@@ -648,6 +648,11 @@ static void LoadWallClockGraphics(void)
     ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, sBgTemplates, ARRAY_COUNT(sBgTemplates));
     InitWindows(sWindowTemplates);
+#if TEXT_RTL
+    // The CANCEL / CONFIRM label sits next to the A icon drawn on the fixed background, so it reads
+    // right to left inside its English extent instead of moving to the window's far end.
+    SetWindowRtlMode(WIN_BUTTON_LABEL, WINDOW_RTL_IN_PLACE);
+#endif
     DeactivateAllTextPrinters();
     LoadUserWindowBorderGfx(0, 0x250, BG_PLTT_ID(13));
     ClearScheduledBgCopiesToVram();

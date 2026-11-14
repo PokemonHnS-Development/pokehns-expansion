@@ -1,0 +1,16 @@
+# r6 items: balls 5/8. Each event clears the object's or tile's flag, warps next to it, turns the
+# player toward it and presses A (Std_FindItem / EventScript_HiddenItemScript, data/scripts/obtain_item.inc).
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+pick b_claw_fossil FLAG_HIDE_PEWTER_CLAW_FOSSIL MAP_PEWTER_CITY_MUSEUM_1F_HNS 21 3 RIGHT
+pick b_ice_stone FLAG_PONI_HIDDEN_ITEM_1 MAP_PONI_ISLE_HNS 25 17 LEFT
+pick b_leaf_stone FLAG_PONI_CAVE_HIDDEN_ITEM_1 MAP_PONI_CAVE_HNS 8 7 UP
+pick b_thunder_stone FLAG_PONI_CAVE_HIDDEN_ITEM_2 MAP_PONI_CAVE_HNS 13 11 UP
+pick b_big_nugget FLAG_ITEM_ROCKETHIDEOUT1_BIG_NUGGET MAP_ROCKET_HIDEOUT_B1F_HNS 42 17 UP
+pick b_ice_heal FLAG_ITEM_ROCKETHIDEOUT3_ICE_HEAL MAP_ROCKET_HIDEOUT_B3F_HNS 22 5 UP
+pick b_guard_spec FLAG_ITEM_ROCKETHIDEOUT3_GUARD_SPEC MAP_ROCKET_HIDEOUT_B3F_HNS 3 17 UP
+pick b_calcium FLAG_ITEM_ROUTE12_CALCIUM MAP_ROUTE12_HNS 4 75 UP
+pick b_shell_bell FLAG_ITEM_ROUTE20_SHELL_BELL MAP_ROUTE20_HNS 69 4 UP
+pick b_destiny_knot FLAG_ITEM_ROUTE27_DESTINY_KNOT MAP_ROUTE27_HNS 93 15 UP
+pick b_nugget FLAG_ITEM_ROUTE2_NUGGET MAP_ROUTE2_HNS 17 76 UP
+pick b_poke_ball FLAG_ITEM_ROUTE_31_POKEBALL MAP_ROUTE31_HNS 44 9 UP

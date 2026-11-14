@@ -1,0 +1,160 @@
+{
+ "_doc": "namecheck.py warnings that were looked at and kept. fr_sync and translit entries pin the names, so a later change on either side warns again. Keys: kind:CONSTANT (fr_sync, translit) and the English name (dupes).",
+ "fr_sync": {
+  "species:SPECIES_EXEGGUTOR": {
+   "hs": "אקזגקיוטר",
+   "firered": "אקזגקיוטור",
+   "why": "names follow FireRed (DECISIONS Q140), but FireRed's spelling does not fit: the Alolan form must be the base name + -א (Q129), and אקזגקיוטור-א is 52 px in the 50 px party and Pokédex lists and the 48 px healthbox (English 44 px)"
+  },
+  "move:MOVE_SLASH": {
+   "hs": "שיסוף",
+   "firered": "חיתוך",
+   "why": "FireRed's חיתוך is already MOVE_CUT in H&S (FireRed has the same duplicate), and two moves cannot share a name; שיסוף also matches NIGHT SLASH שיסוף לילי and AIR SLASH שיסוף אוויר (DECISIONS Q140)"
+  },
+  "item:ITEM_CHESTO_BERRY": {
+   "hs": "פרי צ'סטו",
+   "firered": "פרי צ'סטרו",
+   "why": "a slip in FireRed: the English CHESTO has no R, and FireRed's צ'סטרו adds one (DECISIONS K6, Q140)"
+  },
+  "item:ITEM_IAPAPA_BERRY": {
+   "hs": "פרי יאפאפה",
+   "firered": "פרי יאיפאפה",
+   "why": "the berry tag holds 6 bytes, so the stem is יאפאפה in both trees (FireRed src/berry.c too); H&S writes the bag name with the tag's stem so the two match (DECISIONS K6); FireRed's bag name differs from its own tag (Q140)"
+  },
+  "item:ITEM_POKEBLOCK_CASE": {
+   "hs": "קופסת פוקיבלוק",
+   "firered": "{POKEBLOCK} קופסת",
+   "why": "FireRed writes the {POKEBLOCK} token first for its own renderer; H&S keeps the reading order (STYLE §5, DECISIONS Q140)"
+  },
+  "item:ITEM_POKE_BALL": {
+   "hs": "פוכדור",
+   "firered": "פוקיבול",
+   "why": "the owner's decision for H&S: POKé BALL is פוכדור, its plural פוכדורים, in every line and name (DECISIONS Q159)"
+  },
+  "trainer_class:TRAINER_CLASS_ELITE_FOUR": {
+   "hs": "רביעיית עלית",
+   "firered": "רביעיית עילית",
+   "why": "FireRed's full spelling עילית is 13 bytes; a trainer class name holds 12 (include/data.h u8 name[13]); FireRed widened its array for it, which in H&S is an engine change (DECISIONS Q140)"
+  },
+  "move:MOVE_PSYCHO_BOOST": {
+   "hs": "דחף על-חושי",
+   "firered": "דחף פסיכי",
+   "why": "Psychic is על-חושי in every name (DECISIONS Q139), the PSYCHO moves too; FireRed renamed its type and its PSYCHIC move but left this name on the old word"
+  }
+ },
+ "translit": {
+  "species:SPECIES_MEOWTH_ALOLA": {
+   "hebrew": "מיאו-א",
+   "why": "MEOWTH is מיאו (FireRed); the TH is not pronounced"
+  },
+  "species:SPECIES_MEOWTH_GALAR": {
+   "hebrew": "מיאו-ג",
+   "why": "MEOWTH is מיאו (FireRed); the TH is not pronounced"
+  },
+  "species:SPECIES_FARFETCHD_GALAR": {
+   "hebrew": "פארפג'ד-ג",
+   "why": "-TCH'D is ג'ד as in FireRed's FARFETCH'D"
+  },
+  "species:SPECIES_SIRFETCHD": {
+   "hebrew": "סרפג'ד",
+   "why": "-TCH'D is ג'ד as in FireRed's FARFETCH'D"
+  },
+  "species:SPECIES_MIME_JR": {
+   "hebrew": "מיים זוטר",
+   "why": "JR. is translated (זוטר)"
+  },
+  "species:SPECIES_PORYGON_Z": {
+   "hebrew": "פוריגון-Z",
+   "why": "the Latin Z is kept on purpose (the example in the transliteration rules)"
+  },
+  "species:SPECIES_FRAXURE": {
+   "hebrew": "פראקשר",
+   "why": "the X is /kʃ/ here (glossary note)"
+  },
+  "species:SPECIES_MAUSHOLD_THREE": {
+   "hebrew": "מאוסהולד",
+   "why": "S and H are two sounds (maus-hold)"
+  },
+  "species:SPECIES_MAUSHOLD_FOUR": {
+   "hebrew": "מאוסהולד",
+   "why": "S and H are two sounds (maus-hold)"
+  },
+  "trainer_name:TRNAME_RACHAEL": {
+   "hebrew": "רחל",
+   "why": "a Hebrew-origin name in its Hebrew form"
+  },
+  "trainer_name:TRNAME_B_RIVAL_NAME": {
+   "hebrew": "{B_RIVAL_NAME}",
+   "why": "a placeholder token, not a name"
+  },
+  "frontier_trainer:FRONTIER_TRAINER_101_YAZMIN": {
+   "hebrew": "יסמין",
+   "why": "the Hebrew name יסמין, as FireRed"
+  },
+  "trade_nickname:INGAME_TRADE_SEEDOT_NICKNAME": {
+   "hebrew": "DOTS",
+   "why": "an unreachable or unused in-game trade: kept as in English (glossary note gives the Hebrew if it is ever wired in)"
+  },
+  "trade_ot:INGAME_TRADE_SEEDOT_OTNAME": {
+   "hebrew": "KOBE",
+   "why": "an unreachable or unused in-game trade: kept as in English (glossary note gives the Hebrew if it is ever wired in)"
+  },
+  "trade_nickname:INGAME_TRADE_PLUSLE_NICKNAME": {
+   "hebrew": "PLUSES",
+   "why": "an unreachable or unused in-game trade: kept as in English (glossary note gives the Hebrew if it is ever wired in)"
+  },
+  "trade_ot:INGAME_TRADE_PLUSLE_OTNAME": {
+   "hebrew": "ROMAN",
+   "why": "an unreachable or unused in-game trade: kept as in English (glossary note gives the Hebrew if it is ever wired in)"
+  },
+  "trade_nickname:INGAME_TRADE_HORSEA_NICKNAME": {
+   "hebrew": "SEASOR",
+   "why": "an unreachable or unused in-game trade: kept as in English (glossary note gives the Hebrew if it is ever wired in)"
+  },
+  "trade_nickname:INGAME_TRADE_PIKACHU_NICKNAME": {
+   "hebrew": "VOLTY",
+   "why": "an unreachable or unused in-game trade: kept as in English (glossary note gives the Hebrew if it is ever wired in)"
+  },
+  "trade_nickname:INGAME_TRADE_BELDUM_NICKNAME": {
+   "hebrew": "ברזל",
+   "why": "translated by meaning, the same word as ITEM_IRON"
+  },
+  "trade_nickname:INGAME_TRADE_ELECTRODE_NICKNAME": {
+   "hebrew": "ספירו",
+   "why": "copied from the FireRed fork (glossary note)"
+  },
+  "tent_trainer:TENT_TRAINER_61_JAVIER": {
+   "hebrew": "חאבייר",
+   "why": "a Spanish J is ח (FireRed JOSE חוזה)"
+  },
+  "name:NAME_IRONHARD": {
+   "hebrew": "ברזל קשה",
+   "why": "translated by meaning"
+  },
+  "name:NAME_ETERNAL_FLOWER": {
+   "hebrew": "הפרח הנצחי",
+   "why": "translated by meaning"
+  },
+  "name:NAME_IMPOSING_(CATEGORY,_SPECIES_DRAMPA_MEGA)": {
+   "hebrew": "מרשים",
+   "why": "translated by meaning"
+  },
+  "name:NAME_EMERALD": {
+   "hebrew": "ברקת",
+   "why": "translated by meaning"
+  },
+  "name:NAME_JUAN": {
+   "hebrew": "חואן",
+   "why": "a Spanish name, so J is ח as in JOSE חוזה (transliteration_rules.md §5)"
+  }
+ },
+ "dupes": {
+  "LTSURGE": {
+   "spellings": [
+    "סמל סרג'",
+    "סרג'"
+   ],
+   "why": "the frontier and trade fields hold 7 bytes, so they use the short form on purpose (glossary notes); trainer names and dialogue keep the rank"
+  }
+ }
+}

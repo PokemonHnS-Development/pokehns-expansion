@@ -1,0 +1,18 @@
+# Red again, with only Pikachu and Tauros-Paldea-Combat able to battle (gEnemyParty slots 1-4
+# set to 0 HP at the first action menu), Golem leading: Tauros is the last Pokemon that can
+# Terastallize (Fighting); held three turns as in rv05b_red_venusaur.
+start saves/r2_rival/ladder6_postgame.sav
+include ../continue.txt
+fastbattles off
+ev setflag FLAG_IS_KANTO_CHAMPION; setvar VAR_SINJOH_STORYLINE, 13; clearflag FLAG_HIDE_MTSILVER_RED; end
+warpto MAP_MT_SILVER_SUMMIT_DAY_HNS 10 7
+face UP
+partyswap 0 3
+pinrng
+tap A 4
+drivex rv_redb_talk battle 10
+bwalk rv_redb_intro input:HandleInputChooseAction
+enemyfaint 1 2 3 4
+bwintera rv_redb 40 SPECIES_TAUROS_PALDEA_COMBAT 3
+waitkey 1200
+snap rv_redb_after_01

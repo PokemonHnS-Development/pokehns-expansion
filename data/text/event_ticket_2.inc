@@ -32,20 +32,20 @@ EventTicket_Text_OddTicketGetOnBoard:
 	.string "Get on board, youngster!$"
 
 FarawayIsland_Entrance_Text_SailorReturn:
-	.string "CAPT. BRINEY can be so maddeningly\n"
-	.string "fickle…\p"
+	.string "קפטן ברייני יכול להיות\n"
+	.string "הפכפך עד שיגעון…\p"
 #if IS_HNS
-	.string "Do you want to return to OLIVINE?$"
+	.string "רוצה לחזור לאוליבין?$"
 #else
-	.string "Do you want to return to LILYCOVE?$"
+	.string "רוצה לחזור לליליקוב?$"
 #endif
 
 BirthIsland_Harbor_Text_SailorReturn:
-	.string "What an oddly shaped island, eh?\n"
+	.string "איזה אי משונה בצורתו, הא?\n"
 #if IS_HNS
-	.string "Do you want to return to OLIVINE?$"
+	.string "רוצה לחזור לאוליבין?$"
 #else
-	.string "Do you want to return to LILYCOVE?$"
+	.string "רוצה לחזור לליליקוב?$"
 #endif
 
 EventTicket_Text_OddTicketsWhereTo:
@@ -76,4 +76,4 @@ FarawayIsland_Entrance_Text_Sign:
 	.string "…ith that hope, I depar…”$"
 
 FarawayIsland_Interior_Text_Mew:
-	.string "Myuu…$"
+	.string "מיוו…$"

@@ -1,0 +1,8 @@
+# Chuck, Cianwood Gym (10,2): CianwoodGym_EventScript_Chuck (the rock-smash intro, then the battle).
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_CIANWOOD_GYM; clearflag FLAG_BADGE05_GET; setflag FLAG_HIDE_DOJO_CHUCK; clearflag FLAG_VISITED_VERMILION_CITY; end
+warpto MAP_CIANWOOD_GYM_HNS 10 3
+face UP
+snap ch_room
+include _leader_tail.txt

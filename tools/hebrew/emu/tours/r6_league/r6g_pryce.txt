@@ -1,0 +1,8 @@
+# Pryce, Mahogany Gym (12,4): MahoganyTown_Gym_EventScript_Pryce.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_MAHOGANY_TOWN_GYM; clearflag FLAG_BADGE07_GET; end
+warpto MAP_MAHOGANY_TOWN_GYM_HNS 12 5
+face UP
+snap pr_room
+include _leader_tail.txt

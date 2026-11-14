@@ -10,8 +10,6 @@ Gate_EcruteakCity_Route42_EventScript_Policeman::
 	end
 
 Route42_Text_EcruteakGateOfficer:
-	.string "MT.MORTAR is like a maze\n"
-	.string "inside.\p"
-	.string "Be careful. Don't get lost\n"
-	.string "in there.$"
+	.string "מבפנים, הר המכתש הוא כמו מבוך.\p"
+	.string "כדאי להיזהר שלא ללכת שם לאיבוד.$"
 

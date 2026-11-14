@@ -1,0 +1,20 @@
+sl dome_done
+30 -
+waitctl 300
+py: sb2 = emu.sb2(); emu.w32(sb2 + 0xCDC, emu.r32(sb2 + 0xCDC) | (1 << 10)); print(hex(emu.r32(sb2 + 0xCDC)))
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY_HNS 5 6
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive pk_in menu
+pick 0
+drive pk_lv menu
+pick 0
+drive pk_sel task:Task_HandleChooseMonInput 20
+include tools/hebrew/emu/scripts/r2_battle_frontier_facilities/_bf_enter3.txt
+drive pk_save menu 10
+pick 0
+saveyes
+drivex pk_go free 40 12000
+loc
+ss pike_3path1

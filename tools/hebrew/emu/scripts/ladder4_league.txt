@@ -1,0 +1,33 @@
+# Ladder save 4: the League beaten. A real Hall of Fame record (the ROM's own Lance-defeat warp,
+# Hall of Fame cutscene, special GameClear, credits), then CONTINUE, warp into the Indigo Plateau
+# Pokemon Center and save in-game.
+#   ladder.py run scripts/ladder4_league.txt OUT --save $HNS_SAVES/ladder1_newgame.sav \
+#             --save-out $HNS_SAVES/ladder4_league.sav
+include continue.txt
+include ladder/story_league.txt
+event ladder/party4_league.inc
+expectvar VAR_NUM_BADGES 8
+expectvar VAR_ECRUTEAK_CITY_THEATER 8
+playtime 31 24
+eventstart ladder/s4e_halloffame.inc
+waitcb2 CB2_DoHallOfFameScreen 8000 A
+120 -
+shot l4_hof1
+waitcb2 CB2_StartCreditsSequence 8000 A
+600 -
+shot l4_credits
+waitcb2 CB2_InitCopyrightScreenAfterBootup 60000 A
+# the credits end in a soft reset; boot on with the battery the Hall of Fame just saved.
+# CONTINUE lands outside the player's house in New Bark Town, where the map's ON_FRAME script
+# plays Elm's after-League call at once (NewBarkTown_EventScript_ElmCallAfterLeague: NEWBARK 6 -> 7,
+# lab 10); continue.txt's B taps close it.
+include continue.txt
+shot l4_after_hof
+expectflag FLAG_SYS_GAME_CLEAR 1
+expectflag FLAG_IS_CHAMPION 1
+expectvar VAR_LEAGUE_STATE 1
+expectvar VAR_NEWBARK_TOWN_STATE 7
+expectvar VAR_NEWBARKTOWN_LABSTATE 10
+warp 21 0 19 14              # MAP_INDIGO_PLATEAU_POKEMON_CENTER_HNS
+savegame
+shot l4_saved

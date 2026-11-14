@@ -1,0 +1,18 @@
+# Suicune, Route 25 (99,12), the last of the Suicune chase (VAR_SUICUNE_ENCOUNTERS 6): the trigger
+# row y=16 (Route25_Trigger_Suicune*, data/maps/Route25_hns/scripts.inc:137-196) brings Eusine in
+# (Eusine1, Eusine2); then Suicune itself (Route25_EventScript_Suicune :218-260): battle, and after
+# a catch or a win Eusine's farewell (Eusine3).
+start saves/ladder6_postgame.sav
+include _base.txt
+ev setvar VAR_SUICUNE_ENCOUNTERS, 6; clearflag FLAG_HIDE_ROUTE25_SUICUNE; setflag FLAG_HIDE_ROUTE25_EUSINE; end
+warpto MAP_ROUTE25_HNS 99 17
+face UP
+snap s25_field
+stepto UP 1
+scene s25_eusine 8000
+snap s25_free
+stepto UP 1
+face UP
+tap A 4
+scene s25_pre 4000
+include _legend_tail.txt

@@ -1,0 +1,21 @@
+# Reload check: the x50 save keeps the setting (mints read P?00000 after CONTINUE).
+start saves/r3m_x50.sav
+include ../../continue.txt
+warptoloose MAP_GOLDENROD_CITY_FLOWER_SHOP_HNS 8 6
+evstart goto GoldenrodCity_FlowerShop_EventScript_MintClerk
+talk m99_load_x50_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m99_load_x50_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m99_load_x50 3
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m99_load_x50_bye 10 -
+waitctl 900

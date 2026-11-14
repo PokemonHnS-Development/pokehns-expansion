@@ -1,0 +1,30 @@
+# Kurt's shop with 999 Love Balls and no free Poke Ball pocket slot: buying one more gives
+# "no more room" (gText_NoMoreRoomForThis).
+start saves/r1svc_menuA_base.sav
+include ../continue.txt
+setflag FLAG_CAUGHT_CELEBI
+clearflag FLAG_HIDE_KURT_2
+ev removeitem ITEM_LOVE_BALL, 999; additem ITEM_LOVE_BALL, 999; end
+# fill every free Poke Ball pocket slot (BAG_POKEBALLS_COUNT 39) with 999 Poke Balls; an
+# additem that does not fit adds nothing
+ev additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; additem ITEM_POKE_BALL, 999; end
+warpto MAP_AZALEA_TOWN_KURTS_HOUSE_HNS 15 4
+face UP
+talk svc4_kurt_ask 10
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+snap svc4_kurt_list
+tap A 0
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+waitquiet
+snap svc4_kurt_qty
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap svc4_kurt_confirm
+tap A 0
+pages svc4_kurt_noroom 3
+waittaskx Task_BuyMenu 600
+waitquiet
+snap svc4_kurt_back_to_list

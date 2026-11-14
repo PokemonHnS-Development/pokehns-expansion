@@ -1,0 +1,15 @@
+# Bill (5,4) with a full party of six: TakeThisEevee YES -> CountingOnYou, givenamedmon 3 finds no
+# slot -> Common_EventScript_PartyIsFull (data/event_scripts.s:1422-1432), then EeveeMayEvolve
+# (GiftMonNamed has no PC branch).
+start saves/r6r3_gifts_base.sav
+include _base.txt
+ev file _full.inc
+ev clearflag FLAG_HIDE_GOLDENROD_BILL; clearflag FLAG_GOT_EEVEE; end
+warpto MAP_GOLDENROD_CITY_BILLS_HOUSE_HNS 5 5
+face UP
+tap A 4
+scene evf_offer 6000
+pickd 0
+scene evf_yes 12000
+snap evf_free
+partyinfo

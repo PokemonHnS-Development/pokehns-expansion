@@ -1,0 +1,25 @@
+# Groudon, Seafoam Islands Secret Cave (16,11): SeafoamIslands_SecretCave_EventScript_Groudon
+# (data/maps/SeafoamIslands_SecretCave_hns/scripts.inc:6-25): cry, seteventmon 70,
+# BattleSetup_StartLegendaryBattle (Drought pop-up); catch, defeat and run branches (no text).
+start saves/ladder6_postgame.sav
+include _r3pl_base.txt
+ev clearflag FLAG_HIDE_GROUDON; end
+warpto MAP_SEAFOAM_ISLANDS_SECRET_CAVE_HNS 16 12
+face UP
+snap G_field
+tap A 4
+fieldwatch G_pre cb2:BattleMainCB2 3000
+bwalk G_intro input:HandleInputChooseAction
+snap G_action
+ss G_battle
+bcatch G_catch
+fieldwatch G_catch_after free 6000
+snap G_catch_field
+sl G_battle
+bwin G_win
+fieldwatch G_win_after free 6000
+snap G_win_field
+sl G_battle
+baction RUN
+bwalk G_run free
+snap G_run_field

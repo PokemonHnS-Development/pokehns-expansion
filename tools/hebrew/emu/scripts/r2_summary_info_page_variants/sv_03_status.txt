@@ -1,0 +1,143 @@
+# Summary icons and per-mon marks: the status icon and its STATUS label (CreateSetStatusSprite,
+# src/pokemon_summary_screen.c:5007-5025, sprite at 64,152; label window
+# PSS_LABEL_WINDOW_POKEMON_SKILLS_STATUS :564-571, gText_Status :3636), Pokerus (AILMENT_PKRS,
+# GetMonAilment src/party_menu.c:2190-2202) and the cured mark (DrawPokerusCuredSymbol :3305-3318,
+# strain set + 0 days left, src/pokerus.c:126-133), FNT (setko), the shiny star (sprite at 68,37,
+# :1862-1914) with the shiny-colours challenge option off and on (SaveBlock3+0x2D bit 2, read in
+# GetMonSpritePalFromSpeciesIsEgg src/pokemon.c:8245-8249; Pikachu has a modern shiny palette),
+# hyper-trained IVs (GetAdjustedIvData :1342-1347, P_SUMMARY_SCREEN_IV_HYPERTRAIN) and the move
+# reorder on BATTLE MOVES and CONTEST MOVES (Task_HandleInput_MoveSelect :2595 -> A ->
+# Task_HandleInput_MovePositionSwitch :2741 -> DOWN, A -> ExitMovePositionSwitchMode :2771,
+# SwapMovesNamesPP :4605-4617).
+# Party (menuA_base): 0 Typhlosion, 1 Pikachu, 2 Ampharos, 3 Gyarados, 4 Togepi egg, + 5 shiny Pikachu.
+start saves/menuA_base.sav
+include ../continue.txt
+ev givemon SPECIES_PIKACHU, 20, shinyMode=SHINY_MODE_ALWAYS; end
+
+# ---- pass 1: PKRS (strain 1, 3 days), PSN, PAR, SLP, -, BRN + shiny (colours option off)
+monset 0 pokerus=0x13
+ev setstatus1 STATUS1_POISON, 1; setstatus1 STATUS1_PARALYSIS, 2; setstatus1 STATUS1_SLEEP, 3; setstatus1 STATUS1_BURN, 5; end
+setbits8 @SB3+2D@ 0 4
+monprobe
+include _sum_open.txt
+snap sv03_p1_0_pkrs_info
+sumkey DOWN
+snap sv03_p1_1_psn_info
+sumkey DOWN
+snap sv03_p1_2_par_info
+sumkey DOWN
+snap sv03_p1_3_slp_info
+sumkey DOWN
+snap sv03_p1_4_egg_info
+sumkey DOWN
+snap sv03_p1_5_brn_shiny_info
+sumkey RIGHT
+snap sv03_p1_5_brn_shiny_skills
+sumkey UP
+snap sv03_p1_3_slp_skills
+sumkey UP
+snap sv03_p1_2_par_skills
+sumkey UP
+snap sv03_p1_1_psn_skills
+sumkey UP
+snap sv03_p1_0_pkrs_skills
+tap R 4
+waitquiet
+snap sv03_p1_0_ivs_before_hypertrain
+tap START 4
+waitquiet
+sumkey RIGHT
+snap sv03_p1_0_pkrs_moves
+sumkey LEFT 2
+include _sum_close.txt
+
+# ---- pass 2: cured Pokerus (strain 1, 0 days), FRZ, FNT, frostbite, -, none + shiny (colours on)
+monset 0 pokerus=0x10
+ev setstatus1 STATUS1_FREEZE, 1; setko 2; setstatus1 STATUS1_FROSTBITE, 3; setstatus1 0, 5; end
+setbits8 @SB3+2D@ 4
+monprobe
+include _sum_open.txt
+snap sv03_p2_0_cured_info
+sumkey DOWN
+snap sv03_p2_1_frz_info
+sumkey DOWN
+snap sv03_p2_2_fnt_info
+sumkey DOWN
+snap sv03_p2_3_frb_info
+sumkey DOWN 2
+snap sv03_p2_5_shiny_modern_info
+sumkey RIGHT
+snap sv03_p2_5_shiny_modern_skills
+sumkey UP
+snap sv03_p2_3_frb_skills
+sumkey UP
+snap sv03_p2_2_fnt_skills
+sumkey UP
+snap sv03_p2_1_frz_skills
+sumkey UP
+snap sv03_p2_0_cured_skills
+sumkey LEFT
+include _sum_close.txt
+
+# ---- pass 3: Typhlosion hyper-trained in HP, ATK, SPEED (not DEF, SPATK, SPDEF); then the
+#      move reorder (slot 1 <-> slot 2) on BATTLE MOVES and back on CONTEST MOVES
+ev hypertrain STAT_HP, 0; hypertrain STAT_ATK, 0; hypertrain STAT_SPEED, 0; end
+include _sum_open.txt
+sumkey RIGHT
+snap sv03_p3_skills
+tap R 4
+waitquiet
+snap sv03_p3_ivs_hypertrained
+tap L 4
+waitquiet
+snap sv03_p3_evs
+tap START 4
+waitquiet
+sumkey RIGHT
+snap sv03_p3_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+snap sv03_p3_moves_select
+tap A 4
+waittaskx Task_HandleInput_MovePositionSwitch 300
+waitquiet
+snap sv03_p3_moves_switch_start
+tap DOWN 4
+waitquiet
+snap sv03_p3_moves_switch_target
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitquiet
+snap sv03_p3_moves_swapped
+tap B 4
+sumwait
+snap sv03_p3_moves_after
+sumkey RIGHT
+snap sv03_p3_contest
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlideAppealJamWindow 120
+snap sv03_p3_contest_select
+tap A 4
+waittaskx Task_HandleInput_MovePositionSwitch 300
+waitquiet
+snap sv03_p3_contest_switch_start
+tap DOWN 4
+waitquiet
+snap sv03_p3_contest_switch_target
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitquiet
+snap sv03_p3_contest_swapped
+tap B 4
+sumwait
+snap sv03_p3_contest_after
+sumkey LEFT 3
+include _sum_close.txt
+monprobe 0
+
+# keep the party (cured Pokerus, FRZ/FNT/frostbite, shiny Pikachu, hyper-trained Typhlosion,
+# moves back in order) for fix checks
+savegame
+keepsave sv03_status_party

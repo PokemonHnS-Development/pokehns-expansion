@@ -1,0 +1,188 @@
+# TM USE from the bag (src/item_use.c ItemUseOutOfBattle_TMHM, src/party_menu.c ItemUseCB_TMHM):
+# "Booted up a TM", "It contained X. Teach X to a POKeMON?" YES/NO, the party boxes annotated
+# ABLE! / NOT ABLE! / LEARNED in place of the HP bar (DisplayPartyPokemonDataToTeachMove,
+# src/party_menu.c:1164-1177, strings src/data/party_menu.h:668-682), then each answer:
+# NOT ABLE ("can't learn"), LEARNED ("already knows"), four moves + NO ("did not learn"),
+# four moves + YES (forget page, Poof, learned), fewer than four moves (learned at once),
+# and "Booted up an HM" for an HM.
+# TM24 = THUNDERBOLT (include/constants/tms_hms.h), pocket index 23.
+# Party: 0 Typhlosion, 1 Pikachu (taught Thunderbolt here: LEARNED), 2 Ampharos, 3 Gyarados,
+# 4 Togepi egg, 5 Pichu with two moves.
+start saves/menuA_base.sav
+include ../scripts/continue.txt
+ev givemon SPECIES_PICHU, 10, move1=MOVE_THUNDER_SHOCK, move2=MOVE_CHARM; setmonmove 5, 2, MOVE_NONE; setmonmove 5, 3, MOVE_NONE; setmonmove 1, 0, MOVE_THUNDERBOLT; end
+
+# Bag on TMs & HMs (pocket 3) with TM24 under the cursor: scroll 0x14 + cursor 3 = 23
+w8 @gBagPosition+5@ 3
+w16 @gBagPosition+E@ 3
+w16 @gBagPosition+1A@ 14
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+snap pbi_tm_01_bag
+tap A 4
+waitquiet
+snap pbi_tm_02_context
+tap A 4                                   # USE
+waittaskx Task_ShowTMHMContainedMessage 300
+waitquiet
+snap pbi_tm_03_booted
+tap A 4
+talk pbi_tm_04_contained 4 - Task_CallYesOrNoCallback
+tap A 4                                   # YES
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_tm_05_party_able
+seek 8 @gPartyMenu+9@ 4 DOWN              # the egg: NOT ABLE
+snap pbi_tm_06_party_egg
+seek 8 @gPartyMenu+9@ 0 DOWN              # Typhlosion
+tap A 4
+waitkey 600
+snap pbi_tm_07_cant_01
+tap A 4
+waitkey 600
+snap pbi_tm_07_cant_02
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_tm_08_back_in_bag
+
+# Again: Pikachu already knows it
+tap A 4
+waitquiet
+tap A 4
+waittaskx Task_ShowTMHMContainedMessage 300
+waitquiet
+tap A 4
+waitkey 600
+tap A 4
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 4
+waitkey 600
+snap pbi_tm_09_already
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# Ampharos (four moves): NO -> "did not learn" (P_ASK_MOVE_CONFIRMATION is FALSE, so there
+# is no "Stop trying to teach?" question; src/party_menu.c StopLearningMovePrompt)
+tap A 4
+waitquiet
+tap A 4
+waittaskx Task_ShowTMHMContainedMessage 300
+waitquiet
+tap A 4
+waitkey 600
+tap A 4
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 4
+talk pbi_tm_10_replace 6 - Task_HandleReplaceMoveYesNoInput
+tap DOWN 4
+waitquiet
+snap pbi_tm_11_replace_no
+tap A 4                                   # NO
+waitkey 600
+snap pbi_tm_12_not_learned
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# Gyarados (four moves): YES -> forget page -> Poof -> learned
+tap A 4
+waitquiet
+tap A 4
+waittaskx Task_ShowTMHMContainedMessage 300
+waitquiet
+tap A 4
+waitkey 600
+tap A 4
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 3 DOWN
+tap A 4
+talk pbi_tm_13_replace 6 - Task_HandleReplaceMoveYesNoInput
+tap A 4                                   # YES
+waitkey 600
+tap A 4
+waittaskx Task_HandleReplaceMoveInput 900
+waitquiet
+snap pbi_tm_14_forget
+tap A 4                                   # forget the first move
+waitcb2x CB2_UpdatePartyMenu 900
+talk pbi_tm_15_poof 8 -
+waitnotask Task_Fanfare 900
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# Pichu (two moves): learned at once
+tap A 4
+waitquiet
+tap A 4
+waittaskx Task_ShowTMHMContainedMessage 300
+waitquiet
+tap A 4
+waitkey 600
+tap A 4
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_tm_16_party_after
+seek 8 @gPartyMenu+9@ 5 DOWN
+tap A 4
+waittaskx Task_DoLearnedMoveFanfareAfterText 300
+waitquiet
+snap pbi_tm_17_learned_direct
+waitnotask Task_Fanfare 900
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# HM01 (pocket index 92): "Booted up an HM" and the HM's question; NO goes back to the bag
+tap B 4                                   # closing the bag stores its list position, so poke after
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+w16 @gBagPosition+E@ 3
+w16 @gBagPosition+1A@ 59
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+snap pbi_tm_18_bag_hm
+tap A 4
+waitquiet
+tap A 4
+waittaskx Task_ShowTMHMContainedMessage 300
+waitquiet
+snap pbi_tm_19_booted_hm
+tap A 4
+talk pbi_tm_20_contained_hm 4 - Task_CallYesOrNoCallback
+tap B 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

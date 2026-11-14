@@ -1,0 +1,14 @@
+# Deoxys, Birth Island: the triangle (15,12) and Deoxys (15,3). BirthIsland_Exterior_hns_EventScript_
+# Triangle (data/maps/BirthIsland_Exterior_hns/scripts.inc) calls DoDeoxysRockInteraction; with
+# VAR_DEOXYS_ROCK_LEVEL already at the last level (10, written after the map's OnTransition reset it)
+# the next touch solves the puzzle: the triangle breaks, Deoxys comes down, battle.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_BATTLED_DEOXYS; clearflag FLAG_DEFEATED_DEOXYS; end
+warpto MAP_BIRTH_ISLAND_EXTERIOR_HNS 15 13
+face UP
+snap deoxys_field
+ev setvar VAR_DEOXYS_ROCK_LEVEL, 10; setvar VAR_DEOXYS_ROCK_STEP_COUNT, 0; end
+tap A 4
+scene deoxys_pre 6000 30
+include _legend_tail.txt

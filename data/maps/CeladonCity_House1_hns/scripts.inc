@@ -54,47 +54,46 @@ CeladonCity_House1_EventScript_Sign::
 	end
 
 CeladonCity_House1_Text_ChefEatathon:
-	.string "Hi!\p"
-	.string "We're holding an eatathon contest.\p"
-	.string "We can't serve you right now.\n"
-	.string "Sorry.$"
+	.string "היי!\p"
+	.string "אנחנו עורכים מרתון אכילה.\p"
+	.string "אנחנו לא יכולים להגיש לך אוכל\n"
+	.string "כרגע. סליחה.$"
 
 CeladonCity_House1_Text_Fisher1Snarfle:
-	.string "…Snarfle, chew…$"
+	.string "…זלילה, לעיסה…$"
 
 CeladonCity_House1_Text_Fisher1Concentration:
-	.string "Don't talk to me!\p"
-	.string "You'll break my concentration!$"
+	.string "לא לדבר איתי!\p"
+	.string "זה יהרוס לי את הריכוז!$"
 
 CeladonCity_House1_Text_Fisher2GulpChew:
-	.string "…Gulp… Chew…$"
+	.string "…בליעה… לעיסה…$"
 
 CeladonCity_House1_Text_Fisher2Quantity:
-	.string "I take quantity over quality!\p"
-	.string "I'm happy when I'm full!$"
+	.string "אצלי כמות עדיפה על איכות!\p"
+	.string "אני שמח כשאני שבע!$"
 
 CeladonCity_House1_Text_Fisher3MunchMunch:
-	.string "Munch, munch…$"
+	.string "נשנוש, נשנוש…$"
 
 CeladonCity_House1_Text_Fisher3GoldenrodIsBest:
-	.string "The food is good here, but\n"
-	.string "GOLDENROD has the best food\l"
-	.string "anywhere.$"
+	.string "האוכל כאן טוב, אבל בגולדנרוד\n"
+	.string "יש את האוכל הכי טוב שיש.$"
 
 CeladonCity_House1_Text_TeacherCrunchCrunch:
-	.string "Crunch… Crunch…$"
+	.string "קראנץ'… קראנץ'…$"
 
 CeladonCity_House1_Text_TeacherNoCoinCase:
-	.string "Nobody here will give you a COIN\n"
-	.string "CASE. You should look in JOHTO.$"
+	.string "אף אחד כאן לא ייתן לך\n"
+	.string "ארנק מטבעות. כדאי לחפש בג'וטו.$"
 
 CeladonCity_House1_Text_TeacherKeepEating:
-	.string "Crunch… Crunch…\p"
-	.string "I can keep eating!\p"
-	.string "More, CHEF!$"
+	.string "קראנץ'… קראנץ'…\p"
+	.string "אני יכולה להמשיך לאכול!\p"
+	.string "עוד, שף!$"
 
 CeladonCity_House1_Text_EatathonContestPoster:
-	.string "Eatathon Contest! No time limit!\p"
-	.string "A battle without end! The biggest\n"
-	.string "muncher gets it all for free!$"
+	.string "מרתון אכילה! בלי הגבלת זמן!\p"
+	.string "קרב בלי סוף! הזולל הכי גדול\n"
+	.string "אוכל הכול בחינם!$"
 

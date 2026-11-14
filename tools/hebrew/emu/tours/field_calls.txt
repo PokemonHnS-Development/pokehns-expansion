@@ -1,0 +1,104 @@
+# The 16 scripted Pokegear calls with a speaker name box (setspeaker + pokenavcall): the
+# call box slides up from the bottom, the name box (src/field_name_box.c:61-84, small font,
+# centred; flush right under TEXT_RTL) sits on its top edge from the second page on.
+# Each script is run with `call` (some end in `return`). The last page waits in
+# MatchCall_PrintMessage (src/match_call.c) for A/B, not in a text printer, so `pages`
+# stops before it: `snap _last`, then B until the player is free.
+start saves/r1field_menuA_base.sav
+include ../scripts/continue.txt
+
+evstart call NewBarkTown_EventScript_ElmCallAfterLeague; end
+waitkey 900
+pages field_call_newbark 40
+snap field_call_newbark_last
+waitctl 900 B
+
+evstart call Route30_EventScript_ElmCall_Trigger; end
+waitkey 900
+pages field_call_route30 40
+snap field_call_route30_last
+waitctl 900 B
+
+evstart call VioletCity_EventScript_ElmCall_Trigger; end
+waitkey 900
+pages field_call_violet 40
+snap field_call_violet_last
+waitctl 900 B
+
+evstart call GoldenrodCity_Elm_Togepi_Call; end
+waitkey 900
+pages field_call_goldenrod 40
+snap field_call_goldenrod_last
+waitctl 900 B
+
+evstart call Mahoganytown_EventScript_RocketTrigger; end
+waitkey 900
+pages field_call_mahogany 40
+snap field_call_mahogany_last
+waitctl 900 B
+
+evstart call BlackthornCity_EventScript_Call; end
+waitkey 900
+pages field_call_blackthorn 40
+snap field_call_blackthorn_last
+waitctl 900 B
+
+evstart call Route27_EventScript_BaobaCall; end
+waitkey 900
+pages field_call_route27 40
+snap field_call_route27_last
+waitctl 900 B
+
+evstart call OlivineCity_EventScript_BaobaCall; end
+waitkey 900
+pages field_call_olivine 40
+snap field_call_olivine_last
+waitctl 900 B
+
+evstart call FuchsiaCity_EventScript_BaobaCall; end
+waitkey 900
+pages field_call_fuchsia 40
+snap field_call_fuchsia_last
+waitctl 900 B
+
+evstart call ViridianCity_EventScript_OakCall; end
+waitkey 900
+pages field_call_viridian 40
+snap field_call_viridian_last
+waitctl 900 B
+
+evstart call SinjohRuins_Lab_EventScript_3Plates; end
+waitkey 900
+pages field_call_sinjoh03 40
+snap field_call_sinjoh03_last
+waitctl 900 B
+
+evstart call SinjohRuins_Lab_EventScript_6Plates; end
+waitkey 900
+pages field_call_sinjoh06 40
+snap field_call_sinjoh06_last
+waitctl 900 B
+
+evstart call SinjohRuins_Lab_EventScript_9Plates; end
+waitkey 900
+pages field_call_sinjoh09 40
+snap field_call_sinjoh09_last
+waitctl 900 B
+
+evstart call SinjohRuins_Lab_EventScript_12Plates; end
+waitkey 900
+pages field_call_sinjoh12 40
+snap field_call_sinjoh12_last
+waitctl 900 B
+
+evstart call SinjohRuins_Lab_EventScript_15Plates; end
+waitkey 900
+pages field_call_sinjoh15 40
+snap field_call_sinjoh15_last
+waitctl 900 B
+
+evstart call SinjohRuins_Lab_EventScript_16Plates; end
+waitkey 900
+pages field_call_sinjoh16 40
+snap field_call_sinjoh16_last
+waitctl 900 B

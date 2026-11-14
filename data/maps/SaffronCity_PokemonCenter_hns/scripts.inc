@@ -23,25 +23,24 @@ SaffronCity_PokemonCenter_EventScript_Youngster::
 	end
 
 SaffronCity_PokemonCenter1F_Text_Teacher:
-	.string "What are JOHTO's POKéMON CENTERS\n"
-	.string "like?\p"
-	.string "…Oh, I see. So they're not much\n"
-	.string "different from the ones in KANTO.\p"
-	.string "I can go to JOHTO without\n"
-	.string "worrying, then!$"
+	.string "איך נראים מרכזי הפוקימון\n"
+	.string "בג'וטו?\p"
+	.string "…אה, הבנתי. אז הם לא שונים\n"
+	.string "בהרבה מאלה שבקאנטו.\p"
+	.string "אם כך, אני יכולה לנסוע לג'וטו\n"
+	.string "בלי לדאוג!$"
 
 SaffronCity_PokemonCenter1F_Text_Fisher:
-	.string "I just happened to come through\n"
-	.string "ROCK TUNNEL.\p"
-	.string "There was some commotion at the\n"
-	.string "POWER PLANT.$"
+	.string "במקרה עברתי דרך\n"
+	.string "מערת האבן.\p"
+	.string "הייתה איזו מהומה\n"
+	.string "במפעל החשמל.$"
 
 SaffronCity_PokemonCenter1F_Text_Fisher_ReturnedPart:
-	.string "There's an odd cave in CERULEAN.\p"
-	.string "As a pro HIKER, I should explore it,\n"
-	.string "but that place scares even me.$"
+	.string "יש מערה מוזרה בסרוליאן.\p"
+	.string "בתור מטייל מקצועי, אני אמור לחקור\n"
+	.string "אותה, אבל המקום הזה מפחיד אפילו אותי.$"
 
 SaffronCity_PokemonCenter1F_Text_Youngster:
-	.string "SILPH CO.'s HEAD OFFICE and the\n"
-	.string "MAGNET TRAIN STATION--they're the\l"
-	.string "places to see in SAFFRON.$"
+	.string "המטה של סילף בע”מ ותחנת הרכבת\n"
+	.string "המגנטית הם האטרקציות של סאפרון.$"

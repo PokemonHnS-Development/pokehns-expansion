@@ -296,28 +296,29 @@ GoldenrodCity_TrainStation_Movement_SlideRight:
 	step_end
 
 GoldenrodMagnetTrainStation_Text_OfficerTrainHasntComeIn:
-    .string "The train hasn't come in…\p"
-    .string "I know! I'll carry the passengers\n"
-    .string "on my back!\p"
-    .string "That won't work.$"
+    .string "הרכבת עוד לא הגיעה…\p"
+    .string "יש לי רעיון! אסחב את הנוסעים\n"
+    .string "על הגב!\p"
+    .string "זה לא יעבוד.$"
 
 GoldenrodMagnetTrainStation_Text_OfficerRightThisWay:
-    .string "May I see your rail PASS, please?\p"
-    .string "OK. Right this way, please.$"
+    .string "אפשר לראות את כרטיס הרכבת שלך,\n"
+    .string "בבקשה?\p"
+    .string "בסדר. מכאן, בבקשה.$"
 
 GoldenrodMagnetTrainStation_Text_OfficerNoRailPass:
-    .string "Sorry. You don't have a rail PASS.$"
+    .string "מצטער. אין לך כרטיס רכבת.$"
 
 GoldenrodMagnetTrainStation_Text_GentlemanPresident:
-    .string "I'm the PRESIDENT.\p"
-    .string "My dream was to build a train that\n"
-    .string "is faster than any POKéMON.\p"
-    .string "It really brings JOHTO much closer\n"
-    .string "to KANTO.$"
+    .string "אני נשיא חברת הרכבת.\p"
+    .string "החלום שלי היה לבנות רכבת\n"
+    .string "מהירה יותר מכל פוקימון.\p"
+    .string "היא באמת מקרבת מאוד\n"
+    .string "את ג'וטו לקאנטו.$"
 
 GoldenrodCity_TrainStation_Text_Boy:
-	.string "You brought the MAGNET TRAIN PASS,\n"
-	.string "right?$"
+	.string "הבאת את כרטיס הרכבת המגנטית,\n"
+	.string "נכון?$"
 
 GoldenrodCity_TrainStation_Text_Psychic:
-	.string "I thought you had it!$"
+	.string "חשבתי שהוא אצלך!$"

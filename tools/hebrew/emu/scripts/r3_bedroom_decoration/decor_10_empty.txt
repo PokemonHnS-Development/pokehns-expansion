@@ -1,0 +1,71 @@
+# Bedroom PC > DECORATION with no decorations owned (ladder 1: new game saved in the bedroom).
+# PC: bg event (1,1), data/maps/NewBarkTown_PlayersHouse_2F_hns/events.inc:31 > BedroomPC
+# (src/player_pc.c:374-376); the DECORATION row is 3rd (:197-204) > DoPlayerRoomDecorationMenu
+# (src/decoration.c:619). Main menu DECORATE / PUT AWAY / TOSS / CANCEL with a description per row
+# (src/decoration.c:238-262, PrintCurMainMenuDescription :656). DECORATE and TOSS with no dolls:
+# gText_NoDecorations (:665, :697); PUT AWAY with none placed: gText_NoDecorationsInUse (:680).
+# Then every doll (DECOR_PICHU_DOLL..DECOR_SEEDOT_DOLL 76-100, DECOR_SNORLAX_DOLL..DECOR_REGISTEEL_DOLL
+# 111-120, include/constants/decorations.h:80-124) is added with adddecoration (asm/macros/event.inc:595)
+# and the game is saved in the bedroom: save:decor_dolls.
+start saves/ladder1_newgame.sav
+include ../continue.txt
+decorprobe
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 1 2
+face UP
+talk de_00_pc_boot 10 A PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+snap de_01_pc_menu
+press DOWN
+press DOWN
+snap de_02_pc_menu_decoration
+tap A 0
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+snap de_03_menu_decorate
+press DOWN
+snap de_04_menu_putaway
+press DOWN
+snap de_05_menu_toss
+press DOWN
+snap de_06_menu_cancel
+press UP
+press UP
+press UP
+tap A 0                                   # DECORATE with no dolls
+waitkey
+snap de_07_decorate_no_decorations
+tap A 4
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+snap de_08_after_no_decorations
+press DOWN
+tap A 0                                   # PUT AWAY with none placed
+waitkey
+snap de_09_putaway_none_in_use
+tap A 4
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+press DOWN
+tap A 0                                   # TOSS with no dolls
+waitkey
+snap de_10_toss_no_decorations
+tap A 4
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+snap de_11_after_toss
+press DOWN
+tap A 0                                   # CANCEL: back to the PC menu
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+snap de_12_back_to_pc_menu
+press B
+waitctl 600 B
+
+# ---- every doll into the PC, then save in the bedroom
+ev adddecoration DECOR_PICHU_DOLL; adddecoration DECOR_PIKACHU_DOLL; adddecoration DECOR_MARILL_DOLL; adddecoration DECOR_TOGEPI_DOLL; adddecoration DECOR_CYNDAQUIL_DOLL; adddecoration DECOR_CHIKORITA_DOLL; adddecoration DECOR_TOTODILE_DOLL; adddecoration DECOR_JIGGLYPUFF_DOLL; adddecoration DECOR_MEOWTH_DOLL; adddecoration DECOR_CLEFAIRY_DOLL; adddecoration DECOR_DITTO_DOLL; adddecoration DECOR_SMOOCHUM_DOLL; adddecoration DECOR_TREECKO_DOLL; adddecoration DECOR_TORCHIC_DOLL; adddecoration DECOR_MUDKIP_DOLL; adddecoration DECOR_DUSKULL_DOLL; adddecoration DECOR_WYNAUT_DOLL; adddecoration DECOR_BALTOY_DOLL; adddecoration DECOR_KECLEON_DOLL; adddecoration DECOR_AZURILL_DOLL; adddecoration DECOR_SKITTY_DOLL; adddecoration DECOR_SWABLU_DOLL; adddecoration DECOR_GULPIN_DOLL; adddecoration DECOR_LOTAD_DOLL; adddecoration DECOR_SEEDOT_DOLL; end
+ev adddecoration DECOR_SNORLAX_DOLL; adddecoration DECOR_RHYDON_DOLL; adddecoration DECOR_LAPRAS_DOLL; adddecoration DECOR_VENUSAUR_DOLL; adddecoration DECOR_CHARIZARD_DOLL; adddecoration DECOR_BLASTOISE_DOLL; adddecoration DECOR_WAILMER_DOLL; adddecoration DECOR_REGIROCK_DOLL; adddecoration DECOR_REGICE_DOLL; adddecoration DECOR_REGISTEEL_DOLL; end
+decorprobe
+snap de_13_room_before
+savegame
+keepsave decor_dolls

@@ -179,6 +179,10 @@ void SubtractMoneyFromVar0x8005(void)
 
 void PrintMoneyAmountInMoneyBox(u8 windowId, int amount, u8 speed)
 {
+#if TEXT_RTL
+    // The MONEY label is a sprite at the box's top left; keep the amount right-aligned beside it.
+    SetWindowRtlMode(windowId, WINDOW_RTL_IN_PLACE);
+#endif
     PrintMoneyAmount(windowId, CalculateMoneyTextHorizontalPosition(amount), 1, amount, speed);
 }
 

@@ -1,0 +1,75 @@
+# r11: the PC MAILBOX from mail_en_base.sav (GOLD's TROPIC MAIL and KRISTEN's DREAM MAIL, both written on the
+# English ROM): MOVE TO BAG > YES ('returned to the bag, message erased', src/player_pc.c:860-870); GIVE TO
+# POKeMON to a Pokemon holding an item (gText_PkmnHoldingItemCantHoldMail, strings.c:298; back to the list), then again to a free one
+# (MAIL transferred), after which the mailbox is empty (gText_NoMailHere, player_pc.c:483).
+start saves/mail_en_base.sav
+include _base.txt
+ev callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60, item=ITEM_LEFTOVERS; givemon SPECIES_PIKACHU, 30; special CalculatePlayerPartyCount; end
+evstart lockall; special PlayerPC; waitstate; releaseall; end
+waittaskx PlayerPCProcessMenuInput 900
+waitquiet
+press DOWN
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap m2b_list_two
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 4
+waittaskx Mailbox_HandleConfirmMoveToBag 900
+waitquiet
+snap m2b_tobag_prompt
+tap A 4
+waitkey 600
+snap m2b_tobag_erased
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap m2b_list_one
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap m2b_opts_kristen
+seek 8 @menu:sMenu+2@ 2 DOWN
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap m2b_give_party
+tap A 4
+60 -
+waitquiet
+snap m2b_holding_item
+tap A 4
+60 -
+waitquiet
+snap m2b_after_holding
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+seek 8 @menu:sMenu+2@ 2 DOWN
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap m2b_give_party_pikachu
+tap A 4
+60 -
+waitquiet
+snap m2b_given_pikachu
+tap A 4
+120 -
+waitquiet
+snap m2b_after_give
+showtasks
+tap A 4
+60 -
+waitquiet
+snap m2b_after_give2
+tap B 4
+60 -
+tap B 4
+waitctl 900 B

@@ -1,0 +1,12 @@
+# Alola totem double battle, poni: the totem object (hidden by FLAG_HIDE_PONI_TOTEM until the island's trigger
+# scene) and its battle script (data/maps/PoniIsle_hns:125-160 (Electivire + Electabuzz)): cry, a cry text, setwildbattle with two
+# species + settotemboost B_POSITION_OPPONENT_RIGHT. RTC 12:00 = the day totem where there are two.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_PONI_TOTEM; end
+warpto MAP_PONI_ISLE_HNS 13 9
+face UP
+snap poni_field
+tap A 4
+scene poni_pre 4000
+include _totem_tail.txt

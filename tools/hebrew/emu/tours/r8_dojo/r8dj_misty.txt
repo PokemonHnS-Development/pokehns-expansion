@@ -1,0 +1,8 @@
+# Dojo invitation, Misty on Route 25 (the cape) (Route25_EventScript_MistyRematch, data/maps/Route25_hns/scripts.inc:15-26): one message,
+# the fade, the leader removed, FLAG_HIDE_DOJO_* cleared. The script has no YES/NO.
+start saves/r8_dojo_base.sav
+include _base.txt
+ev clearflag FLAG_HIDE_CAPE_MISTY; setflag FLAG_HIDE_DOJO_MISTY; end
+warpto MAP_ROUTE25_HNS 81 16
+approach 20
+include _invite.txt

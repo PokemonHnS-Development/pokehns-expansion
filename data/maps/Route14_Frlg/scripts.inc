@@ -6,15 +6,15 @@ Route14_EventScript_RouteSign::
 	end
 
 Route14_Text_CarterIntro::
-	.string "You need to use TMs to teach good\n"
-	.string "moves to POKéMON.$"
+	.string "כדי ללמד פוקימונים מהלכים טובים\n"
+	.string "צריך להשתמש במ”מ.$"
 
 Route14_Text_CarterDefeat::
-	.string "Not good enough quite yet.$"
+	.string "עדיין לא מספיק טוב.$"
 
 Route14_Text_CarterPostBattle::
-	.string "You have some HMs, right? POKéMON\n"
-	.string "can't forget those moves easily.$"
+	.string "יש לך כמה מ”נ, נכון? פוקימונים\n"
+	.string "לא שוכחים את המהלכים האלה בקלות.$"
 
 Route14_Text_MitchIntro::
 	.string "My bird POKéMON should be ready\n"

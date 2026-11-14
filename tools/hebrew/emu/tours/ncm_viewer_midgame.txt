@@ -1,0 +1,191 @@
+# The challenge viewer opened mid-game from a Pokemon Center PC (data/scripts/pc.inc:47-53,
+# 85-90; the CHALLENGES row of ScriptMenu_CreatePCMultichoice, src/script_menu.c:790-797):
+# the PC menu, every tab with every row (B hint in the top bar, rows locked by
+# sMidGameLockPolicy, src/challenge_menu.c:182-228), a refused change on a one-way row,
+# B back to the PC menu. Starts from the Hebrew-born new-game save.
+start save:ncm_base
+include ../scripts/continue.txt
+warpto MAP_CHERRYGROVE_CITY_POKEMON_CENTER_HNS 7 4
+go RIGHT 4
+go UP 2
+talk ncm_50_pc_boot 10                           # ends at the PC multichoice
+snap ncm_50_pc_menu
+press DOWN
+press DOWN
+snap ncm_50_pc_menu_challenges
+tap A 0
+waitcb2x CB2_InitChallengeMenu 300
+waittaskx challenge_menu:Task_ProcessInput 900
+waitquiet
+
+# ---- MODE tab
+snap ncm_60_t1_mode_page
+press DOWN
+snap ncm_60_t1_r01
+press DOWN
+snap ncm_60_t1_r02
+press DOWN
+snap ncm_60_t1_r03
+press DOWN
+snap ncm_60_t1_r04
+press DOWN
+snap ncm_60_t1_r05
+press DOWN
+snap ncm_60_t1_r06
+press DOWN
+snap ncm_60_t1_r07
+press DOWN
+snap ncm_60_t1_r08
+press DOWN
+snap ncm_60_t1_r09
+press DOWN
+snap ncm_60_t1_r10
+press DOWN
+snap ncm_60_t1_r11
+press DOWN
+snap ncm_60_t1_r12_next
+press R
+# ---- FEATURES tab
+snap ncm_60_t2_features_page
+snap ncm_60_t2_r00
+press DOWN
+snap ncm_60_t2_r01
+press DOWN
+snap ncm_60_t2_r02
+press DOWN
+snap ncm_60_t2_r03
+press DOWN
+snap ncm_60_t2_r04
+press DOWN
+snap ncm_60_t2_r05_next
+press R
+# ---- RANDOMIZER tab: first with the master switch OFF (rows greyed), then ON
+snap ncm_60_t3_random_page_off
+press DOWN
+snap ncm_60_t3_off_r01
+press DOWN
+snap ncm_60_t3_off_r02
+press DOWN
+snap ncm_60_t3_off_r03
+press DOWN
+snap ncm_60_t3_off_r04
+press DOWN
+snap ncm_60_t3_off_r05
+press DOWN
+snap ncm_60_t3_off_r06
+press DOWN
+snap ncm_60_t3_off_r07
+press DOWN
+snap ncm_60_t3_off_r08
+press DOWN
+snap ncm_60_t3_off_r09
+press DOWN
+snap ncm_60_t3_off_r10
+press DOWN
+snap ncm_60_t3_off_r11
+press DOWN
+snap ncm_60_t3_off_r12
+press DOWN
+snap ncm_60_t3_off_r13
+press DOWN
+snap ncm_60_t3_off_r14
+press DOWN
+snap ncm_60_t3_off_r15
+press DOWN
+snap ncm_60_t3_off_r16
+press DOWN
+snap ncm_60_t3_off_r17
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press R
+# ---- NUZLOCKE tab
+snap ncm_60_t4_nuz_page
+press DOWN
+snap ncm_60_t4_r01
+press DOWN
+snap ncm_60_t4_r02
+press DOWN
+snap ncm_60_t4_r03
+press DOWN
+snap ncm_60_t4_r04
+press DOWN
+snap ncm_60_t4_r05
+press DOWN
+snap ncm_60_t4_r06
+press R
+# ---- DIFFICULTY tab
+snap ncm_60_t5_diff_page
+snap ncm_60_t5_r00
+press DOWN
+snap ncm_60_t5_r01
+press DOWN
+snap ncm_60_t5_r02
+press DOWN
+snap ncm_60_t5_r03
+press DOWN
+snap ncm_60_t5_r04
+press DOWN
+snap ncm_60_t5_r05
+press DOWN
+snap ncm_60_t5_r06
+press DOWN
+snap ncm_60_t5_r07
+press DOWN
+snap ncm_60_t5_r08
+press DOWN
+snap ncm_60_t5_r09
+press DOWN
+snap ncm_60_t5_r10
+press DOWN
+snap ncm_60_t5_r11_next
+press R
+# ---- CHALLENGES tab
+snap ncm_60_t6_chal_page
+press DOWN
+snap ncm_60_t6_r01
+press DOWN
+snap ncm_60_t6_r02
+press DOWN
+snap ncm_60_t6_r03
+press DOWN
+snap ncm_60_t6_r04
+press DOWN
+snap ncm_60_t6_r05
+press DOWN
+snap ncm_60_t6_r06
+press DOWN
+snap ncm_60_t6_r07_save
+
+# a one-way row (Pokemon Center, LOCK_ONEWAY_DOWN) refuses a change upward
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+snap ncm_60_t6_r00_before
+press ROWNEXT
+snap ncm_60_t6_r00_refused
+press L
+snap ncm_60_back_to_difficulty_L
+press B                                          # cancel: back to the PC menu, nothing saved
+waitcb2x CB2_Overworld 900
+talk ncm_70_pc_after 4 -
+snap ncm_70_pc_menu_again
+

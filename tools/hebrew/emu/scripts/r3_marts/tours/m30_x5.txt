@@ -1,0 +1,102 @@
+# EXPENSIVE x5 (tx_Challenges_Expensive = 1): Flower Shop mints, Frontier Mart, Goldenrod 2F and 5F,
+# Mahogany. The list price goes through ConvertIntToDecimalStringN(.., 6) (src/shop.c:1350-1356).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+setexpensive 1
+ev additem ITEM_TM_PROTECT; end
+setmoney 9999999
+warptoloose MAP_GOLDENROD_CITY_FLOWER_SHOP_HNS 8 6
+evstart goto GoldenrodCity_FlowerShop_EventScript_MintClerk
+talk m30_x5_flower_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m30_x5_flower_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m30_x5_flower
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m30_x5_flower_bye 10 -
+waitctl 900
+setmoney 9999999
+warptoloose MAP_BATTLE_FRONTIER_MART_HNS 3 5
+evstart goto BattleFrontier_Mart_EventScript_Clerk_hns
+talk m30_x5_bfmart_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m30_x5_bfmart_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m30_x5_bfmart
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m30_x5_bfmart_bye 10 -
+waitctl 900
+setmoney 9999999
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS 14 13
+evstart goto GoldenrodDeptStore2_EventScript_Clerk
+talk m30_x5_gr2_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m30_x5_gr2_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m30_x5_gr2
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m30_x5_gr2_bye 10 -
+waitctl 900
+setmoney 9999999
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_5F_HNS 17 13
+evstart goto GoldenrodDeptStore5_EventScript_Clerk
+talk m30_x5_gr5_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m30_x5_gr5_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m30_x5_gr5
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m30_x5_gr5_bye 10 -
+waitctl 900
+setmoney 9999999
+warptoloose MAP_MAHOGANY_TOWN_SHOP_HNS 2 7
+evstart lock; faceplayer; goto MahoganyTown_Shop_EventScript_GrannyShop
+talk m30_x5_mahog_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m30_x5_mahog_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m30_x5_mahog
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m30_x5_mahog_bye 10 -
+waitctl 900

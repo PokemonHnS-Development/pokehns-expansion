@@ -1,0 +1,63 @@
+# The mart's count lines (src/shop.c, src/item_menu.c), which already keep the count apart from
+# the name and take the singular (CopyItemName): the buy confirmation "X? And you wanted N?" at
+# the largest quantity, and SELL with ODD KEYSTONE written over ITEMS slot 0 (x999), one of the
+# widest singular names, at the largest quantity, YES, and the sale report. Cherrygrove Mart, as
+# menu_mart. See _pockets.txt (DECISIONS.md Q125).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+w16 @SB1+564@ 9B                          # bag ITEMS slot 0 -> ODD KEYSTONE x999
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 0
+w16 @gBagPosition+14@ 0
+
+go DOWN 9                                 # out of the Center: Cherrygrove City (47,8)
+go LEFT 6
+go UP 1                                   # the Mart door at (41,7)
+go UP 4                                   # in front of the counter (4,3); the clerk is at (2,3)
+face LEFT
+talk mart_welcome 10 A Task_ShopMenu
+waittaskx Task_ShopMenu 300
+waitquiet
+
+# BUY: the 2nd item, the largest quantity (DOWN from 1 wraps to it)
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+press DOWN
+tap A 0
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+waitquiet
+snap mb_qty_01
+press DOWN
+snap mb_qty_max
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap mb_confirm
+tap B 0                                   # NO
+waittaskx Task_BuyMenu 600
+waitquiet
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+
+# SELL: ODD KEYSTONE, how many, the largest quantity, the offer, YES, the report
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap A 0
+waitquiet
+snap ms_qty_01
+tap DOWN 4
+waitquiet
+snap ms_qty_max
+tap A 0
+waitquiet
+snap ms_confirm
+tap A 0                                   # YES
+waitquiet
+snap ms_done

@@ -1,0 +1,7 @@
+go UP 1
+loc
+drivex py_br_in battle 30 9000
+fastbattles off
+bwin py_br_b
+drivex py_br_after free 30 9000
+loc

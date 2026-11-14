@@ -1,0 +1,47 @@
+# Pokedex Plus AREA page at night. The page opens on the RTC's time of day (HNS_RTC default
+# 12:00 = day); UP or DOWN flips gAreaTimeOfDay day <-> night (src/pokedex_area_screen.c:928-940,
+# OW_TIME_OF_DAY_ENCOUNTERS TRUE, include/config/overworld.h:96) and the label at the top becomes
+# "{DPAD_UPDOWN} לילה" / "{DPAD_UPDOWN} יום" (GetTimeOfDayTextWithButton, :676-691, centred in
+# 64 px, ShowEncounterInfoLabel). A table with no areas prints "אזור לא ידוע" (ShowAreaUnknownLabel).
+# The list is the H&S Johto order (dexopen's national-mode write does not change it on this save):
+# list position 14 = HOOTHOOT, 15 = NOCTOWL, 9 = PIDGEY (checked by dexstate in the run log).
+# Species (src/data/wild_encounters.json): HOOTHOOT night on Routes 1/2/5/25/30/31/36/37,
+# Ilex Forest, National Park, day only on Route 29; NOCTOWL night only; PIDGEY day only.
+start saves/r4_misc/r4_menuA_base.sav
+include ../../continue.txt
+
+dexopen
+dexgoto 14
+dexinfo
+dexstate
+snap dex_hoothoot_info
+dexarea
+snap dex_hoothoot_area_day
+dextoggle DOWN
+snap dex_hoothoot_area_night_down
+dextoggle UP
+snap dex_hoothoot_area_day_up
+dextoggle UP
+snap dex_hoothoot_area_night_up
+dexback
+
+dexgoto 15
+dexinfo
+dexstate
+dexarea
+snap dex_noctowl_area_open
+dextoggle DOWN
+snap dex_noctowl_area_toggle1
+dextoggle DOWN
+snap dex_noctowl_area_toggle2
+dexback
+
+dexgoto 9
+dexinfo
+dexstate
+dexarea
+snap dex_pidgey_area_open
+dextoggle DOWN
+snap dex_pidgey_area_toggle1
+dextoggle DOWN
+snap dex_pidgey_area_toggle2

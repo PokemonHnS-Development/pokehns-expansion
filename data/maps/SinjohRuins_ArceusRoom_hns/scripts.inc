@@ -317,12 +317,12 @@ SinjohRuins_ArceusRoom_EventScript_ArceusRan::
 	end
 
 SinjohRuins_ArceusRoom_Text_CryArceus:
-    .string "ARCEUS: Dodogyuuun!$"
+    .string "ארקיאוס: דודוגיווון!$"
 
 SinjohRuins_ArceusRoom_Text_CryArceus2:
-	.string "ARCEUS: Dodogyuuun!\p"
-	.string "The ARCEUS is weakened...\n"
-	.string "Can be caught?$"
+	.string "ארקיאוס: דודוגיווון!\p"
+	.string "ארקיאוס נחלש…\n"
+	.string "אפשר לתפוס אותו?$"
 
 SinjohRuins_ArceusRoom_TriggerSteven::
 	lock
@@ -358,23 +358,21 @@ SinjohRuins_ArceusRoom_Movement_StevenWalkDown:
 	step_end
 
 SinjohRuins_ArceusRoom_Text_StevenCongrats:
-    .string "STEVEN: You did it, {PLAYER}!\p"
-	.string "That battle was breathtaking.\p"
-	.string "Seeing your power made me realize.\p"
-	.string "The KIMONO GIRLS didn't send you\n"
-	.string "to help our research.\p"
-	.string "I think they sent you because\n"
-	.string "you were the only one worthy of\l"
-	.string "taming the legendary POKéMON.\p"
-	.string "They didn't trust my team and I\n"
-	.string "to handle it.\p"
-	.string "And after what I've just seen...\p"
-	.string "I think they were right.\p"
-	.string "I've brought a lot of unwanted\n"
-	.string "attention to this town.\p"
-	.string "I think I'll spend some time\n"
-	.string "with the locals.\p"
-	.string "After all of this, you and your\n"
-	.string "POKéMON deserve some rest.\p"
-	.string "I'll be at the village if you need me.\p"
-	.string "Fufufu, what could you need from me?$"
+    .string "סטיבן: הצלחת, {PLAYER}!\p"
+    .string "הקרב הזה היה עוצר נשימה.\p"
+    .string "כשראיתי את הכוח שלך, הבנתי.\p"
+    .string "נערות הקימונו לא שלחו אותך\n"
+    .string "כדי לעזור למחקר שלנו.\p"
+    .string "אני חושב שהן שלחו אותך כי רק אתה\n"
+    .string "היית ראוי לאלף את הפוקימון האגדי.\p"
+    .string "הן לא סמכו עליי ועל הצוות שלי\n"
+    .string "שנתמודד עם זה.\p"
+    .string "ואחרי מה שראיתי עכשיו…\p"
+    .string "אני חושב שהן צדקו.\p"
+    .string "משכתי לעיירה הזאת\n"
+    .string "הרבה תשומת לב לא רצויה.\p"
+    .string "אני חושב שאבלה קצת זמן עם המקומיים.\p"
+    .string "אחרי כל זה, מגיעה לך\n"
+    .string "ולפוקימונים שלך קצת מנוחה.\p"
+    .string "אהיה בכפר אם תצטרך אותי.\p"
+    .string "פופופו, מה כבר תצטרך ממני?$"

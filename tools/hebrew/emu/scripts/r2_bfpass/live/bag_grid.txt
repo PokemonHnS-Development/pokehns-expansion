@@ -1,0 +1,25 @@
+sl dome_done
+30 -
+waitctl 300
+startmenu BAG
+waitcb2x CB2_Bag 900
+waitquiet
+60 -
+snap bg_00_bag
+tap A 4
+waitquiet
+30 -
+snap bg_01_ctx
+tap RIGHT 4
+waitquiet
+20 -
+snap bg_02_ctx_right
+tap LEFT 4
+waitquiet
+20 -
+snap bg_03_ctx_left
+tap B 4
+waitquiet
+tap B 4
+waitquiet
+showtasks

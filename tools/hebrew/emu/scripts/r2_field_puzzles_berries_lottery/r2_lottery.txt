@@ -1,0 +1,97 @@
+# Radio Tower 1F lottery corner (GoldenrodCity_RadioTower_1F_hns/scripts.inc:263-363, clerk at
+# (19,10), talked to from (19,11) facing up). The ticket number is VAR_POKELOT_RND1
+# (RetrieveLotteryNumber truncates to u16, src/lottery_corner.c:39-43,145-158), printed with
+# leading zeros by BufferLottoTicketNumber (src/field_specials.c:1712-1740).
+# OT ids: the save's party and its 4 boxed Pokemon are 23773. PickLotteryCornerTicket lets a boxed
+# Pokemon with the SAME number of matching digits win over the party (src/lottery_corner.c:67-90
+# compares against digits-1), so the party case needs an OT no box Pokemon has: party slot 6 gets
+# a Pikachu with OT 41234 (TID set before givemon), the PC an Eevee with OT 55678 (party full).
+#   draw 0: NO                                  -> please visit again
+#   draw 1: 00010  no match
+#   draw 2: 00034  2 digits, party Pikachu      -> 3rd prize PP Up
+#           again the same day                  -> come back tomorrow
+#   draw 3: 00234  3 digits, party              -> 2nd prize
+#   draw 4: 01234  4 digits, party              -> 1st prize Max Revive
+#   draw 5: 41234  5 digits, party              -> grand prize Master Ball
+#   draw 6: 00078  2 digits, PC Eevee           -> 3rd prize
+#   draw 7: 23773  5 digits, PC (the save's box) with the Poke Balls pocket full -> no room,
+#           prize kept; empty it; talk -> the prize kept for later
+start saves/r2fpb_postgame.sav
+include ../continue.txt
+zeromon 5
+settid A112
+ev givemon SPECIES_PIKACHU, 10; end
+settid D97E
+ev givemon SPECIES_EEVEE, 10; end
+settid 5CDD
+probe
+warptoloose MAP_GOLDENROD_CITY_RADIO_TOWER_1F_HNS 19 11
+
+# --- draw 0: NO
+ev setvar VAR_POKELOT_PRIZE_ITEM, 0; clearflag FLAG_DAILY_PICKED_LOTO_TICKET; end
+face UP
+talk lt0_intro 10
+tap B 0
+dialog lt0_no 900
+
+# --- draw 1: 00010, no match
+ev setvar VAR_POKELOT_RND1, 10; setvar VAR_POKELOT_PRIZE_ITEM, 0; clearflag FLAG_DAILY_PICKED_LOTO_TICKET; end
+face UP
+talk lt1_intro 10
+tap A 0
+dialog lt1 3000
+
+# --- draw 2: 00034, 2 digits (party)
+ev setvar VAR_POKELOT_RND1, 34; setvar VAR_POKELOT_PRIZE_ITEM, 0; clearflag FLAG_DAILY_PICKED_LOTO_TICKET; end
+face UP
+talk lt2_intro 10
+tap A 0
+dialog lt2 3000
+# --- the same day again
+face UP
+tap A 0
+dialog lt2_tomorrow 900
+
+# --- draw 3: 00234, 3 digits (party)
+ev setvar VAR_POKELOT_RND1, 234; setvar VAR_POKELOT_PRIZE_ITEM, 0; clearflag FLAG_DAILY_PICKED_LOTO_TICKET; end
+face UP
+talk lt3_intro 10
+tap A 0
+dialog lt3 3000
+
+# --- draw 4: 01234, 4 digits (party)
+ev setvar VAR_POKELOT_RND1, 1234; setvar VAR_POKELOT_PRIZE_ITEM, 0; clearflag FLAG_DAILY_PICKED_LOTO_TICKET; end
+face UP
+talk lt4_intro 10
+tap A 0
+dialog lt4 3000
+
+# --- draw 5: 41234, all 5 digits (party)
+ev setvar VAR_POKELOT_RND1, 41234; setvar VAR_POKELOT_PRIZE_ITEM, 0; clearflag FLAG_DAILY_PICKED_LOTO_TICKET; end
+face UP
+talk lt5_intro 10
+tap A 0
+dialog lt5 3000
+
+# --- draw 6: 00078, 2 digits (the PC Eevee, OT 55678)
+ev setvar VAR_POKELOT_RND1, 78; setvar VAR_POKELOT_PRIZE_ITEM, 0; clearflag FLAG_DAILY_PICKED_LOTO_TICKET; end
+face UP
+talk lt6_intro 10
+tap A 0
+dialog lt6 3000
+
+# --- draw 7: 23773 (PC, the save's box) with no room for a Master Ball, then the prize kept for later
+ev file _fill_balls.inc
+expectvar VAR_TEMP_1 0                  # checkitemspace: no room for one more Master Ball
+ev setvar VAR_POKELOT_RND1, 23773; setvar VAR_POKELOT_PRIZE_ITEM, 0; clearflag FLAG_DAILY_PICKED_LOTO_TICKET; end
+face UP
+talk lt7_intro 10
+tap A 0
+dialog lt7 3000
+probe
+ev file _empty_balls.inc
+expectvar VAR_TEMP_1 1
+face UP
+tap A 0
+dialog lt7_kept 3000
+probe

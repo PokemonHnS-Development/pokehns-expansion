@@ -117,12 +117,12 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
 #endif
         .isFemale = TRUE,
         .lostTexts = {
-            COMPOUND_STRING("Okay, I understand…"), //Silver
-            COMPOUND_STRING("Thank you…")           //Gold
+            COMPOUND_STRING("בסדר, אני מבינה…"), //Silver
+            COMPOUND_STRING("תודה לך…")           //Gold
         },
         .wonTexts = {
-            COMPOUND_STRING("It's very disappointing…"), //Silver
-            COMPOUND_STRING("I'm terribly sorry…")       //Gold
+            COMPOUND_STRING("זה מאכזב מאוד…"), //Silver
+            COMPOUND_STRING("אני ממש מצטערת…")       //Gold
         },
         .battledBit = {1 << 0, 1 << 1},
         .streakAppearances = {35, 70, 35, 1},
@@ -139,17 +139,17 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
         .isFemale = FALSE,
         .lostTexts = {
             COMPOUND_STRING(
-                "Grr…\n"
-                "What the…"),        //Silver
+                "גררר…\n"
+                "מה לעז…"),        //Silver
             COMPOUND_STRING(
-                "Ahahaha!\n"
-                "You're inspiring!") //Gold
+                "אהאהאהא!\n"
+                "אתה מעורר השראה!") //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
-                "Ahahaha! Aren't you embarrassed?\n"
-                "Everyone's watching!"),                              //Silver
-            COMPOUND_STRING("My DOME ACE title isn't just for show!") //Gold
+                "אהאהאהא! לא נעים לך?\n"
+                "כולם מסתכלים!"),                              //Silver
+            COMPOUND_STRING("התואר ”אס הכיפה” שלי לא סתם קישוט!") //Gold
         },
         .battledBit = {1 << 2, 1 << 3},
         .streakAppearances = {4, 9, 5, 0},
@@ -166,19 +166,19 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
         .isFemale = FALSE,
         .lostTexts = {
             COMPOUND_STRING(
-                "Ah…\n"
-                "Now this is something else…"), //Silver
+                "אה…\n"
+                "זה כבר משהו אחר לגמרי…"), //Silver
             COMPOUND_STRING(
-                "Gwah!\n"
-                "Hahahaha!")                    //Gold
+                "גוואה!\n"
+                "האהאהאהא!")                    //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
-                "Your POKéMON are wimpy because\n"
-                "you're wimpy as a TRAINER!"),           //Silver
+                "הפוקימונים שלך רכרוכיים\n"
+                "כי אתה מאמן רכרוכי!"),           //Silver
             COMPOUND_STRING(
-                "Gwahahaha!\n"
-                "My brethren, we have nothing to fear!") //Gold
+                "גוואהאהאהא!\n"
+                "אחיי, אין לנו ממה לחשוש!") //Gold
         },
         .battledBit = {1 << 4, 1 << 5},
         .streakAppearances = {21, 42, 21, 1},
@@ -195,19 +195,19 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
         .isFemale = TRUE,
         .lostTexts = {
             COMPOUND_STRING(
-                "No way!\n"
-                "Good job!"),        //Silver
+                "לא ייאמן!\n"
+                "כל הכבוד!"),        //Silver
             COMPOUND_STRING(
-                "Huh?\n"
-                "Are you serious?!") //Gold
+                "מה?\n"
+                "ברצינות?!") //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
-                "Oh, come on!\n"
-                "You have to try harder than that!"), //Silver
+                "נו, באמת!\n"
+                "צריך להתאמץ יותר מזה!"), //Silver
             COMPOUND_STRING(
-                "Heheh!\n"
-                "What did you expect?")               //Gold
+                "חה חה!\n"
+                "מה ציפית?")               //Gold
         },
         .battledBit = {1 << 6, 1 << 7},
         .streakAppearances = {28, 56, 28, 1},
@@ -224,17 +224,17 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
         .isFemale = FALSE,
         .lostTexts = {
             COMPOUND_STRING(
-                "Good job!\n"
-                "You know what you're doing!"),    //Silver
-            COMPOUND_STRING("What happened here?") //Gold
+                "עבודה טובה!\n"
+                "אתה יודע מה אתה עושה!"),    //Silver
+            COMPOUND_STRING("מה קרה פה?") //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
-                "Way to work!\n"
-                "That was a good lesson, eh?"), //Silver
+                "יפה התאמצת!\n"
+                "זה היה שיעור טוב, נכון?"), //Silver
             COMPOUND_STRING(
-                "Hey, hey, hey!\n"
-                "You're finished already?")     //Gold
+                "היי, היי, היי!\n"
+                "כבר סיימת?")     //Gold
         },
         .battledBit = {1 << 8, 1 << 9},
         .streakAppearances = {21, 42, 21, 1},
@@ -250,12 +250,12 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
 #endif
         .isFemale = TRUE,
         .lostTexts = {
-            COMPOUND_STRING("Urk…"), //Silver
-            COMPOUND_STRING("Darn!") //Gold
+            COMPOUND_STRING("אוף…"), //Silver
+            COMPOUND_STRING("לעזאזל!") //Gold
         },
         .wonTexts = {
-            COMPOUND_STRING("Humph…"), //Silver
-            COMPOUND_STRING("Hah!")    //Gold
+            COMPOUND_STRING("המף…"), //Silver
+            COMPOUND_STRING("הא!")    //Gold
         },
         .battledBit = {1 << 10, 1 << 11},
         .streakAppearances = {28, 140, 56, 1},
@@ -272,19 +272,19 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
         .isFemale = FALSE,
         .lostTexts = {
             COMPOUND_STRING(
-                "That's it! You've done great!\n"
-                "You've worked hard for this!"), //Silver
+                "זהו זה! עשית עבודה נהדרת!\n"
+                "עבדת קשה בשביל זה!"), //Silver
             COMPOUND_STRING(
-                "That's it! You've done it!\n"
-                "You kept working for this!")    //Gold
+                "זהו זה! הצלחת!\n"
+                "לא הפסקת להתאמץ בשביל זה!")    //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
-                "Hey! What's wrong with you!\n"
-                "Let's see some effort! Get up!"),       //Silver
+                "היי! מה קרה לך!\n"
+                "תראה לי קצת מאמץ! קום!"),       //Silver
             COMPOUND_STRING(
-                "Hey! Don't you give up now!\n"
-                "Get up! Don't lose faith in yourself!") //Gold
+                "היי! אל תוותר עכשיו!\n"
+                "קום! אל תפסיק להאמין בעצמך!") //Gold
         },
         .battledBit = {1 << 12, 1 << 13},
         .streakAppearances = {21, 70, 35, 0},
@@ -1080,6 +1080,15 @@ static bool8 IsWinStreakActive(u32 challenge)
         return FALSE;
 }
 
+// x of the results windows' status column (current / previous / record / total), which shares a
+// row with the level label. The Hebrew open-level label is 54 px, so the column moves 6 px further
+// from it to keep a gap wider than the label's own word space.
+#if TEXT_RTL
+#define RESULTS_STATUS_X(x) ((x) + 6)
+#else
+#define RESULTS_STATUS_X(x) (x)
+#endif
+
 static void PrintAligned(const u8 *str, s32 y)
 {
     s32 x = GetStringCenterAlignXOffset(FONT_NORMAL, str, DISPLAY_WIDTH - 16);
@@ -1183,10 +1192,10 @@ static void ShowTowerResultsWindow(u8 battleMode)
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Lv502, 16, 49, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_OpenLv, 16, 97, TEXT_SKIP_DRAW, NULL);
     PrintHyphens(10);
-    TowerPrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, 72, 132, 49);
-    TowerPrintRecordStreak(battleMode, FRONTIER_LVL_50, 72, 132, 65);
-    TowerPrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, 72, 132, 97);
-    TowerPrintRecordStreak(battleMode, FRONTIER_LVL_OPEN, 72, 132, 113);
+    TowerPrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, RESULTS_STATUS_X(72), 132, 49);
+    TowerPrintRecordStreak(battleMode, FRONTIER_LVL_50, RESULTS_STATUS_X(72), 132, 65);
+    TowerPrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, RESULTS_STATUS_X(72), 132, 97);
+    TowerPrintRecordStreak(battleMode, FRONTIER_LVL_OPEN, RESULTS_STATUS_X(72), 132, 113);
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }
@@ -1201,11 +1210,47 @@ static u16 DomeGetWinStreak(u8 battleMode, enum FrontierLevelMode lvlMode)
         return winStreak;
 }
 
+#if TEXT_RTL
+// A results row ends in a count field, so mirrored, the count starts where the row's label ends.
+// Where one window mixes labels of different widths, the English lines their counts up by hand:
+// the Dome prints Championships at x 112 and Clear streak at x 121, the Pike pads Times cleared
+// with {CLEAR 0x05} to the width of Rooms cleared. The Hebrew labels have other widths, so such a
+// row is moved to end where its window's reference row ends, and every count of the window starts
+// in one column, the mirror of the English one.
+static const struct
+{
+    const u8 *str;
+    const u8 *refStr;
+    u8 refX;
+} sRtlCountColumns[] =
+{
+    { gText_Championships, gText_ClearStreak, 121 },
+    { gText_TimesCleared, gText_RoomsCleared, 114 },
+};
+
+static u8 RtlCountColumnX(const u8 *str, u8 x)
+{
+    u32 i;
+
+    // Both strings take the count from gStringVar1, so the difference is that of the labels
+    for (i = 0; i < ARRAY_COUNT(sRtlCountColumns); i++)
+    {
+        if (str == sRtlCountColumns[i].str)
+            return sRtlCountColumns[i].refX + GetStringWidth(FONT_NORMAL, sRtlCountColumns[i].refStr, 0)
+                 - GetStringWidth(FONT_NORMAL, str, 0);
+    }
+    return x;
+}
+#endif
+
 static void PrintTwoStrings(const u8 *str1, const u8 *str2, u16 num, u8 x1, u8 x2, u8 y)
 {
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, str1, x1, y, TEXT_SKIP_DRAW, NULL);
     ConvertIntToDecimalStringN(gStringVar1, num, STR_CONV_MODE_RIGHT_ALIGN, 4);
     StringExpandPlaceholders(gStringVar4, str2);
+#if TEXT_RTL
+    x2 = RtlCountColumnX(str2, x2);
+#endif
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar4, x2, y, TEXT_SKIP_DRAW, NULL);
 }
 
@@ -1250,12 +1295,12 @@ static void ShowDomeResultsWindow(u8 battleMode)
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Lv502, 8, 33, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_OpenLv, 8, 97, TEXT_SKIP_DRAW, NULL);
     PrintHyphens(10);
-    DomePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, 64, 121, 33);
-    PrintTwoStrings(gText_Record, gText_ClearStreak, gSaveBlock2Ptr->frontier.domeRecordWinStreaks[battleMode][FRONTIER_LVL_50], 64, 121, 49);
-    PrintTwoStrings(gText_Total, gText_Championships, gSaveBlock2Ptr->frontier.domeTotalChampionships[battleMode][FRONTIER_LVL_50], 64, 112, 65);
-    DomePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, 64, 121, 97);
-    PrintTwoStrings(gText_Record, gText_ClearStreak, gSaveBlock2Ptr->frontier.domeRecordWinStreaks[battleMode][FRONTIER_LVL_OPEN], 64, 121, 113);
-    PrintTwoStrings(gText_Total, gText_Championships, gSaveBlock2Ptr->frontier.domeTotalChampionships[battleMode][FRONTIER_LVL_OPEN], 64, 112, 129);
+    DomePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, RESULTS_STATUS_X(64), 121, 33);
+    PrintTwoStrings(gText_Record, gText_ClearStreak, gSaveBlock2Ptr->frontier.domeRecordWinStreaks[battleMode][FRONTIER_LVL_50], RESULTS_STATUS_X(64), 121, 49);
+    PrintTwoStrings(gText_Total, gText_Championships, gSaveBlock2Ptr->frontier.domeTotalChampionships[battleMode][FRONTIER_LVL_50], RESULTS_STATUS_X(64), 112, 65);
+    DomePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, RESULTS_STATUS_X(64), 121, 97);
+    PrintTwoStrings(gText_Record, gText_ClearStreak, gSaveBlock2Ptr->frontier.domeRecordWinStreaks[battleMode][FRONTIER_LVL_OPEN], RESULTS_STATUS_X(64), 121, 113);
+    PrintTwoStrings(gText_Total, gText_Championships, gSaveBlock2Ptr->frontier.domeTotalChampionships[battleMode][FRONTIER_LVL_OPEN], RESULTS_STATUS_X(64), 112, 129);
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }
@@ -1326,10 +1371,10 @@ static void ShowPalaceResultsWindow(u8 battleMode)
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Lv502, 16, 49, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_OpenLv, 16, 97, TEXT_SKIP_DRAW, NULL);
     PrintHyphens(10);
-    PalacePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, 72, 131, 49);
-    PalacePrintRecordStreak(battleMode, FRONTIER_LVL_50, 72, 131, 65);
-    PalacePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, 72, 131, 97);
-    PalacePrintRecordStreak(battleMode, FRONTIER_LVL_OPEN, 72, 131, 113);
+    PalacePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, RESULTS_STATUS_X(72), 131, 49);
+    PalacePrintRecordStreak(battleMode, FRONTIER_LVL_50, RESULTS_STATUS_X(72), 131, 65);
+    PalacePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, RESULTS_STATUS_X(72), 131, 97);
+    PalacePrintRecordStreak(battleMode, FRONTIER_LVL_OPEN, RESULTS_STATUS_X(72), 131, 113);
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }
@@ -1349,6 +1394,9 @@ static void PikePrintCleared(const u8 *str1, const u8 *str2, u16 num, u8 x1, u8 
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, str1, x1, y, TEXT_SKIP_DRAW, NULL);
     ConvertIntToDecimalStringN(gStringVar1, num, STR_CONV_MODE_RIGHT_ALIGN, 4);
     StringExpandPlaceholders(gStringVar4, str2);
+#if TEXT_RTL
+    x2 = RtlCountColumnX(str2, x2);
+#endif
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar4, x2, y, TEXT_SKIP_DRAW, NULL);
 }
 
@@ -1378,12 +1426,12 @@ static void ShowPikeResultsWindow(void)
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Lv502, 8, 33, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_OpenLv, 8, 97, TEXT_SKIP_DRAW, NULL);
     PrintHyphens(10);
-    PikePrintPrevOrCurrentStreak(FRONTIER_LVL_50, 64, 114, 33);
-    PikePrintCleared(gText_Record, gText_RoomsCleared, gSaveBlock2Ptr->frontier.pikeRecordStreaks[FRONTIER_LVL_50], 64, 114, 49);
-    PikePrintCleared(gText_Total, gText_TimesCleared, gSaveBlock2Ptr->frontier.pikeTotalStreaks[FRONTIER_LVL_50], 64, 114, 65);
-    PikePrintPrevOrCurrentStreak(FRONTIER_LVL_OPEN, 64, 114, 97);
-    PikePrintCleared(gText_Record, gText_RoomsCleared, gSaveBlock2Ptr->frontier.pikeRecordStreaks[FRONTIER_LVL_OPEN], 64, 114, 113);
-    PikePrintCleared(gText_Total, gText_TimesCleared, gSaveBlock2Ptr->frontier.pikeTotalStreaks[FRONTIER_LVL_OPEN], 64, 114, 129);
+    PikePrintPrevOrCurrentStreak(FRONTIER_LVL_50, RESULTS_STATUS_X(64), 114, 33);
+    PikePrintCleared(gText_Record, gText_RoomsCleared, gSaveBlock2Ptr->frontier.pikeRecordStreaks[FRONTIER_LVL_50], RESULTS_STATUS_X(64), 114, 49);
+    PikePrintCleared(gText_Total, gText_TimesCleared, gSaveBlock2Ptr->frontier.pikeTotalStreaks[FRONTIER_LVL_50], RESULTS_STATUS_X(64), 114, 65);
+    PikePrintPrevOrCurrentStreak(FRONTIER_LVL_OPEN, RESULTS_STATUS_X(64), 114, 97);
+    PikePrintCleared(gText_Record, gText_RoomsCleared, gSaveBlock2Ptr->frontier.pikeRecordStreaks[FRONTIER_LVL_OPEN], RESULTS_STATUS_X(64), 114, 113);
+    PikePrintCleared(gText_Total, gText_TimesCleared, gSaveBlock2Ptr->frontier.pikeTotalStreaks[FRONTIER_LVL_OPEN], RESULTS_STATUS_X(64), 114, 129);
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }
@@ -1440,10 +1488,10 @@ static void ShowArenaResultsWindow(void)
     PrintAligned(gStringVar4, 2);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Lv502, 16, 49, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_OpenLv, 16, 97, TEXT_SKIP_DRAW, NULL);
-    ArenaPrintPrevOrCurrentStreak(FRONTIER_LVL_50, 72, 126, 49);
-    ArenaPrintRecordStreak(FRONTIER_LVL_50, 72, 126, 65);
-    ArenaPrintPrevOrCurrentStreak(FRONTIER_LVL_OPEN, 72, 126, 97);
-    ArenaPrintRecordStreak(FRONTIER_LVL_OPEN, 72, 126, 113);
+    ArenaPrintPrevOrCurrentStreak(FRONTIER_LVL_50, RESULTS_STATUS_X(72), 126, 49);
+    ArenaPrintRecordStreak(FRONTIER_LVL_50, RESULTS_STATUS_X(72), 126, 65);
+    ArenaPrintPrevOrCurrentStreak(FRONTIER_LVL_OPEN, RESULTS_STATUS_X(72), 126, 97);
+    ArenaPrintRecordStreak(FRONTIER_LVL_OPEN, RESULTS_STATUS_X(72), 126, 113);
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }
@@ -1591,10 +1639,10 @@ static void ShowPyramidResultsWindow(void)
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Lv502, 8, 49, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_OpenLv, 8, 97, TEXT_SKIP_DRAW, NULL);
     PrintHyphens(10);
-    PyramidPrintPrevOrCurrentStreak(FRONTIER_LVL_50, 64, 111, 49);
-    PyramidPrintRecordStreak(FRONTIER_LVL_50, 64, 111, 65);
-    PyramidPrintPrevOrCurrentStreak(FRONTIER_LVL_OPEN, 64, 111, 97);
-    PyramidPrintRecordStreak(FRONTIER_LVL_OPEN, 64, 111, 113);
+    PyramidPrintPrevOrCurrentStreak(FRONTIER_LVL_50, RESULTS_STATUS_X(64), 111, 49);
+    PyramidPrintRecordStreak(FRONTIER_LVL_50, RESULTS_STATUS_X(64), 111, 65);
+    PyramidPrintPrevOrCurrentStreak(FRONTIER_LVL_OPEN, RESULTS_STATUS_X(64), 111, 97);
+    PyramidPrintRecordStreak(FRONTIER_LVL_OPEN, RESULTS_STATUS_X(64), 111, 113);
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }
@@ -2632,6 +2680,10 @@ void CopyFrontierBrainTrainerName(u8 *dst)
     trainerName = GetTrainerNameFromId(gFrontierBrainInfo[facility].trainerId);
     for (i = 0; i < PLAYER_NAME_LENGTH; i++)
         dst[i] = trainerName[i];
+#if RTL_STRING_REPORT
+    RtlStringReport(trainerName);
+#endif
+#line 2683
 
     dst[i] = EOS;
 }
@@ -3236,11 +3288,19 @@ void GetFrontierTrainerName(u8 *dst, u16 trainerId)
     {
         for (i = 0; gBattlePartners[difficulty][trainerId - TRAINER_PARTNER(PARTNER_NONE)].trainerName[i] != EOS; i++)
             dst[i] = gBattlePartners[difficulty][trainerId - TRAINER_PARTNER(PARTNER_NONE)].trainerName[i];
+#if RTL_STRING_REPORT
+        RtlStringReport(gBattlePartners[difficulty][trainerId - TRAINER_PARTNER(PARTNER_NONE)].trainerName);
+#endif
+#line 3287
     }
     else if (trainerId < FRONTIER_TRAINERS_COUNT)
     {
         for (i = 0; i < PLAYER_NAME_LENGTH; i++)
             dst[i] = gFacilityTrainers[trainerId].trainerName[i];
+#if RTL_STRING_REPORT
+        RtlStringReport(gFacilityTrainers[trainerId].trainerName);
+#endif
+#line 3292
     }
     else if (trainerId < TRAINER_RECORD_MIXING_APPRENTICE)
     {

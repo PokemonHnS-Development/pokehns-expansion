@@ -1,0 +1,11 @@
+# r6 items: retries. TM Embargo (Route 34) with trainer sight off (FLAG_DISABLE_TRAINERS, OW_FLAG_NO_TRAINER_SEE)
+# and the two TM balls after it in r6i_t02; the Cerulean Gym Machine Part, whose script
+# (CeruleanCity_Gym_EventScript_MachinePartItem) only runs finditem at VAR_KANTO_ROCKET_STORY_STATE 5.
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+setflag FLAG_DISABLE_TRAINERS
+pick t_tm_embargo FLAG_ITEM_ROUTE34_TM_EMBARGO MAP_ROUTE34_HNS 32 21 RIGHT
+pick t_tm_payback FLAG_ITEM_ROUTE35_PAYBACK MAP_ROUTE35_HNS 35 46 UP
+pick t_tm_drain_punch FLAG_ITEM_ROUTE39_TM_DRAIN_PUNCH MAP_ROUTE39_HNS 11 14 UP
+setvar VAR_KANTO_ROCKET_STORY_STATE 5
+pick b_machine_part FLAG_HIDDEN_ITEM_MACHINE_PART MAP_CERULEAN_CITY_GYM_HNS 6 13 LEFT

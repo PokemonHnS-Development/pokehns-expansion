@@ -82,17 +82,16 @@ ViridianForest_Text_RickPostBattle::
 	.string "Another time, okay?$"
 
 ViridianForest_Text_DougIntro::
-	.string "Yo!\n"
-	.string "You can't jam out if you're a\l"
-	.string "POKéMON TRAINER!$"
+	.string "יו!\n"
+	.string "מאמן פוקימונים לא בורח מקרבות!$"
 
 ViridianForest_Text_DougDefeat::
-	.string "Huh?\n"
-	.string "I ran out of POKéMON!$"
+	.string "מה?\n"
+	.string "נגמרו לי הפוקימונים!$"
 
 ViridianForest_Text_DougPostBattle::
-	.string "That totally stinks! I'm going to\n"
-	.string "catch some stronger ones!$"
+	.string "איזו באסה! אני הולך לתפוס\n"
+	.string "פוקימונים חזקים יותר!$"
 
 ViridianForest_Text_SammyIntro::
 	.string "Hey, wait up!\n"

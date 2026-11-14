@@ -1,0 +1,58 @@
+# Trainer double battle: Twins Ann & Anne on Route 37 (trainerbattle_double,
+# data/maps/Route37_hns/scripts.inc:13; Clefairy and Furret Lv 18,
+# src/data/trainers_hns.party:6961-6976). The twins stand at (13,29) and (14,29) facing
+# down with sight 1; the player is put two tiles below Ann and steps up into her sight.
+# Screens: the field intro, the two-trainer battle intro, 2+2 HP boxes, an action menu and
+# a move menu per Pokemon, single-target selection (both foe slots), the targets shown for a
+# move that hits both foes (B_SHOW_TARGETS, include/config/battle.h:337), experience for
+# two Pokemon, the twins' defeat text and the prize money.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_TOTODILE, 34, move1=MOVE_WATER_GUN, move2=MOVE_SURF, move3=MOVE_BITE, move4=MOVE_GROWL; givemon SPECIES_CYNDAQUIL, 34, move1=MOVE_EMBER, move2=MOVE_SWIFT, move3=MOVE_TACKLE, move4=MOVE_SMOKESCREEN; end
+
+warpto MAP_ROUTE37_HNS 13 31
+face UP
+pinrng
+8 UP
+waitnotfree 120
+bwalk bv_double_intro input:HandleInputChooseAction
+snap bv_double_action1
+
+# first Pokemon: Water Gun on one foe (both target slots shown)
+baction FIGHT
+waitbinput HandleInputChooseMove
+snap bv_double_moves1
+bmove 0
+waitbinput HandleInputChooseTarget
+snap bv_double_target_01
+tap RIGHT 4
+waitquiet
+snap bv_double_target_02
+tap LEFT 4
+waitquiet
+tap A 4
+# second Pokemon: Swift hits both foes (the targets are shown first)
+waitbinputb 2 HandleInputChooseAction
+snap bv_double_action2
+bactionb 2 FIGHT
+waitbinputb 2 HandleInputChooseMove
+snap bv_double_moves2
+bmoveb 2 1
+bwalk bv_double_tgt2 input:HandleInputShowTargets#2|input:HandleInputChooseTarget#2|input:HandleInputShowEntireFieldTargets#2
+snap bv_double_targets_swift
+tap A 4
+bwalk bv_double_turn1 input:HandleInputChooseAction|free
+snap bv_double_after1
+
+# turn 2: Surf hits both foes and the partner (the whole field is shown), Swift again
+baction FIGHT
+bmove 1
+bwalk bv_double_tgt3 input:HandleInputShowEntireFieldTargets|input:HandleInputShowTargets
+snap bv_double_targets_surf
+tap A 4
+bactionb 2 FIGHT
+bmoveb 2 1
+waitbinputb 2 HandleInputShowTargets
+tap A 4
+bwalk bv_double_turn2 input:HandleInputChooseAction|free
+snap bv_double_after2

@@ -1,0 +1,9 @@
+# Include: in the bag (Task_BagMenu_HandleInput), cursor on a medicine: A opens USE / CANCEL,
+# A on USE opens the battle party menu for the item (ChooseMonForInBattleItem,
+# src/party_menu.c:7637-7642); wait until it reads input.
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet

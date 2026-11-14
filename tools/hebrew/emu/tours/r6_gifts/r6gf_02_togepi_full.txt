@@ -1,0 +1,15 @@
+# Violet aide with a full party (the ladder 6 party, six Pokemon): AideNoRoom (the offer pages then
+# 'make room first'). Aide_FullParty (:28-32) is only reached when the party fills between the
+# offer and the YES, which a player cannot do; it is started by hand to show its text (synthetic).
+start saves/r6_gifts_base.sav
+include _base.txt
+partyinfo
+ev clearflag FLAG_RECEIVED_TOGEPI_EGG; clearflag FLAG_HIDE_VIOLET_CITY_AIDE; end
+warpto MAP_VIOLET_CITY_POKEMON_CENTER_HNS 9 5
+face UP
+tap A 4
+scene tf_noroom 6000
+snap tf_noroom_end
+evstart lock; goto VioletCity_PokemonCenter_EventScript_Aide_FullParty
+scene tf_syn_fullparty 4000
+snap tf_syn_end

@@ -1,0 +1,15 @@
+# r6 items: tms 1/3. Each event clears the object's or tile's flag, warps next to it, turns the
+# player toward it and presses A (Std_FindItem / EventScript_HiddenItemScript, data/scripts/obtain_item.inc).
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+pick t_tm_taunt FLAG_ITEM_BURNED_TOWER_B1F_TM_TAUNT MAP_BURNED_TOWER_B1F_HNS 5 16 UP
+pick t_tm_recycle FLAG_ITEM_CELADON_CITY_TM_RECYCLE MAP_CELADON_CITY_HNS 3 8 UP
+pick t_tm_calm_mind FLAG_ITEM_GOLDENROD_UNDERGROUND_TM_CALM_MIND MAP_GOLDENROD_CITY_UNDERGROUND_STORAGE_HNS 14 10 UP
+pick t_hm_waterfall FLAG_ITEM_ICEPATH1_HM_WATERFALL MAP_ICE_PATH_1F_HNS 41 12 UP
+pick t_tm_false_swipe FLAG_ITEM_ILEX_FOREST_TM_FALSE_SWIPE MAP_ILEX_FOREST_HNS 72 42 LEFT
+pick t_tm_secret_power FLAG_ITEM_LAKE_OF_RAGE_TM_SECRET_POWER MAP_LAKE_OF_RAGE_HNS 37 2 UP
+pick t_tm_aerial_ace FLAG_ITEM_MTMORTAR1_TM_AERIAL_ACE MAP_MT_MORTAR_1F_SOUTH_HNS 24 15 UP
+pick t_tm_stealth_rock FLAG_ITEM_MT_SILVER_CAVE_TM_STEALTH_ROCK MAP_MT_SILVER_MOUNTAIN_SIDE_HNS 31 30 UP
+pick t_tm_dig FLAG_ITEM_NATIONAL_PARK_TM_DIG MAP_NATIONAL_PARK_NORMAL_HNS 2 43 RIGHT
+pick t_tm_swagger FLAG_ITEM_OLIVINE_TM_SWAGGER MAP_OLIVINE_CITY_LIGHTHOUSE_HNS 125 16 UP
+pick t_tm_charge_beam FLAG_ITEM_OLIVINE_TM_CHARGEBEAM MAP_OLIVINE_CITY_HNS 46 46 LEFT

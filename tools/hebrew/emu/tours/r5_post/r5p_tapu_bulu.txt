@@ -1,0 +1,13 @@
+# Tapu bulu at the island shrine: Alola_Ulaula_BattleVsTapuBulu (data/maps/UlaUla_Forest_hns/scripts.inc:298-326) (faceplayer, cry, a cry text that waits for A,
+# seteventmon + BattleSetup_StartLegendaryBattle). The object is hidden by FLAG_HIDE_TAPU_BULU until the flyover
+# (or the Hall of Fame) clears it; the totem at the same tile is hidden so the talk reaches the Tapu. Intro, savestate, Master Ball catch (dex page, nickname NO,
+# party/PC), then the win branch from the savestate.
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev setflag FLAG_HIDE_ULAULA_TOTEM; clearflag FLAG_HIDE_TAPU_BULU; end
+warpto MAP_ULA_ULA_FOREST_HNS 16 6
+face UP
+snap tp_field
+tap A 4
+scene tp_pre 4000
+include ../r5_legends/_legend_tail.txt

@@ -48,8 +48,8 @@ LavenderTown_Mart_Text_SearchingForStatRaiseItems::
 	.string "Do you know where I can get them?$"
 
 LavenderTown_Mart_Text_DidYouBuyRevives::
-	.string "Did you buy some REVIVES?\n"
-	.string "They revive any fainted POKéMON!$"
+	.string "קנית כמה החייאות?\n"
+	.string "הן מחזירות לחיים כל פוקימון שהתעלף!$"
 
 LavenderTown_Mart_Text_TrainerDuosCanChallengeYou::
 	.string "Sometimes, a TRAINER duo will\n"

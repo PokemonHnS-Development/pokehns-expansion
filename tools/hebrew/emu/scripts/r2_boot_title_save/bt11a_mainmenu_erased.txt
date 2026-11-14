@@ -1,0 +1,13 @@
+# Main menu with gSaveFileStatus pinned to SAVE_STATUS_CORRUPT (2) from power-on (include/save.h:39):
+# gText_SaveFileErased (src/main_menu.c:260, 669-672), then NEW GAME / OPTION.
+start saves/boot_base.sav
+pinsym gSaveFileStatus 0200
+waitcb2 CB2_MainMenu 4000 START
+waittaskx Task_WaitForSaveFileErrorWindow 600
+waitquiet
+snap bt11a_01_erased
+unpinsym gSaveFileStatus
+tap A 4
+waittaskx Task_HandleMainMenuInput 600
+waitquiet
+snap bt11a_02_menu

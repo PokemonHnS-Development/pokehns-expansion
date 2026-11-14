@@ -233,9 +233,9 @@ enum
 static const u8 *GetHoldEffectName(enum HoldEffect holdEffect);
 
 // const rom data
-static const u8 sText_Ability[] = _("Ability");
-static const u8 sText_HeldItem[] = _("Held Item");
-static const u8 sText_HoldEffect[] = _("Hold Effect");
+static const u8 sText_Ability[] = _("יכולת");
+static const u8 sText_HeldItem[] = _("פריט מוחזק");
+static const u8 sText_HoldEffect[] = _("השפעת פריט");
 static const u8 sText_EmptyString[] = _("");
 
 static const struct BitfieldInfo sStatus1Bitfield[] =
@@ -312,152 +312,152 @@ static const struct BitfieldInfo sAIBitfield[] =
 
 static const struct ListMenuItem sMainListItems[] =
 {
-    {COMPOUND_STRING("Moves"),        LIST_ITEM_MOVES},
+    {COMPOUND_STRING("מהלכים"),        LIST_ITEM_MOVES},
     {sText_Ability,                   LIST_ITEM_ABILITY},
     {sText_HeldItem,                  LIST_ITEM_HELD_ITEM},
-    {COMPOUND_STRING("PP"),           LIST_ITEM_PP},
-    {COMPOUND_STRING("Types"),        LIST_ITEM_TYPES},
-    {COMPOUND_STRING("Stats"),        LIST_ITEM_STATS},
-    {COMPOUND_STRING("Stat Stages"),  LIST_ITEM_STAT_STAGES},
-    {COMPOUND_STRING("Status1"),      LIST_ITEM_STATUS1},
-    {COMPOUND_STRING("Volatiles"),    LIST_ITEM_VOLATILE},
-    {COMPOUND_STRING("Hazards"),      LIST_ITEM_HAZARDS},
-    {COMPOUND_STRING("Side Status"),  LIST_ITEM_SIDE_STATUS},
-    {COMPOUND_STRING("AI"),           LIST_ITEM_AI},
-    {COMPOUND_STRING("AI Pts/Dmg"),   LIST_ITEM_AI_MOVES_PTS},
-    {COMPOUND_STRING("AI Info"),      LIST_ITEM_AI_INFO},
-    {COMPOUND_STRING("AI Party"),     LIST_ITEM_AI_PARTY},
-    {COMPOUND_STRING("Various"),      LIST_ITEM_VARIOUS},
-    {COMPOUND_STRING("Instant Win"),  LIST_ITEM_INSTANT_WIN},
+    {COMPOUND_STRING("נ”כ"),           LIST_ITEM_PP},
+    {COMPOUND_STRING("סוגים"),        LIST_ITEM_TYPES},
+    {COMPOUND_STRING("נתונים"),        LIST_ITEM_STATS},
+    {COMPOUND_STRING("דרגות נתונים"),  LIST_ITEM_STAT_STAGES},
+    {COMPOUND_STRING("מצב 1"),      LIST_ITEM_STATUS1},
+    {COMPOUND_STRING("מצב זמני"),    LIST_ITEM_VOLATILE},
+    {COMPOUND_STRING("מלכודות"),      LIST_ITEM_HAZARDS},
+    {COMPOUND_STRING("מצב צד"),  LIST_ITEM_SIDE_STATUS},
+    {COMPOUND_STRING("ב”מ"),           LIST_ITEM_AI},
+    {COMPOUND_STRING("ב”מ נק'/נזק"),   LIST_ITEM_AI_MOVES_PTS},
+    {COMPOUND_STRING("מידע ב”מ"),      LIST_ITEM_AI_INFO},
+    {COMPOUND_STRING("קבוצת ב”מ"),     LIST_ITEM_AI_PARTY},
+    {COMPOUND_STRING("שונות"),      LIST_ITEM_VARIOUS},
+    {COMPOUND_STRING("ניצחון מיידי"),  LIST_ITEM_INSTANT_WIN},
 };
 
 static const struct ListMenuItem sStatsListItems[] =
 {
-    {COMPOUND_STRING("HP Current"), LIST_STAT_HP_CURRENT},
-    {COMPOUND_STRING("HP Max"),     LIST_STAT_HP_MAX},
-    {COMPOUND_STRING("Attack"),     LIST_STAT_ATTACK},
-    {COMPOUND_STRING("Defense"),    LIST_STAT_DEFENSE},
-    {COMPOUND_STRING("Speed"),      LIST_STAT_SPEED},
-    {COMPOUND_STRING("Sp. Atk"),    LIST_STAT_SP_ATK},
-    {COMPOUND_STRING("Sp. Def"),    LIST_STAT_SP_DEF},
+    {COMPOUND_STRING("נ”ח נוכחי"), LIST_STAT_HP_CURRENT},
+    {COMPOUND_STRING("נ”ח מרבי"),     LIST_STAT_HP_MAX},
+    {COMPOUND_STRING("התקפה"),     LIST_STAT_ATTACK},
+    {COMPOUND_STRING("הגנה"),    LIST_STAT_DEFENSE},
+    {COMPOUND_STRING("מהירות"),      LIST_STAT_SPEED},
+    {COMPOUND_STRING("התקפה מיוחדת"),    LIST_STAT_SP_ATK},
+    {COMPOUND_STRING("הגנה מיוחדת"),    LIST_STAT_SP_DEF},
 };
 
 static const struct ListMenuItem sStatus1ListItems[] =
 {
-    {COMPOUND_STRING("Sleep"),         LIST_STATUS1_SLEEP},
-    {COMPOUND_STRING("Poison"),        LIST_STATUS1_POISON},
-    {COMPOUND_STRING("Burn"),          LIST_STATUS1_BURN},
-    {COMPOUND_STRING("Freeze"),        LIST_STATUS1_FREEZE},
-    {COMPOUND_STRING("Paralysis"),     LIST_STATUS1_PARALYSIS},
-    {COMPOUND_STRING("Toxic Poison"),  LIST_STATUS1_TOXIC_POISON},
-    {COMPOUND_STRING("Toxic Counter"), LIST_STATUS1_TOXIC_COUNTER},
-    {COMPOUND_STRING("Frostbite"),     LIST_STATUS1_FROSTBITE},
+    {COMPOUND_STRING("שינה"),         LIST_STATUS1_SLEEP},
+    {COMPOUND_STRING("הרעלה"),        LIST_STATUS1_POISON},
+    {COMPOUND_STRING("כוויה"),          LIST_STATUS1_BURN},
+    {COMPOUND_STRING("קיפאון"),        LIST_STATUS1_FREEZE},
+    {COMPOUND_STRING("שיתוק"),     LIST_STATUS1_PARALYSIS},
+    {COMPOUND_STRING("הרעלה קשה"),  LIST_STATUS1_TOXIC_POISON},
+    {COMPOUND_STRING("מונה הרעלה קשה"), LIST_STATUS1_TOXIC_COUNTER},
+    {COMPOUND_STRING("כוויית קור"),     LIST_STATUS1_FROSTBITE},
 };
 
 static const struct ListMenuItem sVolatileStatusListItems[] =
 {
-    {COMPOUND_STRING("Confusion"),          VOLATILE_CONFUSION},
-    {COMPOUND_STRING("Flinched"),           VOLATILE_FLINCHED},
-    {COMPOUND_STRING("Torment"),            VOLATILE_TORMENT},
-    {COMPOUND_STRING("Powder"),             VOLATILE_POWDER},
-    {COMPOUND_STRING("DefenseCurl"),        VOLATILE_DEFENSE_CURL},
-    {COMPOUND_STRING("Rage"),               VOLATILE_RAGE},
-    {COMPOUND_STRING("DestinyBond"),        VOLATILE_DESTINY_BOND},
-    {COMPOUND_STRING("EscapePrevention"),   VOLATILE_ESCAPE_PREVENTION},
-    {COMPOUND_STRING("Cursed"),             VOLATILE_CURSED},
-    {COMPOUND_STRING("Foresight"),          VOLATILE_FORESIGHT},
-    {COMPOUND_STRING("DragonCheer"),        VOLATILE_DRAGON_CHEER},
-    {COMPOUND_STRING("FocusEnergy"),        VOLATILE_FOCUS_ENERGY},
-    {COMPOUND_STRING("Electrified"),        VOLATILE_ELECTRIFIED},
-    {COMPOUND_STRING("MudSport"),           VOLATILE_MUD_SPORT},
-    {COMPOUND_STRING("WaterSport"),         VOLATILE_WATER_SPORT},
-    {COMPOUND_STRING("Infinite Confusion"), VOLATILE_INFINITE_CONFUSION},
-    {COMPOUND_STRING("Salt Cure"),          VOLATILE_SALT_CURE},
-    {COMPOUND_STRING("Syrup Bomb"),         VOLATILE_SYRUP_BOMB},
-    {COMPOUND_STRING("Glaive Rush"),        VOLATILE_GLAIVE_RUSH},
-    {COMPOUND_STRING("Leech Seed"),         VOLATILE_LEECH_SEED},
-    {COMPOUND_STRING("Lock On"),            VOLATILE_LOCK_ON},
-    {COMPOUND_STRING("Perish Song"),        VOLATILE_PERISH_SONG},
-    {COMPOUND_STRING("Minimize"),           VOLATILE_MINIMIZE},
-    {COMPOUND_STRING("Charge"),             VOLATILE_CHARGE_TIMER},
-    {COMPOUND_STRING("Root"),               VOLATILE_ROOT},
-    {COMPOUND_STRING("Yawn"),               VOLATILE_YAWN},
-    {COMPOUND_STRING("Imprison"),           VOLATILE_IMPRISON},
-    {COMPOUND_STRING("Grudge"),             VOLATILE_GRUDGE},
-    {COMPOUND_STRING("Gastro Acid"),        VOLATILE_GASTRO_ACID},
-    {COMPOUND_STRING("Embargo"),            VOLATILE_EMBARGO},
-    {COMPOUND_STRING("Smack Down"),         VOLATILE_SMACK_DOWN},
-    {COMPOUND_STRING("Telekinesis"),        VOLATILE_TELEKINESIS},
-    {COMPOUND_STRING("Miracle Eye"),        VOLATILE_MIRACLE_EYE},
-    {COMPOUND_STRING("Magnet Rise"),        VOLATILE_MAGNET_RISE},
-    {COMPOUND_STRING("Heal Block"),         VOLATILE_HEAL_BLOCK},
-    {COMPOUND_STRING("Aqua Ring"),          VOLATILE_AQUA_RING},
-    {COMPOUND_STRING("Laser Focus"),        VOLATILE_LASER_FOCUS},
-    {COMPOUND_STRING("Power Trick"),        VOLATILE_POWER_TRICK},
+    {COMPOUND_STRING("בלבול"),          VOLATILE_CONFUSION},
+    {COMPOUND_STRING("נרתע"),           VOLATILE_FLINCHED},
+    {COMPOUND_STRING("עינוי"),            VOLATILE_TORMENT},
+    {COMPOUND_STRING("אבקה"),             VOLATILE_POWDER},
+    {COMPOUND_STRING("עמדת הגנה"),        VOLATILE_DEFENSE_CURL},
+    {COMPOUND_STRING("זעם"),               VOLATILE_RAGE},
+    {COMPOUND_STRING("ברית גורל"),        VOLATILE_DESTINY_BOND},
+    {COMPOUND_STRING("מניעת בריחה"),   VOLATILE_ESCAPE_PREVENTION},
+    {COMPOUND_STRING("מקולל"),             VOLATILE_CURSED},
+    {COMPOUND_STRING("חיזוי"),          VOLATILE_FORESIGHT},
+    {COMPOUND_STRING("עידוד דרקון"),        VOLATILE_DRAGON_CHEER},
+    {COMPOUND_STRING("רכז אנרגיה"),        VOLATILE_FOCUS_ENERGY},
+    {COMPOUND_STRING("מחושמל"),        VOLATILE_ELECTRIFIED},
+    {COMPOUND_STRING("משחק בבוץ"),           VOLATILE_MUD_SPORT},
+    {COMPOUND_STRING("משחק מים"),         VOLATILE_WATER_SPORT},
+    {COMPOUND_STRING("בלבול אינסופי"), VOLATILE_INFINITE_CONFUSION},
+    {COMPOUND_STRING("המלחה"),          VOLATILE_SALT_CURE},
+    {COMPOUND_STRING("פצצת סירופ"),         VOLATILE_SYRUP_BOMB},
+    {COMPOUND_STRING("דהירת להב"),        VOLATILE_GLAIVE_RUSH},
+    {COMPOUND_STRING("זרע יניקה"),         VOLATILE_LEECH_SEED},
+    {COMPOUND_STRING("נעילה"),            VOLATILE_LOCK_ON},
+    {COMPOUND_STRING("שיר מוות"),        VOLATILE_PERISH_SONG},
+    {COMPOUND_STRING("צמצום"),           VOLATILE_MINIMIZE},
+    {COMPOUND_STRING("טעינה"),             VOLATILE_CHARGE_TIMER},
+    {COMPOUND_STRING("השתרשות"),               VOLATILE_ROOT},
+    {COMPOUND_STRING("פיהוק"),               VOLATILE_YAWN},
+    {COMPOUND_STRING("כליאה"),           VOLATILE_IMPRISON},
+    {COMPOUND_STRING("טינה"),             VOLATILE_GRUDGE},
+    {COMPOUND_STRING("חומצת קיבה"),        VOLATILE_GASTRO_ACID},
+    {COMPOUND_STRING("אמברגו"),            VOLATILE_EMBARGO},
+    {COMPOUND_STRING("מכה לקרקע"),         VOLATILE_SMACK_DOWN},
+    {COMPOUND_STRING("טלקינזיס"),        VOLATILE_TELEKINESIS},
+    {COMPOUND_STRING("עין פלא"),        VOLATILE_MIRACLE_EYE},
+    {COMPOUND_STRING("ריחוף מגנטי"),        VOLATILE_MAGNET_RISE},
+    {COMPOUND_STRING("חסימת ריפוי"),         VOLATILE_HEAL_BLOCK},
+    {COMPOUND_STRING("טבעת מים"),          VOLATILE_AQUA_RING},
+    {COMPOUND_STRING("מיקוד לייזר"),        VOLATILE_LASER_FOCUS},
+    {COMPOUND_STRING("תעלול כוח"),        VOLATILE_POWER_TRICK},
 };
 
 static const struct ListMenuItem sHazardsListItems[] =
 {
-    {COMPOUND_STRING("Spikes"),       LIST_SIDE_SPIKES},
-    {COMPOUND_STRING("Sticky Web"),   LIST_SIDE_STICKY_WEB},
-    {COMPOUND_STRING("Toxic Spikes"), LIST_SIDE_TOXIC_SPIKES},
-    {COMPOUND_STRING("Stealth Rock"), LIST_SIDE_STEALTH_ROCK},
-    {COMPOUND_STRING("Steelsurge"),   LIST_SIDE_STEELSURGE},
+    {COMPOUND_STRING("קוצים"),       LIST_SIDE_SPIKES},
+    {COMPOUND_STRING("קורים דביקים"),   LIST_SIDE_STICKY_WEB},
+    {COMPOUND_STRING("קוצים רעילים"), LIST_SIDE_TOXIC_SPIKES},
+    {COMPOUND_STRING("סלעי מארב"), LIST_SIDE_STEALTH_ROCK},
+    {COMPOUND_STRING("גל פלדה"),   LIST_SIDE_STEELSURGE},
 };
 
 static const struct ListMenuItem sSideStatusListItems[] =
 {
-    {COMPOUND_STRING("Reflect"),          LIST_SIDE_REFLECT},
-    {COMPOUND_STRING("Light Screen"),     LIST_SIDE_LIGHTSCREEN},
-    {COMPOUND_STRING("Safeguard"),        LIST_SIDE_SAFEGUARD},
-    {COMPOUND_STRING("Mist"),             LIST_SIDE_MIST},
-    {COMPOUND_STRING("Tailwind"),         LIST_SIDE_TAILWIND},
-    {COMPOUND_STRING("Aurora Veil"),      LIST_SIDE_AURORA_VEIL},
-    {COMPOUND_STRING("Lucky Chant"),      LIST_SIDE_LUCKY_CHANT},
-    {COMPOUND_STRING("Damage Non-Types"), LIST_SIDE_DAMAGE_NON_TYPES},
-    {COMPOUND_STRING("Rainbow"),          LIST_SIDE_RAINBOW},
-    {COMPOUND_STRING("Sea of Fire"),      LIST_SIDE_SEA_OF_FIRE},
-    {COMPOUND_STRING("Swamp"),            LIST_SIDE_SWAMP},
+    {COMPOUND_STRING("שיקוף"),          LIST_SIDE_REFLECT},
+    {COMPOUND_STRING("מסך אור"),     LIST_SIDE_LIGHTSCREEN},
+    {COMPOUND_STRING("שמירה"),        LIST_SIDE_SAFEGUARD},
+    {COMPOUND_STRING("ערפל"),             LIST_SIDE_MIST},
+    {COMPOUND_STRING("רוח גבית"),         LIST_SIDE_TAILWIND},
+    {COMPOUND_STRING("צעיף זוהר"),      LIST_SIDE_AURORA_VEIL},
+    {COMPOUND_STRING("לחש מזל"),      LIST_SIDE_LUCKY_CHANT},
+    {COMPOUND_STRING("נזק לשאר הסוגים"), LIST_SIDE_DAMAGE_NON_TYPES},
+    {COMPOUND_STRING("קשת בענן"),          LIST_SIDE_RAINBOW},
+    {COMPOUND_STRING("ים של אש"),      LIST_SIDE_SEA_OF_FIRE},
+    {COMPOUND_STRING("ביצה טובענית"),            LIST_SIDE_SWAMP},
 };
 
 static const struct ListMenuItem sAIListItems[] =
 {
-    {COMPOUND_STRING("Check Bad Move"),             LIST_AI_CHECK_BAD_MOVE},
-    {COMPOUND_STRING("Try to Faint"),               LIST_AI_TRY_TO_FAINT},
-    {COMPOUND_STRING("Check Viability"),            LIST_AI_CHECK_VIABILITY},
-    {COMPOUND_STRING("Force Setup First Turn"),     LIST_AI_FORCE_SETUP_FIRST_TURN},
-    {COMPOUND_STRING("Risky"),                      LIST_AI_RISKY},
-    {COMPOUND_STRING("Try to 2HKO"),                LIST_AI_TRY_TO_2HKO},
-    {COMPOUND_STRING("Prefer Baton Pass"),          LIST_AI_PREFER_BATON_PASS},
-    {COMPOUND_STRING("Double Battle"),              LIST_AI_DOUBLE_BATTLE},
-    {COMPOUND_STRING("HP Aware"),                   LIST_AI_HP_AWARE},
-    {COMPOUND_STRING("Powerful Status"),            LIST_AI_POWERFUL_STATUS},
-    {COMPOUND_STRING("Negate Unaware"),             LIST_AI_NEGATE_UNAWARE},
-    {COMPOUND_STRING("Will Suicide"),               LIST_AI_WILL_SUICIDE},
-    {COMPOUND_STRING("Prefer Status Moves"),        LIST_AI_PREFER_STATUS_MOVES},
-    {COMPOUND_STRING("Stall"),                      LIST_AI_STALL},
-    {COMPOUND_STRING("Smart Switching"),            LIST_AI_SMART_SWITCHING},
-    {COMPOUND_STRING("Ace Pokémon"),                LIST_AI_ACE_POKEMON},
-    {COMPOUND_STRING("Omniscient"),                 LIST_AI_OMNISCIENT},
-    {COMPOUND_STRING("Smart Mon Choices"),          LIST_AI_SMART_MON_CHOICES},
-    {COMPOUND_STRING("Conservative"),               LIST_AI_CONSERVATIVE},
-    {COMPOUND_STRING("Sequence Switching"),         LIST_AI_SEQUENCE_SWITCHING},
-    {COMPOUND_STRING("Double Ace Pokémon"),         LIST_AI_DOUBLE_ACE_POKEMON},
-    {COMPOUND_STRING("Weigh Ability Prediction"),   LIST_AI_WEIGH_ABILITY_PREDICTION},
-    {COMPOUND_STRING("Prefer Highest Damage Move"), LIST_AI_PREFER_HIGHEST_DAMAGE_MOVE},
-    {COMPOUND_STRING("Predict Switch"),             LIST_AI_PREDICT_SWITCH},
-    {COMPOUND_STRING("Predict Incoming Mon"),       LIST_AI_PREDICT_INCOMING_MON},
-    {COMPOUND_STRING("Dynamic Func"),               LIST_AI_DYNAMIC_FUNC},
-    {COMPOUND_STRING("Roaming"),                    LIST_AI_ROAMING},
-    {COMPOUND_STRING("Safari"),                     LIST_AI_SAFARI},
-    {COMPOUND_STRING("First Battle"),               LIST_AI_FIRST_BATTLE},
+    {COMPOUND_STRING("בדיקת מהלך גרוע"),             LIST_AI_CHECK_BAD_MOVE},
+    {COMPOUND_STRING("ניסיון לחסל"),               LIST_AI_TRY_TO_FAINT},
+    {COMPOUND_STRING("בדיקת כדאיות"),            LIST_AI_CHECK_VIABILITY},
+    {COMPOUND_STRING("הכנה כפויה בתור הראשון"),     LIST_AI_FORCE_SETUP_FIRST_TURN},
+    {COMPOUND_STRING("לקיחת סיכונים"),                      LIST_AI_RISKY},
+    {COMPOUND_STRING("ניסיון לחסל ב-2 מכות"),                LIST_AI_TRY_TO_2HKO},
+    {COMPOUND_STRING("העדפת העברת מקל"),          LIST_AI_PREFER_BATON_PASS},
+    {COMPOUND_STRING("קרב כפול"),              LIST_AI_DOUBLE_BATTLE},
+    {COMPOUND_STRING("מודעות לנ”ח"),                   LIST_AI_HP_AWARE},
+    {COMPOUND_STRING("מהלכי סטטוס חזקים"),            LIST_AI_POWERFUL_STATUS},
+    {COMPOUND_STRING("לא מודע לנטרולים"),             LIST_AI_NEGATE_UNAWARE},
+    {COMPOUND_STRING("הקרבה עצמית"),               LIST_AI_WILL_SUICIDE},
+    {COMPOUND_STRING("העדפת מהלכי סטטוס"),        LIST_AI_PREFER_STATUS_MOVES},
+    {COMPOUND_STRING("משיכת זמן"),                      LIST_AI_STALL},
+    {COMPOUND_STRING("החלפה חכמה"),            LIST_AI_SMART_SWITCHING},
+    {COMPOUND_STRING("פוקימון הדגל"),                LIST_AI_ACE_POKEMON},
+    {COMPOUND_STRING("יודע הכול"),                 LIST_AI_OMNISCIENT},
+    {COMPOUND_STRING("בחירת פוקימון חכמה"),          LIST_AI_SMART_MON_CHOICES},
+    {COMPOUND_STRING("שמרני"),               LIST_AI_CONSERVATIVE},
+    {COMPOUND_STRING("החלפה לפי הסדר"),         LIST_AI_SEQUENCE_SWITCHING},
+    {COMPOUND_STRING("שני פוקימוני דגל"),         LIST_AI_DOUBLE_ACE_POKEMON},
+    {COMPOUND_STRING("שקילת חיזוי יכולת"),   LIST_AI_WEIGH_ABILITY_PREDICTION},
+    {COMPOUND_STRING("העדפת המהלך המזיק ביותר"), LIST_AI_PREFER_HIGHEST_DAMAGE_MOVE},
+    {COMPOUND_STRING("חיזוי החלפה"),             LIST_AI_PREDICT_SWITCH},
+    {COMPOUND_STRING("חיזוי הפוקימון הנכנס"),       LIST_AI_PREDICT_INCOMING_MON},
+    {COMPOUND_STRING("פונקציה דינמית"),               LIST_AI_DYNAMIC_FUNC},
+    {COMPOUND_STRING("נודד"),                    LIST_AI_ROAMING},
+    {COMPOUND_STRING("ספארי"),                     LIST_AI_SAFARI},
+    {COMPOUND_STRING("קרב ראשון"),               LIST_AI_FIRST_BATTLE},
 };
 
 static const struct ListMenuItem sVariousListItems[] =
 {
-    {COMPOUND_STRING("Show HP"),       VARIOUS_SHOW_HP},
-    {COMPOUND_STRING("Substitute HP"), VARIOUS_SUBSTITUTE_HP},
-    {COMPOUND_STRING("In Love"),       VARIOUS_IN_LOVE},
+    {COMPOUND_STRING("הצגת נ”ח"),       VARIOUS_SHOW_HP},
+    {COMPOUND_STRING("נ”ח של ממלא מקום"), VARIOUS_SUBSTITUTE_HP},
+    {COMPOUND_STRING("מאוהב"),       VARIOUS_IN_LOVE},
 };
 
 static const struct ListMenuItem sSecondaryListItems[] =
@@ -544,7 +544,13 @@ static const struct WindowTemplate sSecondaryListWindowTemplate =
 static const struct WindowTemplate sModifyWindowTemplate =
 {
     .bg = 0,
+#if TEXT_RTL
+    // The mirror of the English spot inside the secondary list's visible 18 tiles, so it does not
+    // cover the right end of row 0, where the right-aligned rows start.
+    .tilemapLeft = 13,
+#else
     .tilemapLeft = 25,
+#endif
     .tilemapTop = 2,
     .width = 4,
     .height = 2,
@@ -734,7 +740,7 @@ static void PutMovesPointsText(struct BattleDebugMenu *data)
     u8 *text = Alloc(0x50);
 
     FillWindowPixelBuffer(data->aiMovesWindowId, 0x11);
-    AddTextPrinterParameterized(data->aiMovesWindowId, FONT_NORMAL, COMPOUND_STRING("Score/Dmg"), 3, 0, 0, NULL);
+    AddTextPrinterParameterized(data->aiMovesWindowId, FONT_NORMAL, COMPOUND_STRING("ניקוד/נזק"), 3, 0, 0, NULL);
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
         text[0] = CHAR_SPACE;
@@ -775,7 +781,7 @@ static void PutMovesPointsText(struct BattleDebugMenu *data)
     {
         struct Pokemon *party = GetBattlerParty(data->aiBattlerId);
         u32 switchMon = GetMonData(&party[gAiLogicData->mostSuitableMonId[data->aiBattlerId]], MON_DATA_SPECIES);
-        AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74, 79, sTextColorTable[COLORID_RED], 0, COMPOUND_STRING("Switching to "));
+        AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74, 79, sTextColorTable[COLORID_RED], 0, COMPOUND_STRING("עובר לפוקימון "));
         AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74 + 68, 79, sTextColorTable[COLORID_RED], 0, gSpeciesInfo[switchMon].speciesName);
     }
 
@@ -1008,7 +1014,13 @@ static void Task_ShowAiKnowledge(u8 taskId)
             {
                 data->spriteIds.aiIconSpriteIds[i] = CreateMonIcon(gBattleMons[i].species,
                                                          SpriteCallbackDummy,
+#if TEXT_RTL
+                                                         // Mirrored with the 27-tile text window, above
+                                                         // the battler's mirrored column.
+                                                         27 * 8 - (95 + (count * 80)), 17, 0, 0);
+#else
                                                          95 + (count * 80), 17, 0, 0);
+#endif
                 gSprites[data->spriteIds.aiIconSpriteIds[i]].data[0] = i; // battler id
                 count++;
             }
@@ -1052,7 +1064,7 @@ static void Task_ShowAiKnowledge(u8 taskId)
 
 static void Task_ShowAiParty(u8 taskId)
 {
-    u32 i, ailment;
+    u32 i, ailment, x;
     struct WindowTemplate winTemplate;
     struct AiPartyMon *aiMons;
     struct BattleDebugMenu *data = GetStructPtr(taskId);
@@ -1072,10 +1084,16 @@ static void Task_ShowAiParty(u8 taskId)
             u16 species = SPECIES_NONE; // Question mark
             if (aiMons[i].wasSentInBattle && aiMons[i].species)
                 species = aiMons[i].species;
-            data->spriteIds.aiPartyIcons[i] = CreateMonIcon(species, SpriteCallbackDummy, (i * 41) + 15, 7, 1, 0);
+#if TEXT_RTL
+            // Mirrored with the 29-tile text window, so each icon stays above its own column.
+            x = 29 * 8 - ((i * 41) + 15);
+#else
+            x = (i * 41) + 15;
+#endif
+            data->spriteIds.aiPartyIcons[i] = CreateMonIcon(species, SpriteCallbackDummy, x, 7, 1, 0);
             gSprites[data->spriteIds.aiPartyIcons[i]].oam.priority = 0;
 
-            gSprites[data->spriteIds.aiPartyIcons[i]].sConditionSpriteId = CreateSprite(&gSpriteTemplate_StatusIcons, (i * 41) + 15, 7, 0);
+            gSprites[data->spriteIds.aiPartyIcons[i]].sConditionSpriteId = CreateSprite(&gSpriteTemplate_StatusIcons, x, 7, 0);
             gSprites[gSprites[data->spriteIds.aiPartyIcons[i]].sConditionSpriteId].oam.priority = 0;
             if (aiMons[i].isFainted)
                 ailment = AILMENT_FNT;
@@ -1237,6 +1255,10 @@ static void Task_DebugMenuProcessInput(u8 taskId)
         {
             data->currentSecondaryListItemId = listItemId;
             data->modifyWindowId = AddWindow(&sModifyWindowTemplate);
+#if TEXT_RTL
+            // Digits only, edited one by one under the arrows: keep them left to right.
+            SetWindowRtlMode(data->modifyWindowId, WINDOW_RTL_LTR);
+#endif
             PutWindowTilemap(data->modifyWindowId);
             CopyWindowToVram(data->modifyWindowId, COPYWIN_FULL);
             SetUpModifyArrows(data);
@@ -1252,6 +1274,13 @@ static void Task_DebugMenuProcessInput(u8 taskId)
             ClearStdWindowAndFrameToTransparent(data->modifyWindowId, TRUE);
             RemoveWindow(data->modifyWindowId);
             DestroyModifyArrows(data);
+#if TEXT_RTL
+            // The cleared frame around the mirrored modify window runs over the battler window's
+            // bottom row and the left end of the secondary list's first row: put both back.
+            PutWindowTilemap(data->battlerWindowId);
+            PutWindowTilemap(data->secondaryListWindowId);
+            CopyBgTilemapBufferToVram(0);
+#endif
             data->activeWindow = ACTIVE_WIN_SECONDARY;
         }
         else if (JOY_NEW(DPAD_RIGHT))
@@ -1413,6 +1442,11 @@ static void CreateSecondaryListMenu(struct BattleDebugMenu *data)
 
     data->secondaryListItemCount = itemsCount;
     data->secondaryListWindowId = AddWindow(&winTemplate);
+#if TEXT_RTL
+    // The window runs 2 tiles past the screen's right edge: mirror the rows and the cursor inside
+    // the 18 tiles that are on screen.
+    SetWindowRtlMirrorWidth(data->secondaryListWindowId, 18 * 8);
+#endif
 
     listTemplate.totalItems = itemsCount;
     listTemplate.maxShowed = itemsCount;
@@ -1428,6 +1462,10 @@ static void PadString(const u8 *src, u8 *dst)
 {
     u32 i;
 
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
+#line 1465
     for (i = 0; i < 19 && src[i] != EOS; i++)
         dst[i] = src[i];
 
@@ -1437,7 +1475,7 @@ static void PadString(const u8 *src, u8 *dst)
     dst[i] = EOS;
 }
 
-static const u8 sTextAll[] = _("All");
+static const u8 sTextAll[] = _("הכול");
 
 static void PrintSecondaryEntries(struct BattleDebugMenu *data)
 {
@@ -1875,8 +1913,14 @@ static u16 *GetSideStatusValue(struct BattleDebugMenu *data, bool32 changeStatus
 static void SetUpModifyArrows(struct BattleDebugMenu *data)
 {
     LoadSpritePalette(&gSpritePalette_Arrow);
+#if TEXT_RTL
+    // Over the first digit of the modify window, which is mirrored to tile 13.
+    data->modifyArrows.arrowSpriteId[0] = CreateSprite(&gSpriteTemplate_Arrow, 111, 12, 0);
+    data->modifyArrows.arrowSpriteId[1] = CreateSprite(&gSpriteTemplate_Arrow, 111, 36, 0);
+#else
     data->modifyArrows.arrowSpriteId[0] = CreateSprite(&gSpriteTemplate_Arrow, 207, 12, 0);
     data->modifyArrows.arrowSpriteId[1] = CreateSprite(&gSpriteTemplate_Arrow, 207, 36, 0);
+#endif
     gSprites[data->modifyArrows.arrowSpriteId[1]].animNum = 1;
     switch (data->currentMainListItemId)
     {
@@ -2162,135 +2206,135 @@ static void UpdateMonData(struct BattleDebugMenu *data)
 static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
 {
     [HOLD_EFFECT_NONE]             = COMPOUND_STRING("????????"),
-    [HOLD_EFFECT_RESTORE_HP]       = COMPOUND_STRING("Restore Hp"),
-    [HOLD_EFFECT_CURE_PAR]         = COMPOUND_STRING("Cure Par"),
-    [HOLD_EFFECT_CURE_SLP]         = COMPOUND_STRING("Cure Slp"),
-    [HOLD_EFFECT_CURE_PSN]         = COMPOUND_STRING("Cure Psn"),
-    [HOLD_EFFECT_CURE_BRN]         = COMPOUND_STRING("Cure Brn"),
-    [HOLD_EFFECT_CURE_FRZ]         = COMPOUND_STRING("Cure Frz"),
-    [HOLD_EFFECT_RESTORE_PP]       = COMPOUND_STRING("Restore Pp"),
-    [HOLD_EFFECT_CURE_CONFUSION]   = COMPOUND_STRING("Cure Confusion"),
-    [HOLD_EFFECT_CURE_STATUS]      = COMPOUND_STRING("Cure Status"),
-    [HOLD_EFFECT_CONFUSE_SPICY]    = COMPOUND_STRING("Confuse Spicy"),
-    [HOLD_EFFECT_CONFUSE_DRY]      = COMPOUND_STRING("Confuse Dry"),
-    [HOLD_EFFECT_CONFUSE_SWEET]    = COMPOUND_STRING("Confuse Sweet"),
-    [HOLD_EFFECT_CONFUSE_BITTER]   = COMPOUND_STRING("Confuse Bitter"),
-    [HOLD_EFFECT_CONFUSE_SOUR]     = COMPOUND_STRING("Confuse Sour"),
-    [HOLD_EFFECT_ATTACK_UP]        = COMPOUND_STRING("Attack Up"),
-    [HOLD_EFFECT_DEFENSE_UP]       = COMPOUND_STRING("Defense Up"),
-    [HOLD_EFFECT_SPEED_UP]         = COMPOUND_STRING("Speed Up"),
-    [HOLD_EFFECT_SP_ATTACK_UP]     = COMPOUND_STRING("Sp Attack Up"),
-    [HOLD_EFFECT_SP_DEFENSE_UP]    = COMPOUND_STRING("Sp Defense Up"),
-    [HOLD_EFFECT_CRITICAL_UP]      = COMPOUND_STRING("Critical Up"),
-    [HOLD_EFFECT_RANDOM_STAT_UP]   = COMPOUND_STRING("Random Stat Up"),
-    [HOLD_EFFECT_EVASION_UP]       = COMPOUND_STRING("Evasion Up"),
-    [HOLD_EFFECT_WHITE_HERB]       = COMPOUND_STRING("Restore Stats"),
-    [HOLD_EFFECT_MACHO_BRACE]      = COMPOUND_STRING("Macho Brace"),
-    [HOLD_EFFECT_EXP_SHARE]        = COMPOUND_STRING("Exp Share"),
-    [HOLD_EFFECT_QUICK_CLAW]       = COMPOUND_STRING("Quick Claw"),
-    [HOLD_EFFECT_FRIENDSHIP_UP]    = COMPOUND_STRING("Friendship Up"),
-    [HOLD_EFFECT_MENTAL_HERB]      = COMPOUND_STRING("Mental Herb"),
-    [HOLD_EFFECT_CHOICE_BAND]      = COMPOUND_STRING("Choice Band"),
-    [HOLD_EFFECT_FLINCH]           = COMPOUND_STRING("Flinch"),
-    [HOLD_EFFECT_DOUBLE_PRIZE]     = COMPOUND_STRING("Double Prize"),
-    [HOLD_EFFECT_REPEL]            = COMPOUND_STRING("Repel"),
-    [HOLD_EFFECT_SOUL_DEW]         = COMPOUND_STRING("Soul Dew"),
-    [HOLD_EFFECT_DEEP_SEA_TOOTH]   = COMPOUND_STRING("Deep Sea Tooth"),
-    [HOLD_EFFECT_DEEP_SEA_SCALE]   = COMPOUND_STRING("Deep Sea Scale"),
-    [HOLD_EFFECT_CAN_ALWAYS_RUN]   = COMPOUND_STRING("Can Always Run"),
-    [HOLD_EFFECT_PREVENT_EVOLVE]   = COMPOUND_STRING("Prevent Evolve"),
-    [HOLD_EFFECT_FOCUS_BAND]       = COMPOUND_STRING("Focus Band"),
-    [HOLD_EFFECT_LUCKY_EGG]        = COMPOUND_STRING("Lucky Egg"),
-    [HOLD_EFFECT_SCOPE_LENS]       = COMPOUND_STRING("Scope Lens"),
-    [HOLD_EFFECT_LEFTOVERS]        = COMPOUND_STRING("Leftovers"),
-    [HOLD_EFFECT_LIGHT_BALL]       = COMPOUND_STRING("Light Ball"),
-    [HOLD_EFFECT_TYPE_POWER]       = COMPOUND_STRING("Type Power"),
-    [HOLD_EFFECT_SHELL_BELL]       = COMPOUND_STRING("Shell Bell"),
-    [HOLD_EFFECT_LUCKY_PUNCH]      = COMPOUND_STRING("Lucky Punch"),
-    [HOLD_EFFECT_METAL_POWDER]     = COMPOUND_STRING("Metal Powder"),
-    [HOLD_EFFECT_THICK_CLUB]       = COMPOUND_STRING("Thick Club"),
-    [HOLD_EFFECT_LEEK]             = COMPOUND_STRING("Leek"),
-    [HOLD_EFFECT_CHOICE_SCARF]     = COMPOUND_STRING("Choice Scarf"),
-    [HOLD_EFFECT_CHOICE_SPECS]     = COMPOUND_STRING("Choice Specs"),
-    [HOLD_EFFECT_DAMP_ROCK]        = COMPOUND_STRING("Damp Rock"),
-    [HOLD_EFFECT_GRIP_CLAW]        = COMPOUND_STRING("Grip Claw"),
-    [HOLD_EFFECT_HEAT_ROCK]        = COMPOUND_STRING("Heat Rock"),
-    [HOLD_EFFECT_ICY_ROCK]         = COMPOUND_STRING("Icy Rock"),
-    [HOLD_EFFECT_LIGHT_CLAY]       = COMPOUND_STRING("Light Clay"),
-    [HOLD_EFFECT_SMOOTH_ROCK]      = COMPOUND_STRING("Smooth Rock"),
-    [HOLD_EFFECT_POWER_HERB]       = COMPOUND_STRING("Power Herb"),
-    [HOLD_EFFECT_BIG_ROOT]         = COMPOUND_STRING("Big Root"),
-    [HOLD_EFFECT_EXPERT_BELT]      = COMPOUND_STRING("Expert Belt"),
-    [HOLD_EFFECT_LIFE_ORB]         = COMPOUND_STRING("Life Orb"),
-    [HOLD_EFFECT_METRONOME]        = COMPOUND_STRING("Metronome"),
-    [HOLD_EFFECT_MUSCLE_BAND]      = COMPOUND_STRING("Muscle Band"),
-    [HOLD_EFFECT_WIDE_LENS]        = COMPOUND_STRING("Wide Lens"),
-    [HOLD_EFFECT_WISE_GLASSES]     = COMPOUND_STRING("Wise Glasses"),
-    [HOLD_EFFECT_ZOOM_LENS]        = COMPOUND_STRING("Zoom Lens"),
-    [HOLD_EFFECT_LAGGING_TAIL]     = COMPOUND_STRING("Lagging Tail"),
-    [HOLD_EFFECT_FOCUS_SASH]       = COMPOUND_STRING("Focus Sash"),
-    [HOLD_EFFECT_FLAME_ORB]        = COMPOUND_STRING("Flame Orb"),
-    [HOLD_EFFECT_TOXIC_ORB]        = COMPOUND_STRING("Toxic Orb"),
-    [HOLD_EFFECT_STICKY_BARB]      = COMPOUND_STRING("Sticky Barb"),
-    [HOLD_EFFECT_IRON_BALL]        = COMPOUND_STRING("Iron Ball"),
-    [HOLD_EFFECT_BLACK_SLUDGE]     = COMPOUND_STRING("Black Sludge"),
-    [HOLD_EFFECT_DESTINY_KNOT]     = COMPOUND_STRING("Destiny Knot"),
-    [HOLD_EFFECT_SHED_SHELL]       = COMPOUND_STRING("Shed Shell"),
-    [HOLD_EFFECT_QUICK_POWDER]     = COMPOUND_STRING("Quick Powder"),
-    [HOLD_EFFECT_ADAMANT_ORB]      = COMPOUND_STRING("Adamant Orb"),
-    [HOLD_EFFECT_LUSTROUS_ORB]     = COMPOUND_STRING("Lustrous Orb"),
-    [HOLD_EFFECT_GRISEOUS_ORB]     = COMPOUND_STRING("Griseous Orb"),
-    [HOLD_EFFECT_ENIGMA_BERRY]     = COMPOUND_STRING("Enigma Berry"),
-    [HOLD_EFFECT_RESIST_BERRY]     = COMPOUND_STRING("Resist Berry"),
-    [HOLD_EFFECT_POWER_ITEM]       = COMPOUND_STRING("Power Item"),
-    [HOLD_EFFECT_RESTORE_PCT_HP]   = COMPOUND_STRING("Restore Pct Hp"),
-    [HOLD_EFFECT_MICLE_BERRY]      = COMPOUND_STRING("Micle Berry"),
-    [HOLD_EFFECT_CUSTAP_BERRY]     = COMPOUND_STRING("Custap Berry"),
-    [HOLD_EFFECT_JABOCA_BERRY]     = COMPOUND_STRING("Jaboca Berry"),
-    [HOLD_EFFECT_ROWAP_BERRY]      = COMPOUND_STRING("Rowap Berry"),
-    [HOLD_EFFECT_KEE_BERRY]        = COMPOUND_STRING("Kee Berry"),
-    [HOLD_EFFECT_MARANGA_BERRY]    = COMPOUND_STRING("Maranga Berry"),
-    [HOLD_EFFECT_PLATE]            = COMPOUND_STRING("Plate"),
-    [HOLD_EFFECT_FLOAT_STONE]      = COMPOUND_STRING("Float Stone"),
-    [HOLD_EFFECT_EVIOLITE]         = COMPOUND_STRING("Eviolite"),
-    [HOLD_EFFECT_ASSAULT_VEST]     = COMPOUND_STRING("Assault Vest"),
-    [HOLD_EFFECT_DRIVE]            = COMPOUND_STRING("Drive"),
-    [HOLD_EFFECT_GEMS]             = COMPOUND_STRING("Gems"),
-    [HOLD_EFFECT_ROCKY_HELMET]     = COMPOUND_STRING("Rocky Helmet"),
-    [HOLD_EFFECT_AIR_BALLOON]      = COMPOUND_STRING("Air Balloon"),
-    [HOLD_EFFECT_RED_CARD]         = COMPOUND_STRING("Red Card"),
-    [HOLD_EFFECT_RING_TARGET]      = COMPOUND_STRING("Ring Target"),
-    [HOLD_EFFECT_BINDING_BAND]     = COMPOUND_STRING("Binding Band"),
-    [HOLD_EFFECT_EJECT_BUTTON]     = COMPOUND_STRING("Eject Button"),
-    [HOLD_EFFECT_ABSORB_BULB]      = COMPOUND_STRING("Absorb Bulb"),
-    [HOLD_EFFECT_CELL_BATTERY]     = COMPOUND_STRING("Cell Battery"),
-    [HOLD_EFFECT_MEGA_STONE]       = COMPOUND_STRING("Mega Stone"),
-    [HOLD_EFFECT_SAFETY_GOGGLES]   = COMPOUND_STRING("Safety Goggles"),
-    [HOLD_EFFECT_LUMINOUS_MOSS]    = COMPOUND_STRING("Luminous Moss"),
-    [HOLD_EFFECT_SNOWBALL]         = COMPOUND_STRING("Snowball"),
-    [HOLD_EFFECT_WEAKNESS_POLICY]  = COMPOUND_STRING("Weakness Policy"),
-    [HOLD_EFFECT_PRIMAL_ORB]       = COMPOUND_STRING("Primal Orb"),
-    [HOLD_EFFECT_PROTECTIVE_PADS]  = COMPOUND_STRING("Protective Pads"),
-    [HOLD_EFFECT_TERRAIN_EXTENDER] = COMPOUND_STRING("Terrain Extender"),
-    [HOLD_EFFECT_TERRAIN_SEED]     = COMPOUND_STRING("Seeds"),
-    [HOLD_EFFECT_ADRENALINE_ORB]   = COMPOUND_STRING("Adrenaline Orb"),
-    [HOLD_EFFECT_MEMORY]           = COMPOUND_STRING("Memory"),
-    [HOLD_EFFECT_Z_CRYSTAL]        = COMPOUND_STRING("Z-Crystal"),
-    [HOLD_EFFECT_UTILITY_UMBRELLA] = COMPOUND_STRING("Utility Umbrella"),
-    [HOLD_EFFECT_EJECT_PACK]       = COMPOUND_STRING("Eject Pack"),
-    [HOLD_EFFECT_ROOM_SERVICE]     = COMPOUND_STRING("Room Service"),
-    [HOLD_EFFECT_BLUNDER_POLICY]   = COMPOUND_STRING("Blunder Policy"),
-    [HOLD_EFFECT_HEAVY_DUTY_BOOTS] = COMPOUND_STRING("Heavy Duty Boots"),
-    [HOLD_EFFECT_THROAT_SPRAY]     = COMPOUND_STRING("Throat Spray"),
-    [HOLD_EFFECT_ABILITY_SHIELD]   = COMPOUND_STRING("Ability Shield"),
-    [HOLD_EFFECT_CLEAR_AMULET]     = COMPOUND_STRING("Clear Amulet"),
-    [HOLD_EFFECT_MIRROR_HERB]      = COMPOUND_STRING("Mirror Herb"),
-    [HOLD_EFFECT_PUNCHING_GLOVE]   = COMPOUND_STRING("Punching Glove"),
-    [HOLD_EFFECT_COVERT_CLOAK]     = COMPOUND_STRING("Covert Cloak"),
-    [HOLD_EFFECT_LOADED_DICE]      = COMPOUND_STRING("Loaded Dice"),
-    [HOLD_EFFECT_BOOSTER_ENERGY]   = COMPOUND_STRING("Booster Energy"),
-    [HOLD_EFFECT_OGERPON_MASK]     = COMPOUND_STRING("Ogerpon Mask"),
-    [HOLD_EFFECT_BERSERK_GENE]     = COMPOUND_STRING("Berserk Gene"),
+    [HOLD_EFFECT_RESTORE_HP]       = COMPOUND_STRING("שיקום נ”ח"),
+    [HOLD_EFFECT_CURE_PAR]         = COMPOUND_STRING("ריפוי שיתוק"),
+    [HOLD_EFFECT_CURE_SLP]         = COMPOUND_STRING("ריפוי שינה"),
+    [HOLD_EFFECT_CURE_PSN]         = COMPOUND_STRING("ריפוי הרעלה"),
+    [HOLD_EFFECT_CURE_BRN]         = COMPOUND_STRING("ריפוי כוויה"),
+    [HOLD_EFFECT_CURE_FRZ]         = COMPOUND_STRING("ריפוי קיפאון"),
+    [HOLD_EFFECT_RESTORE_PP]       = COMPOUND_STRING("שיקום נ”כ"),
+    [HOLD_EFFECT_CURE_CONFUSION]   = COMPOUND_STRING("ריפוי בלבול"),
+    [HOLD_EFFECT_CURE_STATUS]      = COMPOUND_STRING("ריפוי מצב"),
+    [HOLD_EFFECT_CONFUSE_SPICY]    = COMPOUND_STRING("בלבול חריף"),
+    [HOLD_EFFECT_CONFUSE_DRY]      = COMPOUND_STRING("בלבול יבש"),
+    [HOLD_EFFECT_CONFUSE_SWEET]    = COMPOUND_STRING("בלבול מתוק"),
+    [HOLD_EFFECT_CONFUSE_BITTER]   = COMPOUND_STRING("בלבול מר"),
+    [HOLD_EFFECT_CONFUSE_SOUR]     = COMPOUND_STRING("בלבול חמוץ"),
+    [HOLD_EFFECT_ATTACK_UP]        = COMPOUND_STRING("התקפה +"),
+    [HOLD_EFFECT_DEFENSE_UP]       = COMPOUND_STRING("הגנה +"),
+    [HOLD_EFFECT_SPEED_UP]         = COMPOUND_STRING("מהירות +"),
+    [HOLD_EFFECT_SP_ATTACK_UP]     = COMPOUND_STRING("התק' מ' +"),
+    [HOLD_EFFECT_SP_DEFENSE_UP]    = COMPOUND_STRING("הגנ' מ' +"),
+    [HOLD_EFFECT_CRITICAL_UP]      = COMPOUND_STRING("קריטיות +"),
+    [HOLD_EFFECT_RANDOM_STAT_UP]   = COMPOUND_STRING("נתון מקרי +"),
+    [HOLD_EFFECT_EVASION_UP]       = COMPOUND_STRING("התחמקות +"),
+    [HOLD_EFFECT_WHITE_HERB]       = COMPOUND_STRING("שיקום נתונים"),
+    [HOLD_EFFECT_MACHO_BRACE]      = COMPOUND_STRING("רצועת מאצ'ו"),
+    [HOLD_EFFECT_EXP_SHARE]        = COMPOUND_STRING("חולק ניסיון"),
+    [HOLD_EFFECT_QUICK_CLAW]       = COMPOUND_STRING("טופר מהיר"),
+    [HOLD_EFFECT_FRIENDSHIP_UP]    = COMPOUND_STRING("חברות +"),
+    [HOLD_EFFECT_MENTAL_HERB]      = COMPOUND_STRING("עשב נפשי"),
+    [HOLD_EFFECT_CHOICE_BAND]      = COMPOUND_STRING("סרט בחירה"),
+    [HOLD_EFFECT_FLINCH]           = COMPOUND_STRING("רתיעה"),
+    [HOLD_EFFECT_DOUBLE_PRIZE]     = COMPOUND_STRING("פרס כפול"),
+    [HOLD_EFFECT_REPEL]            = COMPOUND_STRING("דוחה"),
+    [HOLD_EFFECT_SOUL_DEW]         = COMPOUND_STRING("טל נשמה"),
+    [HOLD_EFFECT_DEEP_SEA_TOOTH]   = COMPOUND_STRING("שן מצולות"),
+    [HOLD_EFFECT_DEEP_SEA_SCALE]   = COMPOUND_STRING("קשקש מצולות"),
+    [HOLD_EFFECT_CAN_ALWAYS_RUN]   = COMPOUND_STRING("בריחה מובטחת"),
+    [HOLD_EFFECT_PREVENT_EVOLVE]   = COMPOUND_STRING("מניעת התפתחות"),
+    [HOLD_EFFECT_FOCUS_BAND]       = COMPOUND_STRING("רצועת ריכוז"),
+    [HOLD_EFFECT_LUCKY_EGG]        = COMPOUND_STRING("ביצת מזל"),
+    [HOLD_EFFECT_SCOPE_LENS]       = COMPOUND_STRING("עדשת דיוק"),
+    [HOLD_EFFECT_LEFTOVERS]        = COMPOUND_STRING("שאריות"),
+    [HOLD_EFFECT_LIGHT_BALL]       = COMPOUND_STRING("כדור אור"),
+    [HOLD_EFFECT_TYPE_POWER]       = COMPOUND_STRING("עוצמת סוג"),
+    [HOLD_EFFECT_SHELL_BELL]       = COMPOUND_STRING("פעמון קונכיה"),
+    [HOLD_EFFECT_LUCKY_PUNCH]      = COMPOUND_STRING("כפפת מזל"),
+    [HOLD_EFFECT_METAL_POWDER]     = COMPOUND_STRING("אבקת מתכת"),
+    [HOLD_EFFECT_THICK_CLUB]       = COMPOUND_STRING("עצם עבה"),
+    [HOLD_EFFECT_LEEK]             = COMPOUND_STRING("מקל"),
+    [HOLD_EFFECT_CHOICE_SCARF]     = COMPOUND_STRING("צעיף בחירה"),
+    [HOLD_EFFECT_CHOICE_SPECS]     = COMPOUND_STRING("משקפי בחירה"),
+    [HOLD_EFFECT_DAMP_ROCK]        = COMPOUND_STRING("סלע לח"),
+    [HOLD_EFFECT_GRIP_CLAW]        = COMPOUND_STRING("טופר אחיזה"),
+    [HOLD_EFFECT_HEAT_ROCK]        = COMPOUND_STRING("סלע חם"),
+    [HOLD_EFFECT_ICY_ROCK]         = COMPOUND_STRING("סלע קר"),
+    [HOLD_EFFECT_LIGHT_CLAY]       = COMPOUND_STRING("חימר אור"),
+    [HOLD_EFFECT_SMOOTH_ROCK]      = COMPOUND_STRING("סלע חלק"),
+    [HOLD_EFFECT_POWER_HERB]       = COMPOUND_STRING("עשב כוח"),
+    [HOLD_EFFECT_BIG_ROOT]         = COMPOUND_STRING("שורש גדול"),
+    [HOLD_EFFECT_EXPERT_BELT]      = COMPOUND_STRING("חגורת מומחה"),
+    [HOLD_EFFECT_LIFE_ORB]         = COMPOUND_STRING("גולת חיים"),
+    [HOLD_EFFECT_METRONOME]        = COMPOUND_STRING("פעמן"),
+    [HOLD_EFFECT_MUSCLE_BAND]      = COMPOUND_STRING("רצועת שרירים"),
+    [HOLD_EFFECT_WIDE_LENS]        = COMPOUND_STRING("עדשה רחבה"),
+    [HOLD_EFFECT_WISE_GLASSES]     = COMPOUND_STRING("משקף חכם"),
+    [HOLD_EFFECT_ZOOM_LENS]        = COMPOUND_STRING("עדשת זום"),
+    [HOLD_EFFECT_LAGGING_TAIL]     = COMPOUND_STRING("זנב איטי"),
+    [HOLD_EFFECT_FOCUS_SASH]       = COMPOUND_STRING("אבנט ריכוז"),
+    [HOLD_EFFECT_FLAME_ORB]        = COMPOUND_STRING("גולת להבה"),
+    [HOLD_EFFECT_TOXIC_ORB]        = COMPOUND_STRING("גולת הרעלה"),
+    [HOLD_EFFECT_STICKY_BARB]      = COMPOUND_STRING("קוץ דביק"),
+    [HOLD_EFFECT_IRON_BALL]        = COMPOUND_STRING("כדור ברזל"),
+    [HOLD_EFFECT_BLACK_SLUDGE]     = COMPOUND_STRING("רפש שחור"),
+    [HOLD_EFFECT_DESTINY_KNOT]     = COMPOUND_STRING("קשר גורל"),
+    [HOLD_EFFECT_SHED_SHELL]       = COMPOUND_STRING("קליפת השלה"),
+    [HOLD_EFFECT_QUICK_POWDER]     = COMPOUND_STRING("אבקה מהירה"),
+    [HOLD_EFFECT_ADAMANT_ORB]      = COMPOUND_STRING("גולת יהלום"),
+    [HOLD_EFFECT_LUSTROUS_ORB]     = COMPOUND_STRING("גולה בוהקת"),
+    [HOLD_EFFECT_GRISEOUS_ORB]     = COMPOUND_STRING("גולה אפורה"),
+    [HOLD_EFFECT_ENIGMA_BERRY]     = COMPOUND_STRING("פרי אניגמה"),
+    [HOLD_EFFECT_RESIST_BERRY]     = COMPOUND_STRING("פרי עמידות"),
+    [HOLD_EFFECT_POWER_ITEM]       = COMPOUND_STRING("פריט כוח"),
+    [HOLD_EFFECT_RESTORE_PCT_HP]   = COMPOUND_STRING("שיקום נ”ח באחוז"),
+    [HOLD_EFFECT_MICLE_BERRY]      = COMPOUND_STRING("פרי מייקל"),
+    [HOLD_EFFECT_CUSTAP_BERRY]     = COMPOUND_STRING("פרי קאסטפ"),
+    [HOLD_EFFECT_JABOCA_BERRY]     = COMPOUND_STRING("פרי ג'בוקה"),
+    [HOLD_EFFECT_ROWAP_BERRY]      = COMPOUND_STRING("פרי רוואפ"),
+    [HOLD_EFFECT_KEE_BERRY]        = COMPOUND_STRING("פרי קי"),
+    [HOLD_EFFECT_MARANGA_BERRY]    = COMPOUND_STRING("פרי מרנגה"),
+    [HOLD_EFFECT_PLATE]            = COMPOUND_STRING("לוח"),
+    [HOLD_EFFECT_FLOAT_STONE]      = COMPOUND_STRING("אבן ציפה"),
+    [HOLD_EFFECT_EVIOLITE]         = COMPOUND_STRING("גביש התפת'"),
+    [HOLD_EFFECT_ASSAULT_VEST]     = COMPOUND_STRING("אפוד תקיפה"),
+    [HOLD_EFFECT_DRIVE]            = COMPOUND_STRING("כונן"),
+    [HOLD_EFFECT_GEMS]             = COMPOUND_STRING("אבני חן"),
+    [HOLD_EFFECT_ROCKY_HELMET]     = COMPOUND_STRING("קסדה סלעית"),
+    [HOLD_EFFECT_AIR_BALLOON]      = COMPOUND_STRING("בלון אוויר"),
+    [HOLD_EFFECT_RED_CARD]         = COMPOUND_STRING("כרטיס אדום"),
+    [HOLD_EFFECT_RING_TARGET]      = COMPOUND_STRING("טבעת מטרה"),
+    [HOLD_EFFECT_BINDING_BAND]     = COMPOUND_STRING("רצועת עקידה"),
+    [HOLD_EFFECT_EJECT_BUTTON]     = COMPOUND_STRING("כפתור פליטה"),
+    [HOLD_EFFECT_ABSORB_BULB]      = COMPOUND_STRING("פקעת ספיגה"),
+    [HOLD_EFFECT_CELL_BATTERY]     = COMPOUND_STRING("סוללה"),
+    [HOLD_EFFECT_MEGA_STONE]       = COMPOUND_STRING("אבן מגה"),
+    [HOLD_EFFECT_SAFETY_GOGGLES]   = COMPOUND_STRING("משקפי מגן"),
+    [HOLD_EFFECT_LUMINOUS_MOSS]    = COMPOUND_STRING("טחב זוהר"),
+    [HOLD_EFFECT_SNOWBALL]         = COMPOUND_STRING("כדור שלג"),
+    [HOLD_EFFECT_WEAKNESS_POLICY]  = COMPOUND_STRING("פוליסת חולשה"),
+    [HOLD_EFFECT_PRIMAL_ORB]       = COMPOUND_STRING("גולה קדמונית"),
+    [HOLD_EFFECT_PROTECTIVE_PADS]  = COMPOUND_STRING("רפידות מגן"),
+    [HOLD_EFFECT_TERRAIN_EXTENDER] = COMPOUND_STRING("מאריך שטח"),
+    [HOLD_EFFECT_TERRAIN_SEED]     = COMPOUND_STRING("זרעי שטח"),
+    [HOLD_EFFECT_ADRENALINE_ORB]   = COMPOUND_STRING("גולת אדרנלין"),
+    [HOLD_EFFECT_MEMORY]           = COMPOUND_STRING("זיכרון"),
+    [HOLD_EFFECT_Z_CRYSTAL]        = COMPOUND_STRING("גביש Z"),
+    [HOLD_EFFECT_UTILITY_UMBRELLA] = COMPOUND_STRING("מטרייה שימושית"),
+    [HOLD_EFFECT_EJECT_PACK]       = COMPOUND_STRING("תרמיל פליטה"),
+    [HOLD_EFFECT_ROOM_SERVICE]     = COMPOUND_STRING("שירות חדרים"),
+    [HOLD_EFFECT_BLUNDER_POLICY]   = COMPOUND_STRING("פוליסת פספוס"),
+    [HOLD_EFFECT_HEAVY_DUTY_BOOTS] = COMPOUND_STRING("מגפיים עמידים"),
+    [HOLD_EFFECT_THROAT_SPRAY]     = COMPOUND_STRING("תרסיס גרון"),
+    [HOLD_EFFECT_ABILITY_SHIELD]   = COMPOUND_STRING("מגן יכולת"),
+    [HOLD_EFFECT_CLEAR_AMULET]     = COMPOUND_STRING("קמע שקוף"),
+    [HOLD_EFFECT_MIRROR_HERB]      = COMPOUND_STRING("עשב מראה"),
+    [HOLD_EFFECT_PUNCHING_GLOVE]   = COMPOUND_STRING("כפפת אגרוף"),
+    [HOLD_EFFECT_COVERT_CLOAK]     = COMPOUND_STRING("גלימת הסוואה"),
+    [HOLD_EFFECT_LOADED_DICE]      = COMPOUND_STRING("קוביות מזוי'"),
+    [HOLD_EFFECT_BOOSTER_ENERGY]   = COMPOUND_STRING("אנרגיית דחף"),
+    [HOLD_EFFECT_OGERPON_MASK]     = COMPOUND_STRING("מסכת אוגרפון"),
+    [HOLD_EFFECT_BERSERK_GENE]     = COMPOUND_STRING("גן טירוף"),
 };
 
 static const u8 *GetHoldEffectName(enum HoldEffect holdEffect)

@@ -1,0 +1,156 @@
+# Bill's grandpa, Route 25 (Route25_BillsHouse_hns:371-621; (7,6), talked to from (7,7)), from
+# VAR_BILLS_GRANDPA 0: intro + Meowth NO; YES + B; YES + Typhlosion (wrong); YES + Meowth (Exp. Candy
+# L x1); Zigzagoon (x3), Ponyta (x5), Farfetch'd (x7), Slowpoke (Galarica Cuff + Wreath, teleporter
+# unlocked), shown all. Then the teleporter PC (bg (4,5) from (4,6)): help window, NO; YES + Corsola
+# (not in the party); YES + Meowth (the cutscene and the Galarian form).
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+ev file _gramps_party.inc
+ev setvar VAR_BILLS_GRANDPA, 0; clearflag FLAG_TELEPORTER_UNLOCKED; end
+warpto MAP_ROUTE25_BILLS_HOUSE_HNS 7 7
+
+# --- 1. intro, Meowth: NO
+face UP
+tap A 4
+fieldwatch p1_intro menu 8000
+pick 1
+fieldwatch p1_no free 6000
+
+# --- 2. YES, then B in the party menu
+face UP
+tap A 4
+fieldwatch p2_meowth menu 8000
+pick 0
+fieldwatch p2_excited cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap p2_party
+tap B 0
+fieldwatch p2_declined free 6000
+
+# --- 3. YES, Typhlosion: wrong
+face UP
+tap A 4
+fieldwatch p3_meowth menu 8000
+pick 0
+fieldwatch p3_excited cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 5 DOWN
+tap A 0
+fieldwatch p3_wrong free 6000
+
+# --- 4. Meowth
+face UP
+tap A 4
+fieldwatch p4_meowth menu 8000
+pick 0
+fieldwatch p4_excited cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap A 0
+fieldwatch p4_shown free 12000
+
+# --- 5. Zigzagoon
+face UP
+tap A 4
+fieldwatch p5_zigzagoon menu 8000
+pick 0
+fieldwatch p5_excited cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+fieldwatch p5_shown free 12000
+
+# --- 6. Ponyta
+face UP
+tap A 4
+fieldwatch p6_ponyta menu 8000
+pick 0
+fieldwatch p6_excited cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 0
+fieldwatch p6_shown free 12000
+
+# --- 7. Farfetch'd
+face UP
+tap A 4
+fieldwatch p7_farfetchd menu 8000
+pick 0
+fieldwatch p7_excited cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 3 DOWN
+tap A 0
+fieldwatch p7_shown free 14000
+
+# --- 8. Slowpoke: the Galarica items, the teleporter
+face UP
+tap A 4
+fieldwatch p8_slowpoke menu 8000
+pick 0
+fieldwatch p8_excited cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 4 DOWN
+tap A 0
+fieldwatch p8_shown free 14000
+flags FLAG_TELEPORTER_UNLOCKED
+
+# --- 9. shown all
+face UP
+tap A 4
+fieldwatch p9_all free 8000
+
+# --- 10. the teleporter: help window, NO
+warpto MAP_ROUTE25_BILLS_HOUSE_HNS 4 6
+face UP
+tap A 4
+waitmem 32 @sGlobalScriptContext+4@ @WaitForAorBPress@ 300
+snap t1_help
+tap A 0
+fieldwatch t1_ask menu 6000
+pick 1
+fieldwatch t1_no free 3000
+
+# --- 11. YES, Corsola (row 12): not in the party
+face UP
+tap A 4
+waitmem 32 @sGlobalScriptContext+4@ @WaitForAorBPress@ 300
+tap A 0
+fieldwatch t2_ask menu 6000
+pick 0
+waittaskx Task_HandleScrollingMultichoiceInput 600
+waitquiet
+snap t2_list
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap t2_list_corsola
+tap A 0
+fieldwatch t2_notinparty free 6000
+
+# --- 12. YES, Meowth (row 0): the cutscene
+face UP
+tap A 4
+waitmem 32 @sGlobalScriptContext+4@ @WaitForAorBPress@ 300
+tap A 0
+fieldwatch t3_ask menu 6000
+pick 0
+waittaskx Task_HandleScrollingMultichoiceInput 600
+waitquiet
+tap A 0
+fieldwatch t3_cutscene free 20000 40
+partyinfo

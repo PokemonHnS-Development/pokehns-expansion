@@ -58,28 +58,28 @@ PewterCity_EventScript_Cooltrainer::
 	end
 
 PewterCity_Text_CooltrainerF:
-	.string "Have you visited PEWTER GYM?\p"
-	.string "The LEADER uses ROCK-type POKéMON.$"
+	.string "כבר ביקרת במכון פיוטר?\p"
+	.string "מנהיג המכון משתמש\n"
+	.string "בפוקימונים מסוג סלע.$"
 
 PewterCity_Text_BugCatcher:
-	.string "At night, CLEFAIRY come out to play at\n"
-	.string "MT.MOON.\p"
-	.string "But not every night.$"
+	.string "בלילה, קלפרי יוצאים לשחק\n"
+	.string "בהר הירח.\p"
+	.string "אבל לא בכל לילה.$"
 
 PewterCity_Text_Gramps:
-	.string "Ah, you came all the way out here from\n"
-	.string "JOHTO?\p"
-	.string "That brings back memories. When I was\n"
-	.string "young, I went to JOHTO to train.\p"
-	.string "You remind me so much of what I was like\n"
-	.string "as a young man.\p"
-	.string "Here. I want you to have this item I\n"
-	.string "found in JOHTO.$"
+	.string "אה, הגעת עד לכאן מג'וטו?\p"
+	.string "זה מעורר זיכרונות. כשהייתי צעיר,\n"
+	.string "נסעתי לג'וטו להתאמן.\p"
+	.string "אתה כל כך מזכיר לי את עצמי\n"
+	.string "כשהייתי בחור צעיר.\p"
+	.string "הנה. אני רוצה לתת לך את הפריט הזה\n"
+	.string "שמצאתי בג'וטו.$"
 
 PewterCity_Text_Gramps_GotSilverWing:
-	.string "Going to new, unknown places and seeing\n"
-	.string "new people…\p"
-	.string "Those are the joys of travel.$"
+	.string "לנסוע למקומות חדשים ולא מוכרים\n"
+	.string "ולפגוש אנשים חדשים…\p"
+	.string "אלה התענוגות שבמסעות.$"
 
 PewterCity_EventScript_CitySign::
 	msgbox PewterCity_Text_Sign, MSGBOX_NPC
@@ -102,23 +102,23 @@ PewterCity_EventScript_WelcomeSign::
 	end
 
 PewterCity_Text_Sign:
-	.string "PEWTER CITY\n"
-	.string "A Stone Gray City$"
+	.string "העיר פיוטר\n"
+	.string "עיר אפורה כסלע$"
 
 PewterCity_Text_GymSign:
-	.string "PEWTER CITY POKéMON GYM\n"
-	.string "LEADER: BROCK\p"
-	.string "The Rock Solid POKéMON Trainer$"
+	.string "מכון הפוקימון של העיר פיוטר\n"
+	.string "מנהיג: ברוק\p"
+	.string "מאמן הפוקימונים הקשוח כסלע$"
 
 PewterCity_Text_MuseumSign:
-	.string "There's a notice here…\p"
-	.string "PEWTER MUSEUM OF SCIENCE is closed for\n"
-	.string "renovations…$"
+	.string "יש כאן הודעה…\p"
+	.string "מוזיאון המדע של פיוטר סגור\n"
+	.string "לשיפוצים…$"
 
 PewterCity_Text_MtMoonGiftShopSign:
-	.string "There's a notice here…\p"
-	.string "MT.MOON GIFT SHOP NOW OPEN!$"
+	.string "יש כאן הודעה…\p"
+	.string "חנות המזכרות של הר הירח נפתחה!$"
 
 PewterCity_Text_WelcomeSign:
-	.string "WELCOME TO PEWTER CITY!$"
+	.string "ברוכים הבאים לעיר פיוטר!$"
 

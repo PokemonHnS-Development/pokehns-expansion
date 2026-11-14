@@ -1,0 +1,42 @@
+# The PokeGear ribbon summary of a Pokémon with all 20 contest ribbons: every ribbon's name and
+# description (gRibbonDescriptionPointers, src/data/text/ribbon_descriptions.h), among them the four
+# NORMAL-rank ones. Trimmed from scripts/r2_pokegear_ribbons_contests/rc_ribbons.txt (same ops).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+w8 @gContestMonPartyIndex@ 0
+w8 @gContestPlayerMonIndex@ 3
+w32 @gContestFinalStandings@ 00010203
+ev setvar VAR_CONTEST_CATEGORY, 0; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 3; special GiveMonContestRibbon; end
+ev setvar VAR_CONTEST_CATEGORY, 1; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 3; special GiveMonContestRibbon; end
+ev setvar VAR_CONTEST_CATEGORY, 2; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 3; special GiveMonContestRibbon; end
+ev setvar VAR_CONTEST_CATEGORY, 3; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 3; special GiveMonContestRibbon; end
+ev setvar VAR_CONTEST_CATEGORY, 4; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 3; special GiveMonContestRibbon; end
+startmenu POKEGEAR
+waitcb2x CB2_Pokenav 600
+waitnav
+press DOWN
+waitnav
+press DOWN
+waitnav
+press DOWN
+waitnav
+press DOWN
+waitnav
+snap gear_ribbons
+press A
+waitnav
+snap rib_list
+press A
+waitnav
+snap rib_sum_m1
+press A
+waitnav
+ribbonwalk rib_m1
+press B
+waitnav
+press B
+waitnav
+press B
+waitnav
+press B
+waitcb2x CB2_Overworld 900

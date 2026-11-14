@@ -111,17 +111,16 @@ GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave2:
 
 
 GoldenrodCity_UndergroundTunnel_Text_Kimono1:
-	.string "Team Rocket members in black suits\n"
-	.string "have been running around...\p"
-	.string "I was wondering what was going on.\n"
-	.string "So, you took on Team Rocket?\l"
-	.string "You are impressive!\p"
-	.string "You may be able to face the\n"
-	.string "legendary POKé...$"
+	.string "חברי צוות רוקט בחליפות שחורות\n"
+	.string "התרוצצו כאן…\p"
+	.string "תהיתי מה קורה. אז נלחמת\n"
+	.string "בצוות רוקט? מרשים מאוד!\p"
+	.string "אולי תוכל להתמודד מול\n"
+	.string "הפוקימון האגד…$"
 
 GoldenrodCity_UndergroundTunnel_Text_Kimono2:
-	.string "Hahaha! Never mind.\n"
-	.string "I must go now.$"
+	.string "חה-חה-חה! לא חשוב.\n"
+	.string "אני חייבת ללכת עכשיו.$"
 
 GoldenrodUnderground_EventScript_Eric::
 	trainerbattle_single TRAINER_ERIC_HNS, GoldenrodUnderground_Text_SupernerdEricSeen, GoldenrodUnderground_Text_SupernerdEricBeaten
@@ -321,110 +320,110 @@ GoldenrodCity_UndergroundTunnel_EventScript_Item_Antidote::
 
 
 GoldenrodUnderground_Text_YoungerBrotherOffer:
-    .string "Welcome to the POKéMON SALON!\p"
-    .string "I'm the younger and less expensive\n"
-    .string "of the two HAIRCUT BROTHERS.\p"
-    .string "I'll spiff up your POKéMON for just\n"
-    .string "¥300.\p"
-    .string "So? How about it?$"
+    .string "ברוכים הבאים לסלון הפוקימונים!\p"
+    .string "אני הצעיר והזול מבין\n"
+    .string "שני האחים הספרים.\p"
+    .string "אסדר לפוקימון שלך תספורת\n"
+    .string "תמורת ¥300 בלבד.\p"
+    .string "נו? מה דעתך?$"
 
 GoldenrodUnderground_Text_YoungerBrotherAskWhich:
-    .string "OK, which POKéMON should I do?$"
+    .string "טוב, על איזה פוקימון לעבוד?$"
 
 GoldenrodUnderground_Text_YoungerBrotherLookCool:
-    .string "OK! I'll make it look cool!$"
+    .string "בסדר! אדאג שהוא ייראה מגניב!$"
 
 GoldenrodUnderground_Text_YoungerBrotherAllDone:
-    .string "There we go! All done!$"
+    .string "הנה! סיימנו!$"
 
 GoldenrodUnderground_Text_YoungerBrotherDisappointed:
-    .string "No? How disappointing!$"
+    .string "לא? כמה מאכזב!$"
 
 GoldenrodUnderground_Text_YoungerBrotherShortOnFunds:
-    .string "You're a little short on funds.$"
+    .string "חסר לך קצת כסף.$"
 
 GoldenrodUnderground_Text_YoungerBrotherOnePerDay:
-    .string "I can do only one haircut a day.\p"
-    .string "Sorry, but I'm all done for today.$"
+    .string "אני יכול לעשות רק תספורת אחת ביום.\p"
+    .string "סליחה, אבל סיימתי להיום.$"
 
 
 
 GoldenrodUnderground_Text_OlderBrotherOffer:
-    .string "Welcome!\p"
-    .string "I run the POKéMON SALON!\p"
-    .string "I'm the older and better of the two\n"
-    .string "HAIRCUT BROTHERS.\p"
-    .string "I can make your POKéMON beautiful\n"
-    .string "for just ¥500.\p"
-    .string "Would you like me to do that?$"
+    .string "ברוכים הבאים!\p"
+    .string "אני מנהל את סלון הפוקימונים!\p"
+    .string "אני המבוגר והמוצלח מבין\n"
+    .string "שני האחים הספרים.\p"
+    .string "אוכל להפוך את הפוקימון שלך ליפה\n"
+    .string "תמורת ¥500 בלבד.\p"
+    .string "שאעשה את זה?$"
 
 GoldenrodUnderground_Text_OlderBrotherAskWhich:
-    .string "Which POKéMON should I work on?$"
+    .string "באיזה פוקימון לטפל?$"
 
 GoldenrodUnderground_Text_OlderBrotherWatchItBeautiful:
-    .string "OK! Watch it become beautiful!$"
+    .string "בסדר! תראה איך הוא נהיה יפהפה!$"
 
 GoldenrodUnderground_Text_OlderBrotherAllDone:
-    .string "There! All done!$"
+    .string "הנה! הכול מוכן!$"
 
 GoldenrodUnderground_Text_OlderBrotherThatsAShame:
-    .string "Is that right? That's a shame!$"
+    .string "באמת? חבל מאוד!$"
 
 GoldenrodUnderground_Text_OlderBrotherNeedMoreMoney:
-    .string "You'll need more money than that.$"
+    .string "צריך יותר כסף מזה.$"
 
 GoldenrodUnderground_Text_OlderBrotherOnePerDay:
-    .string "I do only one haircut a day.\n"
-    .string "I'm done for today.$"
+    .string "אני עושה רק תספורת אחת ביום.\n"
+    .string "סיימתי להיום.$"
 
 GoldenrodUnderground_Text_SupernerdEricSeen:
-    .string "I got booted out of the GAME CORNER.\p"
-    .string "I was trying to cheat using my\n"
-    .string "POKéMON…$"
+    .string "זרקו אותי מהמשחקייה.\p"
+    .string "ניסיתי לרמות בעזרת\n"
+    .string "הפוקימונים שלי…$"
 
 GoldenrodUnderground_Text_SupernerdEricBeaten:
-    .string "…Grumble…$"
+    .string "…גררר…$"
 
 GoldenrodUnderground_Text_SupernerdEricAfterBattle:
-    .string "I guess I have to do things fair and\n"
-    .string "square…$"
+    .string "כנראה שאצטרך לעשות דברים\n"
+    .string "ביושר…$"
 
 GoldenrodUnderground_Text_SupernerdTeruSeen:
-    .string "Do you consider type alignments in\n"
-    .string "battle?\p"
-    .string "If you know your type advantages,\n"
-    .string "you'll do better in battle.$"
+    .string "אתה מתחשב ביחסי הסוגים בקרב?\p"
+    .string "מי שמכיר את יתרונות הסוגים\n"
+    .string "מצליח יותר בקרב.$"
 
 GoldenrodUnderground_Text_SupernerdTeruBeaten:
-    .string "Ow, ow, ow!$"
+    .string "איי, איי, איי!$"
 
 GoldenrodUnderground_Text_SupernerdTeruAfterBattle:
-    .string "I know my POKéMON type alignments.\p"
-    .string "But I only use one type of POKéMON.$"
+    .string "אני מכיר את יחסי הסוגים של\n"
+    .string "הפוקימונים.\p"
+    .string "אבל אני משתמש רק בסוג אחד\n"
+    .string "של פוקימונים.$"
 
 GoldenrodUnderground_Text_PokemaniacIssacSeen:
-    .string "My POKéMON just got a haircut!\p"
-    .string "I'll show you how strong it is!$"
+    .string "הפוקימון שלי בדיוק הסתפר!\p"
+    .string "אראה לך כמה הוא חזק!$"
 
 GoldenrodUnderground_Text_PokemaniacIssacBeaten:
-    .string "Aiyeeee!$"
+    .string "אאייייי!$"
 
 GoldenrodUnderground_Text_PokemaniacIssacAfterBattle:
-    .string "Your POKéMON will like you more if\n"
-    .string "you give them haircuts.$"
+    .string "פוקימונים אוהבים יותר את מי\n"
+    .string "שמסדר להם תספורת.$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldSeen:
-    .string "I think you have some rare POKéMON\n"
-    .string "with you.\p"
-    .string "Let me see them!$"
+    .string "נראה לי שיש לך כמה פוקימונים\n"
+    .string "נדירים.\p"
+    .string "אני רוצה לראות אותם!$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldBeaten:
-    .string "Gaah! I lost! That makes me mad!$"
+    .string "אח! הפסדתי! זה מעצבן אותי!$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldAfterBattle:
-	.string "When I was walking near the BIKE\n"
-	.string "SHOP last night, I felt like I was\l"
-	.string "being watched from the rooftops...$"
+	.string "כשהלכתי ליד חנות האופניים אתמול\n"
+	.string "בלילה, הרגשתי שצופים בי מהגגות…$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldAfterBattleOld:
     .string "Are you making a POKéDEX? Here's a\n"
@@ -435,13 +434,13 @@ GoldenrodUnderground_Text_PokemaniacDonaldAfterBattleOld:
     .string "POKéMON.$"
 
 GoldenrodUnderground_Text_DoorsLocked:
-    .string "The door's locked…$"
+    .string "הדלת נעולה…$"
 
 GoldenrodUnderground_Text_DoorIsOpen:
-    .string "The door is open.$"
+    .string "הדלת פתוחה.$"
 
 GoldenrodUnderground_Text_KeyOpenedDoor:
-    .string "The BASEMENT KEY opened the door.$"
+    .string "מפתח המרתף פתח את הדלת.$"
 
 GoldenrodUnderground_Text_NoEntry:
     .string "NO ENTRY BEYOND THIS POINT$"

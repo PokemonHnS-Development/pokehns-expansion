@@ -1,0 +1,124 @@
+# Status tags for every non-volatile status (PSN, TOX, PAR, SLP, BRN, FRZ): on the player's
+# HP box (each Pokemon is switched in once), in the battle party menu, in the party menu
+# outside battle, and on the foe's HP box (one short wild battle per status, with the status
+# written into gEnemyParty[0] before the battle starts; struct Pokemon status at 0x50).
+# The statuses are set with setstatus1 (src/script_pokemon_util.c:846). The foe is a wild
+# Lv 5 Magikarp, which only knows Splash.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_PIKACHU, 30; givemon SPECIES_CYNDAQUIL, 30; givemon SPECIES_TOTODILE, 30; givemon SPECIES_CHIKORITA, 30; givemon SPECIES_PIDGEY, 30; givemon SPECIES_RATTATA, 30; end
+ev setstatus1 STATUS1_POISON, 0; setstatus1 STATUS1_TOXIC_POISON, 1; setstatus1 STATUS1_PARALYSIS, 2; setstatus1 STATUS1_SLEEP_TURN(5), 3; setstatus1 STATUS1_BURN, 4; setstatus1 STATUS1_FREEZE, 5; end
+expect8 @gPlayerPartyCount@ 6
+
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+snap bv_status_party_field
+tap B 4
+waitcb2x CB2_Overworld 900
+waitquiet
+tap B 4
+waitctl 900
+
+pinrng
+evstart setwildbattle SPECIES_MAGIKARP, 5; dowildbattle; end
+waitbattle
+bwalk bv_status_intro input:HandleInputChooseAction
+snap bv_status_hpbox_psn
+include _bv_switch.txt
+snap bv_status_party_battle
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # SHIFT
+bwalk bv_status_sw1 input:HandleInputChooseAction
+snap bv_status_hpbox_tox
+include _bv_switch.txt
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # SHIFT
+bwalk bv_status_sw2 input:HandleInputChooseAction
+snap bv_status_hpbox_par
+include _bv_switch.txt
+seek 8 @gPartyMenu+9@ 3 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # SHIFT
+bwalk bv_status_sw3 input:HandleInputChooseAction
+snap bv_status_hpbox_slp
+include _bv_switch.txt
+seek 8 @gPartyMenu+9@ 4 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # SHIFT
+bwalk bv_status_sw4 input:HandleInputChooseAction
+snap bv_status_hpbox_brn
+include _bv_switch.txt
+seek 8 @gPartyMenu+9@ 5 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # SHIFT
+bwalk bv_status_sw5 input:HandleInputChooseAction
+snap bv_status_hpbox_frz
+include _bv_switch.txt
+snap bv_status_party_battle_end
+tap B 4
+waitbinput HandleInputChooseAction 900
+baction RUN
+bwalk bv_status_run free
+
+# the foe's HP box: one battle per status
+ev setwildbattle SPECIES_MAGIKARP, 5; end
+w32 @gEnemyParty+50@ 8                    # STATUS1_POISON
+evstart dowildbattle; end
+waitbattle
+bwalk bv_status_foe_psn input:HandleInputChooseAction
+snap bv_status_foebox_psn
+baction RUN
+bwalk bv_status_foe_psn_run free
+ev setwildbattle SPECIES_MAGIKARP, 5; end
+w32 @gEnemyParty+50@ 80                    # STATUS1_TOXIC_POISON
+evstart dowildbattle; end
+waitbattle
+bwalk bv_status_foe_tox input:HandleInputChooseAction
+snap bv_status_foebox_tox
+baction RUN
+bwalk bv_status_foe_tox_run free
+ev setwildbattle SPECIES_MAGIKARP, 5; end
+w32 @gEnemyParty+50@ 40                    # STATUS1_PARALYSIS
+evstart dowildbattle; end
+waitbattle
+bwalk bv_status_foe_par input:HandleInputChooseAction
+snap bv_status_foebox_par
+baction RUN
+bwalk bv_status_foe_par_run free
+ev setwildbattle SPECIES_MAGIKARP, 5; end
+w32 @gEnemyParty+50@ 5                    # STATUS1_SLEEP_TURN(5)
+evstart dowildbattle; end
+waitbattle
+bwalk bv_status_foe_slp input:HandleInputChooseAction
+snap bv_status_foebox_slp
+baction RUN
+bwalk bv_status_foe_slp_run free
+ev setwildbattle SPECIES_MAGIKARP, 5; end
+w32 @gEnemyParty+50@ 10                    # STATUS1_BURN
+evstart dowildbattle; end
+waitbattle
+bwalk bv_status_foe_brn input:HandleInputChooseAction
+snap bv_status_foebox_brn
+baction RUN
+bwalk bv_status_foe_brn_run free
+ev setwildbattle SPECIES_MAGIKARP, 5; end
+w32 @gEnemyParty+50@ 20                    # STATUS1_FREEZE
+evstart dowildbattle; end
+waitbattle
+bwalk bv_status_foe_frz input:HandleInputChooseAction
+snap bv_status_foebox_frz
+baction RUN
+bwalk bv_status_foe_frz_run free

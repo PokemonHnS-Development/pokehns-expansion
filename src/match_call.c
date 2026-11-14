@@ -1494,6 +1494,14 @@ static const struct WindowTemplate sMatchCallTextWindow =
 #define TILE_MC_WINDOW    0x270
 #define TILE_POKENAV_ICON 0x279
 
+#if TEXT_RTL
+// The text window is mirrored, so the 32-px indent the text leaves for the Pokegear icon is at
+// the right end of the box (tile columns 25-28) and the icon goes there.
+#define POKENAV_ICON_X    (1 + 28 - 4)
+#else
+#define POKENAV_ICON_X    1
+#endif
+
 static bool32 MatchCall_LoadGfx(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -1533,7 +1541,7 @@ static bool32 MatchCall_DrawWindow(u8 taskId)
 
     PutWindowTilemap(tWindowId);
     DrawMatchCallTextBoxBorder_Internal(tWindowId, TILE_MC_WINDOW, 14);
-    WriteSequenceToBgTilemapBuffer(0, (0xF << 12) | TILE_POKENAV_ICON, 1, 15, 4, 4, 17, 1);
+    WriteSequenceToBgTilemapBuffer(0, (0xF << 12) | TILE_POKENAV_ICON, POKENAV_ICON_X, 15, 4, 4, 17, 1);
     tIconTaskId = CreateTask(Task_SpinPokenavIcon, 10);
     CopyWindowToVram(tWindowId, COPYWIN_GFX);
     CopyBgTilemapBufferToVram(0);
@@ -1734,7 +1742,7 @@ static void Task_SpinPokenavIcon(u8 taskId)
             tSpinStage = 0;
 
         tTileNum = (tSpinStage * 16) + TILE_POKENAV_ICON;
-        WriteSequenceToBgTilemapBuffer(0, tTileNum | ~0xFFF, 1, 15, 4, 4, 17, 1);
+        WriteSequenceToBgTilemapBuffer(0, tTileNum | ~0xFFF, POKENAV_ICON_X, 15, 4, 4, 17, 1);
         CopyBgTilemapBufferToVram(0);
     }
 }
@@ -2004,12 +2012,12 @@ static void PopulateMatchCallStringVar(int matchCallId, int funcId, u8 *destStr)
 
 static const struct MultiTrainerMatchCallText sMultiTrainerMatchCallTexts[] =
 {
-    { .trainerId = TRAINER_KIRA_AND_DAN_1, .text = COMPOUND_STRING("KIRA") },
-    { .trainerId = TRAINER_AMY_AND_LIV_1,  .text = COMPOUND_STRING("AMY") },
-    { .trainerId = TRAINER_JOHN_AND_JAY_1, .text = COMPOUND_STRING("JOHN") },
-    { .trainerId = TRAINER_LILA_AND_ROY_1, .text = COMPOUND_STRING("ROY") },
-    { .trainerId = TRAINER_GABBY_AND_TY_1, .text = COMPOUND_STRING("GABBY") },
-    { .trainerId = TRAINER_ANNA_AND_MEG_1, .text = COMPOUND_STRING("ANNA") },
+    { .trainerId = TRAINER_KIRA_AND_DAN_1, .text = COMPOUND_STRING("קירה") },
+    { .trainerId = TRAINER_AMY_AND_LIV_1,  .text = COMPOUND_STRING("איימי") },
+    { .trainerId = TRAINER_JOHN_AND_JAY_1, .text = COMPOUND_STRING("ג'ון") },
+    { .trainerId = TRAINER_LILA_AND_ROY_1, .text = COMPOUND_STRING("רוי") },
+    { .trainerId = TRAINER_GABBY_AND_TY_1, .text = COMPOUND_STRING("גאבי") },
+    { .trainerId = TRAINER_ANNA_AND_MEG_1, .text = COMPOUND_STRING("אנה") },
 };
 
 static void PopulateTrainerName(int matchCallId, u8 *destStr)

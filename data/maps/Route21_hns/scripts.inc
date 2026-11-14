@@ -23,32 +23,32 @@ Route21_EventScript_Arnold::
 	end
 
 Route21_Text_SwimmermSethSeen:
-	.string "Land ho! Gotta keep going!$"
+	.string "יבשה באופק! חייב להמשיך!$"
 
 Route21_Text_SwimmermSethBeaten:
-	.string "Glug…$"
+	.string "גלוג…$"
 
 Route21_Text_SwimmermSethAfterBattle:
-	.string "This arrogant guy was at CINNABAR's\n"
-	.string "volcano.$"
+	.string "היה איזה בחור יהיר\n"
+	.string "ליד הר הגעש של סיננבר.$"
 
 Route21_Text_SwimmerfNikkiSeen:
-	.string "If I win, you have to help me with\n"
-	.string "my suntan lotion!$"
+	.string "אם אני מנצחת, אתה חייב לעזור לי\n"
+	.string "למרוח קרם שיזוף!$"
 
 Route21_Text_SwimmerfNikkiBeaten:
-	.string "I'm worried about sunburn…$"
+	.string "אני חוששת מכוויות שמש…$"
 
 Route21_Text_SwimmerfNikkiAfterBattle:
-	.string "I have to watch out for blemishes\n"
-	.string "caused by the sun.$"
+	.string "אני צריכה להיזהר מכתמים בעור\n"
+	.string "בגלל השמש.$"
 
 Route21_Text_FisherArnoldSeen:
-	.string "I'm bored by fishing. Let's battle!$"
+	.string "משעמם לי לדוג. בוא נילחם!$"
 
 Route21_Text_FisherArnoldBeaten:
-	.string "Utter failure…$"
+	.string "כישלון מוחלט…$"
 
 Route21_Text_FisherArnoldAfterBattle:
-	.string "I'll just go back to fishing…$"
+	.string "אני פשוט אחזור לדוג…$"
 

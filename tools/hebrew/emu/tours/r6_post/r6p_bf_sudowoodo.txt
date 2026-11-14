@@ -1,0 +1,21 @@
+# Battle Frontier Sudowoodo (37,71): BattleFrontier_OutsideEast_EventScript_Sudowoodo_hns
+# (BattleFrontier_OutsideEast_hns/scripts.inc:104-111): talking only shakes it (no text). The watering
+# script below it (:113-) is not reachable (TryToWaterSudowoodo, src/item_use.c:845-857, checks
+# OBJ_EVENT_GFX_SUDOWOODO and starts the vanilla script); it is started here by hand only to show
+# its text (local id 14), marked synthetic.
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev clearflag FLAG_HIDE_BATTLE_FRONTIER_SUDOWOODO; end
+warpto MAP_BATTLE_FRONTIER_OUTSIDE_EAST_HNS 38 71
+face LEFT
+snap sw_field
+tap A 4
+scene sw_talk 2000 10
+snap sw_talk_end
+evstart setvar VAR_LAST_TALKED, 14; goto BattleFrontier_OutsideEast_EventScript_WaterSudowoodo_hns
+scene sw_syn_pre 6000
+bwalk sw_syn_intro input:HandleInputChooseAction
+snap sw_syn_action
+bwin sw_syn_win
+scene sw_syn_after 6000
+snap sw_syn_end

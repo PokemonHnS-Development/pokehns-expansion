@@ -1,0 +1,32 @@
+# Violet Mart with P50: 'You don't have enough money' (src/shop.c:1838) on a P100 and a P3000 item.
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+setmoney 50
+warptoloose MAP_VIOLET_CITY_MART_HNS 2 5
+evstart goto VioletCity_Mart_EventScript_Clerk
+talk m23_nomoney_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m23_nomoney_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listgo 0
+tap A 0
+snap m23_nomoney_pb
+tap A 0
+snap m23_nomoney_back
+listgo 7
+tap A 0
+snap m23_nomoney_fr
+tap A 0
+snap m23_nomoney_fr_back
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m23_nomoney_bye 10 -
+waitctl 900

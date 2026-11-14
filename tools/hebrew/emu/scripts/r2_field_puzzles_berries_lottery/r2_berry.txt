@@ -1,0 +1,104 @@
+# Berry trees, H&S script (data/scripts/berry_tree.inc:1-80, IS_HNS): every stage below
+# BERRY_STAGE_BERRIES and the sparkle after picking show BerryTree_Text_Hns_NotRipe; a ripe
+# tree is picked at once ("{PLAYER} picked N X", BerryTree_Text_Hns_Picked, no key wait) and
+# replanted (src/berry.c:2276-2283); a full Berries pocket gives BerryTree_Text_Hns_BagFull.
+# Tree: Route 29 BERRY_TREE_ORAN_1 (id 102) at (15,11), talked to from (15,12) facing up.
+# The tree is poked in SaveBlock1 (r2ops.py berry), then the map is re-entered so the object
+# event redraws. minutes 0x3FFF stops it from growing during the tour.
+# Also: the bag opened in berry-planting mode (special Bag_ChooseBerry, src/berry.c:2264,
+# GoToBagMenu(ITEMMENULOCATION_BERRY_TREE, POCKET_BERRIES), src/item_menu.c:659) -- not called
+# by any H&S script, forced here.
+start saves/r2fpb_postgame.sav
+include ../continue.txt
+berryshow 102
+ev removeitem ITEM_ORAN_BERRY, 999; removeitem ITEM_SITRUS_BERRY, 999; end
+
+# --- stages: planted 1, sprouted 2, taller 3, flowering 4 (all "not ripe")
+berry 102 berry 7
+berry 102 minutes 0x3FFF
+berry 102 stage 1
+warpto MAP_ROUTE29_HNS 15 12
+face UP
+snap br_01_planted_tree
+talk br_01_planted 4
+waitctl 600 B
+berry 102 stage 2
+warpto MAP_ROUTE29_HNS 15 12
+face UP
+snap br_02_sprouted_tree
+talk br_02_sprouted 4
+waitctl 600 B
+berry 102 stage 3
+warpto MAP_ROUTE29_HNS 15 12
+face UP
+snap br_03_taller_tree
+talk br_03_taller 4
+waitctl 600 B
+berry 102 stage 4
+warpto MAP_ROUTE29_HNS 15 12
+face UP
+snap br_04_flowering_tree
+talk br_04_flowering 4
+waitctl 600 B
+
+# --- ripe, 1 berry: picked (singular), then the tree sparkles
+berry 102 stage 5
+berry 102 yield 1
+warpto MAP_ROUTE29_HNS 15 12
+face UP
+snap br_05_ripe_tree
+tap A 0
+waitquiet 300
+snap br_05_picked_1
+waitctl 900
+berryshow 102
+snap br_06_after_pick
+face UP
+talk br_06_sparkle 4
+waitctl 600 B
+
+# --- ripe, 5 berries: picked (plural)
+berry 102 stage 5
+berry 102 yield 5
+warpto MAP_ROUTE29_HNS 15 12
+face UP
+tap A 0
+waitquiet 300
+snap br_07_picked_5
+waitctl 900
+
+# --- Sitrus (a longer name), 12 berries
+berry 102 berry 10
+berry 102 stage 5
+berry 102 yield 12
+warpto MAP_ROUTE29_HNS 15 12
+face UP
+tap A 0
+waitquiet 300
+snap br_08_picked_sitrus_12
+waitctl 900
+
+# --- Berries pocket full of Sitrus: bag full (2 pages)
+clearberries
+ev file _fill_berries.inc                 # Sitrus x999 + 1 of every other berry: all 66 slots taken
+berry 102 berry 10
+berry 102 stage 5
+berry 102 yield 12
+warpto MAP_ROUTE29_HNS 15 12
+face UP
+talk br_09_bagfull 4
+waitctl 600 B
+ev removeitem ITEM_SITRUS_BERRY, 999; additem ITEM_ORAN_BERRY, 3; end
+
+# --- the bag in berry-planting mode (forced; unused by H&S scripts)
+evstart special Bag_ChooseBerry; waitstate; end
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap br_10_bag_plant_mode
+press RIGHT                               # the pocket cannot be switched in this mode
+snap br_10_bag_plant_mode_right
+scrollbag br_10_bag_plant_list 68
+tap B 0
+waitcb2x CB2_Overworld 900
+waitctl 900

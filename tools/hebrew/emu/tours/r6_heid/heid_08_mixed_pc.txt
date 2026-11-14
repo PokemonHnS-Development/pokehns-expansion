@@ -1,0 +1,48 @@
+# The mixed name אב12CDג / AB12CDG (save heid_mix from heid_01_identity) inside sentences and
+# rows: the summary OT of a party Pokemon given that OT (setot), the PC boot message
+# ('{PLAYER} הפעיל את המחשב.'), the PC menu row 'המחשב של {PLAYER}' (gText_PlayersPC,
+# src/strings.c:546) and 'נפתח המחשב של {PLAYER}.' (data/text/pc.inc:13-14).
+start save:heid_mix
+include ../../scripts/continue.txt
+setot 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap A 4                                   # SUMMARY: INFO page
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap heid_mx_summary_ot
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+waitquiet
+snap heid_mx_startmenu
+startmenu EXIT
+waitctl 600
+go RIGHT 4
+go UP 2
+talk heid_mx_pc_boot 10
+snap heid_mx_pc_menu
+press DOWN
+snap heid_mx_pc_menu_player
+tap A 0
+talk heid_mx_pc_player_open 10 - PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+snap heid_mx_pc_player_menu
+press B
+waittaskx Task_HandleMultichoiceInput 900
+waitquiet
+press B
+waitctl 900 B

@@ -1,0 +1,11 @@
+# Battle Factory lobby: singles attendant INFO, CHALLENGE -> level menu -> Lv. 50 (the rental
+# save prompt, answered NO by B), doubles attendant INFO, the rules board's first topic, then
+# every other NPC and sign (results boards).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 9 10 fal
+talkobj 1 fal_sgl_info pick=1
+talkobj 1 fal_sgl_ch pick=0,0
+talkobj 6 fal_dbl_info pick=1
+signpick 9 4 fal_rules pick=0
+visit fal skip=1,6

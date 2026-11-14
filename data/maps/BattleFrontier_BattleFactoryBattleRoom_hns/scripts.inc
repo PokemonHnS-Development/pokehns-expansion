@@ -240,71 +240,70 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_ScientistsFaceBattle_hns::
 	return
 
 BattleFrontier_BattleFactoryBattleRoom_Text_GetAMoveOn_hns:
-	.string "Hey, hey!\n"
-	.string "Get a move on!$"
+	.string "היי, היי!\n"
+	.string "קדימה, לזוז!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_NolandImFactoryHead_hns:
-	.string "Hey, my name's NOLAND!\n"
-	.string "I'm basically in charge of this place,\l"
-	.string "which is why I'm the FACTORY HEAD!\p"
-	.string "I had a look at your Battle Swap data.\p"
-	.string "You seem to have the right idea,\n"
-	.string "but you're still square in your head!\p"
-	.string "Listen up, okay? Knowledge isn't only\n"
-	.string "about reading books or doing desk work.\p"
-	.string "Just doing that sort of thing…\n"
-	.string "It may as well be useless!\p"
-	.string "You have to experience things with\n"
-	.string "your heart and your body, understand?\p"
-	.string "I'll take you on under the same\n"
-	.string "conditions as you.\p"
-	.string "I'll be using rental POKéMON, too!$"
+	.string "היי, קוראים לי נולנד! בעצם אני\n"
+	.string "האחראי כאן, ולכן אני ראש המפעל!\p"
+	.string "הצצתי בנתוני החלפת הקרב שלך.\p"
+	.string "נראה שיש לך את הרעיון הנכון,\n"
+	.string "אבל הראש שלך עדיין מרובע!\p"
+	.string "תקשיב טוב, בסדר? ידע זה לא רק\n"
+	.string "לקרוא ספרים או לעבוד ליד שולחן.\p"
+	.string "אם עושים רק דברים כאלה…\n"
+	.string "זה כמעט חסר תועלת!\p"
+	.string "צריך לחוות דברים עם הלב\n"
+	.string "ועם הגוף, ברור?\p"
+	.string "אתמודד מולך בדיוק\n"
+	.string "באותם תנאים כמוך.\p"
+	.string "גם אני אשתמש בפוקימונים שכורים!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_ShakeOutKnowledgeBringItOn_hns:
-	.string "Shake out every last bit of your\n"
-	.string "knowledge and bring it on!$"
+	.string "תשלוף כל פירור של ידע\n"
+	.string "שיש לך, ובוא נראה אותך!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_NolandLetsSeeFrontierPass_hns:
-	.string "NOLAND: Smart going!\n"
-	.string "Let's see your FRONTIER PASS.$"
+	.string "נולנד: מהלך חכם!\n"
+	.string "בוא נראה את כרטיס חזית הקרב שלך.$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_ReceivedKnowledgeSymbol_hns:
-	.string "The Knowledge Symbol was embossed\n"
-	.string "on the FRONTIER PASS!$"
+	.string "סמל הידע הוטבע\n"
+	.string "על כרטיס חזית הקרב!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_NextTimeNoHoldsBarred_hns:
-	.string "Heh…\n"
-	.string "You're a pretty bright spark…\p"
-	.string "Next time, I'll come after you hard.\n"
-	.string "No holds barred, understand?\p"
-	.string "You keep up your studies!$"
+	.string "הה…\n"
+	.string "יש לך ראש די חריף…\p"
+	.string "בפעם הבאה, אני לא אחסוך ממך.\n"
+	.string "בלי הנחות, ברור?\p"
+	.string "ותמשיך ללמוד!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_HarderLookThanLastTime_hns:
-	.string "NOLAND: Hey, hey! How's it going?\n"
-	.string "You keeping up with your studies?\p"
-	.string "…Oh?\p"
-	.string "You've taken on a harder look than\n"
-	.string "the last time I saw you.\p"
-	.string "Now, this should be fun!\n"
-	.string "I'm getting excited, hey!$"
+	.string "נולנד: היי, היי! מה נשמע?\n"
+	.string "הלימודים מתקדמים?\p"
+	.string "…אה?\p"
+	.string "יש לך מבט קשוח יותר\n"
+	.string "מאשר בפעם הקודמת שראיתי אותך.\p"
+	.string "עכשיו זה יהיה כיף!\n"
+	.string "אני מתחיל להתלהב, היי!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_AllRightBringItOn_hns:
-	.string "All right!\n"
-	.string "Bring it on!$"
+	.string "בסדר גמור!\n"
+	.string "קדימה, לקרב!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_OutOfMyLeagueLetsSeePass_hns:
-	.string "NOLAND: What the…\n"
-	.string "You're getting out of my league!\p"
-	.string "Sheesh!\n"
-	.string "Let's see that FRONTIER PASS!$"
+	.string "נולנד: מה זה…\n"
+	.string "אתה כבר משחק בליגה אחרת!\p"
+	.string "אוף!\n"
+	.string "בוא נראה את כרטיס חזית הקרב!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_KnowledgeSymbolTookGoldenShine_hns:
-	.string "The Knowledge Symbol took on\n"
-	.string "a golden shine!$"
+	.string "סמל הידע קיבל\n"
+	.string "ברק זהוב!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_LastTimeILoseToYou_hns:
-	.string "Pfft, man!\p"
-	.string "That's absolutely the last time\n"
-	.string "I lose to you!\p"
-	.string "We have to do this again, hey?$"
+	.string "פפף, נו באמת!\p"
+	.string "זו בהחלט הפעם האחרונה\n"
+	.string "שאני מפסיד לך!\p"
+	.string "חייבים לעשות את זה שוב, היי?$"
 

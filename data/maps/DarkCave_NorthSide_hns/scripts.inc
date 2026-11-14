@@ -33,15 +33,14 @@ DarkCave2_EventScript_BlackGlassesGot::
 	end
 
 DarkCave2_Text_Nerd:
-    .string "Whoa! You startled me there!\p"
-    .string "I had my BLACK-GLASSES on, so I\n"
-    .string "didn't notice you at all.\p"
-    .string "What am I doing here?\p"
-    .string "Hey, don't you worry about it.\p"
-    .string "I'll give you a pair of BLACK-\n"
-    .string "GLASSES, so forget you saw me,\n"
-    .string "OK?$"
+    .string "וואו! הבהלת אותי!\p"
+    .string "הרכבתי את המשקף השחור שלי,\n"
+    .string "אז בכלל לא שמתי לב אליך.\p"
+    .string "מה אני עושה כאן?\p"
+    .string "היי, אל תדאג בקשר לזה.\p"
+    .string "אני אתן לך משקף שחור,\n"
+    .string "ואתה תשכח שראית אותי, טוב?$"
 
 DarkCave2_Text_Nerd2:
-    .string "BLACK-GLASSES ups the power of\n"
-    .string "DARK-type moves.$"
+    .string "משקף שחור מגביר את הכוח\n"
+    .string "של מהלכים מסוג אפל.$"

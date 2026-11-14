@@ -1,0 +1,157 @@
+# Pokemon Center challenge, PC rules and the Nuzlocke whiteout on save chal_a:
+#  1. Route 30: Vulpix (lead, knows only Memento) faints; after the battle the Nuzlocke
+#     moves it to the PC (cemetery, src/nuzlocke.c:337-347 and 354-388);
+#  2. Cherrygrove Center: the nurse refuses (data/scripts/pkmn_center_nurse.inc:5-6,23-29);
+#  3. the PC: WITHDRAW the off-type Geodude ("wrong type"; givemon sent it straight to the
+#     box, src/pokemon.c:5399-5400) and the dead Vulpix ("fainted in Nuzlocke mode"),
+#     src/pokemon_storage_system.c:2873-2895; DEPOSIT is refused with one Pokemon left;
+#  4. the Cherrygrove Mart sells the Pokemon Center challenge list (src/shop.c:1022-1032);
+#  5. Mom: the Pokemon Center challenge line instead of the heal
+#     (data/maps/NewBarkTown_PlayersHouse_1F_hns/scripts.inc:51-69);
+#  6. a whiteout with a live Pokemon in the box: the fainted party is moved out and the first
+#     live box Pokemon joins the party (src/overworld.c:395-410).
+start save:chal_a
+include _chr_base.txt
+ev givemon SPECIES_VULPIX, 5, move1=MOVE_MEMENTO; givemon SPECIES_CYNDAQUIL, 10, move1=MOVE_EMBER, move2=MOVE_MEMENTO; givemon SPECIES_GEODUDE, 5; end
+
+# ---- 1. the lead faints
+warpto MAP_ROUTE30_HNS 23 25
+pinrng
+evstart setwildbattle SPECIES_SENTRET, 2; callnative SetNuzlockeChecks; dowildbattle; end
+waitbattle
+bwalk chr_p1_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0                                   # Memento
+bwalk chr_p1_faint prompt:Cmd_yesnobox|input:PlayerHandleYesNoInput|task:Task_HandleChooseMonInput
+snap chr_p1_next_prompt
+tap A 4                                   # YES
+bwalk chr_p1_party task:Task_HandleChooseMonInput
+waitquiet
+snap chr_p1_party
+tap DOWN 4
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap A 4                                   # SHIFT
+bwalk chr_p1_next input:HandleInputChooseAction
+baction RUN
+bwalk chr_p1_run free
+snap chr_p1_field
+unpinrng
+
+# ---- 2. the nurse
+warpto MAP_CHERRYGROVE_CITY_POKEMON_CENTER_HNS 7 4
+face UP
+talk chr_p2_nurse 10
+60 -
+snap chr_p2_nurse_after
+
+# ---- 3. the PC at (11,1)
+go RIGHT 4
+go UP 2
+talk chr_p3_pc_boot 10                    # SOMEONE'S PC / GOLD's PC / CHALLENGES / LOG OFF
+tap A 0                                   # SOMEONE'S PC
+talk chr_p3_storage_open 10 - Task_PCMainMenu
+waittaskdata Task_PCMainMenu 0 2 600
+press DOWN                                # DEPOSIT: only one Pokemon in the party
+tap A 0
+waitquiet
+snap chr_p3_deposit_refused
+tap A 0
+waittaskdata Task_PCMainMenu 0 2 600
+press DOWN                                # WITHDRAW POKeMON
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap chr_p3_withdraw_box_geodude
+press A
+waittaskx Task_OnSelectedMon 300
+12 -
+snap chr_p3_withdraw_menu_geodude
+press A                                   # WITHDRAW
+waitquiet
+12 -
+snap chr_p3_withdraw_wrongtype
+press A
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press RIGHT                               # Vulpix (box slot 1)
+12 -
+snap chr_p3_withdraw_box_vulpix
+press A
+waittaskx Task_OnSelectedMon 300
+12 -
+press A                                   # WITHDRAW
+waitquiet
+12 -
+snap chr_p3_withdraw_dead
+press A
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+press B
+waitctl 900 B
+
+# ---- 4. the Mart
+warpto MAP_CHERRYGROVE_CITY_MART_HNS 4 3
+face LEFT
+talk chr_p4_mart_welcome 10 A Task_ShopMenu
+waittaskx Task_ShopMenu 300
+waitquiet
+tap A 0                                   # BUY
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+snap chr_p4_buy_01
+press DOWN
+snap chr_p4_buy_02
+press DOWN
+snap chr_p4_buy_03
+press DOWN
+snap chr_p4_buy_04
+press DOWN
+snap chr_p4_buy_05
+press DOWN
+snap chr_p4_buy_06
+press DOWN
+snap chr_p4_buy_07
+press DOWN
+snap chr_p4_buy_08
+press DOWN
+snap chr_p4_buy_09
+press DOWN
+snap chr_p4_buy_10
+tap B 0
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+
+# ---- 5. Mom
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_1F_HNS 2 3
+face UP
+talk chr_p5_mom 10
+waitctl 600 B
+
+# ---- 6. whiteout with Geodude alive in the box: Cyndaquil (Memento) faints
+warpto MAP_ROUTE29_HNS 50 8
+pinrng
+evstart setwildbattle SPECIES_SENTRET, 2; callnative SetNuzlockeChecks; dowildbattle; end
+waitbattle
+bwalk chr_p6_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 1                                   # Memento
+bwalk chr_p6_whiteout free
+snap chr_p6_home
+unpinrng
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap chr_p6_party_after

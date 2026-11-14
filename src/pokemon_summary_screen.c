@@ -87,6 +87,12 @@
 #define PSS_LABEL_WINDOW_PORTRAIT_SPECIES 19 // The lower name
 #define PSS_LABEL_WINDOW_END 20
 
+// The nickname's y in its window. Right to left the line sits 2 px higher than the English one, so
+// the descenders of ק and the final letters end above the dark frame (y 109-110) that the
+// forget-a-move page draws under the name, with only their shadow on it, instead of crossing it
+// and notching the bar below.
+#define PORTRAIT_NICKNAME_Y (TEXT_RTL ? 7 : 1)
+
 // Dynamic fields for the Pokémon Info page
 #define PSS_DATA_WINDOW_INFO_ORIGINAL_TRAINER 0
 #define PSS_DATA_WINDOW_INFO_ID 1
@@ -603,11 +609,22 @@ static const struct WindowTemplate sSummaryTemplate[] =
     [PSS_LABEL_WINDOW_PORTRAIT_NICKNAME] = {
         .bg = 0,
         .tilemapLeft = 1,
+#if TEXT_RTL
+        // A tile row taller and a row higher, so the name can sit 2 px above the English line
+        // (PORTRAIT_NICKNAME_Y). Its 27 tiles (700-726) lie between the page windows' last tile
+        // (696) and the relearn prompt's first (800).
+        .tilemapTop = 11,
+        .width = 9,
+        .height = 3,
+        .paletteNum = 6,
+        .baseBlock = 700,
+#else
         .tilemapTop = 12,
         .width = 9,
         .height = 2,
         .paletteNum = 6,
         .baseBlock = 413,
+#endif
     },
     [PSS_LABEL_WINDOW_PORTRAIT_SPECIES] = {
         .bg = 0,
@@ -624,7 +641,13 @@ static const struct WindowTemplate sPageInfoTemplate[] =
 {
     [PSS_DATA_WINDOW_INFO_ORIGINAL_TRAINER] = {
         .bg = 0,
+#if TEXT_RTL
+        // The OT and ID windows are each mirrored inside themselves, so right to left they trade
+        // places: the OT reads from the right end of the row and the ID sits at its left end.
+        .tilemapLeft = 18,
+#else
         .tilemapLeft = 11,
+#endif
         .tilemapTop = 4,
         .width = 11,
         .height = 2,
@@ -633,7 +656,11 @@ static const struct WindowTemplate sPageInfoTemplate[] =
     },
     [PSS_DATA_WINDOW_INFO_ID] = {
         .bg = 0,
+#if TEXT_RTL
+        .tilemapLeft = 11,
+#else
         .tilemapLeft = 22,
+#endif
         .tilemapTop = 4,
         .width = 7,
         .height = 2,
@@ -788,7 +815,24 @@ static const u8 sMemoMiscTextColor[] = _("{COLOR WHITE}{SHADOW DARK_GRAY}"); // 
 static const u8 sStatsLeftColumnLayout[] = _("{DYNAMIC 0}/{DYNAMIC 1}\n{DYNAMIC 2}\n{DYNAMIC 3}");
 static const u8 sStatsLeftIVEVColumnLayout[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2}");
 static const u8 sStatsRightColumnLayout[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2}");
+#if TEXT_RTL
+// The PP label is the Hebrew abbreviation. The label, a space and the numbers are all in the narrow
+// font: with the numbers in the normal font, "35/35" leaves no room in the 44-px PP column for a
+// gap after the label. The label reads first, so it sits at the column's right end and the numbers
+// follow it to the left.
+static const u8 sMovesPPLayout[] = _("{FONT_NARROW}נ”כ {DYNAMIC 0}/{DYNAMIC 1}");
+// From a fixed x, with the current PP left-aligned, the label and the slash keep their columns on
+// every row: a padding spacer in front of a one-digit current PP would not stay with the digits but
+// sit between them and the label. At x 3 the 43-px text fills the 44-px white column except its
+// rightmost pixel, which the move selector's right edge covers.
+#define MOVES_PP_X 3
+// Mirrored, every move name ends at the name window's edge, and the PP text beside it starts 2 px
+// nearer to that edge than the English one. Printed 2 px in, the names leave the 4 blank columns
+// that English leaves after its widest name; a name wider than the 70 px left takes the narrow font.
+#define MOVES_NAME_X 2
+#else
 static const u8 sMovesPPLayout[] = _("{PP}{DYNAMIC 0}/{DYNAMIC 1}");
+#endif
 
 #define TAG_MOVE_SELECTOR 30000
 #define TAG_MON_STATUS 30001
@@ -3264,6 +3308,17 @@ static void TilemapFiveMovesDisplay(u16 *dst, u16 palette, bool8 remove)
 
 static void DrawPokerusCuredSymbol(struct Pokemon *mon) // This checks if the mon has been cured of pokerus
 {
+#if TEXT_RTL
+    // The level line and the ball are mirrored to the panel's right end (CreateCaughtBallSprite),
+    // which puts the level's digits over the English spot. The mark goes to the mirrored tile left
+    // of the ball, flipped, so it sits as close to the ball as it does in English.
+    u16 mark = ShouldPokemonShowCuredPokerus(mon) ? (0x2C | 0x400) : 0x81A;
+
+    sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][0][0x223] = 0x81A;
+    sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][1][0x223] = 0x81A;
+    sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][0][0x226] = mark;
+    sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][1][0x226] = mark;
+#else
     if (ShouldPokemonShowCuredPokerus(mon))
     {
         sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][0][0x223] = 0x2C;
@@ -3274,6 +3329,7 @@ static void DrawPokerusCuredSymbol(struct Pokemon *mon) // This checks if the mo
         sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][0][0x223] = 0x81A;
         sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][1][0x223] = 0x81A;
     }
+#endif
     ScheduleBgCopyTilemapToVram(3);
 }
 
@@ -3371,11 +3427,85 @@ static void LimitEggSummaryPageDisplay(void) // If the Pokémon is an egg, limit
         ChangeBgX(3, 0, BG_COORD_SET);
 }
 
+#if TEXT_RTL
+// The portrait panel's art is symmetric about x = 40 (frame columns 0-2 and 78-79), but its text
+// windows start at x = 8 and run on to the right frame. Mirroring them about the panel's axis puts
+// the right edge of a line at x = 72, as far from the frame as the English left edge is.
+#define PORTRAIT_RTL_MIRROR_PX 64
+
+// The dex number ("No." {CLEAR} digits) is mirrored inside its own English extent: mirrored across
+// the whole 40-px window it would end under the markings (x 45-76), and a fixed narrower axis
+// would cut off the left end of a Hebrew label wider than the No. glyph. In-place mode cannot be
+// used, because the {CLEAR} would split the label and the digits into two segments.
+static void SetDexNumberRtlAxis(const u8 *str)
+{
+    u32 width = GetStringWidth(FONT_NORMAL, str, 0);
+
+    if (width > WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER))
+        width = WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER);
+    SetWindowRtlMirrorWidth(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, width);
+}
+
+static void SetSummaryLabelWindowsRtl(void)
+{
+    SetWindowRtlMirrorWidth(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, PORTRAIT_RTL_MIRROR_PX);
+    SetWindowRtlMirrorWidth(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, PORTRAIT_RTL_MIRROR_PX);
+    // Labels and values printed into two-tone art (label column, value column) beside the move
+    // category icon and the heart grid, and stat labels centred over their own cells: each keeps
+    // its English slot and only reads right to left.
+    SetWindowRtlMode(PSS_LABEL_WINDOW_MOVES_POWER_ACC, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(PSS_LABEL_WINDOW_MOVES_APPEAL_JAM, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, WINDOW_RTL_IN_PLACE);
+}
+
+// The four quote marks a name can hold (“ ” ‘ ’, the last one also the geresh) are the only
+// glyphs that reach row 1, a row above the ל ascender, so at PORTRAIT_NICKNAME_Y they touch the
+// portrait box's bottom edge (y 95). The extra-symbol cells F9 19-1C hold the same four marks one
+// row lower, at the same widths, in the three fonts GetFontIdToFit can pick for this window
+// (normal, narrow, narrower). The name keeps its baseline; only the marks move down.
+#define CHAR_LOWERED_QUOTE_FIRST 0x19
+
+static void LowerNicknameQuoteMarks(u8 *dest, const u8 *src, struct Pokemon *mon)
+{
+    bool32 japanese = GetMonData(mon, MON_DATA_LANGUAGE) == LANGUAGE_JAPANESE;
+
+    for (; *src != EOS; src++)
+    {
+        if (!japanese && *src >= CHAR_DBL_QUOTE_LEFT && *src <= CHAR_SGL_QUOTE_RIGHT)
+        {
+            *dest++ = CHAR_EXTRA_SYMBOL;
+            *dest++ = CHAR_LOWERED_QUOTE_FIRST + (*src - CHAR_DBL_QUOTE_LEFT);
+        }
+        else
+        {
+            *dest++ = *src;
+        }
+    }
+    *dest = EOS;
+}
+
+// Data windows are added and removed as the pages change, which resets their mode.
+static void SetSummaryDataWindowRtl(const struct WindowTemplate *template, u8 templateId, u32 windowId)
+{
+    // Columns of numbers right-aligned with leading spaces: mirroring would move the spaces to
+    // the right and leave the numbers ragged against the labels. The EXP box holds the same kind
+    // of numbers, so it keeps its English layout too.
+    if (template == sPageSkillsTemplate
+     && (templateId == PSS_DATA_WINDOW_SKILLS_STATS_LEFT || templateId == PSS_DATA_WINDOW_SKILLS_STATS_RIGHT
+      || templateId == PSS_DATA_WINDOW_EXP))
+        SetWindowRtlMode(windowId, WINDOW_RTL_LTR);
+}
+#endif
+
 static void ResetWindows(void)
 {
     u8 i;
 
     InitWindows(sSummaryTemplate);
+#if TEXT_RTL
+    SetSummaryLabelWindowsRtl();
+#endif
     DeactivateAllTextPrinters();
     for (i = 0; i < PSS_LABEL_WINDOW_END; i++)
         FillWindowPixelBuffer(i, PIXEL_FILL(0));
@@ -3401,7 +3531,13 @@ static void PrintTextOnWindowToFitPx(u8 windowId, const u8 *string, u8 x, u8 y, 
 
 static void PrintTextOnWindowToFit(u8 windowId, const u8 *string, u8 x, u8 y, u8 lineSpacing, u8 colorId)
 {
+#if TEXT_RTL
+    // Fitted to the room from x to the window's edge: mirrored, a wider line would lose letters
+    // at the window's left edge.
+    PrintTextOnWindowToFitPx(windowId, string, x, y, lineSpacing, colorId, WindowWidthPx(windowId) - x);
+#else
     PrintTextOnWindowToFitPx(windowId, string, x, y, lineSpacing, colorId, WindowWidthPx(windowId));
+#endif
 }
 
 static void PrintMonInfo(void)
@@ -3428,6 +3564,9 @@ static void PrintNotEggInfo(void)
         StringCopy(gStringVar1, &gText_NumberClear01[0]);
         ConvertIntToDecimalStringN(gStringVar2, dexNum, STR_CONV_MODE_LEADING_ZEROS, digitCount);
         StringAppend(gStringVar1, gStringVar2);
+#if TEXT_RTL
+        SetDexNumberRtlAxis(gStringVar1);
+#endif
         if (!IsMonShiny(mon))
         {
             PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, gStringVar1, 0, 1, 0, 1);
@@ -3448,6 +3587,9 @@ static void PrintNotEggInfo(void)
         else
             StringCopy(gStringVar2, &gText_ThreeQuestionMarks[0]);
         StringAppend(gStringVar1, gStringVar2);
+#if TEXT_RTL
+        SetDexNumberRtlAxis(gStringVar1);
+#endif
         if (!IsMonShiny(mon))
         {
             PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, gStringVar1, 0, 1, 0, 1);
@@ -3465,9 +3607,23 @@ static void PrintNotEggInfo(void)
     StringAppend(gStringVar1, gStringVar2);
     PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, gStringVar1, 24, 17, 0, 1);
     GetMonNickname(mon, gStringVar1);
-    PrintTextOnWindowToFitPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, gStringVar1, 0, 1, 0, 1, WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME) - 9);
+#if TEXT_RTL
+    {
+        u8 nickname[POKEMON_NAME_LENGTH * 2 + 1];
+
+        LowerNicknameQuoteMarks(nickname, gStringVar1, mon);
+        PrintTextOnWindowToFitPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, nickname, 0, PORTRAIT_NICKNAME_Y, 0, 1, WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME) - 9);
+    }
+#else
+    PrintTextOnWindowToFitPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, gStringVar1, 0, PORTRAIT_NICKNAME_Y, 0, 1, WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME) - 9);
+#endif
     PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, gText_Slash, 0, 1, 0, 1);
+#if TEXT_RTL
+    // Mirrored about the narrower axis, the name after the slash must end before the window's left edge.
+    PrintTextOnWindowToFitPx(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, GetSpeciesName(summary->species2), 6, 1, 0, 1, PORTRAIT_RTL_MIRROR_PX - 6);
+#else
     PrintTextOnWindowToFitPx(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, GetSpeciesName(summary->species2), 6, 1, 0, 1, WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_SPECIES) - 9);
+#endif
     PrintGenderSymbol(mon, summary->species2);
     PutWindowTilemap(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME);
     PutWindowTilemap(PSS_LABEL_WINDOW_PORTRAIT_SPECIES);
@@ -3476,7 +3632,7 @@ static void PrintNotEggInfo(void)
 static void PrintEggInfo(void)
 {
     GetMonNickname(&sMonSummaryScreen->currentMon, gStringVar1);
-    PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, gStringVar1, 0, 1, 0, 1);
+    PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, gStringVar1, 0, PORTRAIT_NICKNAME_Y, 0, 1);
     PutWindowTilemap(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME);
     ClearWindowTilemap(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER);
     ClearWindowTilemap(PSS_LABEL_WINDOW_PORTRAIT_SPECIES);
@@ -3534,8 +3690,16 @@ static void PrintPageNamesAndStats(void)
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, gText_SpDef4, statsXPos, 17, 0, 1);
     statsXPos = 2 + GetStringCenterAlignXOffset(FONT_NORMAL, gText_Speed2, 36);
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, gText_Speed2, statsXPos, 33, 0, 1);
+#if TEXT_RTL
+    // The labels' cell starts 4 px into the window, after the frame (x 80-83), and ends at the
+    // window's right edge. English starts the labels 2 px inside the cell; printed from x 2 the
+    // mirrored labels end 2 px inside it too.
+    PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_EXP, gText_ExpPoints, 2, 1, 0, 1);
+    PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_EXP, gText_NextLv, 2, 17, 0, 1);
+#else
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_EXP, gText_ExpPoints, 6, 1, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_EXP, gText_NextLv, 6, 17, 0, 1);
+#endif
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATUS, gText_Status, 2, 1, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_POWER_ACC, gText_Power, 0, 1, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_POWER_ACC, gText_Accuracy2, 0, 17, 0, 1);
@@ -3660,6 +3824,9 @@ static u8 AddWindowFromTemplateList(const struct WindowTemplate *template, u8 te
     if (*windowIdPtr == WINDOW_NONE)
     {
         *windowIdPtr = AddWindow(&template[templateId]);
+#if TEXT_RTL
+        SetSummaryDataWindowRtl(template, templateId, *windowIdPtr);
+#endif
         FillWindowPixelBuffer(*windowIdPtr, PIXEL_FILL(0));
     }
     return *windowIdPtr;
@@ -4050,7 +4217,13 @@ static void PrintHeldItemName(void)
     }
 
     fontId = GetFontIdToFit(text, FONT_NORMAL, 0, WindowTemplateWidthPx(&sPageSkillsTemplate[PSS_DATA_WINDOW_SKILLS_HELD_ITEM]) - 8);
+#if TEXT_RTL
+    // The 80-px window is mirrored, so the English +6 would centre the name 4 px left of the box
+    // (at x 38 instead of 42) and push a 72-px name onto its left frame. +2 mirrors to the English span.
+    x = GetStringCenterAlignXOffset(fontId, text, 72) + 2;
+#else
     x = GetStringCenterAlignXOffset(fontId, text, 72) + 6;
+#endif
     PrintTextOnWindowWithFont(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_HELD_ITEM), text, x, 1, 0, 0, fontId);
 }
 
@@ -4070,7 +4243,12 @@ static void PrintRibbonCount(void)
         text = gStringVar4;
     }
 
+#if TEXT_RTL
+    // Mirrored in its 80-px window, the English +6 centres the text at x 39 instead of 41; +4 matches it.
+    x = GetStringCenterAlignXOffset(FONT_NORMAL, text, 70) + 4;
+#else
     x = GetStringCenterAlignXOffset(FONT_NORMAL, text, 70) + 6;
+#endif
     PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_RIBBON_COUNT), text, x, 1, 0, 0);
 }
 
@@ -4300,8 +4478,13 @@ static void PrintMoveNameAndPP(u8 moveIndex)
     if (move != 0)
     {
         pp = CalculatePPWithBonus(move, summary->ppBonuses, moveIndex);
+#if TEXT_RTL
+        PrintTextOnWindowToFit(moveNameWindowId, GetMoveName(move), MOVES_NAME_X, moveIndex * 16 + 1, 0, 1);
+        ConvertIntToDecimalStringN(gStringVar1, summary->pp[moveIndex], STR_CONV_MODE_LEFT_ALIGN, 2);
+#else
         PrintTextOnWindowToFit(moveNameWindowId, GetMoveName(move), 0, moveIndex * 16 + 1, 0, 1);
         ConvertIntToDecimalStringN(gStringVar1, summary->pp[moveIndex], STR_CONV_MODE_RIGHT_ALIGN, 2);
+#endif
         ConvertIntToDecimalStringN(gStringVar2, pp, STR_CONV_MODE_RIGHT_ALIGN, 2);
         DynamicPlaceholderTextUtil_Reset();
         DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
@@ -4309,11 +4492,19 @@ static void PrintMoveNameAndPP(u8 moveIndex)
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sMovesPPLayout);
         text = gStringVar4;
         ppState = GetCurrentPpToMaxPpState(summary->pp[moveIndex], pp) + 9;
+#if TEXT_RTL
+        x = MOVES_PP_X;
+#else
         x = GetStringRightAlignXOffset(FONT_NORMAL, text, 44);
+#endif
     }
     else
     {
+#if TEXT_RTL
+        PrintTextOnWindow(moveNameWindowId, gText_OneDash, MOVES_NAME_X, moveIndex * 16 + 1, 0, 1);
+#else
         PrintTextOnWindow(moveNameWindowId, gText_OneDash, 0, moveIndex * 16 + 1, 0, 1);
+#endif
         text = gText_TwoDashes;
         ppState = 12;
         x = GetStringCenterAlignXOffset(FONT_NORMAL, text, 44);
@@ -4457,12 +4648,30 @@ static void PrintNewMoveDetailsOrCancelText(void)
 
     if (sMonSummaryScreen->newMove == MOVE_NONE)
     {
+#if TEXT_RTL
+        PrintTextOnWindow(windowId1, gText_Cancel, MOVES_NAME_X, 65, 0, 1);
+#else
         PrintTextOnWindow(windowId1, gText_Cancel, 0, 65, 0, 1);
+#endif
     }
     else
     {
         enum Move move = sMonSummaryScreen->newMove;
 
+#if TEXT_RTL
+        if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
+            PrintTextOnWindowToFit(windowId1, GetMoveName(move), MOVES_NAME_X, 65, 0, 6);
+        else
+            PrintTextOnWindowToFit(windowId1, GetMoveName(move), MOVES_NAME_X, 65, 0, 5);
+
+        ConvertIntToDecimalStringN(gStringVar1, GetMovePP(move), STR_CONV_MODE_LEFT_ALIGN, 2);
+        ConvertIntToDecimalStringN(gStringVar2, GetMovePP(move), STR_CONV_MODE_RIGHT_ALIGN, 2);
+        DynamicPlaceholderTextUtil_Reset();
+        DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
+        DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
+        DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sMovesPPLayout);
+        PrintTextOnWindow(windowId2, gStringVar4, MOVES_PP_X, 65, 0, 12);
+#else
         if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
             PrintTextOnWindowToFit(windowId1, GetMoveName(move), 0, 65, 0, 6);
         else
@@ -4474,6 +4683,7 @@ static void PrintNewMoveDetailsOrCancelText(void)
         DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar1);
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sMovesPPLayout);
         PrintTextOnWindow(windowId2, gStringVar4, GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 44), 65, 0, 12);
+#endif
     }
 }
 
@@ -4584,20 +4794,40 @@ void SetTypeSpritePosAndPal(enum Type typeId, u8 x, u8 y, u8 spriteArrayId)
     SetSpriteInvisibility(spriteArrayId, FALSE);
 }
 
+#if TEXT_RTL
+// The "TYPE/" label is mirrored to the right end of its window (x 88-232), so the 32-px type icons
+// that follow it go to their mirrored places in the same row. The English puts the first icon at
+// x 120 whatever the label's width; here it follows the label's own width (with the English 2-px
+// gap), so a label shorter than "TYPE/" does not leave a hole before its value.
+static u32 InfoTypeIconX(u32 x)
+{
+    u32 labelEnd = GetStringWidth(FONT_NORMAL, gText_TypeSlash, 0) + 2;
+
+    if (labelEnd > 32)
+        labelEnd = 32;
+    // An icon at English x (x - 32 + labelEnd once moved up to the label) spans 32 px; mirror it
+    // inside x 88-232.
+    return (88 + 232) - (x - 32 + labelEnd) - 32;
+}
+#define INFO_TYPE_ICON_X(x) InfoTypeIconX(x)
+#else
+#define INFO_TYPE_ICON_X(x) (x)
+#endif
+
 static void SetMonTypeIcons(void)
 {
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
     if (summary->isEgg)
     {
-        SetTypeSpritePosAndPal(TYPE_MYSTERY, 120, 48, SPRITE_ARR_ID_TYPE);
+        SetTypeSpritePosAndPal(TYPE_MYSTERY, INFO_TYPE_ICON_X(120), 48, SPRITE_ARR_ID_TYPE);
         SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, TRUE);
     }
     else
     {
-        SetTypeSpritePosAndPal(GetSpeciesType(summary->species, 0), 120, 48, SPRITE_ARR_ID_TYPE);
+        SetTypeSpritePosAndPal(GetSpeciesType(summary->species, 0), INFO_TYPE_ICON_X(120), 48, SPRITE_ARR_ID_TYPE);
         if (GetSpeciesType(summary->species, 0) != GetSpeciesType(summary->species, 1))
         {
-            SetTypeSpritePosAndPal(GetSpeciesType(summary->species, 1), 160, 48, SPRITE_ARR_ID_TYPE + 1);
+            SetTypeSpritePosAndPal(GetSpeciesType(summary->species, 1), INFO_TYPE_ICON_X(160), 48, SPRITE_ARR_ID_TYPE + 1);
             SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, FALSE);
         }
         else
@@ -4606,7 +4836,7 @@ static void SetMonTypeIcons(void)
         }
         if (P_SHOW_TERA_TYPE >= GEN_9)
         {
-            SetTypeSpritePosAndPal(summary->teraType, 200, 48, SPRITE_ARR_ID_TYPE + 2);
+            SetTypeSpritePosAndPal(summary->teraType, INFO_TYPE_ICON_X(200), 48, SPRITE_ARR_ID_TYPE + 2);
         }
     }
 }
@@ -4855,7 +5085,13 @@ static void CreateCaughtBallSprite(struct Pokemon *mon)
     enum PokeBall ball = GetMonData(mon, MON_DATA_POKEBALL);
 
     LoadBallGfx(ball);
+#if TEXT_RTL
+    // The level line beside it is mirrored about the portrait panel's axis (x = 40), so the ball
+    // goes to the mirrored place at the panel's right end.
+    sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_BALL] = CreateSprite(&gPokeBalls[ball].spriteTemplate, 80 - 16, 136, 0);
+#else
     sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_BALL] = CreateSprite(&gPokeBalls[ball].spriteTemplate, 16, 136, 0);
+#endif
     gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_BALL]].callback = SpriteCallbackDummy;
     gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_BALL]].oam.priority = 3;
 }
@@ -5006,10 +5242,17 @@ static inline void ShowUtilityPrompt(s16 mode)
     FillWindowPixelBuffer(PSS_LABEL_WINDOW_PROMPT_UTILITY, PIXEL_FILL(0));
     PutWindowTilemap(PSS_LABEL_WINDOW_PROMPT_UTILITY);
 
+#if TEXT_RTL
+    // The window is mirrored: the icon placed first lands flush right (x 46-62), as the English
+    // text does, and the text reads on to its left.
+    int iconXPos = 2;
+    int stringXPos = iconXPos + 16;
+#else
     int stringXPos = GetStringRightAlignXOffset(FONT_NORMAL, promptText, 62);
     int iconXPos = stringXPos - 16;
     if (iconXPos < 0)
         iconXPos = 0;
+#endif
 
     PrintAOrBButtonIcon(PSS_LABEL_WINDOW_PROMPT_UTILITY, FALSE, iconXPos);
     PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_UTILITY, promptText, stringXPos, 1, 0, 0);

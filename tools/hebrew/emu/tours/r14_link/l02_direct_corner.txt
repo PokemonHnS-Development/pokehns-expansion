@@ -1,0 +1,97 @@
+# Direct Corner attendant (Battle Frontier Pokemon Center 2F, (10,2)) past its adapter check
+# (CableClub_EventScript_DirectCornerAttendant, data/scripts/cable_club.inc:954-967): the welcome, the
+# service menus, the trade / battle / Berry Crush prompts, the save, the group-leader menu and the two
+# link-up screens of src/union_room.c (TryBecomeLinkLeader, TryJoinLinkGroup), all run in RAM at the
+# counter. hnsrun has no Wireless Adapter, so the RFU never answers; B cancels each link-up screen.
+start saves/r14/link/base.sav
+include ../../scripts/continue.txt
+warpto MAP_BATTLE_FRONTIER_POKEMON_CENTER_2F_HNS 10 3
+face UP
+
+# --- c1: welcome + service menu without a Powder Jar (MULTI_WIRELESS_NO_RECORD_BERRY), EXIT
+evstart lock; faceplayer; message 0x@CableClub_Text_WelcomeWhichDirectCornerRoom@; waitmessage; delay 28; goto 0x@CableClub_EventScript_DirectCornerSelectService@
+fieldwatch c1_welcome menu 6000
+pick 1 nopress
+snap c1_menu_battle
+pick 2
+fieldwatch c1_exit free 6000
+
+# --- c2: BATTLE: the mode menu, INFO (CableClub_Text_ExplainBattleModes), then EXIT
+evstart lock; faceplayer; goto 0x@CableClub_EventScript_WirelessBattleSelect@
+fieldwatch c2_mode menu 6000
+pick 1 nopress
+snap c2_mode_double
+pick 2 nopress
+snap c2_mode_multi
+pick 3
+fieldwatch c2_info menu 6000
+pick 4
+fieldwatch c2_exit free 6000
+
+# --- c3: TRADE, NO; TRADE, YES with one Pokemon (CableClub_Text_NeedTwoMonsToTrade)
+evstart lock; faceplayer; goto 0x@CableClub_EventScript_WirelessTrade@
+fieldwatch c3_trade_ask menu 6000
+pick 1
+fieldwatch c3_trade_no free 6000
+
+# --- c4: with a Powder Jar: the service menu with Berry Crush (MULTI_WIRELESS_NO_RECORD), Berry Crush YES (the
+# player has Berries): the save prompt, NO. Then CableClub_EventScript_NeedBerryForBerryCrush (no Berries) in RAM,
+# which returns to the service menu, EXIT.
+ev additem ITEM_POWDER_JAR; end
+evstart lock; faceplayer; goto 0x@CableClub_EventScript_DirectCornerSelectService@
+fieldwatch c4_menu menu 6000
+pick 2
+fieldwatch c4_crush_ask menu 6000
+pick 0
+fieldwatch c4_help task:SaveGameTask 6000
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap c4_save_prompt
+tap DOWN 4
+waitquiet
+tap A 4
+fieldwatch c4_save_no free 6000
+evstart lock; faceplayer; goto 0x@CableClub_EventScript_NeedBerryForBerryCrush@
+fieldwatch c4_noberry menu 6000
+pick 3
+fieldwatch c4_exit free 6000
+
+# --- c5: the all-services menu with RECORD CORNER (MULTI_WIRELESS_ALL_SERVICES; FLAG_VISITED_MAUVILLE_CITY is 0 in
+# H&S, include/constants/flags_frlg.h:2508, so no player gets it) and its prompt CableClub_Text_AccessRecordCorner
+evstart lock; faceplayer; message 0x@CableClub_Text_WelcomeWhichDirectCornerRoom@; waitmessage; goto 0x@CableClub_EventScript_DirectCornerSelectAllServices@
+fieldwatch c5_menu menu 6000
+pick 2
+fieldwatch c5_record_ask menu 6000
+pick 1
+fieldwatch c5_record_no free 6000
+
+# --- c6: BATTLE > SINGLE: save YES, the group-leader menu for two (CableClub_Text_ChooseGroupLeaderOfTwo), EXIT
+evstart lock; faceplayer; goto 0x@CableClub_EventScript_WirelessBattleSelect@
+fieldwatch c6_mode menu 6000
+pick 0
+fieldwatch c6_help task:SaveGameTask 6000
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap c6_save_prompt
+tap A 0
+waitptr sSaveDialogCallback SaveReturnSuccessCallback 900
+snap c6_saved
+fieldwatch c6_leader menu 6000
+pick 0 nopress
+snap c6_leader_join
+pick 1 nopress
+snap c6_leader_lead
+pick 2
+fieldwatch c6_exit free 6000
+
+# --- c7: BATTLE > MULTI: the group-leader menu for four (CableClub_Text_ChooseGroupLeaderOfFour), EXIT
+evstart lock; faceplayer; setvar VAR_0x8004, LINK_GROUP_MULTI_BATTLE; goto 0x@CableClub_EventScript_ChooseLinkLeaderFrom4@
+fieldwatch c7_leader4 menu 6000
+pick 2
+fieldwatch c7_exit free 6000
+
+# --- c8: Berry Crush leader menu (CableClub_Text_ChooseGroupLeader), EXIT
+evstart lock; faceplayer; setvar VAR_0x8004, LINK_GROUP_BERRY_CRUSH; goto 0x@CableClub_EventScript_ChooseLinkLeader@
+fieldwatch c8_leaderx menu 6000
+pick 2
+fieldwatch c8_exit free 6000

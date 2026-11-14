@@ -34,8 +34,8 @@ NewSinjoh_HauntedHouse_EventScript_TooEarly::
     end
 
 NewSinjoh_HauntedHouse_Text_TooEarlyNoReaction:
-    .string "You sense an odd presence...\p"
-    .string "But there is no reaction.$"
+    .string "מורגשת כאן נוכחות מוזרה…\p"
+    .string "אבל אין שום תגובה.$"
 
 NewSinjoh_HauntedHouse_EventScript_StartScary::
     msgbox NewSinjoh_HauntedHouse_Text_StartScary, MSGBOX_AUTOCLOSE
@@ -134,8 +134,8 @@ NewSinjoh_House3_Movement_CameraPanRight:
     step_end
 
 NewSinjoh_HauntedHouse_Text_StartScary:
-    .string "You sense an odd presence...\p"
-    .string "Are you being watched?$"
+    .string "מורגשת כאן נוכחות מוזרה…\p"
+    .string "האם מישהו צופה בך?$"
 
 NewSinjoh_HauntedHouse_EventScript_Log1::
     msgbox NewSinjoh_HauntedHouse_Text_Log1, MSGBOX_SIGN
@@ -150,51 +150,50 @@ NewSinjoh_HauntedHouse_EventScript_Log3::
     end
 
 NewSinjoh_HauntedHouse_Text_Log1:
-  	.string "Research Log 9:  September 20, 1975\p"
-	.string "The days are getting shorter now\n"
-	.string "and the wind is becoming harsh.\p"
-    .string "The villagers were quite welcoming.\p"
-    .string "They are allowing me to stay here\n"
-    .string "in this cabin for the winter.\p"
-	.string "It seems a family used to live here.\n"
-	.string "I often think about my family.\p"
-	.string "Maybe I will have the courage to\n"
-    .string "return to them in the spring.$"
+  	.string "יומן מחקר 9, מיום 20 בספטמבר 1975\p"
+  	.string "הימים מתקצרים עכשיו\n"
+  	.string "והרוח נעשית עזה.\p"
+  	.string "תושבי הכפר קיבלו אותי בחום רב.\p"
+  	.string "הם מרשים לי לגור כאן\n"
+  	.string "בבקתה הזאת במשך החורף.\p"
+  	.string "נראה שפעם גרה כאן משפחה.\n"
+  	.string "המשפחה שלי עולה במחשבותיי תכופות.\p"
+  	.string "אולי באביב יהיה לי האומץ\n"
+  	.string "לחזור אליהם.$"
 
 NewSinjoh_HauntedHouse_Text_Log2:
-    .string "Research Log 10: October 20, 1975\p"
-    .string "My thoughts have turned dark.\p"
-    .string "Perhaps it is the changing of the\n"
-    .string "seasons.\p"
-    .string "The villagers continue to treat me\n"
-    .string "as one of their own.\p"
-    .string "But the guilt I carry prevents me from\n"
-    .string "returning the sentiment.\p"
-    .string "I rarely leave the cabin now.\p"
-    .string "And when I think of my family...\n"
-    .string "Their faces have changed...\l"
-    .string "I only see the faces of the POKéMON\l"
-    .string "that were lost at the ruins...\p"
-    .string "Sometimes I think the POKéMON are\n"
-    .string "here with me. I see them in\l"
-    .string "reflections, I feel their gaze.\p"
-    .string "Things will be better in the spring.$"
+    .string "יומן מחקר 10, מיום 20 באוקטובר 1975\p"
+    .string "המחשבות שלי נעשו קודרות.\p"
+    .string "אולי זה בגלל חילופי העונות.\p"
+    .string "תושבי הכפר ממשיכים לקבל אותי\n"
+    .string "כאילו הייתי חלק מהם.\p"
+    .string "אבל רגשות האשם שלי מונעים ממני\n"
+    .string "להשיב להם באותה מידה.\p"
+    .string "בזמן האחרון כמעט לא יצאתי מהבקתה.\p"
+    .string "וכשהמשפחה שלי עולה בזיכרוני…\n"
+    .string "הפנים שלהם השתנו…\p"
+    .string "אני רואה רק את פני הפוקימונים\n"
+    .string "שאבדו בחורבות…\p"
+    .string "לפעמים נדמה לי שהפוקימונים\n"
+    .string "כאן איתי.\p"
+    .string "אני רואה אותם בהשתקפויות,\n"
+    .string "המבט שלהם נעוץ בי.\p"
+    .string "באביב יהיה טוב יותר.$"
 
 NewSinjoh_HauntedHouse_Text_Log3:
-    .string "Research Log 10: November 1, 1975\p"
-    .string "I am not alone here.\n"
-    .string "Maybe I never was.\p"
-    .string "The POKéMON are with me...\p"
-    .string "They are angry with me, I think.\p"
-    .string "Objects are thrown, doors slam.\p"
-    .string "Heavy boxes block the front door.\p"
-    .string "But truthfully, I could leave\n"
-    .string "if I wanted to.\p"
-    .string "There is nothing else for me now.\p"
-    .string "I've written of a family before,\n"
-    .string "but the POKéMON are the only family\l"
-    .string "I can remember...\p"
-    .string "I am running out of food, but my\n"
-    .string "guilt outpaces my hunger.\p"
-    .string "I think I will stay here a while...$"
+    .string "יומן מחקר 10, מיום 1 בנובמבר 1975\p"
+    .string "אני לא לבד כאן.\n"
+    .string "אולי מעולם לא הייתי לבד.\p"
+    .string "הפוקימונים איתי…\p"
+    .string "הם כועסים עליי, נדמה לי.\p"
+    .string "חפצים מושלכים, דלתות נטרקות.\p"
+    .string "ארגזים כבדים חוסמים את דלת הכניסה.\p"
+    .string "אבל האמת היא שיכולתי לעזוב\n"
+    .string "אם רק הייתי רוצה.\p"
+    .string "לא נשאר לי שום דבר אחר עכשיו.\p"
+    .string "כבר כתבתי על משפחה, אבל המשפחה\n"
+    .string "היחידה שבזיכרוני היא הפוקימונים…\p"
+    .string "האוכל שלי אוזל,\n"
+    .string "אבל רגשות האשם גוברים על הרעב.\p"
+    .string "נדמה לי שאשאר כאן עוד זמן מה…$"
   

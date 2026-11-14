@@ -1,0 +1,109 @@
+# METEORITE from KEY ITEMS (ItemUseOutOfBattle_FormChange, src/item_use.c:1512 -> ItemUseCB_FormChange,
+# src/party_menu.c:6911): USE on Typhlosion (no effect), then on Deoxys four times (Normal > Attack > Defense
+# > Speed > Normal), each with "{STR_VAR_1} changed form!" (gText_PkmnTransformed, src/strings.c:330).
+start saves/menuA_base_copy.sav
+include ../../continue.txt
+ev givemon SPECIES_DEOXYS, 50; end
+fillpocket KEY_ITEMS 1 59 1
+bagopen KEY_ITEMS
+snap met_01_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+snap met_02_ctx
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap met_03_party_use_on_which
+tap A 4
+waitkey 900
+snap met_04_typhlosion_no_effect
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+partyslot 5
+snap met_11_deoxys_cursor
+tap A 4
+40 -
+shot met_12_anim
+waitkey 1500
+snap met_13_transformed
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap met_14_back_in_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+partyslot 5
+snap met_21_deoxys_cursor
+tap A 4
+40 -
+shot met_22_anim
+waitkey 1500
+snap met_23_transformed
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap met_24_back_in_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+partyslot 5
+snap met_31_deoxys_cursor
+tap A 4
+40 -
+shot met_32_anim
+waitkey 1500
+snap met_33_transformed
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap met_34_back_in_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+partyslot 5
+snap met_41_deoxys_cursor
+tap A 4
+40 -
+shot met_42_anim
+waitkey 1500
+snap met_43_transformed
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap met_44_back_in_bag
+bagclose
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap met_90_party_after
+tap B 4
+waitcb2x CB2_Overworld 900

@@ -1,0 +1,11 @@
+# Storage tests base save: ladder 6 (post-game) + pcs_setup.inc, in the Cherrygrove Pokemon Center
+# below the nurse (the PC tours walk to the PC at (11,1) like tours/menu_center_pc.txt).
+start saves/pcs_postgame.sav
+include ../continue.txt
+ev file pcs_setup.inc
+dbg 1 1 3                                 # PC/Bag > Fill > items pocket (every slot, x999)
+waitctl 600 B
+boxprobe 0
+warpto MAP_CHERRYGROVE_CITY_POKEMON_CENTER_HNS 7 4
+savegame
+keepsave pcs_base

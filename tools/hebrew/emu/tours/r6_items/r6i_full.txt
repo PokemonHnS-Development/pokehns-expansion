@@ -1,0 +1,21 @@
+# r6 items: the bag-full branches. fillpocket makes every slot of one bag pocket ITEM x999 (RAM only), so
+# checkitemspace fails and Std_FindItem goes to EventScript_NoRoomToPickUpItem ('קיבלת את X!' then
+# gText_TooBadBagIsFull, data/scripts/obtain_item.inc:215-219), one ball per pocket; a hidden item takes
+# EventScript_NoRoomForHiddenItem (:283-288, the found line, then the same bag-full line). Normal play can
+# fill the Items, Medicine, Poke Balls and Key Items pockets this way; the TM and Berries pockets refuse a
+# second stack of one item (src/item.c BagPocket_AddItem), so their full state is forced here.
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+fillpocket POCKET_MEDICINE ITEM_POTION
+pick full_b_potion FLAG_ITEM_DARKCAVE1_POTION MAP_DARK_CAVE_SOUTH_SIDE_HNS 10 8 UP
+fillpocket POCKET_ITEMS ITEM_NUGGET
+pick full_b_nugget FLAG_ITEM_ROUTE2_NUGGET MAP_ROUTE2_HNS 17 76 UP
+fillpocket POCKET_POKE_BALLS ITEM_ULTRA_BALL
+pick full_b_ultra_ball FLAG_ITEM_BURNED_TOWER_B1F_ULTRA_BALL MAP_BURNED_TOWER_B1F_HNS 6 10 UP
+fillpocket POCKET_TM_HM ITEM_TM_DIG
+pick full_t_tm_dig FLAG_ITEM_NATIONAL_PARK_TM_DIG MAP_NATIONAL_PARK_NORMAL_HNS 2 43 RIGHT
+fillpocket POCKET_BERRIES ITEM_ORAN_BERRY
+pick full_b_oran_berry FLAG_ITEM_RUINSOFALPH_ORAN_BERRY MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 19 42 UP
+fillpocket POCKET_KEY_ITEMS ITEM_COIN_CASE
+pick full_b_coin_case FLAG_ITEM_GOLDENROD_UNDERGROUND_COIN_CASE MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL_HNS 13 14 UP
+pick full_h_rare_candy FLAG_HIDDEN_ITEM_LAKEOFRAGE_RARE_CANDY MAP_LAKE_OF_RAGE_HNS 24 7 UP

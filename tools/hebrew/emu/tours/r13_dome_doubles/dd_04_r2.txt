@@ -1,0 +1,60 @@
+# r13 Dome doubles, round 2: RECORD (record the round-1 match), REST and RETIRE questions
+# (answered NO), OPPONENT card, TOURNEY TREE with the round-1 match card (result line), READY
+# TO START, the pick of 2, the battle (won), the static tree, the semifinal menu (state sfmenu).
+start saves/r13/dome_doubles/base.sav
+dstate load r2menu
+pick 3
+drive dd_r2rec menu 10
+pick 0
+drivex dd_r2recyes menu 20 6000
+# after a record the menu has no RECORD row (MULTI_TOURNEY_NO_RECORD): REST 3, RETIRE 4
+pick 3
+drive dd_r2rest menu 10
+pick 1
+drivex dd_r2restno menu 10 3000
+pick 4
+drive dd_r2ret menu 10
+pick 1
+drivex dd_r2retno menu 10 3000
+pick 0
+drivex dd_r2opp cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap dd_r2opp_card
+tap B 0
+drivex dd_r2back menu 10 3000
+pick 1
+drivex dd_r2tree cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+snap dd_r2tree_full
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap dd_r2tree_card_gold
+tapstate Task_HandleInfoCardInput 0 2 RIGHT
+snap dd_r2tree_match_r1
+tapstate Task_HandleInfoCardInput 0 2 RIGHT
+snap dd_r2tree_match_r2
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+tap B 0
+drivex dd_r2back2 menu 10 3000
+pick 2
+drivex dd_r2pre task:Task_HandleChooseMonInput 30 9000
+pfx dd_r2
+include _dd_pick2.txt
+drivex dd_r2go battle 40 12000
+domeinfo
+bwin dd_r2b 30
+drivemap dd_r2after MAP_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM_HNS 40 12000
+domesync dumpif r2done
+drivex dd_r2win task:Task_HandleStaticTourneyTreeInput 30 9000
+waitquiet
+120 -
+snap dd_r2static
+tap A 0
+drivex dd_sfmenu menu 30 9000
+domeinfo
+dstate save sfmenu

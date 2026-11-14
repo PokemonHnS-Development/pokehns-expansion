@@ -1,0 +1,171 @@
+# Round 20 names on the summary screen (run with scripts/r10_names/r10names.py tour): INFO (type plates),
+# SKILLS (ability name and description, held item, the EXP. points label), BATTLE MOVES (type plates, names) and
+# each move's description; the first Pokemon also on the CONTEST MOVES page, where the move list is narrowest.
+# The Psychic and Ghost plates, the four widest Psychic names, the 15 FireRed move names, CLOUD NINE, DAMP's
+# and SCRAPPY's descriptions, EARLY BIRD, and held items whose names changed (PSYCHIC GEM is an audit FIT case).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev .set ROM_SIZE, 0; callnative ZeroPlayerPartyMons; createmon 0, 0, SPECIES_ABRA, 30, item=ITEM_PSYCHIC_GEM, abilityNum=0, move1=MOVE_PSYCHO_CUT, move2=MOVE_PSYSHIELD_BASH, move3=MOVE_PSYCHO_SHIFT, move4=MOVE_PSYCHO_BOOST; createmon 0, 1, SPECIES_GASTLY, 30, item=ITEM_GHOST_GEM, abilityNum=0, move1=MOVE_PSYCHIC_TERRAIN, move2=MOVE_PSYCHIC_NOISE, move3=MOVE_JUMP_KICK, move4=MOVE_ROLLING_KICK; createmon 0, 2, SPECIES_GOLDUCK, 40, item=ITEM_PSYCHIC_SEED, abilityNum=1, move1=MOVE_PSYCHIC, move2=MOVE_SHADOW_BALL, move3=MOVE_PSYCHIC_FANGS, move4=MOVE_SKY_UPPERCUT; createmon 0, 3, SPECIES_PSYDUCK, 20, item=ITEM_TWISTED_SPOON, abilityNum=0, move1=MOVE_SELF_DESTRUCT, move2=MOVE_PAY_DAY, move3=MOVE_COUNTER, move4=MOVE_SWIFT; createmon 0, 4, SPECIES_KANGASKHAN, 40, item=ITEM_LUCKY_EGG, abilityNum=1, move1=MOVE_KINESIS, move2=MOVE_SOFT_BOILED, move3=MOVE_TRIPLE_KICK, move4=MOVE_SKILL_SWAP; createmon 0, 5, SPECIES_DODRIO, 40, item=ITEM_SPELL_TAG, abilityNum=1, move1=MOVE_SCARY_FACE, move2=MOVE_MAGNITUDE, move3=MOVE_GRASS_WHISTLE, move4=MOVE_CONSTRICT; special CalculatePlayerPartyCount; end
+include ../../scripts/r2_summary_info_page_variants/_sum_open.txt
+snap n20_sum_s0_info
+sumkey RIGHT
+snap n20_sum_s0_skills
+sumkey RIGHT
+snap n20_sum_s0_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n20_sum_s0_bm_1
+tap DOWN 4
+waitquiet
+snap n20_sum_s0_bm_2
+tap DOWN 4
+waitquiet
+snap n20_sum_s0_bm_3
+tap DOWN 4
+waitquiet
+snap n20_sum_s0_bm_4
+tap B 4
+sumwait
+sumkey RIGHT
+snap n20_sum_s0_contest
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n20_sum_s0_cm_1
+tap DOWN 4
+waitquiet
+snap n20_sum_s0_cm_2
+tap DOWN 4
+waitquiet
+snap n20_sum_s0_cm_3
+tap DOWN 4
+waitquiet
+snap n20_sum_s0_cm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT
+sumkey LEFT
+sumkey DOWN
+snap n20_sum_s1_info
+sumkey RIGHT
+snap n20_sum_s1_skills
+sumkey RIGHT
+snap n20_sum_s1_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n20_sum_s1_bm_1
+tap DOWN 4
+waitquiet
+snap n20_sum_s1_bm_2
+tap DOWN 4
+waitquiet
+snap n20_sum_s1_bm_3
+tap DOWN 4
+waitquiet
+snap n20_sum_s1_bm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT
+sumkey DOWN
+snap n20_sum_s2_info
+sumkey RIGHT
+snap n20_sum_s2_skills
+sumkey RIGHT
+snap n20_sum_s2_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n20_sum_s2_bm_1
+tap DOWN 4
+waitquiet
+snap n20_sum_s2_bm_2
+tap DOWN 4
+waitquiet
+snap n20_sum_s2_bm_3
+tap DOWN 4
+waitquiet
+snap n20_sum_s2_bm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT
+sumkey DOWN
+snap n20_sum_s3_info
+sumkey RIGHT
+snap n20_sum_s3_skills
+sumkey RIGHT
+snap n20_sum_s3_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n20_sum_s3_bm_1
+tap DOWN 4
+waitquiet
+snap n20_sum_s3_bm_2
+tap DOWN 4
+waitquiet
+snap n20_sum_s3_bm_3
+tap DOWN 4
+waitquiet
+snap n20_sum_s3_bm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT
+sumkey DOWN
+snap n20_sum_s4_info
+sumkey RIGHT
+snap n20_sum_s4_skills
+sumkey RIGHT
+snap n20_sum_s4_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n20_sum_s4_bm_1
+tap DOWN 4
+waitquiet
+snap n20_sum_s4_bm_2
+tap DOWN 4
+waitquiet
+snap n20_sum_s4_bm_3
+tap DOWN 4
+waitquiet
+snap n20_sum_s4_bm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT
+sumkey DOWN
+snap n20_sum_s5_info
+sumkey RIGHT
+snap n20_sum_s5_skills
+sumkey RIGHT
+snap n20_sum_s5_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n20_sum_s5_bm_1
+tap DOWN 4
+waitquiet
+snap n20_sum_s5_bm_2
+tap DOWN 4
+waitquiet
+snap n20_sum_s5_bm_3
+tap DOWN 4
+waitquiet
+snap n20_sum_s5_bm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT

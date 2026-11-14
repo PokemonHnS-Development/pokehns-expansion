@@ -1,0 +1,35 @@
+# Route 32 Slowpoke Tail man (14,80) (Route32_hns/scripts.inc:97-173): the coord trigger at (16,80)
+# with VAR_SLOWPOKE_TAIL 0 ('!', walk-up, SlowpokeTailOffer YES/NO) answered NO (RefusedSlowpokeTail);
+# a fresh map, var reset, the trigger at (17,80) answered YES (ThoughtKidsLoaded, the walk back);
+# then talking to him at (14,80) from (15,80): NO, then YES.
+start saves/r6r3f_base.sav
+include _base.txt
+ev setvar VAR_SLOWPOKE_TAIL, 0; end
+warpto MAP_ROUTE32_HNS 16 79
+snap st_field
+stepto DOWN 1
+scene st_mid 8000 8
+yesno st_mid_yn NO
+scene st_mid_no 6000
+snap st_mid_no_end
+ev setvar VAR_SLOWPOKE_TAIL, 0; end
+warpto MAP_ROUTE32_HNS 17 79
+stepto DOWN 1
+scene st_right 8000 8
+yesno st_right_yn YES
+scene st_right_yes 8000 8
+snap st_right_yes_end
+ev setvar VAR_SLOWPOKE_TAIL, 1; end
+warpto MAP_ROUTE32_HNS 15 80
+face LEFT
+tap A 4
+scene st_talk 8000
+yesno st_talk_yn NO
+scene st_talk_no 6000
+snap st_talk_no_end
+face LEFT
+tap A 4
+scene st_talk2 8000
+yesno st_talk2_yn YES
+scene st_talk2_yes 6000
+snap st_talk2_yes_end

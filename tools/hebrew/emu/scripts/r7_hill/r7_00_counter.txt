@@ -1,0 +1,9 @@
+# Trainer Hill counter (from saves_screens/r7/r7_hill_base.sav, the counter's first-visit save done):
+# Swift + Shadow Ball for every party member, the counter trigger at (9,6), YES, then the
+# tag-match mode menu (MULTI_TAG_MATCH_TYPE at 13,2) stays open for the per-mode runs (--to hc).
+include ../continue.txt
+ev setmonmove 0, 0, MOVE_SWIFT; setmonmove 0, 1, MOVE_SHADOW_BALL; setmonmove 1, 0, MOVE_SWIFT; setmonmove 1, 1, MOVE_SHADOW_BALL; setmonmove 2, 0, MOVE_SWIFT; setmonmove 2, 1, MOVE_SHADOW_BALL; setmonmove 3, 0, MOVE_SWIFT; setmonmove 3, 1, MOVE_SHADOW_BALL; setmonmove 4, 0, MOVE_SWIFT; setmonmove 4, 1, MOVE_SHADOW_BALL; setmonmove 5, 0, MOVE_SWIFT; setmonmove 5, 1, MOVE_SHADOW_BALL; end
+hillstate
+warpto MAP_TRAINER_HILL_ENTRANCE_HNS 9 7
+go UP 1
+dlg c00_welcome save|menu

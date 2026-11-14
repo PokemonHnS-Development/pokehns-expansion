@@ -1,0 +1,11 @@
+# Burned Tower B1F: the three beasts awaken and run, Eusine enters and leaves, InitRoamer
+# (BurnedTower_B1F_EventScript_ReleaseBeasts, data/maps/BurnedTower_B1F_hns/scripts.inc:15-122). The
+# ON_FRAME script runs on VAR_ECRUTEAK_CITY_STATE 3; the 1F hole (warphole) lands the player on B1F.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev setvar VAR_ECRUTEAK_CITY_STATE, 3; clearflag FLAG_HIDE_BURNED_TOWER_BEASTS; clearflag FLAG_HIDE_BURNED_TOWER_B1F_EUSINE; clearflag FLAG_RELEASED_BEASTS; end
+warpraw MAP_BURNED_TOWER_B1F_HNS 16 13
+scene bt 20000 45
+snap bt_end
+roamers
+expectvar VAR_ECRUTEAK_CITY_STATE 4

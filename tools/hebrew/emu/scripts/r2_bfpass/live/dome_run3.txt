@@ -1,0 +1,51 @@
+pick 0
+drivex dt_f_info cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap dt_f_tucker_card
+tap B 0
+drivex dt_f_back menu 10 3000
+pick 1
+drivex dt_f_tree cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+snap dt_f_tree
+tapstate Task_HandleTourneyTreeInput 0 2 RIGHT
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap dt_f_match_01
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_02
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_03
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_04
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_05
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_06
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_07
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_08
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_09
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_10
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_11
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_12
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_13
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_14
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dt_f_match_15
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+tap B 0
+drivex dt_f_back2 menu 10 3000
+ss dome_t_final2

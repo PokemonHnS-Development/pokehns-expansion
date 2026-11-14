@@ -1,0 +1,8 @@
+# Post-game screens (Hall of Fame, credits, HoF PC, Kanto maps): a party born on the ROM under
+# test, so every name comes from that ROM's own tables. Included by r1_hof_base_he/en.txt.
+# Slot 0 a wide species name, 1 a species whose name carries the gender sign (the Hall of Fame
+# adds none, src/hall_of_fame.c:1167), 2 genderless, 3 a three-digit level, 4 an Egg (centred
+# name, :1150), 5 a ten-glyph nickname (GetFontIdToFit, :1156).
+dbg 2 8                                   # debug Party > Clear Party (ZeroPlayerPartyMons)
+ev givemon SPECIES_STARAPTOR, 61; givemon SPECIES_NIDORAN_M, 9; givemon SPECIES_MAGNETON, 40; givemon SPECIES_TYPHLOSION, 100; giveegg SPECIES_TOGEPI; givemon SPECIES_AMPHAROS, 52; end
+expect8 @gPlayerPartyCount@ 6

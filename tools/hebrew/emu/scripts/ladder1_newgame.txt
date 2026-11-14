@@ -1,0 +1,8 @@
+# Ladder save 1: a new game, saved in the bedroom (Player's House 2F, New Bark Town).
+#   hns.py run scripts/ladder1_newgame.txt OUTDIR --save OUTDIR/none.sav \
+#          --save-out $HNS_SAVES/ladder1_newgame.sav
+# --save must name a file that does not exist: NEW GAME on an empty battery.
+include newgame.txt
+savegame
+shot l1_saved
+read @LOC@ 8

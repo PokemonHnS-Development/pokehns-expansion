@@ -249,29 +249,28 @@ ViridianCity_Gym_Text_SamuelPostBattle::
 	.string "LEADER!$"
 
 ViridianCity_Gym_Text_GymGuyAdvice::
-	.string "Yo!\n"
-	.string "Champ in the making!\p"
-	.string "Even I don't know the VIRIDIAN\n"
-	.string "LEADER's identity.\p"
-	.string "But one thing's certain.\n"
-	.string "This will be the toughest of all\l"
-	.string "the GYM LEADERS.\p"
-	.string "Also, I heard that the TRAINERS\n"
-	.string "here like GROUND-type POKéMON.$"
+	.string "יו!\n"
+	.string "אלוף לעתיד!\p"
+	.string "אפילו אני לא יודע מי המנהיג\n"
+	.string "של וירידיאן.\p"
+	.string "אבל דבר אחד בטוח: הוא יהיה\n"
+	.string "הקשוח ביותר מכל מנהיגי המכונים.\p"
+	.string "שמעתי גם שהמאמנים כאן\n"
+	.string "אוהבים פוקימונים מסוג אדמה.$"
 
 ViridianCity_Gym_Text_GymGuyPostVictory::
-	.string "Blow me away! GIOVANNI was the\n"
-	.string "GYM LEADER of VIRIDIAN?$"
+	.string "לא ייאמן! ג'ובאני היה\n"
+	.string "מנהיג המכון של וירידיאן?$"
 
 ViridianCity_Gym_Text_GymStatue::
-	.string "VIRIDIAN POKéMON GYM\n"
-	.string "LEADER: ?\p"
-	.string "WINNING TRAINERS:\n"
+	.string "מכון הפוקימון של וירידיאן\n"
+	.string "מנהיג: ?\p"
+	.string "מאמנים מנצחים:\n"
 	.string "{RIVAL}$"
 
 ViridianCity_Gym_Text_GymStatuePlayerWon::
-	.string "VIRIDIAN POKéMON GYM\n"
-	.string "LEADER: GIOVANNI\p"
-	.string "WINNING TRAINERS:\n"
+	.string "מכון הפוקימון של וירידיאן\n"
+	.string "מנהיג: ג'ובאני\p"
+	.string "מאמנים מנצחים:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

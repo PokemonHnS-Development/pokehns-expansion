@@ -1,0 +1,167 @@
+# Ilex Forest Headbutt tutor (IlexForest_EventScript_HeadbuttMoveTutor, data/scripts/move_tutors.inc:163),
+# party Pokemon. The move_tutor macro (asm/macros/event.inc:2747): teach YES/NO, the box
+# (chooseboxmon SELECT_PC_MON_MOVE_TUTOR), then the field teach flow (src/chooseboxmon.c LearnMove
+# with sMoveLearnUI, src/field_specials.c:4560; Task_LearnMove data[0] = enum LearnMoveState).
+#  1 NO -> declined;  2 the box, the party pane (Snorlax, Magikarp and the Egg greyed), the Egg ->
+#  "can't learn" (2 pages);  3 Magikarp -> "can't learn";  4 Snorlax -> "already knows";
+#  5 Golem (2 moves) -> learned at once (fanfare);  6 Typhlosion (4 moves): replace YES -> the
+#  summary forget-move page, B -> "stop trying?" YES -> "did not learn";  7 Typhlosion: replace NO
+#  -> "stop trying?" NO -> which move -> summary, Tackle -> 1, 2 and... Poof -> learned;
+#  8 B in the box -> what the script says then.
+# Party (_party.inc): 0 Typhlosion, 1 Golem, 2 Snorlax, 3 Magikarp, 4 Egg, 5 Ampharos;
+# box 1: 0 Ho-Oh, 1 Arcanine, 2 Lapras, 3 Arceus (from the ladder), 4 Feraligatr, 5 Raichu.
+start saves/ladder6_postgame_copy.sav
+include _setup.txt
+warpto MAP_ILEX_FOREST_HNS 42 27
+face UP
+
+# --- 1. NO
+talk hb1_teach 10
+tap B 0
+talk hb1_declined 10 -
+waitctl 900
+
+# --- 2. the box; the Egg
+face UP
+talk hb2_teach 10
+tap A 0
+talk hb2_which 10 -
+include _pickparty.txt
+snap hb2_box_01
+boxgo 0 4
+snap hb2_box_feraligatr
+boxgo 0 5
+snap hb2_box_raichu
+boxgo 1 0
+snap hb2_party_typhlosion
+boxgo 1 2
+snap hb2_party_snorlax
+boxgo 1 3
+snap hb2_party_magikarp
+boxpick 1 4 hb2_party_egg
+include _tofield.txt
+pages hb2_cantlearn 2
+talk hb2_declined 10 -
+waitctl 900
+
+# --- 3. Magikarp
+face UP
+talk hb3_teach 10
+tap A 0
+talk hb3_which 10 -
+include _pickparty.txt
+boxpick 1 3 hb3_party_magikarp
+include _tofield.txt
+pages hb3_cantlearn 2
+talk hb3_declined 10 -
+waitctl 900
+
+# --- 4. Snorlax (knows Headbutt)
+face UP
+talk hb4_teach 10
+tap A 0
+talk hb4_which 10 -
+include _pickparty.txt
+boxpick 1 2 hb4_party_snorlax
+include _tofield.txt
+pages hb4_already 1
+talk hb4_declined 10 -
+waitctl 900
+
+# --- 5. Golem, 2 moves: learned at once
+face UP
+talk hb5_teach 10
+tap A 0
+talk hb5_which 10 -
+include _pickparty.txt
+boxpick 1 1 hb5_party_golem
+include _tofield.txt
+pages hb5_learned 1
+talk hb5_taught 10 -
+waitctl 900
+
+# --- 6. Typhlosion, 4 moves: YES -> summary -> B -> stop? YES
+face UP
+talk hb6_teach 10
+tap A 0
+talk hb6_which 10 -
+include _pickparty.txt
+boxpick 1 0 hb6_party_typhlosion
+include _tofield.txt
+pages hb6_replace 2
+waitlearn 5
+snap hb6_replace_yesno
+tap A 0
+pages hb6_whichforget 1
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleReplaceMoveInput 900
+waitquiet
+snap hb6_summary_01
+press DOWN
+snap hb6_summary_02
+press DOWN
+snap hb6_summary_03
+press DOWN
+snap hb6_summary_04
+press DOWN
+snap hb6_summary_05_new
+press DOWN
+snap hb6_summary_06_wrap
+press RIGHT
+waitquiet
+snap hb6_summary_07_right
+press LEFT
+waitquiet
+snap hb6_summary_08_left
+press B
+waitcb2x CB2_Overworld 900
+waittaskx field_specials:Task_LearnMove 900
+waitlearn 8
+snap hb6_stop_yesno
+tap A 0
+pages hb6_notlearned 1
+talk hb6_declined 10 -
+waitctl 900
+
+# --- 7. Typhlosion: NO -> stop? NO -> forget Tackle
+face UP
+talk hb7_teach 10
+tap A 0
+talk hb7_which 10 -
+include _pickparty.txt
+boxpick 1 0
+include _tofield.txt
+pages hb7_replace 2
+waitlearn 5
+tap B 0
+waitlearn 8
+snap hb7_stop_yesno
+tap B 0
+pages hb7_whichforget 1
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleReplaceMoveInput 900
+waitquiet
+snap hb7_summary
+press A
+waitcb2x CB2_Overworld 900
+waittaskx field_specials:Task_LearnMove 900
+pages hb7_poof 4
+talk hb7_taught 10 -
+waitctl 900
+
+# --- 8. B in the box
+face UP
+talk hb8_teach 10
+tap A 0
+talk hb8_which 10 -
+include _pickparty.txt
+tap B 4
+waittaskx Task_OnBPressed 300
+12 -
+waitquiet
+snap hb8_box_b
+press B                                  # NO: leave the box
+waitcb2x CB2_Overworld 900
+talk hb8_after 10 -
+waitctl 900
+showtasks

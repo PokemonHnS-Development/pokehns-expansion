@@ -361,29 +361,29 @@ EWRAM_DATA u8 gCurContestWinnerSaveIdx = 0;
 COMMON_DATA rng_value_t gContestRngValue = {0};
 
 //Text
-const u8 gText_LinkStandby4[] = COMPOUND_STRING("Link standby!");
+const u8 gText_LinkStandby4[] = COMPOUND_STRING("המתנה לקישור!");
 
-const u8 gText_AppealNumWhichMoveWillBePlayed[] = COMPOUND_STRING("Appeal no. {STR_VAR_1}!\nWhich move will be played?");
-const u8 gText_AppealNumButItCantParticipate[] = COMPOUND_STRING("Appeal no. {STR_VAR_1}!\nBut it can't participate!");
-const u8 gText_MonAppealedWithMove[] = COMPOUND_STRING("{STR_VAR_1} appealed with\n{STR_VAR_2}!");
-const u8 gText_MonWasWatchingOthers[] = COMPOUND_STRING("{STR_VAR_1} was watching\nthe others.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_AllOutOfAppealTime[] = COMPOUND_STRING("We're all out of\nAppeal Time!{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_JudgeLookedAtMonExpectantly[] = COMPOUND_STRING("The JUDGE looked at\n{STR_VAR_1} expectantly.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_AppealComboWentOverWell[] = COMPOUND_STRING("The appeal combo went\nover well.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_AppealComboWentOverVeryWell[] = COMPOUND_STRING("The appeal combo went\nover very well.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_AppealComboWentOverExcellently[] = COMPOUND_STRING("The appeal combo went\nover excellently.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_MonWasTooNervousToMove[] = COMPOUND_STRING("{STR_VAR_1} was too\nnervous to move.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_CouldntImproveItsCondition[] = COMPOUND_STRING("But it couldn't improve\nits condition…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_BadConditionResultedInWeakAppeal[] = COMPOUND_STRING("Its bad condition\nresulted in a weak appeal.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_MonWasUnaffected[] = COMPOUND_STRING("{STR_VAR_1} was\nunaffected.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_RepeatedAppeal[] = COMPOUND_STRING("{STR_VAR_1} disappointed\nby repeating an appeal.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_MonsXWentOverGreat[] = COMPOUND_STRING("{STR_VAR_1}'s {STR_VAR_3}\nwent over great.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_MonsXDidntGoOverWell[] = COMPOUND_STRING("{STR_VAR_1}'s {STR_VAR_3}\ndidn't go over well here…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_MonsXGotTheCrowdGoing[] = COMPOUND_STRING("{STR_VAR_1}'s {STR_VAR_3}\ngot the crowd going.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_MonCantAppealNextTurn[] = COMPOUND_STRING("{STR_VAR_1} can't appeal\nnext turn…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_AttractedCrowdsAttention[] = COMPOUND_STRING("It attracted the crowd's\nattention.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_CrowdContinuesToWatchMon[] = COMPOUND_STRING("The crowd continues to\nwatch {STR_VAR_3}.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_MonsMoveIsIgnored[] = COMPOUND_STRING("{STR_VAR_1}'s\n{STR_VAR_2} is ignored.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_AppealNumWhichMoveWillBePlayed[] = COMPOUND_STRING("הופעה מס' {STR_VAR_1}!\nאיזה מהלך יבוצע?");
+const u8 gText_AppealNumButItCantParticipate[] = COMPOUND_STRING("הופעה מס' {STR_VAR_1}!\nאבל הוא לא יכול להשתתף!");
+const u8 gText_MonAppealedWithMove[] = COMPOUND_STRING("{STR_VAR_1} הופיע עם\n{STR_VAR_2}!");
+const u8 gText_MonWasWatchingOthers[] = COMPOUND_STRING("{STR_VAR_1} התבונן\nבאחרים.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_AllOutOfAppealTime[] = COMPOUND_STRING("נגמר לנו\nזמן ההופעות!{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_JudgeLookedAtMonExpectantly[] = COMPOUND_STRING("השופט הביט\nב{STR_VAR_1} בציפייה.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_AppealComboWentOverWell[] = COMPOUND_STRING("שילוב המהלכים\nהתקבל היטב.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_AppealComboWentOverVeryWell[] = COMPOUND_STRING("שילוב המהלכים\nהתקבל טוב מאוד.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_AppealComboWentOverExcellently[] = COMPOUND_STRING("שילוב המהלכים\nהתקבל מצוין.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_MonWasTooNervousToMove[] = COMPOUND_STRING("{STR_VAR_1} היה לחוץ\nמכדי לזוז.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_CouldntImproveItsCondition[] = COMPOUND_STRING("אבל הוא לא הצליח\nלשפר את הכושר שלו…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_BadConditionResultedInWeakAppeal[] = COMPOUND_STRING("כושרו הירוד הוביל\nלהופעה חלשה.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_MonWasUnaffected[] = COMPOUND_STRING("{STR_VAR_1}\nלא הושפע.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_RepeatedAppeal[] = COMPOUND_STRING("{STR_VAR_1} אכזב\nכשחזר על אותו מהלך.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_MonsXWentOverGreat[] = COMPOUND_STRING("{STR_VAR_1} הרשים מאוד\nב{STR_VAR_3} שלו.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_MonsXDidntGoOverWell[] = COMPOUND_STRING("{STR_VAR_1} הפגין {STR_VAR_3}\nאך זה לא התקבל טוב כאן…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_MonsXGotTheCrowdGoing[] = COMPOUND_STRING("{STR_VAR_1} סחף את הקהל\nב{STR_VAR_3} שלו.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_MonCantAppealNextTurn[] = COMPOUND_STRING("{STR_VAR_1} לא יוכל\nלהופיע בתור הבא…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_AttractedCrowdsAttention[] = COMPOUND_STRING("הוא משך את\nתשומת לב הקהל.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_CrowdContinuesToWatchMon[] = COMPOUND_STRING("הקהל ממשיך לצפות\nב{STR_VAR_3}.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_MonsMoveIsIgnored[] = COMPOUND_STRING("לא שמו לב ל{STR_VAR_1}\nול{STR_VAR_2} שלו.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 
 static const u8 sSliderHeartYPositions[CONTESTANT_COUNT] =
 {
@@ -677,50 +677,50 @@ const struct ContestCategory gContestCategoryInfo[CONTEST_CATEGORIES_COUNT + 1] 
 {
     [CONTEST_CATEGORY_COOL] =
     {
-        .name = COMPOUND_STRING("COOL"),
-        .condition = COMPOUND_STRING("coolness"),
-        .generic = COMPOUND_STRING("COOL Move"),
-        .negativeTrait = COMPOUND_STRING("shyness"),
+        .name = COMPOUND_STRING("מגניבות"),
+        .condition = COMPOUND_STRING("מגניבות"),
+        .generic = COMPOUND_STRING("מהלך מגניב"),
+        .negativeTrait = COMPOUND_STRING("ביישנות"),
         .palette = 13,
         .tile = 0x4040,
     },
 
     [CONTEST_CATEGORY_BEAUTY] =
     {
-        .name = COMPOUND_STRING("BEAUTY"),
-        .condition = COMPOUND_STRING("beauty"),
-        .generic = COMPOUND_STRING("BEAUTY Move"),
-        .negativeTrait = COMPOUND_STRING("anxiety"),
+        .name = COMPOUND_STRING("יופי"),
+        .condition = COMPOUND_STRING("יופי"),
+        .generic = COMPOUND_STRING("מהלך יפה"),
+        .negativeTrait = COMPOUND_STRING("חרדה"),
         .palette = 14,
         .tile = 0x4045,
     },
 
     [CONTEST_CATEGORY_CUTE] =
     {
-        .name = COMPOUND_STRING("CUTE"),
-        .condition = COMPOUND_STRING("cuteness"),
-        .generic = COMPOUND_STRING("CUTE Move"),
-        .negativeTrait = COMPOUND_STRING("laziness"),
+        .name = COMPOUND_STRING("חמידות"),
+        .condition = COMPOUND_STRING("חמידות"),
+        .generic = COMPOUND_STRING("מהלך חמוד"),
+        .negativeTrait = COMPOUND_STRING("עצלות"),
         .palette = 14,
         .tile = 0x404A,
     },
 
     [CONTEST_CATEGORY_SMART] =
     {
-        .name = COMPOUND_STRING("SMART"),
-        .condition = COMPOUND_STRING("smartness"),
-        .generic = COMPOUND_STRING("SMART Move"),
-        .negativeTrait = COMPOUND_STRING("hesitancy"),
+        .name = COMPOUND_STRING("חוכמה"),
+        .condition = COMPOUND_STRING("חוכמה"),
+        .generic = COMPOUND_STRING("מהלך חכם"),
+        .negativeTrait = COMPOUND_STRING("היסוס"),
         .palette = 15,
         .tile = 0x406A,
     },
 
     [CONTEST_CATEGORY_TOUGH] =
     {
-        .name = COMPOUND_STRING("TOUGH"),
-        .condition = COMPOUND_STRING("toughness"),
-        .generic = COMPOUND_STRING("TOUGH Move"),
-        .negativeTrait = COMPOUND_STRING("fear"),
+        .name = COMPOUND_STRING("קשיחות"),
+        .condition = COMPOUND_STRING("קשיחות"),
+        .generic = COMPOUND_STRING("מהלך קשוח"),
+        .negativeTrait = COMPOUND_STRING("פחד"),
         .palette = 13,
         .tile = 0x408A,
     },
@@ -734,12 +734,12 @@ const struct ContestCategory gContestCategoryInfo[CONTEST_CATEGORIES_COUNT + 1] 
 // Takes the .attentionLevel of a contestant as an index.
 static const u8 *const sRoundResultTexts[] =
 {
-    COMPOUND_STRING("{STR_VAR_1} failed to\nstand out at all…{PAUSE_UNTIL_PRESS}"),
-    COMPOUND_STRING("{STR_VAR_1} didn't stand\nout very much…{PAUSE_UNTIL_PRESS}"),
-    COMPOUND_STRING("{STR_VAR_1} caught a\nlittle attention.{PAUSE_UNTIL_PRESS}"),
-    COMPOUND_STRING("{STR_VAR_1} attracted a\nlot of attention.{PAUSE_UNTIL_PRESS}"),
-    COMPOUND_STRING("{STR_VAR_1} commanded\ntotal attention.{PAUSE_UNTIL_PRESS}"),
-    COMPOUND_STRING("{STR_VAR_1} hasn't made\nits appeal.{PAUSE_UNTIL_PRESS}"),
+    COMPOUND_STRING("{STR_VAR_1} לא בלט\nבכלל…{PAUSE_UNTIL_PRESS}"),
+    COMPOUND_STRING("{STR_VAR_1} לא בלט\nבמיוחד…{PAUSE_UNTIL_PRESS}"),
+    COMPOUND_STRING("{STR_VAR_1} משך מעט\nתשומת לב.{PAUSE_UNTIL_PRESS}"),
+    COMPOUND_STRING("{STR_VAR_1} משך\nהרבה תשומת לב.{PAUSE_UNTIL_PRESS}"),
+    COMPOUND_STRING("{STR_VAR_1} משך\nאת כל תשומת הלב.{PAUSE_UNTIL_PRESS}"),
+    COMPOUND_STRING("{STR_VAR_1}\nעוד לא הופיע.{PAUSE_UNTIL_PRESS}"),
 };
 
 static const struct BgTemplate sContestBgTemplates[] =
@@ -1114,6 +1114,14 @@ static void InitContestInfoBgs(void)
 static void InitContestWindows(void)
 {
     InitWindows(sContestWindowTemplates);
+#if TEXT_RTL
+    // The move cursor is a BG tile at the English column, left of the names, so the names keep
+    // their English place and only read right to left, as in the battle FIGHT menu.
+    SetWindowRtlMode(WIN_MOVE0, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(WIN_MOVE1, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(WIN_MOVE2, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(WIN_MOVE3, WINDOW_RTL_IN_PLACE);
+#endif
     DeactivateAllTextPrinters();
     if (gLinkContestFlags & LINK_CONTEST_FLAG_IS_LINK)
     {
@@ -2963,6 +2971,10 @@ void SetContestants(enum ContestCategories contestType, u8 rank)
         s32 j;
 
         gContestMons[i] = gContestOpponents[opponents[rnd]];
+#if RTL_STRING_REPORT
+        RtlStringMapRam(&gContestMons[i], &gContestOpponents[opponents[rnd]], sizeof(gContestMons[i]));
+#endif
+#line 2974
         for (j = rnd; opponents[j] != CONTESTANT_NONE; j++)
             opponents[j] = opponents[j + 1];
         opponentsCount--;
@@ -3011,6 +3023,10 @@ void SetLinkAIContestants(enum ContestCategories contestType, u8 rank, bool32 is
         u16 rnd = GetContestRand() % opponentsCount;
 
         gContestMons[gNumLinkContestPlayers + i] = gContestOpponents[opponents[rnd]];
+#if RTL_STRING_REPORT
+        RtlStringMapRam(&gContestMons[gNumLinkContestPlayers + i], &gContestOpponents[opponents[rnd]], sizeof(gContestMons[0]));
+#endif
+#line 3022
         StripPlayerNameForLinkContest(gContestMons[gNumLinkContestPlayers + i].trainerName);
         StripMonNameForLinkContest(gContestMons[gNumLinkContestPlayers + i].nickname, GAME_LANGUAGE);
         for (j = rnd; opponents[j] != CONTESTANT_NONE; j++)
@@ -3077,10 +3093,23 @@ static void PrintContestantTrainerNameWithColor(u8 contestant, u8 color)
     StringCopy(buffer, gText_Slash);
     StringAppend(buffer, gContestMons[contestant].trainerName);
     Contest_CopyStringWithColor(buffer, color);
+#if TEXT_RTL
+    // Mirrored, the name ends 41 px from the window's left edge and grows left, toward the box's
+    // frame (window x 3-4), where the English grows toward the screen edge: 36 px instead of 41.
+    // A wider name takes the narrower font, as the nickname does. One still too wide starts right
+    // of the frame and grows toward the nickname, as a long English name does.
+    u32 fontId = GetFontIdToFit(buffer, FONT_NARROW, 0, 36);
+
+    offset = GetStringRightAlignXOffset(fontId, gDisplayedStringBattle, 0x60 - 5);
+    if (offset > 55)
+        offset = 55;
+    Contest_PrintTextToBg0WindowAt(gContestantTurnOrder[contestant], gDisplayedStringBattle, offset, 1, fontId);
+#else
     offset = GetStringRightAlignXOffset(FONT_NARROW, gDisplayedStringBattle, 0x60);
     if (offset > 55)
         offset = 55;
     Contest_PrintTextToBg0WindowAt(gContestantTurnOrder[contestant], gDisplayedStringBattle, offset, 1, FONT_NARROW);
+#endif
 }
 
 static void PrintContestantMonName(u8 contestant)
@@ -5505,6 +5534,13 @@ static void Contest_StartTextPrinter(const u8 *currChar, bool32 b)
     printerTemplate.color.background = TEXT_COLOR_TRANSPARENT;
     printerTemplate.color.shadow = 8;
 
+#if TEXT_RTL
+    // The box's white area starts 5 px left of this window and ends at its right edge. Mirrored
+    // around 131 px, the text keeps the English 5 px margin, on the right frame's side. A wider
+    // line (a long nickname) widens the axis, up to the whole window, instead of losing glyphs.
+    u32 rtlWidth = GetStringWidth(FONT_NORMAL, currChar, 0);
+    SetWindowRtlMirrorWidth(WIN_GENERAL_TEXT, min(WindowWidthPx(WIN_GENERAL_TEXT), max(131, rtlWidth)));
+#endif
     if (!b)
     {
         AddTextPrinter(&printerTemplate, 0, 0);
@@ -5639,6 +5675,10 @@ void ClearContestWinnerPicsInContestHall(void)
 
     for (i = 0; i < MUSEUM_CONTEST_WINNERS_START; i++)
         gSaveBlock1Ptr->contestWinners[i] = gDefaultContestWinners[i];
+#if RTL_STRING_REPORT
+    RtlStringMapRam(gSaveBlock1Ptr->contestWinners, gDefaultContestWinners, sizeof(gDefaultContestWinners));
+#endif
+#line 5670
 }
 
 static void SetContestLiveUpdateFlags(u8 contestant)

@@ -1040,7 +1040,13 @@ static void HandleMenuActionInput_2x2(u8 taskId)
                 ChangeMenuGridCursorPosition(MENU_CURSOR_DELTA_NONE, MENU_CURSOR_DELTA_DOWN);
             }
         }
+#if TEXT_RTL
+        // A mirrored grid draws its first column on the right, so RIGHT goes back to it and LEFT
+        // on to the second column. L and R keep the column order.
+        else if (JOY_NEW(IsMenuGridMirrored() ? DPAD_RIGHT : DPAD_LEFT) || GetLRKeysPressed() == MENU_L_PRESSED)
+#else
         else if (JOY_NEW(DPAD_LEFT) || GetLRKeysPressed() == MENU_L_PRESSED)
+#endif
         {
             if (id & 1 && IsValidMenuAction(id - 1))
             {
@@ -1048,7 +1054,11 @@ static void HandleMenuActionInput_2x2(u8 taskId)
                 ChangeMenuGridCursorPosition(MENU_CURSOR_DELTA_LEFT, MENU_CURSOR_DELTA_NONE);
             }
         }
+#if TEXT_RTL
+        else if (JOY_NEW(IsMenuGridMirrored() ? DPAD_LEFT : DPAD_RIGHT) || GetLRKeysPressed() == MENU_R_PRESSED)
+#else
         else if (JOY_NEW(DPAD_RIGHT) || GetLRKeysPressed() == MENU_R_PRESSED)
+#endif
         {
             if (!(id & 1) && IsValidMenuAction(id + 1))
             {
@@ -1143,7 +1153,13 @@ static void BagAction_Toss(u8 taskId)
     }
     else
     {
+    #if TEXT_RTL
+        // Hebrew has no plural suffix, so the count lines take the item's plural name, as the main
+        // bag does (CopyItemNameHandlePlural).
+        CopyItemNameHandlePlural(gSpecialVar_ItemId, gStringVar1, 2);
+    #else
         CopyItemName(gSpecialVar_ItemId, gStringVar1);
+    #endif
         StringExpandPlaceholders(gStringVar4, gText_TossHowManyVar1s);
         FillWindowPixelBuffer(WIN_INFO, PIXEL_FILL(0));
         PyramidBagPrint(WIN_INFO, gStringVar4, 3, 0, 0, 1, 0, COLORID_DARK_GRAY);
@@ -1156,7 +1172,11 @@ static void AskConfirmToss(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
+#if TEXT_RTL
+    CopyItemNameHandlePlural(gSpecialVar_ItemId, gStringVar1, tNumToToss);
+#else
     CopyItemName(gSpecialVar_ItemId, gStringVar1);
+#endif
     ConvertIntToDecimalStringN(gStringVar2, tNumToToss, STR_CONV_MODE_LEFT_ALIGN, MAX_PYRAMID_ITEM_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_ConfirmTossItems);
     FillWindowPixelBuffer(WIN_INFO, PIXEL_FILL(0));
@@ -1224,7 +1244,11 @@ static void TossItem(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
+#if TEXT_RTL
+    CopyItemNameHandlePlural(gSpecialVar_ItemId, gStringVar1, tNumToToss);
+#else
     CopyItemName(gSpecialVar_ItemId, gStringVar1);
+#endif
     ConvertIntToDecimalStringN(gStringVar2, tNumToToss, STR_CONV_MODE_LEFT_ALIGN, MAX_PYRAMID_ITEM_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_ThrewAwayVar2Var1s);
     FillWindowPixelBuffer(WIN_INFO, PIXEL_FILL(0));
@@ -1458,6 +1482,11 @@ static void InitPyramidBagWindows(void)
     u8 i;
 
     InitWindows(sWindowTemplates);
+#if TEXT_RTL
+    // The info box is the Bag's description box: its white area is x=1..105 and the window runs on
+    // under the item list's frame. Mirror around the white area, as the Bag does.
+    SetWindowRtlMirrorWidth(WIN_INFO, 107);
+#endif
     DeactivateAllTextPrinters();
     LoadUserWindowBorderGfx(0, 0x1, BG_PLTT_ID(14));
     LoadMessageBoxGfx(0, 0xA, BG_PLTT_ID(13));

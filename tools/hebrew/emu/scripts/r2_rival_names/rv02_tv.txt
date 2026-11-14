@@ -1,0 +1,20 @@
+# Goldenrod Name Rater's house: the TV (bg event at (2,1), data/maps/GoldenrodCity_House1_hns/
+# map.json:48 -> scripts.inc:27-38 RenameRival): the news text, then the rival naming screen
+# again (special NameRival), a second 7-letter name, OK, back to the field.
+start save:rv_named
+include ../continue.txt
+warpto MAP_GOLDENROD_CITY_HOUSE1_HNS 2 2
+face UP
+snap rv_tv_00_room
+tap A 4
+drivex rv_tv_news cb2:CB2_NamingScreen 10
+waitnaming
+snap rv_tv_naming_01_empty
+namehome
+nametype rv_tv_naming_02_typed tv
+snap rv_tv_naming_03_full_ok
+press A
+waitcb2x CB2_Overworld 900
+waitctl 900
+snap rv_tv_04_back
+rivalname tv

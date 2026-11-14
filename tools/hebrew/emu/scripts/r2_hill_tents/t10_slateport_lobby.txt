@@ -1,0 +1,15 @@
+# Slateport Battle Tent (Factory rules, rental Pokemon): the attendant, INFO, save, the corridor, up
+# to the rental screen. Starts from ladder 6 (the save's party is kept by SavePlayerParty).
+include ../continue.txt
+warptoloose MAP_SLATEPORT_CITY_BATTLE_TENT_LOBBY_HNS 6 9
+snap t10_lobby
+talkto 1 t10_att menu
+pick 1
+dlg t10_info menu
+pick 0
+dlg t10_save menu
+yes
+dlg t10_savegame save
+yes
+dlg t10_corridor screen 30
+showtasks

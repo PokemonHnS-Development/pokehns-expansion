@@ -1,0 +1,19 @@
+# Red's standard battle (MtSilver_SummitDay_EventScript_RedStandard, TRAINER_RED_HNS) on ladder 6:
+# VAR_SINJOH_STORYLINE 12 with FLAG_IS_KANTO_CHAMPION set falls through to RedStandard. Talk,
+# the intro, the battle (bitem: his Full Restore), the defeat line, then up to the Hall of Fame.
+start saves/r6_story_l6.sav
+include _base.txt
+ev setvar VAR_SINJOH_STORYLINE, 12; cleartrainerflag TRAINER_RED_HNS; clearflag FLAG_HIDE_MTSILVER_RED; end
+warpto MAP_MT_SILVER_SUMMIT_DAY_HNS 10 8
+walkto 10 7 UP
+snap R_summit
+tap A 4
+scene R_red 20000
+bwalk B_bintro input:HandleInputChooseAction
+snap B_action
+bitem B_item 3
+bwin B_win
+snap B_after
+waitcb2 CB2_DoHallOfFameScreen 8000 A
+120 -
+shot R_hof

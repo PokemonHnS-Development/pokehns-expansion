@@ -1,0 +1,68 @@
+# Johto / Sinjoh NPCs whose Hebrew lines keep a Latin word: Goldenrod Dept. Store 6F lass (LUCKY CHANNEL),
+# Tin Tower 1F sage (BRASS TOWER; VAR_ECRUTEAK_CITY_STATE != 11), Violet Trainer School (EARL, flag
+# cleared), New Bark lab aide (START; wanders, object 3), the player's house 2F NES, Sinjoh lab
+# (archaeologist and biologist with VAR_SINJOH_STORYLINE 6 and 10, notes 3 and 4).
+start saves/ladder6_postgame.sav
+include _setup.txt
+ev clearflag FLAG_HIDE_TRAINER_SCHOOL_EARL; end
+
+# --- Goldenrod Dept. Store 6F lass (14,6)
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_6F_HNS 14 7
+face UP
+tap A 4
+fieldwatch gr6_lass free 4000
+
+# --- Tin Tower 1F sage B (7,4)
+vars VAR_ECRUTEAK_CITY_STATE
+warpto MAP_TIN_TOWER_1F_HNS 7 5
+face UP
+tap A 4
+fieldwatch tin_sage free 4000
+
+# --- Violet Trainer School: Earl (6,3)
+warpto MAP_VIOLET_CITY_TRAINER_SCHOOL_HNS 6 4
+face UP
+tap A 4
+fieldwatch school_earl free 3000
+
+# --- New Bark lab aide (object 3, (9,9))
+vars VAR_NEWBARKTOWN_LABSTATE
+warpto MAP_NEW_BARK_TOWN_LAB_HNS 9 11
+approachnpc 3
+tap A 4
+fieldwatch lab_aide free 3000
+
+# --- the player's house 2F: the NES (bg 4,2)
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 4 3
+face UP
+tap A 4
+fieldwatch home_nes free 3000
+
+# --- Sinjoh lab, before the plate event (storyline 6): archaeologist (11,11), biologist (22,6), notes 3/4
+ev setvar VAR_SINJOH_STORYLINE, 6; end
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 11 12
+face UP
+tap A 4
+fieldwatch sinjoh_arch free 4000
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 22 7
+face UP
+tap A 4
+fieldwatch sinjoh_bio free 4000
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 17 3
+face UP
+tap A 4
+fieldwatch sinjoh_note3 free 6000
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 18 3
+face UP
+tap A 4
+fieldwatch sinjoh_note4 free 6000
+# --- during the event (storyline 10)
+ev setvar VAR_SINJOH_STORYLINE, 10; end
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 11 12
+face UP
+tap A 4
+fieldwatch sinjoh_arch_during free 4000
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 22 7
+face UP
+tap A 4
+fieldwatch sinjoh_bio_during free 4000

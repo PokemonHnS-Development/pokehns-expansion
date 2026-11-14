@@ -1,0 +1,4 @@
+# Cold boot (or soft reset) -> intro skipped with START -> title screen waiting for input
+# (Task_TitleScreenPhase3, src/title_screen.c:803). The key combos are read there.
+waittask Task_TitleScreenPhase3 4000 START
+30 -

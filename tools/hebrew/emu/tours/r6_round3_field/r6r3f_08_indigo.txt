@@ -1,0 +1,19 @@
+# Indigo Plateau Pokemon Center psychic (30,14), IndigoPlateau_EventScript_Psychic
+# (IndigoPlateau_PokemonCenter_hns/scripts.inc:107-131): TeleportGuy1 YES/NO: NO (TeleportGuyNo);
+# again YES (TeleportGuyYes, the Abra, the fade, the warp to New Bark Town).
+start saves/r6r3f_base.sav
+include _base.txt
+warpto MAP_INDIGO_PLATEAU_POKEMON_CENTER_HNS 30 15
+face UP
+snap ig_field
+tap A 4
+scene ig1 8000
+yesno ig1_yn NO
+scene ig1_no 6000
+snap ig1_no_end
+face UP
+tap A 4
+scene ig2 8000
+yesno ig2_yn YES
+scene ig2_yes 12000 12
+snap ig2_yes_end

@@ -1,0 +1,110 @@
+# Rare Candy from the bag (src/party_menu.c ItemUseCB_RareCandy): "elevated to Lv 13", the
+# level-up stats window page 1 (gains) and page 2 (totals), the move prompt with four known
+# moves (YES: "which move to forget?", the summary forget-move page, "1, 2 and... Poof!",
+# learned), then a second candy (Lv 14) that starts the evolution, cancelled with B
+# ("stopped evolving"), then a third candy (Lv 15) that evolves to Quilava.
+# Cyndaquil Lv 12 learns Quick Attack at 13 and evolves at 14 (tours/battle_levelup.txt).
+start saves/menuA_base.sav
+include ../scripts/continue.txt
+ev givemon SPECIES_CYNDAQUIL, 12, move1=MOVE_TACKLE, move2=MOVE_LEER, move3=MOVE_EMBER, move4=MOVE_SMOKESCREEN; additem ITEM_RARE_CANDY, 5; end
+
+# Bag opens on MEDICINE (gBagPosition.pocket +5) with RARE CANDY (index 5) under the cursor
+# (struct BagPosition, include/item_menu.h: cursorPosition[6] at +8, scrollPosition[6] at +0x14)
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 5
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+snap pbi_candy_01_bag
+tap A 4
+waitquiet
+snap pbi_candy_02_context
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+snap pbi_candy_03_party
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg1 300
+snap pbi_candy_04_lv13
+waitmem 16 @sFanfareCounter@ 0 900       # Task_DisplayLevelUpStatsPg1 reads A only after WaitFanfare
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg2 600
+snap pbi_candy_05_stats_pg1
+tap A 4
+waittaskx Task_TryLearnNewMoves 600
+snap pbi_candy_06_stats_pg2
+tap A 4
+talk pbi_candy_07_wants 6 - Task_HandleReplaceMoveYesNoInput
+tap A 4                                   # YES: "Which move should be forgotten?"
+waitkey 600
+snap pbi_candy_08_which
+tap A 4
+waittaskx Task_HandleReplaceMoveInput 900
+waitquiet
+snap pbi_candy_09_forget_01
+tap DOWN 4                                # LEER
+waitquiet
+snap pbi_candy_09_forget_02
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+talk pbi_candy_10_poof 8 -                # 1, 2 and... Poof! / forgot / And... / learned
+waitnotask Task_Fanfare 900
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_candy_11_party_after
+
+# Second candy: Lv 14, then the evolution scene; B held while the sprites cycle cancels it
+# (src/evolution_scene.c:660-666, state EVOSTATE_WAIT_CYCLE_MON_SPRITE = 8)
+seek 8 @gPartyMenu+9@ 5 DOWN
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg1 300
+snap pbi_candy_12_lv14
+waitmem 16 @sFanfareCounter@ 0 900
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg2 600
+snap pbi_candy_13_stats_pg1
+tap A 4
+waittaskx Task_TryLearnNewMoves 600
+snap pbi_candy_14_stats_pg2
+tap A 4
+waitcb2x CB2_EvolutionSceneUpdate 900
+waittaskdata Task_EvolutionScene 0 3 900
+snap pbi_candy_15_evolving
+waittaskdata Task_EvolutionScene 0 8 1200
+40 B
+waittaskdata Task_EvolutionScene 0 15 900
+waitkey 900
+snap pbi_candy_16_stopped
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_candy_17_party_after_cancel
+
+# Third candy: Lv 15, the evolution runs to the end ("Congratulations! ... evolved into")
+seek 8 @gPartyMenu+9@ 5 DOWN
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg1 300
+waitmem 16 @sFanfareCounter@ 0 900
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg2 600
+tap A 4
+waittaskx Task_TryLearnNewMoves 600
+tap A 4
+waitcb2x CB2_EvolutionSceneUpdate 900
+waittaskdata Task_EvolutionScene 0 15 3000
+waitkey 900
+snap pbi_candy_18_evolved
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_candy_19_party_quilava
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_candy_20_bag_after

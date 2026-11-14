@@ -1,0 +1,19 @@
+# Unique 3F: trainer 1 (6,14) looks east, trainer 2 (8,14) west, range 1.
+# Facing comes from TRAINER_DIRS(a, b): trainer 1 takes b, trainer 2 a (src/trainer_hill.c:826).
+# A walk to (7,14), which both trainers see, starts the tag battle ('!', walk-up, both intros);
+# then the after-battle speech of both (Easy Chat) and the stairs at (12,1).
+ev special HealPlayerParty; end
+fastbattles off
+walkto 7 14
+snap u3_spotted
+10 -
+snap u3_spotted2
+dlg u3_intro battle
+battle2 u3
+snap u3_after
+talkto 1 u3_t1_post free
+talkto 2 u3_t2_post free
+hillstate
+walkto2 12 1
+waitctl 600
+snap u3_next

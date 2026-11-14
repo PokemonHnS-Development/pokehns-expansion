@@ -1,0 +1,121 @@
+# Round 20 names on the summary screen, part 2 (r10names.py tour): TRACE, HUSTLE, PSYCHIC SURGE (a Psychic/Fairy
+# plate pair), a Dragon/Ghost pair, the moves whose descriptions name the Psychic or Ghost type, and held items
+# PSYCHIC TERA SHARD (an audit FIT case), MIND PLATE, PSYCHIUM Z, GHOST TERA SHARD.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev .set ROM_SIZE, 0; callnative ZeroPlayerPartyMons; createmon 0, 0, SPECIES_PORYGON, 30, item=ITEM_PSYCHIC_TERA_SHARD, abilityNum=0, move1=MOVE_PSYCHIC, move2=MOVE_PSYCHO_CUT, move3=MOVE_PSYSHOCK, move4=MOVE_CONFUSION; createmon 0, 1, SPECIES_TOGEPI, 20, item=ITEM_MIND_PLATE, abilityNum=0, move1=MOVE_TELEPORT, move2=MOVE_PSYWAVE, move3=MOVE_CURSE, move4=MOVE_ODOR_SLEUTH; createmon 0, 2, SPECIES_TAPU_LELE, 60, item=ITEM_PSYCHIUM_Z, abilityNum=0, move1=MOVE_EXPANDING_FORCE, move2=MOVE_MAGIC_POWDER, move3=MOVE_PSYSTRIKE, move4=MOVE_TRICK_OR_TREAT; createmon 0, 3, SPECIES_DREEPY, 20, item=ITEM_GHOST_TERA_SHARD, abilityNum=0, move1=MOVE_EERIE_SPELL, move2=MOVE_FREEZING_GLARE, move3=MOVE_PSYCHIC_NOISE, move4=MOVE_PSYCHO_BOOST; special CalculatePlayerPartyCount; end
+include ../../scripts/r2_summary_info_page_variants/_sum_open.txt
+snap n20_sum_s0_info
+sumkey RIGHT
+snap n20_sum_s0_skills
+sumkey RIGHT
+snap n20_sum_s0_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n20_sum_s0_bm_1
+tap DOWN 4
+waitquiet
+snap n20_sum_s0_bm_2
+tap DOWN 4
+waitquiet
+snap n20_sum_s0_bm_3
+tap DOWN 4
+waitquiet
+snap n20_sum_s0_bm_4
+tap B 4
+sumwait
+sumkey RIGHT
+snap n20_sum_s0_contest
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n20_sum_s0_cm_1
+tap DOWN 4
+waitquiet
+snap n20_sum_s0_cm_2
+tap DOWN 4
+waitquiet
+snap n20_sum_s0_cm_3
+tap DOWN 4
+waitquiet
+snap n20_sum_s0_cm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT
+sumkey LEFT
+sumkey DOWN
+snap n20_sum_s1_info
+sumkey RIGHT
+snap n20_sum_s1_skills
+sumkey RIGHT
+snap n20_sum_s1_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n20_sum_s1_bm_1
+tap DOWN 4
+waitquiet
+snap n20_sum_s1_bm_2
+tap DOWN 4
+waitquiet
+snap n20_sum_s1_bm_3
+tap DOWN 4
+waitquiet
+snap n20_sum_s1_bm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT
+sumkey DOWN
+snap n20_sum_s2_info
+sumkey RIGHT
+snap n20_sum_s2_skills
+sumkey RIGHT
+snap n20_sum_s2_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n20_sum_s2_bm_1
+tap DOWN 4
+waitquiet
+snap n20_sum_s2_bm_2
+tap DOWN 4
+waitquiet
+snap n20_sum_s2_bm_3
+tap DOWN 4
+waitquiet
+snap n20_sum_s2_bm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT
+sumkey DOWN
+snap n20_sum_s3_info
+sumkey RIGHT
+snap n20_sum_s3_skills
+sumkey RIGHT
+snap n20_sum_s3_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n20_sum_s3_bm_1
+tap DOWN 4
+waitquiet
+snap n20_sum_s3_bm_2
+tap DOWN 4
+waitquiet
+snap n20_sum_s3_bm_3
+tap DOWN 4
+waitquiet
+snap n20_sum_s3_bm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT

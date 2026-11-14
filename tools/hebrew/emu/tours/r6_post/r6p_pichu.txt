@@ -1,0 +1,20 @@
+# Spiky-eared Pichu, Viridian Forest: the first chase trigger (21|22,42) at VAR_VIRIDIAN_FOREST_PICHU 1
+# (ViridianForest_TriggerScript_Pichu1, no text), then ViridianForest_EventScript_SpikyEaredPichu
+# (ViridianForest_hns/scripts.inc:247-262) at (58,49): cry, a Lv 35 wild battle; catch branch
+# (Master Ball) and win branch from a savestate.
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev setvar VAR_VIRIDIAN_FOREST_PICHU, 1; clearflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU1; end
+warpto MAP_VIRIDIAN_FOREST_HNS 22 43
+face UP
+snap pc_chase_field
+stepto UP 1
+scene pc_chase 3000 12
+snap pc_chase_end
+ev clearflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU; end
+warpto MAP_VIRIDIAN_FOREST_HNS 58 50
+face UP
+snap tp_field
+tap A 4
+scene tp_pre 4000
+include ../r5_legends/_legend_tail.txt

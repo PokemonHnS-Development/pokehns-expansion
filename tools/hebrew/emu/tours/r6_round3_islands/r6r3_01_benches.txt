@@ -1,0 +1,63 @@
+# Alola bench heal (Alola_<Isle>_Bench_Heal, AkalaIsle_hns / PoniIsle_hns / UlaulaIsle_hns
+# scripts.inc): a coord trigger on the bench tiles (blocked from the north); stepping up onto one
+# from the south asks Alola_<Isle>_Bench_Heal_Text_0 (YES/NO). NO only releases; YES fades to black, heals,
+# plays MUS_HEAL and fades back. Akala (27,26), Poni (15,26), Ula'ula (37,46: Phant sits on 36,46).
+start saves/r6r3_islands_base.sav
+include _base.txt
+
+warpto MAP_AKALA_ISLE_HNS 27 27
+snap ak_field
+stepto UP 1
+scene ak_q 3000
+ss ak_yn
+pickd 1
+scene ak_no 3000
+snap ak_no_end
+sl ak_yn
+pickd 0
+20 -
+shot ak_yes_f020
+40 -
+shot ak_yes_f060
+60 -
+shot ak_yes_f120
+scene ak_yes 3000 10
+snap ak_yes_end
+
+warpto MAP_PONI_ISLE_HNS 15 27
+snap po_field
+stepto UP 1
+scene po_q 3000
+ss po_yn
+pickd 1
+scene po_no 3000
+snap po_no_end
+sl po_yn
+pickd 0
+20 -
+shot po_yes_f020
+40 -
+shot po_yes_f060
+60 -
+shot po_yes_f120
+scene po_yes 3000 10
+snap po_yes_end
+
+warpto MAP_ULAULA_ISLE_HNS 37 47
+snap ul_field
+stepto UP 1
+scene ul_q 3000
+ss ul_yn
+pickd 1
+scene ul_no 3000
+snap ul_no_end
+sl ul_yn
+pickd 0
+20 -
+shot ul_yes_f020
+40 -
+shot ul_yes_f060
+60 -
+shot ul_yes_f120
+scene ul_yes 3000 10
+snap ul_yes_end

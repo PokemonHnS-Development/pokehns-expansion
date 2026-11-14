@@ -1,0 +1,15 @@
+# r11 (gen_tours.py): MAP_VIOLET_CITY_GYM_HNS after its badge, on ladder4_league. Statue VioletCity_Gym_EventScript_Statue, guide VioletCity_Gym_EventScript_GymGuy, leader VioletCity_Gym_EventScript_Falkner (data/maps/VioletCity_Gym_hns/scripts.inc).
+start saves/ladder4_league.sav
+include _base.txt
+warpto MAP_VIOLET_CITY_GYM_HNS 6 18
+face UP
+snap gj1_room
+talkdir gj1_statue UP
+approach 4
+tap A 4
+drive gj1_guide
+warpto MAP_VIOLET_CITY_GYM_HNS 9 5
+face UP
+snap gj1_leader_room
+talkdir gj1_leader UP
+talkdir gj1_leader_again UP

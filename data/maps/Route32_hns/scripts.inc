@@ -357,232 +357,220 @@ Route32_Movement_SlowpokeRight::
 	step_end
 
 Route32_Text_CooltrainerM_WhatsTheHurry:
-	.string "Wait up!\n"
-	.string "What's the hurry?$"
+	.string "רגע, רגע!\n"
+	.string "לאן כל כך ממהרים?$"
 
 Route32_Text_CooltrainerM_AideIsWaiting:
-	.string "{PLAYER}, right?\n"
-	.string "Some guy wearing glasses\p"
-	.string "was looking for you.\p"
-	.string "See for yourself. He's waiting for\n"
-	.string "you at the POKéMON CENTER.$"
+	.string "{PLAYER}, נכון?\n"
+	.string "איזה בחור עם משקפיים חיפש אותך.\p"
+	.string "לך תראה בעצמך. הוא מחכה לך\n"
+	.string "במרכז הפוקימון.$"
 
 Route32_Text_CooltrainerM_SproutTower:
-	.string "Have you gone to SPROUT TOWER?\n"
-	.string "If you ever visit VIOLET CITY,\p"
-	.string "they'll expect you to train there.\n"
-	.string "That's basic for trainers.\p"
-	.string "Go to SPROUT TOWER!$"
+	.string "כבר היית במגדל הנבט?\p"
+	.string "מי שמבקר בעיר ויולט, מצפים\n"
+	.string "ממנו להתאמן שם.\p"
+	.string "זה בסיסי למאמנים.\n"
+	.string "קדימה, למגדל הנבט!$"
 
 Route32_Text_CooltrainerM_VioletGym:
-	.string "Have you gone to the POKéMON GYM?\n"
-	.string "You can test your POKéMON and\p"
-	.string "yourself there.\n"
-	.string "It's a rite of passage for all\p"
-	.string "trainers!$"
+	.string "כבר היית במכון הפוקימון?\p"
+	.string "שם אפשר לבחון את הפוקימונים שלך\n"
+	.string "ואת עצמך.\p"
+	.string "זה טקס חניכה שכל המאמנים עוברים!$"
 
 Route32_Text_CooltrainerM_HaveThisSeed:
-	.string "You have some good POKéMON there.\n"
-	.string "It must be from the training you\p"
-	.string "gave them around VIOLET CITY.\n"
-	.string "The training at the GYM must have\p"
-	.string "been especially helpful. As a\n"
-	.string "souvenir of VIOLET CITY, take this.\p"
-	.string "It increases the power of GRASS-\n"
-	.string "type moves.$"
+	.string "יש לך פוקימונים טובים. זה בטח\n"
+	.string "בזכות האימונים באזור העיר ויולט.\p"
+	.string "האימונים במכון בטח עזרו במיוחד.\n"
+	.string "קח את זה, למזכרת מהעיר ויולט.\p"
+	.string "זה מגביר את העוצמה של\n"
+	.string "מהלכים מסוג עשב.$"
 
 Route32_Text_CooltrainerM_Experiences:
-	.string "Your experiences in VIOLET CITY\n"
-	.string "should be useful for your journey.$"
+	.string "החוויות שלך בעיר ויולט\n"
+	.string "בטח יועילו לך במסע.$"
 
 Route32_Text_SlowpokeTailOffer:
-	.string "How would you like to have this\n"
-	.string "tasty, nutritious SLOWPOKETAIL?\p"
-	.string "For you right now, just\n"
+	.string "מה דעתך על זנב הסלופוק\n"
+	.string "הטעים והמזין הזה?\p"
+	.string "בשבילך, ממש עכשיו, רק\n"
 	.string "¥1,000,000!\p"
-	.string "You'll want this!$"
+	.string "בטוח תרצה אותו!$"
 
 Route32_Text_ThoughtKidsLoaded:
-	.string "Tch! I thought kids\n"
-	.string "these days were loaded…$"
+	.string "אוף! חשבתי שלילדים של היום\n"
+	.string "יש המון כסף…$"
 
 Route32_Text_RefusedSlowpokeTail:
-	.string "You don't want it?\n"
-	.string "Then scram. Shoo!$"
+	.string "לא רוצה?\n"
+	.string "אז עוף מפה. קישטה!$"
 
 Route32_Text_FisherJustin_Seen:
-	.string "Whoa!\p"
-	.string "You made me lose that fish!$"
+	.string "וואו!\p"
+	.string "בגללך הדג ברח לי!$"
 
 Route32_Text_FisherJustin_Beaten:
-	.string "Sploosh!$"
+	.string "שפלוש!$"
 
 Route32_Text_FisherJustin_After:
-	.string "Calm, collected… The essence of\n"
-	.string "fishing and POKéMON is the same.$"
+	.string "רוגע, קור רוח…\n"
+	.string "המהות של דיג ושל פוקימונים זהה.$"
 
 Route32_Text_FisherRalph1_Seen:
-	.string "I'm really good at both\n"
-	.string "fishing and POKéMON.\p"
-	.string "I'm not about to lose to any kid!$"
+	.string "אני ממש טוב גם בדיג\n"
+	.string "וגם בפוקימונים.\p"
+	.string "אני לא מתכוון להפסיד לשום ילד!$"
 
 Route32_Text_FisherRalph1_Beaten:
-	.string "Tch! I tried to rush\n"
-	.string "things…$"
+	.string "אוף! מיהרתי יותר מדי…$"
 
 Route32_Text_FisherRalph1_After:
-	.string "Fishing is a lifelong\n"
-	.string "passion.\p"
-	.string "POKéMON are lifelong friends!$"
+	.string "דיג הוא תשוקה לכל החיים.\p"
+	.string "פוקימונים הם חברים לכל החיים!$"
 
 Route32_Text_RalphRegister:
-	.string "Fishing is a lifelong\n"
-	.string "passion.\p"
-	.string "POKéMON are lifelong friends!$"
+	.string "דיג הוא תשוקה לכל החיים.\p"
+	.string "פוקימונים הם חברים לכל החיים!$"
 
 Route32_Text_RalphRematchIntro:
-	.string "I'm really good at both\n"
-	.string "fishing and POKéMON.\p"
-	.string "I'm not about to lose to any kid!$"
+	.string "אני ממש טוב גם בדיג\n"
+	.string "וגם בפוקימונים.\p"
+	.string "אני לא מתכוון להפסיד לשום ילד!$"
 
 Route32_Text_RalphRematchDefeat:
-	.string "Tch! I tried to rush\n"
-	.string "things…$"
+	.string "אוף! מיהרתי יותר מדי…$"
 
 Route32_Text_RalphPostRematch:
-	.string "Fishing is a lifelong\n"
-	.string "passion.\p"
-	.string "POKéMON are lifelong friends!$"
+	.string "דיג הוא תשוקה לכל החיים.\p"
+	.string "פוקימונים הם חברים לכל החיים!$"
 
 Route32_Text_FisherHenry_Seen:
-	.string "My POKéMON? Freshly caught!$"
+	.string "הפוקימונים שלי? טריים, ישר מהמים!$"
 
 Route32_Text_FisherHenry_Beaten:
-	.string "SPLASH?$"
+	.string "שכשוך?$"
 
 Route32_Text_FisherHenry_After:
-	.string "Freshly caught POKéMON are\n"
-	.string "no match for properly raised ones.$"
+	.string "פוקימונים טריים מהמים לא משתווים\n"
+	.string "לפוקימונים שגודלו כמו שצריך.$"
 
 Route32_Text_YoungsterAlbert_Seen:
-	.string "I haven't seen you around before.\n"
-	.string "So you think you are pretty tough?$"
+	.string "לא ראיתי אותך פה קודם.\n"
+	.string "אז אתה חושב שאתה די קשוח?$"
 
 Route32_Text_YoungsterAlbert_Beaten:
-	.string "You're strong!$"
+	.string "אתה חזק!$"
 
 Route32_Text_YoungsterAlbert_After:
-	.string "I'm going to try to be the\n"
-	.string "best with my favorites.\p"
-	.string "I'm not using the same tough\n"
-	.string "POKéMON as everyone else.$"
+	.string "אני אנסה להיות הכי טוב\n"
+	.string "עם הפוקימונים האהובים עליי.\p"
+	.string "אני לא משתמש באותם פוקימונים\n"
+	.string "קשוחים שיש לכולם.$"
 
 Route32_Text_YoungsterGordon_Seen:
-	.string "I found some good POKéMON\n"
-	.string "in the grass!\p"
-	.string "I think they'll do it for me!$"
+	.string "מצאתי פוקימונים טובים בעשב!\p"
+	.string "אני חושב שהם יעשו את העבודה!$"
 
 Route32_Text_YoungsterGordon_Beaten:
-	.string "Darn. I thought I could win.$"
+	.string "אוף. חשבתי שאוכל לנצח.$"
 
 Route32_Text_YoungsterGordon_After:
-	.string "The grass is full of\n"
-	.string "clingy things.$"
+	.string "העשב מלא בדברים שנדבקים.$"
 
 Route32_Text_CamperRoland_Seen:
-	.string "That glance… It's intriguing.$"
+	.string "המבט הזה… הוא מסקרן.$"
 
 Route32_Text_CamperRoland_Beaten:
-	.string "Hmmm. This is disappointing.$"
+	.string "המממ. זה מאכזב.$"
 
 Route32_Text_CamperRoland_After:
-	.string "If you don't want to battle,\n"
-	.string "just avoid eye contact.$"
+	.string "אם לא רוצים להילחם,\n"
+	.string "פשוט נמנעים מקשר עין.$"
 
 Route32_Text_PicnickerLiz1_Seen:
-	.string "Uh-huh. Yeah, and you know…\p"
-	.string "Pardon? Battle? I'm on the phone.\n"
-	.string "Oh, all right. But make it fast.$"
+	.string "אה-הא. כן, ובקיצור…\p"
+	.string "סליחה? קרב? אני בטלפון.\n"
+	.string "נו, טוב. אבל שיהיה מהר.$"
 
 Route32_Text_PicnickerLiz1_Beaten:
-	.string "Oh! I've got to relieve\n"
-	.string "my anger!$"
+	.string "אוי! אני חייבת לפרוק\n"
+	.string "את הכעס שלי!$"
 
 Route32_Text_PicnickerLiz1_After:
-	.string "I was having a nice chat too.$"
+	.string "ודווקא הייתה לי שיחה נחמדה.$"
 
 Route32_Text_LizRegister:
-	.string "I was having a nice chat too.$"
+	.string "ודווקא הייתה לי שיחה נחמדה.$"
 
 Route32_Text_LizRematchIntro:
-	.string "Uh-huh. Yeah, and you know…\p"
-	.string "Pardon? Battle? I'm on the phone.\n"
-	.string "Oh, all right. But make it fast.$"
+	.string "אה-הא. כן, ובקיצור…\p"
+	.string "סליחה? קרב? אני בטלפון.\n"
+	.string "נו, טוב. אבל שיהיה מהר.$"
 
 Route32_Text_LizRematchDefeat:
-	.string "Oh! I've got to relieve\n"
-	.string "my anger!$"
+	.string "אוי! אני חייבת לפרוק\n"
+	.string "את הכעס שלי!$"
 
 Route32_Text_LizPostRematch:
-	.string "I was having a nice chat too.$"
+	.string "ודווקא הייתה לי שיחה נחמדה.$"
 
 Route32_Text_BirdKeeperPeter_Seen:
-	.string "That BADGE! It's from VIOLET CITY!\n"
-	.string "You beat FALKNER?$"
+	.string "התג הזה! הוא מהעיר ויולט!\n"
+	.string "ניצחת את פלקנר?$"
 
 Route32_Text_BirdKeeperPeter_Beaten:
-	.string "I know what my weaknesses are.$"
+	.string "אני יודע מהן החולשות שלי.$"
 
 Route32_Text_BirdKeeperPeter_After:
-	.string "I should train again at the\n"
-	.string "GYM in VIOLET CITY.$"
+	.string "כדאי שאתאמן שוב\n"
+	.string "במכון של העיר ויולט.$"
 
 Route32_Text_RoarIntro:
-	.string "WROOOOAR! PEOPLE RUN WHEN I\n"
-	.string "ROAR! BUT YOU CAME LOOKING!\p"
-	.string "THAT PLEASES ME! NOW TAKE THIS!$"
+	.string "גררררר! אנשים בורחים כשאני\n"
+	.string "שואג! אבל אתה דווקא באת לחפש אותי!\p"
+	.string "זה משמח אותי! עכשיו קח את זה!$"
 
 Route32_Text_RoarOutro:
-	.string "WROOOOAR! IT'S ROAR!\p"
-	.string "EVEN POKéMON RUN FROM A GOOD\n"
-	.string "ROAR!$"
+	.string "גררררר! זאת שאגה!\p"
+	.string "אפילו פוקימונים בורחים\n"
+	.string "משאגה טובה!$"
 
 Route32_Text_MeetFrieda:
-	.string "FRIEDA: Yahoo!\p"
-	.string "I'm FRIEDA of the WEEKDAY FAMILY!\n"
-	.string "Nice to meet you!\p"
-	.string "If you can guess my favorite day,\n"
-	.string "I'll give you a reward.$"
+	.string "פרידה: יאהו!\p"
+	.string "אני פרידה ממשפחת ימי השבוע!\n"
+	.string "נעים להכיר!\p"
+	.string "אם תנחש מה היום האהוב עליי,\n"
+	.string "אתן לך פרס.$"
 
 Route32_Text_FriedaGivesGift:
-	.string "Here's a POISON BARB for you!$"
+	.string "הנה, קוץ רעיל בשבילך!$"
 
 Route32_Text_FriedaGaveGift:
-	.string "FRIEDA: Give it to a POKéMON\n"
-	.string "that has POISON-type moves.\p"
-	.string "Oh!\p"
-	.string "It's wicked!\p"
-	.string "You'll be shocked how good it\n"
-	.string "makes poison moves!$"
+	.string "פרידה: תן אותו לפוקימון\n"
+	.string "שיש לו מהלכים מסוג רעל.\p"
+	.string "הו!\p"
+	.string "זה פשוט אדיר!\p"
+	.string "תופתע כמה הוא משפר\n"
+	.string "מהלכי רעל!$"
 
 Route32_Text_FriedaFriday:
-	.string "FRIEDA: Hiya! What day do\n"
-	.string "you like?\p"
-	.string "I love Friday. No doubt about\n"
-	.string "it!\p"
-	.string "Don't you think it's great too?$"
+	.string "פרידה: היי! איזה יום אהוב עליך?\p"
+	.string "אני אוהבת את יום שישי.\n"
+	.string "אין ספק בכלל!\p"
+	.string "נכון שגם בעיניך הוא נהדר?$"
 
 Route32_Text_FriedaNope:
-	.string "FRIEDA: Not that one!$"
+	.string "פרידה: לא היום הזה!$"
 
 Route32_Text_Sign1:
-	.string "ROUTE 32\p"
-	.string "VIOLET CITY - AZALEA TOWN$"
+	.string "דרך 32\p"
+	.string "העיר ויולט - העיירה אזייליה$"
 
 Route32_Text_Sign2:
-	.string "RUINS OF ALPH\n"
-	.string "EAST ENTRANCE$"
+	.string "חורבות אלף\n"
+	.string "כניסה מזרחית$"
 
 Route32_Text_Sign3:
-	.string "UNION CAVE\n"
-	.string "AHEAD$"
+	.string "מערת האיחוד\n"
+	.string "בהמשך הדרך$"

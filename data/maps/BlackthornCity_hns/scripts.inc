@@ -36,20 +36,20 @@ BlackthornCity_EventScript_Call::
 	end
 
 BlackthornCity_Text_ElmName:
-	.string "PROF.ELM$"
+	.string "פרופ' אלם$"
 
 BlackthornCity_Text_BaobaCall:
-	.string "WARDEN BAOBA: {PLAYER}!\p"
-	.string "This is WARDEN BAOBA.\p"
-	.string "I'm calling to tell you that\n"
-	.string "the SAFARI ZONE has expanded!\p"
-	.string "Please come visit!$"
+	.string "הפקח באובה: {PLAYER}!\p"
+	.string "מדבר הפקח באובה.\p"
+	.string "אני מתקשר לספר לך\n"
+	.string "שאזור הספארי התרחב!\p"
+	.string "נשמח לביקור שלך!$"
 
 BlackthornCity_Text_ElmCall:
-	.string "PROF.ELM: Hello, {PLAYER}?\p"
-	.string "I have something here for you.\n"
-	.string "Could you swing by my LAB?\p"
-	.string "See you later!$"
+	.string "פרופ' אלם: הלו, {PLAYER}?\p"
+	.string "יש לי כאן משהו בשבילך.\n"
+	.string "תוכל לקפוץ אליי למעבדה?\p"
+	.string "נתראה!$"
 
 BlackThornCity_EventScript_Sage::
 	lock
@@ -179,83 +179,83 @@ BlackthornCity_EventScript_SantosCompleted::
 
 
 BlackthornCity_Text_ClairNotReady:
-	.string "CLAIR, our GYM LEADER, has been\n"
-	.string "following your progress.\p"
-	.string "However, she only battles trainers\n"
-	.string "who already have 7 badges.$"
+	.string "קלייר, מנהיגת המכון שלנו,\n"
+	.string "עוקבת אחרי ההתקדמות שלך.\p"
+	.string "אבל היא נלחמת רק במאמנים\n"
+	.string "שכבר יש להם 7 תגים.$"
 
 BlackthornCity_Text_ClairIsIn:
-	.string "CLAIR, our GYM LEADER, is waiting\n"
-	.string "for you.\p"
-	.string "However, it would be impossible for\n"
-	.string "a run-of-the-mill trainer to win.$"
+	.string "קלייר, מנהיגת המכון שלנו,\n"
+	.string "מחכה לך.\p"
+	.string "אבל למאמן מן השורה\n"
+	.string "אין שום סיכוי לנצח.$"
 
 BlackthornCity_Text_ClairIsBeaten:
-	.string "You defeated CLAIR?\p"
-	.string "That's amazing!\p"
-	.string "I've never heard of her losing to\n"
-	.string "anyone other than LANCE.$"
+	.string "ניצחת את קלייר?\p"
+	.string "זה מדהים!\p"
+	.string "אף פעם לא שמעתי שהיא הפסידה\n"
+	.string "למישהו חוץ מלאנס.$"
 
 BlackthornGrampsRefusesEntryText:
-	.string "No. Only chosen trainers may train\n"
-	.string "here.\p"
-	.string "Please leave.$"
+	.string "לא. רק מאמנים נבחרים רשאים\n"
+	.string "להתאמן כאן.\p"
+	.string "נא לעזוב.$"
 
 BlackthornGrampsGrantsEntryText:
-	.string "If CLAIR allows it, her grand-\n"
-	.string "father--our MASTER--will also.\p"
-	.string "You may enter.$"
+	.string "אם קלייר מרשה, גם סבא שלה,\n"
+	.string "המאסטר שלנו, ירשה.\p"
+	.string "מותר לך להיכנס.$"
 
 BlackBeltText_VoicesInMyHead:
-	.string "Arooo! Voices in my head!\p"
-	.string "Huh? I'm listening to my radio!$"
+	.string "אוווו! קולות בתוך הראש שלי!\p"
+	.string "מה? אני מקשיב לרדיו שלי!$"
 
 BlackthornCooltrainerF1Text:
-	.string "Are you going to make your POKéMON\n"
-	.string "remember some moves?$"
+	.string "באת כדי שהפוקימונים שלך\n"
+	.string "ייזכרו בכמה מהלכים?$"
 
 BlackthornYoungsterText:
-	.string "Dragon masters all come from the city\n"
-	.string "of BLACKTHORN.$"
+	.string "כל מאסטרי הדרקונים באים\n"
+	.string "מהעיר בלקתורן.$"
 
 BlackthornCity_MeetSantosText:
-	.string "SANTOS: …\p"
-	.string "I'm SANTOS of the weekday family.\p"
-	.string "Take a guess.$"
+	.string "סנטוס: …\p"
+	.string "אני סנטוס ממשפחת ימי השבוע.\p"
+	.string "נסה לנחש.$"
 
 BlackthornCity_SantosGivesGiftText:
-	.string "You can have this…$"
+	.string "זה בשבילך…$"
 
 BlackthornCity_SantosGaveGiftText:
-	.string "SANTOS: …\p"
-	.string "SPELL TAG…\p"
-	.string "GHOST-type moves get stronger…\p"
-	.string "It will frighten you…$"
+	.string "סנטוס: …\p"
+	.string "קמע רוח…\p"
+	.string "מהלכים מסוג רפאים מתחזקים…\p"
+	.string "הוא יפחיד אותך…$"
 
 BlackthornCity_SantosSaturdayText:
-	.string "SANTOS: …\p"
-	.string "See you again on another Saturday…\p"
-	.string "I won't have any more gifts…$"
+	.string "סנטוס: …\p"
+	.string "נתראה שוב בשבת אחרת…\p"
+	.string "לא יהיו לי עוד מתנות…$"
 
 BlackthornCity_SantosNopeText:
-	.string "SANTOS: No.$"
+	.string "סנטוס: לא.$"
 
 BlackthornCooltrainerF2Text:
-	.string "Wow, you came through the ICE PATH?\p"
-	.string "You must be a real hotshot trainer!$"
+	.string "וואו, עברת דרך שביל הקרח?\p"
+	.string "אתה בטח מאמן תותח!$"
 
 BlackthornCitySignText:
-	.string "BLACKTHORN CITY\p"
-	.string "A Quiet Mountain Retreat$"
+	.string "העיר בלקתורן\p"
+	.string "מפלט שקט בהרים$"
 
 BlackthornGymSignText:
-	.string "BLACKTHORN CITY POKéMON GYM\n"
-	.string "LEADER: CLAIR\p"
-	.string "The Blessed User of Dragon POKéMON$"
+	.string "מכון הפוקימון של העיר בלקתורן\n"
+	.string "מנהיגה: קלייר\p"
+	.string "המאלפת המבורכת של פוקימוני דרקון$"
 
 BlackthornCity_Text_MoveDeletersHouseSign:
-	.string "MOVE BROS' HOUSE$"
+	.string "בית אחי המהלכים$"
 
 BlackthornCity_Text_DragonDenSign:
-	.string "DRAGON'S DEN AHEAD$"
+	.string "מאורת הדרקון בהמשך$"
 

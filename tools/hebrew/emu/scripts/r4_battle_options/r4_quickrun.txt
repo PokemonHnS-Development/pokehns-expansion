@@ -1,0 +1,97 @@
+# OPTIONS > BATTLE row 6 'quick run' (runType) and row 7 'run prompt' (lrToRun) in wild battles
+# (Gen 3 UI). runType 1 = L+R+A, 3 = B: the intro text carries the hint
+# (sText_WildPkmnAppearedLR / sText_WildPkmnAppearedB, src/battle_message.c:92-93, chosen at
+# :2462-2465, dropped when lrToRun is 1), and the keys held when the intro text is closed flee
+# before the send-out or print STRINGID_CANTESCAPE (src/battle_main.c:3812-3852; a Shadow Tag
+# Wobbuffet blocks it). runType 2 = B->A: B on the action menu moves the cursor to RUN
+# (src/battle_controller_player.c:383-391).
+start saves/ladder1_newgame.sav
+include ../../tours/_battle_base.txt
+ev givemon SPECIES_TYPHLOSION, 50, move1=MOVE_FLAMETHROWER; end
+
+# runType 1, prompt on: intro hint, hold L+R and press A -> fled
+opt runType=1 lrToRun=0
+pinrng
+evstart setwildbattle SPECIES_GEODUDE, 10; dowildbattle; end
+waitbattle
+waitkey 1200
+snap qr1_intro
+3 Lb+Rb+A
+holdshots qr1_hold Lb+Rb 12 10
+bwalk qr1_fled free
+snap qr1_end
+
+# runType 1 against Shadow Tag: can't escape, then the battle goes on
+pinrng
+evstart setwildbattle SPECIES_WOBBUFFET, 5; dowildbattle; end
+waitbattle
+waitkey 1200
+snap qr1w_intro
+3 Lb+Rb+A
+holdshots qr1w_hold Lb+Rb 12 10
+bwalk qr1w_cant input:HandleInputChooseAction
+snap qr1w_action
+baction FIGHT
+bmove 0
+bwalk qr1w_win free
+
+# runType 1, prompt off: the plain intro text; the combination still flees
+opt runType=1 lrToRun=1
+pinrng
+evstart setwildbattle SPECIES_GEODUDE, 10; dowildbattle; end
+waitbattle
+waitkey 1200
+snap qr1off_intro
+3 Lb+Rb+A
+holdshots qr1off_hold Lb+Rb 12 10
+bwalk qr1off_fled free
+
+# runType 3, prompt on: intro hint, B -> fled
+opt runType=3 lrToRun=0
+pinrng
+evstart setwildbattle SPECIES_GEODUDE, 10; dowildbattle; end
+waitbattle
+waitkey 1200
+snap qr3_intro
+3 B
+holdshots qr3_hold B 12 10
+bwalk qr3_fled free
+
+# runType 3 against Shadow Tag
+pinrng
+evstart setwildbattle SPECIES_WOBBUFFET, 5; dowildbattle; end
+waitbattle
+waitkey 1200
+snap qr3w_intro
+3 B
+holdshots qr3w_hold B 12 10
+bwalk qr3w_cant input:HandleInputChooseAction
+snap qr3w_action
+baction FIGHT
+bmove 0
+bwalk qr3w_win free
+
+# runType 3, prompt off: plain intro; A closes it, no escape
+opt runType=3 lrToRun=1
+pinrng
+evstart setwildbattle SPECIES_GEODUDE, 10; dowildbattle; end
+waitbattle
+waitkey 1200
+snap qr3off_intro
+bwalk qr3off_in input:HandleInputChooseAction
+baction RUN
+bwalk qr3off_run free
+
+# runType 2: B on the action menu moves the cursor to RUN
+opt runType=2 lrToRun=0
+pinrng
+evstart setwildbattle SPECIES_GEODUDE, 10; dowildbattle; end
+waitbattle
+bwalk qr2_intro input:HandleInputChooseAction
+snap qr2_action
+tap B 4
+waitquiet
+snap qr2_b_to_run
+expect8 @gActionSelectionCursor@ 3
+tap A 4
+bwalk qr2_run free

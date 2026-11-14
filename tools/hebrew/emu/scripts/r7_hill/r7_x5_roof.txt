@@ -1,0 +1,26 @@
+# Expert roof: the owner (src/trainer_hill.c:1232-1320, HnS prize lists :241-262) with the clock set to
+# 9:36 on the clock against a best time of 8:42 already on the board: Expert's list (set 1,
+# list 5) gives a Ganlon Berry and 1,000,000, then 'not very quick' (no new record);
+# the elevator back to the reception; the TIME BOARD at (8,10) from (8,11) facing up.
+snap x5_roof
+hillstate
+hilltimer 34567
+hillbest 3 31337
+talkto 1 x5_owner free 80
+hillstate
+walkto 15 6 UP
+8 UP
+waitwarp
+dlg x5_elev menu
+pick 0
+dlg x5_down free
+snap x5_entrance
+walkto 8 11 UP
+tap A 4
+waitcb2 MainCB2_TrainerHillRecords 600
+waittask Task_TrainerHillWaitForPaletteFade 600
+waitquiet
+snap x5_timeboard
+press A
+waitctl 600
+snap x5_back

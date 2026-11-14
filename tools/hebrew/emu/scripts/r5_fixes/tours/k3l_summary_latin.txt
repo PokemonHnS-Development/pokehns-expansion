@@ -1,0 +1,87 @@
+# K3 with a Latin name: the k3_summary_geresh steps with the Ampharos renamed Peggy’s (P e g g y ’ s,
+# charmap CA D9 DB DB ED B4 E7), a quote mark next to Latin descenders (g, y), on the summary INFO
+# page and the forget-move page, whose dark frame runs under the name.
+# Run with scripts/r5_known/r5known.py; the save is a copy of saves_all/menuA_base.sav.
+start saves/menuA_base.sav
+include ../../continue.txt
+w8 @gPlayerParty+D0@ CA
+w8 @gPlayerParty+D1@ D9
+w8 @gPlayerParty+D2@ DB
+w8 @gPlayerParty+D3@ DB
+w8 @gPlayerParty+D4@ ED
+w8 @gPlayerParty+D5@ B4
+w8 @gPlayerParty+D6@ E7
+w8 @gPlayerParty+D7@ FF
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap k3l_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap k3l_summary_1_typhlosion
+tap DOWN 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+snap k3l_summary_2_pikachu
+tap DOWN 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+snap k3l_summary_3_peggys
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 300
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# TM24 (TMs & HMs pocket, index 23) on Peggy’s (party slot 2): YES, the forget-move page, then B
+w8 @gBagPosition+5@ 3
+w16 @gBagPosition+E@ 3
+w16 @gBagPosition+1A@ 14
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waittaskx Task_ShowTMHMContainedMessage 300
+waitquiet
+tap A 4
+waitkey 600
+tap A 4
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 4                                   # YES
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 4
+talk k3l_tm_wants 6 - Task_HandleReplaceMoveYesNoInput
+tap A 4                                   # YES
+waitkey 600
+tap A 4
+waittaskx Task_HandleReplaceMoveInput 900
+waitquiet
+snap k3l_forget_page_peggys
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waitkey 900
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

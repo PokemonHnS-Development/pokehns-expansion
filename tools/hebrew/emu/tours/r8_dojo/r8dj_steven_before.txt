@@ -1,0 +1,12 @@
+# Steven at the Fuchsia Safari Zone entrance before FLAG_IS_KANTO_CHAMPION, no Eon Ticket
+# (FuchsiaCity_SafariZoneEntrance_Steven, data/maps/FuchsiaCity_SafariZoneEntrance_hns/scripts.inc:74-82):
+# the plain NPC line, for comparison with the champion branch.
+start saves/r8_dojo_base.sav
+include _base.txt
+ev clearflag FLAG_IS_KANTO_CHAMPION; setvar VAR_KANTO_SAFARI_ZONE_PROGRESS, 1; setvar VAR_SAFARI_ZONE_STATE, 0; removeitem ITEM_EON_TICKET; end
+warpto MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS 12 6
+approach 2
+snap S_face
+tap A 4
+scene S_msg 20000
+snap S_free

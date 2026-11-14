@@ -1,0 +1,29 @@
+# The YES/NO prompts the H&S field-move scripts no longer show (their msgbox lines are commented
+# out: data/scripts/field_move_scripts_hns.inc:11-12 Cut, :78-79 Rock Smash, :335-336 Strength,
+# :394-395 Waterfall; Text_WantToHeadbutt :317 has no reference at all). NOT REACHABLE in the
+# game: each one is shown here from RAM (msgbox ..., MSGBOX_YESNO) only to check that it fits its
+# box, and the answer is NO.
+start save:fm_party
+include _cont.txt
+warpto MAP_CELADON_CITY_HNS 52 21
+waitctl 600
+evstart msgbox 0x@Text_WantToCut@, MSGBOX_YESNO; closemessage; end
+fieldwatch fm09_wanttocut menu 3000
+tap B 4
+fieldwatch fm09_wanttocut_no free 3000
+evstart msgbox 0x@Text_WantToSmash@, MSGBOX_YESNO; closemessage; end
+fieldwatch fm09_wanttosmash menu 3000
+tap B 4
+fieldwatch fm09_wanttosmash_no free 3000
+evstart msgbox 0x@Text_WantToStrength@, MSGBOX_YESNO; closemessage; end
+fieldwatch fm09_wanttostrength menu 3000
+tap B 4
+fieldwatch fm09_wanttostrength_no free 3000
+evstart msgbox 0x@Text_WantToWaterfall@, MSGBOX_YESNO; closemessage; end
+fieldwatch fm09_wanttowaterfall menu 3000
+tap B 4
+fieldwatch fm09_wanttowaterfall_no free 3000
+evstart msgbox 0x@Text_WantToHeadbutt@, MSGBOX_YESNO; closemessage; end
+fieldwatch fm09_wanttoheadbutt menu 3000
+tap B 4
+fieldwatch fm09_wanttoheadbutt_no free 3000

@@ -1,0 +1,142 @@
+# Confusion and infatuation cured from the bag in battle (BattleScript_ItemCureStatus,
+# data/battle_scripts_2.s:90; BS_ItemCureStatus heals the volatiles of the active Pokemon,
+# src/battle_script_commands.c:12110): STRINGID_PLAYERUSEDITEM, then STRINGID_ITEMCUREDSPECIESSTATUS.
+# Out of battle these states do not exist, so the party-menu lines gText_PkmnSnappedOutOfConfusion and
+# gText_PkmnGotOverInfatuation are not printed from the field bag.
+# Lead: Nidoking (always male, Growl only). Foe: a wild Chansey (always female) made with
+# createmon so it knows only CONFUSE RAY (first battle) or ATTRACT (second battle).
+# Battle 1: Growl / Confuse Ray, then PERSIM on the confused lead, then FULL HEAL on it after the
+# next Confuse Ray, then PERSIM on a healthy party Pokemon (refused). Battle 2: Growl / Attract,
+# then PERSIM on the infatuated lead (the engine lets it cure infatuation too), then FULL HEAL.
+start saves/r8bfe_ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_NIDOKING, 40, move1=MOVE_GROWL, move2=MOVE_NONE, move3=MOVE_NONE, move4=MOVE_NONE; givemon SPECIES_TYPHLOSION, 40, move1=MOVE_GROWL; additem ITEM_PERSIM_BERRY, 5; additem ITEM_FULL_HEAL, 5; end
+expect8 @gPlayerPartyCount@ 2
+setpocket POCKET_MEDICINE ITEM_FULL_HEAL:5 ITEM_POTION:5 ITEM_SUPER_POTION:5 ITEM_HYPER_POTION:5 ITEM_ANTIDOTE:5 ITEM_BURN_HEAL:5 ITEM_ICE_HEAL:5 ITEM_AWAKENING:5 ITEM_PARALYZE_HEAL:5 ITEM_REVIVE:5
+
+pinrng
+ev setwildbattle SPECIES_CHANSEY, 20; createmon 1, 0, SPECIES_CHANSEY, 20, move1=MOVE_CONFUSE_RAY, move2=MOVE_CONFUSE_RAY, move3=MOVE_CONFUSE_RAY, move4=MOVE_CONFUSE_RAY; end
+evstart dowildbattle; end
+waitbattle
+bwalk b01_intro input:HandleInputChooseAction
+baction FIGHT
+waitbinput HandleInputChooseMove
+bmove 0
+bwalk b02_turn1 input:HandleInputChooseAction
+snap b03_confused
+
+# PERSIM on the confused lead
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 0
+w16 @gBagPosition+1C@ 0
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap b04_bag_berries
+tap A 4
+waitquiet
+snap b05_berry_use_cancel
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap b06_party_persim
+tap A 4
+waitnotask Task_HandleChooseMonInput 300
+bwalk b07_persim_used input:HandleInputChooseAction
+snap b08_after_persim
+
+# FULL HEAL on the lead, confused again by the foe's turn (MEDICINE holds 10 rows: the USE/CANCEL
+# window, ITEMWIN_1x2, over rows 7-8 of the list)
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 0
+w16 @gBagPosition+16@ 0
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap b09_bag_medicine
+tap A 4
+waitquiet
+snap b09b_medicine_use_cancel
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap A 4
+waitnotask Task_HandleChooseMonInput 300
+bwalk b10_fullheal_used input:HandleInputChooseAction
+
+# PERSIM on Typhlosion (on the bench, not confused): refused
+w8 @gBagPosition+5@ 4
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+tap A 4
+pages b11_persim_bench
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction 900
+baction RUN
+bwalk b12_run free
+
+# Battle 2: ATTRACT
+ev setwildbattle SPECIES_CHANSEY, 20; createmon 1, 0, SPECIES_CHANSEY, 20, move1=MOVE_ATTRACT, move2=MOVE_ATTRACT, move3=MOVE_ATTRACT, move4=MOVE_ATTRACT; end
+evstart dowildbattle; end
+waitbattle
+bwalk b20_intro input:HandleInputChooseAction
+baction FIGHT
+waitbinput HandleInputChooseMove
+bmove 0
+bwalk b21_turn1 input:HandleInputChooseAction
+snap b22_infatuated
+
+# PERSIM on the infatuated lead: used, since IteamHealsMonVolatile and ItemHealMonVolatile treat
+# ITEM3_CONFUSION as part of ITEM3_STATUS_ALL (src/item_use.c:1268, src/battle_util.c:10264), as in English
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 0
+w16 @gBagPosition+1C@ 0
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap A 4
+waitnotask Task_HandleChooseMonInput 300
+bwalk b23_persim_infatuated input:HandleInputChooseAction
+
+# FULL HEAL on the lead, infatuated again by the foe's turn
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 0
+w16 @gBagPosition+16@ 0
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap A 4
+waitnotask Task_HandleChooseMonInput 300
+bwalk b24_fullheal_infatuation input:HandleInputChooseAction
+baction RUN
+bwalk b25_run free

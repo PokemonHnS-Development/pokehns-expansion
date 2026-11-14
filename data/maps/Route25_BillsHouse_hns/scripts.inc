@@ -36,10 +36,10 @@ Route25_BillsHouse_hns_EventScript_TeleporterTest::
 	end
 
 Route25_BillsHouse_Text_Teleporter:
-	.string "THIS MACHINE WILL TRANSFORM\n"
-	.string "A POKéMON INTO ITS GALARIAN FORM\l"
-	.string "THIS PROCESS IS PERMANENT.\l"
-	.string "WOULD YOU LIKE TO PROCEED?$"
+	.string "המכונה הזאת תהפוך פוקימון\n"
+	.string "לצורת גלאר שלו.\p"
+	.string "התהליך הזה בלתי הפיך.\n"
+	.string "להמשיך?$"
 
 Route25_BillsHouse_hns_PickMeowth::
 	setvar VAR_0x8004, SPECIES_MEOWTH
@@ -316,55 +316,55 @@ Route25_BillsHouse_Movement_ShowPlayer:
 	step_end
 
 Route25_BillsHouse_hns_Text_Meowth:
-	.string "MEOWTH$"
+	.string "מיאו$"
 
 Route25_BillsHouse_hns_Text_Ponyta:
-	.string "PONYTA$"
+	.string "פוניטה$"
 
 Route25_BillsHouse_hns_Text_Rapidash:
-	.string "RAPIDASH$"
+	.string "רפידאש$"
 
 Route25_BillsHouse_hns_Text_Slowpoke:
-	.string "SLOWPOKE$"
+	.string "סלופוק$"
 
 Route25_BillsHouse_hns_Text_Slowbro:
-	.string "SLOWBRO$"
+	.string "סלוברו$"
 
 Route25_BillsHouse_hns_Text_Slowking:
-	.string "SLOWKING$"
+	.string "סלואוקינג$"
 
 Route25_BillsHouse_hns_Text_Farfetchd:
-	.string "FARFETCH'D$"
+	.string "פארפג'ד$"
 
 Route25_BillsHouse_hns_Text_Weezing:
-	.string "WEEZING$"
+	.string "ויזינג$"
 
 Route25_BillsHouse_hns_Text_MrMime:
-	.string "MR. MIME$"
+	.string "מר. מיים$"
 
 Route25_BillsHouse_hns_Text_Articuno:
-	.string "ARTICUNO$"
+	.string "ארטיקונו$"
 
 Route25_BillsHouse_hns_Text_Zapdos:
-	.string "ZAPDOS$"
+	.string "זאפדוס$"
 
 Route25_BillsHouse_hns_Text_Moltres:
-	.string "MOLTRES$"
+	.string "מולטרס$"
 
 Route25_BillsHouse_hns_Text_Corsola:
-	.string "CORSOLA$"
+	.string "קורסולה$"
 
 Route25_BillsHouse_hns_Text_Zigzagoon:
-	.string "ZIGZAGOON$"
+	.string "זיגזגון$"
 
 Route25_BillsHouse_hns_Text_Linoone:
-	.string "LINOONE$"
+	.string "לינון$"
 
 Route25_BillsHouse_hns_Text_Cancel:
-	.string "CANCEL$"
+	.string "ביטול$"
 
 Route25_BillsHouse_hns_Text_NotInParty:
-	.string "POKéMON NOT DETECTED.$"
+	.string "לא זוהה פוקימון.$"
 
 @VAR_BILLS_GRANDPA
 
@@ -536,90 +536,87 @@ Route25_BillsHouse_Movement_MonCelebration:
 	step_end
 
 Route25_BillsHouse_Text_GrandpaIntro:
-	.string "Hm? You know BILL? He's my\n"
-	.string "grandson.\p"
-	.string "He's in JOHTO. He does\n"
-	.string "something with PCs, so I'm\l"
-	.string "housesitting.$"
+	.string "הממ? אתה מכיר את ביל? הוא\n"
+	.string "הנכד שלי.\p"
+	.string "הוא בג'וטו, עושה משהו עם\n"
+	.string "מחשבים, אז אני שומר לו על הבית.$"
 
 Route25_BillsHouse_Text_GrampsMeowth:
-	.string "My grandson BILL told me about\n"
-	.string "a POKéMON that has sharp claws,\l"
-	.string "a charm on its head, and is\p"
-	.string "said to bring good fortune.$"
+	.string "הנכד שלי ביל סיפר לי על פוקימון\n"
+	.string "עם טפרים חדים וקמע על הראש.\p"
+	.string "אומרים שהוא מביא מזל טוב.$"
 
 Route25_BillsHouse_Text_GrampsZigzagoon:
-	.string "BILL mentioned a POKéMON that\n"
-	.string "runs around in a zigzag\l"
-	.string "pattern.\p"
-	.string "It's quite the little\n"
-	.string "scavenger, I hear.$"
+	.string "ביל הזכיר פוקימון שמתרוצץ\n"
+	.string "לכל עבר בזיגזג.\p"
+	.string "שמעתי שהוא אוהב ללקט\n"
+	.string "כל מיני דברים.$"
 
 Route25_BillsHouse_Text_GrampsPonyta:
-	.string "Do you know of a POKéMON with\n"
-	.string "a fiery mane?\p"
-	.string "I hear it can run faster than\n"
-	.string "most trains.$"
+	.string "אתה מכיר פוקימון\n"
+	.string "עם רעמה בוערת?\p"
+	.string "שמעתי שהוא רץ מהר יותר\n"
+	.string "מרוב הרכבות.$"
 
 Route25_BillsHouse_Text_GrampsFarfetchd:
-	.string "BILL told me about a POKéMON\n"
-	.string "that always carries a stalk\l"
-	.string "of leek with it.\p"
-	.string "Quite the peculiar creature.$"
+	.string "ביל סיפר לי על פוקימון שתמיד\n"
+	.string "סוחב איתו גבעול של כרישה.\p"
+	.string "יצור משונה למדי.$"
 
 Route25_BillsHouse_Text_GrampsSlowpoke:
-	.string "Do you know the POKéMON that\n"
-	.string "is always staring blankly?\p"
-	.string "Its tail is often sold on the\n"
-	.string "black market.$"
+	.string "אתה מכיר את הפוקימון\n"
+	.string "שתמיד בוהה באוויר?\p"
+	.string "את הזנב שלו מוכרים הרבה\n"
+	.string "בשוק השחור.$"
 
 Route25_BillsHouse_Text_TeleporterUnlocked:
-	.string "Oh, one more thing!\p"
-	.string "BILL's TELEPORTER.\n"
-	.string "That's the big machine over there.\p"
-	.string "He never quite got it working.\p"
-	.string "But it does curious things to\n"
-	.string "POKéMON.\p"
-	.string "You're welcome to try it, if\n"
-	.string "you'd like!\p"
-	.string "Just use that computer over there.$"
+	.string "אה, עוד דבר אחד!\p"
+	.string "הטלפורטר של ביל.\n"
+	.string "זאת המכונה הגדולה שם.\p"
+	.string "הוא אף פעם לא הצליח להפעיל\n"
+	.string "אותו עד הסוף.\p"
+	.string "אבל הטלפורטר עושה דברים\n"
+	.string "מוזרים לפוקימונים.\p"
+	.string "אפשר לנסות אותו,\n"
+	.string "אם רוצים!\p"
+	.string "פשוט משתמשים במחשב שם.$"
 
 Route25_BillsHouse_Text_AskToSeeMon:
-	.string "If you have that POKéMON, may I\n"
-	.string "see it, please?$"
+	.string "אם יש לך את הפוקימון הזה,\n"
+	.string "אפשר לראות אותו, בבקשה?$"
 
 Route25_BillsHouse_Text_ExcitedToSee:
-	.string "You will show me? How good of\n"
-	.string "you!$"
+	.string "תראה לי? כמה נחמד\n"
+	.string "מצדך!$"
 
 Route25_BillsHouse_Text_YouDontHaveIt:
-	.string "You don't have it?\n"
-	.string "That's too bad…$"
+	.string "אין לך אותו?\n"
+	.string "חבל מאוד…$"
 
 Route25_BillsHouse_Text_ShownPokemon:
-	.string "Ah, so that is {STR_VAR_1}?\p"
-	.string "Isn't it cute! That's so kind\n"
-	.string "of you.$"
+	.string "אה, אז זה {STR_VAR_1}?\p"
+	.string "איזה חמוד! זה כל כך נחמד\n"
+	.string "מצדך.$"
 
 Route25_BillsHouse_Text_Appreciation:
-	.string "Thanks!\p"
-	.string "This is a token of my\n"
-	.string "appreciation.$"
+	.string "תודה!\p"
+	.string "זה אות הוקרה\n"
+	.string "ממני.$"
 
 Route25_BillsHouse_Text_ComeAgain:
-	.string "Come visit again sometime.$"
+	.string "בוא לבקר שוב מתישהו.$"
 
 Route25_BillsHouse_Text_ShownAll:
-	.string "Thanks for showing me so many\n"
-	.string "cute POKéMON.\p"
-	.string "I really enjoyed myself. I'm\n"
-	.string "glad I've lived such a long life.\p"
-	.string "Feel free to use the TELEPORTER\n"
-	.string "whenever you like.$"
+	.string "תודה שהראית לי כל כך הרבה\n"
+	.string "פוקימונים חמודים.\p"
+	.string "ממש נהניתי. אני שמח שזכיתי\n"
+	.string "לחיות חיים כל כך ארוכים.\p"
+	.string "אפשר להשתמש בטלפורטר\n"
+	.string "מתי שרוצים.$"
 
 Route25_BillsHouse_Text_WrongPokemon:
-	.string "Hm?\p"
-	.string "That's not the POKéMON that I\n"
-	.string "was told about.$"
+	.string "הממ?\p"
+	.string "זה לא הפוקימון\n"
+	.string "שסיפרו לי עליו.$"
 
 

@@ -1,0 +1,16 @@
+# Lugia, Whirl Islands Lugia chamber (29,7): the story encounter (VAR_COMPLETED_LUGIA 2). Trigger
+# (29,22): the kimono girls' dance, closing line, Lugia; WhirlIslands_LugiaChamber_EventScript_Lugia
+# (data/maps/WhirlIslands_LugiaChamber_hns/scripts.inc:172-238).
+start saves/ladder6_postgame.sav
+include _base.txt
+ev setvar VAR_COMPLETED_LUGIA, 2; clearflag FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS; clearflag FLAG_CAUGHT_LUGIA; end
+warpto MAP_WHIRL_ISLANDS_LUGIA_CHAMBER_HNS 29 23
+face UP
+snap lu_field
+stepto UP 1
+scene lu_scene 30000 90
+objs
+snap lu_before
+evstart setvar VAR_LAST_TALKED, 1; goto WhirlIslands_LugiaChamber_EventScript_Lugia     # Lugia is out in the water (29,12)
+scene lu_pre 6000
+include _legend_tail.txt

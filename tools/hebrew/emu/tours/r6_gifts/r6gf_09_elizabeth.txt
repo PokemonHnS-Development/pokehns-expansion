@@ -1,0 +1,35 @@
+# New Sinjoh House 1, Elizabeth (3,2): NewSinjoh__House1_EventScripts_Elizabeth
+# (NewSinjoh_House1_hns/scripts.inc:5-37): the Celebi request YES/NO; NO -> Decline; YES without a
+# Celebi -> NicePokemonButNotCelebi; with a Celebi in the party -> the '!' emote, OffersWooper pages,
+# Wooper (Paldea) received with the fanfare, nickname YES/NO (NO); talking again -> GoodToSeeYouAgain.
+start saves/r6_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+ev clearflag FLAG_NEWSINJOH_HOUSE1_ELIZABETH_GAVEWOOPER; end
+warpto MAP_NEW_SINJOH_HOUSE1_HNS 3 3
+face UP
+snap el_field
+tap A 4
+scene el_ask 8000
+ss el_ask
+pickd 1
+scene el_no 4000
+snap el_no_end
+sl el_ask
+pickd 0
+scene el_notcelebi 4000
+snap el_notcelebi_end
+ev createmon 0, 1, SPECIES_CELEBI, 50; special CalculatePlayerPartyCount; end
+partyinfo
+face UP
+tap A 4
+scene el_celebi 8000
+pickd 0
+scene el_give 8000 12
+pickd 1
+scene el_give_no 4000
+snap el_give_end
+face UP
+tap A 4
+scene el_after 4000
+snap el_after_end

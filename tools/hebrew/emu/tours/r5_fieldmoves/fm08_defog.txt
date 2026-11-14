@@ -1,0 +1,28 @@
+# Defog: OW_DEFOG_FIELD_MOVE is FALSE (include/config/overworld.h:13), so DEFOG is not in
+# the party menu (src/field_move.c:251) and EventScript_UseDefog (data/scripts/
+# field_move_scripts_hns.inc:595) cannot be reached from it. The Gyarados action list shows
+# that; then the message EventScript_UseDefog would print (Text_MonUsedFieldMove :54 with
+# STR_VAR_2 = DEFOG) is shown from RAM, the same buffer commands, without the field effect.
+start save:fm_party
+include _cont.txt
+warpto MAP_ROUTE7_HNS 14 5
+waitctl 600
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap fm08_gyarados_actions
+tap B 4
+waittaskx Task_HandleChooseMonInput 600
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+evstart bufferpartymonnick STR_VAR_1, 1; buffermovename STR_VAR_2, MOVE_DEFOG; msgbox 0x@Text_MonUsedFieldMove@, MSGBOX_DEFAULT; closemessage; end
+fieldwatch fm08_defog_msg_ram free 3000

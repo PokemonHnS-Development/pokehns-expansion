@@ -1,0 +1,5 @@
+py: import importlib, bfpops; importlib.reload(bfpops)
+sl arena_b1
+fastbattles off
+bstall ar_b2 3
+ss arena_after_judge

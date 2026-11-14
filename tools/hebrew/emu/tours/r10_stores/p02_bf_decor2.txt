@@ -1,0 +1,14 @@
+# CreateBPDecorShop2 (MAP_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER_HNS): every row asked, one purchase, not enough BP.
+start saves/st_l6.sav
+include _base.txt
+setbp 9999
+visit MAP_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER_HNS
+clerk 5 5 p02_hi
+buywait p02_buy
+listshots p02_list
+buyeach p02_ask
+buy p02_b0 0 1 YES
+setbp 0
+buy p02_nobp 1 0 YES
+press B
+chat p02_bye

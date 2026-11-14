@@ -449,14 +449,14 @@ void CB2_FlashNotDetectedScreen(void)
     InitWindows(textWin);
     DrawStdFrameWithCustomTileAndPalette(0, TRUE, 0x214, 0xE);
     static const u8 saveFailedMessage[] =_(
-        "{COLOR RED}ERROR! {COLOR DARK_GRAY}Flash memory not detected!\n"
+        "{COLOR RED}שגיאה! {COLOR DARK_GRAY}לא זוהה זיכרון Flash!\n"
         "\n"
-        "If playing on an emulator, set your\n"
-        "save type setting to\n"
-        "Flash 1Mb/128K and reload the ROM.\n"
+        "אם משחקים באמולטור, יש להגדיר את\n"
+        "סוג השמירה ל-Flash 1Mb/128K\n"
+        "ולטעון מחדש את ה-ROM.\n"
         "\n"
-        "If playing on hardware, your cart\n"
-        "does not have a working flash chip.");
+        "אם משחקים על חומרה, במחסנית שלך\n"
+        "אין שבב Flash תקין.");
     SaveFailedScreenTextPrint(saveFailedMessage, 1, 0);
     TransferPlttBuffer();
     *(u16*)PLTT = RGB(17, 18, 31);

@@ -1,0 +1,97 @@
+# Trainer memo variants on the summary INFO page (BufferMonTrainerMemo,
+# src/pokemon_summary_screen.c:3883-3936; strings src/strings.c:429-436), one party slot each:
+#   0 Typhlosion   ADAMANT MINT from the bag (pbi_stats.txt:15-55): "X nature (Y)" (:3893-3898,
+#                  sMemoHiddenNatureTextColor / sText_EndParentheses :812-813) + "met at"
+#   1 Pikachu      setmonmetlocation MAPSEC_NONE: "met somewhere at" (gText_XNatureMetSomewhereAt)
+#   2 Ampharos     OT name changed + metloc 0xFF (METLOC_FATEFUL_ENCOUNTER): "fateful encounter"
+#   3 Gyarados     OT name changed + metloc MAPSEC_GOLDENROD_CITY: "probably met at" (3 lines)
+#   4 Togepi egg   hatched here (special EggHatch): met level 0, "hatched at" (3 lines)
+#   5 Pichu egg    hatched here, then metloc MAPSEC_NONE: "hatched somewhere at"
+# The OT check is DoesMonOTMatchOwner (:3965-3989): gender, ID and OT name vs the player. The OT
+# name lives outside the encrypted substructs (struct BoxPokemon.otName, include/pokemon.h:268),
+# so `monset N ot0=0xC2` (GOLD -> HOLD) is a plain byte write.
+start saves/menuA_base.sav
+include ../continue.txt
+
+# ---- 0: ADAMANT MINT (ITEMS pocket index 9 of menuA_base) on slot 0, YES
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 6
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskdata Task_Mint 0 2 600
+waitquiet
+tap A 4                                   # YES
+waitkey 600
+snap sv01_mint_done
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+w32 @gMenuCallback@ 0                     # B closed the menu, the callback stays (hwec.py notes)
+
+# ---- 4, 5: a second egg, then both eggs hatch here (B answers NO to the nickname question)
+ev giveegg SPECIES_PICHU; end
+evstart setvar VAR_0x8004, 4; special EggHatch; waitstate; release; end
+waitcb2x CB2_EggHatch 900
+waitcb2 CB2_Overworld 3000 B
+waitctl 900 B
+evstart setvar VAR_0x8004, 5; special EggHatch; waitstate; release; end
+waitcb2x CB2_EggHatch 900
+waitcb2 CB2_Overworld 3000 B
+waitctl 900 B
+
+# ---- 1, 2, 3, 5: met locations and OT names
+ev setmonmetlocation 1, MAPSEC_NONE; setmonmetlocation 2, 0xFF; setmonmetlocation 3, MAPSEC_GOLDENROD_CITY; setmonmetlocation 5, MAPSEC_NONE; end
+monset 2 ot0=0xC2
+monset 3 ot0=0xC2
+monprobe
+
+include _sum_open.txt
+snap sv01_0_mint_info
+sumkey DOWN
+snap sv01_1_metsomewhere_info
+sumkey DOWN
+snap sv01_2_fateful_info
+sumkey DOWN
+snap sv01_3_probably_info
+sumkey DOWN
+snap sv01_4_hatched_info
+sumkey DOWN
+snap sv01_5_hatchedsomewhere_info
+include _sum_close.txt
+
+# ---- the longest Hebrew map name (MAPSEC_SAFARI_ZONE_GATE, 84 px) on the 3-line memos,
+#      and the fateful-encounter memo on a hatched Pokemon (OT changed)
+ev setmonmetlocation 3, MAPSEC_SAFARI_ZONE_GATE; setmonmetlocation 4, MAPSEC_SAFARI_ZONE_GATE; setmonmetlocation 5, 0xFF; end
+monset 5 ot0=0xC2
+monset 0 ot0=0xC2
+monprobe
+include _sum_open.txt
+snap sv01_0b_mint_probably_info
+sumkey DOWN 3
+snap sv01_3b_probably_long_info
+sumkey DOWN
+snap sv01_4b_hatched_long_info
+sumkey DOWN
+snap sv01_5b_fateful_hatched_info
+include _sum_close.txt
+
+# keep the party for fix checks (START > SAVE; hns.py copies it to OUTDIR/_saves)
+savegame
+keepsave sv01_memo_party

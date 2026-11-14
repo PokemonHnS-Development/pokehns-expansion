@@ -1,0 +1,22 @@
+# Goldenrod Dept. Store 3F, X items (GoldenrodCity_DepartmentStore_3F_hns/scripts.inc:40-60).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_3F_HNS 15 7
+evstart goto GoldenrodDeptStore3_EventScript_Clerk
+talk m01_gr3_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m01_gr3_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m01_gr3
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m01_gr3_bye 10 -
+waitctl 900

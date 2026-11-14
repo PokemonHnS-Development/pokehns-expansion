@@ -1,0 +1,95 @@
+# Save chal_hc (party limit 5, Nuzlocke HARD, player battle items allowed):
+#  1. the Route 34 day care man refuses under the party limit
+#     (Route34_DayCare_EventScript_ClosedForChallenge, data/maps/Route34_DayCare_hns/scripts.inc:326-333);
+#  2. in battle, Revive and Max Revive on the fainted Vulpix: no effect under the Nuzlocke
+#     (CannotUseItemsInBattle, src/item_use.c:1408-1412);
+#  3. a whiteout under HARDCORE: CB2_WhiteOut erases the save and soft-resets
+#     (src/overworld.c:2004-2008); the main menu comes back empty (NEW GAME only).
+start save:chal_hc
+include _chr_base.txt
+ev givemon SPECIES_VULPIX, 5, move1=MOVE_MEMENTO; givemon SPECIES_CYNDAQUIL, 10, move1=MOVE_MEMENTO; additem ITEM_REVIVE, 2; additem ITEM_MAX_REVIVE, 1; end
+
+# ---- 1. the day care man (Route 34, standing at (31,34))
+warptoloose MAP_ROUTE34_HNS 31 35
+waitctl 600
+90 -
+face UP
+talk chr_d1_daycare 10
+waitctl 600 B
+
+# ---- 2. Revive / Max Revive refused in battle
+pinrng
+evstart setwildbattle SPECIES_PONYTA, 2; callnative SetNuzlockeChecks; dowildbattle; end
+waitbattle
+bwalk chr_r1_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0                                   # Memento
+bwalk chr_r1_faint prompt:Cmd_yesnobox|input:PlayerHandleYesNoInput|task:Task_HandleChooseMonInput
+tap A 4                                   # YES
+bwalk chr_r1_party task:Task_HandleChooseMonInput
+waitquiet
+tap DOWN 4
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap A 4                                   # SHIFT
+bwalk chr_r1_next input:HandleInputChooseAction
+include _chr_bag_pocket.txt
+include _chr_pocket_right.txt             # MEDICINE
+expect8 @gBagPosition+5@ 1
+seek 16 @gBagPosition+0A@ 0 UP            # Revive
+snap chr_r1_medicine
+tap A 4
+waitquiet
+tap A 4                                   # USE: the party menu
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap chr_r1_revive_party
+tap DOWN 4                                # the fainted Vulpix
+waitquiet
+tap A 4
+waitquiet
+20 -
+snap chr_r1_revive_refused
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap DOWN 4                                # Max Revive
+waitquiet
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waitquiet
+20 -
+snap chr_r1_maxrevive_refused
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction
+baction RUN
+bwalk chr_r1_run free
+
+# ---- 3. hardcore whiteout: Cyndaquil (Memento) faints
+evstart setwildbattle SPECIES_PONYTA, 2; callnative SetNuzlockeChecks; dowildbattle; end
+waitbattle
+bwalk chr_w1_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0                                   # Memento
+waitcb2 CB2_WhiteOut 6000 A               # the battle's whiteout lines (A every 30 frames)
+snap chr_w1_whiteout_black
+waitcb2 title_screen:MainCB2 3000         # ClearSaveData + DoSoftReset
+snap chr_w1_title
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+waitquiet
+snap chr_w1_mainmenu_empty

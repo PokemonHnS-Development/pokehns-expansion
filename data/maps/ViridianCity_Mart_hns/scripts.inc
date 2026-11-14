@@ -10,9 +10,10 @@ ViridianCity_Mart_EventScript_Cooltrainer::
 	end
 
 ViridianMart_Text_Lass:
-	.string "The GYM LEADER here is totally cool.$"
+	.string "המנהיג של המכון כאן\n"
+	.string "ממש מגניב.$"
 
 ViridianMart_Text_CooltrainerM:
-	.string "Have you been to CINNABAR?\p"
-	.string "It's an island way south of here.$"
+	.string "היית פעם בסיננבר?\p"
+	.string "זה אי הרחק דרומה מכאן.$"
 

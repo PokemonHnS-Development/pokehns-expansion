@@ -245,20 +245,20 @@ RocketHideout_B1F_Movement_GruntWalkLeft:
 	step_end
 
 RocketHideout_B1F_Text_CameraGrunt1Seen:
-    .string "Hey!\n"
-    .string "Intruder alert!$"
+    .string "היי!\n"
+    .string "אזעקה! יש פולש!$"
 
 RocketHideout_B1F_Text_CameraGrunt1Beaten:
-    .string "Dang… I failed…$"
+    .string "לעזאזל… נכשלתי…$"
 
 RocketHideout_B1F_Text_CameraGrunt2Seen:
-    .string "It's my turn! There's no escape!$"
+    .string "עכשיו תורי! אין לך לאן לברוח!$"
 
 RocketHideout_B1F_Text_CameraGrunt2Beaten:
-    .string "Surveillance cams are in the\n"
-    .string "POKéMON statues.\p"
-    .string "We'll keep appearing until you\n"
-    .string "trip a secret switch.$"
+    .string "מצלמות המעקב מוסתרות\n"
+    .string "בפסלי הפוקימונים.\p"
+    .string "נמשיך להופיע עד שתפעיל\n"
+    .string "מתג סודי.$"
 
 RocketHideout_B1F_EventScript_TrainerJed::
 	trainerbattle_single TRAINER_JED_HNS, RocketHideout_B1F_Text_ScientistJedSeen, RocketHideout_B1F_Text_ScientistJedBeaten
@@ -266,32 +266,31 @@ RocketHideout_B1F_EventScript_TrainerJed::
 	end
 
 RocketHideout_B1F_Text_ScientistJedSeen:
-    .string "This was once a ninja hideout.\p"
-    .string "There are traps to confound\n"
-    .string "intruders like you.$"
+    .string "פעם זה היה מחבוא של נינג'ות.\p"
+    .string "יש כאן מלכודות שנועדו לבלבל\n"
+    .string "פולשים כמוך.$"
 
 RocketHideout_B1F_Text_ScientistJedBeaten:
-    .string "I get it…$"
+    .string "הבנתי…$"
 
 RocketHideout_B1F_Text_ScientistJedAfter:
-    .string "All right. I'll divulge a secret\n"
-    .string "about our hideout.\p"
-    .string "That thing on the floor up ahead\n"
-    .string "is a warp panel.\p"
-    .string "If you step on it, you'll be\n"
-    .string "warped back to the entrance.$"
+    .string "בסדר. אגלה לך סוד על המחבוא שלנו.\p"
+    .string "הדבר הזה על הרצפה שם קדימה\n"
+    .string "הוא משטח שיגור.\p"
+    .string "אם תדרוך עליו, תשוגר\n"
+    .string "בחזרה לכניסה.$"
 
 RocketHideout_B1F_Text_GruntM16Seen:
-    .string "Heheh. Feeling lucky, punk?$"
+    .string "הה-הה. מרגיש בר מזל, פרחח?$"
 
 RocketHideout_B1F_Text_GruntM16Beaten:
-    .string "Kaboom!$"
+    .string "קבום!$"
 
 RocketHideout_B1F_Text_GruntM16After:
-    .string "I don't even know where the traps\n"
-    .string "are planted.\p"
-    .string "You'll just have to collect your\n"
-    .string "courage and walk.$"
+    .string "אני אפילו לא יודע איפה\n"
+    .string "המלכודות טמונות.\p"
+    .string "תצטרך פשוט לאזור אומץ\n"
+    .string "ולהתקדם.$"
 
 RocketHideout_B1F_EventScript_Rocket16::
 	trainerbattle_single TRAINER_GRUNT_13_HNS, RocketHideout_B1F_Text_GruntM16Seen, RocketHideout_B1F_Text_GruntM16Beaten
@@ -315,7 +314,7 @@ RocketHideout_B1F_EventScript_Persian::
 	end
 
 RocketHideout_B1F_Text_SecurityCameraStatue:
-    .string "It's a PERSIAN statue…$"
+    .string "זה פסל של פרסיאן…$"
 
 RocketHideout_B1F_EventScript_DummyPanel::
 	msgbox RocketHideout_B1F_Text_NothingThere, MSGBOX_SIGN
@@ -358,10 +357,10 @@ RocketHideout_B1F_EventScript_TurnOffSwitch::
 	end
 
 RocketHideout_B1F_Text_NothingThere:
-	.string "A strange panel... Nothing here.$"
+	.string "לוח מוזר… אין כאן כלום.$"
 
 RocketHideout_B1F_Text_SecretSwitch:
-    .string "A secret switch! Better press it.$"
+    .string "מתג סודי! כדאי ללחוץ עליו.$"
 
 RocketHideout_B1F_Text_SwitchOff:
-    .string "The switch is turned off.$"
+    .string "המתג כבוי.$"

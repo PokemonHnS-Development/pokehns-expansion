@@ -1,0 +1,10 @@
+# TrainerHill_Courtyard vitamin clerk (MAP_TRAINER_HILL_COURTYARD_HNS).
+start saves/st_l6.sav
+include _base.txt
+setbp 9999
+visit MAP_TRAINER_HILL_COURTYARD_HNS
+clerk 15 29 p21_hi
+buywait p21_buy
+listshots p21_list
+press B
+chat p21_bye

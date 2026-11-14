@@ -1,0 +1,5 @@
+# Base: ladder 6 (post-game) -> Trainer Hill entrance; savestate h00 for the next steps.
+include ../continue.txt
+warpto MAP_TRAINER_HILL_ENTRANCE_HNS 8 11
+face UP
+snap h00_entrance

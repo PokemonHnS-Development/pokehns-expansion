@@ -36,32 +36,30 @@ Route11_EventScript_Item_Grass_Knot::
     end
 
 Route11_Text_Engineer:
-	.string "I saw a strange POKéMON climbing\n"
-	.string "in the trees, but it didn't\l"
-	.string "look like MANKEY...$"
+	.string "ראיתי פוקימון מוזר מטפס על העצים,\n"
+	.string "אבל הוא לא נראה כמו מאנקי…$"
 
 Route11_Text_YoungsterOwenSeen:
-	.string "There's no cheating in POKéMON.\p"
-	.string "Let's keep it fair and square!$"
+	.string "אין רמאויות בקרבות פוקימונים.\p"
+	.string "בוא נשמור על משחק הוגן!$"
 
 Route11_Text_YoungsterOwenBeaten:
-	.string "Huh? How did this happen?$"
+	.string "מה? איך זה קרה?$"
 
 Route11_Text_YoungsterOwenAfterBattle:
-	.string "I fought fair and square with\n"
-	.string "honor.\p"
-	.string "I don't regret this at all.$"
+	.string "נלחמתי בהגינות ובכבוד.\p"
+	.string "אני לא מתחרט על זה בכלל.$"
 
 Route11_Text_YoungsterJasonSeen:
-	.string "It itches and tickles a bit when\n"
-	.string "I wear shorts in the grass.$"
+	.string "זה קצת מגרד ומדגדג כשאני\n"
+	.string "הולך עם מכנסיים קצרים בדשא.$"
 
 Route11_Text_YoungsterJasonBeaten:
-	.string "Aiyaaah! I got stomped!$"
+	.string "איי-יאאה! ריסקו אותי!$"
 
 Route11_Text_YoungsterJasonAfterBattle:
-	.string "I'm going to catch more POKéMON in\n"
-	.string "the grass.$"
+	.string "אני הולך לתפוס עוד פוקימונים\n"
+	.string "בדשא.$"
 
 Route11_Text_PsychicHermanSeen:
 	.string "…$"
@@ -71,19 +69,19 @@ Route11_Text_PsychicHermanBeaten:
 
 Route11_Text_PsychicHermanAfterBattle:
 	.string "…\p"
-	.string "I lost while I had my eyes closed…$"
+	.string "הפסדתי כשהעיניים שלי היו עצומות…$"
 
 Route11_Text_PsychicFidelSeen:
-	.string "I can see it…\p"
-	.string "Everything to see about you…$"
+	.string "אני רואה את זה…\p"
+	.string "את כל מה שיש לראות בך…$"
 
 Route11_Text_PsychicFidelBeaten:
-	.string "I couldn't foresee your power…$"
+	.string "לא חזיתי את העוצמה שלך…$"
 
 Route11_Text_PsychicFidelAfterBattle:
-	.string "Strength in conviction…\p"
-	.string "You're strong because you believe\n"
-	.string "in your POKéMON.$"
+	.string "כוחה של אמונה…\p"
+	.string "הכוח שלך נובע מהאמונה\n"
+	.string "בפוקימונים שלך.$"
 
 Route11_Text_Sign:
 	.string "ROUTE 11$"

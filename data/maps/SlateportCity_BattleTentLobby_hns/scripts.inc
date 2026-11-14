@@ -301,17 +301,14 @@ SlateportCity_BattleTentLobby_hns_Text_ExplainTorment:
 	.string "I'm not laying a torment on you!$"
 
 SlateportCity_BattleTentLobby_hns_Text_IllTryUsingBugMons:
-	.string "I don't really like BUG POKéMON,\n"
-	.string "but maybe I'll try using some for\l"
-	.string "a change of pace.\p"
-	.string "Who knows, I might even get to like\n"
-	.string "them!$"
+	.string "אני לא ממש אוהב פוקימונים מסוג חרק, אבל\n"
+	.string "אולי אנסה להשתמש בכמה, בשביל הגיוון.\p"
+	.string "מי יודע, אולי אפילו אתחיל לחבב אותם!$"
 
 SlateportCity_BattleTentLobby_hns_Text_BattleEvenWithoutToughMons:
-	.string "You can battle all you want here even\n"
-	.string "if you don't have any tough POKéMON.$"
+	.string "כאן אפשר להילחם כמה שרוצים,\n"
+	.string "גם בלי פוקימונים חזקים.$"
 
 SlateportCity_BattleTentLobby_hns_Text_NiceIfMoreSelection:
-	.string "Wouldn't it be nice if they had more of\n"
-	.string "a selection?$"
+	.string "לא היה נחמד אם היה להם מבחר גדול יותר?$"
 

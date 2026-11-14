@@ -1,0 +1,108 @@
+# Voltorb Flip (Goldenrod Game Corner table, bg event (16,6), read from (16,7) facing up):
+# GoldenrodCity_GameCorner_EventScript_VoltorbFlip (data/maps/GoldenrodCity_GameCorner_hns/scripts.inc:665-780)
+# and src/voltorb_flip.c. Menus with the coins box, GAME INFO and its three texts, the board
+# (level label, row/column totals, memo mode, quit window), a win (reveal, clear, coins, level up),
+# a loss (Voltorb, oh no, dropped a level), a quit with coins, and the coin cap.
+start saves/gc_base.sav
+include ../continue.txt
+ev additem ITEM_COIN_CASE; checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 500; end
+warpto MAP_GOLDENROD_CITY_GAME_CORNER_HNS 16 7
+face UP
+talk vf_menu 10
+press DOWN
+snap vf_menu_info
+press DOWN
+snap vf_menu_quit
+press UP
+tap A 0
+talk vf_info 10 -
+press DOWN
+snap vf_info_hint
+press DOWN
+snap vf_info_notes
+press DOWN
+snap vf_info_return
+press UP
+press UP
+press UP
+tap A 0
+talk vf_howto 20 -
+press DOWN
+tap A 0
+talk vf_hint 20 -
+press DOWN
+press DOWN
+tap A 0
+talk vf_notes 20 -
+press DOWN
+press DOWN
+press DOWN
+tap A 0
+talk vf_back 10 -
+# PLAY at level 1
+tap A 0
+vfwait 900
+snap vf_board1
+vfboard
+# memo mode: R steps through the 1, 2, 3 and Voltorb pencils
+press Rb
+snap vf_memo1
+tap A 6
+snap vf_memo1_marked
+press Rb
+snap vf_memo2
+press Rb
+snap vf_memo3
+press Rb
+snap vf_memo_voltorb
+press RIGHT
+tap A 6
+snap vf_memo_voltorb_marked
+press Rb
+snap vf_memo_off
+# quit window, then NO
+tap B 0
+snap vf_quit
+press B
+vfwait 300
+snap vf_quit_no
+# win: flip one 1-card, then every x2/x3 card
+vfflip one 1
+snap vf_flip_one
+vfflip mult 1
+snap vf_flip_mult1
+vfflip mult
+waittaskx Task_VoltorbFlipVictory 600
+snap vf_win_reveal
+waitcb2 CB2_Overworld 900
+talk vf_win_msg 20 -
+snap vf_menu_lv2
+# PLAY at level 2: lose at once
+tap A 0
+vfwait 900
+snap vf_board2
+vfboard
+vfflip voltorb
+snap vf_loss_reveal
+waitcb2 CB2_Overworld 900
+talk vf_loss_msg 20 -
+# PLAY at level 1 again: two multipliers, then quit with the coins
+tap A 0
+vfwait 900
+snap vf_board3
+vfflip mult 2
+snap vf_board3_flipped
+tap B 0
+snap vf_quit2
+press A
+waitcb2 CB2_Overworld 900
+talk vf_quit_msg 20 -
+press DOWN
+press DOWN
+tap A 0
+waitctl 600 B
+# coin cap: 9,999 coins
+ev checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 9999; end
+face UP
+talk vf_cap 10
+waitctl 600 B

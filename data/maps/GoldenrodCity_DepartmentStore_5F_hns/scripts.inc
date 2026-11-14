@@ -63,36 +63,36 @@ GoldenrodDeptStore5_EventScript_Receptionist_Already::
 	end
 
 GoldenrodDeptStore_Text_5FReceptionistOhYourMon:
-    .string "Hello. Oh, your POKéMON…$"
+    .string "שלום. אה, הפוקימון שלך…$"
 
 GoldenrodDeptStore_Text_5FReceptionistWait:
-    .string "Wait, I already gave you that TM!$"
+    .string "רגע, כבר נתתי לך את המ”מ הזה!$"
 
 GoldenrodDeptStore_Text_5FReceptionistPutInSomeMoreEffort:
-	.string "Hmm…\n"
-	.string "It's not bad, but it's also not good.\p"
-	.string "You, as the TRAINER, need to put in\n"
-	.string "some more effort.$"
+	.string "הממ…\n"
+	.string "זה לא רע, אבל גם לא טוב.\p"
+	.string "אתה, בתור המאמן, צריך להשקיע\n"
+	.string "קצת יותר מאמץ.$"
 
 GoldenrodDeptStore_Text_5FReceptionistThisMoveShouldBePerfect:
-    .string "It's very attached to you.\p"
-    .string "This move should be perfect for a\n"
-    .string "pair like you.$"
+    .string "הוא מאוד קשור אליך.\p"
+    .string "המהלך הזה אמור להתאים בדיוק\n"
+    .string "לזוג כמוכם.$"
 
 GoldenrodDeptStore_Text_5FLass:
-    .string "During the day, a lady comes to check\n"
-    .string "out POKéMON.\p"
-    .string "She even gives away TMs!$"
+    .string "בשעות היום מגיעה לכאן גברת\n"
+    .string "שבודקת פוקימונים.\p"
+    .string "היא אפילו מחלקת מ”מ!$"
 
 GoldenrodDeptStore_Text_5FPokefanM:
-    .string "You can't rename a POKéMON you get\n"
-    .string "in a trade.\p"
-    .string "The name is a reflection of the\n"
-    .string "original trainer's feelings for it.$"
+    .string "אי אפשר לשנות שם של פוקימון\n"
+    .string "שמקבלים בהחלפה.\p"
+    .string "השם משקף את הרגשות של\n"
+    .string "המאמן המקורי כלפיו.$"
 
 GoldenrodDeptStore_Text_Girl:
-	.string "The lady gave me RETURN!\n"
-    .string "My POKéMON must really like me!$"
+	.string "הגברת נתנה לי את המהלך חזרה!\n"
+	.string "הפוקימון שלי בטח ממש אוהב אותי!$"
 
 GoldenrodDeptStore5_EventScript_Clerk::
 	lock
@@ -120,5 +120,5 @@ GoldenrodDeptStore5_Pokemart:
 
 
 GoldenrodDeptStore_Text_5FDirectory:
-    .string "Customize Your POKéMON\p"
-    .string "5F TM CORNER$"
+    .string "התאמה אישית לפוקימונים שלך\p"
+    .string "ק5: פינת המ”מ$"

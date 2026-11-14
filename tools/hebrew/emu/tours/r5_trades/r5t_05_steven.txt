@@ -1,0 +1,60 @@
+# Steven, Fuchsia Safari Zone entrance (12,5): INGAME_TRADE_BELDUM (src/data/trade.h:1126-1140), Beldum 'Iron' OT Steven for Forretress;
+# Steven trades only while the Eon Ticket is in the bag (data/maps/FuchsiaCity_SafariZoneEntrance_hns/scripts.inc:74-80, 320-375).
+# Talk: NO (decline line); YES + the trade box + a wrong Pokemon (party slot 0, Typhlosion);
+# YES + the trade box + Forretress (party slot 5) + the trade scene + the
+# take-care line; talk again (trade-completed line). Then the party menu and the summary of the
+# received Pokemon (INFO, then every page with RIGHT).
+start saves/r5_trades_base.sav
+include _setup.txt
+
+warpto MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS 12 6
+face UP
+tap A 4
+fieldwatch steven_ask menu 6000
+pick 1
+fieldwatch steven_decline free 3000
+face UP
+tap A 4
+fieldwatch steven_ask2 menu 6000
+pick 0
+include _pickparty.txt
+snap steven_box
+boxpick 1 0 steven_wrong_typhlosion
+waitcb2x CB2_Overworld 900
+fieldwatch steven_wrong free 3000
+face UP
+tap A 4
+fieldwatch steven_ask3 menu 6000
+pick 0
+include _pickparty.txt
+snap steven_box3
+boxpick 1 5 steven_pick_forretress
+waitcb2x CB2_InGameTrade 900
+scenewatch steven_scene CB2_Overworld 6000 0 160 A 150
+waitcb2x CB2_Overworld 900
+fieldwatch steven_takecare free 3000
+face UP
+tap A 4
+fieldwatch steven_completed free 3000
+
+# --- the party and the received Pokemon's summary (slot 5)
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 5 DOWN
+snap steven_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap steven_party_action
+tap A 4
+waitcb2x pokemon_summary_screen:MainCB2 900
+sumwait
+snap steven_sum_info
+sumkey RIGHT
+snap steven_sum_p2
+sumkey RIGHT
+snap steven_sum_p3
+sumkey RIGHT
+snap steven_sum_p4

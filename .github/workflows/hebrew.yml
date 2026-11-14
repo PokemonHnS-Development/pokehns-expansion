@@ -1,0 +1,121 @@
+name: Hebrew
+
+# Checks for the Hebrew translation branches. No ROM is uploaded anywhere: a built ROM is never
+# published from this repository.
+
+on:
+  push:
+    branches:
+      - 'he/**'
+  pull_request:
+    branches:
+      - 'he/main'
+  workflow_dispatch:
+
+# Every job names its runner image instead of ubuntu-latest, so a new image, and the
+# gcc-arm-none-eabi that comes with it, arrives in a reviewed commit.
+jobs:
+  build:
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Install the toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+
+      - name: ROM (make hns)
+        run: make hns -j$(nproc) -O
+
+      - name: Clip-report ROM (glyphs drawn outside their window are logged)
+        run: make hns RTL_CLIP_REPORT=1 -j$(nproc) -O
+
+  audit:
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Check out the baselines
+        # pokehns-heb-engine: the engine with the English strings (he/renderer), for the drift
+        # check; pokehns-en: upstream, for the layout audit's English baseline.
+        run: |
+          git worktree add ../pokehns-heb-engine origin/he/renderer
+          git worktree add ../pokehns-en origin/master
+
+      - name: Only strings differ from the English baseline
+        run: |
+          git diff --name-only origin/master...HEAD -- data src \
+            | grep -E '\.(inc|s|c|h|party|json)$' \
+            | xargs python3 tools/hebrew/drift.py --quiet
+
+      - name: Layout audit (widths, lines, buffers, byte limits)
+        run: python3 tools/hebrew/audit.py --baseline ../pokehns-en --report audit.txt; status=$?; head -40 audit.txt; exit $status
+
+      - name: Glossary (byte limits, final letters, duplicates)
+        run: python3 tools/hebrew/namecheck.py --all --warnings
+
+      - name: Pokédex A-Z order matches the glossary names
+        run: python3 tools/hebrew/gen_dex_alpha.py --check
+
+      - name: Easy Chat group order and letter lists match the word texts
+        run: |
+          python3 tools/hebrew/gen_ec_order.py --check
+          python3 tools/hebrew/gen_ec_letters.py --check
+
+      - name: Labels behind flags defined as 0 are out of the live list
+        run: python3 tools/hebrew/flag_gates.py --check
+
+      - name: Tool tests
+        run: python3 -m unittest discover -s tools/hebrew/tests
+
+  check:
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Install the toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+
+      - name: Build the test ROM
+        # A resource line every minute goes to the job log, so a runner that is shut down mid-step
+        # still shows how far it got and what it was short of.
+        timeout-minutes: 90
+        run: |
+          ( while sleep 60; do echo "[mon] $(date -u +%H:%M) $(free -m | awk '/Mem/{print "mem used " $3 "/" $2 " MB"}'), disk $(df -h . | awk 'NR==2{print $4}') free"; done ) &
+          make BUILD=hns -j2 pokehns-test.elf > build-test.log 2>&1; status=$?
+          tail -30 build-test.log
+          exit $status
+
+      - name: make check, in chunks
+        # The one test that crashes the emulator (tools/hebrew/data/crashing_tests.txt) is not
+        # reported as a crash on Linux: the emulator keeps running and fills the runner's 16 GB.
+        # check_chunked.py runs the suite one test-name prefix at a time and skips that test.
+        # Upstream 2.0.6 does not pass its own suite; check_tests.py fails only on a test that is
+        # not in tools/hebrew/data/known_test_failures.txt (the tests upstream fails).
+        timeout-minutes: 90
+        run: |
+          ( while sleep 60; do echo "[mon] $(date -u +%H:%M) $(free -m | awk '/Mem/{print "mem used " $3 "/" $2 " MB"}'), disk $(df -h . | awk 'NR==2{print $4}') free"; done ) &
+          set +e
+          python3 tools/hebrew/check_chunked.py --build hns --jobs $(nproc) --log check.log --skip-crashing --chunk-timeout 900
+          chunked=$?
+          python3 tools/hebrew/check_tests.py check.log
+          tests=$?
+          [ $chunked -eq 0 ] && [ $tests -eq 0 ]
+
+      - name: Keep the logs
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: check-log
+          path: |
+            build-test.log
+            check.log
+          retention-days: 14

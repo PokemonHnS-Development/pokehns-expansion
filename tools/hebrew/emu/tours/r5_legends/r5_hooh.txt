@@ -1,0 +1,18 @@
+# Ho-Oh, Tin Tower roof (10,1): the story encounter (VAR_COMPLETED_HO_OH 2; TinTower_RoofDay_
+# OnTransition clears FLAG_HIDE_HO_OH). Trigger (10,13): the kimono girls' opening line, the dance,
+# Ho-Oh comes down; TinTower_RoofDay_EventScript_HoOh (data/maps/TinTower_RoofDay_hns/scripts.inc:
+# 169-242): battle; a win prints gText_LegendaryFlewAway, a catch fades the bird out.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev setvar VAR_COMPLETED_HO_OH, 2; clearflag FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS; clearflag FLAG_CAUGHT_HO_OH; end
+warpto MAP_TIN_TOWER_ROOF_DAY_HNS 10 14
+face UP
+snap ho_field
+stepto UP 1
+scene ho_scene 30000 90
+objs
+approach 8
+snap ho_before
+tap A 4
+scene ho_pre 6000
+include _legend_tail.txt

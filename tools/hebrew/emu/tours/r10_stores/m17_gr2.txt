@@ -1,0 +1,10 @@
+# Goldenrod 2F (GoldenrodDeptStore2_Pokemart) (MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS
+clerk 14 11 m17_hi
+buyopen m17_buy
+listshots m17_list
+buyeach m17_ask
+buyclose m17_menu
+shopquit m17_bye

@@ -89,32 +89,32 @@ CianwoodCity_EventScript_ChucksWifeAlreadyHasFly::
 	end
 
 CianwoodCity_Text_ChucksWifeEasierToFly:
-	.string "You crossed the sea to get here?\p"
-	.string "That must have been hard.\p"
-	.string "It would be much easier if your\n"
-	.string "POKéMON knew how to FLY...$"
+	.string "חצית את הים כדי להגיע לכאן?\p"
+	.string "זה בטח היה קשה.\p"
+	.string "היה הרבה יותר קל אם\n"
+	.string "הפוקימונים שלך היו יודעים תעופה…$"
 
 CianwoodCity_Text_ChucksWifeBeatChuck:
-	.string "But you can't use FLY without this\n"
-	.string "city's GYM BADGE.\p"
-	.string "If you beat the GYM LEADER here,\n"
-	.string "come see me.\p"
-	.string "I'll have a nice gift for you.$"
+	.string "אבל אי אפשר להשתמש בתעופה\n"
+	.string "בלי תג המכון של העיר הזאת.\p"
+	.string "אם תנצח את מנהיג המכון כאן,\n"
+	.string "בוא אליי.\p"
+	.string "תהיה לי מתנה נחמדה בשבילך.$"
 
 CianwoodCity_Text_ChucksWifeGiveHM:
-	.string "That's CIANWOOD's GYM BADGE!\p"
-	.string "Then you should take this HM.$"
+	.string "זה תג המכון של סיאנווד!\p"
+	.string "אז כדאי שתיקח את המ”נ הזה.$"
 
 CianwoodCity_Text_ChucksWifeFlySpeech:
-	.string "Teach FLY to your POKéMON.\p"
-	.string "You will be able to FLY instantly\n"
-	.string "to anywhere you have visited.$"
+	.string "כדאי ללמד את הפוקימון שלך תעופה.\p"
+	.string "כך אפשר לעוף מיד\n"
+	.string "לכל מקום שכבר ביקרת בו.$"
 
 CianwoodCity_Text_ChucksWifeChubby:
-	.string "My husband lost to you, so he needs\n"
-	.string "to train harder.\p"
-	.string "That's good, since he was getting\n"
-	.string "a little chubby.$"
+	.string "בעלי הפסיד לך, אז הוא צריך\n"
+	.string "להתאמן יותר קשה.\p"
+	.string "וזה טוב, כי הוא התחיל\n"
+	.string "להשמין קצת.$"
 
 CianwoodCity_EventScript_Youngster::
 	lock
@@ -125,8 +125,8 @@ CianwoodCity_EventScript_Youngster::
 	end
 
 CianwoodCity_Text_Youngster:
-	.string "If you use FLY, you can get back\n"
-	.string "to OLIVINE instantly.$"
+	.string "עם תעופה אפשר לחזור\n"
+	.string "לאוליבין ברגע.$"
 
 CianwoodCity_EventScript_PokefanM::
 	lock
@@ -137,11 +137,11 @@ CianwoodCity_EventScript_PokefanM::
 	end
 
 CianwoodCity_Text_PokefanM:
-	.string "Boulders to the north of town can\n"
-	.string "be crushed.\p"
-	.string "They may be hiding something.\p"
-	.string "Your POKéMON could use ROCK SMASH\n"
-	.string "to break them.$"
+	.string "את הסלעים בצפון העיר\n"
+	.string "אפשר לנפץ.\p"
+	.string "אולי הם מסתירים משהו.\p"
+	.string "הפוקימונים שלך יכולים לשבור\n"
+	.string "אותם בעזרת ניפוץ סלע.$"
 
 CianwoodCity_EventScript_Lass::
 	lock
@@ -152,8 +152,8 @@ CianwoodCity_EventScript_Lass::
 	end
 
 CianwoodCity_Text_Lass:
-	.string "CHUCK, the GYM LEADER, spars with\n"
-	.string "his fighting POKéMON.$"
+	.string "צ'אק, מנהיג המכון, עורך קרבות\n"
+	.string "אימון עם פוקימוני הקרב שלו.$"
 
 CianwoodCity_EventScript_SuicuneTrigger::
 	lock
@@ -271,32 +271,30 @@ CianwoodCity_Movement_Eusine3:
 	step_end
 
 CianwoodCity_Text_EusineSuicune:
-	.string "EUSINE: Yo, {PLAYER}.\p"
-	.string "Wasn't that SUICUNE just now?\p"
-	.string "I only caught a quick glimpse, but\n"
-	.string "I thought I saw SUICUNE running on\l"
-	.string "the waves.\p"
-	.string "SUICUNE is beautiful and grand.\p"
-	.string "And it races through towns and\n"
-	.string "roads at simply awesome speeds.\p"
-	.string "It's wonderful…\p"
-	.string "I want to see SUICUNE up close…\p"
-	.string "I've decided.\p"
-	.string "I'll battle you as a trainer to\n"
-	.string "earn SUICUNE's respect!\p"
-	.string "Come on, {PLAYER}. Let's battle now!$"
+	.string "יוסין: היי, {PLAYER}.\p"
+	.string "זה לא היה סואיקון עכשיו?\p"
+	.string "רק הצצתי לרגע, אבל נדמה לי\n"
+	.string "שראיתי את סואיקון רץ על הגלים.\p"
+	.string "סואיקון יפהפה ומרשים.\p"
+	.string "והוא דוהר בין ערים ודרכים\n"
+	.string "במהירות פשוט מדהימה.\p"
+	.string "זה נפלא…\p"
+	.string "אני רוצה לראות את סואיקון מקרוב…\p"
+	.string "החלטתי.\p"
+	.string "אילחם בך כמאמן כדי\n"
+	.string "לזכות בכבוד של סואיקון!\p"
+	.string "קדימה, {PLAYER}. בוא נילחם עכשיו!$"
 
 CianwoodCity_Text_EusineBeaten:
-	.string "I hate to admit it, but you win.$"
+	.string "קשה לי להודות בזה, אבל ניצחת.$"
 
 CianwoodCity_Text_EusineAfter:
-	.string "You're amazing, {PLAYER}!\p"
-	.string "No wonder POKéMON gravitate to you.\p"
-	.string "I get it now.\p"
-	.string "I'm going to keep searching for\n"
-	.string "SUICUNE.\p"
-	.string "I'm sure we'll see each other again.\p"
-	.string "See you around!$"
+	.string "אתה מדהים, {PLAYER}!\p"
+	.string "אין פלא שפוקימונים נמשכים אליך.\p"
+	.string "עכשיו אני מבין.\p"
+	.string "אני אמשיך לחפש את סואיקון.\p"
+	.string "אני בטוח שעוד ניפגש.\p"
+	.string "להתראות!$"
 
 CianwoodCity_EventScript_CitySign::
 	lock
@@ -306,8 +304,8 @@ CianwoodCity_EventScript_CitySign::
 	end
 
 CianwoodCity_Text_Sign:
-	.string "CIANWOOD CITY\p"
-	.string "A Port Surrounded by Rough Seas$"
+	.string "העיר סיאנווד\p"
+	.string "נמל מוקף במים סוערים$"
 
 CianwoodCity_EventScript_GymSign::
 	lock
@@ -317,9 +315,10 @@ CianwoodCity_EventScript_GymSign::
 	end
 
 CianwoodCity_Text_GymSign:
-	.string "CIANWOOD CITY POKéMON GYM\p"
-	.string "LEADER: CHUCK\p"
-	.string "His Roaring Fists Do the Talking$"
+	.string "מכון הפוקימון של העיר סיאנווד\p"
+	.string "מנהיג: צ'אק\p"
+	.string "האגרופים השואגים שלו\n"
+	.string "מדברים בשבילו$"
 
 CianwoodCity_EventScript_Pharmacy::
 	lock
@@ -329,9 +328,10 @@ CianwoodCity_EventScript_Pharmacy::
 	end
 
 CianwoodCity_Text_PharmacySign:
-	.string "500 Years of Tradition\p"
-	.string "CIANWOOD CITY PHARMACY\p"
-	.string "We Await Your Medicinal Queries$"
+	.string "500 שנות מסורת\p"
+	.string "בית המרקחת של העיר סיאנווד\p"
+	.string "נשמח לענות על שאלותיכם\n"
+	.string "בענייני תרופות$"
 
 CianwoodCity_EventScript_CaveSign::
 	lock
@@ -349,10 +349,9 @@ CianwoodCity_EventScript_Engineer::
 	end
 
 CianwoodCity_Text_Safari:
-	.string "CLIFF EDGE CAVE\n"
-	.string "Road to the SAFARI ZONE.$"
+	.string "מערת הצוק\n"
+	.string "הדרך לאזור הספארי.$"
 
 CianwoodCity_Text_Engineer:
-	.string "This path is under construction.\n"
-	.string "We're getting the new SAFARI ZONE\l"
-	.string "up and running!$"
+	.string "השביל הזה בבנייה. אנחנו עובדים\n"
+	.string "על פתיחת אזור הספארי החדש!$"

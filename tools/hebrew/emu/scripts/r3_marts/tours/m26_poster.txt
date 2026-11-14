@@ -1,0 +1,47 @@
+# BP decor shop 1 with an empty doll inventory: KISS POSTER and KISS CUSHION are categories H&S never sets
+# up (src/decoration_inventory.c:14-17 sets only DECORCAT_DOLL), so DecorationAdd fails for them; the doll
+# is bought.
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+setbp 9999
+evstart special CreateBPDecorShop1; waitstate; release; end
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listgo 0
+tap A 0
+snap m26_poster_poster
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m26_poster_poster_yesno
+tap A 0
+snap m26_poster_poster_thanks
+tap A 0
+snap m26_poster_poster_back
+listgo 1
+tap A 0
+snap m26_poster_cushion
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m26_poster_cushion_yesno
+tap A 0
+snap m26_poster_cushion_thanks
+tap A 0
+snap m26_poster_cushion_back
+listgo 2
+tap A 0
+snap m26_poster_doll
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m26_poster_doll_yesno
+tap A 0
+snap m26_poster_doll_thanks
+tap A 0
+snap m26_poster_doll_back
+press B
+waitcb2x CB2_Overworld 900
+waitctl 900

@@ -1,0 +1,21 @@
+# Battle Dome before-match pick of 2 of the 3 (cursor on slot 0): ENTER slots 0 and 1, confirm.
+# Shots: PFX_pick2_00 empty, _01 action list, _02 both entered.
+waittask Task_HandleChooseMonInput 600
+waitquiet
+psnap pick2_00
+seek 8 @gPartyMenu+9@ 0 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+psnap pick2_01
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+waitquiet
+psnap pick2_02
+tap A 0

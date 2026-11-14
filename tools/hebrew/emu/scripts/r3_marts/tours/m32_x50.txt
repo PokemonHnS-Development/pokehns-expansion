@@ -1,0 +1,176 @@
+# EXPENSIVE x50 (tx_Challenges_Expensive = 3): Flower Shop mints, Frontier Mart, Goldenrod 2F and 5F,
+# Mahogany. The list price goes through ConvertIntToDecimalStringN(.., 6) (src/shop.c:1350-1356).
+# At x50 also: a mint bought at the max quantity (P1000000 each), Full Restore x max (P150000
+# each), a TM (P500000), and with P500000 left 'not enough money' on a mint.
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+setexpensive 3
+ev additem ITEM_TM_PROTECT; end
+setmoney 9999999
+warptoloose MAP_GOLDENROD_CITY_FLOWER_SHOP_HNS 8 6
+evstart goto GoldenrodCity_FlowerShop_EventScript_MintClerk
+talk m32_x50_flower_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m32_x50_flower_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m32_x50_flower
+listgo 0
+tap A 0
+snap m32_x50_flower_mint
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+snap m32_x50_flower_mint_x1
+press DOWN 2
+snap m32_x50_flower_mint_xmax
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m32_x50_flower_mint_yesno
+tap A 0
+snap m32_x50_flower_mint_thanks
+tap A 0
+snap m32_x50_flower_mint_back
+waittaskx Task_BuyMenu 600
+waitquiet
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m32_x50_flower_bye 10 -
+waitctl 900
+setmoney 9999999
+warptoloose MAP_BATTLE_FRONTIER_MART_HNS 3 5
+evstart goto BattleFrontier_Mart_EventScript_Clerk_hns
+talk m32_x50_bfmart_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m32_x50_bfmart_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m32_x50_bfmart
+listgo 3
+tap A 0
+snap m32_x50_bfmart_fr
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+snap m32_x50_bfmart_fr_x1
+press DOWN 2
+snap m32_x50_bfmart_fr_xmax
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m32_x50_bfmart_fr_yesno
+tap A 0
+snap m32_x50_bfmart_fr_thanks
+tap A 0
+snap m32_x50_bfmart_fr_back
+waittaskx Task_BuyMenu 600
+waitquiet
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m32_x50_bfmart_bye 10 -
+waitctl 900
+setmoney 9999999
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS 14 13
+evstart goto GoldenrodDeptStore2_EventScript_Clerk
+talk m32_x50_gr2_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m32_x50_gr2_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m32_x50_gr2
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m32_x50_gr2_bye 10 -
+waitctl 900
+setmoney 9999999
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_5F_HNS 17 13
+evstart goto GoldenrodDeptStore5_EventScript_Clerk
+talk m32_x50_gr5_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m32_x50_gr5_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m32_x50_gr5
+listgo 0
+tap A 0
+snap m32_x50_gr5_tm16
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m32_x50_gr5_tm16_yesno
+tap A 0
+snap m32_x50_gr5_tm16_thanks
+tap A 0
+snap m32_x50_gr5_tm16_back
+waittaskx Task_BuyMenu 600
+waitquiet
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m32_x50_gr5_bye 10 -
+waitctl 900
+setmoney 9999999
+warptoloose MAP_MAHOGANY_TOWN_SHOP_HNS 2 7
+evstart lock; faceplayer; goto MahoganyTown_Shop_EventScript_GrannyShop
+talk m32_x50_mahog_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m32_x50_mahog_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m32_x50_mahog
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m32_x50_mahog_bye 10 -
+waitctl 900
+setmoney 500000
+warptoloose MAP_GOLDENROD_CITY_FLOWER_SHOP_HNS 8 6
+evstart goto GoldenrodCity_FlowerShop_EventScript_MintClerk
+talk m32_x50_poor_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m32_x50_poor_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listgo 0
+tap A 0
+snap m32_x50_poor_mint
+tap A 0
+snap m32_x50_poor_back
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m32_x50_poor_bye 10 -
+waitctl 900

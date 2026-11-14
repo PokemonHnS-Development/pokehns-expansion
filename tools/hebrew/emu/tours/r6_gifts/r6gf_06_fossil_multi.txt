@@ -1,0 +1,37 @@
+# Ruins of Alph lab with two fossils in the bag (Root + Claw): after the YES, the chooser
+# (RuinsOfAlph_Lab_EventScript_ChooseFossil, RuinsOfAlph_Lab_hns/scripts.inc:561-573:
+# TwoFossilsPickOne pages + MULTI_FOSSIL_HNS). From a savestate at the menu: HELIX (row 2, not in the
+# bag) -> DeclineGiveFossil2 ('you don't have that fossil'); CANCEL (row 5) -> released; B -> released;
+# CLAW (row 0) -> handed over.
+start saves/r6_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+dropitem ITEM_ROOT_FOSSIL
+dropitem ITEM_CLAW_FOSSIL
+dropitem ITEM_HELIX_FOSSIL
+dropitem ITEM_DOME_FOSSIL
+dropitem ITEM_OLD_AMBER
+ev additem ITEM_ROOT_FOSSIL; additem ITEM_CLAW_FOSSIL; setvar VAR_FOSSIL_RESURRECTION_STATE, 0; end
+warpto MAP_RUINS_OF_ALPH_LAB_HNS 7 3
+face UP
+tap A 4
+scene fm_intro 8000
+pickd 0
+scene fm_choose 6000
+ss fm_menu
+pickd 2
+scene fm_helix 4000
+snap fm_helix_end
+sl fm_menu
+pickd 5
+scene fm_cancel 2000
+snap fm_cancel_end
+sl fm_menu
+tap B 4
+scene fm_b 2000
+snap fm_b_end
+sl fm_menu
+pickd 0
+scene fm_claw 4000
+snap fm_claw_end
+vars VAR_FOSSIL_RESURRECTION_STATE VAR_WHICH_FOSSIL_REVIVED

@@ -1,0 +1,6 @@
+# r5 legendary / roamer / totem tours: base include (not a tour). Ladder 6 (post-game, Mt. Silver
+# Pokemon Center) -> CONTINUE -> Master Balls for the catch branch, FAST BATTLES off so bwalk
+# photographs the messages that do not wait for A.
+include ../../scripts/continue.txt
+ev additem ITEM_MASTER_BALL, 10; end
+fastbattles off

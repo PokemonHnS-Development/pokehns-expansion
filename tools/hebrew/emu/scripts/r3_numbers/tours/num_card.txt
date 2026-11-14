@@ -1,0 +1,24 @@
+# Trainer card at its largest numbers (save: numsave.txt). Front (src/trainer_card.c): the H&S money
+# row "<money label>  P9999999/999999" (:1125-1145, money and Mom's savings), Pokedex 1080 (:1173),
+# time 999:59 (:1204-1263; the colon blinks, so two shots), ID No. (:1105). A flips to the back:
+# the Hall of Fame debut 999:59:59 (:1296-1326). Input states as in tours/menu_trainercard.txt.
+# The play clock rolls over to 0:01 when CONTINUE starts it at 999:59 (src/play_time.c:34-44), so it
+# is set again after CONTINUE.
+start saves/r3_numbers/r3_numbers.sav
+include ../../continue.txt
+playtime 999 59
+numstate
+startmenu PLAYER
+waitcb2x CB2_TrainerCard 900
+waitpmem 8 trainer_card:sData 0 10 900
+snapcolon num_card_front
+press A
+waitpmem 8 trainer_card:sData 0 11 900
+snap num_card_back
+press B
+waitpmem 8 trainer_card:sData 0 10 900
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

@@ -1,0 +1,277 @@
+# Frontier gambler, Battle Frontier Lounge 3 (data/maps/BattleFrontier_Lounge3_hns/scripts.inc; at (4,6), talked to
+# from (4,7) facing UP). Looking / go messages: src/field_specials.c ShowFrontierGamblerLookingMessage /
+# ShowFrontierGamblerGoMessage (data/maps/BattleFrontier_Lounge3/scripts.inc texts).
+#  1 fewer than 3 silver symbols (CantYouSeeWereBusyHere)
+#  2 3 silver symbols: intro + looking (Tower singles) + enter? NO
+#  3 'Oh' + looking + enter? YES + spot BP? NO
+#  4 looking message for challenges 1..11 (enter? NO)
+#  5 3 BP: YES, YES, bet 5 (not enough), CANCEL
+#  6 bet 5 with 50 BP (thanks + go message); talk again (not attempted: go message)
+#  7 go message for challenges 1..11 (VAR_FRONTIER_GAMBLER_SET_CHALLENGE)
+#  8 won with bet 5 (10 BP); bet 10, won (20 BP); bet 15, won (30 BP); bet 5, lost
+start saves/r6_frontier_npcs.sav
+include ../../scripts/continue.txt
+setbp 50
+warpto MAP_BATTLE_FRONTIER_LOUNGE3_HNS 4 7
+
+# --- 1. fewer than 3 silver symbols
+face UP
+tap A 4
+fieldwatch g1_busy free 6000
+
+# --- 2. three silver symbols: intro, looking (Tower singles), NO
+setflag FLAG_SYS_TOWER_SILVER
+setflag FLAG_SYS_DOME_SILVER
+setflag FLAG_SYS_PALACE_SILVER
+clearflag FLAG_MET_BATTLE_FRONTIER_GAMBLER
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 0; setvar VAR_FRONTIER_GAMBLER_STATE, FRONTIER_GAMBLER_WAITING; end
+face UP
+tap A 4
+fieldwatch g2_intro menu 12000
+pick 1
+fieldwatch g2_no free 6000
+
+# --- 3. YES, then NO to the loan
+face UP
+tap A 4
+fieldwatch g3_enter menu 6000
+pick 0
+fieldwatch g3_spot menu 6000
+pick 1
+fieldwatch g3_no free 6000
+
+# --- 4.1 looking message, challenge 1
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 1; end
+face UP
+tap A 4
+fieldwatch g4_c01 menu 6000
+pick 1
+fieldwatch g4_c01_no free 6000
+
+# --- 4.2 looking message, challenge 2
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 2; end
+face UP
+tap A 4
+fieldwatch g4_c02 menu 6000
+pick 1
+fieldwatch g4_c02_no free 6000
+
+# --- 4.3 looking message, challenge 3
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 3; end
+face UP
+tap A 4
+fieldwatch g4_c03 menu 6000
+pick 1
+fieldwatch g4_c03_no free 6000
+
+# --- 4.4 looking message, challenge 4
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 4; end
+face UP
+tap A 4
+fieldwatch g4_c04 menu 6000
+pick 1
+fieldwatch g4_c04_no free 6000
+
+# --- 4.5 looking message, challenge 5
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 5; end
+face UP
+tap A 4
+fieldwatch g4_c05 menu 6000
+pick 1
+fieldwatch g4_c05_no free 6000
+
+# --- 4.6 looking message, challenge 6
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 6; end
+face UP
+tap A 4
+fieldwatch g4_c06 menu 6000
+pick 1
+fieldwatch g4_c06_no free 6000
+
+# --- 4.7 looking message, challenge 7
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 7; end
+face UP
+tap A 4
+fieldwatch g4_c07 menu 6000
+pick 1
+fieldwatch g4_c07_no free 6000
+
+# --- 4.8 looking message, challenge 8
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 8; end
+face UP
+tap A 4
+fieldwatch g4_c08 menu 6000
+pick 1
+fieldwatch g4_c08_no free 6000
+
+# --- 4.9 looking message, challenge 9
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 9; end
+face UP
+tap A 4
+fieldwatch g4_c09 menu 6000
+pick 1
+fieldwatch g4_c09_no free 6000
+
+# --- 4.10 looking message, challenge 10
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 10; end
+face UP
+tap A 4
+fieldwatch g4_c10 menu 6000
+pick 1
+fieldwatch g4_c10_no free 6000
+
+# --- 4.11 looking message, challenge 11
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 11; end
+face UP
+tap A 4
+fieldwatch g4_c11 menu 6000
+pick 1
+fieldwatch g4_c11_no free 6000
+
+# --- 5. 3 BP: bet 5 is refused, then CANCEL
+setbp 3
+ev setvar VAR_FRONTIER_GAMBLER_CHALLENGE, 0; end
+face UP
+tap A 4
+fieldwatch g5_enter menu 6000
+pick 0
+fieldwatch g5_spot menu 6000
+pick 0
+fieldwatch g5_howmuch menu 6000
+pick 0
+fieldwatch g5_notenough menu 6000
+pick 3
+fieldwatch g5_cancel free 6000
+
+# --- 6. bet 5 with 50 BP, then talk again before the challenge
+setbp 50
+face UP
+tap A 4
+fieldwatch g6_enter menu 6000
+pick 0
+fieldwatch g6_spot menu 6000
+pick 0
+fieldwatch g6_howmuch menu 6000
+pick 0
+fieldwatch g6_bet5 free 6000
+face UP
+tap A 4
+fieldwatch g6_notyet free 6000
+vars VAR_FRONTIER_GAMBLER_STATE VAR_FRONTIER_GAMBLER_AMOUNT_BET VAR_FRONTIER_GAMBLER_SET_CHALLENGE
+
+# --- 7.1 go message, challenge 1
+ev setvar VAR_FRONTIER_GAMBLER_SET_CHALLENGE, 1; end
+face UP
+tap A 4
+fieldwatch g7_c01 free 6000
+
+# --- 7.2 go message, challenge 2
+ev setvar VAR_FRONTIER_GAMBLER_SET_CHALLENGE, 2; end
+face UP
+tap A 4
+fieldwatch g7_c02 free 6000
+
+# --- 7.3 go message, challenge 3
+ev setvar VAR_FRONTIER_GAMBLER_SET_CHALLENGE, 3; end
+face UP
+tap A 4
+fieldwatch g7_c03 free 6000
+
+# --- 7.4 go message, challenge 4
+ev setvar VAR_FRONTIER_GAMBLER_SET_CHALLENGE, 4; end
+face UP
+tap A 4
+fieldwatch g7_c04 free 6000
+
+# --- 7.5 go message, challenge 5
+ev setvar VAR_FRONTIER_GAMBLER_SET_CHALLENGE, 5; end
+face UP
+tap A 4
+fieldwatch g7_c05 free 6000
+
+# --- 7.6 go message, challenge 6
+ev setvar VAR_FRONTIER_GAMBLER_SET_CHALLENGE, 6; end
+face UP
+tap A 4
+fieldwatch g7_c06 free 6000
+
+# --- 7.7 go message, challenge 7
+ev setvar VAR_FRONTIER_GAMBLER_SET_CHALLENGE, 7; end
+face UP
+tap A 4
+fieldwatch g7_c07 free 6000
+
+# --- 7.8 go message, challenge 8
+ev setvar VAR_FRONTIER_GAMBLER_SET_CHALLENGE, 8; end
+face UP
+tap A 4
+fieldwatch g7_c08 free 6000
+
+# --- 7.9 go message, challenge 9
+ev setvar VAR_FRONTIER_GAMBLER_SET_CHALLENGE, 9; end
+face UP
+tap A 4
+fieldwatch g7_c09 free 6000
+
+# --- 7.10 go message, challenge 10
+ev setvar VAR_FRONTIER_GAMBLER_SET_CHALLENGE, 10; end
+face UP
+tap A 4
+fieldwatch g7_c10 free 6000
+
+# --- 7.11 go message, challenge 11
+ev setvar VAR_FRONTIER_GAMBLER_SET_CHALLENGE, 11; end
+face UP
+tap A 4
+fieldwatch g7_c11 free 6000
+
+# --- 8. results: won with bet 5
+ev setvar VAR_FRONTIER_GAMBLER_SET_CHALLENGE, 0; setvar VAR_FRONTIER_GAMBLER_STATE, FRONTIER_GAMBLER_WON; end
+face UP
+tap A 4
+fieldwatch g8_won5 free 6000
+
+# bet 10, won
+face UP
+tap A 4
+fieldwatch g8_enter10 menu 6000
+pick 0
+fieldwatch g8_spot10 menu 6000
+pick 0
+fieldwatch g8_howmuch10 menu 6000
+pick 1
+fieldwatch g8_bet10 free 6000
+ev setvar VAR_FRONTIER_GAMBLER_STATE, FRONTIER_GAMBLER_WON; end
+face UP
+tap A 4
+fieldwatch g8_won10 free 6000
+
+# bet 15, won
+face UP
+tap A 4
+fieldwatch g8_enter15 menu 6000
+pick 0
+fieldwatch g8_spot15 menu 6000
+pick 0
+fieldwatch g8_howmuch15 menu 6000
+pick 2
+fieldwatch g8_bet15 free 6000
+ev setvar VAR_FRONTIER_GAMBLER_STATE, FRONTIER_GAMBLER_WON; end
+face UP
+tap A 4
+fieldwatch g8_won15 free 6000
+
+# bet 5, lost
+face UP
+tap A 4
+fieldwatch g8_enter5 menu 6000
+pick 0
+fieldwatch g8_spot5 menu 6000
+pick 0
+fieldwatch g8_howmuch5 menu 6000
+pick 0
+fieldwatch g8_bet5 free 6000
+ev setvar VAR_FRONTIER_GAMBLER_STATE, FRONTIER_GAMBLER_LOST; end
+face UP
+tap A 4
+fieldwatch g8_lost free 6000

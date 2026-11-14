@@ -1,0 +1,7 @@
+# Bag and PC item slots in SaveBlock1 for this build, measured from the gBagPockets pointers and
+# the PC list (include/global.h comments are stale): pcItems SB1+0x49C (50 slots), the ITEMS
+# pocket SB1+0x564, POKe BALLS SB1+0xA04, MEDICINE SB1+0xE28. A slot is 4 bytes: the item id,
+# then the quantity (XORed with the save's encryption key in the bag, plain in the PC). Writing
+# only the id keeps the slot's quantity. gBagPosition (include/item_menu.h): pocket +5,
+# cursorPosition[] +8, scrollPosition[] +0x14, two bytes per pocket.
+# Item ids (include/constants/items.h): FOSSILIZED_DINO B3, ODD_KEYSTONE 9B, BIG_BAMBOO_SHOOT 2FD.

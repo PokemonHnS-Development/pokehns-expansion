@@ -857,108 +857,108 @@ static const u8 sTournamentIdToPairedTrainerIds[DOME_TOURNAMENT_TRAINERS_COUNT] 
 // Dome Ace Tucker has their own separate potential text.
 static const u8 *const sBattleDomePotentialTexts[DOME_TOURNAMENT_TRAINERS_COUNT + 1] =
 {
-    COMPOUND_STRING("The best candidate to be a champ!"), // Highest potential
-    COMPOUND_STRING("A sure-finalist team."),
-    COMPOUND_STRING("A likely top-three finisher."),
-    COMPOUND_STRING("A candidate to finish first."),
-    COMPOUND_STRING("A team with top-class potential."),
-    COMPOUND_STRING("The dark horse team this tournament."),
-    COMPOUND_STRING("A better-than-average team."),
-    COMPOUND_STRING("This tournament's average team."),
-    COMPOUND_STRING("A team with average potential."),
-    COMPOUND_STRING("A weaker-than-average team."),
-    COMPOUND_STRING("A team looking for its first win."),
-    COMPOUND_STRING("One win will make this team proud."),
-    COMPOUND_STRING("Overall, a weak team."),
-    COMPOUND_STRING("A team with very low potential."),
-    COMPOUND_STRING("A team unlikely to win the tournament."),
-    COMPOUND_STRING("The team most unlikely to win."), // Lowest potential
-    COMPOUND_STRING("The perfect, invincible superstar!"), // Dome Ace Tucker
+    COMPOUND_STRING("הקבוצה עם הסיכוי הטוב ביותר לאליפות!"), // Highest potential
+    COMPOUND_STRING("קבוצה שבטוח תגיע לגמר."),
+    COMPOUND_STRING("קבוצה שצפויה לסיים בין שלוש הראשונות."),
+    COMPOUND_STRING("קבוצה שמועמדת למקום הראשון."),
+    COMPOUND_STRING("קבוצה עם פוטנציאל מהשורה הראשונה."),
+    COMPOUND_STRING("הסוס השחור של הטורניר הזה."),
+    COMPOUND_STRING("קבוצה טובה מהממוצע."),
+    COMPOUND_STRING("הקבוצה הממוצעת של הטורניר הזה."),
+    COMPOUND_STRING("קבוצה עם פוטנציאל ממוצע."),
+    COMPOUND_STRING("קבוצה חלשה מהממוצע."),
+    COMPOUND_STRING("קבוצה שמחפשת את הניצחון הראשון שלה."),
+    COMPOUND_STRING("ניצחון אחד ימלא את הקבוצה הזו גאווה."),
+    COMPOUND_STRING("בסך הכול, קבוצה חלשה."),
+    COMPOUND_STRING("קבוצה עם פוטנציאל נמוך מאוד."),
+    COMPOUND_STRING("קבוצה שלא צפויה לזכות בטורניר."),
+    COMPOUND_STRING("הקבוצה עם הסיכוי הנמוך ביותר לנצח."), // Lowest potential
+    COMPOUND_STRING("כוכב-העל המושלם והבלתי מנוצח!"), // Dome Ace Tucker
 };
 
 // The second line of text on a trainers info card. It gives information about their battle style (dependent on their party's moves).
 static const u8 *const sBattleDomeOpponentStyleTexts[NUM_BATTLE_STYLES] =
 {
-    [DOME_BATTLE_STYLE_RISKY]           = COMPOUND_STRING("Willing to risk total disaster at times."),
-    [DOME_BATTLE_STYLE_STALL]           = COMPOUND_STRING("Skilled at enduring long battles."),
-    [DOME_BATTLE_STYLE_VARIED]          = COMPOUND_STRING("Varies tactics to suit the opponent."),
-    [DOME_BATTLE_STYLE_COMBO_HIGH]      = COMPOUND_STRING("Has a tough winning pattern."),
-    [DOME_BATTLE_STYLE_RARE_MOVES]      = COMPOUND_STRING("Occasionally uses a very rare move."),  // Seems like the text for these two was swapped
-    [DOME_BATTLE_STYLE_RARE_MOVE]       = COMPOUND_STRING("Uses startling and disruptive moves."), //
-    [DOME_BATTLE_STYLE_HP]              = COMPOUND_STRING("Constantly watches HP in battle."),
-    [DOME_BATTLE_STYLE_STORE_POWER]     = COMPOUND_STRING("Good at storing then loosing power."),
-    [DOME_BATTLE_STYLE_ENFEEBLE_LOW]    = COMPOUND_STRING("Skilled at enfeebling foes."),
-    [DOME_BATTLE_STYLE_LUCK]            = COMPOUND_STRING("Prefers tactics that rely on luck."),
-    [DOME_BATTLE_STYLE_REGAL]           = COMPOUND_STRING("Attacks with a regal atmosphere."),
-    [DOME_BATTLE_STYLE_LOW_PP]          = COMPOUND_STRING("Attacks with powerful, low-PP moves."),
-    [DOME_BATTLE_STYLE_STATUS_ATK]      = COMPOUND_STRING("Skilled at enfeebling, then attacking."),
-    [DOME_BATTLE_STYLE_ENDURE]          = COMPOUND_STRING("Battles while enduring all attacks."),
-    [DOME_BATTLE_STYLE_STATUS]          = COMPOUND_STRING("Skilled at upsetting foes emotionally."),
-    [DOME_BATTLE_STYLE_STRAIGHTFORWARD] = COMPOUND_STRING("Uses strong and straightforward moves."),
-    [DOME_BATTLE_STYLE_AGGRESSIVE]      = COMPOUND_STRING("Aggressively uses strong moves."),
-    [DOME_BATTLE_STYLE_DEF]             = COMPOUND_STRING("Battles while cleverly dodging attacks."),
-    [DOME_BATTLE_STYLE_ENFEEBLE_HIGH]   = COMPOUND_STRING("Skilled at using upsetting attacks."),
-    [DOME_BATTLE_STYLE_POPULAR_POWER]   = COMPOUND_STRING("Uses many popular moves."),
-    [DOME_BATTLE_STYLE_COMBO_LOW]       = COMPOUND_STRING("Has moves for powerful combinations."),
-    [DOME_BATTLE_STYLE_ACCURATE]        = COMPOUND_STRING("Uses high-probability attacks."),
-    [DOME_BATTLE_STYLE_POWERFUL]        = COMPOUND_STRING("Aggressively uses spectacular moves."),
-    [DOME_BATTLE_STYLE_ATK_OVER_DEF]    = COMPOUND_STRING("Emphasizes offense over defense."),
-    [DOME_BATTLE_STYLE_DEF_OVER_ATK]    = COMPOUND_STRING("Emphasizes defense over offense."),
-    [DOME_BATTLE_STYLE_POPULAR_STRONG]  = COMPOUND_STRING("Attacks quickly with strong moves."),
-    [DOME_BATTLE_STYLE_EFFECTS]         = COMPOUND_STRING("Often uses moves with added effects."),
-    [DOME_BATTLE_STYLE_BALANCED]        = COMPOUND_STRING("Uses a well-balanced mix of moves."),
-    [DOME_BATTLE_STYLE_UNUSED1]         = COMPOUND_STRING("This is sample message 1."),
-    [DOME_BATTLE_STYLE_UNUSED2]         = COMPOUND_STRING("This is sample message 2."),
-    [DOME_BATTLE_STYLE_UNUSED3]         = COMPOUND_STRING("This is sample message 3."),
-    [DOME_BATTLE_STYLE_UNUSED4]         = COMPOUND_STRING("This is sample message 4."),
+    [DOME_BATTLE_STYLE_RISKY]           = COMPOUND_STRING("נכונות להסתכן מדי פעם באסון מוחלט."),
+    [DOME_BATTLE_STYLE_STALL]           = COMPOUND_STRING("מיומנות בעמידה בקרבות ארוכים."),
+    [DOME_BATTLE_STYLE_VARIED]          = COMPOUND_STRING("התאמת הטקטיקה לכל יריב."),
+    [DOME_BATTLE_STYLE_COMBO_HIGH]      = COMPOUND_STRING("דפוס ניצחון שקשה להתמודד מולו."),
+    [DOME_BATTLE_STYLE_RARE_MOVES]      = COMPOUND_STRING("שימוש מדי פעם במהלך נדיר מאוד."),  // Seems like the text for these two was swapped
+    [DOME_BATTLE_STYLE_RARE_MOVE]       = COMPOUND_STRING("שימוש במהלכים מפתיעים ומשבשים."), //
+    [DOME_BATTLE_STYLE_HP]              = COMPOUND_STRING("מעקב צמוד אחר הנ”ח בקרב."),
+    [DOME_BATTLE_STYLE_STORE_POWER]     = COMPOUND_STRING("כישרון לצבור כוח ואז לשחרר אותו."),
+    [DOME_BATTLE_STYLE_ENFEEBLE_LOW]    = COMPOUND_STRING("מיומנות בהחלשת יריבים."),
+    [DOME_BATTLE_STYLE_LUCK]            = COMPOUND_STRING("העדפה לטקטיקות שתלויות במזל."),
+    [DOME_BATTLE_STYLE_REGAL]           = COMPOUND_STRING("התקפות באווירה מלכותית."),
+    [DOME_BATTLE_STYLE_LOW_PP]          = COMPOUND_STRING("התקפות במהלכים חזקים עם מעט נ”כ."),
+    [DOME_BATTLE_STYLE_STATUS_ATK]      = COMPOUND_STRING("מיומנות בהחלשה ואז בתקיפה."),
+    [DOME_BATTLE_STYLE_ENDURE]          = COMPOUND_STRING("לחימה תוך ספיגת כל ההתקפות."),
+    [DOME_BATTLE_STYLE_STATUS]          = COMPOUND_STRING("מיומנות בערעור רגשי של יריבים."),
+    [DOME_BATTLE_STYLE_STRAIGHTFORWARD] = COMPOUND_STRING("שימוש במהלכים חזקים וישירים."),
+    [DOME_BATTLE_STYLE_AGGRESSIVE]      = COMPOUND_STRING("שימוש תוקפני במהלכים חזקים."),
+    [DOME_BATTLE_STYLE_DEF]             = COMPOUND_STRING("לחימה תוך התחמקות חכמה מהתקפות."),
+    [DOME_BATTLE_STYLE_ENFEEBLE_HIGH]   = COMPOUND_STRING("מיומנות בהתקפות מערערות."),
+    [DOME_BATTLE_STYLE_POPULAR_POWER]   = COMPOUND_STRING("שימוש במהלכים פופולריים רבים."),
+    [DOME_BATTLE_STYLE_COMBO_LOW]       = COMPOUND_STRING("מהלכים לשילובים רבי עוצמה."),
+    [DOME_BATTLE_STYLE_ACCURATE]        = COMPOUND_STRING("התקפות עם סיכוי פגיעה גבוה."),
+    [DOME_BATTLE_STYLE_POWERFUL]        = COMPOUND_STRING("שימוש תוקפני במהלכים מרהיבים."),
+    [DOME_BATTLE_STYLE_ATK_OVER_DEF]    = COMPOUND_STRING("דגש על התקפה יותר מהגנה."),
+    [DOME_BATTLE_STYLE_DEF_OVER_ATK]    = COMPOUND_STRING("דגש על הגנה יותר מהתקפה."),
+    [DOME_BATTLE_STYLE_POPULAR_STRONG]  = COMPOUND_STRING("התקפות מהירות במהלכים חזקים."),
+    [DOME_BATTLE_STYLE_EFFECTS]         = COMPOUND_STRING("שימוש תכוף במהלכים עם השפעות נוספות."),
+    [DOME_BATTLE_STYLE_BALANCED]        = COMPOUND_STRING("שילוב מאוזן היטב של מהלכים."),
+    [DOME_BATTLE_STYLE_UNUSED1]         = COMPOUND_STRING("זו הודעה לדוגמה 1."),
+    [DOME_BATTLE_STYLE_UNUSED2]         = COMPOUND_STRING("זו הודעה לדוגמה 2."),
+    [DOME_BATTLE_STYLE_UNUSED3]         = COMPOUND_STRING("זו הודעה לדוגמה 3."),
+    [DOME_BATTLE_STYLE_UNUSED4]         = COMPOUND_STRING("זו הודעה לדוגמה 4."),
 };
 
 // The third line of text on a trainers info card. It that gives information about their party's stat spread (based on their Pokémon's effort values and Nature).
 static const u8 *const sBattleDomeOpponentStatsTexts[] =
 {
-    COMPOUND_STRING("Emphasizes HP and ATTACK."),              // DOME_TEXT_TWO_GOOD_STATS and DOME_TEXT_HP start here
-    COMPOUND_STRING("Emphasizes HP and DEFENSE."),
-    COMPOUND_STRING("Emphasizes HP and SPEED."),
-    COMPOUND_STRING("Emphasizes HP and SP. ATTACK."),
-    COMPOUND_STRING("Emphasizes HP and SP. DEFENSE."),
-    COMPOUND_STRING("Emphasizes ATTACK and DEFENSE."),         // DOME_TEXT_ATK starts here
-    COMPOUND_STRING("Emphasizes ATTACK and SPEED."),
-    COMPOUND_STRING("Emphasizes ATTACK and SP. ATTACK."),
-    COMPOUND_STRING("Emphasizes ATTACK and SP. DEFENSE."),
-    COMPOUND_STRING("Emphasizes DEFENSE and SPEED."),          // DOME_TEXT_DEF starts here
-    COMPOUND_STRING("Emphasizes DEFENSE and SP. ATTACK."),
-    COMPOUND_STRING("Emphasizes DEFENSE and SP. DEFENSE."),
-    COMPOUND_STRING("Emphasizes SPEED and SP. ATTACK."),       // DOME_TEXT_SPEED starts here
-    COMPOUND_STRING("Emphasizes SPEED and SP. DEFENSE."),
-    COMPOUND_STRING("Emphasizes SP. ATTACK and SP. DEFENSE."), // DOME_TEXT_SPATK starts here
-    COMPOUND_STRING("Emphasizes HP."),                         // DOME_TEXT_ONE_GOOD_STAT starts here
-    COMPOUND_STRING("Emphasizes ATTACK."),
-    COMPOUND_STRING("Emphasizes DEFENSE."),
-    COMPOUND_STRING("Emphasizes SPEED."),
-    COMPOUND_STRING("Emphasizes SP. ATTACK."),
-    COMPOUND_STRING("Emphasizes SP. DEFENSE."),
-    COMPOUND_STRING("Neglects HP and ATTACK."),                // DOME_TEXT_TWO_BAD_STATS starts here
-    COMPOUND_STRING("Neglects HP and DEFENSE."),
-    COMPOUND_STRING("Neglects HP and SPEED."),
-    COMPOUND_STRING("Neglects HP and SP. ATTACK."),
-    COMPOUND_STRING("Neglects HP and SP. DEFENSE."),
-    COMPOUND_STRING("Neglects ATTACK and DEFENSE."),
-    COMPOUND_STRING("Neglects ATTACK and SPEED."),
-    COMPOUND_STRING("Neglects ATTACK and SP. ATTACK."),
-    COMPOUND_STRING("Neglects ATTACK and SP. DEFENSE."),
-    COMPOUND_STRING("Neglects DEFENSE and SPEED."),
-    COMPOUND_STRING("Neglects DEFENSE and SP. ATTACK."),
-    COMPOUND_STRING("Neglects DEFENSE and SP. DEFENSE."),
-    COMPOUND_STRING("Neglects SPEED and SP. ATTACK."),
-    COMPOUND_STRING("Neglects SPEED and SP. DEFENSE."),
-    COMPOUND_STRING("Neglects SP. ATTACK and SP. DEFENSE."),
-    COMPOUND_STRING("Neglects HP."),                           // DOME_TEXT_ONE_BAD_STAT starts here
-    COMPOUND_STRING("Neglects ATTACK."),
-    COMPOUND_STRING("Neglects DEFENSE."),
-    COMPOUND_STRING("Neglects SPEED."),
-    COMPOUND_STRING("Neglects SP. ATTACK."),
-    COMPOUND_STRING("Neglects SP. DEFENSE."),
-    [DOME_TEXT_WELL_BALANCED] = COMPOUND_STRING("Raises POKéMON in a well-balanced way."),
+    COMPOUND_STRING("דגש על נ”ח והתקפה."),              // DOME_TEXT_TWO_GOOD_STATS and DOME_TEXT_HP start here
+    COMPOUND_STRING("דגש על נ”ח והגנה."),
+    COMPOUND_STRING("דגש על נ”ח ומהירות."),
+    COMPOUND_STRING("דגש על נ”ח והתקפה מיוחדת."),
+    COMPOUND_STRING("דגש על נ”ח והגנה מיוחדת."),
+    COMPOUND_STRING("דגש על התקפה והגנה."),         // DOME_TEXT_ATK starts here
+    COMPOUND_STRING("דגש על התקפה ומהירות."),
+    COMPOUND_STRING("דגש על התקפה והתקפה מיוחדת."),
+    COMPOUND_STRING("דגש על התקפה והגנה מיוחדת."),
+    COMPOUND_STRING("דגש על הגנה ומהירות."),          // DOME_TEXT_DEF starts here
+    COMPOUND_STRING("דגש על הגנה והתקפה מיוחדת."),
+    COMPOUND_STRING("דגש על הגנה והגנה מיוחדת."),
+    COMPOUND_STRING("דגש על מהירות והתקפה מיוחדת."),       // DOME_TEXT_SPEED starts here
+    COMPOUND_STRING("דגש על מהירות והגנה מיוחדת."),
+    COMPOUND_STRING("דגש על התקפה מיוחדת והגנה מיוחדת."), // DOME_TEXT_SPATK starts here
+    COMPOUND_STRING("דגש על נ”ח."),                         // DOME_TEXT_ONE_GOOD_STAT starts here
+    COMPOUND_STRING("דגש על התקפה."),
+    COMPOUND_STRING("דגש על הגנה."),
+    COMPOUND_STRING("דגש על מהירות."),
+    COMPOUND_STRING("דגש על התקפה מיוחדת."),
+    COMPOUND_STRING("דגש על הגנה מיוחדת."),
+    COMPOUND_STRING("הזנחה של נ”ח והתקפה."),                // DOME_TEXT_TWO_BAD_STATS starts here
+    COMPOUND_STRING("הזנחה של נ”ח והגנה."),
+    COMPOUND_STRING("הזנחה של נ”ח ומהירות."),
+    COMPOUND_STRING("הזנחה של נ”ח והתקפה מיוחדת."),
+    COMPOUND_STRING("הזנחה של נ”ח והגנה מיוחדת."),
+    COMPOUND_STRING("הזנחה של התקפה והגנה."),
+    COMPOUND_STRING("הזנחה של התקפה ומהירות."),
+    COMPOUND_STRING("הזנחה של התקפה והתקפה מיוחדת."),
+    COMPOUND_STRING("הזנחה של התקפה והגנה מיוחדת."),
+    COMPOUND_STRING("הזנחה של הגנה ומהירות."),
+    COMPOUND_STRING("הזנחה של הגנה והתקפה מיוחדת."),
+    COMPOUND_STRING("הזנחה של הגנה והגנה מיוחדת."),
+    COMPOUND_STRING("הזנחה של מהירות והתקפה מיוחדת."),
+    COMPOUND_STRING("הזנחה של מהירות והגנה מיוחדת."),
+    COMPOUND_STRING("הזנחה של התקפה מיוחדת והגנה מיוחדת."),
+    COMPOUND_STRING("הזנחה של נ”ח."),                           // DOME_TEXT_ONE_BAD_STAT starts here
+    COMPOUND_STRING("הזנחה של התקפה."),
+    COMPOUND_STRING("הזנחה של הגנה."),
+    COMPOUND_STRING("הזנחה של מהירות."),
+    COMPOUND_STRING("הזנחה של התקפה מיוחדת."),
+    COMPOUND_STRING("הזנחה של הגנה מיוחדת."),
+    [DOME_TEXT_WELL_BALANCED] = COMPOUND_STRING("גידול מאוזן של פוקימונים."),
 };
 
 static const u8 sInfoTrainerMonX[FRONTIER_PARTY_SIZE] = {104, 136, 104};
@@ -978,32 +978,32 @@ static const u8 sStatTextOffsets[NUM_STATS - 1] =
 
 static const u8 *const sBattleDomeMatchNumberTexts[DOME_TOURNAMENT_MATCHES_COUNT] =
 {
-    COMPOUND_STRING("Round 1, Match 1"),
-    COMPOUND_STRING("Round 1, Match 2"),
-    COMPOUND_STRING("Round 1, Match 3"),
-    COMPOUND_STRING("Round 1, Match 4"),
-    COMPOUND_STRING("Round 1, Match 5"),
-    COMPOUND_STRING("Round 1, Match 6"),
-    COMPOUND_STRING("Round 1, Match 7"),
-    COMPOUND_STRING("Round 1, Match 8"),
-    COMPOUND_STRING("Round 2, Match 1"),
-    COMPOUND_STRING("Round 2, Match 2"),
-    COMPOUND_STRING("Round 2, Match 3"),
-    COMPOUND_STRING("Round 2, Match 4"),
-    COMPOUND_STRING("Semifinal Match 1"),
-    COMPOUND_STRING("Semifinal Match 2"),
-    COMPOUND_STRING("Final Match"),
+    COMPOUND_STRING("סיבוב 1, קרב 1"),
+    COMPOUND_STRING("סיבוב 1, קרב 2"),
+    COMPOUND_STRING("סיבוב 1, קרב 3"),
+    COMPOUND_STRING("סיבוב 1, קרב 4"),
+    COMPOUND_STRING("סיבוב 1, קרב 5"),
+    COMPOUND_STRING("סיבוב 1, קרב 6"),
+    COMPOUND_STRING("סיבוב 1, קרב 7"),
+    COMPOUND_STRING("סיבוב 1, קרב 8"),
+    COMPOUND_STRING("סיבוב 2, קרב 1"),
+    COMPOUND_STRING("סיבוב 2, קרב 2"),
+    COMPOUND_STRING("סיבוב 2, קרב 3"),
+    COMPOUND_STRING("סיבוב 2, קרב 4"),
+    COMPOUND_STRING("חצי הגמר, קרב 1"),
+    COMPOUND_STRING("חצי הגמר, קרב 2"),
+    COMPOUND_STRING("קרב הגמר"),
 };
 
 static const u8 *const sBattleDomeWinTexts[] =
 {
-    [DOME_TEXT_NO_WINNER_YET]    = COMPOUND_STRING("Let the battle begin!"),
-    [DOME_TEXT_WON_USING_MOVE]   = COMPOUND_STRING("{STR_VAR_1} won using {STR_VAR_2}!"),
-    [DOME_TEXT_CHAMP_USING_MOVE] = COMPOUND_STRING("{STR_VAR_1} became the champ!"),
-    [DOME_TEXT_WON_ON_FORFEIT]   = COMPOUND_STRING("{STR_VAR_1} won by default!"),
-    [DOME_TEXT_CHAMP_ON_FORFEIT] = COMPOUND_STRING("{STR_VAR_1} won outright by default!"),
-    [DOME_TEXT_WON_NO_MOVES]     = COMPOUND_STRING("{STR_VAR_1} won without using a move!"),
-    [DOME_TEXT_CHAMP_NO_MOVES]   = COMPOUND_STRING("{STR_VAR_1} won outright with no moves!"),
+    [DOME_TEXT_NO_WINNER_YET]    = COMPOUND_STRING("שהקרב יתחיל!"),
+    [DOME_TEXT_WON_USING_MOVE]   = COMPOUND_STRING("ניצחון ל{STR_VAR_1} עם {STR_VAR_2}!"),
+    [DOME_TEXT_CHAMP_USING_MOVE] = COMPOUND_STRING("{STR_VAR_1} זוכה באליפות!"),
+    [DOME_TEXT_WON_ON_FORFEIT]   = COMPOUND_STRING("ניצחון טכני ל{STR_VAR_1}!"),
+    [DOME_TEXT_CHAMP_ON_FORFEIT] = COMPOUND_STRING("{STR_VAR_1} זוכה באליפות בניצחון טכני!"),
+    [DOME_TEXT_WON_NO_MOVES]     = COMPOUND_STRING("ניצחון ל{STR_VAR_1} בלי אף מהלך!"),
+    [DOME_TEXT_CHAMP_NO_MOVES]   = COMPOUND_STRING("{STR_VAR_1} זוכה באליפות בלי אף מהלך!"),
 };
 
 static const u8 sLeftTrainerMonX[FRONTIER_PARTY_SIZE]  = { 96,  96,  96};
@@ -4221,6 +4221,10 @@ static void DisplayTrainerInfoOnCard(u8 flags, u8 trainerTourneyId)
 
     for (;gTrainerClasses[j].name[i] != EOS; i++)
         gStringVar1[i] = gTrainerClasses[j].name[i];
+#if RTL_STRING_REPORT
+    RtlStringReport(gTrainerClasses[j].name);
+#endif
+#line 4224
     gStringVar1[i] = CHAR_SPACE;
     gStringVar1[i + 1] = EOS;
 
@@ -5221,6 +5225,12 @@ static void Task_ShowTourneyTree(u8 taskId)
         ResetBgsAndClearDma3BusyFlags(0);
         InitBgsFromTemplates(0, sTourneyTreeBgTemplates, ARRAY_COUNT(sTourneyTreeBgTemplates));
         InitWindows(sTourneyTreeWindowTemplates);
+#if TEXT_RTL
+        // The bracket art is not mirrored, so each name keeps its English place against its
+        // bracket line and only its reading order flips.
+        SetWindowRtlMode(TOURNEYWIN_NAMES_LEFT, WINDOW_RTL_IN_PLACE);
+        SetWindowRtlMode(TOURNEYWIN_NAMES_RIGHT, WINDOW_RTL_IN_PLACE);
+#endif
         DeactivateAllTextPrinters();
         gBattle_BG0_X = 0;
         gBattle_BG0_Y = 0;
@@ -6013,6 +6023,10 @@ static void CopyDomeTrainerName(u8 *str, u16 trainerId)
         {
             for (i = 0; i < PLAYER_NAME_LENGTH; i++)
                 str[i] = gFacilityTrainers[trainerId].trainerName[i];
+#if RTL_STRING_REPORT
+            RtlStringReport(gFacilityTrainers[trainerId].trainerName);
+#endif
+#line 6022
         }
         str[i] = EOS;
     }

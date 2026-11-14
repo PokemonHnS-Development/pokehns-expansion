@@ -1,0 +1,9 @@
+# Prep save for the Mystery Gift / Mystery Events main-menu rows: ladder6_postgame plus
+# FLAG_SYS_MYSTERY_GIFT_ENABLE and FLAG_SYS_MYSTERY_EVENT_ENABLE (src/event_data.c:110-130;
+# normally set only by data/scripts/questionnaire.inc, which no H&S map calls), saved in game.
+# Run: bts.py --rom EN.gba run _prep_mystery.txt OUT --save .../ladder6_postgame.sav --save-out .../boot_mystery.sav
+include ../continue.txt
+ev setflag FLAG_SYS_MYSTERY_GIFT_ENABLE; setflag FLAG_SYS_MYSTERY_EVENT_ENABLE; end
+expectflag FLAG_SYS_MYSTERY_GIFT_ENABLE 1
+expectflag FLAG_SYS_MYSTERY_EVENT_ENABLE 1
+savegame

@@ -1,0 +1,9 @@
+sl pyr_floor1
+30 -
+waitctl 300
+py: exec(open("../hns-tools/scratch/screens/r2_battle_frontier_pass_bp_and_remaining_facilities/tools/pyrhelp.py").read(), globals())
+py: pyr_fill()
+startmenux 12
+waittaskx Task_HandlePyramidBagInput 900
+waitquiet
+30 -

@@ -1,0 +1,32 @@
+# Running from a trainer battle (B_RUN_TRAINER_BATTLE TRUE, include/config/battle.h:342):
+# RUN asks "give up the battle?" (STRINGID_QUESTIONFORFEITBATTLE, src/battle_message.c:872;
+# BattleScript_QuestionForfeitBattle, data/battle_scripts_1.s:8203; src/battle_main.c:4605).
+# NO goes back to the action menu; YES forfeits: the money handed over
+# (BattleScript_ForfeitBattleGaveMoney, STRINGID_PLAYERWHITEOUT2_TRAINER) and the whiteout
+# that follows. Opponent: Youngster Mikey on Route 30, as in battle_trainer.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_PIKACHU, 30, move1=MOVE_THUNDERBOLT, move2=MOVE_QUICK_ATTACK; end
+
+face UP
+pinrng
+8 UP
+waitnotfree 120
+bwalk bv_forfeit_intro input:HandleInputChooseAction
+baction RUN
+bwalk bv_forfeit_q input:PlayerHandleYesNoInput
+snap bv_forfeit_prompt
+tap DOWN 4
+waitquiet
+snap bv_forfeit_prompt_no
+tap A 4                                   # NO: back to the action menu
+bwalk bv_forfeit_no input:HandleInputChooseAction
+snap bv_forfeit_back
+baction RUN
+bwalk bv_forfeit_q2 input:PlayerHandleYesNoInput
+snap bv_forfeit_prompt2
+tap UP 4
+waitquiet
+tap A 4                                   # YES: forfeit
+bwalk bv_forfeit_lost free
+snap bv_forfeit_home

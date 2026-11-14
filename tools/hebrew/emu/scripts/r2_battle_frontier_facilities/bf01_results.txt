@@ -1,0 +1,193 @@
+# r2 Battle Frontier: every facility results window (lobby signs) and the Ranking Hall boards,
+# with distinct 1-4 digit streaks poked into the save (bfrecords), Lv.50 = current, Open = previous.
+# Each window is opened by its own sign script (goto the ROM label), as the sign would.
+start saves/r2_bff/base_postgame.sav
+include ../continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+bfrecords
+
+# tower lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 12 8
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattleTowerLobby_EventScript_ShowSinglesResults_hns@
+30 -
+snap res_tower_singles
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_BattleTowerLobby_EventScript_ShowDoublesResults_hns@
+30 -
+snap res_tower_doubles
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_BattleTowerLobby_EventScript_ShowMultisResults_hns@
+30 -
+snap res_tower_multis
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_BattleTowerLobby_EventScript_ShowLinkMultisResults_hns@
+30 -
+snap res_tower_linkmultis
+tap A 0
+waitctl 600
+
+# dome lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 11 14
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattleDomeLobby_EventScript_ShowSinglesResults_hns@
+30 -
+snap res_dome_singles
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_BattleDomeLobby_EventScript_ShowDoublesResults_hns@
+30 -
+snap res_dome_doubles
+tap A 0
+waitctl 600
+
+# palace lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PALACE_LOBBY_HNS 12 10
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattlePalaceLobby_EventScript_ShowSinglesResults_hns@
+30 -
+snap res_palace_singles
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_BattlePalaceLobby_EventScript_ShowDoublesResults_hns@
+30 -
+snap res_palace_doubles
+tap A 0
+waitctl 600
+
+# arena lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_ARENA_LOBBY_HNS 7 11
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattleArenaLobby_EventScript_ShowResults_hns@
+30 -
+snap res_arena
+tap A 0
+waitctl 600
+
+# factory lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 9 10
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattleFactoryLobby_EventScript_ShowSinglesResults_hns@
+30 -
+snap res_factory_singles
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_BattleFactoryLobby_EventScript_ShowDoublesResults_hns@
+30 -
+snap res_factory_doubles
+tap A 0
+waitctl 600
+
+# pike lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY_HNS 5 11
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattlePikeLobby_EventScript_ShowResults_hns@
+30 -
+snap res_pike
+tap A 0
+waitctl 600
+
+# pyramid lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY_HNS 7 16
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattlePyramidLobby_EventScript_ShowResults_hns@
+30 -
+snap res_pyramid
+tap A 0
+waitctl 600
+
+# Ranking Hall: 10 boards, Lv.50 page then Open Level page
+warptoloose MAP_BATTLE_FRONTIER_RANKING_HALL_HNS 26 13
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_TowerSinglesRecords_hns@
+30 -
+snap hall_towersingles_lv50
+tap A 0
+30 -
+snap hall_towersingles_open
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_TowerDoublesRecords_hns@
+30 -
+snap hall_towerdoubles_lv50
+tap A 0
+30 -
+snap hall_towerdoubles_open
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_TowerMultisRecords_hns@
+30 -
+snap hall_towermultis_lv50
+tap A 0
+30 -
+snap hall_towermultis_open
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_TowerLinkRecords_hns@
+30 -
+snap hall_towerlink_lv50
+tap A 0
+30 -
+snap hall_towerlink_open
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_DomeRecords_hns@
+30 -
+snap hall_dome_lv50
+tap A 0
+30 -
+snap hall_dome_open
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_PalaceRecords_hns@
+30 -
+snap hall_palace_lv50
+tap A 0
+30 -
+snap hall_palace_open
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_ArenaRecords_hns@
+30 -
+snap hall_arena_lv50
+tap A 0
+30 -
+snap hall_arena_open
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_FactoryRecords_hns@
+30 -
+snap hall_factory_lv50
+tap A 0
+30 -
+snap hall_factory_open
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_PikeRecords_hns@
+30 -
+snap hall_pike_lv50
+tap A 0
+30 -
+snap hall_pike_open
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_PyramidRecords_hns@
+30 -
+snap hall_pyramid_lv50
+tap A 0
+30 -
+snap hall_pyramid_open
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_DomePikeFactoryRecordsSign_hns@
+talk hall_sign1 10 -
+waitctl 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_PalaceArenaPyramidRecordsSIgn_hns@
+talk hall_sign2 10 -
+waitctl 600
+evstart goto 0x@BattleFrontier_RankingHall_EventScript_Attendant_hns@
+talk hall_attendant 10 -
+waitctl 600

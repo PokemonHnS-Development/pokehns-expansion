@@ -1,0 +1,17 @@
+# Include: on a naming screen the Nuzlocke forces (src/naming_screen.c:1799-1800): OK with an
+# empty name is refused, then two letters and OK. The caller snaps the opening screen.
+press START                               # cursor to OK
+waitnaming
+press A                                   # refused: the screen stays
+30 -
+waitnaming
+expectcb2 CB2_NamingScreen
+press DOWN
+press LEFT
+press LEFT
+press LEFT
+waitnaming
+press A
+waitnaming
+press A
+waitnaming

@@ -1,0 +1,92 @@
+# Wild battle: intro text, action menu, fight menu (move type, PP, effectiveness marker and
+# the START move-info window), bag in battle (pockets, an item's description, using an X
+# item), party in battle and its submenu, a move with an effectiveness message, the foe's
+# move, switching Pokemon, running away.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_CYNDAQUIL, 12, move1=MOVE_TACKLE, move2=MOVE_LEER, move3=MOVE_EMBER, move4=MOVE_SMOKESCREEN; givemon SPECIES_TOTODILE, 15; additem ITEM_NUGGET, 1; additem ITEM_X_ATTACK, 2; additem ITEM_POTION, 5; additem ITEM_POKE_BALL, 10; additem ITEM_GREAT_BALL, 5; end
+
+pinrng
+evstart setwildbattle SPECIES_GEODUDE, 10; dowildbattle; end
+waitbattle
+bwalk battle_wild_intro input:HandleInputChooseAction
+snap battle_wild_action
+
+# FIGHT: the move list; the right box shows PP and type of the selected move
+baction FIGHT
+waitbinput HandleInputChooseMove
+snap battle_wild_fight_01
+bmove 2 nopress                       # Ember
+waitquiet
+snap battle_wild_fight_02
+tap START 4                           # move info window (B_MOVE_DESCRIPTION_BUTTON)
+waitquiet
+snap battle_wild_fight_info
+tap START 4
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction
+
+# BAG in battle: ITEMS, MEDICINE (battle items live there in Heart & Soul), POKE BALLS;
+# then use an X Attack from MEDICINE (it takes the turn)
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+expect8 @gBagPosition+5@ 0
+snap battle_wild_bag_01
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 1
+snap battle_wild_bag_02
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 2
+snap battle_wild_bag_03
+tap LEFT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 1
+tap A 4                               # X Attack: USE / CANCEL
+waitquiet
+snap battle_wild_bag_use
+tap A 4                               # USE
+bwalk battle_wild_xattack input:HandleInputChooseAction
+
+# POKEMON in battle: the party list, the submenu of the second Pokemon, cancel
+baction POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap battle_wild_party
+tap DOWN 4
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap battle_wild_party_menu
+tap B 4
+waittaskx Task_HandleChooseMonInput 600
+tap B 4
+waitbinput HandleInputChooseAction
+
+# Ember on a Rock/Ground foe: "It's not very effective...", then the foe's move
+baction FIGHT
+bmove 2
+bwalk battle_wild_ember input:HandleInputChooseAction
+
+# Switch to the second Pokemon (it takes the turn), then run away
+baction POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap DOWN 4
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap A 4                               # SHIFT
+bwalk battle_wild_switch input:HandleInputChooseAction
+baction RUN
+bwalk battle_wild_run free
+snap battle_wild_end

@@ -39,28 +39,27 @@ GoldenrodDeptStore1_EventScript_Directory::
 	end
 
 GoldenrodDeptStor1_Text_Receptionist:
-    .string "Welcome to GOLDENROD DEPT.STORE.$"
+    .string "ברוכים הבאים לכלבו של גולדנרוד.$"
 
 GoldenrodDeptStore1_Text_Gentleman:
-    .string "The DEPT.STORE has a decent\n"
-    .string "selection.\p"
-    .string "But some items are only available\n"
-    .string "as GAME CORNER prizes.$"
+    .string "בכלבו יש מבחר לא רע.\p"
+    .string "אבל יש פריטים שאפשר לקבל רק\n"
+    .string "כפרסים במשחקייה.$"
 
 GoldenrodDeptStore1_Text_PokefanF:
-    .string "I'm raring to shop again today!$"
+    .string "אני להוטה לעשות קניות גם היום!$"
 
 GoldenrodDeptStore1_Text_BugCatcher:
-    .string "Mom's good at bargain hunting.\p"
-    .string "She always buys stuff at lower\n"
-    .string "prices.$"
+    .string "אמא שלי טובה בציד מציאות.\p"
+    .string "היא תמיד קונה דברים במחירים\n"
+    .string "נמוכים יותר.$"
 
 GoldenrodDeptStore1_Text_Directory:
-    .string "1F SERVICE COUNTER\n"
-	.string "YOU ARE HERE.\p"
-    .string "2F TRAINER'S MARKET\p"
-    .string "3F BATTLE COLLECTION\p"
-    .string "4F MEDICINE BOX\p"
-    .string "5F TM CORNER\p"
-    .string "6F TRANQUIL SQUARE\p"
-    .string "ROOFTOP LOOKOUT$"
+    .string "ק1: דלפק שירות\n"
+    .string "אתה נמצא כאן.\p"
+    .string "ק2: שוק המאמנים\p"
+    .string "ק3: ציוד קרב\p"
+    .string "ק4: ארון התרופות\p"
+    .string "ק5: פינת המ”מ\p"
+    .string "ק6: כיכר השלווה\p"
+    .string "קומת גג: תצפית$"

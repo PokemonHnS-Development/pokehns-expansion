@@ -1,0 +1,105 @@
+# r7 roster: Battle Tower singles intros, send-outs and win lines for trainer ids 152 185 191 2 3 7 9 14 16 204
+start saves/r7/r7_roster_base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 6 6
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive tw_in menu
+pick 0
+drive tw_lv menu
+pick 0
+drive tw_sel task:Task_HandleChooseMonInput 20
+include ../../scripts/r2_battle_frontier_facilities/_bf_enter3.txt
+drive tw_save menu 10
+pick 0
+saveyes
+fastbattles off
+pin @gTrainerBattleParameter+2@ 9800
+drivex k152_in battle 30 9000
+oppname
+bwinsw k152_b
+drivex k152_after menu 30 9000
+unpin
+sb2w16 CE0 1
+sb2w16 CB2 1
+pin @gTrainerBattleParameter+2@ B900
+pick 0
+drivex k185_in battle 30 9000
+oppname
+bwinsw k185_b
+drivex k185_after menu 30 9000
+unpin
+sb2w16 CE0 1
+sb2w16 CB2 1
+pin @gTrainerBattleParameter+2@ BF00
+pick 0
+drivex k191_in battle 30 9000
+oppname
+bwinsw k191_b
+drivex k191_after menu 30 9000
+unpin
+sb2w16 CE0 1
+sb2w16 CB2 1
+pin @gTrainerBattleParameter+2@ 0200
+pick 0
+drivex k002_in battle 30 9000
+oppname
+bwinr k002_b
+drivex k002_after menu 30 9000
+unpin
+sb2w16 CE0 1
+sb2w16 CB2 1
+pin @gTrainerBattleParameter+2@ 0300
+pick 0
+drivex k003_in battle 30 9000
+oppname
+bwinr k003_b
+drivex k003_after menu 30 9000
+unpin
+sb2w16 CE0 1
+sb2w16 CB2 1
+pin @gTrainerBattleParameter+2@ 0700
+pick 0
+drivex k007_in battle 30 9000
+oppname
+bwinr k007_b
+drivex k007_after menu 30 9000
+unpin
+sb2w16 CE0 1
+sb2w16 CB2 1
+pin @gTrainerBattleParameter+2@ 0900
+pick 0
+drivex k009_in battle 30 9000
+oppname
+bwinr k009_b
+drivex k009_after menu 30 9000
+unpin
+sb2w16 CE0 1
+sb2w16 CB2 1
+pin @gTrainerBattleParameter+2@ 0E00
+pick 0
+drivex k014_in battle 30 9000
+oppname
+bwinr k014_b
+drivex k014_after menu 30 9000
+unpin
+sb2w16 CE0 1
+sb2w16 CB2 1
+pin @gTrainerBattleParameter+2@ 1000
+pick 0
+drivex k016_in battle 30 9000
+oppname
+bwinr k016_b
+drivex k016_after menu 30 9000
+unpin
+sb2w16 CE0 1
+sb2w16 CB2 1
+pin @gTrainerBattleParameter+2@ CC00
+pick 0
+drivex k204_in battle 30 9000
+oppname
+bwinr k204_b
+drivex k204_after menu 30 9000
+unpin

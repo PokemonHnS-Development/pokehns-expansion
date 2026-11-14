@@ -202,6 +202,19 @@ static const u16 sRival_Pal[] = INCBIN_U16("graphics/naming_screen/silver.gbapal
 static const u16 sRival_Gfx[] = INCBIN_U16("graphics/naming_screen/rival.4bpp");
 static const u16 sRival_Pal[] = INCBIN_U16("graphics/naming_screen/rival.gbapal");
 #endif
+#if TEXT_RTL
+// Page tabs of the Hebrew build: "עברית" (blue) for the Hebrew page, "ABC" (orange) for the
+// Latin page, "סמלים" (green) for the symbols page. tools/hebrew/fonts/make_naming_tabs.py draws
+// the first two; the symbols tab is edited by hand. It has no row above its 7 letter rows, so the
+// ל of "סמלים" is 7 rows tall with its ascender on the top row, or it would not read as ל.
+static const u32 sPageSwapHebrew_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_hebrew.4bpp");
+static const u32 sPageSwapLatin_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_latin.4bpp");
+static const u32 sPageSwapSymbols_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_symbols.4bpp");
+// The side buttons say "חזרה" and "אישור", the hint bar's words, in the English buttons' frames
+// and letter style. The B BUTTON and START captions name hardware buttons and stay Latin.
+static const u32 sBackButtonHebrew_Gfx[] = INCBIN_U32("graphics/naming_screen/back_button_hebrew.4bpp");
+static const u32 sOkButtonHebrew_Gfx[] = INCBIN_U32("graphics/naming_screen/ok_button_hebrew.4bpp");
+#endif
 
 static const u8 *const sTransferredToPCMessages[] =
 {
@@ -212,7 +225,7 @@ static const u8 *const sTransferredToPCMessages[] =
 };
 
 
-static const u8 sText_RivalsName[] = _("RIVAL's NAME?");
+static const u8 sText_RivalsName[] = _("שם היריב?");
 static const u8 sText_AlphabetUpperLower[] = _("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!");
 
 static const struct BgTemplate sBgTemplates[] =
@@ -327,6 +340,37 @@ static const u8 sPageColumnXPos[KBPAGE_COUNT][KBCOL_COUNT] = {
     [KEYBOARD_SYMBOLS]       = {0, 22, 44, 66, 88, 110}
 };
 
+#if TEXT_RTL
+// The Hebrew build's pages: the first letter page (KEYBOARD_LETTERS_UPPER, blue) is Hebrew, the
+// second (KEYBOARD_LETTERS_LOWER, orange) holds the Latin capitals, the symbols page is unchanged.
+// Every page is printed into an unmirrored window at the columns the cursor sprite uses, so the
+// grid, the cursor and the D-pad agree; only the Hebrew page's own layout reads right to left.
+#define KEYBOARD_HEBREW KEYBOARD_LETTERS_UPPER
+#define KEYBOARD_LATIN  KEYBOARD_LETTERS_LOWER
+
+// The Hebrew page in visual order (column 0 is on the left). The alphabet starts at the top right
+// and reads right to left, the five final forms follow tav, and the punctuation column (with the
+// geresh, which transliterated names need) is on the left, the mirror image of the Latin pages.
+// The geresh is in the bottom row, away from the comma: the two glyphs are the same shape, and
+// on adjacent rows they read as a semicolon.
+static const u8 sHebrewKeyboardChars[KBROW_COUNT][KBCOL_COUNT] = {
+    {CHAR_PERIOD,          CHAR_HEB_ZAYIN, CHAR_HEB_VAV,         CHAR_HEB_HE,        CHAR_HEB_DALET,     CHAR_HEB_GIMEL,     CHAR_HEB_BET,       CHAR_HEB_ALEF},
+    {CHAR_COMMA,           CHAR_HEB_NUN,   CHAR_HEB_MEM,         CHAR_HEB_LAMED,     CHAR_HEB_KAF,       CHAR_HEB_YOD,       CHAR_HEB_TET,       CHAR_HEB_HET},
+    {CHAR_HYPHEN,          CHAR_HEB_SHIN,  CHAR_HEB_RESH,        CHAR_HEB_QOF,       CHAR_HEB_TSADI,     CHAR_HEB_PE,        CHAR_HEB_AYIN,      CHAR_HEB_SAMEKH},
+    {CHAR_SGL_QUOTE_RIGHT, CHAR_SPACE,     CHAR_HEB_FINAL_TSADI, CHAR_HEB_FINAL_PE,  CHAR_HEB_FINAL_NUN, CHAR_HEB_FINAL_MEM, CHAR_HEB_FINAL_KAF, CHAR_HEB_TAV},
+};
+
+// The Latin pages' columns mirrored inside the same grid: 123 - x of the opposite column.
+static const u8 sHebrewColumnXPos[KBCOL_COUNT] = {0, 31, 43, 55, 67, 99, 111, 123};
+
+static u8 GetKeyboardColumnXPos(u8 keyboard, u8 column)
+{
+    if (keyboard == KEYBOARD_HEBREW)
+        return sHebrewColumnXPos[column];
+    return sPageColumnXPos[keyboard][column];
+}
+#endif
+
 static const struct NamingScreenTemplate *const sNamingScreenTemplates[];
 static const struct SubspriteTable sSubspriteTable_PageSwapFrame[];
 static const struct SubspriteTable sSubspriteTable_PageSwapText[];
@@ -416,7 +460,7 @@ static void VBlankCB_NamingScreen(void);
 static void NamingScreen_ShowBgs(void);
 static bool8 IsWideLetter(u8);
 
-static const u8 sText_MoveOkBack[] = _("{DPAD_NONE}MOVE  {A_BUTTON}OK  {B_BUTTON}BACK");
+static const u8 sText_MoveOkBack[] = _("{DPAD_NONE}הזזה  {A_BUTTON}אישור  {B_BUTTON}חזרה");
 
 void DoNamingScreen(u8 templateNum, u8 *destBuffer, u16 monSpecies, u16 monGender, u32 monPersonality, bool8 isShiny, MainCallback returnCallback)
 {
@@ -548,6 +592,13 @@ static void NamingScreen_InitBGs(void)
 
     for (i = 0; i < WIN_COUNT; i++)
         sNamingScreen->windows[i] = AddWindow(&sWindowTemplates[i]);
+#if TEXT_RTL
+    // The keys sit under the cursor sprite's columns and the entry characters on the underscore
+    // sprites' slots: both place every character themselves (PrintKeyboardKeys, DrawTextEntry).
+    SetWindowRtlMode(sNamingScreen->windows[WIN_KB_PAGE_1], WINDOW_RTL_LTR);
+    SetWindowRtlMode(sNamingScreen->windows[WIN_KB_PAGE_2], WINDOW_RTL_LTR);
+    SetWindowRtlMode(sNamingScreen->windows[WIN_TEXT_ENTRY], WINDOW_RTL_LTR);
+#endif
 
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
     SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_BG1 | BLDCNT_TGT2_BG2);
@@ -786,12 +837,18 @@ static bool8 MainState_WaitPageSwap(void)
     s16 cursorX;
     s16 cursorY;
     bool32 onLastColumn;
+#if TEXT_RTL
+    bool32 wasHebrew;
+#endif
 
     if (IsPageSwapAnimNotInProgress())
     {
 
         GetCursorPos(&cursorX, &cursorY);
         onLastColumn = (cursorX == GetCurrentPageColumnCount());
+#if TEXT_RTL
+        wasHebrew = (CurrentPageToKeyboardId() == KEYBOARD_HEBREW);
+#endif
 
         sNamingScreen->state = STATE_HANDLE_INPUT;
         sNamingScreen->currentPage++;
@@ -803,6 +860,12 @@ static bool8 MainState_WaitPageSwap(void)
         }
         else
         {
+#if TEXT_RTL
+            // The Hebrew page is laid out right to left: keep the cursor on the same side of the
+            // keyboard, so it lands on א when coming from the first column of a Latin page.
+            if (wasHebrew != (CurrentPageToKeyboardId() == KEYBOARD_HEBREW))
+                cursorX = KBCOL_COUNT - 1 - cursorX;
+#endif
             if (cursorX >= GetCurrentPageColumnCount())
                 cursorX = GetCurrentPageColumnCount() - 1;
         }
@@ -1095,7 +1158,12 @@ static void SpriteCB_InputArrow(struct Sprite *sprite)
         sprite->sDelay = 8;
         sprite->sXPosId = MOD(sprite->sXPosId + 1, ARRAY_COUNT(x));
     }
+#if TEXT_RTL
+    // The arrow is on the right of the entry, pointing left, so it bobs to the right
+    sprite->x2 = -x[sprite->sXPosId];
+#else
     sprite->x2 = x[sprite->sXPosId];
+#endif
 }
 
 #undef sDelay
@@ -1111,6 +1179,12 @@ static void SpriteCB_Underscore(struct Sprite *sprite)
     u8 pos;
 
     pos = GetTextEntryPosition();
+#if TEXT_RTL
+    // A typed letter shows without its underscore: the bar covers the tails of ן ך ף ץ ק and
+    // under ר reads as the base of ב. The filled slots are the first ones from the right, and
+    // sId counts the slots from the right.
+    sprite->invisible = (sNamingScreen->textBuffer[(u8)sprite->sId] != EOS);
+#endif
     if (pos != (u8)sprite->sId)
     {
         sprite->y2 = 0;
@@ -1152,7 +1226,12 @@ static void CreateCursorSprite(void)
     gSprites[sNamingScreen->cursorSpriteId].oam.objMode = ST_OAM_OBJ_BLEND;
     gSprites[sNamingScreen->cursorSpriteId].sColorIncr = 1; // ? immediately overwritten
     gSprites[sNamingScreen->cursorSpriteId].sColorIncr = 2;
+#if TEXT_RTL
+    // Start on alef, the top-right key of the Hebrew page
+    SetCursorPos(KBCOL_COUNT - 1, 0);
+#else
     SetCursorPos(0, 0);
+#endif
 }
 
 static void SetCursorPos(s16 x, s16 y)
@@ -1160,7 +1239,11 @@ static void SetCursorPos(s16 x, s16 y)
     struct Sprite *cursorSprite = &gSprites[sNamingScreen->cursorSpriteId];
 
     if (x < sPageColumnCounts[CurrentPageToKeyboardId()])
+#if TEXT_RTL
+        cursorSprite->x = GetKeyboardColumnXPos(CurrentPageToKeyboardId(), x) + 38;
+#else
         cursorSprite->x = sPageColumnXPos[CurrentPageToKeyboardId()][x] + 38;
+#endif
     else
         cursorSprite->x = 0;
 
@@ -1378,6 +1461,26 @@ static void CreateTextEntrySprites(void)
     s16 xPos;
     u8 i;
 
+#if TEXT_RTL
+    // The entry is the mirror image of the English one: the name starts in the rightmost slot,
+    // so the arrow is on the right pointing left, and the slot that bobs is counted from the right.
+    u8 maxChars = sNamingScreen->template->maxChars;
+
+    xPos = sNamingScreen->inputCharBaseXPos + maxChars * 8 + 3;
+    spriteId = CreateSprite(&sSpriteTemplate_InputArrow, xPos, 56, 0);
+    gSprites[spriteId].oam.priority = 3;
+    gSprites[spriteId].invisible = TRUE;
+    gSprites[spriteId].hFlip = TRUE;
+    gSprites[spriteId].oam.matrixNum |= ST_OAM_HFLIP;
+    xPos = sNamingScreen->inputCharBaseXPos;
+    for (i = 0; i < maxChars; i++, xPos += 8)
+    {
+        spriteId = CreateSprite(&sSpriteTemplate_Underscore, xPos + 3, 60, 0);
+        gSprites[spriteId].oam.priority = 3;
+        gSprites[spriteId].data[0] = maxChars - 1 - i;
+        gSprites[spriteId].invisible = TRUE;
+    }
+#else
     xPos = sNamingScreen->inputCharBaseXPos - 5;
     spriteId = CreateSprite(&sSpriteTemplate_InputArrow, xPos, 56, 0);
     gSprites[spriteId].oam.priority = 3;
@@ -1390,6 +1493,7 @@ static void CreateTextEntrySprites(void)
         gSprites[spriteId].data[0] = i;
         gSprites[spriteId].invisible = TRUE;
     }
+#endif
 }
 
 //--------------------------------------------------
@@ -1558,7 +1662,14 @@ static void CreateShinyStarSprite(void)
 
     // Create sprite near the mon icon
     // Mon icon is at (56, 40), place star to the bottom-right
+#if TEXT_RTL
+    // Beside the gender symbol, which is on the left of the mirrored entry: 188 mirrored around
+    // the middle of the underscores (base + maxChars * 4 - 1.5), for an 8 px wide sprite
+    spriteId = CreateSprite(&sSpriteTemplate_ShinyStarIcon,
+                            2 * (sNamingScreen->inputCharBaseXPos + sNamingScreen->template->maxChars * 4) - 2 - 188, 58, 0);
+#else
     spriteId = CreateSprite(&sSpriteTemplate_ShinyStarIcon, 188, 58, 0);
+#endif
     sNamingScreen->shinyStarSprite = &gSprites[spriteId];
     sNamingScreen->shinyStarSprite->oam.priority = 2;
 
@@ -1651,6 +1762,10 @@ static void SwapKeyboardToLowerAfterFirstCapitalLetter(void)
 {
     if (AUTO_LOWERCASE_KEYBOARD < GEN_6)
         return;
+#if TEXT_RTL
+    // The first letter page is Hebrew, which has no case
+    return;
+#endif
 
     if (sNamingScreen->currentPage != KBPAGE_LETTERS_UPPER)
         return;
@@ -1885,9 +2000,40 @@ static void DrawMonTextEntryBox(void)
 {
     u8 buffer[64];
 
+#if TEXT_RTL
+    // The species name goes where the title's {STR_VAR_1} is, so a translation can put it
+    // anywhere in the sentence. (English prints the name and then the title, whose placeholder
+    // bytes the printer skips.) gStringVar1 is left alone: the caller's script may still use it.
+    u8 name[POKEMON_NAME_BUFFER_SIZE + 6];
+    const u8 *title = sNamingScreen->template->title;
+    u8 *dest = buffer;
+    u8 *end = StringCopy(name, GetSpeciesName(sNamingScreen->monSpecies));
+#if RTL_STRING_REPORT
+    RtlStringReport(title);
+#endif
+#line 2011
+
+    WrapFontIdToFit(name, end, FONT_NORMAL, 128 - 64);
+    while (*title != EOS && dest < buffer + sizeof(buffer) - 1)
+    {
+        if (title[0] == PLACEHOLDER_BEGIN && title[1] == PLACEHOLDER_ID_STRING_VAR_1)
+        {
+            const u8 *src = name;
+            while (*src != EOS && dest < buffer + sizeof(buffer) - 1)
+                *dest++ = *src++;
+            title += 2;
+        }
+        else
+        {
+            *dest++ = *title++;
+        }
+    }
+    *dest = EOS;
+#else
     u8 *end = StringCopy(buffer, GetSpeciesName(sNamingScreen->monSpecies));
     WrapFontIdToFit(buffer, end, FONT_NORMAL, 128 - 64);
     StringAppendN(end, sNamingScreen->template->title, 15);
+#endif
     FillWindowPixelBuffer(sNamingScreen->windows[WIN_TEXT_ENTRY_BOX], PIXEL_FILL(1));
     AddTextPrinterParameterized(sNamingScreen->windows[WIN_TEXT_ENTRY_BOX], FONT_NORMAL, buffer, 8, 1, 0, 0);
     PutWindowTilemap(sNamingScreen->windows[WIN_TEXT_ENTRY_BOX]);
@@ -1947,12 +2093,29 @@ static void DrawGenderIcon(void)
             StringCopy(text, gText_FemaleSymbol);
             isFemale = TRUE;
         }
+#if TEXT_RTL
+        // After the name in reading order: left of the first (leftmost) slot, with the same 4 px
+        // gap to its underscore as the English symbol has right of the last slot
+        AddTextPrinterParameterized3(sNamingScreen->windows[WIN_TEXT_ENTRY], FONT_NORMAL,
+                                     sNamingScreen->inputCharBaseXPos - 64 - 4 - GetStringWidth(FONT_NORMAL, text, 0),
+                                     1, sGenderColors[isFemale], TEXT_SKIP_DRAW, text);
+#else
         AddTextPrinterParameterized3(sNamingScreen->windows[WIN_TEXT_ENTRY], FONT_NORMAL, (POKEMON_NAME_LENGTH * 4) + 64, 1, sGenderColors[isFemale], TEXT_SKIP_DRAW, text);
+#endif
     }
 }
 
 static u8 GetCharAtKeyboardPos(s16 x, s16 y)
 {
+#if TEXT_RTL
+    switch (CurrentPageToKeyboardId())
+    {
+    case KEYBOARD_HEBREW:
+        return sHebrewKeyboardChars[y][x];
+    case KEYBOARD_LATIN:
+        return sKeyboardChars[KEYBOARD_LETTERS_UPPER][y][x];
+    }
+#endif
     return sKeyboardChars[CurrentPageToKeyboardId()][y][x];
 }
 
@@ -2086,6 +2249,120 @@ static void NamingScreen_Dummy(u8 bg, u8 page)
 
 }
 
+#if TEXT_RTL
+enum {
+    NAME_CLASS_NEUTRAL,
+    NAME_CLASS_RTL,
+    NAME_CLASS_LTR,
+    NAME_CLASS_DIGIT,
+    NAME_CLASS_NUM_PREFIX,
+};
+
+// The renderer's bidi classes (text.c, sRtlCharClass) for every character a keyboard page can
+// type: Hebrew is right to left, Latin letters and digits left to right, a hyphen before a digit
+// joins the number, and everything else takes the direction around it.
+static u32 GetNameCharClass(u8 c)
+{
+    if (IS_HEBREW_CHAR(c))
+        return NAME_CLASS_RTL;
+    if (c >= CHAR_0 && c <= CHAR_9)
+        return NAME_CLASS_DIGIT;
+    if (c >= CHAR_A && c <= CHAR_z)
+        return NAME_CLASS_LTR;
+    if (c == CHAR_HYPHEN)
+        return NAME_CLASS_NUM_PREFIX;
+    return NAME_CLASS_NEUTRAL;
+}
+
+static bool32 IsStrongNameChar(const u8 *name, u32 i, u32 length)
+{
+    u32 class = GetNameCharClass(name[i]);
+
+    if (class == NAME_CLASS_LTR || class == NAME_CLASS_DIGIT)
+        return TRUE;
+    return class == NAME_CLASS_NUM_PREFIX && i + 1 < length && GetNameCharClass(name[i + 1]) == NAME_CLASS_DIGIT;
+}
+
+// Writes the first length characters of name (stored in reading order) into dest in the order
+// they appear from left to right, as a right-to-left window prints them (RtlBeginRun in text.c):
+// Hebrew and neutral characters right to left, and a run of Latin letters or digits, with the
+// punctuation between them, left to right as one block.
+static void NameToVisualOrder(const u8 *name, u32 length, u8 *dest)
+{
+    u8 unitStart[POKEMON_NAME_LENGTH + 4];
+    u8 unitLength[POKEMON_NAME_LENGTH + 4];
+    u32 numUnits = 0;
+    u32 i = 0;
+
+    while (i < length && numUnits < ARRAY_COUNT(unitStart))
+    {
+        u32 start = i;
+
+        if (IsStrongNameChar(name, i, length))
+        {
+            u32 end = i;
+            while (i < length && GetNameCharClass(name[i]) != NAME_CLASS_RTL)
+            {
+                if (IsStrongNameChar(name, i, length))
+                    end = i + 1;
+                i++;
+            }
+            i = end;
+        }
+        else
+        {
+            i++;
+        }
+        unitStart[numUnits] = start;
+        unitLength[numUnits] = i - start;
+        numUnits++;
+    }
+
+    while (numUnits > 0)
+    {
+        numUnits--;
+        for (i = 0; i < unitLength[numUnits]; i++)
+            *dest++ = name[unitStart[numUnits] + i];
+    }
+}
+
+// The entry reads right to left: the name fills the slots from the right, laid out as it will be
+// printed everywhere else, and the next character goes into the slot left of it.
+static void DrawTextEntry(void)
+{
+    u8 i;
+    u8 temp[2];
+    u8 visual[ARRAY_COUNT(sNamingScreen->textBuffer)];
+    u8 maxChars = sNamingScreen->template->maxChars;
+    u8 length = 0;
+    u16 x = sNamingScreen->inputCharBaseXPos - 0x40;
+
+    FillWindowPixelBuffer(sNamingScreen->windows[WIN_TEXT_ENTRY], PIXEL_FILL(1));
+
+    while (length < maxChars && sNamingScreen->textBuffer[length] != EOS)
+        length++;
+    NameToVisualOrder(sNamingScreen->textBuffer, length, visual);
+
+    for (i = 0; i < length; i++)
+    {
+        u32 slotX = (maxChars - length + i) * 8 + x;
+
+        temp[0] = visual[i];
+        temp[1] = EOS;
+        if (IsWideLetter(temp[0]) == TRUE)
+            slotX += 2;
+        // A Hebrew letter is centred in its slot. Pushed to one side, a narrow letter (yod, vav,
+        // final nun) left its whole spare width as a gap on the other side, which read as a space.
+        else if (IS_HEBREW_CHAR(temp[0]))
+            slotX += (7 - GetStringWidth(FONT_NORMAL, temp, 0)) / 2;
+        AddTextPrinterParameterized(sNamingScreen->windows[WIN_TEXT_ENTRY], FONT_NORMAL, temp, slotX, 1, TEXT_SKIP_DRAW, NULL);
+    }
+
+    TryDrawGenderIcon();
+    CopyWindowToVram(sNamingScreen->windows[WIN_TEXT_ENTRY], COPYWIN_GFX);
+    PutWindowTilemap(sNamingScreen->windows[WIN_TEXT_ENTRY]);
+}
+#else
 static void DrawTextEntry(void)
 {
     u8 i;
@@ -2109,6 +2386,7 @@ static void DrawTextEntry(void)
     CopyWindowToVram(sNamingScreen->windows[WIN_TEXT_ENTRY], COPYWIN_GFX);
     PutWindowTilemap(sNamingScreen->windows[WIN_TEXT_ENTRY]);
 }
+#endif
 
 ALIGNED(4) static const u8 sTextColorStruct[3][4] =
 {
@@ -2131,14 +2409,52 @@ static const u8 *const sKeyboardTextColors[KBPAGE_COUNT] =
     [KEYBOARD_SYMBOLS]       = sTextColorStruct[2]
 };
 
+#if TEXT_RTL
+// Each Hebrew key is printed on its own, centred where the Latin pages centre theirs in the
+// cursor box (a 6 px capital starts 11 px into its column).
+static void PrintHebrewKeyboardKeys(u8 window, u8 page)
+{
+    u8 row, col;
+    u8 key[2];
+
+    key[1] = EOS;
+    for (row = 0; row < KBROW_COUNT; row++)
+    {
+        for (col = 0; col < KBCOL_COUNT; col++)
+        {
+            key[0] = sHebrewKeyboardChars[row][col];
+            if (key[0] == CHAR_SPACE)
+                continue;
+            AddTextPrinterParameterized3(window, FONT_NORMAL,
+                                         sHebrewColumnXPos[col] + 14 - (GetStringWidth(FONT_NORMAL, key, 0) + 1) / 2,
+                                         row * 16 + 1, sKeyboardTextColors[page], TEXT_SKIP_DRAW, key);
+        }
+    }
+    CopyWindowToVram(window, COPYWIN_GFX);
+}
+#endif
+
 static void PrintKeyboardKeys(u8 window, u8 page)
 {
     u8 i;
 
     FillWindowPixelBuffer(window, sFillValues[page]);
 
+#if TEXT_RTL
+    if (page == KEYBOARD_HEBREW)
+    {
+        PrintHebrewKeyboardKeys(window, page);
+        PutWindowTilemap(window);
+        return;
+    }
+    // The Latin page shows the capitals in the second page's colours
+    for (i = 0; i < KBROW_COUNT; i++)
+        AddTextPrinterParameterized3(window, FONT_NORMAL, 0, i * 16 + 1, sKeyboardTextColors[page], 0,
+                                     sNamingScreenKeyboardText[page == KEYBOARD_LATIN ? KEYBOARD_LETTERS_UPPER : page][i]);
+#else
     for (i = 0; i < KBROW_COUNT; i++)
         AddTextPrinterParameterized3(window, FONT_NORMAL, 0, i * 16 + 1, sKeyboardTextColors[page], 0, sNamingScreenKeyboardText[page][i]);
+#endif
 
     PutWindowTilemap(window);
 }
@@ -2282,7 +2598,7 @@ static const struct NamingScreenTemplate sPlayerNamingScreenTemplate =
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 35,
-    .title = COMPOUND_STRING("YOUR NAME?"),
+    .title = COMPOUND_STRING("השם שלך?"),
 };
 
 static const struct NamingScreenTemplate sPCBoxNamingTemplate =
@@ -2293,7 +2609,7 @@ static const struct NamingScreenTemplate sPCBoxNamingTemplate =
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 19,
-    .title = COMPOUND_STRING("BOX NAME?"),
+    .title = COMPOUND_STRING("שם התיבה?"),
 };
 
 static const struct NamingScreenTemplate sMonNamingScreenTemplate =
@@ -2304,7 +2620,7 @@ static const struct NamingScreenTemplate sMonNamingScreenTemplate =
     .addGenderIcon = TRUE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 35,
-    .title = COMPOUND_STRING("{STR_VAR_1}'s nickname?"),
+    .title = COMPOUND_STRING("כינוי ל{STR_VAR_1}?"),
 };
 
 static const struct NamingScreenTemplate sWaldaWordsScreenTemplate =
@@ -2315,7 +2631,7 @@ static const struct NamingScreenTemplate sWaldaWordsScreenTemplate =
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 11,
-    .title = COMPOUND_STRING("Tell him the words."),
+    .title = COMPOUND_STRING("מה לומר לו?"),
 };
 
 static const struct NamingScreenTemplate sCodeScreenTemplate =
@@ -2326,7 +2642,7 @@ static const struct NamingScreenTemplate sCodeScreenTemplate =
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 35,
-    .title = COMPOUND_STRING("Enter code:"),
+    .title = COMPOUND_STRING("הזנת קוד:"),
 };
 
 static const struct NamingScreenTemplate sRivalNamingScreenTemplate =
@@ -2786,13 +3102,24 @@ static const u8 *const sNamingScreenKeyboardText[KBPAGE_COUNT][KBROW_COUNT] =
 
 static const struct SpriteSheet sSpriteSheets[] =
 {
+#if TEXT_RTL
+    {sBackButtonHebrew_Gfx,           0x1E0,  GFXTAG_BACK_BUTTON},
+    {sOkButtonHebrew_Gfx,             0x1E0,  GFXTAG_OK_BUTTON},
+#else
     {gNamingScreenBackButton_Gfx,     0x1E0,  GFXTAG_BACK_BUTTON},
     {gNamingScreenOKButton_Gfx,       0x1E0,  GFXTAG_OK_BUTTON},
+#endif
     {gNamingScreenPageSwapFrame_Gfx,  0x280,  GFXTAG_PAGE_SWAP_FRAME},
     {gNamingScreenPageSwapButton_Gfx, 0x100,  GFXTAG_PAGE_SWAP_BUTTON},
+#if TEXT_RTL
+    {sPageSwapHebrew_Gfx,             0x060,  GFXTAG_PAGE_SWAP_UPPER},
+    {sPageSwapLatin_Gfx,              0x060,  GFXTAG_PAGE_SWAP_LOWER},
+    {sPageSwapSymbols_Gfx,            0x060,  GFXTAG_PAGE_SWAP_OTHERS},
+#else
     {gNamingScreenPageSwapUpper_Gfx,  0x060,  GFXTAG_PAGE_SWAP_UPPER},
     {gNamingScreenPageSwapLower_Gfx,  0x060,  GFXTAG_PAGE_SWAP_LOWER},
     {gNamingScreenPageSwapOthers_Gfx, 0x060,  GFXTAG_PAGE_SWAP_OTHERS},
+#endif
     {gNamingScreenCursor_Gfx,         0x080,  GFXTAG_CURSOR},
     {gNamingScreenCursorSquished_Gfx, 0x080,  GFXTAG_CURSOR_SQUISHED},
     {gNamingScreenCursorFilled_Gfx,   0x080,  GFXTAG_CURSOR_FILLED},

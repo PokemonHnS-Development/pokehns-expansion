@@ -1,0 +1,46 @@
+# The bag's 2x2 item context menu and the d-pad (src/item_menu.c Task_ItemContext_MultipleRows
+# :1868, ChangeMenuGridCursorPosition src/menu.c:1114). The Hebrew window is mirrored (USE drawn on
+# the right, GIVE on the left); one shot after each key: start, LEFT, RIGHT, RIGHT, LEFT, DOWN, LEFT,
+# RIGHT. Start: saves/r3fi_base.sav, ITEMS pocket index 37 = ESCAPE ROPE.
+start saves/r3fi_base.sav
+include ../../scripts/continue.txt
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 22
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap r3fi_cx_01_start_use
+tap LEFT 4
+waitquiet
+snap r3fi_cx_02_left
+tap RIGHT 4
+waitquiet
+snap r3fi_cx_03_right
+tap RIGHT 4
+waitquiet
+snap r3fi_cx_04_right_again
+tap LEFT 4
+waitquiet
+snap r3fi_cx_05_left
+tap DOWN 4
+waitquiet
+snap r3fi_cx_06_down
+tap LEFT 4
+waitquiet
+snap r3fi_cx_07_left
+tap RIGHT 4
+waitquiet
+snap r3fi_cx_08_right
+tap B 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

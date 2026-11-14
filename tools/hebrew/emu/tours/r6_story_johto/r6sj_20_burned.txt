@@ -1,0 +1,38 @@
+# Burned Tower 1F (data/maps/BurnedTower_1F_hns/scripts.inc): Eusine's meeting (ON_FRAME at
+# VAR_ECRUTEAK_CITY_STATE 1, MeetEusine :18-30), then the third rival battle for each starter
+# (BurnedTower_1F_EventScript_Silver at (15,12), state 2, :81-120: before text, battle, after text,
+# the floor gives way, the fall to B1F; the B1F beasts scene that follows was seen in r5 and is only
+# walked through here). Ladder 3 rewound to before s3d_ecruteak.inc's Burned Tower blocks.
+start saves/r6sj_ladder3_ecruteak.sav
+include _base.txt
+include _mewtwo.txt
+ev setvar VAR_ECRUTEAK_CITY_STATE, 1; clearflag FLAG_HIDE_BURNED_TOWER_NPCS; clearflag FLAG_HIDE_BURNED_TOWER_BEASTS; clearflag FLAG_HIDE_BURNED_TOWER_B1F_EUSINE; clearflag FLAG_RELEASED_BEASTS; settrainerflag TRAINER_NARD_HNS; settrainerflag TRAINER_RICHARDO_HNS; end
+warpraw MAP_BURNED_TOWER_1F_HNS 15 21
+scene eus 30000 40
+snap eus_end
+# VAR_STARTER_MON 0: the rival has Cyndaquil
+ev setvar VAR_STARTER_MON, 0; cleartrainerflag TRAINER_RIVAL_CYNDAQUIL_3_HNS; end
+walkto 15 12
+scene r3cyn_pre 20000
+bwalk r3cyn_intro input:HandleInputChooseAction
+bwin r3cyn_win
+sceneto r3cyn_after MAP_BURNED_TOWER_B1F_HNS 40000 40
+scene r3cyn_b1f 60000
+# VAR_STARTER_MON 1: Totodile
+ev setvar VAR_STARTER_MON, 1; cleartrainerflag TRAINER_RIVAL_TOTODILE_3_HNS; setvar VAR_ECRUTEAK_CITY_STATE, 2; clearflag FLAG_HIDE_BURNED_TOWER_NPCS; clearflag FLAG_HIDE_BURNED_TOWER_BEASTS; clearflag FLAG_HIDE_BURNED_TOWER_B1F_EUSINE; clearflag FLAG_RELEASED_BEASTS; end
+warpto MAP_BURNED_TOWER_1F_HNS 15 14
+walkto 15 12
+scene r3tot_pre 20000
+bwalk r3tot_intro input:HandleInputChooseAction
+bwin r3tot_win
+sceneto r3tot_after MAP_BURNED_TOWER_B1F_HNS 40000 40
+scene r3tot_b1f 60000
+# VAR_STARTER_MON 2: Chikorita
+ev setvar VAR_STARTER_MON, 2; cleartrainerflag TRAINER_RIVAL_CHIKORITA_3_HNS; setvar VAR_ECRUTEAK_CITY_STATE, 2; clearflag FLAG_HIDE_BURNED_TOWER_NPCS; clearflag FLAG_HIDE_BURNED_TOWER_BEASTS; clearflag FLAG_HIDE_BURNED_TOWER_B1F_EUSINE; clearflag FLAG_RELEASED_BEASTS; end
+warpto MAP_BURNED_TOWER_1F_HNS 15 14
+walkto 15 12
+scene r3chi_pre 20000
+bwalk r3chi_intro input:HandleInputChooseAction
+bwin r3chi_win
+sceneto r3chi_after MAP_BURNED_TOWER_B1F_HNS 40000 40
+scene r3chi_b1f 60000

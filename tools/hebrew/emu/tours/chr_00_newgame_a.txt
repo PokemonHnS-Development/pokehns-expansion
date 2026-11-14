@@ -1,0 +1,142 @@
+# Challenge save A for the runtime rule screens (chr_* tours): new game, then the
+# challenge menu set to NUZLOCKE NORMAL (species clause, shiny clause and nicknaming ON,
+# deletion OFF = cemetery: the dead go to the PC; Infinite Rare Candy, OFF by default, ON), DIFFICULTY level
+# cap NORMAL, battle items for the player NO, Escape Rope/Dig NO; CHALLENGES Pokemon Center
+# NO (no Center visits), one type FIRE. Row and value orders: src/challenge_menu.c:58-133,
+# 1980-2095. Ends saved in the bedroom: keepsave chal_a.
+start empty
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+snap chr_nga_00_mainmenu
+tap A 30                                         # NEW GAME
+
+waitkey 3000
+talk chr_nga_01_intro 40 -
+waittask Task_NewGameHnsSpeech_ChooseGender 3000
+10 -
+snap chr_nga_02_boyorgirl_menu
+press DOWN                                       # GIRL: the player sprite slides
+waittask Task_NewGameHnsSpeech_ChooseGender 600
+waitquiet
+30 -
+snap chr_nga_02_boyorgirl_girl
+press UP
+waittask Task_NewGameHnsSpeech_ChooseGender 600
+30 -
+snap chr_nga_02_boyorgirl_boy
+tap A 30                                         # BOY
+waittask Task_NewGameHnsSpeech_WaitPressBeforeNameChoice 600
+snap chr_nga_03_whatsyourname
+tap A 30
+waitcb2 CB2_NamingScreen 600
+waittask naming_screen:Task_HandleInput 600
+30 -
+tap START 30
+tap A 30
+waittask Task_NewGameHnsSpeech_ProcessNameYesNoMenu 900
+10 -
+snap chr_nga_04_soitsplayer_yesno
+tap A 30                                         # YES
+
+waitkey 1200
+talk chr_nga_05_disclaimer 12 -
+waittask Task_NewGameHnsSpeech_WaitPressDisclaimer 600
+snap chr_nga_05_disclaimer_last
+tap A 30
+waittask challenge_menu:Task_ProcessInput 900
+waitquiet
+
+# ---- MODE tab stays RECOMMENDED; FEATURES and RANDOMIZER untouched
+press R
+press R
+press R
+# ---- NUZLOCKE: OFF -> EASY -> NORMAL; the sub rows keep their defaults (0 = ON / cemetery)
+press ROWNEXT
+press ROWNEXT
+snap chr_nga_nuz_r00
+press DOWN
+snap chr_nga_nuz_r01
+press DOWN
+snap chr_nga_nuz_r02
+press DOWN
+snap chr_nga_nuz_r03
+press DOWN
+snap chr_nga_nuz_r04
+press DOWN
+snap chr_nga_nuz_r05
+press ROWNEXT                               # Infinite Rare Candy defaults to OFF: ON
+snap chr_nga_nuz_r05_on
+press UP
+press UP
+press UP
+press UP
+press UP
+press R
+# ---- DIFFICULTY: level cap NORMAL (row 1), player items NO (row 3), Escape Rope/Dig NO (row 10)
+press DOWN
+press ROWNEXT
+snap chr_nga_diff_r01
+press DOWN
+press DOWN
+press ROWNEXT
+snap chr_nga_diff_r03
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press ROWNEXT
+snap chr_nga_diff_r10
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press R
+# ---- CHALLENGES: Pokemon Center NO (row 0), one type 19 (OFF) -> 9 (FIRE) (row 3)
+press ROWNEXT
+snap chr_nga_chal_r00
+press DOWN
+press DOWN
+press DOWN
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+snap chr_nga_chal_r03
+press UP
+press UP
+press UP
+
+# ---- Confirmation and closing lines
+press R
+waittask Task_CallYesOrNoCallback 120
+10 -
+snap chr_nga_confirm
+tap A 30                                         # YES
+waittask Task_NewGameHnsSpeech_WaitForTextAfterChallengeMenu 600
+waitquiet
+20 -
+tap A 30
+waitkey 1200
+talk chr_nga_ready 20 -
+waitkey 1200
+talk chr_nga_areyouready 20 -
+waitcb2 CB2_Overworld 3000 A
+waitctl 1200
+snap chr_nga_bedroom
+savegame
+keepsave chal_a

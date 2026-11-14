@@ -1,0 +1,39 @@
+# Ilex Forest (data/maps/IlexForest_hns/scripts.inc): the Farfetch'd chase (Farfetchd_1A from below
+# :43-62, then Farfetchd_2A; at VAR_ILEX_FOREST_FARFETCHD 1 Farfetchd_1A -> Farfetchd_Leave :159-170,
+# state 2, the charcoal master appears), the master's HM01 Cut (TriggerBot (26,44) -> Trigger
+# :183-205), the apprentice after it, and the Kimono Girl (Kimono :315-361 at (55,11), state 3,
+# YES/NO). Ladder 2 + s3a + the Azalea trigger + s3b up to the second rival battle.
+start saves/r6sj_ladder2_badge1.sav
+include _base.txt
+include _mewtwo.txt
+include _l2_azalea.txt
+ev setflag FLAG_HIDE_KURT_1; setflag FLAG_HIDE_AZALEA_TOWN_WELL_ROCKET; settrainerflag TRAINER_GRUNT_21_HNS; settrainerflag TRAINER_GRUNT_22_HNS; settrainerflag TRAINER_ETO_HNS; settrainerflag TRAINER_PROTON_1_HNS; setflag FLAG_HIDE_AZALEA_TOWN_ROCKETS; setflag FLAG_HIDE_SLOWPOKE_WELL_KURT; clearflag FLAG_HIDE_KURT_2; clearflag FLAG_HIDE_AZALEA_TOWN_SLOWPOKE; additem ITEM_FAST_BALL; settrainerflag TRAINER_BUGSY_1_HNS; setflag FLAG_BADGE02_GET; setflag FLAG_DEFEATED_AZALEA_TOWN_GYM; addvar VAR_NUM_BADGES, 1; setflag FLAG_HIDE_AZALEA_TOWN_FARFETCHD; setflag FLAG_GET_HEADBUTT; clearflag FLAG_HIDE_ILEX_FOREST_APPRENTICE; clearflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_1; settrainerflag TRAINER_RIVAL_TOTODILE_2_HNS; setflag FLAG_HIDE_AZALEA_TOWN_SILVER; setvar VAR_AZALEA_TOWN_STATE, 6; setvar VAR_ILEX_FOREST_FARFETCHD, 0; end
+warpto MAP_ILEX_FOREST_HNS 42 48
+snap ff_field
+face UP
+tap A 4
+scene ff1a 8000
+snap ff1a_end
+ev setvar VAR_ILEX_FOREST_FARFETCHD, 1; clearflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_1; setflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_2; end
+warpto MAP_ILEX_FOREST_HNS 33 52
+face UP
+tap A 4
+scene ffleave 8000
+snap ffleave_end
+warpto MAP_ILEX_FOREST_HNS 23 44
+snap cut_field
+walkto 26 44
+scene cut 20000
+snap cut_end
+ev clearflag FLAG_HIDE_ILEX_FOREST_APPRENTICE; end
+warpto MAP_ILEX_FOREST_HNS 27 43
+face UP
+tap A 4
+scene appr 6000
+warpto MAP_ILEX_FOREST_HNS 55 13
+snap kim_field
+walkto 55 11
+scene kim 20000 40
+yesno kim_yn YES
+scene kim_after 30000 40
+snap kim_end

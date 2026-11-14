@@ -1320,7 +1320,7 @@ bool8 CloseMuseumFossilPic(void)
     return TRUE;
 }
 
-static const u8 sText_Other[] = _("OTHER");
+static const u8 sText_Other[] = _("אחר");
 
 void DrawSeagallopDestinationMenu(void)
 {

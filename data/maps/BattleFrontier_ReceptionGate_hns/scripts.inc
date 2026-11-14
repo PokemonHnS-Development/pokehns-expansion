@@ -297,212 +297,190 @@ BattleFrontier_ReceptionGate_EventScript_ExitFrontierPassGuide_hns::
 	end
 
 BattleFrontier_ReceptionGate_Text_FirstTimeHereThisWay_hns:
-	.string "Is it your first time here?\n"
-	.string "Please step this way!$"
+	.string "זו הפעם הראשונה שלך כאן?\n"
+	.string "בבקשה, מכאן!$"
 
 BattleFrontier_ReceptionGate_Text_WelcomeToBattleFrontier_hns:
-	.string "The front lines of POKéMON battling!\n"
-	.string "Welcome to the BATTLE FRONTIER!$"
+	.string "קו החזית של קרבות הפוקימונים!\n"
+	.string "ברוכים הבאים לחזית הקרב!$"
 
 BattleFrontier_ReceptionGate_Text_IssueFrontierPass_hns:
-	.string "For a first-time visitor, we issue\n"
-	.string "the FRONTIER PASS.\p"
-	.string "It's for use at all the facilities\n"
-	.string "in the BATTLE FRONTIER.\p"
-	.string "Here you are!$"
+	.string "למבקרים בפעם הראשונה אנחנו מנפיקים\n"
+	.string "את כרטיס חזית הקרב.\p"
+	.string "הוא משמש בכל המתקנים\n"
+	.string "של חזית הקרב.\p"
+	.string "הנה, בבקשה!$"
 
 BattleFrontier_ReceptionGate_Text_ObtainedFrontierPass_hns:
-	.string "{PLAYER} obtained\n"
-	.string "the FRONTIER PASS.$"
+	.string "{PLAYER} קיבל\n"
+	.string "את כרטיס חזית הקרב.$"
 
 BattleFrontier_ReceptionGate_Text_PlacedTrainerCardInFrontierPass_hns:
-	.string "{PLAYER} placed the TRAINER CARD\n"
-	.string "in the FRONTIER PASS.$"
+	.string "{PLAYER} צירף את כרטיס המאמן\n"
+	.string "לכרטיס חזית הקרב.$"
 
 BattleFrontier_ReceptionGate_Text_EnjoyBattleFrontier_hns:
-	.string "We hope you enjoy all that the BATTLE\n"
-	.string "FRONTIER has to offer!$"
+	.string "אנחנו מקווים שתיהנה מכל מה\n"
+	.string "שחזית הקרב מציעה!$"
 
 BattleFrontier_ReceptionGate_Text_IfItIsntPlayerYouCame_hns:
-	.string "???: Well, if it isn't {PLAYER}{KUN}!\n"
-	.string "You came out here!$"
+	.string "???: תראו מי כאן, {PLAYER}{KUN}!\n"
+	.string "הגעת עד לכאן!$"
 
 BattleFrontier_ReceptionGate_Text_OhMrScottGoodDay_hns:
-	.string "GUIDE: Oh! MR. SCOTT, sir!\n"
-	.string "Good day to you, sir!$"
+	.string "מדריכה: אה! מר סקוט!\n"
+	.string "יום טוב לך, אדוני!$"
 
 BattleFrontier_ReceptionGate_Text_ScottGreatToSeeYouHere_hns:
-	.string "SCOTT: It's great to see you here,\n"
-	.string "it really is!\p"
-	.string "I hope you'll take your time and\n"
-	.string "explore everywhere.\p"
-	.string "Naturally, I hope you'll also experience\n"
-	.string "the pure essence of battling.\p"
-	.string "I also have my quarters here, so feel\n"
-	.string "free to visit if you have time.$"
+	.string "סקוט: כל כך טוב לראות אותך כאן,\n"
+	.string "באמת!\p"
+	.string "אני מקווה שתסייר בכל מקום\n"
+	.string "בלי למהר.\p"
+	.string "וכמובן, אני מקווה שתחווה גם\n"
+	.string "את המהות הטהורה של הקרב.\p"
+	.string "גם המגורים שלי נמצאים כאן, אז\n"
+	.string "תקפוץ לבקר אם יהיה לך זמן.$"
 
 BattleFrontier_ReceptionGate_Text_YourGuideToFacilities_hns:
-	.string "I'm your guide to the various facilities\n"
-	.string "here in the BATTLE FRONTIER.$"
+	.string "אני המדריכה שלך למתקנים השונים\n"
+	.string "כאן בחזית הקרב.$"
 
 BattleFrontier_ReceptionGate_Text_LearnAboutWhich2_hns:
-	.string "Which would you like to learn about?$"
+	.string "על איזה מקום לספר לך?$"
 
 BattleFrontier_ReceptionGate_Text_BattleTowerInfo_hns:
-	.string "It is the gigantic tower considered\n"
-	.string "to be the BATTLE FRONTIER's symbol.\p"
-	.string "There are four kinds of BATTLE ROOMS\n"
-	.string "in the tower for SINGLE, DOUBLE, MULTI,\l"
-	.string "and LINK MULTI BATTLES.$"
+	.string "זהו המגדל הענק שנחשב\n"
+	.string "לסמל של חזית הקרב.\p"
+	.string "במגדל יש ארבעה סוגי חדרי קרב:\n"
+	.string "יחיד, כפול, מרובה ומרובה בקישור.$"
 
 BattleFrontier_ReceptionGate_Text_BattleDomeInfo_hns:
-	.string "The BATTLE DOME is the large building\n"
-	.string "shaped like a huge egg.\p"
-	.string "Events named Battle Tourneys are held\n"
-	.string "in this facility.\p"
-	.string "The Battle Tourneys are offered in\n"
-	.string "two courses--for SINGLE and DOUBLE\l"
-	.string "BATTLES.$"
+	.string "כיפת הקרב היא הבניין הגדול\n"
+	.string "בצורת ביצה ענקית.\p"
+	.string "במתקן הזה נערכים אירועים\n"
+	.string "שנקראים טורנירי קרב.\p"
+	.string "טורנירי הקרב מוצעים בשני מסלולים:\n"
+	.string "לקרבות יחידים ולקרבות כפולים.$"
 
 BattleFrontier_ReceptionGate_Text_BattlePalaceInfo_hns:
-	.string "The BATTLE PALACE is the red building\n"
-	.string "on the right of the BATTLE FRONTIER.\p"
-	.string "There are two kinds of BATTLE HALLS\n"
-	.string "for SINGLE and DOUBLE BATTLES.$"
+	.string "ארמון הקרב הוא הבניין האדום\n"
+	.string "בצד הימני של חזית הקרב.\p"
+	.string "יש בו שני סוגים של אולמות קרב:\n"
+	.string "לקרבות יחידים ולקרבות כפולים.$"
 
 BattleFrontier_ReceptionGate_Text_BattleArenaInfo_hns:
-	.string "The BATTLE ARENA is the dojo-like\n"
-	.string "building at the center-right of\l"
-	.string "the BATTLE FRONTIER.\p"
-	.string "An event called the Set KO Tourney\n"
-	.string "takes place at the BATTLE ARENA.$"
+	.string "זירת הקרב היא הבניין דמוי הדוג'ו\n"
+	.string "שמימין למרכז חזית הקרב.\p"
+	.string "בזירת הקרב נערך אירוע\n"
+	.string "שנקרא טורניר הנוקאאוט.$"
 
 BattleFrontier_ReceptionGate_Text_BattleFactoryInfo_hns:
-	.string "The BATTLE FACTORY is the large\n"
-	.string "building that is the closest to us.\p"
-	.string "An event called the Battle Swap\n"
-	.string "is conducted there.\p"
-	.string "The Battle Swap event is offered in\n"
-	.string "two courses for SINGLE and DOUBLE\l"
-	.string "BATTLES.$"
+	.string "מפעל הקרב הוא הבניין הגדול\n"
+	.string "הקרוב ביותר אלינו.\p"
+	.string "שם נערך אירוע שנקרא\n"
+	.string "החלפת הקרב.\p"
+	.string "אירוע החלפת הקרב מוצע בשני מסלולים:\n"
+	.string "לקרבות יחידים ולקרבות כפולים.$"
 
 BattleFrontier_ReceptionGate_Text_BattlePikeInfo_hns:
-	.string "The BATTLE PIKE is the building shaped\n"
-	.string "like a POKéMON at the center-left of\l"
-	.string "the BATTLE FRONTIER.\p"
-	.string "An event called the Battle Choice\n"
-	.string "is conducted there.$"
+	.string "שביל הקרב הוא הבניין בצורת פוקימון\n"
+	.string "שמשמאל למרכז חזית הקרב.\p"
+	.string "שם נערך אירוע שנקרא\n"
+	.string "בחירת הקרב.$"
 
 BattleFrontier_ReceptionGate_Text_BattlePyramidInfo_hns:
-	.string "The BATTLE PYRAMID is the enormous\n"
-	.string "pyramid.\p"
-	.string "An event called the Battle Quest\n"
-	.string "is conducted there.$"
+	.string "פירמידת הקרב היא הפירמידה\n"
+	.string "העצומה.\p"
+	.string "שם נערך אירוע שנקרא\n"
+	.string "מסע הקרב.$"
 
 BattleFrontier_ReceptionGate_Text_RankingHallInfo_hns:
-	.string "The RANKING HALL is located near\n"
-	.string "the BATTLE TOWER.\p"
-	.string "There, you may see the most fantastic\n"
-	.string "records left by the TRAINERS that\l"
-	.string "took on the many challenges of\l"
-	.string "the BATTLE FRONTIER.$"
+	.string "היכל הדירוג נמצא ליד\n"
+	.string "מגדל הקרב.\p"
+	.string "שם מוצגים השיאים המדהימים ביותר של\n"
+	.string "מאמנים שהתמודדו עם אתגרי חזית הקרב.$"
 
 BattleFrontier_ReceptionGate_Text_ExchangeCornerInfo_hns:
-	.string "The EXCHANGE SERVICE CORNER is near\n"
-	.string "the BATTLE TOWER.\p"
-	.string "The Battle Points you have earned in\n"
-	.string "the BATTLE FRONTIER may be exchanged\l"
-	.string "for fabulous prizes there.$"
+	.string "פינת שירות ההמרה נמצאת ליד\n"
+	.string "מגדל הקרב.\p"
+	.string "שם אפשר להמיר את נקודות הקרב שצברת\n"
+	.string "בחזית הקרב בפרסים נהדרים.$"
 
 BattleFrontier_ReceptionGate_Text_YourGuideToRules_hns:
-	.string "I'm your guide to the basic rules that\n"
-	.string "are common to all the challenges\l"
-	.string "offered by the facilities in the BATTLE\l"
-	.string "FRONTIER.$"
+	.string "אני המדריכה שלך לחוקים הבסיסיים\n"
+	.string "המשותפים לאתגרים בכל מתקני חזית הקרב.$"
 
 BattleFrontier_ReceptionGate_Text_LearnAboutWhat_hns:
-	.string "What would you like to learn about?$"
+	.string "על מה לספר לך?$"
 
 BattleFrontier_ReceptionGate_Text_LevelModeInfo_hns:
-	.string "All the challenges at the BATTLE\n"
-	.string "FRONTIER's facilities come in\l"
-	.string "two courses--Level 50 and Open Level.$"
+	.string "כל האתגרים במתקני חזית הקרב מוצעים\n"
+	.string "בשני מסלולים: רמה 50 ורמה פתוחה.$"
 
 BattleFrontier_ReceptionGate_Text_Level50Info_hns:
-	.string "The Level 50 course is open to POKéMON\n"
-	.string "up to and including Level 50.\p"
-	.string "Please keep in mind, however, that\n"
-	.string "no TRAINER you face will have any\l"
-	.string "POKéMON below Level 50.\p"
-	.string "This course is the entry level for\n"
-	.string "battles at the BATTLE FRONTIER.\p"
-	.string "To begin, we hope you will challenge\n"
-	.string "this course.$"
+	.string "מסלול רמה 50 פתוח לפוקימונים\n"
+	.string "עד רמה 50, כולל.\p"
+	.string "אבל חשוב לזכור: לאף מאמן יריב\n"
+	.string "לא יהיו פוקימונים מתחת לרמה 50.\p"
+	.string "זהו מסלול המתחילים לקרבות\n"
+	.string "בחזית הקרב.\p"
+	.string "בתור התחלה, אנחנו מקווים\n"
+	.string "שתתמודד במסלול הזה.$"
 
 BattleFrontier_ReceptionGate_Text_OpenLevelInfo_hns:
-	.string "The Open Level course places no limit\n"
-	.string "on the levels of POKéMON entering\l"
-	.string "challenges.\p"
-	.string "The levels of your opponents will\n"
-	.string "be adjusted to match the levels of\l"
-	.string "your POKéMON.\p"
-	.string "However, no TRAINER you face will\n"
-	.string "have any POKéMON below Level 60.$"
+	.string "מסלול הרמה הפתוחה לא מגביל את רמות\n"
+	.string "הפוקימונים שמשתתפים באתגרים.\p"
+	.string "הרמות של היריבים יותאמו\n"
+	.string "לרמות של הפוקימונים שלך.\p"
+	.string "עם זאת, לאף מאמן יריב לא יהיו\n"
+	.string "פוקימונים מתחת לרמה 60.$"
 
 BattleFrontier_ReceptionGate_Text_MonEntryInfo_hns:
-	.string "Virtually any kind of POKéMON may take\n"
-	.string "on the challenges at all facilities.\p"
-	.string "EGGS and certain kinds of POKéMON,\n"
-	.string "however, are not permitted.\p"
-	.string "The numbers of POKéMON required for\n"
-	.string "challenges will depend on the facility.\p"
-	.string "At all facilities, however, two or more\n"
-	.string "of the same kind of POKéMON are not\l"
-	.string "permitted.$"
+	.string "כמעט כל פוקימון יכול להשתתף\n"
+	.string "באתגרים בכל המתקנים.\p"
+	.string "עם זאת, ביצים ופוקימונים מסוימים\n"
+	.string "אינם מורשים.\p"
+	.string "מספר הפוקימונים הנדרש לאתגרים\n"
+	.string "תלוי במתקן.\p"
+	.string "אבל בכל המתקנים, אסור להשתתף\n"
+	.string "עם שניים או יותר מאותו פוקימון.$"
 
 BattleFrontier_ReceptionGate_Text_HoldItemsInfo_hns:
-	.string "When entering a challenge at a BATTLE\n"
-	.string "FRONTIER facility, POKéMON may not\l"
-	.string "be holding the same kind of item.\p"
-	.string "Please make sure that all POKéMON\n"
-	.string "entering a challenge are holding\l"
-	.string "different items.$"
+	.string "בכניסה לאתגר במתקני חזית הקרב,\n"
+	.string "אסור לפוקימונים להחזיק פריטים זהים.\p"
+	.string "יש לוודא שכל הפוקימונים שנכנסים\n"
+	.string "לאתגר מחזיקים פריטים שונים.$"
 
 BattleFrontier_ReceptionGate_Text_YourGuideToFrontierPass_hns:
-	.string "I'm your guide to the FRONTIER PASS.$"
+	.string "אני המדריכה שלך לכרטיס חזית הקרב.$"
 
 BattleFrontier_ReceptionGate_Text_LearnAboutWhich1_hns:
-	.string "Which would you like to learn about?$"
+	.string "על מה לספר לך?$"
 
 BattleFrontier_ReceptionGate_Text_SymbolsInfo_hns:
-	.string "There are seven facilities at\n"
-	.string "the BATTLE FRONTIER.\p"
-	.string "TRAINERS who gain recognition for\n"
-	.string "their abilities may be rewarded with\l"
-	.string "symbols from each of the facilities.\p"
-	.string "To earn a symbol, TRAINERS may need\n"
-	.string "to defeat other TRAINERS in a row,\l"
-	.string "and may need to win events repeatedly.\p"
-	.string "It's certainly not easy to win symbols.\n"
-	.string "I wish you the best of luck!$"
+	.string "בחזית הקרב יש שבעה מתקנים.\p"
+	.string "מאמנים שכישוריהם זוכים להכרה עשויים\n"
+	.string "לקבל סמלים מכל אחד מהמתקנים.\p"
+	.string "כדי לזכות בסמל, ייתכן שיהיה צריך\n"
+	.string "לנצח מאמנים אחרים ברצף.\p"
+	.string "ייתכן גם שיהיה צריך לנצח\n"
+	.string "באירועים שוב ושוב.\p"
+	.string "זה בהחלט לא קל לזכות בסמלים.\n"
+	.string "אני מאחלת לך המון הצלחה!$"
 
 BattleFrontier_ReceptionGate_Text_RecordedBattleInfo_hns:
-	.string "It is possible to record one battle\n"
-	.string "on your FRONTIER PASS.\p"
-	.string "You may record a battle you had with\n"
-	.string "a friend or friends.\p"
-	.string "Or you may record a battle conducted\n"
-	.string "at the BATTLE FRONTIER excluding\l"
-	.string "matches at the BATTLE PIKE or\l"
-	.string "the BATTLE PYRAMID.\p"
-	.string "You may choose to record your match\n"
-	.string "at the end of a battle.$"
+	.string "אפשר להקליט קרב אחד\n"
+	.string "בכרטיס חזית הקרב שלך.\p"
+	.string "אפשר להקליט קרב שניהלת\n"
+	.string "עם חבר או עם חברים.\p"
+	.string "או קרב בחזית הקרב, חוץ מקרבות\n"
+	.string "בשביל הקרב או בפירמידת הקרב.\p"
+	.string "בסוף כל קרב אפשר לבחור\n"
+	.string "אם להקליט אותו.$"
 
 BattleFrontier_ReceptionGate_Text_BattlePointsInfo_hns:
-	.string "Battle Points are rewards given to\n"
-	.string "TRAINERS who battled outstandingly\l"
-	.string "at the BATTLE FRONTIER.\p"
-	.string "You may trade in your Battle Points\n"
-	.string "for prizes at the EXCHANGE SERVICE\l"
-	.string "CORNER.$"
+	.string "נקודות קרב הן פרס למאמנים\n"
+	.string "שהצטיינו בקרבות בחזית הקרב.\p"
+	.string "אפשר להמיר את נקודות הקרב\n"
+	.string "בפרסים בפינת שירות ההמרה.$"
 

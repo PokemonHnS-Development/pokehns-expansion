@@ -1,0 +1,4 @@
+# Include: after an in-battle item refusal in the party menu, wait until the bag reads input again.
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet

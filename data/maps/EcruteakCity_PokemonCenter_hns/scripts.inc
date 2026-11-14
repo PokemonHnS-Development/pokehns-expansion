@@ -97,29 +97,28 @@ EcruteakCity_PokemonCenter_Movement_BillBot:
 
 
 EcruteakCity_PokemonCenter1F_Text_Bill1:
-	.string "Hi, I'm BILL. And who are you?\p"
-	.string "Hmm, {PLAYER}, huh?\n"
-	.string "You've come at the right time.$"
+	.string "היי, אני ביל. ואיך קוראים לך?\p"
+	.string "הממ, {PLAYER}, אה?\n"
+	.string "הגעת בדיוק בזמן.$"
 
 EcruteakCity_PokemonCenter1F_Text_Bill2:
-	.string "I just finished adjustments on my\n"
-	.string "POKéMON STORAGE SYSTEM.\p"
-	.string "You know that PC you use to store\n"
-	.string "all your POKéMON?\p"
-	.string "I developed that myself!\p"
-	.string "Now that I've installed this one,\n"
-	.string "my PC is running at all\l"
-	.string "POKéMON CENTERS in JOHTO and KANTO.\p"
-	.string "I have to hurry on back to\n"
-	.string "GOLDENROD and see my folks. Feel\l"
-	.string "free to visit anytime!\p"
-	.string "Buh-bye!$"
+	.string "בדיוק סיימתי לכוונן את\n"
+	.string "מערכת אחסון הפוקימונים שלי.\p"
+	.string "מכיר את המחשב שבו מאחסנים\n"
+	.string "את כל הפוקימונים שלך?\p"
+	.string "אני פיתחתי אותו בעצמי!\p"
+	.string "אחרי ההתקנה הזאת, המחשב שלי פועל\n"
+	.string "בכל מרכזי הפוקימון בג'וטו ובקאנטו.\p"
+	.string "אני חייב למהר בחזרה לגולדנרוד\n"
+	.string "לראות את המשפחה.\p"
+	.string "אתה מוזמן לבקר מתי שתרצה!\p"
+	.string "ביי-ביי!$"
 
 EcruteakCity_PokemonCenter1F_Text_PokefanM:
-	.string "The way the KIMONO GIRLS dance is\n"
-	.string "marvelous.\p"
-	.string "Just like the way they use their\n"
-	.string "POKéMON.$"
+	.string "הריקוד של נערות הקימונו\n"
+	.string "פשוט נפלא.\p"
+	.string "בדיוק כמו הדרך שבה הן\n"
+	.string "משתמשות בפוקימונים שלהן.$"
 
 EcruteakCity_PokemonCenter1F_Text_PokefanM_Mobile:
 	.string "You must be hoping to battle more\n"
@@ -130,13 +129,12 @@ EcruteakCity_PokemonCenter1F_Text_PokefanM_Mobile:
 	.string "It's a little past OLIVINE CITY.$"
 
 EcruteakCity_PokemonCenter1F_Text_CooltrainerF:
-	.string "MORTY, the GYM LEADER, is soooo\n"
-	.string "cool.\p"
-	.string "His POKéMON are really tough too.$"
+	.string "מורטי, מנהיג המכון, הוא\n"
+	.string "מגנייייב.\p"
+	.string "וגם הפוקימונים שלו ממש קשוחים.$"
 
 EcruteakCity_PokemonCenter1F_Text_GymGuide:
-	.string "LAKE OF RAGE…\p"
-	.string "The appearance of a GYARADOS\n"
-	.string "swarm…\p"
-	.string "I smell a conspiracy. I know it!$"
+	.string "אגם הזעם…\p"
+	.string "להקת גרידוס שהופיעה שם…\p"
+	.string "אני מריח פה קנוניה. אני פשוט יודע!$"
 

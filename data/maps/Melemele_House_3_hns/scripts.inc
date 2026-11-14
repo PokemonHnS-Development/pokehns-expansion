@@ -19,12 +19,12 @@ Melemele_House3_Man::
 
 
 Melemele_House3_Woman_Text_0:
-	.string "Island life here is so peaceful!\p"
-	.string "And it's nice that my grandkids are just\n"
-	.string "a quick boat ride away in KANTO!$"
+	.string "החיים כאן על האי כל כך שלווים!\p"
+	.string "ונחמד שהנכדים שלי בקאנטו\n"
+	.string "נמצאים רק במרחק שיט קצר!$"
 
 Melemele_House3_Man_Text_0:
-	.string "Dang tourists!\p"
-	.string "My realtor said this place would be\n"
-	.string "quiet… but I guess its cheaper to \l"
-	.string "travel here than all the way to ALOLA.$"
+	.string "תיירים ארורים!\p"
+	.string "המתווך שלי אמר שיהיה פה שקט…\p"
+	.string "אבל כנראה שזול יותר לנסוע לכאן\n"
+	.string "מאשר עד אלולה הרחוקה.$"

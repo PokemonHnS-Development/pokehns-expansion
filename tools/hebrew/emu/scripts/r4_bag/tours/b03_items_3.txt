@@ -1,0 +1,7 @@
+# ITEMS pocket, items 472-523
+start saves/menuA_base_copy.sav
+include ../../continue.txt
+fillpocket ITEMS 999 472 236
+bagopen ITEMS
+bagrows it ctx 300
+bagclose

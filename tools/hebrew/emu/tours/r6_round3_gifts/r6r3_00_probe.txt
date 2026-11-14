@@ -1,0 +1,8 @@
+# Probe (no screens to review): the ladder 4 party and the flags / vars the gift scripts test.
+start saves/r6r3_gifts_base.sav
+include _base.txt
+partyinfo
+flags FLAG_GOT_EEVEE FLAG_HIDE_GOLDENROD_BILL FLAG_GOT_DRATINI FLAG_SYS_POKEDEX_GET FLAG_SYS_NATIONAL_DEX
+vars VAR_KENYA VAR_BLACKTHORN_CITY_STATE VAR_DRAGONS_DEN_QUIZ
+itemcount ITEM_COIN_CASE
+snap probe

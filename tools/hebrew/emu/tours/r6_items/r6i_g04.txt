@@ -1,0 +1,25 @@
+# r6 items: Std_ObtainItem windows (giveitem ITEM, QTY) for the items NPCs give in *_hns scripts, 4.
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+gift g_hm_whirlpool ITEM_HM_WHIRLPOOL 1
+gift g_tm_thunder ITEM_TM_THUNDER 1
+gift g_super_rod ITEM_SUPER_ROD 1
+gift g_blue_shard ITEM_BLUE_SHARD 1
+gift g_red_shard ITEM_RED_SHARD 1
+gift g_tm_stone_edge ITEM_TM_STONE_EDGE 1
+gift g_tm_thunder_wave ITEM_TM_THUNDER_WAVE 1
+gift g_tm_will_o_wisp ITEM_TM_WILL_O_WISP 1
+gift g_tm_aerial_ace ITEM_TM_AERIAL_ACE 1
+gift g_tm_energy_ball ITEM_TM_ENERGY_BALL 1
+gift g_tm_facade ITEM_TM_FACADE 1
+gift g_tm_toxic ITEM_TM_TOXIC 1
+gift g_tm_brick_break ITEM_TM_BRICK_BREAK 1
+gift g_tm_bulk_up ITEM_TM_BULK_UP 1
+gift g_heart_scale ITEM_HEART_SCALE 1
+gift g_galarica_cuff ITEM_GALARICA_CUFF 1
+gift g_galarica_wreath ITEM_GALARICA_WREATH 1
+gift g_big_nugget ITEM_BIG_NUGGET 1
+gift g_tm_sandstorm ITEM_TM_SANDSTORM 1
+gift g_tm_steel_wing ITEM_TM_STEEL_WING 1
+gift g_silk_scarf ITEM_SILK_SCARF 1
+gift g_nugget ITEM_NUGGET 1

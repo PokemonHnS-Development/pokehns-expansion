@@ -1,0 +1,53 @@
+# Bag context menu, 2x2 grid (item_menu.c Task_ItemContext_MultipleRows): every D-pad move from
+# USE and back. Hebrew draws USE top right, GIVE top left, TOSS bottom right, CANCEL bottom left.
+start saves/r2_bfp/base_postgame.sav
+include ../continue.txt
+startmenu BAG
+waitcb2x CB2_Bag 900
+waitquiet
+60 -
+snap bg_00_bag
+tap A 4
+waitquiet
+30 -
+menupos
+snap bg_01_ctx
+tap RIGHT 4
+waitquiet
+20 -
+menupos
+snap bg_02_ctx_right
+tap LEFT 4
+waitquiet
+20 -
+menupos
+snap bg_03_ctx_left
+tap LEFT 4
+waitquiet
+20 -
+menupos
+snap bg_04_ctx_left_again
+tap RIGHT 4
+waitquiet
+20 -
+menupos
+snap bg_05_ctx_right_back
+tap DOWN 4
+waitquiet
+20 -
+menupos
+snap bg_06_ctx_down
+tap LEFT 4
+waitquiet
+20 -
+menupos
+snap bg_07_ctx_down_left
+tap RIGHT 4
+waitquiet
+20 -
+menupos
+snap bg_08_ctx_down_right
+tap B 4
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900

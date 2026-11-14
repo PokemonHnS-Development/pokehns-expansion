@@ -1,0 +1,15 @@
+# Suicune, Cianwood (17,20), the first sighting (VAR_SUICUNE_ENCOUNTERS 1): trigger (18,22),
+# CianwoodCity_EventScript_SuicuneTrigger (data/maps/CianwoodCity_hns/scripts.inc:158-222): Suicune
+# jumps away, Eusine comes, talks, battles (trainerbattle_no_intro) and leaves.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev setvar VAR_SUICUNE_ENCOUNTERS, 1; setflag FLAG_HIDE_CIANWOOD_EUSINE; end
+warpto MAP_CIANWOOD_CITY_HNS 18 23
+face UP
+snap sc_field
+stepto UP 1
+scene sc_scene 12000 60
+bwalk sc_intro input:HandleInputChooseAction
+bwin sc_win
+scene sc_after 8000
+snap sc_end

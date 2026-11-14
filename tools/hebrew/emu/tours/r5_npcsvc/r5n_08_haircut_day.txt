@@ -1,0 +1,11 @@
+# Goldenrod Underground haircut, older brother (daytime; (6,20), talked to from (5,20);
+# GoldenrodCity_UndergroundTunnel_hns:145-205): YES + B in the party menu; YES + the Egg; ¥100;
+# ¥10000 (¥500, the cut, all done); once a day; NO last (that path ends without `release`).
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+ev file _haircut_party.inc
+ev clearflag FLAG_DAILY_HAIRCUT1_RECEIVED; end
+flags FLAG_DAY_POKEMON FLAG_NIGHT_POKEMON
+setmoney 10000
+warpto MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL_HNS 5 20
+include _haircut_body.inc

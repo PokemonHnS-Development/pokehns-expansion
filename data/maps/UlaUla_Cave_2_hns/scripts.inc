@@ -35,4 +35,4 @@ Alola_Ulaula_BattleMuk_3:
 
 
 Alola_Ulaula_BattleMuk_Text_0:
-	.string "Gaaah!$"
+	.string "גאאאה!$"

@@ -1,0 +1,10 @@
+# Rayquaza, Embedded Tower (14,13): EmbeddedTower_EventScript_Rayquaza (data/maps/EmbeddedTower_hns/scripts.inc:4-20), no text
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_RAYQUAZA; end
+warpto MAP_EMBEDDED_TOWER_HNS 14 14
+face UP
+snap rayquaza_field
+tap A 4
+scene rayquaza_pre 4000
+include _legend_tail.txt

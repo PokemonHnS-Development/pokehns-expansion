@@ -1,0 +1,26 @@
+# Battle messages reached by playing (the RAM sweep in the r2 notes shows every STRINGID; this
+# tour shows a few of them in their real context, with the ability pop-up and item effects):
+# Swords Dance (rose sharply), Fury Swipes into a Static Electabuzz (hit N times, contact ability
+# pop-up, paralysis), Leech Seed (seeded, sapped), Wrap (bound, hurt by), Leftovers, the foe's
+# Oran Berry, Substitute, Protect. Outcomes depend on the pinned RNG: the shots record what
+# happened, the tour does not assert it.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_TYPHLOSION, 50, item=ITEM_LEFTOVERS, move1=MOVE_SWORDS_DANCE, move2=MOVE_FURY_SWIPES, move3=MOVE_LEECH_SEED, move4=MOVE_WRAP; end
+
+pinrng
+evstart setwildbattle SPECIES_ELECTABUZZ, 45, ITEM_ORAN_BERRY; dowildbattle; end
+waitbattle
+bwalk btwn_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0
+bwalk btwn_t1_swordsdance input:HandleInputChooseAction
+baction FIGHT
+bmove 2
+bwalk btwn_t2_leechseed input:HandleInputChooseAction
+baction FIGHT
+bmove 3
+bwalk btwn_t3_wrap input:HandleInputChooseAction
+baction FIGHT
+bmove 1
+bwalk btwn_t4_furyswipes input:HandleInputChooseAction|free

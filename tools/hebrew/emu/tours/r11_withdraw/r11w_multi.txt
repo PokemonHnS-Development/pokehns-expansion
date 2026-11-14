@@ -1,0 +1,45 @@
+# r11 withdraw: the two-opponent withdraw line sText_Trainer2WithdrewPkmn (src/battle_message.c:130,
+# BATTLE_TYPE_TWO_OPPONENTS, :2599-2602). The only two-trainer battle in H&S is the Rocket Hideout
+# B2F multi battle with Lance against Executive Ariana and Grunt 23 (RocketHideout_B2F_Trigger_Ariana,
+# data/maps/RocketHideout_B2F_hns/scripts.inc:185-306; coord trigger (14..16,18) at
+# VAR_MAHOGANY_TOWN_STATE 12, map.json:390-416). `aiswitch 1 all` makes Ariana (battler 1), the
+# Grunt (battler 3) and Lance (battler 2, in-game partner) switch on turn 1.
+start saves/r11/tents_withdraw/wd_base.sav
+include ../r6_league/_base.txt
+ev createmon 0, 1, SPECIES_FERALIGATR, 60, move1=MOVE_SURF; createmon 0, 2, SPECIES_MEGANIUM, 60, move1=MOVE_RAZOR_LEAF; setvar VAR_MAHOGANY_TOWN_STATE, 12; clearflag FLAG_ROCKETHIDEOUT2_BATTLE; setflag FLAG_DISABLE_ENCOUNTERS; end
+warpto MAP_ROCKET_HIDEOUT_B2F_HNS 15 16
+snap mu_room
+walkto 15 18
+drivex mu_scene cb2:CB2_UpdatePartyMenu 40 20000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap mu_choose
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+snap mu_choose_done
+aiswitch 1 all
+tap A 4
+waitbattle 1800
+wdlog
+bwin mu_b
+drivex mu_after free 40 20000

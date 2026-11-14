@@ -118,59 +118,56 @@ Route24_Movement_GruntLeave:
 	step_end
 
 Route24_Text_RocketSeen:
-	.string "Hey, kid! Me am a TEAM ROCKET\n"
-	.string "member kind of guy!\p"
-	.string "Come from another country, a\n"
-	.string "trainer number one, me!\p"
-	.string "Think I did, if stop the energy,\n"
-	.string "be big panic for here people!\p"
-	.string "Secret it is my mission, so tell\n"
-	.string "you I not!\p"
-	.string "But! If win you do versus me, a\n"
-	.string "man I be and mine secret to you\l"
-	.string "I tell.\p"
-	.string "Hey, kid! Battle begin we do!$"
+	.string "היי, ילד! אני להיות חבר\n"
+	.string "צוות רוקט, סוג של בחור!\p"
+	.string "בא ממדינה אחרת, מאמן מספר\n"
+	.string "אחת, אני!\p"
+	.string "חשבתי אני, אם לעצור אנרגיה,\n"
+	.string "להיות פאניקה גדולה לאנשים פה!\p"
+	.string "סוד זה המשימה שלי, אז לספר\n"
+	.string "לך אני לא!\p"
+	.string "אבל! אם לנצח אתה נגד אני,\n"
+	.string "גבר להיות אני ולספר לך סוד שלי.\p"
+	.string "היי, ילד! להתחיל קרב אנחנו!$"
 
 Route24_Text_RocketBeaten:
-	.string "Ayieeeh! No, no, no, believe it\n"
-	.string "I can't!\p"
-	.string "Strong very much be you! Match\n"
-	.string "I am not to you!$"
+	.string "איייייה! לא, לא, לא, להאמין\n"
+	.string "אני לא יכול!\p"
+	.string "חזק מאוד להיות אתה! שווה\n"
+	.string "לך אני לא!$"
 
 Route24_Text_RocketAfter:
-	.string "OK. Tell you mine secret will I?\n"
-	.string "MACHINE PART steal by me, hide it\l"
-	.string "I did in GYM of the CERULEAN.\p"
-	.string "Inside water put it I did. Look\n"
-	.string "for in water center of GYM at.\p"
-	.string "But you forget me not!\p"
-	.string "Beat you for sure will TEAM\n"
-	.string "ROCKET.\p"
-	.string "Come from JOHTO will they, mine\n"
-	.string "friends, yes. Will revenge they\l"
-	.string "are.$"
+	.string "אוקיי. לספר לך הסוד שלי אני?\p"
+	.string "חלק מכונה לגנוב אני, להחביא\n"
+	.string "אותו אני במכון של הסרוליאן.\p"
+	.string "בתוך מים לשים אותו אני. לחפש\n"
+	.string "במים במרכז של המכון אתה.\p"
+	.string "אבל לשכוח אותי אתה לא!\p"
+	.string "לנצח אותך בטוח\n"
+	.string "צוות רוקט.\p"
+	.string "לבוא מג'וטו הם, החברים שלי,\n"
+	.string "כן. לעשות נקמה הם.$"
 
 Route24_Text_RocketDisappears:
 	.string "…\p"
-	.string "You say what? TEAM ROCKET bye-\n"
-	.string "bye a go-go? Broken it is says\l"
-	.string "you?\p"
-	.string "Oh, no! Should I do what now on\n"
-	.string "from, me?$"
+	.string "מה להגיד אתה? צוות רוקט ביי-ביי\n"
+	.string "הלך? מפורק הוא, אומר אתה?\p"
+	.string "אוי, לא! מה לעשות אני מעכשיו\n"
+	.string "והלאה, אני?$"
 
 
 
 Route24_Text_Woman:
-	.string "Isn't it a lovely view?$"
+	.string "נכון שהנוף מקסים?$"
 Route24_Text_Man:
-	.string "I could stay here all day.$"
+	.string "הייתי יכול להישאר כאן כל היום.$"
 
 Route24_Text_WomanRocket:
-	.string "Nobody pushes me!$"
+	.string "אף אחד לא דוחף אותי!$"
 Route24_Text_ManRocket:
-	.string "Nobody pushes my girlfriend!$"
+	.string "אף אחד לא דוחף את החברה שלי!$"
 
 Route24_Text_WomanAfterRocket:
-	.string "What was that all about?$"
+	.string "מה זה היה בכלל?$"
 Route24_Text_ManAfterRocket:
-	.string "Was that a ROCKET?$"
+	.string "זה היה מישהו מצוות רוקט?$"

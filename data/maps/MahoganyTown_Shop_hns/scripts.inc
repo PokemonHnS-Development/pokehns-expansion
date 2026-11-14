@@ -228,12 +228,11 @@ MahoganyTown_Pokemart:
 	end
 
 MahoganyTown_Shop_Text_Granny:
-	.string "Please come back another time.\n"
-	.string "The store is... closed\l"
-	.string "right now.$"
+	.string "בבקשה, בוא שוב בפעם אחרת.\n"
+	.string "החנות… סגורה כרגע.$"
 
 MahoganyMart1F_Text_Pharmacist_Lance:
-    .string "ROCKETS have hijacked my basement!$"
+    .string "אנשי רוקט השתלטו על המרתף שלי!$"
 
 MahoganyMart1F_Text_BlackBelt:
     .string "Heheh! The experi- ment worked like\n"
@@ -246,18 +245,18 @@ MahoganyMart1F_Text_BlackBelt_Lance:
     .string "That guy's POKéMON are tough…$"
 
 MahoganyMart1F_Text_Lance_HyperBeam:
-    .string "LANCE: DRAGONITE, HYPER BEAM.$"
+    .string "לאנס: דרגונייט, קרן על.$"
 
 MahoganyMart1F_Text_Lance_Radio:
-    .string "What took you, {PLAYER}?\p"
-    .string "Just as we thought, that strange\n"
-    .string "radio signal is coming from here.$"
+    .string "למה התעכבת, {PLAYER}?\p"
+    .string "כמו שחשבנו, אות הרדיו המוזר\n"
+    .string "מגיע מכאן.$"
 
 MahoganyMart1F_Text_Lance_Stairs:
-    .string "Excellent work finding the stairs,\n"
-	.string "DRAGONITE!$"
+    .string "כל הכבוד שמצאת את המדרגות,\n"
+    .string "דרגונייט!$"
 
 MahoganyMart1F_Text_Lance_SplitUp:
-    .string "LANCE: {PLAYER}, we should split up\n"
-    .string "to check this place.\p"
-    .string "I'll go first.$"
+    .string "לאנס: {PLAYER}, כדאי שנתפצל\n"
+    .string "כדי לבדוק את המקום.\p"
+    .string "אני אלך ראשון.$"

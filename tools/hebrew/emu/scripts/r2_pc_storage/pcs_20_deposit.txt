@@ -1,0 +1,94 @@
+# DEPOSIT POKeMON and WITHDRAW POKeMON on save pcs_base (box 1 full, box 2 empty, party of 6):
+# DEPOSIT Togekiss into BOX 1 ("The BOX is full.", src/pokemon_storage_system.c:2975), then into
+# BOX 2 (deposited: MSG_WAS_DEPOSITED is never printed, the party just closes up), the party pane
+# with the gap; WITHDRAW with 6 in the party ("Your party's full!", :2883), the PARTY POKeMON button
+# in WITHDRAW mode ("Which one will you take?", :2317).
+start save:pcs_base
+include _pc_open.txt
+press DOWN
+tap A 0                                   # DEPOSIT POKeMON
+waitcb2x CB2_PokeStorage 900
+pcwait
+snap pcs_dep_01_party
+pcgoto party 5
+snap pcs_dep_02_party_slot5
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_dep_03_menu
+press A                                   # DEPOSIT
+waittaskx Task_DepositMenu 300
+waitpmem 8 pokemon_storage_system:sStorage 0 1 300
+waitquiet
+12 -
+snap pcs_dep_04_which_box_box1
+press A                                   # BOX 1 is full
+waitpmem 8 pokemon_storage_system:sStorage 0 4 300
+12 -
+snap pcs_dep_05_box_is_full
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 1 300
+12 -
+snap pcs_dep_06_which_box_again
+press RIGHT
+12 -
+snap pcs_dep_07_which_box_box2
+press A
+pcwait
+snap pcs_dep_08_deposited
+pcgoto party 5
+snap pcs_dep_09_party_gap_slot5
+pcgoto party 6
+snap pcs_dep_10_party_cancel
+# leave: B, "Continue BOX operations?" NO
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+12 -
+snap pcs_dep_11_continue_box
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+
+# WITHDRAW with a full party: give the box a 6th party Pokemon back first? The party is now 5, so
+# withdraw Togekiss back (box 2) to make 6, then try another
+press DOWN
+tap A 0                                   # WITHDRAW POKeMON
+waitcb2x CB2_PokeStorage 900
+pcwait
+snap pcs_wd_01_box1
+pcgoto box 0
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_wd_02_menu
+press A                                   # WITHDRAW: party of 5, goes through
+pcwait
+snap pcs_wd_03_withdrawn
+pcgoto box 1
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press A                                   # WITHDRAW with 6 in the party
+waitpmem 8 pokemon_storage_system:sStorage 0 1 300
+waitquiet
+12 -
+snap pcs_wd_04_party_full
+press A
+pcwait
+pcgoto buttons 0
+snap pcs_wd_05_on_party_button
+press A                                   # PARTY POKeMON in WITHDRAW mode
+waitpmem 8 pokemon_storage_system:sStorage 0 3 300
+12 -
+snap pcs_wd_06_which_one_will_you_take
+press A
+pcwait
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900

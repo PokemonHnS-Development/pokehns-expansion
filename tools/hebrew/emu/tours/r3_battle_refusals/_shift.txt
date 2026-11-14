@@ -1,0 +1,4 @@
+# Include: in a slot's submenu, cursor on its first row (SHIFT): A. The caller then shoots the
+# refusal TrySwitchInPokemon buffered (src/party_menu.c:3938-3953) with `pages NAME`
+# (one shot per page; the English ability text wraps onto a second page).
+tap A 4

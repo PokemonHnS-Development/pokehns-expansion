@@ -1,0 +1,42 @@
+# The 5-row main menu (MYSTERY GIFT + MYSTERY EVENTS, forced, see _menu5.txt), every row; then
+# MYSTERY EVENTS (CB2_InitMysteryEventMenu, link standby, B soft-resets) and MYSTERY GIFT, which without an
+# adapter is the e-Reader path (ACTION_EREADER, main_menu.c:1046-1052, CB2_InitEReader), its pages up to the link.
+start saves/boot_mystery.sav
+include _menu5.txt
+snap bt12b_01_menu5_continue
+tap DOWN 6
+waitquiet
+snap bt12b_02_menu5_newgame
+tap DOWN 6
+waitquiet
+snap bt12b_03_menu5_mysterygift
+tap DOWN 6
+waitquiet
+snap bt12b_04_menu5_mysteryevents
+tap DOWN 6
+waitquiet
+snap bt12b_05_menu5_option
+tap UP 6
+waitquiet
+snap bt12b_06_menu5_mysteryevents_up
+tap A 0
+waitcb2x mystery_event_menu:CB2_MysteryEventMenu 300
+textwatch bt12b_07_events CB2_InitTitleScreen 300 -
+snap bt12b_08_events_wait
+tap B 4
+waitcb2x CB2_InitCopyrightScreenAfterBootup 600
+include _menu5.txt
+tap DOWN 6
+tap DOWN 6
+waitquiet
+tap A 0
+waitcb2x CB2_InitEReader 300
+burst bt12b_10_ereader 10 20
+snap bt12b_11_ereader_menu
+# e-Reader: A -> link init -> "select CONNECT on the e-Reader" pages; B -> "card reading halted"
+tap A 4
+burst bt12b_12_ereader_a 14 20
+tap A 4
+burst bt12b_13_ereader_a2 8 20
+tap B 4
+burst bt12b_14_ereader_b 10 20

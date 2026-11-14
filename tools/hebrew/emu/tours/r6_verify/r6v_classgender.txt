@@ -1,0 +1,7 @@
+# r6 verify: female-only trainer classes (Expert Hns, Psychic Hns, Twins Hns) battle intros.
+start saves/ladder6_postgame.sav
+include ../r6_league/_base.txt
+tbase
+trainer SSAqua_B1F_hns 3
+trainer SaffronCity_Gym_hns 2
+trainer AzaleaTown_Gym_hns 3 notenough

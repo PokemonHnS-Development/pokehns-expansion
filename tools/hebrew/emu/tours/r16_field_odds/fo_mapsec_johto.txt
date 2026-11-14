@@ -1,0 +1,26 @@
+# Olivine Lighthouse before Kanto (ladder3_ecruteak: FLAG_VISITED_KANTO clear, so the JSON name
+# 'מגדלור אוליבין', src/data/region_map/region_map_sections.json:2611): the start-menu SAVE info box
+# inside the lighthouse, then the same box after setflag FLAG_VISITED_KANTO (src/region_map.c:265 'המגדלור').
+start saves/ladder3_ecruteak.sav
+include ../../scripts/continue.txt
+warpto MAP_OLIVINE_CITY_LIGHTHOUSE_HNS 14 18
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_johto_lighthouse
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0
+setflag FLAG_VISITED_KANTO
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_kanto_lighthouse
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0

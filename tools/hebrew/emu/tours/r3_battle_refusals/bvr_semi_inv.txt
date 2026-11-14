@@ -1,0 +1,75 @@
+# A Poke Ball while the wild foe is in the semi-invulnerable turn of Fly / Dig:
+# sText_CantThrowPokeBall_SemiInvulnerable (src/item_use.c:1182-1183, BALL_THROW_UNABLE_SEMI_INVULNERABLE,
+# B_SEMI_INVULNERABLE_CATCH GEN_LATEST, include/config/battle.h:351), shown in the bag's
+# message box (DisplayItemMessage). The foes know only Fly / Dig (createmon after setwildbattle).
+# Turn 1: the player uses Growl, the foe flies up (digs under). Turn 2: BAG > POKE BALLS > USE.
+# Each battle is ended at 1 HP with Tackle on a turn when the foe is back on the ground.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_TYPHLOSION, 70, move1=MOVE_GROWL, move2=MOVE_TACKLE; additem ITEM_POKE_BALL, 5; end
+
+# 1. Fly
+pinrng
+evstart setwildbattle SPECIES_PIDGEOTTO, 10; createmon 1, 0, SPECIES_PIDGEOTTO, 10, move1=MOVE_FLY, move2=MOVE_NONE, move3=MOVE_NONE, move4=MOVE_NONE; dowildbattle; end
+waitbattle
+bwalk bvr_fly_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0
+bwalk bvr_fly_turn1 input:HandleInputChooseAction
+snap bvr_fly_in_air
+w8 @gBagPosition+5@ 2                     # the bag opens on POKE BALLS (struct BagPosition.pocket, include/item_menu.h:59-67)
+w16 @gBagPosition+0C@ 0                   # cursor on its first row
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+expect8 @gBagPosition+5@ 2
+snap bvr_fly_balls
+tap A 4
+waitquiet
+snap bvr_fly_use
+tap A 4                                   # USE
+pages bvr_fly_cant_throw
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap bvr_fly_back
+tap B 4
+waitbinput HandleInputChooseAction 900
+baction FIGHT
+bmove 0
+bwalk bvr_fly_turn2 input:HandleInputChooseAction
+sethp enemy 0 1
+baction FIGHT
+bmove 1
+bwalk bvr_fly_ko free
+
+# 2. Dig
+evstart setwildbattle SPECIES_DIGLETT, 10; createmon 1, 0, SPECIES_DIGLETT, 10, move1=MOVE_DIG, move2=MOVE_NONE, move3=MOVE_NONE, move4=MOVE_NONE; dowildbattle; end
+waitbattle
+bwalk bvr_dig_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0
+bwalk bvr_dig_turn1 input:HandleInputChooseAction
+snap bvr_dig_underground
+w8 @gBagPosition+5@ 2                     # the bag opens on POKE BALLS (struct BagPosition.pocket, include/item_menu.h:59-67)
+w16 @gBagPosition+0C@ 0                   # cursor on its first row
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+expect8 @gBagPosition+5@ 2
+tap A 4
+waitquiet
+tap A 4                                   # USE
+pages bvr_dig_cant_throw
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction 900
+baction FIGHT
+bmove 0
+bwalk bvr_dig_turn2 input:HandleInputChooseAction
+sethp enemy 0 1
+baction FIGHT
+bmove 1
+bwalk bvr_dig_ko free

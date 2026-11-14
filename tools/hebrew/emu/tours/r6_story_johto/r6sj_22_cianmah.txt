@@ -1,0 +1,19 @@
+# Cianwood pharmacy (data/maps/CianwoodShop_hns/scripts.inc:9-26: the Secret Potion at
+# VAR_OLIVINE_CITY_STATE 3, then PharmacistAfter) and the Mahogany souvenir shop raid
+# (data/maps/MahoganyTown_Shop_hns/scripts.inc: ON_FRAME at VAR_MAHOGANY_TOWN_STATE 4, Raid :14-46).
+# Ladder 3 plus the s4a/s4b state those scripts read.
+start saves/r6sj_ladder3_ecruteak.sav
+include _base.txt
+ev setvar VAR_OLIVINE_CITY_STATE, 3; end
+warpto MAP_CIANWOOD_SHOP_HNS 8 9
+snap cw_room
+face UP
+tap A 4
+scene cw 20000
+snap cw_free
+tap A 4
+scene cw_after 6000
+ev setvar VAR_MAHOGANY_TOWN_STATE, 4; clearflag FLAG_HIDE_MAHOGANY_TOWN_SHOP_NPCS; setflag FLAG_VISITED_LAKE_OF_RAGE; setflag FLAG_HIDE_LAKE_OF_RAGE_LANCE; end
+warpraw MAP_MAHOGANY_TOWN_SHOP_HNS 5 9
+scene raid 40000 40
+snap raid_end

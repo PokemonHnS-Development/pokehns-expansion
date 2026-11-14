@@ -124,80 +124,73 @@ BugContest_EventScript_SideEnd::
 	end
 
 BugContest_Text_Judging0::
-	.string "The contest has now concluded.\n"
-	.string "Please pick the POKéMON you would\l"
-	.string "like to keep and have judged.$"
+	.string "התחרות הסתיימה. נא לבחור את הפוקימון\n"
+	.string "שברצונך לשמור ולהגיש לשיפוט.$"
 
 BugContest_Text_Judging1::
-	.string "We will now judge the POKéMON\n"
-	.string "you've caught.\p"
-	.string "...................\n"
-	.string "...................\p"
-	.string "We have chosen the winners! Are\n"
-	.string "ready for this?$"
+	.string "עכשיו נשפוט את הפוקימונים\n"
+	.string "שתפסתם.\p"
+	.string "………………………\n"
+	.string "………………………\p"
+	.string "בחרנו את הזוכים!\n"
+	.string "אתם מוכנים?$"
 
 BugContest_Text_WrongChoiceMon:
-	.string "Please pick the POKéMON you would\n"
-	.string "like to keep and have judged.$"
+	.string "נא לבחור את הפוקימון שברצונך\n"
+	.string "לשמור ולהגיש לשיפוט.$"
 
 BugContest_Text_DidntCatch:
-	.string "Oh no! You didn't catch a POKéMON.\n"
-	.string "You've forfeited the competition.\p"
-	.string "Your party will now be returned.$"
+	.string "אוי לא! לא תפסת אף פוקימון.\n"
+	.string "הודחת מהתחרות.\p"
+	.string "הפוקימונים שלך יוחזרו אליך עכשיו.$"
 
 BugContest_Text_TimesUp:
-	.string "Ding-dong! Time's up!$"
+	.string "דינג-דונג! הזמן נגמר!$"
 
 BugContest_Text_WhiteOut:
-	.string "{PLAYER} is out of useable POKéMON.\n"
-	.string "{PLAYER} forfeited the contest.$"
+	.string "{PLAYER} נשאר בלי פוקימונים כשירים.\n"
+	.string "{PLAYER} הודח מהתחרות.$"
 
 BugContest_Text_First1:
-	.string "Placing third is the COOLTRAINER\n"
-	.string "BELINDA, who caught a wriggling\l"
-	.string "BUTTERFREE!$"
+	.string "במקום השלישי: מאמנת-העל בלינדה,\n"
+	.string "שתפסה בטרפרי מפרפר!$"
 BugContest_Text_First2:
-	.string "Placing second is the BUGCATCHER\n"
-	.string "SHAUN, who caught a writhing\l"
-	.string "PINSIR!$"
+	.string "במקום השני: לוכד החרקים שון,\n"
+	.string "שתפס פינסיר מתפתל!$"
 BugContest_Text_First3:
-	.string "This Bug-Catching Contest Winner\n"
-	.string "is...\p"
-	.string "{PLAYER}, who caught a whopping\n"
-	.string "{STR_VAR_1}!$"
+	.string "הזוכה בתחרות לכידת החרקים\n"
+	.string "הוא…\p"
+	.string "{PLAYER}, שתפס\n"
+	.string "{STR_VAR_1} ענק!$"
 
 BugContest_Text_Second1:
-	.string "Placing third is the COOLTRAINER\n"
-	.string "BELINDA, who caught a wriggling\l"
-	.string "BUTTERFREE!$"
+	.string "במקום השלישי: מאמנת-העל בלינדה,\n"
+	.string "שתפסה בטרפרי מפרפר!$"
 BugContest_Text_Second2:
-	.string "Placing second is {PLAYER}, who\n"
-	.string "caught a writhing {STR_VAR_1}!$"
+	.string "במקום השני: {PLAYER},\n"
+	.string "שתפס {STR_VAR_1} מתפתל!$"
 BugContest_Text_Second3:
-	.string "This Bug-Catching Contest Winner\n"
-	.string "is...\p"
-	.string "BUGCATCHER SHAUN, who caught a\n"
-	.string "whopping PINSIR!$"
+	.string "הזוכה בתחרות לכידת החרקים\n"
+	.string "הוא…\p"
+	.string "לוכד החרקים שון, שתפס\n"
+	.string "פינסיר ענק!$"
 
 BugContest_Text_Third1:
-	.string "Placing third is {PLAYER}, who\n"
-	.string "caught a wriggling {STR_VAR_1}!$"
+	.string "במקום השלישי: {PLAYER},\n"
+	.string "שתפס {STR_VAR_1} מפרפר!$"
 BugContest_Text_Third2:
-	.string "Placing second is the COOLTRAINER\n"
-	.string "BELINDA, who caught a writhing\l"
-	.string "BUTTERFREE!$"
+	.string "במקום השני: מאמנת-העל בלינדה,\n"
+	.string "שתפסה בטרפרי מתפתל!$"
 BugContest_Text_Third3:
-	.string "This Bug-Catching Contest Winner\n"
-	.string "is...\p"
-	.string "BUGCATCHER SHAUN, who caught a\n"
-	.string "whopping PINSIR!$"
+	.string "הזוכה בתחרות לכידת החרקים\n"
+	.string "הוא…\p"
+	.string "לוכד החרקים שון, שתפס\n"
+	.string "פינסיר ענק!$"
 
 BugContest_Text_TakePartInFuture:
-	.string "Thank you for participating!\n"
-	.string "We hope you'll take part in the\l"
-	.string "future.$"
+	.string "תודה על ההשתתפות!\n"
+	.string "נשמח לראות אותך בתחרויות הבאות.$"
 
 BugContest_Text_TransferAndReturn:
-	.string "Your chosen BUG POKéMON will now\n"
-	.string "be sent to the PC and your party\l"
-	.string "will be returned to you.$"
+	.string "פוקימון החרק שבחרת יישלח למחשב,\n"
+	.string "והפוקימונים שלך יוחזרו אליך.$"

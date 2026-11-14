@@ -1,0 +1,23 @@
+sl pyr_after_bag
+30 -
+waitctl 300
+clearflag FLAG_SYS_PYRAMID_SILVER
+clearflag FLAG_SYS_PYRAMID_GOLD
+py: sb2 = emu.sb2(); emu.w16(sb2 + 0xE1A, 21); emu.w16(sb2 + 0xD00, emu.r16(sb2 + 0xD00) & ~(3 << 12)); print("pyr streak", emu.r16(sb2 + 0xE1A), "brainflags", hex(emu.r16(sb2 + 0xD00)))
+evstart warp MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_TOP_HNS, 17, 17; waitstate; end
+waitcb2x CB2_Overworld 900
+waitctl 900
+loc
+snap py_top_00
+go UP 5
+loc
+face UP
+tap A 0
+drivex py_top_att free 20 6000
+go UP 2
+loc
+drivex py_br_in battle 30 9000
+fastbattles off
+bwin py_br_b
+drivex py_br_after free 30 9000
+loc

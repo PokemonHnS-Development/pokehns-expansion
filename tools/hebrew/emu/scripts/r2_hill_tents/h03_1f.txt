@@ -1,0 +1,19 @@
+# 1F: the stairs, then trainer 1 (11,6) spots the player at (11,7) and both come for a tag battle;
+# afterwards both stand next to the player: their after-battle speech, then the stairs to 2F.
+fastbattles off
+walkto 9 1
+snap h03_1f_arrive
+walkto 11 7 UP
+dlg h03_t1_intro battle
+battle2 h03_t1
+battlers
+snap h03_t1_after
+face UP
+tap A 4
+dlg h03_t1_post free
+face RIGHT
+tap A 4
+dlg h03_t2_post free
+snap h03_1f_done
+walkto 12 1
+snap h03_2f_arrive

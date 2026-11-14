@@ -1,23 +1,23 @@
 // multichoice lists
 static const struct MenuAction MultichoiceList_BrineyOnDewford[] =
 {
-    {COMPOUND_STRING("PETALBURG")},
-    {COMPOUND_STRING("SLATEPORT")},
+    {COMPOUND_STRING("פטלבורג")},
+    {COMPOUND_STRING("סלייטפורט")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_EnterInfo[] =
 {
-    {COMPOUND_STRING("ENTER")},
+    {COMPOUND_STRING("הרשמה")},
     {gText_Info2},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_ContestInfo[] =
 {
-    {COMPOUND_STRING("What's a CONTEST?")},
-    {COMPOUND_STRING("Types of CONTESTS")},
-    {COMPOUND_STRING("Ranks")},
+    {COMPOUND_STRING("מהי תחרות?")},
+    {COMPOUND_STRING("סוגי התחרויות")},
+    {COMPOUND_STRING("דרגות")},
     {gText_Cancel2},
 };
 
@@ -56,30 +56,30 @@ static const struct MenuAction MultichoiceList_RegisterMenu[] =
 
 static const struct MenuAction MultichoiceList_Bike[] =
 {
-    {COMPOUND_STRING("MACH")},
-    {COMPOUND_STRING("ACRO")},
+    {COMPOUND_STRING("מהירות")},
+    {COMPOUND_STRING("אקרו")},
 };
 
 static const struct MenuAction MultichoiceList_StatusInfo[] =
 {
-    {COMPOUND_STRING("PSN")},
-    {COMPOUND_STRING("PAR")},
-    {COMPOUND_STRING("SLP")},
-    {COMPOUND_STRING("BRN")},
-    {COMPOUND_STRING("FRZ")},
+    {COMPOUND_STRING("רעל")},
+    {COMPOUND_STRING("שיתוק")},
+    {COMPOUND_STRING("שינה")},
+    {COMPOUND_STRING("כוויה")},
+    {COMPOUND_STRING("קיפאון")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_BrineyOffDewford[] =
 {
-    {COMPOUND_STRING("DEWFORD")},
+    {COMPOUND_STRING("דיופורד")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_ViewedPaintings[] =
 {
-    {COMPOUND_STRING("Saw it")},
-    {COMPOUND_STRING("Not yet")},
+    {COMPOUND_STRING("ראיתי")},
+    {COMPOUND_STRING("עוד לא")},
 };
 
 static const struct MenuAction MultichoiceList_YesNoInfo2[] =
@@ -91,8 +91,8 @@ static const struct MenuAction MultichoiceList_YesNoInfo2[] =
 
 static const struct MenuAction MultichoiceList_ChallengeInfo[] =
 {
-    {COMPOUND_STRING("CHALLENGE")},
-    {COMPOUND_STRING("INFO")},
+    {COMPOUND_STRING("אתגר")},
+    {COMPOUND_STRING("מידע")},
     {gText_Exit},
 };
 
@@ -105,84 +105,84 @@ static const struct MenuAction MultichoiceList_LevelMode[] =
 
 static const struct MenuAction MultichoiceList_Mechadoll1_Q1[] =
 {
-    {COMPOUND_STRING("ODDISH")},
-    {COMPOUND_STRING("POOCHYENA")},
-    {COMPOUND_STRING("TAILLOW")},
+    {COMPOUND_STRING("אודיש")},
+    {COMPOUND_STRING("פוצ'יינה")},
+    {COMPOUND_STRING("טיילואו")},
 };
 
 static const struct MenuAction MultichoiceList_Mechadoll1_Q2[] =
 {
-    {COMPOUND_STRING("AZURILL")},
-    {COMPOUND_STRING("LOTAD")},
-    {COMPOUND_STRING("WINGULL")},
+    {COMPOUND_STRING("אזוריל")},
+    {COMPOUND_STRING("לוטאד")},
+    {COMPOUND_STRING("וינגול")},
 };
 
 static const struct MenuAction MultichoiceList_Mechadoll1_Q3[] =
 {
-    {COMPOUND_STRING("DUSTOX")},
-    {COMPOUND_STRING("ZUBAT")},
-    {COMPOUND_STRING("NINCADA")},
+    {COMPOUND_STRING("דסטוקס")},
+    {COMPOUND_STRING("זובאט")},
+    {COMPOUND_STRING("נינקדה")},
 };
 
 static const struct MenuAction MultichoiceList_Mechadoll2_Q1[] =
 {
-    {COMPOUND_STRING("RALTS")},
-    {COMPOUND_STRING("ZIGZAGOON")},
-    {COMPOUND_STRING("SLAKOTH")},
+    {COMPOUND_STRING("רלטס")},
+    {COMPOUND_STRING("זיגזגון")},
+    {COMPOUND_STRING("סלקות'")},
 };
 
 static const struct MenuAction MultichoiceList_Mechadoll2_Q2[] =
 {
-    {COMPOUND_STRING("POOCHYENA")},
-    {COMPOUND_STRING("SHROOMISH")},
-    {COMPOUND_STRING("ZIGZAGOON")},
+    {COMPOUND_STRING("פוצ'יינה")},
+    {COMPOUND_STRING("שרומיש")},
+    {COMPOUND_STRING("זיגזגון")},
 };
 
 static const struct MenuAction MultichoiceList_Mechadoll2_Q3[] =
 {
-    {COMPOUND_STRING("POOCHYENA")},
-    {COMPOUND_STRING("ZUBAT")},
-    {COMPOUND_STRING("CARVANHA")},
+    {COMPOUND_STRING("פוצ'יינה")},
+    {COMPOUND_STRING("זובאט")},
+    {COMPOUND_STRING("קרוונה")},
 };
 
 static const struct MenuAction MultichoiceList_Mechadoll3_Q1[] =
 {
-    {COMPOUND_STRING("BURN HEAL")},
-    {COMPOUND_STRING("HARBOR MAIL")},
-    {COMPOUND_STRING("Same price")},
+    {COMPOUND_STRING("תרופה לכוויות")},
+    {COMPOUND_STRING("דואר נמל")},
+    {COMPOUND_STRING("אותו מחיר")},
 };
 
 static const struct MenuAction MultichoiceList_Mechadoll3_Q2[] =
 {
     {COMPOUND_STRING("¥60")},
     {COMPOUND_STRING("¥55")},
-    {COMPOUND_STRING("Nothing")},
+    {COMPOUND_STRING("כלום")},
 };
 
 static const struct MenuAction MultichoiceList_Mechadoll3_Q3[] =
 {
-    {COMPOUND_STRING("They will cost more.")},
-    {COMPOUND_STRING("They will cost less.")},
-    {COMPOUND_STRING("Same price")},
+    {COMPOUND_STRING("יעלו יותר.")},
+    {COMPOUND_STRING("יעלו פחות.")},
+    {COMPOUND_STRING("אותו מחיר")},
 };
 
 static const struct MenuAction MultichoiceList_Mechadoll4_Q1[] =
 {
-    {COMPOUND_STRING("Male")},
-    {COMPOUND_STRING("Female")},
-    {COMPOUND_STRING("Neither")},
+    {COMPOUND_STRING("זכר")},
+    {COMPOUND_STRING("נקבה")},
+    {COMPOUND_STRING("לא זה ולא זה")},
 };
 
 static const struct MenuAction MultichoiceList_Mechadoll4_Q2[] =
 {
-    {COMPOUND_STRING("Elderly men")},
-    {COMPOUND_STRING("Elderly ladies")},
-    {COMPOUND_STRING("Same number")},
+    {COMPOUND_STRING("קשישים")},
+    {COMPOUND_STRING("קשישות")},
+    {COMPOUND_STRING("אותו מספר")},
 };
 
 static const struct MenuAction MultichoiceList_Mechadoll4_Q3[] =
 {
-    {COMPOUND_STRING("None")},
+    {COMPOUND_STRING("אף אחת")},
     {COMPOUND_STRING("1")},
     {COMPOUND_STRING("2")},
 };
@@ -210,103 +210,103 @@ static const struct MenuAction MultichoiceList_Mechadoll5_Q3[] =
 
 static const struct MenuAction MultichoiceList_VendingMachine[] =
 {
-    {COMPOUND_STRING("FRESH WATER{CLEAR_TO 0x48}¥200")},
-    {COMPOUND_STRING("SODA POP{CLEAR_TO 0x48}¥300")},
-    {COMPOUND_STRING("LEMONADE{CLEAR_TO 0x48}¥350")},
+    {COMPOUND_STRING("מים טריים{CLEAR_TO 0x48}¥200")},
+    {COMPOUND_STRING("סודה פופ{CLEAR_TO 0x48}¥300")},
+    {COMPOUND_STRING("לימונדה{CLEAR_TO 0x48}¥350")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_MachBikeInfo[] =
 {
-    {COMPOUND_STRING("HOW TO RIDE")},
-    {COMPOUND_STRING("HOW TO TURN")},
-    {COMPOUND_STRING("SANDY SLOPES")},
+    {COMPOUND_STRING("איך לרכוב")},
+    {COMPOUND_STRING("איך לפנות")},
+    {COMPOUND_STRING("מדרונות חול")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_AcroBikeInfo[] =
 {
-    {COMPOUND_STRING("WHEELIES")},
-    {COMPOUND_STRING("BUNNY-HOPS")},
-    {COMPOUND_STRING("JUMP")},
+    {COMPOUND_STRING("רכיבה על גלגל אחורי")},
+    {COMPOUND_STRING("קפיצות ארנב")},
+    {COMPOUND_STRING("קפיצה")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_Satisfaction[] =
 {
-    {COMPOUND_STRING("Satisfied")},
-    {COMPOUND_STRING("Dissatisfied")},
+    {COMPOUND_STRING("מרוצה")},
+    {COMPOUND_STRING("לא מרוצה")},
 };
 
 static const struct MenuAction MultichoiceList_SternDeepSea[] =
 {
-    {COMPOUND_STRING("DEEPSEATOOTH")},
-    {COMPOUND_STRING("DEEPSEASCALE")},
+    {COMPOUND_STRING("שן מצולות")},
+    {COMPOUND_STRING("קשקש מצולות")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_UnusedAshVendor[] =
 {
-    {COMPOUND_STRING("BLUE FLUTE")},
-    {COMPOUND_STRING("YELLOW FLUTE")},
-    {COMPOUND_STRING("RED FLUTE")},
-    {COMPOUND_STRING("WHITE FLUTE")},
-    {COMPOUND_STRING("BLACK FLUTE")},
-    {COMPOUND_STRING("GLASS CHAIR")},
-    {COMPOUND_STRING("GLASS DESK")},
+    {COMPOUND_STRING("חליל כחול")},
+    {COMPOUND_STRING("חליל צהוב")},
+    {COMPOUND_STRING("חליל אדום")},
+    {COMPOUND_STRING("חליל לבן")},
+    {COMPOUND_STRING("חליל שחור")},
+    {COMPOUND_STRING("כיסא זכוכית")},
+    {COMPOUND_STRING("שולחן זכוכית")},
     {gText_Cancel2},
 };
 
 static const struct MenuAction MultichoiceList_GameCornerDolls[] =
 {
-    {COMPOUND_STRING("TREECKO DOLL 1,000 COINS")},
-    {COMPOUND_STRING("TORCHIC DOLL 1,000 COINS")},
-    {COMPOUND_STRING("MUDKIP DOLL   1,000 COINS")},
+    {COMPOUND_STRING("בובת טריקו    1,000 מטבעות")},
+    {COMPOUND_STRING("בובת טורצ'יק 1,000 מטבעות")},
+    {COMPOUND_STRING("בובת מדקיפ   1,000 מטבעות")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_GameCornerDolls2[] =
 {
-    {COMPOUND_STRING("REGIROCK DOLL{CLEAR_TO 0x58}9,000 C.")},
-    {COMPOUND_STRING("REGICE DOLL{CLEAR_TO 0x58}9,000 C.")},
-    {COMPOUND_STRING("REGISTEEL DOLL{CLEAR_TO 0x58}9,000 C.")},
+    {COMPOUND_STRING("בובת רג'ירוק{CLEAR_TO 0x58}9,000 מטבעות")},
+    {COMPOUND_STRING("בובת רג'יס{CLEAR_TO 0x58}9,000 מטבעות")},
+    {COMPOUND_STRING("בובת רג'יסטיל{CLEAR_TO 0x58}9,000 מטבעות")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_PrizeMons[] = 
 {
-    {COMPOUND_STRING("ABRA{CLEAR_TO 0x61}120 C.")},
-    {COMPOUND_STRING("CLEFAIRY{CLEAR_TO 0x61}500 C.")},
-    {COMPOUND_STRING("MUNCHLAX{CLEAR_TO 0x58}2,800 C.")},
-    {COMPOUND_STRING("DRATINI{CLEAR_TO 0x58}5,500 C.")},
-    {COMPOUND_STRING("PORYGON{CLEAR_TO 0x58}6,500 C.")},
+    {COMPOUND_STRING("אברה{CLEAR_TO 0x61}120")},
+    {COMPOUND_STRING("קלפרי{CLEAR_TO 0x61}500")},
+    {COMPOUND_STRING("מאנצ'לקס{CLEAR_TO 0x58}2,800")},
+    {COMPOUND_STRING("דרטיני{CLEAR_TO 0x58}5,500")},
+    {COMPOUND_STRING("פוריגון{CLEAR_TO 0x58}6,500")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_GameCornerTMs[] =
 {
-    {COMPOUND_STRING("DOUBLE TEAM{CLEAR_TO 0x58}1,500 C.")},
-    {COMPOUND_STRING("PSYCHIC{CLEAR_TO 0x58}3,500 C.")},
-    {COMPOUND_STRING("ICE BEAM{CLEAR_TO 0x58}4,000 C.")},
-    {COMPOUND_STRING("THUNDERBOLT{CLEAR_TO 0x58}4,000 C.")},
-    {COMPOUND_STRING("FLAMETHROWER{CLEAR_TO 0x58}4,000 C.")},
+    {COMPOUND_STRING("רואה כפול{CLEAR_TO 0x58}1,500")},
+    {COMPOUND_STRING("כוח על-חושי{CLEAR_TO 0x58}3,500")},
+    {COMPOUND_STRING("קרן קרח{CLEAR_TO 0x58}4,000")},
+    {COMPOUND_STRING("מכת ברק{CLEAR_TO 0x58}4,000")},
+    {COMPOUND_STRING("להביור{CLEAR_TO 0x58}4,000")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_GameCornerCoins[] =
 {
-    {COMPOUND_STRING("50 COINS{CLEAR_TO 0x48}¥500")},
-    {COMPOUND_STRING("500 COINS{CLEAR_TO 0x48}¥5,000")},
-    {COMPOUND_STRING("1,000 COINS{CLEAR_TO 0x48}¥10,000")},
-    {COMPOUND_STRING("2,500 COINS{CLEAR_TO 0x48}¥25,000")},
-    {COMPOUND_STRING("5,000 COINS{CLEAR_TO 0x48}¥50,000")},
+    {COMPOUND_STRING("50 מטבעות{CLEAR_TO 0x48}¥500")},
+    {COMPOUND_STRING("500 מטבעות{CLEAR_TO 0x48}¥5,000")},
+    {COMPOUND_STRING("1,000 מטבעות{CLEAR_TO 0x48}¥10,000")},
+    {COMPOUND_STRING("2,500 מטבעות{CLEAR_TO 0x48}¥25,000")},
+    {COMPOUND_STRING("5,000 מטבעות{CLEAR_TO 0x48}¥50,000")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_HowsFishing[] =
 {
-    {COMPOUND_STRING("Excellent")},
-    {COMPOUND_STRING("Not so good")},
+    {COMPOUND_STRING("מצוין")},
+    {COMPOUND_STRING("לא כל כך טוב")},
 };
 
 static const struct MenuAction MultichoiceList_SSTidalSlateportWithBF[] =
@@ -325,8 +325,8 @@ static const struct MenuAction MultichoiceList_SSTidalBattleFrontier[] =
 
 static const struct MenuAction MultichoiceList_RightLeft[] =
 {
-    {COMPOUND_STRING("Right")},
-    {COMPOUND_STRING("Left")},
+    {COMPOUND_STRING("ימין")},
+    {COMPOUND_STRING("שמאל")},
 };
 
 static const struct MenuAction MultichoiceList_SSTidalSlateportNoBF[] =
@@ -473,8 +473,8 @@ static const struct MenuAction MultichoiceList_TourneyNoRecord[] =
 
 static const struct MenuAction MultichoiceList_Tent[] =
 {
-    {COMPOUND_STRING("RED TENT")},
-    {COMPOUND_STRING("BLUE TENT")},
+    {COMPOUND_STRING("אוהל אדום")},
+    {COMPOUND_STRING("אוהל כחול")},
 };
 
 static const struct MenuAction MultichoiceList_LinkServicesNoBerry[] =
@@ -494,9 +494,9 @@ static const struct MenuAction MultichoiceList_YesNoInfo[] =
 
 static const struct MenuAction MultichoiceList_BattleMode[] =
 {
-    {COMPOUND_STRING("SINGLE BATTLE")},
-    {COMPOUND_STRING("DOUBLE BATTLE")},
-    {COMPOUND_STRING("MULTI BATTLE")},
+    {COMPOUND_STRING("קרב יחיד")},
+    {COMPOUND_STRING("קרב כפול")},
+    {COMPOUND_STRING("קרב מרובה")},
     {gText_Info2},
     {gText_Exit},
 };
@@ -527,46 +527,46 @@ static const struct MenuAction MultichoiceList_LinkServicesNoRecordBerry[] =
 
 static const struct MenuAction MultichoiceList_WirelessMinigame[] =
 {
-    {COMPOUND_STRING("POKéMON JUMP")},
-    {COMPOUND_STRING("DODRIO BERRY-PICKING")},
+    {COMPOUND_STRING("קפיצת פוקימון")},
+    {COMPOUND_STRING("קטיף פירות דודריו")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_LinkLeader[] =
 {
-    {COMPOUND_STRING("JOIN GROUP")},
-    {COMPOUND_STRING("BECOME LEADER")},
+    {COMPOUND_STRING("הצטרפות לקבוצה")},
+    {COMPOUND_STRING("הובלת קבוצה")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_ContestRank[] =
 {
-    {COMPOUND_STRING("NORMAL RANK")},
-    {COMPOUND_STRING("SUPER RANK")},
-    {COMPOUND_STRING("HYPER RANK")},
-    {COMPOUND_STRING("MASTER RANK")},
+    {COMPOUND_STRING("דרגת נורמל")},
+    {COMPOUND_STRING("דרגת סופר")},
+    {COMPOUND_STRING("דרגת היפר")},
+    {COMPOUND_STRING("דרגת מאסטר")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_FrontierItemChoose[] =
 {
-    {COMPOUND_STRING("BATTLE BAG")},
-    {COMPOUND_STRING("HELD ITEM")},
+    {COMPOUND_STRING("תיק הקרב")},
+    {COMPOUND_STRING("פריט מוחזק")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_LinkContestInfo[] =
 {
-    {COMPOUND_STRING("LINK CONTEST")},
-    {COMPOUND_STRING("ABOUT E-MODE")},
-    {COMPOUND_STRING("ABOUT G-MODE")},
+    {COMPOUND_STRING("תחרות בקישור")},
+    {COMPOUND_STRING("מידע על מצב E")},
+    {COMPOUND_STRING("מידע על מצב G")},
     {gText_Cancel2},
 };
 
 static const struct MenuAction MultichoiceList_LinkContestMode[] =
 {
-    {COMPOUND_STRING("E-MODE")},
-    {COMPOUND_STRING("G-MODE")},
+    {COMPOUND_STRING("מצב E")},
+    {COMPOUND_STRING("מצב G")},
     {gText_Exit},
 };
 
@@ -584,7 +584,7 @@ static const struct MenuAction MultichoiceList_ForcedStartMenu[] =
 
 static const struct MenuAction MultichoiceList_FrontierGamblerBet[] =
 {
-    {COMPOUND_STRING("  5BP")},
+    {COMPOUND_STRING("5BP")},
     {COMPOUND_STRING("10BP")},
     {COMPOUND_STRING("15BP")},
     {gText_Exit},
@@ -621,42 +621,42 @@ static const struct MenuAction MultichoiceList_UnusedSSTidal4[] =
 
 static const struct MenuAction MultichoiceList_Fossil[] =
 {
-    {COMPOUND_STRING("CLAW FOSSIL")},
-    {COMPOUND_STRING("ROOT FOSSIL")},
+    {COMPOUND_STRING("מאובן טופר")},
+    {COMPOUND_STRING("מאובן שורש")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_FossilHns[] =
 {
-    {COMPOUND_STRING("CLAW FOSSIL")},
-    {COMPOUND_STRING("ROOT FOSSIL")},
-    {COMPOUND_STRING("HELIX FOSSIL")},
-    {COMPOUND_STRING("DOME FOSSIL")},
-    {COMPOUND_STRING("OLD AMBER")},
+    {COMPOUND_STRING("מאובן טופר")},
+    {COMPOUND_STRING("מאובן שורש")},
+    {COMPOUND_STRING("מאובן סליל")},
+    {COMPOUND_STRING("מאובן כיפה")},
+    {COMPOUND_STRING("ענבר עתיק")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_YesNo[] =
 {
     {gText_Yes},
-    {COMPOUND_STRING("NO")},
+    {COMPOUND_STRING("לא")},
 };
 
 static const struct MenuAction MultichoiceList_FrontierRules[] =
 {
-    {COMPOUND_STRING("TWO STYLES")},
-    {COMPOUND_STRING("LV. 50")},
-    {COMPOUND_STRING("OPEN LEVEL")},
-    {COMPOUND_STRING("{PKMN} TYPE & NO.")},
-    {COMPOUND_STRING("HOLD ITEMS")},
+    {COMPOUND_STRING("שני מסלולים")},
+    {COMPOUND_STRING("רמה 50")},
+    {COMPOUND_STRING("רמה פתוחה")},
+    {COMPOUND_STRING("מיני פוקימונים ומספרם")},
+    {COMPOUND_STRING("פריטים מוחזקים")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_FrontierPassInfo[] =
 {
-    {COMPOUND_STRING("SYMBOLS")},
-    {COMPOUND_STRING("RECORD")},
-    {COMPOUND_STRING("BATTLE PTS")},
+    {COMPOUND_STRING("סמלים")},
+    {COMPOUND_STRING("הקלטה")},
+    {COMPOUND_STRING("נקודות קרב")},
     {gText_Exit},
 };
 
@@ -671,18 +671,18 @@ static const struct MenuAction MultichoiceList_BattleArenaRules[] =
 
 static const struct MenuAction MultichoiceList_BattleTowerRules[] =
 {
-    {COMPOUND_STRING("TOWER INFO")},
-    {COMPOUND_STRING("BATTLE {PKMN}")},
-    {COMPOUND_STRING("BATTLE SALON")},
-    {COMPOUND_STRING("MULTI-LINK")},
+    {COMPOUND_STRING("מידע על המגדל")},
+    {COMPOUND_STRING("פוקימוני הקרב")},
+    {COMPOUND_STRING("סלון הקרב")},
+    {COMPOUND_STRING("מרובה בקישור")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_BattleDomeRules[] =
 {
-    {COMPOUND_STRING("MATCHUP")},
-    {COMPOUND_STRING("TOURNEY TREE")},
-    {COMPOUND_STRING("DOUBLE KO")},
+    {COMPOUND_STRING("שיבוץ יריבים")},
+    {COMPOUND_STRING("עץ הטורניר")},
+    {COMPOUND_STRING("נוקאאוט כפול")},
     {gText_Exit},
 };
 
@@ -692,7 +692,7 @@ static const struct MenuAction MultichoiceList_BattleFactoryRules[] =
     {gText_SwapPartners},
     {gText_SwapNumber},
     {gText_SwapNotes},
-    {COMPOUND_STRING("OPEN LEVEL")},
+    {COMPOUND_STRING("רמה פתוחה")},
     {gText_Exit},
 };
 
@@ -708,18 +708,18 @@ static const struct MenuAction MultichoiceList_BattlePalaceRules[] =
 
 static const struct MenuAction MultichoiceList_BattlePyramidRules[] =
 {
-    {COMPOUND_STRING("PYRAMID: POKéMON")},
-    {COMPOUND_STRING("PYRAMID: TRAINERS")},
-    {COMPOUND_STRING("PYRAMID: MAZE")},
-    {COMPOUND_STRING("BATTLE BAG")},
+    {COMPOUND_STRING("פירמידה: פוקימונים")},
+    {COMPOUND_STRING("פירמידה: מאמנים")},
+    {COMPOUND_STRING("פירמידה: מבוך")},
+    {COMPOUND_STRING("תיק הקרב")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_BattlePikeRules[] =
 {
-    {COMPOUND_STRING("POKéNAV AND BAG")},
-    {COMPOUND_STRING("HELD ITEMS")},
-    {COMPOUND_STRING("POKéMON ORDER")},
+    {COMPOUND_STRING("התיק והפוקיגיר")},
+    {COMPOUND_STRING("פריטים מוחזקים")},
+    {COMPOUND_STRING("סדר הפוקימונים")},
     {gText_Exit},
 };
 
@@ -753,24 +753,24 @@ static const struct MenuAction MultichoiceList_GoOnRetire[] =
 
 static const struct MenuAction MultichoiceList_TVLati[] =
 {
-    {COMPOUND_STRING("RED")},
-    {COMPOUND_STRING("BLUE")},
+    {COMPOUND_STRING("אדום")},
+    {COMPOUND_STRING("כחול")},
 };
 
 static const struct MenuAction MultichoiceList_BattleTowerFeelings[] =
 {
-    {COMPOUND_STRING("I'll battle now!")},
-    {COMPOUND_STRING("I won!")},
-    {COMPOUND_STRING("I lost!")},
-    {COMPOUND_STRING("I won't tell.")},
+    {COMPOUND_STRING("עכשיו לקרב!")},
+    {COMPOUND_STRING("ניצחתי!")},
+    {COMPOUND_STRING("הפסדתי!")},
+    {COMPOUND_STRING("לא אגלה.")},
 };
 
 static const struct MenuAction MultichoiceList_WheresRayquaza[] =
 {
-    {COMPOUND_STRING("CAVE OF ORIGIN")},
-    {COMPOUND_STRING("MT. PYRE")},
-    {COMPOUND_STRING("SKY PILLAR")},
-    {COMPOUND_STRING("Don't remember")},
+    {COMPOUND_STRING("מערת הבראשית")},
+    {COMPOUND_STRING("הר המוקד")},
+    {COMPOUND_STRING("עמוד השמיים")},
+    {COMPOUND_STRING("שכחתי")},
 };
 
 static const struct MenuAction MultichoiceList_SlateportTentRules[] =
@@ -804,32 +804,32 @@ static const struct MenuAction MultichoiceList_TagMatchType[] =
 
 static const struct MenuAction MultichoiceList_BerryPlot[] =
 {
-    {COMPOUND_STRING("FERTILIZE")},
-    {COMPOUND_STRING("PLANT BERRY")},
+    {COMPOUND_STRING("דישון")},
+    {COMPOUND_STRING("שתילת פרי")},
     {gText_Exit},
 };
 
 static const struct MenuAction sMultichoiceList_BikeShop[] = {
-    { COMPOUND_STRING("BICYCLE{CLEAR_TO 0x49}{FONT_SMALL}¥1,000,000") },
-    { COMPOUND_STRING("NO THANKS") }
+    { COMPOUND_STRING("אופניים{CLEAR_TO 0x49}{FONT_SMALL}¥1,000,000") },
+    { COMPOUND_STRING("לא, תודה") }
 };
 
 static const struct MenuAction sMultichoiceList_Eeveelutions[] = {
-    { COMPOUND_STRING("EEVEE") },
-    { COMPOUND_STRING("FLAREON") },
-    { COMPOUND_STRING("JOLTEON") },
-    { COMPOUND_STRING("VAPOREON") },
-    { COMPOUND_STRING("Quit looking.") }
+    { COMPOUND_STRING("איווי") },
+    { COMPOUND_STRING("פלייריאון") },
+    { COMPOUND_STRING("ג'ולטיאון") },
+    { COMPOUND_STRING("ופוריאון") },
+    { COMPOUND_STRING("סיום הצפייה.") }
 };
 
-static const u8 gText_SeviiIslands[] = _("SEVII ISLANDS");
-static const u8 gText_OneIsland[] = _("ONE ISLAND");
-static const u8 gText_TwoIsland[] = _("TWO ISLAND");
-static const u8 gText_ThreeIsland[] = _("THREE ISLAND");
-static const u8 gText_FourIsland[] = _("FOUR ISLAND");
-static const u8 gText_FiveIsland[] = _("FIVE ISLAND");
-static const u8 gText_SixIsland[] = _("SIX ISLAND");
-static const u8 gText_SevenIsland[] = _("SEVEN ISLAND");
+static const u8 gText_SeviiIslands[] = _("איי סווי");
+static const u8 gText_OneIsland[] = _("אי ראשון");
+static const u8 gText_TwoIsland[] = _("אי שני");
+static const u8 gText_ThreeIsland[] = _("אי שלישי");
+static const u8 gText_FourIsland[] = _("אי רביעי");
+static const u8 gText_FiveIsland[] = _("אי חמישי");
+static const u8 gText_SixIsland[] = _("אי שישי");
+static const u8 gText_SevenIsland[] = _("אי שביעי");
 
 static const struct MenuAction sMultichoiceList_Island23[] = {
     { gText_TwoIsland },
@@ -901,75 +901,75 @@ static const struct MenuAction sMultichoiceList_SeagallopVermilion[] = {
     { gText_Exit }
 };
 
-const u8 sText_NoThanks[] = _("NO THANKS");
+const u8 sText_NoThanks[] = _("לא, תודה");
 
 static const struct MenuAction sMultichoiceList_GameCornerPokemonPrizes[] = {
 #if defined(FIRERED)
     { COMPOUND_STRING("ABRA{CLEAR_TO 0x55}{FONT_SMALL} 180 COINS") },
-    { COMPOUND_STRING("CLEFAIRY{CLEAR_TO 0x55}{FONT_SMALL} 500 COINS") },
+    { COMPOUND_STRING("קלפרי{CLEAR_TO 0x55}{FONT_SMALL} 500 מטבעות") },
     { COMPOUND_STRING("DRATINI{CLEAR_TO 0x4B}{FONT_SMALL} 2,800 COINS") },
     { COMPOUND_STRING("SCYTHER{CLEAR_TO 0x4B}{FONT_SMALL} 5,500 COINS") },
-    { COMPOUND_STRING("PORYGON{CLEAR_TO 0x4B}{FONT_SMALL} 9,999 COINS") },
+    { COMPOUND_STRING("פוריגון{CLEAR_TO 0x4B}{FONT_SMALL} 9,999 מטבעות") },
 #else
-    { COMPOUND_STRING("ABRA{CLEAR_TO 0x55}{FONT_SMALL} 120") },
-    { COMPOUND_STRING("CLEFAIRY{CLEAR_TO 0x55}{FONT_SMALL} 750") },
-    { COMPOUND_STRING("PINSIR{CLEAR_TO 0x4B}{FONT_SMALL} 2,500") },
-    { COMPOUND_STRING("DRATINI{CLEAR_TO 0x4B}{FONT_SMALL} 4,600") },
-    { COMPOUND_STRING("PORYGON{CLEAR_TO 0x4B}{FONT_SMALL} 6,500") },
+    { COMPOUND_STRING("אברה{CLEAR_TO 0x55}{FONT_SMALL} 120") },
+    { COMPOUND_STRING("קלפרי{CLEAR_TO 0x55}{FONT_SMALL} 750") },
+    { COMPOUND_STRING("פינסיר{CLEAR_TO 0x4B}{FONT_SMALL} 2,500") },
+    { COMPOUND_STRING("דרטיני{CLEAR_TO 0x4B}{FONT_SMALL} 4,600") },
+    { COMPOUND_STRING("פוריגון{CLEAR_TO 0x4B}{FONT_SMALL} 6,500") },
 #endif
     { sText_NoThanks }
 };
 
 static const struct MenuAction sMultichoiceList_GameCornerTMPrizes[] = {
-    { COMPOUND_STRING("TM13{CLEAR_TO 0x48}{FONT_SMALL}4,000 COINS") },
-    { COMPOUND_STRING("TM23{CLEAR_TO 0x48}{FONT_SMALL}3,500 COINS") },
-    { COMPOUND_STRING("TM24{CLEAR_TO 0x48}{FONT_SMALL}4,000 COINS") },
-    { COMPOUND_STRING("TM30{CLEAR_TO 0x48}{FONT_SMALL}4,500 COINS") },
-    { COMPOUND_STRING("TM35{CLEAR_TO 0x48}{FONT_SMALL}4,000 COINS") },
+    { COMPOUND_STRING("מ”מ 13{CLEAR_TO 0x48}{FONT_SMALL}4,000 מטבעות") },
+    { COMPOUND_STRING("מ”מ 23{CLEAR_TO 0x48}{FONT_SMALL}3,500 מטבעות") },
+    { COMPOUND_STRING("מ”מ 24{CLEAR_TO 0x48}{FONT_SMALL}4,000 מטבעות") },
+    { COMPOUND_STRING("מ”מ 30{CLEAR_TO 0x48}{FONT_SMALL}4,500 מטבעות") },
+    { COMPOUND_STRING("מ”מ 35{CLEAR_TO 0x48}{FONT_SMALL}4,000 מטבעות") },
     { sText_NoThanks }
 };
 
 static const struct MenuAction sMultichoiceList_GameCornerBattleItemPrizes[] = {
-    { COMPOUND_STRING("SMOKE BALL{CLEAR_TO 0x5A}{FONT_SMALL}800 COINS") },
-    { COMPOUND_STRING("MIRACLE SEED{CLEAR_TO 0x50}{FONT_SMALL}1,000 COINS") },
-    { COMPOUND_STRING("CHARCOAL{CLEAR_TO 0x50}{FONT_SMALL}1,000 COINS") },
-    { COMPOUND_STRING("MYSTIC WATER{CLEAR_TO 0x50}{FONT_SMALL}1,000 COINS") },
-    { COMPOUND_STRING("YELLOW FLUTE{CLEAR_TO 0x50}{FONT_SMALL}1,600 COINS") },
+    { COMPOUND_STRING("כדור עשן{CLEAR_TO 0x5A}{FONT_SMALL}800 מטבעות") },
+    { COMPOUND_STRING("זרע פלא{CLEAR_TO 0x50}{FONT_SMALL}1,000 מטבעות") },
+    { COMPOUND_STRING("פחם{CLEAR_TO 0x50}{FONT_SMALL}1,000 מטבעות") },
+    { COMPOUND_STRING("מים מיסטיים{CLEAR_TO 0x50}{FONT_SMALL}1,000 מטבעות") },
+    { COMPOUND_STRING("חליל צהוב{CLEAR_TO 0x50}{FONT_SMALL}1,600 מטבעות") },
     { sText_NoThanks }
 };
 
 static const struct MenuAction sMultichoiceList_DeptStoreElevator[] = {
-    { COMPOUND_STRING("5F") },
-    { COMPOUND_STRING("4F") },
-    { COMPOUND_STRING("3F") },
-    { COMPOUND_STRING("2F") },
-    { COMPOUND_STRING("1F") },
+    { COMPOUND_STRING("קומה 5") },
+    { COMPOUND_STRING("קומה 4") },
+    { COMPOUND_STRING("קומה 3") },
+    { COMPOUND_STRING("קומה 2") },
+    { COMPOUND_STRING("קומה 1") },
     { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_GameCornerCoinPurchaseCounter[] = {
-    { COMPOUND_STRING("{FONT_SMALL} 50 COINS{CLEAR_TO 0x45}¥1,000") },
-    { COMPOUND_STRING("{FONT_SMALL}500 COINS{CLEAR_TO 0x40}¥10,000") },
+    { COMPOUND_STRING("{FONT_SMALL} 50 מטבעות{CLEAR_TO 0x45}¥1,000") },
+    { COMPOUND_STRING("{FONT_SMALL}500 מטבעות{CLEAR_TO 0x40}¥10,000") },
     { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_LinkedDirectUnion[] = {
-    { COMPOUND_STRING("LINKED GAME PLAY") },
-    { COMPOUND_STRING("DIRECT CORNER") },
-    { COMPOUND_STRING("UNION ROOM") },
+    { COMPOUND_STRING("משחק מקושר") },
+    { COMPOUND_STRING("פינה ישירה") },
+    { COMPOUND_STRING("חדר האיחוד") },
     { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_CeladonVendingMachine[] = {
-    { COMPOUND_STRING("FRESH WATER{CLEAR_TO 0x57}{FONT_SMALL}¥200") },
-    { COMPOUND_STRING("SODA POP{CLEAR_TO 0x57}{FONT_SMALL}¥300") },
-    { COMPOUND_STRING("LEMONADE{CLEAR_TO 0x57}{FONT_SMALL}¥350") },
+    { COMPOUND_STRING("מים טריים{CLEAR_TO 0x57}{FONT_SMALL}¥200") },
+    { COMPOUND_STRING("סודה פופ{CLEAR_TO 0x57}{FONT_SMALL}¥300") },
+    { COMPOUND_STRING("לימונדה{CLEAR_TO 0x57}{FONT_SMALL}¥350") },
     { gText_Exit }
 };
 
-const u8 sText_FreshWater[] = _("FRESH WATER");
-const u8 sText_SodaPop[] = _("SODA POP");
-const u8 sText_Lemonade[] = _("LEMONADE");
+const u8 sText_FreshWater[] = _("מים טריים");
+const u8 sText_SodaPop[] = _("סודה פופ");
+const u8 sText_Lemonade[] = _("לימונדה");
 
 static const struct MenuAction sMultichoiceList_ThirstyGirlFreshWater[] = {
     { sText_FreshWater },
@@ -1018,9 +1018,9 @@ static const struct MenuAction sMultichoiceList_RocketHideoutElevator[] = {
     { gText_Exit }
 };
 
-static const u8 sText_HelixFossil[] = _("HELIX FOSSIL");
-static const u8 sText_DomeFossil[] = _("DOME FOSSIL");
-static const u8 sText_OldAmber[] = _("OLD AMBER");
+static const u8 sText_HelixFossil[] = _("מאובן סליל");
+static const u8 sText_DomeFossil[] = _("מאובן כיפה");
+static const u8 sText_OldAmber[] = _("ענבר עתיק");
 
 static const struct MenuAction sMultichoiceList_Helix[] = {
     { sText_HelixFossil },
@@ -1050,8 +1050,8 @@ static const struct MenuAction sMultichoiceList_DomeAmber[] = {
 };
 
 static const struct MenuAction sMultichoiceList_Mushrooms[] = {
-    { COMPOUND_STRING("2 TINYMUSHROOMS") },
-    { COMPOUND_STRING("1 BIG MUSHROOM") }
+    { COMPOUND_STRING("2 פטריות קטנות") },
+    { COMPOUND_STRING("1 פטרייה גדולה") }
 };
 
 static const struct MenuAction sMultichoiceList_RooftopB1F[] = {
@@ -1069,14 +1069,19 @@ static const struct MenuAction sMultichoiceList_TrainerTowerMode[] = {
 };
 
 static const struct MenuAction sMultichoiceList_TrainerCardIconTint[] = {
+#if TEXT_RTL
+    // gText_Normal is the NORMAL contest rank's name; the print type is the ordinary word.
+    { COMPOUND_STRING("רגיל") },
+#else
     { gText_Normal },
+#endif
     { gText_DexSearchColorBlack },
     { gText_DexSearchColorPink },
-    { COMPOUND_STRING("SEPIA") }
+    { COMPOUND_STRING("ספיה") }
 };
 
-static const u8 sText_Eggs[] = _("EGGS");
-static const u8 sText_Victories[] = _("VICTORIES");
+static const u8 sText_Eggs[] = _("ביצים");
+static const u8 sText_Victories[] = _("ניצחונות");
 
 static const struct MenuAction sMultichoiceList_HOF_Quit[] = {
     { gText_HallOfFame },
@@ -1240,15 +1245,15 @@ static const struct MenuAction MultichoiceList_MomMenu[] =
 
 static const struct MenuAction MultichoiceList_LinkServicesHns[] =
 {
-    {COMPOUND_STRING("TRADE")},
-    {COMPOUND_STRING("BATTLE")},
+    {COMPOUND_STRING("החלפה")},
+    {COMPOUND_STRING("קרב")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_BattleModeHns[] =
 {
-    {COMPOUND_STRING("SINGLE BATTLE")},
-    {COMPOUND_STRING("DOUBLE BATTLE")},
+    {COMPOUND_STRING("קרב יחיד")},
+    {COMPOUND_STRING("קרב כפול")},
     {gText_Exit},
 };
 
@@ -1485,7 +1490,7 @@ const u8 *const gStdStrings[] =
     [STDSTRING_MARSH_BADGE]      = gText_Marshbadge,
     [STDSTRING_VOLCANO_BADGE]    = gText_Volcanobadge,
     [STDSTRING_EARTH_BADGE]      = gText_Earthbadge,
-    [STDSTRING_COINS]            = COMPOUND_STRING("COINS"),
+    [STDSTRING_COINS]            = COMPOUND_STRING("מטבעות"),
     [STDSTRING_MEDICINE]         = gText_Medicine,
 #if I_COMBINE_BAG_POCKETS == FALSE
     [STDSTRING_BATTLE_ITEMS]     = gText_BattleItems,

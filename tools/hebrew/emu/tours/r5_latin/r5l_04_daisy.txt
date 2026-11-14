@@ -1,0 +1,41 @@
+# Daisy (Pallet Town House 2, (5,4)): Hello (FLAG_HIDE_CINNABAR_BLUE clear), then with it set and
+# FLAG_DAILY_DAISY_GROOMED clear: offer NO (refused), offer YES + party (the Egg: can't groom),
+# offer YES + party (Typhlosion: alright, the grooming, all done), and the already-groomed line.
+start saves/ladder6_postgame.sav
+include _setup.txt
+ev clearflag FLAG_HIDE_CINNABAR_BLUE; clearflag FLAG_DAILY_DAISY_GROOMED; end
+warpto MAP_PALLET_TOWN_HOUSE2_HNS 5 5
+face UP
+tap A 4
+fieldwatch daisy_hello free 3000
+ev setflag FLAG_HIDE_CINNABAR_BLUE; end
+face UP
+tap A 4
+fieldwatch daisy_offer menu 6000
+pick 1
+fieldwatch daisy_refused free 3000
+face UP
+tap A 4
+fieldwatch daisy_offer2 menu 6000
+pick 0
+fieldwatch daisy_which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 900
+seek 8 @gPartyMenu+9@ 3 DOWN
+snap daisy_party_egg
+tap A 0
+waitcb2x CB2_Overworld 900
+fieldwatch daisy_egg free 3000
+face UP
+tap A 4
+fieldwatch daisy_offer3 menu 6000
+pick 0
+fieldwatch daisy_which3 cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 900
+seek 8 @gPartyMenu+9@ 0 UP
+snap daisy_party_typhlosion
+tap A 0
+waitcb2x CB2_Overworld 900
+fieldwatch daisy_groom free 8000 30
+face UP
+tap A 4
+fieldwatch daisy_already free 3000

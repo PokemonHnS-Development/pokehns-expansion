@@ -118,104 +118,102 @@ SafariZone_EventScript_PokeblockGone::
 	end
 
 SafariZone_Text_PokeblockGone:
-	.string "The {STR_VAR_1} was all\n"
-	.string "eaten up!$"
+	.string "{STR_VAR_1}\n"
+	.string "נאכל כולו!$"
 
 SafariZone_Text_WouldYouLikeToExit:
-	.string "Would you like to exit the SAFARI\n"
-	.string "ZONE right now?$"
+	.string "תרצה לצאת מאזור הספארי\n"
+	.string "עכשיו?$"
 
 SafariZone_Text_TimesUp:
-	.string "Ding-dong! Time's up!\n"
-	.string "Your SAFARI Game is over.$"
+	.string "דינג-דונג! הזמן נגמר!\n"
+	.string "משחק הספארי שלך הסתיים.$"
 
 SafariZone_Text_OutOfBalls:
-	.string "You've run out of SAFARI BALLS.\n"
-	.string "Your SAFARI Game is over.$"
+	.string "נגמרו לך כדורי הספארי.\n"
+	.string "משחק הספארי שלך הסתיים.$"
 
 SafariZone_Text_PlacePokeblockOnFeeder:
-	.string "Would you like to place a {POKEBLOCK}\n"
-	.string "on the {POKEBLOCK} FEEDER?$"
+	.string "תרצה להניח פוקיבלוק\n"
+	.string "במתקן ההאכלה לפוקיבלוקים?$"
 
 SafariZone_Text_PokeblockStillHere:
-	.string "The {STR_VAR_1} you left\n"
-	.string "before is still here.$"
+	.string "{STR_VAR_1} שהשארת\n"
+	.string "קודם עדיין כאן.$"
 
 SafariZone_Text_PokeblockWasPlaced:
-	.string "The {STR_VAR_1} was placed\n"
-	.string "on the {POKEBLOCK} FEEDER.$"
+	.string "{STR_VAR_1} הונח\n"
+	.string "במתקן ההאכלה לפוקיבלוקים.$"
 
 Route121_SafariZoneEntrance_Text_WelcomeToSafariZone:
-	.string "Welcome to the SAFARI ZONE!\p"
-	.string "Here, you may witness many kinds of\n"
-	.string "POKéMON rarely seen in this region.\p"
-	.string "And, you'll see them in their wild,\n"
-	.string "untamed state in natural habitats.\p"
-	.string "What's more, we've thrown open the\n"
-	.string "gates to POKéMON TRAINERS.\p"
-	.string "You're encouraged to catch POKéMON\n"
-	.string "for keeps!\p"
-	.string "Come in and enjoy the SAFARI ZONE!$"
+	.string "ברוכים הבאים לאזור הספארי!\p"
+	.string "כאן אפשר לראות סוגים רבים של\n"
+	.string "פוקימונים שנדירים בחבל הארץ הזה.\p"
+	.string "ותראו אותם במצבם הפראי,\n"
+	.string "בבתי הגידול הטבעיים שלהם.\p"
+	.string "ויותר מזה, פתחנו את השערים\n"
+	.string "בפני מאמני פוקימונים.\p"
+	.string "כולם מוזמנים לתפוס פוקימונים\n"
+	.string "ולשמור אותם!\p"
+	.string "היכנסו ותיהנו באזור הספארי!$"
 
 Route121_SafariZoneEntrance_Text_WelcomeFirstTime:
-	.string "Welcome to the SAFARI ZONE!\n"
-	.string "Is it your first time here?$"
+	.string "ברוכים הבאים לאזור הספארי!\n"
+	.string "זו הפעם הראשונה שלך כאן?$"
 
 Route121_SafariZoneEntrance_Text_ComeInAndEnjoy:
-	.string "Come in and enjoy the SAFARI ZONE!$"
+	.string "היכנסו ותיהנו באזור הספארי!$"
 
 Route121_SafariZoneEntrance_Text_FirstTimeInfo:
-	.string "When you enter the SAFARI ZONE, you\n"
-	.string "start with 30 SAFARI BALLS for\l"
-	.string "catching POKéMON.\p"
-	.string "The SAFARI Game is over when you run\n"
-	.string "out of SAFARI BALLS, or when you've\l"
-	.string "walked 500 steps.\p"
-	.string "Come in and enjoy the SAFARI ZONE!$"
+	.string "כשנכנסים לאזור הספארי, מקבלים\n"
+	.string "30 כדורי ספארי לתפיסת פוקימונים.\p"
+	.string "משחק הספארי נגמר כשנגמרים\n"
+	.string "כדורי הספארי, או אחרי 500 צעדים.\p"
+	.string "היכנסו ותיהנו באזור הספארי!$"
 
 Route121_SafariZoneEntrance_Text_WouldYouLikeToPlay:
-	.string "Welcome to the SAFARI ZONE!\p"
-	.string "All you can catch for just ¥500!\n"
-	.string "Would you like to play a SAFARI Game?$"
+	.string "ברוכים הבאים לאזור הספארי!\p"
+	.string "תופסים כמה שרוצים, רק ¥500!\n"
+	.string "תרצה לשחק במשחק הספארי?$"
 
 Route121_SafariZoneEntrance_Text_PlayAnotherTime:
-	.string "Okay.\n"
-	.string "Please play another time!$"
+	.string "בסדר.\n"
+	.string "מוזמנים לשחק בפעם אחרת!$"
 
 Route121_SafariZoneEntrance_Text_NotEnoughMoney:
-	.string "You don't have enough money.\n"
-	.string "Sorry.$"
+	.string "אין לך מספיק כסף.\n"
+	.string "סליחה.$"
 
 Route121_SafariZoneEntrance_Text_ThatWillBe500Please:
-	.string "That will be ¥500, please.$"
+	.string "זה יהיה ¥500, בבקשה.$"
 
 Route121_SafariZoneEntrance_Text_HereAreYourSafariBalls:
-	.string "Here are your SAFARI BALLS.$"
+	.string "הנה כדורי הספארי שלך.$"
 
 Route121_SafariZoneEntrance_Text_Received30SafariBalls:
-	.string "{PLAYER} received 30 SAFARI BALLS.$"
+	.string "{PLAYER} קיבל 30 כדורי ספארי.$"
 
 Route121_SafariZoneEntrance_Text_PleaseEnjoyYourself:
-	.string "We'll let you know when your game\n"
-	.string "is over.\p"
-	.string "So, until then, enjoy yourself, please!\n"
-	.string "Off you go on your wild excursion!$"
+	.string "נודיע לך כשהמשחק שלך\n"
+	.string "ייגמר.\p"
+	.string "עד אז, שיהיה לך כיף!\n"
+	.string "לדרך, אל ההרפתקה הפראית!$"
 
 Route121_SafariZoneEntrance_Text_PCIsFull:
-	.string "Excuse me!\n"
-	.string "Your PC BOX is full.$"
+	.string "סליחה!\n"
+	.string "תיבת המחשב שלך מלאה.$"
 
 Route121_SafariZoneEntrance_Text_YouNeedPokeblockCase:
-	.string "Excuse me!\n"
-	.string "You seem to be without a {POKEBLOCK} CASE.\p"
-	.string "Your SAFARI Game will be much more\n"
-	.string "fruitful if you use {POKEBLOCK}S.\p"
-	.string "Please come back with a {POKEBLOCK} CASE.\p"
-	.string "You may obtain a {POKEBLOCK} CASE from\n"
+	.string "סליחה!\n"
+	.string "נראה שאין לך קופסת פוקיבלוק.\p"
+	.string "משחק הספארי יהיה מוצלח\n"
+	.string "הרבה יותר עם פוקיבלוקים.\p"
+	.string "נא לחזור עם קופסת פוקיבלוק.\p"
+	.string "אפשר לקבל קופסת פוקיבלוק\n"
 #if IS_HNS
-	.string "that boy over there.$"
+	.string "מהילד ההוא שם.$"
 #else
-	.string "the LILYCOVE CONTEST HALL.$"
+	.string "מאולם התחרויות בליליקוב.$"
 #endif
 
 SafariZone_South_Text_StillHaveTimeExit:
@@ -227,11 +225,11 @@ SafariZone_South_Text_EnjoyTheRestOfYourAdventure:
 	.string "adventure!$"
 
 SafariZone_South_Text_ExitEarlyThankYouForPlaying:
-	.string "Okay.\p"
-	.string "I'll take back your remaining SAFARI\n"
-	.string "BALLS.\p"
-	.string "Thank you for playing.\n"
-	.string "We hope to see you again.$"
+	.string "בסדר.\p"
+	.string "אקח בחזרה את כדורי הספארי\n"
+	.string "שנשארו לך.\p"
+	.string "תודה ששיחקת.\n"
+	.string "נשמח לראות אותך שוב.$"
 
 SafariZone_South_Text_GoodLuck:
 	.string "Good luck!\p"

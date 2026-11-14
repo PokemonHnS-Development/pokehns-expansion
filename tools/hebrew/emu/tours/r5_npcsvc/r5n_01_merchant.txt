@@ -1,0 +1,59 @@
+# Rage Candy Bar merchant, Mahogany Town (MahoganyTown_hns:92-180; merchant LOCALID_MAHOGANY_MERCHANT
+# at (30,11); coord triggers at x 30, y 12-14 for VAR_MAHOGANY_TOWN_STATE 1..16). Ladder 6 is at
+# state 17 (sold out). Paths: sold out (talk), trigger NO, trigger YES (¥300 paid, bar obtained),
+# trigger with ¥100 (not enough money), trigger with a full Medicine pocket (bag full), and the
+# talk path at state 1 (MahoganyTown_EventScript_Merchant).
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+setmoney 10000
+
+# --- 1. state 17: sold out
+warpto MAP_MAHOGANYTOWN_HNS 30 12
+face UP
+tap A 4
+fieldwatch m1_soldout free 3000
+
+# --- 2. state 1: the trigger, NO
+ev setvar VAR_MAHOGANY_TOWN_STATE, 1; end
+warpto MAP_MAHOGANYTOWN_HNS 30 15
+go UP
+fieldwatch m2_trigger menu 6000
+pick 1
+fieldwatch m2_refused free 3000
+
+# --- 3. the trigger, YES: ¥300 paid, the bar obtained
+warpto MAP_MAHOGANYTOWN_HNS 30 15
+go UP
+fieldwatch m3_trigger menu 6000
+pick 0
+fieldwatch m3_bought free 6000 20
+expectmoney 9700
+
+# --- 4. ¥100: not enough money
+setmoney 100
+warpto MAP_MAHOGANYTOWN_HNS 30 15
+go UP
+fieldwatch m4_trigger menu 6000
+pick 0
+fieldwatch m4_broke free 3000
+
+# --- 5. a full Medicine pocket: ¥300 taken, then the bag is full
+setmoney 10000
+fullpocket 1 ITEM_POTION 999            # 1 = POCKET_MEDICINE (include/constants/item.h:10)
+warpto MAP_MAHOGANYTOWN_HNS 30 15
+go UP
+fieldwatch m5_trigger menu 6000
+pick 0
+fieldwatch m5_bagfull free 6000 20
+
+# --- 6. talk to him at state 1 (the Medicine pocket emptied first)
+fullpocket 1 ITEM_NONE 0
+# (talk) (from the tile below, (30,12) is a trigger tile at state 1)
+ev setvar VAR_MAHOGANY_TOWN_STATE, 17; end
+warpto MAP_MAHOGANYTOWN_HNS 30 12
+ev setvar VAR_MAHOGANY_TOWN_STATE, 1; end
+face UP
+tap A 4
+fieldwatch m6_talk menu 6000
+pick 0
+fieldwatch m6_bought free 6000 20

@@ -1,0 +1,54 @@
+# Mystery Gift menu (src/mystery_gift_menu.c). The main menu enters it only with an attached Wireless
+# Adapter (main_menu.c:1013-1022), so the tour switches to CB2_InitMysteryGift from the main menu the
+# way SetMainCallback2 does. Top menu rows, Wonder Cards -> "no card" -> where from (WIRELESS / FRIEND /
+# CANCEL), CANCEL; Wonder News the same; then FRIEND up to the link.
+start saves/boot_mystery.sav
+waitcb2 CB2_MainMenu 4000 START
+waittaskx Task_HandleMainMenuInput 600
+waitquiet
+setcb2 CB2_InitMysteryGift
+waitcb2x CB2_MysteryGiftEReader 300
+waitquiet
+40 -
+snap bt12c_01_top_cards
+tap DOWN 6
+waitquiet
+snap bt12c_02_top_news
+tap DOWN 6
+waitquiet
+snap bt12c_03_top_exit
+tap UP 6
+tap UP 6
+waitquiet
+tap A 4
+waitquiet
+40 -
+snap bt12c_04_cards_none
+tap A 4
+waitquiet
+40 -
+snap bt12c_05_cards_source_wireless
+tap DOWN 6
+waitquiet
+snap bt12c_06_cards_source_friend
+tap DOWN 6
+waitquiet
+snap bt12c_07_cards_source_cancel
+tap A 4
+40 -
+waitquiet
+snap bt12c_08_back_top
+tap DOWN 6
+waitquiet
+tap A 4
+waitquiet
+40 -
+snap bt12c_09_news_none
+tap A 4
+waitquiet
+40 -
+snap bt12c_10_news_source
+tap DOWN 6
+waitquiet
+tap A 4
+burst bt12c_11_friend 12 20

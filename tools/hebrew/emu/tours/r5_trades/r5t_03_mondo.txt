@@ -1,0 +1,60 @@
+# Mondo, Pewter City Pokemon Center (11,5): INGAME_TRADE_HAUNTER (src/data/trade.h:1096-1115), Haunter 'Paul' OT Mondo for Xatu,
+# holding an Everstone, so no trade evolution (data/maps/PewterCity_PokemonCenter_hns/scripts.inc:25-70).
+# Talk: NO (decline line); YES + the trade box + a wrong Pokemon (party slot 1, Bellsprout);
+# YES + the trade box + Xatu (party slot 3) + the trade scene + the
+# take-care line; talk again (trade-completed line). Then the party menu and the summary of the
+# received Pokemon (INFO, then every page with RIGHT).
+start saves/r5_trades_base.sav
+include _setup.txt
+
+warpto MAP_PEWTER_CITY_POKEMON_CENTER_HNS 11 4
+face DOWN
+tap A 4
+fieldwatch mondo_ask menu 6000
+pick 1
+fieldwatch mondo_decline free 3000
+face DOWN
+tap A 4
+fieldwatch mondo_ask2 menu 6000
+pick 0
+include _pickparty.txt
+snap mondo_box
+boxpick 1 1 mondo_wrong_bellsprout
+waitcb2x CB2_Overworld 900
+fieldwatch mondo_wrong free 3000
+face DOWN
+tap A 4
+fieldwatch mondo_ask3 menu 6000
+pick 0
+include _pickparty.txt
+snap mondo_box3
+boxpick 1 3 mondo_pick_xatu
+waitcb2x CB2_InGameTrade 900
+scenewatch mondo_scene CB2_Overworld 6000 0 160 A 150
+waitcb2x CB2_Overworld 900
+fieldwatch mondo_takecare free 3000
+face DOWN
+tap A 4
+fieldwatch mondo_completed free 3000
+
+# --- the party and the received Pokemon's summary (slot 3)
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 3 DOWN
+snap mondo_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap mondo_party_action
+tap A 4
+waitcb2x pokemon_summary_screen:MainCB2 900
+sumwait
+snap mondo_sum_info
+sumkey RIGHT
+snap mondo_sum_p2
+sumkey RIGHT
+snap mondo_sum_p3
+sumkey RIGHT
+snap mondo_sum_p4

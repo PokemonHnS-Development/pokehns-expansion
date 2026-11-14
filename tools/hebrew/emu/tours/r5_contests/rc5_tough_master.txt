@@ -1,0 +1,44 @@
+# A Master-rank TOUGH contest from the H&S contest lobby (MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS).
+# Party slot 0 becomes a level-50 HARIYAMA made by this ROM (so its nickname is the ROM's species name)
+# with the moves below; the appeals are the digit string 01233 (the move-list index for each round):
+#   0 INCINERATE (TOUGH, CONTEST_EFFECT_SHIFT_JUDGE_ATTENTION, src/data/moves_info.h)
+#   1 SLUDGE_BOMB (TOUGH, CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION, src/data/moves_info.h)
+#   2 STONE_EDGE (TOUGH, CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL, src/data/moves_info.h)
+#   3 SWEET_KISS (CUTE, CONTEST_EFFECT_MAKE_FOLLOWING_MONS_NERVOUS, src/data/moves_info.h)
+# Incinerate (shift the judge's attention), Sludge Bomb (startle the one with the judge's attention), Stone Edge (affected by the appeal before), Sweet Kiss twice (a CUTE move: didn't go over well; repeated).
+# Entering Master rank needs the TOUGH ribbon of the rank below (GetContestEntryEligibility); they are
+# given rank by rank with GiveMonContestRibbon on gContestMonPartyIndex 0.
+# Round 1 points are set to 2000 once the contest screen starts (gContestMonRound1Points[3], the
+# player is contestant 3), so the player wins and gets the ribbon (contest_hall.inc ReceiveContestRibbon).
+# gRngValue is pinned from the lobby on (pinrng), so the opponents, the AI's appeals and the
+# audience are the same on the Hebrew and the English ROM (the shots pair up by name).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_HARIYAMA, 50, move1=MOVE_INCINERATE, move2=MOVE_SLUDGE_BOMB, move3=MOVE_STONE_EDGE, move4=MOVE_SWEET_KISS; additem ITEM_POKEBLOCK_CASE, 1; end
+w8 @gContestMonPartyIndex@ 0
+ev setvar VAR_CONTEST_CATEGORY, 4; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 3
+fieldwatch type menu 3000
+pick 4
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap party_pick
+tap A 4
+fieldwatch entry cb2:CB2_StartContest 40000 45
+w16s gContestMonRound1Points 3 2000
+contestplay5 app 01233
+fieldwatch judge cb2:CB2_StartShowContestResults 20000 45
+waitcb2x CB2_ShowContestResults 600
+burstuntil res CB2_ShowContestResults 16 9000 A 240
+fieldwatch prize free 30000 45
+loc
+snap lobby_after

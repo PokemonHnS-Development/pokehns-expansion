@@ -1,0 +1,65 @@
+# Elm's lab police scene and the rival naming screen (NAMING_SCREEN_RIVAL).
+# Save: ladder 2 (Violet Pokemon Center; FLAG_REGISTER_RIVAL_POKENAV set, rival name SILVER).
+# The scene is the lab's ON_FRAME script at VAR_NEWBARKTOWN_LABSTATE 4
+# (data/maps/NewBarkTown_Lab_hns/scripts.inc:15, PoliceEpisode/PoliceNo/PoliceYes :374-400);
+# the cop is object FLAG_HIDE_LAB_POLICEMAN (map.json:110). The player is put on the lab's
+# door tile (6,12); the scene walks him to the cop.
+# Path: Officer1 (YES/NO) -> NO -> OfficerNo (YES/NO) -> NO -> OfficerNo -> YES -> naming
+# screen (every page, OK on an empty name) -> "Okay! So his name is SILVER?" -> NO -> naming
+# screen again -> the 7-letter name -> OK -> "Okay! So his name is <name>?" -> YES ->
+# Officer2 -> Elm after the theft -> free. Then the lab state goes back to 6 and the game is
+# saved (keepsave rv_named) for the later tours.
+start saves/r2_rival/ladder2_badge1.sav
+include ../continue.txt
+rivalname
+ev setvar VAR_NEWBARKTOWN_LABSTATE, 4; clearflag FLAG_HIDE_LAB_POLICEMAN; end
+warpraw MAP_NEW_BARK_TOWN_LAB_HNS 6 12
+
+drivex rv_police_officer1 menu 30
+pick 1                                    # NO
+drivex rv_police_no1 menu 10
+pick 1                                    # NO again: the same question
+drivex rv_police_no2 menu 10
+pick 0                                    # YES: the naming screen
+
+# --- the rival naming screen, empty
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap rv_naming_01_empty
+press SELECT                              # second page (Latin on the Hebrew build)
+waitnaming
+snap rv_naming_02_page2
+press SELECT                              # third page (symbols)
+waitnaming
+snap rv_naming_03_page3
+press SELECT                              # back to the first page
+waitnaming
+snap rv_naming_04_page1
+press START                               # cursor to OK
+waitnaming
+snap rv_naming_05_ok_empty
+press A                                   # OK on an empty name: the default stays
+waitcb2x CB2_Overworld 900
+drivex rv_police_confirm_default menu 10
+rivalname
+pick 1                                    # NO: name him again
+
+# --- the naming screen again: type the name
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap rv_naming_06_again
+namehome
+nametype rv_naming_07_typed rival
+snap rv_naming_08_full_ok
+press A                                   # OK
+waitcb2x CB2_Overworld 900
+drivex rv_police_confirm_typed menu 10
+rivalname rival
+pick 0                                    # YES
+drivex rv_police_after free 40
+snap rv_police_free
+
+# keep a save with the typed rival name (lab state back to "balls given")
+ev setvar VAR_NEWBARKTOWN_LABSTATE, 6; end
+savegame
+keepsave rv_named

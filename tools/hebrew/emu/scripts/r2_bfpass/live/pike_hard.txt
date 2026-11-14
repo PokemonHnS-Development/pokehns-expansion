@@ -1,0 +1,12 @@
+sl pike_3path1
+30 -
+waitctl 600
+py: sb2 = emu.sb2(); emu.w8(sb2 + 0xE10, (emu.r8(sb2 + 0xE10) & 0x80) | (6 << 3) | 1); print("hint", hex(emu.r8(sb2 + 0xE10)))
+go UP 6
+py: emu.frames(8, "UP"); emu.wait_until(lambda: emu.r8(emu.sb1() + 9) != 67 or emu.wants_key(), 900, "the room", step=2); print("in room", emu.location())
+drivex pk_r5_hard_in battle 30 9000
+fastbattles off
+bwin pk_r5_hard_b
+drivex pk_r5_hard_after free 30 9000
+loc
+ss pike_after_hard

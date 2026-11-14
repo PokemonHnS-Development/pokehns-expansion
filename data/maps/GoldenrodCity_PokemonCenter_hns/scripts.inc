@@ -140,23 +140,23 @@ GoldenrodCity_PokemonCenter_EventScript_LinkNpc_End::
 	end
 
 GoldenrodCity_PokemonCenter_LinkNpc_Text_Intro:
-	.string "LINK CORNER\p"
-	.string "SELECT LINK TYPE.$"
+	.string "פינת הקישור\p"
+	.string "יש לבחור סוג קישור.$"
 
 GoldenrodCity_PokemonCenter_LinkNpc_Text_BattleMode:
-	.string "SELECT BATTLE TYPE.$"
+	.string "יש לבחור סוג קרב.$"
 
 GoldenrodCity_PokemonCenter_LinkNpc_Text_Goodbye:
-	.string "GOODBYE.$"
+	.string "להתראות.$"
 
 GoldenrodCity_PokemonCenter_EventScript_LinkExplainerNpc::
 	msgbox GoldenrodCity_PokemonCenter_Text_LinkExplainer, MSGBOX_NPC
 	end
 
 GoldenrodCity_PokemonCenter_Text_LinkExplainer:
-	.string "You can use this machine to trade\n"
-	.string "or battle with other local players.\p"
-	.string "Isn't technology wonderful?$"
+	.string "במכונה הזאת אפשר להחליף פוקימונים\n"
+	.string "או להילחם עם שחקנים אחרים בסביבה.\p"
+	.string "הטכנולוגיה נפלאה, נכון?$"
 
 GoldenrodCity_PokemonCenter_EventScript_GbaKid1::
 	lock
@@ -191,26 +191,24 @@ GoldenrodCity_PokemonCenter_EventScript_Lass::
 	end
 
 GoldenrodCity_PokemonCenter_GrannyText:
-    .string "I just love living in the big city!\n"
-    .string "I moved here when I was a young\l"
-    .string "trainer, like you!$"
+    .string "אני פשוט אוהבת לגור בעיר הגדולה!\n"
+    .string "עברתי לכאן כשהייתי מאמנת צעירה, כמוך!$"
 
 GoldenrodCity_PokemonCenter_GameboyKidText1:
-    .string "This is a special POKéMON CENTER.\n"
-    .string "The roof is made of gold!$"
+    .string "זה מרכז פוקימון מיוחד.\n"
+    .string "הגג עשוי מזהב!$"
 
 GoldenrodCity_PokemonCenter_GameboyKidText2:
-    .string "I told my brother that the roof is\n"
-    .string "made of real gold. He'll believe\l"
-	.string "anything!$"
+    .string "סיפרתי לאח שלי שהגג עשוי\n"
+    .string "מזהב אמיתי. הוא מאמין לכל דבר!$"
 
 GoldenrodCity_PokemonCenter_LassText:
-    .string "A higher level POKéMON doesn't\n"
-    .string "always win.\p"
-    .string "After all, it may have a type\n"
-    .string "disadvantage.\p"
-    .string "I don't think there is a single\n"
-    .string "POKéMON that is the toughest.$"
+    .string "פוקימון ברמה גבוהה יותר\n"
+    .string "לא תמיד מנצח.\p"
+    .string "אחרי הכול, ייתכן שהוא בנחיתות\n"
+    .string "מבחינת הסוג.\p"
+    .string "אני לא חושבת שיש פוקימון\n"
+    .string "אחד שהוא החזק מכולם.$"
 
 GoldenrodPokeCenter_LinkReceptionistPleaseAcceptGSBallText:
     .string "{PLAYER}, isn't it?\p"

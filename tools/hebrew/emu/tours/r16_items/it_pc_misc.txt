@@ -1,0 +1,100 @@
+# PC ITEM STORAGE edge lines (src/player_pc.c) with the widest plurals of both languages (TINY BAMBOO
+# SHOOT: Hebrew 84 px, English 'TINY BAMBOO SHOOTs' 102 px, wider than ITEMPC_WIN_MESSAGE - 6 = 98 px;
+# DUBIOUS DISC: Hebrew 82 px). WITHDRAW 2 with the ITEMS pocket full (menuA_base: debug Fill):
+# 'no more room in the bag' (sText_NoRoomInBag, :1418-1423); then the pocket is emptied and the same
+# withdraw reports 'Withdrew 2 X' (sText_WithdrawXItems, :1408-1416). TOSS: how many, the YES/NO with
+# the count (gText_ConfirmTossItems, :1432-1440), NO, then YES on the second item (gText_ThrewAway).
+# var1font logs the font WrapFontIdToFit gave the plural on the screens that keep gStringVar1.
+# Run: scripts/r16_items/items16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_items --only '^it_pc_misc$'
+# Save: menuA_base.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+dumpbag bag_items_before POCKET_ITEMS
+pcset ITEM_TINY_BAMBOO_SHOOT 2 ITEM_TINY_BAMBOO_SHOOT 2 ITEM_DUBIOUS_DISC 2
+go RIGHT 4
+go UP 2
+talk pc_boot 10                           # SOMEONE'S PC / GOLD's PC / ...
+tap DOWN 4
+tap A 0                                   # GOLD's PC
+talk pc_player_open 10 - PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+tap A 0                                   # ITEM STORAGE: WITHDRAW / DEPOSIT / TOSS / CANCEL
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+
+# WITHDRAW 2 TINY BAMBOO SHOOTs into a full ITEMS pocket
+tap A 0
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap pm_01_withdraw_list
+tap A 0
+waittaskx ItemStorage_HandleQuantityRolling 600
+waitquiet
+snap pm_02_howmany_001
+press UP
+snap pm_03_howmany_002
+tap A 0
+waittaskx ItemStorage_HandleErrorMessageInput 600
+waitquiet
+snap pm_04_no_room_in_bag
+press A
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap pm_05_list_after_no_room
+
+# the same withdraw with room in the ITEMS pocket
+setpocket POCKET_ITEMS
+tap A 0
+waittaskx ItemStorage_HandleQuantityRolling 600
+waitquiet
+press UP
+tap A 0
+waittaskx ItemStorage_HandleRemoveItem 600
+waitquiet
+snap pm_06_withdrew_2
+var1font pm_06_withdrew_2_tiny_bamboo
+press A
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap pm_07_list_after_withdraw
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+
+# TOSS: TINY BAMBOO SHOOT (the second stack, now the first row) answered NO, DUBIOUS DISC answered YES
+press DOWN
+press DOWN
+tap A 0
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap pm_08_toss_list
+tap A 0
+waittaskx ItemStorage_HandleQuantityRolling 600
+waitquiet
+snap pm_09_toss_howmany_001
+press UP
+snap pm_10_toss_howmany_002
+tap A 0
+waitquiet
+snap pm_11_toss_confirm_tiny_bamboo
+var1font pm_11_toss_confirm_tiny_bamboo
+press B
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+press DOWN
+tap A 0
+waittaskx ItemStorage_HandleQuantityRolling 600
+waitquiet
+press UP
+tap A 0
+waitquiet
+snap pm_12_toss_confirm_dubious_disc
+var1font pm_12_toss_confirm_dubious_disc
+tap A 0                                   # YES
+waitquiet
+snap pm_13_threw_away_dubious_disc
+press A
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap pm_14_toss_list_after

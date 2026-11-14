@@ -1,0 +1,53 @@
+# r5 Battle Factory: Factory Head Noland, Gold. FLAG_SYS_FACTORY_SILVER set (one symbol) and
+# factoryWinStreaks[singles][Lv.50] = 40 with its active bit, so after the first win
+# GetFrontierBrainStatus sees 41 + 1 == streakAppearances[1] (src/frontier_util.c:240, :1806):
+# FRONTIER_BRAIN_GOLD. Battle room: GetAMoveOn, HarderLookThanLastTime, AllRightBringItOn
+# (BattleRoom_hns:142-166), the battle and his Gold lost line, OutOfMyLeagueLetsSeePass, the
+# golden shine, LastTimeILoseToYou, the lobby. Then, from a savestate at the GO ON menu, the same
+# battle lost: his Gold won line and LostChallenge.
+start saves/r5/factory_base.sav
+include ../../scripts/continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 4 8
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+sb2w16 DE2 40
+sb2w32 CDC 256
+setflagx FLAG_SYS_FACTORY_SILVER 1
+face UP
+tap A 0
+drive g_in menu
+pick 0
+drive g_lv menu
+pick 0
+drivex g_save menu 10
+pick 0
+saveyes
+drivex g_pre cb2:CB2_InitSelectScreen 30 9000
+include _f_rent3.txt
+waitcb2 CB2_Overworld 1200
+drivex g_br1 battle 30 9000
+fastbattles off
+bwin g_b1
+frontierinfo
+drivex g_call menu 40 9000
+ss g_gomenu
+pick 0
+drivex g_swq menu 20
+pick 1
+drivex g_room battle 40 9000
+bwin g_b2
+drivex g_won menu 40 9000
+pick 1
+drivex g_won2 free 10
+frontierinfo
+# ---- the same Noland battle, lost
+sl g_gomenu
+pick 0
+drivex gl_swq menu 20
+pick 1
+drivex gl_room battle 40 9000
+blose gl_b2
+drivex gl_lost menu 40 9000
+pick 1
+drivex gl_lost2 free 10
+frontierinfo

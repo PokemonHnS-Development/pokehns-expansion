@@ -1,0 +1,87 @@
+# Fight menu, the hard cases of scripts/fight_moves.py (which shows every move): the seven
+# names that need the narrower fallback font in Hebrew (wider than the 64-px slot in
+# FONT_NARROW; src/battle_message.c:3986-3994), the widest FONT_NARROW name, and names and
+# descriptions with Latin letters, parentheses or an ellipsis. Per group of four moves: the
+# fight menu with the cursor on each slot (PP / type / effectiveness of that move) and the
+# START move-info window of slot 0. The moves are written into gBattleMons[0].moves (u16 x4 at
+# +0x0C) and .pp (u8 x4 at +0x25) before FIGHT (src/battle_main.c:4451-4471).
+start saves/ladder1_newgame.sav
+include _bfm_base.txt
+
+# SUNSTEEL_STRIKE 667, CHILLY_RECEPTION 807, TRICK_OR_TREAT 567, DARKEST_LARIAT 626
+w32 @gBattleMons+C@ 0327029B
+w32 @gBattleMons+10@ 02720237
+w8 @gBattleMons+25@ 05
+w8 @gBattleMons+26@ 0A
+w8 @gBattleMons+27@ 14
+w8 @gBattleMons+28@ 0A
+baction FIGHT
+waitbinput HandleInputChooseMove
+snap bfm_names_a0
+tap START 4
+snap bfm_names_a0_info
+tap START 4
+waitquiet
+bmove 1 nopress
+snap bfm_names_a1
+bmove 2 nopress
+snap bfm_names_a2
+bmove 3 nopress
+snap bfm_names_a3
+bmove 0 nopress
+tap B 4
+waitbinput HandleInputChooseAction
+
+# MALIGNANT_CHAIN 847, CLANGING_SCALES 654, TRIPLE_DIVE 793, PARABOLIC_CHARGE 570
+w32 @gBattleMons+C@ 028E034F
+w32 @gBattleMons+10@ 023A0319
+w8 @gBattleMons+25@ 05
+w8 @gBattleMons+26@ 05
+w8 @gBattleMons+27@ 0A
+w8 @gBattleMons+28@ 14
+baction FIGHT
+waitbinput HandleInputChooseMove
+snap bfm_names_b0
+tap START 4
+snap bfm_names_b0_info
+tap START 4
+waitquiet
+bmove 1 nopress
+snap bfm_names_b1
+bmove 2 nopress
+snap bfm_names_b2
+bmove 3 nopress
+snap bfm_names_b3
+bmove 0 nopress
+tap B 4
+waitbinput HandleInputChooseAction
+
+# X_SCISSOR 404, V_CREATE 557, SPIT_UP 255 (parentheses), SPLASH 150 (ellipsis)
+w32 @gBattleMons+C@ 022D0194
+w32 @gBattleMons+10@ 009600FF
+w8 @gBattleMons+25@ 0F
+w8 @gBattleMons+26@ 05
+w8 @gBattleMons+27@ 0A
+w8 @gBattleMons+28@ 28
+baction FIGHT
+waitbinput HandleInputChooseMove
+snap bfm_names_c0
+bmove 1 nopress
+snap bfm_names_c1
+bmove 2 nopress
+snap bfm_names_c2
+tap START 4
+snap bfm_names_c2_info
+tap START 4
+waitquiet
+bmove 3 nopress
+snap bfm_names_c3
+tap START 4
+snap bfm_names_c3_info
+tap START 4
+waitquiet
+bmove 0 nopress
+tap B 4
+waitbinput HandleInputChooseAction
+baction RUN
+bwalk bfm_names_run free

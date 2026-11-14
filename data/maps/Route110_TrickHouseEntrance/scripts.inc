@@ -819,6 +819,6 @@ Route110_TrickHousePuzzle_Text_SecretCodeWrittenOnIt:
 	.string "A secret code is written on it.$"
 
 Route110_TrickHouseEntrance_Text_DoorLockedWriteSecretCodeHere:
-	.string "The door is locked.\p"
-	.string "…On closer inspection, this is written\n"
-	.string "on it: “Write the secret code here.”$"
+	.string "הדלת נעולה.\p"
+	.string "…במבט מקרוב, כתוב עליה:\n"
+	.string "”יש לכתוב כאן את הקוד הסודי.”$"

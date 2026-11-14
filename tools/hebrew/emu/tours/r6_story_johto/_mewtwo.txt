@@ -1,0 +1,4 @@
+# The r6_league battle Pokemon (not a tour): a Lv 100 Mewtwo in party slot 0 (no level-ups or
+# move prompts in the battles); the Exp. Share flag cleared so no other party member levels up or
+# evolves after a battle.
+ev createmon 0, 0, SPECIES_MEWTWO, 100, move1=MOVE_PSYSTRIKE, move2=MOVE_ICE_BEAM, move3=MOVE_RECOVER, move4=MOVE_AURA_SPHERE; clearflag FLAG_EXP_SHARE_ENABLED; end

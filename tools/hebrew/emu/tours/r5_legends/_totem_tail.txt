@@ -1,0 +1,9 @@
+# Shared tail of a totem tour (not a tour): a wild double with settotemboost (no catching, no running,
+# FLAG_NO_WILD_CATCHING / FLAG_NO_WILD_RUNNING). The intro pages carry the aura line
+# (STRINGID_AURAFLAREDTOLIFE, src/battle_message.c:702) and the boosted-stat lines; then the action
+# menu, a BAG attempt is not made (catching is off); the win and the after text.
+bwalk T_intro input:HandleInputChooseAction
+snap T_action
+bwin T_win
+scene T_after 6000
+snap T_field

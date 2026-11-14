@@ -1,0 +1,13 @@
+# (a, long wait) As ela_west up to the tile below the west cave entrance, then UP held for 8 frames
+# (the step onto the warp tile) and up to 9000 frames (2.5 minutes) for the cave map to load, with a
+# shot every 900 frames: tells a slow load from a hang.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+setvar VAR_REPEL_STEP_COUNT FA
+warpto MAP_BATTLE_FRONTIER_OUTSIDE_WEST_HNS 39 58
+trystep UP
+trystep UP
+where below_entrance
+snap ela2_00_below_entrance
+8 UP
+watchload ela2_load 9000 900

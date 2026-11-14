@@ -15,9 +15,9 @@ PewterCity_PokemonCenter_EventScript_BugCatcher::
 	end
 
 PewterCity_PokemonCenter1F_Text_Teacher:
-	.string "…Yeah, and the GYM in CINNABAR's gone.\p"
-	.string "I was really amazed.\p"
-	.string "…Yes? I'm on the phone. Go away!$"
+	.string "…כן, והמכון בסיננבר נעלם.\p"
+	.string "ממש נדהמתי.\p"
+	.string "…כן? אני בטלפון. לך מפה!$"
 
 PewterCity_PokemonCenter1F_Text_Jigglypuff:
 	.string "JIGGLYPUFF: Puu pupuu.$"
@@ -48,29 +48,29 @@ PewterCity_PokemonCenter_EventScript_TradeCompleted::
 	end
 
 PewterCity_PokemonCenter_Text_WantToTrade:
-	.string "I've been traveling all over, looking\n"
-	.string "for a good {STR_VAR_1}.\p"
-	.string "Would you trade one for my\n"
-	.string "{STR_VAR_2}?$"
+	.string "טיילתי בכל מקום, בחיפוש אחר\n"
+	.string "{STR_VAR_1} טוב.\p"
+	.string "תסכים לתת לי אחד בתמורה\n"
+	.string "ל{STR_VAR_2} שלי?$"
 
 PewterCity_PokemonCenter_Text_TakeCare:
-	.string "Thanks a bunch!\n"
-	.string "Take good care of my {STR_VAR_1}!$"
+	.string "תודה רבה!\n"
+	.string "תשמור היטב על ה{STR_VAR_1} שלי!$"
 
 PewterCity_PokemonCenter_Text_DeclineTrade:
-	.string "No? That's too bad…\n"
-	.string "I think you'd like my HAUNTER.$"
+	.string "לא? חבל…\n"
+	.string "אני חושב שהיית אוהב את ההאנטר שלי.$"
 
 PewterCity_PokemonCenter_Text_NotRequestedMon:
-	.string "Hmm, that's not a {STR_VAR_1}.\n"
-	.string "That's not what I'm looking for.$"
+	.string "הממ, זה לא {STR_VAR_1}.\n"
+	.string "זה לא מה שאני מחפש.$"
 
 PewterCity_PokemonCenter_Text_TradeCompleted:
-	.string "How's that HAUNTER treating you?\n"
-	.string "It's a real trickster!$"
+	.string "איך ההאנטר מתייחס אליך?\n"
+	.string "הוא ממש שובב!$"
 
 PewterCity_PokemonCenter1F_Text_BugCatcher:
-	.string "Most POKéMON get drowsy if they hear a\n"
-	.string "JIGGLYPUFF singing.\p"
-	.string "There are several moves that can be\n"
-	.string "used only while a POKéMON is asleep.$"
+	.string "רוב הפוקימונים נהיים ישנוניים כשהם\n"
+	.string "שומעים ג'יגליפאף שר.\p"
+	.string "יש כמה מהלכים שאפשר להשתמש\n"
+	.string "בהם רק כשהפוקימון ישן.$"

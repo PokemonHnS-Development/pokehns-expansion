@@ -1,0 +1,167 @@
+# Nuzlocke at run time on save chal_a (Nuzlocke NORMAL with the species clause and forced
+# nicknames, one type FIRE, no battle items for the player):
+#  1. Route 30, a wild Growlithe (FIRE, never caught): the first-encounter indicator on the
+#     foe HP box (src/battle_interface.c:1895-1906), a Master Ball, the caught page, the
+#     nickname question WITHOUT a YES/NO box (src/battle_script_commands.c:11413-11420), the
+#     naming screen where OK is refused while the name is empty (src/naming_screen.c:1799),
+#     then a typed name;
+#  2. Route 30 again, a wild Ponyta: no indicator, the zone is used (src/item_use.c:1168,
+#     1220-1222), and a Potion in the battle bag: "battle items are forbidden"
+#     (src/item_menu.c:2211-2219);
+#  3. Route 31, a wild Arcanine: the species clause (Growlithe's line, src/item_use.c:1173);
+#  4. Route 31, a wild Growlithe: already caught (src/item_use.c:1171);
+#  5. Route 31, a wild Geodude: off type, no indicator (src/item_use.c:1166, 1232-1234).
+# setwildbattle alone does not run the Nuzlocke checks (CreateScriptedWildMon,
+# src/script_pokemon_util.c:146-168); a random grass encounter does, first thing in
+# BattleSetup_StartWildBattle (src/battle_setup.c:381-383), so each battle here calls
+# SetNuzlockeChecks (src/nuzlocke.c:445-470) itself before dowildbattle.
+start save:chal_a
+include _chr_base.txt
+ev givemon SPECIES_CYNDAQUIL, 10, move1=MOVE_EMBER, move2=MOVE_TACKLE; additem ITEM_MASTER_BALL, 1; additem ITEM_POKE_BALL, 20; additem ITEM_POTION, 3; end
+warpto MAP_ROUTE30_HNS 23 25
+pinrng
+
+# ---- 1. first encounter: indicator, catch, forced nickname
+evstart setwildbattle SPECIES_GROWLITHE, 3; callnative SetNuzlockeChecks; dowildbattle; end
+waitbattle
+bwalk chr_c1_intro input:HandleInputChooseAction
+snap chr_c1_action_indicator
+include _chr_bag_pocket.txt
+include _chr_pocket_right.txt
+include _chr_pocket_right.txt
+expect8 @gBagPosition+5@ 2                # POKE BALLS
+seek 16 @gBagPosition+0C@ 0 UP            # the Master Ball (added first)
+snap chr_c1_balls
+tap A 4
+waitquiet
+snap chr_c1_ball_use
+tap A 4                                   # USE: the throw
+bwalk chr_c1_throw task:Task_HandleCaughtMonPageInput
+snap chr_c1_dexpage
+tap A 4
+bwalk chr_c1_after task:naming_screen:Task_HandleInput|prompt:Cmd_trygivecaughtmonnick
+snap chr_c1_after_end
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap chr_c1_naming_empty
+press START                               # cursor to OK
+waitnaming
+snap chr_c1_naming_ok_cursor
+press A                                   # OK with an empty name: refused
+30 -
+waitnaming
+snap chr_c1_naming_ok_refused
+press A                                   # A on OK again: still refused
+30 -
+expectcb2 CB2_NamingScreen
+press DOWN                                # off OK, back on the keyboard
+press LEFT
+press LEFT
+press LEFT
+waitnaming
+press A                                   # type two letters
+waitnaming
+press A
+waitnaming
+snap chr_c1_naming_typed
+press START
+waitnaming
+press A                                   # OK: accepted
+waitcb2x BattleMainCB2 900
+waitnotask naming_screen:Task_HandleInput 300
+bwalk chr_c1_end free
+snap chr_c1_field
+
+# ---- 2. second encounter on Route 30: no indicator, zone used; a Potion is refused
+evstart setwildbattle SPECIES_PONYTA, 3; callnative SetNuzlockeChecks; dowildbattle; end
+waitbattle
+bwalk chr_c2_intro input:HandleInputChooseAction
+snap chr_c2_action_noindicator
+include _chr_bag_pocket.txt
+expect8 @gBagPosition+5@ 2
+seek 16 @gBagPosition+0C@ 0 UP            # the Poke Ball now heads the pocket
+snap chr_c2_balls
+tap A 4
+waitquiet
+tap A 4                                   # USE
+waitkey 600
+snap chr_c2_zone_used
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+include _chr_pocket_left.txt              # MEDICINE: the Potion
+expect8 @gBagPosition+5@ 1
+snap chr_c2_medicine
+tap A 4
+waitquiet
+snap chr_c2_potion_use
+tap A 4                                   # USE
+waitquiet
+20 -
+snap chr_c2_no_battle_items
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap chr_c2_bag_back
+tap B 4
+waitbinput HandleInputChooseAction
+baction RUN
+bwalk chr_c2_run free
+
+# ---- 3-5. Route 31: species clause, already caught, off type
+warpto MAP_ROUTE31_HNS 10 9
+evstart setwildbattle SPECIES_ARCANINE, 3; callnative SetNuzlockeChecks; dowildbattle; end
+waitbattle
+bwalk chr_c3_intro input:HandleInputChooseAction
+snap chr_c3_action
+include _chr_bag_pocket.txt
+include _chr_pocket_right.txt
+expect8 @gBagPosition+5@ 2
+tap A 4
+waitquiet
+tap A 4
+waitkey 600
+snap chr_c3_species_clause
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction
+baction RUN
+bwalk chr_c3_run free
+
+evstart setwildbattle SPECIES_GROWLITHE, 3; callnative SetNuzlockeChecks; dowildbattle; end
+waitbattle
+bwalk chr_c4_intro input:HandleInputChooseAction
+snap chr_c4_action
+include _chr_bag_pocket.txt
+tap A 4
+waitquiet
+tap A 4
+waitkey 600
+snap chr_c4_already_caught
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction
+baction RUN
+bwalk chr_c4_run free
+
+evstart setwildbattle SPECIES_GEODUDE, 3; callnative SetNuzlockeChecks; dowildbattle; end
+waitbattle
+bwalk chr_c5_intro input:HandleInputChooseAction
+snap chr_c5_action_noindicator
+include _chr_bag_pocket.txt
+tap A 4
+waitquiet
+tap A 4
+waitkey 600
+snap chr_c5_one_type
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction
+baction RUN
+bwalk chr_c5_run free

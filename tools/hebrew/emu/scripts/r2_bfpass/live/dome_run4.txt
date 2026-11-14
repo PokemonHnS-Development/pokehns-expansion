@@ -1,0 +1,6 @@
+pick 2
+drivex dt_fin task:Task_HandleChooseMonInput 30 9000
+include tools/hebrew/emu/scripts/r2_bfpass/_dome_enter2.txt
+drivex dt_fingo battle 40 12000
+bwin dt_finb
+drivex dt_finwin menu 40 12000

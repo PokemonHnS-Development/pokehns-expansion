@@ -453,202 +453,202 @@ BattleFrontier_BattleFactoryPreBattleRoom_Movement_AttendantReturnToPlayer_hns:
 	step_end
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_HoldMonsChooseFromSelection_hns:
-	.string "First, we will hold your POKéMON for\n"
-	.string "safekeeping.\p"
-	.string "You may then choose from our\n"
-	.string "selection of POKéMON.$"
+	.string "קודם כול, נשמור עבורך\n"
+	.string "על הפוקימונים שלך.\p"
+	.string "אחר כך אפשר לבחור מתוך\n"
+	.string "מבחר הפוקימונים שלנו.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_LetUsRestoreMons_hns:
-	.string "Thank you for competing!\n"
-	.string "Let us restore your POKéMON!$"
+	.string "תודה על ההשתתפות!\n"
+	.string "עכשיו נרפא את הפוקימונים שלך!$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor2ndOpponent_hns:
-	.string "The 2nd match is next!\n"
-	.string "Are you ready?$"
+	.string "עכשיו הקרב ה-2!\n"
+	.string "אתה מוכן?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor3rdOpponent_hns:
-	.string "The 3rd match is next!\n"
-	.string "Are you ready?$"
+	.string "עכשיו הקרב ה-3!\n"
+	.string "אתה מוכן?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor4thOpponent_hns:
-	.string "The 4th match is next!\n"
-	.string "Are you ready?$"
+	.string "עכשיו הקרב ה-4!\n"
+	.string "אתה מוכן?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor5thOpponent_hns:
-	.string "The 5th match is next!\n"
-	.string "Are you ready?$"
+	.string "עכשיו הקרב ה-5!\n"
+	.string "אתה מוכן?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor6thOpponent_hns:
-	.string "The 6th match is next!\n"
-	.string "Are you ready?$"
+	.string "עכשיו הקרב ה-6!\n"
+	.string "אתה מוכן?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor7thOpponent_hns:
-	.string "Finally, the 7th match is next!\n"
-	.string "Are you ready?$"
+	.string "ולסיום, הקרב ה-7!\n"
+	.string "אתה מוכן?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_SaveAndQuitGame_hns:
-	.string "Would you like to save and quit\n"
-	.string "the game?$"
+	.string "לשמור את המשחק\n"
+	.string "ולצאת?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_RetireFromChallenge_hns:
-	.string "Would you like to retire from your\n"
-	.string "Battle Swap challenge?$"
+	.string "לפרוש מאתגר\n"
+	.string "החלפת הקרב?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_InvestigatedUpcomingOpponent_hns:
-	.string "I've conducted a little investigation\n"
-	.string "about your upcoming opponent.$"
+	.string "ערכתי בירור קטן\n"
+	.string "לגבי היריב הבא שלך.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInNormalType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the NORMAL type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג רגיל.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInFireType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the FIRE type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג אש.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInWaterType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the WATER type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג מים.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInElectricType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the ELECTRIC type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג חשמל.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInGrassType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the GRASS type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג עשב.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInIceType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the ICE type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג קרח.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInFightingType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the FIGHTING type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג קרב.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInPoisonType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the POISON type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג רעל.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInGroundType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the GROUND type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג אדמה.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInFlyingType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the FLYING type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג תעופה.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInPsychicType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the PSYCHIC type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג על-חושי.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInBugType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the BUG type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג חרק.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInRockType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the ROCK type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג סלע.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInGhostType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the GHOST type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג רפאים.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInDragonType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the DRAGON type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג דרקון.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInDarkType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the DARK type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג אפל.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInFairyType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the FAIRY type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג פיה.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInSteelType_hns:
-	.string "The TRAINER is apparently skilled\n"
-	.string "in the handling of the STEEL type.$"
+	.string "נראה שהמאמן מתמחה\n"
+	.string "בפוקימונים מסוג פלדה.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerHasNoClearFavorite_hns:
-	.string "The TRAINER appears to have no clear\n"
-	.string "favorites when it comes to type.$"
+	.string "נראה שלמאמן אין סוג\n"
+	.string "מועדף מובהק.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_StyleSlowAndSteady_hns:
-	.string "The favorite battle style appears to\n"
-	.string "be slow and steady.$"
+	.string "נראה שסגנון הקרב המועדף\n"
+	.string "הוא איטי ויציב.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_StyleEndurance_hns:
-	.string "The favorite battle style appears to\n"
-	.string "be one of endurance.$"
+	.string "נראה שסגנון הקרב המועדף\n"
+	.string "מבוסס על סיבולת.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_StyleHighRisk_hns:
-	.string "The favorite battle style appears to\n"
-	.string "be high risk, high return.$"
+	.string "נראה שסגנון הקרב המועדף\n"
+	.string "הוא סיכון גבוה, רווח גבוה.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_StyleDependsOnFlow_hns:
-	.string "The favorite battle style appears to\n"
-	.string "depend on the battle's flow.$"
+	.string "נראה שסגנון הקרב המועדף\n"
+	.string "תלוי בהתפתחות הקרב.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_StyleTotalPreparation_hns:
-	.string "The favorite battle style appears to\n"
-	.string "be one based on total preparation.$"
+	.string "נראה שסגנון הקרב המועדף\n"
+	.string "מבוסס על הכנה יסודית.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_StyleWeakenFoe_hns:
-	.string "The favorite battle style appears\n"
-	.string "to be weakening the foe to start.$"
+	.string "נראה שסגנון הקרב המועדף\n"
+	.string "הוא להחליש את היריב מההתחלה.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_StyleFlexible_hns:
-	.string "The favorite battle style appears to\n"
-	.string "be flexibly adaptable to the situation.$"
+	.string "נראה שסגנון הקרב המועדף\n"
+	.string "גמיש ומסתגל למצב.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_StyleImpossibleToPredict_hns:
-	.string "The favorite battle style appears to\n"
-	.string "be impossible to predict.$"
+	.string "נראה שסגנון הקרב המועדף\n"
+	.string "בלתי צפוי לחלוטין.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_StyleUnrestrained_hns:
-	.string "The favorite battle style appears to\n"
-	.string "be free-spirited and unrestrained.$"
+	.string "נראה שסגנון הקרב המועדף\n"
+	.string "חופשי ובלתי מרוסן.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_LikeToSwapMon_hns:
-	.string "Before starting the battle, would you\n"
-	.string "like to swap a POKéMON?$"
+	.string "לפני תחילת הקרב,\n"
+	.string "תרצה להחליף פוקימון?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_YourSwapIsComplete_hns:
-	.string "Thank you!\n"
-	.string "Your POKéMON swap is complete.$"
+	.string "תודה!\n"
+	.string "החלפת הפוקימון הושלמה.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_RightThisWay_hns:
-	.string "Right this way, please!$"
+	.string "מכאן, בבקשה!$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_SavingDataPleaseWait_hns:
-	.string "I am saving your data.\n"
-	.string "Please wait.$"
+	.string "אני שומר את הנתונים שלך.\n"
+	.string "נא להמתין.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_RecordLatestBattle_hns:
-	.string "Would you like to record your latest\n"
-	.string "battle on your FRONTIER PASS?$"
+	.string "לשמור את הקרב האחרון שלך\n"
+	.string "בכרטיס חזית הקרב?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_WaitFewMoments_hns:
-	.string "Excuse me! Excuse me, please!\n"
-	.string "May I get you to wait a few moments?$"
+	.string "סליחה! סליחה, בבקשה!\n"
+	.string "אפשר לבקש ממך להמתין כמה רגעים?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_UnderstoodSirWillDo_hns:
-	.string "…Uh-huh? What?! …Whoa!\n"
-	.string "Understood, sir! Will do!$"
+	.string "…אהה? מה?! …וואו!\n"
+	.string "הבנתי, אדוני! מיד!$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_MessageFromHeadComeRightNow_hns:
-	.string "Oh, my…\n"
-	.string "Sorry to keep you waiting!\p"
-	.string "I have a message from this facility's\n"
-	.string "boss, the FACTORY HEAD.\p"
-	.string "He says, “We're going to do it!\n"
-	.string "Come here right now!”$"
+	.string "אוי ואבוי…\n"
+	.string "סליחה שנאלצת לחכות!\p"
+	.string "יש לי הודעה מהבוס של המתקן,\n"
+	.string "ראש המפעל.\p"
+	.string "הוא אומר: ”הולכים על זה!\n"
+	.string "בוא לכאן עכשיו!”$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_PreparedToFaceHead_hns:
-	.string "The FACTORY HEAD is demanding you.\n"
-	.string "Are you prepared to face him?$"
+	.string "ראש המפעל דורש לראות אותך.\n"
+	.string "אתה מוכן להתמודד מולו?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_CantTellAnythingAboutHead_hns:
-	.string "I'm terribly sorry, but I can't tell you\n"
-	.string "anything about the FACTORY HEAD.$"
+	.string "אני מצטער מאוד, אבל אני לא יכול\n"
+	.string "לספר לך שום דבר על ראש המפעל.$"

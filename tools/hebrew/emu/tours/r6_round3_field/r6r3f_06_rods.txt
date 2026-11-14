@@ -1,0 +1,22 @@
+# Fishing gurus answered NO: Olivine House 3 (4,4) OlivineCityHouse3_EventScriptFishingGuru (Good
+# Rod; OlivineCity_House3_hns/scripts.inc:4-26) and Route 12 House (7,4)
+# Route12_House_EventScript_SuperRod (Super Rod; Route12_House_hns/scripts.inc:4-22).
+start saves/r6r3f_base.sav
+include _base.txt
+ev removeitem ITEM_GOOD_ROD; clearflag FLAG_GOT_SUPER_ROD; removeitem ITEM_SUPER_ROD; end
+warpto MAP_OLIVINE_CITY_HOUSE3_HNS 4 5
+face UP
+snap gr_field
+tap A 4
+scene gr 8000
+yesno gr_yn NO
+scene gr_no 6000
+snap gr_no_end
+warpto MAP_ROUTE12_HOUSE_HNS 7 5
+face UP
+snap sr_field
+tap A 4
+scene sr 8000
+yesno sr_yn NO
+scene sr_no 6000
+snap sr_no_end

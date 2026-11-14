@@ -233,106 +233,105 @@ Route36_Movement_SudoWoodo:
 	step_end
 
 Route36_Text_UseSquirtbottle:
-	.string "Use SQUIRTBOTTLE?$"
+	.string "להשתמש בבקבוק ההתזה?$"
 
 Route36_Text_UsedSquirtbottle:
-	.string "{PLAYER} used the SQUIRTBOTTLE.$"
+	.string "{PLAYER} השתמש בבקבוק ההתזה.$"
 
 Route36_Text_SudowoodoAttacked:
-	.string "The weird tree doesn't like the\n"
-	.string "SQUIRTBOTTLE!\p"
-	.string "The weird tree attacked!$"
+	.string "העץ המוזר לא אוהב את\n"
+	.string "בקבוק ההתזה!\p"
+	.string "העץ המוזר תקף!$"
 
 Route36_Text_RockSmashGuy1:
-	.string "Wa-hey!\p"
-	.string "I was going to snap that tree\n"
-	.string "with my straight-arm punch.\p"
-	.string "But I couldn't! I'm a failure!$"
+	.string "וואו-היי!\p"
+	.string "התכוונתי לשבור את העץ הזה\n"
+	.string "באגרוף הישר שלי.\p"
+	.string "אבל לא הצלחתי! אני כישלון!$"
 
 Route36_Text_RockSmashGuy2:
-	.string "Did you clear that wretched tree?\p"
-	.string "I'm impressed!\n"
-	.string "I want you to have this.$"
+	.string "סילקת את העץ הארור ההוא?\p"
+	.string "מרשים מאוד!\n"
+	.string "אני רוצה לתת לך את זה.$"
 
 Route36_Text_RockSmashGuy3:
-	.string "That happens to be ROCK SMASH.\p"
-	.string "You can shatter rocks with just a\n"
-	.string "single well-aimed smack.\p"
-	.string "If any rocks are in your way,\n"
-	.string "just smash 'em up!$"
+	.string "מה שנתתי לך זה ניפוץ סלע.\p"
+	.string "אפשר לנפץ סלעים במכה אחת\n"
+	.string "מדויקת בלבד.\p"
+	.string "אם סלעים חוסמים לך את הדרך,\n"
+	.string "פשוט מנפצים אותם!$"
 
 Route36_Text_OddTree:
-	.string "A weird tree is blocking the way.$"
+	.string "עץ מוזר חוסם את הדרך.$"
 
 Route36_Text_Lass1:
-	.string "Be careful at night on this route!\p"
-	.string "I saw a POKéMON that looked like\n"
-	.string "GROWLITHE, but it had a scary aura\l"
-	.string "to it.$"
+	.string "כדאי להיזהר בדרך הזאת בלילה!\p"
+	.string "ראיתי פוקימון שנראה כמו גראולית',\n"
+	.string "אבל הייתה לו הילה מפחידה.$"
 
 Route36_Text_Lass2_ClearedSudowoodo:
-	.string "That odd tree disappeared without\n"
-	.string "a trace.\p"
-	.string "Oh! That tree was really a\n"
-	.string "POKéMON?$"
+	.string "העץ המוזר ההוא נעלם\n"
+	.string "בלי להשאיר עקבות.\p"
+	.string "אה! העץ הזה היה בעצם\n"
+	.string "פוקימון?$"
 
 Route36_Text_PsychicMarkSeen:
-	.string "I'm going to read your thoughts!$"
+	.string "אני הולך לקרוא את המחשבות שלך!$"
 
 Route36_Text_PsychicMarkBeaten:
-	.string "I misread you!$"
+	.string "קראתי אותך לא נכון!$"
 
 Route36_Text_PsychicMarkAfter:
-	.string "I'd be strong if only I could tell\n"
-	.string "what my opponent was thinking.$"
+	.string "הייתי חזק, אילו רק יכולתי לדעת\n"
+	.string "מה היריב שלי חושב.$"
 
 Route36_Text_SchoolboyAlan1Seen:
-	.string "Thanks to my studies, I'm ready\n"
-	.string "for any POKéMON!$"
+	.string "בזכות הלימודים שלי, אני מוכן\n"
+	.string "לכל פוקימון!$"
 
 Route36_Text_SchoolboyAlan1Beaten:
-	.string "Oops! Computation error?$"
+	.string "אופס! טעות בחישוב?$"
 
 Route36_Text_SchoolboyAlanAfter:
-	.string "Darn. I study five hours a day too.\p"
-	.string "There's more to learning than just\n"
-	.string "reading books.$"
+	.string "אוף. ואני עוד לומד חמש שעות ביום.\p"
+	.string "כנראה שללמוד זה לא רק\n"
+	.string "לקרוא ספרים.$"
 
 Route36_Text_MeetArthur:
-	.string "ARTHUR: Who are you?\n"
-	.string "I'm ARTHUR of the WEEKDAY FAMILY.\p"
-	.string "If you can guess my favorite day,\n"
-	.string "I'll give you a reward.$"
+	.string "ארתור: מי אתה?\n"
+	.string "שמי ארתור, ממשפחת ימי השבוע.\p"
+	.string "אם תנחש מה היום האהוב עליי,\n"
+	.string "אתן לך פרס.$"
 
 Route36_Text_ArthurNope:
-	.string "Not quite!$"
+	.string "לא בדיוק!$"
 
 Route36_Text_ArthurGivesGift:
-	.string "Here. You can have this.$"
+	.string "הנה. זה בשבילך.$"
 
 Route36_Text_ArthurGaveGift:
-	.string "ARTHUR: A POKéMON that uses ROCK-\n"
-	.string "type moves should hold on to that.\p"
-	.string "It pumps up ROCK-type attacks.$"
+	.string "ארתור: כדאי שפוקימון שמשתמש\n"
+	.string "במהלכים מסוג סלע יחזיק בזה.\p"
+	.string "זה מחזק התקפות מסוג סלע.$"
 
 Route36_Text_ArthurThursday:
-	.string "ARTHUR: I'm ARTHUR of Thursday.\n"
-	.string "I'm the fifth son out of seven.$"
+	.string "ארתור: אני ארתור של יום חמישי.\n"
+	.string "אני הבן החמישי מתוך שבעה.$"
 
 Route36_Text_Sign:
 	.string "ROUTE 36$"
 
 Route36_Text_Sign_RuinsNorth:
-	.string "RUINS OF ALPH\n"
-	.string "NORTH ENTRANCE$"
+	.string "חורבות אלף\n"
+	.string "כניסה צפונית$"
 
 Route36_Text_Tips1:
-	.string "TRAINER TIPS\n"
-	.string "POKéMON stats vary--even within\l"
-	.string "the same species.\p"
-	.string "Their stats may be similar at first.\p"
-	.string "However, differences will become\n"
-	.string "pronounced as the POKéMON grow.$"
+	.string "טיפים למאמנים\p"
+	.string "הנתונים של כל פוקימון שונים,\n"
+	.string "גם בין פוקימונים מאותו מין.\p"
+	.string "בהתחלה הנתונים עשויים להיות דומים.\p"
+	.string "אבל ככל שהפוקימונים גדלים,\n"
+	.string "ההבדלים ביניהם הולכים ובולטים.$"
 
 Route36_Text_Tips2:
 	.string "TRAINER TIPS\n"
@@ -342,31 +341,31 @@ Route36_Text_Tips2:
 	.string "caves and other landmarks.$"
 
 Route36_Text_AlanRegister:
-	.string "Darn. I study five hours a day too.\p"
-	.string "There's more to learning than just\n"
-	.string "reading books.$"
+	.string "אוף. ואני עוד לומד חמש שעות ביום.\p"
+	.string "כנראה שללמוד זה לא רק\n"
+	.string "לקרוא ספרים.$"
 
 Route36_Text_AlanRematchIntro:
-	.string "Thanks to my studies, I'm ready\n"
-	.string "for any POKéMON!$"
+	.string "בזכות הלימודים שלי, אני מוכן\n"
+	.string "לכל פוקימון!$"
 
 Route36_Text_AlanRematchDefeat:
-	.string "Oops! Computation error?$"
+	.string "אופס! טעות בחישוב?$"
 
 Route36_Text_AlanPostRematch:
-	.string "Darn. I study five hours a day too.\p"
-	.string "There's more to learning than just\n"
-	.string "reading books.$"
+	.string "אוף. ואני עוד לומד חמש שעות ביום.\p"
+	.string "כנראה שללמוד זה לא רק\n"
+	.string "לקרוא ספרים.$"
 
 Route36_Text_AlanHasItem:
-	.string "Hey! I found something\n"
-	.string "while studying!\p"
-	.string "Here, you can have it!$"
+	.string "היי! מצאתי משהו\n"
+	.string "בזמן שלמדתי!\p"
+	.string "הנה, זה בשבילך!$"
 
 Route36_Text_AlanGaveItem:
-	.string "I'll let you know if I find\n"
-	.string "anything else!$"
+	.string "אודיע לך אם אמצא\n"
+	.string "עוד משהו!$"
 
 Route36_Text_AlanNoRoom:
-	.string "Hmm, your BAG is full.\p"
-	.string "Come back when you have room.$"
+	.string "הממ, התיק שלך מלא.\p"
+	.string "כדאי לחזור כשיהיה בו מקום.$"

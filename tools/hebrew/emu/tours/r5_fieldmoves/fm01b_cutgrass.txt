@@ -1,0 +1,33 @@
+# CUT from the party menu in tall grass (Route 7, 14,5; SetUpFieldMove_Cut src/fldeff_cut.c:139,
+# FieldCallback_CutGrass :287 -> EventScript_UseCutGrass, data/scripts/field_move_scripts_hns.inc:591):
+# the field-move banner and the grass cut around the player, no text. The script stops in the
+# `waitstate` at the end of EventScript_CutGrassCommon (:588) and nothing re-enables it, so the
+# global script context stays CONTEXT_WAITING while the player walks freely (field controls are
+# unlocked); Emu.controllable() wants CONTEXT_SHUTDOWN, so this tour waits on the lock instead.
+start save:fm_party
+include _cont.txt
+warpto MAP_ROUTE7_HNS 14 5
+waitctl 600
+snap fm01b_00_in_grass
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+waitquiet
+snap fm01b_01_cut_selected
+tap A 4                                   # CUT
+waitcb2x CB2_Overworld 900
+20 -
+shot fm01b_02_f020
+40 -
+shot fm01b_03_f060
+120 -
+shot fm01b_04_f180
+waitmem 8 @sLockFieldControls@ 0 900
+waitquiet
+snap fm01b_05_after_cut

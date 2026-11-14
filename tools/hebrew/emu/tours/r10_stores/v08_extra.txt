@@ -1,0 +1,7 @@
+# The extra-drink lines (random 64 == 0): the machines' own texts (1st and 3rd msgbox of each TryBuyDrink,
+# read from the ROM) shown from an event script in RAM, Goldenrod then Celadon.
+start saves/st_l6.sav
+include _base.txt
+visit MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS 12 6
+evtexts ITEM_SODA_POP GoldenrodDeptStore_EventScript_TryBuyDrink:1 GoldenrodDeptStore_EventScript_TryBuyDrink:3 LilycoveCity_DepartmentStoreRooftop_EventScript_TryBuyDrink:1 LilycoveCity_DepartmentStoreRooftop_EventScript_TryBuyDrink:3
+chat v08_x

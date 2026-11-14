@@ -26,19 +26,18 @@ RuinsOfAlph_Lab_EventScript_Fossils::
 	end
 
 RuinsOfAlph_Lab_Text_Scientist1:
-	.string "The RUINS are about 1500 years old.\p"
-	.string "But it's not known why they were\n"
-	.string "built--or by whom.$"
+	.string "החורבות הן בנות כ-1500 שנה.\p"
+	.string "אבל לא ידוע למה הן נבנו - או בידי מי.$"
 
 RuinsOfAlph_Lab_Text_Scientist2:
-	.string "There are odd patterns drawn on\n"
-	.string "on the walls of the RUINS.\p"
-	.string "They must be the keys for\n"
-	.string "unraveling the RUINS' mystery.$"
+	.string "על קירות החורבות מצוירים\n"
+	.string "דפוסים משונים.\p"
+	.string "הם בטח המפתח לפענוח\n"
+	.string "התעלומה של החורבות.$"
 
 RuinsOfAlph_Lab_Text_Fossils:
-	.string "Fossils found within the RUINS.\n"
-	.string "Maybe there are more somewhere...$"
+	.string "מאובנים שנמצאו בתוך החורבות.\n"
+	.string "אולי יש עוד איפשהו…$"
 
 
 RuinsOfAlph_Lab_EventScript_FossilScientist::
@@ -656,59 +655,58 @@ RuinsOfAlph_Lab_Text_DeviceToVisualizePokemonDreams:
 	.string "But it's not going well.$"
 
 RuinsOfAlph_Lab_Text_DevelopDeviceToResurrectFossils:
-	.string "I've been trying to develop a device\n"
-	.string "that resurrects POKéMON from fossils…\p"
-	.string "And, it's working!$"
+	.string "עבדתי על פיתוח מכשיר שמחזיר\n"
+	.string "פוקימונים לחיים ממאובנים…\p"
+	.string "והוא עובד!$"
 
 RuinsOfAlph_Lab_Text_WantToBringFossilBackToLife:
-	.string "Wait! That thing you have there…\n"
-	.string "Is that a POKéMON fossil?\p"
-	.string "Would you like to bring that POKéMON\n"
-	.string "back to life?\p"
-	.string "I can with my newly developed\n"
-	.string "FOSSIL REGENERATOR.$"
+	.string "רגע! הדבר הזה שיש לך…\n"
+	.string "זה מאובן של פוקימון?\p"
+	.string "היית רוצה להחזיר\n"
+	.string "את הפוקימון הזה לחיים?\p"
+	.string "אני יכול, בעזרת מחייה המאובנים\n"
+	.string "החדש שפיתחתי.$"
 
 RuinsOfAlph_Lab_Text_OhIsThatSo:
-	.string "Oh, is that so?\p"
-	.string "My technological expertise\n"
-	.string "is outstanding, I tell you.$"
+	.string "אה, ככה?\p"
+	.string "המומחיות הטכנולוגית שלי\n"
+	.string "יוצאת מן הכלל, אני אומר לך.$"
 
 RuinsOfAlph_Lab_Text_OhIsThatSo2:
-	.string "Oh, you don't have this fossil.\n"
-	.string "Come back if you manage to find it.$"
+	.string "אה, אין לך את המאובן הזה.\n"
+	.string "תחזור אם תצליח למצוא אותו.$"
 
 RuinsOfAlph_Lab_Text_TwoFossilsPickOne:
-	.string "Oh, now that's a surprise!\n"
-	.string "You have more than one fossil?\p"
-	.string "Unfortunately, my machine can only\n"
-	.string "regenerate one POKéMON at a time.\p"
-	.string "Which fossil would you like to\n"
-	.string "regenerate?$"
+	.string "אה, זאת באמת הפתעה!\n"
+	.string "יש לך יותר ממאובן אחד?\p"
+	.string "לצערי, המכונה שלי יכולה להחיות\n"
+	.string "רק פוקימון אחד בכל פעם.\p"
+	.string "איזה מאובן היית רוצה\n"
+	.string "להחיות?$"
 
 RuinsOfAlph_Lab_Text_HandedFossilToResearcher:
-	.string "Excellent!\n"
-	.string "Let's do this right away.\p"
-	.string "{PLAYER} handed the {STR_VAR_1} to\n"
-	.string "the RUINS RESEARCHER.$"
+	.string "מצוין!\n"
+	.string "נתחיל מיד.\p"
+	.string "{PLAYER} מסר את {STR_VAR_1}\n"
+	.string "לחוקר החורבות.$"
 
 RuinsOfAlph_Lab_Text_FossilRegeneratorTakesTime:
-	.string "The FOSSIL REGENERATOR, which I made,\n"
-	.string "is incredible.\p"
-	.string "But it has one drawback--it takes\n"
-	.string "a long time to work.\p"
-	.string "So, uh… How about you go for a stroll\n"
-	.string "and look around for a while?$"
+	.string "מחייה המאובנים שבניתי\n"
+	.string "הוא מדהים.\p"
+	.string "אבל יש לו חיסרון אחד - התהליך\n"
+	.string "לוקח הרבה זמן.\p"
+	.string "אז, אה… מה דעתך לצאת לטיול\n"
+	.string "ולהסתובב קצת בינתיים?$"
 
 RuinsOfAlph_Lab_Text_FossilizedMonBroughtBackToLife:
-	.string "Thanks for waiting!\p"
-	.string "Your fossilized POKéMON has been\n"
-	.string "brought back to life!\p"
-	.string "The fossil was an ancient POKéMON.\n"
-	.string "{STR_VAR_2}, it was!$"
+	.string "תודה שחיכית!\p"
+	.string "הפוקימון המאובן שלך חזר לחיים!\p"
+	.string "המאובן היה של פוקימון קדום.\n"
+	.string "זה היה {STR_VAR_2}!$"
 
 RuinsOfAlph_Lab_Text_ReceivedMonFromResearcher:
-	.string "{PLAYER} received {STR_VAR_2} from\n"
-	.string "the RESEARCHER.$"
+	.string "{PLAYER} קיבל את {STR_VAR_2}\n"
+	.string "מהחוקר.$"
 
 @ Unused
 RuinsOfAlph_Lab_Text_TooManyPokemon:

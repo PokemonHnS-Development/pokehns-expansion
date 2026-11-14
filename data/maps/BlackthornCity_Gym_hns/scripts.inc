@@ -233,38 +233,37 @@ BlackthornGym_EventScript_ClairAfterLeague::
 	end
 
 BlackthornGym_Text_ClairIntroText:
-    .string "I am CLAIR.\p"
-    .string "The world's best dragon master.\p"
-    .string "I can hold my own against even the\n"
-    .string "POKéMON LEAGUE's ELITE FOUR.\p"
-    .string "Do you still want to take me on?\p"
-    .string "…Fine. Let's do it!\p"
-    .string "As a GYM LEADER, I will use my full\n"
-    .string "power against any opponent!$"
+    .string "אני קלייר.\p"
+    .string "אמנית הדרקונים הטובה בעולם.\p"
+    .string "אני מסוגלת להתמודד אפילו מול\n"
+    .string "הרביעייה העילית של ליגת הפוקימון.\p"
+    .string "אתה עדיין רוצה להילחם בי?\p"
+    .string "…בסדר. קדימה!\p"
+    .string "בתור מנהיגת מכון, אשתמש בכל\n"
+    .string "הכוח שלי נגד כל יריב!$"
 
 BlackthornGym_Text_ClairWinText:
-    .string "I lost?\p"
-    .string "I don't believe it. There must be\n"
-    .string "some mistake…$"
+    .string "הפסדתי?\p"
+    .string "אני לא מאמינה. זו בטח\n"
+    .string "טעות…$"
 
 BlackthornGym_Text_ClairText_GoToDragonsDen:
-    .string "I won't admit this.\p"
-    .string "I may have lost, but you're still\n"
-    .string "not ready for the POKéMON LEAGUE.\p"
-    .string "I know. You should take the dragon-\n"
-    .string "user challenge.\p"
-    .string "Behind this GYM is a place called\n"
-    .string "DRAGON'S DEN.\p"
-    .string "There is a small shrine at its\n"
-    .string "center. Go there.\p"
-    .string "If you can prove that you've lost\n"
-    .string "your lazy ideals, I will recognize\l"
-    .string "you as a trainer worthy of a GYM\l"
-    .string "BADGE!$"
+    .string "אני לא מוכנה להודות בזה.\p"
+    .string "אולי הפסדתי, אבל אתה עדיין\n"
+    .string "לא מוכן לליגת הפוקימון.\p"
+    .string "יש לי רעיון. כדאי שתעבור את\n"
+    .string "האתגר של משתמשי הדרקונים.\p"
+    .string "מאחורי המכון הזה יש מקום\n"
+    .string "שנקרא מאורת הדרקון.\p"
+    .string "במרכזו יש מקדש קטן.\n"
+    .string "לך לשם.\p"
+    .string "אם תוכיח שזנחת את האידיאלים\n"
+    .string "העצלניים שלך,\p"
+    .string "אכיר בך כמאמן שראוי לתג מכון!$"
 
 BlackthornGym_Text_ClairText_TooMuchToExpect:
-    .string "What's the matter?\p"
-    .string "Is it too much to expect of you?$"
+    .string "מה קרה?\p"
+    .string "אני מצפה ממך ליותר מדי?$"
 
 BlackthornGym_Text_ClairText_YouKeptMeWaiting:
     .string "You've kept me waiting!\p"
@@ -275,22 +274,22 @@ BlackthornGym_Text_ClairText_DescribeTM:
     .string "You can figure out what it does.$"
 
 BlackthornGym_Text_ClairText_League:
-    .string "What's the matter?\p"
-    .string "Aren't you headed to the POKéMON\n"
-    .string "LEAGUE?\p"
-    .string "Don't you know where it is?\p"
-    .string "From here, go to NEW BARK TOWN.\p"
-    .string "Then SURF east. The route there is\n"
-    .string "very tough.\p"
-    .string "Don't you dare lose at the POKéMON\n"
-    .string "LEAGUE!\p"
-    .string "If you do, I'll feel even worse\n"
-    .string "about having lost to you!\p"
-    .string "Give it everything you've got.$"
+    .string "מה קרה?\p"
+    .string "אתה לא בדרך\n"
+    .string "לליגת הפוקימון?\p"
+    .string "אתה לא יודע איפה היא?\p"
+    .string "מכאן, לך לעיירה ניו בארק.\p"
+    .string "משם, השתמש בגלישה כדי לשוט\n"
+    .string "מזרחה. הדרך לשם קשה מאוד.\p"
+    .string "שלא תעז להפסיד\n"
+    .string "בליגת הפוקימון!\p"
+    .string "אם תפסיד, ארגיש עוד יותר רע\n"
+    .string "על זה שהפסדתי לך!\p"
+    .string "תן את כל מה שיש לך.$"
 
 BlackthornGym_Text_ClairAfterLeague:
-    .string "You did it, huh?\p"
-    .string "You are now the JOHTO CHAMP.$"
+    .string "עשית את זה, אה?\p"
+    .string "עכשיו אתה האלוף של ג'וטו.$"
 
 BlackthornGym_Text_ClairRematchText:
     .string "You did it, huh?\p"
@@ -309,63 +308,62 @@ BlackthornGym_Text_ClairRematchDefeatText:
     .string "some mistake…$"
 
 BlackthornGym_Text_CooltrainermCodySeenText:
-    .string "I just got access to use DRAGON-\n"
-    .string "type POKéMON!$"
+    .string "הרגע קיבלתי אישור להשתמש\n"
+    .string "בפוקימונים מסוג דרקון!$"
 
 BlackthornGym_Text_CooltrainermCodyBeatenText:
-    .string "Rats! If only I had a DRAGONITE!$"
+    .string "אוף! אילו רק היה לי דרגונייט!$"
 
 BlackthornGym_Text_CooltrainermCodyAfterBattleText:
-    .string "Members of our dragon-user clan\n"
-    .string "can use dragon POKéMON only after\l"
-    .string "our MASTER allows it.$"
+    .string "בשבט הדרקונים שלנו מותר להשתמש\n"
+    .string "בפוקימוני דרקון רק באישור המאסטר.$"
 
 BlackthornGym_Text_CooltrainerfFranSeenText:
-    .string "I can't allow a nameless trainer\n"
-    .string "past me!\p"
-    .string "CLAIR would be livid if I did!$"
+    .string "אני לא יכולה לתת למאמן אלמוני\n"
+    .string "לעבור על פניי!\p"
+    .string "קלייר תתפוצץ מכעס אם אעשה את זה!$"
 
 BlackthornGym_Text_CooltrainerfFranBeatenText:
-    .string "Awww… I lost…$"
+    .string "אוי… הפסדתי…$"
 
 BlackthornGym_Text_CooltrainerfFranAfterBattleText:
-    .string "Uh-oh… CLAIR is going to be mad…$"
+    .string "אוי ואבוי… קלייר תכעס…$"
 
 BlackthornGym_Text_CooltrainermPaulSeenText:
-    .string "Your first battle against dragons?\p"
-    .string "I'll show you how tough they are!$"
+    .string "הקרב הראשון שלך נגד דרקונים?\p"
+    .string "אני אראה לך כמה הם קשוחים!$"
 
 BlackthornGym_Text_CooltrainermPaulBeatenText:
-    .string "My dragon POKéMON lost?$"
+    .string "פוקימוני הדרקון שלי הפסידו?$"
 
 BlackthornGym_Text_CooltrainermPaulAfterBattleText:
-    .string "LANCE told you that he'd like to\n"
-    .string "see you again?\p"
-    .string "Not a chance!$"
+    .string "לאנס אמר לך שהוא רוצה\n"
+    .string "לראות אותך שוב?\p"
+    .string "אין סיכוי!$"
 
 BlackthornGym_Text_CooltrainermMikeSeenText:
-    .string "My chance of losing? Not even one\n"
-    .string "percent!$"
+    .string "הסיכוי שלי להפסיד? אפילו לא\n"
+    .string "אחוז אחד!$"
 
 BlackthornGym_Text_CooltrainermMikeBeatenText:
-    .string "That's odd.$"
+    .string "מוזר.$"
 
 BlackthornGym_Text_CooltrainermMikeAfterBattleText:
-    .string "I know my short-comings now.\p"
-    .string "Thanks for showing me!$"
+    .string "עכשיו אני מכיר את החולשות שלי.\p"
+    .string "תודה שהראית לי!$"
 
 BlackthornGym_Text_CooltrainerfLolaSeenText:
-    .string "Dragons are sacred POKéMON.\p"
-    .string "They are full of life energy.\p"
-    .string "If you're not serious, you won't\n"
-    .string "be able to beat them.$"
+    .string "דרקונים הם פוקימונים קדושים.\p"
+    .string "הם מלאים באנרגיית חיים.\p"
+    .string "אם לא תהיה רציני, לא\n"
+    .string "תצליח לנצח אותם.$"
 
 BlackthornGym_Text_CooltrainerfLolaBeatenText:
-    .string "Way to go!$"
+    .string "כל הכבוד!$"
 
 BlackthornGym_Text_CooltrainerfLolaAfterBattleText:
-    .string "Dragons are weak against DRAGON-\n"
-    .string "type moves.$"
+    .string "דרקונים חלשים מול מהלכים\n"
+    .string "מסוג דרקון.$"
 
 BlackthornGym_EventScript_GymGuy::
 	lock
@@ -388,34 +386,31 @@ BlackthornGym_EventScript_GymGuy3::
 	end	
 
 BlackthornGym_Text_GuideText:
-    .string "Yo! CHAMP in making!\p"
-    .string "It's been a long journey, but we\n"
-    .string "are almost done! Count on me!\p"
-    .string "While CLAIR looks up to the Dragon\n"
-    .string "Master, LANCE, she's managed to\l"
-    .string "create her own identity with a\l"
-    .string "team consisting of dragons from\l"
-    .string "the sea.\p"
-    .string "Dragons are supposed to be\n"
-    .string "weak against ICE-type moves,\l"
-    .string "but you'll need some DRAGON-type\l"
-	.string "or FAIRY-type moves of your own if\l"
-    .string "you want to win.$"
-    .string "You got this!$"
+    .string "יו! אלוף לעתיד!\p"
+    .string "זה היה מסע ארוך, אבל\n"
+    .string "כמעט סיימנו! סמוך עליי!\p"
+    .string "קלייר אמנם מעריצה את\n"
+    .string "אמן הדרקונים, לאנס,\p"
+    .string "אבל היא יצרה לעצמה זהות משלה,\n"
+    .string "עם קבוצה של דרקונים מהים.\p"
+    .string "דרקונים אמורים להיות חלשים\n"
+    .string "מול מהלכים מסוג קרח,\p"
+    .string "אבל כדי לנצח תצטרך גם מהלכים\n"
+    .string "משלך מסוג דרקון או מסוג פיה.$אתה יכול!$"
 
 BlackthornGym_Text_GuideGotoDragonsDen:
-	.string "You were great to beat CLAIR!\p"
-    .string "She can be a bit of a sore loser,\n"
-	.string "though\p"
-    .string "Sounds like you need to head to the\n"
-    .string "DRAGON'S DEN if you want that GYM BADGE!$"
+	.string "היית נהדר כשניצחת את קלייר!\p"
+	.string "אבל היא קצת לא יודעת\n"
+	.string "להפסיד.\p"
+	.string "נשמע שתצטרך ללכת למאורת הדרקון\n"
+	.string "אם אתה רוצה את תג המכון!$"
 
 BlackthornGym_Text_GuideWinText:
-    .string "You were great to beat CLAIR!\p"
-    .string "All that's left is the POKéMON\n"
-    .string "LEAGUE challenge.\p"
-    .string "You're on the way to becoming the\n"
-    .string "POKéMON CHAMPION!$"
+    .string "היית נהדר כשניצחת את קלייר!\p"
+    .string "כל מה שנשאר זה האתגר\n"
+    .string "של ליגת הפוקימון.\p"
+    .string "אתה בדרך להפוך\n"
+    .string "לאלוף הפוקימון!$"
 
 
 BlackthornGym_EventScript_Statue::
@@ -433,9 +428,9 @@ BlackthornGym_EventScript_Statue2::
 	end
 
 BlackthornGym_Text_GymStatue:
-	.string "BLACKTHORN CITY POKéMON GYM$"
+	.string "מכון הפוקימון של העיר בלקתורן$"
 
 BlackthornGym_Text_GymStatueCertified:
-	.string "BLACKTHORN CITY POKéMON GYM\p"
-	.string "CLAIR'S CERTIFIED TRAINERS:\n"
+	.string "מכון הפוקימון של העיר בלקתורן\p"
+	.string "המאמנים המוסמכים של קלייר:\n"
 	.string "{PLAYER}$"

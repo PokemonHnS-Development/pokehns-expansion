@@ -1,0 +1,3 @@
+# after SELECT in the box: back on the field, Task_LearnMove running (src/field_specials.c:4616)
+waitcb2x CB2_Overworld 900
+waittaskx field_specials:Task_LearnMove 900

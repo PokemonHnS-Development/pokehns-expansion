@@ -1,0 +1,98 @@
+# The two ways of not learning a move from the party menu (src/party_menu.c:5719-5822):
+# Rare Candy (Cyndaquil Lv 12 -> 13, Quick Attack with four known moves) answered NO, and a TM
+# (TM24 THUNDERBOLT on Ampharos, four moves) answered YES and then B on the summary screen's
+# forget-move page. Both end in StopLearningMovePrompt; P_ASK_MOVE_CONFIRMATION is FALSE
+# (include/config/pokemon.h:59), so there is no "Stop trying to teach?" question, only
+# "did not learn".
+start saves/menuA_base.sav
+include ../scripts/continue.txt
+ev givemon SPECIES_CYNDAQUIL, 12, move1=MOVE_TACKLE, move2=MOVE_LEER, move3=MOVE_EMBER, move4=MOVE_SMOKESCREEN; end
+
+# MEDICINE pocket, RARE CANDY (index 5)
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 5
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg1 300
+waitmem 16 @sFanfareCounter@ 0 900
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg2 600
+tap A 4
+waittaskx Task_TryLearnNewMoves 600
+tap A 4
+talk pbi_learn_no_01_wants 6 - Task_HandleReplaceMoveYesNoInput
+tap DOWN 4
+waitquiet
+snap pbi_learn_no_02_no_selected
+tap A 4                                   # NO
+waitkey 600
+snap pbi_learn_no_03_not_learned
+tap A 4
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap pbi_learn_no_04_party_after
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# TM24 (TMs & HMs pocket, index 23) on Ampharos: YES, then B on the forget-move page
+w8 @gBagPosition+5@ 3
+w16 @gBagPosition+E@ 3
+w16 @gBagPosition+1A@ 14
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waittaskx Task_ShowTMHMContainedMessage 300
+waitquiet
+tap A 4
+waitkey 600
+tap A 4
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 4                                   # YES
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 4
+talk pbi_learn_no_05_tm_wants 6 - Task_HandleReplaceMoveYesNoInput
+tap A 4                                   # YES
+waitkey 600
+snap pbi_learn_no_06_which
+tap A 4
+waittaskx Task_HandleReplaceMoveInput 900
+waitquiet
+snap pbi_learn_no_07_forget_page
+tap B 4                                   # leave the forget page without choosing
+waitcb2x CB2_UpdatePartyMenu 900
+waitkey 900
+snap pbi_learn_no_08_tm_not_learned
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_learn_no_09_back_in_bag
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

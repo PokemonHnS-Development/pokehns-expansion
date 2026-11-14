@@ -1,0 +1,91 @@
+# Saffron Fighting Dojo EV training (SaffronCity_FightingDojo_hns/scripts.inc:22-207): each of the 6
+# Pokemon: cry text, 'battle X for 3 EVs of <stat>?' YES/NO (bufferstring stat word), a Lv 1 wild
+# battle (catching off). NO once on Lickilicky, then YES and the battle on each.
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_HNS 3 7
+face UP
+snap dj_field
+tap A 4
+scene dj_hp_no 3000
+snap dj_hp_no_menu
+tap B 4
+scene dj_hp_no_after 3000
+
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_HNS 3 7
+face UP
+tap A 4
+scene dj_hp 3000
+snap dj_hp_menu
+tap A 4
+scene dj_hp_pre 4000
+bwalk dj_hp_intro input:HandleInputChooseAction
+snap dj_hp_action
+bwin dj_hp_win
+scene dj_hp_after 6000
+snap dj_hp_end
+
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_HNS 25 7
+face UP
+tap A 4
+scene dj_atk 3000
+snap dj_atk_menu
+tap A 4
+scene dj_atk_pre 4000
+bwalk dj_atk_intro input:HandleInputChooseAction
+snap dj_atk_action
+bwin dj_atk_win
+scene dj_atk_after 6000
+snap dj_atk_end
+
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_HNS 7 10
+face UP
+tap A 4
+scene dj_def 3000
+snap dj_def_menu
+tap A 4
+scene dj_def_pre 4000
+bwalk dj_def_intro input:HandleInputChooseAction
+snap dj_def_action
+bwin dj_def_win
+scene dj_def_after 6000
+snap dj_def_end
+
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_HNS 21 10
+face UP
+tap A 4
+scene dj_spa 3000
+snap dj_spa_menu
+tap A 4
+scene dj_spa_pre 4000
+bwalk dj_spa_intro input:HandleInputChooseAction
+snap dj_spa_action
+bwin dj_spa_win
+scene dj_spa_after 6000
+snap dj_spa_end
+
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_HNS 3 13
+face UP
+tap A 4
+scene dj_spd 3000
+snap dj_spd_menu
+tap A 4
+scene dj_spd_pre 4000
+bwalk dj_spd_intro input:HandleInputChooseAction
+snap dj_spd_action
+bwin dj_spd_win
+scene dj_spd_after 6000
+snap dj_spd_end
+
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_HNS 25 13
+face UP
+tap A 4
+scene dj_spe 3000
+snap dj_spe_menu
+tap A 4
+scene dj_spe_pre 4000
+bwalk dj_spe_intro input:HandleInputChooseAction
+snap dj_spe_action
+bwin dj_spe_win
+scene dj_spe_after 6000
+snap dj_spe_end

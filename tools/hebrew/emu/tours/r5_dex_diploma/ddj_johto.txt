@@ -1,0 +1,18 @@
+# The Game Designer (Celadon Apartments 3F) with the Johto Pokedex complete and the National one not
+# (saves_screens/r5/dex_johto_only.sav, built by scripts/r5_dex_forms/dexsave_johto.txt from
+# ladder6_postgame): ShowMeCompletedDex, the fanfare, FilledPokedexGiveYouThis, the Oval Charm, then
+# the Johto diploma (src/diploma.c DisplayDiplomaText: no BG1 offset, gText_Johto).
+# Run with HNS_SAVES=<hns-tools>/emu/saves_screens.
+start saves/r5/dex_johto_only.sav
+include ../../scripts/continue.txt
+warpto MAP_CELADON_CITY_APARTMENTS_3F_HNS 5 13
+face UP
+snap ddj_00_field
+
+talk ddj_t1
+waittaskx Task_DiplomaWaitForKeyPress 900
+snap ddj_t1_diploma
+tap A 4
+waitcb2x CB2_Overworld 900
+120 -                                     # the script stays in waitstate after the diploma (nothing re-enables it), so no waitctl
+snap ddj_t1_back

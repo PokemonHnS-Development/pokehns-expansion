@@ -1,0 +1,44 @@
+# A Hyper-rank BEAUTY contest from the H&S contest lobby (MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS).
+# Party slot 0 becomes a level-50 NINETALES made by this ROM (so its nickname is the ROM's species name)
+# with the moves below; the appeals are the digit string 03102 (the move-list index for each round):
+#   0 MIST (BEAUTY, CONTEST_EFFECT_AVOID_STARTLE, src/data/moves_info.h)
+#   1 BLAST_BURN (BEAUTY, CONTEST_EFFECT_JAMS_OTHERS_BUT_MISS_ONE_TURN, src/data/moves_info.h)
+#   2 FEATHER_DANCE (BEAUTY, CONTEST_EFFECT_BETTER_IF_LAST, src/data/moves_info.h)
+#   3 PSYSHOCK (BEAUTY, CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON, src/data/moves_info.h)
+# Mist (avoid startle), Psyshock (badly startle the one before), Blast Burn (jams, can't appeal next turn), Feather Dance (better if last).
+# Entering Hyper rank needs the BEAUTY ribbon of the rank below (GetContestEntryEligibility); they are
+# given rank by rank with GiveMonContestRibbon on gContestMonPartyIndex 0.
+# Round 1 points are set to 2000 once the contest screen starts (gContestMonRound1Points[3], the
+# player is contestant 3), so the player wins and gets the ribbon (contest_hall.inc ReceiveContestRibbon).
+# gRngValue is pinned from the lobby on (pinrng), so the opponents, the AI's appeals and the
+# audience are the same on the Hebrew and the English ROM (the shots pair up by name).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_NINETALES, 50, move1=MOVE_MIST, move2=MOVE_BLAST_BURN, move3=MOVE_FEATHER_DANCE, move4=MOVE_PSYSHOCK; additem ITEM_POKEBLOCK_CASE, 1; end
+w8 @gContestMonPartyIndex@ 0
+ev setvar VAR_CONTEST_CATEGORY, 1; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 2
+fieldwatch type menu 3000
+pick 1
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap party_pick
+tap A 4
+fieldwatch entry cb2:CB2_StartContest 40000 45
+w16s gContestMonRound1Points 3 2000
+contestplay5 app 03102
+fieldwatch judge cb2:CB2_StartShowContestResults 20000 45
+waitcb2x CB2_ShowContestResults 600
+burstuntil res CB2_ShowContestResults 16 9000 A 240
+fieldwatch prize free 30000 45
+loc
+snap lobby_after

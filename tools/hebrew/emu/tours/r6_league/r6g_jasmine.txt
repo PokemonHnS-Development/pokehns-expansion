@@ -1,0 +1,8 @@
+# Jasmine, Olivine Gym (8,4): OlivineCity_Gym_EventScript_Jasmine.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_OLIVINE_CITY_GYM; clearflag FLAG_BADGE06_GET; clearflag FLAG_HIDE_OLIVINE_CITY_GYM_JASMINE; end
+warpto MAP_OLIVINE_CITY_GYM_HNS 8 5
+face UP
+snap ja_room
+include _leader_tail.txt

@@ -1,0 +1,40 @@
+# Ruins of Alph lab fossil scientist (7,2): RuinsOfAlph_Lab_EventScript_FossilScientist
+# (RuinsOfAlph_Lab_hns/scripts.inc:43-), one fossil in the bag (ITEM_DOME_FOSSIL, VAR_WHICH_FOSSIL_REVIVED 4,
+# Kabuto): the intro pages, the '!' emote, 'bring it back to life?' YES/NO; NO -> OhIsThatSo; from a
+# savestate YES -> handed over (state 1); talk -> 'takes time'; state 2 -> 'brought back to life',
+# received with the fanfare, the nickname YES/NO (NO) into the party.
+start saves/r6_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+dropitem ITEM_ROOT_FOSSIL
+dropitem ITEM_CLAW_FOSSIL
+dropitem ITEM_HELIX_FOSSIL
+dropitem ITEM_DOME_FOSSIL
+dropitem ITEM_OLD_AMBER
+ev additem ITEM_DOME_FOSSIL; setvar VAR_FOSSIL_RESURRECTION_STATE, 0; end
+warpto MAP_RUINS_OF_ALPH_LAB_HNS 7 3
+face UP
+snap fo_field
+tap A 4
+scene fo_intro 8000 12
+ss fo_ask
+pickd 1
+scene fo_no 4000
+snap fo_no_end
+sl fo_ask
+pickd 0
+scene fo_handed 4000
+snap fo_handed_end
+vars VAR_FOSSIL_RESURRECTION_STATE VAR_WHICH_FOSSIL_REVIVED
+face UP
+tap A 4
+scene fo_wait 4000
+snap fo_wait_end
+ev setvar VAR_FOSSIL_RESURRECTION_STATE, 2; end
+face UP
+tap A 4
+scene fo_ready 8000
+pickd 1
+scene fo_ready_no 4000
+snap fo_ready_end
+partyinfo

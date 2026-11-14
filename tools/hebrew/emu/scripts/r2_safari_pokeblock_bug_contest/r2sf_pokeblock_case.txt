@@ -1,0 +1,100 @@
+# Pokeblock case from the bag (KEY ITEMS > POKEBLOCK CASE > USE, src/item_use.c:721): the list with
+# flavour level and feel, scrolled to its end; the USE / TOSS / CANCEL window; TOSS ("throw
+# away?" YES, "thrown away"); USE: the condition screen of every party slot (src/use_pokeblock.c),
+# "X gets a Pokeblock?" YES, the feeding scene (src/pokeblock_feed.c), the condition results.
+start save:r2sf_blocks
+include ../continue.txt
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap LEFT 4                                # ITEMS wraps left to KEY ITEMS
+waitquiet
+30 -
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 5
+waitquiet
+snap r2sf_pb_keyitems
+bagseek ITEM_POKEBLOCK_CASE
+waitquiet
+snap r2sf_pb_keyitem_case
+tap A 4
+waitquiet
+snap r2sf_pb_case_context
+tap A 4
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+snap r2sf_pb_list_01
+# the list wraps: four shots (three blocks and STOW CASE), the fourth DOWN wraps back to the top
+scrollshots r2sf_pb_listscroll DOWN 4 10
+waitquiet
+snap r2sf_pb_list_top
+tap A 4
+waitquiet
+snap r2sf_pb_actions
+tap DOWN 4
+waitquiet
+snap r2sf_pb_actions_toss
+tap A 4
+waitquiet
+40 -
+waitquiet
+snap r2sf_pb_toss_q
+tap A 4
+waitquiet
+40 -
+waitquiet
+snap r2sf_pb_tossed
+tap A 4
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+snap r2sf_pb_list_after
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UsePokeblockMenu 900
+waitquiet
+40 -
+snap r2sf_pb_use_01
+tap DOWN 4
+40 -
+snap r2sf_pb_use_02
+tap DOWN 4
+40 -
+snap r2sf_pb_use_03
+tap DOWN 4
+40 -
+snap r2sf_pb_use_04
+tap DOWN 4
+40 -
+snap r2sf_pb_use_05
+tap DOWN 4
+40 -
+snap r2sf_pb_use_06
+tap DOWN 4
+40 -
+snap r2sf_pb_use_cancel
+tap DOWN 4
+40 -
+snap r2sf_pb_use_wrap
+waitquiet
+tap A 4
+40 -
+waitquiet
+snap r2sf_pb_use_ask
+tap A 4
+burst r2sf_pb_feedfade 6 20
+textwatch r2sf_pb_feed CB2_ShowUsePokeblockMenuForResults 3000 A
+burst r2sf_pb_results 30 12
+# the results wait for A, then the graph moves and "<condition> rose!" waits for A per condition
+tap A 4
+scenewatch r2sf_pb_rose CB2_PokeblockMenu 1500 112 160 A 90
+waitcb2x CB2_PokeblockMenu 900
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+snap r2sf_pb_list_fed
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+snap r2sf_pb_back_in_bag

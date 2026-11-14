@@ -1,0 +1,5 @@
+# Include: from the battle action menu, open the bag (the pocket is chosen by the caller).
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet

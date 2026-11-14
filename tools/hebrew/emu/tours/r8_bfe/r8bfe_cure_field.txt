@@ -1,0 +1,549 @@
+# Status cures used from the bag in the field (src/party_menu.c ItemUseCB_Medicine :4952,
+# GetMedicineItemEffectMessage :4822): ICE HEAL on a frozen Pokemon (gText_PkmnThawedOut), on a
+# frostbitten one (gText_PkmnFrostbiteHealed), FULL HEAL on asleep / poisoned / paralysed / frozen
+# ones (gText_PkmnBecameHealthy), the status berries (CHERI paralysis, CHESTO sleep, PECHA poison,
+# RAWST burn, ASPEAR freeze, LUM all), FULL HEAL and LUM on a healthy Pokemon (gText_WontHaveEffect),
+# and PERSIM, whose field use is ItemUseOutOfBattle_CannotUse (the advice line in the bag).
+# Confusion and infatuation only exist in battle: see r8bfe_cure_battle.
+# Party (menuA_base + a Chansey): 0 Typhlosion, 1 Pikachu, 2 Ampharos, 3 Gyarados, 4 Egg, 5 Chansey.
+# MEDICINE rows: 0 ICE HEAL, 1 FULL HEAL. BERRIES rows (by number): 0 CHERI, 1 CHESTO, 2 PECHA,
+# 3 RAWST, 4 ASPEAR, 5 PERSIM, 6 LUM.
+start saves/r8bfe_menuA_base.sav
+include ../../scripts/continue.txt
+setpocket POCKET_MEDICINE ITEM_ICE_HEAL:9 ITEM_FULL_HEAL:9
+setpocket POCKET_BERRIES ITEM_CHERI_BERRY:9 ITEM_CHESTO_BERRY:9 ITEM_PECHA_BERRY:9 ITEM_RAWST_BERRY:9 ITEM_ASPEAR_BERRY:9 ITEM_PERSIM_BERRY:9 ITEM_LUM_BERRY:9
+ev givemon SPECIES_CHANSEY, 30; setstatus1 STATUS1_FREEZE, 0; setstatus1 STATUS1_SLEEP_TURN(3), 1; setstatus1 STATUS1_POISON, 2; setstatus1 STATUS1_BURN, 3; setstatus1 STATUS1_PARALYSIS, 5; end
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap c00_party_status
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c01_iceheal_frozen
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 0
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c01_iceheal_frozen_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 0 DOWN
+waitquiet
+snap c01_iceheal_frozen_party
+tap A 4
+waitkey 900
+pages c01_iceheal_frozen_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap c01_iceheal_frozen_after
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c02_fullheal_asleep
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 1
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c02_fullheal_asleep_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+snap c02_fullheal_asleep_party
+tap A 4
+waitkey 900
+pages c02_fullheal_asleep_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c03_fullheal_poisoned
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 1
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c03_fullheal_poisoned_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 2 DOWN
+waitquiet
+snap c03_fullheal_poisoned_party
+tap A 4
+waitkey 900
+pages c03_fullheal_poisoned_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c04_rawst_burned
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 3
+w16 @gBagPosition+1C@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c04_rawst_burned_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 3 DOWN
+waitquiet
+snap c04_rawst_burned_party
+tap A 4
+waitkey 900
+pages c04_rawst_burned_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c05_cheri_paralysed
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 0
+w16 @gBagPosition+1C@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c05_cheri_paralysed_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+snap c05_cheri_paralysed_party
+tap A 4
+waitkey 900
+pages c05_cheri_paralysed_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c06_fullheal_healthy
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 1
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c06_fullheal_healthy_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+snap c06_fullheal_healthy_party
+tap A 4
+waitkey 900
+pages c06_fullheal_healthy_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c07_persim_field
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 5
+w16 @gBagPosition+1C@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c07_persim_field_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitkey 600
+pages c07_persim_field_msg
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+ev setstatus1 STATUS1_FROSTBITE, 0; setstatus1 STATUS1_FREEZE, 1; setstatus1 STATUS1_SLEEP_TURN(3), 2; setstatus1 STATUS1_POISON, 3; setstatus1 STATUS1_PARALYSIS, 5; end
+
+# c08_iceheal_frostbite
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 0
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c08_iceheal_frostbite_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 0 DOWN
+waitquiet
+snap c08_iceheal_frostbite_party
+tap A 4
+waitkey 900
+pages c08_iceheal_frostbite_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c09_fullheal_frozen
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 1
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c09_fullheal_frozen_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+snap c09_fullheal_frozen_party
+tap A 4
+waitkey 900
+pages c09_fullheal_frozen_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c10_chesto_asleep
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 1
+w16 @gBagPosition+1C@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c10_chesto_asleep_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 2 DOWN
+waitquiet
+snap c10_chesto_asleep_party
+tap A 4
+waitkey 900
+pages c10_chesto_asleep_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c11_pecha_poisoned
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 2
+w16 @gBagPosition+1C@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c11_pecha_poisoned_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 3 DOWN
+waitquiet
+snap c11_pecha_poisoned_party
+tap A 4
+waitkey 900
+pages c11_pecha_poisoned_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c12_lum_paralysed
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 6
+w16 @gBagPosition+1C@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c12_lum_paralysed_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+snap c12_lum_paralysed_party
+tap A 4
+waitkey 900
+pages c12_lum_paralysed_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c13_lum_healthy
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 6
+w16 @gBagPosition+1C@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c13_lum_healthy_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 0 DOWN
+waitquiet
+snap c13_lum_healthy_party
+tap A 4
+waitkey 900
+pages c13_lum_healthy_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+ev setstatus1 STATUS1_FREEZE, 1; setstatus1 STATUS1_BURN, 2; end
+
+# c14_aspear_frozen
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 4
+w16 @gBagPosition+1C@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c14_aspear_frozen_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+snap c14_aspear_frozen_party
+tap A 4
+waitkey 900
+pages c14_aspear_frozen_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# c15_fullheal_burned
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 1
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap c15_fullheal_burned_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 2 DOWN
+waitquiet
+snap c15_fullheal_burned_party
+tap A 4
+waitkey 900
+pages c15_fullheal_burned_msg
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap c15_fullheal_burned_after
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+

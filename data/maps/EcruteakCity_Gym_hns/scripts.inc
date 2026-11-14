@@ -77,59 +77,55 @@ EcruteakCity_Gym_EventScript_Statue2::
 	end
 
 EcruteakCity_Gym_Text_GymStatue:
-	.string "ECRUTEAK CITY POKéMON GYM$"
+	.string "מכון הפוקימון של העיר אקרוטיק$"
 
 EcruteakCity_Gym_Text_GymStatueCertified:
-	.string "ECRUTEAK CITY POKéMON GYM\p"
-	.string "MORTY'S CERTIFIED TRAINERS:\n"
+	.string "מכון הפוקימון של העיר אקרוטיק\p"
+	.string "המאמנים המוסמכים של מורטי:\n"
 	.string "{PLAYER}$"
 
 MortyIntroText:
-	.string "Good of you to have come.\p"
-	.string "Here in ECRUTEAK, POKéMON have\n"
-	.string "always been revered.\p"
-	.string "It's said that a rainbow-colored\n"
-	.string "POKéMON will come down to\l"
-	.string "appear before a true Trainer.\p"
-	.string "I believed that tale, so I've\n"
-	.string "trained here in secret.\p"
-	.string "As a result, I can now see what\n"
-	.string "others cannot.\p"
-	.string "Just a bit more...\p"
-	.string "With a little more, I could see\n"
-	.string "a future where I meet the\l"
-	.string "rainbow-colored POKéMON.\p"
-	.string "You're going to help me reach\n"
-	.string "that level!$"
+	.string "טוב שבאת.\p"
+	.string "כאן באקרוטיק, הפוקימונים תמיד\n"
+	.string "זכו להערצה.\p"
+	.string "אומרים שפוקימון בצבעי הקשת\n"
+	.string "ירד ויופיע לפני מאמן אמיתי.\p"
+	.string "האמנתי לאגדה הזאת, אז\n"
+	.string "התאמנתי כאן בסתר.\p"
+	.string "בזכות זה, אני יכול עכשיו לראות\n"
+	.string "מה שאחרים לא רואים.\p"
+	.string "רק עוד קצת…\p"
+	.string "עוד קצת, ואוכל לראות עתיד שבו\n"
+	.string "אני פוגש את הפוקימון בצבעי הקשת.\p"
+	.string "אתה תעזור לי להגיע\n"
+	.string "לרמה הזאת!$"
 
 MortyWinLossText:
-	.string "I'm not good enough yet...\p"
-	.string "All right. This BADGE is yours.$"
+	.string "אני עדיין לא מספיק טוב…\p"
+	.string "בסדר. התג הזה שלך.$"
 
 Text_ReceivedFogBadge:
-	.string "{PLAYER} received the FOGBADGE.$"
+	.string "{PLAYER} קיבל את תג ערפל.$"
 
 MortyText_FogBadgeSpeech:
-	.string "With the FOGBADGE, POKéMON up\n"
-	.string "to Level 50 will obey you.\p"
-	.string "Also, any POKéMON that knows\n"
-	.string "SURF will be able to use it\l"
-	.string "anytime.\p"
-	.string "I want you to have this too.$"
+	.string "עם תג ערפל, פוקימונים עד\n"
+	.string "רמה 50 יצייתו לך.\p"
+	.string "בנוסף, כל פוקימון שיודע גלישה\n"
+	.string "יוכל להשתמש בה בכל זמן.\p"
+	.string "אני רוצה לתת לך גם את זה.$"
 
 MortyText_ShadowBallSpeech:
-	.string "That's SHADOW BALL.\n"
-	.string "It causes damage and may\l"
-	.string "lower SP. DEF.\p"
-	.string "Use it if it suits you.$"
+	.string "זה כדור צל. הוא גורם נזק\n"
+	.string "ועשוי להוריד את ההגנה המיוחדת.\p"
+	.string "אפשר להשתמש בו אם הוא מתאים לך.$"
 
 MortyFightDoneText:
-	.string "I see...\p"
-	.string "Your journey has taken you to\n"
-	.string "far-off places.\p"
-	.string "You've witnessed more than I\n"
-	.string "ever have.\p"
-	.string "I envy you for that...$"
+	.string "אני מבין…\p"
+	.string "המסע שלך לקח אותך\n"
+	.string "למקומות רחוקים.\p"
+	.string "ראית יותר ממה שאני\n"
+	.string "ראיתי אי פעם.\p"
+	.string "אני מקנא בך על כך…$"
 
 MortyRematchText:
 	.string "Ah, the JOHTO CHAMPION!\n"
@@ -150,69 +146,68 @@ Morty_RematchDefeatText:
 	.string "I envy you for that...$"
 
 SageJeffreySeenText:
-	.string "I spent the spring with my\n"
-	.string "POKéMON.\p"
-	.string "Then summer, fall, and winter...\p"
-	.string "Then spring came again.\n"
-	.string "We've been together a long time.$"
+	.string "את האביב ביליתי עם\n"
+	.string "הפוקימונים שלי.\p"
+	.string "אחר כך קיץ, סתיו וחורף…\p"
+	.string "ואז שוב הגיע האביב.\n"
+	.string "אנחנו ביחד כבר הרבה זמן.$"
 
 SageJeffreyBeatenText:
-	.string "Wins and losses--I've known\n"
-	.string "them both.$"
+	.string "ניצחונות והפסדים - הכרתי\n"
+	.string "את שניהם.$"
 
 SageJeffreyAfterBattleText:
-	.string "Where did POKéMON come from?$"
+	.string "מאיפה הגיעו הפוקימונים?$"
 
 SagePingSeenText:
-	.string "Can you inflict any damage\n"
-	.string "on our POKéMON?$"
+	.string "תצליח לגרום נזק כלשהו\n"
+	.string "לפוקימונים שלנו?$"
 
 SagePingBeatenText:
-	.string "Ah! Well done!$"
+	.string "אה! כל הכבוד!$"
 
 SagePingAfterBattleText:
-	.string "We use GHOST-type POKéMON.\p"
-	.string "No NORMAL-type attacks can\n"
-	.string "harm them!$"
+	.string "אנחנו משתמשים בפוקימונים מסוג רפאים.\p"
+	.string "שום התקפה מסוג רגיל לא יכולה\n"
+	.string "לפגוע בהם!$"
 
 MediumMarthaSeenText:
-	.string "I shall win!$"
+	.string "אני אנצח!$"
 
 MediumMarthaBeatenText:
-	.string "I... I... I lost!$"
+	.string "אני… אני… הפסדתי!$"
 
 MediumMarthaAfterBattleText:
-	.string "The one who wants to win the\n"
-	.string "most is the one who will!$"
+	.string "מי שהכי רוצה לנצח\n"
+	.string "הוא זה שינצח!$"
 
 MediumGraceSeenText:
-	.string "Stumped by our dark corridors?\n"
-	.string "Defeat me if you want a hint!$"
+	.string "המסדרונות החשוכים שלנו מבלבלים אותך?\n"
+	.string "מי שרוצה רמז, צריך לנצח אותי!$"
 
 MediumGraceBeatenText:
-	.string "Wha-what?$"
+	.string "מ-מה?$"
 
 MediumGraceAfterBattleText:
-	.string "Fine. I'll tell you the secret\n"
-	.string "of the shadows.\p"
-	.string "The path is right in front of\n"
-	.string "your eyes!$"
+	.string "טוב. אגלה לך את הסוד\n"
+	.string "של הצללים.\p"
+	.string "השביל נמצא ממש מול\n"
+	.string "העיניים שלך!$"
 
 EcruteakCity_GymGuideText:
-	.string "Hey CHAMP! You're almost\n"
-	.string "halfway there!\p"
-	.string "Trainers here use GHOST and\n"
-	.string "DARK-type POKéMON.\p"
-	.string "While MORTY is a GHOST-type\n"
-	.string "expert, be wary of his mystic\l"
-	.string "deer.\p"
-	.string "It's said to cause strange\n"
-	.string "nightmares...$"
+	.string "היי, אלוף! כבר כמעט\n"
+	.string "הגעת לחצי הדרך!\p"
+	.string "המאמנים כאן משתמשים בפוקימונים\n"
+	.string "מסוג רפאים ומסוג אפל.\p"
+	.string "מורטי אמנם מומחה לסוג רפאים, אבל\n"
+	.string "כדאי להיזהר מהצבי המיסטי שלו.\p"
+	.string "אומרים שהוא גורם לסיוטים\n"
+	.string "מוזרים…$"
 
 EcruteakCity_GymGuideWinText:
-	.string "Whew, {PLAYER}. You did great!\p"
-	.string "I was cowering in the corner\n"
-	.string "out of pure terror!$"
+	.string "פיו, {PLAYER}. עשית עבודה מצוינת!\p"
+	.string "אני התכווצתי בפינה\n"
+	.string "מרוב אימה!$"
 
 EcruteakCity_GymClosedText:
 	.string "MORTY, the GYM LEADER, is\n"

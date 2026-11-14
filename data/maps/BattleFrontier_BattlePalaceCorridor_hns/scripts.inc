@@ -120,30 +120,30 @@ BattleFrontier_BattlePalaceCorridor_Movement_AttendantEnterBattleRoom_hns:
 	step_end
 
 BattleFrontier_BattlePalaceCorridor_Text_PeopleAndMonAreSame_hns:
-	.string "People and POKéMON, they are but\n"
-	.string "the same…\p"
-	.string "Their individual nature makes them\n"
-	.string "good at certain things, and not good\l"
-	.string "at others.$"
+	.string "אנשים ופוקימונים, הם בעצם\n"
+	.string "אותו הדבר…\p"
+	.string "האופי של כל אחד הופך אותו לטוב\n"
+	.string "בדברים מסוימים, ולא טוב באחרים.$"
 
 BattleFrontier_BattlePalaceCorridor_Text_LetMonDoWhatItLikes_hns:
-	.string "Rather than trying to make a POKéMON\n"
-	.string "do what it dislikes, try to let it do\l"
-	.string "what it likes and is good at doing.\p"
-	.string "Put yourself in the POKéMON's position\n"
-	.string "and consider what moves it would like.$"
+	.string "לא כדאי לנסות לגרום לפוקימון\n"
+	.string "לעשות דברים שהוא לא אוהב.\p"
+	.string "עדיף לתת לו לעשות את מה\n"
+	.string "שהוא אוהב ושהוא טוב בו.\p"
+	.string "כדאי לשים את עצמך במקום הפוקימון\n"
+	.string "ולחשוב אילו מהלכים הוא היה אוהב.$"
 
 BattleFrontier_BattlePalaceCorridor_Text_MonDifferentWhenCornered_hns:
-	.string "A POKéMON's nature is a remarkable\n"
-	.string "thing…\p"
-	.string "Some POKéMON behave in a completely\n"
-	.string "different way when they are cornered.$"
+	.string "האופי של פוקימון הוא\n"
+	.string "דבר מופלא…\p"
+	.string "יש פוקימונים שמתנהגים בצורה\n"
+	.string "שונה לגמרי כשהם נלחצים לפינה.$"
 
 BattleFrontier_BattlePalaceCorridor_Text_BeginningToUnderstandNature_hns:
-	.string "Are you beginning to understand how\n"
-	.string "a POKéMON's nature makes it behave?$"
+	.string "אתה מתחיל להבין איך האופי\n"
+	.string "של פוקימון קובע את התנהגותו?$"
 
 BattleFrontier_BattlePalaceCorridor_Text_HeartfeltBondBetweenYouAndMons_hns:
-	.string "Ah… I see a strong, heartfelt bond\n"
-	.string "between you and your POKéMON…$"
+	.string "אה… אני רואה קשר חזק ועמוק\n"
+	.string "בינך לבין הפוקימונים שלך…$"
 

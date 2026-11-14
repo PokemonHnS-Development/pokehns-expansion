@@ -1,0 +1,23 @@
+# Save dialog (src/start_menu.c): the info window (location, player, badges, Pokedex,
+# time) with "Would you like to save the game?" YES/NO, the "SAVING... DON'T TURN OFF
+# THE POWER." message, then "GOLD saved the game." Waits on sSaveDialogCallback.
+start save:menuA_base
+include ../scripts/continue.txt
+
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+snap menu_save_01_confirm
+tap A 0
+waitptr sSaveDialogCallback SaveDoSaveCallback 900
+snap menu_save_02_saving
+waitptr sSaveDialogCallback SaveReturnSuccessCallback 900
+snap menu_save_03_saved
+waitctl 900 B
+# NO in the same dialog
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+tap DOWN 4
+waitquiet
+snap menu_save_04_no
+tap A 4
+waitctl 900 B

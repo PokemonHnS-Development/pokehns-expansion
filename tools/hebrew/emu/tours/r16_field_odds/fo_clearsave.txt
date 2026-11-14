@@ -1,0 +1,16 @@
+# Title screen B+SELECT+UP: the clear-save screen (src/clear_save_data_screen.c), YES, then
+# "clearing data, please wait" (gText_ClearingData, src/strings.c:1234) while the flash is erased.
+# Runs on the tour's copy of the save (OUT/<tour>/cur.sav), never on the ladder. regionwatch (bts.py) keeps a
+# shot each time the message area changes; the erase ends in a soft reset that clears RAM, so the string hook
+# has no poll between the print and the reset (the message is on screen, not in the strcov log).
+start saves/ladder6_postgame.sav
+include ../../scripts/r2_boot_title_save/_title.txt
+10 B+SELECT+UP
+waittaskx Task_ClearSaveDataScreenYesNoChoice 300
+waitquiet
+snap fo_clear_01_prompt
+tap UP 4
+waitquiet
+snap fo_clear_02_yes
+tap A 0
+regionwatch fo_clear_03 900 120 152 CB2_InitCopyrightScreenAfterBootup

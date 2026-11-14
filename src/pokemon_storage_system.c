@@ -862,20 +862,20 @@ void SetMonFormPSS(struct BoxPokemon *boxMon, enum FormChanges method);
 void SetMonFormPSS_ItemHold(struct BoxPokemon *boxMon);
 void UpdateSpeciesSpritePSS(struct BoxPokemon *boxmon);
 
-static const u8 gText_JustOnePkmn[] = _("There is just one POKéMON with you.");
-static const u8 gText_PartyFull[] = _("Your party is full!");
-static const u8 gText_Box[] = _("BOX");
+static const u8 gText_JustOnePkmn[] = _("יש איתך רק פוקימון אחד.");
+static const u8 gText_PartyFull[] = _("הקבוצה שלך מלאה!");
+static const u8 gText_Box[] = _("תיבה ");
 
 struct {
     const u8 *text;
     const u8 *desc;
 } static const sMainMenuTexts[OPTIONS_COUNT] =
 {
-    [OPTION_WITHDRAW]   = {COMPOUND_STRING("WITHDRAW POKéMON"), COMPOUND_STRING("Move POKéMON stored in BOXES to\nyour party.")},
-    [OPTION_DEPOSIT]    = {COMPOUND_STRING("DEPOSIT POKéMON"),  COMPOUND_STRING("Store POKéMON in your party in BOXES.")},
-    [OPTION_MOVE_MONS]  = {COMPOUND_STRING("MOVE POKéMON"),     COMPOUND_STRING("Organize the POKéMON in BOXES and\nin your party.")},
-    [OPTION_MOVE_ITEMS] = {COMPOUND_STRING("MOVE ITEMS"),       COMPOUND_STRING("Move items held by any POKéMON\nin a BOX or your party.")},
-    [OPTION_EXIT]       = {COMPOUND_STRING("SEE YA!"),          COMPOUND_STRING("Return to the previous menu.")}
+    [OPTION_WITHDRAW]   = {COMPOUND_STRING("משוך פוקימון"), COMPOUND_STRING("העברת פוקימונים מהתיבות\nאל הקבוצה שלך.")},
+    [OPTION_DEPOSIT]    = {COMPOUND_STRING("הפקד פוקימון"),  COMPOUND_STRING("אחסון פוקימונים מהקבוצה שלך בתיבות.")},
+    [OPTION_MOVE_MONS]  = {COMPOUND_STRING("הזז פוקימון"),     COMPOUND_STRING("סידור הפוקימונים בתיבות\nובקבוצה שלך.")},
+    [OPTION_MOVE_ITEMS] = {COMPOUND_STRING("הזז פריטים"),       COMPOUND_STRING("העברת פריטים שפוקימונים מחזיקים\nבתיבה או בקבוצה שלך.")},
+    [OPTION_EXIT]       = {COMPOUND_STRING("להתראות!"),          COMPOUND_STRING("חזרה לתפריט הקודם.")}
 };
 
 static const struct WindowTemplate sWindowTemplate_MainMenu =
@@ -1048,43 +1048,43 @@ static const struct SpriteTemplate sSpriteTemplate_DisplayMon =
     .oam = &sOamData_DisplayMon,
 };
 
-static const u8 gText_PkmnIsSelected[] = _("{DYNAMIC 0} is selected.");
+static const u8 gText_PkmnIsSelected[] = _("בחרת ב{DYNAMIC 0}.");
 
 static const struct StorageMessage sMessages[] =
 {
-    [MSG_EXIT_BOX]             = {COMPOUND_STRING("Exit from the BOX?"),         MSG_VAR_NONE},
-    [MSG_WHAT_YOU_DO]          = {COMPOUND_STRING("What do you want to do?"),    MSG_VAR_NONE},
-    [MSG_PICK_A_THEME]         = {COMPOUND_STRING("Please pick a theme."),       MSG_VAR_NONE},
-    [MSG_PICK_A_WALLPAPER]     = {COMPOUND_STRING("Pick the wallpaper."),        MSG_VAR_NONE},
+    [MSG_EXIT_BOX]             = {COMPOUND_STRING("לצאת מהתיבה?"),         MSG_VAR_NONE},
+    [MSG_WHAT_YOU_DO]          = {COMPOUND_STRING("מה ברצונך לעשות?"),    MSG_VAR_NONE},
+    [MSG_PICK_A_THEME]         = {COMPOUND_STRING("נא לבחור ערכת נושא."),       MSG_VAR_NONE},
+    [MSG_PICK_A_WALLPAPER]     = {COMPOUND_STRING("נא לבחור רקע."),        MSG_VAR_NONE},
     [MSG_IS_SELECTED]          = {gText_PkmnIsSelected,                          MSG_VAR_MON_NAME_1},
-    [MSG_JUMP_TO_WHICH_BOX]    = {COMPOUND_STRING("Jump to which BOX?"),         MSG_VAR_NONE},
-    [MSG_DEPOSIT_IN_WHICH_BOX] = {COMPOUND_STRING("Deposit in which BOX?"),      MSG_VAR_NONE},
-    [MSG_WAS_DEPOSITED]        = {COMPOUND_STRING("{DYNAMIC 0} was deposited."), MSG_VAR_MON_NAME_1},
-    [MSG_BOX_IS_FULL]          = {COMPOUND_STRING("The BOX is full."),           MSG_VAR_NONE},
-    [MSG_RELEASE_POKE]         = {COMPOUND_STRING("Release this POKéMON?"),      MSG_VAR_NONE},
-    [MSG_WAS_RELEASED]         = {COMPOUND_STRING("{DYNAMIC 0} was released."),  MSG_VAR_RELEASE_MON_1},
-    [MSG_BYE_BYE]              = {COMPOUND_STRING("Bye-bye, {DYNAMIC 0}!"),      MSG_VAR_RELEASE_MON_3},
-    [MSG_MARK_POKE]            = {COMPOUND_STRING("Mark your POKéMON."),         MSG_VAR_NONE},
-    [MSG_LAST_POKE]            = {COMPOUND_STRING("That's your last POKéMON!"),  MSG_VAR_NONE},
+    [MSG_JUMP_TO_WHICH_BOX]    = {COMPOUND_STRING("לאיזו תיבה לקפוץ?"),         MSG_VAR_NONE},
+    [MSG_DEPOSIT_IN_WHICH_BOX] = {COMPOUND_STRING("באיזו תיבה להפקיד?"),      MSG_VAR_NONE},
+    [MSG_WAS_DEPOSITED]        = {COMPOUND_STRING("{DYNAMIC 0} הופקד."), MSG_VAR_MON_NAME_1},
+    [MSG_BOX_IS_FULL]          = {COMPOUND_STRING("התיבה מלאה."),           MSG_VAR_NONE},
+    [MSG_RELEASE_POKE]         = {COMPOUND_STRING("לשחרר את הפוקימון הזה?"),      MSG_VAR_NONE},
+    [MSG_WAS_RELEASED]         = {COMPOUND_STRING("שחררת את {DYNAMIC 0}."),  MSG_VAR_RELEASE_MON_1},
+    [MSG_BYE_BYE]              = {COMPOUND_STRING("להתראות, {DYNAMIC 0}!"),      MSG_VAR_RELEASE_MON_3},
+    [MSG_MARK_POKE]            = {COMPOUND_STRING("נא לסמן את הפוקימון שלך."),         MSG_VAR_NONE},
+    [MSG_LAST_POKE]            = {COMPOUND_STRING("זה הפוקימון האחרון שלך!"),  MSG_VAR_NONE},
     [MSG_PARTY_FULL]           = {gText_YourPartysFull,                          MSG_VAR_NONE},
-    [MSG_HOLDING_POKE]         = {COMPOUND_STRING("You're holding a POKéMON!"),  MSG_VAR_NONE},
-    [MSG_WHICH_ONE_WILL_TAKE]  = {COMPOUND_STRING("Which one will you take?"),   MSG_VAR_NONE},
-    [MSG_CANT_RELEASE_EGG]     = {COMPOUND_STRING("You can't release an EGG."),  MSG_VAR_NONE},
-    [MSG_CONTINUE_BOX]         = {COMPOUND_STRING("Continue BOX operations?"),   MSG_VAR_NONE},
-    [MSG_CAME_BACK]            = {COMPOUND_STRING("{DYNAMIC 0} came back!"),     MSG_VAR_MON_NAME_1},
-    [MSG_WORRIED]              = {COMPOUND_STRING("Was it worried about you?"),  MSG_VAR_NONE},
+    [MSG_HOLDING_POKE]         = {COMPOUND_STRING("יש לך פוקימון ביד!"),  MSG_VAR_NONE},
+    [MSG_WHICH_ONE_WILL_TAKE]  = {COMPOUND_STRING("איזה פוקימון ברצונך לקחת?"),   MSG_VAR_NONE},
+    [MSG_CANT_RELEASE_EGG]     = {COMPOUND_STRING("אי אפשר לשחרר ביצה."),  MSG_VAR_NONE},
+    [MSG_CONTINUE_BOX]         = {COMPOUND_STRING("להמשיך בפעולות התיבה?"),   MSG_VAR_NONE},
+    [MSG_CAME_BACK]            = {COMPOUND_STRING("{DYNAMIC 0} חזר!"),     MSG_VAR_MON_NAME_1},
+    [MSG_WORRIED]              = {COMPOUND_STRING("האם הוא דאג לך?"),  MSG_VAR_NONE},
     [MSG_SURPRISE]             = {COMPOUND_STRING("… … … … !"),                  MSG_VAR_NONE},
-    [MSG_PLEASE_REMOVE_MAIL]   = {COMPOUND_STRING("Please remove the MAIL."),    MSG_VAR_NONE},
+    [MSG_PLEASE_REMOVE_MAIL]   = {COMPOUND_STRING("נא להסיר את הדואר."),    MSG_VAR_NONE},
     [MSG_IS_SELECTED2]         = {gText_PkmnIsSelected,                          MSG_VAR_ITEM_NAME},
-    [MSG_GIVE_TO_MON]          = {COMPOUND_STRING("GIVE to a POKéMON?"),         MSG_VAR_NONE},
-    [MSG_PLACED_IN_BAG]        = {COMPOUND_STRING("Placed item in the BAG."),    MSG_VAR_ITEM_NAME},
-    [MSG_BAG_FULL]             = {COMPOUND_STRING("The BAG is full."),           MSG_VAR_NONE},
-    [MSG_PUT_IN_BAG]           = {COMPOUND_STRING("Put this item in the BAG?"),  MSG_VAR_NONE},
-    [MSG_ITEM_IS_HELD]         = {COMPOUND_STRING("{DYNAMIC 0} is now held."),   MSG_VAR_ITEM_NAME},
-    [MSG_CHANGED_TO_ITEM]      = {COMPOUND_STRING("Changed to {DYNAMIC 0}."),    MSG_VAR_ITEM_NAME},
-    [MSG_CANT_STORE_MAIL]      = {COMPOUND_STRING("MAIL can't be stored!"),      MSG_VAR_NONE},
-    [MSG_NUZLOCKE_FAINTED]     = {COMPOUND_STRING("fainted in Nuzlocke!"),       MSG_VAR_NONE},
-    [MSG_ONE_TYPE_BLOCKED]     = {COMPOUND_STRING("Wrong type!"), MSG_VAR_NONE},
+    [MSG_GIVE_TO_MON]          = {COMPOUND_STRING("לתת לפוקימון?"),         MSG_VAR_NONE},
+    [MSG_PLACED_IN_BAG]        = {COMPOUND_STRING("הפריט הונח בתיק."),    MSG_VAR_ITEM_NAME},
+    [MSG_BAG_FULL]             = {COMPOUND_STRING("התיק מלא."),           MSG_VAR_NONE},
+    [MSG_PUT_IN_BAG]           = {COMPOUND_STRING("לשים את הפריט הזה בתיק?"),  MSG_VAR_NONE},
+    [MSG_ITEM_IS_HELD]         = {COMPOUND_STRING("{DYNAMIC 0} אצלו כעת."),   MSG_VAR_ITEM_NAME},
+    [MSG_CHANGED_TO_ITEM]      = {COMPOUND_STRING("הוחלף ב{DYNAMIC 0}."),    MSG_VAR_ITEM_NAME},
+    [MSG_CANT_STORE_MAIL]      = {COMPOUND_STRING("אי אפשר לאחסן דואר!"),      MSG_VAR_NONE},
+    [MSG_NUZLOCKE_FAINTED]     = {COMPOUND_STRING("הוא התעלף במצב נאזלוק!"),       MSG_VAR_NONE},
+    [MSG_ONE_TYPE_BLOCKED]     = {COMPOUND_STRING("סוג שגוי!"), MSG_VAR_NONE},
 };
 
 static bool8 IsBoxMonNuzlockeDead(u8 boxId, u8 position)
@@ -1358,6 +1358,10 @@ void DrawTextWindowAndBufferTiles(const u8 *string, void *dst, u8 zero1, u8 zero
     winTemplate.width = 24;
     winTemplate.height = 2;
     windowId = AddWindow(&winTemplate);
+#if TEXT_RTL
+    // Scratch window: only the first chunks of tiles are copied out, so keep the English position.
+    SetWindowRtlMode(windowId, WINDOW_RTL_IN_PLACE);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(zero2));
     tileData1 = (u8 *) GetWindowAttribute(windowId, WINDOW_TILE_DATA);
     tileData2 = (winTemplate.width * TILE_SIZE_4BPP) + tileData1;
@@ -3955,6 +3959,11 @@ static bool8 InitPokeStorageWindows(void)
     }
     else
     {
+#if TEXT_RTL
+        // The PKMN DATA panel art is 78 px wide, 6 px more than the window; mirror around the panel
+        // so the lines keep the English 6 px margin, now on the right.
+        SetWindowRtlMirrorWidth(WIN_DISPLAY_INFO, 78);
+#endif
         DeactivateAllTextPrinters();
         return TRUE;
     }
@@ -4109,7 +4118,21 @@ static void PrintDisplayMonInfo(void)
     if (sStorage->boxOption != OPTION_MOVE_ITEMS)
     {
         AddTextPrinterParameterized(WIN_DISPLAY_INFO, GetFontIdToFit(sStorage->displayMonNameText, FONT_NORMAL, 0, WindowWidthPx(WIN_DISPLAY_INFO) - 6), sStorage->displayMonNameText, 6, 0, TEXT_SKIP_DRAW, NULL);
+#if TEXT_RTL
+        {
+            // The species line takes the font fitted to the nickname, as in English. Mirrored
+            // around the 78 px panel (SetWindowRtlMirrorWidth in InitPokeStorageWindows), it can
+            // run to 66 px with a 6 px margin on both sides; a species name wider than that after
+            // a short nickname (EXEGGUTOR-A, 11 letters) falls back to a narrower font instead of
+            // crowding the left edge.
+            u32 fontId = GetFontIdToFit(sStorage->displayMonNameText, FONT_SHORT, 0, WindowWidthPx(WIN_DISPLAY_INFO) - 12);
+
+            fontId = GetFontIdToFit(sStorage->displayMonSpeciesName, fontId, 0, 78 - 12);
+            AddTextPrinterParameterized(WIN_DISPLAY_INFO, fontId, sStorage->displayMonSpeciesName, 6, 15, TEXT_SKIP_DRAW, NULL);
+        }
+#else
         AddTextPrinterParameterized(WIN_DISPLAY_INFO, GetFontIdToFit(sStorage->displayMonNameText, FONT_SHORT, 0, WindowWidthPx(WIN_DISPLAY_INFO) - 12), sStorage->displayMonSpeciesName, 6, 15, TEXT_SKIP_DRAW, NULL);
+#endif
         AddTextPrinterParameterized(WIN_DISPLAY_INFO, FONT_SHORT, sStorage->displayMonGenderLvlText, 10, 29, TEXT_SKIP_DRAW, NULL);
         AddTextPrinterParameterized(WIN_DISPLAY_INFO, GetFontIdToFit(sStorage->displayMonItemName, FONT_SMALL, 0, WindowWidthPx(WIN_DISPLAY_INFO) - 6), sStorage->displayMonItemName, 6, 43, TEXT_SKIP_DRAW, NULL);
     }
@@ -8205,50 +8228,50 @@ static void InitMenu(void)
     sStorage->menuWindow.baseBlock = 92;
 }
 
-static const u8 gPCText_Give[] = _("GIVE");
+static const u8 gPCText_Give[] = _("תן");
 
 static const u8 *const sMenuTexts[] =
 {
-    [MENU_CANCEL]     = COMPOUND_STRING("CANCEL"),
-    [MENU_STORE]      = COMPOUND_STRING("STORE"),
-    [MENU_WITHDRAW]   = COMPOUND_STRING("WITHDRAW"),
-    [MENU_MOVE]       = COMPOUND_STRING("MOVE"),
-    [MENU_SHIFT]      = COMPOUND_STRING("SHIFT"),
-    [MENU_PLACE]      = COMPOUND_STRING("PLACE"),
-    [MENU_SUMMARY]    = COMPOUND_STRING("SUMMARY"),
-    [MENU_RELEASE]    = COMPOUND_STRING("RELEASE"),
-    [MENU_MARK]       = COMPOUND_STRING("MARK"),
-    [MENU_JUMP]       = COMPOUND_STRING("JUMP"),
-    [MENU_WALLPAPER]  = COMPOUND_STRING("WALLPAPER"),
-    [MENU_NAME]       = COMPOUND_STRING("NAME"),
-    [MENU_TAKE]       = COMPOUND_STRING("TAKE"),
+    [MENU_CANCEL]     = COMPOUND_STRING("ביטול"),
+    [MENU_STORE]      = COMPOUND_STRING("אחסן"),
+    [MENU_WITHDRAW]   = COMPOUND_STRING("משוך"),
+    [MENU_MOVE]       = COMPOUND_STRING("הזז"),
+    [MENU_SHIFT]      = COMPOUND_STRING("החלף"),
+    [MENU_PLACE]      = COMPOUND_STRING("הנח"),
+    [MENU_SUMMARY]    = COMPOUND_STRING("סיכום"),
+    [MENU_RELEASE]    = COMPOUND_STRING("שחרר"),
+    [MENU_MARK]       = COMPOUND_STRING("סמן"),
+    [MENU_JUMP]       = COMPOUND_STRING("קפוץ"),
+    [MENU_WALLPAPER]  = COMPOUND_STRING("רקע"),
+    [MENU_NAME]       = COMPOUND_STRING("שם"),
+    [MENU_TAKE]       = COMPOUND_STRING("קח"),
     [MENU_GIVE]       = gPCText_Give,
     [MENU_GIVE_2]     = gPCText_Give,
-    [MENU_SWITCH]     = COMPOUND_STRING("SWITCH"),
-    [MENU_BAG]        = COMPOUND_STRING("BAG"),
-    [MENU_INFO]       = COMPOUND_STRING("INFO"),
-    [MENU_SCENERY_1]  = COMPOUND_STRING("SCENERY 1"),
-    [MENU_SCENERY_2]  = COMPOUND_STRING("SCENERY 2"),
-    [MENU_SCENERY_3]  = COMPOUND_STRING("SCENERY 3"),
-    [MENU_ETCETERA]   = COMPOUND_STRING("ETCETERA"),
-    [MENU_FRIENDS]    = COMPOUND_STRING("FRIENDS"),
-    [MENU_FOREST]     = COMPOUND_STRING("FOREST"),
-    [MENU_CITY]       = COMPOUND_STRING("CITY"),
-    [MENU_DESERT]     = COMPOUND_STRING("DESERT"),
-    [MENU_SAVANNA]    = COMPOUND_STRING("SAVANNA"),
-    [MENU_CRAG]       = COMPOUND_STRING("CRAG"),
-    [MENU_VOLCANO]    = COMPOUND_STRING("VOLCANO"),
-    [MENU_SNOW]       = COMPOUND_STRING("SNOW"),
-    [MENU_CAVE]       = COMPOUND_STRING("CAVE"),
-    [MENU_BEACH]      = COMPOUND_STRING("BEACH"),
-    [MENU_SEAFLOOR]   = COMPOUND_STRING("SEAFLOOR"),
-    [MENU_RIVER]      = COMPOUND_STRING("RIVER"),
-    [MENU_SKY]        = COMPOUND_STRING("SKY"),
-    [MENU_POLKADOT]   = COMPOUND_STRING("POLKA-DOT"),
-    [MENU_POKECENTER] = COMPOUND_STRING("POKéCENTER"),
-    [MENU_MACHINE]    = COMPOUND_STRING("MACHINE"),
-    [MENU_SIMPLE]     = COMPOUND_STRING("SIMPLE"),
-    [MENU_SELECT]     = COMPOUND_STRING("SELECT"),
+    [MENU_SWITCH]     = COMPOUND_STRING("החלף"),
+    [MENU_BAG]        = COMPOUND_STRING("תיק"),
+    [MENU_INFO]       = COMPOUND_STRING("מידע"),
+    [MENU_SCENERY_1]  = COMPOUND_STRING("נוף 1"),
+    [MENU_SCENERY_2]  = COMPOUND_STRING("נוף 2"),
+    [MENU_SCENERY_3]  = COMPOUND_STRING("נוף 3"),
+    [MENU_ETCETERA]   = COMPOUND_STRING("שונות"),
+    [MENU_FRIENDS]    = COMPOUND_STRING("חברים"),
+    [MENU_FOREST]     = COMPOUND_STRING("יער"),
+    [MENU_CITY]       = COMPOUND_STRING("עיר"),
+    [MENU_DESERT]     = COMPOUND_STRING("מדבר"),
+    [MENU_SAVANNA]    = COMPOUND_STRING("סוואנה"),
+    [MENU_CRAG]       = COMPOUND_STRING("צוק"),
+    [MENU_VOLCANO]    = COMPOUND_STRING("הר געש"),
+    [MENU_SNOW]       = COMPOUND_STRING("שלג"),
+    [MENU_CAVE]       = COMPOUND_STRING("מערה"),
+    [MENU_BEACH]      = COMPOUND_STRING("חוף"),
+    [MENU_SEAFLOOR]   = COMPOUND_STRING("קרקעית הים"),
+    [MENU_RIVER]      = COMPOUND_STRING("נהר"),
+    [MENU_SKY]        = COMPOUND_STRING("שמיים"),
+    [MENU_POLKADOT]   = COMPOUND_STRING("נקודות"),
+    [MENU_POKECENTER] = COMPOUND_STRING("מרכז פוקימון"),
+    [MENU_MACHINE]    = COMPOUND_STRING("מכונה"),
+    [MENU_SIMPLE]     = COMPOUND_STRING("פשוט"),
+    [MENU_SELECT]     = COMPOUND_STRING("בחר"),
 };
 
 static void SetMenuText(u8 textId)

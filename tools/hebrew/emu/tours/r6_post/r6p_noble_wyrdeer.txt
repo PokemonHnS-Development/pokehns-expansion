@@ -1,0 +1,20 @@
+# Noble Wyrdeer, Route 49: the trigger (59,9) at VAR_NOBLE_WYRDEER 1 (Route49_EventScript_
+# ActivateWyrdeerLeft, Route49_hns/scripts.inc:255-), then Route49_EventScript_Wyrdeer (:358-).
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev setvar VAR_NOBLE_WYRDEER, 1; setflag FLAG_HIDE_ROUTE49_NOBLE_WYRDEER; end
+warpto MAP_ROUTE49_HNS 59 10
+face UP
+snap wy_field
+stepto UP 1
+scene wy_flute 3000
+snap wy_flute_menu
+tap A 4
+scene wy_scene 20000 45
+snap wy_scene_end
+objs
+approach 12
+snap wy_before
+tap A 4
+scene wy_pre 4000
+include _noble_battle.txt

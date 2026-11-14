@@ -122,76 +122,76 @@ Route30_EventScript_Mailbox::
 	end
 
 Route30_Text_Mailbox:
-	.string "MR.POKéMON's House$"
+	.string "הבית של מר פוקימון$"
 
 Route30_Text_UseTackle:
-	.string "Go, RATTATA!\p"
-	.string "TACKLE!$"
+	.string "קדימה, רטטה!\p"
+	.string "התנפלות!$"
 
 Route30_Text_ThisIsABigBattle:
-	.string "What? This is a big battle!\n"
-	.string "Leave me alone!$"
+	.string "מה? זה קרב חשוב!\n"
+	.string "עזוב אותי בשקט!$"
 
 Route30_Text_YoungsterJoey1Seen:
-	.string "I just lost, so I'm trying to\n"
-	.string "find more POKéMON.\p"
-	.string "Wait! You look weak! Come on,\n"
-	.string "let's battle!$"
+	.string "הרגע הפסדתי, אז אני מנסה\n"
+	.string "למצוא עוד פוקימונים.\p"
+	.string "רגע! אתה נראה חלש! קדימה,\n"
+	.string "בוא נילחם!$"
 
 Route30_Text_YoungsterJoey1Beaten:
-	.string "Ack! I lost again!\n"
-	.string "Doggone it!$"
+	.string "אוי! שוב הפסדתי!\n"
+	.string "אוף, נו!$"
 
 Route30_Text_YoungsterJoey1After:
-	.string "Do I have to have more POKéMON\n"
-	.string "in order to battle better?\p"
-	.string "No! I'm sticking with this one\n"
-	.string "no matter what!$"
+	.string "אני צריך עוד פוקימונים\n"
+	.string "כדי להילחם טוב יותר?\p"
+	.string "לא! אני נשאר עם הפוקימון\n"
+	.string "הזה, לא משנה מה!$"
 
 Route30_Text_YoungsterMikeySeen:
-	.string "You're a POKéMON trainer,\n"
-	.string "right?\p"
-	.string "Then you have to battle!$"
+	.string "אתה מאמן פוקימונים,\n"
+	.string "נכון?\p"
+	.string "אז אתה חייב להילחם!$"
 
 Route30_Text_YoungsterMikeyBeaten:
-	.string "That's strange.\n"
-	.string "I won before.$"
+	.string "מוזר.\n"
+	.string "בפעם הקודמת ניצחתי.$"
 
 Route30_Text_YoungsterMikeyAfter:
-	.string "Becoming a good trainer is\n"
-	.string "really tough.\p"
-	.string "I'm going to battle other\n"
-	.string "people to get better.$"
+	.string "להיות מאמן טוב זה\n"
+	.string "ממש קשה.\p"
+	.string "אני אתמודד מול אנשים\n"
+	.string "אחרים כדי להשתפר.$"
 
 Route30_Text_BugCatcherDonSeen:
-	.string "Instead of a bug POKéMON,\n"
-	.string "I found a trainer!$"
+	.string "במקום פוקימון חרק,\n"
+	.string "מצאתי מאמן!$"
 
 Route30_Text_BugCatcherDonBeaten:
-	.string "Argh! You're too strong!$"
+	.string "ארג! אתה חזק מדי!$"
 
 Route30_Text_BugCatcherDonAfter:
-	.string "I ran out of POKé BALLS while\n"
-	.string "I was catching POKéMON.\p"
-	.string "I should've bought some more…$"
+	.string "נגמרו לי הפוכדורים\n"
+	.string "בזמן שתפסתי פוקימונים.\p"
+	.string "הייתי צריך לקנות עוד…$"
 
 Route30_Text_YoungsterDirectionsToMrPokemon:
-	.string "MR. POKéMON's house?\n"
-	.string "It's a bit farther ahead.$"
+	.string "הבית של מר פוקימון?\n"
+	.string "הוא קצת יותר קדימה.$"
 
 Route30_Text_YoungsterEveryoneIsBattling:
-	.string "Everyone's having fun\n"
-	.string "battling!\p"
-	.string "You should too!$"
+	.string "כולם נהנים\n"
+	.string "להילחם!\p"
+	.string "כדאי גם לך!$"
 
 Route30_Text_CooltrainerF:
-	.string "I'm not a trainer.\p"
-	.string "But if you look one in the\n"
-	.string "eyes, prepare to battle.$"
+	.string "אני לא מאמנת.\p"
+	.string "אבל אם מסתכלים למאמן בעיניים,\n"
+	.string "כדאי להתכונן לקרב.$"
 
 Route30_Text_Sign:
-	.string "ROUTE 30\p"
-	.string "VIOLET CITY - CHERRYGROVE CITY$"
+	.string "דרך 30\p"
+	.string "העיר ויולט - העיר צ'ריגרוב$"
 
 Route30_Text_MrPokemonsHouseDirectionsSign:
 	.string "MR. POKéMON'S HOUSE\n"
@@ -201,35 +201,33 @@ Route30_Text_MrPokemonsHouseSign:
 	.string "MR. POKéMON'S HOUSE$"
 
 Route30_Text_TrainerTips:
-	.string "TRAINER TIPS\p"
-	.string "No stealing other people's\n"
-	.string "POKéMON!\p"
-	.string "POKé BALLS are to be thrown\n"
-	.string "only at wild POKéMON!$"
+	.string "טיפים למאמנים\p"
+	.string "אסור לגנוב פוקימונים של\n"
+	.string "אנשים אחרים!\p"
+	.string "יש לזרוק פוכדורים\n"
+	.string "רק על פוקימונים פראיים!$"
 
 Route30_Text_JoeyRegister:
-	.string "You're pretty good!\p"
-	.string "My RATTATA's raring to go,\n"
-	.string "just like always.\p"
-	.string "It's the only one I have.\n"
-	.string "I'm going to become a great\l"
-	.string "TRAINER with it!\p"
-	.string "Let's battle again sometime!$"
+	.string "אתה די טוב!\p"
+	.string "הרטטה שלי להוט לקרב,\n"
+	.string "כמו תמיד.\p"
+	.string "הוא היחיד שיש לי.\n"
+	.string "אני אהפוך איתו למאמן גדול!\p"
+	.string "בוא נילחם שוב מתישהו!$"
 
 Route30_Text_JoeyRematchIntro:
-	.string "I promised things would be\n"
-	.string "different! Let's battle!$"
+	.string "הבטחתי שהפעם יהיה אחרת!\n"
+	.string "בוא נילחם!$"
 
 Route30_Text_JoeyRematchDefeat:
-	.string "Ack! I lost again!\n"
-	.string "Doggone it!$"
+	.string "אוי! שוב הפסדתי!\n"
+	.string "אוף, נו!$"
 
 Route30_Text_JoeyPostRematch:
-	.string "I'm checking out my\n"
-	.string "RATTATA's moves and devising\l"
-	.string "some strategies.\p"
-	.string "When I come up with a good\n"
-	.string "one, let's battle!$"
+	.string "אני בודק את המהלכים של הרטטה\n"
+	.string "שלי ומתכנן כמה אסטרטגיות.\p"
+	.string "כשאמציא אחת טובה,\n"
+	.string "בוא נילחם!$"
 
 Route30_Text_YoungsterJoeyGiveHPUp:
 	.string "I lost again…\n"
@@ -241,16 +239,16 @@ Route30_Text_YoungsterJoeyGiveHPUp:
 	.string "I'm going to get tougher too.$"
 
 Route30_Text_ElmName:
-	.string "PROF.ELM$"
+	.string "פרופ' אלם$"
 
 Route30_Text_Elm_Disaster:
-	.string "PROF.ELM: H-hello? {PLAYER}? It's\n"
-	.string "a disaster!\p"
-	.string "Uh, um, it's just terrible!\p"
-	.string "What should I do? It…\n"
-	.string "Oh, no…\p"
-	.string "Please get back here now!$"
+	.string "פרופ' אלם: ה-הלו? {PLAYER}?\n"
+	.string "זה אסון!\p"
+	.string "אה, אממ, זה פשוט נורא!\p"
+	.string "מה אני אעשה? זה…\n"
+	.string "אוי, לא…\p"
+	.string "בבקשה, תחזור לכאן מיד!$"
 
 
 Route30_Text_Poliwag:
-	.string "POLIWAG: Wag waag!$"
+	.string "פוליוואג: וואג וואאג!$"

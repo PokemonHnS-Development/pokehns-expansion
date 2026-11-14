@@ -1,0 +1,46 @@
+# The SHIFT refusals with Latin nicknames, a mixed right-to-left / left-to-right run inside the
+# Hebrew sentence: gText_PkmnAlreadyInBattle ("Leafy כבר / בקרב!"), gText_PkmnCantSwitchOut
+# ("אי אפשר להחליף את / Leafy!", the lead is rooted by Ingrain), gText_PkmnHasNoEnergy
+# ("לBob לא נשאר / כוח להילחם!", the prefix letter joined to a Latin name).
+# The nicknames are written into the unencrypted BoxPokemon.nickname (include/pokemon.h:255-259,
+# offset 8, 10 bytes; struct Pokemon is 0x64 bytes) before the battle, in the ROM charmap
+# (L C6, e D9, a D5, f DA, y ED; G C1, t E8, o E3, r E6; B BC, b D6; FF ends the name).
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_MEGANIUM, 50, move1=MOVE_INGRAIN, move2=MOVE_RAZOR_LEAF; givemon SPECIES_FERALIGATR, 50, move1=MOVE_SURF; givemon SPECIES_TYPHLOSION, 50, move1=MOVE_TACKLE; setko 2; end
+expect8 @gPlayerPartyCount@ 3
+w32 @gPlayerParty+8@ DAD5D9C6             # "Leafy"
+w32 @gPlayerParty+C@ FFFFFFED
+w16 @gPlayerParty+10@ FFFF
+w32 @gPlayerParty+6C@ E3E8D5C1            # "Gator"
+w32 @gPlayerParty+70@ FFFFFFE6
+w16 @gPlayerParty+74@ FFFF
+w32 @gPlayerParty+D0@ FFD6E3BC            # "Bob"
+w32 @gPlayerParty+D4@ FFFFFFFF
+w16 @gPlayerParty+D8@ FFFF
+
+pinrng
+evstart setwildbattle SPECIES_MAGIKARP, 5; dowildbattle; end
+waitbattle
+bwalk bvr_latin_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0
+bwalk bvr_latin_turn1 input:HandleInputChooseAction
+include ../_bv_switch.txt
+snap bvr_latin_party
+seek 8 @gPartyMenu+9@ 0 UP
+include _sub.txt
+include _shift.txt
+pages bvr_latin_in_battle
+include _back_to_party.txt
+seek 8 @gPartyMenu+9@ 1 DOWN
+include _sub.txt
+include _shift.txt
+pages bvr_latin_cant_switch
+include _back_to_party.txt
+seek 8 @gPartyMenu+9@ 2 DOWN
+include _sub.txt
+include _shift.txt
+pages bvr_latin_no_energy
+include _back_to_party.txt
+snap bvr_latin_party_end

@@ -1,0 +1,29 @@
+# The same journey as newgame.txt, written only with hnsrun's own commands (wait32, tap,
+# frame counts) so it also runs on bare hnsrun:
+#   hns.py render scripts/newgame_wait32.txt > OUTDIR/ng.txt   # resolves @SYMBOL@ from the ELF
+#   hnsrun pokehns.gba OUTDIR OUTDIR/new.sav < OUTDIR/ng.txt
+# Coarser than newgame.txt: it waits on gMain.callback2 (@CB2@) only, and taps A every 30
+# frames through each stretch of dialogue. Prefer newgame.txt; this one exists to show the
+# minimum, and as a fallback when hns.py is not available.
+
+wait32 @CB2@ @CB2_MainMenu@ 4000 START          # START skips intro + title
+90 -                                            # main menu fade-in (Task_HandleMainMenuInput)
+tap A 30                                        # NEW GAME
+wait32 @CB2@ @CB2_NamingScreen@ 4000 A          # speech, BOY (default), "what's your name"
+60 -
+tap START 30                                    # cursor to OK; empty name keeps the preset
+tap A 30
+wait32 @CB2@ @challenge_menu:MainCB2@ 3000 A    # YES to the name, two disclaimer pages
+90 -
+tap R 20
+tap R 20
+tap R 20
+tap R 20
+tap R 20
+tap R 20                                        # past the last tab -> "Confirm your choices?"
+tap A 30                                        # YES
+wait32 @CB2@ @CB2_Overworld@ 3000 A             # closing lines, shrink, map load
+60 -
+shot raw_bedroom
+r32 @CB2@
+quit

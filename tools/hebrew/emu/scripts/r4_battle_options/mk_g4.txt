@@ -1,0 +1,6 @@
+# Save maker (not a tour: run with r4opt.py run ... --save SRC --save-out DST): CONTINUE,
+# set newBattleUI=1 in gSaveblock3.challengeSettings, save with the game's own SAVE.
+include ../continue.txt
+opt newBattleUI=1
+savegame
+optexpect newBattleUI=1

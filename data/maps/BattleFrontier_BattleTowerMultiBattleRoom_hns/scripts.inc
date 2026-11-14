@@ -440,28 +440,28 @@ BattleFrontier_BattleTowerMultiBattleRoom_Movement_WalkInPlaceLeft_hns:
 	step_end
 
 BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyFor2ndOpponentSet_hns:
-	.string "The 2nd set of opponents is next.\n"
-	.string "Are you ready?$"
+	.string "לפניך צמד יריבים מספר 2.\n"
+	.string "אתה מוכן?$"
 
 BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyFor3rdOpponentSet_hns:
-	.string "The 3rd set of opponents is next.\n"
-	.string "Are you ready?$"
+	.string "לפניך צמד יריבים מספר 3.\n"
+	.string "אתה מוכן?$"
 
 BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyFor4thOpponentSet_hns:
-	.string "The 4th set of opponents is next.\n"
-	.string "Are you ready?$"
+	.string "לפניך צמד יריבים מספר 4.\n"
+	.string "אתה מוכן?$"
 
 BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyFor5thOpponentSet_hns:
-	.string "The 5th set of opponents is next.\n"
-	.string "Are you ready?$"
+	.string "לפניך צמד יריבים מספר 5.\n"
+	.string "אתה מוכן?$"
 
 BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyFor6thOpponentSet_hns:
-	.string "The 6th set of opponents is next.\n"
-	.string "Are you ready?$"
+	.string "לפניך צמד יריבים מספר 6.\n"
+	.string "אתה מוכן?$"
 
 BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyFor7thOpponentSet_hns:
-	.string "The 7th set of opponents is next.\n"
-	.string "Are you ready?$"
+	.string "לפניך צמד יריבים מספר 7.\n"
+	.string "אתה מוכן?$"
 
 @ Unused
 BattleFrontier_BattleTowerMultiBattleRoom_Text_2ndOpponentSetNext_hns:
@@ -494,7 +494,7 @@ BattleFrontier_BattleTowerMultiBattleRoom_Text_7thOpponentSetNext_hns:
 	.string "Do your best!$"
 
 gText_LinkStandby3_hns::
-	.string "Link standby…$"
+	.string "המתנה לקישור…$"
 
 gText_YourPartnerHasRetired_hns::
 	.string "Your partner has retired.\p"

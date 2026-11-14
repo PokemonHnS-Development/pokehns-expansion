@@ -1,0 +1,64 @@
+# Wall clock (src/wallclock.c): the clock sign (AzaleaTown_KurtsHouse_hns 11,1 and
+# Melemele_House_hns 4,6 run LittlerootTown_BrendansHouse_2F_EventScript_WallClock,
+# data/scripts/players_house.inc:43-49): with FLAG_SET_WALL_CLOCK the "press R to set" message,
+# then the view screen (CANCEL label, :763); R switches to setting (CONFIRM label, :715/:884);
+# A asks "Is this the correct time?" with YES/NO (:828). Then the set screen on its own
+# (PlayersHouse_2F_EventScript_SetWallClock, :116, the new-game path).
+start saves/ofui_menuA_base.sav
+include ../continue.txt
+setflag FLAG_SET_WALL_CLOCK          # the ladder saves lack it; with it unset the sign runs the Littleroot intro path
+evstart goto LittlerootTown_BrendansHouse_2F_EventScript_WallClock
+talk wc_sign 4 -
+waittaskx Task_ViewClock_HandleInput 900
+waitquiet
+snap wc_view
+tap Rb 4
+waittaskx Task_SetClock_HandleInput 120
+waitquiet
+snap wc_view_set
+40 RIGHT
+waitquiet
+snap wc_view_set_moved
+tap A 4
+waittaskx Task_SetClock_HandleConfirmInput 120
+waitquiet
+snap wc_confirm_no            # CreateYesNoMenu(..., 1): the cursor starts on NO (src/wallclock.c:831)
+tap UP 4
+waitquiet
+snap wc_confirm_yes
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_SetClock_HandleInput 120
+waitquiet
+snap wc_after_no
+tap A 4
+waittaskx Task_SetClock_HandleConfirmInput 120
+waitquiet
+snap wc_confirm_again
+tap UP 4
+waitquiet
+tap A 4
+waitcb2x CB2_Overworld 600
+waitquiet
+snap wc_back
+# Special_ViewWallClock returns through CB2_ReturnToField (src/field_specials.c:198-203), so the
+# script stays parked in `waitstate` (context WAITING) while the player can walk again (field
+# controls unlocked, checked by walking a step). The harness wants CONTEXT_SHUTDOWN before the next
+# evstart: set it, as `end` would.
+w8 @sGlobalScriptContextStatus@ 2
+waitctl 300
+
+evstart call PlayersHouse_2F_EventScript_SetWallClock; releaseall; end
+waittaskx Task_SetClock_HandleInput 900
+waitquiet
+snap wc_set
+tap A 4
+waittaskx Task_SetClock_HandleConfirmInput 120
+waitquiet
+snap wc_set_confirm
+tap UP 4
+waitquiet
+tap A 4
+waitcb2x CB2_Overworld 600
+waitctl 600

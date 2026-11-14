@@ -1,0 +1,63 @@
+# Rock Smash rock (EventScript_RockSmash, data/scripts/field_move_scripts_hns.inc:68-107):
+# "X used ROCK SMASH!" (Text_MonUsedFieldMove :54; the YES/NO Text_WantToSmash is commented out,
+# :78-79), the follower animation, the rock breaking, then RockSmashWildEncounter (:97; a wild
+# battle is walked and run from) and the random item finds (:100-105 / EventScript_EndSmash
+# :233-241). The Cerulean Cave 1F rock at (16,22) (data/maps/CeruleanCave_1F_hns/map.json),
+# smashed five times: a warp brings it back (FLAG_TEMP_5) and resets the follower, which swaps
+# places with the player in the animation (EventScript_FollowerFieldMove :158). Then each item find run directly from RAM
+# (call EventScript_RockSmashHeartscale ... YellowShard, :243-261: exactly what the random
+# branch calls), and without badge 1 Text_CantSmash (:299-302, :313).
+start save:fm_party
+include _cont.txt
+warpto MAP_CERULEAN_CAVE_1F_HNS 15 22
+go LEFT
+go RIGHT
+face RIGHT
+snap fm02_00_facing_rock
+tap A 2
+fmwatch fm02_rockA 4000 4
+snap fm02_after_rockA
+warpto MAP_CERULEAN_CAVE_1F_HNS 15 22
+go LEFT
+go RIGHT
+face RIGHT
+tap A 2
+fmwatch fm02_rockB 4000
+warpto MAP_CERULEAN_CAVE_1F_HNS 15 22
+go LEFT
+go RIGHT
+face RIGHT
+tap A 2
+fmwatch fm02_rockC 4000
+warpto MAP_CERULEAN_CAVE_1F_HNS 15 22
+go LEFT
+go RIGHT
+face RIGHT
+tap A 2
+fmwatch fm02_rockD 4000
+warpto MAP_CERULEAN_CAVE_1F_HNS 15 22
+go LEFT
+go RIGHT
+face RIGHT
+tap A 2
+fmwatch fm02_rockE 4000
+
+# the item finds, each one as the random branch calls it
+evstart call EventScript_RockSmashHeartscale; end
+fieldwatch fm02_item_heartscale free 3000
+evstart call EventScript_RockSmashRedShard; end
+fieldwatch fm02_item_redshard free 3000
+evstart call EventScript_RockSmashBlueShard; end
+fieldwatch fm02_item_blueshard free 3000
+evstart call EventScript_RockSmashGreenShard; end
+fieldwatch fm02_item_greenshard free 3000
+evstart call EventScript_RockSmashYellowShard; end
+fieldwatch fm02_item_yellowshard free 3000
+
+# no badge 1: Text_CantSmash (a warp brings the rocks back)
+clearflag FLAG_BADGE01_GET
+warpto MAP_CERULEAN_CAVE_1F_HNS 15 22
+face RIGHT
+tap A 2
+fieldwatch fm02_cantsmash free 3000
+setflag FLAG_BADGE01_GET

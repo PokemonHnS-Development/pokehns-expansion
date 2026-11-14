@@ -16,11 +16,10 @@ DiglettsCave_EntranceNorth_EventScript_Brock::
     end
 
 DiglettsCave_EntranceNorth_Text_Brock:
-    .string "BROCK: Small spaces surrounded by\n"
-    .string "rocks make you feel peaceful,\l"
-    .string "don't you agree?\p"
-	.string "If you want another match, I'll be\n"
-	.string "at the FIGHTING DOJO.$"
+    .string "ברוק: מקומות קטנים מוקפי סלעים\n"
+    .string "משרים תחושת שלווה, נכון?\p"
+    .string "אם תרצה עוד קרב, אהיה\n"
+    .string "בדוג'ו הלחימה.$"
 
 
 

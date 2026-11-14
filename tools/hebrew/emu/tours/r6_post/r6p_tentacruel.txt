@@ -1,0 +1,22 @@
+# Route 41 Tentacruel (0,88): Route41_EventScript_Tentacruel1 (Route41_hns/scripts.inc:186-212):
+# two warnings (VAR_TEMP_0 0 and 1), then the attack text, a Lv 100 wild battle (catching off),
+# the heal line.
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev clearflag FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL; end
+warpto MAP_ROUTE41_HNS 0 87
+face DOWN
+snap te_field
+tap A 4
+scene te_warn1 3000
+face DOWN
+tap A 4
+scene te_warn2 3000
+face DOWN
+tap A 4
+scene te_pre 4000
+bwalk te_intro input:HandleInputChooseAction
+snap te_action
+bwin te_win
+scene te_after 6000
+snap te_end

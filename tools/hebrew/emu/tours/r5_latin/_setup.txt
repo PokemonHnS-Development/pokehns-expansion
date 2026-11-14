@@ -1,0 +1,4 @@
+# Every r5_latin tour: CONTINUE from ladder 6 (post-game, 16 badges), then the party of _party.inc.
+include ../../scripts/continue.txt
+ev file _party.inc
+partyinfo

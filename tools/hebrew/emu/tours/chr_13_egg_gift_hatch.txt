@@ -1,0 +1,96 @@
+# Eggs and gifts under the Nuzlocke on save chal_a:
+#  1. an Egg with 0 egg cycles on a route whose encounter is used: the summary says it is
+#     ready but blocked (src/pokemon_summary_screen.c:4041-4042, gText_EggReadyToHatch_Nuzlocke
+#     src/strings.c:427). The cycles are set with the debug menu's own native
+#     (DebugNative_Party_SetFriendship, src/debug.c:4992-5036; it always edits slot 0);
+#  2. a gift Pokemon (Common_EventScript_GiftMon, data/event_scripts.s:1359-1395): the
+#     "received" line, no "nickname?" question, the naming screen that refuses an empty OK;
+#  3. the Egg hatching on a fresh route (EggHatch, src/egg_hatch.c:478-485 and 708-735): no
+#     nickname question, straight to the naming screen.
+start save:chal_a
+include _chr_base.txt
+ev giveegg SPECIES_VULPIX; givemon SPECIES_CYNDAQUIL, 10, move1=MOVE_EMBER; end
+
+# ---- egg cycles of party slot 0 -> 0 (hundreds digit, DOWN clamps to 0)
+evstart setvar VAR_0x8004, 0; callnative DebugNative_Party_SetFriendship; end
+waittaskx DebugNativeStep_Party_SetFriendshipSelect 300
+waitquiet
+tap RIGHT 4
+tap RIGHT 4
+tap DOWN 4
+tap A 4
+waitquiet
+snap chr_e0_debug_cycles
+tap B 4
+waitctl 300
+
+# ---- 1. use Route 30's encounter (flee from a FIRE Pokemon: an off-type one would not use
+#      it, src/battle_main.c:5934-5941), then the Egg's summary
+warpto MAP_ROUTE30_HNS 23 25
+pinrng
+evstart setwildbattle SPECIES_PONYTA, 2; callnative SetNuzlockeChecks; dowildbattle; end
+waitbattle
+bwalk chr_e1_intro input:HandleInputChooseAction
+baction RUN
+bwalk chr_e1_run free
+unpinrng
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap chr_e1_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap chr_e1_egg_submenu
+tap A 4                                   # SUMMARY
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitquiet
+snap chr_e1_egg_summary_blocked
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitctl 600 B
+
+# ---- 2. a gift Pokemon
+evstart bufferspeciesname STR_VAR_1, SPECIES_PONYTA; setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_PONYTA; givemon SPECIES_PONYTA, 5; call Common_EventScript_GiftMon; release; end
+waitquiet
+20 -
+snap chr_g1_received
+waitcb2x CB2_NamingScreen 1200
+waitnaming
+snap chr_g1_naming_empty
+include _chr_name_forced.txt
+snap chr_g1_naming_typed
+press START
+waitnaming
+press A
+waitcb2x CB2_Overworld 900
+waitctl 900
+snap chr_g1_field
+
+# ---- 3. the Egg hatches on Route 31 (encounter still free)
+warpto MAP_ROUTE31_HNS 10 9
+evstart setvar VAR_0x8004, 0; special EggHatch; waitstate; release; end
+waitcb2x CB2_EggHatch 900
+waittaskx Task_Fanfare 1500               # "... hatched from the Egg!" with its fanfare
+waitquiet
+10 -
+snap chr_h1_hatched
+waitcb2x CB2_NamingScreen 1500
+waitnaming
+snap chr_h1_naming_empty
+include _chr_name_forced.txt
+snap chr_h1_naming_typed
+press START
+waitnaming
+press A
+waitcb2x CB2_Overworld 1500
+waitctl 1500 A
+snap chr_h1_field

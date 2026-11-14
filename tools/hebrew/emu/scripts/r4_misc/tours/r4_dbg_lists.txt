@@ -1,0 +1,132 @@
+# Overworld debug menu (src/debug.c; R held + START in the field, src/field_control_avatar.c:165-171,
+# 278-283). Every list: the first page with the cursor on the first item, then the cursor on the
+# last item (lists longer than DEBUG_MENU_HEIGHT_MAIN = 9 rows scroll). Main list order
+# (sDebugMenu_Actions_Main, src/debug.c:729-742): 0 Utilities, 1 PC/Bag, 2 Party, 3 Give X,
+# 4 Player, 5 Scripts, 6 Trainers, 7 Flags & Vars, 8 Sound, 9 ROM Info, 10 Cancel.
+# `dbg I [J ...]` opens the menu and picks I, J, ...; `waitctl 600 B` closes what is left.
+start saves/r4_misc/r4_menuA_base.sav
+include ../../continue.txt
+
+debugmenu
+snap dbg_main_01
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+snap dbg_main_02_mid
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+snap dbg_main_03_last
+waitctl 600 B
+
+dbg 0
+snap dbg_util_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_util_02_last
+waitctl 600 B
+
+dbg 0 4
+snap dbg_util_time_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_util_time_02_last
+waitctl 600 B
+
+dbg 0 4 2
+snap dbg_util_time_tod_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_util_time_tod_02_last
+waitctl 600 B
+
+dbg 0 4 3
+snap dbg_util_time_weekday_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_util_time_weekday_02_last
+waitctl 600 B
+
+dbg 0 7
+snap dbg_util_berry_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_util_berry_02_last
+waitctl 600 B
+
+dbg 0 9
+snap dbg_util_follower_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_util_follower_02_last
+waitctl 600 B
+
+dbg 0 9 0
+snap dbg_util_follower_create_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_util_follower_create_02_last
+waitctl 600 B
+
+dbg 1
+snap dbg_pcbag_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_pcbag_02_last
+waitctl 600 B
+
+dbg 1 1
+snap dbg_pcbag_fill_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_pcbag_fill_02_last
+waitctl 600 B
+
+dbg 2
+snap dbg_party_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_party_02_last
+waitctl 600 B
+
+dbg 2 3
+snap dbg_party_editmon_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_party_editmon_02_last
+waitctl 600 B
+
+dbg 3
+snap dbg_give_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_give_02_last
+waitctl 600 B
+
+dbg 4
+snap dbg_player_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_player_02_last
+waitctl 600 B
+
+dbg 5
+snap dbg_scripts_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_scripts_02_last
+waitctl 600 B
+
+dbg 6
+snap dbg_trainers_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_trainers_02_last
+waitctl 600 B
+
+dbg 7
+snap dbg_flags_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_flags_02_last
+waitctl 600 B
+
+dbg 8
+snap dbg_sound_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_sound_02_last
+waitctl 600 B
+
+dbg 9
+snap dbg_rominfo_01
+tap UP 6                  # lists wrap: UP from the top = the last item
+snap dbg_rominfo_02_last
+waitctl 600 B

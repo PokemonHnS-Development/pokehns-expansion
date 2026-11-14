@@ -1,0 +1,11 @@
+# Negative control: the clip build must report a field call line that is too wide
+# (r3c_ctl_long.inc). Expect clip records in clip.json for c_long_*.
+start saves/r3_calls/base.sav
+include ../continue.txt
+warpto MAP_CHERRYGROVE_CITY_HNS 25 9
+waitctl 600
+evstart file r3c_ctl_long.inc
+waitkey 900
+pages c_long 10
+snap c_long_last
+waitctl 900 B

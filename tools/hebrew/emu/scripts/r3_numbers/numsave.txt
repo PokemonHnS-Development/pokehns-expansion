@@ -1,0 +1,22 @@
+# r3 max-number save: ladder 6 (champion, national Pokedex on) with every number the trainer card,
+# the save info window, CONTINUE, the mart and Mom's savings print set to its largest value:
+#   money 9999999 (MAX_MONEY, include/money.h:4), Mom's savings 999999 (MOM_MAX_MONEY,
+#   include/mom_savings.h:9), play time 999:59, Hall of Fame debut 999:59:59, every national
+#   Pokedex number seen and caught (1080, 4 digits; scripts/r2_pokedex/dex_all_N.inc).
+# Build it on a COPY of ladder6_postgame.sav (either ROM; HNS_SRC = that ROM's tree):
+#   r3num.py --rom ROM run numsave.txt OUT --save <copy> --save-out saves_screens/r3_numbers/r3_numbers.sav
+include ../continue.txt
+numstate
+ev addmoney 9999999; end
+momsavings 999999
+hofdebut 999 59 59
+event ../r2_pokedex/dex_all_1.inc
+event ../r2_pokedex/dex_all_2.inc
+event ../r2_pokedex/dex_all_3.inc
+expectflag FLAG_SYS_POKEDEX_GET 1
+# playtime last: the clock runs on, and stops at 999:59:59 (src/play_time.c)
+playtime 999 59
+numstate
+savegame
+numstate
+shot numsave_saved

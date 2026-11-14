@@ -1,0 +1,119 @@
+# Scott, Battle Frontier Scott's House (data/maps/BattleFrontier_ScottsHouse_hns/scripts.inc; Scott at (2,3),
+# talked to from (2,4) facing UP). FLAG_TEMP_2..4 clear on map load, so every step re-warps.
+#  1 welcome + 1 BP (VAR_SCOTT_STATE 0, what every H&S game has) + explain; again (ExpectingGreatThings)
+#  2 welcome + 4 BP (VAR_SCOTT_STATE 13)
+#  3 all silver symbols with a full berry pocket (bag-full line, BerryPocketStuffed)
+#  4 all silver symbols: Lansat Berry; again (SoGladIBroughtYouHere)
+#  5 all gold symbols: Starf Berry; again
+#  6 Tower singles Lv50 streak 50: Silver Shield line + ComeBackForThisLater (no room, always in H&S); again
+#  7 streak 100: Gold Shield line + ComeBackForThisLater
+#  8 the decoration lines for both shields + ExpectingToHearEvenGreaterThings, run in RAM
+#  9 a random comment, then each of the three comments (RandomComment_hns: msgbox ..., as the branch runs it)
+start saves/r6_frontier_npcs.sav
+include ../../scripts/continue.txt
+setbp 0
+
+# --- 1. welcome, 1 BP
+clearflag FLAG_SCOTT_GIVES_BATTLE_POINTS
+warpto MAP_BATTLE_FRONTIER_SCOTTS_HOUSE_HNS 2 4
+face UP
+tap A 4
+fieldwatch s1_welcome free 12000
+face UP
+tap A 4
+fieldwatch s1_again free 6000
+
+# --- 2. welcome, 4 BP
+clearflag FLAG_SCOTT_GIVES_BATTLE_POINTS
+ev setvar VAR_SCOTT_STATE, 13; end
+warpto MAP_BATTLE_FRONTIER_SCOTTS_HOUSE_HNS 2 4
+face UP
+tap A 4
+fieldwatch s2_welcome4 free 12000
+ev setvar VAR_SCOTT_STATE, 0; end
+
+# --- 3. all silver symbols, berry pocket full
+setflag FLAG_SYS_TOWER_SILVER
+setflag FLAG_SYS_DOME_SILVER
+setflag FLAG_SYS_PALACE_SILVER
+setflag FLAG_SYS_ARENA_SILVER
+setflag FLAG_SYS_FACTORY_SILVER
+setflag FLAG_SYS_PIKE_SILVER
+setflag FLAG_SYS_PYRAMID_SILVER
+clearflag FLAG_COLLECTED_ALL_SILVER_SYMBOLS
+fullpocket 4 ITEM_ORAN_BERRY 999            # 4 = POCKET_BERRIES (include/constants/item.h:13, :27)
+warpto MAP_BATTLE_FRONTIER_SCOTTS_HOUSE_HNS 2 4
+face UP
+tap A 4
+fieldwatch s3_silver_full free 12000
+
+# --- 4. all silver symbols: Lansat Berry
+fullpocket 4 ITEM_NONE 0
+warpto MAP_BATTLE_FRONTIER_SCOTTS_HOUSE_HNS 2 4
+face UP
+tap A 4
+fieldwatch s4_silver free 12000
+face UP
+tap A 4
+fieldwatch s4_again free 6000
+
+# --- 5. all gold symbols: Starf Berry
+setflag FLAG_SYS_TOWER_GOLD
+setflag FLAG_SYS_DOME_GOLD
+setflag FLAG_SYS_PALACE_GOLD
+setflag FLAG_SYS_ARENA_GOLD
+setflag FLAG_SYS_FACTORY_GOLD
+setflag FLAG_SYS_PIKE_GOLD
+setflag FLAG_SYS_PYRAMID_GOLD
+warpto MAP_BATTLE_FRONTIER_SCOTTS_HOUSE_HNS 2 4
+face UP
+tap A 4
+fieldwatch s5_gold free 12000
+face UP
+tap A 4
+fieldwatch s5_again free 6000
+flags FLAG_COLLECTED_ALL_SILVER_SYMBOLS FLAG_COLLECTED_ALL_GOLD_SYMBOLS
+
+# --- 6. Silver Shield (Battle Tower singles, Lv. 50, 50 wins in a row). In H&S givedecoration always fails:
+# gDecorationInventories has DECORCAT_COUNT = 1 entry (include/decoration.h:47-52, IS_HNS) and the shield's
+# category DECORCAT_ORNAMENT = 3 indexes past it (src/decoration_inventory.c:6, :44-53), so Scott says
+# ComeBackForThisLater in both ROMs. Talk twice.
+clearflag FLAG_RECEIVED_SILVER_SHIELD
+clearflag FLAG_RECEIVED_GOLD_SHIELD
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; frontier_set FRONTIER_DATA_LVL_MODE, FRONTIER_LVL_OPEN; tower_set TOWER_DATA_WIN_STREAK, 0; frontier_set FRONTIER_DATA_LVL_MODE, FRONTIER_LVL_50; tower_set TOWER_DATA_WIN_STREAK, 50; end
+warpto MAP_BATTLE_FRONTIER_SCOTTS_HOUSE_HNS 2 4
+face UP
+tap A 4
+fieldwatch s6_silver_shield free 12000
+face UP
+tap A 4
+fieldwatch s6_again free 6000
+flags FLAG_RECEIVED_SILVER_SHIELD FLAG_RECEIVED_GOLD_SHIELD
+
+# --- 7. Gold Shield (100 wins in a row; the Silver Shield flag set by hand)
+setflag FLAG_RECEIVED_SILVER_SHIELD
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; frontier_set FRONTIER_DATA_LVL_MODE, FRONTIER_LVL_50; tower_set TOWER_DATA_WIN_STREAK, 100; end
+warpto MAP_BATTLE_FRONTIER_SCOTTS_HOUSE_HNS 2 4
+face UP
+tap A 4
+fieldwatch s7_gold_shield free 12000
+
+# --- 8. the decoration lines the shield gift would print (Std_ObtainDecoration's message part,
+# data/scripts/obtain_item.inc:130-142, with VAR_0x8007 TRUE), then GivenShield, run in RAM
+evstart lock; setvar VAR_0x8000, DECOR_SILVER_SHIELD; setvar VAR_0x8007, TRUE; call 0x@EventScript_ObtainDecorationMessage@; msgbox 0x@BattleFrontier_ScottsHouse_Text_ExpectingToHearEvenGreaterThings_hns@, MSGBOX_DEFAULT; release; end
+fieldwatch s8_silver_decor free 12000
+evstart lock; setvar VAR_0x8000, DECOR_GOLD_SHIELD; setvar VAR_0x8007, TRUE; call 0x@EventScript_ObtainDecorationMessage@; release; end
+fieldwatch s8_gold_decor free 12000
+setflag FLAG_RECEIVED_GOLD_SHIELD
+
+# --- 9. random comments
+warpto MAP_BATTLE_FRONTIER_SCOTTS_HOUSE_HNS 2 4
+face UP
+tap A 4
+fieldwatch s9_random free 12000
+evstart lock; msgbox 0x@BattleFrontier_ScottsHouse_Text_WhyIGoSeekingTrainers_hns@, MSGBOX_DEFAULT; release; end
+fieldwatch s9_seeking free 12000
+evstart lock; msgbox 0x@BattleFrontier_ScottsHouse_Text_HaveYouMetFrontierBrain_hns@, MSGBOX_DEFAULT; release; end
+fieldwatch s9_brain free 12000
+evstart lock; msgbox 0x@BattleFrontier_ScottsHouse_Text_MayFindWildMonsInFrontier_hns@, MSGBOX_DEFAULT; release; end
+fieldwatch s9_wild free 12000

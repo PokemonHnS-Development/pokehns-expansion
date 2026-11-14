@@ -1,0 +1,36 @@
+# Pokegear CONDITION > SEARCH (src/pokenav_conditions_search_results.c): the results list is a
+# Pokenav list (src/pokenav_list.c) like the phone contacts, with its cursor at one end of the
+# rows. COOL is the first search category.
+start save:menuA_base
+include ../scripts/continue.txt
+
+startmenu POKEGEAR
+waitcb2x CB2_Pokenav 600
+waitnav
+press DOWN                                # CONDITION
+waitnav
+press A
+waitnav
+press DOWN                                # SEARCH
+waitnav
+snap cardgear_condsearch_menu
+press A
+waitnav
+snap cardgear_condsearch_categories
+press A                                   # COOL
+waitnav
+snap cardgear_condsearch_results
+press DOWN
+waitnav
+snap cardgear_condsearch_results_02
+press B
+waitnav
+press B
+waitnav
+press B
+waitnav
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

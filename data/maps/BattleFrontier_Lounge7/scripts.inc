@@ -349,10 +349,10 @@ BattleFrontier_Lounge7_Text_IllTakeBattlePoints:
 	.string "I'll take your Battle Points, thanks!$"
 
 BattleFrontier_Lounge7_Text_YouDontWantTo:
-	.string "What's that?\n"
-	.string "You don't want to…\p"
-	.string "If you want to see how skilled I am,\n"
-	.string "you come see me anytime!$"
+	.string "מה?\n"
+	.string "אתה לא רוצה…\p"
+	.string "אם תרצה לראות את הכישרון שלי,\n"
+	.string "בוא אליי מתי שבא לך!$"
 
 BattleFrontier_Lounge7_Text_RightTutorIntro:
 	.string "Ihihihi!\p"
@@ -397,101 +397,81 @@ BattleFrontier_Lounge7_Text_LadiesWereStrongAndBeautiful:
 	.string "Time is so cruel…$"
 
 BattleFrontier_Lounge7_Text_SoftboiledDesc::
-	.string "Recovers up to\n"
-	.string "half the user's\n"
-	.string "maximum HP.$"
+	.string "משחזר עד חצי\n"
+	.string "מהנ”ח המרבי.$"
 
 BattleFrontier_Lounge7_Text_SeismicTossDesc::
-	.string "Inflicts damage\n"
-	.string "identical to the\n"
-	.string "user's level.$"
+	.string "גורם נזק השווה\n"
+	.string "לרמת המשתמש.$"
 
 BattleFrontier_Lounge7_Text_DreamEaterDesc::
-	.string "Recovers half the\n"
-	.string "damage inflicted\n"
-	.string "on a sleeping foe.$"
+	.string "יונק חצי מהנזק\n"
+	.string "שגרם ליריב ישן.$"
 
 BattleFrontier_Lounge7_Text_MegaPunchDesc::
-	.string "A strong punch\n"
-	.string "thrown with\n"
-	.string "incredible power.$"
+	.string "אגרוף חזק שנשלח\n"
+	.string "בעוצמה מדהימה.$"
 
 BattleFrontier_Lounge7_Text_MegaKickDesc::
-	.string "An extremely\n"
-	.string "powerful kick with\n"
-	.string "intense force.$"
+	.string "בעיטה חזקה ביותר\n"
+	.string "בכוח אדיר.$"
 
 BattleFrontier_Lounge7_Text_BodySlamDesc::
-	.string "A full-body slam\n"
-	.string "that may cause\n"
-	.string "paralysis.$"
+	.string "הטחת גוף מלאה\n"
+	.string "שעלולה לשתק.$"
 
 BattleFrontier_Lounge7_Text_RockSlideDesc::
-	.string "Large boulders\n"
-	.string "are hurled. May\n"
-	.string "cause flinching.$"
+	.string "סלעי ענק מוטלים.\n"
+	.string "עלול להרתיע.$"
 
 BattleFrontier_Lounge7_Text_CounterDesc::
-	.string "Retaliates any\n"
-	.string "physical hit with\n"
-	.string "double the power.$"
+	.string "מחזיר לכל מכה\n"
+	.string "פיזית בכוח כפול.$"
 
 BattleFrontier_Lounge7_Text_ThunderWaveDesc::
-	.string "A weak jolt of\n"
-	.string "electricity that\n"
-	.string "paralyzes the foe.$"
+	.string "זרם חשמלי חלש\n"
+	.string "שמשתק את היריב.$"
 
 BattleFrontier_Lounge7_Text_SwordsDanceDesc::
-	.string "A fighting dance\n"
-	.string "that sharply\n"
-	.string "raises ATTACK.$"
+	.string "ריקוד קרב שמעלה\n"
+	.string "בחדות את ההתקפה.$"
 
 BattleFrontier_Lounge7_Text_DefenseCurlDesc::
-	.string "Curls up to con-\n"
-	.string "ceal weak spots\n"
-	.string "and raise DEFENSE.$"
+	.string "מתכרבל ומסתיר\n"
+	.string "חולשות. הגנה עולה.$"
 
 BattleFrontier_Lounge7_Text_SnoreDesc::
-	.string "A loud attack\n"
-	.string "that can be used\n"
-	.string "only while asleep.$"
+	.string "התקפה רועשת\n"
+	.string "לשימוש רק בשינה.$"
 
 BattleFrontier_Lounge7_Text_MudSlapDesc::
-	.string "Hurls mud in the\n"
-	.string "foe's face to re-\n"
-	.string "duce its accuracy.$"
+	.string "מטיח בוץ בפני\n"
+	.string "היריב ומוריד דיוקו.$"
 
 BattleFrontier_Lounge7_Text_SwiftDesc::
-	.string "Sprays star-\n"
-	.string "shaped rays\n"
-	.string "that never miss.$"
+	.string "מפזר קרני כוכב\n"
+	.string "שתמיד פוגעות.$"
 
 BattleFrontier_Lounge7_Text_IcyWindDesc::
-	.string "A chilling attack\n"
-	.string "that lowers the\n"
-	.string "foe's SPEED.$"
+	.string "קור מקפיא שמוריד\n"
+	.string "את מהירות היריב.$"
 
 BattleFrontier_Lounge7_Text_EndureDesc::
-	.string "Endures any at-\n"
-	.string "tack for 1 turn,\n"
-	.string "leaving 1HP.$"
+	.string "שורד כל מכה במשך\n"
+	.string "1 תור, עם 1 נ”ח.$"
 
 BattleFrontier_Lounge7_Text_PsychUpDesc::
-	.string "Copies the foe's\n"
-	.string "effect(s) and\n"
-	.string "gives to the user.$"
+	.string "מעתיק את השפעות\n"
+	.string "היריב אל המשתמש.$"
 
 BattleFrontier_Lounge7_Text_IcePunchDesc::
-	.string "An icy punch\n"
-	.string "that may\n"
-	.string "freeze the foe.$"
+	.string "אגרוף קפוא שעלול\n"
+	.string "להקפיא את היריב.$"
 
 BattleFrontier_Lounge7_Text_ThunderPunchDesc::
-	.string "An electrified\n"
-	.string "punch that may\n"
-	.string "paralyze the foe.$"
+	.string "אגרוף חשמלי שעלול\n"
+	.string "לשתק את היריב.$"
 
 BattleFrontier_Lounge7_Text_FirePunchDesc::
-	.string "A fiery punch\n"
-	.string "that may burn\n"
-	.string "the foe.$"
+	.string "אגרוף לוהט שעלול\n"
+	.string "לכוות את היריב.$"

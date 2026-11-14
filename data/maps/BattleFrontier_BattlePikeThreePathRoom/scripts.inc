@@ -315,8 +315,8 @@ BattleFrontier_BattlePikeThreePathRoom_Text_SavingYourData:
 	.string "A little time, please…$"
 
 BattleFrontier_BattlePike_Text_PathBlockedNoTurningBack:
-	.string "The path is blocked!\n"
-	.string "And there is no turning back…$"
+	.string "השביל חסום!\n"
+	.string "ואין דרך חזרה…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_FindingItDifficultToChoose:
 	.string "I beg your pardon, but…\p"

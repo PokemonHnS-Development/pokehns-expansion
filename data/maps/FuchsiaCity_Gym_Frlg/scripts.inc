@@ -220,28 +220,28 @@ FuchsiaCity_Gym_Text_ShawnPostBattle::
 	.string "Which do you choose?$"
 
 FuchsiaCity_Gym_Text_GymGuyAdvice::
-	.string "Yo!\n"
-	.string "Champ in the making!\p"
-	.string "FUCHSIA GYM is a tricked-up place.\n"
-	.string "It's riddled with invisible walls!\p"
-	.string "KOGA might appear close, but he's\n"
-	.string "blocked off.\p"
-	.string "You have to find gaps in the walls\n"
-	.string "to reach him.$"
+	.string "יו!\n"
+	.string "אלוף לעתיד!\p"
+	.string "מכון פושיה מלא בטריקים.\n"
+	.string "הוא זרוע קירות בלתי נראים!\p"
+	.string "קוגה אולי נראה קרוב, אבל\n"
+	.string "הדרך אליו חסומה.\p"
+	.string "צריך למצוא פרצות בקירות\n"
+	.string "כדי להגיע אליו.$"
 
 FuchsiaCity_Gym_Text_GymGuyPostVictory::
-	.string "It's amazing how ninja can terrify,\n"
-	.string "even now!$"
+	.string "מדהים איך נינג'ות מצליחים\n"
+	.string "להטיל אימה, אפילו היום!$"
 
 FuchsiaCity_Gym_Text_GymStatue::
-	.string "FUCHSIA POKéMON GYM\n"
-	.string "LEADER: KOGA\p"
-	.string "WINNING TRAINERS:\n"
+	.string "מכון הפוקימון של פושיה\n"
+	.string "מנהיג: קוגה\p"
+	.string "מאמנים מנצחים:\n"
 	.string "{RIVAL}$"
 
 FuchsiaCity_Gym_Text_GymStatuePlayerWon::
-	.string "FUCHSIA POKéMON GYM\n"
-	.string "LEADER: KOGA\p"
-	.string "WINNING TRAINERS:\n"
+	.string "מכון הפוקימון של פושיה\n"
+	.string "מנהיג: קוגה\p"
+	.string "מאמנים מנצחים:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

@@ -1,0 +1,11 @@
+# Dojo VIP, the NO answer (SaffronCity_FightingDojoVIP_EventScript_Declined) with Falkner.
+start saves/r6_league_base.sav
+include _dojo_base.txt
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 2 20
+face LEFT
+tap A 4
+scene D_offer 20000
+snap D_menu
+tap B 4
+scene D_no 20000
+snap D_free

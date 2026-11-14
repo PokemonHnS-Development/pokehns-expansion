@@ -1,0 +1,98 @@
+# Count lines in the PC item storage (DECISIONS.md Q125, src/player_pc.c) and the bag's DEPOSIT
+# mode (src/item_menu.c Task_ItemContext_Deposit): TOSS (how many, the YES/NO with the count, the
+# report) on BIG BAMBOO SHOOT, WITHDRAW on ODD KEYSTONE, DEPOSIT on FOSSILIZED DINO, each all 999
+# (the widest count) and each among the widest plurals. The PC's first two slots (POTION and
+# POKe BALL x999) take the new ids; the bag's last ITEMS slot is emptied so the withdrawn item
+# fits; the deposit uses the PC slot the toss emptied. See _pockets.txt.
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+w16 @SB1+49C@ 2FD                         # PC slot 0 -> BIG BAMBOO SHOOT x999
+w16 @SB1+4A0@ 9B                          # PC slot 1 -> ODD KEYSTONE x999
+w16 @SB1+564@ B3                          # bag ITEMS slot 0 -> FOSSILIZED DINO x999
+w16 @SB1+8F0@ 0                           # bag ITEMS slot 235 (the last) emptied
+w8 @gBagPosition+5@ 0                     # the bag opens on ITEMS, first row
+w16 @gBagPosition+8@ 0
+w16 @gBagPosition+14@ 0
+
+# The PC is at (11,1) of the Center; stand below it facing up (as menu_center_pc)
+go RIGHT 4
+go UP 2
+talk pc_boot 10                           # SOMEONE'S PC / GOLD's PC / ...
+tap DOWN 4
+tap A 0                                   # GOLD's PC
+talk pc_player_open 10 - PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+tap A 0                                   # ITEM STORAGE: WITHDRAW / DEPOSIT / TOSS / CANCEL
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+
+# TOSS: BIG BAMBOO SHOOT x999
+press DOWN
+press DOWN
+tap A 0
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap pt_list
+tap A 0
+waittaskx ItemStorage_HandleQuantityRolling 600
+waitquiet
+snap pt_qty_001
+press DOWN
+snap pt_qty_999
+tap A 0
+waitquiet
+snap pt_confirm
+tap A 0                                   # YES
+waitquiet
+snap pt_done
+press A
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+
+# WITHDRAW: ODD KEYSTONE x999 (now the first row)
+press UP
+press UP
+tap A 0
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap pw_list
+tap A 0
+waittaskx ItemStorage_HandleQuantityRolling 600
+waitquiet
+snap pw_qty_001
+press DOWN
+snap pw_qty_999
+tap A 0
+waitquiet
+snap pw_done
+press A
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+
+# DEPOSIT: the bag in deposit mode, FOSSILIZED DINO x999
+press DOWN
+tap A 0
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pd_bag
+tap A 0
+waitquiet
+snap pd_qty_001
+tap DOWN 4
+waitquiet
+snap pd_qty_999
+tap A 0
+waitquiet
+snap pd_done
+press A
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pd_after

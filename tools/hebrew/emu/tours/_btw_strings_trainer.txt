@@ -1,0 +1,12 @@
+# Include (not a tour) for the r2 battle-string driver (scratch tools/btw_strings.py) in a trainer battle (Youngster Mikey, Route 30): the foe
+# prefix/suffix, trainer names, the trainer's item use.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_SANDSLASH_ALOLA, 50, abilityNum=0, move1=MOVE_GROWL, move2=MOVE_ICICLE_CRASH; end
+face UP
+pinrng
+8 UP
+waitnotfree 120
+bwalk bs_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0

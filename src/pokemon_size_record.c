@@ -120,6 +120,12 @@ static u8* ReturnHeightStringNoWhitespace(u32 size)
     while (i < length)
         heightStr[j++] = heightStr[i++];
 
+#if TEXT_RTL
+    // The imperial height has its inch mark in front of the digits for the Pokédex (pokedex.c), and
+    // the loop above dropped it. These sentences are Latin, so it goes back after the digits.
+    if (gSaveBlock3Ptr->challengeSettings.unitSystem == 1)
+        heightStr[j++] = CHAR_DBL_QUOTE_RIGHT;
+#endif
     heightStr[j] = EOS;
     return heightStr;
 }

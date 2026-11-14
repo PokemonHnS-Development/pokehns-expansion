@@ -1,0 +1,65 @@
+# Exp. Candy messages with a 10-letter Hebrew species name (מאמוסוויין, Mamoswine Lv 99,
+# GROWTH_SLOW: Lv 99 = 1212873 Exp, Lv 100 = 1250000, gap 37127): XL with no level change
+# ("gained 30000 Exp. Points!"), then L, which reaches Lv 100 ("gained 10000 Exp. Points
+# and was elevated to Lv. 100!") and the level-up stats pages.
+# MEDICINE: 6 L, 7 XL (scroll 0).
+start saves/pif2_base.sav
+include ../scripts/continue.txt
+ev givemon SPECIES_MAMOSWINE, 99; additem ITEM_EXP_CANDY_L, 3; additem ITEM_EXP_CANDY_XL, 3; end
+
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 7
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+snap pbi_xcl_01_party_mamoswine
+tap A 4
+waitkey 600
+snap pbi_xcl_02_xl_30000
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap UP 4                                  # EXP. CANDY L
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg1 300
+snap pbi_xcl_03_l_lv100
+waitmem 16 @sFanfareCounter@ 0 900
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg2 600
+snap pbi_xcl_04_stats_pg1
+tap A 4
+waittaskx Task_TryLearnNewMoves 600
+snap pbi_xcl_05_stats_pg2
+tap A 4
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap pbi_xcl_06_party_lv100
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

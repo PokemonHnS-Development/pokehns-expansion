@@ -15,8 +15,8 @@ EcruteakCity_SageOffice1_EventScript_Sign::
 	end
 
 EcruteakCity_SageOffice1_Text_Sign:
-	.string "The bell of tin rings clearly for\n"
-	.string "those under the tower's wing.$"
+	.string "פעמון הבדיל מצלצל בבהירות\n"
+	.string "למי שחוסה תחת כנף המגדל.$"
 
 EcruteakCity_SageOffice2_EventScript_SageA::
 	lock
@@ -89,9 +89,9 @@ EcruteakCity_SageOffice2_Movement_StandAside:
 	step_end
 
 EcruteakTinTowerEntrance_Text_SageNoBadge:
-	.string "TIN TOWER is off limits to the\n"
-	.string "unworthy. Sorry but you'll have\l"
-	.string "to leave.$"
+	.string "הכניסה למגדל הבדיל אסורה\n"
+	.string "על מי שאינו ראוי.\p"
+	.string "מצטער, אבל עליך לעזוב.$"
 
 EcruteakTinTowerEntrance_Text_SageWithBadge:
 	.string "TIN TOWER is off limits to anyone\n"
@@ -109,43 +109,43 @@ EcruteakTinTowerEntrance_Text_SageNoClearBell:
 	.string "so very difficult to understand…$"
 
 EcruteakTinTowerEntrance_Text_SageHearsClearBell1:
-	.string "A momentous event has occurred.\p"
-	.string "I beg your pardon, but I must ask\n"
-	.string "you to leave.\p"
-	.string "..............................$"
+	.string "התרחש אירוע היסטורי.\p"
+	.string "אני מתנצל, אבל עליי לבקש\n"
+	.string "ממך לעזוב.\p"
+	.string "…………$"
 EcruteakTinTowerEntrance_Text_SageHearsClearBell2:
-	.string "Ah!\p"
-	.string "The sound of that CLEAR BELL!\p"
-	.string "It… It's sublime!\p"
-	.string "I've never heard so beautiful a\n"
-	.string "sound before!\p"
-	.string "That bell's chime is indicative of\n"
-	.string "the bearer's soul.\p"
-	.string "You…\p"
-	.string "You may be able to make it through\n"
-	.string "TIN TOWER.\p"
-	.string "Please, do go on.$"
+	.string "אה!\p"
+	.string "הצליל של הפעמון הצלול!\p"
+	.string "זה… זה נשגב!\p"
+	.string "מעולם לא שמעתי צליל\n"
+	.string "כל כך יפה!\p"
+	.string "צלצול הפעמון מעיד על\n"
+	.string "נשמתו של מי שנושא אותו.\p"
+	.string "אתה…\p"
+	.string "ייתכן שתצליח לעבור את\n"
+	.string "מגדל הבדיל.\p"
+	.string "בבקשה, המשך פנימה.$"
 
 EcruteakTinTowerEntrance_Text_SagePleaseDoGoOn:
 	.string "Please, do go on.$"
 
 EcruteakTinTowerEntrance_Text_SageDone:
-	.string "That bell's chime is indicative of\n"
-	.string "the bearer's soul.\p"
-	.string "You…\n"
-	.string "Truly are worthy.$"
+	.string "צלצול הפעמון מעיד על\n"
+	.string "נשמתו של מי שנושא אותו.\p"
+	.string "אתה…\n"
+	.string "באמת ראוי.$"
 
 EcruteakTinTowerEntrance_Text_WanderingSage:
-	.string "The TIN TOWER ahead is a nine-\n"
-	.string "tier tower of divine beauty.\p"
-	.string "It soothes the soul of all who\n"
-	.string "see it.$"
+	.string "מגדל הבדיל שלפנינו הוא מגדל בן\n"
+	.string "תשע קומות, בעל יופי אלוהי.\p"
+	.string "הוא מרגיע את נפשו של כל\n"
+	.string "מי שרואה אותו.$"
 
 EcruteakTinTowerEntrance_Text_WanderingSageClearBell:
-	.string "The TIN TOWER shook! A POKéMON must\n"
-	.string "have returned to the top!$"
+	.string "מגדל הבדיל רעד! כנראה שפוקימון\n"
+	.string "חזר לפסגה!$"
 
 EcruteakTinTowerEntrance_Text_Gramps:
-	.string "Two towers… Two POKéMON…\p"
-	.string "But when one burned down, both\n"
-	.string "POKéMON flew away, never to return.$"
+	.string "שני מגדלים… שני פוקימונים…\p"
+	.string "אבל כשאחד מהם נשרף,\n"
+	.string "שני הפוקימונים עפו ולא שבו עוד.$"

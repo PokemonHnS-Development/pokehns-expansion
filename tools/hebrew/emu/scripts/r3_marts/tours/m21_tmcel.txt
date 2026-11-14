@@ -1,0 +1,28 @@
+# Celadon 3F with three TMs owned (SOLD OUT on rows 0, 5 and 9).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+ev additem ITEM_TM_SAFEGUARD; additem ITEM_TM_DARK_PULSE; additem ITEM_TM_ENDURE; end
+warptoloose MAP_CELADON_CITY_DEPARTMENT_STORE_3F_HNS 6 10
+evstart goto CeladonDept3_EventScript_Clerk
+talk m21_tmcel_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m21_tmcel_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m21_tmcel
+listgo 9
+tap A 0
+snap m21_tmcel_soldout
+tap A 0
+snap m21_tmcel_soldout_back
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m21_tmcel_bye 10 -
+waitctl 900

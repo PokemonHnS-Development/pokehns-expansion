@@ -1,0 +1,8 @@
+# Janine, Fuchsia Gym (2,11): FuchsiaCity_Gym_EventScript_Janine.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_FUCHSIA_GYM; clearflag FLAG_BADGE14_GET; end
+warpto MAP_FUCHSIA_CITY_GYM_HNS 2 12
+face UP
+snap jn_room
+include _leader_tail.txt

@@ -38,22 +38,22 @@ BattleFrontier_PokemonCenter_1F_EventScript_Skitty_hns::
 	end
 
 BattleFrontier_PokemonCenter_1F_Text_NeverSeenPokemon_hns:
-	.string "There was someone here using a \n"
-	.string "POKéMON I've never seen before.\p"
-	.string "I never learned about it at\n"
-	.string "TRAINER'S SCHOOL at least.\p"
-	.string "I wonder where you can catch POKéMON\n"
-	.string "like that.$"
+	.string "היה פה מישהו עם פוקימון\n"
+	.string "שאף פעם לא ראיתי.\p"
+	.string "לפחות בבית הספר למאמנים\n"
+	.string "לא למדנו עליו.\p"
+	.string "מעניין איפה אפשר לתפוס\n"
+	.string "פוקימונים כאלה.$"
 
 BattleFrontier_PokemonCenter_1F_Text_NextStopBattleArena_hns:
-	.string "Okay! Next stop, the BATTLE ARENA!\n"
-	.string "I'd better get the right POKéMON from\l"
-	.string "the PC Storage System.$"
+	.string "טוב! התחנה הבאה: זירת הקרב!\p"
+	.string "כדאי שאקח את הפוקימונים המתאימים\n"
+	.string "ממערכת האחסון במחשב.$"
 
 BattleFrontier_PokemonCenter_1F_Text_GoingThroughEveryChallenge_hns:
-	.string "Giggle… I'm going to go through every\n"
-	.string "challenge with just this baby!$"
+	.string "הי-הי… אני הולכת לעבור כל אתגר\n"
+	.string "רק עם החמוד הזה!$"
 
 BattleFrontier_PokemonCenter_1F_Text_Skitty_hns:
-	.string "SKITTY: Mya myaaah!$"
+	.string "סקיטי: מיאו מיאאאו!$"
 

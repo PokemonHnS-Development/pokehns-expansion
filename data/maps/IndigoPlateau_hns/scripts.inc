@@ -6,6 +6,6 @@ IndigoPlateau_Sign::
 	end
 
 IndigoPlateau_Text_Sign:
-	.string "INDIGO PLATEAU\p"
-	.string "The Ultimate Goal for Trainers!\p"
-	.string "POKéMON LEAGUE HQ$"
+	.string "רמת אינדיגו\p"
+	.string "המטרה העליונה של כל מאמן!\p"
+	.string "מטה ליגת הפוקימון$"

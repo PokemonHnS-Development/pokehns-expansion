@@ -123,91 +123,90 @@ Route13_EventScript_DirectionsSign::
 	end
 
 Route13_Text_PokefanmAlexSeen:
-	.string "Bow down before my regal POKéMON!$"
+	.string "השתחווה בפני הפוקימונים\n"
+	.string "המלכותיים שלי!$"
 
 Route13_Text_PokefanmAlexBeaten:
-	.string "How… How dare you mock royalty!$"
+	.string "איך… איך אתה מעז ללעוג למלוכה!$"
 
 Route13_Text_PokefanmAlexAfterBattle:
-	.string "Doesn't everyone wish to someday\n"
-	.string "be a king?$"
+	.string "מי לא חולם להיות\n"
+	.string "מלך יום אחד?$"
 
 Route13_Text_AlexRegister:
-	.string "You're not royalty but you're good.\n"
-	.string "Let me get your number.$"
+	.string "אין לך דם כחול, אבל יש לך כישרון.\n"
+	.string "אשמח לקבל את המספר שלך.$"
 
 Route13_Text_AlexRematchIntro:
-	.string "I've added knights to my court!\n"
-	.string "Let's battle!$"
+	.string "צירפתי אבירים לחצר שלי!\n"
+	.string "קדימה, לקרב!$"
 
 Route13_Text_AlexRematchDefeat:
-	.string "Dethroned again…$"
+	.string "שוב הודחתי מהכס…$"
 
 Route13_Text_AlexPostRematch:
-	.string "Maybe I'm just a pawn after all.$"
+	.string "אולי בסך הכול אני רק רגלי.$"
 
 Route13_Text_PokefanmJoshuaSeen:
-	.string "Nihihi! Would you like to battle\n"
-	.string "my PIKACHU gang?$"
+	.string "ניהיהי! רוצה להילחם\n"
+	.string "בכנופיית הפיקאצ'ו שלי?$"
 
 Route13_Text_PokefanmJoshuaBeaten:
-	.string "PI-PIKACHU!$"
+	.string "פי-פיקאצ'ו!$"
 
 Route13_Text_PokefanmJoshuaAfterBattle:
-	.string "You look like you have many\n"
-	.string "POKéMON, but PIKACHU\l"
-	.string "is still the best.$"
+	.string "נראה שיש לך הרבה פוקימונים, אבל\n"
+	.string "פיקאצ'ו עדיין הכי טוב.$"
 
 Route13_Text_BirdKeeperPerrySeen:
-	.string "Agility is the key attribute of\n"
-	.string "bird POKéMON.$"
+	.string "זריזות היא התכונה החשובה ביותר\n"
+	.string "של פוקימוני ציפורים.$"
 
 Route13_Text_BirdKeeperPerryBeaten:
-	.string "You beat me with your speed…$"
+	.string "המהירות שלך ניצחה אותי…$"
 
 Route13_Text_BirdKeeperPerryAfterBattle:
-	.string "Your POKéMON are remarkably well-\n"
-	.string "trained.$"
+	.string "הפוקימונים שלך מאומנים\n"
+	.string "היטב להפליא.$"
 
 Route13_Text_BirdKeeperBretSeen:
-	.string "Check out my POKéMON. Just look\n"
-	.string "at their coloring and their\l"
-	.string "plumage.$"
+	.string "תראה את הפוקימונים שלי. רק תסתכל\n"
+	.string "על הצבעים ועל הנוצות שלהם.$"
 
 Route13_Text_BirdKeeperBretBeaten:
-	.string "Shoot! Not good enough!$"
+	.string "אוף! לא מספיק טוב!$"
 
 Route13_Text_BirdKeeperBretAfterBattle:
-	.string "If you groom them, POKéMON get\n"
-	.string "happy.$"
+	.string "פוקימונים שמטפחים אותם\n"
+	.string "נעשים שמחים.$"
 
 Route13_Text_HikerKennySeen:
-	.string "I should go to ROCK TUNNEL to get\n"
-	.string "myself an ONIX.$"
+	.string "כדאי שאלך למערת האבן כדי\n"
+	.string "להשיג לעצמי אוניקס.$"
 
 Route13_Text_HikerKennyBeaten:
-	.string "I lost…$"
+	.string "הפסדתי…$"
 
 Route13_Text_HikerKennyAfterBattle:
-	.string "Geological features don't appear\n"
-	.string "to change.\p"
-	.string "But they actually change, little\n"
-	.string "by little.$"
+	.string "נראה שתצורות גיאולוגיות\n"
+	.string "לא משתנות.\p"
+	.string "אבל בעצם הן משתנות,\n"
+	.string "לאט לאט.$"
 
 Route13_Text_KennyRegister:
-	.string "Maybe POKéMON change over time too.\n"
-	.string "Let's battle again sometime!$"
+	.string "אולי גם פוקימונים משתנים עם הזמן.\n"
+	.string "נילחם שוב מתישהו!$"
 
 Route13_Text_KennyRematchIntro:
-	.string "I've learned from geology!\n"
-	.string "Let's go!$"
+	.string "למדתי מהגיאולוגיה!\n"
+	.string "קדימה!$"
 
 Route13_Text_KennyRematchDefeat:
-	.string "Still not enough…$"
+	.string "עדיין לא מספיק…$"
 
 Route13_Text_KennyPostRematch:
-	.string "The power of POKéMON is like\n"
-	.string "erosion. We will persevere!$"
+	.string "הכוח של פוקימונים הוא כמו\n"
+	.string "סחיפה. אנחנו נתמיד!$"
 
 Route13_Text_TrainerTips:
 	.string "TRAINER TIPS\p"
@@ -215,12 +214,12 @@ Route13_Text_TrainerTips:
 	.string "side of the post.$"
 
 Route13_Text_Sign:
-	.string "ROUTE 13\p"
-	.string "NORTH TO SILENCE BRIDGE$"
+	.string "דרך 13\p"
+	.string "צפונה אל גשר השקט$"
 
 Route13_Text_DirectionsSign:
-	.string "NORTH TO LAVENDER TOWN\p"
-	.string "WEST TO FUCHSIA CITY$"
+	.string "צפונה אל העיירה לבנדר\p"
+	.string "מערבה אל העיר פושיה$"
 
 Route13_GetOffBoat::
 	lock
@@ -423,33 +422,33 @@ Route13_Movement_BoatArrive:
 	step_end
 
 Route13_GetOffBoat_Text_0:
-	.string "Welcome back to mainland Kanto!\p"
-	.string "Come back if you'd like to take a trip\n"
-	.string "to the ALOLA ISLES!$"
+	.string "ברוכים השבים ליבשת קאנטו!\p"
+	.string "אפשר לחזור בכל פעם שבא לך\n"
+	.string "לטייל לאיי אלולה!$"
 
 Route13_TravelToAlola_Text_0:
-	.string "Ahoy there!\p"
-	.string "That's one strange souvenir.\n"
-	.string "You must be from the ISLES!$"
+	.string "אהוי!\p"
+	.string "איזו מזכרת מוזרה!\n"
+	.string "אתה בטח מהאיים!$"
 Route13_TravelToAlola_Text_0_5:
-	.string "Would you like to take the next ship?\n"
-	.string "It departs shortly!$"
+	.string "רוצה לעלות על הספינה הבאה?\n"
+	.string "היא יוצאת בקרוב!$"
 
 Route13_TravelToAlola_Text_1:
-	.string "Ahoy! Let's get you on board!$"
+	.string "אהוי! קדימה, עולים לסיפון!$"
 
 Route13_TravelToAlola_Text_2:
-	.string "Ahoy!\n"
-	.string "Come back when you'd like to set sail.$"
+	.string "אהוי!\n"
+	.string "תחזור כשתרצה להפליג.$"
 
 Route13_TravelToAlola_Text_3:
-	.string "Ah, it's you again!\n"
-	.string "Do you want to go to the ALOLA ISLES?$"
+	.string "אה, זה שוב אתה!\n"
+	.string "רוצה לנסוע לאיי אלולה?$"
 
 Route13_TravelToAlola_Text_4:
-	.string "Ahoy!\n"
-	.string "This port is for residents only.\p"
-	.string "All of the residents of these ISLES\n"
-	.string "carry some… {PAUSE 30}strange souvenirs.\p"
-	.string "It makes them so easy to identify,\n"
-	.string "I don't even need to check tickets!$"
+	.string "אהוי!\n"
+	.string "הנמל הזה לתושבים בלבד.\p"
+	.string "כל תושבי האיים האלה נושאים\n"
+	.string "איתם כמה… {PAUSE 30}מזכרות מוזרות.\p"
+	.string "ככה קל מאוד לזהות אותם,\n"
+	.string "אני אפילו לא צריך לבדוק כרטיסים!$"

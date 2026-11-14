@@ -1,0 +1,13 @@
+# Suicune, Route 42 (52,20): trigger (46,17) while FLAG_HIDE_ROUTE42_SUICUNE is clear
+# (Route42_MapScript_OnTransition / Route42_EventScript_Suicune_Trigger, data/maps/Route42_hns/
+# scripts.inc:6-76): Suicune runs, Eusine admires it, is jealous, won't give up.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_ROUTE42_SUICUNE; setflag FLAG_HIDE_ROUTE42_EUSINE; end
+warpto MAP_ROUTE42_HNS 46 18
+ev setflag FLAG_TEMP_1; removeobject 3; end     # the Cut tree on the trigger tile (object 3, FLAG_TEMP_1), as if cut
+face UP
+snap s42_field
+stepto UP 1
+scene s42_scene 12000 60
+snap s42_end

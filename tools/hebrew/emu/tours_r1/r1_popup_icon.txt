@@ -1,0 +1,55 @@
+# Map-name pop-up for every map section of the two themes with a character at the window's left
+# end (src/map_name_popup.c: MAPPOPUP_THEME_TOWN_HNS, Pichu; MAPPOPUP_THEME_HISTORIC_HNS,
+# Bellsprout). Each warp loads a new map section, so the pop-up slides in.
+start saves/r1_hof_base.sav
+include ../scripts/continue.txt
+# Town theme
+warptoloose MAP_PALLET_TOWN_HNS 6 8
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_town_pallet
+warptoloose MAP_NEW_BARK_TOWN_HNS 10 10
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_town_new_bark
+warptoloose MAP_AZALEA_TOWN_HNS 19 12
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_town_azalea
+warptoloose MAP_CIANWOOD_CITY_HNS 11 26
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_town_cianwood
+warptoloose MAP_MAHOGANYTOWN_HNS 14 5
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_town_mahogany
+# Historic theme
+warptoloose MAP_LAVENDER_TOWN_HNS 4 7
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_hist_lavender
+warptoloose MAP_VIOLET_CITY_HNS 30 14
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_hist_violet
+warptoloose MAP_ECRUTEAK_CITY_HNS 8 36
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_hist_ecruteak
+warptoloose MAP_BLACKTHORN_CITY_HNS 26 13
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_hist_blackthorn
+warptoloose MAP_BURNED_TOWER_1F_HNS 15 21
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_hist_burned_tower
+warptoloose MAP_SPROUT_TOWER_1F_HNS 10 15
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_hist_sprout_tower
+warptoloose MAP_TIN_TOWER_1F_HNS 9 16
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_hist_tin_tower
+warptoloose MAP_EMBEDDED_TOWER_HNS 14 28
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_hist_embedded_tower
+warptoloose MAP_DRAGONS_DEN_ENTRANCE_HNS 4 6
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_hist_dragons_den
+warptoloose MAP_NEW_SINJOH_HNS 37 35
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_hist_new_sinjoh
+warptoloose MAP_SINJOH_RUINS_HNS 24 41
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_hist_sinjoh_ruins

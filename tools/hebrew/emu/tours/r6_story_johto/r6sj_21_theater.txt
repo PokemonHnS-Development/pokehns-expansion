@@ -1,0 +1,25 @@
+# Dance Theater, Rocket scene (data/maps/EcruteakCity_Theater_hns/scripts.inc): RocketEventTrigger
+# (10,16) at VAR_ECRUTEAK_CITY_THEATER 0 (:20-35), Zuki during the raid, the Grunt 33 battle
+# (EcruteakCity_Theater_EventScript_Rocket: seen, trainerbattle_no_intro TRAINER_GRUNT_33_HNS with his
+# Full Restore (bitem), after, the Kimono Girl's thanks), then the Surf guy (TriggerSurfGuy (10,17),
+# state 2) and HM03 Surf. Ladder 3 rewound to before s3d_ecruteak.inc's theater block.
+start saves/r6sj_ladder3_ecruteak.sav
+include _base.txt
+include _mewtwo.txt
+ev setvar VAR_ECRUTEAK_CITY_THEATER, 0; cleartrainerflag TRAINER_GRUNT_33_HNS; clearflag FLAG_HIDE_ECRUTEAK_ROCKET; clearflag FLAG_RECEIVED_HM_SURF; removeitem ITEM_HM_SURF; end
+warpto MAP_ECRUTEAK_CITY_THEATER_HNS 10 17
+snap th_room
+stepto UP
+scene rk 30000 40
+snap rk_end
+walkto 11 4 LEFT
+tap A 4
+scene g33_pre 10000
+bwalk g33_intro input:HandleInputChooseAction
+bitem g33_item 3
+bwin g33_win
+scene g33_after 20000 40
+snap g33_end
+walkto 10 17
+scene surf 20000 40
+snap surf_end

@@ -1,0 +1,15 @@
+# r11 (gen_tours.py): MAP_VIRIDIAN_CITY_GYM_HNS after its badge, on ladder6_postgame. Statue ViridianCity_Gym_EventScript_GymStatue, guide ViridianCity_Gym_EventScript_GymGuy, leader ViridianCity_Gym_EventScript_Blue (data/maps/ViridianCity_Gym_hns/scripts.inc).
+start saves/ladder6_postgame.sav
+include _base.txt
+warpto MAP_VIRIDIAN_CITY_GYM_HNS 3 17
+face UP
+snap gk8_room
+talkdir gk8_statue UP
+approach 1
+tap A 4
+drive gk8_guide
+warpto MAP_VIRIDIAN_CITY_GYM_HNS 5 3
+face UP
+snap gk8_leader_room
+talkdir gk8_leader UP
+talkdir gk8_leader_again UP

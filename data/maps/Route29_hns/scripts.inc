@@ -34,7 +34,7 @@ Route29_Trigger_Monview::
 	end
 
 Route29_Text_PressAorB:
-	.string "Press A or B to stop viewing.$"
+	.string "לחיצה על A או B תפסיק את הצפייה.$"
 
 Route29_EventScript_OldMan::
 	lock
@@ -158,89 +158,88 @@ Route29_EventScript_ItemPotion::
 	end
 
 Route29_Text_OldMan1:
-	.string "POKéMON hide in the grass.\n"
-	.string "Who knows when they'll pop out…$"
+	.string "פוקימונים מתחבאים בדשא.\n"
+	.string "מי יודע מתי הם יקפצו החוצה…$"
 
 Route29_Text_OldMan2:
-	.string "I've seen you a couple times.\n"
-	.string "How many POKéMON have you caught?\p"
-	.string "Would you like me to tell you\n"
-	.string "how to catch POKéMON?$"
+	.string "ראיתי אותך כאן כמה פעמים.\n"
+	.string "כמה פוקימונים כבר תפסת?\p"
+	.string "תרצה שאסביר לך\n"
+	.string "איך תופסים פוקימונים?$"
 
 Route29_Text_OldManExplanation:
-	.string "If you weaken them first,\n"
-	.string "POKéMON are easier to catch.\p"
-	.string "Then, throw a ball at them from\n"
-	.string "your bag! Any ball will do.\p"
-	.string "If you want to learn more,\n"
-	.string "go to the ACADEMY in VIOLET CITY!\p"
-	.string "The students there know a lot\n"
-	.string "about POKéMON.$"
+	.string "קל יותר לתפוס פוקימונים\n"
+	.string "אם מחלישים אותם קודם.\p"
+	.string "אחר כך זורקים עליהם כדור מהתיק!\n"
+	.string "כל כדור יתאים.\p"
+	.string "אם רוצים ללמוד עוד,\n"
+	.string "כדאי ללכת לאקדמיה בעיר ויולט!\p"
+	.string "התלמידים שם יודעים הרבה\n"
+	.string "על פוקימונים.$"
 
 Route29_Text_OldManDeclined:
-	.string "Oh. Fine, then.\p"
-	.string "Check every route to find\n"
-	.string "different types of POKéMON.\p"
-	.string "Your POKéDEX shows where you can\n"
-	.string "find them too!\p"
-	.string "If you want to learn more,\n"
-	.string "go to the ACADEMY in VIOLET CITY!\p"
-	.string "The students know a lot about\n"
-	.string "POKéMON.$"
+	.string "אה. טוב, בסדר.\p"
+	.string "כדאי לחפש בכל דרך כדי למצוא\n"
+	.string "מגוון פוקימונים.\p"
+	.string "הפוקדקס שלך גם מראה איפה\n"
+	.string "אפשר למצוא אותם!\p"
+	.string "אם רוצים ללמוד עוד,\n"
+	.string "כדאי ללכת לאקדמיה בעיר ויולט!\p"
+	.string "התלמידים יודעים\n"
+	.string "הרבה על פוקימונים.$"
 
 Route29_Text_Youngster:
-	.string "Yo. How are your POKéMON?\p"
-	.string "If they're weak and not ready\n"
-	.string "for battle, keep out of the grass.$"
+	.string "יו. מה שלום הפוקימונים שלך?\p"
+	.string "אם הם חלשים ולא מוכנים\n"
+	.string "לקרב, עדיף להתרחק מהדשא.$"
 
 Route29_Text_Lass:
-	.string "See those ledges?\n"
-	.string "It's scary to jump off them.\p"
-	.string "But you can go to NEW BARK\n"
-	.string "without walking through the grass.$"
+	.string "רואה את מדרגות הסלע?\n"
+	.string "מפחיד לקפוץ מהן.\p"
+	.string "אבל ככה אפשר להגיע לניו בארק\n"
+	.string "בלי ללכת דרך הדשא.$"
 
 Route29_Text_Girl:
-	.string "I wanted to take a break,\n"
-	.string "so I saved to record my progress.$"
+	.string "רציתי לעשות הפסקה,\n"
+	.string "אז שמרתי את ההתקדמות שלי.$"
 
 Route29_Text_Boy_WaitingForDay:
-	.string "I'm waiting for POKéMON that\n"
-	.string "appear only later in the day.$"
+	.string "אני מחכה לפוקימונים שמופיעים\n"
+	.string "רק מאוחר יותר ביום.$"
 
 Route29_Text_Boy_WaitingForNight:
-	.string "I'm waiting for POKéMON that\n"
-	.string "appear only at night.$"
+	.string "אני מחכה לפוקימונים\n"
+	.string "שמופיעים רק בלילה.$"
 
 Route29_Text_MeetTuscany:
-	.string "TUSCANY: I do believe that this\n"
-	.string "is the first time we've met?\p"
-	.string "I'm TUSCANY of the WEEKDAY FAMILY.\p"
-	.string "If you can guess my favorite day,\n"
-	.string "I'll give you a reward.$"
+	.string "טוסקני: נדמה לי שזו\n"
+	.string "הפעם הראשונה שאנחנו נפגשים?\p"
+	.string "שמי טוסקני, ממשפחת ימי השבוע.\p"
+	.string "אם תנחש מה היום האהוב עליי,\n"
+	.string "אתן לך פרס.$"
 
 Route29_Text_TuscanyNope:
-	.string "Not quite!$"
+	.string "לא בדיוק!$"
 
 Route29_Text_TuscanyGivesGift:
-	.string "Yes! By way of introduction,\n"
-	.string "please accept this gift, a SILK\l"
-	.string "SCARF.$"
+	.string "כן! לכבוד היכרותנו, אנא קבל\n"
+	.string "את המתנה הזאת: צעיף משי.$"
 
 Route29_Text_TuscanyGaveGift:
-	.string "TUSCANY: Wouldn't you agree\n"
-	.string "that it is most adorable?\p"
-	.string "It strengthens NORMAL-type\n"
-	.string "moves.\p"
-	.string "I am certain it will be of use.$"
+	.string "טוסקני: האם לא תסכים\n"
+	.string "שהוא מקסים ביותר?\p"
+	.string "הוא מחזק מהלכים\n"
+	.string "מסוג רגיל.\p"
+	.string "אין לי ספק שהוא יועיל לך.$"
 
 Route29_Text_TuscanyTuesday:
-	.string "TUSCANY: Have you met MONICA,\n"
-	.string "my older sister?\p"
-	.string "Or my younger brother, WESLEY?\p"
-	.string "I am the third of seven\n"
-	.string "children.$"
+	.string "טוסקני: פגשת את מוניקה,\n"
+	.string "אחותי הגדולה?\p"
+	.string "או את אחי הקטן, ווסלי?\p"
+	.string "במשפחה שלנו שבעה ילדים,\n"
+	.string "ואני מספר שלוש.$"
 
 Route29_Text_Sign1:
-	.string "ROUTE 29\p"
-	.string "CHERRYGROVE CITY - NEW BARK TOWN$"
+	.string "דרך 29\p"
+	.string "העיר צ'ריגרוב - העיירה ניו בארק$"
 

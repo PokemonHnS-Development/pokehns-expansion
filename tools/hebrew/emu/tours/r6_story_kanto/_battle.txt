@@ -1,0 +1,7 @@
+# Shared battle tail (not a tour): the battle intro up to the action menu, the battle won on
+# screen (bwin: the foe at 1 HP each turn), then the field pages after it.
+bwalk B_bintro input:HandleInputChooseAction
+snap B_action
+bwin B_win
+scene B_after 40000
+snap B_free

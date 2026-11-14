@@ -1,0 +1,40 @@
+# Contest appeal result messages that no tour reached (sAppealResultTexts, src/data/contest_text_tables.h;
+# 2-line WIN_GENERAL_TEXT, 17x4 tiles = 136 px; PrintAppealMoveResultText, src/contest.c:4620-4628):
+# LESS_AWARE 4, STOPPED_CARING 5, UNNERVE_ATTEMPT 9, JAM_WELL 14, DIFF_TYPE_GOOD 32, NOT_AS_WELL 34,
+# NOT_FAZED 46, LITTLE_DISTRACTED 47, NO_CONDITION_IMPROVE 58 (include/contest.h:8-73).
+# Forced stand-in: effplan writes each contestant's effectStringId at the move list of a round, after the
+# round reset, so the game prints the string at that contestant's appeal with its own nickname, move and
+# window; a contestant whose own move sets a string prints that one instead (the player's round-2 slot
+# and most round 3-5 slots are overridden that way, so LITTLE_DISTRACTED 47 is planned in several
+# slots). The contest is rc5_smart_normal_effects (Normal SMART, a level-50 Bronzong with four Psychic-type
+# moves, pinned RNG, round-1 points so the player wins).
+# Run: scripts/r16_contests/con16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_contests [--clip]
+# Save: ladder6_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_BRONZONG, 50, move1=MOVE_CONFUSION, move2=MOVE_EXTRASENSORY, move3=MOVE_PSYCHIC, move4=MOVE_FUTURE_SIGHT; additem ITEM_POKEBLOCK_CASE, 1; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 0
+fieldwatch type menu 3000
+pick 3
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap party_pick
+tap A 4
+fieldwatch entry cb2:CB2_StartContest 40000 45
+w16s gContestMonRound1Points 3 2000
+effplan 1:4,5,9,14 2:32,34,46,47 3:47,58,58,58 4:58,47,47,47 5:47,58,47,58
+contestplay5 eff 01230
+fieldwatch judge cb2:CB2_StartShowContestResults 20000 45
+waitcb2x CB2_ShowContestResults 600
+burstuntil res CB2_ShowContestResults 16 9000 A 240
+fieldwatch prize free 30000 45
+snap lobby_after

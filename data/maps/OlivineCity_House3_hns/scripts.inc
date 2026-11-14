@@ -28,30 +28,29 @@ OlivineCityHouse3_EventScriptFishingGuruRefused::
 	end
 
 OlivineCity_Text_OfferGoodRod:
-	.string "OLIVINE is on the sea!\p"
-	.string "And if it's on the sea, there\n"
-	.string "are bound to be fish!\p"
-	.string "I've fished here for 30 years.\p"
-	.string "Would you like to face the sea\n"
-	.string "and try your hand at fishing?$"
+	.string "אוליבין שוכנת על הים!\p"
+	.string "ואם היא על הים, בטוח\n"
+	.string "שיש פה דגים!\p"
+	.string "אני דג כאן כבר 30 שנה.\p"
+	.string "רוצה לעמוד מול הים\n"
+	.string "ולנסות את כוחך בדיג?$"
 
 OlivineCity_Text_GiveGoodRod:
-	.string "Ah, hahah! We have ourselves\n"
-	.string "a new angler in the making!$"
+	.string "אה, חה חה! נולד לנו\n"
+	.string "דייג חדש!$"
 
 OlivineCity_Text_GaveGoodRod:
-	.string "Fish aren't only found in the\n"
-	.string "sea--they're wherever there's\l"
-	.string "water.\p"
-	.string "By the way, your POKéDEX shows\n"
-	.string "fishing groups for POKéMON.\p"
-	.string "Different spots may contain\n"
-	.string "similar fish types.$"
+	.string "דגים יש לא רק בים, הם נמצאים\n"
+	.string "בכל מקום שיש בו מים.\p"
+	.string "דרך אגב, הפוקדקס שלך מציג\n"
+	.string "קבוצות דיג של פוקימונים.\p"
+	.string "במקומות שונים אפשר למצוא\n"
+	.string "סוגי דגים דומים.$"
 
 OlivineCity_Text_DontWantGoodRod:
-	.string "Whaaat? You don't like to fish!?\n"
-	.string "That's incomprehensible!$"
+	.string "מההה? אתה לא אוהב לדוג?!\n"
+	.string "זה בלתי נתפס!$"
 
 OlivineCity_Text_HaveGoodRod:
-	.string "How are things?\n"
-	.string "Did you land the big one?$"
+	.string "מה נשמע?\n"
+	.string "תפסת את הדג הגדול?$"

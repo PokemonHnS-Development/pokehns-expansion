@@ -1,0 +1,24 @@
+# Sprout Tower 3F (data/maps/SproutTower_3F_hns/scripts.inc): the rival leaving
+# (TriggerSceneLeft at (13,7), VAR_SPROUT_TOWER 0, :41-70), Sage Li (SageLi :103-116: seen text,
+# trainerbattle_no_intro TRAINER_LI_HNS, HM05 Flash obtained, the Flash explanation) and Li once
+# more afterwards (SageLi_Beaten). Ladder 2 rewound to before s2_violet.inc's Sprout Tower block;
+# the three trainer sages are set as beaten so their sight lines do not interrupt.
+start saves/r6sj_ladder2_badge1.sav
+include _base.txt
+include _mewtwo.txt
+ev clearflag FLAG_HIDE_SPROUT_TOWER_SILVER; setvar VAR_SPROUT_TOWER, 0; cleartrainerflag TRAINER_LI_HNS; clearflag FLAG_RECEIVED_HM_FLASH; removeitem ITEM_HM_FLASH; settrainerflag TRAINER_JIN_HNS; settrainerflag TRAINER_NEAL_HNS; settrainerflag TRAINER_TROY_HNS; end
+warpto MAP_SPROUT_TOWER_3F_HNS 13 9
+snap st_room
+walkto 13 7
+scene st_rival 30000 40
+snap st_rival_end
+walkto 11 4 UP
+tap A 4
+scene li_pre 10000
+bwalk li_intro input:HandleInputChooseAction
+bwin li_win
+scene li_after 20000
+snap li_end
+tap A 4
+scene li_again 6000
+snap li_again_end

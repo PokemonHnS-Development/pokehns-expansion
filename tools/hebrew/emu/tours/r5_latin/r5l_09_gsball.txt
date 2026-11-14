@@ -1,0 +1,21 @@
+# Kurt's GS Ball scene (VAR_AZALEA_TOWN_STATE 8 -> AzaleaTown_EventScript_GSBall from the map's ON_FRAME
+# table) and the Ilex Forest shrine with state 9: the GS Ball YES/NO, NO, then YES (inserted, Celebi
+# appears) up to the battle start. Kurt's scene moves the player 3 tiles down from the door (19,11).
+start saves/ladder6_postgame.sav
+include _setup.txt
+ev setvar VAR_AZALEA_TOWN_STATE, 8; end
+warptoloose MAP_AZALEA_TOWN_HNS 19 12
+fieldwatch gs_kurt free 12000 40
+vars VAR_AZALEA_TOWN_STATE
+warpto MAP_ILEX_FOREST_HNS 32 37
+face UP
+tap A 4
+fieldwatch ilex_ask menu 6000
+pick 1
+waitctl 900
+face UP
+tap A 4
+fieldwatch ilex_ask2 menu 6000
+pick 0
+fieldwatch ilex_celebi cb2:BattleMainCB2 12000 40
+snap ilex_battle_start

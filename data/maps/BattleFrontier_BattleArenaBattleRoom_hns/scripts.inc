@@ -484,146 +484,145 @@ BattleFrontier_BattleArenaBattleRoom_Movement_GretaWalkBackToCenter_hns:
 	step_end
 
 BattleFrontier_BattleArenaBattleRoom_Text_PlayerStepForward_hns:
-	.string "REFEREE: TRAINER {PLAYER}!\n"
-	.string "Step forward, please!$"
+	.string "שופט: {PLAYER}!\n"
+	.string "נא לצעוד קדימה!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_OpponentStepForward_hns:
-	.string "REFEREE: TRAINER {STR_VAR_1}!\n"
-	.string "Step forward, please!$"
+	.string "שופט: {STR_VAR_1}!\n"
+	.string "נא לצעוד קדימה!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_SetKOTourneyBegin_hns:
-	.string "REFEREE: Set KO Tourney!\n"
-	.string "Begin!$"
+	.string "שופט: טורניר נוקאאוט!\n"
+	.string "שהקרב יתחיל!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsPlayer_hns:
-	.string "REFEREE: The winner is {PLAYER}!$"
+	.string "שופט: הניצחון ל{PLAYER}!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsOpponent_hns:
-	.string "REFEREE: The winner is {STR_VAR_1}!$"
+	.string "שופט: הניצחון ל{STR_VAR_1}!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_MonsWillBeRestored_hns:
-	.string "Your POKéMON will be restored to\n"
-	.string "full health.$"
+	.string "הפוקימונים שלך יחזרו\n"
+	.string "לבריאות מלאה.$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor2ndOpponent_hns:
-	.string "Next up, your second opponent!\n"
-	.string "Are you ready to move on?$"
+	.string "ועכשיו, היריב השני שלך!\n"
+	.string "אפשר להמשיך?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor3rdOpponent_hns:
-	.string "Next up, your third opponent!\n"
-	.string "Are you ready to move on?$"
+	.string "ועכשיו, היריב השלישי שלך!\n"
+	.string "אפשר להמשיך?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor4thOpponent_hns:
-	.string "Next up, your fourth opponent!\n"
-	.string "Are you ready to move on?$"
+	.string "ועכשיו, היריב הרביעי שלך!\n"
+	.string "אפשר להמשיך?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor5thOpponent_hns:
-	.string "Next up, your fifth opponent!\n"
-	.string "Are you ready to move on?$"
+	.string "ועכשיו, היריב החמישי שלך!\n"
+	.string "אפשר להמשיך?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor6thOpponent_hns:
-	.string "Next up, your sixth opponent!\n"
-	.string "Are you ready to move on?$"
+	.string "ועכשיו, היריב השישי שלך!\n"
+	.string "אפשר להמשיך?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor7thOpponent_hns:
-	.string "Next up, your seventh opponent!\n"
-	.string "Are you ready to move on?$"
+	.string "ועכשיו, היריב השביעי שלך!\n"
+	.string "אפשר להמשיך?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_SaveAndShutDown_hns:
-	.string "Would you like to save the game and\n"
-	.string "shut down now?$"
+	.string "לשמור את המשחק\n"
+	.string "ולכבות עכשיו?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_RetireFromChallenge_hns:
-	.string "Would you like to retire from your\n"
-	.string "Set KO Tourney challenge?$"
+	.string "לפרוש מאתגר\n"
+	.string "טורניר הנוקאאוט?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_SavingPleaseWait_hns:
-	.string "I am saving your game data.\n"
-	.string "Please wait.$"
+	.string "אני שומר את נתוני המשחק שלך.\n"
+	.string "נא להמתין.$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_RecordLastBattle_hns:
-	.string "Would you like to record your last\n"
-	.string "battle on your FRONTIER PASS?$"
+	.string "לשמור את הקרב האחרון שלך\n"
+	.string "בכרטיס חזית הקרב?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_NowFaceTycoon_hns:
-	.string "My dear challenger!\p"
-	.string "Your skill level is truly astounding!\p"
-	.string "We now would like you to face our\n"
-	.string "leader, the ARENA TYCOON!$"
+	.string "מתמודד יקר!\p"
+	.string "רמת המיומנות שלך באמת מדהימה!\p"
+	.string "עכשיו נבקש ממך להתמודד מול\n"
+	.string "המנהיגה שלנו, גבירת הזירה!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_PreparedForTycoon_hns:
-	.string "A battle with the ARENA TYCOON!\n"
-	.string "Are you prepared?$"
+	.string "קרב מול גבירת הזירה!\n"
+	.string "האם אתה מוכן?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_MakeWayForGreta_hns:
-	.string "REFEREE: The ARENA TYCOON!\n"
-	.string "Make way for GRETA!$"
+	.string "שופט: גבירת הזירה!\n"
+	.string "פנו דרך לגרטה!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GretaYoureChallenger_hns:
-	.string "GRETA: Hey!\n"
-	.string "Howdy!\p"
-	.string "…Wait, are you the challenger?$"
+	.string "גרטה: היי!\n"
+	.string "מה נשמע?\p"
+	.string "…רגע, אתה המתמודד?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_IsThatRight_hns:
-	.string "Is that right? Hmm…\n"
-	.string "Hmhm…$"
+	.string "באמת? הממ…\n"
+	.string "הממ-הממ…$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_YouLookWeakTakeThingsEasy_hns:
-	.string "I don't know how to say it, but…\n"
-	.string "To put it bluntly, you look pretty weak.\l"
-	.string "Are you sure you're up for me?\p"
-	.string "Hmm…\p"
-	.string "Well, all right!\n"
-	.string "We'll take things easy to start with!$"
+	.string "אני לא יודעת איך להגיד את זה…\n"
+	.string "בלי לייפות, אתה נראה די חלש.\p"
+	.string "בטוח שאתה מסוגל להתמודד איתי?\p"
+	.string "הממ…\p"
+	.string "נו, טוב!\n"
+	.string "נתחיל בקלילות!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_IgniteMyPassionForBattle_hns:
-	.string "Okay! Let's see you ignite my passion\n"
-	.string "for battle!$"
+	.string "אוקיי! בוא נראה אם תצליח להצית\n"
+	.string "את התשוקה שלי לקרב!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GretaYoureToughAfterAll_hns:
-	.string "GRETA: Ow, wait a second!\n"
-	.string "You are tough after all!\p"
-	.string "I like you!\n"
-	.string "Let's see your FRONTIER PASS.$"
+	.string "גרטה: אאוץ', רגע אחד!\n"
+	.string "אז אתה כן קשוח!\p"
+	.string "אתה מוצא חן בעיניי!\n"
+	.string "בוא נראה את כרטיס חזית הקרב שלך.$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReceivedGutsSymbol_hns:
-	.string "The Guts Symbol was embossed on\n"
-	.string "the FRONTIER PASS!$"
+	.string "סמל האומץ הוטבע על\n"
+	.string "כרטיס חזית הקרב!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GoingToBeFunNextTime_hns:
-	.string "Hmm…\p"
-	.string "It's going to be fun the next time!\n"
-	.string "I'm looking forward to it!$"
+	.string "הממ…\p"
+	.string "בפעם הבאה יהיה כיף!\n"
+	.string "אני כבר מחכה לזה!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GretaLookingForwardToSeeingAgain_hns:
-	.string "GRETA: Hey! Howdy!\n"
-	.string "You finally won your way up to me!\p"
-	.string "I was getting worried waiting for you!\n"
-	.string "I was really looking forward to seeing\l"
-	.string "you again!$"
+	.string "גרטה: היי! מה נשמע?\n"
+	.string "סוף סוף ניצחת והגעת עד אליי!\p"
+	.string "כבר התחלתי לדאוג מרוב המתנה!\n"
+	.string "ממש חיכיתי לראות אותך שוב!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_SoAreYouReady_hns:
 	.string "… … …\n"
-	.string "So, are you ready?$"
+	.string "נו, אתה מוכן?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_WontAllowHalfheartedEffort_hns:
-	.string "I won't allow a halfhearted effort!\n"
-	.string "Be ready for a thrashing!$"
+	.string "אצלי אין חצאי מאמצים!\n"
+	.string "תתכונן לתבוסה מוחצת!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_LetsGetThisStarted_hns:
-	.string "Come on, REFEREE!\n"
-	.string "Let's get this started!$"
+	.string "קדימה, שופט!\n"
+	.string "בוא נתחיל כבר!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GretaBlownAway_hns:
-	.string "GRETA: Gaaah! Blown away!\n"
-	.string "Let's see your FRONTIER PASS!$"
+	.string "גרטה: אאאח! פשוט הממת אותי!\n"
+	.string "בוא נראה את כרטיס חזית הקרב שלך!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GutsSymbolTookGoldenShine_hns:
-	.string "The Guts Symbol took on\n"
-	.string "a golden shine!$"
+	.string "סמל האומץ קיבל\n"
+	.string "ברק של זהב!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_IfWeBattleAgainWontLose_hns:
-	.string "Arrrgh!\n"
-	.string "This is so infuriating!\p"
-	.string "If we ever battle again, I won't lose!\n"
-	.string "Don't you forget it! Bye-bye!$"
+	.string "אררר!\n"
+	.string "זה כל כך מעצבן!\p"
+	.string "אם נילחם שוב, אני לא אפסיד!\n"
+	.string "שלא תשכח את זה! ביי-ביי!$"

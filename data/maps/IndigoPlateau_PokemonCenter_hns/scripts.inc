@@ -35,24 +35,23 @@ IndigoPlateau_EventScript_ShigyNinja::
 	end
 
 IndigoPlateau_Text_ShigyNinja:
-	.string "Congrats on making it here!\p"
-	.string "I've seen tons of trainers come\n"
-	.string "through here over the years, and\l"
-	.string "all of them are wonderfully unique.\p"
-	.string "You should be proud of yourself\n"
-	.string "for getting this far!\p"
-	.string "Now, go get 'em!$"
+	.string "כל הכבוד שהגעת עד לכאן!\p"
+	.string "ראיתי המון מאמנים עוברים כאן\n"
+	.string "לאורך השנים, וכולם מיוחדים להפליא.\p"
+	.string "אתה צריך להיות גאה בעצמך\n"
+	.string "על שהגעת כל כך רחוק!\p"
+	.string "עכשיו, קדימה, תראה להם!$"
 
 IndigoPlateau_Text_Blackbelt:
-	.string "The POKéMON LEAGUE is not taking\n"
-	.string "new challengers at the moment.\p"
-	.string "Please check back later.$"
+	.string "ליגת הפוקימון לא מקבלת כרגע\n"
+	.string "מתמודדים חדשים.\p"
+	.string "אפשר לחזור ולבדוק מאוחר יותר.$"
 
 IndigoPlateau_Text_CooltrainerM:
-    .string "At the POKéMON LEAGUE, you'll get\n"
-    .string "tested by the ELITE FOUR.\p"
-    .string "You have to beat them all. If you\n"
-    .string "lose, you have to start all over!$"
+    .string "בליגת הפוקימון, הרביעייה העילית\n"
+    .string "תעמיד אותך במבחן.\p"
+    .string "צריך לנצח את כולם. מי שמפסיד\n"
+    .string "מתחיל הכול מההתחלה!$"
 
 IndigoPlateau_EventScript_Silver::
 	lock
@@ -86,24 +85,24 @@ IndigoPlateau_Silver_Battle_Chikorita::
 	return
 
 IndigoPlateau_Text_RivalEntrance1:
-    .string "Hold it.\p"
-    .string "You're going to take the POKéMON\n"
-    .string "LEAGUE challenge now?\p"
-    .string "That's not going to happen.\p"
-    .string "My super-well-trained POKéMON\n"
-    .string "are going to pound you.\p"
+    .string "עצור.\p"
+    .string "אתה מתכוון לגשת עכשיו לאתגר\n"
+    .string "של ליגת הפוקימון?\p"
+    .string "זה לא יקרה.\p"
+    .string "הפוקימונים הסופר-מאומנים שלי\n"
+    .string "הולכים לרסק אותך.\p"
     .string "{PLAYER}!\n"
-    .string "I challenge you!$"
+    .string "אני מאתגר אותך!$"
 
 IndigoPlateau_Text_RivalWin:
     .string "…\p"
-    .string "OK--I lost…$"
+    .string "טוב - הפסדתי…$"
 
 IndigoPlateau_Text_RivalAfter:
-    .string "…Darn… I still can't win…\p"
-    .string "I… I have to think more about my\n"
-    .string "POKéMON…\p"
-    .string "Humph! Try not to lose!$"
+    .string "…לעזאזל… אני עדיין לא מצליח לנצח…\p"
+    .string "אני… אני צריך לחשוב יותר\n"
+    .string "על הפוקימונים שלי…\p"
+    .string "המף! תשתדל לא להפסיד!$"
 
 IndigoPlateau_EventScript_Psychic::
 	lock
@@ -146,19 +145,20 @@ IndigoPlateau_EventScript_Abra::
 	end
 
 IndigoPlateau_Text_TeleportGuy1:
-    .string "Ah! You're challenging the ELITE\n"
-    .string "FOUR? Are you sure you're ready?\p"
-    .string "If you need to train some more,\n"
-    .string "my ABRA can help you.\p"
-    .string "It can TELEPORT you home.\p"
-    .string "Would you like to go home now?$"
+    .string "אה! אתה מאתגר את הרביעייה העילית?\n"
+    .string "אתה בטוח שאתה מוכן?\p"
+    .string "אם אתה צריך להתאמן עוד קצת,\n"
+    .string "האברה שלי יכול לעזור לך.\p"
+    .string "הוא יכול להחזיר אותך הביתה\n"
+    .string "בעזרת השתגרות.\p"
+    .string "אתה רוצה לחזור הביתה עכשיו?$"
 
 IndigoPlateau_Text_TeleportGuyYes:
-    .string "OK, OK. Picture your house in your\n"
-    .string "mind…$"
+    .string "בסדר, בסדר.\n"
+    .string "תדמיין את הבית שלך בעיני רוחך…$"
 
 IndigoPlateau_Text_TeleportGuyNo:
-    .string "OK, OK. The best of luck to you!$"
+    .string "בסדר, בסדר. בהצלחה רבה!$"
 
 IndigoPlateau_Text_Abra:
-    .string "ABRA: Aabra…$"
+    .string "אברה: אאברה…$"

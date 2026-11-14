@@ -1425,11 +1425,11 @@ Common_EventScript_PartyIsFull::
 	end
 
 Common_Text_ReceivedMon:
-	.string "{PLAYER} received {STR_VAR_1}!$"
+	.string "{PLAYER} קיבל את {STR_VAR_1}!$"
 
 Common_Text_PartyIsFull:
-	.string "Whoa, wait. You can't carry any\n"
-	.string "more POKéMON.$"	
+	.string "וואו, רגע. אי אפשר לקחת איתך\n"
+	.string "עוד פוקימונים.$"
 
 Common_EventScript_PlayerHandedOverTheItem::
 	bufferitemname STR_VAR_1, VAR_0x8004
@@ -1452,17 +1452,17 @@ Common_EventScript_PlayerHandedOverTheItem::
 
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
-	.string "“Selected items for your convenience!”\n"
-	.string "POKéMON MART$"
+	.string "”מוצרים נבחרים לנוחותך!”\n"
+	.string "חנות פוקימון$"
 
 gText_PokemonCenterSign::
-	.string "“Rejuvenate your tired partners!”\n"
-	.string "POKéMON CENTER$"
+	.string "”רעננו את השותפים העייפים שלכם!”\n"
+	.string "מרכז פוקימון$"
 
 gText_MomOrDadMightLikeThisProgram::
-	.string "{STR_VAR_1} might like this program.\n"
+	.string "אולי התוכנית תעניין את {STR_VAR_1}.\n"
 	.string "… … … … … … … … … … … … … … … …\p"
-	.string "Better get going!$"
+	.string "כדאי לזוז!$"
 
 gText_WhichFloorWouldYouLike::
 	.string "Welcome to LILYCOVE DEPARTMENT STORE.\p"
@@ -1473,24 +1473,24 @@ gText_SandstormIsVicious::
 	.string "It's impossible to keep going.$"
 
 gText_SelectWithoutRegisteredItem::
-	.string "An item in the BAG can be\n"
-	.string "registered to SELECT for easy use.$"
+	.string "אפשר לרשום פריט מהתיק\n"
+	.string "לכפתור SELECT לשימוש נוח.$"
 
 gText_SelectWithoutRegisteredHoldItem::
-	.string "A KEY ITEM can be registered\n"
-	.string "to holding SELECT for easy use.$"
+	.string "אפשר לרשום פריט מפתח ללחיצה\n"
+	.string "ממושכת על SELECT לשימוש נוח.$"
 
 gText_PokemonTrainerSchoolEmail::
-	.string "There's an e-mail from POKéMON TRAINER\n"
-	.string "SCHOOL.\p"
+	.string "התקבל דוא”ל מבית הספר\n"
+	.string "למאמני פוקימון.\p"
 	.string "… … … … … …\p"
-	.string "A POKéMON may learn up to four moves.\p"
-	.string "A TRAINER's expertise is tested on the\n"
-	.string "move sets chosen for POKéMON.\p"
+	.string "פוקימון יכול ללמוד עד ארבעה מהלכים.\p"
+	.string "המומחיות של מאמן נבחנת בבחירת\n"
+	.string "המהלכים לפוקימונים שלו.\p"
 	.string "… … … … … …$"
 
 gText_PlayerHouseBootPC::
-	.string "{PLAYER} booted up the PC.$"
+	.string "{PLAYER} הפעיל את המחשב.$"
 
 gText_PokeblockLinkCanceled::
 	.string "The link was canceled.$"
@@ -1500,59 +1500,55 @@ gText_UnusedNicknameReceivedPokemon::
 	.string "the {STR_VAR_2} you received?$"
 
 gText_PlayerWhitedOut::
-	.string "{PLAYER} is out of usable\n"
-	.string "POKéMON!\p{PLAYER} whited out!$"
+	.string "ל{PLAYER} נגמרו הפוקימונים\n"
+	.string "הכשירים לקרב!\p"
+	.string "{PLAYER} התעלף!$"
 
 gText_FirstShouldRestoreMonsHealth::
-	.string "First, you should restore your\n"
-	.string "POKéMON to full health.$"
+	.string "קודם כל, כדאי להחזיר את\n"
+	.string "הפוקימונים שלך לבריאות מלאה.$"
 
 gText_MonsHealedShouldBuyPotions::
-	.string "Your POKéMON have been healed\n"
-	.string "to perfect health.\p"
-	.string "If your POKéMON's energy, HP,\n"
-	.string "is down, please come see us.\p"
-	.string "If you're planning to go far in the\n"
-	.string "field, you should buy some POTIONS\l"
-	.string "at the POKéMON MART.\p"
-	.string "We hope you excel!$"
+	.string "הפוקימונים שלך חזרו\n"
+	.string "לבריאות מושלמת.\p"
+	.string "אם האנרגיה של הפוקימונים שלך,\n"
+	.string "הנ”ח, נמוכה, נשמח לראותך אצלנו.\p"
+	.string "אם בכוונתך לצאת למסע רחוק,\n"
+	.string "כדאי לקנות כמה שיקויים בחנות הפוקימון.\p"
+	.string "אנחנו מאחלים לך הצלחה!$"
 
 gText_MonsHealed::
-	.string "Your POKéMON have been healed\n"
-	.string "to perfect health.\p"
-	.string "We hope you excel!$"
+	.string "הפוקימונים שלך חזרו\n"
+	.string "לבריאות מושלמת.\p"
+	.string "אנחנו מאחלים לך הצלחה!$"
 
 gText_HadQuiteAnExperienceTakeRest::
-	.string "MOM: {PLAYER}!\n"
-	.string "Welcome home.\p"
-	.string "It sounds like you had quite\n"
-	.string "an experience.\p"
-	.string "Maybe you should take a quick\n"
-	.string "rest.$"
+	.string "אמא: {PLAYER}!\n"
+	.string "טוב שחזרת הביתה.\p"
+	.string "נשמע שעברת חוויה לא פשוטה.\p"
+	.string "אולי כדאי לנוח קצת.$"
 
 gText_MomExplainHPGetPotions::
-	.string "MOM: Oh, good! You and your\n"
-	.string "POKéMON are looking great.\p"
-	.string "I just heard from {STR_VAR_1}.\p"
-	.string "He said that POKéMON's energy is\n"
-	.string "measured in HP.\p"
-	.string "If your POKéMON lose their HP,\n"
-	.string "you can restore them at any\l"
-	.string "POKéMON CENTER.\p"
-	.string "If you're going to travel far away,\n"
-	.string "the smart TRAINER stocks up on\l"
-	.string "POTIONS at the POKéMON MART.\p"
-	.string "Make me proud, honey!\p"
-	.string "Take care!$"
+	.string "אמא: אה, יופי! אתה והפוקימונים\n"
+	.string "שלך נראים נהדר.\p"
+	.string "בדיוק דיברתי עם {STR_VAR_1}.\p"
+	.string "הוא אמר שהאנרגיה של פוקימון\n"
+	.string "נמדדת בנ”ח.\p"
+	.string "אם הפוקימונים שלך מאבדים נ”ח,\n"
+	.string "אפשר לרפא אותם בכל מרכז פוקימון.\p"
+	.string "לפני נסיעה רחוקה, מאמן חכם\n"
+	.string "מצטייד בשיקויים בחנות הפוקימון.\p"
+	.string "תעשה אותי גאה, מותק!\p"
+	.string "תשמור על עצמך!$"
 
 #if IS_HNS
 gText_RegisteredTrainerinPokeNav::
-	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
-	.string "in the POKéGEAR.$"
+	.string "רשמת בפוקיגיר את\n"
+	.string "{STR_VAR_1} {STR_VAR_2}.$"
 #else
 gText_RegisteredTrainerinPokeNav::
-	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
-	.string "in the POKéNAV.$"
+	.string "רשמת בפוקינאב את\n"
+	.string "{STR_VAR_1} {STR_VAR_2}.$"
 #endif
 
 gText_ComeBackWithSecretPower::
@@ -1565,13 +1561,12 @@ gText_ComeBackWithSecretPower::
 	.string "you good stuff in secrecy.$"
 
 gText_PokerusExplanation::
-	.string "Your POKéMON may be infected with\n"
-	.string "POKéRUS.\p"
-	.string "Little is known about the POKéRUS\n"
-	.string "except that they are microscopic life-\l"
-	.string "forms that attach to POKéMON.\p"
-	.string "While infected, POKéMON are said to\n"
-	.string "grow exceptionally well.$"
+	.string "ייתכן שהפוקימונים שלך נדבקו\n"
+	.string "בפוקרוס.\p"
+	.string "על הפוקרוס ידוע רק שהם יצורים\n"
+	.string "מיקרוסקופיים שנצמדים לפוקימונים.\p"
+	.string "אומרים שכל עוד פוקימונים נגועים,\n"
+	.string "הם גדלים בצורה יוצאת דופן.$"
 
 	.include "data/text/surf.inc"
 
@@ -1583,13 +1578,12 @@ gText_BigHoleInTheWall::
 	.string "There is a big hole in the wall.$"
 
 gText_SorryWirelessClubAdjustments::
-	.string "I'm terribly sorry.\n"
-	.string "The POKéMON WIRELESS CLUB is\l"
-	.string "undergoing adjustments now.$"
+	.string "אני מצטערת מאוד. כרגע מתבצעים\n"
+	.string "כיוונונים במועדון הפוקימון האלחוטי.$"
 
 gText_UndergoingAdjustments::
-	.string "It appears to be undergoing\n"
-	.string "adjustments…$"
+	.string "נראה שמתבצעים כאן\n"
+	.string "כיוונונים…$"
 
 @ Unused
 gText_SorryTradeCenterInspections::
@@ -1606,24 +1600,24 @@ gText_PlayerHandedOverTheItem::
 	.string "{STR_VAR_1}.$"
 
 gText_ThankYouForAccessingMysteryGift::
-	.string "Thank you for accessing the\n"
-	.string "MYSTERY GIFT System.$"
+	.string "תודה שנכנסת למערכת\n"
+	.string "מתנת המסתורין.$"
 
 gText_PlayerFoundOneTMHM::
-	.string "{PLAYER} found one {STR_VAR_1}\n"
+	.string "{PLAYER} מצא {STR_VAR_1}\n"
 	.string "{STR_VAR_2}!$"
 
 gText_PlayerFoundTMHMs::
-	.string "{PLAYER} found {STR_VAR_3} {STR_VAR_1}\n"
-	.string "{STR_VAR_2}!$"
+	.string "{PLAYER} מצא {STR_VAR_3}\n"
+	.string "{STR_VAR_1} {STR_VAR_2}!$"
 
 gText_Sudowoodo_Attacked::
-	.string "The weird tree doesn't like the\n"
-	.string "WAILMER PAIL!\p"
-	.string "The weird tree attacked!$"
+	.string "העץ המוזר לא אוהב את\n"
+	.string "דלי ווילמר!\p"
+	.string "העץ המוזר תקף!$"
 
 gText_LegendaryFlewAway::
-	.string "The {STR_VAR_1} flew away!$"
+	.string "{STR_VAR_1} עף משם!$"
 
 gText_WantWhichFloor::
 	.string "Which floor do you want?$"

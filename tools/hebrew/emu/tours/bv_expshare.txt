@@ -1,0 +1,67 @@
+# EXP. Share (Gen 6 key item, I_EXP_SHARE_ITEM / I_EXP_SHARE_FLAG, include/config/item.h:31-32):
+# switching it on from the bag (ItemUseOutOfBattle_ExpShare, src/item_use.c:250-273,
+# gText_ExpShareOn, src/strings.c:1265), then a wild battle where the lead KOs the foe: its own
+# experience, then "the rest of your team gained experience" (STRINGID_TEAMGAINEDEXP,
+# src/battle_script_commands.c:4357-4362, text src/battle_message.c:803). Then switching it
+# off again (gText_ExpShareOff).
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_CYNDAQUIL, 20, move1=MOVE_EMBER; givemon SPECIES_TOTODILE, 8; givemon SPECIES_CHIKORITA, 8; additem ITEM_EXP_SHARE; end
+
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap LEFT 4                                # ITEMS -> KEY ITEMS (the pockets wrap)
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 5
+snap bv_exps_keyitems
+tap A 4
+waitquiet
+snap bv_exps_context
+tap A 4                                   # USE
+waitkey 600
+snap bv_exps_on
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitquiet
+tap B 4                                   # close the start menu
+waitctl 900
+expectflag FLAG_EXP_SHARE_ENABLED 1
+
+pinrng
+evstart setwildbattle SPECIES_SENTRET, 6; dowildbattle; end
+waitbattle
+bwalk bv_exps_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0
+bwalk bv_exps_win free
+snap bv_exps_field
+
+tap START 4                               # gMenuCallback still names the closed start menu
+snap bv_exps_startmenu
+startmenu BAG nopress
+waitquiet
+tap A 4
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+expect8 @gBagPosition+5@ 5
+tap A 4
+waitquiet
+tap A 4
+waitkey 600
+snap bv_exps_off
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitquiet
+tap B 4                                   # close the start menu
+waitctl 900
+expectflag FLAG_EXP_SHARE_ENABLED 0

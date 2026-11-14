@@ -1,0 +1,17 @@
+# Same as bt04, with gGameContinueCallback set (as the Hall of Fame save does, src/hall_of_fame.c:528):
+# the screen shows gText_SaveCompletePressA (strings.c:724) and A continues to that callback
+# (CB2_ReturnToField here) instead of resetting.
+start saves/boot_base.sav
+include ../continue.txt
+pokeptr gGameContinueCallback CB2_ReturnToField
+pinsym gDamagedSaveSectors 01000000
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+tap A 0
+waitcb2x CB2_SaveFailedScreen 900
+waitcb2x CB2_WipeSave 600
+unpinsym gDamagedSaveSectors
+regionwatch bt05_wipe 4000 104 152 8 232 CB2_FadeAndReturnToTitleScreen
+snap bt05_end_pressA
+tap A 0
+burst bt05_after 12 20

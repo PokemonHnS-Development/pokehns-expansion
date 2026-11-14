@@ -1,0 +1,23 @@
+# generated: two batches of 8 composed lines '<adverb> <adjective>'
+radiocat 0 0 sRadioText_OPT_Adverb_SweetAdorably SPACE sRadioText_OPT_Adj_HotHotHot
+radiocat 1 1 sRadioText_OPT_Adverb_WigglySlickly SPACE sRadioText_OPT_Adj_Stimulating
+radiocat 2 2 sRadioText_OPT_Adverb_AptlyNamed SPACE sRadioText_OPT_Adj_Guarded
+radiocat 3 3 sRadioText_OPT_Adverb_UndeniablyKindOf SPACE sRadioText_OPT_Adj_Lovely
+radiocat 4 4 sRadioText_OPT_Adverb_Unbearably SPACE sRadioText_OPT_Adj_Speedy
+radiocat 5 5 sRadioText_OPT_Adverb_WowImpressively SPACE sRadioText_OPT_Adj_Cute
+radiocat 6 6 sRadioText_OPT_Adverb_AlmostPoisonously SPACE sRadioText_OPT_Adj_Weird
+radiocat 7 7 sRadioText_OPT_Adverb_Sensually SPACE sRadioText_OPT_Adj_Pleasant
+radionum 8
+radiojump 255
+radiocycle rf_advadj0 8
+radiocat 0 0 sRadioText_OPT_Adverb_Mischievously SPACE sRadioText_OPT_Adj_BoldSortOf
+radiocat 1 1 sRadioText_OPT_Adverb_Topically SPACE sRadioText_OPT_Adj_Frightening
+radiocat 2 2 sRadioText_OPT_Adverb_Addictively SPACE sRadioText_OPT_Adj_SuaveDebonair
+radiocat 3 3 sRadioText_OPT_Adverb_LooksInWater SPACE sRadioText_OPT_Adj_Powerful
+radiocat 4 4 sRadioText_OPT_Adverb_EvolutionMustBe SPACE sRadioText_OPT_Adj_Exciting
+radiocat 5 5 sRadioText_OPT_Adverb_Provocatively SPACE sRadioText_OPT_Adj_Groovy
+radiocat 6 6 sRadioText_OPT_Adverb_FlippedOut SPACE sRadioText_OPT_Adj_Inspiring
+radiocat 7 7 sRadioText_OPT_Adverb_HeartMeltingly SPACE sRadioText_OPT_Adj_Friendly
+radionum 8
+radiojump 255
+radiocycle rf_advadj1 8

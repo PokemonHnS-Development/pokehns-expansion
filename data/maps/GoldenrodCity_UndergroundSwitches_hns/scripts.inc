@@ -54,9 +54,9 @@ GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_TP::
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_Text::
-	.string "You may be stuck.\p"
-	.string "Go back to the entrance\n"
-	.string "and reset switches?$"
+	.string "ייתכן שנתקעת.\p"
+	.string "לחזור לכניסה\n"
+	.string "ולאפס את המתגים?$"
 
 @ 3->2->1
 
@@ -522,35 +522,35 @@ GoldenrodCity_UndergroundSwitches_EventScript_Item_SmokeBall::
 	end
 
 GoldenrodUnderground_Text_SilverBefore:
-    .string "Hold it!\p"
-    .string "I saw you, so I tailed you.\p"
-    .string "I don't need you underfoot while I\n"
-    .string "take care of TEAM ROCKET.\p"
-    .string "…Wait a second. You beat me before,\n"
-    .string "didn't you?\p"
-    .string "That was just a fluke.\p"
-    .string "I've been training my team and now\n"
-    .string "I will repay my debts!$"
+    .string "עצור!\p"
+    .string "ראיתי אותך, אז עקבתי אחריך.\p"
+    .string "אני לא צריך שתסתובב לי בין\n"
+    .string "הרגליים כשאני מטפל בצוות רוקט.\p"
+    .string "…רגע אחד. כבר ניצחת אותי פעם,\n"
+    .string "נכון?\p"
+    .string "זה היה סתם מזל.\p"
+    .string "אימנתי את הפוקימונים שלי, ועכשיו\n"
+    .string "אני אסגור איתך חשבון!$"
 
 GoldenrodUnderground_Text_SilverWin:
-    .string "…Why… Why do I lose?\p"
-    .string "I've assembled the toughest POKéMON.\p"
-    .string "I didn't ease up on the gas.\p"
-    .string "So why do I lose?$"
+    .string "…למה… למה אני מפסיד?\p"
+    .string "אספתי את הפוקימונים הכי קשוחים.\p"
+    .string "לא הורדתי את הרגל מהגז.\p"
+    .string "אז למה אני מפסיד?$"
 
 GoldenrodUnderground_Text_SilverAfter:
-    .string "…I don't understand…\p"
-    .string "Is what that LANCE guy said true?\p"
-    .string "That I don't treat POKéMON properly?\p"
-    .string "Love…\p"
-    .string "Trust…\p"
-    .string "Are they really what I lack?\p"
-    .string "Are they keeping me from winning?\p"
-    .string "I… I just don't understand.\p"
-    .string "But it's not going to end here.\p"
-    .string "Not now. Not because of this.\p"
-    .string "I won't give up my dream of becoming\n"
-    .string "the world's best POKéMON trainer!$"
+    .string "…אני לא מבין…\p"
+    .string "מה שהבחור הזה, לאנס, אמר - זה נכון?\p"
+    .string "שאני לא מתייחס לפוקימונים כמו שצריך?\p"
+    .string "אהבה…\p"
+    .string "אמון…\p"
+    .string "זה באמת מה שחסר לי?\p"
+    .string "זה מה שמונע ממני לנצח?\p"
+    .string "אני… אני פשוט לא מבין.\p"
+    .string "אבל זה לא ייגמר כאן.\p"
+    .string "לא עכשיו. לא בגלל זה.\p"
+    .string "אני לא אוותר על החלום שלי להיות\n"
+    .string "מאמן הפוקימונים הטוב בעולם!$"
 
 GoldenrodUnderground_Text_SilverLoss:
     .string "Humph. This is my real power, wimp.\p"
@@ -559,93 +559,93 @@ GoldenrodUnderground_Text_SilverLoss:
     .string "under my heels.$"
 
 GoldenrodUnderground_Text_GruntM11Seen:
-    .string "Open one shutter, another closes.\p"
-    .string "Bet you can't get where you want!$"
+    .string "פותחים תריס אחד, ואחר נסגר.\p"
+    .string "מתערב שלא תצליח להגיע לאן שאתה רוצה!$"
 
 GoldenrodUnderground_Text_GruntM11Beaten:
-    .string "Drat! I was sunk by indecision!$"
+    .string "אוף! ההססנות שלי הפילה אותי!$"
 
 GoldenrodUnderground_Text_GruntM11After:
-    .string "I'm confused too… The switch on the\n"
-    .string "end is the one to press first, but…$"
+    .string "גם אני מבולבל… על המתג שבקצה\n"
+    .string "צריך ללחוץ ראשון, אבל…$"
 
 GoldenrodUnderground_Text_GruntM25Seen:
-    .string "Kwahaha!\p"
-    .string "Confounded by the shutters, are we?\p"
-    .string "I'll let you in on a secret if you\n"
-    .string "can beat me!$"
+    .string "קוואהאהא!\p"
+    .string "התריסים מבלבלים אותך, מה?\p"
+    .string "אגלה לך סוד אם תצליח\n"
+    .string "לנצח אותי!$"
 
 GoldenrodUnderground_Text_GruntM25Beaten:
-    .string "Uwww… I blew it.$"
+    .string "אוווו… פישלתי.$"
 
 GoldenrodUnderground_Text_GruntM25After:
-    .string "All right. A hint!\p"
-    .string "Change the order of switching.\p"
-    .string "That'll change the ways the shutters\n"
-    .string "open and close.$"
+    .string "טוב. רמז!\p"
+    .string "צריך לשנות את סדר הלחיצה על המתגים.\p"
+    .string "ככה ישתנה האופן שבו התריסים\n"
+    .string "נפתחים ונסגרים.$"
 
 GoldenrodUnderground_Text_BurglarDuncanSeen:
-    .string "Fork over your goodies!$"
+    .string "תביא את כל מה ששווה משהו!$"
 
 GoldenrodUnderground_Text_BurglarDuncanBeaten:
-    .string "Mercy!$"
+    .string "רחמים!$"
 
 GoldenrodUnderground_Text_BurglarDuncanAfter:
-    .string "Steal and sell! That's basic in\n"
-    .string "crime, kid!$"
+    .string "לגנוב ולמכור! זה הבסיס של\n"
+    .string "הפשע, ילד!$"
 
 GoldenrodUnderground_Text_BurglarEddieSeen:
-    .string "They ditched this project before they\n"
-    .string "finished.\p"
-    .string "I'm searching for leftover loot.$"
+    .string "הם נטשו את הפרויקט הזה לפני\n"
+    .string "שסיימו אותו.\p"
+    .string "אני מחפש שלל שנשאר מאחור.$"
 
 GoldenrodUnderground_Text_BurglarEddieBeaten:
-    .string "Over the top!$"
+    .string "זה כבר מוגזם!$"
 
 GoldenrodUnderground_Text_BurglarEddieAfter:
-    .string "UNDERGROUND WAREHOUSE?\p"
-    .string "What do you want to go there for?\p"
-    .string "There's nothing down there.$"
+    .string "המחסן התת-קרקעי?\p"
+    .string "מה יש לך לחפש שם?\p"
+    .string "אין שם למטה כלום.$"
 
 GoldenrodUnderground_Text_GruntM13Seen:
-    .string "I don't care if you're lost.\p"
-    .string "You show up here, you're nothing but\n"
-    .string "a victim!$"
+    .string "לא אכפת לי אם הלכת לאיבוד.\p"
+    .string "אם הגעת לכאן, אתה לא\n"
+    .string "יותר מקורבן!$"
 
 GoldenrodUnderground_Text_GruntM13Beaten:
-    .string "Urk! Yeah, think you're cool, huh?$"
+    .string "אח! מה, חושב שאתה מגניב, הא?$"
 
 GoldenrodUnderground_Text_GruntM13After:
-    .string "You must have ice in your veins to\n"
-    .string "diss TEAM ROCKET.$"
+    .string "בטח יש לך קרח בוורידים אם אתה\n"
+    .string "מעז לזלזל בצוות רוקט.$"
 
 GoldenrodUnderground_Text_GruntF3Seen:
-    .string "Are you lost? No, you can't be.\p"
-    .string "You don't have that scared look.\p"
-    .string "I'll give you something to be\n"
-    .string "scared about!$"
+    .string "הלכת לאיבוד? לא, אין מצב.\p"
+    .string "אין לך את המבט המפוחד הזה.\p"
+    .string "אני אתן לך סיבה טובה\n"
+    .string "לפחד!$"
 
 GoldenrodUnderground_Text_GruntF3Beaten:
-    .string "How could you?$"
+    .string "איך יכולת?$"
 
 GoldenrodUnderground_Text_GruntF3After:
-    .string "Go wherever you'd like! Get lost!\n"
-    .string "See if I care!$"
+    .string "לך לאן שבא לך! לך לאיבוד!\n"
+    .string "ממש לא אכפת לי!$"
 
 GoldenrodUnderground_Text_Switch1:
-    .string "SWITCH 1 activated.$"
+    .string "מתג 1 הופעל.$"
 
 GoldenrodUnderground_Text_Switch2:
-    .string "SWITCH 2 activated.$"
+    .string "מתג 2 הופעל.$"
 
 GoldenrodUnderground_Text_Switch3:
-    .string "SWITCH 3 activated.$"
+    .string "מתג 3 הופעל.$"
 
 GoldenrodUnderground_Text_Switch1Off:
-    .string "SWITCH 1 deactivated.$"
+    .string "מתג 1 כובה.$"
 
 GoldenrodUnderground_Text_Switch2Off:
-    .string "SWITCH 2 deactivated.$"
+    .string "מתג 2 כובה.$"
 
 GoldenrodUnderground_Text_Switch3Off:
-    .string "SWITCH 3 deactivated.$"
+    .string "מתג 3 כובה.$"

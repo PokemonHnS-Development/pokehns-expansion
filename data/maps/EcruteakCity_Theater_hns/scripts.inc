@@ -106,25 +106,22 @@ EcruteakCity_Theater_Movement_KimonoGirlMoveBack:
 	step_end
 
 EcruteakCity_Theater_Text_Rocket1:
-	.string "ROCKET: Stop dancing such a serious\n"
-	.string "dance! Show me something like\l"
-	.string "a hula dance!$"
+	.string "רוקט: די לרקוד ריקוד כל כך רציני!\n"
+	.string "תראי לי משהו כמו ריקוד הולה!$"
 
 EcruteakCity_Theater_Text_KimonoRocket1:
-	.string "KIMONO GIRL: ...You mustn't push\n"
-	.string "such a request on me.$"
+	.string "נערת קימונו: …אסור לך\n"
+	.string "לכפות עליי בקשה כזאת.$"
 
 EcruteakCity_Theater_Text_Rocket2:
-	.string "ROCKET: Huh?\p"
-	.string "Are you telling me you don't\n"
-	.string "respect what the customer\l"
-	.string "wants?$"
+	.string "רוקט: מה?\p"
+	.string "את אומרת לי שאת לא\n"
+	.string "מכבדת את רצון הלקוח?$"
 
 EcruteakCity_Theater_Text_Rocket3:
-	.string "Well, then I'll show you how\n"
-	.string "to dance. I'll show you a\l"
-	.string "great one.\p"
-	.string "Wahahaha!$"
+	.string "טוב, אז אני אראה לך איך רוקדים.\n"
+	.string "אני אראה לך ריקוד מעולה.\p"
+	.string "וואהאהאהא!$"
 
 EcruteakCity_Theater_EventScript_Rocket::
 	lock
@@ -178,32 +175,26 @@ EcruteakCity_Theater_Movement_RocketLeave:
 	step_end
 
 EcruteakCity_Theater_Text_RocketSeen:
-	.string "Huh? Who are you?\n"
-	.string "You dare to get in my way?$"
+	.string "מה? מי אתה?\n"
+	.string "אתה מעז לעמוד בדרכי?$"
 
 EcruteakCity_Theater_Text_RocketBeaten:
-	.string "Oh, no!\n"
-	.string "You make me look like a\l"
-	.string "villain!$"
+	.string "אוי, לא! בגללך אני נראה כמו נבל!$"
 
 EcruteakCity_Theater_Text_RocketAfter:
-	.string "Oops! I have an important mission!\n"
-	.string "If they find out I was wasting\l"
-	.string "time here, they'll make me start\l"
-	.string "over as the lowest ROCKET GRUNT!\p"
-	.string "I better leave now!$"
+	.string "אופס! יש לי משימה חשובה!\p"
+	.string "אם יגלו שבזבזתי פה זמן, יחזירו\n"
+	.string "אותי להיות הגראנט הכי זוטר בצוות רוקט!\p"
+	.string "כדאי שאסתלק מפה!$"
 
 EcruteakCity_Theater_Text_KimonoRocket3:
-	.string "You must be {PLAYER},\n"
-	.string "correct? That was indeed\l"
-	.string "excellent.\p"
-	.string "Kind and strong... Good at\n"
-	.string "raising POKéMON as well...\p"
-	.string "That person does know what\n"
-	.string "to look for in people...\p"
-	.string "Ohoho! That was just me\n"
-	.string "talking to myself.\l"
-	.string "Never mind.$"
+	.string "אתה בטח {PLAYER},\n"
+	.string "נכון? זה אכן היה מצוין.\p"
+	.string "אדיב וחזק… וגם יודע לגדל\n"
+	.string "פוקימונים היטב…\p"
+	.string "האדם ההוא באמת יודע\n"
+	.string "מה לחפש באנשים…\p"
+	.string "אוהוהו! סתם דיברתי עם עצמי. לא חשוב.$"
 
 
 EcruteakCity_Theater_EventScript_KimonoGirl::
@@ -245,13 +236,10 @@ EcruteakCity_Theater_EventScript_ZukiDuringRocket::
 	end
 
 EcruteakCity_Theater_Text_Kimono:
-	.string "For KIMONO GIRLS like me,\n"
-	.string "dancing is everything.\p"
-	.string "I have never gone a day\n"
-	.string "without a dance practice.\p"
-	.string "POKéMON are the same.\n"
-	.string "They grow with you little\l"
-	.string "by little each day.$"
+	.string "לנערות קימונו כמוני, הריקוד הוא הכול.\p"
+	.string "מעולם לא עבר עליי יום בלי אימון ריקוד.\p"
+	.string "כך גם פוקימונים. הם גדלים\n"
+	.string "איתך עוד קצת בכל יום.$"
 
 EcruteakCity_Theater_EventScript_SurfGuy::
 	lock
@@ -400,87 +388,72 @@ EcruteakCity_Theater_Movement_SurfGuy2:
 	step_end
 
 EcruteakCity_Theater_Text_SurfGuyRocket:
-	.string "What's the deal with that\n"
-	.string "Team Rocket Grunt, messing\l"
-	.string "with that KIMONO GIRL?\p"
-	.string "You are a Trainer, right?\n"
-	.string "Please help her!$"
+	.string "מה הבעיה של הגראנט הזה מצוות רוקט,\n"
+	.string "שמציק לנערת הקימונו?\p"
+	.string "אתה מאמן, נכון? בבקשה, תעזור לה!$"
 
 EcruteakCity_Theater_Text_SurfGuyGiveSurf:
-	.string "Wonderful! You were so\n"
-	.string "courageous for your age!\p"
-	.string "It was a rare sight to see!\n"
-	.string "I want you to have this.\p"
-	.string "Don't be shy--take it!$"
+	.string "נפלא! גילית כל כך הרבה אומץ\n"
+	.string "בגיל כל כך צעיר!\p"
+	.string "זה היה מחזה נדיר!\n"
+	.string "אני רוצה שזה יהיה שלך.\p"
+	.string "אל תתבייש, קח את זה!$"
 
 EcruteakCity_Theater_Text_SurfGuyGaveSurf:
-	.string "That's SURF.\n"
-	.string "It's a move that lets POKéMON\l"
-	.string "swim across water with ease.$"
+	.string "זה המהלך גלישה. הוא מאפשר\n"
+	.string "לפוקימונים לשחות על פני המים בקלות.$"
 
 EcruteakCity_Theater_Text_SurfGuyAfter:
-	.string "Not only are the KIMONO GIRLS\n"
-	.string "great dancers, they're also\l"
-	.string "skilled at POKéMON.\p"
-	.string "But they battle only for good\n"
-	.string "reasons.\p"
-	.string "I don't know if you could beat\n"
-	.string "them if they showed their skill...$"
+	.string "נערות הקימונו הן לא רק רקדניות מעולות,\n"
+	.string "הן גם מיומנות מאוד עם פוקימונים.\p"
+	.string "אבל הן נלחמות רק מסיבות טובות.\p"
+	.string "אני לא בטוח שתוכל לנצח אותן\n"
+	.string "אם הן יראו את מלוא הכישרון שלהן…$"
 
 EcruteakCity_Theater_Text_Psyduck:
-	.string "PSYDUCK: Dau dau!$"
+	.string "פסיידאק: דאו דאו!$"
 
 EcruteakCity_Theater_Text_BoyBefore:
-	.string "Eeeeek!$"
+	.string "אייייי!$"
 
 EcruteakCity_Theater_Text_Boy:
-	.string "I was supposed to be the hero...!\n"
-	.string "So much for getting close to\l"
-	.string "a KIMONO GIRL!$"
+	.string "אני הייתי אמור להיות הגיבור…!\n"
+	.string "הלך הסיכוי שלי להתקרב לנערת קימונו!$"
 
 EcruteakCity_Theater_Text_Granny:
-	.string "That man's always with his\n"
-	.string "PSYDUCK.\p"
-	.string "Says he wants a POKéMON that\n"
-	.string "can SURF and dance.\p"
-	.string "Is he trying to make a POKéMON\n"
-	.string "that stars in synchronized\l"
-	.string "swimming?$"
+	.string "האיש הזה תמיד מסתובב\n"
+	.string "עם הפסיידאק שלו.\p"
+	.string "הוא אומר שהוא רוצה פוקימון\n"
+	.string "שיודע גלישה וגם יודע לרקוד.\p"
+	.string "הוא מנסה להפוך פוקימון\n"
+	.string "לכוכב של שחייה אמנותית?$"
 
 EcruteakCity_Theater_Text_GrannyBefore:
-	.string "Oh... Ouch...!\n"
-	.string "This stomachache!\p"
-	.string "I wouldn't let this guy act like\n"
-	.string "that if not for this pain...!$"
+	.string "אוי… איי…! כאב הבטן הזה!\p"
+	.string "לולא הכאב הזה, לא הייתי\n"
+	.string "נותנת לבחור הזה להתנהג ככה…!$"
 
 EcruteakCity_Theater_Text_Gramps:
-	.string "The KIMONO GIRLS are so\n"
-	.string "beautiful...\p"
-	.string "But they have to go through\n"
-	.string "rigorous training.\p"
-	.string "And they have to learn to follow\n"
-	.string "customs before appearing in\l"
-	.string "public.\p"
-	.string "But if you love something,\n"
-	.string "anything is possible.$"
+	.string "נערות הקימונו כל כך יפות…\p"
+	.string "אבל הן צריכות לעבור אימונים קפדניים.\p"
+	.string "והן צריכות ללמוד לשמור על המנהגים\n"
+	.string "לפני שהן מופיעות בפני קהל.\p"
+	.string "אבל כשאוהבים משהו, הכול אפשרי.$"
 
 EcruteakCity_Theater_Text_GrampsBefore:
-	.string "Oh... Ouch...!\n"
-	.string "This back pain!\p"
-	.string "I wouldn't let this guy act like\n"
-	.string "that if not for this pain...!$"
+	.string "אוי… איי…! כאב הגב הזה!\p"
+	.string "לולא הכאב הזה, לא הייתי\n"
+	.string "נותן לבחור הזה להתנהג ככה…!$"
 
 EcruteakCity_Theater_Text_Girl:
-	.string "The KIMONO GIRLS are my big\n"
-	.string "sisters! I'll be like them one\l"
-	.string "day!$"
+	.string "נערות הקימונו הן האחיות הגדולות שלי!\n"
+	.string "יום אחד אהיה כמוהן!$"
 
 EcruteakCity_Theater_Text_GirlBefore:
-	.string "I like that funny dance!$"
+	.string "אני אוהבת את הריקוד המצחיק הזה!$"
 
 EcruteakCity_Theater_Text_FancyPanel:
-	.string "It's a fancy panel that's\n"
-	.string "decorated with flowers.$"
+	.string "זה לוח מהודר מעוטר בפרחים.$"
 
 EcruteakCity_Theater_Trigger_PreBattleCutsceneLeft::
 	lock
@@ -969,117 +942,96 @@ EcruteakCity_Theater_Text_KimonoGirlBeaten:
 	.string "...$"
 
 EcruteakCity_Theater_Text_ZukiSeen:
-	.string "Welcome. My name is ZUKI.\n"
-	.string "I met you previously in VIOLET\l"
-	.string "CITY.\p"
-	.string "To bring back {STR_VAR_1}, we\n"
-	.string "needed someone with the right bond\l"
-	.string "with POKéMON.\p"
-	.string "We asked MR. POKéMON to give this\n"
-	.string "MYSTERY EGG to\l"
-	.string "whoever showed potential.\p"
-	.string "The EGG went from MR. POKéMON\n"
-	.string "to PROF.ELM, then to you.\p"
-	.string "But being pure alone is not enough\n"
-	.string "to face the power of this POKéMON.$"
+	.string "ברוך הבא. שמי זוקי.\n"
+	.string "כבר נפגשנו בעבר, בעיר ויולט.\p"
+	.string "כדי להחזיר את {STR_VAR_1}, היינו\n"
+	.string "צריכות מישהו עם הקשר הנכון לפוקימונים.\p"
+	.string "ביקשנו ממר פוקימון לתת את הביצה\n"
+	.string "המסתורית הזאת למי שיגלה פוטנציאל.\p"
+	.string "הביצה עברה ממר פוקימון\n"
+	.string "לפרופ' אלם, ואז אליך.\p"
+	.string "אבל טוהר לבדו לא מספיק כדי\n"
+	.string "לעמוד מול הכוח של הפוקימון הזה.$"
 
 EcruteakCity_Theater_Text_ZukiSeenAgain:
-	.string "I will test you to see if you are\n"
-	.string "a good Trainer.\p"
-	.string "Are you ready, {PLAYER}?$"
+	.string "אבחן אותך כדי לראות אם אתה מאמן טוב.\p"
+	.string "אתה מוכן, {PLAYER}?$"
 
 EcruteakCity_Theater_Text_ZukiNo:
-	.string "That is fine...\n"
-	.string "I will wait for you to get\l"
-	.string "ready.$"
+	.string "זה בסדר… אחכה לך עד שתהיה מוכן.$"
 
 EcruteakCity_Theater_Text_NaokoSeen:
-	.string "You are quite strong. You helped\n"
-	.string "me in the ILEX FOREST.\p"
-	.string "I'm NAOKO--not so good with\n"
-	.string "directions.\p"
-	.string "I saw you defeat Team Rocket\n"
-	.string "when KURT was in trouble at\l"
-	.string "the SLOWPOKE WELL.\p"
-	.string "Let me challenge you and your\n"
-	.string "POKéMON!$"
+	.string "אתה חזק למדי. עזרת לי ביער אילקס.\p"
+	.string "אני נאוקו, זאת שלא כל כך טובה\n"
+	.string "בהתמצאות.\p"
+	.string "ראיתי אותך מביס את צוות רוקט\n"
+	.string "כשהיה קורט בצרה בבאר סלופוק.\p"
+	.string "אני מאתגרת אותך ואת הפוקימונים שלך!$"
 
 EcruteakCity_Theater_Text_MikiSeen:
-	.string "You're quite the Trainer. I\n"
-	.string "remember you chased off that\l"
-	.string "Rocket Grunt from right here.\p"
-	.string "Thank you for that.\p"
-	.string "Though, I'm a Trainer too.\n"
-	.string "She who knows the most speaks\l"
-	.string "the least!\p"
-	.string "I am MIKI--the KIMONO GIRL!\p"
-	.string "Let me challenge you and your\n"
-	.string "POKéMON!$"
+	.string "אתה מאמן של ממש. אני זוכרת שגירשת\n"
+	.string "את הגראנט מצוות רוקט ממש מכאן.\p"
+	.string "תודה לך על כך.\p"
+	.string "אבל גם אני מאמנת.\n"
+	.string "מי שיודעת הכי הרבה, מדברת הכי מעט!\p"
+	.string "אני מיקי, נערת הקימונו!\p"
+	.string "אני מאתגרת אותך ואת הפוקימונים שלך!$"
 
 EcruteakCity_Theater_Text_SayoSeen:
-	.string "Excellent spirit! You got me\n"
-	.string "off the ice by pushing me.\p"
-	.string "I skate in sandals.\n"
-	.string "I am SAYO--the KIMONO GIRL!\p"
-	.string "I listened in the DRAGON'S DEN\n"
-	.string "when you passed the Elder's test.\p"
-	.string "Let me challenge you and your\n"
-	.string "POKéMON!$"
+	.string "רוח מצוינת! חילצת אותי\n"
+	.string "מהקרח כשדחפת אותי.\p"
+	.string "אני מחליקה בסנדלים.\n"
+	.string "אני סאיו, נערת הקימונו!\p"
+	.string "הקשבתי במאורת הדרקון\n"
+	.string "כשעברת את המבחן של הזקן.\p"
+	.string "אני מאתגרת אותך ואת הפוקימונים שלך!$"
 
 EcruteakCity_Theater_Text_KuniSeen:
-	.string "I'm the last one.\p"
-	.string "You were dependable at the\n"
-	.string "GOLDENROD TUNNEL.\p"
-	.string "I'm the one who twirls even\n"
-	.string "underground--KUNI!\p"
-	.string "I saw you thwart Rocket's\n"
-	.string "plan to take the Radio Tower.\p"
-	.string "Now show me your strength!\n"
-	.string "Let me challenge you and your\l"
-	.string "POKéMON!$"
+	.string "אני האחרונה.\p"
+	.string "אפשר היה לסמוך עליך\n"
+	.string "במעבר התת-קרקעי של גולדנרוד.\p"
+	.string "אני זאת שמסתחררת\n"
+	.string "אפילו מתחת לאדמה, קוני!\p"
+	.string "ראיתי אותך מסכל את התוכנית\n"
+	.string "של רוקט להשתלט על מגדל הרדיו.\p"
+	.string "עכשיו תראה לי את הכוח שלך!\n"
+	.string "אני מאתגרת אותך ואת הפוקימונים שלך!$"
 
 EcruteakCity_Theater_Text_ZukiDone:
-	.string "We were not wrong about you.\n"
-	.string "You are indeed worthy of this...\p"
-	.string "Please take it.$"
+	.string "לא טעינו לגביך. אתה אכן ראוי לזה…\p"
+	.string "בבקשה, זה בשבילך.$"
 
 EcruteakCity_Theater_Text_GirlHooh:
-	.string "Big sisters! I just saw the\n"
-	.string "big shadow of a POKéMON over\l"
-	.string "the TIN TOWER!\p"
-	.string "It could be...$"
+	.string "אחיות שלי! הרגע ראיתי צל ענקי\n"
+	.string "של פוקימון מעל מגדל הבדיל!\p"
+	.string "אולי זה…$"
 
 EcruteakCity_Theater_Text_GirlLugia:
-	.string "Big sisters! I just saw the\n"
-	.string "big shadow of a POKéMON in the\l"
-	.string "WHIRL ISLANDS' waters!\p"
-	.string "It could be...$"
+	.string "אחיות שלי! הרגע ראיתי צל ענקי של\n"
+	.string "פוקימון במים של איי המערבולת!\p"
+	.string "אולי זה…$"
 
 EcruteakCity_Theater_Text_ZukiHooh:
-	.string "ZUKI: {PLAYER}!\n"
-	.string "We'll be at the TIN TOWER.\n"
-	.string "See you there!$"
+	.string "זוקי: {PLAYER}!\n"
+	.string "נהיה במגדל הבדיל. נתראה שם!$"
 
 EcruteakCity_Theater_Text_ZukiLugia:
-	.string "ZUKI: {PLAYER}!\n"
-	.string "We'll be at the WHIRL ISLANDS.\l"
-	.string "See you there!$"
+	.string "זוקי: {PLAYER}!\n"
+	.string "נהיה באיי המערבולת. נתראה שם!$"
 
 EcruteakCity_Theater_Text_KimonoDone:
-	.string "We are rehearsing a dance.$"
+	.string "אנחנו מתאמנות על ריקוד.$"
 
 EcruteakCity_Theater_Text_ZukiAfterAll:
-	.string "Thank you for your help the\n"
-	.string "other day.\p"
-	.string "You've shown the bond between\n"
-	.string "people can grow with POKéMON...\p"
-	.string "We appreciate how you lived up\n"
-	.string "to our hopes, {PLAYER}!\p"
-	.string "If you learned anything from\n"
-	.string "this, thank MR. POKéMON and\l"
-	.string "PROF.ELM...$"
+	.string "תודה על העזרה שלך לפני כמה ימים.\p"
+	.string "הראית שהקשר בין אנשים יכול\n"
+	.string "לצמוח בעזרת פוקימונים…\p"
+	.string "אנחנו מעריכות את זה שעמדת\n"
+	.string "בציפיות שלנו, {PLAYER}!\p"
+	.string "אם למדת משהו מכל זה,\n"
+	.string "עליך להודות למר פוקימון ולפרופ' אלם…$"
 
 EcruteakCity_Theater_Text_KimonoGirlsBeforeBattle:
-	.string "Talk to ZUKI in the middle\n"
-	.string "when you are ready.$"
+	.string "כשתהיה מוכן,\n"
+	.string "דבר עם זוקי שעומדת באמצע.$"
 

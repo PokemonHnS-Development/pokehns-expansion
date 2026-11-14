@@ -1,0 +1,13 @@
+# summary -> party menu (action list still open) -> party menu -> overworld, start menu closed
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+w32 @gMenuCallback@ 0                     # the closed start menu leaves its callback set

@@ -8,6 +8,8 @@
 #include "battle_z_move.h"
 #include "event_data.h"
 #include "fieldmap.h"
+#include "string_util.h"
+#include "text.h"
 #include "item_menu.h"
 #include "main.h"
 #include "malloc.h"
@@ -1575,6 +1577,7 @@ void TestRunner_Battle_RecordMessage(const u8 *string)
     s32 queuedEvent;
     s32 match;
     struct QueuedEvent *event;
+
 
     if (DATA.trial.queuedEvent == DATA.queuedEventsCount)
         return;
@@ -3403,8 +3406,37 @@ void QueueExp(u32 sourceLine, struct BattlePokemon *battler, struct ExpEventCont
     };
 }
 
+#if TEXT_RTL
+// The tests expect the English messages. A Hebrew build prints Hebrew, so each expected message is
+// looked up and replaced by the Hebrew the game prints for it.
+struct HebrewTestMessage
+{
+    u8 en[128];
+    u8 he[128];
+};
+
+static const struct HebrewTestMessage sHebrewTestMessages[] =
+{
+#include "hebrew_battle_messages.h"
+};
+
+static const u8 *ToHebrewTestMessage(const u8 *pattern)
+{
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(sHebrewTestMessages); i++)
+    {
+        if (StringCompare(sHebrewTestMessages[i].en, pattern) == 0)
+            return sHebrewTestMessages[i].he;
+    }
+    return pattern;
+}
+#endif
+
 void QueueMessage(u32 sourceLine, const u8 *pattern)
 {
+#if TEXT_RTL
+    pattern = ToHebrewTestMessage(pattern);
+#endif
     if (gTestRunnerState.expectedFailState == EXPECT_FAIL_OPEN)
         gTestRunnerState.expectedFailState = EXPECT_FAIL_SCENE_OPEN;
 

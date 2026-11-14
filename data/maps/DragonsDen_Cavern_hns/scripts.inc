@@ -20,10 +20,9 @@ DragonsDen_EventScript_ClairRematch::
     end
 
 DragonsDen_Text_Clair:
-    .string "{PLAYER}… So you're here.\p"
-	.string "If you think you can keep up,\n"
-	.string "with me, come to the FIGHTING\l"
-	.string "DOJO in SAFFRON.$"
+    .string "{PLAYER}… אז הגעת.\p"
+    .string "אם אתה חושב שתעמוד בקצב שלי,\n"
+    .string "בוא לדוג'ו הלחימה בסאפרון.$"
 
 DragonsDen_Cavern_Trigger_ClairLeft::
 	lock
@@ -142,34 +141,33 @@ DragonsDen_Cavern_Movement_ClairLeaveRight:
 	step_end
 
 DragonsDen_Cavern_Text_Clair_GiveTM:
-    .string "CLAIR: WAIT!\p"
-	.string "I'm sorry about this.\n"
-    .string "Here, take this as my apology.$"
+    .string "קלייר: רגע!\p"
+    .string "אני מצטערת על כל זה.\n"
+    .string "הנה, קח את זה כהתנצלות.$"
 
 DragonsDen_Cavern_Text_Clair_ExplainTM:
-    .string "DRAGON PULSE is a kind of er...\n"
-	.string "never mind!\p"
-	.string "It's a huge energy of some kind.\p"
-	.string "If you don't want it, you don't have\n"
-	.string "to take it.$"
+    .string "דופק דרקון הוא סוג של, אה…\n"
+    .string "לא משנה!\p"
+    .string "זו אנרגיה עצומה מסוג כלשהו.\p"
+    .string "אם לא רוצים אותו, לא חייבים\n"
+    .string "לקחת אותו.$"
 
 DragonsDen_Cavern_Text_ClairWhatsTheMatter:
-    .string "What's the matter? Aren't\n"
-    .string "you going on to the POKéMON\l"
-    .string "LEAGUE?\p"
-    .string "After you become CHAMPION, you\n"
-    .string "can rematch any GYM LEADER you\l"
-    .string "want.\p"
-    .string "Go to the POKéMON LEAGUE.\p"
-    .string "Do you know how to get there?\p"
-    .string "From here, go to NEW BARK TOWN.\p"
-    .string "Then SURF east to POKéMON LEAGUE.\p"
-    .string "The route there is very tough.\p"
-    .string "Don't you dare lose at the POKéMON\n"
-    .string "LEAGUE!\p"
-    .string "If you do, I'll feel even worse\n"
-    .string "about having lost to you!\p"
-    .string "Give it everything you've got.$"
+    .string "מה קרה? אתה לא ממשיך\n"
+    .string "לליגת הפוקימון?\p"
+    .string "אחרי שתהיה אלוף, תוכל להילחם\n"
+    .string "שוב בכל מנהיג מכון שתרצה.\p"
+    .string "לך לליגת הפוקימון.\p"
+    .string "אתה יודע איך מגיעים לשם?\p"
+    .string "מכאן, לך לעיירה ניו בארק.\p"
+    .string "משם, השתמש בגלישה והמשך\n"
+    .string "מזרחה לליגת הפוקימון.\p"
+    .string "הדרך לשם קשה מאוד.\p"
+    .string "שלא תעז להפסיד\n"
+    .string "בליגת הפוקימון!\p"
+    .string "אם תפסיד, ארגיש עוד יותר רע\n"
+    .string "על זה שהפסדתי לך!\p"
+    .string "תן את הכול.$"
 
 DragonsDen_Cavern_EventScript_Darin::
 	trainerbattle_single TRAINER_DARIN_HNS, DragonsDen_Cavern_Text_CooltrainermDarinSeen, DragonsDen_Cavern_Text_CooltrainermDarinBeaten
@@ -230,46 +228,45 @@ DragonsDen_Cavern_Text_SilverTraining2:
     .string "Learn to stay out of my way…$"
 
 DragonsDen_Cavern_Text_CooltrainermDarinSeen:
-    .string "You! How dare you enter\n"
-    .string "uninvited!$"
+    .string "אתה! איך אתה מעז להיכנס\n"
+    .string "בלי הזמנה!$"
 
 DragonsDen_Cavern_Text_CooltrainermDarinBeaten:
-    .string "S-strong!$"
+    .string "ח-חזק!$"
 
 DragonsDen_Cavern_Text_CooltrainermDarinAfter:
-    .string "The SHRINE ahead is home to the\n"
-    .string "MASTER of our dragon-user clan.\p"
-    .string "You're not allowed to just go in!$"
+    .string "המקדש שבהמשך הוא ביתו של המאסטר\n"
+    .string "של שבט מאלפי הדרקונים שלנו.\p"
+    .string "אסור סתם להיכנס לשם!$"
 
 DragonsDen_Cavern_Text_CooltrainerfCaraSeen:
-    .string "You shouldn't be in here!$"
+    .string "אסור לך להיות כאן!$"
 
 DragonsDen_Cavern_Text_CooltrainerfCaraBeaten:
-    .string "Oh yikes, I lost!$"
+    .string "אוי, לא! הפסדתי!$"
 
 DragonsDen_Cavern_Text_CooltrainerfCaraAfter:
-    .string "Soon I'm going to get permission\n"
-    .string "from our MASTER to use dragons.\p"
-    .string "When I do, I'm going to become an\n"
-    .string "admirable dragon trainer and gain\l"
-    .string "our MASTER's approval.$"
+    .string "בקרוב אקבל מהמאסטר שלנו\n"
+    .string "רשות להשתמש בדרקונים.\p"
+    .string "וכשזה יקרה, אהפוך למאלפת דרקונים\n"
+    .string "מעוררת הערצה ואזכה בהכרת המאסטר.$"
 
 DragonsDen_Cavern_Text_TwinsLeaandPia1Seen:
-    .string "It's a stranger we don't know.$"
+    .string "זה זר שאנחנו לא מכירות.$"
 
 DragonsDen_Cavern_Text_TwinsLeaandPia1Beaten:
-    .string "Ouchies.$"
+    .string "אאוץ'.$"
 
 DragonsDen_Cavern_Text_TwinsLeaandPia1After:
-    .string "It was like having to battle\n"
-    .string "LANCE.$"
+    .string "זה היה כמו להילחם\n"
+    .string "בלאנס.$"
 
 DragonsDen_Cavern_Text_TwinsLeaandPia2Seen:
-    .string "Who are you?$"
+    .string "מי אתה?$"
 
 DragonsDen_Cavern_Text_TwinsLeaandPia2Beaten:
-    .string "Meanie.$"
+    .string "רשע.$"
 
 DragonsDen_Cavern_Text_TwinsLeaandPia2After:
-    .string "We'll tell on you.\p"
-    .string "MASTER will be angry with you.$"
+    .string "אנחנו נלשין עליך.\p"
+    .string "המאסטר יכעס עליך.$"

@@ -1,0 +1,31 @@
+# Samson Oak's villa on Melemele (Alola_Melemele_SamsonOakVilla_Dialogue at (4,5)) on ladder 6, with
+# every island caught and every totem beaten so the dialogue reaches the battle offer (:22): the
+# YES/NO, NO (Text_8), then YES: Text_4, no_intro TRAINER_SAMSON_OAK_HNS (send-out line), defeat
+# (Text_5) and Text_6; then FLAG_DEFEATED_SAMSON_OAK (Text_2). First the dynmultichoice branch
+# (not caught all) with B.
+start saves/r6_story_l6.sav
+include _base.txt
+ev clearflag FLAG_BATTLED_TAPU_KOKO; clearflag FLAG_CAUGHT_ALL_AKALA; clearflag FLAG_DEFEATED_SAMSON_OAK; cleartrainerflag TRAINER_SAMSON_OAK_HNS; end
+warpto MAP_MELEMELE_PLAYER_HOUSE_HNS 4 7
+vars VAR_ALOLA_STATE
+objs
+approach 1
+tap A 4
+scene A_menu 20000
+tap B 4
+scene A_menu_b 20000
+ev setflag FLAG_CAUGHT_ALL_AKALA; setflag FLAG_CAUGHT_ALL_ULAULA; setflag FLAG_CAUGHT_ALL_PONI; setflag FLAG_CAUGHT_ALL_MELEMELE; setflag FLAG_DEFEATED_MELEMELE_TOTEM; setflag FLAG_DEFEATED_AKALA_TOTEM; setflag FLAG_DEFEATED_ULAULA_TOTEM; setflag FLAG_DEFEATED_PONI_TOTEM; end
+approach 1
+tap A 4
+scene A_offer 20000
+tap B 4
+scene A_no 20000
+approach 1
+tap A 4
+scene A_offer2 20000
+tap A 4
+scene A_yes 20000
+include _battle.txt
+approach 1
+tap A 4
+scene A_again 20000

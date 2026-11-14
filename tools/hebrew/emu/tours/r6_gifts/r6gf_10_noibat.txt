@@ -1,0 +1,20 @@
+# Ula'ula house, Phantonomy (8,9) at VAR_ALOLA_STATE 4: Alola_Ulaula_House_Phant_1
+# (UlaUla_House_hns/scripts.inc:14-47): 'welcome, thanks for playing' (autoclose), his jumps
+# (player below him, (8,10)), 'you earned this', giveegg SPECIES_NOIBAT + MUS_HG_OBTAIN_EGG
+# 'received an Egg', 'my favourite Pokemon' pages. Then talking again (state 5 -> Text_7).
+start saves/r6_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+ev setvar VAR_ALOLA_STATE, 4; clearflag FLAG_HIDE_PHANT_INSIDE; end
+warpto MAP_ULA_ULA_HOUSE_HNS 8 10
+face UP
+snap ph_field
+tap A 4
+scene ph_egg 8000 8
+snap ph_egg_end
+partyinfo
+vars VAR_ALOLA_STATE
+face UP
+tap A 4
+scene ph_again 4000
+snap ph_again_end

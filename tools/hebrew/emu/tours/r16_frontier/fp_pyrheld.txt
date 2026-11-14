@@ -1,0 +1,47 @@
+# Battle Pyramid lobby: the held-item storing party menu (PARTY_MENU_TYPE_STORE_PYRAMID_HELD_ITEMS) that the
+# lobby opens after a challenge when a Pokemon holds an item (BattleFrontier_BattlePyramidLobby_hns/scripts.inc:52,
+# :470, special BattlePyramidChooseMonHeldItems src/party_menu.c:8189). Party slots 4 and 5 hold an item.
+# The boxes' HAVE / DON'T HAVE labels (gText_Have / gText_DontHave, party_menu.c:1123-1129), slot 4: 'is
+# already holding' (gText_AlreadyHoldingOne) with TAKE / TOSS, TAKE: 'received X from Y'
+# (gText_ReceivedItemFromPkmn); slot 5: TOSS: 'throw away X?' (gText_ThrowAwayItem), YES: 'X was thrown away'
+# (gText_ItemThrownAway). Stand-in: the special is started from RAM in the lobby (the real call follows a
+# finished challenge).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+partyfree 4
+ev givemon SPECIES_PIKACHU, 50, item=ITEM_LIGHT_BALL; givemon SPECIES_EEVEE, 50, item=ITEM_ORAN_BERRY; setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY_HNS 7 13
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart special BattlePyramidChooseMonHeldItems; waitstate; end
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap fp_ph_00_party_labels
+seek 8 @gPartyMenu+9@ 4 DOWN
+waitquiet
+tap A 0
+waitquiet
+snap fp_ph_01_already_holding
+tap A 0
+waitkey 300
+waitquiet
+snap fp_ph_02_received
+tap A 0
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap fp_ph_03_after_take
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 0
+waitquiet
+snap fp_ph_04_holding5
+tap DOWN 4
+waitquiet
+snap fp_ph_05_toss_row
+tap A 0
+waitquiet
+snap fp_ph_06_throw_away_q
+tap A 0
+waitkey 300
+waitquiet
+snap fp_ph_07_thrown

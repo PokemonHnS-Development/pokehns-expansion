@@ -133,20 +133,20 @@ static const u8 sText_TenDashes[] = _("----------");
 ALIGNED(4) static const u8 sExpandedPlaceholder_PokedexDescription[] = _("");
 static const u16 sSizeScreenSilhouette_Pal[] = INCBIN_U16("graphics/pokedex/size_silhouette.gbapal");
 
-static const u8 sText_Stats_Buttons[] = _("{A_BUTTON}TOGGLE   {DPAD_UPDOWN}MOVES");
+static const u8 sText_Stats_Buttons[] = _("{A_BUTTON}החלפה {DPAD_UPDOWN}מהלכים");
 static const u8 sText_Stats_Buttons_Decapped[] = _("{A_BUTTON}Toggle   {DPAD_UPDOWN}Moves");
-static const u8 sText_Stats_HP[] = _("HP");
-static const u8 sText_Stats_Attack[] = _("ATK");
-static const u8 sText_Stats_Defense[] = _("DEF");
-static const u8 sText_Stats_Speed[] = _("SPE");
-static const u8 sText_Stats_SpAttack[] = _("SP.A");
-static const u8 sText_Stats_SpDefense[] = _("SP.D");
+static const u8 sText_Stats_HP[] = _("נ”ח");
+static const u8 sText_Stats_Attack[] = _("הת'");
+static const u8 sText_Stats_Defense[] = _("הגנ'");
+static const u8 sText_Stats_Speed[] = _("מהי'");
+static const u8 sText_Stats_SpAttack[] = _("ת”מ");
+static const u8 sText_Stats_SpDefense[] = _("הג”מ");
 static const u8 sText_Stats_EV_Plus1[] = _("{UP_ARROW_2}");
 static const u8 sText_Stats_EV_Plus2[] = _("{UP_ARROW_2}{UP_ARROW_2}");
 static const u8 sText_Stats_EV_Plus3[] = _("{UP_ARROW_2}{UP_ARROW_2}{UP_ARROW_2}");
 static const u8 sText_Stats_EvStr1Str2[] = _("{STR_VAR_1}{STR_VAR_2}");
 static const u8 sText_Stats_MoveSelectedMax[] = _("{STR_VAR_1} / {STR_VAR_2}");
-static const u8 sText_Stats_MoveLevel[] = _("LVL");
+static const u8 sText_Stats_MoveLevel[] = _("רמה");
 static const u8 sText_Stats_Gender_0[] = _("♂");
 static const u8 sText_Stats_Gender_12_5[] = _("♀ 1/7 ♂"); //_("♀ 12.5 / 87.5 ♂");
 static const u8 sText_Stats_Gender_25[] = _("♀ 1/3 ♂");     //_("♀ 25 / 75 ♂");
@@ -154,61 +154,61 @@ static const u8 sText_Stats_Gender_50[] = _("♀ 1/1 ♂");     //_("♀ 50 / 50
 static const u8 sText_Stats_Gender_75[] = _("♀ 3/1 ♂");     //_("♀ 75 / 25 ♂");
 static const u8 sText_Stats_Gender_87_5[] = _("♀ 7/1 ♂");
 static const u8 sText_Stats_Gender_100[] = _("♀");
-static const u8 sText_Stats_CatchRate[] = _("CATCH{0x5B}: ");
-static const u8 sText_Stats_CatchRate_Legend[] = _("LEGENDARY");
-static const u8 sText_Stats_CatchRate_VeryHard[] = _("VERY HARD");
-static const u8 sText_Stats_CatchRate_Difficult[] = _("DIFFICULT");
-static const u8 sText_Stats_CatchRate_Medium[] = _("MEDIUM");
-static const u8 sText_Stats_CatchRate_Relaxed[] = _("RELAXED");
-static const u8 sText_Stats_CatchRate_Easy[] = _("EASY");
-static const u8 sText_Stats_ExpYield[] = _("EXP YIELD: ");
-static const u8 sText_Stats_EggCycles[] = _("HATCH STEPS:");
+static const u8 sText_Stats_CatchRate[] = _("לכידה{0x5B}: ");
+static const u8 sText_Stats_CatchRate_Legend[] = _("אגדי");
+static const u8 sText_Stats_CatchRate_VeryHard[] = _("קשה מאוד");
+static const u8 sText_Stats_CatchRate_Difficult[] = _("קשה");
+static const u8 sText_Stats_CatchRate_Medium[] = _("בינוני");
+static const u8 sText_Stats_CatchRate_Relaxed[] = _("די קל");
+static const u8 sText_Stats_CatchRate_Easy[] = _("קל");
+static const u8 sText_Stats_ExpYield[] = _("ניסיון מוענק: ");
+static const u8 sText_Stats_EggCycles[] = _("זמן בקיעה:");
 static const u8 sText_Stats_EggCycles_VeryFast[] = _("{EMOJI_BOLT}{EMOJI_DIZZYEGG}");
 static const u8 sText_Stats_EggCycles_Fast[] = _("{EMOJI_DIZZYEGG}");
 static const u8 sText_Stats_EggCycles_Normal[] = _("{EMOJI_DIZZYEGG}{EMOJI_DIZZYEGG}");
 static const u8 sText_Stats_EggCycles_Slow[] = _("{EMOJI_DIZZYEGG}{EMOJI_DIZZYEGG}{EMOJI_DIZZYEGG}");
-static const u8 sText_Stats_Growthrate[] = _("GROW: ");
-static const u8 sText_Stats_Friendship[] = _("FRIENDSHIP:");
+static const u8 sText_Stats_Growthrate[] = _("גידול: ");
+static const u8 sText_Stats_Friendship[] = _("חברות:");
 static const u8 sText_Stats_Friendship_BigAnger[] = _("{EMOJI_BIGANGER}");
 static const u8 sText_Stats_Friendship_Neutral[] = _("{EMOJI_NEUTRAL}");
 static const u8 sText_Stats_Friendship_Happy[] = _("{EMOJI_HAPPY}");
 static const u8 sText_Stats_Friendship_BigSmile[] = _("{EMOJI_BIGSMILE}");
-static const u8 sText_Stats_MEDIUM_FAST[] = _("MED. FAST");
-static const u8 sText_Stats_ERRATIC[] = _("ERRATIC");
-static const u8 sText_Stats_FLUCTUATING[] = _("FLUCTUATING");
-static const u8 sText_Stats_MEDIUM_SLOW[] = _("MED. SLOW");
-static const u8 sText_Stats_FAST[] = _("FAST");
-static const u8 sText_Stats_SLOW[] = _("SLOW");
+static const u8 sText_Stats_MEDIUM_FAST[] = _("בינ' מהיר");
+static const u8 sText_Stats_ERRATIC[] = _("לא סדיר");
+static const u8 sText_Stats_FLUCTUATING[] = _("תנודתי");
+static const u8 sText_Stats_MEDIUM_SLOW[] = _("בינ' איטי");
+static const u8 sText_Stats_FAST[] = _("מהיר");
+static const u8 sText_Stats_SLOW[] = _("איטי");
 static const u8 sText_Stats_ContestHeart[] = _("H");
 static const u8 sText_Stats_Minus[] = _("-");
 static const u8 sText_Stats_eggGroup[] = _("EGG G1:");
 static const u8 sText_Stats_eggGroup_Groups[] = _("{STR_VAR_1}/{STR_VAR_2}");
-static const u8 sText_Stats_eggGroup_MONSTER[] = _("MONSTER");
-static const u8 sText_Stats_eggGroup_WATER_1[] = _("WATER {CIRCLE_1}");
-static const u8 sText_Stats_eggGroup_BUG[] = _("BUG");
-static const u8 sText_Stats_eggGroup_FLYING[] = _("FLYING");
-static const u8 sText_Stats_eggGroup_FIELD[] = _("FIELD");
-static const u8 sText_Stats_eggGroup_FAIRY[] = _("FAIRY");
-static const u8 sText_Stats_eggGroup_GRASS[] = _("GRASS");
-static const u8 sText_Stats_eggGroup_HUMAN_LIKE[] = _("HUMANE");
-static const u8 sText_Stats_eggGroup_WATER_3[] = _("WATER {CIRCLE_3}");
-static const u8 sText_Stats_eggGroup_MINERAL[] = _("MINERAL");
-static const u8 sText_Stats_eggGroup_AMORPHOUS[] = _("AMORPHOUS");
-static const u8 sText_Stats_eggGroup_WATER_2[] = _("WATER {CIRCLE_2}");
-static const u8 sText_Stats_eggGroup_DITTO[] = _("DITTO");
-static const u8 sText_Stats_eggGroup_DRAGON[] = _("DRAGON");
+static const u8 sText_Stats_eggGroup_MONSTER[] = _("מפלצת");
+static const u8 sText_Stats_eggGroup_WATER_1[] = _("מים {CIRCLE_1}");
+static const u8 sText_Stats_eggGroup_BUG[] = _("חרק");
+static const u8 sText_Stats_eggGroup_FLYING[] = _("תעופה");
+static const u8 sText_Stats_eggGroup_FIELD[] = _("שדה");
+static const u8 sText_Stats_eggGroup_FAIRY[] = _("פיה");
+static const u8 sText_Stats_eggGroup_GRASS[] = _("עשב");
+static const u8 sText_Stats_eggGroup_HUMAN_LIKE[] = _("דמוי אדם");
+static const u8 sText_Stats_eggGroup_WATER_3[] = _("מים {CIRCLE_3}");
+static const u8 sText_Stats_eggGroup_MINERAL[] = _("מינרל");
+static const u8 sText_Stats_eggGroup_AMORPHOUS[] = _("אמורפי");
+static const u8 sText_Stats_eggGroup_WATER_2[] = _("מים {CIRCLE_2}");
+static const u8 sText_Stats_eggGroup_DITTO[] = _("דיטו");
+static const u8 sText_Stats_eggGroup_DRAGON[] = _("דרקון");
 static const u8 sText_Stats_eggGroup_NO_EGGS_DISCOVERED[] = _("---");
 static const u8 sText_Stats_eggGroup_UNKNOWN[] = _("???");
-static const u8 sText_Dex_SEEN[] = _("SEEN");
-static const u8 sText_Dex_OWN[] = _("OWN");
+static const u8 sText_Dex_SEEN[] = _("נראו");
+static const u8 sText_Dex_OWN[] = _("נתפסו");
 
-static const u8 sText_EVO_Buttons[] = _("{DPAD_UPDOWN}EVOs  {A_BUTTON}CHECK");
+static const u8 sText_EVO_Buttons[] = _("{DPAD_UPDOWN}התפתחות  {A_BUTTON}עיון");
 static const u8 sText_EVO_Buttons_Decapped[] = _("{DPAD_UPDOWN}Evos  {A_BUTTON}Check");
-static const u8 sText_EVO_Buttons_PE[] = _("{DPAD_UPDOWN}EVOs  {A_BUTTON}CHECK  {START_BUTTON}FORMs");
+static const u8 sText_EVO_Buttons_PE[] = _("{DPAD_UPDOWN}התפתחות {A_BUTTON}עיון {START_BUTTON}צורות");
 static const u8 sText_EVO_Buttons_Decapped_PE[] = _("{DPAD_UPDOWN}Evos  {A_BUTTON}Check  {START_BUTTON}Forms");
 static const u8 sText_EVO_Name[] = _("{STR_VAR_3}:");
-static const u8 sText_EVO_PreEvo[] = _("{STR_VAR_1} evolves from {STR_VAR_2}");
-static const u8 sText_EVO_PreEvo_PE_Mega[] = _("{STR_VAR_1} Mega Evolves with {STR_VAR_2}");
+static const u8 sText_EVO_PreEvo[] = _("{STR_VAR_1} מתפתח מ{STR_VAR_2}");
+static const u8 sText_EVO_PreEvo_PE_Mega[] = _("{STR_VAR_1} מתפתח למגה עם {STR_VAR_2}");
 static const u8 sText_EVO_LEVEL_SILCOON[] = _("{LV}{UP_ARROW} to {STR_VAR_2}, Silcoon persona");
 static const u8 sText_EVO_LEVEL_CASCOON[] = _("{LV}{UP_ARROW} to {STR_VAR_2}, Cascoon persona");
 static const u8 sText_EVO_MOVE[] = _("{LV}{UP_ARROW}, knows {STR_VAR_2}");
@@ -222,13 +222,13 @@ static const u8 sText_EVO_USE_MOVE_TWENTY_TIMES[] = _("{LV}{UP_ARROW} after 20x 
 static const u8 sText_EVO_RECOIL_DAMAGE_MALE[] = _("{LV}{UP_ARROW} with {STR_VAR_2} recoil, male");
 static const u8 sText_EVO_RECOIL_DAMAGE_FEMALE[] = _("{LV}{UP_ARROW} with {STR_VAR_2} recoil, female");
 static const u8 sText_EVO_DEFEAT_THREE_WITH_ITEM[] = _("{LV}{UP_ARROW} defeating 3 {STR_VAR_3} holding {STR_VAR_2}");
-static const u8 sText_EVO_NONE[] = _("{STR_VAR_1} has no evolution.");
+static const u8 sText_EVO_NONE[] = _("{STR_VAR_1} לא מתפתח.");
 
-static const u8 sText_FORMS_Buttons_PE[] = _("{A_BUTTON}FORM MODE  {START_BUTTON}EVOs");
-static const u8 sText_FORMS_Buttons_Decapped_PE[] = _("{START_BUTTON}Evos");
-static const u8 sText_FORMS_Buttons_Submenu_PE[] = _("{DPAD_NONE}FORMs {A_BUTTON}CHECK {START_BUTTON}EVOs");
-static const u8 sText_FORMS_Buttons_Submenu_Decapped_PE[] = _("{START_BUTTON}Evos");
-static const u8 sText_FORMS_NONE[] = _("{STR_VAR_1} has no alternate forms.");
+static const u8 sText_FORMS_Buttons_PE[] = _("{A_BUTTON}מצב צורות  {START_BUTTON}התפתחות");
+static const u8 sText_FORMS_Buttons_Decapped_PE[] = _("{START_BUTTON}התפתחות");
+static const u8 sText_FORMS_Buttons_Submenu_PE[] = _("{DPAD_NONE}צורות {A_BUTTON}עיון {START_BUTTON}התפתחות");
+static const u8 sText_FORMS_Buttons_Submenu_Decapped_PE[] = _("{START_BUTTON}התפתחות");
+static const u8 sText_FORMS_NONE[] = _("ל{STR_VAR_1} אין צורות נוספות.");
 static const u8 sText_PlusSymbol[] = _("+");
 
 // static .rodata graphics
@@ -286,7 +286,29 @@ static const u32 sPokedexPlusHGSS_ScreenSearchNational_Tilemap[] = INCBIN_U32("g
 #define POKEBALL_ROTATION_BOTTOM (POKEBALL_ROTATION_TOP - 16)
 
 // for evolution method listings
+#if TEXT_RTL
+// Hebrew in the small font reaches higher (geresh, lamed) and lower (final nun) than the Latin
+// capitals, so entries 9 px apart touch the line above or below. 11 px apart, close to the 12 px
+// of a wrapped line, a blank row separates them. The box (y 51-145) has room for a first line and
+// 81 px below it, which is 8 lines at 11 px, so a page with more entries (Eevee's) gets a tighter
+// pitch, down to the English 9 px, instead of leaving some out (SetEvoMethodLinePitch).
+#define EVO_METHOD_LINE_PITCH_MAX 11
+#define EVO_METHOD_LINE_PITCH_MIN 9
+#define EVO_METHOD_LINES_SPAN 81
+#define EVO_METHOD_LINE_PITCH (sPokedexView->sEvoScreenData.linePitch)
+#define MAX_EVO_METHOD_LINES (1 + EVO_METHOD_LINES_SPAN / EVO_METHOD_LINE_PITCH)
+#else
+#define EVO_METHOD_LINE_PITCH 9
 #define MAX_EVO_METHOD_LINES 10
+#endif
+
+// The list's START menu frame spans x 132-235. The Hebrew items are right-aligned in it, so the
+// cursor is mirrored to the frame's right edge and points left at them.
+#if TEXT_RTL
+#define START_MENU_CURSOR_X (132 + 236 - 136)
+#else
+#define START_MENU_CURSOR_X 136
+#endif
 
 // Coordinates of the Pokémon sprite on its page (info/cry screens)
 #define MON_PAGE_X 48
@@ -384,6 +406,9 @@ struct EvoScreenData
     u8 arrowSpriteId;
     bool8 isMega;
     u32 arrowSpriteDist[10];
+#if TEXT_RTL
+    u8 linePitch;
+#endif
 };
 
 struct FromScreenData
@@ -451,6 +476,32 @@ struct PokedexView
 };
 
 static void ResetPokedexView(struct PokedexView *pokedexView);
+
+#if TEXT_RTL
+// The Pokédex windows are 32 tiles wide but the screen shows 30, so mirror them around the visible
+// width rather than the window's.
+static void MirrorDexWindowsAtScreenWidth(void)
+{
+    u32 i;
+    for (i = 0; i < WINDOWS_MAX; i++)
+    {
+        if (GetWindowAttribute(i, WINDOW_BG) != 0xFF && GetWindowAttribute(i, WINDOW_WIDTH) > DISPLAY_TILE_WIDTH)
+            SetWindowRtlMirrorWidth(i, DISPLAY_WIDTH - GetWindowAttribute(i, WINDOW_TILEMAP_LEFT) * 8);
+    }
+}
+
+// Those screen-wide windows hold several art boxes. Mirroring a print or fill around the whole
+// screen throws it into another box, so give it the logical x that mirrors it inside its own box
+// [boxLeft, boxRight) (screen pixels, right edge exclusive) instead.
+#define DEX_RTL_BOX_X(x, boxLeft, boxRight) ((x) + DISPLAY_WIDTH - ((boxLeft) + (boxRight)))
+
+// The screen x of a sprite that sits next to text in a mirrored window: its English x mirrored
+// around the window's mirror axis.
+static s16 DexRtlSpriteX(u32 windowId, s16 x)
+{
+    return 2 * GetWindowAttribute(windowId, WINDOW_TILEMAP_LEFT) * 8 + GetWindowRtlMirrorWidth(windowId) - x;
+}
+#endif
 static void VBlankCB_Pokedex(void);
 static void CB2_Pokedex(void);
 static void Task_OpenPokedexMainPage(u8);
@@ -1483,6 +1534,24 @@ static const struct WindowTemplate sNewEntryInfoScreen_WindowTemplates[] =
 };
 
 // First character in range followed by number of characters in range for upper and lowercase
+#if TEXT_RTL
+// Hebrew names: three letters per group in alphabetical order (no name starts with a final form),
+// and the last group catches any name still in Latin. The labels are gText_DexSearchAlpha* in
+// strings.c and must name the same letters.
+static const u8 sLetterSearchRanges[][4] =
+{
+    {}, // Name not specified, shouldn't be reached
+    [NAME_ABC] = {CHAR_HEB_ALEF,  3, 0, 0},
+    [NAME_DEF] = {CHAR_HEB_DALET, 3, 0, 0},
+    [NAME_GHI] = {CHAR_HEB_ZAYIN, 3, 0, 0},
+    [NAME_JKL] = {CHAR_HEB_YOD,   3, 0, 0},
+    [NAME_MNO] = {CHAR_HEB_MEM,   3, 0, 0},
+    [NAME_PQR] = {CHAR_HEB_AYIN,  3, 0, 0},
+    [NAME_STU] = {CHAR_HEB_QOF,   3, 0, 0},
+    [NAME_VWX] = {CHAR_HEB_TAV,   1, 0, 0},
+    [NAME_YZ]  = {CHAR_A, 26, CHAR_a, 26},
+};
+#else
 static const u8 sLetterSearchRanges[][4] =
 {
     {}, // Name not specified, shouldn't be reached
@@ -1496,6 +1565,7 @@ static const u8 sLetterSearchRanges[][4] =
     [NAME_VWX] = {CHAR_V, 3, CHAR_v, 3},
     [NAME_YZ]  = {CHAR_Y, 2, CHAR_y, 2},
 };
+#endif
 
 #define LETTER_IN_RANGE_UPPER(letter, range) \
     ((letter) >= sLetterSearchRanges[range][0]                                  \
@@ -2401,6 +2471,11 @@ static bool8 LoadPokedexListPage(u8 page)
             sPokedexView->isSearchResults = TRUE;
         LoadPokedexBgPalette(sPokedexView->isSearchResults);
         InitWindows(sPokemonList_WindowTemplate);
+#if TEXT_RTL
+        // Window 0 holds only the list entries, and the list box is at the left of the screen:
+        // mirror them inside its highlight bar (x 11-103), not around the screen width.
+        SetWindowRtlMirrorWidth(0, 11 + 104);
+#endif
         DeactivateAllTextPrinters();
         PutWindowTilemap(0);
         CopyWindowToVram(0, COPYWIN_FULL);
@@ -2765,7 +2840,12 @@ static u8 CreateMonName(u16 num, u8 left, u8 top)
         str = GetSpeciesName(num);
     else
         str = sText_TenDashes;
+#if TEXT_RTL
+    // Hebrew names can run a few pixels past the 50 px column; fall back to the narrower font.
+    PrintMonDexNumAndName_2(0, GetFontIdToFit(str, FONT_NARROW, 0, 50), str, left, top);
+#else
     PrintMonDexNumAndName_2(0, FONT_NARROW, str, left, top);
+#endif
     return StringLength(str);
 }
 
@@ -3414,14 +3494,17 @@ static void CreateInterfaceSprites(u8 page)
 
     if (page == PAGE_MAIN)
     {
-        spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, 136, 96, 1);
+        spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, START_MENU_CURSOR_X, 96, 1);
         gSprites[spriteId].invisible = TRUE;
     }
     else // PAGE_SEARCH_RESULTS
     {
-        spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, 136, 80, 1);
+        spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, START_MENU_CURSOR_X, 80, 1);
         gSprites[spriteId].invisible = TRUE;
     }
+#if TEXT_RTL
+    gSprites[spriteId].hFlip = TRUE;
+#endif
 }
 
 static void SpriteCB_EndMoveMonForInfoScreen(struct Sprite *sprite)
@@ -3584,7 +3667,11 @@ static void SpriteCB_DexListStartMenuCursor(struct Sprite *sprite)
         {
             sprite->invisible = FALSE;
             sprite->y2 = sPokedexView->menuCursorPos * 16;
+#if TEXT_RTL
+            sprite->x2 = -gSineTable[(u8)sprite->data[2]] / 64;
+#else
             sprite->x2 = gSineTable[(u8)sprite->data[2]] / 64;
+#endif
             sprite->data[2] += 8;
         }
         else
@@ -3626,7 +3713,19 @@ static inline void WritePixel(u8 *dst, u32 x, u32 y, u32 value)
         dst[PIXEL_COORDS_TO_OFFSET(x, y)] |= (value);
     }
 }
+#if TEXT_RTL
+// stat_bars.png holds the stats page's Hebrew abbreviations, up to 19 px wide, right-aligned at
+// x 30-48. The bars get the other 30 px: scaled by 30/39, they end at x 29 next to the labels and
+// grow leftwards, the mirror of English's labels-then-bars about the box. The two sprites sit one
+// pixel left of English (STAT_BARS_OFFSET_X), so x 48 is one pixel inside the box's border, as the
+// English labels' x 0 is one pixel inside its red stripe.
+#define STAT_BAR_X_OFFSET 19
+#define STAT_BAR_MAX_WIDTH 39
+#define STAT_BAR_DRAWN_WIDTH(width) max(3, ((width) * (48 - STAT_BAR_X_OFFSET + 1) + STAT_BAR_MAX_WIDTH / 2) / STAT_BAR_MAX_WIDTH)
+#define STAT_BARS_OFFSET_X 183
+#else
 #define STAT_BAR_X_OFFSET 10
+#endif
 static void CreateStatBar(u8 *dst, u32 y, u32 width)
 {
     u32 i, color;
@@ -3653,28 +3752,36 @@ static void CreateStatBar(u8 *dst, u32 y, u32 width)
         break;
     }
 
+#if TEXT_RTL
+    // The colour above still follows the unscaled width.
+    width = STAT_BAR_DRAWN_WIDTH(width);
+    u32 x0 = 48 - STAT_BAR_X_OFFSET + 1 - width;
+#else
+    u32 x0 = STAT_BAR_X_OFFSET;
+#endif
+
     // white pixes left side
-    WritePixel(dst, STAT_BAR_X_OFFSET, y + 0, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET, y + 1, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET, y + 2, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET, y + 3, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET, y + 4, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0, y + 0, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0, y + 1, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0, y + 2, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0, y + 3, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0, y + 4, COLOR_ID_BAR_WHITE);
 
     // white pixels right side
-    WritePixel(dst, STAT_BAR_X_OFFSET + width - 1, y + 0, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET + width - 1, y + 1, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET + width - 1, y + 2, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET + width - 1, y + 3, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET + width - 1, y + 4, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0 + width - 1, y + 0, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0 + width - 1, y + 1, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0 + width - 1, y + 2, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0 + width - 1, y + 3, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0 + width - 1, y + 4, COLOR_ID_BAR_WHITE);
 
     // Fill
     for (i = 1; i < width - 1; i++)
     {
-        WritePixel(dst, STAT_BAR_X_OFFSET + i, y + 0, COLOR_ID_BAR_WHITE);
-        WritePixel(dst, STAT_BAR_X_OFFSET + i, y + 1, COLOR_ID_FILL_SHADOW + color * 2);
-        WritePixel(dst, STAT_BAR_X_OFFSET + i, y + 2, COLOR_ID_FILL + color * 2);
-        WritePixel(dst, STAT_BAR_X_OFFSET + i, y + 3, COLOR_ID_FILL + color * 2);
-        WritePixel(dst, STAT_BAR_X_OFFSET + i, y + 4, COLOR_ID_BAR_WHITE);
+        WritePixel(dst, x0 + i, y + 0, COLOR_ID_BAR_WHITE);
+        WritePixel(dst, x0 + i, y + 1, COLOR_ID_FILL_SHADOW + color * 2);
+        WritePixel(dst, x0 + i, y + 2, COLOR_ID_FILL + color * 2);
+        WritePixel(dst, x0 + i, y + 3, COLOR_ID_FILL + color * 2);
+        WritePixel(dst, x0 + i, y + 4, COLOR_ID_BAR_WHITE);
     }
 }
 static const u8 sBaseStatOffsets[] =
@@ -3708,7 +3815,11 @@ static void TryDestroyStatBarsBg(void)
 }
 static void CreateStatBars(struct PokedexListItem *dexMon)
 {
+#if TEXT_RTL
+    u8 offset_x = STAT_BARS_OFFSET_X;
+#else
     u8 offset_x = 184; //Moves the complete stat box left/right
+#endif
     u8 offset_y = 16; //Moves the complete stat box up/down
     TryDestroyStatBars();
 
@@ -3762,7 +3873,11 @@ static void CreateStatBars(struct PokedexListItem *dexMon)
 static void CreateStatBarsBg(void) //stat bars background text
 {
     static const struct SpriteSheet sheetStatBarsBg = {sStatBarsGfx, 64 * 64, TAG_STAT_BAR_BG};
+#if TEXT_RTL
+    u8 offset_x = STAT_BARS_OFFSET_X;
+#else
     u8 offset_x = 184; //Moves the complete stat box left/right
+#endif
     u8 offset_y = 16; //Moves the complete stat box up/down
 
     TryDestroyStatBarsBg();
@@ -3834,6 +3949,9 @@ static u8 LoadInfoScreen(struct PokedexListItem *item, u8 monSpriteId, bool8 mon
     SetBgTilemapBuffer(1, AllocZeroed(BG_SCREEN_SIZE));
     SetBgTilemapBuffer(0, AllocZeroed(BG_SCREEN_SIZE));
     InitWindows(sInfoScreen_WindowTemplates);
+#if TEXT_RTL
+    MirrorDexWindowsAtScreenWidth();
+#endif
     DeactivateAllTextPrinters();
 
     return taskId;
@@ -4281,6 +4399,9 @@ void Task_DisplayCaughtMonDexPageHGSS(u8 taskId)
             SetBgTilemapBuffer(3, AllocZeroed(BG_SCREEN_SIZE));
             SetBgTilemapBuffer(2, AllocZeroed(BG_SCREEN_SIZE));
             InitWindows(sNewEntryInfoScreen_WindowTemplates);
+#if TEXT_RTL
+            MirrorDexWindowsAtScreenWidth();
+#endif
             DeactivateAllTextPrinters();
             gTasks[taskId].tState = 1;
         }
@@ -4545,6 +4666,20 @@ static void PrintCurrentSpeciesTypeInfo(u8 newEntry, u16 species)
     if (species == SPECIES_NONE)
         type1 = type2 = TYPE_MYSTERY;
 
+#if TEXT_RTL
+    // Read right to left: the first type takes the right slot of the two, as on the summary
+    // screen, and a second type goes to its left.
+    if (type1 == type2)
+    {
+        SetTypeIconPosAndPal(type1, 147 + 33, 48, 0);
+        SetSpriteInvisibility(1, TRUE);
+    }
+    else
+    {
+        SetTypeIconPosAndPal(type1, 147 + 33, 48, 0);
+        SetTypeIconPosAndPal(type2, 147, 48, 1);
+    }
+#else
     if (type1 == type2)
     {
         SetTypeIconPosAndPal(type1, 147, 48, 0);
@@ -4555,6 +4690,7 @@ static void PrintCurrentSpeciesTypeInfo(u8 newEntry, u16 species)
         SetTypeIconPosAndPal(type1, 147, 48, 0);
         SetTypeIconPosAndPal(type2, 147 + 33, 48, 1);
     }
+#endif
 
 }
 static void CreateTypeIconSprites(void)
@@ -4589,13 +4725,23 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
     else
         value = NationalToObtainableOrder(num);
     ConvertIntToDecimalStringN(StringCopy(str, gText_NumberClear01), value, STR_CONV_MODE_LEADING_ZEROS, digitCount);
+#if TEXT_RTL
+    // The number, name and category mirror inside the red name banner and the category box
+    // below it (x 119-236), not across the screen.
+    PrintInfoScreenTextWhite(str, DEX_RTL_BOX_X(123, 119, 237), 17);
+#else
     PrintInfoScreenTextWhite(str, 123, 17);
+#endif
     species = NationalPokedexNumToSpeciesHGSS(num);
     if (species)
         name = GetSpeciesName(species);
     else
         name = sText_TenDashes;
+#if TEXT_RTL
+    PrintInfoScreenTextWhite(name, DEX_RTL_BOX_X(139 + (6 * digitCount), 119, 237), 17);
+#else
     PrintInfoScreenTextWhite(name, 139 + (6 * digitCount), 17);
+#endif
     if (owned)
     {
         CopyMonCategoryText(species, str2);
@@ -4605,7 +4751,11 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
     {
         category = gText_5MarksPokemon;
     }
+#if TEXT_RTL
+    PrintInfoScreenText(category, DEX_RTL_BOX_X(123, 119, 237), 31);
+#else
     PrintInfoScreenText(category, 123, 31);
+#endif
     PrintMonMeasurements(species,owned);
     if (owned)
         description = GetSpeciesPokedexDescription(species);
@@ -4679,13 +4829,25 @@ static u8 PrintCryScreenSpeciesName(u8 windowId, u16 num, u8 left, u8 top)
     default:
         for (i = 0; GetSpeciesName(num)[i] != EOS && i < POKEMON_NAME_LENGTH; i++)
             str[i] = GetSpeciesName(num)[i];
+#if RTL_STRING_REPORT
+        RtlStringReport(GetSpeciesName(num));
+#endif
+#line 4832
         break;
     case 0:
         for (i = 0; i < 5; i++)
             str[i] = CHAR_HYPHEN;
         break;
     }
+#if TEXT_RTL
+    {
+        // The gap between the mon box and the VU meter holds 60 px with a 1 px margin.
+        u8 color[3] = {TEXT_COLOR_TRANSPARENT, TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_LIGHT_GRAY};
+        AddTextPrinterParameterized4(windowId, GetFontIdToFit(str, FONT_NORMAL, 0, 60), left, top, 0, 0, color, TEXT_SKIP_DRAW, str);
+    }
+#else
     PrintInfoSubMenuText(windowId, str, left, top);
+#endif
     return i;
 }
 
@@ -4890,7 +5052,12 @@ static void LoadTilesetTilemapHGSS(u8 page)
 static u8 ShowCategoryIcon(enum DamageCategory category)
 {
     if (sPokedexView->categoryIconSpriteId == 0xFF)
+#if TEXT_RTL
+        // WIN_STATS_MOVES_BOTTOM is mirrored: keep the icon beside POWER on the mirrored side.
+        sPokedexView->categoryIconSpriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, DexRtlSpriteX(WIN_STATS_MOVES_BOTTOM, 139), 90, 0);
+#else
         sPokedexView->categoryIconSpriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, 139, 90, 0);
+#endif
 
     gSprites[sPokedexView->categoryIconSpriteId].invisible = FALSE;
     StartSpriteAnim(&gSprites[sPokedexView->categoryIconSpriteId], category);
@@ -4930,6 +5097,18 @@ static void ResetStatsWindows(void)
 
     FreeAllWindowBuffers();
     InitWindows(sStatsScreen_WindowTemplates);
+#if TEXT_RTL
+    MirrorDexWindowsAtScreenWidth();
+    // The name, number and gender sit right of a fixed icon and divider (x 36): mirror them inside
+    // the text area from there to the box's border (x 94).
+    SetWindowRtlMirrorWidth(WIN_STATS_NAME_GENDER, 37 + 94);
+    // The move box shares its window with the item box, the type icon and the item icon: keep
+    // their English places.
+    SetWindowRtlMode(WIN_STATS_MOVES_TOP, WINDOW_RTL_IN_PLACE);
+    // The stats box has a red bar on its left, so its text area is x 8-92, not the window's 0-95:
+    // mirror inside that area.
+    SetWindowRtlMirrorWidth(WIN_STATS_LEFT, 8 + 93);
+#endif
 
     for (i = 0; i < WIN_STATS_END + 1; i++)
     {
@@ -5358,8 +5537,19 @@ static void PrintStatsScreen_Moves_Top(u8 taskId)
 
     //Move name
     StringCopy(gStringVar3, GetMoveName(move));
+#if TEXT_RTL
+    // No padding: in place, trailing spaces would widen the extent a Hebrew name is laid out in
+    // and push it right, under the item box. The spaces draw nothing on the transparent fill.
+    // Right-align the name in the move box (x 98-183) as the English is left-aligned in it, like
+    // the description and the ability below.
+    {
+        s32 nameX = 85 - (s32)GetStringWidth(FONT_SMALL, gStringVar3, 0);
+        PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, gStringVar3, max(nameX, moves_x), moves_y + 17);
+    }
+#else
     StringCopyPadded(gStringVar3, gStringVar3, CHAR_SPACE, 20);
     PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, gStringVar3, moves_x, moves_y + 17);
+#endif
 
     //Draw move type icon
     if (gTasks[taskId].data[5] == 0)
@@ -5419,6 +5609,13 @@ static void PrintStatsScreen_Moves_BottomText(u8 taskId)
     }
 }
 
+#if TEXT_RTL
+// Mirrored, the accuracy and jam values land 1 px from the box's left frame and read as joined
+// to it: print them 3 px further in.
+#define MOVES_BOTTOM_VALUE_INSET 3
+#else
+#define MOVES_BOTTOM_VALUE_INSET 0
+#endif
 static void PrintStatsScreen_Moves_Bottom(u8 taskId)
 {
     u8 moves_x = 8;
@@ -5451,7 +5648,7 @@ static void PrintStatsScreen_Moves_Bottom(u8 taskId)
             StringCopy(gStringVar1, gText_ThreeDashes);
         else
             ConvertIntToDecimalStringN(gStringVar1, accuracy, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        PrintStatsScreenTextSmall(WIN_STATS_MOVES_BOTTOM, gStringVar1,  moves_x + 114, moves_y);
+        PrintStatsScreenTextSmall(WIN_STATS_MOVES_BOTTOM, gStringVar1,  moves_x + 114 - MOVES_BOTTOM_VALUE_INSET, moves_y);
     }
     else //Appeal + Jam
     {
@@ -5472,8 +5669,21 @@ static void PrintStatsScreen_Moves_Bottom(u8 taskId)
         ConvertIntToDecimalStringN(gStringVar1, contest_jam, STR_CONV_MODE_RIGHT_ALIGN, 1);
         StringCopy(gStringVar2, sText_Stats_Minus);
         StringAppend(gStringVar2, gStringVar1);
-        PrintStatsScreenTextSmall(WIN_STATS_MOVES_BOTTOM, gStringVar2,  moves_x + 119, moves_y);
+        PrintStatsScreenTextSmall(WIN_STATS_MOVES_BOTTOM, gStringVar2,  moves_x + 119 - MOVES_BOTTOM_VALUE_INSET, moves_y);
     }
+}
+
+static void PrintStatsScreen_GenderRatio(const u8 *str, u8 x, u8 y)
+{
+#if TEXT_RTL
+    // Mirrored, the gender symbols would swap sides around the ratio's numbers. Print the ratio in
+    // place, at the right edge where the mirrored name and number above it end.
+    SetWindowRtlMode(WIN_STATS_NAME_GENDER, WINDOW_RTL_IN_PLACE);
+    PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, str, GetWindowRtlMirrorWidth(WIN_STATS_NAME_GENDER) - x - GetStringWidth(FONT_SMALL, str, 0), y);
+    SetWindowRtlMode(WIN_STATS_NAME_GENDER, WINDOW_RTL_MIRROR);
+#else
+    PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, str, x, y);
+#endif
 }
 
 static void PrintStatsScreen_NameGender(u8 taskId, u32 num, u32 value)
@@ -5506,28 +5716,28 @@ static void PrintStatsScreen_NameGender(u8 taskId, u32 num, u32 value)
     switch (sPokedexView->sPokemonStats.genderRatio)
     {
     case 0:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_0, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_0, gender_x, gender_y);
         break;
     case 31:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_12_5, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_12_5, gender_x, gender_y);
         break;
     case 63:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_25, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_25, gender_x, gender_y);
         break;
     case 127:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_50, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_50, gender_x, gender_y);
         break;
     case 191:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_75, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_75, gender_x, gender_y);
         break;
     case 223:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_87_5, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_87_5, gender_x, gender_y);
         break;
     case 254:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_100, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_100, gender_x, gender_y);
         break;
     default:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, gText_ThreeDashes, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(gText_ThreeDashes, gender_x, gender_y);
         break;
     }
 }
@@ -5565,6 +5775,61 @@ static u8* PrintMonStatsToggle_EV_Arrows(u8 *dest, u8 value)
     return dest;
 }
 
+#if TEXT_RTL
+// The stats box mirrors around its text area (x 8-92), but its paper starts at x 7, beside the
+// red bar. Mirrored, two prints reach x 7 and read as joined to the bar: the widest catch rate,
+// 1 px wider than its English, and the hatch-step eggs, which English ends at x 93. They are
+// printed 1 px further in, where the growth rate below them starts.
+#define STATS_LEFT_VALUE_INSET 1
+
+// With three or more different EV yields the first row puts a label every 29 px from x 8. With one
+// arrow an English label is at most 28 px, so the third ends by x 93; a Hebrew one is up to 30 px
+// (הג”מ and an arrow), and mirrored it would start inside the red bar. When the last label would
+// pass x 93, the labels are placed by their widths instead and share the room left between them,
+// so the row ends at x 93 and, mirrored, starts at x 8 like the other lines. A row that does not
+// fit even then (four different yields) keeps the English places.
+#define STATS_LEFT_TEXT_END 93
+#define STATS_LEFT_EV_PITCH 29
+
+static void PrintStatsLeftEvRow(const u8 *EVs, u8 left, u8 top)
+{
+    static const u8 *const sStatNames[NUM_STATS] =
+    {
+        sText_Stats_HP, sText_Stats_Speed, sText_Stats_Attack,
+        sText_Stats_SpAttack, sText_Stats_Defense, sText_Stats_SpDefense,
+    };
+    u8 labels[NUM_STATS][16];
+    u8 widths[NUM_STATS];
+    u32 i, room, count = 0, total = 0;
+    u32 x = left;
+
+    for (i = 0; i < NUM_STATS; i++)
+    {
+        if (EVs[i] == 0)
+            continue;
+        StringCopy(gStringVar1, sStatNames[i]);
+        PrintMonStatsToggle_EV_Arrows(gStringVar2, EVs[i]);
+        StringExpandPlaceholders(labels[count], sText_Stats_EvStr1Str2);
+        widths[count] = GetStringWidth(FONT_SMALL, labels[count], 0);
+        total += widths[count];
+        count++;
+    }
+    if (count < 2
+     || left + STATS_LEFT_EV_PITCH * (count - 1) + widths[count - 1] <= STATS_LEFT_TEXT_END
+     || left + total + count - 1 > STATS_LEFT_TEXT_END)
+    {
+        for (i = 0; i < count; i++)
+            PrintStatsScreenTextSmall(WIN_STATS_LEFT, labels[i], left + STATS_LEFT_EV_PITCH * i, top);
+        return;
+    }
+    room = STATS_LEFT_TEXT_END - left - total;
+    for (i = 0; i < count; i++)
+    {
+        PrintStatsScreenTextSmall(WIN_STATS_LEFT, labels[i], x, top);
+        x += widths[i] + room / (count - 1) + (i < room % (count - 1));
+    }
+}
+#endif
 static void PrintStatsScreen_Left(u8 taskId)
 {
     u8 base_x = 8;
@@ -5688,6 +5953,9 @@ static void PrintStatsScreen_Left(u8 taskId)
         }
         else //3 different EVs in 1 row
         {
+#if TEXT_RTL
+            PrintStatsLeftEvRow(EVs, base_x, base_y + base_y_offset*base_i);
+#else
             column = 0;
             //HP
             if (EVs[0] > 0)
@@ -5743,6 +6011,7 @@ static void PrintStatsScreen_Left(u8 taskId)
                 PrintStatsScreenTextSmall(WIN_STATS_LEFT, gStringVar3, base_x + 29*column, base_y + base_y_offset*base_i);
                 column++;
             }
+#endif
         }
         base_i++;
     }
@@ -5755,6 +6024,9 @@ static void PrintStatsScreen_Left(u8 taskId)
 
         //Catch rate
         PrintStatsScreenTextSmall(WIN_STATS_LEFT, sText_Stats_CatchRate, base_x, base_y + base_y_offset*base_i);
+#if TEXT_RTL
+        x_offset_column -= STATS_LEFT_VALUE_INSET;
+#endif
         if (catchRate <= 10)
             PrintStatsScreenTextSmall(WIN_STATS_LEFT, sText_Stats_CatchRate_Legend, base_x + x_offset_column, base_y + base_y_offset*base_i);
         else if (catchRate <= 70)
@@ -5861,7 +6133,11 @@ static void PrintStatsScreen_Left(u8 taskId)
                 StringCopy(strEV, sText_Stats_EggCycles_Slow);
                 align_x = 67;
             }
+#if TEXT_RTL
+            PrintStatsScreenTextSmall(WIN_STATS_LEFT, strEV, align_x - STATS_LEFT_VALUE_INSET, base_y + base_y_offset*base_i);
+#else
             PrintStatsScreenTextSmall(WIN_STATS_LEFT, strEV, align_x, base_y + base_y_offset*base_i);
+#endif
         }
         base_i++;
 
@@ -6032,6 +6308,9 @@ static void Task_SwitchScreensFromStatsScreen(u8 taskId)
         case 1:
             FreeAllWindowBuffers();
             InitWindows(sInfoScreen_WindowTemplates);
+#if TEXT_RTL
+            MirrorDexWindowsAtScreenWidth();
+#endif
             gTasks[taskId].func = Task_LoadAreaScreen;
             break;
         case 2:
@@ -6040,6 +6319,9 @@ static void Task_SwitchScreensFromStatsScreen(u8 taskId)
         case 3:
             FreeAllWindowBuffers();
             InitWindows(sInfoScreen_WindowTemplates);
+#if TEXT_RTL
+            MirrorDexWindowsAtScreenWidth();
+#endif
             gTasks[taskId].func = Task_LoadEvolutionScreen;
             break;
         default:
@@ -6079,6 +6361,11 @@ static void EvoFormsPage_PrintNavigationButtons(void)
     u8 x = 6;
     u8 y = 0;
 
+#if TEXT_RTL
+    // The red footer bar (x 3-142) is narrower than the 160 px window: mirror inside the bar so the
+    // hints do not run off its right end.
+    SetWindowRtlMirrorWidth(WIN_NAVIGATION_BUTTONS, 3 + 143);
+#endif
     FillWindowPixelBuffer(WIN_NAVIGATION_BUTTONS, PIXEL_FILL(0));
 
         if (sPokedexView->selectedScreen == EVO_SCREEN)
@@ -6140,6 +6427,72 @@ static void GetSeenFlagTargetSpecies(void)
     }
 }
 
+#if TEXT_RTL
+// How many entries PrintEvolutionTargetSpeciesAndMethod lists below species: it walks the same
+// evolutions and skips the same ones.
+static u32 CountEvolutionEntries(u16 species, u16 baseSpecies, u32 depth)
+{
+    const struct Evolution *evolutions;
+    u32 i, times = 0, count = 0;
+
+#if RANDOMIZER_AVAILABLE
+    if (RandomizerFeatureEnabled(RANDOMIZE_EVO_METHODS))
+        species = RandomizeEvoMethod(species);
+#endif
+
+    evolutions = GetSpeciesEvolutions(species);
+    if (evolutions == NULL)
+        return 0;
+
+    for (i = 0; evolutions[i].method != EVOLUTIONS_END; i++)
+        times += 1;
+
+    if (times > 9 && species == SPECIES_MILCERY)
+        times = 9;
+
+    for (i = 0; i < times; i++)
+    {
+        u16 targetSpecies = evolutions[i].targetSpecies;
+        if (!IsSpeciesEnabled(targetSpecies))
+            continue;
+
+#if RANDOMIZER_AVAILABLE
+        if (RandomizerFeatureEnabled(RANDOMIZE_EVOLUTIONS) && targetSpecies != SPECIES_NONE)
+            targetSpecies = RandomizeEvolution(targetSpecies, species);
+#endif
+
+        if (targetSpecies == baseSpecies)
+            continue;
+
+        count++;
+        if (depth < 3)
+            count += CountEvolutionEntries(targetSpecies, baseSpecies, depth + 1);
+    }
+    return count;
+}
+
+// The widest pitch at which every entry of the page fits in the box.
+static void SetEvoMethodLinePitch(u16 species)
+{
+    u32 lines = CountEvolutionEntries(species, species, 0);
+    u32 pitch = EVO_METHOD_LINE_PITCH_MAX;
+
+    // Up to two pre-evolutions are listed above them. Look them up only when they could matter.
+    if (lines + 2 > 1 + EVO_METHOD_LINES_SPAN / EVO_METHOD_LINE_PITCH_MAX)
+    {
+        u16 preSpecies = species;
+        u32 i;
+
+        for (i = 0; i < 2 && (preSpecies = GetSpeciesPreEvolution(preSpecies)) != SPECIES_NONE; i++)
+            lines++;
+    }
+
+    if (lines > 1)
+        pitch = min(pitch, EVO_METHOD_LINES_SPAN / (lines - 1));
+    sPokedexView->sEvoScreenData.linePitch = max(pitch, EVO_METHOD_LINE_PITCH_MIN);
+}
+#endif
+
 static void Task_LoadEvolutionScreen(u8 taskId)
 {
     switch (gMain.state)
@@ -6181,6 +6534,9 @@ static void Task_LoadEvolutionScreen(u8 taskId)
         gMain.state++;
         break;
     case 3:
+#if TEXT_RTL
+        SetEvoMethodLinePitch(NationalPokedexNumToSpeciesHGSS(sPokedexListItem->dexNum));
+#endif
         if (gTasks[taskId].data[1] == 0)
         {
             u32 species = NationalPokedexNumToSpeciesHGSS(sPokedexListItem->dexNum);
@@ -6216,7 +6572,13 @@ static void Task_LoadEvolutionScreen(u8 taskId)
             for (pos = 0; !sPokedexView->sEvoScreenData.seen[pos]; pos++)
                 ;
             sPokedexView->sEvoScreenData.menuPos = pos;
+#if TEXT_RTL
+            // The entries are mirrored to the right edge; point at them from there.
+            sPokedexView->sEvoScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, DexRtlSpriteX(WIN_INFO, 7), 58 + EVO_METHOD_LINE_PITCH * pos, 0);
+            gSprites[sPokedexView->sEvoScreenData.arrowSpriteId].hFlip = TRUE;
+#else
             sPokedexView->sEvoScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, 7, 58 + 9 * pos, 0);
+#endif
             gSprites[sPokedexView->sEvoScreenData.arrowSpriteId].animNum = 2;
         }
         gMain.state++;
@@ -6279,7 +6641,7 @@ static void Task_HandleEvolutionScreenInput(u8 taskId)
     if (sPokedexView->sEvoScreenData.numAllEvolutions > 0 && sPokedexView->sEvoScreenData.numSeen > 0)
     {
         u8 base_y = 58;
-        u8 base_y_offset = 9;
+        u8 base_y_offset = EVO_METHOD_LINE_PITCH;
         u8 pos = sPokedexView->sEvoScreenData.menuPos;
         u8 max = sPokedexView->sEvoScreenData.numAllEvolutions - 1;
         if (JOY_NEW(DPAD_DOWN))
@@ -6377,6 +6739,26 @@ static void HandleTargetSpeciesPrintText(u32 targetSpecies, u32 base_x, u32 base
     PrintInfoScreenTextSmall(gStringVar3, fontId, base_x, base_y + base_y_offset*base_i + numLines); //evolution mon name
 }
 
+#if TEXT_RTL
+// The method after a target's name is placed 5 px per name byte (the small font's widest letter)
+// plus a margin past the name's x. Many Hebrew names are wider than that, and the method would
+// cover their colon and last letters. This is the first x past the 'NAME:' that
+// HandleTargetSpeciesPrintText draws at nameX, plus a space's width.
+#define EVO_METHOD_NAME_GAP 3
+static u32 GetEvoMethodMinX(u32 targetSpecies, u32 nameX)
+{
+    bool32 seen = GetSetPokedexFlag(SpeciesToNationalPokedexNum(targetSpecies), FLAG_GET_SEEN);
+    u32 fontId = GetSpeciesNameFontId(GetSpeciesNameWidthInChars(GetSpeciesName(targetSpecies)));
+
+    if (seen || !HGSS_HIDE_UNSEEN_EVOLUTION_NAMES)
+        StringCopy(gStringVar3, GetSpeciesName(targetSpecies));
+    else
+        StringCopy(gStringVar3, gText_ThreeQuestionMarks);
+    StringExpandPlaceholders(gStringVar3, sText_EVO_Name);
+    return nameX + GetStringWidth(fontId, gStringVar3, 0) + EVO_METHOD_NAME_GAP;
+}
+#endif
+
 static void HandleTargetSpeciesPrintIcon(u8 taskId, u16 targetSpecies, u8 base_i, u8 iterations)
 {
     u32 personality = GetPokedexMonPersonality(targetSpecies);
@@ -6453,7 +6835,7 @@ static u8 PrintPreEvolutions(u8 taskId, u16 species)
 
     u8 base_x = 13+8;
     u8 base_y = 51;
-    u8 base_y_offset = 9;
+    u8 base_y_offset = EVO_METHOD_LINE_PITCH;
 
     u16 preEvolutionOne = 0;
     u16 preEvolutionTwo = 0;
@@ -6633,7 +7015,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
     bool8 left = TRUE;
     u32 base_x = 21;
     u32 base_y = 51;
-    u32 base_y_offset = 9;
+    u32 base_y_offset = EVO_METHOD_LINE_PITCH;
     u32 times = 0;
     u32 arg; // shorthand for some of the more mathy evolutions
     const struct Evolution *evolutions;
@@ -6651,8 +7033,19 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
 
     evolutions = GetSpeciesEvolutions(species);
 
+#if TEXT_RTL
+    // Hebrew evolution methods often wrap, and a wrapped entry pushes down every entry after it,
+    // not only the next one. arrowSpriteDist[i] (also read by the cursor) holds the running
+    // offset of entry i; numLines from the caller would hold only the previous entry's wrap.
+    if (depth == 0)
+    {
+        for (i = 0; i <= (int)*depth_i && i < 10; i++)
+            sPokedexView->sEvoScreenData.arrowSpriteDist[i] = 0;
+    }
+#else
     if (*depth_i < 10)
         sPokedexView->sEvoScreenData.arrowSpriteDist[*depth_i] = numLines;
+#endif
 
     //If there are no evolutions print text and return
     if (evolutions == NULL)
@@ -6696,6 +7089,9 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
 
         u32 speciesNameWidth = (speciesNameWidthInChars * speciesNameCharWidth);
         u32 base_x_offset = speciesNameWidth + base_x + depth_offset; // for evo method info
+#if TEXT_RTL
+        base_x_offset = max(base_x_offset, GetEvoMethodMinX(targetSpecies, base_x + depth_x*depth));
+#endif
         u32 maxScreenWidth = 230 - base_x_offset;
 
         for (u32 j = 0; j < MAX_EVOLUTION_ICONS; j++)
@@ -6717,6 +7113,9 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
 
         sPokedexView->sEvoScreenData.targetSpecies[*depth_i] = targetSpecies;
         sPokedexView->sEvoScreenData.numAllEvolutions += 1;
+#if TEXT_RTL
+        numLines = sPokedexView->sEvoScreenData.arrowSpriteDist[*depth_i];
+#endif
 
         CreateCaughtBallEvolutionScreen(targetSpecies, base_x + depth_x*depth-9, base_y + base_y_offset*(*depth_i) + numLines, 0);
         HandleTargetSpeciesPrintText(targetSpecies, base_x + depth_x*depth, base_y, base_y_offset, *depth_i, numLines); //evolution mon name
@@ -6724,7 +7123,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
         bool32 caught = GetSetPokedexFlag(SpeciesToNationalPokedexNum(targetSpecies), FLAG_GET_CAUGHT);
         if (HGSS_HIDE_UNOWNED_EVOLUTION_METHODS == TRUE && !caught)
         {
-            StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Unknown"));
+            StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("לא ידוע"));
         }
         else
         {
@@ -6732,7 +7131,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
             {
             case EVO_SCRIPT_TRIGGER:
             case EVO_NONE:
-                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Unknown"));
+                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("לא ידוע"));
                 break;
             case EVO_LEVEL:
             case EVO_LEVEL_BATTLE_ONLY:
@@ -6743,34 +7142,34 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     StringAppend(gStringVar4, gStringVar2);
                 }
                 if ((enum EvolutionMethods)evolutions[i].method == EVO_LEVEL_BATTLE_ONLY)
-                    StringAppend(gStringVar4, COMPOUND_STRING(", in battle"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(", בקרב"));
                 break;
             case EVO_TRADE:
-                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Trading"));
+                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("החלפה"));
                 break;
             case EVO_ITEM:
                 CopyItemName(evolutions[i].param, gStringVar2);
-                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("{STR_VAR_2} is used"));
+                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("שימוש ב{STR_VAR_2}"));
                 break;
             case EVO_SPLIT_FROM_EVO:
-                StringCopy(gStringVar4, COMPOUND_STRING("Splits from "));
+                StringCopy(gStringVar4, COMPOUND_STRING("מתפצל מ"));
                 StringAppend(gStringVar4, GetSpeciesName(evolutions[i].param)); //mon name
                 break;
             case EVO_BATTLE_END:
-                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("End battle"));
+                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("בסוף קרב"));
                 break;
             case EVO_SPIN:
-                StringCopy(gStringVar4, COMPOUND_STRING("Spin "));
+                StringCopy(gStringVar4, COMPOUND_STRING("סיבוב "));
                 if (evolutions[i].param == SPIN_CW_SHORT)
-                    StringAppend(gStringVar4, COMPOUND_STRING("CW <5s"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("עם השעון עד 5 שנ'"));
                 else if (evolutions[i].param == SPIN_CW_LONG)
-                    StringAppend(gStringVar4, COMPOUND_STRING("CW >5s"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("עם השעון מעל 5 שנ'"));
                 else if (evolutions[i].param == SPIN_CCW_SHORT)
-                    StringAppend(gStringVar4, COMPOUND_STRING("CCW <5s"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("נגד השעון עד 5 שנ'"));
                 else if (evolutions[i].param == SPIN_CCW_LONG)
-                    StringAppend(gStringVar4, COMPOUND_STRING("CCW >5s"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("נגד השעון מעל 5 שנ'"));
                 else
-                    StringAppend(gStringVar4, COMPOUND_STRING("CW/CCW >10s"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("בכל כיוון מעל 10 שנ'"));
                 break;
             }//Switch end
 
@@ -6789,45 +7188,45 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                 case IF_GENDER:
                     switch (evolutions[i].params[j].arg1)
                     {
-                    case MON_MALE:   StringAppend(gStringVar4, COMPOUND_STRING("Male"));   break;
-                    case MON_FEMALE: StringAppend(gStringVar4, COMPOUND_STRING("Female")); break;
+                    case MON_MALE:   StringAppend(gStringVar4, COMPOUND_STRING("זכר"));   break;
+                    case MON_FEMALE: StringAppend(gStringVar4, COMPOUND_STRING("נקבה")); break;
                     }
                     break;
                 case IF_MIN_FRIENDSHIP:
-                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}friendship"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}חברות"));
                     break;
                 case IF_ATK_GT_DEF:
-                    StringAppend(gStringVar4, COMPOUND_STRING("Atk > Def"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("התקפה גבוהה מהגנה"));
                     break;
                 case IF_ATK_EQ_DEF:
-                    StringAppend(gStringVar4, COMPOUND_STRING("Atk = Def"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("התקפה שווה להגנה"));
                     break;
                 case IF_ATK_LT_DEF:
-                    StringAppend(gStringVar4, COMPOUND_STRING("Atk < Def"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("התקפה נמוכה מהגנה"));
                     break;
                 case IF_TIME:
                     switch (evolutions[i].params[j].arg1)
                     {
-                    case TIME_MORNING: StringAppend(gStringVar4, COMPOUND_STRING("Morning")); break;
-                    case TIME_DAY:     StringAppend(gStringVar4, COMPOUND_STRING("Day"));     break;
-                    case TIME_EVENING: StringAppend(gStringVar4, COMPOUND_STRING("Evening")); break;
-                    case TIME_NIGHT:   StringAppend(gStringVar4, COMPOUND_STRING("Night"));   break;
+                    case TIME_MORNING: StringAppend(gStringVar4, COMPOUND_STRING("בבוקר")); break;
+                    case TIME_DAY:     StringAppend(gStringVar4, COMPOUND_STRING("ביום"));     break;
+                    case TIME_EVENING: StringAppend(gStringVar4, COMPOUND_STRING("בערב")); break;
+                    case TIME_NIGHT:   StringAppend(gStringVar4, COMPOUND_STRING("בלילה"));   break;
                     }
                     break;
                 case IF_NOT_TIME:
                     switch (evolutions[i].params[j].arg1)
                     {
-                    case TIME_MORNING: StringAppend(gStringVar4, COMPOUND_STRING("NOT Morning")); break;
-                    case TIME_DAY:     StringAppend(gStringVar4, COMPOUND_STRING("NOT Day"));     break;
-                    case TIME_EVENING: StringAppend(gStringVar4, COMPOUND_STRING("NOT Evening")); break;
-                    case TIME_NIGHT:   StringAppend(gStringVar4, COMPOUND_STRING("Day"));         break; // More intuitive than "NOT Night"
+                    case TIME_MORNING: StringAppend(gStringVar4, COMPOUND_STRING("לא בבוקר")); break;
+                    case TIME_DAY:     StringAppend(gStringVar4, COMPOUND_STRING("לא ביום"));     break;
+                    case TIME_EVENING: StringAppend(gStringVar4, COMPOUND_STRING("לא בערב")); break;
+                    case TIME_NIGHT:   StringAppend(gStringVar4, COMPOUND_STRING("ביום"));         break; // More intuitive than "NOT Night"
                     }
                     break;
                 case IF_HOLD_ITEM:
-                    StringAppend(gStringVar4, COMPOUND_STRING("holds "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("מחזיק "));
                     if (isAlcremie && IsItemSweet(evolutions[i].params[j].arg1))
                     {
-                        StringAppend(gStringVar4, COMPOUND_STRING("Sweet")); //item
+                        StringAppend(gStringVar4, COMPOUND_STRING("סוכרייה")); //item
                     }
                     else
                     {
@@ -6847,68 +7246,68 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                              && arg < 10 && arg >= 0)
                             arg = 1;
                     ConvertIntToDecimalStringN(gStringVar2, arg * 10, STR_CONV_MODE_LEFT_ALIGN, 3);
-                    StringAppend(gStringVar4, COMPOUND_STRING("random %"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("סיכוי %"));
                     StringAppend(gStringVar4, gStringVar2);
                     break;
                 case IF_MIN_BEAUTY:
-                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}beauty"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}יופי"));
                     break;
                 case IF_MIN_COOLNESS:
-                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}coolness"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}מגניבות"));
                     break;
                 case IF_MIN_SMARTNESS:
-                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}smartness"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}חוכמה"));
                     break;
                 case IF_MIN_TOUGHNESS:
-                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}toughness"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}קשיחות"));
                     break;
                 case IF_MIN_CUTENESS:
-                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}cuteness"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}חמידות"));
                     break;
                 // Gen 4
                 case IF_SPECIES_IN_PARTY:
                     StringAppend(gStringVar4, GetSpeciesName(evolutions[i].params[j].arg1)); //mon name
-                    StringAppend(gStringVar4, COMPOUND_STRING(" in party"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" בקבוצה"));
                     break;
                 case IF_IN_MAPSEC:
-                    StringAppend(gStringVar4, COMPOUND_STRING("in "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("ב"));
                     StringCopy(gStringVar2, GetActiveRegionMapEntries()[evolutions[i].params[j].arg1].name);
                     StringAppend(gStringVar4, gStringVar2);
                     break;
                 case IF_IN_MAP:
-                    StringAppend(gStringVar4, COMPOUND_STRING("in "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("ב"));
                     GetMapName(gStringVar2, Overworld_GetMapHeaderByGroupAndId(evolutions[i].params[j].arg1 >> 8, evolutions[i].params[j].arg1 & 0xFF)->regionMapSectionId, 0);
                     StringAppend(gStringVar4, gStringVar2);
                     break;
                 case IF_KNOWS_MOVE:
-                    StringAppend(gStringVar4, COMPOUND_STRING("knows "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("יודע "));
                     StringAppend(gStringVar4, GetMoveName(evolutions[i].params[j].arg1));
                     break;
                 // Gen 5
                 case IF_TRADE_PARTNER_SPECIES:
-                    StringAppend(gStringVar4, COMPOUND_STRING("traded with "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("תמורת "));
                     StringAppend(gStringVar4, GetSpeciesName(evolutions[i].params[j].arg1));
                     break;
                 // Gen 6
                 case IF_TYPE_IN_PARTY:
                     StringAppend(gStringVar4, gTypesInfo[evolutions[i].params[j].arg1].name); //type name
-                    StringAppend(gStringVar4, COMPOUND_STRING("-type in party"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" בקבוצה"));
                     break;
                 case IF_WEATHER:
-                    StringAppend(gStringVar4, COMPOUND_STRING("weather "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("מזג אוויר: "));
                     StringAppend(gStringVar4, GetWeatherName(evolutions[i].params[j].arg1));
                     break;
                 case IF_KNOWS_MOVE_TYPE:
                     StringAppend(gStringVar4, gTypesInfo[evolutions[i].params[j].arg1].name);
-                    StringAppend(gStringVar4, COMPOUND_STRING(" move"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" בין המהלכים"));
                     break;
                 case IF_REGION:
                 case IF_NOT_REGION:
                 {
                     if (condition == IF_REGION)
-                        StringAppend(gStringVar4, COMPOUND_STRING("in "));
+                        StringAppend(gStringVar4, COMPOUND_STRING("ב"));
                     else if (condition == IF_NOT_REGION)
-                        StringAppend(gStringVar4, COMPOUND_STRING("out of "));
+                        StringAppend(gStringVar4, COMPOUND_STRING("מחוץ ל"));
 
                     switch ((enum Region)evolutions[i].params[j].arg1)
                     {
@@ -6916,16 +7315,16 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     case REGIONS_COUNT:
                         StringAppend(gStringVar4, COMPOUND_STRING("???"));
                         break;
-                    case REGION_KANTO: StringAppend(gStringVar4, COMPOUND_STRING("Kanto")); break;
-                    case REGION_JOHTO: StringAppend(gStringVar4, COMPOUND_STRING("Johto")); break;
-                    case REGION_HOENN: StringAppend(gStringVar4, COMPOUND_STRING("Hoenn")); break;
-                    case REGION_SINNOH: StringAppend(gStringVar4, COMPOUND_STRING("Sinnoh")); break;
-                    case REGION_UNOVA: StringAppend(gStringVar4, COMPOUND_STRING("Unova")); break;
-                    case REGION_KALOS: StringAppend(gStringVar4, COMPOUND_STRING("Kalos")); break;
-                    case REGION_ALOLA: StringAppend(gStringVar4, COMPOUND_STRING("Alola Isles")); break;
-                    case REGION_GALAR: StringAppend(gStringVar4, COMPOUND_STRING("Galar")); break;
-                    case REGION_HISUI: StringAppend(gStringVar4, COMPOUND_STRING("Sinjoh")); break;
-                    case REGION_PALDEA: StringAppend(gStringVar4, COMPOUND_STRING("Paldea")); break;
+                    case REGION_KANTO: StringAppend(gStringVar4, COMPOUND_STRING("קאנטו")); break;
+                    case REGION_JOHTO: StringAppend(gStringVar4, COMPOUND_STRING("ג'וטו")); break;
+                    case REGION_HOENN: StringAppend(gStringVar4, COMPOUND_STRING("הואן")); break;
+                    case REGION_SINNOH: StringAppend(gStringVar4, COMPOUND_STRING("סינו")); break;
+                    case REGION_UNOVA: StringAppend(gStringVar4, COMPOUND_STRING("יונובה")); break;
+                    case REGION_KALOS: StringAppend(gStringVar4, COMPOUND_STRING("קאלוס")); break;
+                    case REGION_ALOLA: StringAppend(gStringVar4, COMPOUND_STRING("איי אלולה")); break;
+                    case REGION_GALAR: StringAppend(gStringVar4, COMPOUND_STRING("גלאר")); break;
+                    case REGION_HISUI: StringAppend(gStringVar4, COMPOUND_STRING("סינג'ו")); break;
+                    case REGION_PALDEA: StringAppend(gStringVar4, COMPOUND_STRING("פלדייה")); break;
                     }
                     break;
                 }
@@ -6933,46 +7332,46 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                 case IF_NATURE:
                     StringCopy(gStringVar2, gNaturesInfo[evolutions[i].params[j].arg1].name);
                     StringAppend(gStringVar4, gStringVar2);
-                    StringAppend(gStringVar4, COMPOUND_STRING(" nature"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" באופי"));
                     break;
                 case IF_AMPED_NATURE:
-                    StringAppend(gStringVar4, COMPOUND_STRING("amped natures"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("אופי נמרץ"));
                     break;
                 case IF_LOW_KEY_NATURE:
-                    StringAppend(gStringVar4, COMPOUND_STRING("low-Key natures"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("אופי מאופק"));
                     break;
                 case IF_RECOIL_DAMAGE_GE:
-                    StringAppend(gStringVar4, COMPOUND_STRING("takes >= "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("ספג לפחות "));
                     ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg1, STR_CONV_MODE_LEFT_ALIGN, 3);
                     StringAppend(gStringVar4, gStringVar2);
-                    StringAppend(gStringVar4, COMPOUND_STRING(" recoil dmg"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" נזק רתע"));
                     break;
                 case IF_CURRENT_DAMAGE_GE:
                     ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg1, STR_CONV_MODE_LEFT_ALIGN, 3);
                     StringAppend(gStringVar4, gStringVar2);
-                    StringAppend(gStringVar4, COMPOUND_STRING(" current dmg"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" נזק נוכחי"));
                     break;
                 case IF_CRITICAL_HITS_GE:
                     ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg1, STR_CONV_MODE_LEFT_ALIGN, 2);
                     StringAppend(gStringVar4, gStringVar2);
-                    StringAppend(gStringVar4, COMPOUND_STRING(" critical hits"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" פגיעות קריטיות"));
                     break;
                 case IF_USED_MOVE_X_TIMES:
-                    StringAppend(gStringVar4, COMPOUND_STRING("use move "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("שימוש במהלך "));
                     StringAppend(gStringVar4, GetMoveName(evolutions[i].params[j].arg1));
                     StringAppend(gStringVar4, COMPOUND_STRING(" "));
                     ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg2, STR_CONV_MODE_LEFT_ALIGN, 3);
                     StringAppend(gStringVar4, gStringVar2);
-                    StringAppend(gStringVar4, COMPOUND_STRING(" times"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" פעמים"));
                     break;
                 // Gen 9
                 case IF_DEFEAT_X_WITH_ITEMS:
-                    StringAppend(gStringVar4, COMPOUND_STRING("defeat "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("ניצחון על "));
                     ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg3, STR_CONV_MODE_LEFT_ALIGN, 3);
                     StringAppend(gStringVar4, gStringVar2);
                     StringAppend(gStringVar4, COMPOUND_STRING(" "));
                     StringAppend(gStringVar4, GetSpeciesName(evolutions[i].params[j].arg1));
-                    StringAppend(gStringVar4, COMPOUND_STRING(" that hold "));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" שמחזיקים "));
                     CopyItemName(evolutions[i].params[j].arg2, gStringVar2);
                     StringAppend(gStringVar4, gStringVar2);
                     break;
@@ -6991,10 +7390,10 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     StringAppend(gStringVar4, gStringVar2);
                     break;
                 case IF_MIN_OVERWORLD_STEPS:
-                    StringAppend(gStringVar4, COMPOUND_STRING("after "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("אחרי "));
                     ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg1, STR_CONV_MODE_LEFT_ALIGN, 4);
                     StringAppend(gStringVar4, gStringVar2);
-                    StringAppend(gStringVar4, COMPOUND_STRING(" steps"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" צעדים"));
                     break;
                 case IF_BAG_ITEM_COUNT:
                     ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg2, STR_CONV_MODE_LEFT_ALIGN, 3);
@@ -7002,7 +7401,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     StringAppend(gStringVar4, COMPOUND_STRING(" "));
                     CopyItemNameHandlePlural(evolutions[i].params[j].arg1, gStringVar2, evolutions[i].params[j].arg2);
                     StringAppend(gStringVar4, gStringVar2);
-                    StringAppend(gStringVar4, COMPOUND_STRING(" in bag"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" בתיק"));
                     break;
                 case CONDITIONS_END:
                     break;
@@ -7015,6 +7414,17 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
             }
         }
 
+#if TEXT_RTL
+        // The font is fitted to the line with its closing period, the string BreakStringAutomatic
+        // wraps: a line that fits only without the period would keep the wider font and wrap.
+        StringAppend(gStringVar4, COMPOUND_STRING("."));
+        if (isAlcremie)
+            fontId = FONT_SMALL_NARROWER;
+        else
+            fontId = GetFontIdToFit(gStringVar4, FONT_SMALL, 0, maxScreenWidth);
+
+        u32 fontHeight = GetFontAttribute(fontId, FONTATTR_MAX_LETTER_HEIGHT);
+#else
         if (isAlcremie)
             fontId = FONT_SMALL_NARROWER;
         else
@@ -7023,16 +7433,24 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
         u32 fontHeight = GetFontAttribute(fontId, FONTATTR_MAX_LETTER_HEIGHT);
 
         StringAppend(gStringVar4, COMPOUND_STRING("."));
+#endif
         BreakStringAutomatic(gStringVar4, maxScreenWidth, MAX_EVO_METHOD_LINES, fontId, HIDE_SCROLL_PROMPT);
 
         PrintInfoScreenTextSmall(gStringVar4, fontId, base_x_offset, base_y + base_y_offset*(*depth_i) + numLines); //Print actual instructions
         (*depth_i)++;
 
         lineBreaks = CountLineBreaks(gStringVar4);
+#if TEXT_RTL
+        numLines += lineBreaks * fontHeight;
+
+        if (*depth_i < 10)
+            sPokedexView->sEvoScreenData.arrowSpriteDist[*depth_i] = numLines;
+#else
         numLines = lineBreaks * fontHeight;
 
         if (*depth_i + 1 < 10)
             sPokedexView->sEvoScreenData.arrowSpriteDist[*depth_i + 1] = numLines;
+#endif
 
         *totalLines += lineBreaks + 1;
 
@@ -7202,6 +7620,12 @@ static void Task_LoadFormsScreen(u8 taskId)
     }
 }
 
+#if TEXT_RTL
+// The arrow sits 13 px left of a form icon's centre (icons at 18 + 34 * column); in RTL it points
+// at the icon from the same distance on its right, flipped.
+#define FORMS_RTL_ARROW_SHIFT 26
+#endif
+
 static void Task_HandleFormsScreenInput(u8 taskId)
 {
     u8 base_x = 5;
@@ -7213,7 +7637,12 @@ static void Task_HandleFormsScreenInput(u8 taskId)
         if (JOY_NEW(A_BUTTON) && sPokedexView->sFormScreenData.numForms != 0)
         {
             sPokedexView->sFormScreenData.inSubmenu = TRUE;
+#if TEXT_RTL
+            sPokedexView->sFormScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, base_x + offset_x + FORMS_RTL_ARROW_SHIFT, base_y, 0);
+            gSprites[sPokedexView->sFormScreenData.arrowSpriteId].hFlip = TRUE;
+#else
             sPokedexView->sFormScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, base_x + offset_x, base_y, 0);
+#endif
             gSprites[sPokedexView->sFormScreenData.arrowSpriteId].animNum = 2;
             EvoFormsPage_PrintNavigationButtons();
         }
@@ -7263,7 +7692,11 @@ static void Task_HandleFormsScreenInput(u8 taskId)
 
         row = menuPos / 7;
         column = menuPos % 7;
+#if TEXT_RTL
+        gSprites[sPokedexView->sFormScreenData.arrowSpriteId].x = base_x + offset_x * column + FORMS_RTL_ARROW_SHIFT;
+#else
         gSprites[sPokedexView->sFormScreenData.arrowSpriteId].x = base_x + offset_x * column;
+#endif
         gSprites[sPokedexView->sFormScreenData.arrowSpriteId].y = base_y + offset_y * row;
 
         sPokedexView->sFormScreenData.menuPos = menuPos;
@@ -7443,8 +7876,14 @@ static void Task_LoadCryScreen(u8 taskId)
         gMain.state++;
         break;
     case 4:
+#if TEXT_RTL
+        // Mirror inside the gap between the mon box and the VU meter (x 81-142).
+        PrintInfoScreenText(gText_CryOf, DEX_RTL_BOX_X(82, 81, 143), 33);
+        PrintCryScreenSpeciesName(0, sPokedexListItem->dexNum, DEX_RTL_BOX_X(82, 81, 143), 49);
+#else
         PrintInfoScreenText(gText_CryOf, 82, 33);
         PrintCryScreenSpeciesName(0, sPokedexListItem->dexNum, 82, 49);
+#endif
         gMain.state++;
         break;
     case 5:
@@ -8182,6 +8621,9 @@ static void Task_LoadSearchMenu(u8 taskId)
             SetBgTilemapBuffer(1, AllocZeroed(BG_SCREEN_SIZE));
             SetBgTilemapBuffer(0, AllocZeroed(BG_SCREEN_SIZE));
             InitWindows(sSearchMenu_WindowTemplate);
+#if TEXT_RTL
+            MirrorDexWindowsAtScreenWidth();
+#endif
             DeactivateAllTextPrinters();
             PutWindowTilemap(0);
             if (!HGSS_DECAPPED)
@@ -8752,31 +9194,39 @@ static void HighlightSelectedSearchMenuItem(u8 topBarItem, u8 menuItem)
 }
 
 // Prints the currently selected search parameters in the search menu selection boxes
+#if TEXT_RTL
+// Each selected value mirrors inside its own field box: the wide fields are x 44-131, the two TYPE
+// fields x 44-83 and 92-131.
+#define SEARCH_FIELD_X(x, boxLeft, boxRight) DEX_RTL_BOX_X(x, boxLeft, boxRight)
+#else
+#define SEARCH_FIELD_X(x, boxLeft, boxRight) (x)
+#endif
+
 static void PrintSelectedSearchParameters(u8 taskId)
 {
     u16 searchParamId;
 
-    ClearSearchMenuRect(40, 16, 96, 80);
+    ClearSearchMenuRect(SEARCH_FIELD_X(40, 40, 136), 16, 96, 80);
 
     searchParamId = gTasks[taskId].tCursorPos_Name + gTasks[taskId].tScrollOffset_Name;
-    PrintSearchText(sDexSearchNameOptions[searchParamId].title, 0x2D, 0x11);
+    PrintSearchText(sDexSearchNameOptions[searchParamId].title, SEARCH_FIELD_X(0x2D, 44, 132), 0x11);
 
     searchParamId = gTasks[taskId].tCursorPos_Color + gTasks[taskId].tScrollOffset_Color;
-    PrintSearchText(sDexSearchColorOptions[searchParamId].title, 0x2D, 0x21);
+    PrintSearchText(sDexSearchColorOptions[searchParamId].title, SEARCH_FIELD_X(0x2D, 44, 132), 0x21);
 
     searchParamId = gTasks[taskId].tCursorPos_TypeLeft + gTasks[taskId].tScrollOffset_TypeLeft;
-    PrintSearchTextToFit(sDexSearchTypeOptions[searchParamId].title, 0x2D, 0x31, 38);
+    PrintSearchTextToFit(sDexSearchTypeOptions[searchParamId].title, SEARCH_FIELD_X(0x2D, 44, 84), 0x31, 38);
 
     searchParamId = gTasks[taskId].tCursorPos_TypeRight + gTasks[taskId].tScrollOffset_TypeRight;
-    PrintSearchTextToFit(sDexSearchTypeOptions[searchParamId].title, 0x5D, 0x31, 38);
+    PrintSearchTextToFit(sDexSearchTypeOptions[searchParamId].title, SEARCH_FIELD_X(0x5D, 92, 132), 0x31, 38);
 
     searchParamId = gTasks[taskId].tCursorPos_Order + gTasks[taskId].tScrollOffset_Order;
-    PrintSearchText(sDexOrderOptions[searchParamId].title, 0x2D, 0x41);
+    PrintSearchText(sDexOrderOptions[searchParamId].title, SEARCH_FIELD_X(0x2D, 44, 132), 0x41);
 
     if (IsNationalPokedexEnabled())
     {
         searchParamId = gTasks[taskId].tCursorPos_Mode + gTasks[taskId].tScrollOffset_Mode;
-        PrintSearchText(sDexModeOptions[searchParamId].title, 0x2D, 0x51);
+        PrintSearchText(sDexModeOptions[searchParamId].title, SEARCH_FIELD_X(0x2D, 44, 132), 0x51);
     }
 }
 
@@ -8983,24 +9433,32 @@ static void EraseAndPrintSearchTextBox(const u8 *str)
     PrintSearchText(str, 8, 121);
 }
 
+#if TEXT_RTL
+// The option list and its cursor mirror inside the dropdown box, which starts at x 140 and runs off
+// the right edge of the screen.
+#define SEARCH_PARAM_BOX_X(x) DEX_RTL_BOX_X(x, 140, DISPLAY_WIDTH)
+#else
+#define SEARCH_PARAM_BOX_X(x) (x)
+#endif
+
 static void EraseSelectorArrow(u32 y)
 {
-    ClearSearchMenuRect(144, y * 16 + 8, 8, 16);
+    ClearSearchMenuRect(SEARCH_PARAM_BOX_X(144), y * 16 + 8, 8, 16);
 }
 
 static void PrintSelectorArrow(u32 y)
 {
-    PrintSearchText(gText_SelectorArrow, 144, y * 16 + 9);
+    PrintSearchText(gText_SelectorArrow, SEARCH_PARAM_BOX_X(144), y * 16 + 9);
 }
 
 static void PrintSearchParameterTitle(u32 y, const u8 *str)
 {
-    PrintSearchText(str, 152, y * 16 + 9);
+    PrintSearchText(str, SEARCH_PARAM_BOX_X(152), y * 16 + 9);
 }
 
 static void ClearSearchParameterBoxText(void)
 {
-    ClearSearchMenuRect(144, 8, 96, 96);
+    ClearSearchMenuRect(SEARCH_PARAM_BOX_X(144), 8, 96, 96);
 }
 
 static void TryLoadDarkModeArrowPalette(void)

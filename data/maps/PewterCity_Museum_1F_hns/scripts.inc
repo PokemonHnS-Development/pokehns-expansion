@@ -39,34 +39,33 @@ PewterCity_Museum_1F_EventScript_Bones::
 	end
 
 PewterCity_Museum_1F_Text_Recptionist:
-	.string "Welcome!\p"
-	.string "Just to let you know, all the large\n"
-	.string "specimens have been taken to the\l"
-	.string "other museums for display.\p"
-	.string "So for now, admission is free of\n"
-	.string "charge!\p"
-	.string "Please go ahead.$"
+	.string "ברוכים הבאים!\p"
+	.string "רק לידיעתך, כל המוצגים הגדולים\n"
+	.string "נלקחו להצגה במוזיאונים אחרים.\p"
+	.string "לכן כרגע, הכניסה היא\n"
+	.string "ללא תשלום!\p"
+	.string "בבקשה, אפשר להיכנס.$"
 
 PewterCity_Museum_1F_Text_FossilWoman:
-	.string "You must be a strong trainer.\p"
-	.string "We don't have much use for the\n"
-	.string "fossils on the counter over there.\p"
-	.string "A strange man with silver hair\n"
-	.string "dropped a ton of them off here.\p"
-	.string "Go ahead and take them if you like.$"
+	.string "אתה בטח מאמן חזק.\p"
+	.string "אין לנו הרבה שימוש במאובנים\n"
+	.string "שעל הדלפק שם.\p"
+	.string "איש מוזר עם שיער כסוף\n"
+	.string "השאיר פה המון כאלה.\p"
+	.string "אם תרצה, אפשר לקחת אותם.$"
 
 PewterCity_Museum_1F_Text_FossilWomanAfter:
-	.string "We often share research with the\n"
-	.string "RUINS OF ALPH researchers.\p"
-	.string "We even share fossils with them\n"
-	.string "through the PC!$"
+	.string "לעתים קרובות אנחנו חולקים מחקרים\n"
+	.string "עם החוקרים של חורבות אלף.\p"
+	.string "אנחנו אפילו חולקים איתם מאובנים\n"
+	.string "דרך המחשב!$"
 
 PewterCity_Museum_1F_Text_Oldman:
-	.string "I should be grateful for my long\n"
-	.string "life.\p"
-	.string "Never did I think I would get to\n"
-	.string "see the bones of a dragon!$"
+	.string "אני צריך להיות אסיר תודה על\n"
+	.string "החיים הארוכים שלי.\p"
+	.string "מעולם לא חשבתי שאזכה\n"
+	.string "לראות עצמות של דרקון!$"
 
 PewterCity_Museum_1F_Text_Bones:
-	.string "Bones of an ancient dragon\n"
-	.string "POKéMON.$"
+	.string "עצמות של פוקימון דרקון\n"
+	.string "קדום.$"

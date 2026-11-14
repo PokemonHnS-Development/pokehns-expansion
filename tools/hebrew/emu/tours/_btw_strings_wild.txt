@@ -1,0 +1,12 @@
+# Include (not a tour) for the r2 battle-string driver (scratch tools/btw_strings.py): a wild battle, Sandslash (Alola form, long name with a hyphen)
+# against a level-5 Staraptor (long name, Intimidate), FIGHT > Growl; the driver takes over
+# while Growl's battle script runs.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_SANDSLASH_ALOLA, 50, abilityNum=0, move1=MOVE_GROWL, move2=MOVE_ICICLE_CRASH; end
+pinrng
+evstart setwildbattle SPECIES_STARAPTOR, 5; dowildbattle; end
+waitbattle
+bwalk bs_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0

@@ -1,0 +1,6 @@
+# r6 Kanto / post-League story tours: base include (not a tour). CONTINUE, a Lv 100 Mewtwo in
+# slot 0 (no level-ups or move prompts in the battles), FAST BATTLES off so bwalk / bwin
+# photograph the messages that do not wait for A.
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_MEWTWO, 100, move1=MOVE_PSYSTRIKE, move2=MOVE_ICE_BEAM, move3=MOVE_RECOVER, move4=MOVE_AURA_SPHERE; end
+fastbattles off

@@ -1,0 +1,58 @@
+# After the League (ladder 4, LABSTATE 10): Elm's S.S. Ticket (NewBarkTown_Lab_EventScript_ElmSSTicket
+# :482-492), Oak at Olivine port (OlivineCity_PortInside_EventScript_Oak:5-45), the sailor's YES/NO
+# and boarding (OlivinePort_EventScript_Sailor:105-116, _Sailor_MaidenVoyage:190-202), then on board:
+# the grandpa trigger (SSAqua_1F_Trigger_Grandpa at (29,8)), Stanly (SSAqua_RoomNW_EventScript_Stanly,
+# no_intro TRAINER_STANLY_HNS), the granddaughter (SSAqua_CaptainsRoom_EventScript_Granddaughter),
+# the reunion (SSAqua_RoomSSE_EventScript_ReuinionScene), the arrival (SSAqua_1F_EventScript_Arrived)
+# and the door sailor's YES/NO (SSAqua_1F_EventScript_DoorSailorArrived) into Vermilion port.
+start saves/r6_story_l4.sav
+include _base.txt
+vars VAR_NEWBARKTOWN_LABSTATE VAR_SSAQUA_STATE
+warpto MAP_NEW_BARK_TOWN_LAB_HNS 6 5
+objs
+approach 2
+tap A 4
+scene E_elm 20000
+warpto MAP_OLIVINE_CITY_PORT_INSIDE_HNS 8 13
+objs
+walkto 8 15 DOWN
+snap O_port
+tap A 4
+scene O_oak 30000 30
+snap O_free
+objs
+approach 1
+tap A 4
+scene O_sailor 20000
+tap A 4
+scene O_board 30000
+snap A_onboard
+vars VAR_SSAQUA_STATE
+walkto 29 8
+scene G_grandpa 30000
+snap G_free
+warpto MAP_SSAQUA_ROOM_NW_HNS 2 3
+objs
+approach 1
+tap A 4
+scene S_stanly 20000
+include _battle.txt
+vars VAR_SSAQUA_STATE
+warpto MAP_SSAQUA_CAPTAINS_ROOM_HNS 4 4
+objs
+approach 2
+tap A 4
+scene C_girl 30000
+snap C_free
+vars VAR_SSAQUA_STATE
+objs
+walkto 3 6
+stepto DOWN 2
+scene V_arrived 30000 8 30000
+snap V_free
+walkto 29 3 UP
+tap A 4
+scene V_door 20000
+tap A 4
+scene V_leave 30000
+snap V_port

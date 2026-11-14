@@ -168,30 +168,30 @@ static EWRAM_DATA u8 sTopMenuNumOptions = 0;
 EWRAM_DATA struct PlayerPCItemPageStruct gPlayerPCItemPageInfo = {};
 static EWRAM_DATA struct ItemStorageMenu *sItemStorageMenu = NULL;
 
-static const u8 sText_WithdrawItem[] = _("WITHDRAW ITEM");
-static const u8 sText_DepositItem[] = _("DEPOSIT ITEM");
-static const u8 sText_TossItem[] = _("TOSS ITEM");
-static const u8 sText_Mailbox[] = _("MAILBOX");
+static const u8 sText_WithdrawItem[] = _("משוך פריט");
+static const u8 sText_DepositItem[] = _("הפקד פריט");
+static const u8 sText_TossItem[] = _("זרוק פריט");
+static const u8 sText_Mailbox[] = _("תיבת דואר");
 
-static const u8 sText_WithdrawHowManyItems[] = _("Withdraw how many\n{STR_VAR_1}?");
-static const u8 sText_WithdrawXItems[] = _("Withdrew {STR_VAR_2}\n{STR_VAR_1}.");
-static const u8 sText_NoRoomInBag[] = _("There is no more\nroom in the BAG.");
-static const u8 sText_TooImportantToToss[] = _("That's much too\nimportant to toss\nout!");
+static const u8 sText_WithdrawHowManyItems[] = _("למשוך כמה\n{STR_VAR_1}?");
+static const u8 sText_WithdrawXItems[] = _("משכת {STR_VAR_2}\n{STR_VAR_1}.");
+static const u8 sText_NoRoomInBag[] = _("אין עוד מקום\nבתיק.");
+static const u8 sText_TooImportantToToss[] = _("זה חשוב מכדי\nלזרוק אותו!");
 
 static const u8 *const sItemStorage_OptionDescriptions[] =
 {
-    [MENU_WITHDRAW] = COMPOUND_STRING("Take out items from the PC."),
-    [MENU_DEPOSIT]  = COMPOUND_STRING("Store items in the PC."),
-    [MENU_TOSS]     = COMPOUND_STRING("Throw away items stored in the PC."),
+    [MENU_WITHDRAW] = COMPOUND_STRING("הוצאת פריטים מהמחשב."),
+    [MENU_DEPOSIT]  = COMPOUND_STRING("אחסון פריטים במחשב."),
+    [MENU_TOSS]     = COMPOUND_STRING("זריקת פריטים שמאוחסנים במחשב."),
     [MENU_EXIT]     = gText_GoBackPrevMenu,
 };
 
 static const struct MenuAction sPlayerPCMenuActions[] =
 {
-    [MENU_ITEMSTORAGE] = { COMPOUND_STRING("ITEM STORAGE"), {PlayerPC_ItemStorage} },
+    [MENU_ITEMSTORAGE] = { COMPOUND_STRING("מחסן פריטים"), {PlayerPC_ItemStorage} },
     [MENU_MAILBOX]     = { sText_Mailbox,                   {PlayerPC_Mailbox} },
-    [MENU_DECORATION]  = { COMPOUND_STRING("DECORATION"),   {PlayerPC_Decoration} },
-    [MENU_TURNOFF]     = { COMPOUND_STRING("TURN OFF"),     {PlayerPC_TurnOff} }
+    [MENU_DECORATION]  = { COMPOUND_STRING("קישוטים"),   {PlayerPC_Decoration} },
+    [MENU_TURNOFF]     = { COMPOUND_STRING("כיבוי"),     {PlayerPC_TurnOff} }
 };
 
 static const u8 sBedroomPC_OptionOrder[] =
@@ -227,9 +227,9 @@ static const u16 sNewGamePCItems[][2] =
 
 const struct MenuAction gMailboxMailOptions[] =
 {
-    { COMPOUND_STRING("READ"),        {Mailbox_DoMailRead} },
-    { COMPOUND_STRING("MOVE TO BAG"), {Mailbox_MoveToBag} },
-    { COMPOUND_STRING("GIVE"),        {Mailbox_Give} },
+    { COMPOUND_STRING("קריאה"),        {Mailbox_DoMailRead} },
+    { COMPOUND_STRING("העברה לתיק"), {Mailbox_MoveToBag} },
+    { COMPOUND_STRING("נתינה"),        {Mailbox_Give} },
     { gText_Cancel2,                  {Mailbox_Cancel} }
 };
 
@@ -742,7 +742,25 @@ static void Mailbox_ProcessInput(u8 taskId)
 static void Mailbox_PrintWhatToDoWithPlayerMailText(u8 taskId)
 {
     StringCopy(gStringVar1, gSaveBlock1Ptr->mail[gPlayerPCItemPageInfo.itemsAbove + PARTY_SIZE + gPlayerPCItemPageInfo.cursorPos].playerName);
+#if TEXT_RTL
+    // As in the mailbox list, only a short name with Japanese letters switches to the Japanese
+    // font; any other keeps the normal font, with the padding of a full-length name trimmed.
+    if (IsStringJapanese(gStringVar1))
+    {
+        ConvertInternationalPlayerNameStripChar(gStringVar1, CHAR_SPACE);
+    }
+    else
+    {
+        u8 *end;
+
+        StripExtCtrlCodes(gStringVar1);
+        end = gStringVar1 + StringLength(gStringVar1);
+        while (end > gStringVar1 && end[-1] == CHAR_SPACE)
+            *--end = EOS;
+    }
+#else
     ConvertInternationalPlayerNameStripChar(gStringVar1, CHAR_SPACE);
+#endif
     StringExpandPlaceholders(gStringVar4, gText_WhatToDoWithVar1sMail);
     DisplayItemMessageOnField(taskId, gStringVar4, Mailbox_PrintMailOptions);
 }

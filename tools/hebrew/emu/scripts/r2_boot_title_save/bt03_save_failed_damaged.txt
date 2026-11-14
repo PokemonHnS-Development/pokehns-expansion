@@ -1,0 +1,15 @@
+# Save failure, damage kept: gDamagedSaveSectors (src/save.c:102) pinned to sector 0 during START > SAVE,
+# so TrySavingData calls DoSaveFailedScreen (save.c:805-808) and every re-save in CB2_WipeSave fails
+# (src/save_failed_screen.c:256-298): "save failed, checking backup", "check completed", three times,
+# then "backup memory damaged" (strings.c:719-722). A returns to the title (soft reset).
+start saves/boot_base.sav
+include ../continue.txt
+pinsym gDamagedSaveSectors 01000000
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+tap A 0
+regionwatch bt03_sf 4000 104 152 8 232 CB2_FadeAndReturnToTitleScreen
+snap bt03_end_damaged
+unpinsym gDamagedSaveSectors
+tap A 0
+waitcb2x CB2_InitCopyrightScreenAfterBootup 600

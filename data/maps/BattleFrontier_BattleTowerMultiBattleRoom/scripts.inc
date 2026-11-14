@@ -494,9 +494,8 @@ BattleFrontier_BattleTowerMultiBattleRoom_Text_7thOpponentSetNext:
 	.string "Do your best!$"
 
 gText_LinkStandby3::
-	.string "Link standby…$"
+	.string "המתנה לקישור…$"
 
 gText_YourPartnerHasRetired::
-	.string "Your partner has retired.\p"
-	.string "Your BATTLE ROOM challenge\n"
-	.string "will be canceled.$"
+	.string "השותף שלך פרש.\p"
+	.string "אתגר חדר הקרב שלך יבוטל.$"

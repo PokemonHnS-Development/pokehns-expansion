@@ -1,0 +1,16 @@
+# Save failure, then the re-save works: the pin is dropped once CB2_WipeSave starts, so the first
+# re-save clears gDamagedSaveSectors. gGameContinueCallback is NULL after a normal save, so the
+# screen shows gText_SaveCompleteGameCannotContinue (strings.c:723) and A soft-resets.
+start saves/boot_base.sav
+include ../continue.txt
+pinsym gDamagedSaveSectors 01000000
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+tap A 0
+waitcb2x CB2_SaveFailedScreen 900
+regionwatch bt04_sf 600 104 152 8 232 CB2_WipeSave
+unpinsym gDamagedSaveSectors
+regionwatch bt04_wipe 4000 104 152 8 232 CB2_FadeAndReturnToTitleScreen
+snap bt04_end_completed
+tap A 0
+waitcb2x CB2_InitCopyrightScreenAfterBootup 600

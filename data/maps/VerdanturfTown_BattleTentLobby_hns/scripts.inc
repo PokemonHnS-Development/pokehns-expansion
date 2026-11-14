@@ -330,44 +330,37 @@ VerdanturfTown_BattleTentLobby_hns_EventScript_ExitRules::
 	end
 
 VerdanturfTown_BattleTentLobby_hns_Text_MonsReluctantToUseDislikedMoves:
-	.string "If it doesn't like a certain move,\n"
-	.string "a POKéMON will be reluctant to use it.\p"
-	.string "It doesn't matter how strong it is,\n"
-	.string "either.\p"
-	.string "For example, a POKéMON with a GENTLE\n"
-	.string "nature probably won't enjoy hurting\l"
-	.string "its opponents.\p"
-	.string "If it can't seem to live up to its\n"
-	.string "potential, it's probably failing at\l"
-	.string "using a disliked move against its will.$"
+	.string "אם פוקימון לא אוהב מהלך מסוים,\n"
+	.string "הוא יהסס להשתמש בו.\p"
+	.string "ולא משנה כמה המהלך חזק.\p"
+	.string "למשל, פוקימון עם אופי נעים כנראה\n"
+	.string "לא ייהנה לפגוע ביריבים שלו.\p"
+	.string "אם הוא לא ממצה את עצמו, כנראה שהוא\n"
+	.string "נכשל במהלך שהוא לא אוהב, שנכפה עליו.$"
 
 VerdanturfTown_BattleTentLobby_hns_Text_GentleMonsScaryIfAngry:
-	.string "My big sister is gentle usually.\n"
-	.string "But when she gets angry,\l"
-	.string "she's really, really scary!\p"
-	.string "I bet a gentle POKéMON will be scary\n"
-	.string "if it gets angry!$"
+	.string "אחותי הגדולה בדרך כלל נעימה. אבל\n"
+	.string "כשהיא כועסת, היא ממש ממש מפחידה!\p"
+	.string "בטח גם פוקימון נעים\n"
+	.string "יהיה מפחיד כשהוא כועס!$"
 
 VerdanturfTown_BattleTentLobby_hns_Text_AttractionRunsDeep:
-	.string "My feelings toward my POKéMON…\n"
-	.string "The attraction runs deep…\p"
-	.string "Oh, hi, you didn't see that, did you?\n"
-	.string "Well, it doesn't matter.\p"
-	.string "How would you like this TM for\n"
-	.string "your POKéMON?$"
+	.string "הרגשות שלי כלפי הפוקימונים שלי…\n"
+	.string "המשיכה כל כך עמוקה…\p"
+	.string "אה, היי, לא ראית את זה, נכון?\n"
+	.string "טוב, זה לא משנה.\p"
+	.string "מה דעתך על המ”מ הזה\n"
+	.string "בשביל הפוקימונים שלך?$"
 
 VerdanturfTown_BattleTentLobby_hns_Text_AttractionMutual:
-	.string "My feelings toward my POKéMON…\n"
-	.string "I'm sure the attraction is mutual!\p"
-	.string "They battle exactly the way I want\n"
-	.string "them to!$"
+	.string "הרגשות שלי כלפי הפוקימונים שלי…\n"
+	.string "אני בטוחה שהמשיכה הדדית!\p"
+	.string "הם נלחמים בדיוק כמו שאני רוצה!$"
 
 VerdanturfTown_BattleTentLobby_hns_Text_TaughtWhatKindsOfMoves:
-	.string "What kind of moves have you taught\n"
-	.string "your POKéMON?\p"
-	.string "I think you would give yourself\n"
-	.string "an advantage if they knew how to\l"
-	.string "heal or protect themselves.$"
+	.string "אילו מהלכים לימדת את הפוקימונים שלך?\p"
+	.string "לדעתי יהיה לך יתרון אם הם יידעו\n"
+	.string "לרפא את עצמם או להגן על עצמם.$"
 
 VerdanturfTown_BattleTentLobby_hns_Text_ScottCanMeetToughTrainers:
 	.string "SCOTT: Hey there, {PLAYER}{KUN}!\n"

@@ -1,0 +1,298 @@
+# MOVE POKeMON on save pcs_base (box 1 full, see pcs_setup.inc): RELEASE answered YES (Meowscarada,
+# box slot 8: "X was released." / "Bye-bye, X!"), RELEASE an Egg (slot 7; OW_PC_RELEASE_EGGS is TRUE,
+# include/config/overworld.h:33, so it is released), RELEASE a mail holder (slot 4, "Please remove the
+# MAIL."), a Pokemon in hand over the box and over the party pane, a SHIFT, CLOSE BOX while holding
+# ("You're holding a POKeMON!"), B while holding (Gen 4+ places it, OW_PC_PRESS_B), the party pane with a
+# gap, a mail holder in hand when the party pane closes, STORE of a mail holder, and RELEASE of Pidgeot,
+# the only Surf user ("... ... ... ... !", "X came back!", "Was it worried about you?").
+# State numbers: Task_ReleaseMon / Task_OnSelectedMon in src/pokemon_storage_system.c:2611-3123.
+start save:pcs_base
+include _pc_open.txt
+tap A 0                                   # MOVE POKeMON
+waitcb2x CB2_PokeStorage 900
+pcwait
+snap pcs_move_01_box
+# the display panel (nickname, species, level, held item) for the item holders: item names with
+# descenders (BERRY JUICE, HYPER POTION) sit on the row above the markings
+pcgoto box 5
+snap pcs_move_01a_panel_leftovers
+pcgoto box 6
+snap pcs_move_01b_panel_lucky_egg
+pcgoto box 9
+snap pcs_move_01c_panel_focus_sash
+pcgoto box 10
+snap pcs_move_01d_panel_power_lens
+pcgoto box 11
+snap pcs_move_01e_panel_berry_juice
+pcgoto box 12
+snap pcs_move_01f_panel_hyper_potion
+pcgoto box 13
+snap pcs_move_01g_panel_thick_club
+
+# ---- RELEASE YES: Meowscarada (slot 8)
+pcgoto box 8
+snap pcs_move_02_cursor_slot8
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_move_03_menu
+press DOWN
+press DOWN
+press DOWN
+press DOWN                                # RELEASE
+press A
+waittaskx Task_ReleaseMon 300
+waitquiet
+12 -
+press UP                                  # YES (the window opens on NO)
+snap pcs_move_04_release_yes_selected
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 4 900
+12 -
+snap pcs_move_05_was_released
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 5 300
+12 -
+snap pcs_move_06_bye_bye
+press A
+pcwait
+snap pcs_move_07_after_release
+
+# ---- RELEASE an Egg (slot 7)
+pcgoto box 7
+snap pcs_move_08_cursor_egg
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_move_09_egg_menu
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press A
+waittaskx Task_ReleaseMon 300
+waitquiet
+12 -
+snap pcs_move_10_egg_release_confirm
+press UP
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 4 900
+12 -
+snap pcs_move_11_egg_was_released
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 5 300
+12 -
+snap pcs_move_12_egg_bye_bye
+press A
+pcwait
+
+# ---- RELEASE a mail holder (Meowth, slot 4)
+pcgoto box 4
+snap pcs_move_13_cursor_mail_holder
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 6 300
+12 -
+snap pcs_move_14_release_mail_remove_mail
+press A
+pcwait
+
+# ---- MOVE: pick up Ho-Oh (slot 0), hold it over the box, over a Pokemon, SHIFT with Arcanine
+pcgoto box 0
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press A                                   # MOVE
+pcwait
+snap pcs_move_15_holding_over_empty_slot
+pcgoto box 1
+snap pcs_move_16_holding_over_mon
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_move_17_holding_menu_shift
+press A                                   # SHIFT
+pcwait
+snap pcs_move_18_shifted
+
+# ---- CLOSE BOX while holding Arcanine: "You're holding a POKeMON!"
+pcgoto buttons 1
+snap pcs_move_19_holding_on_close_box
+press A
+waittaskx Task_OnCloseBoxPressed 300
+waitquiet
+12 -
+snap pcs_move_20_holding_poke_msg
+press A
+pcwait
+
+# ---- the party pane while holding Arcanine; SHIFT it with Togekiss (party 5)
+pcgoto buttons 0
+press A
+pcwait
+snap pcs_move_21_party_pane_holding
+pcgoto party 5
+snap pcs_move_22_holding_over_party_mon
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_move_23_party_holding_menu
+press A                                   # SHIFT
+pcwait
+snap pcs_move_24_party_shifted
+# B while holding Togekiss in the party pane closes the pane; place it in the empty slot 0
+press B
+pcwait
+pcgoto box 0
+press B                                   # B while holding: placed (OW_PC_PRESS_B >= GEN_4)
+pcwait
+snap pcs_move_25_b_placed
+
+# ---- the party pane with a gap: pick up Ampharos (party 2)
+pcgoto buttons 0
+press A
+pcwait
+pcgoto party 2
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_move_26_party_mon_menu
+press A                                   # MOVE
+pcwait
+snap pcs_move_27_party_gap_holding
+pcgoto party 5
+snap pcs_move_28_party_gap_slot
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_move_29_party_place_menu
+press A                                   # PLACE
+pcwait
+snap pcs_move_30_party_placed
+
+# ---- a mail holder into the party (SHIFT Meowth with party 5), then hold it and close the pane
+press B
+pcwait
+pcgoto box 4
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press A                                   # MOVE Meowth
+pcwait
+pcgoto buttons 0
+press A
+pcwait
+pcgoto party 5
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press A                                   # SHIFT: Meowth in party 5, Ampharos in hand
+pcwait
+press B                                   # close the pane holding Ampharos
+pcwait
+pcgoto box 4
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press A                                   # PLACE Ampharos in slot 4
+pcwait
+pcgoto buttons 0
+press A
+pcwait
+pcgoto party 5
+snap pcs_move_31_party_mail_holder
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press A                                   # MOVE Meowth (holding the mail holder in the pane)
+pcwait
+press B                                   # close the pane: MSTATE_ERROR_HAS_MAIL
+waitpmem 8 pokemon_storage_system:sStorage 0 6 300
+12 -
+snap pcs_move_32_close_party_holding_mail
+press A
+pcwait
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press A                                   # PLACE Meowth back (party 5)
+pcwait
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_move_33_party_mail_menu
+press DOWN
+press DOWN                                # STORE
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 6 300
+12 -
+snap pcs_move_34_store_mail_remove_mail
+press A
+pcwait
+
+# ---- RELEASE Pidgeot (party 1), the only Surf user
+pcgoto party 1
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press A
+waittaskx Task_ReleaseMon 300
+waitquiet
+12 -
+press UP
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 9 900
+12 -
+snap pcs_move_35_surf_was_released
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 10 300
+12 -
+snap pcs_move_36_surf_surprise
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 12 600
+12 -
+snap pcs_move_37_surf_came_back
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 13 300
+12 -
+snap pcs_move_38_surf_worried
+press A
+pcwait
+snap pcs_move_39_surf_kept
+boxprobe 0
+
+# ---- DEPOSIT mode with the mail holder (Meowth, party 5): DEPOSIT -> "Please remove the MAIL."
+press B                                   # close the party pane
+pcwait
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+press DOWN
+press A                                   # NO: back to the storage menu
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+press DOWN
+tap A 0                                   # DEPOSIT POKeMON
+waitcb2x CB2_PokeStorage 900
+pcwait
+pcgoto party 5
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_move_40_deposit_mode_mail_menu
+press A                                   # DEPOSIT
+waitpmem 8 pokemon_storage_system:sStorage 0 6 300
+12 -
+snap pcs_move_41_deposit_mode_remove_mail
+press A
+pcwait

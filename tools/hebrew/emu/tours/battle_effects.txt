@@ -1,0 +1,27 @@
+# Abilities, weather and status conditions: the ability pop-up (Intimidate on the player's
+# side, Sand Stream on the foe's), the sandstorm and its end-of-turn messages, paralysis,
+# confusion, rain from a move, and running away.
+# Gyarados gets ability slot 0 (Intimidate); a wild Tyranitar always has Sand Stream (its
+# second slot is empty; src/data/pokemon/species_info/gen_2_families.h).
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_GYARADOS, 50, abilityNum=0, move1=MOVE_THUNDER_WAVE, move2=MOVE_CONFUSE_RAY, move3=MOVE_RAIN_DANCE, move4=MOVE_SPLASH; end
+
+pinrng
+evstart setwildbattle SPECIES_TYRANITAR, 20; dowildbattle; end
+waitbattle
+bwalk battle_effects_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0                                   # Thunder Wave: paralysis
+bwalk battle_effects_turn1 input:HandleInputChooseAction
+baction FIGHT
+bmove 1                                   # Confuse Ray: confusion
+bwalk battle_effects_turn2 input:HandleInputChooseAction
+baction FIGHT
+bmove 2                                   # Rain Dance: the sandstorm gives way to rain
+bwalk battle_effects_turn3 input:HandleInputChooseAction
+baction FIGHT
+bmove 3                                   # Splash: "But nothing happened!"
+bwalk battle_effects_turn4 input:HandleInputChooseAction
+baction RUN
+bwalk battle_effects_run free

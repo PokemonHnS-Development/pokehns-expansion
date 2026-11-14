@@ -1,0 +1,98 @@
+# A Poke Ball the bag refuses in battle (ItemUseInBattle_PokeBall, src/item_use.c:1194-1240):
+# with a full party AND full PC boxes, gText_BoxFull ("התיבה מלאה.", src/strings.c:184);
+# against two wild Pokemon, sText_CantThrowPokeBall_TwoMons (src/item_use.c:1183). The wild
+# double battle also shows two foe HP boxes, two player Pokemon, an action menu per
+# Pokemon and target selection.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_TOTODILE, 20, move1=MOVE_SURF, move2=MOVE_WATER_GUN, move3=MOVE_BITE, move4=MOVE_GROWL; givemon SPECIES_CYNDAQUIL, 20, move1=MOVE_EMBER, move2=MOVE_TACKLE; givemon SPECIES_CHIKORITA, 12; givemon SPECIES_PIKACHU, 12; givemon SPECIES_PIDGEY, 10; givemon SPECIES_RATTATA, 10; additem ITEM_POKE_BALL, 5; end
+expect8 @gPlayerPartyCount@ 6
+dbg 1 1 0                                 # PC/Bag > Fill > Fill PC Boxes Fast
+waitctl 600 B
+
+pinrng
+evstart setwildbattle SPECIES_HOOTHOOT, 5; dowildbattle; end
+waitbattle
+bwalk bv_boxfull_intro input:HandleInputChooseAction
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 2                # POKE BALLS
+snap bv_boxfull_balls
+tap A 4                                   # Poke Ball: USE / CANCEL
+waitquiet
+snap bv_boxfull_use
+tap A 4                                   # USE
+waitkey 600
+snap bv_boxfull_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap bv_boxfull_back
+tap B 4
+waitbinput HandleInputChooseAction
+baction RUN
+bwalk bv_boxfull_run free
+
+# Two wild Pokemon: a double battle
+evstart setwildbattle SPECIES_HOOTHOOT, 5, species2=SPECIES_SENTRET, level2=5; dowildbattle; end
+waitbattle
+bwalk bv_wdouble_intro input:HandleInputChooseAction
+snap bv_wdouble_action1
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+expect8 @gBagPosition+5@ 2                # the bag reopens on POKE BALLS
+tap A 4
+waitquiet
+tap A 4
+waitkey 600
+snap bv_wdouble_twomons_01
+tap A 4
+waitquiet
+snap bv_wdouble_twomons_02
+waittaskx Task_BagMenu_HandleInput 600
+tap B 4
+waitbinput HandleInputChooseAction
+# first Pokemon: Surf (hits both foes and the partner)
+baction FIGHT
+waitbinput HandleInputChooseMove
+snap bv_wdouble_moves1
+bmove 0
+bwalk bv_wdouble_tgt1 input:HandleInputChooseAction|input:HandleInputShowTargets|input:HandleInputShowEntireFieldTargets|input:HandleInputChooseTarget
+snap bv_wdouble_targets_surf
+tap B 4                                   # back to the move list
+waitbinput HandleInputChooseMove
+tap B 4
+waitbinput HandleInputChooseAction
+# first Pokemon: Water Gun, one target
+baction FIGHT
+bmove 1
+waitbinput HandleInputChooseTarget
+snap bv_wdouble_target_01
+tap RIGHT 4
+waitquiet
+snap bv_wdouble_target_02
+tap LEFT 4
+waitquiet
+tap A 4
+# second Pokemon (battler 2): its own action menu
+waitbinputb 2 HandleInputChooseAction
+snap bv_wdouble_action2
+bactionb 2 FIGHT
+waitbinputb 2 HandleInputChooseMove
+snap bv_wdouble_moves2
+bmoveb 2 0                                # Ember
+waitbinputb 2 HandleInputChooseTarget
+snap bv_wdouble_target2_01
+tap A 4
+bwalk bv_wdouble_turn1 input:HandleInputChooseAction|free
+snap bv_wdouble_after1

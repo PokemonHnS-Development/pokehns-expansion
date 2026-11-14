@@ -1,0 +1,42 @@
+# The three Electrodes, Rocket Hideout B2F (11,9/12/15), VAR_MAHOGANY_TOWN_STATE 13: Lance's line on
+# the trigger before they are down (RocketHideout_B2F_Trigger_Electrode, data/maps/RocketHideout_B2F_hns/
+# scripts.inc:442-452), each Electrode (RocketHideout_B2F_EventScript_Electrode :454-471; the first one
+# also caught), and Lance's scene once all three fainted (:473-515).
+start saves/ladder6_postgame.sav
+include _base.txt
+ev setvar VAR_MAHOGANY_TOWN_STATE, 13; setvar VAR_ELECTRODES_FAINTED, 0; clearflag FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE1; clearflag FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE2; clearflag FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE3; clearflag FLAG_HIDE_ROCKETHIDEOUT2_LANCE_DRAGONITE; setflag FLAG_HIDE_MAHOGANY_ROCKETS; end
+warpto MAP_ROCKET_HIDEOUT_B2F_HNS 13 16
+face RIGHT
+snap el_field
+stepto RIGHT 1
+scene el_lance1 6000
+snap el_back
+
+warpto MAP_ROCKET_HIDEOUT_B2F_HNS 12 9
+face LEFT
+tap A 4
+scene el1_pre 4000
+include _legend_tail.txt
+
+warpto MAP_ROCKET_HIDEOUT_B2F_HNS 12 12
+face LEFT
+tap A 4
+scene el2_pre 4000
+bwalk el2_intro input:HandleInputChooseAction
+bwin el2_win
+scene el2_after 3000
+
+warpto MAP_ROCKET_HIDEOUT_B2F_HNS 12 15
+face LEFT
+tap A 4
+scene el3_pre 4000
+bwalk el3_intro input:HandleInputChooseAction
+bwin el3_win
+scene el3_after 3000
+
+showvar VAR_ELECTRODES_FAINTED
+warpto MAP_ROCKET_HIDEOUT_B2F_HNS 13 16
+face RIGHT
+stepto RIGHT 1
+scene el_done 20000 60
+snap el_end

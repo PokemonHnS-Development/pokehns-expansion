@@ -1,0 +1,147 @@
+# Johto Safari Zone (Emerald UI): the gate counter (SafariZoneGate_SafariZoneEntrance_hns
+# scripts.inc:247-279; money box, 500, 30 Safari Balls), the start menu in the zone (RETIRE first,
+# "Safari Balls / stock" window, src/start_menu.c:392-394,463-481), RETIRE -> YES/NO -> NO,
+# Safari battles (BATTLE_TYPE_SAFARI through BattleSetup_StartWildBattle, src/battle_setup.c:381;
+# `dowildbattle` would start a plain scripted battle): the action menu BALL / POKEBLOCK / GO NEAR /
+# RUN, the HP box "Safari Balls / Left: N", the Pokeblock case in battle and the throw, GO NEAR,
+# Safari Ball throws from the bag counting down, out of balls (gNumSafariBalls poked to 1).
+# Second visit: walking back into the gate (exit prompt, YES). Third visit: the steps run out
+# (gSafariZoneStepCounter poked to 2), the PA "time's up" message.
+start save:r2sf_blocks
+include ../continue.txt
+fastbattles off
+warpto MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS 9 3
+go UP
+talk r2sf_sf_gate 40 -
+press A
+talk r2sf_sf_pay 40 -
+waitctl 1200
+loc
+snap r2sf_sf_zone
+
+# start menu: RETIRE, the Safari Balls window; RETIRE -> exit? -> NO
+startmenux 8 nopress
+waitquiet
+snap r2sf_sf_start_retire
+tap DOWN 4
+waitquiet
+snap r2sf_sf_start_2
+tap UP 4
+waitquiet
+tap A 4
+talk r2sf_sf_retire 10 -
+press B
+waitctl 600
+snap r2sf_sf_retire_no
+
+# battle 1: menu, Pokeblock, GO NEAR, two Safari Balls, RUN
+pinrng
+evstart setwildbattle SPECIES_CHANSEY, 30; callnative BattleSetup_StartWildBattle; end
+waitbattle
+bwalk r2sf_sf_b1_intro input:HandleInputChooseAction
+snap r2sf_sf_b1_menu_ball
+baction BAG nopress
+waitquiet
+snap r2sf_sf_b1_menu_pokeblock
+baction POKEMON nopress
+waitquiet
+snap r2sf_sf_b1_menu_gonear
+baction RUN nopress
+waitquiet
+snap r2sf_sf_b1_menu_run
+# POKEBLOCK: the case in battle, USE
+baction BAG
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+snap r2sf_sf_b1_case
+tap A 4
+waitquiet
+snap r2sf_sf_b1_case_actions
+tap A 4
+waitcb2x BattleMainCB2 900
+bwalk r2sf_sf_b1_block input:HandleInputChooseAction
+# GO NEAR twice
+baction POKEMON
+bwalk r2sf_sf_b1_near1 input:HandleInputChooseAction
+baction POKEMON
+bwalk r2sf_sf_b1_near2 input:HandleInputChooseAction
+# BALL: the bag on POKE BALLS, the Safari Ball, USE
+baction FIGHT
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap r2sf_sf_b1_bag
+bagseek ITEM_SAFARI_BALL
+waitquiet
+snap r2sf_sf_b1_bag_safari
+tap A 4
+waitquiet
+snap r2sf_sf_b1_bag_use
+tap A 4
+bwalk r2sf_sf_b1_ball1 input:HandleInputChooseAction|prompt:|task:
+snap r2sf_sf_b1_after_ball1
+# second ball, then RUN
+baction FIGHT
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+bagseek ITEM_SAFARI_BALL
+tap A 4
+waitquiet
+tap A 4
+bwalk r2sf_sf_b1_ball2 input:HandleInputChooseAction
+baction RUN
+bwalk r2sf_sf_b1_run free
+snap r2sf_sf_b1_end
+
+# battle 2: one ball left (gNumSafariBalls, src/safari_zone.c:44) -> out of balls, game over
+evstart setwildbattle SPECIES_TAUROS, 30; callnative BattleSetup_StartWildBattle; end
+waitbattle
+bwalk r2sf_sf_b2_intro input:HandleInputChooseAction
+w8 @gNumSafariBalls@ 1
+baction FIGHT
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+bagseek ITEM_SAFARI_BALL
+tap A 4
+waitquiet
+tap A 4
+waitcb2x BattleMainCB2 900
+waitquiet
+snap r2sf_sf_b2_lastball
+bwalk r2sf_sf_b2_out free|input:
+loc
+snap r2sf_sf_b2_gate
+unpinrng
+
+# second visit: walk back into the gate from the zone -> exit prompt -> YES
+go UP
+talk r2sf_sf_gate2 40 -
+press A
+talk r2sf_sf_pay2 40 -
+waitctl 1200
+loc
+16 DOWN
+60 -
+waitcb2 CB2_Overworld 900
+talk r2sf_sf_exit 10 -
+press A
+talk r2sf_sf_exit_yes 10 -
+waitctl 1200
+loc
+snap r2sf_sf_exit_done
+
+# third visit: the steps run out (gSafariZoneStepCounter, src/safari_zone.c:45,100-106)
+go UP
+talk r2sf_sf_gate3 40 -
+press A
+talk r2sf_sf_pay3 40 -
+waitctl 1200
+w16 @gSafariZoneStepCounter@ 2
+go UP
+go UP
+talk r2sf_sf_timesup 10 -
+waitctl 1200
+loc
+snap r2sf_sf_timesup_gate

@@ -1,0 +1,55 @@
+# r2 script menus: the same menus reached through the real NPCs, signs and triggers (no RAM
+# scripts), to check that the RAM-script captures (m01..m05, gen.py) match the real call sites.
+start saves/r2menus_postgame.sav
+include ../continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; setflag FLAG_BATTLED_TAPU_FINI; setflag FLAG_BATTLED_TAPU_KOKO; setflag FLAG_BATTLED_TAPU_LELE; setflag FLAG_BATTLED_TAPU_BULU; end
+
+# Goldenrod Dept. Store 2F vending machine (bg event 13,5): message, money box, MULTI_VENDING_MACHINE
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS 13 6
+face UP
+talk rv_vending 10 A
+seek 8 @menu:sMenu+2@ 3 DOWN
+snap rv_vending_last
+tap B 0
+waitctl 900 B
+
+# the elevator trigger on 2F (9,5): doors, walk in, MULTI_7FLOORS
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS 9 6
+go UP 1
+talk rv_elev7 4 -
+seek 8 @menu:sMenu+2@ 7 DOWN
+snap rv_elev7_last
+tap B 0
+waitctl 900 B
+
+# Goldenrod Pokemon Center link NPC (14,5): intro, MULTI_LINK_SERVICES_HNS
+warpto MAP_GOLDENROD_CITY_POKEMON_CENTER_HNS 14 6
+face UP
+talk rv_link 10 A
+tap B 0
+waitctl 900 B
+
+# Trainer Hill courtyard left move tutor (8,19): BP window + SCROLL_MULTI_BF_MOVE_TUTOR_1
+warpto MAP_TRAINER_HILL_COURTYARD_HNS 8 20
+face UP
+talk rv_tutor1 20 A field_specials:ScrollableMultichoice_ProcessInput
+scrollshots rv_tutor1_r DOWN 11 8
+tap B 0
+waitctl 900 B
+
+# Akala totem sign (9,10): dynmultichoice at 20,4
+warpto MAP_AKALA_ISLE_HNS 9 11
+face UP
+talk rv_totem 10 A
+scrollshots rv_totem_r DOWN 5 8
+tap B 0
+waitctl 900 B
+
+# Ula'ula move tutor (7,73), paid: dynmultichoice of 27 moves at 0,0 (checks the window damage the RAM capture showed)
+ev setflag FLAG_ULAULA_MOVE_TUTOR_PAID; end
+warptoloose MAP_ULAULA_ISLE_HNS 7 74
+face UP
+talk rv_ulaula 10 A
+scrollshots rv_ulaula_r DOWN 27 8
+tap B 0
+waitctl 900 B

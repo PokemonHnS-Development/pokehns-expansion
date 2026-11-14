@@ -1,0 +1,16 @@
+# Ladder save 5: Kanto, three Kanto badges (11 in all), saved in the Celadon City Pokemon Center.
+# Built ON TOP of ladder 4 (so it keeps that save's real Hall of Fame record):
+#   ladder.py run scripts/ladder5_kanto.txt OUT --save $HNS_SAVES/ladder4_league.sav \
+#             --save-out $HNS_SAVES/ladder5_kanto.sav
+include continue.txt
+event ladder/s5a_ssaqua.inc
+rungoto SSAqua_1F_EventScript_LeaveBoat 3000 B   # the ROM's Kanto flagheap, warps to Vermilion port
+expectloc 15 3                                     # MAP_VERMILION_CITY_PORT_INSIDE_HNS
+event ladder/s5b_kanto.inc
+event ladder/party5_kanto.inc
+expectvar VAR_NUM_BADGES 11
+expectflag FLAG_BADGE12_GET 1
+playtime 43 05
+warp 17 0 7 7                # MAP_CELADON_CITY_POKEMON_CENTER_HNS
+savegame
+shot l5_saved

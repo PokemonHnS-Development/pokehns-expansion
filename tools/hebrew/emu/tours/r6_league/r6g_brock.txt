@@ -1,0 +1,8 @@
+# Brock, Pewter Gym (6,5): PewterCity_Gym_EventScript_Brock.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_PEWTER_GYM; clearflag FLAG_BADGE09_GET; end
+warpto MAP_PEWTER_CITY_GYM_HNS 6 6
+face UP
+snap br_room
+include _leader_tail.txt

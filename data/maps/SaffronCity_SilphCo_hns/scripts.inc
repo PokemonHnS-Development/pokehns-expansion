@@ -30,7 +30,7 @@ SaffronCity_SilphCo_EventScript_Refused::
 	end
 
 SaffronCity_SilphCo_Text_Refused:
-	.string "Oh...$"
+	.string "אה…$"
 
 SaffronCity_SilphCo_EventScript_TreeckoChosen::
 	closemessage
@@ -92,29 +92,28 @@ SaffronCity_SilphCo_Movement_StevenLeave:
 
 
 SaffronCity_SilphCo_Text_Steven1:
-	.string "Hello...\n"
-	.string "You're breaking up...\l"
-	.string "I think it depends on my dad.\l"
-	.string "I see...\n"
-	.string "I'll be on my way. See you soon.$"
+	.string "הלו…\n"
+	.string "הקו מקוטע…\p"
+	.string "אני חושב שזה תלוי באבא שלי.\p"
+	.string "הבנתי…\n"
+	.string "אני יוצא לדרך. נתראה בקרוב.$"
 SaffronCity_SilphCo_Text_Steven2:
-	.string "STEVEN: You are... I remember your\n"
-	.string "eyes.\p"
-	.string "When I see a trainer whose eyes\n"
-	.string "twinkle, I always remember.\p"
-	.string "You have a POKéDEX! So you are\n"
-	.string "also in search of POKéMON!\l"
-	.string "Let me see...\p"
-	.string "I think I can help you with that.\p"
-	.string "Let's say that you have stones in\n"
-	.string "front of you. Which color would\l"
-	.string " you pick?$"
+	.string "סטיבן: אתה… אני זוכר את\n"
+	.string "העיניים שלך.\p"
+	.string "כשאני רואה מאמן שהעיניים שלו\n"
+	.string "נוצצות, אני תמיד זוכר.\p"
+	.string "יש לך פוקדקס! אז גם אתה\n"
+	.string "מחפש פוקימונים!\p"
+	.string "רגע, תן לי לחשוב…\n"
+	.string "נראה לי שאוכל לעזור לך בזה.\p"
+	.string "נניח שיש לפניך כמה אבנים.\n"
+	.string "איזה צבע היית בוחר?$"
 SaffronCity_SilphCo_Text_Steven3:
-	.string "You chose correctly! I'll give you\n"
-	.string "{STR_VAR_1}!$"
+	.string "בחרת נכון! אתן לך\n"
+	.string "את {STR_VAR_1}!$"
 SaffronCity_SilphCo_Text_Steven4:
-	.string "Take good care of it. Your caring\n"
-	.string "for it will make me very happy.$"
+	.string "תשמור עליו היטב. אם תטפל בו\n"
+	.string "באהבה, זה ישמח אותי מאוד.$"
 
 SaffronCity_SilphCo_EventScript_Receptionist::
 	msgbox SilphCo_Text_Receptionist, MSGBOX_NPC
@@ -137,24 +136,23 @@ SaffronCity_SilphCo_EventScript_Sign2::
 	end
 
 SilphCo_Text_Sign1:
-	.string "SILPH CO.\n"
-	.string "1F RECEPTION.$"
+	.string "סילף בע”מ\n"
+	.string "קומה 1: קבלה.$"
 
 SilphCo_Text_Sign2:
-	.string "SILPH CO.\n"
-	.string "ELEVATOR OUT OF SERVICE$"
+	.string "סילף בע”מ\n"
+	.string "המעלית מושבתת$"
 
 SilphCo_Text_Receptionist:
-	.string "Welcome. This is SILPH CO.'s HEAD\n"
-	.string "OFFICE BUILDING.$"
+	.string "ברוכים הבאים. זהו בניין\n"
+	.string "המטה של סילף בע”מ.$"
 
 SilphCo_Text_Officer:
-	.string "Only employees are permitted to\n"
-	.string "go upstairs.\p"
-	.string "But since you came such a long\n"
-	.string "way,\p"
-	.string "have this neat little souvenir.$"
+	.string "רק עובדים רשאים לעלות\n"
+	.string "לקומות העליונות.\p"
+	.string "אבל מכיוון שבאת מרחוק כל כך,\n"
+	.string "הנה מזכרת קטנה ונחמדה בשבילך.$"
 
 SilphCo_Text_Officer_GotUpGrade:
-	.string "It's SILPH CO.'s latest product.\p"
-	.string "It's not for sale anywhere yet.$"
+	.string "זה המוצר החדש ביותר של סילף בע”מ.\p"
+	.string "הוא עוד לא נמכר בשום מקום.$"

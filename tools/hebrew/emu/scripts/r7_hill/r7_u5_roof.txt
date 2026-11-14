@@ -1,0 +1,24 @@
+# Unique roof: the owner (src/trainer_hill.c:1232-1320, HnS prize lists :241-262) with the clock set to
+# 13:35 on the clock: Unique's list (set 1, list 8) gives a Big Nugget and 50,000; a new record;
+# the elevator back to the reception; the TIME BOARD at (8,10) from (8,11) facing up.
+snap u5_roof
+hillstate
+hilltimer 48900
+talkto 1 u5_owner free 80
+hillstate
+walkto 15 6 UP
+8 UP
+waitwarp
+dlg u5_elev menu
+pick 0
+dlg u5_down free
+snap u5_entrance
+walkto 8 11 UP
+tap A 4
+waitcb2 MainCB2_TrainerHillRecords 600
+waittask Task_TrainerHillWaitForPaletteFade 600
+waitquiet
+snap u5_timeboard
+press A
+waitctl 600
+snap u5_back

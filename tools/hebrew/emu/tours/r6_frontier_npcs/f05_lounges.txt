@@ -1,0 +1,74 @@
+# The other Battle Frontier lounge NPCs (MSGBOX_NPC / msgbox lines; data/maps/BattleFrontier_Lounge{2,3,4,5,8}_hns).
+# Wandering NPCs are frozen on their start tile first. Lounge 2's Maniac1-3 (15,14) stand outside the room
+# and cannot be talked to.
+start saves/r6_frontier_npcs.sav
+include ../../scripts/continue.txt
+
+# --- Lounge 4: woman (4,4), cook (6,6, wanders), man (0,5)
+warpto MAP_BATTLE_FRONTIER_LOUNGE4_HNS 4 5
+face UP
+tap A 4
+fieldwatch l4_woman free 6000
+warpto MAP_BATTLE_FRONTIER_LOUNGE4_HNS 6 7
+freezenpc 2 6 6
+face UP
+tap A 4
+fieldwatch l4_cook free 6000
+warpto MAP_BATTLE_FRONTIER_LOUNGE4_HNS 1 5
+face LEFT
+tap A 4
+fieldwatch l4_man free 6000
+
+# --- Lounge 8: ninja boy (4,5, wanders), man (8,7), lass (8,4)
+warpto MAP_BATTLE_FRONTIER_LOUNGE8_HNS 4 6
+freezenpc 1 4 5
+face UP
+tap A 4
+fieldwatch l8_boy free 6000
+warpto MAP_BATTLE_FRONTIER_LOUNGE8_HNS 7 7
+face RIGHT
+tap A 4
+fieldwatch l8_man free 6000
+warpto MAP_BATTLE_FRONTIER_LOUNGE8_HNS 7 4
+face RIGHT
+tap A 4
+fieldwatch l8_lass free 6000
+
+# --- Lounge 3: fat man (4,4), woman (3,5), pokefan (5,5) from (4,5); man (0,6, wanders)
+warpto MAP_BATTLE_FRONTIER_LOUNGE3_HNS 4 5
+face UP
+tap A 4
+fieldwatch l3_fatman free 6000
+face LEFT
+tap A 4
+fieldwatch l3_woman free 6000
+face RIGHT
+tap A 4
+fieldwatch l3_pokefan free 6000
+warpto MAP_BATTLE_FRONTIER_LOUNGE3_HNS 1 6
+freezenpc 5 0 6
+face LEFT
+tap A 4
+fieldwatch l3_man free 6000
+
+# --- Lounge 5: gentleman (0,4), black belt (6,5, wanders), little boy (11,7)
+warpto MAP_BATTLE_FRONTIER_LOUNGE5_HNS 1 4
+face LEFT
+tap A 4
+fieldwatch l5_gentleman free 6000
+warpto MAP_BATTLE_FRONTIER_LOUNGE5_HNS 6 6
+freezenpc 3 6 5
+face UP
+tap A 4
+fieldwatch l5_blackbelt free 6000
+warpto MAP_BATTLE_FRONTIER_LOUNGE5_HNS 10 7
+face RIGHT
+tap A 4
+fieldwatch l5_boy free 6000
+
+# --- Lounge 2: triathlete (4,6, wanders)
+warpto MAP_BATTLE_FRONTIER_LOUNGE2_HNS 4 7
+freezenpc 4 4 6
+face UP
+tap A 4
+fieldwatch l2_triathlete free 6000

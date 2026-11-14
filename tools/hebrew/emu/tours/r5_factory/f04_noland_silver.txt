@@ -1,0 +1,58 @@
+# r5 Battle Factory: Factory Head Noland, Silver. factoryWinStreaks[singles][Lv.50] = 19 with its
+# winStreakActiveFlags bit (STREAK_FACTORY_SINGLES_50, 1 << 8), so InitFactoryChallenge keeps
+# the streak (src/battle_factory.c:139-142) and after the first win the streak is 20:
+# GetFrontierBrainStatus sees 20 + 1 == streakAppearances[0] (src/frontier_util.c:240, :1806).
+# Pre-battle room: the PokeNav-call announcement (:61-78), PreparedToFaceHead with the GO ON menu,
+# CantTellAnythingAboutHead and the swap question. Battle room: GetAMoveOn, Noland's walk-in, the
+# first-meeting speech and the Silver intro (BattleRoom_hns:112-140), the battle and his Silver
+# lost line (src/frontier_util.c:226-229), the Frontier Pass, the Knowledge Symbol award, his
+# parting line, then the lobby's DefeatedFactoryHead lines and the BP award. Then, from a
+# savestate at the GO ON menu, the same battle lost: his Silver won line and LostChallenge.
+start saves/r5/factory_base.sav
+include ../../scripts/continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 4 8
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+sb2w16 DE2 19
+sb2w32 CDC 256
+face UP
+tap A 0
+drive n_in menu
+pick 0
+drive n_lv menu
+pick 0
+drivex n_save menu 10
+pick 0
+saveyes
+drivex n_pre cb2:CB2_InitSelectScreen 30 9000
+include _f_rent3.txt
+waitcb2 CB2_Overworld 1200
+drivex n_br1 battle 30 9000
+fastbattles off
+bwin n_b1
+frontierinfo
+drivex n_call menu 40 9000
+pick 1 nopress
+snap n_call_menu_r1
+pick 0 nopress
+ss n_gomenu
+pick 0
+drivex n_swq menu 20
+pick 1
+drivex n_room battle 40 9000
+bwin n_b2
+drivex n_won menu 40 9000
+pick 1
+drivex n_won2 free 10
+frontierinfo
+# ---- the same Noland battle, lost
+sl n_gomenu
+pick 0
+drivex nl_swq menu 20
+pick 1
+drivex nl_room battle 40 9000
+blose nl_b2
+drivex nl_lost menu 40 9000
+pick 1
+drivex nl_lost2 free 10
+frontierinfo

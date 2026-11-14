@@ -1,0 +1,51 @@
+# Berry Blender 1 with the Blend Master (SafariZoneGate_SafariZoneEntrance_hns sign (17,7),
+# BerryBlender_EventScript_BerryBlender1 -> BlendMasterPresent, data/scripts/berry_blender.inc:233-490;
+# one opponent named sBlenderOpponentsNames[BLENDER_MASTER] while FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER
+# is clear, src/berry_blender.c:1220-1228). The berry pocket holds one Oran Berry, so after the blend
+# 'blend another?' YES prints 'you have run out of berries' (CANT_PLAY_NO_BERRIES, :2690-2694, 2939-2947).
+# Forced stand-in for the play itself: after two shots of the running blender the progress bar value is set
+# to its maximum (sBerryBlender->progressBarValue, src/berry_blender.c:2096-2106, 2216-2221), so the game ends
+# the round and goes on to its own ranking and results.
+# Run: scripts/r16_contests/con16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_contests [--clip]
+# Save: ladder6_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+clearflag FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER
+clearpocket 4                             # POCKET_BERRIES (I_COMBINE_BAG_POCKETS, include/constants/item.h:5-16)
+ev additem ITEM_POKEBLOCK_CASE, 1; additem ITEM_ORAN_BERRY, 1; end
+pokeblocks 1:10,0,0,0,0,10
+warpto MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS 17 8
+face UP
+talk bm_ask 40
+press A
+talk bm_know 40 -
+press A
+talk bm_lets 40 -
+textwatch bm_start CB2_BagMenuRun 2000
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap bm_bag
+tap A 4
+waitquiet
+tap A 4
+waitcb2 CB2_PlayBlender 3000
+60 -
+snap bm_play_01
+300 -
+snap bm_play_02
+pw16 sBerryBlender 116 3E8                # progressBarValue = MAX_PROGRESS_BAR: the bar fills and the game ends
+waitcb2 CB2_EndBlenderGame 3000
+burst bm_endA 40 10
+snap bm_ranking
+tap A 4
+burst bm_endB 12 10
+snap bm_results
+tap A 4
+textwatch bm_made CB2_CheckPlayAgainLocal 600 A
+waitquiet
+snap bm_again_q
+tap A 4                                   # 'blend another?' YES
+burst bm_again 30 8
+tap A 4                                   # the message waits for a key
+waitctl 900
+snap bm_field

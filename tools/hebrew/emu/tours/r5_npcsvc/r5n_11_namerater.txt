@@ -1,0 +1,73 @@
+# Name Rater refusals (GoldenrodCity_House1_hns:40-136; (4,4), talked to from (4,5)): NO; YES + B in
+# the party menu; YES + the Egg; YES + Typhlosion, then NO to a new name; YES + Typhlosion, YES, the
+# naming screen left unchanged (START, A): 'no different, yet superior'. The other-OT branch is
+# commented out in the script (lines 66-70), so it cannot be reached.
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+ev file _namerater_party.inc
+warpto MAP_GOLDENROD_CITY_HOUSE1_HNS 4 5
+
+# --- 1. NO
+face UP
+tap A 4
+fieldwatch n1_ask menu 6000
+pick 1
+fieldwatch n1_no free 6000
+
+# --- 2. YES, then B in the party menu
+face UP
+tap A 4
+fieldwatch n2_ask menu 6000
+pick 0
+fieldwatch n2_which cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap n2_party
+tap B 0
+fieldwatch n2_declined free 6000
+
+# --- 3. YES, the Egg
+face UP
+tap A 4
+fieldwatch n3_ask menu 6000
+pick 0
+fieldwatch n3_which cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap n3_party_egg
+tap A 0
+fieldwatch n3_egg free 6000
+
+# --- 4. YES, Typhlosion, then NO to a better name
+face UP
+tap A 4
+fieldwatch n4_ask menu 6000
+pick 0
+fieldwatch n4_which cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap A 0
+fieldwatch n4_rate menu 6000
+pick 1
+fieldwatch n4_no free 6000
+
+# --- 5. YES, Typhlosion, YES, the name left as it is
+face UP
+tap A 4
+fieldwatch n5_ask menu 6000
+pick 0
+fieldwatch n5_which cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap A 0
+fieldwatch n5_rate menu 6000
+pick 0
+fieldwatch n5_newname cb2:CB2_NamingScreen 6000
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 900
+snap n5_naming
+press START
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 300
+press A
+waitcb2x CB2_Overworld 900
+fieldwatch n5_same free 6000

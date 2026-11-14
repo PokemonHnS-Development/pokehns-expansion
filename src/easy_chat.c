@@ -389,6 +389,42 @@ enum {
     WIN_INPUT_SELECT, // Word groups, word list, and keyboard
 };
 
+#if TEXT_RTL
+// WIN_INPUT_SELECT (tiles 1-28) is mirrored around the frame drawn behind it, not around its own
+// width. The keyboard frame (DrawLowerWindowFrame states 10 and 18: BufferLowerWindowFrame(1, 10,
+// 23, 10)) spans tiles 1-23, so its inside is screen x 16-184. The word list's frame (state 17:
+// BufferLowerWindowFrame(0, 10, 30, 10)) spans tiles 0-29, inside x 8-232, as wide as the window.
+#define RTL_INPUT_SELECT_LEFT        (1 * 8)
+#define RTL_KEYBOARD_INSIDE_LEFT     ((1 + 1) * 8)
+#define RTL_KEYBOARD_INSIDE_RIGHT    ((1 + 23 - 1) * 8)
+#define RTL_WORD_SELECT_INSIDE_LEFT  ((0 + 1) * 8)
+#define RTL_WORD_SELECT_INSIDE_RIGHT ((0 + 30 - 1) * 8)
+// The window's mirror width that maps a frame's inside onto itself, and the screen x a cursor
+// sprite moves to.
+#define RTL_KEYBOARD_MIRROR_WIDTH    (RTL_KEYBOARD_INSIDE_LEFT + RTL_KEYBOARD_INSIDE_RIGHT - 2 * RTL_INPUT_SELECT_LEFT)
+#define RTL_WORD_SELECT_MIRROR_WIDTH (RTL_WORD_SELECT_INSIDE_LEFT + RTL_WORD_SELECT_INSIDE_RIGHT - 2 * RTL_INPUT_SELECT_LEFT)
+#define RTL_KEYBOARD_SPRITE_X(x)     (RTL_KEYBOARD_INSIDE_LEFT + RTL_KEYBOARD_INSIDE_RIGHT - (x))
+#define RTL_WORD_SELECT_SPRITE_X(x)  (RTL_WORD_SELECT_INSIDE_LEFT + RTL_WORD_SELECT_INSIDE_RIGHT - (x))
+// The footer (AddMainScreenButtonWindow: screen tiles 1-28 of rows 11-12) is mirrored too, so its
+// DEL ALL stands at the right end. The keyboard frame covers the footer's rows up to tile 23 and
+// leaves tiles 24-27 open under the mode tab. English shows a few pixels of OK there; the mirrored
+// footer would show pieces of DEL ALL, so those tiles (the window's tiles 23-26) are blanked while
+// the frame covers the rows, and put back before it uncovers them.
+#define RTL_FOOTER_GAP_TILE          (1 + 23 - 1)
+#define RTL_FOOTER_GAP_TILES         4
+
+// Allocated right after the screen's EasyChatScreenControl, in the same block, and freed with it.
+struct RtlFooterGap
+{
+    u8 windowId;
+    bool8 blank;
+    u8 tiles[2][RTL_FOOTER_GAP_TILES * TILE_SIZE_4BPP]; // The gap's pixels while it is blank
+};
+#define sFooterGap ((struct RtlFooterGap *)(sScreenControl + 1))
+
+static void ShowFooterGap(bool32 show);
+#endif
+
 // Values for text frame tilemap
 #define FRAME_OFFSET_ORANGE 0x1000 // Orange frame, for phrase text
 #define FRAME_OFFSET_GREEN  0x4000 // Green frame, for keyboard/word select
@@ -681,6 +717,21 @@ static const struct EasyChatScreenTemplate sEasyChatScreenTemplates[] = {
     },
 };
 
+#if TEXT_RTL
+// The Hebrew keyboard, in reading order (the window is mirrored, so a row's first key is on the
+// right). 0 is 'Others', 1-22 are the letters alef to tav, the lists of
+// data/easy_chat/easy_chat_words_by_letter_rtl.h. Like the English one, the first row has six
+// letters and 'Others' and the second row six letters; the third row has seven and the last row
+// three (resh, shin, tav). The four keys after tav have no letter: they are blank, the cursor skips
+// them (GetLastAlphabetColumn) and they map to 'Others'.
+static const u8 sAlphabetGroupIdMap[NUM_ALPHABET_ROWS][NUM_ALPHABET_COLUMNS] = {
+    { 1,  2,  3,  4,  5,  6,  0},
+    { 7,  8,  9, 10, 11, 12,  0},
+    {13, 14, 15, 16, 17, 18, 19},
+    {20, 21, 22,  0,  0,  0,  0},
+};
+#define RTL_LAST_ALPHABET_ROW_COLUMNS 3
+#else
 // IDs are used indirectly as indexes into gEasyChatWordsByLetterPointers
 // 0 is 'Others', 1-26 are the letters A-Z
 // This array maps the group IDs to the alphabet keyboard
@@ -690,6 +741,7 @@ static const u8 sAlphabetGroupIdMap[NUM_ALPHABET_ROWS][NUM_ALPHABET_COLUMNS] = {
     {13, 14, 15, 16, 17, 18, 19},
     {20, 21, 22, 23, 24, 25, 26},
 };
+#endif
 
 static const u16 sMysteryGiftPhrase[NUM_QUESTIONNAIRE_WORDS] = {
     EC_WORD_LINK,
@@ -869,6 +921,7 @@ static const struct WindowTemplate sEasyChatYesNoWindowTemplate = {
 
 static const u8 sText_Clear17[] = _("{CLEAR 17}");
 
+#if !TEXT_RTL
 static const u8 *const sEasyChatKeyboardAlphabet[NUM_ALPHABET_ROWS] =
 {
     gText_EasyChatKeyboard_ABCDEFothers,
@@ -876,6 +929,7 @@ static const u8 *const sEasyChatKeyboardAlphabet[NUM_ALPHABET_ROWS] =
     gText_EasyChatKeyboard_MNOPQRS,
     gText_EasyChatKeyboard_TUVWXYZ,
 };
+#endif
 
 static const struct SpriteSheet sSpriteSheets[] = {
     {
@@ -1193,7 +1247,13 @@ static const u8 *const sFooterTextOptions[NUM_FOOTER_TYPES][4] = {
 };
 
 #include "data/easy_chat/easy_chat_groups.h"
+#if TEXT_RTL
+// The alphabet keyboard's lists by Hebrew letter (tools/hebrew/gen_ec_letters.py).
+#include "data/easy_chat/easy_chat_words_by_letter_rtl.h"
+#include "data/easy_chat/easy_chat_order_rtl.h"
+#else
 #include "data/easy_chat/easy_chat_words_by_letter.h"
+#endif
 
 static const u16 sDefaultProfileWords[EASY_CHAT_BATTLE_WORDS_COUNT - 2] = {
     EC_WORD_I_AM,
@@ -1751,7 +1811,12 @@ static u16 HandleEasyChatInput_Phrase(void)
         }
         else if (JOY_NEW(DPAD_LEFT))
         {
+#if TEXT_RTL
+            // The phrase and the footer are mirrored: the next column is to the left.
+            sEasyChatScreen->mainCursorColumn++;
+#else
             sEasyChatScreen->mainCursorColumn--;
+#endif
             break;
         }
         else if (JOY_NEW(DPAD_DOWN))
@@ -1761,7 +1826,11 @@ static u16 HandleEasyChatInput_Phrase(void)
         }
         else if (JOY_NEW(DPAD_RIGHT))
         {
+#if TEXT_RTL
+            sEasyChatScreen->mainCursorColumn--;
+#else
             sEasyChatScreen->mainCursorColumn++;
+#endif
             break;
         }
 
@@ -1834,7 +1903,12 @@ static u16 HandleEasyChatInput_MainScreenButtons(void)
         }
         else if (JOY_NEW(DPAD_LEFT))
         {
+#if TEXT_RTL
+            // The phrase and the footer are mirrored: the next column is to the left.
+            sEasyChatScreen->mainCursorColumn++;
+#else
             sEasyChatScreen->mainCursorColumn--;
+#endif
             break;
         }
         else if (JOY_NEW(DPAD_DOWN))
@@ -1844,7 +1918,11 @@ static u16 HandleEasyChatInput_MainScreenButtons(void)
         }
         else if (JOY_NEW(DPAD_RIGHT))
         {
+#if TEXT_RTL
+            sEasyChatScreen->mainCursorColumn--;
+#else
             sEasyChatScreen->mainCursorColumn++;
+#endif
             break;
         }
 
@@ -1905,11 +1983,21 @@ static u16 HandleEasyChatInput_Keyboard(void)
     if (JOY_REPEAT(DPAD_DOWN))
         return MoveKeyboardCursor(INPUT_DOWN);
 
+#if TEXT_RTL
+    // The keys are mirrored, so the next column is to the left and the button window, past the
+    // first column, to the right.
+    if (JOY_REPEAT(DPAD_LEFT))
+        return MoveKeyboardCursor(INPUT_RIGHT);
+
+    if (JOY_REPEAT(DPAD_RIGHT))
+        return MoveKeyboardCursor(INPUT_LEFT);
+#else
     if (JOY_REPEAT(DPAD_LEFT))
         return MoveKeyboardCursor(INPUT_LEFT);
 
     if (JOY_REPEAT(DPAD_RIGHT))
         return MoveKeyboardCursor(INPUT_RIGHT);
+#endif
 
     return ECFUNC_NONE;
 }
@@ -1938,11 +2026,20 @@ static u16 HandleEasyChatInput_WordSelect(void)
     if (JOY_REPEAT(DPAD_DOWN))
         return MoveWordSelectCursor(INPUT_DOWN);
 
+#if TEXT_RTL
+    // The two columns are mirrored, the first on the right.
+    if (JOY_REPEAT(DPAD_LEFT))
+        return MoveWordSelectCursor(INPUT_RIGHT);
+
+    if (JOY_REPEAT(DPAD_RIGHT))
+        return MoveWordSelectCursor(INPUT_LEFT);
+#else
     if (JOY_REPEAT(DPAD_LEFT))
         return MoveWordSelectCursor(INPUT_LEFT);
 
     if (JOY_REPEAT(DPAD_RIGHT))
         return MoveWordSelectCursor(INPUT_RIGHT);
+#endif
 
     return ECFUNC_NONE;
 }
@@ -2623,6 +2720,10 @@ static u8 GetLastAlphabetColumn(u8 row)
     case 1:
         return NUM_ALPHABET_COLUMNS - 2; // At 6 letters, only the 2nd row (index 1) has less than the max columns
                                          // The 3rd and 4th row have 7 letters, the 1st row has 6 letters and 'Others'
+#if TEXT_RTL
+    case NUM_ALPHABET_ROWS - 1:
+        return RTL_LAST_ALPHABET_ROW_COLUMNS - 1;
+#endif
     }
 }
 
@@ -3189,6 +3290,10 @@ static bool8 UpdateMainCursor(void)
         ecWord++;
     }
 
+#if TEXT_RTL
+    // The phrase window is mirrored: the cursor stands right of its word, at the mirrored x.
+    x = 8 * (2 * sPhraseFrameDimensions[frameId].left + sPhraseFrameDimensions[frameId].width) - x;
+#endif
     y = 8 * (sPhraseFrameDimensions[frameId].top + cursorRow * 2);
     SetMainCursorPos(x, y + 8);
     return FALSE;
@@ -3197,6 +3302,10 @@ static bool8 UpdateMainCursor(void)
 static bool8 UpdateMainCursorOnButtons(void)
 {
     u8 xOffset = GetFooterOptionXOffset(GetMainCursorColumn());
+#if TEXT_RTL
+    // The footer window (AddMainScreenButtonWindow, tiles 1-28) is mirrored.
+    xOffset = 8 * (2 * 1 + 28) - xOffset;
+#endif
     SetMainCursorPos(xOffset, 96);
     return FALSE;
 }
@@ -3884,7 +3993,11 @@ static bool8 ShowCantExitMsg(void)
 
 static bool8 InitEasyChatScreenControl_(void)
 {
+#if TEXT_RTL
+    sScreenControl = Alloc(sizeof(*sScreenControl) + sizeof(struct RtlFooterGap));
+#else
     sScreenControl = Alloc(sizeof(*sScreenControl));
+#endif
     if (!sScreenControl)
         return FALSE;
 
@@ -4018,7 +4131,20 @@ static void PrintEasyChatStdMessage(u8 msgId)
 
 static void CreateEasyChatYesNoMenu(u8 initialCursorPos)
 {
+#if TEXT_RTL
+    // The phrase and the footer are mirrored, so the words leave the left end of each row free
+    // and the footer's OK option stands at the left end, where English has them at the right.
+    // English's box covers OK; this one takes the mirrored place on the screen, one tile nearer
+    // its edge, because the mirrored OK label may be wider and starts further out. That covers
+    // the label and its cursor on every phrase frame, as English does.
+    struct WindowTemplate template = sEasyChatYesNoWindowTemplate;
+
+    template.tilemapLeft = DISPLAY_TILE_WIDTH - sEasyChatYesNoWindowTemplate.tilemapLeft
+                         - sEasyChatYesNoWindowTemplate.width - 1;
+    CreateYesNoMenu(&template, 1, 14, initialCursorPos);
+#else
     CreateYesNoMenu(&sEasyChatYesNoWindowTemplate, 1, 14, initialCursorPos);
+#endif
 }
 
 static void AddPhraseWindow(void)
@@ -4208,6 +4334,9 @@ static void InitLowerWindowText(u32 whichText)
 {
     ResetLowerWindowScroll();
     FillWindowPixelBuffer(WIN_INPUT_SELECT, PIXEL_FILL(1));
+#if TEXT_RTL
+    SetWindowRtlMirrorWidth(WIN_INPUT_SELECT, whichText == TEXT_WORD_SELECT ? RTL_WORD_SELECT_MIRROR_WIDTH : RTL_KEYBOARD_MIRROR_WIDTH);
+#endif
     switch (whichText)
     {
     case TEXT_GROUPS:
@@ -4257,6 +4386,41 @@ static void PrintKeyboardGroupNames(void)
     }
 }
 
+#if TEXT_RTL
+// Each key is printed on its own, centred on the cursor box that SetRectangleCursorPos_AlphabetMode
+// draws over it (screen x 32 plus the column offset, 'Others' at 158; the window starts at x 8).
+// The window is mirrored, so letter and box land on the same mirrored x. A string's width counts
+// the one-pixel gap after its last letter, which the mirrored window draws right of the letter;
+// rounding the half width up moves the letter itself into the middle of its box.
+static void PrintKeyboardAlphabet(void)
+{
+    u32 row, column;
+    u8 letter[2];
+
+    letter[1] = EOS;
+    for (row = 0; row < NUM_ALPHABET_ROWS; row++)
+    {
+        for (column = 0; column <= GetLastAlphabetColumn(row); column++)
+        {
+            const u8 *str;
+            int center;
+
+            if (row == 0 && column == NUM_ALPHABET_COLUMNS - 1)
+            {
+                str = gText_EasyChatKeyboard_Others;
+                center = 158 - 8;
+            }
+            else
+            {
+                letter[0] = CHAR_HEB_ALEF + sAlphabetGroupIdMap[row][column] - 1;
+                str = letter;
+                center = 32 + sAlphabetKeyboardColumnOffsets[column] - 8;
+            }
+            PrintEasyChatText(WIN_INPUT_SELECT, FONT_NORMAL, str, center - (GetStringWidth(FONT_NORMAL, str, 0) + 1) / 2, 97 + row * 16, TEXT_SKIP_DRAW, NULL);
+        }
+    }
+}
+#else
 static void PrintKeyboardAlphabet(void)
 {
     u32 i;
@@ -4264,6 +4428,7 @@ static void PrintKeyboardAlphabet(void)
     for (i = 0; i < ARRAY_COUNT(sEasyChatKeyboardAlphabet); i++)
         PrintEasyChatText(WIN_INPUT_SELECT, FONT_NORMAL, sEasyChatKeyboardAlphabet[i], 10, 97 + i * 16, TEXT_SKIP_DRAW, NULL);
 }
+#endif
 
 static void PrintInitialWordSelectText(void)
 {
@@ -4506,6 +4671,10 @@ static void DrawLowerWindowFrame(u8 type)
         break;
     }
 
+#if TEXT_RTL
+    // States 9-19 have the frame's top edge on row 10 or 11; only the footer's gap shows.
+    ShowFooterGap(type < 9 || type > 19);
+#endif
     CopyBgTilemapBufferToVram(1);
 }
 
@@ -4628,9 +4797,19 @@ static void CreateMainCursorSprite(void)
     u8 frameId = GetEasyChatScreenFrameId();
     int x = sPhraseFrameDimensions[frameId].left * 8 + 13;
     int y = sPhraseFrameDimensions[frameId].top * 8 + 8;
+#if TEXT_RTL
+    // The phrase and the footer are mirrored: the cursor stands right of its word and points left.
+    u8 spriteId = CreateSprite(&sSpriteTemplate_TriangleCursor,
+                               8 * (2 * sPhraseFrameDimensions[frameId].left + sPhraseFrameDimensions[frameId].width) - x, y, 2);
+#else
     u8 spriteId = CreateSprite(&sSpriteTemplate_TriangleCursor, x, y, 2);
+#endif
     sScreenControl->mainCursorSprite = &gSprites[spriteId];
     gSprites[spriteId].sAnimateCursor = TRUE;
+#if TEXT_RTL
+    // No animation applies sprite->hFlip to this sprite, so the OAM flip bit is set directly.
+    gSprites[spriteId].oam.matrixNum |= ST_OAM_HFLIP;
+#endif
 }
 
 static void SpriteCB_Cursor(struct Sprite *sprite)
@@ -4640,8 +4819,14 @@ static void SpriteCB_Cursor(struct Sprite *sprite)
         if (++sprite->sDelayTimer > 2)
         {
             sprite->sDelayTimer = 0;
+#if TEXT_RTL
+            // Only the main cursor bounces; it points left and moves left onto its word.
+            if (--sprite->x2 < 0)
+                sprite->x2 = 6;
+#else
             if (++sprite->x2 > 0)
                 sprite->x2 = -6;
+#endif
         }
     }
 }
@@ -4701,6 +4886,14 @@ static void UpdateRectangleCursorPos(void)
             SetRectangleCursorPos_GroupMode(column, row);
         else
             SetRectangleCursorPos_AlphabetMode(column, row);
+#if TEXT_RTL
+        // The keys are mirrored inside the keyboard frame; the button window is not.
+        if (column != -1)
+        {
+            sScreenControl->rectangleCursorSpriteRight->x = RTL_KEYBOARD_SPRITE_X(sScreenControl->rectangleCursorSpriteRight->x);
+            sScreenControl->rectangleCursorSpriteLeft->x = RTL_KEYBOARD_SPRITE_X(sScreenControl->rectangleCursorSpriteLeft->x);
+        }
+#endif
     }
 }
 
@@ -4781,6 +4974,11 @@ static void CreateWordSelectCursorSprite(void)
     sScreenControl->wordSelectCursorSprite = &gSprites[spriteId];
     sScreenControl->wordSelectCursorSprite->callback = SpriteCB_WordSelectCursor;
     sScreenControl->wordSelectCursorSprite->oam.priority = 2;
+#if TEXT_RTL
+    // The words are mirrored: the cursor stands right of its word and points left. The sprite has
+    // no animation that would apply sprite->hFlip, so the OAM flip bit is set directly.
+    sScreenControl->wordSelectCursorSprite->oam.matrixNum |= ST_OAM_HFLIP;
+#endif
     UpdateWordSelectCursorPos();
 }
 
@@ -4789,20 +4987,37 @@ static void SpriteCB_WordSelectCursor(struct Sprite *sprite)
     if (++sprite->sDelayTimer > 2)
     {
         sprite->sDelayTimer = 0;
+#if TEXT_RTL
+        // Mirrored: the cursor moves left onto its word and jumps back right.
+        if (--sprite->x2 < 0)
+            sprite->x2 = 6;
+#else
         if (++sprite->x2 > 0)
             sprite->x2 = -6;
+#endif
     }
 }
 
 static void UpdateWordSelectCursorPos(void)
 {
+#if TEXT_RTL
+    s8 column, row, y;
+#else
     s8 column, row, x, y;
+#endif
 
     GetWordSelectColAndRow(&column, &row);
+#if TEXT_RTL
+    // The word list is mirrored inside its frame, so the cursor goes to the mirrored x: right of
+    // the word in its column, the first column on the right.
+    y = row * 16 + 96;
+    SetWordSelectCursorPos(RTL_WORD_SELECT_SPRITE_X(column * 13 * 8 + 28), y);
+#else
     x = column * 13;
     x = x * 8 + 28;
     y = row * 16 + 96;
     SetWordSelectCursorPos(x, y);
+#endif
 }
 
 static void SetWordSelectCursorPos(u8 x, u8 y)
@@ -4952,8 +5167,13 @@ static void SetScrollIndicatorXPos(bool32 inWordSelect)
     if (!inWordSelect)
     {
         // Keyboard (only relevant for group mode, can't scroll in alphabet mode)
+#if TEXT_RTL
+        sScreenControl->scrollIndicatorUpSprite->x = RTL_KEYBOARD_SPRITE_X(96);
+        sScreenControl->scrollIndicatorDownSprite->x = RTL_KEYBOARD_SPRITE_X(96);
+#else
         sScreenControl->scrollIndicatorUpSprite->x = 96;
         sScreenControl->scrollIndicatorDownSprite->x = 96;
+#endif
     }
     else
     {
@@ -5063,12 +5283,44 @@ static int GetFooterOptionXOffset(int option)
         return 0;
 }
 
+#if TEXT_RTL
+// Blanks the footer's tiles beside the keyboard frame (show FALSE), keeping their pixels, or puts
+// them back (show TRUE).
+static void ShowFooterGap(bool32 show)
+{
+    u32 row, windowId = sFooterGap->windowId;
+
+    if (windowId == WINDOW_NONE || sFooterGap->blank == !show)
+        return;
+    sFooterGap->blank = !show;
+    for (row = 0; row < ARRAY_COUNT(sFooterGap->tiles); row++)
+    {
+        u8 *tiles = gWindows[windowId].tileData
+                  + (row * gWindows[windowId].window.width + RTL_FOOTER_GAP_TILE) * TILE_SIZE_4BPP;
+        if (show)
+        {
+            memcpy(tiles, sFooterGap->tiles[row], sizeof(sFooterGap->tiles[row]));
+        }
+        else
+        {
+            memcpy(sFooterGap->tiles[row], tiles, sizeof(sFooterGap->tiles[row]));
+            memset(tiles, PIXEL_FILL(1), sizeof(sFooterGap->tiles[row]));
+        }
+    }
+    CopyWindowToVram(windowId, COPYWIN_GFX);
+}
+#endif
+
 static void AddMainScreenButtonWindow(void)
 {
     int i;
     u16 windowId;
     struct WindowTemplate template;
     int footerIndex = GetFooterIndex();
+#if TEXT_RTL
+    sFooterGap->windowId = WINDOW_NONE;
+    sFooterGap->blank = FALSE;
+#endif
     if (footerIndex == NUM_FOOTER_TYPES)
         return;
 
@@ -5080,6 +5332,9 @@ static void AddMainScreenButtonWindow(void)
     template.paletteNum = 11;
     template.baseBlock = 0x34;
     windowId = AddWindow(&template);
+#if TEXT_RTL
+    sFooterGap->windowId = windowId;
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     for (i = 0; i < (int)ARRAY_COUNT(sFooterTextOptions[0]); i++)
     {
@@ -5741,7 +5996,9 @@ static u16 SetSelectedWordGroup_GroupMode(u16 groupId)
     u32 i;
     int totalWords;
     const u16 *list;
+#if !TEXT_RTL
     const struct EasyChatWordInfo *wordInfo;
+#endif
     u16 numWords = gEasyChatGroups[groupId].numWords;
 
     if (groupId == EC_GROUP_POKEMON || groupId == EC_GROUP_POKEMON_NATIONAL
@@ -5758,6 +6015,15 @@ static u16 SetSelectedWordGroup_GroupMode(u16 groupId)
     }
     else
     {
+#if TEXT_RTL
+        // The group lists follow the order of the Hebrew texts (tools/hebrew/gen_ec_order.py).
+        list = sEasyChatRtlOrder[groupId];
+        for (i = 0, totalWords = 0; i < numWords; i++)
+        {
+            if (IsEasyChatIndexAndGroupUnlocked(list[i], groupId))
+                sWordData->selectedGroupWords[totalWords++] = EC_WORD(groupId, list[i]);
+        }
+#else
         wordInfo = gEasyChatGroups[groupId].wordData.words;
         for (i = 0, totalWords = 0; i < numWords; i++)
         {
@@ -5765,6 +6031,7 @@ static u16 SetSelectedWordGroup_GroupMode(u16 groupId)
             if (IsEasyChatIndexAndGroupUnlocked(alphabeticalOrder, groupId))
                 sWordData->selectedGroupWords[totalWords++] = EC_WORD(groupId, alphabeticalOrder);
         }
+#endif
 
         return totalWords;
     }

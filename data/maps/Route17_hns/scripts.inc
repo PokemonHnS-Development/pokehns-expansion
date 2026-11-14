@@ -97,84 +97,84 @@ Route17_EventScript_RematchCharlesTryGiveItem::
 	end
 
 Route17_Text_BikerRileySeen:
-	.string "Hey, you! You're from JOHTO, huh?$"
+	.string "היי, אתה! אתה מג'וטו, הא?$"
 
 Route17_Text_BikerRileyBeaten:
-	.string "Whoa, you kick!$"
+	.string "וואו, איזו בעיטה!$"
 
 Route17_Text_BikerRileyAfterBattle:
-	.string "Don't get cocky, you JOHTO punk!$"
+	.string "אל תשתחצן, פרחח מג'וטו!$"
 
 Route17_Text_BikerJoelSeen:
-	.string "Wow. That's a cool BICYCLE!$"
+	.string "וואו. איזה אופניים מגניבים!$"
 
 Route17_Text_BikerJoelBeaten:
-	.string "But you don't just look cool…$"
+	.string "אבל אתה לא רק נראה מגניב…$"
 
 Route17_Text_BikerJoelAfterBattle:
-	.string "I look cool, but I'm weak, so I'm\n"
-	.string "not really cool.\p"
-	.string "I have to train harder…$"
+	.string "אני נראה מגניב, אבל אני חלש,\n"
+	.string "אז אני לא באמת מגניב.\p"
+	.string "אני צריך להתאמן יותר קשה…$"
 
 Route17_Text_BikerGlennSeen:
-	.string "Hey! Want to have a speed battle?$"
+	.string "היי! רוצה קרב מהירות?$"
 
 Route17_Text_BikerGlennBeaten:
-	.string "Yikes! You've got awesome torque!$"
+	.string "וואי! יש לך מומנט מטורף!$"
 
 Route17_Text_BikerGlennAfterBattle:
-	.string "Hands-free riding is considered\n"
-	.string "cool on CYCLING ROAD.$"
+	.string "בשביל האופניים, רכיבה בלי ידיים\n"
+	.string "נחשבת מגניבה.$"
 
 Route17_Text_BikerCharlesSeen:
-	.string "We're fearless highway stars!$"
+	.string "אנחנו כוכבי הכביש חסרי הפחד!$"
 
 Route17_Text_BikerCharlesBeaten:
-	.string "Arrrgh! Crash and burn!$"
+	.string "ארררג! התרסקתי ונשרפתי!$"
 
 Route17_Text_BikerCharlesAfterBattle:
-	.string "Reckless driving causes accidents!\n"
-	.string "Take it easy!$"
+	.string "נהיגה פרועה גורמת לתאונות!\n"
+	.string "לאט ובזהירות!$"
 
 Route17_Text_RileyRegister:
-	.string "Not bad for a JOHTO kid!$"
+	.string "לא רע בשביל ילד מג'וטו!$"
 
 Route17_Text_RileyRematchIntro:
-	.string "JOHTO punks can only win once!$"
+	.string "פרחחים מג'וטו מנצחים רק פעם אחת!$"
 
 Route17_Text_RileyRematchDefeat:
-	.string "I got kicked...$"
+	.string "חטפתי בעיטה…$"
 
 Route17_Text_RileyPostRematch:
-	.string "Maybe I should train in JOHTO\n"
-	.string "after all.$"
+	.string "אולי בכל זאת כדאי לי\n"
+	.string "להתאמן בג'וטו.$"
 
 Route17_Text_JoelRegister:
-	.string "You're pretty cool after all!\n"
-	.string "Let's trade numbers!$"
+	.string "אתה בכל זאת די מגניב!\n"
+	.string "בוא נחליף מספרים!$"
 
 Route17_Text_JoelRematchIntro:
-	.string "Let's see who's cooler now!$"
+	.string "נראה עכשיו מי יותר מגניב!$"
 
 Route17_Text_JoelRematchDefeat:
-	.string "Still not cool enough…$"
+	.string "עדיין לא מגניב מספיק…$"
 
 Route17_Text_JoelPostRematch:
-	.string "I'll keep training to be as cool\n"
-	.string "as you, kid!$"
+	.string "אמשיך להתאמן כדי להיות מגניב\n"
+	.string "כמוך, ילד!$"
 
 Route17_Text_CharlesRegister:
-	.string "You're a heartbreaker like me, kid!\n"
-	.string "Give me your number!$"
+	.string "אתה שובר לבבות כמוני, ילד!\n"
+	.string "תן לי את המספר שלך!$"
 
 Route17_Text_CharlesRematchIntro:
-	.string "I'm not just a highway star,\n"
-	.string "I'm a heartbreaker!$"
+	.string "אני לא רק כוכב כביש,\n"
+	.string "אני גם שובר לבבות!$"
 
 Route17_Text_CharlesRematchDefeat:
-	.string "Crashed and burned again!$"
+	.string "שוב התרסקתי ונשרפתי!$"
 
 Route17_Text_CharlesPostRematch:
-	.string "I met a trainer like you in UNOVA.\n"
-	.string "Don't crash out!$"
+	.string "פגשתי מאמן כמוך ביונובה.\n"
+	.string "אל תתרסק!$"
 

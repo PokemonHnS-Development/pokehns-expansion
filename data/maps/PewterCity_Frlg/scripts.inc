@@ -928,16 +928,16 @@ PewterCity_Text_CallPoliceIfInfoOnThieves::
 	.string "you have any information.$"
 
 PewterCity_Text_MuseumOfScience::
-	.string "PEWTER MUSEUM OF SCIENCE$"
+	.string "מוזיאון המדע של פיוטר$"
 
 PewterCity_Text_GymSign::
-	.string "PEWTER CITY POKéMON GYM\n"
-	.string "LEADER: BROCK\l"
-	.string "The Rock-Solid POKéMON TRAINER!$"
+	.string "מכון הפוקימון של העיר פיוטר\p"
+	.string "מנהיג: ברוק\n"
+	.string "מאמן הפוקימונים האיתן כסלע!$"
 
 PewterCity_Text_CitySign::
-	.string "PEWTER CITY\n"
-	.string "A Stone Gray City$"
+	.string "העיר פיוטר\n"
+	.string "עיר אפורה כאבן$"
 
 PewterCity_Text_OhPlayer::
 	.string "Oh, {PLAYER}{KUN}!$"

@@ -1,0 +1,19 @@
+# Roof: the owner (prize, new record), the elevator back to the reception, the TIME BOARD after the clear.
+snap h07_roof
+talkto 1 h07_owner free 80
+walkto 15 6 UP
+8 UP
+waitwarp
+dlg h07_elev menu
+pick 0
+dlg h07_down free
+snap h07_entrance
+loc
+walkto 8 11 UP
+tap A 4
+waitcb2 MainCB2_TrainerHillRecords 600
+waittask Task_TrainerHillWaitForPaletteFade 600
+waitquiet
+snap h07_timeboard_cleared
+press A
+waitctl 600

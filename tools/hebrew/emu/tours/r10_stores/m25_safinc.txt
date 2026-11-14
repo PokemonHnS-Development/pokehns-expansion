@@ -1,0 +1,10 @@
+# Safari Zone Gate incense clerk (MAP_SAFARI_ZONE_GATE_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_SAFARI_ZONE_GATE_HNS
+clerk 11 21 m25_hi
+buyopen m25_buy
+listshots m25_list
+buyeach m25_ask
+buyclose m25_menu
+shopquit m25_bye

@@ -1,0 +1,273 @@
+# Nature girl, Battle Frontier Lounge 5 (data/maps/BattleFrontier_Lounge5_hns/scripts.inc; at (12,4), talked to
+# from (12,5) facing UP). Greeting YES/NO: NO; YES + B in the PC select; YES + one Pokemon of each of the 25 natures
+# (party slots, createmon nature=N; ShowNatureGirlMessage, src/field_specials.c:2976-2986,
+# gNaturesInfo[].natureGirlMessage, src/pokemon.c:2568-2856); YES + an Egg; YES + a box Pokemon (box pane).
+start saves/r6_frontier_npcs.sav
+include ../../scripts/continue.txt
+warpto MAP_BATTLE_FRONTIER_LOUNGE5_HNS 12 5
+
+# --- 1. NO
+face UP
+tap A 4
+fieldwatch n1_greet menu 6000
+pick 1
+fieldwatch n1_no free 6000
+
+# --- 2. YES, then B in the PC select
+face UP
+tap A 4
+fieldwatch n2_greet menu 6000
+pick 0
+include _pc_ready.txt
+snap n2_pc
+tap B 4
+40 -
+waitquiet
+snap n2_continue_prompt
+tap DOWN 4
+8 -
+snap n2_continue_no
+tap A 4
+waitcb2x CB2_Overworld 900
+fieldwatch n2_none free 6000
+
+# --- round 0: party = HARDY, LONELY, BRAVE, ADAMANT, NAUGHTY, BOLD
+ev createmon 0, 0, SPECIES_PIKACHU, 20, nature=NATURE_HARDY; createmon 0, 1, SPECIES_PIKACHU, 20, nature=NATURE_LONELY; createmon 0, 2, SPECIES_PIKACHU, 20, nature=NATURE_BRAVE; createmon 0, 3, SPECIES_PIKACHU, 20, nature=NATURE_ADAMANT; createmon 0, 4, SPECIES_PIKACHU, 20, nature=NATURE_NAUGHTY; createmon 0, 5, SPECIES_PIKACHU, 20, nature=NATURE_BOLD; special CalculatePlayerPartyCount; end
+partyinfo
+face UP
+tap A 4
+fieldwatch n_00_hardy_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 0 n_00_hardy_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_00_hardy free 6000
+face UP
+tap A 4
+fieldwatch n_01_lonely_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 1 n_01_lonely_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_01_lonely free 6000
+face UP
+tap A 4
+fieldwatch n_02_brave_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 2 n_02_brave_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_02_brave free 6000
+face UP
+tap A 4
+fieldwatch n_03_adamant_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 3 n_03_adamant_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_03_adamant free 6000
+face UP
+tap A 4
+fieldwatch n_04_naughty_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 4 n_04_naughty_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_04_naughty free 6000
+face UP
+tap A 4
+fieldwatch n_05_bold_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 5 n_05_bold_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_05_bold free 6000
+
+# --- round 1: party = DOCILE, RELAXED, IMPISH, LAX, TIMID, HASTY
+ev createmon 0, 0, SPECIES_PIKACHU, 20, nature=NATURE_DOCILE; createmon 0, 1, SPECIES_PIKACHU, 20, nature=NATURE_RELAXED; createmon 0, 2, SPECIES_PIKACHU, 20, nature=NATURE_IMPISH; createmon 0, 3, SPECIES_PIKACHU, 20, nature=NATURE_LAX; createmon 0, 4, SPECIES_PIKACHU, 20, nature=NATURE_TIMID; createmon 0, 5, SPECIES_PIKACHU, 20, nature=NATURE_HASTY; special CalculatePlayerPartyCount; end
+partyinfo
+face UP
+tap A 4
+fieldwatch n_06_docile_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 0 n_06_docile_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_06_docile free 6000
+face UP
+tap A 4
+fieldwatch n_07_relaxed_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 1 n_07_relaxed_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_07_relaxed free 6000
+face UP
+tap A 4
+fieldwatch n_08_impish_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 2 n_08_impish_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_08_impish free 6000
+face UP
+tap A 4
+fieldwatch n_09_lax_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 3 n_09_lax_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_09_lax free 6000
+face UP
+tap A 4
+fieldwatch n_10_timid_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 4 n_10_timid_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_10_timid free 6000
+face UP
+tap A 4
+fieldwatch n_11_hasty_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 5 n_11_hasty_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_11_hasty free 6000
+
+# --- round 2: party = SERIOUS, JOLLY, NAIVE, MODEST, MILD, QUIET
+ev createmon 0, 0, SPECIES_PIKACHU, 20, nature=NATURE_SERIOUS; createmon 0, 1, SPECIES_PIKACHU, 20, nature=NATURE_JOLLY; createmon 0, 2, SPECIES_PIKACHU, 20, nature=NATURE_NAIVE; createmon 0, 3, SPECIES_PIKACHU, 20, nature=NATURE_MODEST; createmon 0, 4, SPECIES_PIKACHU, 20, nature=NATURE_MILD; createmon 0, 5, SPECIES_PIKACHU, 20, nature=NATURE_QUIET; special CalculatePlayerPartyCount; end
+partyinfo
+face UP
+tap A 4
+fieldwatch n_12_serious_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 0 n_12_serious_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_12_serious free 6000
+face UP
+tap A 4
+fieldwatch n_13_jolly_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 1 n_13_jolly_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_13_jolly free 6000
+face UP
+tap A 4
+fieldwatch n_14_naive_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 2 n_14_naive_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_14_naive free 6000
+face UP
+tap A 4
+fieldwatch n_15_modest_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 3 n_15_modest_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_15_modest free 6000
+face UP
+tap A 4
+fieldwatch n_16_mild_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 4 n_16_mild_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_16_mild free 6000
+face UP
+tap A 4
+fieldwatch n_17_quiet_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 5 n_17_quiet_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_17_quiet free 6000
+
+# --- round 3: party = BASHFUL, RASH, CALM, GENTLE, SASSY, CAREFUL
+ev createmon 0, 0, SPECIES_PIKACHU, 20, nature=NATURE_BASHFUL; createmon 0, 1, SPECIES_PIKACHU, 20, nature=NATURE_RASH; createmon 0, 2, SPECIES_PIKACHU, 20, nature=NATURE_CALM; createmon 0, 3, SPECIES_PIKACHU, 20, nature=NATURE_GENTLE; createmon 0, 4, SPECIES_PIKACHU, 20, nature=NATURE_SASSY; createmon 0, 5, SPECIES_PIKACHU, 20, nature=NATURE_CAREFUL; special CalculatePlayerPartyCount; end
+partyinfo
+face UP
+tap A 4
+fieldwatch n_18_bashful_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 0 n_18_bashful_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_18_bashful free 6000
+face UP
+tap A 4
+fieldwatch n_19_rash_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 1 n_19_rash_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_19_rash free 6000
+face UP
+tap A 4
+fieldwatch n_20_calm_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 2 n_20_calm_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_20_calm free 6000
+face UP
+tap A 4
+fieldwatch n_21_gentle_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 3 n_21_gentle_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_21_gentle free 6000
+face UP
+tap A 4
+fieldwatch n_22_sassy_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 4 n_22_sassy_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_22_sassy free 6000
+face UP
+tap A 4
+fieldwatch n_23_careful_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 5 n_23_careful_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_23_careful free 6000
+
+# --- round 4: party = QUIRKY + an Egg
+ev callnative ZeroPlayerPartyMons; createmon 0, 0, SPECIES_PIKACHU, 20, nature=NATURE_QUIRKY; special CalculatePlayerPartyCount; giveegg SPECIES_TOGEPI; end
+partyinfo
+face UP
+tap A 4
+fieldwatch n_24_quirky_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 0 n_24_quirky_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_24_quirky free 6000
+
+# --- the Egg (party slot 1)
+face UP
+tap A 4
+fieldwatch n_egg_greet menu 6000
+pick 0
+include _pc_ready.txt
+boxpick 1 1 n_egg_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_egg free 6000
+
+# --- a Pokemon from the box pane (box 1, slot 0)
+face UP
+tap A 4
+fieldwatch n_box_greet menu 6000
+pick 0
+include _pc_ready.txt
+snap n_box_pc
+boxpick 0 0 n_box_pick
+waitcb2x CB2_Overworld 900
+fieldwatch n_box free 6000

@@ -16,22 +16,21 @@ FuchsiaCity_House2_EventScript_Photo::
 	end
 
 FuchsiaCity_House2_Text_WardensGranddaughter1:
-	.string "My grandpa is the SAFARI ZONE\n"
-	.string "WARDEN.\p"
-	.string "At least he was…\p"
-	.string "He decided to go on a vacation and\n"
-	.string "took off overseas all by himself.\p"
-	.string "He quit running SAFARI ZONE just\n"
-	.string "like that.$"
+	.string "סבא שלי הוא הפקח של\n"
+	.string "אזור הספארי.\p"
+	.string "כלומר, הוא היה…\p"
+	.string "הוא החליט לצאת לחופשה\n"
+	.string "ונסע לבדו אל מעבר לים.\p"
+	.string "הוא הפסיק לנהל את אזור הספארי\n"
+	.string "ככה, פתאום.$"
 
 FuchsiaCity_House2_Text_WardensGranddaughter2:
-	.string "Many people were disappointed that\n"
-	.string "SAFARI ZONE closed down, but Grandpa\l"
-	.string "is so stubborn…$"
+	.string "הרבה אנשים התאכזבו כשאזור הספארי\n"
+	.string "נסגר, אבל סבא כל כך עקשן…$"
 
 FuchsiaCity_House2_Text_WardenPhoto:
-	.string "It's a photo of a grinning old man\n"
-	.string "who's surrounded by POKéMON.$"
+	.string "זו תמונה של איש זקן מחייך,\n"
+	.string "מוקף בפוקימונים.$"
 
 FuchsiaCity_House2_Text_SafariZonePhoto:
 	.string "It's a photo of a huge grassy plain\n"

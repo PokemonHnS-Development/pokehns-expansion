@@ -1,0 +1,31 @@
+# The four Tapu flyover cutscenes: with FLAG_FLYOVER_TAPU_<X> set, a coord trigger on the island
+# (VAR_TEMP_0 0) runs Alola_<Isle>_Tapu<X>_Flyover: the flyover object appears, SE_M_FLY, it flies
+# across the screen, it is removed and FLAG_HIDE_TAPU_<X> is cleared. No text. Triggers:
+# MelemeleIsle_hns (45|46,29), AkalaIsle_hns (36|37,23), UlaulaIsle_hns (9,59|60), PoniIsle_hns (13|14,28).
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev setflag FLAG_FLYOVER_TAPU_KOKO; setflag FLAG_FLYOVER_TAPU_LELE; setflag FLAG_FLYOVER_TAPU_BULU; setflag FLAG_FLYOVER_TAPU_FINI; end
+
+warpto MAP_MELEMELE_ISLE_HNS 45 30
+snap koko_field
+stepto UP 1
+scene koko_fly 3000 12
+snap koko_end
+
+warpto MAP_AKALA_ISLE_HNS 36 24
+snap lele_field
+stepto UP 1
+scene lele_fly 3000 12
+snap lele_end
+
+warpto MAP_ULAULA_ISLE_HNS 8 60
+snap bulu_field
+stepto RIGHT 1
+scene bulu_fly 3000 12
+snap bulu_end
+
+warpto MAP_PONI_ISLE_HNS 13 29
+snap fini_field
+stepto UP 1
+scene fini_fly 3000 12
+snap fini_end

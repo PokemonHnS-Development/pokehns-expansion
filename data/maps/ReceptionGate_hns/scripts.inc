@@ -15,13 +15,12 @@ ReceptionGate_EventScript_Janine::
     end
 
 ReceptionGate_Text_Janine:
-    .string "JANINE: I'm on the way to my dad's\n"
-    .string "house to give him his lunch.\p"
-    .string "The ELITE FOUR has no time to rest\n"
-    .string "day or night. It's such hard work,\l"
-    .string "you know?\p"
-    .string "If you're ready for another battle,\n"
-    .string "I'll be at the DOJO later.$"
+    .string "ג'אנין: אני בדרך לבית של אבא שלי\n"
+    .string "כדי להביא לו ארוחת צהריים.\p"
+    .string "לרביעייה העילית אין מנוחה יום ולילה.\n"
+    .string "זו עבודה כל כך קשה, אתה יודע?\p"
+    .string "אם אתה מוכן לעוד קרב,\n"
+    .string "אהיה בדוג'ו אחר כך.$"
 
 
 ReceptionGate_EventScript_Officer::
@@ -67,30 +66,28 @@ ReceptionGate_EventScript_KantoGuard::
     end
 
 VictoryRoadGate_Text_Officer:
-    .string "Only trainers who have proven\n"
-    .string "themselves may pass.$"
+    .string "רק מאמנים שהוכיחו את עצמם\n"
+    .string "רשאים לעבור.$"
 
 VictoryRoadGate_Text_Kimono:
-    .string "Sorry kid, this way is closed until\n"
-    .string "someone deals with that LEGENDARY\l"
-    .string "POKéMON...$"
+    .string "מצטער, ילד, הדרך הזאת סגורה עד\n"
+    .string "שמישהו יטפל בפוקימון האגדי ההוא…$"
 
 VictoryRoadGate_Text_NotEnoughBadges:
-    .string "You don't have all the GYM BADGES\n"
-    .string "of JOHTO.\p"
-    .string "I'm sorry, but I can't let you go\n"
-    .string "through.$"
+    .string "אין לך את כל תגי המכון של ג'וטו.\p"
+    .string "אני מצטער, אבל אני לא יכול\n"
+    .string "לתת לך לעבור.$"
 
 VictoryRoadGate_Text_EightBadges:
-    .string "Oh! The eight BADGES of JOHTO!\p"
-    .string "Please, go right on through!$"
+    .string "אה! שמונת התגים של ג'וטו!\p"
+    .string "בבקשה, אתה מוזמן לעבור!$"
 
 VictoryRoadGate_Text_LeftBlackBelt:
-    .string "This way leads to MT.SILVER.\p"
-    .string "You'll see scary-strong POKéMON out\n"
-    .string "there.$"
+    .string "הדרך הזאת מובילה להר הכסף.\p"
+    .string "תפגוש שם פוקימונים\n"
+    .string "חזקים בצורה מפחידה.$"
 
 VictoryRoadGate_Text_RightBlackBelt:
-    .string "Off to the POKéMON LEAGUE, are you?\p"
-    .string "The ELITE FOUR are so strong it's\n"
-    .string "scary, and they're ready for you!$"
+    .string "בדרך לליגת הפוקימון, הא?\p"
+    .string "חברי הרביעייה העילית חזקים\n"
+    .string "בצורה מפחידה, והם מחכים לך!$"

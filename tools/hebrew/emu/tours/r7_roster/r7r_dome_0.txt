@@ -1,0 +1,84 @@
+# r7 roster: Battle Dome tourney tree and info cards, batches 0-5
+start saves/r7/r7_roster_base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 5 11
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive dt_in menu
+pick 0
+drive dt_lv menu
+pick 0
+drive dt_sel task:Task_HandleChooseMonInput 20
+include ../../scripts/r2_battle_frontier_facilities/_bf_enter3.txt
+drive dt_save menu 10
+pick 0
+saveyes
+drivex dt_go menu 30 9000
+# batch 0: ids 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+dometrainers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+pick 1
+drivex b00_msg cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domelist b00_tree
+snap b00_tree
+domecards b00_card 0
+tap B 0
+drivex b00_back menu 10 3000
+# batch 1: ids 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+dometrainers 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+pick 1
+drivex b01_msg cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domelist b01_tree
+snap b01_tree
+domecards b01_card 1
+tap B 0
+drivex b01_back menu 10 3000
+# batch 2: ids 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44
+dometrainers 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44
+pick 1
+drivex b02_msg cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domelist b02_tree
+snap b02_tree
+domecards b02_card 1
+tap B 0
+drivex b02_back menu 10 3000
+# batch 3: ids 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59
+dometrainers 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59
+pick 1
+drivex b03_msg cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domelist b03_tree
+snap b03_tree
+domecards b03_card 1
+tap B 0
+drivex b03_back menu 10 3000
+# batch 4: ids 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74
+dometrainers 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74
+pick 1
+drivex b04_msg cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domelist b04_tree
+snap b04_tree
+domecards b04_card 1
+tap B 0
+drivex b04_back menu 10 3000
+# batch 5: ids 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89
+dometrainers 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89
+pick 1
+drivex b05_msg cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domelist b05_tree
+snap b05_tree
+domecards b05_card 1
+tap B 0
+drivex b05_back menu 10 3000

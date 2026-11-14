@@ -1,0 +1,71 @@
+# Goldenrod (data/maps/GoldenrodCity_RadioTower_1F_hns, _BikeShop_hns, _FlowerShop_hns, Route36_hns):
+# the Radio Tower 1F quiz (RadioTower1F_EventScript_Reception: offer YES/NO -> NO; again, Q1 -> NO =
+# wrong answer; again, Q1-Q5 right (YES YES NO YES NO) -> ReceptionGiveRadio), the Bike Shop clerk
+# (YES/NO -> NO = Refused; again YES -> BikeAgreed + Bicycle; again -> BikeReceived), the flower shop
+# Squirt Bottle (with the third badge; again -> GotSquirtBottle) and the Route 36 HM08 Rock Smash
+# (RockSmashGuy2 with Sudowoodo gone). Ladder 2 + s3a + Azalea + s3b + the Goldenrod trigger.
+start saves/r6sj_ladder2_badge1.sav
+include _base.txt
+include _l2_azalea.txt
+event ../../scripts/ladder/s3b_azalea.inc
+rungoto GoldenrodCity_EventScript_Trigger 20000 A
+warpto MAP_GOLDENROD_CITY_RADIO_TOWER_1F_HNS 14 8
+snap rt_room
+face DOWN
+tap A 4
+scene qz_a 10000
+yesno qz_a_yn NO
+scene qz_a_no 6000
+tap A 4
+scene qz_b 10000
+yesno qz_b_yn YES
+scene qz_b1 10000
+yesno qz_b1_yn NO
+scene qz_b_wrong 6000
+tap A 4
+scene qz 10000
+yesno qz_yn YES
+scene qz1 10000
+yesno qz1_yn YES
+scene qz2 10000
+yesno qz2_yn YES
+scene qz3 10000
+yesno qz3_yn NO
+scene qz4 10000
+yesno qz4_yn YES
+scene qz5 10000
+yesno qz5_yn NO
+scene qz_win 30000 40
+snap qz_end
+tap A 4
+scene qz_again 6000
+warpto MAP_GOLDENROD_CITY_BIKE_SHOP_HNS 4 5
+snap bk_room
+face UP
+tap A 4
+scene bk_a 10000
+yesno bk_a_yn NO
+scene bk_a_no 6000
+tap A 4
+scene bk 10000
+yesno bk_yn YES
+scene bk_got 10000
+snap bk_free
+tap A 4
+scene bk_after 6000
+ev setflag FLAG_BADGE03_GET; end
+warpto MAP_GOLDENROD_CITY_FLOWER_SHOP_HNS 3 4
+face LEFT
+tap A 4
+scene fl 10000
+snap fl_free
+tap A 4
+scene fl_after 6000
+ev setflag FLAG_HIDE_SUDOWOODO; end
+warpto MAP_ROUTE36_HNS 47 20
+face LEFT
+tap A 4
+scene rs 10000
+snap rs_free
+tap A 4
+scene rs_after 6000

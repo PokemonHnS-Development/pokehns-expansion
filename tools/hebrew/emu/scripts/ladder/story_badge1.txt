@@ -1,0 +1,5 @@
+# Story steps from a new game (ladder 1, bedroom) to "first badge, aide waiting in the
+# Violet City Pokemon Center". Included by ladder2_badge1.txt and every later rung.
+event s1_newbark.inc
+rungoto VioletCity_EventScript_Trigger
+event s2_violet.inc

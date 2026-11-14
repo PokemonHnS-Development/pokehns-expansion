@@ -1,0 +1,15 @@
+# Snorlax, Vermilion (61,13): VermilionCity_EventScript_Snorlax (data/maps/VermilionCity_hns/
+# scripts.inc:179-212). The sleeping text and the radio wake-up were shot in round 4 (#753-755); here
+# the wake-up branch is entered directly (goto VermilionCity_EventScript_SnorlaxWakeUp, facing the
+# invisible blocker at (60,13)) for the battle, the catch and the win.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_VERMILION_SNORLAX; end
+warpto MAP_VERMILION_CITY_HNS 59 13
+face RIGHT
+snap sx_field
+tap A 4
+scene sx_sleep 3000
+evstart setvar VAR_LAST_TALKED, 1; goto VermilionCity_EventScript_SnorlaxWakeUp
+scene sx_pre 6000
+include _legend_tail.txt

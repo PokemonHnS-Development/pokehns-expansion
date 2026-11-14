@@ -1,0 +1,14 @@
+# CreateBPPowerShop (MAP_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER_HNS): every row asked, one purchase, not enough BP.
+start saves/st_l6.sav
+include _base.txt
+setbp 9999
+visit MAP_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER_HNS
+clerk 4 3 p07_hi
+buywait p07_buy
+listshots p07_list
+buyeach p07_ask
+buy p07_b0 0 1 YES
+setbp 0
+buy p07_nobp 1 0 YES
+press B
+chat p07_bye

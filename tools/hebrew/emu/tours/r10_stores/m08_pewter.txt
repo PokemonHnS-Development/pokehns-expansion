@@ -1,0 +1,9 @@
+# shared Cherrygrove clerk (MAP_PEWTER_CITY_MART_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_PEWTER_CITY_MART_HNS
+clerk 2 3 m08_hi
+buyopen m08_buy
+listshots m08_list
+buyclose m08_menu
+shopquit m08_bye

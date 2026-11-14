@@ -1,0 +1,184 @@
+# Exp. Candies from the bag (src/party_menu.c ItemUseCB_RareCandy): each size on a Lv 99
+# Drifblim with no level change ("X gained N Exp. Points!", gText_PkmnGainedExp), then a
+# second XL that reaches Lv 100 ("gained 30000 Exp. Points and was elevated to Lv. 100!",
+# gText_PkmnGainedExpAndElevatedToLvVar3) with the level-up stats pages 1 and 2, then a
+# candy on the Lv 100 Pokemon ("It won't have any effect.").
+# Drifblim is GROWTH_FLUCTUATING: Lv 99 = 1571884 Exp, Lv 100 = 1640000 (gap 68116), so
+# XS+S+M+L+XL (43900) stay at Lv 99 and the second XL (73900) reaches Lv 100.
+# MEDICINE after the additems: 0 POTION .. 5 RARE CANDY, 6 XS, 7 S, 8 M, 9 L, 10 XL; with
+# CLOSE BAG 12 rows, so the scroll is 4 and the cursor is index - 4.
+start saves/pif2_base.sav
+include ../scripts/continue.txt
+ev givemon SPECIES_DRIFBLIM, 99; additem ITEM_EXP_CANDY_XS, 3; additem ITEM_EXP_CANDY_S, 3; additem ITEM_EXP_CANDY_M, 3; additem ITEM_EXP_CANDY_L, 3; additem ITEM_EXP_CANDY_XL, 3; end
+
+# EXP. CANDY XS on Drifblim (slot 5)
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 2
+w16 @gBagPosition+16@ 4
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_xc_01_bag_xs
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap pbi_xc_02_context
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+snap pbi_xc_03_party
+tap A 4
+waitkey 600
+snap pbi_xc_04_xs_100
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# EXP. CANDY S
+w16 @gBagPosition+A@ 3
+w16 @gBagPosition+16@ 4
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_xc_05_bag_s
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_xc_06_s_800
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# EXP. CANDY M
+w16 @gBagPosition+A@ 4
+w16 @gBagPosition+16@ 4
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_xc_07_bag_m
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_xc_08_m_3000
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# EXP. CANDY L
+w16 @gBagPosition+A@ 5
+w16 @gBagPosition+16@ 4
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_xc_09_bag_l
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_xc_10_l_10000
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# EXP. CANDY XL: no level change, then the same candy again from the bag: Lv 100
+w16 @gBagPosition+A@ 6
+w16 @gBagPosition+16@ 4
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_xc_11_bag_xl
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_xc_12_xl_30000
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg1 300
+snap pbi_xc_13_xl_lv100
+waitmem 16 @sFanfareCounter@ 0 900       # Task_DisplayLevelUpStatsPg1 reads A only after WaitFanfare
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg2 600
+snap pbi_xc_14_stats_pg1
+tap A 4
+waittaskx Task_TryLearnNewMoves 600
+snap pbi_xc_15_stats_pg2
+tap A 4
+waittaskx Task_HandleChooseMonInput 900   # no move, no evolution, XL left: back to choosing
+waitquiet
+snap pbi_xc_16_party_lv100
+
+# XL on the Lv 100 Drifblim: "It won't have any effect." (closes to the bag)
+tap A 4
+waitkey 600
+snap pbi_xc_17_lv100_no_effect
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_xc_18_bag_after
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

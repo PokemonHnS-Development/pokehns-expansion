@@ -1,0 +1,15 @@
+# r6 items: tms 2/3. Each event clears the object's or tile's flag, warps next to it, turns the
+# player toward it and presses A (Std_FindItem / EventScript_HiddenItemScript, data/scripts/obtain_item.inc).
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+pick t_tm_fling FLAG_ITEM_ROCKTUNNEL1_TM_FACADE MAP_ROCK_TUNNEL_B1F_HNS 45 34 UP
+pick t_tm_thief FLAG_ITEM_ROCKETHIDEOUT2_TM_THIEF MAP_ROCKET_HIDEOUT_B2F_HNS 3 18 UP
+pick t_tm_rock_polish FLAG_ITEM_ROUTE10_TM_ROCK_POLISH MAP_ROUTE10_HNS 14 75 UP
+pick t_tm_grass_knot FLAG_ITEM_ROUTE11_TM_GRASS_KNOT MAP_ROUTE11_HNS 28 21 UP
+pick t_tm_brine FLAG_ITEM_ROUTE19_TM_BRINE MAP_ROUTE19_HNS 8 28 UP
+pick t_tm_dragon_claw FLAG_ITEM_ROUTE27_DRAGONCLAW MAP_ROUTE27_HNS 132 17 RIGHT
+pick t_tm_flamethrower FLAG_ITEM_ROUTE28_TM_FLAMETHROWER MAP_ROUTE28_HNS 40 10 RIGHT
+pick t_tm_bullet_seed FLAG_ITEM_ROUTE32_TM_BULLET_SEED MAP_ROUTE32_HNS 9 70 LEFT
+pick t_tm_embargo FLAG_ITEM_ROUTE34_TM_EMBARGO MAP_ROUTE34_HNS 32 21 RIGHT
+pick t_tm_payback FLAG_ITEM_ROUTE35_PAYBACK MAP_ROUTE35_HNS 35 46 UP
+pick t_tm_drain_punch FLAG_ITEM_ROUTE39_TM_DRAIN_PUNCH MAP_ROUTE39_HNS 11 14 UP

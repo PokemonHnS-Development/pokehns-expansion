@@ -4240,6 +4240,12 @@ void PrintMonMeasurements(u16 species, u32 owned)
         PrintUnknownMonMeasurements();
 }
 
+#if TEXT_RTL
+// The HGSS info window spans the screen and is mirrored around the screen width. Shift the HT/WT
+// columns so they mirror inside the white interior of their own box (x 152-236) instead.
+#define DEX_HGSS_RTL_MEASUREMENT_SHIFT (152 + 237 - DISPLAY_WIDTH)
+#endif
+
 static u32 GetMeasurementTextPositions(u32 textElement)
 {
     if (!POKEDEX_PLUS_HGSS)
@@ -4248,14 +4254,22 @@ static u32 GetMeasurementTextPositions(u32 textElement)
     switch (textElement)
     {
     case DEX_HEADER_X:
+#if TEXT_RTL
+        return (DEX_HEADER_X + DEX_HGSS_HEADER_X_PADDING - DEX_HGSS_RTL_MEASUREMENT_SHIFT);
+#else
         return (DEX_HEADER_X + DEX_HGSS_HEADER_X_PADDING);
+#endif
     case DEX_Y_TOP:
         return (DEX_Y_TOP + DEX_HGSS_Y_TOP_PADDING);
     case DEX_Y_BOTTOM:
         return (DEX_Y_BOTTOM + DEX_HGSS_Y_BOTTOM_PADDING);
     default:
     case DEX_MEASUREMENT_X:
+#if TEXT_RTL
+        return (DEX_MEASUREMENT_X + DEX_HGSS_MEASUREMENT_X_PADDING - DEX_HGSS_RTL_MEASUREMENT_SHIFT);
+#else
         return (DEX_MEASUREMENT_X + DEX_HGSS_MEASUREMENT_X_PADDING);
+#endif
     }
 }
 
@@ -4296,6 +4310,10 @@ static u8* ReplaceDecimalSeparator(const u8* originalString)
     bool32 replaced = FALSE;
     u32 length = StringLength(originalString), i;
     u8* modifiedString = Alloc(WEIGHT_HEIGHT_STR_MEM);
+#if RTL_STRING_REPORT
+    RtlStringReport(originalString);
+#endif
+#line 4313
 
     for (i = 0; i < length; i++)
     {
@@ -4388,7 +4406,15 @@ static u8* ConvertMonHeightToImperialString(u32 height)
     heightString[index++] = CHAR_SGL_QUOTE_RIGHT;
     heightString[index++] = (inches / 10) + CHAR_0;
     heightString[index++] = (inches % 10) + CHAR_0;
+#if TEXT_RTL
+    // The inch mark goes in front of the digits (after the 3-byte {CLEAR_TO}), as in gText_UnkHeight:
+    // right to left, a neutral after a number is drawn at its left end, one before it at its right end.
+    memmove(&heightString[4], &heightString[3], index - 3);
+    heightString[3] = CHAR_DBL_QUOTE_RIGHT;
+    index++;
+#else
     heightString[index++] = CHAR_DBL_QUOTE_RIGHT;
+#endif
     heightString[index++] = EOS;
 
     return heightString;
@@ -4454,7 +4480,10 @@ static u8* ConvertMonWeightToImperialString(u32 weight)
     weightString[index++] = CHAR_l;
     weightString[index++] = CHAR_b;
     weightString[index++] = CHAR_s;
+    // Right-to-left text would draw a trailing period at the far end of the number.
+#if !TEXT_RTL
     weightString[index++] = CHAR_PERIOD;
+#endif
     weightString[index++] = EOS;
 
     return weightString;
@@ -4467,7 +4496,10 @@ static u8* ConvertMonWeightToMetricString(u32 weight)
 
     weightString[index++] = CHAR_k;
     weightString[index++] = CHAR_g;
+    // Right-to-left text would draw a trailing period at the far end of the number.
+#if !TEXT_RTL
     weightString[index++] = CHAR_PERIOD;
+#endif
     weightString[index++] = EOS;
     return weightString;
 }
@@ -4776,6 +4808,10 @@ static u8 PrintCryScreenSpeciesName(u8 windowId, u16 num, u8 left, u8 top)
     default:
         for (i = 0; GetSpeciesName(num)[i] != EOS && i < POKEMON_NAME_LENGTH; i++)
             str[i] = GetSpeciesName(num)[i];
+#if RTL_STRING_REPORT
+        RtlStringReport(GetSpeciesName(num));
+#endif
+#line 4807
         WrapFontIdToFit(str, str + i, FONT_NORMAL, 60);
         break;
     case 0:

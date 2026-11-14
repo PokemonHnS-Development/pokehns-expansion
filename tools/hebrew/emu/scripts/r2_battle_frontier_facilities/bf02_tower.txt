@@ -1,0 +1,158 @@
+# r2 Battle Frontier: Battle Tower singles, Lv.50. The Frontier party select with every
+# annotation and refusal (3 needed, same species, same held item, no more than 3, NOT ABLE,
+# NO ENTRY, SUMMARY), the save, the battle room with the opponent's Easy Chat speech before
+# and after the battle, the next-opponent menu, then (streak poked to 34, battle number to 6)
+# the Salon Maiden lead-in, Anabel's intro, her battle, the Ability Symbol and the BP award,
+# and the results window afterwards. Battles are won with bwin (Ice Shard against 1 HP).
+start saves/r2_bff/base_postgame.sav
+include ../continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+include _bf_testparty.txt
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 6 6
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive tw_in menu
+pick 0
+drive tw_lv menu
+pick 0
+drive tw_sel task:Task_HandleChooseMonInput 20
+snap ps_01_start
+# slot 0: action list, ENTER (FIRST)
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+snap ps_02_menu
+pick 0
+waittask Task_HandleChooseMonInput 120
+snap ps_03_first
+# slot 5 (Lugia, NOT ABLE): its action list has no ENTER
+seek 8 @gPartyMenu+9@ 5 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+snap ps_04_banned_menu
+tap B 0
+waittask Task_HandleChooseMonInput 120
+# CONFIRM with one entry: "3 Pokemon are needed"
+seek 8 @gPartyMenu+9@ 6 DOWN
+snap ps_05_confirm_cursor
+tap A 0
+waitquiet
+snap ps_06_need3
+tap A 0
+waittask Task_HandleChooseMonInput 120
+# slots 1 and 4 (both Pidgeot): SECOND, THIRD, confirm -> same species refused
+seek 8 @gPartyMenu+9@ 1 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 4 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+snap ps_07_three
+tap A 0
+waitquiet
+snap ps_08_same_species
+tap A 0
+waittask Task_HandleChooseMonInput 120
+# NO ENTRY on slot 4 and slot 1; ENTER slots 2 and 3 (both Leftovers) -> same item refused
+seek 8 @gPartyMenu+9@ 4 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+snap ps_09_noentry_menu
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 1 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 3 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+snap ps_10_items_entered
+tap A 0
+waitquiet
+snap ps_11_same_item
+tap A 0
+waittask Task_HandleChooseMonInput 120
+# a fourth ENTER: "No more than 3 Pokemon"
+seek 8 @gPartyMenu+9@ 1 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waitquiet
+snap ps_12_no_more_than_3
+tap A 0
+waittask Task_HandleChooseMonInput 120
+# slot 0 (entered): its list (NO ENTRY / SUMMARY / CANCEL), then SUMMARY
+seek 8 @gPartyMenu+9@ 0 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+snap ps_13_entered_menu
+pick 1
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitquiet
+snap ps_14_summary
+tap B 4
+waittask Task_HandleSelectionMenuInput 600
+waitquiet
+tap B 4
+waittask Task_HandleChooseMonInput 600
+waitquiet
+# NO ENTRY slot 3, ENTER slot 1: Typhlosion, Ampharos, Pidgeot; confirm
+seek 8 @gPartyMenu+9@ 3 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 1 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+snap ps_15_final_three
+tap A 0
+drive ps_save menu 10
+pick 0
+saveyes ps_savebox
+drive tw_go battle 30 9000
+# 33 wins so far in Lv.50 singles and 5 battles of this set: the win makes it 34 and 6,
+# so the next opponent is the Frontier Brain (GetFrontierBrainStatus, src/frontier_util.c:1779)
+sb2w16 CE0 33
+sb2w16 CB2 5
+fastbattles off
+bwin tw_b1
+drivex tw_after1 menu 30 9000
+pick 0
+drivex tw_anabel battle 30 9000
+bwin tw_ab
+drivex tw_symbol menu 40 12000
+pick 1
+drivex tw_end free 20 6000
+evstart goto 0x@BattleFrontier_BattleTowerLobby_EventScript_ShowSinglesResults_hns@
+30 -
+snap tw_res_after
+tap A 0
+waitctl 600

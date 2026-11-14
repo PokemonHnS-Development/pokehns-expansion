@@ -1,0 +1,6 @@
+# Invitation tail (not a tour): the player stands next to the leader (approach faces it), A, every
+# message page, the fade, then the field with the leader gone.
+snap I_face
+tap A 4
+scene I_msg 20000
+snap I_free

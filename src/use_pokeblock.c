@@ -156,11 +156,11 @@ static void SpriteCB_SelectionIconCancel(struct Sprite *);
 static void SpriteCB_MonPic(struct Sprite *);
 static void SpriteCB_Condition(struct Sprite *);
 
-static const u8 sText_GetsAPokeBlockQuestion[] = _(" gets a {POKEBLOCK}?");
-static const u8 sText_WasEnhanced[] = _("was enhanced!");
-static const u8 sText_NothingChanged[] = _("Nothing changed!");
-static const u8 sText_WontEatAnymore[] = _("It won't eat anymore…");
-static const u8 sText_NatureSlash[] = _("NATURE/");
+static const u8 sText_GetsAPokeBlockQuestion[] = _(" יקבל פוקיבלוק?");
+static const u8 sText_WasEnhanced[] = _("עלה!");
+static const u8 sText_NothingChanged[] = _("שום דבר לא השתנה!");
+static const u8 sText_WontEatAnymore[] = _("הוא לא יאכל יותר…");
+static const u8 sText_NatureSlash[] = _("אופי/");
 
 extern const u16 gConditionGraphData_Pal[];
 extern const u16 gConditionText_Pal[];
@@ -314,10 +314,20 @@ static const struct SpritePalette sSpritePalette_UpDown =
 static const s16 sUpDownCoordsOnGraph[CONDITION_COUNT][2] =
 {
     [CONDITION_COOL]   = {156,  36},
+#if TEXT_RTL
+    // The Hebrew word is taller and wider than UP: raise the two upper side entries clear of
+    // their condition labels, and keep BEAUTY's off the frame at the right.
+    [CONDITION_TOUGH]  = {117,  55},
+#else
     [CONDITION_TOUGH]  = {117,  59},
+#endif
     [CONDITION_SMART]  = {117, 118},
     [CONDITION_CUTE]   = {197, 118},
+#if TEXT_RTL
+    [CONDITION_BEAUTY] = {193,  55}
+#else
     [CONDITION_BEAUTY] = {197,  59}
+#endif
 };
 
 static const struct OamData sOam_UpDown =

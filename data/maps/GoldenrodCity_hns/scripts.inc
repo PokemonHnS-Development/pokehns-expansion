@@ -289,58 +289,53 @@ GoldenrodCity_EventScript_Beauty::
 	end
 
 GoldenrodCity_Text_Beauty:
-	.string "This is the GOLDENROD GYM!\p"
-	.string "Our leader WHITNEY is not here\n"
-	.string "right now. She might be at the\l"
-	.string "RADIO TOWER.$"
+	.string "זה מכון גולדנרוד!\p"
+	.string "המנהיגה שלנו, ויטני, לא כאן כרגע.\n"
+	.string "אולי היא במגדל הרדיו.$"
 
 GoldenrodCity_Text_Woman:
-	.string "I used to train in WHITNEY's GYM,\n"
-	.string "but all her crying gave me a\l"
-	.string "headache.$"
+	.string "פעם התאמנתי במכון של ויטני,\n"
+	.string "אבל כל הבכי שלה עשה לי כאב ראש.$"
 
 GoldenrodCity_Text_HikerDay:
-	.string "When I went into the GAME CORNER\n"
-	.string "it was night time... How long was I\l"
-	.string "in there?!$"
+	.string "כשנכנסתי למשחקייה היה לילה…\n"
+	.string "כמה זמן הייתי שם?!$"
 
 GoldenrodCity_Text_HikerNight:
-	.string "When I went into the GAME CORNER\n"
-	.string "it was day time... How long was I\l"
-	.string "in there?!$"
+	.string "כשנכנסתי למשחקייה היה יום…\n"
+	.string "כמה זמן הייתי שם?!$"
 
 GoldenrodCity_Text_Snubbull:
-	.string "SNUBBULL: SNUUUBUUUULL!$"
+	.string "סנאבול: סנאאאבוווול!$"
 
 GoldenrodCity_Text_MrMime:
 	.string "............................$"
 
 GoldenrodCity_Text_ElmName:
-	.string "PROF.ELM$"
+	.string "פרופ' אלם$"
 
 GoldenrodCity_Text_ElmCall:
-	.string "PROF.ELM: Hello, {PLAYER}?\n"
-	.string "Has that EGG hatched yet?\p"
-	.string "Once it hatches, don't forget to\n"
-	.string "bring it by the lab! I need to\l"
-	.string "see it!$"
+	.string "פרופ' אלם: הלו, {PLAYER}?\n"
+	.string "הביצה כבר בקעה?\p"
+	.string "כשהיא תבקע, אל תשכח להביא את\n"
+	.string "הפוקימון למעבדה! אני חייב לראותו!$"
 
 GoldenrodCity_Text_PokefanM:
-	.string "They built the new RADIO TOWER\n"
-	.string "to replace the old creaky one.$"
+	.string "בנו את מגדל הרדיו החדש\n"
+	.string "במקום הישן והחורק.$"
 
 GoldenrodCity_Text_Youngster1:
-	.string "I know there's a new BIKE SHOP,\n"
-	.string "but I can't find it anywhere.$"
+	.string "אני יודע שיש חנות אופניים חדשה,\n"
+	.string "אבל אני לא מוצא אותה בשום מקום.$"
 
 GoldenrodCity_Text_CooltrainerF1:
-	.string "Is that man in black dressed up\n"
-	.string "like a TEAM ROCKET member?\p"
-	.string "How silly!$"
+	.string "האיש ההוא בשחור התחפש\n"
+	.string "לחבר בצוות רוקט?\p"
+	.string "כמה מגוחך!$"
 
 GoldenrodCity_Text_CooltrainerF1_Cleared:
-	.string "Was that man in black really part\n"
-	.string "of TEAM ROCKET? I can't believe it!$"
+	.string "האיש ההוא בשחור באמת היה\n"
+	.string "חבר בצוות רוקט? אני לא מאמינה!$"
 
 GoldenrodCity_Text_CooltrainerF2:
 	.string "The RADIO TOWER in GOLDENROD CITY\n"
@@ -354,90 +349,90 @@ GoldenrodCity_Text_CooltrainerF2_GotCard:
 	.string "as a radio!$"
 
 GoldenrodCity_Text_Youngster2:
-	.string "E-he-he-he…\p"
-	.string "I got in trouble for playing in\n"
-	.string "the DEPT.STORE basement.$"
+	.string "הי-הי-הי-הי…\p"
+	.string "הסתבכתי כי שיחקתי\n"
+	.string "במרתף של הכלבו.$"
 
 GoldenrodCity_Text_Lass:
-	.string "That man inside rates your\n"
-	.string "POKéMON nicknames.\p"
-	.string "He can even rename them.$"
+	.string "האיש שבפנים מדרג\n"
+	.string "את הכינויים של הפוקימונים שלך.\p"
+	.string "הוא אפילו יכול לשנות אותם.$"
 
 GoldenrodCity_Text_Gramps:
-	.string "Whew! This town is so big,\n"
-	.string "I can't find anything at all.$"
+	.string "אוף! העיר הזאת כל כך גדולה,\n"
+	.string "אני לא מוצא כאן שום דבר.$"
 
 GoldenrodCity_Text_RocketScout1:
-	.string "So this is the RADIO TOWER…$"
+	.string "אז זה מגדל הרדיו…$"
 
 GoldenrodCity_Text_RocketScout2:
-	.string "What do you want, pest?\n"
-	.string "Scram already!$"
+	.string "מה אתה רוצה, נודניק?\n"
+	.string "תסתלק כבר!$"
 
 GoldenrodCity_Text_Rocket1:
-	.string "Stay out of the way!\n"
-	.string "Beat it, kid!$"
+	.string "אל תעמוד בדרך!\n"
+	.string "עוף מפה, ילד!$"
 
 GoldenrodCity_Text_Rocket2:
-	.string "Take over the RADIO TOWER…\p"
-	.string "What? It's none of your business!$"
+	.string "להשתלט על מגדל הרדיו…\p"
+	.string "מה? זה לא עניינך!$"
 
 GoldenrodCity_Text_Rocket3:
-	.string "POKéMON? They're just tools\n"
-	.string "we use to make money!$"
+	.string "פוקימונים? הם סתם כלים\n"
+	.string "שבעזרתם אנחנו עושים כסף!$"
 
 GoldenrodCity_Text_Rocket4:
-	.string "Our dream will soon come true…\p"
-	.string "It was a long, hard struggle…$"
+	.string "החלום שלנו יתגשם בקרוב…\p"
+	.string "זה היה מאבק ארוך וקשה…$"
 
 GoldenrodCity_Text_Rocket5:
-	.string "Hey, brat! You don't belong here!\n"
-	.string "Get lost already!$"
+	.string "היי, פרחח! אין לך מה לחפש כאן!\n"
+	.string "תתנדף כבר!$"
 
 GoldenrodCity_Text_Rocket6:
-	.string "Come and taste the terror of\n"
-	.string "TEAM ROCKET!$"
+	.string "בוא לטעום את האימה\n"
+	.string "של צוות רוקט!$"
 
 GoldenrodCity_Text_StationSign:
-	.string "GOLDENROD CITY STATION$"
+	.string "תחנת הרכבת של העיר גולדנרוד$"
 
 GoldenrodCity_Text_RadioTowerSign:
-	.string "GOLDENROD CITY RADIO TOWER$"
+	.string "מגדל הרדיו של העיר גולדנרוד$"
 
 GoldenrodCity_Text_DeptStoreSign:
-	.string "Full Selection of POKéMON Goods!\p"
-	.string "GOLDENROD CITY DEPT.STORE$"
+	.string "מבחר מלא של מוצרי פוקימון!\p"
+	.string "הכלבו של העיר גולדנרוד$"
 
 GoldenrodCity_Text_GymSign:
-	.string "GOLDENROD CITY POKéMON GYM\n"
-	.string "LEADER: WHITNEY\p"
-	.string "The Incredibly Pretty Girl!$"
+	.string "מכון הפוקימון של העיר גולדנרוד\n"
+	.string "מנהיגה: ויטני\p"
+	.string "הנערה היפה להפליא!$"
 
 GoldenrodCity_Text_CitySign:
 	.string "GOLDENROD CITY\p"
 	.string "The Festive City of Opulent Charm$"
 
 GoldenrodCity_Text_BikeShopSign:
-	.string "The World is a Cycle Path!\n"
-	.string "BIKE SHOP$"
+	.string "העולם הוא שביל אופניים!\n"
+	.string "חנות אופניים$"
 
 GoldenrodCity_Text_GameCornerSign:
-	.string "Your Playground!\p"
-	.string "GOLDENROD CITY GAME CORNER$"
+	.string "מגרש המשחקים שלך!\p"
+	.string "המשחקייה של העיר גולדנרוד$"
 
 GoldenrodCity_Text_NameRaterSign:
-	.string "NAME RATER\p"
-	.string "Get Your POKéMON Nicknames Rated$"
+	.string "בוחן השמות\p"
+	.string "דירוג כינויים של פוקימונים$"
 
 GoldenrodCity_Text_UndergroundNorthSign:
 	.string "UNDERGROUND ENTRANCE$"
 
 GoldenrodCity_Text_UndergroundSouthSign:
-	.string "UNDERGROUND ENTRANCE$"
+	.string "כניסה למעבר התת-קרקעי$"
 
 
 GoldenrodCity_Text_FlowerShopSign:
-	.string "Blooming Beautiful FLOWER SHOP$"
+	.string "חנות הפרחים - יופי בפריחה$"
 
 GoldenrodCity_Text_MoveTutorAsk:
 	.string "I can teach your POKéMON some\n"

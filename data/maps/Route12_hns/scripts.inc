@@ -83,77 +83,72 @@ Route12_EventScript_Tentacruel::
 	end
 
 Route12_Text_Magikarp:
-	.string "MAGIKARP: Kaaaarp.$"
+	.string "מג'יקארפ: קאאאארפ.$"
 
 Route12_Text_NewFisher:
-	.string "Careful, something vicious lives in\n"
-	.string "these waters.$"
+	.string "זהירות, משהו אכזרי חי\n"
+	.string "במים האלה.$"
 
 Route12_Text_FisherMartinSeen:
-	.string "Patience is the key to both\n"
-	.string "fishing and POKéMON.$"
+	.string "סבלנות היא המפתח גם לדיג\n"
+	.string "וגם לפוקימונים.$"
 
 Route12_Text_FisherMartinBeaten:
-	.string "Gwaaah!$"
+	.string "גוואאה!$"
 
 Route12_Text_FisherMartinAfterBattle:
-	.string "I'm too impatient for fishing…$"
+	.string "אני חסר סבלנות מדי בשביל דיג…$"
 
 Route12_Text_FisherStephenSeen:
-	.string "I feel so content, fishing while\n"
-	.string "listening to some tunes on my\l"
-	.string "radio.$"
+	.string "אני מרגיש כל כך טוב כשאני דג\n"
+	.string "ומקשיב למוזיקה ברדיו שלי.$"
 
 Route12_Text_FisherStephenBeaten:
-	.string "My stupid radio distracted me!$"
+	.string "הרדיו המטופש שלי הסיח את דעתי!$"
 
 Route12_Text_FisherStephenAfterBattle:
-	.string "Have you checked out KANTO's radio\n"
-	.string "programs? We get a good variety\l"
-	.string "here.$"
+	.string "שמעת כבר את תוכניות הרדיו\n"
+	.string "של קאנטו? יש כאן מבחר טוב.$"
 
 Route12_Text_FisherBarneySeen:
-	.string "What's most important in our\n"
-	.string "everyday lives?$"
+	.string "מה הדבר הכי חשוב\n"
+	.string "בחיי היום-יום שלנו?$"
 
 Route12_Text_FisherBarneyBeaten:
-	.string "The answer is coming up next!$"
+	.string "התשובה - מיד בהמשך!$"
 
 Route12_Text_FisherBarneyAfterBattle:
-	.string "I think electricity is the most\n"
-	.string "important thing in our daily\l"
-	.string "lives.\p"
-	.string "If it weren't, people wouldn't\n"
-	.string "have made such a fuss when the\l"
-	.string "POWER PLANT went out of\l"
-	.string "commission.$"
+	.string "אני חושב שחשמל הוא הדבר הכי\n"
+	.string "חשוב בחיי היום-יום שלנו.\p"
+	.string "אחרת, אנשים לא היו עושים כזה רעש\n"
+	.string "כשמפעל החשמל הפסיק לעבוד.$"
 
 Route12_Text_KyleRegister:
-	.string "I'll remember this.\n"
-	.string "Give me your number!$"
+	.string "אני אזכור את זה.\n"
+	.string "תן לי את המספר שלך!$"
 
 Route12_Text_KyleRematchIntro:
-	.string "Did you forget?\n"
-	.string "Let's see!$"
+	.string "שכחת?\n"
+	.string "בוא נראה!$"
 
 Route12_Text_KyleRematchDefeat:
-	.string "You remembered.$"
+	.string "זכרת.$"
 
 Route12_Text_KylePostRematch:
-	.string "The thrill of battle is almost\n"
-	.string "as good as a big catch!$"
+	.string "הריגוש שבקרב כמעט טוב\n"
+	.string "כמו לתפוס דג גדול!$"
 
 Route12_Text_FisherKyleSeen:
-	.string "Do you remember?$"
+	.string "אתה זוכר?$"
 
 Route12_Text_FisherKyleBeaten:
-	.string "You do remember?$"
+	.string "אז אתה כן זוכר?$"
 
 Route12_Text_FisherKyleAfterBattle:
-	.string "The tug you feel on the ROD when\n"
-	.string "you hook a POKéMON…\p"
-	.string "That's the best feeling ever for\n"
-	.string "an angler like me.$"
+	.string "המשיכה שמרגישים בחכה כשפוקימון\n"
+	.string "נתפס בקרס…\p"
+	.string "זו ההרגשה הכי טובה שיש\n"
+	.string "לדייג כמוני.$"
 
 Route12_EventScript_Sign::
 	msgbox Route12_Text_Sign, MSGBOX_SIGN
@@ -164,9 +159,9 @@ Route12_EventScript_FishingSign::
 	end
 
 Route12_Text_Sign:
-	.string "ROUTE 12\p"
-	.string "NORTH TO LAVENDER TOWN$"
+	.string "דרך 12\p"
+	.string "צפונה אל העיירה לבנדר$"
 
 Route12_Text_FishingSpotSign:
-	.string "FISHING SPOT$"
+	.string "מקום דיג$"
 

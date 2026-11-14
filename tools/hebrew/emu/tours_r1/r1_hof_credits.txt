@@ -1,0 +1,227 @@
+# Hall of Fame (src/hall_of_fame.c; IS_FRLG is false, so not hall_of_fame_frlg.c) and the H&S
+# credits (src/credits_hns.c), from the base save (champion, party born on this ROM). The
+# Hall of Fame map's ON_FRAME script sees VAR_LEAGUE_STATE 6 and runs the rematch cutscene
+# (FLAG_IS_CHAMPION set; data/maps/PokemonLeague_HallOfFame_hns/scripts.inc:35-56), which ends in
+# special GameClear: Hall of Fame screen, save, credits, THE END, soft reset.
+# Run with r1run.py (hns.py + FILE:NAME for the rc5 clip ELF, which has no .map).
+start saves/r1_hof_base.sav
+include ../scripts/continue.txt
+evstart setvar VAR_LEAGUE_STATE, 6; warpsilent MAP_POKEMON_LEAGUE_HALL_OF_FAME_HNS, 0; waitstate; end
+waitkey 3000
+pages hof_lance 30
+waitcb2 CB2_DoHallOfFameScreen 4000
+waittaskx Task_Hof_WaitToDisplayMon 900        # the save message stays 32 frames
+2 -
+shot hof_00_saving
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot hof_01_mon1
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot hof_02_mon2
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot hof_03_mon3
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot hof_04_mon4
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot hof_05_mon5
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot hof_06_mon6
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx Task_Hof_DoConfetti 600
+20 -
+shot hof_07_welcome
+waittaskx hall_of_fame:Task_Hof_ExitOnKeyPressed 1500
+4 -
+shot hof_08_player
+tap A 4
+waitcb2x CB2_Credits 900
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p01
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p02
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p03
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p04
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p05
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p06
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p07
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p08
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p09
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p10
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p11
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p12
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p13
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p14
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p15
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p16
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p17
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p18
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p19
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p20
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p21
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p22
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p23
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p24
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p25
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p26
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p27
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p28
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p29
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p30
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p31
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p32
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p33
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p34
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p35
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p36
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p37
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p38
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p39
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p40
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p41
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p42
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p43
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p44
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p45
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p46
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p47
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p48
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p49
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p50
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p51
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p52
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p53
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p54
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p55
+waittaskdata Task_UpdatePage 0 5 600
+waittaskdata Task_UpdatePage 0 4 4000
+shot credits_p56
+waittaskdata Task_UpdatePage 0 5 600
+waittaskx Task_CreditsTheEnd4 6000                # the copyright screen, 235 frames
+waitquiet 400
+shot credits_copyright
+waittaskx Task_CreditsTheEnd6 900
+60 -
+shot credits_theend
+tap A 4                                           # any key: soft reset
+waitcb2 CB2_InitCopyrightScreenAfterBootup 900
+include ../scripts/continue.txt
+shot after_hof_newbark
+expectflag FLAG_SYS_GAME_CLEAR 1
+keepsave r1_after_hof

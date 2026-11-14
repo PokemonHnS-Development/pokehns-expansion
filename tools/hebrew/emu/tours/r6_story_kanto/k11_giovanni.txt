@@ -1,0 +1,23 @@
+# Tohjo Falls Giovanni (TohjoFalls_EventScript_GiovanniScene at (5,7)) on ladder 6: Celebi in party
+# slot 0 at full HP as the visible follower (CheckCelebi, src/braille_puzzles.c:391), so the
+# OnTransition sets VAR_TOHJO_FALLS_GIOVANNI_STATE 1 (after a warp the follower is not out yet when
+# OnTransition runs, so the tour sets the state itself and the trigger's own CheckCelebi decides); the Celebi time travel, the radio, Giovanni's
+# intro and before-battle, TRAINER_GIOVANNI_HNS with his Full Restore (bitem), defeat and after.
+start saves/r6_story_l6.sav
+include _base.txt
+ev createmon 0, 1, SPECIES_MEWTWO, 100, move1=MOVE_PSYSTRIKE, move2=MOVE_ICE_BEAM, move3=MOVE_RECOVER, move4=MOVE_AURA_SPHERE; createmon 0, 0, SPECIES_CELEBI, 100, move1=MOVE_PSYCHIC, move2=MOVE_GIGA_DRAIN, move3=MOVE_RECOVER, move4=MOVE_LEAF_STORM; setvar VAR_TOHJO_FALLS_GIOVANNI_STATE, 0; cleartrainerflag TRAINER_GIOVANNI_HNS; clearflag 14; end
+followers on
+warpto MAP_TOHJO_FALLS_GIOVANNI_ROOM_HNS 5 8
+vars VAR_TOHJO_FALLS_GIOVANNI_STATE
+objs
+snap G_room
+ev setvar VAR_TOHJO_FALLS_GIOVANNI_STATE, 1; end
+vars VAR_TOHJO_FALLS_GIOVANNI_STATE
+stepto UP 1
+scene G_scene 40000 30
+bwalk B_bintro input:HandleInputChooseAction
+snap B_action
+bitem B_item 3
+bwin B_win
+scene B_after 40000 30
+snap B_free

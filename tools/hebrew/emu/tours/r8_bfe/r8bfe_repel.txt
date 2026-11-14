@@ -1,0 +1,136 @@
+# Repel and Lure used from the bag while one is still active (src/item_use.c ItemUseOutOfBattle_Repel
+# / _Lure): the first use prints gText_PlayerUsedVar2, a second one gText_RepelEffectsLingered or
+# gText_LureEffectsLingered (src/strings.c:182-183). MAX REPEL on top of a REPEL lingers too, and a
+# REPEL on top of a LURE replaces it (REPEL_STEP_COUNT reads 0 while a lure runs,
+# include/constants/item.h:39-40). Then ESCAPE ROPE (a key item in H&S) inside the Pokemon Center,
+# where escaping is not allowed: gText_DadsAdvice in the bag window.
+# Save: menuA_base (indoors, a Pokemon Center). ITEMS rows: 0 REPEL, 1 SUPER REPEL, 2 MAX REPEL,
+# 3 LURE, 4 SUPER LURE, 5 MAX LURE.
+start saves/r8bfe_menuA_base.sav
+include ../../scripts/continue.txt
+setvar VAR_REPEL_STEP_COUNT 0
+setpocket POCKET_ITEMS ITEM_REPEL:5 ITEM_SUPER_REPEL:5 ITEM_MAX_REPEL:5 ITEM_LURE:5 ITEM_SUPER_LURE:5 ITEM_MAX_LURE:5
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 0
+w16 @gBagPosition+14@ 0
+
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap r8r_01_pocket
+
+# REPEL: used
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap r8r_02_repel_context
+tap A 4
+waitkey 600
+pages r8r_03_repel_used
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+snap r8r_04_after_repel
+
+# REPEL again: lingered
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap A 4
+waitkey 600
+pages r8r_05_repel_lingered
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+
+# MAX REPEL on top: lingered
+seek 16 @gBagPosition+8@ 2 DOWN
+waitquiet
+snap r8r_06_maxrepel_row
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap A 4
+waitkey 600
+pages r8r_07_maxrepel_lingered
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+
+# LURE with the repel worn off: used, then LURE and SUPER LURE again: lingered
+setvar VAR_REPEL_STEP_COUNT 0
+seek 16 @gBagPosition+8@ 3 DOWN
+waitquiet
+snap r8r_08_lure_row
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap A 4
+waitkey 600
+pages r8r_09_lure_used
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap A 4
+waitkey 600
+pages r8r_10_lure_lingered
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+seek 16 @gBagPosition+8@ 4 DOWN
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap A 4
+waitkey 600
+pages r8r_11_superlure_lingered
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+
+# REPEL while the lure runs: used (replaces the lure)
+seek 16 @gBagPosition+8@ 0 UP
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap A 4
+waitkey 600
+pages r8r_12_repel_over_lure
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+snap r8r_13_after_all
+
+# ESCAPE ROPE (KEY ITEMS) in the Pokemon Center
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+setpocket POCKET_KEY_ITEMS ITEM_ESCAPE_ROPE:1 ITEM_BICYCLE:1 ITEM_OLD_ROD:1
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 0
+w16 @gBagPosition+1E@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap r8r_14_keyitems
+tap A 4
+waitquiet
+snap r8r_15_rope_context
+tap A 4
+waitkey 600
+pages r8r_16_rope_refused
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+# OLD ROD indoors: the same advice
+seek 16 @gBagPosition+12@ 2 DOWN
+waitquiet
+tap A 4
+waitquiet
+tap A 4
+waitkey 600
+pages r8r_17_rod_refused
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

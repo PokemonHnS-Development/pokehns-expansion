@@ -1,0 +1,11 @@
+# Story steps from "Fog Badge, Ecruteak City" (story_ecruteak.txt) to the Champion's room:
+# badges 5-8, Mahogany and the Radio Tower, Ice Path, Dragon's Den, the Kimono Girls and Ho-Oh,
+# Victory Road, the Elite Four and Lance beaten (VAR_LEAGUE_STATE 5). The Hall of Fame is run
+# by the ROM itself (ladder4_league.txt).
+include story_ecruteak.txt
+rungoto OlivineCity_EventScript_CityTrigger
+event s4a_olivine_cianwood.inc
+rungoto MahoganyTown_EventScript_TownTrigger
+event s4b_mahogany.inc
+event s4c_radiotower.inc
+event s4d_blackthorn_league.inc

@@ -16,11 +16,11 @@ GoldenrodDeptStore6_EventScript_Whitney::
 	end
 
 GoldenrodDeptStore6_Text_Whitney:
-	.string "{PLAYER}! Fancy seeing you here!\p"
-	.string "I'm picking up something for\n"
-	.string "my MILTANK.\p"
-	.string "If you want another battle, come to\n"
-	.string "the FIGHTING DOJO!$"
+	.string "{PLAYER}! איזו הפתעה לראות אותך כאן!\p"
+	.string "באתי לקנות משהו בשביל\n"
+	.string "המילטנק שלי.\p"
+	.string "אם אתה רוצה עוד קרב, בוא\n"
+	.string "לדוג'ו הלחימה!$"
 
 GoldenrodCity_DepartmentStore_6F_EventScript_Jose::
 	lock
@@ -48,24 +48,24 @@ GoldenrodCity_DepartmentStore_6F_EventScript_TradeCompleted::
 	end
 
 GoldenrodCity_DepartmentStore_6F_Text_YouWillTradeWontYou:
-	.string "I collect POKéMON!\n"
-	.string "Do you have a {STR_VAR_1}?\p"
-	.string "Want to trade it for my\n"
-	.string "{STR_VAR_2}?$"
+	.string "אני אוסף פוקימונים!\n"
+	.string "יש לך {STR_VAR_1}?\p"
+	.string "רוצה להחליף אותו תמורת\n"
+	.string "ה{STR_VAR_2} שלי?$"
 
 GoldenrodCity_DepartmentStore_6F_Text_MonYouTakeCare:
-	.string "Yay! I got myself {STR_VAR_1}!\p"
-	.string "{STR_VAR_2}, you take care!$"
+	.string "יש! השגתי לעצמי {STR_VAR_1}!\p"
+	.string "{STR_VAR_2}, תשמור על עצמך!$"
 
 GoldenrodCity_DepartmentStore_6F_Text_ThisIsntAMon:
-	.string "Uh, no, I don't think so.\n"
-	.string "That isn't a {STR_VAR_1}.$"
+	.string "אה, לא, לא נראה לי.\n"
+	.string "זה לא {STR_VAR_1}.$"
 
 GoldenrodCity_DepartmentStore_6F_Text_YouWontTradeMe:
-	.string "You don't want to trade? Aww...$"
+	.string "אתה לא רוצה להחליף? אוף…$"
 
 GoldenrodCity_DepartmentStore_6F_Text_After:
-	.string "Hi, how's my old MACHOP doing?$"
+	.string "היי, מה שלום המאצ'ופ הישן שלי?$"
 
 
 GoldenrodDeptStore6_EventScript_Lass::
@@ -93,19 +93,18 @@ GoldenrodDeptStore6_EventScript_Sign::
 	end
 
 GoldenrodDeptStore_Text_6FLass:
-    .string "Do you listen to LUCKY CHANNEL?\p"
-    .string "They say if you want to win,\n"
-	.string "you should trade POKéMON with as\l"
-    .string "many people as possible to get\l"
-    .string "different ID numbers.\p"
-	.string "However, trading isn't as widely\n"
-	.string "available as it once was.$"
+    .string "אתה מאזין לערוץ המזל?\p"
+    .string "אומרים שכדי לזכות, צריך להחליף\n"
+    .string "פוקימונים עם כמה שיותר אנשים.\p"
+    .string "ככה מקבלים מספרי זיהוי שונים.\p"
+    .string "אבל היום כבר אי אפשר להחליף\n"
+    .string "בקלות כמו פעם.$"
 
 GoldenrodDeptStore_Text_6FSuperNerd:
-    .string "If you're tired, try the vending\n"
-    .string "machine's drinks.\p"
-    .string "Your POKéMON will love them too.$"
+    .string "אם אתה עייף, נסה את המשקאות\n"
+    .string "של מכונת הממכר.\p"
+    .string "גם הפוקימונים שלך יאהבו אותם.$"
 
 GoldenrodDeptStore_Text_6FDirectory:
-    .string "Take a Break from Shopping!\p"
-    .string "6F TRANQUIL SQUARE$"
+    .string "הפסקה מהקניות!\p"
+    .string "ק6: כיכר השלווה$"

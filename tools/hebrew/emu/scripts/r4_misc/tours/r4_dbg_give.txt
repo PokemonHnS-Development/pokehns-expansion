@@ -1,0 +1,90 @@
+# Overworld debug menu, Give X (sDebugMenu_Actions_Give, src/debug.c:634-645) extra windows:
+# sDebugMenuWindowTemplateExtra (10x8 tiles at the right, src/debug.c:758-766) with the number
+# field, the digit indicator gText_DigitIndicator ("{LEFT_ARROW}+1{RIGHT_ARROW}", :480-489) and
+# an item / Pokemon icon sprite at DEBUG_NUMBER_ICON_X/Y (210, 50, :191-192). B in an extra window
+# closes the whole menu (DebugAction_DestroyExtraWindow, :997-1009).
+start saves/r4_misc/r4_menuA_base.sav
+include ../../continue.txt
+
+# Give item XYZ: id field (starts at 1), RIGHT moves to the next higher digit
+dbg 3 0
+waitquiet
+snap dbg_give_item_01_id1
+tap UP 6
+tap UP 6
+waitquiet
+snap dbg_give_item_02_id3
+tap RIGHT 6
+tap RIGHT 6
+tap UP 6
+waitquiet
+snap dbg_give_item_03_id103_digit100
+press A
+snap dbg_give_item_04_qty
+tap UP 6
+waitquiet
+snap dbg_give_item_05_qty2
+tap B 6
+waitctl 600 B
+
+# Pokemon (Basic): species then level
+dbg 3 1
+waitquiet
+snap dbg_give_mon_01_species
+tap UP 6
+tap UP 6
+tap UP 6
+waitquiet
+snap dbg_give_mon_02_species4
+press A
+snap dbg_give_mon_03_level
+tap B 6
+waitctl 600 B
+
+# Pokemon (Complex): species, level, shiny, nature, ability, tera, dynamax, gigantamax, IVs...
+dbg 3 2
+waitquiet
+snap dbg_give_cmon_01_species
+press A
+snap dbg_give_cmon_02_level
+press A
+snap dbg_give_cmon_03_shiny
+press A
+snap dbg_give_cmon_04_nature
+press A
+snap dbg_give_cmon_05_ability
+press A
+snap dbg_give_cmon_06_tera
+press A
+snap dbg_give_cmon_07_dmax
+press A
+snap dbg_give_cmon_08_gmax
+press A
+snap dbg_give_cmon_09_iv
+press A
+snap dbg_give_cmon_10_iv2
+tap B 6
+waitctl 600 B
+
+# Give Egg: species field
+dbg 3 3
+waitquiet
+snap dbg_give_egg_01
+tap B 6
+waitctl 600 B
+
+# Give Decoration: decor id
+dbg 3 4
+waitquiet
+snap dbg_give_decor_01
+tap UP 6
+waitquiet
+snap dbg_give_decor_02
+tap B 6
+waitctl 600 B
+
+# Daycare Egg: script message (no Pokemon at the daycare on this save)
+dbg 3 8
+pages dbg_give_daycareegg 10
+waitctl 600 B
+snap dbg_give_99_end

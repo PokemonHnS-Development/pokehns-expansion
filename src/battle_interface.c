@@ -908,15 +908,29 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
         UpdateIndicatorVisibilityAndType(healthboxSpriteId, TRUE);
     }
 
+#if TEXT_RTL
+    // The Hebrew level glyph (רמה) is wider than Lv. The level has a 24 px slot in both layouts:
+    // drop the glyph when glyph and digits do not fit (level 100), as the gimmick indicator does.
+    if (GetIndicatorPalTag(battler) == TAG_NONE && GetStringWidth(FONT_SMALL, text, 0) > 24)
+        StringCopy(text, text + 2);
+#endif
+
     if (UseGen4BattleUI())
     {
         u32 windowId, spriteTileNum;
         u8 *windowTileData;
         u8 *objVram;
+#if TEXT_RTL
+        // Right-align in the 24 px the healthbox copies, instead of upstream's fixed digit cells.
+        s32 xPos = 24 - GetStringWidth(FONT_SMALL, text, 0);
+        if (xPos < 0)
+            xPos = 0;
+#else
         u8 *endPtr = ConvertIntToDecimalStringN(text + 2, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
         u32 xPos = 5 * (3 - (endPtr - (text + 2)));
         if (GetIndicatorPalTag(battler) != TAG_NONE)
             xPos -= 5;
+#endif
 
         windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, xPos, 3, 2, &windowId, FALSE);
         spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum * TILE_SIZE_4BPP;
@@ -1832,6 +1846,11 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
 
         u32 fontId = GetFontIdToFit(gDisplayedStringBattle, FONT_SMALL, 0, 55);
 
+#if TEXT_RTL
+        // Only 55 px are cleared below: a name drawn wider would run into the level, and its end
+        // would stay there after a switch to a shorter name.
+        FitNameToWidth(gDisplayedStringBattle, ptr, fontId, 55);
+#endif
         if (IsOnPlayerSide(gSprites[healthboxSpriteId].data[6]))
         {
             FillSpriteRectColor(healthboxSpriteId, 16, 5, 55, 11, HEALTHBOX_BG_INDEX);
@@ -2123,6 +2142,9 @@ static void UpdateLeftNoOfBallsTextOnHealthbox(u8 healthboxSpriteId)
     else
     {
         u32 healthboxSpriteId2 = gSprites[healthboxSpriteId].oam.affineParam;
+#if TEXT_RTL
+        u8 twoDigits[16];
+#endif
 
         s16 savedValue1 = gSprites[healthboxSpriteId].data[1];
         s16 savedValue2 = gSprites[healthboxSpriteId2].data[1];
@@ -2130,7 +2152,16 @@ static void UpdateLeftNoOfBallsTextOnHealthbox(u8 healthboxSpriteId)
         gSprites[healthboxSpriteId2].data[1] = SPRITE_NONE;
 
         FillSpriteRectColor(healthboxSpriteId, 55, 19, 31, 12, HEALTHBOX_BG_INDEX);
+#if TEXT_RTL
+        // The line reads right to left, label first: end it where a two-digit count ends, so the
+        // label stays in place when the count drops below 10, as the English label does.
+        ConvertIntToDecimalStringN(StringCopy(twoDigits, gText_SafariBallLeft), gNumSafariBalls, STR_CONV_MODE_LEADING_ZEROS, 2);
+        AddSpriteTextPrinterParameterized6(healthboxSpriteId, FONT_SMALL,
+                                           55 + GetStringWidth(FONT_SMALL, twoDigits, 0) - GetStringWidth(FONT_SMALL, text, 0),
+                                           19, 0, 0, sHealthBoxTextColor, 0, text);
+#else
         AddSpriteTextPrinterParameterized6(healthboxSpriteId, FONT_SMALL, 55, 19, 0, 0, sHealthBoxTextColor, 0, text);
+#endif
 
         gSprites[healthboxSpriteId].data[1] = savedValue1;
         gSprites[healthboxSpriteId2].data[1] = savedValue2;
@@ -2529,6 +2560,11 @@ static u8 *AddTextPrinterAndCreateWindowOnHealthboxWithFont(const u8 *str, u32 x
     struct WindowTemplate winTemplate = sHealthboxWindowTemplate;
 
     winId = AddWindow(&winTemplate);
+#if TEXT_RTL
+    // A scratch window: only part of its tiles is copied into the healthbox sprite, so the text
+    // must stay where the English puts it.
+    SetWindowRtlMode(winId, WINDOW_RTL_IN_PLACE);
+#endif
     FillWindowPixelBuffer(winId, PIXEL_FILL(bgColor));
 
     color[0] = bgColor;
@@ -2700,6 +2736,11 @@ static u8 *AddTextPrinterAndCreateWindowOnAbilityPopUp(const u8 *str, u32 x, u32
     winTemplate.height = 2;
 
     *windowId = AddWindow(&winTemplate);
+#if TEXT_RTL
+    // Scratch window for the ability pop-up: only part of it is copied out, so keep the English
+    // position.
+    SetWindowRtlMode(*windowId, WINDOW_RTL_IN_PLACE);
+#endif
     FillWindowPixelBuffer(*windowId, PIXEL_FILL(bgColor));
 
     fontId = GetFontIdToFit(str, FONT_SMALL, 0, ABILITY_POP_UP_STR_WIDTH);
@@ -2769,6 +2810,11 @@ static void PrintBattlerOnAbilityPopUp(enum BattlerId battler, u8 spriteId1, u8 
     else
         GetMonData(GetBattlerMon(battler), MON_DATA_NICKNAME, gStringVar1);
 
+#if TEXT_NAME_SUFFIX_IN_BATTLE
+    // Hebrew has no possessive suffix to add; the nickname above the ability name reads as one.
+    (void)totalChar;
+    (void)lastChar;
+#else
     while (gStringVar1[totalChar] != EOS)
         totalChar++;
 
@@ -2776,6 +2822,7 @@ static void PrintBattlerOnAbilityPopUp(enum BattlerId battler, u8 spriteId1, u8 
     StringAppend(gStringVar1, COMPOUND_STRING("'"));
     if (lastChar != CHAR_S && lastChar != CHAR_s)
         StringAppend(gStringVar1, COMPOUND_STRING("s"));
+#endif
 
     PrintOnAbilityPopUp(gStringVar1,
                         (void *)(OBJ_VRAM0) + TILE_OFFSET_4BPP(gSprites[spriteId1].oam.tileNum),

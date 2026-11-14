@@ -149,116 +149,115 @@ MrPokemonHouse_Movement_MrPokemon_Leave:
 	step_end
 
 MrPokemonHouse_Text_Intro1:
-	.string "Hello, hello! You must be\n"
+	.string "שלום, שלום! אתה בטח\n"
 	.string "{PLAYER}.\p"
-	.string "PROF.ELM said that you would\n"
-	.string "visit.$"
+	.string "פרופ' אלם אמר שתבוא\n"
+	.string "לבקר.$"
 
 MrPokemonHouse_Text_Intro2:
-	.string "This is what I want PROF.ELM\n"
-	.string "to examine.$"
+	.string "את זה אני רוצה שפרופ' אלם\n"
+	.string "יבדוק.$"
 
 MrPokemonHouse_Text_GotEgg:
 	.string "{PLAYER} received MYSTERY EGG.$"
 
 MrPokemonHouse_Text_Intro3:
-	.string "I know a couple who run a\n"
-	.string "POKéMON DAY-CARE service.\p"
-	.string "They gave me that EGG.\p"
-	.string "I was intrigued, so I sent\n"
-	.string "mail to PROF.ELM.\p"
-	.string "For POKéMON evolution,\n"
-	.string "PROF.ELM is the authority.$"
+	.string "אני מכיר זוג שמפעיל\n"
+	.string "מעון יום לפוקימונים.\p"
+	.string "הם נתנו לי את הביצה הזאת.\p"
+	.string "הסתקרנתי, אז שלחתי\n"
+	.string "אימייל לפרופ' אלם.\p"
+	.string "בתחום התפתחות הפוקימונים,\n"
+	.string "פרופ' אלם הוא הסמכות.$"
 
 
 MrPokemonHouse_Text_Intro4:
-	.string "Even PROF.OAK here recognizes\n"
-	.string "that.$"
+	.string "אפילו פרופ' אוק, שנמצא כאן,\n"
+	.string "מכיר בזה.$"
 
 MrPokemonHouse_Text_Intro5:
-	.string "If my assumption is correct,\n"
-	.string "PROF.ELM will know it.$"
+	.string "אם ההשערה שלי נכונה,\n"
+	.string "פרופ' אלם יידע.$"
 
 MrPokemonHouse_Text_Heal:
-	.string "You are returning to PROF.ELM?\p"
-	.string "Here. Your POKéMON should have\n"
-	.string "some rest.$"
+	.string "אתה חוזר לפרופ' אלם?\p"
+	.string "הנה. הפוקימונים שלך צריכים\n"
+	.string "קצת מנוחה.$"
 
 MrPokemonHouse_Text_DependingOnYou:
-	.string "I'm depending on you!$"
+	.string "אני סומך עליך!$"
 
 MrPokemonHouse_Text_AlwaysNewDiscoveries:
-	.string "Life is delightful!\n"
-	.string "Always, new discoveries to be made.$"
+	.string "החיים נפלאים!\n"
+	.string "תמיד יש תגליות חדשות לגלות.$"
 
 MrPokemonHouse_Text_OakIntro:
-	.string "OAK: Aha! So you're {PLAYER}!\p"
-	.string "I'm OAK! A POKéMON researcher.\p"
-	.string "I was just visiting my old friend\n"
-	.string "MR. POKéMON.\p"
-	.string "I heard you were running an errand\n"
-	.string "for PROF.ELM, so I waited here.\p"
-	.string "Oh! What's this? A rare POKéMON!\p"
-	.string "Let's see…\n"
-	.string "Hm, I see!\p"
-	.string "I understand why PROF.ELM gave\n"
-	.string "you a POKéMON for this errand.\p"
-	.string "To researchers like PROF.ELM and\n"
-	.string "I, POKéMON are our friends.\p"
-	.string "He saw that you would treat your\n"
-	.string "POKéMON with love and care.\p"
-	.string "…Ah!\p"
-	.string "You seem to be dependable. How\n"
-	.string "would you like to help me out?\p"
-	.string "See? This is the latest version of\n"
-	.string "the POKéDEX.\p"
-	.string "It automatically records data on\n"
-	.string "POKéMON you've seen or caught.\p"
-	.string "It's a hi-tech encyclopedia!\p"
-	.string "It shows their habitats, how\n"
-	.string "they evolve, and their moves.$"
+	.string "אוק: אהה! אז אתה {PLAYER}!\p"
+	.string "אני אוק! חוקר פוקימונים.\p"
+	.string "בדיוק ביקרתי את חברי הוותיק,\n"
+	.string "מר פוקימון.\p"
+	.string "שמעתי שאתה בשליחות בשביל\n"
+	.string "פרופ' אלם, אז חיכיתי כאן.\p"
+	.string "הו! מה זה? פוקימון נדיר!\p"
+	.string "בוא נראה…\n"
+	.string "הממ, הבנתי!\p"
+	.string "אני מבין למה פרופ' אלם נתן\n"
+	.string "לך פוקימון לשליחות הזאת.\p"
+	.string "לחוקרים כמו פרופ' אלם וכמוני,\n"
+	.string "פוקימונים הם החברים שלנו.\p"
+	.string "הוא ראה שתתייחס לפוקימונים\n"
+	.string "שלך באהבה ובאכפתיות.\p"
+	.string "…אה!\p"
+	.string "אתה נראה אמין. מה דעתך\n"
+	.string "לעזור לי?\p"
+	.string "רואה? זו הגרסה החדשה ביותר\n"
+	.string "של הפוקדקס.\p"
+	.string "הוא מתעד אוטומטית מידע על\n"
+	.string "פוקימונים שראית או תפסת.\p"
+	.string "זו אנציקלופדיה חדשנית!\p"
+	.string "הוא מראה איפה הם חיים, איך\n"
+	.string "הם מתפתחים ומה המהלכים שלהם.$"
 
 MrPokemonHouse_Text_GetDex:
-	.string "{PLAYER} received POKéDEX!$"
+	.string "{PLAYER} קיבל את הפוקדקס!$"
 
 MrPokemonHouse_Text_OakParting:
-	.string "Go meet many kinds of POKéMON and\n"
-	.string "complete that POKéDEX!\p"
-	.string "But I've stayed too long.\p"
-	.string "I have to get to GOLDENROD\n"
-	.string "for my usual radio show.\p"
-	.string "{PLAYER}, I'm counting on you!$"
+	.string "צא לפגוש הרבה מיני פוקימונים\n"
+	.string "והשלם את הפוקדקס!\p"
+	.string "אבל נשארתי יותר מדי זמן.\p"
+	.string "אני צריך להגיע לגולדנרוד\n"
+	.string "לתוכנית הרדיו הקבועה שלי.\p"
+	.string "{PLAYER}, אני סומך עליך!$"
 
 MrPokemonHouse_Text_GimmeTheScale:
-	.string "Hm? That SCALE! What's that?\n"
-	.string "A red GYARADOS?\p"
-	.string "That's rare! I, I want it…\p"
-	.string "{PLAYER}, would you care to\n"
-	.string "trade it?\p"
-	.string "I can offer this EXP.SHARE\n"
-	.string "that I got from PROF.OAK.$"
+	.string "הממ? הקשקש הזה! מה זה?\n"
+	.string "של גרידוס אדום?\p"
+	.string "זה נדיר! אני… אני רוצה אותו…\p"
+	.string "{PLAYER}, תסכים להחליף\n"
+	.string "אותו?\p"
+	.string "אני יכול להציע את חולק הניסיון\n"
+	.string "הקטן הזה, שקיבלתי מפרופ' אוק.$"
 
 MrPokemonHouse_Text_Disappointed:
-	.string "That's disappointing.\n"
-	.string "That happens to be very rare.$"
+	.string "זה מאכזב.\n"
+	.string "מדובר בפריט נדיר מאוד.$"
 
 MrPokemonHouse_Text_ExpShare:
 	.string "I also have a special item\n"
 	.string "for you.$"
 
 MrPokemonHouse_Text_ForeignMagazines:
-	.string "It's packed with foreign\n"
-	.string "magazines.\p"
-	.string "Can't even read their titles…$"
+	.string "זה עמוס במגזינים מחו”ל.\p"
+	.string "אי אפשר אפילו לקרוא\n"
+	.string "את הכותרות שלהם…$"
 
 MrPokemonHouse_Text_BrokenComputer:
 	.string "It's a big computer.\n"
 	.string "Hmm. It's broken.$"
 
 MrPokemonHouse_Text_StrangeCoins:
-	.string "A whole pile of strange coins!\p"
-	.string "Maybe they're from another\n"
-	.string "country…$"
+	.string "ערימה שלמה של מטבעות מוזרים!\p"
+	.string "אולי הם ממדינה אחרת…$"
 
 MrPokemonHouse_Text_GotExpShare:
 	.string "{PLAYER} received EXP. SHARE!$"

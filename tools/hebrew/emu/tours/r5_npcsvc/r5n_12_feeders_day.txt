@@ -1,0 +1,13 @@
+# Berry feeders, daytime: Ice Path B3F Swinub ((22,21), from (21,21); IcePath_B3F_hns:32-72, likes
+# Aspear) and Route 14 Pidgeotto ((5,22), from (4,22); Route14_hns:306-338, likes Qualot): NO; YES +
+# B in the bag (Bag_ChooseBerry, Berries pocket only); YES + Oran (disliked); YES + the liked berry
+# (the TM); again. Each answer blows the player back, so every branch warps back first.
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+ev file _berries.inc
+ev clearflag FLAG_ITEM_ICEPATH4_TM_AVALANCHE; clearflag FLAG_GOT_ROUTE_14_AERIAL_ACE; end
+flags FLAG_DAY_POKEMON FLAG_NIGHT_POKEMON
+warpto MAP_ICE_PATH_B3F_HNS 21 21
+include _feeder_aspear_swinub.inc
+warpto MAP_ROUTE14_HNS 4 22
+include _feeder_qualot_pidgeotto.inc

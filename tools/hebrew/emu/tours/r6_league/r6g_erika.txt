@@ -1,0 +1,8 @@
+# Erika, Celadon Gym (6,4): CeladonCity_Gym_EventScript_Erika.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_CELADON_GYM; clearflag FLAG_BADGE12_GET; end
+warpto MAP_CELADON_CITY_GYM_HNS 6 5
+face UP
+snap er_room
+include _leader_tail.txt

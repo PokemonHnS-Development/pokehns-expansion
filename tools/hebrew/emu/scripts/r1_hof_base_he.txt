@@ -1,0 +1,28 @@
+# Base save for the post-game screen tours, Hebrew ROM. From a copy of ladder4_league.sav:
+#   hns.py --rom pokehns-clip.gba run scripts/r1_hof_base_he.txt OUT --save ladder4_copy.sav \
+#          --save-out $HNS_SAVES/r1_hof_base.sav
+# Player name יהונתן (written into SaveBlock2), slot 5 nicknamed מלךהברקים.
+include continue.txt
+include _r1_hof_party.txt
+w8 @SB2@ 43
+w8 @SB2+1@ 3E
+w8 @SB2+2@ 3F
+w8 @SB2+3@ 47
+w8 @SB2+4@ 4F
+w8 @SB2+5@ 5F
+w8 @SB2+6@ FF
+w8 @SB2+7@ FF
+w8 @gPlayerParty+1FC@ 46
+w8 @gPlayerParty+1FD@ 45
+w8 @gPlayerParty+1FE@ 50
+w8 @gPlayerParty+1FF@ 3E
+w8 @gPlayerParty+200@ 3B
+w8 @gPlayerParty+201@ 4D
+w8 @gPlayerParty+202@ 4C
+w8 @gPlayerParty+203@ 43
+w8 @gPlayerParty+204@ 5E
+w8 @gPlayerParty+205@ FF
+expectflag FLAG_VISITED_KANTO 1
+expectflag FLAG_SYS_GAME_CLEAR 1
+savegame
+shot base_saved

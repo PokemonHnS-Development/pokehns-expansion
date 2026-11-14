@@ -1,0 +1,390 @@
+# r5 Battle Factory singles, Open Level, seven wins. Lobby: INFO, CHALLENGE, Open Level, save YES,
+# the attendant's walk-out. Pre-battle room: walk-in, opponent type and style hints, the rental
+# screen with Lv.100 Pokemon (src/battle_factory_screen.c) and a rental's summary. Battle room:
+# walk-in, the opponent's walk-in and Easy Chat intro (capture only), battle 1 by hand (action
+# menu, FIGHT with the rental moves, a switch through the party menu), then won with bwin. After
+# each win: heal, 'ready for the Nth opponent', MULTI_GO_ON_RECORD_REST_RETIRE, and on win 1
+# RETIRE (NO), RECORD (YES; then MULTI_GO_ON_REST_RETIRE, as recording disables it), REST (NO); the swap question and the swap screen (YES with a full
+# swap after win 1, NO after 2 and 5, quit after 3, accept-NO then quit after 4, RECHOOSE then
+# swap after 6). After win 7: the lobby's WonChallenge lines, the BP award, the record prompt
+# and both results windows with the real streak.
+start saves/r5/factory_base.sav
+include ../../scripts/continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 4 8
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive o_in menu
+pick 0
+drive o_lv menu
+pick 1
+drivex o_save menu 10
+pick 0
+saveyes o_savebox
+pages o_step 2
+snapat o_walkout1 16
+snapat o_walkout2 24
+waitmap o_preroom MAP_BATTLE_FRONTIER_BATTLE_FACTORY_PRE_BATTLE_ROOM_HNS
+snapat o_preroom_walk 30
+drivex o_pre cb2:CB2_InitSelectScreen 30 9000
+# ---- rental screen, Open Level
+waittaskdata Select_Task_HandleChooseMons 0 1 900
+waitquiet
+snap os_ball1
+tap RIGHT 4
+waitquiet
+snap os_ball2
+tap RIGHT 4
+waitquiet
+snap os_ball3
+tap RIGHT 4
+waitquiet
+snap os_ball4
+tap RIGHT 4
+waitquiet
+snap os_ball5
+tap RIGHT 4
+waitquiet
+snap os_ball6
+tap RIGHT 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleMenu 0 3 300
+waitquiet
+snap os_menu_r1
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitquiet
+snap os_summary_p1
+tap RIGHT 4
+waitquiet
+snap os_summary_p2
+tap RIGHT 4
+waitquiet
+snap os_summary_p3
+tap RIGHT 4
+waitquiet
+snap os_summary_p4
+tap B 4
+waittaskdata Select_Task_HandleMenu 0 3 600
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleChooseMons 0 1 300
+20 -
+waitquiet
+snap os_rented1
+tap RIGHT 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleMenu 0 3 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleChooseMons 0 1 300
+20 -
+waitquiet
+snap os_rented2
+tap RIGHT 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleMenu 0 3 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleYesNo 0 5 300
+waitquiet
+snap os_yesno
+tap A 4
+# ---- to the battle room: walk-in, opponent walk-in, intro
+waitcb2 CB2_Overworld 1200
+pages o_right 2
+snapat o_walkroom 20
+waitmap o_br_in MAP_BATTLE_FRONTIER_BATTLE_FACTORY_BATTLE_ROOM_HNS
+snapat o_br_walk1 40
+snapat o_br_walk2 50
+drivex o_br1 battle 30 9000
+fastbattles off
+# ---- battle 1 by hand: action menu, FIGHT (every move), switch via the party menu
+bwalk o_b1a input:HandleInputChooseAction
+snap o_b1_action
+baction FIGHT
+waitbinput HandleInputChooseMove
+waitquiet
+snap o_b1_move0
+bmove 1 nopress
+waitquiet
+snap o_b1_move1
+bmove 2 nopress
+waitquiet
+snap o_b1_move2
+bmove 3 nopress
+waitquiet
+snap o_b1_move3
+tap B 4
+baction POKEMON
+waittask Task_HandleChooseMonInput 600
+waitquiet
+snap o_b1_party
+tap DOWN 4
+waitquiet
+tap A 4
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+snap o_b1_party_menu
+tap A 4
+bwalk o_b1sw input:HandleInputChooseAction
+bwin o_b1
+# ---- win 1: menu rows, RECORD YES, RETIRE NO, REST NO, GO ON, swap YES (full swap)
+drivex o_w1 menu 30 9000
+pick 1 nopress
+snap o_w1_menu_r1
+pick 2 nopress
+snap o_w1_menu_r2
+pick 3 nopress
+snap o_w1_menu_r3
+pick 3
+drivex o_w1_ret menu 10
+pick 0 nopress
+snap o_w1_ret_yes
+pick 1
+drivex o_w1_m2 menu 10
+pick 1
+drivex o_w1_rec menu 10
+pick 0 nopress
+snap o_w1_rec_yes
+pick 0
+drivex o_w1_rec2 menu 20
+pick 1 nopress
+snap o_w1_m3_r1
+pick 2 nopress
+snap o_w1_m3_r2
+pick 1
+drivex o_w1_rest menu 10
+pick 0 nopress
+snap o_w1_rest_yes
+pick 1
+drivex o_w1_m4 menu 10
+pick 0
+drivex o_w1_swq menu 20
+pick 0
+drivex o_w1_swgo cb2:CB2_InitSwapScreen 20 6000
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+snap o_sw1_mine1
+tap RIGHT 4
+waitquiet
+snap o_sw1_mine2
+tap RIGHT 4
+waitquiet
+snap o_sw1_mine3
+tap RIGHT 4
+waitquiet
+snap o_sw1_cancel
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskdata Swap_Task_HandleMenu 0 3 300
+waitquiet
+snap o_sw1_menu_r1
+tap DOWN 4
+waitquiet
+snap o_sw1_menu_r2
+tap DOWN 4
+waitquiet
+snap o_sw1_menu_r3
+tap UP 4
+waitquiet
+tap UP 4
+waitquiet
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitquiet
+snap o_sw1_summary
+tap B 4
+waittaskdata Swap_Task_HandleMenu 0 3 900
+waitquiet
+snap o_sw1_menu_back
+tap DOWN 4
+waitquiet
+tap A 4
+120 -
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+snap o_sw1_opp1
+tap RIGHT 4
+waitquiet
+snap o_sw1_opp2
+tap RIGHT 4
+waitquiet
+snap o_sw1_opp3
+tap RIGHT 4
+waitquiet
+snap o_sw1_oppswap
+tap RIGHT 4
+waitquiet
+snap o_sw1_oppcancel
+tap RIGHT 4
+waitquiet
+tap A 4
+60 -
+waitquiet
+snap o_sw1_accept
+tap DOWN 4
+waitquiet
+snap o_sw1_accept_no
+tap UP 4
+waitquiet
+tap A 4
+drivex o_w1_go battle 30 9000
+bwin o_b2
+# ---- win 2: GO ON, swap NO
+drivex o_w2 menu 30 9000
+pick 0
+drivex o_w2_swq menu 20
+pick 1
+drivex o_w2_go battle 30 9000
+bwin o_b3
+# ---- win 3: GO ON, swap YES, then B and quit swapping
+drivex o_w3 menu 30 9000
+pick 0
+drivex o_w3_swq menu 20
+pick 0
+drivex o_w3_swgo cb2:CB2_InitSwapScreen 20 6000
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+snap o_sw3_mine1
+tap B 4
+60 -
+waitquiet
+snap o_sw3_quit
+tap DOWN 4
+waitquiet
+snap o_sw3_quit_no
+tap UP 4
+waitquiet
+tap A 4
+drivex o_w3_go battle 30 9000
+bwin o_b4
+# ---- win 4: GO ON, swap YES, accept NO, then CANCEL and quit
+drivex o_w4 menu 30 9000
+pick 0
+drivex o_w4_swq menu 20
+pick 0
+drivex o_w4_swgo cb2:CB2_InitSwapScreen 20 6000
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+tap A 4
+waittaskdata Swap_Task_HandleMenu 0 3 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+120 -
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+snap o_sw4_opp1
+tap A 4
+60 -
+waitquiet
+snap o_sw4_accept
+tap DOWN 4
+waitquiet
+tap A 4
+60 -
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+snap o_sw4_back
+tap LEFT 4
+waitquiet
+snap o_sw4_cancel
+tap A 4
+60 -
+waitquiet
+snap o_sw4_quit
+tap A 4
+drivex o_w4_go battle 30 9000
+bwin o_b5
+# ---- win 5: GO ON, swap NO
+drivex o_w5 menu 30 9000
+pick 0
+drivex o_w5_swq menu 20
+pick 1
+drivex o_w5_go battle 30 9000
+bwin o_b6
+# ---- win 6: GO ON, swap YES, RECHOOSE, then a swap
+drivex o_w6 menu 30 9000
+pick 0
+drivex o_w6_swq menu 20
+pick 0
+drivex o_w6_swgo cb2:CB2_InitSwapScreen 20 6000
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap A 4
+waittaskdata Swap_Task_HandleMenu 0 3 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap DOWN 4
+waitquiet
+snap o_sw6_rechoose
+tap A 4
+60 -
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+snap o_sw6_back
+tap LEFT 4
+waitquiet
+tap A 4
+waittaskdata Swap_Task_HandleMenu 0 3 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+120 -
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+snap o_sw6_opp3
+tap A 4
+60 -
+waitquiet
+snap o_sw6_accept
+tap A 4
+drivex o_w6_go battle 30 9000
+bwin o_b7
+# ---- win 7: the lobby
+drivex o_won menu 30 9000
+pick 0 nopress
+snap o_won_rec_yes
+pick 1
+drivex o_won2 free 10
+frontierinfo
+# ---- results windows with the real streak
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 2 8
+face UP
+tap A 0
+30 -
+waitquiet
+snap o_res_singles
+tap A 4
+waitctl 300
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 11 8
+face UP
+tap A 0
+30 -
+waitquiet
+snap o_res_doubles
+tap A 4
+waitctl 300

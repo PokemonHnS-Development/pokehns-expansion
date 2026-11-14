@@ -1,0 +1,51 @@
+# Jessica, Melemele house (15,11), VAR_STARTER_MON 2: INGAME_TRADE_TAUROS_FIGHT (src/data/trade.h:1201-1245), Paldean Tauros 'Tory' OT Jessica,
+# any Pokemon accepted (data/maps/Melemele_House_hns/scripts.inc:84-150).
+# Talk: NO (decline line); YES + the trade box + party slot 3 + the trade scene + the
+# take-care line; talk again (trade-completed line). Then the party menu and the summary of the
+# received Pokemon (INFO, then every page with RIGHT).
+start saves/r5_trades_base.sav
+include _setup.txt
+ev setvar VAR_STARTER_MON, 2; end
+
+warpto MAP_MELEMELE_HOUSE_HNS 14 11
+face RIGHT
+tap A 4
+fieldwatch jes_combat_ask menu 6000
+pick 1
+fieldwatch jes_combat_decline free 3000
+face RIGHT
+tap A 4
+fieldwatch jes_combat_ask3 menu 6000
+pick 0
+include _pickparty.txt
+snap jes_combat_box3
+boxpick 1 3 jes_combat_pick_slot3
+waitcb2x CB2_InGameTrade 900
+scenewatch jes_combat_scene CB2_Overworld 6000 0 160 A 150
+waitcb2x CB2_Overworld 900
+fieldwatch jes_combat_takecare free 3000
+face RIGHT
+tap A 4
+fieldwatch jes_combat_completed free 3000
+
+# --- the party and the received Pokemon's summary (slot 3)
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 3 DOWN
+snap jes_combat_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap jes_combat_party_action
+tap A 4
+waitcb2x pokemon_summary_screen:MainCB2 900
+sumwait
+snap jes_combat_sum_info
+sumkey RIGHT
+snap jes_combat_sum_p2
+sumkey RIGHT
+snap jes_combat_sum_p3
+sumkey RIGHT
+snap jes_combat_sum_p4

@@ -88,38 +88,38 @@ IcePath_Movement_KimonoLeave:
 	step_end
 
 IcePath_1F_Text_Leave:
-	.string "KIMONO GIRL: .....................$"
+	.string "נערת קימונו: …………$"
 
 IcePath_1F_Text_Stuck1:
-    .string "Me oh my... Is that you, {PLAYER}?\n"
-    .string "Fancy meeting you here!\p"
-    .string "To tell the truth... my sandals are\n"
-    .string "frozen on the ice, and I am stuck.\p"
-    .string "In other words, my flip-flops are\n"
-    .string "quick-frozen to the ground.\p"
-    .string "Tee hee.\p"
-    .string "Well, it's no laughing matter.\p"
-    .string "Would you come around and push\n"
-    .string "my back?$"
+    .string "אוי ואבוי… זה אתה, {PLAYER}?\n"
+    .string "איזו הפתעה לפגוש אותך כאן!\p"
+    .string "אם לומר את האמת… הסנדלים שלי\n"
+    .string "קפאו על הקרח, ואני תקועה.\p"
+    .string "במילים אחרות, כפכפי האצבע שלי\n"
+    .string "הוקפאו לקרקע בהקפאת בזק.\p"
+    .string "הי הי.\p"
+    .string "טוב, זה לא עניין לצחוק עליו.\p"
+    .string "אפשר לבוא מאחוריי ולדחוף\n"
+    .string "לי את הגב?$"
 
 IcePath_1F_Text_Stuck2:
-    .string "Me oh my... Is that you, {PLAYER}?\n"
-    .string "Fancy meeting you here!\p"
-    .string "To tell the truth... my sandals are\n"
-    .string "frozen on the ice, and I am stuck.\p"
-    .string "In other words, my flip-flops are\n"
-    .string "quick-frozen with the ground.\p"
-    .string "Tee hee.\p"
-    .string "Well, it's no laughing matter.\n"
-    .string "Would you push my back?$"
+    .string "אוי ואבוי… זה אתה, {PLAYER}?\n"
+    .string "איזו הפתעה לפגוש אותך כאן!\p"
+    .string "אם לומר את האמת… הסנדלים שלי\n"
+    .string "קפאו על הקרח, ואני תקועה.\p"
+    .string "במילים אחרות, כפכפי האצבע שלי\n"
+    .string "הוקפאו לקרקע בהקפאת בזק.\p"
+    .string "הי הי.\p"
+    .string "טוב, זה לא עניין לצחוק עליו.\n"
+    .string "תוכל לדחוף לי את הגב?$"
 
 IcePath_1F_Text_Shove:
-    .string "....SHOVE!....$"
+    .string "…דחיפה!…$"
 
 IcePath_1F_Text_Cruel:
-    .string "Don't be so cruel.\n"
-    .string "You will push my back, won't you?$"
+    .string "אל תהיה כל כך אכזרי.\n"
+    .string "תדחוף לי את הגב, נכון?$"
 
 IcePath_1F_Text_Thanks:
-    .string "You really are kind.\n"
-    .string "Thank you so much!$"
+    .string "אתה באמת אדיב.\n"
+    .string "תודה רבה רבה!$"

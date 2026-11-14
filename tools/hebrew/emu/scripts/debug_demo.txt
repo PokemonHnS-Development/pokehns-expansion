@@ -1,0 +1,138 @@
+# The overworld debug menu, driven blind. Each block is a recipe to copy.
+#   hns.py run scripts/debug_demo.txt OUTDIR --save $HNS_SAVES/ladder1_newgame.sav
+#
+# Rules (src/debug.c, verified on screen with the English 2.0.6 build):
+# - Open: hold R, press START, in a controllable overworld (`debugmenu` does exactly
+#   "10 R / 3 R+START" and waits for DebugTask_HandleMenuInput_General).
+# - Every list starts with the cursor on its FIRST item and WRAPS (UP from the top = last).
+# - B in a submenu returns to the main list with the cursor reset to the top; B in the
+#   main list closes the menu.
+# - Number fields (Debug_HandleInput_Numeric, src/debug.c:960): the cursor starts on the
+#   ONES digit; UP/DOWN add/subtract that digit's power of ten; RIGHT moves to the next
+#   HIGHER digit (the window shows it as <-+1->, <-+10->, ...). hns.py's
+#   Emu.debug_number(start, target, digits) produces the key list.
+# - An action that opens a number window (warp, set flag, give Pokemon) closes the whole
+#   menu when it finishes or on B (DebugAction_DestroyExtraWindow).
+#
+# Main list:  0 Utilities  1 PC/Bag  2 Party  3 Give X  4 Player  5 Scripts  6 Trainers
+#             7 Flags & Vars  8 Sound  9 ROM Info  10 Cancel
+
+include continue.txt
+
+# (c) Give a Pokemon: Give X > Pokemon (Basic), species field starts at 1 (4 digits),
+#     level field starts at 1 (3 digits). Here: Cyndaquil (155) at level 5.
+debugmenu
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap A 10                         # Give X...
+tap DOWN 6
+tap A 10                         # Pokemon (Basic)
+tap UP 6                         # ones: +4  -> 5
+tap UP 6
+tap UP 6
+tap UP 6
+tap RIGHT 6                      # tens: +5  -> 55
+tap UP 6
+tap UP 6
+tap UP 6
+tap UP 6
+tap UP 6
+tap RIGHT 6                      # hundreds: +1 -> 155
+tap UP 6
+10 -
+shot dbg_c_species155
+tap A 10                         # species chosen, level field appears
+tap UP 6
+tap UP 6
+tap UP 6
+tap UP 6                         # level 5
+tap A 30                         # gives the Pokemon, sets FLAG_SYS_POKEMON_GET, closes
+waitctl 300
+expect8 @gPlayerPartyCount@ 1
+
+# (b) Set a flag: Flags & Vars > Set Flag XYZ. The field starts at FLAG_TEMP_1 (1), 4
+#     digits; A toggles the shown flag, B closes. Here FLAG_SYS_POKEDEX_GET = 2193 (0x891).
+debugmenu
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap A 10                         # Flags & Vars...
+tap A 10                         # Set Flag XYZ...
+tap UP 6                         # 1 + 2192: ones +2
+tap UP 6
+tap RIGHT 6                      # tens +9
+tap UP 6
+tap UP 6
+tap UP 6
+tap UP 6
+tap UP 6
+tap UP 6
+tap UP 6
+tap UP 6
+tap UP 6
+tap RIGHT 6                      # hundreds +1
+tap UP 6
+tap RIGHT 6                      # thousands +2 -> 2193
+tap UP 6
+tap UP 6
+10 -
+shot dbg_b_flag2193
+tap A 10                         # toggle -> TRUE
+shot dbg_b_flag_true
+tap B 20                         # close
+waitctl 300
+expectflag 2193 1
+
+# (d) Toggle all badges: Flags & Vars > item 10 "Toggle All badges" (green = on). It sets
+#     or clears every flag in gBadgeFlags (8 entries, FLAG_BADGE01_GET 0x880 .. 0x887).
+#     The list stays open; B back to the main list, B again to close.
+debugmenu
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap A 10                         # Flags & Vars...
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap DOWN 6
+tap A 20                         # Toggle All badges
+shot dbg_d_badges
+tap B 20
+tap B 20
+waitctl 300
+expectflag 0x880 1
+expectflag 0x887 1
+
+# (a) Warp: Utilities > Warp to map warp. Three fields: map group (3 digits, max shown as
+#     "/ 105"), map number within the group, warp id (UP/DOWN only, 0..10; a warp id the
+#     map does not have puts the player in the map's centre). A on the warp id warps
+#     (SetWarpDestinationToMapWarp + DoWarp). Here MAP_CHERRYGROVE_CITY_POKEMON_CENTER_HNS
+#     = group 2, map 0, warp 0 (its door).
+debugmenu
+tap A 10                         # Utilities...
+tap DOWN 6
+tap A 10                         # Warp to map warp...
+tap UP 6
+tap UP 6                         # group 2
+tap A 10
+tap A 10                         # map 0
+shot dbg_a_warpid
+tap A 10                         # warp 0
+waitctl 900
+shot dbg_a_arrived
+expectloc 2 0 7 8

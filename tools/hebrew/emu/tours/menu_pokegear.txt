@@ -1,0 +1,216 @@
+# Pokegear (the PokeNav reskinned, src/pokenav*.c): the map-name pop-up when walking out
+# of the Pokemon Center, the main menu with each entry's help text, the MAP tab, the
+# phone (CALL: Prof. Elm and Mom; calls only work where Fly works,
+# src/pokenav_match_call_list.c:361), the RADIO (Team Rocket takeover, then the Johto
+# stations) and CONDITION.
+# Waits: `waitnav` = Task_Pokenav reads input and no looped task (page load/slide) runs.
+# The region-map cursor and the radio dial move on fixed timers, never on text length.
+start save:menuA_base
+include ../scripts/continue.txt
+
+# Out of the door: Cherrygrove City and its name pop-up (STATE_WAIT = 1,
+# src/map_name_popup.c:536-544)
+go DOWN 9
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap menu_popup_cherrygrove
+
+# Main menu: MAP / CONDITION / CALL / RADIO / SWITCH OFF (src/pokenav_menu_handler.c:79,
+# menu type UNLOCK_MC_RADIO); the help bar changes with the cursor
+startmenu POKEGEAR
+waitcb2x CB2_Pokenav 600
+waitnav
+snap menu_gear_main_01_map
+press DOWN
+waitnav
+snap menu_gear_main_02_condition
+press DOWN
+waitnav
+snap menu_gear_main_03_call
+press DOWN
+waitnav
+snap menu_gear_main_04_radio
+press DOWN
+waitnav
+snap menu_gear_main_05_off
+press DOWN                                # wraps to MAP
+waitnav
+
+# MAP: opens on the current city; the cursor steps one cell per press (fixed 20-frame
+# idle, a cursor animation) and the section name is printed when it stops. Cells from
+# src/data/region_map/region_map_layout_jk.h (Cherrygrove is column 9, row 11).
+press A
+waitnav
+snap menu_gear_map_01_cherrygrove_city
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+waitnav
+snap menu_gear_map_02_new_bark_town
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+waitnav
+snap menu_gear_map_03_violet_city
+tap LEFT 20
+tap LEFT 20
+tap DOWN 20
+tap DOWN 20
+waitnav
+snap menu_gear_map_04_goldenrod_city
+tap RIGHT 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+waitnav
+snap menu_gear_map_05_azalea_town
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+waitnav
+snap menu_gear_map_06_ecruteak_city
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+waitnav
+snap menu_gear_map_07_olivine_city
+tap LEFT 20
+tap LEFT 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+waitnav
+snap menu_gear_map_08_cianwood_city
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+waitnav
+snap menu_gear_map_09_mahogany_town
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+waitnav
+snap menu_gear_map_10_blackthorn_city
+press B
+waitnav
+
+# CALL: the contact list, Prof. Elm's call (every page), then Mom's
+press DOWN
+waitnav
+press DOWN
+waitnav
+press A
+waitnav
+snap menu_gear_call_list
+press A                                   # Prof. Elm: CALL / CANCEL
+waitnav
+snap menu_gear_call_menu
+press A
+pages menu_gear_call_elm 30
+snap menu_gear_call_elm_end               # the last line stays until A
+press A
+waitnav
+press DOWN                                # Mom
+waitnav
+snap menu_gear_call_list_mom
+press A
+waitnav
+press A
+pages menu_gear_call_mom 30
+snap menu_gear_call_mom_end
+press A
+waitnav
+press B
+waitnav
+
+# RADIO: Team Rocket holds the Johto stations until FLAG_HIDE_GOLDENROD_ROCKETS
+# (src/pokenav_radio.c:1040); lines scroll on a timer (radioline N)
+press DOWN
+waitnav
+press A
+waitnav
+snap menu_gear_radio_off
+radiotune 13
+radioline 1
+snap menu_gear_radio_rocket
+setflag FLAG_HIDE_GOLDENROD_ROCKETS
+radiotune 12
+radiotune 13                              # Oak's Pokemon Talk (the Pokedex Show in the morning)
+snap menu_gear_radio_13_01
+radioline 1
+snap menu_gear_radio_13_02
+radioline 2
+snap menu_gear_radio_13_03
+radiotune 22                              # Pokemon Music
+radioline 1
+snap menu_gear_radio_22
+radiotune 25                              # Lucky Channel
+snap menu_gear_radio_25_01
+radioline 1
+snap menu_gear_radio_25_02
+radioline 2
+snap menu_gear_radio_25_03
+radiotune 32                              # Buena's Password
+snap menu_gear_radio_32_01
+radioline 1
+snap menu_gear_radio_32_02
+radioline 2
+snap menu_gear_radio_32_03
+radiotune 41                              # Unown (only in the Ruins of Alph): no station
+snap menu_gear_radio_none
+press B
+waitnav
+
+# CONDITION: PARTY / SEARCH / CANCEL, then the party condition graph
+press UP
+waitnav
+press UP
+waitnav
+press A
+waitnav
+snap menu_gear_condition_menu
+press A
+waitnav
+snap menu_gear_condition_party
+press B
+waitnav
+press B
+waitnav
+
+# SWITCH OFF (B from the main menu does the same)
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

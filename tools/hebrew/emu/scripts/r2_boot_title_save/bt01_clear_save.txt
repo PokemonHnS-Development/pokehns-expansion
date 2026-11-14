@@ -1,0 +1,22 @@
+# Title B+SELECT+UP: clear-save screen (src/clear_save_data_screen.c; strings.c:1233-1234).
+# NO first (soft reset), then YES: "Clearing data... please wait" while ClearSaveData erases the
+# flash, then the reset and the main menu with no save (NEW GAME / OPTION).
+start saves/boot_base.sav
+include _title.txt
+snap bt01_00_title
+10 B+SELECT+UP
+waittaskx Task_ClearSaveDataScreenYesNoChoice 300
+snap bt01_01_prompt_no
+tap UP 4
+snap bt01_02_prompt_yes
+tap DOWN 4
+tap A 4
+include _title.txt
+10 B+SELECT+UP
+waittaskx Task_ClearSaveDataScreenYesNoChoice 300
+tap UP 4
+waitquiet
+tap A 0
+regionwatch bt01_03_clearing 900 120 152 CB2_InitCopyrightScreenAfterBootup
+include _mainmenu.txt
+snap bt01_04_mainmenu_nosave

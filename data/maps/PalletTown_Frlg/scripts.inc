@@ -471,7 +471,7 @@ PalletTown_Text_CanStoreItemsAndMonsInPC::
 	.string "and POKéMON as data via PC.$"
 
 PalletTown_Text_OakPokemonResearchLab::
-	.string "OAK POKéMON RESEARCH LAB$"
+	.string "מעבדת מחקר הפוקימונים של אוק$"
 
 PalletTown_Text_PlayersHouse::
 	.string "{PLAYER}'s house$"
@@ -480,8 +480,8 @@ PalletTown_Text_RivalsHouse::
 	.string "{RIVAL}'s house$"
 
 PalletTown_Text_TownSign::
-	.string "PALLET TOWN\n"
-	.string "Shades of your journey await!$"
+	.string "העיירה פאלט\n"
+	.string "גווני המסע שלך מחכים לך!$"
 
 PalletTown_Text_OakLetMeSeePokedex::
 	.string "OAK: Ah, {PLAYER}!\n"

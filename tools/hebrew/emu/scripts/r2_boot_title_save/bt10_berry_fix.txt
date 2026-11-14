@@ -1,0 +1,27 @@
+# Title B+SELECT: Berry Fix Program (src/berry_fix_program.c:38-60). The three scenes before the
+# transmission (begin, ensure connection, turn off Ruby/Sapphire), then the link-only scenes forced
+# through sBerryFix->state (+0): TRANSMIT pinned (5), released (-> TRANSMIT_FAILED), and EXIT (6,
+# "follow the instructions"). A on the last one soft-resets.
+start saves/boot_base.sav
+include _title.txt
+10 B+SELECT
+waitcb2x berry_fix_program:BerryFix_Main 600
+30 -
+snap bt10_01_begin
+tap A 30
+snap bt10_02_ensure_connect
+tap A 30
+snap bt10_03_turn_off_power
+ptrpin berry_fix_program:sBerryFix 0 05
+30 -
+snap bt10_04_transmitting_forced
+unpin
+30 -
+snap bt10_05_failed
+tap A 30
+snap bt10_06_begin_again
+ptrpoke 8 berry_fix_program:sBerryFix 0 6
+30 -
+snap bt10_07_follow_instructions_forced
+tap A 4
+waitcb2x CB2_InitCopyrightScreenAfterBootup 300

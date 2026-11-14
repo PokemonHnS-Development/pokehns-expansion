@@ -1,0 +1,184 @@
+# Route 34 Day Care (Route34_DayCare_hns/scripts.inc): the four bookshelves (2..5,1) with their message
+# pages and the HELP_DAYCARE1..4 windows (src/data/help_window.h), then the Odd Egg clerk at (10,3):
+# with a full party the refusal (Route34_DayCare_Text_ClerkNoRoom), with room the question pages and
+# the Easy Chat INTERVIEW screen (src/easy_chat.c:490-500; 2x2 frame). In it: the cursor on every slot
+# and footer button, the group keyboard (post-game: every group, src/easy_chat.c:5097-5112) scrolled
+# to its end, the ABC keyboard (src/text_input_strings.c:4-7) with the cursor on each row and on
+# "others", the S / E / W / P / others lists paged to their ends, the STATUS (abilities, types),
+# VOICES, FEELINGS and ACTIONS lists paged to their ends, a wrong answer typed into all four slots
+# (RTL order), DEL ALL -> prompt -> NO, B -> quit prompt -> NO, OK -> "the answer is as shown" ->
+# YES -> the clerk's rejection. The right answer (Pichu) is ec_oddegg.txt.
+start saves/ladder6_postgame.sav
+include ../continue.txt
+ev setflag FLAG_SYS_GAME_CLEAR; clearflag FLAG_RECEIVED_ODD_EGG; end
+
+# bookshelves: stand under each one, face UP
+warptoloose MAP_ROUTE34_DAY_CARE_HNS 2 2
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+loc
+face UP
+talk ec_shelf1 8
+waitctl 600
+go RIGHT
+face UP
+talk ec_shelf2 8
+waitctl 600
+go RIGHT
+face UP
+talk ec_shelf3 8
+waitctl 600
+go RIGHT
+face UP
+talk ec_shelf4 8
+waitctl 600
+
+# the clerk with a full party (ladder6 has six)
+warpto MAP_ROUTE34_HNS 10 20
+warptoloose MAP_ROUTE34_DAY_CARE_HNS 10 4
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+loc
+face UP
+talk ec_clerk_full 10
+waitctl 600
+
+# two Pokemon only, then the question pages and the Easy Chat screen
+ev callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+face UP
+talk ec_clerk_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecstate
+snap ec_iv_slot00
+ec RIGHT
+snap ec_iv_slot01
+ec DOWN
+snap ec_iv_slot11
+ec LEFT
+snap ec_iv_slot10
+ec DOWN
+snap ec_iv_btn_delall
+ec RIGHT
+snap ec_iv_btn_cancel
+ec RIGHT
+snap ec_iv_btn_ok
+ecstate
+ec DOWN
+snap ec_iv_back_slot00
+ecstate
+
+# group keyboard: every group name, scrolled to the end
+ec A
+snap ec_kbd_group_first
+ecstate
+ecgroups ec_kbd_groups
+ec LEFT
+snap ec_kbd_group_btn_mode
+ec DOWN
+snap ec_kbd_group_btn_delete
+ec DOWN
+snap ec_kbd_group_btn_cancel
+ec RIGHT
+
+# ABC keyboard (SELECT switches the mode, src/easy_chat.c:1897)
+ec SELECT
+ecstate
+snap ec_abc_A
+ecletter 0 6
+snap ec_abc_others
+ecletter 1 5
+snap ec_abc_L
+ecletter 2 6
+snap ec_abc_S
+ecletter 3 6
+snap ec_abc_Z
+ecletter 3 0
+ec LEFT
+snap ec_abc_btn_mode
+ec RIGHT
+# word lists by letter: S, E, W, P, others
+ecletter 2 6
+ec A
+eclist ec_abc_list_S 80
+ec B
+ecletter 0 4
+ec A
+eclist ec_abc_list_E 80
+ec B
+ecletter 3 3
+ec A
+eclist ec_abc_list_W 80
+ec B
+ecletter 2 3
+ec A
+eclist ec_abc_list_P 80
+ec B
+ecletter 0 6
+ec A
+eclist ec_abc_list_others 80
+ec B
+ec SELECT
+ecstate
+
+# group lists: STATUS (abilities and types), VOICES, FEELINGS, ACTIONS
+ecgroup EC_GROUP_STATUS
+ec A
+eclist ec_grp_list_status 80
+ec B
+ecgroup EC_GROUP_VOICES
+ec A
+eclist ec_grp_list_voices 80
+ec B
+ecgroup EC_GROUP_FEELINGS
+ec A
+eclist ec_grp_list_feelings 80
+ec B
+ecgroup EC_GROUP_ACTIONS
+ec A
+eclist ec_grp_list_actions 80
+ec B
+ec B
+ecstate
+
+# a wrong answer in all four slots: STATIC ELECTRIC WAAAH LOOKS
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_STATIC ec_put1
+snap ec_iv_1word
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_ELECTRIC ec_put2
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_WAAAH ec_put3
+ecputword 1 1 EC_GROUP_ACTIONS EC_WORD_LOOKS ec_put4
+ecstate
+snap ec_iv_4words
+ec LEFT
+snap ec_iv_4words_slot10
+ec RIGHT
+# DEL ALL -> "all the text being edited will be deleted" -> NO
+ecbutton 0
+ec A
+snap ec_delall_prompt
+ecstate
+ec DOWN
+snap ec_delall_prompt_no
+ec A
+snap ec_delall_no_back
+ecstate
+# B -> the quit prompt -> NO
+ec B
+snap ec_quit_prompt
+ecstate
+ec DOWN
+snap ec_quit_prompt_no
+ec A
+snap ec_quit_no_back
+# OK -> "the answer / is as shown. okay?" -> YES
+ecbutton 2
+ec A
+snap ec_confirm_prompt
+ecstate
+ec DOWN
+snap ec_confirm_prompt_no
+ec UP
+snap ec_confirm_prompt_yes
+tap A 0
+waitcb2x CB2_Overworld 900
+talk ec_reject 10 -
+waitctl 900
+snap ec_reject_after

@@ -1,0 +1,101 @@
+# Gift Pokemon names (src/scrcmd.c:1374-1378): givenamedmon 1 Kenya (Spearow nicknamed קניה, OT רודי,
+# holding Retro Mail), 2 Shuckie (Shuckle nicknamed שאקי, OT קירק), 3 Bill's Eevee (OT ביל), each in party
+# slot 5: the party box and the first two summary pages (nickname, OT). Kenya's mail also gives
+# 'remove the mail first' (gText_RemoveMailBeforeItem, src/party_menu.c:7377): GIVE the first item of
+# the ITEMS pocket to her from the bag.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+partyfree 5
+ev givenamedmon 1; end
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 0
+w16 @gBagPosition+14@ 0
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap fo_gift1_bag
+tap A 4
+waitquiet
+snap fo_gift1_bag_ctx
+tap ROWNEXT 4
+waitquiet
+snap fo_gift1_bag_ctx_give
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+snap fo_gift1_give_which
+tap A 4
+waitkey 600
+waitquiet
+snap fo_gift1_mail_first
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 900 B
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+snap fo_gift1_party
+tap A 0
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap fo_gift1_actions
+tap A 0                                   # SUMMARY
+sumwait
+snap fo_gift1_summary_p1
+sumkey RIGHT
+snap fo_gift1_summary_p2
+tap B 0
+waitcb2x CB2_UpdatePartyMenu 900
+waitquiet
+partyexit
+partyfree 5
+ev givenamedmon 2; end
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+snap fo_gift2_party
+tap A 0
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 0                                   # SUMMARY
+sumwait
+snap fo_gift2_summary_p1
+sumkey RIGHT
+snap fo_gift2_summary_p2
+tap B 0
+waitcb2x CB2_UpdatePartyMenu 900
+waitquiet
+partyexit
+partyfree 5
+ev givenamedmon 3; end
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+snap fo_gift3_party
+tap A 0
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 0                                   # SUMMARY
+sumwait
+snap fo_gift3_summary_p1
+sumkey RIGHT
+snap fo_gift3_summary_p2

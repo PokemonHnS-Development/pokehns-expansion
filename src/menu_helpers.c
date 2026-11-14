@@ -458,6 +458,10 @@ void CreateSwapLineSprites(u8 *spriteIds, u8 count)
         spriteIds[i] = CreateSprite(&sSpriteTemplate_SwapLine, i * 16, 0, 0);
         if (i != 0)
             StartSpriteAnim(&gSprites[spriteIds[i]], 1);
+#if TEXT_RTL
+        else
+            StartSpriteAnim(&gSprites[spriteIds[i]], 2); // The arrow sits at the right end, see below
+#endif
 
         gSprites[spriteIds[i]].invisible = TRUE;
     }
@@ -503,4 +507,19 @@ void UpdateSwapLineSpritesPos(u8 *spriteIds, u8 count, s16 x, u16 y)
 
         gSprites[spriteIds[i]].y = 1 + y;
     }
+#if TEXT_RTL
+    // The lists are mirrored and their cursor is on the right, so mirror the line inside its own
+    // span: the (left-pointing) arrow goes to the right end, next to the cursor.
+    if (count != 0)
+    {
+        s32 first = gSprites[spriteIds[0]].x + gSprites[spriteIds[0]].x2;
+        s32 last = gSprites[spriteIds[count - 1]].x + gSprites[spriteIds[count - 1]].x2;
+
+        for (i = 0; i < count; i++)
+        {
+            struct Sprite *sprite = &gSprites[spriteIds[i]];
+            sprite->x2 = first + last - sprite->x - (sprite->x + sprite->x2);
+        }
+    }
+#endif
 }

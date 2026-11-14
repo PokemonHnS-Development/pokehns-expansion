@@ -440,6 +440,47 @@ static void HideChooseTimeWindow(u8 windowId)
     ScheduleBgCopyTilemapToVram(0);
 }
 
+#if TEXT_RTL
+// The time window is left to right (Task_ResetRtc_Init), so each number stays under its arrow and
+// LEFT/RIGHT move the cursor the way the fields are drawn. The Hebrew words are printed in place.
+// The hours start where the English line puts them, after the four day digits and "DAY".
+#define TIME_HOURS_X 42
+
+static void PrintTimeWordInPlace(u8 windowId, const u8 *str, u8 x, u8 y, u8 speed)
+{
+    SetWindowRtlMode(windowId, WINDOW_RTL_IN_PLACE);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, str, x, y, speed, NULL);
+    SetWindowRtlMode(windowId, WINDOW_RTL_LTR);
+}
+
+static void PrintTime(u8 windowId, u8 x, u8 y, u16 days, u8 hours, u8 minutes, u8 seconds)
+{
+    u8 *dest = gStringVar4;
+    const u8 *dayWord = gText_Day;
+    u32 dayX;
+
+    ConvertIntToDecimalStringN(gStringVar1, days, STR_CONV_MODE_RIGHT_ALIGN, 4);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar1, x, y, TEXT_SKIP_DRAW, NULL);
+
+    // A leading space would be mirrored to the word's far side, so it is kept as the gap after the
+    // number instead.
+    dayX = x + GetStringWidth(FONT_NORMAL, gStringVar1, 0) + GetStringWidth(FONT_NORMAL, gText_Day, 0);
+    while (*dayWord == CHAR_SPACE)
+        dayWord++;
+    dayX -= GetStringWidth(FONT_NORMAL, dayWord, 0);
+    PrintTimeWordInPlace(windowId, dayWord, dayX, y, TEXT_SKIP_DRAW);
+
+    ConvertIntToDecimalStringN(gStringVar1, hours, STR_CONV_MODE_RIGHT_ALIGN, 3);
+    dest = StringCopy(dest, gStringVar1);
+    dest = StringCopy(dest, gText_Colon3);
+    ConvertIntToDecimalStringN(gStringVar1, minutes, STR_CONV_MODE_LEADING_ZEROS, 2);
+    dest = StringCopy(dest, gStringVar1);
+    dest = StringCopy(dest, gText_Colon3);
+    ConvertIntToDecimalStringN(gStringVar1, seconds, STR_CONV_MODE_LEADING_ZEROS, 2);
+    dest = StringCopy(dest, gStringVar1);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar4, x + TIME_HOURS_X, y, TEXT_SKIP_DRAW, NULL);
+}
+#else
 static void PrintTime(u8 windowId, u8 x, u8 y, u16 days, u8 hours, u8 minutes, u8 seconds)
 {
     u8 *dest = gStringVar4;
@@ -465,12 +506,17 @@ static void PrintTime(u8 windowId, u8 x, u8 y, u16 days, u8 hours, u8 minutes, u
 
     AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar4, x, y, TEXT_SKIP_DRAW, NULL);
 }
+#endif
 
 static void ShowChooseTimeWindow(u8 windowId, u16 days, u8 hours, u8 minutes, u8 seconds)
 {
     DrawStdFrameWithCustomTileAndPalette(windowId, FALSE, 0x214, 0xE);
     PrintTime(windowId, 0, 1, days, hours, minutes, seconds);
+#if TEXT_RTL
+    PrintTimeWordInPlace(windowId, gText_Confirm2, 126, 1, 0);
+#else
     AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_Confirm2, 126, 1, 0, NULL);
+#endif
     ScheduleBgCopyTilemapToVram(0);
 }
 
@@ -588,6 +634,9 @@ static void Task_ResetRtc_Init(u8 taskId)
     tMinutes = gLocalTime.minutes;
     tSeconds = gLocalTime.seconds;
     tWindowId = AddWindow(&sInputTimeWindow);
+#if TEXT_RTL
+    SetWindowRtlMode(tWindowId, WINDOW_RTL_LTR);
+#endif
     ShowChooseTimeWindow(tWindowId, tDays, tHours, tMinutes, tSeconds);
     CreateCursor(taskId);
     tSelection = SELECTION_HOURS;

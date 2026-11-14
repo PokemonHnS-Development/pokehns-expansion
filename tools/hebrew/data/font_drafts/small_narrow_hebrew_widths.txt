@@ -1,0 +1,27 @@
+א alef     6  
+ב bet      6  
+ג gimel    5  
+ד dalet    6  
+ה he       6  
+ו vav      4  
+ז zayin    5  
+ח het      6  
+ט tet      6  
+י yod      4  
+כ kaf      5  
+ל lamed    6  
+מ mem      6  
+נ nun      4  
+ס samekh   6  
+ע ayin     6  
+פ pe       6  
+צ tsadi    6  
+ק qof      6  bottom shadow row clipped by height 12 (as upstream g/p/y)
+ר resh     5  
+ש shin     7  
+ת tav      6  
+ן nun.f    4  descender shortened to fit height 12
+ם mem.f    6  
+ץ tsadi.f  6  descender shortened to fit height 12
+ף pe.f     6  descender shortened to fit height 12
+ך kaf.f    5  descender shortened to fit height 12

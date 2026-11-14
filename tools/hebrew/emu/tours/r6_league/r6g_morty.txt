@@ -1,0 +1,8 @@
+# Morty, Ecruteak Gym (4,4): EcruteakCity_Gym_EventScript_Morty.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_ECRUTEAK_CITY_GYM; clearflag FLAG_BADGE04_GET; end
+warpto MAP_ECRUTEAK_CITY_GYM_HNS 4 5
+face UP
+snap mo_room
+include _leader_tail.txt

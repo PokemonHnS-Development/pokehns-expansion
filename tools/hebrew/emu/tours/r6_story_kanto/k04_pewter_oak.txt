@@ -1,0 +1,28 @@
+# Pewter gramps with the wing (PewterCity_EventScript_GrampsRainbowWing / _GrampsSilverWing,
+# then _GrampsDone), and Oak's lab: the 9-badge line, then 16 badges
+# (PalletTown_Lab_EventScript_Oak16Badges, with _OakKantoLeague when not Kanto champion).
+start saves/r6_story_l5.sav
+include _base.txt
+ev setvar VAR_LUGIA_OR_HOOH, 1; removeitem ITEM_RAINBOW_WING, 1; removeitem ITEM_SILVER_WING, 1; setvar VAR_PALLETTOWN_LABSTATE, 1; end
+warpto MAP_PEWTER_CITY_HNS 37 21
+objs
+walkto 37 20 UP
+tap A 4
+scene W_rainbow 20000
+tap A 4
+scene W_done 20000
+ev setvar VAR_LUGIA_OR_HOOH, 2; end
+tap A 4
+scene W_silver 20000
+warpto MAP_PALLET_TOWN_LAB_HNS 13 13
+objs
+approach 1
+tap A 4
+scene O_9badges 20000
+ev setvar VAR_NUM_BADGES, 16; clearflag FLAG_IS_KANTO_CHAMPION; end
+approach 1
+tap A 4
+scene O_16badges 20000
+approach 1
+tap A 4
+scene O_dex 20000

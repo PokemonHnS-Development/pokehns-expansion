@@ -1,0 +1,12 @@
+# Charles's line after a Route 17 rematch (Route17_Text_CharlesPostRematch, data/maps/Route17_hns/scripts.inc),
+# shown in the field message box from Cherrygrove. The label is file-local, so the tour names its address in
+# the rc5 ELF (../hns-tools/release/rc5/pokehns-clip.elf).
+start saves/r3_calls/base.sav
+include ../continue.txt
+warpto MAP_CHERRYGROVE_CITY_HNS 25 9
+waitctl 600
+evstart lockall; msgbox 0x08392aa5, MSGBOX_DEFAULT; releaseall; end
+waitkey 900
+pages x_charles_post 5
+snap x_charles_post_last
+waitctl 900 B

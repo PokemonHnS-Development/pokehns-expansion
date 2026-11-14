@@ -1,0 +1,20 @@
+# Trainer card (src/trainer_card.c): front, back (A flips), back to front (B), close (B).
+# Input states are sData->mainState (u8 at +0): 10 = front reads input, 11 = back
+# (src/trainer_card.c:410-416).
+start save:menuA_base
+include ../scripts/continue.txt
+
+startmenu PLAYER
+waitcb2x CB2_TrainerCard 900
+waitpmem 8 trainer_card:sData 0 10 900
+snap menu_trainercard_front
+press A
+waitpmem 8 trainer_card:sData 0 11 900
+snap menu_trainercard_back
+press B
+waitpmem 8 trainer_card:sData 0 10 900
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

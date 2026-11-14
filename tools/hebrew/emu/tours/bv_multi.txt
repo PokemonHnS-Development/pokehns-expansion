@@ -1,0 +1,94 @@
+# Multi battle with a partner: Lance and the player against Executive Ariana and a Grunt
+# (Debug_EventScript_Lance_Multi, data/scripts/debug.inc:265-280; the story version is the
+# coord trigger in RocketHideout_B2F_hns, scripts.inc:185-306, which runs the same specials).
+# ChooseHalfPartyForBattle (src/script_pokemon_util.c:358) opens the party menu in
+# choose-half mode: FIRST/SECOND/THIRD on the entered Pokemon, ABLE on the others, NOT ABLE
+# on the egg and the fainted Pidgey (src/party_menu.c:1067-1088); CONFIRM with nothing
+# entered gives the "no Pokemon" message (src/party_menu.c:7472-7481). Then the multi intro
+# (two trainers, Lance's send-out), the partner's HP box, Lance choosing his own moves, and
+# the defeat texts of both trainers.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_TYPHLOSION, 80, move1=MOVE_HYPER_VOICE, move2=MOVE_FLAMETHROWER; givemon SPECIES_FERALIGATR, 60, move1=MOVE_SURF; givemon SPECIES_MEGANIUM, 60, move1=MOVE_RAZOR_LEAF; givemon SPECIES_PIKACHU, 30, move1=MOVE_THUNDERBOLT; giveegg SPECIES_TOGEPI; givemon SPECIES_PIDGEY, 10; setko 5; end
+expect8 @gPlayerPartyCount@ 6
+
+pinrng
+evstart goto Debug_EventScript_Lance_Multi
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap bv_multi_choose_01
+seek 8 @gPartyMenu+9@ 4 DOWN              # the egg: NOT ABLE
+snap bv_multi_choose_egg
+tap DOWN 4
+waitquiet
+snap bv_multi_choose_fainted
+tap DOWN 4                                # CONFIRM with nothing entered
+waitquiet
+snap bv_multi_choose_confirm
+tap A 4
+waitquiet
+snap bv_multi_choose_none
+tap A 4
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+seek 8 @gPartyMenu+9@ 0 UP
+tap A 4                                   # Typhlosion: ENTER / SUMMARY / CANCEL
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap bv_multi_choose_submenu
+tap A 4                                   # ENTER: FIRST
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+snap bv_multi_choose_first
+tap A 4                                   # Typhlosion again: NO ENTRY / SUMMARY / CANCEL
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap bv_multi_choose_submenu2
+tap B 4
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # Feraligatr: SECOND
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+snap bv_multi_choose_second
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # Meganium: THIRD, the cursor jumps to CONFIRM
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+snap bv_multi_choose_third
+tap A 4                                   # CONFIRM
+waitbattle 1800
+bwalk bv_multi_intro input:HandleInputChooseAction
+snap bv_multi_action
+
+# Hyper Voice hits both foes (their targets are shown first)
+baction FIGHT
+bmove 0
+bwalk bv_multi_tgt1 input:HandleInputShowTargets|input:HandleInputChooseTarget|input:HandleInputShowEntireFieldTargets
+snap bv_multi_targets
+tap A 4
+bwalk bv_multi_turn1 input:HandleInputChooseAction|free|prompt:Cmd_yesnobox
+snap bv_multi_after1
+
+# turns 2 and 3: Hyper Voice again until both trainers are out of Pokemon
+baction FIGHT
+bmove 0
+bwalk bv_multi_tgt2 input:HandleInputShowTargets|input:HandleInputChooseTarget|input:HandleInputShowEntireFieldTargets
+tap A 4
+bwalk bv_multi_turn2 input:HandleInputChooseAction|free
+baction FIGHT
+bmove 0
+bwalk bv_multi_tgt3 input:HandleInputShowTargets|input:HandleInputChooseTarget|input:HandleInputShowEntireFieldTargets
+tap A 4
+bwalk bv_multi_turn3 input:HandleInputChooseAction|free
+snap bv_multi_end

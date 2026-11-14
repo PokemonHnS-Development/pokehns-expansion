@@ -360,7 +360,26 @@ static void FindMapsWithMon(u16 species)
             continue;
 #endif
 
-        if (MapHasSpecies(&gWildMonHeaders[i].encounterTypes[gAreaTimeOfDay], headerSectionId, species))
+        struct WildEncounterTypes encounterTypes = gWildMonHeaders[i].encounterTypes[gAreaTimeOfDay];
+
+        // Wild encounters use the OW_TIME_OF_DAY_FALLBACK table for any area that has
+        // no table at the current time (GetTimeOfDayForEncounters), so a map with
+        // only a day table must also show its species in the night view.
+        if (!OW_TIME_OF_DAY_DISABLE_FALLBACK)
+        {
+            const struct WildEncounterTypes *fallback = &gWildMonHeaders[i].encounterTypes[OW_TIME_OF_DAY_FALLBACK];
+
+            if (encounterTypes.landMonsInfo == NULL)
+                encounterTypes.landMonsInfo = fallback->landMonsInfo;
+            if (encounterTypes.waterMonsInfo == NULL)
+                encounterTypes.waterMonsInfo = fallback->waterMonsInfo;
+            if (encounterTypes.rockSmashMonsInfo == NULL)
+                encounterTypes.rockSmashMonsInfo = fallback->rockSmashMonsInfo;
+            if (encounterTypes.fishingMonsInfo == NULL)
+                encounterTypes.fishingMonsInfo = fallback->fishingMonsInfo;
+        }
+
+        if (MapHasSpecies(&encounterTypes, headerSectionId, species))
         {
             switch (gWildMonHeaders[i].mapGroup)
             {
@@ -657,10 +676,10 @@ static void DoAreaGlow(void)
 
 static const u8 *GetTimeOfDayTextWithButton(enum TimeOfDay timeOfDay)
 {
-    static const u8 gText_Morning[] = _("{DPAD_UPDOWN} MORNING");
-    static const u8 gText_Day[] = _("{DPAD_UPDOWN} DAY");
-    static const u8 gText_Evening[] = _("{DPAD_UPDOWN} EVENING");
-    static const u8 gText_Night[] = _("{DPAD_UPDOWN} NIGHT");
+    static const u8 gText_Morning[] = _("{DPAD_UPDOWN} בוקר");
+    static const u8 gText_Day[] = _("{DPAD_UPDOWN} יום");
+    static const u8 gText_Evening[] = _("{DPAD_UPDOWN} ערב");
+    static const u8 gText_Night[] = _("{DPAD_UPDOWN} לילה");
 
     switch (gAreaTimeOfDay)
     {
@@ -696,7 +715,7 @@ static void ShowEncounterInfoLabel(void)
 
 static void ShowAreaUnknownLabel(void)
 {
-    static const u8 gText_AreaUnknown[] = _("AREA UNKNOWN");
+    static const u8 gText_AreaUnknown[] = _("אזור לא ידוע");
     int stringXPos = GetStringCenterAlignXOffset(FONT_NORMAL, gText_AreaUnknown, 80);
 
     PrintAreaLabelText(gText_AreaUnknown, DEX_AREA_LABEL_AREA_UNKNOWN, stringXPos);

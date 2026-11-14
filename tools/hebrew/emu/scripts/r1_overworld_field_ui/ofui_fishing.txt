@@ -1,0 +1,49 @@
+# Fishing (src/fishing.c): the dots line grows one "·" every 20 frames at x = n*8
+# (Fishing_ShowDots, :219-243), then "Oh! A bite!" on line 2 (Fishing_GotBite, :287-297, only with
+# the fishing minigame option on, challengeSettings.fishing = SB3+0x10 bit 4), "A Pokemon's on the
+# hook!" (:358), "Not even a nibble..." (:404) and "It got away..." (:415) (texts :64-67).
+# The rod is registered to SELECT (gSaveBlock1Ptr->registeredItem, SB1+0x49A) and used facing
+# the sea west of Cherrygrove City (tile 24,9 is ocean water in data/layouts/CherrygroveCity_hns).
+# Every cast is random, so there are several casts per rod; fishwatch names each shot by what
+# happened (dots, bite, hook, nibble, gotaway).
+start saves/ofui_menuA_base.sav
+include ../continue.txt
+go DOWN 9
+waitctl 600
+warpto MAP_CHERRYGROVE_CITY_HNS 25 9
+face LEFT
+snap fish_00_spot
+
+# minigame ON
+setbit @SB3+10@ 4 1
+w16c @SB1+49A@ ITEM_OLD_ROD
+tap SELECT 0
+fishwatch fish_m_old1 miss
+waitctl 900
+tap SELECT 0
+fishwatch fish_m_old2 miss
+waitctl 900
+w16c @SB1+49A@ ITEM_SUPER_ROD
+tap SELECT 0
+fishwatch fish_m_super1 miss
+waitctl 900
+tap SELECT 0
+fishwatch fish_m_super2 miss
+waitctl 900
+tap SELECT 0
+fishwatch fish_m_super3 hook
+waitbattle 1500
+bwalk fish_m_super3_battle input:HandleInputChooseAction
+baction RUN
+bwalk fish_m_super3_run free
+waitctl 900
+
+# minigame OFF (the default): no "Oh! A bite!", a bite hooks at once
+setbit @SB3+10@ 4 0
+w16c @SB1+49A@ ITEM_GOOD_ROD
+tap SELECT 0
+fishwatch fish_a_good1 hook
+waitbattle 1500
+bwalk fish_a_good1_battle input:HandleInputChooseAction
+baction RUN
+bwalk fish_a_good1_run free

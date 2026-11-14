@@ -1,0 +1,43 @@
+# Machamp with the Fist Plate, Snowswept Cavern (38,49): Snowswept_Cavern_Eventscript_Machamp
+# (SnowsweptCavern_hns/scripts.inc:116-170) with VAR_SINJOH_STORYLINE 2: cry text, 'it holds a plate,
+# battle it?' YES/NO (NO first, then YES), a boss battle without the run block, the dropped-item text,
+# the Fist Plate, the camera shake and the boulder.
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev setvar VAR_SINJOH_STORYLINE, 2; end
+warpto MAP_SNOWSWEPT_CAVERN_HNS 37 49
+face RIGHT
+snap mc_field
+tap A 4
+scene mc_no 3000
+snap mc_no_menu
+tap B 4
+scene mc_no_after 3000
+face RIGHT
+tap A 4
+scene mc_yes 3000
+snap mc_yes_menu
+tap A 4
+scene mc_pre 4000
+bwalk mc_intro input:HandleInputChooseAction
+snap mc_action
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+bagpocket 2
+bagseek ITEM_MASTER_BALL
+waitquiet
+tap A 4
+waitquiet
+tap A 4
+waitkey 600
+snap mc_nocatch
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction
+bwin mc_win
+scene mc_after 12000 45
+snap mc_end

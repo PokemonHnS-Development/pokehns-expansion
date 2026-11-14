@@ -8,17 +8,17 @@ Route47_EventScript_Hiker::
 	end
 
 Route47_Text_HikerSeen::
-	.string "Longing for others is...\n"
-	.string "what it is. \p"
-	.string "But battles are battles,\n"
-	.string "so let's go!$"
+	.string "געגועים לאחרים הם…\n"
+	.string "מה שהם.\p"
+	.string "אבל קרב זה קרב,\n"
+	.string "אז קדימה!$"
 
 Route47_Text_HikerBeaten::
-	.string "Wahaha!$"
+	.string "וואהאהא!$"
 
 Route47_Text_HikerAfter::
-	.string "After a battle you should always leave\n"
-	.string "with a parting laugh!$"
+	.string "אחרי קרב תמיד כדאי להיפרד\n"
+	.string "עם צחוק גדול!$"
 
 Route47_EventScript_Camper::
 	trainerbattle_single TRAINER_GRANT_HNS, Route47_Text_CamperSeen, Route47_Text_CamperBeaten
@@ -26,16 +26,15 @@ Route47_EventScript_Camper::
 	end
 
 Route47_Text_CamperSeen::
-	.string "I'm not good with large crowds, so\n"
-	.string "I'm camping out here with my\l"
-	.string "POKéMON!$"
+	.string "אני לא מסתדר עם קהל גדול, אז\n"
+	.string "אני חונה פה עם הפוקימונים שלי!$"
 
 Route47_Text_CamperBeaten::
-	.string "I should be headed deeper into the\n"
-	.string "mountain I guess...$"
+	.string "כנראה שכדאי לי להמשיך\n"
+	.string "עמוק יותר לתוך ההר…$"
 
 Route47_Text_CamperAfter::
-	.string "See ya!$"
+	.string "נתראה!$"
 
 Route47_EventScript_Thom::
 	trainerbattle_double TRAINER_THOM_AND_KAE_HNS, Route47_Text_Couple1Seen, Route47_Text_Couple1Beaten, Route104_Text_GinaNotEnoughMons
@@ -50,23 +49,22 @@ Route47_EventScript_Kae::
 	end
 
 Route47_Text_Couple1Seen::
-	.string "THOM: One plus one is two. But the\n"
-	.string "two of us together is much\l"
-	.string "stronger!\p"
-	.string "KAE: The two of us aren't just some\n"
-	.string "boring pair!$"
+	.string "תום: אחד ועוד אחד זה שניים. אבל\n"
+	.string "שנינו ביחד חזקים הרבה יותר!\p"
+	.string "קיי: אנחנו לא סתם\n"
+	.string "זוג משעמם!$"
 
 Route47_Text_Couple1Beaten::
-	.string "THOM: That wasn't what I expected.\l"
-	.string "KAE: You're unusual too!$"
+	.string "תום: לא לזה ציפיתי.\l"
+	.string "קיי: גם אתה יוצא דופן!$"
 
 Route47_Text_Couple1After1::
-	.string "THOM: It seems your power is\n"
-	.string "impossible to predict!$"
+	.string "תום: נראה שהכוח שלך\n"
+	.string "בלתי צפוי לחלוטין!$"
 
 Route47_Text_Couple1After2::
-	.string "KAE: I figured you were an ordinary\n"
-	.string "lone trainer. Boy was I wrong!$"
+	.string "קיי: חשבתי שאתה סתם מאמן\n"
+	.string "בודד. כמה שטעיתי!$"
 
 Route47_EventScript_Duff::
 	trainerbattle_double TRAINER_DUFF_AND_EDA_HNS, Route47_Text_Couple2Seen, Route47_Text_Couple2Beaten, Route104_Text_GinaNotEnoughMons
@@ -80,23 +78,22 @@ Route47_EventScript_Eda::
 	end
 
 Route47_Text_Couple2Seen::
-	.string "DUFF: Watching over my girlfriend\n"
-	.string "makes my heart soar!\p"
-	.string "EDA: My heart's feelings for my\n"
-	.string "boyfriend are as wide and deep\l"
-	.string "the ocean!$"
+	.string "דאף: כשאני שומר על החברה שלי,\n"
+	.string "הלב שלי ממריא!\p"
+	.string "אדה: הרגשות שלי כלפי החבר שלי\n"
+	.string "רחבים ועמוקים כמו האוקיינוס!$"
 
 Route47_Text_Couple2Beaten::
-	.string "DUFF: I was no match for you...\l"
-	.string "EDA: You are really something...$"
+	.string "דאף: לא הייתי ברמה שלך…\l"
+	.string "אדה: אתה באמת משהו…$"
 
 Route47_Text_Couple2After1::
-	.string "DUFF: Thank you for the awe-\n"
-	.string "inspiring battle! Bye!$"
+	.string "דאף: תודה על הקרב עוצר הנשימה!\n"
+	.string "ביי!$"
 
 Route47_Text_Couple2After2::
-	.string "EDA: You should really find a\n"
-	.string "wonderful partner, too!$"
+	.string "אדה: באמת כדאי שגם לך יהיה\n"
+	.string "מישהו נפלא לצידך!$"
 
 Route47_EventScript_Sage::
 	lock
@@ -107,25 +104,20 @@ Route47_EventScript_Sage::
 	end
 
 EmbeddedTower_Text_OldManIntro:
-	.string "Well, hello!\p"
-	.string "It's said that past this hole used to\n"
-	.string "be a huge tower reaching far into\l"
-	.string "the sky.\p"
-	.string "They say that it was a rather strange\n"
-	.string "tower with half of it embedded\l"
-	.string "in the cliff.\p"
-	.string "It was not just a tall tower reaching\n"
-	.string "up to the sky, but also reaching deep\l"
-	.string "down underground!\p"
-	.string "It is rumored that it even reached\n"
-	.string "the bottom of the ocean!\p"
-	.string "In short, the ruins used to connect\n"
-	.string "the sky, the land, and the sea to\l"
-	.string "each other...\p"
-	.string "Most of the tower is now crumbled,\n"
-	.string "and the only things that remain are\l"
-	.string "the entrance and its interior, where\l"
-	.string "you'll see strange patterns.$"
+	.string "ובכן, שלום!\p"
+	.string "אומרים שמעבר לחור הזה עמד פעם\n"
+	.string "מגדל ענק שהתנשא הרחק אל השמיים.\p"
+	.string "אומרים שזה היה מגדל די מוזר,\n"
+	.string "שחציו היה שקוע בתוך הצוק.\p"
+	.string "הוא לא רק התנשא גבוה אל השמיים,\n"
+	.string "אלא גם העמיק הרחק מתחת לאדמה!\p"
+	.string "יש שמועות שהוא הגיע אפילו\n"
+	.string "עד קרקעית האוקיינוס!\p"
+	.string "בקיצור, החורבות חיברו פעם\n"
+	.string "בין השמיים, היבשה והים…\p"
+	.string "רוב המגדל כבר התמוטט, ונשארו ממנו\n"
+	.string "רק הכניסה והחלל שבפנים,\p"
+	.string "ושם אפשר לראות דפוסים מוזרים.$"
 
 Route47_EventScript_Item_Pearl::
     finditem ITEM_PEARL
@@ -158,4 +150,4 @@ Route47_EventScript_Chinchou::
 	end
 
 Route47_Text_Chinchou:
-	.string "CHINCHOU: Chou!$"
+	.string "צ'ינצ'ו: צ'ו!$"

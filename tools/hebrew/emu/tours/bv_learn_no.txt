@@ -1,0 +1,35 @@
+# Refusing in the level-up flows (same setup as battle_levelup: Cyndaquil Lv 12 with four
+# moves beats a Lv 12 Chansey at 1 HP and reaches Lv 14):
+# - "delete a move to make room?" NO (Cmd_yesnoboxlearnmove): "X did not learn Y"
+#   (STRINGID_DIDNOTLEARNMOVE). P_ASK_MOVE_CONFIRMATION is off in this build, so there is no
+#   "stop trying to teach?" question (BattleScript_AskToLearnMove, data/battle_scripts_1.s:4397-4412);
+# - the evolution scene after the battle, cancelled by holding B while the sprites cycle
+#   (EVOSTATE_WAIT_CYCLE_MON_SPRITE, src/evolution_scene.c:660-665): "Huh? X stopped evolving!"
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_CYNDAQUIL, 12, move1=MOVE_TACKLE, move2=MOVE_LEER, move3=MOVE_EMBER, move4=MOVE_SMOKESCREEN; end
+
+pinrng
+ev setwildbattle SPECIES_CHANSEY, 12; end
+sethp enemy 0 1
+evstart dowildbattle; end
+waitbattle
+bwalk bv_learn_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 2                               # Ember
+bwalk bv_learn_exp prompt:Cmd_yesnoboxlearnmove
+snap bv_learn_forget_prompt
+tap DOWN 4
+waitquiet
+snap bv_learn_forget_prompt_no
+tap A 4                               # NO: "did not learn"
+pages bv_learn_gaveup 10              # "did not learn" (bwalk would walk on into the evolution)
+waitcb2x CB2_EvolutionSceneUpdate 3000
+waittaskdata Task_EvolutionScene 0 2 600          # EVOSTATE_INTRO_MON_ANIM: the intro text is up
+waitquiet
+snap bv_evo_intro
+waittaskdata Task_EvolutionScene 0 8 1200         # EVOSTATE_WAIT_CYCLE_MON_SPRITE
+snap bv_evo_cycling 60
+30 B                                  # hold B: cancel
+bwalk bv_evo_cancel free
+snap bv_evo_field

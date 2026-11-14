@@ -257,10 +257,10 @@ Route104_Text_GinaPostBattle:
 	.string "We have to train lots more!$"
 
 Route104_Text_GinaNotEnoughMons:
-	.string "GINA: Oh? Only one POKéMON?\n"
-	.string "Then, we don't battle with you.\p"
-	.string "If there's only one POKéMON, it will\n"
-	.string "be lonesome. That's not nice.$"
+	.string "ג'ינה: אה? רק פוקימון אחד?\n"
+	.string "אז לא נילחם איתך.\p"
+	.string "אם יש רק פוקימון אחד, הוא יהיה\n"
+	.string "בודד. וזה לא יפה.$"
 
 Route104_Text_MiaIntro:
 	.string "MIA: We are twins, so we battle\n"

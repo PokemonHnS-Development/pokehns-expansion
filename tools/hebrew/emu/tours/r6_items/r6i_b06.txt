@@ -1,0 +1,16 @@
+# r6 items: balls 6/8. Each event clears the object's or tile's flag, warps next to it, turns the
+# player toward it and presses A (Std_FindItem / EventScript_HiddenItemScript, data/scripts/obtain_item.inc).
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+pick b_great_ball FLAG_ITEM_ROUTE_32_GREATBALL MAP_ROUTE32_HNS 10 31 UP
+pick b_soft_sand FLAG_ITEM_ROUTE34_SOFTSAND MAP_ROUTE34_HNS 28 84 RIGHT
+pick b_lax_incense FLAG_ITEM_ROUTE38_LAX_INCENSE MAP_ROUTE38_HNS 1 31 UP
+pick b_white_flute FLAG_ITEM_ROUTE47_WHITE_FLUTE MAP_ROUTE47_HNS 59 34 UP
+pick b_pearl FLAG_ITEM_ROUTE47_PEARL MAP_ROUTE47_HNS 82 12 UP
+pick b_stardust FLAG_ITEM_ROUTE47_STARDUST MAP_ROUTE47_HNS 29 16 RIGHT
+pick b_lucky_punch FLAG_ITEM_LUCKY_PUNCH MAP_ROUTE47_HNS 33 11 UP
+pick b_lure FLAG_ROUTE_49_ITEM_LURE MAP_ROUTE49_HNS 61 42 LEFT
+pick b_dome_fossil FLAG_ITEM_DOME_FOSSIL MAP_RUINS_OF_ALPH_B1F_HNS 21 5 UP
+pick b_old_amber FLAG_ITEM_OLD_AMBER MAP_RUINS_OF_ALPH_B1F_HNS 21 22 UP
+pick b_helix_fossil FLAG_ITEM_HELIX_FOSSIL MAP_RUINS_OF_ALPH_B1F_HNS 5 22 UP
+pick b_gs_ball FLAG_ITEM_GS_BALL MAP_RUINS_OF_ALPH_B1F_HNS 5 5 UP

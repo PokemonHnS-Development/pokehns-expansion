@@ -1,0 +1,10 @@
+# Goldenrod Underground haircut, younger brother (night: run with --rtc 1767308400, 23:00; (6,16),
+# talked to from (5,16); GoldenrodCity_UndergroundTunnel_hns:207-266): as r5n_08 at ¥300.
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+ev file _haircut_party.inc
+ev clearflag FLAG_DAILY_HAIRCUT2_RECEIVED; end
+flags FLAG_DAY_POKEMON FLAG_NIGHT_POKEMON
+setmoney 10000
+warpto MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL_HNS 5 16
+include _haircut_body.inc

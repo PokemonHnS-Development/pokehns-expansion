@@ -1,0 +1,22 @@
+# Stand-in (no H&S source for the Rotom Catalog): KEY ITEMS holds only the catalog, Rotom in slot 5:
+# USE > Rotom > 'which appliance to order?' (gText_WhichAppliance, ItemUseCB_RotomCatalog
+# src/party_menu.c:6927, window sOrderWhichApplianceMsgWindowTemplate).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+partyfree 5
+ev givemon SPECIES_ROTOM, 50; end
+pocketset KEY_ITEMS ITEM_ROTOM_CATALOG
+w32 @gMenuCallback@ 0
+bagopen KEY_ITEMS 0
+snap fo_rot_01_bag
+tap A 4
+waitquiet
+snap fo_rot_02_ctx
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waitquiet
+snap fo_rot_03_which_appliance

@@ -1,0 +1,11 @@
+# Shared tail of a gym leader tour (not a tour): the player faces the leader. Talk, the field
+# intro pages up to the battle, the battle intro up to the action menu, the battle won on screen
+# (bwin: the foe at 1 HP each turn, so the AI may use its items; the defeat line and the prize
+# money), then the field pages after it (badge line with fanfare, badge speech, TM, TM speech).
+tap A 4
+scene L_field 20000
+bwalk L_bintro input:HandleInputChooseAction
+snap L_action
+bwin L_win
+scene L_after 40000
+snap L_free

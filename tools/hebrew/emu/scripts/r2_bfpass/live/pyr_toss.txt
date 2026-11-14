@@ -1,0 +1,36 @@
+tap A 4
+waittaskx Task_HandlePyramidBagInput 900
+waitquiet
+30 -
+snap py_bag_after_give
+py: bag_seek(2)
+waitquiet
+tap A 4
+waitquiet
+30 -
+tap DOWN 4
+waitquiet
+py: print("ctx pos", menu_pos())
+snap py_toss_00_ctx
+tap A 4
+waitquiet
+30 -
+snap py_toss_01_howmany
+tap UP 4
+waitquiet
+10 -
+snap py_toss_02_qty2
+tap A 4
+waitquiet
+30 -
+snap py_toss_03_confirm
+tap A 4
+waitquiet
+30 -
+snap py_toss_04_threw
+tap A 4
+waittaskx Task_HandlePyramidBagInput 900
+waitquiet
+30 -
+snap py_toss_05_after
+showtasks

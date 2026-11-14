@@ -1,0 +1,24 @@
+# The trainer card's play time colon blinks (sData->timeColonInvisible, src/trainer_card.c:1762;
+# the TEXT_RTL branch prints h:mm as one string with the colon's colour codes, :1233-1255).
+# Shots 20 frames apart over two seconds, to see the colon in both phases (save heid_base).
+start save:heid_base
+include ../../scripts/continue.txt
+startmenu PLAYER
+waitcb2x CB2_TrainerCard 900
+waitpmem 8 trainer_card:sData 0 10 900
+waitquiet
+shot heid_ct_00
+20 -
+shot heid_ct_01
+20 -
+shot heid_ct_02
+20 -
+shot heid_ct_03
+20 -
+shot heid_ct_04
+20 -
+shot heid_ct_05
+20 -
+shot heid_ct_06
+20 -
+shot heid_ct_07

@@ -1,0 +1,247 @@
+# Vitamins from the bag (src/party_menu.c ItemUseCB_Medicine :4947,
+# GetMedicineItemEffectMessage :4848-4870): HP UP, PROTEIN, IRON, CALCIUM, ZINC and CARBOS on
+# Typhlosion ("X's base <stat> stat was raised.", gText_PkmnBaseVar2StatIncreased with all
+# six stat names), then HP UP and CARBOS on a Chansey at the EV limits (HP 252 = per-stat
+# cap, 252+252+6 = 510 total) ("It won't have any effect."), then SUMMARY > SKILLS > L (EVs)
+# for both.
+# MEDICINE after the additems: 0 POTION .. 5 RARE CANDY, 6 HP UP, 7 PROTEIN, 8 IRON,
+# 9 CALCIUM, 10 ZINC, 11 CARBOS; with CLOSE BAG 13 rows, so the scroll is 5.
+start saves/pif2_base.sav
+include ../scripts/continue.txt
+ev givemon SPECIES_CHANSEY, 60, hpEv=252, atkEv=252, defEv=6; additem ITEM_HP_UP, 3; additem ITEM_PROTEIN, 3; additem ITEM_IRON, 3; additem ITEM_CALCIUM, 3; additem ITEM_ZINC, 3; additem ITEM_CARBOS, 3; end
+
+# HP UP on Typhlosion (slot 0)
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 1
+w16 @gBagPosition+16@ 5
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_vit_01_bag_hpup
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap pbi_vit_02_context
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_vit_03_hpup
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# PROTEIN
+tap DOWN 4
+waitquiet
+snap pbi_vit_04_bag_protein
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_vit_05_protein
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# IRON
+tap DOWN 4
+waitquiet
+snap pbi_vit_06_bag_iron
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_vit_07_iron
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# CALCIUM
+tap DOWN 4
+waitquiet
+snap pbi_vit_08_bag_calcium
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_vit_09_calcium
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# ZINC
+tap DOWN 4
+waitquiet
+snap pbi_vit_10_bag_zinc
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_vit_11_zinc
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# CARBOS: Typhlosion, then Chansey (slot 5, 510 EVs in total)
+tap DOWN 4
+waitquiet
+snap pbi_vit_12_bag_carbos
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_vit_13_carbos
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_vit_14_carbos_limit
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# HP UP on Chansey (HP EV 252)
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+w16 @gBagPosition+A@ 1
+w16 @gBagPosition+16@ 5
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_vit_15_hpup_limit
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# SUMMARY > SKILLS: stats, IVs (R), EVs (L) for Typhlosion, then Chansey. The rc5 clip ROM has
+# no .map, so pokemon_summary_screen:Task_HandleInput / MainCB2 cannot be resolved: wait for
+# CB2_InitSummaryScreen, then fixed frames (hex) for the init and the page slide.
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+tap A 4
+waitcb2x CB2_InitSummaryScreen 900
+60 -
+waitquiet
+tap RIGHT 4
+waitnotask Task_PrintSkillsPage 120
+20 -
+snap pbi_vit_16_typh_skills
+tap L 4
+waitquiet
+snap pbi_vit_17_typh_evs
+tap START 4
+waitquiet
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 300
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+tap A 4
+waitcb2x CB2_InitSummaryScreen 900
+60 -
+waitquiet
+tap RIGHT 4
+waitnotask Task_PrintSkillsPage 120
+20 -
+snap pbi_vit_18_chansey_skills
+tap L 4
+waitquiet
+snap pbi_vit_19_chansey_evs
+tap R 4
+waitquiet
+snap pbi_vit_20_chansey_ivs
+tap START 4
+waitquiet
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 300
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

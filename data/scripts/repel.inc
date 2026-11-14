@@ -137,16 +137,16 @@ EventScript_UseSpray::
 
 
 Text_SprayWoreOff::
-	.string "{STR_VAR_1}'s effect wore off…$"
+	.string "ההשפעה של {STR_VAR_1} פגה…$"
 
 Text_SprayWoreOffAskUseAnother::
-	.string "{STR_VAR_1}'s effect wore off!\n"
-	.string "Use another?$"
+	.string "ההשפעה של {STR_VAR_1} פגה!\n"
+	.string "להשתמש בעוד אחד?$"
 
 Text_SprayWoreOffAskUseX::
-	.string "{STR_VAR_1}'s effect wore off…\n"
-	.string "Use a {STR_VAR_2}?$"
+	.string "ההשפעה של {STR_VAR_1} פגה…\n"
+	.string "להשתמש ב{STR_VAR_2}?$"
 
 Text_SprayWoreOffUseX::
-	.string "{PLAYER} used the\n"
-	.string "{STR_VAR_2}.$"
+	.string "{PLAYER} השתמש\n"
+	.string "ב{STR_VAR_2}.$"

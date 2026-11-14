@@ -1,0 +1,60 @@
+# Post-game PC (5 rows with HALL OF FAME, src/script_menu.c:773-789; data/scripts/pc.inc:61-67)
+# and the Hall of Fame PC viewer (src/hall_of_fame.c:799-1040): record header, PICK/NEXT/CANCEL
+# bar, every Pokemon of every record (newest first; A = older record, the oldest exits).
+start save:r1_after_hof
+include ../scripts/continue.txt
+evstart goto EventScript_PC
+waitkey 900
+pages hofpc_boot 4
+waittaskx Task_HandleMultichoiceInput 600
+waitquiet
+snap hofpc_menu_01
+press DOWN
+snap hofpc_menu_02
+press DOWN
+snap hofpc_menu_03_hof
+press A
+waittaskx hall_of_fame:Task_HofPC_HandleInput 1500
+waitquiet 600
+snap hofpc_rec2_mon1
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap hofpc_rec2_mon2
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap hofpc_rec2_mon3
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap hofpc_rec2_mon4
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap hofpc_rec2_mon5
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap hofpc_rec2_mon6
+press A                                   # NEXT: the older record (the ladder's, English-born party)
+waittaskx hall_of_fame:Task_HofPC_HandleInput 900
+waitquiet 600
+snap hofpc_rec1_mon1
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap hofpc_rec1_mon2
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap hofpc_rec1_mon3
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap hofpc_rec1_mon4
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap hofpc_rec1_mon5
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap hofpc_rec1_mon6
+press A                                   # the oldest record: A exits
+waitcb2x CB2_Overworld 1200
+waittaskx Task_HandleMultichoiceInput 900
+waitquiet 600
+snap hofpc_menu_back
+press B
+waitctl 900

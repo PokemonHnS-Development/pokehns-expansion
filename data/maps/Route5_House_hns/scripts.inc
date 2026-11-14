@@ -19,16 +19,15 @@ Route5_House_EventScript_Woman::
 	end
 
 Route5_House_Text_Granny1:
-	.string "Eeyaaaah!\p"
-	.string "I sense a sinister shadow\n"
-	.string "hovering over you.\l"
-	.string "Take this to ward it off!$"
+	.string "אייייאאה!\p"
+	.string "אני חשה צל מרושע שמרחף מעליך.\n"
+	.string "הנה, זה ירחיק אותו!$"
 
 Route5_House_Text_Granny2:
-	.string "You were in mortal danger, but\n"
-	.string "you're protected now.$"
+	.string "היית בסכנת חיים, אבל\n"
+	.string "עכשיו יש לך הגנה.$"
 
 Route5_House_Text_Woman:
-	.string "My grandma is into warding off what\n"
-	.string "she believes to be evil spirits.\p"
-	.string "I'm sorry that she startled you.$"
+	.string "סבתא שלי מתעסקת בגירוש\n"
+	.string "של מה שלדעתה הן רוחות רעות.\p"
+	.string "אני מצטערת שהיא הבהילה אותך.$"

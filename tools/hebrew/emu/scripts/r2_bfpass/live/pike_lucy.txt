@@ -1,0 +1,14 @@
+sl pike_3path1
+30 -
+waitctl 600
+clearflag FLAG_SYS_PIKE_SILVER
+clearflag FLAG_SYS_PIKE_GOLD
+py: sb2 = emu.sb2(); emu.w16(sb2 + 0xE04, 27); emu.w16(sb2 + 0xD00, emu.r16(sb2 + 0xD00) & ~(3 << 10)); emu.w8(sb2 + 0xE10, (emu.r8(sb2 + 0xE10) & 0x80) | (8 << 3) | 1); print("streak", emu.r16(sb2 + 0xE04), "brainflags", hex(emu.r16(sb2 + 0xD00)), "hint", hex(emu.r8(sb2 + 0xE10)))
+go UP 6
+py: emu.frames(8, "UP"); emu.wait_until(lambda: emu.r8(emu.sb1() + 9) != 67 or emu.wants_key(), 900, "the room", step=2); print("in room", emu.location())
+drivex pk_r6_lucy_in battle 40 12000
+fastbattles off
+bwin pk_r6_lucy_b
+drivex pk_r6_lucy_after free 40 12000
+loc
+ss pike_after_lucy

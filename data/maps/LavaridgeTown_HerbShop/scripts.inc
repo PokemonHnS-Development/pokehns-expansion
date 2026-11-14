@@ -41,8 +41,8 @@ LavaridgeTown_HerbShop_EventScript_ExplainCharcoal::
 	end
 
 LavaridgeTown_HerbShop_Text_WelcomeToHerbShop:
-	.string "Welcome to the HERB SHOP, home of\n"
-	.string "effective and inexpensive medicine!$"
+	.string "ברוכים הבאים לחנות עשבי המרפא,\n"
+	.string "המקום לתרופות יעילות וזולות!$"
 
 LavaridgeTown_HerbShop_Text_YouveComeToLookAtHerbalMedicine:
 	.string "You've come to look at herbal medicine\n"
@@ -59,7 +59,7 @@ LavaridgeTown_HerbShop_Text_ExplainCharcoal:
 	.string "moves.$"
 
 LavaridgeTown_HerbShop_Text_HerbalMedicineWorksButMonWillDislike:
-	.string "Herbal medicine works impressively well.\n"
-	.string "But your POKéMON will dislike you for it.\l"
-	.string "It must be horribly bitter!$"
+	.string "תרופות צמחים עובדות טוב להפליא.\n"
+	.string "אבל הפוקימון שלך יאהב אותך פחות.\p"
+	.string "הן בטח מרות נורא!$"
 

@@ -1,0 +1,29 @@
+# Strength boulder (EventScript_StrengthBoulder, data/scripts/field_move_scripts_hns.inc:325-341):
+# the YES/NO Text_WantToStrength (:371) is commented out (:335-339), so A goes straight to
+# EventScript_ActivateStrength: "X used STRENGTH!" (Text_MonUsedStrength :376); A again with
+# FLAG_SYS_USE_STRENGTH set: Text_StrengthActivated (:361-364, :383); then the push. Without
+# badge 3: Text_CantStrength (:356-359, :379). Cianwood Gym boulder (10,6) from (9,6)
+# (data/maps/CianwoodGym_hns/map.json).
+start save:fm_party
+include _cont.txt
+warpto MAP_CIANWOOD_GYM_HNS 9 6
+go LEFT
+go RIGHT
+face RIGHT
+snap fm04_00_facing_boulder
+tap A 2
+fieldwatch fm04_used free 3000
+tap A 2
+fieldwatch fm04_activated free 3000
+tap RIGHT 24                              # push the boulder one tile to the right
+fieldwatch fm04_push free 600 4
+snap fm04_after_push
+
+# no badge 3 (a warp clears FLAG_SYS_USE_STRENGTH and puts the boulder back)
+clearflag FLAG_BADGE03_GET
+clearflag FLAG_SYS_USE_STRENGTH
+warpto MAP_CIANWOOD_GYM_HNS 9 6
+face RIGHT
+tap A 2
+fieldwatch fm04_cant free 3000
+setflag FLAG_BADGE03_GET

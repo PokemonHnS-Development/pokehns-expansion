@@ -1,0 +1,89 @@
+# Failed catches and blocked escapes against a wild Wobbuffet (Shadow Tag,
+# src/data/pokemon/species_info/gen_2_families.h; catch rate 45):
+# - RUN: Shadow Tag prevents escape (IsRunningFromBattleImpossible, src/battle_main.c:4276-4282,
+#   STRINGID_PREVENTSESCAPE, src/battle_message.c:217);
+# - Poke Balls at full HP under different RNG pins: the shake messages
+#   STRINGID_PKMNBROKEFREE / ITAPPEAREDCAUGHT / AARGHALMOSTHADIT / SHOOTSOCLOSE
+#   (src/battle_message.c:429-432);
+# - FLAG_NO_WILD_CATCHING: sText_CantThrowPokeBall_Disabled (src/item_use.c:1185);
+# - FLAG_NO_WILD_RUNNING: STRINGID_CANTESCAPE (src/battle_main.c:4243-4247);
+# - a Master Ball ends the battle.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_TYPHLOSION, 50, move1=MOVE_TACKLE; additem ITEM_POKE_BALL, 12; additem ITEM_MASTER_BALL, 1; end
+
+pinrng
+evstart setwildbattle SPECIES_WOBBUFFET, 40; dowildbattle; end
+waitbattle
+bwalk bv_fail_intro input:HandleInputChooseAction
+baction RUN
+bwalk bv_fail_run1 input:HandleInputChooseAction
+snap bv_fail_run1_after
+
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 2
+seek 16 @gBagPosition+0C@ 0 UP          # the Poke Ball row (it sorts before the Master Ball)
+snap bv_fail_balls
+pinrng 7F3A91C2E45B0D68A1F3C59711000000
+tap A 4
+waitquiet
+tap A 4
+bwalk bv_fail_t1 input:HandleInputChooseAction
+
+pinrng 11111111222222223333333344444444
+include _bv_ball.txt
+bwalk bv_fail_t2 input:HandleInputChooseAction
+pinrng 0123456789ABCDEF0123456789ABCDEF
+include _bv_ball.txt
+bwalk bv_fail_t3 input:HandleInputChooseAction
+pinrng DEADBEEFCAFEBABE0BADF00D11000000
+include _bv_ball.txt
+bwalk bv_fail_t4 input:HandleInputChooseAction
+pinrng 5A5A5A5AA5A5A5A53C3C3C3C11000000
+include _bv_ball.txt
+bwalk bv_fail_t5 input:HandleInputChooseAction
+pinrng 0F0F0F0FF0F0F0F07777777711000000
+include _bv_ball.txt
+bwalk bv_fail_t6 input:HandleInputChooseAction
+pinrng 309D6B79965EDA32DAE4455011000000   # one shake: STRINGID_ITAPPEAREDCAUGHT
+include _bv_ball.txt
+bwalk bv_fail_t7 input:HandleInputChooseAction
+pinrng
+
+# catching switched off
+setflag FLAG_NO_WILD_CATCHING
+include _bv_ball.txt
+waitkey 600
+snap bv_fail_disabled_01
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+tap B 4
+waitbinput HandleInputChooseAction
+clearflag FLAG_NO_WILD_CATCHING
+
+# running switched off
+setflag FLAG_NO_WILD_RUNNING
+baction RUN
+bwalk bv_fail_norun input:HandleInputChooseAction
+snap bv_fail_norun_after
+clearflag FLAG_NO_WILD_RUNNING
+
+# the Master Ball
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+seek 16 @gBagPosition+0C@ 1 DOWN        # the Master Ball
+tap A 4
+waitquiet
+tap A 4
+bwalk bv_fail_catch task:Task_HandleCaughtMonPageInput|prompt:Cmd_trygivecaughtmonnick

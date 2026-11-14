@@ -1,0 +1,12 @@
+# New Bark: Mom's intro with the PokeGear and the running shoes
+# (NewBarkTown_PlayersHouse_1F_EventScript_MomsIntroTrigger2 at (10,3), VAR_NEWBARK_TOWN_STATE 1;
+# data/maps/NewBarkTown_PlayersHouse_1F_hns/scripts.inc:199-268). Ladder 1 (bedroom, state 0) plus the
+# wall-clock block of s1_newbark.inc; the 1F stairs land on (10,2), one step down is the trigger.
+start saves/r6sj_ladder1_newgame.sav
+include _base.txt
+ev initclock 10, 0; callnative InitTimeBasedEvents; setvar VAR_NEWBARK_TOWN_STATE, 1; setflag FLAG_SET_WALL_CLOCK; end
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_1F_HNS 10 2
+snap mom_room
+stepto DOWN
+scene mom 30000 30
+snap mom_end

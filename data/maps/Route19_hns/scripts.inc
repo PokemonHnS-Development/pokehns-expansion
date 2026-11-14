@@ -68,50 +68,50 @@ Route19_EventScript_Item_Brine::
     end
 
 Route19_Text_SwimmermHaroldSeen:
-	.string "Have you ever gone swimming in the\n"
-	.string "sea at night?$"
+	.string "יצא לך פעם לשחות בים\n"
+	.string "בלילה?$"
 
 Route19_Text_SwimmermHaroldBeaten:
-	.string "Glub…$"
+	.string "גלוב…$"
 
 Route19_Text_SwimmermHaroldAfterBattle:
-	.string "At night, the sea turns black. It\n"
-	.string "feels like it will swallow you up.$"
+	.string "בלילה הים נהיה שחור. מרגישים\n"
+	.string "כאילו הוא עומד לבלוע אותך.$"
 
 Route19_Text_SwimmermTuckerSeen:
-	.string "Pant, pant… Just… a little…\p"
-	.string "farther… to… FUCHSIA…$"
+	.string "הא, הא… רק… עוד…\p"
+	.string "קצת… עד… פושיה…$"
 
 Route19_Text_SwimmermTuckerBeaten:
-	.string "I'm drowning!$"
+	.string "אני טובע!$"
 
 Route19_Text_SwimmermTuckerAfterBattle:
-	.string "I… asked my girlfriend to swim to\n"
-	.string "FUCHSIA… Gasp…$"
+	.string "הזמנתי… את החברה שלי לשחות\n"
+	.string "עד פושיה… הא…$"
 
 Route19_Text_SwimmerfDawnSeen:
-	.string "I'm disgusted by wimpy people!$"
+	.string "אנשים חלשלושים מגעילים אותי!$"
 
 Route19_Text_SwimmerfDawnBeaten:
-	.string "I could beat you at swimming…$"
+	.string "בשחייה הייתי מנצחת אותך…$"
 
 Route19_Text_SwimmerfDawnAfterBattle:
-	.string "It's a quick swim between FUCHSIA\n"
-	.string "and SEAFOAM ISLANDS…\p"
-	.string "Sheesh, some big man my boyfriend\n"
-	.string "is! What a wimp!$"
+	.string "זו שחייה קצרה בין פושיה\n"
+	.string "לאיי הקצף…\p"
+	.string "נו באמת, איזה גבר גדול החבר שלי!\n"
+	.string "איזה חלשלוש!$"
 
 Route19_Text_SwimmermJeromeSeen:
-	.string "Swimming? I'm lousy at it.\p"
-	.string "I'm just splashing around in these\n"
-	.string "shallow waters.$"
+	.string "שחייה? אני גרוע בזה.\p"
+	.string "אני סתם משתכשך פה\n"
+	.string "במים הרדודים.$"
 
 Route19_Text_SwimmermJeromeBeaten:
-	.string "I thought I could win.$"
+	.string "חשבתי שאוכל לנצח.$"
 
 Route19_Text_SwimmermJeromeAfterBattle:
-	.string "I might be bad at swimming, but I\n"
-	.string "love the sea.$"
+	.string "אולי אני גרוע בשחייה, אבל\n"
+	.string "אני אוהב את הים.$"
 
 Route19_Text_Fisher1:
 	.string "Sorry. This road is closed for\n"
@@ -121,26 +121,25 @@ Route19_Text_Fisher1:
 	.string "TOWN.$"
 
 Route19_Text_Kingler:
-	.string "KINGLER: KEEEEEEEEEEEE$"
+	.string "קינגלר: קיייייייייייי$"
 
 Route19_Text_Fisher1_RocksCleared:
-	.string "I'm all sweaty. Time for a swim!$"
+	.string "אני כולי מיוזע. הגיע הזמן לשחות!$"
 
 Route19_Text_Fisher2:
-	.string "Aw man, KINGLER is blocking the\n"
-	.string "beach.$"
+	.string "אוף, הקינגלר חוסם את החוף.$"
 
 Route19_Text_FisherBefore:
-	.string "No fishing until these KINGLER\n"
-	.string "clear out.$"
+	.string "אי אפשר לדוג\n"
+	.string "עד שהקינגלר האלה יסתלקו מפה.$"
 
 Route19_Text_Fisher2_RocksCleared:
-	.string "Those KINGLER finally left!\p"
-	.string "Now I can go fishing again.$"
+	.string "הקינגלר האלה סוף סוף הלכו!\p"
+	.string "עכשיו אני יכול לחזור לדוג.$"
 
 Route19_Text_Sign:
-	.string "ROUTE 19\p"
-	.string "FUCHSIA CITY - SEAFOAM ISLANDS$"
+	.string "דרך 19\p"
+	.string "העיר פושיה - איי הקצף$"
 
 Route19_Text_CarefulSwimmingSign:
 	.string "Please be careful if you are\n"

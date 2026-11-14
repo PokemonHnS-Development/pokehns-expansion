@@ -10,11 +10,12 @@ Alola_MelemeleSea_TrainerBattleSwimmer::
 
 
 Alola_MelemeleSea_TrainerBattleSwimmer_Text_0:
-	.string "So much open water here!$"
+	.string "יש כאן כל כך הרבה ים פתוח!$"
 
 Alola_MelemeleSea_TrainerBattleSwimmer_Text_1:
-	.string "Ouch,\npulled a hamstring…$"
+	.string "איי,\n"
+	.string "מתחתי שריר בירך…$"
 
 Alola_MelemeleSea_TrainerBattleSwimmer_Text_2:
-	.string "There are some strong currents here.\n"
-	.string "I think it attracts strong POKéMON!$"
+	.string "יש כאן זרמים חזקים.\n"
+	.string "אני חושב שהם מושכים פוקימונים חזקים!$"

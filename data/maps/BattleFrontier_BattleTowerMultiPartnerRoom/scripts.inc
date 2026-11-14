@@ -336,1471 +336,1494 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice2Reject::
 	.string "partner up with you…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice1Intro::
-	.string "Um, my name's {STR_VAR_3}, and I'm\n"
-	.string "{STR_VAR_1}'s no. {STR_VAR_2} apprentice.\p"
-	.string "Snivel…\p"
-	.string "I'm sorry!\n"
-	.string "This tension is making me cry…$"
+	.string "אממ, קוראים לי {STR_VAR_3}.\p"
+	.string "אני חניך של {STR_VAR_1},\n"
+	.string "מספר {STR_VAR_2}.\p"
+	.string "סניף…\p"
+	.string "סליחה!\n"
+	.string "המתח הזה גורם לי לבכות…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice1Mon1::
-	.string "{STR_VAR_3} advised me, so I have\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "בעצת {STR_VAR_3}, יש לי\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice1Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Snivel…\n"
-	.string "Please, please team up with me!$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\p"
+	.string "סניף…\n"
+	.string "בבקשה, בבקשה, בוא נהיה צוות!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice1Accept::
-	.string "Oh, really? You will?\n"
-	.string "Awesome! Wicked! Awoooh!\p"
-	.string "Oh… I'm sorry…\n"
-	.string "I'm so happy, I'm crying…\p"
-	.string "I'll go register right away.\n"
-	.string "Please don't go away!$"
+	.string "אה, באמת? אתה מסכים?\n"
+	.string "מדהים! אדיר! אוווווו!\p"
+	.string "אוי… סליחה…\n"
+	.string "אני כל כך שמח שאני בוכה…\p"
+	.string "אלך להירשם מיד.\n"
+	.string "בבקשה, אל תלך לשום מקום!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice1Reject::
-	.string "Oh, b-but…\n"
-	.string "Sob… Waaaaah!$"
+	.string "אוי, א-אבל…\n"
+	.string "היק… ואאאאה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Intro::
-	.string "Hi, there! I'm {STR_VAR_3}!\n"
-	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice!$"
+	.string "היי! אני {STR_VAR_3}, חניך של\n"
+	.string "{STR_VAR_1}, מספר {STR_VAR_2}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Mon1::
-	.string "{STR_VAR_3} recommended my crew.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "בהמלצת {STR_VAR_3} הרכבתי צוות:\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1},\n"
-	.string "that's what I have! Cool, huh?\p"
-	.string "So come on!\n"
-	.string "Let's form a tag team!$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1},\n"
+	.string "זה מה שיש לי! מגניב, נכון?\p"
+	.string "אז קדימה!\n"
+	.string "בוא נקים צוות זוגי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Accept::
-	.string "Yay! Great!\n"
-	.string "Okay, I'll go register, okay?$"
+	.string "יש! מעולה!\n"
+	.string "טוב, אני הולך להירשם, בסדר?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Reject::
-	.string "Aww, why?\n"
-	.string "I wanted to team up, {PLAYER}!$"
+	.string "אוף, למה?\n"
+	.string "רציתי שנהיה צוות, {PLAYER}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Intro::
-	.string "I'm {STR_VAR_3}, the no. {STR_VAR_2} apprentice\n"
-	.string "of the famous {STR_VAR_1}!$"
+	.string "אני {STR_VAR_3}!\p"
+	.string "חניך מספר {STR_VAR_2} של\n"
+	.string "{STR_VAR_1}, שכולם מכירים!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Mon1::
-	.string "I looked to {STR_VAR_3} for advice.\n"
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "ביקשתי עצה מ{STR_VAR_3}.\p"
+	.string "יש לי אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Mon2Ask::
-	.string "and one {STR_VAR_2} with {STR_VAR_1},\n"
-	.string "that's my pair.\p"
-	.string "Please, will you join me in\n"
-	.string "a tag team?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1},\n"
+	.string "זה הזוג שלי.\p"
+	.string "בבקשה, תצטרף אליי\n"
+	.string "לצוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Accept::
-	.string "Thank you!\n"
-	.string "I'll register right away!$"
+	.string "תודה!\n"
+	.string "אני רושם אותנו מיד!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Reject::
-	.string "{PLAYER}, I had been hoping to join\n"
-	.string "you in a tag team…$"
+	.string "{PLAYER}, קיוויתי שנהיה\n"
+	.string "ביחד בצוות זוגי…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice4Intro::
-	.string "Um… I'm sincerely happy that you\n"
-	.string "would take the time to talk to me.\p"
-	.string "I'm {STR_VAR_3}.\n"
-	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice…$"
+	.string "אממ… אני באמת שמחה שמצאת\n"
+	.string "זמן לדבר איתי.\p"
+	.string "אני {STR_VAR_3}, חניכה של\n"
+	.string "{STR_VAR_1}, מס' {STR_VAR_2}…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice4Mon1::
-	.string "{STR_VAR_3} gave me advice.\n"
-	.string "I'm very grateful for it.\p"
-	.string "I have a team of one {STR_VAR_2}\n"
-	.string "with {STR_VAR_1} and$"
+	.string "קיבלתי עצה מ{STR_VAR_3}.\n"
+	.string "אני מאוד אסירת תודה על כך.\p"
+	.string "יש לי צוות של {STR_VAR_2}\n"
+	.string "עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice4Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\n"
-	.string "I know I'm asking a lot…\p"
-	.string "I don't think you'll be willing to,\n"
-	.string "but may I join you as a partner?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\n"
+	.string "אני יודעת שזו בקשה גדולה…\p"
+	.string "אני לא חושבת שתסכים,\n"
+	.string "אבל אפשר להצטרף אליך כשותפה?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice4Accept::
-	.string "Really? I can't believe it!\n"
-	.string "I can't believe you'll let me join you!\l"
-	.string "I… I won't let you down!\p"
-	.string "Um… If it's really okay, I'll go register\n"
-	.string "right this instant!$"
+	.string "באמת? אני לא מאמינה!\n"
+	.string "לא מאמינה שתיתן לי להצטרף!\p"
+	.string "א… אני לא אאכזב אותך!\p"
+	.string "אממ… אם זה באמת בסדר,\n"
+	.string "אלך להירשם ברגע זה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice4Reject::
-	.string "Oh…\n"
-	.string "I didn't think I was good enough…$"
+	.string "אה…\n"
+	.string "לא חשבתי שאני מספיק טובה…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice5Intro::
-	.string "Hi, I'm {STR_VAR_3}.\n"
-	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice!$"
+	.string "היי, אני {STR_VAR_3}, חניכה של\n"
+	.string "{STR_VAR_1}, מספר {STR_VAR_2}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice5Mon1::
-	.string "{STR_VAR_3} told me that it would be\n"
-	.string "good to make this team:\l"
-	.string "one {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "לפי {STR_VAR_3}, כדאי לי\n"
+	.string "להרכיב את הצוות הזה:\p"
+	.string "אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice5Mon2Ask::
-	.string "and one {STR_VAR_2} that knows how\n"
-	.string "to use {STR_VAR_1}.\p"
-	.string "Not bad, huh?\n"
-	.string "Want me to team up with you?$"
+	.string "ו{STR_VAR_2} שיודע\n"
+	.string "להשתמש ב{STR_VAR_1}.\p"
+	.string "לא רע, נכון?\n"
+	.string "רוצה שאצטרף לצוות שלך?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice5Accept::
-	.string "Okay, glad to join you!\n"
-	.string "I hope you won't mess things up for me!\l"
-	.string "I'll do my registration now.$"
+	.string "טוב, שמחה להצטרף!\n"
+	.string "מקווה שלא תהרוס לי את העניינים!\p"
+	.string "אני הולכת להירשם עכשיו.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice5Reject::
-	.string "Huh? Why did you turn me down?\n"
-	.string "You're no judge of character!$"
+	.string "מה? למה דחית אותי?\n"
+	.string "אין לך שום הבנה באנשים!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Intro::
-	.string "I'm {STR_VAR_3} and I'm a TRIATHLETE.\n"
-	.string "I'm busy every day what with jogging,\l"
-	.string "training, and rapping.\p"
-	.string "I also happen to be {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice.$"
+	.string "אני {STR_VAR_3}, ואני טריאתלט.\p"
+	.string "אני עסוק כל יום בריצה,\n"
+	.string "באימונים ובראפ.\p"
+	.string "ובמקרה אני גם חניך של\n"
+	.string "{STR_VAR_1}, מספר {STR_VAR_2}.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Mon1::
-	.string "This is what {STR_VAR_3} recommended.\n"
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "זו ההמלצה של {STR_VAR_3}:\p"
+	.string "אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Mon2Ask::
-	.string "and one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2}.\p"
-	.string "I put a lot of effort into raising\n"
-	.string "them, even though I'm busy.\p"
-	.string "Let's form a tag team\n"
-	.string "and give it a go!$"
+	.string "ועוד אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
+	.string "השקעתי הרבה בגידול שלהם,\n"
+	.string "למרות שאני עסוק.\p"
+	.string "בוא נקים צוות זוגי\n"
+	.string "וננסה את כוחנו!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Accept::
-	.string "Thanks, that's the spirit!\n"
-	.string "Hang tight while I go register, okay?$"
+	.string "תודה, ככה צריך!\n"
+	.string "רק רגע, אני הולך להירשם, טוב?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Reject::
-	.string "I took time from my busy schedule\n"
-	.string "to be here! Give me a break!$"
+	.string "פיניתי זמן מהלו”ז העמוס שלי\n"
+	.string "כדי להיות כאן! נו באמת!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Intro::
-	.string "Hi!\n"
-	.string "How's it going?\p"
-	.string "I'm {STR_VAR_3}, {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice. Glad to meet you!$"
+	.string "היי!\n"
+	.string "מה נשמע?\p"
+	.string "אני {STR_VAR_3}, חניכה של\n"
+	.string "{STR_VAR_1}, מס' {STR_VAR_2}.\p"
+	.string "נעים מאוד!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Mon1::
-	.string "Listen, listen! You have to hear about\n"
-	.string "the POKéMON {STR_VAR_3} recommended.\l"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "תקשיב, תקשיב! אתה חייב לשמוע על\n"
+	.string "הפוקימונים בהמלצת {STR_VAR_3}.\p"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\n"
-	.string "Of course I raised them superbly!\p"
-	.string "So, want to team up?\n"
-	.string "I'm sure it'll be a great combo!$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\n"
+	.string "כמובן שגידלתי אותם מצוין!\p"
+	.string "אז, רוצה שנהיה צוות?\n"
+	.string "אני בטוחה שזה יהיה שילוב מעולה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Accept::
-	.string "Yay, I think this will be fun!\n"
-	.string "I'll go register!$"
+	.string "יש, נראה לי שיהיה כיף!\n"
+	.string "אני הולכת להירשם!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Reject::
-	.string "Oh, you're mean!\n"
-	.string "I come recommended, you know.$"
+	.string "אוף, אתה מרושע!\n"
+	.string "אני באה עם המלצות, שתדע.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Intro::
-	.string "Please let me introduce myself.\n"
-	.string "I am {STR_VAR_3}.\p"
-	.string "I serve as {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice.$"
+	.string "אם יורשה לי, אציג את עצמי.\n"
+	.string "שמי {STR_VAR_3}.\p"
+	.string "אני משמשת כחניכה של\n"
+	.string "{STR_VAR_1}, מספר {STR_VAR_2}.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Mon1::
-	.string "I sought the sage advice of\n"
-	.string "{STR_VAR_3} and raised my team\l"
-	.string "of one {STR_VAR_2} with {STR_VAR_1}$"
+	.string "ביקשתי עצה נבונה מ{STR_VAR_3}\n"
+	.string "וגידלתי את הצוות שלי:\p"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Mon2Ask::
-	.string "and one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Please agree to a tag team with me!$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\p"
+	.string "אנא, תסכים להקים איתי צוות זוגי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Accept::
-	.string "Oh… I'm delighted!\n"
-	.string "I promise to give you my best!\p"
-	.string "Of course I will register us!\n"
-	.string "Please wait!$"
+	.string "הו… אני מאושרת!\n"
+	.string "אני מבטיחה לתת את המיטב!\p"
+	.string "כמובן שאני ארשום אותנו!\n"
+	.string "אנא, רק רגע!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Reject::
-	.string "I had been hoping to join you,\n"
+	.string "קיוויתי להצטרף אליך,\n"
 	.string "{PLAYER}…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice9Intro::
-	.string "Eek! You spoke to me!\n"
-	.string "I… I'm overjoyed!\p"
-	.string "I'm {STR_VAR_3}! I'm {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice!$"
+	.string "אייי! דיברת איתי!\n"
+	.string "א… אני מאושרת!\p"
+	.string "אני {STR_VAR_3}! חניכה של\n"
+	.string "{STR_VAR_1}, מספר {STR_VAR_2}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice9Mon1::
-	.string "On {STR_VAR_3}'s advice, I trained\n"
-	.string "one {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "בעצת {STR_VAR_3},\n"
+	.string "אימנתי את הצוות הזה:\p"
+	.string "אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice9Mon2Ask::
-	.string "and one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2}.\p"
-	.string "Please, can you grant me my wish?\n"
-	.string "I want to be your tag-team partner!$"
+	.string "ועוד אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
+	.string "בבקשה, תגשים לי משאלה?\n"
+	.string "אני רוצה להיות השותפה שלך לצוות!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice9Accept::
-	.string "Eek! I… I feel giddy!\n"
-	.string "Thank you so much!\l"
-	.string "I'll go register us right away!$"
+	.string "אייי! א… הראש שלי מסתחרר!\n"
+	.string "תודה רבה רבה!\p"
+	.string "אלך לרשום אותנו מיד!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice9Reject::
-	.string "Waaah! Don't you feel any pity?\n"
-	.string "But that makes you cooler…$"
+	.string "ואאאה! אין לך שום רחמים?\n"
+	.string "אבל זה רק הופך אותך למגניב יותר…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice10Intro::
-	.string "Yeehaw! I'm {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice!\p"
-	.string "{STR_VAR_3}'s my name, hello, hello!$"
+	.string "יי-הא! אני חניך של {STR_VAR_1},\n"
+	.string "מספר {STR_VAR_2}!\p"
+	.string "קוראים לי {STR_VAR_3}, שלום, שלום!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice10Mon1::
-	.string "My mentor {STR_VAR_3} recommended\n"
-	.string "one {STR_VAR_1}-master {STR_VAR_2}$"
+	.string "המנטור שלי, {STR_VAR_3},\n"
+	.string "המליץ על הצוות הזה:\p"
+	.string "אשף {STR_VAR_1} אחד -\n"
+	.string "{STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice10Mon2Ask::
-	.string "and one {STR_VAR_1}-master\n"
+	.string "ועוד אשף {STR_VAR_1} אחד -\n"
 	.string "{STR_VAR_2}.\p"
-	.string "Good stuff, huh?\n"
-	.string "You'll partner with me, won't you?$"
+	.string "שווה, מה?\n"
+	.string "תהיה השותף שלי, נכון?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice10Accept::
-	.string "Okay, excellent!\n"
-	.string "I'll get the registration done quickly!$"
+	.string "יופי, מצוין!\n"
+	.string "אסדר את הרישום מהר!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice10Reject::
-	.string "Gwaaah!\n"
-	.string "You're a calculating one, {PLAYER}!$"
+	.string "גוואאאה!\n"
+	.string "איזה מחשבן אתה, {PLAYER}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Intro::
-	.string "Hey! There's big trouble! This is\n"
-	.string "the BATTLE TOWER's last day!\p"
+	.string "היי! צרה גדולה! היום הוא\n"
+	.string "היום האחרון של מגדל הקרב!\p"
 	.string "… … … … … …\n"
-	.string "I'm only joking!\p"
-	.string "People call me {STR_VAR_3} and I do, too!\n"
-	.string "I'm {STR_VAR_1}'s 1,000th apprentice!\l"
-	.string "Actually, I'm no. {STR_VAR_2}!$"
+	.string "סתם, צחקתי!\p"
+	.string "כולם קוראים לי {STR_VAR_3}, וגם אני!\n"
+	.string "אני החניך ה-1,000 של {STR_VAR_1}!\p"
+	.string "בעצם, אני מספר {STR_VAR_2}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Mon1::
-	.string "{STR_VAR_3} gave me some advice.\n"
-	.string "{STR_VAR_2} with {STR_VAR_1} and$"
+	.string "קיבלתי עצה מ{STR_VAR_3}.\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Mon2Ask::
-	.string "{STR_VAR_2} with {STR_VAR_1}.\n"
-	.string "I've got ten of each kind!\l"
-	.string "Actually, just one of each!\p"
-	.string "How about it?\n"
-	.string "Want to try tag battles with me?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\n"
+	.string "יש לי עשרה מכל סוג!\p"
+	.string "בעצם, רק אחד מכל סוג!\p"
+	.string "נו, מה אתה אומר?\n"
+	.string "רוצה לנסות איתי קרבות צוות?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Accept::
-	.string "Yippee!\n"
-	.string "I'll give you a POKéMON as my thanks!\p"
-	.string "Just joking! But I will really go do\n"
-	.string "the registration, okay?$"
+	.string "יששש!\n"
+	.string "אתן לך פוקימון כאות תודה!\p"
+	.string "סתם, צחקתי! אבל אני באמת הולך\n"
+	.string "לעשות את הרישום, בסדר?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Reject::
-	.string "Oh, that's so cold! I'll have to wreck\n"
-	.string "the BATTLE TOWER for that!\p"
-	.string "Of course I won't!$"
+	.string "אוי, איזה קור לב! בגלל זה\n"
+	.string "אצטרך להרוס את מגדל הקרב!\p"
+	.string "ברור שלא באמת!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Intro::
-	.string "Hey, there, I'm rockin' and a-rollin'!\n"
-	.string "POKéMON, I be controllin'!\p"
-	.string "I'm {STR_VAR_3} the rappin' SAILOR.\n"
-	.string "Don't be mistakin' me for no wailer!\p"
-	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\n"
-	.string "Me, you shouldn't be quick to dismiss!$"
+	.string "יו, אני מקפיץ ומתפרע,\n"
+	.string "את הפוקימונים אני מניע!\p"
+	.string "אני {STR_VAR_3}, מלח וראפר,\n"
+	.string "ולא סתם עוד בכיין מהכפר!\p"
+	.string "חניך של {STR_VAR_1} אני,\n"
+	.string "מספר {STR_VAR_2}, אל תזלזל בי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Mon1::
-	.string "With the advice of {STR_VAR_3} I did\n"
-	.string "abide, put together my team of pride!\l"
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "בעצת {STR_VAR_3} הלכתי,\n"
+	.string "צוות לתפארת הרכבתי!\p"
+	.string "אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Mon2Ask::
-	.string "and one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2}!\p"
-	.string "Our meeting we should commemorate,\n"
-	.string "with a tag-team victory to celebrate!$"
+	.string "ועוד אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}!\p"
+	.string "מפגש כזה צריך לחגוג,\n"
+	.string "בניצחון של צוות, בלי לדאוג!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Accept::
-	.string "Hey, hey, I like your style!\n"
-	.string "Our registration, I will go file!$"
+	.string "היי, היי, הסגנון שלך מעולה!\n"
+	.string "אלך לרשום אותנו, בלי שום שאלה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Reject::
-	.string "Oh, hey, {PLAYER}, now that's cold!\n"
-	.string "If I may be so bold!$"
+	.string "אוי, היי, {PLAYER}, זה קר ולא יפה!\n"
+	.string "אם מותר לי לומר את זה בחוצפה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice13Intro::
-	.string "Yippee-yahoo!\n"
-	.string "Oh, don't run! I was just having fun!\p"
-	.string "Howdy! I'm {STR_VAR_3}!\n"
-	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice!$"
+	.string "יפי-יאהו!\n"
+	.string "אל תברח! סתם עשיתי שמח!\p"
+	.string "מה המצב! אני {STR_VAR_3}, חניך של\n"
+	.string "{STR_VAR_1}, מספר {STR_VAR_2}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice13Mon1::
-	.string "{STR_VAR_3} told me what to do.\n"
-	.string "So one {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "קיבלתי מ{STR_VAR_3} הוראות.\p"
+	.string "אז יש לי אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice13Mon2Ask::
-	.string "and one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2}, I did choose.\p"
-	.string "So, what do you say?\n"
-	.string "Come on, make my day!\p"
-	.string "Please, I'm begging you!\n"
-	.string "Let me join you, don't leave me blue!$"
+	.string "ועוד אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
+	.string "את שניהם בחרתי, אז מה תגיד?\n"
+	.string "קדימה, תשמח אותי מיד!\p"
+	.string "בבקשה, אני מתחנן!\n"
+	.string "תן לי להצטרף, אל תשאיר אותי מסכן!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice13Accept::
-	.string "Yeahah! Luck is with me!\n"
-	.string "It sure makes me happy!\p"
-	.string "Before we go join the fray,\n"
-	.string "I'll go register right away!$"
+	.string "יה-הא! המזל איתי!\n"
+	.string "זה משמח אותי עד אין די!\p"
+	.string "לפני שנצא לקרב הסוער,\n"
+	.string "אלך להירשם, בלי לאחר!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice13Reject::
-	.string "You're turning me down?\n"
-	.string "{PLAYER}, you're making me frown!$"
+	.string "אתה דוחה אותי? איזה מבאס!\n"
+	.string "{PLAYER}, עכשיו אני כועס!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice14Intro::
-	.string "Cough!\p"
-	.string "Oh, sorry, I have a cold.\n"
-	.string "My POKéMON are fine, though.\p"
-	.string "My name's {STR_VAR_3}, {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice. Cough!$"
+	.string "כחח!\p"
+	.string "אה, סליחה, אני מצונן.\n"
+	.string "אבל הפוקימונים שלי בסדר.\p"
+	.string "שמי {STR_VAR_3}. כחח! אני חניך של\n"
+	.string "{STR_VAR_1}, מספר {STR_VAR_2}.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice14Mon1::
-	.string "I took {STR_VAR_3}'s advice to heart\n"
-	.string "and put together my team of\l"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "לקחתי ללב את העצה של {STR_VAR_3}\n"
+	.string "והרכבתי צוות:\p"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice14Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "I trained them every day,\n"
-	.string "even in wind and rain.\p"
-	.string "That's why I have this cold,\n"
-	.string "I think.\p"
-	.string "That's what I'm about.\n"
-	.string "Want to be my tag partner?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\p"
+	.string "אימנתי אותם כל יום,\n"
+	.string "גם ברוח ובגשם.\p"
+	.string "בגלל זה הצטננתי,\n"
+	.string "נראה לי.\p"
+	.string "זה מי שאני.\n"
+	.string "רוצה להיות השותף שלי לצוות?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice14Accept::
-	.string "Thanks, I appreciate this!\n"
-	.string "Cough, cough!\l"
-	.string "Hang on while I go register.$"
+	.string "תודה, אני מעריך את זה!\n"
+	.string "כחח, כחח!\p"
+	.string "רגע, אני הולך להירשם.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice14Reject::
-	.string "Oh, you won't?\n"
-	.string "{PLAYER}, I think we'd make a good pair.$"
+	.string "אה, אתה לא רוצה?\n"
+	.string "{PLAYER}, נראה לי שהיינו זוג טוב.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice15Intro::
-	.string "Oh, hello!\n"
-	.string "This is nerve-racking.\p"
-	.string "I'm {STR_VAR_3}.\n"
-	.string "I'm the no. {STR_VAR_2} apprentice of {STR_VAR_1}.$"
+	.string "אה, שלום!\n"
+	.string "זה מורט עצבים.\p"
+	.string "אני {STR_VAR_3}, חניך מספר\n"
+	.string "{STR_VAR_2} של {STR_VAR_1}.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice15Mon1::
-	.string "{STR_VAR_3} said this team'll be good--\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "לפי {STR_VAR_3}, זה יהיה צוות טוב:\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice15Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "I'm feeling self-conscious about this,\n"
-	.string "but will you let me join you?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\p"
+	.string "אני קצת נבוך לבקש,\n"
+	.string "אבל תיתן לי להצטרף אליך?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice15Accept::
-	.string "Oh, gee, thank you!\n"
-	.string "I feel bashful, but I'll do my best!\p"
-	.string "I'll go get the registration done.$"
+	.string "אוי, וואו, תודה!\n"
+	.string "אני מתבייש, אבל אעשה כמיטב יכולתי!\p"
+	.string "אלך לסדר את הרישום.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice15Reject::
-	.string "Oh, please don't say no!\n"
-	.string "I feel self-conscious enough already…$"
+	.string "אוי, בבקשה אל תסרב!\n"
+	.string "אני כבר נבוך מספיק…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice16Intro::
-	.string "I am {STR_VAR_3}, and that's no lie.\n"
-	.string "I am {STR_VAR_1}'s no. {STR_VAR_2} apprentice.$"
+	.string "שמי {STR_VAR_3}, ואין זה שקר.\p"
+	.string "אני חניך של {STR_VAR_1},\n"
+	.string "מספר {STR_VAR_2}.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice16Mon1::
-	.string "{STR_VAR_3} recommended my team.\p"
-	.string "Since the advice sounded sincere,\n"
-	.string "I decided to bring with me\l"
-	.string "my {STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "בהמלצת {STR_VAR_3} הרכבתי צוות.\p"
+	.string "מאחר שהעצה נשמעה כנה,\n"
+	.string "החלטתי להביא איתי\p"
+	.string "אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice16Mon2Ask::
-	.string "my {STR_VAR_1}-using {STR_VAR_2}.\p"
-	.string "If possible, I would like you to accept\n"
-	.string "me as your tag-team partner.$"
+	.string "ואחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
+	.string "אם אפשר, הייתי רוצה שתקבל אותי\n"
+	.string "כשותף שלך לצוות.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice16Accept::
-	.string "You really will accept me?\n"
-	.string "It would be too terrible otherwise.\p"
-	.string "But since you've agreed, this is fine.\n"
-	.string "I shall go register the both of us.$"
+	.string "באמת תקבל אותי?\n"
+	.string "אחרת זה היה נורא מדי.\p"
+	.string "אבל מאחר שהסכמת, הכול בסדר.\n"
+	.string "אלך לרשום את שנינו.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice16Reject::
-	.string "Hm? Now why would you refuse?\n"
-	.string "Is this your idea of a joke?$"
+	.string "הממ? ומדוע שתסרב?\n"
+	.string "זו אמורה להיות בדיחה?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassIntro::
-	.string "I'm {STR_VAR_1}, and I'm a LASS!$"
+	.string "אני {STR_VAR_1}, ואני עלמה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassMon1::
-	.string "What I have are one {STR_VAR_2}\n"
-	.string "that uses {STR_VAR_1} and one$"
+	.string "מה שיש לי זה {STR_VAR_2}\n"
+	.string "שמשתמש ב{STR_VAR_1}, ועוד$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassMon2Ask::
-	.string "{STR_VAR_2} that uses {STR_VAR_1}.\n"
-	.string "Those are what I have with me.\p"
-	.string "Will you be my partner?$"
+	.string "{STR_VAR_2} שמשתמש\n"
+	.string "ב{STR_VAR_1}.\p"
+	.string "אלה הפוקימונים שאיתי.\n"
+	.string "תהיה השותף שלי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassAccept::
-	.string "Thank you!\n"
-	.string "I'll go do the registration!$"
+	.string "תודה!\n"
+	.string "אני הולכת לעשות את הרישום!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassReject::
-	.string "You don't want to be my partner?\n"
-	.string "You'll regret it later!$"
+	.string "אתה לא רוצה להיות השותף שלי?\n"
+	.string "עוד תתחרט על זה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterIntro::
-	.string "Hello!\p"
-	.string "I'm YOUNGSTER {STR_VAR_1}!$"
+	.string "שלום!\p"
+	.string "אני הצעיר {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterMon1::
-	.string "Want to know what I have?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "רוצה לדעת מה יש לי?\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "You'll be my tag-team partner,\n"
-	.string "won't you?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "תהיה השותף שלי לצוות,\n"
+	.string "נכון?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterAccept::
-	.string "Yay!\n"
-	.string "I'll go and register, okay?$"
+	.string "יש!\n"
+	.string "אני הולך להירשם, טוב?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterReject::
-	.string "Aww! If you'd form a tag team with\n"
-	.string "my POKéMON, we'd be unstoppable!$"
+	.string "אוף! אם היית מקים צוות זוגי עם\n"
+	.string "הפוקימונים שלי, לא היו עוצרים אותנו!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerIntro::
-	.string "Yahoo!\n"
-	.string "I'm HIKER {STR_VAR_1}!$"
+	.string "יאהו!\n"
+	.string "אני המטייל {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerMon1::
-	.string "Know what I have with me?\n"
-	.string "My {STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "יודע מה יש לי? אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerMon2Ask::
-	.string "my {STR_VAR_1}-using {STR_VAR_2}!\p"
-	.string "Sounds good, eh?\n"
-	.string "Want to form a tag team?$"
+	.string "ועוד אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}!\p"
+	.string "נשמע טוב, הא?\n"
+	.string "רוצה להקים צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerAccept::
-	.string "Yahoo!\n"
-	.string "I'll go do the registering, then.$"
+	.string "יאהו!\n"
+	.string "אז אני הולך לעשות את הרישום.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerReject::
-	.string "I would've liked to battle with you\n"
-	.string "at my side.$"
+	.string "הייתי שמח להילחם\n"
+	.string "כשאתה לצידי.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyIntro::
-	.string "Hello!\n"
-	.string "I'm {STR_VAR_1}, and I'm a BEAUTY!$"
+	.string "שלום!\n"
+	.string "אני {STR_VAR_1}, ואני יפהפייה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyMon1::
-	.string "Do you know what I've been raising?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "יודע מה גידלתי?\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "What do you think?\n"
-	.string "Want to make a tag team together?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "מה דעתך?\n"
+	.string "רוצה שנקים צוות זוגי ביחד?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyAccept::
-	.string "Wonderful!\n"
-	.string "I'll get the registration done now!$"
+	.string "נפלא!\n"
+	.string "אסדר את הרישום עכשיו!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyReject::
-	.string "How disappointing!\p"
-	.string "We two together--we would've been\n"
-	.string "the best!$"
+	.string "איזו אכזבה!\p"
+	.string "שנינו ביחד - היינו יכולים\n"
+	.string "להיות הכי טובים!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanIntro::
-	.string "Yo!\p"
-	.string "You know who I am?\n"
-	.string "I'm {STR_VAR_1} the FISHERMAN!$"
+	.string "יו!\p"
+	.string "יודע מי אני?\n"
+	.string "אני {STR_VAR_1} הדייג!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanMon1::
-	.string "I've got with me a team of one\n"
-	.string "{STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "יש איתי צוות: אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanMon2Ask::
-	.string "one {STR_VAR_1}-using {STR_VAR_2}.\p"
-	.string "So, how about it?\n"
-	.string "Will you battle at my side?$"
+	.string "ואחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
+	.string "נו, מה אתה אומר?\n"
+	.string "תילחם לצידי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanAccept::
-	.string "Good, good!\n"
-	.string "Leave it up to me!\p"
-	.string "I'll go and register us now.$"
+	.string "טוב, טוב!\n"
+	.string "תסמוך עליי!\p"
+	.string "אני הולך לרשום אותנו עכשיו.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanReject::
-	.string "We matched up perfectly, too…$"
+	.string "ודווקא היינו זוג מושלם…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyIntro::
-	.string "Glad to make your acquaintance.\n"
-	.string "I am {STR_VAR_1}, a LADY.$"
+	.string "נעים להכיר.\n"
+	.string "שמי {STR_VAR_1}, ואני גברת.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyMon1::
-	.string "I am accompanied by a team of\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "מלווה אותי צוות של\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "I hope I meet your approval.\n"
-	.string "For I wish to have you as my partner.$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\p"
+	.string "אני מקווה שאמצא חן בעיניך,\n"
+	.string "שכן ברצוני שתהיה שותפי.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyAccept::
-	.string "I thank you sincerely.\n"
-	.string "I shall handle the registration.$"
+	.string "אני מודה לך מעומק הלב.\n"
+	.string "אני אטפל ברישום.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyReject::
-	.string "I'm sure that you will regret not\n"
-	.string "having me as your partner.$"
+	.string "אני בטוחה שתצטער על כך\n"
+	.string "שלא בחרת בי כשותפה.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFIntro::
-	.string "I'm TRIATHLETE {STR_VAR_1}!$"
+	.string "אני הטריאתלטית {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFMon1::
-	.string "What I have…\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "מה שיש לי…\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\n"
-	.string "That's my pair!\p"
-	.string "Please?\n"
-	.string "Will you form a tag team with me?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\n"
+	.string "זה הזוג שלי!\p"
+	.string "נו, בבקשה?\n"
+	.string "תקים איתי צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFAccept::
-	.string "Gee, thanks!\n"
-	.string "I'll go register at the counter.$"
+	.string "וואו, תודה!\n"
+	.string "אני הולכת להירשם בדלפק.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFReject::
-	.string "We two together, we would've been\n"
-	.string "tough for certain!$"
+	.string "שנינו ביחד היינו\n"
+	.string "קשוחים, בטוח!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherIntro::
-	.string "Hiya!\n"
-	.string "I'm BUG CATCHER {STR_VAR_1}!$"
+	.string "היי!\n"
+	.string "אני לוכד החרקים {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherMon1::
-	.string "Check out what I have!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "תראה מה יש לי!\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "So, listen!\n"
-	.string "Do you want to form a tag team?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "אז תקשיב!\n"
+	.string "רוצה להקים צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherAccept::
-	.string "Gotcha!\p"
-	.string "I'll go do the registration stuff\n"
-	.string "at the counter.$"
+	.string "סגור!\p"
+	.string "אני הולך לסדר את הרישום\n"
+	.string "בדלפק.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherReject::
-	.string "Aww, my POKéMON are awesome.\n"
-	.string "I hope you won't regret this!$"
+	.string "אוף, הפוקימונים שלי אדירים.\n"
+	.string "מקווה שלא תתחרט על זה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMIntro::
-	.string "Good day!\n"
-	.string "I'm SCHOOL KID {STR_VAR_1}!$"
+	.string "יום טוב!\n"
+	.string "אני התלמיד {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMMon1::
-	.string "What I've been raising are one\n"
-	.string "{STR_VAR_2} that uses {STR_VAR_1}$"
+	.string "אני מגדל {STR_VAR_2}\n"
+	.string "שמשתמש ב{STR_VAR_1}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMMon2Ask::
-	.string "and one {STR_VAR_2} that uses\n"
-	.string "{STR_VAR_1}.\p"
-	.string "Not too bad, don't you think?\n"
-	.string "Would you care to form a tag team?$"
+	.string "ו{STR_VAR_2} שמשתמש\n"
+	.string "ב{STR_VAR_1}.\p"
+	.string "לא רע בכלל, נכון?\n"
+	.string "תרצה להקים איתי צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMAccept::
-	.string "Thank you very much!\n"
-	.string "I'll get done with the registration.$"
+	.string "תודה רבה!\n"
+	.string "אני אדאג לרישום.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMReject::
-	.string "That's too bad…\p"
-	.string "I was hoping that I could learn\n"
-	.string "from you as your partner…$"
+	.string "חבל…\p"
+	.string "קיוויתי שאוכל ללמוד\n"
+	.string "ממך בתור השותף שלך…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyIntro::
-	.string "Yo! Let me tell you who I am!\n"
-	.string "I'm RICH BOY {STR_VAR_1}!$"
+	.string "יו! אגיד לך מי אני!\n"
+	.string "אני הילד העשיר {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyMon1::
-	.string "Guess what I got!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "נחש מה יש לי!\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "I'm willing to offer you the chance\n"
-	.string "to be in a tag team with me.$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "אני מוכן להציע לך את ההזדמנות\n"
+	.string "להיות איתי בצוות זוגי.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyAccept::
-	.string "Smart move!\p"
-	.string "I'll finish up the registration\n"
-	.string "process quick!$"
+	.string "צעד חכם!\p"
+	.string "אסיים את תהליך הרישום\n"
+	.string "במהירות!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyReject::
-	.string "You'd turn me of all people down?\n"
-	.string "You'll regret that decision for sure!$"
+	.string "אתה דוחה דווקא אותי?\n"
+	.string "בטוח שתתחרט על ההחלטה הזאת!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BlackBeltIntro::
-	.string "Hiyah!\n"
-	.string "I am BLACK BELT {STR_VAR_1}.$"
+	.string "הייאה!\n"
+	.string "אני החגורה השחורה {STR_VAR_1}.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BlackBeltMon1::
-	.string "As my companions, I have\n"
-	.string "one {STR_VAR_2} using {STR_VAR_1}$"
+	.string "כבני לוויה, יש לי {STR_VAR_2}\n"
+	.string "שמשתמש ב{STR_VAR_1}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BlackBeltMon2Ask::
-	.string "and one {STR_VAR_2} using\n"
-	.string "{STR_VAR_1}.\p"
-	.string "Please, grant me my wish!\n"
-	.string "Allow me to be your tag partner!$"
+	.string "ו{STR_VAR_2} שמשתמש\n"
+	.string "ב{STR_VAR_1}.\p"
+	.string "אנא, הגשם את משאלתי!\n"
+	.string "הרשה לי להיות שותפך לצוות!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BlackBeltAccept::
-	.string "Hiyah!\n"
-	.string "I will go register forthwith!$"
+	.string "הייאה!\n"
+	.string "אלך להירשם לאלתר!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BlackBeltReject::
-	.string "I see… I hope for an opportunity\n"
-	.string "the next time we meet…$"
+	.string "הבנתי… אני מקווה להזדמנות\n"
+	.string "בפעם הבאה שניפגש…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFIntro::
-	.string "Hi, there!\n"
-	.string "I'm {STR_VAR_1}, and I'm a TUBER!$"
+	.string "היי!\n"
+	.string "אני {STR_VAR_1}, ואני ילדת גלגל ים!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFMon1::
-	.string "I'll tell you what I have.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "אספר לך מה יש לי.\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\n"
-	.string "May I please be on your tag team?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\n"
+	.string "אפשר בבקשה להיות בצוות הזוגי שלך?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFAccept::
-	.string "Thank you!\n"
-	.string "I'll go register us now!$"
+	.string "תודה!\n"
+	.string "אני הולכת לרשום אותנו עכשיו!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFReject::
-	.string "If we'd become partners, we could\n"
-	.string "have been so strong!$"
+	.string "אם היינו שותפים, היינו\n"
+	.string "יכולים להיות כל כך חזקים!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacIntro::
-	.string "Greetings…\n"
-	.string "I am HEX MANIAC {STR_VAR_1}…$"
+	.string "שלום לך…\n"
+	.string "אני מטורפת הכישוף {STR_VAR_1}…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacMon1::
-	.string "I bear with me one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2} together with one$"
+	.string "אני נושאת איתי אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacMon2Ask::
-	.string "{STR_VAR_1}-using {STR_VAR_2}…\p"
-	.string "I beseech you…\n"
-	.string "Join me in a tag team…$"
+	.string "יחד עם אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}…\p"
+	.string "אני מתחננת…\n"
+	.string "הצטרף אליי לצוות זוגי…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacAccept::
-	.string "I thank you…\n"
-	.string "I shall register us…$"
+	.string "אני מודה לך…\n"
+	.string "אני ארשום אותנו…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacReject::
-	.string "I so longed to join you…$"
+	.string "כל כך השתוקקתי להצטרף אליך…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMIntro::
-	.string "How do you do? I'm {STR_VAR_1},\n"
-	.string "and I'm a POKéMON BREEDER!$"
+	.string "מה שלומך? אני {STR_VAR_1},\n"
+	.string "ואני מגדל פוקימון!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMMon1::
-	.string "I'm raising a couple good ones!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "אני מגדל שניים ממש טובים!\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "How about it?\n"
-	.string "Feel like making a tag team with me?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "מה אתה אומר?\n"
+	.string "בא לך להקים איתי צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMAccept::
-	.string "Thank you kindly!\p"
-	.string "I'll go take care of the registration\n"
-	.string "stuff, so you wait right here!$"
+	.string "תודה רבה לך!\p"
+	.string "אני הולך לטפל בעניין הרישום,\n"
+	.string "אז חכה כאן!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMReject::
-	.string "I was looking forward to being\n"
-	.string "your partner…$"
+	.string "כל כך חיכיתי להיות\n"
+	.string "השותף שלך…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFIntro::
-	.string "Well, hello!\n"
-	.string "I'm TRIATHLETE {STR_VAR_1}!$"
+	.string "שלום לך!\n"
+	.string "אני הטריאתלטית {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFMon1::
-	.string "Want to know what I run with?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "רוצה לדעת עם מי אני רצה?\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Well?\n"
-	.string "Want to be in a tag team with me?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "נו?\n"
+	.string "רוצה להיות איתי בצוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFAccept::
-	.string "Good going!\p"
-	.string "I'll be quick and get the registration\n"
-	.string "all done!$"
+	.string "כל הכבוד!\p"
+	.string "אזדרז ואסדר את כל הרישום!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFReject::
-	.string "You and me, we would've been tops.\n"
-	.string "It's too bad…$"
+	.string "שנינו היינו יכולים להיות הכי טובים.\n"
+	.string "ממש חבל…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteMIntro::
-	.string "Hey, there! My name's {STR_VAR_1}!\n"
-	.string "I'm a TRIATHLETE!$"
+	.string "היי! קוראים לי {STR_VAR_1}!\n"
+	.string "אני טריאתלט!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteMMon1::
-	.string "I go on runs with my durable team--\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "אני רץ עם הצוות העמיד שלי:\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Not too shabby, huh?\n"
-	.string "We should be in a tag team together!$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "לא רע, נכון?\n"
+	.string "כדאי שנהיה יחד בצוות זוגי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteMAccept::
-	.string "All right!\n"
-	.string "I'll go register in a flash!$"
+	.string "מעולה!\n"
+	.string "אני רץ להירשם כהרף עין!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteMReject::
-	.string "I really wanted to battle as your\n"
-	.string "tag-team partner…$"
+	.string "ממש רציתי להילחם לצדך\n"
+	.string "בתור שותף לצוות…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlIntro::
-	.string "I'm BATTLE GIRL {STR_VAR_1}!$"
+	.string "אני {STR_VAR_1}, נערת קרב!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlMon1::
-	.string "I've been toughening up one\n"
-	.string "{STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "אני מחשלת פוקימון שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlMon2Ask::
-	.string "one {STR_VAR_1}-using {STR_VAR_2}!\p"
-	.string "Do you like that combo?\n"
-	.string "How about you and me join up?$"
+	.string "ועוד אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}!\p"
+	.string "אהבת את השילוב?\n"
+	.string "מה דעתך שנחבור יחד?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlAccept::
-	.string "Why, thanks!\p"
-	.string "I'll get the registration done\n"
-	.string "right now!$"
+	.string "וואו, תודה!\p"
+	.string "אני מסדרת את הרישום\n"
+	.string "כבר עכשיו!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlReject::
-	.string "With you, I thought we could form\n"
-	.string "the ultimate tag team…$"
+	.string "חשבתי שאיתך נוכל להקים\n"
+	.string "את הצוות הזוגי האולטימטיבי…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMIntro::
-	.string "I'm TRIATHLETE {STR_VAR_1}!$"
+	.string "אני הטריאתלט {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMMon1::
-	.string "I've been running with one {STR_VAR_2}\n"
-	.string "that knows how to use {STR_VAR_1}$"
+	.string "אני מסתובב עם {STR_VAR_2} אחד\n"
+	.string "שיודע להשתמש ב{STR_VAR_1}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMMon2Ask::
-	.string "and one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "We could be in a tag team.\n"
-	.string "Wouldn't that be great?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "נוכל להיות צוות זוגי.\n"
+	.string "יהיה נהדר, לא?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMAccept::
-	.string "Thank you!\p"
-	.string "I'll go register us, and that's\n"
-	.string "right now!$"
+	.string "תודה!\p"
+	.string "אני הולך לרשום אותנו,\n"
+	.string "ומיד!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMReject::
-	.string "Aww, that's too bad. We would've been\n"
-	.string "the toughest tag team around!$"
+	.string "אוף, חבל. היינו יכולים להיות\n"
+	.string "הצוות הזוגי הכי קשוח פה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMIntro::
-	.string "Me?\n"
-	.string "I'm TUBER {STR_VAR_1}!$"
+	.string "אני?\n"
+	.string "אני ילד גלגל הים {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMMon1::
-	.string "What do I have with me?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "מה יש לי איתי?\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Hey?\n"
-	.string "You'll team up with me, right?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "נו?\n"
+	.string "תהיה איתי בצוות, נכון?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMAccept::
-	.string "Okay!\p"
-	.string "I'll go register!\n"
-	.string "Let's be excellent together!$"
+	.string "אוקיי!\p"
+	.string "אני הולך להירשם!\n"
+	.string "ביחד נהיה מצוינים!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMReject::
-	.string "My POKéMON are tough for sure…\n"
-	.string "It's too bad you don't want to team up.$"
+	.string "הפוקימונים שלי חזקים, בטוח…\n"
+	.string "חבל שלא רצית להצטרף אליי.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristIntro::
-	.string "Yay-hey!\n"
-	.string "Call me GUITARIST {STR_VAR_1}!$"
+	.string "יה-היי!\n"
+	.string "תקראו לי הגיטריסט {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristMon1::
-	.string "Check out my entourage!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "הנה הפמליה שלי!\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Yay-hey! Pretty wild, huh?\n"
-	.string "We'll have to do a duet in a tag team!$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "יה-היי! די פרוע, הא?\n"
+	.string "חייבים לנגן דואט כצוות זוגי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristAccept::
-	.string "Yay-hey! Right on!\n"
-	.string "I'll do that registration stuff now!$"
+	.string "יה-היי! מעולה!\n"
+	.string "אני הולך לסדר עכשיו את עניין הרישום!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristReject::
-	.string "My POKéMON rock hard!\n"
-	.string "You'll be sorry, I tell you!$"
+	.string "הפוקימונים שלי מרעידים את הבמה!\n"
+	.string "עוד תצטער, אני אומר לך!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GentlemanIntro::
-	.string "Pleased to meet you.\n"
-	.string "I am {STR_VAR_1}, a GENTLEMAN.$"
+	.string "נעים מאוד להכיר.\n"
+	.string "אני {STR_VAR_1}, ג'נטלמן.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GentlemanMon1::
-	.string "I am accompanied by my trusted\n"
-	.string "{STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "מלווה אותי פוקימון נאמן שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GentlemanMon2Ask::
-	.string "one {STR_VAR_1}-using {STR_VAR_2}.\p"
-	.string "May I ask you to join me in a tag-team\n"
-	.string "partnership arrangement?$"
+	.string "ועוד אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
+	.string "האם אוכל לבקש ממך להצטרף אליי\n"
+	.string "להסדר של שותפות בצוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GentlemanAccept::
-	.string "Ah, I thank you for your trust.\n"
-	.string "I shall be done with the registration.$"
+	.string "אה, אני מודה לך על האמון.\n"
+	.string "אדאג להשלים את הרישום.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GentlemanReject::
-	.string "That is most unfortunate…\p"
-	.string "I shall look forward to the next\n"
-	.string "opportunity…$"
+	.string "זה מצער ביותר…\p"
+	.string "אצפה להזדמנות הבאה…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanMIntro::
-	.string "Hello, I'm {STR_VAR_1},\n"
-	.string "and I'm a POKéFAN.$"
+	.string "שלום, אני {STR_VAR_1},\n"
+	.string "ואני פוקיפאן.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanMMon1::
-	.string "I have with me now one {STR_VAR_2}\n"
-	.string "that knows the move {STR_VAR_1} and$"
+	.string "יש איתי עכשיו {STR_VAR_2} אחד\n"
+	.string "שיודע את המהלך {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Do you like what you see?\n"
-	.string "Why don't you be my tag partner?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\p"
+	.string "מוצא חן בעיניך?\n"
+	.string "מה דעתך שנהיה שותפים לצוות?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanMAccept::
-	.string "Thank you!\n"
-	.string "I'll look after the registration!$"
+	.string "תודה!\n"
+	.string "אני אדאג לרישום!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanMReject::
-	.string "My POKéMON are top grade…\n"
-	.string "It's too bad you can't appreciate that.$"
+	.string "הפוקימונים שלי מהשורה הראשונה…\n"
+	.string "חבל שלא ידעת להעריך את זה.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertMIntro::
-	.string "Hm!\n"
-	.string "I am {STR_VAR_1}, and an EXPERT am I!$"
+	.string "המ!\n"
+	.string "אני {STR_VAR_1}, ומומחה אני!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertMMon1::
-	.string "The POKéMON that I've toughened up are\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "הפוקימונים שחישלתי הם\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "What say you to a tag team with me?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "מה תאמר על צוות זוגי איתי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertMAccept::
-	.string "Hm!\n"
-	.string "I shall register us right away!\l"
-	.string "Let us both do our best!$"
+	.string "המ! ארשום אותנו מיד!\n"
+	.string "הבה ניתן שנינו את המיטב!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertMReject::
-	.string "I will hope that your choice is\n"
-	.string "indeed correct…$"
+	.string "אני מקווה שהבחירה שלך\n"
+	.string "אכן נכונה…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFIntro::
-	.string "Hello, hello.\n"
-	.string "I'm {STR_VAR_1}, and I'm an EXPERT.$"
+	.string "שלום, שלום.\n"
+	.string "אני {STR_VAR_1}, ואני מומחית.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFMon1::
-	.string "I've raised my POKéMON thoroughly.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "גידלתי את הפוקימונים שלי ביסודיות.\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}--\n"
-	.string "they're what I have.\p"
-	.string "Wouldn't you like to team up with me?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1} -\n"
+	.string "אלה הפוקימונים שלי.\p"
+	.string "לא היית רוצה להצטרף אליי לצוות?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFAccept::
-	.string "Good, good.\n"
-	.string "I'll see to the registration right away.$"
+	.string "טוב, טוב.\n"
+	.string "אדאג לרישום מיד.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFReject::
-	.string "Perhaps we can form a team the next\n"
-	.string "time we meet.$"
+	.string "אולי נוכל להקים צוות\n"
+	.string "בפעם הבאה שניפגש.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerIntro::
-	.string "I'm DRAGON TAMER {STR_VAR_1}!$"
+	.string "אני מאלף הדרקונים {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerMon1::
-	.string "The team I've been toughening up is\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "הצוות שחישלתי הוא\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "How about it?\n"
-	.string "Want to be my partner?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "נו, מה דעתך?\n"
+	.string "רוצה להיות השותף שלי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerAccept::
-	.string "Okay, I'll give it my best!\n"
-	.string "I'll go register now, all right?$"
+	.string "אוקיי, אתן את המיטב!\n"
+	.string "אני הולך להירשם עכשיו, בסדר?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerReject::
-	.string "You're not going to find many tougher\n"
-	.string "partners than me!$"
+	.string "קשה למצוא שותפים\n"
+	.string "קשוחים ממני!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperIntro::
-	.string "I'm BIRD KEEPER {STR_VAR_1}!$"
+	.string "אני מגדל הציפורים {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperMon1::
-	.string "What POKéMON do I have?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "אילו פוקימונים יש לי?\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Don't you think we'd make a decent\n"
-	.string "tag team?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\p"
+	.string "לא נראה לך שנהיה\n"
+	.string "צוות זוגי לא רע?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperAccept::
-	.string "Great, thanks!\n"
-	.string "I'll look after the registration!$"
+	.string "מעולה, תודה!\n"
+	.string "אני אדאג לרישום!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperReject::
-	.string "My POKéMON and I are strong.\n"
-	.string "What a letdown.$"
+	.string "אני והפוקימונים שלי חזקים.\n"
+	.string "איזו אכזבה.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyIntro::
-	.string "I'm NINJA BOY {STR_VAR_1}!$"
+	.string "אני נער הנינג'ה {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyMon1::
-	.string "My POKéMON team consists of one\n"
-	.string "{STR_VAR_2} with {STR_VAR_1} and$"
+	.string "צוות הפוקימונים שלי כולל\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Let's be in a tag team together!$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "קדימה, נהיה ביחד בצוות זוגי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyAccept::
-	.string "Yay!\n"
-	.string "Let me go register!$"
+	.string "יש!\n"
+	.string "אני רץ להירשם!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyReject::
-	.string "You'll regret not having my tough\n"
-	.string "POKéMON on your side!$"
+	.string "עוד תתחרט שהפוקימונים הקשוחים\n"
+	.string "שלי לא יהיו לצדך!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyIntro::
-	.string "Hello!\n"
-	.string "I'm PARASOL LADY {STR_VAR_1}!$"
+	.string "שלום!\n"
+	.string "אני {STR_VAR_1}, גברת שמשייה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyMon1::
-	.string "Escorting me now are my {STR_VAR_2}\n"
-	.string "that uses {STR_VAR_1} and$"
+	.string "כעת מלווים אותי ה{STR_VAR_2} שלי\n"
+	.string "שמשתמש ב{STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyMon2Ask::
-	.string "one {STR_VAR_2} that uses\n"
-	.string "{STR_VAR_1}.\p"
-	.string "Aren't they nice?\n"
-	.string "Care to join us in a tag team?$"
+	.string "ו{STR_VAR_2} שמשתמש\n"
+	.string "ב{STR_VAR_1}.\p"
+	.string "הם נחמדים, נכון?\n"
+	.string "תרצה להצטרף אלינו לצוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyAccept::
-	.string "Thanks a bunch!\p"
-	.string "I'll go register at the counter.\n"
-	.string "Let's not disappoint each other!$"
+	.string "תודה רבה!\p"
+	.string "אלך להירשם בדלפק.\n"
+	.string "שלא נאכזב זה את זה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyReject::
-	.string "My POKéMON are tremendously strong.\n"
-	.string "How disappointing…$"
+	.string "הפוקימונים שלי חזקים להפליא.\n"
+	.string "איזו אכזבה…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacIntro::
-	.string "Hello.\n"
-	.string "I'm {STR_VAR_1}, and I'm a BUG MANIAC!$"
+	.string "שלום.\n"
+	.string "אני {STR_VAR_1}, ואני מטורף חרקים!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacMon1::
-	.string "I have found my POKéMON, yes.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "מצאתי את הפוקימונים שלי, כן.\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}--\n"
-	.string "they are what I found.\p"
-	.string "Could I interest you in forming\n"
-	.string "a tag team?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1} -\n"
+	.string "אותם מצאתי.\p"
+	.string "אפשר לעניין אותך\n"
+	.string "בהקמת צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacAccept::
-	.string "Okay!\n"
-	.string "Understood!\p"
-	.string "I won't be long with the registration!$"
+	.string "אוקיי!\n"
+	.string "הבנתי!\p"
+	.string "הרישום לא ייקח לי הרבה זמן!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacReject::
-	.string "With the POKéMON I found, we wouldn't\n"
-	.string "have lost…$"
+	.string "עם הפוקימונים שמצאתי,\n"
+	.string "לא היינו מפסידים…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorIntro::
-	.string "Ahoy, there!\n"
-	.string "I'm SAILOR {STR_VAR_1}!$"
+	.string "אהוי!\n"
+	.string "אני המלח {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorMon1::
-	.string "Let me show you my pride and joy!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "אראה לך במה אני הכי גאה!\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Of course you're not going to turn\n"
-	.string "me down. We will team up, right?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "בטח שלא תסרב לי.\n"
+	.string "נהיה צוות, נכון?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorAccept::
-	.string "I didn't expect any less!\n"
-	.string "I'll go register now.$"
+	.string "לא ציפיתי לפחות מזה!\n"
+	.string "אני הולך להירשם עכשיו.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorReject::
-	.string "We would've stormed through\n"
-	.string "the opposition! Too bad!$"
+	.string "היינו סוחפים את היריבים\n"
+	.string "כמו סערה! חבל!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CollectorIntro::
-	.string "Hi, I'm {STR_VAR_1}.\n"
-	.string "I'm a COLLECTOR.$"
+	.string "היי, אני {STR_VAR_1}.\n"
+	.string "אני אספן.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CollectorMon1::
-	.string "The jewels in my collection are\n"
-	.string "my {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "פניני האוסף שלי הם\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CollectorMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Swell, huh?\n"
-	.string "We should be in a team together.$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "נהדר, הא?\n"
+	.string "כדאי שנהיה ביחד בצוות.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CollectorAccept::
-	.string "Oh, yeah!\p"
-	.string "Well, let's not waste any time.\n"
-	.string "I'll go register the two of us.$"
+	.string "יש!\p"
+	.string "טוב, בלי לבזבז זמן.\n"
+	.string "אני הולך לרשום את שנינו.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CollectorReject::
-	.string "Well, that's upsetting.\n"
-	.string "You don't appreciate my POKéMON.$"
+	.string "נו, זה מעצבן.\n"
+	.string "לא הערכת את הפוקימונים שלי.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMIntro::
-	.string "Howdy, I'm {STR_VAR_1}.\n"
-	.string "I'm a POKéMON RANGER.$"
+	.string "אהלן, אני {STR_VAR_1}.\n"
+	.string "אני שומר פוקימון.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMMon1::
-	.string "Keeping me company are one\n"
-	.string "{STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "עושים לי חברה פוקימון שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Don't you think we'd make an impressive\n"
-	.string "tag team?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "לא נראה לך שנהיה\n"
+	.string "צוות זוגי מרשים?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMAccept::
-	.string "That's super!\n"
-	.string "I'll deal with the registration now.$"
+	.string "מצוין!\n"
+	.string "אטפל ברישום עכשיו.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMReject::
-	.string "Next time, choose my POKéMON,\n"
-	.string "will you?$"
+	.string "בפעם הבאה, תבחר בפוקימונים שלי,\n"
+	.string "טוב?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFIntro::
-	.string "My name's {STR_VAR_1}.\n"
-	.string "I'm a POKéMON RANGER!$"
+	.string "קוראים לי {STR_VAR_1}.\n"
+	.string "אני שומרת פוקימון!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFMon1::
-	.string "Let me tell you about my team. I have\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "אספר לך על הצוות שלי. יש לי\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "How would you like to form a tag team\n"
-	.string "with my little posse?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "מה דעתך להקים צוות זוגי\n"
+	.string "עם החבורה הקטנה שלי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFAccept::
-	.string "We'll be at our best!\n"
-	.string "I'll get the registration done quick!$"
+	.string "נהיה במיטבנו!\n"
+	.string "אסדר את הרישום מהר!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFReject::
-	.string "I hope you'll choose my POKéMON\n"
-	.string "next time.$"
+	.string "אני מקווה שתבחר בפוקימונים שלי\n"
+	.string "בפעם הבאה.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyIntro::
-	.string "Pleased to meet you. I'm {STR_VAR_1}.\n"
-	.string "I consider myself an AROMA LADY.$"
+	.string "נעים מאוד. אני {STR_VAR_1}.\n"
+	.string "אני רואה בעצמי גברת ניחוח.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyMon1::
-	.string "I travel with one {STR_VAR_2}\n"
-	.string "that uses {STR_VAR_1} and$"
+	.string "אני מטיילת עם {STR_VAR_2} אחד\n"
+	.string "שמשתמש ב{STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyMon2Ask::
-	.string "one {STR_VAR_2} that uses\n"
-	.string "{STR_VAR_1}.\p"
-	.string "I hope they strike your fancy.\n"
-	.string "Would you care to be my partner?$"
+	.string "ו{STR_VAR_2} שמשתמש\n"
+	.string "ב{STR_VAR_1}.\p"
+	.string "אני מקווה שהם מוצאים חן בעיניך.\n"
+	.string "תרצה להיות השותף שלי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyAccept::
-	.string "I'm honored by your acceptance.\n"
-	.string "I will go register right this instant.$"
+	.string "הסכמתך מכבדת אותי.\n"
+	.string "אלך להירשם ברגע זה ממש.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyReject::
-	.string "It would be wonderful if we could form\n"
-	.string "a tag team the next time we meet.$"
+	.string "יהיה נפלא אם נוכל להקים\n"
+	.string "צוות זוגי בפעם הבאה שניפגש.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacIntro::
-	.string "Want to know who I am?\n"
-	.string "I'm {STR_VAR_1}, the RUIN MANIAC!$"
+	.string "רוצה לדעת מי אני?\n"
+	.string "אני {STR_VAR_1}, מטורף החורבות!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacMon1::
-	.string "The POKéMON that I have with me are\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "הפוקימונים שיש לי איתי הם\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Intriguing, eh?\n"
-	.string "How about you and I partner up?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "מסקרן, הא?\n"
+	.string "מה דעתך שנהיה שותפים?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacAccept::
-	.string "That's a sound decision!\n"
-	.string "I'll go do the registration paperwork.$"
+	.string "החלטה נבונה!\n"
+	.string "אלך לסדר את טופסי הרישום.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacReject::
-	.string "Hmm…\n"
-	.string "I think my POKéMON are tough…$"
+	.string "הממ…\n"
+	.string "אני חושב שהפוקימונים שלי חזקים…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMIntro::
-	.string "I'm COOLTRAINER {STR_VAR_1}!$"
+	.string "אני {STR_VAR_1}, מאמן-על!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMMon1::
-	.string "The POKéMON I have right now are one\n"
-	.string "{STR_VAR_2} with {STR_VAR_1} and$"
+	.string "הפוקימונים שיש לי כרגע הם\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\n"
-	.string "Cool, huh?\p"
-	.string "Don't you think it'd be pretty cool\n"
-	.string "if we made a tag team?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\n"
+	.string "מגניב, הא?\p"
+	.string "לא נראה לך שיהיה די מגניב\n"
+	.string "אם נקים צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMAccept::
-	.string "Cool!\n"
-	.string "I'll go do the registration in a flash!$"
+	.string "מגניב!\n"
+	.string "אסדר את הרישום כהרף עין!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMReject::
-	.string "I thought that we'd make just\n"
-	.string "the greatest team ever.$"
+	.string "חשבתי שנהיה פשוט\n"
+	.string "הצוות הטוב ביותר אי פעם.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFIntro::
-	.string "I'm COOLTRAINER {STR_VAR_1}!$"
+	.string "אני {STR_VAR_1}, מאמנת-על!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFMon1::
-	.string "The team I've been raising has one\n"
-	.string "{STR_VAR_2} with {STR_VAR_1} and$"
+	.string "בצוות שגידלתי יש\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Does that sound okay?\n"
-	.string "How about we become tag partners?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\p"
+	.string "נשמע טוב?\n"
+	.string "מה דעתך שנהיה שותפים לצוות?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFAccept::
-	.string "Sounds A-OK!\n"
-	.string "I'd better do the registration.$"
+	.string "נשמע מצוין!\n"
+	.string "כדאי שאלך לסדר את הרישום.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFReject::
-	.string "I was thinking how we would be\n"
-	.string "one tough team…$"
+	.string "חשבתי שנהיה\n"
+	.string "צוות ממש קשוח…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacIntro::
-	.string "Heyo!\n"
-	.string "I'm {STR_VAR_1}, the POKéMANIAC!$"
+	.string "אהלן!\n"
+	.string "אני {STR_VAR_1}, הפוקימאניאק!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacMon1::
-	.string "What does a guy like me have?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "מה יש לבחור כמוני?\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1},\n"
-	.string "that's what!\p"
-	.string "Let's do it!\n"
-	.string "We'll stomp around as a tag team!$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1},\n"
+	.string "זה מה שיש לי!\p"
+	.string "קדימה!\n"
+	.string "נשתולל כצוות זוגי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacAccept::
-	.string "Good call!\n"
-	.string "I'll register the both of us!$"
+	.string "החלטה טובה!\n"
+	.string "אני ארשום את שנינו!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacReject::
-	.string "My POKéMON are brutal!\n"
-	.string "It's not my fault if you regret this!$"
+	.string "הפוקימונים שלי אכזריים!\n"
+	.string "זו לא אשמתי אם תתחרט על זה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerIntro::
-	.string "Yo, there!\n"
-	.string "I'm KINDLER {STR_VAR_1}!$"
+	.string "יו!\n"
+	.string "אני המבעיר {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerMon1::
-	.string "You know what my training cooked up?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "רוצה לדעת מה בישלתי באימונים?\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Well, what do you say?\n"
-	.string "Want to form a tag team?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "נו, מה דעתך?\n"
+	.string "רוצה להקים צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerAccept::
-	.string "All right!\n"
-	.string "I'll get on with the registration.$"
+	.string "מעולה!\n"
+	.string "אני ניגש לרישום.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerReject::
-	.string "Promise you'll partner up with me\n"
-	.string "the next time we run into each other.$"
+	.string "תבטיח שתהיה השותף שלי\n"
+	.string "בפעם הבאה שניתקל זה בזה.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CamperIntro::
-	.string "I'm {STR_VAR_1}, and I'm a CAMPER!$"
+	.string "אני {STR_VAR_1}, ואני מחנאי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CamperMon1::
-	.string "I've been raising one {STR_VAR_1}-\n"
-	.string "using {STR_VAR_2} and one$"
+	.string "אני מגדל פוקימון שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CamperMon2Ask::
-	.string "{STR_VAR_1}-using {STR_VAR_2}.\p"
-	.string "Do you think it'd be fun to team up?\n"
-	.string "I bet it would be!$"
+	.string "ועוד אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
+	.string "נראה לך שיהיה כיף להקים צוות?\n"
+	.string "אני בטוח שכן!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CamperAccept::
-	.string "Yeah!\n"
-	.string "Off I go to register!$"
+	.string "יש!\n"
+	.string "אני כבר הולך להירשם!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CamperReject::
-	.string "Next time, okay?\n"
-	.string "I want to be on your team.$"
+	.string "בפעם הבאה, טוב?\n"
+	.string "אני רוצה להיות בצוות שלך.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PicnickerIntro::
-	.string "Hello!\n"
-	.string "I'm {STR_VAR_1}, and I'm a PICNICKER!$"
+	.string "שלום!\n"
+	.string "אני {STR_VAR_1}, ואני מטיילת!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PicnickerMon1::
-	.string "The POKéMON I've been taking are\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "הפוקימונים שאני לוקחת איתי הם\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PicnickerMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Are you interested in joining me\n"
-	.string "on a tag team?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\p"
+	.string "מעניין אותך להצטרף אליי\n"
+	.string "לצוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PicnickerAccept::
-	.string "Why, thank you!\n"
-	.string "I will do the registration now.$"
+	.string "אוי, תודה!\n"
+	.string "אני אסדר את הרישום עכשיו.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PicnickerReject::
-	.string "It would be nice if I could join you\n"
-	.string "some other time.$"
+	.string "יהיה נחמד אם אוכל להצטרף אליך\n"
+	.string "בפעם אחרת.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMIntro::
-	.string "I'm PSYCHIC {STR_VAR_1}!$"
+	.string "אני הטלפת {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMMon1::
-	.string "The twosome I've been raising are\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "הצמד שגידלתי הוא\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Would you like to form a tag team\n"
-	.string "with me?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\p"
+	.string "רוצה להקים איתי\n"
+	.string "צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMAccept::
-	.string "Sure thing!\n"
-	.string "I'll take care of the registration!$"
+	.string "בטח!\n"
+	.string "אני אדאג לרישום!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMReject::
-	.string "If we meet again, that's when I'd like\n"
-	.string "to team up with you.$"
+	.string "אם ניפגש שוב, אז הייתי רוצה\n"
+	.string "להיות איתך בצוות.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFIntro::
-	.string "I'm {STR_VAR_1}.\n"
-	.string "I'm a PSYCHIC.$"
+	.string "אני {STR_VAR_1}.\n"
+	.string "אני טלפתית.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFMon1::
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}--\n"
-	.string "they're my disciples.\p"
-	.string "Doesn't the idea of forming a tag-team\n"
-	.string "partnership intrigue you?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1} -\n"
+	.string "הם תלמידיי.\p"
+	.string "הרעיון של שותפות בצוות זוגי\n"
+	.string "לא מסקרן אותך?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFAccept::
-	.string "Thank you.\n"
-	.string "I'll go deal with the registration.$"
+	.string "תודה.\n"
+	.string "אלך לטפל ברישום.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFReject::
-	.string "I hope there will be another chance\n"
-	.string "to forge an alliance.$"
+	.string "אני מקווה שתהיה עוד הזדמנות\n"
+	.string "לכרות ברית.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFIntro::
-	.string "I'm SCHOOL KID {STR_VAR_1}!$"
+	.string "אני התלמידה {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFMon1::
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "פוקימון שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFMon2Ask::
-	.string "and one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2} are my POKéMON pair.\p"
-	.string "May I please be your partner on\n"
-	.string "a tag team?$"
+	.string "ועוד אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
+	.string "זה צמד הפוקימונים שלי. אפשר בבקשה\n"
+	.string "להיות השותפה שלך בצוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFAccept::
-	.string "Ooh, thank you!\n"
-	.string "I'll register at the counter right away!$"
+	.string "אוו, תודה!\n"
+	.string "אלך להירשם בדלפק מיד!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFReject::
-	.string "Please?\n"
-	.string "May I join you the next time?$"
+	.string "בבקשה?\n"
+	.string "אפשר להצטרף אליך בפעם הבאה?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFIntro::
-	.string "Hiya! The name's {STR_VAR_1}!\n"
-	.string "I'm a POKéMON BREEDER!$"
+	.string "היי! קוראים לי {STR_VAR_1}!\n"
+	.string "אני מגדלת פוקימון!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFMon1::
-	.string "The POKéMON I've raised are one\n"
-	.string "{STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "הפוקימונים שגידלתי הם: אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFMon2Ask::
-	.string "one {STR_VAR_1}-using {STR_VAR_2}.\p"
-	.string "Sound interesting?\n"
-	.string "How about we form a tag team, then?$"
+	.string "ואחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
+	.string "נשמע מעניין?\n"
+	.string "אז מה דעתך שנקים צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFAccept::
-	.string "All righty!\n"
-	.string "You leave the registration to me!$"
+	.string "יופי!\n"
+	.string "ההרשמה עליי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFReject::
-	.string "You have to team up with me next time,\n"
-	.string "all right?$"
+	.string "בפעם הבאה אתה חייב להקים איתי\n"
+	.string "צמד, בסדר?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanFIntro::
-	.string "I'm {STR_VAR_1}, and I'm proud to say\n"
-	.string "that I am a POKéFAN.$"
+	.string "אני {STR_VAR_1}, ואני גאה לומר\n"
+	.string "שאני פוקיפאנית.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanFMon1::
-	.string "The darling POKéMON I've raised are\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "הפוקימונים המתוקים שגידלתי הם\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Aren't they just the cutest?\n"
-	.string "We ought to make a team!$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\p"
+	.string "נכון שהם פשוט הכי חמודים?\n"
+	.string "אנחנו חייבים להקים צמד!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanFAccept::
-	.string "Thank you, dear!\n"
-	.string "I'll be on my way to register!$"
+	.string "תודה, מותק!\n"
+	.string "אני כבר הולכת להירשם!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanFReject::
-	.string "My darling POKéMON are the best,\n"
-	.string "I'll have you know. How annoying!$"
+	.string "שתדע לך שהפוקימונים המתוקים שלי\n"
+	.string "הם הכי טובים. כמה מעצבן!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFIntro::
-	.string "Hi, I'm SWIMMER {STR_VAR_1}.$"
+	.string "היי, אני השחיינית {STR_VAR_1}.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFMon1::
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "אחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFMon2Ask::
-	.string "and one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2} are what I've trained.\p"
-	.string "You and me, let's make a tag team.$"
+	.string "ואחד שמשתמש\n"
+	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
+	.string "אלה הפוקימונים שאימנתי.\n"
+	.string "אתה ואני, בוא נקים צוות זוגי.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFAccept::
-	.string "That's cool!\n"
-	.string "I'll register the two of us.$"
+	.string "מגניב!\n"
+	.string "אני ארשום את שנינו.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFReject::
-	.string "If we meet again, you owe me\n"
-	.string "a tag team!$"
+	.string "אם ניפגש שוב, אתה חייב לי\n"
+	.string "צוות זוגי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMIntro::
-	.string "What's happening?\n"
-	.string "I'm {STR_VAR_1}, and I'm a TRIATHLETE.$"
+	.string "מה קורה?\n"
+	.string "אני {STR_VAR_1}, ואני טריאתלט.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMMon1::
-	.string "I got a couple decent POKéMON.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "יש לי זוג פוקימונים לא רעים.\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "It'd be neat if we made a tag team\n"
-	.string "together, so how about it?$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "יהיה מגניב אם נקים צוות זוגי\n"
+	.string "ביחד, אז מה אתה אומר?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMAccept::
-	.string "Right on!\n"
-	.string "You wait while I register, okay?$"
+	.string "אחלה!\n"
+	.string "תחכה בזמן שאני נרשם, טוב?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMReject::
-	.string "I expect you'll let me join you\n"
-	.string "next time, how's that?$"
+	.string "אני מצפה שבפעם הבאה תיתן לי\n"
+	.string "להצטרף אליך, מה אתה אומר?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFIntro::
-	.string "I'm the TRIATHLETE {STR_VAR_1}!$"
+	.string "אני הטריאתלטית {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFMon1::
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFMon2Ask::
-	.string "another {STR_VAR_2} that knows how\n"
-	.string "to use {STR_VAR_1}. That's my pair.\p"
-	.string "What do you think?\n"
-	.string "We'd make a good team, I'd say.$"
+	.string "ועוד {STR_VAR_2} שיודע להשתמש\n"
+	.string "ב{STR_VAR_1}. זה הזוג שלי.\p"
+	.string "מה דעתך?\n"
+	.string "לדעתי נהיה צמד טוב.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFAccept::
-	.string "I like that answer!\n"
-	.string "I'll get done with registration fast!$"
+	.string "אהבתי את התשובה!\n"
+	.string "אסיים את ההרשמה ממש מהר!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFReject::
-	.string "You'll give me another chance to form\n"
-	.string "a partnership, won't you?$"
+	.string "תיתן לי עוד הזדמנות להקים\n"
+	.string "איתך צמד, נכון?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMIntro::
-	.string "Hi, there! Hello!\n"
-	.string "I'm {STR_VAR_1}, and I'm a SWIMMER!$"
+	.string "היי! שלום לך!\n"
+	.string "אני {STR_VAR_1}, ואני שחיין!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMMon1::
-	.string "Check out what I've been raising!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "תראה מה גידלתי!\n"
+	.string "{STR_VAR_2} עם {STR_VAR_1},$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Sweet, huh?\n"
-	.string "It'd be sweet to form a team, too!$"
+	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
+	.string "אדיר, נכון?\n"
+	.string "יהיה אדיר גם להקים צמד!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMAccept::
-	.string "Much obliged!\n"
-	.string "I'll get this registration thing done!$"
+	.string "תודה רבה!\n"
+	.string "אני כבר אסדר את עניין ההרשמה!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMReject::
-	.string "If we meet again, you have to team up\n"
-	.string "with me. You'll do that, right?$"
+	.string "אם ניפגש שוב, אתה חייב להקים\n"
+	.string "איתי צמד. תעשה את זה, נכון?$"
 

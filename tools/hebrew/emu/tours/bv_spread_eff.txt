@@ -1,0 +1,43 @@
+# Spread-move effectiveness against two foes (a wild double battle with two Rock/Ground
+# Pokemon, Geodude and Onix): Discharge "doesn't affect" both (STRINGID_ITDOESNTAFFECTTWOFOES),
+# Sludge Wave is "not very effective" on both (STRINGID_NOTVERYEFFECTIVETWOFOES), Surf is
+# "super effective" on both (STRINGID_SUPEREFFECTIVETWOFOES; include/constants/
+# battle_string_ids.h:678-680). The partner (Quagsire, Water/Ground) only uses Splash, so
+# Discharge does not touch it either. Then experience for two Pokemon in a wild battle.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_LAPRAS, 20, move1=MOVE_DISCHARGE, move2=MOVE_SLUDGE_WAVE, move3=MOVE_SURF, move4=MOVE_GROWL; givemon SPECIES_QUAGSIRE, 50, move1=MOVE_SPLASH; end
+
+pinrng
+evstart setwildbattle SPECIES_GEODUDE, 7, species2=SPECIES_ONIX, level2=7; dowildbattle; end
+waitbattle
+bwalk bv_spread_intro input:HandleInputChooseAction
+
+# turn 1: Discharge (hits everyone else on the field)
+baction FIGHT
+bmove 0
+bwalk bv_spread_tgt1 input:HandleInputShowEntireFieldTargets|input:HandleInputShowTargets
+snap bv_spread_targets_discharge
+tap A 4
+bactionb 2 FIGHT
+bmoveb 2 0
+bwalk bv_spread_turn1 input:HandleInputChooseAction
+
+# turn 2: Sludge Wave
+baction FIGHT
+bmove 1
+bwalk bv_spread_tgt2 input:HandleInputShowEntireFieldTargets|input:HandleInputShowTargets
+tap A 4
+bactionb 2 FIGHT
+bmoveb 2 0
+bwalk bv_spread_turn2 input:HandleInputChooseAction
+
+# turn 3: Surf
+baction FIGHT
+bmove 2
+bwalk bv_spread_tgt3 input:HandleInputShowEntireFieldTargets|input:HandleInputShowTargets
+tap A 4
+bactionb 2 FIGHT
+bmoveb 2 0
+bwalk bv_spread_turn3 input:HandleInputChooseAction|free
+snap bv_spread_end

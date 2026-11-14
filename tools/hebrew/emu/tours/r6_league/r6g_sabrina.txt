@@ -1,0 +1,8 @@
+# Sabrina, Saffron Gym (14,11): SaffronCity_Gym_EventScript_Sabrina.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_SAFFRON_GYM; clearflag FLAG_BADGE13_GET; end
+warpto MAP_SAFFRON_CITY_GYM_HNS 14 12
+face UP
+snap sa_room
+include _leader_tail.txt

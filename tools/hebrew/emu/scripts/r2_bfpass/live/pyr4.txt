@@ -1,0 +1,37 @@
+waittaskx Task_HandlePyramidBagInput 900
+waitquiet
+30 -
+snap py_bag_00
+tap DOWN 4
+waitquiet
+snap py_bag_01
+tap DOWN 4
+waitquiet
+snap py_bag_02
+tap DOWN 4
+waitquiet
+snap py_bag_03
+tap DOWN 4
+waitquiet
+snap py_bag_04
+tap DOWN 4
+waitquiet
+snap py_bag_05
+tap DOWN 4
+waitquiet
+snap py_bag_06
+tap DOWN 4
+waitquiet
+snap py_bag_07
+tap DOWN 4
+waitquiet
+snap py_bag_08
+tap DOWN 4
+waitquiet
+snap py_bag_09
+tap DOWN 4
+waitquiet
+snap py_bag_10_cancel
+tap DOWN 4
+waitquiet
+snap py_bag_11_end

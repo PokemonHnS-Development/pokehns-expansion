@@ -147,19 +147,19 @@ IcePath_B3F_Movement_StuckSwinubJump:
 	step_end
 
 IcePath_B3F_Text_Swinub:
-	.string "SWINUB: Swiiiiii!$"
+	.string "סווינאב: סוויייייי!$"
 IcePath_B3F_Text_SwinubBerry:
-	.string "Give the SWINUB a BERRY?$"
+	.string "לתת לסווינאב פרי?$"
 IcePath_B3F_Text_SwinubAteBerry:
-	.string "SWINUB enjoyed the ASPEAR BERRY!$"
+	.string "סווינאב נהנה מפרי אספר!$"
 IcePath_B3F_Text_SwinubTurnedAway:
-	.string "SWINUB doesn't like it!$"
+	.string "סווינאב לא אוהב את זה!$"
 
 IcePath_B3F_Text_Delibird:
-	.string "DELIBIRD: SKWAAAAA!$"
+	.string "דליברד: סקוואאאאא!$"
 IcePath_B3F_Text_DelibirdBerry:
-	.string "Give the DELIBIRD a BERRY?$"
+	.string "לתת לדליברד פרי?$"
 IcePath_B3F_Text_DelibirdAteBerry:
-	.string "DELIBIRD enjoyed the ASPEAR BERRY!$"
+	.string "דליברד נהנה מפרי אספר!$"
 IcePath_B3F_Text_DelibirdTurnedAway:
-	.string "DELIBIRD doesn't like it!$"
+	.string "דליברד לא אוהב את זה!$"

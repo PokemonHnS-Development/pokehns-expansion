@@ -1,0 +1,56 @@
+# Jessica, Melemele house (15,11), VAR_STARTER_MON 0: INGAME_TRADE_TAUROS_WATER with a Pokemon picked from the
+# PC box pane (box 1 slot 4, the second Krabby of ../r5_trades/_party.inc), so the received Paldean Tauros
+# lands in the box (data/maps/Melemele_House_hns/scripts.inc:95-110).
+# 1. YES, then B out of the trade box (PARTY_NOTHING_CHOSEN: the decline line).
+# 2. YES, box 1 slot 4, the trade scene, the take-care line.
+# 3. The done flag cleared in RAM, talk again: the trade box shows the Tauros in box 1 slot 4
+#    (data panel and submenu), then B out of the box.
+start saves/r5_trades_base.sav
+include ../r5_trades/_setup.txt
+ev setvar VAR_STARTER_MON, 0; end
+
+warpto MAP_MELEMELE_HOUSE_HNS 14 11
+face RIGHT
+tap A 4
+fieldwatch jbox_ask menu 6000
+pick 0
+include ../r5_trades/_pickparty.txt
+snap jbox_box
+tap B 4
+waitquiet
+snap jbox_box_b
+pick 1
+waitcb2x CB2_Overworld 900
+fieldwatch jbox_cancel free 3000
+
+face RIGHT
+tap A 4
+fieldwatch jbox_ask2 menu 6000
+pick 0
+include ../r5_trades/_pickparty.txt
+snap jbox_box2
+boxpick 0 4 jbox_pick_box_krabby
+waitcb2x CB2_InGameTrade 900
+scenewatch jbox_scene CB2_Overworld 6000 0 160 A 150
+waitcb2x CB2_Overworld 900
+fieldwatch jbox_takecare free 3000
+
+ev clearflag FLAG_COMPLETED_TAUROS_TRADE; end
+face RIGHT
+tap A 4
+fieldwatch jbox_ask3 menu 6000
+pick 0
+include ../r5_trades/_pickparty.txt
+snap jbox_box3
+boxgo 0 4
+waitquiet
+snap jbox_box3_tauros
+boxmenu jbox_box3_tauros
+waitquiet
+snap jbox_box3_back
+tap B 4
+waitquiet
+snap jbox_box3_exit
+pick 1
+waitcb2x CB2_Overworld 900
+fieldwatch jbox_cancel3 free 3000

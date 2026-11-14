@@ -1,0 +1,60 @@
+# Rudy, Violet City house 1 (7,5): INGAME_TRADE_ONIX (src/data/trade.h:1036-1050), Onix 'Rocky' OT Rudy for Bellsprout
+# (data/maps/VioletCity_House1_hns/scripts.inc:12-36).
+# Talk: NO (decline line); YES + the trade box + a wrong Pokemon from the box pane (box 1 slot 4, a Krabby);
+# YES + the trade box + Bellsprout (party slot 1) + the trade scene + the
+# take-care line; talk again (trade-completed line). Then the party menu and the summary of the
+# received Pokemon (INFO, then every page with RIGHT).
+start saves/r5_trades_base.sav
+include _setup.txt
+
+warpto MAP_VIOLET_CITY_HOUSE1_HNS 7 6
+face UP
+tap A 4
+fieldwatch rudy_ask menu 6000
+pick 1
+fieldwatch rudy_decline free 3000
+face UP
+tap A 4
+fieldwatch rudy_ask2 menu 6000
+pick 0
+include _pickparty.txt
+snap rudy_box
+boxpick 0 4 rudy_wrong_box_krabby
+waitcb2x CB2_Overworld 900
+fieldwatch rudy_wrong free 3000
+face UP
+tap A 4
+fieldwatch rudy_ask3 menu 6000
+pick 0
+include _pickparty.txt
+snap rudy_box3
+boxpick 1 1 rudy_pick_bellsprout
+waitcb2x CB2_InGameTrade 900
+scenewatch rudy_scene CB2_Overworld 6000 0 160 A 150
+waitcb2x CB2_Overworld 900
+fieldwatch rudy_takecare free 3000
+face UP
+tap A 4
+fieldwatch rudy_completed free 3000
+
+# --- the party and the received Pokemon's summary (slot 1)
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap rudy_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap rudy_party_action
+tap A 4
+waitcb2x pokemon_summary_screen:MainCB2 900
+sumwait
+snap rudy_sum_info
+sumkey RIGHT
+snap rudy_sum_p2
+sumkey RIGHT
+snap rudy_sum_p3
+sumkey RIGHT
+snap rudy_sum_p4

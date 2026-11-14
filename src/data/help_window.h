@@ -5,10 +5,12 @@ const struct HelpWindow gHelpWindowInfo[] =
 {
     [HELP_DEMO_WINDOW] =
     {
-        .header = COMPOUND_STRING("Information: Help Windows"),
-        .desc = COMPOUND_STRING("This is a help window. You can put\n"
-                                "lots of text on the screen that\n"
-                                "players won't read!\n\nIsn't that great!"
+        .header = COMPOUND_STRING("מידע: חלונות עזרה"),
+        .desc = COMPOUND_STRING("זהו חלון עזרה. אפשר לשים בו\n"
+                                "המון טקסט על המסך,\n"
+                                "והשחקנים לא יקראו אותו!\n"
+                                "\n"
+                                "נהדר, לא?"
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
@@ -16,13 +18,13 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_GAMESTART_WINDOW] =
     {
-        .header = COMPOUND_STRING("Information: More Options"),
-        .desc = COMPOUND_STRING("The clock can be changed from any\n"
-                                "POKéMON CENTER with no penalty.\n"
-                                "Make sure to check your BAG's KEY ITEMS\n"
-                                "and your OPTIONS MENU for even more\n"
-                                "ways to customize your experience.\n"
-                                "Enjoy!"
+        .header = COMPOUND_STRING("מידע: עוד אפשרויות"),
+        .desc = COMPOUND_STRING("אפשר לשנות את השעון בכל\n"
+                                "מרכז פוקימון, בלי שום השלכות.\n"
+                                "כדאי לבדוק את פריטי המפתח בתיק\n"
+                                "ואת תפריט האפשרויות, שבהם יש\n"
+                                "עוד דרכים להתאים את המשחק לטעמך.\n"
+                                "בהנאה!"
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
@@ -30,14 +32,14 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_TRADE_WINDOW] =
     {
-        .header = COMPOUND_STRING("WARNING: COMPATIBILITY"),
-        .desc = COMPOUND_STRING("Attempting to link incorrectly may result\n"
-                                "in permanent damage to your save file.\n"
-                                "Only link with another player if:\n"
-                                "You are both playing Heart & Soul.\n"
-                                "You are both on the same version.\n"
-                                "You both have the same challenge settings.\n"
-                                "You are NOT using any randomizer settings."
+        .header = COMPOUND_STRING("אזהרה: תאימות"),
+        .desc = COMPOUND_STRING("ניסיון התחברות לא תקין עלול לגרום\n"
+                                "נזק קבוע לקובץ השמירה שלך.\n"
+                                "יש להתחבר לשחקן אחר רק אם:\n"
+                                "שניכם משחקים ב-Heart & Soul.\n"
+                                "שניכם משחקים באותה גרסה.\n"
+                                "לשניכם אותן הגדרות אתגר.\n"
+                                "אף אחד מכם לא משתמש במצב האקראי."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,
@@ -45,12 +47,12 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_TELEPORTER_WINDOW] =
     {
-        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: TELEPORTER"),
-        .desc = COMPOUND_STRING("The TELEPORTER can PERMANENTLY change\n"
-                                "POKéMON into their GALARIAN forms.\n"
-                                "GALARIAN forms are NOT required\n"
-                                "for story progression or\n"
-                                "NATIONAL POKéDEX completion.\n"
+        .header = COMPOUND_STRING("תוכן בונוס אופציונלי: הטלפורטר"),
+        .desc = COMPOUND_STRING("הטלפורטר יכול להפוך פוקימונים\n"
+                                "לצורת גלאר שלהם, לצמיתות.\n"
+                                "צורות גלאר אינן נחוצות\n"
+                                "להתקדמות בעלילה או\n"
+                                "להשלמת הפוקדקס הלאומי.\n"
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
@@ -58,13 +60,13 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_SINJOH_WINDOW] =
     {
-        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: SINJOH"),
-        .desc = COMPOUND_STRING("This NPC grants access to optional\n"
-                                "bonus content: SINJOH.\n"
-                                "It is NOT required for story\n"
-                                "or NATIONAL POKéDEX completion.\n"
+        .header = COMPOUND_STRING("תוכן בונוס אופציונלי: סינג'ו"),
+        .desc = COMPOUND_STRING("הדמות הזו פותחת גישה לתוכן\n"
+                                "בונוס אופציונלי: סינג'ו.\n"
+                                "הוא לא נחוץ לסיום העלילה\n"
+                                "או להשלמת הפוקדקס הלאומי.\n"
                                 "\n"
-                                "It's just a bonus. If you want it."
+                                "זה רק בונוס. אם בא לך."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
@@ -72,13 +74,13 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_ALOLA_WINDOW] =
     {
-        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: ISLES"),
-        .desc = COMPOUND_STRING("This NPC grants access to optional\n"
-                                "bonus content: ISLES.\n"
-                                "It is NOT required for story\n"
-                                "or NATIONAL POKéDEX completion.\n"
+        .header = COMPOUND_STRING("תוכן בונוס אופציונלי: האיים"),
+        .desc = COMPOUND_STRING("הדמות הזו פותחת גישה לתוכן\n"
+                                "בונוס אופציונלי: האיים.\n"
+                                "הוא לא נחוץ לסיום העלילה\n"
+                                "או להשלמת הפוקדקס הלאומי.\n"
                                 "\n"
-                                "It's just a bonus. If you want it."
+                                "זה רק בונוס. אם בא לך."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
@@ -86,14 +88,14 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_DAYCARE1_WINDOW] =
     {
-        .header = COMPOUND_STRING("BABY POKéMON ABILITIES"),
-        .desc = COMPOUND_STRING("PICHU's ability is STATIC.\n"
-                                "CLEFFA's ability is CUTE CHARM.\n"
-                                "IGGLYBUFF's ability is CUTE CHARM.\n"
-                                "TYROGUE's ability is GUTS.\n"
-                                "SMOOCHUM's ability is OBLIVIOUS.\n"
-                                "ELEKID's ability is STATIC.\n"
-                                "MAGBY's ability is FLAME BODY."
+        .header = COMPOUND_STRING("יכולות הפוקימונים התינוקות"),
+        .desc = COMPOUND_STRING("היכולת של פיצ'ו היא ”סטטי”.\n"
+                                "היכולת של קלפה היא ”קסם חמוד”.\n"
+                                "היכולת של איגליבאף היא ”קסם חמוד”.\n"
+                                "היכולת של טיירוג היא ”אומץ”.\n"
+                                "היכולת של סמוצ'ום היא ”תמים”.\n"
+                                "היכולת של אלקיד היא ”סטטי”.\n"
+                                "היכולת של מגבי היא ”גוף להבה”."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,
@@ -101,14 +103,14 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_DAYCARE2_WINDOW] =
     {
-        .header = COMPOUND_STRING("BABY POKéMON TYPES"),
-        .desc = COMPOUND_STRING("PICHU is ELECTRIC type.\n"
-                                "CLEFFA is NORMAL type.\n"
-                                "IGGLYBUFF is NORMAL type.\n"
-                                "TYROGUE is FIGHTING type.\n"
-                                "SMOOCHUM is ICE type.\n"
-                                "ELEKID is ELECTRIC type.\n"
-                                "MAGBY is FIRE type."
+        .header = COMPOUND_STRING("סוגי הפוקימונים התינוקות"),
+        .desc = COMPOUND_STRING("פיצ'ו הוא מסוג ”חשמל”.\n"
+                                "קלפה הוא מסוג ”רגיל”.\n"
+                                "איגליבאף הוא מסוג ”רגיל”.\n"
+                                "טיירוג הוא מסוג ”קרב”.\n"
+                                "סמוצ'ום הוא מסוג ”קרח”.\n"
+                                "אלקיד הוא מסוג ”חשמל”.\n"
+                                "מגבי הוא מסוג ”אש”."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,
@@ -116,14 +118,14 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_DAYCARE3_WINDOW] =
     {
-        .header = COMPOUND_STRING("BABY POKéMON CRIES"),
-        .desc = COMPOUND_STRING("PICHU says WAAAH.\n"
-                                "CLEFFA says EEK.\n"
-                                "IGGLYBUFF says LALALA.\n"
-                                "TYROGUE says HIYAH.\n"
-                                "SMOOCHUM says EHEHE.\n"
-                                "ELEKID says OI, OI, OI.\n"
-                                "MAGBY says TCH."
+        .header = COMPOUND_STRING("קריאות הפוקימונים התינוקות"),
+        .desc = COMPOUND_STRING("פיצ'ו אומר ”וואאה”.\n"
+                                "קלפה אומר ”איק”.\n"
+                                "איגליבאף אומר ”לה-לה-לה”.\n"
+                                "טיירוג אומר ”היי-יה”.\n"
+                                "סמוצ'ום אומר ”היהי”.\n"
+                                "אלקיד אומר ”הי, הי, הי”.\n"
+                                "מגבי אומר ”טסק”."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,
@@ -131,14 +133,14 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_DAYCARE4_WINDOW] =
     {
-        .header = COMPOUND_STRING("BABY POKéMON ACTIONS"),
-        .desc = COMPOUND_STRING("PICHU likes to PLAY all day.\n"
-                                "CLEFFA LOOKS at the moon.\n"
-                                "IGGLYBUFF puts them to SLEEP.\n"
-                                "TYROGUE TRAINS constantly.\n"
-                                "SMOOCHUM likes to SHOW off.\n"
-                                "ELEKID STORES up charge.\n"
-                                "MAGBY often ANGERS."
+        .header = COMPOUND_STRING("פעולות הפוקימונים התינוקות"),
+        .desc = COMPOUND_STRING("פיצ'ו אוהב ”לשחק” כל היום.\n"
+                                "קלפה ”מביט” בירח.\n"
+                                "איגליבאף גורם לכולם ”לישון”.\n"
+                                "טיירוג ”מתאמן” כל הזמן.\n"
+                                "סמוצ'ום אוהב ”להראות” מה הוא שווה.\n"
+                                "אלקיד ”מאחסן” מטען חשמלי.\n"
+                                "מגבי ”מכעיס” לעתים קרובות."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,
@@ -146,15 +148,15 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_POKEBLOCK_WINDOW] =
     {
-        .header = COMPOUND_STRING("FEEDERS: REGULAR POKéBLOCKS"),
-        .desc = COMPOUND_STRING("POKéBLOCK colors attract perfect IVs:\n"
-                                "RED: HP,ATK,SPE   BLU: HP,SPA,SPE\n"
-                                "PNK: ATK,SPA,SPE  GRN: HP,DEF,SPD\n"
-                                "YEL: HP,ATK,DEF   PUR: ATK,DEF,SPD\n"
-                                "IND: HP,SPA,SPD   BRN: DEF,SPE,SPD\n"
-                                "LBL: SPA,SPE,SPD  OLV: ATK,DEF,SPE\n"
-                                "GRY: HP,ATK,SPA\n"
-                                "Every POKéBLOCK attracts HIDDEN ABILITY."
+        .header = COMPOUND_STRING("מתקני האכלה: פוקיבלוקים רגילים"),
+        .desc = COMPOUND_STRING("צבעי הפוקיבלוקים מושכים ערכי IV מושלמים:\n"
+                                "אדום נ”ח,הת',מהי'        כחול נ”ח,הת”מ,מהי'\n"
+                                "ורוד הת',הת”מ,מהי'      ירוק נ”ח,הגנ',הג”מ\n"
+                                "צהוב נ”ח,הת',הגנ'        סגול הת',הגנ',הג”מ\n"
+                                "אינדיגו נ”ח,הת”מ,הג”מ  חום הגנ',מהי',הג”מ\n"
+                                "תכלת הת”מ,מהי',הג”מ   זית הת',הגנ',מהי'\n"
+                                "אפור נ”ח,הת',הת”מ\n"
+                                "כל פוקיבלוק מושך פוקימון עם יכולת נסתרת."
 
                             ),
         .headerFont = FONT_NORMAL,
@@ -163,14 +165,14 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_GOLD_POKEBLOCK_WINDOW] =
     {
-        .header = COMPOUND_STRING("FEEDERS: GOLD POKéBLOCKS"),
-        .desc = COMPOUND_STRING("GOLD POKéBLOCKS attract POKéMON with\n"
-                                "5 perfect IVs. Flavor determines which\n"
-                                "IV is not perfect.\n"
-                                "SPICY: no SP.ATK    DRY:    no ATTACK\n"
-                                "SWEET: no SP.DEF   BITTER: no SPEED\n"
-                                "SOUR:  no HP\n"
-                                "Every POKéBLOCK attracts HIDDEN ABILITY."
+        .header = COMPOUND_STRING("מתקני האכלה: פוקיבלוקי זהב"),
+        .desc = COMPOUND_STRING("פוקיבלוקי זהב מושכים פוקימונים עם\n"
+                                "5 ערכי IV מושלמים. הטעם קובע איזה\n"
+                                "ערך IV לא יהיה מושלם.\n"
+                                "חריף: בלי התקפה מיוחדת   יבש: בלי התקפה\n"
+                                "מתוק: בלי הגנה מיוחדת      מר: בלי מהירות\n"
+                                "חמוץ: בלי נ”ח\n"
+                                "כל פוקיבלוק מושך פוקימון עם יכולת נסתרת."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,

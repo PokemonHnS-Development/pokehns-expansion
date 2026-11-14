@@ -1,0 +1,140 @@
+# Mid-game play from ladder save 3: the service people. Kurt in Azalea Town makes balls from
+# berries (his ball list priced in berries, a ball the bag has no berry for, the quantity,
+# YES/NO, the obtained messages); in Blackthorn City the Move Relearner (a Heart Scale; which Pokemon, the move
+# list with the move's data and description, giving up) and the Move Deleter (which
+# Pokemon, which move, answered NO).
+start saves/ladder3_ecruteak.sav
+include ../../scripts/continue.txt
+ev additem ITEM_HEART_SCALE, 1; end
+
+# --- Kurt (the second Kurt object, at (15,3), faces up)
+warpto MAP_AZALEA_TOWN_HNS 19 12
+snap pme_popup_azalea
+warpto MAP_AZALEA_TOWN_KURTS_HOUSE_HNS 15 4
+face UP
+talk pme_kurt 10                          # ... then his ball shop opens
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+snap pme_kurt_list_01
+press DOWN
+snap pme_kurt_list_02
+press DOWN
+press DOWN
+press DOWN
+snap pme_kurt_list_05
+tap A 0                                   # the fifth ball: no berry for it
+waitquiet
+snap pme_kurt_nofruit
+tap A 0
+waittaskx Task_BuyMenu 600
+waitquiet
+press UP                                  # the fourth: Heavy Ball for an Oran Berry (3 in the bag)
+snap pme_kurt_list_04
+tap A 0
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+waitquiet
+snap pme_kurt_qty_1
+press UP
+snap pme_kurt_qty_2
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap pme_kurt_confirm
+tap A 0                                   # YES
+waittaskx shop:Task_ExitKurtShopAfterPurchase 600
+waitquiet
+snap pme_kurt_bought
+tap A 0                                   # back to the field, Kurt works
+waitcb2x CB2_Overworld 900
+talk pme_kurt_made 20 -
+waitctl 900 B
+
+# --- Blackthorn City: the Move Deleter (4,4) faces right, the Move Relearner (7,4) faces left
+warpto MAP_BLACKTHORN_CITY_HNS 10 50
+snap pme_popup_blackthorn
+warpto MAP_BLACKTHORN_CITY_HOUSE3_HNS 6 4
+face RIGHT
+talk pme_relearner 10                     # ends at YES/NO (a Heart Scale)
+tap A 0
+talk pme_relearner_which 10 -
+waitcb2x CB2_PokeStorage 900                # the storage screen, in select mode
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap pme_relearner_box
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP
+press A                                   # PARTY POKeMON
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+12 -
+snap pme_relearner_party
+press A                                   # Quilava
+waittaskx Task_OnSelectedMon 300
+12 -
+snap pme_relearner_mon_menu
+press A                                   # SELECT
+waitcb2x CB2_Overworld 900
+talk pme_relearner_which_move 10 -        # ... then the relearner screen
+waitcb2x CB2_MoveRelearnerMain 900
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 900
+waitquiet
+snap pme_relearner_list_01
+press DOWN
+snap pme_relearner_list_02
+press DOWN
+press DOWN
+snap pme_relearner_list_04
+press B                                   # give up?
+waitquiet
+snap pme_relearner_giveup
+press B                                   # NO: back to the list
+waitquiet
+press UP
+press UP
+press UP
+press A                                   # the first move: "Teach ...?"
+waitquiet
+snap pme_relearner_teach_q
+press B                                   # NO
+waitquiet
+press B
+waitquiet
+press A                                   # give up: YES
+waitcb2x CB2_Overworld 900
+talk pme_relearner_again 10 -             # "which Pokemon" again, then the storage screen
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+press B
+12 -
+snap pme_relearner_box_b
+press DOWN
+press A                                   # NO: leave without a Pokemon
+waitcb2x CB2_Overworld 900
+talk pme_relearner_bye 10 -
+waitctl 900 B
+warpto MAP_BLACKTHORN_CITY_HOUSE3_HNS 5 4
+face LEFT
+talk pme_deleter 10                       # ends at YES/NO
+tap A 0
+talk pme_deleter_which 10 -               # ... then the party menu
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap pme_deleter_party
+seek 8 @gPartyMenu+9@ 4 DOWN              # Haunter
+tap A 0
+waitcb2x CB2_Overworld 900
+talk pme_deleter_which_move 10 -          # ... then the summary's move page
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_SetHandleReplaceMoveInput 900
+waittaskx pokemon_summary_screen:Task_HandleReplaceMoveInput 900
+waitquiet
+snap pme_deleter_moves
+press DOWN
+snap pme_deleter_moves_2
+press A
+waitcb2x CB2_Overworld 900
+talk pme_deleter_confirm 10 -             # ends at YES/NO
+tap B 0                                   # NO
+talk pme_deleter_no 10 -
+waitctl 900 B

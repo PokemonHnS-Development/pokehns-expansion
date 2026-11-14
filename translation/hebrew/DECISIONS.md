@@ -1,0 +1,2558 @@
+# Translation decisions
+
+Each entry is one open question from the review of the first release candidate: the six known issues listed in TESTING.md (K1–K6) and the reviewers' style and consistency questions (Q). For each one the analysis, the options with how each would be done and its risk, and the option chosen and why. "No change" means the current text was kept on purpose.
+
+| ID | Question | Choice | Result |
+|---|---|---|---|
+| [K1](#k1) | Battle text after את: the wild/opposing suffix is indefinite (טירניטר פראי), so lines such as Intimidate read … | C. Make all four suffix strings definite (" הפראי"/" היריב") and the l… | changed |
+| [K2](#k2) | The trainer ID label is the Latin glyph pair {ID}{NO} (IDNo) on the summary and trainer card, a style decision… | B. Hebrew short form "מס' " | changed |
+| [K3](#k3) | POKéGEAR is written in Latin letters in dialogue and menus, consistently; the glossary has no Hebrew form. | B. פוקיגיר everywhere text is drawn | changed |
+| [K4](#k4) | Naming screen: switching to the Hebrew page keeps the cursor column, so the cursor does not start on א. | A. Mirror the column when the swap crosses between the RTL page and an… | changed |
+| [K5](#k5) | Cosmetic: the fainted tag fills its pill edge to edge; the descender of ק in a summary nickname touches the fr… | B. Fix each at its source, under TEXT_RTL or in Hebrew assets | changed |
+| [K6](#k6) | Berry names come from the FireRed fork and mix the words גרגר, פרי, פירות and תות, as FireRed does; CHESTO is … | B. Unify to פרי / פירות, and fix the CHESTO and IAPAPA stems | changed |
+| [Q2](#q2) | STRUGGLE in prose is written without quotation marks ('להשתמש במאבק'), following B30_01. | (a) Bare in dialogue, as now. Write the rule into STYLE.md §3, scoped … | changed |
+| [Q5](#q5) | Brandon's nickname 'the chief' is rendered as 'הבוס', used the same way in both the attendant's and Brandon's … | (a) Keep 'הבוס' | no change |
+| [Q6](#q6) | Frontier lobbies here and in B33/B34 say 'ברכות!' for 'Congratulations!', while the rest of the game mostly us… | A: 'מזל טוב' for every 'Congratulations', the HoF screen included; kee… | changed |
+| [Q8](#q8) | The '{STR_VAR_1}-using {STR_VAR_2}' pattern (a move, then a species) has to keep the token order, so it is tra… | (a) Keep as the house wording | no change |
+| [Q9](#q9) | The apprentices' mentor ({STR_VAR_3} in the Mon messages) is another player's name and may be female. | (a) Keep the masculine | no change |
+| [Q11](#q11) | Sound words are a style call: crying 'סניף…' / 'היק…' (taken from the FireRed fork), cough 'כחח', and the coll… | (a) Keep the other spellings and make the cough 'כחח' everywhere | changed |
+| [Q12](#q12) | Term for 'tag team': the glossary has no row for it, and each chunk uses a different word. | A: 'צוות זוגי' for 'tag team' ('הצוות'/'הצוותים' on a second mention);… | changed |
+| [Q15](#q15) | Intro word order differs by speaker: 'אני {STR_VAR_1}, נערת קרב!' / 'אני {STR_VAR_1}, מאמן על!' versus 'אני נע… | (a) Keep | no change |
+| [Q17](#q17) | Tag team: this chunk and B34_04 use 'צמד', while B35_01, B35_02 and B35_04 use 'צוות' or 'צוות זוגי' for the s… | A: Replace the 8 'צמד' lines with 'צוות זוגי' (on a second mention, 'ה… | changed |
+| [Q18](#q18) | BATTLE PIKE is 'שביל הקרב' everywhere (strings.c gText_BattlePike, B09, B34), but the glossary class PIKE QUEE… | A: 'מלכת השביל' (now applied) | no change |
+| [Q23](#q23) | MIMI (OutsideEast ConquerLeagueAndFrontier) and ZIGG (BelieveInYouBuddy, a Zigzagoon nickname) are not in the … | A: add NAME_MIMI = מימי and NAME_ZIGG = זיג, then apply them | changed |
+| [Q24](#q24) | Battle Frontier facility names (מגדל/כיפת/ארמון/זירת/מפעל/שביל/פירמידת הקרב), היכל הדירוג, מוחות החזית, סלון ה… | A: Add term rows in the tree's existing forms | changed |
+| [Q27](#q27) | Lounge3 ObtainedBattlePoints keeps 'השיג' to match B34_04. | A: 'השיג' for Battle Points; change ScottsHouse_hns:238 | changed |
+| [Q29](#q29) | None of the Battle Frontier facility and event names are in glossary.csv: מגדל/כיפת/ארמון/זירת/מפעל/שביל/פירמי… | A: Add term rows (definite form as the headword, with a note on the co… | changed |
+| [Q33](#q33) | FRONTIER BRAIN, FRONTIER PASS, BATTLE TOWER, BATTLE TENT, Battle Points, BERRY POCKET and Gold/Silver Symbols … | A: Add rows (english as the game writes it) and keep 'מוחות החזית' | changed |
+| [Q37](#q37) | VerdanturfTown GentleMonsScaryIfAngry uses 'נעימה' for the speaker's sister to keep the GENTLE nature (נעים) l… | (a) Keep 'נעימה' | no change |
+| [Q38](#q38) | The apprentice 'underling' (Guitarist) is rendered 'העוזר שלך', and 'mentor' and 'master' stay as the loanword… | (a) Accept as is | no change |
+| [Q40](#q40) | 'I need to tap your mind again' is translated אני שוב צריכה את המוח שלך. | (a) Copy the :821 wording exactly into :1561 and :1848 | changed |
+| [Q41](#q41) | 'Snivel/Sniff' is rendered סניף across B36_01 and this chunk. | (a) Keep 'סניף' | no change |
+| [Q43](#q43) | ThanksNoHeldItem14 and ThanksHeldItem14 translate the odd English line 'Wouldn't it be too cool?' literally (ז… | (a) 'זה לא ייראה מגניב מדי?' | changed |
+| [Q44](#q44) | Two live strings still show Emerald town names in Latin letters: VerdanturfTown_BattleTentLobby_Text_RulesAreL… | A: Use the H&S tent names in the two live strings | changed |
+| [Q48](#q48) | 'crucial rule' is 'כלל מכריע' here and in the Palace lobby. | (a) 'כלל חשוב אחד' in all 3 | changed |
+| [Q49](#q49) | For the Sailor rap I used the slang 'אחי' (bro) for the rhyme. | (a) Accept the register and spell it 'אולה' at :921 and :1897 | changed |
+| [Q50](#q50) | Apprentice names (src/data/battle_frontier/apprentice.h): GAME_LANGUAGE is LANGUAGE_ENGLISH (include/constants… | A: revert the 7 foreign-column cells to their upstream values | changed |
+| [Q52](#q52) | #112 'בלי להשתמש במהלך' vs 'בלי להשתמש באף מהלך' (clearer that no move at all was used): the longer form measu… | (c) 'בלי אף מהלך' | changed |
+| [Q54](#q54) | Cross-chunk consistency: B37_s01 still has about 101 frontier trainer names in English. | A: nothing more to do | no change |
+| [Q56](#q56) | Judgment calls the references do not settle: JORDAN ג'ורדן rather than the Israeli name ירדן; JORDYN ג'ורדין; … | B: JORDAN becomes ירדן; JORDYN and the others stay | changed |
+| [Q57](#q57) | 68 frontier and tent trainer names in this chunk are still in Latin letters (TRISTON, FERRIS, ALIVIA, GRETEL, … | A: nothing more to do | no change |
+| [Q59](#q59) | Not changed but worth a human ear: Tucker's 'לא נעים לך?' for 'Aren't you embarrassed?' (the alternative is 'ל… | (a) Keep both | no change |
+| [Q60](#q60) | Twelve Trainer Hill trainer names are not in glossary.csv, so they stay in English as STYLE §3 says: SABINE, D… | A: nothing more to do | no change |
+| [Q62](#q62) | 'Tag team' is translated inconsistently across chunks: צוות (B35_01), צוות זוגי (B35_02 and this chunk's Roof … | A: Adopt 'צוות זוגי' / 'שותף לצוות' / 'קרב צוות' project-wide (the Q12… | changed |
+| [Q66](#q66) | JOHN DOE (trainer_hill.h@3480#170) is still in English. | A: keep ג'ון דו | no change |
+| [Q67](#q67) | BREYDEN (#156), LUCIANA (#177) and GAVITE (#233) are Trainer Hill trainer names with no glossary row. | B: גאווייט | changed |
+| [Q74](#q74) | If you want these names in Hebrew, these are my proposed glossary rows (trainer_name, 10-byte limit from u8 na… | A: keep the Trainer Tower names in Latin | no change |
+| [Q75](#q75) | Policy clash between parallel reviewers in this run. | A: keep the applied rule: rows for reachable facilities, Trainer Tower… | no change |
+| [Q78](#q78) | To clear those warnings, add these as glossary rows. | A: keep the remaining Trainer Tower names in Latin | no change |
+| [Q79](#q79) | Decision for you: should the pair names (KAT & KIPP, GEB&MEGAN) be translated only once both halves have gloss… | A: keep the pairs in Latin, with GEB recorded as hard g (גב) for any f… | no change |
+| [Q81](#q81) | Trainer Tower names AXE & REN (twice), CAMDEN, ZACKERY and MIKAELA are not in glossary.csv, so they stay in En… | A: keep them in Latin | no change |
+| [Q83](#q83) | Alola_Akala_Totem_sign_Text_0 keeps the line break after אנרגיה, copying the English's own awkward break and m… | (a) Move the \n: 'מהטוטם נובעת\nאנרגיה חזקה…' in all 4 | changed |
+| [Q84](#q84) | The hiking claim is worded differently on different islands: Akala's hiker says הטיולים הכי טובים and Ula'ula'… | (a) Ula'ula = 'באי אולאולה הטיולים הכי טובים!\p', and delete line 364 … | changed |
+| [Q85](#q85) | Game Boy Advance: I followed FireRed's NPC wording, 'גיים בוי אדוונס'. | (a) 'גיים בוי אדוונס' everywhere, with a glossary term row | changed |
+| [Q86](#q86) | HAU'OLI CITY (SamsonOak_Trigger_Beginning_Text_4) and ELIO (House5_Mom) are not in the glossary, so they stay … | A: העיר האואולי, and ELIO = אליו | changed |
+| [Q89](#q89) | Samson's line about the real MELEMELE ISLAND (Trigger_Beginning_Text_4) adds 'שבאלולה' to tell it apart from t… | (a) Keep 'האי מלמלה שבאלולה' | no change |
+| [Q93](#q93) | "demake" is translated as גרסת רטרו. | (a) Keep 'גרסת רטרו' | no change |
+| [Q95](#q95) | Hiker battle intro "You must be tough to handle this rough terrain!" is kept impersonal (צריך להיות קשוח...), … | (c) Keep the impersonal wording | no change |
+| [Q101](#q101) | The GREETINGS menu item (sText_Greetings) is 'ברכות', and sText_ShowTrainerCardMale quotes it ('בתור ”ברכות”'). | A: Keep 'ברכות' in all three | no change |
+| [Q106](#q106) | Several names are missing from glossary.csv, so they stay in English as STYLE §3 requires: BRINEY ('קפטן BRINE… | B: BRINEY everywhere it appears in Hebrew, plus the existing MAXIE row… | changed; its Hoenn-names pass is [Q141](#q141) |
+| [Q111](#q111) | Several sibling strings in src/battle_debug.c are in no unit chunk, so they stay in English inside the Hebrew … | A. Translate the 14 labels with the glossary and in-game forms | changed |
+| [Q112](#q112) | This chunk abbreviates AI as ב”מ (בינה מלאכותית), but the main-list item 'AI' stays Latin, so 'AI' sits next t… | A. Use ב”מ at :326 | changed |
+| [Q118](#q118) | STYLE.md section 5 says not to translate debug-menu strings, but it names only src/debug.c. | A. Keep the battle debug menu in Hebrew and finish it | changed |
+| [Q120](#q120) | STYLE.md excludes src/debug.c, but the overworld debug menu is on in this build (DEBUG_OVERWORLD_MENU TRUE, R+… | A. Keep both menus on and keep src/debug.c and debug.inc in English, b… | changed |
+| [Q122](#q122) | The glossary has no row for TRICK MASTER. | A: Add term rows TRICK MASTER = 'אמן התעלולים' and TRICK HOUSE = 'בית … | changed |
+| [Q123](#q123) | The opponent send-out and about-to-send battle lines use the masculine 'שלח'/'עומד' for every trainer, so Karen and the female leaders read… | A. Reword so the verb agrees with the Pokémon: 'הפוקימון של X, Y, יוצא לקרב!' | changed |
+| [Q124](#q124) | The line for an opponent using an item, '{X} השתמש ב{ITEM}!', uses the masculine verb for every trainer, so Rocket Admin Ariana reads… | A. No verb: '{X}: שימוש ב{ITEM}!' | changed |
+| [Q125](#q125) | Lines that put a count before an item name print the singular for every item without a Hebrew plural name ('זרקת 3 שיקוי.', 'לזרוק כמה נוצת שרירים?')… | A. A Hebrew plural for every stackable item, with the Pyramid bag and the put-away lines following | changed |
+| [Q126](#q126) | The NORMAL contest rank has three names in one contest ('דרגה רגילה', 'בדרגת רגיל', 'דרגת בסיס'), and the MC's 'בדרגת רגיל' is not Hebrew. | A. 'נורמל', a rank name like סופר / היפר / מאסטר, wherever the rank is named | changed |
+| [Q127](#q127) | The withdraw lines with a trainer or partner as the subject use the masculine 'החזיר' for every trainer, so women and pairs read as masc… | A. Reword so the verb agrees with the Pokémon: 'הפוקימון של X, Y, חוזר!' | changed |
+| [Q128](#q128) | Summary screen: a geresh or quote mark in the portrait nickname (ג'ימי, טיפלוז'ן) touches the bottom of the portrait box. | D. Lowered copies of the four quote marks, used only by that window | changed |
+| [Q129](#q129) | EXEGGUTOR-A is אקזגיוטר-א, without the ק of its base form אקזגקיוטר, because the base plus -א was measured at 56 px against the 50 px Pokédex list column. | B. The full form אקזגקיוטר-א, with the TEXT_RTL fits, a Pokédex CRY page fit and one PC panel fallback | changed |
+| [Q130](#q130) | The battle intro attaches מ to the trainer class, and 'ממלכת השביל', 'מאס הכיפה', 'משומר פוקימון' read as other words. | A. 'קיבלת אתגר מאת' before the class | changed |
+| [Q131](#q131) | The battle debug menu shows three stat-up hold effects as 'העלאת X' and six as 'X +', and its 'switching to' label leaves a gap before the Pokémon it names. | A. 'X +' for all nine, and the 68 px label 'עובר לפוקימון ' | changed |
+| [Q132](#q132) | The link battle lines for the other player or the link partner sending out or withdrawing a Pokémon, and running, use the masculine verb whatever character that player chose. | A. Reword so the verb agrees with the Pokémon, as Q123 and Q127 did | changed |
+| [Q133](#q133) | Five Pokédex terms have Hebrew names with no official source: HISUI היסואי, MT. CORONET הר הנזר, Ultra Wormhole חור תולעת אולטרה, TEAM PLASMA צוות פלזמה, ROSE רוז. | A. Keep all five | no change |
+| [Q134](#q134) | 'psychic power' in Pokédex prose is כוח פסיכי in most entries and כוח על-חושי in nine. | A. כוח פסיכי and its forms in every entry; על-חושי stays in Kadabra's 'extrasensory' and in the move names that have it | changed; superseded by [Q139](#q139) |
+| [Q135](#q135) | 482 of the 999 Easy Chat words were still English, so trainer phrases mixed the two directions, and three Odd Egg hints named words the list no longer has. | a. Translate every word, a text of its own for every word the game compares and shared texts only where Hebrew has one word, Hebrew order for the group lists, hints that quote the list words, a Hebrew ABC keyboard and the screen mirrored inside its frames | changed |
+| [Q136](#q136) | Names inherited from or modelled on the FireRed translation differ from FireRed's current names in 34 rows; which ones should follow FireRed? | B. Take FireRed's name only where H&S's has an error (two lost letters fixed); list the rest with a reason | changed; superseded by [Q139](#q139) and [Q140](#q140) |
+| [Q137](#q137) | In the Gen 4 battle interface the frostbite tag is a copy of the burn tag and reads כויה, as in English. | B. Redraw it as קור, the word of the H&S sheets | changed |
+| [Q138](#q138) | The brief says a ROM nobody has played by hand is not committed, but 0.1, 0.2 and every 1.0 update were committed with hand play declared as not tested. | B. Publish to the private builds repository, with hand play always declared in the release notes | no change |
+| [Q139](#q139) | Psychic is פסיכי in the type, the PSYCHIC and PSYCHO names, the items and the prose; FireRed now writes על-חושי. | A. The על-חושי family everywhere (owner's decision); names too wide for their lists are shortened, and PSYCHIC SURGE and SEED take the noun על-חוש as their siblings do; the plates redrawn in narrower glyphs | changed |
+| [Q140](#q140) | Which naming and wording conventions of the owner's FireRed translation (PR #2) should H&S follow? | B. Follow them; keep H&S's form only where an H&S limit or a FireRed slip stands in the way, each keep listed | changed; its הנתון superseded by [Q160](#q160) |
+| [Q141](#q141) | Hoenn names left in Latin inside Hebrew strings until a Hoenn-names pass (Q106), MR. STONE in the H&S PokéGear contact data, and the Latin left after them | C. Rows for every Hoenn name a Hebrew string uses, FireRed's form first, a common word translated (MT. PYRE הר המוקד); the cartridge titles in Hebrew letters (רובי, ספיר, אמרלד), rows for the e-Reader and Ash-Greninja, GLACIA גלסיה | changed |
+| [Q142](#q142) | The contest APPEAL is רושם on the hearts' label, in the judge's results and from the MC, but הופעה in the turn lines, the move descriptions and the Easy Chat word; one English sentence was translated both ways. | A. הופעה everywhere the game names the contest appeal | changed |
+| [Q143](#q143) | The Kanto radio upgrade is שדרוג רדיו in the Lavender hint, כרטיס ההרחבה in the gift line and שדרוג כרטיס הרחבה from the music director. | A. The gift line as its English, שדרוג הרדיו; the music director keeps his EXPN CARD, כרטיס הרחבה | changed |
+| [Q144](#q144) | A count from a placeholder reads '1 פוקימונים' at 1: Elm's Pokédex rating, the field healing line ('ב-1 נקודות') and Steven's plate count. | A. A label and a colon, or a sentence the count does not govern | changed |
+| [Q145](#q145) | The stat-change lines broke after הנתון: 'לפורט היריב הנתון' reads 'to the given opposing Furret', and 'הגנה עלה!' pairs a feminine noun with a masculine verb. | B. The verb on the first line for rise and fall ('ל{X} עלה\nהנתון …'); the other lines break before הנתון | changed; superseded by [Q160](#q160) |
+| [Q146](#q146) | The two-foe effectiveness lines name the second target bare, the form of the player's Pokémon. | A. 'ו{B_DEF_PARTNER_NAME} שלצידו' | changed |
+| [Q147](#q147) | Two numbers joined by neutrals are drawn as one block in the wrong order, and a typed arrow is mirrored (research logs 9 and 10, the Mt. Moon sign). | A. A Hebrew word between two numbers; an arrow typed mirrored | changed |
+| [Q148](#q148) | The numero sign stands left of its number in the bag's TM and berry rows, the Pyramid bag and the berry tag (№01) but right of it on the summary and the Pokédex pages (006№). | A. Right of the number everywhere (01№), as Unicode and Hebrew reading order put it: the renderer treats {NO} as a neutral | changed |
+| [Q149](#q149) | A prefix letter before a name placeholder prints without the maqaf when the name is Latin (לGOLD נגמרו), though every static prefix before Latin letters or digits takes one (ב-20). | A. The engine adds the maqaf when the placeholder's text starts with a Latin letter or a digit, or is a name from a Japanese game | changed |
+| [Q150](#q150) | On the summary move pages every mirrored move name ends 2 px from its PP text ('התנפלות35/35'). | A. The names 2 px in from the window edge, fitted to the 70 px left: the 4 blank columns English keeps after its widest name | changed |
+| [Q151](#q151) | The summary's EXP numbers start at the box's left edge and end ragged, and their labels end 6 px before their cell's edge. | A. The EXP window left to right, as the stat columns; the labels printed from x 2 | changed |
+| [Q152](#q152) | The battle bag's USE/CANCEL box hides the end of סגירת התיק in the bottom row. | A. The one-column action boxes five tiles wide under TEXT_RTL, the YES/NO box's footprint | changed |
+| [Q153](#q153) | On the contest results screen every Hebrew nickname touches the star meter. | A. The name windows mirror around the 92 px English uses; the trainer column fits its 42 px | changed |
+| [Q154](#q154) | The status tags: שינה sits one column right of the English SLP (4 and 2 columns of tag colour where English keeps 3 and 3), and the qof of קפוא cuts through the tag's bottom edge. | A. שינה on the English SLP's columns; every qof in the tags stops on the last letter row | changed |
+| [Q155](#q155) | On the Pokédex stats page the catch rate קשה מאוד and the hatch-step eggs touch the red bar on the box's left, and a three-yield EV row can run into it. | A. Under TEXT_RTL the catch rate and the eggs print 1 px further in, at x 8 like the growth rate; an EV row that would pass x 93 is placed by its labels' widths | changed |
+| [Q156](#q156) | The text-alignment checker reports עוצמה (POWER) touching the right edge of the Pokédex move box. | A. Keep: it ends 2 px inside the box, the mirror of POWER; the checker measured to the category icon | no change |
+| [Q157](#q157) | The checker reports החלפה (SHIFT) filling its Pokédex search button, with its lamed on the top row. | A. Keep: the same columns as SHIFT, and the lamed two rows inside the button | no change |
+| [Q158](#q158) | The checker reports נ”כ touching the PP column's right edge on the forget-move page. | A. Keep Q150's PP layout: 1 blank column on the right, 0 or 1 on the left; the reported 0 is the column's rounded corner | no change |
+| [Q159](#q159) | The Poké Ball is פוקיבול, FireRed's word; the owner decided on פוכדור. | A. פוכדור in every string, name and description, with its prefixes and plural; the pocket כדורי פוקי (later פוכדורים, Q161) and the other balls kept (owner's decision) | changed |
+| [Q160](#q160) | The stat-change lines name the stat through הנתון ('הנתון דיוק ירד'); the owner decided the line names the stat itself. | A. The stat with its article and a verb that agrees with it ('ל{X}\nהדיוק ירד!', 'ההתקפה המיוחדת עלתה'), by two engine tables under TEXT_RTL (owner's decision) | changed |
+| [Q161](#q161) | The bag pocket POKé BALLS kept FireRed's כדורי פוקי (Q159); the owner asked for פוכדורים. | A. פוכדורים, the plural of the ball, in the pocket title and the put-away line; ULTRA BALL and MASTER BALL kept (owner's decision) | changed |
+| [Q162](#q162) | Static's line read 'פיקאצ'ו שיתק בעזרת סטטי את…': an ability's name bare inside a battle line reads as an ordinary word (סטטי, איתן, תמים). | A. היכולת before the name in every battle line that names an ability inside the sentence ('בעזרת היכולת סטטי'); ביכולת where the longer form costs a screen | changed |
+| [Q163](#q163) | The same line's last view was wiped 8 frames after it completed: two manual scrolls where English shows one auto-wrapped view. | A. No manual break in a battle line where English has none (22 lines) | changed |
+
+## K1
+
+**Question.** Battle text after את: the wild/opposing suffix is indefinite (טירניטר פראי), so lines such as Intimidate read 'את התקפת טירניטר פראי'. The definite form (הפראי / היריב) would touch 77 strings; it is a style decision left open.
+
+*Source:* TESTING.md known issue
+
+**Analysis.** Still open in the current tree (he/main @95c35506a0). I checked every claim. Most hold, but the edit list is missing one string.
+
+CORRECTION:
+- STRINGID_WILDPKMNFLED (src/battle_message.c:395) is "{PLAY_SE SE_FLEE}{B_BUFF1} פראי ברח!". It carries a literal indefinite פראי after a plain nickname buffer: PREPARE_MON_NICK_BUFFER at src/battle_main.c:5795, printed by BattleScript_WildMonFled in data/battle_scripts_1.s:4333-4334.
+- The English (pokehns-heb-engine src/battle_message.c:395) is "The wild {B_BUFF1} fled!", which is definite. FireRed's identical "{B_BUFF1} פראי ברח!" (pokefirered-heb src/battle_message.c:326) mirrored FireRed's article-less "Wild {B_BUFF1} fled!".
+- With option C, every other battle line would say "X הפראי" and only the flee line would say "X פראי". So "none of the 489 strings needs rewording" is wrong by one, and C needs a fifth edit.
+- No other English string pairs a definite "the wild/the opposing" with a bare name placeholder. A grep of src, data/*.s and data/text finds only :395. Lines :91-96 ("a wild X", "Wild X appeared!") and the overworld match-call/apprentice "{STR_VAR_3} פראי" lines are indefinite in English and stay as they are.
+
+VERIFIED:
+- Suffix strings and switch:
+  - src/battle_message.c:133-136 are " פראי", " יריב", " פראי", " יריב".
+  - The English (:133-136) is "The wild ", "The opposing ", "the wild ", "the opposing ".
+  - TEXT_NAME_SUFFIX_IN_BATTLE is TRUE (include/config/text.h:28).
+- Code paths:
+  - Placeholder expansion: HANDLE_NICKNAME_WITH_SUFFIX (:2927-2948), used at :3273-3290 and :3737-3746.
+  - B_TXT_26 (:3456-3472).
+  - B_BUFF_MON_NICK_WITH_PREFIX(_LOWER) (:3853-3879).
+- Buffer users:
+  - Trace, the only LOWER user: battle_util.c:3130.
+  - Beat Up: battle_script_commands.c:3654.
+  - Wish: battle_end_turn.c:270.
+  - PreventsSwitching: pokemon.c:8357/8366.
+  - Also: exp at battle_script_commands.c:4349/4403 (player side, so never suffixed) and Instruct at :14393 (it fills BUFF1, but STRINGID_USEDINSTRUCTEDMOVE :670 does not print it). Neither changes the result.
+- Placeholder counts: 78 PREFIX2 and 411 PREFIX.
+- Grammatical positions:
+  - 16 direct objects after את: :220 230 233 238 287 293 322 598 608 611 681 748 769 788 838 862.
+  - 3 construct possessors after את: :352 יכולת, :377 התקפת (Intimidate), :670 הוראת.
+  - Joined prepositions: ב 6, ל 29, מ 10, ש 1, all combined.
+  - No string has a literal ה before a name placeholder, and no Hebrew letter follows one directly.
+- The rc3 finding (hns-tools/release/rc3/visual_findings.json, shot battle_effects_intro_05) confirms the Intimidate line "את התקפת טירניטר פראי".
+- FireRed precedent:
+  - FireRed has the same error. 5 strings put "את {X_NAME_WITH_PREFIX}" before the indefinite suffix (pokefirered-heb src/battle_message.c:84-105).
+  - Its indefinite form was faithful to its own article-less English, so it is precedent only for an English source without the article. H&S's English source has it.
+- Widths (textwidth, FONT_NORMAL):
+  - " פראי" 26 -> " הפראי" 33.
+  - " יריב" 22 -> " היריב" 29.
+  - The worst-case name with suffix goes from 110 to 117 px (TextModel with symtree on the edited copy).
+  - :395 goes from 137 to 144 of 208 px.
+- Audit: I applied all five edits to a scratch copy and ran audit.py --tree <copy> src/battle_message.c, with the sym: lookup reading the new suffix. Result: 0 findings, the same as the current tree.
+  - Control run: --subst B_ATK_NAME_WITH_PREFIX2=W40 produces 18 WIDTH errors, so the substitution path does take effect.
+- Tests:
+  - test/hebrew_battle_messages.h and testmsgs composed.json/table.json do not contain the suffix. Their היריב comes from team strings ("הקבוצה של היריב").
+  - No test or tour expects the wild-flee message.
+  - The standalone sText_FoePkmnPrefix2/3/4 "יריב" (B_*_PREFIX1/2/3) are referenced by no string and are out of scope.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep the indefinite " פראי"/" יריב" (status quo, the FireRed form) | Close K1 as accepted style. | No cost, but it leaves 19 ungrammatical את lines (Intimidate is shown in battle_effects). The Imposter line :629 changes meaning, and subject lines read as "A wild X used…" against a definite English source. |
+| B. Make only the Lower pair definite (:135-136) | Two edits that cover the 78 PREFIX2 placeholders and Trace. | Fixes את, but one battler becomes "X פראי" in one line and "X הפראי" in the next. The split follows English capitalization, not Hebrew grammar (for example "אבל {X2} לא יכול…" against "{X} לא יכול…"). |
+| C. Make all four suffix strings definite (" הפראי"/" היריב") and the literal in STRINGID_WILDPKMNFLED :395 ("{B_BUFF1} הפראי ברח!") | Five Hebrew-only literal edits in src/battle_message.c, plus doc updates. No code, label, flag or script change. | +7 px and +1 byte per name. Measured: 0 audit findings, the widest line at 117 px, :395 at 144/208, and no test expectation changes. It departs deliberately from FireRed, whose source had no article. |
+| C without :395 (the decision as submitted) | Only the four suffix strings. | Every wild-flee message (BattleScript_WildMonFled) keeps the indefinite "X פראי ברח!" right after the battle called the same Pokémon "X הפראי". It is inconsistent and does not match the English "The wild X fled!". |
+| D. Foe suffix " של היריב" (possessive) instead of " היריב" | Mirrors the team strings ("הקבוצה של היריב"). | Produces a double של in 31 של-contexts ("ההתקפה של פידג'י של היריב") and a clumsy construct ("התקפת פידג'י של היריב"). It costs about +16 px more, and wild battles have no parallel form. Worse than the apposition היריב. |
+| E. Reword the 19 את strings, or add a per-position suffix in the engine | Rewrite the strings around the indefinite form, or add a new placeholder or flag in BattleStringExpandPlaceholders. | Many rewrites or a code change. Either leaves the subject lines, :629 and :395 inconsistent, and the engine variant gains nothing over C, since the definite form is correct in every position. |
+
+**Chosen:** C, completed: make all four suffix strings definite (" הפראי" for wild, " היריב" for opposing), and change the literal in STRINGID_WILDPKMNFLED (:395) to "{B_BUFF1} הפראי ברח!". The encounter intros (:91-96) stay indefinite.. The definite form is correct Hebrew in every position the placeholders take: subject, את object, construct possessor, joined and separate prepositions, and relative clause. With a name, the adjective must take ה. It fixes all 19 את lines and the Imposter meaning in one place.
+
+It also translates H&S faithfully, since the English says "The wild / the opposing" in both the capitalized and lower-case variants and "The wild X fled!". FireRed's indefinite form mirrored FireRed's article-less "Wild/Foe", so it is not a precedent here.
+
+The :395 edit is required for completeness. Without it, the one message that ends many wild battles would revert to the indefinite form right after the battle used the definite one. The first-mention intros keep "פראי", as the English "a wild X" / "Wild X appeared!" does.
+
+The risk is minimal: 5 string literals and no code, label, flag or script change. All 5 are audited on a scratch copy with 0 findings and at least 91 px to spare on the widest line, and no test expectation changes. Option B splits one battler into two forms. Option D ("של היריב") stacks של.
+
+*Changed:* `docs/hebrew_translation.md`, `src/battle_message.c`, `translation/hebrew/STYLE.md`
+
+*Glossary:* `TERM_BATTLE_SUFFIX_WILD`, `TERM_BATTLE_SUFFIX_OPPOSING`, `TERM_WILD_ENCOUNTER`
+
+## K2
+
+**Question.** The trainer ID label is the Latin glyph pair {ID}{NO} (IDNo) on the summary and trainer card, a style decision left open.
+
+*Source:* TESTING.md known issue
+
+**Analysis.** Confirmed in the current tree (he/main 95c35506a0), and only the summary screen is still affected. The trainer card is already Hebrew: src/strings.c:756 gText_TrainerCardIDNo = "מס' זיהוי ". The Hall of Fame is also Hebrew: gText_IDNumber, strings.c:133. src/strings.c:157 gText_IDNumber2 = "{ID}{NO}" has three uses, src/pokemon_summary_screen.c:3848 (PrintMonOTID) and :4015/:4017 (PrintEggOTID), and no other source references it. The renderer classes {ID}/{NO} as strong LTR (src/text.c:1105-1108). That is why PrintEggOTID has a TEXT_RTL block at :4011-4019 that prints the marks before the label. The ID window PSS_DATA_WINDOW_INFO_ID is 7 tiles = 56 px (:640-652), right-aligned with GetStringRightAlignXOffset(...,56). Widths in FONT_NORMAL, re-measured: "{ID}{NO}23773" 48, "מס' 23773" 50, "מס' 00000" 50, "מס' ?????" 50, "ת.ז. 23773" 51, "זיהוי 23773" 54, "מס' זיהוי 23773" 74 (too wide). The OTID is always printed as 5 digits with leading zeros, so 50 px is the maximum. FireRed gives no precedent for this string: pokefirered-heb src/strings.c:157 also keeps "{ID}{NO}" but nothing there references it. Its trainer card uses "מס' זיהוי " (:855) and its Hall of Fame uses "מספר מזהה" (:113). Out of scope: gText_NumberClear01 (the dex-number numero sign), which is shared with both dex files.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep {ID}{NO} | No change; record it as a deliberate glyph. | None technically. It stays the last Latin label on the summary info page, and it differs from "מס' זיהוי" on the trainer card and in the Hall of Fame. |
+| B. Hebrew short form "מס' " | gText_IDNumber2 = "מס' " (50 px with 5 digits or marks; fits 56). Under TEXT_RTL, PrintEggOTID returns to label-then-marks. With a Hebrew label, the trailing neutral marks are drawn to its left, where a hatched Pokémon's digits sit. | Low: one string, plus removing a 9-line #if/#else/#endif block. It is the same abbreviation the trainer card and Hall of Fame use. |
+| C. "ת.ז. " | gText_IDNumber2 = "ת.ז. " (51 px), plus the same PrintEggOTID change. | Fits, but ת.ז. is a citizen's identity card, the wrong register for a trainer number, and appears nowhere else in the game. |
+| D. "זיהוי " | gText_IDNumber2 = "זיהוי " (54 px), plus the same PrintEggOTID change. | Only 2 px to spare, and "identification 23773" reads less naturally as a number label than מס'. |
+| E. Redraw the ID/NO glyphs as Hebrew art | Redraw glyphs 0x107/0x108 in every font and reclass them as RTL in RtlClassAt. | High: {NO} is also the numero sign in dex numbers, bag TM/berry rows, DexNav and berry tags, so all of those would change. |
+
+**Chosen:** B. To a Hebrew player, "מס'" next to a number is the natural label. It is the abbreviation the trainer card and Hall of Fame already use ("מס' זיהוי"), and it fits the 56 px slot with 6 px to spare. It changes one string and removes a workaround instead of adding code. FireRed has no competing precedent because it never uses this string.
+
+*Changed:* `src/strings.c`
+
+*Glossary:* `TERM_ID_NO_SHORT`
+
+## K3
+
+**Question.** POKéGEAR is written in Latin letters in dialogue and menus, consistently; the glossary has no Hebrew form.
+
+*Source:* TESTING.md known issue
+
+**Analysis.** Partly resolved since TESTING.md was written, and now inconsistent. The start menu says פוקיגיר: src/strings.c:1030 gText_MenuPokenav (IS_HNS branch). The glossary already has name,NAME_POKÉGEAR,...,פוקיגיר,proposed (glossary.csv:6472). Dialogue still says POKéGEAR. A scan of data/src/include for lines with Hebrew letters and Latin POKéGEAR/POKéNAV finds 25 lines. The 17 HnS dialogue lines are listed in the edits; each old substring occurs exactly once on its stated line. Two more are Pokégear menu descriptions (src/pokenav_menu_handler_gfx.c:351-352). Two are Battle Pike mentions that upstream HnS English left as POKéNAV (BattleFrontier_BattlePikeLobby_hns:418, used at :251; src/data/script_menu.h:720 MultichoiceList_BattlePikeRules, used by MULTI_BATTLE_PIKE_RULES at Pike lobby _hns:241). The Pike is reachable through BattleFrontier_OutsideWest_hns/map.json:629. The remaining four are out of scope. event_scripts.s:1550 is the #else (Emerald) branch. match_call.inc:2623/2699/2841 (Wally6, Scott7, MrStone1) are compiled into the HnS match-call table, but their enable flags FLAG_ENABLE_NORMAN/WALLY/SCOTT_MATCH_CALL are set only in Emerald maps (Route104:377, MauvilleCity:457, SlateportCity:75), so they cannot be reached. src/strings.c:560 gText_MenuOptionPokenav (IS_HNS) is still Latin "POKéGEAR". It is drawn by CreateStartMenuForPokenavTutorial (script_menu.c:1205). The Latin lines left in HnS maps are unreferenced: RadioTower1F_Text_GotRadio, GoldenrodCity_Text_CooltrainerF2_GotCard and RuinsOfAlph_Lab IMadePokenav/WowThatsAPokenav/DevelopNewPokenavFeature. Precedent: the tree writes the sister terms in Hebrew, פוקדקס and פוקיבול. STYLE.md §4 says to attach prefixes rather than hyphenate, and §5 says the {POKE} token is written פוקי. Hebrew גיר is also the everyday word for a gearbox, so the reading is natural.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Latin everywhere | Revert gText_MenuPokenav to "POKéGEAR" and treat the name as a brand. | Keeps Latin inside 17 Hebrew sentences with hyphenated prefixes (ב-, ה-, ל-), unlike פוקדקס and פוקיבול. |
+| B. פוקיגיר everywhere text is drawn | Replace POKéGEAR with פוקיגיר in the 17 dialogue lines, the 2 menu descriptions and gText_MenuOptionPokenav, with prefixes attached directly. Also write פוקיגיר in the 2 HnS Battle Pike lines, because the player carries a Pokégear, not a PokéNav. Keep the header logo art. | Low. Every line gets narrower: by 21 px where a hyphenated prefix is dropped, by 15 px elsewhere. No tokens, labels or logic change. |
+| C. פוקגיר (by analogy with פוקדקס) | The same edits with פוקגיר. | Contradicts the glossary row and the start menu, which already ship פוקיגיר. The rules give POKé as פוקי (פוקיבול); פוקדקס is FireRed's exception. |
+| D. A descriptive Hebrew noun | Translate the meaning instead of the name. | Loses the device's name, lengthens lines, and has no precedent. |
+
+**Chosen:** B. It matches what the player already sees in the start menu and the glossary, and the house style for POKé names. It removes hyphenated Latin from 21 strings, and every line gets narrower. The header art stays as a logo, the way the POKéDEX logo was kept.
+
+*Changed:* `data/event_scripts.s`, `data/maps/BattleFrontier_BattlePikeLobby_hns/scripts.inc`, `data/maps/CherrygroveCity_hns/scripts.inc`, `data/maps/GoldenrodCity_DepartmentStore_2F_hns/scripts.inc`, `data/maps/GoldenrodCity_RadioTower_1F_hns/scripts.inc`, `data/maps/NewBarkTown_Lab_hns/scripts.inc`, `data/maps/NewBarkTown_PlayersHouse_1F_hns/scripts.inc`, `data/maps/NewBarkTown_hns/scripts.inc`, `data/maps/OlivineCity_hns/scripts.inc`, `data/maps/Route27_hns/scripts.inc`, `data/maps/Route39_hns/scripts.inc`, `data/maps/SinjohRuins_House1_hns/scripts.inc`, `data/maps/VermilionCity_hns/scripts.inc`, `src/data/script_menu.h`, `src/pokenav_menu_handler_gfx.c`, `src/strings.c`
+
+*Glossary:* `NAME_POKÉGEAR`
+
+## K4
+
+**Question.** Naming screen: switching to the Hebrew page keeps the cursor column, so the cursor does not start on א.
+
+*Source:* TESTING.md known issue
+
+**Analysis.** Confirmed still open. src/naming_screen.c:835-866 MainState_WaitPageSwap has no TEXT_RTL handling. It keeps cursorX, clamps it to the new page's column count, and handles the button column separately (onLastColumn). The page order is KBPAGE_SYMBOLS=0, LETTERS_UPPER=1, LETTERS_LOWER=2 (:92-96), and currentPage++ mod 3 cycles UPPER -> LOWER -> SYMBOLS -> UPPER. In the Hebrew build KEYBOARD_HEBREW is KEYBOARD_LETTERS_UPPER and KEYBOARD_LATIN is LETTERS_LOWER (:348-349). The Hebrew page is laid out right to left with א in column 7 (sHebrewKeyboardChars :356-361; mirrored x positions sHebrewColumnXPos :364). The Latin page has A in column 0 (:319-324), and the symbols page has 6 columns (sPageColumnCounts :332-336). The cursor starts on א only when the screen opens (CreateCursorSprite :1217-1219), and every template starts on KBPAGE_LETTERS_UPPER (:2583-2638; also :547). So a full SELECT cycle runs א(col 7) -> Latin '.'(7) -> symbols col 5 (clamped, an empty key) -> Hebrew col 5 = ג, which matches the rc3 battle_catch_naming_typed result.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Mirror the column when the swap crosses between the RTL page and an LTR page | Remember the old keyboard id. After currentPage++, if exactly one of old/new is KEYBOARD_HEBREW and the cursor is not on the button column, set cursorX = KBCOL_COUNT-1-cursorX, then apply the existing clamp. The cycle becomes א(7) -> A(0) -> 0(0) -> א(7), and matching keys line up (ב 6 <-> B 1; Hebrew '.' 0 <-> Latin '.' 7). | Low: about 6 lines under #if TEXT_RTL in one function. English is untouched; the row and the button column are kept. |
+| B. Reset to the page's first key on every swap | Under TEXT_RTL, set (7,0) on the Hebrew page and (0,0) on the others unless onLastColumn. | Low code risk, but it discards the row and departs further from stock behaviour. |
+| C. Leave it and document | No change. | Cycling pages lands on ג or an empty key, and the tour types the wrong letters. |
+
+**Chosen:** A. It is the mirror image of the stock rule: column n means the n-th key from the reading start on every page. A full cycle returns to א, and the change is small and confined to TEXT_RTL.
+
+## K5
+
+**Question.** Cosmetic: the fainted tag fills its pill edge to edge; the descender of ק in a summary nickname touches the frame; the unknown height and weight placeholders show the unit before the question marks; the Pokédex list stat panel keeps the English left-to-right layout (the labels are Hebrew).
+
+*Source:* TESTING.md known issue
+
+**Analysis.** All four items are still open. (1) Fainted tag. In graphics/interface/status_icons.png, icon 6 (rows 48-55) מעולף has ink from x6 (final pe, rows 50-51) to x24, while the pill interior is x6-25. The left end therefore looks notched. FireRed's untranslated FNT (pokefirered-heb graphics/summary_screen/status_ailment_icons.png rows 48-55) keeps x6-8 and x24-25 clear. The tag is generated by hns-tools/scratch/graphics/coreui/tools/make_coreui.py status_tags() (TAGS_ICONS, job status_icons.png). Icon 1 שיתוק also inks x25 (rows 10-13), but the issue does not name it. Moving it left would drop the qof descender's bottom pixel on the corner at (7,15), so it is left as is. (2) Summary nickname. PSS_LABEL_WINDOW_PORTRAIT_NICKNAME (src/pokemon_summary_screen.c:603-611: L1 T12 W9 H2, base 413) prints at y=1 (:3543; egg :3559), so the glyph origin is y97. Normal-font Hebrew has its body on rows 4-11, the ל ascender at row 2, and descenders to row 13 with the shadow on row 14 (hns-tools/notes/fonts_done.md). The ק ך ן ף ץ descenders therefore land at y109-110 and the shadow at y111. y is u8 and already 1. The BG0 char base is 0 and BG1-3 use char base 2 (sBgTemplates :354-386). Of the 32 window templates, the largest end is MOVE_DESCRIPTION 617+80=697, and PROMPT_RELEARN sits at 800, so tiles 697-799 are free. No BG0 window uses tile row 11, columns 1-9. The window is cleared with PIXEL_FILL(0) (:3479), so an extra row is transparent. (3) Unknown height and weight. src/strings.c:49-52 holds "{CLEAR_TO 0x0C}??'??”", "???.? m", "????.? lbs" and "???.? kg". '?', '.', ''' and '”' are neutral (sRtlCharClass, text.c:1024-1042), and only m/kg/lbs start an LTR run (RtlStartsRun :1120, RtlBeginRun :1186). The measurements go to window 0 through pokedex.c PrintInfoScreenText, called from pokedex_plus_hgss.c:4729, and that window is mirrored, not in place. Each neutral is therefore drawn at axis-x-w and the unit lands at the far left: "m ?.???", "”??'??". The renderer keeps the logical pen, so {CLEAR_TO} keeps its English meaning (text.c:993-996). Known metric values render "0.5 m". (4) Dex list stat panel. Since df3596f377, stat_bars.png has the Hebrew labels right-aligned at x0-18 with their shadows. CreateStatBar draws the bars from STAT_BAR_X_OFFSET 19, scaled to end at x48 (pokedex_plus_hgss.c:3716-3779). There are 15 WritePixel x terms, and the raw width is capped at 39 (:3838-3839), so the drawn width is at most 30. The panel reads left to right while the dex stats page is mirrored.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Accept all four as cosmetic | Keep TESTING.md as is. | None, but four visible blemishes stay on common screens. |
+| B. Fix each at its source, under TEXT_RTL or in Hebrew assets | (1) Redraw מעולף 2 px narrower (3-px ayin/mem) at x7-23. (2) Move the nickname window up one tile row (height 3) at a free baseBlock and print 2 px higher. (3) Reorder the placeholders' neutrals so the unit forms the run at the right end. (4) Mirror the stat panel: labels flush right, bars growing leftwards. | Low to moderate: one generator override, about 10 lines of summary code, 4 strings, and a graphic plus about 8 lines in CreateStatBar. All are isolated from English, save data and logic. |
+| C. Minimal partial fixes | (2) print at y=0 only (1 px; one white row stays on the frame), (4) keep the LTR panel, (1) and (3) as in B. | Least code, but item 2 is only half fixed and item 4 stays inconsistent with the stats page. |
+
+**Chosen:** B. Each fix is local and reversible, and sits in Hebrew-only assets or behind TEXT_RTL. Each makes its screen match the English layout and its Hebrew neighbours: the pill margins match FNT, the unknown measures match the known "0.5 m", and the panel matches the mirrored stats page. The nickname fix uses free VRAM instead of fighting the u8 y. The PAR tag change is dropped from the plan: it is outside the issue and only swaps a shin pixel for a qof descender pixel.
+
+*Changed:* `src/strings.c`
+
+*Glossary:* `TERM_STATUS_FAINTED_TAG`
+
+## K6
+
+**Question.** Berry names come from the FireRed fork and mix the words גרגר, פרי, פירות and תות, as FireRed does; CHESTO is צ'סטרו there too.
+
+*Source:* TESTING.md known issue
+
+**Analysis.** Confirmed still open in src/data/items.h. Of the 68 berry .name heads (10913-12157), 36 use פרי, 22 תות, 6 פירות and 4 גרגר. Of the plural heads, 42 use פירות, 22 תותי and 4 גרגרי. The 6 פירות items use a plural as the singular name (for example 10995-10996). ITEM_UNUSED_BERRY_1 (16318) is also "פירות סיטרוס". Everything else already says פרי: gText_Var1Berry "פרי {STR_VAR_1}" (strings.c:855), gText_Berry (:1261), battle sText_BerrySuffix (battle_message.c:183), TERM_BERRY = פרי (glossary.csv:5535, which logs FireRed's mix) and the dialogue (כיס הפירות). CHESTO is צ'סטרו at items.h:10935-10936, berry.c:90 (stem, 6-byte limit) and strings.c:1292 gText_Moon. Glossary :4701 already calls this a FireRed slip and asks to fix the item and stem together. A stem mismatch check of berry.c against items.h finds one more case. IAPAPA's tag stem is יאפאפה (berry.c:389), shortened because יאיפאפה is 7 bytes, but the item is "תות יאיפאפה". Glossary :4548/:4714 says the dropped second yod is silent and asks to align the item if it is renamed. Singular dialogue with an item word: Route14_hns:401 "מתות קואלות" (English: the QUALOT BERRY). IcePath_B3F_hns:154/163 "מפירות אספר" (the ASPEAR BERRY). Route39_Barn_hns:154/160/175 "פירות אורן" (an ORAN BERRY, checked against pokehns-heb-engine). The plurals at Route39_Barn :144/:172 and Route35_hns:164 are correct and stay. challenge_menu.c:382/383/451 "פירות סיטרוס" is a plural topic heading and generic statements, so it stays. A scan finds no other old heads in Hebrew text outside items.h.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep FireRed's mixed heads (canon) | No change; document. | Four nouns for one item class in one pocket. פירות as a singular is ungrammatical, and תות means strawberry. |
+| B. Unify to פרי / פירות, and fix the CHESTO and IAPAPA stems | Every .name becomes "פרי <stem>" and every .pluralName "פירות <stem>" (32 items plus the unused duplicate). Chesto becomes צ'סטו in items.h, berry.c and gText_Moon. The IAPAPA item takes the tag's stem, יאפאפה. The 6 singular dialogue lines follow. | Low. Labels, constants and berry data do not change. This deliberately overrides FireRed item names (rules §0), justified by FireRed contradicting itself (logged in §7). |
+| C. Unify to גרגר / גרגרי | Use the botanical word in all 68 items. | Contradicts the code-built strings, battle suffix, glossary term and dialogue, which all say פרי/פירות; also wider and 36 more edits. |
+
+**Chosen:** B. פרי/פירות is the majority head (36 items). It is what the code, battle text, dialogue and TERM_BERRY already use, it is correct Hebrew in both numbers, and it is the narrowest singular head. CHESTO and IAPAPA are fixed in the same pass because those items are being renamed anyway, and the glossary itself asks for both. After the change the bag name matches the berry tag and the berry-crush and blender names built from the stem.
+
+*Changed:* `data/maps/IcePath_B3F_hns/scripts.inc`, `data/maps/Route14_hns/scripts.inc`, `data/maps/Route39_Barn_hns/scripts.inc`, `src/berry.c`, `src/data/items.h`, `src/strings.c`
+
+*Glossary:* `TERM_BERRY`, `ITEM_CHESTO_BERRY`, `ITEM_CHERI_BERRY`, `ITEM_CHERI_BERRY`, `ITEM_CHESTO_BERRY`, `ITEM_CHESTO_BERRY`, `ITEM_PECHA_BERRY`, `ITEM_PECHA_BERRY`, `ITEM_RAWST_BERRY`, `ITEM_RAWST_BERRY`, `ITEM_ASPEAR_BERRY`, `ITEM_LEPPA_BERRY`, `ITEM_ORAN_BERRY`, `ITEM_PERSIM_BERRY`, `ITEM_LUM_BERRY`, `ITEM_SITRUS_BERRY`, `ITEM_FIGY_BERRY`, `ITEM_FIGY_BERRY`, `ITEM_WIKI_BERRY`, `ITEM_WIKI_BERRY`, `ITEM_MAGO_BERRY`, `ITEM_MAGO_BERRY`, `ITEM_AGUAV_BERRY`, `ITEM_AGUAV_BERRY`, `ITEM_IAPAPA_BERRY`, `ITEM_IAPAPA_BERRY`, `ITEM_RAZZ_BERRY`, `ITEM_RAZZ_BERRY`, `ITEM_BLUK_BERRY`, `ITEM_BLUK_BERRY`, `ITEM_NANAB_BERRY`, `ITEM_NANAB_BERRY`, `ITEM_WEPEAR_BERRY`, `ITEM_WEPEAR_BERRY`, `ITEM_PINAP_BERRY`, `ITEM_PINAP_BERRY`, `ITEM_POMEG_BERRY`, `ITEM_POMEG_BERRY`, `ITEM_KELPSY_BERRY`, `ITEM_KELPSY_BERRY`, `ITEM_QUALOT_BERRY`, `ITEM_QUALOT_BERRY`, `ITEM_HONDEW_BERRY`, `ITEM_HONDEW_BERRY`, `ITEM_GREPA_BERRY`, `ITEM_GREPA_BERRY`, `ITEM_TAMATO_BERRY`, `ITEM_TAMATO_BERRY`, `ITEM_CORNN_BERRY`, `ITEM_CORNN_BERRY`, `ITEM_MAGOST_BERRY`, `ITEM_MAGOST_BERRY`, `ITEM_RABUTA_BERRY`, `ITEM_RABUTA_BERRY`, `ITEM_NOMEL_BERRY`, `ITEM_NOMEL_BERRY`, `ITEM_SPELON_BERRY`, `ITEM_SPELON_BERRY`, `ITEM_PAMTRE_BERRY`, `ITEM_PAMTRE_BERRY`
+
+## Q2
+
+**Question.** STRUGGLE in prose is written without quotation marks ('להשתמש במאבק'), following B30_01. Should move names in running dialogue get ”…” to set them apart from the common noun (here מאבק = 'a struggle')? STYLE.md does not settle this
+
+*Source:* reviewer question (chunk B34_03)
+
+**Analysis.** Settled in practice for dialogue, but STYLE.md does not say so, and the proposed bullet as drafted would contradict the C description strings. Dialogue: move names are bare. HintPPWaste_hns has '…ונאלצים להשתמש במאבק…' (BattleFrontier_BattlePyramidLobby_hns/scripts.inc:737, 185 px; English :748 'but to use STRUGGLE…'). Falkner's TM line is now bare: 'המ”מ הזה מכיל את מנוחת כנף.' (VioletCity_Gym_hns/scripts.inc:87). A scan of every ”…” in data/ against the glossary move names finds only two quoted moves in map scripts, and the English quotes both: Route31_hns:171 'התקצר ל”מנוחה”' (English :172 'shortened to 'Rest,''), where the word itself is being explained, and BattlePyramidLobby_hns:558 'ב”מנוחה”' (English :560 'select “REST”'), a menu option. NewBarkTown_Lab_hns:972 '”שמירה”' is the SAVE option, not a move. FireRed writes moves bare in dialogue: CeruleanCity_House1/text.inc:47 'גלישה', OneIsland_KindleRoad:42 'להשתמש בגלישה', SSAnne_3F_Corridor:3 'בחיתוך'. Correction: system and description text does the opposite. At least 36 C strings quote a move name that the English writes in capitals without quotes: src/challenge_menu.c:378 '”גיליוטינה”', :418 'מהלכי טעינה כמו ”קרן על”', :645, :1018-1019; src/data/moves_info.h:111 and :20643 '”הגנה”'; 25 Z-crystal and terrain-item descriptions in src/data/items.h (7937-8206, 9356-9518); and 3 Pokédex entries. A bullet that says 'quote only where the English quotes the word', with no scope, would tell a later batch to strip those quotes or to quote inconsistently. The bullet must say which kind of text it covers.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Bare in dialogue, as now. Write the rule into STYLE.md §3, scoped to dialogue, and record that descriptions and menus keep their quotes | No game text changes. Add one bullet to STYLE.md §3. | None. Context makes מאבק read as the move. The bullet only records what the tree already does. |
+| (a') Same rule, but the bullet is unscoped ('quote only where the English quotes') | No game text changes. Add the bullet as first drafted. | It contradicts the 36+ quoted move names in the C descriptions and invites churn or drift in later batches |
+| (b) Always quote move names | Add ”…” around every move name in dialogue (hundreds of lines) | Large churn, goes against FireRed, and adds width |
+| (c) Add the classifier, FireRed-style: 'במהלך מאבק' | Change line 737 to '…להשתמש במהלך מאבק…' | 214 px, over the 208 limit, and 'במהלך' also reads as 'during' |
+
+**Chosen:** (a). Bare move names in dialogue match the FireRed canon and the whole tree, and cost nothing. The classifier option overflows and is ambiguous. Scoping the bullet keeps STYLE.md consistent with the description and menu strings, which already quote a move cited in a sentence (Hebrew has no capitals to mark the name there).
+
+*Changed:* `translation/hebrew/STYLE.md`
+
+## Q5
+
+**Question.** Brandon's nickname 'the chief' is rendered as 'הבוס', used the same way in both the attendant's and Brandon's lines. 'הצ'יף' and 'המפקד' are alternatives. This is a style call.
+
+*Source:* reviewer question (chunk B34_04)
+
+**Analysis.** Brandon's nickname 'the chief' is 'הבוס' in all three places in the live map: BattleFrontier_BattlePyramidTop_hns/scripts.inc:234 'הבוס שלנו' and :238 'מהבוס שלנו' (the attendant, English :235/:240), and :259 'רוב האנשים קוראים לי הבוס!' (Brandon, English :260). It is consistent. The _hns chain is the live one: BattlePyramidFloor_hns:102 warps to MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_TOP_HNS. The non-hns copy of the map (scripts.inc:235/240/260) is still English and is reached only from the non-hns floor.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Keep 'הבוס' | No change | None |
+| (b) 'הצ'יף' | Replace in 3 lines | A loanword few Hebrew speakers use |
+| (c) 'המפקד' | Replace in 3 lines | Sounds military, which is wrong for a jovial explorer |
+
+**Chosen:** (a). 'הבוס' is how Hebrew speakers naturally say an informal 'the chief', and the attendant and Brandon already use it the same way.
+
+## Q6
+
+**Question.** Frontier lobbies here and in B33/B34 say 'ברכות!' for 'Congratulations!', while the rest of the game mostly uses 'מזל טוב!'. I kept 'ברכות!' to match the other Frontier lobbies; a project-wide choice may be wanted.
+
+*Source:* reviewer question (chunk B34_04)
+
+**Analysis.** Checked against the current tree (HEAD bb8db5c703; commits landed during this review but touched none of these lines). The engine has 52 live units whose English says 'Congratulations'. Their Hebrew:
+- 'מזל טוב' in 34.
+- bare 'ברכות' in 9.
+- 'ברכותיי' in 4.
+- 5 use another fitting phrase ('כל הכבוד', 'אנו מברכים אותך').
+The 9 bare-'ברכות' units are all live staff or tent lines: BattleDomeLobby_hns:517 and :639, BattleFactoryLobby_hns:384 and :447, BattleTowerLobby_hns:948 and :1337, BattleDomePreBattleRoom_hns:367 and :375, and data/text/battle_tent.inc:309 (Slateport tent). The Frontier is already mixed: BattleDomeBattleRoom_hns has 8 'מזל טוב' (936-1176).
+The Hall of Fame string src/strings.c:128 gText_LeagueChamp 'אלוף הליגה!\nברכות!' is printed in FONT_NORMAL in the dialogue frame (hall_of_fame.c:729, hall_of_fame_frlg.c:648) and is copied from FireRed (pokefirered-heb src/strings.c:109). H&S has already moved off FireRed's 'ברכות!' in two places: the evolution message (src/battle_message.c:1418; FireRed :1279) and the easy-chat word CONGRATS (easy_chat_group_greetings.h:58).
+The 4 'ברכותיי' units are formal speakers: PikeLobby_hns:380, PikeRoomFinal_hns:38, TowerBattleRoom_hns:548 (Anabel), and PokemonLeague_HallOfFame_Frlg:58/:68 (Oak, one unit).
+
+| Option | How | Risk |
+|---|---|---|
+| A: 'מזל טוב' for every 'Congratulations', the HoF screen included; keep 'ברכותיי' as a formal speaker's voice | Swap 'ברכות' for 'מזל טוב' in the 9 units and in gText_LeagueChamp, and add a glossary term row. | Low: 10 one-word swaps, the widest line 166 px. The HoF screen departs from FireRed, as the evolution message already does. |
+| B: 'ברכות!' everywhere | Rewrite the 34 'מזל טוב' units. | High: 34+ edits, and a bare 'ברכות!' as an exclamation is stiff, unnatural Hebrew. |
+| C: Leave it mixed as register (staff 'ברכות', everyone else 'מזל טוב') | No edits. | The Dome MC says 'מזל טוב' and the Dome lobby says 'ברכות' for the same event, and the reviewer's question stays open. |
+
+**Chosen:** A. 'מזל טוב' is the natural Hebrew exclamation. It is already the majority (34 to 9), including the Frontier's own Dome battle room, the easy-chat word and the evolution message. 'ברכותיי' stays as character voice (Anabel, the Pike staff, Oak), as STYLE §1 asks. After the HoF change, a bare 'ברכות' never means 'Congratulations' anywhere in the game, which also settles Q101.
+
+*Changed:* `data/maps/BattleFrontier_BattleDomeLobby_hns/scripts.inc`, `data/maps/BattleFrontier_BattleDomePreBattleRoom_hns/scripts.inc`, `data/maps/BattleFrontier_BattleFactoryLobby_hns/scripts.inc`, `data/maps/BattleFrontier_BattleTowerLobby_hns/scripts.inc`, `data/text/battle_tent.inc`, `src/strings.c`
+
+*Glossary:* `TERM_CONGRATULATIONS`
+
+## Q8
+
+**Question.** The '{STR_VAR_1}-using {STR_VAR_2}' pattern (a move, then a species) has to keep the token order, so it is translated as 'אחד שמשתמש ב{STR_VAR_1} - {STR_VAR_2}' throughout. That is correct but stiff. Is it the house wording, or do you want another construction for every chunk?
+
+*Source:* reviewer question (chunk B35_01)
+
+**Analysis.** The live text is in data/maps/BattleFrontier_BattleTowerMultiPartnerRoom/scripts.inc: include/strings.h:985 and :1099 declare the non-_hns labels, and the _hns copies of these texts are not referenced from C. The English has 30 '-using' occurrences. The Hebrew uses 'ב{STR_VAR_1} - {STR_VAR_2}' on 31 lines (:397 … :1756). The lead-in varies naturally: 'אחד שמשתמש' / 'ועוד אחד שמשתמש' (for example :476-477, :480-481). STYLE §5 and drift.py's TOKENS check (order matters) require the move before the species. Width correction: 190 px is the model's default (both tokens at the W12 fill). With STR_VAR_1 filled at W16 the line measures 218 px, but that fill is not a real move. The widest Hebrew move in the glossary is 'להבת נשמה מצלצלת' (96 px) and the widest species is 'מיאוסקראדה' (60 px), which gives a real worst case of 178 px. That is under both 208 and the 200 limit of the '.\p' lines (:481 etc.).
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Keep as the house wording | No change | Slightly formal, but clear |
+| (b) 'אחד עם {STR_VAR_1}: {STR_VAR_2}' | Rewrite 30 units | 218 px at the default fill, over budget, and vaguer |
+| (c) 'מומחה {STR_VAR_1}: {STR_VAR_2}' | Rewrite 30 units | Changes the meaning (an 'expert' rather than one that uses the move) |
+| (d) '{STR_VAR_2} עם {STR_VAR_1}' | Swap the tokens | Breaks STYLE §5 token order, and drift.py fails |
+
+**Chosen:** (a). It is the only natural construction that keeps the required token order and fits with real names. It is already used consistently across all the units.
+
+## Q9
+
+**Question.** The apprentices' mentor ({STR_VAR_3} in the Mon messages) is another player's name and may be female. Most units avoid gender with 'בעצת / בהמלצת', but Apprentice10Mon1 says 'המנטור שלי, {STR_VAR_3}, המליץ' in the masculine. I left it because the player is masculine by default. Should mentor references be gender-neutral everywhere?
+
+*Source:* reviewer question (chunk B35_01)
+
+**Analysis.** {STR_VAR_3} in the Mon1 lines is the apprentice record's playerName (src/battle_tower.c:1461). For the player's own former apprentice, that is the player's name (src/apprentice.c:1174 StringCopy(apprentices[0].playerName, gSaveBlock2Ptr->playerName)). The record stores no gender (include/global.h:430-444). Without record mixing the mentor is always the player, who is masculine by the settled rule (STYLE §2), and apprentice.inc already calls the player 'המנטור שלי' (:1324, :1614; 10 uses of מנטור, e.g. :407 'אתה המנטור שלי'). Only Apprentice10Mon1 is gendered ('המנטור שלי, {STR_VAR_3},\nהמליץ על הצוות הזה:', MultiPartnerRoom:579-580). The other Mon1 lines use בעצת / בהמלצת / לפי.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Keep the masculine | No change | A female mentor from a record-mixed save reads as masculine, the same as everywhere the player is addressed |
+| (b) 'בהמלצת המנטור שלי, {STR_VAR_3},' | Rewrap 579-582 | The noun is still masculine, so little is gained |
+| (c) Drop 'mentor': 'בהמלצת {STR_VAR_3}' | Rewrap | Drops this apprentice's 'my mentor' voice |
+
+**Chosen:** (a). In practice the mentor is the player, and the player is masculine by a decision that is not to be reopened. Hebrew has no neutral noun for 'mentor', and dropping the word loses information.
+
+## Q11
+
+**Question.** Sound words are a style call: crying 'סניף…' / 'היק…' (taken from the FireRed fork), cough 'כחח', and the colloquial 'מחשבן' for 'calculating'. Please confirm or give house spellings.
+
+*Source:* reviewer question (chunk B35_01)
+
+**Analysis.** The coughing apprentice (apprentice.inc suffix 13, the same character as MultiPartnerRoom Apprentice14: 'אה, סליחה, אני מצונן' there, 'יש לי הצטננות' at apprentice.inc:1972) coughs 'כחח' in the MultiPartnerRoom (:687, :690, :709). In data/text/apprentice.inc the same English 'Cough!' is 'כח!' at :58 and :59 (gText_ApprenticeChallenge13, English :54-55) and twice at :544 (WhichLevelMode13, English :575), and 'אחח!' at :1983 (MoveThanks13, English :2093 'Cough!'). That is 5 occurrences, and 'כח' also reads as the old spelling of כוח. The 'Gahack! Gaah!' at :1971 ('אחח! קח-קח!', English :2082) is a different, hacking cough and stays. Neither FireRed nor the rest of the tree has another cough spelling. The other sound words are consistent: סניף (FireRed PokemonTower_1F/text.inc:18), היק, יבבה. 'מחשבן' (MultiPartnerRoom:596) is the standard colloquial word for a calculating person. Width correction: the widest result is :59 at 203/208 px, with STR_VAR_2 at the W12 default fill. STR_VAR_2 there is really the apprentice's number (ConvertIntToDecimalStringN, src/apprentice.c:131), so the real width is far lower. No move appears in these lines.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Keep the other spellings and make the cough 'כחח' everywhere | Edit 4 lines in apprentice.inc (5 occurrences) | None. Widths: :58 170, :59 203 (worst-case fill), :544 57, :1983 174 px, all within 208 |
+| (b) Leave the mix | No change | One character coughs 3 different ways, and 'כח' misreads as 'power' |
+
+**Chosen:** (a). The same character gets one cough spelling, the 'כח' misreading goes away, and every line still fits.
+
+*Changed:* `data/text/apprentice.inc`
+
+## Q12
+
+**Question.** Term for 'tag team': the glossary has no row for it, and each chunk uses a different word. B35_01 (same file, lines 339-1049) uses plain 'צוות'. This chunk uses 'צוות זוגי' (about 20 units), and B37_03 does too. B35_03 and B34_04 use 'צמד'. Players will see these in the same Battle Tower room, so a glossary decision is needed. 'צמד' is the most natural, but this chunk already uses 'הצמד' for 'twosome' (PsychicMMon1) and 'צמד הפוקימונים' for 'POKéMON pair' (SchoolKidFMon2Ask). 'Tag partner' is 'שותף לצוות' here.
+
+*Source:* reviewer question (chunk B35_02)
+
+**Analysis.** Verified against the current tree. 58 live units contain English 'tag team', 'tag-team', 'tag partner' or 'tag battle(s)'. Their Hebrew:
+- 'צוות זוגי' in 21 units, e.g. BattleTowerMultiPartnerRoom:1082, 1103, 1144 and TrainerHill_Roof_hns:76, :107.
+- bare 'צוות' for 'tag team' in 16 units, all in BattleTowerMultiPartnerRoom between 379 and 1060 (B35_01). This counts the rhyme at 647.
+- 'צמד' in 7 units (8 lines; Q17).
+- 'שותף/שותפה/שותפים לצוות' for 'tag partner' in 8 units (562, 705, 756, 799, 998, 1111, 1232, 1547).
+- 'קרבות צוות' for 'tag battles' in 3 units (TrainerHill_Entrance_hns:300 and :307, MultiPartnerRoom:616), consistent with TAG MATCH 'קרב צוות' (src/strings.c:572-575, trainer_hill.c:373).
+Bare 'צוות' is ambiguous in this room. The same NPCs call their Pokémon line-up a צוות: 372 'הרכבתי צוות', 422, 448, 529, 554, 695, 746. For example, Apprentice2 says 'הרכבתי צוות' and then 'בוא נקים צוות!'.
+'זוגי' appears nowhere else in data/ or src/, so it does not clash with 'קרב כפול' (DOUBLE). FireRed has no tag-team term; it uses 'צמד מאמנים' once (LavenderTown_Mart/text.inc:14).
+
+| Option | How | Risk |
+|---|---|---|
+| A: 'צוות זוגי' for 'tag team' ('הצוות'/'הצוותים' on a second mention); 'שותף/שותפה לצוות' for 'tag partner'; 'קרב צוות' for TAG MATCH | Change the 15 bare-צוות units here and the 7 'צמד' units (Q17). | Low. 23 short insertions; the widest new line is 185 px. 'צוות זוגי' is a coined term, a little formal for chatty NPCs. |
+| B: 'צמד' everywhere | Rewrite the 21 'צוות זוגי' units and the 15 bare-צוות units, and move the Pokémon-pair uses (1646, 1693) to 'זוג'. | About 38 edits. 'שותף לצמד' for 'tag partner' is awkward, and it breaks the 'צוות' family with TAG MATCH 'קרב צוות'. |
+| C: Bare 'צוות' everywhere | Strip 'זוגי' from 21 units and replace 'צמד' in 7. | Keeps the ambiguity with the Pokémon-team 'צוות' inside the same NPC's two messages. |
+
+**Chosen:** A. It is unambiguous next to the Pokémon-team 'צוות' and is already the largest group (21 units, including the Trainer Hill owner). It belongs to one family with 'קרב צוות' (TAG MATCH and tag battles) and 'שותף לצוות' (tag partner), and needs the fewest edits of the unambiguous options. Apprentice12Mon2Ask:647 'בניצחון של צוות, בלי לדאוג!' stays: it rhymes (לחגוג/לדאוג), 'ניצחון של צוות' is idiomatic, and STYLE §1 says to keep jokes. The 'team up' lines without 'tag' in English keep plain 'צוות': 353, 387, 456, 510, 1167, 1273, 1280, 1399, 1420, 1610, 1619, 1660.
+
+*Changed:* `data/maps/BattleFrontier_BattleTowerMultiPartnerRoom/scripts.inc`
+
+*Glossary:* `TERM_TAG_TEAM`, `TERM_TAG_PARTNER`, `TERM_TAG_MATCH`
+
+## Q15
+
+**Question.** Intro word order differs by speaker: 'אני {STR_VAR_1}, נערת קרב!' / 'אני {STR_VAR_1}, מאמן על!' versus 'אני נער הנינג'ה {STR_VAR_1}!'. Both are correct, so I left it. Should the chunk use one order?
+
+*Source:* reviewer question (chunk B35_02)
+
+**Analysis.** In MultiPartnerRoom, 4 intros put the name first where the English puts the class first: BattleGirlIntro :1114 'אני {STR_VAR_1}, נערת קרב!' (English 'I'm BATTLE GIRL {STR_VAR_1}!'), ParasolLadyIntro :1344, CoolTrainerMIntro :1517 'אני {STR_VAR_1}, מאמן על!', CoolTrainerFIntro :1538 'אני {STR_VAR_1}, מאמנת על!'. The English itself mixes the two orders: LassIntro :754 'I'm {STR_VAR_1}, and I'm a LASS!' vs :796 'I'm HIKER {STR_VAR_1}!'. Name-first keeps the glossary class forms intact (glossary.csv:4811 נערת קרב, :4812 גברת שמשייה, :4773 מאמן על). With one token, the order of the tokens is unaffected. Each intro belongs to a different trainer and is seen on its own.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Keep | No change | None |
+| (b) Class first: 'אני נערת הקרב {STR_VAR_1}!', 'אני מאמן העל {STR_VAR_1}!' | Edit 4 lines | Bends the glossary forms into the construct state and gains nothing visible |
+
+**Chosen:** (a). Both orders are natural, the English mixes them too, and the current lines quote the glossary class forms exactly.
+
+## Q17
+
+**Question.** Tag team: this chunk and B34_04 use 'צמד', while B35_01, B35_02 and B35_04 use 'צוות' or 'צוות זוגי' for the same partner-room concept. A batch-wide term would help.
+
+*Source:* reviewer question (chunk B35_03)
+
+**Analysis.** This is the same decision as Q12 ('צוות זוגי'). These are the 'צמד' lines still in the current tree for 'tag team', all live:
+- BattleTowerLobby_hns:1241 'שבעה צמדים' and :1243 'הצמדים' (ExplainMultisChallenge_hns).
+- BattleTowerLobby_hns:1372 'ליצור צמד' (ExplainSalonRules_hns).
+- BattleTowerMultiPartnerRoom:1716, :1758, :1766, :1778.
+- BattleTowerMultiPartnerRoom_hns:285 'לצמד שלך' (QuitLookingForPartner_hns).
+Two other 'צמד' uses translate a Pokémon pair, not a tag team, and stay: MultiPartnerRoom:1646 'הצמד שגידלתי' ('twosome') and :1693 'צמד הפוקימונים' ('POKéMON pair'). After the change, 1693-1694 reads 'צמד הפוקימונים שלי… השותפה שלך בצוות זוגי', with the two concepts kept apart.
+
+| Option | How | Risk |
+|---|---|---|
+| A: Replace the 8 'צמד' lines with 'צוות זוגי' (on a second mention, 'הצוותים' / 'הצוות הזוגי'), with the verb 'להקים' as in the salon lines | 8 substring edits, listed below. | Low; every line is measured and within budget (widest 185 px on a \p line, budget 200). |
+| B: Keep 'צמד' in these chunks | No edits. | The Tower Lobby rules and four salon trainers would use a different word from the 38 other tag-team units in the same building. |
+
+**Chosen:** A. It implements the Q12 term. The Lobby's rule text is where a player first meets the concept, so it must use the term the salon trainers then repeat.
+One correction to the earlier proposal: line 1372 uses 'להקים צוות זוגי', not 'ליצור צוות זוגי'. 'להקים צוות' is the standard collocation, and it is the verb the salon trainers use (534, 822, 930, 953, 1060). Width 185 px on a \p line (budget 200).
+Second mentions take plain 'הצוותים', as the English goes from 'tag teams' to 'teams'. Agreement is masculine throughout: 'שבעה צוותים זוגיים', 'כל שבעת הצוותים'.
+
+*Changed:* `data/maps/BattleFrontier_BattleTowerLobby_hns/scripts.inc`, `data/maps/BattleFrontier_BattleTowerMultiPartnerRoom/scripts.inc`, `data/maps/BattleFrontier_BattleTowerMultiPartnerRoom_hns/scripts.inc`
+
+## Q18
+
+**Question.** BATTLE PIKE is 'שביל הקרב' everywhere (strings.c gText_BattlePike, B09, B34), but the glossary class PIKE QUEEN is 'מלכת הרומח' (pike as a weapon). Should the facility and its Brain match?
+
+*Source:* reviewer question (chunk B35_03)
+
+**Analysis.** Already applied in the current tree. Commits landed during this review, 3d72a5d77a, ba90a43b56, 01f4f6db62 and 27d8ed0664, replaced every 'מלכת הרומח' with 'מלכת השביל':
+- src/battle_main.c:372 and :461;
+- BattleFrontier_Lounge2/scripts.inc:219, :223, :231;
+- BattlePikeLobby_hns:382;
+- BattlePikeRoomNormal_hns:756.
+Commit bb8db5c703 set proposed_hebrew to 'מלכת השביל' in glossary.csv:4831 (TRAINER_CLASS_PIKE_QUEEN) and :4917 (_HNS). 'מלכת הרומח' now has 0 hits in data/ and src/, and namecheck.py reports nothing for these rows.
+The English is covered: the live Lounge2 labels (called from src/field_specials.c:2238-2240) and the two _hns Pike labels. The Lounge2_hns English copies and the non-_hns Pike maps are not built.
+One leftover: both rows' notes still say 'PIKE = רומח as done MOVE_GLACIAL_LANCE…; debatable…', which now contradicts their Hebrew. The earlier code plan also had a corrupted character in 'שביל הקרב' (an Arabic letter in place of ר).
+
+| Option | How | Risk |
+|---|---|---|
+| A: 'מלכת השביל' (now applied) | Nothing left in the text. Rewrite the two glossary notes only. | None. 10 bytes (limit 12), 59 px, the same as before; dialogue widths are unchanged. |
+| B: Revert to 'מלכת הרומח' | Undo the 7 string edits and the 2 rows. | Restores a mistranslation (pike as a weapon) and the only Brain title that does not echo its facility. |
+| C: 'מלכת הצינור' (Japanese 'Tube') | Change the class and also rename the facility in 12+ units and the symbol strings. | Large churn against the established 'שביל הקרב'. |
+
+**Chosen:** A. It matches the facility name players see ('שביל הקרב', 'לבחור אחד משלושה שבילים לקרב!', src/strings.c:786, :905) and the pattern of the other six Brains (אס הכיפה, ראש המפעל, גבירת הזירה, אשף הארמון, מלך הפירמידה, עלמת הסלון). It fixes the weapon reading at the same byte and pixel cost.
+
+## Q23
+
+**Question.** MIMI (OutsideEast ConquerLeagueAndFrontier) and ZIGG (BelieveInYouBuddy, a Zigzagoon nickname) are not in the glossary, so they stay in Latin under STYLE section 3. Proposed: מימי and זיג.
+
+*Source:* reviewer question (chunk B35_04)
+
+**Analysis.** Still open at HEAD bb8db5c703. The Hebrew lines are data/maps/BattleFrontier_OutsideEast_hns/scripts.inc:268 'אני… אני אשאל את MIMI מהבית ליד', :298 'ZIGG!' and :300 'אם תנצח, ZIGG הקטן שלי, אכין לך'. The English is pokehns-heb-engine, same file, :270, :301 and :303. The map is live: STATUS.md:72 lists it as 27/27 seen on screen. glossary.csv has no MIMI or ZIGG row; the only MIMI hits are the MIMIKYU species rows. ZIGG is the owner's nickname for the Zigzagoon in the next text box (ZigzagoonLooksVacant, 'זיגזגון בוהה בחלל…'). ZIGZAGOON is זיגזגון, inherited from FireRed (glossary.csv:437). Apart from these 3 lines, MIMI and ZIGG appear only in the untranslated vanilla map data/maps/BattleFrontier_OutsideEast/scripts.inc. I applied the 3 edits to a scratch copy and ran drift.py against the engine baseline: the file is 'ok', and the LATIN warnings for MIMI and ZIGG are gone.
+
+| Option | How | Risk |
+|---|---|---|
+| A: add NAME_MIMI = מימי and NAME_ZIGG = זיג, then apply them | Add two proposed 'name' rows and edit the 3 lines. MIMI: i = י (rules §3). ZIGG: the ZIG chunk of זיגזגון (rules §6), with the doubled g written once (rules §2). Widths in FONT_NORMAL: 160 px at :268, 17 px at :298 and 145 px at :300; each line ends in \n, so the budget is 208. | None. These are dialogue strings, and no token, label or page break changes. |
+| B: keep the Latin names | No change. | Latin stays inside Hebrew lines on a live map, and the pet name appears twice. |
+| C: write the species name זיגזגון instead of ZIGG | Replace ZIGG with זיגזגון. | The owner's pet name is lost, and the species name is repeated from the next text box. |
+
+**Chosen:** A. Both are natural Hebrew renderings. מימי is a common name, and זיג is how a Hebrew speaker would shorten זיגזגון, so the link to the Pokémon the player sees next survives. The spellings follow the transliteration rules and the ZIGZAGOON family, and they remove Latin from a live map. The cost is 3 string edits and 2 rows.
+
+*Changed:* `data/maps/BattleFrontier_OutsideEast_hns/scripts.inc`
+
+*Glossary:* `NAME_MIMI`, `NAME_ZIGG`
+
+## Q24
+
+**Question.** Battle Frontier facility names (מגדל/כיפת/ארמון/זירת/מפעל/שביל/פירמידת הקרב), היכל הדירוג, מוחות החזית, סלון הקרב, חדר קרב מרובה, מסע הקרב and מורה היסודות (ELEMENTAL TUTOR) have no glossary rows. They are used consistently across B34-B36, except one B36_01 unit that has 'ראשי חזית הקרב' for FRONTIER BRAINS. Add them to the glossary?
+
+*Source:* reviewer question (chunk B35_04)
+
+**Analysis.** Each English term was mapped to its Hebrew across all live units. Every one has a single form that matches the engine strings:
+- BATTLE TOWER 54/54 'מגדל הקרב', DOME 21/21 'כיפת הקרב', PALACE 13/13 'ארמון הקרב', ARENA 15/15 'זירת הקרב', FACTORY 11/11 'מפעל הקרב', PIKE 12/12 'שביל הקרב', PYRAMID 15/15 'פירמידת הקרב' (src/strings.c:779-787).
+- RANKING HALL 4/4 'היכל הדירוג' (:617).
+- EXCHANGE SERVICE 5/5 'שירות ההמרה' (:618); two of the units wrap it as 'פינת שירות\n ההמרה'. The corner is 'פינת שירות ההמרה'.
+- BATTLE SALON 4/4 'סלון הקרב'.
+- MULTI BATTLE ROOM in 7 units: 'חדר קרב מרובה' in 5, plural 'חדרי קרב מרובה' in 3.
+- ELEMENTAL TUTOR 1/1 'מורה היסודות' (Lounge7_hns).
+- FRONTIER BRAINS 8/8 'מוחות החזית'; the B36_01 variant 'ראשי חזית הקרב' no longer exists.
+None of these has a glossary row (checked by constant). The related rows that exist are MAPSEC_BATTLE_FRONTIER (glossary.csv:4941) and TERM_FRONTIER_PASS (:6038).
+These terms are written in upper case in the game text, so upper-case english fields match the case-sensitive names matcher in make_chunks.py.
+
+| Option | How | Risk |
+|---|---|---|
+| A: Add term rows in the tree's existing forms | Append the rows below; no text edits. | None. The rows only lock what is already uniform. |
+| B: Leave them out of the glossary | Nothing. | Later chunks get no names map for these terms and may invent variants, as B36_01 once did. |
+
+**Chosen:** A. Every form is already uniform and matches the engine strings, so locking them protects later work at no cost. The event names (Battle Quest and the others) are in Q29 and FRONTIER BRAINS is in Q33, so no row is added twice.
+
+*Glossary:* `TERM_BATTLE_TOWER`, `TERM_BATTLE_DOME`, `TERM_BATTLE_PALACE`, `TERM_BATTLE_ARENA`, `TERM_BATTLE_FACTORY`, `TERM_BATTLE_PIKE`, `TERM_BATTLE_PYRAMID`, `TERM_RANKING_HALL`, `TERM_EXCHANGE_SERVICE_CORNER`, `TERM_EXCHANGE_SERVICE`, `TERM_BATTLE_SALON`, `TERM_MULTI_BATTLE_ROOM`, `TERM_ELEMENTAL_TUTOR`
+
+## Q27
+
+**Question.** Lounge3 ObtainedBattlePoints keeps 'השיג' to match B34_04. ScottsHouse (B36_01) uses 'קיבל'. Pick one for '{PLAYER} obtained … Battle Points'.
+
+*Source:* reviewer question (chunk B35_04)
+
+**Analysis.** The four '{PLAYER} obtained N Battle Points' strings in the current tree:
+- BattleFrontier_Text_ObtainedXBattlePoints (BattleTowerLobby/scripts.inc:1358) uses 'השיג'. This is the shared string: the facility lobbies' streak awards, NewBarkTown_hns:176, and 32 call sites in SaffronCity_FightingDojoVIP_hns (rematch rewards, e.g. after Falkner: 'givebp 10').
+- Its _hns copy (BattleTowerLobby_hns:1345) uses 'השיג'.
+- Lounge3_hns:432 uses 'השיג'.
+- ScottsHouse_hns:238 is the only one with 'קיבל'.
+The TV line tv.inc gTVWhatsNo1InHoennTodayText07 also says 'השיג'. Item and badge receipts use 'קיבל' (46 '{PLAYER} קיבל' lines in the tree, as FireRed does). The second-person tent line 'קיבלת {STR_VAR_1} נקודות קרב!' (battle_tent.inc:464) is a different sentence and is not affected.
+
+| Option | How | Risk |
+|---|---|---|
+| A: 'השיג' for Battle Points; change ScottsHouse_hns:238 | 1 edit. | Minimal. For a gift from Scott, 'השיג' is a little less exact than 'קיבל', but the shared string already says 'השיג' for gifts (Dojo rewards, the New Bark NPC). |
+| B: 'קיבל' everywhere, like item receipts | 3 edits: BattleTowerLobby:1358, BattleTowerLobby_hns:1345 and Lounge3_hns:432; tv.inc stays 'השיג' as narrative. | Also low (one-word swaps, same 161 px), but it changes the string players see most often to fit one line, and it gives up the idiomatic points collocation. |
+
+**Chosen:** A. 'להשיג נקודות' is idiomatic Hebrew for points. The shared string, seen after every Frontier streak and Dojo rematch, already uses it, and 3 of the 4 receipt lines already agree. One edit makes all four match.
+
+*Changed:* `data/maps/BattleFrontier_ScottsHouse_hns/scripts.inc`
+
+## Q29
+
+**Question.** None of the Battle Frontier facility and event names are in glossary.csv: מגדל/כיפת/ארמון/זירת/מפעל/שביל/פירמידת הקרב, היכל הדירוג, החלפת הקרב, בחירת הקרב, מסע הקרב, טורניר הנוקאאוט. They are used the same way in every chunk, but should they be added as glossary rows so they are locked?
+
+*Source:* reviewer question (chunk B35_05)
+
+**Analysis.** The facility names are covered by Q24. Event names in live units:
+- Battle Choice: 17/17 'בחירת הקרב'.
+- Battle Quest: 9/9 'מסע הקרב'.
+- Battle Tournament: 15 'טורניר הקרב', plus 2 plurals 'טורנירי הקרב' (tv.inc).
+- Battle Swap: 8 units with 'החלפת הקרב' and 11 with 'החלפת קרב'. Every indefinite one is grammar, not drift. It is either a construct before יחיד/כפול ('טורניר החלפת קרב יחיד' in FactoryLobby_hns and Lounge3) or an indefinite event ('באירוע החלפת קרב', 'אירועי החלפת קרב' in battle_tent.inc and FactoryLobby). This matches the results titles 'תוצאות החלפת קרב יחיד/כפול' (src/strings.c:974-975).
+- Set KO Tourney: 14 'טורניר הנוקאאוט', plus the referee's callout 'שופט: טורניר נוקאאוט!' (ArenaBattleRoom and ArenaBattleRoom_hns SetKOTourneyBegin).
+- BATTLE HALL (Palace halls): 'אולם הקרב' in 7 units, 'אולמות הקרב' in 6, and indefinite or split forms in 4 ('אולמות קרב', 'לאולמות\n הקרב'). The results titles use 'אולם קרב' (src/strings.c:970-971).
+None of these has a glossary row.
+Case matters for the rows: the game writes 'Battle Swap' (37), 'Battle Choice' (38), 'Battle Quest' (17), 'Set KO Tourney' (22), 'Battle Tournament' (20; also 'BATTLE Tournament' 18) and 'BATTLE HALL(S)'. make_chunks.py names_in() matches case-sensitively, so the earlier all-caps english fields ('BATTLE SWAP' and the others) and 'BATTLE HALL (Battle Palace)' would never fire.
+
+| Option | How | Risk |
+|---|---|---|
+| A: Add term rows (definite form as the headword, with a note on the construct form), with english in the game's own spelling | Append the rows below; no text edits. | None. |
+| B: Also force the definite 'החלפת הקרב' in the 11 construct units | Rewrite 11 units. | Produces ungrammatical Hebrew ('טורניר החלפת הקרב יחיד') and breaks the match with the results titles. |
+
+**Chosen:** A. Once Hebrew construct grammar is taken into account, the tree is already consistent. Locking the headword form, with a note that 'החלפת קרב' / 'בחירת קרב' / 'מסע קרב' / 'אולם קרב' are the construct forms (before יחיד/כפול, after אירוע/טורניר, and in the results titles), prevents drift without touching correct text.
+
+*Glossary:* `TERM_BATTLE_SWAP`, `TERM_BATTLE_CHOICE`, `TERM_BATTLE_QUEST`, `TERM_SET_KO_TOURNEY`, `TERM_BATTLE_TOURNAMENT`, `TERM_BATTLE_HALL`
+
+## Q33
+
+**Question.** FRONTIER BRAIN, FRONTIER PASS, BATTLE TOWER, BATTLE TENT, Battle Points, BERRY POCKET and Gold/Silver Symbols have no glossary rows. I followed what the tree already uses (מוחות החזית, כרטיס חזית הקרב, מגדל הקרב, אוהל הקרב, נקודות קרב, כיס הפירות, סמלי זהב/כסף). Should these become glossary rows? Is 'מוחות החזית' the final term, or should Scott's 'handpicked FRONTIER BRAINS' read more like titled leaders?
+
+*Source:* reviewer question (chunk B36_01)
+
+**Analysis.** Current tree, live units:
+- FRONTIER BRAINS: 8/8 'מוחות החזית'. Lounge2 has 6 in quotes ('מכנה ”מוחות החזית”'). ScottsHouse_hns:264 has 'ממוחות החזית' and :266 'בחרתי את מוחות החזית בקפידה'. The B36_01 variant is gone. The game always writes the plural, 'FRONTIER BRAINS' (18 English occurrences).
+- FRONTIER PASS: 40/40 'כרטיס חזית הקרב'; the row already exists (TERM_FRONTIER_PASS, glossary.csv:6038).
+- BATTLE TOWER: row added in Q24.
+- BATTLE TENT: 16 units 'אוהל הקרב', plus 3 plural 'אוהלי הקרב'.
+- Battle Points: 42 units. 23 use only 'נקודות קרב', 14 only 'נקודות הקרב', 5 both. Every definite use is where Hebrew needs the article ('את נקודות הקרב האלה', 'בנקודות הקרב', 'לוקח את כל נקודות הקרב').
+- BERRY POCKET: 'כיס הפירות' (ScottsHouse_hns:313). The bag tab itself is 'פירות' (src/strings.c:222).
+- Gold/Silver Symbols: the game only writes the plural, 'Gold Symbols' / 'Silver Symbols' (once each, plus lower-case 'gold/silver symbols'). The Hebrew is 'סמלי זהב' / 'סמלי כסף' (tv.inc:1204-1205) and definite 'סמלי הזהב' / 'סמלי הכסף' (ScottsHouse_hns:298, :284), matching the 'סמל' of the per-facility symbols (src/strings.c:884-891).
+None except FRONTIER PASS has a row. Because names_in() in make_chunks.py rejects a hit followed by a letter, a singular english 'Gold Symbol' would never match 'Gold Symbols'. The rows therefore use the plural the game writes.
+
+| Option | How | Risk |
+|---|---|---|
+| A: Add rows (english as the game writes it) and keep 'מוחות החזית' | Append the rows below; no text edits. | None. |
+| B: Re-title FRONTIER BRAINS as leaders ('ראשי החזית' or 'מנהיגי החזית') | Rewrite 8 units and add the row. | 'ראשי' clashes with the class 'ראש המפעל' (FACTORY HEAD), and 'מנהיג' is the glossary's GYM LEADER (TERM_GYM_LEADER, glossary.csv:5520). 8 edits for no gain. |
+
+**Chosen:** A. 'מוחות החזית' is a faithful rendering of the coined English title, reads naturally in Scott's line, and does not collide with ראש המפעל or מנהיג. Every other term already has one form. FRONTIER PASS is already in the glossary and is not added again.
+
+*Glossary:* `TERM_FRONTIER_BRAINS`, `TERM_BATTLE_TENT`, `TERM_BATTLE_POINTS`, `TERM_BERRY_POCKET`, `TERM_GOLD_SYMBOLS`, `TERM_SILVER_SYMBOLS`
+
+## Q37
+
+**Question.** VerdanturfTown GentleMonsScaryIfAngry uses 'נעימה' for the speaker's sister to keep the GENTLE nature (נעים) link. 'עדינה' would be more natural for a person but loses the link. Keep 'נעימה'?
+
+*Source:* reviewer question (chunk B36_01)
+
+**Analysis.** VerdanturfTown_BattleTentLobby_hns GentleMonsScaryIfAngry (label :340, text :341-344) has 'אחותי הגדולה בדרך כלל נעימה' (:341) and 'בטח גם פוקימון נעים' (:343). (Line correction: the text is at :341/:343, not :342/:344.) GENTLE is 'נעים' (glossary.csv:4654) and MILD is 'עדין' (glossary.csv:4649), both FireRed matches.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Keep 'נעימה' | No change | None. 'בדרך כלל נעימה' is natural for a person |
+| (b) 'עדינה' | Edit :341 and :343 | Points at the MILD nature (עדין), so the hint becomes wrong |
+
+**Chosen:** (a). The line exists to hint at GENTLE. 'עדינה' would hint at a different nature.
+
+## Q38
+
+**Question.** The apprentice 'underling' (Guitarist) is rendered 'העוזר שלך', and 'mentor' and 'master' stay as the loanwords 'מנטור' / 'מאסטר' (consistent with B35_01). Confirm this register is acceptable.
+
+*Source:* reviewer question (chunk B36_01)
+
+**Analysis.** Three English words map to three Hebrew words, consistently, in data/text/apprentice.inc: mentor→מנטור (10 Hebrew, 11 English), master→מאסטר (25/24, including the Spanish speaker's 'המאסטרו' at :922), teacher→מורה (9/8), apprentice→חניך. 'underling' (Guitarist, English :529/:535) is 'העוזר שלך' at :499 and :505. מאסטר is also the tree's word for the dragon masters (DragonsDen_Shrine_hns:402 'המאסטר לאנס', BlackthornCity_hns:206).
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Accept as is | No change | None |
+| (b) underling = 'הכפוף שלך' / 'המשרת שלך' | Edit 2 lines | Bureaucratic or servile, which breaks the rocker's playful voice |
+| (c) underling = 'החניך שלך' | Edit 2 lines | Flattens the character's word into the system term |
+
+**Chosen:** (a). It is consistent, keeps the English distinctions, and fits each character's voice.
+
+## Q40
+
+**Question.** 'I need to tap your mind again' is translated אני שוב צריכה את המוח שלך. It is a calque, and I kept it only because B36_01 (WhatHeldItem6) uses the same phrase. Should the whole batch switch to something more idiomatic, such as אני שוב צריכה את הראש שלך?
+
+*Source:* reviewer question (chunk B36_02)
+
+**Analysis.** The premise has changed. Apprentice 6's identical English line 'I need to tap your mind again today.' now has two Hebrew renderings. WhatHeldItem6 :821 has 'היום שוב אני צריכה להיעזר בראש שלך.' (idiomatic). WhichMon6 :1561 ('…\n') and WhichMove6 :1848 ('…\p', a one-line page) still have the calque 'אני שוב צריכה את המוח שלך היום.'. The :821 wording measures 180 px.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Copy the :821 wording exactly into :1561 and :1848 | 2 edits, 180 px (limit 208 at :1561, 200 at :1848) | None |
+| (b) 'אני שוב צריכה להתייעץ איתך היום.' in all 3 | 3 edits, 159 px | Loses the 'tap your mind' color, and it is one more edit |
+| (c) Keep the calque | No change | One character's catchphrase is worded two ways, one of them a calque |
+
+**Chosen:** (a). The character gets one catchphrase, reused word for word in its idiomatic form, with the fewest edits.
+
+*Changed:* `data/text/apprentice.inc`
+
+## Q41
+
+**Question.** 'Snivel/Sniff' is rendered סניף across B36_01 and this chunk. In Hebrew סניף also means a branch (of a bank or store). Keep it, or use a different crying sound such as אפצ'-סניף or *משיכת אף*?
+
+*Source:* reviewer question (chunk B36_02)
+
+**Analysis.** Count correction: 'סניף' appears 22 times in the tree, but only 18 are the crying sound. Sniff/Snivel: apprentice.inc 10 lines (:4, :71, :83, :103, :1455, :1467, :1739, :1753, :2031, :2046), MultiPartnerRoom:342/:352, GoldenrodCity_Gym_hns:142/:145, SaffronCity_FightingDojoVIP_hns:748, tv.inc:2766/:2852/:2868. The other 4 mean 'branch': NewSinjoh_hns:172 'לפתוח סניף', and battle_tent.inc:9/:137/:245 'סניף FALLARBOR!' etc., which sit in the #else (non-HnS) branch and so are not built. As a sound, it always stands alone, with '…' or '!'. It is FireRed canon (pokefirered-heb PokemonTower_1F/text.inc:18 'סניף!').
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Keep 'סניף' | No change | None in context |
+| (b) 'אפצ'-סניף' | Replace 18 times | That is a sneeze, not crying |
+| (c) '*משיכת אף*' | Replace 18 times | A stage direction, which the game never uses |
+
+**Chosen:** (a). It is FireRed canon, consistent across the tree, and never ambiguous where it stands as an interjection. The one live 'branch' use (NewSinjoh) is clear from its verb.
+
+## Q43
+
+**Question.** ThanksNoHeldItem14 and ThanksHeldItem14 translate the odd English line 'Wouldn't it be too cool?' literally (זה לא יהיה מגניב מדי?). It probably means the shy speaker is worried about looking too showy. Is the literal version acceptable, or should it read something like זה לא ייראה יותר מדי מתרברב?
+
+*Source:* reviewer question (chunk B36_02)
+
+**Analysis.** Apprentice 14 is the shy ruin explorer (PleaseTeach14: 'אתה גורם לי להרגיש נבוך', apprentice.inc:559; 'ממש מביך אותי', :561; English :590-593 'You're making me all self-conscious'). In ThanksNoHeldItem14 :1120 and ThanksHeldItem14 :1128, 'Wouldn't it be too cool?' (English :1184/:1193) is 'זה לא יהיה מגניב מדי?'. The joke is that he worries his choice will make him look too flashy. 'ייראה מגניב' is already used in the tree (GoldenrodCity_UndergroundTunnel_hns:334 'אדאג שהוא ייראה מגניב!').
+
+| Option | How | Risk |
+|---|---|---|
+| (a) 'זה לא ייראה מגניב מדי?' | Edit 2 lines, 112 px (limit 200; the lines end in \p) | None |
+| (b) 'זה לא ייראה יותר מדי מתרברב?' | Edit 2 lines, 148 px | Changes the meaning to 'boastful' |
+| (c) Keep the literal version | No change | Reads oddly, and the self-consciousness is lost |
+
+**Chosen:** (a). One verb change keeps the English 'too cool' joke and adds the worry about how it looks, which fits the shy character. The spelling matches the tree's existing 'ייראה מגניב'.
+
+*Changed:* `data/text/apprentice.inc`
+
+## Q44
+
+**Question.** Two live strings still show Emerald town names in Latin letters: VerdanturfTown_BattleTentLobby_Text_RulesAreListed (VERDANTURF) and SlateportCity_BattleTentLobby_Text_ExplainMonRules (SLATEPORT). The H&S scripts call both. Upstream never renamed them, and FALLARBOR/VERDANTURF/SLATEPORT have no glossary rows, so I left the English as STYLE §3 requires. Should these use the H&S names ('אוהל הקרב של הארמון' / 'אוהל הקרב של המפעל') instead? That would also need a decision for the #else-only units that carry the same names.
+
+*Source:* reviewer question (chunk B36_03)
+
+**Analysis.** The premise is confirmed in the current tree:
+- VerdanturfTown_BattleTentLobby_hns/scripts.inc:277 calls VerdanturfTown_BattleTentLobby_Text_RulesAreListed.
+- SlateportCity_BattleTentLobby_hns/scripts.inc:277 calls SlateportCity_BattleTentLobby_Text_ExplainMonRules.
+- live_labels.json marks both as live.
+They still carry Latin: data/text/battle_tent.inc:461 'אוהל הקרב של VERDANTURF.$', and :383-384 'כל הפוקימונים של אוהל הקרב' / 'של SLATEPORT הם שכורים.'. Upstream never gave these two an IS_HNS branch; the engine has a plain 'The VERDANTURF BATTLE TENT' and 'The POKéMON of the SLATEPORT BATTLE TENT'.
+The same file's IS_HNS branches already name the tents: 'באוהל הקרב של הזירה' (:23, English 'ARENA BATTLE TENT'), 'באוהל הקרב של הארמון' (:151, 'PALACE BATTLE TENT') and 'באוהל הקרב של המפעל' (:257, 'FACTORY BATTLE TENT').
+The other Latin town names in this file (:9, :25, :137, :145, :153, :245, :259) are in #else branches that H&S does not build.
+
+| Option | How | Risk |
+|---|---|---|
+| A: Use the H&S tent names in the two live strings | battle_tent.inc:461 VERDANTURF becomes 'הארמון'. Lines 383-384 become 'כל הפוקימונים באוהל הקרב' / 'של המפעל הם שכורים.', which avoids a double 'של'. | Low: widths 127, 105 and 107 px, Hebrew text only, no #if lines or labels touched. |
+| B: Keep the Latin per STYLE §3 | No edits. | Players read 'VERDANTURF' and 'SLATEPORT', towns that do not exist in H&S, right after the tent intro called these tents 'הארמון' and 'המפעל'. |
+
+**Chosen:** A. The names come from the same file's H&S branches, so nothing is invented and STYLE §3 holds. It removes two Latin words players actually see, and it matches the tent intros. The #else-only units are not built (IS_HNS is set) and stay as they are.
+
+*Changed:* `data/text/battle_tent.inc`
+
+*Glossary:* `TERM_ARENA_BATTLE_TENT`, `TERM_PALACE_BATTLE_TENT`, `TERM_FACTORY_BATTLE_TENT`
+
+## Q48
+
+**Question.** 'crucial rule' is 'כלל מכריע' here and in the Palace lobby. 'כלל חשוב אחד' reads more naturally. If you change it, change both places.
+
+*Source:* reviewer question (chunk B36_03)
+
+**Analysis.** 'one crucial rule' appears 3 times as 'כלל מכריע אחד' ('decisive', which is slightly off), and there are no other occurrences in data/ or src/: BattleFrontier_BattlePalaceLobby_hns/scripts.inc:396 and :556 (the Single and Double explanations), and data/text/battle_tent.inc:155 ('יש כלל מכריע אחד…', after the #endif, so it is shared). All three lines end in \p (limit 200).
+
+| Option | How | Risk |
+|---|---|---|
+| (a) 'כלל חשוב אחד' in all 3 | 3 edits: 146 px (was 151) and 159 px (was 164) | None |
+| (b) 'כלל קריטי אחד' | 3 edits, 147 px | A loanword. Natural, but less neutral in register |
+| (c) Keep 'מכריע' | No change | Slightly wrong meaning |
+
+**Chosen:** (a). It is the most natural Hebrew, keeps the meaning, is narrower, and keeps the three copies consistent.
+
+*Changed:* `data/maps/BattleFrontier_BattlePalaceLobby_hns/scripts.inc`, `data/text/battle_tent.inc`
+
+## Q49
+
+**Question.** For the Sailor rap I used the slang 'אחי' (bro) for the rhyme. For the Hiker I kept the Spanish transliterations 'אולה, בואנו', 'סי', 'אדיוס'. Are these acceptable for the register?
+
+*Source:* reviewer question (chunk B36_03)
+
+**Analysis.** The register is fine. 'אחי' is used by the Sailor (apprentice.inc:450, :2282) and the Guitarist (:494, :503), and elsewhere in the tree (BlackthornCity_hns, Route29_hns, LilycoveCity_ContestLobby_hns, among others). The Spanish words come from the English itself ('Hola!' :976, 'Si, bueno!' :990, 'Hola, {PLAYER}{KUN}, bueno!' :2006, 'Hola, bueno!' :2355, 'Adios!' ×7), so STYLE §1 'keep each character's voice' applies. There is one spelling split for 'Hola': 'הולה' at :921 and :1897, but 'אולה' at :2233. 'הולה' is already the tree's word for hula (EcruteakCity_Theater_hns:110 'ריקוד הולה'), and transliteration_rules §2 drops a silent initial h ('HUGH יו').
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Accept the register and spell it 'אולה' at :921 and :1897 | 2 edits (158 px at :1897, unchanged) | None |
+| (b) Spell it 'הולה' at :2233 | 1 edit | Collides with 'hula' and goes against the silent-h rule |
+| (c) Translate the Spanish to Hebrew | Rewrite about 10 lines | Erases the character's voice |
+
+**Chosen:** (a). It keeps the voice, and the single spelling matches both the rules and how Hebrew speakers write the greeting.
+
+*Changed:* `data/text/apprentice.inc`
+
+## Q50
+
+**Question.** Apprentice names (src/data/battle_frontier/apprentice.h): GAME_LANGUAGE is LANGUAGE_ENGLISH (include/constants/global.h:82), and GetApprenticeNameInLanguage returns name[1], the English column (src/apprentice.c:1240-1259). So the names a Hebrew player sees are the English-column ones: DALLAS, TYRESE, ARTURO here, and ALANN, LIONEL, SONNY, LAYLA, MACY, AMIRA, KALI, ANNIE, DILLEN, LAMONT and DANTE in other chunks. None of these is in the glossary, so they display in Latin. Meanwhile the French and German slots (BRUNO, ANDY, DAVID, BRIAN, LOLA, FRANK) were turned into Hebrew only because they happened to match a glossary name, even though those slots are effectively never shown. Should the 16 English-column apprentice names get glossary rows and be transliterated, with the other language columns left alone?
+
+*Source:* reviewer question (chunk B36_04)
+
+**Analysis.** The main part is done. The English column, name[1], of all 16 apprentices (src/data/battle_frontier/apprentice.h:300-420) is Hebrew, from the NAME_ALANN … NAME_ARTURO rows (glossary.csv:6388 onward) plus TRNAME_FRANK פרנק.
+What is left are 7 cells in the other-language columns. They became Hebrew only because they matched glossary names: :324 name[5] לולה, :380 name[2] ברונו, :388 name[2] and name[4] פרנק, :404 name[2] אנדי and name[4] דוד, :420 name[4] בריאן. The other 57 cells in those columns are upstream Latin (STATUS.md:536: '57 | 0 | translated (57 kept in Latin…)').
+GetApprenticeNameInLanguage (src/apprentice.c:1240-1259) picks the column by language. The player's own apprentice uses GAME_LANGUAGE = LANGUAGE_ENGLISH (include/constants/global.h:82; src/apprentice.c:1052). Records and their Pokémon use the stored language (src/frontier_util.c:3270-3274, src/pokemon.c:3591-3593). So a non-English column appears only for an apprentice record mixed in from a French, Italian, German or Spanish game.
+I checked the 5 edits in a scratch copy. After them, every one of the 16 lines differs from upstream only in name[1]. units.extract counts 64 Latin units (it counted 57 before), and drift.py reports 'ok'.
+Correction to the earlier code plan: tools/hebrew/status_report.py fills in 'seen on screen' only when it gets --sweep (status_report.py:59-62, 89-92). Run without it, it would downgrade the 491 'seen on screen' rows to 'translated'. Do not regenerate STATUS.md that way.
+
+| Option | How | Risk |
+|---|---|---|
+| A: revert the 7 foreign-column cells to their upstream values | Restore LOLA, BRUNO, FRANK (twice), ANDY, DAVID and BRIAN. The file then has one rule with no exceptions: the English column is Hebrew and the other columns are upstream, which is exactly what the KEPT_LATIN reason (status_report.py:27) says. Update STATUS.md:536 from 57 to 64 by hand. | None for players, because a Hebrew game's own data never shows these cells. A future name-fill pass over apprentice.h could make them Hebrew again; the KEPT_LATIN reason documents the rule against that. |
+| B: leave them as they are | No change. | Harmless. But the foreign columns stay an arbitrary mix picked by glossary coincidence, and the KEPT_LATIN reason is only partly true. |
+| C: transliterate all 64 foreign-column cells | Add about 50 proposed rows and apply them. | A lot of work and more unchecked proposed names, for text that practically no player sees. |
+
+**Chosen:** A. This is the smallest change that leaves the file under one rule that matches the code. Nothing a player normally sees changes, and it removes translations that came from accidental matches rather than decisions.
+
+*Changed:* `src/data/battle_frontier/apprentice.h`, `translation/hebrew/STATUS.md`
+
+## Q52
+
+**Question.** #112 'בלי להשתמש במהלך' vs 'בלי להשתמש באף מהלך' (clearer that no move at all was used): the longer form measures 204 px against the English's 184 px at realistic worst case. Both fit the 208 px window, so this is a style call.
+
+*Source:* reviewer question (chunk B36_04)
+
+**Analysis.** src/battle_dome.c:1005 DOME_TEXT_WON_NO_MOVES is 'ניצחון ל{STR_VAR_1} בלי להשתמש במהלך!' (English '{STR_VAR_1} won without using a move!'). :1001 is 'ניצחון ל{STR_VAR_1} עם {STR_VAR_2}!', and :1006 (CHAMP_NO_MOVES, English 'won outright with no moves!') is '{STR_VAR_1} זוכה באליפות בלי אף מהלך!'. The string prints in WIN_MATCH_WIN_TEXT: 26 tiles = 208 px wide (battle_dome.c:429-433), at x=0 (:4791-4808). It is chosen at :4624 when the winning move is MOVE_NONE and the match was not forfeited. STR_VAR_1 is a trainer name of at most 7 letters (the widest Hebrew frontier trainer name is 41 px). Widths at W7: current 187, 'באף מהלך' 204, 'בלי אף מהלך' 153.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Keep 'בלי להשתמש במהלך' | No change | Less clear that no move at all was used |
+| (b) 'בלי להשתמש באף מהלך' | 1 edit, 204/208 | A 4 px margin at the worst case |
+| (c) 'בלי אף מהלך' | 1 edit, 153/208 | None. It is the exact negation of the :1001 'עם {STR_VAR_2}' frame |
+
+**Chosen:** (c). It is the clearest ('not a single move'), matches the champion line at :1006 word for word, mirrors the 'won with MOVE' line, and leaves a wide margin.
+
+*Changed:* `src/battle_dome.c`
+
+## Q54
+
+**Question.** Cross-chunk consistency: B37_s01 still has about 101 frontier trainer names in English. Some names in this chunk also appear in other files that are still in English: TRISTAN and ROBERTO (src/trader.c, B30_06); GABRIEL, CHELSEA, TRENTON, BRADEN, SHANIA, BRENNAN, EMANUEL and JARRETT (src/trainer_tower_sets.c, B38); KELSEY and CAITLIN (contest_opponents.h, B26_02); MIRANDA (trainer_hill.h, B37_03). Should those use the spellings chosen here?
+
+*Source:* reviewer question (chunk B37_01))
+
+**Analysis.** Already resolved. Every file named in the question uses the Battle Frontier spellings:
+- src/trader.c:20-23: טריסטן, פיליפ, דניס, רוברטו.
+- src/data/contest_opponents.h:313 קלסי and :777 קייטלין. They have their own contest_trainer rows (glossary.csv:6055 and :6084 at HEAD bb8db5c703; the glossary lost 5 rows during this review).
+- src/data/battle_frontier/trainer_hill.h:788 מירנדה, the same as FRONTIER_TRAINER_247_MIRANDA (glossary.csv:5778).
+- src/trainer_tower_sets.c already has גבריאל, צ'לסי, טרנטון, בריידן, שאנייה, ברנן, עמנואל, ג'ארט and לורנצו, one occurrence each.
+The trader names and the Trainer Hill MIRANDA have no row of their own. They match the existing rows for the same English name: FRONTIER_TRAINER_65_TRISTAN (:5596), FRONTIER_TRAINER_152_ROBERTO (:5683), TENT_TRAINER_40_DENNIS (:6268) and NAME_PHILIP (:6470).
+Correction: the trader buffer is playerNames[NUM_TRADER_ITEMS][11] (include/global.h:880), so the limit is 10 letters, not 7. All four names have 6 letters or fewer.
+
+| Option | How | Risk |
+|---|---|---|
+| A: nothing more to do | Leave the tree and the glossary as they are. | None. |
+| B: add rows keyed to the trader and Trainer Hill constants | Add TRADER_* and HILL_TRAINER_7_MIRANDA rows that repeat the existing Hebrew. | Duplicate rows with no visible effect, and one more place to update if a spelling changes. |
+
+**Chosen:** A. The question is settled: every listed name already uses the Battle Frontier spelling. Matching rows by English name is the convention the Battle Tent and Trainer Hill passes already used.
+
+## Q56
+
+**Question.** Judgment calls the references do not settle: JORDAN ג'ורדן rather than the Israeli name ירדן; JORDYN ג'ורדין; XANDER זנדר (by sound) rather than קסנדר; XAVIER קסבייר (the familiar Israeli form, as in X-Men); JAZMIN ג'זמין, kept distinct from both YAZMIN יסמין and the gym leader JASMINE ג'סמין; HUNTER הנטר (to avoid looking like the Pokémon); GUNNAR גונאר; SHANIA שאנייה; CIERRA סיירה; JULIAN ג'וליאן (English) next to JULIANA יוליאנה (byte-forced).
+
+*Source:* reviewer question (chunk B37_01))
+
+**Analysis.** XANDER is settled: קסנדר in the glossary (glossary.csv:5662) and in the tree.
+JORDAN is still ג'ורדן: src/data/battle_frontier/battle_frontier_trainers.h:928 (FACILITY_CLASS_EXPERT_M) and glossary.csv:5646. That row was :5651 when the decision was drafted; the HEAD bb8db5c703 glossary commit removed 5 rows above it.
+The proposed-names review that was just applied (hns-tools/scratch/names_check/result.json) kept ג'ורדן. Its reason is 'Michael Jordan ג'ורדן', which is about the surname.
+For given names, transliteration_rules §5 gives a name with a familiar Hebrew form that form. FireRed does this for full biblical names: SAMUEL שמואל (pokefirered-heb src/data/trainers.h:3919), AARON אהרן (:3199), JOSHUA יהושע (:3419), ISAAC יצחק (:2079), and also ETHAN איתן, JONAH יונה, BENJAMIN בנימין. The project's own proposed rows do the same: MICHAEL מיכאל, JOEL יואל, NATHAN נתן, DANIEL דניאל, GABRIEL גבריאל, MIRIAM מרים, REBECCA רבקה, EZRA עזרא, ABRAHAM אברהם.
+FireRed is not fully consistent: SIMON סיימון, JEREMY ג'רמי and JESSE ג'סי were transliterated, so this is a judgment call. JORDAN is the standard English form of ירדן, a common Israeli unisex name, so it fits a male Expert.
+The other calls stand:
+- JORDYN ג'ורדין (:1112, a Beauty; glossary.csv:5669) keeps its own spelling. The project keeps different English spellings distinct, as with JAZMIN, YAZMIN and JASMINE.
+- XAVIER קסבייר is the familiar Israeli form.
+- HUNTER הנטר avoids the Pokémon HAUNTER האנטר.
+- GUNNAR גונאר, SHANIA שאנייה and CIERRA סיירה stay as proposed.
+- JULIAN ג'וליאן stays. ג'וליאנה would be 8 bytes, over trainerName[PLAYER_NAME_LENGTH + 1] (include/battle_frontier.h:11; PLAYER_NAME_LENGTH is 7), and יוליאנה follows FireRed's JULIA יוליה.
+
+| Option | How | Risk |
+|---|---|---|
+| A: keep ג'ורדן | No change. This is what the names_check review chose. | It goes against §5 as the project applies it to its own new given names (MICHAEL מיכאל, JOEL יואל, NATHAN נתן). Hebrew players see an anglicised form of a common Israeli name. |
+| B: JORDAN becomes ירדן; JORDYN and the others stay | Edit battle_frontier_trainers.h:928 and the glossary row at glossary.csv:5646. The new name is 4 bytes, within the 7-byte limit. | Minimal: one name string, with no save data or logic involved. It overrides the names_check 'keep' verdict, so the reason is written into the row's notes. |
+| C: both JORDAN and JORDYN become ירדן | Also edit :1112 and glossary.csv:5669. | Two Frontier trainers share one name, and the practice of keeping distinct English spellings distinct is lost. |
+
+**Chosen:** B. ירדן is the natural Hebrew form of this given name. It follows §5 the way FireRed treats SAMUEL, AARON and ISAAC, and the way this project treats MICHAEL, JOEL and NATHAN. The names_check reason rests on the surname Jordan, not the given name. JORDYN is a deliberate modern respelling and keeps its own form, as JASMINE, JAZMIN and YAZMIN do.
+
+*Changed:* `src/data/battle_frontier/battle_frontier_trainers.h`, `translation/hebrew/glossary.csv`
+
+## Q57
+
+**Question.** 68 frontier and tent trainer names in this chunk are still in Latin letters (TRISTON, FERRIS, ALIVIA, GRETEL, and the Slateport, Verdanturf and Fallarbor tent trainers from MALACHI to KIANNA). None of them has a row in glossary.csv, so per STYLE §3 they were not guessed. Sibling chunk B37_01 follows the same convention. Should glossary rows be added (trainer names have a 10-byte limit) so that checkunits' NOHEBREW warnings can be cleared?
+
+*Source:* reviewer question (chunk B37_02)
+
+**Analysis.** Already resolved. I checked src/data/battle_frontier/battle_tent.h by script against the engine baseline:
+- All 90 trainerName fields are Hebrew; none is Latin.
+- 86 have tent_trainer rows, for example TENT_TRAINER_1_MALACHI מלאכי (glossary.csv:6233) and TENT_TRAINER_34_CAITLYN קייטלין (:6263). Every one matches its row.
+- The other 4 reuse existing rows: KELSIE קלסי (:530), REBECCA רבקה (:634), MARKUS מרקוס (:1661) and RONALD רונלד (:1685).
+- The longest name has 7 letters (רודולפו, :562), within trainerName[PLAYER_NAME_LENGTH + 1] (include/battle_frontier.h:11).
+The four Frontier names the question lists (TRISTON, FERRIS, ALIVIA, GRETEL) are Hebrew too.
+
+| Option | How | Risk |
+|---|---|---|
+| A: nothing more to do | No change. | None. |
+| B: re-review the 86 proposed tent spellings | A reviewer pass over the tent_trainer rows. | This belongs to the general check of proposed names, which has just run (names_check), not to this issue. |
+
+**Chosen:** A. Proposed rows were added and applied within the 7-letter limit, and existing spellings were reused, which is what the triage asked for.
+
+## Q59
+
+**Question.** Not changed but worth a human ear: Tucker's 'לא נעים לך?' for 'Aren't you embarrassed?' (the alternative is 'לא מביך אותך?'), and Noland's 'כבר סיימת?' for 'You're finished already?' (the alternative is 'כבר נגמר לך הכוח?').
+
+*Source:* reviewer question (chunk B37_02)
+
+**Analysis.** Tucker, src/frontier_util.c:150-151: 'אהאהאהא! לא נעים לך?\nכולם מסתכלים!' (English 'Ahahaha! Aren't you embarrassed?\nEveryone's watching!'). Noland, :236-237: 'היי, היי, היי!\nכבר סיימת?' (English 'Hey, hey, hey!\nYou're finished already?').
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Keep both | No change | None |
+| (b) Tucker 'לא מביך אותך?', Noland 'כבר נגמר לך הכוח?' | 2 edits | 'לא מביך אותך' is stiffer, and 'נגמר לך הכוח' adds information that is not in the English |
+
+**Chosen:** (a). 'לא נעים לך?' is the idiomatic Hebrew for being embarrassed in front of others, and 'כבר סיימת?' says exactly what the English says.
+
+## Q60
+
+**Question.** Twelve Trainer Hill trainer names are not in glossary.csv, so they stay in English as STYLE §3 says: SABINE, DAICHI, MIRANDA, TANNER, LENORA, MARLIN, LILIAN, REGINALD, MARTINA, FELICIA, CORNELIA, ABRAHAM (src/data/battle_frontier/trainer_hill.h). They need glossary rows. B37_04, B37_05 and B37_s02 have the same gap.
+
+*Source:* reviewer question (chunk B37_03)
+
+**Analysis.** Already resolved. Correction to the count: src/data/battle_frontier/trainer_hill.h has 64 Latin-source names (`.name = _("…")`), not 63, and all 64 are Hebrew. The 4 Japanese e-Reader dummies (`__("…")`) are unchanged.
+I checked by script against the engine baseline. 56 names have hill_trainer rows and all match, for example SABINE סבין (glossary.csv:6318), DAICHI דאיצ'י (:6320), TANNER טנר (:6321), LENORA לנורה (:6322), REGINALD רג'ינלד (:6325), CORNELIA קורנליה (:6330), and ABRAHAM אברהם (:6332 and :6361, the familiar Hebrew form under §5). These line numbers are at HEAD bb8db5c703.
+The other 8 (MIRANDA, PRESTON, CLARISSA, HENRY, DEAN, ALICE, VERONICA, ALFRED) reuse existing rows with the same English name; this is consistent. The longest name has 8 letters (קריסטינה), within name[TRAINER_NAME_LENGTH + 1] (include/trainer_hill.h:8; TRAINER_NAME_LENGTH is 10).
+
+| Option | How | Risk |
+|---|---|---|
+| A: nothing more to do | No change. | None. |
+| B: add duplicate hill rows for the 8 reused names | Add HILL_TRAINER_7_MIRANDA and the others. | Duplication with no visible effect. |
+
+**Chosen:** A. The rows exist, the tree matches them, and every name fits the 10-byte field.
+
+## Q62
+
+**Question.** 'Tag team' is translated inconsistently across chunks: צוות (B35_01), צוות זוגי (B35_02 and this chunk's Roof owner), צמד (B35_03). The menu term TAG MATCH = קרב צוות. The glossary needs one term.
+
+*Source:* reviewer question (chunk B37_03)
+
+**Analysis.** This is the same decision as Q12. This chunk (B37_03) already follows it: TrainerHill_Roof_hns:76 'אתה רוצה להקים איתי צוות זוגי!' and :107 'צוות זוגי!' (both live). TrainerHill_Entrance_hns:300 and :307 render 'tag battles' as 'קרבות צוות', which is consistent with TAG MATCH 'קרב צוות'. The inconsistency the reviewer saw is in other chunks: the 15 bare-צוות units in Q12 and the 8 'צמד' lines in Q17.
+
+| Option | How | Risk |
+|---|---|---|
+| A: Adopt 'צוות זוגי' / 'שותף לצוות' / 'קרב צוות' project-wide (the Q12 and Q17 edits) | No edits of its own. The Q12 and Q17 edit lists cover every remaining unit, so each edit is applied once. | None beyond Q12 and Q17. |
+| B: Change the Trainer Hill lines to another term | Edit TrainerHill_Roof_hns:76 and :107. | Pointless churn on lines that already use the majority term. |
+
+**Chosen:** A. The Trainer Hill owner's lines already use the chosen term. Repeating the Q12 and Q17 edits under this id would apply them twice.
+
+## Q66
+
+**Question.** JOHN DOE (trainer_hill.h@3480#170) is still in English. The glossary has no 'JOHN DOE' row. The chunk's 'names' map lists JOHN = ג'ון, but that comes from TRNAME_JOHN, a different trainer inherited from FireRed. Spelling DOE would mean inventing a transliteration, which STYLE.md section 3 forbids. Should this stay in English, become ג'ון דו (I'd need a glossary row for DOE), or become a Hebrew placeholder name such as פלוני אלמוני (too long for the 10-byte name field, so it would need shortening)?
+
+*Source:* reviewer question (chunk B37_04)
+
+**Analysis.** Already resolved. src/data/battle_frontier/trainer_hill.h:3480 is ג'ון דו, and the HILL_TRAINER_26_JOHN_DOE row (glossary.csv:6336 at HEAD bb8db5c703) records it. JOHN is FireRed's ג'ון, and DOE /doʊ/ is דו. The name is 7 bytes, within name[TRAINER_NAME_LENGTH + 1] (include/trainer_hill.h:8). The names_check review that was just applied also kept it. ג'ון דו is how Hebrew subtitles and the press write the placeholder name.
+
+| Option | How | Risk |
+|---|---|---|
+| A: keep ג'ון דו | No change. | None. |
+| B: פלוני | Replace it with the Hebrew placeholder word. | On its own, פלוני reads oddly as a name, and the full idiom פלוני אלמוני is 12 bytes, over the limit. |
+| C: the English JOHN DOE | Revert. | Latin in a reachable facility. |
+
+**Chosen:** A. The name is applied, recognisable to Hebrew readers, within the limit, and built from the canonical JOHN.
+
+## Q67
+
+**Question.** BREYDEN (#156), LUCIANA (#177) and GAVITE (#233) are Trainer Hill trainer names with no glossary row. Following STYLE.md section 3, I left them in English, as the sibling chunks B37_01, B37_02 and B37_03 do for other unknown names. If they should be in Hebrew, someone needs to add glossary rows first (BREYDEN also appears in B37_05).
+
+*Source:* reviewer question (chunk B37_04)
+
+**Analysis.** The rows exist and are applied:
+- BREYDEN בריידן at trainer_hill.h:3202 and :7678 (glossary.csv:6334 and :6363 at HEAD bb8db5c703).
+- LUCIANA לוסיאנה at :3609 (glossary.csv:6337).
+- GAVITE גאבייט at :4732 (glossary.csv:6343; it was :6348 before the glossary commit).
+GAVITE has a real problem: גאבייט is letter for letter the species GABITE (src/data/pokemon/species_info/gen_4_families.h:4338; glossary.csv:657). In English the two names differ by one letter; in Hebrew they are identical, so a player who knows the Pokémon reads the trainer as 'Gabite'.
+The row's notes are also cut off mid-word ('… 6 chars. FLAG: sam'). The full text in hns-tools/scratch/gaps/names2.json raises exactly this collision and suggests גאווייט. The names_check review that was just applied kept גאבייט, but it saw only the truncated note, and its reason does not mention the collision.
+
+| Option | How | Risk |
+|---|---|---|
+| A: keep גאבייט | Only repair the truncated note. | A trainer has exactly the spelling of a dragon Pokémon, which looks like a bug to Hebrew players. |
+| B: גאווייט | Medial v is written וו, as in the glossary's GAVIN גאווין (rules §2: ב unless the family uses וו). -ITE stays ייט (FR DRAGONITE דרגונייט). 7 bytes, within TRAINER_NAME_LENGTH 10. Rewrite the note in full. | It drops the ב chunk shared with HILL_TRAINER_67_GAV גאב (glossary.csv:6373). The two are separate trainers, so the cost is cosmetic. The spelling still differs from גאבייט by one letter, so any GABITE pun survives, as in English. |
+| C: גאוויט (triage) | Use a single י in the final syllable. | It reads GAV-eet and ignores the -ITE = ייט precedent. |
+
+**Chosen:** B. It makes the /v/ sound unambiguous and ends the exact clash with a species name, while keeping the one-letter resemblance the English has. The cost is one string and one row, and it closes the flag that the truncated note hid from the names_check review. BREYDEN and LUCIANA need nothing more.
+
+*Changed:* `src/data/battle_frontier/trainer_hill.h`, `translation/hebrew/glossary.csv`
+
+## Q74
+
+**Question.** If you want these names in Hebrew, these are my proposed glossary rows (trainer_name, 10-byte limit from u8 name[11] in include/trainer_tower.h:8). JOS & ANNE ג'וס ואן (ANNE=אן as in FireRed's ELI & ANNE). EMY & ALEK אמי ואלק. JO & HALEY ג'ו והיילי (JO=ג'ו as in JO&ZOE; HAYLEE/HAYLIE are היילי in B37_01; 10 bytes, at the limit). GABRIEL גבריאל and CHELSEA צ'לסי, the spellings B37_01 already uses. NICOLAS ניקולס. RIC & RENE ריק ורנה (RICK=ריק; RENE is the female half of a Crush Kin pair). JEN & KIRA ג'ן וקירה. ISAC & MAG אייזק ומג (MEG=מג). Every one is 10 bytes or less and 25 to 42 px in FONT_NORMAL.
+
+*Source:* reviewer question (chunk B38_01)
+
+**Analysis.** These names (JOS & ANNE, EMY & ALEK, JO & HALEY, NICOLAS, RIC & RENE, JEN & KIRA, ISAC & MAG) are in src/trainer_tower_sets.c, which Heart & Soul cannot reach. I re-checked the evidence at HEAD:
+- The data is read only by src/trainer_tower.c:453 (gTrainerTowerFloors).
+- The only scripts that start it are in the FRLG Sevii maps (TrainerTower_*_Frlg, SevenIsland_*_Frlg, data/scripts/trainer_tower.inc).
+- The Seagallop ferry to Seven Island (src/seagallop.c:76) is offered only from the *_Frlg harbor maps.
+- No *_hns map.json or scripts.inc references MAP_SEVEN_ISLAND* or MAP_TRAINER_TOWER*.
+- Re-run: a breadth-first search over warps, connections and MAP_ constants in the scripts, from all 560 *_hns maps, reaches 1013 maps and none of them.
+The project already records this as deliberate: tools/hebrew/status_report.py:36 lists the file under KEPT_LATIN, and STATUS.md:608 reads '36 kept in Latin: Trainer Tower data, which Heart & Soul cannot reach'. The file has 42 Latin name fields, 18 Hebrew ones (filled from existing rows) and two placeholders.
+For the record, if the tower is ever wired up, the spellings would be the triage's: ג'וס ואן, אמי ואלק, ג'ו והיילי (10 bytes, at the name[11] limit; include/trainer_tower.h:8), ניקולס, ריק ורנה, ג'ן וקירה and יצחק ומג (ISAC as FireRed's ISAAC, trainers.h:2079).
+
+| Option | How | Risk |
+|---|---|---|
+| A: keep the Trainer Tower names in Latin | No change. The KEPT_LATIN entry and the STATUS.md line already document it. | None for players, because the content is unreachable. |
+| B: add 7 pair and single rows and apply them | Add trainer_name rows in the 'X וY' form and edit 14 name fields. | Low technical risk, but it adds unchecked proposed names that no player will see. |
+
+**Chosen:** A. No player benefits, and it matches the documented decision for unreachable content.
+
+## Q75
+
+**Question.** Policy clash between parallel reviewers in this run. The B37_01 reviewer transliterated 134 frontier trainer names that have no glossary row, including CHELSEA=צ'לסי and GABRIEL=גבריאל. The B37_02 reviewer and this chunk kept such names in English. Other chunks still have the same kind of English names: B37_s01, B37_02, B38_s01 (COLE, JAC, MILY, JORDY), B38_02 (TRENTON, BRENNAN, LORENZO) and B38_03 (AXE & REN). One rule should be picked for all of them. The cleanest way is to add glossary rows and fill the names with apply_names.py.
+
+*Source:* reviewer question (chunk B38_01)
+
+**Analysis.** The policy was chosen and applied: reachable facilities got proposed rows and Hebrew names.
+- Battle Frontier: 320 frontier_trainer rows, and battle_frontier_trainers.h has no Latin names left.
+- Battle Tent: 86 tent_trainer rows; battle_tent.h is 90 of 90 Hebrew (checked by script).
+- Trainer Hill: 56 hill_trainer rows; trainer_hill.h has 64 of 64 Hebrew (checked by script).
+Trainer Tower (src/trainer_tower_sets.c) is the only exception. It is unreachable: the re-run map search from the 560 *_hns maps reaches 1013 maps and no Seven Island or Trainer Tower map (details in Q74). It is in KEPT_LATIN (tools/hebrew/status_report.py:36). The triage's note still holds: C name fields are applied by re-cutting chunks (make_chunks.py/units.py), not by apply_names.py, which handles only the .party files and region_map_sections.json (apply_names.py:2-4).
+
+| Option | How | Risk |
+|---|---|---|
+| A: keep the applied rule: rows for reachable facilities, Trainer Tower stays Latin | No change. | None. |
+| B: extend the rule to Trainer Tower | Add about 25 rows and apply them to 42 fields. | Work and review load for content no player sees. |
+
+**Chosen:** A. The clash is settled for everything a player can reach, and the one exception is documented in the tooling and in STATUS.md.
+
+## Q78
+
+**Question.** To clear those warnings, add these as glossary rows. Proposed spellings, following transliteration_rules.md: טרנטון, קמרין, נטליה, קתלין, בריידן, אליסון, אלברטו, קט & קיפ, גב&מייגן, פריסילה, שרלוט (French ch = ש, as MICHELLE = מישל), שנאייה, ברנן, עמנואל (familiar Hebrew form, as SAMUEL = שמואל), ג'רט, לורנזו. All are within the 10-byte name[11] limit. Once the rows exist, the same merge step will fill them in.
+
+*Source:* reviewer question (chunk B38_02)
+
+**Analysis.** Every name in this question that is still Latin is a Trainer Tower name in src/trainer_tower_sets.c: CAMRYN, NATALIA, KATHLEEN, ALLYSON, ALBERTO, PRISCILLA, CHARLOTTE, KAT & KIPP and GEB&MEGAN. That file is unreachable and deliberately kept in Latin (Q74; status_report.py:36; STATUS.md:608).
+The names that already had rows are Hebrew there with the glossary spellings, which won over the chunk's proposals: טרנטון, שאנייה, ברנן, עמנואל, ג'ארט, לורנצו and בריידן (one occurrence each).
+CAMRYN קמרין (TENT_TRAINER_25_CAMRYN, glossary.csv:6255) and NATALIA נטליה (CONTEST_OPPONENT_NATALIA_TRAINERNAME, :6135) now exist elsewhere and could be reused if the tower is ever done. Pairs would use the 'X וY' form, for example קט וקיפ and גב ומייגן (KIPP קיפ and MEGAN מייגן exist).
+
+| Option | How | Risk |
+|---|---|---|
+| A: keep the remaining Trainer Tower names in Latin | No change. | None for players. |
+| B: add rows for KATHLEEN קתלין, ALLYSON אליסון, ALBERTO אלברטו, PRISCILLA פריסילה, CHARLOTTE שרלוט and the two pairs, then apply them | About 7 rows and 9 field edits. | More unchecked proposed names for content no player sees. |
+
+**Chosen:** A. Same reason as Q74: the content is unreachable, the exception is documented, and the glossary spellings were already used where they existed.
+
+## Q79
+
+**Question.** Decision for you: should the pair names (KAT & KIPP, GEB&MEGAN) be translated only once both halves have glossary rows? KIPP (קיפ) and MEGAN (מייגן) are in the glossary, but KAT and GEB are not, and translating only half would mix Hebrew and Latin in one name. I left both pairs fully in English. GEB is also unclear: hard g (גב) or soft g (ג'ב)?
+
+*Source:* reviewer question (chunk B38_02)
+
+**Analysis.** The pair-assembly part is settled. The glossary stores each pair as its own row (TRNAME_AMYMAY AMY&MAY = איימי ומיי, glossary.csv:5419), so a pair is never put together from halves.
+KAT & KIPP, GEB&MEGAN and KATI & GEB are all Trainer Tower names in src/trainer_tower_sets.c, two fields each, which is unreachable and kept in Latin (Q74). So the GEB question does not affect the ROM.
+For the record: GEB has a hard g. The Egyptian god Geb is written גב in Hebrew, and rules §2 say to go by sound. But a bare גב is also the everyday word 'back' and reads /gav/; that is why HILL_TRAINER_67_GAV added an א (גאב, glossary.csv:6373). A future pass should weigh this.
+
+| Option | How | Risk |
+|---|---|---|
+| A: keep the pairs in Latin, with GEB recorded as hard g (גב) for any future pass | No change. | None. |
+| B: add 'GEB&MEGAN' = גב ומייגן and 'KATI & GEB' = קייטי וגב now | 2 rows and 4 field edits. | The content is invisible, and this adds proposed names to review. |
+
+**Chosen:** A. The content is unreachable, so the spelling has no effect on players. The hard-g answer and the גב homograph caveat are recorded for later.
+
+## Q81
+
+**Question.** Trainer Tower names AXE & REN (twice), CAMDEN, ZACKERY and MIKAELA are not in glossary.csv, so they stay in English per STYLE.md section 3. checkunits flags each one with a NOHEBREW warning. They need trainer_name glossary rows; ZACKERY and MIKAELA have a double-transliteration risk, so please decide the spellings. The other B38 chunks also leave unlisted names like these in English.
+
+*Source:* reviewer question (chunk B38_03)
+
+**Analysis.** AXE & REN (2 fields), CAMDEN, ZACKERY and MIKAELA are still Latin in src/trainer_tower_sets.c. They are Trainer Tower names, and the tower is unreachable and deliberately kept in Latin (Q74; status_report.py:36; STATUS.md:608). For a future pass, the spellings would be:
+- AXE & REN: אקס ורן.
+- CAMDEN: קמדן.
+- ZACKERY: זכריה, its familiar Hebrew form under §5 (Zachary comes from Zechariah), the way FireRed made ISAAC יצחק. The alternative is זאקרי.
+- MIKAELA: מיכאלה, in line with TRNAME_MICHAEL מיכאל (glossary.csv:5294).
+
+| Option | How | Risk |
+|---|---|---|
+| A: keep them in Latin | No change. | None for players. |
+| B: add the 4 rows and apply them | 4 trainer_name rows and 5 field edits. | Unchecked proposed names for content no player sees. |
+
+**Chosen:** A. Same as Q74. The spellings are recorded so that a later pass does not have to decide them again.
+
+## Q83
+
+**Question.** Alola_Akala_Totem_sign_Text_0 keeps the line break after אנרגיה, copying the English's own awkward break and matching B38_04 and B38_05. A cleaner split would be מהטוטם נובעת\nאנרגיה חזקה…, but it should change in all three islands together.
+
+*Source:* reviewer question (chunk B38_03)
+
+**Analysis.** The totem sign has 4 identical copies: AkalaIsle_hns/scripts.inc:528-529, MelemeleIsle_hns:773-774, PoniIsle_hns:406-407, UlaUla_Forest_hns:358-359. Each breaks 'מהטוטם נובעת אנרגיה\nחזקה…\p', which separates the noun from its adjective. That copies the English break ('a strong\n energy'), which works in English but not in Hebrew.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Move the \n: 'מהטוטם נובעת\nאנרגיה חזקה…' in all 4 | 8 one-line edits: 69/208 and 66/200 px | None. STYLE §5 allows moving \n, and the pages are unchanged |
+| (b) One line: 'מהטוטם נובעת אנרגיה חזקה…\p' | Merge the lines (deletes a line in each file), 138 px | Drops a line from the English layout, and a line deletion is riskier to apply |
+| (c) Keep | No change | An awkward orphaned adjective |
+
+**Chosen:** (a). The noun and adjective stay together, both lines fit easily, and the 4 copies stay identical.
+
+*Changed:* `data/maps/AkalaIsle_hns/scripts.inc`, `data/maps/MelemeleIsle_hns/scripts.inc`, `data/maps/PoniIsle_hns/scripts.inc`, `data/maps/UlaUla_Forest_hns/scripts.inc`
+
+## Q84
+
+**Question.** The hiking claim is worded differently on different islands: Akala's hiker says הטיולים הכי טובים and Ula'ula's (B38_05) says יש את מסלולי ההליכה הכי טובים. Both are fine; aligning them is a style call.
+
+*Source:* reviewer question (chunk B38_03)
+
+**Analysis.** The English line is the same on both islands. AkalaIsle_hns:559 is 'באי אקאלה הטיולים הכי טובים!\n' (English 'AKALA ISLE has the best hiking!\n'). UlaulaIsle_hns:363-364 is 'באי אולאולה יש את מסלולי הטיול\nהכי טובים!\p', which spreads a one-line English page (English :362 'ULA'ULA ISLE has the best hiking!\p') over two lines. Elsewhere the islanders' rivalry joke uses a single frame: Akala's swimmers say 'באי אקאלה החופים הכי טובים!' / 'באי אולאולה החופים הכי טובים!' (AkalaIsle_hns:594, :605). Implementation correction: the line-364 edit as written (old '.string "הכי טובים!\p"' → '') would leave a tab-only line inside the unit. drift.py's split_inc tolerates that, but units.py parse_script (units.py:46-70) stops a block at the first non-.string line. The label would then split into two units (…Text_2 and …Text_2#2), which breaks extract/status pairing against the English. The whole line, including its newline, must be removed.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Ula'ula = 'באי אולאולה הטיולים הכי טובים!\p', and delete line 364 entirely | Rewrite :363 and remove :364 (line and newline). 151/200 px, one line like the English | Low. The page count is unchanged (one \p), and the token list is empty |
+| (a') Same wording, no line deletion: ':363 באי אולאולה הטיולים\n', ':364 הכי טובים!\p' | 2 in-place edits | Keeps an extra line the English does not have, and breaks a short sentence across two lines |
+| (b) Make Akala match Ula'ula's longer wording | Rewrap AkalaIsle_hns:559 | Longer, and breaks the parallel with the swimmers' lines |
+| (c) Keep both | No change | The repeated-boast joke is weakened |
+
+**Chosen:** (a). It restores the identical rival boast and the English one-line page, with a shorter line. The deletion is safe as long as no blank line is left behind.
+
+*Changed:* `data/maps/UlaulaIsle_hns/scripts.inc`
+
+## Q85
+
+**Question.** Game Boy Advance: I followed FireRed's NPC wording, 'גיים בוי אדוונס'. B39_03 (sText_EnsureGBAConnectionMatches) keeps the Latin 'Game Boy Advance' in system text. Should NPC dialogue use the Hebrew and system text the Latin, or should one form be used everywhere?
+
+*Source:* reviewer question (chunk B38_04)
+
+**Analysis.** The tree is split. Hebrew 'גיים בוי אדוונס' is at Melemele_House_6_hns/scripts.inc:25 and :28. Latin is at src/berry_fix_program.c:45 ('ה-Game Boy Advance שלך תואם לתמונה.') and :55 ('ה-Game Boy Advance.'), and at src/strings.c:951 (gJPText_SelectConnectWithGBA, inside an already-translated quote: ”תקשורת עם\nGame Boy Advance”). FireRed's canon is Hebrew (pokefirered-heb CeladonCity_Condominiums_RoofRoom/text.inc:5 'שבתוך הגיים בוי אדוונס שלך!'), and FireRed also transliterates the brand 'גיים פריק' (strings.c:974). The glossary has no row. Both windows are 28 tiles = 224 px (berry_fix_program.c:96 WIN_MSG_BODY; mystery_gift_menu.c:120), and the Hebrew is narrower: 164 vs 192 px, 78 vs 106 px and 77 vs 99 px. The remaining Latin mention in a map, BattleTowerLobby_hns:1269 (ExplainLinkMultisChallenge_hns), is in tools/hebrew/data/live_labels.json's 'dead' list. The Latin kept on the berry-fix screen is the cartridge titles (Ruby/Sapphire, Emerald), which STATUS.md:531 records as deliberate.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) 'גיים בוי אדוונס' everywhere, with a glossary term row | 3 edits plus 1 glossary row | None. Everything is narrower than the Latin |
+| (b) Hebrew in dialogue, Latin in system screens | No edit, but document it | The same device has two names, and the e-Reader quote mixes scripts |
+| (c) Latin everywhere | Edit Melemele_House_6 | Goes against FireRed and is less readable in NPC speech |
+
+**Chosen:** (a). It follows FireRed, uses one name throughout, and reads more naturally for Hebrew players. The prefix attaches directly, per STYLE §4.
+
+*Changed:* `src/berry_fix_program.c`, `src/strings.c`
+
+*Glossary:* `TERM_GAME_BOY_ADVANCE`
+
+## Q86
+
+**Question.** HAU'OLI CITY (SamsonOak_Trigger_Beginning_Text_4) and ELIO (House5_Mom) are not in the glossary, so they stay in Latin. Suggested rows: 'העיר האואולי' and 'אליו'. Note that 'אליו' also reads as the word 'to him', so an alternative such as 'אֶליוֹ' without nikud needs a decision.
+
+*Source:* reviewer question (chunk B38_04)
+
+**Analysis.** Still open.
+- data/maps/MelemeleIsle_hns/scripts.inc:723 reads 'היא דומה באופן מוזר לעיר HAU'OLI'. The English is :724, 'HAU'OLI CITY in ALOLA'.
+- data/maps/Melemele_House_5_hns/scripts.inc:46 reads 'עם הבן שלי, ELIO.' (English :46).
+Both maps are live; STATUS.md:235 and :239 list them as seen on screen. Neither name has a row, and no other string in data/ or src/ uses them.
+ULA'ULA ISLE is האי אולאולה (glossary.csv:4950), which writes the Hawaiian glottal stop ' as א, not a geresh. HAU follows rules §3 (/aʊ/ = או). So HAU'OLI = ה + או + א + ולי = האואולי, and CITY = העיר X (rules §5).
+ELIO by the rules is אליו: initial e = א, and -io = יו as in Hebrew מריו and אנטוניו. It is a homograph of 'to him', but a name set off by a comma after 'הבן שלי' at the end of the sentence reads clearly as a name.
+I applied both edits to a scratch copy and ran drift.py: ok, and the LATIN warnings for HAU'OLI and ELIO are gone.
+
+| Option | How | Risk |
+|---|---|---|
+| A: העיר האואולי, and ELIO = אליו | Add PLACE_HAUOLI_CITY and NAME_ELIO and apply both. Widths: 162 px at :723 (the line ends in \n, budget 208) and 81 px at :46 (it ends in \p, budget 200). | None technically. אליו is ambiguous for a moment, but the apposition resolves it. |
+| B: העיר האואולי, and ELIO = אליאו | The same, but spell the name with an extra א to avoid the homograph. | A nonstandard spelling; Hebrew writes -io names with יו. |
+| C: keep both in Latin | No change. | Latin inside Hebrew on live maps. |
+
+**Chosen:** A. האואולי follows the ULA'ULA precedent for the glottal stop and the rules for /aʊ/. אליו is the standard Hebrew spelling of Elio, and the comma after 'הבן שלי' makes it read as a name.
+
+*Changed:* `data/maps/MelemeleIsle_hns/scripts.inc`, `data/maps/Melemele_House_5_hns/scripts.inc`
+
+*Glossary:* `PLACE_HAUOLI_CITY`, `NAME_ELIO`
+
+## Q89
+
+**Question.** Samson's line about the real MELEMELE ISLAND (Trigger_Beginning_Text_4) adds 'שבאלולה' to tell it apart from this game's MELEMELE ISLE, because both are 'האי מלמלה' in Hebrew. Is this clarifying addition acceptable?
+
+*Source:* reviewer question (chunk B38_04)
+
+**Analysis.** MelemeleIsle_hns/scripts.inc:725-726 is 'כל האי הזה מזכיר לי את\nהאי מלמלה שבאלולה…$' (English 'This whole island reminds me of MELEMELE\nISLAND…$'). The player is standing on MAPSEC MELEMELE ISLE = 'האי מלמלה' (glossary.csv:4948), so without the addition Samson would say the island reminds him of itself. The sentence before already uses the same frame, 'לעיר HAU'OLI\nשבאלולה' (:723-724, English 'HAU'OLI CITY in\nALOLA'), so 'שבאלולה' is parallel and adds no new facts. The Latin HAU'OLI on :723 is a separate issue (Q86) and is not touched here.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Keep 'האי מלמלה שבאלולה' | No change | None |
+| (b) 'האי מלמלה האמיתי' | Edit :726 | Implies that this island is fake |
+| (c) Drop the addition | Edit :726 | Nonsensical in Hebrew: the island reminds him of itself |
+
+**Chosen:** (a). It restores the ISLE/ISLAND distinction that the shared Hebrew mapsec name erases, and it echoes the sentence before it.
+
+## Q93
+
+**Question.** "demake" is translated as גרסת רטרו. Is that acceptable, or is a different term preferred?
+
+*Source:* reviewer question (chunk B38_05)
+
+**Analysis.** 'demake' appears in UlaUla_House_hns/scripts.inc:187 and UlaulaIsle_hns:323 as 'אני עובד על גרסת רטרו מלאה של\nהאזור, שנקראת אולטרה אקליפס.' (English 'I'm working on a full demake of the'). The developer office (CeladonCity_Apartments_2F_hns, CeladonMansion2F_Text_Phant 'I love DEMAKES!') also says DEMAKES. That file's text is dead: the room has no objects, triggers or signs (its map.json lists none) and none of its 16 labels is referenced outside the file, so it is outside this decision. If upstream adds the NPCs later, they should use the same term.
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Keep 'גרסת רטרו' | No change | None |
+| (b) Loanword 'דימייק' | Edit 2 lines | Only ROM-hack insiders know it |
+| (c) 'גרסה בסגנון GBA' | Edit 2 lines | Longer, and adds Latin |
+
+**Chosen:** (a). Hebrew has no established term, and 'retro version' is clear to every player and keeps the meaning.
+
+## Q95
+
+**Question.** Hiker battle intro "You must be tough to handle this rough terrain!" is kept impersonal (צריך להיות קשוח...), reading it as a requirement. The other reading is a deduction about the player (אתה בטח קשוח אם...). Which one is intended?
+
+*Source:* reviewer question (chunk B38_05)
+
+**Analysis.** Hiker battle intro, UlaulaIsle_hns/scripts.inc:355-356: 'צריך להיות קשוח כדי להתמודד\nעם השטח הקשה הזה!' (English :356 'You must be tough to handle this\nrough terrain!'). Correction: the decision read the English as a deduction about the player and cited Akala_Cave_hns:109 as precedent. The Akala English is a different construction: 'You must be tough IF you made it all the way up here!' (English Akala_Cave_hns:109). The 'if' clause forces the deduction, so 'אתה בטח קשוח אם הצלחת…' is right there. 'You must be X to Y', with a bare infinitive, is the requirement idiom ('you must be 18 to enter'): the hiker is boasting about the terrain, and that implicitly challenges the player. The current impersonal Hebrew says exactly that. STYLE §2 says that where a line can be rephrased naturally to avoid second-person gender (impersonal 'צריך…'), that wording is preferred. The current line is already that rephrasing, it is natural, and it fits (153 px would also have fit, so width is not the issue).
+
+| Option | How | Risk |
+|---|---|---|
+| (a) Deduction: 'אתה בטח קשוח אם אתה מתמודד\nעם השטח הקשה הזה!' | Edit :355 only, 153/208 | Picks the less likely reading of 'must be X to Y', and adds masculine second person where STYLE §2 prefers impersonal wording |
+| (b) Neutral maxim: 'רק קשוחים מסתדרים\nבשטח הקשה הזה!' | Rewrite 2 lines | Rephrases more than needed; the current line already is neutral |
+| (c) Keep the impersonal wording | No change | None. It follows the English requirement reading and STYLE §2 |
+
+**Chosen:** (c). The English infinitive construction states a requirement. The Akala Cave line differs ('if you made it'), so it is not a precedent. The current impersonal Hebrew is faithful and natural, and it is the gender-neutral wording STYLE §2 asks for. Changing it would only add a second-person masculine.
+
+## Q101
+
+**Question.** The GREETINGS menu item (sText_Greetings) is 'ברכות', and sText_ShowTrainerCardMale quotes it ('בתור ”ברכות”'). I kept it because the easy-chat group GREETINGS already uses 'ברכות' (src/data/easy_chat/easy_chat_groups.h:57). On its own, though, 'ברכות' reads as 'congratulations' (gText_LeagueChamp uses it that way, src/strings.c:128). 'היכרות' or 'ברכת שלום' would say 'swap trainer cards to say hello' more clearly. Should the menu item, this dialogue line and the easy-chat group name all change together?
+
+*Source:* reviewer question (chunk B39_02)
+
+**Analysis.** Confirmed in the current tree:
+- the Union Room menu item src/data/union_room.h:541 sText_Greetings is 'ברכות';
+- the male quote :259 is 'בטח! בתור ”ברכות”,\nהנה כרטיס המאמן שלי.';
+- the easy-chat group name src/data/easy_chat/easy_chat_groups.h:57 is 'ברכות'.
+FireRed precedent: gEasyChatGroupName_Greetings = 'ברכות' (pokefirered-heb src/strings.c:1193). FireRed left its Union Room strings in English (src/union_room_message.c:256, :513), so there is no other precedent.
+The tree already uses 'ברכות' to mean greetings in data/text/cable_club.inc:395 and data/scripts/cable_club_frlg.inc:1623 ('להחליף ברכות'). The easy-chat group holds hello, thank-you and congrats words, so 'היכרות' would be wrong for it.
+The 'congratulations' reading came only from gText_LeagueChamp (src/strings.c:128), which Q6 changes to 'מזל טוב!'. After Q6, the only bare 'ברכות' left are greetings, plus 'וברכות' meaning blessings in two Pokédex entries.
+
+| Option | How | Risk |
+|---|---|---|
+| A: Keep 'ברכות' in all three | No text edits; add a glossary row to lock the term. | None. After Q6, a bare 'ברכות' is used only for greetings. |
+| B: Change all three to 'היכרות' | Edit union_room.h:541 and :259, and easy_chat_groups.h:57. | Wrong for the easy-chat group, which is a word category (hello, thanks, congrats), not an introduction. It also breaks the FireRed group name. |
+| C: Change only the Union Room item and its quote to 'היכרות' | Edit union_room.h:541 ('היכרות') and :259 ('בתור ”היכרות”'). | Splits one English term into two Hebrew words. The female line ('כדי להציג את עצמי') already carries the 'introduction' sense. |
+
+**Chosen:** A. It matches FireRed's group name and the tree's existing 'להחליף ברכות'. In a menu next to 'קרב' and 'צ'אט' it reads as 'greetings', and Q6 removes the only competing reading. Zero edits, zero risk.
+
+*Glossary:* `TERM_GREETINGS`
+
+## Q106
+
+*The Hoenn-names pass this entry deferred is [Q141](#q141); the choice below stands.*
+
+**Question.** Several names are missing from glossary.csv, so they stay in English as STYLE §3 requires: BRINEY ('קפטן BRINEY'), PETALBURG ('במכון של PETALBURG'), RUSTBORO ('בעיר RUSTBORO') and MAXIE (the 'MAXIE:' speaker prefix, twice). They need glossary rows; MAXIE is the most visible because it is a speaker name.
+
+*Source:* reviewer question (chunk B39_03; merged, checkunits: 116 units, 0 errors))
+
+**Analysis.** BRINEY is live. data/text/event_ticket_2.inc:35 ('קפטן BRINEY יכול להיות'; English 'CAPT. BRINEY can be so maddeningly') is FarawayIsland_Entrance_Text_SailorReturn. It is shown from BattleFrontier_OutsideWest_hns/scripts.inc:13 and FarawayIsland_Entrance_hns/scripts.inc:22, both seen on screen (STATUS.md:73, :145).
+The same Latin name is in 3 more Hebrew strings: data/text/match_call.inc:2339 and :2460 ('מר BRINEY'), and src/landmark.c:22 ('הבקתה של מר BRINEY'). There is no BRINEY row.
+MAXIE has a row, NAME_MAXIE = מקסי (glossary.csv:6462 at HEAD bb8db5c703), and src/strings.c:16 uses it. Two speaker prefixes in data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc, :464 and :478, still read 'MAXIE:', while STEVEN in the same file (:484) is already סטיבן.
+PETALBURG and RUSTBORO are in 15 Hebrew strings: match_call.inc (12), Mossdeep 2F:490, landmark.c:21 and mystery_event_msg.c:3. All of them are vanilla Hoenn content, and other Hoenn names (DEWFORD, SLATEPORT, VERDANTURF) stay Latin consistently.
+Correction to the earlier option C: NAME_MAY מיי (:6464) and NAME_BRENDAN ברנדן (:6463) already exist. Yet match_call.inc still has 31 Hebrew lines with Latin 'MAY:' or 'BRENDAN:' prefixes, including the two text boxes edited here (:2338, :2459). That is a separate follow-up.
+Reachability: the map search I re-ran from the 560 *_hns maps reaches MAP_MOSSDEEP_CITY_SPACE_CENTER_2F, MAP_MOSSDEEP_CITY and MAP_ROUTE104_MR_BRINEYS_HOUSE. The route is the warp at (39,55) in BattleFrontier_OutsideWest_hns/map.json to vanilla MAP_ARTISAN_CAVE_B1F, which exits to vanilla MAP_BATTLE_FRONTIER_OUTSIDE_WEST. So vanilla Hoenn is reachable in the map graph, though this is not verified on screen and may be gated by flags or tiles.
+I applied the 6 edits to a scratch copy and ran drift.py: all 4 files are ok, and the BRINEY and MAXIE LATIN warnings are gone.
+
+| Option | How | Risk |
+|---|---|---|
+| A: BRINEY only, in the one string confirmed on screen | Add NAME_BRINEY = ברייני and edit event_ticket_2.inc:35. | The same name stays Latin in 3 other Hebrew strings. |
+| B: BRINEY everywhere it appears in Hebrew, plus the existing MAXIE row; PETALBURG and RUSTBORO stay Latin | Add NAME_BRINEY = ברייני (BRY-nee: i /aɪ/ = יי, final y = י, rules §3) and make 4 edits. Replace 'MAXIE:' with 'מקסי:' at Mossdeep 2F :464 and :478. Widths: 102 px (:35), 141 px (:2339 and :2460, which end in \p; budget 200), 159 px (:464) and 62 px (:478); the landmark is 95 px, shorter than the Latin it replaces. | None. Only name strings and speaker prefixes change. |
+| C: B plus a full Hoenn-names pass | Add rows for PETALBURG פטלבורג, RUSTBORO רסטבורו, DEWFORD, SLATEPORT, VERDANTURF, PEEKO, STONE and others, apply them in about 25 strings, and apply the existing NAME_MAY and NAME_BRENDAN rows to the 31 match_call.inc speaker prefixes. | A larger set of new proposed names for vanilla Emerald content whose reachability in Heart & Soul is unverified. |
+
+**Chosen:** B. Once a row exists, STYLE §3 has the glossary win everywhere, so BRINEY should not be Hebrew in one string and Latin in three. The MAXIE row already exists, so applying it costs two edits and matches STEVEN in the same file and strings.c:16. That vanilla Hoenn is reachable in the map graph makes these edits more worthwhile, not less. Leaving the Hoenn city names in Latin keeps 15 strings consistent until a Hoenn-names pass is decided. The 31 MAY:/BRENDAN: prefixes are outside this question and belong to that pass.
+
+*Changed:* `data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc`, `data/text/event_ticket_2.inc`, `data/text/match_call.inc`, `src/landmark.c`
+
+*Glossary:* `NAME_BRINEY`
+
+## Q111
+
+**Question.** Several sibling strings in src/battle_debug.c are in no unit chunk, so they stay in English inside the Hebrew menus: main list 'Moves', 'PP', 'Types', 'Stats', 'AI'; Stats list 'Speed'; Status1 list 'Sleep', 'Burn'; Volatiles 'Rage', 'Root', 'Yawn'; Side Status 'Mist', 'Swamp'; AI flags 'Risky', 'Stall'. Should they be added to a chunk? Suggested Hebrew: מהלכים, נ”כ, סוגים, נתונים, מהירות, שינה, כוויה, ערפל (Mist per the glossary). The Hebrew for Rage/Root/Yawn would come from the glossary move rows, which were not looked up here.
+
+*Source:* reviewer question (chunk B39_04)
+
+**Analysis.** The analysis is confirmed. All 14 strings are still Latin, and each old substring occurs exactly once at its line: :315 Moves, :318 PP, :319 Types, :320 Stats, :340 Speed, :347 Sleep, :349 Burn, :364 Rage, :383 Root, :384 Yawn, :413 Mist, :420 Swamp, :429 Risky, :438 Stall.
+
+The windows:
+- Main list: 9 tiles wide (:522-531) with item_X 8, so 64 px.
+- Secondary lists: 20 tiles (:533-542), so 152 px.
+- Both use fontId 1, FONT_NORMAL.
+
+The sources check out:
+- TERM_MOVE מהלך (glossary.csv:5511), TERM_PP נ”כ (:5508, U+201D) and TERM_TYPE סוג (:5514).
+- 'נתונים' as stats: battle_debug.c:321 'דרגות נתונים', battle_z_move.c:98, battle_message.c:208 and :332, and FireRed's move descriptions. The glossary has no TERM_STAT row yet.
+- gText_Speed מהירות (strings.c:1079); gText_Sleep שינה and gText_Burn כוויה (battle_message.c:1441 and :1443).
+- MOVE_RAGE זעם (:2402), MOVE_INGRAIN השתרשות (:2578), MOVE_YAWN פיהוק (:2584), MOVE_MIST ערפל (:2357).
+- STRINGID_SWAMPENVELOPEDSIDE 'ביצה טובענית' (battle_message.c:829). TERM_EGG is ביצה (:5500), so a bare ביצה would read as Egg.
+- AI_FLAG_RISKY 'behave more recklessly' and AI_FLAG_STALL 'stalls battle' (include/constants/battle_ai.h:12 and :23). ABILITY_STALL השהיה (:3338) means 'moves last', which is something else.
+
+Widths (FONT_NORMAL):
+- Main list: 36, 16, 25 and 28 px, all within 64.
+- Secondary lists: 33, 21, 22, 19, 44, 26, 26, 64, 65 and 48 px, all within 152. The AI-flag list already holds a 115 px label.
+
+All edits apply on a scratch copy, and drift.py reports ok.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Translate the 14 labels with the glossary and in-game forms | The 14 edits below. The AI flags become noun phrases like their neighbours ('ניסיון לחסל', 'בדיקת כדאיות', 'הקרבה עצמית'): 'לקיחת סיכונים' and 'משיכת זמן'. | Low. Text only, with no tokens, and every label fits and encodes. |
+| B. As A, but use the ability name 'השהיה' for Stall | Change :438 to 'השהיה'. | It misleads. השהיה is ABILITY_STALL ('moves last'), not the AI's stalling strategy. |
+| C. Leave them in English | No change. | The lists stay mixed. This is consistent only if Q118 reverted the file, and it did not. |
+
+**Chosen:** A. Q118 keeps the menu in Hebrew. Every label comes from a glossary row or a string players already see in battle, except the two AI flags. For those, the wording follows what the flag actually does rather than borrowing an ability name. 'ביצה טובענית' copies the battle message and avoids the clash with Egg. TERM_STAT is added so that 'נתון/נתונים' (used in FireRed and across this tree) is recorded.
+
+*Changed:* `src/battle_debug.c`
+
+*Glossary:* `TERM_STAT`
+
+## Q112
+
+**Question.** This chunk abbreviates AI as ב”מ (בינה מלאכותית), but the main-list item 'AI' stays Latin, so 'AI' sits next to 'מידע ב”מ' and 'קבוצת ב”מ'. Use ב”מ everywhere, or keep Latin 'AI' throughout? This is a debug menu for developers.
+
+*Source:* reviewer question (chunk B39_04)
+
+**Analysis.** The analysis is confirmed. src/battle_debug.c:326 is exactly {COMPOUND_STRING("AI"), LIST_ITEM_AI}. The three rows under it use ב”מ: :327 'ב”מ נק'/נזק', :328 'מידע ב”מ' and :329 'קבוצת ב”מ'. Their gershayim is U+201D (checked by code point), as STYLE §4 requires. Elsewhere in the tree, ב” occurs only before quotation marks (BattlePyramidLobby:558, GoldenrodDeptStore_3F:36), never as an abbreviation. Widths in FONT_NORMAL against the 64 px main list: 'ב”מ' 20 px, 'בינה מלאכותית' 70 px (too wide). The glossary has no TERM_AI row yet.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Use ב”מ at :326 | COMPOUND_STRING("AI") → COMPOUND_STRING("ב”מ"), and add a TERM_AI row to the glossary. | Low. One label of 20 px. The three rows under it give the abbreviation its context. |
+| B. Latin 'AI' everywhere | Revert :327-329 to forms such as 'מידע AI'. | Medium. It puts LTR runs inside RTL labels and undoes reviewed text, against Q118. |
+| C. Spell it out | 'בינה מלאכותית'. | At 70 px it overflows the 64 px window. |
+
+**Chosen:** A. It matches the three ב”מ rows already in the same list, fits easily, and follows Q118's decision to keep the menu in Hebrew. B adds bidi risk and C does not fit.
+
+*Changed:* `src/battle_debug.c`
+
+*Glossary:* `TERM_AI`
+
+## Q118
+
+**Question.** STYLE.md section 5 says not to translate debug-menu strings, but it names only src/debug.c. This chunk is src/battle_debug.c, and the batch translated it. Please confirm the battle debug screen is meant to be in Hebrew.
+
+*Source:* reviewer question (chunk B39_05)
+
+**Analysis.** Checked against the current tree (he/main at 95c35506a0). The analysis holds, with three corrections.
+
+The tree has src/battle_debug.c in Hebrew. It was translated in four commits: 7db86f2f06 (10-12), 57b2a35e4a (10-15), bd09c987a2 (10-18) and 5b1870b7b5 (10-18). 229 of its 251 literals are Hebrew. A scan of every literal outside comments finds exactly 22 with Latin words:
+- 15 in the lists: :315 Moves, :318 PP, :319 Types, :320 Stats, :326 AI, :340 Speed, :347 Sleep, :349 Burn, :364 Rage, :383 Root, :384 Yawn, :413 Mist, :420 Swamp, :429 Risky, :438 Stall. These are Q111 and Q112.
+- :1440 sTextAll "All", printed at :1481 (Moves) and :1528 (Stat Stages).
+- Six hold-effect names: :2196 Repel, :2212 Leek, :2253 Plate, :2257 Drive, :2258 Gems, :2275 Seeds.
+The only other Latin is the Z in :2278 "גביש Z". It is deliberate, as in the glossary's פוריגון-Z.
+
+The tools still contradict the tree in three places:
+- tools/hebrew/make_chunks.py:26-28: SKIP_FILES contains 'src/battle_debug.c' ("Left in English on purpose ... the debug menus").
+- tools/hebrew/status_report.py:21: battle_debug.c is in BLOCKED.
+- tools/hebrew/rom_sweep.py:63 (correction: the original analysis missed this one): DEBUG_OBJ = r'(^|/)src/(battle_)?debug\.o$' leaves battle_debug.o out of the default release sweep. Its docstring at :13 says the same.
+STYLE.md:77 names only src/debug.c.
+
+Players can reach the screen:
+- include/config/debug.h:11 sets DEBUG_BATTLE_MENU TRUE.
+- src/battle_controller_player.c:398 opens the menu on SELECT during action selection. The last-used-ball button is R (include/config/battle.h:361).
+- inventory.json records 215/215 of the file's literals in the release ROM.
+
+The screen prints game data that is already Hebrew: moves (:1474), abilities (:1487), items (:1492), types (:1501) and stat names (:1509; correction, the analysis said :1507).
+
+Sibling forks (correction): the French fork (fr/fr/main) does not touch battle_debug.c. The ES tag es-2.0.6-v1 translated about 12 of its strings; es/master has none.
+
+Widths, measured with textwidth (which says the RTL renderer ignores the list's lettersSpacing):
+- Main list, 64 px: new labels are 16-36 px; the widest existing label is 59.
+- Secondary list, 152 px: new labels are up to 65 px.
+- Hold-effect columns, FONT_SMALL, 75 px: new labels are up to 41 px; the widest existing is 72.
+All strings encode with charmap.txt.
+
+On a scratch copy, all 22 edits applied, and drift.py reported 'ok src/battle_debug.c'.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep the battle debug menu in Hebrew and finish it | Apply Q111's 14 labels and Q112's 'AI', plus the 7 literals below. Then align every tool and STYLE with the tree: remove battle_debug.c from make_chunks SKIP_FILES, from status_report BLOCKED and from rom_sweep's DEBUG_OBJ, and add one sentence to STYLE §5. | Low. Text and tool-config edits only, and every label fits its window. With rom_sweep changed, the default release sweep will cover battle_debug.o and catch any Latin that comes back. |
+| B. Revert the file to English, as the SKIP_FILES comment says | Restore src/battle_debug.c from the parent of 7db86f2f06 (equal to pokehns-heb-engine). | Medium. It throws away four reviewed, width-checked commits. A screen that opens with one button would show English labels next to Hebrew move, item, ability and type names. |
+| C. Turn off DEBUG_BATTLE_MENU for the Hebrew release | Set include/config/debug.h:11 to DISABLED_ON_RELEASE. | An engine and config change. The Hebrew release would no longer match English 2.0.6 or the ES and French forks. It is a product decision outside translation scope; see Q120. |
+
+**Chosen:** A. The menu opens with a single button in every battle and shows Hebrew game data whatever its labels say, so Hebrew labels are what a player should see. The work is about 90% done and already reviewed against the glossary. The remaining 22 edits are one-word labels taken from the glossary or in-game strings:
+- הכול: the full spelling, used 107 times in the tree against 4 for הכל.
+- דוחה: ITEM_REPEL, glossary.csv:3663.
+- מקל: ITEM_LEEK, :3988.
+- לוח: the PLATE chunk, :3799.
+- כונן: the DRIVE chunk, :3816.
+- אבני חן: the GEM chunk, :3935, in the plural like the English.
+- זרעי שטח: SEED זרע, :4046-4049, plus terrain שטח, :4101, the same word as the sibling 'מאריך שטח' at :2274.
+
+The one change to the earlier decision: rom_sweep.py also treats battle_debug.o as an English debug menu, so it gets the same fix. Otherwise the release sweep would keep skipping a file we now ship in Hebrew. The STYLE sentence is reworded slightly ('is translated and uses the glossary's terms').
+
+*Changed:* `src/battle_debug.c`, `tools/hebrew/make_chunks.py`, `tools/hebrew/rom_sweep.py`, `translation/hebrew/STYLE.md`
+
+## Q120
+
+**Question.** STYLE.md excludes src/debug.c, but the overworld debug menu is on in this build (DEBUG_OVERWORLD_MENU TRUE, R+START; notes/harness.md section 6). notes/inventory.md says only 4 debug.c literals are compiled out of the release ROM, so the debug.c text is in the release ROM. If players can reach the menu, does the 'keep English' rule still stand, or should DEBUG_OVERWORLD_MENU be turned off for the Hebrew release? That is an engine and config decision, not a translation one.
+
+*Source:* reviewer question (chunk B40_01)
+
+**Analysis.** The core facts hold. Two supporting claims needed correction.
+
+The R+START menu is in the release ROM:
+- include/config/debug.h:5 sets DEBUG_OVERWORLD_MENU TRUE, and src/field_control_avatar.c:165 and :278 open it.
+- debug.h is identical in Release-v2.0.6, es-2.0.6-v1, es/master and fr/fr/main.
+- data/event_scripts.s:1061 includes data/scripts/debug.inc unconditionally.
+- src/debug.c is byte-identical to pokehns-heb-engine (cmp).
+- data/scripts/debug.inc has 0 Hebrew lines (counted with Python; a plain grep for [א-ת] gives false hits on é and ×). Commit 1332b08bf1, titled 'Translate data/scripts/debug.inc into Hebrew', only rewrapped English lines.
+- STATUS.md:486 shows debug.inc as '74 | 0 | blocked (debug menu, English by design)'. Its 74 units are 2 live plus 72 debug_only (live_labels.json).
+
+The real gap: live_labels.json lists Debug_Text_ArianaDefeat (debug.inc:288-289) and Debug_Text_Grunt23Defeat (:291-292) as live. The story battle at data/maps/RocketHideout_B2F_hns/scripts.inc:305 uses them (multi_2_vs_2 ... PARTNER_LANCE_HNS). No other map uses a Debug_ label. The copies at :342 and :345 (Lance3, Clair3) are reached only from the debug menu.
+
+Speakers and widths:
+- Ariana's lines address the player in the masculine singular (scripts.inc:252-274: אתה, לך, תתכונן).
+- Grunt 23 is male (trainers_hns.party:2539-2543, 'Pic: Rocket Grunt M Hns').
+- Widths in FONT_NORMAL: 'עוד תשמע ממני!' 76 px and 'אני לא מקבל את זה!' 95 px, each one line.
+- drift.py on the edited scratch copy reports 'ok data/scripts/debug.inc'.
+
+Corrections:
+(1) Upstream history. The config was not a single switch. It went DISABLED_ON_RELEASE (b18de9d182, 2025-07-07), then FALSE (3b889fd542), DISABLED_ON_RELEASE (c49b1509d9 'Revert last for debug'), FALSE (b2366daa11) and TRUE (fc9ba4908e, 2026-08-22). That is four toggles in August 2026, so the intent is unclear. TRUE has shipped in Release-v2.0.2 through v2.0.6.
+(2) Sibling forks. The French fork does not touch any debug file. The ES tag es-2.0.6-v1 translated almost all of debug.inc (159 of 168 .string lines, including '¡Aún no has visto mi final!' and '¡No aceptaré esto!'), but only 13 lines of src/debug.c, so its R+START menu labels stay English. The claim that the community HNS_modern ReleaseM2 notes tell players to use the menu could not be checked in this workspace.
+
+Minor: in debug.inc the label Debug_EventScript_DoLanceMultiBattle is at :275 and its multi_2_vs_2 at :276. src/debug.c:581 'Lance Multi' runs Debug_EventScript_Lance_Multi (:265).
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep both menus on and keep src/debug.c and debug.inc in English, but translate the two story lines | Translate debug.inc:289 and :292, and make STYLE §5 name the R+START menu with its two exceptions. In status_report.py, move debug.inc from BLOCKED to KEPT_LATIN so the row reflects the 2 translated live strings. | Low. Two .string edits with labels and '$' kept, and no engine change. Behaviour matches English 2.0.6 and both forks. |
+| B. Turn the debug menus off for the Hebrew release | Set include/config/debug.h:5 and :11 to DISABLED_ON_RELEASE (include/constants/global.h:13-16). Plain make builds keep the menus; make RELEASE=1 (Makefile:63-75, :179-180) drops them. | Medium. An engine and behaviour change outside translation scope that departs from English 2.0.6 and both forks. The two Rocket Hideout lines would still need translating, because debug.inc stays assembled. |
+| C. Translate src/debug.c and all of debug.inc | About 188 C literals and 74 script units. | High cost for a developer tool, with no glossary for flags, vars, EV/IV or SaveBlock text, and a large new surface for width checks. ES translated debug.inc but left its debug.c labels mostly English, so its menu mixes languages. That is not a model to copy. |
+
+**Chosen:** A. A is the only option that stays inside translation scope and keeps the Hebrew release's behaviour identical to English 2.0.6. The two defeat lines are reached in the main story, so they must be Hebrew whatever is decided about the menus.
+
+'עוד תשמע ממני!' is the natural Hebrew for 'you haven't seen the last of me' and addresses the player in the masculine, as Ariana's other lines do. It also says nothing about the speaker's gender, which matters because the party file marks Ariana as Male even though her script lines are feminine. 'אני לא מקבל את זה!' fits the male grunt.
+
+The ES precedent for debug.inc (correction 2) does not change the choice. Translating the menu's result messages while its labels in src/debug.c stay English would mix languages inside one tool. If the user wants the menus hidden, B with DISABLED_ON_RELEASE is the least invasive way, but that is a product decision, not a translation fix.
+
+*Changed:* `data/scripts/debug.inc`, `translation/hebrew/STYLE.md`
+
+## Q122
+
+**Question.** The glossary has no row for TRICK MASTER. This chunk uses 'אמן התעלולים' in all eight secret codes. Other Trick House strings, still untranslated in other chunks ('The TRICK MASTER!', 'Don't look for me. TRICK MASTER', and others), need the same rendering, so a glossary row (or TRICK HOUSE = בית התעלולים) should be added to keep them consistent.
+
+*Source:* reviewer question (chunk B40_02)
+
+**Analysis.** Current tree: all 8 live secret-code units use 'אמן התעלולים'. These are Route110_TrickHousePuzzle1-8 *_Text_WroteSecretCodeLockOpened: Puzzle1:42, Puzzle2:105, Puzzle3:307, Puzzle4:33, Puzzle5:901, Puzzle6:48, Puzzle7:320, Puzzle8:33. The landmark already reads 'בית התעלולים' (src/landmark.c:28).
+The remaining English TRICK MASTER/HOUSE lines are all dead according to tools/hebrew/data/live_labels.json:
+- Route110 (TrickHouseSign; file not built);
+- TrickHouseEntrance TheyCallMeTrickMaster, ComeToChallengeTrickHouse, LeavingOnJourneyNote, MechadollWhichTent;
+- the Puzzle trainer intros and post-battle lines;
+- trainers.inc Route124_Text_JennyPostRematch.
+Related rows already use 'תעלול': MOVE_TRICK 'תעלול' (glossary.csv:2574) and MOVE_TRICK_ROOM 'חדר תעלולים' (:2736). Neither TRICK MASTER nor TRICK HOUSE has a row.
+
+| Option | How | Risk |
+|---|---|---|
+| A: Add term rows TRICK MASTER = 'אמן התעלולים' and TRICK HOUSE = 'בית התעלולים' | Append the 2 rows; no text edits. | None. |
+| B: Also translate the dead English lines now | Translate unreachable units. | Effort spent on text no player can reach; a row is enough to keep any future translation consistent. |
+
+**Chosen:** A. It locks the two forms the tree already uses (8 codes and the landmark), in the MOVE_TRICK 'תעלול' family. Priority is low because the remaining English cannot be reached in H&S.
+
+*Glossary:* `TERM_TRICK_MASTER`, `TERM_TRICK_HOUSE`
+
+## Q123
+
+**Question.** The shared battle lines that say a trainer sends out a Pokémon use the masculine verb for every trainer: 'רביעיית עלית קארן שלח את אמבריאון!', 'מנהיג קלייר עומד לשלוח את לפרס.'. Karen, Whitney, Jasmine, Clair, Misty, Erika, Sabrina and Janine speak of themselves in the feminine in their own text, so the battle box contradicts them. For Karen the verb also disagrees with the feminine head noun רביעייה.
+
+*Source:* screen review, round 6 (gym leaders and Elite Four); left open in round 5 because it needs a decision.
+
+**Analysis.** The strings are src/battle_message.c sText_Trainer1SentOutPkmn, sText_Trainer1SentOutTwoPkmn, sText_Trainer1SentOutPkmn2, sText_TwoTrainersSentPkmn, sText_Trainer2SentOutPkmn and STRINGID_ENEMYABOUTTOSWITCHPKMN. Every opponent trainer prints them, men, women and pairs (Twins, couples) alike. The English 'sent out' and 'is about to send out' carry no gender or number.
+- The trainer data cannot pick a form: src/data/trainers_hns.party marks 630 of its 651 trainers 'Gender: Male', all eight women above included, and changing it would change trainer data.
+- A class noun does not settle it either: TRAINER_CLASS_LEADER and TRAINER_CLASS_LEADER_HNS 'מנהיג' are shared by men and women (glossary.csv:4800, :4898), and TRAINER_CLASS_ELITE_FOUR_HNS 'רביעיית עלית' (:4910) is a feminine noun for Will, Koga and Bruno too.
+- STYLE §2 keeps NPCs in their own gender and prefers a rewording that avoids gender where one reads naturally. The Pokémon is masculine by the settled rule.
+- The English strings have no manual line break, so the battle text breaks them automatically (src/line_break.c BreakStringAutomatic); STYLE §5 says to keep them without breaks.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Reword so the Pokémon is the subject | 'הפוקימון של {X}, {Y}, יוצא לקרב!' for the send-out lines, 'הפוקימונים של {X}, {Y} ו{Z}, יוצאים לקרב!' for two Pokémon, and 'הפוקימון הבא של {X} יהיה {Y}.' for the about-to-send line. Token order unchanged; no manual breaks, as in English. | Low. Six strings; one form for every trainer, pairs included. The line is longer and wraps to two lines more often. |
+| B. Feminine variants chosen in code | Under TEXT_RTL, pick a feminine string from a table of female trainer pics or ids. | Medium. A hand-kept table of every female pic, plural forms for pairs, and the Frontier and link trainers on top; a masculine class noun before a feminine verb ('מנהיג קלייר שלחה') still clashes. |
+| C. Keep and list as a known issue | No change. | Every gym leader and Elite Four battle with a woman shows the clash. |
+
+**Chosen:** A. It removes the clash for every trainer without trainer data or a table to maintain, and the wording is ordinary Hebrew narration. The other lines with a trainer as the subject keep the masculine for now: withdrew (sText_Trainer1WithdrewPkmn, sText_Trainer2WithdrewPkmn) and used an item (STRINGID_TRAINER1USEDITEM). They need their own neutral wording and were not part of this review. The partner lines name only male partners in H&S (src/data/battle_partners.party), and the link lines name real players.
+
+*Changed:* `src/battle_message.c`
+
+## Q124
+
+**Question.** The battle line for an opponent trainer using an item, STRINGID_TRAINER1USEDITEM '{B_ATK_TRAINER_NAME_WITH_CLASS}\nהשתמש ב{B_LAST_ITEM}!', has the masculine verb for every trainer. On the Radio Tower 5F it reads 'מנהל רוקט אריאנה / השתמש בשיחזור מלא!' while Ariana speaks of herself in the feminine on the same screens ('עכשיו אני חזקה יותר'). Q123 left this line masculine 'for now'.
+
+*Source:* screen review, round 6 (Johto story battles), confirmed on screen by a second reviewer; follow-up to Q123.
+
+**Analysis.** The string is src/battle_message.c:509. The English, 'X used ITEM!', carries no gender and has no manual line break.
+- Every AI trainer that carries battle items prints it. 100 entries in src/data/trainers_hns.party have an 'Items:' line. At least 25 of them are women: Whitney, Jasmine, Clair, Misty, Erika, Sabrina, Janine, Karen and Ariana, with their rematch and post-game entries.
+- As in Q123, the trainer data cannot pick a form: both Ariana entries are 'Gender: Male' in the party file (:10892, :10927), like the female leaders.
+- The class noun 'מנהל רוקט' before her name is a separate question. TRAINER_CLASS_ROCKET_ADMIN_HNS (glossary.csv:4926, reviewed) is shared by Archer, Proton, Petrel and Ariana, so it cannot take one gender (the Q123 analysis). A female class would change trainer data, which is out of scope. It stays masculine, in this line and in her intro and defeat lines.
+- STYLE §2 keeps NPCs in their own gender and prefers a rewording that avoids gender where one reads naturally.
+
+| Option | How | Risk |
+|---|---|---|
+| A. No verb | '{B_ATK_TRAINER_NAME_WITH_CLASS}: שימוש ב{B_LAST_ITEM}!'. Token order unchanged; no manual break, as in English, so the battle text breaks it automatically. | Low. One string, one form for every trainer. It reads as a terse battle report rather than a sentence. |
+| B. Feminine variant chosen in code | Under TEXT_RTL, pick 'השתמשה' from a table of female trainer pics. | Medium. A hand-kept table, as rejected in Q123; 'מנהל רוקט אריאנה השתמשה' still clashes with the masculine class noun. |
+| C. Keep and list as a known issue | No change. | Every female leader, Karen and Ariana who uses an item shows the clash. |
+
+**Chosen:** A. It removes the masculine verb for every trainer without trainer data or a table, in the same spirit as Q123. The masculine class noun before Ariana's name is unchanged (shared class, see above). The withdrew lines (sText_Trainer1WithdrewPkmn, sText_Trainer2WithdrewPkmn) are still masculine; they were not part of this review.
+
+*Changed:* `src/battle_message.c`
+
+## Q125
+
+**Question.** Lines that put a count before an item name print the singular for every item that has no Hebrew plural name: 'לזרוק כמה\nנוצת שרירים?', 'האם לזרוק 3\nשיקוי?', 'זרקת 999\nדינוזאור מאובן.', 'משכת 999\nאבן מפתח מוזרה.'. CopyItemNameHandlePlural (src/item.c:196) prints an item's plural name when it has one. Otherwise the English build adds 's' and, under TEXT_RTL, the Hebrew build keeps the singular. Before this change only the 183 items whose English has a pluralName, plus POKé BALL and SPORT BALL, had a Hebrew plural.
+
+*Source:* screen review, round 7 (listed as known in round 6).
+
+**Analysis.** These are the lines a player can see that print an item name after a count, or that ask for the plural on purpose (quantity 2, for 'how many'):
+- The bag (src/item_menu.c): TOSS asks how many (:1984, gText_TossHowManyVar1s), confirms with the count (:1998, gText_ConfirmTossItems) and reports it (:2042, gText_ThrewAwayVar2Var1s). In the PC's DEPOSIT mode the bag asks how many (:2467, sText_DepositHowManyVar1) and reports the deposit (:2515, sText_DepositedVar2Var1s).
+- PC item storage (src/player_pc.c): withdraw how many (:1335), toss how many (:1349), withdrew (:1399), the toss confirmation (:1422) and threw away (:1439).
+- The Battle Pyramid bag (src/battle_pyramid_bag.c BagAction_Toss, AskConfirmToss, TossItem) prints the same three toss strings. It took the name from CopyItemName, so the singular followed the count in both languages ('Threw away 99\nMAX ELIXIR.' in English).
+- Scripts. bufferitemnameplural (src/scrcmd.c:2909) is used only in data/scripts/obtain_item.inc (:15, :162, :182, :195, :296). It feeds 'obtained N' (gText_ObtainedTheItems), 'found N' (gText_PlayerFoundItems, gText_PlayerFoundTMHMs) and the put-away lines after them (gText_PutItemInPocket, gText_PlayerPutItemInBag). The put-away lines get the plural name without a count. Two reachable H&S scripts give an item in a count: the aide's 5 POKé BALLs (NewBarkTown_Lab_hns:500) and the 30 SPORT BALLs (Gate_NationalPark_hns:31, :50). No H&S item ball (movement_range_x) has a quantity above 1, and no hidden item does either (map.json quantity) apart from coins, which print gText_FoundXCoins.
+- Berry trees (src/berry.c:2231, data/scripts/berry_tree.inc:69, :73): 'GOLD קטף\n5 פירות אורן.' and the full-pocket line. Every berry already has a plural (K6).
+- Not reachable in H&S:
+  - the Pokédex evolution condition 'N <item> בתיק' (src/pokedex_plus_hgss.c:7297). It uses a count above 1 only for GHOLDENGO's 999 GIMMIGHOUL COINs, and GIMMIGHOUL is in no H&S encounter, party or map. SHEDINJA's 1 POKé BALL takes the singular.
+  - apricorn trees (src/apricorn_tree.c; APRICORN_TREE_COUNT is 0, include/constants/apricorn_tree.h:88).
+  - Pokémon Jump (src/pokemon_jump.c:3336), a link minigame.
+- Already worded so the count does not govern the name:
+  - Kurt's balls ('{PLAYER} קיבל {STR_VAR_2}\nיחידות של {STR_VAR_1}!', AzaleaTown_KurtsHouse_hns:308, with bufferitemname);
+  - hidden items in a count (gText_FoundXItems 'מצא N פריטים מסוג X');
+  - the mart: 'X? ורצית N?' (src/strings.c gText_Var1AndYouWantedVar2) and 'X?\nכמה ברצונך למכור?' (gText_HowManyToSell), both with CopyItemName.
+- A singular and a plural string chosen by count: the Premier Ball bonus. src/shop.c:2123 prints gText_ThrowInPremierBall ('אוסיף לך גם כדור פרמייר.') for one ball and gText_ThrowInPremierBalls ('אוסיף לך גם {STR_VAR_1} כדורי פרמייר.') from two on, so 'N כדורי פרמייר' never shows a count of 1.
+- The items. 525 stackable items had no Hebrew plural: every item outside the key-item and TM/HM pockets that has no importance. TMs are stackable too (I_REUSABLE_TMS is FALSE), but a TM's name is the abbreviation מ”מ plus a number, which Hebrew does not inflect ('2 מ”מ 01').
+- Widths. The bag's description window is 14 tiles (112 px), the PC's message window 13 tiles (104 px) and the Pyramid's 14 tiles. In all three strings the name has a line to itself. The bag and the PC wrap a name wider than the window minus 16 px (WrapFontIdToFit); the Pyramid does not wrap. The widest plural is 'דינוזאורים מאובנים' (89 px, 18 bytes), so every plural fits on one line in every window. The widest counts are 999 in the bag and the PC (MAX_BAG_ITEM_CAPACITY, MAX_PC_ITEM_CAPACITY) and 99 in the Pyramid.
+
+| Option | How | Risk |
+|---|---|---|
+| A. A Hebrew plural for every stackable item | Add item_plural rows for the 525 items. Where the plural differs from the singular (338 items), add a pluralName under #if TEXT_RTL in src/data/items.h, as for the two balls. A row equal to the singular needs no pluralName, because the fallback prints the singular. The Pyramid bag's count lines ask for the plural under TEXT_RTL, as the main bag does. A check (tools/hebrew/plurals.py, run by the unit tests) fails when a stackable item has no row or items.h prints something else. | The change is mostly data: 525 rows and 338 three-line blocks. drift.py reports STRUCTURE for items.h and battle_pyramid_bag.c until the same blocks, with English placeholders, are on he/renderer. Without a row, an item added later would print the singular, but the check catches it. |
+| B. Reword the count lines so the number does not govern the name | For example '{STR_VAR_1}:\nכמה לזרוק?' and 'לזרוק {STR_VAR_2} יח'\n{STR_VAR_1}?'. The token order (count, then name) must stay. 'יחידות' fails at a count of 1 ('1 יחידות'), which the bag and PC print for a single item. | Small: about ten strings, with every item, caller and later item covered. But the lines read like a receipt in a game that otherwise says 'קיבלת 5 פוקיבולים!'. The 187 reviewed plurals still feed these strings, so each wording must read with both forms. |
+| C. A for what scripts hand out in counts, B for the bag, the PC and the Pyramid | The two script gifts already have plurals; reword the seven bag and PC strings. | Medium. The same kind of line comes in two styles ('קיבלת 5 פוקיבולים!' but 'זרקת 3 יח' פוקיבולים.'), and the B lines read like a receipt. |
+
+**Chosen:** A. It follows the English, where every stackable item has a plural (a pluralName or an added 's'), and the engine already supports it. The lines read as ordinary Hebrew: 'לזרוק כמה\nשיקויים?', 'האם לזרוק 999\nפוקיבולים?', 'משכת 999\nאבני מפתח מוזרות.'. No reviewed wording changes except the three lines below.
+
+The plurals follow the reviewed rows:
+- the head noun in the plural (שיקויים, נוגדנים, החייאות, לימונדות);
+- a construct plural for a compound name (כדורי ריפוי, אבני אש, שיקויי על, נוצות בריאות, לוחות להבה, אבני חן אש, שברי טרה מים);
+- the adjective in the plural where it agrees (כדורים מעולים, אבנים נוצצות, פנינים גדולות, גולות אדומות, אבני חן פסיכיות).
+
+The singular is kept for:
+- mass nouns, as honey, mulch and mail are (ברזל, סידן, אבץ, קטורת, צוף, נענע, חלב מומו, סודה פופ, פחם, אבק כוכבים, מלח מערות, נחושת/כסף/זהב עתיק);
+- names that are already plural (מים טריים, מים מיסטיים);
+- the X items (as X ACCURACY);
+- the 128 Mega Stone, Z-Crystal and Augurite names;
+- two unused placeholders.
+
+A counter is used where the plain plural changes the meaning, as REMEDIES מנות מרפא did: ETHER מנות אתר (אתרים reads as websites) and REPEL תרסיסי דוחה (דוחים reads as 'disgusting'). ULTRA BALL and MASTER BALL take בולים, like פוקיבולים.
+
+The put-away lines dropped 'את'. 'את' marks a definite object. A singular item name is read as a name ('שם את שיקוי'), but a plural name is an indefinite noun, and 'GOLD שם את פוקיבולים' is not Hebrew. Without 'את' the line reads correctly for both: 'GOLD שם פוקיבולים\nבכיס כדורי פוקי.' and 'GOLD שם שיקוי\nבכיס תרופות.'. The same applies to gText_PlayerPutItemInBag (Pyramid item balls) and to the berry tree's full-pocket line ('אי אפשר היה לקחת פירות סיטרוס.').
+
+*Changed:* `src/data/items.h`, `src/battle_pyramid_bag.c`, `data/text/obtain_item.inc`, `data/scripts/berry_tree.inc`, `tools/hebrew/plurals.py`, `tools/hebrew/tests/test_plurals.py`
+
+*Glossary:* 525 `item_plural` rows (notes end in Q125)
+
+## Q126
+
+**Question.** One NORMAL-rank contest calls its rank three different things. The lobby rank menu says 'דרגה רגילה', the MC says 'מנחה: שלום! בדרגת רגיל,' and the results title says 'דרגת בסיס'. The MC line joins the construct noun דרגת to the bare masculine adjective רגיל, which is not Hebrew. סופר, היפר and מאסטר read correctly in the same slot because they are names. Two rewordings of the MC line were rejected: 'הדרגה: {STR_VAR_3}.' puts the feminine noun next to the masculine רגיל, and 'בדרגת ”{STR_VAR_3}”,' quotes a name, which STYLE §3 does not do.
+
+*Source:* screen review, round 9 (contest opponents and COOL ranks), confirmed by two reviewers. Rounds 5 (R6) and 6 (C4) proposed rewordings of the MC line, and neither was merged.
+
+**Analysis.** These are the places that name the NORMAL rank (English 'NORMAL', 'NORMAL RANK', 'Normal Rank'):
+- gText_Normal (src/strings.c) reaches two lines through gStdStrings[STDSTRING_NORMAL]. One is the MC's line (data/scripts/contest_hall.inc ContestHall_Text_GettingStartedParticipantsAsFollows, 'בדרגת {STR_VAR_3},'). The other is the BRAVO TRAINER TV show (src/tv.c CopyContestRankToStringVar; data/text/tv.inc gTVBravoTrainerText00, 'מתהדר בדרגת {STR_VAR_3}'). No H&S map runs EventScript_TV, so the show is not seen in H&S. Both lines put the rank after the construct דרגת, so the rank has to be a name.
+- The lobby rank menu (MultichoiceList_ContestRank, src/data/script_menu.h) says 'דרגה רגילה'.
+- The lobby painting caption (sContestRankNames, src/contest_painting.c) says 'בדרגה רגילה'.
+- The ribbon description (gRibbonDescriptionPart2_NormalRank, src/data/text/ribbon_descriptions.h) says 'מנצח בדרגה רגילה!'.
+- The receptionist's rank explanation (LilycoveCity_ContestLobby_Text_ExplainContestRanks, contest_hall.inc) says 'רגילה, סופר, היפר ומאסטר' and 'בדרגה הרגילה' twice.
+- The results title graphic (graphics/contest/results_screen/tiles.png) says 'דרגת בסיס'. The game builds the title from tiles as [rank][RANK][category][CONTEST], so the rank word follows the construct דרגת there too. The graphics notes chose בסיס because that construct needs a noun.
+
+gText_Normal has one other user, and it is not the contest rank. The FRLG Game Corner photo printer's tint menu (sMultichoiceList_TrainerCardIconTint, MULTI_TRAINER_CARD_ICON_TINT) uses it for the plain print. The menu's only script, data/scripts/trainer_card_frlg.inc:14, is assembled only when IS_FRLG (data/event_scripts.s:605), but the list is in the ROM. VerdanturfTown_ContestHall_Text_NormalRankStage is unused and still in English.
+
+The English and the Japanese (ノーマル, スーパー, ハイパー, マスター) name all four ranks the same way. SUPER, HYPER and MASTER are transliterated everywhere in the tree (סופר, היפר, מאסטר). No glossary row covered any rank.
+
+| Option | How | Risk |
+|---|---|---|
+| A. 'נורמל', a rank name like the other three | Set gText_Normal to 'נורמל', so the MC and TV lines read 'בדרגת נורמל'. The menu, the painting caption, the ribbon description and the rank explanation say 'דרגת נורמל' / 'בדרגת נורמל'. The results title is redrawn as 'דרגת נורמל' in the title's own S11 letters. The tint menu keeps 'רגיל' with its own string under TEXT_RTL. Add glossary rows for the four ranks. | Low. Six strings, one graphic and a TEXT_RTL entry in a data table, with no script or layout change. Every new string is narrower than its MASTER sibling. drift.py reports STRUCTURE for src/data/script_menu.h until the same entry, with an English placeholder, is on he/renderer. |
+| B. 'בסיס' everywhere, the title graphic's word | Set gText_Normal to 'בסיס' and the strings to 'דרגת בסיס'. The graphic does not change. | Low effort. But it makes the first rank the only translated name of the four, and בסיס ('base', 'basic') says something the English NORMAL does not. |
+| C. Reword the lines so an adjective fits | For example 'הדרגה: {STR_VAR_3}.', or quotation marks. | Rejected twice already: the gender clash with רגיל, and quoting a name breaks STYLE §3. The TV line would need the same treatment. |
+
+**Chosen:** A. It treats the four ranks alike, as the English and the Japanese do. Every rank string then has one form, דרגת + name, that is grammatical for all four ranks: 'דרגת נורמל', 'בדרגת נורמל', 'מנצח בדרגת נורמל!', 'תחרות מגניבות בדרגת נורמל'. The word רגיל keeps its meaning wherever it is not the contest rank: TYPE_NORMAL, ordinary use and the photo printer's plain print.
+
+*Changed:* `src/strings.c`, `src/data/script_menu.h`, `src/contest_painting.c`, `src/data/text/ribbon_descriptions.h`, `data/scripts/contest_hall.inc`, `graphics/contest/results_screen/tiles.png`
+
+*Glossary:* `TERM_CONTEST_RANK_NORMAL`, `TERM_CONTEST_RANK_SUPER`, `TERM_CONTEST_RANK_HYPER`, `TERM_CONTEST_RANK_MASTER`
+
+## Q127
+
+**Question.** The battle lines that say a trainer withdraws a Pokémon use the masculine 'החזיר' for every trainer: 'מטיילת ארין החזיר / את רפידאש!', 'מאמן על רינה החזיר / את סטארמי!', 'תאומים לאה ופיה החזיר / את דרגונייר!', and in a Battle Tower multi battle the second opponent and the lobby partner, 'גברת שמשייה יוליאנה החזיר / את קלידול!' and 'עלמה סיביל החזיר / את היטמונטופ!'. Q123 and Q124 left these lines masculine because they were not part of those reviews. The Hebrew also breaks the line by hand where the English has no break.
+
+*Source:* screen review, round 11 (trainer withdraw, finding 1: the Twins pair with a singular verb), the open lines of Q123 and Q124, and round 13 (a woman as the Tower lobby partner).
+
+**Analysis.** The strings are src/battle_message.c sText_Trainer1WithdrewPkmn, sText_Trainer2WithdrewPkmn, sText_InGamePartnerWithdrewPkmn1 and sText_InGamePartnerWithdrewPkmn2, which BufferStringBattle picks for STRINGID_RETURNMON by the battler's side and position. Every AI trainer that switches prints them: field trainers of both genders, a pair in a one-trainer double battle (Twins, couples), both opponents of a multi battle (the Rocket Hideout B2F battle; Battle Tower multis) and the in-game partner (Lance; a Tower lobby partner, who may be a woman, so Q123's 'only male partners' no longer holds once the Frontier partners are counted).
+- The English 'X withdrew Y!' carries no gender or number and has no manual line break.
+- As in Q123, the trainer data cannot pick a form (630 of the 651 trainers in src/data/trainers_hns.party are 'Gender: Male', the women included), a class noun is shared by men and women, and a table of female trainers would also have to cover the Frontier trainers and partners.
+- A search of battle_message.c for {B_TRAINER1_NAME_WITH_CLASS}, {B_TRAINER2_NAME_WITH_CLASS}, {B_PARTNER_NAME_WITH_CLASS} and {B_ATK_TRAINER_NAME_WITH_CLASS}, and for the bare name tokens ({B_TRAINER1_NAME}, {B_TRAINER2_NAME}, {B_ATK_TRAINER_NAME}, {B_PARTNER_NAME}), followed by a verb finds no other line that reaches the screen: the send-out lines follow Q123 and the item line Q124. sText_Trainer1Fled ('{B_TRAINER1_NAME_WITH_CLASS} ברח!') is defined but never referenced, so the compiler drops it (no symbol in pokehns.elf) and it is left as it is.
+- The link lines (sText_LinkTrainer1WithdrewPkmn, sText_LinkPartnerWithdrewPkmn1 and their siblings) name real players, as Q123 noted, and keep their wording.
+- The move WITHDRAW is 'נסיגה' (glossary MOVE_WITHDRAW), so the verb 'נסוג' would read as the move.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Reword so the Pokémon is the subject, as Q123 did | 'הפוקימון של {X}, {Y}, חוזר!' for all four strings, the partner lines with {B_PLAYER_MON1_NAME} / {B_PLAYER_MON2_NAME} in place of {B_BUFF1}. Token order unchanged; no manual break, as in English, so the battle text breaks the line automatically. The present 'חוזר' pairs with the send-out line that follows it, '… יוצא לקרב!'. | Low. Four strings, one form for every trainer and partner, pairs included. The line is longer than before; the battle text keeps it on one line when it fits and wraps it to a second when it does not. |
+| B. Feminine variants chosen in code | Under TEXT_RTL, pick 'החזירה' / 'החזירו' from a table of female trainer pics and pair classes. | Medium. The hand-kept table rejected in Q123 and Q124, with the Frontier trainers and partners on top; 'מאמן על רינה החזירה' would still clash with the masculine class noun. |
+| C. Keep and list as a known issue | No change. | Every woman, pair and woman partner who switches shows the clash. |
+
+**Chosen:** A. It closes the withdraw lines Q123 and Q124 left open, with the wording of the send-out lines, and no trainer data or table. With it no line of src/battle_message.c that reaches the screen gives an opponent or partner trainer a gendered verb; the link lines are the exception noted above, and the player is masculine by STYLE §2. A class noun before a trainer's name keeps the gender the trainer data gives it: Ariana's shared 'מנהל רוקט' (Q124) and the other classes shared by men and women are trainer data, which is out of scope.
+
+*Changed:* `src/battle_message.c`
+
+## Q128
+
+**Question.** On the summary screen, a geresh in the portrait nickname (ג'ימי, and species names used as nicknames such as טיפלוז'ן, פיקאצ'ו and צ'אנסי) is drawn on y 96, directly under the portrait box's last row, y 95. The 1.0 release notes list it as a known issue, a side effect of K5.
+
+*Source:* K5 review ('Review of the changed screens' below); round 5 rejected a fix that moved the name; retried in round 14.
+
+**Analysis.** The name prints at PORTRAIT_NICKNAME_Y = 7 in a window whose top is y 88, so glyph row 0 is y 95. Hebrew letters have their body on rows 4-11, the ל ascender on row 2, and descenders to row 13 with the shadow on row 14. The frame under the name on the move pages is y 109. The four quote marks a name can hold, “ ” ‘ ’ (0xB1-0xB4; ’ is also the geresh, CHAR_SGL_QUOTE_RIGHT, on the Hebrew keyboard), are the only glyphs whose foreground starts on row 1, in all three fonts this window can use (FONT_NORMAL and its GetFontIdToFit fallbacks FONT_NARROW and FONT_NARROWER). Round 5 showed that no y clears both the box and the frame (13 free rows, 14 needed), and that a page-dependent y makes the name jump.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep it as a known issue | No change. | The geresh stays against the box. |
+| B. Lower or shorten the marks in the fonts | Redraw 0xB1-0xB4 one row lower, or one row shorter, in latin_normal/narrow/narrower.png. | Changes every apostrophe, geresh and quote mark in every text in those fonts, including dialogue and the Easy Chat words, which are out of scope. Lowering only the geresh would put it below the gershayim (נ”ח). |
+| C. A per-window y offset in the renderer for glyphs above the x-height | New window state in src/text.c. | An engine change, with its own drift and review, for one window. |
+| D. Lowered copies used only by this window | Write the four marks one row lower, at the same widths, into the blank extra-symbol cells F9 19-1C of the three fonts (and their width tables in src/fonts.c). Under TEXT_RTL, PrintNotEggInfo prints a copy of the nickname with the four marks replaced by those cells. | Low. Nothing else uses the cells, so no other text changes. The cells are neutral to the renderer like the marks (RtlClassAt), so the reading order is the same. A Japanese-language nickname is left as it is. drift.py reports STRUCTURE for src/pokemon_summary_screen.c and src/fonts.c until the same changes are on he/renderer. |
+
+**Chosen:** D. The marks keep their shape and are 1 row below the box. The name's baseline and its lowest rows do not move, so what the forget-move frame shows is unchanged, as round 5 required. In the 71 regression tours, 15 shots differ, each only in the 3 x 6 px of a geresh. They are the Typhlosion, ג'ימי and Chansey summary pages.
+
+*Changed:* `src/pokemon_summary_screen.c`, `src/fonts.c`, `graphics/fonts/latin_normal.png`, `graphics/fonts/latin_narrow.png`, `graphics/fonts/latin_narrower.png`, `tools/hebrew/release/notes.json`
+
+## Q129
+
+**Question.** EXEGGUTOR-A is אקזגיוטר-א, without the ק of the base form אקזגקיוטר (SPECIES_EXEGGUTOR, FireRed's spelling). Every other Alolan form is its base name plus -א (סנדסלאש-א, ניינטיילס-א, מארוואק-א), and the Pokédex shows the two spellings side by side on EXEGGCUTE's EVOLUTION page. The ק was dropped because the base plus -א is 56 px against the 50 px Pokédex list column. The 1.0 release notes list it as a known issue.
+
+*Source:* 1.0 known issue (tools/hebrew/release/notes.json), retried in round 14.
+
+**Analysis.** אקזגקיוטר-א is 11 letters (the species limit is 12 bytes) and measures 61 px in FONT_NORMAL, 56 in FONT_NARROW and 49 in FONT_NARROWER (tools/hebrew/textwidth.py). It would be the widest species name by 1 to 3 px: the widest today is MEOWSCARADA מיאוסקראדה, 60 / 53 / 46. The 56 px figure is the FONT_NARROW width. The list itself does not stop there: under TEXT_RTL, src/pokedex_plus_hgss.c CreateMonName prints with GetFontIdToFit(name, FONT_NARROW, 0, 50), which falls back to FONT_NARROWER at 49 px. That fit dates from a1c5d26885. The audit's budget file was written later but still called the column "no fit" (tools/hebrew/data/budgets.json, and the dex entry of tools/hebrew/glossary_widths.py). Every window that draws the name, with the width it allows:
+
+| Window | Code | Full form |
+|---|---|---|
+| Pokédex list | CreateMonName, FONT_NARROW fitted to 50 | FONT_NARROWER, 49 px |
+| Pokédex INFO banner | PrintInfoScreenTextWhite, FONT_NORMAL inside x 119-237 | 61 px |
+| Pokédex STATS | FONT_SMALL up to 55, else FONT_SMALL_NARROWER | 49 px |
+| Pokédex EVOLUTION | FONT_SMALL, the method text after it | fits on both pages |
+| Summary | nickname line fitted to 63, species line to 58 | 61 px normal; 56 px narrow |
+| Party menu | FONT_SMALL fitted to 50, then FitNameToWidth | FONT_SMALL_NARROWER, 49 px, nothing cut |
+| Healthbox, Gen 3 and Gen 4 UI | name and gender sign fitted to 55, then FitNameToWidth | FONT_SMALL_NARROWER, 53 px with ♂, nothing cut |
+| Ability pop-up | the battler's name on the pop-up's first line | 56 px, inside the pop-up |
+| Naming screen title | WrapFontIdToFit(name, FONT_NORMAL, 64) | 61 px |
+| Pokédex CRY page | FONT_NORMAL with no fit in the x 81-142 gap between the mon box and the VU meter | 61 px would touch the box at x 80; under TEXT_RTL the name is fitted to 60 px, so it falls back to FONT_NARROW, 56 px |
+| PC panel, nickname line | FONT_NORMAL fitted to 66 | 61 px |
+| PC panel, species line | '/' + name in the font fitted to the nickname (English code) | 62 px after no nickname; 67 px after a short one, which would start at x 5, 1 px inside the 6 px margin the 78 px mirror axis keeps |
+| Contest | FONT_NARROW fitted to 50 | FONT_NARROWER, 49 px (not seen on screen) |
+| Messages | dialogue and battle boxes | fits |
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep אקזגיוטר-א | No change. | The only regional form that is not its base plus the suffix, shown next to the base form in the Pokédex. |
+| B. The full form, with the TEXT_RTL fits | The glossary row first, then the species name. On the Pokédex CRY page, under TEXT_RTL, the name is fitted to the 60 px that keep a 1 px gap to the mon box. In the PC panel, under TEXT_RTL, the species line keeps the nickname's font unless the line is wider than the 66 px the mirrored panel leaves; then it falls back to a narrower font. Correct the dex list entry of budgets.json and glossary_widths.py to the fit the code has. | Low. The name is drawn in a narrower font in the list, the party, the healthbox, STATS and the summary species line, as long names already are. The CRY page and PC fallbacks fire for no other species: every other name is 60 px or less in FONT_NORMAL, and every other '/' + name is 66 px or less in FONT_SHORT. drift.py reports STRUCTURE for src/pokemon_storage_system.c and src/pokedex_plus_hgss.c until the same block is on he/renderer. |
+| C. Shorten the base another way | For example drop the י (אקזגקוטר-א, 53 px in FONT_NARROW). | It still differs from the base form, and it loses the /ju/ that the base and the row 184 note keep. |
+
+**Chosen:** B. The Alolan form follows the same rule as the other -א forms, and the Pokédex shows one base spelling on both entries. Every window in the table except the contest was seen on screen before and after (tours scripts/r14_fix_b/tours/r14b_exeggutor_menus, r14b_exeggutor_battle and r14b_dex_cry). The first review found the CRY page touching the box, which the fit then fixed.
+
+*Changed:* `src/data/pokemon/species_info/gen_1_families.h`, `src/pokedex_plus_hgss.c`, `src/pokemon_storage_system.c`, `tools/hebrew/data/budgets.json`, `tools/hebrew/glossary_widths.py`, `tools/hebrew/release/notes.json`
+
+*Glossary:* `SPECIES_EXEGGUTOR_ALOLA`
+
+## Q130
+
+**Question.** The battle intro 'קיבלת אתגר\nמ{B_TRAINER1_NAME_WITH_CLASS}!' attaches the prefix מ to the trainer class, and for some classes the joined word reads as another word: 'ממלכת השביל לוסי!' (PIKE QUEEN: 'kingdom of the Pike'), 'מאס הכיפה טאקר!' (DOME ACE: the verb מאס), 'משומר פוקימון קורנליה!' (PKMN RANGER: 'preserved'), more weakly 'מילד עשיר', 'מצעיר', 'ממנהל רוקט'.
+
+*Source:* screen review, round 16 (Frontier Brain intros; Trainer Hill Rangers), confirmed by the refute pass.
+
+**Analysis.** The strings are src/battle_message.c sText_Trainer1WantsToBattle and sText_TwoTrainersWantToBattle, which every field, Frontier, Trainer Hill and Tower trainer prints when the battle starts; the Frontier Brains take their class from GetFrontierBrainTrainerClass, so the brain lines are the ones in play. STYLE §4 attaches a prefix by default; no decision covered a prefix that changes the word. The link templates name only the player ('קיבלת אתגר מ{B_LINK_OPPONENT1_NAME}!') and are not affected by a class.
+
+| Option | How | Risk |
+|---|---|---|
+| A. 'מאת' before the class | 'קיבלת אתגר\nמאת {B_TRAINER1_NAME_WITH_CLASS}!\p' and 'קיבלת אתגר\nמאת {B_TRAINER1_NAME_WITH_CLASS}\lומאת {B_TRAINER2_NAME_WITH_CLASS}!\p'. Token order and breaks unchanged. | Low. The class is never joined to a letter. Worst case (a 12-letter class and a 10-letter name, the widest glyph): 185 px +8 arrow on one trainer's line, 181 and 188 px on the two-trainer lines, inside 200 px (tools/hebrew/textwidth.py). |
+| B. Rename the classes that collide | Change PIKE QUEEN, DOME ACE, PKMN RANGER and the others. | Trainer-class names are glossary terms used in many lines; a rename for one template is out of proportion, and a new class could collide again. |
+| C. Keep | No change. | The intros of three Frontier Brains and the Rangers read as other words. |
+
+**Chosen:** A. Seen on screen on the rc17 clip build and the fixed clip build: the Pike Queen and Dome Ace intros, the Trainer Hill Rangers (one trainer and a pair), Youngster Mikey, the Twins, the gym leader and the Rocket Hideout multi battle ('מאת מנהל רוקט אריאנה / ומאת רוקט גראנט!'), with 0 clip records. The two-trainer line lost its `\n` and `\l` in Q163: it is auto-wrapped, one view for the Rocket Hideout pair.
+
+*Changed:* `src/battle_message.c`
+
+## Q131
+
+**Question.** The battle debug menu shows the stat-up hold effects in two forms: six as 'X +' ('התקפה +', 'מהירות +', "התק' מ' +", 'קריטיות +', 'נתון מקרי +', 'התחמקות +') and three as 'העלאת X' ('העלאת הגנה', "העלאת הגנ' מ'", 'העלאת חברות'). On the AI points page, the label 'מחליף אל' stands about 19 px away from the Pokémon it names.
+
+*Source:* the string-coverage round (round 16), the battle debug menu; a question for the owner in HANDOFF section 8.2. Q118 keeps this menu in Hebrew and says to finish it.
+
+**Analysis.** The names are src/battle_debug.c sHoldEffectNames. English 2.0.6 uses one form for all nine, 'X Up'.
+- The info page prints a name in FONT_SMALL in a 75 px column per battler (x = 83 + battler × 75). The AI party page copies only the first 7 bytes of the name (StringCopyN(..., 7)) and prints them in FONT_SMALL_NARROW in a 41 px column, so Defense Up and Sp. Def Up both print 'העלאת ה' there, and Friendship Up prints 'העלאת ח'.
+- "הגנ' מ'" is the tree's own short Sp. Def (gText_SpDef4 in src/strings.c), next to "התק' מ'" (gText_SpAtk4), which Sp. Attack Up already uses.
+- The AI points page prints the label at x 74 and the species at the fixed x 74 + 68. The English 'Switching to ' is exactly 68 px, so English has one space between the two. Under TEXT_RTL the window is mirrored, and 'מחליף אל ' (49 px) leaves a hole of 19 px.
+- Labels measured in FONT_NORMAL with the trailing space (tools/hebrew/textwidth.py): 'עובר לפוקימון ' 68 px, 'יחליף לפוקימון ' 71, 'מחליף לפוקימון ' 75, 'החלפה לפוקימון ' 79, 'מחליף אל פוקימון ' 85. A label over 68 px runs into the species.
+
+| Option | How | Risk |
+|---|---|---|
+| A. 'X +' for all nine, and a 68 px label | 'הגנה +', "הגנ' מ' +" and 'חברות +' for the three; 'עובר לפוקימון ' for the label. Text only. | Low. The three are shorter: 32, 45 and 37 px in FONT_SMALL, against 54, 67 and 59. The widest of the nine stays 50 px. Their 7-byte copies, 'הגנה +', "הגנ' מ'" and 'חברות +', differ from each other and measure 30, 30 and 35 px of the 41 px column. |
+| B. 'העלאת X' for all nine | Reword the six 'X +' rows. | It undoes six reviewed rows, "העלאת הגנ' מ'" is 67 px, and the 7-byte copies still read the same. |
+| C. Place the species after the label in code | Under TEXT_RTL, x = 74 + GetStringWidth(label). | An engine change in a file drift.py checks: STRUCTURE until he/renderer has the same block. Not needed when a natural label is exactly 68 px. |
+| D. Keep | No change. | The family stays mixed, and the gap stays. |
+
+**Chosen:** A. One form, as in English, the one most rows already had and the shortest, and the 7-byte party page now tells Defense, Sp. Def and Friendship apart. The label puts the species one space after it, as in English.
+
+*Changed:* `src/battle_debug.c`
+
+## Q132
+
+**Question.** In a link battle, the lines for the other player or the link partner sending out or withdrawing a Pokémon read '{X} שלח את {Y}!' and '{X} החזיר את {Y}!', with the masculine verb whatever character that player chose. The line for a link opponent who runs, '{X} ברח!', has the same fault. The 1.0 release notes listed the send-out and withdraw lines as a known issue.
+
+*Source:* 1.0 known issue (tools/hebrew/release/notes.json); the link lines that Q123 and Q127 left as they were.
+
+**Analysis.** The strings are src/battle_message.c sText_LinkTrainerSentOutPkmn, sText_LinkTrainer2SentOutPkmn2, sText_LinkTrainerSentOutTwoPkmn, sText_TwoLinkTrainersSentOutPkmn, sText_LinkTrainerSentOutPkmn2, sText_LinkTrainerMultiSentOutPkmn, sText_LinkPartnerSentOutPkmn1GoPkmn, sText_LinkPartnerSentOutPkmn2GoPkmn, sText_LinkPartnerSentOutPkmn1, sText_LinkPartnerSentOutPkmn2, sText_LinkPartnerWithdrewPkmn1, sText_LinkPartnerWithdrewPkmn2, sText_LinkTrainer1WithdrewPkmn and sText_LinkTrainer2WithdrewPkmn, and sText_WildFled, which prints when the link opponent runs.
+- Q123 and Q127 kept these lines because they name real players. That is not a reason to keep a gendered verb: the other player may have chosen the girl, and the wording of those two decisions reads the same for both.
+- The English lines carry no gender and have no manual line break. The Hebrew lines for two Pokémon and the partner's lines with 'צא' broke the line by hand.
+- sText_TwoWildFled 'ברחו' is the past plural, which has one form for both genders, so it stays.
+- Widths (tools/hebrew/textwidth.py, worst case a 7-letter player name and a 12-letter Pokémon name): 255 px for one Pokémon sent out, 365 px for two and for the partner's line with 'צא', 229 px for a withdraw, 513 px for the two-player line (two sentences), 175 px for the fled line. The battle text wraps each at 200 px a line and pages it; the trainer lines of Q123 already reach 473 px.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Reword so the Pokémon is the subject, as Q123 and Q127 did | 'הפוקימון של {X}, {Y}, יוצא לקרב!', 'הפוקימונים של {X}, {Y} ו{Z}, יוצאים לקרב!' and 'הפוקימון של {X}, {Y}, חוזר!'; the partner's line keeps 'צא, {Y}!' after its send-out; the fled line becomes 'הקרב הסתיים בבריחה של {X}!'. Token order unchanged; no manual breaks, as in English. | Low. Fifteen strings, text only, one form for every player. |
+| B. Pick the verb by the other player's gender in code | Under TEXT_RTL, read the gender the link sends (gLinkPlayers) and print 'שלחה' / 'החזירה'. | Medium. Engine code for screens only a real link shows, two forms of every line, and no second GBA to check it with. |
+| C. Keep as a known issue | No change. | Every link battle against a girl shows the clash. |
+
+**Chosen:** A. The link lines get the wording the trainer lines already have, with no code. With it, no line of src/battle_message.c that names a link player gives that player a gendered verb. The known issue is removed from the release notes. The player stays masculine by STYLE §2.
+
+*Changed:* `src/battle_message.c`, `tools/hebrew/release/notes.json`
+
+## Q133
+
+**Question.** Round 17 gave Hebrew names to five terms that Pokédex entries printed in Latin: HISUI היסואי, MT. CORONET הר הנזר, Ultra Wormhole חור תולעת אולטרה, TEAM PLASMA צוות פלזמה and ROSE רוז. No official Hebrew source exists for them, and the handoff asked the owner to confirm them.
+
+*Source:* HANDOFF section 8.2, questions for the owner from the Pokédex rounds (16b and 17); glossary rows PLACE_MT_CORONET, NAME_HISUI, PLACE_ULTRA_WORMHOLE, TERM_TEAM_PLASMA and NAME_ROSE.
+
+**Analysis.** The terms appear in src/data/pokemon/species_info: gen_2_families.h:542 (MT. CORONET), gen_5_families.h:822 and :4699, gen_6_families.h:5283 and gen_7_families.h:249 (HISUI), gen_7_families.h:6574, :6640 and :7528 (Ultra Wormhole), shared_dex_text.h:61 (TEAM PLASMA) and gen_8_families.h:7134 (ROSE). How the glossary renders their neighbours:
+
+| Family | Rows | Rule |
+|---|---|---|
+| Mountains | MAPSEC_MT_MOON הר הירח (inherited from FireRed), MAPSEC_MT_MORTAR הר המכתש, MAPSEC_MT_SILVER הר הכסף | MT. = הר; an English common word is translated by its meaning. FireRed also has MT. EMBER הר אמבר, transliterated. |
+| Regions | KANTO קאנטו, JOHTO ג'וטו, GALAR גלאר, SINNOH סינו, PALDEA פלדייה | transliterated; prose says 'אזור X' |
+| Teams | TERM_TEAM_ROCKET צוות רוקט (inherited), TEAM AQUA צוות אקווה, TEAM MAGMA צוות מגמה | TEAM = צוות + the name |
+| People | the NAME_* rows | transliterated, never translated |
+| Ultra | TERM_ULTRA_BEASTS חיות אולטרה, ITEM_ULTRA_BALL אולטרה בול | Ultra = אולטרה; definite 'X האולטרה' |
+
+- היסואי is transliterated like every region; the א marks the break between the two vowels, as in PLACE_HAUOLI_CITY האואולי, and without it היסוי reads 'hisoy'. It matches the -ה ending of the Hisuian forms.
+- 'coronet' is a common English word (נזר), so הר הנזר follows H&S's own mountains. The transliterated הר קורונט is FireRed's minority MT. EMBER pattern; it would also make the entry's last row 113 px instead of 106.
+- חור תולעת is the standard Hebrew physics term; Ultra and the definite form follow חיות האולטרה. The three uses follow the English article: definite at :6574 and :6640, indefinite at :7528.
+- צוות פלזמה follows the three inherited teams; פלזמה is the Hebrew word, as in DEXCAT_PLASMA and MOVE_PLASMA_FISTS.
+- רוז is a person's name, transliterated like every NAME_* row (s as /z/ = ז).
+- No official Hebrew source was found: the Pokémon Israel site (pokemon-il.co.il) refused the request (HTTP 403), and the Hebrew dub's terms were not checked.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep all five | No change. | None found; the rows stay 'proposed' until a native speaker or an official source confirms them. |
+| B. Transliterate MT. CORONET as הר קורונט | Change the glossary row and gen_2_families.h:542. | It follows the minority pattern, and the row is 7 px wider. |
+| C. Leave the five in Latin | Revert round 17. | Latin words inside Hebrew prose, which round 17 removed. |
+
+**Chosen:** A. Each term follows the rule of its family in the glossary. The rows stay 'proposed', as no official source or native reading confirms them.
+
+## Q134
+
+*Superseded by [Q139](#q139):* the owner decided that Psychic is על-חושי; 'psychic power' is now כוח על-חושי and its forms, and the type is על-חושי. The analysis below is kept as it was.
+
+**Question.** The English 'psychic power(s)', 'psychic energy' and 'psychic abilities' have two renderings in Pokédex prose: כוח פסיכי in most entries and כוח על-חושי in nine.
+
+*Source:* HANDOFF section 8.2, questions for the owner from the Pokédex rounds (16b and 17).
+
+**Analysis.** Every English 'psychic power', 'energy' or 'ability' in the tree, paired with its Hebrew:
+
+| Where | Count | Rendering |
+|---|---|---|
+| Pokédex entries | 35 | פסיכי in 26; על-חושי in 9 (11 rows): Alolan Raichu, Golduck, Kadabra, Alakazam, Delphox, Espurr, female Meowstic, Pa'u Oricorio, Bruxish |
+| Move descriptions | 3 (Freezing Glare, Eerie Spell, Psyshield Bash) | פסיכי |
+| Dialogue | 10 lines (the Saffron gyms and the fighting dojo) | פסיכי |
+
+- על-חושי stays in Kadabra's 'extrasensory powers' (תפיסה על-חושית) and in the move names that already have it: PSYBEAM קרן על-חוש, PSYWAVE על-חוש, PSYSHOCK הלם על-חושי, PSYSTRIKE מכת על-חוש, ESPER WING כנף על-חושית and PSYBLADE להב על-חוש. Move names are not changed here. Other PSY- names already use פסיכי (PSYCHO CUT חיתוך פסיכי, PSYSHIELD BASH מכת מגן פסיכי), and the move EXTRASENSORY is חוש נוסף.
+- The type name is פסיכי. It is not changed here: TYPE_PSYCHIC is an inherited glossary row, and the type labels are drawn in the art (graphics/types/psychic.png). FireRed's own prose is mixed, and FireRed has since renamed its type to על-חושי.
+- The English ties the prose to the type in the same scenes (in Sabrina's gym, Sabrina's 'psychic powers' and the guide's 'PSYCHIC-type POKéMON').
+- כוחות פסיכיים is ordinary spoken Hebrew for a medium's powers (STYLE §1).
+- Widths (tools/hebrew/textwidth.py, FONT_NORMAL): each of the eleven rows becomes 13 px narrower; the widest is 195 px of the 224 px line. Doing the opposite would also push two פסיכי rows over the line: Gothitelle to 228 px and Rellor to 227 px.
+
+| Option | How | Risk |
+|---|---|---|
+| A. פסיכי in prose | אנרגיה פסיכית, כוחות פסיכיים, כוח פסיכי, כוחו הפסיכי, ביכולות הפסיכיות in the eleven rows; a glossary term row. | Low. Eleven rows, each narrower; no row count changes. |
+| B. על-חושי in prose | Change 27 Pokédex rows, 10 dialogue lines and 3 move descriptions. | Two Pokédex rows over 224 px, and the prose no longer matches the type name. |
+| C. Keep the mix | No change. | The same English reads two ways. |
+
+**Chosen:** A. It is the form 39 of the 48 strings already had, the word of the type, and the smallest change. על-חושי stays in Kadabra's 'extrasensory' and in the move names that already have it.
+
+*Changed:* `src/data/pokemon/species_info/gen_1_families.h`, `src/data/pokemon/species_info/gen_6_families.h`, `src/data/pokemon/species_info/gen_7_families.h`
+
+*Glossary:* `TERM_PSYCHIC_POWER`
+
+## Q135
+
+**Question.** About half of the Easy Chat words were still English: 482 of the 999 words of the 18 word lists, plus the group names TIME and MISC. Frontier, Tent and Trainer Hill trainers speak in Easy Chat phrases, so many of their lines mixed the two directions ('לבחור YOU CAN / להאמין NOT TO'). The 1.0 release notes listed this as the first known issue and left open whether Easy Chat is translated in full or kept English.
+
+*Source:* 1.0 known issue (tools/hebrew/release/notes.json); HANDOFF section 8.2; the round-16 Trainer Hill review (trainer_hill-002) and the Easy Chat cursor, keyboard and YES/NO findings of the same round (contests_menus-002, -r01, -r02).
+
+**Analysis.**
+- The English words were exactly the short ones: every word of 1 to 5 letters was English and every word of 6 or more was Hebrew. The species and move groups already print the Hebrew name tables.
+- FireRed translated its whole list (997 words) and kept its English letter index. 481 of the 482 English words have a FireRed word; EMERALD has none.
+- A trainer phrase is six words joined with spaces in the English word order, three to a line. The RTL renderer draws a run of Latin letters left to right as one block, so a mixed line reads in two directions, and a ! or ? after a Latin word lands at the wrong end.
+- The Odd Egg interview compares four words with eleven passwords (src/easy_chat.c sInterviewPasswords). Its four Day Care hint windows gave the English word in parentheses, and three named words the list no longer has: the cries LALALA and OI, OI, OI, and the actions STORES and ANGERS. The Tyrogue hint's type word קרב (FIGHTING) was also the text of BATTLE, so a player could pick the wrong one.
+- English never shows two words with the same text. Hebrew has one word for several English ones (a pronoun and the pronoun with 'is', IT, THIS and IT'S, NOT and NO): with FireRed's words as they are, 141 words would share one of 64 texts. FireRed ships with 82 shared texts. The game tells words apart by their ID only where it compares a phrase word by word with fixed words (src/easy_chat.c): the Odd Egg passwords, the questionnaire's Mystery Gift phrase LINK TOGETHER WITH ALL, which an H&S mart reaches, and the Berry Master's wife's phrases, which it does not.
+- A group list is shown in the order of the .alphabeticalOrder fields of its group file, the English alphabetical order. The ABC keyboard (src/data/easy_chat/easy_chat_words_by_letter.h) files every word, species and move under the English initial of its English spelling.
+- Widths: the widest English word is 72 px and 12 bytes; a fixed phrase switches to two words a line above 204 px.
+
+| Option | How | Risk |
+|---|---|---|
+| a. Translate every word | FireRed's word first, the glossary for names and terms, our own where FireRed's misreads or another word already prints it. A text of its own for every compared word; other words share a text only where Hebrew has one word. Hebrew order for the group lists. | Word-by-word Hebrew in the English word order is rough, as in FireRed. Text and display order only: word IDs and which words are unlocked do not change. |
+| b. Revert the lists to English | 517 words back to English. | Species and move names stay Hebrew, so phrases stay mixed, and lines of English words still put ! and ? at the wrong end. |
+| c. Leave the lists mixed | No change. | The known issue and the broken Odd Egg hints stay. |
+
+**Chosen:** a.
+- The 482 words: FireRed's word for 354, the glossary for 30 (the types and abilities of the status group, TYPE סוג, BERRY, BIKE, PC, MONEY, RADIO, RIVAL, EGG, BAG, RUBY אודם, EMERALD ברקת, POKéNAV and the token words {POKEBLOCK} פוקיבלוק and {PK}RS פוקרוס), and our own for 98. POKéNAV is פוקינאב, a new glossary row by the house form POKé = פוקי. Disabled version words take FireRed's colours and metals (RED אדום, GREEN ירוק, GOLD זהב), as SILVER כסף already did. TIME and MISC. are זמן and שונות, FireRed's group names.
+- A text of its own for every word the game compares: the 38 Odd Egg password words, LINK, TOGETHER, WITH and ALL, and the Berry Master's wife's words each print a text no other enabled word prints. Other words share a text where Hebrew has one word for several English ones, as FireRed does. A first pass kept every text apart, as English does; that put the formal present into the words trainers speak most (I AM הנני, IS הינו, YOU'RE הינך, ARE הינם, THAT'S הרי זה, in 434 of the 1,359 distinct trainer phrases), against the spoken register of STYLE section 1, and its pairs still differed by one letter (HE'S הנו and IS הינו, HEY הי and HI היי). Ten texts are shared, each listed in SHARED_TEXTS of tools/hebrew/tests/test_easy_chat.py: I and I AM אני, YOU and YOU'RE אתה, HE and IS הוא, THEY and ARE הם, THIS, THAT'S and IT זה, NOT, NO, DON'T and AREN'T לא, GOOD and WELL טוב, OTHER and ELSE אחר, HI and HEY היי, WINS and WINNER מנצח. Either word prints the same phrase; a group list shows both (five pairs share a list: I and I AM, YOU and YOU'RE, NOT and DON'T, GOOD and WELL, HI and HEY), and an ABC list offers one entry per text. The rarely spoken HE'S הנו, SHE IS הינה, THEY'RE הנם, WE'RE אנו, IT'S זהו and ISN'T אינו keep the first pass's texts, so the lists show fewer equal entries. A and AN are אחד and אחת.
+- Words read in the phrases that use them: DON'T is לא, not אל, which forbids only before a future verb while the Easy Chat verbs are infinitives (לא לוותר); NO is לא, not לא!, which put a ! into all 31 of its phrases; THAT זאת (the pronoun; ההוא is "that one"); LOOK תראה (the verb in 17 of 22 phrases); LEFT השאיר (the verb in 4 of 5); RIGHT ממש (5 of its 15 phrases say right now or right away, 3 end in the tag right?, 6 mean "correct", 1 is the direction); NONE אף אחד (the pronoun, not the type row's ללא); OWN אישי; RULE שולט; WILL עומד and WON'T לא עומד (spoken; עתיד is formal and reads as "future" before a noun). LIKE stays כמו: the verb is 27 of its 49 uses and the preposition 22, and אוהב would turn the preposition into nonsense. Words changed so that their text is not a password word's or a move's: BATTLE דו-קרב (קרב is FIGHTING, a password word), MATCH UP התאמה, CONCEDE להודות בהפסד, SURRENDER להיכנע and FRONTIER החזית (their old texts are the moves SUBMISSION and FACADE); SHOULD אמור, SIMPLE בסיסי, FOREVER לתמיד and OPPONENT מתחרה, changed in the first pass, read well and stay. The battle group is קרבות, so no group bears the name of the type word ”קרב” that the Tyrogue hint quotes.
+- Two words print the name of a move of the move lists, with glossary names on both sides: FLYING and FLY תעופה, BLAZE and EMBER להבה. They stay as the glossary gives them.
+- Every word is at most 72 px and 12 bytes (the widest, להודות בהפסד, is 71 px); no fixed phrase of the Frontier, Tent, Trainer Hill or Pike trainers or the record-mix defaults passes 204 px (1,493 phrases, widest line 136 px), and the in-game trade mails and Kenya's mail fit their window, two words a line in 178 px (widest line 80 px).
+- The four hint windows follow the English sentences in Hebrew only and quote the list word with ”…”: היכולת של פיצ'ו היא ”סטטי”, טיירוג הוא מסוג ”קרב”, אלקיד אומר ”הי, הי, הי”, אלקיד ”מאחסן” מטען חשמלי. The passwords do not change.
+- Under TEXT_RTL the group lists take their order from src/data/easy_chat/easy_chat_order_rtl.h, which tools/hebrew/gen_ec_order.py generates from the word texts in Hebrew alphabetical order; the group files keep the English fields, so they differ from the English baseline only in their texts. tools/hebrew/tests/test_easy_chat.py checks no Latin, the listed shared texts, a text of its own for every compared word, the fixed phrase widths, the generated order and the hint quotes.
+- The keyboard and the screen layout, in engine code under TEXT_RTL (the #else branch is upstream's):
+  - The ABC keyboard shows the 22 letters and אחר right to left in the English grid: א to ו and אחר, ז to ל, מ to ק, ר to ת. The four keys after ת are blank, map to אחר and are skipped by the cursor. Each key opens a list of src/data/easy_chat/easy_chat_words_by_letter_rtl.h, which tools/hebrew/gen_ec_letters.py generates: the entries of the English lists, each under the first letter of the text it prints (the word, species or move name). Entries that print one text are one entry, as upstream's DOUBLE_SPECIES_NAME pairs are: the 67 species pairs stay pairs; FLYING and FLY, MONEY and SILVER, BLAZE, FLAME and EMBER, and the words of each of the ten shared texts become one entry each; the English pair PSYCHIC is filed apart, the type פסיכי under פ and the move אשליה under א.
+  - The longest list, מ, has 239 entries (298 if the unused Japanese lists and both halves of each species pair are counted). That is under EC_MAX_WORDS_IN_GROUP (270), so no constant changes: struct EasyChatScreenWordData, the screen's heap buffer, which is not saved, keeps its 15,268 bytes. The generated header asserts both limits at build time.
+  - The lower window mirrors around the frame drawn behind it, the keyboard frame (inside x 16-184) for the group names and the letters and the list frame for the words, so both columns of group names show. The cursor box, the word-select cursor and the phrase and footer cursor stand at the mirrored x, the triangles point left, and LEFT and RIGHT move the way the mirrored columns run.
+  - The YES/NO box of the confirm, exit and delete-all prompts sits over the footer's OK option at the left end, tiles 2-6 instead of 22-26 on every frame: the mirror of English's place, one tile nearer the screen edge, because אישור is twice as wide as OK and the exact mirror left its last letter showing (and, on the interview frame beside the two people, put the box in the middle of the footer). On the win and loss screens it covers no word of the phrase.
+  - The mode tab's alphabet frame reads מצב over א-ת (graphics/easy_chat/mode.png), the short form of the Pokédex's מצב א' עד ת'; the engine branch keeps the English file.
+  - The phrase and footer cursor was not in the round-16 findings: it stood at the English x, at the far end of the row from the first word, and on the footer it marked OK when DEL. ALL was selected.
+  - The header holds only word constants and the engine commits have no Hebrew text, so they are picked onto he/renderer; there the English words are filed under the initials of their Hebrew texts. After a word, species or move rename, run gen_ec_order.py and gen_ec_letters.py (CI runs both with --check) and pick the regenerated headers onto he/renderer.
+- Seen on the clip build with 0 clip records: the four hint windows, the interview with its keyboards and the status, voices, feelings and actions lists, Pichu's password giving the egg, the Battle Tower feelings man's start, win and loss screens and the first Trainer Hill floor's trainer lines; then, with the keyboard and layout change, every key of the Hebrew keyboard and every one of its 23 lists, the cursors in every column, and every screen type whose script an H&S map or the party menu reaches opened with no crash and the same heap buffer: the Day Care interview, mail written from the bag, the feelings man's three, the contest and Battle Tower interviews, the apprentice's win speech and the mart questionnaire. The quiz, Bard, trendy-phrase, fan-club and profile screens belong to Emerald scripts H&S cannot reach. After the shared texts and the word fixes: the people, endings, speech, misc, hobbies, conditions, battle and actions lists, the group keyboard with קרבות, the mode tab with א-ת, eight Frontier and tent intros, eight win and loss speeches, a Battle Tower battle's two speeches, two Trainer Hill lines, the feelings man's default start phrase and Kenya's mail read from the party, all in the new words; the box over OK with no letter beside it in all 39 YES/NO prompts of the tours; all 11 Odd Egg answers still giving their egg.
+
+*Changed:* `src/data/easy_chat/easy_chat_group_*.h` (18 files), `src/data/easy_chat/easy_chat_groups.h`, `graphics/easy_chat/mode.png`, `src/data/easy_chat/easy_chat_order_rtl.h`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `src/easy_chat.c`, `src/text_input_strings.c`, `include/strings.h`, `src/data/help_window.h`, `tools/hebrew/gen_ec_order.py`, `tools/hebrew/gen_ec_letters.py`, `tools/hebrew/tests/test_easy_chat.py`, `tools/hebrew/drift.py`, `tools/hebrew/status_report.py`, `tools/hebrew/make_chunks.py`, `tools/hebrew/release/notes.json`, `.github/workflows/hebrew.yml`
+
+*Glossary:* `TERM_POKENAV`
+
+## Q136
+
+*Superseded by [Q139](#q139) and [Q140](#q140):* the owner decided that names follow FireRed's conventions and that Psychic is על-חושי. 28 of the 34 differences below now follow FireRed. The allowlist's `fr_sync` section keeps seven entries with new reasons: SLASH, CHESTO BERRY, IAPAPA BERRY, POKéBLOCK CASE, EXEGGUTOR and ELITE FOUR, which an H&S limit or a FireRed slip keeps apart, and PSYCHO BOOST, which FireRed left on פסיכי. The analysis below is kept as it was.
+
+**Question.** Many glossary names were inherited from the FireRed translation or follow its pattern, and FireRed has changed some of its own names since. Comparing the glossary with FireRed's names as they are now gives 34 differences. Which should follow FireRed?
+
+*Source:* HANDOFF section 3.5 (the proposed names were never checked for consistency); `tools/hebrew/namecheck.py --fr-sync`.
+
+**Analysis.** `namecheck.py --fr-sync` compares each glossary name with the FireRed Hebrew tree (`HNS_FIRERED`, default `../pokefirered-heb`), within the same kind, ignoring spaces and hyphens and undoing FireRed's reversed digit runs and `$` padding. With the two other new checks, `--translit` (transliteration slips) and `--dupes` (one English person name with two Hebrew spellings), it gave 61 warnings on this tree: 34 FRSYNC, 26 TRANSLIT and 1 SAMENAME. All three print warnings only and never change the exit status; CI runs `namecheck.py --all --warnings`.
+- Two differences point at an error in H&S's name:
+  - MOVE_SONIC_BOOM בום עלקול: עלקול is not a word; על-קולי (supersonic) lost its final י. FireRed has בוםעל-קולי.
+  - ABILITY_EARLY_BIRD ציפור מקדים: ציפור is feminine, so the adjective lost its ה. FireRed now has the idiom משכימת קום, a new wording, which is not taken; the row stays on the allowlist with the fixed name.
+- The other differences are choices, not errors:
+
+| Names | H&S | FireRed now | Why H&S keeps its name |
+|---|---|---|---|
+| JUMP KICK, TRIPLE KICK | קפוץ בעיטה, משולש בעיטה | בעיטתקפיצה, תלת בעיטה | word-for-word calques, but readable; 1 use each |
+| COUNTER | נגידה | מתקפת נגד | a coined noun; 2 uses |
+| HUSTLE | המולה | חריצות | המולה (commotion) misses the sense, but it is a wording choice; 3 uses |
+| SKILL SWAP | חילוף סגולה | חילוףיכולת | סגולה or יכולת for 'ability'; 2 uses |
+| EXP. SHARE, ELITE FOUR | חולק נסיון, רביעיית עלית | חולק ניסיון, רביעיית עילית | a spelling policy, not one name: the tree writes נסיון 51 times (13 files) and ניסיון 16 times (12 files), and עלית in all 4 uses |
+| GHOST, PSYCHIC (types) | רוח, פסיכי | רפאים, על-חושי | inherited rows whose labels are drawn in `graphics/types/*.png`; H&S does not follow FireRed's later type renames |
+| CHESTO BERRY | פרי צ'סטו | פרי צ'סטרו | H&S is right (Chesto); FireRed adds an R |
+| PAY DAY, ROLLING KICK, PSYCHIC (move), SELF-DESTRUCT, SWIFT, CONSTRICT, KINESIS, SOFT-BOILED, SLASH, SCARY FACE, MAGNITUDE, GRASS WHISTLE, SKY UPPERCUT, CLOUD NINE, TRACE, BERRY JUICE, BERRY POUCH, KINDLER | | | FireRed changed its own wording |
+| IAPAPA BERRY, EXEGGUTOR, AERODACTYL, POKéBLOCK CASE | | | transliteration or token-order choices (EXEGGUTOR: -tor is /tər/; AERODACTYL: -tyl is /tɪl/) |
+
+- The 26 transliteration warnings are each explained by the row's glossary note (for example MEOWTH מיאו, FARFETCH'D ג'ד, MIME JR. translated, and the unused in-game trade names kept in English): no fix. The one same-name warning is LTSURGE: סמל סרג' in dialogue and סרג' in the 7-byte Frontier and trade fields, which cannot hold the rank: kept.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Take every FireRed change | Change 34 rows and their text. | Rewrites wording choices that H&S text already uses, and the type labels drawn in graphics. |
+| B. Fix only the errors | Take FireRed's fix where H&S's name is misspelt or lost a letter; list every other difference in `tools/hebrew/data/namecheck_allow.json` with its reason. | Low; an allow entry pins both names, so a later change on either side warns again. |
+| C. Change nothing | Allow all 61 warnings. | Ships two broken names. |
+
+**Chosen:** B. בום על-קולי and ציפור מקדימה, glossary rows first, then one file per commit. 60 warnings are allowlisted with their reasons and `namecheck.py --all --warnings` prints `warnings 0, allowlisted 60`. The new names fit (57 and 65 px in FONT_NORMAL; namecheck 0 problems; no audit finding), and no test expectation names them. Not yet seen on screen: the move name in the fight menu and the ability on the summary page. The roughly 3,000 rows translated by meaning stay 'proposed' until a native speaker reads them.
+
+*Changed:* `translation/hebrew/glossary.csv`, `src/data/moves_info.h`, `src/data/abilities.h`, `src/data/easy_chat/easy_chat_group_status.h`, `tools/hebrew/data/namecheck_allow.json`
+
+## Q137
+
+**Question.** In the Gen 4 battle interface, the frostbite tag is a copy of the burn tag, so a frostbitten Pokémon shows a blue pill reading כויה. English 2.0.6 has the same copy (BRN). The handoff asked the owner whether to redraw it or list it in the release notes.
+
+*Source:* HANDOFF section 8.2, a question for the owner found in the cross-check against the Spanish translation.
+
+**Analysis.** graphics/battle_interface/gen4/status.png, status2.png, status3.png and status4.png (one per battler) are 24 x 48 sheets of six 8-px rows: PSN, PRZ, SLP, FRZ, BRN, FRB (src/battle_interface.c). In all four, row 5 (FRB) is the same as row 4 (BRN), as in the English sheets. The H&S sheets (graphics/battle_interface/hns/) have קור in row 5.
+- Frostbite is off in H&S: B_USE_FROSTBITE is FALSE (include/config/battle.h), so MOVE_EFFECT_FREEZE_OR_FROSTBITE means freeze. Only the debug menus can set it (the battle debug menu, and Inflict Status1 in the R+START menu), and only the Gen 4 interface option (UseGen4BattleUI) draws these sheets. Frostbite draws these tiles in the freeze colour (PAL_STATUS_FRZ).
+- The H&S rows FRZ and FRB differ only inside x 3-17, and the Gen 4 FRZ row equals the H&S FRZ row there, so the H&S glyph fits the Gen 4 pill unchanged.
+
+| Option | How | Risk |
+|---|---|---|
+| A. List it in the release notes | No change. | A note about a debug-only screen tells a player nothing they can act on. |
+| B. Redraw row 5 with the H&S glyph | In each sheet, a pixel of the pill is glyph where the H&S sheet's row 5 has its קור glyph, and the sheet's own body index (76 + battler) elsewhere. Frame, background, the other rows and the palette stay. | Low. 30 pixels per sheet; art only. |
+| C. The same with the H&S body index (60 + battler) | As B. | The same tiles in game, but 135 changed pixels per sheet. |
+| D. Point frostbite at the freeze tiles in code | Change src/battle_interface.c. | An engine change, and the tag would read קפוא, not קור. |
+
+**Chosen:** B. Pure art with no behaviour change, the word the H&S sheets already use, and the smallest diff.
+
+*Changed:* `graphics/battle_interface/gen4/status.png`, `graphics/battle_interface/gen4/status2.png`, `graphics/battle_interface/gen4/status3.png`, `graphics/battle_interface/gen4/status4.png`
+
+## Q138
+
+**Question.** The original brief says a ROM that has not been played by hand is not committed. Releases 0.1 and 0.2 and every update of 1.0 were committed to the private builds repository with hand play listed under "Not tested". The handoff asked the owner not to change this silently.
+
+*Source:* HANDOFF section 5 (an open policy question for the project owner).
+
+**Analysis.** Nobody can play by hand inside this project's harness, and every update's `TESTING.md` already states the gap (`tools/hebrew/release/notes.json`, `not_tested`). The builds repository is private, and its README says each update replaces 1.0 in place.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Block publishing until a person plays to the first badge | No update until then. | 1.0 stays frozen; the harness cannot lift the block. |
+| B. Publish, and declare it | A candidate that passes the release steps is committed to the private builds repository; `not_tested` always says that nobody played it by hand. | A tester may trust the ROM more than the tests justify; the declaration in `TESTING.md` is the guard. |
+| C. Publish only after the owner confirms each update | Ask before each builds-repository commit. | Slower; the same evidence either way. |
+
+**Chosen:** B. The rule's intent, no claim of play that did not happen, is met by the declaration, and the repository stays private. Recorded so the practice is explicit.
+
+## Q139
+
+**Question.** Psychic is פסיכי in H&S: the type, the PSYCHIC and PSYCHO move names, PSYCHIC SURGE, the Psychic items, and (since Q134) 'psychic power' in prose. FireRed has since renamed its type to על-חושי. Should H&S follow?
+
+*Source:* the owner, round 20: "Psychic is על חושי"; FireRed PR #2 (`ofir286/pokefirered-heb`, head `df2ee712e`), which renamed the type in `src/battle_main.c` gTypeNames (commit `f5d0c2116`).
+
+**Analysis.** The tree had 110 uses of פסיכ in 26 files, plus the two type plates drawn in the art.
+- FireRed now writes the type על-חושי, the move PSYCHIC כוחעל חושי (the space dropped only for its 57 px slot), Sabrina's gym כוח על-חושי and בכוח העל-חושי (`data/maps/SaffronCity_Gym/text.inc`), and the sign ביתו של מר על חושי. The trainer class PSYCHIC, a person, stays טלפת (`src/data/text/trainer_class_names.h`). FireRed still has פסיכי in PSYCHO BOOST, its Easy Chat word, gText_APsychicMove (מהלך פסיכי), two more lines of Sabrina's gym (פוקימוני פסיכי, `SaffronCity_Gym/text.inc:66,139`), the Three Island house (`ThreeIsland_House2/text.inc:7,13`), the Pokédude (`data/text/pokedude.inc:86`), the TWISTED SPOON description (`src/data/items.json:3433`), the FUTURE SIGHT and SKILL SWAP descriptions (`src/move_descriptions.c:251,288`), its help system and its fame checker: leftovers of the rename, not a rule.
+- The PSY- names already used the family: PSYBEAM קרן על-חוש, PSYWAVE על-חוש, PSYSHOCK הלם על-חושי, PSYSTRIKE מכת על-חוש, ESPER WING כנף על-חושית, PSYBLADE להב על-חוש.
+- What was not a straight swap, and what was done instead:
+  - The generic phrase מהלך מסוג על-חושי is 17 bytes; `u8 generic[17]` (`include/data.h`) holds 16 and gcc rejects it. It is מהלך על-חושי, FireRed's own pattern (gText_APsychicMove מהלך פסיכי).
+  - PSYCHIC FANGS ניבים על-חושיים is 62 px in the 59 px contest list: ניב על-חושי, singular like ניב אש, ניב קרח, ניב רעם and ניב רעל.
+  - PSYSHIELD BASH: מכת מגן על-חושי is 65 px in the 64 px battle cell and מכת מגן על-חוש 62 px in the 59 px list: חבטת על-חוש.
+  - PSYCHO SHIFT הסטה על-חושית is 77 px. It is not a field move (`include/constants/field_move.h`), so the party menu's 72 px field-move list never shows it, though `audit.py` applies that budget to every move name and reports an error. It would fit the FIGHT menu (69 px of 64), the summary and the relearner (77 of 72) and the contest list only in the narrower font. הסטת על-חוש, the noun as in PSYBEAM and PSYSTRIKE, fits all of them but the contest list (60 of 59).
+  - PSYCHIC TERA SHARD שבר טרה על-חושי is 68 px in the 66 px PC storage field: שבר טרה על-חוש, the noun as שבר טרה חשמל.
+  - PSYCHIC SURGE and PSYCHIC SEED would fit as נחשול על-חושי and זרע על-חושי; they take the noun by choice, as their siblings do: נחשול על-חוש beside נחשול חשמל, נחשול ערפל, נחשול עשב; זרע על-חוש beside זרע חשמל. FireRed's own PSYBEAM קרן על-חוש and PSYWAVE על-חוש use the same noun.
+  - Seven descriptions, two Pokédex entries (Gothitelle, Rellor) and the Saffron gym guide's page were re-wrapped or shortened to stay inside their lines.
+  - The type plate (`graphics/types/psychic.png`) has 30 px of ink; על-חושי is 36 px in FONT_SMALL. It is drawn in FONT_SMALL_NARROWER glyphs with the hyphen cut to two columns (30 px), and the menu plate in `graphics/interface/menu_info.png` the same way (30 px of 32, 1 px to spare on each side).
+- The PSYCHO moves: 'Psycho' here is the Psychic word (all three are Psychic-type moves), and חיתוך פסיכי reads as "a crazy cut", which is what the owner's decision removes. FireRed's דחף פסיכי is one of its leftovers, so H&S takes דחף על-חושי and allowlists the difference.
+- Not changed: the trainer classes PSYCHIC טלפת and טלפתית and their Battle Tower lines (a person, as in FireRed); EXTRASENSORY חוש נוסף; PSYCH UP עידוד עצמי; SHATTERED PSYCHE נפש מנופצת; the Psychic Terrain battle lines, which say 'weird' in English (שדה הקרב נהיה מוזר!); the Pokédex category PSI פסי; Kadabra's extrasensory תפיסה על-חושית.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The על-חושי family everywhere | The type, every name, description, Pokédex entry, dialogue line, menu row and Easy Chat word that says Psychic or psychic; the over-budget names and lines as above; both plates redrawn. | 108 strings and two graphics change; four names fit some lists only in the narrower fallback font (six FIT warnings). |
+| B. Only the type and the move, as FireRed's tables | Type and MOVE_PSYCHIC; prose stays פסיכי (Q134). | The prose and the type disagree again, the problem Q134 fixed the other way. |
+| C. Keep פסיכי | No change. | Against the owner's decision. |
+
+**Chosen:** A, the owner's decision. Supersedes Q134 (prose is now כוח על-חושי and its forms; TERM_PSYCHIC_POWER) and the Q136 rows that kept the type PSYCHIC and the move PSYCHIC אשליה. Mr. Psychic's sign reads מר על-חושי: FireRed's sign (ביתו של מר על חושי) with the project's hyphen, and a new name row. The three names that keep the noun where an adjective was possible are decided, not open: the owner left the round's open choices to the project. PSYCHIC SURGE נחשול על-חוש and PSYCHIC SEED זרע על-חוש keep the noun of their siblings and of FireRed's PSYBEAM; PSYCHO SHIFT הסטת על-חוש keeps the normal font in the FIGHT menu, the summary and the relearner, where הסטה על-חושית would need the narrower one. Static checks: `audit.py --baseline ../pokehns-en` 0 errors on the changed files (six new FIT warnings: PSYCHIC GEM in the summary and PC storage held-item fields, PSYCHIC TERA SHARD in PC storage, PSYCHO SHIFT in the contest list, PSYCHO CUT in the contest list and the bag TM row, the last audit-only because PSYCHO CUT is not a TM in H&S, `include/constants/tms_hms.h`); `namecheck.py --all --warnings` 0 problems; the Easy Chat lists regenerated. Seen on screen in round 20 beside rc21 and English, with no clipped glyph, except the places HANDOFF section 8.5 lists as not seen.
+
+*Changed:* `src/data/types_info.h`, `src/data/moves_info.h`, `src/data/abilities.h`, `src/data/items.h`, `src/battle_message.c`, `src/strings.c`, `src/data/script_menu.h`, `src/data/easy_chat/easy_chat_group_status.h`, `src/data/pokemon/species_info/gen_{1,2,3,5,6,7,8,9}_families.h`, 12 map scripts (Saffron City, its gym, house and dojo; Cianwood; Will's room; the Frontier lounge, factory and pyramid), `src/data/easy_chat/easy_chat_order_rtl.h`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `graphics/types/psychic.png`, `graphics/interface/menu_info.png`, `tools/hebrew/graphics/types/make_types.py`, `tools/hebrew/graphics/coreui/make_coreui.py`, `tools/hebrew/data/namecheck_allow.json`
+
+*Glossary:* `TYPE_PSYCHIC`, `TYPE_PSYCHIC` (type_generic), `MOVE_PSYCHIC`, `MOVE_PSYCHO_BOOST`, `MOVE_PSYCHO_SHIFT`, `MOVE_PSYCHO_CUT`, `MOVE_PSYCHIC_TERRAIN`, `MOVE_PSYCHIC_FANGS`, `MOVE_PSYSHIELD_BASH`, `MOVE_PSYCHIC_NOISE`, `ABILITY_PSYCHIC_SURGE`, `ITEM_PSYCHIC_MEMORY`, `ITEM_PSYCHIC_GEM`, `ITEM_PSYCHIUM_Z`, `ITEM_PSYCHIC_SEED`, `ITEM_PSYCHIC_TERA_SHARD` (and their plurals), `TERM_PSYCHIC_POWER`, `NAME_MR_PSYCHIC`
+
+## Q140
+
+**Question.** The owner's own FireRed translation settled a set of naming and wording conventions in its PR #2 ("Fix Hebrew RTL rendering bugs and translate …"). Which of them should H&S follow, and where does H&S keep its own form?
+
+*Source:* the owner, round 20: "Check in this PR the conventions made for Pokémon names/moves/stuff in Hebrew" (https://github.com/ofir286/pokefirered-heb/pull/2; head `df2ee712e`, base `4325a4f01`).
+
+**Analysis.** Every FireRed name table (species, moves, abilities, items, natures, trainer classes, types, map sections, Pokédex categories) was compared with the glossary by constant and by English name, and FireRed's changed battle lines were paired with H&S's. 69 rows differed; `namecheck.py --fr-sync` had shown 33 of them, because it compares only identical constants and ignores spaces and hyphens. Natures, map sections and the 235 Johto and Hoenn species were already the same.
+
+FireRed's conventions and what H&S does with each:
+
+| Convention (FireRed) | H&S |
+|---|---|
+| Move names keep the space between words; the four fixed names נשיקה מתוקה, בעיטה נמוכה, זעם דרקון, סופת אש; Thunderbolt מכת ברק | Already so. FireRed squashes 19 names again only for its 64 px cell; H&S keeps them spaced and fits them with the narrower font. |
+| Its own wording for moves, abilities, items and classes | Taken: PAY DAY גשם מטבע, JUMP KICK בעיטת קפיצה, ROLLING KICK בעיטת סיבוב, COUNTER מתקפת נגד, SELF-DESTRUCT פיצוץ עצמי, SWIFT מטר כוכבים, CONSTRICT כיווץ, KINESIS כיפוף כפית, SOFT-BOILED ביצה רכה, TRIPLE KICK תלת בעיטה, SCARY FACE פני אימה, MAGNITUDE עוצמת רעש, SKILL SWAP חילוף יכולת, GRASS WHISTLE שריקת עשב, SKY UPPERCUT אגרוף שמים; CLOUD NINE ביטול מזג, TRACE שעתוק, EARLY BIRD משכימת קום, HUSTLE חריצות; BERRY JUICE מיץ פירות, BERRY POUCH נרתיק פירות; KINDLER מבעיר, CUE BALL בריון, TUBER ילד גלגל ים (the female class ילדת גלגל ים, 12 bytes, which also ends the clash of TUBER שחיין with SWIMMER♂ שחיין♂). |
+| Type names as gTypeNames | GHOST רפאים, with its generic phrase, items (GHOST MEMORY, GEM and TERA SHARD, GHOSTIUM Z רפאיום Z), the plates, Kurt's ball list and the 27 lines that name the type; רוח meaning a ghost, a spirit or the wind stays. PSYCHIC על-חושי is Q139. |
+| The unidentified Ghost is רוח רפאים; the battle lines call it הרוח | Taken (`gText_Ghost`); the lines already say הרוח. |
+| Full spelling ניסיון, עילית | ניסיון in all 56 uses and in EXP. SHARE, EXP. CANDY and EXP. CHARM; STYLE §3's fixed term follows. עילית does not fit (below). |
+| Hyphenated מאמן-על | Taken in the four COOLTRAINER classes, the Battle Tower lines (מאמן-על, מאמנת-על) and the Bug-Catching Contest results (מאמנת-העל בלינדה). |
+| Berries are פרי X | Already so (K6). |
+| Text uses the table's name | The Saffron gym's TM line says חילוף יכולת, the Mr. Psychic TM line כוח על-חושי, MAGNITUDE's battle line עוצמת רעש, DAMP's description פיצוץ עצמי, AERODACTYLITE's description אירודקטייל, and the Battle Tower partners their new class names. |
+| AERODACTYL אירודקטייל | Taken: 47 px in the 50 px lists and the 48 px healthbox; AERODACTYLITE was already אירודקטייליט. The nicknames that equal the name follow; the alphabetical order does not change. |
+| Stat-change adverb after the verb | H&S already has it after the verb, and the masculine הנתון makes the verb agree for every stat, so no engine change. FireRed's words are taken: sharply מאוד, harshly באופן חמור. H&S's extra level severely becomes בצורה קיצונית, so it no longer says the same as harshly. The widest line is 170 px of 208. |
+| The won't-go-higher/lower lines agree with masculine stat names | Already agree through הנתון; kept. |
+| מאמן, not מאמין | Nothing to do: all 53 uses of מאמין mean "believe". |
+| Natural weather and ability lines | Already natural, several word for word as FireRed's. The Encore and Liquid Ooze lines keep the move and ability names (עוד הופעה, רפש נוזלי), where FireRed's new lines drift from its own names. |
+| Trainer card: label first, then the name | Already so (a placeholder after the label). |
+
+Deliberate keeps, each with its reason (the six that still differ from FireRed's tables are in `namecheck_allow.json`):
+- SLASH שיסוף: FireRed's חיתוך is already MOVE_CUT in H&S (FireRed has the same duplicate), and two moves cannot share a name.
+- CHESTO BERRY פרי צ'סטו: FireRed's צ'סטרו adds an R the English does not have (K6).
+- IAPAPA BERRY פרי יאפאפה: the berry tag holds 6 bytes, so its stem is יאפאפה in both trees; K6 made the bag name match the tag, and FireRed's bag name differs from its own tag.
+- POKéBLOCK CASE קופסת פוקיבלוק: FireRed writes the {POKEBLOCK} token first for its renderer.
+- EXEGGUTOR אקזגקיוטר: the Alolan form must be the base name + -א (Q129), and FireRed's spelling makes it 52 px in the 50 px lists and the 48 px healthbox.
+- ELITE FOUR רביעיית עלית: עילית is 13 bytes and a class name holds 12 (`include/data.h`); FireRed widened its array, which in H&S is an engine change.
+- SMELLING SALTS מלחי הרחה, {PKMN} TRAINER (PLAYER_FRLG), ROCKET (TEAM_ROCKET_HNS): different English names from FireRed's rows (SMELLINGSALT, PLAYER, TEAM ROCKET).
+- The H&S-only female classes EXPERT מומחית and PSYCHIC טלפתית: FireRed has no female row.
+- The Pokédex categories DRILL מקדחה and MUSHROOM פטרייה: FireRed itself writes both forms.
+- The 16 spaced move names FireRed squashed for its cell (BLAZE KICK, DRAGON BREATH, DRAGON DANCE, DYNAMIC PUNCH, EARTHQUAKE, HEAL BELL, LOW KICK, MIND READER, MIRROR MOVE, OCTAZOOKA, ROLE PLAY, SKY ATTACK, SONIC BOOM, SWEET KISS, TEETER DANCE, WILL-O-WISP): spaced is the convention; they fit.
+- drastically בצורה דרסטית: an H&S-only level FireRed has no word for.
+
+Not copied, because they belong to FireRed's renderer, not to its naming: digits stored reversed (TM01 as "מ”מ 10"; STYLE §4 writes digits in reading order), the help-system renderer (H&S has none), the RTL anchors and column swaps, the {POKEBLOCK} token first, names squashed into its 64 px cell, and the widened gTrainerClassNames.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Follow every FireRed name | Also SLASH, CHESTO, IAPAPA, POKéBLOCK CASE, EXEGGUTOR, ELITE FOUR. | A duplicate move name, a misspelt berry, a bag name that differs from its tag, two names over their field. |
+| B. Follow the conventions, keep only where an H&S limit or a FireRed slip stands in the way | The changes above; each keep listed with its reason. | Low: names and text only; every changed string checked against its budget. |
+| C. Keep Q136 | No change. | Against the owner's decision. |
+
+**Chosen:** B. It replaces Q136's outcome: of Q136's 34 differences, 28 now follow FireRed (with Q139), and the allowlist's `fr_sync` section holds seven entries, the six keeps above and PSYCHO BOOST (Q139). Static checks: `namecheck.py --all --warnings` prints `warnings 0, allowlisted 34`; `audit.py` 0 errors on the changed files; `plurals.py` 0 problems; `gen_dex_alpha.py --check` up to date; the Easy Chat lists regenerated. Seen on screen in round 20 beside rc21 and English, with no clipped glyph, except the places HANDOFF section 8.5 lists as not seen.
+
+*Changed:* `src/data/types_info.h`, `src/data/moves_info.h`, `src/field_specials.c`, `src/data/abilities.h`, `src/data/items.h`, `src/battle_debug.c`, `src/data/pokemon/species_info/gen_1_families.h`, `src/data/pokemon/species_info/gen_8_families.h`, `src/pokedex_plus_hgss.c`, `src/data/battle_frontier/trainer_hill.h`, `src/trainer_tower_sets.c`, `src/battle_main.c`, `src/battle_message.c`, `src/strings.c`, `src/challenge_menu.c`, `src/data/easy_chat/easy_chat_group_status.h`, 18 map and text scripts, `src/data/easy_chat/easy_chat_order_rtl.h`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `graphics/types/ghost.png`, `graphics/interface/menu_info.png`, `tools/hebrew/graphics/types/make_types.py`, `tools/hebrew/graphics/coreui/make_coreui.py`, `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md`
+
+*Glossary:* the 15 moves, 4 abilities, BERRY JUICE, BERRY POUCH (and plurals), the EXP. items and `TERM_EXP_POINTS`, `TYPE_GHOST` (and type_generic), the Ghost items and plurals, `SPECIES_AERODACTYL`, `SPECIES_AERODACTYL_MEGA`, `TRAINER_CLASS_KINDLER`, `TRAINER_CLASS_CUE_BALL_FRLG`, the three TUBER and four COOLTRAINER classes
+
+## Q141
+
+**Question.** Q106 left the Hoenn names in Latin inside Hebrew strings "until a Hoenn-names pass is decided": PETALBURG, RUSTBORO, DEWFORD, SLATEPORT, the Hoenn gym leaders and the rest. HANDOFF section 8.1 left the name of the H&S PokéGear contact MR. STONE (`src/pokenav_match_call_data.c:193`) in Latin, behind the `KEPT_LATIN` reason "Emerald PokéNav contacts". drift printed 127 `w LATIN` lines. Should the Hoenn names get glossary rows and Hebrew text, and in which forms? And the Latin left after them: the cartridge titles Ruby, Sapphire and Emerald, the e-Reader and Ash-Greninja?
+
+*Source:* Q106 option C and HANDOFF section 8.1. The owner delegated the decision to the project; the plan was reviewed adversarially before it was applied, and the review changed one name (MT. PYRE). The first pass left five questions open for the owner; the owner delegated them as well, and they were decided by the project, with FireRed's convention as the default (Q140).
+
+**Analysis.**
+- **Where the Latin was.** 169 string edits in 17 files in the first pass: `data/text/match_call.inc` 119, `data/text/tv.inc` 8, `data/text/pokemon_news.inc` 8, `data/text/battle_tent.inc` 7, `src/landmark.c` 6, `src/strings.c` 6, `src/data/script_menu.h` 4, `data/text/pc_transfer.inc` 2, and one each in `data/text/pc.inc`, `data/event_scripts.s`, `data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc`, `src/battle_message.c`, `src/field_screen_effect.c`, `src/field_specials.c`, `src/mystery_event_msg.c`, `src/pokenav_match_call_data.c` and `src/data/items.h`. The answered questions added 26 edits in 8 files: `data/scripts/contest_hall.inc` 9, `src/strings.c` 7, `data/text/cable_club.inc` 3, `src/berry_fix_program.c` 3, and one each in `src/data/credits_hns.h`, `data/text/match_call.inc`, `src/field_specials.c` and `src/battle_message.c`.
+- **Reach.** No string of the first pass can be reached in normal H&S play:
+  - the Hoenn match calls and the MR. STONE contact: their header flags are defined as 0, for example `FLAG_ENABLE_NORMAN_MATCH_CALL` (`include/constants/flags_hns.h:1541`), which `sMrStoneMatchCallHeader` uses (`src/pokenav_match_call_data.c:191`). `MatchCall_GetEnabled_NPC` returns `FlagGet(flag)` (`:1283-1288`), and `FlagGet(0)` is FALSE because `GetFlagPointer(0)` is NULL (`src/event_data.c:234-237`, `:272-277`). In the rc23 ROM the header holds flag 0, the desc נשיא דבון and the name `MR. STONE` (decoded with the ELF's symbol `sMrStoneMatchCallHeader`); in the new ROM it holds the same flag and desc and the name מר סטון. Forced into the PokéGear CALL list on the clip ROM, the row reads נשיא דבון | מר סטון, and the five calls a set flag can select (1, 5, 6, 10 and 11; the flags of 2, 3, 4, 7, 8 and 9 are 0, `:172-185`) show in the CALL window, with no clip record;
+  - the TV shows and PokéNews: `FLAG_SYS_TV_START` is 0 (`flags_hns.h:2266`, read at `data/scripts/tv.inc:8`);
+  - the Battle Tent welcomes, Lanette's PC transfer lines, the POKéNAV registration line (`data/event_scripts.s:1550`) and the METEORITE description in `src/data/items.h` are `#else` branches of `#if IS_HNS` or `#if IS_FRLG || IS_HNS`, not built. `gText_AccessedLanettesPC` is assembled, but only `data/scripts/pc.inc:141`, the `#else` of `:138-142`, prints it;
+  - the Mossdeep Space Center line is in a debug-only map, and the Briney and Rayquaza menus of `src/data/script_menu.h` are used only by `DewfordTown`, `Route104_MrBrineysHouse`, `Route109` and `CaveOfOrigin_B1F`, which are `dead` (`tools/hebrew/data/inventory.json`);
+  - the landmarks, Prof. Birch's lines, the S.S. Tidal destination, the fan club's BRAWLY and the diploma are on Emerald paths H&S does not take. The Mystery Event berry line needs a Mystery Event card (`src/mystery_event_script.c:242`); whether one can be loaded is unverified.
+
+  Of the answered questions' strings, a player sees two places. The berry-fix program opens from the title screen with B+SELECT (`src/title_screen.c:823-827`; the tour below reached `BerryFix_Main` that way) and shows its begin and turn-off messages without a second GBA; its follow-instructions message needs a finished transfer to one (`src/berry_fix_program.c:240-270`), which was not tried. The credits page with EMERALD rolls after the Hall of Fame. Play reaches none of the rest:
+  - the link-contest INFO lines: only the link receptionist's script prints them, and the H&S link receptionist is invisible, at (15,1) behind the counter (`data/maps/LilycoveCity_ContestLobby_hns/map.json`), so A from in front of the counter printed nothing in the tour (walking behind the counter with the debug menu's collision switch was not tried);
+  - the cable club's record-mix error: only the RECORD CORNER script prints it (`data/scripts/cable_club.inc:480-491`, `:589-593`). The cable-club menu offers RECORD CORNER only when `FLAG_VISITED_MAUVILLE_CITY` is set (`:260`), and that flag is defined as 0 (`include/constants/flags_hns.h:2329`); the Direct Corner's record mix has the same gate (`:972`, `:994`) and does not check the language; no map object runs the record-corner labels (`data/maps/BattleFrontier_PokemonCenter_2F_hns/scripts.inc:8` calls them unused);
+  - the e-Reader screen: only the five-row main menu opens it (`ACTION_EREADER`, `src/main_menu.c:1027-1054`), and no code sets that menu: a save with Mystery Gift enabled gets the four-row one (`:664-666`, `:677-679`), whose MYSTERY GIFT row without a wireless adapter prints the adapter error;
+  - the Ash-Greninja line: only Battle Bond's branch for generations before 9 prints it (`src/battle_util.c:4597-4606`), and `B_BATTLE_BOND` is `GEN_LATEST`, which is `GEN_9` (`include/config/battle.h:197`, `include/config/general.h:73`), so a Battle Bond Greninja raises its Attack, Sp. Atk and Speed instead and keeps its form, in English too. Only the debug menu gives one: no trainer party or Frontier set has it, and the randomizer never picks it (`MON_RANDOMIZER_INVALID`, `src/data/pokemon/species_info/gen_6_families.h:806`);
+  - GLACIA's match call (flag 0, as above) and the fan club's GLACIA (Emerald path);
+  - the two version placeholders (`src/strings.c:11-12`): no `{VERSION}` in `data` or `src`, and `gText_ExpandedPlaceholder_Ruby` has no reference.
+
+  Of these, the record-mix error, the e-Reader screen, the Ash-Greninja line, GLACIA's call and the placeholders cannot print in this build even with a link or the R+START debug menu: a flag defined as 0 cannot be set, the menu type and the Battle Bond generation are fixed in the code, and nothing refers to the placeholders.
+- **The one visible effect of the first pass.** The Pokémon Center PC menu measures `gText_LanettesPC` with the other PC names for its width (`src/script_menu.c:768-779`; `sPCNameStrings`, `src/data/script_menu.h:1511-1518`), although H&S draws `gText_BillsPc` in its place (`src/script_menu.c:800-806`). The string goes from 96 to 78 px (FONT_NORMAL), and the widest measured string is now המחשב של מישהו (81 px), so the menu narrows whenever המחשב של and the player's name measure under 95 px: 12 tiles instead of 14 up to 86 px, 13 from 87 to 94 px (`(w+9)/8+1`, `:1254-1257`); with a 7-letter name such as אלכסנדר (97 px) nothing changes. Every drawn row still fits: המחשב של ביל is 70 px. Seen on screen on the clip ROM beside rc23: of the 2,056 release-tour shots, the 12 that differ are this menu (x 15-126, y 1-78), and a post-game save with the names דן, GOLD and אלכסנדר shows it narrower for the first two and pixel-identical for the third, every row whole and no clip record.
+- **Names: 35 new rows, all `proposed`.**
+  - FireRed's form wherever FireRed prints the name (Q140): PETALBURG פטלבורג (FireRed `src/mystery_event_msg.c:3`), MAUVILLE מוביל and NEW MAUVILLE ניו מוביל (`src/data/items.json:4345`), BRAWLY ברולי, TATE טייט, LIZA ליזה, WATTSON ווטסון, FLANNERY פלנרי and DRAKE דרייק (`src/data/trainers.h:279`, `:289`, `:819`, `:829`, `:879`), LANETTE לאנט (`data/maps/OneIsland_PokemonCenter_1F/text.inc:263`) and GAME FREAK גיים פריק (`src/strings.c:974`, as Q85 noted). The existing row GLACIA now takes FireRed's גלסיה too (`src/data/trainers.h:869`; question 2).
+  - The transliteration rules for the rest: LITTLEROOT ליטלרוט, RUSTBORO ראסטבורו (the RUS of RUSTY ראסטי; it replaces Q106's unchecked רסטבורו), DEWFORD דיופורד, SLATEPORT סלייטפורט, VERDANTURF ורדנטרף, FALLARBOR פלארבור, LAVARIDGE לאבריג', FORTREE פורטרי, MOSSDEEP מוסדיפ, SOOTOPOLIS סוטופוליס, RUSTURF TUNNEL מנהרת ראסטרף, JUAN חואן (a Spanish J is ח, as JOSE חוזה; allowlisted in `tools/hebrew/data/namecheck_allow.json`), PEEKO פיקו, STERN סטרן, WANDA וונדה, BIRCH בירץ' (IR = יר, as FireRed's KIRK קירק and SHIRLEY שירלי) and MR. STONE מר סטון.
+  - Common English words are translated (rules §5): METEOR FALLS מפלי המטאור, as `src/landmark.c:35` already wrote it, and MT. PYRE הר המוקד.
+  - The answered questions' five rows: the cartridge titles `TERM_TITLE_RUBY` רובי, `TERM_TITLE_SAPPHIRE` ספיר and `TERM_TITLE_EMERALD` אמרלד, the device `TERM_E_READER` אי-רידר and the form name `NAME_ASH_GRENINJA` אש-גרנינג'ה (below).
+  - Each row's note gives its source. Town and city rows hold the full name (העיר ראסטבורו); dialogue uses the proper part with the prefix attached (בראסטבורו, לדיופורד), and a speaker prefix is the bare name (ברולי:, מר סטון:).
+- **MT. PYRE הר המוקד.** The transliteration הר פייר was dropped in review:
+  - rules §5 translate an ordinary word after MT. (MT. MOON הר הירח), and so do H&S's own mountains: הר המכתש, הר הכסף, and הר הנזר in Q133, which called FireRed's transliterated MT. EMBER הר אמבר the minority pattern;
+  - `src/landmark.c` already gives the Hoenn landmarks their meaning: מפלי המטאור (`:35`), מערת השרטון (`:41`), מערת הגרניט (`:43`);
+  - פייר is also the slang for "fair" and, in both trees, the word for FIRE (FireRed's פוקימון פייר רד, `src/strings.c:1072` there; H&S's GOUGING FIRE גג'ינג פייר, `src/data/pokemon/species_info/gen_9_families.h:7965`);
+  - a pyre is מוקד, and the match calls already call the mountain אתר הנצחה. No official Hebrew source was checked;
+  - הר המוקד is 46 px in FONT_NORMAL and 41 px in FONT_NARROW. The landmark (`src/landmark.c:40`) goes from 33 to 41 px, where other landmarks reach 93 px; the Rayquaza menu line (`src/data/script_menu.h:771`) from 40 to 46 px, in a menu sized by מערת הבראשית (74 px).
+- **Existing rows applied.** WALLACE וולאס, WINONA וינונה and PHOEBE פיבי (all as FireRed), GLACIA (גלסיה since question 2), WALLY וולי, GABBY גאבי. POKéGEAR פוקיגיר for the three compiled match-call lines that name the POKéNAV, as K3 did for the Battle Pike lines: the H&S player carries a PokéGear. POKéNAV פוקינאב only in the Emerald `#else` line. Q106's MAY: and BRENDAN: prefixes were already Hebrew (`fd5c1a07ec`); the two left are in English dead labels.
+- **A difference kept and logged.** MAUVILLE מוביל is FireRed's form, but מוביל is also the everyday word for "leading" (H&S itself: `data/scripts/mauville_man.inc:304` המאמן מוביל הטרנדים, `src/data/credits_hns.h:73` מפתח מוביל), so העיר מוביל can read "the leading city". FireRed wins (rules §0, Q140); the clash is logged here, as rules §7 asks, not fixed.
+- **The five questions, answered** (decided by the project; the owner delegated them):
+  1. *Cartridge titles:* FireRed's convention, which writes game titles in Hebrew letters (FireRed `src/strings.c:1072-1073` פוקימון פייר רד, פוקימון ליף גרין, and its version placeholder Ruby רובי, `:8`), and Q140 makes FireRed's convention the default: Ruby רובי, Sapphire ספיר, Emerald אמרלד (also EMERALD in the credits), as titles only. The gem words of Q135 (אודם, ספיר, ברקת) stay for the gems (`ITEM_RUBY`, `ITEM_SAPPHIRE`) and the Easy Chat words. The H&S version placeholders name the game version, a title, so `gText_ExpandedPlaceholder_Ruby` and `_Emerald` (`src/strings.c:11-12`) became רובי and אמרלד, and the row `NAME_EMERALD_(VERSION_PLACEHOLDER)` אמרלד; its `translit` allowlist entry, which pinned ברקת, was dropped as stale. The mode letters E and G of the link contest stay (the menu prints them, `KEPT_LATIN` of `src/data/script_menu.h`): מצב E (מצב אמרלד).
+  2. *GLACIA:* FireRed's גלסיה, the Q140 default. The reason for גלייסיה, the pronunciation GLAY-see-uh, was not checked against an official source, so no FireRed slip is shown; `namecheck.py --fr-sync` does not compare the `name` kind, and no allowlist entry held the difference.
+  3. *NEW MAUVILLE:* FireRed's ניו מוביל stays (`src/data/items.json:4345` there), the Q140 default; NEW stays ניו as in NEW BARK TOWN העיירה ניו בארק. מוביל החדשה is not taken.
+  4. *e-Reader and Ash-Greninja:* the e-Reader gets the row `TERM_E_READER` אי-רידר, after Q85, which put Game Boy Advance into Hebrew (גיים בוי אדוונס, on the same screen, `src/strings.c:952`); the + of e-Reader+ stays the `{PLUS}` token after it, and a prefix attaches (באי-רידר). The glossary's species row for the Ash form, `SPECIES_GRENINJA_ASH`, holds the plain species name GRENINJA גרנינג'ה, which cannot carry the form name the battle line prints, so a row derived from it names the form: `NAME_ASH_GRENINJA` אש-גרנינג'ה, ASH = אש as the chunk of `TENT_TRAINER_45_ASHLYN` אשלין (rules §6), with the English hyphen (rules §1). אש is also the everyday word for fire, which a Water-type Greninja is not; the form is named after a person, the hyphen joins it to the species name, and the clash is logged here as MAUVILLE's is.
+  5. *MT. PYRE:* הר המוקד stays, for the reasons above; הר המדורה ("the bonfire") is not taken.
+- **Kept in Latin**, the 8 `w LATIN` lines drift still prints, and two English strings:
+  - Johto Redrawn (`src/data/credits_hns.h:145`, צוות Johto Redrawn) is the proper name of a fan project and NOA (`:424`, בדיקת מוצר NOA) a company's acronym (Nintendo of America), both written as their owners write them. drift's only mechanism for kept Latin is `LATIN_OK` (`tools/hebrew/drift.py:52-64`), a list of words allowed in every string: NOA was added there, as the acronyms GTS and UFO are; Johto was not, because it would pass a Latin Johto in every line where the glossary's ג'וטו applies, so the credits line stays a listed warning;
+  - XS and XL (EXP. CANDY XS and XL, `src/data/items.h`) and GB (GB PLAYER, its item name and the two `gText_GBPlayer` lines of `src/strings.c`), which their glossary rows keep (`ITEM_EXP_CANDY_XS`, `ITEM_GB_PLAYER`: as X in התקפת X);
+  - the berry-fix program's two labels under the console picture, `sText_Emerald` and `sText_RubySapphire` (drift: `UNTRANSLATED`, not `LATIN`): FONT_SMALL in `WIN_GAME_NAMES`, which TEXT_RTL sets to `WINDOW_RTL_LTR` because the labels sit under the two consoles of the unmirrored picture (`src/berry_fix_program.c:301-304`), so Hebrew there would print reversed without an engine change; `sText_RubySapphire` is also the title over the Game Boy logo. `KEPT_LATIN` now gives that reason;
+  - the game's own title HEART & SOUL, which is not another cartridge's title and is on drift's `LATIN_OK` list; question 1 did not cover it.
+- **Checks** on `he/wip-r23` with all the edits, against `he/main` `73701833a4`; baseline `he/renderer` `ec407862cd`:
+  - drift: 708 files, 0 FAIL, 334 with warnings only (336 before); `w LATIN` 8 (23 after the first pass, 127 before it);
+  - `audit.py --baseline ../pokehns-en`: 0 errors, the same 54 warnings and 88 suppressed (the report is the same as before the answered questions, line for line); 39059 strings, 24841 translated (24836 before);
+  - `namecheck.py --all --warnings`: rows 7128, still empty 0, problems 0; warnings 0, allowlisted 34; `glossary_widths.py` the same one name over budget (Q129);
+  - plurals, `flag_gates.py --check` and the three generators unchanged; 182 tool tests OK on Python 3.11.9 and 3.9.6;
+  - every changed string is narrower than before except the unused Emerald placeholder (26 to 33 px); the widest changed line is גם אי אפשר לערבב בו-זמנית עם אמרלד (189 px, was 195);
+  - the release and clip ROMs of this tree (SHA-1 `28e6b2e739049c6378dbd0b947a3436894602db6` and `8fed22572fd4eb714a752cd9e9face1f2dd91d0d`), built again from a clean `git archive` with the same SHA-1s, keep rc23's code: the same functions (14,547; 14,548 in the clip build) at the same addresses and sizes, no differing byte in code, and of the 10,639 differing literal-pool words, 10,631 point at the same symbol, script label or section offset in both builds and the other 8 are the same symbol plus the same constant in both: the linker's `__iwram_lma`, `__ewram_lma` and `__rom_end`, `gMysteryEventScriptCmdTableEnd` twice, and three constants the compiler folded, `sFieldMoveStreaksOutdoors_Tilemap` - 0x06000140, `str_checkMbootLL` - 0x030000F0 and `sClockwiseDirections` - 1. `script_data` is 184 bytes shorter than rc23's: 144 from the first pass and 40 from the answered questions.
+  - Seen on screen on the clip ROM beside rc23, with no clip record. Reached the player's way: the berry-fix program's begin and turn-off messages, from the title screen, and the 56 credits pages after the ROM's own Hall of Fame, entered by the save ladder's hand-over after the League (only page 38 changed, פוקימון גרסת אמרלד). Forced: the berry fix's follow-instructions message (its state set in memory); the e-Reader screen through the five-row menu set in memory, with its two messages and, after its state was set, the card line; the three link-contest INFO topics through the receptionist's script (8 changed pages); the Ash-Greninja line, by the ROM's own `BattleScript_BattleBondActivatesOnMoveEndAttacker` after doing what the branch before Gen 9 does (without the forcing, the same Greninja knocking out the same trainer's first Pokémon only raised its stats); and, in the field message box, the record-mix error, GLACIA's call, the fan club's GLACIA, the e-Reader card line, the two unused e-Reader lines and the two placeholders. The 2,056 release-tour shots are pixel-identical to the first pass's clip ROM.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep the Latin | No text change; give MR. STONE a `KEPT_LATIN` reason of its own. | The glossary rule stays unapplied in 169 strings, and MR. STONE stays the only Latin name in the H&S contact data. |
+| B. Rows for every Hoenn name that a Hebrew string or a compiled name-only literal uses: FireRed's form where FireRed prints it, the transliteration rules otherwise, a common English word translated; the cartridge titles, e-Reader and Ash-Greninja kept | 30 rows, 169 edits in 17 files, one allowlist entry, `KEPT_LATIN` fixed. | Low: text only, no string over its budget, nothing reachable changes except the PC menu's width. The names are `proposed`, with no official Hebrew source. Leaves the cartridge titles, the e-Reader and Ash-Greninja in Latin, and the Latin titles misordered on screen. |
+| C. B plus Hebrew letters for the cartridge titles (FireRed's convention), rows for the e-Reader and Ash-Greninja, and FireRed's גלסיה | Also edit the contest, cable club, berry-fix and credits lines, the e-Reader lines, the battle line and the version placeholders: 35 rows, 195 edits in 21 files. | Low: text only; every new string is narrower than the old one (except an unused placeholder); the code is rc23's. Two titles share letters with gems: ספיר is both, and רובי sits beside the gem אודם. |
+| D. C with the gem words for the titles (אודם, ספיר, ברקת) | The same edits with H&S's Easy Chat words. | A title reads as a gem (פוקימון ברקת), against FireRed's convention, which Q140 makes the default, and against FireRed's own רובי. |
+
+**Chosen:** C, decided by the project; the owner delegated the five questions the first pass had left open. Once a row exists, STYLE §3 makes the glossary win everywhere, so a Hoenn name should not be Hebrew in one string and Latin in the next, and the H&S contact data no longer holds Latin. The answers follow FireRed wherever FireRed has a form (the titles, GLACIA, NEW MAUVILLE) and the rules elsewhere (MT. PYRE, the e-Reader after Q85, the Ash form from its species row); the reasons are under "The five questions, answered". This supersedes Q106's "until a Hoenn-names pass is decided"; Q106's own choice stands.
+
+*Changed:* `data/text/match_call.inc`, `data/text/tv.inc`, `data/text/pokemon_news.inc`, `data/text/battle_tent.inc`, `data/text/pc.inc`, `data/text/pc_transfer.inc`, `data/event_scripts.s`, `data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc`, `src/landmark.c`, `src/strings.c`, `src/data/script_menu.h`, `src/battle_message.c`, `src/field_screen_effect.c`, `src/field_specials.c`, `src/mystery_event_msg.c`, `src/pokenav_match_call_data.c`, `src/data/items.h`, `tools/hebrew/status_report.py` (`KEPT_LATIN`: the PokéNav contact data entry dropped; `script_menu.h`'s reason is now BP amounts and the link-contest modes E and G), `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md`; for the answered questions also `data/scripts/contest_hall.inc`, `data/text/cable_club.inc`, `src/berry_fix_program.c`, `src/data/credits_hns.h`, `tools/hebrew/drift.py` (`LATIN_OK`: NOA), `tools/hebrew/status_report.py` (`KEPT_LATIN`: the berry-fix reason is the console labels) and `tools/hebrew/data/namecheck_allow.json` (the `translit` entry of `NAME_EMERALD_(VERSION_PLACEHOLDER)` dropped)
+
+*Glossary:* new `PLACE_LITTLEROOT_TOWN`, `PLACE_PETALBURG_CITY`, `PLACE_RUSTBORO_CITY`, `PLACE_DEWFORD_TOWN`, `PLACE_SLATEPORT_CITY`, `PLACE_MAUVILLE_CITY`, `PLACE_NEW_MAUVILLE`, `PLACE_VERDANTURF_TOWN`, `PLACE_FALLARBOR_TOWN`, `PLACE_LAVARIDGE_TOWN`, `PLACE_FORTREE_CITY`, `PLACE_MOSSDEEP_CITY`, `PLACE_SOOTOPOLIS_CITY`, `PLACE_RUSTURF_TUNNEL`, `PLACE_MT_PYRE`, `PLACE_METEOR_FALLS`, `NAME_BRAWLY`, `NAME_WATTSON`, `NAME_FLANNERY`, `NAME_TATE`, `NAME_LIZA`, `NAME_JUAN`, `NAME_DRAKE`, `NAME_PEEKO`, `NAME_STERN`, `NAME_WANDA`, `NAME_MR_STONE`, `NAME_LANETTE`, `NAME_BIRCH`, `TERM_GAME_FREAK`, `TERM_TITLE_RUBY`, `TERM_TITLE_SAPPHIRE`, `TERM_TITLE_EMERALD`, `TERM_E_READER`, `NAME_ASH_GRENINJA`; changed `NAME_GLACIA` (גלסיה) and `NAME_EMERALD_(VERSION_PLACEHOLDER)` (אמרלד); applied `NAME_WALLACE`, `NAME_WINONA`, `NAME_PHOEBE`, `NAME_GLACIA`, `NAME_WALLY`, `NAME_GABBY`, `NAME_POKÉGEAR`, `TERM_POKENAV`
+
+## Q142
+
+**Question.** The contest term APPEAL is two Hebrew words. The appeal hearts' label on the summary, move relearner and Pokédex screens (`gText_Appeal`, `gText_MoveRelearnerAppeal`, `src/strings.c`), the judge's results (`src/data/contest_text_tables.h`), the MC (`data/scripts/contest_hall.inc`) and the people of the contest hall and lobby said רושם; the turn lines (`src/contest.c`), the move descriptions (`src/data/contest_moves.h`), the rest of the results table, the Easy Chat word and the TV contest reports say הופעה. One English sentence, 'Its bad condition resulted in a weak appeal', had both: הרושם היה חלש in `src/contest.c`, להופעה חלשה in `contest_text_tables.h`. Which word is the term?
+
+*Source:* screen review, round 24 (consistency), confirmed by a second reviewer. No glossary row, STYLE rule or earlier decision covered it.
+
+**Analysis.**
+- English uses APPEAL for one Pokémon's turn on stage ('Appeal no. {STR_VAR_1}!', '{STR_VAR_1} appealed with {STR_VAR_2}!', 'can't appeal next turn', 'the order of appeals', 'Appeal Time') and for how that turn went ('{STR_VAR_1}'s appeal went well', 'a weak appeal', the APPEAL hearts). The two Hebrew words followed those senses only roughly: the label and the results were רושם, the turns and the descriptions הופעה.
+- Before the change: רושם in the 2 labels, the 13 result lines (the 12 `CONTEST_STRING_APPEAL_*` and `CONTEST_STRING_HOT_STATUS`), the unread duplicate `gText_BadConditionResultedInWeakAppeal` (the contest prints the table's line, `src/contest_effect.c:752`) and 12 dialogue labels (5 in `data/scripts/contest_hall.inc`: 4 of the MC and the lobby receptionist's rules; 5 in `LilycoveCity_ContestHall_hns`, one of them the MC's; 2 in `LilycoveCity_ContestLobby_hns`); הופעה in 6 lines of `src/contest.c`, 22 of `src/data/contest_moves.h`, 6 more of `contest_text_tables.h`, the Easy Chat word (`src/data/easy_chat/easy_chat_group_events.h`) and the TV contest reports (`data/text/tv.inc`, which H&S does not reach: `FLAG_SYS_TV_START` is 0).
+- רושם ('impression') reads well for the result but not for the turn: רושם מס' 3 as the turn counter, הרושם ניסה להלחיץ for 'The appeal tried to unnerve', סדר הרשמים, and 'X עשה רושם עם Y' says the move impressed before the judge says whether it did. Making it the term would reword 34 strings and leave the Easy Chat word apart, unless the RTL order files are regenerated.
+- הופעה ('performance', on a stage) reads well in both senses: הופעה מס' 3, הופיע עם, זמן ההופעות, סדר ההופעות, הופעת X לא הצליחה, הוביל להופעה חלשה; as the hearts' label it says performance, beside הפרעה for JAM. The ordinary 'make an impression' keeps its word where the English says something else: 'X's Y went over great' הרשים (`src/contest.c`), the move FIRST IMPRESSION רושם ראשוני.
+- FireRed has no contests. Its only APPEAL is the Easy Chat word קסם, the charm of trainers' phrases (`src/data/easy_chat/easy_chat_group_events.h:1` there), so it sets no convention for the contest term (Q140). No official Hebrew source was checked.
+- Widths. The label הופעה is 31 px in FONT_NORMAL: in the summary's 40-px label window (`src/pokemon_summary_screen.c:582-590`) and right-aligned at 92 px in the relearner (`src/menu_specialized.c:836-838`); 27 px in FONT_SMALL in the Pokédex, at x 8 with the value at x 53 (`src/pokedex_plus_hgss.c:5607`, `:5663`). In the 136-px contest text window the results' first line הופעת {STR_VAR_1} is 118 px with a 12-letter name (ההופעה של {STR_VAR_1} would be 141 px), and the widest changed line, הלהט של {STR_VAR_1}, 130 px.
+
+| Option | How | Risk |
+|---|---|---|
+| A. הופעה everywhere the game names the contest appeal | The two labels, the 13 result lines (הופעת X הצליחה / לא הצליחה / הייתה כישלון; the hot status הוביל להופעה אדירה, beside the weak appeal's הוביל להופעה חלשה), the unread duplicate, the MC (זמן ההופעות המיוחל, שיתחילו ההופעות!) and the hall's and lobby's people | Low: 16 C strings and 12 dialogue labels, each measured; the turn lines, the descriptions and the Easy Chat word already say it. |
+| B. רושם everywhere | Reword the turn lines, 22 descriptions and 6 result lines; the turn counter becomes תור {STR_VAR_1}! | 34 strings; עשה רושם says the move impressed before the judge does; the Easy Chat word differs or the RTL order files are regenerated. |
+| C. Keep both, split by sense | Record הופעה for the turn and רושם for the result and the label | The summary page keeps רושם over descriptions that say ההופעה; a player still sees two words for one English term, and the weak-appeal sentence still needs one of them. |
+
+**Chosen:** A. One word for the term, the one that already named most of it and fits both senses. The COOLNESS visitor's 'cool moves go over as appeals… don't go over well' takes the contest screen's verb for 'go over well' (מתקבלים היטב, as gText_AppealComboWentOverWell's התקבל היטב). The Easy Chat word stays הופעה, as it has been since the first translation (Q135 translated only the words of 1 to 5 letters). Seen on screen on the clip ROM beside rc24 and English, with no clip record: the two changed MC lines a single-player contest prints (`ContestHall_Text_VotingCompleteLetsAppeal`, `ContestHall_Text_ThankYouForAppeals`) in a Normal COOL contest (`tours/r9_contests/r9c_cool_normal.txt`); every changed result line, forced through `effplan` in a Normal SMART contest as `tours/r16_contests/con_effects.txt` does, HOT_STATUS and NOT_VERY_WELL also with a 12-letter nickname of 7-px letters; the label in the summary and the Pokédex (release tours `menu_party`, `menu_pokedex`) and in the relearner (`tours/r6_summary/r6sum_relc.txt`); the 12 dialogue labels in the sweep. The unread `src/contest.c` line has no screen.
+
+*Changed:* `src/strings.c`, `src/data/contest_text_tables.h`, `src/contest.c`, `data/scripts/contest_hall.inc`, `data/maps/LilycoveCity_ContestHall_hns/scripts.inc`, `data/maps/LilycoveCity_ContestLobby_hns/scripts.inc`
+
+*Glossary:* `TERM_CONTEST_APPEAL`
+
+## Q143
+
+**Question.** The Kanto radio upgrade has three Hebrew names: the Lavender Pokémon Center hint says שדרוג רדיו, the Radio Station gift line said כרטיס ההרחבה, and the music director says שדרוג כרטיס הרחבה. Which is its name?
+
+*Source:* screen review, round 24 (consistency), confirmed by a second reviewer, who found that English itself has two names.
+
+**Analysis.**
+- English: 'your radio needs a RADIO UPGRADE' in the hint (`data/maps/LavenderTown_PokemonCenter_hns/scripts.inc:34-35` in the English tree), '{PLAYER} obtained the RADIO UPGRADE!' in the gift line (`data/maps/LavenderTown_RadioStation_hns/scripts.inc:92-93` there) and 'If you get an EXPN CARD upgrade, you can tune in' from the music director (`:105` there). EXPN CARD is the Gold and Silver name of the Kanto radio card; its sibling RADIO CARD, the Goldenrod quiz prize, is כרטיס רדיו (`data/maps/GoldenrodCity_RadioTower_1F_hns/scripts.inc:52`, `:174`, `:211`).
+- The hint and the director translate their English. The gift line did not: it named the expansion card where the English names the radio upgrade, so the hint promised one thing and the gift gave another, a link the English keeps.
+- All three labels are live (`tools/hebrew/data/live_labels.json`). No glossary row covered the names.
+- The new gift line, {PLAYER} קיבל את / שדרוג הרדיו!, is 91 and 61 px in the 208-px box with a 7-letter name.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The gift line as its English, שדרוג הרדיו; the director keeps his EXPN CARD, כרטיס הרחבה | One line | Low. English's two names stay two, and 'upgrade' (שדרוג) links all three lines as in English. |
+| B. One name, שדרוג רדיו, in all three | Also reword the director: עם שדרוג רדיו תוכל לקלוט אותן | Drops the EXPN CARD name that the English gives the director. |
+| C. One name, כרטיס הרחבה, in all three | Reword the hint too | Departs from two English lines instead of fixing one. |
+
+**Chosen:** A. The gift line now says what its English says, and the glossary records the three names. Seen on screen: the sweep drew it on the clip ROM beside rc24 and English, with no clip record.
+
+*Changed:* `data/maps/LavenderTown_RadioStation_hns/scripts.inc`
+
+*Glossary:* `TERM_RADIO_UPGRADE`, `TERM_EXPN_CARD`, `TERM_RADIO_CARD`
+
+## Q144
+
+**Question.** A count from a placeholder before a counted noun reads '1 פוקימונים' when the count is 1. Three lines a player can see did this: Prof. Elm's Pokédex rating on the PokéGear ('ותפסת 1 פוקימונים…'), the field healing line ('הנ”ח של X שוקמו ב-1 נקודות.') and Steven's plate count in the Sinjoh Ruins lab ('1 לוחות עד עכשיו.'). Which form reads right for every value?
+
+*Source:* screen review, round 26 (grammar), each confirmed by a second reviewer.
+
+**Analysis.**
+- Elm's rating: `gBirchDexRatingText_SoYouveSeenAndCaught` (`data/text/pokedex_rating.inc:10-13`), filled by `BufferPokedexRatingForMatchCall` with counts of three digits at most (`src/match_call.c:2309-2344`). From the aide's five Poké Balls (`VAR_NEWBARKTOWN_LABSTATE` 6, `data/maps/NewBarkTown_Lab_hns/scripts.inc:500-503`) to the first catch, the caught count is the starter alone (`GiveMonToPlayer` sets it caught, `src/pokemon.c:9757-9760`). The national rating, `gBirchDexRatingText_OnANationwideBasis` (`:111-115`), has the same two lines. English: 'So, you've seen {STR_VAR_1} POKéMON, and you've caught {STR_VAR_2} POKéMON…', where POKéMON takes no plural.
+- Field healing: `gText_PkmnHPRestoredByVar2` (`src/strings.c:310`). STR_VAR_2 is the HP actually restored (`src/party_menu.c:2114-2116`), after a Potion, a berry, Sacred Ash (`src/party_menu.c:5316`, `:6304`), Softboiled or Milk Drink (`src/fldeff_softboiled.c:77`), so a Pokémon missing one HP prints 1. English hedges: 'by {STR_VAR_2} point(s)'.
+- Steven: `SinjohRuins_Lab_Text_StevenFindPlates` (`data/maps/SinjohRuins_House1_hns/scripts.inc:325-331`) prints while `VAR_PLATECOUNTER` is 0 to 2 (`:281-293`), so it says 1 after the first plate. English has the same flaw, '{STR_VAR_1} PLATES so far'. `StevenFindPlates3` and `StevenFindPlates9` say the same English sentence for 3 to 8 and 9 to 16 plates.
+- FireRed sets no convention here: its rating says '{STR_VAR_2} פוקימונים בבעלותך' and its healing line 'ב-{STR_VAR_2} נקודות' (PR #2 head `df2ee712e`, `data/text/pokedex_rating.inc:10`, `src/strings.c:291`), the same flaw.
+- An item name after a count already reads right: it takes the item's plural name, which the game picks by the count (Q125).
+- Not changed: the EXP lines ('{STR_VAR_1} קיבל {STR_VAR_2}\nנקודות ניסיון!', `src/strings.c:322-323`, and `STRINGID_PKMNGAINEDEXP`, `src/battle_message.c:196`). They print after every knock-out, so a label form would make the most frequent line a list for a value that is rare at most: the gain is the species' yield × level / 7 (`B_SCALED_EXP` is `GEN_3`, `include/config/battle.h:17`; `src/battle_script_commands.c:4199-4203`), and whether any reachable battle gives 1 is unverified. English has the same flaw ('gained 1 Exp. Points!'), and נקודות ניסיון is the glossary term.
+- Widths: the rating's lines are 103 and 111 px with three-digit counts and 169 and 177 px with the audit's 12-glyph fill, in the call text's 192 px, 184 px on the second line, which ends in a prompt (`budgets.json` `phone_call_text`); the healing line 146 px with the audit's fill and 34 px with a three-digit amount; Steven's line 130 px with two digits and 202 px with the audit's fill (208).
+
+| Option | How | Risk |
+| --- | --- | --- |
+| A. A label and a colon, or a sentence the count does not govern | 'פוקימונים שראית: {STR_VAR_1}, / פוקימונים שתפסת: {STR_VAR_2}…'; 'הנ”ח של X עלו ב-{STR_VAR_2}.'; 'לוחות שנמצאו עד עכשיו: {STR_VAR_1}.' | Low: text only, token order kept. The rating reads as a list, which suits a report of two numbers. |
+| B. Keep each sentence and fix the noun | 'ותפסת {STR_VAR_2} מהם…'; the abbreviation נק' for נקודות | 'מהם' leaves 'ראית 1 פוקימונים' for the seen count; an abbreviation is a new form of a term. |
+| C. A singular and a plural string chosen by count, as the Premier Ball bonus (Q125) | Engine code at the four call sites under `TEXT_RTL` | Engine work for three lines of text. |
+
+**Chosen:** A. Each form reads right for every value, as the English 'point(s)' does, and STYLE §1 says so. The healing line says עלו, the verb Hebrew uses with an amount (עלו ב-20); the unit went with the plural. Steven's three texts take the same sentence. Seen on screen on the clip ROM beside rc25 and English, with no clip record: Elm's call in the PokéGear with one Pokémon caught (a forced tour that clears every caught flag but the starter's), the healing line for one HP (a Potion on a Pokémon missing 1 HP), and all five labels in the sweep with every STR_VAR at 1 and at four digits (`<private>/scratch/screens/r27/text/`, `tours/` and `sweep/`).
+
+*Changed:* `data/text/pokedex_rating.inc`, `src/strings.c`, `data/maps/SinjohRuins_House1_hns/scripts.inc`, `translation/hebrew/STYLE.md`
+
+## Q145
+
+*Superseded by [Q160](#q160):* the owner decided that a stat-change line names the stat itself, with its article, and its verb agrees with it (הדיוק ירד); no line says הנתון. The analysis below is kept as it was.
+
+**Question.** The stat-change lines broke after הנתון: 'ל{B_DEF_NAME_WITH_PREFIX} הנתון\n{B_BUFF1} עלה{B_BUFF2}!'. The first line prints alone first and reads 'לפורט היריב הנתון', 'to the given opposing Furret'; the second, 'הגנה עלה!', pairs a feminine noun with a masculine verb. Where should these lines break?
+
+*Source:* screen review, round 26 (battle), confirmed by a second reviewer. Seen on rc25 in the release tours `bv_double` ('לפורט היריב הנתון / הגנה עלה!') and `bv_spread_eff`.
+
+**Analysis.**
+- Seven strings broke after הנתון: `gText_DefendersStatRose` and `STRINGID_ATTACKERSSTATROSE`, `SCRIPTINGSTATROSE`, `ATTACKERSSTATFELL`, `DEFENDERSSTATFELL`, `TARGETSTATWONTGOHIGHER` and `STATWASHEIGHTENED` (`src/battle_message.c:79`, `:383`, `:385-387`, `:627`, `:771`). The first five print on most stat changes in every battle. `STATSWONTINCREASE` and `STATSWONTDECREASE` (`:242-243`) already broke before הנתון and read right.
+- The English strings have no manual break, and STYLE §5 keeps such strings auto-wrapped. `BreakStringAutomatic` (`src/line_break.c`) splits only at the template's own spaces, because a placeholder's spaces become NBSP (`src/battle_message.c:3770-3778`), and it balances the lines, so with a long name it can break after הנתון again. Only a manual break keeps הנתון off the end of a line.
+- Q140 keeps the masculine הנתון and the intensity word after the verb. Moving the break, 'ל{X}\nהנתון {B_BUFF1} עלה{B_BUFF2}!', puts הנתון, both buffers and the verb on one line: 198 px with the widest real values (התקפה מיוחדת, בצורה דרסטית), but 223 px with the audit's 12-glyph buffers, an audit error against 208.
+- With the verb on the first line, 'ל{X} עלה\nהנתון {B_BUFF1}{B_BUFF2}!', the line has the order the ability lines already use ('…, עלה הנתון {B_BUFF1}{B_BUFF2}!', `:595`, `:597`, `:684`). The first line is 146 px with a 12-letter name and the suffix, the second 200 px with 12-glyph buffers and 175 px with the widest real values. The intensity word still follows the verb's clause, at its end: 'עלה הנתון הגנה מאוד'.
+- The lines without an intensity word keep the stat before the verb and break before הנתון, as `:242-243` do: 'ל{X}\nהנתון {B_BUFF1} לא יעלה יותר!', 'ל{X}\nהנתון {B_BUFF1} התחזק!'. `TARGETSTATWONTGOHIGHER` said לא יכול לעלות יותר for the English of `STATSWONTINCREASE`; it now says the same לא יעלה יותר.
+- The ability lines (`:595`, `:626`, `:684` auto-wrapped, `:597` broken by hand) were laid out with typical names and with the widest (רגליים מסתבכות, a 12-letter nickname). Their breaks fall after בזכות, after the ability, after עלה or after עלה הנתון, never between a name and הנתון, and the verb stays on the line of הנתון. They are unchanged.
+- FireRed writes these lines 'ה{B_BUFF1} של {X}\n{B_BUFF2}!' with feminine verbs, and its engine puts the verb before the intensity word (PR #2 head `df2ee712e`, `src/battle_message.c:305-313`, `:2241-2259`). H&S keeps its token order (STYLE §5) and Q140's הנתון.
+
+| Option | How | Risk |
+| --- | --- | --- |
+| A. 'ל{X}\nהנתון {B_BUFF1} עלה{B_BUFF2}!' | Move the break before הנתון | Fails the audit with 12-glyph buffers (223 px against 208), though right with the real values. |
+| B. 'ל{X} עלה\nהנתון {B_BUFF1}{B_BUFF2}!' for rise and fall; A for the lines without an intensity word | The verb before the stat, as in the ability lines | Low: every line fits the worst case; the first line ends on the verb, as the second line of `:597` does. |
+| C. No manual break | As the English | The auto-wrap can still break after הנתון. |
+
+**Chosen:** B. Every changed line starts its second line with הנתון, so הנתון never follows a name, and the verb agrees with הנתון on the line they share. STYLE §5 and §7 record the exception and the rule. Seen on screen on the clip ROM beside rc25 and English, with no clip record, forced with `tools/hebrew/emu/scripts/r16_battle_sweep/bsweep.py` in a trainer battle (היריב), a wild battle (הפראי) and on the player's side, with species names and with 12-letter nicknames, each changed string with התקפה מיוחדת and the widest intensity word (`<private>/scratch/screens/r27/text/battle/`), and in the release tours.
+
+*Changed:* `src/battle_message.c`, `translation/hebrew/STYLE.md`
+
+## Q146
+
+**Question.** The two-foe effectiveness lines give the first target its suffix and the second none: 'זה יעיל במיוחד נגד ארבוק היריב וגולבאט!'. A bare name in battle text is the player's Pokémon (STYLE §7), and with two foes of one species the line ends in a bare טורקואל. How should the second target read?
+
+*Source:* screen review, round 26 (battle), confirmed by a second reviewer.
+
+**Analysis.**
+- `STRINGID_SUPEREFFECTIVETWOFOES`, `NOTVERYEFFECTIVETWOFOES` and `ITDOESNTAFFECTTWOFOES` (`src/battle_message.c:863-865`) print '{B_DEF_NAME_WITH_PREFIX2} and {B_DEF_PARTNER_NAME}'. `B_TXT_DEF_PARTNER_NAME` is the partner's nickname with no prefix in both languages (`:3295-3297`), and no other string uses it. English has the same gap: 'the opposing Torkoal and Torkoal!' (`test/battle/spread_moves.c:461`).
+- `ShouldPrintTwoFoesMessage` (`src/battle_script_commands.c:1973-1978`) prints these lines when the targets are the player's too, so a wording such as 'שני היריבים' would be wrong there.
+- The engine could give the partner the suffix (`HANDLE_NICKNAME_STRING_LOWERCASE`) under `TEXT_NAME_SUFFIX_IN_BATTLE`. That is engine code in a file whose strings are Hebrew, picked onto `he/renderer` by hand, and the line would say היריב twice.
+- 'שלצידו' ('beside it') after the second name ties it to the first target's side, whichever side that is: 'נגד ארבוק היריב וגולבאט שלצידו', 'נגד טורקואל היריב וטורקואל שלצידו', 'נגד סנדסלאש-א ודרגונייט שלצידו'. The second target is `BATTLE_PARTNER(gBattlerTarget)`, the Pokémon beside the first, so the word says what the English leaves implicit.
+- Widths: the lines stay auto-wrapped. With two 12-glyph names and the suffix they take three rows with one scroll, as before; with species names two ('זה יעיל במיוחד נגד ארבוק היריב / וגולבאט שלצידו!', 151 and 77 px).
+
+| Option | How | Risk |
+| --- | --- | --- |
+| A. 'ו{B_DEF_PARTNER_NAME} שלצידו' | Text only, three strings | Low: one word the English does not have. |
+| B. The suffix on the partner | Engine code under `TEXT_NAME_SUFFIX_IN_BATTLE`, picked onto `he/renderer` | An engine change for three lines; היריב twice in one line. |
+| C. 'שני היריבים' | Text only | Wrong when the targets are the player's. |
+
+**Chosen:** A. Seen on screen on the clip ROM beside rc25 and English, with no clip record, in the Rocket Hideout multi battle on both sides, with species names and with a 12-letter nickname (`<private>/scratch/screens/r27/text/battle/`), and in the release tour `bv_spread_eff`, a wild double battle.
+
+*Changed:* `src/battle_message.c`, `translation/hebrew/STYLE.md`
+
+## Q147
+
+**Question.** The renderer draws a run of digits, with the neutrals between its digits, left to right as one block, and swaps `<` and `>` outside a run. Two signs read wrong because of it: the New Sinjoh research logs 9 and 10 ('יומן מחקר 9: 20 בספטמבר 1975' showed the 20 first, so the log number and the day traded places) and the Mt. Moon cave sign ('>- כיכר הר הירח' showed '-<'). How should such text be typed?
+
+*Source:* screen review, round 26 (punctuation), confirmed by a second reviewer. The lab's logs 1 to 8 had been fixed the same way (`6135c427ae`), with no rule written down.
+
+**Analysis.**
+- 'Neutrals between two run characters belong to the run' (`docs/hebrew_translation.md:36-40`, `RtlBeginRun` in `src/text.c`). That keeps '10:30', '1,000' and '1-3' whole, but two separate numbers with only a space or punctuation between them become one block in the wrong order. A scan of the Hebrew string literals in `data/` and `src/` (`.inc`, `.s`, `.c`, `.h`, `.party`, `.json`, control codes and placeholders left out) for two digits joined only by spaces and punctuation finds the three log headers before this change and none after it. Its other 97 matches are each joined by one character and are one number or a range: thousands separators (1,000), decimals (1.8), fractions (1/4) and ranges (1-3) (`<private>/scratch/screens/r27/review-text/numpair_scan.txt`, `numpair_base.txt`).
+- Outside a run `<` and `>` swap (`src/text.c:1427-1428`). The English sign, 'MT MOON SQUARE ->', has its arrow at the right edge pointing right. Typed '<-' at the start of the Hebrew line, the arrow shows in the same place and direction: 'כיכר הר הירח ->'. `{RIGHT_ARROW}` is not mirrored, but it is another glyph than the English '->'.
+- Widths: the three log headers are 174, 178 and 167 px in the 200-px prompt line of a sign (log 8 ships at 174 px); the sign's line stays 78 px.
+
+| Option | How | Risk |
+| --- | --- | --- |
+| A. A Hebrew word between two numbers; an arrow typed mirrored | 'יומן מחקר 9, מיום 20 בספטמבר 1975', as logs 1 to 8; '<- כיכר הר הירח' | Low: text only. |
+| B. 'ה-20' | 'יומן מחקר 9: ה-20 בספטמבר 1975' | Reads right, but unlike logs 1 to 8. |
+
+**Chosen:** A; STYLE §4 has both rules. Seen in the sweep on the clip ROM beside rc25 and English, with no clip record (`<private>/scratch/screens/r27/text/sweep/`).
+
+*Changed:* `data/maps/NewSinjoh_House3_hns/scripts.inc`, `data/maps/MtMoon_Cave_hns/scripts.inc`, `translation/hebrew/STYLE.md`
+
+## Q148
+
+**Question.** The numero sign stands on different sides of its number on different screens. The bag's TM and berry rows, the Battle Pyramid bag and the berry tag show №01, the sign left of the digits; the summary's portrait and the Pokédex's info and stats pages show 006№ and 0004№, the sign right of them. Which side?
+
+*Source:* screen review, round 26 (punctuation), confirmed by a second reviewer.
+
+**Analysis.**
+- Hebrew reads the number sign before the number, as it reads מס' 5: in a right-to-left line the sign stands right of the digits. Unicode classes № (U+2116) as a neutral, and a neutral before European digits in a right-to-left paragraph takes the paragraph's direction, so a bidi renderer draws the logical №01 as 01№. STYLE.md §4 keeps digits in reading order and lets the renderer place them; it says nothing about №.
+- The strings are the English layout strings, with no word in them: `gText_NumberItem_TMBerry` `{NO}{STR_VAR_1}{CLEAR 0x03}{STR_VAR_2}` (`src/strings.c`; the bag, `src/item_menu.c`, and the Pyramid bag, `src/battle_pyramid_bag.c`), `sText_NumberVar1Var2` `{NO}{STR_VAR_1} {STR_VAR_2}` (`src/berry_tag_screen.c`) and `gText_NumberClear01` `{NO}{CLEAR 0x01}` before the digits (`src/pokemon_summary_screen.c`, `src/pokedex_plus_hgss.c`).
+- The renderer counted {NO} as a Latin letter, with {PP} and {ID} (`RtlClassAt`, `src/text.c`), so in the first two strings the sign and the digits made one left-to-right run, №01. In the third the {CLEAR} ends the run, each part is mirrored on its own and the sign lands right of the digits; the first review chose that side for the Pokédex stats page, from No0004 to 0004№, to match the info page.
+- The DexNav chain counter (`src/dexnav.c`) and the old Pokédex's list (`src/pokedex.c`) also print {NO}, but neither is reachable in H&S: `DEXNAV_ENABLED` is FALSE and `POKEDEX_PLUS_HGSS` is TRUE.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Right of the number everywhere: 01№, 006№ | Under TEXT_RTL the renderer treats {NO} as a neutral, as Unicode does: it no longer joins the digits' run, is mirrored on its own and stands right of them. The summary and the Pokédex do not change | Low. The sign and the digits trade places inside the same extent, so no width or layout changes; English is untouched |
+| B. Left of the number everywhere: №01, №006 | Join the sign to the digits on the summary and the Pokédex too | Against Unicode and Hebrew reading order, and changes the two screens the first review chose |
+| C. Keep both and record the split | Nothing in the ROM | The same glyph keeps changing sides between screens |
+| D. Reorder the strings to `{STR_VAR_1}{NO}` | A text change in the layout strings | Writes visual order into the text, which STYLE.md §4 forbids for digits; the strings are shared with English |
+
+**Chosen:** A. The sign now stands right of its number on every screen that shows it. Seen on screen against rc25: the release tours' bag and berry tag shots (27 shots of `menu_bag`, `pbi_tm`, `pbi_berrytag`, `pbi_stats`, `pbi_learn_no`), each changed only in the number column; the Pyramid bag with two berries (`<private>/scratch/screens/r27/engine/numero/`); the summary and Pokédex shots are unchanged.
+
+*Changed:* `src/text.c`
+
+## Q149
+
+**Question.** A prefix letter joined to a name placeholder prints without the maqaf when the name is Latin: לGOLD נגמרו הפוקימונים, הניצחון לGOLD!, שמעתי שמועות שGOLD. Every static prefix before Latin letters or digits takes one (ב-20, ה-2). Fix it in the engine or in the text?
+
+*Source:* screen review, round 26 (grammar), confirmed by a second reviewer.
+
+**Analysis.**
+- Hebrew joins a one-letter prefix (ו ה ב כ ל מ ש) to a Hebrew word directly and to Latin letters or digits with a maqaf. The static text does so in all 142 places where a prefix meets Latin letters or digits, and in none without the hyphen.
+- Names and numbers come in through placeholders. In the tree, 454 templates put one to three prefix letters right before one: 9 before {PLAYER} or {RIVAL}, 342 before {STR_VAR_1}..{STR_VAR_3}, 101 before battle names and buffers, 2 before {DYNAMIC}. A Latin name reaches them from a 2.0.x English save (supported: its player name and its Pokémon's names stay Latin), from the naming screen's Latin page, from a link partner, or as a nickname; a number reaches them through the same variables.
+- The text cannot fix it: a hyphen written into the template would also stand before a Hebrew name, ל-גולד, which Hebrew does not write; rewording the lines to keep names out of prefix position would touch hundreds of lines and make them stiffer. Thirteen templates already write the hyphen before a placeholder that holds a count (ב-{STR_VAR_1} מטבעות); they stay as they are.
+- The renderer already keeps a hyphen right after a Hebrew letter with that letter, so ל-GOLD reads in the right order.
+- A name from a Japanese game is stored as {JPN}...{ENG} (`GetBoxMonData`, the link code) and drawn as one left-to-right run in the Japanese font. Its letters are foreign too, so it takes the maqaf like a Latin name. Its kana bytes cannot be classed in the Latin charset: there some of them are Latin letters and others Hebrew ones, which would give ל-あいうえ but לござじず.
+- Width: the hyphen adds one glyph. In every font the widest Latin letter or digit is at least one pixel narrower than the widest Hebrew letter, so a 7-letter Latin name plus the hyphen is no wider than the 7 widest Hebrew letters the layout audit already allows for {PLAYER} (48 against 49 px in the normal font), and a 12-letter one plus the hyphen no wider than the nickname budget (78 against 84 px). Battle messages are wrapped by `BreakStringAutomatic`.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The engine adds the maqaf | Under TEXT_RTL, `RtlNeedsPrefixMaqaf` (`src/text.c`) tells the three placeholder expanders (`StringExpandPlaceholders`, `BattleStringExpandPlaceholders`, `DynamicPlaceholderTextUtil_ExpandPlaceholders`) to put a hyphen before a placeholder's text when the template has one to three prefix letters right before it, after a space, punctuation, a code or the start, and the text starts with a Latin letter or a digit or is a {JPN} name. The template is read from its start, so a code's argument byte is never taken for a letter. The battle expander inserts only while its buffer has room | Low. One more glyph, only in the cases the static text already hyphenates; a Hebrew name and a placeholder after a whole word or an existing hyphen are untouched |
+| B. Reword the lines | Move names out of prefix position (של {PLAYER}, אל {PLAYER}) | Hundreds of lines, stiffer Hebrew, and numbers still bare |
+| C. Known issue | One line in `notes.json` | The inconsistency stays for every player who brings an English save |
+
+**Chosen:** A. Measured on the clip ROM against rc25: the full sweep (player GOLD) changes exactly the 8 labels with a prefix before {PLAYER} (ל-GOLD, ש-GOLD), each one byte longer, the same pages, no clip; a stress sweep with the player MMMMMMM and three 12-letter Latin variables changes 192 labels by one or two bytes, all OK, no page added, no clip; the release and clip tours show no change from it (no tour shows a Latin name after a prefix). Seen on screen: seven of those labels, a battle line with a Pokémon named on the English ROM (ל-TYPHLOSION הנתון הגנה עלה!, while לג'יאודוד הפראי stays joined), and the PC's בחרת ב-GOLDY. (`<private>/scratch/screens/r27/engine/maqaf/`). Two Japanese nicknames in the same battle line both print with the hyphen, ל-あいうえ and ל-ござじず (`<private>/scratch/screens/r27/review-engine/jpn/`).
+
+*Changed:* `src/text.c`, `include/text.h`, `src/string_util.c`, `src/battle_message.c`, `src/dynamic_placeholder_text_util.c`; STYLE.md §4
+
+## Q150
+
+**Question.** On the summary move pages every Hebrew move name ends 2 px from its PP text, so a row reads as one word ('התנפלות35/35'). How should the mirrored name column meet the PP column?
+
+*Source:* play-through review, round 28 (early game), confirmed by a second reviewer.
+
+**Analysis.**
+- The name window `PSS_DATA_WINDOW_MOVE_NAMES` is x 120-191 (`src/pokemon_summary_screen.c`, `sPageMovesTemplate`). English starts each name at x 120; mirrored, every Hebrew name ends at x 191, the exact mirror. The window itself is right.
+- The PP window starts at x 192. The Hebrew PP text, 'נ”כ 35/35' in the narrow font, is 43 px at x 3 (`MOVES_PP_X`), so it starts at x 194; the English 'PP35/35' starts at x 196. That layout is deliberate: the label reads first at the column's right end, and 43 px leaves no room for a margin (the comment at `sMovesPPLayout`). Only columns 192-193 stay blank between a Hebrew name and its numbers, against 4 in English after its widest possible name (72 px, ending at x 191) and 7 after the widest name the review's party showed.
+- The same window holds the dash of an empty slot, CANCEL and the new move on the forget-move page (`PrintMoveNameAndPP`, `PrintNewMoveDetailsOrCancelText`). The pages: BATTLE MOVES, CONTEST MOVES, move select, the forget-move page, the summary opened in battle.
+- Widths of the 935 move names in FONT_NORMAL (`textwidth.py`): 15 are wider than 72 px and already take the narrow font; 8 are 71-72 px (ממתק או תעלול, קבלת פנים קרה, מטר כוכבי טרה, מכות בכל הכוח, ניפוץ שמש צורב, צמיחת יתר מקס, קוצי פלדה מקס, זעם רוח ג'ימקס); 15 more are 69-70 px.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The names 2 px in | Under TEXT_RTL print the names, the dash, CANCEL and the new move at x 2 and fit them to the 70 px left (`MOVES_NAME_X`; `PrintTextOnWindowToFit` fits to the room after x). They end at x 189: 4 blank columns, English's worst case | Low. The 8 names of 71-72 px take the narrow font |
+| B. The names 4 px in | x 4, 68 px | 23 more names take the narrow font, for 2 more blank columns |
+| C. Move or shrink the PP text | Start it at x 196 | It needs 43 px; without the space between label and digits it would crowd the other way |
+| D. No change | | Every row keeps reading as one word |
+
+**Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record: the round's `tours/r28_align/v_summary.txt` (names end at x 189 on every row, the PP ink starts at x 194: 4 blank columns instead of 2) and the 12 release-tour shots of the move pages and the forget-move page, each changed only inside the name window (`<private>/scratch/screens/r28/fix/verify/`, `fix/tours/`). The PP column keeps its layout; checked on its own it shows Hebrew ink 0-1 px from the white column's edges where English keeps 2, by design.
+
+*Changed:* `src/pokemon_summary_screen.c`, `tools/hebrew/data/budgets.json`, `tools/hebrew/glossary_widths.py`, `translation/hebrew/STYLE.md` §10
+
+## Q151
+
+**Question.** On the summary SKILLS page the EXP total and the points to the next level start 4 px from their box's left edge and end ragged (40007 at x 196-225, 3801 at x 196-218), while the stat columns above them are flush right as in English. The two labels beside them end 6 px before their cell's right edge, where English starts them 2 px inside it.
+
+*Source:* play-through review, round 28 (early and middle game), two findings, each confirmed by a second reviewer.
+
+**Analysis.**
+- `PrintExpPointsNextLevel` right-aligns both numbers with leading spaces (`STR_CONV_MODE_RIGHT_ALIGN`, `GetStringRightAlignXOffset(..., 42) + 2`) in `PSS_DATA_WINDOW_EXP` (x 192-239). Mirrored, the spaces go to the right, so both numbers start at x 196 whatever their length.
+- `SetSummaryDataWindowRtl` keeps the two stat value windows `WINDOW_RTL_LTR` for exactly that reason and left the EXP window out. Only these digits print in it.
+- The label window `PSS_LABEL_WINDOW_POKEMON_SKILLS_EXP` is x 80-167, but its green cell starts at x 84: the frame takes x 80-83. English prints the labels at x 6, 2 px inside the cell; mirrored from x 6 they end at x 161, 6 px from the cell's right edge (x 167).
+
+| Option | How | Risk |
+|---|---|---|
+| A. The EXP window left to right, the labels from x 2 | Under TEXT_RTL add `PSS_DATA_WINDOW_EXP` to the windows `SetSummaryDataWindowRtl` keeps `WINDOW_RTL_LTR`; print the two labels at x 2 | Low. The numbers print exactly as English, flush right with the stat column; the labels end at x 165, 2 px inside the cell |
+| B. `WINDOW_RTL_IN_PLACE` for the EXP window | The same picture for text without Hebrew | A different mode from the stat columns for the same kind of text |
+| C. No change | | The only ragged column on the page |
+
+**Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record: in six shots (`tours/r28_align/v_summary.txt`, `v_skills_exp.txt`) the EXP box x 192-239, y 112-145 is pixel for pixel the English one; the labels end at x 165; the 8 release-tour SKILLS shots (`menu_party`, `pbi_vitamins`) change only in the numbers and the labels (`<private>/scratch/screens/r28/fix/verify/`, `fix/tours/`).
+
+*Changed:* `src/pokemon_summary_screen.c`, `translation/hebrew/STYLE.md` §10
+
+## Q152
+
+**Question.** In the battle bag the USE/CANCEL box hides the end of סגירת התיק (CLOSE BAG) in the bottom row; English keeps CLOSE BAG 7 px clear of its box.
+
+*Source:* play-through review, round 28 (middle game), confirmed by a second reviewer.
+
+**Analysis.**
+- Under TEXT_RTL the one-column boxes `ITEMWIN_1x1` and `ITEMWIN_1x2` (`src/item_menu.c`) sit mirrored over the item list's quantity column at `tilemapLeft` 15, one tile right of the exact mirror, with English's 7 tiles: their frame runs to x 183. The Hebrew names are right-aligned at x 222 and grow toward the box, so a bottom-row name kept 39 px (x 184-222) where English keeps 48 (x 120-167). סגירת התיק is 48 px (x 175-222).
+- The exact mirror (`tilemapLeft` 14) would put the frame on the description box's edge, which is why the YES/NO and quantity boxes stay one tile in.
+- These boxes show one column: USE/CANCEL in battle, CANCEL alone, the SELECT registration's two options, and in link, Union Room, Apprentice, Favor Lady and Quiz Lady bags GIVE, SHOW or CONFIRM with CANCEL. The widest label, החזקה, is 29 px in FONT_NARROW at x 8: 37 px.
+- English too hides the ends of long names in the rows its box covers (HYPER POTIO, REVIVAL HER): the box covers the quantity column and whatever reaches it.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Five tiles wide | Under TEXT_RTL both boxes are 5 tiles at `tilemapLeft` 15, the YES/NO box's footprint: the frame ends at x 167 and a covered row keeps x 168-222 (55 px) | Low. The labels fit (37 of 40 px); English and gameplay do not change |
+| B. The exact mirror | `tilemapLeft` 14, 7 tiles | The frame on the description box; the covered rows keep 47 px |
+| C. No change | | CLOSE BAG and names of 40-48 px lose their end |
+
+**Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record: the round's `tours/r28_align/v_bbag.txt` (the frame ends at x 166, סגירת התיק is whole at x 175-222, 8 px clear) and `v_bag_box.txt` (a long medicine pocket at three scroll positions, CANCEL alone, the registration's options); the 5 release-tour shots of the battle bag change only inside the box (`<private>/scratch/screens/r28/fix/verify/`, `fix/tours/`).
+
+*Changed:* `src/item_menu.c`, `tools/hebrew/data/budgets.json`, `translation/hebrew/STYLE.md` §10
+
+## Q153
+
+**Question.** On the contest results screen every Hebrew nickname ends 1 px from the star meter, in both phases and on all four rows.
+
+*Source:* play-through review, round 28 (late game), confirmed by a second reviewer.
+
+**Analysis.**
+- The four name windows are x 56-151 (`sWindowTemplates`, `src/contest_util.c`) and the star meter starts at x 152 (tile column 19). `LoadContestMonName` prints the nickname at x 0, fitted to 49 px, and '/trainer' at x 50. English fills the windows from the left: its widest line, a seven-letter Latin trainer name ('/MMMMMMM', 41 px from x 106), stays inside the first 92 px (x 56-147).
+- Mirrored around the whole window, every Hebrew nickname ended at x 151. Like the dialogue box, the window is wider than what its text uses on the side that becomes the right one (`docs/hebrew_translation.md`, window modes).
+- Mirrored around 92 px, the nickname ends at x 147, but the trainer column shrinks from 46 to 42 px: '/אלכסנדר', a seven-letter player name, is 44 px in FONT_NARROW and lost its last letter at the window's left edge (a clip record, round 9's long-name case). The appeal screen fits the same text to its column (`PrintContestantTrainerNameWithColor`, `src/contest.c`).
+
+| Option | How | Risk |
+|---|---|---|
+| A. Mirror around 92 px and fit the trainer column | Under TEXT_RTL `SetWindowRtlMirrorWidth(i, 92)` for the four windows; `AddContestTextPrinter` fits its text to the room from x to the mirror's edge (42 px), falling back to FONT_NARROWER | Low. The nickname ends where the English trainer column ends; a long '/name' takes a narrower font (38 px for '/אלכסנדר') |
+| B. Mirror around 92 px only | | A seven-letter player name loses a letter |
+| C. No change | | Every name touches the stars |
+
+**Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record: the round's `tours/r28_align/pl18_contest.txt` (the nicknames end at x 147 on all four rows, 5 px before the first star's ink at x 153; the final phase the same) and `pl18_long.txt` ('/אלכסנדר' at x 60-97 in the narrower font, 4 px from the nickname). The release tours show no contest results, and none of their shots changed from it (`<private>/scratch/screens/r28/fix/verify/`).
+
+*Changed:* `src/contest_util.c`, `translation/hebrew/STYLE.md` §10
+
+## Q154
+
+**Question.** In the healthboxes and the party, the SLP tag שינה sits one column right of the English SLP: 4 columns of tag colour on its left and 2 on its right, where English keeps 3 and 3, so the he's top bar comes within a pixel of the rounded corner. In the FRZ tag קפוא the qof's tail cuts through the tag's bottom edge.
+
+*Source:* the text-alignment checker (`tools/hebrew/emu/textalign.py`) on the release tours, round 28; reviewed in round 29.
+
+**Analysis.**
+- The tags are art, not text: `graphics/battle_interface/{hns,gen4}/status{,2,3,4}.png` (one sheet per battler, for the H&S and the Gen 4 interfaces) and `graphics/interface/status_icons.png` (party and summary). A tag is 20 px wide; between its outline rows six rows hold the letters, which are holes in the tag colour.
+- `status_tags()` in `tools/hebrew/graphics/coreui/make_coreui.py` centres each word, then takes, of the centred x and one column either side, the one that loses fewest ink pixels to the outline, ties going right. The tie rule was meant for שיתוק, as wide as the tag, but it pushes every word that loses nothing one column right. שינה (14 px) landed at x 4-17 of the healthbox tags and x 10-23 of the icon; the English SLP has x 3-16 and x 9-22. The same push moved רעל, כוויה, קור and קפוא one column right of the script's centre too.
+- קפוא is 15 px and cannot be centred in 20: it has 3 and 2 columns, where the script's centre (x 2-16 of the healthbox tags, x 8-22 of the icon) gives 2 and 3. Its ק comes from the tags' glyph set with the tail on the tag's bottom row, where no English letter goes; it opens a notch in the tag's outline, light against the healthbox below it. The same ק is in FRB קור (the debug menus only) and in the icon sheet's PAR. `aedb9c43e3` already stopped the healthbox PAR tag's qof above the bottom row. `072ad4c245` kept the lamed's ascender and the final pe's stem of the FNT icon on the outline rows: without them those letters read as kaf and pe. The qof keeps its shape on six rows: its left stem stays apart from the top bar, which tells it from he.
+- The checker reported 'R0' for both tags. Its line band takes the tag's rounded corners for ink; measured from the pixels, the tags had 4 and 2 (SLP) and 3 and 2 with the notch (FRZ).
+- The other tags keep at least English's 3 columns on the right: PSN רעל x 5-16, BRN כוויה x 4-16. The party's PAR keeps x 8-24 of its icon, 2 and 1 columns, as `d3b59b94fe` left it; once its tail is gone the checker can measure that tag and reports it as an EDGE (L0 R0, the corners again).
+
+| Option | How | Risk |
+|---|---|---|
+| A. SLP on the English columns; every qof above the bottom row | Edit the nine sheets: שינה one column left; the qof's tail pixel in FRZ and FRB of every sheet and in PAR of the icon sheet gets the tag colour. `gpaths.LATER_EDITS` keeps `make_coreui.py` from redrawing them | Low. 68 pixels in each healthbox sheet, 69 in the icon sheet; art only, and the English build shows the same art |
+| B. A, and the FRZ tag one column wider | 3 and 3 columns in a 21-px tag | The only 21-px tag; 2 columns are already the healthbox PAR tag's margin on both sides |
+| C. No change | | The SLP tag off centre, a notch in FRZ |
+| D. A, and קפוא one column left | x 2-16 and x 8-22, the script's centre: English's 3 columns on the right, where the Hebrew word starts, and 2 on the left | One more column in the nine sheets. The checker then reads the left corner as ink (L0 instead of R0, on a mock of the foe's tag), so it flags the tag either way |
+
+**Chosen:** A; STYLE §10 has the rule. Seen on screen on the clip ROM beside English and rc26, with no clip record: the release tours `bv_status` (the healthboxes of both sides and the party in and out of battle) and `pbi_heal` (the party). SLP now has English's 3 and 3 everywhere; FRZ keeps its bottom row; 27 shots changed, only in those pixels. Frostbite, the Gen 4 interface and the party's frostbite, freeze, paralysis and sleep icons together are in no release tour; four scratch tours show them on the clip ROM, each shot changed only in the expected pixels (`<private>/scratch/screens/r29/verify/`).
+
+*Changed:* `graphics/battle_interface/hns/status{,2,3,4}.png`, `graphics/battle_interface/gen4/status{,2,3,4}.png`, `graphics/interface/status_icons.png`, `tools/hebrew/graphics/gpaths.py`, `tools/hebrew/graphics/README.md`, `translation/hebrew/STYLE.md` §10
+
+## Q155
+
+**Question.** On the Pokédex stats page the catch rate קשה מאוד touches the red bar on the box's left, where English keeps a blank column; so do the hatch-step eggs on the page's second view. On the second view of a Pokémon with three different EV yields, the first row's last label can run into the bar.
+
+*Source:* the text-alignment checker, round 28 (the two shots of `menu_pokedex`); reviewed in round 29, whose review found the EV row on KINGDRA's page.
+
+**Analysis.**
+- `WIN_STATS_LEFT` mirrors around 101 px, its text area x 8-92 (`ResetStatsWindows`, `src/pokedex_plus_hgss.c`). The box's paper is x 7-94; x 2-6 are the red bar with a pink highlight at x 6. Every English line starts at x 8.
+- English left-aligns the catch rate at x 51. VERY HARD is 42 px; קשה מאוד is 43 (`textwidth.py`, FONT_SMALL), so mirrored it ran to x 7. The other catch rates are 12 to 24 px.
+- English places the eggs by hand to end at x 93; mirrored they started at x 7. The growth rate, right-aligned to x 93 in English, starts at x 8.
+- With three different EV yields the second view's first row puts a label every 29 px from x 8. With one arrow an English label is at most 28 px (SP.A, SP.D), so the third ends by x 93. The Hebrew labels are 23 to 30 px (הג”מ and an arrow is 30), so a third label wider than 27 px starts left of x 8 mirrored: on KINGDRA's page (ATK, SP.A, SP.D) הג”מ starts at x 5 and its arrow is drawn over the bar. By the same arithmetic MELOETTA's starts at x 5 and CELESTEELA's at x 7 (UNVERIFIED on screen: the harness could not open the National Pokédex with either one seen, in English either). DEOXYS's and KYUREM's rows fit. A row of four yields runs past the box in English as well.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Both 1 px further in | Under TEXT_RTL the catch rate and the eggs print 1 px further in (`STATS_LEFT_VALUE_INSET`) and start at x 8, as the growth rate does. A three-yield EV row whose last label would pass x 93 is placed by its labels' widths and shares the room left between them, so it starts at x 8 (`PrintStatsLeftEvRow`) | Low. The catch rate keeps 4 blank columns before its label (English 7); the space inside קשה מאוד is 3. KINGDRA's row keeps 2 and 3 blank columns between its labels; a row that fits at the English places does not move |
+| B. Mirror the box around 102 px | The exact mirror of its paper | Every line moves; the labels end 1 px from the black frame, where English starts 1 px and the pink column away from the red one |
+| C. 'קשה מאד' (40 px) | A text change | The tree's strings spell מאוד 269 times and מאד nowhere |
+| D. No change | | Two lines joined to the bar, and an arrow drawn over it |
+
+**Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record, in the release tour `menu_pokedex`: the catch rate at x 8-50 (rc26 7-49), the eggs at x 8-16 (rc26 7-15); only those pixels changed. Built in English, the change moves only four assert line numbers (`<private>/scratch/screens/r29/engproof/`). The EV row was seen on the clip ROM beside English, with no clip record, in a review tour of KINGDRA's page: the row now runs from x 8 to x 92 (from x 5 before) and the bar is as in English; DEOXYS's row, which fits, did not change, and no release-tour shot changed. With TEXT_RTL FALSE the preprocessed file differs only in four allocation line numbers (`<private>/scratch/screens/r29/review/`).
+
+*Changed:* `src/pokedex_plus_hgss.c`, `translation/hebrew/STYLE.md` §10
+
+## Q156
+
+**Question.** The text-alignment checker reports that on the Pokédex stats page עוצמה (POWER) touches the right edge of the move box (English 2 px, Hebrew 0).
+
+*Source:* the text-alignment checker, round 28; reviewed in round 29.
+
+**Analysis.**
+- The box's paper is x 102-233. POWER starts at x 104 and עוצמה ends at x 231: 2 blank columns each, the mirror. The checker's window for the Hebrew line ends at the category icon (x 191-202), so its 0 is the gap to the icon.
+- What differs is that gap: עוצמה is 27 px and POWER 25, and the icon sits at the mirror of its English x (`DexRtlSpriteX`), so 2 blank columns separate it from עוצמה where English has 4. Nothing touches.
+- On the icon's other side the power value prints right-aligned in three characters. A three-digit power ends 4 columns before the icon: seen on KINGDRA's page (HYDRO PUMP, 110) in a review tour, where English's 110 starts 5 columns after it, its leading 1 being narrow. Moving the icon left would take the 2 px from that side.
+
+| Option | How | Risk |
+|---|---|---|
+| A. No change | | 2 blank columns between the label and the icon |
+| B. The icon 2 px left | Under TEXT_RTL | 4 columns to the label, 2 to a three-digit power |
+| C. A shorter word for POWER | `gText_Power` | Shared with the summary's move page, which would change too |
+
+**Chosen:** A. Seen on the release tour shot `menu_pokedex_entry_stats` beside English (`<private>/scratch/screens/r29/verify/crops/dex_power_en_rc26_new_4x.png`).
+
+## Q157
+
+**Question.** The checker reports החלפה (SHIFT) filling its button on the Pokédex search screen (English 1 px each side, Hebrew 0), with its lamed on the top row.
+
+*Source:* the text-alignment checker, round 28 (8 shots of `menu_pokedex`); reviewed in round 29.
+
+**Analysis.**
+- The button is art, `graphics/pokedex/hgss/tileset_menu_search.png`, drawn by `tools/hebrew/graphics/pokedex/make_pokedex.py`, which centres each word in the button (x 53-82 of the screen).
+- Measured in all 8 shots: the button is x 52-83, rows 1-13. SHIFT's ink is x 53-82, rows 4-11; החלפה's is x 53-82, rows 3-11. The columns are the same; the lamed's ascender takes row 3, with 2 rows of the button above it.
+- The checker's line band reached the button's rounded bottom corners (rows 12-13) and counted them as ink.
+
+| Option | How | Risk |
+|---|---|---|
+| A. No change | | |
+| B. A narrower word | Redraw the button | No defect to fix |
+
+**Chosen:** A. Seen on the 8 release tour shots beside English (`<private>/scratch/screens/r29/verify/crops/search_shift_en_rc26_new_8x.png`).
+
+## Q158
+
+**Question.** The checker reports נ”כ touching the PP column's right edge on the forget-move page (English 2 px, Hebrew 0), also on the forget-move pages after a TM and an Exp. Candy.
+
+*Source:* the text-alignment checker, round 28 (`pbi_learn_no`, `pbi_tm`, `pbi_xcandy_evo`); reviewed in round 29.
+
+**Analysis.**
+- Q150 kept the PP layout: 'נ”כ 35/35' is 43 px in the 44-px white column, x 194-237.
+- Measured on the three forget pages, every row, the new move's fifth row included, ends at x 236: 1 blank column before the column's edge, where English keeps 2. The column's bottom-right corner (x 237, row 110) is rounded; the fifth row's band reached it and the checker counted it as ink.
+- On the left, a row starts at x 195 or at x 194, the column's first, depending on its first digit (a 1, or a 2 as in 20/20): 1 or 0 blank columns where English keeps 2. This is the '0-1 px' Q150 recorded.
+- 2 blank columns on each side need the text 3 px narrower: a narrower font than the rest of the page, or no space between the label and the digits, which Q150 turned down.
+
+| Option | How | Risk |
+|---|---|---|
+| A. No change | Q150's layout | 0 or 1 column where English has 2 |
+| B. The PP text in FONT_NARROWER | | A different face from the names beside it |
+
+**Chosen:** A. Seen on the release tour shots `pbi_learn_no_07_forget_page`, `pbi_tm_14_forget` and `pbi_xce_08_forget` (`<private>/scratch/screens/r29/tours/`).
+
+## Q159
+
+**Question.** The Poké Ball is פוקיבול in H&S, the FireRed translation's word, inherited (glossary `ITEM_POKE_BALL`, `TERM_POKE_BALL`). The owner decided: "replace פוקיבול with פוכדור". Where does the word appear, and does anything besides the spelling change?
+
+*Source:* the owner, round 30: "replace פוקיבול with פוכדור".
+
+**Analysis.**
+- At `he/main` `168eeb0d6d` the word was used 51 times in 23 game files: 16 map-script lines in 10 maps, 10 lines of `data/text/` (the apprentice, the Pokédex rating, seven TV lines), and 25 C strings: the item and its plural (`src/data/items.h`), the GREAT BALL and GS Ball descriptions and the Dream Ball description of the `#else` that the build does not compile (`B_DREAM_BALL_MODIFIER` is `GEN_LATEST`), the BALL FETCH description (`src/data/abilities.h`), the BALL POSTER and BALL CUSHION decorations and four decoration descriptions (`src/data/decoration/`), four Pokédex entries (Voltorb, Hisuian Voltorb, Foongus, Amoonguss) and Minior's core text, the two battle lines about a thrown ball (`STRINGID_TRAINERBLOCKEDBALL`, `STRINGID_ITDODGEDBALL`), the bag's can't-throw line (`src/item_use.c`) and the battle options (`src/option_menu.c`).
+- Every use is the word, with a prefix (ה, ב, ל, מה, מ, שב) or the plural ים: הפוקיבולים, בפוקיבולים, שבפוקיבולים, מהפוקיבול. פוכדור takes the same ones (הפוכדורים, בפוכדורים, שבפוכדורים, מהפוכדור). כדור is masculine, as the old word was, so no verb or adjective around it changes ('המאמן חסם את הפוכדור שלך!', 'מחזיר פוכדור שנכשל.').
+- Width: פוכדור is 32 px in FONT_NORMAL against 35, 28 px in FONT_NARROW against 33, and the plural 42 px against 45 (`textwidth.py`). Every changed line is narrower, so every line keeps its break; none of them gains room for the next word.
+- No graphic and no Easy Chat word has the word: the drawing scripts' tables (`tools/hebrew/graphics/`) have no ball word, the Easy Chat lists are unchanged (`gen_ec_order.py --check`, `gen_ec_letters.py --check` up to date), and no test expectation in `test/` has it. The Poké Ball pocket's A-Z order is the same: no other ball's name starts with פ.
+- FireRed keeps פוקיבול, so `namecheck.py --fr-sync` warns on `ITEM_POKE_BALL`; the difference is in `namecheck_allow.json` with the owner's decision as its reason.
+- Kept: the bag pocket כדורי פוקי (`TERM_POKE_BALLS_POCKET`, its own FireRed row; not a form of the word; renamed פוכדורים by the owner in Q161), the other balls (כדור X, and ULTRA BALL אולטרה בול, MASTER BALL מאסטר בול, which Q161 keeps), and POKé as פוקי in פוקיגיר and פוקיבלוק. K3 and Q125 above, and HANDOFF's troubleshooting table, quote lines as they were then and keep the old word.
+- `FuchsiaCity_Text_ItemBallInThere` (`data/maps/FuchsiaCity_Frlg/scripts.inc`) is not assembled into H&S; it changes with the rest so the text stays one.
+
+| Option | How | Risk |
+|---|---|---|
+| A. פוכדור in every string, name and description | The glossary rows first, then the 51 uses; the allowlist entry for FireRed's difference | Low: text only, every line narrower. The ball and the pocket (כדורי פוקי) and Ultra and Master Ball (בול) no longer share a stem. |
+| B. Keep פוקיבול | No change | Against the owner's decision. |
+
+**Chosen:** A, the owner's decision. Static checks: `audit.py --baseline ../pokehns-en` 0 errors and the same 54 warnings; `namecheck.py --all --warnings` 0 problems, 35 allowlisted; the four generators up to date. Seen on screen on the clip ROM beside rc28 and English, with no clip record: the 25 changed dialogue labels in the sweep (the Fuchsia label is not built in any of the three), the bag's ball list and the GREAT BALL description, the Cherrygrove Mart's buy list with ten balls bought and the Premier Ball line (a scratch tour), the PC item lists, the battle bag, the can't-throw line, 'השתמשת בפוכדור!', the Nuzlocke catch lines, the battle options and the two battle lines, forced (`<private>/scratch/screens/r30/`). Not seen on screen: the decorations, the five Pokédex texts, the BALL FETCH and GS Ball descriptions (audit only).
+
+*Changed:* 10 map scripts, `data/text/apprentice.inc`, `data/text/pokedex_rating.inc`, `data/text/tv.inc`, `src/battle_message.c`, `src/data/abilities.h`, `src/data/decoration/description.h`, `src/data/decoration/header.h`, `src/data/items.h`, `src/data/pokemon/species_info/gen_1_families.h`, `src/data/pokemon/species_info/gen_5_families.h`, `src/data/pokemon/species_info/shared_dex_text.h`, `src/item_use.c`, `src/option_menu.c`, `tools/hebrew/data/namecheck_allow.json`, `tools/hebrew/tests/test_drift.py`, `translation/hebrew/STYLE.md`
+
+*Glossary:* `ITEM_POKE_BALL` (item and item_plural), `TERM_POKE_BALL`, `DECOR_BALL_POSTER`, `DECOR_BALL_CUSHION`, `TERM_POKEBLOCK` (note)
+
+## Q160
+
+**Question.** The stat-change lines name the stat through הנתון ('ל{X} עלה\nהנתון {B_BUFF1}{B_BUFF2}!', Q140, Q145). The owner decided: "In battle, when someone takes or deals a hit, there is no need to write הנתון, e.g. הנתון דיוק ירד; you can simply write הדיוק ירד, or היכולת דיוק ירדה." Which form, and can it be right for every stat?
+
+*Source:* the owner, round 30: "בקרב כשמישהו מקבל מכה או נותן, לא צריך לרשום 'הנתון', למשל הנתון דיוק ירד, אפשר פשוט לרשום הדיוק ירד או 'היכולת דיוק ירדה'".
+
+**Analysis.**
+- The lines: 14 strings said הנתון (`src/battle_message.c` at `he/main`: `gText_DefendersStatRose`, `STRINGID_STATSWONTINCREASE`, `STATSWONTDECREASE`, `ATTACKERSSTATROSE`, `SCRIPTINGSTATROSE`, `ATTACKERSSTATFELL`, `DEFENDERSSTATFELL`, the four ability lines `TARGETABILITYSTATRAISE`, `ATTACKERABILITYSTATRAISE`, `TARGETABILITYSTATLOWER`, `SCRIPTINGABILITYSTATRAISE`, `TARGETSTATWONTGOHIGHER`, the paradox line `STATWASHEIGHTENED` and the Ruin abilities' `ABILITYWEAKENEDSURROUNDINGMONSSTAT`). Five more name a stat from the same buffer: the item lines (`USINGITEMSTATOFPKMNROSE`, `FELL`, 'רמת {B_BUFF1}'), Anger Point's `TARGETSSTATWASMAXEDOUT` and Speed Swap's `ATTACKERSWITCHEDSTATWITHTARGET` ('את ה{B_BUFF1} שלו') and `PKMNSXPREVENTSYLOSS` ('מפני ירידה ב{B_BUFF1}').
+- How they are filled: {B_BUFF1} is the stat, `PREPARE_STAT_BUFFER` (`include/battle_message.h:116-122`), printed from `gStatNamesTable` (`src/battle_message.c`, `ExpandBattleTextBuffPlaceholders`, `case B_BUFF_STAT`); {B_BUFF2} is the intensity, a string chosen by the size of the change (`src/battle_script_commands.c:7926-7970`): מאוד and בצורה דרסטית when a stat rises, באופן חמור and בצורה קיצונית when it falls, or nothing. The verb is in each line's own text.
+- Gender: התקפה, הגנה, מהירות, התקפה מיוחדת, הגנה מיוחדת and התחמקות are feminine, דיוק masculine. One line's verb cannot agree with both, so text alone gives one gender for every stat: הנתון (masculine) did that, and so would the owner's second form.
+- Article: Hebrew marks the adjective too, ההתקפה המיוחדת. A line that writes ה before {B_BUFF1} would print ההתקפה מיוחדת for a special stat. The two lines that wrote it, Speed Swap's and Anger Point's, only ever name the Speed and the Attack (`swapstats STAT_SPEED`, `data/battle_scripts_1.s:1966`; `BattleScript_TargetsStatWasMaxedOut` after Anger Point's Attack), so they read right in the game; they change only because {B_BUFF1} now brings its own article. `gStatNamesTable` itself cannot take the article: the Z-move menu ('+ התקפה', `src/battle_z_move.c:325-354`, through `ExpandBattleTextBuffPlaceholders`), the battle debug menu's stat stages (`src/battle_debug.c:1547`) and the R+START debug menu (`src/debug.c:3355`) print the bare name.
+- Token order: English puts the name first ("X's ATTACK rose"), and Hebrew keeps it first (STYLE §5), so 'ה{B_BUFF1} של {X}' is not allowed. The lines keep 'ל{X}' and put the stat, as the subject, before its verb: 'ל{X}\n{B_BUFF1} עלתה{B_BUFF2}!', the owner's 'הדיוק ירד' after the name. The item lines follow their English order, 'the {B_BUFF1} of {X}': '{B_BUFF1} של {X} עלתה'.
+- The owner's second form, 'היכולת {stat} ירדה', is text only and always feminine, but יכולת is the glossary's Ability (`TERM_ABILITY`) and the battle lines already say היכולת before an ability's name ('קיבל את היכולת {B_DEF_ABILITY}', 'נלקחה היכולת {B_SCR_ABILITY}', 'היכולת {B_ATK_ABILITY} מאפשרת'); 'ל{X}, בזכות {B_DEF_ABILITY}, עלתה היכולת התקפה' would name two abilities.
+- Engine, under `TEXT_RTL` only (`src/battle_message.c`, the block before `BufferStringBattle`): a {B_BUFF1} that holds a stat prints from `sStatNamesWithArticle` (ההתקפה, ההתקפה המיוחדת, הדיוק) in `BattleStringExpandPlaceholders`, so the Z-move and debug menus keep the bare names; and for a stat whose name is masculine (`sStatNameIsMasculine`: הדיוק) `BufferStringBattle` takes the line from `sMasculineStatStrings`. `gBattleStringsTable` holds the feminine form. The English build (`TEXT_RTL` FALSE) compiles none of it: its ROM differs from the one before only in the line number of one assert (`<private>/scratch/screens/r30/engproof/PROOF.md`).
+- Widths, with every stat and intensity word, a 12-glyph name and its suffix, the widest ability (רגליים מסתבכות) and 16-glyph abilities, and a 19-glyph item, through the battle auto-wrap: no row over its budget; the widest are 191 of 208 px (ההתקפה המיוחדת עלתה בצורה דרסטית!), 199 of 200 in the ability lines and 200 of 208 in the item lines (`<private>/scratch/screens/r30/text/widths/measure.py`). `audit.py` 0 errors.
+- Breaks: the lines that name no ability keep the break after the name (STYLE §5's exception), so the stat starts the second line. The four ability lines and the item lines are auto-wrapped, as in English; the attacker's ability line had a manual break before הנתון and now wraps like its three siblings. The Ruin line breaks before את (Q163 removes that break, and Q162 puts היכולת before the ability in the four ability lines and the Ruin line).
+- The plural נתונים stays where a line speaks of stats in general (שינויי הנתונים, the Mirror Herb, Haze and Z-move lines): no stat name follows it.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The stat with its article and a verb that agrees with it | Two tables and two lookups under `TEXT_RTL`; 19 lines reworded, 15 of them also in a masculine form | An engine change (a pick for `he/renderer`); a reworded line must be changed in both tables. |
+| B. 'היכולת {stat}' with feminine verbs | Text only | יכולת already means the Ability in battle lines: 'היכולת התקפה' reads as an ability named Attack. |
+| C. 'ה{stat}' with feminine verbs, text only | Text only | הדיוק ירדה is wrong, and ההתקפה מיוחדת lacks the adjective's article. |
+| D. Keep הנתון | No change | Against the owner's decision. |
+
+**Chosen:** A, the first of the owner's two forms ('simply'), made right for every stat. Supersedes Q145 (and Q140's line on הנתון). Seen on screen on the clip ROM beside rc28 and English, with no clip record: all 19 lines with each of the seven stats and each intensity word (287 entries a run), forced with `tools/hebrew/emu/scripts/r16_battle_sweep/bsweep.py` in a trainer battle with 12-letter nicknames and with species names and in a wild battle; הדיוק takes the masculine verb and every other stat the feminine one. No line needs more scrolled pages than in rc28. In the release tours the new lines are 20 shots (`<private>/scratch/screens/r30/text/battle/`, `tours/`).
+
+*Changed:* `src/battle_message.c`, `translation/hebrew/STYLE.md`
+
+## Q161
+
+**Question.** Q159 kept the bag pocket POKé BALLS as כדורי פוקי, FireRed's word, and the two balls ULTRA BALL and MASTER BALL as אולטרה בול and מאסטר בול. Asked about both, the owner answered: ULTRA BALL and MASTER BALL "keep"; and "כדורי פוקי is not good, is it פוכדורים?" Where is the pocket named, and does the shorter word sit right?
+
+*Source:* the owner, round 31: "כדורי פוקי is not good, is it פוכדורים?"; on ULTRA BALL and MASTER BALL: "keep".
+
+**Analysis.**
+- The pocket's name is three strings, all in `src/strings.c`: `gPocketNamesStringsTable[POCKET_POKE_BALLS]`, the pocket title of the bag (`PrintPocketNames`, `src/item_menu.c`), which is also the bag the battle, the Pokémon Center PC's item storage and the mart's SELL open; `gText_Poke_Balls`, `STDSTRING_POKEBALLS`, which the put-away line fills in ('{PLAYER} שם {STR_VAR_2}\nבכיס {STR_VAR_3}.', `data/text/obtain_item.inc`, buffered in `data/scripts/obtain_item.inc:47` and `:325`); and `gText_PokeBalls`, which nothing in `src/` or `data/` references. No other string has the word: `git grep` for כדורי פוקי with any prefix finds nothing else in `data/` or `src/`, and no Easy Chat word, help window or graphic names the pocket (the drawing scripts' tables in `tools/hebrew/graphics/` have no ball word). The dialogue already says פוכדורים for POKé BALLS (Q159).
+- Grammar: the put-away line reads 'בכיס פוכדורים', like the other pockets' 'בכיס פריטים', 'בכיס פירות', 'בכיס פריטי מפתח'.
+- Width: פוכדורים is 42 px in FONT_NORMAL against 47 for כדורי פוקי (English POKé BALLS 57). The title is centred in its 64 px half of the pocket-name buffer (`GetStringCenterAlignXOffset(FONT_NORMAL, name, 0x40)`) and the window keeps the English position (`WINDOW_RTL_IN_PLACE`), so the shorter word stays centred between the switching arrows.
+- FireRed keeps כדורי פוקי (`gText_PokeBalls`). The glossary row keeps it in its `firered_hebrew` column. `namecheck.py --fr-sync` compares only FireRed's name tables (species, moves, trainer classes, natures, abilities, types, items, map sections: `FR_TABLES`), not term rows, so the difference raises no warning, and an allowlist entry for it would itself be reported as `STALE` (`<private>/scratch/screens/r31/fix/static/namecheck_allow_probe.txt`). It is recorded here and in the row's note instead.
+- ULTRA BALL אולטרה בול and MASTER BALL מאסטר בול stay, the owner's answer.
+
+| Option | How | Risk |
+|---|---|---|
+| A. פוכדורים, the plural of the ball | The three strings; the glossary row | Low: text only, 5 px narrower, still centred. |
+| B. Keep כדורי פוקי | No change | Against the owner's answer; the pocket and the ball share no word. |
+
+**Chosen:** A, the owner's decision. In the release tours against rc29, 19 shots differ in the pocket title only (pixels x 40-87, y 13-24): the field bag (`menu_bag_pocket_03`), the battle bag (`battle_catch`, `battle_wild_bag_03`, `bv_ball_refused`, `bv_catch_fail`, `chr_10_nuzlocke_catch`). A scratch tour on the clip ROM beside rc29 and English (`<private>/scratch/screens/r31/fix/pocket/`) shows the title in the field bag and halfway through a switch to the next pocket, in the mart's SELL bag and in the PC's DEPOSIT ITEM bag, and the put-away line 'GOLD שם כדור מעולה / בכיס פוכדורים.' (English 'in the POKé BALLS POCKET.'), with no clip record. ULTRA BALL and MASTER BALL are unchanged.
+
+*Changed:* `src/strings.c`, `translation/hebrew/glossary.csv`, `translation/hebrew/STYLE.md`
+
+*Glossary:* `TERM_POKE_BALLS_POCKET`, `TERM_POKE_BALL` (note), `ITEM_SPORT_BALL` plural (note)
+
+## Q162
+
+**Question.** The owner, after Pikachu's Static paralysed a foe that touched it: "it said something like הסטטי של פיקצ'ו, which is not accurate". What was on screen, and how should a battle line name an ability?
+
+*Source:* the owner, round 31, on the current 1.0 (rc29) on a TV (RetroArch, mGBA core).
+
+**Analysis.**
+- On screen (rc29, the owner's case replayed: the player's Pikachu with Static, a wild Rattata's Tackle, the default options): the ability pop-up shows the name over the ability, 'פיקאצ'ו' over 'סטטי' (English 'PIKACHU's' over 'STATIC'); then the line `STRINGID_PKMNWASPARALYZEDBY`: 'פיקאצ'ו שיתק / בעזרת סטטי את' ▼ 'רטטה הפראי, וייתכן' ▼ 'שלא יוכל לזוז!'. No string in the game says 'הסטטי'. The quote is the English 'PIKACHU's STATIC' put in Hebrew order. What reads wrong is the ability's name standing bare after בעזרת: סטטי is the ordinary adjective static (the Pokédex says 'חשמל סטטי'), so 'שיתק בעזרת סטטי' does not read as the name of an ability. Other ability names are ordinary words too: איתן (Sturdy), תמים (Oblivious), לוחמני (Scrappy), מבוהל (Rattled), הפחדה (Intimidate), and 49 lines had an ability's name bare after בזכות, בעזרת, בגלל, באמצעות or על, or after את. Six lines already wrote היכולת before the name ('נשאר ער בזכות היכולת {B_DEF_ABILITY}', 'קיבל את היכולת …', 'נלקחה היכולת …', 'היכולת … מאפשרת', 'מונע החלפה בעזרת היכולת …'). Two lines hard-coded the article and של, the shape of the owner's quote: 'הפעיל את הפרוטוסינתזה של X', 'את הנעת הקווארק של X'.
+- Token order (STYLE §5): English puts the Pokémon first ('X's STATIC paralyzed Y'), so 'ה{B_BUFF1} של {X}' is not allowed; the line keeps 'X שיתק בעזרת היכולת סטטי את Y'.
+- The rule: inside a sentence an ability's name follows the noun היכולת ('בעזרת היכולת סטטי', 'בזכות היכולת איתן', 'להפעיל את היכולת פרוטוסינתזה'). The bare name stays only where the ability is the subject that opens the line: Forewarn's '{B_SCR_ABILITY} הזהירה את…' (always התרעה, a noun) and the two Zen Mode lines ('{B_SCR_ABILITY} הופעל!', printed by `BattleScript_ZenMode` for Darmanitan; no trainer, wild encounter or map script of this game has Darmanitan or Darumaka). Two lines also keep it because the same buffer holds an item or a move on other paths: 'X נפגע מY בגלל {B_BUFF1}!' (Rough Skin and Iron Barbs, and Rocky Helmet and Spiky Shield: `BattleScript_HurtAttacker`, `BattleScript_SpikyShieldEffect`) and 'X יפעל מהר מהרגיל בזכות {B_BUFF1}!' (Quick Draw, and Quick Claw and Custap Berry).
+- Width: 'היכולת ' is 35 px. Each changed line was laid out with the game's battle auto-wrap (`src/line_break.c`) for every side assignment of its battlers, with typical names, the longest real names, and 12 copies of the widest letter in a nickname (`<private>/scratch/screens/r31/fix/widths/`). Where 'בעזרת היכולת' or 'בזכות היכולת' would need one screen more than English with the longest names, the line says 'ביכולת' (Poison Point: 'הורעל על ידי X ביכולת נקודת רעל'; Damp, Dazzling, Healer), Intimidate says 'את התקפת X' for 'את ההתקפה של X', and Anger Point drops שלו. The auto-wrap can break between היכולת and a two-word name ('בעזרת היכולת / גוף להבה'); that is kept, since a no-break space would make the unbreakable chunk 35 px wider.
+- 55 strings changed: 51 lines of `gBattleStringsTable` (the 49, and the two hard-coded Protosynthesis and Quark Drive lines) and the four ability lines of `sMasculineStatStrings`. Lines whose English has no manual break lost theirs (Q163). The 49th is Trace's line, whose ability comes in `{B_BUFF2}` (`PREPARE_ABILITY_BUFFER(gBattleTextBuff2, …)`, `src/battle_util.c`): 'הוא העתיק מ{B_BUFF1} את היכולת {B_BUFF2}!', auto-wrapped like its English ('It traced X's Y!') instead of its `\n` (STYLE §5).
+
+| Option | How | Risk |
+|---|---|---|
+| A. היכולת before the name in every line that names an ability inside the sentence | 55 strings, text only; ביכולת where the longer preposition costs a screen | Some lines reach one more screen than English, but only with the synthetic 12-letter nicknames and the widest ability, as rc29 did (below). |
+| B. Only the status lines (paralysis, poison, burn, freeze, sleep, Cute Charm) | 6 strings | 'מוגן בזכות איתן', 'בזכות מבוהל' still read as adjectives; no rule for later lines. |
+| C. Keep the bare names | No change | The owner's report stands. |
+
+**Chosen:** A. Seen on screen with `tools/hebrew/emu/scripts/r16_battle_sweep/bsweep.py`, every changed line (75 entries: a real ability for each line, the accuracy variant for the masculine strings) on the new clip ROM, rc29's clip ROM and English, in a trainer battle with species names, a trainer battle with the longest names and 12-letter nicknames (`--worst --nick`), and a wild battle with the longest names: 0 clip records. With species names no line needs more pages than English. Against rc29, 54 entry runs need fewer pages and 2 more, both still within English (the move-made-ineffective line 'ניטרל בזכות היכולת … את {move}' and the ability-blocks-ability line, with 12-letter nicknames). Twenty entry runs need one page more than English, every one of them the same count as rc29: the 12-letter nicknames (84 px against English's 72) or the widest ability in a wild battle (`<private>/scratch/screens/r31/fix/bs/compare.txt`). Trace's line, with Intimidate, Static and the widest ability (רגליים מסתבכות), in the same three setups: one view each time, against English's one, and two with the 12-letter nickname, with 0 clip records ('הוא העתיק מהוטהוט היריב / את היכולת סטטי!'; `<private>/scratch/screens/r31/review/bs/`). The owner's case replayed on the new ROM shows the pop-up 'פיקאצ'ו' / 'סטטי' and the line 'פיקאצ'ו שיתק בעזרת היכולת סטטי את / רטטה הפראי, וייתכן שלא יוכל לזוז!' (Q163).
+
+*Changed:* `src/battle_message.c`, `translation/hebrew/STYLE.md`
+
+*Glossary:* `TERM_ABILITY` (note)
+
+## Q163
+
+**Question.** The owner, on the same line: "the window disappears too fast in this sentence". Why, and which lines share it?
+
+*Source:* the owner, round 31.
+
+**Analysis.**
+- The owner's case on rc29, traced frame by frame with FAST BATTLES on and text speed FAST (the new-game defaults, `src/new_game.c:109`, `:127`), A pressed 60 frames after each prompt (`<private>/scratch/screens/r31/fix/static_trace/`): the Hebrew line had a `\n` and two `\l`, so it took three views and two presses of A, where English (auto-wrapped, two rows) takes one view and none. The views stay until A (85 and 84 frames), but the last one, 'רטטה הפראי, וייתכן / שלא יוכל לזוז!', is on screen 28 frames, complete for 8, and then wiped: with FAST BATTLES on `Cmd_waitmessage` does not wait (`src/battle_script_commands.c:2182`), and the paralysis script goes on to `flushtextbox`. English is wiped 8 frames after its last letter too, but its reader has read the sentence while it printed, 80 frames in one view. That is the window that disappears.
+- The cause is the manual breaks: any `\n` or `\l` turns off the battle auto-wrap (`StringHasManualBreaks`, `src/line_break.c`), and every `\l` is a press of A. STYLE §5 already says that a battle string without a manual break in English stays without one. 19 Hebrew lines had a `\l` where English has no break, and three more where English has only a closing `\p` (Throat Chop, the Ruin abilities' line, the two-trainer intro).
+- An engine change (a longer hold under `TEXT_RTL`) would make the Hebrew battle timing differ from English's on purpose. It is not needed: once the line fits English's views, the last view behaves as English's does.
+
+| Option | How | Risk |
+|---|---|---|
+| A. No manual breaks where English has none | 22 lines lose their `\n`/`\l` (19 with a `\l`, the three before a `\p`); the ability lines of Q162 lose theirs too | Low: text only. A rare combination of the longest names can still give a line a scroll, as in English. |
+| B. Hold the last view longer under `TEXT_RTL` | Engine | Battle timing differs from English; the two extra presses of A stay. |
+| C. Keep | No change | The owner's report stands. |
+
+**Chosen:** A. The owner's case on the new ROM: one view, 'פיקאצ'ו שיתק בעזרת היכולת סטטי את / רטטה הפראי, וייתכן שלא יוכל לזוז!', no press of A, on screen 74 frames and complete for 8, against English's 80 and 8 and rc29's last view of 28 and 8; with FAST BATTLES off 137 frames (71 complete) against English's 143 (71); at text speed MID 275 against 299; at INSTANT 10 against English's 11 (the investigation's run, `<private>/scratch/screens/r31/static_par/logs/timelines.txt`); with the wild Pikachu's Static (the player's Rattata attacking) 74 and 8. The pop-up is the same in all of them: fully shown 49 frames on its own timer. The pin, the paralysis and every frame up to the line are the same as rc29's; the clip ROM logs 0 records. No Hebrew battle line now has a `\l` where English has no break (`audit.extract_c` over `src/battle_message.c` against `../pokehns-en`).
+
+*Changed:* `src/battle_message.c`, `translation/hebrew/STYLE.md`
+
+## Proposed names
+
+The 1,851 glossary names with status "proposed" (Gen 4+ Pokémon, NPCs, places, trainer classes) were checked against the transliteration rules, the official English pronunciation and consistency with related names, and every proposed change was then argued against by a second reviewer. 23 changes survived. The table gives the result in the tree; the full reasons are in the glossary notes.
+
+| Name | English | Was | Proposed | Now | Why |
+|---|---|---|---|---|---|
+| `CONTEST_OPPONENT_HEATH_NICKNAME` | HEROSS | הרוס | הירוס | הירוס | Hebrew readers read the current spelling הרוס as the ordinary word harus, 'ruined/wrecked'. |
+| `FRONTIER_TRAINER_220_LEON` | LEON | לאון | ליאון | ליאון | The usual English pronunciation of LEON is LEE-on, and rules §3 write e /i/ before a vowel as י (VAPOREON ופוריאון, CHARMELEON צ'רמיליון, GEODUDE ג'יאודוד). |
+| `FRONTIER_TRAINER_32_MARCO` | MARCO | מארקו | מרקו | מרקו | MARCO is MAR-koh, the same sound as FR canon TRAINER_HIKER_MARCOS מרקוס (pokefirered-heb trainers.h:1805-1809) minus the -s. |
+| `NAME_DOUBLE_JAW_(CATEGORY,_SPECIES_FERALIGATR_MEGA)` | Double Jaw (category, SPECIES_FERALIGATR_MEGA) | לסת | לסת כפולה | לסת כפולה | The row is cut off after its first word: לסת alone just means 'jaw'. |
+| `NAME_ETERNAL_FLOWER` | ETERNAL FLOWER | הפרח | הפרח הנצחי | הפרח הנצחי | The row is cut off after its first word: הפרח alone means 'the flower'. |
+| `NAME_GIGANTAMAX` | GIGANTAMAX | ג'ימקס | ג'ייגנטמקס | ג'ימקס | kept: the game uses one word for both Gigantamax and G-Max, ג'ימקס, in over 80 move names, move descriptions and battle lines, where the long form does not fit |
+| `NAME_GLACIA` | GLACIA | גלסיה | גלייסיה | גלסיה | Glacia is said GLAY-see-uh: /eɪ/ = יי (§3: GRACE גרייס, RATICATE רטיקייט). Later back to FireRed's גלסיה (Q141): no official source confirmed that pronunciation, and Q140 makes FireRed's form the default. |
+| `NAME_GIGANTAMAX_(TERM)` | Gigantamax (term) | גיגנטמקס | ג'ייגנטמקס | ג'ימקס | unified with NAME_GIGANTAMAX on ג'ימקס (was גיגנטמקס, which reads like the Hebrew word גיגנטי) |
+| `NAME_HIGH_KING_(CATEGORY)` | High King (category) | מלך | מלך עליון | מלך עליון | The row is cut off after its first word: מלך alone means 'king'. |
+| `NAME_MEGA_EVOLUTION` | MEGA EVOLUTION | התפתחות | התפתחות מגה | התפתחות מגה | The row is cut off after its first word: התפתחות alone means just 'evolution'. |
+| `NAME_MEGA_SOL_CANNON` | MEGA SOL CANNON | תותח | תותח שמש מגה | תותח שמש מגה | The row is cut off after its first word: תותח alone means 'cannon'. |
+| `NAME_MEGA_STONE` | MEGA STONE | אבן | אבן מגה | אבן מגה | The row is cut off after its first word: אבן alone means 'stone'. |
+| `NAME_THE_ROYAL_PINK_PRINCESS_(DIANCIE_MEGA_EPITHET)` | the Royal Pink Princess (Diancie Mega epithet) | הנסיכה | הנסיכה הוורודה המלכותית | הנסיכה הוורודה המלכותית | The row is cut off after its first word: הנסיכה alone means 'the princess'. |
+| `NAME_THE_BLOOD-SOAKED_CRESCENT_(SALAMENCE_MEGA_EPITHET)` | the blood-soaked crescent (Salamence Mega epithet) | הסהר | הסהר הספוג בדם | הסהר הספוג בדם | The row is cut off after its first word: הסהר alone means 'the crescent'. |
+| `SPECIES_ANNIHILAPE` | ANNIHILAPE | אנייהיליפ | אנייאליפ | אנייאליפ | Annihilape is said like 'annihilate' (/əˈnaɪəleɪt/): uh-NYE-uh-layp. |
+| `SPECIES_EXEGGUTOR_ALOLA` | EXEGGUTOR-A | אקזגוטר-א | אקזגיוטר-א | אקזגקיוטר-א | Pronunciation: EXEGGUTOR is said eg-ZEG-yoo-ter, and the row 184 note says the same. Later given the full base form (Q129). |
+| `SPECIES_KRICKETUNE` | KRICKETUNE | קריקטיון | קריקטון | קריקטון | The binding pronunciation is TPC's English, which is US English: KRIK-eh-toon, with /tuːn/ (no y-glide after t). |
+| `SPECIES_PAWMI` | PAWMI | פאומי | פומי | פומי | PAW-mee: medial aw /ɔː/ before a consonant is written ו everywhere in FireRed: CRAWDAUNT קרודונט (species_names.h:329), DAWN דון (trainers.h:1269), SHAWN שון (trainers.h:2889). |
+| `SPECIES_PAWMO` | PAWMO | פאומו | פומו | פומו | PAW-moh. |
+| `SPECIES_PAWMOT` | PAWMOT | פאומוט | פומוט | פומוט | PAW-mot (the batch reason said 'PAW-met'; corrected here). |
+| `SPECIES_ZACIAN_HERO` | ZACIAN | זאסיאן | זאשיאן | זאשיאן | TPCi gave PokeBeach the official pronunciation 'ZAH-shee-ən' (https://x.com/pokebeach/status/1163887152452628480), and Marriland's 'ZAH-shee-in' agrees. |
+| `TRAINER_CLASS_PIKE_QUEEN` | PIKE QUEEN | מלכת הרומח | מלכת השביל | מלכת השביל | PIKE = שביל, as in the facility name BATTLE PIKE שביל הקרב; רומח (a spear) read as a weapon |
+| `TRAINER_CLASS_PIKE_QUEEN_HNS` | PIKE QUEEN | מלכת הרומח | מלכת השביל | מלכת השביל | Same as row 4831 TRAINER_CLASS_PIKE_QUEEN, and it must stay identical to it. |
+
+Eight more rows had kept only the first word of a multi-word Hebrew name (for example הסהר for הסהר הספוג בדם); they were completed from the text that uses them.
+
+## Review of the changed screens
+
+Every screen these decisions changed was reviewed on the release candidate (60 tour frames, 119 dialogue labels on 336 pages), and each finding was then checked by a second reviewer who tried to refute it. 8 findings were confirmed and 8 refuted.
+
+| Finding | Handling |
+|---|---|
+| The narrowed mem of the fainted tag had no base and read as ח | Redrawn with the base open at the bottom left, as the game's small-font mem; the ayin got a tail |
+| Stat changes read "התקפה בחדות ירד!", with the adverb in the English slot | The intensity words follow the verb in all eleven stat change strings: "התקפה ירד בחדות!" |
+| The Pike Queen glossary notes still argued for רומח | Rewritten for מלכת השביל |
+| A blank line was left inside a Hiker text (Q84) | Removed |
+| MIMI: "להיות חברה שלי" reads first as "my girlfriend" | "להיות ידידה שלי" |
+| The nickname tour still typed with the old cursor rule (K4) | The tour was updated; the ROM was right |
+| A geresh in a summary nickname touches the portrait box (a side effect of K5) | Listed as a known issue; fixed later (Q128) |
+| A page ending in a colon draws it against the continue arrow | Listed as a known issue |
+

@@ -1,0 +1,60 @@
+# Emy, Blackthorn City house 2 (2,4, wanders): INGAME_TRADE_MR_MIME (src/data/trade.h:1171-1185), Mr. Mime 'Mimian' OT Riley for Dodrio
+# (data/maps/BlackthornCity_House2_hns/scripts.inc:4-48).
+# Talk: NO (decline line); YES + the trade box + a wrong Pokemon (party slot 0, Typhlosion);
+# YES + the trade box + Dodrio (party slot 4) + the trade scene + the
+# take-care line; talk again (trade-completed line). Then the party menu and the summary of the
+# received Pokemon (INFO, then every page with RIGHT).
+start saves/r5_trades_base.sav
+include _setup.txt
+
+warpto MAP_BLACKTHORN_CITY_HOUSE2_HNS 4 6
+approachnpc 1
+tap A 4
+fieldwatch emy_ask menu 6000
+pick 1
+fieldwatch emy_decline free 3000
+approachnpc 1
+tap A 4
+fieldwatch emy_ask2 menu 6000
+pick 0
+include _pickparty.txt
+snap emy_box
+boxpick 1 0 emy_wrong_typhlosion
+waitcb2x CB2_Overworld 900
+fieldwatch emy_wrong free 3000
+approachnpc 1
+tap A 4
+fieldwatch emy_ask3 menu 6000
+pick 0
+include _pickparty.txt
+snap emy_box3
+boxpick 1 4 emy_pick_dodrio
+waitcb2x CB2_InGameTrade 900
+scenewatch emy_scene CB2_Overworld 6000 0 160 A 150
+waitcb2x CB2_Overworld 900
+fieldwatch emy_takecare free 3000
+approachnpc 1
+tap A 4
+fieldwatch emy_completed free 3000
+
+# --- the party and the received Pokemon's summary (slot 4)
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 4 DOWN
+snap emy_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap emy_party_action
+tap A 4
+waitcb2x pokemon_summary_screen:MainCB2 900
+sumwait
+snap emy_sum_info
+sumkey RIGHT
+snap emy_sum_p2
+sumkey RIGHT
+snap emy_sum_p3
+sumkey RIGHT
+snap emy_sum_p4

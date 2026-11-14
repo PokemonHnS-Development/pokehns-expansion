@@ -1,0 +1,4 @@
+# chooseboxmon SELECT_PC_MON_TRADE: the PC box opens; wait until it reads input
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900

@@ -1,0 +1,150 @@
+# Route 34 Day Care with two Pokemon: the woman takes Pikachu and a Ditto, the man reports
+# on them and offers the Egg (NO twice: he keeps it; YES: received the Egg), two eggs hatch
+# (Togepi: nickname NO; the Day-Care Egg: nickname YES and the naming screen), then the
+# woman's take-back: the level menu (names + gender + Lv, EXIT), B, the cost YES/NO (NO,
+# then YES), "take the other one back too?" YES with a full party.
+start saves/r1svc_menuA_base.sav
+include ../continue.txt
+ev givemon SPECIES_DITTO, 20; end
+# party: Typhlosion, Pikachu, Ampharos, Gyarados, Togepi Egg, Ditto
+
+# --- deposit Pikachu, then Ditto
+warpto MAP_ROUTE34_DAY_CARE_HNS 3 7
+face DOWN
+talk svc_dc_woman 10
+tap A 0
+talk svc_dc_which 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 0
+waitcb2x CB2_Overworld 900
+talk svc_dc_given 10 -
+tap A 0                                  # raise one more? YES
+talk svc_dc_which2 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+seek 8 @gPartyMenu+9@ 4 DOWN             # Ditto
+snap svc_dc_party2
+tap A 0
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 0
+waitcb2x CB2_Overworld 900
+talk svc_dc_given2 10 -
+waitctl 900
+
+# --- the man outside: two Pokemon, then the Egg
+warpto MAP_ROUTE34_HNS 30 34
+face RIGHT
+talk svc_dcman_two 10
+waitctl 900
+dbg 3 8
+waitctl 600 B
+face RIGHT
+talk svc_dcman_egg 10
+tap B 0                                  # NO
+talk svc_dcman_keep 10 -
+tap B 0                                  # NO again: he keeps it
+talk svc_dcman_kept 10 -
+waitctl 900
+dbg 3 8
+waitctl 600 B
+face RIGHT
+talk svc_dcman_egg2 10
+tap A 0                                  # YES
+talk svc_dcman_recv 10 -
+waitctl 900
+# party: Typhlosion, Ampharos, Gyarados, Togepi Egg, Day-Care Egg
+
+# --- hatch the Togepi egg (slot 4): Oh?, the scene, nickname NO
+evstart setvar VAR_0x8004, 3; goto EventScript_EggHatch
+talk svc_hatch1_oh 5 -
+waitcb2x egg_hatch:CB2_EggHatch 900
+burst svc_hatch1_anim 40 8
+waitpmem 8 egg_hatch:sEggHatchData 2 6 900
+12 -
+snap svc_hatch1_hatched
+waitpmem 8 egg_hatch:sEggHatchData 2 10 900
+waitquiet
+12 -
+snap svc_hatch1_nickname
+tap B 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+
+# --- hatch the Day-Care Egg (slot 5): nickname YES, the naming screen
+evstart setvar VAR_0x8004, 4; goto EventScript_EggHatch
+talk svc_hatch2_oh 5 -
+waitcb2x egg_hatch:CB2_EggHatch 900
+waitpmem 8 egg_hatch:sEggHatchData 2 6 900
+12 -
+snap svc_hatch2_hatched
+waitpmem 8 egg_hatch:sEggHatchData 2 10 900
+waitquiet
+12 -
+snap svc_hatch2_nickname
+tap A 0
+waitcb2x CB2_NamingScreen 900
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 900
+snap svc_hatch2_naming_01
+press A
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 300
+press RIGHT
+press A
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 300
+snap svc_hatch2_naming_02_typed
+press START
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 300
+press A
+waitcb2x CB2_Overworld 900
+waitctl 900
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+snap svc_hatch_party
+press B
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+
+# --- the woman: take back. Level menu, B; level menu, cost NO; level menu, cost YES
+warpto MAP_ROUTE34_DAY_CARE_HNS 3 7
+face DOWN
+talk svc_dcw_back 10
+tap A 0                                  # take your Pokemon back? YES
+waittaskx daycare:Task_HandleDaycareLevelMenuInput 600
+waitquiet
+snap svc_dcw_level_01
+press DOWN
+snap svc_dcw_level_02
+press DOWN
+snap svc_dcw_level_03_exit
+press B
+talk svc_dcw_exit 10 -
+waitctl 900
+face DOWN
+talk svc_dcw_back2 10
+tap A 0
+waittaskx daycare:Task_HandleDaycareLevelMenuInput 600
+waitquiet
+tap A 0                                  # the first one
+talk svc_dcw_cost 10 -
+tap B 0                                  # NO
+talk svc_dcw_cost_no 10 -
+waitctl 900
+face DOWN
+talk svc_dcw_back3 10
+tap A 0
+waittaskx daycare:Task_HandleDaycareLevelMenuInput 600
+waitquiet
+press DOWN
+tap A 0                                  # the second one
+talk svc_dcw_cost2 10 -
+tap A 0                                  # YES
+talk svc_dcw_took 10 -
+tap A 0                                  # the other one too? YES (party full)
+talk svc_dcw_full 10 -
+waitctl 900

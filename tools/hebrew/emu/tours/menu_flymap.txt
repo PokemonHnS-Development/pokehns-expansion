@@ -1,0 +1,48 @@
+# Fly map (src/region_map.c CB2_OpenFlyMap, opened with the debug menu's Utilities >
+# Fly to map, src/debug.c:1470): the cursor on several cities with their names, then
+# fly to Goldenrod: the flight and the map-name pop-up on arrival. Input is read while
+# sFlyMap->callback == CB_HandleFlyMapInput (+0) and its state (+4) is 0; the cursor
+# moves on a fixed timer.
+start save:menuA_base
+include ../scripts/continue.txt
+
+dbg 0 0
+waitcb2x region_map:CB2_FlyMap 900
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 900
+waitquiet
+snap menu_flymap_01_cherrygrove_city
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+waitquiet
+snap menu_flymap_02_new_bark_town
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+waitquiet
+snap menu_flymap_03_violet_city
+tap UP 20
+tap UP 20
+tap DOWN 20
+tap DOWN 20
+tap LEFT 20
+tap LEFT 20
+tap DOWN 20
+tap DOWN 20
+waitquiet
+snap menu_flymap_04_goldenrod_city
+tap A 0                                   # fly there
+waitcb2x CB2_Overworld 1200
+waitctl 1200
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap menu_flymap_05_arrived

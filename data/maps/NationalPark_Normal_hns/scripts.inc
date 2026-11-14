@@ -67,44 +67,45 @@ NationalPark_Normal_EventScript_Persian::
 
 
 NationalPark_Normal_Text_Lass:
-	.string "Look! Check out my bag!\p"
-	.string "I printed out my favorites from my\n"
-	.string "POKéDEX and stuck them on my bag.$"
+	.string "תראה! תסתכל על התיק שלי!\p"
+	.string "הדפסתי את האהובים עליי מהפוקדקס\n"
+	.string "והדבקתי אותם על התיק שלי.$"
 
 NationalPark_Normal_Text_PokefanF:
 	.string "This is MAIL I got from my daughter.\n"
 	.string "It cheers me up.$"
 
 NationalPark_Normal_Text_Teacher1:
-	.string "Pay attention, please!\p"
-	.string "…Oops, I have to quit thinking like\n"
-	.string "a teacher all the time.\p"
-	.string "You must be a POKéMON trainer.\p"
-	.string "Since you're working so hard, I\n"
-	.string "want you to have this.$"
+	.string "שימו לב, בבקשה!\p"
+	.string "…אופס, אני חייבת להפסיק לחשוב\n"
+	.string "כמו מורה כל הזמן.\p"
+	.string "אתה בטח מאמן פוקימונים.\p"
+	.string "מכיוון שאתה מתאמץ כל כך,\n"
+	.string "אני רוצה לתת לך את זה.$"
 
 NationalPark_Normal_Text_Teacher1_QuickClaw:
-	.string "Let a POKéMON hold that QUICK CLAW.\p"
-	.string "Sometimes it will strike first\n"
-	.string "during battle.$"
+	.string "כדאי לתת לפוקימון להחזיק\n"
+	.string "את הטופר המהיר.\p"
+	.string "לפעמים הוא יתקוף ראשון\n"
+	.string "בקרב.$"
 
 NationalPark_Normal_Text_Youngster1:
-	.string "I'm playing with stickers I printed\n"
-	.string "from my POKéDEX.$"
+	.string "אני משחק במדבקות שהדפסתי\n"
+	.string "מהפוקדקס שלי.$"
 
 NationalPark_Normal_Text_Youngster2:
-	.string "I get the other guy's POKéDEX sticker\n"
-	.string "if I win.$"
+	.string "אם אנצח, אקבל את מדבקת הפוקדקס\n"
+	.string "של הבחור השני.$"
 
 NationalPark_Normal_Text_Teacher2:
-	.string "I take walks in the PARK, but I\n"
-	.string "never go into the grass.\p"
-	.string "Trainers always want to battle…\p"
-	.string "You must have been in many battles.\n"
-	.string "Let me heal your POKéMON for you.$"
+	.string "אני מטיילת בפארק,\n"
+	.string "אבל אף פעם לא נכנסת לעשב.\p"
+	.string "מאמנים תמיד רוצים להילחם…\p"
+	.string "בטח השתתפת בהרבה קרבות.\n"
+	.string "אני ארפא לך את הפוקימונים.$"
 
 NationalPark_Normal_Text_Persian:
-	.string "PERSIAN: Fufushaa!$"
+	.string "פרסיאן: פופושאא!$"
 
 NationalPark_Normal_EventScript_Jack::
 	trainerbattle_single TRAINER_JACK_HNS, NationalPark_Normal_Text_SchoolboyJack1_Seen, NationalPark_Normal_Text_SchoolboyJack1_Beaten, NationalPark_Normal_EventScript_RegisterJack
@@ -178,73 +179,76 @@ NationalPark_Normal_EventScript_Item_Soothe_Bell::
 	end
 
 NationalPark_Normal_Text_SchoolboyJack1_Seen:
-	.string "The world of POKéMON is deep.\p"
-	.string "There are still lots of things we\n"
-	.string "don't know.\p"
-	.string "But I know more than you do!$"
+	.string "עולם הפוקימונים עמוק.\p"
+	.string "יש עוד הרבה דברים\n"
+	.string "שאנחנו לא יודעים.\p"
+	.string "אבל אני יודע יותר ממך!$"
 
 NationalPark_Normal_Text_SchoolboyJack1_Beaten:
-	.string "Wha-wha-what?$"
+	.string "מ-מ-מה?$"
 
 NationalPark_Normal_Text_SchoolboyJack_After:
-	.string "There is a lot to learn.\p"
-	.string "For example…\p"
-	.string "There are 92 kinds of TMs.\p"
-	.string "Traded POKéMON level up faster.$"
+	.string "יש הרבה מה ללמוד.\p"
+	.string "למשל…\p"
+	.string "יש 92 סוגים של מ”מ.\p"
+	.string "פוקימונים שהתקבלו בהחלפה\n"
+	.string "עולים רמה מהר יותר.$"
 
 NationalPark_Normal_Text_JackRegister:
-	.string "There is a lot to learn.\p"
-	.string "For example…\p"
-	.string "There are 92 kinds of TMs.\p"
-	.string "Traded POKéMON level up faster.$"
+	.string "יש הרבה מה ללמוד.\p"
+	.string "למשל…\p"
+	.string "יש 92 סוגים של מ”מ.\p"
+	.string "פוקימונים שהתקבלו בהחלפה\n"
+	.string "עולים רמה מהר יותר.$"
 
 NationalPark_Normal_Text_JackRematchIntro:
-	.string "I've learned a lot since we\n"
-	.string "last battled! Let's go!$"
+	.string "למדתי הרבה מאז\n"
+	.string "הקרב האחרון שלנו! קדימה!$"
 
 NationalPark_Normal_Text_JackRematchDefeat:
-	.string "Wha-wha-what?$"
+	.string "מ-מ-מה?$"
 
 NationalPark_Normal_Text_JackPostRematch:
-	.string "There is a lot to learn.\p"
-	.string "For example…\p"
-	.string "There are 92 kinds of TMs.\p"
-	.string "Traded POKéMON level up faster.$"
+	.string "יש הרבה מה ללמוד.\p"
+	.string "למשל…\p"
+	.string "יש 92 סוגים של מ”מ.\p"
+	.string "פוקימונים שהתקבלו בהחלפה\n"
+	.string "עולים רמה מהר יותר.$"
 
 NationalPark_Normal_Text_PokefanFBeverly1_Seen:
-	.string "My POKéMON are simply darling.\p"
-	.string "Let me tell you how proud my\n"
-	.string "darlings make me.$"
+	.string "הפוקימונים שלי פשוט מקסימים.\p"
+	.string "אספר לך כמה אני גאה\n"
+	.string "במותקים שלי.$"
 
 NationalPark_Normal_Text_PokefanFBeverly1_Beaten:
-	.string "I can beat you in pride, but…$"
+	.string "בגאווה אני מנצחת אותך, אבל…$"
 
 NationalPark_Normal_Text_PokefanFBeverly_After:
-	.string "I must say, your POKéMON are quite\n"
-	.string "cute, too.$"
+	.string "אני חייבת לומר,\n"
+	.string "גם הפוקימונים שלך די חמודים.$"
 
 NationalPark_Normal_Text_PokefanmWilliam_Seen:
-	.string "We adore our POKéMON, even if they\n"
-	.string "dislike us.\p"
-	.string "That's what being a FAN is about.$"
+	.string "אנחנו מעריצים את הפוקימונים שלנו,\n"
+	.string "גם אם הם לא אוהבים אותנו.\p"
+	.string "זה כל העניין בלהיות פוקיפאן.$"
 
 NationalPark_Normal_Text_PokefanmWilliam_Beaten:
-	.string "M-my POKéMON!$"
+	.string "ה-הפוקימונים שלי!$"
 
 NationalPark_Normal_Text_PokefanmWilliam_After:
-	.string "I lost the battle, but my POKéMON win\n"
-	.string "the prize for being most lovely.$"
+	.string "הפסדתי בקרב, אבל הפוקימונים שלי\n"
+	.string "זוכים בפרס על היותם הכי מקסימים.$"
 
 NationalPark_Normal_Text_LassKrise_Seen:
-	.string "Hello? Why are you staring at me?\p"
-	.string "Oh, a battle?$"
+	.string "הלו? למה אתה בוהה בי?\p"
+	.string "אה, קרב?$"
 
 NationalPark_Normal_Text_LassKrise_Beaten:
-	.string "…Hmmm…$"
+	.string "…הממ…$"
 
 NationalPark_Normal_Text_LassKrise_After:
-	.string "I thought you were staring at me\n"
-	.string "because I'm cute!$"
+	.string "חשבתי שאתה בוהה בי\n"
+	.string "כי אני חמודה!$"
 
 NationalPark_Normal_Text_Sign_RelaxationSquare:
 	.string "RELAXATION SQUARE\n"
@@ -261,19 +265,19 @@ NationalPark_Normal_Text_TrainerTips:
 	.string "pressing START.$"
 
 NationalPark_Normal_Text_BeverlyRegister:
-	.string "I must say, your POKéMON are quite\n"
-	.string "cute, too.$"
+	.string "אני חייבת לומר,\n"
+	.string "גם הפוקימונים שלך די חמודים.$"
 
 NationalPark_Normal_Text_BeverlyHasItem:
-	.string "Oh, hello! I have something\n"
-	.string "for you.\p"
-	.string "Please take it as a token of\n"
-	.string "my appreciation!$"
+	.string "אה, שלום! יש לי משהו\n"
+	.string "בשבילך.\p"
+	.string "בבקשה, קבל את זה\n"
+	.string "כאות הוקרה ממני!$"
 
 NationalPark_Normal_Text_BeverlyGaveItem:
-	.string "My darling POKéMON and I will\n"
-	.string "be cheering for you!$"
+	.string "אני והפוקימונים המתוקים שלי\n"
+	.string "נעודד אותך!$"
 
 NationalPark_Normal_Text_BeverlyNoRoom:
-	.string "Hmm, your BAG is full.\p"
-	.string "Come back when you have room.$"
+	.string "הממ, התיק שלך מלא.\p"
+	.string "תחזור כשיהיה לך מקום.$"

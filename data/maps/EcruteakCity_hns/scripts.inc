@@ -118,30 +118,26 @@ EcruteakCity_Movement_Silver2:
 	step_end
 
 EcruteakCity_Text_Silver1:
-	.string "THUD!!$"
+	.string "טראח!!$"
 
 EcruteakCity_Text_Silver2:
-	.string "{RIVAL}: How...? How is this\n"
-	.string "possible? How can I lose to mere\l"
-	.string "KIMONO GIRLS...?$"
+	.string "{RIVAL}: איך…? איך זה ייתכן?\n"
+	.string "איך אני יכול להפסיד לסתם נערות קימונו…?$"
 
 EcruteakCity_Text_Silver3:
-	.string "{RIVAL}: You were watching me,\n"
-	.string "{PLAYER}...\p"
-	.string "Yeah, that's right!\p"
-	.string "I never thought defeating five\n"
-	.string "KIMONO GIRLS would be so hard...\p"
-	.string "I got beaten to a pulp...\p"
-	.string "...\p"
-	.string "You must have come here for the\n"
-	.string "same reason, right?\p"
-	.string "Don't get cocky just because you\n"
-	.string "defeated TEAM ROCKET!\p"
-	.string "These KIMONO GIRLS are insanely\n"
-	.string "strong.\p"
-	.string "See if you can defeat them.\p"
-	.string "But I'm not going back, I don't\n"
-	.string "want to see you win.$"
+	.string "{RIVAL}: הסתכלת עליי, {PLAYER}…\p"
+	.string "כן, זה נכון!\p"
+	.string "לא חשבתי שלנצח חמש נערות קימונו\n"
+	.string "יהיה כל כך קשה…\p"
+	.string "ריסקו אותי לגמרי…\p"
+	.string "…\p"
+	.string "בטח באת לכאן מאותה סיבה, נכון?\p"
+	.string "אל תתחיל להשוויץ רק בגלל\n"
+	.string "שניצחת את צוות רוקט!\p"
+	.string "נערות הקימונו האלה חזקות בטירוף.\p"
+	.string "נראה אם תצליח לנצח אותן.\p"
+	.string "אבל אני לא חוזר לשם,\n"
+	.string "אין לי חשק לראות אותך מנצח.$"
 
 EcruteakCity_EventScript_Gramps::
 	lock
@@ -281,10 +277,10 @@ EcruteakCity_EventScript_Item_RareCandy::
 	end
 
 EcruteakCity_Text_Eevee:
-	.string "EEVEE: Veee!$"
+	.string "איווי: וייי!$"
 
 EcruteakCity_Text_Vulpix:
-	.string "VULPIX: Vullll Pix!$"
+	.string "וולפיקס: ווללל פיקס!$"
 
 
 EcruteakCity_Text_UnusedMissingDaughter:
@@ -297,68 +293,60 @@ EcruteakCity_Text_UnusedMissingDaughter:
 	.string "Oh, what should I do…?$"
 
 EcruteakCity_Text_Gramps1:
-	.string "ECRUTEAK used to have two towers:\n"
-	.string "one each in the east and west.$"
+	.string "פעם היו באקרוטיק שני מגדלים:\n"
+	.string "אחד במזרח ואחד במערב.$"
 
 EcruteakCity_Text_Gramps2:
-	.string "Ah, child. Have you learned to\n"
-	.string "dance like the KIMONO GIRLS?\p"
-	.string "If you go to their DANCE THEATER,\n"
-	.string "an odd old man will give you\l"
-	.string "something nice, I hear.$"
+	.string "אה, ילד. למדת לרקוד כמו נערות הקימונו?\p"
+	.string "שמעתי שאם תלך לתיאטרון המחול שלהן,\n"
+	.string "זקן מוזר אחד ייתן לך משהו נחמד.$"
 
 EcruteakCity_Text_Lass1:
-	.string "I'm going to practice at the DANCE\n"
-	.string "THEATER. Care to join me?$"
+	.string "אני הולכת להתאמן בתיאטרון המחול.\n"
+	.string "רוצה להצטרף אליי?$"
 
 EcruteakCity_Text_Lass2:
-	.string "The tower that used to be here…\p"
-	.string "My grandma told me it used to be\n"
-	.string "much taller.\p"
-	.string "I hear there are ghosts in it now.$"
+	.string "המגדל שעמד פה פעם…\p"
+	.string "סבתא שלי סיפרה לי שפעם\n"
+	.string "הוא היה הרבה יותר גבוה.\p"
+	.string "שמעתי שעכשיו יש בו רוחות רפאים.$"
 
 EcruteakCity_Text_Lass2_ReleasedBeasts:
-	.string "Three big POKéMON ran off in different\n"
-	.string "directions. What were they?$"
+	.string "שלושה פוקימונים גדולים ברחו\n"
+	.string "לכיוונים שונים. מי הם היו?$"
 
 EcruteakCity_Text_Fisher:
-	.string "I heard a rumor about OLIVINE\n"
-	.string "LIGHTHOUSE.\p"
-	.string "The POKéMON that serves as the\n"
-	.string "beacon fell ill. Sounds like they\l"
-	.string "are in trouble.$"
+	.string "שמעתי שמועה על מגדלור אוליבין.\p"
+	.string "הפוקימון שמשמש כאור של\n"
+	.string "המגדלור חלה. נשמע שהם בצרה.$"
 
 EcruteakCity_Text_Fisher_JasmineReturned:
-	.string "The POKéMON at OLIVINE LIGHTHOUSE\n"
-	.string "has been cured.\p"
-	.string "Boats can safely sail out to sea at\n"
-	.string "night again.$"
+	.string "הפוקימון במגדלור אוליבין החלים.\p"
+	.string "סירות יכולות שוב לצאת לים בבטחה בלילה.$"
 
 EcruteakCity_Text_Youngster:
-	.string "I hear POKéMON are rampaging at the\n"
-	.string "LAKE OF RAGE. I'd like to see that.$"
+	.string "שמעתי שפוקימונים משתוללים\n"
+	.string "באגם הזעם. הייתי רוצה לראות את זה.$"
 
 EcruteakCity_Text_Gramps3:
-	.string "In the distant past…\p"
-	.string "This tower burned in a fire. Three\n"
-	.string "nameless POKéMON perished in it.\p"
-	.string "A rainbow-colored POKéMON descended\n"
-	.string "from the sky and resurrected them…\p"
-	.string "It's a legend that has been passed\n"
-	.string "down by ECRUTEAK GYM LEADERS.\p"
-	.string "Me?\p"
-	.string "I was a trainer way back when.\n"
-	.string "Hohoho!$"
+	.string "בעבר הרחוק…\p"
+	.string "המגדל הזה נשרף באש. שלושה\n"
+	.string "פוקימונים חסרי שם נספו בתוכו.\p"
+	.string "פוקימון בצבעי הקשת ירד\n"
+	.string "מהשמיים והחזיר אותם לחיים…\p"
+	.string "זאת אגדה שמנהיגי מכון אקרוטיק\n"
+	.string "מעבירים מדור לדור.\p"
+	.string "אני?\p"
+	.string "הייתי מאמן פעם, לפני הרבה שנים. הוהוהו!$"
 
 EcruteakCity_Text_SageGym:
-	.string "Gym Leader MORTY is not here right\n"
-	.string "now. You may find him at the\l"
-	.string "BURNED TOWER.$"
+	.string "מנהיג המכון, מורטי, לא נמצא כאן כרגע.\n"
+	.string "אולי תמצא אותו במגדל השרוף.$"
 
 EcruteakCity_Text_Sign:
-	.string "ECRUTEAK CITY\n"
-	.string "A Historical City\p"
-	.string "Where the Past Meets the Present$"
+	.string "העיר אקרוטיק\n"
+	.string "עיר היסטורית\p"
+	.string "שבה העבר פוגש את ההווה$"
 
 EcruteakCity_Text_TinTowerSign:
 	.string "TIN TOWER\p"
@@ -366,19 +354,18 @@ EcruteakCity_Text_TinTowerSign:
 	.string "roost here.$"
 
 EcruteakCity_Text_OfficeSign:
-	.string "Barrier Station to TIN TOWER\p"
-	.string "No Trespassing by the Unworthy.$"
+	.string "עמדת מחסום למגדל הבדיל\p"
+	.string "הכניסה אסורה למי שאינו ראוי.$"
 
 EcruteakCity_Text_GymSign:
-	.string "ECRUTEAK CITY POKéMON GYM\n"
-	.string "LEADER: MORTY\p"
-	.string "The Mystic Seer of the Future$"
+	.string "מכון הפוקימון של העיר אקרוטיק\n"
+	.string "מנהיג: מורטי\p"
+	.string "חוזה העתיד המיסטי$"
 
 EcruteakCity_Text_DanceTheaterSign:
-	.string "ECRUTEAK DANCE THEATER$"
+	.string "תיאטרון המחול של אקרוטיק$"
 
 EcruteakCity_Text_BurnedTowerSign:
-	.string "BURNED TOWER\p"
-	.string "It was destroyed by a mysterious\n"
-	.string "fire.\p"
-	.string "Please stay away, as it is unsafe.$"
+	.string "המגדל השרוף\p"
+	.string "המגדל נהרס בשריפה מסתורית.\p"
+	.string "נא להתרחק, המקום אינו בטוח.$"

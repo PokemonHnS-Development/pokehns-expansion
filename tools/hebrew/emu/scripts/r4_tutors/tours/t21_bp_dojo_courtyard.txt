@@ -1,0 +1,47 @@
+# The same BP tutors (they goto the Lounge 7 scripts) at the Saffron Fighting Dojo VIP room and the
+# Trainer Hill courtyard: one teach each, to see the list, price, box, learned and BP-taken texts there.
+start saves/ladder6_postgame_copy.sav
+include _setup.txt
+setbp 200
+# Dojo VIP: right tutor (5,9) -> Mud-Slap (24) -> Golem
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 5 10
+face UP
+talk bpd1_intro 20 A ScrollableMultichoice_ProcessInput
+press DOWN
+press DOWN
+snap bpd1_list_mudslap
+tap A 0
+talk bpd1_confirm 10 -
+tap A 0
+talk bpd1_which 10 -
+include _pickparty.txt
+boxpick 1 1 bpd1_party_golem
+include _tofield.txt
+pages bpd1_learned 1
+talk bpd1_bptaken 10 -
+waitctl 900
+# Trainer Hill courtyard: left tutor (8,19) -> Body Slam (48) -> Golem
+warpto MAP_TRAINER_HILL_COURTYARD_HNS 9 19
+face LEFT
+talk bpc1_intro 20 A ScrollableMultichoice_ProcessInput
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap bpc1_list_bodyslam
+tap A 0
+talk bpc1_confirm 10 -
+tap A 0
+talk bpc1_which 10 -
+include _pickparty.txt
+boxpick 1 1 bpc1_party_golem
+include _tofield.txt
+pages bpc1_learned 1
+talk bpc1_bptaken 10 -
+waitctl 900
+face LEFT
+talk bpc2_intro 20 A ScrollableMultichoice_ProcessInput
+press B
+talk bpc2_exit 10 -
+waitctl 900

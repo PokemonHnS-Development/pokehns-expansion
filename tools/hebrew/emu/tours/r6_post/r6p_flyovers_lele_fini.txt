@@ -1,0 +1,18 @@
+# The Akala (Tapu Lele) and Poni (Tapu Fini) flyovers, which r5p_flyovers.txt did not trigger from
+# their coord triggers (AkalaIsle_hns (36|37,23), PoniIsle_hns (13|14,28)) under the harness: the
+# trigger scripts Alola_Akala_TapuLele_Flyover (AkalaIsle_hns/scripts.inc:327-341) and
+# Alola_Poni_TapuFini_Flyover (PoniIsle_hns/scripts.inc:245-) are started by hand on the trigger tile.
+# No text.
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev setflag FLAG_FLYOVER_TAPU_LELE; setflag FLAG_FLYOVER_TAPU_FINI; end
+warpto MAP_AKALA_ISLE_HNS 36 23
+snap lele_field
+evstart goto Alola_Akala_TapuLele_Flyover
+scene lele_fly 3000 12
+snap lele_end
+warpto MAP_PONI_ISLE_HNS 13 28
+snap fini_field
+evstart goto Alola_Poni_TapuFini_Flyover
+scene fini_fly 3000 12
+snap fini_end

@@ -1,0 +1,32 @@
+# Frontier Pass > MAP (frontier_pass.c PrintOnFrontierMap): the facility list with the cursor on
+# each name in turn.
+start saves/r2_bfp/base_postgame.sav
+include ../continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+startmenu PLAYER
+waittaskx Task_HandleFrontierPassInput 900
+waitquiet
+passarea MAP
+tap A 4
+waittaskx Task_HandleFrontierMap 600
+60 -
+waitquiet
+snap fm_00
+tap DOWN 4
+waitquiet
+snap fm_01
+tap DOWN 4
+waitquiet
+snap fm_02
+tap DOWN 4
+waitquiet
+snap fm_03
+tap DOWN 4
+waitquiet
+snap fm_04
+tap DOWN 4
+waitquiet
+snap fm_05
+tap DOWN 4
+waitquiet
+snap fm_06

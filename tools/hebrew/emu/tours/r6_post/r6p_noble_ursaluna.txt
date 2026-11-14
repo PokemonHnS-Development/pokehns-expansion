@@ -1,0 +1,21 @@
+# Noble Ursaluna, New Sinjoh hot springs: the trigger (52,30) at VAR_NOBLE_URSALUNA 1
+# (NewSinjoh_HotSprings_hns/scripts.inc:415-456), then NewSinjoh_HotSprings_EventScript_Ursaluna (:468-)
+# boss battle (_noble_battle.txt).
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev setvar VAR_NOBLE_URSALUNA, 1; setflag FLAG_HIDE_HOTSPRINGS_NOBLE_URSALUNA; end
+warpto MAP_NEWSINJOH_HOTSPRINGS_HNS 52 31
+face UP
+snap ur_field
+stepto UP 1
+scene ur_flute 3000
+snap ur_flute_menu
+tap A 4
+scene ur_scene 20000 45
+snap ur_scene_end
+objs
+approach 9
+snap ur_before
+tap A 4
+scene ur_pre 4000
+include _noble_battle.txt

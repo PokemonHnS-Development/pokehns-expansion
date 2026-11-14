@@ -104,60 +104,60 @@ LakeOfRage_House2_EventScript_FisherSatisfied::
 	end
 
 LakeOfRage_House2_Text_LakeHistory:
-    .string "LAKE OF RAGE is actually a crater\n"
-    .string "made by rampaging GYARADOS.\p"
-    .string "The crater filled up with rainwater\n"
-    .string "and the LAKE was formed.\p"
-    .string "That's the story passed on from my\n"
-    .string "Grandpa's great-great-grandpa.\p"
-    .string "It used to be that you could catch\n"
-    .string "lively MAGIKARP there, but…\p"
-    .string "I don't understand what's happening.$"
+    .string "אגם הזעם הוא בעצם מכתש\n"
+    .string "שיצרו גרידוס משתוללים.\p"
+    .string "המכתש התמלא במי גשם,\n"
+    .string "וכך נוצר האגם.\p"
+    .string "את הסיפור הזה סיפר\n"
+    .string "סבא-רבא-רבא של סבא שלי.\p"
+    .string "פעם אפשר היה לתפוס שם\n"
+    .string "מג'יקארפ מלאי חיים, אבל…\p"
+    .string "אני לא מבין מה קורה.$"
 
 LakeOfRage_House2_Text_MenInBlack:
-    .string "The LAKE hasn't been normal since\n"
-    .string "those men wearing black arrived.$"
+    .string "משהו לא בסדר באגם מאז שהגיעו\n"
+    .string "האנשים האלה בבגדים השחורים.$"
 
 LakeOfRage_House2_Text_LastMon:
-    .string "Well don't let me take your last\n"
-    .string "POKéMON!$"
+    .string "נו, אל תיתן לי לקחת את הפוקימון\n"
+    .string "האחרון שלך!$"
 
 LakeOfRage_House2_Text_WorldsLargest:
-    .string "LAKE OF RAGE is back to normal.\p"
-    .string "The MAGIKARP have returned.\p"
-    .string "I may yet realize my dream of own-\n"
-    .string "ing the world's largest MAGIKARP.\p"
-    .string "In fact... I'll pay you ¥2000 for\n"
-	.string "every MAGIKARP you give me, and\l"
-	.string "¥100,000 for a HUGE MAGIKARP!$"
+    .string "אגם הזעם חזר לקדמותו.\p"
+    .string "המג'יקארפ חזרו.\p"
+    .string "אולי עוד אגשים את החלום שלי\n"
+    .string "להחזיק את המג'יקארפ הגדול בעולם.\p"
+    .string "בעצם… אשלם לך ¥2000 על כל\n"
+    .string "מג'יקארפ שתביא לי.\p"
+    .string "ועל מג'יקארפ ענק אשלם ¥100,000!$"
 
 LakeOfRage_House2_Text_ForMe:
-	.string "So... Do you have a MAGIKARP for\n"
-	.string "me?$"
+	.string "אז… יש לך מג'יקארפ\n"
+	.string "בשבילי?$"
 
 LakeOfRage_House2_Text_HaveMagikarp:
     .string "Ah, you have a MAGIKARP! Let's\n"
     .string "see how big that baby is.$"
 
 LakeOfRage_House2_Text_BigPayout:
-    .string "Wow! This one is outstanding!\p"
-    .string "I tip my hat to you!\p"
-    .string "Here's a little something for your\n"
-	.string "trouble.$"
+    .string "וואו! הוא פשוט יוצא מן הכלל!\p"
+    .string "אני מוריד בפניך את הכובע!\p"
+    .string "הנה משהו קטן\n"
+    .string "על הטרחה.$"
 
 LakeOfRage_House2_Text_Bonus:
     .string "The record is the important thing.\p"
     .string "Think of that as a bonus!$"
 
 LakeOfRage_House2_Text_TooShort:
-    .string "Wow! This one is outstanding!\p"
-    .string "…I wish I could say that, but I've\n"
-    .string "seen a bigger one before.\p"
-    .string "I guess it's worth something.$"
+    .string "וואו! הוא פשוט יוצא מן הכלל!\p"
+    .string "…הלוואי שיכולתי להגיד את זה, אבל\n"
+    .string "כבר ראיתי אחד גדול יותר.\p"
+    .string "אני מניח שהוא שווה משהו.$"
 
 LakeOfRage_House2_Text_NotMagikarp:
-    .string "What? That's not a MAGIKARP!$"
+    .string "מה? זה לא מג'יקארפ!$"
 
 LakeOfRage_House2_Text_Refused:
-    .string "Oh… So you didn't get one good\n"
-    .string "enough to show me? Maybe next time.$"
+    .string "אה… אז אין לך אחד ששווה\n"
+    .string "להראות לי? אולי בפעם הבאה.$"

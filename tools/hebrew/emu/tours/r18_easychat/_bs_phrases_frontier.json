@@ -1,0 +1,90 @@
+{
+ "STRINGID_TRAINER1WINTEXT": [
+  [
+   "fr000",
+   {
+    "flags_or": "100",
+    "opponentA": 0
+   }
+  ],
+  [
+   "fr003",
+   {
+    "flags_or": "100",
+    "opponentA": 3
+   }
+  ],
+  [
+   "fr006",
+   {
+    "flags_or": "100",
+    "opponentA": 6
+   }
+  ],
+  [
+   "fr009",
+   {
+    "flags_or": "100",
+    "opponentA": 9
+   }
+  ],
+  [
+   "fr150",
+   {
+    "flags_or": "100",
+    "opponentA": 150
+   }
+  ],
+  [
+   "fr220",
+   {
+    "flags_or": "100",
+    "opponentA": 220
+   }
+  ]
+ ],
+ "STRINGID_TRAINER1LOSETEXT": [
+  [
+   "fr000",
+   {
+    "flags_or": "100",
+    "opponentA": 0
+   }
+  ],
+  [
+   "fr003",
+   {
+    "flags_or": "100",
+    "opponentA": 3
+   }
+  ],
+  [
+   "fr006",
+   {
+    "flags_or": "100",
+    "opponentA": 6
+   }
+  ],
+  [
+   "fr009",
+   {
+    "flags_or": "100",
+    "opponentA": 9
+   }
+  ],
+  [
+   "fr150",
+   {
+    "flags_or": "100",
+    "opponentA": 150
+   }
+  ],
+  [
+   "fr220",
+   {
+    "flags_or": "100",
+    "opponentA": 220
+   }
+  ]
+ ]
+}

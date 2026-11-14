@@ -1,0 +1,131 @@
+# Party menu (src/party_menu.c) and its submenus, and the summary screen
+# (src/pokemon_summary_screen.c) for a Pokemon and for an egg.
+start save:menuA_base
+include ../scripts/continue.txt
+
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+snap menu_party_01
+
+# Slot 1 (Typhlosion): the action list
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+snap menu_party_actions_01
+
+# SUMMARY (first action): INFO page
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap menu_summary_info
+# SKILLS (stats, ability + description); R shows IVs, L EVs, START back to stats
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintSkillsPage 120
+snap menu_summary_skills
+tap R 4
+waitquiet
+snap menu_summary_skills_ivs
+tap L 4
+waitquiet
+snap menu_summary_skills_evs
+tap START 4
+waitquiet
+# BATTLE MOVES; A enters move selection, which shows the selected move's description
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintBattleMoves 120
+snap menu_summary_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+snap menu_summary_moves_desc_01
+tap DOWN 4
+waitquiet
+snap menu_summary_moves_desc_02
+tap B 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+# CONTEST MOVES (the next page, when the build has it)
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintContestMoves 120
+snap menu_summary_contest
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlideAppealJamWindow 120
+snap menu_summary_contest_desc
+tap B 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+tap B 4                                   # back to the party menu, action list still open
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 300
+
+# ITEM submenu (GIVE / TAKE / CANCEL); TAKE on an empty-handed Pokemon prints a message
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+tap DOWN 4
+tap DOWN 4
+snap menu_party_actions_item
+tap A 4
+waitquiet
+snap menu_party_item_menu
+tap DOWN 4
+tap A 4                                   # TAKE
+waitquiet
+snap menu_party_item_take
+tap A 4
+waittaskx Task_HandleChooseMonInput 300
+# GIVE opens the bag in "choose an item to give" mode
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+tap DOWN 4
+tap DOWN 4
+tap A 4
+waitquiet
+tap A 4                                   # GIVE
+waitcb2x CB2_BagMenuRun 900
+waitquiet
+snap menu_party_give_bag
+tap A 4                                   # A on an item gives it at once
+waitcb2x CB2_UpdatePartyMenu 900
+waitquiet
+snap menu_party_give_done
+tap A 4
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+snap menu_party_02
+
+# SWITCH: slot 1 with slot 2 ("Move to where?")
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+tap DOWN 4
+tap A 4
+waitquiet
+snap menu_party_switch_01
+tap DOWN 4
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap menu_party_switch_02
+
+# The egg (slot 5 = index 4): gPartyMenu.slotId (s8 at +9, include/party_menu.h:9-17)
+seek 8 @gPartyMenu+9@ 4 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+snap menu_party_egg_actions
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap menu_summary_egg
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 300
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

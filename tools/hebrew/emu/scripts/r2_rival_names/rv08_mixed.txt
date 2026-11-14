@@ -1,0 +1,22 @@
+# A rival name that mixes Hebrew letters, digits and Latin capitals (logical order
+# א ב 1 2 C D ג on the Hebrew build, A B 1 2 C D G on English): the naming screen's entry
+# (NameToVisualOrder, src/naming_screen.c:2340) and the police officer's
+# "Okay! So his name is {RIVAL}?" with the mixed run. The first six characters are written
+# into the text buffer (they come from three keyboard pages), the seventh is typed.
+start saves/r2_rival/ladder2_badge1.sav
+include ../continue.txt
+ev setvar VAR_NEWBARKTOWN_LABSTATE, 4; clearflag FLAG_HIDE_LAB_POLICEMAN; end
+warpraw MAP_NEW_BARK_TOWN_LAB_HNS 6 12
+drivex rv_mix_officer1 menu 30
+pick 0
+waitcb2x CB2_NamingScreen 900
+waitnaming
+nameprefill mixpre
+namehome
+nametype rv_mix_naming_typed mixlast
+snap rv_mix_naming_full_ok
+press A
+waitcb2x CB2_Overworld 900
+drivex rv_mix_confirm menu 10
+pick 0
+drivex rv_mix_after free 40

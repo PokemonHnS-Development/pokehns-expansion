@@ -1,0 +1,22 @@
+# Summary SKILLS page: the held-item box and the ribbon-count box (PrintHeldItemName and
+# PrintRibbonCount, src/pokemon_summary_screen.c) with the widest item name and 1 ribbon, a short
+# item name and 10 ribbons (a two-digit count), and no item and no ribbons.
+# The ribbons come from GiveMonContestRibbon on gContestMonPartyIndex (one level per call, up to
+# rank + 1): slot 0 gets 1, slot 1 gets 4 + 4 + 2.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev .set ROM_SIZE, 0; createmon 0, 0, 704, 100, item=826, nature=5, abilityNum=0, move1=1; createmon 0, 1, 716, 100, item=1, nature=7, abilityNum=0, move1=1; createmon 0, 2, 767, 100, item=0, nature=10, abilityNum=0, move1=1; special CalculatePlayerPartyCount; end
+w8 @gContestMonPartyIndex@ 0
+ev setvar VAR_CONTEST_CATEGORY, 0; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; end
+w8 @gContestMonPartyIndex@ 1
+ev setvar VAR_CONTEST_RANK, 3; setvar VAR_CONTEST_CATEGORY, 0; special GiveMonContestRibbon; special GiveMonContestRibbon; special GiveMonContestRibbon; special GiveMonContestRibbon; end
+ev setvar VAR_CONTEST_RANK, 3; setvar VAR_CONTEST_CATEGORY, 1; special GiveMonContestRibbon; special GiveMonContestRibbon; special GiveMonContestRibbon; special GiveMonContestRibbon; end
+ev setvar VAR_CONTEST_RANK, 3; setvar VAR_CONTEST_CATEGORY, 2; special GiveMonContestRibbon; special GiveMonContestRibbon; end
+include ../../scripts/r2_summary_info_page_variants/_sum_open.txt
+sumkey RIGHT
+snap R0_skills
+sumkey DOWN
+snap R1_skills
+sumkey DOWN
+snap R2_skills
+include ../../scripts/r2_summary_info_page_variants/_sum_close.txt

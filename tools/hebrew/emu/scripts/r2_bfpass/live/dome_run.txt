@@ -1,0 +1,61 @@
+sl base1
+30 -
+waitctl 300
+py: sb2 = emu.sb2(); emu.w32(sb2 + 0xCDC, emu.r32(sb2 + 0xCDC) | 0x4); emu.w16(sb2 + 0xD0C, 9); print("dome streak", emu.r16(sb2 + 0xD0C), hex(emu.r32(sb2 + 0xCDC)))
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 5 11
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive dt_in menu
+pick 0
+drive dt_lv menu
+pick 0
+drive dt_sel task:Task_HandleChooseMonInput 20
+include tools/hebrew/emu/scripts/r2_battle_frontier_facilities/_bf_enter3.txt
+drive dt_save menu 10
+pick 0
+saveyes
+drivex dt_go menu 30 9000
+ss dome_t_start
+pick 1
+drivex dt_tree cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+snap dt_tree_start
+tap B 0
+drivex dt_back0 menu 10 3000
+pick 2
+drivex dt_r1 task:Task_HandleChooseMonInput 30 9000
+include tools/hebrew/emu/scripts/r2_bfpass/_dome_enter2.txt
+drivex dt_r1go battle 30 9000
+fastbattles off
+bwin dt_r1b
+waittaskx Task_HandleStaticTourneyTreeInput 9000
+waitquiet
+120 -
+snap dt_r1_static
+tap A 0
+drivex dt_r1after menu 30 9000
+pick 2
+drivex dt_r2 task:Task_HandleChooseMonInput 30 9000
+include tools/hebrew/emu/scripts/r2_bfpass/_dome_enter2.txt
+drivex dt_r2go battle 30 9000
+bwin dt_r2b
+waittaskx Task_HandleStaticTourneyTreeInput 9000
+waitquiet
+120 -
+snap dt_r2_static
+tap A 0
+drivex dt_r2after menu 30 9000
+pick 2
+drivex dt_r3 task:Task_HandleChooseMonInput 30 9000
+include tools/hebrew/emu/scripts/r2_bfpass/_dome_enter2.txt
+drivex dt_r3go battle 30 9000
+bwin dt_r3b
+waittaskx Task_HandleStaticTourneyTreeInput 9000
+waitquiet
+120 -
+snap dt_r3_static
+tap A 0
+drivex dt_r3after menu 30 9000
+ss dome_t_final

@@ -1,0 +1,23 @@
+# How the round-20 name screens are run (E = tools/hebrew/emu, S = HNS_SAVES, N = $E/tours/r20_names;
+# one emulator at a time, HNS_SRC = the ROM's tree, --clip only on an RTL_CLIP_REPORT build).
+#
+# Tours:
+#   n20_summary_a, n20_summary_b, n20_relearner   $E/scripts/r10_names/r10names.py tour ROM OUT --tours $N --only RE
+#   n20_bag                                      $E/scripts/r4_bag/bag.py tour ...
+#   n20_dexsearch                                $E/hns.py tour ...
+#   n20_easychat                                 $E/scripts/r18_easy_chat/ec18.py tour ...
+#   n20_menus                                    $E/scripts/r1_npc_services/svc.py tour ...
+#   g4_fight                                     $E/scripts/r4_battle_options/r4opt.py tour ...
+#
+# Lists for the drivers that take no tour:
+#   _fight_moves.txt   $E/scripts/fight_moves.py ROM OUT --save $S/ladder1_newgame.sav --moves $(cat $N/_fight_moves.txt)
+#   _dex_species.txt   $E/scripts/r17_latin/dexpick.py info ROM OUT --save $S/r2dex_all.sav --species $(cat $N/_dex_species.txt)
+#                      (the Mega and Gigantamax forms in it are disabled in H&S and are skipped)
+#   _bs_lines.*        $E/scripts/r16_battle_sweep/bsweep.py ROM OUT --setup $E/tours/r16_battle_sweep/_bs_wild.txt
+#                      --save $S/ladder1_newgame.sav --names $N/_bs_lines.txt --variants $N/_bs_lines.json
+#   (pop-ups)          the same setup with --popups ABILITY_CLOUD_NINE,ABILITY_TRACE,ABILITY_EARLY_BIRD,ABILITY_HUSTLE,
+#                      ABILITY_PSYCHIC_SURGE,ABILITY_DAMP,ABILITY_SCRAPPY
+#   _bs_classes.*      bsweep.py with --setup $E/tours/r16_battle_sweep/_bs_trainer.txt --names $N/_bs_classes.txt
+#                      --variants $N/_bs_classes.json (two H&S field trainers; five Frontier trainers with
+#                      BATTLE_TYPE_BATTLE_TOWER OR-ed in, so the class comes from the facility class)
+#   _labels.txt        $E/sweep.py run ROM OUT --labels-file $N/_labels.txt --shots all --save $S/ladder4_league.sav

@@ -1,0 +1,26 @@
+# The gym-side invitations to the Fighting Dojo rematches: Chuck (CianwoodGym_EventScript_ChuckGotoDojo,
+# then ChuckAtDojo), Blue (ViridianCity_Gym_EventScript_BlueGotoDojo, then BlueAtDojo) and Clair in
+# the Dragon's Den (DragonsDen_EventScript_ClairRematch, DragonsDen_Cavern_hns/scripts.inc:9-25).
+start saves/r6_league_base.sav
+include _base.txt
+ev setflag FLAG_DEFEATED_CIANWOOD_GYM; setflag FLAG_HIDE_DOJO_CHUCK; setflag FLAG_VISITED_VERMILION_CITY; setflag FLAG_DEFEATED_VIRIDIAN_GYM; setflag FLAG_HIDE_DOJO_BLUE; clearflag FLAG_HIDE_VIRIDIAN_BLUE; clearflag FLAG_HIDE_DEN_CLAIR; setvar VAR_BLACKTHORN_CITY_STATE, 4; end
+warpto MAP_CIANWOOD_GYM_HNS 10 3
+face UP
+tap A 4
+scene U_chuck1 20000
+face UP
+tap A 4
+scene U_chuck2 20000
+warpto MAP_VIRIDIAN_CITY_GYM_HNS 5 3
+face UP
+tap A 4
+scene U_blue1 20000
+face UP
+tap A 4
+scene U_blue2 20000
+warpto MAP_DRAGONS_DEN_CAVERN_HNS 31 18
+face DOWN
+snap U_den
+tap A 4
+scene U_clair 20000
+snap U_free

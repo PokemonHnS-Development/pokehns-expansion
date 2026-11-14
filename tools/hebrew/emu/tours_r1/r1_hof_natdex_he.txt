@@ -1,0 +1,45 @@
+# Hall of Fame with the National Pokédex on (4-digit No., src/hall_of_fame.c:1136-1141) and a
+# 12-glyph nickname on slot 0 (POKEMON_NAME_LENGTH 12; GetFontIdToFit switches it to the narrow
+# font past 66 px, :1156). Slot 0's nickname is written into sHofMonPtr (struct HallofFameMon:
+# nickname at +0x0B, 24 bytes per mon) after the record is saved and before the first mon is
+# drawn. he twin; nickname משמרתהמקדשים (12 glyphs, 78 px normal, 70 px narrow).
+# Run with run2/r2run.py (r1run.py + the wptr op).
+start saves/r1_hof_base.sav
+include ../scripts/continue.txt
+ev special EnableNationalPokedex; end
+evstart setvar VAR_LEAGUE_STATE, 6; warpsilent MAP_POKEMON_LEAGUE_HALL_OF_FAME_HNS, 0; waitstate; end
+waitkey 3000
+pages hof_lance 30
+waitcb2 CB2_DoHallOfFameScreen 4000
+waittaskx Task_Hof_WaitToDisplayMon 900
+wptr hall_of_fame:sHofMonPtr B 46 4E 46 4D 4F 3E 46 4C 3D 4E 43 5E
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot natdex_01_mon1
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot natdex_02_mon2
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot natdex_03_mon3
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot natdex_04_mon4
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot natdex_05_mon5
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot natdex_06_mon6
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx Task_Hof_DoConfetti 600
+20 -
+shot natdex_07_welcome
+waittaskx hall_of_fame:Task_Hof_ExitOnKeyPressed 1500
+4 -
+shot natdex_08_player

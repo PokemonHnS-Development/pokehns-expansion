@@ -41,28 +41,27 @@ Route32_PokemonCenter_EventScript_FishingGuru3::
 
 
 Route32_Pokecenter_Text_FishingGuruQuestion:
-	.string "This is a great fishing spot.\p"
-	.string "You saw people fishing?\n"
-	.string "How about you?\p"
-	.string "Would you like one of my RODS?$"
+	.string "זה מקום מעולה לדיג.\p"
+	.string "ראית את האנשים שדגים פה?\n"
+	.string "ומה איתך?\p"
+	.string "רוצה אחת מהחכות שלי?$"
 
 Route32_Pokecenter_Text_FishingGuruYes:
-	.string "Heh, that's good to hear.\p"
-	.string "Now you're an angler too!$"
+	.string "הה, טוב לשמוע.\p"
+	.string "עכשיו גם אתה דייג!$"
 
 Route32_Pokecenter_Text_FishingGuruGiveRod:
-	.string "Fishing is great!\p"
-	.string "If there's water, be it the sea or\n"
-	.string "a stream, try out your ROD.$"
+	.string "דיג זה נהדר!\p"
+	.string "בכל מקום שיש בו מים, ים או נחל,\n"
+	.string "כדאי לנסות את החכה שלך.$"
 
 Route32_Pokecenter_Text_FishingGuruNo:
-	.string "Oh. That's rather disappointing…$"
+	.string "אה. זה די מאכזב…$"
 
 Route32_Pokecenter_Text_FishingGuruAfter:
-	.string "Yo, kid. How are they biting?$"
+	.string "היי, ילד. איך הולך עם הדגים?$"
 
 Route32_Pokecenter_Text_CooltrainerF:
-	.string "What should I make my POKéMON hold?\p"
-	.string "Maybe an item that increases\n"
-	.string "ATTACK power…$"
+	.string "מה כדאי לתת לפוקימון שלי להחזיק?\p"
+	.string "אולי פריט שמגביר את כוח ההתקפה…$"
 

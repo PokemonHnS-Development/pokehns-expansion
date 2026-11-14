@@ -289,49 +289,48 @@ VermilionCity_Gym_EventScript_Surge_Defeated::
 	end
 
 VermilionGym_Text_LtSurgeIntro:
-	.string "SURGE: Hey, you little tyke!\p"
-	.string "I have to hand it to you.\n"
-	.string "It may not be very smart to\l"
-	.string "challenge me, but it takes guts!\p"
-	.string "When it comes to electric\n"
-	.string "POKéMON, I'm number one!\p"
-	.string "I've never lost on the\n"
-	.string "battlefield.\p"
-	.string "I'll zap you just like I did my\n"
-	.string "enemies in war!$"
+	.string "סרג': היי, זאטוט!\p"
+	.string "אני חייב לתת לך קרדיט. אולי זה לא\n"
+	.string "הכי חכם לאתגר אותי, אבל זה דורש אומץ!\p"
+	.string "כשזה נוגע לפוקימונים\n"
+	.string "חשמליים, אני מספר אחת!\p"
+	.string "אף פעם לא הפסדתי\n"
+	.string "בשדה הקרב.\p"
+	.string "אחשמל אותך בדיוק כמו שעשיתי\n"
+	.string "לאויבים שלי במלחמה!$"
 
 VermilionGym_Text_LtSurgeWinLoss:
-	.string "SURGE: Arrrgh! You are strong!\p"
-	.string "OK, kid. You get THUNDERBADGE!$"
+	.string "סרג': אררר! אתה חזק!\p"
+	.string "אוקיי, ילד. מגיע לך תג רעם!$"
 
 VermilionGym_Text_ReceivedThunderBadge:
-	.string "{PLAYER} received THUNDERBADGE.$"
+	.string "{PLAYER} קיבל את תג רעם.$"
 
 VermilionGym_Text_ThunderBadgeInfo:
-	.string "SURGE: THUNDERBADGE increases\n"
-	.string "POKéMON's speed.\p"
-	.string "Consider it proof that you\n"
-	.string "defeated me.\p"
-	.string "You wear it proudly, hear?$"
+	.string "סרג': תג רעם מגביר את\n"
+	.string "המהירות של פוקימונים.\p"
+	.string "זו ההוכחה שניצחת\n"
+	.string "אותי.\p"
+	.string "תענוד אותו בגאווה, שמעת?$"
 
 VermilionGym_Text_LtSurge_GiveTM:
-	.string "And take this TM. It served me\n"
-	.string "well in the war!$"
+	.string "וקח גם את המ”מ הזה. הוא שירת\n"
+	.string "אותי היטב במלחמה!$"
 
 VermilionGym_Text_LtSurge_ExplainTM:
-	.string "It's SHOCK WAVE.\p"
-	.string "A shockingly accurate move\n"
-	.string "which hits every time!$"
+	.string "זה גל הלם.\p"
+	.string "מהלך מדויק עד כדי הלם,\n"
+	.string "שפוגע בכל פעם!$"
 
 VermilionGym_Text_LtSurgeThunderstone:
-	.string "And take this stone. It has real\n"
-	.string "thunder power!$"
+	.string "וקח גם את האבן הזאת. יש בה\n"
+	.string "כוח ברק אמיתי!$"
 
 
 VermilionGym_Text_LtSurgePostBattle:
-	.string "SURGE: Hey, kid! Still slugging\n"
-	.string "and chugging away?\p"
-	.string "My POKéMON and I are still at it!$"
+	.string "סרג': היי, ילד! עדיין נלחם\n"
+	.string "ומתאמץ?\p"
+	.string "אני והפוקימונים שלי ממשיכים במרץ!$"
 
 VermilionGym_Text_SurgeRematch:
 	.string "SURGE: So, you're now KANTO\n"
@@ -345,92 +344,91 @@ VermilionGym_Text_SurgeRematchDefeat:
 	.string "as strong!$"
 
 VermilionGym_Text_GentlemanGregorySeen:
-	.string "You're here to defeat LT.SURGE?\p"
-	.string "Not if I can help it!$"
+	.string "באת לנצח את סמל סרג'?\p"
+	.string "לא אם זה תלוי בי!$"
 
 VermilionGym_Text_GentlemanGregoryBeaten:
-	.string "Sorry I failed you,\n"
-	.string "LT.SURGE, sir!$"
+	.string "סליחה שאכזבתי אותך,\n"
+	.string "סמל סרג', המפקד!$"
 
 VermilionGym_Text_GentlemanGregoryAfter:
-	.string "When I was still in the army,\n"
-	.string "LT.SURGE saved my life.$"
+	.string "כשעוד הייתי בצבא,\n"
+	.string "סמל סרג' הציל את חיי.$"
 
 VermilionGym_Text_GuitaristVincentSeen:
-	.string "LT.SURGE recognized my potential\n"
-	.string "with electric POKéMON.\p"
-	.string "Think you can beat me?$"
+	.string "סמל סרג' זיהה את הפוטנציאל שלי\n"
+	.string "עם פוקימונים חשמליים.\p"
+	.string "נראה לך שתנצח אותי?$"
 
 VermilionGym_Text_GuitaristVincentBeaten:
-	.string "Ooh, how shocking!$"
+	.string "אוו, איזה הלם!$"
 
 VermilionGym_Text_GuitaristVincentAfter:
-	.string "Mom told me not to quit my\n"
-	.string "day job, but what am I supposed\l"
-	.string "to do when I'm not finding\l"
-	.string "success there either?$"
+	.string "אמא אמרה לי לא לעזוב את\n"
+	.string "העבודה הקבועה שלי,\p"
+	.string "אבל מה אני אמור לעשות\n"
+	.string "כשגם שם אני לא מצליח?$"
 
 VermilionGym_Text_JugglerHortonSeen:
-	.string "I'm going to take you down!\n"
-	.string "Prepare to be shocked!$"
+	.string "אני הולך להפיל אותך!\n"
+	.string "תתכונן לקבל הלם!$"
 
 VermilionGym_Text_JugglerHortonBeaten:
-	.string "Gwaaah! I was overpowered…$"
+	.string "גוואאה! הכריעו אותי…$"
 
 VermilionGym_Text_JugglerHortonAfter:
-	.string "Don't get too comfortable about\n"
-	.string "beating me…\p"
-	.string "LT.SURGE is tough.$"
+	.string "אל תתלהב יותר מדי מזה\n"
+	.string "שניצחת אותי…\p"
+	.string "סמל סרג' קשוח.$"
 
 VermilionCity_Gym_Text_GymGuyAdvice::
-    .string "Yo!\n"
-    .string "Champ in the making!\p"
-    .string "LT. SURGE has a nickname.\p"
-    .string "People refer to him as the\n"
-    .string "Lightning American!\p"
-    .string "He's an expert on electric\n"
-    .string "POKéMON.\p"
-    .string "FLYING/WATER-type POKéMON match\n"
-    .string "poorly against the ELECTRIC type.\p"
-    .string "Beware of paralysis, too.\p"
-    .string "LT. SURGE is very cautious.\p"
-    .string "He's locked himself in, so it won't\n"
-    .string "be easy getting to him.$"
+    .string "יו!\n"
+    .string "אלוף לעתיד!\p"
+    .string "לסמל סרג' יש כינוי.\p"
+    .string "אנשים קוראים לו\n"
+    .string "האמריקאי החשמלי!\p"
+    .string "הוא מומחה לפוקימונים\n"
+    .string "חשמליים.\p"
+    .string "פוקימונים מסוג תעופה/מים\n"
+    .string "חלשים מול סוג חשמל.\p"
+    .string "כדאי להיזהר גם משיתוק.\p"
+    .string "סמל סרג' זהיר מאוד.\p"
+    .string "הוא נעל את עצמו בפנים, אז לא\n"
+    .string "יהיה קל להגיע אליו.$"
 
 VermilionCity_Gym_Text_GymGuyPostVictory::
-	.string "Whew! That was an electrifying\n"
-	.string "bout!\p"
-	.string "It sure made me nervous.$"
+	.string "וואו! זה היה קרב מחשמל!\p"
+	.string "זה ממש הלחיץ אותי.$"
 
 VermilionCity_Gym_Text_GymStatue::
-    .string "VERMILION POKéMON GYM\n"
-    .string "LEADER: LT. SURGE\p"
-	.string "WINNING TRAINERS:\n"
-	.string "BLUE, RED$"
+    .string "מכון הפוקימון של ורמיליון\n"
+    .string "מנהיג: סמל סרג'\p"
+    .string "מאמנים מנצחים:\n"
+    .string "בלו, רד$"
 
 
 VermilionCity_Gym_Text_GymStatuePlayerWon::
-    .string "VERMILION POKéMON GYM\n"
-    .string "LEADER: LT. SURGE\p"
-    .string "WINNING TRAINERS:\n"
-    .string "BLUE, RED, {PLAYER}$"
+    .string "מכון הפוקימון של ורמיליון\n"
+    .string "מנהיג: סמל סרג'\p"
+    .string "מאמנים מנצחים:\n"
+    .string "בלו, רד, {PLAYER}$"
 
 VermilionCity_Gym_Text_NopeOnlyTrashHere::
-    .string "Nope!\n"
-    .string "There's only trash here.$"
+    .string "כלום!\n"
+    .string "יש כאן רק זבל.$"
 
 VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened::
-    .string "Hey! There's a switch under the\n"
-    .string "trash! Turn it on!\p"
-    .string "The first electric lock opened!$"
+    .string "היי! יש מתג מתחת לזבל!\n"
+    .string "נדליק אותו!\p"
+    .string "המנעול החשמלי הראשון נפתח!$"
 
 VermilionCity_Gym_Text_SecondLockOpened::
-    .string "The second electric lock opened!\n"
-    .string "The motorized door opened!$"
+    .string "המנעול החשמלי השני נפתח!\n"
+    .string "הדלת הממונעת נפתחה!$"
 
 VermilionCity_Gym_Text_OnlyTrashLocksWereReset::
-    .string "Nope!\n"
-    .string "There's only trash here.\p"
-    .string "Hey!\n"
-    .string "The electric locks were reset!$"
+    .string "כלום!\n"
+    .string "יש כאן רק זבל.\p"
+    .string "היי!\n"
+    .string "המנעולים החשמליים התאפסו!$"
 

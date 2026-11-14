@@ -1,0 +1,87 @@
+# K3: the portrait nickname on the summary screen (src/pokemon_summary_screen.c PrintNotEggInfo):
+# a geresh name without a descender (Ampharos renamed ג'ימי by writing the unencrypted nickname
+# bytes, BoxPokemon +8, include/pokemon.h:259), a geresh name with descenders (Typhlosion,
+# טיפלוז'ן; Pikachu, פיקאצ'ו), the INFO page of each, then TM24 on ג'ימי answered YES to reach
+# the forget-move page, which draws a dark frame under the name (as tours/pbi_learn_no.txt).
+# Run with scripts/r5_known/r5known.py; the save is a copy of saves_all/menuA_base.sav.
+start saves/menuA_base.sav
+include ../../continue.txt
+w8 @gPlayerParty+D0@ 3C
+w8 @gPlayerParty+D1@ B4
+w8 @gPlayerParty+D2@ 43
+w8 @gPlayerParty+D3@ 46
+w8 @gPlayerParty+D4@ 43
+w8 @gPlayerParty+D5@ FF
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap k3_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap k3_summary_1_typhlosion
+tap DOWN 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+snap k3_summary_2_pikachu
+tap DOWN 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+snap k3_summary_3_gimmy
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 300
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# TM24 (TMs & HMs pocket, index 23) on ג'ימי (party slot 2): YES, the forget-move page, then B
+w8 @gBagPosition+5@ 3
+w16 @gBagPosition+E@ 3
+w16 @gBagPosition+1A@ 14
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waittaskx Task_ShowTMHMContainedMessage 300
+waitquiet
+tap A 4
+waitkey 600
+tap A 4
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 4                                   # YES
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 4
+talk k3_tm_wants 6 - Task_HandleReplaceMoveYesNoInput
+tap A 4                                   # YES
+waitkey 600
+tap A 4
+waittaskx Task_HandleReplaceMoveInput 900
+waitquiet
+snap k3_forget_page_gimmy
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waitkey 900
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

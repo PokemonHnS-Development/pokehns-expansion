@@ -1,0 +1,9 @@
+# A sweep base save: ladder 4 (Indigo Plateau Pokemon Center, League beaten) with the 7-letter
+# rival name written into gSaveBlock2Ptr->rivalName (SB2+0xF2C, as the police scene leaves
+# it), saved in-game. The sweep's own --player sets the player's name.
+start saves/r2_rival/ladder4_league.sav
+include ../continue.txt
+setname rival rival
+rivalname rival
+savegame
+keepsave l4_rival

@@ -17,11 +17,11 @@ MahoganyTown_Gym_EventScript_Statue2::
 	end
 
 MahoganyTown_Gym_Text_GymStatue:
-	.string "MAHOGANY TOWN POKéMON GYM$"
+	.string "מכון הפוקימון של העיירה מהגוני$"
 
 MahoganyTown_Gym_Text_GymStatueCertified:
-	.string "MAHOGANY TOWN POKéMON GYM\p"
-	.string "PRYCE'S CERTIFIED TRAINERS:\n"
+	.string "מכון הפוקימון של העיירה מהגוני\p"
+	.string "המאמנים המוסמכים של פרייס:\n"
 	.string "{PLAYER}$"
 
 
@@ -123,49 +123,46 @@ MahoganyTown_Gym_EventScript_Pryce_Defeated::
 	end
 
 MahoganyTown_Gym_Text_PryceIntro:
-    .string "POKéMON have many experiences\n"
-    .string "in their lives, just like we do.\p"
-    .string "I, too, have seen and suffered\n"
-    .string "much in my life.\p"
-    .string "Since I am your elder, let me\n"
-    .string "show you what I mean.\p"
-    .string "I have been with POKéMON since\n"
-    .string "before you were born.\p"
-    .string "I do not lose easily.\p"
-    .string "I, PRYCE--the winter trainer--\n"
-    .string "shall demonstrate my power!$"
+    .string "לפוקימונים יש חוויות רבות\n"
+    .string "בחייהם, בדיוק כמו לנו.\p"
+    .string "גם אני ראיתי וסבלתי הרבה בחיי.\p"
+    .string "מכיוון שאני מבוגר ממך, הרשה לי\n"
+    .string "להראות לך למה אני מתכוון.\p"
+    .string "אני חי לצד פוקימונים עוד\n"
+    .string "מלפני שנולדת.\p"
+    .string "אני לא מפסיד בקלות.\p"
+    .string "אני, פרייס, מאמן החורף,\n"
+    .string "אראה לך את כוחי!$"
 
 MahoganyTown_Gym_Text_PryceImpressed:
-    .string "Ah, I am impressed by your\n"
-    .string "prowess.\p"
-    .string "With your strong will, I know you\n"
-    .string "will overcome all life's obstacles.\p"
-    .string "You are worthy of this BADGE!$"
+    .string "אה, הכישרון שלך מרשים אותי.\p"
+    .string "עם רצון חזק כמו שלך, אני יודע\n"
+    .string "שתתגבר על כל מכשולי החיים.\p"
+    .string "התג הזה מגיע לך בצדק!$"
 
 MahoganyTown_Gym_Text_ReceivedBadge:
-    .string "{PLAYER} received GLACIERBADGE.$"
+    .string "{PLAYER} קיבל את תג קרחון.$"
 
 MahoganyTown_Gym_Text_GlacierBadgeSpeech:
-    .string "That BADGE will raise the SPECIAL\n"
-    .string "ATTACK of POKéMON.\p"
-    .string "It also lets your POKéMON use\n"
-    .string "WHIRLPOOL to get across\l"
-    .string "real whirlpools.\p"
-    .string "And this… This is a gift from me!$"
+    .string "התג הזה מעלה את ההתקפה\n"
+    .string "המיוחדת של פוקימונים.\p"
+    .string "הוא גם מאפשר לפוקימונים שלך להשתמש\n"
+    .string "במערבולת לחציית מערבולות אמיתיות.\p"
+    .string "וזה… זו מתנה ממני!$"
 
 MahoganyTown_Gym_Text_HailSpeech:
-    .string "That TM contains HAIL.\p"
-    .string "It inflicts damage every\n"
-    .string "turn for 5 turns.\p"
-    .string "It demonstrates the harshness\n"
-    .string "of winter.$"
+    .string "המ”מ הזה מכיל את ברד.\p"
+    .string "הוא גורם נזק בכל תור\n"
+    .string "במשך 5 תורים.\p"
+    .string "הוא ממחיש את חומרת\n"
+    .string "החורף.$"
 
 MahoganyTown_Gym_Text_CherishPokemon:
-    .string "When the ice and snow melt,\n"
-    .string "spring arrives.\p"
-    .string "You and your POKéMON will be\n"
-    .string "together for many years to come.\p"
-    .string "Cherish your time together!$"
+    .string "כשהקרח והשלג נמסים,\n"
+    .string "האביב מגיע.\p"
+    .string "אתה והפוקימונים שלך תהיו\n"
+    .string "יחד עוד שנים רבות.\p"
+    .string "הוקירו את הזמן שלכם יחד!$"
 
 MahoganyTown_Gym_Text_PryceRematch:
     .string "Ah, JOHTO CHAMPION!\p"
@@ -185,76 +182,72 @@ MahoganyTown_Gym_Text_PryceRematchDefeat:
     .string "will overcome all life's obstacles.$"
 
 MahoganyTown_Gym_Text_Guide:
-    .string "PRYCE is a veteran who has\n"
-    .string "trained POKéMON for some 50 years.\p"
-    .string "He's got a solid lineup of\n"
-    .string "POKéMON to cover whatever\l"
-    .string "you bring his way.\p"
-    .string "Fire is a good place to start,\n"
-    .string "but watch out for the rain!$"
+    .string "פרייס הוא ותיק שמאמן פוקימונים\n"
+    .string "כבר בערך 50 שנה.\p"
+    .string "יש לו הרכב פוקימונים חזק\n"
+    .string "שיכול להתמודד עם כל מה שתביא נגדו.\p"
+    .string "אש היא נקודת פתיחה טובה,\n"
+    .string "אבל כדאי להיזהר מהגשם!$"
 
 MahoganyTown_Gym_Text_GuideWin:
-    .string "PRYCE is something, but you're\n"
-    .string "something else!\p"
-    .string "That was a hot battle that\n"
-    .string "bridged the generation gap!$"
+    .string "פרייס הוא משהו, אבל אתה\n"
+    .string "משהו אחר לגמרי!\p"
+    .string "זה היה קרב לוהט שגישר\n"
+    .string "על פער הדורות!$"
 
 MahoganyTown_Gym_Text_BoarderRonaldSeen:
-    .string "I'll freeze your POKéMON,\n"
-    .string "so you can't do a thing!$"
+    .string "אקפיא את הפוקימונים שלך,\n"
+    .string "כך שלא תוכל לעשות כלום!$"
 
 MahoganyTown_Gym_Text_BoarderRonaldBeaten:
-    .string "Darn. I couldn't do a thing.$"
+    .string "אוף. לא יכולתי לעשות כלום.$"
 
 MahoganyTown_Gym_Text_BoarderRonaldAfter:
-    .string "I think there's a move a\n"
-    .string "POKéMON can use while it's\l"
-    .string "frozen.$"
+    .string "נראה לי שיש מהלך שפוקימון יכול\n"
+    .string "להשתמש בו גם כשהוא קפוא.$"
 
 MahoganyTown_Gym_Text_BoarderBradSeen:
-    .string "This GYM has a slippery floor.\p"
-    .string "It's fun, isn't it?\p"
-    .string "But hey--we're not playing\n"
-    .string "games here!$"
+    .string "הרצפה במכון הזה חלקה.\p"
+    .string "כיף, נכון?\p"
+    .string "אבל היי, אנחנו לא כאן\n"
+    .string "בשביל משחקים!$"
 
 MahoganyTown_Gym_Text_BoarderBradBeaten:
-    .string "Do you see how serious we are?$"
+    .string "אתה רואה כמה אנחנו רציניים?$"
 
 MahoganyTown_Gym_Text_BoarderBradAfter:
-    .string "This GYM is great.\n"
-    .string "I love boarding with my\l"
-    .string "POKéMON!$"
+    .string "המכון הזה נהדר. אני אוהב לגלוש\n"
+    .string "על סנובורד עם הפוקימונים שלי!$"
 
 MahoganyTown_Gym_Text_BoarderDouglasSeen:
-    .string "I know PRYCE's secret.$"
+    .string "אני יודע את הסוד של פרייס.$"
 
 MahoganyTown_Gym_Text_BoarderDouglasBeaten:
-    .string "OK. I'll tell you PRYCE's secret.$"
+    .string "טוב. אגלה לך את הסוד של פרייס.$"
 
 MahoganyTown_Gym_Text_BoarderDouglasAfter:
-    .string "The secret behind PRYCE's power…\p"
-    .string "He meditates under a waterfall\n"
-    .string "daily to strengthen his mind\l"
-    .string "and body.$"
+    .string "הסוד מאחורי הכוח של פרייס…\p"
+    .string "הוא עושה מדיטציה מתחת למפל\n"
+    .string "כל יום, כדי לחזק את נפשו ואת גופו.$"
 
 MahoganyTown_Gym_Text_SkierRoxanneSeen:
-    .string "To get to PRYCE, our GYM LEADER,\n"
-    .string "you need to think before you skate.$"
+    .string "כדי להגיע לפרייס, מנהיג המכון שלנו,\n"
+    .string "צריך לחשוב לפני שמחליקים.$"
 
 MahoganyTown_Gym_Text_SkierRoxanneBeaten:
-    .string "I wouldn't lose to you in skiing!$"
+    .string "בסקי לא הייתי מפסידה לך!$"
 
 MahoganyTown_Gym_Text_SkierRoxanneAfter:
-    .string "If you don't skate with precision,\n"
-    .string "you won't get far in this GYM.$"
+    .string "מי שלא מחליק בדיוק\n"
+    .string "לא יגיע רחוק במכון הזה.$"
 
 MahoganyTown_Gym_Text_SkierClarissaSeen:
-    .string "Check out my parallel turn!$"
+    .string "תראה את הפנייה המקבילה שלי!$"
 
 MahoganyTown_Gym_Text_SkierClarissaBeaten:
-    .string "No! You made me wipe out!$"
+    .string "לא! בגללך נפלתי!$"
 
 MahoganyTown_Gym_Text_SkierClarissaAfter:
-    .string "I shouldn't have been bragging\n"
-    .string "about my skiing…$"
+    .string "לא הייתי צריכה להתרברב\n"
+    .string "בגלישת הסקי שלי…$"
 

@@ -1,0 +1,12 @@
+waitkey 300
+tap A 4
+waitquiet
+20 -
+snap py_rest_01_yesno
+tap DOWN 4
+waitquiet
+tap A 4
+waitquiet
+20 -
+snap py_rest_02_no
+showtasks

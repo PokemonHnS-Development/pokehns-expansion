@@ -206,7 +206,13 @@ u8 *CopyItemNameHandlePlural(enum Item itemId, u8 *dst, u32 quantity)
     else
     {
         u8 *end = StringCopy(dst, GetItemName(itemId));
+    #if TEXT_RTL
+        // Hebrew plurals are not made with a suffix; an item without its own plural name keeps
+        // the singular rather than gaining a Latin "s".
+        return end;
+    #else
         return StringCopy(end, sText_s);
+    #endif
     }
 }
 

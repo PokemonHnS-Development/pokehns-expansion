@@ -1,0 +1,41 @@
+# BLACK FLUTE and WHITE FLUTE used from the bag in the field (src/item_use.c
+# ItemUseOutOfBattle_BlackWhiteFlute :1085, Task_UsedBlackWhiteFlute :1073; texts
+# sText_UsedVar2WildRepelled / sText_UsedVar2WildLured :94-95, two pages each).
+# ITEMS pocket of menuA_base (full, 236): 29 BLACK FLUTE, 30 WHITE FLUTE; scroll 26, cursor 3.
+start saves/pif2_base.sav
+include ../scripts/continue.txt
+
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 1A
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_flute_01_bag_black
+tap A 4
+waitquiet
+snap pbi_flute_02_context
+tap A 4                                   # USE
+talk pbi_flute_03_black 2 -
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_flute_04_bag_after_black
+
+tap DOWN 4
+waitquiet
+snap pbi_flute_05_bag_white
+tap A 4
+waitquiet
+tap A 4                                   # USE
+talk pbi_flute_06_white 2 -
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_flute_07_bag_after_white
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

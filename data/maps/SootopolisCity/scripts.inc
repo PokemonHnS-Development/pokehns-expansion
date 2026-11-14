@@ -1399,7 +1399,7 @@ SootopolisCity_Text_CitySign:
 	.string "slumbers.”$"
 
 SootopolisCity_Text_DoorIsClosed:
-	.string "The door is closed.$"
+	.string "הדלת סגורה.$"
 
 SootopolisCity_Text_PhysicallyFitLivingHere:
 	.string "Diving in the sea. Climbing up and\n"

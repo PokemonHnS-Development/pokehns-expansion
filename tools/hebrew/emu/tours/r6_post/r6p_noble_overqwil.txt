@@ -1,0 +1,18 @@
+# Noble Overqwil, Route 49: its triggers (46..50,44|45) are on water and the player does not surf
+# here, so Route49_EventScript_ActivateOverqwil (Route49_hns/scripts.inc:138-180) is started from the
+# shore (51,48), then Route49_EventScript_Overqwil (:196-) with VAR_LAST_TALKED = its local id (11).
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev setvar VAR_NOBLE_OVERQWIL, 1; setflag FLAG_HIDE_ROUTE49_NOBLE_OVERQWIL; end
+warpto MAP_ROUTE49_HNS 51 48
+face UP
+snap oq_field
+evstart goto Route49_EventScript_ActivateOverqwil
+scene oq_flute 3000
+snap oq_flute_menu
+tap A 4
+scene oq_scene 20000 45
+snap oq_scene_end
+evstart setvar VAR_LAST_TALKED, 11; goto Route49_EventScript_Overqwil
+scene oq_pre 4000
+include _noble_battle.txt

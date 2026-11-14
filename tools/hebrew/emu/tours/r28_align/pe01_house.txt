@@ -1,0 +1,179 @@
+# Played from ladder save 1 (a new game saved in the bedroom, no Pokemon) as a player would:
+# the bedroom (stopped clock -> wall clock screen -> help window, the PC with its item storage,
+# the NES, the bookshelf; looking at the set clock again leaves the field script waiting in
+# both builds, so the tour does not), Mom's intro downstairs (PokeGear, running shoes),
+# Mom and her friend, New Bark Town (signs, mailboxes, the lass's warning at the west exit,
+# the rival at the lab window, the townsfolk, both houses), Elm's lab up to the starter, Elm's
+# directions and the aide's Potion. One shot per text page and per new window. Ends saved in
+# the lab: keepsave pe_lab.
+# Driver: pe_ops.py (hns.py + the story-tour ops + talkw / fight / walkfight / walkw / scenea / pocket).
+start saves/ladder1_newgame.sav
+include ../../scripts/continue.txt
+fastbattles off
+snap pe01_bedroom
+
+# --- the stopped clock (coord trigger at (9,3)): two pages, then the wall clock screen
+walkto 9 3
+talk pe01_clock 10 -
+waittaskx Task_SetClock_HandleInput 600
+waitquiet
+snap pe01_clock_set
+tap A 4
+waittaskx Task_SetClock_HandleConfirmInput 600
+waitquiet
+snap pe01_clock_confirm_no
+tap UP 4
+waitquiet
+snap pe01_clock_confirm_yes
+tap A 4
+waitcb2x CB2_Overworld 1200
+scene pe01_help 3000
+
+# --- the bedroom PC: ITEM STORAGE (WITHDRAW list with the Potion, quantity), MAILBOX, TURN OFF
+walkto 1 2 UP
+talk pe01_pc 10 A PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+snap pe01_pc_menu
+tap A 0
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+snap pe01_pc_items_menu
+tap A 0
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap pe01_pc_withdraw_list
+tap A 0                                   # a single Potion: withdrawn at once, no quantity box
+waitquiet
+snap pe01_pc_withdraw_done
+press A
+waitquiet
+snap pe01_pc_after_withdraw
+press B
+waitquiet
+snap pe01_pc_after_withdraw_b
+press B
+waitquiet
+snap pe01_pc_after_withdraw_bb
+showtasks
+closeall
+
+# --- the NES and the bookshelf
+walkto 4 3 UP
+talk pe01_nes 10
+walkto 5 2 UP
+talk pe01_shelf 10
+
+# --- downstairs: Mom's intro (coord trigger below the stairs)
+walkto 9 2
+go LEFT                                   # the stair tile is a west arrow warp
+snap pe01_1f_arrive
+stepto DOWN
+scene pe01_mom 30000 30
+snap pe01_mom_end
+
+# --- Mom again ("Elm is waiting") and her friend
+approach 1
+talk pe01_mom_again 10
+approach 2
+talk pe01_momsfriend 10
+
+# --- New Bark Town
+walkto 9 8
+go DOWN
+snap pe01_newbark
+objs
+walkto 17 12 UP
+talk pe01_mailbox_home 5
+approach 1
+talk pe01_fatman 10
+walkto 10 15 UP
+talk pe01_townsign 5
+walkto 1 13
+stepto LEFT
+scene pe01_leave 20000
+walkto 1 11 LEFT
+talk pe01_lass 10
+walkto 9 10 UP
+talk pe01_labsign 5
+approach 3
+talk pe01_silver 10
+scene pe01_silver_after 6000
+walkto 12 22 UP
+talk pe01_mailbox_elm 5
+walkto 4 22
+go UP
+snap pe01_house1
+objs
+approach 1
+talk pe01_house1_daughter 10
+walkto 4 8
+go DOWN
+walkto 15 22
+go UP
+snap pe01_house2
+objs
+approach 1
+talk pe01_house2_son 10
+talkw 2 pe01_house2_wife 10
+walkto 4 8
+go DOWN
+
+# --- Elm's lab: the intro (NO, then YES), the e-mail, the starters (Chikorita and Totodile
+# looked at and declined, Cyndaquil taken), the nickname prompt (YES: the naming screen, kept
+# as is), Elm's directions, the lab's furniture, the aide's Potion at the door
+walkto 10 10
+go UP
+snap pe01_lab
+objs
+walkto 6 8
+stepto UP
+scene pe01_elm_intro 20000
+yesno pe01_elm_intro_yn NO
+scene pe01_elm_refused 20000
+yesno pe01_elm_refused_yn YES
+scene pe01_elm_accepted 60000 30
+snap pe01_elm_free
+walkto 6 8
+scene pe01_elm_return 10000
+walkto 8 5 UP
+tap A 4
+scene pe01_chiko 10000
+yesno pe01_chiko_yn NO
+scene pe01_chiko_no 6000
+walkto 10 5 UP
+tap A 4
+scene pe01_toto 10000
+yesno pe01_toto_yn NO
+scene pe01_toto_no 6000
+walkto 9 5 UP
+tap A 4
+scene pe01_cynda 10000
+yesno pe01_cynda_yn YES
+scene pe01_cynda_yes 20000
+yesno pe01_cynda_nick YES
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap pe01_naming
+tap START 30
+snap pe01_naming_ok
+tap A 30
+waitcb2x CB2_Overworld 900
+scene pe01_cynda_named 6000
+objs
+approach 2
+tap A 4
+scene pe01_elm_dir 30000
+snap pe01_elm_dir_end
+walkto 3 5 UP
+talk pe01_lab_pc 5
+walkto 11 5 UP
+talk pe01_lab_trash 5
+walkto 9 7 DOWN
+talk pe01_lab_shelf 5
+talkw 3 pe01_lab_aide2 10
+walkto 6 12
+scene pe01_aide_potion 20000
+snap pe01_aide_potion_end
+savegame
+keepsave pe_lab

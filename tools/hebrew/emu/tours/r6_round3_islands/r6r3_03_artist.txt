@@ -1,0 +1,19 @@
+# New Sinjoh Pokemon Center artist (NewSinjoh_EventScript_Artist at (11,5),
+# NewSinjoh_PokemonCenter_hns/scripts.inc): NewSinjoh_Text_Artist (YES/NO) answered NO ->
+# NewSinjoh_Text_Artist_No; with the gift flag set -> Text_WasGiven_ZoomLensAlready.
+start saves/r6r3_islands_base.sav
+include _base.txt
+ev clearflag FLAG_NEWSINJOH_POKEMONCENTER_ARTIST_GIFT; end
+warpto MAP_NEW_SINJOH_POKEMON_CENTER_HNS 11 6
+face UP
+snap ar_field
+tap A 4
+scene ar_q 3000
+pickd 1
+scene ar_no 3000
+snap ar_no_end
+ev setflag FLAG_NEWSINJOH_POKEMONCENTER_ARTIST_GIFT; end
+face UP
+tap A 4
+scene ar_got 3000
+snap ar_got_end

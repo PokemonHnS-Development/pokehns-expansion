@@ -1,0 +1,102 @@
+# HP restores with three-digit amounts (src/party_menu.c ItemUseCB_Medicine :4947,
+# Task_DisplayHPRestoredMessage, gText_PkmnHPRestoredByVar2): a poisoned Chansey Lv 60 at
+# 10 HP gets HYPER POTION (120), then MAX POTION (the rest), then is put back to 10 HP and
+# gets FULL RESTORE (HP and poison at once).
+# MEDICINE after the additems: 0 POTION, 1 SUPER POTION, 2 FULL RESTORE, 3 REVIVE,
+# 4 ANTIDOTE, 5 RARE CANDY, 6 HYPER POTION, 7 MAX POTION (with CLOSE BAG 9 rows, scroll 1).
+start saves/pif2_base.sav
+include ../scripts/continue.txt
+ev givemon SPECIES_CHANSEY, 60; additem ITEM_HYPER_POTION, 3; additem ITEM_MAX_POTION, 3; setstatus1 STATUS1_POISON, 5; end
+sethp player 5 10
+
+# HYPER POTION
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 5
+w16 @gBagPosition+16@ 1
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_hp3_01_bag_hyper
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+snap pbi_hp3_02_party_chansey
+tap A 4
+waitkey 900
+snap pbi_hp3_03_hyper_120
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_hp3_04_party_after_hyper
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# MAX POTION (next item)
+tap DOWN 4
+waitquiet
+snap pbi_hp3_05_bag_max
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waitkey 900
+snap pbi_hp3_06_max_restored
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_hp3_07_party_after_max
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# FULL RESTORE on the poisoned Chansey, back at 10 HP
+sethp player 5 10
+w16 @gBagPosition+A@ 2
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_hp3_08_bag_fullrestore
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+snap pbi_hp3_09_party_poisoned
+tap A 4
+waitkey 900
+snap pbi_hp3_10_fullrestore
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_hp3_11_party_after_fullrestore
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

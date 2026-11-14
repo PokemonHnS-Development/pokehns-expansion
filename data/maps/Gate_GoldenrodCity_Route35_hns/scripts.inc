@@ -76,58 +76,57 @@ Gate_GoldenrodCity_Route35_EventScript_Fisher::
 	end
 
 Route35GoldenrodGate_Text_RandyAskFavor:
-	.string "Excuse me, kid! Can you do a guy\n"
-	.string "a favor?\p"
-	.string "Can you take this POKéMON with MAIL\n"
-	.string "to my friend?\p"
-	.string "He's on ROUTE 31.$"
+	.string "סליחה, ילד! תוכל לעשות לי טובה?\p"
+	.string "תוכל לקחת את הפוקימון הזה עם\n"
+	.string "הדואר לחבר שלי?\p"
+	.string "הוא נמצא בדרך 31.$"
 
 Route35GoldenrodGate_Text_RandyThanks:
-	.string "You will? Perfect! Thanks, kid!\p"
-	.string "My pal's a chubby guy who snoozes\n"
-	.string "all the time.\p"
-	.string "You'll recognize him right away!$"
+	.string "באמת? מושלם! תודה, ילד!\p"
+	.string "החבר שלי הוא בחור שמנמן\n"
+	.string "שמנמנם כל הזמן.\p"
+	.string "תזהה אותו מיד!$"
 
 Route35GoldenrodGate_Text_ReceivedMonWithMail:
 	.string "{PLAYER} received a POKéMON with MAIL.$"
 
 Route35GoldenrodGate_Text_RandyWeirdTree:
-	.string "Make sure to put it at the front of\n"
-	.string "your team when you find my friend!\p"
-	.string "ROUTE 31!\p"
-	.string "Oh, yeah. There was a weird tree\n"
-	.string "blocking the road.\p"
-	.string "I wonder if it's been cleared?$"
+	.string "תדאג לשים אותו בראש הקבוצה שלך\n"
+	.string "כשתמצא את החבר שלי!\p"
+	.string "דרך 31!\p"
+	.string "אה, נכון. היה שם עץ מוזר\n"
+	.string "שחסם את הדרך.\p"
+	.string "מעניין אם כבר פינו אותו?$"
 
 Route35GoldenrodGate_Text_CantCarryMoreMon:
 	.string "You can't carry another POKéMON…$"
 
 Route35GoldenrodGate_Text_RandyNeverMind:
-	.string "Oh… Never mind, then…$"
+	.string "אה… טוב, לא חשוב…$"
 
 Route35GoldenrodGate_Text_ThanksForDelivery:
-	.string "Thanks, kid! You made the delivery\n"
-	.string "for me!\p"
-	.string "Here's something for your trouble!$"
+	.string "תודה, ילד! מסרת את המשלוח\n"
+	.string "בשבילי!\p"
+	.string "הנה משהו על הטרחה!$"
 
 Route35GoldenrodGate_Text_RandyMyPalSnoozing:
-	.string "My pal was snoozing, right? Heh,\n"
-	.string "what'd I say?$"
+	.string "החבר שלי נמנם, נכון? חה,\n"
+	.string "מה אמרתי לך?$"
 
 Route35GoldenrodGate_Text_PokefanF_TreeBlocking:
-	.string "A strange tree is blocking the road.\p"
-	.string "It wriggles around if you talk to it.\p"
-	.string "I heard it became wild when someone\n"
-	.string "watered it with a SQUIRTBOTTLE.$"
+	.string "עץ מוזר חוסם את הדרך.\p"
+	.string "הוא מתפתל כשמדברים אליו.\p"
+	.string "שמעתי שהוא השתולל כשמישהו\n"
+	.string "השקה אותו בבקבוק התזה.$"
 
 Route35GoldenrodGate_Text_PokefanF_Lullaby:
-	.string "I like the POKéMON Lullaby they play\n"
-	.string "on the radio.$"
+	.string "אני אוהבת את שיר הערש לפוקימונים\n"
+	.string "שמשמיעים ברדיו.$"
 
 Route35GoldenrodGate_Text_Fisher:
-	.string "I wonder how many kinds of POKéMON\n"
-	.string "there are in the world.\p"
-	.string "Three years ago, PROF.OAK said that\n"
-	.string "there were 150 different kinds.\p"
-	.string "But recently I heard there's\n"
-	.string "over 400!$"
+	.string "מעניין כמה מינים של פוקימונים\n"
+	.string "יש בעולם.\p"
+	.string "לפני שלוש שנים פרופ' אוק אמר\n"
+	.string "שיש 150 מינים שונים.\p"
+	.string "אבל לאחרונה שמעתי שיש\n"
+	.string "יותר מ-400!$"

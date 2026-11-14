@@ -1,0 +1,88 @@
+# New Sinjoh hot-springs tutor (NewSinjoh_HotSprings_EventScript_PLATutor,
+# data/maps/NewSinjoh_HotSprings_hns/scripts.inc:119; chooseboxmon SELECT_PC_MON_PLA_TUTOR at :222,
+# filter CanMonLearnPLAMove with sPLATutorLearnsets, src/chooseboxmon.c:107):
+#  1 intro NO -> 'come back';  2 YES -> the list -> Mountain Gale (row 4) -> confirm YES -> which ->
+#  the box: only Feraligatr (box 4) is not greyed -> Feraligatr (4 moves) -> replace YES -> the box
+#  mon's summary -> forget Bite -> Poof -> learned -> done;  3 Mountain Gale -> Typhlosion (party,
+#  greyed) -> can't learn -> 'come back';  4 the list, B.
+start saves/ladder6_postgame_copy.sav
+include _setup.txt
+warpto MAP_NEWSINJOH_HOTSPRINGS_HNS 16 20
+face UP
+
+# --- 1. NO
+talk ns1_intro 20
+tap B 0
+talk ns1_decline 10 -
+waitctl 900
+
+# --- 2. Mountain Gale to Feraligatr in the box
+face UP
+talk ns2_intro 20
+tap A 0
+talk ns2_choose 10 -
+snap ns2_list_01
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap ns2_list_mountaingale
+tap A 0
+talk ns2_confirm 10 -
+tap A 0
+talk ns2_which 10 -
+include _pickparty.txt
+snap ns2_box_hooh
+boxgo 0 4
+snap ns2_box_feraligatr
+boxgo 1 0
+snap ns2_party
+boxpick 0 4 ns2_box_feraligatr_pick
+include _tofield.txt
+pages ns2_replace 2
+waitlearn 5
+snap ns2_replace_yesno
+tap A 0
+pages ns2_whichforget 1
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleReplaceMoveInput 900
+waitquiet
+press UP
+snap ns2_summary_new
+press UP
+snap ns2_summary_4
+press A
+waitcb2x CB2_Overworld 900
+waittaskx field_specials:Task_LearnMove 900
+pages ns2_poof 4
+talk ns2_done 10 -
+waitctl 900
+
+# --- 3. Typhlosion can't learn it
+face UP
+talk ns3_intro 20
+tap A 0
+talk ns3_choose 10 -
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+tap A 0
+talk ns3_confirm 10 -
+tap A 0
+talk ns3_which 10 -
+include _pickparty.txt
+boxpick 1 0 ns3_party_typhlosion
+include _tofield.txt
+pages ns3_cantlearn 2
+talk ns3_after 10 -
+waitctl 900
+
+# --- 4. the list, B
+face UP
+talk ns4_intro 20
+tap A 0
+talk ns4_choose 10 -
+tap B 0
+talk ns4_after 10 -
+waitctl 900

@@ -10,11 +10,10 @@ VermilionCity_House2_EventScript_Youngster::
 	end
 
 VermilionCity_House2_Text_PokefanF:
-	.string "Do you know about the MAGNET\n"
-	.string "TRAIN?\p"
-	.string "It's a railway that goes to\n"
-	.string "GOLDENROD in JOHTO.$"
+	.string "שמעת על הרכבת המגנטית?\p"
+	.string "זו מסילת רכבת שמגיעה\n"
+	.string "לגולדנרוד שבג'וטו.$"
 
 VermilionCity_House2_Text_Youngster:
-	.string "I want to go to SAFFRON to see\n"
-	.string "the MAGNET TRAIN.$"
+	.string "אני רוצה לנסוע לסאפרון כדי\n"
+	.string "לראות את הרכבת המגנטית.$"

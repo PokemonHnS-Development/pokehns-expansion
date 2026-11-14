@@ -342,110 +342,103 @@ AzaleaTown_Movement_KurtLeave:
 	step_end
 
 AzaleaTown_Text_RivalBefore:
-	.string "…Tell me something.\p"
-	.string "Is it true that TEAM ROCKET\n"
-	.string "has returned?\p"
-	.string "What? You beat them? Hah! Quit\n"
-	.string "lying.\p"
-	.string "You're not joking?\n"
-	.string "Then let's see how good you are.$"
+	.string "…תגיד לי משהו.\p"
+	.string "זה נכון שצוות רוקט חזר?\p"
+	.string "מה? ניצחת אותם? הא! תפסיק לשקר.\p"
+	.string "אתה לא צוחק? אז בוא נראה כמה אתה טוב.$"
 
 AzaleaTown_Text_RivalWin:
-	.string "…Humph! Useless POKéMON!\p"
-	.string "Listen, you. You only won because\n"
-	.string "my POKéMON were weak.$"
+	.string "…המפף! פוקימונים חסרי תועלת!\p"
+	.string "תקשיב לי. ניצחת רק כי\n"
+	.string "הפוקימונים שלי היו חלשים.$"
 
 AzaleaTown_Text_RivalAfter:
-	.string "I hate the weak.\p"
-	.string "POKéMON, trainers. It doesn't\n"
-	.string "matter who or what.\p"
-	.string "I'm going to be strong and wipe\n"
-	.string "out the weak.\p"
-	.string "That goes for TEAM ROCKET too.\p"
-	.string "They act big and tough in a group.\p"
-	.string "But get them alone, and they're weak.\n"
-	.string "I hate them all.\p"
-	.string "You stay out of my way. A weakling\n"
-	.string "like you is only a distraction.$"
+	.string "אני שונא חלשים.\p"
+	.string "פוקימונים, מאמנים. לא משנה מי או מה.\p"
+	.string "אני אהיה חזק ואמחק את החלשים.\p"
+	.string "זה נכון גם לגבי צוות רוקט.\p"
+	.string "בקבוצה הם עושים את עצמם\n"
+	.string "גדולים וקשוחים.\p"
+	.string "אבל לבד, הם חלשים. אני שונא את כולם.\p"
+	.string "אל תעמוד לי בדרך.\n"
+	.string "חלשלוש כמוך רק מסיח את דעתי.$"
 
 AzaleaTown_Text_RivalLoss:
 	.string "…Humph! I knew you were lying.$"
 
 AzaleaTown_Text_Rocket1:
-	.string "It's unsafe to go in there,\n"
-	.string "so I'm standing guard.\p"
-	.string "Aren't I a good Samaritan?$"
+	.string "מסוכן להיכנס לשם,\n"
+	.string "אז אני עומד על המשמר.\p"
+	.string "נכון שאני שומרוני טוב?$"
 
 AzaleaTown_Text_Rocket2:
-	.string "Do you know about SLOWPOKETAIL?\n"
-	.string "I heard it's tasty!\p"
-	.string "Aren't you glad I told you that?$"
+	.string "שמעת על זנב סלופוק?\n"
+	.string "אומרים שהוא טעים!\p"
+	.string "נכון שאתה שמח שסיפרתי לך?$"
 
 AzaleaTown_Text_GrampsBefore:
-	.string "The SLOWPOKE have disappeared\n"
-	.string "from town…\p"
-	.string "I heard their TAILS are being\n"
-	.string "sold somewhere.$"
+	.string "הסלופוק נעלמו מהעיירה…\p"
+	.string "שמעתי שמוכרים את הזנבות שלהם איפשהו.$"
 
 AzaleaTown_Text_GrampsAfter:
-	.string "The SLOWPOKE have returned.\p"
-	.string "Knowing them, they could've just\n"
-	.string "been goofing off somewhere.$"
+	.string "הסלופוק חזרו.\p"
+	.string "כמו שאני מכיר אותם,\n"
+	.string "אולי הם סתם התבטלו איפשהו.$"
 
 AzaleaTown_Text_Teacher:
-	.string "Did you come to get KURT to make\n"
-	.string "some BALLS?\p"
-	.string "A lot of people do just that.$"
+	.string "באת לבקש מקורט\n"
+	.string "להכין לך כמה כדורים?\p"
+	.string "הרבה אנשים באים בדיוק בשביל זה.$"
 
 AzaleaTown_Text_Youngster:
-	.string "Cut through AZALEA and you'll be\n"
-	.string "in ILEX FOREST.\p"
-	.string "But these skinny trees make it\n"
-	.string "impossible to get through.\p"
-	.string "The CHARCOAL MAN's POKéMON\n"
-	.string "can CUT down trees.$"
+	.string "אם חוצים את אזייליה,\n"
+	.string "מגיעים ליער אילקס.\p"
+	.string "אבל העצים הדקים האלה\n"
+	.string "חוסמים את המעבר לגמרי.\p"
+	.string "הפוקימון של איש הפחם יכול\n"
+	.string "לכרות עצים בעזרת חיתוך.$"
 
 AzaleaTown_Text_Slowpoke1:
-	.string "SLOWPOKE:..........\p"
-	.string "...............YAWN?$"
+	.string "סלופוק:..........\p"
+	.string "...............פיהוק?$"
 
 AzaleaTown_Text_Kurt1:
-	.string "ILEX FOREST is restless!\p"
-	.string "What is going on?$"
+	.string "יער אילקס סוער!\p"
+	.string "מה קורה שם?$"
 
 AzaleaTown_Text_Kurt2:
-	.string "{PLAYER}, here's your GS BALL back!$"
+	.string "{PLAYER}, הנה, אני מחזיר לך את כדור GS!$"
 
 AzaleaTown_Text_Kurt3:
-	.string "Could you go see why ILEX FOREST\n"
-	.string "is so restless?$"
+	.string "תוכל ללכת לבדוק למה\n"
+	.string "יער אילקס כל כך סוער?$"
 
 AzaleaTown_Text_Sign:
-	.string "AZALEA TOWN\n"
-	.string "Where People and POKéMON Live in\l"
-	.string "Happy Harmony.$"
+	.string "העיירה אזייליה\p"
+	.string "כאן אנשים ופוקימונים חיים\n"
+	.string "בהרמוניה שמחה.$"
 
 AzaleaTown_Text_KurtsHouseSign:
-	.string "KURT'S HOUSE$"
+	.string "הבית של קורט$"
 
 AzaleaTown_Text_GymSign:
-	.string "AZALEA TOWN\n"
-	.string "POKéMON GYM\p"
-	.string "LEADER: BUGSY\p"
-	.string "The Walking Bug POKéMON\n"
-	.string "Encyclopedia$"
+	.string "העיירה אזייליה\n"
+	.string "מכון הפוקימון\p"
+	.string "מנהיג: באגסי\p"
+	.string "האנציקלופדיה המהלכת\n"
+	.string "של פוקימוני חרק$"
 
 AzaleaTown_Text_SlowpokeWellSign:
-	.string "SLOWPOKE WELL\p"
-	.string "Also known as the RAINMAKER WELL.\p"
-	.string "Locals believe that a SLOWPOKE's\n"
-	.string "yawn summons rain.\p"
-	.string "Records show that a SLOWPOKE's\n"
-	.string "yawn ended a drought 400 years ago.$"
+	.string "באר סלופוק\p"
+	.string "ידועה גם בשם באר מביאת הגשם.\p"
+	.string "המקומיים מאמינים שפיהוק\n"
+	.string "של סלופוק מזמן גשם.\p"
+	.string "לפי הרשומות, פיהוק של סלופוק\n"
+	.string "סיים בצורת לפני 400 שנה.$"
 
 AzaleaTown_Text_CharcoalKilnSign:
-	.string "CHARCOAL KILN$"
+	.string "כבשן הפחם$"
 
 AzaleaTown_Text_IlexForestSign:
-	.string "ILEX FOREST\p"
-	.string "Enter through the gate.$"
+	.string "יער אילקס\p"
+	.string "הכניסה דרך השער.$"

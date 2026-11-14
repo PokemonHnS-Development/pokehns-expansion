@@ -1,0 +1,12 @@
+# Stand-in (unverified reach: the special rate needs an active Game Corner PokeNews, data/scripts/roulette.inc:11-18):
+# the second table's script with VAR_0x8004 = 1 + ROULETTE_SPECIAL_RATE (0x81): 'the table pays a special
+# rate' (Roulette_Text_SpecialRateTable, Task_PrintRouletteEntryMsg src/roulette.c:3378-3384), in the field box.
+start saves/gc_base.sav
+include ../../scripts/continue.txt
+ev additem ITEM_COIN_CASE; checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 500; end
+warpto MAP_CELADON_CITY_GAME_CORNER_HNS 17 8
+face UP
+evstart setvar VAR_0x8004, 0x81; special PlayRoulette; waitstate; end
+waittaskx roulette:Task_PrintMinBet 600
+waitquiet
+snap fo_rl_01_special_rate

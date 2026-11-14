@@ -18,13 +18,13 @@ GoldenrodCity_House2_EventScript_Woman::
 	end
 
 GoldenrodPPSpeechHouse_Text_Man:
-    .string "Once while I was battling, my\n"
-    .string "POKéMON couldn't make any moves.\p"
-    .string "The POWER POINTS, or PP, of its\n"
-    .string "moves were all gone.$"
+    .string "פעם, באמצע קרב, הפוקימון שלי\n"
+    .string "לא הצליח לבצע אף מהלך.\p"
+    .string "כל נקודות הכוח, או נ”כ,\n"
+    .string "של המהלכים שלו נגמרו.$"
 
 GoldenrodPPSpeechHouse_Text_Lass:
-    .string "Sometimes, a healthy POKéMON may be\n"
-    .string "unable to use its moves.\p"
-    .string "If that happens, heal it at a\n"
-    .string "POKéMON CENTER or use an item.$"
+    .string "לפעמים גם פוקימון בריא\n"
+    .string "לא יכול להשתמש במהלכים שלו.\p"
+    .string "אם זה קורה, אפשר לרפא אותו\n"
+    .string "במרכז פוקימון או להשתמש בפריט.$"

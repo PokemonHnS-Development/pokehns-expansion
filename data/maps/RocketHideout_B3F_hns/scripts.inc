@@ -82,14 +82,14 @@ RocketHideout_B3F_Movement_DragoniteLeave:
 	step_end
 
 RocketHideout_B3F_Text_LanceGetPassword:
-    .string "LANCE: It takes two passwords\n"
-    .string "to get into the boss' quarters.\p"
-    .string "Those passwords are known only\n"
-    .string "to a few ROCKETS.\p"
-    .string "That ROCKET there very graciously\n"
-    .string "told me so.\p"
-    .string "{PLAYER}, let's go get the\n"
-    .string "passwords.$"
+    .string "לאנס: צריך שתי סיסמאות\n"
+    .string "כדי להיכנס למגורי הבוס.\p"
+    .string "את הסיסמאות האלה יודעים\n"
+    .string "רק כמה אנשי רוקט.\p"
+    .string "איש הרוקט ההוא היה נחמד מאוד\n"
+    .string "וסיפר לי את זה.\p"
+    .string "{PLAYER}, הולכים להשיג\n"
+    .string "את הסיסמאות.$"
 
 RocketHideout_B3F_EventScript_RocketKO::
 	lock
@@ -99,8 +99,8 @@ RocketHideout_B3F_EventScript_RocketKO::
 	end
 
 RocketHideout_B3F_Text_B3FRocket:
-    .string "Urrggh… The guy in the cape is\n"
-    .string "incredibly tough…$"
+    .string "אררגג… הבחור עם הגלימה\n"
+    .string "חזק בטירוף…$"
 
 
 RocketHideout_B3F_Trigger_MurkrowStairs::
@@ -269,34 +269,34 @@ RocketHideout_B3F_EventScript_Item_HyperPotion::
 	end
 
 RocketHideout_B3F_Text_B3FLockedDoorNeedsPassword:
-    .string "The door's closed…\p"
-    .string "It needs two passwords to open.$"
+    .string "הדלת סגורה…\p"
+    .string "צריך שתי סיסמאות כדי לפתוח אותה.$"
 
 RocketHideout_B3F_Text_B3FLockedDoorOpenSesame:
-    .string "The door's closed…\p"
-    .string "{PLAYER} entered the two passwords.\p"
-    .string "The door opened!$"
+    .string "הדלת סגורה…\p"
+    .string "{PLAYER} הקיש את שתי הסיסמאות.\p"
+    .string "הדלת נפתחה!$"
 
 RocketHideout_B3F_Text_Rival:
     .string "…\p"
-    .string "Didn't I tell you that I was\n"
-    .string "going to destroy TEAM ROCKET?\p"
-    .string "…Tell me, who was the guy in the\n"
-    .string "cape who used dragon POKéMON?\p"
-    .string "My POKéMON were no match at all.\p"
-    .string "It's what he said that bothers\n"
-    .string "me…\p"
-    .string "He told me that I don't love and\n"
-    .string "trust my POKéMON enough.\p"
-    .string "It's not my fault my team is so\n"
-    .string "useless.\p"
-    .string "I'm furious that I lost to a\n"
-    .string "bleeding heart like him.\p"
-    .string "But it makes me question myself.\p"
-    .string "Is there something I'm doing\n"
-    .string "wrong?\p"
-    .string "Could it be that love made his\n"
-    .string "team so powerful?$"
+    .string "לא אמרתי לך שאני הולך\n"
+    .string "להשמיד את צוות רוקט?\p"
+    .string "…תגיד לי, מי היה הבחור עם\n"
+    .string "הגלימה שהשתמש בפוקימוני דרקון?\p"
+    .string "לפוקימונים שלי לא היה שום סיכוי.\p"
+    .string "מה שהוא אמר מטריד\n"
+    .string "אותי…\p"
+    .string "הוא אמר לי שאני לא אוהב את\n"
+    .string "הפוקימונים שלי ולא סומך עליהם מספיק.\p"
+    .string "זו לא אשמתי שהקבוצה שלי\n"
+    .string "כל כך חסרת תועלת.\p"
+    .string "אני זועם שהפסדתי\n"
+    .string "ליפה נפש כמוהו.\p"
+    .string "אבל זה גורם לי לפקפק בעצמי.\p"
+    .string "אני עושה משהו\n"
+    .string "לא נכון?\p"
+    .string "יכול להיות שהאהבה היא שהפכה\n"
+    .string "את הקבוצה שלו לחזקה כל כך?$"
 
 @=======[PETREL]==============================================================================================================================
 
@@ -561,52 +561,44 @@ RocketHideout_B3F_Movement_Spin2:
 	step_end
 
 RocketHideout_B3F_Text_PetrelIntro:
-    .string "Muhahaha, we've been waiting\n"
-    .string "for you. So, you are {PLAYER}...\p"
-    .string "Me? You don't know who I am?\n"
-    .string "It is me, GIOVANNI.\p"
-    .string "The majestic GIOVANNI himself!\n"
-    .string "Wahahaha!$"
+    .string "מוהאהאהא, חיכינו לך.\n"
+    .string "אז אתה {PLAYER}…\p"
+    .string "אני? אתה לא יודע מי אני?\n"
+    .string "זה אני, ג'ובאני.\p"
+    .string "ג'ובאני המלכותי בכבודו ובעצמו!\n"
+    .string "וואהאהאהא!$"
 
 RocketHideout_B3F_Text_PetrelDisbelief:
-    .string "...Huh?\n"
-    .string "I don't sound anything like\l"
-    .string "GIOVANNI?\p"
-    .string "I don't even look like GIOVANNI?\n"
-    .string "How come? I've worked so hard\l"
-    .string "to mimic him!$"
+    .string "…מה? אני לא נשמע\n"
+    .string "בכלל כמו ג'ובאני?\p"
+    .string "אני אפילו לא נראה כמו ג'ובאני?\n"
+    .string "איך ייתכן? התאמצתי כל כך לחקות אותו!$"
 
 RocketHideout_B3F_Text_PetrelReveal:
-    .string "PETREL: I am a Team Rocket\n"
-    .string "Executive!\p"
-    .string "You must be trying to sneak into\n"
-    .string "the radio-transmitter room.\p"
-    .string "Well, that's not going to happen.\n"
-    .string "That room is protected with a\l"
-    .string "special password.\p"
-    .string "The password is “Hail GIOVANNI.”\n"
-    .string "Surprised to hear it from me?\p"
-    .string "Knowing the password won't help\n"
-    .string "you though.\p"
-    .string "The door won't open unless I say\n"
-    .string "the password. It only reacts to\l"
-    .string "my voice.$"
+    .string "פטרל: אני מנהל בצוות רוקט!\p"
+    .string "בטח אתה מנסה להתגנב\n"
+    .string "לחדר משדר הרדיו.\p"
+    .string "ובכן, זה לא יקרה. החדר\n"
+    .string "מוגן בסיסמה מיוחדת.\p"
+    .string "הסיסמה היא ”יחי ג'ובאני”.\n"
+    .string "מופתע לשמוע את זה ממני?\p"
+    .string "אבל לדעת את הסיסמה\n"
+    .string "לא יעזור לך.\p"
+    .string "הדלת לא תיפתח אם לא אגיד\n"
+    .string "את הסיסמה. היא מגיבה רק לקול שלי.$"
 
 RocketHideout_B3F_Text_PetrelBeaten:
-    .string "I… I couldn't do a thing…\p"
-    .string "GIOVANNI, please forgive me…$"
+    .string "אני… לא הצלחתי לעשות כלום…\p"
+    .string "ג'ובאני, בבקשה סלח לי…$"
 
 RocketHideout_B3F_Text_PetrelAfterBattle:
-    .string "PETREL: Since disbanding Team\n"
-    .string "Rocket three years ago, our\l"
-    .string "GIOVANNI has been missing.\p"
-    .string "But we're certain he's been\n"
-    .string "waiting for the right time for\l"
-    .string "our revival... Wahahaha!\p"
-    .string "Losing to you won't change the\n"
-    .string "fact that you are unable to get\l"
-    .string "in the radio-transmitter room!\p"
-    .string "You need my voice to unlock it!$"
+    .string "פטרל: מאז שפירק את צוות רוקט\n"
+    .string "לפני שלוש שנים, ג'ובאני שלנו נעדר.\p"
+    .string "אבל אנחנו בטוחים שהוא מחכה\n"
+    .string "לרגע הנכון לתחייה שלנו… וואהאהאהא!\p"
+    .string "ההפסד לך לא משנה את העובדה שאתה\n"
+    .string "לא יכול להיכנס לחדר משדר הרדיו!\p"
+    .string "צריך את הקול שלי כדי לפתוח אותו!$"
 
 RocketHideout_B3F_EventScript_Murkrow::
 	lock
@@ -619,78 +611,76 @@ RocketHideout_B3F_EventScript_Murkrow::
 	end
 
 RocketHideout_B3F_Text_MurkrowSpeak1:
-    .string "MURKROW: Hail GIOVANNI.$"
+    .string "מרקרואו: יחי ג'ובאני.$"
 
 RocketHideout_B3F_Text_MurkrowMimic:
-    .string "MURKROW is mimicking\n"
-    .string "the voice of PETREL!\p"
-    .string "You may be able to...!?$"
+    .string "מרקרואו מחקה\n"
+    .string "את הקול של פטרל!\p"
+    .string "אולי אפשר…!?$"
 
 RocketHideout_B3F_Text_Murkrow:
-    .string "MURKROW: The password is…\p"
-    .string "HAIL GIOVANNI.$"
+    .string "מרקרואו: הסיסמה היא…\p"
+    .string "יחי ג'ובאני.$"
 
 RocketHideout_B3F_Text_GruntF5Seen:
-    .string "Do I know the password?\p"
-    .string "Maybe.\p"
-    .string "But no weakling's going to get\n"
-    .string "it!$"
+    .string "אם אני יודעת את הסיסמה?\p"
+    .string "אולי.\p"
+    .string "אבל שום חלשלוש לא יקבל\n"
+    .string "אותה ממני!$"
 
 RocketHideout_B3F_Text_GruntF5Beaten:
-    .string "All right. Stop. I'll tell you.$"
+    .string "טוב. די. אני אגיד לך.$"
 
 RocketHideout_B3F_Text_GruntF5After:
-    .string "The password to the boss' room\n"
-    .string "is SLOWPOKETAIL.\p"
-    .string "But it's useless unless you have\n"
-    .string "two passwords.$"
+    .string "הסיסמה לחדר של הבוס\n"
+    .string "היא זנב סלופוק.\p"
+    .string "אבל היא חסרת תועלת\n"
+    .string "בלי שתי הסיסמאות.$"
 
 RocketHideout_B3F_Text_GruntM28Seen:
-    .string "Hyuck-hyuck-hyuck!\p"
-    .string "I remember you from the well!\p"
-    .string "You're challenging me again?\p"
-    .string "Hah! You're nuts, but you have\n"
-    .string "guts!\p"
-    .string "I'll warn you, I got better!\p"
-    .string "If you can beat me, I'll tell\l"
-    .string "you a password to the boss'\n"
-    .string "room!$"
+    .string "חה-חה-חה!\p"
+    .string "אני זוכר אותך מהבאר!\p"
+    .string "אתה שוב מאתגר אותי?\p"
+    .string "הא! אתה משוגע, אבל יש לך\n"
+    .string "אומץ!\p"
+    .string "אני מזהיר אותך, השתפרתי!\p"
+    .string "אם תנצח אותי, אגיד לך\n"
+    .string "סיסמה לחדר של הבוס!$"
 
 RocketHideout_B3F_Text_GruntM28Beaten:
-    .string "Hyuck-hyuck-hyuck! You're good!$"
+    .string "חה-חה-חה! אתה טוב!$"
 
 RocketHideout_B3F_Text_GruntM28After:
-    .string "Hyuck-hyuck-hyuck!\p"
-    .string "The password to the boss' room…\p"
-    .string "Uh…, I think it is RATICATE TAIL.$"
+    .string "חה-חה-חה!\p"
+    .string "הסיסמה לחדר של הבוס…\p"
+    .string "אה…, נדמה לי שזה זנב רטיקייט.$"
 
 RocketHideout_B3F_Text_ScientistRossSeen:
-    .string "I used to work for SILPH, but now\n"
-    .string "I run research for TEAM ROCKET.\p"
-    .string "A meddlesome child like you needs\n"
-    .string "to be punished.$"
+    .string "פעם עבדתי בחברת סילף, אבל עכשיו\n"
+    .string "אני מנהל מחקר בשביל צוות רוקט.\p"
+    .string "ילד חטטן כמוך\n"
+    .string "צריך לקבל עונש.$"
 
 RocketHideout_B3F_Text_ScientistRossBeaten:
-    .string "A mere tactical error cost me…$"
+    .string "טעות טקטית קטנה עלתה לי ביוקר…$"
 
 RocketHideout_B3F_Text_ScientistRossAfter:
-    .string "A radio signal that drives\n"
-    .string "POKéMON mad…\p"
-    .string "My experiment is a complete\n"
-    .string "success.\p"
-    .string "My promotion is assured. This\n"
-    .string "loss means absolutely nothing.$"
+    .string "אות רדיו שמשגע\n"
+    .string "פוקימונים…\p"
+    .string "הניסוי שלי הוא הצלחה\n"
+    .string "מוחלטת.\p"
+    .string "הקידום שלי מובטח. ההפסד הזה\n"
+    .string "לא אומר שום דבר.$"
 
 RocketHideout_B3F_Text_ScientistMitchSeen:
-    .string "I don't care that POKéMON are hurt\n"
-    .string "by our experiment.$"
+    .string "לא אכפת לי שהניסוי שלנו\n"
+    .string "פוגע בפוקימונים.$"
 
 RocketHideout_B3F_Text_ScientistMitchBeaten:
-    .string "Thinking is my strong suit, not\n"
-    .string "battling.$"
+    .string "הצד החזק שלי הוא חשיבה,\n"
+    .string "לא קרבות.$"
 
 RocketHideout_B3F_Text_ScientistMitchAfter:
-    .string "If we turn up the power of our\n"
-    .string "radio signal for broadcast\l"
-    .string "nationwide…\p"
-    .string "The very thought excites me!$"
+    .string "אם נגביר את העוצמה של אות הרדיו\n"
+    .string "שלנו כדי לשדר בכל הארץ…\p"
+    .string "עצם המחשבה מרגשת אותי!$"

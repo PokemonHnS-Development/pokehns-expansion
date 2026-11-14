@@ -1,0 +1,15 @@
+# Cold boot from a battery save -> CONTINUE -> controllable in the overworld.
+# Run with:  hns.py run scripts/continue.txt OUTDIR --save SAVE.sav
+# (hns.py copies SAVE to OUTDIR/cur.sav first, so an in-game save never touches the ladder.)
+#
+# Note for a save made with a DIFFERENT build: the official 2.0.x upgrade procedure is to
+# leave the Pokemon Center before doing anything else; scripts that load ladder saves on a
+# new build should walk out first.
+
+waitcb2 CB2_MainMenu 4000 START                 # START skips intro and title
+waittask Task_HandleMainMenuInput 600
+shot ct01_mainmenu
+tap A 30                                        # CONTINUE (top item when a save exists)
+waitcb2 CB2_Overworld 1200
+waitctl 1200 B                                  # B closes anything a map script opens
+shot ct02_overworld

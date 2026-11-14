@@ -1,0 +1,10 @@
+# From the overworld: the PC storage menu (special ShowPokemonStorageSystemPC, as the Center PC
+# script calls it) -> DEPOSIT POKeMON; the cursor starts on party slot 0 and the left panel shows
+# its nickname and /SPECIES (PrintDisplayMonInfo, src/pokemon_storage_system.c)
+evstart special ShowPokemonStorageSystemPC; waitstate; releaseall; end
+waittaskx Task_PCMainMenu 600
+waittaskdata Task_PCMainMenu 0 2 600
+press DOWN
+tap A 0
+waitcb2x CB2_PokeStorage 900
+pcwait

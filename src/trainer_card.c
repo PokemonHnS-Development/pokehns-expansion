@@ -975,6 +975,13 @@ static void InitBgsAndWindows(void)
     ChangeBgX(3, 0, BG_COORD_SET);
     ChangeBgY(3, 0, BG_COORD_SET);
     InitWindows(sTrainerCardWindowTemplates);
+#if TEXT_RTL
+    // The card text sits in fixed places on the card art (row bullets, the name underline, the
+    // header label, the photo circle), so it keeps the English layout and only reads right to
+    // left. The trainer picture is a bitmap and must not be mirrored.
+    SetWindowRtlMode(WIN_CARD_TEXT, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(WIN_TRAINER_PIC, WINDOW_RTL_LTR);
+#endif
     DeactivateAllTextPrinters();
     LoadMessageBoxAndBorderGfx();
 }
@@ -1223,6 +1230,31 @@ static void PrintTimeOnCard(void)
     x -= totalWidth;
 
     FillWindowPixelRect(WIN_CARD_TEXT, PIXEL_FILL(0), x, y, totalWidth, 15);
+#if TEXT_RTL
+    {
+        // One string, so that h:mm is a single left-to-right run however the window is laid out.
+        // The colon blinks through colour codes instead of its own printer. Right-aligned to the
+        // end of the field, the glyphs land where the three separate prints put them.
+        const u8 *colonColors = sTimeColonTextColors[sData->timeColonInvisible];
+        u8 *ptr = ConvertIntToDecimalStringN(gStringVar4, hours, STR_CONV_MODE_LEFT_ALIGN, 3);
+        *ptr++ = EXT_CTRL_CODE_BEGIN;
+        *ptr++ = EXT_CTRL_CODE_COLOR;
+        *ptr++ = colonColors[1];
+        *ptr++ = EXT_CTRL_CODE_BEGIN;
+        *ptr++ = EXT_CTRL_CODE_SHADOW;
+        *ptr++ = colonColors[2];
+        ptr = StringCopy(ptr, gText_Colon2);
+        *ptr++ = EXT_CTRL_CODE_BEGIN;
+        *ptr++ = EXT_CTRL_CODE_COLOR;
+        *ptr++ = sTrainerCardTextColors[1];
+        *ptr++ = EXT_CTRL_CODE_BEGIN;
+        *ptr++ = EXT_CTRL_CODE_SHADOW;
+        *ptr++ = sTrainerCardTextColors[2];
+        ConvertIntToDecimalStringN(ptr, minutes, STR_CONV_MODE_LEADING_ZEROS, 2);
+        x = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, x + totalWidth);
+        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, x, y, sTrainerCardTextColors, TEXT_SKIP_DRAW, gStringVar4);
+    }
+#else
     ConvertIntToDecimalStringN(gStringVar4, hours, STR_CONV_MODE_RIGHT_ALIGN, 3);
     AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, x, y, sTrainerCardTextColors, TEXT_SKIP_DRAW, gStringVar4);
     x += 18;
@@ -1230,6 +1262,7 @@ static void PrintTimeOnCard(void)
     x += width;
     ConvertIntToDecimalStringN(gStringVar4, minutes, STR_CONV_MODE_LEADING_ZEROS, 2);
     AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, x, y, sTrainerCardTextColors, TEXT_SKIP_DRAW, gStringVar4);
+#endif
 }
 
 static void PrintProfilePhraseOnCard(void)

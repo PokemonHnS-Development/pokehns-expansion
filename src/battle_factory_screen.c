@@ -1838,7 +1838,13 @@ static void Select_PrintMonSpecies(void)
     FillWindowPixelBuffer(SELECT_WIN_SPECIES, PIXEL_FILL(0));
     species = GetMonData(&sFactorySelectScreen->mons[monId].monData, MON_DATA_SPECIES);
     StringCopy(gStringVar4, GetSpeciesName(species));
+#if TEXT_RTL
+    // The banner art behind this mirrored window is not mirrored: x 2 ends the text at the
+    // window's right edge, where the English right alignment ends it.
+    x = 2;
+#else
     x = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 86);
+#endif
     AddTextPrinterParameterized3(SELECT_WIN_SPECIES, FONT_NORMAL, x, 1, sSpeciesNameTextColors, 0, gStringVar4);
     CopyWindowToVram(SELECT_WIN_SPECIES, COPYWIN_GFX);
 }
@@ -1958,7 +1964,11 @@ static void Select_PrintMonCategory(void)
         FillWindowPixelBuffer(SELECT_WIN_MON_CATEGORY, PIXEL_FILL(0));
         species = GetMonData(&sFactorySelectScreen->mons[monId].monData, MON_DATA_SPECIES);
         CopyMonCategoryText(species, text);
+#if TEXT_RTL
+        x = 2;
+#else
         x = GetStringRightAlignXOffset(FONT_NORMAL, text, 118);
+#endif
         AddTextPrinterParameterized(SELECT_WIN_MON_CATEGORY, FONT_NORMAL, text, x, 1, 0, NULL);
         CopyWindowToVram(SELECT_WIN_MON_CATEGORY, COPYWIN_GFX);
     }
@@ -3744,7 +3754,11 @@ static void Swap_PrintMonSpecies(void)
         else
             species = GetMonData(&gEnemyParty[monId], MON_DATA_SPECIES);
         StringCopy(gStringVar4, GetSpeciesName(species));
+#if TEXT_RTL
+        x = 2;
+#else
         x = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 86);
+#endif
         AddTextPrinterParameterized3(SWAP_WIN_SPECIES, FONT_NORMAL, x, 1, sSwapSpeciesNameTextColors, 0, gStringVar4);
         CopyWindowToVram(SWAP_WIN_SPECIES, COPYWIN_FULL);
     }
@@ -3778,7 +3792,13 @@ static void Swap_PrintYesNoOptions(void)
 
 static void Swap_PrintActionString(const u8 *str, u32 y, u32 windowId)
 {
+#if TEXT_RTL
+    // The button art behind these mirrored windows is not mirrored: x 2 puts the label's right
+    // edge at 70, where the English right alignment ends it.
+    s32 x = 2;
+#else
     s32 x = GetStringRightAlignXOffset(FONT_SMALL, str, 70);
+#endif
     AddTextPrinterParameterized3(windowId, FONT_SMALL, x, y, sSwapMenuOptionsTextColors, 0, str);
 }
 
@@ -3853,7 +3873,11 @@ static void Swap_PrintMonSpeciesAtFade(void)
         else
             species = GetMonData(&gEnemyParty[monId], MON_DATA_SPECIES);
         StringCopy(gStringVar4, GetSpeciesName(species));
+#if TEXT_RTL
+        x = 2;
+#else
         x = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 86);
+#endif
         AddTextPrinterParameterized3(SWAP_WIN_SPECIES_AT_FADE, FONT_NORMAL, x, 1, sSwapSpeciesNameTextColors, 0, gStringVar4);
         CopyWindowToVram(SWAP_WIN_SPECIES_AT_FADE, COPYWIN_FULL);
     }
@@ -3880,7 +3904,11 @@ static void Swap_PrintMonSpeciesForTransition(void)
         else
             species = GetMonData(&gEnemyParty[monId], MON_DATA_SPECIES);
         StringCopy(gStringVar4, GetSpeciesName(species));
+#if TEXT_RTL
+        x = 2;
+#else
         x = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 86);
+#endif
         AddTextPrinterParameterized3(SWAP_WIN_SPECIES, FONT_NORMAL, x, 1, sSwapSpeciesNameTextColors, 0, gStringVar4);
         CopyWindowToVram(SWAP_WIN_SPECIES, COPYWIN_FULL);
     }
@@ -3906,7 +3934,11 @@ static void Swap_PrintMonCategory(void)
         else
             species = GetMonData(&gEnemyParty[monId], MON_DATA_SPECIES);
         CopyMonCategoryText(species, text);
+#if TEXT_RTL
+        x = 2;
+#else
         x = GetStringRightAlignXOffset(FONT_NORMAL, text, 118);
+#endif
         AddTextPrinterParameterized(SWAP_WIN_MON_CATEGORY, FONT_NORMAL, text, x, 1, 0, NULL);
         CopyWindowToVram(SWAP_WIN_MON_CATEGORY, COPYWIN_GFX);
     }

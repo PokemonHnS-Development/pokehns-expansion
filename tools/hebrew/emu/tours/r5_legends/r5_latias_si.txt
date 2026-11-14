@@ -1,0 +1,13 @@
+# Latias, Southern Island interior (12,13): shown when VAR_ROAMER_POKEMON_HNS is 1 (Latios roams); no text
+# The object walks a fixed sequence (or hides in the grass), so after walking next to it the
+# script is started directly with VAR_LAST_TALKED = its local id.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev setvar VAR_ROAMER_POKEMON_HNS, 1; clearflag FLAG_HIDE_LATIAS; end
+warpto MAP_SOUTHERN_ISLAND_INTERIOR_HNS 12 14
+objs
+approach 2
+snap latias_si_field
+evstart setvar VAR_LAST_TALKED, 2; goto SouthernIsland_Interior_hns_EventScript_Latias
+scene latias_si_pre 4000
+include _legend_tail.txt

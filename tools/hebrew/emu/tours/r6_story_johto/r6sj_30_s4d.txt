@@ -1,0 +1,67 @@
+# Late Johto story (s4d_blackthorn_league.inc sources): Ice Path 1F (the Kimono Girl trigger
+# (49,29) at VAR_ICE_PATH_STATE 0 'Leave'; the Kimono Girl from the north: YES/NO -> NO, again
+# YES -> pushed, thanks; the HM07 Waterfall item ball (41,11)); Elm's Master Ball
+# (NewBarkTown_Lab_EventScript_ElmMasterBall :441-462, LABSTATE 7); the rival at the theater door
+# (EcruteakCity_Trigger_Silver (39,41), THEATER 4); Victory Road rival battle 5 for each starter
+# (VictoryRoadKanto_1F_Trigger (28,7), VAR_ROUTE27_STATE 2). Ladder 4 rewound.
+start saves/r6sj_ladder4_league.sav
+include _base.txt
+include _mewtwo.txt
+ev setvar VAR_ICE_PATH_STATE, 0; clearflag FLAG_HIDE_ICE_PATH_KIMONO; clearflag FLAG_ITEM_ICEPATH1_HM_WATERFALL; removeitem ITEM_HM_WATERFALL; end
+warpto MAP_ICE_PATH_1F_HNS 49 31
+snap ip_room
+walkto 49 29
+scene ip_leave 10000
+warpto MAP_ICE_PATH_1F_HNS 49 24
+face DOWN
+tap A 4
+scene ip_k 10000
+yesno ip_k_yn NO
+scene ip_k_no 8000
+tap A 4
+scene ip_k2 10000
+yesno ip_k2_yn YES
+scene ip_k2_yes 30000 40
+snap ip_k2_end
+warpto MAP_ICE_PATH_1F_HNS 41 12
+face UP
+tap A 4
+scene wf 8000
+snap wf_end
+ev setvar VAR_NEWBARKTOWN_LABSTATE, 7; clearflag FLAG_HIDE_NEWBARKTOWN_LAB_AIDE; removeitem ITEM_MASTER_BALL, 99; end
+warpto MAP_NEW_BARK_TOWN_LAB_HNS 6 4
+snap mb_room
+face UP
+tap A 4
+scene mb 30000 40
+snap mb_end
+ev setvar VAR_ECRUTEAK_CITY_THEATER, 4; setflag FLAG_HIDE_ECRUTEAK_SILVER; end
+warpto MAP_ECRUTEAK_CITY_HNS 39 43
+snap ec_field
+walkto 39 41
+scene ec 30000 40
+snap ec_end
+# Victory Road, rival battle 5
+ev setvar VAR_STARTER_MON, 0; cleartrainerflag TRAINER_RIVAL_CYNDAQUIL_5_HNS; setvar VAR_ROUTE27_STATE, 2; end
+warpto MAP_VICTORY_ROAD_KANTO_1F_HNS 28 9
+snap vr_room
+walkto 28 7
+scene r5cyn_pre 20000
+bwalk r5cyn_intro input:HandleInputChooseAction
+bwin r5cyn_win
+scene r5cyn_after 30000 40
+ev setvar VAR_STARTER_MON, 1; cleartrainerflag TRAINER_RIVAL_TOTODILE_5_HNS; setvar VAR_ROUTE27_STATE, 2; end
+warpto MAP_VICTORY_ROAD_KANTO_1F_HNS 28 9
+walkto 28 7
+scene r5tot_pre 20000
+bwalk r5tot_intro input:HandleInputChooseAction
+bwin r5tot_win
+scene r5tot_after 30000 40
+ev setvar VAR_STARTER_MON, 2; cleartrainerflag TRAINER_RIVAL_CHIKORITA_5_HNS; setvar VAR_ROUTE27_STATE, 2; end
+warpto MAP_VICTORY_ROAD_KANTO_1F_HNS 28 9
+walkto 28 7
+scene r5chi_pre 20000
+bwalk r5chi_intro input:HandleInputChooseAction
+bwin r5chi_win
+scene r5chi_after 30000 40
+snap r5_end

@@ -1,0 +1,58 @@
+# Kanto NPCs whose Hebrew lines keep a Latin name: Viridian House 1 (the lass naming SPEARY/RATTEY, both
+# Pokemon, which wander), Lavender House 1 (the guy, FUJI), Soul House (Mr. FUJI, the teacher), Celadon
+# Dept. Store 4F (SURF MAIL, LOVELY MAIL), Route 20 (DENNIS the Magikarp), Red's house 2F (the NES).
+start saves/ladder6_postgame.sav
+include _setup.txt
+
+# --- Viridian City House 1: lass (9,5), Rattey (object 3, (10,3)), Speary (object 4, (11,4))
+warpto MAP_VIRIDIAN_CITY_HOUSE1_HNS 9 6
+face UP
+tap A 4
+fieldwatch vir_lass free 3000
+approachnpc 3
+tap A 4
+fieldwatch vir_rattey free 3000
+warpto MAP_VIRIDIAN_CITY_HOUSE1_HNS 9 6
+approachnpc 4
+tap A 4
+fieldwatch vir_speary free 3000
+
+# --- Lavender Town House 1: the guy (6,2)
+warpto MAP_LAVENDER_TOWN_HOUSE1_HNS 6 3
+face UP
+tap A 4
+fieldwatch lav_guy free 3000
+
+# --- Soul House: Mr. Fuji (11,11), the teacher (8,15)
+warpto MAP_LAVENDER_TOWN_SOUL_HOUSE_HNS 11 12
+face UP
+tap A 4
+fieldwatch soul_fuji free 4000
+warpto MAP_LAVENDER_TOWN_SOUL_HOUSE_HNS 8 16
+face UP
+tap A 4
+fieldwatch soul_teacher free 3000
+
+# --- Celadon Dept. Store 4F: super nerd (6,10), youngster (12,6)
+warpto MAP_CELADON_CITY_DEPARTMENT_STORE_4F_HNS 6 11
+face UP
+tap A 4
+fieldwatch cel_nerd free 3000
+warpto MAP_CELADON_CITY_DEPARTMENT_STORE_4F_HNS 12 7
+face UP
+tap A 4
+fieldwatch cel_youngster free 3000
+
+# --- Route 20: Dennis (24,8), the Magikarp next to the fisherman (23,8), from the sand at (25,8)
+# ((24,9) is water, elevation 1: the land object at elevation 3 does not answer from there)
+warpto MAP_ROUTE20_HNS 25 8
+snap r20_where
+face LEFT
+tap A 4
+fieldwatch r20_dennis free 3000
+
+# --- Red's house 2F: the NES (bg 4,2)
+warpto MAP_PALLET_TOWN_REDS_HOUSE_2F_HNS 4 3
+face UP
+tap A 4
+fieldwatch red_nes free 3000

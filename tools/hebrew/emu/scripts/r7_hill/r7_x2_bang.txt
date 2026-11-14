@@ -1,0 +1,8 @@
+# Expert 2F, both trainers spotting the player in a column: from (6,17) one step east into (7,17),
+# which trainer 1 (7,15, looking south) and trainer 2 (7,19, looking north) both see; a burst of
+# shots for the '!' and the walk-up, then the intros.
+fastbattles off
+walkto2 6 17
+8 RIGHT
+burst x2b_bang 14 6
+dlg x2b_intro battle

@@ -1,0 +1,72 @@
+# Overworld debug menu, Utilities (sDebugMenu_Actions_Utilities, src/debug.c:567-584) windows and
+# script messages: Warp to map warp (group / map / warp fields, :1482-1640), Set weather
+# (:1700-1780), Font Test (Debug_EventScript_FontTest, data/scripts/debug.inc), EWRAM Counters,
+# Time Functions > Get time / Get time of day, Set time of day (Fake RTC off: message),
+# Berry Functions > pests / weeds (OW_BERRY_* off: messages), Follower NPC > Create (off: message).
+start saves/r4_misc/r4_menuA_base.sav
+include ../../continue.txt
+
+# Warp to map warp
+dbg 0 1
+waitquiet
+snap dbg_util_warp_01_group
+tap UP 6
+waitquiet
+snap dbg_util_warp_02_group1
+press A
+snap dbg_util_warp_03_map
+press A
+snap dbg_util_warp_04_warp
+tap B 6
+waitctl 600 B
+
+# Set weather
+dbg 0 2
+waitquiet
+snap dbg_util_weather_01
+tap UP 6
+tap UP 6
+waitquiet
+snap dbg_util_weather_02
+tap B 6
+waitctl 600 B
+
+# Font Test (script message)
+dbg 0 3
+pages dbg_util_fonttest 60
+waitctl 600 B
+
+# EWRAM Counters
+dbg 0 8
+pages dbg_util_ewram 6
+waitctl 600 B
+
+# Time Functions > Get time, Get time of day, Set time of day (message), Set weekday (message)
+dbg 0 4 0
+pages dbg_util_time_get 6
+waitctl 600 B
+dbg 0 4 1
+pages dbg_util_time_tod 6
+waitctl 600 B
+dbg 0 4 2
+pages dbg_util_time_settod 6
+waitctl 600 B
+
+# Berry Functions > Give map trees pests / weeds
+dbg 0 7 3
+pages dbg_util_berry_pests 6
+waitctl 600 B
+dbg 0 7 4
+pages dbg_util_berry_weeds 6
+waitctl 600 B
+
+# Follower NPC > Create Follower (feature off: message), Destroy Follower
+dbg 0 9 0
+pages dbg_util_fnpc_create 6
+waitctl 600 B
+dbg 0 9 1
+waitquiet
+snap dbg_util_fnpc_destroy
+pages dbg_util_fnpc_destroy_msg 6
+waitctl 600 B
+snap dbg_util_99_end

@@ -1,0 +1,25 @@
+# r6 items: Std_ObtainItem windows (giveitem ITEM, QTY) for the items NPCs give in *_hns scripts, 3.
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+gift g_tm_hail ITEM_TM_HAIL 1
+gift g_rage_candy_bar ITEM_RAGE_CANDY_BAR 1
+gift g_beast_ball ITEM_BEAST_BALL 1
+gift g_quick_claw ITEM_QUICK_CLAW 1
+gift g_potion ITEM_POTION 1
+gift g_master_ball ITEM_MASTER_BALL 1
+gift g_ss_ticket ITEM_SS_TICKET 1
+gift g_poke_ball_x5 ITEM_POKE_BALL 5
+gift g_everstone ITEM_EVERSTONE 1
+gift g_splash_plate ITEM_SPLASH_PLATE 1
+gift g_flame_plate ITEM_FLAME_PLATE 1
+gift g_earth_plate ITEM_EARTH_PLATE 1
+gift g_spooky_plate ITEM_SPOOKY_PLATE 1
+gift g_meadow_plate ITEM_MEADOW_PLATE 1
+gift g_icicle_plate ITEM_ICICLE_PLATE 1
+gift g_pixie_plate ITEM_PIXIE_PLATE 1
+gift g_zoom_lens ITEM_ZOOM_LENS 1
+gift g_hm_strength ITEM_HM_STRENGTH 1
+gift g_tm_iron_tail ITEM_TM_IRON_TAIL 1
+gift g_good_rod ITEM_GOOD_ROD 1
+gift g_aurora_ticket ITEM_AURORA_TICKET 1
+gift g_tm_rock_slide ITEM_TM_ROCK_SLIDE 1

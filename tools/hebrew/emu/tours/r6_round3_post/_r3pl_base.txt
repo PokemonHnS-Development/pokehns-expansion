@@ -1,0 +1,8 @@
+# r3pl (postgame legends, Noble Electrode, Route 22 Celebi) base include (not a tour). Ladder 6
+# (post-game) -> CONTINUE -> Master Balls for the catch branch, FAST BATTLES off so bwalk / bwin
+# photograph the messages that do not wait for A, wild encounters off (OW_FLAG_NO_ENCOUNTER =
+# FLAG_DISABLE_ENCOUNTERS) so walks are not interrupted. Run with scripts/r6_story_kanto/r6story.py.
+include ../../scripts/continue.txt
+ev additem ITEM_MASTER_BALL, 10; end
+fastbattles off
+ev setflag FLAG_DISABLE_ENCOUNTERS; end

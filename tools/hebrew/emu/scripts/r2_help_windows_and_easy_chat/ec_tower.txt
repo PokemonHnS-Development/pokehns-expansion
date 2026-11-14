@@ -1,0 +1,112 @@
+# Battle Tower lobby, the feelings man at (23,5) (BattleFrontier_BattleTowerLobby_hns/scripts.inc:434-470):
+# MULTI_BATTLE_TOWER_FEELINGS (every row), then the Easy Chat BATTLE_START / BATTLE_WON / BATTLE_LOST
+# screens (src/easy_chat.c:441-475; 2x3 frame, 6 words, title "at the battle's start:" etc.).
+# BATTLE_START: the cursor on all six slots and the buttons, six long words (the longest Hebrew
+# words of five groups) in RTL order, OK -> "your feeling at the battle's start / is as shown" -> YES
+# -> the man's reply. BATTLE_WON: one word, then B -> quit prompt -> YES. BATTLE_LOST: the empty screen,
+# B -> quit -> YES. Then "won't tell".
+start saves/ladder6_postgame.sav
+include ../continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; setflag FLAG_SYS_GAME_CLEAR; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 23 6
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+loc
+face UP
+talk tw_feel 10
+snap tw_feel_r1
+seek 8 @menu:sMenu+2@ 1 DOWN
+snap tw_feel_r2
+seek 8 @menu:sMenu+2@ 2 DOWN
+snap tw_feel_r3
+seek 8 @menu:sMenu+2@ 3 DOWN
+snap tw_feel_r4
+seek 8 @menu:sMenu+2@ 0 UP
+tap A 0
+talk tw_start_msg 10 -
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecstate
+snap tw_start_slot00
+ec RIGHT
+snap tw_start_slot01
+ec DOWN
+snap tw_start_slot11
+ec LEFT
+snap tw_start_slot10
+ec DOWN
+snap tw_start_slot20
+ec RIGHT
+snap tw_start_slot21
+ec DOWN
+snap tw_start_btn_ok
+ec LEFT
+snap tw_start_btn_cancel
+ec LEFT
+snap tw_start_btn_delall
+ec DOWN
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_SHELL_ARMOR
+ecputword 0 1 EC_GROUP_BATTLE EC_WORD_CAN_T_WIN
+ecputword 1 0 EC_GROUP_GREETINGS EC_WORD_WELCOME
+ecputword 1 1 EC_GROUP_TRAINER EC_WORD_SP_ABILITY
+ecputword 2 0 EC_GROUP_FEELINGS EC_WORD_MISHEARD
+ecputword 2 1 EC_GROUP_VOICES EC_WORD_WAAAH tw_put6
+ecstate
+snap tw_start_6words
+ecslot 0 0
+snap tw_start_6words_slot00
+ecslot 0 1
+snap tw_start_6words_slot01
+ecslot 2 0
+snap tw_start_6words_slot20
+ec START
+snap tw_start_confirm
+ecstate
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk tw_start_done 10 -
+waitctl 900
+
+# BATTLE_WON: one word, then quit
+face UP
+talk tw_feel2 10
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0
+talk tw_won_msg 10 -
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+snap tw_won_screen
+ecputword 0 0 EC_GROUP_FEELINGS EC_WORD_HAPPY
+snap tw_won_1word
+ec B
+snap tw_won_quit
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk tw_won_cancel 10 -
+waitctl 900
+
+# BATTLE_LOST: the screen, then quit
+face UP
+talk tw_feel3 10
+seek 8 @menu:sMenu+2@ 2 DOWN
+tap A 0
+talk tw_lost_msg 10 -
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+snap tw_lost_screen
+ec B
+snap tw_lost_quit
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk tw_lost_cancel 10 -
+waitctl 900
+
+# won't tell
+face UP
+talk tw_feel4 10
+seek 8 @menu:sMenu+2@ 3 DOWN
+tap A 0
+talk tw_wonttell 10 -
+waitctl 900

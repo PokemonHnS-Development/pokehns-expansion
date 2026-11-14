@@ -72,9 +72,9 @@ GoldenrodDeptStore7_EventScript_Bugcatcher::
 	end
 
 GoldenrodDeptStore_Text_RoofPokefanF:
-    .string "Whew, I'm tired.\p"
-    .string "I sometimes come up to the rooftop\n"
-    .string "to take a break from shopping.$"
+    .string "אוף, אני עייפה.\p"
+    .string "לפעמים אני עולה לגג כדי לנוח\n"
+    .string "קצת מהקניות.$"
 
 GoldenrodDeptStore_Text_RoofFisher:
     .string "Pardon? Who says an adult can't get\n"
@@ -87,23 +87,23 @@ GoldenrodDeptStore_Text_RoofTwin:
     .string "so often.$"
 
 GoldenrodDeptStore_Text_RoofSuperNerdOhWow:
-    .string "Oh, wow!$"
+    .string "אוי, וואו!$"
 
 GoldenrodDeptStore_Text_RoofSuperNerdQuitBotheringMe:
-    .string "Will you quit bothering me?$"
+    .string "אולי תפסיק להציק לי?$"
 
 GoldenrodDeptStore_Text_RoofPokefanM:
-    .string "There's something I really want,\n"
-    .string "but I don't have the necessary cash…\p"
-    .string "Maybe I'll sell off the BERRIES I've\n"
-    .string "collected…$"
+    .string "יש משהו שאני ממש רוצה,\n"
+    .string "אבל אין לי מספיק כסף…\p"
+    .string "אולי אמכור את הפירות\n"
+    .string "שאספתי…$"
 
 GoldenrodDeptStore_Text_RoofTeacher:
     .string "Oh, everything is so cheap!\p"
     .string "I bought so much, my PACK's crammed!$"
 
 GoldenrodDeptStore_Text_RoofBugCatcher:
-    .string "My POKéMON always get paralyzed or\n"
-    .string "poisoned when the chips are down…\p"
-    .string "So I came to buy some FULL HEAL.\p"
-    .string "I wonder if there's any left?$"
+    .string "הפוקימונים שלי תמיד חוטפים שיתוק\n"
+    .string "או הרעלה ברגעים הקריטיים…\p"
+    .string "אז באתי לקנות ריפוי מלא.\p"
+    .string "מעניין אם נשאר עוד?$"

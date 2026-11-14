@@ -1,0 +1,53 @@
+# Slowpoke Well B1F (data/maps/SlowpokeWell_B1F_hns/scripts.inc): Kurt lying at the entrance (:15-19),
+# grunts 21 and 22 (trainerbattle_single, seen / beaten / after), Eto, Proton (:41-70: seen,
+# trainerbattle_no_intro TRAINER_PROTON_1_HNS, after, Kurt, the warp to Kurt's house) and Kurt's
+# Fast Ball (AzaleaTown_KurtsHouse_EventScript_ReturnFromWell, the house's ON_FRAME at
+# VAR_AZALEA_TOWN_STATE 3). Ladder 2 + s3a + the Azalea trigger + Kurt's "must wait" (state 2).
+start saves/r6sj_ladder2_badge1.sav
+include _base.txt
+include _mewtwo.txt
+include _l2_azalea.txt
+ev setflag FLAG_HIDE_KURT_1; setflag FLAG_HIDE_AZALEA_TOWN_WELL_ROCKET; setvar VAR_AZALEA_TOWN_STATE, 2; end
+warpto MAP_SLOWPOKE_WELL_B1F_HNS 26 27
+snap sw_room
+objs
+approach 9
+tap A 4
+scene kurt 8000
+snap kurt_end
+warpto MAP_SLOWPOKE_WELL_B1F_HNS 28 9
+face UP
+tap A 4
+scene g21_pre 10000
+bwalk g21_intro input:HandleInputChooseAction
+bwin g21_win
+scene g21_post 6000
+tap A 4
+scene g21_after 6000
+warpto MAP_SLOWPOKE_WELL_B1F_HNS 21 6
+face UP
+tap A 4
+scene g22_pre 10000
+bwalk g22_intro input:HandleInputChooseAction
+bwin g22_win
+scene g22_post 6000
+tap A 4
+scene g22_after 6000
+warpto MAP_SLOWPOKE_WELL_B1F_HNS 13 8
+face UP
+tap A 4
+scene eto_pre 10000
+bwalk eto_intro input:HandleInputChooseAction
+bwin eto_win
+scene eto_post 6000
+tap A 4
+scene eto_after 6000
+warpto MAP_SLOWPOKE_WELL_B1F_HNS 14 4
+face UP
+tap A 4
+scene pr_pre 10000
+bwalk pr_intro input:HandleInputChooseAction
+bwin pr_win
+scene pr_after 60000 40
+scene pr_kurt 60000 40
+snap pr_end

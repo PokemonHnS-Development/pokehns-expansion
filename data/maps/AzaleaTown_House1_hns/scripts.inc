@@ -76,45 +76,39 @@ AzaleaTown_House1_EventScript_Farfetchd::
 
 
 CharcoalKiln_Text_Boss1:
-	.string "All the SLOWPOKE have disappeared\n"
-	.string "from the town.\p"
-	.string "The forest's protector may be\n"
-	.string "angry with us…\p"
-	.string "It may be a bad omen. We should\n"
-	.string "stay in.$"
+	.string "כל הסלופוק נעלמו מהעיירה.\p"
+	.string "אולי מגן היער כועס עלינו…\p"
+	.string "אולי זה סימן רע. כדאי שנישאר בבית.$"
 
 CharcoalKiln_Text_Boss2:
-	.string "The SLOWPOKE have returned…$"
+	.string "הסלופוק חזרו…$"
 
 CharcoalKiln_Text_Boss3:
-	.string "The SLOWPOKE have returned…\p"
-	.string "But my APPRENTICE hasn't come back\n"
-	.string "from ILEX FOREST.\p"
-	.string "Where in the world is that lazy guy?$"
+	.string "הסלופוק חזרו…\p"
+	.string "אבל השוליה שלי עוד לא חזר מיער אילקס.\p"
+	.string "איפה בכלל מסתובב הבטלן הזה?$"
 
 CharcoalKiln_Text_Boss4:
-	.string "You chased off TEAM ROCKET and\n"
-	.string "went to ILEX FOREST alone?\p"
-	.string "That takes guts! I like that.\n"
-	.string "Come train with us.$"
+	.string "גירשת את צוות רוקט\n"
+	.string "והלכת לבד ליער אילקס?\p"
+	.string "לזה צריך אומץ! אני אוהב את זה.\n"
+	.string "בוא להתאמן איתנו.$"
 
 CharcoalKiln_Text_Apprentice1:
-	.string "Where have all the SLOWPOKE gone?\p"
-	.string "Are they out playing somewhere?$"
+	.string "לאן נעלמו כל הסלופוק?\p"
+	.string "אולי הם משחקים איפשהו בחוץ?$"
 
 CharcoalKiln_Text_Apprentice2:
-	.string "The SLOWPOKE came back!$"
+	.string "הסלופוק חזרו!$"
 
 CharcoalKiln_Text_Apprentice3:
-	.string "I'm sorry--I forgot to thank you.\p"
-	.string "This is CHARCOAL that I made.\p"
-	.string "FIRE-type POKéMON would be happy\n"
-	.string "to hold that.$"
+	.string "סליחה, שכחתי להודות לך.\p"
+	.string "זה פחם שהכנתי.\p"
+	.string "פוקימונים מסוג אש ישמחו להחזיק אותו.$"
 
 CharcoalKiln_Text_Apprentice4:
-	.string "The SLOWPOKE came back, and you even\n"
-	.string "found FARFETCH'D.\p"
-	.string "You're the coolest, man!$"
+	.string "הסלופוק חזרו, ואפילו מצאת את פארפג'ד.\p"
+	.string "אתה הכי מגניב, אחי!$"
 
 CharcoalKiln_Text_Farfetchd:
-	.string "FARFETCH'D: Kwaa!$"
+	.string "פארפג'ד: קוואה!$"

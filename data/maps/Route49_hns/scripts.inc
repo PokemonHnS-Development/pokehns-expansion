@@ -34,39 +34,37 @@ Route49_EventScript_SkylarAfter::
 	end
 
 Route49_Text_SkylarDefeat:
-	.string "OKAY, you can have the PLATE.$"
+	.string "טוב, הלוח שלך.$"
 
 Route49_Text_SkylarAfter:
-	.string "As cool as that PLATE is,\n"
-	.string "you earned it fair and square.\p"
-	.string "I'll just buy something at the gift\n"
-	.string "shop instead.$"
+	.string "הלוח הזה ממש מגניב,\n"
+	.string "אבל הרווחת אותו ביושר.\p"
+	.string "במקום זה אקנה משהו\n"
+	.string "בחנות המזכרות.$"
 
 Route49_Text_SkylarBeforeBattle:
-	.string "What?\p"
-	.string "You want the PLATE?\n"
-	.string "It's an artifact imbued with an\l"
-	.string "ancient power with a connection\l"
-	.string "to the legendary POKéMON?!\p"
-	.string "Well now I'm definitely keeping it.\p"
-	.string "Fine.\p"
-	.string "You'll just have to battle me for it.$"
+	.string "מה?\p"
+	.string "רוצה את הלוח? זה חפץ עתיק שטמון\n"
+	.string "בו כוח קדום שקשור לפוקימון האגדי?!\p"
+	.string "טוב, עכשיו אני בהחלט שומרת אותו.\p"
+	.string "נו, שיהיה.\p"
+	.string "אז נצטרך להילחם עליו.$"
 
 Route49_Text_SkylarBefore:
-	.string "When I was hitting the slopes, my\n"
-	.string "skis snagged on something.\p"
-	.string "It was this strange SKY-blue PLATE.\p"
-	.string "I think I'll hold onto it as a\n"
-	.string "souvenir!$"
+	.string "כשגלשתי במדרון, המגלשיים שלי\n"
+	.string "נתקעו במשהו.\p"
+	.string "זה היה לוח מוזר בצבע כחול שמים.\p"
+	.string "אני חושבת שאשמור אותו\n"
+	.string "בתור מזכרת!$"
 
 Route49_EventScript_SkierM::
 	msgbox Route49_Text_SkierM, MSGBOX_NPC
 	end
 
 Route49_Text_SkierM::
-	.string "Hey, watch out for my board!\p"
-	.string "What? You want to battle?\n"
-	.string "No way, these slopes are too wicked!$"
+	.string "היי, זהירות עם הסנובורד שלי!\p"
+	.string "מה? רוצה להילחם?\n"
+	.string "אין מצב, המדרונות פה מטורפים מדי!$"
 
 Route49_EventScripts_KimonoGirl::
     delay 10
@@ -114,14 +112,12 @@ Route49_KimonoGitl_Movement2:
 	step_end
 
 Route49_Text_KimonoGirl:
-    .string "You....\p"
-	.string "You must be {PLAYER}, correct?\n"
-    .string "I've heard all about you and\l"
-	.string "your deeds from my cousins\l"
-	.string "in ECRUTEAK CITY.\p"
-	.string "My sisters wish to meet with you.\l"
-	.string "If you find the time, please\n"
-	.string "seek us out in the town up ahead.$"
+    .string "אתה…\n"
+    .string "אתה בטח {PLAYER}, נכון?\p"
+    .string "בנות הדודות שלי בעיר אקרוטיק\n"
+    .string "סיפרו לי הכול עליך ועל מעשיך.\p"
+    .string "אחיותיי מבקשות לפגוש אותך.\n"
+    .string "אם תתפנה, אנא חפש אותנו בעיירה שלפנינו.$"
 
 Route49_EventScript_Item_StarDust::
     finditem ITEM_STARDUST

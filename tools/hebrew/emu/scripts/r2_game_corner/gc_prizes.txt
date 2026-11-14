@@ -1,0 +1,130 @@
+# Prize corners. Goldenrod (GoldenrodCity_GameCorner_hns/scripts.inc): Pokemon clerk (16,2),
+# MULTI_PRIZE_MONS at (20,0) with the coins box (1,1) (:13-30), confirm, PC transfer, not
+# enough coins; TM clerk (18,2), dynmultichoice (12,0) with prices (:230-253), buy, you already
+# have this, not enough coins, bag full (FLAG_FINITE_TMS + 999 of the TM), quit.
+# Celadon (CeladonCity_GameCorner_hns): TM clerk (18,2) = MauvilleCity_GameCorner_EventScript_PrizeCornerTMs
+# (MauvilleCity_GameCorner/scripts.inc:452-483), MULTI_GAME_CORNER_TMS at (12,0).
+start saves/gc_base.sav
+include ../continue.txt
+ev additem ITEM_COIN_CASE; checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 9999; clearflag FLAG_FINITE_TMS; end
+warpto MAP_GOLDENROD_CITY_GAME_CORNER_HNS 16 3
+face UP
+talk pm_a 10
+press DOWN
+snap pm_menu2
+press DOWN
+snap pm_menu3
+press DOWN
+snap pm_menu4
+press DOWN
+snap pm_menu5
+press DOWN
+snap pm_menu6
+seek 8 @menu:sMenu+2@ 0 UP
+tap A 0
+talk pm_abra 10 -
+tap A 0
+talk pm_abra_get 20 -
+waitctl 900 B
+# not enough coins for Clefairy (500)
+ev checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 100; end
+face UP
+talk pm_b 10
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0
+talk pm_clefairy 10 -
+tap A 0
+talk pm_nocoins 10 -
+waitctl 900 B
+# TM clerk
+ev checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 9999; end
+warpto MAP_GOLDENROD_CITY_GAME_CORNER_HNS 18 3
+face UP
+talk tm_a 10
+press DOWN
+snap tm_menu2
+press DOWN
+snap tm_menu3
+press DOWN
+snap tm_menu4
+press DOWN
+snap tm_menu5
+press DOWN
+snap tm_menu6
+press DOWN
+snap tm_menu7
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+tap A 0
+talk tm_rest 10 -
+tap A 0
+talk tm_rest_buy 10 -
+tap A 0
+talk tm_rest2 10 -
+tap A 0
+talk tm_rest_have 10 -
+# not enough coins
+setcoins 100
+tap A 0
+talk tm_rest3 10 -
+tap A 0
+talk tm_nocoins 10 -
+tap B 0
+talk tm_quit 10 -
+waitctl 900 B
+# bag full: finite TMs and 999 TM44
+ev checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 9999; setflag FLAG_FINITE_TMS; removeitem ITEM_TM_REST, 1; additem ITEM_TM_REST, 999; end
+face UP
+talk tm_b 10
+tap A 0
+talk tm_rest4 10 -
+tap A 0
+talk tm_bagfull 10 -
+tap B 0
+talk tm_quit2 10 -
+waitctl 900 B
+ev clearflag FLAG_FINITE_TMS; end
+# Celadon TM corner
+warpto MAP_CELADON_CITY_GAME_CORNER_HNS 18 3
+face UP
+talk ce_a 10
+press DOWN
+snap ce_menu2
+press DOWN
+snap ce_menu3
+press DOWN
+snap ce_menu4
+press DOWN
+snap ce_menu5
+press DOWN
+snap ce_menu6
+seek 8 @menu:sMenu+2@ 0 UP
+tap A 0
+talk ce_dt 10 -
+tap A 0
+talk ce_dt_buy 10 -
+seek 8 @menu:sMenu+2@ 0 UP
+tap A 0
+talk ce_dt2 10 -
+tap A 0
+talk ce_dt_have 10 -
+setcoins 100
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0
+talk ce_psy 10 -
+tap A 0
+talk ce_nocoins 10 -
+tap B 0
+talk ce_quit 10 -
+waitctl 900 B
+# Celadon Pokemon clerk (same script as Goldenrod)
+ev checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 9999; end
+warpto MAP_CELADON_CITY_GAME_CORNER_HNS 16 3
+face UP
+talk cm_a 10
+tap B 0
+waitctl 900 B

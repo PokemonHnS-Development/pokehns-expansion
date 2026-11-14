@@ -1,0 +1,252 @@
+# Move relearner and deleter branches svc_relearner does not reach (Blackthorn House3):
+# 1. relearner, Typhlosion with 4 moves: the box with an Egg and a greyed Magikarp (nothing to
+#    relearn) chosen first ("can't teach an Egg", "no move to teach"), then Typhlosion;
+#    "delete an older move?" NO -> the list (P_ASK_MOVE_CONFIRMATION is FALSE, so no
+#    "stop teaching?" here); again YES -> the summary, B there -> "stop trying to teach X?"
+#    YES -> the list, B -> give up YES -> back in the box, B, NO.
+# 2. deleter: Magikarp ("only knows one move"), Gyarados's summary and B (back to choose),
+#    Typhlosion: forget its 4th move, confirm NO ("come again"), then YES.
+# 3. relearner, Typhlosion with 3 moves: teach a move straight away ("learned X!").
+# sMoveRelearnerStruct->state (u8 at +0): 4 idle battle, 9 teach YES/NO, 13 give up YES/NO,
+# 18 delete old move YES/NO, 26 stop teaching YES/NO, 33 wait for A.
+start saves/r1svc_menuA_base.sav
+include ../continue.txt
+ev additem ITEM_HEART_SCALE, 5; givemon SPECIES_MAGIKARP, 1; end
+# party: Typhlosion, Pikachu, Ampharos, Gyarados, Togepi Egg, Magikarp
+
+# --- 1. relearner, 4 moves
+warpto MAP_BLACKTHORN_CITY_HOUSE3_HNS 6 4
+face RIGHT
+talk svc2_rel_intro 20
+tap A 0                                  # YES
+talk svc2_rel_which 10 -
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP 6
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorPosition@ 4 DOWN 8
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+snap svc2_rel_box_egg
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+snap svc2_rel_box_egg_submenu
+press A                                  # SELECT the Egg
+waitcb2x CB2_Overworld 900
+talk svc2_rel_egg 10 -
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap svc2_rel_box_again
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP 6
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorPosition@ 5 DOWN 8
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+snap svc2_rel_box_magikarp
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+press A                                  # SELECT the greyed Magikarp
+waitcb2x CB2_Overworld 900
+talk svc2_rel_nomove 10 -
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP 6
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorPosition@ 0 UP 8
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+press A                                  # SELECT Typhlosion
+waitcb2x CB2_Overworld 900
+talk svc2_rel_teachwhich 10 -
+waitcb2x CB2_MoveRelearnerMain 900
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 900
+snap svc2_rel_list
+press A                                  # Eruption
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 9 300
+snap svc2_rel_teach_confirm
+press A                                  # YES
+pages svc2_rel_trying 5
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 18 600
+snap svc2_rel_delete_yesno
+press B                                  # NO: back to the list (P_ASK_MOVE_CONFIRMATION is FALSE)
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 600
+snap svc2_rel_list_after_no
+press A
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 9 300
+press A                                  # YES
+pages svc2_rel_trying2 5
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 18 600
+press A                                  # YES: which move to forget
+pages svc2_rel_forgetwhich 3
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleReplaceMoveInput 900
+waitquiet
+snap svc2_rel_summary
+press B                                  # cancel in the summary
+waitcb2x CB2_MoveRelearnerMain 900
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 26 900
+waitquiet
+snap svc2_rel_stop2_yesno
+press A                                  # YES: stop teaching
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 600
+snap svc2_rel_list_again
+press B
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 13 300
+snap svc2_rel_giveup
+press A                                  # YES: give up
+waitcb2x CB2_Overworld 900
+talk svc2_rel_after_giveup 10 -
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap svc2_rel_box_third
+press B
+waittaskx Task_OnBPressed 300
+12 -
+snap svc2_rel_box_continue
+press B                                  # NO: leave
+waitcb2x CB2_Overworld 900
+talk svc2_rel_nothing 10 -
+waitctl 900
+
+# --- 2. deleter
+warpto MAP_BLACKTHORN_CITY_HOUSE3_HNS 5 4
+face LEFT
+talk svc2_del_ask 10
+tap A 0
+talk svc2_del_which 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+seek 8 @gPartyMenu+9@ 5 DOWN
+snap svc2_del_party_magikarp
+tap A 4
+waitcb2x CB2_Overworld 900
+talk svc2_del_onemove 10 -
+waitctl 900
+face LEFT
+talk svc2_del_ask2 10
+tap A 0
+talk svc2_del_which2 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+seek 8 @gPartyMenu+9@ 3 DOWN
+waitquiet
+12 -
+tap A 4                                  # Gyarados
+waitcb2x CB2_Overworld 900
+talk svc2_del_whichmove2 10 -
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleReplaceMoveInput 900
+waitquiet
+snap svc2_del_gyarados_summary
+press B                                  # back: which Pokemon should forget?
+waitcb2x CB2_Overworld 900
+talk svc2_del_back 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+12 -
+tap A 4                                  # Typhlosion
+waitcb2x CB2_Overworld 900
+talk svc2_del_whichmove3 10 -
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleReplaceMoveInput 900
+waitquiet
+press UP                                 # wraps to CANCEL
+press UP                                 # 4th move
+snap svc2_del_typhlosion_move4
+press A
+waitcb2x CB2_Overworld 900
+talk svc2_del_confirm 10 -
+tap B 0                                  # NO
+talk svc2_del_comeagain 10 -
+waitctl 900
+face LEFT
+talk svc2_del_ask3 10
+tap A 0
+talk svc2_del_which3 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+12 -
+tap A 4
+waitcb2x CB2_Overworld 900
+talk svc2_del_whichmove4 10 -
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleReplaceMoveInput 900
+waitquiet
+press UP
+press UP
+press A
+waitcb2x CB2_Overworld 900
+talk svc2_del_confirm2 10 -
+tap A 0                                  # YES
+talk svc2_del_done 10 -
+waitctl 900
+
+# --- 3. relearner, 3 moves: learned at once
+warpto MAP_BLACKTHORN_CITY_HOUSE3_HNS 6 4
+face RIGHT
+talk svc2_rel3_ask 20
+tap A 0
+talk svc2_rel3_which 10 -
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP 6
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorPosition@ 0 UP 8
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+press A
+waitcb2x CB2_Overworld 900
+talk svc2_rel3_teachwhich 10 -
+waitcb2x CB2_MoveRelearnerMain 900
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 900
+snap svc2_rel3_list
+press A
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 9 300
+press A                                  # YES: learned at once
+textwatch svc2_rel3_learn CB2_Overworld 400 -
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 33 900
+snap svc2_rel3_learned
+tap A 0
+waitcb2x CB2_Overworld 900
+talk svc2_rel3_after 10 -
+waitctl 900
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+12 -
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+snap svc2_rel3_summary_moves

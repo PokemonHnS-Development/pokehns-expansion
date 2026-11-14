@@ -1,0 +1,16 @@
+# Field obtain box for every item of plural_items.json, 2 of each: the event script 'giveitem VAR_0x8004, 2;
+# removeitem VAR_0x8004, 2' (Std_ObtainItem, data/scripts/obtain_item.inc:4-90): a shot of 'Obtained 2 X!'
+# (gText_ObtainedTheItems, bufferitemnameplural) during the fanfare and of the put-away line
+# (gText_PutItemInPocket), then A. Every pocket is emptied first so each item fits. Items 288-430.
+# Run: scripts/r16_items/items16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_items --only '^it_obtain_c$'
+# Save: menuA_base.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+pclist plural_items.json
+setpocket POCKET_ITEMS
+setpocket POCKET_MEDICINE
+setpocket POCKET_POKE_BALLS
+setpocket POCKET_TM_HM
+setpocket POCKET_BERRIES
+setpocket POCKET_KEY_ITEMS
+obtainrows 288 143 ob 2

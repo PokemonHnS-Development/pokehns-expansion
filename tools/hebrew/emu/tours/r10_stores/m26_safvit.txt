@@ -1,0 +1,10 @@
+# Safari Zone Gate vitamin guru (MAP_SAFARI_ZONE_GATE_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_SAFARI_ZONE_GATE_HNS
+clerk 20 21 m26_hi
+buyopen m26_buy
+listshots m26_list
+buyeach m26_ask
+buyclose m26_menu
+shopquit m26_bye

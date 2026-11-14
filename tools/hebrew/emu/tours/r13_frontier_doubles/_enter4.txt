@@ -1,0 +1,40 @@
+# Frontier party select for FRONTIER_DOUBLES_PARTY_SIZE (4), cursor on slot 0: ENTER slots 0, 1, 2;
+# CONFIRM with three ('4 needed'); ENTER slot 3; CONFIRM.
+waittask Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 0 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+snap e4_01_menu
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+snap e4_02_three
+seek 8 @gPartyMenu+9@ 6 DOWN
+snap e4_03_confirm_cursor
+tap A 0
+waitquiet
+snap e4_04_need4
+tap A 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 3 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+snap e4_06_four
+seek 8 @gPartyMenu+9@ 6 DOWN
+tap A 0

@@ -1,0 +1,23 @@
+# Ice Path B1F puzzle-skip button (bg 4,13), IcePath_B1F_EventScript_PuzzleSkipButton
+# (IcePath_B1F_hns/scripts.inc:9-19): NO, then YES (warp to 15,12; the assert screen first).
+start saves/r6r3f_base.sav
+include _base.txt
+warpto MAP_ICE_PATH_B1F_HNS 4 14
+face UP
+snap ip_field
+tap A 4
+scene ip1 6000
+yesno ip1_yn NO
+scene ip1_no 6000
+snap ip1_no_end
+face UP
+tap A 4
+scene ip2 6000
+yesno ip2_yn YES
+# the script leaves on `warp` without a waitstate; this (non-release) build stops on the
+# script.c StopScript assert screen; START continues it
+120 -
+shot ip2_yes_assert
+press START
+scene ip2_yes 3000 8
+snap ip2_yes_end

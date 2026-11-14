@@ -1,0 +1,66 @@
+# Overworld debug menu: Flags & Vars > Set Flag XYZ / Set Var XYZ (extra windows, src/debug.c
+# :2200-2420), Trainers > Trainer 1 (trainer id window), Sound > SFX / Music
+# (sDebugMenuWindowTemplateSound 20x6 tiles, sDebugText_Sound_* :474-477), ROM Info > Save Block
+# space / ROM space / Expansion Version (script messages, data/scripts/debug.inc:347-455).
+start saves/r4_misc/r4_menuA_base.sav
+include ../../continue.txt
+
+dbg 7 0
+waitquiet
+snap dbg_flags_setflag_01
+tap UP 6
+waitquiet
+snap dbg_flags_setflag_02
+press A
+snap dbg_flags_setflag_03_toggled
+tap B 6
+waitctl 600 B
+
+dbg 7 1
+waitquiet
+snap dbg_flags_setvar_01
+tap UP 6
+waitquiet
+snap dbg_flags_setvar_02
+press A
+snap dbg_flags_setvar_03_value
+tap B 6
+waitctl 600 B
+
+dbg 6 1
+waitquiet
+snap dbg_trainers_t1_01
+tap UP 6
+waitquiet
+snap dbg_trainers_t1_02
+tap B 6
+waitctl 600 B
+
+dbg 8 0
+waitquiet
+snap dbg_sound_sfx_01
+tap UP 6
+waitquiet
+snap dbg_sound_sfx_02
+tap B 6
+waitctl 600 B
+
+dbg 8 1
+waitquiet
+snap dbg_sound_mus_01
+tap UP 6
+waitquiet
+snap dbg_sound_mus_02
+tap B 6
+waitctl 600 B
+
+dbg 9 0
+pages dbg_rominfo_saveblock 10
+waitctl 600 B
+dbg 9 1
+pages dbg_rominfo_romspace 6
+waitctl 600 B
+dbg 9 2
+pages dbg_rominfo_version 6
+waitctl 600 B
+snap dbg_rominfo_99_end

@@ -1,0 +1,11 @@
+# Kanto towns after the League, outside: the map-name pop-up, every NPC and sign.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_PALLET_TOWN_HNS 6 8 pat
+visit pat
+arrive MAP_VIRIDIAN_CITY_HNS 30 37 vir
+visit vir
+arrive MAP_PEWTER_CITY_HNS 19 30 pew
+visit pew
+arrive MAP_CERULEAN_CITY_HNS 25 30 cer
+visit cer

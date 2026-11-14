@@ -1,0 +1,108 @@
+# Mart at 7-digit money (save: numsave.txt): Cherrygrove Mart, 16 badges, so the 8-badge list
+# (src/shop.c:542-563; Full Restore is row 8, price 3000). The money box ¥9999999 on the buy screen
+# (src/shop.c:1536-1537), the quantity window at 999 (DOWN from 1 wraps to the maximum, which is
+# MAX_BAG_ITEM_CAPACITY 999, src/shop.c:1907-1914) with the total ¥2997000 (src/shop.c:2198), the
+# confirmation with that total (gText_Var1AndYouWantedVar2, MAX_MONEY_DIGITS, src/shop.c:1946),
+# the purchase and the money box after it; then SELL: Full Restore x999 for ¥1498500
+# (src/item_menu.c:2348-2420), the bag's money box.
+start saves/r3_numbers/r3_numbers.sav
+include ../../continue.txt
+warp 2 1 4 3                              # MAP_CHERRYGROVE_CITY_MART_HNS, in front of the counter
+face LEFT
+numstate
+talk num_mart_welcome 10 A Task_ShopMenu
+waittaskx Task_ShopMenu 300
+waitquiet
+snap num_mart_menu
+
+# BUY
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+snap num_mart_buy_01_top
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap num_mart_buy_02_fullrestore
+tap A 0
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+waitquiet
+snap num_mart_buy_03_qty1
+press DOWN
+snap num_mart_buy_04_qty999
+press LEFT
+snap num_mart_buy_05_qty_left
+press RIGHT
+snap num_mart_buy_06_qty_right
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap num_mart_buy_07_confirm
+tap A 0                                   # YES
+waitquiet
+snap num_mart_buy_08_done
+tap A 0
+waittaskx Task_BuyMenu 600
+waitquiet
+numstate
+snap num_mart_buy_09_after
+# the list's end: 20 items and CANCEL; from FULL RESTORE (row 8) 13 presses reach CANCEL (a 14th wraps to the top)
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap num_mart_buy_10_end
+press B                                   # leave the list
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+snap num_mart_menu_again
+
+# SELL: the bag in sell mode, medicine pocket, Full Restore x999 = ¥1498500
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+bagpocket 1
+bagseek ITEM_FULL_RESTORE
+waitquiet
+snap num_mart_sell_01_bag
+tap A 0
+waitquiet
+snap num_mart_sell_02_howmany
+press DOWN
+snap num_mart_sell_03_qty_max
+tap A 0
+waitquiet
+snap num_mart_sell_04_confirm
+tap A 0                                   # YES
+waitquiet
+snap num_mart_sell_05_done
+numstate
+tap A 0
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap num_mart_sell_06_after
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+seek 8 @menu:sMenu+2@ 2 DOWN
+tap A 0
+talk num_mart_bye 10 -
+waitctl 900

@@ -171,8 +171,8 @@ TEST("Item names fit on Pokemon Storage System")
         if (gItemsInfo[i].importance) continue;
         PARAMETRIZE_LABEL("%S", gItemsInfo[i].name) { item = i; }
     }
-    // All items explicitly listed here are too big to fit.
-    switch (item)
+    // All items explicitly listed here are too big to fit (in English; the Hebrew names fit).
+    switch (TEXT_RTL ? ITEM_NONE : item)
     {
     case ITEM_ELECTRIC_TERA_SHARD:
     case ITEM_FIGHTING_TERA_SHARD:
@@ -198,8 +198,8 @@ TEST("Item names fit on Pokemon Summary Screen")
         if (gItemsInfo[i].importance) continue;
         PARAMETRIZE_LABEL("%S", gItemsInfo[i].name) { item = i; }
     }
-    // All items explicitly listed here are too big to fit.
-    switch (item)
+    // All items explicitly listed here are too big to fit (in English; the Hebrew names fit).
+    switch (TEXT_RTL ? ITEM_NONE : item)
     {
     case ITEM_UNREMARKABLE_TEACUP:
         EXPECT_GT(GetStringWidth(fontId, gItemsInfo[item].name, 0), widthPx);

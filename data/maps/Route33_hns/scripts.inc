@@ -36,34 +36,27 @@ Route33_EventScript_Lass::
 	end
 
 Route33_Text_HikerAnthony2Seen:
-	.string "I came through the tunnel,\n"
-	.string "but I still have plenty\l"
-	.string "of energy left.$"
+	.string "עברתי דרך המנהרה, אבל\n"
+	.string "עוד נשארה לי המון אנרגיה.$"
 
 Route33_Text_HikerAnthony2Beaten:
-	.string "Whoa! You've got more zip\n"
-	.string "than me!$"
+	.string "וואו! יש לך יותר מרץ ממני!$"
 
 Route33_Text_HikerAnthony2After:
-	.string "We HIKERS are at our best\n"
-	.string "in the mountains.$"
+	.string "אנחנו המטיילים במיטבנו בהרים.$"
 
 Route33_Text_AnthonyRegister:
-	.string "We HIKERS are at our best\n"
-	.string "in the mountains.$"
+	.string "אנחנו המטיילים במיטבנו בהרים.$"
 
 Route33_Text_AnthonyRematchIntro:
-	.string "I came through the tunnel,\n"
-	.string "but I still have plenty\l"
-	.string "of energy left.$"
+	.string "עברתי דרך המנהרה, אבל\n"
+	.string "עוד נשארה לי המון אנרגיה.$"
 
 Route33_Text_AnthonyRematchDefeat:
-	.string "Whoa! You've got more zip\n"
-	.string "than me!$"
+	.string "וואו! יש לך יותר מרץ ממני!$"
 
 Route33_Text_AnthonyPostRematch:
-	.string "We HIKERS are at our best\n"
-	.string "in the mountains.$"
+	.string "אנחנו המטיילים במיטבנו בהרים.$"
 
 Route33_Text_HikerAnthonyDunsparce:
 	.string "Hey, did you get a DUNSPARCE?\p"
@@ -72,8 +65,8 @@ Route33_Text_HikerAnthonyDunsparce:
 	.string "It's got a funny face!$"
 
 Route33_Text_Lass:
-	.string "Pant, pant…\p"
-	.string "That cave was bigger than\n"
-	.string "I'd expected.\p"
-	.string "I got too tired exploring\n"
-	.string "for MARILL, so I came outside.$"
+	.string "מתנשפת, מתנשפת…\p"
+	.string "המערה הזאת הייתה גדולה\n"
+	.string "ממה שציפיתי.\p"
+	.string "התעייפתי מדי מלחפש\n"
+	.string "מריל, אז יצאתי החוצה.$"

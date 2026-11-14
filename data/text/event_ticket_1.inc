@@ -22,28 +22,28 @@ EventTicket_Text_ShowEonTicket:
 
 #if IS_HNS
 EventTicket_Text_SouthernIslandSailBack:
-	.string "Aye, mate, there's nothing here to\n"
-	.string "see or do on this forgettable island.\p"
-	.string "What say we sail back to OLIVINE?$"
+	.string "שמע, חבר, אין פה שום דבר לראות\n"
+	.string "או לעשות באי חסר הייחוד הזה.\p"
+	.string "מה דעתך שנפליג חזרה לאוליבין?$"
 #else
 EventTicket_Text_SouthernIslandSailBack:
-	.string "Aye, mate, there's nothing here to\n"
-	.string "see or do on this forgettable island.\p"
-	.string "What say we sail back to LILYCOVE?$"
+	.string "שמע, חבר, אין פה שום דבר לראות\n"
+	.string "או לעשות באי חסר הייחוד הזה.\p"
+	.string "מה דעתך שנפליג חזרה לליליקוב?$"
 #endif 
 
 
 EventTicket_Text_SailHome:
-	.string "Aye, right, then!\n"
-	.string "Sail home we will!$"
+	.string "טוב, אז קדימה!\n"
+	.string "מפליגים הביתה!$"
 
 EventTicket_Text_AsYouLike:
-	.string "Aye, right, as you like, then.$"
+	.string "טוב, בסדר, איך שתרצה.$"
 
 SouthernIsland_Interior_Text_Sign:
 	.string "“All dreams are but another reality.\n"
 	.string "Never forget…”$"
 
 SouthernIsland_Exterior_Text_Sign:
-	.string "“Those whose memories fade seek to\n"
-	.string "carve them in their hearts…”$"
+	.string "”אלה שזיכרונותיהם דוהים מבקשים\n"
+	.string "לחרוט אותם בליבם…”$"

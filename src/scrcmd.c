@@ -1371,11 +1371,11 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
     u8 heldItem[2];
     u8 mailIndex = 0;
 
-    static const u8 sKenyaNickname[] = _("KENYA");
-    static const u8 sKenyaOtName[]   = _("RUDY");
-    static const u8 sShuckieNickname[] = _("SHUCKIE");
-    static const u8 sShuckieOtName[]   = _("KIRK");
-    static const u8 sEeveeOtName[]     = _("BILL");
+    static const u8 sKenyaNickname[] = _("קניה");
+    static const u8 sKenyaOtName[]   = _("רודי");
+    static const u8 sShuckieNickname[] = _("שאקי");
+    static const u8 sShuckieOtName[]   = _("קירק");
+    static const u8 sEeveeOtName[]     = _("ביל");
 
     static const u16 sKenyaMailWords[MAIL_WORDS_COUNT] = {
         EC_WORD_YUP,
@@ -1455,6 +1455,11 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
             SetBoxMonIVs(&mon->box, USE_RANDOM_IVS);
             GiveBoxMonInitialMoveset(&mon->box);
 
+#if RTL_STRING_REPORT
+            RtlStringReport(nickname);
+            RtlStringReport(otName);
+#endif
+#line 1458
             if (nickname != NULL)
                 SetMonData(mon, MON_DATA_NICKNAME, nickname);
             SetMonData(mon, MON_DATA_OT_NAME, otName);
@@ -1501,8 +1506,8 @@ bool8 ScrCmd_removenamedmon(struct ScriptContext *ctx)
     u16 giftId = ScriptReadHalfword(ctx);
     const u8 *targetNickname;
 
-    static const u8 sKenyaNickname[]   = _("KENYA");
-    static const u8 sShuckieNickname[] = _("SHUCKIE");
+    static const u8 sKenyaNickname[]   = _("קניה");
+    static const u8 sShuckieNickname[] = _("שאקי");
 
     switch (giftId)
     {

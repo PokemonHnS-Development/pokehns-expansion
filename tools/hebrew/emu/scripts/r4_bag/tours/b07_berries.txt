@@ -1,0 +1,11 @@
+# BERRIES pocket (capacity 66 < 69 berries): berries 0-65, then 63-68; every row and its context menu.
+start saves/menuA_base_copy.sav
+include ../../continue.txt
+fillpocket BERRIES 999 0 66
+bagopen BERRIES
+bagrows ber ctx 100
+bagclose
+fillpocket BERRIES 999 63 66
+bagopen BERRIES
+bagrows ber ctx 100
+bagclose

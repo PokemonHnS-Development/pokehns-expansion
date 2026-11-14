@@ -39,29 +39,27 @@ NewSinjoh_PokemonCenter_hns_Map::
 	end
 
 NewSinjoh_PokemonCenter_Text_Skiier:
-	.string "The snow makes it hard to navigate\n"
-	.string "this place.\p"
-	.string "It all looks the same.\p"
-	.string "So this map is a big help!\p"
-	.string "What a beautiful region!$"
+	.string "בגלל השלג קשה למצוא\n"
+	.string "כאן את הדרך.\p"
+	.string "הכול נראה אותו דבר.\p"
+	.string "אז המפה הזאת עוזרת מאוד!\p"
+	.string "איזה אזור יפה!$"
 
 NewSinjoh_Text_Artist:
-	.string "I've found great inspiration in\n"
-	.string "this hidden town!\p"
-	.string "Don't you think the landscape\n"
-    .string "is breathtaking?$"
+	.string "מצאתי השראה גדולה\n"
+	.string "בעיירה הנסתרת הזאת!\p"
+	.string "אתה לא חושב שהנוף\n"
+	.string "עוצר נשימה?$"
 
 Text_ItemGiveaway:
-	.string "I see!\n"
-	.string "You must be an artist as well!\p"
-	.string "I happen to have an extra something\n"
-	.string "that'll help you notice the tiny\l"
-    .string "details of life!$"
+	.string "אני מבין!\n"
+	.string "אתה בטח אמן בעצמך!\p"
+	.string "במקרה יש לי משהו נוסף שיעזור לך\n"
+	.string "לשים לב לפרטים הקטנים של החיים!$"
 
 NewSinjoh_Text_Artist_No:
-    .string "You aren't one of those anti-tourist\n"
-    .string "types are you?\n"
-	.string "Beauty is meant to be shared.$"
+    .string "אתה לא מאלה ששונאים תיירים, נכון?\n"
+    .string "את היופי צריך לחלוק עם אחרים.$"
 
 NewSinjoh_EventScript_ZoomLens_No::
 	msgbox NewSinjoh_Text_Artist_No, MSGBOX_DEFAULT
@@ -74,19 +72,19 @@ NewSinjoh_EventScript_ZoomLens_Gotten::
 	end
 
 Text_WasGiven_ZoomLensAlready:
-	.string "I hope you enjoy that lens!$"
+	.string "מקווה שתיהנה מהעדשה!$"
 
 NewSinjoh_EventScript_FemAce::
 	msgbox NewSinjoh_Text_FemAce, MSGBOX_NPC
 	end
 
 NewSinjoh_Text_FemAce:
-	.string "We don't have many modern\n"
-	.string "commodities in NEW SINJOH.\p"
-	.string "But at least we have this\n"
-	.string "POKéMON CENTER.$"
+	.string "אין לנו הרבה נוחויות\n"
+	.string "מודרניות בסינג'ו החדשה.\p"
+	.string "אבל לפחות יש לנו את\n"
+	.string "מרכז הפוקימון הזה.$"
 
 
 NewSinjoh_PokemonCenter_hns_Text_0:
-	.string "{PLAYER} took a closer look at the\n"
-	.string "SINJOH map.$"
+	.string "{PLAYER} התבונן מקרוב\n"
+	.string "במפת סינג'ו.$"

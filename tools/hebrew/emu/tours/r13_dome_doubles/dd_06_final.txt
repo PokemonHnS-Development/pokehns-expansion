@@ -1,0 +1,62 @@
+# r13 Dome doubles, final: OPPONENT card, the tree, READY TO START, the pick of 2, the battle
+# (won), the champion line, the lobby (congratulations, the BP prize, the record will be saved,
+# record question NO, see you again), then the doubles results window (18,10) and the previous
+# tourney tree (7,10) on the lobby signs. Keeps the battery as dd_won.
+start saves/r13/dome_doubles/base.sav
+dstate load finalmenu
+pick 0
+drivex dd_fopp cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap dd_fopp_card
+tap B 0
+drivex dd_fback menu 10 3000
+pick 1
+drivex dd_ftree cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+snap dd_ftree_full
+tap B 0
+drivex dd_fback2 menu 10 3000
+pick 2
+drivex dd_fpre task:Task_HandleChooseMonInput 30 9000
+pfx dd_f
+include _dd_pick2.txt
+drivex dd_fgo battle 40 12000
+domeinfo
+bwin dd_fb 30
+drivex dd_fwin menu 60 20000
+pick 1
+drivex dd_fend free 20 6000
+dstate save won_lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 18 11
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drivex dd_fres free 10 3000
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 7 11
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drivex dd_fprev cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+snap dd_fprev_tree
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap dd_fprev_card_gold
+tapstate Task_HandleInfoCardInput 0 2 RIGHT
+snap dd_fprev_match_r1
+tapstate Task_HandleInfoCardInput 0 2 RIGHT
+snap dd_fprev_match_r2
+tapstate Task_HandleInfoCardInput 0 2 RIGHT
+snap dd_fprev_match_sf
+tapstate Task_HandleInfoCardInput 0 2 RIGHT
+snap dd_fprev_match_final
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+tap B 0
+drivex dd_fprevend free 10 3000
+keepsave dd_won

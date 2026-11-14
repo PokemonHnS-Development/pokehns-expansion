@@ -1,0 +1,31 @@
+# Goldenrod, Bill's house, Bill (5,4): GoldenrodCity_BillsHouse_EventScript_Bill
+# (GoldenrodCity_BillsHouse_hns/scripts.inc:27-55) with a party of one: TakeThisEevee YES/NO, NO ->
+# NoEevee; again, YES -> CountingOnYou, givenamedmon 3, 'received' with the fanfare
+# (Common_EventScript_GiftMonNamed, data/event_scripts.s:1410-1420), EeveeMayEvolve; talking again
+# -> PopWontWork. Then the summary of the Eevee (OT from src/scrcmd.c sEeveeOtName).
+# The warp lands inside the house, so the Goldenrod City map script that sets the hide flag does
+# not run.
+start saves/r6r3_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+ev clearflag FLAG_HIDE_GOLDENROD_BILL; clearflag FLAG_GOT_EEVEE; end
+warpto MAP_GOLDENROD_CITY_BILLS_HOUSE_HNS 5 5
+face UP
+snap ev_field
+tap A 4
+scene ev_offer 6000
+pickd 1
+scene ev_no 6000
+snap ev_no_end
+face UP
+tap A 4
+scene ev_offer2 6000
+pickd 0
+scene ev_yes 12000
+snap ev_free
+partyinfo
+face UP
+tap A 4
+scene ev_again 6000
+snap ev_again_end
+include _summary2.txt

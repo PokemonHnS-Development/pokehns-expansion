@@ -1,0 +1,712 @@
+# Bag sort (START in a pocket list, src/item_menu.c:1338-1366 and 2885-3005): the sort menu of every
+# pocket (2x2 NAME/TYPE/AMOUNT/CANCEL in ITEMS and MEDICINE, NAME/AMOUNT/-/CANCEL in POKE BALLS,
+# NAME/AMOUNT/NUMBER/CANCEL in BERRIES and TMs & HMs, NAME/CANCEL in KEY ITEMS), the sorted message
+# sText_ItemsSorted with each sort word, the list afterwards (dumped to <tour>/<tag>.json for the
+# order check against StringCompareAlphabetical, src/string_util.c:178-196), and the nothing-to-sort
+# message with one item and with an empty pocket. First the save's own full pockets by NAME, then
+# small pockets with mixed quantities so TYPE / AMOUNT / NUMBER change the order. The 2x2 grid is
+# moved with ROWNEXT (second column; LEFT on the mirrored Hebrew grid) and DOWN (second row).
+start saves/r8bfe_menuA_base.sav
+include ../../scripts/continue.txt
+
+# full pockets of the save, by NAME
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 0
+w16 @gBagPosition+14@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+dumpbag s01_items_full_name_before POCKET_ITEMS
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap s01_items_full_name_menu
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s01_items_full_name_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s01_items_full_name POCKET_ITEMS
+seek 16 @gBagPosition+14@ 0 UP 40
+seek 16 @gBagPosition+8@ 0 UP 40
+waitquiet
+snap s01_items_full_name_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s01_items_full_name_list_02
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+w8 @gBagPosition+5@ 2
+w16 @gBagPosition+C@ 0
+w16 @gBagPosition+18@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+dumpbag s02_balls_full_name_before POCKET_POKE_BALLS
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap s02_balls_full_name_menu
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s02_balls_full_name_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s02_balls_full_name POCKET_POKE_BALLS
+seek 16 @gBagPosition+18@ 0 UP 40
+seek 16 @gBagPosition+C@ 0 UP 40
+waitquiet
+snap s02_balls_full_name_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s02_balls_full_name_list_02
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+w8 @gBagPosition+5@ 3
+w16 @gBagPosition+E@ 0
+w16 @gBagPosition+1A@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+dumpbag s03_tm_full_name_before POCKET_TM_HM
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap s03_tm_full_name_menu
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s03_tm_full_name_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s03_tm_full_name POCKET_TM_HM
+seek 16 @gBagPosition+1A@ 0 UP 40
+seek 16 @gBagPosition+E@ 0 UP 40
+waitquiet
+snap s03_tm_full_name_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s03_tm_full_name_list_02
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 0
+w16 @gBagPosition+1C@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+dumpbag s04_berries_full_name_before POCKET_BERRIES
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap s04_berries_full_name_menu
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s04_berries_full_name_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s04_berries_full_name POCKET_BERRIES
+seek 16 @gBagPosition+1C@ 0 UP 40
+seek 16 @gBagPosition+10@ 0 UP 40
+waitquiet
+snap s04_berries_full_name_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s04_berries_full_name_list_02
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 0
+w16 @gBagPosition+1E@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+dumpbag s05_key_full_name_before POCKET_KEY_ITEMS
+tap START 4
+waittaskx Task_ItemContext_SingleRow 60
+waitquiet
+snap s05_key_full_name_menu
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s05_key_full_name_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s05_key_full_name POCKET_KEY_ITEMS
+seek 16 @gBagPosition+1E@ 0 UP 40
+seek 16 @gBagPosition+12@ 0 UP 40
+waitquiet
+snap s05_key_full_name_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s05_key_full_name_list_02
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# TMs: by AMOUNT and by NUMBER after the name sort
+w8 @gBagPosition+5@ 3
+w16 @gBagPosition+E@ 0
+w16 @gBagPosition+1A@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4
+waitquiet
+snap s06_tm_amount_cursor
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s06_tm_amount_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s06_tm_amount POCKET_TM_HM
+seek 16 @gBagPosition+1A@ 0 UP 40
+seek 16 @gBagPosition+E@ 0 UP 40
+waitquiet
+snap s06_tm_amount_list_01
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap DOWN 4
+waitquiet
+snap s07_tm_number_cursor
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s07_tm_number_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s07_tm_number POCKET_TM_HM
+seek 16 @gBagPosition+1A@ 0 UP 40
+seek 16 @gBagPosition+E@ 0 UP 40
+waitquiet
+snap s07_tm_number_list_01
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# small pockets with mixed quantities
+setpocket POCKET_ITEMS ITEM_REPEL:7 ITEM_HEART_SCALE:99 ITEM_FIRE_STONE:4 ITEM_PEARL:1 ITEM_X_ATTACK:20 ITEM_BIG_PEARL:12 ITEM_LEFTOVERS:2 ITEM_NUGGET:55 ITEM_WATER_STONE:9 ITEM_HONEY:30 ITEM_SUPER_REPEL:3
+setpocket POCKET_MEDICINE ITEM_POTION:20 ITEM_FULL_HEAL:3 ITEM_ICE_HEAL:8 ITEM_REVIVE:1 ITEM_ANTIDOTE:15 ITEM_ETHER:2 ITEM_HP_UP:6 ITEM_RARE_CANDY:40 ITEM_EXP_CANDY_XS:11 ITEM_EXP_CANDY_XL:5 ITEM_PARALYZE_HEAL:9 ITEM_BURN_HEAL:13
+setpocket POCKET_POKE_BALLS ITEM_POKE_BALL:30 ITEM_GREAT_BALL:5 ITEM_ULTRA_BALL:12 ITEM_MASTER_BALL:1 ITEM_NET_BALL:3 ITEM_DIVE_BALL:8 ITEM_HEAL_BALL:20
+setpocket POCKET_BERRIES ITEM_CHERI_BERRY:7 ITEM_CHESTO_BERRY:1 ITEM_PECHA_BERRY:12 ITEM_RAWST_BERRY:5 ITEM_ASPEAR_BERRY:2 ITEM_PERSIM_BERRY:9 ITEM_LUM_BERRY:4 ITEM_ORAN_BERRY:10 ITEM_SITRUS_BERRY:3
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 0
+w16 @gBagPosition+14@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap s10_items_before
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap s11_items_name_menu
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s11_items_name_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s11_items_name POCKET_ITEMS
+seek 16 @gBagPosition+14@ 0 UP 40
+seek 16 @gBagPosition+8@ 0 UP 40
+waitquiet
+snap s11_items_name_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s11_items_name_list_02
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4
+waitquiet
+snap s12_items_type_cursor
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s12_items_type_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s12_items_type POCKET_ITEMS
+seek 16 @gBagPosition+14@ 0 UP 40
+seek 16 @gBagPosition+8@ 0 UP 40
+waitquiet
+snap s12_items_type_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s12_items_type_list_02
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap DOWN 4
+waitquiet
+snap s13_items_amount_cursor
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s13_items_amount_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s13_items_amount POCKET_ITEMS
+seek 16 @gBagPosition+14@ 0 UP 40
+seek 16 @gBagPosition+8@ 0 UP 40
+waitquiet
+snap s13_items_amount_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s13_items_amount_list_02
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 1
+seek 16 @gBagPosition+16@ 0 UP 40
+seek 16 @gBagPosition+A@ 0 UP 40
+waitquiet
+snap s20_med_before
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap s21_med_name_menu
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s21_med_name_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s21_med_name POCKET_MEDICINE
+seek 16 @gBagPosition+16@ 0 UP 40
+seek 16 @gBagPosition+A@ 0 UP 40
+waitquiet
+snap s21_med_name_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s21_med_name_list_02
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4
+waitquiet
+snap s22_med_type_cursor
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s22_med_type_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s22_med_type POCKET_MEDICINE
+seek 16 @gBagPosition+16@ 0 UP 40
+seek 16 @gBagPosition+A@ 0 UP 40
+waitquiet
+snap s22_med_type_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s22_med_type_list_02
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap DOWN 4
+waitquiet
+snap s23_med_amount_cursor
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s23_med_amount_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s23_med_amount POCKET_MEDICINE
+seek 16 @gBagPosition+16@ 0 UP 40
+seek 16 @gBagPosition+A@ 0 UP 40
+waitquiet
+snap s23_med_amount_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s23_med_amount_list_02
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 2
+seek 16 @gBagPosition+18@ 0 UP 40
+seek 16 @gBagPosition+C@ 0 UP 40
+waitquiet
+snap s30_balls_before
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap s31_balls_name_menu
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s31_balls_name_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s31_balls_name POCKET_POKE_BALLS
+seek 16 @gBagPosition+18@ 0 UP 40
+seek 16 @gBagPosition+C@ 0 UP 40
+waitquiet
+snap s31_balls_name_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s31_balls_name_list_02
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4
+waitquiet
+snap s32_balls_amount_cursor
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s32_balls_amount_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s32_balls_amount POCKET_POKE_BALLS
+seek 16 @gBagPosition+18@ 0 UP 40
+seek 16 @gBagPosition+C@ 0 UP 40
+waitquiet
+snap s32_balls_amount_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s32_balls_amount_list_02
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 4
+seek 16 @gBagPosition+1C@ 0 UP 40
+seek 16 @gBagPosition+10@ 0 UP 40
+waitquiet
+snap s40_berries_before
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap s41_berries_name_menu
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s41_berries_name_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s41_berries_name POCKET_BERRIES
+seek 16 @gBagPosition+1C@ 0 UP 40
+seek 16 @gBagPosition+10@ 0 UP 40
+waitquiet
+snap s41_berries_name_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s41_berries_name_list_02
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4
+waitquiet
+snap s42_berries_amount_cursor
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s42_berries_amount_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s42_berries_amount POCKET_BERRIES
+seek 16 @gBagPosition+1C@ 0 UP 40
+seek 16 @gBagPosition+10@ 0 UP 40
+waitquiet
+snap s42_berries_amount_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s42_berries_amount_list_02
+tap START 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap DOWN 4
+waitquiet
+snap s43_berries_number_cursor
+tap A 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s43_berries_number_msg
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+dumpbag s43_berries_number POCKET_BERRIES
+seek 16 @gBagPosition+1C@ 0 UP 40
+seek 16 @gBagPosition+10@ 0 UP 40
+waitquiet
+snap s43_berries_number_list_01
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap s43_berries_number_list_02
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0
+
+# nothing to sort: KEY ITEMS with one item, BERRIES empty
+setpocket POCKET_KEY_ITEMS ITEM_BICYCLE:1
+setpocket POCKET_BERRIES
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 0
+w16 @gBagPosition+1E@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap s50_key_one
+tap START 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s51_key_one_nothing
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+tap LEFT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 4
+snap s52_berries_empty
+tap START 4
+waittaskx menu_helpers:Task_ContinueTaskAfterMessagePrints 120
+10 -
+waitquiet 600
+waitquiet
+snap s53_berries_empty_nothing
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0

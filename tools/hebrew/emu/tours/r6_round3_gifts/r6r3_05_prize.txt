@@ -1,0 +1,128 @@
+# Goldenrod Game Corner, prize-Pokemon clerk (16,2): PrizeClerkMons
+# (GoldenrodCity_GameCorner_hns/scripts.inc:4-210) with a party of one and the Coin Case: the
+# MULTI_PRIZE_MONS menu at (20,0); Abra: ConfirmPrizeMon YES/NO -> NO; Abra YES -> obtained with the
+# coins box and MUS_LEVEL_UP, the nickname YES/NO -> NO; Clefairy YES -> nickname YES -> the naming
+# screen (OK); Munchlax, Dratini, Porygon YES -> nickname NO (the party is now full); Abra with a
+# full party -> obtained, Common_EventScript_TransferredToPC; not enough coins (Porygon with 879
+# coins); party and every box full (fillboxes) -> Route119_WeatherInstitute_2F_Text_NoRoomForPokemon;
+# the menu's EXIT row.
+start saves/r6r3_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+ev additem ITEM_COIN_CASE; addcoins 9999; end
+warpto MAP_GOLDENROD_CITY_GAME_CORNER_HNS 16 3
+face UP
+snap pz_field
+tap A 4
+scene pz_menu 6000
+ss pz_menu
+pickd 0
+scene pz_abra_ask 6000
+pickd 1
+scene pz_abra_no 6000
+snap pz_abra_no_end
+# Abra YES, nickname NO
+face UP
+tap A 4
+scene pz_m1 6000
+pickd 0
+scene pz_abra_ask2 6000
+pickd 0
+scene pz_abra_yes 12000
+pickd 1
+scene pz_abra_nonick 6000
+snap pz_abra_end
+# Clefairy YES, nickname YES -> naming screen
+face UP
+tap A 4
+scene pz_m2 6000
+pickd 1
+scene pz_clef_ask 6000
+pickd 0
+scene pz_clef_yes 12000
+pickd 0
+waitcb2x CB2_NamingScreen 1200
+waitnaming
+snap pz_clef_naming
+press START
+waitnaming
+snap pz_clef_naming_ok
+press A
+waitcb2x CB2_Overworld 900
+scene pz_clef_after 6000
+snap pz_clef_end
+# Munchlax
+ev addcoins 9999; end
+face UP
+tap A 4
+scene pz_m3 6000
+pickd 2
+scene pz_mun_ask 6000
+pickd 0
+scene pz_mun_yes 12000
+pickd 1
+scene pz_mun_nonick 6000
+snap pz_mun_end
+# Dratini
+ev addcoins 9999; end
+face UP
+tap A 4
+scene pz_m4 6000
+pickd 3
+scene pz_dra_ask 6000
+pickd 0
+scene pz_dra_yes 12000
+pickd 1
+scene pz_dra_nonick 6000
+snap pz_dra_end
+# Porygon (fills the party)
+ev addcoins 9999; end
+face UP
+tap A 4
+scene pz_m5 6000
+pickd 4
+scene pz_pory_ask 6000
+pickd 0
+scene pz_pory_yes 12000
+pickd 1
+scene pz_pory_nonick 6000
+snap pz_pory_end
+partyinfo
+# Abra with a full party -> PC
+ev addcoins 9999; end
+face UP
+tap A 4
+scene pz_m6 6000
+pickd 0
+scene pz_pc_ask 6000
+pickd 0
+scene pz_pc_yes 15000
+snap pz_pc_end
+# not enough coins
+ev removecoins 9000; end
+face UP
+tap A 4
+scene pz_m7 6000
+pickd 4
+scene pz_poor_ask 6000
+pickd 0
+scene pz_poor 6000
+snap pz_poor_end
+# party and every box full
+fillboxes 0
+ev addcoins 9999; end
+face UP
+tap A 4
+scene pz_m8 6000
+pickd 0
+scene pz_full_ask 6000
+pickd 0
+scene pz_full 12000
+snap pz_full_end
+# EXIT row
+face UP
+tap A 4
+scene pz_m9 6000
+pickd 5
+scene pz_exit 6000
+snap pz_exit_end

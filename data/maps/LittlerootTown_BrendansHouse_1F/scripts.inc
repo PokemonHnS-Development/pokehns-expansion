@@ -334,9 +334,9 @@ PlayersHouse_1F_Text_DidYouMeetProfBirch:
 	.string "PROF. BIRCH?$"
 
 PlayersHouse_1F_Text_YouShouldRestABit:
-	.string "MOM: How are you doing, {PLAYER}?\n"
-	.string "You look a little tired.\p"
-	.string "I think you should rest a bit.$"
+	.string "אמא: מה שלומך, {PLAYER}?\n"
+	.string "אתה נראה קצת עייף.\p"
+	.string "אני חושבת שכדאי שתנוח קצת.$"
 
 PlayersHouse_1F_Text_TakeCareHoney:
 	.string "MOM: Take care, honey!$"
@@ -372,18 +372,18 @@ PlayersHouse_1F_Text_ReportFromPetalburgGym:
 	.string "report from in front of PETALBURG GYM.$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV:
-	.string "There is a movie on TV.\p"
-	.string "Two men are dancing on a big piano\n"
-	.string "keyboard.\p"
-	.string "Better get going!$"
+	.string "יש סרט בטלוויזיה.\p"
+	.string "שני גברים רוקדים על\n"
+	.string "קלידי פסנתר ענקיים.\p"
+	.string "הגיע הזמן לזוז!$"
 
 PlayersHouse_1F_Text_RunningShoesManual:
-	.string "It's the instruction booklet for the\n"
-	.string "RUNNING SHOES.\p"
-	.string "“Press the B Button to run while\n"
-	.string "wearing your RUNNING SHOES.\p"
-	.string "“Lace up your RUNNING SHOES and hit\n"
-	.string "the road running!”$"
+	.string "זו חוברת ההוראות של\n"
+	.string "נעלי הריצה.\p"
+	.string "”כדי לרוץ, לוחצים על כפתור B\n"
+	.string "כשנועלים את נעלי הריצה.\p"
+	.string "”שורכים את נעלי הריצה\n"
+	.string "ויוצאים לדרך בריצה!”$"
 
 PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
 	.string "DAD: Hm?\p"
@@ -416,15 +416,14 @@ PlayersHouse_1F_Text_IsThatABreakingStory:
 	.string "MOM: Is that a breaking news story?$"
 
 PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
-	.string "We bring you this emergency\n"
-	.string "news flash!\p"
-	.string "In various HOENN locales, there have\n"
-	.string "been reports of a BZZT…colored\l"
-	.string "POKéMON in flight.\p"
-	.string "The identity of this POKéMON is\n"
-	.string "currently unknown.\p"
-	.string "We now return you to the regular\n"
-	.string "movie program.$"
+	.string "אנו מביאים לכם\n"
+	.string "מבזק חדשות דחוף!\p"
+	.string "ממקומות שונים בהואן מדווחים\n"
+	.string "על פוקימון בצבע בזזט… שעף בשמיים.\p"
+	.string "זהותו של הפוקימון הזה\n"
+	.string "עדיין אינה ידועה.\p"
+	.string "ועכשיו נחזור לשידור\n"
+	.string "הסרט הרגיל.$"
 
 PlayersHouse_1F_Text_WhatColorDidTheySay:
 	.string "MOM: {PLAYER}, did you catch that?\p"

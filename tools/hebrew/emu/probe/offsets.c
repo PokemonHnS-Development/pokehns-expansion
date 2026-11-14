@@ -1,0 +1,57 @@
+#include "global.h"
+#include "main.h"
+#include "text.h"
+#include "script.h"
+#include "palette.h"
+#include <stddef.h>
+#define O(name, expr) {name, (u32)(expr)}
+struct Off { const char *n; u32 v; };
+const struct Off gOffsets[] = {
+  O("SB1.saveVersion", offsetof(struct SaveBlock1, saveVersion)),
+  O("SB1.pos", offsetof(struct SaveBlock1, pos)),
+  O("SB1.location", offsetof(struct SaveBlock1, location)),
+  O("SB1.continueGameWarp", offsetof(struct SaveBlock1, continueGameWarp)),
+  O("SB1.dynamicWarp", offsetof(struct SaveBlock1, dynamicWarp)),
+  O("SB1.lastHealLocation", offsetof(struct SaveBlock1, lastHealLocation)),
+  O("SB1.escapeWarp", offsetof(struct SaveBlock1, escapeWarp)),
+  O("SB1.mapLayoutId", offsetof(struct SaveBlock1, mapLayoutId)),
+  O("SB1.playerPartyCount", offsetof(struct SaveBlock1, playerPartyCount)),
+  O("SB1.playerParty", offsetof(struct SaveBlock1, playerParty)),
+  O("SB1.money", offsetof(struct SaveBlock1, money)),
+  O("SB1.bag", offsetof(struct SaveBlock1, bag)),
+  O("SB1.flags", offsetof(struct SaveBlock1, flags)),
+  O("SB1.vars", offsetof(struct SaveBlock1, vars)),
+  O("sizeof SB1", sizeof(struct SaveBlock1)),
+  O("SB2.playerName", offsetof(struct SaveBlock2, playerName)),
+  O("SB2.playerGender", offsetof(struct SaveBlock2, playerGender)),
+  O("SB2.specialSaveWarpFlags", offsetof(struct SaveBlock2, specialSaveWarpFlags)),
+  O("SB2.playerTrainerId", offsetof(struct SaveBlock2, playerTrainerId)),
+  O("SB2.optionsTextSpeedWord", 0x14),
+  O("SB2.encryptionKey", offsetof(struct SaveBlock2, encryptionKey)),
+  O("sizeof SB2", sizeof(struct SaveBlock2)),
+  O("WarpData.mapGroup", offsetof(struct WarpData, mapGroup)),
+  O("WarpData.mapNum", offsetof(struct WarpData, mapNum)),
+  O("WarpData.warpId", offsetof(struct WarpData, warpId)),
+  O("WarpData.x", offsetof(struct WarpData, x)),
+  O("WarpData.y", offsetof(struct WarpData, y)),
+  O("sizeof WarpData", sizeof(struct WarpData)),
+  O("Main.callback1", offsetof(struct Main, callback1)),
+  O("Main.callback2", offsetof(struct Main, callback2)),
+  O("Main.savedCallback", offsetof(struct Main, savedCallback)),
+  O("Main.heldKeys", offsetof(struct Main, heldKeys)),
+  O("Main.newKeys", offsetof(struct Main, newKeys)),
+  O("Main.state", offsetof(struct Main, state)),
+  O("TextPrinter.currentChar", offsetof(struct TextPrinter, printerTemplate.currentChar)),
+  O("TextPrinter.windowId", offsetof(struct TextPrinter, printerTemplate.windowId)),
+  O("TextPrinter.fontId", offsetof(struct TextPrinter, printerTemplate.fontId)),
+  O("TextPrinter.x", offsetof(struct TextPrinter, printerTemplate.x)),
+  O("TextPrinter.currentX", offsetof(struct TextPrinter, printerTemplate.currentX)),
+  O("TextPrinter.nextPrinter", offsetof(struct TextPrinter, nextPrinter)),
+  O("TextPrinter.autoScrollDelay", offsetof(struct TextPrinter, autoScrollDelay)),
+  O("TextPrinter.state", offsetof(struct TextPrinter, state)),
+  O("ScriptContext.mode", offsetof(struct ScriptContext, mode)),
+  O("ScriptContext.nativePtr", offsetof(struct ScriptContext, nativePtr)),
+  O("PaletteFade.blendColorWord", offsetof(struct PaletteFadeControl, bld1) + 4),
+  O("sizeof TextPrinter", sizeof(struct TextPrinter)),
+  O("sizeof Pokemon", sizeof(struct Pokemon)),
+};

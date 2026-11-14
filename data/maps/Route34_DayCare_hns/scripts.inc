@@ -30,20 +30,20 @@ Route34_DayCare_Bookshelf4::
 	end
 
 Route34_DayCare_Text_Bookshelf1:
-	.string "A BABY POKéMON encyclopedia!\p"
-	.string "VOLUME 1: ALL ABOUT ABILITIES$"
+	.string "אנציקלופדיה של פוקימונים תינוקות!\p"
+	.string "כרך 1: הכול על יכולות$"
 
 Route34_DayCare_Text_Bookshelf2:
-	.string "A BABY POKéMON encyclopedia!\p"
-	.string "VOLUME 2: TYPICAL TYPES$"
+	.string "אנציקלופדיה של פוקימונים תינוקות!\p"
+	.string "כרך 2: סוגים טיפוסיים$"
 
 Route34_DayCare_Text_Bookshelf3:
-	.string "A BABY POKéMON encyclopedia!\p"
-	.string "VOLUME 3: BABIES' CRIES$"
+	.string "אנציקלופדיה של פוקימונים תינוקות!\p"
+	.string "כרך 3: קריאות התינוקות$"
 
 Route34_DayCare_Text_Bookshelf4:
-	.string "A BABY POKéMON encyclopedia!\p"
-	.string "VOLUME 4: ADORABLE ACTIONS$"
+	.string "אנציקלופדיה של פוקימונים תינוקות!\p"
+	.string "כרך 4: פעולות מקסימות$"
 
 Route34_DayCare_EventScript_Clerk::
 	lock
@@ -152,40 +152,37 @@ Route34_DayCare_EventScript_ClerkAfter::
 	end
 
 Route34_DayCare_Text_ClerkBefore:
-	.string "I'm the DAY-CARE couple's son.\p"
-	.string "An ODD EGG was found with a TRAINER's\n"
-	.string "POKéMON, but they didn't want it...\p"
-	.string "I'd offer it to you...\n"
-	.string "But how can I know you'll take good\l"
-	.string "care of it?$"
+	.string "אני הבן של הזוג ממעון היום.\p"
+	.string "ביצה מוזרה נמצאה אצל פוקימון\n"
+	.string "של מאמן, אבל לא רצו אותה…\p"
+	.string "הייתי מציע אותה לך… אבל איך\n"
+	.string "אדע שתטפל בה היטב?$"
 
 Route34_DayCare_Text_ClerkNoRoom:
-	.string "It looks like you can't carry another\n"
-	.string "POKéMON anyway.$"
+	.string "נראה שבכל מקרה אין לך\n"
+	.string "מקום לעוד פוקימון.$"
 
 Route34_DayCare_Text_ClerkQuestion:
-	.string "Answer this question for me.\n"
-	.string "How do you feel about this ODD EGG?$"
+	.string "ענה לי על השאלה הבאה.\n"
+	.string "מה דעתך על הביצה המוזרה הזו?$"
 
 Route34_DayCare_Text_Rejection:
-	.string "Hmm, I think this EGG isn't for you.\p"
-	.string "It would be irresponsible of me to\n"
-	.string "give out a precious EGG like this\l"
-	.string "to someone who isn't as well-read\l"
-	.string "on the subject of baby POKéMON!$"
+	.string "הממ, נראה לי שהביצה הזו לא בשבילך.\p"
+	.string "זה יהיה חוסר אחריות לתת ביצה יקרה כזו\n"
+	.string "למי שלא קרא מספיק על פוקימונים תינוקות!$"
 
 Route34_DayCare_Text_ReceivedOddEgg:
-	.string "{PLAYER} Received the ODD EGG.$"
+	.string "{PLAYER} קיבל את הביצה המוזרה.$"
 
 Route34_DayCare_Text_TakeCare:
-	.string "I knew you were the right trainer\n"
-	.string "for the job. Take good care of it!$"
+	.string "ידעתי שאתה המאמן המתאים\n"
+	.string "למשימה. תטפל בה היטב!$"
 
 Route34_DayCare_Text_ClerkAfter:
-	.string "We see a lot of those eggs around\n"
-	.string "here.\p"
-	.string "Something was different about that\n"
-	.string "one, though.$"
+	.string "אנחנו רואים פה הרבה\n"
+	.string "ביצים כאלה.\p"
+	.string "אבל משהו בביצה ההיא\n"
+	.string "היה שונה.$"
 
 Route34_DayCare_EventScript_Ditto::
 	lock
@@ -198,7 +195,7 @@ Route34_DayCare_EventScript_Ditto::
 	end
 
 Route34_DayCare_Text_Ditto:
-	.string "DITTO: Tto!$"
+	.string "דיטו: טו!$"
 
 Route34_EventScript_DaycareMan::
 	lock
@@ -332,9 +329,8 @@ Route34_DayCare_EventScript_ClosedForChallenge::
 	end
 
 Route34_DayCare_Text_ClosedForChallenge:
-	.string "Sorry, we can't look after your\n"
-	.string "POKéMON during a party limit\l"
-	.string "challenge!$"
+	.string "מצטערים, בזמן אתגר הגבלת קבוצה\n"
+	.string "לא נוכל לשמור על הפוקימונים שלך!$"
 
 Route34_DayCare_EventScript_OnlyOneMon::
 	msgbox Route34_DayCare_Text_YouHaveJustOneMon, MSGBOX_DEFAULT
@@ -470,46 +466,46 @@ Route34_DayCare_EventScript_TwoMonsInDaycare::
 	end
 
 Route34_Text_SeeWifeIfYoudLikeMeToRaiseMon:
-	.string "I'm the DAY-CARE MAN.\p"
-	.string "I help take care of the precious\n"
-	.string "POKéMON of TRAINERS.\p"
-	.string "If you'd like me to raise your POKéMON,\n"
-	.string "have a word with my wife.$"
+	.string "אני האיש ממעון היום.\p"
+	.string "אני עוזר לטפל בפוקימונים\n"
+	.string "היקרים של מאמנים.\p"
+	.string "אם תרצה שאגדל את הפוקימון\n"
+	.string "שלך, דבר עם אשתי.$"
 
 Route34_Text_DoYouWantEgg:
-	.string "Ah, it's you!\p"
-	.string "We were raising your POKéMON,\n"
-	.string "and my goodness, were we surprised!\p"
-	.string "Your POKéMON had an EGG!\p"
-	.string "We don't know how it got there,\n"
-	.string "but your POKéMON had it.\p"
-	.string "You do want it, yes?$"
+	.string "אה, זה אתה!\p"
+	.string "גידלנו את הפוקימונים שלך,\n"
+	.string "ואוי, כמה שהופתענו!\p"
+	.string "לפוקימון שלך הייתה ביצה!\p"
+	.string "אנחנו לא יודעים מאיפה היא הגיעה,\n"
+	.string "אבל היא הייתה אצל הפוקימון שלך.\p"
+	.string "אתה רוצה אותה, נכון?$"
 
 Route34_Text_YourMonIsDoingFine:
-	.string "Ah, it's you! Good to see you.\n"
-	.string "Your {STR_VAR_1}'s doing fine.$"
+	.string "אה, זה אתה! טוב לראות אותך.\n"
+	.string "{STR_VAR_1} שלך במצב מצוין.$"
 
 Route34_Text_IllKeepIt:
-	.string "Well then, I'll keep it.\n"
-	.string "Thanks!$"
+	.string "טוב, אז אשמור אותה.\n"
+	.string "תודה!$"
 
 Route34_Text_YouHaveNoRoomForIt:
-	.string "You have no room for it…\n"
-	.string "Come back when you've made room.$"
+	.string "אין לך מקום בשבילה…\n"
+	.string "תחזור כשתפנה מקום.$"
 
 Route34_Text_ReceivedEgg:
-	.string "{PLAYER} received the EGG from\n"
-	.string "the DAY-CARE MAN.$"
+	.string "{PLAYER} קיבל את הביצה\n"
+	.string "מהאיש ממעון היום.$"
 
 Route34_Text_TakeGoodCareOfIt:
-	.string "Take good care of it.$"
+	.string "תטפל בה היטב.$"
 
 Route34_Text_FriendlyWithOtherTrainersMon:
-	.string "By the way, about your {STR_VAR_1},\n"
-	.string "it seemed to be friendly with\l"
-	.string "{STR_VAR_2}'s {STR_VAR_3}.\p"
-	.string "I may even have seen it receiving\n"
-	.string "a piece of MAIL.$"
+	.string "דרך אגב, לגבי {STR_VAR_1} שלך…\p"
+	.string "נראה שהוא התיידד עם הפוקימון\n"
+	.string "של {STR_VAR_2}, {STR_VAR_3}.\p"
+	.string "אולי אפילו ראיתי אותו\n"
+	.string "מקבל דואר.$"
 
 @ Unused
 Route34_Text_SeeWifeIfYouWantToPickUpMon:
@@ -517,94 +513,95 @@ Route34_Text_SeeWifeIfYouWantToPickUpMon:
 	.string "have a word with my wife.$"
 
 Route34_Text_YourMonsAreDoingFine:
-	.string "Ah, it's you! Your {STR_VAR_1} and\n"
-	.string "{STR_VAR_2} are doing fine.$"
+	.string "אה, זה אתה! {STR_VAR_1} שלך\n"
+	.string "ו{STR_VAR_2} במצב מצוין.$"
 
 Route34_Text_IWillKeepDoYouWantIt:
-	.string "I really will keep it.\n"
-	.string "You do want this, yes?$"
+	.string "אני באמת אשמור אותה.\n"
+	.string "אתה כן רוצה אותה, נכון?$"
 
 Route34_DayCare_Text_WouldYouLikeUsToRaiseAMon:
-	.string "I'm the DAY-CARE LADY.\p"
-	.string "We can raise POKéMON for you.\p"
-	.string "Would you like us to raise one?$"
+	.string "אני הגברת ממעון היום.\p"
+	.string "אנחנו יכולים לגדל\n"
+	.string "פוקימונים בשבילך.\p"
+	.string "תרצה שנגדל אחד?$"
 
 Route34_DayCare_Text_WhichMonShouldWeRaise:
-	.string "Which POKéMON should we raise for\n"
-	.string "you?$"
+	.string "איזה פוקימון לגדל\n"
+	.string "בשבילך?$"
 
 Route34_DayCare_Text_WellRaiseYourMon:
-	.string "Fine, we'll raise your {STR_VAR_1}\n"
-	.string "for a while.\p"
-	.string "Come back for it later.$"
+	.string "בסדר, נגדל את {STR_VAR_1} שלך\n"
+	.string "לזמן מה.\p"
+	.string "תחזור לקחת אותו מאוחר יותר.$"
 
 Route34_DayCare_Text_WeCanRaiseOneMore:
-	.string "We can raise two of your POKéMON.\n"
-	.string "Would you like us to raise one more?$"
+	.string "נוכל לגדל שניים מהפוקימונים שלך.\n"
+	.string "תרצה שנגדל עוד אחד?$"
 
 Route34_DayCare_Text_HusbandWasLookingForYou:
-	.string "My husband was looking for you.$"
+	.string "בעלי חיפש אותך.$"
 
 Route34_DayCare_Text_FineThenComeAgain:
-	.string "Oh, fine, then.\n"
-	.string "Come again.$"
+	.string "אה, טוב, בסדר.\n"
+	.string "בוא שוב.$"
 
 Route34_DayCare_Text_NotEnoughMoney:
-	.string "You don't have enough money…$"
+	.string "אין לך מספיק כסף…$"
 
 Route34_DayCare_Text_TakeOtherOneBackToo:
-	.string "Will you take back the other one,\n"
-	.string "too?$"
+	.string "תיקח בחזרה גם\n"
+	.string "את השני?$"
 
 Route34_DayCare_Text_ComeAgain:
-	.string "Fine.\n"
-	.string "Come again.$"
+	.string "בסדר.\n"
+	.string "בוא שוב.$"
 
 Route34_DayCare_Text_GoodToSeeYou:
-	.string "Ah, it's you! Good to see you.\n"
-	.string "Your POKéMON can only be doing good!$"
+	.string "אה, זה אתה! טוב לראות אותך.\n"
+	.string "אצלנו לפוקימונים תמיד טוב!$"
 
 Route34_DayCare_Text_YourMonHasGrownXLevels:
-	.string "By level, your {STR_VAR_1} has\n"
-	.string "grown by {STR_VAR_2}.$"
+	.string "{STR_VAR_1} שלך עלה\n"
+	.string "במספר רמות: {STR_VAR_2}.$"
 
 Route34_DayCare_Text_YourTeamIsFull:
-	.string "Your POKéMON team is full.\n"
-	.string "Make room, then come see me.$"
+	.string "קבוצת הפוקימונים שלך מלאה.\n"
+	.string "פנה מקום, ואז בוא אליי.$"
 
 @ Unused
 Route34_DayCare_Text_TakeBackWhichMon:
 	.string "Which POKéMON will you take back?$"
 
 Route34_DayCare_Text_ItWillCostX:
-	.string "If you want your {STR_VAR_1} back,\n"
-	.string "it will cost ¥{STR_VAR_2}.$"
+	.string "אם תרצה את {STR_VAR_1} שלך בחזרה,\n"
+	.string "זה יעלה ¥{STR_VAR_2}.$"
 
 Route34_DayCare_Text_HeresYourMon:
-	.string "Perfect!\n"
-	.string "Here's your POKéMON.$"
+	.string "מצוין!\n"
+	.string "הנה הפוקימון שלך.$"
 
 Route34_DayCare_Text_TookBackMon:
-	.string "{PLAYER} took back {STR_VAR_1} from\n"
-	.string "the DAY-CARE LADY.$"
+	.string "{PLAYER} לקח את {STR_VAR_1}\n"
+	.string "בחזרה מהגברת ממעון היום.$"
 
 Route34_DayCare_Text_YouHaveJustOneMon:
-	.string "Oh? But you have just one\n"
-	.string "POKéMON.\p"
-	.string "Come back another time.$"
+	.string "הו? אבל יש לך רק\n"
+	.string "פוקימון אחד.\p"
+	.string "בוא בפעם אחרת.$"
 
 Route34_DayCare_Text_TakeYourMonBack:
-	.string "Will you take your POKéMON back?$"
+	.string "תרצה לקחת בחזרה פוקימון שלך?$"
 
 Route34_DayCare_Text_WhatWillYouBattleWith:
-	.string "If you leave me that POKéMON,\n"
-	.string "what will you battle with?\p"
-	.string "Come back another time.$"
+	.string "אם תשאיר אצלי את הפוקימון\n"
+	.string "הזה, עם מה תילחם?\p"
+	.string "בוא בפעם אחרת.$"
 
 Route34_DayCare_Text_YoullBeLeftWithJustOne:
-	.string "Huh?\n"
-	.string "Now, now.\p"
-	.string "If you leave that POKéMON with\n"
-	.string "me, you'll be left with just one.\p"
-	.string "You will be better off if you catch\n"
-	.string "some more, I dare say.$"
+	.string "מה?\n"
+	.string "נו, נו.\p"
+	.string "אם תשאיר אצלי את הפוקימון\n"
+	.string "הזה, יישאר לך רק אחד.\p"
+	.string "לדעתי, עדיף שתתפוס\n"
+	.string "עוד כמה.$"

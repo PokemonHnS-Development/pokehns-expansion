@@ -1,0 +1,64 @@
+# A Normal-rank COOL contest from the H&S contest lobby (MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS, entered
+# from Viridian City). Ladder 6 has no Pokeblock case, so the receptionist gives it first
+# (data/scripts/contest_hall.inc:1-30). ENTER > NORMAL > COOL > "which Pokemon?" > the party menu in
+# contest mode (src/party_menu.c:1011, B: "cancel participation?", :1639) > "entry No. 4" > the walk
+# to the hall > the hall: MC, entry pictures (ShowContestEntryMonPic), the audience vote >
+# startcontest (CB2_StartContest, src/contest.c:1223): 5 appeals > the judging lines >
+# showcontestresults (src/contest_util.c:513) > the winner, the ribbon > back in the lobby.
+# The player's Round 1 (condition) points are raised to 600 once the contest screen starts, so
+# the player wins (gContestMonRound1Points[3], src/contest.c:338; the player is contestant 3).
+start saves/ladder6_postgame.sav
+include ../continue.txt
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+snap rc_lobby_counter
+tap A 4
+fieldwatch rc_recep menu 6000
+pick 0
+fieldwatch rc_rank menu 3000
+pick 0
+fieldwatch rc_type menu 3000
+pick 0
+fieldwatch rc_which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap rc_party_01
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap rc_party_02
+seek 8 @gPartyMenu+9@ 2 DOWN
+snap rc_party_03
+seek 8 @gPartyMenu+9@ 3 DOWN
+snap rc_party_04
+seek 8 @gPartyMenu+9@ 4 DOWN
+snap rc_party_05
+seek 8 @gPartyMenu+9@ 5 DOWN
+snap rc_party_06
+seek 8 @gPartyMenu+9@ 7 DOWN
+snap rc_party_cancel
+tap B 4
+waitquiet
+40 -
+waitquiet
+snap rc_party_cancel_q
+tap B 4
+waitquiet
+40 -
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap rc_party_back
+seek 8 @gPartyMenu+9@ 0 UP
+snap rc_party_pick
+tap A 4
+fieldwatch rc_entry cb2:CB2_StartContest 40000 45
+ss rc_pre_contest
+w16s gContestMonRound1Points 3 600
+contestplay rc_app 01230
+fieldwatch rc_judge cb2:CB2_StartShowContestResults 20000 45
+waitcb2x CB2_ShowContestResults 600
+burstuntil rc_res CB2_ShowContestResults 16 9000 A 240
+fieldwatch rc_prize free 30000 45
+loc
+snap rc_lobby_after
+savegame
+keepsave rc_after_normal

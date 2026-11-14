@@ -1,0 +1,175 @@
+# Buena's Password (32), src/pokenav_radio.c:802-818: 6 lines, line 4 = '<password>!'
+# (sRadioText_Buena4 '{STR_VAR_1}!'). The password is VAR_RADIO_BUENAS_PASSWORD = (category << 4) |
+# word once FLAG_DAILY_BUENAS_PASSWORD is set (GetOrGenerateBuenaPassword :667-683); all 11 x 3
+# (sBuenaPasswords :262-286): line 4 of each, and a full cycle for the first.
+start saves/ladder4_league.sav
+include _johto.txt
+setflag FLAG_DAILY_BUENAS_PASSWORD
+setvar VAR_RADIO_BUENAS_PASSWORD 0
+radiotune 32
+radiocycle rb_full 6
+setvar VAR_RADIO_BUENAS_PASSWORD 0
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c00_starters_w0
+setvar VAR_RADIO_BUENAS_PASSWORD 1
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c00_starters_w1
+setvar VAR_RADIO_BUENAS_PASSWORD 2
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c00_starters_w2
+setvar VAR_RADIO_BUENAS_PASSWORD 10
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c01_drinks_w0
+setvar VAR_RADIO_BUENAS_PASSWORD 11
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c01_drinks_w1
+setvar VAR_RADIO_BUENAS_PASSWORD 12
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c01_drinks_w2
+setvar VAR_RADIO_BUENAS_PASSWORD 20
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c02_healing_w0
+setvar VAR_RADIO_BUENAS_PASSWORD 21
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c02_healing_w1
+setvar VAR_RADIO_BUENAS_PASSWORD 22
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c02_healing_w2
+setvar VAR_RADIO_BUENAS_PASSWORD 30
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c03_balls_w0
+setvar VAR_RADIO_BUENAS_PASSWORD 31
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c03_balls_w1
+setvar VAR_RADIO_BUENAS_PASSWORD 32
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c03_balls_w2
+setvar VAR_RADIO_BUENAS_PASSWORD 40
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c04_mon1_w0
+setvar VAR_RADIO_BUENAS_PASSWORD 41
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c04_mon1_w1
+setvar VAR_RADIO_BUENAS_PASSWORD 42
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c04_mon1_w2
+setvar VAR_RADIO_BUENAS_PASSWORD 50
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c05_mon2_w0
+setvar VAR_RADIO_BUENAS_PASSWORD 51
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c05_mon2_w1
+setvar VAR_RADIO_BUENAS_PASSWORD 52
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c05_mon2_w2
+setvar VAR_RADIO_BUENAS_PASSWORD 60
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c06_towns_w0
+setvar VAR_RADIO_BUENAS_PASSWORD 61
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c06_towns_w1
+setvar VAR_RADIO_BUENAS_PASSWORD 62
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c06_towns_w2
+setvar VAR_RADIO_BUENAS_PASSWORD 70
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c07_types_w0
+setvar VAR_RADIO_BUENAS_PASSWORD 71
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c07_types_w1
+setvar VAR_RADIO_BUENAS_PASSWORD 72
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c07_types_w2
+setvar VAR_RADIO_BUENAS_PASSWORD 80
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c08_moves_w0
+setvar VAR_RADIO_BUENAS_PASSWORD 81
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c08_moves_w1
+setvar VAR_RADIO_BUENAS_PASSWORD 82
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c08_moves_w2
+setvar VAR_RADIO_BUENAS_PASSWORD 90
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c09_xitems_w0
+setvar VAR_RADIO_BUENAS_PASSWORD 91
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c09_xitems_w1
+setvar VAR_RADIO_BUENAS_PASSWORD 92
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c09_xitems_w2
+setvar VAR_RADIO_BUENAS_PASSWORD A0
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c10_stations_w0
+setvar VAR_RADIO_BUENAS_PASSWORD A1
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c10_stations_w1
+setvar VAR_RADIO_BUENAS_PASSWORD A2
+radiotune 31
+radiotune 32
+radioline 3
+snap rb_c10_stations_w2

@@ -1,0 +1,35 @@
+# Silph Co. 1F, Steven (17,14): SaffronCity_SilphCo_EventScript_Steven (SaffronCity_SilphCo_hns/
+# scripts.inc:4-67): the phone pages, the '!' emote, the Steven2 pages and MULTI_HOENN_STARTERS; from
+# a savestate at the menu each row: Treecko / Torchic / Mudkip ('you chose well', received with the
+# fanfare, nickname YES/NO = NO, 'take good care', he walks off), and B (Refused: 'אה…').
+start saves/r6_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+ev clearflag FLAG_GOT_HOENN_STARTER; end
+warpto MAP_SAFFRON_CITY_SILPH_CO_HNS 17 15
+face UP
+snap st_field
+tap A 4
+scene st_talk 12000 12
+ss st_menu
+pickd 0
+scene st_treecko 8000
+pickd 1
+scene st_treecko_no 8000 16
+snap st_treecko_end
+sl st_menu
+pickd 1
+scene st_torchic 8000
+pickd 1
+scene st_torchic_no 8000 16
+snap st_torchic_end
+sl st_menu
+pickd 2
+scene st_mudkip 8000
+pickd 1
+scene st_mudkip_no 8000 16
+snap st_mudkip_end
+sl st_menu
+tap B 4
+scene st_refused 4000
+snap st_refused_end

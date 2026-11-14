@@ -1,0 +1,14 @@
+# Refute check: Karen first-time battle only (send-out and about-to-send lines).
+start saves/r6_league_base.sav
+include ../r6_league/_base.txt
+ev clearflag FLAG_IS_CHAMPION; setvar VAR_LEAGUE_STATE, 4; setflag FLAG_HIDE_LEAGUE_BLACKBELT; end
+warptoloose MAP_POKEMON_LEAGUE_KARENS_ROOM_HNS 6 11
+scene R_door 3000
+snap R_room
+walkto 6 7
+face UP
+tap A 4
+scene R_field 20000
+bwalk R_bintro input:HandleInputChooseAction
+snap R_action
+bwin R_win

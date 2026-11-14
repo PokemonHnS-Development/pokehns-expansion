@@ -1,0 +1,15 @@
+sl pike_3path1
+30 -
+waitctl 600
+py: sb2 = emu.sb2(); emu.w8(sb2 + 0xE10, (emu.r8(sb2 + 0xE10) & 0x80) | (5 << 3) | 1); print("hint", hex(emu.r8(sb2 + 0xE10)))
+go UP 6
+py: emu.frames(8, "UP"); emu.wait_until(lambda: emu.r8(emu.sb1() + 9) != 67 or emu.wants_key(), 900, "the room", step=2); print("in room", emu.location())
+drivex pk_r7_wild_in free 10 3000
+snap pk_r7_wild_room
+py: b = emu.sym("BattleMainCB2"); k = 0
+py: exec("for i in range(200):\n    emu.frames(16, 'UP' if (i // 2) % 2 == 0 else 'DOWN')\n    if emu.cb2() != emu.sym('CB2_Overworld'):\n        break\nprint('cb2', emu.cb2_name(), i)")
+drivex pk_r7_wild_go battle 10 3000
+fastbattles off
+bwin pk_r7_wild_b
+drivex pk_r7_wild_after free 10 3000
+loc

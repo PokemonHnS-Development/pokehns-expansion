@@ -1,0 +1,1632 @@
+# Warp into every live map from the post-game save and look for crashes (no walking).
+start saves/ladder6_postgame.sav
+include ../scripts/continue.txt
+warptoloose MAP_AKALA_ISLE_HNS 32 26
+waitctl 900 B
+snap mapwalk_map_akala_isle_hns
+warptoloose MAP_AKALA_CAVE_HNS 22 36
+waitctl 900 B
+snap mapwalk_map_akala_cave_hns
+warptoloose MAP_AKALA_FOREST_HNS 2 22
+waitctl 900 B
+snap mapwalk_map_akala_forest_hns
+warptoloose MAP_AKALA_HOUSE_HNS 11 13
+waitctl 900 B
+snap mapwalk_map_akala_house_hns
+warptoloose MAP_ALOLA_WATER_HNS 19 6
+waitctl 900 B
+snap mapwalk_map_alola_water_hns
+warptoloose MAP_AZALEA_TOWN_GYM_HNS 11 44
+waitctl 900 B
+snap mapwalk_map_azalea_town_gym_hns
+warptoloose MAP_AZALEA_TOWN_HOUSE1_HNS 5 8
+waitctl 900 B
+snap mapwalk_map_azalea_town_house1_hns
+warptoloose MAP_AZALEA_TOWN_KURTS_HOUSE_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_azalea_town_kurts_house_hns
+warptoloose MAP_AZALEA_TOWN_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_azalea_town_mart_hns
+warptoloose MAP_AZALEA_TOWN_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_azalea_town_pokemon_center_hns
+warptoloose MAP_AZALEA_TOWN_HNS 52 7
+waitctl 900 B
+snap mapwalk_map_azalea_town_hns
+warptoloose MAP_BATTLE_COLOSSEUM_2P_HNS 6 8
+waitctl 900 B
+snap mapwalk_map_battle_colosseum_2p_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_ARENA_BATTLE_ROOM_HNS 5 4
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_arena_battle_room_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_ARENA_CORRIDOR_HNS 9 13
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_arena_corridor_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_ARENA_LOBBY_HNS 7 12
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_arena_lobby_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_BATTLE_ROOM_HNS 5 5
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_dome_battle_room_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_CORRIDOR_HNS 6 8
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_dome_corridor_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 11 16
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_dome_lobby_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM_HNS 6 8
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_dome_pre_battle_room_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_BATTLE_ROOM_HNS 0 7
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_factory_battle_room_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 9 11
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_factory_lobby_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_PRE_BATTLE_ROOM_HNS 8 13
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_factory_pre_battle_room_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PALACE_BATTLE_ROOM_HNS 0 9
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_palace_battle_room_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PALACE_CORRIDOR_HNS 8 13
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_palace_corridor_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PALACE_LOBBY_HNS 12 11
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_palace_lobby_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PIKE_CORRIDOR_HNS 6 7
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_pike_corridor_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY_HNS 5 12
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_pike_lobby_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_FINAL_HNS 2 5
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_pike_room_final_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_NORMAL_HNS 4 5
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_pike_room_normal_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PIKE_THREE_PATH_ROOM_HNS 4 11
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_pike_three_path_room_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR_HNS 0 1
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_pyramid_floor_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY_HNS 7 17
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_pyramid_lobby_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_TOP_HNS 17 12
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_pyramid_top_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_BATTLE_ROOM_HNS 5 8
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_tower_battle_room_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_CORRIDOR_HNS 9 3
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_tower_corridor_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_ELEVATOR_HNS 2 6
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_tower_elevator_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 12 9
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_tower_lobby_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_BATTLE_ROOM_HNS 5 2
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_tower_multi_battle_room_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_CORRIDOR_HNS 1 2
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_tower_multi_corridor_hns
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_PARTNER_ROOM_HNS 11 3
+waitctl 900 B
+snap mapwalk_map_battle_frontier_battle_tower_multi_partner_room_hns
+warptoloose MAP_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER_HNS 7 10
+waitctl 900 B
+snap mapwalk_map_battle_frontier_exchange_service_corner_hns
+warptoloose MAP_BATTLE_FRONTIER_LOUNGE1_HNS 1 7
+waitctl 900 B
+snap mapwalk_map_battle_frontier_lounge1_hns
+warptoloose MAP_BATTLE_FRONTIER_LOUNGE2_HNS 4 9
+waitctl 900 B
+snap mapwalk_map_battle_frontier_lounge2_hns
+warptoloose MAP_BATTLE_FRONTIER_LOUNGE3_HNS 4 9
+waitctl 900 B
+snap mapwalk_map_battle_frontier_lounge3_hns
+warptoloose MAP_BATTLE_FRONTIER_LOUNGE4_HNS 4 9
+waitctl 900 B
+snap mapwalk_map_battle_frontier_lounge4_hns
+warptoloose MAP_BATTLE_FRONTIER_LOUNGE5_HNS 1 7
+waitctl 900 B
+snap mapwalk_map_battle_frontier_lounge5_hns
+warptoloose MAP_BATTLE_FRONTIER_LOUNGE6_HNS 4 9
+waitctl 900 B
+snap mapwalk_map_battle_frontier_lounge6_hns
+warptoloose MAP_BATTLE_FRONTIER_LOUNGE7_HNS 4 9
+waitctl 900 B
+snap mapwalk_map_battle_frontier_lounge7_hns
+warptoloose MAP_BATTLE_FRONTIER_LOUNGE8_HNS 4 9
+waitctl 900 B
+snap mapwalk_map_battle_frontier_lounge8_hns
+warptoloose MAP_BATTLE_FRONTIER_LOUNGE9_HNS 1 9
+waitctl 900 B
+snap mapwalk_map_battle_frontier_lounge9_hns
+warptoloose MAP_BATTLE_FRONTIER_MART_HNS 3 7
+waitctl 900 B
+snap mapwalk_map_battle_frontier_mart_hns
+warptoloose MAP_BATTLE_FRONTIER_OUTSIDE_EAST_HNS 16 14
+waitctl 900 B
+snap mapwalk_map_battle_frontier_outside_east_hns
+warptoloose MAP_BATTLE_FRONTIER_OUTSIDE_WEST_HNS 42 27
+waitctl 900 B
+snap mapwalk_map_battle_frontier_outside_west_hns
+warptoloose MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_battle_frontier_pokemon_center_1f_hns
+warptoloose MAP_BATTLE_FRONTIER_POKEMON_CENTER_2F_HNS 1 6
+waitctl 900 B
+snap mapwalk_map_battle_frontier_pokemon_center_2f_hns
+warptoloose MAP_BATTLE_FRONTIER_RANKING_HALL_HNS 26 14
+waitctl 900 B
+snap mapwalk_map_battle_frontier_ranking_hall_hns
+warptoloose MAP_BATTLE_FRONTIER_RECEPTION_GATE_HNS 4 13
+waitctl 900 B
+snap mapwalk_map_battle_frontier_reception_gate_hns
+warptoloose MAP_BATTLE_FRONTIER_SCOTTS_HOUSE_HNS 2 7
+waitctl 900 B
+snap mapwalk_map_battle_frontier_scotts_house_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE01_HNS 2 4
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square01_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE02_HNS 2 2
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square02_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE03_HNS 2 2
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square03_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE04_HNS 7 3
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square04_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE05_HNS 6 5
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square05_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE06_HNS 5 3
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square06_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE07_HNS 0 7
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square07_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE08_HNS 1 3
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square08_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE09_HNS 3 1
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square09_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE10_HNS 3 1
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square10_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE11_HNS 3 3
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square11_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE12_HNS 7 6
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square12_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE13_HNS 5 2
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square13_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE14_HNS 7 2
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square14_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE15_HNS 2 6
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square15_hns
+warptoloose MAP_BATTLE_PYRAMID_SQUARE16_HNS 0 7
+waitctl 900 B
+snap mapwalk_map_battle_pyramid_square16_hns
+warptoloose MAP_BELLCHIME_TRAIL_HNS 8 37
+waitctl 900 B
+snap mapwalk_map_bellchime_trail_hns
+warptoloose MAP_BIRTH_ISLAND_EXTERIOR_HNS 22 19
+waitctl 900 B
+snap mapwalk_map_birth_island_exterior_hns
+warptoloose MAP_BIRTH_ISLAND_HARBOR_HNS 8 2
+waitctl 900 B
+snap mapwalk_map_birth_island_harbor_hns
+warptoloose MAP_BLACKTHORN_CITY_GYM_HNS 20 58
+waitctl 900 B
+snap mapwalk_map_blackthorn_city_gym_hns
+warptoloose MAP_BLACKTHORN_CITY_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_blackthorn_city_house1_hns
+warptoloose MAP_BLACKTHORN_CITY_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_blackthorn_city_house2_hns
+warptoloose MAP_BLACKTHORN_CITY_HOUSE3_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_blackthorn_city_house3_hns
+warptoloose MAP_BLACKTHORN_CITY_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_blackthorn_city_mart_hns
+warptoloose MAP_BLACKTHORN_CITY_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_blackthorn_city_pokemon_center_hns
+warptoloose MAP_BLACKTHORN_CITY_HNS 42 22
+waitctl 900 B
+snap mapwalk_map_blackthorn_city_hns
+warptoloose MAP_BURNED_TOWER_1F_HNS 15 22
+waitctl 900 B
+snap mapwalk_map_burned_tower_1f_hns
+warptoloose MAP_BURNED_TOWER_B1F_HNS 26 7
+waitctl 900 B
+snap mapwalk_map_burned_tower_b1f_hns
+warptoloose MAP_CELADON_CITY_APARTMENTS_1F_HNS 4 2
+waitctl 900 B
+snap mapwalk_map_celadon_city_apartments_1f_hns
+warptoloose MAP_CELADON_CITY_APARTMENTS_2F_HNS 2 2
+waitctl 900 B
+snap mapwalk_map_celadon_city_apartments_2f_hns
+warptoloose MAP_CELADON_CITY_APARTMENTS_3F_HNS 4 2
+waitctl 900 B
+snap mapwalk_map_celadon_city_apartments_3f_hns
+warptoloose MAP_CELADON_CITY_APARTMENTS_ROOF_DAY_HNS 4 2
+waitctl 900 B
+snap mapwalk_map_celadon_city_apartments_roof_day_hns
+warptoloose MAP_CELADON_CITY_APARTMENTS_ROOF_HOUSE_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_celadon_city_apartments_roof_house_hns
+warptoloose MAP_CELADON_CITY_APARTMENTS_ROOF_NIGHT_HNS 10 2
+waitctl 900 B
+snap mapwalk_map_celadon_city_apartments_roof_night_hns
+warptoloose MAP_CELADON_CITY_DEPARTMENT_STORE_1F_HNS 4 2
+waitctl 900 B
+snap mapwalk_map_celadon_city_department_store_1f_hns
+warptoloose MAP_CELADON_CITY_DEPARTMENT_STORE_2F_HNS 9 2
+waitctl 900 B
+snap mapwalk_map_celadon_city_department_store_2f_hns
+warptoloose MAP_CELADON_CITY_DEPARTMENT_STORE_3F_HNS 3 2
+waitctl 900 B
+snap mapwalk_map_celadon_city_department_store_3f_hns
+warptoloose MAP_CELADON_CITY_DEPARTMENT_STORE_4F_HNS 9 2
+waitctl 900 B
+snap mapwalk_map_celadon_city_department_store_4f_hns
+warptoloose MAP_CELADON_CITY_DEPARTMENT_STORE_5F_HNS 3 2
+waitctl 900 B
+snap mapwalk_map_celadon_city_department_store_5f_hns
+warptoloose MAP_CELADON_CITY_DEPARTMENT_STORE_ROOF_DAY_HNS 15 6
+waitctl 900 B
+snap mapwalk_map_celadon_city_department_store_roof_day_hns
+warptoloose MAP_CELADON_CITY_DEPARTMENT_STORE_ROOF_NIGHT_HNS 15 6
+waitctl 900 B
+snap mapwalk_map_celadon_city_department_store_roof_night_hns
+warptoloose MAP_CELADON_CITY_GAME_CORNER_HNS 2 12
+waitctl 900 B
+snap mapwalk_map_celadon_city_game_corner_hns
+warptoloose MAP_CELADON_CITY_GYM_HNS 6 18
+waitctl 900 B
+snap mapwalk_map_celadon_city_gym_hns
+warptoloose MAP_CELADON_CITY_HOUSE1_HNS 6 8
+waitctl 900 B
+snap mapwalk_map_celadon_city_house1_hns
+warptoloose MAP_CELADON_CITY_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_celadon_city_house2_hns
+warptoloose MAP_CELADON_CITY_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_celadon_city_pokemon_center_hns
+warptoloose MAP_CELADON_CITY_HNS 11 14
+waitctl 900 B
+snap mapwalk_map_celadon_city_hns
+warptoloose MAP_CERULEAN_CAVE_1F_HNS 35 23
+waitctl 900 B
+snap mapwalk_map_cerulean_cave_1f_hns
+warptoloose MAP_CERULEAN_CAVE_B1F_HNS 14 5
+waitctl 900 B
+snap mapwalk_map_cerulean_cave_b1f_hns
+warptoloose MAP_CERULEAN_CAVE_B2F_HNS 6 8
+waitctl 900 B
+snap mapwalk_map_cerulean_cave_b2f_hns
+warptoloose MAP_CERULEAN_CITY_BIKE_SHOP_HNS 5 8
+waitctl 900 B
+snap mapwalk_map_cerulean_city_bike_shop_hns
+warptoloose MAP_CERULEAN_CITY_GYM_HNS 7 18
+waitctl 900 B
+snap mapwalk_map_cerulean_city_gym_hns
+warptoloose MAP_CERULEAN_CITY_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_cerulean_city_house1_hns
+warptoloose MAP_CERULEAN_CITY_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_cerulean_city_house2_hns
+warptoloose MAP_CERULEAN_CITY_HOUSE3_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_cerulean_city_house3_hns
+warptoloose MAP_CERULEAN_CITY_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_cerulean_city_mart_hns
+warptoloose MAP_CERULEAN_CITY_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_cerulean_city_pokemon_center_hns
+warptoloose MAP_CERULEAN_CITY_HNS 7 10
+waitctl 900 B
+snap mapwalk_map_cerulean_city_hns
+warptoloose MAP_CHERRYGROVE_CITY_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_cherrygrove_city_house1_hns
+warptoloose MAP_CHERRYGROVE_CITY_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_cherrygrove_city_house2_hns
+warptoloose MAP_CHERRYGROVE_CITY_HOUSE3_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_cherrygrove_city_house3_hns
+warptoloose MAP_CHERRYGROVE_CITY_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_cherrygrove_city_mart_hns
+warptoloose MAP_CHERRYGROVE_CITY_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_cherrygrove_city_pokemon_center_hns
+warptoloose MAP_CHERRYGROVE_CITY_HNS 41 7
+waitctl 900 B
+snap mapwalk_map_cherrygrove_city_hns
+warptoloose MAP_CIANWOOD_CITY_HNS 11 25
+waitctl 900 B
+snap mapwalk_map_cianwood_city_hns
+warptoloose MAP_CIANWOOD_GYM_HNS 10 15
+waitctl 900 B
+snap mapwalk_map_cianwood_gym_hns
+warptoloose MAP_CIANWOOD_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_cianwood_house1_hns
+warptoloose MAP_CIANWOOD_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_cianwood_house2_hns
+warptoloose MAP_CIANWOOD_HOUSE3_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_cianwood_house3_hns
+warptoloose MAP_CIANWOOD_POKECENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_cianwood_pokecenter_hns
+warptoloose MAP_CIANWOOD_SHOP_HNS 8 11
+waitctl 900 B
+snap mapwalk_map_cianwood_shop_hns
+warptoloose MAP_CINNABAR_ISLAND_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_cinnabar_island_pokemon_center_hns
+warptoloose MAP_CINNABAR_ISLAND_HNS 41 1
+waitctl 900 B
+snap mapwalk_map_cinnabar_island_hns
+warptoloose MAP_CLIFF_EDGE_CAVE_HNS 10 11
+waitctl 900 B
+snap mapwalk_map_cliff_edge_cave_hns
+warptoloose MAP_CLIFF_EDGE_GATE_HNS 26 10
+waitctl 900 B
+snap mapwalk_map_cliff_edge_gate_hns
+warptoloose MAP_CONTEST_HALL_HNS 6 5
+waitctl 900 B
+snap mapwalk_map_contest_hall_hns
+warptoloose MAP_DARK_CAVE_NORTH_SIDE_HNS 45 9
+waitctl 900 B
+snap mapwalk_map_dark_cave_north_side_hns
+warptoloose MAP_DARK_CAVE_SOUTH_SIDE_HNS 14 20
+waitctl 900 B
+snap mapwalk_map_dark_cave_south_side_hns
+warptoloose MAP_DIGLETTS_CAVE_ENTRANCE_NORTH_HNS 3 5
+waitctl 900 B
+snap mapwalk_map_digletts_cave_entrance_north_hns
+warptoloose MAP_DIGLETTS_CAVE_ENTRANCE_SOUTH_HNS 4 3
+waitctl 900 B
+snap mapwalk_map_digletts_cave_entrance_south_hns
+warptoloose MAP_DIGLETTS_CAVE_TUNNEL_HNS 3 3
+waitctl 900 B
+snap mapwalk_map_digletts_cave_tunnel_hns
+warptoloose MAP_DRAGONS_DEN_CAVERN_HNS 31 3
+waitctl 900 B
+snap mapwalk_map_dragons_den_cavern_hns
+warptoloose MAP_DRAGONS_DEN_ENTRANCE_HNS 4 5
+waitctl 900 B
+snap mapwalk_map_dragons_den_entrance_hns
+warptoloose MAP_DRAGONS_DEN_SHRINE_HNS 6 16
+waitctl 900 B
+snap mapwalk_map_dragons_den_shrine_hns
+warptoloose MAP_ECRUTEAK_CITY_GYM_HNS 10 46
+waitctl 900 B
+snap mapwalk_map_ecruteak_city_gym_hns
+warptoloose MAP_ECRUTEAK_CITY_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_ecruteak_city_house1_hns
+warptoloose MAP_ECRUTEAK_CITY_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_ecruteak_city_house2_hns
+warptoloose MAP_ECRUTEAK_CITY_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_ecruteak_city_mart_hns
+warptoloose MAP_ECRUTEAK_CITY_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_ecruteak_city_pokemon_center_hns
+warptoloose MAP_ECRUTEAK_CITY_SAGE_OFFICE1_HNS 13 8
+waitctl 900 B
+snap mapwalk_map_ecruteak_city_sage_office1_hns
+warptoloose MAP_ECRUTEAK_CITY_SAGE_OFFICE2_HNS 8 5
+waitctl 900 B
+snap mapwalk_map_ecruteak_city_sage_office2_hns
+warptoloose MAP_ECRUTEAK_CITY_THEATER_HNS 10 17
+waitctl 900 B
+snap mapwalk_map_ecruteak_city_theater_hns
+warptoloose MAP_ECRUTEAK_CITY_HNS 8 35
+waitctl 900 B
+snap mapwalk_map_ecruteak_city_hns
+warptoloose MAP_EMBEDDED_TOWER_HNS 14 29
+waitctl 900 B
+snap mapwalk_map_embedded_tower_hns
+warptoloose MAP_FALLARBOR_TOWN_BATTLE_TENT_BATTLE_ROOM_HNS 4 9
+waitctl 900 B
+snap mapwalk_map_fallarbor_town_battle_tent_battle_room_hns
+warptoloose MAP_FALLARBOR_TOWN_BATTLE_TENT_CORRIDOR_HNS 2 7
+waitctl 900 B
+snap mapwalk_map_fallarbor_town_battle_tent_corridor_hns
+warptoloose MAP_FALLARBOR_TOWN_BATTLE_TENT_LOBBY_HNS 6 9
+waitctl 900 B
+snap mapwalk_map_fallarbor_town_battle_tent_lobby_hns
+warptoloose MAP_FARAWAY_ISLAND_ENTRANCE_HNS 22 7
+waitctl 900 B
+snap mapwalk_map_faraway_island_entrance_hns
+warptoloose MAP_FARAWAY_ISLAND_INTERIOR_HNS 12 19
+waitctl 900 B
+snap mapwalk_map_faraway_island_interior_hns
+warptoloose MAP_FUCHSIA_CITY_GYM_HNS 7 21
+waitctl 900 B
+snap mapwalk_map_fuchsia_city_gym_hns
+warptoloose MAP_FUCHSIA_CITY_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_fuchsia_city_house1_hns
+warptoloose MAP_FUCHSIA_CITY_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_fuchsia_city_house2_hns
+warptoloose MAP_FUCHSIA_CITY_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_fuchsia_city_mart_hns
+warptoloose MAP_FUCHSIA_CITY_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_fuchsia_city_pokemon_center_hns
+warptoloose MAP_FUCHSIA_CITY_ROUTE15_GATE_HNS 11 5
+waitctl 900 B
+snap mapwalk_map_fuchsia_city_route15_gate_hns
+warptoloose MAP_FUCHSIA_ROUTE19GATE_HNS 7 1
+waitctl 900 B
+snap mapwalk_map_fuchsia_route19gate_hns
+warptoloose MAP_FUCHSIA_CITY_SAFARI_ZONE_BEACH_HNS 19 39
+waitctl 900 B
+snap mapwalk_map_fuchsia_city_safari_zone_beach_hns
+warptoloose MAP_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS 6 21
+waitctl 900 B
+snap mapwalk_map_fuchsia_city_safari_zone_brush_hns
+warptoloose MAP_FUCHSIA_CITY_SAFARI_ZONE_CAVE_HNS 20 20
+waitctl 900 B
+snap mapwalk_map_fuchsia_city_safari_zone_cave_hns
+warptoloose MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS 5 13
+waitctl 900 B
+snap mapwalk_map_fuchsia_city_safari_zone_entrance_hns
+warptoloose MAP_FUCHSIA_CITY_SAFARI_ZONE_MOUNTAIN_HNS 51 15
+waitctl 900 B
+snap mapwalk_map_fuchsia_city_safari_zone_mountain_hns
+warptoloose MAP_FUCHSIA_CITY_HNS 26 5
+waitctl 900 B
+snap mapwalk_map_fuchsia_city_hns
+warptoloose MAP_GATE_AZALEA_TOWN_ILEX_FOREST_HNS 11 5
+waitctl 900 B
+snap mapwalk_map_gate_azalea_town_ilex_forest_hns
+warptoloose MAP_GATE_CELADON_CITY_ROUTE16_HNS 11 5
+waitctl 900 B
+snap mapwalk_map_gate_celadon_city_route16_hns
+warptoloose MAP_GATE_ECRUTEAK_CITY_ROUTE38_HNS 11 5
+waitctl 900 B
+snap mapwalk_map_gate_ecruteak_city_route38_hns
+warptoloose MAP_GATE_ECRUTEAK_CITY_ROUTE42_HNS 1 5
+waitctl 900 B
+snap mapwalk_map_gate_ecruteak_city_route42_hns
+warptoloose MAP_GATE_FUCHSIA_CITY_ROUTE18_HNS 1 5
+waitctl 900 B
+snap mapwalk_map_gate_fuchsia_city_route18_hns
+warptoloose MAP_GATE_GOLDENROD_CITY_ROUTE35_HNS 7 9
+waitctl 900 B
+snap mapwalk_map_gate_goldenrod_city_route35_hns
+warptoloose MAP_GATE_ILEX_FOREST_ROUTE34_HNS 7 9
+waitctl 900 B
+snap mapwalk_map_gate_ilex_forest_route34_hns
+warptoloose MAP_GATE_MAHOGANY_TOWN_ROUTE43_HNS 7 9
+waitctl 900 B
+snap mapwalk_map_gate_mahogany_town_route43_hns
+warptoloose MAP_GATE_NATIONAL_PARK_HNS 7 13
+waitctl 900 B
+snap mapwalk_map_gate_national_park_hns
+warptoloose MAP_GATE_ROUTE29_ROUTE46_HNS 7 1
+waitctl 900 B
+snap mapwalk_map_gate_route29_route46_hns
+warptoloose MAP_GATE_ROUTE2_VIRIDIAN_FOREST_HNS 7 9
+waitctl 900 B
+snap mapwalk_map_gate_route2_viridian_forest_hns
+warptoloose MAP_GATE_ROUTE2_HNS 7 1
+waitctl 900 B
+snap mapwalk_map_gate_route2_hns
+warptoloose MAP_GATE_ROUTE31_VIOLET_CITY_HNS 11 5
+waitctl 900 B
+snap mapwalk_map_gate_route31_violet_city_hns
+warptoloose MAP_GATE_ROUTE40_TRAINER_HILL_COURTYARD_HNS 7 9
+waitctl 900 B
+snap mapwalk_map_gate_route40_trainer_hill_courtyard_hns
+warptoloose MAP_GATE_ROUTE43_HNS 7 9
+waitctl 900 B
+snap mapwalk_map_gate_route43_hns
+warptoloose MAP_GATE_RUINS_OF_ALPH_ROUTE32_HNS 11 5
+waitctl 900 B
+snap mapwalk_map_gate_ruins_of_alph_route32_hns
+warptoloose MAP_GATE_RUINS_OF_ALPH_ROUTE36_HNS 7 1
+waitctl 900 B
+snap mapwalk_map_gate_ruins_of_alph_route36_hns
+warptoloose MAP_GATE_SAFFRON_CITY_ROUTE5_HNS 7 1
+waitctl 900 B
+snap mapwalk_map_gate_saffron_city_route5_hns
+warptoloose MAP_GATE_SAFFRON_CITY_ROUTE6_HNS 7 1
+waitctl 900 B
+snap mapwalk_map_gate_saffron_city_route6_hns
+warptoloose MAP_GATE_SAFFRON_CITY_ROUTE7_HNS 11 5
+waitctl 900 B
+snap mapwalk_map_gate_saffron_city_route7_hns
+warptoloose MAP_GATE_SAFFRON_CITY_ROUTE8_HNS 1 5
+waitctl 900 B
+snap mapwalk_map_gate_saffron_city_route8_hns
+warptoloose MAP_GATE_VIRIDIAN_FOREST_ROUTE2_HNS 7 9
+waitctl 900 B
+snap mapwalk_map_gate_viridian_forest_route2_hns
+warptoloose MAP_GOLDENROD_CITY_BIKE_SHOP_HNS 5 8
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_bike_shop_hns
+warptoloose MAP_GOLDENROD_CITY_BILLS_HOUSE_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_bills_house_hns
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_BASEMENT_HNS 20 2
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_department_store_basement_hns
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_ELEVATOR_HNS 2 5
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_department_store_elevator_hns
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_1F_HNS 15 11
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_department_store_1f_hns
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS 17 5
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_department_store_2f_hns
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_3F_HNS 24 5
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_department_store_3f_hns
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_4F_HNS 17 5
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_department_store_4f_hns
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_5F_HNS 24 5
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_department_store_5f_hns
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_6F_HNS 24 5
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_department_store_6f_hns
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_7FNIGHT_HNS 22 5
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_department_store_7fnight_hns
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_7F_HNS 22 5
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_department_store_7f_hns
+warptoloose MAP_GOLDENROD_CITY_FLOWER_SHOP_HNS 6 9
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_flower_shop_hns
+warptoloose MAP_GOLDENROD_CITY_GAME_CORNER_HNS 2 12
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_game_corner_hns
+warptoloose MAP_GOLDENROD_CITY_GYM_HNS 9 22
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_gym_hns
+warptoloose MAP_GOLDENROD_CITY_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_house1_hns
+warptoloose MAP_GOLDENROD_CITY_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_house2_hns
+warptoloose MAP_GOLDENROD_CITY_HOUSE3_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_house3_hns
+warptoloose MAP_GOLDENROD_CITY_POKEMON_CENTER_HNS 9 9
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_pokemon_center_hns
+warptoloose MAP_GOLDENROD_CITY_RADIO_TOWER_1F_HNS 9 10
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_radio_tower_1f_hns
+warptoloose MAP_GOLDENROD_CITY_RADIO_TOWER_2F_HNS 27 5
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_radio_tower_2f_hns
+warptoloose MAP_GOLDENROD_CITY_RADIO_TOWER_3F_HNS 19 5
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_radio_tower_3f_hns
+warptoloose MAP_GOLDENROD_CITY_RADIO_TOWER_4F_HNS 19 5
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_radio_tower_4f_hns
+warptoloose MAP_GOLDENROD_CITY_RADIO_TOWER_5F_HNS 11 5
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_radio_tower_5f_hns
+warptoloose MAP_GOLDENROD_CITY_TRAIN_STATION_HNS 16 26
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_train_station_hns
+warptoloose MAP_GOLDENROD_CITY_UNDERGROUND_ENTRANCE_HNS 23 3
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_underground_entrance_hns
+warptoloose MAP_GOLDENROD_CITY_UNDERGROUND_STORAGE_HNS 19 2
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_underground_storage_hns
+warptoloose MAP_GOLDENROD_CITY_UNDERGROUND_SWITCHES_HNS 30 11
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_underground_switches_hns
+warptoloose MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL_HNS 3 33
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_underground_tunnel_hns
+warptoloose MAP_GOLDENROD_CITY_HNS 33 7
+waitctl 900 B
+snap mapwalk_map_goldenrod_city_hns
+warptoloose MAP_ICE_PATH_1F_HNS 14 24
+waitctl 900 B
+snap mapwalk_map_ice_path_1f_hns
+warptoloose MAP_ICE_PATH_B1F_HNS 9 20
+waitctl 900 B
+snap mapwalk_map_ice_path_b1f_hns
+warptoloose MAP_ICE_PATH_B2F_HNS 26 6
+waitctl 900 B
+snap mapwalk_map_ice_path_b2f_hns
+warptoloose MAP_ICE_PATH_B3F_HNS 14 8
+waitctl 900 B
+snap mapwalk_map_ice_path_b3f_hns
+warptoloose MAP_ICE_PATH_B4F_HNS 9 18
+waitctl 900 B
+snap mapwalk_map_ice_path_b4f_hns
+warptoloose MAP_ILEX_FOREST_HNS 22 63
+waitctl 900 B
+snap mapwalk_map_ilex_forest_hns
+warptoloose MAP_INDIGO_PLATEAU_POKEMON_CENTER_HNS 19 16
+waitctl 900 B
+snap mapwalk_map_indigo_plateau_pokemon_center_hns
+warptoloose MAP_INDIGO_PLATEAU_HNS 11 6
+waitctl 900 B
+snap mapwalk_map_indigo_plateau_hns
+warptoloose MAP_LAKE_OF_RAGE_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_lake_of_rage_house1_hns
+warptoloose MAP_LAKE_OF_RAGE_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_lake_of_rage_house2_hns
+warptoloose MAP_LAKE_OF_RAGE_HNS 39 41
+waitctl 900 B
+snap mapwalk_map_lake_of_rage_hns
+warptoloose MAP_LAVENDER_TOWN_HOUSE1_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_lavender_town_house1_hns
+warptoloose MAP_LAVENDER_TOWN_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_lavender_town_house2_hns
+warptoloose MAP_LAVENDER_TOWN_HOUSE3_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_lavender_town_house3_hns
+warptoloose MAP_LAVENDER_TOWN_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_lavender_town_mart_hns
+warptoloose MAP_LAVENDER_TOWN_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_lavender_town_pokemon_center_hns
+warptoloose MAP_LAVENDER_TOWN_RADIO_STATION_HNS 3 9
+waitctl 900 B
+snap mapwalk_map_lavender_town_radio_station_hns
+warptoloose MAP_LAVENDER_TOWN_SOUL_HOUSE_HNS 11 17
+waitctl 900 B
+snap mapwalk_map_lavender_town_soul_house_hns
+warptoloose MAP_LAVENDER_TOWN_HNS 4 6
+waitctl 900 B
+snap mapwalk_map_lavender_town_hns
+warptoloose MAP_LILYCOVE_CITY_CONTEST_HALL_HNS 19 32
+waitctl 900 B
+snap mapwalk_map_lilycove_city_contest_hall_hns
+warptoloose MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 11
+waitctl 900 B
+snap mapwalk_map_lilycove_city_contest_lobby_hns
+warptoloose MAP_MAHOGANY_TOWN_GYM_HNS 12 28
+waitctl 900 B
+snap mapwalk_map_mahogany_town_gym_hns
+warptoloose MAP_MAHOGANY_TOWN_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_mahogany_town_house1_hns
+warptoloose MAP_MAHOGANY_TOWN_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_mahogany_town_pokemon_center_hns
+warptoloose MAP_MAHOGANY_TOWN_SHOP_HNS 5 10
+waitctl 900 B
+snap mapwalk_map_mahogany_town_shop_hns
+warptoloose MAP_MAHOGANYTOWN_HNS 14 4
+waitctl 900 B
+snap mapwalk_map_mahoganytown_hns
+warptoloose MAP_MELEMELE_ISLE_HNS 46 23
+waitctl 900 B
+snap mapwalk_map_melemele_isle_hns
+warptoloose MAP_MELEMELE_HOUSE_2_HNS 7 13
+waitctl 900 B
+snap mapwalk_map_melemele_house_2_hns
+warptoloose MAP_MELEMELE_HOUSE_3_HNS 6 13
+waitctl 900 B
+snap mapwalk_map_melemele_house_3_hns
+warptoloose MAP_MELEMELE_HOUSE_4_HNS 6 13
+waitctl 900 B
+snap mapwalk_map_melemele_house_4_hns
+warptoloose MAP_MELEMELE_HOUSE_5_HNS 6 13
+waitctl 900 B
+snap mapwalk_map_melemele_house_5_hns
+warptoloose MAP_MELEMELE_HOUSE_6_HNS 6 13
+waitctl 900 B
+snap mapwalk_map_melemele_house_6_hns
+warptoloose MAP_MELEMELE_HOUSE_HNS 8 13
+waitctl 900 B
+snap mapwalk_map_melemele_house_hns
+warptoloose MAP_MELEMELE_PLAYER_HOUSE_HNS 3 8
+waitctl 900 B
+snap mapwalk_map_melemele_player_house_hns
+warptoloose MAP_MT_MOON_CAVE_HNS 46 31
+waitctl 900 B
+snap mapwalk_map_mt_moon_cave_hns
+warptoloose MAP_MT_MOON_OUTSIDE_HNS 22 12
+waitctl 900 B
+snap mapwalk_map_mt_moon_outside_hns
+warptoloose MAP_MT_MOON_SHOP_HNS 5 9
+waitctl 900 B
+snap mapwalk_map_mt_moon_shop_hns
+warptoloose MAP_MT_MORTAR_1F_NORTH_HNS 20 64
+waitctl 900 B
+snap mapwalk_map_mt_mortar_1f_north_hns
+warptoloose MAP_MT_MORTAR_1F_SOUTH_HNS 16 40
+waitctl 900 B
+snap mapwalk_map_mt_mortar_1f_south_hns
+warptoloose MAP_MT_MORTAR_2F_HNS 26 38
+waitctl 900 B
+snap mapwalk_map_mt_mortar_2f_hns
+warptoloose MAP_MT_MORTAR_B1F_HNS 19 2
+waitctl 900 B
+snap mapwalk_map_mt_mortar_b1f_hns
+warptoloose MAP_MT_SILVER_1F_ITEM_ROOM_HNS 10 10
+waitctl 900 B
+snap mapwalk_map_mt_silver_1f_item_room_hns
+warptoloose MAP_MT_SILVER_1F_MOLTRES_ROOM_HNS 17 32
+waitctl 900 B
+snap mapwalk_map_mt_silver_1f_moltres_room_hns
+warptoloose MAP_MT_SILVER_1F_WATERFALL_ROOM_HNS 43 46
+waitctl 900 B
+snap mapwalk_map_mt_silver_1f_waterfall_room_hns
+warptoloose MAP_MT_SILVER_2F_HNS 25 36
+waitctl 900 B
+snap mapwalk_map_mt_silver_2f_hns
+warptoloose MAP_MT_SILVER_3F_HNS 12 1
+waitctl 900 B
+snap mapwalk_map_mt_silver_3f_hns
+warptoloose MAP_MT_SILVER_MOUNTAIN_SIDE_HNS 28 18
+waitctl 900 B
+snap mapwalk_map_mt_silver_mountain_side_hns
+warptoloose MAP_MT_SILVER_OUTSIDE_HNS 17 7
+waitctl 900 B
+snap mapwalk_map_mt_silver_outside_hns
+warptoloose MAP_MT_SILVER_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_mt_silver_pokemon_center_hns
+warptoloose MAP_MT_SILVER_SNOW_HNS 14 39
+waitctl 900 B
+snap mapwalk_map_mt_silver_snow_hns
+warptoloose MAP_MT_SILVER_SUMMIT_DAY_HNS 10 21
+waitctl 900 B
+snap mapwalk_map_mt_silver_summit_day_hns
+warptoloose MAP_MT_SILVER_SUMMIT_NIGHT_HNS 10 21
+waitctl 900 B
+snap mapwalk_map_mt_silver_summit_night_hns
+warptoloose MAP_NATIONAL_PARK_BUG_CONTEST_HNS 12 49
+waitctl 900 B
+snap mapwalk_map_national_park_bug_contest_hns
+warptoloose MAP_NATIONAL_PARK_NORMAL_HNS 12 49
+waitctl 900 B
+snap mapwalk_map_national_park_normal_hns
+warptoloose MAP_NEW_BARK_TOWN_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_new_bark_town_house1_hns
+warptoloose MAP_NEW_BARK_TOWN_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_new_bark_town_house2_hns
+warptoloose MAP_NEW_BARK_TOWN_LAB_HNS 6 12
+waitctl 900 B
+snap mapwalk_map_new_bark_town_lab_hns
+warptoloose MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_1F_HNS 9 8
+waitctl 900 B
+snap mapwalk_map_new_bark_town_players_house_1f_hns
+warptoloose MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 9 2
+waitctl 900 B
+snap mapwalk_map_new_bark_town_players_house_2f_hns
+warptoloose MAP_NEW_BARK_TOWN_HNS 10 9
+waitctl 900 B
+snap mapwalk_map_new_bark_town_hns
+warptoloose MAP_NEWSINJOH_HOTSPRINGS_HNS 50 15
+waitctl 900 B
+snap mapwalk_map_newsinjoh_hotsprings_hns
+warptoloose MAP_NEW_SINJOH_HOUSE1_HNS 11 8
+waitctl 900 B
+snap mapwalk_map_new_sinjoh_house1_hns
+warptoloose MAP_NEW_SINJOH_HOUSE2_HNS 1 7
+waitctl 900 B
+snap mapwalk_map_new_sinjoh_house2_hns
+warptoloose MAP_NEW_SINJOH_HOUSE3_HNS 49 15
+waitctl 900 B
+snap mapwalk_map_new_sinjoh_house3_hns
+warptoloose MAP_NEW_SINJOH_HOUSE4_HNS 5 12
+waitctl 900 B
+snap mapwalk_map_new_sinjoh_house4_hns
+warptoloose MAP_NEW_SINJOH_KIMONO_HIDEOUT_HNS 9 11
+waitctl 900 B
+snap mapwalk_map_new_sinjoh_kimono_hideout_hns
+warptoloose MAP_NEW_SINJOH_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_new_sinjoh_pokemon_center_hns
+warptoloose MAP_NEW_SINJOH_HNS 37 34
+waitctl 900 B
+snap mapwalk_map_new_sinjoh_hns
+warptoloose MAP_OLIVINE_CITY_CAFE_HNS 3 8
+waitctl 900 B
+snap mapwalk_map_olivine_city_cafe_hns
+warptoloose MAP_OLIVINE_CITY_GYM_HNS 8 20
+waitctl 900 B
+snap mapwalk_map_olivine_city_gym_hns
+warptoloose MAP_OLIVINE_CITY_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_olivine_city_house1_hns
+warptoloose MAP_OLIVINE_CITY_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_olivine_city_house2_hns
+warptoloose MAP_OLIVINE_CITY_HOUSE3_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_olivine_city_house3_hns
+warptoloose MAP_OLIVINE_CITY_LIGHTHOUSE_HNS 14 18
+waitctl 900 B
+snap mapwalk_map_olivine_city_lighthouse_hns
+warptoloose MAP_OLIVINE_CITY_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_olivine_city_mart_hns
+warptoloose MAP_OLIVINE_CITY_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_olivine_city_pokemon_center_hns
+warptoloose MAP_OLIVINE_CITY_PORT_INSIDE_HNS 8 9
+waitctl 900 B
+snap mapwalk_map_olivine_city_port_inside_hns
+warptoloose MAP_OLIVINE_CITY_PORT_OUTSIDE_HNS 15 10
+waitctl 900 B
+snap mapwalk_map_olivine_city_port_outside_hns
+warptoloose MAP_OLIVINE_CITY_HNS 39 49
+waitctl 900 B
+snap mapwalk_map_olivine_city_hns
+warptoloose MAP_PALLET_TOWN_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_pallet_town_house2_hns
+warptoloose MAP_PALLET_TOWN_LAB_HNS 13 20
+waitctl 900 B
+snap mapwalk_map_pallet_town_lab_hns
+warptoloose MAP_PALLET_TOWN_REDS_HOUSE_1F_HNS 9 8
+waitctl 900 B
+snap mapwalk_map_pallet_town_reds_house_1f_hns
+warptoloose MAP_PALLET_TOWN_REDS_HOUSE_2F_HNS 9 2
+waitctl 900 B
+snap mapwalk_map_pallet_town_reds_house_2f_hns
+warptoloose MAP_PALLET_TOWN_HNS 6 7
+waitctl 900 B
+snap mapwalk_map_pallet_town_hns
+warptoloose MAP_PEWTER_CITY_GYM_HNS 6 14
+waitctl 900 B
+snap mapwalk_map_pewter_city_gym_hns
+warptoloose MAP_PEWTER_CITY_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_pewter_city_house1_hns
+warptoloose MAP_PEWTER_CITY_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_pewter_city_house2_hns
+warptoloose MAP_PEWTER_CITY_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_pewter_city_mart_hns
+warptoloose MAP_PEWTER_CITY_MUSEUM_1F_HNS 8 8
+waitctl 900 B
+snap mapwalk_map_pewter_city_museum_1f_hns
+warptoloose MAP_PEWTER_CITY_MUSEUM_2F_HNS 11 8
+waitctl 900 B
+snap mapwalk_map_pewter_city_museum_2f_hns
+warptoloose MAP_PEWTER_CITY_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_pewter_city_pokemon_center_hns
+warptoloose MAP_PEWTER_CITY_HNS 19 8
+waitctl 900 B
+snap mapwalk_map_pewter_city_hns
+warptoloose MAP_POKEMON_LEAGUE_BRUNOS_ROOM_HNS 6 12
+waitctl 900 B
+snap mapwalk_map_pokemon_league_brunos_room_hns
+warptoloose MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM_HNS 6 19
+waitctl 900 B
+snap mapwalk_map_pokemon_league_champions_room_hns
+warptoloose MAP_POKEMON_LEAGUE_HALL_OF_FAME_HNS 5 12
+waitctl 900 B
+snap mapwalk_map_pokemon_league_hall_of_fame_hns
+warptoloose MAP_POKEMON_LEAGUE_KARENS_ROOM_HNS 6 12
+waitctl 900 B
+snap mapwalk_map_pokemon_league_karens_room_hns
+warptoloose MAP_POKEMON_LEAGUE_KOGAS_ROOM_HNS 6 2
+waitctl 900 B
+snap mapwalk_map_pokemon_league_kogas_room_hns
+warptoloose MAP_POKEMON_LEAGUE_WILLS_ROOM_HNS 6 12
+waitctl 900 B
+snap mapwalk_map_pokemon_league_wills_room_hns
+warptoloose MAP_PONI_ISLE_HNS 20 18
+waitctl 900 B
+snap mapwalk_map_poni_isle_hns
+warptoloose MAP_PONI_CAVE_HNS 15 22
+waitctl 900 B
+snap mapwalk_map_poni_cave_hns
+warptoloose MAP_RECEPTION_GATE_HNS 11 19
+waitctl 900 B
+snap mapwalk_map_reception_gate_hns
+warptoloose MAP_ROCK_TUNNEL_1F_HNS 2 13
+waitctl 900 B
+snap mapwalk_map_rock_tunnel_1f_hns
+warptoloose MAP_ROCK_TUNNEL_B1F_HNS 4 2
+waitctl 900 B
+snap mapwalk_map_rock_tunnel_b1f_hns
+warptoloose MAP_ROCKET_HIDEOUT_B1F_HNS 48 2
+waitctl 900 B
+snap mapwalk_map_rocket_hideout_b1f_hns
+warptoloose MAP_ROCKET_HIDEOUT_B2F_HNS 3 21
+waitctl 900 B
+snap mapwalk_map_rocket_hideout_b2f_hns
+warptoloose MAP_ROCKET_HIDEOUT_B3F_HNS 3 2
+waitctl 900 B
+snap mapwalk_map_rocket_hideout_b3f_hns
+warptoloose MAP_ROUTE10_POWER_PLANT_BACK_ROOM_HNS 12 12
+waitctl 900 B
+snap mapwalk_map_route10_power_plant_back_room_hns
+warptoloose MAP_ROUTE10_POWER_PLANT_ENTRANCE_HNS 4 21
+waitctl 900 B
+snap mapwalk_map_route10_power_plant_entrance_hns
+warptoloose MAP_ROUTE10_HNS 16 35
+waitctl 900 B
+snap mapwalk_map_route10_hns
+warptoloose MAP_ROUTE11_HNS 50 10
+waitctl 900 B
+snap mapwalk_map_route11_hns
+warptoloose MAP_ROUTE12_HOUSE_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_route12_house_hns
+warptoloose MAP_ROUTE12_HNS 18 55
+waitctl 900 B
+snap mapwalk_map_route12_hns
+warptoloose MAP_ROUTE13_HNS 8 27
+waitctl 900 B
+snap mapwalk_map_route13_hns
+warptoloose MAP_ROUTE14_HNS 13 37
+waitctl 900 B
+snap mapwalk_map_route14_hns
+warptoloose MAP_ROUTE15_HNS 16 6
+waitctl 900 B
+snap mapwalk_map_route15_hns
+warptoloose MAP_ROUTE16_HOUSE_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_route16_house_hns
+warptoloose MAP_ROUTE16_HNS 38 27
+waitctl 900 B
+snap mapwalk_map_route16_hns
+warptoloose MAP_ROUTE17_HNS 14 122
+waitctl 900 B
+snap mapwalk_map_route17_hns
+warptoloose MAP_ROUTE18_HNS 48 9
+waitctl 900 B
+snap mapwalk_map_route18_hns
+warptoloose MAP_ROUTE19_CAVE_HNS 11 18
+waitctl 900 B
+snap mapwalk_map_route19_cave_hns
+warptoloose MAP_ROUTE19_HNS 15 54
+waitctl 900 B
+snap mapwalk_map_route19_hns
+warptoloose MAP_ROUTE1_HNS 29 12
+waitctl 900 B
+snap mapwalk_map_route1_hns
+warptoloose MAP_ROUTE20_HNS 60 8
+waitctl 900 B
+snap mapwalk_map_route20_hns
+warptoloose MAP_ROUTE21_HNS 13 79
+waitctl 900 B
+snap mapwalk_map_route21_hns
+warptoloose MAP_ROUTE22_HNS 12 9
+waitctl 900 B
+snap mapwalk_map_route22_hns
+warptoloose MAP_ROUTE23_HNS 18 20
+waitctl 900 B
+snap mapwalk_map_route23_hns
+warptoloose MAP_ROUTE24_HNS 18 9
+waitctl 900 B
+snap mapwalk_map_route24_hns
+warptoloose MAP_ROUTE25_BILLS_HOUSE_HNS 7 9
+waitctl 900 B
+snap mapwalk_map_route25_bills_house_hns
+warptoloose MAP_ROUTE25_HNS 85 13
+waitctl 900 B
+snap mapwalk_map_route25_hns
+warptoloose MAP_ROUTE26NORTH_HNS 12 5
+waitctl 900 B
+snap mapwalk_map_route26north_hns
+warptoloose MAP_ROUTE26_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_route26_house1_hns
+warptoloose MAP_ROUTE26_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_route26_house2_hns
+warptoloose MAP_ROUTE26_HNS 12 -24
+waitctl 900 B
+snap mapwalk_map_route26_hns
+warptoloose MAP_ROUTE27_HOUSE_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_route27_house_hns
+warptoloose MAP_ROUTE27_HNS 31 19
+waitctl 900 B
+snap mapwalk_map_route27_hns
+warptoloose MAP_ROUTE28_HOUSE_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_route28_house_hns
+warptoloose MAP_ROUTE28_HNS 53 12
+waitctl 900 B
+snap mapwalk_map_route28_hns
+warptoloose MAP_ROUTE29_HNS 34 10
+waitctl 900 B
+snap mapwalk_map_route29_hns
+warptoloose MAP_ROUTE2_HOUSE_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_route2_house_hns
+warptoloose MAP_ROUTE2_HNS 5 51
+waitctl 900 B
+snap mapwalk_map_route2_hns
+warptoloose MAP_ROUTE30_HOUSE_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_route30_house_hns
+warptoloose MAP_ROUTE30_MR_POKEMONS_HOUSE_HNS 5 8
+waitctl 900 B
+snap mapwalk_map_route30_mr_pokemons_house_hns
+warptoloose MAP_ROUTE30_HNS 26 39
+waitctl 900 B
+snap mapwalk_map_route30_hns
+warptoloose MAP_ROUTE31_HNS 48 9
+waitctl 900 B
+snap mapwalk_map_route31_hns
+warptoloose MAP_ROUTE32_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_route32_pokemon_center_hns
+warptoloose MAP_ROUTE32_HNS 13 3
+waitctl 900 B
+snap mapwalk_map_route32_hns
+warptoloose MAP_ROUTE33_HNS 27 17
+waitctl 900 B
+snap mapwalk_map_route33_hns
+warptoloose MAP_ROUTE34_DAY_CARE_HNS 1 4
+waitctl 900 B
+snap mapwalk_map_route34_day_care_hns
+warptoloose MAP_ROUTE34_HNS 31 67
+waitctl 900 B
+snap mapwalk_map_route34_hns
+warptoloose MAP_ROUTE35_HNS 13 48
+waitctl 900 B
+snap mapwalk_map_route35_hns
+warptoloose MAP_ROUTE36_HNS 56 25
+waitctl 900 B
+snap mapwalk_map_route36_hns
+warptoloose MAP_ROUTE37_HNS 17 10
+waitctl 900 B
+snap mapwalk_map_route37_hns
+warptoloose MAP_ROUTE38_HNS 43 16
+waitctl 900 B
+snap mapwalk_map_route38_hns
+warptoloose MAP_ROUTE39_BARN_HNS 8 18
+waitctl 900 B
+snap mapwalk_map_route39_barn_hns
+warptoloose MAP_ROUTE39_FARM_HOUSE_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_route39_farm_house_hns
+warptoloose MAP_ROUTE39_HNS 21 15
+waitctl 900 B
+snap mapwalk_map_route39_hns
+warptoloose MAP_ROUTE3_HNS 12 6
+waitctl 900 B
+snap mapwalk_map_route3_hns
+warptoloose MAP_ROUTE40_HNS 12 60
+waitctl 900 B
+snap mapwalk_map_route40_hns
+warptoloose MAP_ROUTE41_HNS 13 37
+waitctl 900 B
+snap mapwalk_map_route41_hns
+warptoloose MAP_ROUTE42_HNS 8 15
+waitctl 900 B
+snap mapwalk_map_route42_hns
+warptoloose MAP_ROUTE43_HNS 11 50
+waitctl 900 B
+snap mapwalk_map_route43_hns
+warptoloose MAP_ROUTE44_HNS 68 12
+waitctl 900 B
+snap mapwalk_map_route44_hns
+warptoloose MAP_ROUTE45_HNS 14 4
+waitctl 900 B
+snap mapwalk_map_route45_hns
+warptoloose MAP_ROUTE46_HNS 10 40
+waitctl 900 B
+snap mapwalk_map_route46_hns
+warptoloose MAP_ROUTE47_HNS 106 32
+waitctl 900 B
+snap mapwalk_map_route47_hns
+warptoloose MAP_ROUTE48_HNS 39 12
+waitctl 900 B
+snap mapwalk_map_route48_hns
+warptoloose MAP_ROUTE49_HNS 8 50
+waitctl 900 B
+snap mapwalk_map_route49_hns
+warptoloose MAP_ROUTE4_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_route4_pokemon_center_hns
+warptoloose MAP_ROUTE4_HNS 32 5
+waitctl 900 B
+snap mapwalk_map_route4_hns
+warptoloose MAP_ROUTE50_HNS 75 15
+waitctl 900 B
+snap mapwalk_map_route50_hns
+warptoloose MAP_ROUTE5_HOUSE_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_route5_house_hns
+warptoloose MAP_ROUTE5_TUNNEL_ENTRANCE_HNS 13 12
+waitctl 900 B
+snap mapwalk_map_route5_tunnel_entrance_hns
+warptoloose MAP_ROUTE5_HNS 22 20
+waitctl 900 B
+snap mapwalk_map_route5_hns
+warptoloose MAP_ROUTE6_TUNNEL_ENTRANCE_HNS 13 12
+waitctl 900 B
+snap mapwalk_map_route6_tunnel_entrance_hns
+warptoloose MAP_ROUTE6_HNS 40 5
+waitctl 900 B
+snap mapwalk_map_route6_hns
+warptoloose MAP_ROUTE7_TUNNEL_ENTRANCE_HNS 13 12
+waitctl 900 B
+snap mapwalk_map_route7_tunnel_entrance_hns
+warptoloose MAP_ROUTE7_HNS 15 12
+waitctl 900 B
+snap mapwalk_map_route7_hns
+warptoloose MAP_ROUTE8_TUNNEL_ENTRANCE_HNS 14 8
+waitctl 900 B
+snap mapwalk_map_route8_tunnel_entrance_hns
+warptoloose MAP_ROUTE8_HNS 3 21
+waitctl 900 B
+snap mapwalk_map_route8_hns
+warptoloose MAP_ROUTE9_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_route9_pokemon_center_hns
+warptoloose MAP_ROUTE9_HNS 36 48
+waitctl 900 B
+snap mapwalk_map_route9_hns
+warptoloose MAP_RUINS_OF_ALPH_B1F_HNS 15 16
+waitctl 900 B
+snap mapwalk_map_ruins_of_alph_b1f_hns
+warptoloose MAP_RUINS_OF_ALPH_LAB_HNS 2 7
+waitctl 900 B
+snap mapwalk_map_ruins_of_alph_lab_hns
+warptoloose MAP_RUINS_OF_ALPH_OUTSIDE_HNS 38 27
+waitctl 900 B
+snap mapwalk_map_ruins_of_alph_outside_hns
+warptoloose MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 20 9
+waitctl 900 B
+snap mapwalk_map_ruins_of_alph_puzzle_and_reward_chambers_hns
+warptoloose MAP_RUINS_OF_ALPH_WORDS_ROOM1_HNS 17 14
+waitctl 900 B
+snap mapwalk_map_ruins_of_alph_words_room1_hns
+warptoloose MAP_RUINS_OF_ALPH_WORDS_ROOM2_HNS 17 10
+waitctl 900 B
+snap mapwalk_map_ruins_of_alph_words_room2_hns
+warptoloose MAP_RUINS_OF_ALPH_WORDS_ROOM3_HNS 17 10
+waitctl 900 B
+snap mapwalk_map_ruins_of_alph_words_room3_hns
+warptoloose MAP_RUINS_OF_ALPH_WORDS_ROOM4_HNS 17 10
+waitctl 900 B
+snap mapwalk_map_ruins_of_alph_words_room4_hns
+warptoloose MAP_SSAQUA_1F_HNS 29 1
+waitctl 900 B
+snap mapwalk_map_ssaqua_1f_hns
+warptoloose MAP_SSAQUA_B1F_HNS 3 12
+waitctl 900 B
+snap mapwalk_map_ssaqua_b1f_hns
+warptoloose MAP_SSAQUA_CAPTAINS_ROOM_HNS 5 8
+waitctl 900 B
+snap mapwalk_map_ssaqua_captains_room_hns
+warptoloose MAP_SSAQUA_PLAYERS_ROOM_HNS 2 1
+waitctl 900 B
+snap mapwalk_map_ssaqua_players_room_hns
+warptoloose MAP_SSAQUA_ROOM_NE_HNS 2 1
+waitctl 900 B
+snap mapwalk_map_ssaqua_room_ne_hns
+warptoloose MAP_SSAQUA_ROOM_NNE_HNS 2 1
+waitctl 900 B
+snap mapwalk_map_ssaqua_room_nne_hns
+warptoloose MAP_SSAQUA_ROOM_NW_HNS 2 1
+waitctl 900 B
+snap mapwalk_map_ssaqua_room_nw_hns
+warptoloose MAP_SSAQUA_ROOM_SE_HNS 3 7
+waitctl 900 B
+snap mapwalk_map_ssaqua_room_se_hns
+warptoloose MAP_SSAQUA_ROOM_SSE_HNS 3 7
+waitctl 900 B
+snap mapwalk_map_ssaqua_room_sse_hns
+warptoloose MAP_SSAQUA_ROOM_SSW_HNS 3 7
+waitctl 900 B
+snap mapwalk_map_ssaqua_room_ssw_hns
+warptoloose MAP_SSAQUA_ROOM_SW_HNS 3 7
+waitctl 900 B
+snap mapwalk_map_ssaqua_room_sw_hns
+warptoloose MAP_SAFARI_ZONE1_HNS 25 29
+waitctl 900 B
+snap mapwalk_map_safari_zone1_hns
+warptoloose MAP_SAFARI_ZONE2_HNS 35 11
+waitctl 900 B
+snap mapwalk_map_safari_zone2_hns
+warptoloose MAP_SAFARI_ZONE_GATE_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_safari_zone_gate_pokemon_center_hns
+warptoloose MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS 9 1
+waitctl 900 B
+snap mapwalk_map_safari_zone_gate_safari_zone_entrance_hns
+warptoloose MAP_SAFARI_ZONE_GATE_HNS 16 8
+waitctl 900 B
+snap mapwalk_map_safari_zone_gate_hns
+warptoloose MAP_SAFARI_ZONE_INDOOR_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_safari_zone_indoor_hns
+warptoloose MAP_SAFARI_ZONE_ENTERANCE_HNS 14 9
+waitctl 900 B
+snap mapwalk_map_safari_zone_enterance_hns
+warptoloose MAP_SAFARI_ZONE_LOW_LEFT_HNS 23 26
+waitctl 900 B
+snap mapwalk_map_safari_zone_low_left_hns
+warptoloose MAP_SAFARI_ZONE_LOW_MID_HNS 30 16
+waitctl 900 B
+snap mapwalk_map_safari_zone_low_mid_hns
+warptoloose MAP_SAFARI_ZONE_LOW_RIGHT_HNS 31 31
+waitctl 900 B
+snap mapwalk_map_safari_zone_low_right_hns
+warptoloose MAP_SAFARI_ZONE_TOP_LEFT_HNS 5 27
+waitctl 900 B
+snap mapwalk_map_safari_zone_top_left_hns
+warptoloose MAP_SAFARI_ZONE_TOP_MID_HNS 16 15
+waitctl 900 B
+snap mapwalk_map_safari_zone_top_mid_hns
+warptoloose MAP_SAFARI_ZONE_TOP_RIGHT_HNS 24 25
+waitctl 900 B
+snap mapwalk_map_safari_zone_top_right_hns
+warptoloose MAP_SAFFRON_CITY_COPY_CATS_HOUSE_1F_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_saffron_city_copy_cats_house_1f_hns
+warptoloose MAP_SAFFRON_CITY_COPY_CATS_HOUSE_2F_HNS 9 2
+waitctl 900 B
+snap mapwalk_map_saffron_city_copy_cats_house_2f_hns
+warptoloose MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 22 40
+waitctl 900 B
+snap mapwalk_map_saffron_city_fighting_dojo_vip_hns
+warptoloose MAP_SAFFRON_CITY_FIGHTING_DOJO_HNS 14 14
+waitctl 900 B
+snap mapwalk_map_saffron_city_fighting_dojo_hns
+warptoloose MAP_SAFFRON_CITY_GYM_HNS 14 23
+waitctl 900 B
+snap mapwalk_map_saffron_city_gym_hns
+warptoloose MAP_SAFFRON_CITY_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_saffron_city_house1_hns
+warptoloose MAP_SAFFRON_CITY_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_saffron_city_mart_hns
+warptoloose MAP_SAFFRON_CITY_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_saffron_city_pokemon_center_hns
+warptoloose MAP_SAFFRON_CITY_SILPH_CO_HNS 8 20
+waitctl 900 B
+snap mapwalk_map_saffron_city_silph_co_hns
+warptoloose MAP_SAFFRON_CITY_TRAIN_STATION_HNS 137 26
+waitctl 900 B
+snap mapwalk_map_saffron_city_train_station_hns
+warptoloose MAP_SAFFRON_CITY_TUNNEL_NS_HNS 3 4
+waitctl 900 B
+snap mapwalk_map_saffron_city_tunnel_ns_hns
+warptoloose MAP_SAFFRON_CITY_TUNNEL_SW_HNS 3 4
+waitctl 900 B
+snap mapwalk_map_saffron_city_tunnel_sw_hns
+warptoloose MAP_SAFFRON_CITY_HNS 28 5
+waitctl 900 B
+snap mapwalk_map_saffron_city_hns
+warptoloose MAP_SEAFOAM_ISLANDS_1F_HNS 4 16
+waitctl 900 B
+snap mapwalk_map_seafoam_islands_1f_hns
+warptoloose MAP_SEAFOAM_ISLANDS_B1F_HNS 29 15
+waitctl 900 B
+snap mapwalk_map_seafoam_islands_b1f_hns
+warptoloose MAP_SEAFOAM_ISLANDS_GYM_HNS 18 23
+waitctl 900 B
+snap mapwalk_map_seafoam_islands_gym_hns
+warptoloose MAP_SEAFOAM_ISLANDS_SECRET_CAVE_HNS 16 17
+waitctl 900 B
+snap mapwalk_map_seafoam_islands_secret_cave_hns
+warptoloose MAP_SINJOH_RUINS_ARCEUS_ROOM_HNS 18 33
+waitctl 900 B
+snap mapwalk_map_sinjoh_ruins_arceus_room_hns
+warptoloose MAP_SINJOH_RUINS_HOUSE1_HNS 4 11
+waitctl 900 B
+snap mapwalk_map_sinjoh_ruins_house1_hns
+warptoloose MAP_SINJOH_RUINS_REGICE_ROOM_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_sinjoh_ruins_regice_room_hns
+warptoloose MAP_SINJOH_RUINS_REGIDRACO_ROOM_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_sinjoh_ruins_regidraco_room_hns
+warptoloose MAP_SINJOH_RUINS_REGIELEKI_ROOM_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_sinjoh_ruins_regieleki_room_hns
+warptoloose MAP_SINJOH_RUINS_REGIGIGAS_ROOM_HNS 17 18
+waitctl 900 B
+snap mapwalk_map_sinjoh_ruins_regigigas_room_hns
+warptoloose MAP_SINJOH_RUINS_REGIROCK_ROOM_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_sinjoh_ruins_regirock_room_hns
+warptoloose MAP_SINJOH_RUINS_REGISTEEL_ROOM_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_sinjoh_ruins_registeel_room_hns
+warptoloose MAP_SINJOH_RUINS_TEMPLE_HNS 18 18
+waitctl 900 B
+snap mapwalk_map_sinjoh_ruins_temple_hns
+warptoloose MAP_SINJOH_RUINS_HNS 14 52
+waitctl 900 B
+snap mapwalk_map_sinjoh_ruins_hns
+warptoloose MAP_SLATEPORT_CITY_BATTLE_TENT_BATTLE_ROOM_HNS 1 5
+waitctl 900 B
+snap mapwalk_map_slateport_city_battle_tent_battle_room_hns
+warptoloose MAP_SLATEPORT_CITY_BATTLE_TENT_CORRIDOR_HNS 2 7
+waitctl 900 B
+snap mapwalk_map_slateport_city_battle_tent_corridor_hns
+warptoloose MAP_SLATEPORT_CITY_BATTLE_TENT_LOBBY_HNS 6 9
+waitctl 900 B
+snap mapwalk_map_slateport_city_battle_tent_lobby_hns
+warptoloose MAP_SLOWPOKE_WELL_B1F_HNS 26 29
+waitctl 900 B
+snap mapwalk_map_slowpoke_well_b1f_hns
+warptoloose MAP_SLOWPOKE_WELL_B2F_HNS 16 17
+waitctl 900 B
+snap mapwalk_map_slowpoke_well_b2f_hns
+warptoloose MAP_SNOWSWEPT_CAVERN_HNS 50 68
+waitctl 900 B
+snap mapwalk_map_snowswept_cavern_hns
+warptoloose MAP_SOUTHERN_ISLAND_EXTERIOR_HNS 14 5
+waitctl 900 B
+snap mapwalk_map_southern_island_exterior_hns
+warptoloose MAP_SOUTHERN_ISLAND_INTERIOR_HNS 13 18
+waitctl 900 B
+snap mapwalk_map_southern_island_interior_hns
+warptoloose MAP_SPROUT_TOWER_1F_HNS 10 16
+waitctl 900 B
+snap mapwalk_map_sprout_tower_1f_hns
+warptoloose MAP_SPROUT_TOWER_2F_HNS 1 6
+waitctl 900 B
+snap mapwalk_map_sprout_tower_2f_hns
+warptoloose MAP_SPROUT_TOWER_3F_HNS 11 16
+waitctl 900 B
+snap mapwalk_map_sprout_tower_3f_hns
+warptoloose MAP_TEST_MAP1_HNS 1 2
+waitctl 900 B
+snap mapwalk_map_test_map1_hns
+warptoloose MAP_TEST_MAP2_HNS 26 2
+waitctl 900 B
+snap mapwalk_map_test_map2_hns
+warptoloose MAP_TIN_TOWER_1F_HNS 9 17
+waitctl 900 B
+snap mapwalk_map_tin_tower_1f_hns
+warptoloose MAP_TIN_TOWER_2F_HNS 9 4
+waitctl 900 B
+snap mapwalk_map_tin_tower_2f_hns
+warptoloose MAP_TIN_TOWER_3F_HNS 16 4
+waitctl 900 B
+snap mapwalk_map_tin_tower_3f_hns
+warptoloose MAP_TIN_TOWER_4F_HNS 15 4
+waitctl 900 B
+snap mapwalk_map_tin_tower_4f_hns
+warptoloose MAP_TIN_TOWER_5F_HNS 2 6
+waitctl 900 B
+snap mapwalk_map_tin_tower_5f_hns
+warptoloose MAP_TIN_TOWER_6F_HNS 10 16
+waitctl 900 B
+snap mapwalk_map_tin_tower_6f_hns
+warptoloose MAP_TIN_TOWER_7F_HNS 7 5
+waitctl 900 B
+snap mapwalk_map_tin_tower_7f_hns
+warptoloose MAP_TIN_TOWER_8F_HNS 11 5
+waitctl 900 B
+snap mapwalk_map_tin_tower_8f_hns
+warptoloose MAP_TIN_TOWER_9F_HNS 9 5
+waitctl 900 B
+snap mapwalk_map_tin_tower_9f_hns
+warptoloose MAP_TIN_TOWER_ROOF_DAY_HNS 10 14
+waitctl 900 B
+snap mapwalk_map_tin_tower_roof_day_hns
+warptoloose MAP_TIN_TOWER_ROOF_NIGHT_HNS 10 14
+waitctl 900 B
+snap mapwalk_map_tin_tower_roof_night_hns
+warptoloose MAP_TOHJO_FALLS_CAVERN_HNS 37 23
+waitctl 900 B
+snap mapwalk_map_tohjo_falls_cavern_hns
+warptoloose MAP_TOHJO_FALLS_GIOVANNI_ROOM_HNS 5 8
+waitctl 900 B
+snap mapwalk_map_tohjo_falls_giovanni_room_hns
+warptoloose MAP_TRADE_CENTER_HNS 5 8
+waitctl 900 B
+snap mapwalk_map_trade_center_hns
+warptoloose MAP_TRAINER_HILL_1F_HNS 2 1
+waitctl 900 B
+snap mapwalk_map_trainer_hill_1f_hns
+warptoloose MAP_TRAINER_HILL_2F_HNS 2 1
+waitctl 900 B
+snap mapwalk_map_trainer_hill_2f_hns
+warptoloose MAP_TRAINER_HILL_3F_HNS 2 1
+waitctl 900 B
+snap mapwalk_map_trainer_hill_3f_hns
+warptoloose MAP_TRAINER_HILL_4F_HNS 2 1
+waitctl 900 B
+snap mapwalk_map_trainer_hill_4f_hns
+warptoloose MAP_TRAINER_HILL_COURTYARD_HNS 12 10
+waitctl 900 B
+snap mapwalk_map_trainer_hill_courtyard_hns
+warptoloose MAP_TRAINER_HILL_ELEVATOR_HNS 2 6
+waitctl 900 B
+snap mapwalk_map_trainer_hill_elevator_hns
+warptoloose MAP_TRAINER_HILL_ENTRANCE_HNS 9 16
+waitctl 900 B
+snap mapwalk_map_trainer_hill_entrance_hns
+warptoloose MAP_TRAINER_HILL_ROOF_HNS 9 5
+waitctl 900 B
+snap mapwalk_map_trainer_hill_roof_hns
+warptoloose MAP_ULA_ULA_CAVE_2_HNS 17 14
+waitctl 900 B
+snap mapwalk_map_ula_ula_cave_2_hns
+warptoloose MAP_ULA_ULA_CAVE_HNS 9 24
+waitctl 900 B
+snap mapwalk_map_ula_ula_cave_hns
+warptoloose MAP_ULA_ULA_FOREST_HNS 12 16
+waitctl 900 B
+snap mapwalk_map_ula_ula_forest_hns
+warptoloose MAP_ULA_ULA_HOUSE_HNS 10 13
+waitctl 900 B
+snap mapwalk_map_ula_ula_house_hns
+warptoloose MAP_ULAULA_ISLE_HNS 17 31
+waitctl 900 B
+snap mapwalk_map_ulaula_isle_hns
+warptoloose MAP_UNION_CAVE_1F_HNS 32 7
+waitctl 900 B
+snap mapwalk_map_union_cave_1f_hns
+warptoloose MAP_UNION_CAVE_B1F_HNS 9 22
+waitctl 900 B
+snap mapwalk_map_union_cave_b1f_hns
+warptoloose MAP_UNION_CAVE_B2F_HNS 7 3
+waitctl 900 B
+snap mapwalk_map_union_cave_b2f_hns
+warptoloose MAP_UNION_ROOM_HNS 7 11
+waitctl 900 B
+snap mapwalk_map_union_room_hns
+warptoloose MAP_VERDANTURF_TOWN_BATTLE_TENT_BATTLE_ROOM_HNS 2 9
+waitctl 900 B
+snap mapwalk_map_verdanturf_town_battle_tent_battle_room_hns
+warptoloose MAP_VERDANTURF_TOWN_BATTLE_TENT_CORRIDOR_HNS 2 7
+waitctl 900 B
+snap mapwalk_map_verdanturf_town_battle_tent_corridor_hns
+warptoloose MAP_VERDANTURF_TOWN_BATTLE_TENT_LOBBY_HNS 6 9
+waitctl 900 B
+snap mapwalk_map_verdanturf_town_battle_tent_lobby_hns
+warptoloose MAP_VERMILION_CITY_FAN_CLUB_HNS 5 10
+waitctl 900 B
+snap mapwalk_map_vermilion_city_fan_club_hns
+warptoloose MAP_VERMILION_CITY_GYM_HNS 5 19
+waitctl 900 B
+snap mapwalk_map_vermilion_city_gym_hns
+warptoloose MAP_VERMILION_CITY_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_vermilion_city_house1_hns
+warptoloose MAP_VERMILION_CITY_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_vermilion_city_house2_hns
+warptoloose MAP_VERMILION_CITY_HOUSE3_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_vermilion_city_house3_hns
+warptoloose MAP_VERMILION_CITY_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_vermilion_city_mart_hns
+warptoloose MAP_VERMILION_CITY_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_vermilion_city_pokemon_center_hns
+warptoloose MAP_VERMILION_CITY_PORT_INSIDE_HNS 8 2
+waitctl 900 B
+snap mapwalk_map_vermilion_city_port_inside_hns
+warptoloose MAP_VERMILION_CITY_PORT_OUTSIDE_HNS 15 10
+waitctl 900 B
+snap mapwalk_map_vermilion_city_port_outside_hns
+warptoloose MAP_VERMILION_CITY_HNS 61 10
+waitctl 900 B
+snap mapwalk_map_vermilion_city_hns
+warptoloose MAP_VICTORY_ROAD_KANTO_1F_HNS 28 2
+waitctl 900 B
+snap mapwalk_map_victory_road_kanto_1f_hns
+warptoloose MAP_VICTORY_ROAD_KANTO_B1F_HNS 7 15
+waitctl 900 B
+snap mapwalk_map_victory_road_kanto_b1f_hns
+warptoloose MAP_VICTORY_ROAD_KANTO_B2F_HNS 30 47
+waitctl 900 B
+snap mapwalk_map_victory_road_kanto_b2f_hns
+warptoloose MAP_VIOLET_CITY_GYM_HNS 9 19
+waitctl 900 B
+snap mapwalk_map_violet_city_gym_hns
+warptoloose MAP_VIOLET_CITY_HOUSE1_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_violet_city_house1_hns
+warptoloose MAP_VIOLET_CITY_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_violet_city_house2_hns
+warptoloose MAP_VIOLET_CITY_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_violet_city_mart_hns
+warptoloose MAP_VIOLET_CITY_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_violet_city_pokemon_center_hns
+warptoloose MAP_VIOLET_CITY_TRAINER_SCHOOL_HNS 4 19
+waitctl 900 B
+snap mapwalk_map_violet_city_trainer_school_hns
+warptoloose MAP_VIOLET_CITY_HNS 49 46
+waitctl 900 B
+snap mapwalk_map_violet_city_hns
+warptoloose MAP_VIRIDIAN_CITY_GYM_HNS 5 20
+waitctl 900 B
+snap mapwalk_map_viridian_city_gym_hns
+warptoloose MAP_VIRIDIAN_CITY_HOUSE1_HNS 6 8
+waitctl 900 B
+snap mapwalk_map_viridian_city_house1_hns
+warptoloose MAP_VIRIDIAN_CITY_HOUSE2_HNS 4 8
+waitctl 900 B
+snap mapwalk_map_viridian_city_house2_hns
+warptoloose MAP_VIRIDIAN_CITY_MART_HNS 4 7
+waitctl 900 B
+snap mapwalk_map_viridian_city_mart_hns
+warptoloose MAP_VIRIDIAN_CITY_POKEMON_CENTER_HNS 7 8
+waitctl 900 B
+snap mapwalk_map_viridian_city_pokemon_center_hns
+warptoloose MAP_VIRIDIAN_CITY_HNS 32 18
+waitctl 900 B
+snap mapwalk_map_viridian_city_hns
+warptoloose MAP_VIRIDIAN_FOREST_HNS 39 72
+waitctl 900 B
+snap mapwalk_map_viridian_forest_hns
+warptoloose MAP_WHIRL_ISLANDS_1F_HNS 47 17
+waitctl 900 B
+snap mapwalk_map_whirl_islands_1f_hns
+warptoloose MAP_WHIRL_ISLANDS_B1F_INNER_HNS 8 24
+waitctl 900 B
+snap mapwalk_map_whirl_islands_b1f_inner_hns
+warptoloose MAP_WHIRL_ISLANDS_B1F_HNS 16 6
+waitctl 900 B
+snap mapwalk_map_whirl_islands_b1f_hns
+warptoloose MAP_WHIRL_ISLANDS_B2F_HNS 9 16
+waitctl 900 B
+snap mapwalk_map_whirl_islands_b2f_hns
+warptoloose MAP_WHIRL_ISLANDS_B3F_HNS 9 17
+waitctl 900 B
+snap mapwalk_map_whirl_islands_b3f_hns
+warptoloose MAP_WHIRL_ISLANDS_DESCENT_HNS 30 13
+waitctl 900 B
+snap mapwalk_map_whirl_islands_descent_hns
+warptoloose MAP_WHIRL_ISLANDS_LUGIA_CHAMBER_HNS 29 35
+waitctl 900 B
+snap mapwalk_map_whirl_islands_lugia_chamber_hns

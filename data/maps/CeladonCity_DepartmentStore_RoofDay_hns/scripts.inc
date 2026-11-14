@@ -40,14 +40,13 @@ CeladonDeptStore6F_Text_VendingNoSpace:
 	.string "There's no more room for stuff…$"
 
 CeladonDeptStore6F_Text_SuperNerd:
-	.string "A vending machine with a prize\n"
-	.string "roulette…\p"
-	.string "You never see those anymore.$"
+	.string "מכונת ממכר עם רולטת פרסים…\p"
+	.string "כבר לא רואים כאלה היום.$"
 
 CeladonDeptStore6F_Text_Youngster:
-	.string "Aww! There's no games here!\p"
-	.string "I wanted to play…$"
+	.string "אוף! אין פה משחקים!\p"
+	.string "רציתי לשחק…$"
 
 CeladonDeptStore6F_Text_Directory:
-	.string "6F: ROOFTOP SQUARE VENDING\n"
-	.string "MACHINES$"
+	.string "ק6: כיכר הגג\n"
+	.string "מכונות ממכר$"

@@ -1,0 +1,20 @@
+# Include (not a tour) for scripts/r16_battle_sweep/bsweep.py: the Rocket Hideout multi battle with Lance as
+# the in-game partner (data/maps/RocketHideout_B2F_hns/scripts.inc: multi_2_vs_2 TRAINER_ARIANA_1_HNS,
+# TRAINER_GRUNT_23_HNS, PARTNER_LANCE_HNS), started in RAM on Route 30; FIGHT > Growl (hits both foes, so no
+# target choice; the spread-move target confirmation takes one more A); the driver takes over while Growl's battle script runs. The map script picks the party with
+# special ChooseHalfPartyForBattle first; here gSelectedOrderFromParty is set to slots 1 and 2 instead, so
+# multi_do's ReducePlayerPartyToSelectedMons keeps both Pokemon. Save: ladder1_newgame.sav.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_SANDSLASH_ALOLA, 50, abilityNum=0, move1=MOVE_GROWL, move2=MOVE_ICICLE_CRASH; givemon SPECIES_STARAPTOR, 50, move1=MOVE_GROWL; end
+w8 @gSelectedOrderFromParty@ 1
+w8 @gSelectedOrderFromParty+1@ 2
+w8 @gSelectedOrderFromParty+2@ 0
+pinrng
+evstart multi_2_vs_2 TRAINER_ARIANA_1_HNS, 0x@Debug_Text_ArianaDefeat@, TRAINER_GRUNT_23_HNS, 0x@Debug_Text_Grunt23Defeat@, PARTNER_LANCE_HNS; end
+waitbattle
+bwalk bs_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0
+waitquiet
+tap A 4

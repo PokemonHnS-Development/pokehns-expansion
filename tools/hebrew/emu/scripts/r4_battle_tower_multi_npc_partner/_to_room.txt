@@ -1,0 +1,34 @@
+# The multis attendant -> Lv.50 -> slots 0 and 1 -> save -> the partner room, no shots; ends with
+# the player free at (10,10) facing candidate K=4 (local id 6) at (10,11).
+include ../continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+include ../r2_battle_frontier_facilities/_bf_testparty.txt
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 14 6
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive x_in menu
+pick 0
+drive x_lv menu
+pick 0
+drive x_sel task:Task_HandleChooseMonInput 20
+waitquiet
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 6 DOWN
+tap A 0
+drive x_save menu 10
+pick 0
+saveyes
+drive x_go free 30 9000
+go DOWN 7
+face DOWN

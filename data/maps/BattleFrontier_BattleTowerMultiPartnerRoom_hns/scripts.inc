@@ -277,23 +277,23 @@ BattleFrontier_BattleTowerMultiPartnerRoom_EventScript_Partner8_hns::
 	end
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PleaseFindPartner_hns:
-	.string "Please find a partner from out of\n"
-	.string "the TRAINERS gathered here.$"
+	.string "נא למצוא שותף מבין\n"
+	.string "המאמנים שהתאספו כאן.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_QuitLookingForPartner_hns:
-	.string "{PLAYER}, you have not found a partner\n"
-	.string "for your tag team.\p"
-	.string "Would you like to quit looking and\n"
-	.string "return to the reception counter?$"
+	.string "{PLAYER}, עדיין לא מצאת שותף\n"
+	.string "לצוות הזוגי שלך.\p"
+	.string "האם ברצונך להפסיק לחפש\n"
+	.string "ולחזור לדלפק הקבלה?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PleaseFindPartner_hns2_hns:
-	.string "Then, please find a partner from\n"
-	.string "the TRAINERS gathered here.$"
+	.string "אם כך, נא למצוא שותף מבין\n"
+	.string "המאמנים שהתאספו כאן.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ThankYouForChoosingPartner_hns::
-	.string "Thank you for choosing a partner.\p"
-	.string "I will now show you to your\n"
-	.string "MULTI BATTLE ROOM.$"
+	.string "תודה שבחרת שותף.\p"
+	.string "כעת אוביל אותך\n"
+	.string "לחדר קרב מרובה.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice1Intro_hns::
 	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\n"

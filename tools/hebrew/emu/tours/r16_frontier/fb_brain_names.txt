@@ -1,0 +1,8 @@
+# bsweep.py --names list for the Frontier Brain lines (tours/r16_frontier/_fb_brain_F_S.txt setups)
+STRINGID_INTROMSG
+STRINGID_TRAINER1LOSETEXT
+STRINGID_TRAINER1WINTEXT
+STRINGID_QUESTIONFORFEITMATCH
+STRINGID_FORFEITEDMATCH
+slide:gText_RecordBattleToPass
+slide:gText_BattleRecordedOnPass

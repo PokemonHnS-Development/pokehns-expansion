@@ -1,0 +1,263 @@
+# r10 names: the bag list (FONT_NARROW, 88 px; TM and berry rows 61 px) and the description of
+# each item, with the widest item names of each pocket (static widths: static/widest_bag.txt).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+setpocket POCKET_ITEMS ITEM_TWICE_SPICED_RADISH:5 ITEM_ODD_KEYSTONE:5 ITEM_ULTRANECROZIUM_Z:5 ITEM_CORNERSTONE_MASK:5 ITEM_FLYING_TERA_SHARD:5 ITEM_UTILITY_UMBRELLA:5 ITEM_POWER_ANKLET:5 ITEM_ELECTRIC_TERA_SHARD:5 ITEM_STEEL_TERA_SHARD:5
+setpocket POCKET_MEDICINE ITEM_JUBILIFE_MUFFIN:5 ITEM_BIG_MALASADA:5 ITEM_ICE_HEAL:5 ITEM_CASTELIACONE:5 ITEM_MAX_POTION:5 ITEM_DYNAMAX_CANDY:5 ITEM_PARALYZE_HEAL:5 ITEM_EXP_CANDY_XS:5 ITEM_EXP_CANDY_XL:5
+setpocket POCKET_POKE_BALLS ITEM_DUSK_BALL:5 ITEM_ULTRA_BALL:5 ITEM_PREMIER_BALL:5 ITEM_GREAT_BALL:5 ITEM_FRIEND_BALL:5 ITEM_DIVE_BALL:5
+setpocket POCKET_TM_HM ITEM_TM_AVALANCHE ITEM_TM_TRICK_ROOM ITEM_TM_SKILL_SWAP ITEM_TM_PAYBACK ITEM_TM_EARTHQUAKE ITEM_TM_WILL_O_WISP ITEM_HM_WATERFALL
+setpocket POCKET_BERRIES ITEM_PAYAPA_BERRY:5 ITEM_IAPAPA_BERRY:5 ITEM_PAMTRE_BERRY:5 ITEM_SPELON_BERRY:5 ITEM_QUALOT_BERRY:5 ITEM_ENIGMA_BERRY:5
+setpocket POCKET_KEY_ITEMS ITEM_INFINITE_RARE_CANDIES ITEM_POKEBLOCK_CASE ITEM_OLD_SEA_MAP ITEM_MYSTERY_EGG ITEM_KEY_TO_ROOM_6 ITEM_REINS_OF_UNITY ITEM_ZYGARDE_CUBE ITEM_DYNAMAX_BAND
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 0
+w16 @gBagPosition+14@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap n_bag_items_01
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_items_02
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_items_03
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_items_04
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_items_05
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_items_06
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_items_07
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_items_08
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_items_09
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_items_close
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+a@ 0
+w16 @gBagPosition+16@ 0
+20 -
+tap A 4
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap n_bag_medicine_01
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_medicine_02
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_medicine_03
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_medicine_04
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_medicine_05
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_medicine_06
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_medicine_07
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_medicine_08
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_medicine_09
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_medicine_close
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+w8 @gBagPosition+5@ 2
+w16 @gBagPosition+c@ 0
+w16 @gBagPosition+18@ 0
+20 -
+tap A 4
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap n_bag_poke_balls_01
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_poke_balls_02
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_poke_balls_03
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_poke_balls_04
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_poke_balls_05
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_poke_balls_06
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_poke_balls_close
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+w8 @gBagPosition+5@ 3
+w16 @gBagPosition+e@ 0
+w16 @gBagPosition+1a@ 0
+20 -
+tap A 4
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap n_bag_tm_hm_01
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_tm_hm_02
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_tm_hm_03
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_tm_hm_04
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_tm_hm_05
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_tm_hm_06
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_tm_hm_07
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_tm_hm_close
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 0
+w16 @gBagPosition+1c@ 0
+20 -
+tap A 4
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap n_bag_berries_01
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_berries_02
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_berries_03
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_berries_04
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_berries_05
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_berries_06
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_berries_close
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 0
+w16 @gBagPosition+1e@ 0
+20 -
+tap A 4
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap n_bag_key_items_01
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_key_items_02
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_key_items_03
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_key_items_04
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_key_items_05
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_key_items_06
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_key_items_07
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_key_items_08
+tap DOWN 4
+waittaskx Task_BagMenu_HandleInput 60
+waitquiet
+snap n_bag_key_items_close
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

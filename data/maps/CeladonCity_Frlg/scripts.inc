@@ -129,7 +129,7 @@ CeladonCity_Text_MyTrustedPalPoliwrath::
 	.string "I used a WATER STONE.$"
 
 CeladonCity_Text_Poliwrath::
-	.string "POLIWRATH: Ribi ribit!$"
+	.string "פוליראת': ריבי ריביט!$"
 
 CeladonCity_Text_GetLostOrIllPunchYou::
 	.string "What are you staring at?\n"
@@ -148,20 +148,20 @@ CeladonCity_Text_ExplainXAccuracyDireHit::
 	.string "DEPT. STORE!$"
 
 CeladonCity_Text_CitySign::
-	.string "CELADON CITY\n"
-	.string "The City of Rainbow Dreams$"
+	.string "העיר סלדון\n"
+	.string "העיר שבה חולמים בצבעי הקשת$"
 
 CeladonCity_Text_GymSign::
-	.string "CELADON CITY POKéMON GYM\n"
-	.string "LEADER: ERIKA\l"
-	.string "The Nature-Loving Princess!$"
+	.string "מכון הפוקימון של העיר סלדון\n"
+	.string "מנהיגה: אריקה\p"
+	.string "הנסיכה אוהבת הטבע!$"
 
 CeladonCity_Text_MansionSign::
-	.string "CELADON MANSION$"
+	.string "אחוזת סלדון$"
 
 CeladonCity_Text_DeptStoreSign::
-	.string "Find what you need at the\n"
-	.string "CELADON DEPT. STORE!$"
+	.string "תמצאו כל מה שאתם צריכים\n"
+	.string "בכלבו של סלדון!$"
 
 CeladonCity_Text_GuardSpecProtectsFromStatus::
 	.string "TRAINER TIPS\p"
@@ -176,8 +176,8 @@ CeladonCity_Text_PrizeExchangeSign::
 	.string "PRIZE EXCHANGE$"
 
 CeladonCity_Text_GameCornerSign::
-	.string "ROCKET GAME CORNER\n"
-	.string "The playground for grown-ups!$"
+	.string "משחקיית רוקט\n"
+	.string "מגרש המשחקים של המבוגרים!$"
 
 CeladonCity_Text_ScaldedTongueOnTea::
 	.string "Aaaagh, ow…\n"

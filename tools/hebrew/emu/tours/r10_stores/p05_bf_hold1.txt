@@ -1,0 +1,14 @@
+# CreateBPHoldItemShop (MAP_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER_HNS): every row asked, one purchase, not enough BP.
+start saves/st_l6.sav
+include _base.txt
+setbp 9999
+visit MAP_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER_HNS
+clerk 10 4 p05_hi
+buywait p05_buy
+listshots p05_list
+buyeach p05_ask
+buy p05_b0 0 1 YES
+setbp 0
+buy p05_nobp 1 0 YES
+press B
+chat p05_bye

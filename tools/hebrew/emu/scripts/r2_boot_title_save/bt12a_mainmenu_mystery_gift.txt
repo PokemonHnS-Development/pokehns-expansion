@@ -1,0 +1,49 @@
+# Main menu with FLAG_SYS_MYSTERY_GIFT_ENABLE (boot_mystery.sav): 4 rows (HAS_MYSTERY_GIFT,
+# src/main_menu.c:661-667, 838-841). MYSTERY GIFT without a Wireless Adapter -> gText_WirelessNotConnected
+# (main_menu.c:270, 1016-1021, 1172-1174). The two "can't be used while the adapter is attached" windows
+# need an attached adapter; they are shown by setting the task's tMenuType (data[0]) to the value
+# Task_HandleMainMenuAPressed sets in those cases (1 / 2, main_menu.c:1043-1050) right after it ran.
+start saves/boot_mystery.sav
+waitcb2 CB2_MainMenu 4000 START
+waittaskx Task_HandleMainMenuInput 600
+waitquiet
+snap bt12a_01_menu4_continue
+tap DOWN 6
+waitquiet
+snap bt12a_02_menu4_newgame
+tap DOWN 6
+waitquiet
+snap bt12a_03_menu4_mysterygift
+tap DOWN 6
+waitquiet
+snap bt12a_04_menu4_option
+tap UP 6
+waitquiet
+tap A 0
+waittaskx Task_DisplayMainMenuInvalidActionError 300
+waitquiet
+snap bt12a_05_err_not_connected
+tap A 4
+waitcb2x CB2_InitTitleScreen 300
+include _mainmenu.txt
+tap DOWN 6
+tap DOWN 6
+waitquiet
+tap A 0
+taskwaitfunc Task_HandleMainMenuAPressed Task_DisplayMainMenuInvalidActionError 300
+taskpoke Task_DisplayMainMenuInvalidActionError 0 1
+waitquiet
+snap bt12a_06_err_gift_cant_use
+tap A 4
+waitcb2x CB2_InitTitleScreen 300
+include _mainmenu.txt
+tap DOWN 6
+tap DOWN 6
+waitquiet
+tap A 0
+taskwaitfunc Task_HandleMainMenuAPressed Task_DisplayMainMenuInvalidActionError 300
+taskpoke Task_DisplayMainMenuInvalidActionError 0 2
+waitquiet
+snap bt12a_07_err_events_cant_use
+tap A 4
+waitcb2x CB2_InitTitleScreen 300

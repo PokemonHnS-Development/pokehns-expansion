@@ -1,0 +1,9 @@
+# Lapras, Union Cave B2F (15,38): UnionCave_B2F_EventScript_Lapras (data/maps/UnionCave_B2F_hns/scripts.inc:19-37), no text. The Lapras swims in the lake; the player is not surfing here, so the script is started with VAR_LAST_TALKED = its local id (6) from the nearest shore tile. The 'Friday only' gate is not in this build: FLAG_HIDE_UNION_CAVE_LAPRAS is cleared by VioletCity_EventScript_Trigger (data/maps/VioletCity_hns/scripts.inc:29)
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_UNION_CAVE_LAPRAS; end
+warpto MAP_UNION_CAVE_B2F_HNS 20 43
+snap lapras_field
+evstart setvar VAR_LAST_TALKED, 6; goto UnionCave_B2F_EventScript_Lapras
+scene lapras_pre 4000
+include _legend_tail.txt

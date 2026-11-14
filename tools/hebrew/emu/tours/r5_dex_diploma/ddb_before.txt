@@ -1,0 +1,9 @@
+# The Game Designer (Celadon Apartments 3F) before the Pokedex is complete (r2dex_ladder6_copy.sav in
+# saves_screens is a copy of ladder6_postgame): only ShowMeCompletedDex (data/maps/LilycoveCity_CoveLilyMotel_2F/scripts.inc:94-100), no diploma.
+start saves/r2dex_ladder6_copy.sav
+include ../../scripts/continue.txt
+warpto MAP_CELADON_CITY_APARTMENTS_3F_HNS 5 13
+face UP
+snap ddb_00_field
+talk ddb_t1
+snap ddb_t1_back

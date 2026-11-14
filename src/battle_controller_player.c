@@ -1765,12 +1765,32 @@ static void MoveSelectionDisplayMoveDescription(enum BattlerId battler)
     }
 
     u8 pwr_num[3], acc_num[3];
-    u8 cat_desc[7] = _("CAT: ");
-    u8 pwr_desc[7] = _("PWR: ");
-    u8 acc_desc[7] = _("ACC: ");
+    // Sized by their initializers: the translated labels are longer than the English ones.
+#if RTL_STRING_REPORT
+    static const
+#endif
+#line 1769
+    u8 cat_desc[] = _("סיווג: ");
+#if RTL_STRING_REPORT
+    static const
+#endif
+#line 1770
+    u8 pwr_desc[] = _("עוצמה: ");
+#if RTL_STRING_REPORT
+    static const
+#endif
+#line 1771
+    u8 acc_desc[] = _("דיוק: ");
     u8 cat_start[] = _("{CLEAR_TO 0x03}");
+#if TEXT_RTL
+    // The Hebrew labels are wider than the English ones: PWR and ACC start further along the
+    // line so that the accuracy value still ends inside the window.
+    u8 pwr_start[] = _("{CLEAR_TO 0x30}");
+    u8 acc_start[] = _("{CLEAR_TO 0x68}");
+#else
     u8 pwr_start[] = _("{CLEAR_TO 0x38}");
     u8 acc_start[] = _("{CLEAR_TO 0x6C}");
+#endif
     LoadMessageBoxAndBorderGfx();
     DrawStdWindowFrame(B_WIN_MOVE_DESCRIPTION, FALSE);
     if (pwr < 2)
@@ -1794,7 +1814,16 @@ static void MoveSelectionDisplayMoveDescription(enum BattlerId battler)
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_DESCRIPTION);
 
     if (gCategoryIconSpriteId == 0xFF)
+    {
+#if TEXT_RTL
+        // The icon follows "CAT:", which the mirrored window puts at its right end; it sits
+        // 5 px further along than in English to clear the wider Hebrew label.
+        s32 windowX = GetWindowAttribute(B_WIN_MOVE_DESCRIPTION, WINDOW_TILEMAP_LEFT) * 8;
+        gCategoryIconSpriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, windowX + WindowRtlX(B_WIN_MOVE_DESCRIPTION, 43 - windowX, 0), 64, 1);
+#else
         gCategoryIconSpriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, 38, 64, 1);
+#endif
+    }
 
     StartSpriteAnim(&gSprites[gCategoryIconSpriteId], cat);
 

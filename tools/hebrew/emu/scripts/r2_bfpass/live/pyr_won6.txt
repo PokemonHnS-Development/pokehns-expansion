@@ -1,0 +1,8 @@
+tap B 4
+waitquiet
+tap B 4
+waittask Task_HandleMultichoiceInput 900
+waitquiet
+pick 2
+drivex py_won2_exit free 40 12000
+loc

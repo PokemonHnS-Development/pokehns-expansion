@@ -1,0 +1,21 @@
+# Waterfall while surfing (MB_WATERFALL, src/field_control_avatar.c:688 ->
+# EventScript_UseWaterfall / EventScript_CannotUseWaterfall, data/scripts/field_move_scripts_hns.inc:
+# 387-408): without badge 8 Text_CantWaterfall (:410); then "X used WATERFALL."
+# (Text_MonUsedWaterfall :418) and the climb. (Without WATERFALL in the party is the same text and
+# is not reachable with this party: checkpartymove also accepts a Pokemon that can learn the move
+# while HM07 is in the bag, src/scrcmd.c:3123-3142.)
+# Route 47: the waterfall at (50..55,31..33); the player surfs at (51,35), moves up onto (51,34)
+# and faces it.
+start save:fm_party
+include _cont.txt
+warpto MAP_ROUTE47_HNS 51 35
+waitctl 600
+go UP                                     # this faces the waterfall; a `face UP` here first
+snap fm06_00_facing_waterfall             # turns the surfer the other way
+clearflag FLAG_BADGE08_GET
+tap A 2
+fieldwatch fm06_cant_nobadge free 3000
+setflag FLAG_BADGE08_GET
+tap A 2
+fieldwatch fm06_used free 4000 4
+snap fm06_after_climb

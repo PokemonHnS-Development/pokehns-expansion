@@ -1,0 +1,44 @@
+# Infinite TMs OFF (tx_Mode_InfiniteTMs = 0) and FLAG_FINITE_TMS: the Safari incense clerk's TM branch
+# (SafariZoneGate_hns/scripts.inc:104-105), a TM is then an ordinary item: price, not SOLD OUT, even when
+# owned, and the quantity window (gText_Var1CertainlyHowMany2, src/shop.c:1851-1854).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+setinfinitetms 0
+ev setflag FLAG_FINITE_TMS; additem ITEM_TM_HIDDEN_POWER; end
+warptoloose MAP_SAFARI_ZONE_GATE_HNS 11 23
+evstart goto SafariZoneGate_EventScript_IncenseClerk
+talk m27_finite_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m27_finite_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m27_finite
+listgo 1
+tap A 0
+snap m27_finite_tm43
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+snap m27_finite_tm43_x1
+press UP 2
+snap m27_finite_tm43_x2
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m27_finite_tm43_yesno
+tap A 0
+snap m27_finite_tm43_thanks
+tap A 0
+snap m27_finite_tm43_back
+waittaskx Task_BuyMenu 600
+waitquiet
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m27_finite_bye 10 -
+waitctl 900

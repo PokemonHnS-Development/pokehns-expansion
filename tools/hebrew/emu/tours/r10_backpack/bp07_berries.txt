@@ -1,0 +1,11 @@
+# Field bag, BERRIES pocket (capacity 66 < 68 berries; ITEM_UNUSED_BERRY_1 left out): berries 0-65, then 60-67; row + context menu.
+start saves/bp_menuA.sav
+include ../../scripts/continue.txt
+fillpocket BERRIES 999 0 66
+bagopen BERRIES
+bagrows ber ctx 100
+bagclose
+fillpocket BERRIES 999 60 66
+bagopen BERRIES
+bagrows ber ctx 100
+bagclose

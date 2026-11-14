@@ -37,15 +37,14 @@ MtMortar_2F_EventScript_Nerd::
 	end
 
 MtMortar_2F_Text_SupernerdHughSeen::
-	.string "Yo! MARKUS!$"
+	.string "אהלן! מרקוס!$"
 
 MtMortar_2F_Text_SupernerdHughBeaten:
-	.string "Sorry, my mistake.\n"
-	.string "I misjudged you.$"
+	.string "סליחה, טעות שלי.\n"
+	.string "לא הערכתי אותך נכון.$"
 
 MtMortar_2F_Text_SupernerdHughAfter:
-	.string "I'm investigating MT.MORTAR,\n"
-	.string "but my pal's gone AWOL.\p"
-	.string "Have you seen a trainer who\n"
-	.string "has a SLOWPOKE that can use\l"
-	.string "STRENGTH?$"
+	.string "אני חוקר את הר המכתש,\n"
+	.string "אבל החבר שלי נעלם בלי להודיע.\p"
+	.string "ראית מאמן שיש לו סלופוק\n"
+	.string "שיכול להשתמש במהלך עוצמה?$"

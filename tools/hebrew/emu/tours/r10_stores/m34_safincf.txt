@@ -1,0 +1,11 @@
+# Safari Zone Gate incense clerk with FLAG_FINITE_TMS (SafariZoneGate_EventScript_IncenseClerkFinite).
+start saves/st_l6.sav
+include _base.txt
+ev setflag FLAG_FINITE_TMS; end
+visit MAP_SAFARI_ZONE_GATE_HNS
+clerk 11 21 m34_hi
+buyopen m34_buy
+listshots m34_list
+buyeach m34_ask
+buyclose m34_menu
+shopquit m34_bye

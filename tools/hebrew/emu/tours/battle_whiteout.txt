@@ -1,0 +1,30 @@
+# Fainting and whiting out in a wild battle: "X fainted!", the "use next Pokemon?" prompt,
+# the forced party menu, then the last Pokemon faints too: out of usable Pokemon, the money
+# lost, whiting out, and the text where the player wakes up. Both Pokemon only know
+# Memento, which always makes the user faint (src/data/moves_info.h, EFFECT_MEMENTO).
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_MURKROW, 10, move1=MOVE_MEMENTO; givemon SPECIES_MISDREAVUS, 10, move1=MOVE_MEMENTO; end
+
+pinrng
+evstart setwildbattle SPECIES_RATTATA, 3; dowildbattle; end
+waitbattle
+bwalk battle_whiteout_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0
+bwalk battle_whiteout_faint prompt:Cmd_yesnobox|input:PlayerHandleYesNoInput
+snap battle_whiteout_next_prompt
+tap A 4                                   # YES: use the next Pokemon
+bwalk battle_whiteout_party task:Task_HandleChooseMonInput
+waitquiet
+snap battle_whiteout_party
+tap DOWN 4
+tap A 4                                   # the second Pokemon: its submenu (SHIFT ...)
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap A 4                                   # SHIFT
+bwalk battle_whiteout_next input:HandleInputChooseAction
+baction FIGHT
+bmove 0
+bwalk battle_whiteout_lost free
+snap battle_whiteout_home

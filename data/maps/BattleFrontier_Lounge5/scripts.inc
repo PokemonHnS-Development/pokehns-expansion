@@ -52,58 +52,57 @@ BattleFrontier_Lounge5_Text_NatureGirlNoneShown::
 	.string "Cheapie!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlAttackHighAttackLow::
-	.string "Hmhm…\p"
-	.string "This one says it likes to battle!\n"
-	.string "It will battle even if it has a lot\l"
-	.string "of ouchies!$"
+	.string "הממ…\p"
+	.string "הוא אומר שהוא אוהב להילחם!\n"
+	.string "הוא יילחם גם כשממש כואב לו!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlAttackHighDefenseLow::
-	.string "Hmhm…\p"
-	.string "This one says it likes to battle!\n"
-	.string "But if it gets enough ouchies,\l"
-	.string "it will worry about itself!$"
+	.string "הממ…\p"
+	.string "הוא אומר שהוא אוהב להילחם!\p"
+	.string "אבל אם כואב לו מספיק,\n"
+	.string "הוא ידאג לעצמו!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlAttackHighSupportLow::
-	.string "Hmhm…\p"
-	.string "This one says it likes to battle!\n"
-	.string "But if it gets enough ouchies,\l"
-	.string "it will turn sneaky!$"
+	.string "הממ…\p"
+	.string "הוא אומר שהוא אוהב להילחם!\p"
+	.string "אבל אם כואב לו מספיק,\n"
+	.string "הוא יהפוך לערמומי!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlDefenseHighAttackLow::
-	.string "Hmhm…\p"
-	.string "This one says it looks after itself!\n"
-	.string "But if it gets enough ouchies,\l"
-	.string "it will hit back!$"
+	.string "הממ…\p"
+	.string "הוא אומר שהוא שומר על עצמו!\p"
+	.string "אבל אם כואב לו מספיק,\n"
+	.string "הוא ירביץ בחזרה!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlDefenseHighDefenseLow::
-	.string "Hmhm…\p"
-	.string "This one says it looks after itself!\n"
-	.string "It says it worries about itself whether\l"
-	.string "or not it has a lot of ouchies!$"
+	.string "הממ…\p"
+	.string "הוא אומר שהוא שומר על עצמו!\p"
+	.string "הוא אומר שהוא דואג לעצמו\n"
+	.string "בין אם כואב לו הרבה ובין אם לא!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlDefenseHighSupportLow::
-	.string "Hmhm…\p"
-	.string "This one says it looks after itself!\n"
-	.string "But if it gets enough ouchies,\l"
-	.string "it will turn sneaky!$"
+	.string "הממ…\p"
+	.string "הוא אומר שהוא שומר על עצמו!\p"
+	.string "אבל אם כואב לו מספיק,\n"
+	.string "הוא יהפוך לערמומי!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlSupportHighAttackLow::
-	.string "Hmhm…\p"
-	.string "This one says it likes to be sneaky!\n"
-	.string "But if it gets enough ouchies,\l"
-	.string "it will hit back!$"
+	.string "הממ…\p"
+	.string "הוא אומר שהוא אוהב להיות ערמומי!\p"
+	.string "אבל אם כואב לו מספיק,\n"
+	.string "הוא ירביץ בחזרה!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlSupportHighDefenseLow::
-	.string "Hmhm…\p"
-	.string "This one says it likes to be sneaky!\n"
-	.string "But if it gets enough ouchies,\l"
-	.string "it will worry about itself!$"
+	.string "הממ…\p"
+	.string "הוא אומר שהוא אוהב להיות ערמומי!\p"
+	.string "אבל אם כואב לו מספיק,\n"
+	.string "הוא ידאג לעצמו!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlSupportHighSupportLow::
-	.string "Hmhm…\p"
-	.string "This one says it likes to be sneaky!\n"
-	.string "It says it likes to be sneaky even\l"
-	.string "if it has a lot of ouchies!$"
+	.string "הממ…\p"
+	.string "הוא אומר שהוא אוהב להיות ערמומי!\p"
+	.string "הוא אומר שהוא אוהב להיות ערמומי\n"
+	.string "גם כשממש כואב לו!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlEgg::
 	.string "That's silly! An EGG is asleep!\n"

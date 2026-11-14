@@ -1,0 +1,362 @@
+# Fly map with FLAG_VISITED_KANTO (debug Utilities > Fly to map, src/debug.c:1470): the cursor on
+# the first cell of every map section of the JK layout, then a flight to Celadon City and the
+# map-name pop-up on arrival.
+start saves/r1_hof_base.sav
+include ../scripts/continue.txt
+setflag FLAG_VISITED_ALOLA
+setflag FLAG_VISITED_AZALEA_TOWN
+setflag FLAG_VISITED_BLACKTHORN_CITY
+setflag FLAG_VISITED_CELADON_CITY
+setflag FLAG_VISITED_CERULEAN_CITY
+setflag FLAG_VISITED_CHERRYGROVE_CITY
+setflag FLAG_VISITED_CIANWOOD_CITY
+setflag FLAG_VISITED_CINNABAR_ISLAND
+setflag FLAG_VISITED_ECRUTEAK_CITY
+setflag FLAG_VISITED_FUCHSIA_CITY
+setflag FLAG_VISITED_GOLDENROD_CITY
+setflag FLAG_VISITED_INDIGO_PLATEAU
+setflag FLAG_VISITED_LAKE_OF_RAGE
+setflag FLAG_VISITED_LAVENDER_TOWN
+setflag FLAG_VISITED_MAHOGANY_TOWN
+setflag FLAG_VISITED_MT_SILVER
+setflag FLAG_VISITED_NEWBARK_TOWN
+setflag FLAG_VISITED_NEW_SINJOH
+setflag FLAG_VISITED_OLIVINE_CITY
+setflag FLAG_VISITED_PALLET_TOWN
+setflag FLAG_VISITED_PEWTER_CITY
+setflag FLAG_VISITED_SAFARI_ZONE_GATE
+setflag FLAG_VISITED_SAFFRON_CITY
+setflag FLAG_VISITED_VERMILION_CITY
+setflag FLAG_VISITED_VIOLET_CITY
+setflag FLAG_VISITED_VIRIDIAN_CITY
+dbg 0 0
+waitcb2x region_map:CB2_FlyMap 900
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 900
+waitquiet
+mapwhere
+snap flyjk_000_start
+mapgo 24 0
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_001_route_24
+mapgo 25 0
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_002_route_25
+mapgo 23 1
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_003_cerulean_cave
+mapgo 9 1
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_004_lake_of_rage
+mapgo 6 2
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_005_tin_tower
+mapgo 8 2
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_006_mt_mortar
+mapgo 9 2
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_007_route_43
+mapgo 11 2
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_008_ice_path
+mapgo 16 2
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_009_indigo_plateau
+mapgo 19 2
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_010_pewter_city
+mapgo 20 2
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_011_route_3
+mapgo 21 2
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_012_route_4
+mapgo 22 2
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_013_mt_moon
+mapgo 24 2
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_014_cerulean_city
+mapgo 25 2
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_015_route_9
+mapgo 27 3
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_016_route_10
+mapgo 24 3
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_017_route_5
+mapgo 20 3
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_018_digletts_cave
+mapgo 19 3
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_019_route_2
+mapgo 14 3
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_020_sinjoh_ruins
+mapgo 12 3
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_021_blackthorn_city
+mapgo 11 3
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_022_route_44
+mapgo 9 3
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_023_mahogany_town
+mapgo 8 3
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_024_route_42
+mapgo 6 3
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_025_ecruteak_city
+mapgo 5 3
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_026_route_38
+mapgo 3 3
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_027_route_39
+mapgo 6 4
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_028_route_37
+mapgo 12 4
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_029_route_45
+mapgo 14 4
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_030_route_50
+mapgo 16 4
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_031_victory_road_hns
+mapgo 19 4
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_032_viridian_forest
+mapgo 27 4
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_033_rock_tunnel
+mapgo 27 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_034_lavender_town
+mapgo 26 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_035_route_8
+mapgo 24 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_036_saffron_city
+mapgo 23 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_037_route_7
+mapgo 22 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_038_celadon_city
+mapgo 21 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_039_route_16
+mapgo 14 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_040_new_sinjoh
+mapgo 11 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_041_dark_cave
+mapgo 9 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_042_route_31
+mapgo 7 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_043_violet_city
+mapgo 6 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_044_route_36
+mapgo 5 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_045_national_park
+mapgo 2 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_046_trainer_hill
+mapgo 0 6
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_047_safari_zone
+mapgo 2 6
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_048_route_40
+mapgo 3 6
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_049_olivine_city
+mapgo 4 6
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_050_olivine_lighthouse
+mapgo 5 6
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_051_route_35
+mapgo 6 6
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_052_ruins_of_alph
+mapgo 7 6
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_053_route_32
+mapgo 9 6
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_054_route_30
+mapgo 14 6
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_055_snowswept_cavern
+mapgo 21 6
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_056_route_17
+mapgo 24 6
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_057_route_6
+mapgo 27 6
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_058_route_12
+mapgo 26 7
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_059_route_11
+mapgo 24 7
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_060_vermilion_city
+mapgo 19 7
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_061_viridian_city
+mapgo 18 7
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_062_route_22
+mapgo 15 7
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_063_route_28
+mapgo 14 7
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_064_mt_silver
+mapgo 5 7
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_065_goldenrod_city
+mapgo 0 7
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_066_safari_zone_gate
+mapgo 0 8
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_067_route_48
+mapgo 11 8
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_068_route_46
+mapgo 16 8
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_069_route_26
+mapgo 19 8
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_070_route_1
+mapgo 5 9
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_071_route_34
+mapgo 2 9
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_072_route_41
+mapgo 1 9
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_073_cianwood_city
+mapgo 0 9
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_074_route_47
+mapgo 0 10
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_075_embedded_tower
+mapgo 1 10
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_076_whirl_islands
+mapgo 7 10
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_077_union_cave
+mapgo 26 10
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_078_route_14
+mapgo 27 10
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_079_route_13
+mapgo 27 11
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_080_akala_forest
+mapgo 26 11
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_081_route_15
+mapgo 24 11
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_082_fuchsia_city
+mapgo 23 11
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_083_route_18
+mapgo 19 11
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_084_pallet_town
+mapgo 15 11
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_085_route_27
+mapgo 13 11
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_086_new_bark_town
+mapgo 12 11
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_087_route_29
+mapgo 9 11
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_088_cherrygrove_city
+mapgo 5 11
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_089_ilex_forest
+mapgo 6 12
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_090_azalea_town
+mapgo 7 12
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_091_route_33
+mapgo 19 12
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_092_route_21
+mapgo 24 12
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_093_route_19
+mapgo 25 12
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_094_alola_ocean
+mapgo 26 12
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_095_ulaula_cave_2
+mapgo 27 12
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_096_akala_island
+mapgo 27 13
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_097_ulaula_island
+mapgo 26 13
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_098_melemele_island
+mapgo 25 13
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_099_poni_island
+mapgo 22 13
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_100_seafoam_islands
+mapgo 21 13
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_101_route_20
+mapgo 19 13
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_102_cinnabar_island
+mapgo 12 14
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_103_battle_frontier
+mapgo 25 14
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_104_poni_cave
+mapgo 26 14
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_105_ulaula_cave
+mapgo 27 14
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+snap flyjk_106_akala_cave
+mapgo 22 5
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 600
+tap A 0                                   # fly to Celadon City
+waitcb2x CB2_Overworld 1200
+waitctl 1200
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap flyjk_arrived_celadon

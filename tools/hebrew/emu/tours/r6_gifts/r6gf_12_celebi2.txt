@@ -1,0 +1,21 @@
+# Ilex Forest, the second Celebi (32,37; FLAG_HIDE_ILEX_FOREST_SECOND_CELEBI is cleared in the Hall
+# of Fame): IlexForest_EventScript_SecondCelebi (IlexForest_hns/scripts.inc:290-310): the cry, the
+# legendary battle; from a savestate at the action menu the catch branch and the win branch.
+start saves/r6_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+ev setvar VAR_AZALEA_TOWN_STATE, 10; clearflag FLAG_HIDE_ILEX_FOREST_SECOND_CELEBI; end
+warpto MAP_ILEX_FOREST_HNS 32 38
+face UP
+snap c2_field
+tap A 4
+scene c2_pre 6000
+bwalk c2_intro input:HandleInputChooseAction
+snap c2_action
+ss c2_battle
+bcatch c2_catch
+snap c2_catch_free
+sl c2_battle
+bwin c2_win
+fieldwatch c2_win_after free 8000
+snap c2_win_free

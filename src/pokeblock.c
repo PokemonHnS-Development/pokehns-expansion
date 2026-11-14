@@ -130,10 +130,10 @@ static void ReturnToPokeblockCaseOnField(void);
 static void CreateTossPokeblockYesNoMenu(u8);
 static void TossPokeblock(u8);
 
-static const u8 sText_StowCase[] = _("Stow CASE.");
+static const u8 sText_StowCase[] = _("סגירת הקופסה.");
 static const u8 sText_LvVar1[] = _("{LV}{STR_VAR_1}");
-static const u8 sText_ThrowAwayVar1[] = _("Throw away this\n{STR_VAR_1}?");
-static const u8 sText_Var1ThrownAway[] = _("The {STR_VAR_1}\nwas thrown away.");
+static const u8 sText_ThrowAwayVar1[] = _("לזרוק את\n{STR_VAR_1}?");
+static const u8 sText_Var1ThrownAway[] = _("{STR_VAR_1}\nנזרק.");
 
 EWRAM_DATA static struct PokeblockSavedData sSavedPokeblockData = {0};
 EWRAM_DATA static struct PokeblockMenuStruct *sPokeblockMenu = NULL;
@@ -202,20 +202,20 @@ static const struct BgTemplate sBgTemplatesForPokeblockMenu[] =
 const u8 *const gPokeblockNames[] =
 {
     [PBLOCK_CLR_NONE]      = NULL,
-    [PBLOCK_CLR_RED]       = COMPOUND_STRING("RED {POKEBLOCK}"),
-    [PBLOCK_CLR_BLUE]      = COMPOUND_STRING("BLUE {POKEBLOCK}"),
-    [PBLOCK_CLR_PINK]      = COMPOUND_STRING("PINK {POKEBLOCK}"),
-    [PBLOCK_CLR_GREEN]     = COMPOUND_STRING("GREEN {POKEBLOCK}"),
-    [PBLOCK_CLR_YELLOW]    = COMPOUND_STRING("YELLOW {POKEBLOCK}"),
-    [PBLOCK_CLR_PURPLE]    = COMPOUND_STRING("PURPLE {POKEBLOCK}"),
-    [PBLOCK_CLR_INDIGO]    = COMPOUND_STRING("INDIGO {POKEBLOCK}"),
-    [PBLOCK_CLR_BROWN]     = COMPOUND_STRING("BROWN {POKEBLOCK}"),
-    [PBLOCK_CLR_LITE_BLUE] = COMPOUND_STRING("LITEBLUE {POKEBLOCK}"),
-    [PBLOCK_CLR_OLIVE]     = COMPOUND_STRING("OLIVE {POKEBLOCK}"),
-    [PBLOCK_CLR_GRAY]      = COMPOUND_STRING("GRAY {POKEBLOCK}"),
-    [PBLOCK_CLR_BLACK]     = COMPOUND_STRING("BLACK {POKEBLOCK}"),
-    [PBLOCK_CLR_WHITE]     = COMPOUND_STRING("WHITE {POKEBLOCK}"),
-    [PBLOCK_CLR_GOLD]      = COMPOUND_STRING("GOLD {POKEBLOCK}")
+    [PBLOCK_CLR_RED]       = COMPOUND_STRING("פוקיבלוק אדום"),
+    [PBLOCK_CLR_BLUE]      = COMPOUND_STRING("פוקיבלוק כחול"),
+    [PBLOCK_CLR_PINK]      = COMPOUND_STRING("פוקיבלוק ורוד"),
+    [PBLOCK_CLR_GREEN]     = COMPOUND_STRING("פוקיבלוק ירוק"),
+    [PBLOCK_CLR_YELLOW]    = COMPOUND_STRING("פוקיבלוק צהוב"),
+    [PBLOCK_CLR_PURPLE]    = COMPOUND_STRING("פוקיבלוק סגול"),
+    [PBLOCK_CLR_INDIGO]    = COMPOUND_STRING("פוקיבלוק אינדיגו"),
+    [PBLOCK_CLR_BROWN]     = COMPOUND_STRING("פוקיבלוק חום"),
+    [PBLOCK_CLR_LITE_BLUE] = COMPOUND_STRING("פוקיבלוק תכלת"),
+    [PBLOCK_CLR_OLIVE]     = COMPOUND_STRING("פוקיבלוק זית"),
+    [PBLOCK_CLR_GRAY]      = COMPOUND_STRING("פוקיבלוק אפור"),
+    [PBLOCK_CLR_BLACK]     = COMPOUND_STRING("פוקיבלוק שחור"),
+    [PBLOCK_CLR_WHITE]     = COMPOUND_STRING("פוקיבלוק לבן"),
+    [PBLOCK_CLR_GOLD]      = COMPOUND_STRING("פוקיבלוק זהב")
 };
 
 static const struct MenuAction sPokeblockMenuActions[] =
@@ -702,13 +702,24 @@ static void DrawPokeblockMenuTitleText(void)
     u8 i;
 
     const u8 *itemName = GetItemName(ITEM_POKEBLOCK_CASE);
-    PrintOnPokeblockWindow(WIN_TITLE, itemName, GetStringCenterAlignXOffset(FONT_NORMAL, itemName, 0x48));
+#if TEXT_RTL
+    // The Hebrew name is a few pixels wider than the 72 px title in FONT_NORMAL: narrow it to fit.
+    u32 fontId = GetFontIdToFit(itemName, FONT_NORMAL, 0, 0x48);
+    AddTextPrinterParameterized4(WIN_TITLE, fontId, GetStringCenterAlignXOffset(fontId, itemName, 0x48), 1, 0, 0, sTextColor, 0, itemName);
 
-    PrintOnPokeblockWindow(WIN_SPICY,  COMPOUND_STRING("SPICY"),  0);
-    PrintOnPokeblockWindow(WIN_DRY,    COMPOUND_STRING("DRY"),    0);
-    PrintOnPokeblockWindow(WIN_SWEET,  COMPOUND_STRING("SWEET"),  0);
-    PrintOnPokeblockWindow(WIN_BITTER, COMPOUND_STRING("BITTER"), 0);
-    PrintOnPokeblockWindow(WIN_SOUR,   COMPOUND_STRING("SOUR"),   0);
+    // The flavour cubes are tiles left of these windows: keep each label at its English place,
+    // beside its own cube, and only read it right to left.
+    for (i = WIN_SPICY; i <= WIN_SOUR; i++)
+        SetWindowRtlMode(i, WINDOW_RTL_IN_PLACE);
+#else
+    PrintOnPokeblockWindow(WIN_TITLE, itemName, GetStringCenterAlignXOffset(FONT_NORMAL, itemName, 0x48));
+#endif
+
+    PrintOnPokeblockWindow(WIN_SPICY,  COMPOUND_STRING("חריף"),  0);
+    PrintOnPokeblockWindow(WIN_DRY,    COMPOUND_STRING("יבש"),    0);
+    PrintOnPokeblockWindow(WIN_SWEET,  COMPOUND_STRING("מתוק"),  0);
+    PrintOnPokeblockWindow(WIN_BITTER, COMPOUND_STRING("מר"), 0);
+    PrintOnPokeblockWindow(WIN_SOUR,   COMPOUND_STRING("חמוץ"),   0);
 
     for (i = 0; i < WIN_ACTIONS_TALL; i++)
         PutWindowTilemap(i);
@@ -743,7 +754,13 @@ static void PutPokeblockListMenuString(u8 *dst, u16 pkblId)
 
     *(txtPtr++) = EXT_CTRL_CODE_BEGIN;
     *(txtPtr++) = EXT_CTRL_CODE_SKIP;
+#if TEXT_RTL
+    // The narrow font's level glyph is 4 px wider than the English one: start the level column 4 px
+    // earlier, so a three-digit level keeps English's 1 px margin once mirrored in the 112 px window.
+    *(txtPtr++) = CHAR_BLOCK_1 - 4;
+#else
     *(txtPtr++) = CHAR_BLOCK_1;
+#endif
 
     ConvertIntToDecimalStringN(gStringVar1, GetHighestPokeblocksFlavorLevel(pkblock), STR_CONV_MODE_LEFT_ALIGN, 3);
     StringExpandPlaceholders(txtPtr, sText_LvVar1);

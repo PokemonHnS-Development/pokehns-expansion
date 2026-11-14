@@ -1,0 +1,6 @@
+# Vending machine on MAP_GOLDENROD_CITY_DEPARTMENT_STORE_6F_HNS: money box + MULTI_VENDING_MACHINE, a drink bought.
+start saves/st_l6.sav
+include _base.txt
+visit MAP_GOLDENROD_CITY_DEPARTMENT_STORE_6F_HNS
+signat 13 5 UP v03_hi
+chat v03_fw A B

@@ -1,0 +1,16 @@
+# Alola, Poni Isle and the sea between the islands (after the first visit): arrival next to the
+# island sign, every NPC and sign (Exeggutor-A, totem / Tapu Fini, swimmers, the girl, item
+# ball), a wild encounter, the cave (Golem-A, items); then the open sea (the swimmer trainer).
+start saves/r10pg_base.sav
+include _base.txt
+ev setflag FLAG_VISITED_ALOLA; end
+arrive MAP_PONI_ISLE_HNS 20 27 po
+ss po
+visit po
+wild po_wild
+arrive MAP_PONI_CAVE_HNS 15 21 poc
+ss poc
+visit poc
+wild poc_wild
+arrive MAP_ALOLA_WATER_HNS 19 7 aw
+visit aw

@@ -1,0 +1,10 @@
+# Unique 1F, the moment both trainers spot the player: from (6,9) one step up into (6,8), which
+# trainer 1 (4,8, looking east) and trainer 2 (7,8, looking west) both see; a burst of shots for the
+# '!' and the walk-up, then the intro (Easy Chat).
+fastbattles off
+walkto 9 1
+waitctl 600
+walkto2 6 9 UP
+8 UP
+burst u1b_bang 14 6
+dlg u1b_intro battle

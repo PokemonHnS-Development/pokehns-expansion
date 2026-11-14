@@ -1,0 +1,4 @@
+# (after the tutor's "which Pokemon" text) the box opens; nothing to do here but wait
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900

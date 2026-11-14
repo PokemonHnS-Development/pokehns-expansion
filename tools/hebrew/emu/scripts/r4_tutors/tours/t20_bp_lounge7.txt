@@ -1,0 +1,115 @@
+# Battle Frontier Lounge 7 BP tutors (data/maps/BattleFrontier_Lounge7_hns/scripts.inc): after the
+# move list, the BP price YES/NO, then chooseboxmon SELECT_PC_MON_MOVE_TUTOR (:286) and the field
+# teach flow, then 'I'll take your BP' (TakeFrontierBattlePoints).
+#  1 left tutor, 10 BP: Seismic Toss (24) -> not enough BP -> the list again -> B -> exit text;
+#  2 left tutor, 200 BP: Seismic Toss -> YES -> box -> Golem learns it -> BP taken;
+#  3 elemental tutor: Blast Burn (64) -> Typhlosion (4 moves) -> replace NO -> stop YES -> not learned
+#     -> 'you don't want to' (no BP taken);  4 again: replace YES -> summary -> Smokescreen -> learned
+#     -> BP taken;  5 right tutor: Defense Curl -> Golem already knows it;  6 the BP left, B.
+start saves/ladder6_postgame_copy.sav
+include _setup.txt
+setbp 10
+warpto MAP_BATTLE_FRONTIER_LOUNGE7_HNS 4 5
+face LEFT
+
+# --- 1. not enough BP
+talk bpl1_intro 20 A ScrollableMultichoice_ProcessInput
+press DOWN
+snap bpl1_list_seismic
+tap A 0
+talk bpl1_confirm 10 -
+tap A 0
+talk bpl1_notenough 10 - ScrollableMultichoice_ProcessInput
+press B
+talk bpl1_exit 10 -
+waitctl 900
+
+# --- 2. 200 BP: Golem
+setbp 200
+face LEFT
+talk bpl2_intro 20 A ScrollableMultichoice_ProcessInput
+press DOWN
+tap A 0
+talk bpl2_confirm 10 -
+tap A 0
+talk bpl2_which 10 -
+include _pickparty.txt
+snap bpl2_box
+boxpick 1 1 bpl2_party_golem
+include _tofield.txt
+pages bpl2_learned 1
+talk bpl2_bptaken 10 -
+waitctl 900
+
+# --- 3. elemental tutor: Blast Burn, Typhlosion, NO, stop YES
+face UP
+talk bpe3_intro 20 A ScrollableMultichoice_ProcessInput
+press DOWN
+snap bpe3_list_blastburn
+tap A 0
+talk bpe3_confirm 10 -
+tap A 0
+talk bpe3_which 10 -
+include _pickparty.txt
+boxpick 1 0 bpe3_party_typhlosion
+include _tofield.txt
+pages bpe3_replace 2
+waitlearn 5
+snap bpe3_replace_yesno
+tap B 0
+waitlearn 8
+snap bpe3_stop_yesno
+tap A 0
+pages bpe3_notlearned 1
+talk bpe3_after 10 -
+waitctl 900
+
+# --- 4. elemental tutor again: replace YES -> forget Smokescreen
+face UP
+talk bpe4_intro 20 A ScrollableMultichoice_ProcessInput
+press DOWN
+tap A 0
+talk bpe4_confirm 10 -
+tap A 0
+talk bpe4_which 10 -
+include _pickparty.txt
+boxpick 1 0
+include _tofield.txt
+pages bpe4_replace 2
+waitlearn 5
+tap A 0
+pages bpe4_whichforget 1
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleReplaceMoveInput 900
+waitquiet
+press UP
+snap bpe4_summary_new
+press UP
+snap bpe4_summary_4
+press A
+waitcb2x CB2_Overworld 900
+waittaskx field_specials:Task_LearnMove 900
+pages bpe4_poof 4
+talk bpe4_bptaken 10 -
+waitctl 900
+
+# --- 5. right tutor: Defense Curl, Golem knows it
+face RIGHT
+talk bpr5_intro 20 A ScrollableMultichoice_ProcessInput
+tap A 0
+talk bpr5_confirm 10 -
+tap A 0
+talk bpr5_which 10 -
+include _pickparty.txt
+boxpick 1 1 bpr5_party_golem
+include _tofield.txt
+pages bpr5_already 1
+talk bpr5_after 10 -
+waitctl 900
+
+# --- 6. the BP left (200 - 24 - 64 = 112), B
+face LEFT
+talk bpl6_intro 20 A ScrollableMultichoice_ProcessInput
+press B
+talk bpl6_exit 10 -
+waitctl 900

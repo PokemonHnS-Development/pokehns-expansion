@@ -1,0 +1,40 @@
+# Help windows (src/help_window.c:22-58, texts src/data/help_window.h) reached through their own NPCs:
+# HELP_SINJOH_WINDOW (Meara, MtSilver_PokemonCenter_hns/scripts.inc:10-21: needs ITEM_AZURE_FLUTE and
+# VAR_SINJOH_STORYLINE < 1), HELP_ALOLA_WINDOW (the captain on Route 13, Route13_hns/scripts.inc:252-274:
+# needs ITEM_STRANGE_SOUVENIR and FLAG_VISITED_ALOLA unset), HELP_POKEBLOCK_WINDOW and
+# HELP_GOLD_POKEBLOCK_WINDOW (the two charts in the Safari Zone gate, SafariZoneGate_SafariZoneEntrance_hns
+# scripts.inc:313-323). Each yes/no prompt after a help window is answered NO.
+start saves/ladder6_postgame.sav
+include ../continue.txt
+giveitem ITEM_AZURE_FLUTE 1
+giveitem ITEM_STRANGE_SOUVENIR 1
+ev setvar VAR_SINJOH_STORYLINE, 0; clearflag FLAG_VISITED_ALOLA; end
+
+# Sinjoh: Meara at (12,5)
+warptoloose MAP_MT_SILVER_POKEMON_CENTER_HNS 12 6
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+talk hw_sinjoh 20
+press B
+waitctl 600          # NO: BonusContentNo only releases (no text)
+
+# Alola: the captain at (78,26) on Route 13
+warptoloose MAP_ROUTE13_HNS 78 25
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+loc
+face DOWN
+talk hw_alola 20
+press B
+talk hw_alola_no 10 -
+waitctl 600
+
+# Safari Zone gate charts at (6,1) and (7,1)
+warptoloose MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS 6 2
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+talk hw_pokeblock 5
+waitctl 600
+go RIGHT
+face UP
+talk hw_goldblock 5
+waitctl 600

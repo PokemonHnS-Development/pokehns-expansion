@@ -24,6 +24,10 @@ enum TextColorType
     TEXT_COLOR_TYPE_BACKGROUND,
 };
 
+#if RTL_STRING_REPORT
+void RtlStringReport(const u8 *str);
+void RtlStringMapRam(const void *ram, const void *rom, u32 size);
+#endif
 u8 *StringCopy_Nickname(u8 *dest, const u8 *src);
 u8 *StringGet_Nickname(u8 *str);
 u8 *StringCopy_PlayerName(u8 *dest, const u8 *src);
@@ -35,6 +39,7 @@ u16 StringLength(const u8 *str);
 u16 StringLineLength(const u8 *str);
 s32 StringCompare(const u8 *str1, const u8 *str2);
 s32 StringCompareN(const u8 *str1, const u8 *str2, u32 n);
+s32 StringCompareAlphabetical(const u8 *str1, const u8 *str2);
 bool8 IsStringLengthAtLeast(const u8 *str, s32 n);
 u8 *ConvertIntToDecimalStringN(u8 *dest, s32 value, enum StringConvertMode mode, u8 n);
 u8 *ConvertUIntToDecimalStringN(u8 *dest, u32 value, enum StringConvertMode mode, u8 n);

@@ -1,0 +1,98 @@
+# r5 Battle Factory doubles, Lv.50: the doubles attendant's CHALLENGE, Lv.50, save YES and walk-out;
+# the rental screen in doubles mode (balls, menu, summary, YES/NO); a double battle with 2+2 rental
+# HP boxes (action menu, FIGHT for both battlers), won with bwin; after win 1 REST > YES: the
+# pause-and-save lines (PreBattleRoom :190-198), the soft reset, CONTINUE, the lobby's
+# ResumeChallenge (Lobby :98-108) and the pre-battle room's resume (:200-205, record disabled:
+# MULTI_GO_ON_REST_RETIRE); GO ON, swap NO, battle 2 lost on purpose (blose): the player's
+# faint lines, then the lobby's LostChallenge lines (Lobby :66-76), the record prompt and the doubles
+# results window with the run's streak.
+start saves/r5/factory_base.sav
+include ../../scripts/continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 14 8
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive d_in menu
+pick 0
+drive d_lv menu
+pick 0
+drivex d_save menu 10
+pick 0
+saveyes d_savebox
+pages d_step 2
+snapat d_walkout1 16
+snapat d_walkout2 24
+drivex d_pre cb2:CB2_InitSelectScreen 30 9000
+# ---- rental screen, doubles
+waittaskdata Select_Task_HandleChooseMons 0 1 900
+waitquiet
+snap ds_ball1
+tap RIGHT 4
+waitquiet
+snap ds_ball2
+tap LEFT 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleMenu 0 3 300
+waitquiet
+snap ds_menu_r1
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitquiet
+snap ds_summary
+tap B 4
+waittaskdata Select_Task_HandleMenu 0 3 600
+waitquiet
+tap B 4
+waittaskdata Select_Task_HandleChooseMons 0 1 300
+20 -
+include _f_rent3.txt
+# ---- battle room and the double battle
+waitcb2 CB2_Overworld 1200
+drivex d_br1 battle 30 9000
+fastbattles off
+bwalk d_b1a input:HandleInputChooseAction
+snap d_b1_action
+baction FIGHT
+waitbinput HandleInputChooseMove
+waitquiet
+snap d_b1_move0
+tap B 4
+bwin d_b1
+# ---- win 1: REST > YES, soft reset, CONTINUE, resume
+drivex d_w1 menu 30 9000
+pick 2
+drivex d_rest menu 10
+pick 0
+driveleave d_saving 3000
+waitcb2 CB2_MainMenu 6000 START
+waittask Task_HandleMainMenuInput 600
+waitquiet
+snap d_mainmenu
+tap A 30
+waitcb2 CB2_Overworld 1200
+drivex d_resume menu 30 9000
+pick 1 nopress
+snap d_resume_menu_r1
+pick 2 nopress
+snap d_resume_menu_r2
+pick 0
+drivex d_w1_swq menu 20
+pick 1
+drivex d_w1_go battle 30 9000
+# ---- battle 2: lost
+blose d_b2
+drivex d_lost menu 30 9000
+pick 1
+drivex d_lost2 free 10
+frontierinfo
+# ---- doubles results window after the run (streak 1, record 1)
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 11 8
+face UP
+tap A 0
+30 -
+waitquiet
+snap d_res_doubles
+tap A 4
+waitctl 300

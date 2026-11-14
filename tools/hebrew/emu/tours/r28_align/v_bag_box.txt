@@ -1,0 +1,109 @@
+# The bag's one-column action boxes (ITEMWIN_1x1 and ITEMWIN_1x2, src/item_menu.c) over the item
+# list. The battle bag's USE/CANCEL over a medicine pocket long enough that item names fill the
+# rows the box covers, at three scroll positions; CANCEL alone (a key item has no battle use);
+# then, in the field bag, a key item's REGISTER and its two options (tap / hold SELECT).
+# The same save and items on both ROMs, so the shots pair by name.
+# gBagPosition: pocket u8 at +5, cursorPosition[] u16 at +8, scrollPosition[] u16 at +14
+# (include/item_menu.h; pockets ITEMS 0, MEDICINE 1, ..., KEY_ITEMS 5).
+start saves/ladder3_ecruteak.sav
+include ../../scripts/continue.txt
+ev additem ITEM_HYPER_POTION, 3; additem ITEM_MAX_POTION, 2; additem ITEM_FULL_RESTORE, 1; additem ITEM_FULL_HEAL, 2; additem ITEM_BURN_HEAL, 1; additem ITEM_ICE_HEAL, 1; additem ITEM_MAX_REVIVE, 1; additem ITEM_ENERGY_ROOT, 1; additem ITEM_REVIVAL_HERB, 1; additem ITEM_MAX_ETHER, 1; additem ITEM_ELIXIR, 1; additem ITEM_BERRY_JUICE, 1; additem ITEM_SACRED_ASH, 1; end
+w16 @SB1+49A@ 0
+fastbattles off
+pinrng
+evstart setwildbattle SPECIES_PIDGEY, 4; dowildbattle; end
+waitbattle 1800
+bwalk vb_intro input:HandleInputChooseAction
+
+# --- Battle bag, MEDICINE: USE/CANCEL with the list at the top, then scrolled by 4 and by 8
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 0
+w16 @gBagPosition+16@ 0
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap vb_med_s0
+tap A 4
+waitquiet
+snap vb_med_s0_context
+tap B 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction
+w16 @gBagPosition+16@ 4
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap vb_med_s4
+tap A 4
+waitquiet
+snap vb_med_s4_context
+tap B 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction
+w16 @gBagPosition+16@ 8
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap vb_med_s8
+tap A 4
+waitquiet
+snap vb_med_s8_context
+tap B 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+
+# --- Battle bag, KEY ITEMS: CANCEL alone
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 0
+w16 @gBagPosition+1E@ 0
+tap B 4
+waitbinput HandleInputChooseAction
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap vb_key
+tap A 4
+waitquiet
+snap vb_key_cancel
+tap B 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction
+baction RUN
+bwalk vb_run free
+unpinrng
+
+# --- Field bag, KEY ITEMS: USE / REGISTER / CANCEL, then REGISTER's two options. The grid's
+# REGISTER is the second option (sMenu.cursorPos 1, src/menu.c); it is set in memory because
+# LEFT and RIGHT trade places in the mirrored Hebrew grid.
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 0
+w16 @gBagPosition+1E@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap vb_field_key
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap vb_field_key_context
+w8 @menu:sMenu+2@ 1
+tap A 4
+waittaskx Task_ItemContext_SingleRow 300
+waitquiet
+snap vb_register_options
+tap B 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600

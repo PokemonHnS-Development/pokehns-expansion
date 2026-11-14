@@ -1,0 +1,47 @@
+# r6 items: real NPC gifts (Std_ObtainItem after the NPC's own lines), received flags cleared in RAM.
+# Old Rod: Route32_PokemonCenter_EventScript_FishingGuru (Route32_PokemonCenter_hns/scripts.inc:17-36, checks
+# checkitem ITEM_OLD_ROD); Miracle Seed: the Route 32 trigger at VAR_VIOLET_CITY_STATE 4 into
+# Route32_EventScript_BaldingManCheck (:263-273); TM10 Hidden Power: LakeOfRage_House1_EventScript_HiddenPowerGuy
+# (FLAG_GOT_HIDDEN_POWER); Cheri Berry: Route30_House_EventScript_BaldMan (FLAG_GOT_BERRY_ROUTE_30_HOUSE);
+# Bicycle: GoldenrodCity_BikeShop_EventScript_Clerk (FLAG_RECEIVED_BIKE, a yes/no first); the aide's
+# 'giveitem ITEM_POKE_BALL, 5' (NewBarkTown_Lab_EventScript_TriggerAideGiveBalls, the door trigger at
+# VAR_NEWBARKTOWN_LABSTATE 5); and an NPC gift with a full Key Items pocket (the Old Rod again:
+# Common_EventScript_ShowBagIsFull, data/event_scripts.s:1218).
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+setflag FLAG_DISABLE_TRAINERS
+ev removeitem ITEM_OLD_ROD; end
+warpto MAP_ROUTE32_POKEMON_CENTER_HNS 2 6
+ev turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH; end
+talk npc_oldrod 20
+talk npc_oldrod_yes 20 A
+setvar VAR_VIOLET_CITY_STATE 4
+warpto MAP_ROUTE32_HNS 27 11
+go UP
+talk npc_seed 20 -
+clearflag FLAG_GOT_HIDDEN_POWER
+warpto MAP_LAKE_OF_RAGE_HOUSE1_HNS 4 5
+ev turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH; end
+talk npc_tm10 20
+clearflag FLAG_GOT_BERRY_ROUTE_30_HOUSE
+warpto MAP_ROUTE30_HOUSE_HNS 4 5
+ev turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH; end
+talk npc_berry 20
+ev removeitem ITEM_BICYCLE; end
+clearflag FLAG_RECEIVED_BIKE
+warpto MAP_GOLDENROD_CITY_BIKE_SHOP_HNS 4 5
+ev turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH; end
+talk npc_bike 20
+talk npc_bike_yes 20 A
+setvar VAR_NEWBARKTOWN_LABSTATE 5
+clearflag FLAG_HIDE_NEWBARKTOWN_LAB_AIDE
+warpto MAP_NEW_BARK_TOWN_LAB_HNS 6 11
+ev turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH; end
+go DOWN
+talk npc_balls 20 -
+ev removeitem ITEM_OLD_ROD; end
+fillpocket POCKET_KEY_ITEMS ITEM_COIN_CASE
+warpto MAP_ROUTE32_POKEMON_CENTER_HNS 2 6
+ev turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH; end
+talk npc_full 20
+talk npc_full_yes 20 A

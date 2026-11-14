@@ -19,21 +19,21 @@ CeladonCity_PokemonCenter_EventScript_Eusine::
 	end
 
 CeladonCity_PokemonCenter1F_Text_CooltrainerF:
-	.string "ERIKA is a master of grass\n"
-	.string "POKéMON.\p"
-	.string "She'll make you pay if you don't\n"
-	.string "watch yourself.$"
+	.string "אריקה היא מומחית לפוקימונים\n"
+	.string "מסוג עשב.\p"
+	.string "היא תגרום לך לשלם ביוקר\n"
+	.string "אם לא תיזהר.$"
 
 CeladonCity_PokemonCenter1F_Text_Pharmacist:
-	.string "TEAM ROCKET's hideout is in the\n"
-	.string "basement of the GAME CORNER.\p"
-	.string "Oh, wait. That was three years\n"
-	.string "ago.$"
+	.string "המחבוא של צוות רוקט נמצא\n"
+	.string "במרתף של המשחקייה.\p"
+	.string "אה, רגע. זה היה לפני\n"
+	.string "שלוש שנים.$"
 
 Celadon_Text_Eusine1:
-	.string "EUSINE: Hi!\p"
-	.string "I'm back visiting my hometown.\p"
-	.string "It's been quite a while.$"
+	.string "יוסין: היי!\p"
+	.string "חזרתי לבקר בעיר הולדתי.\p"
+	.string "עבר די הרבה זמן.$"
 
 Celadon_Text_EusineLeaves:
 	.string "{PLAYER}, have you heard?\p"

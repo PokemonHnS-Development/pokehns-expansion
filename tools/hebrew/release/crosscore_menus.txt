@@ -1,0 +1,33 @@
+# Same input on every core, built so that boot speed does not matter: START is pressed until the
+# main menu is up (START does nothing there), and every screen gets a long settle wait.
+1200 -
+shot cc01_title_or_intro
+10 START
+400 -
+10 START
+400 -
+10 START
+600 -
+shot cc02_mainmenu
+10 A
+900 -
+shot cc03_overworld
+10 START
+240 -
+shot cc04_startmenu
+10 DOWN
+60 -
+10 DOWN
+60 -
+10 A
+600 -
+shot cc05_bag
+10 B
+600 -
+10 UP
+60 -
+10 A
+600 -
+shot cc06_party
+10 B
+600 -

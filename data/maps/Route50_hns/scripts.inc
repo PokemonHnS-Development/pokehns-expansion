@@ -6,19 +6,18 @@ Route50_EventScript_BlackBelt1::
 	end
 
 Route50_Text_BlackBelt1::
-	.string "The body must be hardened\n"
-    .string "and the mind strengthened\l"
-    .string "in the harshest of conditions!$"
+	.string "יש לחשל את הגוף ולחזק את הנפש\n"
+	.string "בתנאים הקשים ביותר!$"
 
 Route50_EventScript_BlackBelt2::
 	msgbox Route50_Text_BlackBelt2, MSGBOX_NPC
 	end
 
 Route50_Text_BlackBelt2::
-    .string "Phew!\p"
-    .string "I'm not as hardcore as he is.\p"
-	.string "There's really not much else\n"
-    .string "to do here but train.$"
+    .string "פיו!\p"
+    .string "אני לא קשוח כמוהו.\p"
+    .string "באמת אין פה הרבה מה לעשות\n"
+    .string "חוץ מלהתאמן.$"
   
 
 Route50_EventScript_Wessel::
@@ -49,27 +48,26 @@ Route50_EventScript_WesselAfter::
 	end
 
 Route50_Text_WesselBefore:
-	.string "Incredible, A VOLTORB!\p"
-    .string "But it appears to be made\n"
-    .string "of... Wood?\p"
-    .string "My hypothesis that this route\n"
-    .string "would contain many STEEL TYPE\l"
-    .string "POKéMON is disproven yet again.\p"
-    .string "But why else would I have found\n"
-    .string "this STEEL PLATE here?\p"
-    .string "I must collect more data!$"
+	.string "מדהים, וולטורב!\p"
+	.string "אבל נראה שהוא עשוי\n"
+	.string "מ… עץ?\p"
+	.string "ההשערה שלי שבדרך הזאת יהיו הרבה\n"
+	.string "פוקימונים מסוג פלדה הופרכה שוב.\p"
+	.string "אבל אחרת, איך זה שמצאתי\n"
+	.string "כאן את לוח הפלדה הזה?\p"
+	.string "אני חייב לאסוף עוד נתונים!$"
 
 Route50_Text_WesselBeforeBattle:
-	.string "You want this PLATE?\n"
-	.string "But I haven't analyzed it yet!\p"
-	.string "Fine, we will battle for it.$"
+	.string "רוצה את הלוח הזה?\n"
+	.string "אבל עוד לא ניתחתי אותו!\p"
+	.string "טוב, נילחם עליו.$"
 
 Route50_Text_WesselDefeat:
-	.string "My hypothesis was wrong...$"
+	.string "ההשערה שלי הייתה שגויה…$"
 
 Route50_Text_WesselAfter:
-	.string "Take the PLATE. I don't want to\n"
-	.string "talk about it.$"
+	.string "הלוח שלך. אני לא רוצה\n"
+	.string "לדבר על זה.$"
 
 Route50_EventScript_Finley::
 	goto_if_defeated TRAINER_FINLEY_HNS, Route50_EventScript_FinleyAfter
@@ -99,32 +97,31 @@ Route50_EventScript_FinleyAfter::
 	end
 
 Route50_Text_FinleyBefore:
-	.string "How are the villagers treating\n"
-    .string "you?\p"
-    .string "They can be very unwelcoming to\n"
-    .string "strangers.\p"
-    .string "But meeting new people is one\n"
-    .string "of life's greatest joys.\p"
-    .string "One day, I hope to meet CHAMPION\n"
-    .string "LANCE.\p"
-    .string "He is a legendary dragon tamer,\n"
-    .string "much like myself.\l"
-    .string "Who am I?\p"
-    .string "Well, I am FINLEY, keeper of the\n"
-    .string "DRACO PLATE.$"
+	.string "איך תושבי הכפר מתייחסים\n"
+	.string "אליך?\p"
+	.string "הם עלולים להיות מאוד לא\n"
+	.string "מסבירי פנים כלפי זרים.\p"
+	.string "אבל היכרות עם אנשים חדשים היא\n"
+	.string "אחת השמחות הגדולות בחיים.\p"
+	.string "יום אחד אני מקווה לפגוש את\n"
+	.string "האלוף לאנס.\p"
+	.string "הוא מאלף דרקונים אגדי,\n"
+	.string "ממש כמוני. מי אני?\p"
+	.string "ובכן, אני פינלי, שומר\n"
+	.string "לוח הדרקון.$"
 
 Route50_Text_FinleyBeforeBattle:
-	.string "I know the KIMONO's have sent you\n"
-	.string "to collect these PLATES.\p"
-	.string "They say you are worthy...\n"
-	.string "But can you conquer my dragons?$"
+	.string "אני יודע שנערות הקימונו שלחו\n"
+	.string "אותך לאסוף את הלוחות האלה.\p"
+	.string "הן אומרות שאתה ראוי…\n"
+	.string "אבל תוכל להכניע את הדרקונים שלי?$"
 
 Route50_Text_FinleyDefeat:
-	.string "My dragons fought well.$"
+	.string "הדרקונים שלי נלחמו היטב.$"
 
 Route50_Text_FinleyAfter:
-	.string "Perhaps you are even strong enough\n"
-	.string "to beat LANCE...$"
+	.string "אולי אתה אפילו חזק מספיק\n"
+	.string "כדי לנצח את לאנס…$"
 
 Route50_EventScript_Item_ULtraBall::
     finditem ITEM_ULTRA_BALL

@@ -1,0 +1,21 @@
+py: bag_seek(0)
+waitquiet
+tap A 4
+waitquiet
+30 -
+snap py_use_00_ctx
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 600
+waittask Task_HandleChooseMonInput 600
+waitquiet
+30 -
+snap py_use_01_party
+tap A 4
+waitquiet
+30 -
+snap py_use_02_noeffect
+tap A 4
+waitquiet
+30 -
+snap py_use_03_back
+showtasks

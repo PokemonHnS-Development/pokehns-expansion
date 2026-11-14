@@ -1,0 +1,96 @@
+# Evolution stone USE from the bag (src/item_use.c ItemUseOutOfBattle_EvolutionStone,
+# src/party_menu.c ItemUseCB_EvolutionStone :6309): the party boxes annotated NO USE in place
+# of the HP bar for every Pokemon the stone does nothing for (src/party_menu.c:1151-1157,
+# string table src/data/party_menu.h:668-682); Pikachu keeps its HP bar. Typhlosion: "It won't
+# have any effect." Pikachu: the evolution scene (B held while the sprites cycle, to show
+# whether a stone evolution can be stopped) and "evolved into RAICHU".
+# THUNDER STONE is index 113 of the ITEMS pocket of menuA_base (scroll 0x6E + cursor 3).
+start saves/menuA_base.sav
+include ../scripts/continue.txt
+
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 6E
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+snap pbi_stone_01_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap pbi_stone_02_context
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_stone_03_party_nouse
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap pbi_stone_04_party_pikachu
+seek 8 @gPartyMenu+9@ 4 DOWN
+snap pbi_stone_05_party_egg
+seek 8 @gPartyMenu+9@ 0 UP
+tap A 4                                   # Typhlosion: no effect
+waitkey 600
+snap pbi_stone_06_no_effect
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_stone_07_back_in_bag
+
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 4
+waitcb2x CB2_EvolutionSceneUpdate 900
+waittaskdata Task_EvolutionScene 0 3 900
+snap pbi_stone_08_evolving
+waittaskdata Task_EvolutionScene 0 8 1200
+40 B
+snap pbi_stone_09_after_b 60
+waittaskdata Task_EvolutionScene 0 15 3000
+waitkey 900
+snap pbi_stone_10_evolved
+# Raichu learns a move on evolving and already knows four (src/evolution_scene.c:910-1060):
+# "wants to learn", "already knows four moves", "Delete a move...?" YES/NO; NO -> "did not learn"
+tap A 4
+waittaskdata Task_EvolutionScene 6 1 600
+waitquiet
+snap pbi_stone_11_wants
+tap A 4
+waittaskdata Task_EvolutionScene 6 2 600
+waitquiet
+snap pbi_stone_12_four
+tap A 4
+waittaskdata Task_EvolutionScene 6 4 600
+waitquiet
+snap pbi_stone_13_delete_yesno
+tap DOWN 4
+waitquiet
+snap pbi_stone_14_delete_no
+tap A 4
+waittaskdata Task_EvolutionScene 0 15 600
+waitquiet
+snap pbi_stone_15_not_learned
+tap A 4
+waitcb2x CB2_BagMenuRun 1200
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_stone_16_bag_after
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_stone_17_party_raichu
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

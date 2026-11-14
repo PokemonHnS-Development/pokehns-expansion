@@ -1,0 +1,164 @@
+# KEY ITEMS > USE from the bag (src/item_use.c): EXP. SHARE on and off (ItemUseOutOfBattle_ExpShare
+# :250), COIN CASE (:767), POKe FLUTE with a sleeping Pokemon and then without (:1707), the
+# DOWSING MACHINE (classic Itemfinder, I_ORAS_DOWSING_FLAG is 0: :365), the TOWN MAP
+# (:1741, EventScript_RegionMap -> FieldShowRegionMap; not the PokeGear map) and the POKeMON BOX
+# LINK (:755, EventScript_AccessPokemonBoxLink -> the storage menu).
+# KEY pocket of menuA_base (full, 60): 0 EXP. SHARE, 29 DOWSING MACHINE, 30 TOWN MAP,
+# 34 POKeMON BOX LINK, 35 COIN CASE, 41 POKe FLUTE. Pikachu (slot 1) is put to sleep.
+start saves/menuA_base.sav
+include ../scripts/continue.txt
+ev setstatus1 STATUS1_SLEEP, 1; end
+
+# EXP. SHARE: on, then off
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 0
+w16 @gBagPosition+1E@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_key_01_bag_expshare
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap pbi_key_02_key_context
+tap A 4                                   # USE
+waitkey 600
+snap pbi_key_03_expshare_on
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_key_04_expshare_off
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# COIN CASE
+w16 @gBagPosition+12@ 3
+w16 @gBagPosition+1E@ 20
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_key_05_bag_coincase
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_key_06_coins
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# POKe FLUTE: Pikachu wakes up; then again with nobody asleep
+w16 @gBagPosition+12@ 3
+w16 @gBagPosition+1E@ 26
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_key_07_bag_flute
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # "played the POKe FLUTE" prints, then the fanfare
+waittaskx Task_DisplayPokeFluteMessage 600
+snap pbi_key_08_flute_played
+waitkey 900
+snap pbi_key_08b_flute_woke
+tap A 4
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+pages pbi_key_09_flute_catchy 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# DOWSING MACHINE: closes the bag, message in the field
+w16 @gBagPosition+12@ 3
+w16 @gBagPosition+1E@ 1A
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_key_10_bag_dowsing
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_Overworld 900
+waitkey 900
+snap pbi_key_11_dowsing_none
+tap A 4
+waitctl 900
+
+# TOWN MAP: "look closer at the map", the region map, a move of the cursor, B
+w32 @gMenuCallback@ 0
+w16 @gBagPosition+12@ 3
+w16 @gBagPosition+1E@ 1B
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_key_12_bag_townmap
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_Overworld 900
+waitkey 900
+snap pbi_key_13_townmap_msg
+tap A 4
+waitcb2x MCB2_FieldUpdateRegionMap 900
+60 -
+snap pbi_key_14_townmap
+8 LEFT
+20 -
+snap pbi_key_15_townmap_moved
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900
+
+# POKeMON BOX LINK: "storage system opened", the storage menu, B
+w32 @gMenuCallback@ 0
+w16 @gBagPosition+12@ 3
+w16 @gBagPosition+1E@ 1F
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_key_16_bag_boxlink
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_Overworld 900
+waitkey 900
+snap pbi_key_17_boxlink_msg
+tap A 4
+waitquiet
+30 -
+snap pbi_key_18_boxlink_menu
+tap DOWN 4
+waitquiet
+snap pbi_key_19_boxlink_menu_2
+tap B 4
+waitctl 900 B

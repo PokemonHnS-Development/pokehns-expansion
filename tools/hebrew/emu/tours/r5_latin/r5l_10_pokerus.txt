@@ -1,0 +1,13 @@
+# The nurse's Pokerus explanation (gText_PokerusExplanation, data/event_scripts.s:1563, via
+# data/scripts/pkmn_center_nurse.inc:136): party slot 0 infected (pokerus 0x11, sumvar.py monset),
+# FLAG_POKERUS_EXPLAINED clear, Azalea Pokemon Center nurse (7,2) from (7,4), YES (heal).
+start saves/ladder6_postgame.sav
+include _setup.txt
+monset 0 pokerus=0x11
+ev clearflag FLAG_POKERUS_EXPLAINED; end
+warpto MAP_AZALEA_TOWN_POKEMON_CENTER_HNS 7 4
+face UP
+tap A 4
+fieldwatch pkrs_nurse menu 6000
+pick 0
+fieldwatch pkrs_heal free 12000 30

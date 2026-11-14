@@ -1,0 +1,26 @@
+# HONEY used from the bag where no wild Pokemon live (src/item_use.c ItemUseOnFieldCB_Honey): the bag
+# closes, gText_PlayerUsedVar2 in the field box, the Sweet Scent effect, then Text_FailSweetScent
+# (data/scripts/field_move_scripts_hns.inc:563). Save: menuA_base (a Pokemon Center).
+start saves/r8bfe_menuA_base.sav
+include ../../scripts/continue.txt
+setpocket POCKET_ITEMS ITEM_HONEY:3
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 0
+w16 @gBagPosition+14@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap h01_bag
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap h02_context
+tap A 4
+waitcb2x CB2_Overworld 900
+waitkey 900
+pages h03_used
+waitkey 1200
+pages h04_fail
+waitctl 900
+snap h05_field_after

@@ -1,0 +1,21 @@
+# Red with only Pikachu and Venusaur able to battle (gEnemyParty slots 1, 2, 4, 5 set to 0 HP at
+# the first action menu) and Golem (party slot 3, swapped to the lead) facing them. With one
+# Tera-capable Pokemon left the smart-Tera AI Terastallizes when Tera adds any damage and the
+# foe has no KO threat (src/battle_ai_util.c:5490-5640); bwintera holds Venusaur three turns
+# with Splash as the player's only move. In rv05_red (Typhlosion, all six foes) neither
+# Venusaur nor Tauros Terastallized.
+start saves/r2_rival/ladder6_postgame.sav
+include ../continue.txt
+fastbattles off
+ev setflag FLAG_IS_KANTO_CHAMPION; setvar VAR_SINJOH_STORYLINE, 13; clearflag FLAG_HIDE_MTSILVER_RED; end
+warpto MAP_MT_SILVER_SUMMIT_DAY_HNS 10 7
+face UP
+partyswap 0 3
+pinrng
+tap A 4
+drivex rv_redv_talk battle 10
+bwalk rv_redv_intro input:HandleInputChooseAction
+enemyfaint 1 2 4 5
+bwintera rv_redv 40 SPECIES_VENUSAUR 3
+waitkey 1200
+snap rv_redv_after_01

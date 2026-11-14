@@ -1,0 +1,154 @@
+# Bug-Catching Contest (Gate_NationalPark_hns/scripts.inc:4-41, data/scripts/bug_contest.inc,
+# src/bug_contest.c): the attendant (participate? use the first Pokemon? Sport Balls, rules), the
+# start menu with RETIRE first (src/start_menu.c:930-936), a contest battle (DoBugContestBattle via
+# BattleSetup_StartWildBattle) with a Sport Ball, RETIRE -> "time's up", the judging party menu
+# (slot 1 -> "wrong Pokemon", then the caught bug), the 1st / 2nd / 3rd announcements with the prize
+# (placement by max HP, src/bug_contest.c:86-138, poked between savestate loads), the time limit
+# running out (sBugContestStartTime poked, checked per step), and RETIRE without a catch ("didn't
+# catch anything"). Last: the one-Pokemon registration path (party cut to one Pokemon).
+start saves/ladder6_postgame.sav
+include ../continue.txt
+fastbattles off
+ev clearflag FLAG_DAILY_BUG_CONTEST_COMPLETED; end
+warpto MAP_GATE_NATIONAL_PARK_HNS 4 2
+face LEFT
+ss bc_gate
+talk r2sf_bc_ask 40
+press A
+talk r2sf_bc_first 40 -
+press A
+talk r2sf_bc_rules 40 -
+waitcb2 CB2_Overworld 900
+talk r2sf_bc_enter 20 -
+waitctl 1200
+loc
+snap r2sf_bc_park
+ss bc_entered
+
+# start menu: RETIRE first (closed again with B)
+startmenux 15 nopress
+waitquiet
+snap r2sf_bc_start
+tap B 4
+waitctl 600
+
+# a contest battle: Caterpie (catch rate 255) and a Sport Ball
+pinrng
+evstart setwildbattle SPECIES_CATERPIE, 30; callnative BattleSetup_StartWildBattle; end
+waitbattle
+bwalk r2sf_bc_b_intro input:HandleInputChooseAction
+snap r2sf_bc_b_menu
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+bagpocket 2
+waitquiet
+snap r2sf_bc_b_balls
+bagseek ITEM_SPORT_BALL
+waitquiet
+snap r2sf_bc_b_sportball
+tap A 4
+waitquiet
+snap r2sf_bc_b_sportball_use
+tap A 4
+bwalk r2sf_bc_b_throw prompt:Cmd_trygivecaughtmonnick|task:Task_HandleCaughtMonPageInput
+snap r2sf_bc_b_dexpage
+tap A 4
+bwalk r2sf_bc_b_nick prompt:Cmd_trygivecaughtmonnick
+tap B 4
+bwalk r2sf_bc_b_end free
+unpinrng
+snap r2sf_bc_after_catch
+ss bc_caught
+
+# 1st place: Caterpie Lv 30 has max HP 48 or more. START > RETIRE -> "time's up" at once
+startmenux 15 nopress
+waitquiet
+tap A 4
+waitnotfree 300
+talk r2sf_bc1_timesup 20 - party_menu:Task_HandleChooseMonInput Task_HandleChooseMonInput
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap r2sf_bc1_party
+tap A 4
+waitquiet
+snap r2sf_bc1_party_slot1
+waitcb2 CB2_Overworld 900
+talk r2sf_bc1_wrong 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap DOWN 4
+waitquiet
+snap r2sf_bc1_party_slot2
+tap A 4
+waitquiet
+snap r2sf_bc1_party_chosen
+waitwarp 1200
+talk r2sf_bc1_judge 40 -
+waitctl 1200
+loc
+snap r2sf_bc1_end
+
+# 2nd place: max HP 41-47 (poked to 44 in gPlayerParty[1], struct Pokemon maxHP at +0x58), RNG pinned
+sl bc_caught
+w16 @gPlayerParty+BC@ 2C
+pinrng
+startmenux 15 nopress
+waitquiet
+tap A 4
+waitnotfree 300
+talk r2sf_bc2_timesup 20 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waitwarp 1200
+talk r2sf_bc2_judge 40 -
+waitctl 1200
+unpinrng
+
+# 3rd place: max HP under 41; this time the 8-minute limit runs out (sBugContestStartTime set so
+# that vblankCounter1 - start >= BUG_CONTEST_TIME_LIMIT_FRAMES; checked when the player steps)
+sl bc_caught
+w16 @gPlayerParty+BC@ 1E
+w32 @sBugContestStartTime@ 80000000
+go UP
+talk r2sf_bc3_timesup 20 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waitwarp 1200
+talk r2sf_bc3_judge 40 -
+waitctl 1200
+snap r2sf_bc3_end
+
+# nothing caught: RETIRE right after entering the park
+sl bc_entered
+startmenux 15 nopress
+waitquiet
+tap A 4
+waitnotfree 300
+talk r2sf_bc0_timesup 20 -
+waitctl 1200
+loc
+snap r2sf_bc0_end
+
+# one Pokemon in the party: the OnlyOneMon registration (no "hold your Pokemon" step)
+sl bc_gate
+ev callnative ZeroPlayerPartyMons; special CalculatePlayerPartyCount; givemon SPECIES_TYPHLOSION, 50; end
+face LEFT
+talk r2sf_bc1m_ask 40
+press A
+talk r2sf_bc1m_first 40 -
+press A
+talk r2sf_bc1m_rules 40 -
+waitcb2 CB2_Overworld 900
+talk r2sf_bc1m_enter 20 -
+waitctl 1200
+snap r2sf_bc1m_park

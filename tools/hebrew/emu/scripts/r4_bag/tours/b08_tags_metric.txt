@@ -1,0 +1,12 @@
+# CHECK TAG for every berry, metric (unitSystem 0, the new-game default; Watmel uses its metric-only description, src/berry_tag_screen.c:469).
+start saves/menuA_base_copy.sav
+include ../../continue.txt
+expectunits 0
+fillpocket BERRIES 999 0 66
+bagopen BERRIES
+tagrun tagm
+bagclose
+fillpocket BERRIES 999 63 66
+bagopen BERRIES
+tagrun tagm
+bagclose

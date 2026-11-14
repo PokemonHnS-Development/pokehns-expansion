@@ -1,0 +1,17 @@
+# Include (not a tour) for scripts/r16_battle_sweep/bsweep.py --ops r14_link/r14link: the trainer battle of
+# _bs_trainer.txt with gLinkPlayers filled as a cable link would (r14link.py linkplayers: [1] opponent 1,
+# [2] the player's partner, [3] opponent 2; 7-letter names, the longest a link name can be) and
+# BATTLE_TYPE_RECORDED_LINK (1 << 25) set once the battle runs, as tours/r14_link/l07 does. The link lines are
+# then printed by the driver's slide: entries (forced stand-in). LK_LANG=he|en picks the names.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_SANDSLASH_ALOLA, 50, abilityNum=0, move1=MOVE_GROWL, move2=MOVE_ICICLE_CRASH; givemon SPECIES_STARAPTOR, 50, move1=MOVE_GROWL; end
+linkplayers he:אבשמחתם,en:MAXWELL 1 he:סילבריה,en:SILVERS 0 he:שמשבחתם,en:KENNETH 0
+face UP
+pinrng
+8 UP
+waitnotfree 120
+orw32 gBattleTypeFlags 2000000
+bwalk bs_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0

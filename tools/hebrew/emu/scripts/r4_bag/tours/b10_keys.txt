@@ -1,0 +1,11 @@
+# KEY ITEMS pocket (capacity 60 < 99 key items): 0-59, then 60-98; every row, its context menu, and USE on the ItemUseOutOfBattle_CannotUse ones.
+start saves/menuA_base_copy.sav
+include ../../continue.txt
+fillpocket KEY_ITEMS 1 0 60
+bagopen KEY_ITEMS
+bagrows key key 100
+bagclose
+fillpocket KEY_ITEMS 1 60 60
+bagopen KEY_ITEMS
+bagrows key key 100
+bagclose

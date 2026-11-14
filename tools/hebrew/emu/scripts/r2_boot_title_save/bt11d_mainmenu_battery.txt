@@ -1,0 +1,13 @@
+# Main menu with the RTC error status pinned to RTC_ERR_POWER_FAILURE (rtc.c sErrorStatus,
+# include/constants/rtc.h:8): gText_BatteryRunDry page 1 and page 2 (src/main_menu.c:262, 735-744).
+start saves/boot_base.sav
+pinsym rtc:sErrorStatus 2000
+waitcb2 CB2_MainMenu 4000 START
+waittaskx Task_WaitForBatteryDryErrorWindow 600
+pages bt11d_battery 4
+snap bt11d_battery_last
+tap A 4
+unpinsym rtc:sErrorStatus
+waittaskx Task_HandleMainMenuInput 600
+waitquiet
+snap bt11d_03_menu

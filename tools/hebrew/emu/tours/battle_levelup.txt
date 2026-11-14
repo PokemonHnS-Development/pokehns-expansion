@@ -1,0 +1,31 @@
+# Level up in battle: experience, the exp bar, "grew to Lv." and both pages of the stats
+# window, twice; a move-learning prompt with four known moves ("delete a move?" YES, the
+# summary screen's forget-a-move page, "1, 2, and... Poof!"); then the evolution scene
+# after the battle (Cyndaquil -> Quilava at Lv 14).
+# Cyndaquil Lv 12 (exp 973, Medium Slow) beats a wild Lv 12 Chansey: 395 * 12 / 7 = 677 exp
+# (src/battle_script_commands.c:4191-4195, B_SCALED_EXP GEN_3) -> 1650: Lv 13 (Quick Attack,
+# src/data/pokemon/level_up_learnsets/gen_7.h, Cyndaquil) and Lv 14 (evolves).
+# Chansey's HP is poked to 1 before the battle so one Ember wins.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_CYNDAQUIL, 12, move1=MOVE_TACKLE, move2=MOVE_LEER, move3=MOVE_EMBER, move4=MOVE_SMOKESCREEN; end
+
+pinrng
+ev setwildbattle SPECIES_CHANSEY, 12; end
+sethp enemy 0 1
+evstart dowildbattle; end
+waitbattle
+bwalk battle_levelup_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 2                               # Ember
+bwalk battle_levelup_exp prompt:Cmd_yesnoboxlearnmove
+snap battle_levelup_forget_prompt
+tap A 4                               # YES: delete a move
+bwalk battle_levelup_which task:Task_HandleReplaceMoveInput
+snap battle_levelup_forget_01
+tap DOWN 4                            # Leer
+waitquiet
+snap battle_levelup_forget_02
+tap A 4
+bwalk battle_levelup_learned free
+snap battle_levelup_end

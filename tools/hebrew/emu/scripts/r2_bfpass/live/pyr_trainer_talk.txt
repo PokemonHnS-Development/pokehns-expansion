@@ -1,0 +1,13 @@
+waitctl 300
+py: sb1 = emu.sb1(); px, py = emu.r16(sb1 + 4), emu.r16(sb1 + 6); t = sb1 + 0x138C + 0x18 * 2; emu.w16(t + 4, px); emu.w16(t + 6, py - 1); emu.w8(t + 9, 0x7); print("player", px, py, "trainer", emu.r8(t), emu.r16(t + 4), emu.r16(t + 6))
+go DOWN 1
+go UP 1
+py: objs()
+face UP
+tap A 0
+drivex py_tr2_in battle 20 3000
+fastbattles off
+bwin py_tr2_b
+py: exec("for i in range(300):\n    emu.frames(2)\n    if emu.text_state() != 'idle':\n        break\nprint('text', emu.text_state(), i)")
+drivex py_tr2_hint free 20 6000
+loc

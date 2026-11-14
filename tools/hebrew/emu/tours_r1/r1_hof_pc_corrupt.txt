@@ -1,0 +1,27 @@
+# Hall of Fame PC with a damaged Hall of Fame sector: the viewer prints gText_HOFCorrupted in the
+# message box and gText_AButtonExit in the top bar (src/hall_of_fame.c:863-865, :1085-1091).
+# The save is r1_after_hof (from r1_hof_credits) with one data byte of flash sector 28 (HoF 1)
+# flipped, so TryLoadSaveSector's checksum fails. Build it with:
+#   b = bytearray(open(SAV,'rb').read()); b[28*0x1000 + 0x10] ^= 0xFF
+# and put it in HNS_SAVES as r1_hof_corrupt.sav.
+start saves/r1_hof_corrupt.sav
+include ../scripts/continue.txt
+evstart goto EventScript_PC
+waitkey 900
+pages hofpc_boot 4
+waittaskx Task_HandleMultichoiceInput 600
+waitquiet
+press DOWN
+press DOWN
+snap hofpc_corrupt_menu
+press A
+waittaskx hall_of_fame:Task_HofPC_ExitOnButtonPress 1500
+waitquiet 600
+snap hofpc_corrupt
+press A
+waitcb2x CB2_Overworld 1200
+waittaskx Task_HandleMultichoiceInput 900
+waitquiet 600
+snap hofpc_corrupt_back
+press B
+waitctl 900

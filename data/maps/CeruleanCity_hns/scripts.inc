@@ -24,34 +24,32 @@ CeruleanCity_EventScript_Guard::
 	end
 
 CeruleanCity_Text_ThisIsCeruleanCave::
-    .string "This is CERULEAN CAVE.\p"
-    .string "Horribly strong POKéMON live inside\n"
-    .string "there.\p"
-    .string "It takes a very special TRAINER to\n"
-    .string "be allowed inside there.\p"
-    .string "You'd have to be strong enough to\n"
-    .string "become the KANTO POKéMON LEAGUE\l"
-    .string "CHAMPION for starters.\p"
-    .string "And, you would have to have\n"
-    .string "made a great achievement.$"
+    .string "זו מערת סרוליאן.\p"
+    .string "בפנים חיים פוקימונים\n"
+    .string "חזקים להחריד.\p"
+    .string "רק מאמן מיוחד מאוד\n"
+    .string "מורשה להיכנס לשם.\p"
+    .string "קודם כול, צריך להיות חזק מספיק כדי\n"
+    .string "להיות אלוף ליגת הפוקימון של קאנטו.\p"
+    .string "וחוץ מזה, צריך גם\n"
+    .string "להגיע להישג גדול.$"
 
 CeruleanCity_Text_CooltrainerM1:
-	.string "KANTO's POWER PLANT?\p"
-	.string "It's near the end of ROUTE 9, the\n"
-	.string "road that heads east from here.\p"
-	.string "I think there was an accident of\n"
-	.string "some sort there.$"
+	.string "מפעל החשמל של קאנטו?\p"
+	.string "הוא ליד הקצה של דרך 9,\n"
+	.string "הדרך שיוצאת מכאן מזרחה.\p"
+	.string "נראה לי שקרתה שם\n"
+	.string "איזושהי תאונה.$"
 
 CeruleanCity_Text_CooltrainerM2:
-	.string "You're collecting every single\n"
-	.string "kind of POKéMON?\p"
-	.string "That must be quite a challenge,\n"
-	.string "but it sounds fun too.$"
+	.string "אתה אוסף כל פוקימון שקיים?\p"
+	.string "זה בטח אתגר לא קטן,\n"
+	.string "אבל זה נשמע גם כיף.$"
 
 CeruleanCity_Text_SuperNerd:
-	.string "The CAPE in the north is a good\n"
-	.string "place for dates.\p"
-	.string "Girls like it!$"
+	.string "הכף שבצפון הוא מקום טוב\n"
+	.string "לדייטים.\p"
+	.string "בנות אוהבות אותו!$"
 
 CeruleanCity_EventScript_Slowbro::
 	lock
@@ -64,7 +62,7 @@ CeruleanCity_EventScript_Slowbro::
 	end
 
 CeruleanCity_Text_Slowbro:
-	.string "SLOWBRO: Yarah?$"
+	.string "סלוברו: יארה?$"
 
 CeruleanCity_EventScript_SlowbroWoman::
 	msgbox CeruleanCity_Text_CooltrainerF1, MSGBOX_NPC
@@ -83,11 +81,10 @@ CeruleanCity_EventScript_SlowbroWoman::
 	end
 
 CeruleanCity_Text_CooltrainerF1:
-	.string "My SLOWBRO and I make an awesome\n"
-	.string "combination!$"
+	.string "אני והסלוברו שלי צמד מדהים!$"
 
 CeruleanCity_Text_CooltrainerF2:
-	.string "SLOWBRO, show me your CONFUSION!$"
+	.string "סלוברו, תראה לי את האנדרלמוסיה שלך!$"
 
 CeruleanCity_Text_CooltrainerF3:
 	.string "…$"
@@ -102,20 +99,20 @@ CeruleanCity_EventScript_FisherDuringRocket::
 	end
 
 CeruleanCity_Text_Fisher:
-	.string "I'm a huge fan of CERULEAN GYM's\n"
-	.string "MISTY.$"
+	.string "אני מעריץ ענק של מיסטי\n"
+	.string "ממכון סרוליאן.$"
 
 CeruleanCity_Text_Fisher_RocketTip:
-	.string "I saw this shady guy go off toward\n"
-	.string "CERULEAN's CAPE.$"
+	.string "ראיתי איזה בחור חשוד הולך\n"
+	.string "לכיוון כף סרוליאן.$"
 
 CeruleanCity_EventScript_Youngster::
 	msgbox CeruleanCity_Text_Youngster1, MSGBOX_NPC
 	end
 
 CeruleanCity_Text_Youngster1:
-	.string "The cave north of town has\n"
-	.string "horribly powerful POKéMON in it.$"
+	.string "במערה שמצפון לעיר יש\n"
+	.string "פוקימונים חזקים להחריד.$"
 
 CeruleanCity_Text_Youngster2:
 	.string "Ayuh?\p"
@@ -142,30 +139,28 @@ CeruleanCity_EventScript_CapeSign::
 	end
 
 CeruleanCity_Text_Sign:
-	.string "CERULEAN CITY\p"
-	.string "A Mysterious Blue Aura Surrounds It$"
+	.string "העיר סרוליאן\p"
+	.string "אפופה בהילה כחולה ומסתורית$"
 
 CeruleanCity_Text_GymSign:
-	.string "CERULEAN CITY\n"
-	.string "POKéMON GYM\n"
-	.string "LEADER: MISTY\p"
-	.string "The Tomboyish Mermaid$"
+	.string "מכון הפוקימון של העיר סרוליאן\n"
+	.string "מנהיגה: מיסטי\p"
+	.string "בת הים הבנית$"
 
 CeruleanCity_Text_BikeShopSign:
-	.string "There's a notice here…\p"
-	.string "The BIKE SHOP has moved to\n"
-	.string "GOLDENROD CITY in JOHTO…$"
+	.string "יש כאן הודעה…\p"
+	.string "חנות האופניים עברה\n"
+	.string "לעיר גולדנרוד בג'וטו…$"
 
 CeruleanCity_Text_PoliceSign:
-	.string "There's a notice here…\p"
-	.string "Stamp out thievery and make the\n"
-	.string "city a friendlier, more cheerful\l"
-	.string "place!\p"
-	.string "CERULEAN POLICE$"
+	.string "יש כאן הודעה…\p"
+	.string "בואו נמגר את הגניבות ונהפוך\n"
+	.string "את העיר למקום ידידותי ועליז יותר!\p"
+	.string "משטרת סרוליאן$"
 
 CeruleanCity_Text_CapeSign:
-	.string "CERULEAN CAPE\n"
-	.string "AHEAD$"
+	.string "כף סרוליאן\n"
+	.string "בהמשך הדרך$"
 
 CeruleanCity_Text_LockedDoor:
 	.string "It's locked…$"

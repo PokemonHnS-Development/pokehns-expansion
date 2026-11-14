@@ -1,0 +1,11 @@
+# The Union Room (MAP_UNION_ROOM, src/union_room.c RunUnionRoom / Task_RunUnionRoom), entered the way
+# CableClub_EventScript_EnterUnionRoom (data/scripts/cable_club.inc:883-914) does after its warp: warpto, then
+# special RunUnionRoom. hnsrun has no Wireless Adapter.
+start saves/r14/link/base.sav
+include ../../scripts/continue.txt
+ev special HealPlayerParty; end
+warpto MAP_UNION_ROOM 7 11
+snap u1_map
+evstart special Script_ResetUnionRoomTrade; special RunUnionRoom; waitstate; end
+burst u2_run 12 20
+showtasks

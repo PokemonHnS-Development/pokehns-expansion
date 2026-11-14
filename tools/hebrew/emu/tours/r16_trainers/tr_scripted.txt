@@ -1,0 +1,101 @@
+# The scripted H&S trainers no earlier tour fought (src/data/trainers_hns.party names), each started in RAM
+# with its own trainerbattle line and texts from data/maps/*_hns/scripts.inc (trainerbattle_single: the seen
+# text in the field box, then the battle; the Fuchsia Gym four: trainerbattle_no_intro), after clearing its
+# trainer flag. The battle intro, send-out and defeat lines carry the class and name. Run with
+# scripts/r6_trainers/r6trainers.py tour ROM OUT --tours <emu>/tours/r16_trainers (bwin: each turn the foes at
+# 1 HP, Ice Shard). Night-only Keith, Dirk and Jamie need no clock here: the time gate is the object's, not
+# the battle's. Save: ladder6_postgame.sav (HNS_SAVES), Lv 100 Mewtwo from r6_league/_base.txt.
+start saves/ladder6_postgame.sav
+include ../r6_league/_base.txt
+pinrng
+# --- TRAINER_ROSS_HNS
+ev cleartrainerflag TRAINER_ROSS_HNS; end
+evstart lock; trainerbattle_single TRAINER_ROSS_HNS, 0x@RocketHideout_B3F_Text_ScientistRossSeen@, 0x@RocketHideout_B3F_Text_ScientistRossBeaten@; release; end
+bwalk tr_ross_a input:HandleInputChooseAction
+bwin tr_ross_b 30
+waitctl 1200 A
+snap tr_ross_z
+# --- TRAINER_MITCH_HNS
+ev cleartrainerflag TRAINER_MITCH_HNS; end
+evstart lock; trainerbattle_single TRAINER_MITCH_HNS, 0x@RocketHideout_B3F_Text_ScientistMitchSeen@, 0x@RocketHideout_B3F_Text_ScientistMitchBeaten@; release; end
+bwalk tr_mitch_a input:HandleInputChooseAction
+bwin tr_mitch_b 30
+waitctl 1200 A
+snap tr_mitch_z
+# --- TRAINER_JED_HNS
+ev cleartrainerflag TRAINER_JED_HNS; end
+evstart lock; trainerbattle_single TRAINER_JED_HNS, 0x@RocketHideout_B1F_Text_ScientistJedSeen@, 0x@RocketHideout_B1F_Text_ScientistJedBeaten@; release; end
+bwalk tr_jed_a input:HandleInputChooseAction
+bwin tr_jed_b 30
+waitctl 1200 A
+snap tr_jed_z
+# --- TRAINER_RICH_HNS
+ev cleartrainerflag TRAINER_RICH_HNS; end
+evstart lock; trainerbattle_single TRAINER_RICH_HNS, 0x@GoldenrodCity_RadioTower_4F4_Text_ScientistRichSeen@, 0x@GoldenrodCity_RadioTower_4F4_Text_ScientistRichBeaten@; release; end
+bwalk tr_rich_a input:HandleInputChooseAction
+bwin tr_rich_b 30
+waitctl 1200 A
+snap tr_rich_z
+# --- TRAINER_ALICE_HNS
+ev cleartrainerflag TRAINER_ALICE_HNS; end
+evstart lock; trainerbattle_no_intro TRAINER_ALICE_HNS, 0x@FuchsiaCity_Gym_Text_LassAlice_Beaten@; release; end
+bwalk tr_alice_a input:HandleInputChooseAction
+bwin tr_alice_b 30
+waitctl 1200 A
+snap tr_alice_z
+# --- TRAINER_LINDA_HNS
+ev cleartrainerflag TRAINER_LINDA_HNS; end
+evstart lock; trainerbattle_no_intro TRAINER_LINDA_HNS, 0x@FuchsiaCity_Gym_Text_LassLinda_Beaten@; release; end
+bwalk tr_linda_a input:HandleInputChooseAction
+bwin tr_linda_b 30
+waitctl 1200 A
+snap tr_linda_z
+# --- TRAINER_CINDY_HNS
+ev cleartrainerflag TRAINER_CINDY_HNS; end
+evstart lock; trainerbattle_no_intro TRAINER_CINDY_HNS, 0x@FuchsiaCity_Gym_Text_PicnickerCindy_Beaten@; release; end
+bwalk tr_cindy_a input:HandleInputChooseAction
+bwin tr_cindy_b 30
+waitctl 1200 A
+snap tr_cindy_z
+# --- TRAINER_BARRY_HNS
+ev cleartrainerflag TRAINER_BARRY_HNS; end
+evstart lock; trainerbattle_no_intro TRAINER_BARRY_HNS, 0x@FuchsiaCity_Gym_Text_CamperBarry_Beaten@; release; end
+bwalk tr_barry_a input:HandleInputChooseAction
+bwin tr_barry_b 30
+waitctl 1200 A
+snap tr_barry_z
+# --- TRAINER_EDWARD_HNS
+ev cleartrainerflag TRAINER_EDWARD_HNS; end
+evstart lock; trainerbattle_single TRAINER_EDWARD_HNS, 0x@SSAqua_RoomNW_Text_GentlemanEdwardSeen@, 0x@SSAqua_RoomNW_Text_GentlemanEdwardBeaten@; release; end
+bwalk tr_edward_a input:HandleInputChooseAction
+bwin tr_edward_b 30
+waitctl 1200 A
+snap tr_edward_z
+# --- TRAINER_MARTIN_HNS
+ev cleartrainerflag TRAINER_MARTIN_HNS; end
+evstart lock; trainerbattle_single TRAINER_MARTIN_HNS, 0x@Route12_Text_FisherMartinSeen@, 0x@Route12_Text_FisherMartinBeaten@; release; end
+bwalk tr_martin_a input:HandleInputChooseAction
+bwin tr_martin_b 30
+waitctl 1200 A
+snap tr_martin_z
+# --- TRAINER_JAMIE_HNS
+ev cleartrainerflag TRAINER_JAMIE_HNS; end
+evstart lock; trainerbattle_single TRAINER_JAMIE_HNS, 0x@Route39_Text_PokefanFJaimeSeen@, 0x@Route39_Text_PokefanFJaimeBeaten@; release; end
+bwalk tr_jamie_a input:HandleInputChooseAction
+bwin tr_jamie_b 30
+waitctl 1200 A
+snap tr_jamie_z
+# --- TRAINER_KEITH_HNS
+ev cleartrainerflag TRAINER_KEITH_HNS; end
+evstart lock; trainerbattle_single TRAINER_KEITH_HNS, 0x@Route34_Text_OfficerKeith_Seen@, 0x@Route34_Text_OfficerKeith_Win@; release; end
+bwalk tr_keith_a input:HandleInputChooseAction
+bwin tr_keith_b 30
+waitctl 1200 A
+snap tr_keith_z
+# --- TRAINER_DIRK_HNS
+ev cleartrainerflag TRAINER_DIRK_HNS; end
+evstart lock; trainerbattle_single TRAINER_DIRK_HNS, 0x@Route35_Text_OfficerDirkSeen@, 0x@Route35_Text_OfficerDirkBeaten@; release; end
+bwalk tr_dirk_a input:HandleInputChooseAction
+bwin tr_dirk_b 30
+waitctl 1200 A
+snap tr_dirk_z

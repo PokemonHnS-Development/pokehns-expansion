@@ -49,57 +49,58 @@ Route46_EventScript_Item_Revive::
 	end
 
 Route46_Text_HikerBaileySeen:
-	.string "Awright! I'll show you the\n"
-	.string "power of mountain POKéMON!$"
+	.string "קדימה! אראה לך את\n"
+	.string "הכוח של פוקימוני ההרים!$"
 
 Route46_Text_HikerBaileyBeaten:
-	.string "Mercy! You showed me your\n"
-	.string "power!$"
+	.string "רחם עליי!\n"
+	.string "הראית לי את הכוח שלך!$"
 
 Route46_Text_HikerBaileyAfterBattle:
-	.string "It's over. I don't mind.\n"
-	.string "We HIKERS are like that.$"
+	.string "נגמר. לא אכפת לי.\n"
+	.string "ככה זה אצלנו, המטיילים.$"
 
 Route46_Text_CamperTedSeen:
-	.string "I'm raising POKéMON too!\p"
-	.string "Will you battle with me?$"
+	.string "גם אני מגדל פוקימונים!\p"
+	.string "תילחם איתי?$"
 
 Route46_Text_CamperTedBeaten:
-	.string "Wha…?$"
+	.string "מה…?$"
 
 Route46_Text_CamperTedAfterBattle:
-	.string "I did my best but came up\n"
-	.string "short.\p"
-	.string "No excuses--I admit I lost.$"
+	.string "עשיתי כמיטב יכולתי,\n"
+	.string "אבל זה לא הספיק.\p"
+	.string "בלי תירוצים -\n"
+	.string "אני מודה שהפסדתי.$"
 
 Route46_Text_PicnickerErinSeen:
-	.string "I raise POKéMON too!\p"
-	.string "Will you battle with me?$"
+	.string "גם אני מגדלת פוקימונים!\p"
+	.string "תילחם איתי?$"
 
 Route46_Text_PicnickerErinBeaten:
-	.string "Oh, rats!$"
+	.string "אוף, חבל!$"
 
 Route46_Text_PicnickerErinAfterBattle:
-	.string "I've been to many GYMS, but the\n"
-	.string "GYM in GOLDENROD is my favorite.\p"
-	.string "It's filled with pretty flowers!$"
+	.string "הייתי בהרבה מכונים,\n"
+	.string "אבל המכון בגולדנרוד הכי אהוב עליי.\p"
+	.string "הוא מלא בפרחים יפים!$"
 
 Route46_Text_ErinRegister:
-	.string "I've been to many GYMS, but the\n"
-	.string "GYM in GOLDENROD is my favorite.\p"
-	.string "It's filled with pretty flowers!$"
+	.string "הייתי בהרבה מכונים,\n"
+	.string "אבל המכון בגולדנרוד הכי אהוב עליי.\p"
+	.string "הוא מלא בפרחים יפים!$"
 
 Route46_Text_ErinRematchIntro:
-	.string "I raise POKéMON too!\p"
-	.string "Will you battle with me?$"
+	.string "גם אני מגדלת פוקימונים!\p"
+	.string "תילחם איתי?$"
 
 Route46_Text_ErinRematchDefeat:
-	.string "Oh, rats!$"
+	.string "אוף, חבל!$"
 
 Route46_Text_ErinPostRematch:
-	.string "I've been to many GYMS, but the\n"
-	.string "GYM in GOLDENROD is my favorite.\p"
-	.string "It's filled with pretty flowers!$"
+	.string "הייתי בהרבה מכונים,\n"
+	.string "אבל המכון בגולדנרוד הכי אהוב עליי.\p"
+	.string "הוא מלא בפרחים יפים!$"
 
 Route46_Text_PicnickerErin2Beaten:
 	.string "Aww… I keep losing all the time!\p"
@@ -110,5 +111,5 @@ Route46_Text_PicnickerErin2Beaten:
 	.string "other time.$"
 
 Route46_Text_Sign:
-	.string "ROUTE 46\n"
-	.string "MOUNTAIN RD. AHEAD$"
+	.string "דרך 46\n"
+	.string "בהמשך: דרך הררית$"

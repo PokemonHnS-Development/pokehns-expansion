@@ -1,0 +1,14 @@
+# The melemele totem at night (run with --rtc at 23:00, e.g. 1767308400): the map's ON_TRANSITION script
+# clears FLAG_MELEMELE_TOTEM_DAY outside morning/day/evening and the totem object becomes Raticate-A (Rattata-A + Raticate-A totem).
+# Its battle branch (data/maps/MelemeleIsle_hns/scripts.inc:310-327, 356-368): cry, cry text, setwildbattle with two species +
+# settotemboost B_POSITION_OPPONENT_RIGHT, no catching / running; win -> removeobject + the after text.
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev clearflag FLAG_HIDE_MELEMELE_TOTEM; end
+warpto MAP_MELEMELE_ISLE_HNS 34 27
+expectflag FLAG_MELEMELE_TOTEM_DAY 0
+face UP
+snap tn_field
+tap A 4
+scene tn_pre 4000
+include ../r5_legends/_totem_tail.txt

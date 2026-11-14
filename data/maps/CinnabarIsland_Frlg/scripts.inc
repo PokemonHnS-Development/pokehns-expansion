@@ -374,9 +374,9 @@ CinnabarIsland_Text_PokemonLab::
 	.string "POKéMON LAB$"
 
 CinnabarIsland_Text_GymSign::
-	.string "CINNABAR ISLAND POKéMON GYM\n"
-	.string "LEADER: BLAINE\l"
-	.string "The Hotheaded Quiz Master!$"
+	.string "מכון הפוקימון של האי סיננבר\n"
+	.string "מנהיג: בליין\p"
+	.string "אמן החידונים חם המזג!$"
 
 CinnabarIsland_Text_HeyIfItIsntPlayer::
 	.string "Huh?\n"

@@ -312,13 +312,28 @@ static void PrintLinkBattleRecord(struct LinkBattleRecord *record, u8 y, s32 lan
 
         AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar1, 8, (y * 8) + 1, 0, NULL);
 
+#if TEXT_RTL
+        // The window is mirrored: a number printed at a column's x ends at that column's right
+        // edge, so numbers without padding line up on their units digit. The English padding
+        // spaces would land to the right of the digits.
+        ConvertIntToDecimalStringN(gStringVar1, record->wins, STR_CONV_MODE_LEFT_ALIGN, 4);
+#else
         ConvertIntToDecimalStringN(gStringVar1, record->wins, STR_CONV_MODE_RIGHT_ALIGN, 4);
+#endif
         AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar1,  80, (y * 8) + 1, 0, NULL);
 
+#if TEXT_RTL
+        ConvertIntToDecimalStringN(gStringVar1, record->losses, STR_CONV_MODE_LEFT_ALIGN, 4);
+#else
         ConvertIntToDecimalStringN(gStringVar1, record->losses, STR_CONV_MODE_RIGHT_ALIGN, 4);
+#endif
         AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar1, 128, (y * 8) + 1, 0, NULL);
 
+#if TEXT_RTL
+        ConvertIntToDecimalStringN(gStringVar1, record->draws, STR_CONV_MODE_LEFT_ALIGN, 4);
+#else
         ConvertIntToDecimalStringN(gStringVar1, record->draws, STR_CONV_MODE_RIGHT_ALIGN, 4);
+#endif
         AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar1, 176, (y * 8) + 1, 0, NULL);
     }
 }

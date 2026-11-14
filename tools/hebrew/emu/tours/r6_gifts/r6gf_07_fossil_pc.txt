@@ -1,0 +1,45 @@
+# Ruins of Alph lab, the PC branch with a full party (the ladder 6 party): state 2 with
+# VAR_WHICH_FOSSIL_REVIVED 1 -> 'brought back to life', RuinsOfAlph_Lab_EventScript_ReceiveLileepPC
+# (received with the fanfare, nickname YES -> the naming screen for a box Pokemon, OK with the
+# default name, then 'transferred to the PC'); from a savestate, NO -> 'transferred'. Then
+# Aerodactyl (5) the same way with NO only, and Kabuto (4) with every PC box filled as well
+# (fillboxes): Common_EventScript_NoMoreRoomForPokemon.
+start saves/r6_gifts_base.sav
+include _base.txt
+partyinfo
+ev setvar VAR_FOSSIL_RESURRECTION_STATE, 2; setvar VAR_WHICH_FOSSIL_REVIVED, 1; end
+warpto MAP_RUINS_OF_ALPH_LAB_HNS 7 3
+vars VAR_FOSSIL_RESURRECTION_STATE VAR_WHICH_FOSSIL_REVIVED
+face UP
+tap A 4
+scene fp_ready 8000
+ss fp_nick
+pickd 0
+waitcb2x CB2_NamingScreen 1200
+waitnaming
+snap fp_naming
+press START
+waitnaming
+snap fp_naming_ok
+press A
+waitcb2x CB2_Overworld 900
+scene fp_yes 6000
+snap fp_yes_end
+sl fp_nick
+pickd 1
+scene fp_no 6000
+snap fp_no_end
+ev setvar VAR_FOSSIL_RESURRECTION_STATE, 2; setvar VAR_WHICH_FOSSIL_REVIVED, 5; end
+face UP
+tap A 4
+scene fp_aero 8000
+pickd 1
+scene fp_aero_no 6000
+snap fp_aero_end
+ev setvar VAR_FOSSIL_RESURRECTION_STATE, 2; setvar VAR_WHICH_FOSSIL_REVIVED, 4; end
+fillboxes 0
+face UP
+tap A 4
+scene fp_boxfull 8000
+snap fp_boxfull_end
+restoreboxes

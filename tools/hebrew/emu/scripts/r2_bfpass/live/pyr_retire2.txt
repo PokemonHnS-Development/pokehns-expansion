@@ -1,0 +1,7 @@
+waitquiet
+snap py_rest_03_menu
+startmenux 11
+waitquiet
+30 -
+snap py_retire_00
+showtasks

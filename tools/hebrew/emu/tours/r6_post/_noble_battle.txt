@@ -1,0 +1,32 @@
+# Shared tail of a noble boss tour (not a tour): the boss battle has started (setwildbossbattle,
+# asm/macros/event.inc:2936, + settotemboost; FLAG_NO_WILD_CATCHING and FLAG_NO_WILD_RUNNING set).
+# Intro pages with the aura and stat lines, a RUN attempt (STRINGID_CANTESCAPE), a Master Ball
+# attempt (sText_CantThrowPokeBall_Disabled, src/item_use.c), then the win, the dropped-item text
+# (SinjohRuins_Lab_Text_DropedItem) and the plate.
+bwalk nb_intro input:HandleInputChooseAction
+snap nb_action
+baction RUN
+bwalk nb_run input:HandleInputChooseAction
+snap nb_run_after
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+bagpocket 2
+bagseek ITEM_MASTER_BALL
+waitquiet
+snap nb_bag
+tap A 4
+waitquiet
+snap nb_bag_use
+tap A 4
+waitkey 600
+snap nb_nocatch
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction
+bwin nb_win
+scene nb_after 12000
+snap nb_end

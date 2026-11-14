@@ -1,0 +1,22 @@
+# Celadon Dept. Store 3F, TMs (CeladonCity_DepartmentStore_3F_hns/scripts.inc:17-40).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_CELADON_CITY_DEPARTMENT_STORE_3F_HNS 6 10
+evstart goto CeladonDept3_EventScript_Clerk
+talk m04_cel3_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m04_cel3_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m04_cel3
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m04_cel3_bye 10 -
+waitctl 900

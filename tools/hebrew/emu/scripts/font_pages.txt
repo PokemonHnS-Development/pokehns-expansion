@@ -1,0 +1,72 @@
+# Cold boot -> NEW GAME -> the temporary font test pages that replace gText_Oak_Welcome
+# (14 pages) and gText_Oak_MainSpeech (6 pages); "This is a POKEMON" sits between them.
+# Each page: wait until the box is complete and waits for A, settle, photograph, A.
+# Needs a ROM built with the font test text; the English ROM has
+# fewer pages and stops early.
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+tap A 30
+waittask Task_NewGameHnsSpeech_ThisIsAPokemon 3000
+waitkey 2400
+snap w01
+tap A 4
+waitkey 2400
+snap w02
+tap A 4
+waitkey 2400
+snap w03
+tap A 4
+waitkey 2400
+snap w04
+tap A 4
+waitkey 2400
+snap w05
+tap A 4
+waitkey 2400
+snap w06
+tap A 4
+waitkey 2400
+snap w07
+tap A 4
+waitkey 2400
+snap w08
+tap A 4
+waitkey 2400
+snap w09
+tap A 4
+waitkey 2400
+snap w10
+tap A 4
+waitkey 2400
+snap w11
+tap A 4
+waitkey 2400
+snap w12
+tap A 4
+waitkey 2400
+snap w13
+tap A 4
+waitkey 2400
+snap w14
+tap A 4
+waitkey 2400
+snap pokemon
+tap A 4
+waitkey 2400
+snap m1
+tap A 4
+waitkey 2400
+snap m2
+tap A 4
+waitkey 2400
+snap m3
+tap A 4
+waitkey 2400
+snap m4
+tap A 4
+waitkey 2400
+snap m5
+tap A 4
+waitkey 2400
+snap m6
+tap A 4

@@ -1,0 +1,37 @@
+# Location-locked stations (IsStationAvailable, src/pokenav_radio.c:982-1013): the Unown station (41)
+# only in MAPSEC_RUINS_OF_ALPH, the Evolution station (63, drawn with the Unown name '?????',
+# sRadioChannels :163) only in Mahogany / Route 43 / Lake of Rage while FLAG_HIDE_MAHOGANY_ROCKETS
+# is clear. Neither has lines (GenerateStationContent :888-891). Each also shows the other's
+# frequency as '- - - -'.
+start saves/ladder4_league.sav
+include ../continue.txt
+warpto MAP_RUINS_OF_ALPH_OUTSIDE_HNS 36 17
+gearradio
+radiotune 41
+radiocycle ru_unown_41 2
+radiotune 63
+radiocycle ru_unown_63_none 2
+gearclose
+clearflag FLAG_HIDE_MAHOGANY_ROCKETS
+warpto MAP_MAHOGANYTOWN_HNS 15 11
+gearradio
+radiotune 63
+radiocycle re_mahogany_63 2
+radiotune 41
+radiocycle re_mahogany_41_none 2
+gearclose
+warpto MAP_ROUTE43_HNS 11 49
+gearradio
+radiotune 63
+radiocycle re_route43_63 2
+gearclose
+warpto MAP_LAKE_OF_RAGE_HNS 39 42
+gearradio
+radiotune 63
+radiocycle re_lakeofrage_63 2
+gearclose
+setflag FLAG_HIDE_MAHOGANY_ROCKETS
+warpto MAP_MAHOGANYTOWN_HNS 15 11
+gearradio
+radiotune 63
+radiocycle re_mahogany_63_after 2

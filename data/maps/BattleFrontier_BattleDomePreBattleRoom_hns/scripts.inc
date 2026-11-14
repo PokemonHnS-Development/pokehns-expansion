@@ -271,47 +271,44 @@ BattleFrontier_BattleDomePreBattleRoom_Movement_PlayerEnter_hnsDoor_hns:
 	step_end
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForRound1_hns:
-	.string "Your 1st-round match is next.\n"
-	.string "Are you ready?$"
+	.string "עכשיו הקרב שלך בסיבוב הראשון.\n"
+	.string "אפשר להתחיל?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForRound2_hns:
-	.string "Your 2nd-round match is next.\n"
-	.string "Are you ready?$"
+	.string "עכשיו הקרב שלך בסיבוב השני.\n"
+	.string "אפשר להתחיל?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForSemifinals_hns:
-	.string "Your semifinal match is next.\n"
-	.string "Are you ready?$"
+	.string "עכשיו הקרב שלך בחצי הגמר.\n"
+	.string "אפשר להתחיל?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForFinals_hns:
-	.string "Your final match is next.\n"
-	.string "Are you ready?$"
+	.string "עכשיו הקרב שלך בגמר.\n"
+	.string "אפשר להתחיל?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ChooseTwoMons_hns:
-	.string "Please choose the two POKéMON\n"
-	.string "that are to appear in battle.$"
+	.string "יש לבחור את שני הפוקימונים\n"
+	.string "שישתתפו בקרב.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_RightThisWay_hns:
-	.string "Right this way, please.$"
+	.string "מכאן, בבקשה.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_RestoreMonsToFullHealth_hns:
-	.string "Thank you for competing!\p"
-	.string "I'll restore your POKéMON to\n"
-	.string "full health.$"
+	.string "תודה על ההשתתפות!\p"
+	.string "אחזיר את הפוקימונים שלך\n"
+	.string "לבריאות מלאה.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_Round1Complete_hns:
-	.string "All 1st-round matches have been\n"
-	.string "completed.\p"
-	.string "These are the teams that advanced!$"
+	.string "כל הקרבות בסיבוב הראשון הסתיימו.\p"
+	.string "אלה הקבוצות שעלו לשלב הבא!$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_Round2Complete_hns:
-	.string "All 2nd-round matches have been\n"
-	.string "completed.\p"
-	.string "These are the teams that advanced!$"
+	.string "כל הקרבות בסיבוב השני הסתיימו.\p"
+	.string "אלה הקבוצות שעלו לשלב הבא!$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_SemifinalsComplete_hns:
-	.string "All semifinal matches have been\n"
-	.string "completed.\p"
-	.string "These are the teams that advanced!$"
+	.string "כל הקרבות בחצי הגמר הסתיימו.\p"
+	.string "אלה הקבוצות שעלו לשלב הבא!$"
 
 @ Unused
 BattleFrontier_BattleDomePreBattleRoom_Text_CongratsReadyForRound2_hns:
@@ -335,58 +332,58 @@ BattleFrontier_BattleDomePreBattleRoom_Text_CongratsReadyForFinals_hns:
 	.string "Are you ready?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_PlayersNextOpponentIsTrainer_hns:
-	.string "{PLAYER}'s next opponent\n"
-	.string "is this TRAINER.$"
+	.string "היריב הבא של {PLAYER}\n"
+	.string "הוא המאמן הזה.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_TourneyInRound1_hns:
-	.string "The tournament is in the 1st round.$"
+	.string "הטורניר נמצא בסיבוב הראשון.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_TourneyInRound2_hns:
-	.string "The tournament is in the 2nd round.$"
+	.string "הטורניר נמצא בסיבוב השני.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_TourneyInSemifinals_hns:
-	.string "The tournament is in the semifinals.$"
+	.string "הטורניר נמצא בחצי הגמר.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_TourneyInFinals_hns:
-	.string "The tournament is up to the final.$"
+	.string "הטורניר הגיע לגמר.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_SaveAndQuitGame_hns:
-	.string "Would you like to save and\n"
-	.string "quit the game?$"
+	.string "לשמור ולצאת\n"
+	.string "מהמשחק?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_RetireYourChallenge_hns:
-	.string "Would you like to retire from your\n"
-	.string "Battle Tournament challenge?$"
+	.string "לפרוש מאתגר\n"
+	.string "טורניר הקרב?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_SavingDataPleaseWait_hns:
-	.string "I am saving your data.\n"
-	.string "Please wait.$"
+	.string "אני שומר את הנתונים שלך.\n"
+	.string "נא להמתין.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_RecordLastMatch_hns:
-	.string "Should I record your last match\n"
-	.string "on your FRONTIER PASS?$"
+	.string "להקליט את הקרב האחרון שלך\n"
+	.string "בכרטיס חזית הקרב?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerSilver_hns:
-	.string "Congratulations for advancing\n"
-	.string "to the final match.\p"
-	.string "For the final match, you will challenge\n"
-	.string "the DOME ACE TUCKER.\p"
-	.string "Are you ready?$"
+	.string "מזל טוב על העלייה\n"
+	.string "לגמר.\p"
+	.string "בגמר, היריב שלך יהיה\n"
+	.string "אס הכיפה טאקר.\p"
+	.string "אפשר להתחיל?$"
 
 @ Identical to ReadyForTuckerSilver
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerGold_hns:
-	.string "Congratulations for advancing\n"
-	.string "to the final match.\p"
-	.string "For the final match, you will challenge\n"
-	.string "the DOME ACE TUCKER.\p"
-	.string "Are you ready?$"
+	.string "מזל טוב על העלייה\n"
+	.string "לגמר.\p"
+	.string "בגמר, היריב שלך יהיה\n"
+	.string "אס הכיפה טאקר.\p"
+	.string "אפשר להתחיל?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerSilver_hnsShort_hns:
-	.string "Your final battle against TUCKER is\n"
-	.string "next. Are you ready?$"
+	.string "עכשיו קרב הגמר שלך מול טאקר.\n"
+	.string "אפשר להתחיל?$"
 
 @ Identical again
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerGold_hnsShort_hns:
-	.string "Your final battle against TUCKER is\n"
-	.string "next. Are you ready?$"
+	.string "עכשיו קרב הגמר שלך מול טאקר.\n"
+	.string "אפשר להתחיל?$"
 

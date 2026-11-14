@@ -55,50 +55,48 @@ VioletCity_Gym_EventScript_Falkner_Defeated::
 	end
 
 VioletGym_Text_Falkner_Intro:
-	.string "I'm FALKNER, the VIOLET POKéMON\n"
-	.string "GYM leader!\p"
-	.string "People say you can clip\n"
-	.string "FLYING-type POKéMON's wings\p"
-	.string "with a jolt of electricity…\n"
-	.string "I won't allow such insults to bird\l"
-	.string "POKéMON!\p"
-	.string "I'll show you the real power\n"
-	.string "of the magnificent bird POKéMON!$"
+	.string "אני פלקנר, מנהיג מכון הפוקימון\n"
+	.string "של העיר ויולט!\p"
+	.string "אומרים שאפשר לקצץ את הכנפיים\n"
+	.string "של פוקימונים מסוג תעופה\p"
+	.string "בעזרת מכת חשמל… אני לא אסכים\n"
+	.string "לעלבון כזה כלפי פוקימוני ציפורים!\p"
+	.string "אני אראה לך את הכוח האמיתי\n"
+	.string "של פוקימוני הציפורים המופלאים!$"
 
 VioletGym_Text_Falkner_WinLoss:
-	.string "…Darn! My dad's cherished bird\n"
-	.string "POKéMON…\p"
-	.string "All right. Take this.\p"
-	.string "It's the official POKéMON LEAGUE\n"
-	.string "ZEPHYRBADGE.$"
+	.string "…לעזאזל! פוקימוני הציפורים\n"
+	.string "היקרים של אבא שלי…\p"
+	.string "נו, טוב. הנה, זה בשבילך.\p"
+	.string "זה תג משב, התג הרשמי\n"
+	.string "של ליגת הפוקימון.$"
 
 VioletGym_Text_ReceivedZephyrBadge:
-	.string "{PLAYER} received ZEPHYRBADGE.$"
+	.string "{PLAYER} קיבל את תג משב.$"
 
 VioletGym_Text_Falkner_BadgeExplain:
-	.string "ZEPHYRBADGE raises the ATTACK\n"
-	.string "power of POKéMON.\p"
-	.string "It also enables POKéMON to use\n"
-	.string "FLASH, if they can learn it,\l"
-	.string "anytime.\p"
-	.string "Here--take this too.$"
+	.string "תג משב מעלה את\n"
+	.string "כוח ההתקפה של פוקימונים.\p"
+	.string "הוא גם מאפשר לפוקימונים שיכולים\n"
+	.string "ללמוד הבזק להשתמש בו בכל זמן.\p"
+	.string "הנה, גם זה בשבילך.$"
 
 VioletGym_Text_Falkner_TMExplain:
-	.string "By using a TM, a POKéMON will\n"
-	.string "instantly learn a new move.\p"
-	.string "That TM contains ROOST.\p"
-	.string "It restores HP up to half of your\n"
-	.string "POKéMON's maximum.\p"
-	.string "In other words, it heals your\n"
-	.string "POKéMON.$"
+	.string "בעזרת מ”מ, פוקימון לומד מיד\n"
+	.string "מהלך חדש.\p"
+	.string "המ”מ הזה מכיל את מנוחת כנף.\p"
+	.string "הוא מחזיר לפוקימון שלך עד חצי\n"
+	.string "מהנ”ח המרבי שלו.\p"
+	.string "במילים אחרות, הוא מרפא את\n"
+	.string "הפוקימון שלך.$"
 
 VioletGym_Text_Falkner_AfterFight:
-	.string "There are POKéMON GYMS in cities\n"
-	.string "and towns ahead.\p"
-	.string "You should test your skills at\n"
-	.string "these GYMS.\p"
-	.string "I'm going to train harder to\n"
-	.string "become the greatest bird master!$"
+	.string "בערים ובעיירות שבהמשך הדרך\n"
+	.string "יש מכוני פוקימון.\p"
+	.string "כדאי לך לבחון את הכישורים שלך\n"
+	.string "במכונים האלה.\p"
+	.string "ואני אתאמן קשה יותר כדי להיות\n"
+	.string "אמן הציפורים הגדול ביותר!$"
 
 VioletGym_Text_Falkner_Rematch:
 	.string "Congratulations on defeating\n"
@@ -114,52 +112,48 @@ VioletGym_Text_Falkner_RematchLoss:
 	.string "become the greatest bird master!$"
 
 VioletGym_Text_BirdKeeperRod_Seen:
-	.string "The keyword is guts!\p"
-	.string "Those here are training night and\n"
-	.string "day to become bird POKéMON masters.\p"
-	.string "Come on!$"
+	.string "מילת המפתח היא אומץ!\p"
+	.string "כולם כאן מתאמנים יומם ולילה כדי\n"
+	.string "להפוך לאמנים של פוקימוני ציפורים.\p"
+	.string "קדימה!$"
 
 VioletGym_Text_BirdKeeperRod_Beaten:
-	.string "Gaaah!$"
+	.string "אאאאח!$"
 
 VioletGym_Text_BirdKeeperRod_After:
-	.string "FALKNER's skills are for real!\p"
-	.string "Don't get cocky just because\n"
-	.string "you beat me!$"
+	.string "פלקנר מיומן באמת!\p"
+	.string "אל תתרברב רק כי ניצחת אותי!$"
 
 VioletGym_Text_BirdKeeperAbe_Seen:
-	.string "Let me see if you are good\n"
-	.string "enough to face FALKNER!$"
+	.string "נראה אם יש לך מה שצריך\n"
+	.string "כדי להתמודד מול פלקנר!$"
 
 VioletGym_Text_BirdKeeperAbe_Beaten:
-	.string "This can't be true!$"
+	.string "זה לא יכול להיות!$"
 
 VioletGym_Text_BirdKeeperAbe_After:
-	.string "This is pathetic, losing to some\n"
-	.string "rookie trainer…$"
+	.string "זה פתטי, להפסיד לאיזה מאמן טירון…$"
 
 VioletGym_Text_GymGuide_Intro:
-	.string "Hey! What's up? I'm no trainer,\n"
-	.string "but I can give some advice!\p"
-	.string "Believe me! If you believe, a\n"
-	.string "championship dream can come true.\p"
-	.string "You believe? Then listen.\p"
-	.string "FALKNER's ace is a bulky owl\n"
-	.string "that loves to eat BERRIES.\p"
-	.string "While it's not the strongest,\n"
-	.string "it can take a lot of hits.\p"
-	.string "You can hurt it with ELECTRIC \n"
-	.string "and ROCK-type moves, but watch out\l"
-	.string "for MUD-SLAP!\p"
-	.string "If you want more help, go visit the\n"
-	.string "POKéMON ACADEMY.\p"
-	.string "The students there really know\n"
-	.string "their stuff!$"
+	.string "היי! מה קורה? אני לא מאמן,\n"
+	.string "אבל אני יכול לתת כמה עצות!\p"
+	.string "תאמין לי! אם מאמינים,\n"
+	.string "חלום האליפות יכול להתגשם.\p"
+	.string "אתה מאמין? אז תקשיב.\p"
+	.string "הקלף המנצח של פלקנר הוא ינשוף\n"
+	.string "חסון שאוהב לאכול פירות.\p"
+	.string "הוא לא החזק ביותר,\n"
+	.string "אבל הוא יכול לספוג הרבה מכות.\p"
+	.string "אפשר לפגוע בו במהלכים מסוג חשמל\n"
+	.string "וסלע, אבל צריך להיזהר מסטירת בוץ!\p"
+	.string "אם צריך עוד עזרה, כדאי לבקר\n"
+	.string "באקדמיית הפוקימון.\p"
+	.string "התלמידים שם באמת יודעים\n"
+	.string "על מה הם מדברים!$"
 
 VioletGym_Text_GymGuide_Win:
-	.string "Nice battle! Keep it up,\n"
-	.string "and you'll be the CHAMP in no\l"
-	.string "time at all!$"
+	.string "קרב יפה! תמשיך ככה,\n"
+	.string "ותהיה האלוף תוך זמן קצר!$"
 
 VioletCity_Gym_EventScript_Statue::
 	lock
@@ -176,9 +170,9 @@ VioletCity_Gym_EventScript_Statue2::
 	end
 
 VioletCity_Gym_Text_GymStatue:
-	.string "VIOLET CITY POKéMON GYM$"
+	.string "מכון הפוקימון של העיר ויולט$"
 
 VioletCity_Gym_Text_GymStatueCertified:
-	.string "VIOLET CITY POKéMON GYM\p"
-	.string "FALKNER'S CERTIFIED TRAINERS:\n"
+	.string "מכון הפוקימון של העיר ויולט\p"
+	.string "המאמנים המוסמכים של פלקנר:\n"
 	.string "{PLAYER}$"

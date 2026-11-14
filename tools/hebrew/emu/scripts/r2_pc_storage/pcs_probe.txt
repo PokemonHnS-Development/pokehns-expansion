@@ -1,0 +1,5 @@
+# Probe: the base save's party, box 1 and ITEMS pocket
+start save:pcs_base
+include ../continue.txt
+boxprobe 0 1
+bagcursor 0 ITEM_NONE

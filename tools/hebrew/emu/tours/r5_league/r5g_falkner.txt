@@ -1,0 +1,8 @@
+# Falkner, Violet City Gym (9,4): VioletCity_Gym_EventScript_Falkner (data/maps/VioletCity_Gym_hns/scripts.inc:33-56).
+start saves/r5_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_VIOLET_GYM; clearflag FLAG_BADGE01_GET; clearflag FLAG_HIDE_JOHTO_GYM_LEADERS; end
+warpto MAP_VIOLET_CITY_GYM_HNS 9 5
+face UP
+snap fa_room
+include _leader_tail.txt

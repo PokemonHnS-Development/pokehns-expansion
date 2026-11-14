@@ -1,0 +1,23 @@
+# EXEGGUTOR-A on the Pokedex CRY page (src/pokedex_plus_hgss.c
+# PrintCryScreenSpeciesName, FONT_NORMAL, mirrored inside the x 81-142 gap).
+start saves/r2dex_all.sav
+include ../../continue.txt
+w8 @SB2+19@ 1
+w8 @SB2+18@ 0
+w16 @sLastSelectedPokemon@ 1B3
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap A 4
+waittaskx Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx Task_HandleEvolutionScreenInput 600
+tap RIGHT 4
+waittaskx Task_HandleCryScreenInput 600
+waitquiet
+snap rb_dex_cry

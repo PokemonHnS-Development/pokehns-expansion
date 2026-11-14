@@ -36,35 +36,32 @@ NewSinjoh_House1_EventScript_GiveWooperPaldea::
     end
 
 NewSinjoh_House1_Text_Looking4Celebi:
-    .string "Hey there, Trainer!\p"
-	.string "You came all the way from\n"
-	.string "NEW BARK TOWN?\p"
-	.string "I have a request for someone as\n"
-	.string "well traveled as you are.\l"
-	.string "You see, my favorite POKEMON in the\l"
-	.string "whole world just so happens to be\l"
-	.string "the mythical POKEMON known as CELEBI.\p"
-	.string "If you happen to have one, would\n"
-	.string "you mind showing it to me?$"
+    .string "היי, מאמן!\p"
+    .string "באת כל הדרך מהעיירה\n"
+    .string "ניו בארק?\p"
+    .string "יש לי בקשה למישהו\n"
+    .string "שטייל הרבה כמוך.\p"
+    .string "אתה מבין, הפוקימון שאני הכי אוהבת\n"
+    .string "בעולם הוא במקרה הפוקימון המיתי סלבי.\p"
+    .string "אם במקרה יש לך אחד, תוכל\n"
+    .string "להראות לי אותו?$"
 
 NewSinjoh_House1_Text_NicePokemonButNotCelebi:
-    .string "That's a very wonderful POKEMON\n"
-	.string "you have there but that's\l"
-	.string "not exactly what I was looking for..$"
+    .string "יש לך פוקימון נפלא מאוד, אבל\n"
+    .string "זה לא בדיוק מה שחיפשתי…$"
 
 NewSinjoh_House1_OffersWooper:
-    .string "That's it! That's a real living CELEBI!!\p"
-	.string "Thank you show much for bringing it\n"
-	.string "all the way up north for me to see.\p"
-    .string "Here, my girlfriend happened to\n"
-	.string "catch a few too many of these during\l"
-	.string "her trip to a far away region..\p"
-    .string "Please take this special WOOPER as\n"
-	.string "thanks, {PLAYER}.$"
+    .string "זה הוא! זה סלבי אמיתי וחי!!\p"
+    .string "תודה רבה שהבאת אותו\n"
+    .string "כל הדרך צפונה כדי שאראה אותו.\p"
+    .string "הנה, בת הזוג שלי תפסה במקרה\n"
+    .string "יותר מדי כאלה בטיול שלה לאזור רחוק…\p"
+    .string "בבקשה, קח את הוופר המיוחד הזה\n"
+    .string "כאות תודה, {PLAYER}.$"
 
 NewSinjoh_House1_Text_Decline:
-	.string "That's too bad. I really wanted\n"
-	.string "to see one.$"
+	.string "חבל. ממש רציתי\n"
+	.string "לראות אחד.$"
 
 NewSinjoh_House1_Text_TakeCareOfWooper:
     .string "Take good care of that WOOPER\n"
@@ -76,10 +73,10 @@ NewSinjoh_House1_EventScript_Elizabeth_AfterGift::
 	end
 
 NewSinjoh_House1_Text_GoodToSeeYouAgain:
-    .string "It's good to see you again,\n"
-	.string "{PLAYER}.\p"
-	.string "How have you been treating that\n"
-	.string "that WOOPER?$"
+    .string "טוב לראות אותך שוב,\n"
+    .string "{PLAYER}.\p"
+    .string "איך אתה מטפל\n"
+    .string "בוופר ההוא?$"
 
 NewSinjoh_House1_Bookshelf::
     lock
@@ -88,8 +85,8 @@ NewSinjoh_House1_Bookshelf::
 	end
 
 NewSinjoh_House1_Bookshelf_Text:
-    .string "It's a shelf packed full of\n"
-	.string "computer games and graphic novels!$"
+    .string "זה מדף עמוס במשחקי מחשב\n"
+    .string "ורומנים גרפיים!$"
 
 NewSinjoh_House1_Eevee::
     lock
@@ -102,4 +99,4 @@ NewSinjoh_House1_Eevee::
 	end
 
 NewSinjoh_House1_Text_Eevee_Cry:
-    .string "Vee Vee?$"
+    .string "וי וי?$"

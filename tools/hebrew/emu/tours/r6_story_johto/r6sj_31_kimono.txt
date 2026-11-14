@@ -1,0 +1,40 @@
+# Dance Theater, the five Kimono Girls (data/maps/EcruteakCity_Theater_hns/scripts.inc):
+# Trigger_PreBattleCutsceneTop (10,16) at VAR_ECRUTEAK_CITY_THEATER 5 -> LegendaryCutscene :683-689
+# (ZukiSeen), ZukiBattle YES/NO -> NO (LegendaryDenied); Zuki again (state 6) -> YES and the five
+# battles Zuki, Naoko, Miki, Sayo, Kuni (:690-711, trainerbattle_no_intro, totem boosts), BeatGauntlet
+# and the Ho-Oh branch (Clear Bell, VAR_LUGIA_OR_HOOH 2); then BeatGauntlet again with
+# VAR_LUGIA_OR_HOOH 1 for the Lugia branch (Tidal Bell). Ladder 4 rewound to THEATER 5.
+start saves/r6sj_ladder4_league.sav
+include _base.txt
+include _mewtwo.txt
+ev setvar VAR_LUGIA_OR_HOOH, 2; setvar VAR_ECRUTEAK_CITY_THEATER, 5; setflag FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS; clearflag FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS; clearflag FLAG_HIDE_ECRUTEAK_CITY_THEATER_ZUKI; cleartrainerflag TRAINER_ZUKI_HNS; cleartrainerflag TRAINER_NAOKO_HNS; cleartrainerflag TRAINER_MIKI_HNS; cleartrainerflag TRAINER_SAYO_HNS; cleartrainerflag TRAINER_KUNI_HNS; removeitem ITEM_CLEAR_BELL; removeitem ITEM_TIDAL_BELL; setvar VAR_COMPLETED_HO_OH, 0; end
+warpto MAP_ECRUTEAK_CITY_THEATER_HNS 10 17
+snap km_room
+stepto UP
+scene km 40000 40
+yesno km_yn NO
+scene km_no 10000
+tap A 4
+scene km2 10000
+yesno km2_yn YES
+scene zuki_pre 20000
+bwalk zuki_intro input:HandleInputChooseAction
+bwin zuki_win
+scene naoko_pre 20000
+bwalk naoko_intro input:HandleInputChooseAction
+bwin naoko_win
+scene miki_pre 20000
+bwalk miki_intro input:HandleInputChooseAction
+bwin miki_win
+scene sayo_pre 20000
+bwalk sayo_intro input:HandleInputChooseAction
+bwin sayo_win
+scene kuni_pre 20000
+bwalk kuni_intro input:HandleInputChooseAction
+bwin kuni_win
+scene bell 60000 40
+snap bell_end
+ev setvar VAR_LUGIA_OR_HOOH, 1; end
+evstart goto EcruteakCity_Theater_EventScript_BeatGauntlet
+scene tidal 60000 40
+snap tidal_end

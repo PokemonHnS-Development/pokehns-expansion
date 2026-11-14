@@ -1,0 +1,234 @@
+# Key items from the bag and through SELECT (src/item_use.c): the DOWSING MACHINE (classic
+# Itemfinder, I_ORAS_DOWSING_FLAG 0) with a hidden item in range (beeps, the player turns toward it,
+# sText_ItemFinderNearby :86, Task_HiddenItemNearby :689) and standing on it (the spin,
+# sText_ItemFinderOnTop :87, Task_StandingOnHiddenItem :695), then the pickup; the GB PLAYER
+# on/off (Task_UseGBPlayer :1588, gText_GBPlayerOn/Off src/strings.c:1279-1280) from the bag and
+# through SELECT; the BICYCLE on Cycling Road (FLAG_SYS_CYCLING_ROAD, ItemUseOutOfBattle_Bike
+# :275, sText_CantDismountBike :85) from the bag and through SELECT, then SELECT indoors
+# (gText_DadsAdvice src/strings.c:176); the ESCAPE ROPE in Union Cave (ItemUseOnFieldCB_EscapeRope
+# :1111, gText_PlayerUsedVar2 src/strings.c:180).
+# Start: saves/r3fi_base.sav (= menuA_base). KEY pocket: 1 GB PLAYER, 23 BICYCLE, 29 DOWSING
+# MACHINE; ITEMS pocket: 37 ESCAPE ROPE. Route 30 hidden POTION at (24,2)
+# (data/maps/Route30_hns/events.inc:46). Route 33 (27,17) is the Union Cave 1F door.
+# The bag's key-item context grid (USE | REGISTER) is entered with ROWNEXT: RIGHT on English, LEFT on
+# a Hebrew build, whose mirrored grid draws REGISTER on the left (src/item_menu.c
+# Task_ItemContext_MultipleRows). rc5 predates that fix and reached REGISTER with RIGHT.
+start saves/r3fi_base.sav
+include ../../scripts/continue.txt
+clearflag FLAG_HIDDEN_ITEM_ROUTE30_POTION_1
+clearflag FLAG_SYS_GBS_ENABLED
+clearflag FLAG_SYS_CYCLING_ROAD
+
+# DOWSING MACHINE four tiles south of the hidden POTION
+warpto MAP_ROUTE30_HNS 24 6
+waitctl 900
+face DOWN
+snap r3fi_ki_01_route30
+w32 @gMenuCallback@ 0
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 3
+w16 @gBagPosition+1E@ 1A
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap r3fi_ki_02_bag_dowsing
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap r3fi_ki_03_key_context
+tap A 4                                   # USE
+waitcb2x CB2_Overworld 900
+waittaskx Task_HiddenItemNearby 900
+waitquiet
+snap r3fi_ki_04_dowsing_turned
+waitkey 900
+pages r3fi_ki_05_dowsing_near 4
+waitctl 900
+
+# Standing on the POTION: the spin, then "shaking wildly"
+warpto MAP_ROUTE30_HNS 24 2
+waitctl 900
+w32 @gMenuCallback@ 0
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 3
+w16 @gBagPosition+1E@ 1A
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waitcb2x CB2_Overworld 900
+waittaskx Task_StandingOnHiddenItem 900
+6 -
+snap r3fi_ki_06_dowsing_spin
+waitkey 900
+pages r3fi_ki_07_dowsing_ontop 4
+waitctl 900
+
+# Pick it up: a hidden item is checked from the tile in front (src/field_control_avatar.c:488).
+# The follower Pokemon always takes the player's previous tile, so the player walks round to
+# (24,1) through (23,2) (22,2) (22,1) (23,1) and faces south with the follower behind.
+go LEFT 2
+go UP 1
+go RIGHT 2
+face DOWN
+talk r3fi_ki_08_found 6
+waitctl 900 B
+expectflag FLAG_HIDDEN_ITEM_ROUTE30_POTION_1 1
+
+# GB PLAYER: USE from the bag twice (on, off), then REGISTER it (tap) and SELECT twice
+w32 @gMenuCallback@ 0
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 1
+w16 @gBagPosition+1E@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap r3fi_ki_09_bag_gbplayer
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE: on
+waitkey 900
+snap r3fi_ki_10_gbplayer_on
+tap A 4
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE: off
+waitkey 900
+snap r3fi_ki_11_gbplayer_off
+tap A 4
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4
+waitquiet
+snap r3fi_ki_12_context_register
+tap A 4                                   # REGISTER: tap / hold submenu
+waittaskx Task_ItemContext_SingleRow 120
+waitquiet
+snap r3fi_ki_13_register_how
+tap A 4                                   # tap (SELECT)
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap r3fi_ki_14_registered
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+tap SELECT 10                             # on, in the field box
+waitkey 900
+snap r3fi_ki_15_select_gbplayer_on
+tap A 4
+waitctl 900
+tap SELECT 10                             # off
+waitkey 900
+snap r3fi_ki_16_select_gbplayer_off
+tap A 4
+waitctl 900
+
+# BICYCLE on Cycling Road (Route 17): get on from the bag, set the gate's flag, then USE and SELECT
+warpto MAP_ROUTE17_HNS 14 3
+waitctl 900
+w32 @gMenuCallback@ 0
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 3
+w16 @gBagPosition+1E@ 14
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap r3fi_ki_17_bag_bicycle
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE: get on
+waitcb2x CB2_Overworld 900
+waitctl 900
+snap r3fi_ki_18_on_bike
+setflag FLAG_SYS_CYCLING_ROAD
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE: can't dismount
+waitkey 900
+snap r3fi_ki_19_bag_cant_dismount
+tap A 4
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4                                   # REGISTER
+waittaskx Task_ItemContext_SingleRow 120
+waitquiet
+tap A 4                                   # tap (SELECT)
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+tap SELECT 10
+waitkey 900
+snap r3fi_ki_20_select_cant_dismount
+tap A 4
+waitctl 900
+clearflag FLAG_SYS_CYCLING_ROAD
+tap SELECT 10                             # get off
+waitctl 900
+40 -
+
+# Indoors (Cherrygrove Pokemon Center): SELECT with the BICYCLE registered -> ELM's advice
+warpto MAP_CHERRYGROVE_CITY_POKEMON_CENTER_HNS 7 4
+waitctl 900
+tap SELECT 10
+waitkey 900
+pages r3fi_ki_21_select_elm_advice 4
+waitctl 900
+
+# ESCAPE ROPE: walk into Union Cave 1F from Route 33 (sets the escape warp), USE from the bag
+warpto MAP_ROUTE33_HNS 27 18
+waitctl 900
+go UP 1
+waitctl 900
+snap r3fi_ki_22_union_cave
+w32 @gMenuCallback@ 0
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 22
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap r3fi_ki_23_bag_rope
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap r3fi_ki_24_items_context
+tap A 4                                   # USE
+waitcb2x CB2_Overworld 900
+waitkey 900
+snap r3fi_ki_25_rope_used
+tap A 4
+waitctl 1200
+snap r3fi_ki_26_escaped

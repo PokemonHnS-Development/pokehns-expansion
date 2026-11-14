@@ -1,0 +1,6 @@
+# Story state (not a tour): s1_newbark.inc up to the aide's Potion (VAR_NEWBARKTOWN_LABSTATE 3,
+# VAR_NEWBARK_TOWN_STATE 3, starter Cyndaquil = VAR_STARTER_MON 1). Ladder 1 has no party, so a
+# Lv 100 Mewtwo (the r6_league battle Pokemon) is given instead of the starter.
+include _s1_clock_mom.txt
+ev setvar VAR_NEWBARKTOWN_LABSTATE, 1; setvar VAR_STARTER_MON, 1; setflag FLAG_HIDE_CYNDAQUILBALL; setflag FLAG_SYS_POKEMON_GET; setvar VAR_NEWBARKTOWN_LABSTATE, 2; setvar VAR_NEWBARK_TOWN_STATE, 3; setflag FLAG_ENABLE_PROF_BIRCH_MATCH_CALL; additem ITEM_POTION; setflag FLAG_RECEIVED_FIRST_POTION; setvar VAR_NEWBARKTOWN_LABSTATE, 3; end
+ev givemon SPECIES_MEWTWO, 100, move1=MOVE_PSYSTRIKE, move2=MOVE_ICE_BEAM, move3=MOVE_RECOVER, move4=MOVE_AURA_SPHERE; end

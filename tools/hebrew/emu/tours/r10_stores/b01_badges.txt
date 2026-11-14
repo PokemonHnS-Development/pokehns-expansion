@@ -1,0 +1,58 @@
+# Violet Mart badge list ('pokemart 0') with 0..8 badges.
+start saves/st_l6.sav
+include _base.txt
+visit MAP_VIOLET_CITY_MART_HNS
+setbadges 0
+clerk 2 3 b0_hi
+buyopen b0_buy
+listshots b0_list
+buyclose b0_menu
+shopquit b0_bye
+setbadges 1
+clerk 2 3 b1_hi
+buyopen b1_buy
+listshots b1_list
+buyclose b1_menu
+shopquit b1_bye
+setbadges 2
+clerk 2 3 b2_hi
+buyopen b2_buy
+listshots b2_list
+buyclose b2_menu
+shopquit b2_bye
+setbadges 3
+clerk 2 3 b3_hi
+buyopen b3_buy
+listshots b3_list
+buyclose b3_menu
+shopquit b3_bye
+setbadges 4
+clerk 2 3 b4_hi
+buyopen b4_buy
+listshots b4_list
+buyclose b4_menu
+shopquit b4_bye
+setbadges 5
+clerk 2 3 b5_hi
+buyopen b5_buy
+listshots b5_list
+buyclose b5_menu
+shopquit b5_bye
+setbadges 6
+clerk 2 3 b6_hi
+buyopen b6_buy
+listshots b6_list
+buyclose b6_menu
+shopquit b6_bye
+setbadges 7
+clerk 2 3 b7_hi
+buyopen b7_buy
+listshots b7_list
+buyclose b7_menu
+shopquit b7_bye
+setbadges 8
+clerk 2 3 b8_hi
+buyopen b8_buy
+listshots b8_list
+buyclose b8_menu
+shopquit b8_bye

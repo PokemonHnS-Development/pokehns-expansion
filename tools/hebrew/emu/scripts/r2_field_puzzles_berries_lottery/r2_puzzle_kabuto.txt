@@ -1,0 +1,104 @@
+# Ruins of Alph sliding puzzle, Kabuto (src/sliding_puzzle.c, layout src/data/sliding_puzzles.h:17-23).
+# Walks every instruction-bar state (src/sliding_puzzle.c:410-424): pick up, no selection,
+# place, rotate only, swap; solves the puzzle (4 movable tiles: 6 -> (1,2) L, 11 -> (2,3) RR,
+# 9 -> (2,1) L, 2 -> (0,2) R; rows/cols 0-based, cursor starts at (0,0)), the solved glow and
+# 'continue' bar, the camera shake, the hole, the fall to B1F, then the solved view
+# (FLAG_COMPLETED_KABUTO_PUZZLE set -> VAR_0x8005 TRUE) and the receptionist's two lines.
+start saves/r2fpb_postgame.sav
+include ../continue.txt
+clearflag FLAG_COMPLETED_KABUTO_PUZZLE
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 21 5
+face UP
+snap pzk_00_room
+tap A 0
+waitcb2x sliding_puzzle:CB2_SlidingPuzzle 900
+waittaskx sliding_puzzle:Task_SlidingPuzzle_HandleInput 900
+waitquiet
+frames 20
+snap pzk_01_pickup                 # cursor (0,0) on tile 6
+press RIGHT                        # (0,1) immovable tile 1
+frames 20
+snap pzk_02_noselect
+press LEFT
+press A                            # hold tile 6
+frames 10
+snap pzk_03_place
+tap L 40                           # 90 -> 0
+snap pzk_04_rotated
+press RIGHT                        # over immovable tile 1 while holding
+frames 10
+snap pzk_05_rotateonly
+press RIGHT
+press DOWN                         # (1,2)
+press A                            # place 6
+frames 10
+snap pzk_06_placed6
+press RIGHT
+press RIGHT
+press RIGHT                        # (1,5) tile 11
+press A                            # hold 11 (180)
+tap R 40
+tap R 40                           # 180 -> 0
+press DOWN                         # (2,5) empty
+press DOWN                         # (3,5) tile 9
+frames 10
+snap pzk_07_swap
+press A                            # swap: hold 9 (90), 11 stays at (3,5)
+tap L 40                           # 90 -> 0
+press UP
+press LEFT
+press LEFT
+press LEFT
+press LEFT                         # (2,1)
+press A                            # place 9
+press DOWN                         # (3,1)
+press RIGHT
+press RIGHT
+press RIGHT
+press RIGHT                        # (3,5) tile 11
+press A                            # hold 11
+press UP
+press LEFT
+press LEFT                         # (2,3)
+press A                            # place 11
+press DOWN                         # (3,3)
+press LEFT
+press LEFT
+press LEFT                         # (3,0) tile 2
+press A                            # hold 2 (270)
+tap R 40                           # 270 -> 0
+frames 4
+snap pzk_08_last_tile
+press UP
+press UP
+press UP                           # (0,0)
+press RIGHT
+press RIGHT                        # (0,2)
+tap A 0                            # place 2: solved
+burst pzk_09_glow 8 20
+waittaskx sliding_puzzle:Task_SlidingPuzzle_Solved 900
+waitquiet
+snap pzk_10_solved_continue
+tap A 0                            # back to the field: shake, hole, fall
+waitcb2x CB2_Overworld 900
+burst pzk_11_shake 50 6
+waitkey 1200                       # B1F greets with a message
+snap pzk_12_b1f_msg
+waitctl 1200 B
+snap pzk_12_b1f
+probe
+# solved view: the puzzle again with FLAG_COMPLETED_KABUTO_PUZZLE set
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 21 6
+snap pzk_13_room_hole
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 24 6
+face UP
+talk pzk_14_receptionist2 6
+waitctl 600 B
+evstart setvar VAR_0x8004, SLIDING_PUZZLE_KABUTO; setvar VAR_0x8005, TRUE; special DoSlidingPuzzle; waitstate; end
+waitcb2x sliding_puzzle:CB2_SlidingPuzzle 900
+waittaskx sliding_puzzle:Task_SlidingPuzzle_Solved 900
+waitquiet
+snap pzk_15_solved_view
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900

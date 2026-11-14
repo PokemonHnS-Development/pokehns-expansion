@@ -1,0 +1,2 @@
+# The harness runner is built locally from emu/hnsrun.c (see emu/README.md).
+emu/hnsrun

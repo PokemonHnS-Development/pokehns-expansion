@@ -154,14 +154,14 @@ FuchsiaCity_Text_WheresSara::
 	.string "I said I'd meet her here.$"
 
 FuchsiaCity_Text_ItemBallInThere::
-	.string "That item ball in there…\n"
-	.string "Were you wanting that?\p"
-	.string "Me, too!\n"
-	.string "…Huh? That's a POKéMON?$"
+	.string "הפוכדור שם בפנים…\n"
+	.string "רצית אותו?\p"
+	.string "גם אני!\n"
+	.string "…מה? זה פוקימון?$"
 
 FuchsiaCity_Text_CitySign::
-	.string "FUCHSIA CITY\n"
-	.string "Behold! It's Passion Pink!$"
+	.string "העיר פושיה\n"
+	.string "הביטו! זהו ורוד התשוקה!$"
 
 FuchsiaCity_Text_SafariZoneSign::
 	.string "POKéMON PARADISE\n"
@@ -181,9 +181,9 @@ FuchsiaCity_Text_SafariZoneOfficeSign::
 	.string "SAFARI ZONE OFFICE$"
 
 FuchsiaCity_Text_GymSign::
-	.string "FUCHSIA CITY POKéMON GYM\n"
-	.string "LEADER: KOGA\l"
-	.string "The Poisonous Ninja Master$"
+	.string "מכון הפוקימון של העיר פושיה\n"
+	.string "מנהיג: קוגה\p"
+	.string "מאסטר הנינג'ה הרעיל$"
 
 FuchsiaCity_Text_ChanseySign::
 	.string "Name: CHANSEY\n"

@@ -1,0 +1,125 @@
+# Challenge rules in the field on save chal_a (level cap NORMAL, 0 badges -> cap 11,
+# src/caps.c:19-85; Escape Rope/Dig switched off; Infinite Rare Candy ON):
+#  1. the bedroom PC: ITEM STORAGE > WITHDRAW lists the Infinite Rare Candies the new game
+#     put there (src/player_pc.c:356-372);
+#  2. a Rare Candy on a Lv 11 Pokemon at the cap: no effect (src/party_menu.c:5892-5905);
+#  3. Union Cave 1F (escaping allowed): Escape Rope from the bag and Dig from the party menu
+#     are refused (CanUseDigOrEscapeRopeOnCurMap, src/item_use.c:1122-1135);
+#  4. a wild battle won at the cap: 0 EXP (src/battle_script_commands.c:4309-4316).
+start save:chal_a
+include _chr_base.txt
+ev givemon SPECIES_CYNDAQUIL, 11, move1=MOVE_EMBER, move2=MOVE_DIG, move3=MOVE_TACKLE; additem ITEM_RARE_CANDY, 3; additem ITEM_ESCAPE_ROPE, 2; end
+
+# ---- 1. bedroom PC
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 1 2
+face UP
+talk chr_l1_pc_boot 10 A PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+snap chr_l1_pc_menu
+tap A 0                                   # ITEM STORAGE
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+snap chr_l1_pc_items_menu
+tap A 0                                   # WITHDRAW ITEM
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap chr_l1_pc_withdraw_01
+press DOWN
+snap chr_l1_pc_withdraw_02
+press DOWN
+snap chr_l1_pc_withdraw_03
+press DOWN
+snap chr_l1_pc_withdraw_04
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+press B
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press B
+waitctl 600 B
+
+# ---- 2. Rare Candy at the level cap (MEDICINE pocket, Rare Candy first)
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 0
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap chr_l2_bag_candy
+tap A 4
+waitquiet
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap chr_l2_party
+tap A 4
+waitkey 600
+snap chr_l2_candy_no_effect
+tap A 4                                   # back to the bag
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitctl 600 B
+
+# ---- 3. Union Cave: Escape Rope (ITEMS pocket) and Dig (party menu) refused
+warptoloose MAP_UNION_CAVE_1F_HNS 32 9
+waitctl 600
+90 -                                      # the map name pop-up slides away
+w32 @gMenuCallback@ 0                     # the start menu closed by B leaves a stale callback
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 0
+w16 @gBagPosition+14@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap chr_l3_bag_rope
+tap A 4
+waitquiet
+snap chr_l3_rope_menu
+tap A 4                                   # USE
+talk chr_l3_rope_refused 6 - Task_BagMenu_HandleInput
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitctl 600 B
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap chr_l3_party_submenu
+tap DOWN 4                                # SUMMARY, DIG, ITEM, FOLLOWER, CANCEL
+waitquiet
+snap chr_l3_party_submenu_dig
+tap A 4                                   # DIG
+waitquiet
+20 -
+snap chr_l3_dig_refused
+tap A 4
+waitquiet
+snap chr_l3_dig_after
+tap B 4
+waitquiet
+tap B 4
+waitctl 600 B
+
+# ---- 4. a wild battle won at the cap: 0 EXP
+pinrng
+evstart setwildbattle SPECIES_SENTRET, 2; callnative SetNuzlockeChecks; dowildbattle; end
+waitbattle
+bwalk chr_l4_intro input:HandleInputChooseAction
+baction FIGHT
+waitbinput HandleInputChooseMove
+snap chr_l4_moves
+bmove 0                                   # Ember
+bwalk chr_l4_turn free|input:HandleInputChooseAction
+snap chr_l4_after

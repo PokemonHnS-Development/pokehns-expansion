@@ -1,0 +1,6 @@
+# Dojo VIP base include (not a tour): every leader shown (all FLAG_HIDE_DOJO_* clear), then the
+# player in the VIP room next to the nurse.
+include _base.txt
+ev clearflag FLAG_HIDE_DOJO_MISTY; clearflag FLAG_HIDE_DOJO_BROCK; clearflag FLAG_HIDE_DOJO_SURGE; clearflag FLAG_HIDE_DOJO_ERIKA; clearflag FLAG_HIDE_DOJO_JANINE; clearflag FLAG_HIDE_DOJO_SABRINA; clearflag FLAG_HIDE_DOJO_BLAINE; clearflag FLAG_HIDE_DOJO_BLUE; clearflag FLAG_HIDE_DOJO_WHITNEY; clearflag FLAG_HIDE_DOJO_FALKNER; clearflag FLAG_HIDE_DOJO_BUGSY; clearflag FLAG_HIDE_DOJO_MORTY; clearflag FLAG_HIDE_DOJO_JASMINE; clearflag FLAG_HIDE_DOJO_CHUCK; clearflag FLAG_HIDE_DOJO_CLAIR; clearflag FLAG_HIDE_DOJO_PRYCE; end
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 22 7
+snap vip_room

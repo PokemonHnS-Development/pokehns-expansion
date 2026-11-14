@@ -1,0 +1,22 @@
+# Mt. Moon gift shop (MtMoon_Shop_hns/scripts.inc:8-28).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_MT_MOON_SHOP_HNS 2 6
+evstart goto MtMoon_Shop_EventScript_Clerk
+talk m07_mtmoon_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m07_mtmoon_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m07_mtmoon
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m07_mtmoon_bye 10 -
+waitctl 900

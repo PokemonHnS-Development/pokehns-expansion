@@ -1,0 +1,23 @@
+# r6 items: Std_ObtainItem windows (giveitem ITEM, QTY) for the items NPCs give in *_hns scripts, 6.
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+gift g_pass ITEM_PASS 1
+gift g_tm_skill_swap ITEM_TM_SKILL_SWAP 1
+gift g_tm_psychic ITEM_TM_PSYCHIC 1
+gift g_up_grade ITEM_UP_GRADE 1
+gift g_tm_explosion ITEM_TM_EXPLOSION 1
+gift g_tm_overheat ITEM_TM_OVERHEAT 1
+gift g_stone_plate ITEM_STONE_PLATE 1
+gift g_tm_rain_dance ITEM_TM_RAIN_DANCE 1
+gift g_toxic_plate ITEM_TOXIC_PLATE 1
+gift g_fist_plate ITEM_FIST_PLATE 1
+gift g_hm_flash ITEM_HM_FLASH 1
+gift g_tm_safeguard ITEM_TM_SAFEGUARD 1
+gift g_rare_candy ITEM_RARE_CANDY 1
+gift g_lost_item ITEM_LOST_ITEM 1
+gift g_thunder_stone ITEM_THUNDER_STONE 1
+gift g_tm_shock_wave ITEM_TM_SHOCK_WAVE 1
+gift g_tm_roost ITEM_TM_ROOST 1
+gift g_tm_trick_room ITEM_TM_TRICK_ROOM 1
+gift g_tm_dream_eater ITEM_TM_DREAM_EATER 1
+gift g_tm_x_scissor ITEM_TM_X_SCISSOR 1

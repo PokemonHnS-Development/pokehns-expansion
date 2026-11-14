@@ -334,210 +334,210 @@ static const u16 sTextPal[] = INCBIN_U16("graphics/interface/option_menu_text_cu
 // =============================================================================
 
 static const u8 *const sChoices_OffOn[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("ON"),
+    COMPOUND_STRING("כבוי"),
+    COMPOUND_STRING("פעיל"),
 };
 
 static const u8 *const sChoices_OnOff[] = {
-    COMPOUND_STRING("ON"),
-    COMPOUND_STRING("OFF"),
+    COMPOUND_STRING("פעיל"),
+    COMPOUND_STRING("כבוי"),
 };
 
 static const u8 *const sChoices_Gamemode[] = {
-    COMPOUND_STRING("RECOMMENDED"),
-    COMPOUND_STRING("CUSTOM"),
+    COMPOUND_STRING("מומלץ"),
+    COMPOUND_STRING("מותאם אישית"),
 };
 
 static const u8 *const sChoices_OriginalModern[] = {
-    COMPOUND_STRING("ORIGINAL"),
-    COMPOUND_STRING("MODERN"),
+    COMPOUND_STRING("מקורי"),
+    COMPOUND_STRING("מודרני"),
 };
 
-static const u8 sText_TopBar_Left[]   = _("{L_BUTTON}PREVIOUS");
-static const u8 sText_TopBar_Right[]  = _("{R_BUTTON}NEXT");
-static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}SAVE");
-static const u8 sText_TopBar_Cancel[] = _("{B_BUTTON}CANCEL");
+static const u8 sText_TopBar_Left[]   = _("{L_BUTTON}הקודם");
+static const u8 sText_TopBar_Right[]  = _("{R_BUTTON}הבא");
+static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}שמור");
+static const u8 sText_TopBar_Cancel[] = _("{B_BUTTON}ביטול");
 
 // =============================================================================
 // Tab item tables — skeleton placeholders
 // =============================================================================
 
 static const u8 *const sDesc_Gamemode[] = {
-    COMPOUND_STRING("Recommended settings."),
-    COMPOUND_STRING("Choose your own rules."),
+    COMPOUND_STRING("הגדרות מומלצות."),
+    COMPOUND_STRING("בחירת חוקים משלך."),
 };
 static const u8 *const sDesc_ModernMoves[] = {
-    COMPOUND_STRING("Generation 3 LEARNSETS and EGG\n MOVES with no changes."),
-    COMPOUND_STRING("Generation 7 LEARNSETS and EGG\n MOVES + minor changes."),
+    COMPOUND_STRING("רשימות מהלכים ומהלכי ביצה\nמדור 3, ללא שינויים."),
+    COMPOUND_STRING("רשימות מהלכים ומהלכי ביצה\nמדור 7, עם שינויים קלים."),
 };
 static const u8 *const sDesc_Synchronize[] = {
-    COMPOUND_STRING("SYNCHRONIZE works as in GEN III.\n50% chance to copy nature."),
-    COMPOUND_STRING("SYNCHRONIZE works as in GEN VIII+.\n100% chance to copy nature."),
+    COMPOUND_STRING("היכולת סנכרון פועלת כמו בדור 3.\nסיכוי של 50% להעתיק את האופי."),
+    COMPOUND_STRING("היכולת סנכרון פועלת כמו בדור 8 ומעלה.\nסיכוי של 100% להעתיק את האופי."),
 };
 static const u8 *const sDesc_Sturdy[] = {
-    COMPOUND_STRING("STURDY works as in GEN III. Only\nnegates OHKO moves (GUILLOTINE, etc.)"),
-    COMPOUND_STRING("STURDY works as in GEN V+.\n{PKMN} survive lethal hits with 1HP."),
+    COMPOUND_STRING("היכולת איתן פועלת כמו בדור 3. מבטלת\nרק מהלכי חיסול מיידי (”גיליוטינה” וכו')."),
+    COMPOUND_STRING("היכולת איתן פועלת כמו בדור 5 ומעלה.\nפוקימונים שורדים מכה קטלנית עם 1 נ”ח."),
 };
 static const u8 *const sDesc_NewCitrus[] = {
-    COMPOUND_STRING("SITRUS BERRY restores 30HP.\nSame as GEN III."),
-    COMPOUND_STRING("SITRUS BERRY restores 25% of\ntotal HP. Same as GEN IV and up."),
+    COMPOUND_STRING("פירות סיטרוס משקמים 30 נ”ח.\nכמו בדור 3."),
+    COMPOUND_STRING("פירות סיטרוס משקמים 25%\nמסך הנ”ח. כמו בדור 4 ומעלה."),
 };
 static const u8 *const sDesc_FairyTypes[] = {
-    COMPOUND_STRING("FAIRY TYPE isn't added to {PKMN}\nthat got it in GEN VI."),
-    COMPOUND_STRING("FAIRY TYPE is added / changed to\ncertain {PKMN}, as in GEN VI."),
+    COMPOUND_STRING("סוג פיה לא מתווסף לפוקימונים\nשקיבלו אותו בדור 6."),
+    COMPOUND_STRING("סוג פיה מתווסף לפוקימונים מסוימים\nאו מחליף סוג קיים, כמו בדור 6."),
 };
 static const u8 *const sDesc_LegAbilities[] = {
-    COMPOUND_STRING("PRESSURE stays as the main\nability of some legendaries."),
-    COMPOUND_STRING("Legendaries have PRESSURE changed\nfor a better ability."),
+    COMPOUND_STRING("היכולת לחץ נשארת היכולת העיקרית\nשל חלק מהפוקימונים האגדיים."),
+    COMPOUND_STRING("אצל האגדיים, היכולת לחץ מוחלפת\nביכולת טובה יותר."),
 };
 static const u8 *const sDesc_InfiniteTMs[] = {
-    COMPOUND_STRING("TMs are not reusable.\nLike in the original."),
-    COMPOUND_STRING("TMs are reusable."),
+    COMPOUND_STRING("אי אפשר להשתמש שוב במ”מ.\nכמו במקור."),
+    COMPOUND_STRING("אפשר להשתמש שוב ושוב במ”מ."),
 };
 static const u8 *const sDesc_Mints[] = {
-    COMPOUND_STRING("Mints are not available ingame until\nfinishing the game."),
-    COMPOUND_STRING("Mints can be bought at the\nFLOWER SHOP after the 3rd badge."),
+    COMPOUND_STRING("פריטי הנענע זמינים רק\nאחרי סיום המשחק."),
+    COMPOUND_STRING("אפשר לקנות פריטי נענע\nבחנות הפרחים אחרי קבלת 3 תגים."),
 };
 static const u8 *const sDesc_SurvivePoison[] = {
-    COMPOUND_STRING("Your {PKMN} will faint if they are\nPOISONED."),
-    COMPOUND_STRING("Your {PKMN} will survive the POISON\nstatus with 1HP."),
+    COMPOUND_STRING("הפוקימונים שלך עלולים להתעלף\nמהרעלה."),
+    COMPOUND_STRING("הפוקימונים שלך ישרדו\nאת ההרעלה עם 1 נ”ח."),
 };
 static const u8 *const sDesc_Split[] = {
-    COMPOUND_STRING("PHYSICAL and SPECIAL MOVES\ndepend on the {PKMN} TYPE."),
-    COMPOUND_STRING("PHYSICAL and SPECIAL MOVES\nare MOVE specific."),
+    COMPOUND_STRING("חלוקת המהלכים לפיזיים ולמיוחדים\nנקבעת לפי סוג המהלך."),
+    COMPOUND_STRING("כל מהלך מוגדר בנפרד\nכפיזי או כמיוחד."),
 };
 static const u8 *const sChoices_Gen3Gen7[] = {
-    COMPOUND_STRING("GEN 3"),
-    COMPOUND_STRING("GEN 7"),
+    COMPOUND_STRING("דור 3"),
+    COMPOUND_STRING("דור 7"),
 };
 static const u8 *const sChoices_Gen3Gen1[] = {
-    COMPOUND_STRING("GEN 3"),
-    COMPOUND_STRING("GEN 1"),
+    COMPOUND_STRING("דור 3"),
+    COMPOUND_STRING("דור 1"),
 };
 static const u8 *const sDesc_GenOneRecharge[] = {
-    COMPOUND_STRING("RECHARGE MOVES like HYPER BEAM will\nalways need to recharge after use."),
-    COMPOUND_STRING("If a RECHARGE MOVE KO's the opponent,\nno recharge turn is needed."),
+    COMPOUND_STRING("מהלכי טעינה כמו ”קרן על” תמיד\nדורשים טעינה מחדש אחרי השימוש."),
+    COMPOUND_STRING("אם מהלך טעינה מעלף את היריב,\nאין צורך בתור טעינה."),
 };
 static const u8 *const sDesc_Next[] = {
-    COMPOUND_STRING("Continue to the next page."),
+    COMPOUND_STRING("המשך לעמוד הבא."),
 };
 
 static const struct ChallengeMenuItem sTabItems_Mode[] = {
     [ITEM_MODE_GAMEMODE] = {
-        .name         = COMPOUND_STRING("GAMEMODE"),
+        .name         = COMPOUND_STRING("מצב משחק"),
         .descriptions = sDesc_Gamemode,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gamemode,
     },
     [ITEM_MODE_MODERN_MOVES] = {
-        .name         = COMPOUND_STRING("{PKMN} MOVEPOOL"),
+        .name         = COMPOUND_STRING("מאגר מהלכים"),
         .descriptions = sDesc_ModernMoves,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gen3Gen7,
     },
     [ITEM_MODE_SYNCHRONIZE] = {
-        .name         = COMPOUND_STRING("SYNCHRONIZE"),
+        .name         = COMPOUND_STRING("סנכרון"),
         .descriptions = sDesc_Synchronize,
         .numChoices   = 2,
         .choiceNames  = sChoices_OriginalModern,
     },
     [ITEM_MODE_STURDY] = {
-        .name         = COMPOUND_STRING("STURDY"),
+        .name         = COMPOUND_STRING("איתן"),
         .descriptions = sDesc_Sturdy,
         .numChoices   = 2,
         .choiceNames  = sChoices_OriginalModern,
     },
     [ITEM_MODE_NEW_CITRUS] = {
-        .name         = COMPOUND_STRING("SITRUS BERRY"),
+        .name         = COMPOUND_STRING("פירות סיטרוס"),
         .descriptions = sDesc_NewCitrus,
         .numChoices   = 2,
         .choiceNames  = sChoices_OriginalModern,
     },
     [ITEM_MODE_FAIRY_TYPES] = {
-        .name         = COMPOUND_STRING("ADD FAIRY TYPE"),
+        .name         = COMPOUND_STRING("הוספת סוג פיה"),
         .descriptions = sDesc_FairyTypes,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_LEGENDARY_ABILITIES] = {
-        .name         = COMPOUND_STRING("LEGEN. ABILITIES"),
+        .name         = COMPOUND_STRING("יכולות אגדיים"),
         .descriptions = sDesc_LegAbilities,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_INFINITE_TMS] = {
-        .name         = COMPOUND_STRING("REUSABLE TMS"),
+        .name         = COMPOUND_STRING("מ”מ רב-פעמיים"),
         .descriptions = sDesc_InfiniteTMs,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_MINTS] = {
-        .name         = COMPOUND_STRING("NATURE MINTS"),
+        .name         = COMPOUND_STRING("נענע אופי"),
         .descriptions = sDesc_Mints,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_SURVIVE_POISON] = {
-        .name         = COMPOUND_STRING("SURVIVE POISON"),
+        .name         = COMPOUND_STRING("הישרדות מרעל"),
         .descriptions = sDesc_SurvivePoison,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_SPLIT] = {
-        .name         = COMPOUND_STRING("PHYS/SP SPLIT"),
+        .name         = COMPOUND_STRING("פיצול פיזי/מיוחד"),
         .descriptions = sDesc_Split,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_GEN_ONE_RECHARGE] = {
-        .name         = COMPOUND_STRING("RECHARGE MOVES"),
+        .name         = COMPOUND_STRING("מהלכי טעינה"),
         .descriptions = sDesc_GenOneRecharge,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gen3Gen1,
     },
     [ITEM_MODE_NEXT] = {
-        .name         = COMPOUND_STRING("NEXT"),
+        .name         = COMPOUND_STRING("הבא"),
         .descriptions = sDesc_Next,
         .numChoices   = 0,
         .choiceNames  = NULL,
     },
 };
 
-static const u8 *const sDesc_SaveExit[] = { COMPOUND_STRING("Save choices and continue...") };
-static const u8 sText_ConfirmSave[] = COMPOUND_STRING("Confirm your choices?");
+static const u8 *const sDesc_SaveExit[] = { COMPOUND_STRING("שמירת הבחירות והמשך…") };
+static const u8 sText_ConfirmSave[] = COMPOUND_STRING("לאשר את הבחירות?");
 
 // =============================================================================
 // Choice strings — shared across tabs
 // =============================================================================
 
 static const u8 *const sChoices_OffRandom[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("RANDOM"),
+    COMPOUND_STRING("כבוי"),
+    COMPOUND_STRING("אקראי"),
 };
 
 static const u8 *const sChoices_GenScope[] = {
-    COMPOUND_STRING("GEN 1-9"),
-    COMPOUND_STRING("GEN 1-3"),
+    COMPOUND_STRING("דור 1-9"),
+    COMPOUND_STRING("דור 1-3"),
 };
 
 static const u8 *const sChoices_OffChaos[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("CHAOS"),
+    COMPOUND_STRING("כבוי"),
+    COMPOUND_STRING("כאוס"),
 };
 
 static const u8 *const sChoices_YesNo[] = {
-    COMPOUND_STRING("YES"),
-    COMPOUND_STRING("NO"),
+    COMPOUND_STRING("כן"),
+    COMPOUND_STRING("לא"),
 };
 
 static const u8 *const sChoices_BanUnban[] = {
-    COMPOUND_STRING("BAN"),
-    COMPOUND_STRING("UNBAN"),
+    COMPOUND_STRING("אסור"),
+    COMPOUND_STRING("מותר"),
 };
 
 static const u8 *const sChoices_RtcFake[] = {
-    COMPOUND_STRING("RTC"),
-    COMPOUND_STRING("FAKE RTC"),
+    COMPOUND_STRING("אמיתי"),
+    COMPOUND_STRING("מדומה"),
 };
 
 static const u8 *const sChoices_ShinyChance[] = {
@@ -549,19 +549,19 @@ static const u8 *const sChoices_ShinyChance[] = {
 };
 
 static const u8 *const sChoices_Nuzlocke[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("EASY"),
-    COMPOUND_STRING("NORMAL"),
-    COMPOUND_STRING("HARD"),
+    COMPOUND_STRING("כבוי"),
+    COMPOUND_STRING("קל"),
+    COMPOUND_STRING("רגיל"),
+    COMPOUND_STRING("קשה"),
 };
 
 static const u8 *const sChoices_CemeteryRelease[] = {
-    COMPOUND_STRING("CEMETERY"),
-    COMPOUND_STRING("RELEASE"),
+    COMPOUND_STRING("בית קברות"),
+    COMPOUND_STRING("שחרור"),
 };
 
 static const u8 *const sChoices_PartyLimit[] = {
-    COMPOUND_STRING("OFF"),
+    COMPOUND_STRING("כבוי"),
     COMPOUND_STRING("5"),
     COMPOUND_STRING("4"),
     COMPOUND_STRING("3"),
@@ -570,9 +570,9 @@ static const u8 *const sChoices_PartyLimit[] = {
 };
 
 static const u8 *const sChoices_LevelCap[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("NORMAL"),
-    COMPOUND_STRING("HARD"),
+    COMPOUND_STRING("כבוי"),
+    COMPOUND_STRING("רגיל"),
+    COMPOUND_STRING("קשה"),
 };
 
 static const u8 *const sChoices_ExpMult[] = {
@@ -583,44 +583,44 @@ static const u8 *const sChoices_ExpMult[] = {
 };
 
 static const u8 *const sChoices_TrainerIVs[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("SCALE"),
-    COMPOUND_STRING("HARD"),
+    COMPOUND_STRING("כבוי"),
+    COMPOUND_STRING("מדורג"),
+    COMPOUND_STRING("קשה"),
 };
 
 static const u8 *const sChoices_TrainerEVs[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("SCALE"),
-    COMPOUND_STRING("HARD"),
-    COMPOUND_STRING("EXTREM"),
+    COMPOUND_STRING("כבוי"),
+    COMPOUND_STRING("מדורג"),
+    COMPOUND_STRING("קשה"),
+    COMPOUND_STRING("קיצוני"),
 };
 
 static const u8 *const sChoices_PlayerIVs[] = {
-    COMPOUND_STRING("YES"),
-    COMPOUND_STRING("NO"),
-    COMPOUND_STRING("NO (HP)"),
+    COMPOUND_STRING("כן"),
+    COMPOUND_STRING("לא"),
+    COMPOUND_STRING("לא (כוח נסתר)"),
 };
 
 static const u8 *const sChoices_PkmnCenter[] = {
-    COMPOUND_STRING("YES"),
-    COMPOUND_STRING("NO"),
+    COMPOUND_STRING("כן"),
+    COMPOUND_STRING("לא"),
 };
 
 static const u8 *const sChoices_Expensive[] = {
-    COMPOUND_STRING("OFF"),
+    COMPOUND_STRING("כבוי"),
     COMPOUND_STRING("x5"),
     COMPOUND_STRING("x10"),
     COMPOUND_STRING("x50!"),
 };
 
 static const u8 *const sChoices_EvoLimit[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("FIRST"),
-    COMPOUND_STRING("ALL"),
+    COMPOUND_STRING("כבוי"),
+    COMPOUND_STRING("חלקית"),
+    COMPOUND_STRING("מלאה"),
 };
 
 static const u8 *const sChoices_BstEqual[] = {
-    COMPOUND_STRING("OFF"),
+    COMPOUND_STRING("כבוי"),
     COMPOUND_STRING("100"),
     COMPOUND_STRING("255"),
     COMPOUND_STRING("500"),
@@ -631,65 +631,65 @@ static const u8 *const sChoices_BstEqual[] = {
 // =============================================================================
 
 static const u8 *const sDesc_RtcType[] = {
-    COMPOUND_STRING("Use vanilla Real Time Clock."),
-    COMPOUND_STRING("Use a fake Real Time Clock.\n1h in real life = 1 day in-game."),
+    COMPOUND_STRING("שימוש בשעון זמן אמת רגיל."),
+    COMPOUND_STRING("שימוש בשעון זמן אמת מדומה.\n1 שעה במציאות = 1 יום במשחק."),
 };
 static const u8 *const sDesc_ShinyChance[] = {
-    COMPOUND_STRING("Very low chance of SHINY encounter.\nDefault chance from Generation III."),
-    COMPOUND_STRING("Low chance of SHINY encounter.\nDefault chance from Generation VI+."),
-    COMPOUND_STRING("Decent chance of SHINY encounter."),
-    COMPOUND_STRING("High chance of SHINY encounter."),
-    COMPOUND_STRING("Very high chance of SHINY encounter."),
+    COMPOUND_STRING("סיכוי נמוך מאוד לפגוש פוקימון נוצץ.\nסיכוי ברירת המחדל של דור 3."),
+    COMPOUND_STRING("סיכוי נמוך לפגוש פוקימון נוצץ.\nסיכוי ברירת המחדל מדור 6 ומעלה."),
+    COMPOUND_STRING("סיכוי סביר לפגוש פוקימון נוצץ."),
+    COMPOUND_STRING("סיכוי גבוה לפגוש פוקימון נוצץ."),
+    COMPOUND_STRING("סיכוי גבוה מאוד לפגוש פוקימון נוצץ."),
 };
 static const u8 *const sDesc_ItemDrop[] = {
-    COMPOUND_STRING("Wild {PKMN} items will be only\nobtainable via capture or THIEF."),
-    COMPOUND_STRING("Wild {PKMN} will drop their hold\nitem after defeating them."),
+    COMPOUND_STRING("את הפריטים של פוקימונים פראיים\nמשיגים רק בלכידה או בעזרת ”גניבה”."),
+    COMPOUND_STRING("פוקימונים פראיים מפילים את הפריט\nשהם מחזיקים כשמביסים אותם."),
 };
 static const u8 *const sDesc_FrontierBans[] = {
-    COMPOUND_STRING("Powerful legendary {PKMN} are banned\nin the BATTLE FRONTIER. Default."),
-    COMPOUND_STRING("All legendaries are allowed to\nparticipate in the BATTLE FRONTIER."),
+    COMPOUND_STRING("פוקימונים אגדיים חזקים אסורים\nבחזית הקרב. ברירת מחדל."),
+    COMPOUND_STRING("כל האגדיים רשאים להשתתף\nבחזית הקרב."),
 };
 static const u8 *const sDesc_ShinyColor[] = {
-    COMPOUND_STRING("Original shiny color palette for\nall {PKMN}. Default."),
-    COMPOUND_STRING("Some shiny {PKMN} have brand new\ncolor palettes."),
+    COMPOUND_STRING("הצבעים המקוריים לכל\nהפוקימונים הנוצצים. ברירת מחדל."),
+    COMPOUND_STRING("לחלק מהפוקימונים הנוצצים יש\nצבעים חדשים לגמרי."),
 };
 static const u8 *const sDesc_FeaturesNext[] = {
-    COMPOUND_STRING("Continue to Randomizer options."),
+    COMPOUND_STRING("המשך לאפשרויות המצב האקראי."),
 };
 
 static const struct ChallengeMenuItem sTabItems_Features[] = {
     [ITEM_FEATURES_RTC_TYPE] = {
-        .name         = COMPOUND_STRING("CLOCK TYPE"),
+        .name         = COMPOUND_STRING("סוג שעון"),
         .descriptions = sDesc_RtcType,
         .numChoices   = 2,
         .choiceNames  = sChoices_RtcFake,
     },
     [ITEM_FEATURES_SHINY_CHANCE] = {
-        .name         = COMPOUND_STRING("SHINY CHANCE"),
+        .name         = COMPOUND_STRING("סיכוי לנוצץ"),
         .descriptions = sDesc_ShinyChance,
         .numChoices   = 5,
         .choiceNames  = sChoices_ShinyChance,
     },
     [ITEM_FEATURES_SHINY_COLOR] = {
-        .name         = COMPOUND_STRING("ALT SHINY"),
+        .name         = COMPOUND_STRING("נוצץ חלופי"),
         .descriptions = sDesc_ShinyColor,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_FEATURES_ITEM_DROP] = {
-        .name         = COMPOUND_STRING("ITEM DROP"),
+        .name         = COMPOUND_STRING("הפלת פריטים"),
         .descriptions = sDesc_ItemDrop,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_FEATURES_FRONTIER_BANS] = {
-        .name         = COMPOUND_STRING("FRONTIER BANS"),
+        .name         = COMPOUND_STRING("הגבלות בחזית"),
         .descriptions = sDesc_FrontierBans,
         .numChoices   = 2,
         .choiceNames  = sChoices_BanUnban,
     },
     [ITEM_FEATURES_NEXT] = {
-        .name         = COMPOUND_STRING("NEXT"),
+        .name         = COMPOUND_STRING("הבא"),
         .descriptions = sDesc_FeaturesNext,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -701,182 +701,182 @@ static const struct ChallengeMenuItem sTabItems_Features[] = {
 // =============================================================================
 
 static const u8 *const sDesc_RandomOffOn[] = {
-    COMPOUND_STRING("Game will not be randomized."),
-    COMPOUND_STRING("Play the game randomized.\nSettings below!"),
+    COMPOUND_STRING("המשחק לא יהיה אקראי."),
+    COMPOUND_STRING("משחק במצב אקראי.\nההגדרות למטה!"),
 };
 static const u8 *const sDesc_RandomStarter[] = {
-    COMPOUND_STRING("Standard starter {PKMN}."),
-    COMPOUND_STRING("Randomize starter {PKMN}."),
+    COMPOUND_STRING("הפוקימונים ההתחלתיים הרגילים."),
+    COMPOUND_STRING("פוקימונים התחלתיים אקראיים."),
 };
 static const u8 *const sDesc_RandomWild[] = {
-    COMPOUND_STRING("Same wild encounter as in the\nbase game."),
-    COMPOUND_STRING("Randomize wild {PKMN}."),
+    COMPOUND_STRING("אותם פוקימונים פראיים כמו\nבמשחק המקורי."),
+    COMPOUND_STRING("פוקימונים פראיים אקראיים."),
 };
 static const u8 *const sDesc_RandomMapBased[] = {
-    COMPOUND_STRING("Wild encounters are fully random\nevery time."),
-    COMPOUND_STRING("Wild encounters are seeded per map.\nSame area always has the same {PKMN}."),
+    COMPOUND_STRING("המפגשים עם פוקימונים פראיים\nאקראיים לגמרי בכל פעם."),
+    COMPOUND_STRING("הפוקימונים הפראיים נקבעים לפי מפה.\nבאותו אזור תמיד אותם פוקימונים."),
 };
 static const u8 *const sDesc_RandomTrainer[] = {
-    COMPOUND_STRING("Trainer will have their expected\nparty."),
-    COMPOUND_STRING("Randomize enemy trainer parties."),
+    COMPOUND_STRING("למאמנים תהיה הקבוצה הרגילה שלהם."),
+    COMPOUND_STRING("קבוצות אקראיות למאמנים יריבים."),
 };
 static const u8 *const sDesc_RandomStatic[] = {
-    COMPOUND_STRING("Static encounters will be the same\nas in the base game."),
-    COMPOUND_STRING("Named {PKMN}, casino {PKMN}, roamers, and\nsome other special {PKMN} won't change."),
+    COMPOUND_STRING("מפגשים סטטיים יישארו כמו\nבמשחק המקורי."),
+    COMPOUND_STRING("פוקימונים עם כינוי, מהקזינו, נודדים\nועוד פוקימונים מיוחדים לא ישתנו."),
 };
 static const u8 *const sDesc_RandomSimilar[] = {
-    COMPOUND_STRING("{PKMN} replaced with similar tiered\nones. Currently based on evo stages."),
-    COMPOUND_STRING("Distribution of {PKMN} not balanced\naround their strength!"),
+    COMPOUND_STRING("כל פוקימון מוחלף בפוקימון בדרגה\nדומה. כרגע לפי שלבי התפתחות."),
+    COMPOUND_STRING("חלוקת הפוקימונים לא מאוזנת\nלפי החוזק שלהם!"),
 };
 static const u8 *const sDesc_RandomLegendaries[] = {
-    COMPOUND_STRING("Legendary {PKMN} will not be\nincluded and randomized."),
-    COMPOUND_STRING("Include legendary {PKMN} in\nrandomization!"),
+    COMPOUND_STRING("פוקימונים אגדיים לא ייכללו\nבבחירה האקראית."),
+    COMPOUND_STRING("הכללת פוקימונים אגדיים\nבבחירה האקראית!"),
 };
 static const u8 *const sDesc_RandomGenScope[] = {
-    COMPOUND_STRING("Randomize into {PKMN} from every\ngeneration."),
-    COMPOUND_STRING("Only GEN 1-3 {PKMN} and their\ncross-gen evolutions."),
+    COMPOUND_STRING("בחירה אקראית מתוך פוקימונים\nמכל הדורות."),
+    COMPOUND_STRING("רק פוקימונים מדורות 1-3\nוההתפתחויות שלהם מדורות אחרים."),
 };
 static const u8 *const sDesc_RandomType[] = {
-    COMPOUND_STRING("{PKMN} types stay the same as in\nthe base game."),
-    COMPOUND_STRING("Randomize all {PKMN} types."),
+    COMPOUND_STRING("סוגי הפוקימונים נשארים כמו\nבמשחק המקורי."),
+    COMPOUND_STRING("סוגים אקראיים לכל הפוקימונים."),
 };
 static const u8 *const sDesc_RandomMoves[] = {
-    COMPOUND_STRING("{PKMN} moves stay the same as in\nthe base game."),
-    COMPOUND_STRING("Randomize all {PKMN} moves."),
+    COMPOUND_STRING("מהלכי הפוקימונים נשארים כמו\nבמשחק המקורי."),
+    COMPOUND_STRING("מהלכים אקראיים לכל הפוקימונים."),
 };
 static const u8 *const sDesc_RandomAbilities[] = {
-    COMPOUND_STRING("{PKMN} abilities stay the same as\nin the base game."),
-    COMPOUND_STRING("Randomize all {PKMN} abilities."),
+    COMPOUND_STRING("יכולות הפוקימונים נשארות כמו\nבמשחק המקורי."),
+    COMPOUND_STRING("יכולות אקראיות לכל הפוקימונים."),
 };
 static const u8 *const sDesc_RandomEvolutions[] = {
-    COMPOUND_STRING("{PKMN} evolutions stay the same as\nin the base game."),
-    COMPOUND_STRING("Randomize all {PKMN} evolutions."),
+    COMPOUND_STRING("התפתחויות הפוקימונים נשארות\nכמו במשחק המקורי."),
+    COMPOUND_STRING("התפתחויות אקראיות לכל הפוקימונים."),
 };
 static const u8 *const sDesc_RandomEvoMethods[] = {
-    COMPOUND_STRING("The {PKMN} that can potentially\nevolve are unchanged."),
-    COMPOUND_STRING("Randomize evolution lines. Allows\nnew evolution lines to occur!"),
+    COMPOUND_STRING("הפוקימונים שיכולים להתפתח\nנשארים ללא שינוי."),
+    COMPOUND_STRING("קווי התפתחות אקראיים. מאפשר\nקווי התפתחות חדשים!"),
 };
 static const u8 *const sDesc_RandomTypeEffec[] = {
-    COMPOUND_STRING("Type effectiveness chart will remain\nthe same as in the base game."),
-    COMPOUND_STRING("Randomize type effectiveness.\nWARNING: CAN BE BUGGY!"),
+    COMPOUND_STRING("טבלת יעילות הסוגים תישאר\nכמו במשחק המקורי."),
+    COMPOUND_STRING("יעילות סוגים אקראית.\nאזהרה: עלול לגרום לתקלות!"),
 };
 static const u8 *const sDesc_RandomItems[] = {
-    COMPOUND_STRING("All found or received items are the\nsame as in the base game."),
-    COMPOUND_STRING("Randomize found, hidden and received\nitems. KEY items are excluded!"),
+    COMPOUND_STRING("כל הפריטים שמוצאים או מקבלים\nנשארים כמו במשחק המקורי."),
+    COMPOUND_STRING("הפריטים שמוצאים, החבויים והמתקבלים\nאקראיים. פריטי מפתח לא משתנים!"),
 };
 static const u8 *const sDesc_RandomChaos[] = {
-    COMPOUND_STRING("Chaos mode disabled."),
-    COMPOUND_STRING("Every above chosen option will be\nvery chaotic. NOT recommended!"),
+    COMPOUND_STRING("מצב כאוס כבוי."),
+    COMPOUND_STRING("כל האפשרויות שנבחרו למעלה יהיו\nכאוטיות מאוד. לא מומלץ!"),
 };
 static const u8 *const sDesc_RandomNext[] = {
-    COMPOUND_STRING("Continue to Nuzlocke options."),
+    COMPOUND_STRING("המשך לאפשרויות נאזלוק."),
 };
 
 static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
     [ITEM_RANDOM_OFF_ON] = {
-        .name         = COMPOUND_STRING("RANDOMIZER"),
+        .name         = COMPOUND_STRING("מצב אקראי"),
         .descriptions = sDesc_RandomOffOn,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_STARTER] = {
-        .name         = COMPOUND_STRING("STARTER {PKMN}"),
+        .name         = COMPOUND_STRING("פוקימון התחלתי"),
         .descriptions = sDesc_RandomStarter,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_WILD_PKMN] = {
-        .name         = COMPOUND_STRING("WILD {PKMN}"),
+        .name         = COMPOUND_STRING("פוקימונים פראיים"),
         .descriptions = sDesc_RandomWild,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_MAP_BASED] = {
-        .name         = COMPOUND_STRING("MAP SEEDED"),
+        .name         = COMPOUND_STRING("קבוע לפי מפה"),
         .descriptions = sDesc_RandomMapBased,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_RANDOM_TRAINER] = {
-        .name         = COMPOUND_STRING("TRAINER"),
+        .name         = COMPOUND_STRING("מאמנים"),
         .descriptions = sDesc_RandomTrainer,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_STATIC] = {
-        .name         = COMPOUND_STRING("STATIC {PKMN}"),
+        .name         = COMPOUND_STRING("פוקימונים סטטיים"),
         .descriptions = sDesc_RandomStatic,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_SIMILAR] = {
-        .name         = COMPOUND_STRING("BALANCING"),
+        .name         = COMPOUND_STRING("איזון"),
         .descriptions = sDesc_RandomSimilar,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_RANDOM_LEGENDARIES] = {
-        .name         = COMPOUND_STRING("LEGENDARIES"),
+        .name         = COMPOUND_STRING("אגדיים"),
         .descriptions = sDesc_RandomLegendaries,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_RANDOM_GEN_SCOPE] = {
-        .name         = COMPOUND_STRING("GEN SCOPE"),
+        .name         = COMPOUND_STRING("טווח דורות"),
         .descriptions = sDesc_RandomGenScope,
         .numChoices   = 2,
         .choiceNames  = sChoices_GenScope,
     },
     [ITEM_RANDOM_TYPE] = {
-        .name         = COMPOUND_STRING("TYPE"),
+        .name         = COMPOUND_STRING("סוגים"),
         .descriptions = sDesc_RandomType,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_MOVES] = {
-        .name         = COMPOUND_STRING("MOVES"),
+        .name         = COMPOUND_STRING("מהלכים"),
         .descriptions = sDesc_RandomMoves,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_ABILITIES] = {
-        .name         = COMPOUND_STRING("ABILITIES"),
+        .name         = COMPOUND_STRING("יכולות"),
         .descriptions = sDesc_RandomAbilities,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_EVOLUTIONS] = {
-        .name         = COMPOUND_STRING("EVOLUTIONS"),
+        .name         = COMPOUND_STRING("התפתחויות"),
         .descriptions = sDesc_RandomEvolutions,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_EVO_METHODS] = {
-        .name         = COMPOUND_STRING("EVO LINES"),
+        .name         = COMPOUND_STRING("קווי התפתחות"),
         .descriptions = sDesc_RandomEvoMethods,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_TYPE_EFFEC] = {
-        .name         = COMPOUND_STRING("EFFECTIVENESS"),
+        .name         = COMPOUND_STRING("יעילות סוגים"),
         .descriptions = sDesc_RandomTypeEffec,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_ITEMS] = {
-        .name         = COMPOUND_STRING("ITEMS"),
+        .name         = COMPOUND_STRING("פריטים"),
         .descriptions = sDesc_RandomItems,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_CHAOS] = {
-        .name         = COMPOUND_STRING("CHAOS MODE"),
+        .name         = COMPOUND_STRING("מצב כאוס"),
         .descriptions = sDesc_RandomChaos,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffChaos,
     },
     [ITEM_RANDOM_NEXT] = {
-        .name         = COMPOUND_STRING("NEXT"),
+        .name         = COMPOUND_STRING("הבא"),
         .descriptions = sDesc_RandomNext,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -888,74 +888,74 @@ static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
 // =============================================================================
 
 static const u8 *const sDesc_Nuzlocke[] = {
-    COMPOUND_STRING("Nuzlocke mode is disabled."),
-    COMPOUND_STRING("Fainted {PKMN} can't be used anymore!\nNo more rules are enforced."),
-    COMPOUND_STRING("One catch per route! Fainted {PKMN}\ncan't be used anymore."),
-    COMPOUND_STRING("Same rules as NORMAL but also\ndeletes SAVE on battle loss!"),
+    COMPOUND_STRING("מצב נאזלוק כבוי."),
+    COMPOUND_STRING("אי אפשר להשתמש יותר בפוקימונים\nשהתעלפו! אין חוקים נוספים."),
+    COMPOUND_STRING("לכידה אחת בכל דרך! אי אפשר להשתמש\nיותר בפוקימונים שהתעלפו."),
+    COMPOUND_STRING("אותם חוקים כמו ב”רגיל”, וגם השמירה\nנמחקת כשמפסידים בקרב!"),
 };
 static const u8 *const sDesc_SpeciesClause[] = {
-    COMPOUND_STRING("Only not prior caught {PKMN} count\nas first encounter. RECOMMENDED!"),
-    COMPOUND_STRING("The player always has to catch the\nfirst {PKMN} per route."),
+    COMPOUND_STRING("רק פוקימונים שעוד לא נלכדו נחשבים\nכמפגש הראשון. מומלץ!"),
+    COMPOUND_STRING("תמיד חובה ללכוד את\nהפוקימון הראשון בכל דרך."),
 };
 static const u8 *const sDesc_ShinyClause[] = {
-    COMPOUND_STRING("The player can always catch shiny\n{PKMN}. RECOMMENDED!"),
-    COMPOUND_STRING("The player can only catch a shiny\n{PKMN} if it's the first encounter."),
+    COMPOUND_STRING("תמיד אפשר ללכוד\nפוקימונים נוצצים. מומלץ!"),
+    COMPOUND_STRING("אפשר ללכוד פוקימון נוצץ רק\nאם זה המפגש הראשון."),
 };
 static const u8 *const sDesc_Nicknaming[] = {
-    COMPOUND_STRING("Forces the player to nickname every\n{PKMN}. RECOMMENDED!"),
-    COMPOUND_STRING("Nicknames are optional."),
+    COMPOUND_STRING("חובה לתת כינוי\nלכל פוקימון. מומלץ!"),
+    COMPOUND_STRING("מתן כינויים אינו חובה."),
 };
 static const u8 *const sDesc_Deletion[] = {
-    COMPOUND_STRING("Fainted {PKMN} are sent to the PC\nafter battle and can't be retrieved."),
-    COMPOUND_STRING("Fainted {PKMN} are released after\nbattle!"),
+    COMPOUND_STRING("פוקימונים שהתעלפו נשלחים למחשב\nאחרי הקרב ואי אפשר להחזיר אותם."),
+    COMPOUND_STRING("פוקימונים שהתעלפו משוחררים\nאחרי הקרב!"),
 };
 static const u8 *const sDesc_RareCandy[] = {
-    COMPOUND_STRING("Infinite Rare Candy will be in the\nplayer's PC at game start."),
-    COMPOUND_STRING("Player will not have access to\nInfinite Rare Candy."),
+    COMPOUND_STRING("ממתק נדיר אינסופי יחכה\nבמחשב של השחקן כבר בתחילת המשחק."),
+    COMPOUND_STRING("לשחקן לא תהיה גישה\nלממתק נדיר אינסופי."),
 };
 static const u8 *const sDesc_NuzlockeNext[] = {
-    COMPOUND_STRING("Continue to difficulty options."),
+    COMPOUND_STRING("מעבר לאפשרויות הקושי."),
 };
 
 static const struct ChallengeMenuItem sTabItems_Nuzlocke[] = {
     [ITEM_NUZLOCKE_NUZLOCKE] = {
-        .name         = COMPOUND_STRING("NUZLOCKE"),
+        .name         = COMPOUND_STRING("נאזלוק"),
         .descriptions = sDesc_Nuzlocke,
         .numChoices   = 4,
         .choiceNames  = sChoices_Nuzlocke,
     },
     [ITEM_NUZLOCKE_SPECIES_CLAUSE] = {
-        .name         = COMPOUND_STRING("DUPES CLAUSE"),
+        .name         = COMPOUND_STRING("כלל כפילויות"),
         .descriptions = sDesc_SpeciesClause,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_NUZLOCKE_SHINY_CLAUSE] = {
-        .name         = COMPOUND_STRING("SHINY CLAUSE"),
+        .name         = COMPOUND_STRING("כלל נוצצים"),
         .descriptions = sDesc_ShinyClause,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_NUZLOCKE_NICKNAMING] = {
-        .name         = COMPOUND_STRING("NICKNAMES"),
+        .name         = COMPOUND_STRING("כינויים"),
         .descriptions = sDesc_Nicknaming,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_NUZLOCKE_DELETION] = {
-        .name         = COMPOUND_STRING("FAINTING"),
+        .name         = COMPOUND_STRING("התעלפות"),
         .descriptions = sDesc_Deletion,
         .numChoices   = 2,
         .choiceNames  = sChoices_CemeteryRelease,
     },
     [ITEM_NUZLOCKE_RARE_CANDY] = {
-        .name         = COMPOUND_STRING("INF. RARE CANDY"),
+        .name         = COMPOUND_STRING("ממתק נדיר אינסופי"),
         .descriptions = sDesc_RareCandy,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_NUZLOCKE_NEXT] = {
-        .name         = COMPOUND_STRING("NEXT"),
+        .name         = COMPOUND_STRING("הבא"),
         .descriptions = sDesc_NuzlockeNext,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -966,131 +966,131 @@ static const struct ChallengeMenuItem sTabItems_Nuzlocke[] = {
 // DIFFICULTY descriptions + table
 // =============================================================================
 
-static const u8 sText_Desc_PartyLimit[] = _("Limits the amount of {PKMN} in the\nparty. 1 has visual bugs in DOUBLES.");
+static const u8 sText_Desc_PartyLimit[] = _("מגביל את מספר הפוקימונים בקבוצה.\nעם 1 יש תקלות תצוגה בקרבות כפולים.");
 static const u8 *const sDesc_PartyLimit[] = {
     sText_Desc_PartyLimit, sText_Desc_PartyLimit, sText_Desc_PartyLimit,
     sText_Desc_PartyLimit, sText_Desc_PartyLimit, sText_Desc_PartyLimit,
 };
 static const u8 *const sDesc_LevelCap[] = {
-    COMPOUND_STRING("No level cap. Overleveling possible."),
-    COMPOUND_STRING("Maximum level is based on the next\ngym's highest {PKMN} level."),
-    COMPOUND_STRING("Maximum level is based on the next\ngym's lowest {PKMN} level."),
+    COMPOUND_STRING("אין תקרת רמה. אפשר לעלות\nלרמות גבוהות מהמתוכנן."),
+    COMPOUND_STRING("הרמה המרבית נקבעת לפי הפוקימון\nברמה הגבוהה ביותר במכון הבא."),
+    COMPOUND_STRING("הרמה המרבית נקבעת לפי הפוקימון\nברמה הנמוכה ביותר במכון הבא."),
 };
 static const u8 *const sDesc_ExpMult[] = {
-    COMPOUND_STRING("{PKMN} gain normal EXP. Points.\nStacks with HARD MODE EXP."),
-    COMPOUND_STRING("{PKMN} gain 50 percent more EXP.\nPoints! Stacks with HARD MODE EXP."),
-    COMPOUND_STRING("{PKMN} gain double EXP. Points!\nStacks with HARD MODE EXP."),
-    COMPOUND_STRING("{PKMN} gain ZERO EXP. Points!!!\nApplies to HARD MODE EXP. as well."),
+    COMPOUND_STRING("הפוקימונים מקבלים נקודות ניסיון\nכרגיל. מצטבר עם הניסיון במצב קשה."),
+    COMPOUND_STRING("הפוקימונים מקבלים 50% יותר ניסיון!\nמצטבר עם הניסיון במצב קשה."),
+    COMPOUND_STRING("הפוקימונים מקבלים נקודות ניסיון\nכפולות! מצטבר עם הניסיון במצב קשה."),
+    COMPOUND_STRING("הפוקימונים מקבלים אפס ניסיון!!!\nחל גם על הניסיון במצב קשה."),
 };
 static const u8 *const sDesc_ItemPlayer[] = {
-    COMPOUND_STRING("The player can use battle items."),
-    COMPOUND_STRING("The player can NOT use battle items.\nHold items are allowed!"),
+    COMPOUND_STRING("השחקן יכול להשתמש בפריטי קרב."),
+    COMPOUND_STRING("השחקן לא יכול להשתמש בפריטי קרב.\nפריטים להחזקה מותרים!"),
 };
 static const u8 *const sDesc_ItemTrainer[] = {
-    COMPOUND_STRING("Enemy trainers can use battle items."),
-    COMPOUND_STRING("Enemy trainers can NOT use battle\nitems."),
+    COMPOUND_STRING("מאמנים יריבים יכולים להשתמש\nבפריטי קרב."),
+    COMPOUND_STRING("מאמנים יריבים לא יכולים להשתמש\nבפריטי קרב."),
 };
 static const u8 *const sDesc_NoEVs[] = {
-    COMPOUND_STRING("The player's {PKMN} gain effort\nvalues as expected."),
-    COMPOUND_STRING("The player's {PKMN} do NOT gain any\neffort values!"),
+    COMPOUND_STRING("הפוקימונים של השחקן מקבלים\nערכי מאמץ (EV) כרגיל."),
+    COMPOUND_STRING("הפוקימונים של השחקן לא מקבלים\nערכי מאמץ (EV) בכלל!"),
 };
 static const u8 *const sDesc_ScalingIVs[] = {
-    COMPOUND_STRING("The {PKMN} of enemy Trainer have\nthe expected IVs."),
-    COMPOUND_STRING("The IVs of Trainer {PKMN} increase\nwith gym badges!"),
-    COMPOUND_STRING("All Trainer {PKMN} have perfect IVs!"),
+    COMPOUND_STRING("לפוקימונים של מאמנים יריבים יש\nערכי IV רגילים."),
+    COMPOUND_STRING("ערכי ה-IV של פוקימוני המאמנים\nעולים ככל שמשיגים תגי מכון!"),
+    COMPOUND_STRING("לכל פוקימוני המאמנים יש\nערכי IV מושלמים!"),
 };
 static const u8 *const sDesc_ScalingEVs[] = {
-    COMPOUND_STRING("The {PKMN} of enemy Trainer have\nno EVs."),
-    COMPOUND_STRING("The EVs of Trainer {PKMN} increase\nwith gym badges!"),
-    COMPOUND_STRING("All Trainer {PKMN} have high EVs!"),
-    COMPOUND_STRING("All Trainer {PKMN} have 252 EVs!\nVery Hard!"),
+    COMPOUND_STRING("לפוקימונים של מאמנים יריבים\nאין ערכי EV."),
+    COMPOUND_STRING("ערכי ה-EV של פוקימוני המאמנים\nעולים ככל שמשיגים תגי מכון!"),
+    COMPOUND_STRING("לכל פוקימוני המאמנים יש\nערכי EV גבוהים!"),
+    COMPOUND_STRING("לכל פוקימוני המאמנים יש\n252 נקודות EV! קשה מאוד!"),
 };
 static const u8 *const sDesc_MaxPartyIVs[] = {
-    COMPOUND_STRING("Your {PKMN} have the expected IVs\n(between 0 and 31)."),
-    COMPOUND_STRING("The IVs of your {PKMN} are set\nalways to the maximum (31)."),
-    COMPOUND_STRING("IVs are set between 30 and 31 to\nallow different Hidden Powers."),
+    COMPOUND_STRING("לפוקימונים שלך יש ערכי IV רגילים\n(בין 0 ל-31)."),
+    COMPOUND_STRING("ערכי ה-IV של הפוקימונים שלך\nנקבעים תמיד לערך המרבי (31)."),
+    COMPOUND_STRING("ערכי ה-IV נקבעים בין 30 ל-31 כדי\nלאפשר כוח נסתר מסוגים שונים."),
 };
 static const u8 *const sDesc_LessEscapes[] = {
-    COMPOUND_STRING("The player can easily run away from\nbattles, as usual."),
-    COMPOUND_STRING("The player can't easily run away\nfrom battles. Use repels!"),
+    COMPOUND_STRING("השחקן יכול לברוח מקרבות בקלות,\nכרגיל."),
+    COMPOUND_STRING("השחקן לא יכול לברוח בקלות מקרבות.\nכדאי להשתמש בדוחה!"),
 };
 static const u8 *const sDesc_EscapeRopeDig[] = {
-    COMPOUND_STRING("ESCAPE ROPE and DIG can be used to\nexit dungeons."),
-    COMPOUND_STRING("ESCAPE ROPE and DIG can't be used\nto exit dungeons."),
+    COMPOUND_STRING("אפשר להשתמש בחבל מילוט\nוב”התחפרות” כדי לצאת ממבוכים."),
+    COMPOUND_STRING("אי אפשר להשתמש בחבל מילוט\nוב”התחפרות” כדי לצאת ממבוכים."),
 };
 static const u8 *const sDesc_DifficultyNext[] = {
-    COMPOUND_STRING("Continue to challenge options."),
+    COMPOUND_STRING("מעבר לאפשרויות האתגרים."),
 };
 
 static const struct ChallengeMenuItem sTabItems_Difficulty[] = {
     [ITEM_DIFFICULTY_PARTY_LIMIT] = {
-        .name         = COMPOUND_STRING("PARTY LIMIT"),
+        .name         = COMPOUND_STRING("הגבלת קבוצה"),
         .descriptions = sDesc_PartyLimit,
         .numChoices   = 6,
         .choiceNames  = sChoices_PartyLimit,
     },
     [ITEM_DIFFICULTY_LEVEL_CAP] = {
-        .name         = COMPOUND_STRING("LEVEL CAP"),
+        .name         = COMPOUND_STRING("תקרת רמה"),
         .descriptions = sDesc_LevelCap,
         .numChoices   = 3,
         .choiceNames  = sChoices_LevelCap,
     },
     [ITEM_DIFFICULTY_EXP_MULTIPLIER] = {
-        .name         = COMPOUND_STRING("EXP. MULTIPLIER"),
+        .name         = COMPOUND_STRING("מכפיל ניסיון"),
         .descriptions = sDesc_ExpMult,
         .numChoices   = 4,
         .choiceNames  = sChoices_ExpMult,
     },
     [ITEM_DIFFICULTY_ITEM_PLAYER] = {
-        .name         = COMPOUND_STRING("PLAYER ITEMS"),
+        .name         = COMPOUND_STRING("פריטי שחקן"),
         .descriptions = sDesc_ItemPlayer,
         .numChoices   = 2,
         .choiceNames  = sChoices_YesNo,
     },
     [ITEM_DIFFICULTY_ITEM_TRAINER] = {
-        .name         = COMPOUND_STRING("TRAINER ITEMS"),
+        .name         = COMPOUND_STRING("פריטי מאמנים"),
         .descriptions = sDesc_ItemTrainer,
         .numChoices   = 2,
         .choiceNames  = sChoices_YesNo,
     },
     [ITEM_DIFFICULTY_MAX_PARTY_IVS] = {
-        .name         = COMPOUND_STRING("PLAYER IVs"),
+        .name         = COMPOUND_STRING("ערכי IV לשחקן"),
         .descriptions = sDesc_MaxPartyIVs,
         .numChoices   = 3,
         .choiceNames  = sChoices_PlayerIVs,
     },
     [ITEM_DIFFICULTY_SCALING_IVS] = {
-        .name         = COMPOUND_STRING("TRAINER IVs"),
+        .name         = COMPOUND_STRING("ערכי IV למאמנים"),
         .descriptions = sDesc_ScalingIVs,
         .numChoices   = 3,
         .choiceNames  = sChoices_TrainerIVs,
     },
     [ITEM_DIFFICULTY_NO_EVS] = {
-        .name         = COMPOUND_STRING("PLAYER EVs"),
+        .name         = COMPOUND_STRING("ערכי EV לשחקן"),
         .descriptions = sDesc_NoEVs,
         .numChoices   = 2,
         .choiceNames  = sChoices_YesNo,
     },
     [ITEM_DIFFICULTY_SCALING_EVS] = {
-        .name         = COMPOUND_STRING("TRAINER EVs"),
+        .name         = COMPOUND_STRING("ערכי EV למאמנים"),
         .descriptions = sDesc_ScalingEVs,
         .numChoices   = 4,
         .choiceNames  = sChoices_TrainerEVs,
     },
     [ITEM_DIFFICULTY_LESS_ESCAPES] = {
-        .name         = COMPOUND_STRING("LESS ESCAPES"),
+        .name         = COMPOUND_STRING("פחות בריחות"),
         .descriptions = sDesc_LessEscapes,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_DIFFICULTY_ESCAPE_ROPE_DIG] = {
-        .name         = COMPOUND_STRING("ESC. ROPE / DIG"),
+        .name         = COMPOUND_STRING("חבל/התחפרות"),
         .descriptions = sDesc_EscapeRopeDig,
         .numChoices   = 2,
         .choiceNames  = sChoices_YesNo,
     },
     [ITEM_DIFFICULTY_NEXT] = {
-        .name         = COMPOUND_STRING("NEXT"),
+        .name         = COMPOUND_STRING("הבא"),
         .descriptions = sDesc_DifficultyNext,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -1102,25 +1102,25 @@ static const struct ChallengeMenuItem sTabItems_Difficulty[] = {
 // =============================================================================
 
 static const u8 *const sDesc_Pokecenter[] = {
-    COMPOUND_STRING("The player can visit {PKMN}centers\nand other locations to heal."),
-    COMPOUND_STRING("The player CAN'T visit {PKMN}centers\nor other locations to heal."),
+    COMPOUND_STRING("השחקן יכול לבקר במרכזי פוקימון\nובמקומות ריפוי אחרים."),
+    COMPOUND_STRING("השחקן לא יכול לבקר במרכזי פוקימון\nאו במקומות ריפוי אחרים."),
 };
 static const u8 *const sDesc_Expensive[] = {
-    COMPOUND_STRING("Everything has the usual cost."),
-    COMPOUND_STRING("Everything is 5 times more\nexpensive!"),
-    COMPOUND_STRING("Everything is 10 times more\nexpensive! Good ol' capitalism."),
-    COMPOUND_STRING("Everything is 50 times more\nexpensive! Ultra capitalism!"),
+    COMPOUND_STRING("הכול במחיר הרגיל."),
+    COMPOUND_STRING("הכול יקר פי 5 מהרגיל!"),
+    COMPOUND_STRING("הכול יקר פי 10 מהרגיל!\nהקפיטליזם הטוב והישן."),
+    COMPOUND_STRING("הכול יקר פי 50 מהרגיל!\nקפיטליזם חזירי!"),
 };
 static const u8 *const sDesc_EvoLimit[] = {
-    COMPOUND_STRING("{PKMN} evolve as expected."),
-    COMPOUND_STRING("{PKMN} can only evolve into their\nfirst evolution."),
-    COMPOUND_STRING("{PKMN} can NOT evolve at all!"),
+    COMPOUND_STRING("הפוקימונים מתפתחים כרגיל."),
+    COMPOUND_STRING("הפוקימונים יכולים להתפתח רק\nעד ההתפתחות הראשונה שלהם."),
+    COMPOUND_STRING("הפוקימונים לא יכולים להתפתח בכלל!"),
 };
 #define NUM_ONE_TYPE_CHOICES 20
 #define ONE_TYPE_OFF 31
 #define EVO_LINE_TYPE_SEARCH_DEPTH 4 // deepest evolution chain worth walking
 
-static const u8 sText_Desc_OneType[] = _("Allow only one {PKMN} type the\nplayer can capture and use.");
+static const u8 sText_Desc_OneType[] = _("מאפשר רק סוג פוקימון אחד\nשהשחקן יכול ללכוד ולהשתמש בו.");
 static const u8 *const sDesc_OneType[] = {
     sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType,
     sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType,
@@ -1129,65 +1129,65 @@ static const u8 *const sDesc_OneType[] = {
     sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType,
 };
 static const u8 *const sDesc_BstEqualizer[] = {
-    COMPOUND_STRING("All {PKMN} have their original\nbase stats."),
-    COMPOUND_STRING("{PKMN} stats are calculated with\n100 of each base stat."),
-    COMPOUND_STRING("{PKMN} stats are calculated with\n255 of each base stat."),
-    COMPOUND_STRING("{PKMN} stats are calculated with\n500 of each base stat."),
+    COMPOUND_STRING("כל הפוקימונים שומרים על\nנתוני הבסיס המקוריים שלהם."),
+    COMPOUND_STRING("נתוני הפוקימונים מחושבים לפי\nערך 100 בכל נתון בסיס."),
+    COMPOUND_STRING("נתוני הפוקימונים מחושבים לפי\nערך 255 בכל נתון בסיס."),
+    COMPOUND_STRING("נתוני הפוקימונים מחושבים לפי\nערך 500 בכל נתון בסיס."),
 };
 static const u8 *const sDesc_Mirror[] = {
-    COMPOUND_STRING("The player uses their own party."),
-    COMPOUND_STRING("In Trainer battles, the player gets\na copy of the enemy's party!"),
+    COMPOUND_STRING("השחקן משתמש בקבוצה שלו."),
+    COMPOUND_STRING("בקרבות מאמנים, השחקן מקבל\nעותק של קבוצת היריב!"),
 };
 static const u8 *const sDesc_MirrorThief[] = {
-    COMPOUND_STRING("The player gets their own party\nback after battles."),
-    COMPOUND_STRING("The player keeps the enemies party\nafter battle!"),
+    COMPOUND_STRING("השחקן מקבל את הקבוצה שלו\nבחזרה אחרי קרבות."),
+    COMPOUND_STRING("השחקן שומר את קבוצת היריב\nאחרי הקרב!"),
 };
 
 static const struct ChallengeMenuItem sTabItems_Challenges[] = {
     [ITEM_CHALLENGES_POKECENTER] = {
-        .name         = COMPOUND_STRING("{PKMN}CENTER"),
+        .name         = COMPOUND_STRING("מרכז פוקימון"),
         .descriptions = sDesc_Pokecenter,
         .numChoices   = 2,
         .choiceNames  = sChoices_PkmnCenter,
     },
     [ITEM_CHALLENGES_EXPENSIVE] = {
-        .name         = COMPOUND_STRING("ULTRA EXPENSIVE!"),
+        .name         = COMPOUND_STRING("יקר בטירוף!"),
         .descriptions = sDesc_Expensive,
         .numChoices   = 4,
         .choiceNames  = sChoices_Expensive,
     },
     [ITEM_CHALLENGES_EVO_LIMIT] = {
-        .name         = COMPOUND_STRING("EVO LIMIT"),
+        .name         = COMPOUND_STRING("הגבלת התפתחות"),
         .descriptions = sDesc_EvoLimit,
         .numChoices   = 3,
         .choiceNames  = sChoices_EvoLimit,
     },
     [ITEM_CHALLENGES_ONE_TYPE] = {
-        .name         = COMPOUND_STRING("ONE TYPE ONLY"),
+        .name         = COMPOUND_STRING("סוג אחד בלבד"),
         .descriptions = sDesc_OneType,
         .numChoices   = NUM_ONE_TYPE_CHOICES,
         .choiceNames  = NULL,
     },
     [ITEM_CHALLENGES_BST_EQUALIZER] = {
-        .name         = COMPOUND_STRING("BST EQUALIZER"),
+        .name         = COMPOUND_STRING("נתוני בסיס אחידים"),
         .descriptions = sDesc_BstEqualizer,
         .numChoices   = 4,
         .choiceNames  = sChoices_BstEqual,
     },
     [ITEM_CHALLENGES_MIRROR] = {
-        .name         = COMPOUND_STRING("MIRROR MODE"),
+        .name         = COMPOUND_STRING("מצב מראה"),
         .descriptions = sDesc_Mirror,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_CHALLENGES_MIRROR_THIEF] = {
-        .name         = COMPOUND_STRING("MIRROR THIEF"),
+        .name         = COMPOUND_STRING("גניבת מראה"),
         .descriptions = sDesc_MirrorThief,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_CHALLENGES_SAVE] = {
-        .name         = COMPOUND_STRING("SAVE"),
+        .name         = COMPOUND_STRING("שמירה"),
         .descriptions = sDesc_SaveExit,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -1206,12 +1206,12 @@ struct TabDef
 };
 
 static const struct TabDef sTabs[TAB_COUNT] = {
-    [TAB_MODE]       = { COMPOUND_STRING("MODE"),       sTabItems_Mode,       ITEM_MODE_COUNT },
-    [TAB_FEATURES]   = { COMPOUND_STRING("FEATURES"),   sTabItems_Features,   ITEM_FEATURES_COUNT },
-    [TAB_RANDOMIZER] = { COMPOUND_STRING("RANDOMIZER"), sTabItems_Randomizer, ITEM_RANDOM_COUNT },
-    [TAB_NUZLOCKE]   = { COMPOUND_STRING("NUZLOCKE"),   sTabItems_Nuzlocke,   ITEM_NUZLOCKE_COUNT },
-    [TAB_DIFFICULTY] = { COMPOUND_STRING("DIFFICULTY"),  sTabItems_Difficulty, ITEM_DIFFICULTY_COUNT },
-    [TAB_CHALLENGES] = { COMPOUND_STRING("CHALLENGES"), sTabItems_Challenges, ITEM_CHALLENGES_COUNT },
+    [TAB_MODE]       = { COMPOUND_STRING("מצב"),       sTabItems_Mode,       ITEM_MODE_COUNT },
+    [TAB_FEATURES]   = { COMPOUND_STRING("תכונות"),   sTabItems_Features,   ITEM_FEATURES_COUNT },
+    [TAB_RANDOMIZER] = { COMPOUND_STRING("מצב אקראי"), sTabItems_Randomizer, ITEM_RANDOM_COUNT },
+    [TAB_NUZLOCKE]   = { COMPOUND_STRING("נאזלוק"),   sTabItems_Nuzlocke,   ITEM_NUZLOCKE_COUNT },
+    [TAB_DIFFICULTY] = { COMPOUND_STRING("רמת קושי"),  sTabItems_Difficulty, ITEM_DIFFICULTY_COUNT },
+    [TAB_CHALLENGES] = { COMPOUND_STRING("אתגרים"), sTabItems_Challenges, ITEM_CHALLENGES_COUNT },
 };
 
 // =============================================================================
@@ -1508,8 +1508,8 @@ static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
     {
         u8 n = sel;
         const u8 *text;
-        static const u8 sText_Random[] = _("RANDOM");
-        static const u8 sText_Off[] = _("OFF");
+        static const u8 sText_Random[] = _("אקראי");
+        static const u8 sText_Off[] = _("כבוי");
         if (n > 18)
             text = sText_Off;
         else if (n == 18)
@@ -1642,6 +1642,33 @@ static void DrawTopBar(void)
 
     AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 120 - width, 1, color, 0, tabName);
 
+#if TEXT_RTL
+    // The hints stand for physical buttons, so they keep their English places: each x is
+    // pre-mirrored, and the mirrored bar draws L at the left edge, R at the right edge and B
+    // between the tab name and R (src/option_menu.c DrawTopBar does the same for L and R).
+    // Both R hints end 5 px from the right edge, so the R icon stays put when NEXT becomes SAVE.
+    if (sMenu->currentTab > 0)
+    {
+        int w = GetStringWidth(FONT_SMALL, sText_TopBar_Left, 0);
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, WindowRtlX(WIN_TOPBAR, 5, w), 1, color, 0, sText_TopBar_Left);
+    }
+    if (sMenu->currentTab < TAB_COUNT - 1)
+    {
+        int w = GetStringWidth(FONT_SMALL, sText_TopBar_Right, 0);
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, WindowRtlX(WIN_TOPBAR, 240 - 5 - w, w), 1, color, 0, sText_TopBar_Right);
+    }
+    else if (sMenu->currentTab == TAB_COUNT - 1)
+    {
+        int w = GetStringWidth(FONT_SMALL, sText_TopBar_Save, 0);
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, WindowRtlX(WIN_TOPBAR, 240 - 5 - w, w), 1, color, 0, sText_TopBar_Save);
+    }
+    if (!sIsInitialSetup)
+    {
+        int w = GetStringWidth(FONT_SMALL, sText_TopBar_Cancel, 0);
+        int cancelX = (120 + width + right) / 2 - w / 2;
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, WindowRtlX(WIN_TOPBAR, cancelX, w), 1, color, 0, sText_TopBar_Cancel);
+    }
+#else
     if (sMenu->currentTab > 0)
         AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 5, 1, color, 0, sText_TopBar_Left);
     if (sMenu->currentTab < TAB_COUNT - 1)
@@ -1653,6 +1680,7 @@ static void DrawTopBar(void)
         int cancelX = (120 + width + right) / 2 - GetStringWidth(FONT_SMALL, sText_TopBar_Cancel, 0) / 2;
         AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, cancelX, 1, color, 0, sText_TopBar_Cancel);
     }
+#endif
 
     PutWindowTilemap(WIN_TOPBAR);
     CopyWindowToVram(WIN_TOPBAR, COPYWIN_FULL);
@@ -1783,17 +1811,27 @@ static void ProcessLeftRight(void)
     if (!CheckConditions(sMenu->currentTab, itemIndex))
         return;
 
+#if TEXT_RTL
+    // A mirrored row lists its values right to left (the first at the right), so LEFT moves to
+    // the next one, as in src/option_menu.c ProcessLeftRight and the multi-column menus.
+    u16 nextKey = GetWindowRtlMode(WIN_OPTIONS) == WINDOW_RTL_MIRROR ? DPAD_LEFT : DPAD_RIGHT;
+    u16 prevKey = nextKey == DPAD_LEFT ? DPAD_RIGHT : DPAD_LEFT;
+#else
+    u16 nextKey = DPAD_RIGHT;
+    u16 prevKey = DPAD_LEFT;
+#endif
+
     u8 *sel = GetSelectionPtr(sMenu->currentTab, itemIndex);
     u8 prev = *sel;
 
-    if (JOY_NEW(DPAD_RIGHT))
+    if (JOY_NEW(nextKey))
     {
         if (*sel < items[itemIndex].numChoices - 1)
             (*sel)++;
         else
             *sel = 0;
     }
-    else if (JOY_NEW(DPAD_LEFT))
+    else if (JOY_NEW(prevKey))
     {
         if (*sel > 0)
             (*sel)--;

@@ -35,27 +35,26 @@ VioletCity_House1_EventScript_TradeCompleted::
 	end
 
 VioletCity_House1_Text_YouWillTradeWontYou:
-	.string "I collect POKéMON!\n"
-	.string "Do you have a {STR_VAR_1}?\p"
-	.string "Want to trade it for my\n"
-	.string "{STR_VAR_2}?$"
+	.string "אני אוסף פוקימונים!\n"
+	.string "יש לך {STR_VAR_1}?\p"
+	.string "רוצה להחליף אותו\n"
+	.string "ב{STR_VAR_2} שלי?$"
 
 VioletCity_House1_Text_MonYouTakeCare:
-	.string "Yay! I got myself {STR_VAR_1}!\p"
-	.string "{STR_VAR_2}, you take care!$"
+	.string "יש! השגתי {STR_VAR_1}!\p"
+	.string "{STR_VAR_2}, תשמור על עצמך!$"
 
 VioletCity_House1_Text_ThisIsntAMon:
-	.string "Uh, no, I don't think so.\n"
-	.string "That isn't a {STR_VAR_1}.$"
+	.string "אה, לא, לא נראה לי.\n"
+	.string "זה לא {STR_VAR_1}.$"
 
 VioletCity_House1_Text_YouWontTradeMe:
-	.string "You don't want to trade? Aww...$"
+	.string "לא רוצה להחליף? אוף…$"
 
 VioletCity_House1_Text_After:
-	.string "Hi, how's my old ONIX doing?$"
+	.string "היי, מה שלום האוניקס שהיה פעם שלי?$"
 
 VioletCity_House1_Text_PokefanM:
-	.string "A POKéMON you get in a trade\n"
-	.string "grows quickly.\p"
-	.string "But if you don't have the right\n"
-	.string "GYM BADGE, they may disobey you.$"
+	.string "פוקימון שמקבלים בהחלפה גדל מהר.\p"
+	.string "אבל בלי תג המכון המתאים,\n"
+	.string "הוא עלול לא לציית לך.$"

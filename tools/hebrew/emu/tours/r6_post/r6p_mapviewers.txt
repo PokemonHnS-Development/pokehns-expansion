@@ -1,0 +1,32 @@
+# Alola and Sinjoh wall maps: Alola_Melemele_Pokecenter_Map (Melemele_House_hns/scripts.inc:25-33,
+# signs (13|14,6)) and NewSinjoh_PokemonCenter_hns_Map (NewSinjoh_PokemonCenter_hns/scripts.inc:31-39,
+# signs (12|13,1)): the message, then OpenScreenshotsFromScript (src/ui_screenshots.c:173), B to leave.
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+warpto MAP_MELEMELE_HOUSE_HNS 13 7
+face UP
+snap al_field
+tap A 4
+waitkey 600
+snap al_msg
+tap A 4
+waittaskx Task_ScreenshotsMain 900
+waitquiet
+snap al_view
+tap B 4
+closeall
+snap al_back
+
+warpto MAP_NEW_SINJOH_POKEMON_CENTER_HNS 12 2
+face UP
+snap sj_field
+tap A 4
+waitkey 600
+snap sj_msg
+tap A 4
+waittaskx Task_ScreenshotsMain 900
+waitquiet
+snap sj_view
+tap B 4
+closeall
+snap sj_back

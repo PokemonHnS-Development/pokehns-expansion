@@ -1,0 +1,557 @@
+# Pokegear MAP with FLAG_VISITED_KANTO: the joint Johto + Kanto layout (REGION_MAP_JK,
+# src/region_map.c:1490-1497, 1533-1537). The cursor visits every non-empty cell of
+# src/data/region_map/region_map_layout_jk.h (snake order; mapgo X Y is in r1run.py) and each is
+# shot after the info window updates (map name, landmarks or the city map).
+start saves/r1_hof_base.sav
+include ../scripts/continue.txt
+# every town visited: cities show as fly-able (city map in the info window), Sinjoh and Alola appear
+setflag FLAG_VISITED_ALOLA
+setflag FLAG_VISITED_AZALEA_TOWN
+setflag FLAG_VISITED_BLACKTHORN_CITY
+setflag FLAG_VISITED_CELADON_CITY
+setflag FLAG_VISITED_CERULEAN_CITY
+setflag FLAG_VISITED_CHERRYGROVE_CITY
+setflag FLAG_VISITED_CIANWOOD_CITY
+setflag FLAG_VISITED_CINNABAR_ISLAND
+setflag FLAG_VISITED_ECRUTEAK_CITY
+setflag FLAG_VISITED_FUCHSIA_CITY
+setflag FLAG_VISITED_GOLDENROD_CITY
+setflag FLAG_VISITED_INDIGO_PLATEAU
+setflag FLAG_VISITED_LAKE_OF_RAGE
+setflag FLAG_VISITED_LAVENDER_TOWN
+setflag FLAG_VISITED_MAHOGANY_TOWN
+setflag FLAG_VISITED_MT_SILVER
+setflag FLAG_VISITED_NEWBARK_TOWN
+setflag FLAG_VISITED_NEW_SINJOH
+setflag FLAG_VISITED_OLIVINE_CITY
+setflag FLAG_VISITED_PALLET_TOWN
+setflag FLAG_VISITED_PEWTER_CITY
+setflag FLAG_VISITED_SAFARI_ZONE_GATE
+setflag FLAG_VISITED_SAFFRON_CITY
+setflag FLAG_VISITED_VERMILION_CITY
+setflag FLAG_VISITED_VIOLET_CITY
+setflag FLAG_VISITED_VIRIDIAN_CITY
+startmenu POKEGEAR
+waitcb2x CB2_Pokenav 600
+waitnav
+press A
+waitnav
+mapwhere
+snap gearjk_000_start
+mapgo 24 0
+waitnav
+snap gearjk_001_00_24_route_24
+mapgo 25 0
+waitnav
+snap gearjk_002_00_25_route_25
+mapgo 24 1
+waitnav
+snap gearjk_003_01_24_route_24
+mapgo 23 1
+waitnav
+snap gearjk_004_01_23_cerulean_cave
+mapgo 9 1
+waitnav
+snap gearjk_005_01_09_lake_of_rage
+mapgo 6 2
+waitnav
+snap gearjk_006_02_06_tin_tower
+mapgo 8 2
+waitnav
+snap gearjk_007_02_08_mt_mortar
+mapgo 9 2
+waitnav
+snap gearjk_008_02_09_route_43
+mapgo 11 2
+waitnav
+snap gearjk_009_02_11_ice_path
+mapgo 12 2
+waitnav
+snap gearjk_010_02_12_ice_path
+mapgo 16 2
+waitnav
+snap gearjk_011_02_16_indigo_plateau
+mapgo 19 2
+waitnav
+snap gearjk_012_02_19_pewter_city
+mapgo 20 2
+waitnav
+snap gearjk_013_02_20_route_3
+mapgo 21 2
+waitnav
+snap gearjk_014_02_21_route_4
+mapgo 22 2
+waitnav
+snap gearjk_015_02_22_mt_moon
+mapgo 23 2
+waitnav
+snap gearjk_016_02_23_route_4
+mapgo 24 2
+waitnav
+snap gearjk_017_02_24_cerulean_city
+mapgo 25 2
+waitnav
+snap gearjk_018_02_25_route_9
+mapgo 26 2
+waitnav
+snap gearjk_019_02_26_route_9
+mapgo 27 2
+waitnav
+snap gearjk_020_02_27_route_9
+mapgo 27 3
+waitnav
+snap gearjk_021_03_27_route_10
+mapgo 24 3
+waitnav
+snap gearjk_022_03_24_route_5
+mapgo 20 3
+waitnav
+snap gearjk_023_03_20_digletts_cave
+mapgo 19 3
+waitnav
+snap gearjk_024_03_19_route_2
+mapgo 16 3
+waitnav
+snap gearjk_025_03_16_indigo_plateau
+mapgo 14 3
+waitnav
+snap gearjk_026_03_14_sinjoh_ruins
+mapgo 12 3
+waitnav
+snap gearjk_027_03_12_blackthorn_city
+mapgo 11 3
+waitnav
+snap gearjk_028_03_11_route_44
+mapgo 10 3
+waitnav
+snap gearjk_029_03_10_route_44
+mapgo 9 3
+waitnav
+snap gearjk_030_03_09_mahogany_town
+mapgo 8 3
+waitnav
+snap gearjk_031_03_08_route_42
+mapgo 7 3
+waitnav
+snap gearjk_032_03_07_route_42
+mapgo 6 3
+waitnav
+snap gearjk_033_03_06_ecruteak_city
+mapgo 5 3
+waitnav
+snap gearjk_034_03_05_route_38
+mapgo 4 3
+waitnav
+snap gearjk_035_03_04_route_38
+mapgo 3 3
+waitnav
+snap gearjk_036_03_03_route_39
+mapgo 3 4
+waitnav
+snap gearjk_037_04_03_route_39
+mapgo 6 4
+waitnav
+snap gearjk_038_04_06_route_37
+mapgo 12 4
+waitnav
+snap gearjk_039_04_12_route_45
+mapgo 14 4
+waitnav
+snap gearjk_040_04_14_route_50
+mapgo 16 4
+waitnav
+snap gearjk_041_04_16_victory_road_hns
+mapgo 19 4
+waitnav
+snap gearjk_042_04_19_viridian_forest
+mapgo 24 4
+waitnav
+snap gearjk_043_04_24_route_5
+mapgo 27 4
+waitnav
+snap gearjk_044_04_27_rock_tunnel
+mapgo 27 5
+waitnav
+snap gearjk_045_05_27_lavender_town
+mapgo 26 5
+waitnav
+snap gearjk_046_05_26_route_8
+mapgo 25 5
+waitnav
+snap gearjk_047_05_25_route_8
+mapgo 24 5
+waitnav
+snap gearjk_048_05_24_saffron_city
+mapgo 23 5
+waitnav
+snap gearjk_049_05_23_route_7
+mapgo 22 5
+waitnav
+snap gearjk_050_05_22_celadon_city
+mapgo 21 5
+waitnav
+snap gearjk_051_05_21_route_16
+mapgo 19 5
+waitnav
+snap gearjk_052_05_19_viridian_forest
+mapgo 16 5
+waitnav
+snap gearjk_053_05_16_victory_road_hns
+mapgo 14 5
+waitnav
+snap gearjk_054_05_14_new_sinjoh
+mapgo 12 5
+waitnav
+snap gearjk_055_05_12_route_45
+mapgo 11 5
+waitnav
+snap gearjk_056_05_11_dark_cave
+mapgo 10 5
+waitnav
+snap gearjk_057_05_10_dark_cave
+mapgo 9 5
+waitnav
+snap gearjk_058_05_09_route_31
+mapgo 8 5
+waitnav
+snap gearjk_059_05_08_route_31
+mapgo 7 5
+waitnav
+snap gearjk_060_05_07_violet_city
+mapgo 6 5
+waitnav
+snap gearjk_061_05_06_route_36
+mapgo 5 5
+waitnav
+snap gearjk_062_05_05_national_park
+mapgo 3 5
+waitnav
+snap gearjk_063_05_03_route_39
+mapgo 2 5
+waitnav
+snap gearjk_064_05_02_trainer_hill
+mapgo 0 6
+waitnav
+snap gearjk_065_06_00_safari_zone
+mapgo 2 6
+waitnav
+snap gearjk_066_06_02_route_40
+mapgo 3 6
+waitnav
+snap gearjk_067_06_03_olivine_city
+mapgo 4 6
+waitnav
+snap gearjk_068_06_04_olivine_lighthouse
+mapgo 5 6
+waitnav
+snap gearjk_069_06_05_route_35
+mapgo 6 6
+waitnav
+snap gearjk_070_06_06_ruins_of_alph
+mapgo 7 6
+waitnav
+snap gearjk_071_06_07_route_32
+mapgo 9 6
+waitnav
+snap gearjk_072_06_09_route_30
+mapgo 11 6
+waitnav
+snap gearjk_073_06_11_dark_cave
+mapgo 12 6
+waitnav
+snap gearjk_074_06_12_route_45
+mapgo 14 6
+waitnav
+snap gearjk_075_06_14_snowswept_cavern
+mapgo 16 6
+waitnav
+snap gearjk_076_06_16_victory_road_hns
+mapgo 19 6
+waitnav
+snap gearjk_077_06_19_route_2
+mapgo 21 6
+waitnav
+snap gearjk_078_06_21_route_17
+mapgo 24 6
+waitnav
+snap gearjk_079_06_24_route_6
+mapgo 25 6
+waitnav
+snap gearjk_080_06_25_digletts_cave
+mapgo 27 6
+waitnav
+snap gearjk_081_06_27_route_12
+mapgo 27 7
+waitnav
+snap gearjk_082_07_27_route_12
+mapgo 26 7
+waitnav
+snap gearjk_083_07_26_route_11
+mapgo 25 7
+waitnav
+snap gearjk_084_07_25_route_11
+mapgo 24 7
+waitnav
+snap gearjk_085_07_24_vermilion_city
+mapgo 21 7
+waitnav
+snap gearjk_086_07_21_route_17
+mapgo 19 7
+waitnav
+snap gearjk_087_07_19_viridian_city
+mapgo 18 7
+waitnav
+snap gearjk_088_07_18_route_22
+mapgo 17 7
+waitnav
+snap gearjk_089_07_17_route_22
+mapgo 16 7
+waitnav
+snap gearjk_090_07_16_victory_road_hns
+mapgo 15 7
+waitnav
+snap gearjk_091_07_15_route_28
+mapgo 14 7
+waitnav
+snap gearjk_092_07_14_mt_silver
+mapgo 12 7
+waitnav
+snap gearjk_093_07_12_route_45
+mapgo 11 7
+waitnav
+snap gearjk_094_07_11_dark_cave
+mapgo 9 7
+waitnav
+snap gearjk_095_07_09_route_30
+mapgo 7 7
+waitnav
+snap gearjk_096_07_07_route_32
+mapgo 5 7
+waitnav
+snap gearjk_097_07_05_goldenrod_city
+mapgo 2 7
+waitnav
+snap gearjk_098_07_02_route_40
+mapgo 0 7
+waitnav
+snap gearjk_099_07_00_safari_zone_gate
+mapgo 0 8
+waitnav
+snap gearjk_100_08_00_route_48
+mapgo 2 8
+waitnav
+snap gearjk_101_08_02_route_40
+mapgo 5 8
+waitnav
+snap gearjk_102_08_05_goldenrod_city
+mapgo 7 8
+waitnav
+snap gearjk_103_08_07_route_32
+mapgo 9 8
+waitnav
+snap gearjk_104_08_09_route_30
+mapgo 11 8
+waitnav
+snap gearjk_105_08_11_route_46
+mapgo 12 8
+waitnav
+snap gearjk_106_08_12_route_45
+mapgo 16 8
+waitnav
+snap gearjk_107_08_16_route_26
+mapgo 19 8
+waitnav
+snap gearjk_108_08_19_route_1
+mapgo 21 8
+waitnav
+snap gearjk_109_08_21_route_17
+mapgo 27 8
+waitnav
+snap gearjk_110_08_27_route_12
+mapgo 27 9
+waitnav
+snap gearjk_111_09_27_route_12
+mapgo 21 9
+waitnav
+snap gearjk_112_09_21_route_17
+mapgo 19 9
+waitnav
+snap gearjk_113_09_19_route_1
+mapgo 16 9
+waitnav
+snap gearjk_114_09_16_route_26
+mapgo 11 9
+waitnav
+snap gearjk_115_09_11_route_46
+mapgo 9 9
+waitnav
+snap gearjk_116_09_09_route_30
+mapgo 7 9
+waitnav
+snap gearjk_117_09_07_route_32
+mapgo 5 9
+waitnav
+snap gearjk_118_09_05_route_34
+mapgo 2 9
+waitnav
+snap gearjk_119_09_02_route_41
+mapgo 1 9
+waitnav
+snap gearjk_120_09_01_cianwood_city
+mapgo 0 9
+waitnav
+snap gearjk_121_09_00_route_47
+mapgo 0 10
+waitnav
+snap gearjk_122_10_00_embedded_tower
+mapgo 1 10
+waitnav
+snap gearjk_123_10_01_whirl_islands
+mapgo 5 10
+waitnav
+snap gearjk_124_10_05_route_34
+mapgo 7 10
+waitnav
+snap gearjk_125_10_07_union_cave
+mapgo 9 10
+waitnav
+snap gearjk_126_10_09_route_30
+mapgo 11 10
+waitnav
+snap gearjk_127_10_11_route_46
+mapgo 16 10
+waitnav
+snap gearjk_128_10_16_route_26
+mapgo 19 10
+waitnav
+snap gearjk_129_10_19_route_1
+mapgo 21 10
+waitnav
+snap gearjk_130_10_21_route_17
+mapgo 26 10
+waitnav
+snap gearjk_131_10_26_route_14
+mapgo 27 10
+waitnav
+snap gearjk_132_10_27_route_13
+mapgo 27 11
+waitnav
+snap gearjk_133_11_27_akala_forest
+mapgo 26 11
+waitnav
+snap gearjk_134_11_26_route_15
+mapgo 25 11
+waitnav
+snap gearjk_135_11_25_route_15
+mapgo 24 11
+waitnav
+snap gearjk_136_11_24_fuchsia_city
+mapgo 23 11
+waitnav
+snap gearjk_137_11_23_route_18
+mapgo 22 11
+waitnav
+snap gearjk_138_11_22_route_18
+mapgo 21 11
+waitnav
+snap gearjk_139_11_21_route_17
+mapgo 19 11
+waitnav
+snap gearjk_140_11_19_pallet_town
+mapgo 16 11
+waitnav
+snap gearjk_141_11_16_route_26
+mapgo 15 11
+waitnav
+snap gearjk_142_11_15_route_27
+mapgo 14 11
+waitnav
+snap gearjk_143_11_14_route_27
+mapgo 13 11
+waitnav
+snap gearjk_144_11_13_new_bark_town
+mapgo 12 11
+waitnav
+snap gearjk_145_11_12_route_29
+mapgo 11 11
+waitnav
+snap gearjk_146_11_11_route_29
+mapgo 10 11
+waitnav
+snap gearjk_147_11_10_route_29
+mapgo 9 11
+waitnav
+snap gearjk_148_11_09_cherrygrove_city
+mapgo 7 11
+waitnav
+snap gearjk_149_11_07_union_cave
+mapgo 5 11
+waitnav
+snap gearjk_150_11_05_ilex_forest
+mapgo 5 12
+waitnav
+snap gearjk_151_12_05_ilex_forest
+mapgo 6 12
+waitnav
+snap gearjk_152_12_06_azalea_town
+mapgo 7 12
+waitnav
+snap gearjk_153_12_07_route_33
+mapgo 19 12
+waitnav
+snap gearjk_154_12_19_route_21
+mapgo 24 12
+waitnav
+snap gearjk_155_12_24_route_19
+mapgo 25 12
+waitnav
+snap gearjk_156_12_25_alola_ocean
+mapgo 26 12
+waitnav
+snap gearjk_157_12_26_ulaula_cave_2
+mapgo 27 12
+waitnav
+snap gearjk_158_12_27_akala_island
+mapgo 27 13
+waitnav
+snap gearjk_159_13_27_ulaula_island
+mapgo 26 13
+waitnav
+snap gearjk_160_13_26_melemele_island
+mapgo 25 13
+waitnav
+snap gearjk_161_13_25_poni_island
+mapgo 24 13
+waitnav
+snap gearjk_162_13_24_route_19
+mapgo 23 13
+waitnav
+snap gearjk_163_13_23_route_19
+mapgo 22 13
+waitnav
+snap gearjk_164_13_22_seafoam_islands
+mapgo 21 13
+waitnav
+snap gearjk_165_13_21_route_20
+mapgo 20 13
+waitnav
+snap gearjk_166_13_20_route_20
+mapgo 19 13
+waitnav
+snap gearjk_167_13_19_cinnabar_island
+mapgo 12 14
+waitnav
+snap gearjk_168_14_12_battle_frontier
+mapgo 25 14
+waitnav
+snap gearjk_169_14_25_poni_cave
+mapgo 26 14
+waitnav
+snap gearjk_170_14_26_ulaula_cave
+mapgo 27 14
+waitnav
+snap gearjk_171_14_27_akala_cave
+press B
+waitnav
+press B
+waitcb2x CB2_Overworld 900

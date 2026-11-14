@@ -1,43 +1,43 @@
 Questionnaire_Text_FillOut::
-	.string "There is a questionnaire.\n"
-	.string "Would you like to fill it out?$"
+	.string "יש כאן שאלון.\n"
+	.string "למלא אותו?$"
 
 Questionnaire_Text_ThankYou::
-	.string "Thank you for taking the time to\n"
-	.string "fill out our questionnaire.\p"
-	.string "Your feedback will be used for\n"
-	.string "future reference.$"
+	.string "תודה שהקדשת מזמנך\n"
+	.string "למילוי השאלון שלנו.\p"
+	.string "המשוב שלך ישמש אותנו\n"
+	.string "בעתיד.$"
 
 Questionnaire_Text_YouKnowThoseWordsGift::
-	.string "Oh, hello!\n"
-	.string "You know those words?\p"
-	.string "That means you must know about\n"
-	.string "the MYSTERY GIFT.\p"
-	.string "From now on, you should be\n"
-	.string "receiving MYSTERY GIFTS!$"
+	.string "אה, שלום!\n"
+	.string "המילים האלה מוכרות לך?\p"
+	.string "זה אומר שבטח שמעת על\n"
+	.string "מתנת מסתורין.\p"
+	.string "מעכשיו אמורות להגיע אליך\n"
+	.string "מתנות מסתורין!$"
 
 Questionnaire_Text_YouCanAccessMysteryGift::
-	.string "Once you save your game, you can\n"
-	.string "access the MYSTERY GIFT.$"
+	.string "אחרי שמירת המשחק, אפשר יהיה\n"
+	.string "לגשת למתנת מסתורין.$"
 
 Questionnaire_Text_YouKnowThoseWordsEvent::
-	.string "Oh, hello!\n"
-	.string "You know those words?\p"
-	.string "That means you must know about\n"
-	.string "the MYSTERY EVENT.$"
+	.string "אה, שלום!\n"
+	.string "המילים האלה מוכרות לך?\p"
+	.string "זה אומר שבטח שמעת על\n"
+	.string "אירועי מסתורין.$"
 
 Questionnaire_Text_YouCanAccessMysteryEvent::
-	.string "Once you save your game, you can\n"
-	.string "access the MYSTERY EVENT.$"
+	.string "אחרי שמירת המשחק, אפשר יהיה\n"
+	.string "לגשת לאירועי מסתורין.$"
 
 MysteryGift_Text_TheresATicketForYou::
-	.string "Thank you for using the MYSTERY\n"
-	.string "EVENT System.\p"
-	.string "You must be {PLAYER}.\n"
-	.string "There is a ticket here for you.$"
+	.string "תודה שהשתמשת במערכת\n"
+	.string "אירועי המסתורין.\p"
+	.string "{PLAYER}, נכון?\n"
+	.string "יש כאן כרטיס בשבילך.$"
 
 MysteryGift_Text_TryUsingItAtLilycovePort::
-	.string "It appears to be for use at\n"
-	.string "the LILYCOVE CITY port.\p"
-	.string "Why not give it a try and see what\n"
-	.string "it is about?$"
+	.string "נראה שהוא מיועד לשימוש\n"
+	.string "בנמל של העיר ליליקוב.\p"
+	.string "אולי כדאי לנסות אותו ולראות\n"
+	.string "במה מדובר?$"

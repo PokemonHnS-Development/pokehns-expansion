@@ -1,0 +1,7 @@
+include ../hns-tools/scratch/screens/r2_battle_frontier_pass_bp_and_remaining_facilities/live/_enter_123.txt
+drive py_save menu 10
+pick 0
+saveyes
+drivex py_go free 40 12000
+loc
+ss pyr_floor1

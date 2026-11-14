@@ -1,0 +1,39 @@
+tap UP 4
+waitquiet
+tap UP 4
+waitquiet
+tap UP 4
+waitquiet
+tap UP 4
+waitquiet
+tap UP 4
+waitquiet
+tap UP 4
+waitquiet
+tap UP 4
+waitquiet
+tap UP 4
+waitquiet
+tap UP 4
+waitquiet
+tap UP 4
+waitquiet
+tap UP 4
+waitquiet
+shot pdbg_top
+tap A 4
+waitquiet
+30 -
+snap py_ctx_00
+tap RIGHT 4
+waitquiet
+snap py_ctx_01
+tap DOWN 4
+waitquiet
+snap py_ctx_02
+tap LEFT 4
+waitquiet
+snap py_ctx_03
+tap B 4
+waitquiet
+showtasks

@@ -18,7 +18,7 @@ RuinsOfAlph_Outside_EventScript_Quagsire::
 	end
 
 RuinsOfAlph_Outside_Text_Quagsire:
-	.string "QUAGSIRE: Quag Quag$"
+	.string "קווגסייר: קווג קווג$"
 
 RuinsOfAlph_Outside_EventScript_Stan::
 	trainerbattle_single TRAINER_STAN_HNS, RuinsOfAlph_Outside_Text_SuperNerdStan_Seen, RuinsOfAlph_Outside_Text_SuperNerdStan_Beaten
@@ -100,58 +100,56 @@ RuinsOfAlph_Outside_Text_Scientist:
 	.string "POKéDEX. Follow me.$"
 
 RuinsOfAlph_Outside_Text_SuperNerdStan_Seen:
-	.string "What do you want? I'm studying--\n"
-	.string "don't disturb me!$"
+	.string "מה אתה רוצה? אני לומד -\n"
+	.string "אל תפריע לי!$"
 
 RuinsOfAlph_Outside_Text_SuperNerdStan_Beaten:
-	.string "Sorry…\n"
-	.string "I'm frustrated by our lack of\p"
-	.string "real understanding…$"
+	.string "סליחה… אני מתוסכל מכך שעדיין\n"
+	.string "אין לנו הבנה אמיתית…$"
 
 RuinsOfAlph_Outside_Text_SuperNerdStan_After:
-	.string "The RUINS are from about 1500\n"
-	.string "years ago.\p"
-	.string "Nobody knows who built them.\p"
-	.string "It's also not known if the POKéMON\n"
-	.string "statues have any meaning.\p"
-	.string "It's all one big mystery…$"
+	.string "החורבות הן מלפני כ-1500 שנה.\p"
+	.string "אף אחד לא יודע מי בנה אותן.\p"
+	.string "גם לא ידוע אם לפסלי\n"
+	.string "הפוקימונים יש משמעות כלשהי.\p"
+	.string "הכול תעלומה אחת גדולה…$"
 
 RuinsOfAlph_Outside_Text_PsychicNathan_Seen:
-	.string "Hmmm… This is a strange place.$"
+	.string "המממ… זה מקום מוזר.$"
 
 RuinsOfAlph_Outside_Text_PsychicNathan_Beaten:
 	.string "…$"
 
 RuinsOfAlph_Outside_Text_PsychicNathan_After:
-	.string "I like thinking here.$"
+	.string "אני אוהב לחשוב כאן.$"
 
 RuinsOfAlph_Outside_Text_MysteryChamberSign:
-	.string "MYSTERY STONE PANEL CHAMBER$"
+	.string "חדר לוחות האבן המסתוריים$"
 
 RuinsOfAlph_Outside_Text_MainSign:
-	.string "RUINS OF ALPH\n"
-	.string "VISITORS WELCOME$"
+	.string "חורבות אלף\n"
+	.string "המבקרים מוזמנים$"
 
 RuinsOfAlph_Outside_Text_ResearchSign:
-	.string "RUINS OF ALPH RESEARCH CENTER\p"
-	.string "THE AUTHORITY ON THE\n"
-	.string "RUINS OF ALPH$"
+	.string "מרכז המחקר של חורבות אלף\p"
+	.string "הסמכות המובילה בנושא\n"
+	.string "חורבות אלף$"
 
 RuinsOfAlph_Outside_Text_Fisher1:
-	.string "While exploring the RUINS, we\n"
-	.string "suddenly noticed an odd presence.\p"
-	.string "We all got scared and ran away.\n"
-	.string "You should be careful too.$"
+	.string "כשחקרנו את החורבות, פתאום\n"
+	.string "הרגשנו נוכחות משונה.\p"
+	.string "כולנו נבהלנו וברחנו.\n"
+	.string "כדאי גם לך להיזהר.$"
 
 RuinsOfAlph_Outside_Text_Fisher2:
-	.string "The RUINS hide a huge secret!\p"
-	.string "…I think…$"
+	.string "החורבות מסתירות סוד ענק!\p"
+	.string "…נדמה לי…$"
 
 RuinsOfAlph_Outside_Text_Youngster1:
-	.string "There are many kinds of UNOWN, so\n"
-	.string "we use them for our secret codes.$"
+	.string "יש הרבה סוגים של אנון, אז אנחנו\n"
+	.string "משתמשים בהם לקודים הסודיים שלנו.$"
 
 RuinsOfAlph_Outside_Text_Youngster2:
-	.string "A… H… E… A… D… Hmm…\p"
-	.string "What?\p"
-	.string "I'm decoding this message!$"
+	.string "A… H… E… A… D… הממ…\p"
+	.string "מה?\p"
+	.string "אני מפענח את ההודעה הזאת!$"

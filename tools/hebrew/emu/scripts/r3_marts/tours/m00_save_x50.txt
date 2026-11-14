@@ -1,0 +1,7 @@
+# Save r3m_x50: ladder6_postgame + P9999999 + EXPENSIVE level 3, saved in place.
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+setexpensive 3
+savegame
+keepsave r3m_x50
