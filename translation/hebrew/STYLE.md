@@ -38,7 +38,8 @@ Where they disagree, the glossary wins for names and this file wins for everythi
 - Every proper noun and game term comes from `glossary.csv` (`proposed_hebrew` column). Never invent
   a spelling. If a name is missing from the glossary, leave the English name in place and add it to
   your report; do not guess.
-- Fixed terms (glossary kind `term`): פוקימון / פוקימונים, מאמן, פוקדקס, פוקיבול, מרכז פוקימון,
+- Fixed terms (glossary kind `term`): פוקימון / פוקימונים, מאמן, פוקדקס, פוכדור (POKé BALL, the owner's
+  decision, `DECISIONS.md` Q159; plural פוכדורים), מרכז פוקימון,
   מכון (gym), מחשב (PC), מהלך (move), יכולת, אופי, סוג (type), נ”ח (HP), נ”כ (PP), מ”מ (TM), מ”נ (HM),
   רמה (level), נקודות ניסיון (EXP; the full spelling ניסיון, as FireRed now writes it). Hebrew uses the
   definite article and prefixes on these normally: `הפוקימון שלך`, `לפוקדקס`, `במרכז הפוקימון`.
@@ -88,7 +89,7 @@ Only characters in `charmap.txt`. In particular:
 - Line breaks: `\n` = next line, `\l` = scroll one line, `\p` = new page. You may move `\n`/`\l` to
   re-wrap Hebrew, and add or remove `\p` only when a page would otherwise not fit; keep the number of
   pages close to the English. Battle strings without any manual break in English are auto-wrapped:
-  keep them without breaks, except the stat-change lines (§7).
+  keep them without breaks, except the stat-change lines that name no ability or item (§7).
 - `{POKE}` / `{PKMN}` render the Latin "POKé"/"PKMN" glyph pairs. In Hebrew text replace them with the
   Hebrew word (`פוקי`, `פוקימון`). `drift.py` ignores these glyph-pair tokens (`{POKE}`, `{PKMN}`,
   `{POKEBLOCK}`, the `{ID}{NO}` pair and the `{PK}` of the Easy Chat word `{PK}RS`), so dropping
@@ -134,14 +135,17 @@ Only characters in `charmap.txt`. In particular:
   friends). Hebrew puts the adjective after the noun, so they are suffixes, and they are definite
   (` הפראי`, ` היריב`, see §9): a name is definite, so its adjective takes ה in every position, after `את` too. A literal "wild" written in a string follows the English article: `{B_BUFF1} הפראי ברח!` for "The wild X fled!", but `פראי` in the encounter intros ("a wild X", "Wild X appeared!").
 - Verbs agree in the masculine: `{B_DEF_NAME_WITH_PREFIX} התעלף!`, `… נפגע!`.
-- A stat change names the stat through the masculine `הנתון`, so the verb agrees for every stat
-  (Q140). A stat-change line that names no ability starts its second line with `הנתון`:
-  `ל{B_DEF_NAME_WITH_PREFIX} עלה\nהנתון {B_BUFF1}{B_BUFF2}!`,
-  `ל{B_DEF_NAME_WITH_PREFIX}\nהנתון {B_BUFF1} לא יעלה יותר!`. At the end of a line after a name
-  `הנתון` reads as 'the given' (`לפורט היריב הנתון`), and a line that starts with the stat
-  (`הגנה עלה!`) pairs a feminine noun with a masculine verb. The auto-wrap could break at either
-  place, so these lines keep the manual break. The lines that name an ability never put the name
-  just before `הנתון` (Q145).
+- A stat change names the stat itself, with its article, and the verb agrees with the stat (`DECISIONS.md` Q160,
+  the owner's decision, which supersedes Q145): `ל{B_DEF_NAME_WITH_PREFIX}\n{B_BUFF1} עלתה{B_BUFF2}!` shows
+  `לפורט היריב` / `ההתקפה המיוחדת עלתה מאוד!`, and for accuracy `הדיוק ירד באופן חמור!`. In a battle message a
+  `{B_BUFF1}` that holds a stat already has its article (ההתקפה, ההתקפה המיוחדת, הדיוק: `sStatNamesWithArticle`
+  in `src/battle_message.c`, under `TEXT_RTL`), so a line never puts ה or another prefix letter right before it:
+  `את {B_BUFF1} שלו`, `מפני הורדת {B_BUFF1}`. Every stat name but דיוק is feminine. A line in
+  `gBattleStringsTable` takes the feminine verb (עלתה, ירדה, לא תעלה, לא תרד, התחזקה); its masculine form (עלה,
+  ירד, לא יעלה, לא ירד, התחזק) is in `sMasculineStatStrings` in the same file, and the game prints that one
+  for הדיוק. Change a stat-change line in both places. A line that names no ability or item breaks after the name,
+  so the stat starts the second line; the ability and item lines are auto-wrapped. `הנתונים` stays where a line
+  speaks of stats in general (`שינויי הנתונים`), with no stat name after it.
 - `{B_DEF_PARTNER_NAME}` is a bare name on either side, so the line ties it to the first target with
   `שלצידו`: `נגד {B_DEF_NAME_WITH_PREFIX2} ו{B_DEF_PARTNER_NAME} שלצידו!`. A second foe then does not
   read as the player's Pokémon, and the line still reads right when the targets are the player's (Q146).
