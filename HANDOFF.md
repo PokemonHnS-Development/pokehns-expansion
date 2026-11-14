@@ -30,7 +30,7 @@ fresh clone.
 | [`tools/hebrew/release/README.md`](tools/hebrew/release/README.md) | the release scripts; [`REVIEW.md`](tools/hebrew/release/REVIEW.md) there is the screenshot review |
 | [`tools/hebrew/testmsgs/README.md`](tools/hebrew/testmsgs/README.md) | the Hebrew battle-test message table |
 | [`translation/hebrew/STYLE.md`](translation/hebrew/STYLE.md) | the binding style rules |
-| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 79 recorded decisions, up to Q143, and the names review |
+| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 90 recorded decisions, up to Q160, and the names review |
 | [`translation/hebrew/transliteration_rules.md`](translation/hebrew/transliteration_rules.md) | how names are transliterated |
 | [`translation/hebrew/STATUS.md`](translation/hebrew/STATUS.md) | per-file state (generated) |
 | [`translation/hebrew/glossary.csv`](translation/hebrew/glossary.csv) | every name and fixed term |
@@ -42,14 +42,14 @@ fresh clone.
 
 | Item | Value | Check |
 | --- | --- | --- |
-| `he/main` | `eddc03560c` and the documents after it (on GitHub too), the build of 1.0: round 29's merge (`he/fix-r29`: the status tags SLP and FRZ as in English, the Pokédex stats lines off the red bar; Q154-Q158). Before it, `394eda95a7`: round 28's merge `2db56ead2b` (`he/fix-r28`: the summary, bag and contest text boxes aligned for Hebrew, `tools/hebrew/emu/textalign.py`, the `r28_align` play tours, Q150-Q153) and its release notes. Before it, `c423645e48`. Round 27's merges: `he/fix-r27e` (the engine: English battle names in the English build, the numero sign, a maqaf before Latin names), `he/fix-r27` (the text: stat-change lines, counts of one, the research logs, the Mt. Moon sign, two-foe and Mirror Herb lines) and `he/fix-r27u` (credits, upstream's CI kept, the guide in `docs/SUMMARY.md`); `c423645e48` adds the release notes. Before them: round 26's docs (`a5d6c1a101`) and round 25 (`1124d9661d`) | `git rev-parse --short he/main` |
-| `he/renderer` | `8150569884` (round 29's status-tag graphics and Pokédex stats commits on top of) `51579203a4` (on GitHub too): `a2c7009987` plus round 28's five engine commits (English build: 55 assert-line digits differ, `nm` identical; `<private>/scratch/screens/r28/engproof/PROOF.md`), and before that `62b7fccf8b` plus round 27's five engine commits (`06c51691a4`, `38a85d5a26`, `a0089221a7`, `2fc9af5f52`, `72b0ce65b4`, cherry-picked). `TEXT_NAME_SUFFIX_IN_BATTLE` now follows `TEXT_RTL`, so the English build (`TEXT_RTL` FALSE, SHA-1 `769e4c058e…`) takes upstream's battle-name code: `BattleStringExpandPlaceholders`, `ExpandBattleTextBuffPlaceholders`, `CopyMonCategoryText` and `CreateAbilityPopUp` have upstream's sizes and the English battle message boxes equal upstream's; no `Rtl*` symbol (`<private>/scratch/screens/r27/engproof/PROOF.md`) | `git rev-parse --short he/renderer` |
-| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. The same three files are the assets of the builds repo's GitHub Release `1.0` (tag `1.0` at `<builds>` `90e1f99`). Current 1.0: built from `he/main` `1124d9661d` (rc25) | `git -C <builds> log` (`20a8d79` "Update 1.0 to the build of he/main 1124d9661d"); `<builds>/records/README.md:46`; `gh release view 1.0 -R ronyeh2/pokehns-hebrew-builds` (each asset's SHA-256 is that of the file in `20a8d79`) |
-| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `c95195cfaa54b24bf04993c781b60da271f24708`, CRC32 `F5C889CC`, built from `eddc03560c` as rc28; against rc27 30 of 2,056 tour shots differ: 27 status tags, 2 Pokédex stats, and the Day Care man's shot one frame earlier (the icon sheet compresses 4 bytes smaller). Also on the living-room Shield (`Download/gamesretro/gba/`) | `<builds>/SHA1SUMS`; `<builds>/records/rc28/build_info.json` |
+| `he/main` | `d5da0e8609` and the documents after it (on GitHub too), the build of 1.0: round 30's merge (`he/fix-r30`: POKé BALL is פוכדור everywhere, and the stat-change lines name the stat with its article and no longer say הנתון; Q159, Q160). Before it, `eddc03560c`: round 29's merge (`he/fix-r29`: the status tags SLP and FRZ as in English, the Pokédex stats lines off the red bar; Q154-Q158). Before it, `394eda95a7`: round 28's merge `2db56ead2b` (`he/fix-r28`: the summary, bag and contest text boxes aligned for Hebrew, `tools/hebrew/emu/textalign.py`, the `r28_align` play tours, Q150-Q153) and its release notes. Before it, `c423645e48`. Round 27's merges: `he/fix-r27e` (the engine: English battle names in the English build, the numero sign, a maqaf before Latin names), `he/fix-r27` (the text: stat-change lines, counts of one, the research logs, the Mt. Moon sign, two-foe and Mirror Herb lines) and `he/fix-r27u` (credits, upstream's CI kept, the guide in `docs/SUMMARY.md`); `c423645e48` adds the release notes. Before them: round 26's docs (`a5d6c1a101`) and round 25 (`1124d9661d`) | `git rev-parse --short he/main` |
+| `he/renderer` | `4ea0c000c8` (round 30's battle-message commit: a stat named with its article, and a verb that agrees with it; English build: one assert line number differs, `nm` identical; `<private>/scratch/screens/r30/engproof/PROOF.md`) on top of `8150569884` (round 29's status-tag graphics and Pokédex stats commits on top of) `51579203a4` (on GitHub too): `a2c7009987` plus round 28's five engine commits (English build: 55 assert-line digits differ, `nm` identical; `<private>/scratch/screens/r28/engproof/PROOF.md`), and before that `62b7fccf8b` plus round 27's five engine commits (`06c51691a4`, `38a85d5a26`, `a0089221a7`, `2fc9af5f52`, `72b0ce65b4`, cherry-picked). `TEXT_NAME_SUFFIX_IN_BATTLE` now follows `TEXT_RTL`, so the English build (`TEXT_RTL` FALSE, SHA-1 `769e4c058e…`) takes upstream's battle-name code: `BattleStringExpandPlaceholders`, `ExpandBattleTextBuffPlaceholders`, `CopyMonCategoryText` and `CreateAbilityPopUp` have upstream's sizes and the English battle message boxes equal upstream's; no `Rtl*` symbol (`<private>/scratch/screens/r27/engproof/PROOF.md`) | `git rev-parse --short he/renderer` |
+| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. The same three files are the assets of the builds repo's GitHub Release `1.0` (tag `1.0` at `<builds>` `90e1f99`). Current 1.0: built from `he/main` `d5da0e8609` (rc29) | `git -C <builds> log` (`c83b649` "Update 1.0 to the build of he/main d5da0e8609"); `<builds>/records/README.md:50`; `gh release view 1.0 -R ronyeh2/pokehns-hebrew-builds` (each asset's SHA-256 is that of the file in `c83b649`) |
+| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `101e0f2502e981e83c6832cfd8da5222e302b412`, CRC32 `FF99016D`, built from `d5da0e8609` as rc29; against rc28 79 of rc28's 2,056 tour shots differ and one is gone (2,055 now): 39 show the new ball word, 20 the new stat lines, 8 an animation frame taken earlier after a shorter line, and 12 (plus one page fewer) in `bv_double`'s turn 2, where a 4-frame shift changes the foe's random move pick. Also on the living-room Shield (`Download/gamesretro/gba/`) | `<builds>/SHA1SUMS`; `<builds>/records/rc29/build_info.json` |
 | Upstream | offered as `PokemonHnS-Development/pokehns-expansion#39` ("Hebrew localization - complete (2.0.6)", opened 2026-11-11, open). Its head is `ronyeh2:he/main` and its base `master`, so every push to `he/main` updates it. No checks are reported on it. Its description was rewritten on 2026-11-12 to match the tree at `c423645e48` (the switches, the six upstream fixes, the English build, CI, the files a merge can leave out, what is kept in English, what was tested) | `gh pr view 39 -R PokemonHnS-Development/pokehns-expansion`; `gh pr checks 39 -R ...` |
 | Releasing | Build a candidate with `tools/hebrew/release/`. Then replace the three files in the builds repo, say in the commit message which `he/main` commit it was built from, and replace the GitHub Release's assets. Keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
-| CI | green in all three jobs at `eddc03560c` (run 43410413615), at `394eda95a7` (run 43398670810), at `c423645e48` (run 43134335865), at `a5d6c1a101` (run 43120151292), at `be01ca8215` (run 43113468009), at `1124d9661d` (run 43102206527: `build` 5m48s, `audit` 1m11s, `check` 19m47s), at `b70d4d33b6` (42895047715), at `47669d9f06` (42889868670), at `8aeb3a0f2b` (42802955754) and at `c1cfd8a30b` (42721195219), and so were the runs before them on `he/main`. Round 25's three branches failed only `audit`: CI's drift compares with `origin/he/renderer`, which holds every branch's engine picks, so each branch failed on the files of the engine commits it does not carry (`he/fix-r25` 5 FAIL, `he/fix-r25e` 1, `he/fix-r25t` 6; runs 43102190874, 43102195638, 43102200540); their merge passes | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
-| Static checks | at `he/main` `1124d9661d`, baseline `he/renderer` `62b7fccf8b`: drift 708 files, 0 FAIL, 334 with warnings only (8 `w LATIN`, all kept: Q141; no `w GLYPHPAIR`); audit 0 errors and 54 warnings, 39,060 strings (24,841 translated) as in CI; namecheck 7,133 rows, 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 199 tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7, none skipped | section 4.2 |
+| CI | green in all three jobs at `d5da0e8609` (run 43588288711), at `eddc03560c` (run 43410413615), at `394eda95a7` (run 43398670810), at `c423645e48` (run 43134335865), at `a5d6c1a101` (run 43120151292), at `be01ca8215` (run 43113468009), at `1124d9661d` (run 43102206527: `build` 5m48s, `audit` 1m11s, `check` 19m47s), at `b70d4d33b6` (42895047715), at `47669d9f06` (42889868670), at `8aeb3a0f2b` (42802955754) and at `c1cfd8a30b` (42721195219), and so were the runs before them on `he/main`. Round 25's three branches failed only `audit`: CI's drift compares with `origin/he/renderer`, which holds every branch's engine picks, so each branch failed on the files of the engine commits it does not carry (`he/fix-r25` 5 FAIL, `he/fix-r25e` 1, `he/fix-r25t` 6; runs 43102190874, 43102195638, 43102200540); their merge passes | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
+| Static checks | at `he/main` `d5da0e8609`, baseline `he/renderer` `4ea0c000c8`: drift 708 files, 0 FAIL, 334 with warnings only (8 `w LATIN`, all kept: Q141; no `w GLYPHPAIR`); audit 0 errors, 54 warnings and 91 suppressed, 39,083 strings (24,864 translated) as in CI; namecheck 7,133 rows, 0 problems and 0 warnings (35 allowlisted: FireRed's פוקיבול is the 35th, Q159); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators and `flag_gates.py` up to date; 227 tool tests OK on Python 3.9.6 and 3.11.9 | section 4.2 |
 | Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked. Regenerated from rc25's sweep, `STATUS.md` is byte for byte the committed one | `translation/hebrew/STATUS.md:5` |
 
 **What remains** (details in section 8):
@@ -284,7 +284,7 @@ Reference machine: Apple Silicon, macOS.
 | libpng, pkg-config | Homebrew libpng 1.6.58 | `brew install libpng pkg-config`; Linux: `libpng-dev` |
 | GNU make | macOS ships 3.81 | 3.81 builds fine but has no `-O` (section 6.1) |
 | git | any | the build refuses to run without git history (section 6.1) |
-| Python 3 | 3.9 or newer: the 199 tool tests pass on 3.9.6, 3.11.9 and 3.14.7, and all 248 scripts under `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7 (`he/main` `1124d9661d`; CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
+| Python 3 | 3.9 or newer: the 227 tool tests pass on 3.9.6 and 3.11.9 (199 also on 3.14.7 at `1124d9661d`), and all 248 scripts under `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7 (`he/main` `1124d9661d`; CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
 | Pillow | 12.2.0 | `python3 -m pip install Pillow`. Needed by `fontcells.py`, `tools/hebrew/graphics/`, the font previews and the review-sheet scripts; the harness writes PNGs itself |
 | numpy | any recent | only `tools/hebrew/inventory/` |
 | cmake | 4.4.3 | only for building mGBA for the harness |
@@ -904,7 +904,7 @@ Apply a decision in this order:
 | whole tree | `audit.py --baseline ../pokehns-en` | WIDTH, LINES, BUFFER, BYTES, TERMINATOR, CHARSET | 28 s |
 | glossary | `namecheck.py --all --warnings` | byte limits, final letters, duplicates; warnings for FireRed differences, transliteration slips, two-way names | instant |
 | generated data | `gen_dex_alpha.py`, `gen_ec_order.py`, `gen_ec_letters.py`, `flag_gates.py`, each `--check` | a stale A–Z order, Easy Chat list or live-label list | instant |
-| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (199 tests) | 16 s |
+| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (227 tests) | 16 s |
 | game logic | `make check BUILD=hns` + `check_tests.py` | a test that passes upstream but fails in Hebrew | about 4 min at `-j12` in the release worktree (rc5, rc20: `make_check.log` created to last written; 15 hydra runners), 13 to 20 min in CI |
 | screens | `hns.py tour` (71 tours) | crashes, timeouts, wrong typed bytes; screenshots for review | about 3 min |
 | glyphs outside windows | `hns.py tour --clip`, `sweep.py` on the clip ROM | every glyph drawn outside its window | about 2.5 min: 6,611 labels in 150 s on rc21's clip ROM (191 s with a cold cache) |
@@ -934,9 +934,9 @@ git diff --name-only Release-v2.0.6...HEAD -- data src | grep -E '\.(inc|s|c|h|p
 #    last line: drift: 708 files, 0 FAIL, 334 with warnings only   (exit 0)
 # 2. layout audit (hebrew.yml:56-57); creates build/hebrew; prints the report's two == lines
 python3 tools/hebrew/audit.py --baseline ../pokehns-en --report build/hebrew/audit.txt
-#    == translated strings: 0 errors, 54 warnings, 88 suppressed by baseline ../pokehns-en
+#    == translated strings: 0 errors, 54 warnings, 91 suppressed by baseline ../pokehns-en
 #    == English (untranslated) strings, baseline only: 448 errors, 0 warnings   <- informational
-#    line 1 of the report: audit ...: 39060 strings (24841 translated)   (the same as CI)
+#    line 1 of the report: audit ...: 39083 strings (24864 translated)   (the same as CI)
 # 3. glossary (hebrew.yml:59-60), here with ../pokefirered-heb present (HNS_FIRERED, section 1.3)
 python3 tools/hebrew/namecheck.py --all --warnings
 #    rows 7133, still empty 0, problems 0
@@ -950,7 +950,7 @@ python3 tools/hebrew/gen_ec_letters.py --check    # gen_ec_letters: 23 lists, th
 python3 tools/hebrew/flag_gates.py --check        # total: live 6585, flag_off 451, not_built 147 / no change
 # 5. tool tests (hebrew.yml:73-74)
 python3 -m unittest discover -s tools/hebrew/tests
-#    Ran 199 tests ... OK   (no skip with tools/preproc built, ../pokehns-en/pokehns.gba present,
+#    Ran 227 tests ... OK   (no skip with tools/preproc built, ../pokehns-en/pokehns.gba present,
 #                            devkitARM's arm-none-eabi-gcc and a host cc; tools/hebrew/README.md)
 # not in CI: item plurals
 python3 tools/hebrew/plurals.py                   # items 902, stackable 693, problems 0
@@ -1509,6 +1509,7 @@ there is one). Engine fixes exist twice: the commit merged into `he/main`, and i
 | Symptom | Check | Cause | Fix | Commit |
 | --- | --- | --- | --- | --- |
 | drift `E STRUCTURE changed outside strings` | the `-`/`+` lines in the output | an edit outside a string; a raw `"` inside `.string` (also gives `string count 15 -> 14`); an engine commit missing from `he/renderer`, or a stale `../pokehns-heb-engine` | revert it; write `”`; cherry-pick the engine commit onto `he/renderer` and update that worktree | — |
+| drift `E STRUCTURE` on `src/battle_message.c` with `+#if TEXT_RTL` or `sStatNamesWithArticle` lines | `git -C ../pokehns-heb-engine log --oneline -3` | round 30's battle-message commit is not on `he/renderer`, or `../pokehns-heb-engine` is stale | cherry-pick it and update the engine checkout | `4ea0c000c8` |
 | drift `STRUCTURE label order A vs B` | | blocks moved or merged | restore the English block order | — |
 | drift `E TOKENS <label>: ['{PLAYER}'] -> []` | | a placeholder was dropped or reordered | keep English order. Droppable: `{POKE} {PKMN} {POKEBLOCK} {ID} {NO} {PK}`; `{B_BUFF1..3}` may swap with each other | `43e43941b4`, `dbf3d07e01`, `43acd4d4e3` |
 | drift `E TERMINATOR`, `E CHARSET <label>: €`, `SHRUNK` | | `$` lost or added; a character the charmap cannot encode; the file is under 60% of the English bytes | restore the `$`; use the charmap form; restore the file | — |
@@ -1978,7 +1979,7 @@ Earlier passes: round 20 corrected the audit's example finding (section 4.2:
 section 7. Round 19 corrected six line references: `RELEASE ?= 0` is at `Makefile:69`, `KEPT_LATIN`
 at `status_report.py:22-48`, the Hebrew count at `status_report.py:82`, the sweep's path guard at
 `sweep.py:391-396`, `walk_tree` (now at `audit.py:461-481`) and `LoadSaveblockObjEventScripts` at
-`src/overworld.c:592-600`. Every text tool has tests: 199 tests in 26 files under
+`src/overworld.c:592-600`. Every text tool has tests: 227 tests in 27 files under
 `tools/hebrew/tests`, with small committed fixtures in `tools/hebrew/tests/data/`. Add a row here
 when a document and the tree disagree, and fix it in a docs-only commit.
 
@@ -2428,8 +2429,19 @@ is the build of the merge (below). Scratch in `<private>/scratch/screens/r25/`, 
   repository, its three assets with the SHA-256 of the files in `<builds>` `20a8d79`; PR #39 open
   with head `he/main`; CI as in section 0.
 
+**Verified in round 30** (`he/fix-r30`, merged as `d5da0e8609`; re-checked by an adversarial reviewer; scratch in `<private>/scratch/screens/r30/`):
+
+- **POKé BALL is פוכדור (Q159).** 51 uses in 23 game files, every prefix and the plural; 49 of them are built. The ROM has פוכדור 49 times and פוקיבול none. כדור is masculine like the old word, so no verb or adjective changed, and every line got narrower. The bag pocket כדורי פוקי and the other balls keep their names.
+- **Stat-change lines without הנתון (Q160, supersedes Q145).** A stat in `{B_BUFF1}` now prints with its article (`sStatNamesWithArticle`, ההתקפה המיוחדת, הדיוק), and a masculine stat takes its verb from `sMasculineStatStrings`, both in `src/battle_message.c` under `TEXT_RTL`. A stat-change line lives twice there: the feminine form in `gBattleStringsTable` and the masculine one (for הדיוק) in `sMasculineStatStrings`; change both, and put no prefix letter before `{B_BUFF1}`. The Z-move and debug menus still print the bare names.
+- **On screen.** All 19 lines × 7 stats × every intensity (287 entries per run) on the clip ROM with 12-letter nicknames and in a wild battle, beside rc28 and English: 0 clip records, no line needs more pages than in rc28. The sweep (6,611 OK) and the 71 release tours (0 clipped). Of the tour shots that differ from rc28, 39 show the new ball word, 20 the new stat lines, 8 an animation frame, and 12 in `bv_double` follow a 4-frame shift that changes the foe's random move pick (proved by a ROM with the old line length, which matches rc28).
+- **Clean build.** Both ROMs reproduced byte for byte from a clean `git archive` (an archive needs `touch .histignore`).
+
 **Not verified:**
 
+- Of round 30: the BALL POSTER and BALL CUSHION decorations, the five Pokédex entries with פוכדור, the Ball Fetch and GS Ball
+  descriptions, and the Z-move menu's stat names with the new code (its path is unchanged); `make check` on the round's tree.
+  Open for the owner: פוכדור no longer shares a stem with the bag pocket כדורי פוקי or with אולטרה בול and מאסטר בול;
+  keep them as they are, or align them.
 - Of round 25: its round tours (the contests, the relearner, Easy Chat, the Japanese names and
   mail, the Safari menu) ran on the branches' builds, not on rc25; rc25 ran the release tests
   (section 0, round 25). Why the engine commits move frames in two round tours (`ec_daycare` a
