@@ -225,6 +225,19 @@ same patch-id as its source) and built with `TEXT_RTL` FALSE, the English ROM is
 same before and after (SHA-1 `1c6d1d7c…`), and every one of the 391 units that defines the option
 sees `TEXT_RTL` (`<private>/scratch/screens/r35/engproof/PROOF.md`).
 
+**To be picked (round 37).** On `he/fix-r37`: the engine commit `c6c94a3e4b` (the Berry Tag's
+metric size line as a `TEXT_RTL` string, with the English `cm` in it; `DECISIONS.md` Q175) and the
+nine graphics commits `ce81325c94`, `7b897df642`, `50c69512af`, `4040e4479b`, `4f5f0d331e`,
+`3035655bfa`, `a4106b6a7b`, `255697d2b2` and `648fc81bd0` (the art labels, Q176) are to be picked
+onto `he/renderer` `fe0cfa4be9`. Until the engine commit is there, CI's drift step fails on
+`src/berry_tag_screen.c` (`STRUCTURE`: a new `#if TEXT_RTL`, string count 14 to 15); against a
+clone with the pick, drift prints `708 files, 0 FAIL`. In that clone every commit picks cleanly:
+the graphics picks keep their sources' patch-ids, and the engine pick's differs only in two context
+lines that are Hebrew on `he/main` and English on `he/renderer`. Built with `TEXT_RTL` FALSE before
+and after the engine pick, the English ROMs differ in 3 bytes, the line number of the
+allocation-site string `src/berry_tag_screen.c:196` (now `:201`), and `nm -S` lists the same
+symbols and sizes (`<private>/scratch/screens/r37/fix/integrate/engproof/PROOF.md`).
+
 **Checking a pick with an English build.** Build `he/renderer` before and after the picks with
 `TEXT_RTL` set to FALSE (`include/config/text.h:20`, in a scratch worktree) and `make hns`, and
 compare the two English ROMs. When a picked graphic is compressed and its size changes, every
@@ -542,7 +555,8 @@ Every live file is already in Hebrew. New work is therefore one of three things:
 | `src/data/trainers_hns.party`, `battle_partners.party` | trainer `Name:` lines | `apply_names.py` (glossary `trainer_name` rows) | 2 |
 | `src/data/region_map/region_map_sections.json` | map-section names | `apply_names.py` (glossary `mapsec` rows) | 1 |
 | `src/data/pokemon/pokedex_orders.h` | Hebrew A–Z dex order (the `#if TEXT_RTL` branch) | `gen_dex_alpha.py` | 1 |
-| `graphics/**` | labels drawn into PNGs (and a few `.bin` tilemaps) | edited PNGs, committed as engine or asset commits; the drawing scripts are in `tools/hebrew/graphics/` | 129 |
+| `graphics/**` | labels drawn into PNGs (and a few `.bin` tilemaps) | edited PNGs, committed as engine or asset commits; the drawing scripts are in `tools/hebrew/graphics/` | 138 |
+| `data/tilesets/**/tiles.png` | words on map tiles: the Poké Mart, Pokémon Center and gym signs, the department store floor plates, the Battle Dome banner | edited PNGs (pixels only: tiles, metatiles and palettes unchanged), drawn by `tools/hebrew/graphics/side/` | 10 |
 | `test/hebrew_battle_messages.h`, `test/bag.c`, `test/text.c` | test expectations that depend on the Hebrew | `tools/hebrew/testmsgs/`, or a direct edit | 3 |
 
 **Left in English on purpose:**
@@ -553,6 +567,11 @@ Every live file is already in Hebrew. New work is therefore one of three things:
   (`STYLE.md` §5);
 - braille;
 - Latin literals that code compares (the Odd Egg names, the mystery-gift sample code).
+- art: the PokéGear header and the POKéDEX logo (K3), GAME BOY on the berry-fix screen (a
+  hardware logo), the Pokédex name search's `A-Z` row (`STYLE.md` §9), `VU` on the cry meter,
+  `POWERED BY` and the copyright and company splash (names, as the credits keep them), the
+  Frontier Pass's `TRAINER CARD` tab (3-pixel rows; `side/fpcard.py`) and the version label
+  `v2.0.6` (`DECISIONS.md` Q176).
 
 `status_report.py:22-45` (`KEPT_LATIN`) lists the deliberate Latin per file.
 

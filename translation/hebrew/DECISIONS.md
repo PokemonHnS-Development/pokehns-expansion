@@ -114,6 +114,8 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q172](#q172) | Two early lines translate an English idiom word for word: a watched pot, a good Samaritan. | A. Plain Hebrew: 'כשמסתכלים על השעון, הזמן לא זז', 'צדיק' | changed |
 | [Q173](#q173) | The owner: what are עקידה and פעמן, is there a better name? And FLUFFY's פרוותי is fine too. | BIND לפיתה, METRONOME מטרונום (move and item), FLUFFY back to פרוותי | changed |
 | [Q174](#q174) | The owner: when B turns down a new move, the game does not ask 'לוותר על הלמידה?' with yes and no. English Heart & Soul does not ask either (P_ASK_MOVE_CONFIRMATION is FALSE). | A. The box in the Hebrew build only (the option follows TEXT_RTL), and every prompt says 'לוותר על לימוד {move}' | changed |
+| [Q175](#q175) | The Berry Tag prints the size as '2.0cm' in Latin letters with the default metric units; the imperial line reads אינץ'. | A. ס”מ under TEXT_RTL, as the imperial line (an engine commit picked onto he/renderer, and a text commit) | changed |
+| [Q176](#q176) | English words drawn into art players see: town signs, the title's PRESS START, the Game Corner, the minigames, the trade menu's Lv., the Pokérus tag. | A. Draw them in the game's own Hebrew words; keep the logos, the hardware logo, A-Z, VU, the boot splash names, the Frontier Pass tab and the version label | changed |
 
 ## K1
 
@@ -2857,6 +2859,74 @@ Seen on screen on the clip ROM beside rc30 and English, with no clip record: the
 **Chosen:** A, the owner's request. Seen on the clip ROM with 0 clip records, beside rc30 (no box) and an English build with the option forced on (layout only), in each path: the battle level-up (B at the question, NO in the box back to the question, B on the forget-a-move page, YES), the evolution scene (Raichu), TM24 on Ampharos, a Rare Candy on Cyndaquil, and the Blackthorn move relearner (`tools/hebrew/emu/tours/r35_learn_no/`, `<private>/scratch/screens/r35/shots/`). The trade-evolution scene uses the same states as the evolution scene and needs a link trade; it was not shown. The tours that turned a move down now answer the box: `bv_learn_no`, `pbi_learn_no`, `pbi_tm`, `pbi_stone`, and the round tours `r28_align/pm_f_gyms`, `r1_npc_services/svc_relearner2`, `r14b_summary_quotes`, `k3l_summary_latin` and `k3_summary_geresh`. They answer it inside a new tour block, `ifsym Task_HandleStopLearningMoveYesNoInput` ... `endif` (a function the option compiles in), so on the English ROM they skip it and give the same shots as before. The 71 release tours run 71 OK on the release and clip ROMs with 0 clip records; against the build of `he/main` `0c43cf5505`, 2,053 shots are identical, 6 are new (the box) and 2 differ only in an animation step (the down arrow, the party icons) (`<private>/scratch/screens/r35/tours/`).
 
 *Changed:* `include/config/pokemon.h` (engine), `src/battle_message.c`, `src/strings.c`, `tools/hebrew/emu/hns.py` (`ifsym`), `tools/hebrew/emu/README.md`, the tours named above
+
+## Q175
+
+**Question.** The Berry Tag prints the size as '2.0cm', in Latin letters, with the default metric units, while the same line's imperial branch reads אינץ'.
+
+*Source:* round 37's search for English still on screen (the live string capture and the static trace both found it).
+
+**Analysis.**
+- `sText_Var1DotVar2_Metric` (`src/berry_tag_screen.c`) was a byte array of `CHAR_` codes, not a `_()` string, so the string tools never listed it. `PrintBerrySize` prints it after 'גודל /' whenever the units option is metric, which is what a new game sets (`src/new_game.c:130`; the option row יחידות מידה, `src/option_menu.c`). English Heart & Soul shows the same 'cm'.
+- The imperial branch of the same line is already Hebrew under `TEXT_RTL`: '{STR_VAR_1}.{STR_VAR_2} אינץ'' (`6cc216cd01`). The metric one now follows it: under `TEXT_RTL` a `_()` string '{STR_VAR_1}.{STR_VAR_2} ס”מ'; the English build keeps the byte array in `#else`. The gershayim is ” (`B2`), the character of נ”ח, and ס”מ is the standard abbreviation.
+- On screen the digits and the point are one left-to-right run; the space and ” are neutral and ס, מ right-to-left, so the line reads '2.0 ס”מ' with the number on the right, laid out as 'אינץ''. Width (`textwidth.py`): 44 px with the widest digits ('99.9 ס”מ'), against 47 px for the imperial line, printed at x 40 in the 144-px window.
+- The Pokédex keeps Latin m, kg and lbs (K5); that stays as it is. Those are the dex's own unit placeholders; the Berry Tag is one line whose twin is already Hebrew.
+- The `#if TEXT_RTL` block adds a string to the file, so it is an engine commit (with the English 'cm' in its `TEXT_RTL` branch) to be picked onto `he/renderer`; the Hebrew unit is a text commit. Until the pick is there, `drift.py` reports `STRUCTURE` for `src/berry_tag_screen.c` against `he/renderer`.
+
+| Option | How | Risk |
+|---|---|---|
+| A. ס”מ under `TEXT_RTL`, as the imperial line | an engine commit (the `TEXT_RTL` string, picked onto `he/renderer`) and a text commit | None found: the English build compiles the same array; its ROM differs only in one allocation-site line number |
+| B. Keep 'cm' as a symbol, as the Pokédex keeps m and kg | No change | The tag's two unit lines would follow two styles |
+
+**Chosen:** A. Seen on screen on the build of `he/fix-r37` beside 1.0 (`65586be574`): the release tour `pbi_berrytag` shows 'גודל / 2.0 ס”מ' for CHERI and 'גודל / 13.5 ס”מ' for POMEG, the number on the right as in the imperial line; its seven tag shots differ from 1.0 only in the size line (`<private>/scratch/screens/r37/fix/integrate/shots/berrytag_*.png`). Built with `TEXT_RTL` FALSE on `he/renderer` before and after the engine commit, the English ROMs differ in 3 bytes, the line number of an allocation-site string (`src/berry_tag_screen.c:196`, now `:201`), and `nm -S` lists the same symbols and sizes (`<private>/scratch/screens/r37/fix/integrate/engproof/PROOF.md`).
+
+*Changed:* `src/berry_tag_screen.c` (engine and text)
+
+## Q176
+
+**Question.** Round 37's search found English words drawn into art that players see: on town buildings, in the Game Corner, on the title screen, in the minigames, on the trade menu and on the summary screen's Pokérus tag. Which are drawn in Hebrew, and which stay?
+
+*Source:* round 37's search for English still on screen (the art sweep, its verifier and the critic's check of the redrawn art).
+
+**Analysis.** Each label is redrawn in its PNG only: the same size, bit depth, palette and non-pixel chunks, no palette index the English file did not use, the English text's own colour indices, and no tile, tilemap, metatile, palette or code change. Every file has its script in `tools/hebrew/graphics/side/`, which starts from the English file and checks these rules after writing (`do_pkrs.py` starts from the committed file and redraws only the Pokérus frame). The word is the one the game's own text uses for the same thing.
+
+| English | Hebrew | File | Why this word |
+|---|---|---|---|
+| PkRS (the summary screen's status tag) | פוקרוס | `graphics/interface/status_icons.png`, frame 5 (`do_pkrs.py`) | `TERM_POKERUS`; the Easy Chat word and the nurse's lines. The T6 letters of the other tags; the two letter corners that would touch the pill's corner pixels are rounded off |
+| Lv. (before each level in both parties' boxes of the trade menu) | רמ' | `graphics/trade/menu.png`, tiles 130-133 (`do_tradelv.py`) | The font's רמה mark is 11 px at its narrowest and the slot is 9 px (tile 130 and column 0 of 131-133; the gender symbols start at column 2). רמ' is what the Union Room trade board prints for the same LV. (`src/data/union_room.h:545`) |
+| PRESS START (title screen) | לוחצים START | `graphics/title_screen/hns/press_start.png` (`do_pressstart.py`) | The game's wording ('לוחצים START.', `src/data/union_room.h:8`); START is a button name and keeps its English pixels. The group spans the English x 35-124, so it stays centred |
+| NOTES (Voltorb Flip memo panel) | סימונים | `graphics/voltorb_flip/gameboard.png` (`do_vflip.py`) | The Game Corner's own word for the memos ('על הסימונים', 'מצב סימונים') |
+| COINS: (Voltorb Flip coin box) | מטבעות: | `graphics/voltorb_flip/coins.png` (`do_vflip.py`) | `gText_Coins`; the slot and roulette coin plates |
+| REPLAY (slot machine reel symbol) | חוזר | `graphics/slot_machine/reel_symbols/7.png` (`do_reelreplay.py`) | The slot machine's pay table (`do_slotmenu.py`) |
+| START (the Berry Blender, after 3-2-1) | קדימה! | `graphics/berry_blender/start.png` (`do_minigames.py`) | The word 'go', not the button; Easy Chat's GO AHEAD is קדימה |
+| START (the wireless minigames' 3-2-1) | קדימה! | `graphics/link/321start.png`, `graphics/link/321start_static.png` (`do_minigames.py`) | As the blender. The static sheet is not in the ROM (its countdown is never started) and is redrawn so the two sheets match |
+| NICE +50, GOOD +100, GREAT +200, EXCELLENT +500 (Pokémon Jump bonus banners) | נחמד +50, טוב +100, נהדר +200, מצוין +500 | `graphics/pokemon_jump/bonuses.png` (`do_minigames.py`; `bonuses.bin` unchanged) | The Easy Chat words; מצוין is also the Pokémon Jump records' '”מצוין” ברצף'. The word reads first, on the right, and the English +NN moves to its left |
+| MART (Poké Mart sign) | חנות | `data/tilesets/primary/{johto_general_hns,johto_north_east_hns,johto_north_west_hns,johto_south_hns,kanto_general_hns,general}/tiles.png` (`do_townsigns.py`) | `TERM_POKE_MART` חנות פוקימון |
+| P.C (Pokémon Center sign) | מרכז | the same five Johto and Kanto primaries, `general`, `alola_island` and `mt_silver_exp_hns` (`do_townsigns.py`) | `TERM_POKEMON_CENTER` מרכז פוקימון |
+| GYM (the gym's wall plaque and its stand) | מכון | the five Johto and Kanto primaries (`do_townsigns.py`) | `TERM_GYM`, STYLE §3. On the stand the kaf is two columns wide, so the word keeps a column of background beside the stand's frame on each side, as the English does |
+| 1F to 6F (department store floor plates) | ק after the digit (ק1 to ק6) | `data/tilesets/secondary/department_store_hns/tiles.png`, tile 132 (`do_deptfloor.py`) | The directory boards' ק1: to ק6: (`gText_2F` is קומה 2); the digits stay |
+| BATTLE FRONTIER (the banner along the Battle Dome room's top wall) | חזית הקרב | `data/tilesets/secondary/battle_dome/tiles.png` (`do_domebanner.py`) | `MAPSEC_BATTLE_FRONTIER`; the Frontier Pass map header |
+
+Every changed map tile is drawn only by these signs' metatiles on the maps that place them (no `setmetatile` reaches them); tiles that other metatiles also use are not changed (the wooden route signpost). Copies of the signs in tilesets no Heart & Soul map places (`general_frlg`, the bike shops, Cianwood's secondary, the snow primary's MART) stay English.
+
+Kept in English on purpose:
+- the PokéGear header and the POKéDEX logo: logos (K3);
+- GAME BOY on the berry-fix program's screen: the logo the other console shows at power-on, which the Hebrew instruction asks the player to look for;
+- the Pokédex name search's last row 'A-Z': a value the engine depends on (STYLE §9);
+- 'VU' on the cry meter: a real meter label, printed so on Hebrew audio equipment too;
+- 'POWERED BY' and the copyright and company splash at boot: names, as the credits keep them;
+- the Frontier Pass's 'TRAINER CARD' tab (`frontier_pass/bg.png`, `map_and_card.png`): 3-pixel rows, where no Hebrew is legible (`side/fpcard.py`);
+- the version label 'v2.0.6' under the title.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Draw the labels above in Hebrew, keep the listed ones | 20 PNGs, 9 scripts | None found: pixels only |
+| B. Keep all art in English | No change | English words on screens every player sees (town signs, title screen, Game Corner) |
+| C. Also redraw the kept labels | | Logos, a meter label and names would stop matching what they name; the TRAINER CARD tab cannot hold legible Hebrew |
+
+**Chosen:** A. Seen on screen on the build of `he/fix-r37` beside 1.0 (`65586be574`), every difference inside the label (`<private>/scratch/screens/r37/fix/integrate/shots/`): the title screen; the Voltorb Flip board; the slot reels; the Battle Dome battle room; the summary screen of a Pokémon with Pokérus (INFO and SKILLS pages); the trade menu with the partner faked in RAM (`tools/hebrew/emu/tours/r14_link/l04_trade_menu.txt`: 30 of its 61 shots differ, each only in the level marks); the Berry Blender's countdown with the Blend Master; the MART, P.C and GYM signs in Cherrygrove, Violet, Azalea, Goldenrod, Ecruteak, Celadon, Lavender, Saffron, Melemele Isle, New Sinjoh and the Battle Frontier's east side; the floor plates of all eleven department store floors. The wireless minigames need a second GBA, so their START and the four bonus banners were drawn from the ROM's own data (`s321Start_Gfx` and `sBonuses_Gfx` decompressed, through the bonus tilemap, whose bytes are the same in both ROMs). After review, the gym stand's word got the narrower kaf and the Pokérus tag its two rounded corners. The pixel checks (`side/check.py`, `side/finalize.py`) pass for all 20 PNGs.
+
+*Changed:* `graphics/interface/status_icons.png`, `graphics/trade/menu.png`, `graphics/title_screen/hns/press_start.png`, `graphics/voltorb_flip/gameboard.png`, `graphics/voltorb_flip/coins.png`, `graphics/slot_machine/reel_symbols/7.png`, `graphics/berry_blender/start.png`, `graphics/link/321start.png`, `graphics/link/321start_static.png`, `graphics/pokemon_jump/bonuses.png`, `data/tilesets/primary/{johto_general_hns,johto_north_east_hns,johto_north_west_hns,johto_south_hns,kanto_general_hns,alola_island,mt_silver_exp_hns,general}/tiles.png`, `data/tilesets/secondary/{department_store_hns,battle_dome}/tiles.png`, `tools/hebrew/graphics/side/do_{pkrs,tradelv,pressstart,vflip,reelreplay,minigames,townsigns,deptfloor,domebanner}.py`, `tools/hebrew/graphics/README.md`
 
 ## Proposed names
 
