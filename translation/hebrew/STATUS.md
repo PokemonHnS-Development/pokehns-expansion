@@ -536,12 +536,12 @@ seen on screen: 525 | translated: 125
 | `src/battle_controller_oak_old_man.c` | 8 | 8 | translated |
 | `src/battle_dome.c` | 114 | 114 | translated |
 | `src/battle_main.c` | 174 | 173 | translated (1 kept in Latin: a code comment) |
-| `src/battle_message.c` | 838 | 838 | translated |
+| `src/battle_message.c` | 861 | 861 | translated |
 | `src/battle_z_move.c` | 8 | 8 | translated |
 | `src/berry.c` | 204 | 204 | translated |
 | `src/berry_blender.c` | 27 | 27 | translated |
 | `src/berry_fix_program.c` | 9 | 7 | translated (2 kept in Latin: the game names under the console picture, printed left to right) |
-| `src/berry_tag_screen.c` | 11 | 11 | translated |
+| `src/berry_tag_screen.c` | 12 | 12 | translated |
 | `src/challenge_menu.c` | 265 | 265 | translated |
 | `src/contest.c` | 48 | 48 | translated |
 | `src/contest_painting.c` | 26 | 26 | translated |
