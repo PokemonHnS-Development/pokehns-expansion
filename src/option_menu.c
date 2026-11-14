@@ -335,8 +335,8 @@ static const u8 *const sDesc_NewBattleUI[] = {
     COMPOUND_STRING("ממשק קרב מודרני של דור 4."),
 };
 static const u8 *const sDesc_BallPrompt[] = {
-    COMPOUND_STRING("לחיצה על {R_BUTTON} בקרב לשימוש בפוקיבול.\nהחזקת {L_BUTTON}/{R_BUTTON} להחלפת סוג הפוקיבול."),
-    COMPOUND_STRING("ביטול החלונית לשימוש מהיר\nבפוקיבולים."),
+    COMPOUND_STRING("לחיצה על {R_BUTTON} בקרב לשימוש בפוכדור.\nהחזקת {L_BUTTON}/{R_BUTTON} להחלפת סוג הפוכדור."),
+    COMPOUND_STRING("ביטול החלונית לשימוש מהיר\nבפוכדורים."),
 };
 static const u8 *const sDesc_RunType[] = {
     COMPOUND_STRING("אין בריחה מהירה מקרבות."),
@@ -476,7 +476,7 @@ static const struct OptionMenuItem sTabItems_Battle[] = {
         .choiceNames  = sChoices_Gen3Gen4,
     },
     [ITEM_BATTLE_BALL_PROMPT] = {
-        .name         = COMPOUND_STRING("חלונית פוקיבול"),
+        .name         = COMPOUND_STRING("חלונית פוכדור"),
         .descriptions = sDesc_BallPrompt,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,

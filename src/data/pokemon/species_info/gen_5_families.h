@@ -8703,8 +8703,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .weight = 10,
         .description = COMPOUND_STRING(
             "הוא מפתה פוקימונים בדוגמה שלו, שנראית\n"
-            "בדיוק כמו פוקיבול, ואז משחרר נבגי רעל. לא\n"
-            "ידוע למה הוא דומה לפוקיבול."),
+            "בדיוק כמו פוכדור, ואז משחרר נבגי רעל. לא\n"
+            "ידוע למה הוא דומה לפוכדור."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -8776,7 +8776,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .weight = 105,
         .description = COMPOUND_STRING(
             "הוא מפתה טרף בריקוד ובנפנוף מתנדנד של\n"
-            "כובעי הזרועות שלו, שדומים לפוקיבולים, אבל\n"
+            "כובעי הזרועות שלו, שדומים לפוכדורים, אבל\n"
             "מעט מאוד פוקימונים נופלים בפח."),
         .pokemonScale = 422,
         .pokemonOffset = 13,

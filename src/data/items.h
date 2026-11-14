@@ -194,10 +194,10 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_POKE_BALL] =
     {
-        .name = ITEM_NAME("פוקיבול"),
+        .name = ITEM_NAME("פוכדור"),
     #if TEXT_RTL
         // An item without a plural name keeps its singular after a count (CopyItemNameHandlePlural).
-        .pluralName = ITEM_PLURAL_NAME("פוקיבולים"),
+        .pluralName = ITEM_PLURAL_NAME("פוכדורים"),
     #endif
         .price = 100,
         .description = COMPOUND_STRING(
@@ -223,7 +223,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "כדור טוב עם\n"
             "סיכוי תפיסה גבוה\n"
-            "יותר מפוקיבול."),
+            "יותר מפוכדור."),
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
@@ -632,7 +632,7 @@ const struct ItemInfo gItemsInfo[] =
             "פוקימונים\n"
             "ישנים."),
         #else
-            "פוקיבול שמשמש\n"
+            "פוכדור שמשמש\n"
             "ביער אנטרה."),
         #endif
         .pocket = POCKET_POKE_BALLS,
@@ -16993,7 +16993,7 @@ const struct ItemInfo gItemsInfo[] =
     #endif
         .price = 1000,
         .description = COMPOUND_STRING(
-            "פוקיבול מוזר\n"
+            "פוכדור מוזר\n"
             "בעיצוב זהב וכסף."),
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_PARTY_MENU,

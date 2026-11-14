@@ -165,7 +165,7 @@ const u8 gMiniorMeteorPokedexText[] = _(
 const u8 gMiniorCorePokedexText[] = _(
     "אם הליבה שלו נשארת חשופה, הוא\n"
     "ימות בקרוב. ייתכן שהוא ישרוד\n"
-    "אם יכניסו אותו לפוקיבול\n"
+    "אם יכניסו אותו לפוכדור\n"
     "מהר מספיק.");
 
 const u8 gTogedemaruPokedexText[] = _(

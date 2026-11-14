@@ -1813,7 +1813,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_BALL_FETCH] =
     {
         .name = _("הבאת כדור"),
-        .description = COMPOUND_STRING("מחזיר פוקיבול שנכשל."),
+        .description = COMPOUND_STRING("מחזיר פוכדור שנכשל."),
         .aiRating = 0,
     },
 
