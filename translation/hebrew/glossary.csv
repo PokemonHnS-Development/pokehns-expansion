@@ -4631,7 +4631,7 @@ item_plural,ITEM_FINE_REMEDY,Fine Remedies,,מנות מרפא משובח,propose
 item_plural,ITEM_SUPERB_REMEDY,Superb Remedies,,מנות מרפא עילאי,proposed,as REMEDIES מנות מרפא; singular: מרפא עילאי (item_04); reviewed
 item_plural,ITEM_TWICE_SPICED_RADISH,Twice-Spiced Radishes,,צנונים בתיבול כפול,proposed,plural head noun; singular: צנון בתיבול כפול (item_04); reviewed
 item_plural,ITEM_POKE_BALL,POKé BALLs,,פוכדורים,proposed,"plural head noun, the form the dialogue uses (AzaleaTown_KurtsHouse_hns, AzaleaTown_Mart_hns); English adds s (no pluralName); shown after a count in the aide's 5 Poké Balls (NewBarkTown_Lab_hns) and in the bag and PC quantity lines; singular: פוכדור (Q159)"
-item_plural,ITEM_SPORT_BALL,SPORT BALLs,,כדורי תחרות,proposed,"construct plural כדורי, as the bag pocket כדורי פוקי; the officer already says כדורי התחרות (Gate_NationalPark_hns); English adds s (no pluralName); shown after a count in the Bug-Catching Contest's 30 Sport Balls (Gate_NationalPark_hns); singular: כדור תחרות"
+item_plural,ITEM_SPORT_BALL,SPORT BALLs,,כדורי תחרות,proposed,"construct plural כדורי, as כדורי ספארי (ITEM_SAFARI_BALL); the officer already says כדורי התחרות (Gate_NationalPark_hns); English adds s (no pluralName); shown after a count in the Bug-Catching Contest's 30 Sport Balls (Gate_NationalPark_hns); singular: כדור תחרות"
 item_plural,ITEM_STRANGE_BALL,STRANGE BALLs,,כדורים מוזרים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כדור מוזר; Q125
 item_plural,ITEM_GREAT_BALL,GREAT BALLs,,כדורים מעולים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כדור מעולה; Q125
 item_plural,ITEM_ULTRA_BALL,ULTRA BALLs,,אולטרה בולים,proposed,plural head noun; English adds s (no pluralName); singular: אולטרה בול; Q125
@@ -6018,8 +6018,8 @@ term,TERM_POKEMON,POKéMON,פוקימון,פוקימון,inherited,FR gText_Menu
 term,TERM_POKEMON_PLURAL,POKéMON (plural),פוקימונים,פוקימונים,inherited,FR text uses פוקימונים in 597 strings
 term,TERM_POKEDEX,POKéDEX,פוקדקס,פוקדקס,inherited,FR gText_Pokedex = פוקדקס; FireRed dialogue also writes פוקידקס; menus use פוקדקס
 term,TERM_TRAINER,TRAINER,מאמן,מאמן,inherited,FR gEasyChatGroupName_Trainer = מאמן
-term,TERM_POKE_BALL,POKé BALL,פוקיבול,פוכדור,proposed,"the owner's decision (DECISIONS.md Q159), with its prefixes and plural (הפוכדור, בפוכדורים); FireRed has פוקיבול; the bag pocket keeps כדורי פוקי (TERM_POKE_BALLS_POCKET)"
-term,TERM_POKE_BALLS_POCKET,POKé BALLS (bag pocket),כדורי פוקי,כדורי פוקי,inherited,FR gText_PokeBalls = כדורי פוקי
+term,TERM_POKE_BALL,POKé BALL,פוקיבול,פוכדור,proposed,"the owner's decision (DECISIONS.md Q159), with its prefixes and plural (הפוכדור, בפוכדורים); FireRed has פוקיבול; the bag pocket is its plural פוכדורים (TERM_POKE_BALLS_POCKET, Q161)"
+term,TERM_POKE_BALLS_POCKET,POKé BALLS (bag pocket),כדורי פוקי,פוכדורים,proposed,"the owner's decision (DECISIONS.md Q161): the pocket is the plural of the ball, פוכדורים (TERM_POKE_BALL, Q159), in the bag, the battle bag and the put-away line (בכיס פוכדורים); FireRed has כדורי פוקי (gText_PokeBalls)"
 term,TERM_EGG,EGG,ביצה,ביצה,inherited,FR gText_EggNickname = ביצה
 term,TERM_BAG,BAG,תיק,תיק,inherited,FR gPCText_Bag = תיק
 term,TERM_ITEMS_POCKET,ITEMS,פריטים,פריטים,inherited,FR gText_Items = פריטים
