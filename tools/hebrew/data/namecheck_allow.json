@@ -26,6 +26,11 @@
    "firered": "{POKEBLOCK} קופסת",
    "why": "FireRed writes the {POKEBLOCK} token first for its own renderer; H&S keeps the reading order (STYLE §5, DECISIONS Q140)"
   },
+  "item:ITEM_POKE_BALL": {
+   "hs": "פוכדור",
+   "firered": "פוקיבול",
+   "why": "the owner's decision for H&S: POKé BALL is פוכדור, its plural פוכדורים, in every line and name (DECISIONS Q159)"
+  },
   "trainer_class:TRAINER_CLASS_ELITE_FOUR": {
    "hs": "רביעיית עלית",
    "firered": "רביעיית עילית",

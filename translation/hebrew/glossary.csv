@@ -3547,7 +3547,7 @@ ability,ABILITY_TERA_SHELL,TERA SHELL,,קונכיית טרה,proposed,meaning; S
 ability,ABILITY_TERAFORM_ZERO,TERAFORM ZERO,,איפוס טרה,proposed,meaning: the terraform pun is lost; the ability zeroes weather and terrain; TERA = טרה; reviewed
 ability,ABILITY_POISON_PUPPETEER,POISON PUPPETEER,,בובנאי רעל,proposed,meaning; POISON = TYPE_POISON רעל; reviewed
 item,ITEM_STRANGE_BALL,STRANGE BALL,,כדור מוזר,proposed,"meaning; STRANGE = מוזר (also STRANGE SOUVENIR); ODD also = מוזר (ODD INCENSE, ODD KEYSTONE); reviewed: note updated, the ODD = משונה split was dropped for consistency with item_03"
-item,ITEM_POKE_BALL,POKé BALL,פוקיבול,פוקיבול,inherited,FR match: constant
+item,ITEM_POKE_BALL,POKé BALL,פוקיבול,פוכדור,proposed,"the owner's decision (DECISIONS.md Q159): פוכדור, פו- and כדור, in every name, line and description; FireRed and the first H&S text had פוקיבול"
 item,ITEM_GREAT_BALL,GREAT BALL,כדור מעולה,כדור מעולה,inherited,FR match: constant
 item,ITEM_ULTRA_BALL,ULTRA BALL,אולטרה בול,אולטרה בול,inherited,FR match: constant
 item,ITEM_MASTER_BALL,MASTER BALL,מאסטר בול,מאסטר בול,inherited,FR match: constant
@@ -4630,7 +4630,7 @@ item_plural,ITEM_REMEDY,Remedies,,מנות מרפא,proposed,"meaning: מרפא 
 item_plural,ITEM_FINE_REMEDY,Fine Remedies,,מנות מרפא משובח,proposed,as REMEDIES מנות מרפא; singular: מרפא משובח (item_04); reviewed
 item_plural,ITEM_SUPERB_REMEDY,Superb Remedies,,מנות מרפא עילאי,proposed,as REMEDIES מנות מרפא; singular: מרפא עילאי (item_04); reviewed
 item_plural,ITEM_TWICE_SPICED_RADISH,Twice-Spiced Radishes,,צנונים בתיבול כפול,proposed,plural head noun; singular: צנון בתיבול כפול (item_04); reviewed
-item_plural,ITEM_POKE_BALL,POKé BALLs,,פוקיבולים,proposed,"plural head noun, the form the dialogue already uses (AzaleaTown_KurtsHouse_hns, AzaleaTown_Mart_hns); English adds s (no pluralName); shown after a count in the aide's 5 Poké Balls (NewBarkTown_Lab_hns) and in the bag and PC quantity lines; singular: פוקיבול (inherited)"
+item_plural,ITEM_POKE_BALL,POKé BALLs,,פוכדורים,proposed,"plural head noun, the form the dialogue uses (AzaleaTown_KurtsHouse_hns, AzaleaTown_Mart_hns); English adds s (no pluralName); shown after a count in the aide's 5 Poké Balls (NewBarkTown_Lab_hns) and in the bag and PC quantity lines; singular: פוכדור (Q159)"
 item_plural,ITEM_SPORT_BALL,SPORT BALLs,,כדורי תחרות,proposed,"construct plural כדורי, as the bag pocket כדורי פוקי; the officer already says כדורי התחרות (Gate_NationalPark_hns); English adds s (no pluralName); shown after a count in the Bug-Catching Contest's 30 Sport Balls (Gate_NationalPark_hns); singular: כדור תחרות"
 item_plural,ITEM_STRANGE_BALL,STRANGE BALLs,,כדורים מוזרים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כדור מוזר; Q125
 item_plural,ITEM_GREAT_BALL,GREAT BALLs,,כדורים מעולים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כדור מעולה; Q125
@@ -6018,7 +6018,7 @@ term,TERM_POKEMON,POKéMON,פוקימון,פוקימון,inherited,FR gText_Menu
 term,TERM_POKEMON_PLURAL,POKéMON (plural),פוקימונים,פוקימונים,inherited,FR text uses פוקימונים in 597 strings
 term,TERM_POKEDEX,POKéDEX,פוקדקס,פוקדקס,inherited,FR gText_Pokedex = פוקדקס; FireRed dialogue also writes פוקידקס; menus use פוקדקס
 term,TERM_TRAINER,TRAINER,מאמן,מאמן,inherited,FR gEasyChatGroupName_Trainer = מאמן
-term,TERM_POKE_BALL,POKé BALL,פוקיבול,פוקיבול,inherited,FR ITEM_POKE_BALL = פוקיבול; FireRed item and most dialogue use פוקיבול; the bag pocket uses כדורי פוקי
+term,TERM_POKE_BALL,POKé BALL,פוקיבול,פוכדור,proposed,"the owner's decision (DECISIONS.md Q159), with its prefixes and plural (הפוכדור, בפוכדורים); FireRed has פוקיבול; the bag pocket keeps כדורי פוקי (TERM_POKE_BALLS_POCKET)"
 term,TERM_POKE_BALLS_POCKET,POKé BALLS (bag pocket),כדורי פוקי,כדורי פוקי,inherited,FR gText_PokeBalls = כדורי פוקי
 term,TERM_EGG,EGG,ביצה,ביצה,inherited,FR gText_EggNickname = ביצה
 term,TERM_BAG,BAG,תיק,תיק,inherited,FR gPCText_Bag = תיק
@@ -6503,7 +6503,7 @@ decoration,DECOR_POWDER_SNOW_MAT,POWDER SNOW MAT,,שטיח אבק שלג,propose
 decoration,DECOR_ATTRACT_MAT,ATTRACT MAT,,שטיח משיכה,proposed,"src/data/decoration/header.h; The move name ATTRACT = משיכה, exactly as glossary MOVE_ATTRACT (inherited). 10 bytes."
 decoration,DECOR_FISSURE_MAT,FISSURE MAT,,שטיח בולען,proposed,"src/data/decoration/header.h; The move name FISSURE = בולען, exactly as glossary MOVE_FISSURE (inherited). 10 bytes."
 decoration,DECOR_SPIKES_MAT,SPIKES MAT,,שטיח קוצים,proposed,"src/data/decoration/header.h; The move name SPIKES = קוצים, exactly as glossary MOVE_SPIKES (inherited). 10 bytes."
-decoration,DECOR_BALL_POSTER,BALL POSTER,,פוסטר פוקיבול,proposed,"src/data/decoration/header.h; The description says it is printed with POKé BALLS, so BALL = פוקיבול (glossary TERM_POKE_BALL, inherited). The same as BALL CUSHION. MUD BALL's כדור is the literal sense. 13 bytes."
+decoration,DECOR_BALL_POSTER,BALL POSTER,,פוסטר פוכדור,proposed,"src/data/decoration/header.h; The description says it is printed with POKé BALLS, so BALL = פוכדור (glossary TERM_POKE_BALL, Q159). The same as BALL CUSHION. MUD BALL's כדור is the literal sense. 12 bytes."
 decoration,DECOR_GREEN_POSTER,GREEN POSTER,,פוסטר ירוק,proposed,"src/data/decoration/header.h; POSTER = פוסטר, the category gText_Poster (src/strings.c:461). GREEN = ירוק, as in glossary ITEM_GREEN_SHARD (inherited). 10 bytes."
 decoration,DECOR_RED_POSTER,RED POSTER,,פוסטר אדום,proposed,src/data/decoration/header.h; Same pattern; RED = אדום. 10 bytes.
 decoration,DECOR_BLUE_POSTER,BLUE POSTER,,פוסטר כחול,proposed,src/data/decoration/header.h; Same pattern; BLUE = כחול. 10 bytes.
@@ -6544,7 +6544,7 @@ decoration,DECOR_KISS_CUSHION,KISS CUSHION,,כרית נשיקה,proposed,"src/da
 decoration,DECOR_ZIGZAG_CUSHION,ZIGZAG CUSHION,,כרית זיגזג,proposed,src/data/decoration/header.h; ZIGZAG = זיגזג. It is the chunk of glossary SPECIES_ZIGZAGOON זיגזגון (inherited); the description calls it a ZIGZAGOON cushion. It is also an ordinary Hebrew word. 10 bytes.
 decoration,DECOR_SPIN_CUSHION,SPIN CUSHION,,כרית סחרור,proposed,"src/data/decoration/header.h; The review's change to סיבוב is reverted. SPIN is made consistent the other way: SPIN MAT becomes שטיח סחרור, matching the TV text (data/text/tv.inc:2190), so this row already agrees. סחרור (dizzy whirl) also fits Spinda, which the description names (כרית ספינדה). The g"
 decoration,DECOR_DIAMOND_CUSHION,DIAMOND CUSHION,,כרית יהלום,proposed,"src/data/decoration/header.h; DIAMOND = יהלום, as in glossary MOVE_DIAMOND_STORM סופת יהלומים. 10 bytes."
-decoration,DECOR_BALL_CUSHION,BALL CUSHION,,כרית פוקיבול,proposed,"src/data/decoration/header.h; BALL = פוקיבול (term), the same as BALL POSTER; the Hebrew description says כרית פוקיבול. 12 bytes."
+decoration,DECOR_BALL_CUSHION,BALL CUSHION,,כרית פוכדור,proposed,"src/data/decoration/header.h; BALL = פוכדור (term, Q159), the same as BALL POSTER; the Hebrew description says כרית פוכדור. 11 bytes."
 decoration,DECOR_GRASS_CUSHION,GRASS CUSHION,,כרית עשב,proposed,"src/data/decoration/header.h; GRASS = עשב, as glossary TYPE_GRASS (inherited); a grass-mark cushion. 8 bytes."
 decoration,DECOR_FIRE_CUSHION,FIRE CUSHION,,כרית אש,proposed,"src/data/decoration/header.h; FIRE = אש, as glossary TYPE_FIRE (inherited). 7 bytes."
 decoration,DECOR_WATER_CUSHION,WATER CUSHION,,כרית מים,proposed,"src/data/decoration/header.h; WATER = מים, as glossary TYPE_WATER (inherited). 8 bytes."
@@ -7131,4 +7131,4 @@ term,TERM_CONTEST_APPEAL,"APPEAL (contest: a turn on stage, its hearts, to appea
 term,TERM_RADIO_UPGRADE,RADIO UPGRADE,,שדרוג רדיו,proposed,"the Kanto radio upgrade, as the English names it in the Lavender Pokémon Center hint (שדרוג רדיו) and the Radio Station gift (שדרוג הרדיו); the music director calls it an EXPN CARD upgrade (TERM_EXPN_CARD); see DECISIONS.md Q143"
 term,TERM_EXPN_CARD,EXPN CARD,,כרטיס הרחבה,proposed,"the music director's name for the radio upgrade (LavenderTown_RadioStation_hns, 'שדרוג כרטיס הרחבה'); EXPN = expansion הרחבה, CARD = כרטיס as TERM_RADIO_CARD כרטיס רדיו; see DECISIONS.md Q143"
 term,TERM_RADIO_CARD,RADIO CARD,,כרטיס רדיו,proposed,"the PokéGear radio card, the Goldenrod Radio Tower quiz prize (GoldenrodCity_RadioTower_1F_hns), as the tree writes it; see DECISIONS.md Q143"
-term,TERM_POKEBLOCK,POKéBLOCK,,פוקיבלוק,proposed,"the Hebrew word that replaces the {POKEBLOCK} glyph pair (STYLE §5) in the battle messages, the Safari battle menu, the block names, the blender and ITEM_POKEBLOCK_CASE קופסת פוקיבלוק; POKé = פוקי as פוקיבול and פוקיגיר; 41 px in FONT_NORMAL, so the Safari battle menu's 40 px column draws it in FONT_NARROW (39 px, src/battle_message.c)"
+term,TERM_POKEBLOCK,POKéBLOCK,,פוקיבלוק,proposed,"the Hebrew word that replaces the {POKEBLOCK} glyph pair (STYLE §5) in the battle messages, the Safari battle menu, the block names, the blender and ITEM_POKEBLOCK_CASE קופסת פוקיבלוק; POKé = פוקי as in פוקיגיר; 41 px in FONT_NORMAL, so the Safari battle menu's 40 px column draws it in FONT_NARROW (39 px, src/battle_message.c)"
