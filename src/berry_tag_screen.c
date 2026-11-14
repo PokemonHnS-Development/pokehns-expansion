@@ -185,7 +185,7 @@ static const u8 sText_Var1DotVar2[] = {PLACEHOLDER_BEGIN, 0x02, CHAR_PERIOD, PLA
 #endif
 #if TEXT_RTL
 // A string in the Hebrew build, so the unit can be translated; the English build keeps the bytes.
-static const u8 sText_Var1DotVar2_Metric[] = _("{STR_VAR_1}.{STR_VAR_2} cm");
+static const u8 sText_Var1DotVar2_Metric[] = _("{STR_VAR_1}.{STR_VAR_2} ס”מ");
 #else
 static const u8 sText_Var1DotVar2_Metric[] = {PLACEHOLDER_BEGIN, 0x02, CHAR_PERIOD, PLACEHOLDER_BEGIN, 0x03, CHAR_c, CHAR_m, EOS};
 #endif
