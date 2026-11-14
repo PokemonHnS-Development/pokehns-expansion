@@ -156,7 +156,10 @@ Only characters in `charmap.txt`. In particular:
   תמים, מבוהל, הפחדה) and read as such when bare. The Pokémon keeps its English place before the ability,
   so never `ה{ability} של {X}`. Where `בעזרת היכולת` or `בזכות היכולת` would cost a screen more than English
   with the longest names, write `ביכולת` (the Poison Point, Damp, Dazzling and Healer lines). The bare name
-  stays only where the ability is the subject that opens the line (Forewarn's `{B_SCR_ABILITY} הזהירה את…`).
+  stays only where the ability is the subject that opens the line (Forewarn's `{B_SCR_ABILITY} הזהירה את…`),
+  and where the same `{B_BUFF1}` holds an item or a move on another path (Rough Skin and Rocky Helmet share
+  `בגלל {B_BUFF1}`, Quick Draw and Quick Claw share `בזכות {B_BUFF1}`). A `{B_BUFF}` can hold an ability too:
+  check the `PREPARE_ABILITY_BUFFER` calls (Trace's `את היכולת {B_BUFF2}`).
 - `{B_DEF_PARTNER_NAME}` is a bare name on either side, so the line ties it to the first target with
   `שלצידו`: `נגד {B_DEF_NAME_WITH_PREFIX2} ו{B_DEF_PARTNER_NAME} שלצידו!`. A second foe then does not
   read as the player's Pokémon, and the line still reads right when the targets are the player's (Q146).
