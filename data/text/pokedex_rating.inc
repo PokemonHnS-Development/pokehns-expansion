@@ -262,7 +262,7 @@ gJohtoDexRatingText_LessThan10::
 
 gJohtoDexRatingText_LessThan20::
 	.string "טוב. אני רואה שאתה יודע\n"
-	.string "להשתמש בפוקיבולים.$"
+	.string "להשתמש בפוכדורים.$"
 
 gJohtoDexRatingText_LessThan35::
 	.string "אתה משתפר בזה,\n"
@@ -304,7 +304,7 @@ gJohtoDexRatingText_LessThan155::
 	.string "ולא רק תופס אותם.$"
 
 gJohtoDexRatingText_LessThan170::
-	.string "אם תלמד להשתמש היטב בפוקיבולים\n"
+	.string "אם תלמד להשתמש היטב בפוכדורים\n"
 	.string "המיוחדים שמכין קורט,\p"
 	.string "תוכל לתפוס פוקימונים\n"
 	.string "טוב יותר!$"
