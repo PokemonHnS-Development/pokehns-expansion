@@ -26,7 +26,7 @@ writing. Words are laid out right to left, in the English text's own colour indi
 | `coreui/` | `make_coreui.py [--only SUBSTR] [--dry] [--out TREE]` | battle HUD labels (`battle_interface/{hns,gen4}/hpbar.png`, `status{,2,3,4}.png`, `hns/healthbox_singles_player.png`, `move_info_window_{l,r,start}.png`), `interface/status_icons.png`, `menu_info.png` (type plates in FONT_SMALL cells, the Psychic plate in FONT_SMALL_NARROWER with the types plate's 2 px hyphen), `mon_markings_menu.png`, `bag/hm.png`, `check_berry.png`, `shop/money.png`, `party_menu/hns/bg.png`, `pokemon_storage/menu.png`, `summary_screen/hns/tiles.png`. `screens.py` draws the tilemapped screens as a preview |
 | `pokedex/` | `make_pokedex.py [--write] [job ...]` | `graphics/pokedex/hgss/`: `tileset_menu1.png`, `tileset_menu2.png`, `tileset_menu3.png` (page tabs), `tileset_interface_hns.png` (SEEN/OWN panel), `tileset_menu_list.png` and the two START menu tilemaps, `tileset_menu_search.png`. Each tileset is edited through every tilemap that shows it, and every screen is re-rendered to prove no shared tile changed by accident. `disk_check.py` re-checks the written files |
 | `pokegear/` | `heb_pokegear.py [PATH_FILTER ...]` (always writes) | the 29 `graphics/pokenav/` files: the `options/` buttons, `left_headers/`, `condition/graph.png` and `cancel.png`, `hns/radio/ui_tiles.png`, `region_map/city_zoom_text.png`. The condition graph also reads the two Spanish forks' redrawn graph (commits `268113861f` and `098f8e4906`, fetched from the `es` and `sigon` remotes) |
-| `side/` | one `do_*.py` per file (always writes); `finalize.py` checks them all and draws the previews, `screens.py` the tilemapped screens | contest (`applause`, `nextturn`, `interface`, `results_screen/tiles`), Pokéblock (`menu`, `use_screen/{graph,updown,condition}`), `roulette/credit`, slot machine (`menu`, `digital_display`), trainer card (`tiles`, `frlg/tiles`), Frontier Pass (`bg`, `map_and_card`, `map_screen`), `battle_frontier/tourney_buttons`, Easy Chat (`button_window`, `mode`), Union Room chat (`background`, `r_button_labels`) |
+| `side/` | one `do_*.py` per file or group of files (always writes); `finalize.py` checks them all and draws the previews, `screens.py` the tilemapped screens | contest (`applause`, `nextturn`, `interface`, `results_screen/tiles`), Pokéblock (`menu`, `use_screen/{graph,updown,condition}`), `roulette/credit`, slot machine (`menu`, `digital_display`, `reel_symbols/7` by `do_reelreplay.py`), trainer card (`tiles`, `frlg/tiles`), Frontier Pass (`bg`, `map_and_card`, `map_screen`), `battle_frontier/tourney_buttons`, Easy Chat (`button_window`, `mode`), Union Room chat (`background`, `r_button_labels`); `interface/status_icons.png`'s Pokérus tag (`do_pkrs.py`), `trade/menu.png`'s level mark (`do_tradelv.py`), `title_screen/hns/press_start.png` (`do_pressstart.py`), Voltorb Flip `gameboard` and `coins` (`do_vflip.py`); `do_minigames.py`: `berry_blender/start`, `link/321start`, `link/321start_static`, `pokemon_jump/bonuses`; map tilesets under `data/tilesets/`: the building signs of the five Johto and Kanto primaries, `alola_island`, `mt_silver_exp_hns` and `general` (`do_townsigns.py`), `secondary/department_store_hns` (`do_deptfloor.py`), `secondary/battle_dome` (`do_domebanner.py`) |
 
 Glyph sources: `types/`, `pokedex/` and `pokegear/` cut the letters from the installed font PNGs;
 `coreui/` and `side/` start from the stroke designs and derive shorter or bolder sets from them
@@ -44,7 +44,7 @@ says so. `HNS_GFX_OVERWRITE=1` writes them anyway; the later fix must then be ma
 | --- | --- |
 | `battle_interface/hns/status{,2,3,4}.png` | `aedb9c43e3` (paralysis tag widened), then `e2bf92a4e9` (sleep tag one column left, to the English columns; the qof of the freeze and frostbite tags above the bottom row) |
 | `battle_interface/gen4/status{,2,3,4}.png` | `aedb9c43e3`, then `f09b0a6923` (frostbite tag drawn as קור), then `e2bf92a4e9` (as the H&S sheets) |
-| `interface/status_icons.png` | `d3b59b94fe` (paralysis letters kept inside the pill), then `e2bf92a4e9` (sleep tag one column left; the qof of the paralysis, freeze and frostbite tags above the bottom row) |
+| `interface/status_icons.png` | `d3b59b94fe` (paralysis letters kept inside the pill), then `e2bf92a4e9` (sleep tag one column left; the qof of the paralysis, freeze and frostbite tags above the bottom row), then `side/do_pkrs.py` (the Pokérus tag, which `make_coreui.py` leaves in English, drawn as פוקרוס; it starts from the committed file, so run it again after `make_coreui.py` writes this file) |
 | `pokedex/hgss/tileset_menu{1,2,3}.png` | `d93afb1f02` (page tabs spaced evenly; the tab tilemaps changed with them) |
 | `pokedex/hgss/tileset_menu_list.png`, `tilemap_start_menu.bin`, `tilemap_start_menu_search_results.bin` | `066d60d2ad` (list START menu mirrored) |
 | `pokenav/condition/graph.png` | `9e489b46a5` (two labels moved clear of the pentagon outline) |
@@ -62,7 +62,9 @@ edited directly; the commits that changed them say how.
 
 ## Checking a redraw
 
-Every script starts from the English file, so it gives the same output on every run. Running
+Every script starts from the English file, so it gives the same output on every run.
+`side/do_pkrs.py` is the one exception: it starts from the committed `status_icons.png` and
+redraws only the Pokérus frame from the English one. Running
 all five families into an export of this tree, with the files they write reset to English,
 reproduced every one of them byte for byte, except the Pokéblock graph above and the later-edited
 files: those were left alone, and the copies saved under `kept/` equal the versions their script
