@@ -6032,7 +6032,7 @@ term,TERM_PP,PP,נ”כ,נ”כ,inherited,FR ITEM_PP_UP = הגדלת נ”כ; נ
 term,TERM_LV,Lv.,רמה,רמה,inherited,FR text uses רמה in 48 strings; FireRed writes ברמה N in prose; H&S draws Lv. as a glyph ({LV} in charmap) — decide whether the glyph needs a Hebrew tile
 term,TERM_EXP_POINTS,EXP. POINTS,נקודות נסיון,נקודות ניסיון,proposed,"FR gText_PokeSum_ExpPoints; FireRed now spells ניסיון (battle_message.c, EXP. SHARE חולק ניסיון); the full spelling everywhere (DECISIONS Q140 (FireRed naming conventions))"
 term,TERM_MOVE,MOVE (a Pokémon's move),מהלך,מהלך,inherited,FR text uses מהלך in 193 strings; FireRed calls a Pokémon move מהלך (KNOWN MOVES = מהלכים ידועים); the PC verb MOVE is הזז
-term,TERM_ABILITY,ABILITY,יכולת,יכולת,inherited,FR Help_Text_Ability = יכולת$
+term,TERM_ABILITY,ABILITY,יכולת,יכולת,inherited,"FR Help_Text_Ability = יכולת$; a battle line that names an ability inside the sentence writes היכולת before it (בעזרת היכולת סטטי; DECISIONS.md Q162, STYLE §7)"
 term,TERM_NATURE,NATURE,אופי,אופי,inherited,FR Help_Text_Nature = אופי$; FireRed help/summary use אופי; the move NATURE POWER uses טבע
 term,TERM_TYPE,TYPE,סוג,סוג,inherited,FR Help_Text_Type = סוג$
 term,TERM_PC,PC,מחשב,מחשב,inherited,FR text uses מחשב in 69 strings

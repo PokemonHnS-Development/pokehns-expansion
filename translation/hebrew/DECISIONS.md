@@ -98,8 +98,11 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q156](#q156) | The text-alignment checker reports עוצמה (POWER) touching the right edge of the Pokédex move box. | A. Keep: it ends 2 px inside the box, the mirror of POWER; the checker measured to the category icon | no change |
 | [Q157](#q157) | The checker reports החלפה (SHIFT) filling its Pokédex search button, with its lamed on the top row. | A. Keep: the same columns as SHIFT, and the lamed two rows inside the button | no change |
 | [Q158](#q158) | The checker reports נ”כ touching the PP column's right edge on the forget-move page. | A. Keep Q150's PP layout: 1 blank column on the right, 0 or 1 on the left; the reported 0 is the column's rounded corner | no change |
-| [Q159](#q159) | The Poké Ball is פוקיבול, FireRed's word; the owner decided on פוכדור. | A. פוכדור in every string, name and description, with its prefixes and plural; the pocket כדורי פוקי and the other balls kept (owner's decision) | changed |
+| [Q159](#q159) | The Poké Ball is פוקיבול, FireRed's word; the owner decided on פוכדור. | A. פוכדור in every string, name and description, with its prefixes and plural; the pocket כדורי פוקי (later פוכדורים, Q161) and the other balls kept (owner's decision) | changed |
 | [Q160](#q160) | The stat-change lines name the stat through הנתון ('הנתון דיוק ירד'); the owner decided the line names the stat itself. | A. The stat with its article and a verb that agrees with it ('ל{X}\nהדיוק ירד!', 'ההתקפה המיוחדת עלתה'), by two engine tables under TEXT_RTL (owner's decision) | changed |
+| [Q161](#q161) | The bag pocket POKé BALLS kept FireRed's כדורי פוקי (Q159); the owner asked for פוכדורים. | A. פוכדורים, the plural of the ball, in the pocket title and the put-away line; ULTRA BALL and MASTER BALL kept (owner's decision) | changed |
+| [Q162](#q162) | Static's line read 'פיקאצ'ו שיתק בעזרת סטטי את…': an ability's name bare inside a battle line reads as an ordinary word (סטטי, איתן, תמים). | A. היכולת before the name in every battle line that names an ability inside the sentence ('בעזרת היכולת סטטי'); ביכולת where the longer form costs a screen | changed |
+| [Q163](#q163) | The same line's last view was wiped 8 frames after it completed: two manual scrolls where English shows one auto-wrapped view. | A. No manual break in a battle line where English has none (22 lines) | changed |
 
 ## K1
 
@@ -1608,7 +1611,7 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 | B. Rename the classes that collide | Change PIKE QUEEN, DOME ACE, PKMN RANGER and the others. | Trainer-class names are glossary terms used in many lines; a rename for one template is out of proportion, and a new class could collide again. |
 | C. Keep | No change. | The intros of three Frontier Brains and the Rangers read as other words. |
 
-**Chosen:** A. Seen on screen on the rc17 clip build and the fixed clip build: the Pike Queen and Dome Ace intros, the Trainer Hill Rangers (one trainer and a pair), Youngster Mikey, the Twins, the gym leader and the Rocket Hideout multi battle ('מאת מנהל רוקט אריאנה / ומאת רוקט גראנט!'), with 0 clip records.
+**Chosen:** A. Seen on screen on the rc17 clip build and the fixed clip build: the Pike Queen and Dome Ace intros, the Trainer Hill Rangers (one trainer and a pair), Youngster Mikey, the Twins, the gym leader and the Rocket Hideout multi battle ('מאת מנהל רוקט אריאנה / ומאת רוקט גראנט!'), with 0 clip records. The two-trainer line lost its `\n` and `\l` in Q163: it is auto-wrapped, one view for the Rocket Hideout pair.
 
 *Changed:* `src/battle_message.c`
 
@@ -2393,7 +2396,7 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 - Width: פוכדור is 32 px in FONT_NORMAL against 35, 28 px in FONT_NARROW against 33, and the plural 42 px against 45 (`textwidth.py`). Every changed line is narrower, so every line keeps its break; none of them gains room for the next word.
 - No graphic and no Easy Chat word has the word: the drawing scripts' tables (`tools/hebrew/graphics/`) have no ball word, the Easy Chat lists are unchanged (`gen_ec_order.py --check`, `gen_ec_letters.py --check` up to date), and no test expectation in `test/` has it. The Poké Ball pocket's A-Z order is the same: no other ball's name starts with פ.
 - FireRed keeps פוקיבול, so `namecheck.py --fr-sync` warns on `ITEM_POKE_BALL`; the difference is in `namecheck_allow.json` with the owner's decision as its reason.
-- Kept: the bag pocket כדורי פוקי (`TERM_POKE_BALLS_POCKET`, its own FireRed row; not a form of the word), the other balls (כדור X, and ULTRA BALL אולטרה בול, MASTER BALL מאסטר בול), and POKé as פוקי in פוקיגיר and פוקיבלוק. K3 and Q125 above, and HANDOFF's troubleshooting table, quote lines as they were then and keep the old word.
+- Kept: the bag pocket כדורי פוקי (`TERM_POKE_BALLS_POCKET`, its own FireRed row; not a form of the word; renamed פוכדורים by the owner in Q161), the other balls (כדור X, and ULTRA BALL אולטרה בול, MASTER BALL מאסטר בול, which Q161 keeps), and POKé as פוקי in פוקיגיר and פוקיבלוק. K3 and Q125 above, and HANDOFF's troubleshooting table, quote lines as they were then and keep the old word.
 - `FuchsiaCity_Text_ItemBallInThere` (`data/maps/FuchsiaCity_Frlg/scripts.inc`) is not assembled into H&S; it changes with the rest so the text stays one.
 
 | Option | How | Risk |
@@ -2422,7 +2425,7 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 - The owner's second form, 'היכולת {stat} ירדה', is text only and always feminine, but יכולת is the glossary's Ability (`TERM_ABILITY`) and the battle lines already say היכולת before an ability's name ('קיבל את היכולת {B_DEF_ABILITY}', 'נלקחה היכולת {B_SCR_ABILITY}', 'היכולת {B_ATK_ABILITY} מאפשרת'); 'ל{X}, בזכות {B_DEF_ABILITY}, עלתה היכולת התקפה' would name two abilities.
 - Engine, under `TEXT_RTL` only (`src/battle_message.c`, the block before `BufferStringBattle`): a {B_BUFF1} that holds a stat prints from `sStatNamesWithArticle` (ההתקפה, ההתקפה המיוחדת, הדיוק) in `BattleStringExpandPlaceholders`, so the Z-move and debug menus keep the bare names; and for a stat whose name is masculine (`sStatNameIsMasculine`: הדיוק) `BufferStringBattle` takes the line from `sMasculineStatStrings`. `gBattleStringsTable` holds the feminine form. The English build (`TEXT_RTL` FALSE) compiles none of it: its ROM differs from the one before only in the line number of one assert (`<private>/scratch/screens/r30/engproof/PROOF.md`).
 - Widths, with every stat and intensity word, a 12-glyph name and its suffix, the widest ability (רגליים מסתבכות) and 16-glyph abilities, and a 19-glyph item, through the battle auto-wrap: no row over its budget; the widest are 191 of 208 px (ההתקפה המיוחדת עלתה בצורה דרסטית!), 199 of 200 in the ability lines and 200 of 208 in the item lines (`<private>/scratch/screens/r30/text/widths/measure.py`). `audit.py` 0 errors.
-- Breaks: the lines that name no ability keep the break after the name (STYLE §5's exception), so the stat starts the second line. The four ability lines and the item lines are auto-wrapped, as in English; the attacker's ability line had a manual break before הנתון and now wraps like its three siblings. The Ruin line breaks before את.
+- Breaks: the lines that name no ability keep the break after the name (STYLE §5's exception), so the stat starts the second line. The four ability lines and the item lines are auto-wrapped, as in English; the attacker's ability line had a manual break before הנתון and now wraps like its three siblings. The Ruin line breaks before את (Q163 removes that break, and Q162 puts היכולת before the ability in the four ability lines and the Ruin line).
 - The plural נתונים stays where a line speaks of stats in general (שינויי הנתונים, the Mirror Herb, Haze and Z-move lines): no stat name follows it.
 
 | Option | How | Risk |
@@ -2433,6 +2436,76 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 | D. Keep הנתון | No change | Against the owner's decision. |
 
 **Chosen:** A, the first of the owner's two forms ('simply'), made right for every stat. Supersedes Q145 (and Q140's line on הנתון). Seen on screen on the clip ROM beside rc28 and English, with no clip record: all 19 lines with each of the seven stats and each intensity word (287 entries a run), forced with `tools/hebrew/emu/scripts/r16_battle_sweep/bsweep.py` in a trainer battle with 12-letter nicknames and with species names and in a wild battle; הדיוק takes the masculine verb and every other stat the feminine one. No line needs more scrolled pages than in rc28. In the release tours the new lines are 20 shots (`<private>/scratch/screens/r30/text/battle/`, `tours/`).
+
+*Changed:* `src/battle_message.c`, `translation/hebrew/STYLE.md`
+
+## Q161
+
+**Question.** Q159 kept the bag pocket POKé BALLS as כדורי פוקי, FireRed's word, and the two balls ULTRA BALL and MASTER BALL as אולטרה בול and מאסטר בול. Asked about both, the owner answered: ULTRA BALL and MASTER BALL "keep"; and "כדורי פוקי is not good, is it פוכדורים?" Where is the pocket named, and does the shorter word sit right?
+
+*Source:* the owner, round 31: "כדורי פוקי is not good, is it פוכדורים?"; on ULTRA BALL and MASTER BALL: "keep".
+
+**Analysis.**
+- The pocket's name is three strings, all in `src/strings.c`: `gPocketNamesStringsTable[POCKET_POKE_BALLS]`, the pocket title of the bag (`PrintPocketNames`, `src/item_menu.c`), which is also the bag the battle, the Pokémon Center PC's item storage and the mart's SELL open; `gText_Poke_Balls`, `STDSTRING_POKEBALLS`, which the put-away line fills in ('{PLAYER} שם {STR_VAR_2}\nבכיס {STR_VAR_3}.', `data/text/obtain_item.inc`, buffered in `data/scripts/obtain_item.inc:47` and `:325`); and `gText_PokeBalls`, which nothing in `src/` or `data/` references. No other string has the word: `git grep` for כדורי פוקי with any prefix finds nothing else in `data/` or `src/`, and no Easy Chat word, help window or graphic names the pocket (the drawing scripts' tables in `tools/hebrew/graphics/` have no ball word). The dialogue already says פוכדורים for POKé BALLS (Q159).
+- Grammar: the put-away line reads 'בכיס פוכדורים', like the other pockets' 'בכיס פריטים', 'בכיס פירות', 'בכיס פריטי מפתח'.
+- Width: פוכדורים is 42 px in FONT_NORMAL against 47 for כדורי פוקי (English POKé BALLS 57). The title is centred in its 64 px half of the pocket-name buffer (`GetStringCenterAlignXOffset(FONT_NORMAL, name, 0x40)`) and the window keeps the English position (`WINDOW_RTL_IN_PLACE`), so the shorter word stays centred between the switching arrows.
+- FireRed keeps כדורי פוקי (`gText_PokeBalls`). The glossary row keeps it in its `firered_hebrew` column. `namecheck.py --fr-sync` compares only FireRed's name tables (species, moves, trainer classes, natures, abilities, types, items, map sections: `FR_TABLES`), not term rows, so the difference raises no warning, and an allowlist entry for it would itself be reported as `STALE` (`<private>/scratch/screens/r31/fix/static/namecheck_allow_probe.txt`). It is recorded here and in the row's note instead.
+- ULTRA BALL אולטרה בול and MASTER BALL מאסטר בול stay, the owner's answer.
+
+| Option | How | Risk |
+|---|---|---|
+| A. פוכדורים, the plural of the ball | The three strings; the glossary row | Low: text only, 5 px narrower, still centred. |
+| B. Keep כדורי פוקי | No change | Against the owner's answer; the pocket and the ball share no word. |
+
+**Chosen:** A, the owner's decision. In the release tours against rc29, 19 shots differ in the pocket title only (pixels x 40-87, y 13-24): the field bag (`menu_bag_pocket_03`), the battle bag (`battle_catch`, `battle_wild_bag_03`, `bv_ball_refused`, `bv_catch_fail`, `chr_10_nuzlocke_catch`). A scratch tour on the clip ROM beside rc29 and English (`<private>/scratch/screens/r31/fix/pocket/`) shows the title in the field bag and halfway through a switch to the next pocket, in the mart's SELL bag and in the PC's DEPOSIT ITEM bag, and the put-away line 'GOLD שם כדור מעולה / בכיס פוכדורים.' (English 'in the POKé BALLS POCKET.'), with no clip record. ULTRA BALL and MASTER BALL are unchanged.
+
+*Changed:* `src/strings.c`, `translation/hebrew/glossary.csv`, `translation/hebrew/STYLE.md`
+
+*Glossary:* `TERM_POKE_BALLS_POCKET`, `TERM_POKE_BALL` (note), `ITEM_SPORT_BALL` plural (note)
+
+## Q162
+
+**Question.** The owner, after Pikachu's Static paralysed a foe that touched it: "it said something like הסטטי של פיקצ'ו, which is not accurate". What was on screen, and how should a battle line name an ability?
+
+*Source:* the owner, round 31, on the current 1.0 (rc29) on a TV (RetroArch, mGBA core).
+
+**Analysis.**
+- On screen (rc29, the owner's case replayed: the player's Pikachu with Static, a wild Rattata's Tackle, the default options): the ability pop-up shows the name over the ability, 'פיקאצ'ו' over 'סטטי' (English 'PIKACHU's' over 'STATIC'); then the line `STRINGID_PKMNWASPARALYZEDBY`: 'פיקאצ'ו שיתק / בעזרת סטטי את' ▼ 'רטטה הפראי, וייתכן' ▼ 'שלא יוכל לזוז!'. No string in the game says 'הסטטי'. The quote is the English 'PIKACHU's STATIC' put in Hebrew order. What reads wrong is the ability's name standing bare after בעזרת: סטטי is the ordinary adjective static (the Pokédex says 'חשמל סטטי'), so 'שיתק בעזרת סטטי' does not read as the name of an ability. Other ability names are ordinary words too: איתן (Sturdy), תמים (Oblivious), לוחמני (Scrappy), מבוהל (Rattled), הפחדה (Intimidate), and 48 lines had an ability's name bare after בזכות, בעזרת, בגלל, באמצעות or על, or after את. Six lines already wrote היכולת before the name ('נשאר ער בזכות היכולת {B_DEF_ABILITY}', 'קיבל את היכולת …', 'נלקחה היכולת …', 'היכולת … מאפשרת', 'מונע החלפה בעזרת היכולת …'). Two lines hard-coded the article and של, the shape of the owner's quote: 'הפעיל את הפרוטוסינתזה של X', 'את הנעת הקווארק של X'.
+- Token order (STYLE §5): English puts the Pokémon first ('X's STATIC paralyzed Y'), so 'ה{B_BUFF1} של {X}' is not allowed; the line keeps 'X שיתק בעזרת היכולת סטטי את Y'.
+- The rule: inside a sentence an ability's name follows the noun היכולת ('בעזרת היכולת סטטי', 'בזכות היכולת איתן', 'להפעיל את היכולת פרוטוסינתזה'). The bare name stays only where the ability is the subject that opens the line: Forewarn's '{B_SCR_ABILITY} הזהירה את…' (always התרעה, a noun) and the two Zen Mode lines, which no script prints.
+- Width: 'היכולת ' is 35 px. Each changed line was laid out with the game's battle auto-wrap (`src/line_break.c`) for every side assignment of its battlers, with typical names, the longest real names, and 12 copies of the widest letter in a nickname (`<private>/scratch/screens/r31/fix/widths/`). Where 'בעזרת היכולת' or 'בזכות היכולת' would need one screen more than English with the longest names, the line says 'ביכולת' (Poison Point: 'הורעל על ידי X ביכולת נקודת רעל'; Damp, Dazzling, Healer), Intimidate says 'את התקפת X' for 'את ההתקפה של X', and Anger Point drops שלו. The auto-wrap can break between היכולת and a two-word name ('בעזרת היכולת / גוף להבה'); that is kept, since a no-break space would make the unbreakable chunk 35 px wider.
+- 54 strings changed: 50 lines of `gBattleStringsTable` (the 48, and the two hard-coded Protosynthesis and Quark Drive lines) and the four ability lines of `sMasculineStatStrings`. Lines whose English has no manual break lost theirs (Q163).
+
+| Option | How | Risk |
+|---|---|---|
+| A. היכולת before the name in every line that names an ability inside the sentence | 54 strings, text only; ביכולת where the longer preposition costs a screen | Some lines reach one more screen than English, but only with the synthetic 12-letter nicknames and the widest ability, as rc29 did (below). |
+| B. Only the status lines (paralysis, poison, burn, freeze, sleep, Cute Charm) | 6 strings | 'מוגן בזכות איתן', 'בזכות מבוהל' still read as adjectives; no rule for later lines. |
+| C. Keep the bare names | No change | The owner's report stands. |
+
+**Chosen:** A. Seen on screen with `tools/hebrew/emu/scripts/r16_battle_sweep/bsweep.py`, every changed line (75 entries: a real ability for each line, the accuracy variant for the masculine strings) on the new clip ROM, rc29's clip ROM and English, in a trainer battle with species names, a trainer battle with the longest names and 12-letter nicknames (`--worst --nick`), and a wild battle with the longest names: 0 clip records. With species names no line needs more pages than English. Against rc29, 54 entry runs need fewer pages and 2 more, both still within English (the move-made-ineffective line 'ניטרל בזכות היכולת … את {move}' and the ability-blocks-ability line, with 12-letter nicknames). Twenty entry runs need one page more than English, every one of them the same count as rc29: the 12-letter nicknames (84 px against English's 72) or the widest ability in a wild battle (`<private>/scratch/screens/r31/fix/bs/compare.txt`). The owner's case replayed on the new ROM shows the pop-up 'פיקאצ'ו' / 'סטטי' and the line 'פיקאצ'ו שיתק בעזרת היכולת סטטי את / רטטה הפראי, וייתכן שלא יוכל לזוז!' (Q163).
+
+*Changed:* `src/battle_message.c`, `translation/hebrew/STYLE.md`
+
+*Glossary:* `TERM_ABILITY` (note)
+
+## Q163
+
+**Question.** The owner, on the same line: "the window disappears too fast in this sentence". Why, and which lines share it?
+
+*Source:* the owner, round 31.
+
+**Analysis.**
+- The owner's case on rc29, traced frame by frame with FAST BATTLES on and text speed FAST (the new-game defaults, `src/new_game.c:109`, `:127`), A pressed 60 frames after each prompt (`<private>/scratch/screens/r31/fix/static_trace/`): the Hebrew line had a `\n` and two `\l`, so it took three views and two presses of A, where English (auto-wrapped, two rows) takes one view and none. The views stay until A (85 and 84 frames), but the last one, 'רטטה הפראי, וייתכן / שלא יוכל לזוז!', is on screen 28 frames, complete for 8, and then wiped: with FAST BATTLES on `Cmd_waitmessage` does not wait (`src/battle_script_commands.c:2182`), and the paralysis script goes on to `flushtextbox`. English is wiped 8 frames after its last letter too, but its reader has read the sentence while it printed, 80 frames in one view. That is the window that disappears.
+- The cause is the manual breaks: any `\n` or `\l` turns off the battle auto-wrap (`StringHasManualBreaks`, `src/line_break.c`), and every `\l` is a press of A. STYLE §5 already says that a battle string without a manual break in English stays without one. 19 Hebrew lines had a `\l` where English has no break, and three more where English has only a closing `\p` (Throat Chop, the Ruin abilities' line, the two-trainer intro).
+- An engine change (a longer hold under `TEXT_RTL`) would make the Hebrew battle timing differ from English's on purpose. It is not needed: once the line fits English's views, the last view behaves as English's does.
+
+| Option | How | Risk |
+|---|---|---|
+| A. No manual breaks where English has none | 22 lines lose their `\n`/`\l` (19 with a `\l`, the three before a `\p`); the ability lines of Q162 lose theirs too | Low: text only. A rare combination of the longest names can still give a line a scroll, as in English. |
+| B. Hold the last view longer under `TEXT_RTL` | Engine | Battle timing differs from English; the two extra presses of A stay. |
+| C. Keep | No change | The owner's report stands. |
+
+**Chosen:** A. The owner's case on the new ROM: one view, 'פיקאצ'ו שיתק בעזרת היכולת סטטי את / רטטה הפראי, וייתכן שלא יוכל לזוז!', no press of A, on screen 74 frames and complete for 8, against English's 80 and 8 and rc29's last view of 28 and 8; with FAST BATTLES off 137 frames (71 complete) against English's 143 (71); at text speed MID 275 against 299; at INSTANT 10 against English's 11 (the investigation's run, `<private>/scratch/screens/r31/static_par/logs/timelines.txt`); with the wild Pikachu's Static (the player's Rattata attacking) 74 and 8. The pop-up is the same in all of them: fully shown 49 frames on its own timer. The pin, the paralysis and every frame up to the line are the same as rc29's; the clip ROM logs 0 records. No Hebrew battle line now has a `\l` where English has no break (`audit.extract_c` over `src/battle_message.c` against `../pokehns-en`).
 
 *Changed:* `src/battle_message.c`, `translation/hebrew/STYLE.md`
 

@@ -39,7 +39,7 @@ Where they disagree, the glossary wins for names and this file wins for everythi
   a spelling. If a name is missing from the glossary, leave the English name in place and add it to
   your report; do not guess.
 - Fixed terms (glossary kind `term`): פוקימון / פוקימונים, מאמן, פוקדקס, פוכדור (POKé BALL, the owner's
-  decision, `DECISIONS.md` Q159; plural פוכדורים), מרכז פוקימון,
+  decision, `DECISIONS.md` Q159; plural פוכדורים, which is also the bag pocket POKé BALLS, Q161), מרכז פוקימון,
   מכון (gym), מחשב (PC), מהלך (move), יכולת, אופי, סוג (type), נ”ח (HP), נ”כ (PP), מ”מ (TM), מ”נ (HM),
   רמה (level), נקודות ניסיון (EXP; the full spelling ניסיון, as FireRed now writes it). Hebrew uses the
   definite article and prefixes on these normally: `הפוקימון שלך`, `לפוקדקס`, `במרכז הפוקימון`.
@@ -89,7 +89,10 @@ Only characters in `charmap.txt`. In particular:
 - Line breaks: `\n` = next line, `\l` = scroll one line, `\p` = new page. You may move `\n`/`\l` to
   re-wrap Hebrew, and add or remove `\p` only when a page would otherwise not fit; keep the number of
   pages close to the English. Battle strings without any manual break in English are auto-wrapped:
-  keep them without breaks, except the stat-change lines that name no ability or item (§7).
+  keep them without breaks, except the stat-change lines that name no ability or item (§7). A `\l`
+  in a battle line is one more press of A, and the view after the last one stays only until the
+  next print: with FAST BATTLES on (the default) a status line's last view is wiped 8 frames after
+  its last letter, while English shows its whole sentence while it prints (`DECISIONS.md` Q163).
 - `{POKE}` / `{PKMN}` render the Latin "POKé"/"PKMN" glyph pairs. In Hebrew text replace them with the
   Hebrew word (`פוקי`, `פוקימון`). `drift.py` ignores these glyph-pair tokens (`{POKE}`, `{PKMN}`,
   `{POKEBLOCK}`, the `{ID}{NO}` pair and the `{PK}` of the Easy Chat word `{PK}RS`), so dropping
@@ -147,6 +150,13 @@ Only characters in `charmap.txt`. In particular:
   no ability or item breaks after the name, so the stat starts the second line; the ability and item lines are
   auto-wrapped. `הנתונים` stays where a line speaks of stats in general (`שינויי הנתונים`), with no stat name
   after it.
+- An ability named inside a battle line follows the noun היכולת: `{B_SCR_NAME_WITH_PREFIX} שיתק בעזרת היכולת
+  {B_BUFF1} את {B_EFF_NAME_WITH_PREFIX2}…`, `מוגן בזכות היכולת {B_DEF_ABILITY}`, `להפעיל את היכולת {B_SCR_ABILITY}`
+  (`DECISIONS.md` Q162, the owner's report on Static). Many ability names are ordinary words (סטטי, איתן,
+  תמים, מבוהל, הפחדה) and read as such when bare. The Pokémon keeps its English place before the ability,
+  so never `ה{ability} של {X}`. Where `בעזרת היכולת` or `בזכות היכולת` would cost a screen more than English
+  with the longest names, write `ביכולת` (the Poison Point, Damp, Dazzling and Healer lines). The bare name
+  stays only where the ability is the subject that opens the line (Forewarn's `{B_SCR_ABILITY} הזהירה את…`).
 - `{B_DEF_PARTNER_NAME}` is a bare name on either side, so the line ties it to the first target with
   `שלצידו`: `נגד {B_DEF_NAME_WITH_PREFIX2} ו{B_DEF_PARTNER_NAME} שלצידו!`. A second foe then does not
   read as the player's Pokémon, and the line still reads right when the targets are the player's (Q146).
