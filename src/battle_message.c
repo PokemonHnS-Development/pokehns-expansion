@@ -2366,6 +2366,75 @@ static const struct BattleWindowText *const sBattleTextOnWindowsInfo[] =
 
 static const u8 sRecordedBattleTextSpeeds[] = {8, 4, 1, 0};
 
+#if TEXT_RTL
+// A battle message names a stat with its article. Hebrew puts the article on the adjective of a
+// two-word stat name too, so the message cannot write it as a prefix of {B_BUFF1}.
+static const u8 *const sStatNamesWithArticle[NUM_BATTLE_STATS] =
+{
+    [STAT_HP]      = COMPOUND_STRING("HP"),
+    [STAT_ATK]     = COMPOUND_STRING("ATTACK"),
+    [STAT_DEF]     = COMPOUND_STRING("DEFENSE"),
+    [STAT_SPEED]   = COMPOUND_STRING("SPEED"),
+    [STAT_SPATK]   = COMPOUND_STRING("SP. ATK"),
+    [STAT_SPDEF]   = COMPOUND_STRING("SP. DEF"),
+    [STAT_ACC]     = COMPOUND_STRING("accuracy"),
+    [STAT_EVASION] = COMPOUND_STRING("evasiveness"),
+};
+
+// The verb of a stat-change line agrees with the stat it names. gBattleStringsTable holds each
+// line for a feminine stat name; this table holds it for a masculine one.
+static const bool8 sStatNameIsMasculine[NUM_BATTLE_STATS] =
+{
+    [STAT_ACC] = TRUE,
+};
+
+struct MasculineStatString
+{
+    u16 stringId;
+    const u8 *text;
+};
+
+static const struct MasculineStatString sMasculineStatStrings[] =
+{
+    {STRINGID_DEFENDERSSTATROSE,         COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1} {B_BUFF2}rose!")},
+    {STRINGID_ATTACKERSSTATROSE,         COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1} {B_BUFF2}rose!")},
+    {STRINGID_SCRIPTINGSTATROSE,         COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_BUFF1} {B_BUFF2}rose!")},
+    {STRINGID_ATTACKERSSTATFELL,         COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1} {B_BUFF2}fell!")},
+    {STRINGID_DEFENDERSSTATFELL,         COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1} {B_BUFF2}fell!")},
+    {STRINGID_STATSWONTINCREASE,         COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1} won't go any higher!")},
+    {STRINGID_STATSWONTDECREASE,         COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1} won't go any lower!")},
+    {STRINGID_TARGETSTATWONTGOHIGHER,    COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1} won't go any higher!")},
+    {STRINGID_TARGETABILITYSTATRAISE,    COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} {B_BUFF2}raised its {B_BUFF1}!")},
+    {STRINGID_ATTACKERABILITYSTATRAISE,  COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY} {B_BUFF2}raised its {B_BUFF1}!")},
+    {STRINGID_TARGETABILITYSTATLOWER,    COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} {B_BUFF2}lowered its {B_BUFF1}!")},
+    {STRINGID_SCRIPTINGABILITYSTATRAISE, COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_SCR_ABILITY} {B_BUFF2}raised its {B_BUFF1}!")},
+    {STRINGID_STATWASHEIGHTENED,         COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_BUFF1} was heightened!")},
+    {STRINGID_USINGITEMSTATOFPKMNROSE,   COMPOUND_STRING("Using {B_LAST_ITEM}, the {B_BUFF1} of {B_SCR_NAME_WITH_PREFIX2} {B_BUFF2}rose!")},
+    {STRINGID_USINGITEMSTATOFPKMNFELL,   COMPOUND_STRING("Using {B_LAST_ITEM}, the {B_BUFF1} of {B_SCR_NAME_WITH_PREFIX2} {B_BUFF2}fell!")},
+};
+
+// The buffer PREPARE_STAT_BUFFER makes: one stat and nothing else.
+static bool32 IsStatTextBuffer(const u8 *buffer)
+{
+    return buffer[0] == B_BUFF_PLACEHOLDER_BEGIN && buffer[1] == B_BUFF_STAT
+        && buffer[2] < NUM_BATTLE_STATS && buffer[3] == B_BUFF_EOS;
+}
+
+static const u8 *GetStatAgreementString(enum StringID stringID, const u8 *string)
+{
+    u32 i;
+
+    if (!IsStatTextBuffer(gBattleTextBuff1) || !sStatNameIsMasculine[gBattleTextBuff1[2]])
+        return string;
+    for (i = 0; i < ARRAY_COUNT(sMasculineStatStrings); i++)
+    {
+        if (sMasculineStatStrings[i].stringId == stringID)
+            return sMasculineStatStrings[i].text;
+    }
+    return string;
+}
+#endif
+
 void BufferStringBattle(enum StringID stringID, enum BattlerId battler)
 {
     s32 i;
@@ -2862,6 +2931,9 @@ void BufferStringBattle(enum StringID stringID, enum BattlerId battler)
         else
         {
             stringPtr = gBattleStringsTable[stringID];
+#if TEXT_RTL
+            stringPtr = GetStatAgreementString(stringID, stringPtr);
+#endif
         }
         break;
     }
@@ -3210,6 +3282,13 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
             switch (*src)
             {
             case B_TXT_BUFF1:
+#if TEXT_RTL
+                if (IsStatTextBuffer(gBattleTextBuff1))
+                {
+                    toCpy = sStatNamesWithArticle[gBattleTextBuff1[2]];
+                    break;
+                }
+#endif
                 if (gBattleTextBuff1[0] == B_BUFF_PLACEHOLDER_BEGIN)
                 {
                     ExpandBattleTextBuffPlaceholders(gBattleTextBuff1, gStringVar1);
