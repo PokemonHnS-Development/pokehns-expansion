@@ -819,5 +819,5 @@ Alola_Melemele_camper_Text_0:
 Alola_Melemele_Picnicker_Text_0:
 	.string "האיים האלה מלאים בפוקימונים\n"
 	.string "ייחודיים!\p"
-	.string "אני חייבת להצטייד בפוקיבולים\n"
+	.string "אני חייבת להצטייד בפוכדורים\n"
 	.string "כדי לתפוס את כולם!$"

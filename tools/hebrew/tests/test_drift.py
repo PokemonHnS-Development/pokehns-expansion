@@ -81,7 +81,7 @@ class DriftTest(unittest.TestCase):
     def test_a_kept_glyph_pair_in_a_translated_string(self):
         rel = 'data/maps/Glyphs/scripts.inc'
         cases = [('BALL {POKEBLOCK}$', 'כדור {POKEBLOCK}$', '{POKEBLOCK}'),
-                 ('{POKE} BALL, {PKMN}, {ID}{NO}$', 'פוקיבול, {PKMN} {ID}{NO}$', '{PKMN} {ID} {NO}'),
+                 ('{POKE} BALL, {PKMN}, {ID}{NO}$', 'פוכדור, {PKMN} {ID}{NO}$', '{PKMN} {ID} {NO}'),
                  ('BALL {POKEBLOCK}$', 'כדור פוקיבלוק$', None),       # the Hebrew word replaces it
                  ('{PK}RS$', '{PK}RS$', None)]                        # untranslated: not this check
         en, he = [], []

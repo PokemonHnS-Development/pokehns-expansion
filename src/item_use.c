@@ -1183,7 +1183,7 @@ bool32 CanThrowBall(void)
 
 static const u8 sText_CantThrowPokeBall_TwoMons[] = _("אי אפשר לזרוק כדור!\nיש שם שני פוקימונים!\p");
 static const u8 sText_CantThrowPokeBall_SemiInvulnerable[] = _("אי אפשר לזרוק כדור!\nאין אף פוקימון בטווח ראייה!\p");
-static const u8 sText_CantThrowPokeBall_Disabled[] = _("אי אפשר להשתמש\nבפוקיבולים כרגע!\p");
+static const u8 sText_CantThrowPokeBall_Disabled[] = _("אי אפשר להשתמש\nבפוכדורים כרגע!\p");
 static const u8 sText_CantThrowPokeBall_NuzlockeZone[] = _("כבר ניצלת את המפגש\nשלך באזור הזה!\p");
 static const u8 sText_CantThrowPokeBall_NuzlockeSpecies[] = _("כלל כפילויות: כבר נתפס פוקימון\nמקו ההתפתחות הזה!\p");
 static const u8 sText_CantThrowPokeBall_NuzlockeAlreadyCaught[] = _("כבר תפסת את\nהפוקימון הזה!\p");

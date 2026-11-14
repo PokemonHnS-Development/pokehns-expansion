@@ -19,7 +19,7 @@ AzaleaTown_Mart_EventScriptBugCatcher::
 
 AzaleaMart_Text_CooltrainerM:
 	.string "אתה יכול לקנות כדור מעולה?\n"
-	.string "אני יכול לקנות רק פוקיבולים.\p"
+	.string "אני יכול לקנות רק פוכדורים.\p"
 	.string "שמעתי שאפשר לקנות יותר\n"
 	.string "פריטים כשמרוויחים תגי מכון!\p"
 	.string "הלוואי שקורט יכין לי כמה\n"
@@ -27,7 +27,7 @@ AzaleaMart_Text_CooltrainerM:
 
 AzaleaMart_Text_BugCatcher:
 	.string "כדור מעולה טוב יותר לתפיסת\n"
-	.string "פוקימונים מאשר פוקיבול.\p"
+	.string "פוקימונים מאשר פוכדור.\p"
 	.string "אבל לפעמים הכדורים של קורט\n"
 	.string "יכולים להיות טובים יותר.$"
 

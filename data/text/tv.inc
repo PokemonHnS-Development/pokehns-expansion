@@ -885,7 +885,7 @@ gTVPokemonTodayFailedText01::
 
 gTVPokemonTodayFailedText02::
 	.string "הפוקימון הצליח לברוח!\p"
-	.string "כמות הפוקיבולים שבוזבזו:\n"
+	.string "כמות הפוכדורים שבוזבזו:\n"
 	.string "{STR_VAR_2}!\p"
 	.string "איזה תסכול היה על הפנים\n"
 	.string "של {STR_VAR_1} כשהפוקימון ברח!$"
@@ -893,7 +893,7 @@ gTVPokemonTodayFailedText02::
 gTVPokemonTodayFailedText03::
 	.string "אבל {STR_VAR_1} פישל וגרם\n"
 	.string "לפוקימון להתעלף!\p"
-	.string "כמות הפוקיבולים שבוזבזו:\n"
+	.string "כמות הפוכדורים שבוזבזו:\n"
 	.string "{STR_VAR_2}!\p"
 	.string "איזה הלם ואכזבה היו על הפנים\n"
 	.string "של {STR_VAR_1} כשהפוקימון התעלף!$"
@@ -947,7 +947,7 @@ gTVPokemonTodaySuccessfulText01::
 	.string "נשמע ש{STR_VAR_3} מקבל המון אהבה!$"
 
 gTVPokemonTodaySuccessfulText02::
-	.string "אח גדול: כמות הפוקיבולים שהמאמן נאלץ\n"
+	.string "אח גדול: כמות הפוכדורים שהמאמן נאלץ\n"
 	.string "לזרוק כדי לתפוס אותו: {STR_VAR_3}!\p"
 	.string "בסוף, {STR_VAR_2} אחד הספיק\n"
 	.string "כדי לתפוס אותו!$"
@@ -1372,7 +1372,7 @@ gTVBreakingNewsText02::
 	.string "הפוקימון {STR_VAR_3}.$"
 
 gTVBreakingNewsText03::
-	.string "במהלך הקרב, מספר הפוקיבולים שהמאמן\n"
+	.string "במהלך הקרב, מספר הפוכדורים שהמאמן\n"
 	.string "זרק היה {STR_VAR_1}.\p"
 	.string "לבסוף, הפוקימון הנדיר נלכד בעזרת\n"
 	.string "{STR_VAR_2}, שנזרק אחרון.$"
@@ -1418,7 +1418,7 @@ gTVBreakingNewsText08::
 
 gTVBreakingNewsText09::
 	.string "אבל נראה של{STR_VAR_1}\n"
-	.string "נגמרו הפוקיבולים.\p"
+	.string "נגמרו הפוכדורים.\p"
 	.string "המאמן נאלץ להפסיק את הקרב עם\n"
 	.string "{STR_VAR_2} הנדיר.\p"
 	.string "באותו רגע, באזור {STR_VAR_3} הדהדו\n"
@@ -1639,7 +1639,7 @@ gTVTrainerFanClubText00::
 
 gTVTrainerFanClubText01::
 	.string "מעריצים: את הדרך המגניבה\n"
-	.string "שבה הוא זורק פוקיבולים!$"
+	.string "שבה הוא זורק פוכדורים!$"
 
 gTVTrainerFanClubText02::
 	.string "מעריצים: את הדרך המקסימה שבה הוא רץ!$"
@@ -2771,7 +2771,7 @@ gTVInSearchOfTrainersText04::
 
 gTVInSearchOfTrainersText05::
 	.string "יש רק דבר אחד לומר. שלא תעזו\n"
-	.string "לזרוק פוקיבול באמצע קרב מאמנים!\p"
+	.string "לזרוק פוכדור באמצע קרב מאמנים!\p"
 	.string "{PLAYER} אמנם חזק, אבל אין לו\n"
 	.string "מושג בחוקים הבסיסיים.\p"
 	.string "יש לי בקשה מהצופים שלנו בבית.\p"

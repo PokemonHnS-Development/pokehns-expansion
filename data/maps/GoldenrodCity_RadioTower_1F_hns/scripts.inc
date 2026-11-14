@@ -190,7 +190,7 @@ RadioTower1F_Text_QuizQuestion2:
 RadioTower1F_Text_QuizQuestion3:
     .string "בול!\n"
     .string "שאלה 3:\p"
-    .string "האם קורט, יוצר הפוקיבולים,\n"
+    .string "האם קורט, יוצר הפוכדורים,\n"
     .string "משתמש בבלוטים כחומרי גלם?$"
 
 RadioTower1F_Text_QuizQuestion4:

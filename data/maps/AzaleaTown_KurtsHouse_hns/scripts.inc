@@ -291,11 +291,11 @@ KurtsHouse_Text_KurtBallsFromApricorns:
 	.string "קורט: אני מכין כדורים מפירות.\p"
 	.string "אפשר לאסוף אותם מעצים\n"
 	.string "ולהביא אותם אליי.\p"
-	.string "אני אכין מהם פוקיבולים.$"
+	.string "אני אכין מהם פוכדורים.$"
 
 KurtsHouse_Text_KurtAskYouHaveAnApricorn:
 	.string "קורט: יש לך פירות בשבילי?\p"
-	.string "יופי! אהפוך אותם לפוקיבולים.$"
+	.string "יופי! אהפוך אותם לפוכדורים.$"
 
 KurtsHouse_Text_KurtThatsALetdown:
 	.string "KURT: I don't see any {STR_VAR_1}s!$"
@@ -323,7 +323,7 @@ KurtsHouse_Text_KurtTurnedOutGreat:
 KurtsHouse_Text_KurtWhatIsThat:
 	.string "מ-מה זה?\p"
 	.string "אף פעם לא ראיתי כזה.\p"
-	.string "זה נראה כמו פוקיבול,\n"
+	.string "זה נראה כמו פוכדור,\n"
 	.string "אבל כנראה שזה משהו אחר.\p"
 	.string "אבדוק את זה בשבילך.$"
 
@@ -356,7 +356,7 @@ KurtsHouse_Text_GranddaughterSlowpokeBack:
 
 KurtsHouse_Text_GranddaughterDad:
 	.string "אבא עובד בחברת סילף,\n"
-	.string "ושם הוא חוקר פוקיבולים.\p"
+	.string "ושם הוא חוקר פוכדורים.\p"
 	.string "אני צריכה להישאר בבית\n"
 	.string "עם סבא וסלופוק.$"
 

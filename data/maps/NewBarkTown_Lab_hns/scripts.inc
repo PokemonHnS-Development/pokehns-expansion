@@ -708,7 +708,7 @@ NewBarkTown_Lab_Text_ElmMissionFromMrPokemon:
 
 NewBarkTown_Lab_Text_ElmChooseAPokemon:
 	.string "אני רוצה שתגדל את אחד\n"
-	.string "הפוקימונים שבפוקיבולים האלה.\p"
+	.string "הפוקימונים שבפוכדורים האלה.\p"
 	.string "אתה תהיה השותף הראשון\n"
 	.string "של הפוקימון הזה, {PLAYER}!\p"
 	.string "קדימה. תבחר אחד!$"

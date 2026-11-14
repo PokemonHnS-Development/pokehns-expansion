@@ -79,12 +79,12 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q137](#q137) | In the Gen 4 battle interface the frostbite tag is a copy of the burn tag and reads כויה, as in English. | B. Redraw it as קור, the word of the H&S sheets | changed |
 | [Q138](#q138) | The brief says a ROM nobody has played by hand is not committed, but 0.1, 0.2 and every 1.0 update were committed with hand play declared as not tested. | B. Publish to the private builds repository, with hand play always declared in the release notes | no change |
 | [Q139](#q139) | Psychic is פסיכי in the type, the PSYCHIC and PSYCHO names, the items and the prose; FireRed now writes על-חושי. | A. The על-חושי family everywhere (owner's decision); names too wide for their lists are shortened, and PSYCHIC SURGE and SEED take the noun על-חוש as their siblings do; the plates redrawn in narrower glyphs | changed |
-| [Q140](#q140) | Which naming and wording conventions of the owner's FireRed translation (PR #2) should H&S follow? | B. Follow them; keep H&S's form only where an H&S limit or a FireRed slip stands in the way, each keep listed | changed |
+| [Q140](#q140) | Which naming and wording conventions of the owner's FireRed translation (PR #2) should H&S follow? | B. Follow them; keep H&S's form only where an H&S limit or a FireRed slip stands in the way, each keep listed | changed; its הנתון superseded by [Q160](#q160) |
 | [Q141](#q141) | Hoenn names left in Latin inside Hebrew strings until a Hoenn-names pass (Q106), MR. STONE in the H&S PokéGear contact data, and the Latin left after them | C. Rows for every Hoenn name a Hebrew string uses, FireRed's form first, a common word translated (MT. PYRE הר המוקד); the cartridge titles in Hebrew letters (רובי, ספיר, אמרלד), rows for the e-Reader and Ash-Greninja, GLACIA גלסיה | changed |
 | [Q142](#q142) | The contest APPEAL is רושם on the hearts' label, in the judge's results and from the MC, but הופעה in the turn lines, the move descriptions and the Easy Chat word; one English sentence was translated both ways. | A. הופעה everywhere the game names the contest appeal | changed |
 | [Q143](#q143) | The Kanto radio upgrade is שדרוג רדיו in the Lavender hint, כרטיס ההרחבה in the gift line and שדרוג כרטיס הרחבה from the music director. | A. The gift line as its English, שדרוג הרדיו; the music director keeps his EXPN CARD, כרטיס הרחבה | changed |
 | [Q144](#q144) | A count from a placeholder reads '1 פוקימונים' at 1: Elm's Pokédex rating, the field healing line ('ב-1 נקודות') and Steven's plate count. | A. A label and a colon, or a sentence the count does not govern | changed |
-| [Q145](#q145) | The stat-change lines broke after הנתון: 'לפורט היריב הנתון' reads 'to the given opposing Furret', and 'הגנה עלה!' pairs a feminine noun with a masculine verb. | B. The verb on the first line for rise and fall ('ל{X} עלה\nהנתון …'); the other lines break before הנתון | changed |
+| [Q145](#q145) | The stat-change lines broke after הנתון: 'לפורט היריב הנתון' reads 'to the given opposing Furret', and 'הגנה עלה!' pairs a feminine noun with a masculine verb. | B. The verb on the first line for rise and fall ('ל{X} עלה\nהנתון …'); the other lines break before הנתון | changed; superseded by [Q160](#q160) |
 | [Q146](#q146) | The two-foe effectiveness lines name the second target bare, the form of the player's Pokémon. | A. 'ו{B_DEF_PARTNER_NAME} שלצידו' | changed |
 | [Q147](#q147) | Two numbers joined by neutrals are drawn as one block in the wrong order, and a typed arrow is mirrored (research logs 9 and 10, the Mt. Moon sign). | A. A Hebrew word between two numbers; an arrow typed mirrored | changed |
 | [Q148](#q148) | The numero sign stands left of its number in the bag's TM and berry rows, the Pyramid bag and the berry tag (№01) but right of it on the summary and the Pokédex pages (006№). | A. Right of the number everywhere (01№), as Unicode and Hebrew reading order put it: the renderer treats {NO} as a neutral | changed |
@@ -98,6 +98,8 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q156](#q156) | The text-alignment checker reports עוצמה (POWER) touching the right edge of the Pokédex move box. | A. Keep: it ends 2 px inside the box, the mirror of POWER; the checker measured to the category icon | no change |
 | [Q157](#q157) | The checker reports החלפה (SHIFT) filling its Pokédex search button, with its lamed on the top row. | A. Keep: the same columns as SHIFT, and the lamed two rows inside the button | no change |
 | [Q158](#q158) | The checker reports נ”כ touching the PP column's right edge on the forget-move page. | A. Keep Q150's PP layout: 1 blank column on the right, 0 or 1 on the left; the reported 0 is the column's rounded corner | no change |
+| [Q159](#q159) | The Poké Ball is פוקיבול, FireRed's word; the owner decided on פוכדור. | A. פוכדור in every string, name and description, with its prefixes and plural; the pocket כדורי פוקי and the other balls kept (owner's decision) | changed |
+| [Q160](#q160) | The stat-change lines name the stat through הנתון ('הנתון דיוק ירד'); the owner decided the line names the stat itself. | A. The stat with its article and a verb that agrees with it ('ל{X}\nהדיוק ירד!', 'ההתקפה המיוחדת עלתה'), by two engine tables under TEXT_RTL (owner's decision) | changed |
 
 ## K1
 
@@ -2074,6 +2076,8 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 
 ## Q145
 
+*Superseded by [Q160](#q160):* the owner decided that a stat-change line names the stat itself, with its article, and its verb agrees with it (הדיוק ירד); no line says הנתון. The analysis below is kept as it was.
+
 **Question.** The stat-change lines broke after הנתון: 'ל{B_DEF_NAME_WITH_PREFIX} הנתון\n{B_BUFF1} עלה{B_BUFF2}!'. The first line prints alone first and reads 'לפורט היריב הנתון', 'to the given opposing Furret'; the second, 'הגנה עלה!', pairs a feminine noun with a masculine verb. Where should these lines break?
 
 *Source:* screen review, round 26 (battle), confirmed by a second reviewer. Seen on rc25 in the release tours `bv_double` ('לפורט היריב הנתון / הגנה עלה!') and `bv_spread_eff`.
@@ -2376,6 +2380,61 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 | B. The PP text in FONT_NARROWER | | A different face from the names beside it |
 
 **Chosen:** A. Seen on the release tour shots `pbi_learn_no_07_forget_page`, `pbi_tm_14_forget` and `pbi_xce_08_forget` (`<private>/scratch/screens/r29/tours/`).
+
+## Q159
+
+**Question.** The Poké Ball is פוקיבול in H&S, the FireRed translation's word, inherited (glossary `ITEM_POKE_BALL`, `TERM_POKE_BALL`). The owner decided: "replace פוקיבול with פוכדור". Where does the word appear, and does anything besides the spelling change?
+
+*Source:* the owner, round 30: "replace פוקיבול with פוכדור".
+
+**Analysis.**
+- At `he/main` `168eeb0d6d` the word was used 51 times in 23 game files: 16 map-script lines in 10 maps, 10 lines of `data/text/` (the apprentice, the Pokédex rating, seven TV lines), and 25 C strings: the item and its plural (`src/data/items.h`), the GREAT BALL and GS Ball descriptions and the Dream Ball description of the `#else` that the build does not compile (`B_DREAM_BALL_MODIFIER` is `GEN_LATEST`), the BALL FETCH description (`src/data/abilities.h`), the BALL POSTER and BALL CUSHION decorations and four decoration descriptions (`src/data/decoration/`), four Pokédex entries (Voltorb, Hisuian Voltorb, Foongus, Amoonguss) and Minior's core text, the two battle lines about a thrown ball (`STRINGID_TRAINERBLOCKEDBALL`, `STRINGID_ITDODGEDBALL`), the bag's can't-throw line (`src/item_use.c`) and the battle options (`src/option_menu.c`).
+- Every use is the word, with a prefix (ה, ב, ל, מה, מ, שב) or the plural ים: הפוקיבולים, בפוקיבולים, שבפוקיבולים, מהפוקיבול. פוכדור takes the same ones (הפוכדורים, בפוכדורים, שבפוכדורים, מהפוכדור). כדור is masculine, as the old word was, so no verb or adjective around it changes ('המאמן חסם את הפוכדור שלך!', 'מחזיר פוכדור שנכשל.').
+- Width: פוכדור is 32 px in FONT_NORMAL against 35, 28 px in FONT_NARROW against 33, and the plural 42 px against 45 (`textwidth.py`). Every changed line is narrower, so every line keeps its break; none of them gains room for the next word.
+- No graphic and no Easy Chat word has the word: the drawing scripts' tables (`tools/hebrew/graphics/`) have no ball word, the Easy Chat lists are unchanged (`gen_ec_order.py --check`, `gen_ec_letters.py --check` up to date), and no test expectation in `test/` has it. The Poké Ball pocket's A-Z order is the same: no other ball's name starts with פ.
+- FireRed keeps פוקיבול, so `namecheck.py --fr-sync` warns on `ITEM_POKE_BALL`; the difference is in `namecheck_allow.json` with the owner's decision as its reason.
+- Kept: the bag pocket כדורי פוקי (`TERM_POKE_BALLS_POCKET`, its own FireRed row; not a form of the word), the other balls (כדור X, and ULTRA BALL אולטרה בול, MASTER BALL מאסטר בול), and POKé as פוקי in פוקיגיר and פוקיבלוק. K3 and Q125 above, and HANDOFF's troubleshooting table, quote lines as they were then and keep the old word.
+- `FuchsiaCity_Text_ItemBallInThere` (`data/maps/FuchsiaCity_Frlg/scripts.inc`) is not assembled into H&S; it changes with the rest so the text stays one.
+
+| Option | How | Risk |
+|---|---|---|
+| A. פוכדור in every string, name and description | The glossary rows first, then the 51 uses; the allowlist entry for FireRed's difference | Low: text only, every line narrower. The ball and the pocket (כדורי פוקי) and Ultra and Master Ball (בול) no longer share a stem. |
+| B. Keep פוקיבול | No change | Against the owner's decision. |
+
+**Chosen:** A, the owner's decision. Static checks: `audit.py --baseline ../pokehns-en` 0 errors and the same 54 warnings; `namecheck.py --all --warnings` 0 problems, 35 allowlisted; the four generators up to date. Seen on screen on the clip ROM beside rc28 and English, with no clip record: the 25 changed dialogue labels in the sweep (the Fuchsia label is not built in any of the three), the bag's ball list and the GREAT BALL description, the Cherrygrove Mart's buy list with ten balls bought and the Premier Ball line (a scratch tour), the PC item lists, the battle bag, the can't-throw line, 'השתמשת בפוכדור!', the Nuzlocke catch lines, the battle options and the two battle lines, forced (`<private>/scratch/screens/r30/`). Not seen on screen: the decorations, the five Pokédex texts, the BALL FETCH and GS Ball descriptions (audit only).
+
+*Changed:* 10 map scripts, `data/text/apprentice.inc`, `data/text/pokedex_rating.inc`, `data/text/tv.inc`, `src/battle_message.c`, `src/data/abilities.h`, `src/data/decoration/description.h`, `src/data/decoration/header.h`, `src/data/items.h`, `src/data/pokemon/species_info/gen_1_families.h`, `src/data/pokemon/species_info/gen_5_families.h`, `src/data/pokemon/species_info/shared_dex_text.h`, `src/item_use.c`, `src/option_menu.c`, `tools/hebrew/data/namecheck_allow.json`, `tools/hebrew/tests/test_drift.py`, `translation/hebrew/STYLE.md`
+
+*Glossary:* `ITEM_POKE_BALL` (item and item_plural), `TERM_POKE_BALL`, `DECOR_BALL_POSTER`, `DECOR_BALL_CUSHION`, `TERM_POKEBLOCK` (note)
+
+## Q160
+
+**Question.** The stat-change lines name the stat through הנתון ('ל{X} עלה\nהנתון {B_BUFF1}{B_BUFF2}!', Q140, Q145). The owner decided: "In battle, when someone takes or deals a hit, there is no need to write הנתון, e.g. הנתון דיוק ירד; you can simply write הדיוק ירד, or היכולת דיוק ירדה." Which form, and can it be right for every stat?
+
+*Source:* the owner, round 30: "בקרב כשמישהו מקבל מכה או נותן, לא צריך לרשום 'הנתון', למשל הנתון דיוק ירד, אפשר פשוט לרשום הדיוק ירד או 'היכולת דיוק ירדה'".
+
+**Analysis.**
+- The lines: 14 strings said הנתון (`src/battle_message.c` at `he/main`: `gText_DefendersStatRose`, `STRINGID_STATSWONTINCREASE`, `STATSWONTDECREASE`, `ATTACKERSSTATROSE`, `SCRIPTINGSTATROSE`, `ATTACKERSSTATFELL`, `DEFENDERSSTATFELL`, the four ability lines `TARGETABILITYSTATRAISE`, `ATTACKERABILITYSTATRAISE`, `TARGETABILITYSTATLOWER`, `SCRIPTINGABILITYSTATRAISE`, `TARGETSTATWONTGOHIGHER`, the paradox line `STATWASHEIGHTENED` and the Ruin abilities' `ABILITYWEAKENEDSURROUNDINGMONSSTAT`). Five more name a stat from the same buffer: the item lines (`USINGITEMSTATOFPKMNROSE`, `FELL`, 'רמת {B_BUFF1}'), Anger Point's `TARGETSSTATWASMAXEDOUT` and Speed Swap's `ATTACKERSWITCHEDSTATWITHTARGET` ('את ה{B_BUFF1} שלו') and `PKMNSXPREVENTSYLOSS` ('מפני ירידה ב{B_BUFF1}').
+- How they are filled: {B_BUFF1} is the stat, `PREPARE_STAT_BUFFER` (`include/battle_message.h:116-122`), printed from `gStatNamesTable` (`src/battle_message.c`, `ExpandBattleTextBuffPlaceholders`, `case B_BUFF_STAT`); {B_BUFF2} is the intensity, a string chosen by the size of the change (`src/battle_script_commands.c:7926-7970`): מאוד and בצורה דרסטית when a stat rises, באופן חמור and בצורה קיצונית when it falls, or nothing. The verb is in each line's own text.
+- Gender: התקפה, הגנה, מהירות, התקפה מיוחדת, הגנה מיוחדת and התחמקות are feminine, דיוק masculine. One line's verb cannot agree with both, so text alone gives one gender for every stat: הנתון (masculine) did that, and so would the owner's second form.
+- Article: Hebrew marks the adjective too, ההתקפה המיוחדת. A line that writes ה before {B_BUFF1} would print ההתקפה מיוחדת for a special stat. The two lines that wrote it, Speed Swap's and Anger Point's, only ever name the Speed and the Attack (`swapstats STAT_SPEED`, `data/battle_scripts_1.s:1966`; `BattleScript_TargetsStatWasMaxedOut` after Anger Point's Attack), so they read right in the game; they change only because {B_BUFF1} now brings its own article. `gStatNamesTable` itself cannot take the article: the Z-move menu ('+ התקפה', `src/battle_z_move.c:325-354`, through `ExpandBattleTextBuffPlaceholders`), the battle debug menu's stat stages (`src/battle_debug.c:1547`) and the R+START debug menu (`src/debug.c:3355`) print the bare name.
+- Token order: English puts the name first ("X's ATTACK rose"), and Hebrew keeps it first (STYLE §5), so 'ה{B_BUFF1} של {X}' is not allowed. The lines keep 'ל{X}' and put the stat, as the subject, before its verb: 'ל{X}\n{B_BUFF1} עלתה{B_BUFF2}!', the owner's 'הדיוק ירד' after the name. The item lines follow their English order, 'the {B_BUFF1} of {X}': '{B_BUFF1} של {X} עלתה'.
+- The owner's second form, 'היכולת {stat} ירדה', is text only and always feminine, but יכולת is the glossary's Ability (`TERM_ABILITY`) and the battle lines already say היכולת before an ability's name ('קיבל את היכולת {B_DEF_ABILITY}', 'נלקחה היכולת {B_SCR_ABILITY}', 'היכולת {B_ATK_ABILITY} מאפשרת'); 'ל{X}, בזכות {B_DEF_ABILITY}, עלתה היכולת התקפה' would name two abilities.
+- Engine, under `TEXT_RTL` only (`src/battle_message.c`, the block before `BufferStringBattle`): a {B_BUFF1} that holds a stat prints from `sStatNamesWithArticle` (ההתקפה, ההתקפה המיוחדת, הדיוק) in `BattleStringExpandPlaceholders`, so the Z-move and debug menus keep the bare names; and for a stat whose name is masculine (`sStatNameIsMasculine`: הדיוק) `BufferStringBattle` takes the line from `sMasculineStatStrings`. `gBattleStringsTable` holds the feminine form. The English build (`TEXT_RTL` FALSE) compiles none of it: its ROM differs from the one before only in the line number of one assert (`<private>/scratch/screens/r30/engproof/PROOF.md`).
+- Widths, with every stat and intensity word, a 12-glyph name and its suffix, the widest ability (רגליים מסתבכות) and 16-glyph abilities, and a 19-glyph item, through the battle auto-wrap: no row over its budget; the widest are 191 of 208 px (ההתקפה המיוחדת עלתה בצורה דרסטית!), 199 of 200 in the ability lines and 200 of 208 in the item lines (`<private>/scratch/screens/r30/text/widths/measure.py`). `audit.py` 0 errors.
+- Breaks: the lines that name no ability keep the break after the name (STYLE §5's exception), so the stat starts the second line. The four ability lines and the item lines are auto-wrapped, as in English; the attacker's ability line had a manual break before הנתון and now wraps like its three siblings. The Ruin line breaks before את.
+- The plural נתונים stays where a line speaks of stats in general (שינויי הנתונים, the Mirror Herb, Haze and Z-move lines): no stat name follows it.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The stat with its article and a verb that agrees with it | Two tables and two lookups under `TEXT_RTL`; 19 lines reworded, 15 of them also in a masculine form | An engine change (a pick for `he/renderer`); a reworded line must be changed in both tables. |
+| B. 'היכולת {stat}' with feminine verbs | Text only | יכולת already means the Ability in battle lines: 'היכולת התקפה' reads as an ability named Attack. |
+| C. 'ה{stat}' with feminine verbs, text only | Text only | הדיוק ירדה is wrong, and ההתקפה מיוחדת lacks the adjective's article. |
+| D. Keep הנתון | No change | Against the owner's decision. |
+
+**Chosen:** A, the first of the owner's two forms ('simply'), made right for every stat. Supersedes Q145 (and Q140's line on הנתון). Seen on screen on the clip ROM beside rc28 and English, with no clip record: all 19 lines with each of the seven stats and each intensity word (287 entries a run), forced with `tools/hebrew/emu/scripts/r16_battle_sweep/bsweep.py` in a trainer battle with 12-letter nicknames and with species names and in a wild battle; הדיוק takes the masculine verb and every other stat the feminine one. No line needs more scrolled pages than in rc28. In the release tours the new lines are 20 shots (`<private>/scratch/screens/r30/text/battle/`, `tours/`).
+
+*Changed:* `src/battle_message.c`, `translation/hebrew/STYLE.md`
 
 ## Proposed names
 

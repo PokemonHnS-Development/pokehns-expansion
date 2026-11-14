@@ -4,7 +4,7 @@ const u8 DecorDesc_SMALL_DESK[] = _(
 
 const u8 DecorDesc_POKEMON_DESK[] = _(
     "שולחן קטן\n"
-    "בצורת פוקיבול.");
+    "בצורת פוכדור.");
 
 const u8 DecorDesc_HEAVY_DESK[] = _(
     "שולחן גדול מפלדה.\n"
@@ -47,7 +47,7 @@ const u8 DecorDesc_SMALL_CHAIR[] = _(
 
 const u8 DecorDesc_POKEMON_CHAIR[] = _(
     "כיסא קטן\n"
-    "בצורת פוקיבול.");
+    "בצורת פוכדור.");
 
 const u8 DecorDesc_HEAVY_CHAIR[] = _(
     "כיסא קטן מפלדה.");
@@ -297,7 +297,7 @@ const u8 DecorDesc_SPIKES_MAT[] = _(
 const u8 DecorDesc_BALL_POSTER[] = _(
     "פוסטר קטן עם\n"
     "הדפס של\n"
-    "פוקיבולים.");
+    "פוכדורים.");
 
 const u8 DecorDesc_GREEN_POSTER[] = _(
     "פוסטר קטן עם\n"
@@ -492,7 +492,7 @@ const u8 DecorDesc_DIAMOND_CUSHION[] = _(
     "שטיח או שולחן.");
 
 const u8 DecorDesc_BALL_CUSHION[] = _(
-    "כרית פוקיבול.\n"
+    "כרית פוכדור.\n"
     "מניחים אותה על\n"
     "שטיח או שולחן.");
 

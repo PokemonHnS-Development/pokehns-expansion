@@ -154,7 +154,7 @@ FuchsiaCity_Text_WheresSara::
 	.string "I said I'd meet her here.$"
 
 FuchsiaCity_Text_ItemBallInThere::
-	.string "הפוקיבול שם בפנים…\n"
+	.string "הפוכדור שם בפנים…\n"
 	.string "רצית אותו?\p"
 	.string "גם אני!\n"
 	.string "…מה? זה פוקימון?$"

@@ -1621,7 +1621,7 @@ gText_ApprenticeWhichMon9::
 
 gText_ApprenticeMonThanks9::
 	.string "אהה, אז {STR_VAR_1}! אוקיי, סבבה!\n"
-	.string "אכניס אחד לפוקיבול, כזה, טראח!\p"
+	.string "אכניס אחד לפוכדור, כזה, טראח!\p"
 	.string "יופי, תודה, כמו תמיד!\n"
 	.string "אדיוס!$"
 

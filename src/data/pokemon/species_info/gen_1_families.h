@@ -13506,7 +13506,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 5,
         .weight = 104,
         .description = COMPOUND_STRING(
-            "יש לו דמיון מוזר ובלתי מוסבר לפוקיבול.\n"
+            "יש לו דמיון מוזר ובלתי מוסבר לפוכדור.\n"
             "מאחר שהוא מתפוצץ בזעזוע הקל ביותר,\n"
             "גם מאמנים ותיקים נזהרים ממנו."),
         .pokemonScale = 364,
@@ -13661,7 +13661,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 5,
         .weight = 130,
         .description = COMPOUND_STRING(
-            "הוא דומה לדגם עתיק של פוקיבול. כשהוא\n"
+            "הוא דומה לדגם עתיק של פוכדור. כשהוא\n"
             "מתרגש, הוא פורק את הזרם החשמלי\n"
             "שאגר בבטנו, ואז פורץ בצחוק רם וגדול."),
         .pokemonScale = 364,
