@@ -60,10 +60,11 @@ Where they disagree, the glossary wins for names and this file wins for everythi
   as a name (the owner's report, `DECISIONS.md` Q164; Q165). So STATIC is `חשמל סטטי`, STURDY `איתנות`,
   LIMBER `גמישות`, RATTLED `בהלה`, AS ONE `אחדות`. An agent noun is a noun, as the English one is (`צלף`,
   `מרפא`, `שובר תבניות`). FLUFFY keeps the adjective `פרוותי`: Q165 renamed it, and the owner kept the old
-  name (Q173). The adjective phrases still in the glossary (`אטום לרעש`, `חסין חום`, `חסין קליעים`,
-  `מורט עצבים`, `שווה זהב`) and `דווקאי` wait for the owner (Q165, "Not renamed here"). A rename starts in
-  the glossary and goes on to the Easy Chat word, the hints that quote the word and the descriptions that
-  cite the name (HANDOFF section 3.5).
+  name (Q173). A fixed everyday compound that names its effect stays (`אטום לרעש`, `חסין חום`, `חסין קליעים`),
+  and so do a participle with its object (`מורט עצבים`, like `שובר תבניות`), an idiom (`שווה זהב`) and a
+  person noun (`דווקאי`) (Q177). A prepositional phrase is not a name: NO GUARD is `חוסר הגנה`, not `ללא משמר`,
+  which the Ability Capsule printed as `לללא משמר` (Q177). A rename starts in the glossary and goes on to the
+  Easy Chat word, the hints that quote the word and the descriptions that cite the name (HANDOFF section 3.5).
 
 ## 4. Characters you may use
 
@@ -99,7 +100,9 @@ Only characters in `charmap.txt`. In particular:
 - Line breaks: `\n` = next line, `\l` = scroll one line, `\p` = new page. You may move `\n`/`\l` to
   re-wrap Hebrew, and add or remove `\p` only when a page would otherwise not fit; keep the number of
   pages close to the English. Battle strings without any manual break in English are auto-wrapped:
-  keep them without breaks, except the stat-change lines that name no ability or item (§7). A `\l`
+  keep them without breaks, except the stat-change lines that name no ability or item (§7). An older battle
+  line that keeps a `\n` English lacks, with both rows within 208 px at worst case, costs no press and is left
+  as it is; a line edited for any other reason loses that `\n` (`DECISIONS.md` Q179). A `\l`
   in a battle line is one more press of A, and the view after the last one stays only until the
   next print: with FAST BATTLES on (the default) a status line's last view is wiped 8 frames after
   its last letter, while English shows its whole sentence while it prints (`DECISIONS.md` Q163).
@@ -240,9 +243,10 @@ and check it against this list before it ships (`DECISIONS.md` Q159-Q172).
 3. **A name must read as a name.** A bare adjective, an imperative or a calque does not: סטטי
    became חשמל סטטי, על-קולי גל על-קולי, רכז אנרגיה ריכוז אנרגיה, שנה צורה שינוי צורה (Q167). Read
    a move, item or ability name inside its battle line: 'השתמש ב{move}!' must not turn into another
-   word (בעל-קולי, בשנה צורה), and a name must not be an everyday word with another meaning
-   (הפלה, Q167; singular משקף, Q168). The ability FLUFFY keeps the adjective פרוותי by the owner's
-   decision (Q173), and the adjective names §3 lists wait for the owner.
+   word (בעל-קולי, בשנה צורה, בחזרה, ברואה כפול: Q178), and a name must not be an everyday word with
+   another meaning (הפלה, Q167; singular משקף, Q168) or a word the game already uses for something
+   else (הורדה, its stat drop, for DOWNLOAD: Q177). The ability FLUFFY keeps the adjective פרוותי by the
+   owner's decision (Q173); §3 lists the other adjective names kept (Q177).
 4. **No article or possessive glued to a name.** Not 'הסטטי של פיקאצ'ו': the Pokémon keeps its
    English place and the name follows its noun ('שיתק ביכולת חשמל סטטי את…', Q162, Q164). A definite
    adjective in construct reads as a person: 'מהלך העל-קולי של זובאט' became 'הגל העל-קולי של זובאט' (Q167).
@@ -261,5 +265,6 @@ and check it against this list before it ships (`DECISIONS.md` Q159-Q172).
    An item or an ability cures a status with נרפא מה{status}.
 8. **A child understands it on first read.** No English proverb or idiom translated word for word
    ('a watched pot', 'a good Samaritan': Q172), no form label in speech ('עלה במספר רמות: 3',
-   Q171), no literary word where a spoken one exists (לקדמותו). A direct object that is a name
-   takes את ('למד את {move}', Q171).
+   Q171), no literary word where a spoken one exists: 'חזרו לרגיל', not לקדמותם; a possessive or object
+   suffix where speech says שלו or אותו ('הנתונים של X', not נתוניו; 'לראות אותו', not לראותו; Q179,
+   Q181). A direct object that is a name takes את ('למד את {move}', Q171).
