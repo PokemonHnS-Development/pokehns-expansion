@@ -239,19 +239,18 @@ pick, the English ROMs differ in 3 bytes, the line number of the allocation-site
 (`<private>/scratch/screens/r37/fix/integrate/engproof/PROOF.md`). Against it, drift prints
 `708 files, 0 FAIL`.
 
-**To be picked (round 38).** On `he/fix-r38`: the Easy Chat commit `b20cdda406` (the ABC keyboard
-lists after the RETURN and DOUBLE TEAM renames, `DECISIONS.md` Q178; engine data compiled only under
-`TEXT_RTL`) and the three graphics commits `1662bf21c4` (the gym sign's mem and the stand's dash
-pixel), `e060c87982` (the Pokémon Jump EXCELLENT and NICE banners) and `fe261dca27` (the Mart and
-Pokémon Center sign glows, `side/do_signlights.py`) (Q183) are to be picked onto `he/renderer`
-`b5dc6b7b1b`, in that order. Until the Easy Chat commit is there, CI's drift step fails on
-`src/data/easy_chat/easy_chat_words_by_letter_rtl.h` (`STRUCTURE`); against a clone with the picks,
-drift prints `708 files, 0 FAIL`. In that clone each commit picks cleanly and keeps its source's
-patch-id. Built with `TEXT_RTL` FALSE, the English ROM is byte for byte the same before and after the
-Easy Chat pick (SHA-1 `3786f201…`); after the graphics picks no symbol is added or removed, only
-`sBonuses_Gfx` and `gTilesetTiles_Johto_South_Hns` change size, and content changes only in the
-redrawn graphics and in four summary-screen literals that point at anonymous data the graphics moved
-(`<private>/scratch/screens/r38/apply/engproof/PROOF.md`).
+**Picked (round 38).** The Easy Chat commit `b20cdda406` (the ABC keyboard lists after the RETURN
+and DOUBLE TEAM renames, `DECISIONS.md` Q178; engine data compiled only under `TEXT_RTL`) is on
+`he/renderer` as `bebea70a37`, followed by the three graphics commits (Q183): `ffe90407cc` (from
+`1662bf21c4`, the gym sign's mem and the stand's dash pixel), `80b209c4c5` (`e060c87982`, the
+Pokémon Jump EXCELLENT and NICE banners) and `96ab0ccdd5` (`fe261dca27`, the Mart and Pokémon Center
+sign glows, `side/do_signlights.py`). Each pick keeps its source's patch-id. Built with `TEXT_RTL`
+FALSE, the English ROM is byte for byte the same before and after the Easy Chat pick (SHA-1
+`3786f201…`); after the graphics picks no symbol is added or removed, only `sBonuses_Gfx` and
+`gTilesetTiles_Johto_South_Hns` change size, and content changes only in the redrawn graphics and in
+four summary-screen literals that point at anonymous data the graphics moved
+(`<private>/scratch/screens/r38/apply/engproof/PROOF.md`). Against `he/renderer` `96ab0ccdd5`,
+drift prints `708 files, 0 FAIL`.
 
 **Checking a pick with an English build.** Build `he/renderer` before and after the picks with
 `TEXT_RTL` set to FALSE (`include/config/text.h:20`, in a scratch worktree) and `make hns`, and
