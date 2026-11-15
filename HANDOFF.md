@@ -30,7 +30,7 @@ fresh clone.
 | [`tools/hebrew/release/README.md`](tools/hebrew/release/README.md) | the release scripts; [`REVIEW.md`](tools/hebrew/release/REVIEW.md) there is the screenshot review |
 | [`tools/hebrew/testmsgs/README.md`](tools/hebrew/testmsgs/README.md) | the Hebrew battle-test message table |
 | [`translation/hebrew/STYLE.md`](translation/hebrew/STYLE.md) | the binding style rules |
-| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 106 recorded decisions, up to Q176, and the names review |
+| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 113 recorded decisions, up to Q183, and the names review |
 | [`translation/hebrew/transliteration_rules.md`](translation/hebrew/transliteration_rules.md) | how names are transliterated |
 | [`translation/hebrew/STATUS.md`](translation/hebrew/STATUS.md) | per-file state (generated) |
 | [`translation/hebrew/glossary.csv`](translation/hebrew/glossary.csv) | every name and fixed term |
@@ -238,6 +238,19 @@ pick, the English ROMs differ in 3 bytes, the line number of the allocation-site
 `src/berry_tag_screen.c:196` (now `:201`), and `nm -S` lists the same symbols and sizes
 (`<private>/scratch/screens/r37/fix/integrate/engproof/PROOF.md`). Against it, drift prints
 `708 files, 0 FAIL`.
+
+**Picked (round 38).** The Easy Chat commit `b20cdda406` (the ABC keyboard lists after the RETURN
+and DOUBLE TEAM renames, `DECISIONS.md` Q178; engine data compiled only under `TEXT_RTL`) is on
+`he/renderer` as `bebea70a37`, followed by the three graphics commits (Q183): `ffe90407cc` (from
+`1662bf21c4`, the gym sign's mem and the stand's dash pixel), `80b209c4c5` (`e060c87982`, the
+Pokémon Jump EXCELLENT and NICE banners) and `96ab0ccdd5` (`fe261dca27`, the Mart and Pokémon Center
+sign glows, `side/do_signlights.py`). Each pick keeps its source's patch-id. Built with `TEXT_RTL`
+FALSE, the English ROM is byte for byte the same before and after the Easy Chat pick (SHA-1
+`3786f201…`); after the graphics picks no symbol is added or removed, only `sBonuses_Gfx` and
+`gTilesetTiles_Johto_South_Hns` change size, and content changes only in the redrawn graphics and in
+four summary-screen literals that point at anonymous data the graphics moved
+(`<private>/scratch/screens/r38/apply/engproof/PROOF.md`). Against `he/renderer` `96ab0ccdd5`,
+drift prints `708 files, 0 FAIL`.
 
 **Checking a pick with an English build.** Build `he/renderer` before and after the picks with
 `TEXT_RTL` set to FALSE (`include/config/text.h:20`, in a scratch worktree) and `make hns`, and
@@ -556,7 +569,7 @@ Every live file is already in Hebrew. New work is therefore one of three things:
 | `src/data/trainers_hns.party`, `battle_partners.party` | trainer `Name:` lines | `apply_names.py` (glossary `trainer_name` rows) | 2 |
 | `src/data/region_map/region_map_sections.json` | map-section names | `apply_names.py` (glossary `mapsec` rows) | 1 |
 | `src/data/pokemon/pokedex_orders.h` | Hebrew A–Z dex order (the `#if TEXT_RTL` branch) | `gen_dex_alpha.py` | 1 |
-| `graphics/**` | labels drawn into PNGs (and a few `.bin` tilemaps) | edited PNGs, committed as engine or asset commits; the drawing scripts are in `tools/hebrew/graphics/` | 138 |
+| `graphics/**` | labels drawn into PNGs (and a few `.bin` tilemaps) | edited PNGs, committed as engine or asset commits; the drawing scripts are in `tools/hebrew/graphics/` | 140 |
 | `data/tilesets/**/tiles.png` | words on map tiles: the Poké Mart, Pokémon Center and gym signs, the department store floor plates, the Battle Dome banner | edited PNGs (pixels only: tiles, metatiles and palettes unchanged), drawn by `tools/hebrew/graphics/side/` | 10 |
 | `test/hebrew_battle_messages.h`, `test/bag.c`, `test/text.c` | test expectations that depend on the Hebrew | `tools/hebrew/testmsgs/`, or a direct edit | 3 |
 
@@ -822,8 +835,8 @@ git -C <main worktree> merge --no-ff he/fix-<topic> -m "Merge he/fix-<topic>: <w
 
 - `translation/hebrew/glossary.csv`: columns `kind,constant,english,firered_hebrew,proposed_hebrew,status,notes`;
   7,133 rows, with CRLF line ends. The tools read `proposed_hebrew`.
-  - Status `inherited` (1,893) comes from the FireRed fork.
-  - Status `proposed` (5,240) is new and has not been checked against an official Hebrew source.
+  - Status `inherited` (1,891) comes from the FireRed fork.
+  - Status `proposed` (5,242) is new and has not been checked against an official Hebrew source.
     It includes the 25 inherited rows that round 20 renamed after FireRed's newer names (Q139,
     Q140); their `firered_hebrew` column still holds the form they were first taken from.
 - `translation/hebrew/glossary_sources.csv`: `kind,constant,english,source,pattern` (5,529 rows).
@@ -841,7 +854,7 @@ Keep families together; `python3 tools/hebrew/translit_stats.py 'EON$'` lists th
 
 1. Commit `glossary.csv` alone, **before** any text that uses the name.
 2. `python3 tools/hebrew/namecheck.py --all --warnings` should print `rows 7133, still empty 0,
-   problems 0` and `warnings 0, allowlisted 49`; then run `python3 tools/hebrew/glossary_widths.py`
+   problems 0` and `warnings 0, allowlisted 51`; then run `python3 tools/hebrew/glossary_widths.py`
    (today `1 over budget`: the EXEGGUTOR-A healthbox name, 49 px against 48, decided in Q129).
    A move or ability rename also changes its Easy Chat word: run `gen_ec_order.py` and `gen_ec_letters.py`,
    commit the headers alone and pick that commit onto `he/renderer` (English proof: `TEXT_RTL` FALSE build
@@ -972,7 +985,7 @@ python3 tools/hebrew/audit.py --baseline ../pokehns-en --report build/hebrew/aud
 # 3. glossary (hebrew.yml:59-60), here with ../pokefirered-heb present (HNS_FIRERED, section 1.3)
 python3 tools/hebrew/namecheck.py --all --warnings
 #    rows 7133, still empty 0, problems 0
-#    warnings 0, allowlisted 49
+#    warnings 0, allowlisted 51
 #    CI checks out no FireRed tree, so it prints the skipped variant (run 43102206527):
 #    rows 7133, still empty 0, problems 0 / WARN FRSYNC skipped: ... / warnings 1, allowlisted 27
 # 4. generated data (hebrew.yml:62-71)
@@ -1888,7 +1901,7 @@ rc24's shipped `TESTING.md` byte for byte, and the old list still exits 1
 - **The radio's Pokédex Show** wraps two place names across its lines (הר / הנזר in the
   Typhlosion-H entry, נהרות / היסואי in Basculegion's). Accepted: the ticker breaks between words,
   nothing clips, and 1.0 and English split at the same places.
-- **Proposed names.** The 5,240 `proposed` glossary rows were never checked against an official
+- **Proposed names.** The 5,242 `proposed` glossary rows were never checked against an official
   Hebrew source. `namecheck.py --warnings` checks them for consistency with FireRed and for
   transliteration slips (Q140); the roughly 3,000 rows translated by meaning stay `proposed` until
   a native speaker reads them.
@@ -2504,9 +2517,14 @@ is the build of the merge (below). Scratch in `<private>/scratch/screens/r25/`, 
 
 - Of rounds 32 to 34: a native read of the 22 new ability names (the owner kept SHADOW TAG and ANALYTIC and restored
   FLUFFY); As One's summary page (the Calyrex rider times out in the harness, on English too); a real battle with each
-  renamed ability. Open for the owner: the ability names left in DECISIONS Q165 (CLOUD NINE, AERILATE, CONTRARY, the
-  adjective phrases and calques), and round 33's list (female trainer classes, ROCKET GRUNT, ANTIDOTE, ETHER, NUGGET,
-  SODA POP, RETURN, the nature IMPISH).
+  renamed ability. The ability names left in DECISIONS Q165 are decided in Q177 (NO GUARD and DOWNLOAD renamed, the rest
+  kept), RETURN and DOUBLE TEAM in Q178. Open for the owner: round 33's list (female trainer classes, ROCKET GRUNT,
+  ANTIDOTE, ETHER, NUGGET, SODA POP, the nature IMPISH), and Kurt's plural lines, which a script change
+  (`bufferitemnameplural`) would let read 'הכנתי לך {STR_VAR_1}' (Q181).
+- Of round 38: the Battle Arena referee lines were forced in a battle, not met in the Arena (Q180); the Emerald Game Corner
+  prize menu, the move relearner and contest lists with RETURN and DOUBLE TEAM, and the Ability Patch's result line were
+  measured, not shown (Q177, Q178); the sign glows were seen at 22:00 only, not in the morning or evening (Q183); the
+  Pokémon Jump banners were drawn from the ROM's data, not played (Q183).
 - Of round 31: RetroArch's mGBA core on the owner's TV; a native read of the reworded battle lines; a real Ralts with Trace
   (forced only); the frostbite, affection and Protean lines (forced only). 20 synthetic worst cases (12 copies of the
   widest letter, or the widest ability) still need one page more than English, as in rc29.

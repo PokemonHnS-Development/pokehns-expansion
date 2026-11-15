@@ -91,7 +91,7 @@ GoldenrodDeptStore_Text_5FPokefanM:
     .string "המאמן המקורי כלפיו.$"
 
 GoldenrodDeptStore_Text_Girl:
-	.string "הגברת נתנה לי את המהלך חזרה!\n"
+	.string "הגברת נתנה לי את המהלך החזרת טובה!\n"
 	.string "הפוקימון שלי בטח ממש אוהב אותי!$"
 
 GoldenrodDeptStore5_EventScript_Clerk::

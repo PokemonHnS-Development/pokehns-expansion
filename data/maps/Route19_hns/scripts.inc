@@ -79,7 +79,7 @@ Route19_Text_SwimmermHaroldAfterBattle:
 	.string "כאילו הוא עומד לבלוע אותך.$"
 
 Route19_Text_SwimmermTuckerSeen:
-	.string "הא, הא… רק… עוד…\p"
+	.string "הא… הא… רק… עוד…\p"
 	.string "קצת… עד… פושיה…$"
 
 Route19_Text_SwimmermTuckerBeaten:

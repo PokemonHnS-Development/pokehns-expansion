@@ -179,8 +179,8 @@ Route29_Text_OldManExplanation:
 
 Route29_Text_OldManDeclined:
 	.string "אה. טוב, בסדר.\p"
-	.string "כדאי לחפש בכל דרך כדי למצוא\n"
-	.string "מגוון פוקימונים.\p"
+	.string "כדאי לעבור בכל הדרכים\n"
+	.string "כדי למצוא מגוון פוקימונים.\p"
 	.string "הפוקדקס שלך גם מראה איפה\n"
 	.string "אפשר למצוא אותם!\p"
 	.string "אם רוצים ללמוד עוד,\n"
@@ -226,8 +226,8 @@ Route29_Text_TuscanyGivesGift:
 	.string "את המתנה הזאת: צעיף משי.$"
 
 Route29_Text_TuscanyGaveGift:
-	.string "טוסקני: האם לא תסכים\n"
-	.string "שהוא מקסים ביותר?\p"
+	.string "טוסקני: הוא מקסים ביותר,\n"
+	.string "אינך מסכים?\p"
 	.string "הוא מחזק מהלכים\n"
 	.string "מסוג רגיל.\p"
 	.string "אין לי ספק שהוא יועיל לך.$"

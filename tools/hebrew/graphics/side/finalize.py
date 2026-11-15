@@ -20,6 +20,7 @@ FILES = [
     'graphics/slot_machine/reel_symbols/7.png',
     'graphics/berry_blender/start.png', 'graphics/link/321start.png', 'graphics/link/321start_static.png',
     'graphics/pokemon_jump/bonuses.png',
+    'graphics/object_events/pics/misc/mart_light_hns.png', 'graphics/object_events/pics/misc/poke_center_light_hns.png',
 ] + ['data/tilesets/primary/%s/tiles.png' % t for t in (
     'johto_general_hns', 'johto_north_east_hns', 'johto_north_west_hns', 'johto_south_hns', 'kanto_general_hns',
     'alola_island', 'mt_silver_exp_hns', 'general')] + [

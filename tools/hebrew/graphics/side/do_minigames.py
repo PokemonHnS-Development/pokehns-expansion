@@ -29,7 +29,8 @@ def verify(P):
 
 # Letters whose diagonal does not come out of rectangles, drawn by hand at the size they are used
 # (body rows, stem width): tsadi's right arm bends in to meet the left arm's slant at mid-height,
-# as in W4_7, and the stem comes back out to the right edge below it.
+# as in W4_7, and the stem comes back out to the right edge below it. The 11-row tsadi is the
+# 12-row one with one of its two identical stem rows left out.
 HAND = {
     ('צ', 12, 4): ['####...####',
                    '####...####',
@@ -39,6 +40,17 @@ HAND = {
                    '....######.',
                    '......#####',
                    '.......####',
+                   '.......####',
+                   '###########',
+                   '###########',
+                   '###########'],
+    ('צ', 11, 4): ['####...####',
+                   '####...####',
+                   '.####..####',
+                   '..####.###.',
+                   '...######..',
+                   '....######.',
+                   '......#####',
                    '.......####',
                    '###########',
                    '###########',
@@ -274,12 +286,18 @@ print(preview('link__321start_static_pair.png', [('sheet', e, f), ('START as sho
 # reuse one tile across the banner and are not touched. The only text tile used twice is 0x63 in
 # the EXCELLENT banner (map column 14, on row 1 and flipped on row 2): it must stay symmetric top to
 # bottom, so the "+500" block is placed with its last "0", which is symmetric, on that column.
+# NICE: ח, מ and ד one column narrower and a 4-column gap, so the group keeps the English banner's
+# 4 columns of air from the rim. EXCELLENT: an 11-row body, so final nun runs 3 rows below the
+# other letters; vav and final nun take a 1-px head past the stem, the size of a print nun's tick,
+# and 8 columns part the word from "+500": with the digits' height, a digit 1's 2-px flag and the
+# digits' spacing, the nun read as one more digit.
 P = 'graphics/pokemon_jump/bonuses.png'
-BANNERS = [  # (map screen, Hebrew, English, body rows, fixed x of the "+NN" block or None)
-    (0, 'נחמד', 'NICE +50', 14, None),
-    (2, 'טוב', 'GOOD +100', 14, None),
-    (1, 'נהדר', 'GREAT +200', 14, None),
-    (3, 'מצוין', 'EXCELLENT +500', 12, 46),     # final nun runs 2 rows below the 12-row body
+BANNERS = [  # (map screen, Hebrew, English, body rows, fixed x of the "+NN" block or None,
+             #  letter widths, background columns between "+NN" and the word)
+    (0, 'נחמד', 'NICE +50', 14, None, {'ח': 10, 'מ': 10, 'ד': 10}, 4),
+    (2, 'טוב', 'GOOD +100', 14, None, {}, 5),
+    (1, 'נהדר', 'GREAT +200', 14, None, {}, 5),
+    (3, 'מצוין', 'EXCELLENT +500', 11, 46, {'ו': 5, 'ן': 5}, 8),
 ]
 INK = {7, 9, 10}
 tm = read_bin('graphics/pokemon_jump/bonuses.bin')
@@ -317,9 +335,8 @@ def runs(b):
     return out
 
 
-SPACE = 5                                          # background columns between "+NN" and the word
 shown = []
-for scr, heb_word, en_word, H, fixed in BANNERS:
+for scr, heb_word, en_word, H, fixed, widths, SPACE in BANNERS:
     src, b = Banner(e, scr), Banner(f, scr)
     rs = runs(src)
     ndig = len(en_word.split('+')[1])
@@ -330,7 +347,7 @@ for scr, heb_word, en_word, H, fixed in BANNERS:
     inside = {(x, y) for y in range(8, 24) for x in range(b.width)
               if src.get(x, y) == bg[y] or src.get(x, y) in INK or xa <= x <= xb}
     # the new rows 8..23: background, the "+NN" block, then the word (fill, corners, ring)
-    m = word(heb_word, H, 4, 3, D=14 - H)
+    m = word(heb_word, H, 4, 3, D=14 - H, widths=widths)
     blk = xb - xp + 1
 
     def draw_at(gx):

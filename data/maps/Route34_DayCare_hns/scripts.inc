@@ -591,7 +591,7 @@ Route34_DayCare_Text_YouHaveJustOneMon:
 	.string "בוא בפעם אחרת.$"
 
 Route34_DayCare_Text_TakeYourMonBack:
-	.string "תרצה לקחת בחזרה פוקימון שלך?$"
+	.string "תרצה לקחת פוקימון בחזרה?$"
 
 Route34_DayCare_Text_WhatWillYouBattleWith:
 	.string "אם תשאיר אצלי את הפוקימון\n"

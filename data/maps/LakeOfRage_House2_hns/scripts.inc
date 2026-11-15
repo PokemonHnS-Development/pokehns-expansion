@@ -123,7 +123,7 @@ LakeOfRage_House2_Text_LastMon:
     .string "האחרון שלך!$"
 
 LakeOfRage_House2_Text_WorldsLargest:
-    .string "אגם הזעם חזר לקדמותו.\p"
+    .string "באגם הזעם הכול שוב בסדר.\p"
     .string "המג'יקארפ חזרו.\p"
     .string "אולי עוד אגשים את החלום שלי\n"
     .string "להחזיק את המג'יקארפ הגדול בעולם.\p"

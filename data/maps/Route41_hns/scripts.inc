@@ -37,7 +37,7 @@ Route41_Text_SwimmermGeorgeSeen:
 	.string "אם אנצח, תשאיל לי את הפוקימון שלך.$"
 
 Route41_Text_SwimmermGeorgeBeaten:
-	.string "מתנשף, מתנשף…$"
+	.string "הא… הא…$"
 
 Route41_Text_SwimmermGeorgeAfter:
 	.string "סיאנווד כל כך רחוקה.\p"
