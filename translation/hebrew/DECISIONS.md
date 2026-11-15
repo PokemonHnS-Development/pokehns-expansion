@@ -104,7 +104,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q162](#q162) | Static's line read 'פיקאצ'ו שיתק בעזרת סטטי את…': an ability's name bare inside a battle line reads as an ordinary word (סטטי, איתן, תמים). | A. היכולת before the name in every battle line that names an ability inside the sentence ('בעזרת היכולת סטטי'); ביכולת where the longer form costs a screen | changed |
 | [Q163](#q163) | The same line's last view was wiped 8 frames after it completed: two manual scrolls where English shows one auto-wrapped view. | A. No manual break in a battle line where English has none (22 lines) | changed |
 | [Q164](#q164) | The owner: the ability 'סטטי' does not sound natural in Hebrew; a bare adjective after היכולת reads as a description, not a name. | A. חשמל סטטי in the name, the Easy Chat word and the Day Care hints; the paralysis line says ביכולת | changed |
-| [Q165](#q165) | 21 more ability names are bare adjectives, participles or adverbs that both audits found do not read as a name after היכולת. | A. Rename the 21 (22 rows) to nouns; the names one reader questioned are left to the owner | changed; its FLUFFY superseded by [Q173](#q173) |
+| [Q165](#q165) | 21 more ability names are bare adjectives, participles or adverbs that both audits found do not read as a name after היכולת. | A. Rename the 21 (22 rows) to nouns; the names one reader questioned are left to the owner | changed; its FLUFFY superseded by [Q173](#q173); the names left decided in [Q177](#q177) |
 | [Q166](#q166) | Heal and cure lines said 'שוקמו', 'נרפא מבעיית המצב שלו', 'מבעיית שיתוק', and the Ether prompt 'איזה מהלך לשקם?': words a player would not say. | A. The plain verbs: עלו, נרפא, החלים, 'מה{status}', 'למלא נ”כ' | changed; amended in round 36: seven battle HP lines (six with שיקם, the berries' with החלים) say עלו |
 | [Q167](#q167) | FireRed's FOCUS ENERGY, SUPERSONIC, TRANSFORM and KNOCK OFF read as other words in 'השתמש ב{move}!' (רכז, בעל-קולי, בשנה, הפלה). | A. ריכוז אנרגיה, גל על-קולי, שינוי צורה, חבטת העפה, each kept apart from FireRed with its reason | changed |
 | [Q168](#q168) | X SP. ATK מיוחד X names no stat; singular משקף (BLACK, WISE GLASSES) is not glasses. | A. התקפה מיוחדת X, משקפיים שחורים, משקפי חוכמה | changed |
@@ -116,6 +116,13 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q174](#q174) | The owner: when B turns down a new move, the game does not ask 'לוותר על הלמידה?' with yes and no. English Heart & Soul does not ask either (P_ASK_MOVE_CONFIRMATION is FALSE). | A. The box in the Hebrew build only (the option follows TEXT_RTL), and every prompt says 'לוותר על לימוד {move}' | changed |
 | [Q175](#q175) | The Berry Tag prints the size as '2.0cm' in Latin letters with the default metric units; the imperial line reads אינץ'. | A. ס”מ under TEXT_RTL, as the imperial line (an engine commit picked onto he/renderer, and a text commit) | changed |
 | [Q176](#q176) | English words drawn into art players see: town signs, the title's PRESS START, the Game Corner, the minigames, the trade menu's Lv., the Pokérus tag. | A. Draw them in the game's own Hebrew words; keep the logos, the hardware logo, A-Z, VU, the boot splash names, the Frontier Pass tab and the version label | changed |
+| [Q177](#q177) | The ability names Q165 left for the owner: which still read wrong after היכולת or in the Ability Capsule's line? | A. NO GUARD חוסר הגנה, DOWNLOAD הורדת מידע; the adjective phrases, GUARD and VEIL families, CLOUD NINE and the rest kept | changed |
+| [Q178](#q178) | RETURN חזרה and DOUBLE TEAM רואה כפול read as 'used back' and 'used sees-double' after ב. | A. החזרת טובה and כפילים, each kept apart from FireRed with its reason | changed |
+| [Q179](#q179) | Battle lines in written register (נתוניו, השיב, לקדמותם) and the stats word in the Pokédex line after a catch. | A. 'הנתונים של X', 'חזרו לרגיל', 'המידע על X נוסף'; no line break English lacks | changed |
+| [Q180](#q180) | The Battle Arena referee's result lines had a page English does not have. | A. One auto-wrapped page: 'שופט: התוצאה: … ניצח הפוקימון של …' | changed |
+| [Q181](#q181) | Early-story lines that copy the English or use a written word, and the map lines with לקדמותו. | A. The spoken lines (18 map files); Blackthorn Mart's משקמת kept | changed |
+| [Q182](#q182) | The Mart clerk's ברצונך, 'לזה לא תהיה שום השפעה', the Pokérus explanation, the day-care question. | A. 'כמה תרצה?', 'זה לא ישפיע.', the nurse's and the day-care lady's lines in plain Hebrew | changed |
+| [Q183](#q183) | The gym sign read ןוכא, the Jump banners' final nun read as a 1, and the sign glows lit English letters over the Hebrew signs at night. | A. A box mem, the dash pixel, the banners' metrics, the glows redrawn from the Hebrew signs; the other art folders keep their art | changed |
 
 ## K1
 
@@ -2610,7 +2617,7 @@ The owner's case, replayed in a real battle (the player's Pikachu, a wild Rattat
 - Widths: every new name fits every place it is drawn. The widest, חשיבה אנליטית, is 13 bytes, 71 px of the summary's 144 and 65 px of the pop-up's 76. Every new name is narrower than the widest name before, רגליים מסתבכות (77 px), with which Q162 laid out every ability line. The challenge menu's first Sturdy description is 193 px of its 200. The six Easy Chat words are 31 to 44 px, and the test's fixed-phrase widths still pass.
 - Battle lines: each renamed ability's own lines were laid out with real holders and real foes, like Static's (`rn_own_lines.txt`). None needs more views than English: Sturdy, Limber, Oblivious, Scrappy, Shadow Tag, Hyper Cutter and Effect Spore. The other fourteen print their name only in the pop-up, or in lines that any ability can fill (Trace, acquired, Receiver), which the widest name already bounds.
 - FireRed: Sturdy, Limber, Oblivious, Shadow Tag, Effect Spore and Hyper Cutter, like Static, leave FireRed's names. The reason is the owner's rule for Static, not an H&S limit (Q140), so each has an entry in `tools/hebrew/data/namecheck_allow.json`.
-- Not renamed here; listed for the owner:
+- Not renamed here; listed for the owner (decided in Q177):
   - Three names that one reader put in this class: Cloud Nine (ביטול מזג, where מזג alone reads as 'temper'; FireRed's name, adopted in Q140); Aerilate (אוורור, a noun, but ventilation); Contrary (דווקאי, read by one reader as a person noun).
   - The names either reader found unnatural for other reasons: calques and a wrong sense of a word (the GUARD and VEIL families, Hustle, Lightning Rod and others), and fixed adjective phrases, which have the fault of this question in a milder form (Soundproof אטום לרעש, Heatproof חסין חום, Bulletproof חסין קליעים, Unnerve מורט עצבים, Good as Gold שווה זהב).
 
@@ -2693,7 +2700,7 @@ Seen on screen on the clip ROM beside rc30 and English, with no clip record: the
 - KNOCK OFF: on its own הפלה reads as abortion or miscarriage: 'מאצ'וק השתמש בהפלה!' is not a line for a child. חבטת העפה, a swat that sends the held item flying, follows חבטת גוף and חבטת על-חוש (`src/data/moves_info.h:1005`, `:19377`).
 - Widths (`textwidth.py`, FONT_NARROW): 53, 49, 43 and 51 px in the 64 px battle move cell; 58, 51, 45 and 59 px in the 70 px summary list; at most 12 bytes (16 allowed). The used-move line stays one view with a 12-letter nickname.
 - Q140 keeps a name apart from FireRed when a FireRed slip stands in the way, with the reason in `namecheck_allow.json`; the four entries are there. The Easy Chat move words are the names, so `gen_ec_letters.py` regenerated the ABC lists: SUPERSONIC moves from ayin to gimel, KNOCK OFF from he to het (`src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, engine data compiled only under `TEXT_RTL`, `src/easy_chat.c:1250-1256`; its commit is to be picked onto `he/renderer`; the English build of the pick is byte-identical, `<private>/scratch/screens/r33/apply/engproof/PROOF.md`). The battle debug menu's Focus Energy label follows.
-- Left for the owner: RETURN חזרה and DOUBLE TEAM רואה כפול, which read as real words and whose fix replaces the concept.
+- Left for the owner: RETURN חזרה and DOUBLE TEAM רואה כפול, which read as real words and whose fix replaces the concept (decided in Q178).
 
 | Option | How | Risk |
 |---|---|---|
@@ -2761,7 +2768,7 @@ Seen on screen on the clip ROM beside rc30 and English, with no clip record: the
 - Vitamins and EV berries (`src/strings.c:324-327`, `src/party_menu.c:4853-4876`, `:5388-5398`): {STR_VAR_2} is נ”ח (plural) or one of five feminine stat names, so a verb whose subject is the stat cannot agree with all six, and putting the stat first breaks the token order. 'X קיבל חיזוק ל{stat}.' takes its verb from the Pokémon, and 'החיזוק ל{stat} ירד!' from חיזוק, both masculine, for every stat; ל absorbs the article. The old line also read 'עלה במהירות' (rose quickly) for Carbos. 'base' becomes חיזוק; the item descriptions still say 'ההתקפה הבסיסית'. Widths with a 12-glyph name: 136/93, 151/147, 146/147 and 151/194 px, each no wider than before.
 - Pokédex (`src/strings.c:67`, `:82-87`): מצב-X and פרמטרים are system words, and 'מצב הכבד ביותר' reads as the state of the heaviest one. The titles become the sorting idiom: לפי מספר, מא' עד ת', מהכבד לקל, מהקל לכבד, מהגבוה לנמוך, מהנמוך לגבוה (46-65 px in the 88 px field), as their descriptions already say ('מהכבד ביותר לקל ביותר'); the search line 'חיפוש פוקימונים לפי\nמה שבחרת.'.
 - Descriptions: יחס is the maths word ratio; the same English sentence is already 'סיכוי גבוה לפגיעה קריטית.' in five other moves (`src/data/moves_info.h:2091`, `:4833`). Air Cutter, Poison Tail, Leaf Blade, Night Slash, Shadow Claw, Psycho Cut, Stone Edge, Attack Order and Spacial Rend take it (123 px of 152 in the summary, 113 of 128 in the relearner's narrow font, 115 of 139 in the Pokédex); Sky Attack's 'התקפת 2 תורים. סיכוי גבוה לפגיעה' would be 129 px in the relearner, so it reads '2 תורים. סיכוי גבוה לפגיעה / קריטית. עלול להרתיע.' (115 and 94 px).
-- Kept for the owner: Intimidate against Inner Focus and Clear Body, 'X שומר על נתוניו בזכות היכולת Y', and White Herb's 'השיב את נתוניו לקדמותם': Q160 keeps the plural נתונים where a line speaks of stats in general.
+- Kept for the owner: Intimidate against Inner Focus and Clear Body, 'X שומר על נתוניו בזכות היכולת Y', and White Herb's 'השיב את נתוניו לקדמותם': Q160 keeps the plural נתונים where a line speaks of stats in general (decided in Q179).
 
 | Option | How | Risk |
 |---|---|---|
@@ -2927,6 +2934,202 @@ Kept in English on purpose:
 **Chosen:** A. Seen on screen on the build of `he/fix-r37` beside 1.0 (`65586be574`), every difference inside the label (`<private>/scratch/screens/r37/fix/integrate/shots/`): the title screen; the Voltorb Flip board; the slot reels; the Battle Dome battle room; the summary screen of a Pokémon with Pokérus (INFO and SKILLS pages); the trade menu with the partner faked in RAM (`tools/hebrew/emu/tours/r14_link/l04_trade_menu.txt`: 30 of its 61 shots differ, each only in the level marks); the Berry Blender's countdown with the Blend Master; the MART, P.C and GYM signs in Cherrygrove, Violet, Azalea, Goldenrod, Ecruteak, Celadon, Lavender, Saffron, Melemele Isle, New Sinjoh and the Battle Frontier's east side; the floor plates of all eleven department store floors. The wireless minigames need a second GBA, so their START and the four bonus banners were drawn from the ROM's own data (`s321Start_Gfx` and `sBonuses_Gfx` decompressed, through the bonus tilemap, whose bytes are the same in both ROMs). After review, the gym stand's word got the narrower kaf and the Pokérus tag its two rounded corners. The pixel checks (`side/check.py`, `side/finalize.py`) pass for all 20 PNGs.
 
 *Changed:* `graphics/interface/status_icons.png`, `graphics/trade/menu.png`, `graphics/title_screen/hns/press_start.png`, `graphics/voltorb_flip/gameboard.png`, `graphics/voltorb_flip/coins.png`, `graphics/slot_machine/reel_symbols/7.png`, `graphics/berry_blender/start.png`, `graphics/link/321start.png`, `graphics/link/321start_static.png`, `graphics/pokemon_jump/bonuses.png`, `data/tilesets/primary/{johto_general_hns,johto_north_east_hns,johto_north_west_hns,johto_south_hns,kanto_general_hns,alola_island,mt_silver_exp_hns,general}/tiles.png`, `data/tilesets/secondary/{department_store_hns,battle_dome}/tiles.png`, `tools/hebrew/graphics/side/do_{pkrs,tradelv,pressstart,vflip,reelreplay,minigames,townsigns,deptfloor,domebanner}.py`, `tools/hebrew/graphics/README.md`
+
+## Q177
+
+**Question.** Rounds 32 to 34 renamed the ability names that read as bare adjectives and left a group for the owner: the adjective phrases אטום לרעש, חסין חום, חסין קליעים, מורט עצבים, שווה זהב, the adjective דווקאי, CLOUD NINE ביטול מזג, AERILATE אוורור, and the round-32 readers' other doubts (Q165, "Not renamed here"). Which of the 47 names Q165 did not rename read wrong after היכולת or in the Ability Capsule's line, and which stay?
+
+*Source:* round 38's reading of every name Q165 left, with both round-32 readers' notes (`<private>/scratch/screens/r32/ability-cold-read/flagged_report.json`, `r32/abilities-meaning/b_lines.txt`), each finding checked by a second reader (`<private>/scratch/screens/r38/owner-names/`).
+
+**Analysis.**
+- NO GUARD ללא משמר is a prepositional phrase, not a noun (STYLE §3): 'היכולת ללא משמר' reads 'the ability, without a guard'. The Ability Capsule and Ability Patch glue ל to the name (`sText_askText`, `sText_doneText`, `src/party_menu.c:515-516`), so they printed 'לשנות את היכולת של מאצ'ופ / לללא משמר?' and '…השתנתה / לללא משמר!', three lameds at the start of a word. חוסר הגנה follows Q165's pattern for a negated English name (UNAWARE חוסר מודעות, MERCILESS חוסר רחמים), and GUARD is הגנה in GUARD SPEC. הגנה מיוחדת, GUARD SWAP חילוף הגנה and WIDE GUARD הגנה רחבה. Machop, Machoke and Machamp have it in slot 2 (`src/data/pokemon/species_info/gen_1_families.h:9234`), and the Capsule (32 BP) switches Guts and No Guard (`src/data/battle_frontier/battle_frontier_exchange_corner.h:15-16`).
+- DOWNLOAD הורדה is this game's word for a stat drop ('מוגן … מהורדת {B_BUFF1}', `src/battle_message.c:477`; Clear Body's 'מונע הורדת נתונים'). On every switch-in of a Pokémon with Download the line said 'לפוריגון, בזכות היכולת הורדה, ההתקפה עלתה!' (`STRINGID_ATTACKERABILITYSTATRAISE`, `:597`), lowering and raising in one line. הורדת מידע is the everyday download and cannot be read as a drop; הורדת נתונים was rejected because נתונים are the stats. Porygon, Porygon2 and Porygon-Z have it in slot 2.
+- Kept, each a noun phrase, an agent noun or the owner's own FireRed name (Q140), with no fault a player meets:
+  - CLOUD NINE ביטול מזג: the owner's FireRed rename; ביטול מזג אוויר is 15 bytes, over the Easy Chat word's 12 (STYLE §5), and the description beside it says 'מבטל השפעות מזג אוויר';
+  - the GUARD family משמר פלא, משמר קסם, משמר עלים, משמר ידידים and the VEIL family צעיף מים, צעיף מתוק, צעיף ניחוח, צעיף פרחים, צעיף פסטל: noun phrases ('X מוגן בזכות היכולת משמר עלים!');
+  - SOUNDPROOF אטום לרעש, HEATPROOF חסין חום, BULLETPROOF חסין קליעים: fixed everyday compounds that name the effect (חלון אטום לרעש, אפוד חסין קליעים). The nouns אטימות and חסינות sound technical, and אטימות is also callousness; Soundproof is an Odd Egg password word and the owner's FireRed name;
+  - UNNERVE מורט עצבים, a participle with its object like שובר תבניות; GOOD AS GOLD שווה זהב, the Hebrew idiom; CONTRARY דווקאי, a person noun ('השתנתה לדווקאי' reads well); AERILATE אוורור, a noun like REFRIGERATE קירור; HUSTLE חריצות and LIGHTNING ROD מוט ברקים, the owner's FireRed names. Contrary, Unnerve and Good as Gold print no battle line, and Aerilate and Good as Gold are met only with the randomizer;
+  - the rest of the round-32 lists (גוף נקי, נקודת רעל, צלחת גשם, ראש סלע, רוח חיונית, עצלן, שעתוק, משכימת קום, מזל על, משגר על, דחף הרעלה, דחף להבה, לוגם מוהל, החזר קסם, שרשרת מיומנות, שינוי עמדה, קולט, אוכל אדמה): the readers' alternatives are taste, not a fault. A scan of all 310 names found no other bare adjective or participle among those met in normal play.
+- Widths (`textwidth.py`): חוסר הגנה 49 px on the summary (FONT_NORMAL, 144) and 44 px in the pop-up and Pokédex (FONT_SMALL), the same as before; הורדת מידע 57 and 50 px. The Capsule rows are 182/61 (question) and 177/59 (result) px for No Guard, 182/69 and 177/67 for Download, of 208. Download's line, laid out with Porygon, Porygon2, Porygon-Z and a 12-letter nickname on every side with ATTACK and SP. ATK, is one view in all 24 cases, as in English; its widest row is 198 px (`<private>/scratch/screens/r38/owner-names/lines_download.txt`).
+- Both are Gen 4 abilities: no Easy Chat word, no FireRed row, no dialogue, no test entry. The glossary's TYPE_NONE note cited the old name and no longer does.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Rename NO GUARD and DOWNLOAD; keep the rest | Glossary, `src/data/abilities.h` | None found: same or narrower lines, no other file names them |
+| B. Rename the adjective phrases too (אטימות לרעש, חסינות לחום…) | Glossary, abilities, Easy Chat, the Odd Egg password and its hint | Technical nouns for everyday phrases; a password word changes |
+| C. Keep all | No change | 'לללא משמר' in the Capsule; Download's line says lowering for a rise |
+
+**Chosen:** A. Seen on screen on the clip ROM beside 1.0 and English, with 0 clip records (`<private>/scratch/screens/r38/apply/`): both names in the pop-up on each side (`bs/`); Download's switch-in line with ATTACK and SP. ATK on each side, in a trainer and a wild battle, with species names and with 12-letter nicknames (`bsweep.py`), one view each as in English and 1.0 ('לאבדהחטמסעפשת היריב, בזכות היכולת / הורדת מידע, ההתקפה עלתה!'); the summary INFO page of Machop and Porygon (`st/`); the Ability Capsule on Machop, 'לשנות את היכולת של מאצ'ופ / לחוסר הגנה?' and 'היכולת של מאצ'ופ השתנתה / לחוסר הגנה!', where 1.0 printed 'לללא משמר'.
+
+*Changed:* `src/data/abilities.h`, `translation/hebrew/STYLE.md` (§3 and §11 list the names kept)
+
+*Glossary:* `ABILITY_NO_GUARD`, `ABILITY_DOWNLOAD`; the note of `TYPE_NONE`
+
+## Q178
+
+**Question.** Q167 left two FireRed move names for the owner because their fix 'replaces the concept': RETURN חזרה and DOUBLE TEAM רואה כפול. Do they read as names in the used-move line 'X השתמש ב{move}!'?
+
+*Source:* round 38's reading of the names Q167 left (STYLE §11, 3), checked by a second reader.
+
+**Analysis.**
+- RETURN: after ב, חזרה reads as the adverb בחזרה, 'back', which is this game's own Easy Chat word BACK (`src/data/easy_chat/easy_chat_group_misc.h:52`) and the word the maps use about ten times for 'back'. 'טיפלוז'ן השתמש בחזרה!' reads 'used back'; the Goldenrod 5F girl's 'הגברת נתנה לי את המהלך חזרה!' reads 'the lady gave me the move back'. החזרת טובה keeps the English word's root and says what is returned, the kindness: the Japanese おんがえし, and the move's own description (stronger the more the Pokémon loves its trainer). It is a common idiom (להחזיר טובה) and a noun phrase. Rejected: הכרת תודה is the Pokédex category GRATITUDE; גמול also reads as 'weaned'; נאמנות changes the concept. FRUSTRATION תסכול stays a matching noun.
+- DOUBLE TEAM: רואה כפול is the participle phrase 'sees double' (STYLE §11, 3): 'זובאט השתמש ברואה כפול!' reads 'used sees-double'. כפילים are lookalike doubles, the copies the move makes ('יוצר העתקים מדומים', its description); a plain noun a child knows, which keeps DOUBLE. Rejected: ראייה כפולה, the noun of FireRed's name, is a symptom of the foe (double vision), not something the user does. No move, item or line uses כפילים, and SUBSTITUTE is ממלא מקום.
+- Where they print: the FIGHT menu cell, the summary's move list and details, the move relearner, the contest list, the bag's TM row, the used-move line (`sText_AttackerUsedX`, `src/battle_message.c:144`), the Easy Chat move words and ABC lists, the Emerald Game Corner prize menu (`src/data/script_menu.h:288`) and the Goldenrod 5F girl's line. The Frontier and Trainer Tower speeches take the Easy Chat word (`EC_MOVE(RETURN)`), so they follow the name.
+- Widths (`textwidth.py`): החזרת טובה 52 px in the 64 px FIGHT cell (FONT_NARROW), 59 px in the 70/72 px summary, relearner, contest and Easy Chat fields (10 bytes, 12 allowed), 52 of 61 px in the bag's TM row; כפילים 29 and 32 px. The used-move line's second row is 108 and 81 px with a 12-letter nickname on the first: one view. The girl's line is 188 and 161 px of 208, the same two rows. The prize menu row is 32 px before its `CLEAR_TO 0x58`.
+- Reach: TM27 from the Goldenrod Dept Store 5F lady, an early story map; TM32, 45 level-up learnsets and 29 trainer sets for Double Team, among them Koga's, Karen's and the rival's fifth team (`src/data/trainers_hns.party:9027`, `:9137`, `:9572`, `:9892`).
+- FireRed keeps חזרה and רואה כפול, so both differences are in `namecheck_allow.json` with their reasons (Q140, as Q167). The Easy Chat ABC lists move RETURN from ח to ה and DOUBLE TEAM from ר to כ (`gen_ec_letters.py`); the headers are engine data, compiled only under `TEXT_RTL`, and their commit is to be picked onto `he/renderer`. The Voltorb Flip menu's 'חזרה' (`data/maps/GoldenrodCity_GameCorner_hns/scripts.inc:820`) means 'back', not the move, and stays.
+
+| Option | How | Risk |
+|---|---|---|
+| A. החזרת טובה and כפילים, each kept apart from FireRed with its reason | Glossary, the move table, the prize menu, the girl's line, the Easy Chat lists | A pick for `he/renderer` (the Easy Chat lists) |
+| B. Keep FireRed's names (Q140) | No change | Two used-move lines read as other words, one of them in the early story |
+
+**Chosen:** A. Seen on screen on the clip ROM beside 1.0 and English, with 0 clip records (`<private>/scratch/screens/r38/apply/`): the used-move line of both moves for the player's and the foe's Pokémon (`bsweep.py`) in a trainer and a wild battle, with species names and with 12-letter nicknames, one view each as in English and 1.0 ('אבדהחטמסעפשת היריב / השתמש בהחזרת טובה!'); the FIGHT menu cells and the move-info window beside FRUSTRATION and SUBSTITUTE (`fight_moves.py`, `fm/`); the summary's move list and move details of Machop and Porygon (`st/`); the bag's TM27 and TM32 rows (and TM27 in the release tours `pbi_tm`, `pbi_learn_no`); the Easy Chat MOVE group and the he and kaf ABC lists, the kaf list a page longer (`st/`); the Goldenrod 5F girl's line in the dialogue sweep (`sw/`). Not seen: the Emerald Game Corner prize menu, the move relearner and the contest list (widths only).
+
+*Changed:* `src/data/moves_info.h`, `src/data/script_menu.h`, `data/maps/GoldenrodCity_DepartmentStore_5F_hns/scripts.inc`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `tools/hebrew/data/namecheck_allow.json`
+
+*Glossary:* `MOVE_RETURN`, `MOVE_DOUBLE_TEAM`
+
+## Q179
+
+**Question.** Q166 and Q170 left a few battle lines in written register for the owner: Intimidate against Inner Focus and Clear Body ('X שומר על נתוניו בזכות היכולת Y!'), White Herb ('X השיב את נתוניו לקדמותם בזכות Z!'), and the four field effects that end with 'חזרו לקדמותם' (Trick Room, Wonder Room, Magic Room, Gravity). After a catch the Pokédex line said 'הנתונים של X נוספו לפוקדקס!'. Would a player say them?
+
+*Source:* round 38's search for the literary words STYLE §11, 8 names (לקדמותו, השיב, the possessive suffix), and for the stat word נתונים outside its general sense (STYLE §7, Q160), each checked by a second reader.
+
+**Analysis.**
+- 'שומר על נתוניו' and 'השיב את נתוניו לקדמותם' are written Hebrew: the possessive suffix of נתוניו is literary, and לקדמותם is the word §11, 8 names. A player says 'הנתונים שלו' and 'חזרו לרגיל'. The new lines follow the English 'X's … stat loss' and keep the token order (name, then ability or item); the plural verbs agree with הנתונים whatever the name, ability or item. הנתונים in the general sense, with no stat after it, is what Q160 and STYLE §7 keep.
+  - `STRINGID_PKMNPREVENTSSTATLOSSWITH` (`src/battle_message.c:378`; printed by `BattleScript_IntimidatePrevented` for Inner Focus, Scrappy, Own Tempo and Oblivious against Intimidate, and by `BattleScript_AbilityNoStatLoss` for Clear Body, White Smoke and Full Metal Body against any stat-lowering move, `data/battle_scripts_1.s:6237-6241`, `:6560-6564`): 'הנתונים של X לא יורדים בזכות היכולת Y!'. The present tense matches English 'prevents' and states the ability's rule. 'X מוגן מהורדת נתונים' was rejected: הורדת נתונים reads as a data download, beside Download's new name (Q177). Wild Zubat and Golbat against the player's Intimidate, and Growl, Leer or Tail Whip against Tentacool on every sea route, print it often.
+  - `STRINGID_PKMNSITEMRESTOREDSTATUS` (`:470`, White Herb): 'הנתונים של X חזרו לרגיל בזכות Z!'. Trainers' Torkoal, Huntail and Exeggutor-A carry it (`src/data/trainers_hns.party:8673`, `:13588`, `:14446`).
+  - `STRINGID_ZMOVERESETSSTATS` (`:755`): 'הנתונים של X שירדו חזרו לרגיל בזכות כוח Z!', the White Herb shape with Q166's 'בזכות כוח Z'. The plural שירדו can only attach to הנתונים. Met only with the randomizer.
+  - `STRINGID_ULTRABURSTCOMPLETED` (`:802`), the last השיב in the battle text: 'X קיבל בחזרה את הכוח האמיתי שלו בפרץ אולטרה!'. Met only with the randomizer.
+  - The field effects (`:584-586`, `:589`): only the literary word goes, 'חזרו לרגיל' and 'חזרה לרגיל'. Wonder Room keeps 'נתוני ההגנה וההגנה המיוחדת', as its start lines say.
+  - `STRINGID_PKMNDATAADDEDTODEX` (`:441`, after every catch of a new species, `data/battle_scripts_2.s:203`): 'הנתונים של X' is the stats word, and a child reads it as Pidgey's stats. 'המידע על X נוסף לפוקדקס!' is the plain sentence and the owner's FireRed wording (`pokefirered-heb src/battle_message.c:484`); the singular נוסף agrees with מידע.
+- Breaks: English breaks none of these lines. Five had a `\n` English lacks (Wonder Room, Magic Room, Z reset, Ultra Burst, the Pokédex line); each loses it, so the battle auto-wrap lays them out (STYLE §5, as Q166's amendment did).
+- Lines left with a `\n` English lacks: 417 battle lines keep such a `\n` and, at most, English's closing `\p`. Under textwidth's worst-case placeholders (12-letter nicknames, 16-letter moves, 20-letter items) every one has two rows within 208 px (200 before a prompt), so each is one view and costs no press (`<private>/scratch/screens/r38/owner-names/breaks_battle.txt`; a stricter count by the second reader gives 376). They stay; STYLE §5 now says so, and that a line edited for another reason loses the `\n`.
+- Layout with typical names, the longest names and 12 copies of the widest letter, on every side (round 31's sweep model, `<private>/scratch/screens/r38/owner-names/lines_statloss_rooms.txt`, `verify/v_lines.txt`, `verify/v_ultra.txt`): every line is one view, as in English (one or two); the widest rows are 196 px (stat loss), 195 (White Herb), 194 (Ultra Burst), 184 (Pokédex), 177 (Z reset) and 176 (Wonder Room) of 208.
+- The battle-test table holds Magic Room's Hebrew (`tools/hebrew/testmsgs/data/composed.json`, a hand-composed pattern); it follows, and `gen_header.py` rebuilds `test/hebrew_battle_messages.h`. The stat-loss and Download lines' tests are already known upstream failures.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Spoken Hebrew: 'הנתונים של X', 'חזרו לרגיל', 'המידע על X'; no `\n` English lacks | 9 battle strings, the test table | Low: every line one view, as English |
+| B. Keep | No change | Written register in lines a player meets from the first routes |
+
+**Chosen:** A. Seen on screen on the clip ROM beside 1.0 and English, with 0 clip records: every changed line forced with `tools/hebrew/emu/scripts/r16_battle_sweep/bsweep.py` (the stat-loss line with Inner Focus, Clear Body and the widest Hebrew and English abilities, White Herb and the widest Hebrew and English items, each on both sides; the four field effects; Z reset and Ultra Burst on both sides; the Pokédex line) in a trainer and a wild battle, each with species names and with 12-letter nicknames: one view in every entry, never more than 1.0 or English, which needs two views in 20 of the round's 134 entries (`<private>/scratch/screens/r38/apply/bs/compare.txt`). In the release tours, the Pokédex line after five catches ('המידע על הוטהוט נוסף לפוקדקס!', one row) and the stat-loss line in `bv_multi`'s double battle, Dragonite's Inner Focus against Arbok's Intimidate ('הנתונים של דרגונייט לא יורדים / בזכות היכולת מיקוד פנימי!').
+
+*Changed:* `src/battle_message.c`, `test/hebrew_battle_messages.h`, `tools/hebrew/testmsgs/data/composed.json`, `translation/hebrew/STYLE.md` (§5, §11)
+
+## Q180
+
+**Question.** The Battle Arena referee's result lines, `B_MSG_REF_PLAYER_WON` and `B_MSG_REF_OPPONENT_WON` (`src/battle_message.c:1515-1516`), had a `\p` English lacks: 'שופט: תוצאת השיפוט: / 3 מול 0! ▼ המנצח הוא הפוקימון של / ג'ואי, פואקוקו!', one more press of A than English.
+
+*Source:* round 38's check of every battle string against English for breaks English lacks (STYLE §5, Q163): of 790 battle strings these are the only two with more `\l` or `\p` than English (`<private>/scratch/screens/r38/owner-names/verify/v_breaks.txt`).
+
+**Analysis.**
+- `BS_ArenaJudgmentString` prints them through `BattleStringExpandPlaceholders` (`src/battle_script_commands.c:13950-13955`), whose auto-wrap breaks at 208 px and 2 rows (`src/battle_message.c:3898`) in the 26-tile judgment window (`src/battle_bg.c:826-834`). With no manual break the lines are laid out as English is.
+- 'שופט: התוצאה: {B_BUFF1} מול {B_BUFF2}! ניצח הפוקימון של {player}, {mon}!' takes one page with typical names, the longest names and 12-letter nicknames (rows 177 and up to 159 px). With 'תוצאת השיפוט' the auto-wrap splits the score ('3 מול / 0!') with a 12-letter nickname, and the 'המנצח הוא' forms need two views with a 12-letter nickname (`<private>/scratch/screens/r38/owner-names/lines_arena.txt`, `verify/v_arena.txt`). Row 1 holds no name, so the score never splits. Token order is unchanged.
+- The draw line (`:1517`) is one page already; it takes 'התוצאה' too and loses its `\n`, so the three results read the same: 'שופט: התוצאה: 3 מול 3! זה תיקו!' (152 px, one row).
+- Reach: the Battle Arena, after the game (post-game Battle Frontier).
+
+| Option | How | Risk |
+|---|---|---|
+| A. One auto-wrapped page, 'התוצאה', 'ניצח' | 3 strings | Low |
+| B. Keep | No change | A press English does not ask for |
+
+**Chosen:** A. Seen on screen on the clip ROM beside 1.0 and English, with 0 clip records: the three lines forced with a scratch copy of `bsweep.py` that hands the referee table's pointer to the trainer-slide message, which prints through the same expander into the battle message box, 208 px like the judgment window (`<private>/scratch/screens/r38/apply/bs/bsweep_ref.py`), with the score 3 to 0, in a trainer battle with species names and with 12-letter nicknames: each result line one page ('שופט: התוצאה: 3 מול 0! ניצח הפוקימון / של GOLD, אבדהחטמסעפשת!'), as in English, where 1.0 took two; the draw line one page, as before. In a wild battle the opponent's line has no trainer to name and does not finish, on all three ROMs. The Arena itself was not played.
+
+*Changed:* `src/battle_message.c`
+
+## Q181
+
+**Question.** Read aloud beside the English, which lines of the early story (New Bark Town to Ilex Forest, with Mom's and Elm's calls in that stretch) still copy the English or use a written word, and which map lines keep the literary לקדמותו?
+
+*Source:* round 38's reading of all 545 live string units of 49 early-story maps, the calls and the shared nurse and Mart texts (`<private>/scratch/screens/r38/story-early/`), and its search for לקדמות in `data/`, each finding checked by a second reader.
+
+**Analysis.** Each line below keeps its pages and presses; speakers' genders were checked against their object graphics.
+
+| Line | English | Before | After | Why |
+|---|---|---|---|---|
+| `CherrygroveCity_Text_GuideGentIntro` p1 | You're a rookie trainer, aren't you? I can tell! | 'אני רואה את זה!' | 'רואים את זה עליך!' | 'I can tell' word for word; Hebrew says רואים עליך of a beginner |
+| `NewBarkTown_Lab_Text_ElmIntro` p3 | I was wondering if you could help me with it | 'תהיתי אם תוכל לעזור לי בו' | 'אשמח אם תוכל לעזור לי בו' | a calque; אשמח אם is the polite request. Row 2 183+8 px with a 7-letter name |
+| `VioletGym_Text_Falkner_BadgeExplain` p2 | It also enables POKéMON to use FLASH, if they can learn it, anytime. | 'הוא גם מאפשר לפוקימונים שיכולים / ללמוד הבזק להשתמש בו בכל זמן.' | 'הוא גם מאפשר להשתמש בהבזק בכל זמן, / אם יש לך פוקימון שיכול ללמוד אותו.' | two infinitives in a row read 'learn Flash in order to use it'; English's order and condition (192 and 164+8 px) |
+| `Route29_Text_OldManDeclined` p2 | Check every route to find different types of POKéMON. | 'כדאי לחפש בכל דרך כדי למצוא / מגוון פוקימונים.' | 'כדאי לעבור בכל הדרכים / כדי למצוא מגוון פוקימונים.' | 'בכל דרך' is 'by every means', so the hint about routes was lost |
+| `Route30_Text_BugCatcherDonBeaten` | Argh! | 'ארג!' | 'אררג!' | ארג reads as weaving; אררג is the game's Argh elsewhere (`SlowpokeWell_B1F_hns`, `Route44_hns`) |
+| `Route33_Text_Lass` p1, `Route41_Text_SwimmermGeorgeBeaten`, `Route19_Text_SwimmermTuckerSeen` | Pant, pant… | 'מתנשפת, מתנשפת…', 'מתנשף, מתנשף…', 'הא, הא…' | 'הא… הא…' | the participle printed a stage direction as speech; with a comma 'הא, הא' reads as a laugh, with ellipses as breath |
+| `AzaleaTown_Text_Sign` p2 | Where People and POKéMON Live in Happy Harmony. | 'בהרמוניה שמחה.' | 'יחד בשמחה ובהרמוניה.' | harmony is not 'happy' in Hebrew (120 and 108 px) |
+| `AzaleaTown_Text_SlowpokeWellSign` p4 | a SLOWPOKE's yawn ended a drought | 'סיים בצורת' | 'שם קץ לבצורת' | the fixed phrase, in a historical sign's register |
+| `NewBarkTown_Lab_Text_ElmAfterTheft4` p5 | He is superb at seeing the potential of people as trainers. | 'הוא מצטיין בזיהוי הפוטנציאל / של אנשים כמאמנים.' | 'הוא יודע מצוין לזהות / מי יכול להיות מאמן טוב.' | a written noun chain with a dangling כמאמנים |
+| `Route29_Text_TuscanyGaveGift` p1 | Wouldn't you agree that it is most adorable? | 'האם לא תסכים / שהוא מקסים ביותר?' | 'הוא מקסים ביותר, / אינך מסכים?' | a calque; the formal tag keeps Tuscany's voice |
+| `KurtsHouse_Text_KurtFinishedSingular` | Your {STR_VAR_1} is done. Here! | 'הכדור מוכן: {STR_VAR_1}. הנה!' | 'הכנתי לך {STR_VAR_1}. הנה!' | a form label in speech (STYLE §11, 8); one ball name on this path, so every Kurt ball reads right (157 px with a 20-letter item) |
+| `GoldenrodCity_Text_ElmCall` p2 | I need to see it! | 'אני חייב לראותו!' | 'אני חייב לראות אותו!' | the written object suffix; the row ends in `$`, so the phone box's budget is 192 px, not 184 (187 px) |
+| `IlexForest_Text_CharcoalMasterOutro` p1 | That's the CUT HM. | 'זה המ”נ של חיתוך.' | 'זה מ”נ חיתוך.' | construct, as Sprout Tower's 'מ”נ הבזק' |
+| `MrPokemonHouse_Text_AlwaysNewDiscoveries` | Always, new discoveries to be made. | 'תמיד יש תגליות חדשות לגלות.' | 'תמיד יש עוד משהו חדש לגלות.' | the repeated root |
+| `MrPokemonHouse_Text_GimmeTheScale` p4 | I can offer this EXP.SHARE | 'את חולק הניסיון / הקטן הזה' | 'את חולק הניסיון / הזה' | 'small' is not in the English |
+| `AzaleaTown_Gym_Text_GymGuide` p4 | knows a move that covers its ROCK-type weakness. | 'שמחפה על חולשתו לסוג סלע.' | 'שמחפה על החולשה שלו מול סלע.' | the written suffix, from the casual gym guide (197+8 px of 208) |
+| `LakeOfRage_House2_Text_WorldsLargest` p1 | LAKE OF RAGE is back to normal. | 'אגם הזעם חזר לקדמותו.' | 'באגם הזעם הכול שוב בסדר.' | §11, 8's word; it answers his own 'משהו לא בסדר באגם' |
+| `RocketHideout_B2F_Text_LanceElectrodeDone` | The LAKE should be back to normal. | 'האגם אמור לחזור / לקדמותו.' | 'האגם אמור לחזור / להיות כמו פעם.' | the same word, in Lance's calm voice |
+
+- Kept: Blackthorn Mart's 'היא משקמת לגמרי פוקימון שהתעלף' (`data/maps/BlackthornCity_Mart_hns/scripts.inc:13-14`): Q166 keeps the active משקם, and Q172 the nurse's 'שיקמנו'; the proposed 'מחייה … עם כל הנ”ח' could attach to the fainting. Also kept, on a second reading: the sigh 'אנחה' (the Easy Chat word SIGH), the decided Q167 and Q172 lines, Route 31's 'מנוחה' joke, the puns that land in Hebrew (מבריק, שכשוך), 'החיתוך של הסייטר' (a noun), Kurt's plural lines (the name buffer is singular, so a count-free label is the text-only form; `bufferitemnameplural` would let the plural read 'הכנתי לך', a script change left for the owner), the academy's general נתונים, 'טיפים למאמנים', and Mom's and Elm's calls.
+- `audit.py` reports no error in the changed folders, and no changed line has more `\p` or `\l` than English.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The spoken lines above | 20 labels in 18 map files | None found: the same pages and presses |
+| B. Keep | No change | Calques and written words in the first hours of play |
+
+**Chosen:** A. Seen on screen on the clip ROM beside 1.0 and English: the dialogue sweep of the 23 changed labels (Kurt's line with LURE BALL in its buffer), every page shot: 0 clip records, the same pages and presses as 1.0, never more than English (`<private>/scratch/screens/r38/apply/sw/compare.txt`); Elm's Goldenrod call in its own phone box in the release tour `field_calls` ('…אני חייב לראות אותו!' inside the box).
+
+*Changed:* `data/maps/{CherrygroveCity_hns,NewBarkTown_Lab_hns,VioletCity_Gym_hns,Route29_hns,Route30_hns,Route33_hns,Route41_hns,Route19_hns,AzaleaTown_hns,AzaleaTown_KurtsHouse_hns,GoldenrodCity_hns,IlexForest_hns,Route30_MrPokemonsHouse_hns,AzaleaTown_Gym_hns,LakeOfRage_House2_hns,RocketHideout_B2F_hns}/scripts.inc`
+
+## Q182
+
+**Question.** Which of the lines a player meets in every session (shops, the bag and party menu, the nurse, the day care) still read as a translation?
+
+*Source:* round 38's reading of the shared texts and the UI strings beside English and the owner's FireRed tree (`<private>/scratch/screens/r38/system-lines/`), checked by a second reader.
+
+**Analysis.**
+
+| String | English | Before | After | Why |
+|---|---|---|---|---|
+| `gText_WontHaveEffect` (`src/strings.c:276`; 21 call sites: a Potion at full HP, a cure on a healthy Pokémon, the battle bag's refusal) | It won't have any effect. | 'לזה לא תהיה שום השפעה.' | 'זה לא ישפיע.' | לזה in English's 'It' slot; the plain spoken form is the owner's FireRed string (`pokefirered-heb src/strings.c:258`) and matches the battle's 'זה לא משפיע על…' (61 px) |
+| `gText_Var1CertainlyHowMany`, `…2` (`:242-243`, every Mart and BP purchase) | {STR_VAR_1}? Certainly. How many would you like? | 'כמה ברצונך לקנות?' | 'כמה תרצה?' | ברצונך is the written register of the Frontier attendants; a clerk says 'כמה תרצה?', FireRed's line (`:224`), the תרצה of STYLE §2 |
+| `gText_HowManyToSell` (`:269`) | How many would you like to sell? | 'כמה ברצונך למכור?' | 'כמה תרצה למכור?' | the same clerk, FireRed's sell line (`:238`) |
+| `gText_PokerusExplanation` (`data/event_scripts.s:1563-1569`, the nurse, once) | … except that they are microscopic life-forms … POKéMON are said to grow exceptionally well. | 'ידוע רק שהם יצורים…', 'גדלים בצורה יוצאת דופן' | 'ידוע רק שמדובר ביצורים…', 'גדלים טוב במיוחד' | הפוקרוס … שהם paired a singular noun with a plural pronoun; 'בצורה יוצאת דופן' can be heard as 'abnormally' in a warning about an infection; גדל, not מתפתח, which is 'evolve' here (171 px) |
+| `Route34_DayCare_Text_TakeYourMonBack` | Will you take your POKéMON back? | 'תרצה לקחת בחזרה פוקימון שלך?' | 'תרצה לקחת פוקימון בחזרה?' | the missing את ה- read like a learner's line; the line opens both with one Pokémon in care and with two (`scripts.inc:370`, `:462`), so the number-free form reads right for both (132 px) |
+
+The Pokédex line after a catch is in Q179. Kept on a second reading: the nurse's lines (the owner's FireRed wording, Q172), the PC's imperatives (FireRed's), 'יש לבחור פוקימון' (neutral UI), DESELECT 'בטל רישום' (the noun does not fit the 48 px column), 'חזרה לשטח', the how-many prompts, 'ורצית 3?', the Pokédex rating's labels (Q144), Strength's line, the held-item swap line, the battle send-out and EXP lines, the save lines, the field-move and repel lines, and the obtained-item lines.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The spoken lines above | 4 C strings, 2 script labels | None found: every line as wide or narrower, the same boxes |
+| B. Keep | No change | Written register at the Mart counter, every visit |
+
+**Chosen:** A. Seen on screen in the release tours on the new release ROM beside 1.0: 'זה לא ישפיע.' in ten shots (the bag's medicine, Ether, Rare Candy at level 100 and the cap, the vitamins at their limits, a stone, a capsule, the hardcore Revive refusals), the clerk's 'כמה תרצה?' and 'כמה תרצה למכור?' (`menu_mart`), the day-care question (`chr_17_daycare_cap`); the Pokérus explanation in the dialogue sweep on the clip ROM, 0 clip records, 3 pages as before (English 4).
+
+*Changed:* `src/strings.c`, `data/event_scripts.s`, `data/maps/Route34_DayCare_hns/scripts.inc`
+
+## Q183
+
+**Question.** Round 37's review of the redrawn art left three legibility notes: the gym sign's מכון reads ןוכא, its final nun runs into the stand's dashes, and the Pokémon Jump banners (EXCELLENT's final nun reads as a digit 1, NICE is 2 px from its rim). Do the art folders round 37 did not open hold more English on screen?
+
+*Source:* round 38's look at the round-37 notes and at every remaining art folder (`object_events`, `balls`, `berries`, `battle_environment` sheets 01-03, `map_preview` sheet 01, `graphics/pokemon`), rendered from the real layouts and tilemaps (`<private>/scratch/screens/r38/art/`), each finding checked by a second reader.
+
+**Analysis.**
+- **GYM, the plaque and the stand** (`tools/hebrew/graphics/side/do_townsigns.py`). The 3-row mem was the font's W4_7 mem cut to 3 rows: an X with a foot (`#.#. / .#.# / #.##`) that reads as alef, so the plaque read ןוכא. Of nine mems tried in place, only a box closed at the top and on the right, its top-left corner cut and its base open at the bottom left (`.### / #..# / #.##`), reads as מ at TV size: the shape of the game's small-font mem and of the fainted tag's fix; it cannot be ם, which never starts a word, and it does not close into ס. Taller letters do not fit: the plaque has rows 5-7 and the white row 8 for the descender, the stand rows 4-7 between the Poké Ball's margin and the dashes. The plaque's word moves one column right (x 6-17, margins 3 and 2 against English's 3 and 3), so the final nun's descender lands on the white row clear of the bevel's corner pixel. On the stand the descender ended on the first red dash of the fake small print below it; that one dash pixel (tile 382, x 2, row 0) becomes background, in all five Johto and Kanto primaries. Every placed metatile that uses tiles 382/383 sits right under the stand's text tiles 366/367, with no flip and no `setmetatile` reaching them.
+- **The Pokémon Jump banners** (`tools/hebrew/graphics/side/do_minigames.py`, `graphics/pokemon_jump/bonuses.png`). EXCELLENT's final nun had a digit 1's 2-px flag, the digits' height (rows 9-22) and stood 5 px from the last 0, so the banner read '+500 1'. Now the word body is 11 rows, so the nun runs 3 rows below the other letters; vav and final nun take a 1-px head past the stem; and 8 columns part the word from '+500' (a gap alone still read as a 1, no head at all as an I, a 10-row body shrank the word too far). NICE's ח, מ and ד are one column narrower and the gap one column smaller, so the group keeps the English banner's 4 columns of air from the rim (it had 2); ד keeps its 2-px overhang, which GREAT's נהדר needs to tell ד from ר. The other banners and countdown sprites are byte for byte as before. The minigame needs a second GBA; the ROM's `sBonuses_Gfx` is the compressed file of this PNG, and the bonus tilemap is unchanged.
+- **The sign glows** (new `tools/hebrew/graphics/side/do_signlights.py`). At every time of day but TIME_DAY a light sprite is drawn over the Poké Mart and Pokémon Center signs of the Emerald general tileset and blended with them (`UpdateLightSprite`, `src/event_object_movement.c:2979-3000`; `OW_ENABLE_DNS`). The English glows draw MART and P C again, pixel for pixel over the sign tiles (sprite rows 8-12 = tile rows 0-4), so in the morning, evening and at night the Battle Frontier's east side showed a glowing English word over round 37's חנות and מרכז. The glows are redrawn from the Hebrew tiles with the English glow's own mapping: a letter pixel takes the glow index the English row gives that tile index most, a background pixel keeps the English glow where the English tile was background and takes the row's main background glow where an English letter was; the halo rows and the frame stay. Light type 2 (the Mart) is placed only at the Battle Frontier's east side (21,45), type 1 (the Center) there (14,45) and at Melemele Isle (27,6), whose Johto-style sign has its letters two rows lower than the glow, as in English. The non-H&S `mart_light.png` and `poke_center_light.png` are used only in an `#else` branch and stay.
+- Kept: the P.C sign's מרכז (its ז and ר differ as the usual tiny-font pair; the sign's interior is the two tiles' 16 px, and a T-shaped ז would push the mem onto the pilaster); the Fame Checker pictures, the truck and town-map sprites (not placed in any H&S map); the people sprites (the Rocket R and the Aqua and Magma marks are logos); the overworld Pokémon, berry trees, dolls and cushions, balls and berries (no letters; the Enigma Berry's ? is a symbol); the battle backgrounds and map previews (no letters); `graphics/pokemon` (Unown's letters are the species' forms).
+- Every file is redrawn by its script from the English one and keeps the English size, depth, palette and non-pixel chunks, with no new palette index (`side/check.py`, `side/finalize.py`). A graphics commit is picked onto `he/renderer`.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The box mem and the plaque shift, the dash pixel, the two banners' metrics, the glows from the Hebrew signs | `do_townsigns.py`, `do_minigames.py`, `do_signlights.py`; 5 tilesets, `bonuses.png`, 2 glow sprites | None found: pixels only |
+| B. Keep | No change | A gym sign that reads ןוכא; English glowing over Hebrew signs at night |
+
+**Chosen:** A. Seen on screen on the new clip ROM beside 1.0 and English, with 0 clip records (`<private>/scratch/screens/r38/apply/st/`, `shots/`): the gym plaques and stands of Violet, Azalea, Goldenrod, Ecruteak, Celadon and Saffron by day, where מכון reads as the word and the stand's final nun ends above background; at 22:00 (`hns.py --rtc`), the Battle Frontier's east side, where the Mart glow lights חנות and the Center glow מרכז, against 1.0's English MART and P C glowing over the Hebrew, and Melemele Isle, where the glow sits two rows above the letters as English's does. The banners need a second GBA: the new ROM's `sBonuses_Gfx` is byte for byte the compressed file of the new `bonuses.png`, rendered through the unchanged bonus tilemap beside 1.0 and English (`shots/jump_banners_v10_new_en_4x.png`).
+
+The round's release checks, on the build of `he/fix-r38`: the 71 release tours run 71 OK on the release and clip ROMs with 0 clip records. Against 1.0, 32 of the 2,061 release shots differ, and the same 32 clip shots: 5 the Pokédex line after a catch (Q179), 2 the stat-loss line in `bv_multi` (Q179), 10 'זה לא ישפיע.' (Q182), 3 the Mart clerk (Q182), 1 the day-care question (Q182), 1 Elm's Goldenrod call (Q181), 3 TM27's bag row (Q178), and 7 an animation step that the shorter lines move (the bag's sprite twice, a summary portrait four times, a wandering NPC once). No tour shows a gym sign at night or the Jump banners. `make check`: 5,074 results, 1,899 failing, all of them known upstream failures, as 1.0 (`<private>/scratch/screens/r38/apply/tours_out/`, `check_tests.txt`).
+
+*Changed:* `data/tilesets/primary/{johto_general_hns,johto_north_east_hns,johto_north_west_hns,johto_south_hns,kanto_general_hns}/tiles.png`, `graphics/pokemon_jump/bonuses.png`, `graphics/object_events/pics/misc/{mart_light_hns,poke_center_light_hns}.png`, `tools/hebrew/graphics/side/{do_townsigns,do_minigames,do_signlights,finalize}.py`, `tools/hebrew/graphics/README.md`
 
 ## Proposed names
 
