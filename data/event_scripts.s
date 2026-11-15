@@ -1563,10 +1563,10 @@ gText_ComeBackWithSecretPower::
 gText_PokerusExplanation::
 	.string "ייתכן שהפוקימונים שלך נדבקו\n"
 	.string "בפוקרוס.\p"
-	.string "על הפוקרוס ידוע רק שהם יצורים\n"
+	.string "על הפוקרוס ידוע רק שמדובר ביצורים\n"
 	.string "מיקרוסקופיים שנצמדים לפוקימונים.\p"
 	.string "אומרים שכל עוד פוקימונים נגועים,\n"
-	.string "הם גדלים בצורה יוצאת דופן.$"
+	.string "הם גדלים טוב במיוחד.$"
 
 	.include "data/text/surf.inc"
 
