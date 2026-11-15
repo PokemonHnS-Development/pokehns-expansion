@@ -2404,7 +2404,7 @@ move,MOVE_TELEPORT,TELEPORT,השתגרות,השתגרות,inherited,FR match: co
 move,MOVE_NIGHT_SHADE,NIGHT SHADE,צל לילי,צל לילי,inherited,FR match: constant
 move,MOVE_MIMIC,MIMIC,חקיינות,חקיינות,inherited,FR match: constant
 move,MOVE_SCREECH,SCREECH,צווחה,צווחה,inherited,FR match: constant
-move,MOVE_DOUBLE_TEAM,DOUBLE TEAM,רואה כפול,רואה כפול,inherited,FR match: constant
+move,MOVE_DOUBLE_TEAM,DOUBLE TEAM,רואה כפול,כפילים,proposed,"lookalike doubles, the copies the move makes, as its description 'יוצר העתקים מדומים' (DECISIONS.md Q178): the participle phrase רואה כפול ('sees double') did not read as a name, and 'השתמש ברואה כפול' read 'used sees-double'; FireRed has רואה כפול; 29 px narrow"
 move,MOVE_RECOVER,RECOVER,החלמה,החלמה,inherited,FR match: constant
 move,MOVE_HARDEN,HARDEN,הקשחה,הקשחה,inherited,FR match: constant
 move,MOVE_MINIMIZE,MINIMIZE,צמצום,צמצום,inherited,FR match: constant
@@ -2516,7 +2516,7 @@ move,MOVE_MEAN_LOOK,MEAN LOOK,מבט אכזר,מבט אכזר,inherited,FR match
 move,MOVE_ATTRACT,ATTRACT,משיכה,משיכה,inherited,FR match: constant
 move,MOVE_SLEEP_TALK,SLEEP TALK,דיבור שינה,דיבור שינה,inherited,FR match: constant
 move,MOVE_HEAL_BELL,HEAL BELL,פעמוןמרפא,פעמון מרפא,proposed,"spacing restored (FR removed the space for its 64 px cell, FR commit 9908ae109); 52 px narrow; reviewed (the join dates from FR 091d397f4; 9908ae109 kept it)"
-move,MOVE_RETURN,RETURN,חזרה,חזרה,inherited,FR match: constant
+move,MOVE_RETURN,RETURN,חזרה,החזרת טובה,proposed,"returning a kindness, as the Japanese おんがえし: the move is stronger the more the Pokémon loves its trainer (DECISIONS.md Q178): after ב the bare חזרה read בחזרה, the Easy Chat word BACK, so 'השתמש בחזרה' read 'used back'; keeps the root of RETURN; not הכרת תודה (the category GRATITUDE); FireRed has חזרה; 52 px narrow"
 move,MOVE_PRESENT,PRESENT,מתנה,מתנה,inherited,FR match: constant
 move,MOVE_FRUSTRATION,FRUSTRATION,תסכול,תסכול,inherited,FR match: constant
 move,MOVE_SAFEGUARD,SAFEGUARD,שמירה,שמירה,inherited,FR match: constant
@@ -3323,7 +3323,7 @@ ability,ABILITY_UNBURDEN,UNBURDEN,,פריקת משא,proposed,meaning (sheds its
 ability,ABILITY_HEATPROOF,HEATPROOF,,חסין חום,proposed,"meaning; -PROOF = חסין (also BULLETPROOF); inherited SOUNDPROOF is אטום לרעש, חסין is the natural word for heat; reviewed"
 ability,ABILITY_SIMPLE,SIMPLE,,פשטות,proposed,"meaning; renamed from פשוט (DECISIONS Q165): a bare adjective, mostly read as the adverb simply; the noun, as in MOVE_SIMPLE_BEAM קרן פשטות"
 ability,ABILITY_DRY_SKIN,DRY SKIN,,עור יבש,proposed,"meaning; SKIN = עור (ROUGH SKIN, SHED SKIN); reviewed"
-ability,ABILITY_DOWNLOAD,DOWNLOAD,,הורדה,proposed,meaning; reviewed
+ability,ABILITY_DOWNLOAD,DOWNLOAD,,הורדת מידע,proposed,"meaning; renamed from הורדה (DECISIONS.md Q177): in this game הורדה is a stat drop, so 'בזכות היכולת הורדה, ההתקפה עלתה' said lowering and raising at once; הורדת מידע is the everyday download; not הורדת נתונים (נתונים are stats); reviewed"
 ability,ABILITY_IRON_FIST,IRON FIST,,אגרוף ברזל,proposed,"meaning; FIST/PUNCH = אגרוף (punch moves, FIST PLATE), IRON = ברזל (IRON TAIL); reviewed"
 ability,ABILITY_POISON_HEAL,POISON HEAL,,ריפוי ברעל,proposed,"meaning (heals by poison, not of poison); HEAL = ריפוי (FULL HEAL), POISON = רעל; reviewed"
 ability,ABILITY_ADAPTABILITY,ADAPTABILITY,,הסתגלות,proposed,meaning; reviewed
@@ -3334,7 +3334,7 @@ ability,ABILITY_QUICK_FEET,QUICK FEET,,רגליים מהירות,proposed,"meani
 ability,ABILITY_NORMALIZE,NORMALIZE,,נרמול,proposed,meaning; reviewed
 ability,ABILITY_SNIPER,SNIPER,,צלף,proposed,meaning; reviewed
 ability,ABILITY_MAGIC_GUARD,MAGIC GUARD,,משמר קסם,proposed,"meaning; GUARD = משמר (ABILITY_WONDER_GUARD משמר פלא), MAGIC = קסם (MAGIC COAT); reviewed"
-ability,ABILITY_NO_GUARD,NO GUARD,,ללא משמר,proposed,meaning; GUARD = משמר (WONDER GUARD); reviewed
+ability,ABILITY_NO_GUARD,NO GUARD,,חוסר הגנה,proposed,"meaning; renamed from ללא משמר (DECISIONS.md Q177), a prepositional phrase, not a noun, which the Ability Capsule printed as 'לללא משמר'; GUARD = הגנה, as GUARD SPEC. הגנה מיוחדת, GUARD SWAP חילוף הגנה, WIDE GUARD הגנה רחבה; pattern חוסר X (Q165: UNAWARE, MERCILESS); reviewed"
 ability,ABILITY_STALL,STALL,,השהיה,proposed,meaning (always moves last); reviewed
 ability,ABILITY_TECHNICIAN,TECHNICIAN,,טכנאי,proposed,meaning; reviewed
 ability,ABILITY_LEAF_GUARD,LEAF GUARD,,משמר עלים,proposed,"meaning; GUARD = משמר (WONDER GUARD), LEAF = עלה/עלי (RAZOR LEAF עלי להב); reviewed"
@@ -5182,7 +5182,7 @@ nature,NATURE_GENTLE,GENTLE,נעים,נעים,inherited,FR match: constant
 nature,NATURE_SASSY,SASSY,חצוף,חצוף,inherited,FR match: constant
 nature,NATURE_CAREFUL,CAREFUL,זהיר,זהיר,inherited,FR match: constant
 nature,NATURE_QUIRKY,QUIRKY,מוזר,מוזר,inherited,FR match: constant
-type,TYPE_NONE,NONE,,ללא,proposed,"meaning: ""without"", as ABILITY_NO_GUARD ללא משמר; English NONE (types_info.h:53); reviewed"
+type,TYPE_NONE,NONE,,ללא,proposed,"meaning: ""without""; English NONE (types_info.h:53); reviewed"
 type,TYPE_NORMAL,NORMAL,רגיל,רגיל,inherited,FR match: constant
 type,TYPE_FIGHTING,FIGHTING,קרב,קרב,inherited,FR match: constant TYPE_FIGHTING; English renamed since Gen 3 (FR 'FIGHT')
 type,TYPE_FLYING,FLYING,תעופה,תעופה,inherited,FR match: constant
