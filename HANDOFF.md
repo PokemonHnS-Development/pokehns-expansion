@@ -836,8 +836,8 @@ git -C <main worktree> merge --no-ff he/fix-<topic> -m "Merge he/fix-<topic>: <w
 
 - `translation/hebrew/glossary.csv`: columns `kind,constant,english,firered_hebrew,proposed_hebrew,status,notes`;
   7,133 rows, with CRLF line ends. The tools read `proposed_hebrew`.
-  - Status `inherited` (1,893) comes from the FireRed fork.
-  - Status `proposed` (5,240) is new and has not been checked against an official Hebrew source.
+  - Status `inherited` (1,891) comes from the FireRed fork.
+  - Status `proposed` (5,242) is new and has not been checked against an official Hebrew source.
     It includes the 25 inherited rows that round 20 renamed after FireRed's newer names (Q139,
     Q140); their `firered_hebrew` column still holds the form they were first taken from.
 - `translation/hebrew/glossary_sources.csv`: `kind,constant,english,source,pattern` (5,529 rows).
@@ -1902,7 +1902,7 @@ rc24's shipped `TESTING.md` byte for byte, and the old list still exits 1
 - **The radio's Pokédex Show** wraps two place names across its lines (הר / הנזר in the
   Typhlosion-H entry, נהרות / היסואי in Basculegion's). Accepted: the ticker breaks between words,
   nothing clips, and 1.0 and English split at the same places.
-- **Proposed names.** The 5,240 `proposed` glossary rows were never checked against an official
+- **Proposed names.** The 5,242 `proposed` glossary rows were never checked against an official
   Hebrew source. `namecheck.py --warnings` checks them for consistency with FireRed and for
   transliteration slips (Q140); the roughly 3,000 rows translated by meaning stay `proposed` until
   a native speaker reads them.

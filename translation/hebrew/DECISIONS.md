@@ -120,7 +120,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q178](#q178) | RETURN חזרה and DOUBLE TEAM רואה כפול read as 'used back' and 'used sees-double' after ב. | A. החזרת טובה and כפילים, each kept apart from FireRed with its reason | changed |
 | [Q179](#q179) | Battle lines in written register (נתוניו, השיב, לקדמותם) and the stats word in the Pokédex line after a catch. | A. 'הנתונים של X', 'חזרו לרגיל', 'המידע על X נוסף'; no line break English lacks | changed |
 | [Q180](#q180) | The Battle Arena referee's result lines had a page English does not have. | A. One auto-wrapped page: 'שופט: התוצאה: … ניצח הפוקימון של …' | changed |
-| [Q181](#q181) | Early-story lines that copy the English or use a written word, and the map lines with לקדמותו. | A. The spoken lines (18 map files); Blackthorn Mart's משקמת kept | changed |
+| [Q181](#q181) | Early-story lines that copy the English or use a written word, and the map lines with לקדמותו. | A. The spoken lines (16 map files); Blackthorn Mart's משקמת kept | changed |
 | [Q182](#q182) | The Mart clerk's ברצונך, 'לזה לא תהיה שום השפעה', the Pokérus explanation, the day-care question. | A. 'כמה תרצה?', 'זה לא ישפיע.', the nurse's and the day-care lady's lines in plain Hebrew | changed |
 | [Q183](#q183) | The gym sign read ןוכא, the Jump banners' final nun read as a 1, and the sign glows lit English letters over the Hebrew signs at night. | A. A box mem, the dash pixel, the banners' metrics, the glows redrawn from the Hebrew signs; the other art folders keep their art | changed |
 
@@ -3073,7 +3073,7 @@ Kept in English on purpose:
 
 | Option | How | Risk |
 |---|---|---|
-| A. The spoken lines above | 20 labels in 18 map files | None found: the same pages and presses |
+| A. The spoken lines above | 20 labels in 16 map files | None found: the same pages and presses |
 | B. Keep | No change | Calques and written words in the first hours of play |
 
 **Chosen:** A. Seen on screen on the clip ROM beside 1.0 and English: the dialogue sweep of the 23 changed labels (Kurt's line with LURE BALL in its buffer), every page shot: 0 clip records, the same pages and presses as 1.0, never more than English (`<private>/scratch/screens/r38/apply/sw/compare.txt`); Elm's Goldenrod call in its own phone box in the release tour `field_calls` ('…אני חייב לראות אותו!' inside the box).
