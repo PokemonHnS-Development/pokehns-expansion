@@ -15611,7 +15611,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "הוא שולח זרועות עשויות קנוקנות ולוכד\n"
             "בהן טרף. גם אם אחת מזרועותיו נאכלת,\n"
             "זה לא נורא. הפוקימון מתחדש במהירות\n"
-            "וחוזר מיד לקדמותו."),
+            "וחוזר מיד לרגיל."),
         .pokemonScale = 261,
         .pokemonOffset = 1,
         .trainerScale = 334,
