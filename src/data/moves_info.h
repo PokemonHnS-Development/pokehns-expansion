@@ -2841,7 +2841,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_DOUBLE_TEAM] =
     {
-        .name = COMPOUND_STRING("רואה כפול"),
+        .name = COMPOUND_STRING("כפילים"),
         .description = COMPOUND_STRING(
             "יוצר העתקים מדומים כדי\n"
             "להעלות את ההתחמקות."),
@@ -5868,7 +5868,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_RETURN] =
     {
-        .name = COMPOUND_STRING("חזרה"),
+        .name = COMPOUND_STRING("החזרת טובה"),
         .description = COMPOUND_STRING(
             "התקפה שמתחזקת ככל\n"
             "שהחברות גדולה יותר."),

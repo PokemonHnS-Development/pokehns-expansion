@@ -665,7 +665,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_DOWNLOAD] =
     {
-        .name = _("הורדה"),
+        .name = _("הורדת מידע"),
         .description = COMPOUND_STRING("מכוונן עוצמה לטובתו."),
         .aiRating = 7,
     },
@@ -742,7 +742,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_NO_GUARD] =
     {
-        .name = _("ללא משמר"),
+        .name = _("חוסר הגנה"),
         .description = COMPOUND_STRING("כל המהלכים פוגעים בוודאות."),
         .aiRating = 8,
     },
