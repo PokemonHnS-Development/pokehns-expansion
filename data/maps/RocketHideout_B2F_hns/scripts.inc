@@ -625,7 +625,7 @@ RocketHideout_B2F_Text_LanceElectrodeDone:
     .string "לאנס: האות המוזר\n"
     .string "סוף סוף נפסק.\p"
     .string "האגם אמור לחזור\n"
-    .string "לקדמותו.\p"
+    .string "להיות כמו פעם.\p"
     .string "אתה הגיבור! הרשה לי להודות לך\n"
     .string "בשם כל הפוקימונים.\p"
     .string "אה, כן. כדאי שתיקח את זה. מצאתי\n"

@@ -318,7 +318,7 @@ GoldenrodCity_Text_ElmCall:
 	.string "פרופ' אלם: הלו, {PLAYER}?\n"
 	.string "הביצה כבר בקעה?\p"
 	.string "כשהיא תבקע, אל תשכח להביא את\n"
-	.string "הפוקימון למעבדה! אני חייב לראותו!$"
+	.string "הפוקימון למעבדה! אני חייב לראות אותו!$"
 
 GoldenrodCity_Text_PokefanM:
 	.string "בנו את מגדל הרדיו החדש\n"

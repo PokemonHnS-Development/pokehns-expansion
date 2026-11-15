@@ -680,7 +680,7 @@ IlexForest_Text_CharcoalMasterIntro:
 	.string "אני יודע! הנה, קח את זה.$"
 
 IlexForest_Text_CharcoalMasterOutro:
-	.string "זה המ”נ של חיתוך. אפשר ללמד אותו\n"
+	.string "זה מ”נ חיתוך. אפשר ללמד אותו\n"
 	.string "לפוקימון כדי לפנות עצים קטנים.\p"
 	.string "כמובן, כדי להשתמש בו צריך\n"
 	.string "את תג המכון של אזייליה.$"

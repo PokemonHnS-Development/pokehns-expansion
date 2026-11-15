@@ -310,7 +310,7 @@ KurtsHouse_Text_KurtObtainedPlural:
 
 KurtsHouse_Text_KurtFinishedSingular:
 	.string "קורט: {PLAYER}!\n"
-	.string "הכדור מוכן: {STR_VAR_1}. הנה!$"
+	.string "הכנתי לך {STR_VAR_1}. הנה!$"
 
 KurtsHouse_Text_KurtObtainedSingular:
 	.string "{PLAYER} קיבל את\n"

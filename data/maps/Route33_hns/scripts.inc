@@ -65,7 +65,7 @@ Route33_Text_HikerAnthonyDunsparce:
 	.string "It's got a funny face!$"
 
 Route33_Text_Lass:
-	.string "מתנשפת, מתנשפת…\p"
+	.string "הא… הא…\p"
 	.string "המערה הזאת הייתה גדולה\n"
 	.string "ממה שציפיתי.\p"
 	.string "התעייפתי מדי מלחפש\n"

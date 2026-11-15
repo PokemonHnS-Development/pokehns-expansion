@@ -279,7 +279,7 @@ CherryGroveCity_Silver_AfterBattle::
 
 CherrygroveCity_Text_GuideGentIntro:
 	.string "אתה מאמן מתחיל, נכון?\n"
-	.string "אני רואה את זה!\p"
+	.string "רואים את זה עליך!\p"
 	.string "זה בסדר! כולם היו\n"
 	.string "מתחילים פעם!\p"
 	.string "אם תרצה, אוכל\n"

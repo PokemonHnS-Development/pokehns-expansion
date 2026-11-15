@@ -77,8 +77,8 @@ VioletGym_Text_ReceivedZephyrBadge:
 VioletGym_Text_Falkner_BadgeExplain:
 	.string "תג משב מעלה את\n"
 	.string "כוח ההתקפה של פוקימונים.\p"
-	.string "הוא גם מאפשר לפוקימונים שיכולים\n"
-	.string "ללמוד הבזק להשתמש בו בכל זמן.\p"
+	.string "הוא גם מאפשר להשתמש בהבזק בכל זמן,\n"
+	.string "אם יש לך פוקימון שיכול ללמוד אותו.\p"
 	.string "הנה, גם זה בשבילך.$"
 
 VioletGym_Text_Falkner_TMExplain:

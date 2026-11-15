@@ -189,7 +189,7 @@ MrPokemonHouse_Text_DependingOnYou:
 
 MrPokemonHouse_Text_AlwaysNewDiscoveries:
 	.string "החיים נפלאים!\n"
-	.string "תמיד יש תגליות חדשות לגלות.$"
+	.string "תמיד יש עוד משהו חדש לגלות.$"
 
 MrPokemonHouse_Text_OakIntro:
 	.string "אוק: אהה! אז אתה {PLAYER}!\p"
@@ -236,7 +236,7 @@ MrPokemonHouse_Text_GimmeTheScale:
 	.string "{PLAYER}, תסכים להחליף\n"
 	.string "אותו?\p"
 	.string "אני יכול להציע את חולק הניסיון\n"
-	.string "הקטן הזה, שקיבלתי מפרופ' אוק.$"
+	.string "הזה, שקיבלתי מפרופ' אוק.$"
 
 MrPokemonHouse_Text_Disappointed:
 	.string "זה מאכזב.\n"

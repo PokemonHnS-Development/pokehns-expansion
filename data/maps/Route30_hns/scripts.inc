@@ -168,7 +168,7 @@ Route30_Text_BugCatcherDonSeen:
 	.string "מצאתי מאמן!$"
 
 Route30_Text_BugCatcherDonBeaten:
-	.string "ארג! אתה חזק מדי!$"
+	.string "אררג! אתה חזק מדי!$"
 
 Route30_Text_BugCatcherDonAfter:
 	.string "נגמרו לי הפוכדורים\n"

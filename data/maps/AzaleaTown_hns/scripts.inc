@@ -416,7 +416,7 @@ AzaleaTown_Text_Kurt3:
 AzaleaTown_Text_Sign:
 	.string "העיירה אזייליה\p"
 	.string "כאן אנשים ופוקימונים חיים\n"
-	.string "בהרמוניה שמחה.$"
+	.string "יחד בשמחה ובהרמוניה.$"
 
 AzaleaTown_Text_KurtsHouseSign:
 	.string "הבית של קורט$"
@@ -434,7 +434,7 @@ AzaleaTown_Text_SlowpokeWellSign:
 	.string "המקומיים מאמינים שפיהוק\n"
 	.string "של סלופוק מזמן גשם.\p"
 	.string "לפי הרשומות, פיהוק של סלופוק\n"
-	.string "סיים בצורת לפני 400 שנה.$"
+	.string "שם קץ לבצורת לפני 400 שנה.$"
 
 AzaleaTown_Text_CharcoalKilnSign:
 	.string "כבשן הפחם$"
