@@ -123,6 +123,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q181](#q181) | Early-story lines that copy the English or use a written word, and the map lines with לקדמותו. | A. The spoken lines (16 map files); Blackthorn Mart's משקמת kept | changed |
 | [Q182](#q182) | The Mart clerk's ברצונך, 'לזה לא תהיה שום השפעה', the Pokérus explanation, the day-care question. | A. 'כמה תרצה?', 'זה לא ישפיע.', the nurse's and the day-care lady's lines in plain Hebrew | changed |
 | [Q183](#q183) | The gym sign read ןוכא, the Jump banners' final nun read as a 1, and the sign glows lit English letters over the Hebrew signs at night. | A. A box mem, the dash pixel, the banners' metrics, the glows redrawn from the Hebrew signs; the other art folders keep their art | changed |
+| [Q184](#q184) | After a RetroArch save state the game came back on a white screen of lists that read as scrambled: the battle debug menu, laid out in English order. | A. Mirror the debug menu's screen in the Hebrew build; the menu stays on, as in English | changed |
 
 ## K1
 
@@ -3130,6 +3131,27 @@ The Pokédex line after a catch is in Q179. Kept on a second reading: the nurse'
 The round's release checks, on the build of `he/fix-r38`: the 71 release tours run 71 OK on the release and clip ROMs with 0 clip records. Against 1.0, 32 of the 2,061 release shots differ, and the same 32 clip shots: 5 the Pokédex line after a catch (Q179), 2 the stat-loss line in `bv_multi` (Q179), 10 'זה לא ישפיע.' (Q182), 3 the Mart clerk (Q182), 1 the day-care question (Q182), 1 Elm's Goldenrod call (Q181), 3 TM27's bag row (Q178), and 7 an animation step that the shorter lines move (the bag's sprite twice, a summary portrait four times, a wandering NPC once). No tour shows a gym sign at night or the Jump banners. `make check`: 5,074 results, 1,899 failing, all of them known upstream failures, as 1.0 (`<private>/scratch/screens/r38/apply/tours_out/`, `check_tests.txt`).
 
 *Changed:* `data/tilesets/primary/{johto_general_hns,johto_north_east_hns,johto_north_west_hns,johto_south_hns,kanto_general_hns}/tiles.png`, `graphics/pokemon_jump/bonuses.png`, `graphics/object_events/pics/misc/{mart_light_hns,poke_center_light_hns}.png`, `tools/hebrew/graphics/side/{do_townsigns,do_minigames,do_signlights,finalize}.py`, `tools/hebrew/graphics/README.md`
+
+## Q184
+
+**Question.** The owner: after saving a state in RetroArch on the Shield, the game comes back on a white screen with scrambled letters; opening the menu again and choosing Resume brings the game back. Fix the game, keep the debug menu working for everyone, no workarounds.
+
+*Source:* the owner, with the Shield's own save state, after rc34.
+
+**Analysis.**
+- Reproduced in RetroArch on the Android emulator with the Shield's own mGBA core (from its core backup), its `retroarch.cfg`, the 1.0 ROM and the owner's save. The Shield opens RetroArch's menu with START+SELECT. A hand presses SELECT a moment before START, so in a battle the game reads SELECT at the action menu and opens the battle debug menu (`DEBUG_BATTLE_MENU`, TRUE in English too, `src/battle_controller_player.c:398`) behind RetroArch's menu. Save State resumes into it. Opening RetroArch's menu again sends SELECT once more, which closes the debug menu (`src/battle_debug.c`, `Task_DebugMenuProcessInput`), and Resume shows the battle. The owner's save state holds exactly this screen. Saving a state does not change the game: the frames before and after a save are the same.
+- The screen is not corrupted; English draws the same white screen. But the Hebrew one kept English's window places while each window mirrored its own rows: the main list stood in the middle, its secondary list at the right edge and the value editor between them, so the screen read backwards, right to left. On the AI pages the foe's picture and the small icons kept their English places beside mirrored columns.
+- Mirrored places (tiles of 8 px, screen 30 tiles): main list 20 (English 1), secondary list 0 with its rows right-aligned in the first 18 tiles, 2 tiles short of the main list as English's start 2 tiles after it (English 12), value editor 1 (English 25; its digits stay left to right, the arrows over the first digit at x 15), the battler's name 6 (English 10); the AI score page's icons and picture mirrored in its 30-tile window, the AI info page's picture in its 27-tile window.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Mirror the debug menu's screen in the Hebrew build | the window templates and sprite places in `src/battle_debug.c` under `TEXT_RTL` (an engine commit, picked onto `he/renderer`) | None for the English build: every change is under `TEXT_RTL` |
+| B. Turn the debug menu off in the Hebrew build | `DEBUG_BATTLE_MENU` follows `!TEXT_RTL` | The owner wants the menu working, as in English |
+| C. Change RetroArch's menu combo, or make SELECT a long press | the Shield's settings, or the trigger | Workarounds; the owner asked for none |
+
+**Chosen:** A. The 61 shots of the `btw_debug_menu` tour beside English and English mirrored: every page reads right to left with English's places mirrored; 0 clip records on the clip ROM, as rc34. Built with `TEXT_RTL` FALSE before and after the commit, the English ROMs differ in 8 bytes, the line numbers of four `src/battle_debug.c` assert sites, and `nm -S` lists the same symbols and sizes (`<private>/scratch/screens/r39/engproof/PROOF.md`).
+
+*Changed:* `src/battle_debug.c` (engine)
 
 ## Proposed names
 
