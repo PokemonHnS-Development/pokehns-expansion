@@ -519,10 +519,17 @@ static const struct ListMenuTemplate sSecondaryListTemplate =
 };
 
 
+// The Hebrew build reads the screen right to left: the main list at the right edge, the secondary
+// list to its left, the value editor at the left edge and the battler's name above, each the
+// mirror of the English place.
 static const struct WindowTemplate sMainListWindowTemplate =
 {
     .bg = 0,
+#if TEXT_RTL
+    .tilemapLeft = 20,
+#else
     .tilemapLeft = 1,
+#endif
     .tilemapTop = 3,
     .width = 9,
     .height = 12,
@@ -533,7 +540,11 @@ static const struct WindowTemplate sMainListWindowTemplate =
 static const struct WindowTemplate sSecondaryListWindowTemplate =
 {
     .bg = 0,
+#if TEXT_RTL
+    .tilemapLeft = 0,
+#else
     .tilemapLeft = 12,
+#endif
     .tilemapTop = 3,
     .width = 20,
     .height = 16,
@@ -545,9 +556,7 @@ static const struct WindowTemplate sModifyWindowTemplate =
 {
     .bg = 0,
 #if TEXT_RTL
-    // The mirror of the English spot inside the secondary list's visible 18 tiles, so it does not
-    // cover the right end of row 0, where the right-aligned rows start.
-    .tilemapLeft = 13,
+    .tilemapLeft = 1,
 #else
     .tilemapLeft = 25,
 #endif
@@ -561,7 +570,11 @@ static const struct WindowTemplate sModifyWindowTemplate =
 static const struct WindowTemplate sBattlerWindowTemplate =
 {
     .bg = 0,
+#if TEXT_RTL
+    .tilemapLeft = 6,
+#else
     .tilemapLeft = 10,
+#endif
     .tilemapTop = 0,
     .width = 14,
     .height = 2,
@@ -834,7 +847,13 @@ static void Task_ShowAiPoints(u8 taskId)
             {
                 data->spriteIds.aiIconSpriteIds[i] = CreateMonIcon(gBattleMons[i].species,
                                                          SpriteCallbackDummy,
+#if TEXT_RTL
+                                                         // Mirrored with the 30-tile text window,
+                                                         // above the battler's mirrored column.
+                                                         30 * 8 - (106 + (count * 54)), 17, 0, 0);
+#else
                                                          106 + (count * 54), 17, 0, 0);
+#endif
                 gSprites[data->spriteIds.aiIconSpriteIds[i]].data[0] = i; // battler id
                 count++;
             }
@@ -849,7 +868,11 @@ static void Task_ShowAiPoints(u8 taskId)
                                                  GetMonData(mon, MON_DATA_IS_SHINY),
                                                  gBattleMons[data->aiBattlerId].personality,
                                                  TRUE,
+#if TEXT_RTL
+                                                 30 * 8 - 39, 135, 15, TAG_NONE);
+#else
                                                  39, 135, 15, TAG_NONE);
+#endif
         data->aiViewState++;
         break;
     // Put text
@@ -1036,7 +1059,11 @@ static void Task_ShowAiKnowledge(u8 taskId)
                                                  GetMonData(mon, MON_DATA_IS_SHINY),
                                                  gBattleMons[data->aiBattlerId].personality,
                                                  TRUE,
+#if TEXT_RTL
+                                                 27 * 8 - 39, 130, 15, TAG_NONE);
+#else
                                                  39, 130, 15, TAG_NONE);
+#endif
         data->aiViewState++;
         break;
     // Put text
@@ -1275,8 +1302,8 @@ static void Task_DebugMenuProcessInput(u8 taskId)
             RemoveWindow(data->modifyWindowId);
             DestroyModifyArrows(data);
 #if TEXT_RTL
-            // The cleared frame around the mirrored modify window runs over the battler window's
-            // bottom row and the left end of the secondary list's first row: put both back.
+            // The cleared frame around the modify window runs over the left end of the secondary
+            // list's first rows: put the windows back.
             PutWindowTilemap(data->battlerWindowId);
             PutWindowTilemap(data->secondaryListWindowId);
             CopyBgTilemapBufferToVram(0);
@@ -1443,8 +1470,8 @@ static void CreateSecondaryListMenu(struct BattleDebugMenu *data)
     data->secondaryListItemCount = itemsCount;
     data->secondaryListWindowId = AddWindow(&winTemplate);
 #if TEXT_RTL
-    // The window runs 2 tiles past the screen's right edge: mirror the rows and the cursor inside
-    // the 18 tiles that are on screen.
+    // Mirror the rows and the cursor inside the window's first 18 tiles, so they end 2 tiles short
+    // of the main list, as the English rows start 2 tiles after it.
     SetWindowRtlMirrorWidth(data->secondaryListWindowId, 18 * 8);
 #endif
 
@@ -1914,9 +1941,9 @@ static void SetUpModifyArrows(struct BattleDebugMenu *data)
 {
     LoadSpritePalette(&gSpritePalette_Arrow);
 #if TEXT_RTL
-    // Over the first digit of the modify window, which is mirrored to tile 13.
-    data->modifyArrows.arrowSpriteId[0] = CreateSprite(&gSpriteTemplate_Arrow, 111, 12, 0);
-    data->modifyArrows.arrowSpriteId[1] = CreateSprite(&gSpriteTemplate_Arrow, 111, 36, 0);
+    // Over the first digit of the modify window, which is mirrored to tile 1.
+    data->modifyArrows.arrowSpriteId[0] = CreateSprite(&gSpriteTemplate_Arrow, 15, 12, 0);
+    data->modifyArrows.arrowSpriteId[1] = CreateSprite(&gSpriteTemplate_Arrow, 15, 36, 0);
 #else
     data->modifyArrows.arrowSpriteId[0] = CreateSprite(&gSpriteTemplate_Arrow, 207, 12, 0);
     data->modifyArrows.arrowSpriteId[1] = CreateSprite(&gSpriteTemplate_Arrow, 207, 36, 0);

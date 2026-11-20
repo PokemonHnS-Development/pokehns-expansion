@@ -30,7 +30,7 @@ fresh clone.
 | [`tools/hebrew/release/README.md`](tools/hebrew/release/README.md) | the release scripts; [`REVIEW.md`](tools/hebrew/release/REVIEW.md) there is the screenshot review |
 | [`tools/hebrew/testmsgs/README.md`](tools/hebrew/testmsgs/README.md) | the Hebrew battle-test message table |
 | [`translation/hebrew/STYLE.md`](translation/hebrew/STYLE.md) | the binding style rules |
-| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 113 recorded decisions, up to Q183, and the names review |
+| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 114 recorded decisions, up to Q184, and the names review |
 | [`translation/hebrew/transliteration_rules.md`](translation/hebrew/transliteration_rules.md) | how names are transliterated |
 | [`translation/hebrew/STATUS.md`](translation/hebrew/STATUS.md) | per-file state (generated) |
 | [`translation/hebrew/glossary.csv`](translation/hebrew/glossary.csv) | every name and fixed term |
@@ -251,6 +251,8 @@ FALSE, the English ROM is byte for byte the same before and after the Easy Chat 
 four summary-screen literals that point at anonymous data the graphics moved
 (`<private>/scratch/screens/r38/apply/engproof/PROOF.md`). Against `he/renderer` `96ab0ccdd5`,
 drift prints `708 files, 0 FAIL`.
+
+**Picked (round 39).** `e422268340` (on `he/fix-r39`), on `he/renderer` as `07ddec22d5` with its source's patch-id: the battle debug menu's screen mirrored in the Hebrew build (`DECISIONS.md` Q184; the window templates and sprite places of `src/battle_debug.c` under `TEXT_RTL`). Built with `TEXT_RTL` FALSE before and after, the English ROMs differ in 8 bytes, the line numbers of four assert sites in `src/battle_debug.c`, and `nm -S` lists the same symbols and sizes (`<private>/scratch/screens/r39/engproof/PROOF.md`).
 
 **Checking a pick with an English build.** Build `he/renderer` before and after the picks with
 `TEXT_RTL` set to FALSE (`include/config/text.h:20`, in a scratch worktree) and `make hns`, and
