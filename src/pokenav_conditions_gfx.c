@@ -30,7 +30,7 @@ static const u32 sConditionGraphData_Gfx[] = INCBIN_U32("graphics/pokenav/condit
 static const u32 sConditionGraphData_Tilemap[] = INCBIN_U32("graphics/pokenav/condition/graph_data.bin.smolTM");
 static const u16 sMonMarkings_Pal[] = INCBIN_U16("graphics/pokenav/condition/mon_markings.gbapal");
 
-static const u8 gText_Number2[] = _("No. ");
+static const u8 gText_Number2[] = _("מס' ");
 
 static const struct BgTemplate sMenuBgTemplates[3] =
 {
@@ -680,7 +680,13 @@ static void CreateMonMarkingsOrPokeballIndicators(void)
         BufferMonMarkingsMenuTiles();
         sprite = CreateMonMarkingAllCombosSprite(TAG_CONDITION_MON_MARKINGS, TAG_CONDITION_MON_MARKINGS, sMonMarkings_Pal);
         sprite->oam.priority = 3;
+#if TEXT_RTL
+        // The location under the name is right-aligned in the mirrored name window (x 104-208),
+        // where the English markings stand; mirror the markings inside that window too.
+        sprite->x = 120;
+#else
         sprite->x = 192;
+#endif
         sprite->y = 32;
         sprite->callback = MonMarkingsCallback;
         menu->monMarksSprite = sprite;

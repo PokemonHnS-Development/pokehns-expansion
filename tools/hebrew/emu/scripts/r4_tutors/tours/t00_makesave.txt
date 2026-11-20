@@ -1,0 +1,8 @@
+# The tutor party of _party.inc saved with the game's save (Mt. Silver Pokemon Center, from the ladder 6
+# copy), exported as save:r4t_party. Nicknames are written in the language of the ROM that runs this
+# (the species name), so make one per ROM: saves_screens/r4_tutors/r4t_party_he.sav / _en.sav.
+# The other tours do not need it: each builds the same party in RAM.
+start saves/ladder6_postgame_copy.sav
+include _setup.txt
+savegame
+keepsave r4t_party

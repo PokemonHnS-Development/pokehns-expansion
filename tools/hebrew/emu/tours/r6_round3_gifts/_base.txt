@@ -1,0 +1,4 @@
+# r6 round-3 named / prize gift Pokemon tours: base include (not a tour). r6r3_gifts_base.sav is a
+# byte copy of ladder 4 (saves/ladder4_league.sav) -> CONTINUE -> FAST BATTLES off.
+include ../../scripts/continue.txt
+fastbattles off

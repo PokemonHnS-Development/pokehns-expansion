@@ -1,0 +1,59 @@
+# Dragon's Den shrine, the elder (6,9): DragonsDen_Shrine_EventScript_Elder
+# (DragonsDen_Shrine_hns/scripts.inc:9-15, 410-445), VAR_BLACKTHORN_CITY_STATE 5 (ladder 4).
+# Special branch (VAR_DRAGONS_DEN_QUIZ 0), party of one: TakeThisDratini, givenamedmon 4 (shiny
+# Adamant Dratini), 'received', SymbolicDragon; talking again -> AlreadyGotDratini; the summary.
+# Basic branch (quiz 1), party of one: givemon Lv 15, Common_EventScript_GiftMon (received, nickname
+# YES/NO -> NO); from a savestate, YES -> naming screen. Basic branch with a full party: the PC
+# branch. Special branch with a full party: PartyIsFull.
+start saves/r6r3_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+ev setvar VAR_DRAGONS_DEN_QUIZ, 0; clearflag FLAG_GOT_DRATINI; end
+warpto MAP_DRAGONS_DEN_SHRINE_HNS 6 10
+face UP
+snap dr_field
+tap A 4
+scene dr_sp 15000
+snap dr_sp_free
+face UP
+tap A 4
+scene dr_again 6000
+snap dr_again_end
+include _summary2.txt
+# basic branch, party of one
+ev file _solo.inc
+ev setvar VAR_DRAGONS_DEN_QUIZ, 1; clearflag FLAG_GOT_DRATINI; end
+face UP
+tap A 4
+scene dr_basic 15000
+ss dr_nick
+pickd 1
+scene dr_basic_no 8000
+snap dr_basic_end
+sl dr_nick
+pickd 0
+waitcb2x CB2_NamingScreen 1200
+waitnaming
+snap dr_naming
+press START
+waitnaming
+press A
+waitcb2x CB2_Overworld 900
+scene dr_basic_yes 8000
+snap dr_basic_yes_end
+# basic branch, full party -> PC
+ev file _full.inc
+ev setvar VAR_DRAGONS_DEN_QUIZ, 1; clearflag FLAG_GOT_DRATINI; end
+face UP
+tap A 4
+scene dr_bpc 15000
+pickd 1
+scene dr_bpc_no 12000
+snap dr_bpc_end
+# special branch, full party -> PartyIsFull
+ev file _full.inc
+ev setvar VAR_DRAGONS_DEN_QUIZ, 0; clearflag FLAG_GOT_DRATINI; end
+face UP
+tap A 4
+scene dr_spf 15000
+snap dr_spf_end

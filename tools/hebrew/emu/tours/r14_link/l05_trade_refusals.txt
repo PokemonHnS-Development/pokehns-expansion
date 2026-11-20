@@ -1,0 +1,44 @@
+# Trade screen refusals that depend on the parties (src/trade.c CanTradeSelectedMon :2384). The partner has no
+# National Pokedex (gLinkPlayers[1].progressFlagsCopy & 0xF == 0, +0x2E), so the player may not send an Egg
+# (CANT_TRADE_PARTNER_EGG_YET -> gText_EggCantBeTradedNow); a species with cannotBeTraded (EEVEE_STARTER) gives
+# CANT_TRADE_INVALID_MON -> gText_PkmnCantBeTradedNow. Player party: PIKACHU, an Egg, EEVEE_STARTER.
+start saves/r14/link/base.sav
+include ../../scripts/continue.txt
+ev callnative ZeroPlayerPartyMons; special CalculatePlayerPartyCount; givemon SPECIES_VOLCANION, 70; givemon SPECIES_SQUAWKABILLY, 31; givemon SPECIES_CROBAT, 45; end
+stashparty partner
+otname partner he:דנה,en:DANA
+ev callnative ZeroPlayerPartyMons; special CalculatePlayerPartyCount; givemon SPECIES_PIKACHU, 5; end
+giveegg SPECIES_TOGEPI
+ev givemon SPECIES_EEVEE_STARTER, 5; end
+partyinfo
+linkplayers he:דנה,en:DANA 1
+w8 @gLinkPlayers+2E@ 0
+include _trade_enter.txt
+snap r01_menu
+# the Egg (slot 1): TRADE
+tap RIGHT 6
+tap A 6
+waitquiet
+tap DOWN 6
+tap A 6
+waitquiet
+20 -
+snap r02_egg_refused
+tap A 6
+waitquiet
+20 -
+# EEVEE_STARTER (slot 2, cannotBeTraded): 1 LEFT -> 0, 0 DOWN -> 2
+tap LEFT 6
+tap DOWN 6
+ptrread sTradeMenu 35 1
+tap A 6
+waitquiet
+tap DOWN 6
+tap A 6
+waitquiet
+20 -
+snap r03_partner_eevee_refused
+tap A 6
+waitquiet
+20 -
+snap r04_back

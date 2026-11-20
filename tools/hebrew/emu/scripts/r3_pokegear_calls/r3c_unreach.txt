@@ -1,0 +1,23 @@
+# The three national rating tiers the obtainable dex cannot reach (the count is Complete from
+# about 418 caught, src/birch_pc.c:137-196; r3c_elm shows <435 up to 416 and Complete at 420), shown
+# with a scripted pokenavcall in the field call box, which has the PokeGear call window's geometry
+# (28 tiles, text at x 32).
+start saves/r3_calls/base.sav
+include ../continue.txt
+warpto MAP_CHERRYGROVE_CITY_HNS 25 9
+waitctl 600
+evstart lockall; pokenavcall gNationalDexRatingText_LessThan465; waitmessage; delay 30; releaseall; end
+waitkey 900
+pages u_n_lessthan465 10
+snap u_n_lessthan465_last
+waitctl 900 B
+evstart lockall; pokenavcall gNationalDexRatingText_LessThan475; waitmessage; delay 30; releaseall; end
+waitkey 900
+pages u_n_lessthan475 10
+snap u_n_lessthan475_last
+waitctl 900 B
+evstart lockall; pokenavcall gNationalDexRatingText_LessThanMaxDex; waitmessage; delay 30; releaseall; end
+waitkey 900
+pages u_n_lessthanmaxdex 10
+snap u_n_lessthanmaxdex_last
+waitctl 900 B

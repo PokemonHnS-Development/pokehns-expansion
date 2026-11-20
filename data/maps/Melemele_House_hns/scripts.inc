@@ -17,10 +17,10 @@ Alola_Melemele_Pokecenter_EventScript_Swimmer::
 	end
 
 Alola_Melemele_Pokecenter_Text_Swimmer:
-	.string "Ah, it's so hard to keep these\n"
-	.string "isles straight!\p"
-	.string "I always seem to mix them up!\p"
-	.string "Thank goodness for this map!$"
+	.string "אה, כל כך קשה לזכור\n"
+	.string "איזה אי זה איזה!\p"
+	.string "אני תמיד מתבלבלת ביניהם!\p"
+	.string "תודה לאל על המפה הזאת!$"
 
 Alola_Melemele_Pokecenter_Map::
 	lockall
@@ -70,16 +70,16 @@ Alola_Melemele_Pokecenter_BugCatcher_Movement_0:
 	step_end
 
 Alola_Melemele_Pokecenter_AceTrainer_Text_0:
-	.string "There are so many unique POKéMON here!\n"
-	.string "I'm gonna catch 'em all!$"
+	.string "יש כאן כל כך הרבה פוקימונים ייחודיים!\n"
+	.string "אני הולכת לתפוס את כולם!$"
 
 Alola_Melemele_Pokecenter_BugCatcher_Text_0:
-	.string "I found some brand new POKéMON\n"
-	.string "here on the ISLES!\p"
-	.string "Like my new friend RATTATA here!$"
+	.string "מצאתי כאן באיים כמה\n"
+	.string "פוקימונים חדשים לגמרי!\p"
+	.string "כמו החבר החדש שלי, רטטה!$"
 
 Alola_Melemele_Pokecenter_Grubbin_Text_0:
-	.string "Grrr!$"
+	.string "גררר!$"
 
 
 @ Jessica's Paldean Tauros trade. Which Tauros she offers depends on the
@@ -153,20 +153,21 @@ Alola_Melemele_Pokecenter_Jessica_TradeCompleted::
 	end
 
 Alola_Melemele_Pokecenter_Jessica_Text_WantToTrade:
-	.string "The {STR_VAR_2} out here aren't like\n"
-	.string "the ones on the mainland.\p"
-	.string "Want to trade for my {STR_VAR_2}?$"
+	.string "ה{STR_VAR_2} שחיים כאן שונים\n"
+	.string "מאלה שביבשה.\p"
+	.string "רוצה להחליף פוקימון\n"
+	.string "ב{STR_VAR_2} שלי?$"
 
 Alola_Melemele_Pokecenter_Jessica_Text_TakeCare:
-	.string "Thanks!\n"
-	.string "TORY, you take care!$"
+	.string "תודה!\n"
+	.string "טורי, שמור על עצמך!$"
 
 Alola_Melemele_Pokecenter_Jessica_Text_DeclineTrade:
-	.string "You don't want to trade? Aww...$"
+	.string "לא רוצה להחליף? אוי, חבל…$"
 
 Alola_Melemele_Pokecenter_Jessica_Text_TradeCompleted:
-	.string "Hi, how's my old TORY doing?$"
+	.string "היי, מה שלום טורי שלי לשעבר?$"
 
 Alola_Melemele_Pokecenter_Map_Text_0:
-	.string "{PLAYER} took a closer look at the\n"
-	.string "ALOLA ISLES map.$"
+	.string "{PLAYER} התבונן מקרוב\n"
+	.string "במפת איי אלולה.$"

@@ -1,0 +1,9 @@
+# Celadon 2F: VioletCity_Mart_EventScript_Clerk (badge list) (MAP_CELADON_CITY_DEPARTMENT_STORE_2F_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_CELADON_CITY_DEPARTMENT_STORE_2F_HNS
+clerk 12 11 m14_hi
+buyopen m14_buy
+listshots m14_list
+buyclose m14_menu
+shopquit m14_bye

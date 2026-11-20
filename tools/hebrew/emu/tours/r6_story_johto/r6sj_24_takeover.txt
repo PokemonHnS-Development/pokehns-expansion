@@ -1,0 +1,85 @@
+# Radio Tower takeover (s4c_radiotower.inc sources): 1F Grunt 2 (RadioTower1F_EventScript_Grunt:
+# seen, trainerbattle_no_intro TRAINER_GRUNT_2_HNS, after); the 5F fake director Petrel at (11,9)
+# (GoldenrodCity_RadioTower_5F_EventScript_Petrel: TRAINER_PETREL_2_HNS, Basement Key); the
+# Underground switch panels (Panel1 on, Panel1 off, Panel2, Panel3); rival battle 4
+# (SilverTriggerTop (26,5), VAR_GOLDENROD_CITY_STATE 8, VAR_STARTER_MON 1); the Card Key
+# (GoldenrodCity_UndergroundStorage_EventScript_Director, then Director2); Ariana (28,10,
+# trainerbattle_single TRAINER_ARIANA_2_HNS) with her Full Restore (bitem: foe at 1/8 HP, player
+# Splash) and her after line; Archer (25,12) and the director's Rainbow Wing (WingBot, Ho-Oh run);
+# then the Silver Wing branch (WingTop with VAR_LUGIA_OR_HOOH 1). Ladder 3 + the s4b tail state
+# (VAR_GOLDENROD_CITY_STATE 6, FLAG_HIDE_GOLDENROD_ROCKETS clear).
+start saves/r6sj_ladder3_ecruteak.sav
+include _base.txt
+include _mewtwo.txt
+ev setvar VAR_LUGIA_OR_HOOH, 2; setvar VAR_MAHOGANY_TOWN_STATE, 16; setvar VAR_GOLDENROD_CITY_STATE, 6; clearflag FLAG_HIDE_GOLDENROD_ROCKETS; setflag FLAG_HIDE_GOLDENROD_ROCKET_SCOUT; setflag FLAG_HIDE_GOLDENROD_NPCS; clearflag FLAG_HIDE_ROCKET_GOLDENROD_RADIOTOWER_1; setvar VAR_STARTER_MON, 1; end
+warpto MAP_GOLDENROD_CITY_RADIO_TOWER_1F_HNS 22 6
+snap g2_room
+face UP
+tap A 4
+scene g2_pre 10000
+bwalk g2_intro input:HandleInputChooseAction
+bwin g2_win
+scene g2_after 20000 40
+snap g2_end
+warpto MAP_GOLDENROD_CITY_RADIO_TOWER_5F_HNS 11 10
+snap pe_room
+face UP
+tap A 4
+scene pe_pre 20000
+bwalk pe_intro input:HandleInputChooseAction
+bwin pe_win
+scene pe_after 20000 40
+snap pe_end
+warpto MAP_GOLDENROD_CITY_UNDERGROUND_SWITCHES_HNS 22 2
+snap sw_room
+face UP
+tap A 4
+scene sw1on 8000
+tap A 4
+scene sw1off 8000
+warpto MAP_GOLDENROD_CITY_UNDERGROUND_SWITCHES_HNS 13 2
+face UP
+tap A 4
+scene sw2 8000
+warpto MAP_GOLDENROD_CITY_UNDERGROUND_SWITCHES_HNS 5 2
+face UP
+tap A 4
+scene sw3 8000
+ev setvar VAR_GOLDENROD_CITY_STATE, 8; cleartrainerflag TRAINER_RIVAL_TOTODILE_4_HNS; end
+warpto MAP_GOLDENROD_CITY_UNDERGROUND_SWITCHES_HNS 24 5
+walkto 26 5
+scene r4_pre 20000
+bwalk r4_intro input:HandleInputChooseAction
+bwin r4_win
+scene r4_after 30000 40
+snap r4_end
+warpto MAP_GOLDENROD_CITY_UNDERGROUND_STORAGE_HNS 13 9
+face UP
+tap A 4
+scene ck 20000
+snap ck_free
+tap A 4
+scene ck_after 6000
+warpto MAP_GOLDENROD_CITY_RADIO_TOWER_5F_HNS 28 11
+snap ar_room
+face UP
+tap A 4
+scene ar_pre 10000
+bwalk ar_intro input:HandleInputChooseAction
+bitem ar_item 3
+bwin ar_win
+scene ar_post 6000
+tap A 4
+scene ar_after 6000
+warpto MAP_GOLDENROD_CITY_RADIO_TOWER_5F_HNS 25 13
+face UP
+tap A 4
+scene ac_pre 10000
+bwalk ac_intro input:HandleInputChooseAction
+bwin ac_win
+scene ac_after 40000 40
+snap ac_end
+ev setvar VAR_LUGIA_OR_HOOH, 1; end
+evstart goto GoldenrodCity_RadioTower_5F_EventScript_WingTop
+scene sw_wing 30000 40
+snap sw_wing_end

@@ -1,0 +1,50 @@
+# Berry Blender 3 (SafariZoneGate_SafariZoneEntrance_hns sign (13,7), BerryBlender_EventScript_BerryBlender3,
+# data/scripts/berry_blender.inc:390-445): three opponents named sBlenderOpponentsNames[BLENDER_MISS],
+# [BLENDER_LADDIE], [BLENDER_LASSIE] (src/berry_blender.c:1244-1252). The case holds 39 blocks and the
+# berry pocket two Oran Berries, so after the blend the case is full and 'blend another?' YES prints
+# 'your Pokeblock case is full' (CANT_PLAY_NO_PKBLCK_SPACE, :2695-2700, 2933-2942).
+# Forced stand-in for the play itself: after two shots of the running blender the progress bar value is set
+# to its maximum (sBerryBlender->progressBarValue, src/berry_blender.c:2096-2106, 2216-2221), so the game ends
+# the round and goes on to its own ranking and results.
+# Run: scripts/r16_contests/con16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_contests [--clip]
+# Save: ladder6_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+clearpocket 4                             # POCKET_BERRIES (I_COMBINE_BAG_POCKETS, include/constants/item.h:5-16)
+ev additem ITEM_POKEBLOCK_CASE, 1; additem ITEM_ORAN_BERRY, 2; end
+pokeblocks 1:10,0,0,0,0,10 fill 39
+warpto MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS 13 8
+face UP
+talk b3_ask 40
+press A
+talk b3_know 40 -
+press A
+talk b3_lets 40 -
+textwatch b3_start CB2_BagMenuRun 2000
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap b3_bag
+tap A 4
+waitquiet
+tap A 4
+waitcb2 CB2_PlayBlender 3000
+60 -
+snap b3_play_01
+300 -
+snap b3_play_02
+pw16 sBerryBlender 116 3E8                # progressBarValue = MAX_PROGRESS_BAR: the bar fills and the game ends
+waitcb2 CB2_EndBlenderGame 3000
+burst b3_endA 40 10
+snap b3_ranking
+tap A 4
+burst b3_endB 12 10
+snap b3_results
+tap A 4
+textwatch b3_made CB2_CheckPlayAgainLocal 600 A
+waitquiet
+snap b3_again_q
+tap A 4                                   # 'blend another?' YES
+burst b3_again 30 8
+tap A 4                                   # the message waits for a key
+waitctl 900
+snap b3_field

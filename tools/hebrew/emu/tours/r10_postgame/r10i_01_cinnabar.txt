@@ -1,0 +1,12 @@
+# Cinnabar Island after the League, reached by Fly (landing at the heal location in front of the
+# Pokemon Center): the island-name pop-up, the town and gym signs (Blue and Blaine are hidden here
+# in the post-game: FLAG_HIDE_CINNABAR_*), then the Pokemon Center (nurse heal YES, Chansey,
+# cooltrainer, fisher, the Explosion tutor answered NO, wall clock, bookshelves).
+start saves/r10pg_base.sav
+include _base.txt
+arrive MAP_CINNABAR_ISLAND_HNS 45 30 cin
+ss cin
+visit cin
+arrive MAP_CINNABAR_ISLAND_POKEMON_CENTER_HNS 7 7 cpc
+ss cpc
+visit cpc yes=1

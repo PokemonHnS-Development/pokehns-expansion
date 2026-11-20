@@ -1,0 +1,67 @@
+# The Pokedex Show (13 in the morning, FindStation src/pokenav_radio.c:1024-1029; morning is
+# 06:00-09:59, include/constants/rtc.h:85-86): intro, 'OAK: Today's POKEMON is <species>!', then
+# the species' Pokedex text wrapped into lines of at most 220 px / 39 bytes (WrapDexTextIntoLines
+# :580-624). clockshift moves the clock from 10:00 to 07:00. First the save's own caught list,
+# then one species at a time (dexonly): the widest wrapped line (Axew, 220 px), Latin runs
+# (Kartana 'Ultra Beast' / 'Ultra Wormhole'), decimals and grouped digits (Magneton 3.6 / 3,300,
+# Wailord 10,000), a number at a line start (Excadrill), digits mid-line (Skiploom, Rapidash),
+# names with a digit / Latin / symbol / period (Porygon2, Porygon-Z, Nidoran F, Mr. Mime,
+# Type: Null) and a two-line text (Naganadel).
+start saves/ladder4_league.sav
+include _johto.txt
+clockshift 0 -3
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiostate
+radiocycle rd_natural 12
+dexonly 610
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_610_axew 12
+dexonly 798
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_798_kartana 12
+dexonly 82
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_082_magneton 12
+dexonly 321
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_321_wailord 12
+dexonly 530
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_530_excadrill 12
+dexonly 188
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_188_skiploom 12
+dexonly 78
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_078_rapidash 12
+dexonly 233
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_233_porygon2 12
+dexonly 474
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_474_porygonz 12
+dexonly 29
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_029_nidoranf 12
+dexonly 122
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_122_mrmime 12
+dexonly 772
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_772_typenull 12
+dexonly 804
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle rd_804_naganadel 12

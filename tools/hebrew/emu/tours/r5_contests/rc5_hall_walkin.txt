@@ -1,0 +1,61 @@
+# The walk-in Contest Hall (MAP_LILYCOVE_CITY_CONTEST_HALL_HNS, the lobby's warps at (9,1) and
+# (21,1) lead here; this map's warps are at (19..20,32) and (30..31,32)): the 32 object events of
+# data/maps/LilycoveCity_ContestHall_hns/map.json (the Smart, Beauty and Cute stages: MC, judge,
+# 4 contestants, audience; Boy1, Boy2, Girl and Sailor walk around) and the 6 stage signs
+# (bg events (11,28), (15,28), (23,16), (27,16), (35,28), (39,28)). Every text page is a shot.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+warpto MAP_LILYCOVE_CITY_CONTEST_HALL_HNS 19 31
+waitnotask Task_MapNamePopUpWindow 600
+snap hall_entry
+# Smart stage (bottom left)
+readsign 11 28 sign_smart_l
+readsign 15 28 sign_smart_r
+walkto 13 27
+talknpc 4 smart_mc
+talknpc 5 smart_judge
+talknpc 6 smart_c1
+talknpc 7 smart_c2
+talknpc 8 smart_c3
+talknpc 9 smart_c4
+talknpc 10 smart_aud1
+talknpc 12 smart_aud2
+talknpc 22 smart_aud3
+talknpc 11 smart_aud4
+# Sailor (wanders near (23,26)) and Boy1 (near (30,30))
+walkto 24 29
+talknpc 32 sailor
+talknpc 1 boy1
+# Cute stage (bottom right)
+readsign 35 28 sign_cute_l
+readsign 39 28 sign_cute_r
+walkto 37 27
+talknpc 23 cute_mc
+talknpc 24 cute_judge
+talknpc 25 cute_c1
+talknpc 26 cute_c2
+talknpc 27 cute_c3
+talknpc 28 cute_c4
+talknpc 29 cute_aud1
+talknpc 31 cute_aud2
+talknpc 30 cute_aud3
+# Girl (wanders near (40,8))
+walkto 40 12
+talknpc 3 girl
+# Beauty stage (top middle)
+readsign 23 16 sign_beauty_l
+readsign 27 16 sign_beauty_r
+walkto 25 15
+talknpc 13 beauty_mc
+talknpc 14 beauty_judge
+talknpc 15 beauty_c1
+talknpc 16 beauty_c2
+talknpc 17 beauty_c3
+talknpc 18 beauty_c4
+talknpc 19 beauty_aud1
+talknpc 21 beauty_aud2
+talknpc 20 beauty_aud3
+# Boy2 (wanders near (11,7))
+walkto 16 9
+talknpc 2 boy2
+snap hall_end

@@ -430,9 +430,9 @@ CeruleanCity_Text_MakeRoomForThisCantRun::
 	.string "I can't run until I give it to you!$"
 
 CeruleanCity_Text_TrainerLifeIsToughIsntIt::
-	.string "You're a TRAINER, too?\p"
-	.string "Collecting, battling…\n"
-	.string "It's a tough life, isn't it?$"
+	.string "גם אתה מאמן?\p"
+	.string "איסוף, קרבות…\n"
+	.string "אלה חיים לא קלים, נכון?$"
 
 CeruleanCity_Text_YouCanCutDownSmallTrees::
 	.string "Did you know that you can CUT down\n"
@@ -485,16 +485,16 @@ CeruleanCity_Text_HardToControlMonsObedience::
 	.string "on your abilities as a TRAINER.$"
 
 CeruleanCity_Text_SlowbroTookSnooze::
-	.string "SLOWBRO took a snooze…$"
+	.string "סלוברו נמנם…$"
 
 CeruleanCity_Text_SlowbroLoafingAround::
-	.string "SLOWBRO is loafing around…$"
+	.string "סלוברו מתבטל…$"
 
 CeruleanCity_Text_SlowbroTurnedAway::
-	.string "SLOWBRO turned away…$"
+	.string "סלוברו הפנה את הגב…$"
 
 CeruleanCity_Text_SlowbroIgnoredOrders::
-	.string "SLOWBRO ignored orders…$"
+	.string "סלוברו התעלם מהפקודות…$"
 
 CeruleanCity_Text_WantBrightRedBicycle::
 	.string "I want a bright red bicycle.\p"
@@ -502,16 +502,15 @@ CeruleanCity_Text_WantBrightRedBicycle::
 	.string "get dirty.$"
 
 CeruleanCity_Text_ThisIsCeruleanCave::
-	.string "This is CERULEAN CAVE.\p"
-	.string "Horribly strong POKéMON live inside\n"
-	.string "there.\p"
-	.string "It takes a very special TRAINER to\n"
-	.string "be allowed inside there.\p"
-	.string "You'd have to be strong enough to\n"
-	.string "become the POKéMON LEAGUE\l"
-	.string "CHAMPION for starters.\p"
-	.string "And, you would have to have\n"
-	.string "made a great achievement.$"
+	.string "זו מערת סרוליאן.\p"
+	.string "בפנים חיים פוקימונים\n"
+	.string "חזקים להחריד.\p"
+	.string "רק מאמן מיוחד מאוד\n"
+	.string "מורשה להיכנס לשם.\p"
+	.string "קודם כול, צריך להיות חזק מספיק\n"
+	.string "כדי להיות אלוף ליגת הפוקימון.\p"
+	.string "וחוץ מזה, צריך גם\n"
+	.string "להגיע להישג גדול.$"
 
 CeruleanCity_Text_CitySign::
 	.string "CERULEAN CITY\n"
@@ -526,11 +525,11 @@ CeruleanCity_Text_TrainerTipsHeldItems::
 	.string "the holding POKéMON in battle.$"
 
 CeruleanCity_Text_BikeShopSign::
-	.string "Grass and caves handled easily!\n"
-	.string "BIKE SHOP$"
+	.string "עוברים דשא ומערות בקלות!\n"
+	.string "חנות אופניים$"
 
 CeruleanCity_Text_GymSign::
-	.string "CERULEAN CITY POKéMON GYM\n"
-	.string "LEADER: MISTY\l"
-	.string "The Tomboyish Mermaid!$"
+	.string "מכון הפוקימון של העיר סרוליאן\n"
+	.string "מנהיגה: מיסטי\p"
+	.string "בת הים הבנית!$"
 

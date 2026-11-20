@@ -1,0 +1,4 @@
+# Story state (not a tour): ladder 2 + s3a_violet_azalea.inc + the Azalea first-visit trigger
+# (rungoto AzaleaTown_EventScript_Trigger, VAR_AZALEA_TOWN_STATE 1).
+event ../../scripts/ladder/s3a_violet_azalea.inc
+rungoto AzaleaTown_EventScript_Trigger

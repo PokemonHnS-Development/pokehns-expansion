@@ -3784,6 +3784,10 @@ static u8 ReformatItemDescription(enum Item item, u8 *dest)
     u8 numLines = 1;
     u8 maxChars = 32;
     u8 *desc = (u8 *)GetItemDescription(item);
+#if RTL_STRING_REPORT
+    RtlStringReport(desc);
+#endif
+#line 3787
 
     while (*desc != EOS)
     {

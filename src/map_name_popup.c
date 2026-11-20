@@ -9,6 +9,7 @@
 #include "main.h"
 #include "menu.h"
 #include "map_name_popup.h"
+#include "overworld.h"
 #include "palette.h"
 #include "region_map.h"
 #include "rtc.h"
@@ -134,6 +135,16 @@ static const u16 sMapPopUp_PaletteTable[][16] =
     [MAPPOPUP_THEME_OCEAN_HNS]       = INCBIN_U16("graphics/map_popup/ocean_outline_hns.gbapal"),
 #endif
 };
+
+#if TEXT_RTL && IS_HNS
+// The first column right of the character drawn at the window's left end, in the rows the name
+// is printed in, for the themes whose Hebrew names are wide enough to run into it (0: centre
+// the name in the whole window). The name is centred in the part of the window right of it.
+static const u8 sMapPopUp_RtlNameLeft[ARRAY_COUNT(sMapPopUp_Table)] =
+{
+    [MAPPOPUP_THEME_TOWN_HNS] = 16,
+};
+#endif
 
 static const u16 sMapPopUp_Palette_Underwater[16] = INCBIN_U16("graphics/map_popup/underwater.gbapal");
 
@@ -505,14 +516,14 @@ static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping_BW[] =
 #endif
 };
 
-static const u8 sText_PyramidFloor1[] = _("PYRAMID FLOOR 1");
-static const u8 sText_PyramidFloor2[] = _("PYRAMID FLOOR 2");
-static const u8 sText_PyramidFloor3[] = _("PYRAMID FLOOR 3");
-static const u8 sText_PyramidFloor4[] = _("PYRAMID FLOOR 4");
-static const u8 sText_PyramidFloor5[] = _("PYRAMID FLOOR 5");
-static const u8 sText_PyramidFloor6[] = _("PYRAMID FLOOR 6");
-static const u8 sText_PyramidFloor7[] = _("PYRAMID FLOOR 7");
-static const u8 sText_Pyramid[] = _("PYRAMID");
+static const u8 sText_PyramidFloor1[] = _("פירמידה, קומה 1");
+static const u8 sText_PyramidFloor2[] = _("פירמידה, קומה 2");
+static const u8 sText_PyramidFloor3[] = _("פירמידה, קומה 3");
+static const u8 sText_PyramidFloor4[] = _("פירמידה, קומה 4");
+static const u8 sText_PyramidFloor5[] = _("פירמידה, קומה 5");
+static const u8 sText_PyramidFloor6[] = _("פירמידה, קומה 6");
+static const u8 sText_PyramidFloor7[] = _("פירמידה, קומה 7");
+static const u8 sText_Pyramid[] = _("פירמידה");
 
 static const u8 *const sBattlePyramid_MapHeaderStrings[FRONTIER_STAGES_PER_CHALLENGE + 1] =
 {
@@ -768,7 +779,14 @@ static void ShowMapNamePopUpWindow(void)
     }
     else
     {
+#if TEXT_RTL && IS_HNS
+        // The window is mirrored around its 80 px, so logical x draws the name at 80 - x - width:
+        // centring it in 80 - left px puts it in the columns left..79.
+        x = GetStringCenterAlignXOffset(FONT_NARROW, withoutPrefixPtr,
+                                        80 - sMapPopUp_RtlNameLeft[sMapSectionToThemeId[gMapHeader.regionMapSectionId]]);
+#else
         x = GetStringCenterAlignXOffset(FONT_NARROW, withoutPrefixPtr, 80);
+#endif
         AddTextPrinterParameterized(GetMapNamePopUpWindowId(), FONT_NARROW, mapDisplayHeader, x, 3, TEXT_SKIP_DRAW, NULL);
         CopyWindowToVram(GetMapNamePopUpWindowId(), COPYWIN_FULL);
     }
@@ -857,5 +875,15 @@ static void LoadMapNamePopUpWindowBg(void)
         else
             LoadPalette(sMapPopUp_PaletteTable[popUpThemeId], BG_PLTT_ID(14), sizeof(sMapPopUp_PaletteTable[0]));
         BlitBitmapToWindow(popupWindowId, sMapPopUp_Table[popUpThemeId], 0, 0, 80, 24);
+    }
+
+    // Shade the pop-up to match the overworld's current time of day. UpdatePalettesWithTime
+    // masks itself to PALETTES_MAP | PALETTES_OBJECTS so it never reaches this UI palette,
+    // hence blending slot 14 here directly. LoadPalette above left the untinted colors in
+    // both buffers, so unfaded stays clean as the blend source.
+    if (MapHasNaturalLight(gMapHeader.mapType))
+    {
+        TimeMixPalettes(1 << 14, gPlttBufferUnfaded, gPlttBufferFaded,
+                        &gTimeBlend.startBlend, &gTimeBlend.endBlend, gTimeBlend.weight);
     }
 }

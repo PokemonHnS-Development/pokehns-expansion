@@ -198,29 +198,27 @@ BattleFrontier_Lounge3_EventScript_FaceOriginalDirection_hns::
 	end
 
 BattleFrontier_Lounge3_Text_CantYouSeeWereBusyHere_hns::
-	.string "…What's that you want?\p"
-	.string "Can't you see we're kind of busy here?\n"
-	.string "Can't your business wait till later?$"
+	.string "…מה רצית?\p"
+	.string "אתה לא רואה שאנחנו די עסוקים פה?\n"
+	.string "אי אפשר לדחות את העניין שלך?$"
 
 BattleFrontier_Lounge3_Text_YouLookToughExplainGambling_hns::
-	.string "…Huh?\n"
-	.string "You look to me like a tough TRAINER.\p"
-	.string "Heheh…\n"
-	.string "Listen, I have this proposition.\p"
-	.string "We have a little group going here,\n"
-	.string "and we play a little game with what\l"
-	.string "goes on in the BATTLE FRONTIER.\p"
-	.string "The rules are really simple.\p"
-	.string "First, we pick one of the facilities\n"
-	.string "in the BATTLE FRONTIER.\p"
-	.string "Then, we each pick a different TRAINER\n"
-	.string "who's taking that facility's challenge,\l"
-	.string "and bet with our Battle Points.\p"
-	.string "The guy who bet on the TRAINER with\n"
-	.string "the best record takes all the Battle\l"
-	.string "Points in the pool.\p"
-	.string "Sounds simple, huh?\n"
-	.string "So, anyway…$"
+	.string "…מה?\n"
+	.string "אתה נראה לי מאמן קשוח.\p"
+	.string "הה-הה…\n"
+	.string "תקשיב, יש לי הצעה בשבילך.\p"
+	.string "יש לנו פה חבורה קטנה שמשחקת\n"
+	.string "משחק קטן על מה שקורה בחזית הקרב.\p"
+	.string "החוקים ממש פשוטים.\p"
+	.string "קודם כול, אנחנו בוחרים אחד\n"
+	.string "מהמתקנים בחזית הקרב.\p"
+	.string "אז כל אחד מאיתנו בוחר מאמן אחר\n"
+	.string "שמתמודד באתגר של אותו מתקן,\p"
+	.string "ומהמר עליו בנקודות קרב.\p"
+	.string "מי שהימר על המאמן עם המאזן הכי טוב\n"
+	.string "לוקח את כל נקודות הקרב שבקופה.\p"
+	.string "נשמע פשוט, נכון?\n"
+	.string "בקיצור…$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattleTowerSingle_hns::
 	.string "What I'm looking for is a TRAINER who's\n"
@@ -307,30 +305,28 @@ BattleFrontier_Lounge3_Text_ChallengeBattlePyramid_hns::
 	.string "that has that winning quality.$"
 
 BattleFrontier_Lounge3_Text_HowAboutEnteringEventForMe_hns::
-	.string "I'll see to it that you benefit, too.\n"
-	.string "So how about it?\l"
-	.string "How about entering that event for me?$"
+	.string "גם אתה תרוויח מזה, אני אדאג לכך.\n"
+	.string "נו? תתמודד באתגר הזה בשבילי?$"
 
 BattleFrontier_Lounge3_Text_SpotMeSomeBattlePoints_hns::
-	.string "All right, that's perfect.\n"
-	.string "So, uh… How about spotting me some\l"
-	.string "of your Battle Points?\p"
-	.string "Trust me, I'll show you my gratitude\n"
-	.string "afterward.$"
+	.string "מצוין, זה מושלם. אז, אה… מה דעתך\n"
+	.string "להלוות לי קצת מנקודות הקרב שלך?\p"
+	.string "סמוך עליי, אחר כך אראה לך\n"
+	.string "כמה אני אסיר תודה.$"
 
 BattleFrontier_Lounge3_Text_HowMuchCanYouSpot_hns::
-	.string "Great, great!\n"
-	.string "So, how much can you spot me?$"
+	.string "יופי, יופי!\n"
+	.string "אז כמה תוכל להלוות לי?$"
 
 BattleFrontier_Lounge3_Text_YouDontHaveEnoughPoints_hns::
-	.string "Oh, no, no, no!\n"
-	.string "You don't have enough Battle Points!\p"
-	.string "I wish you wouldn't monkey around and\n"
-	.string "waste everyone's time!$"
+	.string "אוי, לא, לא, לא!\n"
+	.string "אין לך מספיק נקודות קרב!\p"
+	.string "די לעשות שטויות ולבזבז\n"
+	.string "לכולם את הזמן!$"
 
 BattleFrontier_Lounge3_Text_ThanksOffYouGo_hns::
-	.string "Heheh! Thanks much!\n"
-	.string "So, off you go!$"
+	.string "הה-הה! תודה רבה!\n"
+	.string "אז קדימה, לדרך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleTowerSingle_hns::
 	.string "Get to the BATTLE TOWER's\n"
@@ -417,52 +413,50 @@ BattleFrontier_Lounge3_Text_GetToBattlePyramid_hns::
 	.string "Both of our futures depend on you!$"
 
 BattleFrontier_Lounge3_Text_NiceTryCantReturnPoints_hns::
-	.string "Oh, it's you…\n"
-	.string "Nice try…\p"
-	.string "I hate to break it to you, but I can't\n"
-	.string "return your Battle Points…\p"
-	.string "I guess we'll have to let it motivate\n"
-	.string "us to try harder next time!$"
+	.string "אה, זה אתה…\n"
+	.string "ניסיון יפה…\p"
+	.string "צר לי לבשר לך, אבל אני לא יכול\n"
+	.string "להחזיר לך את נקודות הקרב…\p"
+	.string "כנראה שזה פשוט ידרבן אותנו\n"
+	.string "להתאמץ יותר בפעם הבאה!$"
 
 BattleFrontier_Lounge3_Text_HelloChampHeresYourPoints_hns::
-	.string "Oh, yes!\n"
-	.string "Hello there, champ!\p"
-	.string "I knew you could!\n"
-	.string "I knew you would!\l"
-	.string "We're both big winners!\p"
-	.string "I'll return your Battle Points and,\n"
-	.string "of course, a little extra from me!$"
+	.string "אה, כן!\n"
+	.string "שלום לך, אלוף!\p"
+	.string "ידעתי שאתה מסוגל! ידעתי שתצליח!\n"
+	.string "שנינו מנצחים גדולים!\p"
+	.string "אחזיר לך את נקודות הקרב שלך,\n"
+	.string "וכמובן, גם קצת תוספת ממני!$"
 
 BattleFrontier_Lounge3_Text_ObtainedBattlePoints_hns::
-	.string "{PLAYER} obtained\n"
-	.string "{STR_VAR_1} Battle Points.$"
+	.string "{PLAYER} השיג\n"
+	.string "{STR_VAR_1} נקודות קרב.$"
 
 BattleFrontier_Lounge3_Text_ThinkOfMeForAnotherChallenge_hns::
-	.string "If you're up for another challenge,\n"
-	.string "please do think of me!$"
+	.string "אם תרצה עוד אתגר,\n"
+	.string "אל תשכח אותי!$"
 
 BattleFrontier_Lounge3_Text_NotInterested_hns::
-	.string "Not interested?! You shouldn't be\n"
-	.string "so afraid to take a chance!$"
+	.string "לא מעוניין?! אל תפחד כל כך\n"
+	.string "לקחת סיכון!$"
 
 BattleFrontier_Lounge3_Text_Oh_hns::
-	.string "Oh…$"
+	.string "אה…$"
 
 BattleFrontier_Lounge3_Text_BackedWrongTrainer_hns::
-	.string "I backed the wrong TRAINER again!\p"
-	.string "Maybe I should be battling normally\n"
-	.string "like everyone else…$"
+	.string "שוב הימרתי על המאמן הלא נכון!\p"
+	.string "אולי כדאי שאתחיל להילחם כרגיל,\n"
+	.string "כמו כולם…$"
 
 BattleFrontier_Lounge3_Text_TrainerGoodButRattled_hns::
-	.string "That TRAINER…\p"
-	.string "He's good, but he gets rattled too\n"
-	.string "easily to survive the BATTLE DOME…$"
+	.string "המאמן הזה…\p"
+	.string "הוא טוב, אבל הוא נלחץ בקלות מדי\n"
+	.string "בשביל לשרוד בכיפת הקרב…$"
 
 BattleFrontier_Lounge3_Text_KnowWinnerWhenISeeOne_hns::
-	.string "Giggle!\n"
-	.string "I know a winner when I see one!$"
+	.string "חי-חי!\n"
+	.string "אני מזהה מנצח ממבט ראשון!$"
 
 BattleFrontier_Lounge3_Text_ShouldBeTakingChallenges_hns::
-	.string "Those TRAINERS…\n"
-	.string "What are they doing?\l"
-	.string "They should be taking challenges.$"
+	.string "המאמנים האלה… מה הם עושים?\n"
+	.string "הם אמורים להתמודד באתגרים.$"

@@ -1,0 +1,144 @@
+# Bag (src/item_menu.c): every pocket, an item's description, a TM's description, the
+# item context menu (USE / GIVE / TOSS / REGISTER / CANCEL), the toss quantity selector.
+start save:menuA_base
+include ../scripts/continue.txt
+
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+snap menu_bag_pocket_01
+expect8 @gBagPosition+5@ 0                # gBagPosition.pocket (include/item_menu.h:59): ITEMS
+tap DOWN 4
+waitquiet
+snap menu_bag_items_desc_02
+
+# Context menu of the 2nd item (a feather: USE / GIVE / TOSS / CANCEL)
+tap A 4
+waitquiet
+snap menu_bag_items_context
+waittaskx Task_ItemContext_MultipleRows 60
+
+# TOSS (grid: USE GIVE / TOSS CANCEL): quantity selector, then "Throw away ...?" YES/NO
+tap DOWN 4
+tap A 4
+waittaskx item_menu:Task_ChooseHowManyToToss 300
+waitquiet
+snap menu_bag_toss_qty_01
+tap UP 4
+tap UP 4
+waitquiet
+snap menu_bag_toss_qty_03
+tap A 4
+waitquiet
+snap menu_bag_toss_confirm
+tap B 4                                   # NO
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+
+# USE on a feather opens the party menu ("Use on which POKeMON?")
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+snap menu_bag_use_party
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# GIVE opens the party menu ("Give to which POKeMON?")
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap ROWNEXT 4
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+snap menu_bag_give_party
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# SELECT: move an item (swap mode); START: sort options
+tap SELECT 4
+waittaskx Task_HandleSwappingItemsInput 120
+waitquiet
+snap menu_bag_swap
+tap B 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+tap START 4
+waitquiet
+snap menu_bag_sort
+tap B 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+
+# The other pockets (RIGHT): MEDICINE, POKE BALLS, TMs & HMs, BERRIES, KEY ITEMS
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 1
+snap menu_bag_pocket_02
+# POTION > USE on a Pokemon at full HP: "It won't have any effect."
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap menu_bag_medicine_context
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap menu_bag_medicine_use_party
+tap A 0
+waitkey 600
+snap menu_bag_medicine_no_effect
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 2
+snap menu_bag_pocket_03
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 3
+snap menu_bag_pocket_04
+tap DOWN 4                                # a second TM: its move data and description
+waitquiet
+snap menu_bag_tm_desc_02
+tap A 4
+waitquiet
+snap menu_bag_tm_context
+tap B 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 4
+snap menu_bag_pocket_05
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 5
+snap menu_bag_pocket_06
+tap A 4                                   # a key item: USE / REGISTER / CANCEL
+waitquiet
+snap menu_bag_key_context
+tap B 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

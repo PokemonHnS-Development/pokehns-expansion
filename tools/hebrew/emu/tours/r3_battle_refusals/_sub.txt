@@ -1,0 +1,5 @@
+# Include: in the battle party menu (Task_HandleChooseMonInput), cursor on a slot: A opens the
+# slot's submenu (SHIFT / SUMMARY / CANCEL, or SUMMARY / CANCEL for an Egg); wait until it reads input.
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet

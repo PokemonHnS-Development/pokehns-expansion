@@ -1,0 +1,35 @@
+# r13 Dome doubles, semifinal: OPPONENT card, the tree, READY TO START, the pick of 2, the
+# battle (won), the static tree, the final menu (state finalmenu).
+start saves/r13/dome_doubles/base.sav
+dstate load sfmenu
+pick 0
+drivex dd_sfopp cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap dd_sfopp_card
+tap B 0
+drivex dd_sfback menu 10 3000
+pick 1
+drivex dd_sftree cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+snap dd_sftree_full
+tap B 0
+drivex dd_sfback2 menu 10 3000
+pick 2
+drivex dd_sfpre task:Task_HandleChooseMonInput 30 9000
+pfx dd_sf
+include _dd_pick2.txt
+drivex dd_sfgo battle 40 12000
+domeinfo
+bwin dd_sfb 30
+drivemap dd_sfafter MAP_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM_HNS 40 12000
+domesync dumpif sfdone
+drivex dd_sfwin task:Task_HandleStaticTourneyTreeInput 30 9000
+waitquiet
+120 -
+snap dd_sfstatic
+tap A 0
+drivex dd_finalmenu menu 30 9000
+domeinfo
+dstate save finalmenu

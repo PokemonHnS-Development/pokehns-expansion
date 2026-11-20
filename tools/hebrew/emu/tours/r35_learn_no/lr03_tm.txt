@@ -1,0 +1,63 @@
+# Not learning a TM move in the field (src/party_menu.c StopLearningMovePrompt): TM24 THUNDERBOLT
+# from the bag on Ampharos (four moves), as in tours/pbi_tm.txt. "delete a move?" B -> "give up
+# learning X?" (gText_StopLearningMove2) NO -> the three pages and the question again; YES ->
+# "which move?" -> the forget-a-move page, B there -> "give up learning X?" YES -> "did not learn"
+# (gText_MoveNotLearned).
+# TM24 = THUNDERBOLT (include/constants/tms_hms.h), pocket index 23 (scroll 0x14 + cursor 3).
+# Needs a build that asks (P_ASK_MOVE_CONFIRMATION, which follows TEXT_RTL): the Hebrew one.
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+
+w8 @gBagPosition+5@ 3
+w16 @gBagPosition+E@ 3
+w16 @gBagPosition+1A@ 14
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waittaskx Task_ShowTMHMContainedMessage 300
+waitquiet
+tap A 4
+waitkey 600
+tap A 4
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 4                                   # YES: teach it
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 4                                   # Ampharos
+talk lr03_a0_wants 6 - Task_HandleReplaceMoveYesNoInput
+snap lr03_a1_delete_q
+tap B 4                                   # B: the same as NO
+waittaskx Task_HandleStopLearningMoveYesNoInput 600
+waitquiet
+snap lr03_a3_stop_box
+tap DOWN 4
+waitquiet
+snap lr03_a4_stop_box_no
+tap A 4                                   # NO: the question again
+talk lr03_b1_wants_again 6 - Task_HandleReplaceMoveYesNoInput
+snap lr03_b2_delete_q_again
+tap A 4                                   # YES
+waitkey 600
+snap lr03_b3_which
+tap A 4
+waittaskx Task_HandleReplaceMoveInput 900
+waitquiet
+snap lr03_b4_forget_page
+tap B 4                                   # leave the page without choosing
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleStopLearningMoveYesNoInput 900
+waitquiet
+snap lr03_c2_stop_box
+tap A 4                                   # YES: give up
+waitkey 600
+snap lr03_c3_not_learned
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600

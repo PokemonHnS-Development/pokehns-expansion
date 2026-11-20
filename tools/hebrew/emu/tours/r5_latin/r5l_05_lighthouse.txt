@@ -1,0 +1,35 @@
+# Olivine Lighthouse top floor: Jasmine (156,9) and Amphy (156,8) with FLAG_HIDE_LIGHTHOUSE_JASMINE clear.
+# VAR_OLIVINE_CITY_STATE 2: pharmacy + get-medicine (sets 3); 3: get-medicine 2; Amphy sick (state < 5);
+# 4 + a SecretPotion: cure? NO (I see), YES (handed over, don't be offended, how feeling, Palulu, thank
+# you, she leaves); state 5: Amphy healed.
+start saves/ladder6_postgame.sav
+include _setup.txt
+ev clearflag FLAG_HIDE_LIGHTHOUSE_JASMINE; setvar VAR_OLIVINE_CITY_STATE, 2; end
+warpto MAP_OLIVINE_CITY_LIGHTHOUSE_HNS 156 10
+face UP
+tap A 4
+fieldwatch lh_jasmine1 free 4000
+face UP
+tap A 4
+fieldwatch lh_jasmine2 free 4000
+warpto MAP_OLIVINE_CITY_LIGHTHOUSE_HNS 155 8
+face RIGHT
+tap A 4
+fieldwatch lh_amphy_sick free 4000
+ev setvar VAR_OLIVINE_CITY_STATE, 4; additem ITEM_SECRET_POTION; end
+warpto MAP_OLIVINE_CITY_LIGHTHOUSE_HNS 156 10
+face UP
+tap A 4
+fieldwatch lh_cure_ask menu 4000
+pick 1
+fieldwatch lh_cure_no free 3000
+face UP
+tap A 4
+fieldwatch lh_cure_ask2 menu 4000
+pick 0
+fieldwatch lh_cure_yes free 12000 40
+vars VAR_OLIVINE_CITY_STATE
+warpto MAP_OLIVINE_CITY_LIGHTHOUSE_HNS 155 8
+face RIGHT
+tap A 4
+fieldwatch lh_amphy_healed free 4000

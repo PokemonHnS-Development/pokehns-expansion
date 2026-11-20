@@ -61,16 +61,16 @@ SafariZoneFuchsia_Approved::
 	return
 
 SafariZoneFuchsia_Text_Attendant1:
-	.string "This area requires\n"
-	.string "SAFARI LEVEL 2.$"
+	.string "האזור הזה דורש\n"
+	.string "רמת ספארי 2.$"
 
 SafariZoneFuchsia_Text_Attendant2:
-	.string "This area requires\n"
-	.string "SAFARI LEVEL 3.$"
+	.string "האזור הזה דורש\n"
+	.string "רמת ספארי 3.$"
 
 SafariZoneFuchsia_Text_Attendant3:
-	.string "This area requires\n"
-	.string "SAFARI LEVEL 4.$"
+	.string "האזור הזה דורש\n"
+	.string "רמת ספארי 4.$"
 
 SafariZoneFuchsia_Text_Approved:
-	.string "Go right ahead.$"
+	.string "אפשר להמשיך.$"

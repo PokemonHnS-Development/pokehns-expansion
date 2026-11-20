@@ -1,0 +1,19 @@
+# The Pokedex Show with only an out-of-dex species caught: the show picks among the caught species
+# (src/pokenav_radio.c:729-765), so with dexonly it must read CROAGUNK (453, the widest 4-row Gen 4
+# entry) and then GENESECT (649, a shared_dex_text.h entry with the Latin 'Team Plasma'), wrapped by
+# WrapDexTextIntoLines (:580-624) into lines of at most 220 px. Morning show (13): clockshift moves
+# the clock from 10:00 to 07:00. Same steps and RNG seed as scripts/r2_pokegear_radio/radio_b_dexshow.txt.
+# Driver: scripts/r2_pokegear_radio/radio.py
+# Run: radio.py tour ROM OUT --tours tools/hebrew/emu/tours/r16b_dex --only '^dx_radio_dexshow$'
+# Save: ladder4_league.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder4_league.sav
+include ../../scripts/r2_pokegear_radio/_johto.txt
+clockshift 0 -3
+dexonly 453
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle dxr_453_croagunk 12
+dexonly 649
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle dxr_649_genesect 12

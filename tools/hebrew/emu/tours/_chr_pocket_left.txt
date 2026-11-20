@@ -1,0 +1,6 @@
+# Include: one bag pocket to the left, then wait until the pocket switch has finished
+# (Task_SwitchBagPocket, src/item_menu.c:1446-1520) and the list reads input again.
+tap LEFT 4
+waitnotask Task_SwitchBagPocket 300
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet

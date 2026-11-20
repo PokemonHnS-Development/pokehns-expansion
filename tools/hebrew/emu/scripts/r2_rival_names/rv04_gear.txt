@@ -1,0 +1,27 @@
+# PokeGear CALL list with the typed rival name in the save. The rival entry
+# (sMayMatchCallHeader, src/pokenav_match_call_data.c:306-314) is enabled by
+# FLAG_ENABLE_RIVAL_MATCH_CALL, which is 0 in HnS (include/constants/flags_hns.h:1495), and
+# FlagGet(0) is FALSE (src/event_data.c:236-237): this tour shows the whole list to check.
+start save:rv_named
+include ../continue.txt
+warpto MAP_NEW_BARK_TOWN_HNS 10 10
+startmenu POKEGEAR
+waitcb2x CB2_Pokenav 600
+waitnav
+snap rv_gear_main
+press DOWN                                # MAP / CALL / SWITCH OFF at this point of the story
+waitnav
+snap rv_gear_main_call
+press A
+waitnav
+snap rv_gear_call_01
+scrollshots rv_gear_call_scroll DOWN 12
+press A
+waitnav
+snap rv_gear_call_menu
+press B
+waitnav
+press B
+waitnav
+press B
+waitcb2x CB2_Overworld 900

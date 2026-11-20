@@ -1,0 +1,21 @@
+# Red at the Mt. Silver summit after the Sinjoh storyline: MtSilver_SummitDay_EventScript_Red
+# (data/maps/MtSilver_SummitDay_hns/scripts.inc:34-42) battles TRAINER_RED_POSTOBC_HNS when
+# FLAG_IS_KANTO_CHAMPION is set and VAR_SINJOH_STORYLINE >= 13 (both hold in ladder 6).
+# Party: Pikachu, Snorlax, Charizard, Venusaur (Tera Grass), Blastoise, Tauros-Paldea-Combat
+# (Tera Fighting) (src/data/trainers_hns.party:15943-16010). The AI Terastallizes without an
+# orb (src/battle_terastal.c:62-100), once per trainer. bwintera holds Venusaur and Tauros
+# for two turns each (player at full HP using Splash), so the AI gets turns to Terastallize;
+# every action menu is shot (the foe HP box with the Tera type indicator).
+start saves/r2_rival/ladder6_postgame.sav
+include ../continue.txt
+fastbattles off
+ev setflag FLAG_IS_KANTO_CHAMPION; setvar VAR_SINJOH_STORYLINE, 13; clearflag FLAG_HIDE_MTSILVER_RED; end
+warpto MAP_MT_SILVER_SUMMIT_DAY_HNS 10 7
+face UP
+snap rv_red_00_summit
+pinrng
+tap A 4
+drivex rv_red_talk battle 10
+bwintera rv_red 60 SPECIES_VENUSAUR,SPECIES_TAUROS_PALDEA_COMBAT 2
+waitkey 1200
+snap rv_red_after_01

@@ -896,11 +896,11 @@ Route110_TrickHousePuzzle5_Movement_MechadollShake:
 	step_end
 
 Route110_TrickHousePuzzle5_Text_WroteSecretCodeLockOpened:
-	.string "{PLAYER} wrote down the secret code\n"
-	.string "on the door.\p"
-	.string "“TRICK MASTER is a genius.”\n"
+	.string "{PLAYER} כתב את הקוד הסודי\n"
+	.string "על הדלת.\p"
+	.string "”אמן התעלולים גאון.”\n"
 	.string "… … … … … … … …\p"
-	.string "The lock clicked open!$"
+	.string "המנעול נפתח בנקישה!$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll1Intro:
 	.string "CLICKETY-CLACK…\n"

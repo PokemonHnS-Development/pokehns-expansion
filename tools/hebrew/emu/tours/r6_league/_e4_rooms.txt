@@ -1,0 +1,71 @@
+# Elite Four run (not a tour): from the Indigo Plateau Pokemon Center through the door to Will's
+# room, then Will, Koga, Bruno, Karen and Lance. Each room: the ON_FRAME door script
+# (EliteFourRoom_CloseDoor: walk up 2, door shuts, camera shake) photographed every 8 frames,
+# the lighting (DoPokemonLeagueLightingEffect), the intro, the battle, the defeat line and the
+# door opening; then on through the north door. Lance: the battle, the after-battle scene up to
+# the Hall of Fame warp.
+warpto MAP_INDIGO_PLATEAU_POKEMON_CENTER_HNS 32 3
+snap pc_door
+stepto UP 1
+periodic W_enter 240 8
+snap W_room
+walkto 6 7
+face UP
+tap A 4
+scene W_field 20000
+bwalk W_bintro input:HandleInputChooseAction
+snap W_action
+bwin W_win
+scene W_after 40000 30
+snap W_free
+walkto 6 3
+stepto UP 1
+periodic K_enter 240 8
+snap K_room
+walkto 6 7
+face UP
+tap A 4
+scene K_field 20000
+bwalk K_bintro input:HandleInputChooseAction
+snap K_action
+bwin K_win
+scene K_after 40000 30
+snap K_free
+walkto 6 3
+stepto UP 1
+periodic B_enter 240 8
+snap B_room
+walkto 6 7
+face UP
+tap A 4
+scene B_field 20000
+bwalk B_bintro input:HandleInputChooseAction
+snap B_action
+bwin B_win
+scene B_after 40000 30
+snap B_free
+walkto 6 3
+stepto UP 1
+periodic R_enter 240 8
+snap R_room
+walkto 6 7
+face UP
+tap A 4
+scene R_field 20000
+bwalk R_bintro input:HandleInputChooseAction
+snap R_action
+bwin R_win
+scene R_after 40000 30
+snap R_free
+walkto 6 3
+stepto UP 1
+periodic L_enter 300 8
+snap L_room
+walkto 6 9
+face UP
+tap A 4
+scene L_field 20000
+bwalk L_bintro input:HandleInputChooseAction
+snap L_action
+bwin L_win
+sceneto L_after MAP_POKEMON_LEAGUE_HALL_OF_FAME_HNS 60000 40

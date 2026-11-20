@@ -1,0 +1,34 @@
+# Rental screen (CB2_InitSelectScreen is up): rent balls 1, 2 and 3, answer YES.
+waittaskdata Select_Task_HandleChooseMons 0 1 900
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleMenu 0 3 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleChooseMons 0 1 300
+20 -
+waitquiet
+tap RIGHT 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleMenu 0 3 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleChooseMons 0 1 300
+20 -
+waitquiet
+tap RIGHT 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleMenu 0 3 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleYesNo 0 5 300
+waitquiet
+tap A 4

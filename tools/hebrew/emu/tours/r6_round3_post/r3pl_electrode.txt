@@ -1,0 +1,67 @@
+# Noble Electrode-H, Route 50: the trigger (20..23,22) at VAR_NOBLE_ELECTRODE 1
+# (Route50_EventScript_ActivateElectrode, data/maps/Route50_hns/scripts.inc:232-277): sparkle,
+# '!', SinjohRuins_Lab_Text_PlayFlute YES/NO; NO (retrigger), YES: the flute, the entrance, the
+# shake. Then Route50_EventScript_Electrode (:301-343): a boss battle with settotemboost, RUN
+# refused (FLAG_NO_WILD_RUNNING), the ball refused (FLAG_NO_WILD_CATCHING), the win, the dropped
+# item and the Zap Plate; the ElectrodeRan branch (FLAG_NO_WILD_RUNNING cleared in RAM, the
+# player's Speed raised, then RUN). No follower: it would stand between the player and the Electrode.
+start saves/ladder6_postgame.sav
+include _r3pl_base.txt
+ev setvar VAR_NOBLE_ELECTRODE, 1; setflag FLAG_HIDE_ROUTE50_NOBLE_ELECTRODE; end
+showvar VAR_PLATECOUNTER
+followers off
+warpto MAP_ROUTE50_HNS 21 21
+face DOWN
+snap E_field
+stepto DOWN 1
+scene E_no 3000 8
+tap B 4
+scene E_no_after 1200
+snap E_no_free
+stepto UP 1
+stepto DOWN 1
+scene E_yes 3000 8
+tap A 4
+scene E_scene 20000 10
+snap E_scene_end
+objs
+approach 29
+snap E_before
+tap A 4
+scene E_pre 4000
+bwalk E_intro input:HandleInputChooseAction
+snap E_action
+ss E_battle
+baction RUN
+bwalk E_run input:HandleInputChooseAction
+snap E_run_back
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+bagpocket 2
+bagseek ITEM_MASTER_BALL
+waitquiet
+snap E_bag
+tap A 4
+waitquiet
+snap E_bag_use
+tap A 4
+waitkey 600
+snap E_bag_refused
+tap A 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap E_bag_back
+tap B 4
+waitbinput HandleInputChooseAction
+snap E_action2
+ss E_battle2
+bwin E_win
+scene E_after 12000
+snap E_end
+sl E_battle2
+clearflag FLAG_NO_WILD_RUNNING
+# the escape roll (TryRunFromBattle) compares Speed: the player's battler gets 999 (BattlePokemon.speed +6)
+w16 @gBattleMons+6@ 3E7
+baction RUN
+bwalk E_ran free
+snap E_ran_field

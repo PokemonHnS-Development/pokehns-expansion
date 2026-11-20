@@ -1,0 +1,205 @@
+# The bag opened from the party menu's ITEM > GIVE (ITEMMENULOCATION_PARTY, Task_ItemContext_GiveToParty):
+# every pocket switched through, each pocket's CLOSE row ("return to the party" text), then one give per
+# pocket with the widest names (A gives at once; the party's "was given X to hold" message), a give to a
+# Pokemon already holding an item (the switch prompt, NO), and a key item, which cannot be held
+# (PrintItemCantBeHeld). Pockets are set with setpocket (three rows each).
+start saves/bp_menuA.sav
+include ../../scripts/continue.txt
+setpocket POCKET_ITEMS ITEM_TWICE_SPICED_RADISH:999 ITEM_ODD_KEYSTONE:999 ITEM_ULTRANECROZIUM_Z:999
+setpocket POCKET_MEDICINE ITEM_BIG_MALASADA:999 ITEM_JUBILIFE_MUFFIN:999 ITEM_ICE_HEAL:999
+setpocket POCKET_POKE_BALLS ITEM_DUSK_BALL:999 ITEM_ULTRA_BALL:999 ITEM_PREMIER_BALL:999
+setpocket POCKET_TM_HM ITEM_TM01:1 ITEM_TM50:1 ITEM_HM01:1
+setpocket POCKET_BERRIES ITEM_IAPAPA_BERRY:999 ITEM_PAYAPA_BERRY:999 ITEM_PAMTRE_BERRY:999
+setpocket POCKET_KEY_ITEMS ITEM_INFINITE_RARE_CANDIES:1 ITEM_POKEBLOCK_CASE:1 ITEM_REINS_OF_UNITY:1
+bagpos ITEMS 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Typhlosion (slot 0): ITEM > GIVE > ITEMS row 0
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap A 4
+waitquiet
+snap gv_00_item_submenu
+tap A 4
+bagwait
+snap gv_01_bag_items
+pocketcycle gvpc
+bagto 3
+snap gv_02_items_close
+bagto 0
+tap A 4
+waitkey 600
+snap gv_03_given_items
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap gv_04_party_after
+
+# Pikachu (slot 1): MEDICINE row 0, then the CLOSE row of each other pocket on the way
+partyslot 1
+bagpos MEDICINE 0
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap A 4
+waitquiet
+tap A 4
+bagwait
+snap gv_10_bag_medicine
+bagto 3
+snap gv_11_medicine_close
+bagto 0
+tap A 4
+waitkey 600
+snap gv_12_given_medicine
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Ampharos (slot 2): POKE BALLS row 0
+partyslot 2
+bagpos POKE_BALLS 0
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap A 4
+waitquiet
+tap A 4
+bagwait
+snap gv_20_bag_balls
+bagto 3
+snap gv_21_balls_close
+bagto 0
+tap A 4
+waitkey 600
+snap gv_22_given_ball
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Pikachu again (slot 1, holds the malasada): BERRIES row 0 -> the switch prompt, YES
+# (Feraligatr's action list has field moves above ITEM, so the gives stay on slots 0-2)
+partyslot 1
+bagpos BERRIES 0
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap A 4
+waitquiet
+tap A 4
+bagwait
+snap gv_30_bag_berries
+bagto 3
+snap gv_31_berries_close
+bagto 0
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waitkey 900
+snap gv_32_switch_msg
+tap A 4
+waittaskx Task_HandleSwitchItemsYesNoInput 900
+waitquiet
+snap gv_33_switch_yesno
+tap A 4
+waitkey 600
+snap gv_34_switched
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap gv_36_party
+
+# Typhlosion again: TM_HM row 0, a TM cannot be held (PrintItemCantBeHeld)
+partyslot 0
+bagpos TM_HM 0
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap A 4
+waitquiet
+tap A 4
+bagwait
+snap gv_40_bag_tms
+bagto 3
+snap gv_41_tms_close
+bagto 0
+tap A 4
+waitquiet
+50 -
+snap gv_42_tm_cant_be_held
+tap A 4
+bagwait
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waitquiet
+snap gv_43_back_from_bag
+btill Task_HandleChooseMonInput
+
+# Ampharos again (holds the dusk ball): POKE BALLS row 1 -> the switch prompt, NO
+partyslot 2
+bagpos POKE_BALLS 1
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap A 4
+waitquiet
+tap A 4
+bagwait
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waitkey 900
+snap gv_45_switch_msg
+tap A 4
+waittaskx Task_HandleSwitchItemsYesNoInput 900
+waitquiet
+tap DOWN 4
+waitquiet
+snap gv_46_switch_no_selected
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap gv_47_back_in_party
+
+# KEY ITEMS: the CLOSE row, then a key item, which cannot be held
+bagpos KEY_ITEMS 0
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap A 4
+waitquiet
+tap A 4
+bagwait
+snap gv_50_bag_keys
+bagto 3
+snap gv_51_keys_close
+bagto 0
+tap A 4
+waitquiet
+50 -
+snap gv_52_key_cant_be_held
+tap A 4
+bagwait
+snap gv_53_back_in_bag
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waitquiet
+snap gv_55_back_from_bag
+btill Task_HandleChooseMonInput
+snap gv_54_party_after_close

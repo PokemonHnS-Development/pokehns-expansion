@@ -1,0 +1,58 @@
+# The Poke Ball plural name in the bag's quantity lines, which take the name from
+# CopyItemNameHandlePlural (src/item_menu.c). The save holds 999 of every ball, Poke Ball in slot 2
+# of the POKe BALLS pocket. TOSS: "toss how many" (the plural), the quantity 3, "throw away 3 ...?"
+# (YES) and "threw away 3 ...". Then the same for the GREAT BALL below it, an item with no plural
+# name (pb_ = Poke Ball, gb_ = Great Ball).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+w8 @gBagPosition+5@ 2                     # gBagPosition.pocket (include/item_menu.h:59): POKE_BALLS
+w16 @gBagPosition+C@ 1                    # cursorPosition[2]: the 2nd slot
+w16 @gBagPosition+18@ 0                   # scrollPosition[2]
+
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pb_pocket
+
+# Context menu (USE GIVE / TOSS CANCEL), TOSS: quantity selector, then "Throw away ...?" YES/NO
+tap A 4
+waitquiet
+snap pb_context
+tap DOWN 4
+tap A 4
+waittaskx item_menu:Task_ChooseHowManyToToss 300
+waitquiet
+snap pb_toss_qty_01
+tap UP 4
+tap UP 4
+waitquiet
+snap pb_toss_qty_03
+tap A 4
+waitquiet
+snap pb_toss_confirm
+tap A 4                                   # YES
+waitquiet
+snap pb_toss_done
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+
+# The next slot, GREAT BALL
+tap DOWN 4
+waitquiet
+tap A 4
+waitquiet
+tap DOWN 4
+tap A 4
+waittaskx item_menu:Task_ChooseHowManyToToss 300
+waitquiet
+snap gb_toss_qty_01
+tap UP 4
+tap UP 4
+tap A 4
+waitquiet
+snap gb_toss_confirm
+tap A 4                                   # YES
+waitquiet
+snap gb_toss_done

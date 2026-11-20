@@ -1,0 +1,9 @@
+waitctl 300
+py: sb1 = emu.sb1(); t = sb1 + 0x138C + 0x18; emu.w16(t + 4, 26); emu.w16(t + 6, 27); emu.w8(t + 9, 0x8); print("trainer2 ->", emu.r8(t), emu.r16(t + 4), emu.r16(t + 6))
+go LEFT 1
+py: objs()
+drivex py_tr1_in battle 20 3000
+fastbattles off
+bwin py_tr1_b
+drivex py_tr1_hint free 20 6000
+loc

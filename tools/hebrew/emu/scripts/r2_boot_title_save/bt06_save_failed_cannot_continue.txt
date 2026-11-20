@@ -1,0 +1,20 @@
+# Save failure where the damaged sector cannot be wiped: ProgramFlashByte (a RAM function pointer)
+# pinned to a no-op (Display_Dummy returns 0) while the save-failed screen runs, so WipeSector's
+# verify fails 130 times and WipeSectors returns TRUE (src/save_failed_screen.c:262-268):
+# gText_BackupMemoryDamaged, then on A gText_GamePlayCannotBeContinued (CB2_GameplayCannotBeContinued).
+start saves/boot_base.sav
+include ../continue.txt
+pinsym gDamagedSaveSectors 01000000
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+tap A 0
+waitcb2x CB2_SaveFailedScreen 900
+pinptr ProgramFlashByte Display_Dummy
+regionwatch bt06_sf 6000 104 152 8 232 CB2_GameplayCannotBeContinued
+snap bt06_damaged
+tap A 0
+waitcb2x CB2_FadeAndReturnToTitleScreen 120
+snap bt06_cannot_continue
+unpin
+tap A 0
+waitcb2x CB2_InitCopyrightScreenAfterBootup 600

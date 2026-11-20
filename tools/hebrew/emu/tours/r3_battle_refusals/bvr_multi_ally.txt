@@ -1,0 +1,86 @@
+# Multi battle with Lance as the partner (Debug_EventScript_Lance_Multi, data/scripts/debug.inc:265-280;
+# the choose-half flow is the one bv_multi.txt photographs). In the battle party menu the
+# partner's Pokemon sit in slots 1, 4 and 5 (TrySwitchInPokemon, src/party_menu.c:7662-7668):
+# SHIFT on one gives gText_CantSwitchWithAlly (src/strings.c:283) with Lance's name
+# (GetTrainerPartnerName). Also SHIFT on the player's Pokemon that is out (already in battle)
+# and the multi layout of the party menu itself.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_TYPHLOSION, 80, move1=MOVE_HYPER_VOICE, move2=MOVE_FLAMETHROWER; givemon SPECIES_FERALIGATR, 60, move1=MOVE_SURF; givemon SPECIES_MEGANIUM, 60, move1=MOVE_RAZOR_LEAF; givemon SPECIES_PIKACHU, 30, move1=MOVE_THUNDERBOLT; giveegg SPECIES_TOGEPI; givemon SPECIES_PIDGEY, 10; setko 5; end
+expect8 @gPlayerPartyCount@ 6
+
+pinrng
+evstart goto Debug_EventScript_Lance_Multi
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 4 DOWN              # the egg: NOT ABLE
+tap DOWN 4
+waitquiet
+tap DOWN 4                                # CONFIRM with nothing entered
+waitquiet
+tap A 4
+waitquiet
+tap A 4
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+seek 8 @gPartyMenu+9@ 0 UP
+tap A 4                                   # Typhlosion: ENTER / SUMMARY / CANCEL
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # ENTER: FIRST
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+tap A 4                                   # Typhlosion again: NO ENTRY / SUMMARY / CANCEL
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # Feraligatr: SECOND
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # Meganium: THIRD, the cursor jumps to CONFIRM
+waittaskx Task_HandleChooseMonInput 300
+waitquiet
+tap A 4                                   # CONFIRM
+waitbattle 1800
+bwalk bvr_multi_intro input:HandleInputChooseAction
+snap bvr_multi_action
+include ../_bv_switch.txt
+snap bvr_multi_party
+seek 8 @gPartyMenu+9@ 0 UP
+include _sub.txt
+snap bvr_multi_sub_own
+include _shift.txt
+pages bvr_multi_own_in_battle
+include _back_to_party.txt
+seek 8 @gPartyMenu+9@ 1 DOWN              # the partner's first Pokemon
+snap bvr_multi_cursor_ally1
+include _sub.txt
+snap bvr_multi_sub_ally1
+include _shift.txt
+pages bvr_multi_ally1
+include _back_to_party.txt
+snap bvr_multi_party_back
+seek 8 @gPartyMenu+9@ 4 RIGHT             # the partner's second Pokemon (RIGHT from slot 1)
+include _sub.txt
+include _shift.txt
+pages bvr_multi_ally4
+include _back_to_party.txt
+seek 8 @gPartyMenu+9@ 5 DOWN              # the partner's third Pokemon
+include _sub.txt
+include _shift.txt
+pages bvr_multi_ally5
+include _back_to_party.txt
+snap bvr_multi_party_end

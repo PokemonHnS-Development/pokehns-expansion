@@ -282,18 +282,18 @@ PlayersHouse_2F_EventScript_GameCube::
 	end
 
 PlayersHouse_2F_Text_ClockIsStopped:
-	.string "The clock is stopped…\p"
-	.string "Better set it and start it!$"
+	.string "השעון עומד…\p"
+	.string "כדאי לכוון אותו ולהפעיל אותו!$"
 
 PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
-	.string "MOM: {PLAYER}, how do you like your\n"
-	.string "new room?\p"
-	.string "Good! Everything's put away neatly!\p"
-	.string "They finished moving everything in\n"
-	.string "downstairs, too.\p"
-	.string "POKéMON movers are so convenient!\p"
-	.string "Oh, you should make sure that\n"
-	.string "everything's all there on your desk.$"
+	.string "אמא: {PLAYER}, מה דעתך על\n"
+	.string "החדר החדש שלך?\p"
+	.string "יופי! הכול מסודר יפה!\p"
+	.string "גם למטה כבר סיימו\n"
+	.string "להכניס את כל הדברים.\p"
+	.string "הובלה עם פוקימונים זה כל כך נוח!\p"
+	.string "אה, כדאי לבדוק שכל הדברים שלך\n"
+	.string "נמצאים על השולחן.$"
 
 PlayersHouse_2F_Text_Notebook:
 	.string "{PLAYER} flipped open the notebook.\p"
@@ -304,8 +304,8 @@ PlayersHouse_2F_Text_Notebook:
 	.string "The remaining pages are blank…$"
 
 Common_Text_LookCloserAtMap:
-	.string "{PLAYER} took a closer look at the\n"
-	.string "{REGION} region map.$"
+	.string "{PLAYER} התבונן מקרוב\n"
+	.string "במפת אזור {REGION}.$"
 
 PlayersHouse_2F_Text_ItsAGameCube:
 	.string "It's a Nintendo GameCube.\p"

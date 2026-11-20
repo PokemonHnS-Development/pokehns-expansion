@@ -1,0 +1,8 @@
+# Misty, Cerulean Gym (7,6): CeruleanCity_Gym_EventScript_Misty.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_CERULEAN_GYM; clearflag FLAG_BADGE10_GET; clearflag FLAG_HIDE_CERULEAN_GYM_TRAINERS; end
+warpto MAP_CERULEAN_CITY_GYM_HNS 7 7
+face UP
+snap mi_room
+include _leader_tail.txt

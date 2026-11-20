@@ -1,0 +1,36 @@
+# Violet Mart with the Poke Ball pocket full: 'You have no more room for this item' (src/shop.c:2000-2012).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+ev file fill_balls.inc
+warptoloose MAP_VIOLET_CITY_MART_HNS 2 5
+evstart goto VioletCity_Mart_EventScript_Clerk
+talk m24_noroom_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m24_noroom_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listgo 0
+tap A 0
+snap m24_noroom_pb
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+snap m24_noroom_pb_x1
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m24_noroom_pb_yesno
+tap A 0
+snap m24_noroom_pb_thanks
+tap A 0
+snap m24_noroom_back
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m24_noroom_bye 10 -
+waitctl 900

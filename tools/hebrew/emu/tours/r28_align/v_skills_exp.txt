@@ -1,0 +1,36 @@
+# Summary SKILLS page of each party member (EXP window check), from ladder save 3.
+start saves/ladder3_ecruteak.sav
+include ../../scripts/continue.txt
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 4 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # SUMMARY
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+60 -
+press RIGHT
+60 -
+waitquiet
+snap v1_skills_4
+press UP
+60 -
+waitquiet
+snap v1_skills_3
+press UP
+60 -
+waitquiet
+snap v1_skills_2
+press UP
+60 -
+waitquiet
+snap v1_skills_1
+press UP
+60 -
+waitquiet
+snap v1_skills_0

@@ -1,0 +1,12 @@
+# r11 (gen_tours.py): MAP_CIANWOOD_GYM_HNS after its badge, on ladder4_league. Statue CianwoodGym_EventScript_Statue, guide none, leader CianwoodGym_EventScript_Chuck (data/maps/CianwoodGym_hns/scripts.inc).
+start saves/ladder4_league.sav
+include _base.txt
+warpto MAP_CIANWOOD_GYM_HNS 13 15
+face UP
+snap gj5_room
+talkdir gj5_statue UP
+warpto MAP_CIANWOOD_GYM_HNS 10 3
+face UP
+snap gj5_leader_room
+talkdir gj5_leader UP
+talkdir gj5_leader_again UP

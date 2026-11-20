@@ -1,0 +1,10 @@
+# Moltres, Mt. Silver Moltres room (17,20): MtSilver_1F_MoltresRoom_EventScript_Moltres (data/maps/MtSilver_1F_MoltresRoom_hns/scripts.inc), cry text shared with Articuno
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_MOLTRES; end
+warpto MAP_MT_SILVER_1F_MOLTRES_ROOM_HNS 17 21
+face UP
+snap moltres_field
+tap A 4
+scene moltres_pre 4000
+include _legend_tail.txt

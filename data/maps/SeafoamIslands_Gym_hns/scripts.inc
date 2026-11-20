@@ -56,52 +56,52 @@ SeafoamIslands_Gym_EventScript_GymStatuePostVictory::
 	end
 
 SeafoamIslands_Gym_Text_GymStatue::
-    .string "CINNABAR POKéMON GYM\n"
-    .string "LEADER: BLAINE\p"
-	.string "WINNING TRAINERS:\n"
-	.string "BLUE, RED$"
+    .string "מכון הפוקימון של סיננבר\n"
+    .string "מנהיג: בליין\p"
+    .string "מאמנים מנצחים:\n"
+    .string "בלו, רד$"
 
 SeafoamIslands_Gym_Text_GymStatuePlayerWon::
-    .string "CINNABAR POKéMON GYM\n"
-    .string "LEADER: BLAINE\p"
-    .string "WINNING TRAINERS:\n"
-	.string "BLUE, RED, {PLAYER}$"
+    .string "מכון הפוקימון של סיננבר\n"
+    .string "מנהיג: בליין\p"
+    .string "מאמנים מנצחים:\n"
+    .string "בלו, רד, {PLAYER}$"
 
 SeafoamIslands_Gym_Text_Blaine_GiveTM:
-	.string "Take this too!$"
+	.string "קח גם את זה!$"
 
 SeafoamIslands_Gym_Text_Blaine_ExplainTM:
-	.string "This TM contains\n"
-	.string "the awesome OVERHEAT!\p"
-	.string "The overwhelming heat scorches your\n"
-	.string "opponents, but then drops your power.\p"
-	.string "I hope your next opponent has an\n"
-	.string "extra BURN HEAL! Waaah!$"
+	.string "המ”מ הזה מכיל את המהלך\n"
+	.string "המדהים חום יתר!\p"
+	.string "החום העצום חורך את היריבים,\n"
+	.string "אבל אז הכוח שלך יורד.\p"
+	.string "אני מקווה שליריב הבא שלך תהיה\n"
+	.string "עוד תרופה לכוויות! וואההה!$"
 
 SeafoamIslands_Gym_Text_BlaineIntro:
-	.string "BLAINE: Waaah!\p"
-	.string "My GYM in CINNABAR burned down.\p"
-	.string "My fire-breathing POKéMON and I are\n"
-	.string "homeless because of the volcano.\p"
-	.string "Waaah!\p"
-	.string "But I'm back in business as a GYM\n"
-	.string "LEADER here in this cave.\p"
-	.string "If you can beat me, I'll give you\n"
-	.string "a BADGE.\p"
-	.string "Ha! You'd better have BURN HEAL!$"
+	.string "בליין: וואההה!\p"
+	.string "המכון שלי בסיננבר עלה באש.\p"
+	.string "אני והפוקימונים יורקי האש שלי\n"
+	.string "נשארנו בלי בית בגלל הר הגעש.\p"
+	.string "וואההה!\p"
+	.string "אבל חזרתי לעניינים כמנהיג מכון,\n"
+	.string "כאן במערה הזאת.\p"
+	.string "אם תנצח אותי, אתן לך תג.\p"
+	.string "הה! כדאי שתהיה לך\n"
+	.string "תרופה לכוויות!$"
 
 SeafoamIslands_Gym_Text_BlaineWinLoss:
-	.string "BLAINE: Awesome. I've burned out…\p"
-	.string "You've earned VOLCANOBADGE!$"
+	.string "בליין: מדהים. האש שלי כבתה…\p"
+	.string "הרווחת את תג הר געש!$"
 
 SeafoamIslands_Gym_Text_ReceivedVolcanoBadge:
-	.string "{PLAYER} received VOLCANOBADGE.$"
+	.string "{PLAYER} קיבל את תג הר געש.$"
 
 SeafoamIslands_Gym_Text_BlaineAfterBattle:
-	.string "BLAINE: I did lose this time, but\n"
-	.string "I'm going to win the next time.\p"
-	.string "When I rebuild my CINNABAR GYM,\n"
-	.string "we'll have to have a rematch.$"
+	.string "בליין: הפעם אמנם הפסדתי, אבל\n"
+	.string "בפעם הבאה אני אנצח.\p"
+	.string "כשאבנה מחדש את מכון סיננבר,\n"
+	.string "נצטרך לערוך קרב חוזר.$"
 
 SeafoamIslands_Gym_Text_BlaineFightDone:
 	.string "BLAINE: My fire POKéMON will be\n"
@@ -123,15 +123,15 @@ SeafoamIslands_Gym_Text_BlaineRematchDefeat:
 	.string "defenses.$"
 
 SeafoamIslands_Gym_Text_GymGuideWin:
-	.string "Yo!\p"
-	.string "… Huh? It's over already?\p"
-	.string "Sorry, sorry!\p"
-	.string "CINNABAR GYM was gone, so I didn't\n"
-	.string "know where to find you.\p"
-	.string "But, hey, you're plenty strong even\n"
-	.string "without my advice. I knew you'd win!$"
+	.string "יו!\p"
+	.string "… מה? זה כבר נגמר?\p"
+	.string "סליחה, סליחה!\p"
+	.string "מכון סיננבר נעלם, אז לא ידעתי\n"
+	.string "איפה למצוא אותך.\p"
+	.string "אבל היי, אתה חזק מספיק גם\n"
+	.string "בלי העצות שלי. ידעתי שתנצח!$"
 
 SeafoamIslands_Gym_Text_GymGuideWin2:
-	.string "A POKéMON GYM can be anywhere as\n"
-	.string "long as the GYM LEADER is there.\p"
-	.string "There's no need for a building.$"
+	.string "מכון פוקימון יכול להיות בכל מקום,\n"
+	.string "כל עוד מנהיג המכון נמצא שם.\p"
+	.string "אין צורך בבניין.$"

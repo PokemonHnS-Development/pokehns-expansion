@@ -1,0 +1,36 @@
+# Ladder save 6: the end of the post-game. 16 badges, the League beaten again as Kanto champion
+# (Hall of Fame record 2), the Sinjoh storyline finished, Red beaten (record 3, credits), saved in
+# the Mt. Silver Pokemon Center. Built ON TOP of ladder 5:
+#   ladder.py run scripts/ladder6_postgame.txt OUT --save $HNS_SAVES/ladder5_kanto.sav \
+#             --save-out $HNS_SAVES/ladder6_postgame.sav
+include continue.txt
+event ladder/s6a_kanto_rest.inc
+event ladder/party6_postgame.inc
+expectvar VAR_NUM_BADGES 16
+expectflag FLAG_IS_CHAMPION 1
+playtime 61 47
+# The League rematch: same hand-over as ladder 4; with FLAG_IS_CHAMPION set the Hall of Fame map
+# runs PokemonLeague_HallOfFame_EventScript_CutsceneKantoChamp and SetGameClearFlags.
+eventstart ladder/s4e_halloffame.inc
+waitcb2 CB2_DoHallOfFameScreen 8000 A
+120 -
+shot l6_hof_kanto
+waitcb2 CB2_StartCreditsSequence 8000 A
+waitcb2 CB2_InitCopyrightScreenAfterBootup 60000 A
+include continue.txt
+expectflag FLAG_IS_KANTO_CHAMPION 1
+event ladder/s6b_silver_sinjoh.inc
+playtime 78 12
+warp 24 79 10 8              # MAP_MT_SILVER_SUMMIT_DAY_HNS, two tiles below Red
+eventstart ladder/s6c_red.inc
+waitcb2 CB2_DoHallOfFameScreen 8000 A
+120 -
+shot l6_hof_red
+waitcb2 CB2_StartCreditsSequence 8000 A
+waitcb2 CB2_InitCopyrightScreenAfterBootup 60000 A
+include continue.txt
+expectflag FLAG_DEFEATED_RED 1
+expectvar VAR_SINJOH_STORYLINE 13
+warp 22 34 7 7               # MAP_MT_SILVER_POKEMON_CENTER_HNS
+savegame
+shot l6_saved

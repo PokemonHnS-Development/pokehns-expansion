@@ -1,0 +1,220 @@
+# PokeGear after the League, in Lavender Town: the main menu with each entry's help text, the MAP
+# opened on Lavender and moved over Kanto, the frontier and the islands (each place name), the
+# RADIO on the Kanto and Johto stations (Places and People, Let's All Sing, Poke Flute, Hoenn
+# Sound, Oak's talk, music, Lucky Channel, Buena), CONDITION, then off.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+
+setflag FLAG_KANTO_RADIO_GOT
+arrive MAP_LAVENDER_TOWN_HNS 9 7 lav
+startmenu POKEGEAR
+waitcb2x CB2_Pokenav 600
+waitnav
+snap gr_main_01
+press DOWN
+waitnav
+snap gr_main_02
+press DOWN
+waitnav
+snap gr_main_03
+press DOWN
+waitnav
+snap gr_main_04
+press DOWN
+waitnav
+snap gr_main_05
+press DOWN
+waitnav
+snap gr_main_06
+press DOWN
+waitnav
+press A
+waitnav
+snap gr_map_00_lavender
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+waitnav
+snap gr_map_01_saffron
+tap LEFT 20
+tap LEFT 20
+waitnav
+snap gr_map_02_celadon
+tap DOWN 20
+tap DOWN 20
+waitnav
+snap gr_map_03_r17
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+waitnav
+snap gr_map_04_vermilion
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+waitnav
+snap gr_map_05_fuchsia
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+waitnav
+snap gr_map_06_pallet
+tap DOWN 20
+tap DOWN 20
+waitnav
+snap gr_map_07_cinnabar
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+waitnav
+snap gr_map_08_seafoam
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+tap RIGHT 20
+waitnav
+snap gr_map_09_melemele
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+waitnav
+snap gr_map_10_route9
+tap LEFT 20
+tap LEFT 20
+waitnav
+snap gr_map_11_cerulean
+tap LEFT 20
+tap LEFT 20
+waitnav
+snap gr_map_12_mtmoon
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+waitnav
+snap gr_map_13_pewter
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+waitnav
+snap gr_map_14_viridian
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+waitnav
+snap gr_map_15_victoryroad
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+waitnav
+snap gr_map_16_indigo
+tap LEFT 20
+tap LEFT 20
+waitnav
+snap gr_map_17_sinjoh
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+waitnav
+snap gr_map_18_mtsilver
+tap LEFT 20
+tap LEFT 20
+waitnav
+snap gr_map_19_route45
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+tap DOWN 20
+waitnav
+snap gr_map_20_frontier
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+tap UP 20
+waitnav
+snap gr_map_21_trainerhill_col
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+tap LEFT 20
+waitnav
+snap gr_map_22_trainerhill
+tap DOWN 20
+waitnav
+snap gr_map_23_safari
+press B
+waitnav
+press DOWN
+waitnav
+press DOWN
+waitnav
+press DOWN
+waitnav
+press A
+waitnav
+snap gr_radio_off
+radiotune 5
+snap gr_radio_05_hoenn_1
+radiotune 50
+snap gr_radio_50_places_1
+radioline 1
+snap gr_radio_50_places_2
+radioline 2
+snap gr_radio_50_places_3
+radioline 3
+snap gr_radio_50_places_4
+radiotune 57
+snap gr_radio_57_sing_1
+radiotune 61
+snap gr_radio_61_flute_1
+radiotune 13
+snap gr_radio_13_none
+press B
+waitnav
+press UP
+waitnav
+press UP
+waitnav
+press A
+waitnav
+snap gr_cond_menu
+press A
+waitnav
+snap gr_cond_party
+press B
+waitnav
+press B
+waitnav
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

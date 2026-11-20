@@ -1,0 +1,34 @@
+# r13 Dome doubles, a drawn round-2 match: every Pokemon on the field at 1 HP except the
+# player's battler 0, which uses Explosion (it hits the foes and the ally, and its user faints),
+# so both sides are out of Pokemon at once (Cmd_checkteamslost ORs LOST and WON = DREW). The
+# battle room's referee lines ('the referees will decide', 'the referees have decided the
+# winner', 'the winner is GOLD'), then the round counts as won: static tree, semifinal menu.
+start saves/r13/dome_doubles/base.sav
+dstate load r2menu
+pick 2
+drivex dd_dpre task:Task_HandleChooseMonInput 30 9000
+pfx dd_d
+include _dd_pick2.txt
+drivex dd_dgo battle 40 12000
+domeinfo
+bwalk dd_db_intro input:HandleInputChooseAction
+bhp4 1 1 max
+bmove0 0 MOVE_EXPLOSION
+bmove0 2 MOVE_SPLASH
+bactionb 0 FIGHT
+bmoveb 0 0
+waitbinputb 0 HandleInputShowTargets
+snap dd_db_explosion_targets
+tap A 4
+waitbinputb 2 HandleInputChooseAction
+bactionb 2 FIGHT
+bmoveb 2 0
+bwin dd_db 3 keephp
+# the player is always tourney slot 0, the best seed, so the referees always pick the player
+# (GetPlayerSeededBeforeOpponent, src/battle_dome.c:5706); the round then counts as won
+drivex dd_dafter task:Task_HandleStaticTourneyTreeInput 60 20000
+waitquiet
+120 -
+snap dd_dstatic
+tap A 0
+drivex dd_dmenu menu 30 9000

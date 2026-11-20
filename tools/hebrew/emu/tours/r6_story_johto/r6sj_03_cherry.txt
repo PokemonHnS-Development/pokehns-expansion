@@ -1,0 +1,31 @@
+# Cherrygrove (data/maps/CherrygroveCity_hns/scripts.inc): the guide gent (TriggerGent_Mid at
+# (57,10), VAR_CHERRYGROVE_CITY_STATE 0): YES/NO with NO (TriggerGent_Cancel), then again with YES
+# and the whole tour (GentTour :82-131); the fisherman's Mystic Water (Fisherman :133-150: YES/NO,
+# YES, obtained, the after line). Ladder 1 + s1_newbark.inc up to the aide's Potion.
+start saves/r6sj_ladder1_newgame.sav
+include _base.txt
+include _s1_lab_done.txt
+warpto MAP_CHERRYGROVE_CITY_HNS 59 10
+snap cg_field
+walkto 57 10
+scene gentno 10000
+yesno gentno_yn NO
+scene gentno_cancel 8000
+ev setvar VAR_CHERRYGROVE_CITY_STATE, 0; end
+warpto MAP_CHERRYGROVE_CITY_HNS 59 10
+walkto 57 10
+scene gent 10000
+yesno gent_yn YES
+scene gent_tour 60000 40
+snap gent_end
+warpto MAP_CHERRYGROVE_CITY_HNS 18 21
+objs
+approach 2
+tap A 4
+scene mw 10000
+yesno mw_yn YES
+scene mw_got 10000
+snap mw_free
+tap A 4
+scene mw_after 6000
+snap mw_after_end

@@ -1,0 +1,36 @@
+# Battle Dome: the tourney tree at the start of a Lv.50 challenge (Task_HandleTourneyTreeInput)
+# and the tree shown after the first match (Task_HandleStaticTourneyTreeInput).
+start saves/r2_bfp/base_postgame.sav
+include ../continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 5 11
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive dt_in menu
+pick 0
+drive dt_lv menu
+pick 0
+drive dt_sel task:Task_HandleChooseMonInput 20
+include ../r2_battle_frontier_facilities/_bf_enter3.txt
+drive dt_save menu 10
+pick 0
+saveyes
+drivex dt_go menu 30 9000
+pick 1
+drivex dt_tree cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+snap dt_tree_start
+tap B 0
+drivex dt_back0 menu 10 3000
+pick 2
+drivex dt_r1 task:Task_HandleChooseMonInput 30 9000
+include _dome_enter2.txt
+drivex dt_r1go battle 30 9000
+fastbattles off
+bwin dt_r1b
+drivex dt_r1win task:Task_HandleStaticTourneyTreeInput 30 9000
+waitquiet
+120 -
+snap dt_r1_static

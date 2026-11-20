@@ -1,0 +1,10 @@
+# Every Oak's Talk report (sOPT_Reports, src/data/text/radio_strings.h:367-379) and all 16 adverbs
+# and adjectives on screen: the radio's own lines[] / lineBuffers are pointed at the ROM strings
+# (or composed with StringCopy/StringAppend semantics, as GenerateOPTSegment does,
+# src/pokenav_radio.c:495-503), then the scroll is let run. Adverb i is paired with adjective
+# (i + 11) % 16 so the widest pair (WigglySlickly + HotHotHot, 195 px in Hebrew) is shown.
+start saves/ladder4_league.sav
+include _johto.txt
+radiotune 13
+include _reports.txt
+include _advadj.txt

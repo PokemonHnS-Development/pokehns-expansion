@@ -8,65 +8,65 @@
 // Station Names (displayed at top of radio UI)
 // ==========================================================
 
-static const u8 sRadioStationName_OaksPkmnTalk[]    = _("OAK's POKéMON Talk");
-static const u8 sRadioStationName_PokedexShow[]     = _("POKéDEX Show");
-static const u8 sRadioStationName_PokemonMusic[]    = _("POKéMON Music");
-static const u8 sRadioStationName_LuckyChannel[]    = _("Lucky Channel");
-static const u8 sRadioStationName_BuenasPassword[]  = _("BUENA'S PASSWORD");
+static const u8 sRadioStationName_OaksPkmnTalk[]    = _("שיחות פוקימון עם אוק");
+static const u8 sRadioStationName_PokedexShow[]     = _("תוכנית הפוקדקס");
+static const u8 sRadioStationName_PokemonMusic[]    = _("מוזיקת פוקימון");
+static const u8 sRadioStationName_LuckyChannel[]    = _("ערוץ המזל");
+static const u8 sRadioStationName_BuenasPassword[]  = _("הסיסמה של בואנה");
 static const u8 sRadioStationName_Unown[]           = _("?????");
-static const u8 sRadioStationName_PlacesAndPeople[] = _("Places & People");
-static const u8 sRadioStationName_LetsAllSing[]     = _("Let's All Sing!");
-static const u8 sRadioStationName_PokeFlute[]       = _("POKé FLUTE");
+static const u8 sRadioStationName_PlacesAndPeople[] = _("מקומות ואנשים");
+static const u8 sRadioStationName_LetsAllSing[]     = _("בואו נשיר ביחד!");
+static const u8 sRadioStationName_PokeFlute[]       = _("חליל פוקימון");
 
-static const u8 sRadioStationName_HoennSound[]  = _("Hoenn Sound");
+static const u8 sRadioStationName_HoennSound[]  = _("צלילי הואן");
 
 // ==========================================================
 // Hoenn Sound
 // ==========================================================
 
-static const u8 sRadioText_Hoenn1[] = _("A POKéMON melody from a");
-static const u8 sRadioText_Hoenn2[] = _("faraway region called HOENN!");
-static const u8 sRadioText_Hoenn3[] = _("Wild POKéMON from that region");
-static const u8 sRadioText_Hoenn4[] = _("may appear nearby!");
+static const u8 sRadioText_Hoenn1[] = _("מנגינת פוקימונים מאזור");
+static const u8 sRadioText_Hoenn2[] = _("רחוק שנקרא הואן!");
+static const u8 sRadioText_Hoenn3[] = _("פוקימונים פראיים מהאזור ההוא");
+static const u8 sRadioText_Hoenn4[] = _("עשויים להופיע בסביבה!");
 
 // ==========================================================
 // POKéDEX Show
 // ==========================================================
 
-static const u8 sRadioText_PokedexShow_Intro[] = _("OAK's POKéDEX SHOW!");
-static const u8 sRadioText_PokedexShow_TodaysPrefix[] = _("OAK: Today's POKéMON is ");
+static const u8 sRadioText_PokedexShow_Intro[] = _("תוכנית הפוקדקס של אוק!");
+static const u8 sRadioText_PokedexShow_TodaysPrefix[] = _("אוק: פוקימון היום הוא ");
 
 // ==========================================================
 // Oak's POKéMON Talk
 // ==========================================================
 
-static const u8 sRadioText_OPT_Intro[] = _("MARY: PROF.OAK's POKéMON TALK!");
-static const u8 sRadioText_OPT_WithMeMary[] = _("With me, MARY!");
-static const u8 sRadioText_OPT_OakPrefix[] = _("OAK: ");
-static const u8 sRadioText_OPT_SeenAround[] = _("may be seen around");
-static const u8 sRadioText_OPT_MaryPrefix[] = _("MARY: ");
-static const u8 sRadioText_OPT_MaryIs[] = _("'s ");
+static const u8 sRadioText_OPT_Intro[] = _("מרי: שיחות פוקימון עם פרופ' אוק!");
+static const u8 sRadioText_OPT_WithMeMary[] = _("ואיתכם, מרי!");
+static const u8 sRadioText_OPT_OakPrefix[] = _("אוק: ");
+static const u8 sRadioText_OPT_SeenAround[] = _("אפשר לראות אותו באזור");
+static const u8 sRadioText_OPT_MaryPrefix[] = _("מרי: ");
+static const u8 sRadioText_OPT_MaryIs[] = _(",");
 
 // Pokemon Channel interlude
-static const u8 sRadioText_OPT_PokemonChannel[] = _("POKéMON Channel");
+static const u8 sRadioText_OPT_PokemonChannel[] = _("ערוץ הפוקימון");
 
 // Adverbs (randomly selected)
-static const u8 sRadioText_OPT_Adverb_SweetAdorably[]      = _("sweet and adorably");
-static const u8 sRadioText_OPT_Adverb_WigglySlickly[]      = _("wiggly and slickly");
-static const u8 sRadioText_OPT_Adverb_AptlyNamed[]         = _("aptly named and");
-static const u8 sRadioText_OPT_Adverb_UndeniablyKindOf[]   = _("undeniably kind of");
-static const u8 sRadioText_OPT_Adverb_Unbearably[]         = _("so, so unbearably");
-static const u8 sRadioText_OPT_Adverb_WowImpressively[]    = _("wow, impressively");
-static const u8 sRadioText_OPT_Adverb_AlmostPoisonously[]  = _("almost poisonously");
-static const u8 sRadioText_OPT_Adverb_Sensually[]          = _("ooh, so sensually");
-static const u8 sRadioText_OPT_Adverb_Mischievously[]      = _("so mischievously");
-static const u8 sRadioText_OPT_Adverb_Topically[]          = _("so very topically");
-static const u8 sRadioText_OPT_Adverb_Addictively[]        = _("sure addictively");
-static const u8 sRadioText_OPT_Adverb_LooksInWater[]       = _("looks in water is");
-static const u8 sRadioText_OPT_Adverb_EvolutionMustBe[]    = _("evolution must be");
-static const u8 sRadioText_OPT_Adverb_Provocatively[]      = _("provocatively");
-static const u8 sRadioText_OPT_Adverb_FlippedOut[]         = _("so flipped out and");
-static const u8 sRadioText_OPT_Adverb_HeartMeltingly[]     = _("heart-meltingly");
+static const u8 sRadioText_OPT_Adverb_SweetAdorably[]      = _("מתוק ומלבב, וגם");
+static const u8 sRadioText_OPT_Adverb_WigglySlickly[]      = _("מתפתל וחלקלק, וגם");
+static const u8 sRadioText_OPT_Adverb_AptlyNamed[]         = _("ראוי לשמו, וגם");
+static const u8 sRadioText_OPT_Adverb_UndeniablyKindOf[]   = _("ללא ספק די");
+static const u8 sRadioText_OPT_Adverb_Unbearably[]         = _("כל כך, כל כך נורא");
+static const u8 sRadioText_OPT_Adverb_WowImpressively[]    = _("וואו, מרשים, וגם");
+static const u8 sRadioText_OPT_Adverb_AlmostPoisonously[]  = _("כמעט ארסי, וגם");
+static const u8 sRadioText_OPT_Adverb_Sensually[]          = _("אוו, חושני, וגם");
+static const u8 sRadioText_OPT_Adverb_Mischievously[]      = _("שובב כל כך, וגם");
+static const u8 sRadioText_OPT_Adverb_Topically[]          = _("אקטואלי מאוד, וגם");
+static const u8 sRadioText_OPT_Adverb_Addictively[]        = _("בהחלט ממכר, וגם");
+static const u8 sRadioText_OPT_Adverb_LooksInWater[]       = _("במים הוא נראה");
+static const u8 sRadioText_OPT_Adverb_EvolutionMustBe[]    = _("כשיתפתח בטח יהיה");
+static const u8 sRadioText_OPT_Adverb_Provocatively[]      = _("מתגרה, וגם");
+static const u8 sRadioText_OPT_Adverb_FlippedOut[]         = _("מטורף לגמרי, וגם");
+static const u8 sRadioText_OPT_Adverb_HeartMeltingly[]     = _("ממיס לב, וגם");
 
 static const u8 *const sRadioText_OPT_Adverbs[] =
 {
@@ -89,22 +89,22 @@ static const u8 *const sRadioText_OPT_Adverbs[] =
 };
 
 // Adjectives (randomly selected)
-static const u8 sRadioText_OPT_Adj_Cute[]           = _("cute.");
-static const u8 sRadioText_OPT_Adj_Weird[]          = _("weird.");
-static const u8 sRadioText_OPT_Adj_Pleasant[]       = _("pleasant.");
-static const u8 sRadioText_OPT_Adj_BoldSortOf[]     = _("bold, sort of.");
-static const u8 sRadioText_OPT_Adj_Frightening[]    = _("frightening.");
-static const u8 sRadioText_OPT_Adj_SuaveDebonair[]  = _("suave & debonair!");
-static const u8 sRadioText_OPT_Adj_Powerful[]        = _("powerful.");
-static const u8 sRadioText_OPT_Adj_Exciting[]        = _("exciting.");
-static const u8 sRadioText_OPT_Adj_Groovy[]          = _("groovy!");
-static const u8 sRadioText_OPT_Adj_Inspiring[]       = _("inspiring.");
-static const u8 sRadioText_OPT_Adj_Friendly[]        = _("friendly.");
-static const u8 sRadioText_OPT_Adj_HotHotHot[]       = _("hot, hot, hot!");
-static const u8 sRadioText_OPT_Adj_Stimulating[]     = _("stimulating.");
-static const u8 sRadioText_OPT_Adj_Guarded[]         = _("guarded.");
-static const u8 sRadioText_OPT_Adj_Lovely[]          = _("lovely.");
-static const u8 sRadioText_OPT_Adj_Speedy[]          = _("speedy.");
+static const u8 sRadioText_OPT_Adj_Cute[]           = _("חמוד.");
+static const u8 sRadioText_OPT_Adj_Weird[]          = _("מוזר.");
+static const u8 sRadioText_OPT_Adj_Pleasant[]       = _("נעים.");
+static const u8 sRadioText_OPT_Adj_BoldSortOf[]     = _("נועז, בערך.");
+static const u8 sRadioText_OPT_Adj_Frightening[]    = _("מפחיד.");
+static const u8 sRadioText_OPT_Adj_SuaveDebonair[]  = _("אלגנטי ומגונדר!");
+static const u8 sRadioText_OPT_Adj_Powerful[]        = _("עוצמתי.");
+static const u8 sRadioText_OPT_Adj_Exciting[]        = _("מרגש.");
+static const u8 sRadioText_OPT_Adj_Groovy[]          = _("מגניב!");
+static const u8 sRadioText_OPT_Adj_Inspiring[]       = _("מעורר השראה.");
+static const u8 sRadioText_OPT_Adj_Friendly[]        = _("ידידותי.");
+static const u8 sRadioText_OPT_Adj_HotHotHot[]       = _("לוהט, לוהט, לוהט!");
+static const u8 sRadioText_OPT_Adj_Stimulating[]     = _("מלהיב.");
+static const u8 sRadioText_OPT_Adj_Guarded[]         = _("זהיר.");
+static const u8 sRadioText_OPT_Adj_Lovely[]          = _("מקסים.");
+static const u8 sRadioText_OPT_Adj_Speedy[]          = _("מהיר.");
 
 static const u8 *const sRadioText_OPT_Adjectives[] =
 {
@@ -130,58 +130,58 @@ static const u8 *const sRadioText_OPT_Adjectives[] =
 // POKéMON Music Channel (Ben & Fern)
 // ==========================================================
 
-static const u8 sRadioText_BenIntro[] = _("BEN: POKéMON MUSIC CHANNEL!");
-static const u8 sRadioText_BenIntro2[] = _("It's me, DJ BEN!");
-static const u8 sRadioText_FernIntro[] = _("FERN: POKéMUSIC!");
-static const u8 sRadioText_FernIntro2[] = _("With DJ FERN!");
+static const u8 sRadioText_BenIntro[] = _("בן: ערוץ מוזיקת פוקימון!");
+static const u8 sRadioText_BenIntro2[] = _("זה אני, הדי-ג'יי בן!");
+static const u8 sRadioText_FernIntro[] = _("פרן: פוקימוזיקה!");
+static const u8 sRadioText_FernIntro2[] = _("עם הדי-ג'יי פרן!");
 // "Today's {DAY}," built dynamically
-static const u8 sRadioText_BenFern_TodayIs[] = _("Today's ");
-static const u8 sRadioText_BenFern_JamTo[] = _("so let us jam to");
-static const u8 sRadioText_BenFern_ChillTo[] = _("so chill out to");
-static const u8 sRadioText_BenFern_March[] = _("POKéMON March!");
-static const u8 sRadioText_BenFern_Lullaby[] = _("POKéMON Lullaby!");
+static const u8 sRadioText_BenFern_TodayIs[] = _("היום ");
+static const u8 sRadioText_BenFern_JamTo[] = _("אז בואו נזוז לצלילי");
+static const u8 sRadioText_BenFern_ChillTo[] = _("אז תירגעו לצלילי");
+static const u8 sRadioText_BenFern_March[] = _("מארש הפוקימונים!");
+static const u8 sRadioText_BenFern_Lullaby[] = _("שיר הערש לפוקימונים!");
 
 // ==========================================================
 // Lucky Channel
 // ==========================================================
 
-static const u8 sRadioText_LC1[] = _("REED: Yeehaw! How y'all doin'");
-static const u8 sRadioText_LC2[] = _("now? Whether you're up or way");
-static const u8 sRadioText_LC3[] = _("down low, don't you miss the");
-static const u8 sRadioText_LC4[] = _("LUCKY NUMBER SHOW!");
-static const u8 sRadioText_LC5[] = _("This week's Lucky Number is");
+static const u8 sRadioText_LC1[] = _("ריד: יי-הא! מה העניינים");
+static const u8 sRadioText_LC2[] = _("אצלכם? בין אם אתם בעננים");
+static const u8 sRadioText_LC3[] = _("או ממש בקרשים, אל תפספסו את");
+static const u8 sRadioText_LC4[] = _("תוכנית מספר המזל!");
+static const u8 sRadioText_LC5[] = _("מספר המזל של השבוע הוא");
 // "{number}!" built dynamically
-static const u8 sRadioText_LC_Repeat[] = _("I'll repeat that!");
-static const u8 sRadioText_LC_Match[] = _("Match it and go to");
-static const u8 sRadioText_LC_Tower[] = _("the RADIO TOWER!");
-static const u8 sRadioText_LC_Drag1[] = _("…Repeating myself");
-static const u8 sRadioText_LC_Drag2[] = _("gets to be a drag…");
+static const u8 sRadioText_LC_Repeat[] = _("אחזור על זה!");
+static const u8 sRadioText_LC_Match[] = _("יש לכם מספר תואם? בואו");
+static const u8 sRadioText_LC_Tower[] = _("למגדל הרדיו!");
+static const u8 sRadioText_LC_Drag1[] = _("…לחזור על עצמי");
+static const u8 sRadioText_LC_Drag2[] = _("זה די מייגע…");
 
 // ==========================================================
 // Places and People
 // ==========================================================
 
-static const u8 sRadioText_PnP_Intro[] = _("PLACES AND PEOPLE! Brought");
-static const u8 sRadioText_PnP_Intro2[] = _("to you by me, DJ LILY!");
+static const u8 sRadioText_PnP_Intro[] = _("מקומות ואנשים! בהגשה");
+static const u8 sRadioText_PnP_Intro2[] = _("שלי, הדי-ג'יי לילי!");
 static const u8 sRadioText_PnP_Space[] = _(" ");
 
 // People adjectives
-static const u8 sRadioText_PnP_Cute[]       = _("is cute.");
-static const u8 sRadioText_PnP_Lazy[]       = _("is sort of lazy.");
-static const u8 sRadioText_PnP_Happy[]      = _("is always happy.");
-static const u8 sRadioText_PnP_Noisy[]      = _("is quite noisy.");
-static const u8 sRadioText_PnP_Precocious[] = _("is precocious.");
-static const u8 sRadioText_PnP_Bold[]       = _("is somewhat bold.");
-static const u8 sRadioText_PnP_Picky[]      = _("is too picky!");
-static const u8 sRadioText_PnP_SortOfOK[]   = _("is sort of OK.");
-static const u8 sRadioText_PnP_SoSo[]       = _("is just so-so.");
-static const u8 sRadioText_PnP_Great[]       = _("is actually great.");
-static const u8 sRadioText_PnP_MyType[]      = _("is just my type.");
-static const u8 sRadioText_PnP_Cool[]        = _("is so cool, no?");
-static const u8 sRadioText_PnP_Inspiring[]   = _("is inspiring!");
-static const u8 sRadioText_PnP_Weird[]       = _("is kind of weird.");
-static const u8 sRadioText_PnP_RightForMe[]  = _("is right for me?");
-static const u8 sRadioText_PnP_Odd[]         = _("is definitely odd!");
+static const u8 sRadioText_PnP_Cute[]       = _("חמידות אחת גדולה.");
+static const u8 sRadioText_PnP_Lazy[]       = _("עושה רושם די עצלני.");
+static const u8 sRadioText_PnP_Happy[]      = _("תמיד במצב רוח טוב.");
+static const u8 sRadioText_PnP_Noisy[]      = _("עושה די הרבה רעש.");
+static const u8 sRadioText_PnP_Precocious[] = _("עם ראש של גדולים.");
+static const u8 sRadioText_PnP_Bold[]       = _("עם לא מעט תעוזה.");
+static const u8 sRadioText_PnP_Picky[]      = _("עושה יותר מדי עניינים!");
+static const u8 sRadioText_PnP_SortOfOK[]   = _("בסדר, פחות או יותר.");
+static const u8 sRadioText_PnP_SoSo[]       = _("פשוט ככה-ככה.");
+static const u8 sRadioText_PnP_Great[]       = _("דווקא מעולה.");
+static const u8 sRadioText_PnP_MyType[]      = _("בדיוק הטיפוס שלי.");
+static const u8 sRadioText_PnP_Cool[]        = _("ממש אחלה, לא?");
+static const u8 sRadioText_PnP_Inspiring[]   = _("פשוט השראה!");
+static const u8 sRadioText_PnP_Weird[]       = _("קצת משונה.");
+static const u8 sRadioText_PnP_RightForMe[]  = _("אולי זה בשבילי?");
+static const u8 sRadioText_PnP_Odd[]         = _("בהחלט משונה!");
 
 static const u8 *const sRadioText_PnP_PeopleAdj[] =
 {
@@ -207,15 +207,15 @@ static const u8 *const sRadioText_PnP_PeopleAdj[] =
 // Rocket Radio
 // ==========================================================
 
-static const u8 sRadioStationName_Rocket[] = _("TEAM ROCKET");
-static const u8 sRadioText_Rocket1[]  = _("… …Ahem, we are");
-static const u8 sRadioText_Rocket2[]  = _("TEAM ROCKET!");
-static const u8 sRadioText_Rocket3[]  = _("After three years");
-static const u8 sRadioText_Rocket4[]  = _("of preparation, we");
-static const u8 sRadioText_Rocket5[]  = _("have risen again");
-static const u8 sRadioText_Rocket6[]  = _("from the ashes!");
-static const u8 sRadioText_Rocket7[]  = _("GIOVANNI!");
-static const u8 sRadioText_Rocket8[]  = _("Can you hear?");
+static const u8 sRadioStationName_Rocket[] = _("צוות רוקט");
+static const u8 sRadioText_Rocket1[]  = _("… …אהם, אנחנו");
+static const u8 sRadioText_Rocket2[]  = _("צוות רוקט!");
+static const u8 sRadioText_Rocket3[]  = _("אחרי שלוש שנים");
+static const u8 sRadioText_Rocket4[]  = _("של הכנות, אנחנו");
+static const u8 sRadioText_Rocket5[]  = _("קמנו מחדש");
+static const u8 sRadioText_Rocket6[]  = _("מתוך האפר!");
+static const u8 sRadioText_Rocket7[]  = _("ג'ובאני!");
+static const u8 sRadioText_Rocket8[]  = _("אתה שומע אותנו?");
 static const u8 sRadioText_Rocket9[]  = _("");
 static const u8 sRadioText_Rocket10[] = _("");
 
@@ -223,142 +223,142 @@ static const u8 sRadioText_Rocket10[] = _("");
 // Buena's Password
 // ==========================================================
 
-static const u8 sRadioText_Buena1[] = _("BUENA: BUENA here!");
-static const u8 sRadioText_Buena2[] = _("Today's password!");
-static const u8 sRadioText_Buena3[] = _("Let me think… It's");
+static const u8 sRadioText_Buena1[] = _("בואנה: כאן בואנה!");
+static const u8 sRadioText_Buena2[] = _("הסיסמה של היום!");
+static const u8 sRadioText_Buena3[] = _("רגע, תנו לי לחשוב… זה");
 // "{password}!" built dynamically with STR_VAR_1
 static const u8 sRadioText_Buena4[] = _("{STR_VAR_1}!");
-static const u8 sRadioText_Buena5[] = _("Don't forget it! I'm in");
-static const u8 sRadioText_Buena6[] = _("GOLDENROD's RADIO TOWER!");
+static const u8 sRadioText_Buena5[] = _("אל תשכחו אותה! אני");
+static const u8 sRadioText_Buena6[] = _("במגדל הרדיו של גולדנרוד!");
 
 
 // ==========================================================
 // Buena's Password Categories & Options
 // ==========================================================
 
-static const u8 sRadioBuenaPassword_NewBarkTown[]     = _("NEW BARK TOWN");
-static const u8 sRadioBuenaPassword_CherrygroveCity[]  = _("CHERRYGROVE CITY");
-static const u8 sRadioBuenaPassword_AzaleaTown[]      = _("AZALEA TOWN");
-static const u8 sRadioBuenaPassword_Flying[]          = _("FLYING");
-static const u8 sRadioBuenaPassword_Bug[]             = _("BUG");
-static const u8 sRadioBuenaPassword_Grass[]           = _("GRASS");
-static const u8 sRadioBuenaPassword_PkmnTalk[]        = _("POKéMON Talk");
-static const u8 sRadioBuenaPassword_PkmnMusic[]       = _("POKéMON Music");
-static const u8 sRadioBuenaPassword_LuckyChannel[]    = _("Lucky Channel");
+static const u8 sRadioBuenaPassword_NewBarkTown[]     = _("העיירה ניו בארק");
+static const u8 sRadioBuenaPassword_CherrygroveCity[]  = _("העיר צ'ריגרוב");
+static const u8 sRadioBuenaPassword_AzaleaTown[]      = _("העיירה אזייליה");
+static const u8 sRadioBuenaPassword_Flying[]          = _("תעופה");
+static const u8 sRadioBuenaPassword_Bug[]             = _("חרק");
+static const u8 sRadioBuenaPassword_Grass[]           = _("עשב");
+static const u8 sRadioBuenaPassword_PkmnTalk[]        = _("שיחות פוקימון");
+static const u8 sRadioBuenaPassword_PkmnMusic[]       = _("מוזיקת פוקימון");
+static const u8 sRadioBuenaPassword_LuckyChannel[]    = _("ערוץ המזל");
 
 // ==========================================================
 // Oak's POKéMON Talk - Special Reports
 // ==========================================================
 
-static const u8 sOPT_Report_Clefairy_0[]  = _("MARY: Tonight, a rare moonlight");
-static const u8 sOPT_Report_Clefairy_1[]  = _("moment on POKéMON TALK!");
-static const u8 sOPT_Report_Clefairy_2[]  = _("OAK: We're spotlighting the");
-static const u8 sOPT_Report_Clefairy_3[]  = _("mystical CLEFAIRY!");
-static const u8 sOPT_Report_Clefairy_4[]  = _("They gather at MT.MOON");
-static const u8 sOPT_Report_Clefairy_5[]  = _("under full moons.");
-static const u8 sOPT_Report_Clefairy_6[]  = _("MARY: They DANCE in circles!");
-static const u8 sOPT_Report_Clefairy_7[]  = _("So adorably weird!");
-static const u8 sOPT_Report_Clefairy_8[]  = _("OAK: A timeless mystery");
-static const u8 sOPT_Report_Clefairy_9[]  = _("and a sight to behold!");
+static const u8 sOPT_Report_Clefairy_0[]  = _("מרי: הלילה, רגע נדיר לאור הירח");
+static const u8 sOPT_Report_Clefairy_1[]  = _("בשיחות פוקימון!");
+static const u8 sOPT_Report_Clefairy_2[]  = _("אוק: הזרקור שלנו מופנה אל");
+static const u8 sOPT_Report_Clefairy_3[]  = _("קלפרי המסתורי!");
+static const u8 sOPT_Report_Clefairy_4[]  = _("הם מתאספים בהר הירח");
+static const u8 sOPT_Report_Clefairy_5[]  = _("בלילות של ירח מלא.");
+static const u8 sOPT_Report_Clefairy_6[]  = _("מרי: הם רוקדים במעגלים!");
+static const u8 sOPT_Report_Clefairy_7[]  = _("מוזרים ומקסימים כל כך!");
+static const u8 sOPT_Report_Clefairy_8[]  = _("אוק: תעלומה נצחית");
+static const u8 sOPT_Report_Clefairy_9[]  = _("ומחזה מרהיב!");
 
-static const u8 sOPT_Report_Lapras_0[]  = _("MARY: A gentle giant takes");
-static const u8 sOPT_Report_Lapras_1[]  = _("the stage on today's show!");
-static const u8 sOPT_Report_Lapras_2[]  = _("OAK: It's the ocean ferry,");
-static const u8 sOPT_Report_Lapras_3[]  = _("our beloved LAPRAS!");
-static const u8 sOPT_Report_Lapras_4[]  = _("Seen in UNION CAVE, but");
-static const u8 sOPT_Report_Lapras_5[]  = _("nowhere else. How curious!");
-static const u8 sOPT_Report_Lapras_6[]  = _("MARY: So rare and peaceful!");
-static const u8 sOPT_Report_Lapras_7[]  = _("And it sings, too!");
-static const u8 sOPT_Report_Lapras_8[]  = _("OAK: Some say its songs calm");
-static const u8 sOPT_Report_Lapras_9[]  = _("the soul of the sea.");
+static const u8 sOPT_Report_Lapras_0[]  = _("מרי: ענק עדין עולה");
+static const u8 sOPT_Report_Lapras_1[]  = _("לבמה בתוכנית של היום!");
+static const u8 sOPT_Report_Lapras_2[]  = _("אוק: זו מעבורת האוקיינוס,");
+static const u8 sOPT_Report_Lapras_3[]  = _("לפרס האהוב שלנו!");
+static const u8 sOPT_Report_Lapras_4[]  = _("רואים אותו במערת האיחוד, אבל");
+static const u8 sOPT_Report_Lapras_5[]  = _("לא בשום מקום אחר. מסקרן!");
+static const u8 sOPT_Report_Lapras_6[]  = _("מרי: כל כך נדיר ושליו!");
+static const u8 sOPT_Report_Lapras_7[]  = _("והוא גם שר!");
+static const u8 sOPT_Report_Lapras_8[]  = _("אוק: יש אומרים שהשירים שלו");
+static const u8 sOPT_Report_Lapras_9[]  = _("מרגיעים את נשמת הים.");
 
-static const u8 sOPT_Report_Ampharos_0[]  = _("MARY: Welcome back, everyone!");
-static const u8 sOPT_Report_Ampharos_1[]  = _("Time for POKéMON TALK!");
-static const u8 sOPT_Report_Ampharos_2[]  = _("OAK: Let's shine a light on");
-static const u8 sOPT_Report_Ampharos_3[]  = _("our friend AMPHAROS!");
-static const u8 sOPT_Report_Ampharos_4[]  = _("Its bright tail glows through");
-static const u8 sOPT_Report_Ampharos_5[]  = _("fog to guide lost folks.");
-static const u8 sOPT_Report_Ampharos_6[]  = _("MARY: Powerful, elegant,");
-static const u8 sOPT_Report_Ampharos_7[]  = _("and undeniably friendly!");
-static const u8 sOPT_Report_Ampharos_8[]  = _("OAK: A key part of many");
-static const u8 sOPT_Report_Ampharos_9[]  = _("lighthouse stories!");
+static const u8 sOPT_Report_Ampharos_0[]  = _("מרי: ברוכים השבים, מאזינים!");
+static const u8 sOPT_Report_Ampharos_1[]  = _("הגיע הזמן לשיחות פוקימון!");
+static const u8 sOPT_Report_Ampharos_2[]  = _("אוק: בואו נשפוך אור על");
+static const u8 sOPT_Report_Ampharos_3[]  = _("ידידנו אמפרוס!");
+static const u8 sOPT_Report_Ampharos_4[]  = _("הזנב הבוהק שלו זוהר מבעד");
+static const u8 sOPT_Report_Ampharos_5[]  = _("לערפל ומנחה את מי שהלך לאיבוד.");
+static const u8 sOPT_Report_Ampharos_6[]  = _("מרי: חזק, אלגנטי,");
+static const u8 sOPT_Report_Ampharos_7[]  = _("וללא ספק ידידותי!");
+static const u8 sOPT_Report_Ampharos_8[]  = _("אוק: חלק חשוב בהרבה");
+static const u8 sOPT_Report_Ampharos_9[]  = _("סיפורי מגדלורים!");
 
-static const u8 sOPT_Report_Sudowoodo_0[]  = _("MARY: Up next, a real oddball");
-static const u8 sOPT_Report_Sudowoodo_1[]  = _("on ROUTE 36...");
-static const u8 sOPT_Report_Sudowoodo_2[]  = _("OAK: SUDOWOODO! Looks like a");
-static const u8 sOPT_Report_Sudowoodo_3[]  = _("tree, but isn't one!");
-static const u8 sOPT_Report_Sudowoodo_4[]  = _("It blocks the road and won't");
-static const u8 sOPT_Report_Sudowoodo_5[]  = _("budge without water.");
-static const u8 sOPT_Report_Sudowoodo_6[]  = _("MARY: It only reacts to a");
-static const u8 sOPT_Report_Sudowoodo_7[]  = _("SQUIRTBOTTLE!");
-static const u8 sOPT_Report_Sudowoodo_8[]  = _("OAK: That's no bush, it's a");
-static const u8 sOPT_Report_Sudowoodo_9[]  = _("ROCK-type in disguise!");
+static const u8 sOPT_Report_Sudowoodo_0[]  = _("מרי: ועכשיו, יצור משונה באמת");
+static const u8 sOPT_Report_Sudowoodo_1[]  = _("בדרך 36…");
+static const u8 sOPT_Report_Sudowoodo_2[]  = _("אוק: סודוודו! הוא נראה כמו");
+static const u8 sOPT_Report_Sudowoodo_3[]  = _("עץ, אבל הוא לא עץ!");
+static const u8 sOPT_Report_Sudowoodo_4[]  = _("הוא חוסם את הדרך ולא");
+static const u8 sOPT_Report_Sudowoodo_5[]  = _("יזוז בלי מים.");
+static const u8 sOPT_Report_Sudowoodo_6[]  = _("מרי: הוא מגיב רק");
+static const u8 sOPT_Report_Sudowoodo_7[]  = _("לבקבוק התזה!");
+static const u8 sOPT_Report_Sudowoodo_8[]  = _("אוק: זה לא שיח, זה פוקימון");
+static const u8 sOPT_Report_Sudowoodo_9[]  = _("מסוג סלע בתחפושת!");
 
-static const u8 sOPT_Report_RedGyarados_0[]  = _("MARY: Today's story is a");
-static const u8 sOPT_Report_RedGyarados_1[]  = _("shocking one from JOHTO!");
-static const u8 sOPT_Report_RedGyarados_2[]  = _("OAK: Trainers spotted a RED");
-static const u8 sOPT_Report_RedGyarados_3[]  = _("GYARADOS at LAKE OF RAGE!");
-static const u8 sOPT_Report_RedGyarados_4[]  = _("Unlike the usual blue ones,");
-static const u8 sOPT_Report_RedGyarados_5[]  = _("this one's bright crimson!");
-static const u8 sOPT_Report_RedGyarados_6[]  = _("MARY: People say it's linked");
-static const u8 sOPT_Report_RedGyarados_7[]  = _("to some strange radio waves!");
-static const u8 sOPT_Report_RedGyarados_8[]  = _("OAK: A mysterious evolution…");
-static const u8 sOPT_Report_RedGyarados_9[]  = _("Possibly unnatural.");
+static const u8 sOPT_Report_RedGyarados_0[]  = _("מרי: היום יש לנו סיפור");
+static const u8 sOPT_Report_RedGyarados_1[]  = _("מסעיר מג'וטו!");
+static const u8 sOPT_Report_RedGyarados_2[]  = _("אוק: מאמנים ראו גרידוס");
+static const u8 sOPT_Report_RedGyarados_3[]  = _("אדום באגם הזעם!");
+static const u8 sOPT_Report_RedGyarados_4[]  = _("בניגוד לכחולים הרגילים,");
+static const u8 sOPT_Report_RedGyarados_5[]  = _("הוא בצבע ארגמן בוהק!");
+static const u8 sOPT_Report_RedGyarados_6[]  = _("מרי: אומרים שזה קשור");
+static const u8 sOPT_Report_RedGyarados_7[]  = _("לגלי רדיו משונים!");
+static const u8 sOPT_Report_RedGyarados_8[]  = _("אוק: התפתחות מסתורית…");
+static const u8 sOPT_Report_RedGyarados_9[]  = _("אולי לא טבעית.");
 
-static const u8 sOPT_Report_Unown_0[]  = _("MARY: Ever visited the RUINS");
-static const u8 sOPT_Report_Unown_1[]  = _("OF ALPH? Spooky stuff!");
-static const u8 sOPT_Report_Unown_2[]  = _("OAK: Strange symbols line the");
-static const u8 sOPT_Report_Unown_3[]  = _("walls, like ancient runes.");
-static const u8 sOPT_Report_Unown_4[]  = _("Inside, you'll find UNOWN…");
-static const u8 sOPT_Report_Unown_5[]  = _("each shaped like letters!");
-static const u8 sOPT_Report_Unown_6[]  = _("MARY: They spell things,");
-static const u8 sOPT_Report_Unown_7[]  = _("maybe? Or just freak us out!");
-static const u8 sOPT_Report_Unown_8[]  = _("OAK: A true puzzle of nature,");
-static const u8 sOPT_Report_Unown_9[]  = _("still unsolved to this day.");
+static const u8 sOPT_Report_Unown_0[]  = _("מרי: ביקרתם פעם בחורבות אלף?");
+static const u8 sOPT_Report_Unown_1[]  = _("ממש מצמרר!");
+static const u8 sOPT_Report_Unown_2[]  = _("אוק: סמלים מוזרים מכסים את");
+static const u8 sOPT_Report_Unown_3[]  = _("הקירות, כמו כתב רונות עתיק.");
+static const u8 sOPT_Report_Unown_4[]  = _("בפנים אפשר למצוא אנון…");
+static const u8 sOPT_Report_Unown_5[]  = _("כל אחד מהם בצורת אות!");
+static const u8 sOPT_Report_Unown_6[]  = _("מרי: אולי הם מאייתים משהו?");
+static const u8 sOPT_Report_Unown_7[]  = _("או שהם סתם מפחידים אותנו!");
+static const u8 sOPT_Report_Unown_8[]  = _("אוק: חידה אמיתית של הטבע,");
+static const u8 sOPT_Report_Unown_9[]  = _("שלא נפתרה עד היום.");
 
-static const u8 sOPT_Report_Snubbull_0[]  = _("MARY: GOLDENROD residents are");
-static const u8 sOPT_Report_Snubbull_1[]  = _("searching high and low!");
-static const u8 sOPT_Report_Snubbull_2[]  = _("OAK: A SNUBBULL has gone rogue");
-static const u8 sOPT_Report_Snubbull_3[]  = _("and is on the run!");
-static const u8 sOPT_Report_Snubbull_4[]  = _("Usually shy and fussy, it's");
-static const u8 sOPT_Report_Snubbull_5[]  = _("been seen near the station.");
-static const u8 sOPT_Report_Snubbull_6[]  = _("MARY: Maybe it's chasing");
-static const u8 sOPT_Report_Snubbull_7[]  = _("love… or just adventure!");
-static const u8 sOPT_Report_Snubbull_8[]  = _("OAK: Keep your eyes peeled,");
-static const u8 sOPT_Report_Snubbull_9[]  = _("and your leash ready.");
+static const u8 sOPT_Report_Snubbull_0[]  = _("מרי: תושבי גולדנרוד");
+static const u8 sOPT_Report_Snubbull_1[]  = _("מחפשים בכל פינה!");
+static const u8 sOPT_Report_Snubbull_2[]  = _("אוק: סנאבול אחד יצא משליטה");
+static const u8 sOPT_Report_Snubbull_3[]  = _("ועכשיו הוא במנוסה!");
+static const u8 sOPT_Report_Snubbull_4[]  = _("בדרך כלל הוא ביישן ובררן,");
+static const u8 sOPT_Report_Snubbull_5[]  = _("אבל ראו אותו ליד התחנה.");
+static const u8 sOPT_Report_Snubbull_6[]  = _("מרי: אולי הוא רודף אחרי");
+static const u8 sOPT_Report_Snubbull_7[]  = _("אהבה… או סתם הרפתקה!");
+static const u8 sOPT_Report_Snubbull_8[]  = _("אוק: פקחו עיניים,");
+static const u8 sOPT_Report_Snubbull_9[]  = _("והכינו את הרצועה.");
 
-static const u8 sOPT_Report_Slowpoke_0[]  = _("MARY: Big news from AZALEA");
-static const u8 sOPT_Report_Slowpoke_1[]  = _("TOWN this week!");
-static const u8 sOPT_Report_Slowpoke_2[]  = _("OAK: SLOWPOKE have returned");
-static const u8 sOPT_Report_Slowpoke_3[]  = _("to their well after a crisis!");
-static const u8 sOPT_Report_Slowpoke_4[]  = _("TEAM ROCKET had been cutting");
-static const u8 sOPT_Report_Slowpoke_5[]  = _("off their tails! Horrible!");
-static const u8 sOPT_Report_Slowpoke_6[]  = _("MARY: But a brave young");
-static const u8 sOPT_Report_Slowpoke_7[]  = _("trainer shut them down!");
-static const u8 sOPT_Report_Slowpoke_8[]  = _("OAK: The SLOWPOKE are safe");
-static const u8 sOPT_Report_Slowpoke_9[]  = _("and happily dozing again.");
+static const u8 sOPT_Report_Slowpoke_0[]  = _("מרי: חדשות גדולות השבוע");
+static const u8 sOPT_Report_Slowpoke_1[]  = _("מהעיירה אזייליה!");
+static const u8 sOPT_Report_Slowpoke_2[]  = _("אוק: הסלופוק חזרו");
+static const u8 sOPT_Report_Slowpoke_3[]  = _("לבאר שלהם אחרי משבר!");
+static const u8 sOPT_Report_Slowpoke_4[]  = _("צוות רוקט כרת להם");
+static const u8 sOPT_Report_Slowpoke_5[]  = _("את הזנבות! נורא!");
+static const u8 sOPT_Report_Slowpoke_6[]  = _("מרי: אבל מאמן צעיר ואמיץ");
+static const u8 sOPT_Report_Slowpoke_7[]  = _("עצר אותם!");
+static const u8 sOPT_Report_Slowpoke_8[]  = _("אוק: הסלופוק כבר לא בסכנה");
+static const u8 sOPT_Report_Slowpoke_9[]  = _("ושוב מנמנמים בשמחה.");
 
-static const u8 sOPT_Report_LavenderTower_0[]  = _("MARY: LAVENDER TOWN's tower");
-static const u8 sOPT_Report_LavenderTower_1[]  = _("has changed tunes!");
-static const u8 sOPT_Report_LavenderTower_2[]  = _("OAK: The old ghost tower is");
-static const u8 sOPT_Report_LavenderTower_3[]  = _("now a RADIO STATION!");
-static const u8 sOPT_Report_LavenderTower_4[]  = _("Some locals say it still");
-static const u8 sOPT_Report_LavenderTower_5[]  = _("feels… spooky.");
-static const u8 sOPT_Report_LavenderTower_6[]  = _("MARY: I swear I saw a GASTLY");
-static const u8 sOPT_Report_LavenderTower_7[]  = _("near the mic booth!");
-static const u8 sOPT_Report_LavenderTower_8[]  = _("OAK: Might be static…");
-static const u8 sOPT_Report_LavenderTower_9[]  = _("or specters!");
+static const u8 sOPT_Report_LavenderTower_0[]  = _("מרי: המגדל בעיירה לבנדר");
+static const u8 sOPT_Report_LavenderTower_1[]  = _("שינה את הנעימה!");
+static const u8 sOPT_Report_LavenderTower_2[]  = _("אוק: מגדל הרפאים הישן הוא");
+static const u8 sOPT_Report_LavenderTower_3[]  = _("עכשיו תחנת רדיו!");
+static const u8 sOPT_Report_LavenderTower_4[]  = _("כמה תושבים אומרים שעדיין");
+static const u8 sOPT_Report_LavenderTower_5[]  = _("יש שם אווירה… מצמררת.");
+static const u8 sOPT_Report_LavenderTower_6[]  = _("מרי: אני נשבעת שראיתי גסטלי");
+static const u8 sOPT_Report_LavenderTower_7[]  = _("ליד תא השידור!");
+static const u8 sOPT_Report_LavenderTower_8[]  = _("אוק: אולי אלה הפרעות קליטה…");
+static const u8 sOPT_Report_LavenderTower_9[]  = _("או רוחות רפאים!");
 
-static const u8 sOPT_Report_Tentacruel_0[]  = _("MARY: Weird news from the");
-static const u8 sOPT_Report_Tentacruel_1[]  = _("WHIRL ISLANDS today!");
-static const u8 sOPT_Report_Tentacruel_2[]  = _("OAK: TENTACRUEL have been");
-static const u8 sOPT_Report_Tentacruel_3[]  = _("surrounding cave entrances!");
-static const u8 sOPT_Report_Tentacruel_4[]  = _("They're massive, and acting");
-static const u8 sOPT_Report_Tentacruel_5[]  = _("almost territorial.");
-static const u8 sOPT_Report_Tentacruel_6[]  = _("MARY: They block the way");
-static const u8 sOPT_Report_Tentacruel_7[]  = _("without attacking…");
-static const u8 sOPT_Report_Tentacruel_8[]  = _("OAK: As if guarding something");
-static const u8 sOPT_Report_Tentacruel_9[]  = _("deep beneath the waves.");
+static const u8 sOPT_Report_Tentacruel_0[]  = _("מרי: חדשות מוזרות היום");
+static const u8 sOPT_Report_Tentacruel_1[]  = _("מאיי המערבולת!");
+static const u8 sOPT_Report_Tentacruel_2[]  = _("אוק: טנטקרול רבים מקיפים");
+static const u8 sOPT_Report_Tentacruel_3[]  = _("את פתחי המערות!");
+static const u8 sOPT_Report_Tentacruel_4[]  = _("הם ענקיים, ומתנהגים");
+static const u8 sOPT_Report_Tentacruel_5[]  = _("בצורה כמעט טריטוריאלית.");
+static const u8 sOPT_Report_Tentacruel_6[]  = _("מרי: הם חוסמים את הדרך");
+static const u8 sOPT_Report_Tentacruel_7[]  = _("בלי לתקוף…");
+static const u8 sOPT_Report_Tentacruel_8[]  = _("אוק: כאילו הם שומרים על משהו");
+static const u8 sOPT_Report_Tentacruel_9[]  = _("עמוק מתחת לגלים.");
 
 #define OPT_REPORT_LINES 10
 #define NUM_OPT_REPORTS 10

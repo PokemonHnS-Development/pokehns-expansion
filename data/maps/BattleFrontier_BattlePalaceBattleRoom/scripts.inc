@@ -441,16 +441,16 @@ BattleFrontier_BattlePalaceBattleRoom_Movement_SpenserEnter:
 	step_end
 
 BattleFrontier_BattlePalaceBattleRoom_Text_LetMeRestoreYourMons:
-	.string "Excellent…\n"
-	.string "Let me restore your POKéMON.$"
+	.string "מצוין…\n"
+	.string "הרשה לי לרפא את הפוקימונים שלך.$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor2ndOpponent:
-	.string "The 2nd opponent is next.\n"
-	.string "Are you prepared?$"
+	.string "עכשיו תורו של היריב ה-2.\n"
+	.string "האם אתה מוכן?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor3rdOpponent:
-	.string "The 3rd opponent is next.\n"
-	.string "Are you prepared?$"
+	.string "עכשיו תורו של היריב ה-3.\n"
+	.string "האם אתה מוכן?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor4thOpponent:
 	.string "The 4th opponent is next.\n"
@@ -469,15 +469,15 @@ BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor7thOpponent:
 	.string "Are you prepared?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SaveAndQuitGame:
-	.string "Would you like to save and quit\n"
-	.string "the game?$"
+	.string "לשמור את המשחק\n"
+	.string "ולצאת?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_WishToQuitChallenge:
-	.string "Do you wish to quit your challenge?$"
+	.string "האם ברצונך לפרוש מהאתגר?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SavingData:
-	.string "Saving the data.\n"
-	.string "Have patience…$"
+	.string "אני שומר את הנתונים.\n"
+	.string "נא להתאזר בסבלנות…$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_RecordLastMatch:
 	.string "Do you wish to record your latest\n"

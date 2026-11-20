@@ -56,41 +56,40 @@ PalletTown_House2_EventScript_DaisyGrooming::
 	end
 
 PalletTown_House2_Text_Hello:
-	.string "DAISY: Hi! My kid brother is the\n"
-	.string "GYM LEADER in VIRIDIAN CITY.\p"
-	.string "But he goes out of town so\n"
-	.string "often, it causes problems for\l"
-	.string "the trainers.$"
+	.string "דייזי: היי! אחי הקטן הוא מנהיג\n"
+	.string "המכון בעיר וירידיאן.\p"
+	.string "אבל הוא יוצא מהעיר לעתים כל כך\n"
+	.string "קרובות, שזה גורם בעיות למאמנים.$"
 
 PalletTown_House2_Text_OfferGrooming:
-	.string "DAISY: Hi! Good timing. I'm about\n"
-	.string "to have some tea.\p"
-	.string "Would you like to join me?\p"
-	.string "Oh, your POKéMON are a bit dirty.\p"
-	.string "Would you like me to groom one?$"
+	.string "דייזי: היי! הגעת בזמן טוב.\n"
+	.string "אני עומדת לשתות תה.\p"
+	.string "תרצה להצטרף אליי?\p"
+	.string "אוי, הפוקימונים שלך קצת מלוכלכים.\p"
+	.string "תרצה שאטפח אחד מהם?$"
 
 PalletTown_House2_Text_WhichMon:
-	.string "DAISY: Which one should I groom?$"
+	.string "דייזי: את מי מהם לטפח?$"
 
 PalletTown_House2_Text_Alright:
-	.string "DAISY: OK, I'll get it looking\n"
-	.string "nice in no time.$"
+	.string "דייזי: בסדר, אני אדאג שהוא ייראה\n"
+	.string "נהדר תוך רגע.$"
 
 PalletTown_House2_Text_AllDone:
-	.string "DAISY: There you go! All done.\p"
-	.string "See? Doesn't {STR_VAR_1} look\n"
-	.string "nice?\p"
-	.string "It's such a cute POKéMON.$"
+	.string "דייזי: הנה! סיימתי.\p"
+	.string "רואה? {STR_VAR_1} נראה נהדר,\n"
+	.string "נכון?\p"
+	.string "זה פוקימון כל כך חמוד.$"
 
 PalletTown_House2_Text_AlreadyGroomed:
-	.string "DAISY: I always have tea around\n"
-	.string "this time. Come join me.$"
+	.string "דייזי: אני תמיד שותה תה\n"
+	.string "בשעה הזאת. בוא להצטרף אליי.$"
 
 PalletTown_House2_Text_Refused:
-	.string "DAISY: You don't want to have one\n"
-	.string "groomed?\p"
-	.string "OK, we'll just have tea.$"
+	.string "דייזי: לא רוצה שאטפח\n"
+	.string "אחד מהם?\p"
+	.string "בסדר, אז רק נשתה תה.$"
 
 PalletTown_House2_Text_CantGroomEgg:
-	.string "DAISY: Oh, sorry. I honestly can't\n"
-	.string "groom an EGG.$"
+	.string "דייזי: אוי, סליחה. אני באמת\n"
+	.string "לא יכולה לטפח ביצה.$"

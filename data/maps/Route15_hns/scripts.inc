@@ -92,98 +92,97 @@ Route15_EventScript_PPup::
 	end
 
 Route15_Text_TeacherColetteSeen:
-	.string "Have you forgotten anything?$"
+	.string "שכחת משהו?$"
 
 Route15_Text_TeacherColetteBeaten:
-	.string "Kyaaah!$"
+	.string "אאאאה!$"
 
 Route15_Text_TeacherColetteAfterBattle:
-	.string "Before I became a teacher, I used\n"
-	.string "to forget a lot of things.$"
+	.string "לפני שהפכתי למורה,\n"
+	.string "הייתי שוכחת המון דברים.$"
 
 Route15_Text_TeacherHillarySeen:
-	.string "On sunny days, I think that the\n"
-	.string "kids would rather be playing in the\l"
-	.string "schoolyard than studying in class.$"
+	.string "בימים שמשיים, נראה לי שהילדים מעדיפים\n"
+	.string "לשחק בחצר בית הספר ולא ללמוד בכיתה.$"
 
 Route15_Text_TeacherHillaryBeaten:
-	.string "I didn't want to lose…$"
+	.string "לא רציתי להפסיד…$"
 
 Route15_Text_TeacherHillaryAfterBattle:
-	.string "Studying is important, but\n"
-	.string "exercise is just as vital.$"
+	.string "ללמוד זה חשוב,\n"
+	.string "אבל פעילות גופנית חיונית לא פחות.$"
 
 Route15_Text_HillaryRegister:
-	.string "You've taught me a lesson!\n"
-	.string "May I have your number?$"
+	.string "לימדת אותי לקח!\n"
+	.string "אפשר לקבל את המספר שלך?$"
 
 Route15_Text_HillaryRematchIntro:
-	.string "I'll school you this time!$"
+	.string "הפעם אני אלמד אותך שיעור!$"
 
 Route15_Text_HillaryRematchDefeat:
-	.string "Back to the drawing board…$"
+	.string "חוזרים לנקודת ההתחלה…$"
 
 Route15_Text_HillaryPostRematch:
-	.string "Teaching POKéMON is just like\n"
-	.string "teaching children. Patience!$"
+	.string "ללמד פוקימונים זה בדיוק כמו\n"
+	.string "ללמד ילדים. סבלנות!$"
 
 Route15_Text_SchoolboyKippSeen:
-	.string "Hang on. I have to phone my mom.$"
+	.string "רגע. אני צריך להתקשר לאמא שלי.$"
 
 Route15_Text_SchoolboyKippBeaten:
-	.string "Sorry, Mom! I was beaten!$"
+	.string "סליחה, אמא! הפסדתי!$"
 
 Route15_Text_SchoolboyKippAfterBattle:
-	.string "My mom worries so much about me, I\n"
-	.string "have to phone her all the time.$"
+	.string "אמא שלי כל כך דואגת לי,\n"
+	.string "שאני צריך להתקשר אליה כל הזמן.$"
 
 Route15_Text_SchoolboyTommySeen:
-	.string "Let's battle. I won't lose!$"
+	.string "בוא נילחם. אני לא אפסיד!$"
 
 Route15_Text_SchoolboyTommyBeaten:
-	.string "I forgot to do my homework!$"
+	.string "שכחתי להכין שיעורי בית!$"
 
 Route15_Text_SchoolboyTommyAfterBattle:
-	.string "Sayonara! I just learned that in\n"
-	.string "my Japanese class.$"
+	.string "סאיונרה! הרגע למדתי את זה\n"
+	.string "בשיעור יפנית.$"
 
 Route15_Text_SchoolboyJohnnySeen:
-	.string "We're on a field trip to LAVENDER\n"
-	.string "RADIO TOWER for social studies.$"
+	.string "אנחנו בסיור למגדל הרדיו של לבנדר\n"
+	.string "במסגרת לימודי החברה.$"
 
 Route15_Text_SchoolboyJohnnyBeaten:
-	.string "You're wickedly tough!$"
+	.string "יש לך כוח מטורף!$"
 
 Route15_Text_SchoolboyJohnnyAfterBattle:
-	.string "I'm tired of walking. I need to\n"
-	.string "take a break.$"
+	.string "נמאס לי ללכת. אני חייב\n"
+	.string "לעשות הפסקה.$"
 
 Route15_Text_SchoolboyBillySeen:
-	.string "My favorite class is Gym!$"
+	.string "השיעור האהוב עליי הוא התעמלות!$"
 
 Route15_Text_SchoolboyBillyBeaten:
-	.string "Oh, no! How could I lose?$"
+	.string "אוי, לא! איך הפסדתי?$"
 
 Route15_Text_SchoolboyBillyAfterBattle:
-	.string "If POKéMON were a subject at\n"
-	.string "school, I'd be the best!$"
+	.string "אם פוקימונים היו מקצוע\n"
+	.string "בבית הספר, הייתי הכי טוב!$"
 
 Route15_Text_BillyRegister:
-	.string "I should've paid more attention in class.\n"
-	.string "Can I have your number?$"
+	.string "הייתי צריך להקשיב יותר בשיעור.\n"
+	.string "אפשר לקבל את המספר שלך?$"
 
 Route15_Text_BillyRematchIntro:
-	.string "I've been studying hard!\n"
-	.string "Let me show you what I learned!$"
+	.string "ישבתי על הספרים בלי הפסקה!\n"
+	.string "עכשיו אראה לך מה למדתי!$"
 
 Route15_Text_BillyRematchDefeat:
-	.string "I need to study more…$"
+	.string "אני צריך ללמוד עוד…$"
 
 Route15_Text_BillyPostRematch:
-	.string "Book smarts aren't everything.\n"
-	.string "I need battle experience too!$"
+	.string "ידע מהספרים זה לא הכול.\n"
+	.string "אני צריך גם ניסיון בקרבות!$"
 
 Route15_Text_Sign:
-	.string "ROUTE 15\p"
-	.string "FUCHSIA CITY - LAVENDER TOWN$"
+	.string "דרך 15\p"
+	.string "העיר פושיה - העיירה לבנדר$"
 

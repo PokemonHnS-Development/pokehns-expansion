@@ -1,0 +1,103 @@
+# The player's name where the game prints it (save heid_base: שמשבחתם / KENNETH, the widest
+# 7-letter names; then the mixed name אב12CDג / AB12CDG): the main menu CONTINUE window
+# (MainMenu_FormatSavegamePlayer, src/main_menu.c:2184-2188), the trainer card front and back
+# (PrintNameOnCardFront, src/trainer_card.c:1085), the START > SAVE info window
+# (src/start_menu.c:1559), the summary INFO page OT (PrintMonOTName,
+# src/pokemon_summary_screen.c:3857), the start menu's PLAYER row, and the main menu again after
+# a save and a soft reset.
+start save:heid_base
+waitcb2 CB2_MainMenu 4000 START
+waittaskx Task_HandleMainMenuInput 900
+waitquiet
+snap heid_id_continue_7
+tap A 30
+waitcb2 CB2_Overworld 1200
+waitctl 1200 B
+
+startmenu PLAYER
+waitcb2x CB2_TrainerCard 900
+waitpmem 8 trainer_card:sData 0 10 900
+snap heid_id_card_front_7
+press A
+waitpmem 8 trainer_card:sData 0 11 900
+snap heid_id_card_back_7
+press B
+waitpmem 8 trainer_card:sData 0 10 900
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+waitquiet
+snap heid_id_startmenu_7
+
+# The start menu is still open here: startmenu moves its cursor (closing it first would leave
+# gMenuCallback at HandleStartMenuInput, and startmenu would then walk the player)
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap heid_id_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap heid_id_party_submenu
+tap A 4                                   # SUMMARY: INFO page
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap heid_id_summary_info_ot_7
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 600   # the summary returns to the submenu
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+snap heid_id_save_info_7
+tap A 0
+waitptr sSaveDialogCallback SaveDoSaveCallback 900
+waitptr sSaveDialogCallback SaveReturnSuccessCallback 900
+snap heid_id_save_done_7
+waitctl 900 B
+
+# The mixed name: Hebrew letters, digits and Latin capitals in one name
+setplayer אב12CDג AB12CDG
+startmenu PLAYER nopress
+waitquiet
+snap heid_id_startmenu_mix
+tap A 0
+waitcb2x CB2_TrainerCard 900
+waitpmem 8 trainer_card:sData 0 10 900
+snap heid_id_card_front_mix
+press A
+waitpmem 8 trainer_card:sData 0 11 900
+snap heid_id_card_back_mix
+press B
+waitpmem 8 trainer_card:sData 0 10 900
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+snap heid_id_save_info_mix
+tap A 0
+waitptr sSaveDialogCallback SaveDoSaveCallback 900
+waitptr sSaveDialogCallback SaveReturnSuccessCallback 900
+snap heid_id_save_done_mix
+waitctl 900 B
+# soft reset: the CONTINUE window with the mixed name
+10 A+B+START+SELECT
+waittask Task_TitleScreenPhase3 4000 START
+30 -
+tap A 0
+waittaskx Task_HandleMainMenuInput 900
+waitquiet
+snap heid_id_continue_mix
+tap A 30
+waitcb2 CB2_Overworld 1200
+waitctl 1200 B
+keepsave heid_mix

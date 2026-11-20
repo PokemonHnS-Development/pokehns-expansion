@@ -70,15 +70,15 @@ CianwoodCity_EventScript_KirkReturnedShuckie::
 	end
 
 CianwoodCity_Text_ManiacAskShuckle:
-	.string "I, I'm in shock!\p"
-	.string "A guy about your age with piercing\n"
-	.string "eyes and long hair came in.\p"
-	.string "He scared me into giving him my\n"
-	.string "prized POKéMON!\p"
-	.string "I still have one left, but what if\n"
-	.string "he comes back?\p"
-	.string "You look strong. Could you look\n"
-	.string "after my POKéMON for a while?$"
+	.string "אני, אני בהלם!\p"
+	.string "בחור בערך בגילך, עם עיניים\n"
+	.string "חודרות ושיער ארוך, נכנס לכאן.\p"
+	.string "הוא הפחיד אותי עד שנתתי לו\n"
+	.string "את הפוקימון היקר שלי!\p"
+	.string "נשאר לי עוד אחד,\n"
+	.string "אבל מה אם הוא יחזור?\p"
+	.string "אתה נראה חזק. תוכל לשמור\n"
+	.string "על הפוקימון שלי לזמן מה?$"
 
 CianwoodCity_Text_ManiacTakeCareShuckle:
 	.string "Oh, thank you!\p"
@@ -91,39 +91,39 @@ CianwoodCity_Text_ManiacPartyFull:
 	.string "Your POKéMON party is full.$"
 
 CianwoodCity_Text_ManiacIfHeComesBack:
-	.string "Oh, no… What'll I do if he comes\n"
-	.string "back?$"
+	.string "אוי, לא… מה אעשה\n"
+	.string "אם הוא יחזור?$"
 
 CianwoodCity_Text_ManiacHowsdoing:
-	.string "Hi! How's my POKéMON?$"
+	.string "היי! מה שלום הפוקימון שלי?$"
 
 CianwoodCity_Text_ManiacAskReturn:
-	.string "Hi! How's my POKéMON?\p"
-	.string "I think I'm safe now, so may I\n"
-	.string "have it back?$"
+	.string "היי! מה שלום הפוקימון שלי?\p"
+	.string "נראה לי שעכשיו כבר אין סכנה,\n"
+	.string "אז אפשר לקבל אותו בחזרה?$"
 
 CianwoodCity_Text_ManiacThankYou:
-	.string "Thank you!$"
+	.string "תודה!$"
 
 CianwoodCity_Text_ManiacShuckleNotThere:
 	.string "Hey, you don't have my POKéMON\n"
 	.string "with you.$"
 
 CianwoodCity_Text_ManiacShuckleLikesYou:
-	.string "My POKéMON has come to like you.\p"
-	.string "All right, you should keep it.\p"
-	.string "But promise to be good to it!$"
+	.string "הפוקימון שלי התחיל לחבב אותך.\p"
+	.string "בסדר, כדאי שתשאיר אותו אצלך.\p"
+	.string "אבל תבטיח להיות טוב אליו!$"
 
 CianwoodCity_Text_ManiacRobbed:
-	.string "Huh, something's not right.$"
+	.string "הממ, משהו כאן לא בסדר.$"
 
 CianwoodCity_Text_ManiacRobbed2:
-	.string "Oh, no, no… That's the same as\n"
-	.string "being robbed.$"
+	.string "אוי, לא, לא… זה כמו\n"
+	.string "לשדוד אותי.$"
 
 CianwoodCity_Text_ManiacHappinessSpeech:
-	.string "For POKéMON, happiness is being\n"
-	.string "with a person who treats them well.$"
+	.string "בשביל פוקימונים, אושר זה להיות\n"
+	.string "עם אדם שמתייחס אליהם יפה.$"
 
 CianwoodCity_Text_ManiacLastMon:
 	.string "If I take my POKéMON back,\n"
@@ -132,4 +132,4 @@ CianwoodCity_Text_ManiacLastMon:
 
 
 CianwoodCity_Text_ManiacReturnedMon:
-	.string "{PLAYER} returned SHUCKIE.$"
+	.string "{PLAYER} החזיר את שאקי.$"

@@ -1,0 +1,38 @@
+# Rival battle 1, Cherrygrove (CherryGroveCity_EventScript_TriggerSilver :226-237, the three
+# CherryGroveCity_Silver_Battle_* :239-249, AfterBattle :251-277) once for each starter:
+# VAR_STARTER_MON 0 -> the rival's Cyndaquil, 1 -> Totodile, 2 -> Chikorita. Ladder 1 + s1 up to
+# Mr. Pokemon (CHERRYGROVE 2 -> 3).
+start saves/r6sj_ladder1_newgame.sav
+include _base.txt
+include _s1_lab_done.txt
+ev setflag FLAG_VISITED_CHERRYGROVE_CITY; setvar VAR_CHERRYGROVE_CITY_STATE, 1; additem ITEM_MYSTERY_EGG; setflag FLAG_DELIVERED_EGG; clearflag FLAG_HIDE_MRPOKEMON; setvar VAR_NEWBARKTOWN_LABSTATE, 4; setflag FLAG_HIDE_SILVER_NEWBARKTOWN; setflag FLAG_SYS_POKEDEX_GET; setflag FLAG_HIDE_GUIDE_GENT_CHERRYGROVE; clearflag FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE; end
+# VAR_STARTER_MON 0: the rival has Cyndaquil
+ev setvar VAR_STARTER_MON, 0; end
+ev setvar VAR_CHERRYGROVE_CITY_STATE, 3; clearflag FLAG_HIDE_SILVER_CHERRYGROVE; end
+warpto MAP_CHERRYGROVE_CITY_HNS 58 10
+walkto 56 10
+scene r1cyn_pre 20000
+bwalk r1cyn_intro input:HandleInputChooseAction
+bwin r1cyn_win
+scene r1cyn_after 40000 40
+snap r1cyn_end
+# VAR_STARTER_MON 1: the rival has Totodile
+ev setvar VAR_STARTER_MON, 1; end
+ev setvar VAR_CHERRYGROVE_CITY_STATE, 3; clearflag FLAG_HIDE_SILVER_CHERRYGROVE; end
+warpto MAP_CHERRYGROVE_CITY_HNS 58 10
+walkto 56 10
+scene r1tot_pre 20000
+bwalk r1tot_intro input:HandleInputChooseAction
+bwin r1tot_win
+scene r1tot_after 40000 40
+snap r1tot_end
+# VAR_STARTER_MON 2: the rival has Chikorita
+ev setvar VAR_STARTER_MON, 2; end
+ev setvar VAR_CHERRYGROVE_CITY_STATE, 3; clearflag FLAG_HIDE_SILVER_CHERRYGROVE; end
+warpto MAP_CHERRYGROVE_CITY_HNS 58 10
+walkto 56 10
+scene r1chi_pre 20000
+bwalk r1chi_intro input:HandleInputChooseAction
+bwin r1chi_win
+scene r1chi_after 40000 40
+snap r1chi_end

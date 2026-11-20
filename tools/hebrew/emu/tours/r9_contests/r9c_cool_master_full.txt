@@ -1,0 +1,52 @@
+# r9c_cool_master_again with the POKE BALLS pocket full (fullpocket), so the LUXURY BALL does not fit:
+# NoRoomForLuxuryBall (bag full, pick it up at the counter later). Back in the lobby the receptionist
+# offers the prize (PickUpPrize) while the pocket is still full (ComeBackForPrizeLater), then again with
+# one slot free (GiveLuxuryBallAtCounter).
+# Based on: a Master-rank COOL contest entered by a Pokemon that already holds the COOL Master ribbon (all four
+# COOL ribbons given with GiveMonContestRibbon): the receptionist asks whether to enter anyway
+# (LilycoveCity_ContestLobby_Text_AlreadyWonEnterAnyway, YES), and the win gives the Master-only
+# repeat prize, a LUXURY BALL (contest_hall.inc ContestHall_EventScript_GiveLuxuryBall), instead of
+# a ribbon. Party slot 0 becomes a level-50 LUCARIO; appeals 30122 (as r9c_cool_master).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_LUCARIO, 50, move1=MOVE_SKY_UPPERCUT, move2=MOVE_DYNAMIC_PUNCH, move3=MOVE_TRUMP_CARD, move4=MOVE_EXTREME_SPEED; additem ITEM_POKEBLOCK_CASE, 1; end
+w8 @gContestMonPartyIndex@ 0
+fullpocket 2 ITEM_POKE_BALL 999
+ev setvar VAR_CONTEST_CATEGORY, 0; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 3; special GiveMonContestRibbon; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 3
+fieldwatch type menu 3000
+pick 0
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap party_pick
+tap A 4
+fieldwatch again menu 3000
+snap again_menu
+pick 0
+fieldwatch entry cb2:CB2_StartContest 40000 45
+w16s gContestMonRound1Points 3 2000
+contestplay5 app 30122
+fieldwatch judge cb2:CB2_StartShowContestResults 20000 45
+waitcb2x CB2_ShowContestResults 600
+burstuntil res CB2_ShowContestResults 16 9000 A 240
+fieldwatch prize free 30000 45
+loc
+snap lobby_after
+face UP
+tap A 4
+fieldwatch counter1 free 6000 0
+snap counter1_end
+freeslot
+face UP
+tap A 4
+fieldwatch counter2 free 6000 0
+snap counter2_end

@@ -1,0 +1,41 @@
+# Mart SELL: the bag in sell mode (ITEMMENULOCATION_SHOP) on its CANCEL row, whose description is
+# 'Return to {the shop}.' (PrintItemDescription src/item_menu.c:1090-1104, gText_ReturnToVar1 with
+# gBagMenu_ReturnToStrings[ITEMMENULOCATION_SHOP] = gText_TheShop, src/strings.c:196). The MEDICINE
+# pocket is set to one POTION so its CANCEL row is row 1; the field bag's CANCEL row is shot for
+# comparison (gText_TheField). Walk and clerk as tours/menu_mart.txt.
+# Run: scripts/r16_items/items16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_items --only '^it_sell_cancel$'
+# Save: menuA_base.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+setpocket POCKET_MEDICINE ITEM_POTION:20
+bagopen MEDICINE 1
+snap sc_01_field_bag_cancel
+bagclose
+tap B 4
+waitctl 600
+w32 @gMenuCallback@ 0
+bagpos MEDICINE 1
+go DOWN 9                                 # out of the Center: Cherrygrove City (47,8)
+go LEFT 6
+go UP 1                                   # the Mart door at (41,7)
+go UP 4                                   # in front of the counter (4,3); the clerk is at (2,3)
+face LEFT
+talk sc_mart_welcome 10 A Task_ShopMenu
+waittaskx Task_ShopMenu 300
+waitquiet
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0                                   # SELL
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap sc_02_sell_bag_open
+bagto 1
+snap sc_03_sell_bag_cancel_row
+bagto 0
+snap sc_04_sell_bag_potion
+bagto 1
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+snap sc_05_back_to_shop_menu

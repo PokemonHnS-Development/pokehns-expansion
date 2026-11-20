@@ -46,72 +46,71 @@ Route9_EventScript_Item_Flash_Cannon::
     end
 
 Route9_Text_CamperDeanSeen:
-	.string "I came to explore ROCK TUNNEL.$"
+	.string "באתי לחקור את מערת האבן.$"
 
 Route9_Text_CamperDeanBeaten:
-	.string "Whoa! Danger, man.$"
+	.string "וואו! מסוכן, אחי.$"
 
 Route9_Text_CamperDeanAfter:
-	.string "My POKéMON were hurt before even\n"
-	.string "entering ROCK TUNNEL.\p"
-	.string "I'd better take them to a POKéMON\n"
-	.string "CENTER right away.$"
+	.string "הפוקימונים שלי נפצעו עוד לפני\n"
+	.string "שנכנסנו למערת האבן.\p"
+	.string "כדאי שאקח אותם מיד\n"
+	.string "למרכז פוקימון.$"
 
 Route9_Text_PicnickerHeidiSeen:
-	.string "Have you ever been to a picnic?\p"
-	.string "They're so much fun!$"
+	.string "היית פעם בפיקניק?\p"
+	.string "זה כל כך כיף!$"
 
 Route9_Text_PicnickerHeidiBeaten:
-	.string "Ohhhh!$"
+	.string "אוווו!$"
 
 Route9_Text_PicnickerHeidiAfter:
-	.string "We bake lots of goodies and share\n"
-	.string "them all around.\p"
-	.string "They're delicious!$"
+	.string "אנחנו אופים המון מטעמים\n"
+	.string "ומחלקים אותם לכולם.\p"
+	.string "הם טעימים!$"
 
 Route9_Text_CamperSidSeen:
-	.string "Hey, you! Don't litter!$"
+	.string "היי, אתה! אל תלכלך!$"
 
 Route9_Text_CamperSidBeaten:
-	.string "I was just pointing out…$"
+	.string "רק הערתי…$"
 
 Route9_Text_CamperSidAfter:
-	.string "Sorry. You weren't littering. It\n"
-	.string "was my mistake.$"
+	.string "סליחה. לא לכלכת.\n"
+	.string "זאת הייתה טעות שלי.$"
 
 Route9_Text_PicnickerEdnaSeen:
-	.string "People shouldn't leave any litter\n"
-	.string "behind.$"
+	.string "אסור לאנשים להשאיר\n"
+	.string "אחריהם לכלוך.$"
 
 Route9_Text_PicnickerEdnaBeaten:
-	.string "Ohh… I lost…$"
+	.string "אוף… הפסדתי…$"
 
 Route9_Text_PicnickerEdnaAfter:
-	.string "Conserving energy is important,\n"
-	.string "but the environment is even more\l"
-	.string "vital.$"
+	.string "חיסכון באנרגיה חשוב, אבל\n"
+	.string "הסביבה חיונית עוד יותר.$"
 
 Route9_Text_HikerTimSeen:
-	.string "She'll be coming 'round MT.SILVER\n"
-	.string "when she comes…\p"
-	.string "MT.SILVER is in JOHTO, right?$"
+	.string "היא תבוא מסביב להר הכסף\n"
+	.string "כשהיא תבוא…\p"
+	.string "הר הכסף נמצא בג'וטו, נכון?$"
 
 Route9_Text_HikerTimBeaten:
-	.string "I was too busy singing…$"
+	.string "הייתי עסוק מדי בשירה…$"
 
 Route9_Text_HikerTimAfter:
-	.string "Battles are about concentration.$"
+	.string "קרבות הם עניין של ריכוז.$"
 
 Route9_Text_HikerSidneySeen:
-	.string "I'll tell you a secret.\p"
-	.string "But first, we battle!$"
+	.string "אגלה לך סוד.\p"
+	.string "אבל קודם, נילחם!$"
 
 Route9_Text_HikerSidneyBeaten:
-	.string "Oh, dang! I lost that…$"
+	.string "אוף, לא! הפסדתי…$"
 
 Route9_Text_HikerSidneyAfter:
-	.string "The POWER PLANT is across a small\n"
-	.string "river.$"
+	.string "מפעל החשמל נמצא מעבר\n"
+	.string "לנהר קטן.$"
 
 Route9_Text_Sign:
 	.string "ROUTE 9\p"

@@ -1,0 +1,10 @@
+# TIME BOARD before any clear (sign at (8,10), special ShowTrainerHillRecords).
+tap A 4
+waitcb2 MainCB2_TrainerHillRecords 600
+waittask Task_TrainerHillWaitForPaletteFade 600
+waitquiet
+snap h01_timeboard_empty
+showtasks
+press A
+waitctl 600
+snap h01_back

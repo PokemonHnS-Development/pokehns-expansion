@@ -1,0 +1,8 @@
+# Elite Four and Lance, rematch branch (FLAG_IS_CHAMPION set, as on the post-game save):
+# *_RematchBefore, TRAINER_*_2_HNS / *_POSTOBC_HNS, LanceOnDefeatKanto, stopping at the Hall of
+# Fame warp.
+start saves/r6_league_base.sav
+include _base.txt
+ev setflag FLAG_IS_CHAMPION; setvar VAR_LEAGUE_STATE, 1; setflag FLAG_HIDE_LEAGUE_BLACKBELT; setflag FLAG_HIDE_INDIGO_PLATEAU_SILVER; setflag FLAG_HIDE_INDIGO_PLATEAU_MARY_OAK; end
+vars VAR_SINJOH_STORYLINE
+include _e4_rooms.txt

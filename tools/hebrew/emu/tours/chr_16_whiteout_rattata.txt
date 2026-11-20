@@ -1,0 +1,29 @@
+# Nuzlocke whiteout with no live Pokemon in the PC (save chal_a): the fainted party is moved
+# out and a Lv 1 Rattata is given (DoWhiteOut, src/overworld.c:395-410).
+start save:chal_a
+include _chr_base.txt
+ev givemon SPECIES_VULPIX, 5, move1=MOVE_MEMENTO; end
+warpto MAP_ROUTE30_HNS 23 25
+pinrng
+evstart setwildbattle SPECIES_PONYTA, 2; callnative SetNuzlockeChecks; dowildbattle; end
+waitbattle
+bwalk chr_wr_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0                                   # Memento
+bwalk chr_wr_whiteout free
+snap chr_wr_home
+unpinrng
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap chr_wr_party_rattata
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap A 4                                   # SUMMARY
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitquiet
+snap chr_wr_rattata_summary

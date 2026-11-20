@@ -1,0 +1,10 @@
+# Goldenrod 3F X items (MAP_GOLDENROD_CITY_DEPARTMENT_STORE_3F_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_GOLDENROD_CITY_DEPARTMENT_STORE_3F_HNS
+clerk 15 5 m18_hi
+buyopen m18_buy
+listshots m18_list
+buyeach m18_ask
+buyclose m18_menu
+shopquit m18_bye

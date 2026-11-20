@@ -1,0 +1,11 @@
+# Refute check: Clair gym battle only (send-out and about-to-send lines).
+start saves/r6_league_base.sav
+include ../r6_league/_base.txt
+ev clearflag FLAG_DEFEATED_BLACKTHORN_GYM; clearflag FLAG_BADGE08_GET; clearflag FLAG_IS_CHAMPION; setvar VAR_BLACKTHORN_CITY_STATE, 1; setflag FLAG_HIDE_DRAGONS_DEN_SHRINE_CLAIR; setflag FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR; end
+warpto MAP_BLACKTHORN_CITY_GYM_HNS 20 6
+face UP
+tap A 4
+scene L_field 20000
+bwalk L_bintro input:HandleInputChooseAction
+snap L_action
+bwin L_win

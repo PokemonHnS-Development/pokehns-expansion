@@ -1,0 +1,7 @@
+# POKE BALLS pocket: every row and its context menu.
+start saves/menuA_base_copy.sav
+include ../../continue.txt
+fillpocket POKE_BALLS 999 0 39
+bagopen POKE_BALLS
+bagrows ball ctx 60
+bagclose

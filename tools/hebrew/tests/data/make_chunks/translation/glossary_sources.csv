@@ -1,0 +1,2 @@
+kind,constant,english,source,pattern
+species,SPECIES_PIKACHU,PIKACHU,src/data/pokemon/species_info/gen_1_families.h:5,".speciesName = _(""…"")"

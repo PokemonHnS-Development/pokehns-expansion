@@ -302,11 +302,11 @@ Route110_TrickHousePuzzle3_EventScript_Alan::
 	end
 
 Route110_TrickHousePuzzle3_Text_WroteSecretCodeLockOpened:
-	.string "{PLAYER} wrote down the secret code\n"
-	.string "on the door.\p"
-	.string "“TRICK MASTER is coveted.”\n"
+	.string "{PLAYER} כתב את הקוד הסודי\n"
+	.string "על הדלת.\p"
+	.string "”אמן התעלולים נחשק.”\n"
 	.string "… … … … … … … …\p"
-	.string "The lock clicked open!$"
+	.string "המנעול נפתח בנקישה!$"
 
 Route110_TrickHousePuzzle3_Text_JustinIntro:
 	.string "I keep coming back to this same place!$"

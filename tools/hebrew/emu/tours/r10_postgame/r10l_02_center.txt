@@ -1,0 +1,10 @@
+# Indigo Plateau Pokemon Center (post-game), entered from the plateau door: nurse (heal YES), the
+# Chansey, the mart clerk (BUY list scrolled to the end), the cooltrainer, the psychic (teleport
+# offer answered NO), the Abra, the rival (daily rematch: battle and after-line), the ninja, the
+# wall clock (clock screen), the statues.
+start saves/r10pg_base.sav
+include _base.txt
+arrive MAP_INDIGO_PLATEAU_HNS 11 8 ipo
+arrive MAP_INDIGO_PLATEAU_POKEMON_CENTER_HNS 19 15 ipc
+ss ipc
+visit ipc yes=1

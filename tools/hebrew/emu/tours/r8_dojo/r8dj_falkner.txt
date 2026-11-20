@@ -1,0 +1,8 @@
+# Dojo invitation, Falkner at Celadon Dept. Store 5F (CeladonDeptStore5_EventScript_Falkner, data/maps/CeladonCity_DepartmentStore_5F_hns/scripts.inc:61-72): one message,
+# the fade, the leader removed, FLAG_HIDE_DOJO_* cleared. The script has no YES/NO.
+start saves/r8_dojo_base.sav
+include _base.txt
+ev clearflag FLAG_HIDE_CELADON_FALKNER; setflag FLAG_HIDE_DOJO_FALKNER; end
+warpto MAP_CELADON_CITY_DEPARTMENT_STORE_5F_HNS 4 8
+approach 5
+include _invite.txt

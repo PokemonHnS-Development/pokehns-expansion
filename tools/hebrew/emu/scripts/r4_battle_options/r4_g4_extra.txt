@@ -1,0 +1,75 @@
+# Gen 4 battle UI (newBattleUI = 1, src/battle_gfx_sfx_util.c:35-38) on the cases the
+# re-run tours do not reach: Lv 100 on both boxes (the TEXT_RTL level slot drops the level
+# glyph when glyph and digits pass 24 px, src/battle_interface.c:910-935), the widest
+# 10-letter species names (Hebrew: Meowscarada 53 px + gender, Crabominable 51 px + gender)
+# and 10-letter nicknames in the 55 px name fit (src/battle_interface.c:1811-1816), the
+# shiny icon on both boxes, and a wild double battle with the player's HP as bars and, after
+# START, as text (SwapHpBarsWithHpText, src/battle_interface.c:1222-1262).
+start saves/ladder1_newgame.sav
+include ../../tours/_battle_base.txt
+opt newBattleUI=1
+ev givemon SPECIES_MEOWSCARADA, 100, shinyMode=0, move1=MOVE_TACKLE; givemon SPECIES_HITMONCHAN, 100, move1=MOVE_TACKLE; givemon SPECIES_HITMONCHAN, 100, move1=MOVE_TACKLE; givemon SPECIES_SANDSLASH_ALOLA, 99, move1=MOVE_TACKLE; end
+nick 1 שששששששששש WWWWWWWWWW
+nick 2 מלכתהשלגים SNOWQUEENS
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+snap g4x_party_field
+tap B 4
+waitcb2x CB2_Overworld 900
+waitquiet
+tap B 4
+waitctl 900
+
+# single: shiny Lv 100 Crabominable (moves: Splash only) against the shiny Lv 100 Meowscarada
+pinrng
+ev setwildbattleshiny SPECIES_CRABOMINABLE, 100; end
+ev createmon 1, 0, SPECIES_CRABOMINABLE, 100, shinyMode=0, move1=MOVE_SPLASH, move2=MOVE_NONE, move3=MOVE_NONE, move4=MOVE_NONE; end
+evstart dowildbattle; end
+waitbattle
+bwalk g4x_intro input:HandleInputChooseAction
+snap g4x_lv100_shiny
+include ../../tours/_bv_switch.txt
+snap g4x_party_battle
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4
+bwalk g4x_sw1 input:HandleInputChooseAction
+snap g4x_nick_widest
+include ../../tours/_bv_switch.txt
+snap g4x_party_battle_widest_lead
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4
+bwalk g4x_sw2 input:HandleInputChooseAction
+snap g4x_nick_phrase
+include ../../tours/_bv_switch.txt
+seek 8 @gPartyMenu+9@ 3 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4
+bwalk g4x_sw3 input:HandleInputChooseAction
+snap g4x_lv99_sandslash
+baction RUN
+bwalk g4x_run free
+
+# wild double: Sandslash-Alola and Brambleghast (52 px names), Lv 100
+pinrng
+evstart setwildbattle SPECIES_SANDSLASH_ALOLA, 100, ITEM_NONE, SPECIES_BRAMBLEGHAST, 100; dowildbattle; end
+waitbattle
+bwalk g4x_dbl_intro input:HandleInputChooseAction
+snap g4x_dbl_bars
+tap START 4
+waitquiet
+snap g4x_dbl_hptext
+tap START 4
+waitquiet
+snap g4x_dbl_bars_again
+baction RUN
+bwalk g4x_dbl_run free
+

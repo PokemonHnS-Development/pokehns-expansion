@@ -12,24 +12,24 @@ SSAqua_RoomSW_EventScript_Clyde::
 	end
 
 SSAqua_RoomSW_Text_BeautyCassieSeen:
-    .string "I'm trying to forget my woes.\n"
-    .string "Let's battle!$"
+    .string "אני מנסה לשכוח מהצרות שלי.\n"
+    .string "קדימה, לקרב!$"
 
 SSAqua_RoomSW_Text_BeautyCassieBeaten:
-    .string "My heart weeps…$"
+    .string "הלב שלי בוכה…$"
 
 SSAqua_RoomSW_Text_BeautyCassieAfterBattle:
-    .string "A voyage is best for getting over\n"
-    .string "a broken heart.\p"
-    .string "But a FAST SHIP trip is too short\n"
-    .string "for grieving.$"
+    .string "הפלגה היא הדרך הכי טובה\n"
+    .string "להתגבר על לב שבור.\p"
+    .string "אבל ההפלגה בספינה המהירה\n"
+    .string "קצרה מדי בשביל להתאבל.$"
 
 SSAqua_RoomSW_Text_GuitaristClydeSeen:
-    .string "I'm going to audition my songs\n"
-    .string "at GOLDENROD's RADIO STATION.$"
+    .string "אני בדרך לאודישן עם השירים שלי\n"
+    .string "בתחנת הרדיו של גולדנרוד.$"
 
 SSAqua_RoomSW_Text_GuitaristClydeBeaten:
-    .string "Yowza! Total distortion!$"
+    .string "וואו! דיסטורשן מוחלט!$"
 
 SSAqua_RoomSW_Text_GuitaristClydeAfterBattleMobile:
     .string "I was going to make my debut at\n"
@@ -38,5 +38,5 @@ SSAqua_RoomSW_Text_GuitaristClydeAfterBattleMobile:
     .string "redo my training…$"
 
 SSAqua_RoomSW_Text_GuitaristClydeAfterBattle:
-    .string "Speaking of the RADIO STATION,\n"
-    .string "what's this week's lucky number?$"
+    .string "אם כבר מדברים על תחנת הרדיו,\n"
+    .string "מה מספר המזל של השבוע?$"

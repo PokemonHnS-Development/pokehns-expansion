@@ -1,0 +1,21 @@
+# Base save for the Hebrew-born identity tours (run with scripts/r5_heid/heidops.py, HNS_SAVES =
+# saves_all). From the post-game ladder save: the player is renamed (שמשבחתם, seven letters that
+# are all 7 px wide; KENNETH on English), ResetPokemonStorageSystem (src/pokemon_storage_system.c:1755)
+# empties the boxes and writes this ROM's default names ('תיבה 1'..'תיבה 14' / BOX1..BOX14), the
+# party's OT becomes the new name, and 29 gifts fill box 1 to 29 (the party is full), so the next
+# catch fills box 1 and the one after it is redirected to box 2. Saved in the Cherrygrove Pokemon
+# Center below the nurse; the PC is at (11,1).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+setplayer שמשבחתם KENNETH
+ev callnative ResetPokemonStorageSystem; end
+boxnames
+setot 0 1 2 3 4 5
+ev givemon SPECIES_MEOWTH, 30; givemon SPECIES_SNORLAX, 50; givemon SPECIES_CHANSEY, 40; givemon SPECIES_TOGEPI, 5; givemon SPECIES_MEOWSCARADA, 50; givemon SPECIES_STARAPTOR, 40; givemon SPECIES_BRAMBLEGHAST, 40; givemon SPECIES_SANDSLASH_ALOLA, 40; givemon SPECIES_EXEGGUTOR_ALOLA, 40; givemon SPECIES_MAROWAK, 40; end
+ev givemon SPECIES_ELECTRODE_HISUI, 40; givemon SPECIES_CRABOMINABLE, 40; givemon SPECIES_DUDUNSPARCE, 40; givemon SPECIES_PIKACHU, 20; givemon SPECIES_BULBASAUR, 10; givemon SPECIES_CHIKORITA, 10; givemon SPECIES_TOTODILE, 10; givemon SPECIES_MAREEP, 10; givemon SPECIES_SUDOWOODO, 20; givemon SPECIES_HERACROSS, 30; end
+ev givemon SPECIES_SCYTHER, 30; givemon SPECIES_EEVEE, 10; givemon SPECIES_UMBREON, 30; givemon SPECIES_ESPEON, 30; givemon SPECIES_TYRANITAR, 55; givemon SPECIES_DRAGONITE, 55; givemon SPECIES_LAPRAS, 40; givemon SPECIES_GENGAR, 40; givemon SPECIES_ARCANINE, 40; additem ITEM_MASTER_BALL, 20; clearflag FLAG_SHOWN_BOX_WAS_FULL_MESSAGE; end
+boxprobe 0 1
+boxnames
+warpto MAP_CHERRYGROVE_CITY_POKEMON_CENTER_HNS 7 4
+savegame
+keepsave heid_base

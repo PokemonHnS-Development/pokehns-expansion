@@ -1,0 +1,30 @@
+# The contest 'link standby' line (gText_LinkStandby4, src/contest.c:364), printed by Task_SelectedMove
+# only in a link contest (src/contest.c:1693-1704). Forced stand-in: linkplan sets
+# gLinkContestFlags = LINK_CONTEST_FLAG_IS_LINK at the round-1 move list of a local Normal SMART
+# contest, so the game prints the line in its own window when the move is picked. No link partner
+# answers, so contestplay5 stops after 900 frames and the tour ends there.
+# Run: scripts/r16_contests/con16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_contests [--clip]
+# Save: ladder6_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_BRONZONG, 50, move1=MOVE_CONFUSION, move2=MOVE_EXTRASENSORY, move3=MOVE_PSYCHIC, move4=MOVE_FUTURE_SIGHT; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 0
+fieldwatch type menu 3000
+pick 3
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+fieldwatch entry cb2:CB2_StartContest 40000 45
+linkplan 1
+contestplay5 lnk 0 900
+40 -
+snap lnk_after

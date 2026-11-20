@@ -116,6 +116,38 @@ static void SpriteCB_Rival(struct Sprite *);
 static u8 CreateCreditsMonSprite(u16, s16, s16, u16);
 static void DeterminePokemonToShow(void);
 
+#if TEXT_RTL
+// The end card says סוף in the same block tiles. It is drawn left to right on screen (final pe, vav,
+// samekh), so it reads right to left. The maps are as wide as noted; the final pe drops one row
+// below the line.
+static const u8 sTheEnd_LetterMap_FinalPe[] = // 3 x 6
+{
+    1,    6,    7,
+    1,    8,    9,
+    0xFF, 0xFF, 1,
+    0xFF, 0xFF, 1,
+    0xFF, 0xFF, 1,
+    0xFF, 0xFF, 1,
+};
+
+static const u8 sTheEnd_LetterMap_Vav[] = // 2 x 5
+{
+    6,    7,
+    8,    9,
+    0xFF, 1,
+    0xFF, 1,
+    0xFF, 1,
+};
+
+static const u8 sTheEnd_LetterMap_Samekh[] = // 4 x 5
+{
+    1,    0,    0,    1,
+    1,    0xFF, 0xFF, 1,
+    1,    0xFF, 0xFF, 1,
+    0xC9, 0xC8, 0x88, 0x89,
+    0xC7, 0xC6, 0x86, 0x87,
+};
+#else
 static const u8 sTheEnd_LetterMap_T[] =
 {
     0,    1, 0,
@@ -160,6 +192,7 @@ static const u8 sTheEnd_LetterMap_D[] =
     1, 0x88, 0x89,
     1, 0x86, 0x87,
 };
+#endif // TEXT_RTL
 
 #include "data/credits_hns.h"
 
@@ -1242,6 +1275,19 @@ static u16 GetLetterMapTile(u8 baseTiles)
     return out;
 }
 
+#if TEXT_RTL
+static void DrawLetterMapTilesSized(const u8 baseTiles[], u8 width, u8 height, u8 baseX, u8 baseY, u16 offset, u16 palette)
+{
+    u8 y, x;
+    const u16 tileOffset = (palette / 16) << 12;
+
+    for (y = 0; y < height; y++)
+    {
+        for (x = 0; x < width; x++)
+            ((u16 *) (VRAM + offset + (baseY + y) * 64))[baseX + x] = tileOffset + GetLetterMapTile(baseTiles[y * width + x]);
+    }
+}
+#else
 static void DrawLetterMapTiles(const u8 baseTiles[], u8 baseX, u8 baseY, u16 offset, u16 palette)
 {
     u8 y, x;
@@ -1253,6 +1299,7 @@ static void DrawLetterMapTiles(const u8 baseTiles[], u8 baseX, u8 baseY, u16 off
             ((u16 *) (VRAM + offset + (baseY + y) * 64))[baseX + x] = tileOffset + GetLetterMapTile(baseTiles[y * 3 + x]);
     }
 }
+#endif // TEXT_RTL
 
 static void DrawTheEnd(u16 offset, u16 palette)
 {
@@ -1262,12 +1309,21 @@ static void DrawTheEnd(u16 offset, u16 palette)
     for (pos = 0; pos < 32 * 32; pos++)
         ((u16 *) (VRAM + offset))[pos] = baseTile + 1;
 
+#if TEXT_RTL
+    // The word spans columns 9-19 (11 tiles); the layer scrolls 4 pixels right so it is centred on the
+    // screen, as THE END is.
+    DrawLetterMapTilesSized(sTheEnd_LetterMap_FinalPe, 3, 6, 9, 7, offset, palette);
+    DrawLetterMapTilesSized(sTheEnd_LetterMap_Vav, 2, 5, 13, 7, offset, palette);
+    DrawLetterMapTilesSized(sTheEnd_LetterMap_Samekh, 4, 5, 16, 7, offset, palette);
+    SetGpuReg(REG_OFFSET_BG0HOFS, 256 - 4);
+#else
     DrawLetterMapTiles(sTheEnd_LetterMap_T, 3, 7, offset, palette);
     DrawLetterMapTiles(sTheEnd_LetterMap_H, 7, 7, offset, palette);
     DrawLetterMapTiles(sTheEnd_LetterMap_E, 11, 7, offset, palette);
     DrawLetterMapTiles(sTheEnd_LetterMap_E, 16, 7, offset, palette);
     DrawLetterMapTiles(sTheEnd_LetterMap_N, 20, 7, offset, palette);
     DrawLetterMapTiles(sTheEnd_LetterMap_D, 24, 7, offset, palette);
+#endif
 }
 
 #define sState data[0]

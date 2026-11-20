@@ -33,6 +33,19 @@ MAKER_CODE  := 01
 REVISION    := 0
 KEEP_TEMPS  ?= 0
 
+# Diagnostic build that records glyphs drawn outside their window: make hns RTL_CLIP_REPORT=1
+# It is a different ROM (pokehns-clip.gba, built in build/hns-clip), never the release.
+RTL_CLIP_REPORT ?= 0
+ifeq ($(RTL_CLIP_REPORT),1)
+	BUILD_NAME := $(BUILD_NAME)-clip
+endif
+# Diagnostic build that records every ROM string copied or printed: make hns RTL_STRING_REPORT=1
+# It is a different ROM (pokehns-strrep.gba, built in build/hns-strrep), never the release.
+RTL_STRING_REPORT ?= 0
+ifeq ($(RTL_STRING_REPORT),1)
+	BUILD_NAME := $(BUILD_NAME)-strrep
+endif
+
 # `File name`.gba
 FILE_NAME := poke$(BUILD_NAME)
 BUILD_DIR := build
@@ -166,6 +179,12 @@ else
 O_LEVEL ?= 2
 endif
 CPPFLAGS := $(INCLUDE_CPP_ARGS) -Wno-trigraphs -DMODERN=1 -DTESTING=$(TEST) -D$(GAME_VERSION) -std=gnu17
+ifeq ($(RTL_CLIP_REPORT),1)
+	override CPPFLAGS += -DRTL_CLIP_REPORT=TRUE
+endif
+ifeq ($(RTL_STRING_REPORT),1)
+	override CPPFLAGS += -DRTL_STRING_REPORT=TRUE
+endif
 ifeq ($(RELEASE),1)
 	override CPPFLAGS += -DRELEASE
 	ifeq ($(USE_LTO_ON_RELEASE),1)
@@ -609,6 +628,18 @@ $(ELF): $(LD_SCRIPT) $(OBJS) libagbsyscall
 	@cd $(OBJ_DIR) && $(LD) $(LDFLAGS) -T ../../$<  -o ../../$@ $(OBJS_REL) $(LIB) | cat
 	@echo "cd $(OBJ_DIR) && $(LD) $(LDFLAGS) -T ../../$< -o ../../$@ <objs> <libs> | cat"
 	$(FIX) $@ -t"$(TITLE)" -c$(GAME_CODE) -m$(MAKER_CODE) -r$(REVISION) --silent
+endif
+# The string-report build sees the strings that other files hand to text.c's printers through
+# wrappers in src/string_util.c, so text.c itself stays untouched.
+ifeq ($(RTL_STRING_REPORT),1)
+RTL_STRING_WRAPS := AddTextPrinter AddTextPrinterParameterized AddSpriteTextPrinterParametrerized \
+	AddSpriteTextPrinterParameterized3 AddSpriteTextPrinterParameterized4 AddSpriteTextPrinterParameterized6 \
+	RenderTextHandleBold
+ifeq ($(LTO),0)
+LDFLAGS += $(RTL_STRING_WRAPS:%=--wrap=%)
+else
+LDFLAGS += $(RTL_STRING_WRAPS:%=-Xlinker --wrap=%)
+endif
 endif
 
 # Builds the rom from the elf file

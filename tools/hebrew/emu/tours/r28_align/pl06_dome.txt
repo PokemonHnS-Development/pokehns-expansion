@@ -1,0 +1,10 @@
+# Battle Dome lobby: singles INFO, CHALLENGE -> level -> party pick, doubles INFO, rules board,
+# the previous tourney tree, every other NPC and sign.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 11 15 dol
+talkobj 1 dol_sgl_info pick=1
+talkobj 1 dol_sgl_ch pick=0,0
+talkobj 5 dol_dbl_info pick=1
+signpick 15 10 dol_rules pick=0
+visit dol skip=1,5

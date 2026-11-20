@@ -1,0 +1,30 @@
+# Softboiled from the party menu on a Pokemon at full HP: 'can't be used on this Pokemon'
+# (gText_CantBeUsedOnPkmn, CantUseSoftboiledOnMon src/fldeff_softboiled.c:105-110). Party slot 5 is a
+# Chansey with Softboiled (SUMMARY is row 0 of its actions, SOFTBOILED row 1); the target is slot 0.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+partyfree 5
+ev givemon SPECIES_CHANSEY, 50, move1=MOVE_SOFTBOILED; special HealPlayerParty; end
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 0
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap fo_sb_01_actions
+tap DOWN 4
+waitquiet
+snap fo_sb_02_softboiled
+tap A 0
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap fo_sb_03_which
+seek 8 @gPartyMenu+0A@ 0 UP
+waitquiet
+tap A 0
+waitkey 600
+waitquiet
+snap fo_sb_04_cant

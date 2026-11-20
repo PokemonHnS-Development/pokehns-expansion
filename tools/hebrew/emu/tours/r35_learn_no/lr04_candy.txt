@@ -1,0 +1,44 @@
+# Not learning a move after a RARE CANDY in the field (src/party_menu.c Task_TryLearnNewMoves,
+# StopLearningMovePrompt): Cyndaquil Lv 12 -> 13 wants Quick Attack with four moves known, as in
+# tours/pbi_learn_no.txt. "delete a move?" B -> "give up learning X?" YES -> "did not learn".
+# Needs a build that asks (P_ASK_MOVE_CONFIRMATION, which follows TEXT_RTL): the Hebrew one.
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+ev givemon SPECIES_CYNDAQUIL, 12, move1=MOVE_TACKLE, move2=MOVE_LEER, move3=MOVE_EMBER, move4=MOVE_SMOKESCREEN; end
+
+# MEDICINE pocket, RARE CANDY (index 5)
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 5
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+tap A 4                                   # Cyndaquil
+waittaskx Task_DisplayLevelUpStatsPg1 300
+waitmem 16 @sFanfareCounter@ 0 900
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg2 600
+tap A 4
+waittaskx Task_TryLearnNewMoves 600
+tap A 4
+talk lr04_a0_wants 6 - Task_HandleReplaceMoveYesNoInput
+snap lr04_a1_delete_q
+tap B 4                                   # B: the same as NO
+waittaskx Task_HandleStopLearningMoveYesNoInput 600
+waitquiet
+snap lr04_a3_stop_box
+tap A 4                                   # YES: give up
+waitkey 600
+snap lr04_c3_not_learned
+tap A 4
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap lr04_d1_party_after

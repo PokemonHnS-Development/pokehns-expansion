@@ -1,0 +1,24 @@
+# Route 31 sleepy man (18,11) at VAR_KENYA 1 without Kenya in the party (party of one): YES ->
+# removenamedmon 1 fails -> Route31_EventScript_SleepyMan_Fail (SleepyManFail). Then Randy with a
+# full party at VAR_KENYA 0: YES -> RandyThanks, givenamedmon 1 finds no slot -> PartyIsFull.
+start saves/r6r3_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+ev setvar VAR_KENYA, 1; end
+warpto MAP_ROUTE31_HNS 18 12
+face UP
+tap A 4
+scene smf_offer 6000
+pickd 0
+scene smf_yes 6000
+snap smf_free
+ev file _full.inc
+ev setvar VAR_KENYA, 0; end
+warpto MAP_GATE_GOLDENROD_CITY_ROUTE35_HNS 3 6
+face UP
+tap A 4
+scene kyf_offer 6000
+pickd 0
+scene kyf_yes 12000
+snap kyf_free
+vars VAR_KENYA

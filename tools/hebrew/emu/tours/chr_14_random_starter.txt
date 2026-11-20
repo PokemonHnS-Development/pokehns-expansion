@@ -1,0 +1,64 @@
+# The starter on save chal_hc (randomizer ON with starter/gift randomized, Nuzlocke HARD with
+# forced nicknames): Elm's lab with VAR_NEWBARKTOWN_LABSTATE 1, the Cyndaquil ball. The
+# picture and the name are the randomized species (ScrCmd_showmonpic, src/scrcmd.c:2715-2722),
+# then the Nuzlocke nickname line without a YES/NO and the naming screen
+# (NewBarkTown_Lab_hns/scripts.inc:236-292).
+start save:chal_hc
+include ../scripts/continue.txt
+ev setvar VAR_NEWBARKTOWN_LABSTATE, 1; setflag FLAG_MOM_VISITED; end
+warptoloose MAP_NEW_BARK_TOWN_LAB_HNS 9 5
+waitctl 600
+# Talking to the ball after this warp crashed both ROMs (HE pc=0A1BD866, EN pc=0A1EBCFE, 9
+# frames after A; the Elm intro was skipped), so the ball's choice script is started directly.
+evstart lock; goto NewBarkTown_Lab_EventScript_CyndaquilBall_Choice
+talk chr_s1_ball 10 -                     # ends at YES/NO
+snap chr_s1_choice
+tap A 0                                   # YES
+waitkey 600                               # "I think that's a great Pokemon too!"
+snap chr_s1_great
+tap A 0
+waittaskx Task_Fanfare 900                # "... received X!" with the fanfare
+waitquiet
+snap chr_s1_received
+waitnotask Task_Fanfare 900               # then the nickname line, no YES/NO, and the fade:
+4 -
+shot chr_s1_nickname_line_01
+4 -
+shot chr_s1_nickname_line_02
+4 -
+shot chr_s1_nickname_line_03
+4 -
+shot chr_s1_nickname_line_04
+4 -
+shot chr_s1_nickname_line_05
+4 -
+shot chr_s1_nickname_line_06
+4 -
+shot chr_s1_nickname_line_07
+4 -
+shot chr_s1_nickname_line_08
+4 -
+shot chr_s1_nickname_line_09
+4 -
+shot chr_s1_nickname_line_10
+4 -
+shot chr_s1_nickname_line_11
+4 -
+shot chr_s1_nickname_line_12
+waitcb2x CB2_NamingScreen 1500
+waitnaming
+snap chr_s1_naming_empty
+include _chr_name_forced.txt
+snap chr_s1_naming_typed
+press START
+waitnaming
+press A
+waitcb2x CB2_Overworld 1500
+waitctl 1500
+snap chr_s1_field
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap chr_s1_party

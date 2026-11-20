@@ -1,0 +1,44 @@
+# A Super-rank CUTE contest from the H&S contest lobby (MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS).
+# Party slot 0 becomes a level-50 PIKACHU made by this ROM (so its nickname is the ROM's species name)
+# with the moves below; the appeals are the digit string 01233 (the move-list index for each round):
+#   0 BABY_DOLL_EYES (CUTE, CONTEST_EFFECT_NEXT_APPEAL_EARLIER, src/data/moves_info.h)
+#   1 AFTER_YOU (CUTE, CONTEST_EFFECT_NEXT_APPEAL_LATER, src/data/moves_info.h)
+#   2 TICKLE (CUTE, CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS, src/data/moves_info.h)
+#   3 DEFENSE_CURL (CUTE, CONTEST_EFFECT_AVOID_STARTLE_ONCE, src/data/moves_info.h)
+# Baby-Doll Eyes (earlier), After You (later), Tickle (worsen condition), Defense Curl twice (settle down; repeated appeal).
+# Entering Super rank needs the CUTE ribbon of the rank below (GetContestEntryEligibility); they are
+# given rank by rank with GiveMonContestRibbon on gContestMonPartyIndex 0.
+# Round 1 points are set to 600 once the contest screen starts (gContestMonRound1Points[3], the
+# player is contestant 3), so the player wins and gets the ribbon (contest_hall.inc ReceiveContestRibbon).
+# gRngValue is pinned from the lobby on (pinrng), so the opponents, the AI's appeals and the
+# audience are the same on the Hebrew and the English ROM (the shots pair up by name).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_PIKACHU, 50, move1=MOVE_BABY_DOLL_EYES, move2=MOVE_AFTER_YOU, move3=MOVE_TICKLE, move4=MOVE_DEFENSE_CURL; additem ITEM_POKEBLOCK_CASE, 1; end
+w8 @gContestMonPartyIndex@ 0
+ev setvar VAR_CONTEST_CATEGORY, 2; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 1
+fieldwatch type menu 3000
+pick 2
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap party_pick
+tap A 4
+fieldwatch entry cb2:CB2_StartContest 40000 45
+w16s gContestMonRound1Points 3 600
+contestplay5 app 01233
+fieldwatch judge cb2:CB2_StartShowContestResults 20000 45
+waitcb2x CB2_ShowContestResults 600
+burstuntil res CB2_ShowContestResults 16 9000 A 240
+fieldwatch prize free 30000 45
+loc
+snap lobby_after

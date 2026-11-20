@@ -335,7 +335,7 @@ LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg:
 	.string "this here EGG!$"
 
 LavaridgeTown_Text_ReceivedTheEgg:
-	.string "{PLAYER} received the EGG.$"
+	.string "{PLAYER} קיבל את הביצה.$"
 
 LavaridgeTown_Text_NoRoomForThisEgg:
 	.string "Oh? You've too many POKéMON.\n"

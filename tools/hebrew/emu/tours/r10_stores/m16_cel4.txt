@@ -1,0 +1,10 @@
+# Celadon 4F vitamins (LilycoveCity_DepartmentStore_3F_Pokemart_Vitamins) (MAP_CELADON_CITY_DEPARTMENT_STORE_4F_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_CELADON_CITY_DEPARTMENT_STORE_4F_HNS
+clerk 3 13 m16_hi
+buyopen m16_buy
+listshots m16_list
+buyeach m16_ask
+buyclose m16_menu
+shopquit m16_bye

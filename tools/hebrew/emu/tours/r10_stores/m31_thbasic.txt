@@ -1,0 +1,10 @@
+# Trainer Hill entrance, basic list (MAP_TRAINER_HILL_ENTRANCE_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_TRAINER_HILL_ENTRANCE_HNS
+clerk 14 9 m31_hi
+buyopen m31_buy
+listshots m31_list
+buyeach m31_ask
+buyclose m31_menu
+shopquit m31_bye

@@ -300,11 +300,12 @@ SaffronMagnetTrainStation_Text_OfficerComingAboard:
     .string "Are you coming aboard?$"
 
 SaffronMagnetTrainStation_Text_OfficerRightThisWay:
-    .string "May I see your rail PASS, please?\p"
-    .string "OK. Right this way, please.$"
+    .string "אפשר לראות את כרטיס הרכבת\n"
+    .string "שלך, בבקשה?\p"
+    .string "בסדר. מכאן, בבקשה.$"
 
 SaffronMagnetTrainStation_Text_OfficerNoRailPass:
-    .string "Sorry. You don't have a rail PASS.$"
+    .string "מצטער. אין לך כרטיס רכבת.$"
 
 SaffronMagnetTrainStation_Text_OfficerHopeToSeeYouAgain:
     .string "We hope to see you again!$"
@@ -316,30 +317,28 @@ SaffronMagnetTrainStation_Text_OfficerArrivedInSaffron:
 @=============================================================================================================================
 
 SaffronMagnetTrainStation_Text_Officer_TrainNotOperating:
-	.string "I'm sorry, but the MAGNET TRAIN\n"
-	.string "isn't operating now.$"
+	.string "מצטער, אבל הרכבת המגנטית\n"
+	.string "לא פועלת כרגע.$"
 
 SaffronMagnetTrainStation_Text_GymGuide:
-	.string "The MAGNET TRAIN is a super-modern\n"
-	.string "rail liner that uses electricity\p"
-	.string "and magnets to attain incredible\n"
-	.string "speed.\p"
-	.string "However, if there isn't any\n"
-	.string "electricity…$"
+	.string "הרכבת המגנטית היא רכבת חדישה\n"
+	.string "במיוחד, שמשתמשת בחשמל ובמגנטים\p"
+	.string "כדי להגיע למהירות מדהימה.\p"
+	.string "אבל אם אין חשמל…$"
 
 SaffronMagnetTrainStation_Text_GymGuide_ReturnedPart:
-	.string "Whew…\p"
-	.string "How many times have I gone back\n"
-	.string "and forth between KANTO and JOHTO?$"
+	.string "פיו…\p"
+	.string "כמה פעמים כבר נסעתי הלוך ושוב\n"
+	.string "בין קאנטו לג'וטו?$"
 
 SaffronMagnetTrainStation_Text_Teacher:
-	.string "Before the MAGNET TRAIN STATION\n"
-	.string "was built, there was a house there.\p"
-	.string "A little girl named COPYCAT used\n"
-	.string "to live there.$"
+	.string "לפני שבנו את תחנת הרכבת\n"
+	.string "המגנטית, עמד כאן בית.\p"
+	.string "פעם גרה בו ילדה קטנה\n"
+	.string "שקראו לה ”חקיינית”.$"
 
 SaffronMagnetTrainStation_Text_Lass:
-	.string "Hi. Do you have a rail PASS?\n"
-	.string "I have one.\p"
-	.string "All the people in SAFFRON who ride\n"
-	.string "the MAGNET TRAIN have PASSES.$"
+	.string "היי. יש לך כרטיס רכבת?\n"
+	.string "לי יש.\p"
+	.string "כל תושבי סאפרון שנוסעים ברכבת\n"
+	.string "המגנטית מחזיקים כרטיס רכבת.$"

@@ -1,0 +1,50 @@
+# NEW GAME over an existing save, then START > SAVE: gText_DifferentSaveFile (data/text/save.inc:16)
+# through SaveFileExistsCallback / SaveConfirmOverwriteDefaultNoCallback (src/start_menu.c:1223-1260),
+# YES/NO with the cursor on NO. Answers NO (nothing is overwritten).
+start saves/boot_base.sav
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+snap bt02_00_mainmenu
+tap DOWN 6
+snap bt02_01_mainmenu_newgame
+tap A 30
+waittask Task_NewGameHnsSpeech_ChooseGender 4000 A
+10 -
+tap A 30
+waittask Task_NewGameHnsSpeech_WaitPressBeforeNameChoice 600
+tap A 30
+waitcb2 CB2_NamingScreen 600
+waittask naming_screen:Task_HandleInput 600
+30 -
+tap START 30
+tap A 30
+waittask Task_NewGameHnsSpeech_ProcessNameYesNoMenu 600
+10 -
+tap A 30
+waittask Task_NewGameHnsSpeech_WaitPressDisclaimer 1200 A
+tap A 30
+waittask challenge_menu:Task_ProcessInput 600
+tap R 20
+tap R 20
+tap R 20
+tap R 20
+tap R 20
+tap R 20
+waittask Task_CallYesOrNoCallback 120
+tap A 30
+waitcb2 CB2_Overworld 3000 A
+waitctl 1200
+snap bt02_02_bedroom
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+snap bt02_03_confirm
+tap A 0
+pages bt02_04_warning 10
+waitptr sSaveDialogCallback SaveOverwriteInputCallback 900
+snap bt02_05_overwrite_no
+tap UP 4
+snap bt02_06_overwrite_yes
+tap DOWN 4
+tap A 4
+waitctl 900 B
+snap bt02_07_after_no

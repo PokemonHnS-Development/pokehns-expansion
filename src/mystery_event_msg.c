@@ -1,13 +1,13 @@
 #include "global.h"
 
-const u8 gText_MysteryEventBerry[] = _("Obtained a {STR_VAR_2} BERRY!\nDad has it at PETALBURG GYM.");
-const u8 gText_MysteryEventBerryTransform[] = _("The {STR_VAR_1} BERRY transformed into\none {STR_VAR_2} BERRY.");
-const u8 gText_MysteryEventBerryObtained[] = _("The {STR_VAR_1} BERRY has already been\nobtained.");
-const u8 gText_MysteryEventSpecialRibbon[] = _("A special RIBBON was awarded to\nyour party POKéMON.");
-const u8 gText_MysteryEventNationalDex[] = _("The POKéDEX has been upgraded\nwith the NATIONAL MODE.");
-const u8 gText_MysteryEventRareWord[] = _("A rare word has been added.");
-const u8 gText_MysteryEventSentOver[] = _("{STR_VAR_1} was sent over!");
-const u8 gText_MysteryEventFullParty[] = _("Your party is full.\n{STR_VAR_1} could not be sent over.");
-const u8 gText_MysteryEventNewTrainer[] = _("A new TRAINER has arrived in\nHOENN.");
-const u8 gText_MysteryEventNewAdversaryInBattleTower[] = _("A new adversary has arrived in the\nBATTLE TOWER.");
-const u8 gText_MysteryEventCantBeUsed[] = _("This data can't be used in\nthis version.");
+const u8 gText_MysteryEventBerry[] = _("קיבלת פרי {STR_VAR_2}!\nהוא אצל אבא, במכון של פטלבורג.");
+const u8 gText_MysteryEventBerryTransform[] = _("פרי {STR_VAR_1} הפך\nלפרי {STR_VAR_2} אחד.");
+const u8 gText_MysteryEventBerryObtained[] = _("פרי {STR_VAR_1} כבר\nהתקבל.");
+const u8 gText_MysteryEventSpecialRibbon[] = _("סרט מיוחד הוענק\nלפוקימונים בקבוצה שלך.");
+const u8 gText_MysteryEventNationalDex[] = _("הפוקדקס שודרג\nוקיבל את המצב הלאומי.");
+const u8 gText_MysteryEventRareWord[] = _("נוספה מילה נדירה.");
+const u8 gText_MysteryEventSentOver[] = _("קיבלת {STR_VAR_1}!");
+const u8 gText_MysteryEventFullParty[] = _("הקבוצה שלך מלאה.\nלא ניתן היה לשלוח {STR_VAR_1}.");
+const u8 gText_MysteryEventNewTrainer[] = _("מאמן חדש הגיע\nלהואן.");
+const u8 gText_MysteryEventNewAdversaryInBattleTower[] = _("יריב חדש הגיע\nלמגדל הקרב.");
+const u8 gText_MysteryEventCantBeUsed[] = _("אי אפשר להשתמש בנתונים\nהאלה בגרסה הזו.");

@@ -18,23 +18,22 @@ FuchsiaCity_EventScript_BaobaCall::
 	end
 
 FuchsiaCity_Text_BaobaName:
-	.string "BAOBA$"
+	.string "באובה$"
 
 FuchsiaCity_Text_Baoba:
-	.string "WARDEN BAOBA: {PLAYER}!\p"
-	.string "This is WARDEN BAOBA.\p"
-	.string "Something awful has happened!\n"
-	.string "My old SAFARI ZONE in FUCHSIA CITY\l"
-	.string "was bought out and reopened!\p"
-	.string "And apparently it has exotic new\n"
-	.string "POKéMON!\p"
-	.string "It's hurting my business!\p"
-	.string "{PLAYER}, you must venture into the\n"
-	.string "new SAFARI ZONE and catch a POKéMON\l"
-	.string "to show me. I must know about these\l"
-	.string "'exotic' POKéMON.\p"
-	.string "Please {PLAYER}, my business depends\n"
-	.string "on you!$"
+	.string "הפקח באובה: {PLAYER}!\p"
+	.string "כאן הפקח באובה.\p"
+	.string "קרה משהו נורא!\p"
+	.string "אזור הספארי הישן שלי בעיר פושיה\n"
+	.string "נקנה ונפתח מחדש!\p"
+	.string "וכנראה שיש בו פוקימונים\n"
+	.string "אקזוטיים חדשים!\p"
+	.string "זה פוגע לי בעסק!\p"
+	.string "{PLAYER}, אתה חייב לתפוס פוקימון\n"
+	.string "באזור הספארי החדש ולהראות לי.\p"
+	.string "אני חייב לדעת על הפוקימונים\n"
+	.string "ה”אקזוטיים” האלה.\p"
+	.string "בבקשה, {PLAYER}, העסק שלי תלוי בך!$"
 
 FuchsiaCity_EventScript_Dratini::
 	lock
@@ -97,27 +96,25 @@ FuchsiaCity_EventScript_SafariZone::
 	end
 
 FuchsiaCity_Text_Youngster:
-	.string "One of the ELITE FOUR used to be\n"
-	.string "the LEADER of FUCHSIA's GYM.$"
+	.string "אחד מחברי הרביעייה העילית היה\n"
+	.string "פעם המנהיג של מכון פושיה.$"
 
 FuchsiaCity_Text_PokefanM:
-	.string "KOGA's daughter succeeded him as\n"
-	.string "the GYM LEADER after he joined the\l"
-	.string "ELITE FOUR.$"
+	.string "כשקוגה הצטרף לרביעייה העילית,\n"
+	.string "הבת שלו ירשה את מקומו כמנהיגת המכון.$"
 
 FuchsiaCity_Text_Teacher:
-	.string "The SAFARI ZONE is under new\n"
-	.string "management.\p"
-	.string "And it has tons of new POKéMON!$"
+	.string "אזור הספארי עבר לניהול חדש.\p"
+	.string "ויש בו המון פוקימונים חדשים!$"
 
 FuchsiaCity_Text_Sign:
-	.string "FUCHSIA CITY\p"
-	.string "Behold! It's Passion Pink!$"
+	.string "העיר פושיה\p"
+	.string "הביטו! זהו ורוד התשוקה!$"
 
 FuchsiaCity_Text_GymSign:
-	.string "FUCHSIA CITY POKéMON GYM\n"
-	.string "LEADER: JANINE\p"
-	.string "The Poisonous Ninja Master$"
+	.string "מכון הפוקימון של העיר פושיה\n"
+	.string "מנהיגה: ג'אנין\p"
+	.string "מאסטרית הנינג'ה הרעילה$"
 
 FuchsiaCity_Text_SafariZoneOfficeSign:
 	.string "There's a notice here…\p"
@@ -125,9 +122,8 @@ FuchsiaCity_Text_SafariZoneOfficeSign:
 	.string "further notice.$"
 
 FuchsiaCity_Text_SafariZone:
-	.string "SAFARI ZONE\n"
-	.string "NOW OWNED BY\l"
-	.string "DEVON CORP.$"
+	.string "אזור הספארי\n"
+	.string "כעת בבעלות חברת דבון$"
 
 FuchsiaCity_Text_SafariZoneClosedSign:
 	.string "The WARDEN is traveling abroad.\p"

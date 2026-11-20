@@ -1,0 +1,36 @@
+# Include (not a tour): from the overworld, START > POKEMON > slot 1 > SUMMARY: INFO, SKILLS and
+# MOVES pages of the Pokemon in slot 1, then back to the field.
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap DOWN 4
+waitquiet
+snap sum_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap sum_actions
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+waitquiet
+snap sum_info
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintSkillsPage 120
+waitquiet
+snap sum_skills
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintBattleMoves 120
+waitquiet
+snap sum_moves
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 300
+tap B 4
+waitcb2x CB2_Overworld 600
+closeall

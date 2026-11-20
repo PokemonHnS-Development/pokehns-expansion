@@ -14,32 +14,24 @@ BattleFrontier_Lounge8_EventScript_NinjaBoy_hns::
 	end
 
 BattleFrontier_Lounge8_Text_WhatATrainerNeeds_hns:
-	.string "What a TRAINER needs…\p"
-	.string "Knowledge…\n"
-	.string "Strategy…\l"
-	.string "Luck…\l"
-	.string "Guts…\l"
-	.string "Spirit…\l"
-	.string "Bravery…\l"
-	.string "And ability…\p"
-	.string "Well, I'm all set in every way!\n"
-	.string "I'll be unstoppable at every building!\p"
-	.string "Huh? POKéMON?\n"
-	.string "What's that?$"
+	.string "מה שמאמן צריך…\p"
+	.string "ידע… אסטרטגיה… מזל… תעוזה…\n"
+	.string "רוח… גבורה… ויכולת…\p"
+	.string "טוב, לי יש את כל אלה!\n"
+	.string "אף אחד לא יעצור אותי באף מתקן!\p"
+	.string "מה? פוקימונים?\n"
+	.string "מה זה?$"
 
 BattleFrontier_Lounge8_Text_KnowAboutFrontierBrains_hns:
-	.string "Do you know about the FRONTIER\n"
-	.string "BRAINS?\p"
-	.string "That's what SCOTT calls the seven\n"
-	.string "special TRAINERS that run the seven\l"
-	.string "facilities in the BATTLE FRONTIER.$"
+	.string "שמעת על מוחות החזית?\p"
+	.string "כך סקוט קורא לשבעת המאמנים המיוחדים\n"
+	.string "שמנהלים את שבעת המתקנים בחזית הקרב.$"
 
 BattleFrontier_Lounge8_Text_ToldMeIHaveTalentForBattling_hns:
-	.string "At the BATTLE TOWER, an older girl\n"
-	.string "told me that I have a lot of talent\l"
-	.string "for battling!\p"
-	.string "I like POKéMON CONTESTS more!\p"
-	.string "But I'm no good at CONTESTS!\p"
-	.string "I guess having talent and liking\n"
-	.string "something aren't the same.$"
+	.string "במגדל הקרב, בחורה מבוגרת ממני\n"
+	.string "אמרה לי שיש לי המון כישרון לקרבות!\p"
+	.string "אבל אני יותר אוהב תחרויות פוקימון!\p"
+	.string "רק שאני לא טוב בתחרויות!\p"
+	.string "כנראה שכישרון לדבר ואהבה אליו\n"
+	.string "זה לא אותו הדבר.$"
 

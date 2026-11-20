@@ -1,0 +1,74 @@
+# Reach check of the species track (written by hand, not by names16.py gen): the New Game options
+# RANDOM STATIC POKEMON on and GEN SCOPE all gens, set in RAM; twelve scripted wild battles
+# (CreateScriptedWildMon rolls RandomizeMon(RANDOMIZER_REASON_FIXED_ENCOUNTER, ..., Random32(), species),
+# src/script_pokemon_util.c) with the RNG not pinned, so each shows whatever species the randomizer
+# rolled; snap the appeared line and the action menu, RUN. Run with names16.py tour ROM OUT --tours <here>.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+fastbattles off
+rzseed
+rzopt static on
+rzopt genscope13 off
+ev .set ROM_SIZE, 0; createmon 0, 0, SPECIES_TYPHLOSION, 100; special CalculatePlayerPartyCount; end
+evstart setwildbattle SPECIES_PIDGEY, 5; dowildbattle; end
+waitbattle
+bwalk R01_bt input:HandleInputChooseAction
+baction RUN
+bwalk R01_run free
+evstart setwildbattle SPECIES_RATTATA, 5; dowildbattle; end
+waitbattle
+bwalk R02_bt input:HandleInputChooseAction
+baction RUN
+bwalk R02_run free
+evstart setwildbattle SPECIES_SENTRET, 5; dowildbattle; end
+waitbattle
+bwalk R03_bt input:HandleInputChooseAction
+baction RUN
+bwalk R03_run free
+evstart setwildbattle SPECIES_HOOTHOOT, 5; dowildbattle; end
+waitbattle
+bwalk R04_bt input:HandleInputChooseAction
+baction RUN
+bwalk R04_run free
+evstart setwildbattle SPECIES_ZUBAT, 5; dowildbattle; end
+waitbattle
+bwalk R05_bt input:HandleInputChooseAction
+baction RUN
+bwalk R05_run free
+evstart setwildbattle SPECIES_GEODUDE, 5; dowildbattle; end
+waitbattle
+bwalk R06_bt input:HandleInputChooseAction
+baction RUN
+bwalk R06_run free
+evstart setwildbattle SPECIES_MAGIKARP, 5; dowildbattle; end
+waitbattle
+bwalk R07_bt input:HandleInputChooseAction
+baction RUN
+bwalk R07_run free
+evstart setwildbattle SPECIES_SPINARAK, 5; dowildbattle; end
+waitbattle
+bwalk R08_bt input:HandleInputChooseAction
+baction RUN
+bwalk R08_run free
+evstart setwildbattle SPECIES_LEDYBA, 5; dowildbattle; end
+waitbattle
+bwalk R09_bt input:HandleInputChooseAction
+baction RUN
+bwalk R09_run free
+evstart setwildbattle SPECIES_ODDISH, 5; dowildbattle; end
+waitbattle
+bwalk R10_bt input:HandleInputChooseAction
+baction RUN
+bwalk R10_run free
+evstart setwildbattle SPECIES_BELLSPROUT, 5; dowildbattle; end
+waitbattle
+bwalk R11_bt input:HandleInputChooseAction
+baction RUN
+bwalk R11_run free
+evstart setwildbattle SPECIES_POLIWAG, 5; dowildbattle; end
+waitbattle
+bwalk R12_bt input:HandleInputChooseAction
+baction RUN
+bwalk R12_run free
+rzopt static off
+rzopt genscope13 on

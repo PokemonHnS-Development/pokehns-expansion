@@ -1,0 +1,60 @@
+# Violet Mart badge list under the Pokemon Center challenge (sShopInventories_PC) with 0..8 badges.
+start saves/st_l6.sav
+include _base.txt
+setpcchallenge 1
+visit MAP_VIOLET_CITY_MART_HNS
+setbadges 0
+clerk 2 3 c0_hi
+buyopen c0_buy
+listshots c0_list
+buyclose c0_menu
+shopquit c0_bye
+setbadges 1
+clerk 2 3 c1_hi
+buyopen c1_buy
+listshots c1_list
+buyclose c1_menu
+shopquit c1_bye
+setbadges 2
+clerk 2 3 c2_hi
+buyopen c2_buy
+listshots c2_list
+buyclose c2_menu
+shopquit c2_bye
+setbadges 3
+clerk 2 3 c3_hi
+buyopen c3_buy
+listshots c3_list
+buyclose c3_menu
+shopquit c3_bye
+setbadges 4
+clerk 2 3 c4_hi
+buyopen c4_buy
+listshots c4_list
+buyclose c4_menu
+shopquit c4_bye
+setbadges 5
+clerk 2 3 c5_hi
+buyopen c5_buy
+listshots c5_list
+buyclose c5_menu
+shopquit c5_bye
+setbadges 6
+clerk 2 3 c6_hi
+buyopen c6_buy
+listshots c6_list
+buyclose c6_menu
+shopquit c6_bye
+setbadges 7
+clerk 2 3 c7_hi
+buyopen c7_buy
+listshots c7_list
+buyclose c7_menu
+shopquit c7_bye
+setbadges 8
+clerk 2 3 c8_hi
+buyopen c8_buy
+listshots c8_list
+buyeach c8_ask
+buyclose c8_menu
+shopquit c8_bye

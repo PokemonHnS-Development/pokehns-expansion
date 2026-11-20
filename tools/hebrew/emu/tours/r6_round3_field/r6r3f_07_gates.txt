@@ -1,0 +1,17 @@
+# Cycling Road gates on foot: Gate_CeladonCity_Route16 and Gate_FuchsiaCity_Route18, the coord
+# trigger at (6,4..6) without the bike (Gate_CeladonCity_Route16_hns/scripts.inc:10-17): 'too
+# dangerous to walk' (Route110_SeasideCyclingRoadSouthEntrance_Text_TooDangerousToWalk) and the
+# push back one tile right.
+start saves/r6r3f_base.sav
+include _base.txt
+ev clearflag FLAG_SYS_CYCLING_ROAD; end
+warpto MAP_GATE_CELADON_CITY_ROUTE16_HNS 7 5
+snap g16_field
+stepto LEFT 1
+scene g16 6000 8
+snap g16_end
+warpto MAP_GATE_FUCHSIA_CITY_ROUTE18_HNS 7 5
+snap g18_field
+stepto LEFT 1
+scene g18 6000 8
+snap g18_end

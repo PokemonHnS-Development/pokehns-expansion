@@ -1,0 +1,344 @@
+# The battle debug menu (DEBUG_BATTLE_MENU is TRUE in the release, include/config/debug.h:11):
+# SELECT at the action menu sends B_ACTION_DEBUG (src/battle_controller_player.c:398-402) and
+# opens CB2_BattleDebugMenu (src/battle_debug.c). Every main-list page, scrolled to its end, the
+# value editor (modify window) on a few pages, the foe's side (R), the three AI views, and the
+# "instant win" entry that ends the battle.
+# Main list (src/battle_debug.c:96-115): 0 moves, 1 ability, 2 held item, 3 PP, 4 types,
+# 5 stats, 6 stat stages, 7 status 1, 8 volatile, 9 hazards, 10 side status, 11 AI flags,
+# 12 AI points/damage, 13 AI info, 14 AI party, 15 various, 16 instant win.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_TYPHLOSION, 50, item=ITEM_LEFTOVERS, move1=MOVE_SWORDS_DANCE, move2=MOVE_FLAMETHROWER, move3=MOVE_GROWL, move4=MOVE_PROTECT; end
+
+pinrng
+evstart setwildbattle SPECIES_GYARADOS, 30, ITEM_SITRUS_BERRY; dowildbattle; end
+waitbattle
+bwalk btwdbg_intro input:HandleInputChooseAction
+
+tap SELECT 4
+waittaskx Task_DebugMenuProcessInput 900
+snap btwdbg_main_00
+
+# 0 moves (5 rows: four moves + the "all" row) and its value editor
+press A
+snap btwdbg_p00_moves
+press A
+snap btwdbg_p00_moves_modify
+press B
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p00_moves_allrow
+press B
+
+# 1 ability, with its editor
+press DOWN
+press A
+snap btwdbg_p01_ability
+press A
+snap btwdbg_p01_ability_modify
+press B
+press B
+
+# 2 held item, with its editor
+press DOWN
+press A
+snap btwdbg_p02_helditem
+press A
+snap btwdbg_p02_helditem_modify
+press B
+press B
+
+# 3 PP
+press DOWN
+press A
+snap btwdbg_p03_pp
+press B
+
+# 4 types
+press DOWN
+press A
+snap btwdbg_p04_types
+press B
+
+# 5 stats (7 rows)
+press DOWN
+press A
+snap btwdbg_p05_stats
+press A
+snap btwdbg_p05_stats_modify
+press B
+press B
+snap btwdbg_main_05
+
+# 6 stat stages: 7 stats + the "all" row; all +2, then Attack -1, to see both signs
+press DOWN
+press A
+snap btwdbg_p06_stages
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press A
+snap btwdbg_p06_stages_all_modify
+press RIGHT
+press UP
+press UP
+snap btwdbg_p06_stages_all_plus2
+press A
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press A
+press RIGHT
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p06_stages_atk_minus1
+press A
+press B
+
+# 7 status 1 (8 rows, scrolls)
+press DOWN
+press A
+snap btwdbg_p07_status1
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p07_status1_end
+press A
+snap btwdbg_p07_status1_modify
+press B
+press B
+
+# 8 volatile statuses (38 rows, 7 shown)
+press DOWN
+press A
+snap btwdbg_p08_volatile_00
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p08_volatile_07
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p08_volatile_14
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p08_volatile_21
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p08_volatile_28
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p08_volatile_35
+press DOWN
+press DOWN
+snap btwdbg_p08_volatile_end
+press B
+snap btwdbg_main_08
+
+# 9 hazards
+press DOWN
+press A
+snap btwdbg_p09_hazards
+press A
+snap btwdbg_p09_hazards_modify
+press B
+press B
+
+# 10 side status (11 rows)
+press DOWN
+press A
+snap btwdbg_p10_side_00
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p10_side_07
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p10_side_end
+press B
+
+# 11 AI flags (29 rows)
+press DOWN
+press A
+snap btwdbg_p11_ai_00
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p11_ai_07
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p11_ai_14
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p11_ai_21
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_p11_ai_end
+press A
+snap btwdbg_p11_ai_modify
+press B
+press B
+snap btwdbg_main_11
+
+# 12 AI points / damage (its own view on BG 1; B returns)
+press DOWN
+press A
+waittaskx Task_ShowAiPoints 120
+snap btwdbg_p12_aipoints
+press B
+waittaskx Task_DebugMenuProcessInput 120
+
+# 13 AI info
+press DOWN
+press A
+waittaskx Task_ShowAiKnowledge 120
+snap btwdbg_p13_aiinfo
+press B
+waittaskx Task_DebugMenuProcessInput 120
+
+# 14 AI party
+press DOWN
+press A
+waittaskx Task_ShowAiParty 120
+snap btwdbg_p14_aiparty
+press B
+waittaskx Task_DebugMenuProcessInput 120
+
+# 15 various
+press DOWN
+press A
+snap btwdbg_p15_various
+press A
+snap btwdbg_p15_various_modify
+press B
+press B
+
+# 16 instant win (cursor only here)
+press DOWN
+snap btwdbg_main_16
+
+# the foe's side: R switches the battler (window "1 - name"); its ability, item, stages.
+# The AI points view (item 12) sets the menu's battler to the AI battler (1) without
+# reprinting the battler window (Task_ShowAiPoints, src/battle_debug.c), so the window still
+# says 0 here while the battler is 1: the first R wraps to 0, the second one shows the foe.
+press Rb
+press Rb
+snap btwdbg_foe_main
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+snap btwdbg_foe_main_06
+press A
+snap btwdbg_foe_stages
+press B
+press UP
+press UP
+press UP
+press UP
+press A
+snap btwdbg_foe_helditem
+press B
+press UP
+press A
+snap btwdbg_foe_ability
+press B
+press UP
+press A
+snap btwdbg_foe_moves
+press B
+
+# SELECT closes the menu (back to the action menu), then reopen it and take the instant win
+press SELECT
+waitbinput HandleInputChooseAction
+snap btwdbg_back_in_battle
+tap SELECT 4
+waittaskx Task_DebugMenuProcessInput 900
+snap btwdbg_reopen
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap btwdbg_instantwin_cursor
+tap A 4
+bwalk btwdbg_instantwin free

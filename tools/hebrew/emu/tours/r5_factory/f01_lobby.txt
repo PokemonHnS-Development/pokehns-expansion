@@ -1,0 +1,142 @@
+# r5 Battle Factory lobby (BattleFrontier_BattleFactoryLobby_hns/scripts.inc): the singles and
+# doubles attendants' welcome pages, CHALLENGE/INFO/EXIT (MULTI_CHALLENGEINFO) with the cursor on
+# each row, INFO (ExplainSingles/ExplainDoublesChallenge), the level menu (MULTI_LEVEL_MODE) and the
+# save question answered NO, EXIT; the rules board (MULTI_BATTLE_FACTORY_RULES, every heading);
+# the four lobby NPCs; both results windows on the base save; then every opponent-type and
+# battle-style hint of the pre-battle room (CommentOnOpponentType / CommentOnOpponentStyle, run
+# from RAM in the lobby: the same message window as in the pre-battle room).
+start saves/r5/factory_base.sav
+include ../../scripts/continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 4 8
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+snap lb_lobby
+# singles attendant: welcome, the menu (each row), INFO, CHALLENGE > level menu > save NO
+face UP
+tap A 0
+drive ls_in menu
+pick 1 nopress
+snap ls_menu_r1
+pick 2 nopress
+snap ls_menu_r2
+pick 1
+drive ls_info menu
+pick 0
+drive ls_lv menu
+pick 1 nopress
+snap ls_lv_r1
+pick 2 nopress
+snap ls_lv_r2
+pick 1
+drivex ls_save menu 10
+pick 1
+drivex ls_no free 10
+# singles attendant again: EXIT
+face UP
+tap A 0
+drive ls_in2 menu
+pick 2
+drivex ls_exit free 10
+# doubles attendant: welcome, INFO, EXIT
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 14 8
+face UP
+tap A 0
+drive ld_in menu
+pick 1
+drive ld_info menu
+pick 0
+drive ld_lv menu
+tap B 4
+drivex ld_cancel free 10
+# rules board: every heading, then EXIT
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 9 5
+face UP
+tap A 0
+drive lr_in menu
+pick 1 nopress
+snap lr_menu_r1
+pick 2 nopress
+snap lr_menu_r2
+pick 3 nopress
+snap lr_menu_r3
+pick 4 nopress
+snap lr_menu_r4
+pick 5 nopress
+snap lr_menu_r5
+pick 0
+drive lr_basics menu
+pick 1
+drive lr_partner menu
+pick 2
+drive lr_number menu
+pick 3
+drive lr_notes menu
+pick 4
+drive lr_openlv menu
+pick 5
+drivex lr_exit free 5
+# results windows on the base save
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 2 8
+face UP
+tap A 0
+30 -
+waitquiet
+snap lres_singles_base
+tap A 4
+waitctl 300
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 11 8
+face UP
+tap A 0
+30 -
+waitquiet
+snap lres_doubles_base
+tap A 4
+waitctl 300
+# NPCs: FatMan (local 5, look-around) from below, Picnicker (4) from the left, Camper (3) from
+# below, Woman (2, wanders) from the right once she stands still
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 6 11
+face UP
+tap A 0
+drivex ln_fatman free 10
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 12 11
+face RIGHT
+tap A 0
+drivex ln_picnicker free 10
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 14 12
+face UP
+tap A 0
+drivex ln_camper free 10
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 6 11
+approachright 2
+tap A 0
+drivex ln_woman free 10
+# pre-battle room hints: every opponent type (and no favourite), every battle style (and flexible)
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 9 8
+evdrive ht_normal free setvar VAR_0x8005, TYPE_NORMAL; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_fighting free setvar VAR_0x8005, TYPE_FIGHTING; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_flying free setvar VAR_0x8005, TYPE_FLYING; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_poison free setvar VAR_0x8005, TYPE_POISON; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_ground free setvar VAR_0x8005, TYPE_GROUND; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_rock free setvar VAR_0x8005, TYPE_ROCK; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_bug free setvar VAR_0x8005, TYPE_BUG; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_ghost free setvar VAR_0x8005, TYPE_GHOST; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_steel free setvar VAR_0x8005, TYPE_STEEL; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_fire free setvar VAR_0x8005, TYPE_FIRE; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_water free setvar VAR_0x8005, TYPE_WATER; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_grass free setvar VAR_0x8005, TYPE_GRASS; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_electric free setvar VAR_0x8005, TYPE_ELECTRIC; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_psychic free setvar VAR_0x8005, TYPE_PSYCHIC; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_ice free setvar VAR_0x8005, TYPE_ICE; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_dragon free setvar VAR_0x8005, TYPE_DRAGON; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_dark free setvar VAR_0x8005, TYPE_DARK; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_fairy free setvar VAR_0x8005, TYPE_FAIRY; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive ht_none free setvar VAR_0x8005, NUMBER_OF_MON_TYPES; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType_hns; end
+evdrive hs_unrestrained free setvar VAR_0x8006, FACTORY_STYLE_NONE; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentStyle_hns; end
+evdrive hs_preparation free setvar VAR_0x8006, FACTORY_STYLE_PREPARATION; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentStyle_hns; end
+evdrive hs_slowsteady free setvar VAR_0x8006, FACTORY_STYLE_SLOW_STEADY; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentStyle_hns; end
+evdrive hs_endurance free setvar VAR_0x8006, FACTORY_STYLE_ENDURANCE; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentStyle_hns; end
+evdrive hs_highrisk free setvar VAR_0x8006, FACTORY_STYLE_HIGH_RISK; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentStyle_hns; end
+evdrive hs_weaken free setvar VAR_0x8006, FACTORY_STYLE_WEAKENING; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentStyle_hns; end
+evdrive hs_unpredictable free setvar VAR_0x8006, FACTORY_STYLE_UNPREDICTABLE; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentStyle_hns; end
+evdrive hs_weather free setvar VAR_0x8006, FACTORY_STYLE_WEATHER; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentStyle_hns; end
+evdrive hs_flexible free setvar VAR_0x8006, FACTORY_NUM_STYLES; call BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentStyle_hns; end

@@ -1,0 +1,162 @@
+# Boxes renamed on the NAME screen (save heid_base): box 1 becomes 'צוות 123' (Hebrew, space,
+# three digits; the 8-letter maximum), box 2 '12 גן' (digits first) and box 3 'בשמחתשבת' (eight
+# 7 px letters); TEAM 123 / 12 ZOO / WWWWWWWW on English. Shown in the box title, the JUMP
+# chooser and DEPOSIT's chooser (ChooseBoxMenu_PrintInfo, src/pokemon_storage_system.c:1947);
+# saved as heid_renamed for the transfer messages (heid_05_renamed_transfer).
+start save:heid_base
+include ../../scripts/continue.txt
+go RIGHT 4
+go UP 2
+talk heid_rn_pc_boot 10
+tap A 0                                   # BILL'S PC
+talk heid_rn_storage_open 10 - Task_PCMainMenu
+waittaskdata Task_PCMainMenu 0 2 600
+tap A 0
+waitcb2x CB2_PokeStorage 900
+pcwait
+
+# box 1: NAME
+pcgoto title 0
+press A
+waittaskx Task_HandleBoxOptions 300
+12 -
+press DOWN
+press DOWN
+12 -
+snap heid_rn1_options_name
+press A
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap heid_rn1_prefilled
+nameclear heid_rn1_empty
+nametext heid_rn1 צוות_123 TEAM_123
+press START
+waitnaming
+snap heid_rn1_ok
+press A
+waitcb2x CB2_PokeStorage 900
+pcwait
+snap heid_rn1_title
+boxnames
+
+# box 2: NAME (RIGHT on the title scrolls to box 2)
+pcgoto title 0
+press RIGHT
+pcwait
+snap heid_rn2_title_before
+press A
+waittaskx Task_HandleBoxOptions 300
+12 -
+press DOWN
+press DOWN
+press A
+waitcb2x CB2_NamingScreen 900
+waitnaming
+nameclear heid_rn2_empty
+nametext heid_rn2 12_גן 12_ZOO
+press START
+waitnaming
+snap heid_rn2_ok
+press A
+waitcb2x CB2_PokeStorage 900
+pcwait
+snap heid_rn2_title
+boxnames
+# box 3: NAME with eight 7 px letters (56 px, the widest Hebrew box name; WWWWWWWW on English)
+pcgoto title 0
+press RIGHT
+pcwait
+pcgoto title 0
+press A
+waittaskx Task_HandleBoxOptions 300
+12 -
+press DOWN
+press DOWN
+press A
+waitcb2x CB2_NamingScreen 900
+waitnaming
+nameclear heid_rn3_empty
+nametext heid_rn3 בשמחתשבת WWWWWWWW
+press START
+waitnaming
+snap heid_rn3_ok
+press A
+waitcb2x CB2_PokeStorage 900
+pcwait
+snap heid_rn3_title
+boxnames
+pcgoto title 0
+press LEFT
+pcwait
+press LEFT
+pcwait
+snap heid_rn1_title_back
+
+# JUMP list with the renamed boxes
+pcgoto title 0
+press A
+waittaskx Task_HandleBoxOptions 300
+12 -
+press A
+waittaskx Task_JumpBox 300
+12 -
+snap heid_rn_jump_01
+press RIGHT
+12 -
+snap heid_rn_jump_02
+press RIGHT
+12 -
+snap heid_rn_jump_03
+press B
+waittaskx Task_PokeStorageMain 300
+pcwait
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+12 -
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+
+# DEPOSIT chooser with the renamed boxes
+press DOWN
+tap A 0
+waitcb2x CB2_PokeStorage 900
+pcwait
+pcgoto party 5
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press A                                   # DEPOSIT
+waittaskx Task_DepositMenu 300
+waitpmem 8 pokemon_storage_system:sStorage 0 1 300
+waitquiet
+12 -
+snap heid_rn_dep_box01
+press RIGHT
+12 -
+snap heid_rn_dep_next
+press RIGHT
+12 -
+snap heid_rn_dep_box03
+press LEFT
+12 -
+press LEFT
+12 -
+press LEFT
+12 -
+snap heid_rn_dep_prev
+press B
+pcwait
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+tap B 0
+waitctl 900 B
+savegame
+keepsave heid_renamed

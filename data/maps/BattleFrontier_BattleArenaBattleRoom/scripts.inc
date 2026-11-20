@@ -492,26 +492,26 @@ BattleFrontier_BattleArenaBattleRoom_Text_OpponentStepForward:
 	.string "Step forward, please!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_SetKOTourneyBegin:
-	.string "REFEREE: Set KO Tourney!\n"
-	.string "Begin!$"
+	.string "שופט: טורניר נוקאאוט!\n"
+	.string "שהקרב יתחיל!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsPlayer:
-	.string "REFEREE: The winner is {PLAYER}!$"
+	.string "שופט: הניצחון ל{PLAYER}!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsOpponent:
-	.string "REFEREE: The winner is {STR_VAR_1}!$"
+	.string "שופט: הניצחון ל{STR_VAR_1}!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_MonsWillBeRestored:
-	.string "Your POKéMON will be restored to\n"
-	.string "full health.$"
+	.string "הפוקימונים שלך יחזרו\n"
+	.string "לבריאות מלאה.$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor2ndOpponent:
-	.string "Next up, your second opponent!\n"
-	.string "Are you ready to move on?$"
+	.string "ועכשיו, היריב השני שלך!\n"
+	.string "אפשר להמשיך?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor3rdOpponent:
-	.string "Next up, your third opponent!\n"
-	.string "Are you ready to move on?$"
+	.string "ועכשיו, היריב השלישי שלך!\n"
+	.string "אפשר להמשיך?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor4thOpponent:
 	.string "Next up, your fourth opponent!\n"
@@ -530,16 +530,15 @@ BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor7thOpponent:
 	.string "Are you ready to move on?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_SaveAndShutDown:
-	.string "Would you like to save the game and\n"
-	.string "shut down now?$"
+	.string "לשמור את המשחק ולכבות עכשיו?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_RetireFromChallenge:
-	.string "Would you like to retire from your\n"
-	.string "Set KO Tourney challenge?$"
+	.string "לפרוש מאתגר\n"
+	.string "טורניר הנוקאאוט?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_SavingPleaseWait:
-	.string "I am saving your game data.\n"
-	.string "Please wait.$"
+	.string "שומרים את נתוני המשחק שלך.\n"
+	.string "נא להמתין.$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_RecordLastBattle:
 	.string "Would you like to record your last\n"

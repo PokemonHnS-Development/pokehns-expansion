@@ -1,0 +1,110 @@
+# Baoba, Safari Zone Gate (SafariZoneGate_SafariZoneEntrance_hns:54-245; (5,10) facing left, talked
+# to from (4,10)). VAR_BAOBA_QUEST_STATE 1 (Beach): NO; YES + B in the party menu; YES + Typhlosion
+# (wrong); YES + the Egg (wrong); YES + Beldum (done, money box +¥200,000). Then Brush (Castform,
+# +¥300,000), Mountain (Medicham, +¥400,000), Cave (Bagon, +¥400,000; money capped), and the done line.
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+vars VAR_BAOBA_QUEST_STATE VAR_SAFARI_ZONE_GATE_STATE VAR_SAFARI_ZONE_STATE
+ev file _baoba_party.inc
+partyinfo
+ev setvar VAR_BAOBA_QUEST_STATE, 1; end
+setmoney 0
+warpto MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS 4 10
+
+# --- 1. NO
+face RIGHT
+tap A 4
+fieldwatch b1_beach menu 6000
+pick 1
+fieldwatch b1_declined free 6000
+
+# --- 2. YES, then B in the party menu
+face RIGHT
+tap A 4
+fieldwatch b2_beach menu 6000
+pick 0
+fieldwatch b2_choose cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap b2_party
+tap B 0
+fieldwatch b2_declined free 6000
+
+# --- 3. YES, Typhlosion: wrong
+face RIGHT
+tap A 4
+fieldwatch b3_beach menu 6000
+pick 0
+fieldwatch b3_choose cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap A 0
+fieldwatch b3_wrong free 6000
+
+# --- 4. YES, the Egg: wrong
+face RIGHT
+tap A 4
+fieldwatch b4_beach menu 6000
+pick 0
+fieldwatch b4_choose cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 5 DOWN
+snap b4_party_egg
+tap A 0
+fieldwatch b4_wrong free 6000
+
+# --- 5. Beach: Beldum (+¥200,000)
+face RIGHT
+tap A 4
+fieldwatch b5_beach menu 6000
+pick 0
+fieldwatch b5_choose cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+fieldwatch b5_done free 6000 15
+expectmoney 200000
+
+# --- 6. Brush: Castform (+¥300,000)
+face RIGHT
+tap A 4
+fieldwatch b6_brush menu 6000
+pick 0
+fieldwatch b6_choose cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 0
+fieldwatch b6_done free 6000 15
+
+# --- 7. Mountain: Medicham (+¥400,000)
+face RIGHT
+tap A 4
+fieldwatch b7_mountain menu 6000
+pick 0
+fieldwatch b7_choose cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 3 DOWN
+tap A 0
+fieldwatch b7_done free 6000 15
+
+# --- 8. Cave: Bagon (+¥400,000, capped)
+face RIGHT
+tap A 4
+fieldwatch b8_cave menu 6000
+pick 0
+fieldwatch b8_choose cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 4 DOWN
+tap A 0
+fieldwatch b8_done free 6000 8
+
+# --- 9. done
+face RIGHT
+tap A 4
+fieldwatch b9_after free 6000
+vars VAR_BAOBA_QUEST_STATE

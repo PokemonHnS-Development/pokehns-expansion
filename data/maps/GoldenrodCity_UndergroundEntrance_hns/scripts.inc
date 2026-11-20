@@ -21,13 +21,12 @@ GoldenrodUnderground_EventScript_Teacher::
 	end
 
 GoldenrodUnderground1_Text_SuperNerd:
-	.string "I was challenged to a battle\n"
-	.string "downstairs.\p"
-	.string "It's rough down there. You'd\n"
-	.string "better be careful.$"
+	.string "הזמינו אותי לקרב בקומה למטה.\p"
+	.string "קשוח שם למטה.\n"
+	.string "כדאי לך להיזהר.$"
 
 
 GoldenrodUnderground1_Text_Teacher:
-	.string "There are some shops downstairs…\n"
-	.string "But there are also trainers.\p"
-	.string "I'm scared to go down there.$"
+	.string "יש כמה חנויות למטה…\n"
+	.string "אבל יש שם גם מאמנים.\p"
+	.string "אני מפחדת לרדת לשם.$"

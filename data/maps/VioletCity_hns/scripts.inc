@@ -391,63 +391,57 @@ VioletCity_EventScript_GymSign::
 	end
 
 VioletCity_Text_LiquidJustice:
-	.string "Look around!\p"
-	.string "It's easy to see what POKéMON\n"
-	.string "you can catch in an area without\l"
-	.string "having to run around in tall\l"
-	.string "grass all day!$"
+	.string "תסתכל מסביב!\p"
+	.string "קל לראות אילו פוקימונים אפשר לתפוס\n"
+	.string "באזור בלי לרוץ כל היום בדשא הגבוה!$"
 
 VioletCity_Text_EarlAsksIfYouBeatFalkner:
-	.string "Hello!\n"
-	.string "You are trainer?\p"
-	.string "Battle GYM LEADER,\n"
-	.string "win you did?$"
+	.string "שלום!\n"
+	.string "מאמן אתה?\p"
+	.string "במנהיג המכון נלחמת,\n"
+	.string "וניצחון השגת?$"
 
 VioletCity_Text_VeryNiceIndeed:
-	.string "Ooh, la la!\n"
-	.string "Very indeed nice!$"
+	.string "או-לה-לה!\n"
+	.string "מאוד באמת יפה!$"
 
 VioletCity_Text_FollowEarl:
-	.string "Is that so? Then study shall\n"
-	.string "you! Follow me!$"
+	.string "כך הדבר? אם כן, ללמוד תלך!\n"
+	.string "אחריי, בוא!$"
 
 VioletCity_Text_HereTeacherIAm:
-	.string "Here, teacher I am.\n"
-	.string "Good it is you study here!$"
+	.string "כאן, מורה אני.\n"
+	.string "טוב שללמוד כאן באת!$"
 
 VioletCity_Text_Lass:
-	.string "Ghosts are rumored to appear\n"
-	.string "in SPROUT TOWER.\p"
-	.string "They say that GHOST-type\n"
-	.string "moves can bypass the defenses\p"
-	.string "of tough POKéMON like ONIX\n"
-	.string "and GEODUDE.$"
+	.string "לפי השמועות, רוחות רפאים\n"
+	.string "מופיעות במגדל הנבט.\p"
+	.string "אומרים שמהלכים מסוג רפאים יכולים לעקוף\n"
+	.string "את ההגנות של פוקימונים קשוחים\p"
+	.string "כמו אוניקס וג'יאודוד.$"
 
 VioletCity_Text_Boy:
-	.string "Hey, you're a POKéMON trainer?\p"
-	.string "If you head to the ACADEMY,\n"
-	.string "you might learn something new!$"
+	.string "היי, אתה מאמן פוקימונים?\p"
+	.string "אם תקפוץ לאקדמיה, אולי תלמד משהו חדש!$"
 
 VioletCity_Text_Gramps:
-	.string "FALKNER, from the VIOLET\n"
-	.string "POKéMON GYM, is a fine trainer!\p"
-	.string "He inherited his father's gym\n"
-	.string "and has done a great job with\l"
-	.string "it.$"
+	.string "פלקנר, ממכון הפוקימון\n"
+	.string "של ויולט, הוא מאמן מצוין!\p"
+	.string "הוא ירש את המכון מאביו\n"
+	.string "ועושה בו עבודה נהדרת.$"
 
 VioletCity_Text_Youngster:
-	.string "I saw a wiggly tree up ahead!\p"
-	.string "If you touch it, it squirms\n"
-	.string "and dances! Cool!$"
+	.string "ראיתי עץ מתנועע שם קדימה!\p"
+	.string "אם נוגעים בו, הוא מתפתל ורוקד! מגניב!$"
 
 VioletCity_Text_Sign:
 	.string "VIOLET CITY\p"
 	.string "The City of Nostalgic Scents$"
 
 VioletCity_Text_GymSign:
-	.string "VIOLET CITY POKéMON GYM\p"
-	.string "LEADER: FALKNER, The Elegant\n"
-	.string "Master of Flying POKéMON$"
+	.string "מכון הפוקימון של העיר ויולט\p"
+	.string "מנהיג: פלקנר, המאסטר האלגנטי\n"
+	.string "של פוקימוני תעופה$"
 
 VioletCity_Text_SproutTowerSign:
 	.string "SPROUT TOWER\p"
@@ -457,41 +451,40 @@ VioletCity_Text_EarlsAcademySign:
 	.string "EARL'S POKéMON ACADEMY$"
 
 VioletCity_Text_Pichu:
-	.string "PICHU: Chuuuu!$"
+	.string "פיצ'ו: צ'וווו!$"
 
 VioletCity_Text_Bellsprout:
-	.string "BELLSPROUT: Sprouuuut.$"
+	.string "בלספראוט: ספראוווט.$"
 
 VioletCity_Text_Rattata:
-	.string "RATTATA: RATTATARATTA!$"
+	.string "רטטה: רטטהרטה!$"
 
 VioletCity_Text_ElmName:
-	.string "PROF.ELM$"
+	.string "פרופ' אלם$"
 
 VioletCity_Text_Elm_Call:
-	.string "PROF.ELM: Hello, {PLAYER}? We\n"
-	.string "discovered something about the EGG!\p"
-	.string "My assistant is at the POKéMON\n"
-	.string "CENTER in VIOLET CITY.\p"
-	.string "Could you talk to him?$"
+	.string "פרופ' אלם: הלו, {PLAYER}?\n"
+	.string "גילינו משהו על הביצה!\p"
+	.string "העוזר שלי נמצא\n"
+	.string "במרכז הפוקימון בעיר ויולט.\p"
+	.string "תוכל לדבר איתו?$"
 
 VioletCity_Text_Kimono_Girl1:
-.string "Me oh my...\n"
-.string "That EGG must be...!$"
+.string "אוי ואבוי…\n"
+.string "הביצה הזאת היא בטח…!$"
 
 VioletCity_Text_Kimono_Girl2:
-.string "I see...\p"
-.string "So it was handed from MR. POKéMON\n"
-.string "to PROF.ELM, then from \l"
-.string "PROF.ELM to you.\p"
-.string "Now I get it...$"
+.string "אני מבינה…\p"
+.string "אז היא עברה ממר פוקימון לפרופ' אלם,\n"
+.string "ואז מפרופ' אלם אליך.\p"
+.string "עכשיו הבנתי…$"
 
 VioletCity_Text_Kimono_Girl3:
-.string "That EGG is truly an important EGG.\p"
-.string "Please do take good care of it\n"
-.string "for me. Is that understood?$"
+.string "הביצה הזאת היא באמת ביצה חשובה.\p"
+.string "בבקשה, תשמור עליה היטב בשבילי.\n"
+.string "זה מובן?$"
 
 VioletCity_Text_Kimono_Girl4:
-.string "I am counting on you.$"
+.string "אני סומכת עליך.$"
 
 

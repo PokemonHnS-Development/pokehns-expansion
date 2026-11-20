@@ -1,0 +1,48 @@
+{
+ "_comment": "opponentA 330 = TRAINER_FRONTIER_BRAIN (TRAINER_EREADER + 1 = 320 + 5 + 4 + 1, include/constants/trainers.h:9-12, the same in both trees); flags_or 0x100 = BATTLE_TYPE_BATTLE_TOWER (any BATTLE_TYPE_FRONTIER bit)",
+ "STRINGID_INTROMSG": [
+  [
+   "",
+   {
+    "flags_or": "100",
+    "opponentA": 330
+   }
+  ]
+ ],
+ "STRINGID_TRAINER1LOSETEXT": [
+  [
+   "",
+   {
+    "flags_or": "100",
+    "opponentA": 330
+   }
+  ]
+ ],
+ "STRINGID_TRAINER1WINTEXT": [
+  [
+   "",
+   {
+    "flags_or": "100",
+    "opponentA": 330
+   }
+  ]
+ ],
+ "STRINGID_QUESTIONFORFEITMATCH": [
+  [
+   "",
+   {
+    "flags_or": "100",
+    "opponentA": 330
+   }
+  ]
+ ],
+ "STRINGID_FORFEITEDMATCH": [
+  [
+   "",
+   {
+    "flags_or": "100",
+    "opponentA": 330
+   }
+  ]
+ ]
+}

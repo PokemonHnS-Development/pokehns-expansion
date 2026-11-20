@@ -1,0 +1,77 @@
+# SHIFT refused because a move traps the player's Pokemon: gText_PkmnCantSwitchOut
+# (src/strings.c:279; TrySwitchInPokemon, src/party_menu.c:7699-7706; the party menu gets
+# PARTY_ACTION_CANT_SWITCH when !CanBattlerEscape, src/battle_main.c:4507-4512). Three traps:
+# - the lead's own Ingrain (rooted);
+# - the foe's Mean Look;
+# - the foe's Wrap (bound).
+# The foes are wild Pokemon that know only that one move (createmon after setwildbattle
+# overwrites gEnemyParty[0]; src/script_pokemon_util.c:764-786). Each battle is ended by
+# setting the foe to 1 HP and using Razor Leaf.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_MEGANIUM, 50, move1=MOVE_INGRAIN, move2=MOVE_GROWL, move3=MOVE_RAZOR_LEAF; givemon SPECIES_FERALIGATR, 50, move1=MOVE_SURF; end
+expect8 @gPlayerPartyCount@ 2
+
+# 1. Ingrain
+pinrng
+evstart setwildbattle SPECIES_MAGIKARP, 5; dowildbattle; end
+waitbattle
+bwalk bvr_ingrain_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0
+bwalk bvr_ingrain_turn1 input:HandleInputChooseAction
+include ../_bv_switch.txt
+snap bvr_ingrain_party
+seek 8 @gPartyMenu+9@ 1 DOWN
+include _sub.txt
+snap bvr_ingrain_sub
+include _shift.txt
+pages bvr_ingrain_cant_switch
+include _back_to_party.txt
+snap bvr_ingrain_party_back
+tap B 4
+waitbinput HandleInputChooseAction 900
+sethp enemy 0 1
+baction FIGHT
+bmove 2
+bwalk bvr_ingrain_ko free
+
+# 2. Mean Look
+evstart setwildbattle SPECIES_UMBREON, 20; createmon 1, 0, SPECIES_UMBREON, 20, move1=MOVE_MEAN_LOOK, move2=MOVE_NONE, move3=MOVE_NONE, move4=MOVE_NONE; dowildbattle; end
+waitbattle
+bwalk bvr_meanlook_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 1
+bwalk bvr_meanlook_turn1 input:HandleInputChooseAction
+include ../_bv_switch.txt
+seek 8 @gPartyMenu+9@ 1 DOWN
+include _sub.txt
+include _shift.txt
+pages bvr_meanlook_cant_switch
+include _back_to_party.txt
+tap B 4
+waitbinput HandleInputChooseAction 900
+sethp enemy 0 1
+baction FIGHT
+bmove 2
+bwalk bvr_meanlook_ko free
+
+# 3. Wrap
+evstart setwildbattle SPECIES_EKANS, 20; createmon 1, 0, SPECIES_EKANS, 20, move1=MOVE_WRAP, move2=MOVE_NONE, move3=MOVE_NONE, move4=MOVE_NONE; dowildbattle; end
+waitbattle
+bwalk bvr_wrap_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 1
+bwalk bvr_wrap_turn1 input:HandleInputChooseAction
+include ../_bv_switch.txt
+seek 8 @gPartyMenu+9@ 1 DOWN
+include _sub.txt
+include _shift.txt
+pages bvr_wrap_cant_switch
+include _back_to_party.txt
+tap B 4
+waitbinput HandleInputChooseAction 900
+sethp enemy 0 1
+baction FIGHT
+bmove 2
+bwalk bvr_wrap_ko free

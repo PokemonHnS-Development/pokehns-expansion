@@ -1,0 +1,22 @@
+# Options (src/option_menu.c): which way LEFT/RIGHT move the choice on a row with more than
+# two choices. TEXT SPEED (SLOW/MID/FAST/FASTER) starts at FAST in menuA_base; LEFT once,
+# then RIGHT twice, then LEFT back to FAST before B saves and closes.
+start save:menuA_base
+include ../scripts/continue.txt
+
+startmenu OPTION
+waitcb2x option_menu:MainCB2 900
+waittaskx option_menu:Task_ProcessInput 900
+snap cardgear_options_textspeed_start
+press LEFT
+snap cardgear_options_textspeed_left
+press RIGHT
+press RIGHT
+snap cardgear_options_textspeed_right
+press LEFT
+snap cardgear_options_textspeed_back
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

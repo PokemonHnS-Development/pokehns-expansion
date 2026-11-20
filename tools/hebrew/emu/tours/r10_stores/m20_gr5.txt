@@ -1,0 +1,10 @@
+# Goldenrod 5F TMs (owned TMs read SOLD OUT) (MAP_GOLDENROD_CITY_DEPARTMENT_STORE_5F_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_GOLDENROD_CITY_DEPARTMENT_STORE_5F_HNS
+clerk 17 11 m20_hi
+buyopen m20_buy
+listshots m20_list
+buyeach m20_ask
+buyclose m20_menu
+shopquit m20_bye

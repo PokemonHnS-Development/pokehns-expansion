@@ -132,7 +132,15 @@ struct TextPrinter
     u8 minLetterSpacing;
 
     u8 textSpeed;
-    u8 padding[3];
+    u8 rtlRunStart;      // Logical x where the current left-to-right run (Latin, digits) starts
+    u8 rtlRunWidth;      // Width of that run in pixels
+    u8 rtlRunGlyphs:7;   // Glyphs of that run still to be printed
+    u8 rtlVisualOrder:1; // The string was reordered for left-to-right printing (sprite printers)
+    u16 rtlAxis;         // Mirror axis: physical x = rtlAxis - logical x - width
+    u8 rtlMode:2;        // The window's WINDOW_RTL_* mode when the printer started
+    u8 rtlNeedAxis:1;    // A new segment starts; in-place mode measures it at its first glyph
+    u8 rtlSegmentLtr:1;  // In-place mode: this segment has no Hebrew, so it keeps its English layout
+    u8 rtlAfterRtl:1;    // The glyph printed last on this segment was a Hebrew letter
 
     struct TextPrinter *nextPrinter;
 
@@ -225,6 +233,10 @@ u16 FontFunc_Braille(struct TextPrinter *textPrinter);
 u32 GetGlyphWidth_Braille(u16 glyphId, bool32 isJapanese);
 
 u32 GetFontIdToFit(const u8 *string, u32 widestFontId, u32 letterSpacing, u32 widthPx);
+void FitNameToWidth(u8 *str, u8 *nameEnd, u32 fontId, u32 widthPx); // TEXT_RTL only
+#if TEXT_RTL
+bool32 RtlNeedsPrefixMaqaf(const u8 *template, const u8 *placeholder, const u8 *expansion);
+#endif
 u8 *PrependFontIdToFit(u8 *start, u8 *end, u32 fontId, u32 width);
 u8 *WrapFontIdToFit(u8 *start, u8 *end, u32 fontId, u32 width);
 

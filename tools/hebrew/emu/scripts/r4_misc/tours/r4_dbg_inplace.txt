@@ -1,0 +1,74 @@
+# Experiment for the suggested fix (Hebrew ROM only; rtlmode is a no-op on the English ROM): the
+# debug menu's windows switched to WINDOW_RTL_IN_PLACE after they are created, as
+# SetWindowRtlMode(windowId, WINDOW_RTL_IN_PLACE) after each AddWindow in src/debug.c would do.
+# In-place mode keeps a segment with no Hebrew in its English layout (src/text.c RtlPrepareGlyph,
+# rtlSegmentLtr) and mirrors a Hebrew segment inside its own extent. A key press reprints the window.
+start saves/r4_misc/r4_menuA_base.sav
+include ../../continue.txt
+
+# main list: UP wraps to the last item (the page scrolls and is reprinted), DOWN wraps back
+debugmenu
+rtlmode DebugTask_HandleMenuInput_General 1 1
+tap UP 6
+tap DOWN 6
+waitquiet
+snap dbg_inplace_main
+waitctl 600 B
+
+# Flags & Vars (colour codes inside the rows)
+dbg 7
+rtlmode DebugTask_HandleMenuInput_General 1 1
+tap UP 6
+tap DOWN 6
+waitquiet
+snap dbg_inplace_flags
+waitctl 600 B
+
+# Give item XYZ (Hebrew item name, icon sprite, digit indicator)
+dbg 3 0
+waitquiet
+rtlmode DebugAction_Give_Item_SelectId 2 1
+tap UP 6
+waitquiet
+snap dbg_inplace_give_item
+press A
+rtlmode DebugAction_Give_Item_SelectQuantity 2 1
+tap UP 6
+waitquiet
+snap dbg_inplace_give_qty
+tap B 6
+waitctl 600 B
+
+# Pokemon (Basic): species
+dbg 3 1
+waitquiet
+rtlmode DebugAction_Give_Pokemon_SelectId 2 1
+tap UP 6
+tap UP 6
+tap UP 6
+waitquiet
+snap dbg_inplace_give_mon
+tap B 6
+waitctl 600 B
+
+# Warp: map section (Hebrew name)
+dbg 0 1
+waitquiet
+press A
+rtlmode DebugAction_Util_Warp_SelectMap 2 1
+tap UP 6
+tap DOWN 6
+waitquiet
+snap dbg_inplace_warp_map
+tap B 6
+waitctl 600 B
+
+# Sound > SFX
+dbg 8 0
+waitquiet
+rtlmode DebugAction_Sound_SE_SelectId 2 1
+tap UP 6
+waitquiet
+snap dbg_inplace_sfx
+tap B 6
+waitctl 600 B

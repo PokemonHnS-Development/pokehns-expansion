@@ -1,0 +1,35 @@
+# Egg summary INFO page: the egg STATE (PrintEggState, src/pokemon_summary_screen.c:4034-4053,
+# src/strings.c:423-426; egg cycles are the friendship byte) and the egg MEMO (PrintEggMemo
+# :4055-4077, src/strings.c:437-442). Party: Cyndaquil + 5 eggs.
+#   1 Togepi    cycles 100 -> "long time";  metloc 0xFF        -> "peculiar egg, nice place"
+#   2 Larvitar  cycles 40  -> "some time";  OT name changed    -> "peculiar egg, trade"
+#   3 Pichu     cycles 10  -> "hatch soon"; metloc NEW_BARK    -> "odd egg found by the couple"
+#   4 Togepi    cycles 41  -> "long time";  metloc 0xFD (giveegg default) -> "odd egg, day care"
+#   5 Togepi    cycles 11  -> "some time";  met game 0 (DidMonComeFromGBAGames FALSE) -> "trade"
+start saves/menuA_base.sav
+include ../continue.txt
+ev callnative ZeroPlayerPartyMons; special CalculatePlayerPartyCount; givemon SPECIES_CYNDAQUIL, 20; giveegg SPECIES_TOGEPI; giveegg SPECIES_LARVITAR; giveegg SPECIES_PICHU; giveegg SPECIES_TOGEPI; giveegg SPECIES_TOGEPI; end
+ev setmonmetlocation 1, 0xFF; setmonmetlocation 3, MAPSEC_NEW_BARK_TOWN; end
+monset 1 friendship=100
+monset 2 ot0=0xC2
+monset 4 friendship=41
+monset 5 friendship=11 metgame=0
+monprobe
+
+include _sum_open.txt
+snap sv02_0_cyndaquil_info
+sumkey DOWN
+snap sv02_1_long_niceplace
+sumkey DOWN
+snap sv02_2_some_trade
+sumkey DOWN
+snap sv02_3_soon_couple
+sumkey DOWN
+snap sv02_4_long_daycare
+sumkey DOWN
+snap sv02_5_some_trade_metgame
+include _sum_close.txt
+
+# keep the party for fix checks (START > SAVE; hns.py copies it to OUTDIR/_saves)
+savegame
+keepsave sv02_egg_party

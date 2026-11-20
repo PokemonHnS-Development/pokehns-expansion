@@ -22,21 +22,19 @@ PalletTown_RedsHouse_1F_EventScript_TV::
 	end
 
 RedsHouse_Text_Mom1:
-	.string "Hi!\p"
-	.string "RED's been away for a long time.\p"
-	.string "He hasn't called either, so I have\n"
-	.string "no idea where he is or what he's\l"
-	.string "been doing.\p"
-	.string "They say that no word is proof that\n"
-	.string "he's doing fine, but I do worry\l"
-	.string "about him.$"
+	.string "היי!\p"
+	.string "רד לא בבית כבר הרבה זמן.\p"
+	.string "הוא גם לא התקשר, אז אין לי מושג\n"
+	.string "איפה הוא או מה הוא עושה.\p"
+	.string "אומרים שאין חדשות - חדשות טובות,\n"
+	.string "אבל אני בכל זאת דואגת לו.$"
 
 RedsHouse_Text_Mom2:
-	.string "I worry about RED getting hurt or\n"
-	.string "sick, but he's a boy.\p"
-	.string "I'm proud that he is doing what he\n"
-	.string "wants to do.$"
+	.string "אני דואגת שרד ייפגע או יחלה,\n"
+	.string "אבל ככה זה עם בנים.\p"
+	.string "אני גאה בו שהוא עושה את מה\n"
+	.string "שהוא רוצה לעשות.$"
 
 RedsHouse_Text_TV:
-	.string "They have programs that aren't\n"
-	.string "shown in JOHTO…$"
+	.string "יש פה תוכניות שלא משודרות\n"
+	.string "בג'וטו…$"

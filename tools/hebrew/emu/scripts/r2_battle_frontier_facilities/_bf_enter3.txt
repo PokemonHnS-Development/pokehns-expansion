@@ -1,0 +1,24 @@
+# Frontier party select (ChoosePartyForBattleFrontier is on screen, cursor on slot 0):
+# ENTER slots 0, 1, 2, then confirm. Each action list waits for its message to print first.
+waittask Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 0 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+snap party_three
+tap A 0

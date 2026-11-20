@@ -1,0 +1,127 @@
+# The registered-item cycle (src/item_menu.c ItemMenu_CheckWhichRegister / AddRegisterSubMenu /
+# ItemMenu_Register, src/field_control_avatar.c:250-253 UseRegisteredKeyItemOnField): KEY ITEMS > REGISTER >
+# the tap/hold submenu with its question in the description window, the SELECT and SELECT-hold tags in the
+# list (sRegisteredSelect_Gfx, sRegisteredSelectHold_Gfx, src/item_menu.c:1082-1085), re-registering moves
+# the tag, SELECT tap (TOWN MAP) and SELECT hold (COIN CASE) in the field, DESELECT ("בטל רישום") in the
+# context menu, and SELECT / SELECT-hold with nothing registered (EventScript_SelectWithoutRegistered*).
+start saves/bp_menuA.sav
+include ../../scripts/continue.txt
+setpocket POCKET_KEY_ITEMS ITEM_BICYCLE:1 ITEM_COIN_CASE:1 ITEM_TOWN_MAP:1 ITEM_INFINITE_RARE_CANDIES:1
+w16 @SB1+49A@ 0                           # gSaveBlock1Ptr->registeredItem = ITEM_NONE
+
+bagopen KEY_ITEMS
+snap rg_00_list
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+snap rg_01_ctx
+tap ROWNEXT 4
+waitquiet
+snap rg_02_ctx_register
+tap A 4
+waittaskx Task_ItemContext_SingleRow 120
+waitquiet
+snap rg_03_how_tap
+tap A 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+snap rg_04_registered_tap
+
+# COIN CASE > REGISTER > hold
+press DOWN
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+tap ROWNEXT 4
+tap A 4
+waittaskx Task_ItemContext_SingleRow 120
+waitquiet
+tap DOWN 4
+waitquiet
+snap rg_05_how_hold
+tap A 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+snap rg_06_registered_both
+
+# TOWN MAP > REGISTER > tap (the tag moves from BICYCLE)
+press DOWN
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+tap ROWNEXT 4
+tap A 4
+waittaskx Task_ItemContext_SingleRow 120
+waitquiet
+tap A 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+snap rg_07_registered_moved
+press DOWN
+snap rg_08_list_row3
+bagclose
+tap B 4
+waitctl 600
+
+# SELECT tap: TOWN MAP
+tap SELECT 4
+waitkey 600
+snap rg_09_select_townmap_msg
+tap A 4
+waitcb2x MCB2_FieldUpdateRegionMap 900
+waitquiet
+60 -
+snap rg_10_select_townmap
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 600
+snap rg_11_back
+# SELECT hold: COIN CASE
+70 SELECT
+10 -
+waitkey 600
+snap rg_12_selecthold_coincase
+tap A 4
+waitctl 600
+
+# DESELECT both (gMenuCallback still holds HandleStartMenuInput from the menu closed with B, which
+# start_menu_cursor would take for an open menu)
+w32 @gMenuCallback@ 0
+bagopen KEY_ITEMS 1
+snap rg_20_list
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+snap rg_21_ctx_deselect
+tap ROWNEXT 4
+waitquiet
+snap rg_22_ctx_deselect_cursor
+tap A 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+snap rg_23_deselected_hold
+press DOWN
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+tap ROWNEXT 4
+tap A 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+snap rg_24_deselected_tap
+bagclose
+tap B 4
+waitctl 600
+
+# SELECT and SELECT-hold with nothing registered
+tap SELECT 4
+waitkey 600
+snap rg_30_select_none
+tap A 4
+waitctl 600
+70 SELECT
+10 -
+waitkey 600
+snap rg_31_selecthold_none
+tap A 4
+waitctl 600

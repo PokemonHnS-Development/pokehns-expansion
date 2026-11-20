@@ -1,0 +1,11 @@
+{
+ "STRINGID_PKMNCHANGEDTYPE": [["psychic", {"b1": ["type", "TYPE_PSYCHIC"]}], ["ghost", {"b1": ["type", "TYPE_GHOST"]}]],
+ "STRINGID_TARGETCHANGEDTYPE": [["psychic", {"b1": ["type", "TYPE_PSYCHIC"]}], ["ghost", {"b1": ["type", "TYPE_GHOST"]}]],
+ "STRINGID_THIRDTYPEADDED": [["ghost", {"b1": ["type", "TYPE_GHOST"]}], ["psychic", {"b1": ["type", "TYPE_PSYCHIC"]}]],
+ "STRINGID_PKMNTERASTALLIZEDINTO": [["psychic", {"b1": ["type", "TYPE_PSYCHIC"]}], ["ghost", {"b1": ["type", "TYPE_GHOST"]}]],
+ "STRINGID_PKMNTRACED": [["cloud9", {"b1": ["nickp", 1, 0], "b2": ["ability", "ABILITY_CLOUD_NINE"]}],
+                         ["trace", {"b1": ["nickp", 1, 0], "b2": ["ability", "ABILITY_TRACE"]}],
+                         ["earlybird", {"b1": ["nickp", 1, 0], "b2": ["ability", "ABILITY_EARLY_BIRD"]}],
+                         ["hustle", {"b1": ["nickp", 1, 0], "b2": ["ability", "ABILITY_HUSTLE"]}],
+                         ["psysurge", {"b1": ["nickp", 1, 0], "b2": ["ability", "ABILITY_PSYCHIC_SURGE"]}]]
+}

@@ -1,57 +1,58 @@
 gText_ObtainedTheItem::
-	.string "Obtained the {STR_VAR_2}!$"
+	.string "קיבלת את {STR_VAR_2}!$"
 
 gText_TheBagIsFull::
-	.string "The BAG is full…$"
+	.string "התיק מלא…$"
 
 gText_PutItemInPocket::
-	.string "{PLAYER} put away the {STR_VAR_2}\n"
-	.string "in the {STR_VAR_3} POCKET.$"
+	.string "{PLAYER} שם {STR_VAR_2}\n"
+	.string "בכיס {STR_VAR_3}.$"
 
 gText_PlayerFoundOneItem::
-	.string "{PLAYER} found one {STR_VAR_2}!$"
+	.string "{PLAYER} מצא {STR_VAR_2}!$"
 
 gText_TooBadBagIsFull::
-	.string "Too bad!\n"
-	.string "The BAG is full…$"
+	.string "חבל!\n"
+	.string "התיק מלא…$"
 
 gText_PlayerPutItemInBag::
-	.string "{PLAYER} put away the {STR_VAR_2}\n"
-	.string "in the BAG.$"
+	.string "{PLAYER} שם {STR_VAR_2}\n"
+	.string "בתיק.$"
 
 gText_ObtainedTheDecor::
-	.string "Obtained the {STR_VAR_2}!$"
+	.string "קיבלת את {STR_VAR_2}!$"
 
 gText_NoRoomLeftForAnother::
 	.string "Too bad! There's no room left for\n"
 	.string "another {STR_VAR_2}…$"
 
 gText_TheDecorWasTransferredToThePC::
-	.string "The {STR_VAR_2} was transferred\n"
-	.string "to the PC.$"
+	.string "הקישוט {STR_VAR_2} הועבר\n"
+	.string "למחשב.$"
 
 gText_ObtainedTheItems::
-	.string "Obtained {STR_VAR_1} {STR_VAR_2}!$"
+	.string "קיבלת {STR_VAR_1} {STR_VAR_2}!$"
 
 gText_PlayerFoundItems::
-	.string "{PLAYER} found {STR_VAR_1} {STR_VAR_2}!$"
+	.string "{PLAYER} מצא\n"
+	.string "{STR_VAR_1} {STR_VAR_2}!$"
 
 gText_PutCoinsAwayInCoinCase::
-	.string "{PLAYER} put the COINS away in\n"
-	.string "the COIN CASE.$"
+	.string "{PLAYER} שם את המטבעות\n"
+	.string "בארנק המטבעות.$"
 
 gText_FoundXCoins::
-	.string "{PLAYER} found\n"
+	.string "{PLAYER} מצא\n"
 	.string "{STR_VAR_1} {STR_VAR_2}!$"
 
 gText_FoundXItems::
-	.string "{PLAYER} found\n"
-	.string "{STR_VAR_1} {STR_VAR_2}(s)!$"
+	.string "{PLAYER} מצא {STR_VAR_1} פריטים\n"
+	.string "מסוג {STR_VAR_2}!$"
 
 gText_CoinCaseIsFull::
-	.string "Too bad!\n"
-	.string "The COIN CASE is full…$"
+	.string "חבל!\n"
+	.string "ארנק המטבעות מלא…$"
 
 gText_NothingToPutThemIn::
-	.string "Too bad!\n"
-	.string "There's nothing to put them in…$"
+	.string "חבל!\n"
+	.string "אין לאן לשים אותם…$"

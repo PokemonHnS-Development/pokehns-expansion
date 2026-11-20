@@ -1,0 +1,22 @@
+# New Sinjoh cafe (NewSinjoh_House4_hns/scripts.inc:4-34).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_NEW_SINJOH_HOUSE4_HNS 16 9
+evstart goto NewSinjoh_Cafe_Script_Sister
+talk m12_sjcafe_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m12_sjcafe_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m12_sjcafe
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m12_sjcafe_bye 10 -
+waitctl 900

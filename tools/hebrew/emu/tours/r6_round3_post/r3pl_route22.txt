@@ -1,0 +1,17 @@
+# Route 22 Celebi time travel (Route22_EventScript_TriggerMid at (17,21), VAR_ROUTE22_GIOVANNI_STATE 0;
+# data/maps/Route22_hns/scripts.inc:26-190): Celebi in party slot 0 at full HP as the visible
+# follower (CheckCelebi, src/braille_puzzles.c:391); the Celebi spin, '!' and '?', the camera pan,
+# Silver1..5 / Giovanni1..3, Silver6, the push and the return.
+start saves/ladder6_postgame.sav
+include _r3pl_base.txt
+ev createmon 0, 0, SPECIES_CELEBI, 50, move1=MOVE_PSYCHIC, move2=MOVE_GIGA_DRAIN, move3=MOVE_RECOVER, move4=MOVE_LEAF_STORM; setvar VAR_ROUTE22_GIOVANNI_STATE, 0; setflag FLAG_HIDE_ROUTE22_GIOVANNI_SILVER; end
+followers on
+warpto MAP_ROUTE22_HNS 18 21
+face LEFT
+60 -
+objs
+snap R_field
+stepto LEFT 1
+scene R_scene 60000 16
+snap R_end
+vars VAR_ROUTE22_GIOVANNI_STATE

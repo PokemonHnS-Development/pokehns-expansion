@@ -1,0 +1,9 @@
+# Berry feeder, night (run with --rtc 1767308400): Ice Path B3F Delibird ((22,21), from (21,21);
+# IcePath_B3F_hns:74-114, likes Aspear). As r5n_12.
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+ev file _berries.inc
+ev clearflag FLAG_ITEM_ICEPATH4_TM_AVALANCHE; end
+flags FLAG_DAY_POKEMON FLAG_NIGHT_POKEMON
+warpto MAP_ICE_PATH_B3F_HNS 21 21
+include _feeder_aspear_delibird.inc

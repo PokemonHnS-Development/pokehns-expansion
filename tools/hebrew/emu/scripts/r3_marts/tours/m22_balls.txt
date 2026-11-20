@@ -1,0 +1,138 @@
+# Violet Mart: 10 Poke Balls (one Premier Ball, src/shop.c:2105-2118 gText_ThrowInPremierBall), 20 (two,
+# gText_ThrowInPremierBalls), 9 (no bonus), the quantity window at x1 / x10 / x20 / max, and Full Restore
+# at the max quantity (999 x P3000 = a 7-digit total) answered NO.
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_VIOLET_CITY_MART_HNS 2 5
+evstart goto VioletCity_Mart_EventScript_Clerk
+talk m22_balls_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m22_balls_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listgo 0
+tap A 0
+snap m22_balls_pb
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+snap m22_balls_pb_x1
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+snap m22_balls_pb_x10
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m22_balls_pb10_yesno
+tap A 0
+snap m22_balls_pb10_thanks
+tap A 0
+snap m22_balls_pb10_premier
+tap A 0
+waittaskx Task_BuyMenu 600
+waitquiet
+snap m22_balls_pb10_list
+listgo 0
+tap A 0
+snap m22_balls_pb20
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+snap m22_balls_pb20_x1
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+snap m22_balls_pb20_x20
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m22_balls_pb20_yesno
+tap A 0
+snap m22_balls_pb20_thanks
+tap A 0
+snap m22_balls_pb20_premier
+tap A 0
+waittaskx Task_BuyMenu 600
+waitquiet
+listgo 0
+tap A 0
+snap m22_balls_pbmax
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+snap m22_balls_pbmax_x1
+press DOWN 2
+snap m22_balls_pbmax_xmax
+tap B 0
+waittaskx Task_BuyMenu 600
+waitquiet
+listgo 7
+tap A 0
+snap m22_balls_fr
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+snap m22_balls_fr_x1
+press DOWN 2
+snap m22_balls_fr_xmax
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m22_balls_frmax_yesno
+tap B 0
+waittaskx Task_BuyMenu 600
+waitquiet
+listgo 0
+tap A 0
+snap m22_balls_pb9
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+snap m22_balls_pb9_x1
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+press UP 2
+snap m22_balls_pb9_x9
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m22_balls_pb9_yesno
+tap A 0
+snap m22_balls_pb9_thanks
+tap A 0
+snap m22_balls_pb9_nobonus
+waittaskx Task_BuyMenu 600
+waitquiet
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m22_balls_bye 10 -
+waitctl 900

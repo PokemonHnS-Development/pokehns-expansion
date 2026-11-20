@@ -1,0 +1,23 @@
+# Surf from the shore (GetInteractedWaterScript src/field_control_avatar.c:681 ->
+# EventScript_UseSurf, data/scripts/surf.inc:1-14): gText_WantToUseSurf YES/NO
+# (data/text/surf.inc:1), NO; A again, YES: gText_PlayerUsedSurf (:5) and the mount.
+# Cherrygrove City (51,2) facing the pond to the north.
+start save:fm_party
+include _cont.txt
+warpto MAP_CHERRYGROVE_CITY_HNS 51 2
+go DOWN
+go UP
+face UP
+snap fm05_00_facing_water
+tap A 2
+fieldwatch fm05_ask_no menu 3000
+snap fm05_yesno
+tap B 4
+fieldwatch fm05_no free 3000
+snap fm05_after_no
+face UP
+tap A 2
+fieldwatch fm05_ask_yes menu 3000
+tap A 4
+fieldwatch fm05_yes free 3000 4
+snap fm05_surfing

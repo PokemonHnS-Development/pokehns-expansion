@@ -1,0 +1,176 @@
+# GIVE from the bag (src/item_menu.c ItemMenu_Give :2147 -> src/party_menu.c): a plain give
+# ("was given X to hold"), a give to a Pokemon already holding an item (Task_SwitchHoldItemsPrompt
+# :3547, "already holding ... switch the two items?" YES/NO; NO back to the party, YES "X was
+# taken and replaced with Y"), the same with the held item's stack full in the bag ("The BAG is
+# full"), then a mail item's CHECK (src/item_use.c ItemUseOutOfBattle_Mail :242, ReadMail).
+# ITEMS pocket of menuA_base: 57 HEART SCALE, 99 ORANGE MAIL, 145 EVERSTONE (all x999).
+# Chansey (slot 5) holds an ORAN BERRY, whose bag stack is already 999.
+start saves/menuA_base.sav
+include ../scripts/continue.txt
+ev givemon SPECIES_CHANSEY, 30, item=ITEM_ORAN_BERRY; end
+
+# EVERSTONE > GIVE > Typhlosion
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 8E
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_give_01_bag_everstone
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4
+waitquiet
+snap pbi_give_02_context_give
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_give_03_give_which
+tap A 4
+waitkey 600
+snap pbi_give_04_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# HEART SCALE > GIVE > Typhlosion (holds the Everstone): NO (back to the bag), then YES
+# (src/party_menu.c TryGiveItemOrMailToSelectedMon :7221, Task_HandleSwitchItemsFromBagYesNoInput :7333)
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 36
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_give_05_party_held_icon
+tap A 4
+talk pbi_give_06_switch_prompt 4 - Task_HandleSwitchItemsFromBagYesNoInput
+tap DOWN 4
+waitquiet
+snap pbi_give_07_switch_no_selected
+tap A 4                                   # NO
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitkey 600
+tap A 4
+waittaskx Task_HandleSwitchItemsFromBagYesNoInput 600
+waitquiet
+tap A 4                                   # YES
+waitkey 600
+snap pbi_give_08_switched
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# HEART SCALE > GIVE > Chansey (holds an ORAN BERRY, bag stack full): YES -> bag full
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+talk pbi_give_09_switch_prompt_berry 4 - Task_HandleSwitchItemsFromBagYesNoInput
+tap A 4                                   # YES
+waitkey 600
+snap pbi_give_10_bag_full
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# The party menu's own path: Typhlosion (holds the Heart Scale) > ITEM > GIVE > an item from the
+# bag > "switch the two items?" (Task_SwitchHoldItemsPrompt :3547): NO, back to the party
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap pbi_give_11_party_actions
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap pbi_give_12_actions_item
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap pbi_give_13_item_submenu
+tap A 4                                   # GIVE
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_give_14_give_bag
+tap A 4                                   # the item under the cursor
+waitcb2x CB2_UpdatePartyMenu 900
+talk pbi_give_15_party_switch_prompt 4 - Task_HandleSwitchItemsYesNoInput
+tap DOWN 4
+tap A 4                                   # NO
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_give_16_party_after_no
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# ORANGE MAIL > CHECK: the read-mail screen of a blank mail
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 60
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_give_17_bag_mail
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap pbi_give_18_mail_context
+tap A 4                                   # CHECK
+waitcb2x CB2_MailRead 600
+30 -
+snap pbi_give_19_read_mail 300
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_give_20_back_in_bag
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

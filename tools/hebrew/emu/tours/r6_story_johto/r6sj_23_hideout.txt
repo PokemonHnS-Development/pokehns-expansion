@@ -1,0 +1,77 @@
+# Rocket Hideout (data/maps/RocketHideout_B1F_hns, _B2F_hns, _B3F_hns): B1F Persian statue 1 alarm
+# (Trigger_Statue1 at (45,4), VAR_ROCKET_HIDEOUT_STATUE_1 0; StatueGruntLeft :171-196: grunts 17 and
+# 18, trainerbattle_no_intro); B3F Lance's password line (ON_FRAME at VAR_MAHOGANY_TOWN_STATE 6), the
+# password grunts GruntF5 and Eto (trainerbattle_single, after lines), the locked door (needs password,
+# then open sesame), Petrel disguised as Giovanni (Giovanni :303-358, TRAINER_PETREL_1_HNS with his
+# Full Restore via bitem, then the Murkrow), the B3F Murkrow stairs (state 10); B2F HM06 Whirlpool
+# (ElectrodeDone :473-520). Ladder 3 plus the s4b state before the hideout.
+start saves/r6sj_ladder3_ecruteak.sav
+include _base.txt
+include _mewtwo.txt
+ev setvar VAR_LUGIA_OR_HOOH, 2; setflag FLAG_VISITED_LAKE_OF_RAGE; setflag FLAG_HIDE_LAKE_OF_RAGE_GYARADOS; setflag FLAG_HIDE_LAKE_OF_RAGE_LANCE; setflag FLAG_HIDE_MAHOGANY_TOWN_SHOP_NPCS; setvar VAR_MAHOGANY_TOWN_STATE, 5; clearflag FLAG_HIDE_ROCKETHIDEOUT_ROCKETS; setvar VAR_ROCKET_HIDEOUT_STATUE_1, 0; cleartrainerflag TRAINER_GRUNT_17_HNS; cleartrainerflag TRAINER_GRUNT_18_HNS; end
+warpto MAP_ROCKET_HIDEOUT_B1F_HNS 42 4
+snap b1_room
+walkto 45 4
+scene st1 20000 40
+bwalk st1_g17 input:HandleInputChooseAction
+bwin st1_g17win
+scene st1_mid 20000 40
+bwalk st1_g18 input:HandleInputChooseAction
+bwin st1_g18win
+scene st1_after 20000 40
+snap st1_end
+# B3F: Lance's password line
+ev setvar VAR_MAHOGANY_TOWN_STATE, 6; clearflag FLAG_HIDE_ROCKETHIDEOUT3_LANCE_DRAGONITE; clearflag FLAG_HIDE_MAHOGANY_ROCKETS; setvar VAR_ROCKET_PASSWORD, 0; clearflag FLAG_GOT_PASSWORD_FROM_ETO; clearflag FLAG_GOT_PASSWORD_FROM_GRUNTF; clearflag FLAG_HIDE_ROCKETHIDEOUT3_GATE; setflag FLAG_HIDE_ROCKETHIDEOUT3_GIOVANNI; clearflag FLAG_HIDE_ROCKETHIDEOUT3_PETREL; settrainerflag TRAINER_MITCH_HNS; settrainerflag TRAINER_ROSS_HNS; end
+warpraw MAP_ROCKET_HIDEOUT_B3F_HNS 29 17
+scene lance 30000 40
+snap lance_end
+warpto MAP_ROCKET_HIDEOUT_B3F_HNS 12 13
+face UP
+tap A 4
+scene door1 6000
+warpto MAP_ROCKET_HIDEOUT_B3F_HNS 29 10
+face UP
+tap A 4
+scene gf_pre 10000
+bwalk gf_intro input:HandleInputChooseAction
+bwin gf_win
+scene gf_post 6000
+tap A 4
+scene gf_after 6000
+warpto MAP_ROCKET_HIDEOUT_B3F_HNS 4 17
+face UP
+tap A 4
+scene eto_pre 10000
+bwalk eto_intro input:HandleInputChooseAction
+bwin eto_win
+scene eto_post 6000
+tap A 4
+scene eto_after 6000
+warpto MAP_ROCKET_HIDEOUT_B3F_HNS 12 13
+face UP
+tap A 4
+scene door2 6000
+snap door2_end
+warpto MAP_ROCKET_HIDEOUT_B3F_HNS 10 4
+snap pt_room
+face UP
+tap A 4
+scene pt_pre 20000
+bwalk pt_intro input:HandleInputChooseAction
+bitem pt_item 3
+bwin pt_win
+scene pt_after 40000 40
+snap pt_end
+# B3F Murkrow stairs (state 10)
+ev setvar VAR_MAHOGANY_TOWN_STATE, 10; clearflag FLAG_HIDE_ROCKETHIDEOUT3_MURKROWSTAIRS; end
+warpto MAP_ROCKET_HIDEOUT_B3F_HNS 25 3
+walkto 27 3
+scene mk 20000 40
+snap mk_end
+# B2F: the Electrodes done, Lance, HM06 Whirlpool
+ev setvar VAR_MAHOGANY_TOWN_STATE, 13; clearflag FLAG_HIDE_ROCKETHIDEOUT2_LANCE_DRAGONITE; setvar VAR_ELECTRODES_FAINTED, 3; clearflag FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE1; clearflag FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE2; clearflag FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE3; end
+warpto MAP_ROCKET_HIDEOUT_B2F_HNS 12 17
+snap wp_room
+evstart goto RocketHideout_B2F_EventScript_ElectrodeDone
+scene wp 40000 40
+snap wp_end

@@ -39,36 +39,34 @@ LavenderTown_EventScript_SoulHouseSign::
 	end
 
 LavenderTown_Text_PokefanM:
-	.string "That's quite some building, eh?\p"
-	.string "It's KANTO's RADIO TOWER.$"
+	.string "זה בניין מרשים, הא?\p"
+	.string "זה מגדל הרדיו של קאנטו.$"
 
 LavenderTown_Text_Teacher:
-	.string "KANTO has many good radio shows.$"
+	.string "בקאנטו יש הרבה תוכניות רדיו טובות.$"
 
 LavenderTown_Text_Gramps:
-	.string "People come from all over to pay\n"
-	.string "their respects to the departed\l"
-	.string "souls of POKéMON.$"
+	.string "אנשים באים מכל מקום כדי לחלוק כבוד\n"
+	.string "לנשמות הפוקימונים שהלכו לעולמם.$"
 
 LavenderTown_Text_Youngster:
-	.string "You need a POKé FLUTE to wake\n"
-	.string "sleeping POKéMON.\p"
-	.string "Every trainer has to know that!$"
+	.string "צריך חליל פוקימון כדי להעיר\n"
+	.string "פוקימונים ישנים.\p"
+	.string "כל מאמן חייב לדעת את זה!$"
 
 LavenderTown_Text_Sign:
-	.string "LAVENDER TOWN\p"
-	.string "The Noble Purple Town$"
+	.string "העיירה לבנדר\p"
+	.string "העיירה הסגולה הנעלה$"
 
 LavenderTown_Text_KantoRadioStationSign:
-	.string "KANTO RADIO STATION\p"
-	.string "Your Favorite Programs On-Air\n"
-	.string "Around the Clock!$"
+	.string "תחנת הרדיו של קאנטו\p"
+	.string "התוכניות האהובות עליכם\n"
+	.string "בשידור מסביב לשעון!$"
 
 LavenderTown_Text_VolunteerPokemonHouseSign:
-	.string "LAVENDER VOLUNTEER POKéMON\n"
-	.string "HOUSE$"
+	.string "בית המתנדבים לפוקימונים\n"
+	.string "של לבנדר$"
 
 LavenderTown_Text_SoulHouseSign:
-	.string "SOUL HOUSE\p"
-	.string "May the Souls of POKéMON Rest\n"
-	.string "Easy$"
+	.string "בית הנשמות\p"
+	.string "שנשמות הפוקימונים ינוחו בשלום$"

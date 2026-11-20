@@ -1,0 +1,31 @@
+# A Poke Ball thrown in a trainer battle: the trainer blocks it (Cmd_handleballthrow,
+# src/battle_script_commands.c:11008-11013 -> BattleScript_TrainerBallBlock,
+# data/battle_scripts_2.s:241-247: STRINGID_TRAINERBLOCKEDBALL, then STRINGID_DONTBEATHIEF).
+# Opponent: Youngster Mikey on Route 30 (setup of battle_trainer.txt). Then the in-battle bag
+# again, and the battle is won with Thunderbolt.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_PIKACHU, 30, move1=MOVE_THUNDERBOLT, move2=MOVE_GROWL; additem ITEM_POKE_BALL, 5; end
+
+face UP
+pinrng
+8 UP
+waitnotfree 120
+bwalk bvr_tball_intro input:HandleInputChooseAction
+w8 @gBagPosition+5@ 2                     # the bag opens on POKE BALLS (struct BagPosition.pocket, include/item_menu.h:59-67)
+w16 @gBagPosition+0C@ 0                   # cursor on its first row
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+expect8 @gBagPosition+5@ 2
+snap bvr_tball_balls
+tap A 4
+waitquiet
+snap bvr_tball_use
+tap A 4                                   # USE
+bwalk bvr_tball_throw input:HandleInputChooseAction
+snap bvr_tball_after
+baction FIGHT
+bmove 0
+bwalk bvr_tball_turn2 prompt:Cmd_yesnobox|input:HandleInputChooseAction

@@ -1,0 +1,15 @@
+# r11 (gen_tours.py): MAP_BLACKTHORN_CITY_GYM_HNS after its badge, on ladder4_league. Statue BlackthornGym_EventScript_Statue, guide BlackthornGym_EventScript_GymGuy, leader BlackthornGym_EventScript_Clair (data/maps/BlackthornCity_Gym_hns/scripts.inc).
+start saves/ladder4_league.sav
+include _base.txt
+warpto MAP_BLACKTHORN_CITY_GYM_HNS 17 56
+face UP
+snap gj8_room
+talkdir gj8_statue UP
+approach 5
+tap A 4
+drive gj8_guide
+warpto MAP_BLACKTHORN_CITY_GYM_HNS 20 6
+face UP
+snap gj8_leader_room
+talkdir gj8_leader UP
+talkdir gj8_leader_again UP

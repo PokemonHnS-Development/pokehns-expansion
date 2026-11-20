@@ -124,10 +124,10 @@ static const u16 sListWindow_Pal[] = INCBIN_U16("graphics/pokenav/match_call/lis
 static const u16 sPokeball_Pal[] = INCBIN_U16("graphics/pokenav/match_call/pokeball.gbapal");
 static const u32 sPokeball_Gfx[] = INCBIN_U32("graphics/pokenav/match_call/pokeball.4bpp.smol");
 
-static const u8 gText_NumberRegistered[] = _("No. registered");
-static const u8 gText_NumberOfBattles[] = _("No. of battles");
-static const u8 gText_TrainerCloseBy[] = _("That TRAINER is close by.\nTalk to the TRAINER in person!");
-static const u8 gText_Unknown[] = _("UNKNOWN");
+static const u8 gText_NumberRegistered[] = _("מספר רשומים");
+static const u8 gText_NumberOfBattles[] = _("מספר קרבות");
+static const u8 gText_TrainerCloseBy[] = _("המאמן הזה נמצא בקרבת מקום.\nכדאי לדבר איתו פנים אל פנים!");
+static const u8 gText_Unknown[] = _("לא ידוע");
 
 static const struct BgTemplate sMatchCallBgTemplates[3] =
 {
@@ -204,9 +204,9 @@ static const struct WindowTemplate sMatchCallInfoBoxWindowTemplate =
 
 static const u8 *const sMatchCallOptionTexts[MATCH_CALL_OPTION_COUNT] =
 {
-    [MATCH_CALL_OPTION_CALL]   = COMPOUND_STRING("CALL"),
-    [MATCH_CALL_OPTION_CHECK]  = COMPOUND_STRING("CHECK"),
-    [MATCH_CALL_OPTION_CANCEL] = COMPOUND_STRING("CANCEL")
+    [MATCH_CALL_OPTION_CALL]   = COMPOUND_STRING("חיוג"),
+    [MATCH_CALL_OPTION_CHECK]  = COMPOUND_STRING("בדיקה"),
+    [MATCH_CALL_OPTION_CANCEL] = COMPOUND_STRING("ביטול")
 };
 
 // The series of 5 dots that appear when someone is called with Match Call
@@ -927,10 +927,42 @@ enum {
     POKEBALL_ICON_EMPTY,
 };
 
+#if TEXT_RTL
+// A mirrored row ends with the name at the list window's left edge, where the ball goes. The column
+// left of the window holds the panel's frame, so the ball takes the window's first column: the
+// Hebrew names of the trainers who can ask for a rematch end well short of it (the name field is
+// 51 px; theirs are at most 26). Other rows get the window's own tiles back there, so a longer name
+// such as PROF. ELM's is not cut.
+static bool32 TryDrawMirroredRematchPokeballIcon(u16 windowId, bool32 draw, u32 tileOffset)
+{
+    u16 *tilemap;
+
+    if (GetWindowRtlMode(windowId) != WINDOW_RTL_MIRROR)
+        return FALSE;
+
+    if (draw)
+    {
+        tilemap = GetBgTilemapBuffer(GetWindowAttribute(windowId, WINDOW_BG));
+        tilemap += tileOffset * 64 + GetWindowAttribute(windowId, WINDOW_TILEMAP_LEFT);
+        tilemap[0] = POKEBALL_ICON_TOP;
+        tilemap[0x20] = POKEBALL_ICON_BOTTOM;
+    }
+    else
+    {
+        PutWindowRectTilemap(windowId, 0, tileOffset * 2, 1, 2);
+    }
+    return TRUE;
+}
+
+#endif
 static void TryDrawRematchPokeballIcon(u16 windowId, u32 rematchId, u32 tileOffset)
 {
     u8 bg = GetWindowAttribute(windowId, WINDOW_BG);
     u16 *tilemap = GetBgTilemapBuffer(bg);
+#if TEXT_RTL
+    if (TryDrawMirroredRematchPokeballIcon(windowId, ShouldDrawRematchPokeballIcon(rematchId), tileOffset))
+        return;
+#endif
     tilemap += tileOffset * 64 + 0x1D;
     if (ShouldDrawRematchPokeballIcon(rematchId))
     {
@@ -948,6 +980,10 @@ void ClearRematchPokeballIcon(u16 windowId, u32 tileOffset)
 {
     u8 bg = GetWindowAttribute(windowId, WINDOW_BG);
     u16 *tilemap = GetBgTilemapBuffer(bg);
+#if TEXT_RTL
+    if (TryDrawMirroredRematchPokeballIcon(windowId, FALSE, tileOffset))
+        return;
+#endif
     tilemap += tileOffset * 64 + 0x1D;
     tilemap[0] = POKEBALL_ICON_EMPTY;
     tilemap[0x20] = POKEBALL_ICON_EMPTY;
@@ -1093,7 +1129,13 @@ static void DrawMsgBoxForMatchCallMsg(struct Pokenav_MatchCallGfx *gfx)
     PutWindowTilemap(gfx->msgBoxWindowId);
     CopyWindowToVram(gfx->msgBoxWindowId, COPYWIN_FULL);
     sprite = GetSpinningPokenavSprite();
+#if TEXT_RTL
+    // The call text is mirrored inside the box (screen x 8..232), so its 32-px indent for the
+    // Pokegear icon is on the right; the icon goes there too.
+    sprite->x = 240 - 24;
+#else
     sprite->x = 24;
+#endif
     sprite->y = 112;
     sprite->y2 = 0;
 }
@@ -1207,7 +1249,23 @@ static void CreateOptionsCursorSprite(struct Pokenav_MatchCallGfx *gfx, int top)
 {
     if (!gfx->optionsCursorSprite)
     {
+#if TEXT_RTL
+        // The options are mirrored inside the info box (88 px), so the cursor moves to its right
+        // edge and points left.
+        u8 spriteId;
+        if (GetWindowRtlMode(gfx->infoBoxWindowId) == WINDOW_RTL_MIRROR)
+        {
+            spriteId = CreateSprite(&sOptionsCursorSpriteTemplate, 88 - 4, 80, 5);
+            gSprites[spriteId].hFlip = TRUE;
+            gSprites[spriteId].oam.matrixNum |= ST_OAM_HFLIP;
+        }
+        else
+        {
+            spriteId = CreateSprite(&sOptionsCursorSpriteTemplate, 4, 80, 5);
+        }
+#else
         u8 spriteId = CreateSprite(&sOptionsCursorSpriteTemplate, 4, 80, 5);
+#endif
         gfx->optionsCursorSprite = &gSprites[spriteId];
         UpdateCursorGfxPos(gfx, top);
     }
@@ -1229,7 +1287,15 @@ static void SpriteCB_OptionsCursor(struct Sprite *sprite)
     if (++sprite->data[0] > 3)
     {
         sprite->data[0] = 0;
+#if TEXT_RTL
+        // A flipped cursor bobs to the left, toward the options.
+        if (sprite->hFlip)
+            sprite->x2 = -((-sprite->x2 + 1) & 7);
+        else
+            sprite->x2 = (sprite->x2 + 1) & 7;
+#else
         sprite->x2 = (sprite->x2 + 1) & 7;
+#endif
     }
 }
 

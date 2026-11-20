@@ -1,0 +1,22 @@
+# EXEGGUTOR-A in the PC's MOVE ITEMS party pane (src/pokemon_storage_system.c
+# PrintDisplayMonInfo, OPTION_MOVE_ITEMS branch: species line FONT_SHORT fitted to 60 px), which
+# the TEXT_RTL fallback does not touch. Slot 0 no nickname, slot 1 nicknamed.
+start saves/r2dex_all.sav
+include ../../continue.txt
+ev createmon 0, 0, SPECIES_EXEGGUTOR_ALOLA, 50, gender=MON_MALE; createmon 0, 1, SPECIES_EXEGGUTOR_ALOLA, 50, gender=MON_FEMALE; special CalculatePlayerPartyCount; end
+nick12 1 ג'ימי JIMMY
+evstart special ShowPokemonStorageSystemPC; waitstate; end
+waittaskdata Task_PCMainMenu 0 2 600
+press DOWN
+press DOWN
+press DOWN
+tap A 0
+waitcb2x CB2_PokeStorage 900
+pcwait
+pcgoto buttons 0
+tap A 4
+pcwait
+pcgoto party 0
+snap rb_pcitems_party0
+pcgoto party 1
+snap rb_pcitems_party1_nick

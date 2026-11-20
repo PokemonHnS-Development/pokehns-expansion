@@ -1,0 +1,105 @@
+# Writing mail on the Hebrew build: the Easy Chat MAIL screen (2x5 frame, nine words) reached the
+# way the game reaches it, a Retro Mail from the bag given to a Pokemon (party_menu.c,
+# CB2_WriteMailToGiveMonFromBag -> DoEasyChatScreen(EASY_CHAT_TYPE_MAIL)). The same steps as
+# r2_help_windows_and_easy_chat/mail_compose.txt, plus heapstat with the screen open, the alphabet
+# keyboard and the mem list, and the YES/NO box of the OK prompt (the fifth row's word on the right).
+start saves/ladder6_postgame.sav
+include ../continue.txt
+ev setflag FLAG_SYS_GAME_CLEAR; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; special CalculatePlayerPartyCount; end
+giveitem ITEM_RETRO_MAIL 1
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+bagpocket 0
+bagseek ITEM_RETRO_MAIL
+waitquiet
+snap mc_bag_mail
+tap A 4
+waitquiet
+snap mc_bag_mail_context
+tap ROWNEXT 4
+waitquiet
+snap mc_bag_mail_context_give
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap mc_give_party
+tap A 4
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+heapstat mail
+ecstate
+snap mc_ec_empty
+ec A
+ec SELECT
+ecletter 2 0
+snap mc_ec_abc
+ec A
+eclist mc_ec_mem 80
+ec B
+ec SELECT
+ec B
+ec B
+snap mc_ec_quit_prompt
+ecstate
+ec A
+snap mc_ec_quit_no
+ecputword 0 0 EC_GROUP_GREETINGS EC_WORD_THANK_YOU
+ecputword 0 1 EC_GROUP_ENDINGS EC_WORD_FOR
+ecputword 1 0 EC_GROUP_STATUS EC_WORD_STATIC
+ecputword 1 1 EC_GROUP_STATUS EC_WORD_SHELL_ARMOR
+ecputword 2 0 EC_GROUP_VOICES EC_WORD_WAAAH
+ecputword 2 1 EC_GROUP_FEELINGS EC_WORD_PLAY
+ecputword 3 0 EC_GROUP_GREETINGS EC_WORD_WELCOME
+ecputword 3 1 EC_GROUP_TRAINER EC_WORD_SP_ABILITY
+ecputword 4 0 EC_GROUP_FEELINGS EC_WORD_MISHEARD mc_put9
+ecstate
+snap mc_ec_9words
+ecslot 0 0
+snap mc_ec_9words_slot00
+ecslot 1 1
+snap mc_ec_9words_slot11
+ecslot 3 1
+snap mc_ec_9words_slot31
+ecslot 4 0
+snap mc_ec_9words_slot40
+ecbutton 2
+snap mc_ec_btn_ok
+ec A
+snap mc_ec_confirm
+ecstate
+tap A 0
+waitcb2x CB2_UpdatePartyMenu 1200
+60 -
+waitquiet
+snap mc_given
+showtasks
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap mc_back_in_bag
+tap B 4
+waitcb2x CB2_Overworld 900
+60 -
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap mc_party_holding
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap mc_read_composed
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900

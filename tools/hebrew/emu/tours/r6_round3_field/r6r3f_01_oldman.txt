@@ -1,0 +1,25 @@
+# Route 29 old man (61,16), Route29_EventScript_OldMan (Route29_hns/scripts.inc:38-60): without
+# FLAG_ADVENTURE_STARTED only OldMan1; with it the OldMan2 YES/NO: YES -> OldManExplanation, then
+# once more NO -> OldManDeclined.
+start saves/r6r3f_base.sav
+include _base.txt
+ev clearflag FLAG_ADVENTURE_STARTED; end
+warpto MAP_ROUTE29_HNS 61 17
+face UP
+snap om_field
+tap A 4
+scene om1 6000
+snap om1_end
+ev setflag FLAG_ADVENTURE_STARTED; end
+face UP
+tap A 4
+scene om2 8000
+yesno om2_yn YES
+scene om2_yes 8000
+snap om2_yes_end
+face UP
+tap A 4
+scene om3 8000
+yesno om3_yn NO
+scene om3_no 6000
+snap om3_no_end

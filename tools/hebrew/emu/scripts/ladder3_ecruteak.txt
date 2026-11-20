@@ -1,0 +1,17 @@
+# Ladder save 3: mid Johto, Ecruteak City, 4 badges (Zephyr, Hive, Plain, Fog), saved in the
+# Ecruteak City Pokemon Center.
+#   ladder.py run scripts/ladder3_ecruteak.txt OUT --save $HNS_SAVES/ladder1_newgame.sav \
+#             --save-out $HNS_SAVES/ladder3_ecruteak.sav
+# Starts from ladder 1 and replays the story as event scripts (scripts/ladder/),
+# gives the party, warps into the Center and saves in-game.
+include continue.txt
+include ladder/story_ecruteak.txt
+event ladder/party3_ecruteak.inc
+warp 6 0 7 7                 # MAP_ECRUTEAK_CITY_POKEMON_CENTER_HNS
+expectflag FLAG_BADGE04_GET 1
+expectvar VAR_NUM_BADGES 4
+expectvar VAR_ECRUTEAK_CITY_STATE 4
+expectvar VAR_ECRUTEAK_CITY_THEATER 3
+playtime 9 38
+savegame
+shot l3_saved

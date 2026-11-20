@@ -1,0 +1,11 @@
+# r11: Chuck (Cianwood Gym, (10,2)) after his badge once the player has been to Vermilion
+# (ladder 5: FLAG_VISITED_VERMILION_CITY set, FLAG_HIDE_DOJO_CHUCK set): ChuckGotoDojo, which clears
+# FLAG_HIDE_DOJO_CHUCK, then talked to again: ChuckAtDojo (data/maps/CianwoodGym_hns/scripts.inc).
+start saves/ladder5_kanto.sav
+include _base.txt
+pstate FLAG_VISITED_VERMILION_CITY FLAG_HIDE_DOJO_CHUCK FLAG_DEFEATED_CIANWOOD_GYM
+warpto MAP_CIANWOOD_GYM_HNS 10 3
+face UP
+snap v2_room
+talkdir v2_gotodojo UP
+talkdir v2_atdojo UP

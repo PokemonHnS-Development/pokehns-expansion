@@ -1,0 +1,20 @@
+# Game Corner on MAP_CELADON_CITY_GAME_CORNER_HNS: coins clerk (buy 50 / 500), prize Pokemon menu, TM prize menu, buy,
+# not enough coins.
+start saves/st_l6.sav
+include _base.txt
+ev additem ITEM_COIN_CASE; end
+setcoins 9000
+visit MAP_CELADON_CITY_GAME_CORNER_HNS
+clerk 3 2 g02_coin
+chat g02_c50 A
+clerk 3 2 g02_coinb
+chat g02_c500 d1
+clerk 16 2 g02_mon
+chat g02_mon1 A B
+clerk 18 2 g02_tm
+chat g02_tm1 A A
+clerk 18 2 g02_tmb
+chat g02_tm2 d3 B
+setcoins 10
+clerk 16 2 g02_monp
+chat g02_mon2 A A

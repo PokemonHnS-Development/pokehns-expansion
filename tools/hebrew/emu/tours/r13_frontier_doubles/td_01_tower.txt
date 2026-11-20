@@ -1,0 +1,96 @@
+# r13 Battle Tower doubles, Lv.50, from the doubles attendant (10,5) to the BP prize. Lobby:
+# welcome for a double battle, CHALLENGE/INFO/EXIT, INFO (the doubles explanation), the level menu,
+# 'select four', the Frontier party pick for 4 (the '4 needed' and same-item refusals), the save,
+# the elevator and corridor. Battle room: the opponent (pinned to Dragon Tamer ROBERTO, 152, the
+# widest class + name) and its Easy Chat intro (capture only), double battle 1 by hand: the action
+# menu for each of the player's two battlers, the move menu and the target selection, then the win
+# (bwin). After win 1: restore, 'ready for the 2nd', GO ON / RECORD / REST / RETIRE; GO ON, battle 2,
+# then from battle 2's savestate with the battle number poked: the 7th win in the lobby (BP award,
+# record prompt) and the doubles results board (8,5).
+start saves/r13/palace_doubles/base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+include _party4.txt
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 10 6
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+snap td_00_lobby
+tap A 0
+drive td_in menu
+pick 1
+drive td_info menu
+pick 0
+drive td_lv menu
+pick 0
+drive td_sel task:Task_HandleChooseMonInput 20
+waitquiet
+snap td_ps_00_start
+include _enter4.txt
+drive td_save menu 10
+pick 0
+saveyes td_savebox
+fastbattles off
+pin @gTrainerBattleParameter+2@ 9800
+drivex td_go battle 30 9000
+unpin
+oppname
+tstate save td_b1
+# ---- battle 1 by hand: both battlers' action menus, move menus and target selection
+bwalk td_b1a input:HandleInputChooseAction
+bsetmoves 0 MOVE_FLAMETHROWER
+bsetmoves 2 MOVE_AERIAL_ACE
+bfoe1
+snapq td_b1_act0
+baction FIGHT
+waitbinput HandleInputChooseMove
+waitquiet
+snap td_b1_move0
+tap A 4
+waitbinput HandleInputChooseTarget
+waitquiet
+snap td_b1_target0
+tap RIGHT 4
+waitquiet
+snap td_b1_target0b
+tap A 4
+waitbinputb 2 HandleInputChooseAction
+waitquiet
+snap td_b1_act2
+bactionb 2 FIGHT
+waitbinputb 2 HandleInputChooseMove
+waitquiet
+snap td_b1_move2
+tap A 4
+waitbinputb 2 HandleInputChooseTarget
+waitquiet
+snap td_b1_target2
+tap A 4
+bwin2 td_b1
+drivex td_w1 menu 30 9000
+pick 0
+drivex td_b2_in battle 30 9000
+tstate save td_b2
+bwin2 td_b2
+drivex td_b2_after menu 30 9000
+# the 7th win
+tstate load td_b2
+sb2w16 CB2 6
+bwin2 td_b7
+drivex td_won menu 40 12000
+tstate save td_won_rec
+pick 0
+drivex td_won_yes free 20 6000
+snap td_won_yes_end
+tstate load td_won_rec
+pick 1
+drivex td_won_no free 10
+snap td_won_no_end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 8 6
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+30 -
+waitquiet
+snap td_res_doubles
+tap A 4
+waitctl 300

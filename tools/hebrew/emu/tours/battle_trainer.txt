@@ -1,0 +1,33 @@
+# Trainer battle: the trainer's field intro text, the battle intro with trainer class and
+# name, a super-effective move, the foe fainting, experience, the "will you change
+# Pokemon?" switch prompt before the trainer's next Pokemon, the trainer's defeat text and the
+# prize money message (no field text follows this battle). Opponent: Youngster Mikey on
+# Route 30 (Hoothoot Lv 2, Sentret Lv 4; src/data/trainers_hns.party:102-117).
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_PIKACHU, 30, move1=MOVE_THUNDERBOLT, move2=MOVE_QUICK_ATTACK, move3=MOVE_IRON_TAIL, move4=MOVE_THUNDER_WAVE; givemon SPECIES_CYNDAQUIL, 12; end
+
+# Mikey stands at (23,22) facing down with sight 2 (data/maps/Route30_hns/map.json); the
+# base leaves the player at (23,25), out of sight. One step up and he spots the player:
+# "!", he walks over, his intro text, the battle.
+face UP
+pinrng
+8 UP
+waitnotfree 120
+bwalk battle_trainer_intro input:HandleInputChooseAction
+snap battle_trainer_action
+
+# Thunderbolt on Hoothoot (Normal/Flying): super effective, faints; then the switch prompt
+baction FIGHT
+bmove 0
+bwalk battle_trainer_turn1 prompt:Cmd_yesnobox
+snap battle_trainer_switch_prompt
+tap DOWN 4                            # NO: keep Pikachu in
+tap A 4
+bwalk battle_trainer_next input:HandleInputChooseAction
+
+# Thunderbolt on Sentret: the win, the defeat text, the prize money, back to the field
+baction FIGHT
+bmove 0
+bwalk battle_trainer_win free
+snap battle_trainer_end

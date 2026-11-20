@@ -1,0 +1,105 @@
+# Mid-game play from ladder save 3, at the sea west of Cherrygrove City (tile 24,9 is ocean):
+# the Surf question (Flaaffy is taught Surf here so that one party Pokemon has it; answered
+# NO, then YES), fishing with the Old Rod from the bag (the dots, the bite, the wild battle),
+# the in-battle bag (a Potion on Quilava) and party, a Great Ball thrown at the 1-HP foe,
+# the catch, the nickname question and the Pokedex entry.
+start saves/ladder3_ecruteak.sav
+include ../../scripts/continue.txt
+ev setmonmove 2, 3, MOVE_SURF; end
+fastbattles off
+warpto MAP_CHERRYGROVE_CITY_HNS 25 9
+snap pmh_popup_cherrygrove
+face LEFT
+talk pmh_surf 10                          # ends at YES/NO
+tap B 0                                   # NO
+waitctl 900
+face LEFT
+talk pmh_surf2 10
+tap A 0                                   # YES
+talk pmh_surf_yes 10 -
+waitctl 1200
+snap pmh_surfing
+warpto MAP_CHERRYGROVE_CITY_HNS 25 9
+face LEFT
+
+# --- Old Rod from the key items pocket (index 2)
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 2
+w16 @gBagPosition+1E@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pmh_bag_rod
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap pmh_bag_rod_context
+pinrng DEADBEEFDEADBEEFDEADBEEF00000000    # this cast catches nothing
+tap A 4                                   # USE
+waitcb2x CB2_Overworld 900
+30 -
+shot pmh_fish_cast
+waitkey 1500
+snap pmh_fish_nibble
+tap A 0
+waitctl 900
+# a second cast, from SELECT (gSaveBlock1Ptr->registeredItem at SB1+0x49A = ITEM_OLD_ROD 0x2C5)
+pinrng 12345678123456781234567812345678    # this one hooks a Pokemon
+w16 @SB1+49A@ 2C5
+tap SELECT 0
+waitkey 1500
+snap pmh_fish_hook
+tap A 0
+waitbattle 1800
+bwalk pmh_wild_intro input:HandleInputChooseAction
+snap pmh_wild_action
+
+# --- the bag in battle: a Potion on Quilava (HP 30)
+sethp player 0 30
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 0
+w16 @gBagPosition+16@ 0
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap pmh_bbag_medicine
+tap A 4
+waitquiet
+snap pmh_bbag_context
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pmh_bbag_party
+tap A 4
+waitquiet
+snap pmh_bbag_restored
+bwalk pmh_wild_t1 input:HandleInputChooseAction
+
+# --- a Great Ball at the foe on 1 HP
+w16 @gBattleMons+B2@ 1
+w8 @gBagPosition+5@ 2
+w16 @gBagPosition+C@ 1
+w16 @gBagPosition+18@ 0
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap pmh_bbag_balls
+tap A 4
+waitquiet
+snap pmh_bbag_ball_context
+tap A 4                                   # USE
+bwalk pmh_catch
+waitquiet
+snap pmh_catch_dex
+tap A 4
+bwalk pmh_catch2 prompt:Cmd_yesnobox|prompt:Cmd_trygivecaughtmonnick
+snap pmh_nick_q
+tap B 4                                   # NO nickname
+bwalk pmh_catch3 prompt:Cmd_givecaughtmon
+snap pmh_party_q                          # the party is full: add it to the party?
+tap B 4                                   # NO: to the PC
+bwalk pmh_catch4 free

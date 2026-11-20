@@ -1,0 +1,195 @@
+# Items that change a Pokemon's nature, ability or EVs, used from the bag (src/party_menu.c):
+# a Mint (Task_Mint :5216, "It might affect X's stats. Use it anyway?" YES/NO, NO back to
+# the party, YES "stats may have changed"), the Ability Capsule (Task_AbilityCapsule :5030:
+# no effect on a one-ability species, "Change X's ability to Y?" on Chansey), the Ability
+# Patch (Task_AbilityPatch :5116, Chansey's hidden ability), an EV-reducing berry (ItemUseCB_ReduceEV
+# :5358: EV > 0 "turned friendly. The base HP fell!", EV 0 "can't fall") and the Fresh-Start
+# Mochi (ItemUseCB_ResetEVs :5331, "base points reset").
+# ITEMS pocket of menuA_base (full, 236): 6 ABILITY CAPSULE, 7 ABILITY PATCH, 9 ADAMANT MINT;
+# the last item (ABOMASITE, 235) is removed so FRESH-START MOCHI takes index 235.
+# BERRIES: 20 POMEG. Chansey (slot 5) is given 100 HP EVs.
+start saves/menuA_base.sav
+include ../scripts/continue.txt
+ev givemon SPECIES_CHANSEY, 30, hpEv=100; removeitem ITEM_ABOMASITE, 999; additem ITEM_FRESH_START_MOCHI, 3; end
+
+# ADAMANT MINT on Typhlosion: NO, then YES
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 6
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_stats_01_bag_mint
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskdata Task_Mint 0 2 600
+waitquiet
+snap pbi_stats_02_mint_ask
+tap DOWN 4
+waitquiet
+snap pbi_stats_03_mint_ask_no
+tap A 4                                   # NO: back to choosing a Pokemon
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_stats_04_mint_back
+tap A 4
+waittaskdata Task_Mint 0 2 600
+waitquiet
+tap A 4                                   # YES
+waitkey 600
+snap pbi_stats_05_mint_done
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# ABILITY CAPSULE: Typhlosion (no effect), then Chansey (YES)
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 3
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_stats_06_bag_capsule
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_stats_07_capsule_no_effect
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waittaskdata Task_AbilityCapsule 0 2 600
+waitquiet
+snap pbi_stats_08_capsule_ask
+tap A 4                                   # YES
+waitkey 600
+snap pbi_stats_09_capsule_done
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# ABILITY PATCH (next item down): the party cursor stays on Chansey, so its hidden ability
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskdata Task_AbilityPatch 0 2 600
+waitquiet
+snap pbi_stats_10_patch_ask
+tap A 4
+waitkey 600
+snap pbi_stats_11_patch_done
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# POMEG BERRY (BERRIES 20): Chansey (HP EV 100), then Typhlosion (HP EV 0)
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 3
+w16 @gBagPosition+1C@ 11
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_stats_12_bag_pomeg
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap pbi_stats_13_berry_context
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_stats_14_pomeg_fell
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_stats_15_pomeg_cant_fall
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# FRESH-START MOCHI (ITEMS 235) on Chansey
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 6
+w16 @gBagPosition+14@ E5
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_stats_16_bag_mochi
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_stats_17_mochi_reset
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

@@ -1,0 +1,2157 @@
+[
+{
+"const": "ITEM_MASTER_BALL",
+"id": 7174,
+"group": "I_A"
+},
+{
+"const": "ITEM_PREMIER_BALL",
+"id": 7177,
+"group": "I_A"
+},
+{
+"const": "ITEM_HEAL_BALL",
+"id": 7180,
+"group": "I_B"
+},
+{
+"const": "ITEM_NET_BALL",
+"id": 7183,
+"group": "I_A"
+},
+{
+"const": "ITEM_NEST_BALL",
+"id": 7186,
+"group": "I_A"
+},
+{
+"const": "ITEM_DIVE_BALL",
+"id": 7189,
+"group": "I_A"
+},
+{
+"const": "ITEM_TIMER_BALL",
+"id": 7195,
+"group": "I_A"
+},
+{
+"const": "ITEM_QUICK_BALL",
+"id": 7198,
+"group": "I_B"
+},
+{
+"const": "ITEM_REPEAT_BALL",
+"id": 7201,
+"group": "I_A"
+},
+{
+"const": "ITEM_LUXURY_BALL",
+"id": 7204,
+"group": "I_A"
+},
+{
+"const": "ITEM_LEVEL_BALL",
+"id": 7207,
+"group": "I_A"
+},
+{
+"const": "ITEM_LURE_BALL",
+"id": 7210,
+"group": "I_A"
+},
+{
+"const": "ITEM_MOON_BALL",
+"id": 7213,
+"group": "I_A"
+},
+{
+"const": "ITEM_FRIEND_BALL",
+"id": 7216,
+"group": "I_A"
+},
+{
+"const": "ITEM_LOVE_BALL",
+"id": 7219,
+"group": "I_A"
+},
+{
+"const": "ITEM_FAST_BALL",
+"id": 7222,
+"group": "I_A"
+},
+{
+"const": "ITEM_HEAVY_BALL",
+"id": 7225,
+"group": "I_A"
+},
+{
+"const": "ITEM_DREAM_BALL",
+"id": 7228,
+"group": "I_B"
+},
+{
+"const": "ITEM_SAFARI_BALL",
+"id": 7230,
+"group": "I_B"
+},
+{
+"const": "ITEM_PARK_BALL",
+"id": 7236,
+"group": "I_B"
+},
+{
+"const": "ITEM_BEAST_BALL",
+"id": 7239,
+"group": "I_B"
+},
+{
+"const": "ITEM_CHERISH_BALL",
+"id": 7242,
+"group": "I_B"
+},
+{
+"const": "ITEM_SUPER_POTION",
+"id": 7248,
+"group": "I_A"
+},
+{
+"const": "ITEM_HYPER_POTION",
+"id": 7251,
+"group": "I_A"
+},
+{
+"const": "ITEM_MAX_POTION",
+"id": 7254,
+"group": "I_A"
+},
+{
+"const": "ITEM_FULL_RESTORE",
+"id": 7257,
+"group": "I_A"
+},
+{
+"const": "ITEM_REVIVE",
+"id": 7260,
+"group": "I_A"
+},
+{
+"const": "ITEM_MAX_REVIVE",
+"id": 7263,
+"group": "I_A"
+},
+{
+"const": "ITEM_LEMONADE",
+"id": 7269,
+"group": "I_A"
+},
+{
+"const": "ITEM_ENERGY_POWDER",
+"id": 7274,
+"group": "I_B"
+},
+{
+"const": "ITEM_ENERGY_ROOT",
+"id": 7277,
+"group": "I_A"
+},
+{
+"const": "ITEM_HEAL_POWDER",
+"id": 7280,
+"group": "I_A"
+},
+{
+"const": "ITEM_REVIVAL_HERB",
+"id": 7283,
+"group": "I_A"
+},
+{
+"const": "ITEM_ANTIDOTE",
+"id": 7286,
+"group": "I_A"
+},
+{
+"const": "ITEM_PARALYZE_HEAL",
+"id": 7289,
+"group": "I_A"
+},
+{
+"const": "ITEM_BURN_HEAL",
+"id": 7292,
+"group": "I_A"
+},
+{
+"const": "ITEM_ICE_HEAL",
+"id": 7295,
+"group": "I_A"
+},
+{
+"const": "ITEM_AWAKENING",
+"id": 7298,
+"group": "I_A"
+},
+{
+"const": "ITEM_ETHER",
+"id": 7303,
+"group": "I_A"
+},
+{
+"const": "ITEM_MAX_ETHER",
+"id": 7306,
+"group": "I_A"
+},
+{
+"const": "ITEM_ELIXIR",
+"id": 7309,
+"group": "I_A"
+},
+{
+"const": "ITEM_BERRY_JUICE",
+"id": 7315,
+"group": "I_A"
+},
+{
+"const": "ITEM_SACRED_ASH",
+"id": 7318,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_SWEET_HEART",
+"id": 7321,
+"group": "I_B"
+},
+{
+"const": "ITEM_MAX_HONEY",
+"id": 7324,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_PEWTER_CRUNCHIES",
+"id": 7326,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_RAGE_CANDY_BAR",
+"id": 7328,
+"group": "I_A"
+},
+{
+"const": "ITEM_LAVA_COOKIE",
+"id": 7330,
+"group": "I_A"
+},
+{
+"const": "ITEM_OLD_GATEAU",
+"id": 7333,
+"group": "I_B"
+},
+{
+"const": "ITEM_CASTELIACONE",
+"id": 7335,
+"group": "I_B"
+},
+{
+"const": "ITEM_LUMIOSE_GALETTE",
+"id": 7337,
+"group": "I_B"
+},
+{
+"const": "ITEM_SHALOUR_SABLE",
+"id": 7339,
+"group": "I_B"
+},
+{
+"const": "ITEM_HP_UP",
+"id": 7343,
+"group": "I_A"
+},
+{
+"const": "ITEM_PROTEIN",
+"id": 7346,
+"group": "I_A"
+},
+{
+"const": "ITEM_CARBOS",
+"id": 7355,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_PP_UP",
+"id": 7358,
+"group": "I_A"
+},
+{
+"const": "ITEM_PP_MAX",
+"id": 7361,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_RESIST_FEATHER",
+"id": 7368,
+"group": "I_B"
+},
+{
+"const": "ITEM_GENIUS_FEATHER",
+"id": 7370,
+"group": "I_B"
+},
+{
+"const": "ITEM_CLEVER_FEATHER",
+"id": 7372,
+"group": "I_B"
+},
+{
+"const": "ITEM_SWIFT_FEATHER",
+"id": 7374,
+"group": "I_B"
+},
+{
+"const": "ITEM_ABILITY_CAPSULE",
+"id": 7376,
+"group": "I_A"
+},
+{
+"const": "ITEM_ABILITY_PATCH",
+"id": 7379,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_RARE_CANDY",
+"id": 7424,
+"group": "I_A"
+},
+{
+"const": "ITEM_EXP_CANDY_XS",
+"id": 7427,
+"group": "I_B"
+},
+{
+"const": "ITEM_EXP_CANDY_S",
+"id": 7430,
+"group": "I_B"
+},
+{
+"const": "ITEM_EXP_CANDY_M",
+"id": 7433,
+"group": "I_B"
+},
+{
+"const": "ITEM_EXP_CANDY_L",
+"id": 7436,
+"group": "I_A"
+},
+{
+"const": "ITEM_EXP_CANDY_XL",
+"id": 7439,
+"group": "I_B"
+},
+{
+"const": "ITEM_DYNAMAX_CANDY",
+"id": 7442,
+"group": "I_B"
+},
+{
+"const": "ITEM_BLUE_FLUTE",
+"id": 7445,
+"group": "I_B"
+},
+{
+"const": "ITEM_YELLOW_FLUTE",
+"id": 7448,
+"group": "I_B"
+},
+{
+"const": "ITEM_RED_FLUTE",
+"id": 7451,
+"group": "I_B"
+},
+{
+"const": "ITEM_BLACK_FLUTE",
+"id": 7454,
+"group": "I_A"
+},
+{
+"const": "ITEM_WHITE_FLUTE",
+"id": 7457,
+"group": "I_B"
+},
+{
+"const": "ITEM_SUPER_REPEL",
+"id": 7463,
+"group": "I_A"
+},
+{
+"const": "ITEM_LURE",
+"id": 7469,
+"group": "I_B"
+},
+{
+"const": "ITEM_SUPER_LURE",
+"id": 7472,
+"group": "I_B"
+},
+{
+"const": "ITEM_MAX_LURE",
+"id": 7475,
+"group": "I_A"
+},
+{
+"const": "ITEM_X_ACCURACY",
+"id": 7485,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_DIRE_HIT",
+"id": 7487,
+"group": "I_A"
+},
+{
+"const": "ITEM_GUARD_SPEC",
+"id": 7490,
+"group": "I_A"
+},
+{
+"const": "ITEM_POKE_DOLL",
+"id": 7493,
+"group": "I_A"
+},
+{
+"const": "ITEM_FLUFFY_TAIL",
+"id": 7495,
+"group": "I_A"
+},
+{
+"const": "ITEM_POKE_TOY",
+"id": 7497,
+"group": "I_B"
+},
+{
+"const": "ITEM_MAX_MUSHROOMS",
+"id": 7499,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_BOTTLE_CAP",
+"id": 7502,
+"group": "I_B"
+},
+{
+"const": "ITEM_GOLD_BOTTLE_CAP",
+"id": 7505,
+"group": "I_B"
+},
+{
+"const": "ITEM_NUGGET",
+"id": 7508,
+"group": "I_A"
+},
+{
+"const": "ITEM_BIG_NUGGET",
+"id": 7511,
+"group": "I_A"
+},
+{
+"const": "ITEM_TINY_MUSHROOM",
+"id": 7514,
+"group": "I_A"
+},
+{
+"const": "ITEM_BIG_MUSHROOM",
+"id": 7517,
+"group": "I_A"
+},
+{
+"const": "ITEM_BALM_MUSHROOM",
+"id": 7519,
+"group": "I_A"
+},
+{
+"const": "ITEM_PEARL",
+"id": 7521,
+"group": "I_A"
+},
+{
+"const": "ITEM_BIG_PEARL",
+"id": 7524,
+"group": "I_A"
+},
+{
+"const": "ITEM_PEARL_STRING",
+"id": 7527,
+"group": "I_B"
+},
+{
+"const": "ITEM_STAR_PIECE",
+"id": 7532,
+"group": "I_A"
+},
+{
+"const": "ITEM_COMET_SHARD",
+"id": 7535,
+"group": "I_B"
+},
+{
+"const": "ITEM_SHOAL_SHELL",
+"id": 7540,
+"group": "I_B"
+},
+{
+"const": "ITEM_RED_SHARD",
+"id": 7543,
+"group": "I_A"
+},
+{
+"const": "ITEM_BLUE_SHARD",
+"id": 7545,
+"group": "I_A"
+},
+{
+"const": "ITEM_YELLOW_SHARD",
+"id": 7547,
+"group": "I_A"
+},
+{
+"const": "ITEM_GREEN_SHARD",
+"id": 7549,
+"group": "I_A"
+},
+{
+"const": "ITEM_HEART_SCALE",
+"id": 7551,
+"group": "I_A"
+},
+{
+"const": "ITEM_HONEY",
+"id": 7554,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_RARE_BONE",
+"id": 7557,
+"group": "I_B"
+},
+{
+"const": "ITEM_PRETTY_FEATHER",
+"id": 7563,
+"group": "I_A"
+},
+{
+"const": "ITEM_RELIC_VASE",
+"id": 7572,
+"group": "I_B"
+},
+{
+"const": "ITEM_RELIC_BAND",
+"id": 7575,
+"group": "I_B"
+},
+{
+"const": "ITEM_RELIC_STATUE",
+"id": 7578,
+"group": "I_B"
+},
+{
+"const": "ITEM_RELIC_CROWN",
+"id": 7581,
+"group": "I_B"
+},
+{
+"const": "ITEM_STRANGE_SOUVENIR",
+"id": 7584,
+"group": "I_A"
+},
+{
+"const": "ITEM_ARMOR_FOSSIL",
+"id": 7595,
+"group": "I_B"
+},
+{
+"const": "ITEM_SKULL_FOSSIL",
+"id": 7598,
+"group": "I_B"
+},
+{
+"const": "ITEM_COVER_FOSSIL",
+"id": 7601,
+"group": "I_B"
+},
+{
+"const": "ITEM_PLUME_FOSSIL",
+"id": 7604,
+"group": "I_B"
+},
+{
+"const": "ITEM_JAW_FOSSIL",
+"id": 7607,
+"group": "I_B"
+},
+{
+"const": "ITEM_SAIL_FOSSIL",
+"id": 7610,
+"group": "I_B"
+},
+{
+"const": "ITEM_FOSSILIZED_BIRD",
+"id": 7613,
+"group": "I_B"
+},
+{
+"const": "ITEM_FOSSILIZED_FISH",
+"id": 7616,
+"group": "I_B"
+},
+{
+"const": "ITEM_FOSSILIZED_DRAKE",
+"id": 7618,
+"group": "I_B"
+},
+{
+"const": "ITEM_GROWTH_MULCH",
+"id": 7623,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_DAMP_MULCH",
+"id": 7626,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_STABLE_MULCH",
+"id": 7629,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_GOOEY_MULCH",
+"id": 7632,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_RICH_MULCH",
+"id": 7635,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_SURPRISE_MULCH",
+"id": 7638,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_BOOST_MULCH",
+"id": 7641,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_AMAZE_MULCH",
+"id": 7644,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_RED_APRICORN",
+"id": 7647,
+"group": "I_B"
+},
+{
+"const": "ITEM_BLUE_APRICORN",
+"id": 7650,
+"group": "I_B"
+},
+{
+"const": "ITEM_YELLOW_APRICORN",
+"id": 7653,
+"group": "I_B"
+},
+{
+"const": "ITEM_GREEN_APRICORN",
+"id": 7656,
+"group": "I_B"
+},
+{
+"const": "ITEM_PINK_APRICORN",
+"id": 7659,
+"group": "I_B"
+},
+{
+"const": "ITEM_WHITE_APRICORN",
+"id": 7662,
+"group": "I_B"
+},
+{
+"const": "ITEM_BLACK_APRICORN",
+"id": 7665,
+"group": "I_B"
+},
+{
+"const": "ITEM_WISHING_PIECE",
+"id": 7668,
+"group": "I_B"
+},
+{
+"const": "ITEM_GALARICA_TWIG",
+"id": 7671,
+"group": "I_B"
+},
+{
+"const": "ITEM_ARMORITE_ORE",
+"id": 7674,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_DYNITE_ORE",
+"id": 7677,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_HARBOR_MAIL",
+"id": 7683,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_GLITTER_MAIL",
+"id": 7686,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_MECH_MAIL",
+"id": 7689,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_WOOD_MAIL",
+"id": 7692,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_WAVE_MAIL",
+"id": 7695,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_BEAD_MAIL",
+"id": 7698,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_SHADOW_MAIL",
+"id": 7700,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_TROPIC_MAIL",
+"id": 7703,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_DREAM_MAIL",
+"id": 7706,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_FAB_MAIL",
+"id": 7708,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_RETRO_MAIL",
+"id": 7711,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_WATER_STONE",
+"id": 7716,
+"group": "I_A"
+},
+{
+"const": "ITEM_THUNDER_STONE",
+"id": 7718,
+"group": "I_A"
+},
+{
+"const": "ITEM_LEAF_STONE",
+"id": 7720,
+"group": "I_A"
+},
+{
+"const": "ITEM_ICE_STONE",
+"id": 7722,
+"group": "I_A"
+},
+{
+"const": "ITEM_SUN_STONE",
+"id": 7724,
+"group": "I_A"
+},
+{
+"const": "ITEM_MOON_STONE",
+"id": 7726,
+"group": "I_A"
+},
+{
+"const": "ITEM_SHINY_STONE",
+"id": 7728,
+"group": "I_A"
+},
+{
+"const": "ITEM_DUSK_STONE",
+"id": 7730,
+"group": "I_A"
+},
+{
+"const": "ITEM_DAWN_STONE",
+"id": 7732,
+"group": "I_A"
+},
+{
+"const": "ITEM_SWEET_APPLE",
+"id": 7734,
+"group": "I_B"
+},
+{
+"const": "ITEM_TART_APPLE",
+"id": 7737,
+"group": "I_B"
+},
+{
+"const": "ITEM_CRACKED_POT",
+"id": 7740,
+"group": "I_B"
+},
+{
+"const": "ITEM_CHIPPED_POT",
+"id": 7743,
+"group": "I_B"
+},
+{
+"const": "ITEM_GALARICA_CUFF",
+"id": 7746,
+"group": "I_B"
+},
+{
+"const": "ITEM_GALARICA_WREATH",
+"id": 7749,
+"group": "I_B"
+},
+{
+"const": "ITEM_DRAGON_SCALE",
+"id": 7752,
+"group": "I_A"
+},
+{
+"const": "ITEM_UPGRADE",
+"id": 7755,
+"group": "I_B"
+},
+{
+"const": "ITEM_PROTECTOR",
+"id": 7758,
+"group": "I_A"
+},
+{
+"const": "ITEM_ELECTIRIZER",
+"id": 7761,
+"group": "I_A"
+},
+{
+"const": "ITEM_MAGMARIZER",
+"id": 7764,
+"group": "I_A"
+},
+{
+"const": "ITEM_DUBIOUS_DISC",
+"id": 7767,
+"group": "I_A"
+},
+{
+"const": "ITEM_REAPER_CLOTH",
+"id": 7770,
+"group": "I_A"
+},
+{
+"const": "ITEM_PRISM_SCALE",
+"id": 7773,
+"group": "I_B"
+},
+{
+"const": "ITEM_WHIPPED_DREAM",
+"id": 7776,
+"group": "I_B"
+},
+{
+"const": "ITEM_SACHET",
+"id": 7779,
+"group": "I_B"
+},
+{
+"const": "ITEM_OVAL_STONE",
+"id": 7782,
+"group": "I_A"
+},
+{
+"const": "ITEM_STRAWBERRY_SWEET",
+"id": 7785,
+"group": "I_B"
+},
+{
+"const": "ITEM_LOVE_SWEET",
+"id": 7788,
+"group": "I_B"
+},
+{
+"const": "ITEM_BERRY_SWEET",
+"id": 7791,
+"group": "I_B"
+},
+{
+"const": "ITEM_CLOVER_SWEET",
+"id": 7794,
+"group": "I_B"
+},
+{
+"const": "ITEM_FLOWER_SWEET",
+"id": 7797,
+"group": "I_B"
+},
+{
+"const": "ITEM_STAR_SWEET",
+"id": 7800,
+"group": "I_B"
+},
+{
+"const": "ITEM_RIBBON_SWEET",
+"id": 7803,
+"group": "I_B"
+},
+{
+"const": "ITEM_EVERSTONE",
+"id": 7806,
+"group": "I_A"
+},
+{
+"const": "ITEM_FLAME_PLATE",
+"id": 7813,
+"group": "I_B"
+},
+{
+"const": "ITEM_SPLASH_PLATE",
+"id": 7816,
+"group": "I_B"
+},
+{
+"const": "ITEM_ZAP_PLATE",
+"id": 7819,
+"group": "I_B"
+},
+{
+"const": "ITEM_MEADOW_PLATE",
+"id": 7822,
+"group": "I_B"
+},
+{
+"const": "ITEM_ICICLE_PLATE",
+"id": 7825,
+"group": "I_B"
+},
+{
+"const": "ITEM_FIST_PLATE",
+"id": 7828,
+"group": "I_B"
+},
+{
+"const": "ITEM_TOXIC_PLATE",
+"id": 7831,
+"group": "I_B"
+},
+{
+"const": "ITEM_EARTH_PLATE",
+"id": 7834,
+"group": "I_A"
+},
+{
+"const": "ITEM_SKY_PLATE",
+"id": 7837,
+"group": "I_B"
+},
+{
+"const": "ITEM_MIND_PLATE",
+"id": 7840,
+"group": "I_B"
+},
+{
+"const": "ITEM_INSECT_PLATE",
+"id": 7843,
+"group": "I_B"
+},
+{
+"const": "ITEM_STONE_PLATE",
+"id": 7846,
+"group": "I_B"
+},
+{
+"const": "ITEM_SPOOKY_PLATE",
+"id": 7849,
+"group": "I_A"
+},
+{
+"const": "ITEM_DRACO_PLATE",
+"id": 7852,
+"group": "I_B"
+},
+{
+"const": "ITEM_DREAD_PLATE",
+"id": 7855,
+"group": "I_B"
+},
+{
+"const": "ITEM_IRON_PLATE",
+"id": 7858,
+"group": "I_A"
+},
+{
+"const": "ITEM_PIXIE_PLATE",
+"id": 7861,
+"group": "I_B"
+},
+{
+"const": "ITEM_DOUSE_DRIVE",
+"id": 7864,
+"group": "I_B"
+},
+{
+"const": "ITEM_SHOCK_DRIVE",
+"id": 7867,
+"group": "I_B"
+},
+{
+"const": "ITEM_BURN_DRIVE",
+"id": 7870,
+"group": "I_B"
+},
+{
+"const": "ITEM_CHILL_DRIVE",
+"id": 7873,
+"group": "I_B"
+},
+{
+"const": "ITEM_FIRE_MEMORY",
+"id": 7876,
+"group": "I_B"
+},
+{
+"const": "ITEM_WATER_MEMORY",
+"id": 7879,
+"group": "I_B"
+},
+{
+"const": "ITEM_ELECTRIC_MEMORY",
+"id": 7882,
+"group": "I_B"
+},
+{
+"const": "ITEM_GRASS_MEMORY",
+"id": 7885,
+"group": "I_B"
+},
+{
+"const": "ITEM_ICE_MEMORY",
+"id": 7888,
+"group": "I_B"
+},
+{
+"const": "ITEM_FIGHTING_MEMORY",
+"id": 7891,
+"group": "I_B"
+},
+{
+"const": "ITEM_POISON_MEMORY",
+"id": 7894,
+"group": "I_B"
+},
+{
+"const": "ITEM_GROUND_MEMORY",
+"id": 7897,
+"group": "I_B"
+},
+{
+"const": "ITEM_FLYING_MEMORY",
+"id": 7900,
+"group": "I_B"
+},
+{
+"const": "ITEM_PSYCHIC_MEMORY",
+"id": 7903,
+"group": "I_B"
+},
+{
+"const": "ITEM_BUG_MEMORY",
+"id": 7906,
+"group": "I_B"
+},
+{
+"const": "ITEM_ROCK_MEMORY",
+"id": 7909,
+"group": "I_B"
+},
+{
+"const": "ITEM_GHOST_MEMORY",
+"id": 7912,
+"group": "I_B"
+},
+{
+"const": "ITEM_DRAGON_MEMORY",
+"id": 7915,
+"group": "I_B"
+},
+{
+"const": "ITEM_DARK_MEMORY",
+"id": 7918,
+"group": "I_B"
+},
+{
+"const": "ITEM_STEEL_MEMORY",
+"id": 7921,
+"group": "I_B"
+},
+{
+"const": "ITEM_FAIRY_MEMORY",
+"id": 7924,
+"group": "I_B"
+},
+{
+"const": "ITEM_RUSTED_SWORD",
+"id": 7927,
+"group": "I_B"
+},
+{
+"const": "ITEM_RUSTED_SHIELD",
+"id": 7930,
+"group": "I_B"
+},
+{
+"const": "ITEM_RED_ORB",
+"id": 7933,
+"group": "I_B"
+},
+{
+"const": "ITEM_BLUE_ORB",
+"id": 7936,
+"group": "I_B"
+},
+{
+"const": "ITEM_NORMAL_GEM",
+"id": 8113,
+"group": "I_B"
+},
+{
+"const": "ITEM_FIRE_GEM",
+"id": 8116,
+"group": "I_B"
+},
+{
+"const": "ITEM_WATER_GEM",
+"id": 8119,
+"group": "I_B"
+},
+{
+"const": "ITEM_ELECTRIC_GEM",
+"id": 8122,
+"group": "I_B"
+},
+{
+"const": "ITEM_GRASS_GEM",
+"id": 8125,
+"group": "I_B"
+},
+{
+"const": "ITEM_ICE_GEM",
+"id": 8128,
+"group": "I_B"
+},
+{
+"const": "ITEM_FIGHTING_GEM",
+"id": 8131,
+"group": "I_B"
+},
+{
+"const": "ITEM_POISON_GEM",
+"id": 8134,
+"group": "I_B"
+},
+{
+"const": "ITEM_GROUND_GEM",
+"id": 8137,
+"group": "I_B"
+},
+{
+"const": "ITEM_FLYING_GEM",
+"id": 8140,
+"group": "I_B"
+},
+{
+"const": "ITEM_PSYCHIC_GEM",
+"id": 8143,
+"group": "I_B"
+},
+{
+"const": "ITEM_BUG_GEM",
+"id": 8146,
+"group": "I_B"
+},
+{
+"const": "ITEM_ROCK_GEM",
+"id": 8149,
+"group": "I_B"
+},
+{
+"const": "ITEM_GHOST_GEM",
+"id": 8152,
+"group": "I_B"
+},
+{
+"const": "ITEM_DRAGON_GEM",
+"id": 8155,
+"group": "I_B"
+},
+{
+"const": "ITEM_DARK_GEM",
+"id": 8158,
+"group": "I_B"
+},
+{
+"const": "ITEM_STEEL_GEM",
+"id": 8161,
+"group": "I_B"
+},
+{
+"const": "ITEM_FAIRY_GEM",
+"id": 8164,
+"group": "I_B"
+},
+{
+"const": "ITEM_LIGHT_BALL",
+"id": 8237,
+"group": "I_A"
+},
+{
+"const": "ITEM_LEEK",
+"id": 8240,
+"group": "I_A"
+},
+{
+"const": "ITEM_THICK_CLUB",
+"id": 8243,
+"group": "I_A"
+},
+{
+"const": "ITEM_LUCKY_PUNCH",
+"id": 8246,
+"group": "I_A"
+},
+{
+"const": "ITEM_METAL_POWDER",
+"id": 8249,
+"group": "I_A"
+},
+{
+"const": "ITEM_QUICK_POWDER",
+"id": 8252,
+"group": "I_A"
+},
+{
+"const": "ITEM_DEEP_SEA_SCALE",
+"id": 8255,
+"group": "I_A"
+},
+{
+"const": "ITEM_DEEP_SEA_TOOTH",
+"id": 8258,
+"group": "I_A"
+},
+{
+"const": "ITEM_ADAMANT_ORB",
+"id": 8262,
+"group": "I_B"
+},
+{
+"const": "ITEM_LUSTROUS_ORB",
+"id": 8265,
+"group": "I_B"
+},
+{
+"const": "ITEM_GRISEOUS_ORB",
+"id": 8268,
+"group": "I_B"
+},
+{
+"const": "ITEM_RED_SCARF",
+"id": 8282,
+"group": "I_B"
+},
+{
+"const": "ITEM_BLUE_SCARF",
+"id": 8285,
+"group": "I_B"
+},
+{
+"const": "ITEM_PINK_SCARF",
+"id": 8288,
+"group": "I_B"
+},
+{
+"const": "ITEM_GREEN_SCARF",
+"id": 8291,
+"group": "I_B"
+},
+{
+"const": "ITEM_YELLOW_SCARF",
+"id": 8294,
+"group": "I_B"
+},
+{
+"const": "ITEM_MACHO_BRACE",
+"id": 8297,
+"group": "I_A"
+},
+{
+"const": "ITEM_POWER_WEIGHT",
+"id": 8300,
+"group": "I_A"
+},
+{
+"const": "ITEM_POWER_BRACER",
+"id": 8303,
+"group": "I_A"
+},
+{
+"const": "ITEM_POWER_BELT",
+"id": 8306,
+"group": "I_A"
+},
+{
+"const": "ITEM_POWER_LENS",
+"id": 8309,
+"group": "I_A"
+},
+{
+"const": "ITEM_POWER_BAND",
+"id": 8312,
+"group": "I_A"
+},
+{
+"const": "ITEM_POWER_ANKLET",
+"id": 8315,
+"group": "I_A"
+},
+{
+"const": "ITEM_SILK_SCARF",
+"id": 8318,
+"group": "I_A"
+},
+{
+"const": "ITEM_MAGNET",
+"id": 8325,
+"group": "I_A"
+},
+{
+"const": "ITEM_MIRACLE_SEED",
+"id": 8328,
+"group": "I_B"
+},
+{
+"const": "ITEM_BLACK_BELT",
+"id": 8332,
+"group": "I_A"
+},
+{
+"const": "ITEM_POISON_BARB",
+"id": 8335,
+"group": "I_A"
+},
+{
+"const": "ITEM_SOFT_SAND",
+"id": 8338,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_SHARP_BEAK",
+"id": 8341,
+"group": "I_A"
+},
+{
+"const": "ITEM_TWISTED_SPOON",
+"id": 8344,
+"group": "I_A"
+},
+{
+"const": "ITEM_SILVER_POWDER",
+"id": 8346,
+"group": "I_A"
+},
+{
+"const": "ITEM_HARD_STONE",
+"id": 8349,
+"group": "I_A"
+},
+{
+"const": "ITEM_SPELL_TAG",
+"id": 8351,
+"group": "I_A"
+},
+{
+"const": "ITEM_DRAGON_FANG",
+"id": 8354,
+"group": "I_A"
+},
+{
+"const": "ITEM_BLACK_GLASSES",
+"id": 8357,
+"group": "I_B"
+},
+{
+"const": "ITEM_METAL_COAT",
+"id": 8360,
+"group": "I_A"
+},
+{
+"const": "ITEM_CHOICE_BAND",
+"id": 8363,
+"group": "I_A"
+},
+{
+"const": "ITEM_CHOICE_SPECS",
+"id": 8366,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_CHOICE_SCARF",
+"id": 8369,
+"group": "I_A"
+},
+{
+"const": "ITEM_FLAME_ORB",
+"id": 8372,
+"group": "I_A"
+},
+{
+"const": "ITEM_TOXIC_ORB",
+"id": 8375,
+"group": "I_A"
+},
+{
+"const": "ITEM_DAMP_ROCK",
+"id": 8378,
+"group": "I_B"
+},
+{
+"const": "ITEM_HEAT_ROCK",
+"id": 8381,
+"group": "I_B"
+},
+{
+"const": "ITEM_SMOOTH_ROCK",
+"id": 8384,
+"group": "I_B"
+},
+{
+"const": "ITEM_ICY_ROCK",
+"id": 8387,
+"group": "I_B"
+},
+{
+"const": "ITEM_ELECTRIC_SEED",
+"id": 8392,
+"group": "I_B"
+},
+{
+"const": "ITEM_PSYCHIC_SEED",
+"id": 8395,
+"group": "I_A"
+},
+{
+"const": "ITEM_MISTY_SEED",
+"id": 8398,
+"group": "I_B"
+},
+{
+"const": "ITEM_GRASSY_SEED",
+"id": 8401,
+"group": "I_B"
+},
+{
+"const": "ITEM_ABSORB_BULB",
+"id": 8404,
+"group": "I_A"
+},
+{
+"const": "ITEM_CELL_BATTERY",
+"id": 8407,
+"group": "I_A"
+},
+{
+"const": "ITEM_LUMINOUS_MOSS",
+"id": 8410,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_SNOWBALL",
+"id": 8413,
+"group": "I_A"
+},
+{
+"const": "ITEM_BRIGHT_POWDER",
+"id": 8416,
+"group": "I_A"
+},
+{
+"const": "ITEM_WHITE_HERB",
+"id": 8419,
+"group": "I_A"
+},
+{
+"const": "ITEM_QUICK_CLAW",
+"id": 8425,
+"group": "I_A"
+},
+{
+"const": "ITEM_SOOTHE_BELL",
+"id": 8428,
+"group": "I_B"
+},
+{
+"const": "ITEM_MENTAL_HERB",
+"id": 8431,
+"group": "I_A"
+},
+{
+"const": "ITEM_KINGS_ROCK",
+"id": 8433,
+"group": "I_A"
+},
+{
+"const": "ITEM_AMULET_COIN",
+"id": 8435,
+"group": "I_B"
+},
+{
+"const": "ITEM_CLEANSE_TAG",
+"id": 8437,
+"group": "I_A"
+},
+{
+"const": "ITEM_SMOKE_BALL",
+"id": 8439,
+"group": "I_A"
+},
+{
+"const": "ITEM_FOCUS_BAND",
+"id": 8442,
+"group": "I_A"
+},
+{
+"const": "ITEM_LUCKY_EGG",
+"id": 8445,
+"group": "I_A"
+},
+{
+"const": "ITEM_SCOPE_LENS",
+"id": 8448,
+"group": "I_A"
+},
+{
+"const": "ITEM_LEFTOVERS",
+"id": 8451,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_SHELL_BELL",
+"id": 8454,
+"group": "I_A"
+},
+{
+"const": "ITEM_WIDE_LENS",
+"id": 8457,
+"group": "I_A"
+},
+{
+"const": "ITEM_MUSCLE_BAND",
+"id": 8460,
+"group": "I_A"
+},
+{
+"const": "ITEM_WISE_GLASSES",
+"id": 8463,
+"group": "I_A"
+},
+{
+"const": "ITEM_EXPERT_BELT",
+"id": 8466,
+"group": "I_A"
+},
+{
+"const": "ITEM_LIFE_ORB",
+"id": 8471,
+"group": "I_A"
+},
+{
+"const": "ITEM_POWER_HERB",
+"id": 8474,
+"group": "I_A"
+},
+{
+"const": "ITEM_FOCUS_SASH",
+"id": 8477,
+"group": "I_A"
+},
+{
+"const": "ITEM_ZOOM_LENS",
+"id": 8480,
+"group": "I_A"
+},
+{
+"const": "ITEM_METRONOME",
+"id": 8483,
+"group": "I_A"
+},
+{
+"const": "ITEM_IRON_BALL",
+"id": 8486,
+"group": "I_A"
+},
+{
+"const": "ITEM_LAGGING_TAIL",
+"id": 8489,
+"group": "I_A"
+},
+{
+"const": "ITEM_DESTINY_KNOT",
+"id": 8491,
+"group": "I_A"
+},
+{
+"const": "ITEM_GRIP_CLAW",
+"id": 8496,
+"group": "I_A"
+},
+{
+"const": "ITEM_STICKY_BARB",
+"id": 8499,
+"group": "I_A"
+},
+{
+"const": "ITEM_SHED_SHELL",
+"id": 8502,
+"group": "I_A"
+},
+{
+"const": "ITEM_BIG_ROOT",
+"id": 8505,
+"group": "I_A"
+},
+{
+"const": "ITEM_RAZOR_CLAW",
+"id": 8508,
+"group": "I_A"
+},
+{
+"const": "ITEM_RAZOR_FANG",
+"id": 8511,
+"group": "I_A"
+},
+{
+"const": "ITEM_EVIOLITE",
+"id": 8513,
+"group": "I_A"
+},
+{
+"const": "ITEM_FLOAT_STONE",
+"id": 8516,
+"group": "I_B"
+},
+{
+"const": "ITEM_ROCKY_HELMET",
+"id": 8519,
+"group": "I_A"
+},
+{
+"const": "ITEM_AIR_BALLOON",
+"id": 8522,
+"group": "I_A"
+},
+{
+"const": "ITEM_RED_CARD",
+"id": 8525,
+"group": "I_A"
+},
+{
+"const": "ITEM_RING_TARGET",
+"id": 8528,
+"group": "I_B"
+},
+{
+"const": "ITEM_BINDING_BAND",
+"id": 8531,
+"group": "I_B"
+},
+{
+"const": "ITEM_EJECT_BUTTON",
+"id": 8534,
+"group": "I_A"
+},
+{
+"const": "ITEM_WEAKNESS_POLICY",
+"id": 8537,
+"group": "I_A"
+},
+{
+"const": "ITEM_ASSAULT_VEST",
+"id": 8540,
+"group": "I_A"
+},
+{
+"const": "ITEM_SAFETY_GOGGLES",
+"id": 8543,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_ADRENALINE_ORB",
+"id": 8546,
+"group": "I_B"
+},
+{
+"const": "ITEM_TERRAIN_EXTENDER",
+"id": 8549,
+"group": "I_B"
+},
+{
+"const": "ITEM_PROTECTIVE_PADS",
+"id": 8552,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_THROAT_SPRAY",
+"id": 8555,
+"group": "I_B"
+},
+{
+"const": "ITEM_EJECT_PACK",
+"id": 8558,
+"group": "I_B"
+},
+{
+"const": "ITEM_HEAVY_DUTY_BOOTS",
+"id": 8561,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_BLUNDER_POLICY",
+"id": 8564,
+"group": "I_B"
+},
+{
+"const": "ITEM_ROOM_SERVICE",
+"id": 8567,
+"group": "I_B"
+},
+{
+"const": "ITEM_UTILITY_UMBRELLA",
+"id": 8570,
+"group": "I_B"
+},
+{
+"const": "ITEM_LUM_BERRY",
+"id": 8597,
+"group": "I_A"
+},
+{
+"const": "ITEM_FIGY_BERRY",
+"id": 8604,
+"group": "I_B"
+},
+{
+"const": "ITEM_WIKI_BERRY",
+"id": 8606,
+"group": "I_B"
+},
+{
+"const": "ITEM_MAGO_BERRY",
+"id": 8608,
+"group": "I_B"
+},
+{
+"const": "ITEM_AGUAV_BERRY",
+"id": 8610,
+"group": "I_B"
+},
+{
+"const": "ITEM_RAZZ_BERRY",
+"id": 8614,
+"group": "I_B"
+},
+{
+"const": "ITEM_BLUK_BERRY",
+"id": 8617,
+"group": "I_B"
+},
+{
+"const": "ITEM_NANAB_BERRY",
+"id": 8620,
+"group": "I_B"
+},
+{
+"const": "ITEM_WEPEAR_BERRY",
+"id": 8623,
+"group": "I_B"
+},
+{
+"const": "ITEM_PINAP_BERRY",
+"id": 8626,
+"group": "I_B"
+},
+{
+"const": "ITEM_CORNN_BERRY",
+"id": 8647,
+"group": "I_B"
+},
+{
+"const": "ITEM_MAGOST_BERRY",
+"id": 8650,
+"group": "I_B"
+},
+{
+"const": "ITEM_RABUTA_BERRY",
+"id": 8653,
+"group": "I_B"
+},
+{
+"const": "ITEM_NOMEL_BERRY",
+"id": 8656,
+"group": "I_B"
+},
+{
+"const": "ITEM_SPELON_BERRY",
+"id": 8659,
+"group": "I_B"
+},
+{
+"const": "ITEM_PAMTRE_BERRY",
+"id": 8662,
+"group": "I_B"
+},
+{
+"const": "ITEM_WATMEL_BERRY",
+"id": 8665,
+"group": "I_B"
+},
+{
+"const": "ITEM_DURIN_BERRY",
+"id": 8668,
+"group": "I_B"
+},
+{
+"const": "ITEM_BELUE_BERRY",
+"id": 8671,
+"group": "I_B"
+},
+{
+"const": "ITEM_CHILAN_BERRY",
+"id": 8674,
+"group": "I_B"
+},
+{
+"const": "ITEM_OCCA_BERRY",
+"id": 8677,
+"group": "I_A"
+},
+{
+"const": "ITEM_PASSHO_BERRY",
+"id": 8680,
+"group": "I_B"
+},
+{
+"const": "ITEM_WACAN_BERRY",
+"id": 8683,
+"group": "I_B"
+},
+{
+"const": "ITEM_RINDO_BERRY",
+"id": 8686,
+"group": "I_B"
+},
+{
+"const": "ITEM_YACHE_BERRY",
+"id": 8689,
+"group": "I_A"
+},
+{
+"const": "ITEM_CHOPLE_BERRY",
+"id": 8692,
+"group": "I_B"
+},
+{
+"const": "ITEM_KEBIA_BERRY",
+"id": 8695,
+"group": "I_B"
+},
+{
+"const": "ITEM_SHUCA_BERRY",
+"id": 8698,
+"group": "I_A"
+},
+{
+"const": "ITEM_COBA_BERRY",
+"id": 8701,
+"group": "I_B"
+},
+{
+"const": "ITEM_PAYAPA_BERRY",
+"id": 8704,
+"group": "I_B"
+},
+{
+"const": "ITEM_TANGA_BERRY",
+"id": 8707,
+"group": "I_B"
+},
+{
+"const": "ITEM_CHARTI_BERRY",
+"id": 8710,
+"group": "I_B"
+},
+{
+"const": "ITEM_KASIB_BERRY",
+"id": 8713,
+"group": "I_B"
+},
+{
+"const": "ITEM_HABAN_BERRY",
+"id": 8716,
+"group": "I_B"
+},
+{
+"const": "ITEM_COLBUR_BERRY",
+"id": 8719,
+"group": "I_B"
+},
+{
+"const": "ITEM_BABIRI_BERRY",
+"id": 8722,
+"group": "I_B"
+},
+{
+"const": "ITEM_ROSELI_BERRY",
+"id": 8725,
+"group": "I_B"
+},
+{
+"const": "ITEM_LIECHI_BERRY",
+"id": 8728,
+"group": "I_B"
+},
+{
+"const": "ITEM_GANLON_BERRY",
+"id": 8731,
+"group": "I_A"
+},
+{
+"const": "ITEM_SALAC_BERRY",
+"id": 8734,
+"group": "I_A"
+},
+{
+"const": "ITEM_PETAYA_BERRY",
+"id": 8737,
+"group": "I_A"
+},
+{
+"const": "ITEM_APICOT_BERRY",
+"id": 8740,
+"group": "I_A"
+},
+{
+"const": "ITEM_LANSAT_BERRY",
+"id": 8743,
+"group": "I_A"
+},
+{
+"const": "ITEM_STARF_BERRY",
+"id": 8746,
+"group": "I_A"
+},
+{
+"const": "ITEM_ENIGMA_BERRY",
+"id": 8749,
+"group": "I_A"
+},
+{
+"const": "ITEM_MICLE_BERRY",
+"id": 8752,
+"group": "I_B"
+},
+{
+"const": "ITEM_CUSTAP_BERRY",
+"id": 8755,
+"group": "I_B"
+},
+{
+"const": "ITEM_JABOCA_BERRY",
+"id": 8758,
+"group": "I_B"
+},
+{
+"const": "ITEM_ROWAP_BERRY",
+"id": 8761,
+"group": "I_A"
+},
+{
+"const": "ITEM_KEE_BERRY",
+"id": 8764,
+"group": "I_B"
+},
+{
+"const": "ITEM_MARANGA_BERRY",
+"id": 8767,
+"group": "I_B"
+},
+{
+"const": "ITEM_REINS_OF_UNITY",
+"id": 9011,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_DEVON_PARTS",
+"id": 9075,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_GO_GOGGLES",
+"id": 9078,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_GOLD_TEETH",
+"id": 9112,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_TEA",
+"id": 9128,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_ABILITY_SHIELD",
+"id": 9136,
+"group": "I_B"
+},
+{
+"const": "ITEM_CLEAR_AMULET",
+"id": 9139,
+"group": "I_B"
+},
+{
+"const": "ITEM_PUNCHING_GLOVE",
+"id": 9142,
+"group": "I_B"
+},
+{
+"const": "ITEM_COVERT_CLOAK",
+"id": 9145,
+"group": "I_B"
+},
+{
+"const": "ITEM_LOADED_DICE",
+"id": 9148,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_AUSPICIOUS_ARMOR",
+"id": 9151,
+"group": "I_B"
+},
+{
+"const": "ITEM_BOOSTER_ENERGY",
+"id": 9154,
+"group": "I_B"
+},
+{
+"const": "ITEM_GIMMIGHOUL_COIN",
+"id": 9160,
+"group": "I_B"
+},
+{
+"const": "ITEM_LEADERS_CREST",
+"id": 9163,
+"group": "I_B"
+},
+{
+"const": "ITEM_MALICIOUS_ARMOR",
+"id": 9166,
+"group": "I_B"
+},
+{
+"const": "ITEM_MIRROR_HERB",
+"id": 9169,
+"group": "I_B"
+},
+{
+"const": "ITEM_TINY_BAMBOO_SHOOT",
+"id": 9180,
+"group": "I_B"
+},
+{
+"const": "ITEM_PEAT_BLOCK",
+"id": 9233,
+"group": "I_A"
+},
+{
+"const": "ITEM_HEALTH_MOCHI",
+"id": 9260,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_MUSCLE_MOCHI",
+"id": 9262,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_RESIST_MOCHI",
+"id": 9264,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_GENIUS_MOCHI",
+"id": 9266,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_CLEVER_MOCHI",
+"id": 9268,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_SWIFT_MOCHI",
+"id": 9270,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_FRESH_START_MOCHI",
+"id": 9272,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_GS_BALL",
+"id": 9310,
+"group": "I_A"
+},
+{
+"const": "ITEM_EXP_SHARE_SMALL",
+"id": 9315,
+"group": "I_A"
+},
+{
+"const": "ITEM_UNUSED_BERRY_1",
+"id": 9356,
+"group": "NU_item_plural"
+},
+{
+"const": "ITEM_ORANGE_MAIL",
+"id": 7680,
+"group": "NU_item_plural"
+}
+]

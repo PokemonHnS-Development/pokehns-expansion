@@ -1,0 +1,10 @@
+# New Sinjoh cafe (MAP_NEW_SINJOH_HOUSE4_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_NEW_SINJOH_HOUSE4_HNS
+clerk 16 7 m28_hi
+buyopen m28_buy
+listshots m28_list
+buyeach m28_ask
+buyclose m28_menu
+shopquit m28_bye

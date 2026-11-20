@@ -1,0 +1,26 @@
+# View tiles: Route 29 (4,9) Route29_Trigger_Monview (camera 4 tiles up, Route29_Text_PressAorB,
+# back down, player one step down) and Union Cave 1F (33,32) UnionCave_1F_Trigger_Monview (camera
+# 4 tiles right, the same message, back, player one step left). Periodic shots during the pans.
+# Both trigger tiles carry the collision bit in the map layout (English ROM too): walking onto them
+# from any side is refused, so the tour first shows the refused step, then stands on the tile by
+# warp and runs the trigger's own script.
+start saves/r6r3f_base.sav
+include _base.txt
+warpto MAP_ROUTE29_HNS 4 10
+face UP
+stepto UP 1
+snap mv29_blocked
+warpto MAP_ROUTE29_HNS 4 9
+snap mv29_field
+evstart goto Route29_Trigger_Monview
+scene mv29 8000 8
+snap mv29_end
+warpto MAP_UNION_CAVE_1F_HNS 32 32
+face RIGHT
+stepto RIGHT 1
+snap mvuc_blocked
+warpto MAP_UNION_CAVE_1F_HNS 33 32
+snap mvuc_field
+evstart goto UnionCave_1F_Trigger_Monview
+scene mvuc 8000 8
+snap mvuc_end

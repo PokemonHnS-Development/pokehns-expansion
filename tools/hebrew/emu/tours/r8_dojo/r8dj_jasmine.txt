@@ -1,0 +1,8 @@
+# Dojo invitation, Jasmine in the Olivine Cafe (OlivineCity_Cafe_EventScript_Jasmine, data/maps/OlivineCity_Cafe_hns/scripts.inc:4-15): one message,
+# the fade, the leader removed, FLAG_HIDE_DOJO_* cleared. The script has no YES/NO.
+start saves/r8_dojo_base.sav
+include _base.txt
+ev clearflag FLAG_HIDE_CAFE_JASMINE; setflag FLAG_HIDE_DOJO_JASMINE; end
+warpto MAP_OLIVINE_CITY_CAFE_HNS 5 5
+approach 4
+include _invite.txt

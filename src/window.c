@@ -1,5 +1,6 @@
 #include "global.h"
 #include "window.h"
+#include "text.h"
 #include "malloc.h"
 #include "bg.h"
 #include "blit.h"
@@ -14,6 +15,55 @@ static u32 GetNumActiveWindowsOnBg(u32 bgId);
 static u32 GetNumActiveWindowsOnBg8Bit(u32 bgId);
 
 static const struct WindowTemplate sDummyWindowTemplate = DUMMY_WIN_TEMPLATE;
+
+#if TEXT_RTL
+// Per-window right-to-left layout (see the TEXT_RTL notes in src/text.c). The mirror width is in
+// pixels; 0 means the window's own width. A window wider than the box drawn behind it (a text box
+// whose art ends before the window does, or the HGSS Pokédex's 32-tile windows on a 30-tile
+// screen) mirrors around the visible width instead.
+static EWRAM_DATA u8 sWindowRtlMode[WINDOWS_MAX] = {0};
+static EWRAM_DATA u8 sWindowRtlMirrorPx[WINDOWS_MAX] = {0};
+
+static void ResetWindowRtl(u32 windowId)
+{
+    sWindowRtlMode[windowId] = WINDOW_RTL_MIRROR;
+    sWindowRtlMirrorPx[windowId] = 0;
+}
+
+void SetWindowRtlMode(u32 windowId, u32 mode)
+{
+    if (windowId < WINDOWS_MAX)
+        sWindowRtlMode[windowId] = mode;
+}
+
+u32 GetWindowRtlMode(u32 windowId)
+{
+    if (windowId >= WINDOWS_MAX)
+        return WINDOW_RTL_LTR;
+    return sWindowRtlMode[windowId];
+}
+
+void SetWindowRtlMirrorWidth(u32 windowId, u32 widthPx)
+{
+    if (windowId < WINDOWS_MAX)
+        sWindowRtlMirrorPx[windowId] = min(widthPx, 255);
+}
+
+u32 GetWindowRtlMirrorWidth(u32 windowId)
+{
+    if (sWindowRtlMirrorPx[windowId] != 0)
+        return sWindowRtlMirrorPx[windowId];
+    return gWindows[windowId].window.width * 8;
+}
+
+// Where a rect that the English code puts at x lands in this window.
+s32 WindowRtlX(u32 windowId, s32 x, s32 width)
+{
+    if (GetWindowRtlMode(windowId) != WINDOW_RTL_MIRROR)
+        return x;
+    return (s32)GetWindowRtlMirrorWidth(windowId) - x - width;
+}
+#endif
 
 static void DummyWindowBgTilemap(void)
 {
@@ -43,6 +93,9 @@ bool32 InitWindows(const struct WindowTemplate *templates)
     {
         gWindows[i].window = sDummyWindowTemplate;
         gWindows[i].tileData = NULL;
+#if TEXT_RTL
+        ResetWindowRtl(i);
+#endif
     }
 
     for (i = 0, allocatedBaseBlock = 0, bgLayer = templates[i].bg; bgLayer != 0xFF && i < WINDOWS_MAX; ++i, bgLayer = templates[i].bg)
@@ -120,6 +173,10 @@ u32 AddWindow(const struct WindowTemplate *template)
     if (win == WINDOWS_MAX)
         return WINDOW_NONE;
 
+#if TEXT_RTL
+    ResetWindowRtl(win);
+#endif
+
     bgLayer = template->bg;
     allocatedBaseBlock = 0;
 
@@ -189,6 +246,10 @@ int AddWindowWithoutTileMap(const struct WindowTemplate *template)
     if (win == WINDOWS_MAX)
         return WINDOW_NONE;
 
+#if TEXT_RTL
+    ResetWindowRtl(win);
+#endif
+
     bgLayer = template->bg;
     allocatedBaseBlock = 0;
 
@@ -214,6 +275,10 @@ int AddWindowWithoutTileMap(const struct WindowTemplate *template)
 void RemoveWindow(u32 windowId)
 {
     u32 bgLayer = gWindows[windowId].window.bg;
+
+#if TEXT_RTL
+    ResetWindowRtl(windowId);
+#endif
 
     if (gWindowTileAutoAllocEnabled == TRUE)
         BgTileAllocOp(bgLayer, gWindows[windowId].window.baseBlock, gWindows[windowId].window.width * gWindows[windowId].window.height, 2);
@@ -253,6 +318,11 @@ void RemoveAllWindowsOnBg(u32 bgId)
 void FreeAllWindowBuffers(void)
 {
     int i;
+
+#if TEXT_RTL
+    for (i = 0; i < WINDOWS_MAX; i++)
+        ResetWindowRtl(i);
+#endif
 
     for (i = 0; i < NUM_BACKGROUNDS; ++i)
     {
@@ -418,6 +488,22 @@ void BlitBitmapRectToWindow(u32 windowId, const u8 *pixels, u16 srcX, u16 srcY, 
     destRect.width = 8 * gWindows[windowId].window.width;
     destRect.height = 8 * gWindows[windowId].window.height;
 
+#if TEXT_RTL
+    {
+        // The bitmap itself is not flipped: icons and arrows keep their shape, only their place
+        // in the window is mirrored.
+        s32 x = WindowRtlX(windowId, destX, rectWidth);
+        if (x < 0)
+        {
+            if (-x >= rectWidth)
+                return;
+            srcX += -x;
+            rectWidth -= -x;
+            x = 0;
+        }
+        destX = x;
+    }
+#endif
     BlitBitmapRect4Bit(&sourceRect, &destRect, srcX, srcY, destX, destY, rectWidth, rectHeight, 0);
 }
 
@@ -440,6 +526,20 @@ static void UNUSED BlitBitmapRectToWindowWithColorKey(u32 windowId, const u8 *pi
 void FillWindowPixelRect(u32 windowId, u8 fillValue, u16 x, u16 y, u16 width, u16 height)
 {
     struct Bitmap pixelRect;
+
+#if TEXT_RTL
+    {
+        s32 mirroredX = WindowRtlX(windowId, x, width);
+        if (mirroredX < 0)
+        {
+            if (-mirroredX >= width)
+                return;
+            width -= -mirroredX;
+            mirroredX = 0;
+        }
+        x = mirroredX;
+    }
+#endif
 
     pixelRect.pixels = gWindows[windowId].tileData;
     pixelRect.width = 8 * gWindows[windowId].window.width;
@@ -668,6 +768,20 @@ void FillWindowPixelRect8Bit(u32 windowId, u8 fillValue, u16 x, u16 y, u16 width
 {
     struct Bitmap pixelRect;
 
+#if TEXT_RTL
+    {
+        s32 mirroredX = WindowRtlX(windowId, x, width);
+        if (mirroredX < 0)
+        {
+            if (-mirroredX >= width)
+                return;
+            width -= -mirroredX;
+            mirroredX = 0;
+        }
+        x = mirroredX;
+    }
+#endif
+
     pixelRect.pixels = gWindows[windowId].tileData;
     pixelRect.width = 8 * gWindows[windowId].window.width;
     pixelRect.height = 8 * gWindows[windowId].window.height;
@@ -688,6 +802,20 @@ void BlitBitmapRectToWindow4BitTo8Bit(u32 windowId, const u8 *pixels, u16 srcX, 
     destRect.width = 8 * gWindows[windowId].window.width;
     destRect.height = 8 * gWindows[windowId].window.height;
 
+#if TEXT_RTL
+    {
+        s32 x = WindowRtlX(windowId, destX, rectWidth);
+        if (x < 0)
+        {
+            if (-x >= rectWidth)
+                return;
+            srcX += -x;
+            rectWidth -= -x;
+            x = 0;
+        }
+        destX = x;
+    }
+#endif
     BlitBitmapRect4BitTo8Bit(&sourceRect, &destRect, srcX, srcY, destX, destY, rectWidth, rectHeight, 0, paletteNum);
 }
 

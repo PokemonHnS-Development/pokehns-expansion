@@ -1,0 +1,100 @@
+# Kanto Safari Zone entrance, Fuchsia (FuchsiaCity_SafariZoneEntrance_hns): Steven's first-visit
+# scene (VAR_KANTO_SAFARI_ZONE_PROGRESS 0; the Pokeblock case removed first, so he gives it), the
+# counter trigger (coord (4..6,5)) with the money box: NO; YES without the case; YES with a full
+# party and a full PC; YES with ¥100; YES (¥500, 30 Safari Balls, into the Beach); the exit prompt
+# (VAR_SAFARI_ZONE_STATE 2) NO, then YES; the upgrade man (2,10) from (3,10): level 1->2 NO, YES
+# with ¥100, YES (¥200,000), level 2->3 (¥300,000), 3->4 (¥400,000), max level.
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+vars VAR_KANTO_SAFARI_ZONE_PROGRESS VAR_SAFARI_ZONE_STATE
+partyinfo
+setmoney 10000
+
+# --- 1. first visit: Steven
+ev removeitem ITEM_POKEBLOCK_CASE; end
+warptoloose MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS 5 12
+fieldwatch z1_steven free 12000 30
+vars VAR_KANTO_SAFARI_ZONE_PROGRESS
+
+# --- 2. the counter: NO
+warpto MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS 5 6
+go UP
+fieldwatch z2_counter menu 6000
+pick 1
+fieldwatch z2_no free 6000
+
+# --- 3. YES without the Pokeblock case
+ev removeitem ITEM_POKEBLOCK_CASE; end
+go UP
+fieldwatch z3_counter menu 6000
+pick 0
+fieldwatch z3_nocase free 6000
+ev additem ITEM_POKEBLOCK_CASE; end
+
+# --- 4. YES with 6 in the party and every PC slot taken
+fillboxes 0
+go UP
+fieldwatch z4_counter menu 6000
+pick 0
+fieldwatch z4_pcfull free 6000
+restoreboxes
+
+# --- 5. YES with ¥100
+setmoney 100
+go UP
+fieldwatch z5_counter menu 6000
+pick 0
+fieldwatch z5_nomoney free 6000
+
+# --- 6. YES: ¥500, the balls, into the Safari Zone
+setmoney 10000
+go UP
+fieldwatch z6_counter menu 6000
+pick 0
+fieldwatch z6_enter free 12000 30
+snap z6_beach
+vars VAR_SAFARI_ZONE_STATE
+
+# --- 7. back at the entrance in Safari mode: exit? NO (back in), then YES
+warptoloose MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS 5 3
+fieldwatch z7_exit menu 6000
+pick 1
+fieldwatch z7_reenter free 12000 30
+warptoloose MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS 5 3
+fieldwatch z8_exit menu 6000
+pick 0
+fieldwatch z8_exited free 12000 30
+
+# --- 9. the upgrade man (progress 1): NO, ¥100, then YES at each level, then max
+warpto MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS 3 10
+face LEFT
+tap A 4
+fieldwatch u1_offer menu 6000
+pick 1
+fieldwatch u1_no free 6000
+setmoney 100
+face LEFT
+tap A 4
+fieldwatch u2_offer menu 6000
+pick 0
+fieldwatch u2_nomoney free 6000
+setmoney 999999
+face LEFT
+tap A 4
+fieldwatch u3_offer menu 6000
+pick 0
+fieldwatch u3_yes free 6000 20
+face LEFT
+tap A 4
+fieldwatch u4_offer menu 6000
+pick 0
+fieldwatch u4_yes free 6000 20
+face LEFT
+tap A 4
+fieldwatch u5_offer menu 6000
+pick 0
+fieldwatch u5_yes free 6000 20
+face LEFT
+tap A 4
+fieldwatch u6_max free 6000
+vars VAR_KANTO_SAFARI_ZONE_PROGRESS

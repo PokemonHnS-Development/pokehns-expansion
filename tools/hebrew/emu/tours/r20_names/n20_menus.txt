@@ -1,0 +1,45 @@
+# Round 20 names in script menus (run with scripts/r1_npc_services/svc.py tour): Kurt's ball list
+# (MULTI_KURT_BALLS: LOVE and MOON rows name the Psychic and Ghost types), the Game Corner TM prize list
+# (MULTI_GAME_CORNER_TMS: TM29), and the Battle Frontier move tutor lists 1 and 2 (SOFT-BOILED,
+# COUNTER, SWIFT). No H&S script calls MULTI_KURT_BALLS (Kurt runs special CreateKurtBallShop) and the
+# TM prize list is the Mauville Game Corner's; both are drawn here by a RAM script as stand-ins, the
+# tutor lists the way m03_scroll draws them. Save: r2menus_postgame.sav.
+start saves/r2menus_postgame.sav
+include ../../scripts/continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+
+# Kurt's ball list
+warptoloose MAP_AZALEA_TOWN_KURTS_HOUSE_HNS 4 8
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart lockall; message 0x@KurtsHouse_Text_KurtAskYouHaveAnApricorn@; waitmessage; multichoice 0, 0, MULTI_KURT_BALLS, FALSE; closemessage; releaseall; end
+talk kurt_m 40 - Task_HandleMultichoiceInput
+snap kurt_r1
+seek 8 @menu:sMenu+2@ 4 DOWN
+snap kurt_r5
+tap B 0
+waitctl 900
+
+# Game Corner TM prizes
+warptoloose MAP_GOLDENROD_CITY_GAME_CORNER_HNS 2 12
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart lockall; message 0x@GoldenrodCity_GameCorner_Text_PrizeVendorWhichPrize@; waitmessage; multichoice 12, 0, MULTI_GAME_CORNER_TMS, FALSE; closemessage; releaseall; end
+talk gctm_m 40 - Task_HandleMultichoiceInput
+snap gctm_r1
+seek 8 @menu:sMenu+2@ 1 DOWN
+snap gctm_r2
+tap B 0
+waitctl 900
+
+# Battle Frontier tutor lists 1 and 2 (as tours m03_scroll)
+warptoloose MAP_BATTLE_FRONTIER_LOUNGE7_HNS 4 9
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart lockall; message 0x@BattleFrontier_Lounge7_Text_TeachWhichMove_hns@; waitmessage; special ShowBattlePointsWindow; setvar VAR_0x8004, SCROLL_MULTI_BF_MOVE_TUTOR_1; setvar VAR_0x8006, 0; special ShowScrollableMultichoice; waitstate; special CloseBattleFrontierTutorWindow; special CloseBattlePointsWindow; closemessage; releaseall; end
+talk tutor1_m 40 - field_specials:ScrollableMultichoice_ProcessInput
+scrollshots tutor1_r DOWN 11 8
+tap B 0
+waitctl 900
+evstart lockall; message 0x@BattleFrontier_Lounge7_Text_TeachWhichMove_hns@; waitmessage; special ShowBattlePointsWindow; setvar VAR_0x8004, SCROLL_MULTI_BF_MOVE_TUTOR_2; setvar VAR_0x8006, 0; special ShowScrollableMultichoice; waitstate; special CloseBattleFrontierTutorWindow; special CloseBattlePointsWindow; closemessage; releaseall; end
+talk tutor2_m 40 - field_specials:ScrollableMultichoice_ProcessInput
+scrollshots tutor2_r DOWN 11 8
+tap B 0
+waitctl 900

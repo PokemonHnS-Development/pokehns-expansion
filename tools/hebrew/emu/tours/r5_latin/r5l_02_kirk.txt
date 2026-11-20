@@ -1,0 +1,41 @@
+# Kirk (Cianwood House 3, (4,4)): the Shuckie gift and its return. VAR_SHUCKIE 0 -> NO (if he comes
+# back), YES (gift: givenamedmon 2 = Shuckle nicknamed שאקי, src/scrcmd.c:1376), then with VAR_SHUCKIE 1
+# and the Zephyr badge: return NO (robbed), return YES (the "{PLAYER} returned SHUCKIE" line,
+# CianwoodHouse3_hns:134), and the after line (VAR_SHUCKIE 3). Party slot 5 is free for the gift.
+start saves/ladder6_postgame.sav
+include _setup.txt
+ev setvar VAR_SHUCKIE, 0; end
+warpto MAP_CIANWOOD_HOUSE3_HNS 4 5
+face UP
+tap A 4
+fieldwatch kirk_ask menu 6000
+pick 1
+fieldwatch kirk_declined free 3000
+face UP
+tap A 4
+fieldwatch kirk_ask2 menu 6000
+pick 0
+fieldwatch kirk_gift free 6000
+partyinfo
+# the gift in the party (slot 5): its nickname
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+snap kirk_party
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+face UP
+tap A 4
+fieldwatch kirk_return_ask menu 6000
+pick 1
+fieldwatch kirk_return_no free 3000
+face UP
+tap A 4
+fieldwatch kirk_return_ask2 menu 6000
+pick 0
+fieldwatch kirk_returned free 6000
+partyinfo
+face UP
+tap A 4
+fieldwatch kirk_after free 3000

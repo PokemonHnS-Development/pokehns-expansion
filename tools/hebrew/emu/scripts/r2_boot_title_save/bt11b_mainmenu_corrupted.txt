@@ -1,0 +1,17 @@
+# Main menu with gSaveFileStatus pinned to SAVE_STATUS_ERROR (0xFF): gText_SaveFileCorrupted
+# (src/main_menu.c:259, 673-679), then CONTINUE / NEW GAME / OPTION, then CONTINUE into the game.
+start saves/boot_base.sav
+pinsym gSaveFileStatus FF00
+waitcb2 CB2_MainMenu 4000 START
+waittaskx Task_WaitForSaveFileErrorWindow 600
+waitquiet
+snap bt11b_01_corrupted
+unpinsym gSaveFileStatus
+tap A 4
+waittaskx Task_HandleMainMenuInput 600
+waitquiet
+snap bt11b_02_menu
+tap A 30
+waitcb2 CB2_Overworld 1200
+waitctl 1200 B
+snap bt11b_03_continued

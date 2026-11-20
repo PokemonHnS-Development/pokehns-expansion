@@ -1,0 +1,21 @@
+# Alola, Akala Isle (after the first visit: FLAG_VISITED_ALOLA): arrival from the sea side next to
+# the island sign (the harness does not surf), every NPC and sign (bench old man and Natu,
+# trainers on land and in the water, item balls, totem), a wild encounter; then the house, the
+# forest (trainers, Raichu-A, item) and the cave (trainers, Marowak-A / Dugtrio-A, items).
+start saves/r10pg_base.sav
+include _base.txt
+ev setflag FLAG_VISITED_ALOLA; end
+arrive MAP_AKALA_ISLE_HNS 10 31 ak
+ss ak
+visit ak
+wild ak_wild
+arrive MAP_AKALA_HOUSE_HNS 11 12 akh
+visit akh
+arrive MAP_AKALA_FOREST_HNS 2 21 akf
+ss akf
+visit akf
+wild akf_wild
+arrive MAP_AKALA_CAVE_HNS 22 35 akc
+ss akc
+visit akc
+wild akc_wild

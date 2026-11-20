@@ -1,0 +1,35 @@
+# The Trainer Hill attendant (walked up to, so it is on screen): the challenge menu's first row
+# and the menu backed out; then a Kanto Pokemon Center PC's CHALLENGES viewer.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_TRAINER_HILL_ENTRANCE_HNS 9 15 th2
+walkto 12 11
+talkobj 1 th2_att pick=0
+talkobj 1 th2_att2
+arrive MAP_LAVENDER_TOWN_POKEMON_CENTER_HNS 7 7 lpc2
+walkto 11 2
+face UP
+talk pc2_boot 10
+press DOWN
+press DOWN
+press DOWN
+snap pc2_menu_chal
+tap A 0
+waitquiet 1200
+40 -
+snap pc2_chal_01
+tap DOWN 10
+40 -
+snap pc2_chal_02
+tap A 10
+40 -
+snap pc2_chal_03
+tap B 10
+40 -
+snap pc2_chal_04
+tap B 10
+40 -
+snap pc2_chal_05
+tap B 10
+waitcb2x CB2_Overworld 1200
+waitctl 600 B

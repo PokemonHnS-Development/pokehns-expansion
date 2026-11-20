@@ -1,0 +1,9 @@
+# Battle Palace lobby: as the Factory tour.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_BATTLE_FRONTIER_BATTLE_PALACE_LOBBY_HNS 12 10 pal
+talkobj 1 pal_sgl_info pick=1
+talkobj 1 pal_sgl_ch pick=0,0
+talkobj 6 pal_dbl_info pick=1
+signpick 10 4 pal_rules pick=0
+visit pal skip=1,6

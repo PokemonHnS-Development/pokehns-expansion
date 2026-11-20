@@ -60,53 +60,51 @@ GoldenrodCity_BillsHouse_EventScript_Bill_Refused::
 	end
 
 BillHouse_Text_TakeThisEevee:
-    .string "BILL: Hi, {PLAYER}! Do us a favor and\n"
-    .string "take this EEVEE.\p"
-    .string "It was left in our care while\n"
-    .string "I was away working on my system.\p"
-    .string "Someone has to take care of it,\n"
-    .string "but I don't like being outside.\p"
-    .string "Can I count on you to play with it,\n"
+    .string "ביל: היי, {PLAYER}! תעשה לנו טובה\n"
+    .string "ותיקח את האיווי הזה.\p"
+    .string "השאירו אותו אצלנו בזמן שלא\n"
+    .string "הייתי כאן, כי עבדתי על המערכת שלי.\p"
+    .string "מישהו צריך לטפל בו,\n"
+    .string "אבל אני לא אוהב להיות בחוץ.\p"
+    .string "אפשר לסמוך עליך שתשחק איתו,\n"
     .string "{PLAYER}?$"
 
 BillHouse_Text_CountingOnYou:
-    .string "BILL: I knew you'd come through!\p"
-    .string "Way to go! You're the real deal!\p"
-    .string "OK, I'm counting on you.\p"
-    .string "Take good care of it!$"
+    .string "ביל: ידעתי שלא תאכזב!\p"
+    .string "כל הכבוד! אתה פשוט תותח!\p"
+    .string "אוקיי, אני סומך עליך.\p"
+    .string "תשמור עליו היטב!$"
 
 BillHouse_Text_ReceivedEevee:
     .string "{PLAYER} received EEVEE!$"
 
 BillHouse_Text_EeveeMayEvolve:
-    .string "BILL: PROF.ELM claims EEVEE may\n"
-    .string "evolve in new and unknown ways.$"
+    .string "ביל: פרופ' אלם טוען שאיווי עשוי\n"
+    .string "להתפתח בדרכים חדשות ולא ידועות.$"
 
 BillHouse_Text_PartyFull:
     .string "Whoa, wait. You can't carry any\n"
     .string "more POKéMON.$"
 
 BillHouse_Text_NoEevee:
-    .string "Oh… Now what to do?$"
+    .string "אוי… מה עושים עכשיו?$"
 
 BillHouse_Text_PopWontWork:
-    .string "BILL: My pop, he won't work. All he\n"
-    .string "does is goof off all day long.\p"
-    .string "He's getting to be a real headache…$"
+    .string "ביל: אבא שלי לא מוכן לעבוד. כל מה\n"
+    .string "שהוא עושה זה להתבטל כל היום.\p"
+    .string "הוא נהיה כאב ראש אמיתי…$"
 
 BillHouse_Text_MomBeforeEcruteak:
-    .string "Oh, you collect POKéMON? My son\n"
-    .string "BILL is an expert.\p"
-    .string "He just got called to the POKéMON\n"
-    .string "CENTER in ECRUTEAK CITY.\p"
-    .string "My husband went off to the GAME\n"
-    .string "CORNER without being called…$"
+    .string "אה, אתה אוסף פוקימונים? הבן שלי\n"
+    .string "ביל הוא מומחה.\p"
+    .string "הרגע קראו לו למרכז הפוקימון\n"
+    .string "בעיר אקרוטיק.\p"
+    .string "בעלי הלך למשחקייה\n"
+    .string "בלי שאף אחד קרא לו…$"
 
 BillHouse_Text_MomAfterEcruteak:
-    .string "My husband was once known as a\n"
-    .string "POKéMANIAC.\p"
-    .string "BILL must have taken after his\n"
-    .string "father.$"
+    .string "פעם בעלי היה ידוע כפוקימאניאק.\p"
+    .string "ביל כנראה יצא דומה לאבא שלו.$"
 
 BillHouse_Text_SisterUsefulNumber:
     .string "Are you a TRAINER?\p"
@@ -126,5 +124,5 @@ BillHouse_Text_SisterPhoneFull:
     .string "You can't record any more numbers.$"
 
 BillHouse_Text_SisterStorageSystem:
-    .string "My big brother BILL made the PC\n"
-    .string "POKéMON storage system.$"
+    .string "אחי הגדול ביל יצר את מערכת\n"
+    .string "אחסון הפוקימונים במחשב.$"

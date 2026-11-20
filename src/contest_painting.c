@@ -42,7 +42,7 @@ static void PrintContestPaintingCaption(u8, u8);
 static void VBlankCB_ContestPainting(void);
 static void _InitContestMonPixels(u8 *spriteGfx, u16 *palette, u16 (*destPixels)[64][64]);
 
-const u8 gContestHallPaintingCaption[] = COMPOUND_STRING("{STR_VAR_1}\n{STR_VAR_2}'s {STR_VAR_3}");
+const u8 gContestHallPaintingCaption[] = COMPOUND_STRING("{STR_VAR_1}\nהפוקימון של {STR_VAR_2}: {STR_VAR_3}");
 
 static const u16 sPictureFramePalettes[]          = INCBIN_U16("graphics/picture_frame/bg.gbapal");
 static const u32 sPictureFrameTiles_Cool[]        = INCBIN_U32("graphics/picture_frame/cool.4bpp.smol");
@@ -60,20 +60,20 @@ static const u32 sPictureFrameTilemap_HallLobby[] = INCBIN_U32("graphics/picture
 
 static const u8 *const sContestCategoryNames_Unused[] =
 {
-    [CONTEST_CATEGORY_COOL]   = COMPOUND_STRING("COOLNESS"),
-    [CONTEST_CATEGORY_BEAUTY] = COMPOUND_STRING("BEAUTY"),
-    [CONTEST_CATEGORY_CUTE]   = COMPOUND_STRING("CUTENESS"),
-    [CONTEST_CATEGORY_SMART]  = COMPOUND_STRING("SMARTNESS"),
-    [CONTEST_CATEGORY_TOUGH]  = COMPOUND_STRING("TOUGHNESS"),
+    [CONTEST_CATEGORY_COOL]   = COMPOUND_STRING("מגניבות"),
+    [CONTEST_CATEGORY_BEAUTY] = COMPOUND_STRING("יופי"),
+    [CONTEST_CATEGORY_CUTE]   = COMPOUND_STRING("חמידות"),
+    [CONTEST_CATEGORY_SMART]  = COMPOUND_STRING("חוכמה"),
+    [CONTEST_CATEGORY_TOUGH]  = COMPOUND_STRING("קשיחות"),
 };
 
 static const u8 *const sContestRankNames[] =
 {
-    [CONTEST_RANK_NORMAL] = COMPOUND_STRING("NORMAL RANK"),
-    [CONTEST_RANK_SUPER]  = COMPOUND_STRING("SUPER RANK"),
-    [CONTEST_RANK_HYPER]  = COMPOUND_STRING("HYPER RANK"),
-    [CONTEST_RANK_MASTER] = COMPOUND_STRING("MASTER RANK"),
-    [CONTEST_RANK_LINK]   = COMPOUND_STRING("LINK"),
+    [CONTEST_RANK_NORMAL] = COMPOUND_STRING("בדרגת נורמל"),
+    [CONTEST_RANK_SUPER]  = COMPOUND_STRING("בדרגת סופר"),
+    [CONTEST_RANK_HYPER]  = COMPOUND_STRING("בדרגת היפר"),
+    [CONTEST_RANK_MASTER] = COMPOUND_STRING("בדרגת מאסטר"),
+    [CONTEST_RANK_LINK]   = COMPOUND_STRING("בקישור"),
 };
 
 static const struct BgTemplate sBgTemplates[] =
@@ -102,21 +102,21 @@ static const struct WindowTemplate sWindowTemplate =
 
 static const u8 *const sMuseumCaptions[NUM_PAINTING_CAPTIONS * CONTEST_CATEGORIES_COUNT] =
 {
-    [0 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_COOL]   = COMPOUND_STRING("Nonstop supercool--\nthe inestimable {STR_VAR_1}"),
-    [1 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_COOL]   = COMPOUND_STRING("Hey, there!\nThe good-looking POKéMON {STR_VAR_1}"),
-    [2 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_COOL]   = COMPOUND_STRING("The marvelous, wonderful, and\nvery great {STR_VAR_1}"),
-    [0 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_BEAUTY] = COMPOUND_STRING("This century's last Venus--\nthe beautiful {STR_VAR_1}"),
-    [1 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_BEAUTY] = COMPOUND_STRING("{STR_VAR_1}'s dazzling,\nglittering smile"),
-    [2 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_BEAUTY] = COMPOUND_STRING("POKéMON CENTER's super idol--\nthe incomparable {STR_VAR_1}"),
-    [0 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_CUTE]   = COMPOUND_STRING("The lovely and sweet {STR_VAR_1}"),
-    [1 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_CUTE]   = COMPOUND_STRING("The pretty {STR_VAR_1}'s\nwinning portrait"),
-    [2 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_CUTE]   = COMPOUND_STRING("Give us a wink!\nThe cutie POKéMON {STR_VAR_1}"),
-    [0 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_SMART]  = COMPOUND_STRING("The smartness maestro--\nthe wise POKéMON {STR_VAR_1}"),
-    [1 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_SMART]  = COMPOUND_STRING("{STR_VAR_1}--the one chosen\nabove all POKéMON"),
-    [2 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_SMART]  = COMPOUND_STRING("The excellent {STR_VAR_1}'s\nmoment of elegance"),
-    [0 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_TOUGH]  = COMPOUND_STRING("The powerfully muscular\nspeedster {STR_VAR_1}"),
-    [1 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_TOUGH]  = COMPOUND_STRING("The strong, stronger, and\nstrongest {STR_VAR_1}"),
-    [2 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_TOUGH]  = COMPOUND_STRING("The mighty tough\nhyper POKéMON {STR_VAR_1}"),
+    [0 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_COOL]   = COMPOUND_STRING("סופר-מגניב בלי הפסקה -\n{STR_VAR_1} שלא יסולא בפז"),
+    [1 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_COOL]   = COMPOUND_STRING("היי, שלום!\nהפוקימון החתיך {STR_VAR_1}"),
+    [2 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_COOL]   = COMPOUND_STRING("{STR_VAR_1} המופלא, הנפלא\nוהנהדר מאוד"),
+    [0 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_BEAUTY] = COMPOUND_STRING("ונוס האחרונה של המאה -\n{STR_VAR_1} היפהפה"),
+    [1 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_BEAUTY] = COMPOUND_STRING("החיוך המסנוור והנוצץ\nשל {STR_VAR_1}"),
+    [2 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_BEAUTY] = COMPOUND_STRING("כוכב-העל של מרכז הפוקימון -\n{STR_VAR_1} שאין כמוהו"),
+    [0 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_CUTE]   = COMPOUND_STRING("{STR_VAR_1} המקסים והמתוק"),
+    [1 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_CUTE]   = COMPOUND_STRING("הדיוקן המנצח\nשל {STR_VAR_1} היפה"),
+    [2 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_CUTE]   = COMPOUND_STRING("תקרוץ לנו!\nהפוקימון החמוד {STR_VAR_1}"),
+    [0 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_SMART]  = COMPOUND_STRING("מאסטרו החוכמה -\nהפוקימון הנבון {STR_VAR_1}"),
+    [1 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_SMART]  = COMPOUND_STRING("{STR_VAR_1} - הנבחר\nמכל הפוקימונים"),
+    [2 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_SMART]  = COMPOUND_STRING("רגע האלגנטיות\nשל {STR_VAR_1} המעולה"),
+    [0 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_TOUGH]  = COMPOUND_STRING("האצן השרירי\nוהעוצמתי {STR_VAR_1}"),
+    [1 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_TOUGH]  = COMPOUND_STRING("{STR_VAR_1} החזק,\nהחזק יותר והחזק ביותר"),
+    [2 + NUM_PAINTING_CAPTIONS * CONTEST_CATEGORY_TOUGH]  = COMPOUND_STRING("פוקימון-העל הקשוח\nוהאדיר {STR_VAR_1}"),
 };
 
 static const struct OamData sContestPaintingMonOamData =
@@ -141,6 +141,15 @@ void SetContestWinnerForPainting(int contestWinnerId)
     u8 *saveIdx = &gCurContestWinnerSaveIdx;
     u8 *isForArtist = &gCurContestWinnerIsForArtist;
     gCurContestWinner = gSaveBlock1Ptr->contestWinners[contestWinnerId - 1];
+#if RTL_STRING_REPORT
+    {
+        // the Contest Hall paintings show this copy of the save's copy of the default winners
+        extern const struct ContestWinner gDefaultContestWinners[];
+        if ((u32)(contestWinnerId - 1) < MUSEUM_CONTEST_WINNERS_START)
+            RtlStringMapRam(&gCurContestWinner, &gDefaultContestWinners[contestWinnerId - 1], sizeof(gCurContestWinner));
+    }
+#endif
+#line 144
     *saveIdx = contestWinnerId - 1;
     *isForArtist = FALSE;
 }

@@ -1,0 +1,34 @@
+# Variety 3F: trainer 1 (9,6) looks east, trainer 2 (14,6) west, range 4: both see (10-13,6).
+# Facing comes from TRAINER_DIRS(a, b): trainer 1 takes b, trainer 2 a (src/trainer_hill.c:826).
+# The floor below row 6 is ice (MB_TRICK_HOUSE_PUZZLE_8_FLOOR) between south ledges; a slide onto a
+# ledge jumps it and slides on. Route: (3,6) down -> (3,10), right -> (9,10), down -> (9,16),
+# right -> (12,16), up the ice of column 12 -> (12,6), where both trainers see the player.
+ev special HealPlayerParty; end
+fastbattles off
+walkto 3 6
+go DOWN 1
+40 -
+loc
+go RIGHT 1
+40 -
+loc
+go DOWN 1
+40 -
+loc
+go RIGHT 1
+40 -
+loc
+snap v3_below
+go UP 1
+snap v3_spotted
+10 -
+snap v3_spotted2
+dlg v3_intro battle
+battle2 v3
+snap v3_after
+talkto 1 v3_t1_post free
+talkto 2 v3_t2_post free
+hillstate
+walkto2 12 1
+waitctl 600
+snap v3_next

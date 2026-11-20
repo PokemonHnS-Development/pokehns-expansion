@@ -1,0 +1,19 @@
+# Alola: the developer Phantonomy naming ULTRA ECLIPSE: outside on Ula'ula (36,46, FLAG_HIDE_PHANT_OUTSIDE
+# clear; he then walks off), inside his house (8,9, VAR_ALOLA_STATE != 4), and Melemele House 6's
+# Game Boy kid (11,10).
+start saves/ladder6_postgame.sav
+include _setup.txt
+ev clearflag FLAG_HIDE_PHANT_OUTSIDE; clearflag FLAG_HIDE_PHANT_INSIDE; end
+warpto MAP_ULAULA_ISLE_HNS 36 47
+face UP
+tap A 4
+fieldwatch phant_out free 8000 30
+ev clearflag FLAG_HIDE_PHANT_INSIDE; end
+warpto MAP_ULA_ULA_HOUSE_HNS 7 9
+face RIGHT
+tap A 4
+fieldwatch phant_in free 4000
+warpto MAP_MELEMELE_HOUSE_6_HNS 10 10
+face RIGHT
+tap A 4
+fieldwatch mele_kid free 4000

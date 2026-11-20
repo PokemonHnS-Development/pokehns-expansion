@@ -1,0 +1,81 @@
+# "That's your last POKeMON!" (src/pokemon_storage_system.c:2516, :2785): on save pcs_base the HP of
+# party slots 1-5 is set to 0 (struct Pokemon hp, +0x56) before the PC opens, so Typhlosion is the
+# only party Pokemon that can battle (CountPartyAliveNonEggMonsExcept). DEPOSIT it (DEPOSIT mode),
+# then in MOVE POKeMON: MOVE it, RELEASE it, STORE it, and SHIFT a box Pokemon in hand... (allowed).
+start save:pcs_base
+include ../continue.txt
+w16 @gPlayerParty+BA@ 0
+w16 @gPlayerParty+11E@ 0
+w16 @gPlayerParty+182@ 0
+w16 @gPlayerParty+1E6@ 0
+w16 @gPlayerParty+24A@ 0
+go RIGHT 4
+go UP 2
+talk pc_boot 10
+tap A 0
+talk pc_storage_open 10 - Task_PCMainMenu
+waittaskdata Task_PCMainMenu 0 2 600
+press DOWN
+tap A 0                                   # DEPOSIT POKeMON
+waitcb2x CB2_PokeStorage 900
+pcwait
+snap pcs_last_01_party
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_last_02_menu
+press A                                   # DEPOSIT
+waitpmem 8 pokemon_storage_system:sStorage 0 6 300
+12 -
+snap pcs_last_03_deposit_last_poke
+press A
+pcwait
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+press UP
+tap A 0                                   # MOVE POKeMON
+waitcb2x CB2_PokeStorage 900
+pcwait
+pcgoto buttons 0
+press A
+pcwait
+pcgoto party 0
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_last_04_move_menu
+press A                                   # MOVE
+waitpmem 8 pokemon_storage_system:sStorage 0 6 300
+12 -
+snap pcs_last_05_move_last_poke
+press A
+pcwait
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN
+press DOWN                                # STORE
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 6 300
+12 -
+snap pcs_last_06_store_last_poke
+press A
+pcwait
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN
+press DOWN
+press DOWN
+press DOWN                                # RELEASE
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 6 300
+12 -
+snap pcs_last_07_release_last_poke
+press A
+pcwait

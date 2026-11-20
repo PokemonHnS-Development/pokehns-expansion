@@ -55,6 +55,37 @@
 #define CHAR_BARD_WORD_DELIMIT 0x37 // Empty space to separate words in Bard's song
 #define CHAR_V_D_ARROW         0x38
 #define CHAR_NBSP              0x39
+// Hebrew. The 22 letters take 0x3A-0x4F in alphabetical order and the five final forms take the
+// next free slots. None of these bytes is used by a Latin character, so leftover English (POKéMON)
+// keeps rendering.
+#define CHAR_HEB_ALEF          0x3A
+#define CHAR_HEB_BET           0x3B
+#define CHAR_HEB_GIMEL         0x3C
+#define CHAR_HEB_DALET         0x3D
+#define CHAR_HEB_HE            0x3E
+#define CHAR_HEB_VAV           0x3F
+#define CHAR_HEB_ZAYIN         0x40
+#define CHAR_HEB_HET           0x41
+#define CHAR_HEB_TET           0x42
+#define CHAR_HEB_YOD           0x43
+#define CHAR_HEB_KAF           0x44
+#define CHAR_HEB_LAMED         0x45
+#define CHAR_HEB_MEM           0x46
+#define CHAR_HEB_NUN           0x47
+#define CHAR_HEB_SAMEKH        0x48
+#define CHAR_HEB_AYIN          0x49
+#define CHAR_HEB_PE            0x4A
+#define CHAR_HEB_TSADI         0x4B
+#define CHAR_HEB_QOF           0x4C
+#define CHAR_HEB_RESH          0x4D
+#define CHAR_HEB_SHIN          0x4E
+#define CHAR_HEB_TAV           0x4F
+#define CHAR_HEB_FINAL_KAF     0x50
+#define CHAR_HEB_FINAL_MEM     0x5E
+#define CHAR_HEB_FINAL_NUN     0x5F
+#define CHAR_HEB_FINAL_PE      0x60
+#define CHAR_HEB_FINAL_TSADI   0x61
+#define IS_HEBREW_CHAR(c)      (((c) >= CHAR_HEB_ALEF && (c) <= CHAR_HEB_FINAL_KAF) || ((c) >= CHAR_HEB_FINAL_MEM && (c) <= CHAR_HEB_FINAL_TSADI))
 #define CHAR_INV_QUESTION_MARK 0x51
 #define CHAR_INV_EXCL_MARK     0x52
 #define CHAR_PK                0x53
@@ -83,6 +114,7 @@
 #define CHAR_SUPER_E           0x84
 #define CHAR_LESS_THAN         0x85
 #define CHAR_GREATER_THAN      0x86
+#define CHAR_BLACK_TRIANGLE_LEFT 0x87
 //
 #define CHAR_SUPER_RE          0xA0
 #define CHAR_0                 0xA1

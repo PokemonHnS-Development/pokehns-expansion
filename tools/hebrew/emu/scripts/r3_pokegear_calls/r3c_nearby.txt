@@ -1,0 +1,21 @@
+# The close-by message (gText_TrainerCloseBy, src/pokenav_match_call_gfx.c:129, drawn at x 0,
+# :1134): POKEGEAR > CALL > a trainer whose map section the player stands on, no rematch pending
+# (ShouldDoNearbyMessage, src/pokenav_match_call_list.c:495-510). On Route 31 (Wade's route):
+# Wade (close-by), Wade with a rematch pending (a normal call, Battle text), Joey from here.
+# Then inside the Cherrygrove Pokemon Center: "the call can't be made here" (gText_CallCantBeMadeHere).
+start saves/r3_calls/base.sav
+include ../continue.txt
+warpto MAP_ROUTE31_HNS 10 9
+waitctl 600
+mcclear
+mcreg all
+mclistopen
+mcnearby Wade n_wade_route31
+mclist Wade Battle n_wade_battle_pending
+mclist Joey General1 n_joey_from_route31
+mclistclose
+warpto MAP_CHERRYGROVE_CITY_POKEMON_CENTER_HNS 7 4
+waitctl 600
+mclistopen
+mcnearby Joey n_cantcall_center
+mclistclose

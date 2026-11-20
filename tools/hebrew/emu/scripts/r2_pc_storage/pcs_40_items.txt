@@ -1,0 +1,324 @@
+# MOVE ITEMS on save pcs_base (box 1: 4 Meowth/ORANGE MAIL, 5 Snorlax/LEFTOVERS, 6 Chansey/LUCKY EGG,
+# 8 Meowscarada (no item), 9 FOCUS SASH, 10 POWER LENS, 11 BERRY JUICE, 12 HYPER POTION, 13 THICK CLUB,
+# 14 Electrode-H (no item); party 0 Typhlosion/CHARCOAL; the ITEMS pocket is full (debug fill), so
+# ITEMS-pocket items cannot go back to the bag while MEDICINE items can).
+# Item tasks: src/pokemon_storage_system.c:3159-3460, menu texts :7963-8007.
+start save:pcs_base
+include _pc_open.txt
+press DOWN
+press DOWN
+press DOWN
+tap A 0                                   # MOVE ITEMS
+waitcb2x CB2_PokeStorage 900
+pcwait
+snap pcs_item_01_box
+
+# ---- a Pokemon with no item: "GIVE to a POKeMON?", GIVE opens the bag
+pcgoto box 8
+snap pcs_item_02_cursor_no_item
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_item_03_give_to_mon_menu
+bagcursor 0 ITEM_ORANGE_MAIL
+press A                                   # GIVE: the bag, on the ORANGE MAIL
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pcs_item_04_bag_from_box_mail
+press A                                   # a mail: "You can't write MAIL here."
+waitquiet
+60 -
+snap pcs_item_05_bag_cant_write_mail
+press A
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap LEFT 40                               # previous pocket: KEY ITEMS
+waitquiet
+snap pcs_item_06_bag_key_items
+press A                                   # a key item: "can't be held"
+waitquiet
+60 -
+snap pcs_item_07_bag_key_cant_hold
+press A
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+press B                                   # close the bag: back to the box, nothing given
+waitcb2x CB2_PokeStorage 900
+pcwait
+snap pcs_item_08_bag_closed
+bagcursor 0 ITEM_ODD_KEYSTONE                # the widest held-item name in the filled pocket
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press A                                   # GIVE
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pcs_item_09_bag_odd_keystone
+press A                                   # give it
+waitcb2x CB2_PokeStorage 900
+waitpmem 8 pokemon_storage_system:sStorage 0 2 600
+12 -
+snap pcs_item_10_item_is_held_from_bag
+press A
+pcwait
+snap pcs_item_11_after_give
+
+# ---- Typhlosion (party 0, CHARCOAL; 999 in the bag): the menu, BAG -> "The BAG is full.", INFO
+pcgoto buttons 0
+press A
+pcwait
+pcgoto party 0
+snap pcs_item_12_party_charcoal
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_item_13_charcoal_menu
+press DOWN                                # BAG
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 3 300
+12 -
+snap pcs_item_14_bag_full
+press A
+pcwait
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN
+press DOWN                                # INFO
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 4 300
+12 -
+snap pcs_item_15_info_charcoal
+press A
+pcwait
+# TAKE the Charcoal: an item in hand over the party pane
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press A                                   # TAKE
+pcwait
+snap pcs_item_16_holding_charcoal_party
+# close the pane with the item in hand, then CLOSE BOX: "Put this item in the BAG?" YES -> bag full
+press B
+pcwait
+snap pcs_item_17_holding_charcoal_box
+pcgoto buttons 1
+press A
+waittaskx Task_CloseBoxWhileHoldingItem 300
+waitquiet
+12 -
+snap pcs_item_18_put_in_bag_prompt
+press A                                   # YES
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_item_19_put_in_bag_bag_full
+press A
+pcwait
+# B while holding the item: the same prompt, answered NO
+press B
+waittaskx Task_CloseBoxWhileHoldingItem 300
+waitquiet
+12 -
+press DOWN
+snap pcs_item_20_put_in_bag_no_selected
+press A                                   # NO
+pcwait
+
+# ---- drop the Charcoal on Chansey (LUCKY EGG): SWITCH -> "Changed to LUCKY EGG."
+pcgoto box 6
+snap pcs_item_21_holding_over_item_mon
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_item_22_switch_menu
+press A                                   # SWITCH
+waitpmem 8 pokemon_storage_system:sStorage 0 3 300
+12 -
+snap pcs_item_23_changed_to_item
+press A
+pcwait
+# give the Lucky Egg to Electrode-H (no item): GIVE -> "LUCKY EGG is now held."
+pcgoto box 14
+snap pcs_item_24_holding_over_no_item_mon
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_item_25_give_menu
+press A                                   # GIVE
+waitpmem 8 pokemon_storage_system:sStorage 0 3 300
+12 -
+snap pcs_item_26_item_is_held
+press A
+pcwait
+
+# ---- Snorlax (LEFTOVERS): INFO, BAG -> "The BAG is full." (ITEMS pocket full); Sandslash-A
+# (BERRY JUICE, a MEDICINE item): BAG -> "Placed item in the BAG."
+pcgoto box 5
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_item_27_leftovers_menu
+press DOWN
+press DOWN                                # INFO
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 4 300
+12 -
+snap pcs_item_28_info_leftovers
+press A
+pcwait
+pcgoto box 11
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN
+press DOWN
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 4 300
+12 -
+snap pcs_item_34_info_berry_juice
+press A
+pcwait
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN                                # BAG
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_item_29_placed_in_bag
+press A
+pcwait
+
+# ---- Meowth (ORANGE MAIL): only INFO / CANCEL
+pcgoto box 4
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_item_30_mail_menu
+press A                                   # INFO
+waitpmem 8 pokemon_storage_system:sStorage 0 4 300
+12 -
+snap pcs_item_31_info_mail
+press A
+pcwait
+
+# ---- INFO panels: FOCUS SASH (9), POWER LENS (10), BERRY JUICE (11), HYPER POTION (12), THICK CLUB (13),
+# CHARCOAL now on Chansey (6), LUCKY EGG on Electrode-H (14), the bag's first item on Meowscarada (8)
+pcgoto box 9
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN
+press DOWN
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 4 300
+12 -
+snap pcs_item_32_info_focus_sash
+press A
+pcwait
+pcgoto box 10
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN
+press DOWN
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 4 300
+12 -
+snap pcs_item_33_info_power_lens
+press A
+pcwait
+pcgoto box 12
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN
+press DOWN
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 4 300
+12 -
+snap pcs_item_35_info_hyper_potion
+press A
+pcwait
+pcgoto box 13
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN
+press DOWN
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 4 300
+12 -
+snap pcs_item_36_info_thick_club
+press A
+pcwait
+pcgoto box 14
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN
+press DOWN
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 4 300
+12 -
+snap pcs_item_37_info_lucky_egg
+press A
+pcwait
+pcgoto box 8
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press DOWN
+press DOWN
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 4 300
+12 -
+snap pcs_item_38_info_bag_item
+press A
+pcwait
+
+# ---- TAKE the HYPER POTION (12, MEDICINE), close the box with it: YES puts it in the bag
+pcgoto box 12
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press A                                   # TAKE
+pcwait
+snap pcs_item_39_holding_hyper_potion
+pcgoto buttons 1
+press A
+waittaskx Task_CloseBoxWhileHoldingItem 300
+waitquiet
+12 -
+snap pcs_item_40_put_in_bag_prompt_potion
+press A                                   # YES
+waittaskx Task_PokeStorageMain 300
+waitquiet
+snap pcs_item_41_put_in_bag_yes_flying
+pcwait
+snap pcs_item_42_put_in_bag_yes_done
+
+# ---- MSG_CANT_STORE_MAIL (forced): no menu offers TAKE / SWITCH on a mail holder
+# (SetMenuTexts_Item), so the TAKE menu of the POWER LENS holder (10) is opened and
+# sStorage->displayMonItemId is set to ORANGE MAIL before TAKE (Task_TakeItemForMoving :3163)
+pcgoto box 9
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+pcfield dispitem ITEM_FOCUS_SASH
+press B
+pcwait
+pcgoto box 10
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+pcfield dispitem ITEM_POWER_LENS
+pcpoke dispitem ITEM_ORANGE_MAIL
+press A                                   # TAKE
+waittaskx Task_PrintCantStoreMail 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+snap pcs_item_43_cant_store_mail_forced
+press A
+pcwait
+snap pcs_item_44_end

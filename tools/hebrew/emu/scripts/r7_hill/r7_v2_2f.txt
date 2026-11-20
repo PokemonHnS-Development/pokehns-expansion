@@ -1,0 +1,19 @@
+# Variety 2F: trainer 1 (3,13) looks east, trainer 2 (11,13) west, range 7.
+# Facing comes from TRAINER_DIRS(a, b): trainer 1 takes b, trainer 2 a (src/trainer_hill.c:826).
+# A walk to (7,13), which both trainers see, starts the tag battle ('!', walk-up, both intros);
+# then the after-battle speech of both (Easy Chat) and the stairs at (12,1).
+ev special HealPlayerParty; end
+fastbattles off
+walkto 7 13
+snap v2_spotted
+10 -
+snap v2_spotted2
+dlg v2_intro battle
+battle2 v2
+snap v2_after
+talkto 1 v2_t1_post free
+talkto 2 v2_t2_post free
+hillstate
+walkto2 12 1
+waitctl 600
+snap v2_next

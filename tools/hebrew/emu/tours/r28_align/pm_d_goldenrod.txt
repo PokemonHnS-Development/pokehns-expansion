@@ -1,0 +1,224 @@
+# Mid-game play from ladder save 3, in Goldenrod City: the Name Rater renames Quilava (the
+# naming screen, typing on the first keyboard page), the Department Store (receptionist,
+# directory, the 2F clerk's shop with long names and prices, a drink from the vending machine
+# with its price list and the money box, the 5F TM shop, the elevator's floor list, the
+# 6F people and sign), then the Route 34 Day
+# Care (the woman takes Togepi, the man outside).
+start saves/ladder3_ecruteak.sav
+include ../../scripts/continue.txt
+
+# --- Name Rater (GoldenrodCity_House1_hns)
+warpto MAP_GOLDENROD_CITY_HNS 22 17
+snap pmd_popup_goldenrod
+warpto MAP_GOLDENROD_CITY_HOUSE1_HNS 4 5
+face UP
+talk pmd_rater 10                         # ends at YES/NO
+tap A 0
+talk pmd_rater_which 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap pmd_rater_party
+tap A 0                                   # Quilava
+waitcb2x CB2_Overworld 900
+talk pmd_rater_rate 10 -                  # ends at YES/NO
+tap A 0
+talk pmd_rater_ask 10 -
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap pmd_naming_01
+press A                                   # three keys down the first column of the first page
+waitnaming
+press DOWN
+press A
+waitnaming
+press DOWN
+press A
+waitnaming
+snap pmd_naming_02_typed
+press SELECT
+waitnaming
+snap pmd_naming_03_page2
+press SELECT
+waitnaming
+snap pmd_naming_04_page3
+press SELECT
+waitnaming
+press START
+waitnaming
+snap pmd_naming_05_ok
+press A
+waitcb2x CB2_Overworld 900
+talk pmd_rater_done 10 -
+waitctl 900
+
+# --- Department Store 1F
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_1F_HNS 15 6
+face UP
+talk pmd_store_reception 10
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_1F_HNS 21 5
+face UP
+talk pmd_store_directory 10
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_1F_HNS 11 10
+face UP
+talk pmd_store_1f_woman 10
+
+# --- 2F: the clerk at (14,11) faces up
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS 14 10
+face DOWN
+talk pmd_2f_welcome 10 A Task_ShopMenu
+waittaskx Task_ShopMenu 300
+waitquiet
+snap pmd_2f_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+snap pmd_2f_buy_01
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap pmd_2f_buy_05
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap pmd_2f_buy_09
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap pmd_2f_buy_13
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap pmd_2f_buy_17
+tap A 0
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+waitquiet
+snap pmd_2f_qty
+press B
+waittaskx Task_BuyMenu 600
+waitquiet
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+seek 8 @menu:sMenu+2@ 2 DOWN
+tap A 0
+talk pmd_2f_bye 10 -
+waitctl 900
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS 13 7
+face UP
+talk pmd_2f_youngster 10
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS 9 9
+face RIGHT
+talk pmd_2f_gent 10
+# the vending machine at (12..14,5): which drink, with the prices and the money box
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS 12 6
+face UP
+talk pmd_vending 10
+press DOWN
+snap pmd_vending_02
+press UP
+tap A 0                                   # Fresh Water
+talk pmd_vending_buy 10 -
+snap pmd_vending_end
+waitctl 900 B
+
+# --- 5F: the TM clerk at (17,11) faces up
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_5F_HNS 17 10
+face DOWN
+talk pmd_5f_welcome 10 A Task_ShopMenu
+waittaskx Task_ShopMenu 300
+waitquiet
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+snap pmd_5f_buy_01
+press DOWN
+press DOWN
+press DOWN
+snap pmd_5f_buy_04
+press DOWN
+press DOWN
+press DOWN
+snap pmd_5f_buy_07
+tap A 0                                   # a TM: no quantity, straight to YES/NO
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap pmd_5f_confirm
+press B                                   # NO
+waittaskx Task_BuyMenu 600
+waitquiet
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+seek 8 @menu:sMenu+2@ 2 DOWN
+tap A 0
+talk pmd_5f_bye 10 -
+waitctl 900
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_5F_HNS 13 6
+face UP
+talk pmd_5f_lass 10
+
+# --- The elevator from 1F: the floor list (a 7-floor multichoice), up to 6F
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_1F_HNS 9 6
+go UP 1                                   # the trigger at (9,5) walks the player in
+talk pmd_elevator 10 -                    # ends at the floor list
+press DOWN
+snap pmd_elevator_02
+press UP
+tap A 0                                   # 6F
+waitcb2x CB2_Overworld 1200
+waitctl 1200
+snap pmd_6f_arrive
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_6F_HNS 14 10
+face LEFT
+talk pmd_6f_jose 10                       # a trade offer: ends at YES/NO
+tap B 0                                   # NO
+talk pmd_6f_jose_no 10 -
+waitctl 900 B
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_6F_HNS 14 7
+face UP
+talk pmd_6f_lass 10
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_6F_HNS 12 8
+face LEFT
+talk pmd_6f_nerd 10
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_6F_HNS 24 5
+face UP
+talk pmd_6f_sign 10
+
+# --- Route 34 Day Care: the woman inside takes Togepi (slot 6)
+warpto MAP_ROUTE34_DAY_CARE_HNS 3 7
+face DOWN
+talk pmd_daycare_woman 10                 # ends at YES/NO
+tap A 0
+talk pmd_daycare_which 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap pmd_daycare_party
+seek 8 @gPartyMenu+9@ 5 DOWN
+tap A 0
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap pmd_daycare_party_store
+tap A 0                                   # STORE
+waitcb2x CB2_Overworld 900
+talk pmd_daycare_given 10 -               # ends at "...raise one more?" YES/NO
+tap B 0                                   # NO
+talk pmd_daycare_no_more 10 -
+waitctl 900
+face DOWN
+talk pmd_daycare_woman_again 10
+waitctl 900 B
+warpto MAP_ROUTE34_HNS 30 34
+snap pmd_popup_route34
+face RIGHT
+talk pmd_daycare_man 10
+waitctl 900 B

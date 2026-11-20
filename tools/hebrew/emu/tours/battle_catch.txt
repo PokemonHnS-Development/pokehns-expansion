@@ -1,0 +1,56 @@
+# Catching: the bag's POKE BALLS pocket in battle, throwing a ball, "Gotcha!", the Pokedex
+# registration message and the caught Pokemon's dex page, the nickname prompt, the naming
+# screen keyboard (all its pages), and the end of the battle.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_CYNDAQUIL, 12; additem ITEM_MASTER_BALL, 1; end
+
+pinrng
+evstart setwildbattle SPECIES_HOOTHOOT, 5; dowildbattle; end
+waitbattle
+bwalk battle_catch_intro input:HandleInputChooseAction
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 2                # POKE BALLS
+snap battle_catch_balls
+tap A 4                                   # Master Ball: USE / CANCEL
+waitquiet
+snap battle_catch_ball_use
+tap A 4                                   # USE: the throw
+bwalk battle_catch_throw task:Task_HandleCaughtMonPageInput
+snap battle_catch_dexpage
+tap A 4
+bwalk battle_catch_after prompt:Cmd_trygivecaughtmonnick
+snap battle_catch_nick_prompt
+tap A 4                                   # YES: give a nickname
+bwalk battle_catch_naming task:naming_screen:Task_HandleInput
+waitnaming
+snap battle_catch_naming_01
+tap SELECT 4                              # next keyboard page
+waitnaming
+snap battle_catch_naming_02
+tap SELECT 4
+waitnaming
+snap battle_catch_naming_03
+tap SELECT 4                              # back to the first page
+waitnaming
+tap A 4                                   # type the letter under the cursor
+waitnaming
+tap A 4
+waitnaming
+snap battle_catch_naming_typed
+tap START 4                               # START: cursor to OK
+waitnaming
+tap A 4                                   # OK: keep the typed nickname
+waitcb2x BattleMainCB2 900
+waitnotask naming_screen:Task_HandleInput 300
+bwalk battle_catch_end free
+snap battle_catch_field

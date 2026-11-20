@@ -1,0 +1,11 @@
+# The Wireless Communication status screen (src/wireless_communication_status_screen.c,
+# special ShowWirelessCommunicationScreen), which EventScript_WirelessBoxResults (data/scripts/cable_club.inc:1212)
+# opens after its adapter check. No H&S map has that sign; run in RAM at the Battle Frontier Pokemon Center 2F
+# past the check (fadescreen, the special, waitstate). No Wireless Adapter: every count stays 0.
+start saves/r14/link/base.sav
+include ../../scripts/continue.txt
+warpto MAP_BATTLE_FRONTIER_POKEMON_CENTER_2F_HNS 6 3
+evstart lockall; fadescreen FADE_TO_BLACK; special ShowWirelessCommunicationScreen; waitstate; msgbox 0x@CableClub_Text_ParticipantsStepUpToCounter@, MSGBOX_DEFAULT; releaseall; end
+burst w1_status 10 30
+tap B 6
+fieldwatch w2_after free 6000

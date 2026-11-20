@@ -1,0 +1,8 @@
+# Dojo invitation, Bugsy in Viridian Forest (ViridianForest_EventScript_Bugsy, data/maps/ViridianForest_hns/scripts.inc:55-66): one message,
+# the fade, the leader removed, FLAG_HIDE_DOJO_* cleared. The script has no YES/NO.
+start saves/r8_dojo_base.sav
+include _base.txt
+ev clearflag FLAG_HIDE_VIRIDIAN_BUGSY; setflag FLAG_HIDE_DOJO_BUGSY; end
+warpto MAP_VIRIDIAN_FOREST_HNS 36 30
+approach 16
+include _invite.txt

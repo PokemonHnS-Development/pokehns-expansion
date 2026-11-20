@@ -1,0 +1,8 @@
+# Blue, Viridian Gym (5,2): ViridianCity_Gym_EventScript_Blue.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_VIRIDIAN_GYM; clearflag FLAG_BADGE16_GET; setflag FLAG_HIDE_DOJO_BLUE; clearflag FLAG_HIDE_VIRIDIAN_BLUE; end
+warpto MAP_VIRIDIAN_CITY_GYM_HNS 5 3
+face UP
+snap bu_room
+include _leader_tail.txt

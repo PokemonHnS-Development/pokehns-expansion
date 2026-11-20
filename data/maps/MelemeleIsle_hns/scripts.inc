@@ -667,105 +667,102 @@ Alola_MeleMele_TapuKoko_Flyover_Movement_0:
 	step_end
 
 Alola_Melemele_GetOffBoat_Text_0:
-	.string "Welcome back to the ISLES!\p"
-	.string "Come back if you'd like to take a trip\n"
-	.string "to mainland KANTO!$"
+	.string "ברוכים השבים לאיים!\p"
+	.string "בוא שוב אם תרצה לצאת\n"
+	.string "לטיול ליבשת קאנטו!$"
 
 Alola_Melemele_TravelToKanto_Text_0:
-	.string "Ahoy!\p"
-	.string "Would you like to travel to mainland\n"
-	.string "KANTO?$"
+	.string "אהוי!\p"
+	.string "תרצה להפליג ליבשת קאנטו?$"
 
 Alola_Melemele_TravelToKanto_Text_1:
-	.string "Ahoy! Let's get you on board!$"
+	.string "אהוי! בוא נעלה אותך לסיפון!$"
 
 Alola_Melemele_TravelToKanto_Text_2:
-	.string "Ahoy!\n"
-	.string "Come back when you'd like to set sail.$"
+	.string "אהוי!\n"
+	.string "בוא שוב כשתרצה להפליג.$"
 
 Alola_Melemele_Mailbox_Text_0:
-	.string "SAMSON OAK's VILLA$"
+	.string "הווילה של שמשון אוק$"
 
 Alola_Melemele_Melemele_Sign_Text_0:
-	.string "Welcome to MELEMELE ISLE!$"
+	.string "ברוכים הבאים לאי מלמלה!$"
 
 Alola_Melemele_Pokecenter_Sign_Text_0:
-	.string "Welcome to the MELEMELE ISLE\n"
-	.string "POKéMON CENTER!\p"
-	.string "This is the only POKéMON CENTER on the\n"
-	.string "ALOLA ISLES but you can rest on\l"
-	.string "benches around the ISLES.$"
+	.string "ברוכים הבאים למרכז הפוקימון\n"
+	.string "של האי מלמלה!\p"
+	.string "זהו מרכז הפוקימון היחיד באיי אלולה,\n"
+	.string "אבל אפשר לנוח על ספסלים ברחבי האיים.$"
 
 Alola_Melemele_MelemeleMart_Sign_Text_0:
-	.string "MELEMELE ISLE MART$"
+	.string "חנות האי מלמלה$"
 
 Alola_Melemele_BattleSandygast_Text_0:
 	.string "Coorr!$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_0:
-	.string "ALOLA!$"
+	.string "אלולה!$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_1:
-	.string "Welcome to the ALOLA ISLES!$"
+	.string "ברוכים הבאים לאיי אלולה!$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_2:
-	.string "My name is SAMSON OAK!\n"
-	.string "I'm a POKéMON PROFESSOR.\p"
-	.string "What's your name?$"
+	.string "שמי שמשון אוק!\n"
+	.string "אני פרופסור לפוקימונים.\p"
+	.string "איך קוראים לך?$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_3:
-	.string "Ah, {PLAYER}.\n"
-	.string "A fine name!\p"
-	.string "You may know my cousin, PROFESSOR OAK,\n"
-	.string "from the KANTO region.\p"
-	.string "Let me show you to town!$"
+	.string "אה, {PLAYER}.\n"
+	.string "שם יפה!\p"
+	.string "אולי אתה מכיר את בן הדוד שלי,\n"
+	.string "פרופסור אוק מאזור קאנטו.\p"
+	.string "בוא, אוביל אותך לעיר!$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_4:
-	.string "This is the main town on these islands.\p"
-	.string "It's eerily similar to HAU'OLI CITY in\n"
-	.string "ALOLA… {PAUSE 30}And when I think about it…\p"
-	.string "This whole island reminds me of MELEMELE\n"
-	.string "ISLAND…$"
+	.string "זו העיר הראשית באיים האלה.\p"
+	.string "היא דומה באופן מוזר לעיר האואולי\n"
+	.string "שבאלולה… {PAUSE 30}וכשאני חושב על זה…\p"
+	.string "כל האי הזה מזכיר לי את\n"
+	.string "האי מלמלה שבאלולה…$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_5:
-	.string "Well, anyways!\p"
-	.string "I research variations of POKéMON that \n"
-	.string "can be found in different regions!\p"
-	.string "On my way back from the ALOLA region,\n"
-	.string "I stumbled across these isles…\p"
-	.string "Surprisingly, many of the POKéMON I saw\n"
-	.string "in ALOLA were here as well, so I've\l"
-	.string "called this place… {PAUSE 30}the ALOLA ISLES!$"
+	.string "טוב, בכל אופן!\p"
+	.string "אני חוקר זנים של פוקימונים\n"
+	.string "שאפשר למצוא באזורים שונים!\p"
+	.string "בדרכי חזרה מאזור אלולה,\n"
+	.string "נתקלתי באיים האלה…\p"
+	.string "להפתעתי, רבים מהפוקימונים שראיתי\n"
+	.string "באלולה נמצאים גם כאן,\p"
+	.string "אז קראתי למקום הזה… {PAUSE 30}איי אלולה!$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_6:
-	.string "Now I haven't completely explored the\n"
-	.string "ISLES yet… {PAUSE 30}I just landed here myself.\p"
-	.string "I'd like to know if all of the variants\n"
-	.string "native to ALOLA are here.\p"
-	.string "If you happen to come across any,\n"
-	.string "please come by my villa on the east side\l"
-	.string "of the ISLE and show them to me!\p"
-	.string "Oh. And feel free to explore the ISLE\n"
-	.string "while on your way!\p"
-	.string "See you there!$"
+	.string "עוד לא חקרתי את האיים עד הסוף…\n"
+	.string "{PAUSE 30}גם אני רק עכשיו נחתתי כאן.\p"
+	.string "הייתי רוצה לדעת אם כל הזנים\n"
+	.string "שמקורם באלולה נמצאים כאן.\p"
+	.string "אם במקרה תיתקל בכמה מהם, בוא בבקשה\n"
+	.string "לווילה שלי במזרח האי ותראה לי אותם!\p"
+	.string "אה. ואפשר בהחלט לחקור את האי\n"
+	.string "בדרך לשם!\p"
+	.string "נתראה שם!$"
 
 Alola_Melemele_NeedToTalkToSamsonOak_Text_0:
-	.string "SAMSON is waiting for you at his villa…\n"
-	.string "{PAUSE 30}best not make him wait too long!$"
+	.string "שמשון מחכה לך בווילה שלו…\n"
+	.string "{PAUSE 30}כדאי לא לגרום לו לחכות יותר מדי!$"
 
 Alola_Melemele_TotemBattle_Text_0:
-	.string "Leee!$"
+	.string "לייי!$"
 
 Alola_Melemele_TotemBattle_Text_1:
-	.string "Totem LEAFEON was defeated!\n"
-	.string "It scampered off somewhere…$"
+	.string "ליפיאון הטוטם הובס!\n"
+	.string "הוא נמלט לאנשהו…$"
 
 Alola_Melemele_TotemBattle_Text_2:
-	.string "Thhhh!$"
+	.string "סססס!$"
 
 Alola_Melemele_TotemBattle_Text_3:
-	.string "Totem RATICATE was defeated!\n"
-	.string "It scampered off somewhere…$"
+	.string "רטיקייט הטוטם הובס!\n"
+	.string "הוא נמלט לאנשהו…$"
 
 MelemeleIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
 	face_up
@@ -773,54 +770,54 @@ MelemeleIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
 
 
 Alola_Melemele_Totem_sign_Text_0:
-	.string "The totem is emanating a strong\n"
-	.string "energy…\p"
-	.string "Touch the totem to teleport to another\n"
-	.string "Isle?$"
+	.string "מהטוטם נובעת\n"
+	.string "אנרגיה חזקה…\p"
+	.string "לגעת בטוטם כדי להשתגר\n"
+	.string "לאי אחר?$"
 
 Alola_Melemele_Totem_sign_Text_1:
-	.string "MELEMELE ISLE$"
+	.string "האי מלמלה$"
 
 Alola_Melemele_Totem_sign_Text_2:
-	.string "AKALA ISLE$"
+	.string "האי אקאלה$"
 
 Alola_Melemele_Totem_sign_Text_3:
-	.string "ULA'ULA ISLE$"
+	.string "האי אולאולה$"
 
 Alola_Melemele_Totem_sign_Text_4:
-	.string "PONI ISLE$"
+	.string "האי פוני$"
 
 Alola_Melemele_Totem_sign_Text_5:
-	.string "Cancel$"
+	.string "ביטול$"
 
 Alola_Melemele_Totem_sign_Text_6:
-	.string "A strange totem stands here,\n"
-	.string "power is emanating from it…$"
+	.string "כאן עומד טוטם מוזר,\n"
+	.string "ועוצמה נובעת ממנו…$"
 
 Alola_Melemele_BattleVsTapuKoko_Text_0:
-	.string "Ko-Ko-Kooo!$"
+	.string "קו-קו-קווו!$"
 
 Alola_Melemele_TrainerBattleSwimmer_Text_0:
-	.string "The waters are warm here by the ISLES!$"
+	.string "המים חמימים כאן ליד האיים!$"
 
 Alola_Melemele_TrainerBattleSwimmer_Text_1:
-	.string "Maybe I should dry off on land for\na bit…$"
+	.string "אולי כדאי לי להתייבש קצת\n"
+	.string "על היבשה…$"
 
 Alola_Melemele_TrainerBattleSwimmer_Text_2:
-	.string "There are plenty of neat POKéMON in\n"
-	.string "the water, try all your fishing rods!$"
+	.string "יש הרבה פוקימונים מגניבים במים,\n"
+	.string "כדאי לנסות את כל החכות שלך!$"
 
 Alola_Melemele_Bugcatcher_Text_0:
-	.string "The bug POKéMON on the ALOLA ISLES\n"
-	.string "are much bigger than those in KANTO!$"
+	.string "פוקימוני החרק באיי אלולה\n"
+	.string "גדולים בהרבה מאלה שבקאנטו!$"
 
 Alola_Melemele_camper_Text_0:
-	.string "I traveled all the way from KANTO to see\n"
-	.string "a variant of my favorite cat POKéMON,\l"
-	.string "MEOWTH!$"
+	.string "נסעתי כל הדרך מקאנטו כדי לראות זן\n"
+	.string "של פוקימון החתול האהוב עליי, מיאו!$"
 
 Alola_Melemele_Picnicker_Text_0:
-	.string "These ISLES are chock full of unique\n"
-	.string "POKéMON!\p"
-	.string "I need to stock up on POKé BALLS so I\n"
-	.string "can catch them all!$"
+	.string "האיים האלה מלאים בפוקימונים\n"
+	.string "ייחודיים!\p"
+	.string "אני חייבת להצטייד בפוכדורים\n"
+	.string "כדי לתפוס את כולם!$"

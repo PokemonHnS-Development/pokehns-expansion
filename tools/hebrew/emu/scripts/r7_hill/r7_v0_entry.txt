@@ -1,0 +1,7 @@
+# Variety tag match: from the counter state (hc, YES/NO/INFO open) YES, the mode menu, VARIETY (row 1), GO.
+pick 0
+dlg v0_mode menu
+pick 1
+dlg v0_go free
+hillstate
+snap v0_started

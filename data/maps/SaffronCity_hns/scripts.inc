@@ -7,7 +7,7 @@ SaffronCity_EventScript_CityEnter::
 	end
 
 SaffronCity_Text_BaobaName:
-	.string "BAOBA$"
+	.string "באובה$"
 
 SaffronCity_Text_Baoba:
 	.string "WARDEN BAOBA: {PLAYER}!\p"
@@ -95,92 +95,89 @@ SaffronCity_EventScript_Elli::
 	end
 
 SaffronCity_Text_Elli:
-	.string "I love VULPIX! :D$"
+	.string "אני פשוט מתה על וולפיקס!!$"
 
 SaffronCity_Text_Lass1:
-	.string "A little girl who is an expert at\n"
-	.string "mimicking people lives here.\p"
-	.string "She even mimics the people she's\n"
-	.string "conversing with. It's confusing.$"
+	.string "כאן גרה ילדה קטנה שהיא\n"
+	.string "מומחית בחיקוי אנשים.\p"
+	.string "היא מחקה אפילו את מי שהיא\n"
+	.string "מדברת איתו. זה מבלבל.$"
 
 SaffronCity_Text_Lass1_ReturnedPart:
-	.string "The COPYCAT girl looked unhappy.\p"
-	.string "She said she lost her favorite\n"
-	.string "POKé DOLL--CLEFAIRY.$"
+	.string "הילדה החקיינית נראתה עצובה.\p"
+	.string "היא אמרה שאיבדה את בובת הפוקימון\n"
+	.string "האהובה עליה, בובת הקלפרי.$"
 
 SaffronCity_Text_PokefanM:
-	.string "You came out from JOHTO?\p"
-	.string "You can zip back home if the\n"
-	.string "MAGNET TRAIN's running.$"
+	.string "באת מג'וטו?\p"
+	.string "אפשר לחזור הביתה בזריזות\n"
+	.string "אם הרכבת המגנטית פועלת.$"
 
 SaffronCity_Text_PokefanM_ReturnedPart:
-	.string "You came out from JOHTO?\p"
-	.string "You can zip back home by hopping\n"
-	.string "on the MAGNET TRAIN.$"
+	.string "באת מג'וטו?\p"
+	.string "אפשר לחזור הביתה בזריזות\n"
+	.string "אם קופצים על הרכבת המגנטית.$"
 
 SaffronCity_Text_CooltrainerM:
-	.string "I went to the GYM, raring for\n"
-	.string "battles against trainers…\p"
-	.string "It turns out, I stumbled into the\n"
-	.string "unused GYM next door.\p"
-	.string "Boy, I was pretty embarrassed.$"
+	.string "הלכתי למכון, להוט לקרבות\n"
+	.string "נגד מאמנים…\p"
+	.string "מסתבר שנכנסתי בטעות\n"
+	.string "למכון הנטוש שליד.\p"
+	.string "אוי, ממש התביישתי.$"
 
 SaffronCity_Text_CooltrainerF:
-	.string "This is SILPH CO., famous for\n"
-	.string "POKéMON merchandise.\p"
-	.string "In the past, TEAM ROCKET wanted\n"
-	.string "the company because of that.$"
+	.string "זו סילף בע”מ, המפורסמת\n"
+	.string "במוצרי פוקימון.\p"
+	.string "בעבר צוות רוקט רצה לשים יד\n"
+	.string "על החברה בגלל זה.$"
 
 SaffronCity_Text_Fisher:
-	.string "Chew… Chew…\p"
-	.string "I hear there's big trouble brewing\n"
-	.string "at the POWER PLANT.\p"
-	.string "Chew… Chew…$"
+	.string "לעיסה… לעיסה…\p"
+	.string "שמעתי שמתבשלת צרה גדולה\n"
+	.string "במפעל החשמל.\p"
+	.string "לעיסה… לעיסה…$"
 
 SaffronCity_Text_Fisher_ReturnedPart:
-	.string "Chew… Chew…\p"
-	.string "I hear there was big trouble at the\n"
-	.string "POWER PLANT.\p"
-	.string "Chew… Chew… Haaah, I'm full!$"
+	.string "לעיסה… לעיסה…\p"
+	.string "שמעתי שהייתה צרה גדולה\n"
+	.string "במפעל החשמל.\p"
+	.string "לעיסה… לעיסה… אההה, אני שבע!$"
 
 SaffronCity_Text_Youngster1:
-	.string "Going into an alley for the first\n"
-	.string "time makes me sorta anxious.$"
+	.string "להיכנס לסמטה בפעם הראשונה\n"
+	.string "קצת מלחיץ אותי.$"
 
 SaffronCity_Text_Youngster2:
-	.string "There's a place called the CONTEST\n"
-	.string "HALL in VIRIDIAN where trainers\l"
-	.string "gather from all over the place.$"
+	.string "בעיר וירידיאן יש מקום שנקרא\n"
+	.string "אולם התחרויות.\p"
+	.string "מאמנים מכל מקום מתאספים בו.$"
 
 SaffronCity_Text_Lass2:
-	.string "Our city was featured on a radio\n"
-	.string "program.\p"
-	.string "It's nice to hear praise for your\n"
-	.string "city, but it's a bit embarrassing\l"
-	.string "too.$"
+	.string "העיר שלנו הופיעה בתוכנית רדיו.\p"
+	.string "נחמד לשמוע שמשבחים את העיר\n"
+	.string "שלך, אבל זה גם קצת מביך.$"
 
 SaffronCity_Text_Sign:
-	.string "SAFFRON CITY\p"
-	.string "Shining, Golden Land of Commerce$"
+	.string "העיר סאפרון\p"
+	.string "ארץ המסחר הזהובה והנוצצת$"
 
 SaffronCity_Text_GymSign:
-	.string "SAFFRON CITY\n"
-	.string "POKéMON GYM\l"
-	.string "LEADER: SABRINA\p"
-	.string "The Master of Psychic POKéMON!$"
+	.string "מכון הפוקימון של העיר סאפרון\n"
+	.string "מנהיגה: סברינה\p"
+	.string "המומחית לפוקימונים מסוג על-חושי!$"
 
 SaffronCity_Text_FightingDojoSign:
-	.string "Everyone Welcome!\n"
-	.string "FIGHTING DOJO$"
+	.string "כולם מוזמנים!\n"
+	.string "דוג'ו הלחימה$"
 
 SaffronCity_Text_SilphCoSign:
-	.string "SILPH CO.\n"
-	.string "OFFICE BUILDING$"
+	.string "סילף בע”מ\n"
+	.string "בניין משרדים$"
 
 SaffronCity_Text_MrPsychicHouseSign:
-	.string "MR.PSYCHIC'S\n"
-	.string "HOUSE$"
+	.string "הבית של\n"
+	.string "מר על-חושי$"
 
 SaffronCity_Text_MagnetTrainStationSign:
-	.string "SAFFRON CITY\n"
-	.string "MAGNET TRAIN STATION$"
+	.string "העיר סאפרון\n"
+	.string "תחנת הרכבת המגנטית$"

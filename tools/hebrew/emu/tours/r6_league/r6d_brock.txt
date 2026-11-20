@@ -1,0 +1,18 @@
+# Dojo VIP rematch, Brock (local id 2 at (41,24)): SaffronCity_FightingDojoVIP_EventScript_Brock
+# (data/maps/SaffronCity_FightingDojoVIP_hns/scripts.inc): the YES/NO offer, YES, the battle won on
+# screen, the defeat line, the BP message.
+start saves/r6_league_base.sav
+include _dojo_base.txt
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 40 24
+face RIGHT
+snap D_face
+tap A 4
+scene D_offer 20000
+snap D_menu
+tap A 4
+scene D_pre 20000
+bwalk D_bintro input:HandleInputChooseAction
+snap D_action
+bwin D_win
+scene D_after 40000
+snap D_free

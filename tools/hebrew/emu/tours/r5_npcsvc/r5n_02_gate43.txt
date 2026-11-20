@@ -1,0 +1,40 @@
+# Route 43 gate Rocket toll (Gate_Route43_hns:1-60): an on-frame shakedown on every entry while
+# VAR_MAHOGANY_TOWN_STATE is 1..5; the money box at (0,0). ¥10000 -> ¥500 paid; ¥300 -> 'that's
+# all you got' (removemoney 500 leaves 0); ¥0 -> kicked out. Then the Rockets (7,3)/(7,8) and the
+# policeman (3,5) with his TM (FLAG_HIDE_MAHOGANY_COP cleared, FLAG_GOT_TM_FROM_MAHOGANY_COP clear).
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+flags FLAG_HIDE_MAHOGANY_ROCKETS FLAG_HIDE_MAHOGANY_COP FLAG_GOT_TM_FROM_MAHOGANY_COP
+ev setvar VAR_MAHOGANY_TOWN_STATE, 3; clearflag FLAG_HIDE_MAHOGANY_ROCKETS; clearflag FLAG_HIDE_MAHOGANY_COP; clearflag FLAG_GOT_TM_FROM_MAHOGANY_COP; end
+
+# --- 1. ¥10000: the toll is paid
+setmoney 10000
+warpto MAP_GATE_ROUTE43_HNS 7 5
+fieldwatch g1_toll free 6000 20
+expectmoney 9500
+
+# --- 2. the Rocket at (7,3) from (7,4)
+go UP
+face UP
+tap A 4
+fieldwatch g2_rocket free 3000
+
+# --- 3. the policeman (3,5) from (4,5): the TM
+warpto MAP_GATE_ROUTE43_HNS 4 5
+fieldwatch g3_toll free 6000 20
+face LEFT
+tap A 4
+fieldwatch g3_cop free 6000
+face LEFT
+tap A 4
+fieldwatch g3_cop_after free 3000
+
+# --- 4. ¥300: 'that's all you got'
+setmoney 300
+warpto MAP_GATE_ROUTE43_HNS 7 5
+fieldwatch g4_allyougot free 6000 20
+expectmoney 0
+
+# --- 5. ¥0: kicked out
+warpto MAP_GATE_ROUTE43_HNS 7 5
+fieldwatch g5_kickout free 6000 20

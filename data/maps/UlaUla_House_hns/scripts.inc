@@ -158,8 +158,8 @@ Alola_Ulaula_House_Phant_Movement_5:
 	step_end
 
 Alola_Ulaula_House_Phant_Text_0:
-	.string "Welcome, {PLAYER}.\p"
-	.string "Thanks again for playing!$"
+	.string "ברוך הבא, {PLAYER}.\p"
+	.string "ושוב, תודה ששיחקת!$"
 
 Alola_Ulaula_House_Phant_Text_1:
 	.string "I hope you're prepared…\n"
@@ -169,26 +169,26 @@ Alola_Ulaula_House_Phant_Text_2:
 	.string "Congratulations, {PLAYER}!$"
 
 Alola_Ulaula_House_Phant_Text_3:
-	.string "I think you've earned this.$"
+	.string "נראה לי שהרווחת את זה.$"
 
 Alola_Ulaula_House_Phant_Text_4:
-	.string "You received an EGG from PHANTONOMY!$"
+	.string "קיבלת ביצה מפנטונומי!$"
 
 Alola_Ulaula_House_Phant_Text_5:
-	.string "That EGG contains my favorite POKéMON.\p"
-	.string "Please, take good care of it…$"
+	.string "בביצה הזו נמצא הפוקימון האהוב עליי.\p"
+	.string "בבקשה, תשמור עליה היטב…$"
 
 Alola_Ulaula_House_Phant_Text_6:
 	.string "No worries, {PLAYER}.\n"
 	.string "Come back when you're ready…$"
 
 Alola_Ulaula_House_Phant_Text_7:
-	.string "I hope you enjoyed this taste of ALOLA.\p"
-	.string "I'm working on a full demake of the\n"
-	.string "region called ULTRA ECLIPSE.$"
+	.string "מקווה שנהנית מהטעימה הזו מאלולה.\p"
+	.string "אני עובד על גרסת רטרו מלאה של\n"
+	.string "האזור, שנקראת אולטרה אקליפס.$"
 
 Alola_Ulaula_House_Noivern_Text_0:
-	.string "Scree!$"
+	.string "סקרייי!$"
 
 Alola_Ulaula_House_Typholosion_Text_0:
-	.string "Graa!$"
+	.string "גראא!$"

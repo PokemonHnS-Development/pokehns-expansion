@@ -1,0 +1,506 @@
+[
+{
+"id": 18059,
+"species": "SPECIES_TORTERRA",
+"natdex": "NATIONAL_DEX_TORTERRA",
+"base": "SPECIES_TORTERRA",
+"form": false
+},
+{
+"id": 18068,
+"species": "SPECIES_INFERNAPE",
+"natdex": "NATIONAL_DEX_INFERNAPE",
+"base": "SPECIES_INFERNAPE",
+"form": false
+},
+{
+"id": 18125,
+"species": "SPECIES_BURMY_PLANT",
+"natdex": "NATIONAL_DEX_BURMY",
+"base": "SPECIES_BURMY_PLANT",
+"form": false
+},
+{
+"id": 18128,
+"species": "SPECIES_BURMY_SANDY",
+"natdex": "NATIONAL_DEX_BURMY",
+"base": "SPECIES_BURMY_PLANT",
+"form": true
+},
+{
+"id": 18131,
+"species": "SPECIES_BURMY_TRASH",
+"natdex": "NATIONAL_DEX_BURMY",
+"base": "SPECIES_BURMY_PLANT",
+"form": true
+},
+{
+"id": 18134,
+"species": "SPECIES_WORMADAM_PLANT",
+"natdex": "NATIONAL_DEX_WORMADAM",
+"base": "SPECIES_WORMADAM_PLANT",
+"form": false
+},
+{
+"id": 18137,
+"species": "SPECIES_WORMADAM_SANDY",
+"natdex": "NATIONAL_DEX_WORMADAM",
+"base": "SPECIES_WORMADAM_PLANT",
+"form": true
+},
+{
+"id": 18140,
+"species": "SPECIES_WORMADAM_TRASH",
+"natdex": "NATIONAL_DEX_WORMADAM",
+"base": "SPECIES_WORMADAM_PLANT",
+"form": true
+},
+{
+"id": 18181,
+"species": "SPECIES_DRIFLOON",
+"natdex": "NATIONAL_DEX_DRIFLOON",
+"base": "SPECIES_DRIFLOON",
+"form": false
+},
+{
+"id": 18304,
+"species": "SPECIES_MESPRIT",
+"natdex": "NATIONAL_DEX_MESPRIT",
+"base": "SPECIES_MESPRIT",
+"form": false
+},
+{
+"id": 18369,
+"species": "SPECIES_SERPERIOR",
+"natdex": "NATIONAL_DEX_SERPERIOR",
+"base": "SPECIES_SERPERIOR",
+"form": false
+},
+{
+"id": 18397,
+"species": "SPECIES_PATRAT",
+"natdex": "NATIONAL_DEX_PATRAT",
+"base": "SPECIES_PATRAT",
+"form": false
+},
+{
+"id": 18403,
+"species": "SPECIES_LILLIPUP",
+"natdex": "NATIONAL_DEX_LILLIPUP",
+"base": "SPECIES_LILLIPUP",
+"form": false
+},
+{
+"id": 18415,
+"species": "SPECIES_LIEPARD",
+"natdex": "NATIONAL_DEX_LIEPARD",
+"base": "SPECIES_LIEPARD",
+"form": false
+},
+{
+"id": 18454,
+"species": "SPECIES_ZEBSTRIKA",
+"natdex": "NATIONAL_DEX_ZEBSTRIKA",
+"base": "SPECIES_ZEBSTRIKA",
+"form": false
+},
+{
+"id": 18466,
+"species": "SPECIES_WOOBAT",
+"natdex": "NATIONAL_DEX_WOOBAT",
+"base": "SPECIES_WOOBAT",
+"form": false
+},
+{
+"id": 18472,
+"species": "SPECIES_DRILBUR",
+"natdex": "NATIONAL_DEX_DRILBUR",
+"base": "SPECIES_DRILBUR",
+"form": false
+},
+{
+"id": 18496,
+"species": "SPECIES_TYMPOLE",
+"natdex": "NATIONAL_DEX_TYMPOLE",
+"base": "SPECIES_TYMPOLE",
+"form": false
+},
+{
+"id": 18499,
+"species": "SPECIES_PALPITOAD",
+"natdex": "NATIONAL_DEX_PALPITOAD",
+"base": "SPECIES_PALPITOAD",
+"form": false
+},
+{
+"id": 18502,
+"species": "SPECIES_SEISMITOAD",
+"natdex": "NATIONAL_DEX_SEISMITOAD",
+"base": "SPECIES_SEISMITOAD",
+"form": false
+},
+{
+"id": 18593,
+"species": "SPECIES_MARACTUS",
+"natdex": "NATIONAL_DEX_MARACTUS",
+"base": "SPECIES_MARACTUS",
+"form": false
+},
+{
+"id": 18671,
+"species": "SPECIES_GOTHORITA",
+"natdex": "NATIONAL_DEX_GOTHORITA",
+"base": "SPECIES_GOTHORITA",
+"form": false
+},
+{
+"id": 18686,
+"species": "SPECIES_DUCKLETT",
+"natdex": "NATIONAL_DEX_DUCKLETT",
+"base": "SPECIES_DUCKLETT",
+"form": false
+},
+{
+"id": 18692,
+"species": "SPECIES_VANILLITE",
+"natdex": "NATIONAL_DEX_VANILLITE",
+"base": "SPECIES_VANILLITE",
+"form": false
+},
+{
+"id": 18734,
+"species": "SPECIES_FOONGUS",
+"natdex": "NATIONAL_DEX_FOONGUS",
+"base": "SPECIES_FOONGUS",
+"form": false
+},
+{
+"id": 18737,
+"species": "SPECIES_AMOONGUSS",
+"natdex": "NATIONAL_DEX_AMOONGUSS",
+"base": "SPECIES_AMOONGUSS",
+"form": false
+},
+{
+"id": 18889,
+"species": "SPECIES_HYDREIGON",
+"natdex": "NATIONAL_DEX_HYDREIGON",
+"base": "SPECIES_HYDREIGON",
+"form": false
+},
+{
+"id": 18895,
+"species": "SPECIES_VOLCARONA",
+"natdex": "NATIONAL_DEX_VOLCARONA",
+"base": "SPECIES_VOLCARONA",
+"form": false
+},
+{
+"id": 18966,
+"species": "SPECIES_FENNEKIN",
+"natdex": "NATIONAL_DEX_FENNEKIN",
+"base": "SPECIES_FENNEKIN",
+"form": false
+},
+{
+"id": 18969,
+"species": "SPECIES_BRAIXEN",
+"natdex": "NATIONAL_DEX_BRAIXEN",
+"base": "SPECIES_BRAIXEN",
+"form": false
+},
+{
+"id": 18972,
+"species": "SPECIES_DELPHOX",
+"natdex": "NATIONAL_DEX_DELPHOX",
+"base": "SPECIES_DELPHOX",
+"form": false
+},
+{
+"id": 18984,
+"species": "SPECIES_GRENINJA",
+"natdex": "NATIONAL_DEX_GRENINJA",
+"base": "SPECIES_GRENINJA",
+"form": false
+},
+{
+"id": 18986,
+"species": "SPECIES_GRENINJA_BATTLE_BOND",
+"natdex": "NATIONAL_DEX_GRENINJA",
+"base": "SPECIES_GRENINJA",
+"form": true
+},
+{
+"id": 18988,
+"species": "SPECIES_GRENINJA_ASH",
+"natdex": "NATIONAL_DEX_GRENINJA",
+"base": "SPECIES_GRENINJA",
+"form": true
+},
+{
+"id": 19037,
+"species": "SPECIES_PYROAR",
+"natdex": "NATIONAL_DEX_PYROAR",
+"base": "SPECIES_PYROAR",
+"form": false
+},
+{
+"id": 19190,
+"species": "SPECIES_GOODRA",
+"natdex": "NATIONAL_DEX_GOODRA",
+"base": "SPECIES_GOODRA",
+"form": false
+},
+{
+"id": 19237,
+"species": "SPECIES_AVALUGG",
+"natdex": "NATIONAL_DEX_AVALUGG",
+"base": "SPECIES_AVALUGG",
+"form": false
+},
+{
+"id": 19241,
+"species": "SPECIES_AVALUGG_HISUI",
+"natdex": "NATIONAL_DEX_AVALUGG_HISUI",
+"base": "SPECIES_AVALUGG_HISUI",
+"form": false
+},
+{
+"id": 19308,
+"species": "SPECIES_POPPLIO",
+"natdex": "NATIONAL_DEX_POPPLIO",
+"base": "SPECIES_POPPLIO",
+"form": false
+},
+{
+"id": 19339,
+"species": "SPECIES_VIKAVOLT",
+"natdex": "NATIONAL_DEX_VIKAVOLT",
+"base": "SPECIES_VIKAVOLT",
+"form": false
+},
+{
+"id": 19341,
+"species": "SPECIES_VIKAVOLT_TOTEM",
+"natdex": "NATIONAL_DEX_VIKAVOLT",
+"base": "SPECIES_VIKAVOLT",
+"form": true
+},
+{
+"id": 19352,
+"species": "SPECIES_ORICORIO_BAILE",
+"natdex": "NATIONAL_DEX_ORICORIO",
+"base": "SPECIES_ORICORIO_BAILE",
+"form": false
+},
+{
+"id": 19355,
+"species": "SPECIES_ORICORIO_POM_POM",
+"natdex": "NATIONAL_DEX_ORICORIO",
+"base": "SPECIES_ORICORIO_BAILE",
+"form": true
+},
+{
+"id": 19358,
+"species": "SPECIES_ORICORIO_PAU",
+"natdex": "NATIONAL_DEX_ORICORIO",
+"base": "SPECIES_ORICORIO_BAILE",
+"form": true
+},
+{
+"id": 19361,
+"species": "SPECIES_ORICORIO_SENSU",
+"natdex": "NATIONAL_DEX_ORICORIO",
+"base": "SPECIES_ORICORIO_BAILE",
+"form": true
+},
+{
+"id": 19371,
+"species": "SPECIES_ROCKRUFF",
+"natdex": "NATIONAL_DEX_ROCKRUFF",
+"base": "SPECIES_ROCKRUFF",
+"form": false
+},
+{
+"id": 19373,
+"species": "SPECIES_ROCKRUFF_OWN_TEMPO",
+"natdex": "NATIONAL_DEX_ROCKRUFF",
+"base": "SPECIES_ROCKRUFF",
+"form": true
+},
+{
+"id": 19435,
+"species": "SPECIES_BOUNSWEET",
+"natdex": "NATIONAL_DEX_BOUNSWEET",
+"base": "SPECIES_BOUNSWEET",
+"form": false
+},
+{
+"id": 19438,
+"species": "SPECIES_STEENEE",
+"natdex": "NATIONAL_DEX_STEENEE",
+"base": "SPECIES_STEENEE",
+"form": false
+},
+{
+"id": 19441,
+"species": "SPECIES_TSAREENA",
+"natdex": "NATIONAL_DEX_TSAREENA",
+"base": "SPECIES_TSAREENA",
+"form": false
+},
+{
+"id": 19590,
+"species": "SPECIES_POIPOLE",
+"natdex": "NATIONAL_DEX_POIPOLE",
+"base": "SPECIES_POIPOLE",
+"form": false
+},
+{
+"id": 19593,
+"species": "SPECIES_NAGANADEL",
+"natdex": "NATIONAL_DEX_NAGANADEL",
+"base": "SPECIES_NAGANADEL",
+"form": false
+},
+{
+"id": 19659,
+"species": "SPECIES_ROOKIDEE",
+"natdex": "NATIONAL_DEX_ROOKIDEE",
+"base": "SPECIES_ROOKIDEE",
+"form": false
+},
+{
+"id": 19683,
+"species": "SPECIES_NICKIT",
+"natdex": "NATIONAL_DEX_NICKIT",
+"base": "SPECIES_NICKIT",
+"form": false
+},
+{
+"id": 19686,
+"species": "SPECIES_THIEVUL",
+"natdex": "NATIONAL_DEX_THIEVUL",
+"base": "SPECIES_THIEVUL",
+"form": false
+},
+{
+"id": 19704,
+"species": "SPECIES_DREDNAW",
+"natdex": "NATIONAL_DEX_DREDNAW",
+"base": "SPECIES_DREDNAW",
+"form": false
+},
+{
+"id": 19710,
+"species": "SPECIES_YAMPER",
+"natdex": "NATIONAL_DEX_YAMPER",
+"base": "SPECIES_YAMPER",
+"form": false
+},
+{
+"id": 19716,
+"species": "SPECIES_ROLYCOLY",
+"natdex": "NATIONAL_DEX_ROLYCOLY",
+"base": "SPECIES_ROLYCOLY",
+"form": false
+},
+{
+"id": 19719,
+"species": "SPECIES_CARKOL",
+"natdex": "NATIONAL_DEX_CARKOL",
+"base": "SPECIES_CARKOL",
+"form": false
+},
+{
+"id": 19722,
+"species": "SPECIES_COALOSSAL",
+"natdex": "NATIONAL_DEX_COALOSSAL",
+"base": "SPECIES_COALOSSAL",
+"form": false
+},
+{
+"id": 19825,
+"species": "SPECIES_IMPIDIMP",
+"natdex": "NATIONAL_DEX_IMPIDIMP",
+"base": "SPECIES_IMPIDIMP",
+"form": false
+},
+{
+"id": 19854,
+"species": "SPECIES_SNOM",
+"natdex": "NATIONAL_DEX_SNOM",
+"base": "SPECIES_SNOM",
+"form": false
+},
+{
+"id": 19869,
+"species": "SPECIES_INDEEDEE_M",
+"natdex": "NATIONAL_DEX_INDEEDEE",
+"base": "SPECIES_INDEEDEE_M",
+"form": false
+},
+{
+"id": 19872,
+"species": "SPECIES_INDEEDEE_F",
+"natdex": "NATIONAL_DEX_INDEEDEE",
+"base": "SPECIES_INDEEDEE_M",
+"form": true
+},
+{
+"id": 19890,
+"species": "SPECIES_DRACOZOLT",
+"natdex": "NATIONAL_DEX_DRACOZOLT",
+"base": "SPECIES_DRACOZOLT",
+"form": false
+},
+{
+"id": 19893,
+"species": "SPECIES_ARCTOZOLT",
+"natdex": "NATIONAL_DEX_ARCTOZOLT",
+"base": "SPECIES_ARCTOZOLT",
+"form": false
+},
+{
+"id": 19896,
+"species": "SPECIES_DRACOVISH",
+"natdex": "NATIONAL_DEX_DRACOVISH",
+"base": "SPECIES_DRACOVISH",
+"form": false
+},
+{
+"id": 19899,
+"species": "SPECIES_ARCTOVISH",
+"natdex": "NATIONAL_DEX_ARCTOVISH",
+"base": "SPECIES_ARCTOVISH",
+"form": false
+},
+{
+"id": 20016,
+"species": "SPECIES_OINKOLOGNE_M",
+"natdex": "NATIONAL_DEX_OINKOLOGNE",
+"base": "SPECIES_OINKOLOGNE_M",
+"form": false
+},
+{
+"id": 20019,
+"species": "SPECIES_OINKOLOGNE_F",
+"natdex": "NATIONAL_DEX_OINKOLOGNE",
+"base": "SPECIES_OINKOLOGNE_M",
+"form": true
+},
+{
+"id": 20037,
+"species": "SPECIES_PAWMO",
+"natdex": "NATIONAL_DEX_PAWMO",
+"base": "SPECIES_PAWMO",
+"form": false
+},
+{
+"id": 20052,
+"species": "SPECIES_FIDOUGH",
+"natdex": "NATIONAL_DEX_FIDOUGH",
+"base": "SPECIES_FIDOUGH",
+"form": false
+}
+]

@@ -305,28 +305,24 @@ FallarborTown_BattleTentLobby_hns_EventScript_ExitRules::
 	end
 
 FallarborTown_BattleTentLobby_hns_Text_MakeThinkImJustKid:
-	.string "Fufufufufu.\p"
-	.string "I'm going to make everyone think\n"
-	.string "I'm just a kid and let them play down.\p"
-	.string "Then, I'll shock them and grab\n"
-	.string "the title!$"
+	.string "פופופופופו.\p"
+	.string "אני אגרום לכולם לחשוב שאני סתם ילד,\n"
+	.string "כדי שיזלזלו בי.\p"
+	.string "ואז אפתיע אותם ואחטוף את התואר!$"
 
 FallarborTown_BattleTentLobby_hns_Text_FallarborTentMyFavorite:
-	.string "You know how BATTLE TENTS offer\n"
-	.string "different events?\p"
-	.string "My favorite is definitely the red\n"
-	.string "colored TENT.\p"
-	.string "I think it's fantastic how TRAINERS\n"
-	.string "try to win with all their faith in\l"
-	.string "their POKéMON.$"
+	.string "ידעת שאוהלי הקרב\n"
+	.string "מציעים אירועים שונים?\p"
+	.string "האהוב עליי הוא בלי ספק האוהל האדום.\p"
+	.string "לדעתי זה נפלא איך שמאמנים מנסים לנצח\n"
+	.string "מתוך אמונה מלאה בפוקימונים שלהם.$"
 
 FallarborTown_BattleTentLobby_hns_Text_CameToCampOut:
-	.string "I heard something about some tent,\n"
-	.string "so I came to camp out.\p"
-	.string "I didn't know that tents these days\n"
-	.string "are so luxurious!\p"
-	.string "Since I'm here, I may as well try\n"
-	.string "my hand at battling!$"
+	.string "שמעתי משהו על איזה אוהל,\n"
+	.string "אז באתי לעשות קמפינג.\p"
+	.string "לא ידעתי שאוהלים בימינו כל כך מפוארים!\p"
+	.string "אם אני כבר כאן,\n"
+	.string "למה לא לנסות את כוחי בקרבות!$"
 
 FallarborTown_BattleTentLobby_hns_Text_ScottLookingForSomeone:
 	.string "SCOTT: Hi, {PLAYER}{KUN}!\n"

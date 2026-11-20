@@ -1,0 +1,74 @@
+# r11 screen check: Kenya from the Route 35 gate officer, her mail taken and sent to the PC,
+# then the PC MAILBOX list row and the 'what to do with X's mail' message for that mail.
+start saves/mail_en_base.sav
+include ../r11_leaders/_base.txt
+ev callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; special CalculatePlayerPartyCount; setvar VAR_KENYA, 0; end
+mails
+warpto MAP_GATE_GOLDENROD_CITY_ROUTE35_HNS 3 6
+face UP
+tap A 4
+scene vk_offer 6000
+pickd 0
+scene vk_yes 12000
+snap vk_free
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap vk_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+snap vk_actions_mail
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+snap vk_sendpc
+tap A 4
+waitkey 600
+snap vk_sent
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+mails
+evstart lockall; special PlayerPC; waitstate; releaseall; end
+waittaskx PlayerPCProcessMenuInput 900
+waitquiet
+snap vk_pc_menu
+press DOWN
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap vk_list_00
+press DOWN
+snap vk_list_01
+press DOWN
+snap vk_list_02
+press DOWN
+snap vk_list_03
+press UP
+waitquiet
+snap vk_list_kenya
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap vk_opts
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap vk_read
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap vk_back

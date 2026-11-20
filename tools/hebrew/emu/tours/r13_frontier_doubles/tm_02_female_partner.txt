@@ -1,0 +1,64 @@
+# r13 Battle Tower multis with a woman as the lobby partner: Lass CYBIL (frontier trainer 3) is
+# chosen in the partner room, then multi battle 1: the partner's send-out line
+# (sText_InGamePartnerSentOutZGoN, {B_PARTNER_NAME_WITH_CLASS}) and her Pokemon's move lines.
+start saves/r13/palace_doubles/multis_base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+include ../../scripts/r2_battle_frontier_facilities/_bf_testparty.txt
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 14 6
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+snap tf_00_lobby
+tap A 0
+drive tf_in menu
+pick 1
+drive tf_info menu
+pick 0
+drive tf_lv menu
+pick 0
+drive tf_sel task:Task_HandleChooseMonInput 20
+waitquiet
+snap tf_ps_01_start
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+snap tf_ps_02_two
+seek 8 @gPartyMenu+9@ 6 DOWN
+tap A 0
+drive tf_save menu 10
+pick 0
+saveyes tf_savebox
+drive tf_go task:Task_MoveElevator 30 9000
+snap tf_elev
+drive tf_room free 30 9000
+snap tf_room_00
+face UP
+tap A 0
+drive tf_att menu 10
+pick 1
+drive tf_att_no free 10
+go DOWN 7
+face DOWN
+ptalk tf_p003 4 3 236 57
+fids 4 3
+fids 16 236 57
+face DOWN
+tap A 0
+drive tf_fin menu 10
+pick 0
+drive tf_fin_acc task:Task_MoveElevator 30 9000
+fids 0 185 66 191 255 55 43 147 109 231 52 74 97 131 188
+waitmap tf_corridor MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_CORRIDOR_HNS
+waitmap tf_mroom MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_BATTLE_ROOM_HNS
+fastbattles off
+drive tf_b1_in battle 20 9000
+bwin2 tf_b1
+drivex tf_w1 menu 30 9000

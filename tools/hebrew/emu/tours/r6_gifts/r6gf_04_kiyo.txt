@@ -1,0 +1,39 @@
+# Mt. Mortar B1F, Karate King Kiyo (39,8): MountMortar4_EventScript_Kiyo (MtMortar_B1F_hns/
+# scripts.inc:29-46): intro pages, trainerbattle_no_intro TRAINER_KIYO_HNS (battle intro, win with
+# the defeat line and the prize), the Tyrogue reward pages, 'received' with the fanfare
+# (Common_EventScript_GiftMon), the nickname YES/NO: NO -> the after pages; from a savestate, YES ->
+# the naming screen (OK with the default name) -> the after pages; then talking again.
+start saves/r6_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+ev clearflag FLAG_BEAT_KIYO; clearflag FLAG_GOT_TYROGUE; cleartrainerflag TRAINER_KIYO_HNS; end
+warpto MAP_MT_MORTAR_B1F_HNS 39 9
+face UP
+snap ky_field
+tap A 4
+scene ky_pre 6000
+bwalk ky_intro input:HandleInputChooseAction
+snap ky_action
+bwin ky_win
+scene ky_after 12000
+ss ky_nick
+pickd 1
+scene ky_no 6000
+snap ky_no_end
+face UP
+tap A 4
+scene ky_again 6000
+snap ky_again_end
+sl ky_nick
+pickd 0
+waitcb2x CB2_NamingScreen 1200
+waitnaming
+snap ky_naming
+press START
+waitnaming
+snap ky_naming_ok
+press A
+waitcb2x CB2_Overworld 900
+scene ky_yes 6000
+snap ky_yes_end
+partyinfo

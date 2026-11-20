@@ -1,0 +1,60 @@
+# Tim, Olivine City house 1 (4,4): INGAME_TRADE_VOLTORB (src/data/trade.h:1066-1080), Voltorb 'Billy' OT Tim for Krabby
+# (data/maps/OlivineCity_House1_hns/scripts.inc:4-47).
+# Talk: NO (decline line); YES + the trade box + a wrong Pokemon (party slot 0, Typhlosion);
+# YES + the trade box + Krabby (party slot 2) + the trade scene + the
+# take-care line; talk again (trade-completed line). Then the party menu and the summary of the
+# received Pokemon (INFO, then every page with RIGHT).
+start saves/r5_trades_base.sav
+include _setup.txt
+
+warpto MAP_OLIVINE_CITY_HOUSE1_HNS 4 5
+face UP
+tap A 4
+fieldwatch tim_ask menu 6000
+pick 1
+fieldwatch tim_decline free 3000
+face UP
+tap A 4
+fieldwatch tim_ask2 menu 6000
+pick 0
+include _pickparty.txt
+snap tim_box
+boxpick 1 0 tim_wrong_typhlosion
+waitcb2x CB2_Overworld 900
+fieldwatch tim_wrong free 3000
+face UP
+tap A 4
+fieldwatch tim_ask3 menu 6000
+pick 0
+include _pickparty.txt
+snap tim_box3
+boxpick 1 2 tim_pick_krabby
+waitcb2x CB2_InGameTrade 900
+scenewatch tim_scene CB2_Overworld 6000 0 160 A 150
+waitcb2x CB2_Overworld 900
+fieldwatch tim_takecare free 3000
+face UP
+tap A 4
+fieldwatch tim_completed free 3000
+
+# --- the party and the received Pokemon's summary (slot 2)
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 2 DOWN
+snap tim_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap tim_party_action
+tap A 4
+waitcb2x pokemon_summary_screen:MainCB2 900
+sumwait
+snap tim_sum_info
+sumkey RIGHT
+snap tim_sum_p2
+sumkey RIGHT
+snap tim_sum_p3
+sumkey RIGHT
+snap tim_sum_p4

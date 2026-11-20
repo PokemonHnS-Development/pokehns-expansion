@@ -1,0 +1,6 @@
+# r6 Johto story tours: base include (not a tour). CONTINUE from the rung named by the tour's
+# `start` line, FAST BATTLES off so bwalk / bwin photograph the messages that do not wait for A,
+# wild encounters off (OW_FLAG_NO_ENCOUNTER = FLAG_DISABLE_ENCOUNTERS) so walks are not interrupted.
+include ../../scripts/continue.txt
+fastbattles off
+ev setflag FLAG_DISABLE_ENCOUNTERS; end

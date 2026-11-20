@@ -1,0 +1,12 @@
+# Stand-in (unverified reach): the party menu with an empty party: 'you have no Pokemon'
+# (sActionStringTable[PARTY_MSG_NO_POKEMON], DisplayPartyMenuStdMessage src/party_menu.c:2782-2790).
+# The party is zeroed (gPlayerPartyCount 0), then START > POKEMON.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+partyfree 0
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waitquiet
+20 -
+snap fo_np_01_no_pokemon

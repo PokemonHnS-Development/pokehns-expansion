@@ -1,0 +1,116 @@
+# Route 35 / Goldenrod gate, officer Randy (3,5): Gate_GoldenrodCity_Route35_EventScript_Randy
+# (Gate_GoldenrodCity_Route35_hns/scripts.inc:4-45) at VAR_KENYA 0 with a party of one: RandyAskFavor
+# YES/NO, NO -> RandyNeverMind; again, YES -> RandyThanks, givenamedmon 1 (Kenya, Spearow holding
+# Retro Mail), 'received' with the fanfare. Kenya's summary and party MAIL > READ. Randy at
+# VAR_KENYA 1 (RandyWeirdTree). Route 31 sleepy man (18,11) at VAR_KENYA 1: SleepyManGotMail
+# YES/NO, NO -> SleepyManFail; again, YES -> HandOverMailMon, ReadingMail, TM Rest, DescribeRest
+# (Route31_hns/scripts.inc:52-80). Randy at VAR_KENYA 2 (ThanksForDelivery, HP Up,
+# RandyMyPalSnoozing), then at 3 (RandyPostKenya).
+start saves/r6r3_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+ev setvar VAR_KENYA, 0; end
+warpto MAP_GATE_GOLDENROD_CITY_ROUTE35_HNS 3 6
+face UP
+snap ky_field
+tap A 4
+scene ky_offer 6000
+pickd 1
+scene ky_no 6000
+snap ky_no_end
+face UP
+tap A 4
+scene ky_offer2 6000
+pickd 0
+scene ky_yes 12000
+snap ky_free
+vars VAR_KENYA
+# party > Kenya: SUMMARY (INFO, SKILLS, MOVES), then MAIL (row 3: Kenya knows Fly) > READ, in one party-menu visit
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap DOWN 4
+waitquiet
+snap sum_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap sum_actions
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+waitquiet
+snap sum_info
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintSkillsPage 120
+waitquiet
+snap sum_skills
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintBattleMoves 120
+waitquiet
+snap sum_moves
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+snap ml_actions
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap ml_actions_mail
+tap A 4
+waitquiet
+snap ml_mail_menu
+tap A 4
+waitcb2x CB2_MailRead 600
+30 -
+snap ml_read 300
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waitquiet
+snap ml_back
+tap B 4
+waitquiet
+tap B 4
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+closeall
+# Randy at VAR_KENYA 1
+warpto MAP_GATE_GOLDENROD_CITY_ROUTE35_HNS 3 6
+face UP
+tap A 4
+scene ky_state1 6000
+snap ky_state1_end
+ss ky_state1
+# Route 31 sleepy man at VAR_KENYA 1
+warpto MAP_ROUTE31_HNS 18 12
+face UP
+snap sm_field
+tap A 4
+scene sm_offer 6000
+pickd 1
+scene sm_no 6000
+snap sm_no_end
+face UP
+tap A 4
+scene sm_offer2 6000
+pickd 0
+scene sm_yes 15000
+snap sm_free
+vars VAR_KENYA
+partyinfo
+# Randy at VAR_KENYA 2, then 3
+warpto MAP_GATE_GOLDENROD_CITY_ROUTE35_HNS 3 6
+face UP
+tap A 4
+scene ky_state2 12000
+snap ky_state2_end
+vars VAR_KENYA
+face UP
+tap A 4
+scene ky_state3 6000
+snap ky_state3_end

@@ -1,0 +1,22 @@
+# Pokegear phone list: the location window under the list shows the selected caller's map section,
+# or 'unknown' (gText_Unknown) when it is MAPSEC_NONE (PrintMatchCallLocation,
+# src/pokenav_match_call_gfx.c:1055-1068). No caller registered in these saves has MAPSEC_NONE, so the
+# second row's map section is set to MAPSEC_NONE in RAM (mcmapsec, a stand-in), then the cursor moves
+# onto it and the game prints the location itself.
+# Run: scripts/r16_pokegear/gear16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_pokegear [--clip]
+# Save: r3_calls/base.sav (HNS_SAVES=hns-tools/emu/saves_screens).
+start saves/r3_calls/base.sav
+include ../../scripts/continue.txt
+warpto MAP_CHERRYGROVE_CITY_HNS 25 9
+waitctl 600
+mcclear
+mcreg all
+mclistopen
+snap gu_list_row0
+mcmapsec 1 125                            # MAPSEC_NONE in the IS_HNS branch of include/constants/region_map_sections.h
+press DOWN
+waitnav
+snap gu_row1_unknown
+press UP
+waitnav
+snap gu_row0_again

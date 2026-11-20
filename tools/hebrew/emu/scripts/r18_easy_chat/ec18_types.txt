@@ -1,0 +1,234 @@
+# Every Easy Chat screen type Heart & Soul can reach, opened on the Hebrew build with the game's own
+# script (Common_ShowEasyChatScreen, data/event_scripts.s:1187) and the type in VAR_0x8004, the way
+# the scripts that reach them set it (the feelings man's BATTLE_START/WON/LOST, the contest and
+# Battle Tower reporters' interviews, the apprentice's win speech, the mart questionnaire; the Day
+# Care INTERVIEW is ec18_ui.txt and MAIL is ec18_mail.txt). In each: heapstat with the screen open,
+# the alphabet keyboard, the longest list (mem) paged to its end, the group keyboard, one word put
+# into the first slot, and the YES/NO box of the exit prompt (the contest interview and the
+# apprentice cannot be left: B shows 'you cannot quit here', so they are confirmed with OK -> YES);
+# then back to the field. BATTLE_WON gets six words and the OK prompt, the C3 case (its YES/NO box
+# sat over the third row's first word).
+start saves/ladder6_postgame.sav
+include ../continue.txt
+ev setflag FLAG_SYS_GAME_CLEAR; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+
+# EASY_CHAT_TYPE_BATTLE_START
+evstart setvar VAR_0x8004, EASY_CHAT_TYPE_BATTLE_START; call Common_ShowEasyChatScreen; end
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+heapstat start
+ecstate
+snap ty_start_screen
+ec A
+ecstate
+snap ty_start_kbd
+ec SELECT
+ecletter 2 0
+snap ty_start_abc
+ec A
+eclist ty_start_mem 80
+ec B
+ec SELECT
+ec B
+ecputword 0 0 EC_GROUP_FEELINGS EC_WORD_HAPPY ty_start_put
+snap ty_start_1word
+ec B
+ecstate
+snap ty_start_quit
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+
+# EASY_CHAT_TYPE_BATTLE_WON
+evstart setvar VAR_0x8004, EASY_CHAT_TYPE_BATTLE_WON; call Common_ShowEasyChatScreen; end
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+heapstat won
+ecstate
+snap ty_won_screen
+ec A
+ecstate
+snap ty_won_kbd
+ec SELECT
+ecletter 2 0
+snap ty_won_abc
+ec A
+eclist ty_won_mem 80
+ec B
+ec SELECT
+ec B
+ecputword 0 0 EC_GROUP_FEELINGS EC_WORD_HAPPY ty_won_put
+snap ty_won_1word
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_SHELL_ARMOR
+ecputword 1 0 EC_GROUP_GREETINGS EC_WORD_WELCOME
+ecputword 1 1 EC_GROUP_TRAINER EC_WORD_SP_ABILITY
+ecputword 2 0 EC_GROUP_FEELINGS EC_WORD_MISHEARD
+ecputword 2 1 EC_GROUP_VOICES EC_WORD_WAAAH
+snap ty_won_6words
+ecbutton 2
+ec A
+ecstate
+snap ty_won_confirm
+ec DOWN
+tap A 0
+ecwait
+ec B
+ecstate
+snap ty_won_quit
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+
+# EASY_CHAT_TYPE_BATTLE_LOST
+evstart setvar VAR_0x8004, EASY_CHAT_TYPE_BATTLE_LOST; call Common_ShowEasyChatScreen; end
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+heapstat lost
+ecstate
+snap ty_lost_screen
+ec A
+ecstate
+snap ty_lost_kbd
+ec SELECT
+ecletter 2 0
+snap ty_lost_abc
+ec A
+eclist ty_lost_mem 80
+ec B
+ec SELECT
+ec B
+ecputword 0 0 EC_GROUP_FEELINGS EC_WORD_HAPPY ty_lost_put
+snap ty_lost_1word
+ec B
+ecstate
+snap ty_lost_quit
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+
+# EASY_CHAT_TYPE_CONTEST_INTERVIEW
+evstart setvar VAR_0x8004, EASY_CHAT_TYPE_CONTEST_INTERVIEW; setvar VAR_0x8005, 0; setvar VAR_0x8006, 0; call Common_ShowEasyChatScreen; end
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+heapstat contest
+ecstate
+snap ty_contest_screen
+ec A
+ecstate
+snap ty_contest_kbd
+ec SELECT
+ecletter 2 0
+snap ty_contest_abc
+ec A
+eclist ty_contest_mem 80
+ec B
+ec SELECT
+ec B
+ecputword 0 0 EC_GROUP_FEELINGS EC_WORD_HAPPY ty_contest_put
+snap ty_contest_1word
+ec B
+ecstate
+snap ty_contest_cantquit
+ec A
+ecstate
+ecbutton 2
+ec A
+ecstate
+snap ty_contest_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+
+# EASY_CHAT_TYPE_BATTLE_TOWER_INTERVIEW
+evstart setvar VAR_0x8004, EASY_CHAT_TYPE_BATTLE_TOWER_INTERVIEW; setvar VAR_0x8005, 0; call Common_ShowEasyChatScreen; end
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+heapstat towerint
+ecstate
+snap ty_towerint_screen
+ec A
+ecstate
+snap ty_towerint_kbd
+ec SELECT
+ecletter 2 0
+snap ty_towerint_abc
+ec A
+eclist ty_towerint_mem 80
+ec B
+ec SELECT
+ec B
+ecputword 0 0 EC_GROUP_FEELINGS EC_WORD_HAPPY ty_towerint_put
+snap ty_towerint_1word
+ec B
+ecstate
+snap ty_towerint_quit
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+
+# EASY_CHAT_TYPE_APPRENTICE
+evstart setvar VAR_0x8004, EASY_CHAT_TYPE_APPRENTICE; call Common_ShowEasyChatScreen; end
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+heapstat apprentice
+ecstate
+snap ty_apprentice_screen
+ec A
+ecstate
+snap ty_apprentice_kbd
+ec SELECT
+ecletter 2 0
+snap ty_apprentice_abc
+ec A
+eclist ty_apprentice_mem 80
+ec B
+ec SELECT
+ec B
+ecputword 0 0 EC_GROUP_FEELINGS EC_WORD_HAPPY ty_apprentice_put
+snap ty_apprentice_1word
+ec B
+ecstate
+snap ty_apprentice_cantquit
+ec A
+ecstate
+ecbutton 2
+ec A
+ecstate
+snap ty_apprentice_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+
+# EASY_CHAT_TYPE_QUESTIONNAIRE
+evstart setvar VAR_0x8004, EASY_CHAT_TYPE_QUESTIONNAIRE; call Common_ShowEasyChatScreen; end
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+heapstat quest
+ecstate
+snap ty_quest_screen
+ec A
+ecstate
+snap ty_quest_kbd
+ec SELECT
+ecletter 2 0
+snap ty_quest_abc
+ec A
+eclist ty_quest_mem 80
+ec B
+ec SELECT
+ec B
+ecputword 0 0 EC_GROUP_FEELINGS EC_WORD_HAPPY ty_quest_put
+snap ty_quest_1word
+ec B
+ecstate
+snap ty_quest_quit
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900

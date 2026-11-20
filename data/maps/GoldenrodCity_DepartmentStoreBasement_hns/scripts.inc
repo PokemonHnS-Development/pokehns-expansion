@@ -182,17 +182,17 @@ GoldenrodCity_DepartmentStoreBasement_Movement_Boulder3:
 
 
 GoldenrodDeptStore_Text_BlackBeltMove:
-	.string "MACHOKE, help us move that boulder!$"
+	.string "מאצ'וק, תעזור לנו להזיז את הסלע!$"
 
 GoldenrodDeptStore_Text_B1FBlackBelt1:
-    .string "Hey, kid! You're holding us up!\p"
-    .string "Our policy is to work behind the\n"
-    .string "scenes where no one can see us!$"
+    .string "היי, ילד! אתה מעכב אותנו!\p"
+    .string "המדיניות שלנו היא לעבוד מאחורי\n"
+    .string "הקלעים, איפה שאף אחד לא רואה!$"
 
 GoldenrodDeptStore_Text_B1FBlackBelt2:
-    .string "I lose my passion for work if\n"
-    .string "someone's watching.\p"
-    .string "Come on, kid, scoot!$"
+    .string "אני מאבד את החשק לעבוד כשמישהו\n"
+    .string "מסתכל.\p"
+    .string "נו, ילד, זוז מפה!$"
 
 GoldenrodDeptStore_Text_B1FBlackBelt3:
     .string "Oohah! Oohah!\p"
@@ -200,9 +200,9 @@ GoldenrodDeptStore_Text_B1FBlackBelt3:
     .string "I'm working here!$"
 
 GoldenrodDeptStore_Text_B1FBlackBelt3After:
-    .string "Oohah! Oohah!\p"
-    .string "The stuff on the ground's junk.\p"
-    .string "Take it if you want it!$"
+    .string "או-הה! או-הה!\p"
+    .string "הדברים שעל הרצפה הם זבל.\p"
+    .string "קח אותם אם אתה רוצה!$"
 
 GoldenrodDeptStore_Text_B1FMachoke:
-    .string "MACHOKE: Maaacho!$"
+    .string "מאצ'וק: מאאאצ'ו!$"

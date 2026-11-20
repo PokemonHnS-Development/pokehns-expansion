@@ -1,0 +1,23 @@
+# r11 withdraw: the AI withdraw line (sText_Trainer1WithdrewPkmn, src/battle_message.c:129) from
+# field trainers, forced with `aiswitch` (scripts/r11_withdraw/r11wd.py: the AI's own switch path
+# through gDynamicAiSwitchFunc), for two men, two women and a single trainer's double battle
+# (Twins: both foes switch, the battler-3 line is still sText_Trainer1WithdrewPkmn, :2603-2606).
+# Ladder 6 with a Lv 100 Mewtwo in slot 0 (r6_league/_base.txt); `trainer` is the r6 field-trainer op.
+start saves/r11/tents_withdraw/wd_base.sav
+include ../r6_league/_base.txt
+tbase
+# man: Bird Keeper (Route 27, 4 Pokemon)
+aiswitch
+trainer Route27_hns 4
+# man: Pokemaniac (Route 44, 3 Pokemon)
+aiswitch
+trainer Route44_hns 4
+# woman: Picnicker (Route 46, 4 Pokemon)
+aiswitch
+trainer Route46_hns 6
+# woman: Cooltrainer (Route 27, 5 Pokemon)
+aiswitch
+trainer Route27_hns 9
+# double battle, one trainer: Twins (Dragon's Den, 4 Pokemon)
+aiswitch
+trainer DragonsDen_Cavern_hns 2

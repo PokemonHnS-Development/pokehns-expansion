@@ -1,0 +1,27 @@
+# probe: ribbons on the party, the PokeGear main menu
+start saves/ladder6_postgame.sav
+include ../continue.txt
+loc
+ev special GivePartyMonLandRibbon; special GivePartyMonMarineRibbon; special GivePartyMonSkyRibbon; special GivePartyMonNationalRibbon; special GivePartyMonEarthRibbon; special GivePartyMonWorldRibbon; special GiveLeadMonEffortRibbon; end
+startmenu POKEGEAR
+waitcb2x CB2_Pokenav 600
+waitnav
+snap p_main_01
+press DOWN
+waitnav
+snap p_main_02
+press DOWN
+waitnav
+snap p_main_03
+press DOWN
+waitnav
+snap p_main_04
+press DOWN
+waitnav
+snap p_main_05
+press DOWN
+waitnav
+snap p_main_06
+press DOWN
+waitnav
+snap p_main_07

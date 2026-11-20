@@ -1,0 +1,5 @@
+# From the reception after the Expert TIME BOARD (state x5): save the game, so the battery holds the
+# TIME BOARD with Variety, Unique and Expert times (saves_screens/r7/r7_hill_all_cleared.sav).
+savegame overwrite
+hillstate
+snap sv_saved

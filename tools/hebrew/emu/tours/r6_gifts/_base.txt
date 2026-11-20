@@ -1,0 +1,7 @@
+# r6 gift Pokemon / egg / fossil tours: base include (not a tour). r6_gifts_base.sav (a byte copy
+# of ladder 6: post-game, Mt. Silver Pokemon Center) -> CONTINUE -> a Lv 100 Mewtwo in slot 0 for
+# the battles, 10 Master Balls for the Celebi catch, FAST BATTLES off so bwalk / bwin photograph the
+# messages that do not wait for A.
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_MEWTWO, 100, move1=MOVE_PSYSTRIKE, move2=MOVE_ICE_BEAM, move3=MOVE_RECOVER, move4=MOVE_AURA_SPHERE; additem ITEM_MASTER_BALL, 10; end
+fastbattles off

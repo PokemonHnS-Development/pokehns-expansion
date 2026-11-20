@@ -1,0 +1,1836 @@
+{
+ "loads": [
+  {
+   "tour": "sn_L001",
+   "tag": "L001",
+   "slots": [
+    "SPECIES_GASTRODON_WEST",
+    "SPECIES_SHELLOS_WEST",
+    "SPECIES_SHELLOS_EAST",
+    "SPECIES_GASTRODON_EAST",
+    "SPECIES_LOPUNNY",
+    "SPECIES_GLAMEOW"
+   ],
+   "ids": [
+    18174,
+    18168,
+    18171,
+    18177,
+    18189,
+    18195
+   ],
+   "wild": "SPECIES_GASTRODON_EAST",
+   "lead": "SPECIES_GASTRODON_WEST"
+  },
+  {
+   "tour": "sn_L002",
+   "tag": "L002",
+   "slots": [
+    "SPECIES_SKUNTANK",
+    "SPECIES_PURUGLY",
+    "SPECIES_STUNKY",
+    "SPECIES_CHATOT",
+    "SPECIES_SPIRITOMB",
+    "SPECIES_GIBLE"
+   ],
+   "ids": [
+    18204,
+    18198,
+    18201,
+    18213,
+    18216,
+    18219
+   ],
+   "wild": "SPECIES_SPIRITOMB",
+   "lead": "SPECIES_SKUNTANK"
+  },
+  {
+   "tour": "sn_L003",
+   "tag": "L003",
+   "slots": [
+    "SPECIES_GARCHOMP",
+    "SPECIES_GABITE",
+    "SPECIES_RIOLU",
+    "SPECIES_HIPPOPOTAS",
+    "SPECIES_HIPPOWDON",
+    "SPECIES_SKORUPI"
+   ],
+   "ids": [
+    18225,
+    18222,
+    18234,
+    18246,
+    18249,
+    18252
+   ],
+   "wild": "SPECIES_HIPPOPOTAS",
+   "lead": "SPECIES_GARCHOMP"
+  },
+  {
+   "tour": "sn_L004",
+   "tag": "L004",
+   "slots": [
+    "SPECIES_TOXICROAK",
+    "SPECIES_DRAPION",
+    "SPECIES_CROAGUNK",
+    "SPECIES_CARNIVINE",
+    "SPECIES_FINNEON",
+    "SPECIES_LUMINEON"
+   ],
+   "ids": [
+    18261,
+    18255,
+    18258,
+    18264,
+    18267,
+    18270
+   ],
+   "wild": "SPECIES_LUMINEON",
+   "lead": "SPECIES_TOXICROAK"
+  },
+  {
+   "tour": "sn_L005",
+   "tag": "L005",
+   "slots": [
+    "SPECIES_ABOMASNOW",
+    "SPECIES_ROTOM",
+    "SPECIES_ROTOM_HEAT",
+    "SPECIES_ROTOM_WASH",
+    "SPECIES_ROTOM_FROST",
+    "SPECIES_ROTOM_FAN"
+   ],
+   "ids": [
+    18276,
+    18282,
+    18285,
+    18288,
+    18291,
+    18294
+   ],
+   "wild": "SPECIES_ROTOM",
+   "lead": "SPECIES_ABOMASNOW"
+  },
+  {
+   "tour": "sn_L006",
+   "tag": "L006",
+   "slots": [
+    "SPECIES_MESPRIT",
+    "SPECIES_ROTOM_MOW",
+    "SPECIES_UXIE",
+    "SPECIES_AZELF",
+    "SPECIES_DIALGA",
+    "SPECIES_DIALGA_ORIGIN"
+   ],
+   "ids": [
+    18303,
+    18297,
+    18300,
+    18306,
+    18309,
+    18312
+   ],
+   "wild": "SPECIES_DIALGA",
+   "lead": "SPECIES_MESPRIT"
+  },
+  {
+   "tour": "sn_L007",
+   "tag": "L007",
+   "slots": [
+    "SPECIES_PALKIA",
+    "SPECIES_PALKIA_ORIGIN",
+    "SPECIES_HEATRAN",
+    "SPECIES_GIRATINA_ALTERED",
+    "SPECIES_GIRATINA_ORIGIN",
+    "SPECIES_CRESSELIA"
+   ],
+   "ids": [
+    18315,
+    18318,
+    18321,
+    18330,
+    18333,
+    18336
+   ],
+   "wild": "SPECIES_PALKIA_ORIGIN",
+   "lead": "SPECIES_PALKIA"
+  },
+  {
+   "tour": "sn_L008",
+   "tag": "L008",
+   "slots": [
+    "SPECIES_SERVINE",
+    "SPECIES_PHIONE",
+    "SPECIES_MANAPHY",
+    "SPECIES_SHAYMIN_LAND",
+    "SPECIES_SHAYMIN_SKY",
+    "SPECIES_SNIVY"
+   ],
+   "ids": [
+    18365,
+    18339,
+    18342,
+    18351,
+    18354,
+    18362
+   ],
+   "wild": "SPECIES_MANAPHY",
+   "lead": "SPECIES_SERVINE"
+  },
+  {
+   "tour": "sn_L009",
+   "tag": "L009",
+   "slots": [
+    "SPECIES_SERPERIOR",
+    "SPECIES_TEPIG",
+    "SPECIES_PIGNITE",
+    "SPECIES_EMBOAR",
+    "SPECIES_OSHAWOTT",
+    "SPECIES_DEWOTT"
+   ],
+   "ids": [
+    18368,
+    18371,
+    18374,
+    18377,
+    18383,
+    18386
+   ],
+   "wild": "SPECIES_OSHAWOTT",
+   "lead": "SPECIES_SERPERIOR"
+  },
+  {
+   "tour": "sn_L010",
+   "tag": "L010",
+   "slots": [
+    "SPECIES_SAMUROTT_HISUI",
+    "SPECIES_SAMUROTT",
+    "SPECIES_PATRAT",
+    "SPECIES_WATCHOG",
+    "SPECIES_LILLIPUP",
+    "SPECIES_HERDIER"
+   ],
+   "ids": [
+    18392,
+    18389,
+    18396,
+    18399,
+    18402,
+    18405
+   ],
+   "wild": "SPECIES_LILLIPUP",
+   "lead": "SPECIES_SAMUROTT_HISUI"
+  },
+  {
+   "tour": "sn_L011",
+   "tag": "L011",
+   "slots": [
+    "SPECIES_STOUTLAND",
+    "SPECIES_PURRLOIN",
+    "SPECIES_LIEPARD",
+    "SPECIES_PANSAGE",
+    "SPECIES_SIMISAGE",
+    "SPECIES_PANSEAR"
+   ],
+   "ids": [
+    18408,
+    18411,
+    18414,
+    18417,
+    18420,
+    18423
+   ],
+   "wild": "SPECIES_SIMISAGE",
+   "lead": "SPECIES_STOUTLAND"
+  },
+  {
+   "tour": "sn_L012",
+   "tag": "L012",
+   "slots": [
+    "SPECIES_MUSHARNA",
+    "SPECIES_SIMISEAR",
+    "SPECIES_PANPOUR",
+    "SPECIES_SIMIPOUR",
+    "SPECIES_MUNNA",
+    "SPECIES_PIDOVE"
+   ],
+   "ids": [
+    18438,
+    18426,
+    18429,
+    18432,
+    18435,
+    18441
+   ],
+   "wild": "SPECIES_SIMISEAR",
+   "lead": "SPECIES_MUSHARNA"
+  },
+  {
+   "tour": "sn_L013",
+   "tag": "L013",
+   "slots": [
+    "SPECIES_ZEBSTRIKA",
+    "SPECIES_TRANQUILL",
+    "SPECIES_UNFEZANT",
+    "SPECIES_BLITZLE",
+    "SPECIES_ROGGENROLA",
+    "SPECIES_BOLDORE"
+   ],
+   "ids": [
+    18453,
+    18444,
+    18447,
+    18450,
+    18456,
+    18459
+   ],
+   "wild": "SPECIES_ROGGENROLA",
+   "lead": "SPECIES_ZEBSTRIKA"
+  },
+  {
+   "tour": "sn_L014",
+   "tag": "L014",
+   "slots": [
+    "SPECIES_GIGALITH",
+    "SPECIES_WOOBAT",
+    "SPECIES_SWOOBAT",
+    "SPECIES_DRILBUR",
+    "SPECIES_AUDINO",
+    "SPECIES_TIMBURR"
+   ],
+   "ids": [
+    18462,
+    18465,
+    18468,
+    18471,
+    18480,
+    18486
+   ],
+   "wild": "SPECIES_DRILBUR",
+   "lead": "SPECIES_GIGALITH"
+  },
+  {
+   "tour": "sn_L015",
+   "tag": "L015",
+   "slots": [
+    "SPECIES_SEISMITOAD",
+    "SPECIES_GURDURR",
+    "SPECIES_CONKELDURR",
+    "SPECIES_TYMPOLE",
+    "SPECIES_PALPITOAD",
+    "SPECIES_THROH"
+   ],
+   "ids": [
+    18501,
+    18489,
+    18492,
+    18495,
+    18498,
+    18504
+   ],
+   "wild": "SPECIES_CONKELDURR",
+   "lead": "SPECIES_SEISMITOAD"
+  },
+  {
+   "tour": "sn_L016",
+   "tag": "L016",
+   "slots": [
+    "SPECIES_WHIRLIPEDE",
+    "SPECIES_SAWK",
+    "SPECIES_SEWADDLE",
+    "SPECIES_SWADLOON",
+    "SPECIES_LEAVANNY",
+    "SPECIES_VENIPEDE"
+   ],
+   "ids": [
+    18522,
+    18507,
+    18510,
+    18513,
+    18516,
+    18519
+   ],
+   "wild": "SPECIES_SWADLOON",
+   "lead": "SPECIES_WHIRLIPEDE"
+  },
+  {
+   "tour": "sn_L017",
+   "tag": "L017",
+   "slots": [
+    "SPECIES_LILLIGANT_HISUI",
+    "SPECIES_SCOLIPEDE",
+    "SPECIES_COTTONEE",
+    "SPECIES_WHIMSICOTT",
+    "SPECIES_PETILIL",
+    "SPECIES_LILLIGANT"
+   ],
+   "ids": [
+    18543,
+    18525,
+    18531,
+    18534,
+    18537,
+    18540
+   ],
+   "wild": "SPECIES_SCOLIPEDE",
+   "lead": "SPECIES_LILLIGANT_HISUI"
+  },
+  {
+   "tour": "sn_L018",
+   "tag": "L018",
+   "slots": [
+    "SPECIES_BASCULEGION_M",
+    "SPECIES_BASCULIN_RED_STRIPED",
+    "SPECIES_BASCULIN_BLUE_STRIPED",
+    "SPECIES_BASCULIN_WHITE_STRIPED",
+    "SPECIES_BASCULEGION_F",
+    "SPECIES_SANDILE"
+   ],
+   "ids": [
+    18556,
+    18547,
+    18550,
+    18553,
+    18559,
+    18562
+   ],
+   "wild": "SPECIES_BASCULEGION_F",
+   "lead": "SPECIES_BASCULEGION_M"
+  },
+  {
+   "tour": "sn_L019",
+   "tag": "L019",
+   "slots": [
+    "SPECIES_DARUMAKA_GALAR",
+    "SPECIES_KROKOROK",
+    "SPECIES_KROOKODILE",
+    "SPECIES_DARUMAKA",
+    "SPECIES_MARACTUS",
+    "SPECIES_DWEBBLE"
+   ],
+   "ids": [
+    18580,
+    18565,
+    18568,
+    18571,
+    18592,
+    18595
+   ],
+   "wild": "SPECIES_KROOKODILE",
+   "lead": "SPECIES_DARUMAKA_GALAR"
+  },
+  {
+   "tour": "sn_L020",
+   "tag": "L020",
+   "slots": [
+    "SPECIES_YAMASK_GALAR",
+    "SPECIES_CRUSTLE",
+    "SPECIES_SCRAGGY",
+    "SPECIES_SCRAFTY",
+    "SPECIES_SIGILYPH",
+    "SPECIES_COFAGRIGUS"
+   ],
+   "ids": [
+    18619,
+    18598,
+    18601,
+    18604,
+    18610,
+    18616
+   ],
+   "wild": "SPECIES_COFAGRIGUS",
+   "lead": "SPECIES_YAMASK_GALAR"
+  },
+  {
+   "tour": "sn_L021",
+   "tag": "L021",
+   "slots": [
+    "SPECIES_ARCHEOPS",
+    "SPECIES_TIRTOUGA",
+    "SPECIES_CARRACOSTA",
+    "SPECIES_TRUBBISH",
+    "SPECIES_GARBODOR",
+    "SPECIES_ZOROARK"
+   ],
+   "ids": [
+    18635,
+    18626,
+    18629,
+    18638,
+    18641,
+    18650
+   ],
+   "wild": "SPECIES_CARRACOSTA",
+   "lead": "SPECIES_ARCHEOPS"
+  },
+  {
+   "tour": "sn_L022",
+   "tag": "L022",
+   "slots": [
+    "SPECIES_ZOROARK_HISUI",
+    "SPECIES_ZORUA_HISUI",
+    "SPECIES_MINCCINO",
+    "SPECIES_GOTHITA",
+    "SPECIES_GOTHORITA",
+    "SPECIES_GOTHITELLE"
+   ],
+   "ids": [
+    18657,
+    18653,
+    18661,
+    18667,
+    18670,
+    18673
+   ],
+   "wild": "SPECIES_ZORUA_HISUI",
+   "lead": "SPECIES_ZOROARK_HISUI"
+  },
+  {
+   "tour": "sn_L023",
+   "tag": "L023",
+   "slots": [
+    "SPECIES_REUNICLUS",
+    "SPECIES_SOLOSIS",
+    "SPECIES_DUOSION",
+    "SPECIES_DUCKLETT",
+    "SPECIES_SWANNA",
+    "SPECIES_VANILLITE"
+   ],
+   "ids": [
+    18682,
+    18676,
+    18679,
+    18685,
+    18688,
+    18691
+   ],
+   "wild": "SPECIES_SOLOSIS",
+   "lead": "SPECIES_REUNICLUS"
+  },
+  {
+   "tour": "sn_L024",
+   "tag": "L024",
+   "slots": [
+    "SPECIES_VANILLUXE",
+    "SPECIES_VANILLISH",
+    "SPECIES_DEERLING_SPRING",
+    "SPECIES_DEERLING_SUMMER",
+    "SPECIES_DEERLING_AUTUMN",
+    "SPECIES_DEERLING_WINTER"
+   ],
+   "ids": [
+    18697,
+    18694,
+    18700,
+    18703,
+    18706,
+    18709
+   ],
+   "wild": "SPECIES_DEERLING_SPRING",
+   "lead": "SPECIES_VANILLUXE"
+  },
+  {
+   "tour": "sn_L025",
+   "tag": "L025",
+   "slots": [
+    "SPECIES_KARRABLAST",
+    "SPECIES_SAWSBUCK_SPRING",
+    "SPECIES_SAWSBUCK_SUMMER",
+    "SPECIES_SAWSBUCK_AUTUMN",
+    "SPECIES_SAWSBUCK_WINTER",
+    "SPECIES_EMOLGA"
+   ],
+   "ids": [
+    18727,
+    18712,
+    18715,
+    18718,
+    18721,
+    18724
+   ],
+   "wild": "SPECIES_EMOLGA",
+   "lead": "SPECIES_KARRABLAST"
+  },
+  {
+   "tour": "sn_L026",
+   "tag": "L026",
+   "slots": [
+    "SPECIES_ALOMOMOLA",
+    "SPECIES_ESCAVALIER",
+    "SPECIES_FOONGUS",
+    "SPECIES_AMOONGUSS",
+    "SPECIES_FRILLISH",
+    "SPECIES_JELLICENT"
+   ],
+   "ids": [
+    18745,
+    18730,
+    18733,
+    18736,
+    18739,
+    18742
+   ],
+   "wild": "SPECIES_ESCAVALIER",
+   "lead": "SPECIES_ALOMOMOLA"
+  },
+  {
+   "tour": "sn_L027",
+   "tag": "L027",
+   "slots": [
+    "SPECIES_KLINKLANG",
+    "SPECIES_JOLTIK",
+    "SPECIES_GALVANTULA",
+    "SPECIES_FERROTHORN",
+    "SPECIES_KLINK",
+    "SPECIES_KLANG"
+   ],
+   "ids": [
+    18766,
+    18748,
+    18751,
+    18757,
+    18760,
+    18763
+   ],
+   "wild": "SPECIES_GALVANTULA",
+   "lead": "SPECIES_KLINKLANG"
+  },
+  {
+   "tour": "sn_L028",
+   "tag": "L028",
+   "slots": [
+    "SPECIES_EELEKTRIK",
+    "SPECIES_TYNAMO",
+    "SPECIES_EELEKTROSS",
+    "SPECIES_ELGYEM",
+    "SPECIES_BEHEEYEM",
+    "SPECIES_LITWICK"
+   ],
+   "ids": [
+    18772,
+    18769,
+    18775,
+    18781,
+    18784,
+    18787
+   ],
+   "wild": "SPECIES_EELEKTROSS",
+   "lead": "SPECIES_EELEKTRIK"
+  },
+  {
+   "tour": "sn_L029",
+   "tag": "L029",
+   "slots": [
+    "SPECIES_CRYOGONAL",
+    "SPECIES_LAMPENT",
+    "SPECIES_CHANDELURE",
+    "SPECIES_FRAXURE",
+    "SPECIES_HAXORUS",
+    "SPECIES_BEARTIC"
+   ],
+   "ids": [
+    18814,
+    18790,
+    18793,
+    18802,
+    18805,
+    18811
+   ],
+   "wild": "SPECIES_FRAXURE",
+   "lead": "SPECIES_CRYOGONAL"
+  },
+  {
+   "tour": "sn_L030",
+   "tag": "L030",
+   "slots": [
+    "SPECIES_STUNFISK",
+    "SPECIES_SHELMET",
+    "SPECIES_ACCELGOR",
+    "SPECIES_MIENFOO",
+    "SPECIES_MIENSHAO",
+    "SPECIES_DRUDDIGON"
+   ],
+   "ids": [
+    18823,
+    18817,
+    18820,
+    18830,
+    18833,
+    18836
+   ],
+   "wild": "SPECIES_ACCELGOR",
+   "lead": "SPECIES_STUNFISK"
+  },
+  {
+   "tour": "sn_L031",
+   "tag": "L031",
+   "slots": [
+    "SPECIES_PAWNIARD",
+    "SPECIES_GOLETT",
+    "SPECIES_GOLURK",
+    "SPECIES_BISHARP",
+    "SPECIES_BOUFFALANT",
+    "SPECIES_RUFFLET"
+   ],
+   "ids": [
+    18848,
+    18839,
+    18842,
+    18851,
+    18857,
+    18860
+   ],
+   "wild": "SPECIES_BOUFFALANT",
+   "lead": "SPECIES_PAWNIARD"
+  },
+  {
+   "tour": "sn_L032",
+   "tag": "L032",
+   "slots": [
+    "SPECIES_BRAVIARY_HISUI",
+    "SPECIES_BRAVIARY",
+    "SPECIES_VULLABY",
+    "SPECIES_MANDIBUZZ",
+    "SPECIES_HEATMOR",
+    "SPECIES_DURANT"
+   ],
+   "ids": [
+    18866,
+    18863,
+    18870,
+    18873,
+    18876,
+    18879
+   ],
+   "wild": "SPECIES_MANDIBUZZ",
+   "lead": "SPECIES_BRAVIARY_HISUI"
+  },
+  {
+   "tour": "sn_L033",
+   "tag": "L033",
+   "slots": [
+    "SPECIES_HYDREIGON",
+    "SPECIES_DEINO",
+    "SPECIES_ZWEILOUS",
+    "SPECIES_LARVESTA",
+    "SPECIES_VOLCARONA",
+    "SPECIES_COBALION"
+   ],
+   "ids": [
+    18888,
+    18882,
+    18885,
+    18891,
+    18894,
+    18897
+   ],
+   "wild": "SPECIES_VOLCARONA",
+   "lead": "SPECIES_HYDREIGON"
+  },
+  {
+   "tour": "sn_L034",
+   "tag": "L034",
+   "slots": [
+    "SPECIES_TORNADUS_INCARNATE",
+    "SPECIES_TERRAKION",
+    "SPECIES_VIRIZION",
+    "SPECIES_THUNDURUS_INCARNATE",
+    "SPECIES_LANDORUS_INCARNATE",
+    "SPECIES_KYUREM"
+   ],
+   "ids": [
+    18906,
+    18900,
+    18903,
+    18912,
+    18924,
+    18930
+   ],
+   "wild": "SPECIES_THUNDURUS_INCARNATE",
+   "lead": "SPECIES_TORNADUS_INCARNATE"
+  },
+  {
+   "tour": "sn_L035",
+   "tag": "L035",
+   "slots": [
+    "SPECIES_GENESECT",
+    "SPECIES_KELDEO_ORDINARY",
+    "SPECIES_MELOETTA_ARIA",
+    "SPECIES_MELOETTA_PIROUETTE",
+    "SPECIES_QUILLADIN",
+    "SPECIES_CHESNAUGHT"
+   ],
+   "ids": [
+    18951,
+    18939,
+    18945,
+    18948,
+    18956,
+    18959
+   ],
+   "wild": "SPECIES_MELOETTA_ARIA",
+   "lead": "SPECIES_GENESECT"
+  },
+  {
+   "tour": "sn_L036",
+   "tag": "L036",
+   "slots": [
+    "SPECIES_FLETCHINDER",
+    "SPECIES_BRAIXEN",
+    "SPECIES_DELPHOX",
+    "SPECIES_FROAKIE",
+    "SPECIES_FROGADIER",
+    "SPECIES_DIGGERSBY"
+   ],
+   "ids": [
+    19001,
+    18968,
+    18971,
+    18977,
+    18980,
+    18995
+   ],
+   "wild": "SPECIES_DIGGERSBY",
+   "lead": "SPECIES_FLETCHINDER"
+  },
+  {
+   "tour": "sn_L037",
+   "tag": "L037",
+   "slots": [
+    "SPECIES_TALONFLAME",
+    "SPECIES_SCATTERBUG_ICY_SNOW",
+    "SPECIES_SPEWPA_ICY_SNOW",
+    "SPECIES_VIVILLON_ICY_SNOW",
+    "SPECIES_LITLEO",
+    "SPECIES_PYROAR"
+   ],
+   "ids": [
+    19004,
+    19007,
+    19009,
+    19011,
+    19033,
+    19036
+   ],
+   "wild": "SPECIES_SCATTERBUG_ICY_SNOW",
+   "lead": "SPECIES_TALONFLAME"
+  },
+  {
+   "tour": "sn_L038",
+   "tag": "L038",
+   "slots": [
+    "SPECIES_FLORGES_RED",
+    "SPECIES_FLOETTE_RED",
+    "SPECIES_GOGOAT",
+    "SPECIES_PANCHAM",
+    "SPECIES_PANGORO",
+    "SPECIES_ESPURR"
+   ],
+   "ids": [
+    19057,
+    19049,
+    19070,
+    19073,
+    19076,
+    19081
+   ],
+   "wild": "SPECIES_PANCHAM",
+   "lead": "SPECIES_FLORGES_RED"
+  },
+  {
+   "tour": "sn_L039",
+   "tag": "L039",
+   "slots": [
+    "SPECIES_MEOWSTIC_M",
+    "SPECIES_MEOWSTIC_F",
+    "SPECIES_HONEDGE",
+    "SPECIES_DOUBLADE",
+    "SPECIES_AROMATISSE",
+    "SPECIES_SLURPUFF"
+   ],
+   "ids": [
+    19084,
+    19087,
+    19096,
+    19099,
+    19111,
+    19117
+   ],
+   "wild": "SPECIES_MEOWSTIC_F",
+   "lead": "SPECIES_MEOWSTIC_M"
+  },
+  {
+   "tour": "sn_L040",
+   "tag": "L040",
+   "slots": [
+    "SPECIES_BARBARACLE",
+    "SPECIES_INKAY",
+    "SPECIES_MALAMAR",
+    "SPECIES_SKRELP",
+    "SPECIES_DRAGALGE",
+    "SPECIES_CLAWITZER"
+   ],
+   "ids": [
+    19132,
+    19120,
+    19123,
+    19138,
+    19141,
+    19150
+   ],
+   "wild": "SPECIES_DRAGALGE",
+   "lead": "SPECIES_BARBARACLE"
+  },
+  {
+   "tour": "sn_L041",
+   "tag": "L041",
+   "slots": [
+    "SPECIES_HELIOPTILE",
+    "SPECIES_HELIOLISK",
+    "SPECIES_TYRANTRUM",
+    "SPECIES_AURORUS",
+    "SPECIES_HAWLUCHA",
+    "SPECIES_DEDENNE"
+   ],
+   "ids": [
+    19153,
+    19156,
+    19162,
+    19168,
+    19171,
+    19177
+   ],
+   "wild": "SPECIES_HELIOLISK",
+   "lead": "SPECIES_HELIOPTILE"
+  },
+  {
+   "tour": "sn_L042",
+   "tag": "L042",
+   "slots": [
+    "SPECIES_GOODRA_HISUI",
+    "SPECIES_CARBINK",
+    "SPECIES_SLIGGOO",
+    "SPECIES_GOODRA",
+    "SPECIES_SLIGGOO_HISUI",
+    "SPECIES_KLEFKI"
+   ],
+   "ids": [
+    19196,
+    19180,
+    19186,
+    19189,
+    19192,
+    19200
+   ],
+   "wild": "SPECIES_SLIGGOO_HISUI",
+   "lead": "SPECIES_GOODRA_HISUI"
+  },
+  {
+   "tour": "sn_L043",
+   "tag": "L043",
+   "slots": [
+    "SPECIES_PHANTUMP",
+    "SPECIES_TREVENANT",
+    "SPECIES_PUMPKABOO_AVERAGE",
+    "SPECIES_PUMPKABOO_SMALL",
+    "SPECIES_PUMPKABOO_LARGE",
+    "SPECIES_PUMPKABOO_SUPER"
+   ],
+   "ids": [
+    19203,
+    19206,
+    19209,
+    19212,
+    19215,
+    19218
+   ],
+   "wild": "SPECIES_PUMPKABOO_AVERAGE",
+   "lead": "SPECIES_PHANTUMP"
+  },
+  {
+   "tour": "sn_L044",
+   "tag": "L044",
+   "slots": [
+    "SPECIES_GOURGEIST_AVERAGE",
+    "SPECIES_GOURGEIST_SMALL",
+    "SPECIES_GOURGEIST_LARGE",
+    "SPECIES_GOURGEIST_SUPER",
+    "SPECIES_BERGMITE",
+    "SPECIES_AVALUGG"
+   ],
+   "ids": [
+    19221,
+    19224,
+    19227,
+    19230,
+    19233,
+    19236
+   ],
+   "wild": "SPECIES_GOURGEIST_SMALL",
+   "lead": "SPECIES_GOURGEIST_AVERAGE"
+  },
+  {
+   "tour": "sn_L045",
+   "tag": "L045",
+   "slots": [
+    "SPECIES_DECIDUEYE_HISUI",
+    "SPECIES_AVALUGG_HISUI",
+    "SPECIES_DIANCIE",
+    "SPECIES_HOOPA_CONFINED",
+    "SPECIES_DARTRIX",
+    "SPECIES_DECIDUEYE"
+   ],
+   "ids": [
+    19294,
+    19239,
+    19270,
+    19276,
+    19288,
+    19291
+   ],
+   "wild": "SPECIES_AVALUGG_HISUI",
+   "lead": "SPECIES_DECIDUEYE_HISUI"
+  },
+  {
+   "tour": "sn_L046",
+   "tag": "L046",
+   "slots": [
+    "SPECIES_INCINEROAR",
+    "SPECIES_LITTEN",
+    "SPECIES_TORRACAT",
+    "SPECIES_BRIONNE",
+    "SPECIES_PRIMARINA",
+    "SPECIES_PIKIPEK"
+   ],
+   "ids": [
+    19304,
+    19298,
+    19301,
+    19310,
+    19313,
+    19316
+   ],
+   "wild": "SPECIES_PRIMARINA",
+   "lead": "SPECIES_INCINEROAR"
+  },
+  {
+   "tour": "sn_L047",
+   "tag": "L047",
+   "slots": [
+    "SPECIES_CRABRAWLER",
+    "SPECIES_TRUMBEAK",
+    "SPECIES_TOUCANNON",
+    "SPECIES_GUMSHOOS",
+    "SPECIES_GRUBBIN",
+    "SPECIES_VIKAVOLT"
+   ],
+   "ids": [
+    19342,
+    19319,
+    19322,
+    19328,
+    19332,
+    19338
+   ],
+   "wild": "SPECIES_TRUMBEAK",
+   "lead": "SPECIES_CRABRAWLER"
+  },
+  {
+   "tour": "sn_L048",
+   "tag": "L048",
+   "slots": [
+    "SPECIES_CUTIEFLY",
+    "SPECIES_RIBOMBEE",
+    "SPECIES_ROCKRUFF",
+    "SPECIES_ROCKRUFF_OWN_TEMPO",
+    "SPECIES_LYCANROC_MIDDAY",
+    "SPECIES_LYCANROC_MIDNIGHT"
+   ],
+   "ids": [
+    19363,
+    19366,
+    19370,
+    19372,
+    19374,
+    19377
+   ],
+   "wild": "SPECIES_LYCANROC_MIDDAY",
+   "lead": "SPECIES_CUTIEFLY"
+  },
+  {
+   "tour": "sn_L049",
+   "tag": "L049",
+   "slots": [
+    "SPECIES_TOXAPEX",
+    "SPECIES_LYCANROC_DUSK",
+    "SPECIES_MUDSDALE",
+    "SPECIES_ARAQUANID",
+    "SPECIES_FOMANTIS",
+    "SPECIES_LURANTIS"
+   ],
+   "ids": [
+    19392,
+    19380,
+    19398,
+    19404,
+    19408,
+    19411
+   ],
+   "wild": "SPECIES_LYCANROC_DUSK",
+   "lead": "SPECIES_TOXAPEX"
+  },
+  {
+   "tour": "sn_L050",
+   "tag": "L050",
+   "slots": [
+    "SPECIES_BOUNSWEET",
+    "SPECIES_MORELULL",
+    "SPECIES_SHIINOTIC",
+    "SPECIES_SALAZZLE",
+    "SPECIES_BEWEAR",
+    "SPECIES_STEENEE"
+   ],
+   "ids": [
+    19434,
+    19415,
+    19418,
+    19424,
+    19431,
+    19437
+   ],
+   "wild": "SPECIES_MORELULL",
+   "lead": "SPECIES_BOUNSWEET"
+  },
+  {
+   "tour": "sn_L051",
+   "tag": "L051",
+   "slots": [
+    "SPECIES_JANGMO_O",
+    "SPECIES_ORANGURU",
+    "SPECIES_PALOSSAND",
+    "SPECIES_TURTONATOR",
+    "SPECIES_TOGEDEMARU",
+    "SPECIES_HAKAMO_O"
+   ],
+   "ids": [
+    19507,
+    19446,
+    19464,
+    19480,
+    19483,
+    19510
+   ],
+   "wild": "SPECIES_TURTONATOR",
+   "lead": "SPECIES_JANGMO_O"
+  },
+  {
+   "tour": "sn_L052",
+   "tag": "L052",
+   "slots": [
+    "SPECIES_COSMOEM",
+    "SPECIES_KOMMO_O",
+    "SPECIES_COSMOG",
+    "SPECIES_BUZZWOLE",
+    "SPECIES_PHEROMOSA",
+    "SPECIES_XURKITREE"
+   ],
+   "ids": [
+    19532,
+    19513,
+    19529,
+    19544,
+    19547,
+    19550
+   ],
+   "wild": "SPECIES_XURKITREE",
+   "lead": "SPECIES_COSMOEM"
+  },
+  {
+   "tour": "sn_L053",
+   "tag": "L053",
+   "slots": [
+    "SPECIES_STAKATAKA",
+    "SPECIES_CELESTEELA",
+    "SPECIES_GUZZLORD",
+    "SPECIES_MARSHADOW",
+    "SPECIES_POIPOLE",
+    "SPECIES_BLACEPHALON"
+   ],
+   "ids": [
+    19595,
+    19553,
+    19559,
+    19586,
+    19589,
+    19598
+   ],
+   "wild": "SPECIES_CELESTEELA",
+   "lead": "SPECIES_STAKATAKA"
+  },
+  {
+   "tour": "sn_L054",
+   "tag": "L054",
+   "slots": [
+    "SPECIES_ZERAORA",
+    "SPECIES_MELTAN",
+    "SPECIES_MELMETAL",
+    "SPECIES_GROOKEY",
+    "SPECIES_THWACKEY",
+    "SPECIES_RILLABOOM"
+   ],
+   "ids": [
+    19601,
+    19607,
+    19610,
+    19616,
+    19619,
+    19622
+   ],
+   "wild": "SPECIES_MELMETAL",
+   "lead": "SPECIES_ZERAORA"
+  },
+  {
+   "tour": "sn_L055",
+   "tag": "L055",
+   "slots": [
+    "SPECIES_INTELEON",
+    "SPECIES_RABOOT",
+    "SPECIES_CINDERACE",
+    "SPECIES_SOBBLE",
+    "SPECIES_DRIZZILE",
+    "SPECIES_SKWOVET"
+   ],
+   "ids": [
+    19646,
+    19631,
+    19634,
+    19640,
+    19643,
+    19652
+   ],
+   "wild": "SPECIES_CINDERACE",
+   "lead": "SPECIES_INTELEON"
+  },
+  {
+   "tour": "sn_L056",
+   "tag": "L056",
+   "slots": [
+    "SPECIES_CORVISQUIRE",
+    "SPECIES_GREEDENT",
+    "SPECIES_ROOKIDEE",
+    "SPECIES_BLIPBUG",
+    "SPECIES_DOTTLER",
+    "SPECIES_ORBEETLE"
+   ],
+   "ids": [
+    19661,
+    19655,
+    19658,
+    19670,
+    19673,
+    19676
+   ],
+   "wild": "SPECIES_BLIPBUG",
+   "lead": "SPECIES_CORVISQUIRE"
+  },
+  {
+   "tour": "sn_L057",
+   "tag": "L057",
+   "slots": [
+    "SPECIES_ELDEGOSS",
+    "SPECIES_NICKIT",
+    "SPECIES_THIEVUL",
+    "SPECIES_WOOLOO",
+    "SPECIES_DUBWOOL",
+    "SPECIES_CHEWTLE"
+   ],
+   "ids": [
+    19691,
+    19682,
+    19685,
+    19694,
+    19697,
+    19700
+   ],
+   "wild": "SPECIES_DUBWOOL",
+   "lead": "SPECIES_ELDEGOSS"
+  },
+  {
+   "tour": "sn_L058",
+   "tag": "L058",
+   "slots": [
+    "SPECIES_BOLTUND",
+    "SPECIES_DREDNAW",
+    "SPECIES_CARKOL",
+    "SPECIES_COALOSSAL",
+    "SPECIES_FLAPPLE",
+    "SPECIES_APPLETUN"
+   ],
+   "ids": [
+    19712,
+    19703,
+    19718,
+    19721,
+    19730,
+    19736
+   ],
+   "wild": "SPECIES_DREDNAW",
+   "lead": "SPECIES_BOLTUND"
+  },
+  {
+   "tour": "sn_L059",
+   "tag": "L059",
+   "slots": [
+    "SPECIES_CENTISKORCH",
+    "SPECIES_HYDRAPPLE",
+    "SPECIES_SANDACONDA",
+    "SPECIES_BARRASKEWDA",
+    "SPECIES_TOXEL",
+    "SPECIES_SIZZLIPEDE"
+   ],
+   "ids": [
+    19788,
+    19745,
+    19751,
+    19769,
+    19772,
+    19785
+   ],
+   "wild": "SPECIES_SANDACONDA",
+   "lead": "SPECIES_CENTISKORCH"
+  },
+  {
+   "tour": "sn_L060",
+   "tag": "L060",
+   "slots": [
+    "SPECIES_POLTEAGEIST_PHONY",
+    "SPECIES_CLOBBOPUS",
+    "SPECIES_GRAPPLOCT",
+    "SPECIES_SINISTEA_PHONY",
+    "SPECIES_SINISTEA_ANTIQUE",
+    "SPECIES_POLTEAGEIST_ANTIQUE"
+   ],
+   "ids": [
+    19806,
+    19794,
+    19797,
+    19800,
+    19803,
+    19809
+   ],
+   "wild": "SPECIES_POLTEAGEIST_ANTIQUE",
+   "lead": "SPECIES_POLTEAGEIST_PHONY"
+  },
+  {
+   "tour": "sn_L061",
+   "tag": "L061",
+   "slots": [
+    "SPECIES_GRIMMSNARL",
+    "SPECIES_HATENNA",
+    "SPECIES_HATTREM",
+    "SPECIES_HATTERENE",
+    "SPECIES_IMPIDIMP",
+    "SPECIES_MORGREM"
+   ],
+   "ids": [
+    19830,
+    19812,
+    19815,
+    19818,
+    19824,
+    19827
+   ],
+   "wild": "SPECIES_IMPIDIMP",
+   "lead": "SPECIES_GRIMMSNARL"
+  },
+  {
+   "tour": "sn_L062",
+   "tag": "L062",
+   "slots": [
+    "SPECIES_PINCURCHIN",
+    "SPECIES_MILCERY",
+    "SPECIES_ALCREMIE_STRAWBERRY_VANILLA_CREAM",
+    "SPECIES_FALINKS",
+    "SPECIES_FROSMOTH",
+    "SPECIES_INDEEDEE_M"
+   ],
+   "ids": [
+    19850,
+    19836,
+    19839,
+    19844,
+    19856,
+    19868
+   ],
+   "wild": "SPECIES_FROSMOTH",
+   "lead": "SPECIES_PINCURCHIN"
+  },
+  {
+   "tour": "sn_L063",
+   "tag": "L063",
+   "slots": [
+    "SPECIES_DRACOZOLT",
+    "SPECIES_INDEEDEE_F",
+    "SPECIES_CUFANT",
+    "SPECIES_COPPERAJAH",
+    "SPECIES_ARCTOZOLT",
+    "SPECIES_DRACOVISH"
+   ],
+   "ids": [
+    19889,
+    19871,
+    19880,
+    19883,
+    19892,
+    19895
+   ],
+   "wild": "SPECIES_ARCTOZOLT",
+   "lead": "SPECIES_DRACOZOLT"
+  },
+  {
+   "tour": "sn_L064",
+   "tag": "L064",
+   "slots": [
+    "SPECIES_ARCHALUDON",
+    "SPECIES_ARCTOVISH",
+    "SPECIES_DREEPY",
+    "SPECIES_DRAKLOAK",
+    "SPECIES_DRAGAPULT",
+    "SPECIES_ETERNATUS"
+   ],
+   "ids": [
+    19907,
+    19898,
+    19910,
+    19913,
+    19916,
+    19931
+   ],
+   "wild": "SPECIES_ARCTOVISH",
+   "lead": "SPECIES_ARCHALUDON"
+  },
+  {
+   "tour": "sn_L065",
+   "tag": "L065",
+   "slots": [
+    "SPECIES_SPRIGATITO",
+    "SPECIES_KUBFU",
+    "SPECIES_ZARUDE",
+    "SPECIES_ZARUDE_DADA",
+    "SPECIES_CALYREX",
+    "SPECIES_ENAMORUS_INCARNATE"
+   ],
+   "ids": [
+    19985,
+    19937,
+    19952,
+    19955,
+    19970,
+    19979
+   ],
+   "wild": "SPECIES_CALYREX",
+   "lead": "SPECIES_SPRIGATITO"
+  },
+  {
+   "tour": "sn_L066",
+   "tag": "L066",
+   "slots": [
+    "SPECIES_QUAXWELL",
+    "SPECIES_FLORAGATO",
+    "SPECIES_FUECOCO",
+    "SPECIES_CROCALOR",
+    "SPECIES_SKELEDIRGE",
+    "SPECIES_QUAXLY"
+   ],
+   "ids": [
+    20006,
+    19988,
+    19994,
+    19997,
+    20000,
+    20003
+   ],
+   "wild": "SPECIES_FLORAGATO",
+   "lead": "SPECIES_QUAXWELL"
+  },
+  {
+   "tour": "sn_L067",
+   "tag": "L067",
+   "slots": [
+    "SPECIES_QUAQUAVAL",
+    "SPECIES_SPIDOPS",
+    "SPECIES_LOKIX",
+    "SPECIES_PAWMO",
+    "SPECIES_PAWMOT",
+    "SPECIES_TANDEMAUS"
+   ],
+   "ids": [
+    20009,
+    20024,
+    20030,
+    20036,
+    20039,
+    20042
+   ],
+   "wild": "SPECIES_SPIDOPS",
+   "lead": "SPECIES_QUAQUAVAL"
+  },
+  {
+   "tour": "sn_L068",
+   "tag": "L068",
+   "slots": [
+    "SPECIES_NACLSTACK",
+    "SPECIES_MAUSHOLD_THREE",
+    "SPECIES_MAUSHOLD_FOUR",
+    "SPECIES_DOLLIV",
+    "SPECIES_GARGANACL",
+    "SPECIES_CHARCADET"
+   ],
+   "ids": [
+    20081,
+    20045,
+    20048,
+    20060,
+    20084,
+    20087
+   ],
+   "wild": "SPECIES_MAUSHOLD_THREE",
+   "lead": "SPECIES_NACLSTACK"
+  },
+  {
+   "tour": "sn_L069",
+   "tag": "L069",
+   "slots": [
+    "SPECIES_KILOWATTREL",
+    "SPECIES_ARMAROUGE",
+    "SPECIES_CERULEDGE",
+    "SPECIES_TADBULB",
+    "SPECIES_MASCHIFF",
+    "SPECIES_SHROODLE"
+   ],
+   "ids": [
+    20105,
+    20090,
+    20093,
+    20096,
+    20108,
+    20114
+   ],
+   "wild": "SPECIES_CERULEDGE",
+   "lead": "SPECIES_KILOWATTREL"
+  },
+  {
+   "tour": "sn_L070",
+   "tag": "L070",
+   "slots": [
+    "SPECIES_TOEDSCRUEL",
+    "SPECIES_GRAFAIAI",
+    "SPECIES_BRAMBLIN",
+    "SPECIES_CAPSAKID",
+    "SPECIES_SCOVILLAIN",
+    "SPECIES_RELLOR"
+   ],
+   "ids": [
+    20129,
+    20117,
+    20120,
+    20135,
+    20138,
+    20144
+   ],
+   "wild": "SPECIES_SCOVILLAIN",
+   "lead": "SPECIES_TOEDSCRUEL"
+  },
+  {
+   "tour": "sn_L071",
+   "tag": "L071",
+   "slots": [
+    "SPECIES_TINKATINK",
+    "SPECIES_RABSCA",
+    "SPECIES_FLITTLE",
+    "SPECIES_TINKATUFF",
+    "SPECIES_TINKATON",
+    "SPECIES_WIGLETT"
+   ],
+   "ids": [
+    20156,
+    20147,
+    20150,
+    20159,
+    20162,
+    20165
+   ],
+   "wild": "SPECIES_TINKATUFF",
+   "lead": "SPECIES_TINKATINK"
+  },
+  {
+   "tour": "sn_L072",
+   "tag": "L072",
+   "slots": [
+    "SPECIES_CYCLIZAR",
+    "SPECIES_WUGTRIO",
+    "SPECIES_FINIZEN",
+    "SPECIES_VAROOM",
+    "SPECIES_REVAVROOM",
+    "SPECIES_GLIMMORA"
+   ],
+   "ids": [
+    20189,
+    20168,
+    20174,
+    20183,
+    20186,
+    20198
+   ],
+   "wild": "SPECIES_WUGTRIO",
+   "lead": "SPECIES_CYCLIZAR"
+  },
+  {
+   "tour": "sn_L073",
+   "tag": "L073",
+   "slots": [
+    "SPECIES_HOUNDSTONE",
+    "SPECIES_GREAVARD",
+    "SPECIES_CETODDLE",
+    "SPECIES_CETITAN",
+    "SPECIES_VELUZA",
+    "SPECIES_DONDOZO"
+   ],
+   "ids": [
+    20207,
+    20204,
+    20213,
+    20216,
+    20219,
+    20222
+   ],
+   "wild": "SPECIES_GREAVARD",
+   "lead": "SPECIES_HOUNDSTONE"
+  },
+  {
+   "tour": "sn_L074",
+   "tag": "L074",
+   "slots": [
+    "SPECIES_IRON_BUNDLE",
+    "SPECIES_SCREAM_TAIL",
+    "SPECIES_BRUTE_BONNET",
+    "SPECIES_FLUTTER_MANE",
+    "SPECIES_SLITHER_WING",
+    "SPECIES_SANDY_SHOCKS"
+   ],
+   "ids": [
+    20264,
+    20246,
+    20249,
+    20252,
+    20255,
+    20258
+   ],
+   "wild": "SPECIES_SCREAM_TAIL",
+   "lead": "SPECIES_IRON_BUNDLE"
+  },
+  {
+   "tour": "sn_L075",
+   "tag": "L075",
+   "slots": [
+    "SPECIES_IRON_JUGULIS",
+    "SPECIES_IRON_HANDS",
+    "SPECIES_IRON_MOTH",
+    "SPECIES_IRON_THORNS",
+    "SPECIES_ARCTIBAX",
+    "SPECIES_BAXCALIBUR"
+   ],
+   "ids": [
+    20270,
+    20267,
+    20273,
+    20276,
+    20282,
+    20285
+   ],
+   "wild": "SPECIES_IRON_THORNS",
+   "lead": "SPECIES_IRON_JUGULIS"
+  },
+  {
+   "tour": "sn_L076",
+   "tag": "L076",
+   "slots": [
+    "SPECIES_ROARING_MOON",
+    "SPECIES_GIMMIGHOUL_CHEST",
+    "SPECIES_GIMMIGHOUL_ROAMING",
+    "SPECIES_IRON_VALIANT",
+    "SPECIES_WALKING_WAKE",
+    "SPECIES_IRON_LEAVES"
+   ],
+   "ids": [
+    20312,
+    20291,
+    20294,
+    20315,
+    20324,
+    20327
+   ],
+   "wild": "SPECIES_IRON_VALIANT",
+   "lead": "SPECIES_ROARING_MOON"
+  },
+  {
+   "tour": "sn_L077",
+   "tag": "L077",
+   "slots": [
+    "SPECIES_GOUGING_FIRE",
+    "SPECIES_SINISTCHA_UNREMARKABLE",
+    "SPECIES_SINISTCHA_MASTERPIECE",
+    "SPECIES_MUNKIDORI",
+    "SPECIES_FEZANDIPITI",
+    "SPECIES_OGERPON_TEAL"
+   ],
+   "ids": [
+    20353,
+    20336,
+    20339,
+    20345,
+    20348,
+    20351
+   ],
+   "wild": "SPECIES_MUNKIDORI",
+   "lead": "SPECIES_GOUGING_FIRE"
+  },
+  {
+   "tour": "sn_L078",
+   "tag": "L078",
+   "slots": [
+    "SPECIES_RAGING_BOLT",
+    "SPECIES_IRON_BOULDER",
+    "SPECIES_IRON_CROWN"
+   ],
+   "ids": [
+    20356,
+    20359,
+    20362
+   ],
+   "wild": "SPECIES_IRON_BOULDER",
+   "lead": "SPECIES_RAGING_BOLT"
+  }
+ ],
+ "wide": [
+  {
+   "tour": "sn_wide1",
+   "tag": "W1",
+   "slots": [
+    "SPECIES_DECIDUEYE_HISUI",
+    "SPECIES_RAGING_BOLT",
+    "SPECIES_SANDSLASH_ALOLA",
+    "SPECIES_EXEGGUTOR_ALOLA",
+    "SPECIES_CRABOMINABLE",
+    "SPECIES_MEOWSCARADA"
+   ]
+  },
+  {
+   "tour": "sn_wide2",
+   "tag": "W2",
+   "slots": [
+    "SPECIES_BRAMBLEGHAST",
+    "SPECIES_CENTISKORCH",
+    "SPECIES_IRON_JUGULIS",
+    "SPECIES_DARUMAKA_GALAR",
+    "SPECIES_JANGMO_O",
+    "SPECIES_IRON_BUNDLE"
+   ]
+  },
+  {
+   "tour": "sn_wide3",
+   "tag": "W3",
+   "slots": [
+    "SPECIES_POLTEAGEIST_PHONY",
+    "SPECIES_POLTEAGEIST_ANTIQUE",
+    "SPECIES_TOEDSCRUEL",
+    "SPECIES_SCREAM_TAIL",
+    "SPECIES_FLUTTER_MANE",
+    "SPECIES_GOUGING_FIRE"
+   ]
+  }
+ ],
+ "abilities": [
+  {
+   "tour": "sn_abil_1",
+   "tag": "A1",
+   "rz": true,
+   "slots": [
+    [
+     "SPECIES_FARFETCHD",
+     "ABILITY_AERILATE"
+    ],
+    [
+     "SPECIES_CROAGUNK",
+     "ABILITY_PARENTAL_BOND"
+    ],
+    [
+     "SPECIES_OMASTAR",
+     "ABILITY_PRIMORDIAL_SEA"
+    ],
+    [
+     "SPECIES_MAKUHITA",
+     "ABILITY_DESOLATE_LAND"
+    ],
+    [
+     "SPECIES_SEEL",
+     "ABILITY_DELTA_STREAM"
+    ],
+    [
+     "SPECIES_HUNTAIL",
+     "ABILITY_NEUROFORCE"
+    ]
+   ],
+   "battles": [
+    [
+     "SPECIES_OMASTAR",
+     "SPECIES_MAKUHITA"
+    ],
+    [
+     "SPECIES_SEEL",
+     "SPECIES_OMASTAR"
+    ]
+   ]
+  },
+  {
+   "tour": "sn_abil_2",
+   "tag": "A2",
+   "rz": true,
+   "slots": [
+    [
+     "SPECIES_MAGMAR",
+     "ABILITY_EMBODY_ASPECT_TEAL_MASK"
+    ],
+    [
+     "SPECIES_ESPEON",
+     "ABILITY_EMBODY_ASPECT_HEARTHFLAME_MASK"
+    ],
+    [
+     "SPECIES_ROSELIA",
+     "ABILITY_EMBODY_ASPECT_WELLSPRING_MASK"
+    ],
+    [
+     "SPECIES_CELEBI",
+     "ABILITY_EMBODY_ASPECT_CORNERSTONE_MASK"
+    ],
+    [
+     "SPECIES_MASQUERAIN",
+     "ABILITY_AS_ONE_ICE_RIDER"
+    ],
+    [
+     "SPECIES_CARRACOSTA",
+     "ABILITY_AS_ONE_SHADOW_RIDER"
+    ]
+   ],
+   "battles": [
+    [
+     "SPECIES_MASQUERAIN",
+     "SPECIES_CARRACOSTA"
+    ],
+    [
+     "SPECIES_MAGMAR",
+     "SPECIES_ESPEON"
+    ]
+   ]
+  }
+ ]
+}

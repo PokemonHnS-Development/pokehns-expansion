@@ -1,0 +1,12 @@
+# Kyogre, Route 19 cave (8,6): Route19Cave_EventScript_Kyogre (data/maps/Route19_Cave_hns/
+# scripts.inc:6-24): cry, seteventmon 70, BattleSetup_StartLegendaryBattle; after a win or a catch
+# the object is removed (no text).
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_KYOGRE; end
+warpto MAP_ROUTE19_CAVE_HNS 8 7
+face UP
+snap ky_field
+tap A 4
+fieldwatch ky_pre cb2:BattleMainCB2 3000
+include _legend_tail.txt

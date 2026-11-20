@@ -1,0 +1,117 @@
+# Berry Blender with two NPCs (the Safari Zone gate, sign (17,11) between Blender2Man and the
+# Twin; data/scripts/berry_blender.inc:332-378): the invitation, "do you know how?" NO and the
+# explanation, the blender's start message, the berry bag (list, CONFIRM/CHECK TAG menu, the
+# berry tag screen), the blender (berries thrown in, names, countdown, arrow, RPM digits), the
+# ranking, the results, the Pokeblock received, "blend another?". Three rounds, so the case
+# holds three Pokeblocks for the case and Safari tours. Exported as save:r2sf_blocks.
+start save:r2sf_base
+include ../continue.txt
+warpto MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS 17 12
+face UP
+talk r2sf_bl_ask 40
+press A
+talk r2sf_bl_okay 40 -
+press B
+talk r2sf_bl_explain 40 -
+textwatch r2sf_bl_start CB2_BagMenuRun 2000
+waittaskx Task_BagMenu_HandleInput 900
+snap r2sf_bl_bag
+scrollshots r2sf_bl_bagscroll DOWN 20
+tap UP 4
+tap UP 4
+tap UP 4
+tap UP 4
+tap UP 4
+tap UP 4
+tap UP 4
+tap UP 4
+tap UP 4
+tap UP 4
+tap UP 4
+tap UP 4
+waitquiet
+snap r2sf_bl_bagtop
+tap A 4
+waitquiet
+snap r2sf_bl_context
+tap ROWNEXT 4
+waitquiet
+snap r2sf_bl_context_tag
+tap A 4
+waitquiet
+40 -
+waitquiet
+snap r2sf_bl_tag_01
+tap DOWN 4
+waitquiet
+40 -
+waitquiet
+snap r2sf_bl_tag_02
+tap B 4
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap UP 4
+waitquiet
+snap r2sf_bl_bagback
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_StartBlenderLocal 1200
+burst r2sf_bl_intro 40 12
+blendplay r2sf_bl_play 12000 90 14
+burst r2sf_bl_endA 40 10
+snap r2sf_bl_ranking
+tap A 4
+burst r2sf_bl_endB 12 10
+snap r2sf_bl_results
+tap A 4
+textwatch r2sf_bl_made CB2_CheckPlayAgainLocal 500 A
+snap r2sf_bl_again
+press A
+# round 2: the second berry
+textwatch r2sf_bl2_start CB2_BagMenuRun 2000
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap DOWN 4
+waitquiet
+snap r2sf_bl2_bag
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_PlayBlender 3000
+blendplay r2sf_bl2_play 12000 300 3 good
+burst r2sf_bl2_endA 40 10
+snap r2sf_bl2_ranking
+tap A 4
+burst r2sf_bl2_endB 12 10
+snap r2sf_bl2_results
+tap A 4
+textwatch r2sf_bl2_made CB2_CheckPlayAgainLocal 500 A
+press A
+# round 3: the third berry, then NO
+textwatch r2sf_bl3_start CB2_BagMenuRun 2000
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap DOWN 4
+waitquiet
+tap DOWN 4
+waitquiet
+snap r2sf_bl3_bag
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_PlayBlender 3000
+blendplay r2sf_bl3_play 12000 600 1
+burst r2sf_bl3_endA 40 10
+tap A 4
+burst r2sf_bl3_endB 12 10
+tap A 4
+textwatch r2sf_bl3_made CB2_CheckPlayAgainLocal 500 A
+snap r2sf_bl3_again
+press B
+waitcb2x CB2_Overworld 1200
+waitctl 1200
+waitctl 1200
+snap r2sf_bl_field
+savegame
+keepsave r2sf_blocks

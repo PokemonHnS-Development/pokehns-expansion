@@ -1,0 +1,84 @@
+# Poke Mart (src/shop.c) in Cherrygrove: the clerk's BUY / SELL / SEE YA menu, the buy
+# list with prices and descriptions, the quantity selector with the total, the YES/NO
+# confirmation, the purchase message; SELL: the bag in sell mode, quantity with the
+# price offered, the YES/NO (answered NO). Then outside: the town sign.
+start save:menuA_base
+include ../scripts/continue.txt
+
+go DOWN 9                                 # out of the Center: Cherrygrove City (47,8)
+go LEFT 6
+go UP 1                                   # the Mart door at (41,7)
+go UP 4                                   # in front of the counter (4,3); the clerk is at (2,3)
+face LEFT
+talk menu_mart_welcome 10 A Task_ShopMenu
+waittaskx Task_ShopMenu 300
+waitquiet
+snap menu_mart_menu
+
+# BUY
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+snap menu_mart_buy_01
+press DOWN
+snap menu_mart_buy_02
+tap A 0
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+waitquiet
+snap menu_mart_buy_qty_01
+press UP
+press UP
+snap menu_mart_buy_qty_03
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap menu_mart_buy_confirm
+tap A 0                                   # YES
+waittaskx Task_ReturnToItemListAfterItemPurchase 600   # waits for A itself (src/shop.c:2035)
+waitquiet
+snap menu_mart_buy_done
+tap A 0
+waittaskx Task_BuyMenu 600
+waitquiet
+press B                                   # leave the list
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+snap menu_mart_menu_again
+
+# SELL: the bag in sell mode
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap menu_mart_sell_bag
+tap A 0
+waitquiet
+snap menu_mart_sell_qty
+tap A 0
+waitquiet
+snap menu_mart_sell_confirm
+tap B 0                                   # NO
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+
+# QUIT (the menu reopens on BUY; menu:sMenu.cursorPos is s8 at +2, src/menu.c:37-41)
+seek 8 @menu:sMenu+2@ 2 DOWN
+tap A 0
+talk menu_mart_bye 10 -
+waitctl 900
+
+# Outside: the Cherrygrove City sign at (51,12)
+go DOWN 9                                 # out of the Mart: (41,8)
+go RIGHT 8                                # (49,8); (50,8) is a wall
+go DOWN 3
+go RIGHT 2                                # (51,11), the sign is below
+face DOWN
+talk menu_sign_cherrygrove 10
+waitctl 900

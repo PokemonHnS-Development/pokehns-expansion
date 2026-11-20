@@ -1,0 +1,14 @@
+# 3F: trainer 1 (5,7) looks west over (2-4,7), trainer 2 (9,7) east over (10-12,7). Arrow tiles (MB_SLIDE_*) push
+# the player; walkto plans around them. Talk to trainer 1 (a walk into its sight may end it), then trainer 2; the after-battle speech of both; the stairs to 4F.
+ev special HealPlayerParty; end
+talkto 1 h05_t1_intro battle
+battle2 h05_t1
+snap h05_t1_after
+talkto 1 h05_t1_post free
+ev special HealPlayerParty; end
+talkto 2 h05_t2_intro battle
+battle2 h05_t2
+snap h05_t2_after
+talkto 2 h05_t2_post free
+walkto 12 1
+snap h05_4f_arrive

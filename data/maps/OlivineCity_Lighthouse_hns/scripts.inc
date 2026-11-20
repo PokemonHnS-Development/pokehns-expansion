@@ -38,15 +38,15 @@ OlivineLighthouse_EventScript_1FPokefanF::
 	end
 
 OlivineLighthouse_Text_1FSailor:
-	.string "People train at this LIGHTHOUSE.\p"
-	.string "It's not easy to climb with all\n"
-	.string "the trainers waiting inside.$"
+	.string "אנשים מתאמנים במגדלור הזה.\p"
+	.string "לא קל לטפס כשכל המאמנים\n"
+	.string "האלה מחכים בפנים.$"
 
 OlivineLighthouse_Text_1FPokefanF:
-	.string "In the past, POKéMON used to light\n"
-	.string "the sea around OLIVINE at night.\p"
-	.string "The LIGHTHOUSE was built in honor\n"
-	.string "of those noble POKéMON.$"
+	.string "פעם, פוקימונים היו מאירים בלילה\n"
+	.string "את הים שסביב אוליבין.\p"
+	.string "המגדלור נבנה לכבוד\n"
+	.string "הפוקימונים האצילים האלה.$"
 
 @2nd floor==============================================================================================================================
 
@@ -76,46 +76,46 @@ OlivineLighthouse_EventScript_GentlemanAlfred::
     end
 
 OlivineLighthouse_Text_SailorHueySeen:
-	.string "Men of the sea are always\n"
-	.string "spoiling for a good fight!$"
+	.string "אנשי הים תמיד\n"
+	.string "מחפשים קרב טוב!$"
 
 OlivineLighthouse_Text_SailorHueyBeaten:
-	.string "Urf!\n"
-	.string "I lose!$"
+	.string "אוף!\n"
+	.string "הפסדתי!$"
 
 OlivineLighthouse_Text_SailorHueyAfter:
-	.string "What power! How would you like\n"
-	.string "to sail the seas with me?$"
+	.string "איזה כוח! מה דעתך\n"
+	.string "להפליג איתי בימים?$"
 
 OlivineLighthouse_Text_HueyRegister:
-	.string "What power! How would you like\n"
-	.string "to sail the seas with me?$"
+	.string "איזה כוח! מה דעתך\n"
+	.string "להפליג איתי בימים?$"
 
 OlivineLighthouse_Text_HueyRematchIntro:
-	.string "Men of the sea are always\n"
-	.string "spoiling for a good fight!$"
+	.string "אנשי הים תמיד\n"
+	.string "מחפשים קרב טוב!$"
 
 OlivineLighthouse_Text_HueyRematchDefeat:
-	.string "Urf!\n"
-	.string "I lose!$"
+	.string "אוף!\n"
+	.string "הפסדתי!$"
 
 OlivineLighthouse_Text_HueyPostRematch:
-	.string "What power! How would you like\n"
-	.string "to sail the seas with me?$"
+	.string "איזה כוח! מה דעתך\n"
+	.string "להפליג איתי בימים?$"
 
 OlivineLighthouse_Text_GentlemanAlfredSeen:
-	.string "Hm? This is no place\n"
-	.string "for playing.$"
+	.string "הממ? זה לא מקום\n"
+	.string "למשחקים.$"
 
 OlivineLighthouse_Text_GentlemanAlfredBeaten:
-	.string "Ah! I can see that you're\n"
-	.string "serious.$"
+	.string "אה! אני רואה\n"
+	.string "שאתה רציני.$"
 
 OlivineLighthouse_Text_GentlemanAlfredAfter:
-	.string "Up top is a POKéMON that keeps\n"
-	.string "the LIGHTHOUSE lit.\p"
-	.string "But I hear that it's sick now,\n"
-	.string "and can't be cured normally.$"
+	.string "למעלה יש פוקימון שמאיר\n"
+	.string "את המגדלור.\p"
+	.string "אבל שמעתי שהוא חולה עכשיו,\n"
+	.string "ושאי אפשר לרפא אותו בדרך רגילה.$"
 
 @3rd floor==============================================================================================================================
 
@@ -136,41 +136,41 @@ OlivineLighthouse_EventScript_GentlemanPreston::
 
 
 OlivineLighthouse_Text_BirdKeeperTheoSeen:
-	.string "Why are you here? Are you just\n"
-	.string "going to gawk? I suggest you leave!$"
+	.string "מה אתה עושה פה? באת רק\n"
+	.string "לבהות? כדאי לך ללכת!$"
 
 OlivineLighthouse_Text_BirdKeeperTheoBeaten:
-	.string "You really are concerned about\n"
-	.string "the sick POKéMON…$"
+	.string "אתה באמת דואג\n"
+	.string "לפוקימון החולה…$"
 
 OlivineLighthouse_Text_BirdKeeperTheoAfter:
-	.string "How the heck do you go up?\p"
-	.string "I want to visit the sick POKéMON,\n"
-	.string "but I can't get up there…$"
+	.string "איך לעזאזל עולים למעלה?\p"
+	.string "אני רוצה לבקר את הפוקימון החולה,\n"
+	.string "אבל אני לא מצליח לעלות לשם…$"
 
 OlivineLighthouse_Text_SailorTerrellSeen:
-	.string "Sailors are both kind and strong.\n"
-	.string "How about you?$"
+	.string "מלחים הם גם טובי לב\n"
+	.string "וגם חזקים. ומה איתך?$"
 
 OlivineLighthouse_Text_SailorTerrellBeaten:
-	.string "You are both kind and strong…$"
+	.string "אתה גם טוב לב וגם חזק…$"
 
 OlivineLighthouse_Text_SailorTerrellAfter:
-	.string "Every time I return to OLIVINE,\n"
-	.string "I visit the GYM.\p"
-	.string "The GYM LEADER’s POKéMON type\n"
-	.string "changed without me noticing.$"
+	.string "בכל פעם שאני חוזר לאוליבין,\n"
+	.string "אני מבקר במכון.\p"
+	.string "סוג הפוקימונים של המנהיגה\n"
+	.string "השתנה בלי ששמתי לב.$"
 
 OlivineLighthouse_Text_GentlemanPrestonSeen:
-	.string "I travel the world to train my\n"
-	.string "POKéMON. I wish to battle you.$"
+	.string "אני מטייל בעולם כדי לאמן את\n"
+	.string "הפוקימונים שלי. ברצוני להילחם בך.$"
 
 OlivineLighthouse_Text_GentlemanPrestonBeaten:
-	.string "…sigh… I must train some more…$"
+	.string "…אנחה… עליי להתאמן עוד…$"
 
 OlivineLighthouse_Text_GentlemanPrestonAfter:
-	.string "JASMINE used to use ROCK-type\n"
-	.string "POKéMON like ONIX.$"
+	.string "ג'סמין השתמשה פעם בפוקימונים\n"
+	.string "מסוג סלע, כמו אוניקס.$"
 
 @4th floor==============================================================================================================================
 
@@ -186,30 +186,31 @@ OlivineLighthouse_EventScript_LassConnie::
 
 
 OlivineLighthouse_Text_SailorKentSeen:
-	.string "JASMINE must be worried sick about\n"
-	.string "the POKéMON here.\p"
-	.string "She won't even smile these days.$"
+	.string "ג'סמין בטח מתה מדאגה\n"
+	.string "לפוקימון שכאן.\p"
+	.string "בימים אלה היא אפילו לא מחייכת.$"
 
 OlivineLighthouse_Text_SailorKentBeaten:
-	.string "I can't manage a smile either…$"
+	.string "גם אני לא מצליח לחייך…$"
 
 OlivineLighthouse_Text_SailorKentAfter:
-	.string "Speaking of sick, I've heard there's\n"
-	.string "a good PHARMACY in CIANWOOD.$"
+	.string "אם כבר מדברים על חולים, שמעתי\n"
+	.string "שיש בית מרקחת טוב בסיאנווד.$"
 
 OlivineLighthouse_Text_LassConnieSeen:
-	.string "JASMINE is this city's GYM LEADER.\p"
-	.string "I mean to bring her back with me.\p"
-	.string "Nobody had better get in my way!$"
+	.string "ג'סמין היא מנהיגת המכון\n"
+	.string "של העיר הזאת.\p"
+	.string "אני מתכוונת להחזיר אותה איתי.\p"
+	.string "שאף אחד לא יעז לעמוד בדרכי!$"
 
 OlivineLighthouse_Text_LassConnieBeaten:
-	.string "Aaack! My POKéMON!$"
+	.string "איי! הפוקימונים שלי!$"
 
 OlivineLighthouse_Text_LassConnieAfter:
-	.string "Right. Anybody would be worried if\n"
-	.string "his or her own POKéMON were hurt.\p"
-	.string "I'll pray for the POKéMON here, so\n"
-	.string "JASMINE can come back to the GYM.$"
+	.string "נכון. כל אחד היה דואג אם\n"
+	.string "הפוקימון שלו היה נפגע.\p"
+	.string "אתפלל לשלום הפוקימון שכאן,\n"
+	.string "כדי שג'סמין תוכל לחזור למכון.$"
 
 @5th floor==============================================================================================================================
 
@@ -224,31 +225,31 @@ OlivineLighthouse_EventScript_BirdKeeperDenis::
     end
 
 OlivineLighthouse_Text_SailorErnestSeen:
-	.string "I wanted to battle JASMINE, but she's\n"
-	.string "not up to it now.\p"
-	.string "So, how about you?$"
+	.string "רציתי להילחם בג'סמין, אבל\n"
+	.string "היא לא במצב לזה עכשיו.\p"
+	.string "אז מה איתך?$"
 
 OlivineLighthouse_Text_SailorErnestBeaten:
-	.string "Whoa, whoa. You're overwhelming!$"
+	.string "וואו, וואו. אתה פשוט מוחץ!$"
 
 OlivineLighthouse_Text_SailorErnestAfter:
-	.string "A GYM LEADER isn't just about being\n"
-	.string "strong.\p"
-	.string "A LEADER also needs to be\n"
-	.string "compassionate.$"
+	.string "להיות מנהיג זה לא רק\n"
+	.string "להיות חזק.\p"
+	.string "מנהיג צריך גם\n"
+	.string "לגלות חמלה.$"
 
 OlivineLighthouse_Text_BirdKeeperDenisSeen:
-	.string "We're pretty high up here. My bird\n"
-	.string "POKéMON are in prime form.$"
+	.string "אנחנו די גבוה פה.\n"
+	.string "פוקימוני הציפורים שלי בכושר שיא.$"
 
 OlivineLighthouse_Text_BirdKeeperDenisBeaten:
-	.string "Oops… They crashed…$"
+	.string "אופס… הם התרסקו…$"
 
 OlivineLighthouse_Text_BirdKeeperDenisAfter:
-	.string "My POKéMON learned how to use FLY in\n"
-	.string "CIANWOOD.\p"
-	.string "Well, since I'm a loser, I'll FLY\n"
-	.string "across the sea…$"
+	.string "הפוקימונים שלי למדו בסיאנווד\n"
+	.string "להשתמש בתעופה.\p"
+	.string "טוב, אחרי הפסד כזה, אשתמש\n"
+	.string "בתעופה ואעוף מעבר לים…$"
 
 @6th floor==============================================================================================================================
 
@@ -294,30 +295,30 @@ OlivineLighthouse_EventScript_AmpharosSick::
 	end
 
 OlivineLighthouse_Text_JasmineCianwoodPharmacy:
-	.string "JASMINE: …This POKéMON always kept\n"
-	.string "the sea lit at night.\p"
-	.string "…But it suddenly got sick… It's\n"
-	.string "gasping for air…\p"
-	.string "…I understand that there is a\n"
-	.string "wonderful PHARMACY in CIANWOOD…\p"
-	.string "But that's across the sea…\n"
-	.string "And I can't leave AMPHY unattended…$"
+	.string "ג'סמין: …הפוקימון הזה תמיד\n"
+	.string "האיר את הים בלילה.\p"
+	.string "…אבל פתאום הוא חלה… הוא\n"
+	.string "מתנשם בכבדות…\p"
+	.string "…שמעתי שיש בית מרקחת\n"
+	.string "נפלא בסיאנווד…\p"
+	.string "אבל הוא מעבר לים…\n"
+	.string "ואני לא יכולה להשאיר את אמפי לבד…$"
 
 OlivineLighthouse_Text_JasmineGetMedicine:
-	.string "…May I ask you to get some medicine\n"
-	.string "for me? Please?$"
+	.string "…אפשר לבקש ממך להביא\n"
+	.string "לי תרופה? בבקשה?$"
 
 OlivineLighthouse_Text_JasmineGetMedicine2:
-	.string "There is a wonderful PHARMACY\n"
-	.string "in CIANWOOD…\p"
-	.string "But that's across the sea…\n"
-	.string "And I can't leave AMPHY unattended…\p"
-	.string "…May I ask you to get some medicine\n"
-	.string "for me? Please?$"
+	.string "יש בית מרקחת נפלא\n"
+	.string "בסיאנווד…\p"
+	.string "אבל הוא מעבר לים…\n"
+	.string "ואני לא יכולה להשאיר את אמפי לבד…\p"
+	.string "…אפשר לבקש ממך להביא\n"
+	.string "לי תרופה? בבקשה?$"
 
 OlivineLighthouse_Text_JasmineCureAmphy:
-	.string "JASMINE: …Will that medicine cure\n"
-	.string "AMPHY?$"
+	.string "ג'סמין: …התרופה הזאת\n"
+	.string "תרפא את אמפי?$"
 
 
 OlivineLighthouse_EventScript_JasmineDeliverPotion::
@@ -384,40 +385,40 @@ OlivineLighthouse_EventScript_JasmineRefuse::
 	end
 
 OlivineLighthouse_Text_PlayerHandedSecretpotion:
-	.string "{PLAYER} handed the SECRET POTION to\n"
-	.string "JASMINE.$"
+	.string "{PLAYER} מסר את השיקוי הסודי\n"
+	.string "לג'סמין.$"
 
 OlivineLighthouse_Text_JasmineDontBeOffended:
-	.string "JASMINE: …Um, please don't be\n"
-	.string "offended…\p"
-	.string "…AMPHY will not take anything from\n"
-	.string "anyone but me…$"
+	.string "ג'סמין: …אממ, בבקשה\n"
+	.string "אל תיעלב…\p"
+	.string "…אמפי לא מקבל שום דבר\n"
+	.string "מאף אחד חוץ ממני…$"
 
 OlivineLighthouse_Text_JasmineAmphyHowFeeling:
-	.string "JASMINE: …\p"
-	.string "AMPHY, how are you feeling?$"
+	.string "ג'סמין: …\p"
+	.string "אמפי, איך אתה מרגיש?$"
 
 OlivineLighthouse_Text_JasmineThankYou:
-	.string "JASMINE: …Oh, I'm so relieved…\p"
-	.string "This is just so wonderful…\p"
-	.string "Thank you so very, very much.\p"
-	.string "…I will return to the GYM…\p"
-	.string "I'll also warn you, STEEL types\n"
-	.string "are powerful.$"
+	.string "ג'סמין: …הו, איזו הקלה…\p"
+	.string "זה פשוט נפלא…\p"
+	.string "תודה לך, תודה רבה רבה.\p"
+	.string "…אני אחזור למכון…\p"
+	.string "ואני גם מזהירה אותך: פוקימונים\n"
+	.string "מסוג פלדה הם חזקים.$"
 
 OlivineLighthouse_Text_JasmineISee:
-	.string "JASMINE: …I see…\n"
-	.string "…AMPHY, hang on!$"
+	.string "ג'סמין: …אני מבינה…\n"
+	.string "…אמפי, תחזיק מעמד!$"
 
 OlivineLighthouse_Text_AmphyPalPaloo:
-	.string "AMPHY: …\n"
-	.string "…Pa… paloo…$"
+	.string "אמפי: …\n"
+	.string "…פא… פאלו…$"
 
 OlivineLighthouse_Text_AmphyBreathingLabored:
-	.string "Its breathing is terribly\n"
-	.string "labored…$"
+	.string "הנשימה שלו כבדה\n"
+	.string "מאוד…$"
 
 OlivineLighthouse_Text_AmphyPaluPalulu:
-	.string "AMPHY: Palu! Palulu!$"
+	.string "אמפי: פאלו! פאלולו!$"
 
 

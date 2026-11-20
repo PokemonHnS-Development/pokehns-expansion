@@ -1,0 +1,33 @@
+# The Pokedex Show with only one species caught, for the five entries that name Hisui or Mt. Coronet:
+# BASCULEGION (902), TYPHLOSION_HISUI (1067), SAMUROTT_HISUI (1070), SLIGGOO_HISUI (1075) and
+# DECIDUEYE_HISUI (1078). The regional forms have their own national dex numbers
+# (P_SEPARATE_REGIONAL_FORMS, include/config/species_enabled.h:41; include/constants/pokedex.h:1089-1106),
+# and NationalPokedexNumToSpecies maps them back through sNationalToSpeciesOrder (src/pokemon.c:1440).
+# The show picks among the caught species (src/pokenav_radio.c:726-776) and WrapDexTextIntoLines
+# (:576-628) wraps the entry into lines of at most 220 px. Same steps and RNG seed as dx_radio_ub.txt.
+# Driver: scripts/r2_pokegear_radio/radio.py
+# Run: radio.py tour ROM OUT --tours tools/hebrew/emu/tours/r17_latin --only '^dx_radio_hisui$'
+# Save: ladder4_league.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder4_league.sav
+include ../../scripts/r2_pokegear_radio/_johto.txt
+clockshift 0 -3
+dexonly 902
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle dxr_902_basculegion 12
+dexonly 1067
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle dxr_1067_typhlosion_hisui 12
+dexonly 1070
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle dxr_1070_samurott_hisui 12
+dexonly 1075
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle dxr_1075_sliggoo_hisui 12
+dexonly 1078
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle dxr_1078_decidueye_hisui 12

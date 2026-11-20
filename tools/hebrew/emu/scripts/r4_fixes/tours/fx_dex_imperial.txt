@@ -1,0 +1,37 @@
+# Pokedex INFO page height and weight with the imperial unit option (OPTIONS > MAIN row 11, as in
+# scripts/r4_bag/tours/b09_tags_imperial.txt), for src/pokedex.c:4378-4407: the height is built as
+# digits, CHAR_SGL_QUOTE_RIGHT, digits, CHAR_DBL_QUOTE_RIGHT, the same pattern as the berry tag
+# size. Run with scripts/r4_misc/r4misc.py (dexopen, dexgoto, dexinfo).
+start saves/r4_misc/r4_menuA_base.sav
+include ../../continue.txt
+startmenu OPTION
+waitcb2x option_menu:MainCB2 900
+waittaskx option_menu:Task_ProcessInput 900
+waitquiet
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap fxd_opt_metric
+press RIGHT
+snap fxd_opt_imperial
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 900
+dexopen
+dexgoto 14
+dexinfo
+snap fxd_hoothoot_info
+dexback
+dexgoto 0
+dexinfo
+snap fxd_first_info
+dexback

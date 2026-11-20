@@ -309,79 +309,78 @@ VermilionCity_Movement_EusineLeave:
 	step_end
 
 VermilionCity_Text_Eusine:
-	.string "EUSINE: That was so close!\n"
-	.string "I though I could corner it by\l"
-	.string "ambushing it here.\p"
-	.string "But running on the water is beyond\n"
-	.string "me.\p"
-	.string "Still, I am starting to see\n"
-	.string "a pattern.\p"
-	.string "SUICUNE prefers water!\p"
-	.string "That means...$"
+	.string "יוסין: זה היה כל כך קרוב! חשבתי\n"
+	.string "שאוכל ללכוד אותו במארב כאן.\p"
+	.string "אבל לרוץ על המים זה מעבר\n"
+	.string "ליכולת שלי.\p"
+	.string "ובכל זאת, אני מתחיל לזהות\n"
+	.string "דפוס.\p"
+	.string "סואיקון מעדיף מים!\p"
+	.string "זה אומר ש…$"
 
 VermilionCity_Text_Eusine2:
-	.string "Sorry {PLAYER}, I've got to go!$"
+	.string "סליחה, {PLAYER}, אני חייב ללכת!$"
 
 VermilionCity_Text_Teacher:
-	.string "VERMILION PORT is KANTO's seaside\n"
-	.string "gateway.\p"
-	.string "Luxury liners from around the\n"
-	.string "world dock here.$"
+	.string "נמל ורמיליון הוא שער הים\n"
+	.string "של קאנטו.\p"
+	.string "אוניות פאר מכל העולם\n"
+	.string "עוגנות כאן.$"
 
 VermilionCity_Text_MachopOwner:
-	.string "My POKéMON is preparing the land\n"
-	.string "for construction.\p"
-	.string "But I have no money to start the\n"
-	.string "project…$"
+	.string "הפוקימון שלי מכין את הקרקע\n"
+	.string "לבנייה.\p"
+	.string "אבל אין לי כסף להתחיל את\n"
+	.string "הפרויקט…$"
 
 VermilionCity_Text_Machop1:
-	.string "MACHOP: Guooh gogogoh!$"
+	.string "מאצ'ופ: גואוה גוגוגוה!$"
 
 VermilionCity_Text_Machop2:
-	.string "A MACHOP is growling while\n"
-	.string "stomping the ground flat.$"
+	.string "מאצ'ופ נוהם תוך כדי שהוא\n"
+	.string "רוקע ומשטח את הקרקע.$"
 
 VermilionCity_Text_SuperNerd:
-	.string "There are eight GYMS in KANTO.\p"
-	.string "That big building is VERMILION's\n"
-	.string "POKéMON GYM.$"
+	.string "יש שמונה מכונים בקאנטו.\p"
+	.string "הבניין הגדול הזה הוא\n"
+	.string "מכון הפוקימון של ורמיליון.$"
 
 VermilionCity_Text_SnorlaxSleeping:
-	.string "SNORLAX is snoring peacefully…$"
+	.string "סנורלקס נוחר בשלווה…$"
 
 VermilionCity_Text_RadioNearSnorlax:
-	.string "The POKéGEAR was placed near \n"
-	.string "the sleeping SNORLAX…\p"
+	.string "הפוקיגיר הונח ליד\n"
+	.string "סנורלקס הישן…\p"
 	.string "…\p"
-	.string "SNORLAX woke up!$"
+	.string "סנורלקס התעורר!$"
 
 VermilionCity_Text_BadgeGuy_Trainer:
-	.string "Skilled trainers gather in KANTO.\p"
-	.string "GYM LEADERS are especially strong.\p"
-	.string "They won't be easy to defeat.$"
+	.string "מאמנים מיומנים מתאספים בקאנטו.\p"
+	.string "מנהיגי המכונים חזקים במיוחד.\p"
+	.string "לא יהיה קל לנצח אותם.$"
 
 VermilionCity_Text_BadgeGuy_SomeBadges:
-	.string "You've started to collect KANTO\n"
-	.string "GYM BADGES?\p"
-	.string "Don't you agree that the trainers\n"
-	.string "here are tough?$"
+	.string "התחלת לאסוף את תגי המכונים\n"
+	.string "של קאנטו?\p"
+	.string "נכון שהמאמנים כאן\n"
+	.string "קשוחים?$"
 
 VermilionCity_Text_BadgeGuy_MostBadges:
-	.string "I guess you'll be finished with\n"
-	.string "your conquest of KANTO GYMS soon.\p"
-	.string "Let me know if you get all eight\n"
-	.string "BADGES.$"
+	.string "נראה לי שבקרוב תסיים לכבוש\n"
+	.string "את המכונים של קאנטו.\p"
+	.string "תגיד לי אם תשיג את כל שמונת\n"
+	.string "התגים.$"
 
 VermilionCity_Text_BadgeGuy_AllBadges:
-	.string "Congratulations!\p"
-	.string "You got all the KANTO GYM BADGES.\p"
-	.string "I've got a reward for your efforts.$"
+	.string "מזל טוב!\p"
+	.string "השגת את כל תגי המכונים של קאנטו.\p"
+	.string "יש לי פרס בשביל המאמצים שלך.$"
 
 VermilionCity_Text_BadgeGuy_BattleEdge:
-	.string "Having a variety of POKéMON types\n"
-	.string "should give you an edge in battle.\p"
-	.string "I'm sure the KANTO GYM BADGES will\n"
-	.string "help you.$"
+	.string "מגוון של סוגי פוקימונים אמור\n"
+	.string "לתת לך יתרון בקרב.\p"
+	.string "אני בטוח שתגי המכונים של קאנטו\n"
+	.string "יעזרו לך.$"
 
 VermilionCity_EventScript_CitySign::
 	msgbox VermilionCity_Text_Sign, MSGBOX_SIGN
@@ -397,21 +396,21 @@ VermilionCity_EventScript_DiglettsCaveSign::
 	end
 
 VermilionCity_Text_Sign:
-	.string "VERMILION CITY\p"
-	.string "The Port of Exquisite Sunsets$"
+	.string "העיר ורמיליון\p"
+	.string "נמל השקיעות המופלאות$"
 
 VermilionCity_Text_GymSign:
-	.string "VERMILION CITY\n"
-	.string "POKéMON GYM\p"
-	.string "LEADER: LT.SURGE\p"
-	.string "The Lightning American$"
+	.string "העיר ורמיליון\n"
+	.string "מכון הפוקימון\p"
+	.string "מנהיג: סמל סרג'\p"
+	.string "האמריקאי החשמלי$"
 
 VermilionCity_Text_FanClubSign:
-	.string "POKéMON FAN CLUB\p"
-	.string "All POKéMON Fans Welcome!$"
+	.string "מועדון מעריצי הפוקימונים\p"
+	.string "כל מעריצי הפוקימונים מוזמנים!$"
 
 VermilionCity_Text_DiglettsCaveSign:
-	.string "DIGLETT'S CAVE$"
+	.string "מערת דיגלט$"
 
 VermilionCity_Text_PortSign:
 	.string "VERMILION PORT\n"
@@ -501,34 +500,31 @@ VermilionCity_Movement_StevenWalkToPlayer:
 	step_end
 
 VermilionCity_Text_StevenIntro:
-	.string "Hi!\n"
-	.string "My name is Steven.\l"
-	.string "The Champion from the HOENN region.\p"
-	.string "Have we met...before?\p"
-	.string "That's not possible. \n"
-	.string "All the trainers I have battled\l"
-	.string "seem to have the same look, anyway.\p"
-	.string "Especially the ones who gave me\n"
-	.string "tough battles.\p"
-	.string "I'm in KANTO for business.\n"
-	.string "Recently many HOENN POKéMON have\l"
-	.string "migrated to this region.\l"
-	.string "This influx risks disrupting the\l"
-	.string "natural ecosystem here.\p"
-	.string "So with the help of my company,\n"
-	.string "I'm creating a special habitat\l"
-	.string "to attract and contain the most\l"
-	.string "invasive species.\p"
-	.string "Make sure you keep an eye out\n"
-	.string "and catch any HOENN POKéMON you see.\p"
-	.string "Some trainers have even reported\n"
-	.string "one that soars through the sky like\l"
-	.string "a jet... What color was it again?$"
+	.string "היי! קוראים לי סטיבן.\n"
+	.string "אני האלוף מאזור הואן.\p"
+	.string "נפגשנו… פעם?\p"
+	.string "זה לא ייתכן. כל המאמנים שנלחמתי\n"
+	.string "בהם נראים די אותו דבר, בכל מקרה.\p"
+	.string "במיוחד אלה שנתנו לי\n"
+	.string "קרבות קשים.\p"
+	.string "אני בקאנטו לרגל עסקים. לאחרונה\n"
+	.string "פוקימונים רבים מהואן נדדו לאזור הזה.\p"
+	.string "הזרם הזה עלול לשבש את\n"
+	.string "המערכת האקולוגית הטבעית כאן.\p"
+	.string "אז בעזרת החברה שלי, אני מקים\n"
+	.string "בית גידול מיוחד.\p"
+	.string "הוא ימשוך אליו את המינים\n"
+	.string "הפולשניים ביותר ויחזיק אותם שם.\p"
+	.string "כדאי לפקוח עיניים ולתפוס\n"
+	.string "כל פוקימון מהואן שרואים.\p"
+	.string "כמה מאמנים אפילו דיווחו על אחד\n"
+	.string "שדואה בשמיים כמו מטוס סילון…\p"
+	.string "מה היה הצבע שלו, בעצם?$"
 
 VermilionCity_Text_StevenOutro:
-	.string "Ah, that's right.\p"
-	.string "I must go.\n"
-	.string "May our journeys cross again.$"
+	.string "אה, נכון.\p"
+	.string "אני חייב ללכת.\n"
+	.string "שדרכינו יצטלבו שוב.$"
 
 VermilionCity_EventScript_TriggerSamson::
 	lock
@@ -577,16 +573,15 @@ VermilionCity_Movement_SamsonLeave:
 	step_end
 
 VermilionCity_Text_Samson:
-	.string "Whoah!\p"
-	.string "Sorry kiddo, I'm in a hurry!\p"
-	.string "The ferry on ROUTE 13 will be\n"
-	.string "leaving for the ISLES soon, and\l"
-	.string "I've got to be on it!\p"
-	.string "Phew... Phew...\p"
-	.string "I ran all the way here from\n"
-	.string "MT. MOON.\p"
-	.string "See this tchotchke here?\p"
-	.string "I picked up this STRANGE SOUVENIR\n"
-	.string "at the GIFT SHOP.\p"
-	.string "It's my ticket onto the ISLES.\p"
-	.string "Well, see-ya!$"
+	.string "וואו!\p"
+	.string "סליחה, ילד, אני ממהר!\p"
+	.string "המעבורת בדרך 13 תצא בקרוב\n"
+	.string "לאיים, ואני חייב להיות עליה!\p"
+	.string "פוו… פוו…\p"
+	.string "רצתי כל הדרך לכאן\n"
+	.string "מהר הירח.\p"
+	.string "רואה את הקישוט הקטן הזה?\p"
+	.string "השגתי את המזכרת המוזרה הזאת\n"
+	.string "בחנות המזכרות.\p"
+	.string "זה הכרטיס שלי לאיים.\p"
+	.string "טוב, להתראות!$"

@@ -1,0 +1,45 @@
+# Elm's lab, non-random starters (data/maps/NewBarkTown_Lab_hns/scripts.inc): the intro trigger
+# (6,7) at LABSTATE 0 -> ElmIntro YES/NO, NO -> ElmRefused YES/NO, YES -> ElmAccepted, the e-mail,
+# the mission, choose a Pokemon (LABSTATE 1); TriggerReturnPlayer (5..7,8); the Chikorita and Totodile
+# balls with the picture and YES/NO, NO (DeclinedStarter); the Cyndaquil ball YES (ChoseStarter,
+# received, nickname YES/NO -> NO); Elm's directions with the registered-Elm fanfare (MrPokemon,
+# LABSTATE 2); the aide's Potion trigger at the door (6,12) at LABSTATE 2.
+start saves/r6sj_ladder1_newgame.sav
+include _base.txt
+include _s1_clock_mom.txt
+warpto MAP_NEW_BARK_TOWN_LAB_HNS 6 8
+snap lab_room
+stepto UP
+scene elm_intro 20000
+yesno elm_intro_yn NO
+scene elm_refused 20000
+yesno elm_refused_yn YES
+scene elm_accepted 60000 30
+snap elm_free
+walkto 6 8
+scene return 10000
+snap return_end
+walkto 8 5 UP
+tap A 4
+scene chiko 10000
+yesno chiko_yn NO
+scene chiko_no 6000
+walkto 10 5 UP
+tap A 4
+scene toto 10000
+yesno toto_yn NO
+scene toto_no 6000
+walkto 9 5 UP
+tap A 4
+scene cynda 10000
+yesno cynda_yn YES
+scene cynda_yes 20000
+yesno cynda_nick NO
+scene cynda_end 6000
+approach 2
+tap A 4
+scene elm_dir 30000
+snap elm_dir_end
+walkto 6 12
+scene aide_potion 20000
+snap aide_potion_end

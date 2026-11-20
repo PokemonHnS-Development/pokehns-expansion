@@ -1,0 +1,13 @@
+# r6 items: tms 3/3. Each event clears the object's or tile's flag, warps next to it, turns the
+# player toward it and presses A (Std_FindItem / EventScript_HiddenItemScript, data/scripts/obtain_item.inc).
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+pick t_tm_shadow_claw FLAG_ITEM_ROUTE42_TM_SHADOW_CLAW MAP_ROUTE42_HNS 60 7 UP
+pick t_tm_rock_climb FLAG_HIDE_ROUTE49_TM_ROCK_CLIMB MAP_ROUTE49_HNS 27 58 LEFT
+pick t_tm_silver_wind FLAG_ITEM_ROUTE6_TM_SILVER_WIND MAP_ROUTE6_HNS 29 25 LEFT
+pick t_tm_flash_cannon FLAG_ITEM_ROUTE9_TM_FLASH_CANNON MAP_ROUTE9_HNS 32 44 UP
+pick t_tm_ice_beam FLAG_ITEM_SEAFOAM_ISLANDS_B4F_TM_ICE_BEAM MAP_SEAFOAM_ISLANDS_B1F_HNS 29 18 UP
+pick t_tm_rock_tomb FLAG_ITEM_UNION_CAVE_ROCK_TOMB MAP_UNION_CAVE_B1F_HNS 14 4 UP
+pick t_tm_dark_pulse FLAG_ITEM_VICTORY_ROAD_3F_TM_DARK_PULSE MAP_VICTORY_ROAD_KANTO_1F_HNS 23 15 DOWN
+pick t_tm_earthquake FLAG_ITEM_VICTORYROAD1_TM_EARTHQUAKE MAP_VICTORY_ROAD_KANTO_B2F_HNS 20 11 LEFT
+pick t_tm_psych_up FLAG_ITEM_VIRIDIAN_FOREST_TM_PSYCH_UP MAP_VIRIDIAN_FOREST_HNS 55 31 UP

@@ -14,8 +14,8 @@ SecretBase_Text_Trainer0DeclineBattle:
 	.string "Oh, you can't now…$"
 
 SecretBase_Text_Trainer0Defeated::
-	.string "Waaargh! You're too strong!\n"
-	.string "About me losing… Please keep it secret!$"
+	.string "וואאאה! אין לי סיכוי מולך!\n"
+	.string "ההפסד שלי… שיישאר בינינו, טוב?$"
 
 SecretBase_Text_Trainer0PostBattle:
 	.string "What do you think of my SECRET BASE?\n"
@@ -42,9 +42,8 @@ SecretBase_Text_Trainer5DeclineBattle:
 	.string "You can't now, okay.$"
 
 SecretBase_Text_Trainer5Defeated::
-	.string "Hmmm… It's our loss…\n"
-	.string "But don't tell anyone!\l"
-	.string "It's a confidential secret!$"
+	.string "הממם… הפסדנו…\n"
+	.string "אבל שאף אחד לא יידע! זה סוד כמוס!$"
 
 SecretBase_Text_Trainer5PostBattle:
 	.string "If you're in this area again,\n"
@@ -73,8 +72,8 @@ SecretBase_Text_Trainer1DeclineBattle:
 	.string "You're not interested in this spot?$"
 
 SecretBase_Text_Trainer1Defeated::
-	.string "I can't keep going!\n"
-	.string "I surrender!$"
+	.string "אני לא יכול להמשיך!\n"
+	.string "אני נכנע!$"
 
 SecretBase_Text_Trainer1PostBattle:
 	.string "Okay, when I move one day,\n"
@@ -100,8 +99,8 @@ SecretBase_Text_Trainer6DeclineBattle:
 	.string "Some other time, then!$"
 
 SecretBase_Text_Trainer6Defeated::
-	.string "Hmm… I've still got lots to learn.\n"
-	.string "I have to study some more.$"
+	.string "הממ… יש לי עוד הרבה מה ללמוד.\n"
+	.string "אני צריכה להתאמן עוד.$"
 
 SecretBase_Text_Trainer6PostBattle:
 	.string "Thanks for battling with me.\n"
@@ -126,8 +125,8 @@ SecretBase_Text_Trainer2DeclineBattle:
 	.string "When you're ready, give me a shout!$"
 
 SecretBase_Text_Trainer2Defeated::
-	.string "Aww! Done in!\n"
-	.string "But it's still fun to battle!$"
+	.string "אוף! גמרו אותי!\n"
+	.string "אבל עדיין כיף להילחם!$"
 
 SecretBase_Text_Trainer2PostBattle:
 	.string "Well, anyway, I should go buy some\n"
@@ -158,7 +157,7 @@ SecretBase_Text_Trainer7DeclineBattle:
 	.string "How disappointing…$"
 
 SecretBase_Text_Trainer7Defeated::
-	.string "I concede…$"
+	.string "אני מודה בתבוסה…$"
 
 SecretBase_Text_Trainer7PostBattle:
 	.string "That was all in good fun!\n"
@@ -185,7 +184,7 @@ SecretBase_Text_Trainer3DeclineBattle:
 	.string "for this place?$"
 
 SecretBase_Text_Trainer3Defeated::
-	.string "I went down…$"
+	.string "הפסדתי…$"
 
 SecretBase_Text_Trainer3PostBattle:
 	.string "Where's your SECRET BASE?\n"
@@ -211,8 +210,8 @@ SecretBase_Text_Trainer8DeclineBattle:
 	.string "I'll battle with you anytime.$"
 
 SecretBase_Text_Trainer8Defeated::
-	.string "Huh?\n"
-	.string "Did I just lose?$"
+	.string "מה?\n"
+	.string "הרגע הפסדתי?$"
 
 SecretBase_Text_Trainer8PostBattle:
 	.string "I won't lose at collecting decorations.\n"
@@ -240,7 +239,7 @@ SecretBase_Text_Trainer4DeclineBattle:
 	.string "into it.$"
 
 SecretBase_Text_Trainer4Defeated::
-	.string "I know exactly what you're made of now.$"
+	.string "עכשיו אני יודע בדיוק מה היכולות שלך.$"
 
 SecretBase_Text_Trainer4PostBattle:
 	.string "We can both become stronger.\n"
@@ -270,8 +269,8 @@ SecretBase_Text_Trainer9DeclineBattle:
 	.string "anytime.$"
 
 SecretBase_Text_Trainer9Defeated::
-	.string "You're supremely talented!\n"
-	.string "Your power seems to be limitless…$"
+	.string "יש לך כישרון יוצא מן הכלל!\n"
+	.string "נראה שלכוח שלך אין גבולות…$"
 
 SecretBase_Text_Trainer9PostBattle:
 	.string "What did you think of my style?\n"

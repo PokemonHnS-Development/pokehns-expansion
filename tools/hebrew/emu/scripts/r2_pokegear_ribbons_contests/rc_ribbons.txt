@@ -1,0 +1,116 @@
+# PokeGear RIBBONS (src/pokenav_ribbons_list.c, src/pokenav_ribbons_summary.c).
+# Ladder 6 has FLAG_SYS_RIBBON_GET and the Champion Ribbon on the party (Hall of Fame). Here:
+#  - party slot 6 becomes a Staraptor given by this ROM (its nickname is the ROM's species name, so
+#    the Hebrew run shows a Hebrew name in the list; the longest Hebrew species name, 57 px)
+#  - the party gets the Land/Marine/Sky/National/Earth/World/Artist ribbons, the lead the Effort
+#    Ribbon (src/field_specials.c:1505-1515, :5973-6160)
+#  - party mon 1 gets all 20 contest ribbons, mon 2 four (GiveMonContestRibbon,
+#    src/contest_util.c:1983: rank by rank, needs gContestFinalStandings[player] == 0)
+#  - gift-ribbon slots get descriptions (gSaveBlock1Ptr->giftRibbons, read by
+#    PrintRibbonNameAndDescription, src/pokenav_ribbons_summary.c:834-850)
+#  - the six party mons are cloned into box 14, so the list holds 12 mons and scrolls
+start saves/ladder6_postgame.sav
+include ../continue.txt
+partyclear 5
+ev givemon SPECIES_STARAPTOR, 50; end
+ev special GivePartyMonLandRibbon; special GivePartyMonMarineRibbon; special GivePartyMonSkyRibbon; special GivePartyMonNationalRibbon; special GivePartyMonEarthRibbon; special GivePartyMonWorldRibbon; special GivePartyMonArtistRibbon; special GiveLeadMonEffortRibbon; end
+w8 @gContestMonPartyIndex@ 0
+w8 @gContestPlayerMonIndex@ 3
+w32 @gContestFinalStandings@ 00010203
+ev setvar VAR_CONTEST_CATEGORY, 0; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 3; special GiveMonContestRibbon; end
+ev setvar VAR_CONTEST_CATEGORY, 1; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 3; special GiveMonContestRibbon; end
+ev setvar VAR_CONTEST_CATEGORY, 2; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 3; special GiveMonContestRibbon; end
+ev setvar VAR_CONTEST_CATEGORY, 3; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 3; special GiveMonContestRibbon; end
+ev setvar VAR_CONTEST_CATEGORY, 4; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 3; special GiveMonContestRibbon; end
+w8 @gContestMonPartyIndex@ 1
+ev setvar VAR_CONTEST_CATEGORY, 2; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_CATEGORY, 3; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_CATEGORY, 4; special GiveMonContestRibbon; end
+w8 @gContestMonPartyIndex@ 0
+giftribbon 0 1
+giftribbon 1 50
+giftribbon 2 51
+giftribbon 4 52
+giftribbon 5 55
+giftribbon 6 64
+boxclone 0 13 0
+boxclone 1 13 1
+boxclone 2 13 2
+boxclone 3 13 3
+boxclone 4 13 4
+boxclone 5 13 5
+
+# main menu: MAP / CONDITION / CALL / RADIO / RIBBONS / SWITCH OFF, a help line per row
+startmenu POKEGEAR
+waitcb2x CB2_Pokenav 600
+waitnav
+snap rc_gear_main_1_map
+press DOWN
+waitnav
+snap rc_gear_main_2_condition
+press DOWN
+waitnav
+snap rc_gear_main_3_call
+press DOWN
+waitnav
+snap rc_gear_main_4_radio
+press DOWN
+waitnav
+snap rc_gear_main_5_ribbons
+press DOWN
+waitnav
+snap rc_gear_main_6_off
+press UP
+waitnav
+
+# RIBBONS list: 12 mons (6 party, 6 in box 14), UP/DOWN one row, RIGHT/LEFT one page
+press A
+waitnav
+snap rc_rib_list_open
+navshot rc_rib_list_down DOWN 14
+navshot rc_rib_list_up UP 14
+press RIGHT
+waitnav
+snap rc_rib_list_pagedown
+press RIGHT
+waitnav
+snap rc_rib_list_pagedown2
+press LEFT
+waitnav
+snap rc_rib_list_pageup
+press LEFT
+waitnav
+snap rc_rib_list_pageup2
+
+# summary of mon 1 (Champion, 20 contest ribbons, Artist, Effort, 6 gift ribbons)
+press A
+waitnav
+snap rc_rib_sum_m1
+press A
+waitnav
+ribbonwalk rc_rib_m1
+giftcycle rc_rib_gift 1 64
+press B
+waitnav
+snap rc_rib_sum_m1_back
+# DOWN/UP: the next/previous mon in the list
+navshot rc_rib_sum_next DOWN 13
+press A
+waitnav
+ribbonwalk rc_rib_m12
+press B
+waitnav
+navshot rc_rib_sum_prev UP 13
+press DOWN
+waitnav
+press A
+waitnav
+ribbonwalk rc_rib_m2
+press B
+waitnav
+press B
+waitnav
+snap rc_rib_list_back
+press B
+waitnav
+snap rc_gear_main_back
+press B
+waitcb2x CB2_Overworld 900

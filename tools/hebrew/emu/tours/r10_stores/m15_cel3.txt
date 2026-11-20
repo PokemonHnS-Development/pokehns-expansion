@@ -1,0 +1,10 @@
+# Celadon 3F TMs (CeladonDept3_Pokemart) (MAP_CELADON_CITY_DEPARTMENT_STORE_3F_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_CELADON_CITY_DEPARTMENT_STORE_3F_HNS
+clerk 6 8 m15_hi
+buyopen m15_buy
+listshots m15_list
+buyeach m15_ask
+buyclose m15_menu
+shopquit m15_bye

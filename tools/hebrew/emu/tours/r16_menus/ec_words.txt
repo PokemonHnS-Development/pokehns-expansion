@@ -1,0 +1,109 @@
+# Easy Chat (src/easy_chat.c, words in src/data/easy_chat/easy_chat_group_*.h; the word lists are under
+# an open owner decision, recorded only). Three screens opened with the game's own script
+# (Common_ShowEasyChatScreen, data/event_scripts.s:1187) and the type in VAR_0x8004:
+#  - BATTLE_WON and BATTLE_LOST (the Battle Tower lobby feelings man's types, easy_chat.c:455-476): one
+#    word, OK, the confirm prompt ('what you say if you win / lose'), YES;
+#  - CONTEST_INTERVIEW (the contest lobby reporter, data/scripts/interview.inc:178-200): the instruction
+#    lines ('find words that describe your feelings right now'), B -> 'you cannot quit here / this
+#    section must be completed' (MSG_CANT_QUIT, :3995-4005), then the group keyboard and every word list
+#    of the groups that held unseen words (CONDITIONS, HOBBIES, ADJECTIVES, BATTLE, SPEECH, TIME,
+#    LIFESTYLE, PEOPLE, MISC, ENDINGS, TRAINER, and EVENTS, unlocked by FLAG_SYS_GAME_CLEAR,
+#    :5097-5112), each paged to its end with SELECT (eclist); then one word, OK, YES.
+# Run: scripts/r16_menus/menu16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_menus [--clip]
+# Save: ladder6_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_GAME_CLEAR; end
+evstart setvar VAR_0x8004, EASY_CHAT_TYPE_BATTLE_WON; call Common_ShowEasyChatScreen; end
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+snap ec_won_screen
+ecputword 0 0 EC_GROUP_FEELINGS EC_WORD_HAPPY
+snap ec_won_1word
+ec START
+snap ec_won_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+evstart setvar VAR_0x8004, EASY_CHAT_TYPE_BATTLE_LOST; call Common_ShowEasyChatScreen; end
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+snap ec_lost_screen
+ecputword 0 0 EC_GROUP_FEELINGS EC_WORD_HAPPY
+snap ec_lost_1word
+ec START
+snap ec_lost_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+evstart setvar VAR_0x8004, EASY_CHAT_TYPE_CONTEST_INTERVIEW; setvar VAR_0x8005, 0; setvar VAR_0x8006, 0; call Common_ShowEasyChatScreen; end
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecstate
+snap ec_int_screen
+ec B
+snap ec_int_cantquit
+ec A
+ecstate
+ec A
+ecstate
+snap ec_int_kbd
+ecgroup EC_GROUP_CONDITIONS
+ec A
+eclist ec_grp_conditions 80
+ec B
+ecgroup EC_GROUP_HOBBIES
+ec A
+eclist ec_grp_hobbies 80
+ec B
+ecgroup EC_GROUP_ADJECTIVES
+ec A
+eclist ec_grp_adjectives 80
+ec B
+ecgroup EC_GROUP_BATTLE
+ec A
+eclist ec_grp_battle 80
+ec B
+ecgroup EC_GROUP_SPEECH
+ec A
+eclist ec_grp_speech 80
+ec B
+ecgroup EC_GROUP_TIME
+ec A
+eclist ec_grp_time 80
+ec B
+ecgroup EC_GROUP_LIFESTYLE
+ec A
+eclist ec_grp_lifestyle 80
+ec B
+ecgroup EC_GROUP_PEOPLE
+ec A
+eclist ec_grp_people 80
+ec B
+ecgroup EC_GROUP_MISC
+ec A
+eclist ec_grp_misc 80
+ec B
+ecgroup EC_GROUP_ENDINGS
+ec A
+eclist ec_grp_endings 80
+ec B
+ecgroup EC_GROUP_TRAINER
+ec A
+eclist ec_grp_trainer 80
+ec B
+ecgroup EC_GROUP_EVENTS
+ec A
+eclist ec_grp_events 80
+ec B
+ec B
+ecstate
+ecputword 0 0 EC_GROUP_FEELINGS EC_WORD_HAPPY
+ec START
+snap ec_int_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900

@@ -19,25 +19,24 @@ CeladonDept1_EventScript_Directory::
     end
 
 CeladonDeptStore_Text_1FReceptionist:
-    .string "Hello! Welcome to CELADON DEPT.\n"
-    .string "STORE!\p"
-    .string "The directory is on the wall.$"
+    .string "שלום! ברוכים הבאים\n"
+    .string "לכלבו של סלדון!\p"
+    .string "לוח הקומות נמצא על הקיר.$"
 
 CeladonDeptStore_Text_1FGentleman:
-    .string "This DEPT.STORE is part of the same\n"
-    .string "chain as the one in GOLDENROD CITY.\p"
-    .string "They were both renovated at the same\n"
-    .string "time.$"
+    .string "הכלבו הזה שייך לאותה רשת\n"
+    .string "כמו זה שבעיר גולדנרוד.\p"
+    .string "שניהם שופצו באותו זמן.$"
 
 CeladonDeptStore_Text_1FTeacher:
-    .string "This is my first time here.\p"
-    .string "It's so big…\p"
-    .string "I'm afraid I'll get lost.$"
+    .string "זו הפעם הראשונה שלי כאן.\p"
+    .string "המקום כל כך גדול…\p"
+    .string "אני חוששת שאלך לאיבוד.$"
 
 CeladonDeptStore_Text_1FDirectory:
-    .string "1F: SERVICE COUNTER\p"
-    .string "2F: TRAINER'S MARKET\p"
-    .string "3F: TM SHOP\p"
-    .string "4F: WISEMAN GIFTS\p"
-    .string "5F: DRUG STORE\p"
-    .string "6F: ROOFTOP SQUARE$"
+    .string "ק1: דלפק שירות\p"
+    .string "ק2: שוק המאמנים\p"
+    .string "ק3: חנות המ”מ\p"
+    .string "ק4: מתנות החכם\p"
+    .string "ק5: בית מרקחת\p"
+    .string "ק6: כיכר הגג$"

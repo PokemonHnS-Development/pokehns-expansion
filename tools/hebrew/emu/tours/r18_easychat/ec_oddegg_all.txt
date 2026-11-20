@@ -1,0 +1,291 @@
+# The Odd Egg clerk (Route34_DayCare_hns/scripts.inc) given each of the 11 answers in turn
+# (sInterviewPasswords, src/easy_chat.c; the egg for answer N is sOddEggSpecies[N], src/scrcmd.c).
+# First the four bookshelves: HELP_DAYCARE1..4 (src/data/help_window.h) give, for Pichu to Magby, the
+# ability, the type, the cry and the habit, each as the word of the Easy Chat list to pick. The
+# answers below are the words those hints name (one word a hint: abilities and types from STATUS,
+# cries from VOICES, habits from ACTIONS, Pichu's PLAY from FEELINGS). Mantyke, Bonsly, Happiny and
+# Mime Jr. have no hint window; their answers are the table's.
+# For each answer: a party of two (the egg goes to slot 2), the flag cleared, the clerk's question
+# pages, the four words through the keyboard and the lists, OK -> YES, "take care" and the fanfare
+# line, then FLAG_RECEIVED_ODD_EGG set and slot 2 an egg of the expected species (eggcheck).
+# Run: scripts/r18_easy_chat/ec18.py tour ROM OUT --tours tools/hebrew/emu/tours/r18_easychat --only '^ec_oddegg_all$'
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_GAME_CLEAR; end
+
+# the four hint windows
+warptoloose MAP_ROUTE34_DAY_CARE_HNS 2 2
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+talk egg_shelf1 8
+waitctl 600
+go RIGHT
+face UP
+talk egg_shelf2 8
+waitctl 600
+go RIGHT
+face UP
+talk egg_shelf3 8
+waitctl 600
+go RIGHT
+face UP
+talk egg_shelf4 8
+waitctl 600
+warpto MAP_ROUTE34_HNS 10 20
+warptoloose MAP_ROUTE34_DAY_CARE_HNS 10 4
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+
+# 01: STATIC ELECTRIC WAAAH PLAY
+ev clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+face UP
+talk egg01_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_STATIC egg01_w1
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_ELECTRIC egg01_w2
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_WAAAH egg01_w3
+ecputword 1 1 EC_GROUP_FEELINGS EC_WORD_PLAY egg01_w4
+ecstate
+snap egg01_words
+ec START
+snap egg01_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk egg01_take 10 -
+waitctl 900
+expectflag FLAG_RECEIVED_ODD_EGG 1
+eggcheck 2 SPECIES_PICHU
+
+# 02: CUTE_CHARM NORMAL EEK LOOKS
+ev clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+face UP
+talk egg02_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_CUTE_CHARM egg02_w1
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_NORMAL egg02_w2
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_EEK egg02_w3
+ecputword 1 1 EC_GROUP_ACTIONS EC_WORD_LOOKS egg02_w4
+ecstate
+snap egg02_words
+ec START
+snap egg02_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk egg02_take 10 -
+waitctl 900
+expectflag FLAG_RECEIVED_ODD_EGG 1
+eggcheck 2 SPECIES_CLEFFA
+
+# 03: CUTE_CHARM NORMAL LALALA SLEEP
+ev clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+face UP
+talk egg03_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_CUTE_CHARM egg03_w1
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_NORMAL egg03_w2
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_LALALA egg03_w3
+ecputword 1 1 EC_GROUP_ACTIONS EC_WORD_SLEEP egg03_w4
+ecstate
+snap egg03_words
+ec START
+snap egg03_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk egg03_take 10 -
+waitctl 900
+expectflag FLAG_RECEIVED_ODD_EGG 1
+eggcheck 2 SPECIES_IGGLYBUFF
+
+# 04: GUTS FIGHTING HIYAH TRAINS
+ev clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+face UP
+talk egg04_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_GUTS egg04_w1
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_FIGHTING egg04_w2
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_HIYAH egg04_w3
+ecputword 1 1 EC_GROUP_ACTIONS EC_WORD_TRAINS egg04_w4
+ecstate
+snap egg04_words
+ec START
+snap egg04_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk egg04_take 10 -
+waitctl 900
+expectflag FLAG_RECEIVED_ODD_EGG 1
+eggcheck 2 SPECIES_TYROGUE
+
+# 05: OBLIVIOUS ICE EHEHE SHOW
+ev clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+face UP
+talk egg05_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_OBLIVIOUS egg05_w1
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_ICE egg05_w2
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_EHEHE egg05_w3
+ecputword 1 1 EC_GROUP_ACTIONS EC_WORD_SHOW egg05_w4
+ecstate
+snap egg05_words
+ec START
+snap egg05_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk egg05_take 10 -
+waitctl 900
+expectflag FLAG_RECEIVED_ODD_EGG 1
+eggcheck 2 SPECIES_SMOOCHUM
+
+# 06: STATIC ELECTRIC OI_OI_OI STORES
+ev clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+face UP
+talk egg06_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_STATIC egg06_w1
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_ELECTRIC egg06_w2
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_OI_OI_OI egg06_w3
+ecputword 1 1 EC_GROUP_ACTIONS EC_WORD_STORES egg06_w4
+ecstate
+snap egg06_words
+ec START
+snap egg06_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk egg06_take 10 -
+waitctl 900
+expectflag FLAG_RECEIVED_ODD_EGG 1
+eggcheck 2 SPECIES_ELEKID
+
+# 07: FLAME_BODY FIRE TCH ANGERS
+ev clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+face UP
+talk egg07_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_FLAME_BODY egg07_w1
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_FIRE egg07_w2
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_TCH egg07_w3
+ecputword 1 1 EC_GROUP_ACTIONS EC_WORD_ANGERS egg07_w4
+ecstate
+snap egg07_words
+ec START
+snap egg07_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk egg07_take 10 -
+waitctl 900
+expectflag FLAG_RECEIVED_ODD_EGG 1
+eggcheck 2 SPECIES_MAGBY
+
+# 08: SWIFT_SWIM WATER WAAAH SINK
+ev clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+face UP
+talk egg08_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_SWIFT_SWIM egg08_w1
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_WATER egg08_w2
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_WAAAH egg08_w3
+ecputword 1 1 EC_GROUP_ACTIONS EC_WORD_SINK egg08_w4
+ecstate
+snap egg08_words
+ec START
+snap egg08_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk egg08_take 10 -
+waitctl 900
+expectflag FLAG_RECEIVED_ODD_EGG 1
+eggcheck 2 SPECIES_MANTYKE
+
+# 09: STURDY ROCK URGH PRETEND
+ev clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+face UP
+talk egg09_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_STURDY egg09_w1
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_ROCK egg09_w2
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_URGH egg09_w3
+ecputword 1 1 EC_GROUP_ACTIONS EC_WORD_PRETEND egg09_w4
+ecstate
+snap egg09_words
+ec START
+snap egg09_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk egg09_take 10 -
+waitctl 900
+expectflag FLAG_RECEIVED_ODD_EGG 1
+eggcheck 2 SPECIES_BONSLY
+
+# 10: NATURAL_CURE NORMAL SIGH TRUST
+ev clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+face UP
+talk egg10_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_NATURAL_CURE egg10_w1
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_NORMAL egg10_w2
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_SIGH egg10_w3
+ecputword 1 1 EC_GROUP_ACTIONS EC_WORD_TRUST egg10_w4
+ecstate
+snap egg10_words
+ec START
+snap egg10_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk egg10_take 10 -
+waitctl 900
+expectflag FLAG_RECEIVED_ODD_EGG 1
+eggcheck 2 SPECIES_HAPPINY
+
+# 11: SOUNDPROOF PSYCHIC HMM WORRY
+ev clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+face UP
+talk egg11_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_SOUNDPROOF egg11_w1
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_PSYCHIC egg11_w2
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_HMM egg11_w3
+ecputword 1 1 EC_GROUP_ACTIONS EC_WORD_WORRY egg11_w4
+ecstate
+snap egg11_words
+ec START
+snap egg11_confirm
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk egg11_take 10 -
+waitctl 900
+expectflag FLAG_RECEIVED_ODD_EGG 1
+eggcheck 2 SPECIES_MIME_JR
+
+# the eleventh egg in the party and its summary
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waitquiet
+seek 8 @gPartyMenu+9@ 2 DOWN
+snap egg11_party
+tap A 4
+waitquiet
+tap A 4
+90 -
+waitquiet
+snap egg11_summary

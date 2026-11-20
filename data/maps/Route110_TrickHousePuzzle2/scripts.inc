@@ -100,11 +100,11 @@ Route110_TrickHousePuzzle2_EventScript_Georgia::
 	end
 
 Route110_TrickHousePuzzle2_Text_WroteSecretCodeLockOpened:
-	.string "{PLAYER} wrote down the secret code\n"
-	.string "on the door.\p"
-	.string "“TRICK MASTER is smart.”\n"
+	.string "{PLAYER} כתב את הקוד הסודי\n"
+	.string "על הדלת.\p"
+	.string "”אמן התעלולים חכם.”\n"
 	.string "… … … … … … … …\p"
-	.string "The lock clicked open!$"
+	.string "המנעול נפתח בנקישה!$"
 
 Route110_TrickHousePuzzle2_Text_TedIntro:
 	.string "Which switch closes which hole?$"

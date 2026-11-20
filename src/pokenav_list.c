@@ -101,9 +101,9 @@ static const u16 sListArrow_Pal[] = INCBIN_U16("graphics/pokenav/list_arrows.gba
 static const u32 sListArrow_Gfx[] = INCBIN_U32("graphics/pokenav/list_arrows.4bpp.smol");
 #endif
 
-static const u8 gText_PokenavMatchCall_Strategy[] = _("STRATEGY");
-static const u8 gText_PokenavMatchCall_TrainerPokemon[] = _("TRAINER'S POKéMON");
-static const u8 gText_PokenavMatchCall_SelfIntroduction[] = _("SELF-INTRODUCTION");
+static const u8 gText_PokenavMatchCall_Strategy[] = _("אסטרטגיה");
+static const u8 gText_PokenavMatchCall_TrainerPokemon[] = _("פוקימוני המאמן");
+static const u8 gText_PokenavMatchCall_SelfIntroduction[] = _("הצגה עצמית");
 
 bool32 CreatePokenavList(const struct BgTemplate *bgTemplate, struct PokenavListTemplate *listTemplate, s32 tileOffset)
 {
@@ -849,7 +849,26 @@ static void CreateListArrowSprites(struct PokenavListWindowState *windowState, s
     u32 spriteId;
     s16 x;
 
+#if TEXT_RTL
+    if (GetWindowRtlMode(list->listWindow.windowId) == WINDOW_RTL_MIRROR)
+    {
+        // The rows are mirrored, so their 8-px cursor margin is at the right edge of the list:
+        // the arrow goes there and points left. A list that ends at the screen edge would put
+        // the arrow's last column off-screen, so the 8-px sprite is kept inside the display.
+        x = (list->listWindow.x + list->listWindow.width) * 8 - 3;
+        if (x > DISPLAY_WIDTH - 4)
+            x = DISPLAY_WIDTH - 4;
+        spriteId = CreateSprite(&sSpriteTemplate_RightArrow, x, (list->listWindow.y + 1) * 8, 7);
+        gSprites[spriteId].hFlip = TRUE;
+        gSprites[spriteId].oam.matrixNum |= ST_OAM_HFLIP;
+    }
+    else
+    {
+        spriteId = CreateSprite(&sSpriteTemplate_RightArrow, list->listWindow.x * 8 + 3, (list->listWindow.y + 1) * 8, 7);
+    }
+#else
     spriteId = CreateSprite(&sSpriteTemplate_RightArrow, list->listWindow.x * 8 + 3, (list->listWindow.y + 1) * 8, 7);
+#endif
     list->rightArrow = &gSprites[spriteId];
 
     x = list->listWindow.x * 8 + (list->listWindow.width - 1) * 4;

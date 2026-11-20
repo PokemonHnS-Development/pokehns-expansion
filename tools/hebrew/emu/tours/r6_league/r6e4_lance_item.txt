@@ -1,0 +1,15 @@
+# Lance, Champion's room: the champion's item use in battle (Full Restore x2) with the first-time
+# branch; bitem keeps his Pokemon at 1/8 HP while the player's battler uses Splash.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_IS_CHAMPION; setvar VAR_LEAGUE_STATE, 5; setflag FLAG_HIDE_INDIGO_PLATEAU_MARY_OAK; end
+warptoloose MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM_HNS 6 19
+waitquiet
+walkto 6 9
+face UP
+tap A 4
+scene I_field 20000
+bwalk I_bintro input:HandleInputChooseAction
+bitem I_item 4
+bwin I_win
+sceneto I_after MAP_POKEMON_LEAGUE_HALL_OF_FAME_HNS 60000 40

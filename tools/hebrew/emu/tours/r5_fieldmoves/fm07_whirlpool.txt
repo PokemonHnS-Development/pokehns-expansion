@@ -1,0 +1,19 @@
+# Whirlpool objects while surfing (EventScript_Whirlpool, data/scripts/field_move_scripts_hns.inc:
+# 469-534): without badge 7 Text_CantWhirlpool (:506-510, :536); with it the player slides three
+# tiles past (Movement_Whirlpool*, no text; the party-move check is commented out, :472-473).
+# Route 41: the whirlpool at (42..43,45..46) (data/maps/Route41_hns/map.json), approached from
+# (41,46) on the water.
+start save:fm_party
+include _cont.txt
+warpto MAP_ROUTE41_HNS 41 46
+waitctl 600
+face RIGHT
+snap fm07_00_facing_whirlpool
+clearflag FLAG_BADGE07_GET
+tap A 2
+fieldwatch fm07_cant free 3000
+setflag FLAG_BADGE07_GET
+face RIGHT
+tap A 2
+fieldwatch fm07_slide free 3000 4
+snap fm07_after_slide

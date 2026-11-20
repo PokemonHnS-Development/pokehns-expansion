@@ -1,0 +1,26 @@
+pick 0
+waittaskx Task_HandlePyramidBagInput 900
+waitquiet
+30 -
+snap py_ct_00_bag
+tap A 4
+waitquiet
+30 -
+snap py_ct_01_ctx
+tap A 4
+waitquiet
+30 -
+snap py_ct_02_howmany
+tap A 4
+waitquiet
+30 -
+snap py_ct_03_confirm
+tap A 4
+waitquiet
+30 -
+snap py_ct_04_threw
+tap A 4
+waitquiet
+30 -
+snap py_ct_05_after
+showtasks

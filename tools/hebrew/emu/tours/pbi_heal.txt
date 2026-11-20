@@ -1,0 +1,240 @@
+# Healing items on a party with status conditions (src/party_menu.c ItemUseCB_Medicine,
+# Task_DisplayHPRestoredMessage :5308, ItemUseCB_SacredAsh :6226): the party boxes with the
+# fainted and status tags, Potion on a damaged Pokemon ("HP was restored by 20 points"),
+# Revive on a fainted one, Antidote / Paralyze Heal / Awakening / Full Heal on a statused one,
+# then Sacred Ash on two fainted Pokemon.
+# Party: 0 Typhlosion (burned, HP 30), 1 Pikachu (fainted), 2 Ampharos (poisoned),
+# 3 Gyarados (paralysed), 4 Togepi egg, 5 Chansey (asleep).
+# MEDICINE after the additem below: 0 POTION, 1 SUPER POTION, 2 FULL RESTORE, 3 REVIVE,
+# 4 ANTIDOTE, 5 RARE CANDY, 6 PARALYZE HEAL, 7 AWAKENING, 8 FULL HEAL, 9 SACRED ASH.
+start saves/menuA_base.sav
+include ../scripts/continue.txt
+ev givemon SPECIES_CHANSEY, 30; additem ITEM_PARALYZE_HEAL, 3; additem ITEM_AWAKENING, 3; additem ITEM_FULL_HEAL, 3; additem ITEM_SACRED_ASH, 3; setko 1; setstatus1 STATUS1_BURN, 0; setstatus1 STATUS1_POISON, 2; setstatus1 STATUS1_PARALYSIS, 3; setstatus1 STATUS1_SLEEP, 5; end
+sethp player 0 30
+
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_heal_01_party_status
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# POTION on Typhlosion
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 0
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_heal_02_use_party
+tap A 4
+waitkey 900
+snap pbi_heal_03_potion_restored
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_heal_04_party_after_potion
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# REVIVE on Pikachu
+w16 @gBagPosition+A@ 3
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap pbi_heal_05_party_fainted
+tap A 4
+waitkey 900
+snap pbi_heal_06_revived
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_heal_06b_party_after_revive
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# ANTIDOTE on Ampharos
+w16 @gBagPosition+A@ 3
+w16 @gBagPosition+16@ 1
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 4
+waitkey 900
+snap pbi_heal_07_cured_poison
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# PARALYZE HEAL on Gyarados
+w16 @gBagPosition+A@ 3
+w16 @gBagPosition+16@ 3
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 3 DOWN
+tap A 4
+waitkey 900
+snap pbi_heal_08_cured_paralysis
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# AWAKENING on Chansey
+w16 @gBagPosition+A@ 4
+w16 @gBagPosition+16@ 3
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+tap A 4
+waitkey 900
+snap pbi_heal_09_woke_up
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# FULL HEAL on Typhlosion (burn)
+w16 @gBagPosition+A@ 5
+w16 @gBagPosition+16@ 3
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_heal_10_bag_fullheal
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitkey 900
+snap pbi_heal_11_cured_burn
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# SACRED ASH with Pikachu and Gyarados fainted: one "HP was restored" message per Pokemon
+30 -
+ev setko 1; setko 3; end
+waitctl 600
+30 -
+w32 @gMenuCallback@ 0                     # the closed start menu leaves gMenuCallback set; startmenu would think it is open
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 6
+w16 @gBagPosition+16@ 3
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_heal_12_bag_sacredash
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waitkey 900
+snap pbi_heal_13_ash_first
+tap A 4
+waitkey 900
+snap pbi_heal_14_ash_second
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_heal_15_party_after
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

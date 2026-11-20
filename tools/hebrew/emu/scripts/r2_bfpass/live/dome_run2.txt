@@ -1,0 +1,29 @@
+drivex dt_r1win task:Task_HandleStaticTourneyTreeInput 30 9000
+waitquiet
+120 -
+snap dt_r1_static
+tap A 0
+drivex dt_r1after menu 30 9000
+pick 2
+drivex dt_r2 task:Task_HandleChooseMonInput 30 9000
+include tools/hebrew/emu/scripts/r2_bfpass/_dome_enter2.txt
+drivex dt_r2go battle 30 9000
+bwin dt_r2b
+drivex dt_r2win task:Task_HandleStaticTourneyTreeInput 30 9000
+waitquiet
+120 -
+snap dt_r2_static
+tap A 0
+drivex dt_r2after menu 30 9000
+pick 2
+drivex dt_r3 task:Task_HandleChooseMonInput 30 9000
+include tools/hebrew/emu/scripts/r2_bfpass/_dome_enter2.txt
+drivex dt_r3go battle 30 9000
+bwin dt_r3b
+drivex dt_r3win task:Task_HandleStaticTourneyTreeInput 30 9000
+waitquiet
+120 -
+snap dt_r3_static
+tap A 0
+drivex dt_r3after menu 30 9000
+ss dome_t_final

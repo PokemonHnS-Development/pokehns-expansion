@@ -1,0 +1,4 @@
+# Include: after `pages`, wait until the party menu reads input again
+# (Task_ReturnToChooseMonAfterText -> Task_HandleChooseMonInput, src/party_menu.c:2004-2023).
+waittaskx Task_HandleChooseMonInput 600
+waitquiet

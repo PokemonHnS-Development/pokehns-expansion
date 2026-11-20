@@ -1,0 +1,38 @@
+# START > SAVE at the largest numbers (save: numsave.txt): the info window (src/start_menu.c:1525-1583,
+# numbers from src/menu.c:1935-1948: badges 16, national Pokedex 1080, time 999:59), YES, saving,
+# saved; then a soft reset and the main menu's CONTINUE window (src/main_menu.c:2183-2235: player,
+# Pokedex 1080, time 999:59, badges 16), with the cursor on the other rows too.
+start saves/r3_numbers/r3_numbers.sav
+include ../../continue.txt
+playtime 999 59
+numstate
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+snap num_save_01_confirm
+tap A 0
+waitptr sSaveDialogCallback SaveDoSaveCallback 900
+snap num_save_02_saving
+waitptr sSaveDialogCallback SaveReturnSuccessCallback 900
+snap num_save_03_saved
+waitctl 900 B
+numstate
+# soft reset (A+B+START+SELECT), title, main menu
+10 A+B+START+SELECT
+waittask Task_TitleScreenPhase3 4000 START
+30 -
+tap A 0
+waittaskx Task_HandleMainMenuInput 900
+waitquiet
+snap num_continue_01
+press DOWN
+snap num_continue_02_newgame
+press DOWN
+snap num_continue_03_option
+press UP
+press UP
+# CONTINUE into the game: the clock was 999:59 and rolls over (src/play_time.c:34-44)
+tap A 30
+waitcb2 CB2_Overworld 1200
+waitctl 1200 B
+numstate
+snap num_continue_04_overworld

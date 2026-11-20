@@ -84,54 +84,52 @@ CeladonCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 CeladonCity_Gym_Text_ErikaIntro::
-	.string "Hello…\n"
-	.string "Lovely weather, isn't it?\l"
-	.string "It's so pleasant…\p"
-	.string "…Oh, dear…\n"
-	.string "I must have dozed off. Welcome.\p"
-	.string "My name is ERIKA.\n"
-	.string "I am the LEADER of CELADON GYM.\p"
-	.string "I am a student of the art of\n"
-	.string "flower arranging.\p"
-	.string "My POKéMON are solely of the\n"
-	.string "GRASS type.\p"
-	.string "…Oh, I'm sorry, I had no idea that\n"
-	.string "you wished to challenge me.\p"
-	.string "Very well, but I shall not lose.{PLAY_BGM MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "שלום… מזג אוויר נהדר, נכון?\n"
+	.string "כל כך נעים…\p"
+	.string "…אוי ואבוי…\n"
+	.string "כנראה שנרדמתי. ברוך הבא.\p"
+	.string "שמי אריקה.\n"
+	.string "אני מנהיגת מכון סלדון.\p"
+	.string "אני לומדת את אומנות\n"
+	.string "סידור הפרחים.\p"
+	.string "הפוקימונים שלי הם\n"
+	.string "מסוג עשב בלבד.\p"
+	.string "…אה, סליחה, לא היה לי מושג\n"
+	.string "שרצית לאתגר אותי.\p"
+	.string "טוב מאוד, אבל אני לא אפסיד.{PLAY_BGM MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 CeladonCity_Gym_Text_ErikaDefeat::
-	.string "Oh!\n"
-	.string "I concede defeat.\l"
-	.string "You are remarkably strong.\p"
-	.string "I must confer on you the\n"
-	.string "RAINBOWBADGE.$"
+	.string "הו! אני מודה בתבוסה.\n"
+	.string "אתה חזק להפליא.\p"
+	.string "עליי להעניק לך את\n"
+	.string "תג קשת.$"
 
 CeladonCity_Gym_Text_ErikaPostBattle::
-	.string "You are cataloging POKéMON?\n"
-	.string "I must say I'm impressed.\p"
-	.string "I would never collect POKéMON if\n"
-	.string "they were unattractive.$"
+	.string "אתה מתעד פוקימונים?\n"
+	.string "עליי לומר שזה מרשים.\p"
+	.string "לעולם לא הייתי אוספת פוקימונים\n"
+	.string "אם הם לא היו יפים.$"
 
 CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
-	.string "The RAINBOWBADGE will make\n"
-	.string "POKéMON up to Lv. 50 obey.\p"
-	.string "It also allows POKéMON to use\n"
-	.string "STRENGTH in and out of battle.\p"
-	.string "Please also take this with you.$"
+	.string "בזכות תג קשת, פוקימונים\n"
+	.string "עד רמה 50 יצייתו לך.\p"
+	.string "הוא גם מאפשר לפוקימונים להשתמש\n"
+	.string "במהלך עוצמה בקרב ומחוץ לקרב.\p"
+	.string "בבקשה, קח גם את זה.$"
 
 CeladonCity_Gym_Text_ReceivedTM19FromErika::
-	.string "{PLAYER} received TM19\n"
-	.string "from ERIKA.$"
+	.string "{PLAYER} קיבל את מ”מ 19\n"
+	.string "מאריקה.$"
 
 CeladonCity_Gym_Text_ExplainTM19::
-	.string "TM19 contains GIGA DRAIN.\p"
-	.string "Half the damage it inflicts is\n"
-	.string "drained to heal your POKéMON.\p"
-	.string "Wouldn't you agree that it's a\n"
-	.string "wonderful move?$"
+	.string "מ”מ 19 מכיל את יניקת ענק.\p"
+	.string "חצי מהנזק שהוא גורם נשאב\n"
+	.string "כדי לרפא את הפוקימון שלך.\p"
+	.string "אתה לא מסכים שזה מהלך\n"
+	.string "נפלא?$"
 
 CeladonCity_Gym_Text_ShouldMakeRoomForThis::
-	.string "You should make room for this.$"
+	.string "כדאי שתפנה מקום בשביל זה.$"
 
 CeladonCity_Gym_Text_KayIntro::
 	.string "I should tell you about this GYM.\p"
@@ -224,14 +222,14 @@ CeladonCity_Gym_Text_MaryPostBattle::
 	.string "Wait until next time!$"
 
 CeladonCity_Gym_Text_GymStatue::
-	.string "CELADON POKéMON GYM\n"
-	.string "LEADER: ERIKA\p"
-	.string "WINNING TRAINERS:\n"
+	.string "מכון הפוקימון של סלדון\n"
+	.string "מנהיגה: אריקה\p"
+	.string "מאמנים מנצחים:\n"
 	.string "{RIVAL}$"
 
 CeladonCity_Gym_Text_GymStatuePlayerWon::
-	.string "CELADON POKéMON GYM\n"
-	.string "LEADER: ERIKA\p"
-	.string "WINNING TRAINERS:\n"
+	.string "מכון הפוקימון של סלדון\n"
+	.string "מנהיגה: אריקה\p"
+	.string "מאמנים מנצחים:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

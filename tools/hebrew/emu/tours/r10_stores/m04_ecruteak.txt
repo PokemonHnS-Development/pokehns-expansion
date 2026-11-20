@@ -1,0 +1,9 @@
+# shared Cherrygrove clerk (MAP_ECRUTEAK_CITY_MART_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_ECRUTEAK_CITY_MART_HNS
+clerk 2 3 m04_hi
+buyopen m04_buy
+listshots m04_list
+buyclose m04_menu
+shopquit m04_bye

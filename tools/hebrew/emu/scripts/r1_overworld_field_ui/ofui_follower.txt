@@ -1,0 +1,54 @@
+# Talking to the follower Pokemon (Typhlosion, party slot 1; followers are on in menuA_base,
+# SB3+0x10 bit 0 = 0, src/event_object_movement.c:2516): EventScript_Follower
+# (data/scripts/follower.inc:13) plays the cry, GetFollowerAction picks an emotion, shows its
+# emote bubble over the follower and a message box (src/event_object_movement.c:2894-2939).
+# Each talk is random: 8 talks in a row, then poisoned (FOLLOWER_EMOTION_POISONED pool),
+# then below 20% HP (sad pool + conditional sad texts).
+start saves/ofui_menuA_base.sav
+include ../continue.txt
+go DOWN 9
+waitctl 600
+go DOWN 1
+face UP
+# the emote bubble shows before the message box (waitfieldeffect FLDEFF_EMOTE)
+tap A 0
+burst fol_emote01 10 6
+talk fol_talk01 4 -
+go RIGHT 1
+face LEFT
+talk fol_talk02 4
+go RIGHT 1
+face LEFT
+talk fol_talk03 4
+go RIGHT 1
+face LEFT
+talk fol_talk04 4
+go RIGHT 1
+face LEFT
+talk fol_talk05 4
+go RIGHT 1
+face LEFT
+talk fol_talk06 4
+go RIGHT 1
+face LEFT
+talk fol_talk07 4
+go RIGHT 1
+face LEFT
+talk fol_talk08 4
+# poisoned follower: the POISONED pool and its emote
+ev setstatus1 STATUS1_POISON, 0; end
+go DOWN 1
+face UP
+talk fol_psn01 4
+go DOWN 1
+face UP
+talk fol_psn02 4
+# low HP (below 20%): sad emotion weight and the sad conditional texts
+ev setstatus1 STATUS1_NONE, 0; end
+sethp player 0 5
+go DOWN 1
+face UP
+talk fol_lowhp01 4
+go DOWN 1
+face UP
+talk fol_lowhp02 4

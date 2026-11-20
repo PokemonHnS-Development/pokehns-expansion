@@ -1,0 +1,21 @@
+# Unique tag match: from the reception after the previous mode's TIME BOARD, out to the courtyard and
+# back in (its ON_TRANSITION clears VAR_TRAINER_HILL_IS_ACTIVE, which the counter trigger needs),
+# the counter trigger at (9,6), YES, the mode menu, UNIQUE (row 2), GO.
+walkto 9 16
+go DOWN 1
+waitctl 600
+loc
+snap u0_courtyard
+walkto 12 11
+go UP 1
+waitctl 600
+loc
+walkto 9 7
+go UP 1
+dlg u0_welcome menu
+pick 0
+dlg u0_mode menu
+pick 2
+dlg u0_go free
+hillstate
+snap u0_started

@@ -70,39 +70,38 @@ Gate_Route43_Rocket_EventScript_Rockets::
 	end
 
 Gate_Route43_Rocket_Text_TollFee:
-    .string "Hold it there, kiddo!\p"
-    .string "The toll is ¥500 to go\n"
-    .string "through.$"
+    .string "עצור, ילדון!\p"
+    .string "המעבר כאן עולה ¥500.$"
 
 Gate_Route43_Rocket_Text_ThankYou:
-    .string "Thank you very much!$"
+    .string "תודה רבה!$"
 
 Gate_Route43_Rocket_Text_AllYouGot:
-    .string "Then pay what you have, please.$"
+    .string "אז תשלם כמה שיש לך, בבקשה.$"
 
 Gate_Route43_Rocket_Text_KickOut:
-	.string "Wow!\p"
-	.string "You're totally broke!\p"
-	.string "I almost feel sorry for you.\p"
-	.string "Okay, you can pass...\p"
-	.string "Just don't tell the other guard,\n"
-	.string "okay?$"
+	.string "וואו!\p"
+	.string "אתה מרושש לגמרי!\p"
+	.string "אני כמעט מרחם עליך.\p"
+	.string "טוב, אתה יכול לעבור…\p"
+	.string "רק אל תספר לשומר השני,\n"
+	.string "בסדר?$"
 
 Gate_Route43_Rocket_Text_MakingABundle:
-    .string "He-he-he. We're making a bundle.\p"
-    .string "Everyone wants to see what's going\n"
-    .string "on up at LAKE OF RAGE.$"
+    .string "חה-חה-חה. אנחנו עושים הון.\p"
+    .string "כולם רוצים לראות מה קורה\n"
+    .string "למעלה באגם הזעם.$"
 
 Route43Gate_Text_OfficerFoundTM:
-    .string "I got chased from my post by these\n"
-    .string "thugs in black.\p"
-    .string "They left this behind.\p"
-    .string "It makes me uncomfortable. Could\n"
-    .string "you take it away?$"
+    .string "הבריונים האלה בשחור גירשו\n"
+    .string "אותי מהעמדה שלי.\p"
+    .string "הם השאירו את זה פה.\p"
+    .string "לא נוח לי עם זה. תוכל לקחת\n"
+    .string "את זה מכאן?$"
 
 Gate_Route43_Text_ReceivedTM30:
     .string "{PLAYER} received TM36.$"
 
 Gate_Route43_Text_OfficerAvoidGrass:
-    .string "Use this gate to avoid walking in\n"
-    .string "the grass.$"
+    .string "אפשר לעבור דרך השער הזה\n"
+    .string "כדי לא ללכת בעשב.$"

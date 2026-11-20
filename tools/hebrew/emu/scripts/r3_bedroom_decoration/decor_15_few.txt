@@ -1,0 +1,85 @@
+# Single-digit doll counts, as in normal play (Mom buys the dolls one by one, sMomGifts_Sequential
+# src/mom_savings.c:37-50 > DecorationAdd). The category menu and the summary window print the
+# owned count with ConvertIntToDecimalStringN(STR_CONV_MODE_RIGHT_ALIGN, 2) (src/decoration.c:787),
+# which pads a single digit with CHAR_SPACER (src/string_util.c:271-274): " 1/40", " 9/40".
+# From ladder 1: one doll (PIKACHU), then eight more (9 in all), then one placed.
+start saves/ladder1_newgame.sav
+include ../continue.txt
+ev adddecoration DECOR_PIKACHU_DOLL; end
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 1 2
+face UP
+talk df_00_pc_boot 10 A PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press DOWN
+press DOWN
+tap A 0                                   # DECORATION
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+tap A 0                                   # DECORATE
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+snap df_01_categories_1_doll
+tap A 0                                   # DOLL
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+snap df_02_list_1_doll
+press DOWN
+snap df_03_list_1_doll_cancel
+press B
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+press B
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+press B
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press B
+waitctl 600 B
+ev adddecoration DECOR_PICHU_DOLL; adddecoration DECOR_MARILL_DOLL; adddecoration DECOR_TOGEPI_DOLL; adddecoration DECOR_CYNDAQUIL_DOLL; adddecoration DECOR_JIGGLYPUFF_DOLL; adddecoration DECOR_CLEFAIRY_DOLL; adddecoration DECOR_DITTO_DOLL; adddecoration DECOR_SNORLAX_DOLL; end
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 1 2
+face UP
+talk df_10_pc_boot 10 A PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press DOWN
+press DOWN
+tap A 0                                   # DECORATION
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+tap A 0                                   # DECORATE
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+snap df_11_categories_9_dolls
+tap A 0                                   # DOLL
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+snap df_12_list_9_dolls
+decorrow 8
+snap df_13_list_9_dolls_last
+press DOWN
+snap df_14_list_9_dolls_cancel
+decorrow 1                                # PIKACHU DOLL
+tap A 0
+decorwait
+decorgoto 2 3
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0                                   # YES
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+snap df_15_list_9_dolls_1_placed
+press B
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+press B
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+press B
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press B
+waitctl 600 B
+snap df_16_room_1_doll

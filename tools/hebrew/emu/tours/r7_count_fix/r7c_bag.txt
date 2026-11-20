@@ -1,0 +1,98 @@
+# Count lines in the bag (DECISIONS.md Q125): TOSS asks how many (CopyItemNameHandlePlural with
+# 2, src/item_menu.c ItemMenu_Toss), confirms with the count (AskTossItems) and reports it
+# (ConfirmToss), for POTION (MEDICINE slot 0, x20), POKe BALL (POKe BALLS slot 1, x999, all 999
+# thrown: the widest count) and FOSSILIZED DINO, the widest plural, written over ITEMS slot 0
+# (x999). Save: menuA_base (999 of every ball, feathers and berries; see _pockets.txt).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+w16 @SB1+564@ B3                          # ITEMS slot 0: HEALTH FEATHER x999 -> FOSSILIZED DINO x999
+w8 @gBagPosition+5@ 1                     # MEDICINE
+w16 @gBagPosition+A@ 0
+w16 @gBagPosition+16@ 0
+
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap po_pocket
+tap A 4                                   # context grid USE GIVE / TOSS CANCEL
+waitquiet
+tap DOWN 4
+tap A 4
+waittaskx item_menu:Task_ChooseHowManyToToss 300
+waitquiet
+snap po_toss_qty_01
+tap UP 4
+tap UP 4
+waitquiet
+snap po_toss_qty_03
+tap A 4
+waitquiet
+snap po_toss_confirm
+tap A 4                                   # YES
+waitquiet
+snap po_toss_done
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+
+# POKe BALL: POKe BALLS slot 1, all 999 (DOWN from 1 wraps to the maximum)
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 2
+tap DOWN 4
+waitquiet
+snap pb_pocket
+tap A 4
+waitquiet
+tap DOWN 4
+tap A 4
+waittaskx item_menu:Task_ChooseHowManyToToss 300
+waitquiet
+snap pb_toss_qty_01
+tap DOWN 4
+waitquiet
+snap pb_toss_qty_999
+tap A 4
+waitquiet
+snap pb_toss_confirm
+tap A 4                                   # YES
+waitquiet
+snap pb_toss_done
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+
+# FOSSILIZED DINO: ITEMS slot 0, all 999
+tap LEFT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+tap LEFT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 0
+seek 16 @gBagPosition+8@ 0 UP
+waitquiet
+snap fd_pocket
+tap A 4
+waitquiet
+snap fd_context
+tap DOWN 4
+tap A 4
+waittaskx item_menu:Task_ChooseHowManyToToss 300
+waitquiet
+snap fd_toss_qty_01
+tap DOWN 4
+waitquiet
+snap fd_toss_qty_999
+tap A 4
+waitquiet
+snap fd_toss_confirm
+tap A 4                                   # YES
+waitquiet
+snap fd_toss_done
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+snap fd_after

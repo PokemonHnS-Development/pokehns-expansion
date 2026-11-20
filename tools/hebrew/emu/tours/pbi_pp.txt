@@ -1,0 +1,127 @@
+# PP items from the bag (src/party_menu.c ItemUseCB_PPUp :5574, ItemUseCB_PPRecovery :5486,
+# ShowMoveSelectWindow :5448): "Boost PP of which move?" and "Restore PP of which move?" with
+# the move list window, "PP increased", "PP was restored" (Ether on one move, Elixir on all),
+# and "It won't have any effect." on a move at full PP.
+# Two wild battles against a 1-HP Rattata first spend 1 PP of Typhlosion's moves 1 and 2
+# (EMBER, TACKLE set here), so there is PP to restore.
+start saves/menuA_base.sav
+include ../scripts/continue.txt
+ev setmonmove 0, 0, MOVE_EMBER; setmonmove 0, 1, MOVE_TACKLE; additem ITEM_PP_UP, 3; additem ITEM_ETHER, 3; additem ITEM_ELIXIR, 3; end
+
+pinrng
+ev setwildbattle SPECIES_RATTATA, 2; end
+evstart dowildbattle; end
+waitbattle
+sethp enemy 0 1
+bwalk pbi_pp_b1_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0
+bwalk pbi_pp_b1_end free
+ev setwildbattle SPECIES_RATTATA, 2; end
+evstart dowildbattle; end
+waitbattle
+sethp enemy 0 1
+bwalk pbi_pp_b2_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 1
+bwalk pbi_pp_b2_end free
+unpinrng
+
+# MEDICINE: 0 POTION .. 5 RARE CANDY, then 6 PP UP, 7 ETHER, 8 ELIXIR (added above)
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 6
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+snap pbi_pp_01_bag_ppup
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_pp_02_party
+tap A 4                                   # Typhlosion
+waittaskx Task_HandleWhichMoveInput 300
+waitquiet
+snap pbi_pp_03_boost_which
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap pbi_pp_04_boost_which_3
+tap A 4
+waitkey 600
+snap pbi_pp_05_pp_increased
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# ETHER on move 1 (one PP spent): restore list, then "PP was restored"
+tap DOWN 4
+waitquiet
+snap pbi_pp_06_bag_ether
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleWhichMoveInput 300
+waitquiet
+snap pbi_pp_07_restore_which
+tap A 4
+waitkey 600
+snap pbi_pp_08_pp_restored
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# ETHER again on move 1 (now full): no effect
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleWhichMoveInput 300
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_pp_09_ether_no_effect
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# ELIXIR (all moves; move 2 has one PP spent): no move list, "PP was restored"
+tap DOWN 4
+waitquiet
+snap pbi_pp_10_bag_elixir
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap pbi_pp_11_elixir_restored
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_pp_12_bag_after
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

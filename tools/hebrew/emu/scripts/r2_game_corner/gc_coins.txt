@@ -1,0 +1,65 @@
+# Game Corner coins clerk (Goldenrod Game Corner, clerk at (3,2), talked to from (3,3)):
+# MauvilleCity_GameCorner_EventScript_CoinsClerk (data/maps/MauvilleCity_GameCorner/scripts.inc:19-60):
+# money box (0,0), coins box (1,6), MULTI_GAME_CORNER_COINS at (15,0); buy 50, buy 500, thanks;
+# not enough money for 500 (boxes on), not enough for 50 (no boxes), no room for 500 (boxes on),
+# coin case full (no boxes), no coin case.
+start saves/gc_base.sav
+include ../continue.txt
+ev additem ITEM_COIN_CASE; checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 100; removemoney 9999999; addmoney 60000; end
+warpto MAP_GOLDENROD_CITY_GAME_CORNER_HNS 3 3
+face UP
+talk coins_a 10
+press DOWN
+snap coins_a_menu2
+press DOWN
+snap coins_a_menu3
+press DOWN
+snap coins_a_menu4
+press DOWN
+snap coins_a_menu5
+press DOWN
+snap coins_a_menu6
+seek 8 @menu:sMenu+2@ 0 UP
+tap A 0
+talk coins_buy50 10 -
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0
+talk coins_buy500 10 -
+tap B 0
+talk coins_thanks 10 -
+waitctl 600
+# money 1000: enough for 50 coins, not for 500
+ev removemoney 9999999; addmoney 1000; end
+face UP
+talk coins_b 10
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0
+talk coins_nomoney500 10 -
+tap B 0
+talk coins_dontneed 10 -
+waitctl 600
+# money 100: not enough for 50 coins (no boxes)
+ev removemoney 9999999; addmoney 100; end
+face UP
+talk coins_nomoney50 10
+waitctl 600
+# coins 9600: no room for 500
+ev removemoney 9999999; addmoney 60000; checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 9600; end
+face UP
+talk coins_c 10
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0
+talk coins_noroom500 10 -
+tap B 0
+talk coins_c_end 10 -
+waitctl 600
+# coins 9960: coin case full (no boxes)
+ev checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 9960; end
+face UP
+talk coins_full 10
+waitctl 600
+# no coin case
+ev removeitem ITEM_COIN_CASE; end
+face UP
+talk coins_nocase 10
+waitctl 600

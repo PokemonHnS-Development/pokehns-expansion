@@ -1,0 +1,7 @@
+# Elite Four and Lance, first-time branch (FLAG_IS_CHAMPION clear): PokemonLeague_WillsRoom_hns
+# :7-80, Kogas/Brunos/KarensRoom :12-60, PokemonLeague_ChampionsRoom_hns :51-140
+# (LanceOnDefeatJohto), stopping at the Hall of Fame warp.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_IS_CHAMPION; setvar VAR_LEAGUE_STATE, 1; setflag FLAG_HIDE_LEAGUE_BLACKBELT; setflag FLAG_HIDE_INDIGO_PLATEAU_SILVER; setflag FLAG_HIDE_INDIGO_PLATEAU_MARY_OAK; end
+include _e4_rooms.txt

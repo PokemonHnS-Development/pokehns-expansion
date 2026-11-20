@@ -1,0 +1,30 @@
+tap B 4
+waittaskx Task_HandlePyramidBagInput 900
+waitquiet
+30 -
+tap SELECT 4
+waitquiet
+20 -
+snap py_swap_00
+tap DOWN 4
+waitquiet
+6 -
+tap DOWN 4
+waitquiet
+20 -
+snap py_swap_01
+tap B 4
+waitquiet
+20 -
+snap py_swap_02_cancel
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+waitquiet
+20 -
+snap py_sm_back
+startmenux 10
+waitquiet
+30 -
+snap py_rest_00
+showtasks

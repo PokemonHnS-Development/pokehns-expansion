@@ -1,0 +1,25 @@
+# Ilex Forest shrine (32,36) at VAR_AZALEA_TOWN_STATE 9 (after Kurt's GS Ball scene; the r5_latin
+# r5l_09_gsball setup): GS Ball YES -> inserted, Celebi appears, the legendary battle. From a
+# savestate at the action menu: the catch branch (Master Ball: throw, caught, dex page, nickname
+# NO) and the win branch (bwin), each followed by the field after the battle: the fade, Kurt's
+# walk-in (IlexForest_EventScript_Kurt, IlexForest_hns/scripts.inc:258-273), his pages, his exit.
+start saves/r6_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+ev setvar VAR_AZALEA_TOWN_STATE, 9; end
+warpto MAP_ILEX_FOREST_HNS 32 37
+face UP
+tap A 4
+scene cb_ask 6000
+pickd 0
+scene cb_celebi 12000 30
+bwalk cb_intro input:HandleInputChooseAction
+snap cb_action
+ss cb_battle
+bcatch cb_catch
+snap cb_catch_free
+vars VAR_AZALEA_TOWN_STATE
+sl cb_battle
+bwin cb_win
+fieldwatch cb_win_after free 12000 20
+snap cb_win_free

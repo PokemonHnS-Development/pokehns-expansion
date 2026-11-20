@@ -38,37 +38,36 @@ SSAqua_RoomNW_EventScript_Corey::
 
 
 SSAqua_RoomNW_Text_SailorStanlySeen:
-	.string "Yeah, I'm a sailor, all right.\p"
-	.string "I wasn't goofing off!\p"
-	.string "This cabin was vacant, so I\n"
-	.string "just took a quick nap!\p"
-	.string "Ah, forget it! Let's battle!$"
+	.string "כן, אני מלח, בהחלט.\p"
+	.string "לא התבטלתי!\p"
+	.string "התא הזה היה פנוי, אז\n"
+	.string "רק חטפתי תנומה קצרה!\p"
+	.string "אה, לא משנה! קדימה, לקרב!$"
 
 SSAqua_RoomNW_Text_SailorStanlyBeaten:
-	.string "Sorry! It's all my fault!$"
+	.string "סליחה! הכול באשמתי!$"
 
 SSAqua_RoomNW_Text_SailorStanlyAfterBattle:
-	.string "Being a sailor, I have to do\n"
-	.string "physical labor. It's exhausting!$"
+	.string "בתור מלח, אני חייב לעשות\n"
+	.string "עבודה פיזית. זה מתיש!$"
 
 SSAqua_RoomNW_Text_GentlemanEdwardSeen:
-	.string "Oh, no. I've lost something\n"
-	.string "that's very important.$"
+	.string "אוי, לא. איבדתי משהו\n"
+	.string "חשוב מאוד.$"
 
 SSAqua_RoomNW_Text_GentlemanEdwardBeaten:
-	.string "I… I can't find it…$"
+	.string "אני… אני לא מוצא את זה…$"
 
 SSAqua_RoomNW_Text_GentlemanEdwardAfterBattle:
-	.string "I give up. You don't have to\n"
-	.string "look.\p"
-	.string "Just forget about it!$"
+	.string "אני מוותר. אין צורך לחפש.\p"
+	.string "פשוט תשכח מזה!$"
 
 SSAqua_RoomNW_Text_BurglarCoreySeen:
-	.string "Yeehaw! Lucky!$"
+	.string "יששש! איזה מזל!$"
 
 SSAqua_RoomNW_Text_BurglarCoreyBeaten:
-	.string "How unlucky! I lost!$"
+	.string "איזה חוסר מזל! הפסדתי!$"
 
 SSAqua_RoomNW_Text_BurglarCoreyAfterBattle:
-	.string "I found a pretty coin here.\p"
-	.string "Someone must have lost it…$"
+	.string "מצאתי פה מטבע יפה.\p"
+	.string "מישהו בטח איבד אותו…$"

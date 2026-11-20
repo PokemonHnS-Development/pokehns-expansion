@@ -1,0 +1,12 @@
+# Alola totem double battle, melemele: the totem object (hidden by FLAG_HIDE_MELEMELE_TOTEM until the island's trigger
+# scene) and its battle script (data/maps/MelemeleIsle_hns:308-360 (day: Leafeon + Eevee, all stats +1)): cry, a cry text, setwildbattle with two
+# species + settotemboost B_POSITION_OPPONENT_RIGHT. RTC 12:00 = the day totem where there are two.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_MELEMELE_TOTEM; end
+warpto MAP_MELEMELE_ISLE_HNS 34 27
+face UP
+snap melemele_field
+tap A 4
+scene melemele_pre 4000
+include _totem_tail.txt

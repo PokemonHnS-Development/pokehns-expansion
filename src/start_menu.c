@@ -523,6 +523,16 @@ static void ShowTimeWindow(void)
         suffix = sText_PM;
     }
 
+#if TEXT_RTL
+    // Israel reads the 24-hour clock, and one string keeps the time a single left-to-right run.
+    (void)suffix;
+    (void)convertedHours;
+    ptr = ConvertIntToDecimalStringN(gStringVar4, gLocalTime.hours, STR_CONV_MODE_LEFT_ALIGN, 2);
+    *ptr = CHAR_COLON;
+    ConvertIntToDecimalStringN(ptr + 1, gLocalTime.minutes, STR_CONV_MODE_LEADING_ZEROS, 2);
+    AddTextPrinterParameterized(sStartClockWindowId, FONT_NORMAL, gStringVar4,
+        GetStringCenterAlignXOffset(FONT_NORMAL, gStringVar4, CLOCK_WINDOW_WIDTH), 1, 0xFF, NULL);
+#else
     ptr = ConvertIntToDecimalStringN(gStringVar4, convertedHours, STR_CONV_MODE_LEFT_ALIGN, 3);
     *ptr = 0xF0;
     ConvertIntToDecimalStringN(ptr + 1, gLocalTime.minutes, STR_CONV_MODE_LEADING_ZEROS, 2);
@@ -531,6 +541,7 @@ static void ShowTimeWindow(void)
 
     AddTextPrinterParameterized(sStartClockWindowId, FONT_NORMAL, suffix,
         GetStringWidth(FONT_NORMAL, gStringVar4, 0) + 3, 1, 0xFF, NULL);
+#endif
 
     CopyWindowToVram(sStartClockWindowId, COPYWIN_GFX);
 }
@@ -563,7 +574,15 @@ static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
     {
         if (sStartMenuItems[sCurrentStartMenuActions[index]].func.u8_void == StartMenuPlayerNameCallback)
         {
+#if TEXT_RTL
+            // The row has 48 px after the cursor column of the 56-px window. Seven 7-px Hebrew letters
+            // are 49 px, and the mirrored window would cut the last letter's first column, so a name
+            // wider than the row drops to the narrower font.
+            StringExpandPlaceholders(gStringVar4, sStartMenuItems[sCurrentStartMenuActions[index]].text);
+            AddTextPrinterParameterized(GetStartMenuWindowId(), GetFontIdToFit(gStringVar4, FONT_NORMAL, 0, 48), gStringVar4, 8, (index << 4) + 9, TEXT_SKIP_DRAW, NULL);
+#else
             PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[sCurrentStartMenuActions[index]].text, 8, (index << 4) + 9);
+#endif
         }
         else
         {

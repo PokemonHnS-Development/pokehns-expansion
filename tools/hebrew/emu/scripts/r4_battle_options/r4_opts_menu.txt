@@ -1,0 +1,59 @@
+# OPTIONS > BATTLE rows 4-7 with every value and its description (src/option_menu.c:453-496,
+# descriptions :333-350, choices :240-250). Row 7 (LR_RUN) is shown only while row 6 is
+# L+R+A or B (CheckConditions, src/option_menu.c:587-595). Ends with row 4 Gen 4, row 5 off,
+# row 6 B, row 7 off, closes with B (the options are written to gSaveblock3,
+# src/option_menu.c:1105-1112) and checks the bitfields r4opt.py writes against the menu's.
+start saves/ladder1_newgame.sav
+include ../continue.txt
+optshow
+startmenu OPTION
+waitcb2x option_menu:MainCB2 900
+waittaskx option_menu:Task_ProcessInput 900
+press R
+waittaskx option_menu:Task_ProcessInput 300
+snap opt_b01_fastintro
+press DOWN
+press DOWN
+press DOWN
+snap opt_b04_gen3
+pressnext
+snap opt_b04_gen4
+press DOWN
+snap opt_b05_on
+pressnext
+snap opt_b05_off
+pressprev
+snap opt_b05_on_again
+press DOWN
+snap opt_b06_0_none
+pressnext
+snap opt_b06_1_lra
+press DOWN
+snap opt_b07_on_lra
+pressnext
+snap opt_b07_off_lra
+pressprev
+press UP
+pressnext
+snap opt_b06_2_ba
+pressnext
+snap opt_b06_3_b
+press DOWN
+snap opt_b07_on_b
+pressnext
+snap opt_b07_off_b
+press UP
+pressnext
+snap opt_b06_wrap
+pressprev
+snap opt_b06_back_b
+press UP
+pressnext
+snap opt_b05_final_off
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+optshow
+optexpect newBattleUI=1 ballPrompt=1 runType=3 lrToRun=1

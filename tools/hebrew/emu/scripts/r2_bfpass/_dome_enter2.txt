@@ -1,0 +1,19 @@
+# Battle Dome match party select (2 of the 3 challenge Pokemon, cursor on slot 0): ENTER slots
+# 0 and 1, then confirm (the cursor jumps to CONFIRM after the second entry).
+waittask Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 0 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+waitquiet
+snap dome_party_two
+tap A 0

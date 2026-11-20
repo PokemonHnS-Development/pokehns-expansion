@@ -1,0 +1,7 @@
+# Bike shops (Goldenrod, Cerulean): every NPC (no shop list; the Goldenrod clerk lends the BICYCLE).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_GOLDENROD_CITY_BIKE_SHOP_HNS
+npcs
+visit MAP_CERULEAN_CITY_BIKE_SHOP_HNS
+npcs

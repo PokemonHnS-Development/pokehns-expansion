@@ -200,50 +200,50 @@ static const u16 sTextPal[] = INCBIN_U16("graphics/interface/option_menu_text_cu
 // =============================================================================
 
 static const u8 *const sChoices_OnOff[] = {
-    COMPOUND_STRING("ON"),
-    COMPOUND_STRING("OFF"),
+    COMPOUND_STRING("פעיל"),
+    COMPOUND_STRING("כבוי"),
 };
 
 static const u8 *const sChoices_ShiftSet[] = {
-    COMPOUND_STRING("SHIFT"),
-    COMPOUND_STRING("SET"),
+    COMPOUND_STRING("החלפה"),
+    COMPOUND_STRING("קבוע"),
 };
 
 static const u8 *const sChoices_MonoStereo[] = {
-    COMPOUND_STRING("MONO"),
-    COMPOUND_STRING("STEREO"),
+    COMPOUND_STRING("מונו"),
+    COMPOUND_STRING("סטריאו"),
 };
 
 static const u8 *const sChoices_ButtonMode[] = {
-    COMPOUND_STRING("NORMAL"),
+    COMPOUND_STRING("רגיל"),
     COMPOUND_STRING("LR"),
     COMPOUND_STRING("L=A"),
 };
 
 static const u8 *const sChoices_TextSpeed[] = {
-    COMPOUND_STRING("SLOW"),
-    COMPOUND_STRING("MID"),
-    COMPOUND_STRING("FAST"),
-    COMPOUND_STRING("FASTER"),
+    COMPOUND_STRING("איטי"),
+    COMPOUND_STRING("בינוני"),
+    COMPOUND_STRING("מהיר"),
+    COMPOUND_STRING("טורבו"),
 };
 
 static const u8 *const sChoices_MetricImperial[] = {
-    COMPOUND_STRING("METRIC"),
-    COMPOUND_STRING("IMPERIAL"),
+    COMPOUND_STRING("מטרי"),
+    COMPOUND_STRING("אימפריאלי"),
 };
 
 static const u8 *const sChoices_OldModern[] = {
-    COMPOUND_STRING("OLD"),
-    COMPOUND_STRING("MODERN"),
+    COMPOUND_STRING("ישן"),
+    COMPOUND_STRING("מודרני"),
 };
 
 static const u8 *const sChoices_Gen3Gen4[] = {
-    COMPOUND_STRING("GEN 3"),
-    COMPOUND_STRING("GEN 4"),
+    COMPOUND_STRING("דור 3"),
+    COMPOUND_STRING("דור 4"),
 };
 
 static const u8 *const sChoices_RunType[] = {
-    COMPOUND_STRING("NO"),
+    COMPOUND_STRING("לא"),
     COMPOUND_STRING("L+R+A"),
     COMPOUND_STRING("B{RIGHT_ARROW}A"),
     COMPOUND_STRING("B"),
@@ -263,7 +263,7 @@ static const u8 sText_TopBar_Right[] = _("{R_BUTTON}");
 // Descriptions
 // =============================================================================
 
-static const u8 sText_Desc_TextSpeed[] = _("Choose one of the four text-display\nspeeds.");
+static const u8 sText_Desc_TextSpeed[] = _("בחירה בין ארבע מהירויות\nלהצגת הטקסט.");
 static const u8 *const sDesc_TextSpeed[] = {
     sText_Desc_TextSpeed,
     sText_Desc_TextSpeed,
@@ -271,98 +271,98 @@ static const u8 *const sDesc_TextSpeed[] = {
     sText_Desc_TextSpeed,
 };
 static const u8 *const sDesc_BattleScene[] = {
-    COMPOUND_STRING("Show the {PKMN} animations\nand attack animations."),
-    COMPOUND_STRING("Skip the {PKMN} animations\nand attack animations."),
+    COMPOUND_STRING("הצגת האנימציות של הפוקימונים\nואנימציות המהלכים."),
+    COMPOUND_STRING("דילוג על האנימציות של הפוקימונים\nועל אנימציות המהלכים."),
 };
 static const u8 *const sDesc_BattleStyle[] = {
-    COMPOUND_STRING("Get the option to switch your\n{PKMN} after the enemies faints."),
-    COMPOUND_STRING("No free switch after fainting the\nenemies {PKMN}."),
+    COMPOUND_STRING("אפשרות להחליף פוקימון אחרי\nשהפוקימון של היריב מתעלף."),
+    COMPOUND_STRING("אין החלפה חופשית אחרי\nשהפוקימון של היריב מתעלף."),
 };
 static const u8 *const sDesc_ButtonMode[] = {
-    COMPOUND_STRING("All buttons work as normal."),
-    COMPOUND_STRING("On some screens the L and R buttons\nact as left and right."),
-    COMPOUND_STRING("The L button acts as another A\nbutton for one-handed play."),
+    COMPOUND_STRING("כל הכפתורים פועלים כרגיל."),
+    COMPOUND_STRING("בחלק מהמסכים, הכפתורים L ו-R\nמשמשים כחיצי שמאלה וימינה."),
+    COMPOUND_STRING("הכפתור L פועל ככפתור A נוסף,\nלמשחק ביד אחת."),
 };
 static const u8 *const sDesc_Follower[] = {
-    COMPOUND_STRING("Let the first {PKMN} in your\nparty follow you."),
-    COMPOUND_STRING("Walk alone."),
+    COMPOUND_STRING("הפוקימון הראשון בקבוצה שלך\nילך אחריך."),
+    COMPOUND_STRING("הליכה לבד."),
 };
 static const u8 *const sDesc_LargeFollower[] = {
-    COMPOUND_STRING("Enable large {PKMN} followers.\nCan cause graphical issues."),
-    COMPOUND_STRING("Disable large {PKMN} followers.\nRecommended."),
+    COMPOUND_STRING("הפעלת פוקימונים מלווים גדולים.\nעלול לגרום לתקלות גרפיות."),
+    COMPOUND_STRING("כיבוי פוקימונים מלווים גדולים.\nמומלץ."),
 };
 static const u8 *const sDesc_Autorun[] = {
-    COMPOUND_STRING("Run without pressing B."),
-    COMPOUND_STRING("Press and hold B to run."),
+    COMPOUND_STRING("ריצה בלי ללחוץ על B."),
+    COMPOUND_STRING("כדי לרוץ, יש להחזיק את B."),
 };
 static const u8 *const sDesc_AutorunSurf[] = {
-    COMPOUND_STRING("Surf faster without pressing B."),
-    COMPOUND_STRING("Press and hold B to surf faster."),
+    COMPOUND_STRING("גלישה מהירה יותר בלי ללחוץ על B."),
+    COMPOUND_STRING("כדי לגלוש מהר יותר, יש להחזיק את B."),
 };
 static const u8 *const sDesc_Fishing[] = {
-    COMPOUND_STRING("Automatically reel while fishing."),
-    COMPOUND_STRING("Manually reel while fishing.\nFish like you always fished!"),
+    COMPOUND_STRING("משיכה אוטומטית של החכה בזמן דיג."),
+    COMPOUND_STRING("משיכה ידנית של החכה בזמן דיג.\nלדוג כמו שתמיד דגת!"),
 };
 static const u8 *const sDesc_FasterJoy[] = {
-    COMPOUND_STRING("NURSE JOY heals you faster."),
-    COMPOUND_STRING("NURSE JOY heals you with the\nusual animation."),
+    COMPOUND_STRING("האחות ג'וי מרפאת אותך מהר יותר."),
+    COMPOUND_STRING("האחות ג'וי מרפאת אותך\nבאנימציה הרגילה."),
 };
 static const u8 *const sDesc_UnitType[] = {
-    COMPOUND_STRING("Display BERRY and {PKMN} weight\nand size in kilograms and meters."),
-    COMPOUND_STRING("Display BERRY and {PKMN} weight\nand size in pounds and inches."),
+    COMPOUND_STRING("הצגת המשקל והגודל של פירות\nופוקימונים בקילוגרמים ובמטרים."),
+    COMPOUND_STRING("הצגת המשקל והגודל של פירות\nופוקימונים בליברות ובאינצ'ים."),
 };
 static const u8 *const sDesc_MatchCall[] = {
-    COMPOUND_STRING("TRAINERs will be able to call you,\noffering rematches and info."),
-    COMPOUND_STRING("You will not receive calls.\nSpecial events will still occur."),
+    COMPOUND_STRING("מאמנים יוכלו להתקשר אליך\nולהציע קרבות חוזרים ומידע."),
+    COMPOUND_STRING("לא יגיעו אליך שיחות.\nאירועים מיוחדים עדיין יתרחשו."),
 };
 static const u8 *const sDesc_FrameType[] = {
-    COMPOUND_STRING("Choose the frame surrounding the\nwindows."),
+    COMPOUND_STRING("בחירת המסגרת שמסביב\nלחלונות."),
 };
 static const u8 *const sDesc_FastIntro[] = {
-    COMPOUND_STRING("Skip the sliding animation\nand enter battles faster."),
-    COMPOUND_STRING("Battles load at the usual speed."),
+    COMPOUND_STRING("דילוג על אנימציית ההחלקה\nוכניסה מהירה יותר לקרבות."),
+    COMPOUND_STRING("הקרבות נטענים במהירות הרגילה."),
 };
 static const u8 *const sDesc_FastBattles[] = {
-    COMPOUND_STRING("Skips all delays in battles, which\nmakes them faster."),
-    COMPOUND_STRING("Manual delay skipping. You can\npress A or B to skip delays."),
+    COMPOUND_STRING("דילוג על כל ההשהיות בקרבות,\nכך שהם מהירים יותר."),
+    COMPOUND_STRING("דילוג ידני על השהיות. אפשר\nללחוץ על A או B כדי לדלג."),
 };
 static const u8 *const sDesc_NewBackgrounds[] = {
-    COMPOUND_STRING("Original battle terrain backgrounds."),
-    COMPOUND_STRING("Modernized battle terrain\nbackgrounds, from HnS."),
+    COMPOUND_STRING("רקעי הקרב המקוריים."),
+    COMPOUND_STRING("רקעי קרב מודרניים\nשל HnS."),
 };
 static const u8 *const sDesc_NewBattleUI[] = {
-    COMPOUND_STRING("Original GEN III Battle UI."),
-    COMPOUND_STRING("Modernized GEN IV Battle UI."),
+    COMPOUND_STRING("ממשק הקרב המקורי של דור 3."),
+    COMPOUND_STRING("ממשק קרב מודרני של דור 4."),
 };
 static const u8 *const sDesc_BallPrompt[] = {
-    COMPOUND_STRING("Press {R_BUTTON} in battle to use Pokeballs.\nHold {L_BUTTON}/{R_BUTTON} to swap {PKMN}BALLS."),
-    COMPOUND_STRING("Disables the prompt to use\n{PKMN}BALLS quickly."),
+    COMPOUND_STRING("לחיצה על {R_BUTTON} בקרב לשימוש בפוכדור.\nהחזקת {L_BUTTON}/{R_BUTTON} להחלפת סוג הפוכדור."),
+    COMPOUND_STRING("ביטול החלונית לשימוש מהיר\nבפוכדורים."),
 };
 static const u8 *const sDesc_RunType[] = {
-    COMPOUND_STRING("No quick running from battles."),
-    COMPOUND_STRING("Hold {L_BUTTON}+{R_BUTTON}, then {A_BUTTON} to run from\nbattles before they start."),
-    COMPOUND_STRING("Press {B_BUTTON} to move the cursor to the RUN\noption after the battle started."),
-    COMPOUND_STRING("Press {B_BUTTON} to run from battles before\nthey start."),
+    COMPOUND_STRING("אין בריחה מהירה מקרבות."),
+    COMPOUND_STRING("החזקת {L_BUTTON}+{R_BUTTON} ולחיצה על {A_BUTTON}\nלבריחה מקרבות לפני שהם מתחילים."),
+    COMPOUND_STRING("לחיצה על {B_BUTTON} מעבירה את הסמן\nלאפשרות ”בריחה” אחרי תחילת הקרב."),
+    COMPOUND_STRING("לחיצה על {B_BUTTON} לבריחה מקרבות\nלפני שהם מתחילים."),
 };
 static const u8 *const sDesc_LRRun[] = {
-    COMPOUND_STRING("Enables a prompt to show that you\ncan run away from battles."),
-    COMPOUND_STRING("Disables said prompt to flee.\nButton combo still works."),
+    COMPOUND_STRING("הצגת חלונית שמראה שאפשר\nלברוח מקרבות."),
+    COMPOUND_STRING("ביטול חלונית הבריחה.\nצירוף הכפתורים עדיין עובד."),
 };
 static const u8 *const sDesc_Sound[] = {
-    COMPOUND_STRING("Sound is the same in all speakers.\nRecommended for original hardware."),
-    COMPOUND_STRING("Play the left and right audio channel\nseparately. Great with headphones."),
+    COMPOUND_STRING("אותו צליל בכל הרמקולים.\nמומלץ לחומרה המקורית."),
+    COMPOUND_STRING("ניגון נפרד של ערוצי השמע\nהשמאלי והימני. מעולה עם אוזניות."),
 };
 static const u8 *const sDesc_Music[] = {
-    COMPOUND_STRING("Enables music playback.\nChange maps to take effect."),
-    COMPOUND_STRING("Disables music playback.\nChange maps to take effect."),
+    COMPOUND_STRING("הפעלת המוזיקה.\nהשינוי ייכנס לתוקף במעבר לאזור אחר."),
+    COMPOUND_STRING("כיבוי המוזיקה.\nהשינוי ייכנס לתוקף במעבר לאזור אחר."),
 };
 static const u8 *const sDesc_BikeMusic[] = {
-    COMPOUND_STRING("Enables BIKE music."),
-    COMPOUND_STRING("Disables BIKE music."),
+    COMPOUND_STRING("הפעלת מוזיקת האופניים."),
+    COMPOUND_STRING("כיבוי מוזיקת האופניים."),
 };
 static const u8 *const sDesc_SurfMusic[] = {
-    COMPOUND_STRING("Enables SURF music."),
-    COMPOUND_STRING("Disables SURF music."),
+    COMPOUND_STRING("הפעלת מוזיקת הגלישה."),
+    COMPOUND_STRING("כיבוי מוזיקת הגלישה."),
 };
 
 // =============================================================================
@@ -371,79 +371,79 @@ static const u8 *const sDesc_SurfMusic[] = {
 
 static const struct OptionMenuItem sTabItems_Main[] = {
     [ITEM_MAIN_TEXTSPEED] = {
-        .name         = COMPOUND_STRING("TEXT SPEED"),
+        .name         = COMPOUND_STRING("מהירות טקסט"),
         .descriptions = sDesc_TextSpeed,
         .numChoices   = 4,
         .choiceNames  = sChoices_TextSpeed,
     },
     [ITEM_MAIN_BATTLESCENE] = {
-        .name         = COMPOUND_STRING("BATTLE SCENE"),
+        .name         = COMPOUND_STRING("סצנת קרב"),
         .descriptions = sDesc_BattleScene,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_BATTLESTYLE] = {
-        .name         = COMPOUND_STRING("BATTLE STYLE"),
+        .name         = COMPOUND_STRING("סגנון קרב"),
         .descriptions = sDesc_BattleStyle,
         .numChoices   = 2,
         .choiceNames  = sChoices_ShiftSet,
     },
     [ITEM_MAIN_BUTTONMODE] = {
-        .name         = COMPOUND_STRING("BUTTON MODE"),
+        .name         = COMPOUND_STRING("מצב כפתורים"),
         .descriptions = sDesc_ButtonMode,
         .numChoices   = 3,
         .choiceNames  = sChoices_ButtonMode,
     },
     [ITEM_MAIN_FOLLOWER] = {
-        .name         = COMPOUND_STRING("FOLLOWER"),
+        .name         = COMPOUND_STRING("פוקימון מלווה"),
         .descriptions = sDesc_Follower,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_LARGE_FOLLOWER] = {
-        .name         = COMPOUND_STRING("BIG FOLLOWERS"),
+        .name         = COMPOUND_STRING("מלווים גדולים"),
         .descriptions = sDesc_LargeFollower,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_AUTORUN] = {
-        .name         = COMPOUND_STRING("AUTORUN"),
+        .name         = COMPOUND_STRING("ריצה אוטומטית"),
         .descriptions = sDesc_Autorun,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_AUTORUN_SURF] = {
-        .name         = COMPOUND_STRING("AUTORUN (SURF)"),
+        .name         = COMPOUND_STRING("גלישה מהירה"),
         .descriptions = sDesc_AutorunSurf,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_FISHING] = {
-        .name         = COMPOUND_STRING("EASIER FISHING"),
+        .name         = COMPOUND_STRING("דיג קל"),
         .descriptions = sDesc_Fishing,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_FASTER_JOY] = {
-        .name         = COMPOUND_STRING("FASTER JOY"),
+        .name         = COMPOUND_STRING("ריפוי מהיר"),
         .descriptions = sDesc_FasterJoy,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_UNIT_TYPE] = {
-        .name         = COMPOUND_STRING("UNIT SYSTEM"),
+        .name         = COMPOUND_STRING("יחידות מידה"),
         .descriptions = sDesc_UnitType,
         .numChoices   = 2,
         .choiceNames  = sChoices_MetricImperial,
     },
     [ITEM_MAIN_MATCHCALL] = {
-        .name         = COMPOUND_STRING("MATCH CALLS"),
+        .name         = COMPOUND_STRING("שיחות מאמנים"),
         .descriptions = sDesc_MatchCall,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_FRAMETYPE] = {
-        .name         = COMPOUND_STRING("FRAME"),
+        .name         = COMPOUND_STRING("מסגרת"),
         .descriptions = sDesc_FrameType,
         .numChoices   = FRAME_TYPE_SPECIAL,
         .choiceNames  = NULL,
@@ -452,43 +452,43 @@ static const struct OptionMenuItem sTabItems_Main[] = {
 
 static const struct OptionMenuItem sTabItems_Battle[] = {
     [ITEM_BATTLE_FAST_INTRO] = {
-        .name         = COMPOUND_STRING("FAST INTRO"),
+        .name         = COMPOUND_STRING("פתיחה מהירה"),
         .descriptions = sDesc_FastIntro,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_BATTLE_FAST_BATTLES] = {
-        .name         = COMPOUND_STRING("FAST BATTLES"),
+        .name         = COMPOUND_STRING("קרבות מהירים"),
         .descriptions = sDesc_FastBattles,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_BATTLE_NEW_BACKGROUNDS] = {
-        .name         = COMPOUND_STRING("BATTLE TERRAIN"),
+        .name         = COMPOUND_STRING("רקע קרב"),
         .descriptions = sDesc_NewBackgrounds,
         .numChoices   = 2,
         .choiceNames  = sChoices_OldModern,
     },
     [ITEM_BATTLE_NEW_BATTLEUI] = {
-        .name         = COMPOUND_STRING("BATTLE UI"),
+        .name         = COMPOUND_STRING("ממשק קרב"),
         .descriptions = sDesc_NewBattleUI,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gen3Gen4,
     },
     [ITEM_BATTLE_BALL_PROMPT] = {
-        .name         = COMPOUND_STRING("BALL PROMPT"),
+        .name         = COMPOUND_STRING("חלונית פוכדור"),
         .descriptions = sDesc_BallPrompt,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_BATTLE_RUN_TYPE] = {
-        .name         = COMPOUND_STRING("QUICK RUN"),
+        .name         = COMPOUND_STRING("בריחה מהירה"),
         .descriptions = sDesc_RunType,
         .numChoices   = 4,
         .choiceNames  = sChoices_RunType,
     },
     [ITEM_BATTLE_LR_RUN] = {
-        .name         = COMPOUND_STRING("RUN PROMPT"),
+        .name         = COMPOUND_STRING("חלונית בריחה"),
         .descriptions = sDesc_LRRun,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -497,25 +497,25 @@ static const struct OptionMenuItem sTabItems_Battle[] = {
 
 static const struct OptionMenuItem sTabItems_Sound[] = {
     [ITEM_SOUND_SOUND] = {
-        .name         = COMPOUND_STRING("SOUND"),
+        .name         = COMPOUND_STRING("צליל"),
         .descriptions = sDesc_Sound,
         .numChoices   = 2,
         .choiceNames  = sChoices_MonoStereo,
     },
     [ITEM_SOUND_MUSIC] = {
-        .name         = COMPOUND_STRING("MUSIC"),
+        .name         = COMPOUND_STRING("מוזיקה"),
         .descriptions = sDesc_Music,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_SOUND_BIKE_MUSIC] = {
-        .name         = COMPOUND_STRING("BIKE MUSIC"),
+        .name         = COMPOUND_STRING("מוזיקת אופניים"),
         .descriptions = sDesc_BikeMusic,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_SOUND_SURF_MUSIC] = {
-        .name         = COMPOUND_STRING("SURF MUSIC"),
+        .name         = COMPOUND_STRING("מוזיקת גלישה"),
         .descriptions = sDesc_SurfMusic,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -534,9 +534,9 @@ struct TabDef
 };
 
 static const struct TabDef sTabs[TAB_COUNT] = {
-    [TAB_MAIN]   = { COMPOUND_STRING("OPTIONS"),        sTabItems_Main,   ITEM_MAIN_COUNT },
-    [TAB_BATTLE] = { COMPOUND_STRING("BATTLE OPTIONS"), sTabItems_Battle, ITEM_BATTLE_COUNT },
-    [TAB_SOUND]  = { COMPOUND_STRING("SOUND"),          sTabItems_Sound,  ITEM_SOUND_COUNT },
+    [TAB_MAIN]   = { COMPOUND_STRING("אפשרויות"),        sTabItems_Main,   ITEM_MAIN_COUNT },
+    [TAB_BATTLE] = { COMPOUND_STRING("אפשרויות קרב"), sTabItems_Battle, ITEM_BATTLE_COUNT },
+    [TAB_SOUND]  = { COMPOUND_STRING("צליל"),          sTabItems_Sound,  ITEM_SOUND_COUNT },
 };
 
 // =============================================================================
@@ -698,7 +698,7 @@ static void DrawFrameTypeChoice(u8 selection, int y, bool8 active)
     }
     text[i] = EOS;
 
-    DrawRightSideChoiceText(COMPOUND_STRING("TYPE"), 104, y + 1, FALSE, active);
+    DrawRightSideChoiceText(COMPOUND_STRING("סוג"), 104, y + 1, FALSE, active);
     DrawRightSideChoiceText(text, 128, y + 1, TRUE, active);
 }
 
@@ -842,10 +842,19 @@ static void DrawTopBar(void)
 
     AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 120 - width, 1, color, 0, tabName);
 
+#if TEXT_RTL
+    // The hints stand for the physical shoulder buttons, so they keep their sides: their x is
+    // pre-mirrored, and the mirrored bar puts them back where the English has them.
+    if (sMenu->currentTab > 0)
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, WindowRtlX(WIN_TOPBAR, 2, GetStringWidth(FONT_SMALL, sText_TopBar_Left, 0)), 1, color, 0, sText_TopBar_Left);
+    if (sMenu->currentTab < TAB_COUNT - 1)
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, WindowRtlX(WIN_TOPBAR, 222, GetStringWidth(FONT_SMALL, sText_TopBar_Right, 0)), 1, color, 0, sText_TopBar_Right);
+#else
     if (sMenu->currentTab > 0)
         AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 2, 1, color, 0, sText_TopBar_Left);
     if (sMenu->currentTab < TAB_COUNT - 1)
         AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 222, 1, color, 0, sText_TopBar_Right);
+#endif
 
     PutWindowTilemap(WIN_TOPBAR);
     CopyWindowToVram(WIN_TOPBAR, COPYWIN_FULL);
@@ -938,6 +947,15 @@ static void ProcessLeftRight(void)
     u16 scrollOffset, selectedRow;
     ListMenuGetScrollAndRow(sMenu->listTaskId, &scrollOffset, &selectedRow);
     u8 itemIndex = scrollOffset + selectedRow;
+#if TEXT_RTL
+    // A mirrored row lists its choices right to left, so LEFT moves to the next one (as in
+    // multi-column menus, src/menu.c).
+    u16 nextKey = GetWindowRtlMode(WIN_OPTIONS) == WINDOW_RTL_MIRROR ? DPAD_LEFT : DPAD_RIGHT;
+    u16 prevKey = nextKey == DPAD_LEFT ? DPAD_RIGHT : DPAD_LEFT;
+#else
+    u16 nextKey = DPAD_RIGHT;
+    u16 prevKey = DPAD_LEFT;
+#endif
 
     const struct OptionMenuItem *items = GetCurrentTabItems();
     if (itemIndex >= GetCurrentTabItemCount())
@@ -951,14 +969,14 @@ static void ProcessLeftRight(void)
         u8 *sel = GetSelectionPtr(sMenu->currentTab, itemIndex);
         u8 prev = *sel;
 
-        if (JOY_NEW(DPAD_RIGHT))
+        if (JOY_NEW(nextKey))
         {
             if (*sel < WINDOW_FRAMES_COUNT - 1)
                 (*sel)++;
             else
                 *sel = 0;
         }
-        else if (JOY_NEW(DPAD_LEFT))
+        else if (JOY_NEW(prevKey))
         {
             if (*sel > 0)
                 (*sel)--;
@@ -985,14 +1003,14 @@ static void ProcessLeftRight(void)
     u8 *sel = GetSelectionPtr(sMenu->currentTab, itemIndex);
     u8 prev = *sel;
 
-    if (JOY_NEW(DPAD_RIGHT))
+    if (JOY_NEW(nextKey))
     {
         if (*sel < items[itemIndex].numChoices - 1)
             (*sel)++;
         else
             *sel = 0;
     }
-    else if (JOY_NEW(DPAD_LEFT))
+    else if (JOY_NEW(prevKey))
     {
         if (*sel > 0)
             (*sel)--;

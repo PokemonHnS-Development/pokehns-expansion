@@ -1,0 +1,15 @@
+# Variant of numsave.txt for the trainer card back: also the link battle record, trades, Pokeblocks
+# with friends and link contests at the caps SetPlayerCardData applies (src/trainer_card.c:792-795,
+# 811-812): 9999 / 9999, 65535, 65535, 999. Built on r3_numbers.sav:
+#   r3num.py --rom ROM run numsave_links.txt OUT --save r3_numbers.sav --save-out r3_numbers_links.sav
+include ../continue.txt
+gamestat LINK_BATTLE_WINS 9999
+gamestat LINK_BATTLE_LOSSES 9999
+gamestat POKEMON_TRADES 65535
+gamestat POKEBLOCKS_WITH_FRIENDS 65535
+gamestat WON_LINK_CONTEST 999
+playtime 999 59
+numstate
+savegame
+numstate
+shot numsave_links_saved

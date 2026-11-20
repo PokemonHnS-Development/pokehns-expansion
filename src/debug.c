@@ -790,6 +790,19 @@ static const struct WindowTemplate sDebugMenuWindowTemplateSound =
 
 static bool32 Debug_SaveCallbackMenu(struct DebugMenuOption *callbackItems);
 
+#if TEXT_RTL
+// The debug menu is in English, so its windows keep the English layout (cursor, arrows, digit
+// indicator and icons); a Hebrew item, species or map name still reads right to left in its place.
+static u32 Debug_AddWindow(const struct WindowTemplate *template)
+{
+    u32 windowId = AddWindow(template);
+    SetWindowRtlMode(windowId, WINDOW_RTL_IN_PLACE);
+    return windowId;
+}
+#else
+#define Debug_AddWindow AddWindow
+#endif
+
 // *******************************
 // Functions universal
 void Debug_ShowMainMenu(void)
@@ -873,7 +886,7 @@ static void Debug_ShowMenu(DebugFunc HandleInput, const struct DebugMenuOption *
     // create window
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateMain);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateMain);
     DrawStdWindowFrame(windowId, FALSE);
 
     u32 totalItems = 0;
@@ -1016,7 +1029,7 @@ static u8 DebugNativeStep_CreateDebugWindow(void)
     FreezeObjectEvents();
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateExtra);
     DrawStdWindowFrame(windowId, FALSE);
     CopyWindowToVram(windowId, COPYWIN_FULL);
 
@@ -1488,7 +1501,7 @@ static void DebugAction_Util_Warp_Warp(u8 taskId)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateExtra);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -1723,7 +1736,7 @@ static void DebugAction_Util_Weather(u8 taskId)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateWeather);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateWeather);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -2000,7 +2013,7 @@ static void DebugAction_Trainers_ChooseFromMap(u8 taskId)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    u32 windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    u32 windowId = Debug_AddWindow(&sDebugMenuWindowTemplateExtra);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -2109,7 +2122,7 @@ static void DebugAction_Trainers_ChooseTrainer(u8 taskId, u32 selection)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    u32 windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    u32 windowId = Debug_AddWindow(&sDebugMenuWindowTemplateExtra);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -2266,7 +2279,7 @@ static void DebugAction_FlagsVars_Flags(u8 taskId)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateExtra);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -2313,7 +2326,7 @@ static void DebugAction_FlagsVars_Vars(u8 taskId)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateExtra);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -2723,7 +2736,7 @@ static void DebugAction_Give_Item(u8 taskId)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateExtra);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -2877,7 +2890,7 @@ static void DebugAction_Give_PokemonSimple(u8 taskId)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateExtra);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -2919,7 +2932,7 @@ static void DebugAction_Give_PokemonComplex(u8 taskId)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateExtra);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -2961,7 +2974,7 @@ static void DebugAction_Give_NewEgg(u8 taskId)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateExtra);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -3674,7 +3687,7 @@ static void DebugAction_Give_Decoration(u8 taskId)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateExtra);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -4017,7 +4030,7 @@ static void DebugAction_Sound_SE(u8 taskId)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateSound);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateSound);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -4078,7 +4091,7 @@ static void DebugAction_Sound_MUS(u8 taskId)
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateSound);
+    windowId = Debug_AddWindow(&sDebugMenuWindowTemplateSound);
     DrawStdWindowFrame(windowId, FALSE);
 
     CopyWindowToVram(windowId, COPYWIN_FULL);

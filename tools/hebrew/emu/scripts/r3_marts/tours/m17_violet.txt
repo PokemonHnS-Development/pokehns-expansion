@@ -1,0 +1,22 @@
+# Violet Mart, badge list with all badges ('pokemart 0', src/shop.c:546-567).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_VIOLET_CITY_MART_HNS 2 5
+evstart goto VioletCity_Mart_EventScript_Clerk
+talk m17_violet_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m17_violet_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m17_violet
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m17_violet_bye 10 -
+waitctl 900

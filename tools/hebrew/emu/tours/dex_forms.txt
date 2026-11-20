@@ -1,0 +1,124 @@
+# Pokedex FORMS page (START on the EVO page) and its form-icon cursor, which menu_pokedex does not
+# reach: #006 TYPHLOSION ('has no alternate forms'; A does nothing) and #022 PIKACHU (two rows of
+# forms). Also the EVO page of #005 QUILAVA, whose cursor moves to the second line.
+# Fixed idle frames appear only after list scrolls, whose length does not depend on text.
+start save:menuA_base
+include ../scripts/continue.txt
+
+press START 2
+waitptr gMenuCallback HandleStartMenuInput
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+
+# DOWN x4 = #005 QUILAVA
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+16 -
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleEvolutionScreenInput 600
+snap dex_evo_quilava
+tap DOWN 4
+waitquiet
+snap dex_evo_quilava_down
+tap B 4                                   # B on the EVO/FORMS page goes back to the list
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+16 -
+
+# #006 TYPHLOSION: EVO -> START -> FORMS ('no alternate forms'; A opens no cursor)
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+16 -
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleEvolutionScreenInput 600
+tap START 4
+waittaskx pokedex_plus_hgss:Task_HandleFormsScreenInput 600
+snap dex_forms_typhlosion
+tap A 4
+waitquiet
+snap dex_forms_typhlosion_cursor
+tap B 4                                   # leave the cursor
+waitquiet
+tap B 4                                   # B on the EVO/FORMS page goes back to the list
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+16 -
+
+# #022 PIKACHU: two rows of forms; the cursor on the first, the third and the second row
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+16 -
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleEvolutionScreenInput 600
+tap START 4
+waittaskx pokedex_plus_hgss:Task_HandleFormsScreenInput 600
+snap dex_forms_pikachu
+tap A 4
+waitquiet
+snap dex_forms_pikachu_cursor_1
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+snap dex_forms_pikachu_cursor_3
+tap DOWN 4
+waitquiet
+snap dex_forms_pikachu_cursor_10
+tap B 4                                   # leave the cursor
+waitquiet
+tap B 4                                   # back to the list
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+16 -

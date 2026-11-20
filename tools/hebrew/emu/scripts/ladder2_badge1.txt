@@ -1,0 +1,15 @@
+# Ladder save 2: early Johto, first badge (Zephyr), saved in the Violet City Pokemon Center.
+#   ladder.py run scripts/ladder2_badge1.txt OUT --save $HNS_SAVES/ladder1_newgame.sav \
+#             --save-out $HNS_SAVES/ladder2_badge1.sav
+# Starts from ladder 1 (bedroom, GOLD), replays the story's state changes as event scripts
+# assembled from the ROM's own macros (scripts/ladder/*.inc), gives the
+# party, warps into the Center (one tile above its door) and saves in-game.
+include continue.txt
+include ladder/story_badge1.txt
+event ladder/party2_badge1.inc
+warp 3 0 7 7                 # MAP_VIOLET_CITY_POKEMON_CENTER_HNS
+expectflag FLAG_BADGE01_GET 1
+expectvar VAR_VIOLET_CITY_STATE 4
+playtime 1 52
+savegame
+shot l2_saved

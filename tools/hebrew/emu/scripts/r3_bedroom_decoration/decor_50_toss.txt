@@ -1,0 +1,92 @@
+# TOSS from save:decor_full (12 dolls placed, rows 0-10 and 25 of the sorted list in use).
+# DecorationMenuAction_Toss (src/decoration.c:692-704) > category menu > the list. A placed doll:
+# gText_CantThrowAwayInUse (DecorationItemsMenuAction_AttemptToss :2794-2807). A doll in the PC:
+# gText_DecorationWillBeDiscarded with STR_VAR_1 = the doll's name + YES/NO (:2796-2800, :2809);
+# NO: DontTossDecoration (:1182) shows the list again; YES: gText_DecorationThrownAway (TossDecoration
+# :2815-2823). Tossed here: SMOOCHUM DOLL (row 11, NO then YES) and REGISTEEL DOLL (the last row,
+# the longest name in the list, "בובת רג'יסטיל"); CHARIZARD DOLL (row 28 by then): B on the YES/NO = NO.
+start save:decor_full
+include ../continue.txt
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 1 2
+face UP
+talk dt_00_pc_boot 10 A PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press DOWN
+press DOWN
+tap A 0                                   # DECORATION
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+press DOWN
+press DOWN
+tap A 0                                   # TOSS
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+snap dt_01_toss_categories
+tap A 0                                   # DOLL
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+snap dt_02_toss_list
+tap A 0                                   # PICHU DOLL: placed
+decormsg
+snap dt_03_cant_toss_in_use
+tap A 4
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+decorrow 11                               # SMOOCHUM DOLL
+snap dt_04_list_smoochum
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap dt_05_toss_smoochum_yes
+press DOWN
+snap dt_06_toss_smoochum_no
+tap A 0                                   # NO: the list again
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+snap dt_07_after_no
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0                                   # YES
+decormsg
+snap dt_08_thrown_away
+tap A 4
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+snap dt_09_list_after_toss
+decorrow 33                               # REGISTEEL DOLL (34 dolls now)
+snap dt_10_list_registeel
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap dt_11_toss_registeel_yesno
+tap A 0                                   # YES
+decormsg
+snap dt_12_registeel_thrown_away
+tap A 4
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+snap dt_13_list_end_after_toss
+decorrow 28                               # CHARIZARD DOLL
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap dt_14_toss_charizard_yesno
+press B                                   # B on YES/NO = NO
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+snap dt_15_after_b
+press B
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+snap dt_16_categories_after_toss
+press B
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+press B
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press B
+waitctl 600 B
+decorprobe

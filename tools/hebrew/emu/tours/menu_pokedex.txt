@@ -1,0 +1,115 @@
+# Start menu and Pokedex (HGSS-style "Pokedex Plus", src/pokedex_plus_hgss.c).
+# Entry pages, each reached with RIGHT: INFO (category, height/weight, description) ->
+# AREA -> STATS (A toggles the moves list with a move's details) -> EVOLUTION -> CRY ->
+# SIZE. SELECT on the list opens the search screen.
+# Fixed idle frames appear only after slide animations whose length does not depend on
+# text (the list's start menu slides 8 px per frame, src/pokedex_plus_hgss.c:2221).
+start save:menuA_base
+include ../scripts/continue.txt
+
+press START 2
+waitptr gMenuCallback HandleStartMenuInput
+snap menu_start_01
+
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+snap menu_pokedex_list_01
+
+# List: DOWN x3 = #004 CYNDAQUIL (each scroll returns to Task_HandlePokedexInput)
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+16 -
+snap menu_pokedex_list_02
+
+# START on the list: the slide-up menu (BACK TO LIST / LIST TOP / LIST BOTTOM / CLOSE)
+tap START 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexStartMenuInput 120
+16 -
+snap menu_pokedex_list_menu
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+16 -
+
+# Entry pages
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleInfoScreenInput 600
+snap menu_pokedex_entry_info
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600   # tState 1 = reads input
+snap menu_pokedex_entry_area
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleStatsScreenInput 600
+snap menu_pokedex_entry_stats
+tap A 4
+waitquiet
+snap menu_pokedex_entry_stats_moves
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleEvolutionScreenInput 600
+snap menu_pokedex_entry_evolution
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleCryScreenInput 600
+snap menu_pokedex_entry_cry
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleSizeScreenInput 600
+snap menu_pokedex_entry_size
+tap B 4                                   # B on a page goes back to INFO, B there to the list
+waittaskx pokedex_plus_hgss:Task_HandleInfoScreenInput 600
+waitquiet
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+16 -
+
+# Search: SELECT -> top bar (SEARCH / SHIFT / CANCEL)
+tap SELECT 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchTopBarInput 600
+snap menu_pokedex_search_01
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+snap menu_pokedex_search_02
+tap A 4                                   # NAME: the parameter list
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+snap menu_pokedex_search_name
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+tap DOWN 4                                # COLOR
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+snap menu_pokedex_search_color
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+tap DOWN 4                                # TYPE
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+snap menu_pokedex_search_type
+tap DOWN 4                                # pick the 2nd type (NORMAL is first after NONE)
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+tap DOWN 4                                # ORDER
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+snap menu_pokedex_search_order
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+tap DOWN 4                                # OK (MODE is only listed with the national dex)
+snap menu_pokedex_search_ok
+tap A 4
+waittaskx pokedex_plus_hgss:Task_SearchCompleteWaitForInput 600
+snap menu_pokedex_search_done
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchResultsInput 600
+16 -
+snap menu_pokedex_search_results
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+16 -
+tap B 4                                   # back to the field with the start menu open
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+snap menu_pokedex_closed
+tap B 4
+waitctl 600

@@ -1,0 +1,100 @@
+{
+ "slide:sText_Trainer1WantsToBattle": [
+  [
+   "cooltrainer_hns",
+   {
+    "opponentA": "TRAINER_NICK_HNS"
+   }
+  ],
+  [
+   "tuber_m_hns",
+   {
+    "opponentA": "TRAINER_PONI_SWIMMER_2_HNS"
+   }
+  ],
+  [
+   "f_tuber_m",
+   {
+    "opponentA": "FRONTIER_TRAINER_KIPP",
+    "flags_or": "100"
+   }
+  ],
+  [
+   "f_tuber_f",
+   {
+    "opponentA": "FRONTIER_TRAINER_ANN",
+    "flags_or": "100"
+   }
+  ],
+  [
+   "f_kindler",
+   {
+    "opponentA": "FRONTIER_TRAINER_CADEN",
+    "flags_or": "100"
+   }
+  ],
+  [
+   "f_cooltrainer_m",
+   {
+    "opponentA": "FRONTIER_TRAINER_BRADEN",
+    "flags_or": "100"
+   }
+  ],
+  [
+   "f_cooltrainer_f",
+   {
+    "opponentA": "FRONTIER_TRAINER_JULIA",
+    "flags_or": "100"
+   }
+  ]
+ ],
+ "slide:sText_PlayerDefeatedLinkTrainerTrainer1": [
+  [
+   "cooltrainer_hns",
+   {
+    "opponentA": "TRAINER_NICK_HNS"
+   }
+  ],
+  [
+   "tuber_m_hns",
+   {
+    "opponentA": "TRAINER_PONI_SWIMMER_2_HNS"
+   }
+  ],
+  [
+   "f_tuber_m",
+   {
+    "opponentA": "FRONTIER_TRAINER_KIPP",
+    "flags_or": "100"
+   }
+  ],
+  [
+   "f_tuber_f",
+   {
+    "opponentA": "FRONTIER_TRAINER_ANN",
+    "flags_or": "100"
+   }
+  ],
+  [
+   "f_kindler",
+   {
+    "opponentA": "FRONTIER_TRAINER_CADEN",
+    "flags_or": "100"
+   }
+  ],
+  [
+   "f_cooltrainer_m",
+   {
+    "opponentA": "FRONTIER_TRAINER_BRADEN",
+    "flags_or": "100"
+   }
+  ],
+  [
+   "f_cooltrainer_f",
+   {
+    "opponentA": "FRONTIER_TRAINER_JULIA",
+    "flags_or": "100"
+   }
+  ]
+ ]
+}

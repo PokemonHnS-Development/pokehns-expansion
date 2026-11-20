@@ -1,0 +1,13 @@
+# The red Gyarados, Lake of Rage (32,28): LakeOfRage_EventScript_Gyarados (data/maps/LakeOfRage_hns/
+# scripts.inc:88-116): cry text, a shiny wild battle, then (win or catch) Lance appears and the Red
+# Scale is given. The Gyarados is in the lake and the player is not surfing, so the script is started
+# with VAR_LAST_TALKED = its local id (8) from the south shore (31,35).
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_LAKE_OF_RAGE_GYARADOS; setflag FLAG_HIDE_LAKE_OF_RAGE_LANCE; end
+warpto MAP_LAKE_OF_RAGE_HNS 31 35
+face UP
+snap gy_field
+evstart setvar VAR_LAST_TALKED, 8; goto LakeOfRage_EventScript_Gyarados
+scene gy_pre 4000
+include _legend_tail.txt

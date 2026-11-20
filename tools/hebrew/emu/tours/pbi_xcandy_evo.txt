@@ -1,0 +1,72 @@
+# Exp. Candy L on a low-level Pokemon (src/party_menu.c ItemUseCB_RareCandy, then
+# Task_TryLearnNewMoves :6026 and PartyMenuTryEvolution :6094): Cyndaquil Lv 12 gains
+# 10000 Exp. (973 -> 10973, Lv 24), the level-up stats pages, the move prompt for Quick
+# Attack (Lv 13; the other moves up to Lv 24 are already known), YES, forget Smokescreen
+# ("1, 2 and... Poof!"), then the evolution into Quilava (Lv 14).
+# Cyndaquil's gen-7 learnset (P_LVL_UP_LEARNSETS GEN_7): 12 Smokescreen, 13 Quick Attack,
+# 19 Flame Wheel, 20 Mud Shot, 22 Defense Curl. MEDICINE: 6 L, 7 XL (scroll 0).
+start saves/pif2_base.sav
+include ../scripts/continue.txt
+ev givemon SPECIES_CYNDAQUIL, 12, move1=MOVE_SMOKESCREEN, move2=MOVE_FLAME_WHEEL, move3=MOVE_MUD_SHOT, move4=MOVE_DEFENSE_CURL; additem ITEM_EXP_CANDY_L, 3; additem ITEM_EXP_CANDY_XL, 3; end
+
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 6
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_xce_01_bag_l
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+snap pbi_xce_02_party_cyndaquil
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg1 300
+snap pbi_xce_03_l_lv24
+waitmem 16 @sFanfareCounter@ 0 900
+tap A 4
+waittaskx Task_DisplayLevelUpStatsPg2 600
+snap pbi_xce_04_stats_pg1
+tap A 4
+waittaskx Task_TryLearnNewMoves 600
+snap pbi_xce_05_stats_pg2
+tap A 4
+talk pbi_xce_06_wants 6 - Task_HandleReplaceMoveYesNoInput
+tap A 4                                   # YES: "Which move should be forgotten?"
+waitkey 600
+snap pbi_xce_07_which
+tap A 4
+waittaskx Task_HandleReplaceMoveInput 900
+waitquiet
+snap pbi_xce_08_forget
+tap A 4                                   # Smokescreen (slot 1)
+waitcb2x CB2_UpdatePartyMenu 900
+talk pbi_xce_09_poof 4 -                  # 1, 2 and... Poof! / forgot / And... / learned
+waitnotask Task_Fanfare 900
+tap A 4
+waitcb2x CB2_EvolutionSceneUpdate 900
+waittaskdata Task_EvolutionScene 0 3 900
+snap pbi_xce_10_evolving
+waittaskdata Task_EvolutionScene 0 15 3000
+waitkey 900
+snap pbi_xce_11_evolved
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_xce_12_party_quilava
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

@@ -1,0 +1,11 @@
+# The other special contacts in the CALL list of this save: Mom (row 1) and Baoba (row 2),
+# MatchCall_GetMessage_NPC > MatchCall_BufferCallMessageText (src/pokenav_match_call_data.c).
+start saves/r3_calls/base.sav
+include ../continue.txt
+warpto MAP_CHERRYGROVE_CITY_HNS 25 9
+waitctl 600
+mcclear
+mclistopen
+mcrow 1 s_mom
+mcrow 2 s_baoba
+mclistclose

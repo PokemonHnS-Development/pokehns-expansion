@@ -1,0 +1,18 @@
+# Sudowoodo, Route 36 (39,19): Route36_EventScript_SudoWoodo (data/maps/Route36_hns/scripts.inc:88-140):
+# without the Squirtbottle only the 'odd tree' text; with it the YES/NO, the water, the attack and the
+# wild battle.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_SUDOWOODO; removeitem ITEM_SQUIRT_BOTTLE, 1; end
+warpto MAP_ROUTE36_HNS 40 19
+face LEFT
+snap sw_field
+tap A 4
+scene sw_nobottle 4000
+ev additem ITEM_SQUIRT_BOTTLE, 1; end
+tap A 4
+scene sw_ask 4000
+snap sw_yesno
+tap A 4
+scene sw_pre 6000
+include _legend_tail.txt

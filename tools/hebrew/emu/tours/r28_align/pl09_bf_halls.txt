@@ -1,0 +1,15 @@
+# Ranking Hall (every record board), Exchange Service Corner (every clerk's prize menu), the
+# reception gate (greeter, the facility guide's first facility, the rules guide's first topic,
+# the pass guide) and Scott's house.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_BATTLE_FRONTIER_RANKING_HALL_HNS 26 13 rkh
+visit rkh
+arrive MAP_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER_HNS 7 9 exc
+visit exc
+arrive MAP_BATTLE_FRONTIER_RECEPTION_GATE_HNS 4 12 rcg
+talkobj 2 rcg_fac pick=0
+talkobj 3 rcg_rules pick=0
+visit rcg skip=2,3
+arrive MAP_BATTLE_FRONTIER_SCOTTS_HOUSE_HNS 2 6 sch
+visit sch

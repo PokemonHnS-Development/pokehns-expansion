@@ -10,9 +10,9 @@ FuchsiaCity_Mart_EventScript_Woman::
 	end
 
 FuchsiaMart_Text_Fisher:
-	.string "The old SAFARI ZONE had way better\n"
-	.string "souvenirs...$"
+	.string "באזור הספארי הישן היו\n"
+	.string "מזכרות הרבה יותר טובות…$"
 
 FuchsiaMart_Text_CooltrainerF:
-	.string "The old SAFARI ZONE WARDEN's \n"
-	.string "granddaughter lives in town.$"
+	.string "הנכדה של הפקח הקודם\n"
+	.string "של אזור הספארי גרה בעיר.$"

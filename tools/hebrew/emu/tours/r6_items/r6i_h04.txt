@@ -1,0 +1,17 @@
+# r6 items: hidden 4/6. Each event clears the object's or tile's flag, warps next to it, turns the
+# player toward it and presses A (Std_FindItem / EventScript_HiddenItemScript, data/scripts/obtain_item.inc).
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+pick h_ultra_ball FLAG_ITEM_ROUTE10_ULTRABALL MAP_ROUTE10_HNS 32 69 UP
+pick h_tm_rock_polish FLAG_HIDDEN_ITEM_ROUTE10_TM_ROCK_POLISH MAP_ROUTE10_HNS 1 13 UP
+pick h_yellow_flute FLAG_HIDDEN_ITEM_ROUTE12_YELLOW_FLUTE MAP_ROUTE12_HNS 20 27 UP
+pick h_calcium FLAG_HIDDEN_ITEM_ROUTE12_CALCIUM MAP_ROUTE12_HNS 8 13 RIGHT
+pick h_lucky_punch FLAG_HIDDEN_ITEM_ROUTE14_LUCKY_PUNCH MAP_ROUTE14_HNS 21 23 UP
+pick h_rose_incense FLAG_HIDDEN_ITEM_ROUTE15_ROSE_INCENSE MAP_ROUTE15_HNS 76 8 RIGHT
+pick h_deep_sea_tooth FLAG_HIDDEN_ITEM_ROUTE20_DEEP_SEA_TOOTH MAP_ROUTE20_HNS 25 7 UP
+pick h_deep_sea_scale FLAG_HIDDEN_ITEM_ROUTE20_DEEP_SEA_SCALE MAP_ROUTE20_HNS 23 7 UP
+pick h_stardust FLAG_HIDDEN_ITEM_ROUTE21_STARDUST_1 MAP_ROUTE21_HNS 8 74 UP
+pick h_pecha_berry FLAG_HIDDEN_ITEM_ROUTE24_PECHA_BERRY_HNS MAP_ROUTE24_HNS 24 21 UP
+pick h_great_ball FLAG_HIDDEN_ITEM_ROUTE32_GREAT_BALL MAP_ROUTE32_HNS 22 97 RIGHT
+pick h_shell_bell FLAG_HIDDEN_ITEM_ROUTE32_SHELL_BELL MAP_ROUTE32_HNS 29 97 RIGHT
+pick h_super_potion FLAG_ITEM_ROUTE34_SUPERPOTION MAP_ROUTE34_HNS 47 39 UP

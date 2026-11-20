@@ -1,0 +1,5 @@
+# Title -> A -> main menu reading input.
+include _title.txt
+tap A 0
+waittask Task_HandleMainMenuInput 900
+waitquiet

@@ -1,0 +1,58 @@
+# Kanto stations (IsStationAvailable, src/pokenav_radio.c:1000-1010: !IsPlayerInJohto &&
+# FLAG_KANTO_RADIO_GOT, set by scripts/ladder/s6a_kanto_rest.inc:37): Hoenn Sound (5, 4 lines),
+# Places & People (50: DJ Lily, trainer class + name or a Kanto place, then an adjective,
+# :820-870), Let's All Sing (57: DJ Fern, the POKEMON Music lines), POKE FLUTE (61, no lines);
+# the Johto frequencies show '- - - -'. Then the Snorlax in Vermilion City
+# (data/maps/VermilionCity_hns/scripts.inc:178-200): talked to without the radio it sleeps; with the
+# POKE FLUTE channel left playing (CheckRadioStation :1359-1369 reads the map music) it wakes up
+# and a battle starts. The ladder hides it (FLAG_HIDE_VERMILION_SNORLAX, s6a_kanto_rest.inc:38),
+# so the flag is cleared before the warp. The player stands below it at (61,14).
+start saves/ladder6_postgame.sav
+include ../continue.txt
+clearflag FLAG_HIDE_VERMILION_SNORLAX
+warpto MAP_VERMILION_CITY_HNS 61 14
+face UP
+talk rz_sleeping 4
+waitctl 600
+gearradio
+radiotune 5
+radiocycle rk_hoenn_05 6
+radiotune 13
+radiocycle rk_johto_13_none 2
+radiotune 22
+radiocycle rk_johto_22_none 2
+radiotune 25
+radiocycle rk_johto_25_none 2
+radiotune 32
+radiocycle rk_johto_32_none 2
+radiotune 41
+radiocycle rk_41_none 2
+radiotunepin 50 -1 96B7E0B42D28E515B9DF3B8213013F29
+radiocycle rk_pnp_a 15
+radiotunepin 50 -1 4EE95C57A628117704CEB3093102BD25
+radiocycle rk_pnp_b 15
+radiotunepin 50 -1 86AF85E6DDCFC29AC49BA2CE0FC18357
+radiocycle rk_pnp_c 15
+radiotunepin 50 -1 BE067553A78496358F03A32B163F48DD
+radiocycle rk_pnp_d 15
+radiotune 57
+radiocycle rk_sing_57_sat 5
+clockshift 2 0
+radiotune 56
+radiotune 57
+radiocycle rk_sing_57_mon 5
+clockshift -2 0
+radiotune 63
+radiocycle rk_63_none 2
+radiotune 61
+radiocycle rk_flute_61 2
+gearclose
+snap rk_field_flute
+face UP
+talk rz_wake 8
+waitbattle
+bwalk rz_battle input:HandleInputChooseAction
+snap rz_battle_action
+baction RUN
+bwalk rz_ran free
+snap rz_end

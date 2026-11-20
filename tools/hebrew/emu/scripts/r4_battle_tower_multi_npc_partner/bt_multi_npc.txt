@@ -1,0 +1,192 @@
+# r4 Battle Tower multis with an NPC partner, Lv.50. The multis attendant (welcome,
+# MULTI_CHALLENGEINFO and its INFO pages, level mode, "select two"), the Frontier party select for
+# a 2-Pokemon entry ("2 needed", "no more than 2"), the save, the elevator, the partner room: the
+# attendant's "quit looking for a partner?" (YES -> lobby, from a savestate; NO -> "please find a
+# partner"), one candidate as loaded, then all 50 partner text tables (ptalk: intro, both
+# Pokemon, YES/NO, accept and reject), the chosen partner (Dragon Tamer, 152), "thank you for
+# choosing a partner", the elevator, the multi corridor and battle room, the two-opponent intros,
+# the 2+2 battle and the win, then GO ON / RECORD / REST / RETIRE with every YES/NO (RETIRE YES
+# and REST YES from a savestate; REST resumes in the lobby after the reset), RECORD YES, the
+# no-record menu, battle 2, battle 2 again with the battle number poked for the 4th..7th set
+# lines, the 7th battle, the win in the lobby and the multis results.
+# Opponents are fixed with fids once the partner is chosen; their Pokemon are still random.
+start saves/r4_multis/base_postgame.sav
+include ../continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+include ../r2_battle_frontier_facilities/_bf_testparty.txt
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 14 6
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+snap ml_00_lobby
+tap A 0
+drive ml_in menu
+pick 1
+drive ml_info menu
+pick 0
+drive ml_lv menu
+pick 0
+drive ml_sel task:Task_HandleChooseMonInput 20
+snap ml_ps_01_start
+# slot 0: ENTER (FIRST)
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+snap ml_ps_02_menu
+pick 0
+waittask Task_HandleChooseMonInput 120
+snap ml_ps_03_first
+# CONFIRM with one entry: "2 Pokemon are needed"
+seek 8 @gPartyMenu+9@ 6 DOWN
+snap ml_ps_04_confirm_cursor
+tap A 0
+waitquiet
+snap ml_ps_05_need2
+tap A 0
+waittask Task_HandleChooseMonInput 120
+# slot 1: ENTER (SECOND)
+seek 8 @gPartyMenu+9@ 1 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+snap ml_ps_06_two
+# slot 2: a third ENTER, "no more than 2"
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waitquiet
+snap ml_ps_07_no_more_than_2
+tap A 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 6 DOWN
+snap ml_ps_08_final_two
+tap A 0
+drive ml_save menu 10
+pick 0
+saveyes ml_savebox
+drive ml_go task:Task_MoveElevator 30 9000
+snap ml_elev
+drive mp_in free 30 9000
+snap mp_room_00
+# the partner room attendant (10,2), right above the player
+face UP
+tap A 0
+drive mp_att menu 10
+ss mp_att_menu
+pick 0
+drivex mp_quit free 30 9000
+snap mp_quit_lobby
+sl mp_att_menu
+pick 1
+drive mp_att_no free 10
+# candidate K=4 (local id 6) stands at (10,11)
+go DOWN 7
+face DOWN
+tap A 0
+drive mp_nat menu 10
+pick 1
+drive mp_nat_rej free 10
+face DOWN
+include _classes.txt
+# the partner: Dragon Tamer ROBERTO (152) with the same two Pokemon
+fids 4 152
+fids 16 236 57
+face DOWN
+tap A 0
+drive mp_fin menu 10
+pick 0
+drive mp_fin_acc task:Task_MoveElevator 30 9000
+# opponents for the 7 battles (pairs [0,1] .. [12,13]), all distinct, none the partner
+fids 0 185 66 191 255 55 43 147 109 231 52 74 97 131 188
+snap mp_elev
+waitmap mc_corridor MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_CORRIDOR_HNS
+waitmap mb_room MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_BATTLE_ROOM_HNS
+drive mb1_in battle 20 9000
+fastbattles off
+bwin mb1 40
+drivex mb1_after menu 30 9000
+# GO ON / RECORD / REST / RETIRE: each YES/NO with NO
+pick 1
+drive mr_rec menu 5
+pick 1
+drive mr_rec_no menu 5
+pick 2
+drive mr_rest menu 5
+pick 1
+drive mr_rest_no menu 5
+pick 3
+drive mr_ret menu 5
+pick 1
+drive mr_ret_no menu 5
+ss mr_menu
+# RETIRE YES: back to the lobby (challenge lost)
+pick 3
+drive mr_ret2 menu 5
+pick 0
+drivex mr_retired menu 30 9000
+pick 1
+drive mr_retired_no free 10
+snap mr_retired_lobby
+sl mr_menu
+# REST YES: saved, the game resets; CONTINUE resumes the challenge from the lobby
+pick 2
+drive mr_rest2 menu 5
+pick 0
+20 -
+snap mr_rest_saving
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+snap mr_rs_mainmenu
+tap A 30
+waitcb2 CB2_Overworld 1200
+drivex mr_resume task:Task_MoveElevator 20 9000
+snap mr_resume_elev
+sl mr_menu
+# RECORD YES: the battle is saved, the menu loses RECORD
+pick 1
+drive mr_rec2 menu 5
+pick 0
+drivex mr_rec_yes menu 20 6000
+# GO ON: battle 2 (the 3rd set line after it)
+pick 0
+drive mb2_in battle 20 9000
+ss mb2_start
+bwin mb2 40
+drivex mb2_after menu 30 9000
+# battle 2 again with the battle number poked: the 4th, 5th, 6th and 7th set lines
+sl mb2_start
+sb2w16 CB2 2
+bwin mb2r4 40
+drivex mb2_n4 menu 30 9000
+sl mb2_start
+sb2w16 CB2 3
+bwin mb2r5 40
+drivex mb2_n5 menu 30 9000
+sl mb2_start
+sb2w16 CB2 4
+bwin mb2r6 40
+drivex mb2_n6 menu 30 9000
+sl mb2_start
+sb2w16 CB2 5
+bwin mb2r7 40
+drivex mb2_n7 menu 30 9000
+# GO ON: the 7th battle, then the lobby (won, BP)
+pick 0
+drive mb7_in battle 20 9000
+bwin mb7 40
+drivex mw_won menu 40 12000
+ss mw_record
+pick 0
+drivex mw_rec_yes free 20 6000
+snap mw_rec_yes_end
+sl mw_record
+pick 1
+drive mw_rec_no free 10
+evstart goto 0x@BattleFrontier_BattleTowerLobby_EventScript_ShowMultisResults_hns@
+30 -
+snap mw_results
+tap A 0
+waitctl 600

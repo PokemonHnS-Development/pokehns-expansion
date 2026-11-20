@@ -1,0 +1,18 @@
+# Slateport tent: into the battle room, battle 1, back in the corridor: GO ON / REST / RETIRE (REST and
+# RETIRE are answered NO), GO ON, YES to the swap.
+dlg t12_corr battle
+battle2 t12_b1
+dlg t12_back menu
+pick 1
+dlg t12_rest menu
+pick 1
+dlg t12_rest_no menu
+pick 2
+dlg t12_retire menu
+pick 1
+dlg t12_retire_no menu
+pick 0
+dlg t12_goon menu
+yes
+dlg t12_swap screen
+showtasks

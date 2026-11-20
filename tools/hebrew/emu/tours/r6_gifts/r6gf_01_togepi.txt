@@ -1,0 +1,27 @@
+# Violet Pokemon Center, Elm's aide (9,4): VioletCity_PokemonCenter_EventScript_Aide
+# (VioletCity_PokemonCenter_hns/scripts.inc:9-74) with room in the party: the offer YES/NO, NO ->
+# the refuse loop (Aide_Refuse YES/NO) twice, YES -> 'received the Egg' with the fanfare, the
+# hatching speech, the Exp. Share S line and giveitem (obtained, put away), then talking again
+# (Aide_Received).
+start saves/r6_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+ev clearflag FLAG_RECEIVED_TOGEPI_EGG; clearflag FLAG_HIDE_VIOLET_CITY_AIDE; end
+warpto MAP_VIOLET_CITY_POKEMON_CENTER_HNS 9 5
+face UP
+snap tg_field
+tap A 4
+scene tg_offer 4000
+ss tg_offer
+pickd 1
+scene tg_refuse 4000
+pickd 1
+scene tg_refuse2 4000
+pickd 0
+scene tg_give 12000
+snap tg_free
+partyinfo
+face UP
+tap A 4
+scene tg_again 4000
+snap tg_end

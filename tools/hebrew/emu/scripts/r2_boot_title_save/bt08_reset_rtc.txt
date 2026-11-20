@@ -1,0 +1,40 @@
+# Title B+SELECT+LEFT: reset-RTC screen (src/reset_rtc_screen.c; strings.c:728-734, 1019-1021).
+# Needs FLAG_SYS_RESET_RTC_ENABLE + VAR_RESET_RTC_ENABLE 0x920 (prep_rtc.txt -> boot_rtc.sav).
+# Prompt with present/previous time, A -> "please reset the time" + time input; the cursor is walked
+# over every field (LEFT to the 1000s of days, RIGHT to CONFIRM), one value change, then CONFIRM ->
+# "clock has been reset, saving" -> "save completed" -> A (soft reset).
+start saves/boot_rtc.sav
+include _title.txt
+10 B+SELECT+LEFT
+waittaskx Task_ShowResetRtcPrompt 600
+waitquiet
+snap bt08_01_prompt
+tap A 4
+waittaskx Task_ResetRtc_HandleInput 300
+waitquiet
+snap bt08_02_input_hours
+tap UP 4
+snap bt08_03_input_hours_up
+tap LEFT 4
+snap bt08_04_input_days1
+tap LEFT 4
+snap bt08_05_input_days10
+tap LEFT 4
+snap bt08_06_input_days100
+tap LEFT 4
+snap bt08_07_input_days1000
+tap RIGHT 4
+tap RIGHT 4
+tap RIGHT 4
+tap RIGHT 4
+tap RIGHT 4
+snap bt08_08_input_mins
+tap RIGHT 4
+snap bt08_09_input_secs
+tap RIGHT 4
+snap bt08_10_input_confirm
+tap A 0
+regionwatch bt08_11_msg 900 120 152 16 232 CB2_InitCopyrightScreenAfterBootup
+snap bt08_12_end
+tap A 0
+waitcb2x CB2_InitCopyrightScreenAfterBootup 300

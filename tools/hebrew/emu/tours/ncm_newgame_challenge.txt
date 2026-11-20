@@ -1,0 +1,567 @@
+# New-game intro pages in their own window over the professor scene, the BOY/GIRL menu,
+# the name YES/NO, the two challenge-disclaimer pages, then the challenge menu: every tab,
+# every row, every value (each value has its own description), the greyed rows, the scroll
+# arrow, the confirmation YES/NO with the NO path, and the closing lines.
+# src/oak_speech_hns.c:325-620, data/text/oak_speech_hns.inc, src/challenge_menu.c.
+# Ends saved in the bedroom with the default (RECOMMENDED) settings: keepsave ncm_base.
+start empty
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+snap ncm_00_mainmenu
+tap A 30                                         # NEW GAME
+
+# Welcome .. ThisIsAPokemon .. MainSpeech .. AndYouAre (each page in the intro window)
+waitkey 3000
+talk ncm_01_intro 40 -
+waittask Task_NewGameHnsSpeech_ChooseGender 3000
+10 -
+snap ncm_02_boyorgirl_menu
+press DOWN                                       # GIRL: the player sprite slides
+waittask Task_NewGameHnsSpeech_ChooseGender 600
+waitquiet
+30 -
+snap ncm_02_boyorgirl_girl
+press UP
+waittask Task_NewGameHnsSpeech_ChooseGender 600
+30 -
+snap ncm_02_boyorgirl_boy
+tap A 30                                         # BOY
+waittask Task_NewGameHnsSpeech_WaitPressBeforeNameChoice 600
+snap ncm_03_whatsyourname
+tap A 30
+waitcb2 CB2_NamingScreen 600
+waittask naming_screen:Task_HandleInput 600
+30 -
+tap START 30
+tap A 30
+waittask Task_NewGameHnsSpeech_ProcessNameYesNoMenu 900
+10 -
+snap ncm_04_soitsplayer_yesno
+tap A 30                                         # YES
+
+# Challenge disclaimer: page 1, then page 2 that scrolls line by line (\l)
+waitkey 1200
+talk ncm_05_disclaimer 12 -
+waittask Task_NewGameHnsSpeech_WaitPressDisclaimer 600
+snap ncm_05_disclaimer_last
+tap A 30
+waittask challenge_menu:Task_ProcessInput 900
+waitquiet
+
+# ---- MODE tab
+snap ncm_10_t1_mode_page
+press ROWNEXT                               # RECOMMENDED -> CUSTOM unlocks rows 1-11
+snap ncm_10_t1_r00_custom
+press DOWN
+snap ncm_10_t1_r01_a
+press ROWNEXT
+snap ncm_10_t1_r01_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t1_r02_a
+press ROWNEXT
+snap ncm_10_t1_r02_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t1_r03_a
+press ROWNEXT
+snap ncm_10_t1_r03_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t1_r04_a
+press ROWNEXT
+snap ncm_10_t1_r04_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t1_r05_a
+press ROWNEXT
+snap ncm_10_t1_r05_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t1_r06_a
+press ROWNEXT
+snap ncm_10_t1_r06_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t1_r07_a
+press ROWNEXT
+snap ncm_10_t1_r07_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t1_r08_a
+press ROWNEXT
+snap ncm_10_t1_r08_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t1_r09_a
+press ROWNEXT
+snap ncm_10_t1_r09_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t1_r10_a
+press ROWNEXT
+snap ncm_10_t1_r10_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t1_r11_a
+press ROWNEXT
+snap ncm_10_t1_r11_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t1_r12_next
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press ROWPREV                                # back to RECOMMENDED (ApplyRecommendedPresets)
+snap ncm_10_t1_r00_recommended_again
+press R
+# ---- FEATURES tab
+snap ncm_10_t2_features_page
+snap ncm_10_t2_r00_a
+press ROWNEXT
+snap ncm_10_t2_r00_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t2_r01_a
+press ROWNEXT
+snap ncm_10_t2_r01_b
+press ROWNEXT
+snap ncm_10_t2_r01_c
+press ROWNEXT
+snap ncm_10_t2_r01_d
+press ROWNEXT
+snap ncm_10_t2_r01_e
+press ROWNEXT
+press DOWN
+snap ncm_10_t2_r02_a
+press ROWNEXT
+snap ncm_10_t2_r02_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t2_r03_a
+press ROWNEXT
+snap ncm_10_t2_r03_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t2_r04_a
+press ROWNEXT
+snap ncm_10_t2_r04_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t2_r05_next
+press R
+# ---- RANDOMIZER tab: first with the master switch OFF (rows greyed), then ON
+snap ncm_10_t3_random_page_off
+press DOWN
+snap ncm_10_t3_off_r01
+press DOWN
+snap ncm_10_t3_off_r02
+press DOWN
+snap ncm_10_t3_off_r03
+press DOWN
+snap ncm_10_t3_off_r04
+press DOWN
+snap ncm_10_t3_off_r05
+press DOWN
+snap ncm_10_t3_off_r06
+press DOWN
+snap ncm_10_t3_off_r07
+press DOWN
+snap ncm_10_t3_off_r08
+press DOWN
+snap ncm_10_t3_off_r09
+press DOWN
+snap ncm_10_t3_off_r10
+press DOWN
+snap ncm_10_t3_off_r11
+press DOWN
+snap ncm_10_t3_off_r12
+press DOWN
+snap ncm_10_t3_off_r13
+press DOWN
+snap ncm_10_t3_off_r14
+press DOWN
+snap ncm_10_t3_off_r15
+press DOWN
+snap ncm_10_t3_off_r16
+press DOWN
+snap ncm_10_t3_off_r17
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press ROWNEXT                               # master switch ON
+snap ncm_10_t3_r00_on
+press DOWN
+snap ncm_10_t3_r01_a
+press ROWNEXT
+snap ncm_10_t3_r01_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r02_a
+press ROWNEXT
+snap ncm_10_t3_r02_b
+press DOWN
+snap ncm_10_t3_r03_a
+press ROWNEXT
+snap ncm_10_t3_r03_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r04_a
+press ROWNEXT
+snap ncm_10_t3_r04_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r05_a
+press ROWNEXT
+snap ncm_10_t3_r05_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r06_a
+press ROWNEXT
+snap ncm_10_t3_r06_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r07_a
+press ROWNEXT
+snap ncm_10_t3_r07_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r08_a
+press ROWNEXT
+snap ncm_10_t3_r08_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r09_a
+press ROWNEXT
+snap ncm_10_t3_r09_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r10_a
+press ROWNEXT
+snap ncm_10_t3_r10_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r11_a
+press ROWNEXT
+snap ncm_10_t3_r11_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r12_a
+press ROWNEXT
+snap ncm_10_t3_r12_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r13_a
+press ROWNEXT
+snap ncm_10_t3_r13_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r14_a
+press ROWNEXT
+snap ncm_10_t3_r14_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r15_a
+press ROWNEXT
+snap ncm_10_t3_r15_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r16_a
+press ROWNEXT
+snap ncm_10_t3_r16_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t3_r17_next
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press ROWNEXT                               # WILD back to OFF
+press UP
+press UP
+press ROWPREV                                # master switch OFF again
+snap ncm_10_t3_r00_off_again
+press R
+# ---- NUZLOCKE tab
+snap ncm_10_t4_nuz_page
+snap ncm_10_t4_r00_a
+press ROWNEXT
+snap ncm_10_t4_r00_b
+press ROWNEXT
+snap ncm_10_t4_r00_c
+press ROWNEXT
+snap ncm_10_t4_r00_d
+press ROWPREV                                # HARD -> NORMAL: sub rows unlocked
+snap ncm_10_t4_r00_normal
+press DOWN
+snap ncm_10_t4_r01_a
+press ROWNEXT
+snap ncm_10_t4_r01_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t4_r02_a
+press ROWNEXT
+snap ncm_10_t4_r02_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t4_r03_a
+press ROWNEXT
+snap ncm_10_t4_r03_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t4_r04_a
+press ROWNEXT
+snap ncm_10_t4_r04_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t4_r05_a
+press ROWNEXT
+snap ncm_10_t4_r05_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t4_r06_next
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press ROWPREV                                # NORMAL -> EASY (resets sub rows)
+press ROWPREV                                # EASY -> OFF
+snap ncm_10_t4_r00_off_again
+press R
+# ---- DIFFICULTY tab
+snap ncm_10_t5_diff_page
+snap ncm_10_t5_r00_a
+press ROWNEXT
+snap ncm_10_t5_r00_b
+press ROWNEXT
+snap ncm_10_t5_r00_c
+press ROWNEXT
+snap ncm_10_t5_r00_d
+press ROWNEXT
+snap ncm_10_t5_r00_e
+press ROWNEXT
+snap ncm_10_t5_r00_f
+press ROWNEXT
+press DOWN
+snap ncm_10_t5_r01_a
+press ROWNEXT
+snap ncm_10_t5_r01_b
+press ROWNEXT
+snap ncm_10_t5_r01_c
+press ROWNEXT
+press DOWN
+snap ncm_10_t5_r02_a
+press ROWNEXT
+snap ncm_10_t5_r02_b
+press ROWNEXT
+snap ncm_10_t5_r02_c
+press ROWNEXT
+snap ncm_10_t5_r02_d
+press ROWNEXT
+press DOWN
+snap ncm_10_t5_r03_a
+press ROWNEXT
+snap ncm_10_t5_r03_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t5_r04_a
+press ROWNEXT
+snap ncm_10_t5_r04_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t5_r05_a
+press ROWNEXT
+snap ncm_10_t5_r05_b
+press ROWNEXT
+snap ncm_10_t5_r05_c
+press ROWNEXT
+press DOWN
+snap ncm_10_t5_r06_a
+press ROWNEXT
+snap ncm_10_t5_r06_b
+press ROWNEXT
+snap ncm_10_t5_r06_c
+press ROWNEXT
+press DOWN
+snap ncm_10_t5_r07_a
+press ROWNEXT
+snap ncm_10_t5_r07_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t5_r08_a
+press ROWNEXT
+snap ncm_10_t5_r08_b
+press ROWNEXT
+snap ncm_10_t5_r08_c
+press ROWNEXT
+snap ncm_10_t5_r08_d
+press ROWNEXT
+press DOWN
+snap ncm_10_t5_r09_a
+press ROWNEXT
+snap ncm_10_t5_r09_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t5_r10_a
+press ROWNEXT
+snap ncm_10_t5_r10_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t5_r11_next
+press R
+# ---- CHALLENGES tab
+snap ncm_10_t6_chal_page
+snap ncm_10_t6_r00_a
+press ROWNEXT
+snap ncm_10_t6_r00_b
+press ROWNEXT
+press DOWN
+snap ncm_10_t6_r01_a
+press ROWNEXT
+snap ncm_10_t6_r01_b
+press ROWNEXT
+snap ncm_10_t6_r01_c
+press ROWNEXT
+snap ncm_10_t6_r01_d
+press ROWNEXT
+press DOWN
+snap ncm_10_t6_r02_a
+press ROWNEXT
+snap ncm_10_t6_r02_b
+press ROWNEXT
+snap ncm_10_t6_r02_c
+press ROWNEXT
+press DOWN
+snap ncm_10_t6_r03_a
+press ROWNEXT
+snap ncm_10_t6_r03_b
+press ROWNEXT
+snap ncm_10_t6_r03_c
+press ROWNEXT
+snap ncm_10_t6_r03_d
+press ROWNEXT
+snap ncm_10_t6_r03_e
+press ROWNEXT
+snap ncm_10_t6_r03_f
+press ROWNEXT
+snap ncm_10_t6_r03_g
+press ROWNEXT
+snap ncm_10_t6_r03_h
+press ROWNEXT
+snap ncm_10_t6_r03_i
+press ROWNEXT
+snap ncm_10_t6_r03_j
+press ROWNEXT
+snap ncm_10_t6_r03_k
+press ROWNEXT
+snap ncm_10_t6_r03_l
+press ROWNEXT
+snap ncm_10_t6_r03_m
+press ROWNEXT
+snap ncm_10_t6_r03_n
+press ROWNEXT
+snap ncm_10_t6_r03_o
+press ROWNEXT
+snap ncm_10_t6_r03_p
+press ROWNEXT
+snap ncm_10_t6_r03_q
+press ROWNEXT
+snap ncm_10_t6_r03_r
+press ROWNEXT
+snap ncm_10_t6_r03_s
+press ROWNEXT
+snap ncm_10_t6_r03_t
+press ROWNEXT
+press DOWN
+snap ncm_10_t6_r04_a
+press ROWNEXT
+snap ncm_10_t6_r04_b
+press ROWNEXT
+snap ncm_10_t6_r04_c
+press ROWNEXT
+snap ncm_10_t6_r04_d
+press ROWNEXT
+press DOWN
+snap ncm_10_t6_r05_a
+press ROWNEXT
+snap ncm_10_t6_r05_b
+press DOWN
+snap ncm_10_t6_r06_a
+press ROWNEXT
+snap ncm_10_t6_r06_b
+press ROWNEXT
+press UP
+press ROWNEXT                               # mirror back to OFF
+snap ncm_10_t6_r05_off_again
+press DOWN
+press DOWN
+snap ncm_10_t6_r07_save
+
+# ---- Confirmation: R on the last tab, NO, back in the menu, then A on SAVE and YES
+press R
+waittask Task_CallYesOrNoCallback 120
+10 -
+snap ncm_20_confirm_yes
+press DOWN
+snap ncm_20_confirm_no_cursor
+press A                                          # NO -> Task_ConfirmSaveNo
+waittask challenge_menu:Task_ProcessInput 120
+snap ncm_20_back_in_menu
+press A                                          # A on SAVE -> Task_Save
+waittask Task_CallYesOrNoCallback 120
+10 -
+snap ncm_20_confirm_again
+tap A 30                                         # YES
+
+# ---- Closing lines over the professor scene
+waittask Task_NewGameHnsSpeech_WaitForTextAfterChallengeMenu 600
+waitquiet
+20 -
+snap ncm_30_selected
+tap A 30
+waitkey 1200
+talk ncm_31_ready 20 -
+waitkey 1200
+talk ncm_32_areyouready 20 -
+waitcb2 CB2_Overworld 3000 A
+waitctl 1200
+snap ncm_40_bedroom
+savegame
+keepsave ncm_base
+

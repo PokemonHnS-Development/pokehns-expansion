@@ -1,0 +1,8 @@
+# Goldenrod Underground haircut brothers (GoldenrodUnderground_EventScript_Brother_Haircut1/2): the offer with the
+# money box, NO (the YES branch opens the party menu; toured in r6). The younger brother is out at night only:
+# n07_haircut_night, run with --rtc 1767304800 (22:00).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL_HNS
+clerk 6 20 n05_old
+chat n05_old2 B

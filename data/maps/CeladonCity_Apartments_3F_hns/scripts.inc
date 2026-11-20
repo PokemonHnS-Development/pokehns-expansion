@@ -37,8 +37,8 @@ GameFreak_Text_GameDesignerCompletedPokedex:
 	.string "Congratulations!$"
 
 GameFreak_Text_GraphicArtist:
-	.string "I'm the GRAPHIC ARTIST.\p"
-	.string "I drew you!$"
+	.string "אני המעצב הגרפי.\p"
+	.string "אני ציירתי אותך!$"
 
 GameFreak_Text_GraphicArtistPrintDiploma:
 	.string "I'm the GRAPHIC ARTIST.\p"
@@ -55,25 +55,24 @@ GameFreak_Text_GraphicArtistError:
 	.string "cancel printing.$"
 
 GameFreak_Text_Programmer:
-	.string "Who, me? I'm the PROGRAMMER.\p"
-	.string "Play the slot machines!$"
+	.string "מי, אני? אני המתכנתת.\p"
+	.string "כדאי לשחק במכונות המזל!$"
 
 GameFreak_Text_CharacterDesigner:
-	.string "Aren't the TWINS adorable?\p"
-	.string "JASMINE's pretty too.\p"
-	.string "Oh, I love them!$"
+	.string "התאומות מקסימות, נכון?\p"
+	.string "גם ג'סמין יפה.\p"
+	.string "אוי, אני מת עליהן!$"
 
 CeladonMansion3F_Text_DevRoomSign:
-	.string "GAME FREAK DEVELOPMENT ROOM$"
+	.string "חדר הפיתוח של גיים פריק$"
 
 CeladonMansion3F_Text_Drawing:
-	.string "It's a detailed drawing of a\n"
-	.string "pretty girl.$"
+	.string "זה ציור מפורט של\n"
+	.string "בחורה יפה.$"
 
 CeladonMansion3F_Text_GameProgram:
-	.string "It's the game program. Messing\n"
-	.string "with it could put a bug in the\n"
-	.string "game!$"
+	.string "זו תוכנת המשחק. אם תתעסק איתה,\n"
+	.string "זה עלול להכניס באג למשחק!$"
 
 CeladonMansion3F_Text_ReferenceMaterial:
 	.string "It's crammed with reference\n"

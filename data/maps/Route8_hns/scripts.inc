@@ -33,60 +33,59 @@ Route8_EventScript_Tom::
 	end
 
 Route8_Text_BikerDwayneSeen:
-	.string "We're the KANTO POKéMON FEDERATION\n"
-	.string "trainer group.\p"
-	.string "We'll drive you under our wheels!$"
+	.string "אנחנו חבורת המאמנים\n"
+	.string "”פדרציית הפוקימונים של קאנטו”.\p"
+	.string "נדרוס אותך מתחת לגלגלים שלנו!$"
 
 Route8_Text_BikerDwayneBeaten:
-	.string "S-sorry!$"
+	.string "ס-סליחה!$"
 
 Route8_Text_BikerDwayneAfter:
-	.string "The KANTO POKéMON FEDERATION will\n"
-	.string "never fall!$"
+	.string "פדרציית הפוקימונים של קאנטו\n"
+	.string "לעולם לא תיפול!$"
 
 Route8_Text_BikerHarrisSeen:
-	.string "The cops shut down our\n"
-	.string "UNDERGROUND PATH!\p"
-	.string "That really fries me!$"
+	.string "השוטרים סגרו לנו את\n"
+	.string "המעבר התת-קרקעי!\p"
+	.string "זה ממש מרתיח אותי!$"
 
 Route8_Text_BikerHarrisBeaten:
-	.string "F-forgive me!$"
+	.string "ת-תסלח לי!$"
 
 Route8_Text_BikerHarrisAfter:
-	.string "Wiped out by some punk from\n"
-	.string "JOHTO…$"
+	.string "חוסלתי בידי איזה פרחח\n"
+	.string "מג'וטו…$"
 
 Route8_Text_BikerZekeSeen:
-	.string "We're the KANTO POKéMON FEDERA-\n"
-	.string "TION!\n"
-	.string "Right on!$"
+	.string "אנחנו פדרציית הפוקימונים\n"
+	.string "של קאנטו! בדיוק ככה!$"
 
 Route8_Text_BikerZekeBeaten:
-	.string "Yikes! Sorry!$"
+	.string "אוי ואבוי! סליחה!$"
 
 Route8_Text_BikerZekeAfter:
-	.string "We'll try not to disturb anyone\n"
-	.string "from now on…$"
+	.string "מעכשיו ננסה לא להפריע\n"
+	.string "לאף אחד…$"
 
 Route8_Text_SupernerdSamSeen:
-	.string "How does the MAGNET TRAIN work?$"
+	.string "איך הרכבת המגנטית עובדת?$"
 
 Route8_Text_SupernerdSamBeaten:
-	.string "I just want to see the MAGNET\n"
-	.string "TRAIN…$"
+	.string "אני רק רוצה לראות את\n"
+	.string "הרכבת המגנטית…$"
 
 Route8_Text_SupernerdSamAfter:
-	.string "The power of magnets is awesome!$"
+	.string "הכוח של מגנטים פשוט מדהים!$"
 
 Route8_Text_SupernerdTomSeen:
-	.string "Hm… You've got many GYM BADGES.$"
+	.string "הממ… יש לך הרבה תגי מכון.$"
 
 Route8_Text_SupernerdTomBeaten:
-	.string "Just as I thought… You're tough!$"
+	.string "בדיוק כמו שחשבתי… אתה קשוח!$"
 
 Route8_Text_SupernerdTomAfter:
-	.string "GYM BADGES give you advantages in\n"
-	.string "battles.$"
+	.string "תגי מכון נותנים לך יתרונות\n"
+	.string "בקרבות.$"
 
 Route8_Text_LockedDoor:
 	.string "It's locked…$"

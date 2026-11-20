@@ -1,0 +1,47 @@
+# Friendship raters (GetLeadMonFriendshipScore on party slot 0, Typhlosion): Goldenrod Dept. Store
+# 5F receptionist ((14,11) from (14,12); TM Return at >= 150), Celadon Dept. Store 4F receptionist
+# ((5,13) from (5,14); TM Frustration at < 50), Route 27 house woman ((4,4) from (5,4); TM Sandstorm
+# at >= 150). Low, high, then the after line, at each.
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+ev clearflag FLAG_GOT_RETURN; clearflag FLAG_GOT_FRUSTRATION; clearflag FLAG_GOT_TM_SANDSTORM; end
+
+# --- Goldenrod 5F
+monset 0 friendship=0
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_5F_HNS 14 12
+face UP
+tap A 4
+fieldwatch r1_low free 6000
+monset 0 friendship=255
+face UP
+tap A 4
+fieldwatch r1_high free 8000
+face UP
+tap A 4
+fieldwatch r1_after free 6000
+
+# --- Celadon 4F
+warpto MAP_CELADON_CITY_DEPARTMENT_STORE_4F_HNS 5 14
+face UP
+tap A 4
+fieldwatch c1_high free 6000
+monset 0 friendship=0
+face UP
+tap A 4
+fieldwatch c1_low free 8000
+face UP
+tap A 4
+fieldwatch c1_after free 6000
+
+# --- Route 27 house
+warpto MAP_ROUTE27_HOUSE_HNS 5 4
+face LEFT
+tap A 4
+fieldwatch w1_low free 8000 30
+monset 0 friendship=255
+face LEFT
+tap A 4
+fieldwatch w1_high free 10000 30
+face LEFT
+tap A 4
+fieldwatch w1_after free 6000

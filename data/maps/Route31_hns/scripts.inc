@@ -116,62 +116,61 @@ Route31_EventScript_ItemAntidote::
 	end
 
 Route31_Text_CooltrainerM:
-	.string "DARK CAVE…\p"
-	.string "If POKéMON could light it up,\n"
-	.string "I'd explore it.$"
+	.string "המערה החשוכה…\p"
+	.string "אם פוקימון היה יכול להאיר\n"
+	.string "אותה, הייתי חוקר אותה.$"
 
 Route31_Text_BugCatcherWade1_Seen:
-	.string "I caught a bunch of POKéMON.\n"
-	.string "Let me battle with you!$"
+	.string "תפסתי המון פוקימונים.\n"
+	.string "בוא נילחם!$"
 
 Route31_Text_BugCatcherWade1_Beaten:
-	.string "Awwwww…$"
+	.string "אוףףף…$"
 
 Route31_Text_BugCatcherWade1_After:
-	.string "You can catch POKéMON even if\n"
-	.string "you have six with you.\p"
-	.string "If you catch one, it'll go to\n"
-	.string "your BOX automatically.$"
+	.string "אפשר לתפוס פוקימונים גם\n"
+	.string "כשיש איתך כבר שישה.\p"
+	.string "אם תתפוס עוד אחד, הוא יישלח\n"
+	.string "אוטומטית לתיבה שלך.$"
 
 Route31_Text_SleepyMan:
-	.string "… Hnuurg… Huh?\p"
-	.string "I walked too far today looking\n"
-	.string "for POKéMON.\p"
-	.string "My feet hurt and I'm sleepy…\p"
-	.string "If I were a wild POKéMON, I'd\n"
-	.string "be easy to catch…\p"
-	.string "…Zzzz…$"
+	.string "… הממממ… מה?\p"
+	.string "הלכתי היום יותר מדי בחיפוש\n"
+	.string "אחרי פוקימונים.\p"
+	.string "הרגליים כואבות לי ואני עייף…\p"
+	.string "אם הייתי פוקימון פראי,\n"
+	.string "היה קל לתפוס אותי…\p"
+	.string "…זזזז…$"
 
 Route31_Text_SleepyManGotMail:
-	.string "…Zzzz… Huh?\p"
-	.string "What's that? You have MAIL\n"
-	.string "for me?$"
+	.string "…זזזז… מה?\p"
+	.string "מה זה? יש לך דואר\n"
+	.string "בשבילי?$"
 
 Route31_Text_SleepyManFail:
-	.string "…Zzzz…$"
+	.string "…זזזז…$"
 
 Route31_Text_HandOverMailMon:
-	.string "{PLAYER} handed over the\n"
-	.string "POKéMON holding the MAIL.$"
+	.string "{PLAYER} מסר את הפוקימון\n"
+	.string "שמחזיק את הדואר.$"
 
 Route31_Text_ReadingMail:
-	.string "Let's see…\p"
-	.string "Thanks for bringing this to\n"
-	.string "me.\p"
-	.string "My friend's a good guy, and\n"
-	.string "you're swell too!\p"
-	.string "I'd like to do something good\n"
-	.string "in return too!\p"
-	.string "I know! I want you to have\n"
-	.string "this!$"
+	.string "בוא נראה…\p"
+	.string "תודה שהבאת לי את זה.\p"
+	.string "החבר שלי בחור טוב,\n"
+	.string "וגם אתה נהדר!\p"
+	.string "גם אני רוצה לעשות משהו\n"
+	.string "טוב בתמורה!\p"
+	.string "אני יודע! אני רוצה\n"
+	.string "לתת לך את זה!$"
 
 Route31_Text_DescribeRest:
-	.string "...Zzz...\p"
-	.string "...Umm... Rest!\p"
-	.string "The phrase 'recover fast' became\n"
-	.string "shortened to 'Rest,' you see?\p"
-	.string "This is a move to sleep and recover\n"
-	.string "some HP.$"
+	.string "…זזז…\p"
+	.string "…אממ… מנוחה!\p"
+	.string "הביטוי ”מנוחה להחלמה מהירה”\n"
+	.string "התקצר ל”מנוחה”, מבין?\p"
+	.string "זה מהלך שמאפשר לישון\n"
+	.string "ולהחזיר קצת נ”ח.$"
 
 Route31_Text_WrongMail:
 	.string "This MAIL isn't for me.$"
@@ -191,54 +190,51 @@ Route31_Text_CantTakeLastMon:
 	.string "battle?$"
 
 Route31_Text_Youngster:
-	.string "I found a good POKéMON in DARK\n"
-	.string "CAVE.\p"
-	.string "I'm going to raise it to take\n"
-	.string "on FALKNER.\p"
-	.string "He's the leader of VIOLET\n"
-	.string "CITY's GYM.$"
+	.string "מצאתי פוקימון טוב\n"
+	.string "במערה החשוכה.\p"
+	.string "אני הולך לאמן אותו כדי\n"
+	.string "להתמודד מול פלקנר.\p"
+	.string "הוא המנהיג של המכון\n"
+	.string "בעיר ויולט.$"
 
 Route31_Text_Sign:
-	.string "ROUTE 31\p"
-	.string "VIOLET CITY - CHERRYGROVE CITY$"
+	.string "דרך 31\p"
+	.string "העיר ויולט - העיר צ'ריגרוב$"
 
 Route31_Text_WadeRegister:
-	.string "You're awesome! I like you!\p"
-	.string "I look for POKéMON here every\n"
-	.string "day.\p"
-	.string "When I'm in the grass, I find\n"
-	.string "all kinds of BERRIES.\p"
-	.string "If you'd like, I'll share\n"
-	.string "some.$"
+	.string "אתה מדהים! אני מחבב אותך!\p"
+	.string "אני מחפש פוקימונים כאן\n"
+	.string "כל יום.\p"
+	.string "כשאני בעשב, אני מוצא\n"
+	.string "כל מיני פירות.\p"
+	.string "אם תרצה, אחלוק\n"
+	.string "איתך כמה.$"
 
 Route31_Text_WadeRematchIntro:
-	.string "I was waiting for you.\n"
-	.string "Let's battle!$"
+	.string "חיכיתי לך.\n"
+	.string "בוא נילחם!$"
 
 Route31_Text_WadeRematchDefeat:
-	.string "Awwwww…$"
+	.string "אוףףף…$"
 
 Route31_Text_WadePostRematch:
-	.string "You'll hear from me as soon\n"
-	.string "as I find anything that you\l"
-	.string "might like.$"
+	.string "תשמע ממני ברגע שאמצא\n"
+	.string "משהו שאולי תאהב.$"
 
 Route31_Text_WadeHasItem:
-	.string "Hey! I've been looking for\n"
-	.string "you!\p"
-	.string "I found something while I\n"
-	.string "was in the grass.\p"
-	.string "Here, you can have it!$"
+	.string "היי! חיפשתי אותך!\p"
+	.string "מצאתי משהו\n"
+	.string "כשהייתי בעשב.\p"
+	.string "הנה, זה בשבילך!$"
 
 Route31_Text_WadeGaveItem:
-	.string "I'll let you know if I find\n"
-	.string "anything else!$"
+	.string "אודיע לך אם אמצא\n"
+	.string "עוד משהו!$"
 
 Route31_Text_WadeNoRoom:
-	.string "Hmm, looks like your BAG\n"
-	.string "is full.\p"
-	.string "Come back when you have\n"
-	.string "room!$"
+	.string "הממ, נראה שהתיק שלך\n"
+	.string "מלא.\p"
+	.string "תחזור כשיהיה לך מקום!$"
 
 Route31_Text_DarkCaveSign:
-	.string "DARK CAVE$"
+	.string "המערה החשוכה$"

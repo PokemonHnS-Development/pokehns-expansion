@@ -1,0 +1,257 @@
+# r10 names: the longest place names (static/widest.txt mapsec rows) in the map-name pop-up
+# (FONT_NARROW, 80 px), the Fly map (debug Utilities > Fly to map; the cursor opens on the
+# current section) and the PokéGear MAP (opens on the current section).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+# ---- safari_zone_gate
+warptoloose MAP_SAFARI_ZONE_GATE_HNS 16 9
+waittaskdata Task_MapNamePopUpWindow 0 1 900
+snap n_map_safari_zone_gate_popup
+waitnotask Task_MapNamePopUpWindow 900
+waitctl 600
+dbg 0 0
+waitcb2x region_map:CB2_FlyMap 900
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 900
+waitquiet
+snap n_map_safari_zone_gate_fly
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 1200
+waitptr gMenuCallback HandleStartMenuInput 600
+waitquiet
+seek 8 @sStartMenuCursorPos@ 3 DOWN
+waitquiet
+30 -
+tap A 4
+waitcb2x CB2_Pokenav 600
+waitnav
+press A
+waitnav
+snap n_map_safari_zone_gate_gear
+tap B 4
+waitnav
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+20 -
+# ---- snowswept_cavern
+warptoloose MAP_SNOWSWEPT_CAVERN_HNS 50 69
+waittaskdata Task_MapNamePopUpWindow 0 1 900
+snap n_map_snowswept_cavern_popup
+waitnotask Task_MapNamePopUpWindow 900
+waitctl 600
+dbg 0 0
+waitcb2x region_map:CB2_FlyMap 900
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 900
+waitquiet
+snap n_map_snowswept_cavern_fly
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 1200
+waitptr gMenuCallback HandleStartMenuInput 600
+waitquiet
+seek 8 @sStartMenuCursorPos@ 3 DOWN
+waitquiet
+30 -
+tap A 4
+waitcb2x CB2_Pokenav 600
+waitnav
+press A
+waitnav
+snap n_map_snowswept_cavern_gear
+tap B 4
+waitnav
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+20 -
+# ---- new_bark_town
+warptoloose MAP_NEW_BARK_TOWN_HNS 10 10
+waittaskdata Task_MapNamePopUpWindow 0 1 900
+snap n_map_new_bark_town_popup
+waitnotask Task_MapNamePopUpWindow 900
+waitctl 600
+dbg 0 0
+waitcb2x region_map:CB2_FlyMap 900
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 900
+waitquiet
+snap n_map_new_bark_town_fly
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 1200
+waitptr gMenuCallback HandleStartMenuInput 600
+waitquiet
+seek 8 @sStartMenuCursorPos@ 3 DOWN
+waitquiet
+30 -
+tap A 4
+waitcb2x CB2_Pokenav 600
+waitnav
+press A
+waitnav
+snap n_map_new_bark_town_gear
+tap B 4
+waitnav
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+20 -
+# ---- dark_cave
+warptoloose MAP_DARK_CAVE_SOUTH_SIDE_HNS 14 21
+waittaskdata Task_MapNamePopUpWindow 0 1 900
+snap n_map_dark_cave_popup
+waitnotask Task_MapNamePopUpWindow 900
+waitctl 600
+dbg 0 0
+waitcb2x region_map:CB2_FlyMap 900
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 900
+waitquiet
+snap n_map_dark_cave_fly
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 1200
+waitptr gMenuCallback HandleStartMenuInput 600
+waitquiet
+seek 8 @sStartMenuCursorPos@ 3 DOWN
+waitquiet
+30 -
+tap A 4
+waitcb2x CB2_Pokenav 600
+waitnav
+press A
+waitnav
+snap n_map_dark_cave_gear
+tap B 4
+waitnav
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+20 -
+# ---- trainer_hill
+warptoloose MAP_TRAINER_HILL_COURTYARD_HNS 12 11
+waittaskdata Task_MapNamePopUpWindow 0 1 900
+snap n_map_trainer_hill_popup
+waitnotask Task_MapNamePopUpWindow 900
+waitctl 600
+dbg 0 0
+waitcb2x region_map:CB2_FlyMap 900
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 900
+waitquiet
+snap n_map_trainer_hill_fly
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 1200
+waitptr gMenuCallback HandleStartMenuInput 600
+waitquiet
+seek 8 @sStartMenuCursorPos@ 3 DOWN
+waitquiet
+30 -
+tap A 4
+waitcb2x CB2_Pokenav 600
+waitnav
+press A
+waitnav
+snap n_map_trainer_hill_gear
+tap B 4
+waitnav
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+20 -
+# ---- azalea_town
+warptoloose MAP_AZALEA_TOWN_HNS 52 8
+waittaskdata Task_MapNamePopUpWindow 0 1 900
+snap n_map_azalea_town_popup
+waitnotask Task_MapNamePopUpWindow 900
+waitctl 600
+dbg 0 0
+waitcb2x region_map:CB2_FlyMap 900
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 900
+waitquiet
+snap n_map_azalea_town_fly
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 1200
+waitptr gMenuCallback HandleStartMenuInput 600
+waitquiet
+seek 8 @sStartMenuCursorPos@ 3 DOWN
+waitquiet
+30 -
+tap A 4
+waitcb2x CB2_Pokenav 600
+waitnav
+press A
+waitnav
+snap n_map_azalea_town_gear
+tap B 4
+waitnav
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+20 -
+# ---- national_park
+warptoloose MAP_NATIONAL_PARK_NORMAL_HNS 12 48
+waittaskdata Task_MapNamePopUpWindow 0 1 900
+snap n_map_national_park_popup
+waitnotask Task_MapNamePopUpWindow 900
+waitctl 600
+dbg 0 0
+waitcb2x region_map:CB2_FlyMap 900
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 900
+waitquiet
+snap n_map_national_park_fly
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 1200
+waitptr gMenuCallback HandleStartMenuInput 600
+waitquiet
+seek 8 @sStartMenuCursorPos@ 3 DOWN
+waitquiet
+30 -
+tap A 4
+waitcb2x CB2_Pokenav 600
+waitnav
+press A
+waitnav
+snap n_map_national_park_gear
+tap B 4
+waitnav
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+20 -

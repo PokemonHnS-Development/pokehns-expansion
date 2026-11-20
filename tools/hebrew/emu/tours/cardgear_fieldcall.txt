@@ -1,0 +1,11 @@
+# Overworld phone call box (src/match_call.c), the box story calls (Mom, Prof. Elm) use:
+# debug Scripts > Script 4 shows a message box, then a scripted `pokenavcall`
+# (data/scripts/debug.inc:225-229). The call box slides up from the bottom with the
+# Pokegear icon (bg tiles) at one end of the box and the text beside it.
+start save:menuA_base
+include ../scripts/continue.txt
+
+dbg 5 3
+talk cardgear_fieldcall_msg 10 -
+pages cardgear_fieldcall 20
+snap cardgear_fieldcall_end

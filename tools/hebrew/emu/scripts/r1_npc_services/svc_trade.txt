@@ -1,0 +1,166 @@
+# In-game trade with Jose (Goldenrod Dept Store 6F, (13,10) facing right): the request
+# YES/NO, NO (declined), the PC box in select-a-Pokemon mode (OPTION_SELECT_MON) with its
+# submenu, SUMMARY, MARK, the party pane, B + "continue?" NO (nothing chosen), a wrong
+# Pokemon, then the box Drowzee in box 4 and the trade scene.
+# Storage: sStorage->state 0 = MSTATE_HANDLE_INPUT, 2 = menu reads input (Task_OnSelectedMon).
+start saves/r1svc_menuA_base.sav
+include ../continue.txt
+ev givemon SPECIES_DROWZEE, 20; end
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_6F_HNS 14 10
+face LEFT
+
+# --- 1. NO
+talk svc_trade_ask 10
+tap B 0
+talk svc_trade_declined 10 -
+waitctl 900
+
+# --- 2. YES, the box, the submenu, SUMMARY, MARK, party pane, B -> continue? -> NO
+face LEFT
+talk svc_trade_ask2 10
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap svc_trade_box_01_box1
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+snap svc_trade_box_02_submenu
+press DOWN
+snap svc_trade_box_03_submenu_summary
+press DOWN
+snap svc_trade_box_04_submenu_mark
+press DOWN
+snap svc_trade_box_05_submenu_cancel
+press UP
+press UP
+press A                                  # SUMMARY
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap svc_trade_box_06_summary
+press B
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap svc_trade_box_07_back
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+press DOWN
+press DOWN
+press A                                  # MARK
+waittaskx Task_ShowMarkMenu 300
+12 -
+snap svc_trade_box_08_mark
+press B
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+# party pane: UP to the box title, UP to the buttons (Party Pokemon), A
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP 6
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+snap svc_trade_box_09_buttons
+press A
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+snap svc_trade_box_10_party
+seek 8 @pokemon_storage_system:sCursorPosition@ 5 DOWN 8
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+snap svc_trade_box_11_party_drowzee
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+snap svc_trade_box_12_party_submenu
+press B
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press B                                  # hide the party pane
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press B                                  # "Continue Box operations?"
+waittaskx Task_OnBPressed 300
+12 -
+snap svc_trade_box_13_continue
+press B                                  # NO: leave
+waitcb2x CB2_Overworld 900
+talk svc_trade_nothing 10 -
+waitctl 900
+
+# --- 3. a Pokemon he does not want (Bulbasaur from box 1)
+face LEFT
+talk svc_trade_ask3 10
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+press A                                  # SELECT
+waitcb2x CB2_Overworld 900
+talk svc_trade_wrong 10 -
+waitctl 900
+
+# --- 4. the box Drowzee (box 4, position 5) and the trade scene
+face LEFT
+talk svc_trade_ask4 10
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+seek 8 @pokemon_storage_system:sCursorArea@ 2 UP 4
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press RIGHT
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press RIGHT
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press RIGHT
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+snap svc_trade_box_14_box4
+press DOWN
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorPosition@ 5 RIGHT 8
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+snap svc_trade_box_15_box4_drowzee
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+snap svc_trade_box_16_box4_submenu
+press B
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP 6
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A                                  # party pane
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorPosition@ 5 DOWN 8
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+press A                                  # SELECT the party Drowzee
+waitcb2x CB2_InGameTrade 900
+scenewatch svc_trade_scene CB2_Overworld 5000 110 160 A 150
+waitcb2x CB2_Overworld 900
+talk svc_trade_done 10 -
+waitctl 900
+face LEFT
+talk svc_trade_after 10
+waitctl 900 B
+# the received Pokemon in party slot 6: party menu and its summary (nickname, OT)
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+snap svc_trade_party_machop
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap svc_trade_summary_machop_info
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintSkillsPage 120
+snap svc_trade_summary_machop_skills

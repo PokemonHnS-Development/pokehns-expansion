@@ -1,0 +1,12 @@
+# Title -> A -> main menu forced to 5 rows (HAS_MYSTERY_EVENTS): no code path sets tMenuType 3
+# (src/main_menu.c:661-667 only adds 1 for Mystery Gift), so data[0] = 3 and tItemCount data[12] = 5
+# are written between Task_MainMenuCheckSaveFile and Task_DisplayMainMenu (which draws the rows,
+# main_menu.c:856-875, and the scroll arrows).
+include _title.txt
+tap A 0
+waitcb2x CB2_MainMenu 600
+taskwaitfunc Task_MainMenuCheckSaveFile Task_MainMenuCheckBattery 300
+taskpoke Task_MainMenuCheckBattery 0 3
+taskpoke Task_MainMenuCheckBattery 12 5
+waittaskx Task_HandleMainMenuInput 600
+waitquiet

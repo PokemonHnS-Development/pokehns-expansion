@@ -1,0 +1,60 @@
+# The Battle Pyramid bag's TOSS lines (src/battle_pyramid_bag.c BagAction_Toss, AskConfirmToss,
+# TossItem), which share the bag's strings and, under TEXT_RTL, now take the plural name too
+# (DECISIONS.md Q125). The bag is opened in its toss mode with special
+# ChooseItemsToTossFromPyramidBag (the screen a won run shows when the bag is full), on two
+# items written into SaveBlock2.frontier.pyramidBag (+0xE2C: u16 itemId[2][10], then u8
+# quantity[2][10]; both level modes): MAX ELIXIR x99 (one of the widest plurals in the medicine
+# pool, the largest Pyramid count) and POTION x5.
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+w16 @SB2+E2C@ 34                          # [0][0] MAX ELIXIR
+w16 @SB2+E2E@ 1C                          # [0][1] POTION
+w16 @SB2+E40@ 34                          # [1][0]
+w16 @SB2+E42@ 1C                          # [1][1]
+w8 @SB2+E54@ 63                           # quantity [0][0] 99
+w8 @SB2+E55@ 5                            # quantity [0][1] 5
+w8 @SB2+E5E@ 63                           # quantity [1][0]
+w8 @SB2+E5F@ 5                            # quantity [1][1]
+
+evstart special ChooseItemsToTossFromPyramidBag; waitstate; end
+waitcb2x battle_pyramid_bag:CB2_PyramidBag 900
+waittaskx Task_HandlePyramidBagInput 900
+waitquiet
+snap py_bag
+tap A 4                                   # TOSS / CANCEL
+waitquiet
+snap py_context
+tap A 4                                   # TOSS
+waittaskx battle_pyramid_bag:Task_ChooseHowManyToToss 300
+waitquiet
+snap py_toss_qty_01
+tap DOWN 4
+waitquiet
+snap py_toss_qty_99
+tap A 4
+waitquiet
+snap py_toss_confirm
+tap A 4                                   # YES
+waitquiet
+snap py_toss_done
+tap A 4
+waittaskx Task_HandlePyramidBagInput 900
+waitquiet
+
+# POTION x5: 3 of them
+snap py_bag2
+tap A 4
+waitquiet
+tap A 4
+waittaskx battle_pyramid_bag:Task_ChooseHowManyToToss 300
+waitquiet
+snap po_toss_qty_01
+tap UP 4
+tap UP 4
+waitquiet
+tap A 4
+waitquiet
+snap po_toss_confirm
+tap A 4                                   # YES
+waitquiet
+snap po_toss_done

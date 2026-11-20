@@ -1,0 +1,5 @@
+# r10 travel (gen_tours.py): AZALEA_TOWN on tr_l4
+start saves/tr_l4.sav
+include _base.txt
+visit MAP_AZALEA_TOWN_HNS
+town

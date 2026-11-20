@@ -1,0 +1,21 @@
+# The trainer card back with every link row at its cap as well (save: numsave_links.txt): link
+# battles 9999 W / 9999 L, trades 65535, Pokeblocks with friends 65535, link contests won 999
+# (src/trainer_card.c:1323-1405), under the Hall of Fame debut 999:59:59.
+start saves/r3_numbers/r3_numbers_links.sav
+include ../../continue.txt
+playtime 999 59
+numstate
+startmenu PLAYER
+waitcb2x CB2_TrainerCard 900
+waitpmem 8 trainer_card:sData 0 10 900
+snapcolon num_cardlinks_front
+press A
+waitpmem 8 trainer_card:sData 0 11 900
+snap num_cardlinks_back
+press B
+waitpmem 8 trainer_card:sData 0 10 900
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

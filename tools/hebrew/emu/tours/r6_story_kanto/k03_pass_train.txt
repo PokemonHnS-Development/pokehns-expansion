@@ -1,0 +1,63 @@
+# Magnet Train and the Pass on ladder 5: both attendants before the Machine Part was returned
+# (GoldenrodCity_TrainStation_EventScript_Attendant -> TrainHasntComeIn, SaffronStation_
+# EventScript_AttendantTrainNotRunning), then with FLAG_RETURNED_MACHINE_PART and no Pass
+# (OfficerNoRailPass), the Copycat as GOLD after the part (SaffronCity_CopyCatsHouse_2F_
+# EventScript_CopycatReturnedMachinePart), the Fan Club Clefairy doll and the Lost Item
+# (VermilionCity_FanClub_EventScript_ClefairyGiveDoll), the Copycat returning the doll with the
+# Pass (_CopycatReturnDoll) and after (_CopycatAfterDollReturned), then the rides
+# Saffron -> Goldenrod and Goldenrod -> Saffron (BoardTrain, ExitTrain on arrival).
+start saves/r6_story_l5.sav
+include _base.txt
+ev clearflag FLAG_RETURNED_MACHINE_PART; removeitem ITEM_PASS, 1; removeitem ITEM_LOST_ITEM, 1; setvar VAR_FAN_CLUB_CLEFAIRY, 0; setvar VAR_FAN_CLUB_GUY, 1; clearflag FLAG_HIDE_FAN_CLUB_CLEFAIRY_DOLL; setflag FLAG_HIDE_COPYCAT_CLEFAIRY_DOLL; setvar VAR_TRAIN, 0; end
+vars VAR_FAN_CLUB_CLEFAIRY VAR_FAN_CLUB_GUY VAR_TRAIN
+warpto MAP_GOLDENROD_CITY_TRAIN_STATION_HNS 16 22
+objs
+approach 1
+tap A 4
+scene T_gold_nopart 20000
+warpto MAP_SAFFRON_CITY_TRAIN_STATION_HNS 137 22
+objs
+approach 1
+tap A 4
+scene T_saff_nopart 20000
+ev setflag FLAG_RETURNED_MACHINE_PART; end
+approach 1
+tap A 4
+scene T_saff_nopass 20000
+warpto MAP_GOLDENROD_CITY_TRAIN_STATION_HNS 16 22
+approach 1
+tap A 4
+scene T_gold_nopass 20000
+warpto MAP_SAFFRON_CITY_COPY_CATS_HOUSE_2F_HNS 3 6
+objs
+approach 1
+tap A 4
+scene C_part 30000
+snap C_part_free
+vars VAR_FAN_CLUB_CLEFAIRY
+warpto MAP_VERMILION_CITY_FAN_CLUB_HNS 4 8
+objs
+walkto 3 5 RIGHT
+tap A 4
+scene F_doll 30000
+snap F_free
+vars VAR_FAN_CLUB_CLEFAIRY
+warpto MAP_SAFFRON_CITY_COPY_CATS_HOUSE_2F_HNS 3 6
+approach 1
+tap A 4
+scene C_doll 30000
+snap C_doll_free
+approach 1
+tap A 4
+scene C_after 30000
+snap C_after_free
+warpto MAP_SAFFRON_CITY_TRAIN_STATION_HNS 137 22
+approach 1
+tap A 4
+scene T_saff_ride 40000 30
+snap T_gold_arrived
+warpto MAP_GOLDENROD_CITY_TRAIN_STATION_HNS 16 22
+approach 1
+tap A 4
+scene T_gold_ride 40000 30
+snap T_saff_arrived

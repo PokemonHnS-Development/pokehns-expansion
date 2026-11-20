@@ -1,0 +1,40 @@
+# New Sinjoh Kimono hideout on ladder 6: the meeting (NewSinjoh_KimonoHideout_EventScript_
+# PlayerMeetsKimonos, ON_FRAME at VAR_SINJOH_STORYLINE 4), then at 6 the battles with Miharu (5,3),
+# Shizuko (9,3) and Youko (13,3): meet line, before-battle, battle, defeat, plate, after; and the
+# after line on a second talk.
+start saves/r6_story_l6.sav
+include _base.txt
+ev setvar VAR_SINJOH_STORYLINE, 5; setvar VAR_PLATECOUNTER, 17; cleartrainerflag TRAINER_MIHARU_HNS; cleartrainerflag TRAINER_SHIZUKO_HNS; cleartrainerflag TRAINER_YOUKO_HNS; removeitem ITEM_MEADOW_PLATE, 1; removeitem ITEM_MIND_PLATE, 1; removeitem ITEM_SPOOKY_PLATE, 1; end
+vars VAR_PLATECOUNTER
+warpto MAP_NEW_SINJOH_KIMONO_HIDEOUT_HNS 9 11
+snap H_room
+evstart setvar VAR_SINJOH_STORYLINE, 4; end
+scene H_meet 30000 30
+snap H_free
+ev setvar VAR_SINJOH_STORYLINE, 6; end
+objs
+approach 3
+tap A 4
+scene K1_miharu 30000
+include _battle.txt
+approach 3
+tap A 4
+scene K1_again 20000
+approach 1
+tap A 4
+scene K2_shizuko 30000
+include _battle2.txt
+approach 1
+tap A 4
+scene K2_again 20000
+approach 2
+tap A 4
+scene K3_youko 30000
+bwalk B3_bintro input:HandleInputChooseAction
+snap B3_action
+bwin B3_win
+scene B3_after 40000
+snap B3_free
+approach 2
+tap A 4
+scene K3_again 20000

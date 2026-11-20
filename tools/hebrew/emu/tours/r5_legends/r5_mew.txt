@@ -1,0 +1,13 @@
+# Mew, Faraway Island interior (13,17): FarawayIsland_Interior_hns_EventScript_Mew (data/maps/FarawayIsland_Interior_hns/scripts.inc:115-155): Mew comes out of the grass, 'Mew!' message, battle; a win or a run ends in Common_EventScript_LegendaryFlewAway
+# The object walks a fixed sequence (or hides in the grass), so after walking next to it the
+# script is started directly with VAR_LAST_TALKED = its local id.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_MEW; clearflag FLAG_CAUGHT_MEW; clearflag FLAG_DEFEATED_MEW; end
+warpto MAP_FARAWAY_ISLAND_INTERIOR_HNS 13 18
+objs
+approach 1
+snap mew_field
+evstart setvar VAR_LAST_TALKED, 1; goto FarawayIsland_Interior_hns_EventScript_Mew
+scene mew_pre 4000
+include _legend_tail.txt

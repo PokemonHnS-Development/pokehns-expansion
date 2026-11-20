@@ -1,0 +1,178 @@
+# r10 names: summary INFO / SKILLS / BATTLE MOVES (each move detail) / CONTEST MOVES (each move)
+# with the widest learnable move names (summary 72 px FONT_NORMAL, fit chain), the widest held
+# items, the widest ability (TANGLED FEET, SKILL LINK) and natures (BASHFUL, TIMID, NAUGHTY, IMPISH).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev .set ROM_SIZE, 0; createmon 0, 0, SPECIES_PIDGEOT, 100, item=ITEM_ODD_KEYSTONE, nature=NATURE_BASHFUL, abilityNum=1, move1=MOVE_SUNSTEEL_STRIKE, move2=MOVE_DARKEST_LARIAT, move3=MOVE_MALIGNANT_CHAIN, move4=MOVE_TRICK_OR_TREAT; createmon 0, 1, SPECIES_CINCCINO, 100, item=ITEM_TWICE_SPICED_RADISH, nature=NATURE_TIMID, abilityNum=2, move1=MOVE_CHILLY_RECEPTION, move2=MOVE_TERA_STARSTORM, move3=MOVE_PARABOLIC_CHARGE, move4=MOVE_FLYING_PRESS; createmon 0, 2, SPECIES_PORYGON2, 100, item=ITEM_CORNERSTONE_MASK, nature=NATURE_NAUGHTY, abilityNum=0, move1=MOVE_TRIPLE_DIVE, move2=MOVE_CLANGING_SCALES, move3=MOVE_STEAM_ERUPTION, move4=MOVE_SKITTER_SMACK; createmon 0, 3, SPECIES_MACHAMP, 100, item=ITEM_INFINITE_RARE_CANDIES, nature=NATURE_IMPISH, abilityNum=0, move1=MOVE_DISCHARGE, move2=MOVE_DOUBLE_IRON_BASH, move3=MOVE_THUNDERCLAP, move4=MOVE_SHELL_TRAP; special CalculatePlayerPartyCount; end
+include ../../scripts/r2_summary_info_page_variants/_sum_open.txt
+snap n_sum_s0_info
+sumkey RIGHT
+snap n_sum_s0_skills
+sumkey RIGHT
+snap n_sum_s0_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n_sum_s0_bm_1
+tap DOWN 4
+waitquiet
+snap n_sum_s0_bm_2
+tap DOWN 4
+waitquiet
+snap n_sum_s0_bm_3
+tap DOWN 4
+waitquiet
+snap n_sum_s0_bm_4
+tap B 4
+sumwait
+sumkey RIGHT
+snap n_sum_s0_contest
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n_sum_s0_cm_1
+tap DOWN 4
+waitquiet
+snap n_sum_s0_cm_2
+tap DOWN 4
+waitquiet
+snap n_sum_s0_cm_3
+tap DOWN 4
+waitquiet
+snap n_sum_s0_cm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT
+sumkey LEFT
+sumkey DOWN
+snap n_sum_s1_info
+sumkey RIGHT
+snap n_sum_s1_skills
+sumkey RIGHT
+snap n_sum_s1_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n_sum_s1_bm_1
+tap DOWN 4
+waitquiet
+snap n_sum_s1_bm_2
+tap DOWN 4
+waitquiet
+snap n_sum_s1_bm_3
+tap DOWN 4
+waitquiet
+snap n_sum_s1_bm_4
+tap B 4
+sumwait
+sumkey RIGHT
+snap n_sum_s1_contest
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n_sum_s1_cm_1
+tap DOWN 4
+waitquiet
+snap n_sum_s1_cm_2
+tap DOWN 4
+waitquiet
+snap n_sum_s1_cm_3
+tap DOWN 4
+waitquiet
+snap n_sum_s1_cm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT
+sumkey LEFT
+sumkey DOWN
+snap n_sum_s2_info
+sumkey RIGHT
+snap n_sum_s2_skills
+sumkey RIGHT
+snap n_sum_s2_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n_sum_s2_bm_1
+tap DOWN 4
+waitquiet
+snap n_sum_s2_bm_2
+tap DOWN 4
+waitquiet
+snap n_sum_s2_bm_3
+tap DOWN 4
+waitquiet
+snap n_sum_s2_bm_4
+tap B 4
+sumwait
+sumkey RIGHT
+snap n_sum_s2_contest
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n_sum_s2_cm_1
+tap DOWN 4
+waitquiet
+snap n_sum_s2_cm_2
+tap DOWN 4
+waitquiet
+snap n_sum_s2_cm_3
+tap DOWN 4
+waitquiet
+snap n_sum_s2_cm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT
+sumkey LEFT
+sumkey DOWN
+snap n_sum_s3_info
+sumkey RIGHT
+snap n_sum_s3_skills
+sumkey RIGHT
+snap n_sum_s3_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n_sum_s3_bm_1
+tap DOWN 4
+waitquiet
+snap n_sum_s3_bm_2
+tap DOWN 4
+waitquiet
+snap n_sum_s3_bm_3
+tap DOWN 4
+waitquiet
+snap n_sum_s3_bm_4
+tap B 4
+sumwait
+sumkey RIGHT
+snap n_sum_s3_contest
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+waitquiet
+snap n_sum_s3_cm_1
+tap DOWN 4
+waitquiet
+snap n_sum_s3_cm_2
+tap DOWN 4
+waitquiet
+snap n_sum_s3_cm_3
+tap DOWN 4
+waitquiet
+snap n_sum_s3_cm_4
+tap B 4
+sumwait
+sumkey LEFT
+sumkey LEFT
+sumkey LEFT

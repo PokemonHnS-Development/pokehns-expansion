@@ -1,0 +1,10 @@
+# Melemele (Alola) shop (MAP_MELEMELE_HOUSE_2_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_MELEMELE_HOUSE_2_HNS
+clerk 5 9 m29_hi
+buyopen m29_buy
+listshots m29_list
+buyeach m29_ask
+buyclose m29_menu
+shopquit m29_bye

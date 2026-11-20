@@ -1,0 +1,264 @@
+# HGSS Pokedex search (src/pokedex_plus_hgss.c, strings in src/strings.c:66-118): the top bar
+# descriptions (SEARCH / SHIFT / CANCEL, :1580-1600), the description line of every search-menu row
+# (MODE is listed with the national dex, sSearchMovementMap_SearchNatDex :1678-1730, no wrap), every
+# row of the NAME, COLOR, ORDER and MODE option lists with its description (EraseAndPrintSearchTextBox,
+# :9329-9333; B leaves each list without choosing), then a search with NAME = the last letter group,
+# COLOR = the last colour and TYPE = the eighth type that finds nothing ('no matching Pokemon',
+# :8784-8792).
+# Run: scripts/r16_menus/menu16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_menus [--clip]
+# Save: ladder6_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all; national dex on).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+16 -
+tap SELECT 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchTopBarInput 600
+16 -
+snap ds_top_search
+tap RIGHT 4
+16 -
+snap ds_top_shift
+tap RIGHT 4
+16 -
+snap ds_top_cancel
+tap LEFT 4
+16 -
+tap LEFT 4
+16 -
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+16 -
+snap ds_menu_name
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+16 -
+snap ds_name_00
+tap DOWN 4
+8 -
+snap ds_name_01
+tap DOWN 4
+8 -
+snap ds_name_02
+tap DOWN 4
+8 -
+snap ds_name_03
+tap DOWN 4
+8 -
+snap ds_name_04
+tap DOWN 4
+8 -
+snap ds_name_05
+tap DOWN 4
+8 -
+snap ds_name_06
+tap DOWN 4
+8 -
+snap ds_name_07
+tap DOWN 4
+8 -
+snap ds_name_08
+tap DOWN 4
+8 -
+snap ds_name_09
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+16 -
+tap DOWN 4
+16 -
+snap ds_menu_color
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+16 -
+snap ds_color_00
+tap DOWN 4
+8 -
+snap ds_color_01
+tap DOWN 4
+8 -
+snap ds_color_02
+tap DOWN 4
+8 -
+snap ds_color_03
+tap DOWN 4
+8 -
+snap ds_color_04
+tap DOWN 4
+8 -
+snap ds_color_05
+tap DOWN 4
+8 -
+snap ds_color_06
+tap DOWN 4
+8 -
+snap ds_color_07
+tap DOWN 4
+8 -
+snap ds_color_08
+tap DOWN 4
+8 -
+snap ds_color_09
+tap DOWN 4
+8 -
+snap ds_color_10
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+16 -
+tap DOWN 4
+16 -
+snap ds_menu_type
+tap DOWN 4
+16 -
+snap ds_menu_order
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+16 -
+snap ds_order_00
+tap DOWN 4
+8 -
+snap ds_order_01
+tap DOWN 4
+8 -
+snap ds_order_02
+tap DOWN 4
+8 -
+snap ds_order_03
+tap DOWN 4
+8 -
+snap ds_order_04
+tap DOWN 4
+8 -
+snap ds_order_05
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+16 -
+tap DOWN 4
+16 -
+snap ds_menu_mode
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+16 -
+snap ds_mode_00
+tap DOWN 4
+8 -
+snap ds_mode_01
+tap UP 4                                  # the list opens on the current mode (national)
+8 -
+snap ds_mode_up
+tap UP 4
+8 -
+snap ds_mode_up2
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+16 -
+tap DOWN 4
+16 -
+snap ds_menu_ok
+# a search that finds nothing
+tap UP 4
+8 -
+tap UP 4
+8 -
+tap UP 4
+8 -
+tap UP 4
+8 -
+tap UP 4
+8 -
+tap UP 4
+8 -
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+16 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+snap ds_nm_name_pick
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+16 -
+tap DOWN 4
+16 -
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+16 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+snap ds_nm_color_pick
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+16 -
+tap DOWN 4
+16 -
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+16 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+snap ds_nm_type_pick
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+16 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+tap DOWN 4
+8 -
+snap ds_nm_menu_ok
+tap A 4
+waittaskx pokedex_plus_hgss:Task_SearchCompleteWaitForInput 600
+16 -
+snap ds_nm_result
+tap A 4
+60 -
+waitquiet
+snap ds_nm_after

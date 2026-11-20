@@ -1,0 +1,15 @@
+# r11 (gen_tours.py): MAP_MAHOGANY_TOWN_GYM_HNS after its badge, on ladder4_league. Statue MahoganyTown_Gym_EventScript_Statue, guide MahoganyTown_GymEventScript_GymGuy, leader MahoganyTown_Gym_EventScript_Pryce (data/maps/MahoganyTown_Gym_hns/scripts.inc).
+start saves/ladder4_league.sav
+include _base.txt
+warpto MAP_MAHOGANY_TOWN_GYM_HNS 10 27
+face UP
+snap gj7_room
+talkdir gj7_statue UP
+approach 7
+tap A 4
+drive gj7_guide
+warpto MAP_MAHOGANY_TOWN_GYM_HNS 12 5
+face UP
+snap gj7_leader_room
+talkdir gj7_leader UP
+talkdir gj7_leader_again UP

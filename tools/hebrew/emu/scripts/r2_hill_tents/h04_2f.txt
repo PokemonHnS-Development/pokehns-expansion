@@ -1,0 +1,16 @@
+# 2F: trainer 1 (4,16) looks south: walking past it starts its single battle; then trainer 2 (9,19)
+# is talked to; the after-battle speech of both; the stairs to 3F. The party is healed before each
+# battle (ev HealPlayerParty) so no Pokemon starts a battle fainted.
+ev special HealPlayerParty; end
+walkto 4 18
+dlg h04_t1_intro battle
+battle2 h04_t1
+snap h04_t1_after
+talkto 1 h04_t1_post free
+ev special HealPlayerParty; end
+talkto 2 h04_t2_intro battle
+battle2 h04_t2
+snap h04_t2_after
+talkto 2 h04_t2_post free
+walkto 12 1
+snap h04_3f_arrive

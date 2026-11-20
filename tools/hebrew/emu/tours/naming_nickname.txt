@@ -1,0 +1,206 @@
+# Hebrew nicknames through the Name Rater (Goldenrod), then the party menu and the summary.
+#   Typhlosion -> ג'ימי  (gimel, geresh, yod, mem, yod: a geresh between two Hebrew letters)
+#   Pikachu    -> פיקה 2 (Hebrew, a space, then a digit from the symbols page)
+#   Ampharos   -> ABC   (Latin capitals only)
+# Keys on the Hebrew page (visual columns, 0 = left):
+#   row 0: . ז ו ה ד ג ב א    row 1: , נ מ ל כ י ט ח
+#   row 2: - ש ר ק צ פ ע ס    row 3: ' _ ץ ף ן ם ך ת   (_ = space, ' = geresh)
+# The cursor starts on alef (column 7, row 0). A page swap between the Hebrew page and a Latin page
+# mirrors the cursor's column (Hebrew column c <-> Latin column 7-c); Latin <-> symbols keeps it.
+# The naming screen reads input in sNamingScreen->state == 2 (u8 at +0x1E10).
+start save:menuA_base
+include ../scripts/continue.txt
+
+# --- Typhlosion (party slot 1)
+warpto MAP_GOLDENROD_CITY_HOUSE1_HNS 4 5
+face UP
+talk naming_nick_rater 10                 # ends at YES/NO
+tap A 0
+talk naming_nick_rater_which 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet                                 # the party menu reads input once its fade ends
+tap A 0                                   # slot 1
+waitcb2x CB2_Overworld 900
+talk naming_nick_rater_rate 10 -
+tap A 0
+talk naming_nick_rater_ask 10 -
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap naming_nick_01_start
+press LEFT                                # gimel: row 0, column 5
+press LEFT
+press A
+waitnaming
+press DOWN                                # geresh: row 3, column 0
+press DOWN
+press DOWN
+press LEFT
+press LEFT
+press LEFT
+press LEFT
+press LEFT
+press A
+waitnaming
+press UP                                  # yod: row 1, column 5
+press UP
+press RIGHT
+press RIGHT
+press RIGHT
+press RIGHT
+press RIGHT
+press A
+waitnaming
+press LEFT                                # mem: row 1, column 2
+press LEFT
+press LEFT
+press A
+waitnaming
+press RIGHT                               # yod again
+press RIGHT
+press RIGHT
+press A
+waitnaming
+snap naming_nick_02_typed
+press START
+waitnaming
+press A
+waitcb2x CB2_Overworld 900
+talk naming_nick_rater_done 10 -
+waitctl 900
+expect8 @gPlayerParty+08@ 3C                # slot 1 (struct Pokemon 0x64, nickname +8): gimel
+expect8 @gPlayerParty+09@ B4                # geresh
+expect8 @gPlayerParty+0A@ 43                # yod
+expect8 @gPlayerParty+0B@ 46                # mem
+expect8 @gPlayerParty+0C@ 43                # yod
+expect8 @gPlayerParty+0D@ FF                # end of the name
+
+# --- Pikachu (party slot 2)
+face UP
+talk naming_nick_rater2 10
+tap A 0
+talk naming_nick_rater2_which 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet                                 # the party menu reads input once its fade ends
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+waitcb2x CB2_Overworld 900
+talk naming_nick_rater2_rate 10 -
+tap A 0
+talk naming_nick_rater2_ask 10 -
+waitcb2x CB2_NamingScreen 900
+waitnaming
+press DOWN                                # pe: row 2, column 5
+press DOWN
+press LEFT
+press LEFT
+press A
+waitnaming
+press UP                                  # yod: row 1, column 5
+press A
+waitnaming
+press DOWN                                # qof: row 2, column 3
+press LEFT
+press LEFT
+press A
+waitnaming
+press UP                                  # he: row 0, column 3
+press UP
+press A
+waitnaming
+press DOWN                                # space: row 3, column 1
+press DOWN
+press DOWN
+press LEFT
+press LEFT
+press A
+waitnaming
+press UP                                  # row 0, column 1 ...
+press UP
+press UP
+press RIGHT                               # ... column 5, which is Latin column 2 and then
+press RIGHT                               # symbols column 2, the key '2'
+press RIGHT
+press RIGHT
+press SELECT
+waitnaming
+press SELECT
+waitnaming
+snap naming_nick_03_symbols_on_2
+press A
+waitnaming
+snap naming_nick_04_typed_mixed
+press START
+waitnaming
+press A
+waitcb2x CB2_Overworld 900
+talk naming_nick_rater2_done 10 -
+waitctl 900
+expect8 @gPlayerParty+6C@ 4A                # slot 2: pe
+expect8 @gPlayerParty+6D@ 43                # yod
+expect8 @gPlayerParty+6E@ 4C                # qof
+expect8 @gPlayerParty+6F@ 3E                # he
+expect8 @gPlayerParty+70@ 00                # the space
+expect8 @gPlayerParty+71@ A3                # the '2' from the symbols page
+expect8 @gPlayerParty+72@ FF                # end of the name
+
+# --- Ampharos (party slot 3)
+face UP
+talk naming_nick_rater3 10
+tap A 0
+talk naming_nick_rater3_which 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet                                 # the party menu reads input once its fade ends
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 0
+waitcb2x CB2_Overworld 900
+talk naming_nick_rater3_rate 10 -
+tap A 0
+talk naming_nick_rater3_ask 10 -
+waitcb2x CB2_NamingScreen 900
+waitnaming
+press SELECT                              # the Latin page: alef's column 7 becomes column 0, A
+waitnaming
+press A
+waitnaming
+press RIGHT
+press A
+waitnaming
+press RIGHT
+press A
+waitnaming
+snap naming_nick_05_typed_latin
+press START
+waitnaming
+press A
+waitcb2x CB2_Overworld 900
+talk naming_nick_rater3_done 10 -
+waitctl 900
+expect8 @gPlayerParty+D0@ BB                # slot 3 nickname: A
+expect8 @gPlayerParty+D1@ BC                # B
+expect8 @gPlayerParty+D2@ BD                # C
+expect8 @gPlayerParty+D3@ FF                # end of the name
+
+# --- The names elsewhere: party menu, summary of slots 1-3
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+snap naming_nick_06_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap naming_nick_07_summary_1
+tap DOWN 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+snap naming_nick_08_summary_2
+tap DOWN 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+snap naming_nick_09_summary_3
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900

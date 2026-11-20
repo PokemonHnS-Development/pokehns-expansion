@@ -1,0 +1,14 @@
+# K4: the message box's continue arrow after a page that ends in a colon: the Frontier Maniac's
+# Salon Maiden text (BattleFrontier_Lounge2/scripts.inc:152-158, printed by
+# ShowFrontierManiacMessage, src/field_specials.c) and his
+# Dome Ace text (:184-191), shown as RAM scripts. Their other pages end in "?", "," and ".", for the
+# general arrow position.
+# Run with scripts/r5_known/r5known.py; the save is a copy of saves_all/menuA_base.sav.
+start saves/menuA_base.sav
+include ../../continue.txt
+evstart lock; msgbox 0x@BattleFrontier_Lounge2_Text_SalonMaidenSilverMons@, MSGBOX_DEFAULT; release; end
+talk k4_maniac_silver 6 -
+waitctl 900
+evstart lock; msgbox 0x@BattleFrontier_Lounge2_Text_DomeAceGoldMons@, MSGBOX_DEFAULT; release; end
+talk k4_maniac_dome_gold 6 -
+waitctl 900

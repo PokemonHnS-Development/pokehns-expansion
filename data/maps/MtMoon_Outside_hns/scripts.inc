@@ -100,20 +100,18 @@ MtMoon_Outside_Movement_Jirachi:
 	step_end
 
 MtMoon_Outside_Text_WhiteRockTouchIt:
-	.string "An unusual white rock.\n"
-	.string "The color reminds you of the moon.\p"
-	.string "Touch it?$"
+	.string "סלע לבן ויוצא דופן.\n"
+	.string "הצבע שלו מזכיר את הירח.\p"
+	.string "לגעת בו?$"
 
 MtMoon_Outside_Text_WhiteRockTouchDay:
-	.string "{PLAYER} touched the unusual rock.\n"
-	.string "..........................\l"
-	.string "..........................\l"
-	.string "But nothing happened.$"
+	.string "{PLAYER} נגע בסלע יוצא הדופן.\n"
+	.string "………………\p"
+	.string "אבל שום דבר לא קרה.$"
 
 MtMoon_Outside_Text_WhiteRockTouchNight:
-	.string "{PLAYER} touched the unusual rock.\n"
-	.string "..........................\l"
-	.string "..........................$"
+	.string "{PLAYER} נגע בסלע יוצא הדופן.\n"
+	.string "………………$"
 
 MtMoon_Outside_EventScript_Jirachi::
 	lock
@@ -140,12 +138,12 @@ MtMoon_Outside_EventScript_JirachiRan::
 
 
 MtMoon_Outside_Text_DontLitterSign:
-	.string "MT.MOON SQUARE\n"
-	.string "DON'T LITTER$"
+	.string "כיכר הר הירח\n"
+	.string "נא לא ללכלך$"
 
 MtMoon_Outside_Text_Jirachi:
-    .string "JIRACHI: Chi!$"
+    .string "ג'ירצ'י: צ'י!$"
 
 MtMoon_Outside_Text_Clefairy:
-    .string "CLEFAIRY: Pi pippippi!$"
+    .string "קלפרי: פי פיפיפי!$"
 

@@ -1,0 +1,39 @@
+# The 1x2 context window (ITEMWIN_1x2, src/item_menu.c:526, tilemapLeft 22 in both languages) over a
+# list with 8 visible rows: the KEY ITEMS sort menu (NAME / CANCEL) and the REGISTER submenu of the
+# GB PLAYER (row 1). The English window sits right of the left-aligned names of rows 7-8; the Hebrew names are
+# right-aligned, under the window. Save: menuA_base, KEY ITEMS as saved (60 items; rows 7-8 are
+# CLAW FOSSIL and OVAL CHARM).
+start saves/r8bfe_menuA_base.sav
+include ../../scripts/continue.txt
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 0
+w16 @gBagPosition+1E@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap x01_key_list
+tap START 4
+waittaskx Task_ItemContext_SingleRow 60
+waitquiet
+snap x02_key_sort_menu
+tap B 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+dumpbag x_key_order POCKET_KEY_ITEMS
+seek 16 @gBagPosition+12@ 1 DOWN
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap x03_gbplayer_context
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_SingleRow 120
+waitquiet
+snap x04_register_submenu
+tap B 4
+waitquiet
+tap B 4
+waitquiet

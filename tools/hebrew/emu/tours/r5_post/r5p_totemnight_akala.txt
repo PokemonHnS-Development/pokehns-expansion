@@ -1,0 +1,14 @@
+# The akala totem at night (run with --rtc at 23:00, e.g. 1767308400): the map's ON_TRANSITION script
+# clears FLAG_AKALA_TOTEM_DAY outside morning/day/evening and the totem object becomes Probopass.
+# Its battle branch (data/maps/AkalaIsle_hns/scripts.inc:181-200): cry, cry text, setwildbattle with two species +
+# settotemboost B_POSITION_OPPONENT_RIGHT, no catching / running; win -> removeobject + the after text.
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev clearflag FLAG_HIDE_AKALA_TOTEM; end
+warpto MAP_AKALA_ISLE_HNS 9 12
+expectflag FLAG_AKALA_TOTEM_DAY 0
+face UP
+snap tn_field
+tap A 4
+scene tn_pre 4000
+include ../r5_legends/_totem_tail.txt

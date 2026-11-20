@@ -1,0 +1,5 @@
+tap B 4
+waitquiet
+tap B 4
+drivex py_won2_end free 40 12000
+loc

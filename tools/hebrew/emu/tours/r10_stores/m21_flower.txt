@@ -1,0 +1,10 @@
+# Goldenrod Flower Shop mints (MAP_GOLDENROD_CITY_FLOWER_SHOP_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_GOLDENROD_CITY_FLOWER_SHOP_HNS
+clerk 8 4 m21_hi
+buyopen m21_buy
+listshots m21_list
+buyeach m21_ask
+buyclose m21_menu
+shopquit m21_bye

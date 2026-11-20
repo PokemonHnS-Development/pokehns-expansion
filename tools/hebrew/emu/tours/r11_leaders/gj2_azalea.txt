@@ -1,0 +1,15 @@
+# r11 (gen_tours.py): MAP_AZALEA_TOWN_GYM_HNS after its badge, on ladder4_league. Statue AzaleaTown_Gym_EventScript_Statue, guide AzaleaTown_Gym_EventScript_GymGuy, leader AzaleaTown_Gym_EventScript_Bugsy (data/maps/AzaleaTown_Gym_hns/scripts.inc).
+start saves/ladder4_league.sav
+include _base.txt
+warpto MAP_AZALEA_TOWN_GYM_HNS 9 43
+face UP
+snap gj2_room
+talkdir gj2_statue UP
+approach 1
+tap A 4
+drive gj2_guide
+warpto MAP_AZALEA_TOWN_GYM_HNS 11 7
+face UP
+snap gj2_leader_room
+talkdir gj2_leader UP
+talkdir gj2_leader_again UP

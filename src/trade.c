@@ -1922,7 +1922,12 @@ static void DrawSelectedMonScreen(u8 whichParty)
 
         // Print selected pokemon's name and moves
         nameStringWidth = GetMonNicknameWidth(nickname, selectedMonParty, partyIdx);
+#if TEXT_RTL
+        // The window is 112 px wide and mirrored; the English centres the name in its first 80 px.
+        AddTextPrinterParameterized3((whichParty * 2) + 14, FONT_SMALL, (80 - nameStringWidth) / 2 + 32, 4, sTradeTextColors, 0, nickname);
+#else
         AddTextPrinterParameterized3((whichParty * 2) + 14, FONT_SMALL, (80 - nameStringWidth) / 2, 4, sTradeTextColors, 0, nickname);
+#endif
         BufferMovesString(movesString, selectedMonParty, partyIdx);
         AddTextPrinterParameterized4((whichParty * 2) + 15, FONT_NORMAL, 0, 0, 0, 0, sTradeTextColors, 0, movesString);
         PutWindowTilemap((whichParty * 2) + 14);

@@ -1,0 +1,12 @@
+# Baoba's first PokeGear call (MatchCall_Text_Baoba1, data/text/match_call.inc), which the CALL list only
+# plays before FLAG_AMPHAROS_HEALED; shown with a scripted pokenavcall in the field call box. Its first
+# line is the speaker prefix 'BAOBA: {PLAYER}!'.
+start saves/r3_calls/base.sav
+include ../continue.txt
+warpto MAP_CHERRYGROVE_CITY_HNS 25 9
+waitctl 600
+evstart lockall; pokenavcall MatchCall_Text_Baoba1; waitmessage; delay 30; releaseall; end
+waitkey 900
+pages x_baoba1 10
+snap x_baoba1_last
+waitctl 900 B

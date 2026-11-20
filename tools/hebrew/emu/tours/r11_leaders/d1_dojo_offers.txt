@@ -1,0 +1,119 @@
+# r11: the leaders' in-person rematch offers after their badges (H&S has no phone rematch and the gyms'
+# own *_Rematch texts are unreferenced): the Fighting Dojo VIP room (SaffronCity_FightingDojoVIP_hns/scripts.inc),
+# every leader shown (all FLAG_HIDE_DOJO_* clear, as after the 16 invitations), each offer answered NO
+# (SaffronCity_FightingDojoVIP_EventScript_Declined). Positions from tours/r6_league/r6d_*.txt.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_DOJO_MISTY; clearflag FLAG_HIDE_DOJO_BROCK; clearflag FLAG_HIDE_DOJO_SURGE; clearflag FLAG_HIDE_DOJO_ERIKA; clearflag FLAG_HIDE_DOJO_JANINE; clearflag FLAG_HIDE_DOJO_SABRINA; clearflag FLAG_HIDE_DOJO_BLAINE; clearflag FLAG_HIDE_DOJO_BLUE; clearflag FLAG_HIDE_DOJO_WHITNEY; clearflag FLAG_HIDE_DOJO_FALKNER; clearflag FLAG_HIDE_DOJO_BUGSY; clearflag FLAG_HIDE_DOJO_MORTY; clearflag FLAG_HIDE_DOJO_JASMINE; clearflag FLAG_HIDE_DOJO_CHUCK; clearflag FLAG_HIDE_DOJO_CLAIR; clearflag FLAG_HIDE_DOJO_PRYCE; end
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 2 20
+face LEFT
+tap A 4
+scene d_falkner_offer 20000
+snap d_falkner_menu
+tap B 4
+scene d_falkner_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 24 34
+face UP
+tap A 4
+scene d_bugsy_offer 20000
+snap d_bugsy_menu
+tap B 4
+scene d_bugsy_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 40 25
+face RIGHT
+tap A 4
+scene d_whitney_offer 20000
+snap d_whitney_menu
+tap B 4
+scene d_whitney_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 2 18
+face LEFT
+tap A 4
+scene d_morty_offer 20000
+snap d_morty_menu
+tap B 4
+scene d_morty_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 26 21
+face UP
+tap A 4
+scene d_chuck_offer 20000
+snap d_chuck_menu
+tap B 4
+scene d_chuck_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 20 34
+face UP
+tap A 4
+scene d_jasmine_offer 20000
+snap d_jasmine_menu
+tap B 4
+scene d_jasmine_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 40 16
+face RIGHT
+tap A 4
+scene d_pryce_offer 20000
+snap d_pryce_menu
+tap B 4
+scene d_pryce_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 26 19
+face UP
+tap A 4
+scene d_clair_offer 20000
+snap d_clair_menu
+tap B 4
+scene d_clair_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 40 24
+face RIGHT
+tap A 4
+scene d_brock_offer 20000
+snap d_brock_menu
+tap B 4
+scene d_brock_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 32 36
+face RIGHT
+tap A 4
+scene d_misty_offer 20000
+snap d_misty_menu
+tap B 4
+scene d_misty_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 18 19
+face UP
+tap A 4
+scene d_surge_offer 20000
+snap d_surge_menu
+tap B 4
+scene d_surge_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 35 36
+face LEFT
+tap A 4
+scene d_erika_offer 20000
+snap d_erika_menu
+tap B 4
+scene d_erika_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 5 36
+face RIGHT
+tap A 4
+scene d_janine_offer 20000
+snap d_janine_menu
+tap B 4
+scene d_janine_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 5 38
+face UP
+tap A 4
+scene d_sabrina_offer 20000
+snap d_sabrina_menu
+tap B 4
+scene d_sabrina_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 40 17
+face RIGHT
+tap A 4
+scene d_blaine_offer 20000
+snap d_blaine_menu
+tap B 4
+scene d_blaine_no 20000
+warpto MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS 18 21
+face UP
+tap A 4
+scene d_blue_offer 20000
+snap d_blue_menu
+tap B 4
+scene d_blue_no 20000

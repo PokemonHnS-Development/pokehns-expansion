@@ -1,0 +1,39 @@
+# Last-used ball (B_LAST_USED_BALL, B_LAST_USED_BALL_BUTTON R_BUTTON, B_LAST_USED_BALL_CYCLE TRUE;
+# include/config/battle.h:360-362): the ball window on the action menu (HnS graphic
+# graphics/battle_interface/hns/last_used_ball_r_cycle.4bpp, src/battle_interface.c:3068-3074),
+# holding R (arrows light up), R+DOWN cycling to the next balls, releasing R after a swap (no
+# throw), then tapping R alone: the quick throw of the shown ball and its messages
+# (src/battle_controller_player.c:246-298; CanThrowLastUsedBall src/battle_interface.c:3123).
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_TYPHLOSION, 50, move1=MOVE_TACKLE; additem ITEM_POKE_BALL, 5; additem ITEM_GREAT_BALL, 5; additem ITEM_ULTRA_BALL, 5; end
+
+pinrng
+evstart setwildbattle SPECIES_GYARADOS, 45; dowildbattle; end
+waitbattle
+bwalk btwlb_intro input:HandleInputChooseAction
+snap btwlb_action
+
+# hold R: the window's arrows light up (ArrowsChangeColorLastBallCycle)
+12 Rb
+shot btwlb_hold_r
+# R+DOWN twice: the next balls (GetNextBall)
+3 Rb+DOWN
+10 Rb
+shot btwlb_cycle_1
+3 Rb+DOWN
+10 Rb
+shot btwlb_cycle_2
+3 Rb+UP
+10 Rb
+shot btwlb_cycle_back
+# let go of R after a swap: no throw, arrows back to normal
+20 -
+waitbinput HandleInputChooseAction
+snap btwlb_released
+
+# tap R alone: the quick throw of the shown ball
+pinrng 7F3A91C2E45B0D68A1F3C59711000000
+tap Rb 4
+bwalk btwlb_throw input:HandleInputChooseAction|task:Task_HandleCaughtMonPageInput|prompt:Cmd_trygivecaughtmonnick
+snap btwlb_after_throw

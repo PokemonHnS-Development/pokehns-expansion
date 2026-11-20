@@ -1,0 +1,112 @@
+# BERRIES > CHECK TAG (src/item_menu.c ACTION_CHECK_TAG :308, ItemMenu_CheckTag :2193 ->
+# src/berry_tag_screen.c DoBerryTagScreen :188): the berry tag of the first berry, UP/DOWN to the
+# neighbouring berries on the tag screen itself (Task_DisplayAnotherBerry), then B back to the bag.
+# Tags shown: the first berry (No01), POMEG (BERRIES index 20, No21), ENIGMA (index 60) and the
+# last berry in the pocket (index 65). The context menu is USE / GIVE TOSS / CHECK TAG CANCEL.
+start saves/menuA_base.sav
+include ../scripts/continue.txt
+
+w8 @gBagPosition+5@ 4
+w16 @gBagPosition+10@ 0
+w16 @gBagPosition+1C@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_tag_01_bag_berries
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap pbi_tag_02_context_checktag
+tap A 4                                   # CHECK TAG
+waitcb2x CB2_BerryTagScreen 900
+waitquiet
+30 -
+snap pbi_tag_03_tag_first
+tap DOWN 4
+waitquiet
+30 -
+snap pbi_tag_04_tag_second
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# POMEG (index 20)
+w16 @gBagPosition+10@ 3
+w16 @gBagPosition+1C@ 11
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4
+waitcb2x CB2_BerryTagScreen 900
+waitquiet
+30 -
+snap pbi_tag_05_tag_pomeg
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# ENIGMA (index 60), then DOWN through 61..65 and once more (the list end)
+w16 @gBagPosition+10@ 3
+w16 @gBagPosition+1C@ 39
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pbi_tag_06_bag_enigma
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4
+waitcb2x CB2_BerryTagScreen 900
+waitquiet
+30 -
+snap pbi_tag_07_tag_enigma
+tap DOWN 4
+waitquiet
+30 -
+snap pbi_tag_08_tag_61
+tap DOWN 4
+waitquiet
+tap DOWN 4
+waitquiet
+tap DOWN 4
+waitquiet
+tap DOWN 4
+waitquiet
+30 -
+snap pbi_tag_09_tag_65
+tap DOWN 4
+waitquiet
+30 -
+snap pbi_tag_10_tag_after_last
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

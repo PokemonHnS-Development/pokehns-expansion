@@ -1,0 +1,160 @@
+# Move relearner (Blackthorn House3, (7,4) facing left): intro, Heart Scale YES/NO (NO, then
+# YES), the box in select mode (SELECT_PC_MON_MOVE_RELEARNER: Pokemon with nothing to
+# relearn greyed), the relearner screen (move list to its end, battle and contest info),
+# give-up prompt, teach YES, "trying to learn" / stop-teaching prompts, the summary screen
+# in relearner mode, forget, the fanfare messages, the Heart Scale line.
+# sMoveRelearnerStruct->state (u8 at +0): 4 idle battle, 6 idle contest, 9 teach YES/NO,
+# 13 give up YES/NO, 18 delete old move YES/NO, 26 stop teaching YES/NO, 33 wait for A.
+start saves/r1svc_menuA_base.sav
+include ../continue.txt
+ev additem ITEM_HEART_SCALE, 5; end
+warpto MAP_BLACKTHORN_CITY_HOUSE3_HNS 6 4
+face RIGHT
+talk svc_relearn_intro 20
+tap B 0                                  # NO
+talk svc_relearn_no 10 -
+waitctl 900
+face RIGHT
+talk svc_relearn_ask 10
+tap A 0                                  # YES
+talk svc_relearn_which 10 -
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap svc_relearn_box_01
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+snap svc_relearn_box_02_submenu
+press B
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP 6
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+snap svc_relearn_box_03_party
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+snap svc_relearn_box_04_party_submenu
+press A                                  # SELECT Typhlosion
+waitcb2x CB2_Overworld 900
+talk svc_relearn_teachwhich 10 -
+waitcb2x CB2_MoveRelearnerMain 900
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 900
+scrollmem svc_relearn_list DOWN @move_relearner:sMoveRelearnerMenuState@ 60
+# contest info (LEFT/RIGHT swap the info window)
+press LEFT
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 6 300
+snap svc_relearn_contest_01
+press UP
+snap svc_relearn_contest_02
+press RIGHT
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 300
+snap svc_relearn_battle_back
+# give up? NO
+press B
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 13 300
+snap svc_relearn_giveup
+press B
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 300
+# teach the selected move: YES, "trying to learn" NO -> "stop teaching?" NO -> YES -> summary
+press A
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 9 300
+snap svc_relearn_teach_confirm
+press A
+pages svc_relearn_trying 5
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 18 600
+snap svc_relearn_trying_yesno
+press A
+pages svc_relearn_forgetwhich 3
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleReplaceMoveInput 900
+waitquiet
+snap svc_relearn_summary_01
+press DOWN
+snap svc_relearn_summary_02
+press DOWN
+snap svc_relearn_summary_03
+press DOWN
+snap svc_relearn_summary_04
+press DOWN
+snap svc_relearn_summary_05_new
+press RIGHT
+waitquiet
+snap svc_relearn_summary_06_contest
+press LEFT
+waitquiet
+press UP
+press UP
+press UP
+press UP
+snap svc_relearn_summary_07_first
+press A                                  # forget move 1
+waitcb2x CB2_MoveRelearnerMain 900
+textwatch svc_relearn_poof CB2_Overworld 900 A
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 33 900
+snap svc_relearn_learned
+tap A 0
+waitcb2x CB2_Overworld 900
+talk svc_relearn_after 10 -
+waitctl 900
+# the deleter next door: (4,4) facing right
+warpto MAP_BLACKTHORN_CITY_HOUSE3_HNS 5 4
+face LEFT
+talk svc_delete_ask 10
+tap B 0
+talk svc_delete_no 10 -
+waitctl 900
+face LEFT
+talk svc_delete_ask2 10
+tap A 0
+talk svc_delete_which 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+snap svc_delete_party
+seek 8 @gPartyMenu+9@ 4 DOWN
+snap svc_delete_party_egg
+press A
+waitcb2x CB2_Overworld 900
+talk svc_delete_egg 10 -
+waitctl 900
+face LEFT
+talk svc_delete_ask3 10
+tap A 0
+talk svc_delete_which3 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+seek 8 @gPartyMenu+9@ 0 DOWN
+waitquiet
+12 -
+tap A 4                                  # Typhlosion
+waitcb2x CB2_Overworld 900
+talk svc_delete_whichmove 10 -
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleReplaceMoveInput 900
+waitquiet
+snap svc_delete_summary_01
+press DOWN
+snap svc_delete_summary_02
+press DOWN
+snap svc_delete_summary_03
+press DOWN
+snap svc_delete_summary_04
+press DOWN
+snap svc_delete_summary_05_cancel
+press RIGHT
+waitquiet
+snap svc_delete_summary_06_contest
+press LEFT
+waitquiet
+press UP
+snap svc_delete_summary_07_move4
+press A
+waitcb2x CB2_Overworld 900
+talk svc_delete_confirm 10 -
+tap A 0
+talk svc_delete_done 10 -
+waitctl 900

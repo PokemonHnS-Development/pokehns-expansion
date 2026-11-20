@@ -22,11 +22,12 @@
 #define GFXTAG_OPTIONS    3
 
 #define PALTAG_BLUE_LIGHT 3
-#define PALTAG_OPTIONS_DEFAULT 4 // Includes green for Smart/Region Map and yellow for Tough
+#define PALTAG_OPTIONS_DEFAULT 4 // Includes green for Smart/Region Map
 #define PALTAG_OPTIONS_BLUE 5
 #define PALTAG_OPTIONS_PINK 6
 #define PALTAG_OPTIONS_BEIGE 7
 #define PALTAG_OPTIONS_RED 8
+#define PALTAG_OPTIONS_YELLOW 9 // Tough; indices 4-6 of banks 0-4 are blue in the H&S palette
 
 #define PALTAG_OPTIONS_START PALTAG_OPTIONS_DEFAULT
 
@@ -121,7 +122,7 @@ static const u32 sPokenavDeviceBgTilemap[] = INCBIN_U32("graphics/pokenav/device
 static const u16 sMatchCallBlueLightPal[] = INCBIN_U16("graphics/pokenav/blue_light.gbapal");
 static const u32 sMatchCallBlueLightTiles[] = INCBIN_U32("graphics/pokenav/blue_light.4bpp.smol");
 
-static const u8 gText_NoRibbonWinners[] = _("There are no RIBBON winners.");
+static const u8 gText_NoRibbonWinners[] = _("אין פוקימונים עם סרטים.");
 
 static const struct BgTemplate sPokenavMainMenuBgTemplates[] = {
     {
@@ -189,6 +190,7 @@ static const struct SpritePalette sPokenavOptionsSpritePalettes[] =
     {&gPokenavOptions_Pal[0x20], PALTAG_OPTIONS_PINK},
     {&gPokenavOptions_Pal[0x30], PALTAG_OPTIONS_BEIGE},
     {&gPokenavOptions_Pal[0x40], PALTAG_OPTIONS_RED},
+    {&gPokenavOptions_Pal[0x50], PALTAG_OPTIONS_YELLOW},
     {sMatchCallBlueLightPal, PALTAG_BLUE_LIGHT},
     {}
 };
@@ -205,7 +207,7 @@ static const u16 sOptionsLabelGfx_Cool[]      = {0x0E0, PALTAG_OPTIONS_RED - PAL
 static const u16 sOptionsLabelGfx_Beauty[]    = {0x100, PALTAG_OPTIONS_BLUE - PALTAG_OPTIONS_START};
 static const u16 sOptionsLabelGfx_Cute[]      = {0x120, PALTAG_OPTIONS_PINK - PALTAG_OPTIONS_START};
 static const u16 sOptionsLabelGfx_Smart[]     = {0x140, PALTAG_OPTIONS_DEFAULT - PALTAG_OPTIONS_START};
-static const u16 sOptionsLabelGfx_Tough[]     = {0x160, PALTAG_OPTIONS_DEFAULT - PALTAG_OPTIONS_START};
+static const u16 sOptionsLabelGfx_Tough[]     = {0x160, PALTAG_OPTIONS_YELLOW - PALTAG_OPTIONS_START};
 static const u16 sOptionsLabelGfx_Cancel[]    = {0x180, PALTAG_OPTIONS_BEIGE - PALTAG_OPTIONS_START};
 #if IS_HNS
 static const u16 sOptionsLabelGfx_Radio[]     = {0x1A0, PALTAG_OPTIONS_DEFAULT - PALTAG_OPTIONS_START};
@@ -334,32 +336,32 @@ static const struct WindowTemplate sOptionDescWindowTemplate =
 };
 
 #if IS_HNS
-static const u8 *const sHnSMapPageDescriptionJohto = COMPOUND_STRING("Check the map of the JOHTO region");
-static const u8 *const sHnSMapPageDescriptionJohtoKanto = COMPOUND_STRING("Check the combined region map");
+static const u8 *const sHnSMapPageDescriptionJohto = COMPOUND_STRING("צפייה במפת אזור ג'וטו");
+static const u8 *const sHnSMapPageDescriptionJohtoKanto = COMPOUND_STRING("צפייה במפת האזורים המשולבת");
 #endif
 
 static const u8 *const sPageDescriptions[] =
 {
-    [POKENAV_MENUITEM_MAP]                     = COMPOUND_STRING("Check the map of the HOENN region"),
-    [POKENAV_MENUITEM_CONDITION]               = COMPOUND_STRING("Check POKéMON in detail."),
-    [POKENAV_MENUITEM_MATCH_CALL]              = COMPOUND_STRING("Call a registered TRAINER."),
-    [POKENAV_MENUITEM_RIBBONS]                 = COMPOUND_STRING("Check obtained RIBBONS."),
+    [POKENAV_MENUITEM_MAP]                     = COMPOUND_STRING("צפייה במפת אזור הואן"),
+    [POKENAV_MENUITEM_CONDITION]               = COMPOUND_STRING("בדיקה מפורטת של פוקימונים."),
+    [POKENAV_MENUITEM_MATCH_CALL]              = COMPOUND_STRING("התקשרות למאמן רשום."),
+    [POKENAV_MENUITEM_RIBBONS]                 = COMPOUND_STRING("צפייה בסרטים שהושגו."),
 #if IS_HNS
-    [POKENAV_MENUITEM_RADIO]                   = COMPOUND_STRING("Listen to the radio."),
-    [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Put away the POKéGEAR."),
-    [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Return to the POKéGEAR menu."),
+    [POKENAV_MENUITEM_RADIO]                   = COMPOUND_STRING("האזנה לרדיו."),
+    [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("סגירת הפוקיגיר."),
+    [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("חזרה לתפריט הפוקיגיר."),
 #else
     [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Put away the POKéNAV."),
     [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Return to the POKéNAV menu."),
 #endif
-    [POKENAV_MENUITEM_CONDITION_PARTY]         = COMPOUND_STRING("Check party POKéMON in detail."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH]        = COMPOUND_STRING("Check all POKéMON in detail."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_COOL]   = COMPOUND_STRING("Find cool POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_BEAUTY] = COMPOUND_STRING("Find beautiful POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_CUTE]   = COMPOUND_STRING("Find cute POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_SMART]  = COMPOUND_STRING("Find smart POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_TOUGH]  = COMPOUND_STRING("Find tough POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_CANCEL] = COMPOUND_STRING("Return to the CONDITION menu.")
+    [POKENAV_MENUITEM_CONDITION_PARTY]         = COMPOUND_STRING("בדיקה מפורטת של פוקימוני הקבוצה."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH]        = COMPOUND_STRING("בדיקה מפורטת של כל הפוקימונים."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_COOL]   = COMPOUND_STRING("חיפוש פוקימונים מגניבים."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_BEAUTY] = COMPOUND_STRING("חיפוש פוקימונים יפים."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_CUTE]   = COMPOUND_STRING("חיפוש פוקימונים חמודים."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_SMART]  = COMPOUND_STRING("חיפוש פוקימונים חכמים."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_TOUGH]  = COMPOUND_STRING("חיפוש פוקימונים קשוחים."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_CANCEL] = COMPOUND_STRING("חזרה לתפריט הכושר.")
 };
 
 static const u8 sOptionDescTextColors[]  = {TEXT_COLOR_GREEN, TEXT_COLOR_BLUE, TEXT_COLOR_LIGHT_GREEN};
@@ -883,6 +885,7 @@ static void FreeAndDestroyMainMenuSprites(void)
     FreeSpritePaletteByTag(PALTAG_OPTIONS_PINK);
     FreeSpritePaletteByTag(PALTAG_OPTIONS_BEIGE);
     FreeSpritePaletteByTag(PALTAG_OPTIONS_RED);
+    FreeSpritePaletteByTag(PALTAG_OPTIONS_YELLOW);
     FreeSpritePaletteByTag(PALTAG_BLUE_LIGHT);
     DestroyMenuOptionSprites();
     DestroyRematchBlueLightSprite();

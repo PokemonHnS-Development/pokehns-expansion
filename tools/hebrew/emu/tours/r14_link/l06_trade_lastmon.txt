@@ -1,0 +1,24 @@
+# Trade screen: the player's only Pokemon that can battle (CANT_TRADE_LAST_MON -> gText_OnlyPkmnForBattle,
+# src/trade.c CanTradeSelectedMon :2384). Player party: PIKACHU and an Egg.
+start saves/r14/link/base.sav
+include ../../scripts/continue.txt
+ev callnative ZeroPlayerPartyMons; special CalculatePlayerPartyCount; givemon SPECIES_VOLCANION, 70; givemon SPECIES_CROBAT, 45; end
+stashparty partner
+otname partner he:דנה,en:DANA
+ev callnative ZeroPlayerPartyMons; special CalculatePlayerPartyCount; givemon SPECIES_PIKACHU, 5; end
+giveegg SPECIES_TOGEPI
+partyinfo
+linkplayers he:דנה,en:DANA 1
+include _trade_enter.txt
+snap m01_menu
+tap A 6
+waitquiet
+tap DOWN 6
+tap A 6
+waitquiet
+20 -
+snap m02_last_mon
+tap A 6
+waitquiet
+20 -
+snap m03_back

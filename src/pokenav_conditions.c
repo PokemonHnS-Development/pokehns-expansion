@@ -322,6 +322,10 @@ bool32 LoadNextConditionMenuMonData(u8 mode)
 
 u8 *CopyStringLeftAlignedToConditionData(u8 *dst, const u8 *src, s16 n)
 {
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
+#line 325
     while (*src != EOS)
         *dst++ = *src++, n--;
 

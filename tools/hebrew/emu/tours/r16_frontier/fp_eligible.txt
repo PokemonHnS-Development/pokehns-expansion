@@ -1,0 +1,30 @@
+# Battle Tower lobby (H&S) with a party of two Frontier-banned Pokemon (Mewtwo, Lugia: no eligible Pokemon,
+# 3 needed): CheckPartyIneligibility (src/frontier_util.c:2177-2297) builds the refusal: ' אינן כשירות'
+# (gText_FrontierFacilityAreInelegible) when no banned species is caught in the Pokedex, else
+# ' ו-N ממיני הפוקימונים שתפסת אינם כשירים' (gText_FrontierFacilityTotalCaughtSpeciesBanned), then
+# '.\pביניהם ' (gText_FrontierFacilityIncluding) and the two party species joined by ' וגם '
+# (gText_SpaceAndSpace, AppendCaughtBannedMonSpeciesName :2130-2135). First with the post-game Pokedex (banned
+# species caught), then with only Pikachu caught (radio.py dexonly 25) for the 'are ineligible' variant.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; createmon 0, 0, SPECIES_MEWTWO, 70; createmon 0, 1, SPECIES_LUGIA, 70; end
+partyfree 2
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 6 6
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive el_in menu
+pick 0
+drive el_lv menu
+pick 0
+drive el_refuse menu 20
+tap B 0
+drive el_bye free 20
+dexonly 25
+face UP
+tap A 0
+drive el2_in menu
+pick 0
+drive el2_lv menu
+pick 0
+drive el2_refuse free 20

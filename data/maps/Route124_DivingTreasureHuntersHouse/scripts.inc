@@ -284,48 +284,46 @@ Route124_DivingTreasureHuntersHouse_EventScript_ShardTradeBoard::
 	end
 
 Route124_DivingTreasureHuntersHouse_Text_Greeting:
-	.string "I'm the DIVING TREASURE HUNTER!\p"
-	.string "I'm the awesome dude who makes\n"
-	.string "deep-sea dives to gather treasures\l"
-	.string "resting at the bottom.$"
+	.string "אני צייד האוצרות הצולל!\p"
+	.string "אני הבחור המגניב שצולל למעמקי הים\n"
+	.string "כדי לאסוף אוצרות מהקרקעית.$"
 
 Route124_DivingTreasureHuntersHouse_Text_HaveYouSeenAnyShards:
-	.string "Tell me, have you seen any SHARDS of\n"
-	.string "tools made in ancient times?$"
+	.string "תגיד לי, נתקלת בשברים\n"
+	.string "של כלים מימי קדם?$"
 
 Route124_DivingTreasureHuntersHouse_Text_YouHaventGotAnyShards:
-	.string "You haven't got any treasures\n"
-	.string "for me…\p"
-	.string "If you see any SHARDS, like the RED\n"
-	.string "SHARD, you've got to trade it with me!$"
+	.string "אין לך שום אוצר בשבילי…\p"
+	.string "אם תמצא שברים, כמו השבר האדום,\n"
+	.string "אתה חייב להחליף אותם איתי!$"
 
 Route124_DivingTreasureHuntersHouse_Text_ThatsAShardIllTradeYou:
-	.string "Oh, hey! That…\n"
-	.string "That's a SHARD! I'm looking for those!\p"
-	.string "Oh, man, you've got to trade that\n"
-	.string "with me! I'll give you something good!$"
+	.string "הו, היי! זה…\n"
+	.string "זה שבר! אני מחפש כאלה!\p"
+	.string "בחיי, אתה חייב להחליף אותו איתי!\n"
+	.string "אתן לך משהו טוב!$"
 
 Route124_DivingTreasureHuntersHouse_Text_WhatDoYouWantToTrade:
-	.string "What do you want to trade?$"
+	.string "מה בא לך להחליף?$"
 
 Route124_DivingTreasureHuntersHouse_Text_YoullTradeShardForStone:
-	.string "You'll trade your {STR_VAR_1} for\n"
-	.string "my {STR_VAR_2}, then?$"
+	.string "אז תיתן לי {STR_VAR_1}\n"
+	.string "ותקבל ממני {STR_VAR_2}?$"
 
 Route124_DivingTreasureHuntersHouse_Text_ItsADeal:
-	.string "It's a done deal!\n"
-	.string "Use that wisely!$"
+	.string "סגרנו עסקה!\n"
+	.string "תשתמש בזה בחוכמה!$"
 
 Route124_DivingTreasureHuntersHouse_Text_TradeSomethingElse:
-	.string "Do you want to trade something else?$"
+	.string "רוצה להחליף עוד משהו?$"
 
 Route124_DivingTreasureHuntersHouse_Text_BagFull:
-	.string "Whoops, your BAG's full.\n"
-	.string "Get rid of some items, friend!$"
+	.string "אופס, התיק שלך מלא.\n"
+	.string "תיפטר מכמה פריטים, חבר!$"
 
 Route124_DivingTreasureHuntersHouse_Text_ComeBackIfYouChangeMind:
-	.string "No? That's a downer.\n"
-	.string "Well, if you change your mind, come back.$"
+	.string "לא? איזה באסה.\n"
+	.string "טוב, אם תשנה את דעתך, תחזור.$"
 
 Route124_DivingTreasureHuntersHouse_Text_ShardTradeBoard:
 	.string "{CLEAR_TO 0x0a}Wanted item{CLEAR_TO 0x7c}Trade item\n"

@@ -1,0 +1,86 @@
+# The Hall of Fame with the Hebrew-born player (save heid_base: שמשבחתם / KENNETH; party OT =
+# the player). The Hall of Fame map's rematch cutscene (VAR_LEAGUE_STATE 6,
+# data/maps/PokemonLeague_HallOfFame_hns/scripts.inc) runs special GameClear: the record is
+# saved, each Pokemon is shown, then the NAME / IDNo. panel (src/hall_of_fame.c:1217-1218).
+# A soft reset skips the credits; then the post-game PC's HALL OF FAME viewer shows the record.
+start save:heid_base
+include ../../scripts/continue.txt
+evstart setvar VAR_LEAGUE_STATE, 6; warpsilent MAP_POKEMON_LEAGUE_HALL_OF_FAME_HNS, 0; waitstate; end
+waitkey 3000
+pages heid_hof_lance 30
+waitcb2 CB2_DoHallOfFameScreen 4000
+waittaskx Task_Hof_WaitToDisplayMon 900
+2 -
+shot heid_hof_00_saving
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot heid_hof_01_mon1
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot heid_hof_02_mon2
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot heid_hof_03_mon3
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot heid_hof_04_mon4
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot heid_hof_05_mon5
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx hall_of_fame:Task_Hof_TryDisplayAnotherMon 1200
+4 -
+shot heid_hof_06_mon6
+waitnotask hall_of_fame:Task_Hof_TryDisplayAnotherMon 600
+waittaskx Task_Hof_DoConfetti 600
+20 -
+shot heid_hof_07_welcome
+waittaskx hall_of_fame:Task_Hof_ExitOnKeyPressed 1500
+4 -
+shot heid_hof_08_player
+30 -
+shot heid_hof_08_player_b
+# soft reset (the record was saved before the first Pokemon was shown)
+10 A+B+START+SELECT
+waittask Task_TitleScreenPhase3 4000 START
+30 -
+tap A 0
+waittaskx Task_HandleMainMenuInput 900
+waitquiet
+snap heid_hof_continue
+tap A 30
+waitcb2 CB2_Overworld 1200
+waitctl 1200 B
+snap heid_hof_after
+evstart goto EventScript_PC
+waitkey 900
+pages heid_hofpc_boot 4
+waittaskx Task_HandleMultichoiceInput 600
+waitquiet
+snap heid_hofpc_menu_01
+press DOWN
+press DOWN
+snap heid_hofpc_menu_03_hof
+press A
+waittaskx hall_of_fame:Task_HofPC_HandleInput 1500
+waitquiet 600
+snap heid_hofpc_mon1
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap heid_hofpc_mon2
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap heid_hofpc_mon3
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap heid_hofpc_mon4
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap heid_hofpc_mon5
+press DOWN
+waittaskx hall_of_fame:Task_HofPC_HandleInput 300
+snap heid_hofpc_mon6

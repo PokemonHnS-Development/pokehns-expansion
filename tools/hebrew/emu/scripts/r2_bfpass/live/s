@@ -1,0 +1,3 @@
+#!/bin/bash
+# s NAME : send stdin lines to live session NAME
+exec python3 ../hns-tools/scratch/screens/r2_battle_frontier_pass_bp_and_remaining_facilities/tools/sess.py send ../hns-tools/scratch/screens/r2_battle_frontier_pass_bp_and_remaining_facilities/live/$1

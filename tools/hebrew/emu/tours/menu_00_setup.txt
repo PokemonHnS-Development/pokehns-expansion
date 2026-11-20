@@ -1,0 +1,80 @@
+# Part A setup: from ladder save 1 (bedroom, no Pokemon) to a save every menu tour starts
+# from (`start save:menuA_base`). Uses only the debug menu and flag pokes, so it runs the
+# same on any build of the same source (flag/species/item numbers are compiled from the
+# build's own include/, addresses come from its ELF).
+#
+# Result: Cherrygrove Pokemon Center at (7,4) below the nurse, party of 5 (Typhlosion,
+# Pikachu, Ampharos, Gyarados, a Togepi egg), every bag pocket filled (medicine by hand:
+# the debug Fill list has no medicine entry, src/debug.c:586-596), PC boxes and PC item
+# storage filled, all Pokedex entries seen+caught, Pokedex/Pokegear/phone/radio/running
+# shoes on, max money, all fly locations, all badges.
+start saves/ladder1_newgame.sav
+
+include ../scripts/continue.txt
+
+# Party (debug Give X > Pokemon (Basic) / Give Egg). Typhlosion first: the summary and
+# party tours use slot 1, the egg is slot 5.
+givemon SPECIES_TYPHLOSION 36
+givemon SPECIES_PIKACHU 25
+givemon SPECIES_AMPHAROS 32
+givemon SPECIES_GYARADOS 30
+giveegg SPECIES_TOGEPI
+
+# Key system flags (src/start_menu.c:355 BuildNormalStartMenu; Pokegear menu type,
+# src/pokenav_menu_handler.c:136 GetPokenavMainMenuType; phone list: Mom is always there,
+# Prof. Elm needs FLAG_ENABLE_PROF_BIRCH_MATCH_CALL, src/pokenav_match_call_data.c:217)
+setflag FLAG_SYS_POKEDEX_GET
+setflag FLAG_SYS_POKENAV_GET
+setflag FLAG_ADDED_MATCH_CALL_TO_POKENAV
+setflag FLAG_HAS_MATCH_CALL
+setflag FLAG_ENABLE_PROF_BIRCH_MATCH_CALL
+setflag FLAG_ENABLE_RADIO
+setflag FLAG_SYS_B_DASH
+
+# Flags & Vars > Pokedex Flags All (closes the menu)
+dbg 7 2
+waitctl 600 B
+# Flags & Vars > Toggle Fly Flags, then Toggle All badges. Each from a fresh menu: an
+# action that takes several frames swallows the next key press, so a list that stays
+# open cannot be walked blind. `waitctl 600 B` closes whatever is left open.
+dbg 7 9               # Toggle Fly Flags
+waitctl 600 B
+dbg 7 10              # Toggle All badges
+waitctl 600 B
+expectflag FLAG_BADGE01_GET 1
+
+# PC/Bag > Fill... (src/debug.c:586): 0 PC boxes fast (closes the menu itself), 2 PC
+# items, 3 items pocket, 4 Poke Balls, 5 TMs/HMs, 6 berries, 7 key items. The fills
+# loop over every item id and take several frames each, so again one per fresh menu.
+dbg 1 1 0
+waitctl 600 B
+dbg 1 1 2
+waitctl 600 B
+dbg 1 1 3
+waitctl 600 B
+dbg 1 1 4
+waitctl 600 B
+dbg 1 1 5
+waitctl 600 B
+dbg 1 1 6
+waitctl 600 B
+dbg 1 1 7
+waitctl 600 B
+
+# Medicine pocket (no debug fill exists for it)
+giveitem ITEM_POTION 20
+giveitem ITEM_SUPER_POTION 10
+giveitem ITEM_FULL_RESTORE 5
+giveitem ITEM_REVIVE 5
+giveitem ITEM_ANTIDOTE 10
+giveitem ITEM_RARE_CANDY 3
+
+# Give X > Max Money (the list stays open)
+dbg 3 5
+waitctl 600 B
+
+warpto MAP_CHERRYGROVE_CITY_POKEMON_CENTER_HNS 7 4
+snap menu_setup_01_center
+savegame
+keepsave menuA_base
+expect8 @gPlayerPartyCount@ 5

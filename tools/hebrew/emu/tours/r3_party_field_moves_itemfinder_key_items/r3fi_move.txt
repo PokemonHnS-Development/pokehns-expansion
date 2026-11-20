@@ -1,0 +1,306 @@
+# Party ITEM > MOVE (src/data/party_menu.h:744 sPartyMenuAction_GiveTakeItemCancel; CursorCb_MoveItem
+# src/party_menu.c:8429, CursorCb_MoveItemCallback :8355; result text :8395-8412): "Move item to
+# where?" with the moving cursor, MOVE to a Pokemon holding nothing ("X was given the Y to hold"),
+# MOVE from a Pokemon holding nothing ("X isn't holding anything"), and the two-line swap
+# "X's Y and\nX's Y were swapped!" (gText_XsYAnd + gText_XsYWereSwapped, src/strings.c:358-359)
+# with a Latin and a Hebrew nickname in either order and with two Hebrew ones.
+# Start: saves/r3fi_base.sav (= menuA_base; HNS_SAVES holds a per-language copy so the party
+# nicknames match the ROM). Party: 0 Typhlosion, 1 Pikachu, 2 Ampharos, 3 Gyarados, 4 egg,
+# + 5 Meowscarada (the widest Hebrew species name, 60 px) holding ODD KEYSTONE (the widest
+# holdable item name, 80 px). Gyarados gets the Latin nickname GYARADOS (struct BoxPokemon
+# nickname at +8, outside the checksum; EOS at [8]) as a save from English 2.0.6 carries it.
+# ITEMS pocket index 133 = REAPER CLOTH (73 px), given to Pikachu first (party ITEM > GIVE).
+start saves/r3fi_base.sav
+include ../../scripts/continue.txt
+ev givemon SPECIES_MEOWSCARADA, 50, item=ITEM_ODD_KEYSTONE; end
+w32 @gPlayerParty+134@ CCBBD3C1
+w32 @gPlayerParty+138@ CDC9BEBB
+w8 @gPlayerParty+13C@ FF
+
+# Pikachu (slot 1) > ITEM > GIVE > REAPER CLOTH, through the party menu's own GIVE (no bag context
+# grid, whose LEFT/RIGHT differ between rc5 and a build with the src/item_menu.c:1889 fix)
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 82
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4                                # SUMMARY, FLASH, SWITCH, ITEM, CANCEL
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # ITEM
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # GIVE
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap r3fi_mv_01_bag_reaper
+tap A 4                                   # REAPER CLOTH
+waitcb2x CB2_UpdatePartyMenu 900
+waitkey 600
+snap r3fi_mv_02_given_pikachu
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap r3fi_mv_03_party
+
+# Meowscarada (ODD KEYSTONE) > ITEM > MOVE > Typhlosion (holds nothing)
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap r3fi_mv_04_meow_actions
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # ITEM
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap r3fi_mv_05_item_submenu
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap r3fi_mv_06_item_submenu_move
+tap A 4                                   # MOVE
+waittaskx CursorCb_MoveItemCallback 300
+waitquiet
+snap r3fi_mv_07_move_where
+seek 8 @gPartyMenu+A@ 0 UP
+waitquiet
+snap r3fi_mv_08_move_cursor_typhlosion
+tap A 4
+waitkey 600
+snap r3fi_mv_09_given_typhlosion
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap r3fi_mv_10_party_after_given
+
+# Meowscarada (now holding nothing) > ITEM > MOVE: "isn't holding anything"
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # MOVE
+waitkey 600
+snap r3fi_mv_11_meow_not_holding
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Typhlosion (ODD KEYSTONE) > MOVE > Pikachu (REAPER CLOTH): first a Hebrew-Hebrew swap
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap r3fi_mv_12_typh_actions
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # MOVE
+waittaskx CursorCb_MoveItemCallback 300
+waitquiet
+seek 8 @gPartyMenu+A@ 1 DOWN
+waitquiet
+snap r3fi_mv_13_move_cursor_pikachu
+tap A 4
+waitkey 600
+snap r3fi_mv_14_swap_typh_pika
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Pikachu (now ODD KEYSTONE) > MOVE > GYARADOS (Latin nickname, holds nothing)
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap r3fi_mv_15_pika_actions
+tap DOWN 4                                # SUMMARY, FLASH, SWITCH, ITEM, CANCEL
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # MOVE
+waittaskx CursorCb_MoveItemCallback 300
+waitquiet
+seek 8 @gPartyMenu+A@ 3 DOWN
+waitquiet
+tap A 4
+waitkey 600
+snap r3fi_mv_16_given_latin
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Typhlosion (REAPER CLOTH) > MOVE > GYARADOS (ODD KEYSTONE): Hebrew first, then "ו" + Latin
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # MOVE
+waittaskx CursorCb_MoveItemCallback 300
+waitquiet
+seek 8 @gPartyMenu+A@ 3 DOWN
+waitquiet
+tap A 4
+waitkey 600
+snap r3fi_mv_17_swap_heb_latin
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# GYARADOS (REAPER CLOTH) > MOVE > Typhlosion (ODD KEYSTONE): Latin first
+seek 8 @gPartyMenu+9@ 3 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap r3fi_mv_18_gyarados_actions
+tap DOWN 4                                # SUMMARY, field move, SWITCH, ITEM, CANCEL
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # MOVE
+waittaskx CursorCb_MoveItemCallback 300
+waitquiet
+seek 8 @gPartyMenu+A@ 0 UP
+waitquiet
+tap A 4
+waitkey 600
+snap r3fi_mv_19_swap_latin_heb
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# GYARADOS (ODD KEYSTONE) > MOVE > Meowscarada (nothing): the widest "was given" pair
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # MOVE
+waittaskx CursorCb_MoveItemCallback 300
+waitquiet
+seek 8 @gPartyMenu+A@ 5 DOWN
+waitquiet
+snap r3fi_mv_20_move_cursor_meow
+tap A 4
+waitkey 600
+snap r3fi_mv_21_given_widest
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Typhlosion (REAPER CLOTH) > MOVE > Meowscarada (ODD KEYSTONE): row 2 is the widest real pair
+seek 8 @gPartyMenu+9@ 0 UP
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # MOVE
+waittaskx CursorCb_MoveItemCallback 300
+waitquiet
+seek 8 @gPartyMenu+A@ 5 DOWN
+waitquiet
+tap A 4
+waitkey 600
+snap r3fi_mv_22_swap_widest
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap r3fi_mv_23_party_held_icons
+
+# Meowscarada > MOVE, then B: back to choosing a Pokemon
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # MOVE
+waittaskx CursorCb_MoveItemCallback 300
+waitquiet
+snap r3fi_mv_24_move_where_meow
+tap B 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap r3fi_mv_25_move_cancelled
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

@@ -1005,6 +1005,13 @@ static void CreateUISprites(void)
 
     for (i = 0; i < 16; i++)
         gSprites[sMoveRelearnerStruct->heartSpriteIds[i]].invisible = TRUE;
+
+#if TEXT_RTL
+    // The contest info window (screen x 8-136) is mirrored, so the hearts are too: they sit at its
+    // left end, next to the labels, and fill from the right.
+    for (i = 0; i < 16; i++)
+        gSprites[sMoveRelearnerStruct->heartSpriteIds[i]].x = 144 - gSprites[sMoveRelearnerStruct->heartSpriteIds[i]].x;
+#endif
 }
 
 static void AddScrollArrows(void)
@@ -1125,7 +1132,12 @@ void MoveRelearnerShowHideCategoryIcon(s32 moveId)
     else
     {
         if (sMoveRelearnerStruct->categoryIconSpriteId == 0xFF)
+#if TEXT_RTL
+            // Mirrored inside the battle info window (screen x 8-136), right of the mirrored power label.
+            sMoveRelearnerStruct->categoryIconSpriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, 144 - 66, 40, 0);
+#else
             sMoveRelearnerStruct->categoryIconSpriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, 66, 40, 0);
+#endif
 
         gSprites[sMoveRelearnerStruct->categoryIconSpriteId].invisible = FALSE;
         StartSpriteAnim(&gSprites[sMoveRelearnerStruct->categoryIconSpriteId], GetBattleMoveCategory(moveId));
@@ -1142,9 +1154,9 @@ static void QuickSortMoves(u16 *moves, s32 left, s32 right)
 
     while (i <= j)
     {
-        while (moves[i] != MOVE_NONE && StringCompare(GetMoveName(moves[i]), GetMoveName(pivot)) < 0)
+        while (moves[i] != MOVE_NONE && StringCompareAlphabetical(GetMoveName(moves[i]), GetMoveName(pivot)) < 0)
             i++;
-        while (moves[j] != MOVE_NONE && StringCompare(GetMoveName(moves[j]), GetMoveName(pivot)) > 0)
+        while (moves[j] != MOVE_NONE && StringCompareAlphabetical(GetMoveName(moves[j]), GetMoveName(pivot)) > 0)
             j--;
 
         if (i <= j)

@@ -1,0 +1,18 @@
+# Validate ladder rung 1, the new game saved in the bedroom (NewBarkTown_PlayersHouse_2F_hns):
+#   ladder.py run scripts/ladder_validate_newgame.txt OUT --save $HNS_SAVES/ladder1_newgame.sav
+# It has no Center to leave, no Pokédex and no party yet, and the stairs start the clock-setup
+# scene, so only CONTINUE and the start-menu screens a new game has: the bag and the trainer
+# card. Every step waits on game state. Rungs 2-6 use ladder_validate.txt.
+include continue.txt
+shot v01_bedroom
+startmenu 2                   # BAG
+90 -
+shot v06_bag
+waitctl 1200 B
+startmenu 4                   # trainer card
+120 -
+shot v07_card_front
+tap A 60
+shot v07b_card_back
+waitctl 1200 B
+shot v09_end

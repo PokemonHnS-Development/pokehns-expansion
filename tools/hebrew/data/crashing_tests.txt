@@ -1,0 +1,3 @@
+# Tests that crash the emulator on upstream 2.0.6. check_chunked.py runs each one alone, or skips
+# it with --skip-crashing. One test name per line, without the parameter suffix.
+Capture: ball data is properly set in captured pokemon

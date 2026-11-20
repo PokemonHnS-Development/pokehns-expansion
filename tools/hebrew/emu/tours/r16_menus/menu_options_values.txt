@@ -1,0 +1,140 @@
+# Options (src/option_menu.c): every row of MAIN, BATTLE and SOUND is moved through all its values
+# with ROWNEXT (the key that moves a value row to its next value: LEFT on the mirrored Hebrew window,
+# RIGHT in English; values wrap, src/option_menu.c:1005-1019), one shot per value, so the
+# description of every value (WIN_DESCRIPTION, 26x4 tiles; DrawDescription :863-892) is on screen.
+# The last ROWNEXT brings the row back to its first value. TEXT SPEED (one description for every
+# value) and FRAME (numbered frames) are shot once. B saves the options; the game is not saved.
+# Run: hns.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_menus [--clip]
+# Save: menuA_base.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+
+startmenu OPTION
+waitcb2x option_menu:MainCB2 900
+waittaskx option_menu:Task_ProcessInput 900
+snap mo_main_01_v0
+press DOWN
+snap mo_main_02_v0
+press ROWNEXT
+snap mo_main_02_v1
+press ROWNEXT
+press DOWN
+snap mo_main_03_v0
+press ROWNEXT
+snap mo_main_03_v1
+press ROWNEXT
+press DOWN
+snap mo_main_04_v0
+press ROWNEXT
+snap mo_main_04_v1
+press ROWNEXT
+snap mo_main_04_v2
+press ROWNEXT
+press DOWN
+snap mo_main_05_v0
+press ROWNEXT
+snap mo_main_05_v1
+press ROWNEXT
+press DOWN
+snap mo_main_06_v0
+press ROWNEXT
+snap mo_main_06_v1
+press ROWNEXT
+press DOWN
+snap mo_main_07_v0
+press ROWNEXT
+snap mo_main_07_v1
+press ROWNEXT
+press DOWN
+snap mo_main_08_v0
+press ROWNEXT
+snap mo_main_08_v1
+press ROWNEXT
+press DOWN
+snap mo_main_09_v0
+press ROWNEXT
+snap mo_main_09_v1
+press ROWNEXT
+press DOWN
+snap mo_main_10_v0
+press ROWNEXT
+snap mo_main_10_v1
+press ROWNEXT
+press DOWN
+snap mo_main_11_v0
+press ROWNEXT
+snap mo_main_11_v1
+press ROWNEXT
+press DOWN
+snap mo_main_12_v0
+press ROWNEXT
+snap mo_main_12_v1
+press ROWNEXT
+press DOWN
+snap mo_main_13_v0
+press R
+waittaskx option_menu:Task_ProcessInput 300
+snap mo_battle_01_v0
+press ROWNEXT
+snap mo_battle_01_v1
+press ROWNEXT
+press DOWN
+snap mo_battle_02_v0
+press ROWNEXT
+snap mo_battle_02_v1
+press ROWNEXT
+press DOWN
+snap mo_battle_03_v0
+press ROWNEXT
+snap mo_battle_03_v1
+press ROWNEXT
+press DOWN
+snap mo_battle_04_v0
+press ROWNEXT
+snap mo_battle_04_v1
+press ROWNEXT
+press DOWN
+snap mo_battle_05_v0
+press ROWNEXT
+snap mo_battle_05_v1
+press ROWNEXT
+press DOWN
+snap mo_battle_06_v0
+press ROWNEXT
+snap mo_battle_06_v1
+press ROWNEXT
+snap mo_battle_06_v2
+press ROWNEXT
+snap mo_battle_06_v3
+press ROWNEXT
+press DOWN
+snap mo_battle_07_v0
+press ROWNEXT
+snap mo_battle_07_v1
+press ROWNEXT
+press R
+waittaskx option_menu:Task_ProcessInput 300
+snap mo_sound_01_v0
+press ROWNEXT
+snap mo_sound_01_v1
+press ROWNEXT
+press DOWN
+snap mo_sound_02_v0
+press ROWNEXT
+snap mo_sound_02_v1
+press ROWNEXT
+press DOWN
+snap mo_sound_03_v0
+press ROWNEXT
+snap mo_sound_03_v1
+press ROWNEXT
+press DOWN
+snap mo_sound_04_v0
+press ROWNEXT
+snap mo_sound_04_v1
+press ROWNEXT
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

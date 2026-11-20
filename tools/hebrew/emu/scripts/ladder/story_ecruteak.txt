@@ -1,0 +1,11 @@
+# Story steps from "first badge, aide waiting in the Violet City Pokemon Center" (story_badge1.txt)
+# to "Fog Badge, Ecruteak City" (4 badges). Each town's first-visit trigger is the ROM's own
+# flagheap script (rungoto); the events between them are scripts/ladder/s3*.inc.
+include story_badge1.txt
+event s3a_violet_azalea.inc
+rungoto AzaleaTown_EventScript_Trigger
+event s3b_azalea.inc
+rungoto GoldenrodCity_EventScript_Trigger 20000 A
+event s3c_goldenrod.inc
+rungoto EcruteakCity_EventScript_Trigger
+event s3d_ecruteak.inc

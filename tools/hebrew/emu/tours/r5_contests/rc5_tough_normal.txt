@@ -1,0 +1,40 @@
+# A Normal-rank TOUGH contest from the H&S contest lobby (MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS).
+# Party slot 0 becomes a level-50 MACHAMP made by this ROM (so its nickname is the ROM's species name)
+# with the moves below; the appeals are the digit string 10233 (the move-list index for each round):
+#   0 BODY_SLAM (TOUGH, CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON, src/data/moves_info.h)
+#   1 IRON_DEFENSE (TOUGH, CONTEST_EFFECT_AVOID_STARTLE, src/data/moves_info.h)
+#   2 TORMENT (TOUGH, CONTEST_EFFECT_MAKE_FOLLOWING_MONS_NERVOUS, src/data/moves_info.h)
+#   3 ENDEAVOR (TOUGH, CONTEST_EFFECT_BETTER_IF_LAST, src/data/moves_info.h)
+# Iron Defense (avoid startle), Body Slam (badly startle the one before), Torment (nervous), Endeavor twice (better if last; repeated).
+# Round 1 points are set to 600 once the contest screen starts (gContestMonRound1Points[3], the
+# player is contestant 3), so the player wins and gets the ribbon (contest_hall.inc ReceiveContestRibbon).
+# gRngValue is pinned from the lobby on (pinrng), so the opponents, the AI's appeals and the
+# audience are the same on the Hebrew and the English ROM (the shots pair up by name).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_MACHAMP, 50, move1=MOVE_BODY_SLAM, move2=MOVE_IRON_DEFENSE, move3=MOVE_TORMENT, move4=MOVE_ENDEAVOR; additem ITEM_POKEBLOCK_CASE, 1; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 0
+fieldwatch type menu 3000
+pick 4
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap party_pick
+tap A 4
+fieldwatch entry cb2:CB2_StartContest 40000 45
+w16s gContestMonRound1Points 3 600
+contestplay5 app 10233
+fieldwatch judge cb2:CB2_StartShowContestResults 20000 45
+waitcb2x CB2_ShowContestResults 600
+burstuntil res CB2_ShowContestResults 16 9000 A 240
+fieldwatch prize free 30000 45
+loc
+snap lobby_after

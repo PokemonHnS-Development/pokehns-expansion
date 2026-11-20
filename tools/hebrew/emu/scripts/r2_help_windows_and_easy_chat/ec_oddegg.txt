@@ -1,0 +1,42 @@
+# The Odd Egg clerk (Route34_DayCare_hns/scripts.inc:47-145) given the right answer: Pichu's
+# STATIC ELECTRIC WAAAH PLAY (sInterviewPasswords, src/easy_chat.c:1415-1427) -> OK -> YES ->
+# "take care" (Route34_DayCare_Text_TakeCare) -> the fanfare line (Text_ReceivedOddEgg, `message`
+# without a key wait) -> the egg in the party (party menu, summary).
+start saves/ladder6_postgame.sav
+include ../continue.txt
+ev setflag FLAG_SYS_GAME_CLEAR; clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+warptoloose MAP_ROUTE34_DAY_CARE_HNS 10 4
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+talk ec_egg_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_STATIC
+ecputword 0 1 EC_GROUP_STATUS EC_WORD_ELECTRIC
+ecputword 1 0 EC_GROUP_VOICES EC_WORD_WAAAH
+ecputword 1 1 EC_GROUP_FEELINGS EC_WORD_PLAY ec_egg_put4
+ecstate
+snap ec_egg_4words
+ec START
+snap ec_egg_confirm
+ec UP
+snap ec_egg_confirm_yes
+tap A 0
+waitcb2x CB2_Overworld 900
+talk ec_egg_take 10 -
+waitctl 900
+snap ec_egg_after
+expectflag FLAG_RECEIVED_ODD_EGG 1
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waitquiet
+snap ec_egg_party
+seek 8 @gPartyMenu+9@ 2 DOWN
+snap ec_egg_party_egg
+tap A 4
+waitquiet
+snap ec_egg_party_egg_menu
+tap A 4
+90 -
+waitquiet
+snap ec_egg_summary

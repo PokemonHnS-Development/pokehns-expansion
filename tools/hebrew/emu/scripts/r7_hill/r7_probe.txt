@@ -1,0 +1,6 @@
+# probe: print the live collision grid, behaviors and objects of the current floor.
+waitctl 600
+snap probe_here
+grid
+behaviors
+objs

@@ -1,0 +1,7 @@
+# Field bag, POKE BALLS pocket, all 29: row + context menu.
+start saves/bp_menuA.sav
+include ../../scripts/continue.txt
+fillpocket POKE_BALLS 999 0 39
+bagopen POKE_BALLS
+bagrows ball ctx 60
+bagclose

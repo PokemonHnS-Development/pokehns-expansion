@@ -1,0 +1,31 @@
+# Cable-club lines in the field message box, run in RAM in the Trade Center (as tours/r14_link/l11 r3 does):
+#   - the coloured trainer card line (CableClub_Text_GotToLookAtColoredTrainerCard) with STR_VAR_2 = each card
+#     colour word GetLinkTrainerCardColor buffers (src/cable_club.c sTrainerCardColorNames: Bronze, Copper,
+#     Gold; Silver was seen in r14) and STR_VAR_1 = the partner's 7-letter name: their real window;
+#   - stand-ins in the field box (their own windows need a peer): gText_NumPlayerLink with STR_VAR_1 = 4 (real:
+#     the 88 px player-count window of the cable leader, src/cable_club.c PrintNumPlayersInLink) and
+#     gText_CommunicationStandby (real: the link contest results text box, src/contest_util.c).
+# Then the link battle records window (special ShowLinkBattleRecords, data/scripts/cable_club.inc
+# EventScript_CableBoxResults) empty, and again with two records (7-letter names, 4-digit counts).
+# Run with scripts/r16_link/lkops.py; LK_LANG=he|en.
+start saves/ladder1_newgame.sav
+include ../../scripts/continue.txt
+linkplayers he:סילבריה,en:SILVERS 1
+warpto MAP_TRADE_CENTER_HNS 5 7
+face UP
+evstart lock; bufferstring STR_VAR_1, 0x@gLinkPlayers+24@; bufferstring STR_VAR_2, 0x@gText_BronzeCard@; msgbox 0x@CableClub_Text_GotToLookAtColoredTrainerCard@, MSGBOX_DEFAULT; bufferstring STR_VAR_2, 0x@gText_CopperCard@; msgbox 0x@CableClub_Text_GotToLookAtColoredTrainerCard@, MSGBOX_DEFAULT; bufferstring STR_VAR_2, 0x@gText_GoldCard@; msgbox 0x@CableClub_Text_GotToLookAtColoredTrainerCard@, MSGBOX_DEFAULT; release; end
+fieldwatch cc_card free 6000
+evstart lock; setvar VAR_0x8000, 4; buffernumberstring STR_VAR_1, VAR_0x8000; msgbox 0x@gText_NumPlayerLink@, MSGBOX_DEFAULT; msgbox 0x@gText_CommunicationStandby@, MSGBOX_DEFAULT; release; end
+fieldwatch cc_standin free 6000
+evstart lockall; setvar VAR_0x8004, 0; special ShowLinkBattleRecords; waitbuttonpress; special RemoveRecordsWindow; releaseall; end
+60 -
+snap rec_empty
+tap A 4
+waitctl 600 A
+linkrecord 0 he:אבשמחתם,en:MAXWELL 1234 999 77
+linkrecord 1 he:סילבריה,en:SILVERS 8 9999 0
+evstart lockall; setvar VAR_0x8004, 0; special ShowLinkBattleRecords; waitbuttonpress; special RemoveRecordsWindow; releaseall; end
+60 -
+snap rec_filled
+tap A 4
+waitctl 600 A

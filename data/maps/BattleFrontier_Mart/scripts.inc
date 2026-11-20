@@ -45,10 +45,10 @@ BattleFrontier_Mart_EventScript_Boy::
 	end
 
 BattleFrontier_Mart_Text_ChaperonGrandson:
-	.string "We came here to chaperon our\n"
-	.string "grandson.\p"
-	.string "But since we're here, we thought\n"
-	.string "we should get some souvenirs.$"
+	.string "באנו לכאן כדי ללוות את\n"
+	.string "הנכד שלנו.\p"
+	.string "אבל אם כבר אנחנו פה, חשבנו\n"
+	.string "שכדאי לקנות כמה מזכרות.$"
 
 BattleFrontier_Mart_Text_ProteinMakeNiceGift:
 	.string "Dear, what do you think of this?\n"

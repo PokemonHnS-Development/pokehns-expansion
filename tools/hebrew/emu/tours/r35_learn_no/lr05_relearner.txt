@@ -1,0 +1,61 @@
+# Not learning a move at the move relearner (Blackthorn City House 3, src/move_relearner.c):
+# Typhlosion (four moves), as in scripts/r1_npc_services/svc_relearner2.txt. "delete an older
+# move?" NO -> "give up learning X?" (MENU_STATE_PRINT_STOP_TEACHING,
+# gText_MoveRelearnerStopTryingToTeachMove) NO -> "trying to learn" and the question again; NO
+# -> the same box, YES -> back to the move list (the relearner prints no "did not learn" line).
+# sMoveRelearnerStruct->state (u8 at +0): 4 idle battle, 9 teach YES/NO, 13 give up YES/NO,
+# 18 delete old move YES/NO, 26 stop teaching YES/NO.
+# Needs a build that asks (P_ASK_MOVE_CONFIRMATION, which follows TEXT_RTL): the Hebrew one.
+start saves/r1svc_menuA_base.sav
+include ../../scripts/continue.txt
+ev additem ITEM_HEART_SCALE, 5; end
+
+warpto MAP_BLACKTHORN_CITY_HOUSE3_HNS 6 4
+face RIGHT
+talk lr05_intro 20
+tap A 0                                  # YES
+talk lr05_which 10 -
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP 6
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorPosition@ 0 UP 8
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+press A                                  # SELECT Typhlosion
+waitcb2x CB2_Overworld 900
+talk lr05_teachwhich 10 -
+waitcb2x CB2_MoveRelearnerMain 900
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 900
+press A                                  # the first move
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 9 300
+press A                                  # YES: teach it
+pages lr05_trying 5
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 18 600
+snap lr05_a1_delete_q
+press B                                  # NO
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 26 600
+snap lr05_a3_stop_box
+tap DOWN 4
+waitquiet
+snap lr05_a4_stop_box_no
+press A                                  # NO: "trying to learn" again
+pages lr05_b1_trying_again 5
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 18 600
+snap lr05_b2_delete_q_again
+press B                                  # NO
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 26 600
+snap lr05_c2_stop_box
+press A                                  # YES: back to the list
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 600
+snap lr05_c3_list
+press B
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 13 300
+press A                                  # give up: YES
+waitcb2x CB2_Overworld 900

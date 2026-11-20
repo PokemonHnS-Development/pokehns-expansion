@@ -1,0 +1,88 @@
+# Power Plant chain on ladder 5 (three Kanto badges): the manager before the theft
+# (Route10_PowerPlantBackRoom_EventScript_ManagerInitial), the Route 10 cop
+# (Route10_PowerPlantEntrance_Trigger_Cop at (6,15)), the Cerulean Gym grunt
+# (CeruleanCity_Gym_EventScript_RocketGrunt, ON_FRAME at state 2), the Route 24 scene
+# (Route24_Trigger_GruntScene at (17,11), state 3) and battle (Route24_EventScript_Grunt,
+# no_intro TRAINER_GRUNT_31_HNS; bitem so the AI uses its Full Restore), the Machine Part
+# (CeruleanCity_Gym_EventScript_MachinePart sparkle, _MachinePartItem), the manager with the
+# part (Route10_PowerPlantBackRoom_EventScript_ManagerCheckPart, TM Thunder), the Lavender
+# radio director (LavenderTown_RadioStation_EventScript_DirectorReturnedMachinePart), Misty's
+# date (Route25_Trigger_MistyRight at (99,21), state 2) and Kevin (Route25_EventScript_Kevin,
+# Big Nugget, no_intro TRAINER_KEVIN_HNS).
+start saves/r6_story_l5.sav
+include _base.txt
+ev setvar VAR_KANTO_ROCKET_STORY_STATE, 0; setflag FLAG_HIDE_CERULEAN_GYM_ROCKET; setflag FLAG_HIDE_CERULEAN_CAPE_ROCKET; setflag FLAG_HIDDEN_ITEM_MACHINE_PART; clearflag FLAG_RETURNED_MACHINE_PART; clearflag FLAG_KANTO_RADIO_GOT; cleartrainerflag TRAINER_GRUNT_31_HNS; clearflag FLAG_HIDE_POWER_PLANT_ENGINEER; setflag FLAG_HIDE_ROUTE25_MISTY; setvar VAR_CERULEAN_CITY_STATE, 1; clearflag FLAG_ROUTE25_GOT_NUGGET; cleartrainerflag TRAINER_KEVIN_HNS; end
+vars VAR_KANTO_ROCKET_STORY_STATE VAR_CERULEAN_CITY_STATE
+warpto MAP_ROUTE10_POWER_PLANT_BACK_ROOM_HNS 11 7
+objs
+approach 2
+tap A 4
+scene M_first 20000
+warpto MAP_ROUTE10_POWER_PLANT_ENTRANCE_HNS 6 17
+snap P_room
+walkto 6 15
+scene P_cop 30000
+snap P_free
+vars VAR_KANTO_ROCKET_STORY_STATE
+ev setvar VAR_KANTO_ROCKET_STORY_STATE, 1; end
+warpto MAP_CERULEAN_CITY_GYM_HNS 7 18
+snap Y_gym
+evstart setvar VAR_KANTO_ROCKET_STORY_STATE, 2; end
+scene Y_grunt 30000
+snap Y_free
+vars VAR_KANTO_ROCKET_STORY_STATE
+warpto MAP_ROUTE24_HNS 17 13
+snap R_route
+objs
+stepto UP 2
+scene R_scene 30000
+snap R_free
+objs
+vars VAR_KANTO_ROCKET_STORY_STATE
+approach 1
+tap A 4
+scene R_grunt 20000
+bwalk B_bintro input:HandleInputChooseAction
+snap B_action
+bitem B_item 3
+bwin B_win
+scene B_after 40000
+snap B_free
+vars VAR_KANTO_ROCKET_STORY_STATE
+warpto MAP_CERULEAN_CITY_GYM_HNS 7 17
+periodic Y_part 200 16
+snap Y_part_after
+objs
+approach 10
+tap A 4
+scene Y_item 20000
+snap Y_item_free
+warpto MAP_ROUTE10_POWER_PLANT_BACK_ROOM_HNS 11 7
+approach 2
+tap A 4
+scene M_part 20000
+snap M_free
+vars VAR_KANTO_ROCKET_STORY_STATE VAR_CERULEAN_CITY_STATE
+warpto MAP_LAVENDER_TOWN_RADIO_STATION_HNS 12 4
+objs
+approach 5
+tap A 4
+scene L_director 30000
+snap L_free
+approach 5
+tap A 4
+scene L_director2 20000
+warpto MAP_ROUTE25_HNS 99 23
+snap D_route
+stepto UP 2
+scene D_misty 30000
+snap D_free
+warpto MAP_ROUTE25_HNS 72 21
+objs
+approach 9
+tap A 4
+scene K_kevin 30000
+include _battle2.txt
+approach 9
+tap A 4
+scene K_again 20000

@@ -1,0 +1,17 @@
+# r6 items: hidden 5/6. Each event clears the object's or tile's flag, warps next to it, turns the
+# player toward it and presses A (Std_FindItem / EventScript_HiddenItemScript, data/scripts/obtain_item.inc).
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+pick h_awakening FLAG_HIDDEN_ITEM_ROUTE36_AWAKENING MAP_ROUTE36_HNS 59 18 UP
+pick h_tm_pluck FLAG_ITEM_ROUTE40_TM_PLUCK MAP_ROUTE40_HNS 15 19 UP
+pick h_modest_mint FLAG_ITEM_ROUTE42_MODEST_MINT MAP_ROUTE42_HNS 68 18 LEFT
+pick h_dubious_disc FLAG_HIDDEN_ITEM_ROUTE42_DUBIOUS_DISC MAP_ROUTE42_HNS 63 7 UP
+pick h_elixir FLAG_HIDDEN_ITEM_ROUTE44_ELIXIR MAP_ROUTE44_HNS 51 8 UP
+pick h_lucky_egg FLAG_HIDDEN_ITEM_ROUTE47_LUCKY_EGG MAP_ROUTE47_HNS 31 14 UP
+pick h_wave_incense FLAG_HIDDEN_ITEM_ROUTE47_WAVE_INCENSE MAP_ROUTE47_HNS 86 49 UP
+pick h_lagging_tail FLAG_HIDDEN_ITEM_ROUTE47_LAGGING_TAIL MAP_ROUTE47_HNS 53 10 UP
+pick h_ice_stone FLAG_ROUTE_49_HIDDENITEM_ICESTONE MAP_ROUTE49_HNS 23 8 UP
+pick h_kings_rock FLAG_ROUTE_49_HIDDENITEM_KINGSROCK MAP_ROUTE49_HNS 10 43 UP
+pick h_enigma_berry FLAG_ROUTE50_HIDDENITEM_1 MAP_ROUTE50_HNS 68 55 UP
+pick h_poke_doll FLAG_ROUTE50_HIDDENITEM_2 MAP_ROUTE50_HNS 55 41 UP
+pick h_fairy_gem FLAG_HIDDEN_ITEM_ROUTE8_FAIRY_GEM MAP_ROUTE8_HNS 0 1 UP

@@ -158,32 +158,32 @@ NationalPark_BugContest_Movement_AttendantSide:
 	step_end
 
 NationalPark_BugContest_Text_Trash:
-	.string "Nothing here.$"
+	.string "אין כאן כלום.$"
 
 NationlParkBugContest_Text_EnjoyTheContest:
-	.string "ATTENDANT: Enjoy the Contest!$"
+	.string "סדרן: תיהנה מהתחרות!$"
 
 NationalParkBugContest_Text_Attendant:
-	.string "ATTENDANT: Would you like to end\n"
-	.string "the contest?$"
+	.string "סדרן: רוצה לסיים\n"
+	.string "את התחרות?$"
 
 NationalParkBugContest_Text_ContestantBelinda:
-	.string "BELINDA: I'm going to win!\n"
-	.string "Don't bother me.$"
+	.string "בלינדה: אני הולכת לנצח!\n"
+	.string "לא להפריע לי.$"
 
 NationalParkBugContest_Text_Contestant2A:
-	.string "ED: My PARASECT puts POKéMON to\n"
-	.string "sleep with SPORE.$"
+	.string "אד: הפרסקט שלי מרדים\n"
+	.string "פוקימונים בעזרת נבג.$"
 
 NationalParkBugContest_Text_ContestantShaun:
-	.string "SHAUN: I'm not concerned about\n"
-	.string "winning.\p"
-	.string "I'm just looking for rare POKéMON.$"
+	.string "שון: לא אכפת לי\n"
+	.string "מהניצחון.\p"
+	.string "אני רק מחפש פוקימונים נדירים.$"
 
 NationalParkBugContest_Text_Contestant6A:
-	.string "BARRY: You should weaken bug\n"
-	.string "POKéMON first,\p"
-	.string "then throw a BALL.$"
+	.string "ברי: כדאי קודם להחליש\n"
+	.string "פוקימוני חרק,\p"
+	.string "ואז לזרוק עליהם כדור.$"
 
 NationalParkBugContest_Text_Contestant7A:
 	.string "CINDY: I love bug POKéMON.\p"
@@ -204,16 +204,15 @@ NationalParkBugContest_Text_Contestant10A:
 	.string "I'm going to win for sure.$"
 
 NationalParkBugContest_Text_Sign_RelaxationSquare:
-	.string "RELAXATION SQUARE\n"
-	.string "NATIONAL PARK$"
+	.string "כיכר המנוחה\n"
+	.string "הפארק הלאומי$"
 
 NationalParkBugContest_Text_Sign_BattleNotice:
-	.string "What is this notice?\p"
-	.string "Please battle only in the grass.\p"
-	.string "NATIONAL PARK WARDEN'S OFFICE$"
+	.string "מה כתוב במודעה הזאת?\p"
+	.string "נא להילחם רק בעשב.\p"
+	.string "משרד הפקח של הפארק הלאומי$"
 
 NationalParkBugContest_Text_TrainerTips:
-	.string "The NATIONAL PARK has different\n"
-	.string "POKéMON during the BUG-CATCHING\l"
-	.string "CONTEST.$"
+	.string "בפארק הלאומי יש פוקימונים אחרים\n"
+	.string "בזמן תחרות לכידת החרקים.$"
 

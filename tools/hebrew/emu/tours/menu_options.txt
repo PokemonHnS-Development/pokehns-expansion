@@ -1,0 +1,67 @@
+# Options (src/option_menu.c): three tabs (MAIN 13 items, BATTLE 7, SOUND 4;
+# src/option_menu.c:29-73), L/R switch tabs, each row prints its own description.
+# One shot per row; MAIN row 2 also once with its value changed (RIGHT, then LEFT back).
+# B saves and closes (the tour does not save the game afterwards).
+start save:menuA_base
+include ../scripts/continue.txt
+
+startmenu OPTION
+waitcb2x option_menu:MainCB2 900
+waittaskx option_menu:Task_ProcessInput 900
+snap menu_options_main_01
+press DOWN
+snap menu_options_main_02
+press RIGHT
+snap menu_options_main_02_changed
+press LEFT
+press DOWN
+snap menu_options_main_03
+press DOWN
+snap menu_options_main_04
+press DOWN
+snap menu_options_main_05
+press DOWN
+snap menu_options_main_06
+press DOWN
+snap menu_options_main_07
+press DOWN
+snap menu_options_main_08
+press DOWN
+snap menu_options_main_09
+press DOWN
+snap menu_options_main_10
+press DOWN
+snap menu_options_main_11
+press DOWN
+snap menu_options_main_12
+press DOWN
+snap menu_options_main_13
+press R
+waittaskx option_menu:Task_ProcessInput 300
+snap menu_options_battle_01
+press DOWN
+snap menu_options_battle_02
+press DOWN
+snap menu_options_battle_03
+press DOWN
+snap menu_options_battle_04
+press DOWN
+snap menu_options_battle_05
+press DOWN
+snap menu_options_battle_06
+press DOWN
+snap menu_options_battle_07
+press R
+waittaskx option_menu:Task_ProcessInput 300
+snap menu_options_sound_01
+press DOWN
+snap menu_options_sound_02
+press DOWN
+snap menu_options_sound_03
+press DOWN
+snap menu_options_sound_04
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

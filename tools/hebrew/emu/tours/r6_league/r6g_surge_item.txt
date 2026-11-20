@@ -1,0 +1,14 @@
+# Lt. Surge, Vermilion Gym: the leader's item use in battle (Full Restore x2, src/data/trainers_hns.party).
+# bitem keeps his Pokemon at 1/8 HP while the player's battler uses Splash, so the AI heals.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_VERMILION_GYM; clearflag FLAG_BADGE11_GET; setflag FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES; end
+warpto MAP_VERMILION_CITY_GYM_HNS 5 3
+face UP
+tap A 4
+scene I_field 20000
+bwalk I_bintro input:HandleInputChooseAction
+bitem I_item 4
+bwin I_win
+scene I_after 40000
+snap I_free

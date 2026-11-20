@@ -1,0 +1,7 @@
+# Goldenrod Underground younger haircut brother (FLAG_NIGHT_POKEMON object, out at night): offer, NO.
+# Run with --rtc 1767304800 (2026-01-01 22:00 UTC).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL_HNS
+clerk 6 16 n07_young
+chat n07_young2 B

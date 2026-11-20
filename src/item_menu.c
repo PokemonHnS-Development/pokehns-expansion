@@ -222,11 +222,11 @@ static void ConfirmSell(u8);
 static void CancelSell(u8);
 static void Task_FadeAndCloseBagMenuIfMulch(u8 taskId);
 
-static const u8 sText_Var1CantBeHeldHere[] = _("The {STR_VAR_1} can't be held\nhere.");
-static const u8 sText_DepositHowManyVar1[] = _("Deposit how many\n{STR_VAR_1}?");
-static const u8 sText_DepositedVar2Var1s[] = _("Deposited {STR_VAR_2}\n{STR_VAR_1}.");
-static const u8 sText_NoRoomForItems[] = _("There's no room to\nstore items.");
-static const u8 sText_CantStoreImportantItems[] = _("Important items\ncan't be stored in\nthe PC!");
+static const u8 sText_Var1CantBeHeldHere[] = _("לא ניתן להחזיק את\n{STR_VAR_1} כאן.");
+static const u8 sText_DepositHowManyVar1[] = _("להפקיד כמה\n{STR_VAR_1}?");
+static const u8 sText_DepositedVar2Var1s[] = _("הפקדת {STR_VAR_2}\n{STR_VAR_1}.");
+static const u8 sText_NoRoomForItems[] = _("אין מקום לאחסן\nעוד פריטים.");
+static const u8 sText_CantStoreImportantItems[] = _("אי אפשר לאחסן\nפריטים חשובים\nבמחשב!");
 
 static void Task_LoadBagSortOptions(u8 taskId);
 static void ItemMenu_SortByName(u8 taskId);
@@ -294,7 +294,7 @@ static const struct ListMenuTemplate sItemListMenu =
     .cursorKind = CURSOR_BLACK_ARROW
 };
 
-static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
+static const u8 sText_NothingToSort[] = _("אין מה למיין!");
 static const struct MenuAction sItemMenuActions[] = {
     [ACTION_USE]               = {gMenuText_Use,                {ItemMenu_UseOutOfBattle}},
     [ACTION_TOSS]              = {gMenuText_Toss,               {ItemMenu_Toss}},
@@ -302,20 +302,20 @@ static const struct MenuAction sItemMenuActions[] = {
     [ACTION_GIVE]              = {gMenuText_Give,               {ItemMenu_Give}},
     [ACTION_CANCEL]            = {gText_Cancel2,                {ItemMenu_Cancel}},
     [ACTION_BATTLE_USE]        = {gMenuText_Use,                {ItemMenu_UseInBattle}},
-    [ACTION_CHECK]             = {COMPOUND_STRING("CHECK"),     {ItemMenu_UseOutOfBattle}},
-    [ACTION_WALK]              = {COMPOUND_STRING("WALK"),      {ItemMenu_UseOutOfBattle}},
-    [ACTION_DESELECT]          = {COMPOUND_STRING("DESELECT"),  {ItemMenu_CheckWhichRegister}},
-    [ACTION_CHECK_TAG]         = {COMPOUND_STRING("CHECK TAG"), {ItemMenu_CheckTag}},
+    [ACTION_CHECK]             = {COMPOUND_STRING("בדיקה"),     {ItemMenu_UseOutOfBattle}},
+    [ACTION_WALK]              = {COMPOUND_STRING("הליכה"),      {ItemMenu_UseOutOfBattle}},
+    [ACTION_DESELECT]          = {COMPOUND_STRING("בטל רישום"),  {ItemMenu_CheckWhichRegister}},
+    [ACTION_CHECK_TAG]         = {COMPOUND_STRING("תווית פרי"), {ItemMenu_CheckTag}},
     [ACTION_CONFIRM]           = {gMenuText_Confirm,            {Task_FadeAndCloseBagMenu}},
-    [ACTION_SHOW]              = {COMPOUND_STRING("SHOW"),      {ItemMenu_Show}},
+    [ACTION_SHOW]              = {COMPOUND_STRING("הצגה"),      {ItemMenu_Show}},
     [ACTION_GIVE_FAVOR_LADY]   = {gMenuText_Give2,              {ItemMenu_GiveFavorLady}},
     [ACTION_CONFIRM_QUIZ_LADY] = {gMenuText_Confirm,            {ItemMenu_ConfirmQuizLady}},
-    [ACTION_BY_NAME]           = {COMPOUND_STRING("NAME"),      {ItemMenu_SortByName}},
-    [ACTION_BY_TYPE]           = {COMPOUND_STRING("TYPE"),      {ItemMenu_SortByType}},
-    [ACTION_BY_AMOUNT]         = {COMPOUND_STRING("AMOUNT"),    {ItemMenu_SortByAmount}},
-    [ACTION_BY_INDEX]          = {COMPOUND_STRING("INDEX"),     {ItemMenu_SortByIndex}},
-    [ACTION_REGISTER_TAP]      = {COMPOUND_STRING("TAP"),      {ItemMenu_Register}},
-    [ACTION_REGISTER_HOLD]     = {COMPOUND_STRING("HOLD"),     {ItemMenu_RegisterHold}},
+    [ACTION_BY_NAME]           = {COMPOUND_STRING("שם"),      {ItemMenu_SortByName}},
+    [ACTION_BY_TYPE]           = {COMPOUND_STRING("סוג"),      {ItemMenu_SortByType}},
+    [ACTION_BY_AMOUNT]         = {COMPOUND_STRING("כמות"),    {ItemMenu_SortByAmount}},
+    [ACTION_BY_INDEX]          = {COMPOUND_STRING("מספר"),     {ItemMenu_SortByIndex}},
+    [ACTION_REGISTER_TAP]      = {COMPOUND_STRING("לחיצה"),      {ItemMenu_Register}},
+    [ACTION_REGISTER_HOLD]     = {COMPOUND_STRING("החזקה"),     {ItemMenu_RegisterHold}},
     [ACTION_DUMMY]             = {gText_EmptyString2, {NULL}}
 };
 
@@ -335,7 +335,7 @@ static const u8 sRegisterOptions[] = {
     ACTION_REGISTER_TAP, ACTION_REGISTER_HOLD,
 };
 
-static const u8 sText_RegisterHow[] = _("Register this\nitem by tapping or\nholding SELECT?");
+static const u8 sText_RegisterHow[] = _("לרשום את הפריט\nללחיצה על SELECT\nאו להחזקת SELECT?");
 
 static const u8 sContextMenuItems_BallsPocket[] = {
     ACTION_USE,         ACTION_GIVE,
@@ -516,18 +516,39 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
 {
     [ITEMWIN_1x1] = {
         .bg = 1,
+#if TEXT_RTL
+        // Mirrored inside the item list, as the quantity and YES/NO windows, so it covers the
+        // quantity column of the bottom rows rather than their right-aligned names.
+        .tilemapLeft = 15,
+#else
         .tilemapLeft = 22,
+#endif
         .tilemapTop = 17,
+#if TEXT_RTL
+        // Five tiles, the YES/NO box's footprint: the right-aligned names of the bottom rows
+        // grow toward the box, and a name up to 55 px stays clear of its frame. The widest
+        // label, החזקה, needs 8 + 29 px in the narrow font.
+        .width = 5,
+#else
         .width = 7,
+#endif
         .height = 2,
         .paletteNum = 15,
         .baseBlock = 0x21D,
     },
     [ITEMWIN_1x2] = {
         .bg = 1,
+#if TEXT_RTL
+        .tilemapLeft = 15, // Mirrored inside the item list, as ITEMWIN_1x1
+#else
         .tilemapLeft = 22,
+#endif
         .tilemapTop = 15,
+#if TEXT_RTL
+        .width = 5, // As ITEMWIN_1x1
+#else
         .width = 7,
+#endif
         .height = 4,
         .paletteNum = 15,
         .baseBlock = 0x21D,
@@ -561,7 +582,13 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
     },
     [ITEMWIN_YESNO_LOW] = { // Yes/No tucked in corner, for toss confirm
         .bg = 1,
+#if TEXT_RTL
+        // Mirrored inside the item list, over the quantity column. The exact mirror (14) would put
+        // the frame on the description box's edge, so it stays one tile in.
+        .tilemapLeft = 15,
+#else
         .tilemapLeft = 24,
+#endif
         .tilemapTop = 15,
         .width = 5,
         .height = 4,
@@ -570,7 +597,11 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
     },
     [ITEMWIN_YESNO_HIGH] = { // Yes/No higher up, positioned above a lower message box
         .bg = 1,
+#if TEXT_RTL
+        .tilemapLeft = 17, // Mirrored inside the item list
+#else
         .tilemapLeft = 21,
+#endif
         .tilemapTop = 9,
         .width = 5,
         .height = 4,
@@ -579,7 +610,13 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
     },
     [ITEMWIN_QUANTITY] = { // Used for quantity of items to Toss/Deposit
         .bg = 1,
+#if TEXT_RTL
+        // Mirrored inside the item list, over the quantity column. The exact mirror (14) would put
+        // the frame on the description box's edge, so it stays one tile in.
+        .tilemapLeft = 15,
+#else
         .tilemapLeft = 24,
+#endif
         .tilemapTop = 17,
         .width = 5,
         .height = 2,
@@ -588,7 +625,11 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
     },
     [ITEMWIN_QUANTITY_WIDE] = { // Used for quantity and price of items to Sell
         .bg = 1,
+#if TEXT_RTL
+        .tilemapLeft = 15, // Mirrored inside the item list
+#else
         .tilemapLeft = 18,
+#endif
         .tilemapTop = 11,
         .width = 10,
         .height = 2,
@@ -1324,7 +1365,7 @@ static void Task_BagMenu_HandleInput(u8 taskId)
             {
                 if ((gBagMenu->numItemStacks[gBagPosition.pocket] - 1) <= 1) //can't sort with 0 or 1 item in bag
                 {
-                    static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
+                    static const u8 sText_NothingToSort[] = _("אין מה למיין!");
                     PlaySE(SE_FAILURE);
                     DisplayItemMessage(taskId, 1, sText_NothingToSort, HandleErrorMessage);
                     break;
@@ -1866,7 +1907,13 @@ static void Task_ItemContext_MultipleRows(u8 taskId)
                 ChangeMenuGridCursorPosition(MENU_CURSOR_DELTA_NONE, MENU_CURSOR_DELTA_DOWN);
             }
         }
+#if TEXT_RTL
+        // A mirrored grid draws its first column on the right, so RIGHT goes back to it and LEFT
+        // on to the second column. L and R keep the column order.
+        else if (JOY_NEW(IsMenuGridMirrored() ? DPAD_RIGHT : DPAD_LEFT) || GetLRKeysPressed() == MENU_L_PRESSED)
+#else
         else if (JOY_NEW(DPAD_LEFT) || GetLRKeysPressed() == MENU_L_PRESSED)
+#endif
         {
             if ((cursorPos & 1) && IsValidContextMenuPos(cursorPos - 1))
             {
@@ -1874,7 +1921,11 @@ static void Task_ItemContext_MultipleRows(u8 taskId)
                 ChangeMenuGridCursorPosition(MENU_CURSOR_DELTA_LEFT, MENU_CURSOR_DELTA_NONE);
             }
         }
+#if TEXT_RTL
+        else if (JOY_NEW(IsMenuGridMirrored() ? DPAD_LEFT : DPAD_RIGHT) || GetLRKeysPressed() == MENU_R_PRESSED)
+#else
         else if (JOY_NEW(DPAD_RIGHT) || GetLRKeysPressed() == MENU_R_PRESSED)
+#endif
         {
             if (!(cursorPos & 1) && IsValidContextMenuPos(cursorPos + 1))
             {
@@ -2188,7 +2239,7 @@ static void ItemMenu_Cancel(u8 taskId)
     ReturnToItemList(taskId);
 }
 
-static const u8 sText_NoItemsInBattle[] = _("Battle items are not allowed\nunder current rules!");
+static const u8 sText_NoItemsInBattle[] = _("פריטי קרב אסורים לפי\nהחוקים הנוכחיים!");
 
 static void ItemMenu_UseInBattle(u8 taskId)
 {
@@ -2659,6 +2710,10 @@ static void PrintPocketNames(const u8 *pocketName1, const u8 *pocketName2)
     window.width = 16;
     window.height = 2;
     windowId = AddWindow(&window);
+#if TEXT_RTL
+    // Scratch window whose halves are copied out separately; keep the English position.
+    SetWindowRtlMode(windowId, WINDOW_RTL_IN_PLACE);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(0));
     offset = GetStringCenterAlignXOffset(FONT_NORMAL, pocketName1, 0x40);
     BagMenu_Print(windowId, FONT_NORMAL, pocketName1, offset, 1, 0, 0, TEXT_SKIP_DRAW, COLORID_POCKET_NAME);
@@ -2691,6 +2746,13 @@ static void LoadBagMenuTextWindows(void)
     u8 i;
 
     InitWindows(sDefaultBagWindows);
+#if TEXT_RTL
+    // The description box's white area is x=1..105; the window runs on under the item list's
+    // frame. Mirror around the white area so the English 2 px left margin becomes a right one.
+    SetWindowRtlMirrorWidth(WIN_DESCRIPTION, 107);
+    // Right-aligned numbers beside the fixed TYPE/POWER/ACCURACY/PP label art.
+    SetWindowRtlMode(WIN_TMHM_INFO, WINDOW_RTL_LTR);
+#endif
     DeactivateAllTextPrinters();
     LoadUserWindowBorderGfx(0, 1, BG_PLTT_ID(14));
     LoadMessageBoxGfx(0, 10, BG_PLTT_ID(13));
@@ -2842,14 +2904,14 @@ static void PrintTMHMMoveData(enum Item itemId)
     }
 }
 
-static const u8 sText_SortItemsHow[] = _("Sort items how?");
-static const u8 sText_ItemsSorted[] = _("Items sorted by {STR_VAR_1}!");
+static const u8 sText_SortItemsHow[] = _("איך למיין פריטים?");
+static const u8 sText_ItemsSorted[] = _("הפריטים מוינו לפי {STR_VAR_1}!");
 static const u8 *const sSortTypeStrings[] =
 {
-    [SORT_ALPHABETICALLY] = COMPOUND_STRING("NAME"),
-    [SORT_BY_TYPE] = COMPOUND_STRING("TYPE"),
-    [SORT_BY_AMOUNT] = COMPOUND_STRING("AMOUNT"),
-    [SORT_BY_INDEX] = COMPOUND_STRING("INDEX")
+    [SORT_ALPHABETICALLY] = COMPOUND_STRING("שם"),
+    [SORT_BY_TYPE] = COMPOUND_STRING("סוג"),
+    [SORT_BY_AMOUNT] = COMPOUND_STRING("כמות"),
+    [SORT_BY_INDEX] = COMPOUND_STRING("מספר")
 };
 
 static const u8 sBagMenuSortItems[] =
@@ -3074,7 +3136,7 @@ static s32 CompareItemsAlphabetically(enum Pocket pocketId, struct ItemSlot item
         name2 = GetItemName(item2.itemId);
     }
 
-    return StringCompare(name1, name2);
+    return StringCompareAlphabetical(name1, name2);
 }
 
 static s32 CompareItemsByMost(enum Pocket pocketId, struct ItemSlot item1, struct ItemSlot item2)

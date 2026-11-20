@@ -97,74 +97,73 @@ Route20_EventScript_Headlocker::
 	end
 
 Route20_Text_Dennis:
-	.string "DENNIS: SHAAAAAAAA!$"
+	.string "דניס: שאאאאאאאא!$"
 
 Route20_Text_Headlocker:
-	.string "There's a rare POKéMON on this\n"
-	.string "route.\p"
-	.string "And sometimes it carries a rare\n"
-	.string "evolution item.\p"
-	.string "That's double rare!\p"
-	.string "I need to finish my POKéDEX, so\n"
-	.string "I've been fishing here for hours!$"
+	.string "יש פוקימון נדיר בדרך הזאת.\p"
+	.string "ולפעמים הוא מחזיק\n"
+	.string "פריט התפתחות נדיר.\p"
+	.string "זה נדיר בריבוע!\p"
+	.string "אני חייב להשלים את הפוקדקס שלי,\n"
+	.string "אז אני דג פה כבר שעות!$"
 
 Route20_Text_Seel:
-	.string "SEEL: Seel seel!$"
+	.string "סיל: סיל סיל!$"
 
 Route20_Text_Dewgong:
-	.string "DEWGONG: Goooong!$"
+	.string "דיוגונג: גוווונג!$"
 
 Route20_Text_SeafoamSign:
-	.string "SEAFOAM ISLANDS$"
+	.string "איי הקצף$"
 
 Route20_Text_NicoleRegister:
-	.string "Your POKéMON swims fast!\n"
-	.string "Let me get your number!$"
+	.string "הפוקימון שלך שוחה מהר!\n"
+	.string "אני חייבת את המספר שלך!$"
 
 Route20_Text_NicoleRematchIntro:
-	.string "All this swimming has made my\n"
-	.string "POKéMON stronger! Let's battle!$"
+	.string "כל השחייה הזאת חיזקה\n"
+	.string "את הפוקימונים שלי! בוא נילחם!$"
 
 Route20_Text_NicoleRematchDefeat:
-	.string "Swept away again…$"
+	.string "שוב נסחפתי…$"
 
 Route20_Text_NicolePostRematch:
-	.string "Win or lose, I'm getting fit and\n"
-	.string "so are my POKéMON!$"
+	.string "ניצחון או הפסד, אני נכנסת לכושר\n"
+	.string "וגם הפוקימונים שלי!$"
 
 Route20_Text_SwimmerfNicoleSeen:
-	.string "I feel so much lighter in water.$"
+	.string "במים אני מרגישה הרבה יותר קלה.$"
 
 Route20_Text_SwimmerfNicoleBeaten:
-	.string "Oh, no!$"
+	.string "אוי, לא!$"
 
 Route20_Text_SwimmerfNicoleAfterBattle:
-	.string "Swimming exercises your full body.\p"
-	.string "It's really good for you.$"
+	.string "שחייה מפעילה את כל הגוף.\p"
+	.string "זה ממש בריא.$"
 
 Route20_Text_SwimmerfLoriSeen:
-	.string "What an impressive collection of\n"
-	.string "GYM BADGES. We should battle!$"
+	.string "איזה אוסף מרשים של תגי מכון.\n"
+	.string "כדאי שנילחם!$"
 
 Route20_Text_SwimmerfLoriBeaten:
-	.string "No!$"
+	.string "לא!$"
 
 Route20_Text_SwimmerfLoriAfterBattle:
-	.string "SURF is no longer the only HM move\n"
-	.string "you use in water.$"
+	.string "גלישה היא כבר לא\n"
+	.string "מהלך המ”נ היחיד שמשתמשים בו במים.$"
 
 Route20_Text_SwimmermCameronSeen:
-	.string "I guess it's impossible to swim\n"
-	.string "all the way to JOHTO.$"
+	.string "כנראה שאי אפשר לשחות\n"
+	.string "כל הדרך עד ג'וטו.$"
 
 Route20_Text_SwimmermCameronBeaten:
-	.string "Aiyah!$"
+	.string "איייה!$"
 
 Route20_Text_SwimmermCameronAfterBattle:
-	.string "Besides the sea, I can also swim\n"
-	.string "in ponds and rivers.$"
+	.string "חוץ מהים, אני יכול לשחות גם\n"
+	.string "באגמים ובנהרות.$"
 
 Route20_Text_CinnabarIsland_GymUnusedSign:
-	.string "What does this sign say?\p"
-	.string "CINNABAR GYM LEADER: BLAINE$"
+	.string "מה כתוב על השלט הזה?\p"
+	.string "מנהיג מכון סיננבר: בליין$"
 

@@ -1,0 +1,25 @@
+# r6 items: Std_ObtainItem windows (giveitem ITEM, QTY) for the items NPCs give in *_hns scripts, 1.
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+gift g_tm_u_turn ITEM_TM_U_TURN 1
+gift g_charcoal ITEM_CHARCOAL 1
+gift g_fast_ball ITEM_FAST_BALL 1
+gift g_gs_ball ITEM_GS_BALL 1
+gift g_lansat_berry ITEM_LANSAT_BERRY 1
+gift g_starf_berry ITEM_STARF_BERRY 1
+gift g_meteorite ITEM_METEORITE 1
+gift g_spell_tag ITEM_SPELL_TAG 1
+gift g_tm_sleep_talk ITEM_TM_SLEEP_TALK 1
+gift g_tm_frustration ITEM_TM_FRUSTRATION 1
+gift g_tm_giga_drain ITEM_TM_GIGA_DRAIN 1
+gift g_tm_water_pulse ITEM_TM_WATER_PULSE 1
+gift g_mystic_water ITEM_MYSTIC_WATER 1
+gift g_hm_fly ITEM_HM_FLY 1
+gift g_tm_focus_punch ITEM_TM_FOCUS_PUNCH 1
+gift g_secret_potion ITEM_SECRET_POTION 1
+gift g_black_glasses ITEM_BLACK_GLASSES 1
+gift g_tm_dragon_pulse ITEM_TM_DRAGON_PULSE 1
+gift g_tm_shadow_ball ITEM_TM_SHADOW_BALL 1
+gift g_dowsing_machine ITEM_DOWSING_MACHINE 1
+gift g_hm_surf ITEM_HM_SURF 1
+gift g_tidal_bell ITEM_TIDAL_BELL 1

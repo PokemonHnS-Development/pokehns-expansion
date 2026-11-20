@@ -1,0 +1,78 @@
+# Name Rater (Goldenrod, GoldenrodCity_House1_hns) with the naming screen keyboard (every
+# page), and the Route 34 Day Care (the woman inside takes a Pokemon, the man outside).
+# The naming screen reads input in sNamingScreen->state == STATE_HANDLE_INPUT (2; u8 at
+# +0x1E10, src/naming_screen.c:128-167).
+start save:menuA_base
+include ../scripts/continue.txt
+
+# --- Name Rater: YES, choose Typhlosion, YES to a new name, the keyboard
+warpto MAP_GOLDENROD_CITY_HOUSE1_HNS 4 5
+face UP
+talk menu_namerater 10                    # ends at YES/NO
+tap A 0
+talk menu_namerater_which 10 -            # ... then the party menu opens
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+snap menu_namerater_party
+tap A 0                                   # slot 1
+waitcb2x CB2_Overworld 900
+talk menu_namerater_rate 10 -             # ends at YES/NO
+tap A 0
+talk menu_namerater_ask 10 -              # ... then the naming screen
+waitcb2x CB2_NamingScreen 900
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 900
+snap menu_naming_01_upper
+press A                                   # type three letters
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 300
+press RIGHT
+press A
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 300
+press RIGHT
+press A
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 300
+snap menu_naming_02_typed
+press SELECT                              # next keyboard page
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 300
+snap menu_naming_03_page2
+press SELECT
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 300
+snap menu_naming_04_page3
+press SELECT
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 300
+press START                               # cursor to OK
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 300
+snap menu_naming_05_ok
+press A
+waitcb2x CB2_Overworld 900
+talk menu_namerater_done 10 -
+waitctl 900
+
+# --- Day Care (Route 34): the woman inside raises a Pokemon
+warpto MAP_ROUTE34_DAY_CARE_HNS 3 7
+face DOWN
+talk menu_daycare_woman 10                # ends at YES/NO
+tap A 0
+talk menu_daycare_which 10 -              # ... then the party menu
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+snap menu_daycare_party
+seek 8 @gPartyMenu+9@ 1 DOWN              # slot 2 (Pikachu)
+tap A 0
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap menu_daycare_party_store
+tap A 0                                   # STORE
+waitcb2x CB2_Overworld 900
+talk menu_daycare_given 10 -              # ends at "...raise one more?" YES/NO
+tap B 0                                   # NO
+talk menu_daycare_no_more 10 -
+waitctl 900
+face DOWN
+talk menu_daycare_woman_again 10
+waitctl 900 B
+
+# --- The Day-Care Man outside at (31,34), facing left
+warpto MAP_ROUTE34_HNS 30 34
+face RIGHT
+talk menu_daycare_man 10
+waitctl 900 B

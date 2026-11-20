@@ -20,8 +20,8 @@ GoldenrodCity_FlowerShop_EventScript_MintClerkNotReady::
 	end
 
 GoldenrodCity_FlowerShop_Text_MintClerkNotReady:
-	.string "We are currently out of stock.\p"
-	.string "Please come back later.$"
+	.string "כרגע אזל לנו המלאי.\p"
+	.string "בבקשה לחזור מאוחר יותר.$"
 
 	.align 2
 GoldenrodCity_FlowerShop_Mints:
@@ -109,53 +109,45 @@ GoldenrodCity_FlowerShop_EventScript_Floria3::
 	end
 
 GoldenrodCity_FlowerShop_Text_Floria:
-	.string "When I told my sis about the jiggly\n"
-	.string "tree, she said it's dangerous.\p"
-	.string "If I beat WHITNEY, I wonder if\n"
-	.string "she'll lend me her water bottle…$"
+	.string "כשסיפרתי לאחותי על העץ המתנועע,\n"
+	.string "היא אמרה שזה מסוכן.\p"
+	.string "אם אנצח את ויטני, אולי אחותי\n"
+	.string "תשאיל לי את בקבוק המים שלה…$"
 
 GoldenrodCity_FlowerShop_Text_Owner1:
-.string "Apparently, there is an odd tree\n"
-.string "on ROUTE 36.\p"
-.string "They say it dances when you water\n"
-.string "it...\p"
-.string "Oh, of course not!\p"
-.string "This is a flower shop, so we do\n"
-.string "have watering cans...\p"
-.string "But I cannot let you have one!\n"
-.string "It's too dangerous!\p"
-.string "Well, maybe if you manage to\n"
-.string "defeat gym leader WHITNEY, it\l"
-.string "might be okay.$"
+.string "מסתבר שיש עץ משונה בדרך 36.\p"
+.string "אומרים שהוא רוקד כשמשקים אותו…\p"
+.string "אה, בטח שלא!\p"
+.string "זו חנות פרחים, אז יש לנו מזלפים…\p"
+.string "אבל אני לא יכולה לתת לך אחד!\n"
+.string "זה מסוכן מדי!\p"
+.string "טוב, אולי אם תצליח לנצח את\n"
+.string "מנהיגת המכון ויטני, זה יהיה בסדר.$"
 
 GoldenrodCity_FlowerShop_Text_Owner2:
-.string "Apparently, there is an odd tree\n"
-.string "on ROUTE 36.\p"
-.string "They say it dances when you water\n"
-.string "it...\p"
-.string "Oh, that's a PLAINBADGE from\n"
-.string "the GOLDENROD GYM!\p"
-.string "Did you defeat WHITNEY?!\p"
-.string "Well, then there's nothing to worry\n"
-.string "about, is there?\p"
-.string "I'll let you use this SQUIRTBOTTLE\n"
-.string "for a while then.\l"
-.string "...\p"
-.string "Oh, never mind. Keep it!$"
+.string "מסתבר שיש עץ משונה בדרך 36.\p"
+.string "אומרים שהוא רוקד כשמשקים אותו…\p"
+.string "אה, זה תג מישור של מכון גולדנרוד!\p"
+.string "ניצחת את ויטני?!\p"
+.string "טוב, אז אין מה לדאוג, נכון?\p"
+.string "אז אשאיל לך את בקבוק ההתזה\n"
+.string "הזה לזמן מה.\p"
+.string "…\n"
+.string "אה, לא משנה. תשאיר אותו אצלך!$"
 
 GoldenrodCity_FlowerShop_Text_Owner3:
-.string "The odd tree is on ROUTE 36.\n"
-.string "Please be careful!$"
+.string "העץ המשונה נמצא בדרך 36.\n"
+.string "תיזהר, בבקשה!$"
 
 GoldenrodCity_FlowerShop_Text_Owner4:
-    .string "Lalala lalalala. Have plenty of\n"
-    .string "water, my lovely!$"
+    .string "לה-לה-לה, לה-לה-לה-לה. תשתו\n"
+    .string "הרבה מים, יפים שלי!$"
 
 GoldenrodCity_FlowerShop_Text_FloriaYouBeatWhitney:
-    .string "Wow, you beat WHITNEY? Cool!$"
+    .string "וואו, ניצחת את ויטני? מגניב!$"
 
 GoldenrodCity_FlowerShop_Text_FloriaItWasAMon:
-    .string "So it really was a POKéMON!$"
+    .string "אז זה באמת היה פוקימון!$"
 
 
 GoldenrodCity_FlowerShop_EventScript_RandomBerryGirl::

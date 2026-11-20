@@ -1,0 +1,10 @@
+# DEPOSIT screen -> B -> "Continue BOX operations?" NO -> PC menu -> B -> overworld, free
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+press B
+waitctl 900

@@ -1,0 +1,5 @@
+# r10 travel (gen_tours.py): GATE_ILEX_FOREST_ROUTE34 on tr_l4
+start saves/tr_l4.sav
+include _base.txt
+visit MAP_GATE_ILEX_FOREST_ROUTE34_HNS
+area

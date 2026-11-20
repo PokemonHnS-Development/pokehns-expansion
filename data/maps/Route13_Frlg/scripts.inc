@@ -72,15 +72,15 @@ Route13_Text_AlmaPostBattle::
 	.string "POKéMON.$"
 
 Route13_Text_PerryIntro::
-	.string "I'm not going to lose.\n"
-	.string "Not when the wind's blowing my way!$"
+	.string "אני לא עומד להפסיד.\n"
+	.string "לא כשהרוח לטובתי!$"
 
 Route13_Text_PerryDefeat::
-	.string "The wind turned!$"
+	.string "הרוח התהפכה!$"
 
 Route13_Text_PerryPostBattle::
-	.string "I'm beat.\n"
-	.string "I guess I'll FLY home.$"
+	.string "אני גמור.\n"
+	.string "נראה לי שאחזור הביתה בתעופה.$"
 
 Route13_Text_LolaIntro::
 	.string "Sure, I'll play with you, sweetie.$"
@@ -138,6 +138,6 @@ Route13_Text_SelectToSwitchItems::
 	.string "ITEMS window.$"
 
 Route13_Text_RouteSign::
-	.string "ROUTE 13\n"
-	.string "North to SILENCE BRIDGE$"
+	.string "דרך 13\n"
+	.string "צפונה אל גשר השקט$"
 

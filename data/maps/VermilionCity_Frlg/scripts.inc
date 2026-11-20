@@ -284,10 +284,10 @@ VermilionCity_Text_BuildingOnThisLand::
 	.string "to lay the foundation.$"
 
 VermilionCity_Text_Machop::
-	.string "MACHOP: Guoh! Gogogoh!$"
+	.string "מאצ'ופ: גואה! גוגוגוה!$"
 
 VermilionCity_Text_MachopStompingLandFlat::
-	.string "A MACHOP is stomping the land flat.$"
+	.string "מאצ'ופ רוקע ומשטח את הקרקע.$"
 
 VermilionCity_Text_SSAnneVisitsOnceAYear::
 	.string "The S.S. ANNE is a famous luxury\n"
@@ -295,8 +295,8 @@ VermilionCity_Text_SSAnneVisitsOnceAYear::
 	.string "It visits VERMILION once a year.$"
 
 VermilionCity_Text_CitySign::
-	.string "VERMILION CITY\n"
-	.string "The Port of Exquisite Sunsets$"
+	.string "העיר ורמיליון\n"
+	.string "נמל השקיעות המופלאות$"
 
 VermilionCity_Text_SnorlaxBlockingRoute12::
 	.string "NOTICE!\p"
@@ -311,9 +311,9 @@ VermilionCity_Text_PokemonFanClubSign::
 	.string "All POKéMON fans welcome!$"
 
 VermilionCity_Text_GymSign::
-	.string "VERMILION CITY POKéMON GYM\n"
-	.string "LEADER: LT. SURGE\l"
-	.string "The Lightning American!$"
+	.string "מכון הפוקימון של העיר ורמיליון\n"
+	.string "מנהיג: סמל סרג'\p"
+	.string "האמריקאי החשמלי!$"
 
 VermilionCity_Text_VermilionHarbor::
 	.string "VERMILION HARBOR$"

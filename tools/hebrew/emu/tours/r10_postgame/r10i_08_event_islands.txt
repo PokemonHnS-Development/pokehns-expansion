@@ -1,0 +1,29 @@
+# The ticket islands, reached the way a player does: the Olivine port sailor's destination menu
+# (after the League: VAR_SSAQUA_STATE 7), first with no tickets (no-credentials line), then with
+# the Eon Ticket, the Old Sea Map and the Aurora Ticket: the ship, the arrival pop-up, the
+# island's sign, sailor (way back answered NO), the interior (Latios / Latias, Mew, the Deoxys
+# triangle and the meteorite).
+start saves/r10pg_base.sav
+include _base.txt
+arrive MAP_OLIVINE_CITY_PORT_INSIDE_HNS 8 10 port
+ss port
+visit port skip=1
+talkobj 1 port_noticket pick=1
+ev additem ITEM_EON_TICKET; additem ITEM_OLD_SEA_MAP; additem ITEM_AURORA_TICKET; end
+talkobj 1 port_south pick=1
+ss south
+visit south
+arrive MAP_SOUTHERN_ISLAND_INTERIOR_HNS 13 17 southin
+visit southin
+arrive MAP_OLIVINE_CITY_PORT_INSIDE_HNS 8 14 port2
+talkobj 1 port_far pick=3
+ss far
+visit far
+arrive MAP_FARAWAY_ISLAND_INTERIOR_HNS 12 18 farin
+visit farin
+arrive MAP_OLIVINE_CITY_PORT_INSIDE_HNS 8 14 port3
+talkobj 1 port_birth pick=2
+ss birth
+visit birth
+arrive MAP_BIRTH_ISLAND_HARBOR_HNS 8 3 harbor
+visit harbor

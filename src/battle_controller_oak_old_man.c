@@ -48,16 +48,16 @@ static void PrintOakText_ForPetesSake(enum BattlerId battler);
 static void PrintOakTextWithMainBgDarkened(enum BattlerId battler, const u8 *text, u8 delay);
 static void HandleInputChooseAction(enum BattlerId battler);
 
-static const u8 sText_ForPetesSake[] = _("OAK: Oh, for Pete's sake…\nSo pushy, as always.\p{B_PLAYER_NAME}.\pYou've never had a POKéMON battle\nbefore, have you?\pA POKéMON battle is when TRAINERS\npit their POKéMON against each\lother.\p");
-static const u8 sText_HowDissapointing[] = _("OAK: Hm…\nHow disappointing…\pIf you win, you earn prize money,\nand your POKéMON grow.\pBut if you lose, {B_PLAYER_NAME}, you end\nup paying prize money…\pHowever, since you had no warning\nthis time, I'll pay for you.\pBut things won't be this way once\nyou step outside these doors.\pThat's why you must strengthen your\nPOKéMON by battling wild POKéMON.\p");
-static const u8 sText_InflictingDamageIsKey[] = _("OAK: Inflicting damage on the foe\nis the key to any battle.\p");
+static const u8 sText_ForPetesSake[] = _("אוק: אוי, נו באמת…\nדחפן כמו תמיד.\p{B_PLAYER_NAME}.\pעוד לא יצא לך להשתתף\nבקרב פוקימונים, נכון?\pבקרב פוקימונים, מאמנים מעמידים\nאת הפוקימונים שלהם זה מול זה.\p");
+static const u8 sText_HowDissapointing[] = _("אוק: הממ…\nאיזו אכזבה…\pניצחון מזכה בכסף פרס,\nוהפוקימונים שלך מתחזקים.\pאבל אם תפסיד, {B_PLAYER_NAME},\nבסוף תצטרך לשלם כסף פרס…\pעם זאת, מכיוון שלא הוזהרת הפעם,\nאני אשלם במקומך.\pאבל מחוץ לדלתות האלה,\nהדברים כבר לא יהיו ככה.\pלכן עליך לחזק את הפוקימונים\nשלך בקרבות נגד פוקימונים פראיים.\p");
+static const u8 sText_InflictingDamageIsKey[] = _("אוק: גרימת נזק ליריב\nהיא המפתח לכל קרב.\p");
 static const u8 sText_KeepAnEyeOnHP[] = _("OAK: Keep your eyes on your\nPOKéMON's HP.\pIt will faint if the HP drops to\n“0.”\p");
 static const u8 sText_LoweringStats[] = _("OAK: Lowering the foe's stats\nwill put you at an advantage.\p");
-static const u8 sText_OakNoRunningFromATrainer[] = _("OAK: No! There's no running away\nfrom a TRAINER POKéMON battle!\p");
-static const u8 sText_TheTrainerThat[] = _("The TRAINER that makes the other\nTRAINER's POKéMON faint by lowering\ltheir HP to “0,” wins.\p");
-static const u8 sText_TryBattling[] = _("But rather than talking about it,\nyou'll learn more from experience.\pTry battling and see for yourself.\p");
-static const u8 sText_WinEarnsPrizeMoney[] = _("OAK: Hm! Excellent!\pIf you win, you earn prize money,\nand your POKéMON will grow!\pBattle other TRAINERS and make\nyour POKéMON strong!\p");
-static const u8 gText_WhatWillOldManDo[] = _("What will the\nold man do?");
+static const u8 sText_OakNoRunningFromATrainer[] = _("אוק: לא! אי אפשר לברוח\nמקרב פוקימונים נגד מאמן!\p");
+static const u8 sText_TheTrainerThat[] = _("המנצח הוא המאמן שגורם לפוקימונים\nשל המאמן השני להתעלף על ידי\lהורדת הנ”ח שלהם ל-”0”.\p");
+static const u8 sText_TryBattling[] = _("אבל במקום לדבר על זה,\nלומדים יותר מניסיון.\pכדאי לנסות להילחם ולראות בעצמך.\p");
+static const u8 sText_WinEarnsPrizeMoney[] = _("אוק: הממ! מצוין!\pניצחון מזכה בכסף פרס,\nוהפוקימונים שלך יתחזקו!\pקדימה, להילחם במאמנים אחרים\nולחזק את הפוקימונים שלך!\p");
+static const u8 gText_WhatWillOldManDo[] = _("מה יעשה\nהזקן?");
 
 static void (*const sOakOldManBufferCommands[CONTROLLER_CMDS_COUNT])(enum BattlerId battler) =
 {

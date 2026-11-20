@@ -1,0 +1,57 @@
+# r11 withdraw: the player's own come-back and go lines. A wild Lv 5 Magikarp (Splash only); before
+# each switch its HP is set so hpthresholds2 / hpthresholds (src/battle_script_commands.c:6981-7027)
+# pick every variant: foe at 100% (that's enough / go), 80% (come back / go), 50% (OK, come back /
+# you're in charge), 20% (good job / go for it), 5% (good job / your foe's weak). Slot 1 is a
+# Feraligatr made by this ROM, so both names are the ROM's own species names.
+start saves/r11/tents_withdraw/wd_base.sav
+include ../r6_league/_base.txt
+ev createmon 0, 1, SPECIES_FERALIGATR, 60, move1=MOVE_SURF; setflag FLAG_DISABLE_ENCOUNTERS; end
+pinrng
+evstart setwildbattle SPECIES_MAGIKARP, 5; dowildbattle; end
+waitbattle
+bwalk pl_intro input:HandleInputChooseAction
+snap pl_action
+foehp 100
+include ../_bv_switch.txt
+snap pl_party_1
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap pl_party_1_menu
+tap A 4
+bwalk pl_sw1_100 input:HandleInputChooseAction
+foehp 80
+include ../_bv_switch.txt
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4
+bwalk pl_sw2_080 input:HandleInputChooseAction
+foehp 50
+include ../_bv_switch.txt
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4
+bwalk pl_sw3_050 input:HandleInputChooseAction
+foehp 20
+include ../_bv_switch.txt
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4
+bwalk pl_sw4_020 input:HandleInputChooseAction
+foehp 5
+include ../_bv_switch.txt
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4
+bwalk pl_sw5_005 input:HandleInputChooseAction
+baction RUN
+bwalk pl_run free

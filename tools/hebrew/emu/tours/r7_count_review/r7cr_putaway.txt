@@ -1,0 +1,13 @@
+# Review of DECISIONS.md Q125: the put-away line (gText_PutItemInPocket) without 'את', after a
+# single item whose Hebrew name is definite (KING'S ROCK, REAPER CLOTH) and after counts of
+# ULTRA BALL and MAX REPEL (Std_ObtainItem through giveitem).
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+evstart giveitem ITEM_KINGS_ROCK; end
+talk kr 6 -
+evstart giveitem ITEM_REAPER_CLOTH; end
+talk rc 6 -
+evstart giveitem ITEM_ULTRA_BALL, 5; end
+talk ub 6 -
+evstart giveitem ITEM_MAX_REPEL, 3; end
+talk mr 6 -

@@ -1,0 +1,33 @@
+# Post-game road to the League, walked as a player: from Mt. Silver east along Route 28 into the
+# Pokemon League Reception Gate (officer, Janine; the Silver/Kanto guards are hidden after the
+# League: FLAG_INDIGOJUNCTION_HIDE_*), Victory Road B2F -> B1F -> 1F (item balls, Strength/Rock
+# Smash prompts, a wild encounter on each floor), Route 23 (statues), Indigo Plateau outside
+# (statues, sign). Each map: the arrival (map-name pop-up), a savestate, then `visit` (every live
+# object and sign, nearest first). Between maps the player is placed where the door or cave
+# mouth puts him; boulder puzzles and surfing are skipped that way.
+start saves/r10pg_base.sav
+include _base.txt
+arrive MAP_ROUTE28_HNS 53 13 r28
+ss r28
+visit r28
+arrive MAP_RECEPTION_GATE_HNS 2 9 gate
+ss gate
+visit gate
+arrive MAP_VICTORY_ROAD_KANTO_B2F_HNS 30 46 vrb2
+ss vrb2
+visit vrb2
+wild vrb2_wild
+arrive MAP_VICTORY_ROAD_KANTO_B1F_HNS 7 16 vrb1
+ss vrb1
+visit vrb1
+wild vrb1_wild
+arrive MAP_VICTORY_ROAD_KANTO_1F_HNS 4 7 vr1f
+ss vr1f
+visit vr1f
+wild vr1f_wild
+arrive MAP_ROUTE23_HNS 18 21 r23
+ss r23
+visit r23
+stepmap UP ipo 40
+ss ipo
+visit ipo

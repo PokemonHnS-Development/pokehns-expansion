@@ -1,0 +1,38 @@
+# POKEMON Music (22), DJ Ben (GeneratePokemonMusicContent, src/pokenav_radio.c:626-650): 5 lines;
+# line 3 'Today's <weekday>,' and lines 4-5 'jam to'+March (even weekday) or 'chill to'+Lullaby
+# (odd). Local day 0 is a Saturday (gGen3Epoch, src/datetime.c:6-15; the save's offset makes
+# local time day 0 10:00): a full cycle on Saturday, then each other weekday (clockshift moves
+# SaveBlock2.localTimeOffset one day) with a full cycle on Monday (odd).
+start saves/ladder4_league.sav
+include _johto.txt
+radiotune 22
+radiocycle rm_sat 5
+clockshift 1 0
+radiotune 21
+radiotune 22
+radioline 2
+snap rm_sun_02
+clockshift 1 0
+radiotune 21
+radiotune 22
+radiocycle rm_mon 5
+clockshift 1 0
+radiotune 21
+radiotune 22
+radioline 2
+snap rm_tue_02
+clockshift 1 0
+radiotune 21
+radiotune 22
+radioline 2
+snap rm_wed_02
+clockshift 1 0
+radiotune 21
+radiotune 22
+radioline 2
+snap rm_thu_02
+clockshift 1 0
+radiotune 21
+radiotune 22
+radioline 2
+snap rm_fri_02

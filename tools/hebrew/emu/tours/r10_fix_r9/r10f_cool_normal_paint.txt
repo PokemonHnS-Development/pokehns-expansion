@@ -1,0 +1,41 @@
+# r9c_cool_normal (a Normal-rank COOL contest the player wins: lobby rank menu, the MC's rank line,
+# the results title, the ribbon) and then the lobby painting it leaves: SaveContestWinner(rank)
+# (src/contest_util.c:602) puts the winner in CONTEST_WINNER_HALL_1, whose caption names the rank
+# (sContestRankNames, src/contest_painting.c:70). The painting is opened with the wall sign's own
+# script (LilycoveCity_ContestLobby_EventScript_ContestWinner1_hns, bg event (3,1)).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_ZANGOOSE, 50, move1=MOVE_CRUSH_CLAW, move2=MOVE_FALSE_SWIPE, move3=MOVE_AERIAL_ACE, move4=MOVE_GUILLOTINE; additem ITEM_POKEBLOCK_CASE, 1; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 0
+fieldwatch type menu 3000
+pick 0
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap party_pick
+tap A 4
+fieldwatch entry cb2:CB2_StartContest 40000 45
+w16s gContestMonRound1Points 3 600
+contestplay5 app 20133
+fieldwatch judge cb2:CB2_StartShowContestResults 20000 45
+waitcb2x CB2_ShowContestResults 600
+burstuntil res CB2_ShowContestResults 16 9000 A 240
+fieldwatch prize free 30000 45
+loc
+snap lobby_after
+evstart goto LilycoveCity_ContestLobby_EventScript_ContestWinner1_hns
+fieldwatch hall1 cb2:CB2_HoldContestPainting 6000 30
+burst hall1_paint 6 20
+snap hall1_paint_final
+tap A 4
+waitcb2x CB2_Overworld 900
+waitquiet
+snap hall1_back

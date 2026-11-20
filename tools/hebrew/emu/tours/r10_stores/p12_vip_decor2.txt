@@ -1,0 +1,10 @@
+# CreateBPDecorShop2 (MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS).
+start saves/st_l6.sav
+include _base.txt
+setbp 9999
+visit MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS
+clerk 7 5 p12_hi
+buywait p12_buy
+listshots p12_list
+press B
+chat p12_bye

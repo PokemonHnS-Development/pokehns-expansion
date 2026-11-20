@@ -95,7 +95,7 @@ static u32 GetTrainerTowerRecordTime(u32 *);
 static void SetTrainerTowerRecordTime(u32 *, u32);
 #endif //FREE_TRAINER_TOWER
 
-const u8 gText_XMinYZSec[] = _("{STR_VAR_1}MIN. {STR_VAR_2}.{STR_VAR_3}SEC.");
+const u8 gText_XMinYZSec[] = _("{STR_VAR_1} דק' {STR_VAR_2}.{STR_VAR_3} שנ'");
 
 extern const u8 gText_TimeBoard[];
 
@@ -455,6 +455,11 @@ static void SetUpTrainerTowerDataStruct(void)
         {
             *(sTrainerTowerState->data.floors + i) = *(floors_p[i]); // manual pointer arithmetic needed to match
         }
+#if RTL_STRING_REPORT
+        for (i = 0; i < MAX_TRAINER_TOWER_FLOORS; i++)
+            RtlStringMapRam(sTrainerTowerState->data.floors + i, floors_p[i], sizeof(*floors_p[i]));
+#endif
+#line 458
         sTrainerTowerState->data.checksum = CalcByteArraySum((void *)sTrainerTowerState->data.floors, sizeof(sTrainerTowerState->data.floors));
         ValidateOrResetCurTrainerTowerRecord();
     // }

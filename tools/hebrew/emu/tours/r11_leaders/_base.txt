@@ -1,0 +1,6 @@
+# r11 leaders base include (not a tour): CONTINUE from the save, no wild encounters and no trainer
+# sight (FLAG_DISABLE_ENCOUNTERS / FLAG_DISABLE_TRAINERS, include/config/overworld.h), so every
+# walk is the same on both ROMs.
+include ../../scripts/continue.txt
+setflag FLAG_DISABLE_ENCOUNTERS
+setflag FLAG_DISABLE_TRAINERS

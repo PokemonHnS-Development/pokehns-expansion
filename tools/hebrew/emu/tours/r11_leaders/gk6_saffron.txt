@@ -1,0 +1,15 @@
+# r11 (gen_tours.py): MAP_SAFFRON_CITY_GYM_HNS after its badge, on ladder6_postgame. Statue SaffronCity_Gym_EventScript_GymStatue, guide SaffronCity_Gym_EventScript_GymGuy, leader SaffronCity_Gym_EventScript_Sabrina (data/maps/SaffronCity_Gym_hns/scripts.inc).
+start saves/ladder6_postgame.sav
+include _base.txt
+warpto MAP_SAFFRON_CITY_GYM_HNS 12 21
+face UP
+snap gk6_room
+talkdir gk6_statue UP
+approach 6
+tap A 4
+drive gk6_guide
+warpto MAP_SAFFRON_CITY_GYM_HNS 14 12
+face UP
+snap gk6_leader_room
+talkdir gk6_leader UP
+talkdir gk6_leader_again UP

@@ -1,0 +1,59 @@
+# Alola travel: the Route 13 captain (Route13_TravelToAlola at (78,26), Route13_hns/scripts.inc)
+# talked to from (77,26) facing east: without ITEM_STRANGE_SOUVENIR (Text_4); with it and
+# FLAG_VISITED_ALOLA clear (Text_0, HELP_ALOLA_WINDOW closed by a key, Text_0_5 YES/NO: NO -> Text_2, YES ->
+# Text_1 and the boat to Melemele); then the Melemele captain (Alola_Melemele_TravelToKanto at
+# (24,33)): YES/NO, NO -> Text_2, YES -> Text_1 and the boat back to Route 13; then the Route 13
+# captain with the flag set (Text_3 YES/NO: NO -> Text_2, YES -> Text_1).
+start saves/r6r3_islands_base.sav
+include _base.txt
+dropitem ITEM_STRANGE_SOUVENIR
+warpto MAP_ROUTE13_HNS 77 26
+face RIGHT
+snap r13_field
+tap A 4
+scene r13_nosouv 3000
+snap r13_nosouv_end
+
+ev additem ITEM_STRANGE_SOUVENIR; clearflag FLAG_VISITED_ALOLA; end
+face RIGHT
+talk r13_first 20
+ss r13_firstyn
+pickd 1
+scene r13_first_no 3000
+snap r13_first_no_end
+sl r13_firstyn
+pickd 0
+sceneto r13_first_yes MAP_MELEMELE_ISLE_HNS 12000 30
+scene r13_arrive 6000 30
+snap mel_arrived
+flags FLAG_VISITED_ALOLA
+
+face LEFT
+tap A 4
+scene mel_q 3000
+ss mel_yn
+pickd 1
+scene mel_no 3000
+snap mel_no_end
+sl mel_yn
+pickd 0
+sceneto mel_yes MAP_ROUTE13_HNS 12000 30
+scene mel_arrive 6000 30
+snap r13_back
+
+# FLAG_VISITED_ALOLA is set by the Samson Oak intro (MelemeleIsle_hns/scripts.inc), which ladder 6
+# has already seen: set it here for the 'again' prompt (Text_3).
+ev setflag FLAG_VISITED_ALOLA; end
+warpto MAP_ROUTE13_HNS 77 26
+face RIGHT
+tap A 4
+scene r13_again_q 3000
+ss r13_againyn
+pickd 1
+scene r13_again_no 3000
+snap r13_again_no_end
+sl r13_againyn
+pickd 0
+sceneto r13_again_yes MAP_MELEMELE_ISLE_HNS 12000 30
+scene r13_again_arrive 6000 30
+snap mel_arrived2

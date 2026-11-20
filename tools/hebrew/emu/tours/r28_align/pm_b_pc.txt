@@ -1,0 +1,280 @@
+# Mid-game play from ladder save 3: the Ecruteak Pokemon Center PC with a full party of six.
+# Storage: DEPOSIT Togepi (slot 6) into BOX 1 with the "which BOX?" picker, WITHDRAW it again,
+# MOVE POKeMON (pick up Quilava and look at the box list), MOVE ITEMS (Quilava's held
+# Charcoal: its menu, INFO, back to the bag, GIVE from the bag), MOVE POKeMON (Togepi picked
+# up from the party and put back), the exit questions;
+# then the player's PC: ITEM STORAGE (withdraw with the quantity picker, toss with YES/NO).
+# Storage reads input in sStorage->state == MSTATE_HANDLE_INPUT (0); the cursor and menus
+# animate on fixed timers, so the idle frames after a key do not depend on text length.
+start saves/ladder3_ecruteak.sav
+include ../../scripts/continue.txt
+
+go UP 4                                   # (7,4)
+go RIGHT 4                                # (11,4)
+go UP 2                                   # (11,2), the PC is at (11,1)
+face UP
+talk pmb_pc_boot 10                       # ends at the "which PC" menu
+press DOWN
+snap pmb_pc_which_02
+press UP
+tap A 0                                   # SOMEONE'S PC
+talk pmb_storage_open 10 - Task_PCMainMenu
+waittaskdata Task_PCMainMenu 0 2 600
+snap pmb_storage_menu_01
+press DOWN
+snap pmb_storage_menu_02
+
+# --- DEPOSIT: Togepi, party slot 6
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap pmb_deposit_party
+seek 8 @pokemon_storage_system:sCursorPosition@ 5 DOWN
+12 -
+snap pmb_deposit_togepi
+press A
+waittaskx Task_OnSelectedMon 300
+12 -
+snap pmb_deposit_menu
+press A                                   # STORE: "Deposit in which BOX?"
+waittaskx Task_DepositMenu 300
+waitquiet
+12 -
+snap pmb_deposit_which_box
+press RIGHT
+12 -
+snap pmb_deposit_which_box_2
+press LEFT
+12 -
+press A
+waittaskx Task_PokeStorageMain 600
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+12 -
+snap pmb_deposit_done
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+12 -
+snap pmb_deposit_exit_q
+press DOWN
+press A                                   # NO
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+
+# --- WITHDRAW: Togepi from BOX 1 (menu: MOVE, DEPOSIT, WITHDRAW, MOVE ITEMS, SEE YA)
+press DOWN
+snap pmb_storage_menu_withdraw
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap pmb_withdraw_box
+press A
+waittaskx Task_OnSelectedMon 300
+12 -
+snap pmb_withdraw_menu
+press A                                   # WITHDRAW
+waittaskx Task_PokeStorageMain 600
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+12 -
+snap pmb_withdraw_done
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+12 -
+snap pmb_withdraw_exit_q
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+
+# --- MOVE POKeMON: pick up Togepi from the party, put it into the box, take it back
+press UP
+press UP
+snap pmb_storage_menu_move
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap pmb_move_box
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP
+press A                                   # PARTY POKeMON
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+12 -
+seek 8 @pokemon_storage_system:sCursorPosition@ 5 DOWN
+12 -
+snap pmb_move_party_togepi
+press A
+waittaskx Task_OnSelectedMon 300
+12 -
+snap pmb_move_menu                        # MOVE / SUMMARY / STORE / MARK / RELEASE / CANCEL
+press A                                   # MOVE: Togepi on the cursor
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+12 -
+snap pmb_move_holding
+press A                                   # with a Pokemon in hand: PLACE / SUMMARY / ...
+waittaskx Task_OnSelectedMon 300
+12 -
+snap pmb_move_place_menu
+press A                                   # PLACE
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+12 -
+snap pmb_move_placed
+press B                                   # close the party
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorArea@ 0 DOWN
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+12 -
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+
+# --- MOVE ITEMS: Quilava's Charcoal (party slot 1)
+press DOWN
+press DOWN
+press DOWN
+snap pmb_storage_menu_items
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap pmb_items_box
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP
+12 -
+snap pmb_items_buttons
+press A                                   # PARTY POKeMON
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+12 -
+snap pmb_items_party
+press A
+12 -
+snap pmb_items_menu                       # TAKE / BAG / INFO / CANCEL
+press DOWN
+press DOWN
+press A                                   # INFO
+12 -
+waitquiet
+snap pmb_items_info
+press B
+12 -
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+12 -
+press DOWN
+press A                                   # BAG
+waitquiet
+12 -
+snap pmb_items_to_bag
+press A                                   # the message waits for a key
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+12 -
+snap pmb_items_after_bag
+press A                                   # no item now: GIVE
+12 -
+snap pmb_items_give_menu
+press A
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap pmb_items_give_bag
+press B
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+12 -
+snap pmb_items_back
+press B                                   # close the party
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorArea@ 0 DOWN
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+12 -
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+press DOWN
+snap pmb_storage_menu_seeya
+press A
+talk pmb_storage_closed 10 -
+
+# --- The player's PC: ITEM STORAGE
+tap DOWN 4
+tap A 0
+talk pmb_player_pc 10 - PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+snap pmb_player_pc_menu
+tap A 0                                   # ITEM STORAGE
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+snap pmb_item_storage_menu
+tap A 0                                   # WITHDRAW ITEM
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap pmb_withdraw_item_list
+tap A 0                                   # one Potion: no quantity picker
+waitquiet
+snap pmb_withdraw_item_done
+press A
+waitquiet
+snap pmb_withdraw_item_list_after
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+press DOWN                                # DEPOSIT ITEM: the bag in deposit mode
+tap A 0
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pmb_deposit_item_bag
+press DOWN
+press DOWN                                # Escape Rope x2
+snap pmb_deposit_item_bag_3
+tap A 0
+waittaskx Task_ChooseHowManyToDeposit 300
+waitquiet
+snap pmb_deposit_item_qty
+press UP
+snap pmb_deposit_item_qty_2
+tap A 0
+waitquiet
+snap pmb_deposit_item_done
+press A
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pmb_deposit_item_bag_after
+press B
+waitcb2x CB2_Overworld 900
+waittaskx ItemStorageMenuProcessInput 900
+waitquiet
+press DOWN                                # TOSS ITEM: quantity, then "Throw away?" YES/NO
+tap A 0
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap pmb_toss_item_list
+tap A 0
+waittaskx ItemStorage_HandleQuantityRolling 600
+waitquiet
+snap pmb_toss_item_qty
+tap A 0
+waitquiet
+snap pmb_toss_item_confirm
+press B                                   # NO
+waitquiet
+snap pmb_toss_item_no
+waittaskx ItemStorage_ProcessInput 600
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+press B
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press B
+talk pmb_logoff 10 -
+waitctl 900 B

@@ -1,0 +1,14 @@
+# The Battle Frontier elemental move tutor (old man, Lounge 7, data/maps/BattleFrontier_Lounge7_hns/
+# scripts.inc:309): B on the move list goes to ExitTutorMoveSelect_hns, which prints
+# BattleFrontier_Lounge7_Text_YouDontWantTo (data/maps/BattleFrontier_Lounge7/scripts.inc:351).
+# t20_bp_lounge7 does not reach it. Run with scripts/r4_tutors/tutor.py (talk, setbp, face).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+setbp 200
+warpto MAP_BATTLE_FRONTIER_LOUNGE7_HNS 4 5
+face UP
+talk fxe_intro 20 A ScrollableMultichoice_ProcessInput
+snap fxe_list
+press B
+talk fxe_exit 10 -
+waitctl 900

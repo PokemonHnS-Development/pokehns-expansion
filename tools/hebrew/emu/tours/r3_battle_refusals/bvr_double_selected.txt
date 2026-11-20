@@ -1,0 +1,113 @@
+# Double battle: the same Pokemon picked for both of the player's slots, gText_PkmnAlreadySelected
+# (src/strings.c:281; TrySwitchInPokemon, src/party_menu.c:7689-7694, against
+# gBattleStruct->prevSelectedPartySlot, set from the battle's choose-Pokemon request,
+# src/battle_controller_player.c:2206). Two ways tried:
+# 1. after a double faint: both player Pokemon use Memento on turn 1 (the user faints,
+#    EFFECT_MEMENTO); the battle asks for the left slot's replacement, then for the right
+#    slot's with the left one's choice as prevSelectedPartySlot (BS_FAINTED_MULTIPLE_2,
+#    src/battle_script_commands.c:5657-5680). The left pick is swapped into the first slot of
+#    the second menu (SwapPartyPokemon, src/party_menu.c:7707-7711), so picking it again gives
+#    gText_PkmnAlreadyInBattle, and its old slot holds the fainted Pokemon (gText_PkmnHasNoEnergy).
+#    Seen on both the Hebrew and the English ROM: this path never shows "already selected";
+# 2. at action selection: the left Pokemon chooses SHIFT to a reserve, then the right one
+#    tries the same reserve (src/battle_main.c:4519-4523 passes monToSwitchIntoId[0]):
+#    gText_PkmnAlreadySelected.
+# Also: SHIFT on the partner that is out (gText_PkmnAlreadyInBattle, src/party_menu.c:7675-7683
+# checks every player battler) and on a fainted one in the double layout.
+# Foes: a wild Lv 5 Hoothoot and Sentret (as bv_ball_refused.txt).
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_MURKROW, 10, move1=MOVE_MEMENTO; givemon SPECIES_MISDREAVUS, 10, move1=MOVE_MEMENTO; givemon SPECIES_TOTODILE, 20, move1=MOVE_WATER_GUN; givemon SPECIES_CYNDAQUIL, 20, move1=MOVE_EMBER; givemon SPECIES_CHIKORITA, 20, move1=MOVE_RAZOR_LEAF; givemon SPECIES_PIKACHU, 20, move1=MOVE_THUNDER_SHOCK; end
+expect8 @gPlayerPartyCount@ 6
+
+pinrng
+evstart setwildbattle SPECIES_HOOTHOOT, 5, species2=SPECIES_SENTRET, level2=5; dowildbattle; end
+waitbattle
+bwalk bvr_dbl_intro input:HandleInputChooseAction
+
+# turn 1: Memento from both
+baction FIGHT
+bmove 0
+waitbinput HandleInputChooseTarget
+tap A 4
+bactionb 2 FIGHT
+bmoveb 2 0
+waitbinputb 2 HandleInputChooseTarget
+tap A 4
+bwalk bvr_dbl_turn1 task:Task_HandleChooseMonInput|prompt:Cmd_yesnobox
+snap bvr_dbl_replace_left
+
+# the left slot's replacement: a fainted one first, then Totodile
+include _sub.txt
+snap bvr_dbl_left_sub_fainted
+include _shift.txt
+pages bvr_dbl_left_no_energy
+include _back_to_party.txt
+seek 8 @gPartyMenu+9@ 2 RIGHT             # Totodile (the double layout: 0-1 left column, 2-5 right)
+include _sub.txt
+snap bvr_dbl_left_sub_pick
+tap A 4                                   # SEND OUT: accepted
+waitcb2x BattleMainCB2 900
+# the right slot's replacement: the party menu again, the same Pokemon picked
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap bvr_dbl_replace_right
+# the left pick was swapped into the first slot of this menu (SwapPartyPokemon in
+# TrySwitchInPokemon, src/party_menu.c:7707-7711); slot 2 now holds the fainted Murkrow
+seek 8 @gPartyMenu+9@ 2 RIGHT
+include _sub.txt
+include _shift.txt
+pages bvr_dbl_right_no_energy
+include _back_to_party.txt
+seek 8 @gPartyMenu+9@ 0 LEFT              # Totodile, already picked for the left slot
+snap bvr_dbl_right_cursor
+include _sub.txt
+snap bvr_dbl_right_sub
+include _shift.txt
+pages bvr_dbl_right_repick_in_battle           # gText_PkmnAlreadyInBattle, not AlreadySelected (see the header)
+include _back_to_party.txt
+snap bvr_dbl_right_back
+seek 8 @gPartyMenu+9@ 2 RIGHT
+seek 8 @gPartyMenu+9@ 3 DOWN              # Cyndaquil
+include _sub.txt
+tap A 4                                   # SEND OUT: accepted
+bwalk bvr_dbl_sendout input:HandleInputChooseAction
+snap bvr_dbl_turn2_action
+
+# turn 2, at action selection: the left Pokemon SHIFTs to Chikorita, the right one tries the same
+include ../_bv_switch.txt
+snap bvr_dbl_t2_left_party
+seek 8 @gPartyMenu+9@ 1 DOWN              # the partner that is out: already in battle
+include _sub.txt
+snap bvr_dbl_t2_left_sub_partner
+include _shift.txt
+pages bvr_dbl_t2_partner_in_battle
+include _back_to_party.txt
+seek 8 @gPartyMenu+9@ 4 RIGHT             # Chikorita (RIGHT from the lower left slot lands on slot 4)
+include _sub.txt
+tap A 4                                   # SHIFT: accepted
+waitbinputb 2 HandleInputChooseAction 900
+snap bvr_dbl_t2_right_action
+bactionb 2 POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap bvr_dbl_t2_right_party
+seek 8 @gPartyMenu+9@ 1 DOWN
+seek 8 @gPartyMenu+9@ 4 RIGHT             # Chikorita, already picked by the left Pokemon
+snap bvr_dbl_t2_right_cursor
+include _sub.txt
+snap bvr_dbl_t2_right_sub
+include _shift.txt
+pages bvr_dbl_t2_already_selected
+include _back_to_party.txt
+snap bvr_dbl_t2_right_back
+tap B 4
+waitbinputb 2 HandleInputChooseAction 900
+bactionb 2 FIGHT
+bmoveb 2 0
+waitbinputb 2 HandleInputChooseTarget
+tap A 4
+bwalk bvr_dbl_t2_turn input:HandleInputChooseAction
+snap bvr_dbl_t3_action

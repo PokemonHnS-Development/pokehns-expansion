@@ -1,0 +1,111 @@
+# SHIFT refusals in the battle party menu while an ability traps the player's Pokemon
+# (TrySwitchInPokemon, src/party_menu.c:7657-7712; the trap is decided in src/battle_main.c:
+# 4507-4518, PARTY_ACTION_ABILITY_PREVENTS):
+# - SHIFT on the Pokemon already out: gText_PkmnAlreadyInBattle (src/strings.c:280), checked
+#   before the trap (src/party_menu.c:7675-7683);
+# - SHIFT on a healthy one: gText_PkmnsXPreventsSwitching (src/battle_message.c:75) with the
+#   foe's name and prefix and the ability name (SetMonPreventsSwitchingString, src/pokemon.c:
+#   8352-8369), once per trapping ability: Shadow Tag (Wobbuffet), Arena Trap (Dugtrio),
+#   Magnet Pull (Magnemite; the lead is a Steel type);
+# - SHIFT on a fainted one: gText_PkmnHasNoEnergy (src/strings.c:282);
+# - the Egg: only SUMMARY / CANCEL (GetPartyMenuActionsTypeInBattle, src/party_menu.c:7644-7654),
+#   so gText_EggCantBattle should not be reachable from here.
+# The lead is a Lv 100 Steelix (Steel/Ground: Magnet Pull and Arena Trap both trap it; no
+# Shed Shell, not a Ghost), so it gains no experience and needs no level-up pages. Each foe
+# is set to 1 HP and knocked out with Tackle to end its battle.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_STEELIX, 100, move1=MOVE_TACKLE; givemon SPECIES_FERALIGATR, 50, move1=MOVE_SURF; givemon SPECIES_MEGANIUM, 50, move1=MOVE_RAZOR_LEAF; giveegg SPECIES_TOGEPI; setko 2; end
+expect8 @gPlayerPartyCount@ 4
+
+# 1. Shadow Tag
+pinrng
+evstart setwildbattle SPECIES_WOBBUFFET, 40; dowildbattle; end
+waitbattle
+bwalk bvr_tag_intro input:HandleInputChooseAction
+include ../_bv_switch.txt
+snap bvr_tag_party
+seek 8 @gPartyMenu+9@ 0 UP
+include _sub.txt
+snap bvr_tag_sub_active
+include _shift.txt
+pages bvr_tag_already_in_battle
+include _back_to_party.txt
+snap bvr_tag_party_back
+seek 8 @gPartyMenu+9@ 1 DOWN
+include _sub.txt
+snap bvr_tag_sub_healthy
+include _shift.txt
+pages bvr_tag_prevents
+include _back_to_party.txt
+seek 8 @gPartyMenu+9@ 2 DOWN
+include _sub.txt
+snap bvr_tag_sub_fainted
+include _shift.txt
+pages bvr_tag_no_energy
+include _back_to_party.txt
+seek 8 @gPartyMenu+9@ 3 DOWN
+snap bvr_tag_cursor_egg
+include _sub.txt
+snap bvr_tag_sub_egg
+tap DOWN 4
+waitquiet
+snap bvr_tag_sub_egg_cancel
+tap UP 4
+waitquiet
+tap A 4                                   # the Egg's first row: SUMMARY
+# FILE:NAME needs a linker .map next to the ELF (Elf.objfile); release/rc5 ships none for
+# pokehns-clip.elf, so the Hebrew run used a per-symbol .map beside a symlinked copy of that ROM
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitquiet
+snap bvr_tag_egg_summary
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap bvr_tag_sub_egg_after_summary
+tap B 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction 900
+sethp enemy 0 1
+baction FIGHT
+bmove 0
+bwalk bvr_tag_ko free
+
+# 2. Arena Trap (Dugtrio's second ability: abilityNum 1; its first is Sand Veil)
+evstart setwildbattle SPECIES_DUGTRIO, 40; createmon 1, 0, SPECIES_DUGTRIO, 40, abilityNum=1; dowildbattle; end
+waitbattle
+bwalk bvr_arena_intro input:HandleInputChooseAction
+include ../_bv_switch.txt
+seek 8 @gPartyMenu+9@ 1 DOWN
+include _sub.txt
+include _shift.txt
+pages bvr_arena_prevents
+include _back_to_party.txt
+snap bvr_arena_party_back
+tap B 4
+waitbinput HandleInputChooseAction 900
+sethp enemy 0 1
+baction FIGHT
+bmove 0
+bwalk bvr_arena_ko free
+
+# 3. Magnet Pull (Magnemite's first ability; the lead is Steel)
+evstart setwildbattle SPECIES_MAGNEMITE, 40; createmon 1, 0, SPECIES_MAGNEMITE, 40, abilityNum=0; dowildbattle; end
+waitbattle
+bwalk bvr_magnet_intro input:HandleInputChooseAction
+include ../_bv_switch.txt
+seek 8 @gPartyMenu+9@ 1 DOWN
+include _sub.txt
+include _shift.txt
+pages bvr_magnet_prevents
+include _back_to_party.txt
+snap bvr_magnet_party_back
+tap B 4
+waitbinput HandleInputChooseAction 900
+sethp enemy 0 1
+baction FIGHT
+bmove 0
+bwalk bvr_magnet_ko free

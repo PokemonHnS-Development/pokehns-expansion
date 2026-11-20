@@ -22,7 +22,7 @@ enum
     CONDITION_SEARCH_FUNC_SELECT_MON,
 };
 
-static const u8 gText_NumberIndex[] = _("No. {DYNAMIC 0}");
+static const u8 gText_NumberIndex[] = _("מס' {DYNAMIC 0}");
 
 struct Pokenav_SearchResults
 {
@@ -475,7 +475,7 @@ static u32 LoopedTask_OpenConditionSearchResults(s32 state)
         HideBg(3);
         if (!gfx->fromGraph)
         {
-            u8 searchGfxId = GetSelectedConditionSearch() + POKENAV_MENUITEM_CONDITION_SEARCH_COOL;
+            u8 searchGfxId = GetSelectedConditionSearch() + POKENAV_GFX_COOL_MENU;
             LoadLeftHeaderGfxForIndex(searchGfxId);
             ShowLeftHeaderGfx(searchGfxId, TRUE, FALSE);
             ShowLeftHeaderGfx(POKENAV_GFX_CONDITION_MENU, TRUE, FALSE);

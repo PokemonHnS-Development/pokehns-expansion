@@ -63,32 +63,30 @@ SafariZoneGate_EventScript_SlowpokeLady::
 
 
 SafariZone_Text_ForeignFeeling:
-	.string "SAFARI ZONE...\n"
-	.string "It makes me feel like I am in a\l"
-	.string "foreign country.\p"
-	.string "It brings up a strange feeling.$"
+	.string "אזור הספארי… הוא גורם לי\n"
+	.string "להרגיש כאילו אני בארץ זרה.\p"
+	.string "זה מעורר תחושה מוזרה.$"
 
 SafariZone_Text_SilentNPC:
-	.string "..................\p"
-	.string "(I am not a talker.)$"
+	.string "………………\p"
+	.string "(אני לא דברנית.)$"
 
 SafariZone_Text_Kangaskhan:
-	.string "KANGASKHAN: ..................$"
+	.string "קנגסקאן: ………………$"
 
 SafariZone_Text_JigglypuffTrainer:
-	.string "This SAFARI ZONE is great!\n"
-	.string "I just kept going after POKéMON!\p"
-	.string "That made my JIGGLYPUFF upset though.$"
+	.string "אזור הספארי הזה מעולה!\n"
+	.string "פשוט רדפתי אחרי פוקימונים בלי סוף!\p"
+	.string "אבל זה הרגיז את הג'יגליפאף שלי.$"
 
 SafariZone_Text_FirstCatch:
-	.string "I have always wanted to catch my first\n"
-	.string "POKéMON at the SAFARI ZONE.$"
+	.string "תמיד רציתי לתפוס את הפוקימון\n"
+	.string "הראשון שלי באזור הספארי.$"
 
 SafariZone_Text_SlowpokeFan:
-	.string "There are many POKéMON to choose from,\n"
-	.string "but nothing beats the cuteness of\l"
-	.string "SLOWPOKE.\p"
-	.string "People often say that I look like one!$"
+	.string "יש המון פוקימונים לבחור מהם, אבל\n"
+	.string "אין כמו החמידות של סלופוק.\p"
+	.string "הרבה פעמים אומרים לי שאני דומה לו!$"
 
 SafariZone_Text_CustomSystem:
 	.string "You may be under the impression there\n"
@@ -167,6 +165,6 @@ SafariZoneGate_Pokemart_VitaminGuru:
 
 
 SafariZoneGate_Text_VitaminGuruSellWhatYouNeed:
-	.string "I'm the ENERGY GURU! I'll go for it and\n"
-	.string "sell you what you need!$"
+	.string "אני גורו האנרגיה! אני הולך על זה\n"
+	.string "ואמכור לך את מה שצריך!$"
 

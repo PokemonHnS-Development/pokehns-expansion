@@ -1,0 +1,23 @@
+# Contest lobby (H&S) link receptionist (15,1, invisible): ENTER/INFO/CANCEL -> INFO -> the three link
+# topics (link contest, E mode, G mode; Emerald/Ruby/Sapphire stay Latin by design, Q106), CANCEL back,
+# CANCEL. The player is warped to (15,2), behind the counter: from the floor, (15,4) facing up looks
+# across the counter (15,3) at (15,2), where nobody stands, and row 2 is closed off by the counter
+# (data/layouts/LilycoveCity_ContestLobby_hns/map.bin: (11..18,3) and (11,2), (18,2) are collision 1).
+start saves/ladder6_postgame.sav
+include _setup.txt
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 15 2
+face UP
+tap A 4
+fieldwatch link_recep menu 6000
+pick 1
+fieldwatch link_topics menu 3000
+pick 0
+fieldwatch link_explain menu 8000
+pick 1
+fieldwatch link_emode menu 8000
+pick 2
+fieldwatch link_gmode menu 8000
+pick 3
+fieldwatch link_back menu 3000
+pick 2
+fieldwatch link_cancel free 3000

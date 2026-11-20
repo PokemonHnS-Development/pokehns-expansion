@@ -1,0 +1,45 @@
+# r10 names: the trainer card front and back (no hometown line on the H&S card), then the radio
+# upgrade lines that name the same key gift three ways (Lavender Pokémon Center teacher, the radio
+# director's gift line, the music director), and the Celadon 4F super nerd's SURF MAIL line.
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+
+startmenu PLAYER
+waitcb2x CB2_TrainerCard 900
+waitpmem 8 trainer_card:sData 0 10 900
+snap n_card_front
+press A
+waitpmem 8 trainer_card:sData 0 11 900
+snap n_card_back
+press B
+waitpmem 8 trainer_card:sData 0 10 900
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+clearflag FLAG_KANTO_RADIO_GOT
+evstart goto LavenderTown_PokemonCenter_EventScript_Teacher
+pages n_msg_radio_1_pc_teacher
+20 -
+pages n_msg_radio_1_pc_teacher_b
+waitctl 600
+evstart goto LavenderTown_RadioStation_EventScript_DirectorReturnedMachinePart
+pages n_msg_radio_2_director
+240 -
+pages n_msg_radio_2_director_b
+120 -
+pages n_msg_radio_2_director_c
+waitctl 900
+clearflag FLAG_KANTO_RADIO_GOT
+evstart goto LavenderTown_RadioStation_EventScript_Host
+pages n_msg_radio_3_music_director
+20 -
+pages n_msg_radio_3_music_director_b
+waitctl 600
+evstart goto CeladonDept_EventScript_Supernerd
+pages n_msg_celadon4f_surf_mail
+20 -
+pages n_msg_celadon4f_surf_mail_b
+waitctl 600

@@ -1,0 +1,16 @@
+# A rival battle with the typed rival name: TRAINER_RIVAL_CYNDAQUIL_2_HNS (Name {B_RIVAL_NAME},
+# src/data/trainers_hns.party:9763-9764, expanded from gSaveBlock2Ptr->rivalName at
+# src/battle_message.c:3605-3606), started the way Azalea Town starts it
+# (data/maps/AzaleaTown_hns/scripts.inc:207-209, called as is). Intro with class and name, every send-out, the
+# defeat line in battle and the prize money. bwin: foes at 1 HP, Ice Shard.
+start save:rv_named
+include ../continue.txt
+fastbattles off
+warpto MAP_AZALEA_TOWN_HNS 31 16
+rivalname rival
+pinrng
+evstart call AzaleaTown_Silver_Battle_Cyndaquil; end
+waitbattle
+bwin rv_battle 30
+waitctl 900
+snap rv_battle_after

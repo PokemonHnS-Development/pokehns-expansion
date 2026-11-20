@@ -1,0 +1,104 @@
+# Day-Care branches svc_daycare does not reach (Route 34): one Pokemon in care (a level-1
+# Magikarp), the man's one-Pokemon line, ~200 steps walked in the Day-Care house, then the
+# woman: "good to see you", "your MAGIKARP has grown by N levels" (a number in the text),
+# "raise one more?" NO, "take it back?" YES, the cost (100 + 100 per level, no level menu
+# with one Pokemon) with no money: "not enough money"; then with money: YES, taken back.
+start saves/r1svc_menuA_base.sav
+include ../continue.txt
+ev givemon SPECIES_MAGIKARP, 1; end
+# party: Typhlosion, Pikachu, Ampharos, Gyarados, Togepi Egg, Magikarp
+
+warpto MAP_ROUTE34_DAY_CARE_HNS 3 7
+face DOWN
+talk svc3_dc_woman 10
+tap A 0
+talk svc3_dc_which 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+seek 8 @gPartyMenu+9@ 5 DOWN
+snap svc3_dc_party_magikarp
+tap A 0
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap svc3_dc_party_submenu
+tap A 0
+waitcb2x CB2_Overworld 900
+talk svc3_dc_given 10 -
+tap B 0                                  # raise one more? NO
+talk svc3_dc_given_no 10 -
+waitctl 900
+
+# the man outside with one Pokemon
+warpto MAP_ROUTE34_HNS 30 34
+face RIGHT
+talk svc3_dcman_one 10
+waitctl 900
+
+# walk ~200 steps in the Day-Care house (row 4, x 3..8)
+warpto MAP_ROUTE34_DAY_CARE_HNS 3 4
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+go RIGHT 5
+go LEFT 5
+warpto MAP_ROUTE34_DAY_CARE_HNS 3 7
+face DOWN
+ev removemoney 9999999; end
+talk svc3_dcw_back 10                    # good to see you, grown N levels, raise one more?
+tap B 0                                  # NO
+talk svc3_dcw_takeback 10 -
+tap A 0                                  # take it back? YES
+talk svc3_dcw_cost 10 -
+tap A 0                                  # YES, but no money
+talk svc3_dcw_nomoney 10 -
+waitctl 900
+ev addmoney 5000; end
+face DOWN
+talk svc3_dcw_back2 10
+tap B 0
+talk svc3_dcw_takeback2 10 -
+tap A 0
+talk svc3_dcw_cost2 10 -
+tap A 0                                  # YES
+talk svc3_dcw_took 10 -
+waitctl 900
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+snap svc3_party_magikarp_back

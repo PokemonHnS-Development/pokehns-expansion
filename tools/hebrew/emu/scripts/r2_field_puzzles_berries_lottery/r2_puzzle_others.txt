@@ -1,0 +1,143 @@
+# Ruins of Alph puzzle chambers: the Omanyte, Aerodactyl and Ho-Oh puzzles (open, pick up a
+# tile, place it back, quit with B), every puzzle's solved view (VAR_0x8005 TRUE,
+# RuinsOfAlph_PuzzleAndRewardChambers_hns/scripts.inc:110-114), the four descriptions, a
+# statue, the receptionist's first line; the Kabuto reward wall (sign at (20,1)) without a
+# Kabuto, then with one (shake, "the room reacts", door 0x308 at (21,1)), through the door
+# into the reward chamber, the wall again ("the way is open") and the receptionist's third line.
+start saves/r2fpb_postgame.sav
+include ../continue.txt
+
+# --- Omanyte: sign (5,21), cursor (0,0) = tile 9
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 5 22
+face UP
+tap A 0
+waitcb2x sliding_puzzle:CB2_SlidingPuzzle 900
+waittaskx sliding_puzzle:Task_SlidingPuzzle_HandleInput 900
+waitquiet
+frames 20
+snap pzo_01_open
+press A
+frames 10
+snap pzo_02_held
+press A                                   # put it back on its own cell
+press DOWN                                # (1,0) empty
+frames 20
+snap pzo_03_noselect
+tap B 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+snap pzo_04_quit
+
+# --- Aerodactyl: sign (21,21), cursor (0,0) = tile 14
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 21 22
+face UP
+tap A 0
+waitcb2x sliding_puzzle:CB2_SlidingPuzzle 900
+waittaskx sliding_puzzle:Task_SlidingPuzzle_HandleInput 900
+waitquiet
+frames 20
+snap pza_01_open
+press A
+tap R 40
+frames 4
+snap pza_02_held_rotated
+tap B 0                                   # quit while holding a tile
+waitcb2x CB2_Overworld 900
+waitctl 900
+
+# --- Ho-Oh: sign (5,4), cursor (0,0) = tile 15
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 5 5
+face UP
+tap A 0
+waitcb2x sliding_puzzle:CB2_SlidingPuzzle 900
+waittaskx sliding_puzzle:Task_SlidingPuzzle_HandleInput 900
+waitquiet
+frames 20
+snap pzh_01_open
+press A
+press RIGHT                               # (0,1) empty while holding: place
+frames 10
+snap pzh_02_held_place
+tap B 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+
+# --- solved views (the 'completed' path)
+evstart setvar VAR_0x8004, SLIDING_PUZZLE_OMANYTE; setvar VAR_0x8005, TRUE; special DoSlidingPuzzle; waitstate; end
+waitcb2x sliding_puzzle:CB2_SlidingPuzzle 900
+waittaskx sliding_puzzle:Task_SlidingPuzzle_Solved 900
+waitquiet
+snap pzo_05_solved_view
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+evstart setvar VAR_0x8004, SLIDING_PUZZLE_AERODACTYL; setvar VAR_0x8005, TRUE; special DoSlidingPuzzle; waitstate; end
+waitcb2x sliding_puzzle:CB2_SlidingPuzzle 900
+waittaskx sliding_puzzle:Task_SlidingPuzzle_Solved 900
+waitquiet
+snap pza_05_solved_view
+tap B 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+evstart setvar VAR_0x8004, SLIDING_PUZZLE_HO_OH; setvar VAR_0x8005, TRUE; special DoSlidingPuzzle; waitstate; end
+waitcb2x sliding_puzzle:CB2_SlidingPuzzle 900
+waittaskx sliding_puzzle:Task_SlidingPuzzle_Solved 900
+waitquiet
+snap pzh_05_solved_view
+tap A 0
+waitcb2x CB2_Overworld 900
+waitctl 900
+
+# --- descriptions, statue, receptionist
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 20 5
+face UP
+talk pzd_kabuto 6
+waitctl 600 B
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 4 5
+face UP
+talk pzd_hooh 6
+waitctl 600 B
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 4 22
+face UP
+talk pzd_omanyte 6
+waitctl 600 B
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 20 22
+face UP
+talk pzd_aerodactyl 6
+waitctl 600 B
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 19 6
+face UP
+talk pzd_statue 6
+waitctl 600 B
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 24 6
+face UP
+talk pzd_receptionist1 10
+waitctl 600 B
+
+# --- the Kabuto reward wall: no Kabuto, then a Kabuto in the party
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 20 2
+face UP
+snap pzw_00_wall
+talk pzw_01_sensor 6
+waitctl 600 B
+zeromon 5
+ev givemon SPECIES_KABUTO, 30; end
+face UP
+tap A 0
+burst pzw_02_shake 24 6
+waitkey 900
+snap pzw_03_reacts
+tap A 0
+waitctl 900 B
+snap pzw_04_door_open
+talk pzw_05_wall_again 6
+waitctl 600 B
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 21 2
+go UP
+waitctl 900 B
+snap pzw_06_reward_chamber
+warpto MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS 24 6
+face UP
+talk pzw_07_receptionist3 6
+waitctl 600 B
+probe

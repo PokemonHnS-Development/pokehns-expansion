@@ -1,0 +1,128 @@
+# Pokedex after the League (national dex): the list, its START menu, an entry's pages (INFO, AREA
+# of a Kanto Pokemon, STATS, EVOLUTION, CRY, SIZE), the search (SEARCH bar, the menu, NAME, COLOR,
+# TYPE, ORDER lists, a search and its results).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+16 -
+snap dx_list_01
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+tap DOWN 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+16 -
+snap dx_list_02
+tap START 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexStartMenuInput 120
+16 -
+snap dx_list_menu
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+16 -
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleInfoScreenInput 600
+snap dx_entry_info
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+snap dx_entry_area
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleStatsScreenInput 600
+snap dx_entry_stats
+tap A 4
+waitquiet
+snap dx_entry_stats_moves
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleEvolutionScreenInput 600
+snap dx_entry_evo
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleCryScreenInput 600
+snap dx_entry_cry
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleSizeScreenInput 600
+snap dx_entry_size
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleInfoScreenInput 600
+waitquiet
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+16 -
+tap SELECT 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchTopBarInput 600
+16 -
+snap dx_search_01
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+16 -
+snap dx_search_02
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+16 -
+snap dx_search_name
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+tap DOWN 4
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+16 -
+snap dx_search_color
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+tap DOWN 4
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+16 -
+snap dx_search_type
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+16 -
+snap dx_search_type_fire
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+tap DOWN 4
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+16 -
+snap dx_search_order
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+tap DOWN 4
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+16 -
+snap dx_search_mode
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+tap DOWN 4
+16 -
+snap dx_search_ok
+tap A 4
+waittaskx pokedex_plus_hgss:Task_SearchCompleteWaitForInput 600
+snap dx_search_done
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchResultsInput 600
+16 -
+snap dx_search_results
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleInfoScreenInput 600
+snap dx_result_info
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+snap dx_result_area
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleInfoScreenInput 600
+waitquiet
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchResultsInput 600
+16 -
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+16 -
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

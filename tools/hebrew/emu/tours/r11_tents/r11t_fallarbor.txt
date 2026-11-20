@@ -1,0 +1,302 @@
+# r11 tents: Fallarbor Battle Tent, trainers 0-29 (src/data/battle_frontier/battle_tent.h), one pinned battle each from the state taken after entering
+start saves/r11/tents_withdraw/tent_base.sav
+include ../../scripts/continue.txt
+warptoloose MAP_FALLARBOR_TOWN_BATTLE_TENT_LOBBY_HNS 6 6
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+snap fa_lobby
+tap A 0
+drive fa_in menu
+pick 0
+drive fa_sel task:Task_HandleChooseMonInput 20
+include ../../scripts/r2_battle_frontier_facilities/_bf_enter3.txt
+drive fa_save menu 10
+pick 0
+saveyes
+fastbattles off
+tstate save go
+# trainer 0
+tentpin 0
+drivex f00_in battle 30 9000
+tentlog f00_in
+oppname
+tentwin f00_b
+drivex f00_after menu 30 9000
+unpin
+# trainer 1
+tstate load go
+tentpin 1
+drivex f01_in battle 30 9000
+tentlog f01_in
+oppname
+tentwin f01_b
+drivex f01_after menu 30 9000
+unpin
+# trainer 2
+tstate load go
+tentpin 2
+drivex f02_in battle 30 9000
+tentlog f02_in
+oppname
+tentwin f02_b
+drivex f02_after menu 30 9000
+unpin
+# trainer 3
+tstate load go
+tentpin 3
+drivex f03_in battle 30 9000
+tentlog f03_in
+oppname
+tentwin f03_b
+drivex f03_after menu 30 9000
+unpin
+# trainer 4
+tstate load go
+tentpin 4
+drivex f04_in battle 30 9000
+tentlog f04_in
+oppname
+tentwin f04_b
+drivex f04_after menu 30 9000
+unpin
+# trainer 5
+tstate load go
+tentpin 5
+drivex f05_in battle 30 9000
+tentlog f05_in
+oppname
+tentwin f05_b
+drivex f05_after menu 30 9000
+unpin
+# trainer 6
+tstate load go
+tentpin 6
+drivex f06_in battle 30 9000
+tentlog f06_in
+oppname
+tentwin f06_b
+drivex f06_after menu 30 9000
+unpin
+# trainer 7
+tstate load go
+tentpin 7
+drivex f07_in battle 30 9000
+tentlog f07_in
+oppname
+tentwin f07_b
+drivex f07_after menu 30 9000
+unpin
+# trainer 8
+tstate load go
+tentpin 8
+drivex f08_in battle 30 9000
+tentlog f08_in
+oppname
+tentwin f08_b
+drivex f08_after menu 30 9000
+unpin
+# trainer 9
+tstate load go
+tentpin 9
+drivex f09_in battle 30 9000
+tentlog f09_in
+oppname
+tentwin f09_b
+drivex f09_after menu 30 9000
+unpin
+# trainer 10
+tstate load go
+tentpin 10
+drivex f10_in battle 30 9000
+tentlog f10_in
+oppname
+tentwin f10_b
+drivex f10_after menu 30 9000
+unpin
+# trainer 11
+tstate load go
+tentpin 11
+drivex f11_in battle 30 9000
+tentlog f11_in
+oppname
+tentwin f11_b
+drivex f11_after menu 30 9000
+unpin
+# trainer 12
+tstate load go
+tentpin 12
+drivex f12_in battle 30 9000
+tentlog f12_in
+oppname
+tentwin f12_b
+drivex f12_after menu 30 9000
+unpin
+# trainer 13
+tstate load go
+tentpin 13
+drivex f13_in battle 30 9000
+tentlog f13_in
+oppname
+tentwin f13_b
+drivex f13_after menu 30 9000
+unpin
+# trainer 14
+tstate load go
+tentpin 14
+drivex f14_in battle 30 9000
+tentlog f14_in
+oppname
+tentwin f14_b
+drivex f14_after menu 30 9000
+unpin
+# trainer 15
+tstate load go
+tentpin 15
+drivex f15_in battle 30 9000
+tentlog f15_in
+oppname
+tentwin f15_b
+drivex f15_after menu 30 9000
+unpin
+# trainer 16
+tstate load go
+tentpin 16
+drivex f16_in battle 30 9000
+tentlog f16_in
+oppname
+tentwin f16_b
+drivex f16_after menu 30 9000
+unpin
+# trainer 17
+tstate load go
+tentpin 17
+drivex f17_in battle 30 9000
+tentlog f17_in
+oppname
+tentwin f17_b
+drivex f17_after menu 30 9000
+unpin
+# trainer 18
+tstate load go
+tentpin 18
+drivex f18_in battle 30 9000
+tentlog f18_in
+oppname
+tentwin f18_b
+drivex f18_after menu 30 9000
+unpin
+# trainer 19
+tstate load go
+tentpin 19
+drivex f19_in battle 30 9000
+tentlog f19_in
+oppname
+tentwin f19_b
+drivex f19_after menu 30 9000
+unpin
+# trainer 20
+tstate load go
+tentpin 20
+drivex f20_in battle 30 9000
+tentlog f20_in
+oppname
+tentwin f20_b
+drivex f20_after menu 30 9000
+unpin
+# trainer 21
+tstate load go
+tentpin 21
+drivex f21_in battle 30 9000
+tentlog f21_in
+oppname
+tentwin f21_b
+drivex f21_after menu 30 9000
+unpin
+# trainer 22
+tstate load go
+tentpin 22
+drivex f22_in battle 30 9000
+tentlog f22_in
+oppname
+tentwin f22_b
+drivex f22_after menu 30 9000
+unpin
+# trainer 23
+tstate load go
+tentpin 23
+drivex f23_in battle 30 9000
+tentlog f23_in
+oppname
+tentwin f23_b
+drivex f23_after menu 30 9000
+unpin
+# trainer 24
+tstate load go
+tentpin 24
+drivex f24_in battle 30 9000
+tentlog f24_in
+oppname
+tentwin f24_b
+drivex f24_after menu 30 9000
+unpin
+# trainer 25
+tstate load go
+tentpin 25
+drivex f25_in battle 30 9000
+tentlog f25_in
+oppname
+tentwin f25_b
+drivex f25_after menu 30 9000
+unpin
+# trainer 26
+tstate load go
+tentpin 26
+drivex f26_in battle 30 9000
+tentlog f26_in
+oppname
+tentwin f26_b
+drivex f26_after menu 30 9000
+unpin
+# trainer 27
+tstate load go
+tentpin 27
+drivex f27_in battle 30 9000
+tentlog f27_in
+oppname
+tentwin f27_b
+drivex f27_after menu 30 9000
+unpin
+# trainer 28
+tstate load go
+tentpin 28
+drivex f28_in battle 30 9000
+tentlog f28_in
+oppname
+tentwin f28_b
+drivex f28_after menu 30 9000
+unpin
+# trainer 29
+tstate load go
+tentpin 29
+drivex f29_in battle 30 9000
+tentlog f29_in
+oppname
+tentwin f29_b
+drivex f29_after menu 30 9000
+unpin
+# trainer 1, lost
+tstate load go
+tentpin 1
+drivex f01_lost_in battle 30 9000
+tentlog f01_lost_in
+blose f01_lost_b
+drivex f01_lost_after free 30 12000
+unpin
+# trainer 9, lost
+tstate load go
+tentpin 9
+drivex f09_lost_in battle 30 9000
+tentlog f09_lost_in
+blose f09_lost_b
+drivex f09_lost_after free 30 12000
+unpin

@@ -28,11 +28,11 @@ Route110_TrickHousePuzzle8_EventScript_Leroy::
 	end
 
 Route110_TrickHousePuzzle8_Text_WroteSecretCodeLockOpened::
-	.string "{PLAYER} wrote down the secret code\n"
-	.string "on the door.\p"
-	.string "“TRICK MASTER I love.”\n"
+	.string "{PLAYER} כתב את הקוד הסודי\n"
+	.string "על הדלת.\p"
+	.string "”אמן התעלולים אהוב עליי.”\n"
 	.string "… … … … … … … …\p"
-	.string "The lock clicked open!$"
+	.string "המנעול נפתח בנקישה!$"
 
 Route110_TrickHousePuzzle8_Text_VincentIntro:
 	.string "Not many TRAINERS have made it\n"

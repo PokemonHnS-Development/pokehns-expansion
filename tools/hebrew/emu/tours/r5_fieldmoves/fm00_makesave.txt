@@ -1,0 +1,15 @@
+# r5 field moves, setup: ladder 6 (16 badges, Mt. Silver Pokemon Center) -> CONTINUE -> the
+# field-move party (_party.inc) -> saved with the game's own save. Every other fm tour starts
+# from this save (save:fm_party), made on the ROM under test, so the nicknames are in its
+# language.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev file _party.inc
+expectflag FLAG_BADGE02_GET 1
+expectflag FLAG_BADGE08_GET 1
+expectflag FLAG_GET_HEADBUTT 1
+go DOWN 9
+waitctl 900
+savegame
+snap fm00_saved
+keepsave fm_party

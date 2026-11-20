@@ -1,0 +1,13 @@
+# NOT reachable in Heart & Soul: MoveTutor_Text_ThisMoveCanOnlyBeLearnedOnce (data/text/move_tutors.inc:1,
+# a local label, so it is passed by address) is only shown by the move_tutor macro when a flag is
+# given, and include/constants/flags_hns.h:1597-1606 defines every FLAG_MOVE_TUTOR_TAUGHT_* as 0.
+# Shown here from an event script in RAM, at the Route 4 Pokemon Center Swagger tutor, only to see
+# what the string would look like if the flags were ever given values.
+start saves/ladder6_postgame_copy.sav
+include _setup.txt
+warpto MAP_ROUTE4_POKEMON_CENTER_HNS 12 6
+face UP
+evstart lock; msgbox 0x@MoveTutor_Text_ThisMoveCanOnlyBeLearnedOnce@, MSGBOX_YESNO; release; end
+talk fo_once 10 -
+tap B 0
+waitctl 900

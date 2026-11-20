@@ -1,0 +1,89 @@
+# Catching with a full party (B_CATCH_SWAP_INTO_PARTY, include/config/battle.h:363):
+# Cmd_givecaughtmon (src/battle_script_commands.c:11087-11240) asks "add X to your party?"
+# (STRINGID_SENDCAUGHTMONPARTYORBOX). YES opens the party menu in send-to-box mode
+# (PARTY_MSG_CHOOSE_MON_FOR_BOX, src/party_menu.c:7630); a Pokemon that knows an HM is
+# refused (sText_CannotSendMonToBoxHM, src/party_menu.c:518); the chosen one goes to the
+# PC (STRINGID_PKMNTRANSFERREDSOMEONESPC with B_MSG_SWAPPED_INTO_PARTY). Then a second
+# catch answers NO: the caught Pokemon goes to the box (B_MSG_SENT_SOMEONES_PC).
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_TOTODILE, 12, move1=MOVE_CUT, move2=MOVE_WATER_GUN; givemon SPECIES_CYNDAQUIL, 12; givemon SPECIES_CHIKORITA, 12; givemon SPECIES_PIKACHU, 12; givemon SPECIES_PIDGEY, 10; givemon SPECIES_RATTATA, 10; additem ITEM_MASTER_BALL, 2; end
+expect8 @gPlayerPartyCount@ 6
+
+pinrng
+evstart setwildbattle SPECIES_HOOTHOOT, 5; dowildbattle; end
+waitbattle
+bwalk bv_full_intro input:HandleInputChooseAction
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 2                # POKE BALLS
+tap A 4                                   # Master Ball: USE / CANCEL
+waitquiet
+tap A 4                                   # USE: the throw
+bwalk bv_full_throw task:Task_HandleCaughtMonPageInput
+snap bv_full_dexpage
+tap A 4
+bwalk bv_full_after prompt:Cmd_trygivecaughtmonnick
+snap bv_full_nick_prompt
+tap DOWN 4                                # NO nickname
+tap A 4
+bwalk bv_full_swapq prompt:Cmd_givecaughtmon
+snap bv_full_swap_prompt
+tap DOWN 4
+waitquiet
+snap bv_full_swap_prompt_no
+tap UP 4
+waitquiet
+tap A 4                                   # YES: choose a Pokemon to send to the box
+bwalk bv_full_choose task:Task_HandleChooseMonInput
+waitquiet
+snap bv_full_choose_01
+tap A 4                                   # slot 1 knows Cut: refused
+waitquiet
+snap bv_full_choose_hm
+tap A 4                                   # {PAUSE_UNTIL_PRESS}
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 5 DOWN
+snap bv_full_choose_06
+tap DOWN 4                                # CANCEL button
+waitquiet
+snap bv_full_choose_cancel
+tap UP 4
+waitquiet
+tap A 4                                   # Rattata to the box
+bwalk bv_full_sent free
+snap bv_full_field
+expect8 @gPlayerPartyCount@ 6
+
+# The NO path: the caught Pokemon itself goes to the box
+evstart setwildbattle SPECIES_SENTRET, 5; dowildbattle; end
+waitbattle
+bwalk bv_full2_intro input:HandleInputChooseAction
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+seek 8 @gBagPosition+5@ 2 RIGHT
+tap A 4
+waitquiet
+tap A 4
+bwalk bv_full2_throw task:Task_HandleCaughtMonPageInput
+snap bv_full2_dexpage
+tap A 4
+bwalk bv_full2_after prompt:Cmd_trygivecaughtmonnick
+tap DOWN 4
+tap A 4
+bwalk bv_full2_swapq prompt:Cmd_givecaughtmon
+tap DOWN 4                                # NO: to the box
+tap A 4
+bwalk bv_full2_sent free
+snap bv_full2_field

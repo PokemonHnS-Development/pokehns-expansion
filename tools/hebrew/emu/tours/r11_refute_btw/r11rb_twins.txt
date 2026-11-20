@@ -1,0 +1,6 @@
+# refute r11 battle_tents_rosters_and_trainer_withdraw [0]: Twins Lea & Pia withdraw line (release ROM)
+start saves/r11/refute_btw_screen/wd_base.sav
+include ../r6_league/_base.txt
+tbase
+aiswitch
+trainer DragonsDen_Cavern_hns 2

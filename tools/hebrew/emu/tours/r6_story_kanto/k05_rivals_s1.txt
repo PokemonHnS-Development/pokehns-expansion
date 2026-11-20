@@ -1,0 +1,20 @@
+# Rival battle 6 at Mt. Moon (MtMoon_Cave_EventScript_Silver, ON_FRAME at VAR_PEWTER_CITY_STATE 1)
+# and rival battle 7 in the Indigo Plateau Pokemon Center (IndigoPlateau_EventScript_Silver at
+# (32,8)) with VAR_STARTER_MON 1.
+start saves/r6_story_l5.sav
+include _base.txt
+ev setvar VAR_STARTER_MON, 1; setvar VAR_PEWTER_CITY_STATE, 2; clearflag FLAG_HIDE_MTMOON_SILVER; cleartrainerflag TRAINER_RIVAL_CYNDAQUIL_6_HNS; cleartrainerflag TRAINER_RIVAL_TOTODILE_6_HNS; cleartrainerflag TRAINER_RIVAL_CHIKORITA_6_HNS; end
+warpto MAP_MT_MOON_CAVE_HNS 4 12
+snap M_cave
+evstart setvar VAR_PEWTER_CITY_STATE, 1; end
+scene M_silver 30000
+include _battle.txt
+ev clearflag FLAG_HIDE_INDIGO_PLATEAU_SILVER; clearflag FLAG_DAILY_BEAT_SILVER; cleartrainerflag TRAINER_RIVAL_CYNDAQUIL_7_HNS; cleartrainerflag TRAINER_RIVAL_TOTODILE_7_HNS; cleartrainerflag TRAINER_RIVAL_CHIKORITA_7_HNS; end
+warpto MAP_INDIGO_PLATEAU_POKEMON_CENTER_HNS 32 10
+objs
+walkto 32 9 UP
+tap A 4
+scene I_silver 30000
+include _battle2.txt
+tap A 4
+scene I_again 20000

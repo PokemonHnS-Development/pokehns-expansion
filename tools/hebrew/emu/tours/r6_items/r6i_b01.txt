@@ -1,0 +1,16 @@
+# r6 items: balls 1/8. Each event clears the object's or tile's flag, warps next to it, turns the
+# player toward it and presses A (Std_FindItem / EventScript_HiddenItemScript, data/scripts/obtain_item.inc).
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+pick b_iron FLAG_AKALA_HIDDEN_ITEM_2 MAP_AKALA_ISLE_HNS 43 12 LEFT
+pick b_protein FLAG_AKALA_HIDDEN_ITEM_1 MAP_AKALA_ISLE_HNS 44 26 UP
+pick b_carbos FLAG_AKALA_CAVE_HIDDEN_ITEM_1 MAP_AKALA_CAVE_HNS 7 27 UP
+pick b_hp_up FLAG_AKALA_CAVE_HIDDEN_ITEM_2 MAP_AKALA_CAVE_HNS 23 18 UP
+pick b_pp_up FLAG_AKALA_FOREST_HIDDEN_ITEM_2 MAP_AKALA_FOREST_HNS 3 3 LEFT
+pick b_big_mushroom FLAG_ITEM_BELLCHIME_BIG_MUSHROOM MAP_BELLCHIME_TRAIL_HNS 12 56 UP
+pick b_ether FLAG_ITEM_BURNED_TOWER_1F_ETHER MAP_BURNED_TOWER_1F_HNS 3 8 UP
+pick b_ultra_ball FLAG_ITEM_BURNED_TOWER_B1F_ULTRA_BALL MAP_BURNED_TOWER_B1F_HNS 6 10 UP
+pick b_rare_candy FLAG_ITEM_CERULEANCAVE1_RARE_CANDY MAP_CERULEAN_CAVE_1F_HNS 12 23 UP
+pick b_max_elixir FLAG_ITEM_CERULEANCAVE1_MAX_ELIXIR MAP_CERULEAN_CAVE_1F_HNS 35 12 UP
+pick b_big_pearl FLAG_ITEM_CERULEANCAVE2_BIG_PEARL MAP_CERULEAN_CAVE_B1F_HNS 30 16 DOWN
+pick b_zinc FLAG_ITEM_CERULEANCAVE2_ZINC MAP_CERULEAN_CAVE_B1F_HNS 9 19 RIGHT

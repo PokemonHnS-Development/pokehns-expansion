@@ -1,0 +1,30 @@
+# Two menus that show gText_Normal or the NORMAL rank, drawn with RAM scripts in the contest lobby
+# (the r2 script-menu pattern, scripts/r2_script_menus/m05_contest.txt):
+#  - the lobby rank menu (MULTI_CONTEST_RANK, data/scripts/contest_hall.inc:118), every row;
+#  - the FRLG photo printer's print-type menu (MULTI_TRAINER_CARD_ICON_TINT). Its only script,
+#    data/scripts/trainer_card_frlg.inc:14, is assembled only when IS_FRLG (data/event_scripts.s:605), so no H&S
+#    player sees it; the list itself is in the ROM, and the RAM script opens it without a message. Its first
+#    row is gText_Normal in English; in Hebrew it keeps the ordinary word רגיל, because gText_Normal is now
+#    the contest rank's name (DECISIONS.md Q126).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+warptoloose MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 11
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart lockall; message 0x@LilycoveCity_ContestLobby_Text_EnterWhichRank@; waitmessage; multichoice 0, 0, MULTI_CONTEST_RANK, FALSE; closemessage; releaseall; end
+talk contest_rank_m 40 - Task_HandleMultichoiceInput
+snap contest_rank_r1
+seek 8 @menu:sMenu+2@ 1 DOWN
+snap contest_rank_r2
+seek 8 @menu:sMenu+2@ 4 DOWN
+snap contest_rank_r5
+tap B 0
+waitctl 900
+evstart lockall; multichoice 21, 0, MULTI_TRAINER_CARD_ICON_TINT, TRUE; releaseall; end
+talk tint_m 40 - Task_HandleMultichoiceInput
+snap tint_r1
+seek 8 @menu:sMenu+2@ 3 DOWN
+snap tint_r4
+seek 8 @menu:sMenu+2@ 0 DOWN
+tap A 0
+waitctl 900
+snap tint_after

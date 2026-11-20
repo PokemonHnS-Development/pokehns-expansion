@@ -1,0 +1,28 @@
+# Pokegear RIBBONS with FLAG_SYS_RIBBON_GET set and no mon holding a ribbon (menuA_base is before
+# any ribbon): the RIBBONS row is in the main menu and A prints 'no Pokemon with ribbons'
+# (CanViewRibbonsMenu false, PrintNoRibbonWinners, src/pokenav_menu_handler_gfx.c:800, 1322-1329).
+# Run: scripts/r16_pokegear/gear16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_pokegear [--clip]
+# Save: menuA_base.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+setflag FLAG_SYS_RIBBON_GET
+startmenu POKEGEAR
+waitcb2x CB2_Pokenav 600
+waitnav
+press DOWN
+waitnav
+press DOWN
+waitnav
+press DOWN
+waitnav
+press DOWN
+waitnav
+snap gn_main_ribbons
+tap A 4
+60 -
+waitquiet
+snap gn_no_ribbons
+tap B 4
+60 -
+waitquiet
+snap gn_after

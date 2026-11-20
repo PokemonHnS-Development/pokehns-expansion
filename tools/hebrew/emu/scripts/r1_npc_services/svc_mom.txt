@@ -1,0 +1,70 @@
+# Mom's savings (MULTI_MOM_MENU, NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu):
+# the menu, CHECK (balance), DEPOSIT (the amount input with the money box: 1, wrap to the
+# max, +100, B; then the max), CHECK again, WITHDRAW (1, the max), the saving toggle YES/NO
+# both ways, EXIT. The player has max money.
+start saves/r1svc_menuA_base.sav
+include ../continue.txt
+warptoloose MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_1F_HNS 5 6
+evstart lockall; call NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu; releaseall; end
+talk svc_mom_menu 10 -
+press DOWN
+snap svc_mom_menu_2
+press DOWN
+snap svc_mom_menu_3
+press DOWN
+snap svc_mom_menu_4
+press DOWN
+snap svc_mom_menu_5
+seek 8 @menu:sMenu+2@ 0 UP
+tap A 0                                  # CHECK
+talk svc_mom_balance 10 -
+# DEPOSIT: 1, wrap, +100, B
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0
+waittaskx mom_savings:Task_MomInput_HandleInput 600
+waitquiet
+snap svc_mom_dep_01
+press DOWN
+snap svc_mom_dep_max
+press UP
+press RIGHT
+snap svc_mom_dep_101
+press B
+talk svc_mom_dep_cancel 10 -
+# DEPOSIT the max
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0
+waittaskx mom_savings:Task_MomInput_HandleInput 600
+waitquiet
+press DOWN
+tap A 0
+talk svc_mom_deposited 10 -
+seek 8 @menu:sMenu+2@ 0 UP
+tap A 0
+talk svc_mom_balance2 10 -
+# WITHDRAW: 1, the max
+seek 8 @menu:sMenu+2@ 2 DOWN
+tap A 0
+waittaskx mom_savings:Task_MomInput_HandleInput 600
+waitquiet
+snap svc_mom_wd_01
+press DOWN
+snap svc_mom_wd_max
+tap A 0
+talk svc_mom_withdrawn 10 -
+# saving toggle
+seek 8 @menu:sMenu+2@ 3 DOWN
+tap A 0
+talk svc_mom_toggle 10 -
+tap A 0
+talk svc_mom_toggled 10 -
+seek 8 @menu:sMenu+2@ 3 DOWN
+tap A 0
+talk svc_mom_toggle2 10 -
+tap B 0
+talk svc_mom_toggle2_no 10 -
+# EXIT
+seek 8 @menu:sMenu+2@ 4 DOWN
+tap A 0
+talk svc_mom_bye 10 -
+waitctl 900

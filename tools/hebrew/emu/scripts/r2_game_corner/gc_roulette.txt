@@ -1,0 +1,167 @@
+# Celadon Game Corner roulette (bg events (17-18, 5-11) = Roulette_EventScript_Table2,
+# data/scripts/roulette.inc:11-22; src/roulette.c, strings :419-430). Read from (17,8) facing up.
+# Minimum wager prompt with the coins box, the controls line, a hit with its payout, a jackpot,
+# misses, keep playing YES/NO, the board cleared after six balls, a full coin case, no coins
+# left, and not enough coins at the table. Hits and misses are forced with rlwin.
+start saves/gc_base.sav
+include ../continue.txt
+ev additem ITEM_COIN_CASE; checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 500; end
+warpto MAP_CELADON_CITY_GAME_CORNER_HNS 17 8
+face UP
+tap A 0
+waittaskx menu_helpers:Task_CallYesOrNoCallback 600
+snap rl_minbet
+tap A 0
+waitcb2x CB2_Roulette 900
+waittaskx roulette:Task_WaitForNextTask 600
+snap rl_controls
+tap A 0
+waittaskx roulette:Task_HandleBetGridInput 600
+snap rl_grid
+press RIGHT
+snap rl_grid_right
+press DOWN
+snap rl_grid_down
+# ball 1: a hit (x4)
+tap A 0
+rlwin 4 1
+waittaskx roulette:Task_TryIncrementWins 900
+waittaskx roulette:Task_WaitForNextTask 900
+snap rl_hit
+tap A 0
+waittaskx roulette:Task_GivePayout 300
+waittaskx roulette:Task_WaitForNextTask 900
+snap rl_payout
+tap A 0
+waittaskx menu_helpers:Task_CallYesOrNoCallback 300
+snap rl_keep
+tap A 0
+# ball 2: jackpot (x12)
+waittaskx roulette:Task_HandleBetGridInput 600
+snap rl_grid2
+tap A 0
+rlwin 12 1
+waittaskx roulette:Task_TryIncrementWins 900
+waittaskx roulette:Task_WaitForNextTask 900
+snap rl_jackpot
+tap A 0
+waittaskx roulette:Task_GivePayout 300
+waittaskx roulette:Task_WaitForNextTask 900
+snap rl_payout2
+tap A 0
+waittaskx menu_helpers:Task_CallYesOrNoCallback 300
+10 -
+tap A 0
+# balls 3-6: misses
+waittaskx roulette:Task_HandleBetGridInput 600
+10 -
+tap A 0
+rlwin 0 0
+waittaskx roulette:Task_TryIncrementWins 900
+waittaskx roulette:Task_WaitForNextTask 900
+snap rl_miss
+tap A 0
+waittaskx menu_helpers:Task_CallYesOrNoCallback 300
+10 -
+tap A 0
+waittaskx roulette:Task_HandleBetGridInput 600
+10 -
+tap A 0
+rlwin 0 0
+waittaskx roulette:Task_TryIncrementWins 900
+waittaskx roulette:Task_WaitForNextTask 900
+tap A 0
+waittaskx menu_helpers:Task_CallYesOrNoCallback 300
+10 -
+tap A 0
+waittaskx roulette:Task_HandleBetGridInput 600
+10 -
+tap A 0
+rlwin 0 0
+waittaskx roulette:Task_TryIncrementWins 900
+waittaskx roulette:Task_WaitForNextTask 900
+tap A 0
+waittaskx menu_helpers:Task_CallYesOrNoCallback 300
+10 -
+tap A 0
+waittaskx roulette:Task_HandleBetGridInput 600
+snap rl_grid6
+tap A 0
+rlwin 0 0
+waittaskx roulette:Task_TryIncrementWins 900
+waittaskx roulette:Task_WaitForNextTask 900
+snap rl_miss6
+tap A 0
+10 -
+waittaskx roulette:Task_WaitForNextTask 300
+snap rl_clear
+tap A 0
+waittaskx menu_helpers:Task_CallYesOrNoCallback 300
+snap rl_keep_after_clear
+press DOWN
+snap rl_keep_no
+tap A 0
+waitcb2 CB2_Overworld 900
+waitctl 900 B
+# a full coin case after a payout
+ev checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 9990; end
+face UP
+tap A 0
+waittaskx menu_helpers:Task_CallYesOrNoCallback 600
+snap rl_minbet_9990
+tap A 0
+waitcb2x CB2_Roulette 900
+waittaskx roulette:Task_WaitForNextTask 600
+tap A 0
+waittaskx roulette:Task_HandleBetGridInput 600
+10 -
+tap A 0
+rlwin 4 1
+waittaskx roulette:Task_TryIncrementWins 900
+waittaskx roulette:Task_WaitForNextTask 900
+tap A 0
+waittaskx roulette:Task_GivePayout 300
+waittaskx roulette:Task_WaitForNextTask 900
+snap rl_payout_full
+tap A 0
+waittaskx roulette:Task_WaitForNextTask 300
+snap rl_full
+tap A 0
+waittaskx menu_helpers:Task_CallYesOrNoCallback 300
+10 -
+press DOWN
+tap A 0
+waitcb2 CB2_Overworld 900
+waitctl 900 B
+# three coins: one miss leaves none
+ev checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 3; end
+face UP
+tap A 0
+waittaskx menu_helpers:Task_CallYesOrNoCallback 600
+10 -
+tap A 0
+waitcb2x CB2_Roulette 900
+waittaskx roulette:Task_WaitForNextTask 600
+tap A 0
+waittaskx roulette:Task_HandleBetGridInput 600
+10 -
+tap A 0
+rlwin 0 0
+waittaskx roulette:Task_TryIncrementWins 900
+waittaskx roulette:Task_WaitForNextTask 900
+tap A 0
+waittaskx roulette:Task_WaitForNextTask 300
+snap rl_nocoins
+tap A 0
+waitcb2 CB2_Overworld 900
+waitctl 900 B
+# two coins: not enough for the table
+ev checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 2; end
+face UP
+tap A 0
+waitquiet
+snap rl_notenough
+tap A 0
+# Task_NotEnoughForMinBet (src/roulette.c:3342-3353) unlocks the controls without
+# ScriptContext_Enable, as in the English build, so the field script stays in waitstate.
+30 -

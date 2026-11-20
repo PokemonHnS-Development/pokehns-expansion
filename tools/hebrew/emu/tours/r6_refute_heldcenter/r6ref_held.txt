@@ -1,0 +1,18 @@
+# Summary SKILLS held-item box centring check: widest names, a short name and NONE
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev .set ROM_SIZE, 0; createmon 0, 0, 704, 100, item=826, nature=5, abilityNum=0, move1=1; createmon 0, 1, 717, 100, item=776, nature=6, abilityNum=0, move1=1; createmon 0, 2, 716, 100, item=1, nature=7, abilityNum=0, move1=1; createmon 0, 3, 718, 100, item=64, nature=8, abilityNum=0, move1=1; createmon 0, 4, 749, 100, item=816, nature=9, abilityNum=0, move1=1; createmon 0, 5, 767, 100, item=0, nature=10, abilityNum=0, move1=1; special CalculatePlayerPartyCount; end
+include ../../scripts/r2_summary_info_page_variants/_sum_open.txt
+sumkey RIGHT
+snap H0_skills
+sumkey DOWN
+snap H1_skills
+sumkey DOWN
+snap H2_skills
+sumkey DOWN
+snap H3_skills
+sumkey DOWN
+snap H4_skills
+sumkey DOWN
+snap H5_skills
+include ../../scripts/r2_summary_info_page_variants/_sum_close.txt

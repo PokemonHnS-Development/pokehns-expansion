@@ -1,0 +1,8 @@
+# Battle Pyramid lobby: attendant INFO, CHALLENGE -> level -> party pick, rules board, NPCs, signs.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY_HNS 7 16 pyl
+talkobj 1 pyl_info pick=1
+talkobj 1 pyl_ch pick=0,0
+signpick 1 12 pyl_rules pick=0
+visit pyl skip=1

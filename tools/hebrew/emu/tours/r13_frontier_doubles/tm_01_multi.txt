@@ -1,0 +1,94 @@
+# r13 Battle Tower multis with a lobby partner, Lv.50 (round 4 ran every partner table; this run
+# is the current release's check of the flow). The multis attendant (14,5): welcome, CHALLENGE/
+# INFO/EXIT, INFO, the level menu, 'select two', the party pick for 2, the save, the elevator, the
+# partner room and its attendant; three candidates' tables (intro, both Pokemon, YES/NO, accept
+# and reject: the three widest class + name pairs, 152 Dragon Tamer ROBERTO, 185, 191); the chosen
+# partner (152), 'thank you for choosing a partner', the multi corridor and battle room, the
+# two-opponent intro, the partner's send-out, the 2+2 battle where the partner (AI) picks its own
+# moves, the win; GO ON; battle 2; the 7th win in the lobby (BP, record prompt) and the multis
+# results board (12,5).
+start saves/r13/palace_doubles/multis_base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+include ../../scripts/r2_battle_frontier_facilities/_bf_testparty.txt
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 14 6
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+snap tm_00_lobby
+tap A 0
+drive tm_in menu
+pick 1
+drive tm_info menu
+pick 0
+drive tm_lv menu
+pick 0
+drive tm_sel task:Task_HandleChooseMonInput 20
+waitquiet
+snap tm_ps_01_start
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+snap tm_ps_02_two
+seek 8 @gPartyMenu+9@ 6 DOWN
+tap A 0
+drive tm_save menu 10
+pick 0
+saveyes tm_savebox
+drive tm_go task:Task_MoveElevator 30 9000
+snap tm_elev
+drive tm_room free 30 9000
+snap tm_room_00
+face UP
+tap A 0
+drive tm_att menu 10
+pick 1
+drive tm_att_no free 10
+go DOWN 7
+face DOWN
+ptalk tm_p152 4 152 236 57
+ptalk tm_p185 4 185 236 57
+ptalk tm_p191 4 191 236 57
+fids 4 152
+fids 16 236 57
+face DOWN
+tap A 0
+drive tm_fin menu 10
+pick 0
+drive tm_fin_acc task:Task_MoveElevator 30 9000
+fids 0 185 66 191 255 55 43 147 109 231 52 74 97 131 188
+snap tm_elev2
+waitmap tm_corridor MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_CORRIDOR_HNS
+waitmap tm_mroom MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_BATTLE_ROOM_HNS
+fastbattles off
+drive tm_b1_in battle 20 9000
+bwin2 tm_b1
+drivex tm_w1 menu 30 9000
+pick 0
+drive tm_b2_in battle 20 9000
+tstate save tm_b2
+bwin2 tm_b2
+drivex tm_b2_after menu 30 9000
+tstate load tm_b2
+sb2w16 CB2 6
+bwin2 tm_b7
+drivex tm_won menu 40 12000
+tstate save tm_won_rec
+pick 0
+drivex tm_won_yes free 20 6000
+snap tm_won_yes_end
+tstate load tm_won_rec
+pick 1
+drivex tm_won_no free 10
+evstart goto 0x@BattleFrontier_BattleTowerLobby_EventScript_ShowMultisResults_hns@
+30 -
+snap tm_res_multis
+tap A 0
+waitctl 600

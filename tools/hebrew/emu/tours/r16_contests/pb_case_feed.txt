@@ -1,0 +1,185 @@
+# Pokeblock case and feeding (src/pokeblock.c, src/use_pokeblock.c, src/pokeblock_feed.c).
+# The case is filled in RAM (pokeblocks: gSaveBlock1Ptr->pokeblocks) with one block of every colour,
+# RED .. GOLD (PBLOCK_CLR_*, include/pokeblock.h:8-22), so the list shows every name next to its
+# {SKIP 0x57} level column (gPokeblockNames, src/pokeblock.c:204-218; list rows :750-761).
+# Party slot 0 becomes a level-50 ADAMANT Bronzong (likes spicy, dislikes dry) with a 12-character
+# nickname (nick12, the widest STR_VAR_1 for the feeding lines). Then four blocks are fed from the top of
+# the list: RED spicy 30 ('happily ate', coolness rose), BLUE dry 30 ('disdainfully ate', beauty rose),
+# PINK sweet 30 ('ate', cuteness rose), GREEN bitter 30 (smartness rose); YELLOW has no flavour
+# ('nothing changed'); then the sheen is set to 255 (monsheen) and the next block is refused
+# ('won't eat any more', PrintWontEatAnymore, src/use_pokeblock.c:959-964). The list is opened on
+# row 0 (the saved list position is zero after boot) and every feed returns to row 0; the rest of the
+# list is scrolled at the end.
+# Run: scripts/r16_contests/con16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_contests [--clip]
+# Save: ladder6_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_BRONZONG, 50, nature=NATURE_ADAMANT; additem ITEM_POKEBLOCK_CASE, 1; end
+nick12 0 שששששששששששש WWWWWWWWWWWW
+pokeblocks 1:30,0,0,0,0,10 2:0,30,0,0,0,10 3:0,0,30,0,0,10 4:0,0,0,30,0,10 5:0,0,0,0,0,10 6:10,10,10,0,0,20 7:0,10,10,10,0,20 8:0,0,10,10,10,20 9:10,0,0,10,10,20 10:10,10,0,0,10,20 11:20,0,0,0,0,30 12:0,20,0,0,0,30 13:0,0,20,0,0,30 14:40,40,40,40,40,40
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+bagpocket 5
+waitquiet
+bagseek ITEM_POKEBLOCK_CASE
+waitquiet
+tap A 4
+waitquiet
+tap A 4
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+snap pb_list_01
+# feed 1: the cursor is on row 0 (the fed block is gone, the next one moved up); USE on party slot 0
+waitquiet
+snap pb_feed1_pick
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UsePokeblockMenu 900
+waitquiet
+40 -
+snap pb_feed1_party
+tap A 4
+40 -
+waitquiet
+snap pb_feed1_ask
+tap A 4
+textwatch pb_feed1_eat CB2_ShowUsePokeblockMenuForResults 3000 A
+burst pb_feed1_results 30 12
+tap A 4
+scenewatch pb_feed1_rose CB2_PokeblockMenu 1500 112 160 A 90
+waitcb2x CB2_PokeblockMenu 900
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+# feed 2: the cursor is on row 0 (the fed block is gone, the next one moved up); USE on party slot 0
+waitquiet
+snap pb_feed2_pick
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UsePokeblockMenu 900
+waitquiet
+40 -
+snap pb_feed2_party
+tap A 4
+40 -
+waitquiet
+snap pb_feed2_ask
+tap A 4
+textwatch pb_feed2_eat CB2_ShowUsePokeblockMenuForResults 3000 A
+burst pb_feed2_results 30 12
+tap A 4
+scenewatch pb_feed2_rose CB2_PokeblockMenu 1500 112 160 A 90
+waitcb2x CB2_PokeblockMenu 900
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+# feed 3: the cursor is on row 0 (the fed block is gone, the next one moved up); USE on party slot 0
+waitquiet
+snap pb_feed3_pick
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UsePokeblockMenu 900
+waitquiet
+40 -
+snap pb_feed3_party
+tap A 4
+40 -
+waitquiet
+snap pb_feed3_ask
+tap A 4
+textwatch pb_feed3_eat CB2_ShowUsePokeblockMenuForResults 3000 A
+burst pb_feed3_results 30 12
+tap A 4
+scenewatch pb_feed3_rose CB2_PokeblockMenu 1500 112 160 A 90
+waitcb2x CB2_PokeblockMenu 900
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+# feed 4: the cursor is on row 0 (the fed block is gone, the next one moved up); USE on party slot 0
+waitquiet
+snap pb_feed4_pick
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UsePokeblockMenu 900
+waitquiet
+40 -
+snap pb_feed4_party
+tap A 4
+40 -
+waitquiet
+snap pb_feed4_ask
+tap A 4
+textwatch pb_feed4_eat CB2_ShowUsePokeblockMenuForResults 3000 A
+burst pb_feed4_results 30 12
+tap A 4
+scenewatch pb_feed4_rose CB2_PokeblockMenu 1500 112 160 A 90
+waitcb2x CB2_PokeblockMenu 900
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+# feed 5: the cursor is on row 0 (the fed block is gone, the next one moved up); USE on party slot 0
+waitquiet
+snap pb_feed5_pick
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UsePokeblockMenu 900
+waitquiet
+40 -
+snap pb_feed5_party
+tap A 4
+40 -
+waitquiet
+snap pb_feed5_ask
+tap A 4
+textwatch pb_feed5_eat CB2_ShowUsePokeblockMenuForResults 3000 A
+burst pb_feed5_results 30 12
+tap A 4
+scenewatch pb_feed5_rose CB2_PokeblockMenu 1500 112 160 A 90
+waitcb2x CB2_PokeblockMenu 900
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+# sheen at the maximum: the next block is refused
+monsheen 0 255
+waitquiet
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UsePokeblockMenu 900
+waitquiet
+40 -
+tap A 4
+40 -
+waitquiet
+snap pb_full_ask
+tap A 4
+40 -
+waitquiet
+snap pb_full_wont
+tap A 4
+40 -
+waitquiet
+snap pb_full_after
+tap A 4
+40 -
+tap DOWN 4
+40 -
+tap DOWN 4
+40 -
+tap DOWN 4
+40 -
+tap DOWN 4
+40 -
+tap DOWN 4
+40 -
+tap DOWN 4
+40 -
+snap pb_use_cancel
+tap A 4                                   # the party screen's CANCEL row (six Pokemon, then CANCEL)
+waitcb2x CB2_PokeblockMenu 900
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+snap pb_list_left
+scrollshots pb_rest DOWN 12 10

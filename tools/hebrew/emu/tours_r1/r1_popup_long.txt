@@ -1,0 +1,25 @@
+# Map-name pop-up (src/map_name_popup.c:771-773: FONT_NARROW, centred in the 80 px window at
+# tile x 1, over the theme's icon at its left end) for the map sections whose Hebrew name is
+# wider than the English one (textwidth.py FONT_NARROW: New Bark 68/61, Dark Cave 65/43,
+# Azalea 64/53, Burned Tower 59/58), plus Safari Zone Gate (75/75) and Snowswept Cavern (71/78)
+# as the widest names. Each warp loads a new map section, so the pop-up slides in.
+start saves/r1_hof_base.sav
+include ../scripts/continue.txt
+warptoloose MAP_AZALEA_TOWN_HNS 19 12
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_azalea
+warptoloose MAP_DARK_CAVE_SOUTH_SIDE_HNS 14 21
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_dark_cave
+warptoloose MAP_BURNED_TOWER_1F_HNS 15 21
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_burned_tower
+warptoloose MAP_SAFARI_ZONE_GATE_HNS 16 9
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_safari_zone_gate
+warptoloose MAP_SNOWSWEPT_CAVERN_HNS 50 67
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_snowswept_cavern
+warptoloose MAP_NEW_BARK_TOWN_HNS 10 10
+waittaskdata Task_MapNamePopUpWindow 0 1 600
+snap popup_new_bark

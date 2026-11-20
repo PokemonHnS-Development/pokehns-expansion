@@ -1,0 +1,9 @@
+# include: enter the trade menu with the stashed party 'partner' as the partner's (see l04_trade_menu.txt)
+w8 @gReceivedRemoteLinkPlayers@ 1
+setcb2 CB2_StartCreateTradeMenu
+waitstate 4,5,6 600
+loadparty partner enemy
+w8 @gMain+438@ 7
+waitcb2x CB2_TradeMenu 900
+waitquiet
+40 -

@@ -1,0 +1,21 @@
+# Noble Sneasler, Snowswept Cavern: the trigger (10,28) at VAR_NOBLE_SNEASLER 1
+# (Snowswept_Cavern_EventScript_ActivateSneasler), then Snowswept_Cavern_EventScript_Sneasler
+# (SnowsweptCavern_hns/scripts.inc:73-) boss battle (_noble_battle.txt).
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev setvar VAR_NOBLE_SNEASLER, 1; setflag FLAG_HIDE_SNOWSWEPT_NOBLE_SNEASLER; end
+warpto MAP_SNOWSWEPT_CAVERN_HNS 11 28
+face LEFT
+snap sn_field
+stepto LEFT 1
+scene sn_flute 3000
+snap sn_flute_menu
+tap A 4
+scene sn_scene 20000 45
+snap sn_scene_end
+objs
+approach 38
+snap sn_before
+tap A 4
+scene sn_pre 4000
+include _noble_battle.txt

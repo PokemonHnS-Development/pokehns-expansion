@@ -1,0 +1,12 @@
+# Shared tail of a static-encounter tour (not a tour): the battle has started. Intro pages up to
+# the action menu, a savestate, then the catch branch (Master Ball, after text) and, from the
+# savestate, the defeat branch (bwin, after text).
+bwalk L_intro input:HandleInputChooseAction
+snap L_action
+ss L_battle
+bcatch L_catch
+snap L_catch_field
+sl L_battle
+bwin L_win
+fieldwatch L_win_after free 6000
+snap L_win_field

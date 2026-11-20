@@ -1,0 +1,54 @@
+# r13 Battle Dome doubles: the DOUBLE counter (17,10) from the welcome to the round-1 menu in the
+# pre-battle room: welcome, INFO pages, level menu, the party pick of 3, the save, the corridor,
+# the round-1 'ready?' menu. Saves state r1menu (OUT/_states) for the later tours.
+start saves/r13/dome_doubles/base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+fastbattles off
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 17 11
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive dd_in menu
+pick 1
+drive dd_info menu
+pick 0
+drive dd_lv menu
+pick 0
+drive dd_sel task:Task_HandleChooseMonInput 20
+# the party pick of 3: empty, each action list, all three entered
+waittask Task_HandleChooseMonInput 600
+waitquiet
+snap dd_party_00
+seek 8 @gPartyMenu+9@ 0 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+snap dd_party_01_menu
+pick 0
+waittask Task_HandleChooseMonInput 120
+waitquiet
+snap dd_party_02
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+snap dd_party_03_menu
+pick 0
+waittask Task_HandleChooseMonInput 120
+waitquiet
+snap dd_party_04_three
+tap A 0
+drive dd_save menu 10
+pick 0
+saveyes dd_saveq
+drivex dd_go menu 30 9000
+domeinfo
+domesync dumpif r1
+dstate save r1menu

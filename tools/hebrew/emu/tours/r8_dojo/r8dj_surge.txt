@@ -1,0 +1,8 @@
+# Dojo invitation, Lt. Surge on Route 10 (Route10_EventScript_Surge, data/maps/Route10_hns/scripts.inc:10-21): one message,
+# the fade, the leader removed, FLAG_HIDE_DOJO_* cleared. The script has no YES/NO.
+start saves/r8_dojo_base.sav
+include _base.txt
+ev clearflag FLAG_HIDE_PLANT_SURGE; setflag FLAG_HIDE_DOJO_SURGE; end
+warpto MAP_ROUTE10_HNS 17 56
+approach 8
+include _invite.txt

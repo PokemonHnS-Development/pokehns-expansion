@@ -1,0 +1,60 @@
+# refute r11 battle_tents_rosters_and_trainer_withdraw [1]: Slateport tent trainers 13, 15, 19 (release ROM)
+start saves/r11/refute_btw_screen/tent_base.sav
+include ../../scripts/continue.txt
+warptoloose MAP_SLATEPORT_CITY_BATTLE_TENT_LOBBY_HNS 6 6
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+snap sl_lobby
+tap A 0
+drive sl_in menu
+pick 0
+drive sl_save menu 10
+pick 0
+saveyes
+fastbattles off
+drive sl_go cb2:CB2_SelectScreen 30 9000
+waitquiet
+60 -
+snap sl_rent_01
+tap A 30
+tap DOWN 10
+tap A 40
+tap RIGHT 20
+tap A 30
+tap DOWN 10
+tap A 40
+tap RIGHT 20
+tap A 30
+tap DOWN 10
+tap A 40
+snap sl_rent_confirm
+tap A 40
+waitcb2x CB2_Overworld 3000
+tstate save go
+# trainer 13
+tstate load go
+tentpin 13
+drivex s13_in battle 30 9000
+tentlog s13_in
+oppname
+tentwin s13_b
+drivex s13_after menu 30 9000
+unpin
+# trainer 15
+tstate load go
+tentpin 15
+drivex s15_in battle 30 9000
+tentlog s15_in
+oppname
+tentwin s15_b
+drivex s15_after menu 30 9000
+unpin
+# trainer 19
+tstate load go
+tentpin 19
+drivex s19_in battle 30 9000
+tentlog s19_in
+oppname
+tentwin s19_b
+drivex s19_after menu 30 9000
+unpin

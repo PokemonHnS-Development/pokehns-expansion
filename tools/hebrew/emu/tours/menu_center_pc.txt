@@ -1,0 +1,303 @@
+# Pokemon Center: the nurse (YES/NO, healing), then the PC (data/scripts/pc.inc):
+# SOMEONE'S PC = Pokemon Storage System (src/pokemon_storage_system.c) in every mode,
+# with the box options (JUMP / WALLPAPER / NAME), a Pokemon's submenu, its summary, MARK
+# and RELEASE (answered NO); GOLD's PC = item storage (src/player_pc.c): WITHDRAW with
+# the quantity selector, DEPOSIT (the bag in deposit mode), TOSS, MAILBOX; LOG OFF.
+# Storage waits: Task_PokeStorageMain with sStorage->state == MSTATE_HANDLE_INPUT (0,
+# src/pokemon_storage_system.c:2285); the cursor and menus animate on fixed timers, so
+# a few idle frames after a key are not tied to text length.
+start save:menuA_base
+include ../scripts/continue.txt
+
+# --- Nurse: welcome pages, YES/NO, the heal (its messages do not all wait for A)
+face UP
+talk menu_center_nurse 20
+tap A 0                                   # YES
+talk menu_center_nurse_heal 20 -
+
+# --- The PC is at (11,1) (metatile behavior MB_PC); stand below it facing up
+go RIGHT 4
+go UP 2
+talk menu_pc_boot 10                      # ends at SOMEONE'S PC / GOLD's PC / CHALLENGES / LOG OFF
+tap A 0                                   # SOMEONE'S PC
+talk menu_pc_storage_open 10 - Task_PCMainMenu
+waittaskdata Task_PCMainMenu 0 2 600      # STATE_HANDLE_INPUT (src/pokemon_storage_system.c:1545)
+snap menu_pc_storage_menu_01_move
+press DOWN
+snap menu_pc_storage_menu_02_deposit
+press DOWN
+snap menu_pc_storage_menu_03_withdraw
+press DOWN
+snap menu_pc_storage_menu_04_move_items
+press DOWN
+snap menu_pc_storage_menu_05_see_ya
+press DOWN                                # wraps to MOVE POKeMON
+
+# MOVE POKeMON: the box, a Pokemon's submenu, SUMMARY, MARK, RELEASE (NO)
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap menu_pc_box_01
+press A
+waittaskx Task_OnSelectedMon 300
+12 -
+snap menu_pc_box_mon_menu
+press DOWN                                # SUMMARY
+press A
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap menu_pc_box_summary
+press B
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+press A
+waittaskx Task_OnSelectedMon 300
+12 -
+press DOWN
+press DOWN
+press DOWN                                # MARK (MOVE SUMMARY WITHDRAW MARK RELEASE CANCEL)
+press A
+waittaskx Task_ShowMarkMenu 300
+12 -
+snap menu_pc_box_mark
+press B
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_OnSelectedMon 300
+12 -
+press DOWN
+press DOWN
+press DOWN
+press DOWN                                # RELEASE
+press A
+waittaskx Task_ReleaseMon 300
+waitquiet
+12 -
+snap menu_pc_box_release_confirm
+press B                                   # NO
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+
+# Box options: UP to the box title, A = JUMP / WALLPAPER / NAME / CANCEL
+press UP
+12 -
+press A
+waittaskx Task_HandleBoxOptions 300
+12 -
+snap menu_pc_box_options
+press DOWN                                # WALLPAPER: theme list, then a theme's wallpapers
+press A
+waittaskx Task_HandleWallpapers 300
+12 -
+snap menu_pc_box_wallpaper_themes
+press A
+12 -
+snap menu_pc_box_wallpaper_list
+press B
+12 -
+press B
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A                                   # NAME: the naming screen for the box
+waittaskx Task_HandleBoxOptions 300
+12 -
+press DOWN
+press DOWN
+press A
+waitcb2x CB2_NamingScreen 900
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 900   # state STATE_HANDLE_INPUT (src/naming_screen.c:128-167)
+snap menu_pc_box_name
+press START                               # cursor to OK; an empty entry keeps the old name
+waitpmem 8 naming_screen:sNamingScreen 1E10 2 300
+press A
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+press A                                   # JUMP: the box list
+waittaskx Task_HandleBoxOptions 300
+12 -
+press A
+waittaskx Task_JumpBox 300
+12 -
+snap menu_pc_box_jump
+press B
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+
+# Leave: B asks "Continue BOX operations?"
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+12 -
+snap menu_pc_box_exit_confirm
+press DOWN
+press A                                   # NO: back to the storage menu
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+
+# DEPOSIT POKeMON: the party list and a party Pokemon's submenu
+press DOWN
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap menu_pc_deposit_01
+press A
+waittaskx Task_OnSelectedMon 300
+12 -
+snap menu_pc_deposit_mon_menu
+press A                                   # DEPOSIT: "Deposit in which BOX?"
+waittaskx Task_DepositMenu 300
+waitquiet
+12 -
+snap menu_pc_deposit_which_box
+press B
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+
+# WITHDRAW POKeMON: the box in withdraw mode and the submenu
+press DOWN
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap menu_pc_withdraw_01
+press A
+waittaskx Task_OnSelectedMon 300
+12 -
+snap menu_pc_withdraw_mon_menu
+press B
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+
+# MOVE ITEMS: the box in item mode, an item's menu
+press DOWN
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+snap menu_pc_move_items_01
+press A
+12 -
+snap menu_pc_move_items_menu
+press B
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+
+# SEE YA! back to "Which PC should be accessed?"
+press B
+talk menu_pc_storage_closed 10 -
+
+# GOLD's PC: ITEM STORAGE / MAILBOX / TURN OFF
+tap DOWN 4
+tap A 0
+talk menu_pc_player_open 10 - PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+snap menu_pc_player_menu
+tap A 0                                   # ITEM STORAGE: WITHDRAW / DEPOSIT / TOSS / CANCEL
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+snap menu_pc_items_menu_01
+press DOWN
+snap menu_pc_items_menu_02
+press DOWN
+snap menu_pc_items_menu_03
+press DOWN
+snap menu_pc_items_menu_04
+press DOWN
+tap A 0                                   # WITHDRAW ITEM: the list, an item, its quantity
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap menu_pc_withdraw_item_list
+press DOWN
+snap menu_pc_withdraw_item_list_02
+tap A 0
+waittaskx ItemStorage_HandleQuantityRolling 600
+waitquiet
+snap menu_pc_withdraw_item_qty_01
+press UP
+snap menu_pc_withdraw_item_qty_02
+tap A 0
+waitquiet
+snap menu_pc_withdraw_item_done
+press A
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+press DOWN                                # DEPOSIT ITEM: the bag in deposit mode
+tap A 0
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap menu_pc_deposit_item_bag
+tap A 0
+waitquiet
+snap menu_pc_deposit_item_qty
+tap A 0
+waitquiet
+snap menu_pc_deposit_item_done
+press A
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+press B
+waitcb2x CB2_Overworld 900
+waittaskx ItemStorageMenuProcessInput 900
+waitquiet
+press DOWN                                # TOSS ITEM: quantity, then "Throw away?" YES/NO
+tap A 0
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap menu_pc_toss_item_list
+tap A 0
+waittaskx ItemStorage_HandleQuantityRolling 600
+waitquiet
+tap A 0
+waitquiet
+snap menu_pc_toss_item_confirm
+press B                                   # NO
+waitquiet
+snap menu_pc_toss_item_no
+waittaskx ItemStorage_ProcessInput 600
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+press B
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press DOWN                                # MAILBOX
+tap A 0
+waitquiet
+snap menu_pc_mailbox
+press A
+waitquiet
+press B
+talk menu_pc_logoff 10 -
+waitctl 900 B

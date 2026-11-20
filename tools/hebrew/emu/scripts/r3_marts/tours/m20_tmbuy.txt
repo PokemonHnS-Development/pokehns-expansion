@@ -1,0 +1,53 @@
+# Goldenrod 5F with three TMs owned: SOLD OUT rows (src/shop.c:1364-1370), 'that item is sold out'
+# (src/shop.c:1793), and a TM not owned = an important item: no quantity window, 'You wanted X?
+# That'll be N' with YES/NO (src/shop.c:1843-1850), YES, then NO on another TM.
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+ev additem ITEM_TM_PROTECT; additem ITEM_TM_HYPER_BEAM; additem ITEM_TM_THUNDER; end
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_5F_HNS 17 13
+evstart goto GoldenrodDeptStore5_EventScript_Clerk
+talk m20_tmbuy_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m20_tmbuy_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m20_tmbuy
+listgo 1
+tap A 0
+snap m20_tmbuy_soldout
+tap A 0
+snap m20_tmbuy_soldout_back
+listgo 0
+tap A 0
+snap m20_tmbuy_tm16
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m20_tmbuy_tm16_yesno
+tap A 0
+snap m20_tmbuy_tm16_thanks
+tap A 0
+snap m20_tmbuy_tm16_back
+listgo 2
+tap A 0
+snap m20_tmbuy_tm33
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m20_tmbuy_tm33_yesno
+tap B 0
+waittaskx Task_BuyMenu 600
+waitquiet
+snap m20_tmbuy_tm33_no
+listshots m20_tmbuy_after
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m20_tmbuy_bye 10 -
+waitctl 900

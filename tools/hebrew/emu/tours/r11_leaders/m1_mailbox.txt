@@ -1,0 +1,998 @@
+# r11 (gen_mail.py): mail given from the bag, read, sent to the PC, and the PC MAILBOX, with
+# short / long Hebrew senders (Latin twins on the English ROM), Kenya's unpadded sender and
+# two mails written on the English ROM (mail_en_base.sav).
+start saves/mail_en_base.sav
+include _base.txt
+ev callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; special CalculatePlayerPartyCount; additem ITEM_ORANGE_MAIL, 1; additem ITEM_HARBOR_MAIL, 1; additem ITEM_GLITTER_MAIL, 1; additem ITEM_MECH_MAIL, 1; additem ITEM_WOOD_MAIL, 1; additem ITEM_WAVE_MAIL, 1; additem ITEM_BEAD_MAIL, 1; additem ITEM_SHADOW_MAIL, 1; additem ITEM_FAB_MAIL, 1; setvar VAR_KENYA, 0; end
+mails
+# Kenya (Route 35 gate officer Randy, Gate_GoldenrodCity_Route35_hns/scripts.inc:4-30)
+warpto MAP_GATE_GOLDENROD_CITY_ROUTE35_HNS 3 6
+face UP
+tap A 4
+scene ky_offer 6000
+pickd 0
+scene ky_yes 12000
+snap ky_free
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap ky_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+snap ky_actions_mail
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+snap ky_mailmenu
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap ky_read
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+snap ky_sendpc
+tap A 4
+waitkey 600
+snap ky_sent
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+# mail from a player named ש / S (ITEM_ORANGE_MAIL)
+setname ש S
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+bagpocket 0
+bagseek ITEM_ORANGE_MAIL
+waitquiet
+snap p1_orange_bag
+tap A 4
+waitquiet
+snap p1_orange_context
+tap ROWNEXT 4
+waitquiet
+snap p1_orange_context_give
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap p1_orange_give_party
+tap A 4
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+snap p1_orange_ec_frame
+ecputword 0 0 EC_GROUP_GREETINGS EC_WORD_THANK_YOU
+ecbutton 2
+ec A
+snap p1_orange_ec_confirm
+tap A 0
+waitcb2x CB2_UpdatePartyMenu 1200
+60 -
+waitquiet
+snap p1_orange_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap p1_orange_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+snap p1_orange_actions_mail
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+snap p1_orange_mailmenu
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap p1_orange_read
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+snap p1_orange_sendpc
+tap A 4
+waitkey 600
+snap p1_orange_sent
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+# mail from a player named דן / DN (ITEM_HARBOR_MAIL)
+setname דן DN
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+bagpocket 0
+bagseek ITEM_HARBOR_MAIL
+waitquiet
+tap A 4
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_GREETINGS EC_WORD_THANK_YOU
+ecbutton 2
+ec A
+tap A 0
+waitcb2x CB2_UpdatePartyMenu 1200
+60 -
+waitquiet
+snap p2_harbor_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap p2_harbor_read
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap p2_harbor_sent
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+# mail from a player named רון / RON (ITEM_GLITTER_MAIL)
+setname רון RON
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+bagpocket 0
+bagseek ITEM_GLITTER_MAIL
+waitquiet
+tap A 4
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_GREETINGS EC_WORD_THANK_YOU
+ecbutton 2
+ec A
+tap A 0
+waitcb2x CB2_UpdatePartyMenu 1200
+60 -
+waitquiet
+snap p3_glitter_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap p3_glitter_read
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap p3_glitter_sent
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+# mail from a player named נועה / NOAH (ITEM_MECH_MAIL)
+setname נועה NOAH
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+bagpocket 0
+bagseek ITEM_MECH_MAIL
+waitquiet
+tap A 4
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_GREETINGS EC_WORD_THANK_YOU
+ecbutton 2
+ec A
+tap A 0
+waitcb2x CB2_UpdatePartyMenu 1200
+60 -
+waitquiet
+snap p4_mech_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap p4_mech_read
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap p4_mech_sent
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+# mail from a player named אביבה / AVIVA (ITEM_WOOD_MAIL)
+setname אביבה AVIVA
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+bagpocket 0
+bagseek ITEM_WOOD_MAIL
+waitquiet
+tap A 4
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_GREETINGS EC_WORD_THANK_YOU
+ecbutton 2
+ec A
+tap A 0
+waitcb2x CB2_UpdatePartyMenu 1200
+60 -
+waitquiet
+snap p5_wood_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap p5_wood_read
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap p5_wood_sent
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+# mail from a player named מיכאלה / MICHAL (ITEM_WAVE_MAIL)
+setname מיכאלה MICHAL
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+bagpocket 0
+bagseek ITEM_WAVE_MAIL
+waitquiet
+tap A 4
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_GREETINGS EC_WORD_THANK_YOU
+ecbutton 2
+ec A
+tap A 0
+waitcb2x CB2_UpdatePartyMenu 1200
+60 -
+waitquiet
+snap p6_wave_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap p6_wave_read
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap p6_wave_sent
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+# mail from a player named אלכסנדר / ALEXAND (ITEM_BEAD_MAIL)
+setname אלכסנדר ALEXAND
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+bagpocket 0
+bagseek ITEM_BEAD_MAIL
+waitquiet
+tap A 4
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_GREETINGS EC_WORD_THANK_YOU
+ecbutton 2
+ec A
+tap A 0
+waitcb2x CB2_UpdatePartyMenu 1200
+60 -
+waitquiet
+snap p7_bead_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap p7_bead_read
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap p7_bead_sent
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+# ITEM_SHADOW_MAIL from בן_דוד / BEN_DAV: read from the party
+setname בן_דוד BEN_DAV
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+bagpocket 0
+bagseek ITEM_SHADOW_MAIL
+waitquiet
+tap A 4
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_GREETINGS EC_WORD_THANK_YOU
+ecbutton 2
+ec A
+tap A 0
+waitcb2x CB2_UpdatePartyMenu 1200
+60 -
+waitquiet
+snap x1_shadow_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap x1_shadow_read
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 600
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+# take it back to the bag so the next one can be given
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+tap DOWN 4
+tap A 4
+waittaskx Task_HandleLoseMailMessageYesNoInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap x1_shadow_taken_lost
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+# ITEM_FAB_MAIL from GOLD / GOLD: read from the party, then TAKE into the full mailbox
+setname GOLD GOLD
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+bagpocket 0
+bagseek ITEM_FAB_MAIL
+waitquiet
+tap A 4
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_GREETINGS EC_WORD_THANK_YOU
+ecbutton 2
+ec A
+tap A 0
+waitcb2x CB2_UpdatePartyMenu 1200
+60 -
+waitquiet
+snap x2_fab_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap x2_fab_read
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap x2_fab_full
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap x2_fab_full_after
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+mails
+# the PC MAILBOX (src/player_pc.c, list src/menu_specialized.c:248-261)
+evstart lockall; special PlayerPC; waitstate; releaseall; end
+waittaskx PlayerPCProcessMenuInput 900
+waitquiet
+snap mb_pc_menu
+press DOWN
+snap mb_pc_menu_mailbox
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_list_00
+press DOWN
+snap mb_list_01
+press DOWN
+snap mb_list_02
+press DOWN
+snap mb_list_03
+press DOWN
+snap mb_list_04
+press DOWN
+snap mb_list_05
+press DOWN
+snap mb_list_06
+press DOWN
+snap mb_list_07
+press DOWN
+snap mb_list_08
+press DOWN
+snap mb_list_09
+press DOWN
+snap mb_list_10
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+waitquiet
+snap mb_list_top
+# mail 0
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap mb_m00_opts
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap mb_m00_read
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_m00_back
+press DOWN
+# mail 1
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap mb_m01_opts
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap mb_m01_read
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_m01_back
+press DOWN
+# mail 2
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap mb_m02_opts
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap mb_m02_read
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_m02_back
+press DOWN
+# mail 3
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap mb_m03_opts
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap mb_m03_read
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_m03_back
+press DOWN
+# mail 4
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap mb_m04_opts
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap mb_m04_read
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_m04_back
+press DOWN
+# mail 5
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap mb_m05_opts
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap mb_m05_read
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_m05_back
+press DOWN
+# mail 6
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap mb_m06_opts
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap mb_m06_read
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_m06_back
+press DOWN
+# mail 7
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap mb_m07_opts
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap mb_m07_read
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_m07_back
+press DOWN
+# mail 8
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap mb_m08_opts
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap mb_m08_read
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_m08_back
+press DOWN
+# mail 9
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap mb_m09_opts
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap mb_m09_read
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_m09_back
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+seek 8 @menu:sMenu+2@ 1 DOWN
+snap mb_opt_tobag
+seek 8 @menu:sMenu+2@ 2 DOWN
+snap mb_opt_give
+seek 8 @menu:sMenu+2@ 3 DOWN
+snap mb_opt_cancel
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_after_cancel
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 4
+waittaskx Mailbox_HandleConfirmMoveToBag 900
+waitquiet
+snap mb_tobag_prompt
+tap DOWN 4
+waitquiet
+snap mb_tobag_no_sel
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap mb_tobag_no
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+seek 8 @menu:sMenu+2@ 2 DOWN
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap mb_give_party
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 4
+60 -
+waitquiet
+snap mb_given
+tap A 4
+120 -
+waitquiet
+snap mb_after_give
+tap B 4
+waittaskx PlayerPCProcessMenuInput 900
+waitquiet
+snap mb_pc_menu_end
+tap B 4
+waitctl 900 B

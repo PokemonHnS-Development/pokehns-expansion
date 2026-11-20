@@ -1,0 +1,93 @@
+# A new game played from an empty battery, as a player would see it: the main menu, the
+# professor's speech (every page), BOY / GIRL, the name (the offered name kept), the name
+# confirmation, the challenge disclaimer, each tab of the challenge menu with the defaults
+# (MODE, FEATURES, RANDOMIZER, NUZLOCKE, DIFFICULTY, CHALLENGES) and a row's description,
+# the confirmation and the closing lines, then the bedroom.
+# Driver: pe_ops.py (hns.py + the story-tour ops + talkw / fight / walkfight / walkw / scenea / pocket).
+start empty
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+snap pe00_mainmenu
+tap A 30                                         # NEW GAME
+
+waitkey 3000
+talk pe00_intro 40 -
+waittask Task_NewGameHnsSpeech_ChooseGender 3000
+10 -
+snap pe00_boyorgirl_boy
+press DOWN
+waittask Task_NewGameHnsSpeech_ChooseGender 600
+waitquiet
+30 -
+snap pe00_boyorgirl_girl
+press UP
+waittask Task_NewGameHnsSpeech_ChooseGender 600
+30 -
+tap A 30                                         # BOY
+waittask Task_NewGameHnsSpeech_WaitPressBeforeNameChoice 600
+snap pe00_whatsyourname
+tap A 30
+waitcb2 CB2_NamingScreen 600
+waittask naming_screen:Task_HandleInput 600
+30 -
+snap pe00_naming
+tap START 30
+tap A 30
+waittask Task_NewGameHnsSpeech_ProcessNameYesNoMenu 900
+10 -
+snap pe00_soitsplayer_yesno
+tap A 30                                         # YES
+
+waitkey 1200
+talk pe00_disclaimer 12 -
+waittask Task_NewGameHnsSpeech_WaitPressDisclaimer 600
+snap pe00_disclaimer_last
+tap A 30
+waittask challenge_menu:Task_ProcessInput 900
+waitquiet
+snap pe00_chal_tab1
+press DOWN
+snap pe00_chal_tab1_r1
+press UP
+press R
+snap pe00_chal_tab2
+press DOWN
+snap pe00_chal_tab2_r1
+press UP
+press R
+snap pe00_chal_tab3
+press DOWN
+snap pe00_chal_tab3_r1
+press UP
+press R
+snap pe00_chal_tab4
+press DOWN
+snap pe00_chal_tab4_r1
+press UP
+press R
+snap pe00_chal_tab5
+press DOWN
+snap pe00_chal_tab5_r1
+press UP
+press R
+snap pe00_chal_tab6
+press DOWN
+snap pe00_chal_tab6_r1
+press UP
+press R
+waittask Task_CallYesOrNoCallback 120
+10 -
+snap pe00_chal_confirm
+tap A 30                                         # YES
+waittask Task_NewGameHnsSpeech_WaitForTextAfterChallengeMenu 600
+waitquiet
+20 -
+snap pe00_after_challenge
+tap A 30
+waitkey 1200
+talk pe00_ready 20 -
+waitkey 1200
+talk pe00_areyouready 20 -
+waitcb2 CB2_Overworld 3000 A
+waitctl 1200
+snap pe00_bedroom

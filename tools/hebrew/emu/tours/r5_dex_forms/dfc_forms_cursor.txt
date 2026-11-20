@@ -1,0 +1,556 @@
+# Pokedex FORMS page cursor at every position, national numerical list (src/pokedex_plus_hgss.c
+# Task_HandleFormsScreenInput :7490-7594, PrintForms :7600-7645): Pikachu (15 forms), Unown (27) and
+# Arceus (17), whose positions 14+ have no icon (PrintForms draws 13) and put the arrow on empty rows;
+# Castform (3), Paldean Tauros (2), and Alolan Sandslash (no forms: sText_FORMS_NONE). Each list: the
+# page out of the cursor (sText_FORMS_Buttons_PE), A (sText_FORMS_Buttons_Submenu_PE) and RIGHT to
+# the last form, UP to row 1 and DOWN to the last row on lists of 7 or more, B out of the cursor.
+# Then A on Pikachu forms 9-11 (the Sinnoh, Unova and Kalos caps) for their INFO pages.
+# The list opens on sLastSelectedPokemon (:2107), so each species is set there before the Pokedex
+# opens; SaveBlock2.pokedex (+0x18) mode 1 = national, order 0 = numerical. Leaving the Pokedex
+# returns to the field with the start menu open, so the next species is picked from it directly.
+# The arrow position depends only on the cursor index, so a fixed waitquiet after each step is enough.
+start saves/r2dex_all.sav
+include ../../scripts/continue.txt
+w8 @SB2+19@ 1
+w8 @SB2+18@ 0
+
+w16 @sLastSelectedPokemon@ 19
+press START 2
+waitptr gMenuCallback HandleStartMenuInput
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap A 4
+waittaskx Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx Task_HandleEvolutionScreenInput 600
+tap START 4
+waittaskx Task_HandleFormsScreenInput 600
+snap dfc_pikachu_out
+tap A 4
+waitquiet
+snap dfc_pikachu_c01
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c02
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c03
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c04
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c05
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c06
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c07
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c08
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c09
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c10
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c11
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c12
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c13
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c14
+tap RIGHT 4
+waitquiet
+snap dfc_pikachu_c15
+tap UP 4
+waitquiet
+snap dfc_pikachu_up08
+tap UP 4
+waitquiet
+snap dfc_pikachu_up01
+tap UP 4                                  # UP on row 1 goes to position 1
+waitquiet
+snap dfc_pikachu_up01
+tap DOWN 4
+waitquiet
+snap dfc_pikachu_dn08
+tap DOWN 4
+waitquiet
+snap dfc_pikachu_dn15
+tap B 4                                   # leave the cursor
+waitquiet
+snap dfc_pikachu_out_after_b
+tap B 4                                   # FORMS -> list
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap B 4                                   # list -> field, start menu open again
+waitcb2x CB2_Overworld 600
+
+w16 @sLastSelectedPokemon@ E8
+waitptr gMenuCallback HandleStartMenuInput
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap A 4
+waittaskx Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx Task_HandleEvolutionScreenInput 600
+tap START 4
+waittaskx Task_HandleFormsScreenInput 600
+snap dfc_unown_out
+tap A 4
+waitquiet
+snap dfc_unown_c01
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c02
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c03
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c04
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c05
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c06
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c07
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c08
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c09
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c10
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c11
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c12
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c13
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c14
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c15
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c16
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c17
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c18
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c19
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c20
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c21
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c22
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c23
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c24
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c25
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c26
+tap RIGHT 4
+waitquiet
+snap dfc_unown_c27
+tap UP 4
+waitquiet
+snap dfc_unown_up20
+tap UP 4
+waitquiet
+snap dfc_unown_up13
+tap UP 4
+waitquiet
+snap dfc_unown_up06
+tap UP 4                                  # UP on row 1 goes to position 1
+waitquiet
+snap dfc_unown_up01
+tap DOWN 4
+waitquiet
+snap dfc_unown_dn08
+tap DOWN 4
+waitquiet
+snap dfc_unown_dn15
+tap DOWN 4
+waitquiet
+snap dfc_unown_dn22
+tap DOWN 4
+waitquiet
+snap dfc_unown_dn27
+tap B 4                                   # leave the cursor
+waitquiet
+snap dfc_unown_out_after_b
+tap B 4                                   # FORMS -> list
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap B 4                                   # list -> field, start menu open again
+waitcb2x CB2_Overworld 600
+
+w16 @sLastSelectedPokemon@ 1DB
+waitptr gMenuCallback HandleStartMenuInput
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap A 4
+waittaskx Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx Task_HandleEvolutionScreenInput 600
+tap START 4
+waittaskx Task_HandleFormsScreenInput 600
+snap dfc_arceus_out
+tap A 4
+waitquiet
+snap dfc_arceus_c01
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c02
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c03
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c04
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c05
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c06
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c07
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c08
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c09
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c10
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c11
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c12
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c13
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c14
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c15
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c16
+tap RIGHT 4
+waitquiet
+snap dfc_arceus_c17
+tap UP 4
+waitquiet
+snap dfc_arceus_up10
+tap UP 4
+waitquiet
+snap dfc_arceus_up03
+tap UP 4                                  # UP on row 1 goes to position 1
+waitquiet
+snap dfc_arceus_up01
+tap DOWN 4
+waitquiet
+snap dfc_arceus_dn08
+tap DOWN 4
+waitquiet
+snap dfc_arceus_dn15
+tap DOWN 4
+waitquiet
+snap dfc_arceus_dn17
+tap B 4                                   # leave the cursor
+waitquiet
+snap dfc_arceus_out_after_b
+tap B 4                                   # FORMS -> list
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap B 4                                   # list -> field, start menu open again
+waitcb2x CB2_Overworld 600
+
+w16 @sLastSelectedPokemon@ 180
+waitptr gMenuCallback HandleStartMenuInput
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap A 4
+waittaskx Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx Task_HandleEvolutionScreenInput 600
+tap START 4
+waittaskx Task_HandleFormsScreenInput 600
+snap dfc_castform_out
+tap A 4
+waitquiet
+snap dfc_castform_c01
+tap RIGHT 4
+waitquiet
+snap dfc_castform_c02
+tap RIGHT 4
+waitquiet
+snap dfc_castform_c03
+tap B 4                                   # leave the cursor
+waitquiet
+snap dfc_castform_out_after_b
+tap B 4                                   # FORMS -> list
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap B 4                                   # list -> field, start menu open again
+waitcb2x CB2_Overworld 600
+
+w16 @sLastSelectedPokemon@ 1D2
+waitptr gMenuCallback HandleStartMenuInput
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap A 4
+waittaskx Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx Task_HandleEvolutionScreenInput 600
+tap START 4
+waittaskx Task_HandleFormsScreenInput 600
+snap dfc_taurosp_out
+tap A 4
+waitquiet
+snap dfc_taurosp_c01
+tap RIGHT 4
+waitquiet
+snap dfc_taurosp_c02
+tap B 4                                   # leave the cursor
+waitquiet
+snap dfc_taurosp_out_after_b
+tap B 4                                   # FORMS -> list
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap B 4                                   # list -> field, start menu open again
+waitcb2x CB2_Overworld 600
+
+w16 @sLastSelectedPokemon@ 1A7
+waitptr gMenuCallback HandleStartMenuInput
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap A 4
+waittaskx Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx Task_HandleEvolutionScreenInput 600
+tap START 4
+waittaskx Task_HandleFormsScreenInput 600
+snap dfc_sandslasha_none
+tap A 4                                   # no forms: A opens no cursor
+waitquiet
+snap dfc_sandslasha_none_after_a
+tap B 4                                   # FORMS -> list
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap B 4                                   # list -> field, start menu open again
+waitcb2x CB2_Overworld 600
+
+w16 @sLastSelectedPokemon@ 19
+waitptr gMenuCallback HandleStartMenuInput
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap A 4
+waittaskx Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx Task_HandleEvolutionScreenInput 600
+tap START 4
+waittaskx Task_HandleFormsScreenInput 600
+tap A 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap A 4                                   # that form's INFO page
+waittaskx Task_HandleInfoScreenInput 600
+snap dfc_pikachu_f09_sinnoh_info
+tap B 4                                   # INFO -> list
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap B 4                                   # list -> field, start menu open again
+waitcb2x CB2_Overworld 600
+
+w16 @sLastSelectedPokemon@ 19
+waitptr gMenuCallback HandleStartMenuInput
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap A 4
+waittaskx Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx Task_HandleEvolutionScreenInput 600
+tap START 4
+waittaskx Task_HandleFormsScreenInput 600
+tap A 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap A 4                                   # that form's INFO page
+waittaskx Task_HandleInfoScreenInput 600
+snap dfc_pikachu_f10_unova_info
+tap B 4                                   # INFO -> list
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap B 4                                   # list -> field, start menu open again
+waitcb2x CB2_Overworld 600
+
+w16 @sLastSelectedPokemon@ 19
+waitptr gMenuCallback HandleStartMenuInput
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap A 4
+waittaskx Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx Task_HandleEvolutionScreenInput 600
+tap START 4
+waittaskx Task_HandleFormsScreenInput 600
+tap A 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap RIGHT 4
+waitquiet
+tap A 4                                   # that form's INFO page
+waittaskx Task_HandleInfoScreenInput 600
+snap dfc_pikachu_f11_kalos_info
+tap B 4                                   # INFO -> list
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap B 4                                   # list -> field, start menu open again
+waitcb2x CB2_Overworld 600

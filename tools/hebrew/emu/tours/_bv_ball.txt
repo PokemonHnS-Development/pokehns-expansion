@@ -1,0 +1,9 @@
+# Include: from the action menu, BAG > (POKE BALLS, cursor on the Poke Ball) > USE.
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+seek 16 @gBagPosition+0C@ 0 UP
+tap A 4
+waitquiet
+tap A 4

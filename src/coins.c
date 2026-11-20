@@ -17,8 +17,15 @@ void PrintCoinsString(u32 coinAmount)
     ConvertIntToDecimalStringN(gStringVar1, coinAmount, STR_CONV_MODE_RIGHT_ALIGN, MAX_COIN_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_Coins);
 
+#if TEXT_RTL
+    // The Hebrew label is wider than the 64-px box at four digits in the normal font; the narrow
+    // font keeps every amount inside it without the font changing as the amount grows.
+    xAlign = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 0x40);
+    AddTextPrinterParameterized(sCoinsWindowId, FONT_NARROW, gStringVar4, xAlign, 1, 0, NULL);
+#else
     xAlign = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 0x40);
     AddTextPrinterParameterized(sCoinsWindowId, FONT_NORMAL, gStringVar4, xAlign, 1, 0, NULL);
+#endif
 }
 
 void ShowCoinsWindow(u32 coinAmount, u8 x, u8 y)

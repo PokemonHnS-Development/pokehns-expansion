@@ -1,0 +1,15 @@
+# Trainer Hill entry: the counter trigger at (9,6), first-visit save, INFO, Normal tag match, start.
+ev setmonmove 0, 0, MOVE_SWIFT; setmonmove 0, 1, MOVE_SHADOW_BALL; setmonmove 1, 0, MOVE_SWIFT; setmonmove 1, 1, MOVE_SHADOW_BALL; setmonmove 2, 0, MOVE_SWIFT; setmonmove 2, 1, MOVE_SHADOW_BALL; setmonmove 3, 0, MOVE_SWIFT; setmonmove 3, 1, MOVE_SHADOW_BALL; setmonmove 4, 0, MOVE_SWIFT; setmonmove 4, 1, MOVE_SHADOW_BALL; setmonmove 5, 0, MOVE_SWIFT; setmonmove 5, 1, MOVE_SHADOW_BALL; end
+warpto MAP_TRAINER_HILL_ENTRANCE_HNS 9 7
+go UP 1
+dlg h02_a save
+yes
+dlg h02_b save|menu
+pick 2
+dlg h02_info menu
+pick 0
+waitquiet
+dlg h02_mode menu
+pick 0
+dlg h02_go free
+snap h02_started

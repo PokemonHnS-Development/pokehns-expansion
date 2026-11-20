@@ -203,6 +203,26 @@ static u16 GetBerryFromBall(u16 ballItem)
     return ITEM_NONE;
 }
 
+// The berry's name without the word "berry", as Kurt's price column and confirmation use it
+// (English drops " BERRY" from "CHERI BERRY"). Hebrew names put that word first, so cutting
+// bytes off the end would cut the berry's own name instead; drop the first word there.
+static void CopyKurtBerryName(u16 berryId, u8 *dest)
+{
+    CopyItemName(berryId, dest);
+#if TEXT_RTL
+    for (u8 *space = dest; *space != EOS; space++)
+    {
+        if (*space == CHAR_SPACE)
+        {
+            StringCopy(dest, space + 1);
+            break;
+        }
+    }
+#else
+    dest[StringLength(dest) - 6] = EOS;
+#endif
+}
+
 static const struct OamData sOamData_QuantityBerryIcon =
 {
     .y = 0,
@@ -261,7 +281,14 @@ static void AddBerryIcon(u16 berryItem)
     if (spriteId != MAX_SPRITES)
     {
         sBerryIconSpriteId = spriteId;
+#if TEXT_RTL
+        // The apricorn window (screen x 8-88) is mirrored, so the icon goes to the mirrored spot at its
+        // right end, before the count as a Hebrew reader reads it. The icon art fills the left 24 of
+        // the sprite's 32 pixels, so the art (English 9-26) is what is mirrored: 69-86.
+        gSprites[spriteId].x = 82;
+#else
         gSprites[spriteId].x = 22;
+#endif
         gSprites[spriteId].y = 24;
         gSprites[spriteId].oam.priority = 0;
     }
@@ -297,7 +324,14 @@ static void AddQuantityBerryIcon(u16 berryItem)
     if (spriteId != MAX_SPRITES)
     {
         sQuantityBerryIconSpriteId = spriteId;
+#if TEXT_RTL
+        // The quantity window moves to screen x 120-200 and is mirrored, so the icon sits at its left
+        // end, past the cost, as the English one sits at the right end of 144-224 (art 210-222 there,
+        // 121-133 here).
+        gSprites[spriteId].x = 130;
+#else
         gSprites[spriteId].x = 219;
+#endif
         gSprites[spriteId].y = 99;
         gSprites[spriteId].oam.priority = 0;
         SetOamMatrixRotationScaling(gSprites[spriteId].oam.matrixNum, 192, 192, 0);
@@ -351,6 +385,10 @@ static void PrintBPAmountInMoneyBox(u8 windowId, u32 bp, u8 speed)
     u8 x;
     StringCopy(ptr, gText_BP);
     x = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar1, 80);
+#if TEXT_RTL
+    // Like the money box: the BP label is a sprite at the top left, so the amount stays right-aligned.
+    SetWindowRtlMode(windowId, WINDOW_RTL_IN_PLACE);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar1, x, 1, speed, NULL);
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -884,7 +922,11 @@ static const struct WindowTemplate sShopBuyMenuWindowTemplates[] =
     },
     [WIN_QUANTITY_PRICE] = {
         .bg = 0,
+#if TEXT_RTL
+        .tilemapLeft = 15, // Mirrored inside the item list, over the price column
+#else
         .tilemapLeft = 18,
+#endif
         .tilemapTop = 11,
         .width = 10,
         .height = 2,
@@ -915,7 +957,11 @@ static const struct WindowTemplate sShopBuyMenuWindowTemplates[] =
 static const struct WindowTemplate sShopBuyMenuYesNoWindowTemplates =
 {
     .bg = 0,
+#if TEXT_RTL
+    .tilemapLeft = 17, // Mirrored inside the item list
+#else
     .tilemapLeft = 21,
+#endif
     .tilemapTop = 9,
     .width = 5,
     .height = 4,
@@ -1264,6 +1310,20 @@ static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, s
     BuyMenuPrint(WIN_ITEM_DESCRIPTION, description, 3, 1, 0, COLORID_NORMAL);
 }
 
+#if TEXT_RTL
+// The mirrored prices end at the list window's left edge, where the frame's dark shading touches the
+// window. On the right, the English prices end 3 px before the shading (their shadow column and the
+// frame's two light inner columns), so start the mirrored prices 3 px into the window.
+#define BUY_MENU_PRICE_RIGHT 117
+// EXPENSIVE x50 makes prices of 1,000,000 and more. Six digits print their seventh as '?', and the
+// renderer only starts a left-to-right run at the currency sign when a digit follows it, so the
+// price would be drawn reversed. Print every digit, as the quantity window does.
+#define BUY_MENU_PRICE_DIGITS MAX_MONEY_DIGITS
+#else
+#define BUY_MENU_PRICE_RIGHT 120
+#define BUY_MENU_PRICE_DIGITS 6
+#endif
+
 static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
 {
     u8 x;
@@ -1276,7 +1336,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
         {
             u8 *ptr = ConvertIntToDecimalStringN(gStringVar4, GetBPCostForItem((u16)itemId), STR_CONV_MODE_LEFT_ALIGN, 4);
             StringCopy(ptr, gText_BP);
-            x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 120);
+            x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, BUY_MENU_PRICE_RIGHT);
             AddTextPrinterParameterized4(windowId, FONT_NARROW, x, y, 0, 0, sShopBuyMenuTextColors[COLORID_ITEM_LIST], TEXT_SKIP_DRAW, gStringVar4);
             return;
         }
@@ -1285,11 +1345,10 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
             u16 berryId = GetBerryFromBall(itemId);
             if (berryId != ITEM_NONE)
             {
-                CopyItemName(berryId, gStringVar4);
-                gStringVar4[StringLength(gStringVar4) - 6] = EOS;
+                CopyKurtBerryName(berryId, gStringVar4);
                 StringAppend(gStringVar4, gText_Space);
                 StringAppend(gStringVar4, gText_xOne);
-                x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 120);
+                x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, BUY_MENU_PRICE_RIGHT);
                 AddTextPrinterParameterized4(windowId, FONT_NARROW, x, y, 0, 0, sShopBuyMenuTextColors[COLORID_ITEM_LIST], TEXT_SKIP_DRAW, gStringVar4);
             }
             return;
@@ -1301,7 +1360,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
                 gStringVar1,
                 GetItemPrice(itemId) >> IsPokeNewsActive(POKENEWS_SLATEPORT),
                 STR_CONV_MODE_LEFT_ALIGN,
-                6);
+                BUY_MENU_PRICE_DIGITS);
         }
         else
         {
@@ -1309,14 +1368,14 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
                 gStringVar1,
                 gDecorations[itemId].price,
                 STR_CONV_MODE_LEFT_ALIGN,
-                6);
+                BUY_MENU_PRICE_DIGITS);
         }
 
         if (GetItemImportance(itemId) && (CheckBagHasItem(itemId, 1) || CheckPCHasItem(itemId, 1)))
             StringCopy(gStringVar4, gText_SoldOut);
         else
             StringExpandPlaceholders(gStringVar4, gText_PokedollarVar1);
-        x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 120);
+        x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, BUY_MENU_PRICE_RIGHT);
         AddTextPrinterParameterized4(windowId, FONT_NARROW, x, y, 0, 0, sShopBuyMenuTextColors[COLORID_ITEM_LIST], TEXT_SKIP_DRAW, gStringVar4);
     }
 }
@@ -1428,6 +1487,11 @@ static void BuyMenuInitWindows(void)
     u8 moneyWindowId;
 
     InitWindows(sShopBuyMenuWindowTemplates);
+#if TEXT_RTL
+    // The description box's white area is x=1..107; the window runs on under the item list's
+    // frame. Mirror around the white area so the English 2 px left margin becomes a right one.
+    SetWindowRtlMirrorWidth(WIN_ITEM_DESCRIPTION, 109);
+#endif
     DeactivateAllTextPrinters();
 
     moneyWindowId = (sMartInfo.martType == MART_TYPE_KURT) ? WIN_BERRIES : WIN_MONEY;
@@ -1785,7 +1849,7 @@ static void Task_BuyMenu(u8 taskId)
                     CopyItemName(itemId, gStringVar1);
                     if (GetItemImportance(itemId))
                     {
-                        ConvertIntToDecimalStringN(gStringVar2, sShopData->totalCost, STR_CONV_MODE_LEFT_ALIGN, 6);
+                        ConvertIntToDecimalStringN(gStringVar2, sShopData->totalCost, STR_CONV_MODE_LEFT_ALIGN, BUY_MENU_PRICE_DIGITS);
                         StringExpandPlaceholders(gStringVar4, gText_YouWantedVar1ThatllBeVar2);
                         tItemCount = 1;
                         sShopData->totalCost = (GetItemPrice(tItemId) >> IsPokeNewsActive(POKENEWS_SLATEPORT)) * tItemCount;
@@ -1888,8 +1952,7 @@ static void Task_BuyHowManyDialogueHandleInput(u8 taskId)
             if (sMartInfo.martType == MART_TYPE_KURT)
             {
                 u16 berryId = GetBerryFromBall(tItemId);
-                CopyItemName(berryId, gStringVar4);
-                gStringVar4[StringLength(gStringVar4) - 6] = EOS;
+                CopyKurtBerryName(berryId, gStringVar4);
                 StringAppend(gStringVar3, gText_Space);
                 StringAppend(gStringVar3, gStringVar4);
 

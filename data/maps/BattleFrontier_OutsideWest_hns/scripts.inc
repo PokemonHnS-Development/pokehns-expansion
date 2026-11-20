@@ -257,16 +257,16 @@ BattleFrontier_OutsideWest_EventScript_PokefanF_hns::
 	end
 
 BattleFrontier_OutsideWest_Text_BattleDomeSign_hns:
-	.string "This is the BATTLE DOME!\n"
-	.string "Your path to the invincible superstar!$"
+	.string "זוהי כיפת הקרב!\n"
+	.string "הדרך שלכם להפוך לכוכב-על בלתי מנוצח!$"
 
 BattleFrontier_OutsideWest_Text_BattleFactorySign_hns:
-	.string "This is the BATTLE FACTORY!\n"
-	.string "Seek out the toughest POKéMON!$"
+	.string "זהו מפעל הקרב!\n"
+	.string "חפשו את הפוקימונים החזקים ביותר!$"
 
 BattleFrontier_OutsideWest_Text_BattlePikeSign_hns:
-	.string "This is the BATTLE PIKE!\n"
-	.string "Choose one of three paths!$"
+	.string "זהו שביל הקרב!\n"
+	.string "בחרו אחת משלוש דרכים!$"
 
 BattleFrontier_OutsideWest_Text_ThisIsBattleTower_hns:
 	.string "This is the BATTLE TOWER.\p"
@@ -305,9 +305,8 @@ BattleFrontier_OutsideWest_Text_ThenWhereWouldYouLikeToGo_hns:
 	.string "Then, where would you like to go?$"
 
 BattleFrontier_OutsideWest_Text_BestOutOfAllMyFriends_hns:
-	.string "I'm the best out of all my friends.\n"
-	.string "But here…\l"
-	.string "I've been useless!$"
+	.string "אני הכי טוב מכל החברים שלי.\n"
+	.string "אבל כאן… לא הייתי שווה כלום!$"
 
 BattleFrontier_OutsideWest_Text_CantFindBattleTower_hns:
 	.string "I want to go to the BATTLE TOWER,\n"
@@ -316,77 +315,74 @@ BattleFrontier_OutsideWest_Text_CantFindBattleTower_hns:
 	.string "This place is just too big!$"
 
 BattleFrontier_OutsideWest_Text_GotSeasickOnWayHere_hns:
-	.string "I wanted to take a challenge as soon\n"
-	.string "as I arrived here.\p"
-	.string "But on the way, I got seasick…\n"
-	.string "Urrrrp…$"
+	.string "רציתי להתמודד באתגר ברגע\n"
+	.string "שהגעתי לכאן.\p"
+	.string "אבל בדרך, קיבלתי מחלת ים…\n"
+	.string "אוווורפ…$"
 
 BattleFrontier_OutsideWest_Text_OnlyToughTrainersBroughtHere_hns:
-	.string "It's not as if just anyone can come\n"
-	.string "here, you know?\p"
-	.string "Only those TRAINERS who've been\n"
-	.string "recognized as tough are brought here.\p"
-	.string "That's why many TRAINERS don't even\n"
-	.string "know about the BATTLE FRONTIER.$"
+	.string "זה לא שכל אחד יכול לבוא לכאן,\n"
+	.string "אתה יודע?\p"
+	.string "רק מאמנים שהוכרו כקשוחים\n"
+	.string "מובאים לכאן.\p"
+	.string "בגלל זה הרבה מאמנים בכלל לא\n"
+	.string "יודעים על חזית הקרב.$"
 
 BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons_hns:
-	.string "Hey, bro…\p"
-	.string "Are you sure we can make challenges\n"
-	.string "even if we don't have any POKéMON?$"
+	.string "היי, אחי…\p"
+	.string "אתה בטוח שאפשר להתמודד באתגרים\n"
+	.string "גם אם אין לנו פוקימונים?$"
 
 BattleFrontier_OutsideWest_Text_BigGuySaidIllLendYouMons_hns:
-	.string "Uh…\n"
-	.string "I'm sure it'll be okay.\p"
-	.string "I think…\p"
-	.string "But remember that big scary guy?\n"
-	.string "He said, “I'll lend you POKéMON!”$"
+	.string "אה…\n"
+	.string "בטח יהיה בסדר.\p"
+	.string "אני חושב…\p"
+	.string "אבל זוכר את הבחור הגדול והמפחיד?\n"
+	.string "הוא אמר: ”אשאיל לכם פוקימונים!”$"
 
 BattleFrontier_OutsideWest_Text_WhosRaisingThoseRentalMons_hns:
-	.string "That's the BATTLE FACTORY.\n"
-	.string "You can rent strong POKéMON there.\p"
-	.string "But it makes me wonder.\n"
-	.string "Who's raising those rental POKéMON?$"
+	.string "זה מפעל הקרב.\n"
+	.string "אפשר לשכור שם פוקימונים חזקים.\p"
+	.string "אבל זה גורם לי לתהות.\n"
+	.string "מי מגדל את הפוקימונים השכורים?$"
 
 BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseSeviper_hns:
-	.string "I'm scared of going into the BATTLE\n"
-	.string "PIKE because of SEVIPER…\p"
-	.string "B-but I came all the way here, so I will\n"
-	.string "try to conquer everything!\l"
-	.string "…Shudder…$"
+	.string "אני מפחדת להיכנס לשביל הקרב\n"
+	.string "בגלל סוויפר…\p"
+	.string "א-אבל באתי עד לכאן, אז אנסה\n"
+	.string "לכבוש הכול! …צמרמורת…$"
 
 BattleFrontier_OutsideWest_Text_LetsPlayRockPaperScissors_hns:
-	.string "Let's play rock, paper, scissors!\n"
-	.string "One, two, three!\p"
+	.string "קדימה, נשחק אבן, נייר ומספריים!\n"
+	.string "אחת, שתיים, שלוש!\p"
 	.string "… … … … … …$"
 
 BattleFrontier_OutsideWest_Text_WonIllTakePikeChallenge_hns:
-	.string "Yay! I won!\n"
-	.string "I will take the BATTLE PIKE challenge!$"
+	.string "יש! ניצחתי!\n"
+	.string "אתמודד באתגר שביל הקרב!$"
 
 BattleFrontier_OutsideWest_Text_LostIllPutOffPikeChallenge_hns:
-	.string "Oh, no…\n"
-	.string "I lost.\p"
-	.string "I guess I'm not very lucky today.\n"
-	.string "I'll put off my BATTLE PIKE challenge\l"
-	.string "until tomorrow.$"
+	.string "אוי, לא…\n"
+	.string "הפסדתי.\p"
+	.string "כנראה שהמזל לא לצידי היום.\n"
+	.string "אדחה את אתגר שביל הקרב למחר.$"
 
 BattleFrontier_OutsideWest_Text_ChooseFishingOverBattling_hns:
-	.string "I believe I'm the only person here who,\n"
-	.string "for some unknown reason, would choose\l"
-	.string "fishing over battling.\p"
-	.string "Huh? You can't catch anything here?\n"
-	.string "That's disappointing…$"
+	.string "נראה לי שאני היחיד כאן שמסיבה\n"
+	.string "לא ידועה מעדיף דיג על פני קרבות.\p"
+	.string "מה? אי אפשר לתפוס כאן כלום?\n"
+	.string "איזו אכזבה…$"
 
 BattleFrontier_OutsideWest_Text_KeepBattlingUntilIGetSymbol_hns:
-	.string "Today, I'm going to keep battling, no\n"
-	.string "matter what, until I get a Symbol.$"
+	.string "היום אמשיך להילחם, ויהי מה,\n"
+	.string "עד שאשיג סמל.$"
 
 BattleFrontier_OutsideWest_Text_YoureOffToChallengeDome_hns:
-	.string "Oh? You're off to challenge\n"
-	.string "the BATTLE DOME?\p"
-	.string "I'll wish you the best of luck.\n"
-	.string "Let us both win our way up and meet\l"
-	.string "in challenges.$"
+	.string "הו? אתה בדרך לאתגר את\n"
+	.string "כיפת הקרב?\p"
+	.string "אני מאחל לך הרבה מזל.\p"
+	.string "הבה נתקדם שנינו מניצחון לניצחון\n"
+	.string "וניפגש באתגרים.$"
 
 BattleFrontier_OutsideWest_Text_DomeIsHereGrandpa_hns:
 	.string "Grandpa, over here!\n"
@@ -394,82 +390,80 @@ BattleFrontier_OutsideWest_Text_DomeIsHereGrandpa_hns:
 	.string "Go get 'em, Grandpa!$"
 
 BattleFrontier_OutsideWest_Text_WontLetGentlemenBeatMe_hns:
-	.string "Ah, so this here is the BATTLE DOME?\n"
-	.string "I won't let GENTLEMEN beat me!\p"
-	.string "But where is the entrance?$"
+	.string "אה, אז זאת כיפת הקרב?\n"
+	.string "לא אתן לג'נטלמנים לנצח אותי!\p"
+	.string "אבל איפה הכניסה?$"
 
 BattleFrontier_OutsideWest_Text_NothingHereNotLongAgo_hns:
-	.string "There used to be nothing here not all\n"
-	.string "that long ago.\p"
-	.string "But, now look at this place! Amazing!\n"
-	.string "I'll bring my mother out to see this.$"
+	.string "לפני לא הרבה זמן, לא היה כאן\n"
+	.string "כלום.\p"
+	.string "אבל תראה את המקום עכשיו! מדהים!\n"
+	.string "אביא את אמא שלי לראות את זה.$"
 
 BattleFrontier_OutsideWest_Text_FinallyArrivedAtFrontier_hns:
-	.string "I've finally arrived at the BATTLE\n"
-	.string "FRONTIER!\p"
-	.string "I'm sure to grab attention with\n"
-	.string "my looks and ability!$"
+	.string "סוף סוף הגעתי לחזית הקרב!\p"
+	.string "אני בטוחה שאמשוך תשומת לב\n"
+	.string "בזכות המראה והכישורים שלי!$"
 
 BattleFrontier_OutsideWest_Text_SquareFilledWithToughPeople_hns:
-	.string "Munch, munch…\p"
-	.string "It looks like this square's filled with\n"
-	.string "tough people.\p"
-	.string "Munch, munch…$"
+	.string "נשנוש, נשנוש…\p"
+	.string "נראה שהכיכר הזאת מלאה\n"
+	.string "באנשים קשוחים.\p"
+	.string "נשנוש, נשנוש…$"
 
 BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike_hns:
-	.string "Crunch, munch…\p"
-	.string "A while back, I met this older girl\n"
-	.string "at the BATTLE PIKE.\p"
-	.string "She had these eyes that were scary\n"
-	.string "in a real ornery way.\p"
-	.string "Crunch, munch…\p"
-	.string "She got all furious: “Will you quit\n"
-	.string "eating!” Then she whaled on me.\p"
-	.string "It was a hair-raising kind of\n"
-	.string "scary experience, sure enough.\p"
-	.string "Crunch, munch…$"
+	.string "קראנץ', נשנוש…\p"
+	.string "לפני זמן מה, פגשתי בחורה מבוגרת ממני\n"
+	.string "בשביל הקרב.\p"
+	.string "היו לה עיניים מפחידות,\n"
+	.string "ממש רעות ועצבניות.\p"
+	.string "קראנץ', נשנוש…\p"
+	.string "היא התעצבנה נורא: ”תפסיק כבר\n"
+	.string "לאכול!” ואז היא הרביצה לי.\p"
+	.string "זאת הייתה חוויה מפחידה, מסמרת\n"
+	.string "שיער, ללא ספק.\p"
+	.string "קראנץ', נשנוש…$"
 
 BattleFrontier_OutsideWest_Text_LastTimeOurEyesMet_hns:
-	.string "Huh? Will you listen to yourself?\n"
-	.string "That's nothing!\p"
-	.string "Why, the last time I cheered for him,\n"
-	.string "our eyes met and sparks flew!$"
+	.string "מה? אתה שומע את עצמך?\n"
+	.string "זה כלום!\p"
+	.string "הרי בפעם האחרונה שעודדתי אותו,\n"
+	.string "המבטים שלנו נפגשו ועפו ניצוצות!$"
 
 BattleFrontier_OutsideWest_Text_DomeAceLookedBecauseOfMyCheering_hns:
-	.string "Whaaaaaat?!\n"
-	.string "Pfft!\p"
-	.string "That only happened because\n"
-	.string "I happened to be sitting next to you!\p"
-	.string "The DOME ACE only looked our way\n"
-	.string "because my cheering was so loud!$"
+	.string "מהההההה?!\n"
+	.string "פפף!\p"
+	.string "זה קרה רק כי במקרה\n"
+	.string "ישבתי לידך!\p"
+	.string "אס הכיפה הסתכל לכיוון שלנו רק\n"
+	.string "כי העידוד שלי היה כל כך רועש!$"
 
 BattleFrontier_OutsideWest_Text_DomeAceIsMine_hns:
-	.string "Oh, shush!\n"
-	.string "Keep that racket down!\p"
-	.string "You fair-weather fans should stick\n"
-	.string "to cheering for some GYM LEADER!\p"
-	.string "The DOME ACE is mine!\n"
-	.string "The only idol for me!$"
+	.string "אוי, שקט!\n"
+	.string "תורידו את הרעש!\p"
+	.string "אוהדים הפכפכים כמוכם צריכים\n"
+	.string "להסתפק בעידוד של איזה מנהיג מכון!\p"
+	.string "אס הכיפה שלי!\n"
+	.string "האליל היחיד שלי!$"
 
 BattleFrontier_OutsideWest_Text_FansOverThereUsedToBeTrainers_hns:
-	.string "Those people squabbling over there…\p"
-	.string "It's hard to believe, but they once\n"
-	.string "were TRAINERS, and good ones, too.\p"
-	.string "They used to be incredibly tough,\n"
-	.string "and they were famous, too.\p"
-	.string "But they were obliterated by this\n"
-	.string "certain TRAINER at a tournament.\p"
-	.string "They were so thoroughly whipped,\n"
-	.string "they became smitten by the TRAINER.\p"
-	.string "Now they're just fans of the TRAINER.\n"
-	.string "They go cheer for their idol at the\l"
-	.string "BATTLE DOME every day now.$"
+	.string "האנשים שמתקוטטים שם…\p"
+	.string "קשה להאמין, אבל פעם הם היו\n"
+	.string "מאמנים, ומאמנים טובים.\p"
+	.string "הם היו קשוחים להפליא,\n"
+	.string "וגם מפורסמים.\p"
+	.string "אבל מאמן מסוים מחץ אותם\n"
+	.string "בטורניר אחד.\p"
+	.string "הם הובסו כל כך, שהם\n"
+	.string "התאהבו במאמן הזה.\p"
+	.string "עכשיו הם סתם מעריצים שלו.\p"
+	.string "כל יום הם הולכים לעודד את\n"
+	.string "האליל שלהם בכיפת הקרב.$"
 
 BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier_hns:
-	.string "I heard a rumor that someone saw\n"
-	.string "a POKéMON with an unusually long tail\l"
-	.string "somewhere in the BATTLE FRONTIER.\p"
-	.string "It must be adorable. I'm sure of it…\p"
-	.string "Oh, challenges can wait. I feel driven\n"
-	.string "to find the delightful creature!$"
+	.string "שמועה אומרת שמישהו ראה פוקימון עם\n"
+	.string "זנב ארוך במיוחד, אי שם בחזית הקרב.\p"
+	.string "הוא בטח מקסים. אני בטוח בזה…\p"
+	.string "אה, האתגרים יכולים לחכות. אני חייב\n"
+	.string "למצוא את היצור המקסים הזה!$"
 

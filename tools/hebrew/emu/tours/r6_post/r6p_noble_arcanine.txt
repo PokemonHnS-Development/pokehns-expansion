@@ -1,0 +1,21 @@
+# Noble Arcanine-H, New Sinjoh hot springs: the trigger (16,10) at VAR_NOBLE_ARCANINE 1
+# (NewSinjoh_HotSprings_hns/scripts.inc:310-352): sparkle, '!', flute YES/NO, the entrance, the camera
+# shake; then NewSinjoh_HotSprings_EventScript_Arcanine (:364-) boss battle (_noble_battle.txt).
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev setvar VAR_NOBLE_ARCANINE, 1; setflag FLAG_HIDE_HOTSPRINGS_NOBLE_ARCANINE; end
+warpto MAP_NEWSINJOH_HOTSPRINGS_HNS 16 11
+face UP
+snap ar_field
+stepto UP 1
+scene ar_flute 3000
+snap ar_flute_menu
+tap A 4
+scene ar_scene 20000 45
+snap ar_scene_end
+objs
+approach 8
+snap ar_before
+tap A 4
+scene ar_pre 4000
+include _noble_battle.txt

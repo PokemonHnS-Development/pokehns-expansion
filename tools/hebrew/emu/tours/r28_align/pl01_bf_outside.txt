@@ -1,0 +1,8 @@
+# Battle Frontier outside, both halves, as a player walks them after the League: the map-name
+# pop-up, every NPC and every sign (facility signs, Pokemon Center / Mart signs).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_BATTLE_FRONTIER_OUTSIDE_WEST_HNS 26 60 bfw
+visit bfw
+arrive MAP_BATTLE_FRONTIER_OUTSIDE_EAST_HNS 12 46 bfe
+visit bfe

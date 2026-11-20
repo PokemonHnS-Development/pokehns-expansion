@@ -1,0 +1,38 @@
+# Not learning a move in battle (BattleScript_AskToLearnMove, data/battle_scripts_1.s): Cyndaquil
+# Lv 12 with four moves beats a Lv 12 Chansey at 1 HP and reaches Lv 13 (Quick Attack), as in
+# tours/bv_learn_no.txt. "delete a move?" B -> "give up learning X?" (STRINGID_STOPLEARNINGMOVE,
+# Cmd_yesnoboxstoplearningmove) NO -> the question again; YES -> the forget-a-move page, B there
+# -> "give up learning X?" YES -> "X did not learn Y" (STRINGID_DIDNOTLEARNMOVE).
+# Needs a build that asks (P_ASK_MOVE_CONFIRMATION, which follows TEXT_RTL): the Hebrew one.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_CYNDAQUIL, 12, move1=MOVE_TACKLE, move2=MOVE_LEER, move3=MOVE_EMBER, move4=MOVE_SMOKESCREEN; end
+
+pinrng
+ev setwildbattle SPECIES_CHANSEY, 12; end
+sethp enemy 0 1
+evstart dowildbattle; end
+waitbattle
+bwalk lr01_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 2                               # Ember
+bwalk lr01_exp prompt:Cmd_yesnoboxlearnmove
+snap lr01_a1_delete_q
+tap B 4                               # B: the same as NO
+bwalk lr01_a2_stop prompt:Cmd_yesnoboxstoplearningmove
+snap lr01_a3_stop_box
+tap DOWN 4
+waitquiet
+snap lr01_a4_stop_box_no
+tap A 4                               # NO: back to the question
+bwalk lr01_b1_again prompt:Cmd_yesnoboxlearnmove
+snap lr01_b2_delete_q_again
+tap A 4                               # YES: the forget-a-move page
+bwalk lr01_b3_which task:Task_HandleReplaceMoveInput
+snap lr01_b4_forget_page
+tap B 4                               # leave the page without choosing
+waitcb2x BattleMainCB2 900
+bwalk lr01_c1_stop prompt:Cmd_yesnoboxstoplearningmove
+snap lr01_c2_stop_box
+tap A 4                               # YES: give up
+pages lr01_c3_gaveup 10

@@ -17,16 +17,16 @@ Route40_EventScript_Simon::
 	end
 
 Route40_Text_SwimmermSimonSeen:
-	.string "You have to warm up before\n"
-	.string "going into the water.\p"
-	.string "That's basic.$"
+	.string "צריך להתחמם לפני\n"
+	.string "שנכנסים למים.\p"
+	.string "זה בסיסי.$"
 
 Route40_Text_SwimmermSimonBeaten:
-	.string "OK! Uncle! I give!$"
+	.string "בסדר! די! אני נכנע!$"
 
 Route40_Text_SwimmermSimonAfter:
-	.string "CIANWOOD CITY is a good\n"
-	.string "distance away from here.$"
+	.string "העיר סיאנווד די\n"
+	.string "רחוקה מכאן.$"
 
 Route40_EventScript_Randall::
 	trainerbattle_single TRAINER_RANDALL_HNS, Route40_Text_SwimmermRandallSeen, Route40_Text_SwimmermRandallBeaten
@@ -34,16 +34,16 @@ Route40_EventScript_Randall::
 	end
 
 Route40_Text_SwimmermRandallSeen:
-	.string "Hey, you're young and fit!\p"
-	.string "Don't ride your POKéMON!\n"
-	.string "Swim!$"
+	.string "היי, אתה צעיר וחטוב!\p"
+	.string "אל תרכב על הפוקימון שלך!\n"
+	.string "תשחה!$"
 
 Route40_Text_SwimmermRandallBeaten:
-	.string "Uh-oh. I lost…$"
+	.string "אוי-אוי. הפסדתי…$"
 
 Route40_Text_SwimmermRandallAfter:
-	.string "Swimming exercises your\n"
-	.string "entire body. It's healthy.$"
+	.string "שחייה מפעילה את כל\n"
+	.string "הגוף. זה בריא.$"
 
 Route40_EventScript_Elaine::
 	trainerbattle_single TRAINER_ELAINE_HNS, Route40_Text_SwimmerfElaineSeen, Route40_Text_SwimmerfElaineBeaten
@@ -51,16 +51,16 @@ Route40_EventScript_Elaine::
 	end
 
 Route40_Text_SwimmerfElaineSeen:
-	.string "Are you going to CIANWOOD?\p"
-	.string "How about a quick battle\n"
-	.string "first?$"
+	.string "אתה בדרך לסיאנווד?\p"
+	.string "מה דעתך על קרב קצר\n"
+	.string "קודם?$"
 
 Route40_Text_SwimmerfElaineBeaten:
-	.string "I lost that one!$"
+	.string "את הקרב הזה הפסדתי!$"
 
 Route40_Text_SwimmerfElaineAfter:
-	.string "I'd say I'm a better swimmer\n"
-	.string "than you. Yeah!$"
+	.string "הייתי אומרת שאני שוחה\n"
+	.string "טוב ממך. כן!$"
 
 Route40_EventScript_Paula::
 	trainerbattle_single TRAINER_PAULA_HNS, Route40_Text_SwimmerfPaulaSeen, Route40_Text_SwimmerfPaulaBeaten
@@ -68,16 +68,15 @@ Route40_EventScript_Paula::
 	end
 
 Route40_Text_SwimmerfPaulaSeen:
-	.string "No inner tube for me.\p"
-	.string "I'm hanging on to a sea\n"
-	.string "POKéMON!$"
+	.string "אני לא צריכה גלגל ים.\p"
+	.string "אני נאחזת בפוקימון ים!$"
 
 Route40_Text_SwimmerfPaulaBeaten:
-	.string "Ooh, I'm feeling dizzy!$"
+	.string "אוי, מסתובב לי הראש!$"
 
 Route40_Text_SwimmerfPaulaAfter:
-	.string "While I float like this,\n"
-	.string "the waves carry me along.$"
+	.string "כשאני צפה ככה,\n"
+	.string "הגלים סוחפים אותי איתם.$"
 
 Route40_EventScript_Woman1::
 	lock
@@ -88,8 +87,8 @@ Route40_EventScript_Woman1::
 	end
 
 Route40_Text_Lass1:
-	.string "Although you can't see it from here,\n"
-	.string "CIANWOOD is across the sea.$"
+	.string "אמנם אי אפשר לראות אותה מכאן,\n"
+	.string "אבל סיאנווד נמצאת מעבר לים.$"
 
 Route40_EventScript_Woman2::
 	lock
@@ -115,42 +114,40 @@ Route40_EventScript_Youngster::
 	end
 
 Route40_Text_StandingYoungster:
-	.string "Have you gone to the TRAINER\n"
-	.string "HILL?\p"
-	.string "I think a lot of tough trainers\n"
-	.string "have gathered there already.\p"
-	.string "But since you have so many BADGES\n"
-	.string "you shouldn't do badly at all.$"
+	.string "היית כבר בגבעת המאמנים?\p"
+	.string "נראה לי שהרבה מאמנים קשוחים\n"
+	.string "כבר התאספו שם.\p"
+	.string "אבל עם כל כך הרבה תגים,\n"
+	.string "לא אמור להיות לך קשה בכלל.$"
 
 Route40_Text_Monica:
-	.string "MONICA: Glad to meet you.\n"
-	.string "I'm MONICA of the WEEKDAY FAMILY.\p"
-	.string "I bet you can't guess my favorite\n"
-	.string "day of the week!$"
+	.string "מוניקה: שמחה להכיר.\n"
+	.string "אני מוניקה ממשפחת ימי השבוע.\p"
+	.string "בטוח שלא תצליח לנחש מה\n"
+	.string "היום האהוב עליי בשבוע!$"
 
 Route40_Text_MonicaGivesGift:
-	.string "That's right!\p"
-	.string "As a token of our friendship,\n"
-	.string "I have a gift for you!$"
+	.string "נכון מאוד!\p"
+	.string "לאות ידידות,\n"
+	.string "יש לי מתנה בשבילך!$"
 
 Route40_Text_MonicaGaveGift:
-	.string "MONICA: It's an item that raises\n"
-	.string "the power of FLYING-type moves.\p"
-	.string "You should equip a bird\n"
-	.string "POKéMON with that item.$"
+	.string "מוניקה: זה פריט שמגביר את הכוח\n"
+	.string "של מהלכים מסוג תעופה.\p"
+	.string "כדאי לתת את הפריט הזה\n"
+	.string "לפוקימון ציפור.$"
 
 Route40_Text_MonicaMonday:
-	.string "MONICA: My brothers and\n"
-	.string "sisters are all over the place.\p"
-	.string "See if you could find\n"
-	.string "them all!$"
+	.string "מוניקה: האחים והאחיות שלי\n"
+	.string "מפוזרים בכל מקום.\p"
+	.string "נסה למצוא את כולם!$"
 
 Route40_Text_MonicaNotMonday:
 	.string "MONICA: I don't think today\n"
 	.string "is Monday. How sad…$"
 
 Route40_Text_MonicaNope:
-	.string "Not that one.$"
+	.string "לא היום הזה.$"
 
 Rotue40_EventScript_Monica::
 	lock

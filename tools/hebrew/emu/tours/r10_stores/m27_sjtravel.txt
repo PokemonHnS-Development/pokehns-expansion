@@ -1,0 +1,10 @@
+# New Sinjoh travel shop (MAP_NEW_SINJOH_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_NEW_SINJOH_HNS
+clerk 40 10 m27_hi
+buyopen m27_buy
+listshots m27_list
+buyeach m27_ask
+buyclose m27_menu
+shopquit m27_bye

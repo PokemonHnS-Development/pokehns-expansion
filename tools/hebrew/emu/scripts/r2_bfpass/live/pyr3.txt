@@ -1,0 +1,16 @@
+waitquiet
+snap py_floor
+py: items = ["ITEM_HYPER_POTION", "ITEM_ETHER", "ITEM_FULL_RESTORE", "ITEM_MAX_REVIVE", "ITEM_X_SP_DEF", "ITEM_FULL_HEAL", "ITEM_LEFTOVERS", "ITEM_QUICK_CLAW", "ITEM_BRIGHT_POWDER", "ITEM_MAX_ELIXIR"]; qty = [1, 1, 3, 2, 5, 4, 2, 1, 1, 2]; sb2 = emu.sb2(); lv = emu.r8(sb2 + 0xCA9) & 3; [emu.w16(sb2 + 0xE2C + 20 * lv + 2 * i, emu.const(it)) for i, it in enumerate(items)]; [emu.w8(sb2 + 0xE54 + 10 * lv + i, q) for i, q in enumerate(qty)]; print("lv", lv, [hex(emu.r16(sb2 + 0xE2C + 20 * lv + 2 * i)) for i in range(10)])
+pyrfloor
+startmenux 12 nopress
+waitquiet
+snap py_sm_bag
+startmenux 10 nopress
+waitquiet
+snap py_sm_rest
+startmenux 11 nopress
+waitquiet
+snap py_sm_retire
+startmenux 12
+waitcb2x CB2_Overworld 10
+showtasks

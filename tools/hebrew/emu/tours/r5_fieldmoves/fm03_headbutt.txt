@@ -1,0 +1,53 @@
+# Headbutt tree (MB_HEADBUTT_TREE, GetInteractedMetatileScript src/field_control_avatar.c:523 ->
+# EventScript_Headbutt, data/scripts/field_move_scripts_hns.inc:110-132): "X used HEADBUTT!"
+# (Text_MonUsedHeadbutt :154), the follower animation, then RockSmashWildEncounter (:128; a wild
+# battle is walked and run from). Ilex Forest (66,4) from (66,5), four times, each after a warp
+# (the follower swaps places with the player in the animation; the tree at (67,4) is not used: a
+# decorative Butterfree object (local id 34, data/maps/IlexForest_hns/map.json) stands on it and
+# the script then waits forever for its rock_smash_break movement, :125-127). Cherrygrove City
+# (50,2) from (51,2). Then Text_CantHeadbutt (:139-142, :321) without FLAG_GET_HEADBUTT. Without
+# HEADBUTT in the party is the same text, and is not reachable with this party: checkpartymove
+# also accepts a Pokemon that can learn the move when it has no TM/HM (src/scrcmd.c:3123-3142).
+start save:fm_party
+include _cont.txt
+warpto MAP_ILEX_FOREST_HNS 66 5
+go RIGHT
+go LEFT
+face UP
+snap fm03_00_facing_tree
+tap A 2
+fmwatch fm03_hbA 4000 4
+warpto MAP_ILEX_FOREST_HNS 66 5
+go RIGHT
+go LEFT
+face UP
+tap A 2
+fmwatch fm03_hbB 4000
+warpto MAP_ILEX_FOREST_HNS 66 5
+go RIGHT
+go LEFT
+face UP
+tap A 2
+fmwatch fm03_hbC 4000
+warpto MAP_ILEX_FOREST_HNS 66 5
+go RIGHT
+go LEFT
+face UP
+tap A 2
+fmwatch fm03_hbD 4000
+
+warpto MAP_CHERRYGROVE_CITY_HNS 51 2
+go DOWN
+go UP
+face LEFT
+snap fm03_cg_facing_tree
+tap A 2
+fmwatch fm03_hbE 4000
+
+# without FLAG_GET_HEADBUTT
+clearflag FLAG_GET_HEADBUTT
+warpto MAP_CHERRYGROVE_CITY_HNS 51 2
+face LEFT
+tap A 2
+fieldwatch fm03_cant_noflag free 3000
+setflag FLAG_GET_HEADBUTT

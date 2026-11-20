@@ -22,13 +22,12 @@ ViridianCity_EventScript_OakCall::
 	end
 
 ViridianCity_Text_OakName:
-	.string "OAK$"
+	.string "אוק$"
 
 ViridianCity_Text_OakCall:
-	.string "OAK: Ah, {PLAYER}!\p"
-	.string "Come and see my at my\n"
-	.string "LAB in PALLET TOWN\l"
-	.string "when you get the chance.$"
+	.string "אוק: אה, {PLAYER}!\p"
+	.string "בוא לבקר אותי במעבדה שלי\n"
+	.string "בעיירה פאלט כשתהיה לך הזדמנות.$"
 
 ViridianCity_EventScript_Gramps::
 	lock
@@ -83,34 +82,33 @@ ViridianCity_EventScript_GymSign::
 	end
 
 ViridianCity_Text_CoffeeGramps_Question:
-	.string "Hey, kid! I just had a double shot\n"
-	.string "of espresso, and I am wired!\p"
-	.string "I need to talk to someone, so you'll\n"
-	.string "have to do!\p"
-	.string "I might not look like much now, but\n"
-	.string "I was an expert at catching POKéMON.\p"
-	.string "Do you believe me?$"
+	.string "היי, ילד! הרגע שתיתי אספרסו כפול,\n"
+	.string "ואני מתפוצץ מאנרגיה!\p"
+	.string "אני חייב לדבר עם מישהו,\n"
+	.string "אז אסתפק בך!\p"
+	.string "אולי עכשיו אני לא נראה משהו, אבל\n"
+	.string "פעם הייתי מומחה בתפיסת פוקימונים.\p"
+	.string "אתה מאמין לי?$"
 
 ViridianCity_Text_CoffeeGramps_Believed:
-	.string "Good, good. Yes, I was something\n"
-	.string "out of the ordinary, let me tell\l"
-	.string "you!$"
+	.string "טוב, טוב. כן, הייתי משהו\n"
+	.string "יוצא דופן, אני אומר לך!$"
 
 ViridianCity_Text_CoffeeGramps_Doubted:
-	.string "What? You little whelp!\p"
-	.string "If I were just a bit younger, I'd\n"
-	.string "show you a thing or two. Humph!$"
+	.string "מה? פרחח קטן שכמוך!\p"
+	.string "אילו הייתי קצת יותר צעיר,\n"
+	.string "הייתי מראה לך מה זה. המף!$"
 
 ViridianCity_Text_GrampsNearGym:
-	.string "This GYM didn't have a LEADER\n"
-	.string "until recently.\p"
-	.string "A young man from PALLET became\n"
-	.string "the LEADER, but he's often away.$"
+	.string "למכון הזה לא היה מנהיג\n"
+	.string "עד לא מזמן.\p"
+	.string "בחור צעיר מפאלט הפך למנהיג,\n"
+	.string "אבל הוא נעדר לעיתים קרובות.$"
 
 ViridianCity_Text_GrampsNearGym_BlueReturned:
-	.string "Are you going to battle the\n"
-	.string "LEADER?\p"
-	.string "Good luck to you. You'll need it.$"
+	.string "אתה הולך להילחם\n"
+	.string "במנהיג?\p"
+	.string "בהצלחה. תצטרך הרבה מזל.$"
 
 ViridianCity_Text_DreamEaterFisherNew:
 	.string "…Zzzzz…\p" 
@@ -121,38 +119,38 @@ ViridianCity_Text_DreamEaterFisherNew:
 
 
 ViridianCity_Text_DreamEaterFisher_GotTM::
-	.string "…Zzzzz…$"
+	.string "…זזזזז…$"
 
 ViridianCity_Text_DreamEaterFisher:
-	.string "Yawn!\p"
-	.string "I must have dozed off in the sun.\p"
-	.string "…I had this dream about a DROWZEE\n"
-	.string "eating my dream. Weird, huh?\p"
-	.string "Huh? What's this?\p"
-	.string "Where did this TM come from?\p"
-	.string "This is spooky! Here, you can have\n"
-	.string "this TM.$"
+	.string "פיהוק!\p"
+	.string "כנראה נרדמתי בשמש.\p"
+	.string "…חלמתי שדראוזי זולל\n"
+	.string "לי את החלום. מוזר, לא?\p"
+	.string "הא? מה זה?\p"
+	.string "מאיפה הגיע המ”מ הזה?\p"
+	.string "זה מצמרר! הנה,\n"
+	.string "קח את המ”מ הזה.$"
 
 ViridianCity_Text_DreamEaterFisher_GotDreamEater:
 	.string "TM42 contains DREAM EATER…\p"
 	.string "…Zzzzz…$"
 
 ViridianCity_Text_Youngster:
-	.string "I heard that there are many items\n"
-	.string "on the ground in VIRIDIAN FOREST.$"
+	.string "שמעתי שביער וירידיאן מפוזרים\n"
+	.string "הרבה פריטים על האדמה.$"
 
 ViridianCity_Text_Sign:
-	.string "VIRIDIAN CITY\p"
-	.string "The Eternally Green Paradise$"
+	.string "העיר וירידיאן\p"
+	.string "גן העדן הירוק הנצחי$"
 
 ViridianCity_Text_GymSign:
-	.string "VIRIDIAN CITY POKéMON GYM\n"
-	.string "LEADER: …\p"
-	.string "The rest of the text is illegible…$"
+	.string "מכון הפוקימון של העיר וירידיאן\n"
+	.string "מנהיג: …\p"
+	.string "שאר הכיתוב לא קריא…$"
 
 ViridianCity_Text_WelcomeSign:
-	.string "WELCOME TO VIRIDIAN CITY,\p"
-	.string "THE GATEWAY TO INDIGO PLATEAU$"
+	.string "ברוכים הבאים לעיר וירידיאן,\p"
+	.string "השער לרמת אינדיגו$"
 
 ViridianCity_Text_TrainerHouseSign:
 	.string "TRAINER HOUSE\p"

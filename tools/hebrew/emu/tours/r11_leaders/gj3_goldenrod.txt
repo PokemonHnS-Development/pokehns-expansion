@@ -1,0 +1,15 @@
+# r11 (gen_tours.py): MAP_GOLDENROD_CITY_GYM_HNS after its badge, on ladder4_league. Statue GoldenrodCity_Gym_EventScript_Statue, guide GoldenrodCity_Gym_EventScript_Gym_Guy, leader GoldenrodCity_Gym_EventScript_Whitney (data/maps/GoldenrodCity_Gym_hns/scripts.inc).
+start saves/ladder4_league.sav
+include _base.txt
+warpto MAP_GOLDENROD_CITY_GYM_HNS 11 21
+face UP
+snap gj3_room
+talkdir gj3_statue UP
+approach 1
+tap A 4
+drive gj3_guide
+warpto MAP_GOLDENROD_CITY_GYM_HNS 15 9
+face UP
+snap gj3_leader_room
+talkdir gj3_leader UP
+talkdir gj3_leader_again UP

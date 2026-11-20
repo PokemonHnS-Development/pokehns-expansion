@@ -26,12 +26,12 @@ Route25_EventScript_MistyRematch::
     end
 
 Route25_Text_Misty:
-    .string "MISTY: I love the sunset here!\n"
-	.string "It gives me the courage to go on,\l"
-	.string "you know?\p"
-	.string "Right!\p"
-	.string "If you're ready for a real splash,\n"
-	.string "meet me at the FIGHTING DOJO!$"
+    .string "מיסטי: אני אוהבת את השקיעה כאן!\p"
+    .string "היא נותנת לי אומץ להמשיך,\n"
+    .string "אתה יודע?\p"
+    .string "טוב!\p"
+    .string "אם אתה מוכן להירטב באמת,\n"
+    .string "בוא לפגוש אותי בדוג'ו הלחימה!$"
 
 Route25_EventScript_Dudley::
 	trainerbattle_single TRAINER_DUDLEY_HNS, Route25_Text_SchoolboyDudleySeen, Route25_Text_SchoolboyDudleyBeaten
@@ -191,31 +191,30 @@ Route25_Trigger_SuicuneLeftLeft::
 	goto Route25_Trigger_SuicuneLeft
 
 Route25_Text_Eusine1:
-	.string "EUSINE: Puff, puff...\n"
-	.string "I am... no match for you.\p"
-	.string "...As I predicted.\n"
-	.string "..........................\l"
-	.string "... Go ahead.\p"
-	.string "Since I met you in the BURNED TOWER\n"
-	.string "at ECRUTEAK CITY, I've sort of\l"
-	.string "known that SUICUNE would choose\l"
-	.string "you.$"
+	.string "יוסין: הוף, הוף…\n"
+	.string "אני… לא משתווה לך.\p"
+	.string "…כפי שחזיתי.\n"
+	.string "…………\p"
+	.string "… קדימה.\p"
+	.string "מאז שפגשתי אותך\n"
+	.string "במגדל השרוף בעיר אקרוטיק,\p"
+	.string "איכשהו ידעתי שסואיקון\n"
+	.string "יבחר בך.$"
 
 Route25_Text_Eusine2:
-	.string "Take a look at it!\p"
-	.string "SUICUNE is waiting for you!\n"
-	.string "It has been waiting for a battle\l"
-	.string "with a worthy trainer to whom it\l"
-	.string "can entrust itself.$"
+	.string "תסתכל עליו!\p"
+	.string "סואיקון מחכה לך!\p"
+	.string "הוא חיכה לקרב עם מאמן ראוי,\n"
+	.string "שבידיו יוכל להפקיד את עצמו.$"
 
 Route25_Text_Eusine3:
-	.string "{PLAYER}...\n"
-	.string "You two are truly amazing...\p"
-	.string "I have never seen a battle this\n"
-	.string "intense!\l"
-	.string "I have no regrets...\p"
-	.string "Farewell, SUICUNE!\n"
-	.string "Farewell... {PLAYER}!$"
+	.string "{PLAYER}…\n"
+	.string "שניכם באמת מדהימים…\p"
+	.string "מעולם לא ראיתי קרב\n"
+	.string "כל כך עוצמתי!\p"
+	.string "אין לי חרטות…\p"
+	.string "היה שלום, סואיקון!\n"
+	.string "היה שלום… {PLAYER}!$"
 
 Route25_EventScript_Eusine::
 	msgbox Route25_Text_Eusine2, MSGBOX_NPC
@@ -385,126 +384,124 @@ Route25_Movement_MistyWalkToPlayerLeft:
 	step_end
 
 Route25_Text_MistyDate:
-	.string "MISTY: Aww! Why did you have to\n"
-	.string "show up and bug us now?\p"
-	.string "Do you know what they call\n"
-	.string "people like you?\p"
-	.string "Pests! You heard me right,\n"
-	.string "pest!\p"
+	.string "מיסטי: אוף! למה היית חייב\n"
+	.string "להופיע ולהפריע לנו דווקא עכשיו?\p"
+	.string "אתה יודע איך קוראים\n"
+	.string "לאנשים כמוך?\p"
+	.string "נודניקים! שמעת נכון,\n"
+	.string "נודניק!\p"
 	.string "…\p"
-	.string "…Oh? Those BADGES you have…\n"
-	.string "Are they JOHTO GYM BADGES?\p"
-	.string "If you have eight, you must be\n"
-	.string "good.\p"
-	.string "OK, then. Come to CERULEAN GYM.\p"
-	.string "I'll be happy to take you on.\p"
-	.string "I'm MISTY, the GYM LEADER in\n"
-	.string "CERULEAN.$"
+	.string "…אה? התגים האלה שלך…\n"
+	.string "אלה תגי מכון של ג'וטו?\p"
+	.string "אם יש לך שמונה, אתה בטח\n"
+	.string "טוב.\p"
+	.string "אז בסדר. בוא למכון סרוליאן.\p"
+	.string "אשמח להתמודד מולך.\p"
+	.string "אני מיסטי, מנהיגת המכון\n"
+	.string "בסרוליאן.$"
 
 Route25_Text_SchoolboyDudleySeen:
-	.string "Beat the six of us trainers to\n"
-	.string "win a fabulous prize!\p"
-	.string "Think you've got what it takes?$"
+	.string "נצח את כל ששת המאמנים שלנו\n"
+	.string "ותזכה בפרס מדהים!\p"
+	.string "חושב שיש לך מה שצריך?$"
 
 Route25_Text_SchoolboyDudleyBeaten:
-	.string "Whoo! Good stuff.$"
+	.string "וואו! יופי של קרב.$"
 
 Route25_Text_SchoolboyDudleyAfter:
-	.string "I did my best.\n"
-	.string "I have no regrets.$"
+	.string "עשיתי כמיטב יכולתי.\n"
+	.string "אין לי חרטות.$"
 
 Route25_Text_LassEllenSeen:
-	.string "I'm second.\n"
-	.string "Now it's serious!$"
+	.string "אני השנייה.\n"
+	.string "עכשיו זה רציני!$"
 
 Route25_Text_LassEllenBeaten:
-	.string "How could I lose?$"
+	.string "איך יכולתי להפסיד?$"
 
 Route25_Text_LassEllenAfter:
-	.string "I did my best.\n"
-	.string "I have no regrets.$"
+	.string "עשיתי כמיטב יכולתי.\n"
+	.string "אין לי חרטות.$"
 
 Route25_Text_SchoolboyJoeSeen:
-	.string "Here's No. 3!\n"
-	.string "I won't be easy.$"
+	.string "הנה מספר 3!\n"
+	.string "אני לא אהיה קל.$"
 
 Route25_Text_SchoolboyJoeBeaten:
-	.string "Ow! Stomped flat!$"
+	.string "איי! נמחצתי לגמרי!$"
 
 Route25_Text_SchoolboyJoeAfter:
-	.string "I did my best.\n"
-	.string "I have no regrets.$"
+	.string "עשיתי כמיטב יכולתי.\n"
+	.string "אין לי חרטות.$"
 
 Route25_Text_LassLauraSeen:
-	.string "I'm No. 4!\n"
-	.string "Getting tired?$"
+	.string "אני מספר 4!\n"
+	.string "מתחיל להתעייף?$"
 
 Route25_Text_LassLauraBeaten:
-	.string "I lost too…$"
+	.string "גם אני הפסדתי…$"
 
 Route25_Text_LassLauraAfter:
-	.string "I did my best.\n"
-	.string "I have no regrets.$"
+	.string "עשיתי כמיטב יכולתי.\n"
+	.string "אין לי חרטות.$"
 
 Route25_Text_CamperLloydSeen:
-	.string "OK! I'm No. 5.\n"
-	.string "I'll stomp you!$"
+	.string "אוקיי! אני מספר 5.\n"
+	.string "אני אמחץ אותך!$"
 
 Route25_Text_CamperLloydBeaten:
-	.string "Whoa! Too much.$"
+	.string "וואו! זה יותר מדי.$"
 
 Route25_Text_CamperLloydAfter:
-	.string "I did my best.\n"
-	.string "I have no regrets.$"
+	.string "עשיתי כמיטב יכולתי.\n"
+	.string "אין לי חרטות.$"
 
 Route25_Text_LassShannonSeen:
-	.string "I'm the last in line, but I tell\n"
-	.string "you, I'm tough!$"
+	.string "אני האחרונה בתור, אבל תאמין לי,\n"
+	.string "אני קשוחה!$"
 
 Route25_Text_LassShannonBeaten:
-	.string "You're kidding.$"
+	.string "אתה צוחק עליי.$"
 
 Route25_Text_LassShannonAfter:
-	.string "I did my best.\n"
-	.string "I have no regrets.$"
+	.string "עשיתי כמיטב יכולתי.\n"
+	.string "אין לי חרטות.$"
 
 Route25_Text_SupernerdPatSeen:
-	.string "Mufufufu…\p"
-	.string "I have nothing to do with the\n"
-	.string "six-pack trainers.\p"
-	.string "I waited here to beat you when\n"
-	.string "you were tired out by all the\l"
-	.string "battles.$"
+	.string "מופופופו…\p"
+	.string "אין לי שום קשר לשישיית\n"
+	.string "המאמנים.\p"
+	.string "חיכיתי כאן כדי לנצח אותך\n"
+	.string "כשתהיה סחוט מכל הקרבות.$"
 
 Route25_Text_SupernerdPatBeaten:
-	.string "Aren't you tired at all?$"
+	.string "אתה בכלל לא עייף?$"
 
 Route25_Text_SupernerdPatAfter:
-	.string "I'm sorry… I won't cheat\n"
-	.string "anymore…$"
+	.string "סליחה… אני לא ארמה\n"
+	.string "יותר…$"
 
 Route25_Text_CooltrainerKevinNugget:
-	.string "You took on one more battle than\n"
-	.string "you expected, but you won\l"
-	.string "anyway.\p"
-	.string "As promised, you win a prize.$"
+	.string "נאלצת להתמודד עם קרב נוסף\n"
+	.string "שלא ציפית לו, ובכל זאת ניצחת.\p"
+	.string "כמו שהובטח, זכית בפרס.$"
 
 Route25_Text_CooltrainerKevinSeen:
-	.string "But after seeing how you battle,\n"
-	.string "I want to see how I'll fare.\p"
-	.string "How about it? Let me take you\n"
-	.string "on.$"
+	.string "אבל אחרי שראיתי איך אתה נלחם,\n"
+	.string "אני רוצה לראות איך אני אסתדר.\p"
+	.string "מה אתה אומר? תן לי להתמודד\n"
+	.string "מולך.$"
 
 Route25_Text_CooltrainerKevinBeaten:
-	.string "I've never had a battle this\n"
-	.string "good!$"
+	.string "מעולם לא היה לי קרב\n"
+	.string "כל כך טוב!$"
 
 Route25_Text_CooltrainerKevinAfter:
-	.string "That was a great battle!\p"
-	.string "You and your POKéMON are truly\n"
-	.string "outstanding!$"
+	.string "זה היה קרב נהדר!\p"
+	.string "אתה והפוקימונים שלך באמת\n"
+	.string "יוצאים מן הכלל!$"
 
 Route25_Text_BillsHouseSign:
-	.string "SEA COTTAGE\n"
-	.string "BILL'S HOUSE$"
+	.string "קוטג' ימי\n"
+	.string "הבית של ביל$"
 

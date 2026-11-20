@@ -1,0 +1,5 @@
+# Include: from the action menu, POKEMON: wait until the battle party menu reads input.
+baction POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet

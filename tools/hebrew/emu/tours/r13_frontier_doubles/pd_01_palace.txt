@@ -1,0 +1,188 @@
+# r13 Battle Palace doubles, Lv.50, from the doubles attendant (19,6) to the BP prize.
+# Lobby: welcome for a double battle, CHALLENGE/INFO/EXIT, INFO (the doubles explanation), the
+# level menu, 'select three', the Frontier party pick (3 of 6), the save YES/NO and save box,
+# 'follow me' and the walk to the doubles hall door. Corridor: the attendant's comment. Battle
+# room: the opponent's walk-in and intro (Easy Chat: capture only), then double battle 1 twice
+# from one savestate (pass A and pass B), each with every battler's moves pinned to Splash and
+# its nature pinned (palpins), hp set to half (bhalfall): turn 1 shows 'X used Splash' and the
+# 'incapable of using its power' line, the end of turn 1 shows each battler's flavor line, both
+# sides, all four lines (A: player LONELY glint / BRAVE position, foes LAX growl / HARDY eager;
+# B: the other way round). Then the win (bpalace), the attendant's restore line, 'ready for
+# the 2nd opponent', GO ON / RECORD / REST / RETIRE with each YES/NO answered NO, RETIRE YES
+# and REST YES from a savestate, RECORD YES, battle 2 and the 3rd..7th set lines (battle number
+# poked from the battle-2 savestate), the 7th win: the lobby's 7-win lines, the BP award, the
+# record prompt, and the doubles results board.
+start saves/r13/palace_doubles/base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+include ../../scripts/r2_battle_frontier_facilities/_bf_testparty.txt
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PALACE_LOBBY_HNS 19 7
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+snap pd_00_lobby
+tap A 0
+drive pd_in menu
+pick 1
+drive pd_info menu
+pick 0
+drive pd_lv menu
+pick 0
+drive pd_sel task:Task_HandleChooseMonInput 20
+waitquiet
+snap pd_ps_00_start
+include ../../scripts/r2_battle_frontier_facilities/_bf_enter3.txt
+drive pd_save menu 10
+pick 0
+saveyes pd_savebox
+fastbattles off
+# battle 1's opponent pinned to Camper CHEN (18) in both ROMs, so the intro, send-out and
+# defeat lines compare; the pin is dropped once the battle has started (palpins needs all 8)
+pin @gTrainerBattleParameter+2@ 1200
+drivex pd_go battle 30 9000
+unpin
+oppname
+bmons
+tstate save pd_b1
+# ---- battle 1, pass A: b0 LONELY (glint), b1 LAX (growl), b2 BRAVE (position), b3 HARDY (eager)
+palpins 1 9 2 0
+bwalk1 pd_a_i
+bmons
+bhalfall
+palwalk pd_a 22
+bmons
+palunpin
+bsetmoves 0 MOVE_ICE_SHARD MOVE_BULLET_PUNCH MOVE_SHADOW_SNEAK MOVE_AQUA_JET
+bsetmoves 2 MOVE_ICE_SHARD MOVE_BULLET_PUNCH MOVE_SHADOW_SNEAK MOVE_AQUA_JET
+bpalace pd_a_w 0
+drivex pd_a_after menu 30 9000
+# ---- battle 1, pass B: b0 LAX (growl), b1 LONELY (glint), b2 HARDY (eager), b3 BRAVE (position)
+tstate load pd_b1
+palpins 9 1 0 2
+bwalk1 pd_b_i
+bmons
+bhalfall
+palwalk pd_b 22
+bmons
+palunpin
+bsetmoves 0 MOVE_ICE_SHARD MOVE_BULLET_PUNCH MOVE_SHADOW_SNEAK MOVE_AQUA_JET
+bsetmoves 2 MOVE_ICE_SHARD MOVE_BULLET_PUNCH MOVE_SHADOW_SNEAK MOVE_AQUA_JET
+bpalace pd_b_w 0
+# ---- after win 1: restore, ready for the 2nd, GO ON / RECORD / REST / RETIRE
+drivex pd_w1 menu 30 9000
+pick 1
+drive pd_rec menu 5
+pick 1
+drive pd_rec_no menu 5
+pick 2
+drive pd_rest menu 5
+pick 1
+drive pd_rest_no menu 5
+pick 3
+drive pd_ret menu 5
+pick 1
+drive pd_ret_no menu 5
+tstate save pd_m1
+# RETIRE YES: back to the lobby, the challenge is lost
+pick 3
+drive pd_ret2 menu 5
+pick 0
+drivex pd_retired menu 30 9000
+pick 1
+drivex pd_retired_no free 10
+snap pd_retired_lobby
+tstate load pd_m1
+# REST YES with a doubles Lv.50 streak of 60 (corridor comment 3): saved, reset, CONTINUE, resume
+sb2w16 DCC 60
+pick 2
+drive pd_rest2 menu 5
+pick 0
+20 -
+snap pd_rest_saving
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+snap pd_rs_mainmenu
+tap A 30
+waitcb2 CB2_Overworld 1200
+drivex pd_resume menu 30 9000
+tstate load pd_m1
+# REST YES with a streak of 120 (corridor comment 4)
+sb2w16 DCC 120
+pick 2
+drive pd_rest3 menu 5
+pick 0
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+tap A 30
+waitcb2 CB2_Overworld 1200
+drivex pd_resume2 menu 30 9000
+tstate load pd_m1
+sb2w16 DCC 1
+# RECORD YES: the battle is saved, the menu loses RECORD
+pick 1
+drive pd_rec2 menu 5
+pick 0
+drivex pd_rec_yes menu 20 6000
+pick 0
+drivex pd_b2_in battle 30 9000
+tstate save pd_b2
+palwin pd_b2
+drivex pd_b2_after menu 30 9000
+# battle 2 again with the battle number poked: the 4th, 5th, 6th and 7th set lines
+tstate load pd_b2
+sb2w16 CB2 2
+palwin pd_b2r4
+drivex pd_n4 menu 30 9000
+tstate load pd_b2
+sb2w16 CB2 3
+palwin pd_b2r5
+drivex pd_n5 menu 30 9000
+tstate load pd_b2
+sb2w16 CB2 4
+palwin pd_b2r6
+drivex pd_n6 menu 30 9000
+tstate load pd_b2
+sb2w16 CB2 5
+palwin pd_b2r7
+drivex pd_n7 menu 30 9000
+# the 7th win: back in the lobby, the 7-win lines, the BP award, the record prompt
+tstate load pd_b2
+sb2w16 CB2 6
+palwin pd_b7
+drivex pd_won menu 40 12000
+tstate save pd_won_rec
+pick 0
+drivex pd_won_yes free 20 6000
+snap pd_won_yes_end
+tstate load pd_won_rec
+pick 1
+drivex pd_won_no free 10
+snap pd_won_no_end
+# the doubles results board (16,7)
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PALACE_LOBBY_HNS 16 8
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+30 -
+waitquiet
+snap pd_res_doubles
+tap A 4
+waitctl 300
+# ---- the Palace action menu in doubles (battler 0, then battler 2), from battle 1's state:
+# POKEMON opens the party menu (the only order a Palace trainer gives), B back, FIGHT for both
+tstate load pd_b1
+bwalk pd_m_i input:HandleInputChooseAction
+snapq pd_m_act0
+baction POKEMON
+waittask Task_HandleChooseMonInput 600
+waitquiet
+snap pd_m_party
+tap B 4
+waitbinput HandleInputChooseAction
+waitquiet
+snap pd_m_act0_back
+baction FIGHT
+waitbinputb 2 HandleInputChooseAction
+waitquiet
+snap pd_m_act2
+bactionb 2 FIGHT
+bwalk pd_m_t1 input:HandleInputChooseAction

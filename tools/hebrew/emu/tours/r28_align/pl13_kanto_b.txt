@@ -1,0 +1,13 @@
+# Kanto towns after the League, outside (second half).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_VERMILION_CITY_HNS 22 5 ver
+visit ver
+arrive MAP_LAVENDER_TOWN_HNS 9 7 lav
+visit lav
+arrive MAP_CELADON_CITY_HNS 48 12 cel
+visit cel
+arrive MAP_SAFFRON_CITY_HNS 18 39 saf
+visit saf
+arrive MAP_FUCHSIA_CITY_HNS 25 32 fuc
+visit fuc

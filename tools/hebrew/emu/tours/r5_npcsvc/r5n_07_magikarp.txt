@@ -1,0 +1,84 @@
+# Lake of Rage House 2 fisher ((5,4), talked to from (5,5); LakeOfRage_House2_hns:4-163).
+# Before the hideout (VAR_MAHOGANY_TOWN_STATE 12): the lake history + men in black, then men in black.
+# After (17): NO; YES + B in the party menu; YES + Typhlosion (not a Magikarp); YES + Magikarp Lv 20
+# (too short, +¥2000); 'another?' + Magikarp Lv 100 (+¥100,000); a party of one (last Pokemon).
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+setmoney 10000
+
+# --- 1. before the hideout
+ev setvar VAR_MAHOGANY_TOWN_STATE, 12; setvar VAR_LAKE_OF_RAGE_FISHERMAN, 0; end
+warpto MAP_LAKE_OF_RAGE_HOUSE2_HNS 5 5
+face UP
+tap A 4
+fieldwatch k1_history free 8000
+face UP
+tap A 4
+fieldwatch k1_again free 6000
+
+# --- 2. after the hideout: NO
+ev setvar VAR_MAHOGANY_TOWN_STATE, 17; setvar VAR_LAKE_OF_RAGE_FISHERMAN, 0; end
+ev file _fisher_party.inc
+face UP
+tap A 4
+fieldwatch k2_ask menu 8000
+pick 1
+fieldwatch k2_no free 6000
+
+# --- 3. YES, then B in the party menu
+face UP
+tap A 4
+fieldwatch k3_ask menu 8000
+pick 0
+fieldwatch k3_choose cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap k3_party
+tap B 0
+fieldwatch k3_refused free 6000 15
+
+# --- 4. YES, Typhlosion
+face UP
+tap A 4
+fieldwatch k4_ask menu 8000
+pick 0
+fieldwatch k4_choose cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap A 0
+fieldwatch k4_notkarp free 6000 15
+
+# --- 5. YES, Magikarp Lv 20: too short (+¥2000)
+face UP
+tap A 4
+fieldwatch k5_ask menu 8000
+pick 0
+fieldwatch k5_choose cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap k5_party_karp
+tap A 0
+fieldwatch k5_short free 6000 10
+expectmoney 12000
+
+# --- 6. another: Magikarp Lv 100 (now slot 1): +¥100,000
+face UP
+tap A 4
+fieldwatch k6_ask menu 8000
+pick 0
+fieldwatch k6_choose cb2:CB2_UpdatePartyMenu 6000
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+fieldwatch k6_big free 6000 10
+expectmoney 112000
+
+# --- 7. a party of one: the last Pokemon
+partyinfo
+face UP
+tap A 4
+fieldwatch k7_ask menu 8000
+pick 0
+fieldwatch k7_lastmon free 6000

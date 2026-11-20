@@ -1,0 +1,25 @@
+# r6 items: Std_ObtainItem windows (giveitem ITEM, QTY) for the items NPCs give in *_hns scripts, 5.
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+gift g_cheri_berry ITEM_CHERI_BERRY 1
+gift g_mystery_egg ITEM_MYSTERY_EGG 1
+gift g_exp_share_small ITEM_EXP_SHARE_SMALL 1
+gift g_tm_rest ITEM_TM_REST 1
+gift g_old_rod ITEM_OLD_ROD 1
+gift g_tm_roar ITEM_TM_ROAR 1
+gift g_poison_barb ITEM_POISON_BARB 1
+gift g_miracle_seed ITEM_MIRACLE_SEED 1
+gift g_hm_rock_smash ITEM_HM_ROCK_SMASH 1
+gift g_hard_stone ITEM_HARD_STONE 1
+gift g_magnet ITEM_MAGNET 1
+gift g_tm_snatch ITEM_TM_SNATCH 1
+gift g_sharp_beak ITEM_SHARP_BEAK 1
+gift g_sky_plate ITEM_SKY_PLATE 1
+gift g_dread_plate ITEM_DREAD_PLATE 1
+gift g_mind_plate ITEM_MIND_PLATE 1
+gift g_iron_plate ITEM_IRON_PLATE 1
+gift g_draco_plate ITEM_DRACO_PLATE 1
+gift g_insect_plate ITEM_INSECT_PLATE 1
+gift g_zap_plate ITEM_ZAP_PLATE 1
+gift g_cleanse_tag ITEM_CLEANSE_TAG 1
+gift g_metal_coat ITEM_METAL_COAT 1

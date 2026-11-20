@@ -1,0 +1,31 @@
+# Mom's gift calls in the field call box (data/scripts/mom_savings.inc:1-45): the three scripts
+# run with evstart, then the natural trigger (FLAG_MOM_HAS_GIFT + a step in a city,
+# Mom_TryTriggerGiftCall, src/mom_savings.c:267-290; it picks the script by the pending gift).
+# The intro page ("……") waits for A; the last page waits in MatchCall_PrintMessage for A/B.
+start saves/r3_calls/base.sav
+include ../continue.txt
+warpto MAP_CHERRYGROVE_CITY_HNS 25 9
+waitctl 600
+mcclear
+evstart call EventScript_MomGiftCall_Item; end
+waitkey 900
+pages m_item 20
+snap m_item_last
+waitctl 900 B
+evstart call EventScript_MomGiftCall_Berry; end
+waitkey 900
+pages m_berry 20
+snap m_berry_last
+waitctl 900 B
+evstart call EventScript_MomGiftCall_Decoration; end
+waitkey 900
+pages m_decoration 20
+snap m_decoration_last
+waitctl 900 B
+setflag FLAG_MOM_HAS_GIFT
+go RIGHT 1
+waitkey 900
+pages m_natural 20
+snap m_natural_last
+waitctl 900 B
+mcflags FLAG_MOM_HAS_GIFT

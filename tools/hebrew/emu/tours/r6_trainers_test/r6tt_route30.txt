@@ -1,0 +1,7 @@
+# test: Route 30 Mikey (walk-up), Joey (rematch), Don
+start saves/ladder6_postgame.sav
+include ../r6_league/_base.txt
+tbase
+trainer Route30_hns 7 walk
+trainer Route30_hns 2 rematch
+trainer Route30_hns 4

@@ -1,0 +1,330 @@
+# Mid-game play from ladder save 3: the party and the bag as a player uses them between
+# battles. Party: Quilava (holds Charcoal), Pidgeotto (HP 6), Flaaffy (poisoned), Graveler
+# (fainted), Haunter (paralysed), Togepi. The party menu with its status tags and the
+# submenus (SUMMARY, ITEM > TAKE, a field move), the medicine pocket (Potion, Antidote,
+# Paralyze Heal, Revive, a Super Potion with no effect), the items pocket (Repel used, Repel
+# tossed with the quantity picker and YES/NO, items given to a Pokemon, the switch question),
+# the key items pocket.
+# gBagPosition: pocket u8 at +5, cursorPosition[6] u16 at +8, scrollPosition[6] u16 at +14
+# (include/item_menu.h:59-67; pockets ITEMS 0, MEDICINE 1, ..., KEY_ITEMS 5).
+start saves/ladder3_ecruteak.sav
+include ../../scripts/continue.txt
+ev setstatus1 STATUS1_POISON, 2; setstatus1 STATUS1_PARALYSIS, 4; setko 3; end
+sethp player 1 6
+
+# --- The party menu
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pmc_party_status
+tap A 4                                   # Quilava: its submenu
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap pmc_party_menu_quilava
+press B
+waittaskx Task_HandleChooseMonInput 300
+seek 8 @gPartyMenu+9@ 1 DOWN              # Pidgeotto: a field move in its submenu
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap pmc_party_menu_pidgeotto
+press B
+waittaskx Task_HandleChooseMonInput 300
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# --- Medicine pocket
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 0
+w16 @gBagPosition+16@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pmc_bag_medicine
+# Medicine: 0 Potion, 1 Super Potion, 2 Antidote, 3 Paralyze Heal, 4 Awakening, 5 Revive
+# Potion on Pidgeotto (slot 1)
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap pmc_potion_context
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap pmc_potion_which
+tap A 4
+waitkey 900
+snap pmc_potion_msg
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pmc_potion_after
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+# Antidote on Flaaffy (slot 2)
+press DOWN
+press DOWN
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 2 DOWN
+snap pmc_antidote_which
+tap A 4
+waitkey 900
+snap pmc_antidote_msg
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pmc_antidote_after
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+# Paralyze Heal on Haunter (slot 4)
+press DOWN
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 4 DOWN
+snap pmc_parlyz_which
+tap A 4
+waitkey 900
+snap pmc_parlyz_msg
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pmc_parlyz_after
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+# Revive on Graveler (slot 3)
+press DOWN
+press DOWN
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 3 DOWN
+snap pmc_revive_which
+tap A 4
+waitkey 900
+snap pmc_revive_msg
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pmc_revive_after
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+# Super Potion on Quilava at full HP: no effect
+press UP
+press UP
+press UP
+press UP
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 0 DOWN
+snap pmc_noeffect_which
+tap A 4
+waitkey 900
+snap pmc_noeffect_msg
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pmc_noeffect_after
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pmc_bag_medicine_after
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# --- Items pocket
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 0
+w16 @gBagPosition+14@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pmc_bag_items
+press DOWN
+snap pmc_bag_items_02
+press DOWN
+snap pmc_bag_items_03
+press DOWN
+snap pmc_bag_items_04
+# Repel (index 3): USE
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap pmc_repel_context
+tap A 4                                   # USE
+waitkey 900
+snap pmc_repel_used
+tap A 4
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap pmc_repel_after
+# Repel: TOSS two, with the quantity picker and YES/NO
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap DOWN 4                                # TOSS
+waitquiet
+snap pmc_toss_context
+tap A 4
+waitquiet
+snap pmc_toss_qty_1
+press UP
+snap pmc_toss_qty_2
+tap A 4
+waitquiet
+snap pmc_toss_confirm
+tap A 4                                   # YES
+waittaskx Task_TossItemFromBag 300
+waitquiet
+snap pmc_toss_done
+tap A 4
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap pmc_toss_after
+# Miracle Seed (index 1): GIVE to Pidgeotto
+press UP
+press UP
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4                             # GIVE
+waitquiet
+snap pmc_give_context
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap pmc_give_which
+tap A 4
+waitkey 600
+snap pmc_give_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pmc_give_after
+# Escape Rope: GIVE to Quilava, who holds the Charcoal: the switch question, NO
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4                                   # slot 1, Quilava
+waitquiet
+snap pmc_switch_q
+tap A 4
+waittaskx Task_HandleSwitchItemsFromBagYesNoInput 300
+waitquiet
+snap pmc_switch_yesno
+tap B 4                                   # NO
+waitquiet
+snap pmc_switch_no
+waitcb2x CB2_BagMenuRun 900               # NO goes back to the bag
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# --- Key items pocket
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 0
+w16 @gBagPosition+1E@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pmc_bag_keys
+tap A 4
+waitquiet
+snap pmc_bag_keys_context
+tap B 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+
+# --- The party: ITEM > TAKE the Charcoal from Quilava, then Haunter's summary
+tap B 4
+waitctl 600
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pmc_party_healed
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+seek 8 @menu:sMenu+2@ 2 DOWN              # ITEM
+tap A 4
+waitquiet
+snap pmc_party_item_menu
+press DOWN                                # GIVE / TAKE / MOVE / CANCEL
+snap pmc_party_item_take_sel
+tap A 4
+waitkey 600
+snap pmc_party_item_taken
+tap A 4
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+seek 8 @gPartyMenu+9@ 4 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap A 4                                   # SUMMARY
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap pmc_summary_info
+press RIGHT
+waitquiet
+snap pmc_summary_skills
+press RIGHT
+waitquiet
+snap pmc_summary_moves
+press A
+waitquiet
+snap pmc_summary_moves_detail
+press DOWN
+waitquiet
+snap pmc_summary_moves_detail_2

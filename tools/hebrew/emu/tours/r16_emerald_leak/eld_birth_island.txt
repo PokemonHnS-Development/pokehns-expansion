@@ -1,0 +1,17 @@
+# (d) The Birth Island harbor sailor (BirthIsland_Harbor_hns/scripts.inc:17: YES -> warp
+# MAP_LILYCOVE_CITY_HARBOR 8 11, an Emerald map). Talk from the north (the sailor faces up), YES
+# (the default row: A), then let the ferry scene run. r6r3_islands_base.sav is a byte copy of ladder 6.
+# watchload looks every 4 frames: what the warp loads depends on the RNG at the map load, so the A
+# presses keep the frame timeline of the first run (which reached the debug error screen on the
+# rc17 clip ROM); START answers that screen as a player would.
+start saves/r6r3_islands_base.sav
+include ../../scripts/continue.txt
+warpto MAP_BIRTH_ISLAND_HARBOR_HNS 8 4
+where start
+face DOWN
+snap eld_00_field
+tap A 4
+drive eld_q menu
+tap A 4
+watchload eld_yes 6000 240 4
+where end

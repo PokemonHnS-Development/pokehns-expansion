@@ -480,24 +480,24 @@ BattleFrontier_BattlePalaceLobby_Text_BattlePointsFor7WinStreak:
 	.string "we present you with Battle Point(s).$"
 
 BattleFrontier_BattlePalaceLobby_Text_NoSpaceForPrize:
-	.string "You seem to have no space for\n"
-	.string "our prize.\p"
-	.string "You should return when you have\n"
-	.string "organized your BAG.$"
+	.string "נראה שאין לך מקום\n"
+	.string "לפרס שלנו.\p"
+	.string "כדאי לחזור כשהתיק שלך\n"
+	.string "יהיה מסודר.$"
 
 BattleFrontier_BattlePalaceLobby_Text_WeHaveBeenWaiting:
-	.string "We have been waiting for you…$"
+	.string "חיכינו לך…$"
 
 BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge:
-	.string "I must save before I show you to\n"
-	.string "the BATTLE HALL. Is that okay?$"
+	.string "עליי לשמור לפני שאוביל אותך\n"
+	.string "לאולם הקרב. זה בסדר?$"
 
 BattleFrontier_BattlePalaceLobby_Text_FailedToSaveBeforeEndingChallenge:
-	.string "Sigh…\p"
-	.string "You failed to save before you ended\n"
-	.string "your challenge the last time.\p"
-	.string "As a result, your challenge has been\n"
-	.string "disqualified. It is most unfortunate.$"
+	.string "אח…\p"
+	.string "בפעם הקודמת לא שמרת לפני\n"
+	.string "שסיימת את האתגר שלך.\p"
+	.string "לכן האתגר שלך נפסל.\n"
+	.string "זה מצער ביותר.$"
 
 @ Unused
 BattleFrontier_BattlePalaceLobby_Text_ReceivedPrize:
@@ -600,55 +600,47 @@ BattleFrontier_BattlePalaceLobby_Text_RulesAreListed:
 	.string "The BATTLE HALL rules are listed.$"
 
 BattleFrontier_BattlePalaceLobby_Text_ReadWhichHeading:
-	.string "Which heading do you want to read?$"
+	.string "איזה סעיף ברצונך לקרוא?$"
 
 BattleFrontier_BattlePalaceLobby_Text_ExplainRulesBasics:
-	.string "Here, POKéMON are required to think\n"
-	.string "and battle by themselves.\p"
-	.string "Unlike in the wild, POKéMON that live\n"
-	.string "with people behave differently\l"
-	.string "depending on their nature.$"
+	.string "כאן הפוקימונים נדרשים לחשוב\n"
+	.string "ולהילחם בכוחות עצמם.\p"
+	.string "בניגוד לפוקימונים בטבע, פוקימונים שחיים\n"
+	.string "עם אנשים מתנהגים בהתאם לאופי שלהם.$"
 
 BattleFrontier_BattlePalaceLobby_Text_ExplainRulesNature:
-	.string "Depending on its nature, a POKéMON\n"
-	.string "may prefer to attack no matter what.\p"
-	.string "Another POKéMON may prefer to protect\n"
-	.string "itself from any harm.\p"
-	.string "Yet another may enjoy vexing or\n"
-	.string "confounding its foes.\p"
-	.string "Due to its nature, a POKéMON\n"
-	.string "will have favorite moves that it is good\l"
-	.string "at using.\p"
-	.string "It may also dislike certain moves that\n"
-	.string "it has trouble using.$"
+	.string "בהתאם לאופי שלו, פוקימון עשוי\n"
+	.string "להעדיף לתקוף בכל מצב.\p"
+	.string "פוקימון אחר עשוי להעדיף להגן\n"
+	.string "על עצמו מכל פגיעה.\p"
+	.string "ואחר עשוי ליהנות להציק\n"
+	.string "ליריביו ולבלבל אותם.\p"
+	.string "בגלל האופי שלו, לפוקימון יש\n"
+	.string "מהלכים אהובים שהוא טוב בהם.\p"
+	.string "הוא גם עלול לא לאהוב מהלכים\n"
+	.string "מסוימים שקשה לו להשתמש בהם.$"
 
 BattleFrontier_BattlePalaceLobby_Text_ExplainRulesMoves:
-	.string "There are offensive moves that inflict\n"
-	.string "direct damage on the foe.\p"
-	.string "There are defensive moves that are\n"
-	.string "used to prepare for enemy attacks or\l"
-	.string "used to heal HP and so on.\p"
-	.string "There are also other somewhat-odd\n"
-	.string "moves that may enfeeble the foes with\l"
-	.string "stat problems including poison and \l"
-	.string "paralysis.\p"
-	.string "POKéMON will consider using moves in\n"
-	.string "these three categories.$"
+	.string "יש מהלכי התקפה שגורמים\n"
+	.string "נזק ישיר ליריב.\p"
+	.string "יש מהלכי הגנה שמשמשים להתכונן להתקפות\n"
+	.string "היריב, לרפא נ”ח וכדומה.\p"
+	.string "יש גם מהלכים מוזרים משהו שמחלישים\n"
+	.string "יריבים בבעיות מצב כמו הרעלה ושיתוק.\p"
+	.string "הפוקימונים ישקלו להשתמש\n"
+	.string "במהלכים משלוש הקטגוריות האלה.$"
 
 BattleFrontier_BattlePalaceLobby_Text_ExplainRulesUnderpowered:
-	.string "When not under command by its TRAINER,\n"
-	.string "a POKéMON may be unable to effectively\l"
-	.string "use certain moves.\p"
-	.string "A POKéMON is not good at using any\n"
-	.string "move that it dislikes.\p"
-	.string "If a POKéMON only knows moves that\n"
-	.string "do not match its nature, it will often\l"
-	.string "be unable to live up to its potential.$"
+	.string "כשהמאמן לא נותן לו פקודות, פוקימון\n"
+	.string "עלול לא לנצל היטב מהלכים מסוימים.\p"
+	.string "פוקימון לא מיטיב להשתמש\n"
+	.string "במהלכים שהוא לא אוהב.\p"
+	.string "אם כל המהלכים של פוקימון לא תואמים\n"
+	.string "את אופיו, לרוב הוא לא ימצה את יכולתו.$"
 
 BattleFrontier_BattlePalaceLobby_Text_ExplainRulesWhenInDanger:
-	.string "Depending on its nature, a POKéMON may\n"
-	.string "start using moves that don't match its\l"
-	.string "nature when it is in trouble.\p"
-	.string "If a POKéMON begins behaving oddly\n"
-	.string "in a pinch, watch it carefully.$"
+	.string "בהתאם לאופי שלו, פוקימון בצרה עשוי\n"
+	.string "לעבור למהלכים שלא תואמים את אופיו.\p"
+	.string "אם פוקימון מתחיל להתנהג מוזר\n"
+	.string "בשעת דחק, כדאי לעקוב אחריו היטב.$"
 

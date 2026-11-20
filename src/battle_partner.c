@@ -134,6 +134,10 @@ void FillPartnerParty(u16 trainerId)
             CreateFacilityMon(&gFacilityTrainerMons[monId], level, ivs, otID, 0, &gPlayerParty[MULTI_PARTY_SIZE + i]);
             for (j = 0; j < PLAYER_NAME_LENGTH + 1; j++)
                 trainerName[j] = gFacilityTrainers[trainerId].trainerName[j];
+#if RTL_STRING_REPORT
+            RtlStringReport(gFacilityTrainers[trainerId].trainerName);
+#endif
+#line 137
             SetMonData(&gPlayerParty[MULTI_PARTY_SIZE + i], MON_DATA_OT_NAME, &trainerName);
             j = IsFrontierTrainerFemale(trainerId);
             SetMonData(&gPlayerParty[MULTI_PARTY_SIZE + i], MON_DATA_OT_GENDER, &j);

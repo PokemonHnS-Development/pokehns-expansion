@@ -1,0 +1,122 @@
+# Goldenrod Pokemon Center link NPC (data/maps/GoldenrodCity_PokemonCenter_hns/scripts.inc:34-150; the receptionist
+# at (14,5), talked to from (14,6) facing UP) with no link partner:
+#  1 TRADE with one Pokemon (CableClub_Text_NeedTwoMonsToTrade, data/scripts/cable_club.inc:463-474)
+#  2 BATTLE > DOUBLE with one usable Pokemon (CableClub_Text_NeedTwoMonsForDoubleBattle), back to the mode menu, EXIT
+#  3 TRADE with an Enigma Berry held (CableClub_Text_CantTradeEnigmaBerry; DoesPartyHaveEnigmaBerry checks
+#    ITEM_ENIGMA_BERRY_E_READER only, src/script_pokemon_util.c:137-144, an item no H&S player can hold)
+#  4 TRADE, the save prompt, NO
+#  5 TRADE, save YES, 'please wait' (Task_LinkupAwaitConnection), B: LINKUP_FAILED (src/cable_club.c:162-171)
+#     -> CableClub_EventScript_AbortLink
+#  6 BATTLE > SINGLE, save YES, 'please wait', B: the same abort
+#  7 the other CableClub_EventScript_AbortLink* lines (they need a partner), run in RAM in the same spot
+start saves/r6_frontier_npcs.sav
+include ../../scripts/continue.txt
+ev callnative ZeroPlayerPartyMons; special CalculatePlayerPartyCount; givemon SPECIES_PIKACHU, 20; end
+partyinfo
+warpto MAP_GOLDENROD_CITY_POKEMON_CENTER_HNS 14 6
+
+# --- 1. TRADE with one Pokemon
+face UP
+tap A 4
+fieldwatch k1_intro menu 6000
+pick 0
+fieldwatch k1_trade_one free 6000
+snap k1_after
+
+# --- 2. BATTLE > DOUBLE with one Pokemon, then EXIT
+face UP
+tap A 4
+fieldwatch k2_intro menu 6000
+pick 1
+fieldwatch k2_mode menu 6000
+pick 1
+fieldwatch k2_double_one menu 6000
+pick 2
+fieldwatch k2_exit free 6000
+
+# --- 3. TRADE with an Enigma Berry held
+ev createmon 0, 1, SPECIES_PIKACHU, 5, item=ITEM_ENIGMA_BERRY_E_READER; special CalculatePlayerPartyCount; end
+partyinfo
+face UP
+tap A 4
+fieldwatch k3_intro menu 6000
+pick 0
+fieldwatch k3_enigma free 6000
+
+# --- 4. TRADE, save prompt, NO
+ev createmon 0, 1, SPECIES_PIKACHU, 5; special CalculatePlayerPartyCount; end
+face UP
+tap A 4
+fieldwatch k4_intro menu 6000
+pick 0
+fieldwatch k4_help task:SaveGameTask 6000
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap k4_save_prompt
+tap DOWN 4
+waitquiet
+snap k4_save_no
+tap A 4
+waitctl 900
+snap k4_after
+
+# --- 5. TRADE, save YES, please wait, B
+face UP
+tap A 4
+fieldwatch k5_intro menu 6000
+pick 0
+fieldwatch k5_help task:SaveGameTask 6000
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap k5_save_prompt
+tap A 0
+waitptr sSaveDialogCallback SaveDoSaveCallback 900
+snap k5_saving
+waitptr sSaveDialogCallback SaveReturnSuccessCallback 900
+snap k5_saved
+waittask Task_LinkupAwaitConnection 1200 A
+waitquiet
+snap k5_wait
+30 -
+snap k5_wait_later
+tap B 4
+fieldwatch k5_abort free 6000
+
+# --- 6. BATTLE > SINGLE, save YES, please wait, B
+face UP
+tap A 4
+fieldwatch k6_intro menu 6000
+pick 1
+fieldwatch k6_mode menu 6000
+pick 0
+fieldwatch k6_help task:SaveGameTask 6000
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap k6_save_prompt
+tap A 0
+waitptr sSaveDialogCallback SaveReturnSuccessCallback 900
+snap k6_saved
+waittask Task_LinkupAwaitConnection 1200 A
+waitquiet
+snap k6_wait
+tap B 4
+fieldwatch k6_abort free 6000
+
+# --- 7. the abort lines that need a partner, run in RAM
+face UP
+evstart lock; goto 0x@CableClub_EventScript_AbortLinkSomeoneNotReady@
+fieldwatch k7_someone_not_ready free 6000
+evstart lock; goto 0x@CableClub_EventScript_AbortLinkDifferentSelections@
+fieldwatch k7_diff_selections free 6000
+evstart lock; goto 0x@CableClub_EventScript_AbortLinkIncorrectNumberOfParticipants@
+fieldwatch k7_wrong_participants free 6000
+evstart lock; buffernumberstring STR_VAR_1, 3; goto 0x@CableClub_EventScript_AbortLinkWrongNumberForSingleBattle@
+fieldwatch k7_single_3players free 6000
+evstart lock; buffernumberstring STR_VAR_1, 3; goto 0x@CableClub_EventScript_AbortLinkWrongNumberForDoubleBattle@
+fieldwatch k7_double_3players free 6000
+evstart lock; goto 0x@CableClub_EventScript_AbortLinkConnectionError@
+fieldwatch k7_connection_error free 6000
+evstart lock; goto 0x@CableClub_EventScript_AbortLinkPlayerNotReady@
+fieldwatch k7_player_not_ready free 6000
+evstart lock; goto 0x@CableClub_EventScript_AbortLinkOtherTrainerNotReady@
+fieldwatch k7_other_not_ready free 6000

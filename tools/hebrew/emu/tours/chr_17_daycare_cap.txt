@@ -1,0 +1,47 @@
+# Day care growth under the level cap on save chal_a (cap 11 with 0 badges): Cyndaquil Lv 10
+# is left with the Route 34 day-care lady, then its step counter is set to 400 (enough EXP
+# for Lv 12 without a cap). The lady reports the levels gained, capped at 11
+# (GetNumLevelsGainedFromSteps, src/daycare.c:427-439), and the Pokemon comes back at Lv 11
+# (src/daycare.c:386-393).
+start save:chal_a
+include _chr_base.txt
+ev givemon SPECIES_CYNDAQUIL, 10; givemon SPECIES_GROWLITHE, 10; givemon SPECIES_PONYTA, 10; end
+warptoloose MAP_ROUTE34_DAY_CARE_HNS 3 7
+waitctl 600
+face DOWN
+talk chr_dc1_lady 10                      # ends at YES/NO: raise a Pokemon?
+tap A 0                                   # YES
+talk chr_dc1_which 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap chr_dc1_party
+tap A 0                                   # Cyndaquil: its submenu
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap chr_dc1_party_menu
+tap A 0                                   # the first entry stores it
+waitcb2x CB2_Overworld 900
+talk chr_dc1_stored 10 -                  # ends at YES/NO: raise one more?
+tap B 0                                   # NO
+talk chr_dc1_comeagain 10 -
+waitctl 600 B
+
+# 400 steps (DaycareMon.steps: the u32 after the BoxPokemon and the mail, SB1+0x37D8 for
+# mons[0] in this build, found by a step diff; mons[0] starts at SB1+0x3750)
+w32 @SB1+37D8@ 190
+face DOWN
+talk chr_dc2_lady 10                      # good to see you / grown by N levels / one more?
+tap B 0                                   # NO
+talk chr_dc2_takeback 10 -                # take it back? YES/NO
+tap A 0                                   # YES
+talk chr_dc2_cost 10 -                    # it will cost ... YES/NO
+tap A 0                                   # YES
+talk chr_dc2_return 10 -
+waitctl 600 B
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap chr_dc2_party_after

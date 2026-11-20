@@ -1,0 +1,37 @@
+# Frontier Exchange BP decor shop 1 (CreateBPDecorShop1) with the 40 doll slots full: 'The space for X is
+# full' (src/shop.c:2027-2035) for a poster and a doll, after 'You wanted X? That'll be N BP'.
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+setbp 9999
+ev file fill_dolls.inc
+evstart special CreateBPDecorShop1; waitstate; release; end
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m25_decorfull
+listgo 0
+tap A 0
+snap m25_decorfull_poster
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m25_decorfull_poster_yesno
+tap A 0
+snap m25_decorfull_poster_thanks
+tap A 0
+snap m25_decorfull_poster_back
+listgo 2
+tap A 0
+snap m25_decorfull_doll
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+10 -
+snap m25_decorfull_doll_yesno
+tap A 0
+snap m25_decorfull_doll_thanks
+tap A 0
+snap m25_decorfull_doll_back
+press B
+waitcb2x CB2_Overworld 900
+waitctl 900

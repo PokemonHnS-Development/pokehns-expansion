@@ -1,0 +1,59 @@
+# A Master-rank COOL contest with a Pokemon this ROM names (party slot 6 becomes a Staraptor given
+# by `givemon`, so on the Hebrew ROM its nickname is the Hebrew species name, 57 px, the widest
+# one): it shows the contest texts with a Hebrew nickname. Entering Master rank needs the Cool
+# Hyper ribbon (GetContestEntryEligibility), given rank by rank with GiveMonContestRibbon.
+# Round 1 points are set to 900 at the contest screen, so the total reaches 800 and
+# ShouldReadyContestArtist (src/contest_util.c:2348) readies the contest artist. In H&S the artist
+# never comes: the lobby's ON_FRAME script needs FLAG_HIDE_LILYCOVE_MUSEUM_CURATOR
+# (LilycoveCity_ContestLobby_hns/scripts.inc:16-19), which is 0 (no flag) in
+# include/constants/flags_hns.h:1872, so it resets VAR_LILYCOVE_CONTEST_LOBBY_STATE. The tour
+# then runs the artist scene itself (LilycoveCity_ContestLobby_EventScript_ContestArtist_hns:
+# the painting, "take it to the museum?" NO, "but I'd like to..." YES, the Artist Ribbon).
+start saves/ladder6_postgame.sav
+include ../continue.txt
+partyclear 5
+ev givemon SPECIES_STARAPTOR, 50; additem ITEM_POKEBLOCK_CASE, 1; end
+w8 @gContestMonPartyIndex@ 5
+w8 @gContestPlayerMonIndex@ 3
+w32 @gContestFinalStandings@ 00010203
+ev setvar VAR_CONTEST_CATEGORY, 0; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 4
+fieldwatch rc_m_recep menu 6000
+pick 0
+fieldwatch rc_m_rank menu 3000
+pick 3
+fieldwatch rc_m_type menu 3000
+pick 0
+fieldwatch rc_m_which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 5 DOWN
+snap rc_m_party_pick
+tap A 4
+fieldwatch rc_m_entry cb2:CB2_StartContest 40000 90
+ss rc_m_pre_contest
+w16s gContestMonRound1Points 3 900
+contestplay rc_m_app 01230
+fieldwatch rc_m_judge cb2:CB2_StartShowContestResults 20000 90
+waitcb2x CB2_ShowContestResults 600
+burstuntil rc_m_res CB2_ShowContestResults 16 9000 A 240
+fieldwatch rc_m_prize free 30000 60
+snap rc_m_lobby_back
+evstart goto LilycoveCity_ContestLobby_EventScript_ContestArtist_hns
+fieldwatch rc_m_artist cb2:CB2_HoldContestPainting 6000 30
+burst rc_m_artpaint 6 20
+snap rc_m_artpaint_final
+tap A 4
+waitcb2x CB2_Overworld 900
+fieldwatch rc_m_museum menu 3000
+pick 1
+fieldwatch rc_m_takehome menu 3000
+pick 0
+fieldwatch rc_m_ribbon free 30000 60
+loc
+snap rc_m_lobby_after
+savegame
+keepsave rc_after_master

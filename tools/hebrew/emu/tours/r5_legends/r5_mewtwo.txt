@@ -1,0 +1,10 @@
+# Mewtwo, Cerulean Cave B2F (8,14): CeruleanCave3_EventScript_MewtwoNew (data/maps/CeruleanCave_B2F_hns/scripts.inc:4-20), no text
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_MEWTWO; end
+warpto MAP_CERULEAN_CAVE_B2F_HNS 8 15
+face UP
+snap mewtwo_field
+tap A 4
+scene mewtwo_pre 4000
+include _legend_tail.txt

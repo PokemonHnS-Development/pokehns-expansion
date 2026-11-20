@@ -1,0 +1,80 @@
+# In-game trades whose dialogue names the received Pokemon in Latin while the Pokemon itself carries
+# the Hebrew nickname (src/data/trade.h): Jasmine's RUSTY (Olivine Gym, INGAME_TRADE_STEELIX, any
+# Pokemon), Brock's WOODY (Pewter Gym, INGAME_TRADE_BONSLY, wants Rhyhorn), Lorenzo's MAGGIE (Power
+# Plant entrance, INGAME_TRADE_MAGNETON, wants Dugtrio). Each: NO (decline line), YES + the PC box
+# (party pane) + the trade scene + the take-care line, then talk again (trade-completed line).
+start saves/ladder6_postgame.sav
+include _setup.txt
+ev clearflag FLAG_HIDE_DOJO_JASMINE; clearflag FLAG_HIDE_OLIVINE_CITY_GYM_JASMINE; clearflag FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED; clearflag FLAG_HIDE_DOJO_BROCK; clearflag FLAG_PEWTER_GYM_NPC_TRADE_COMPLETED; clearflag FLAG_POWERPLANT_NPC_TRADE_COMPLETED; end
+
+# --- Jasmine (8,4), from (8,5) facing up
+warpto MAP_OLIVINE_CITY_GYM_HNS 8 5
+face UP
+tap A 4
+fieldwatch jas_ask menu 6000
+pick 1
+fieldwatch jas_decline free 3000
+face UP
+tap A 4
+fieldwatch jas_ask2 menu 6000
+pick 0
+include _pickparty.txt
+snap jas_box
+boxpick 1 4 jas_party_magikarp
+waitcb2x CB2_InGameTrade 900
+scenewatch jas_scene CB2_Overworld 5000 110 160 A 150
+waitcb2x CB2_Overworld 900
+fieldwatch jas_takecare free 3000
+face UP
+tap A 4
+fieldwatch jas_completed free 3000
+
+# --- Brock (6,5), from (6,6) facing up
+warpto MAP_PEWTER_CITY_GYM_HNS 6 6
+face UP
+tap A 4
+fieldwatch brock_ask menu 6000
+pick 1
+fieldwatch brock_decline free 3000
+face UP
+tap A 4
+fieldwatch brock_ask2 menu 6000
+pick 0
+include _pickparty.txt
+snap brock_box
+boxpick 1 1 brock_party_rhyhorn
+waitcb2x CB2_InGameTrade 900
+scenewatch brock_scene CB2_Overworld 5000 110 160 A 150
+waitcb2x CB2_Overworld 900
+fieldwatch brock_takecare free 3000
+face UP
+tap A 4
+fieldwatch brock_completed free 3000
+
+# --- Lorenzo (18,16), from (18,17) facing up
+warpto MAP_ROUTE10_POWER_PLANT_ENTRANCE_HNS 18 17
+face UP
+tap A 4
+fieldwatch lor_ask menu 6000
+pick 1
+fieldwatch lor_decline free 3000
+face UP
+tap A 4
+fieldwatch lor_ask2 menu 6000
+pick 0
+include _pickparty.txt
+snap lor_box
+boxpick 1 2 lor_party_dugtrio
+waitcb2x CB2_InGameTrade 900
+scenewatch lor_scene CB2_Overworld 5000 110 160 A 150
+waitcb2x CB2_Overworld 900
+fieldwatch lor_takecare free 3000
+face UP
+tap A 4
+fieldwatch lor_completed free 3000
+
+# --- the party with the three received Pokemon (Hebrew nicknames on the Hebrew ROM)
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+snap trades_party

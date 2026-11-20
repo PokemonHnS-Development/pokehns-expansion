@@ -1,0 +1,786 @@
+# Battle Dome tourney tree info cards (src/battle_dome.c): the player's own card (tree position 0) drawn
+# again after each change of gSaveBlock2Ptr->frontier.domePlayerPartyData (SB2+0xEFC, include/global.h:626),
+# which the card reads for the battle-style line (moves, :4291-4360) and the stat line (EVs and nature,
+# :4395-4579); Dome Ace Tucker's potential line (TRAINER_FRONTIER_BRAIN in DOME_TRAINERS slot 8 = tree
+# position 1, :4282-4286); the match cards of R1 M2-M7, R2 M2-M4 and SF M2 (tree positions 16 + match,
+# Task_HandleTourneyTreeInput :4891-4960); then match results set in DOME_TRAINERS (isEliminated,
+# eliminatedAt, forfeited) and domeWinningMoves (SB2+0xEC0) for the forfeit, no-move and champion lines
+# (BufferDomeWinString :4581-4643), with the player as champion and a 7-character player name.
+# The tree cursor is moved by writing the tree task's data[1] (bts.py taskpoke); every card is the game's.
+# Stand-in: the stat and style lines come from poked party data; the style scoring keeps only the last move
+# read (allocatedArray[k] = ..., :4311-4356, in English 2.0.6 too), so only the styles whose thresholds are
+# all 1 can show, tested here one move at a time in domePlayerPartyData[2].moves[3].
+# Save: saves/r13/dome_doubles/base.sav (HNS_SAVES = hns-tools/emu/saves_screens). The entry is the r13
+# DOUBLE counter flow (tours/r13_dome_doubles/dd_01_entry.txt).
+start saves/r13/dome_doubles/base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+fastbattles off
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 17 11
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive fd_in menu
+pick 1
+drive fd_info menu
+pick 0
+drive fd_lv menu
+pick 0
+drive fd_sel task:Task_HandleChooseMonInput 20
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 0 UP
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+pick 0
+waittask Task_HandleChooseMonInput 120
+waitquiet
+tap A 0
+drive fd_save menu 10
+pick 0
+saveyes fd_saveq
+drivex fd_go menu 30 9000
+domeinfo
+domeplayershow
+pick 1
+drivex fd_tree cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+snap fd_00_tree
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_01_player_card_orig
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,252,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,252,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,252,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2g_HP_DEF
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,252,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,252,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,252,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2g_HP_SPA
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,252,252,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,252,252,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,252,252,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2g_ATK_DEF
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,252,0,0,252,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,252,0,0,252,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,252,0,0,252,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2g_ATK_SPA
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,252,0,0,0,252 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,252,0,0,0,252 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,252,0,0,0,252 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2g_ATK_SPD
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,252,252,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,252,252,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,252,252,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2g_DEF_SPE
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,252,0,252,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,252,0,252,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,252,0,252,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2g_DEF_SPA
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,252,0,0,252 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,252,0,0,252 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,252,0,0,252 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2g_DEF_SPD
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,252,252,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,252,252,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,252,252,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2g_SPE_SPA
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,252,0,252 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,252,0,252 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,252,0,252 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2g_SPE_SPD
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,0,252,252 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,0,252,252 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,0,252,252 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2g_SPA_SPD
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,252,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,252,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,252,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st1g_DEF
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,252,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,252,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,252,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st1g_SPE
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,0,252,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,0,252,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,0,0,252,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st1g_SPA
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,64,64,64,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,64,64,64,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,0,64,64,64,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_HP_ATK
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,0,64,64,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,0,64,64,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,0,64,64,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_HP_DEF
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,64,0,64,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,64,0,64,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,64,0,64,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_HP_SPE
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,64,64,0,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,64,64,0,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,64,64,0,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_HP_SPA
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,64,64,64,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,64,64,64,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,64,64,64,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_HP_SPD
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,0,64,64,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,0,64,64,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,0,64,64,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_ATK_DEF
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,64,0,64,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,64,0,64,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,64,0,64,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_ATK_SPE
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,64,64,0,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,64,64,0,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,64,64,0,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_ATK_SPA
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,64,64,64,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,64,64,64,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,64,64,64,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_ATK_SPD
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,0,0,64,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,0,0,64,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,0,0,64,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_DEF_SPE
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,0,64,0,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,0,64,0,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,0,64,0,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_DEF_SPA
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,0,0,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,0,0,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,0,0,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_SPE_SPA
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,0,64,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,0,64,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,0,64,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_SPE_SPD
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,64,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,64,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,64,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st2b_SPA_SPD
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,64,64,64,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,64,64,64,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 0,64,64,64,64,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st1b_HP
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,64,64,64,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,64,64,64,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,0,64,64,64,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st1b_ATK
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,0,64,64,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,0,64,64,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,0,64,64,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st1b_DEF
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,0,64,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,0,64,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,0,64,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st1b_SPE
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,64,0,64 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,64,0,64 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,64,0,64 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st1b_SPA
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,64,64,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,64,64,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 64,64,64,64,64,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_st_st1b_SPD
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_DESTINY_BOND 252,0,0,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_sy_risky_destinybond
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_PERISH_SONG 252,0,0,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_sy_risky_perishsong
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TOXIC_THREAD 252,0,0,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_sy_toxicthread
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_VENOM_DRENCH 252,0,0,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_sy_venomdrench
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_SWAGGER 252,0,0,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_sy_swagger
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_FLATTER 252,0,0,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_sy_flatter
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_STRENGTH_SAP 252,0,0,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_sy_strengthsap
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_HYPER_BEAM 252,0,0,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_sy_hyperbeam
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_sy_tackle
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeplayer 0 MOVE_HYPER_BEAM,MOVE_HYPER_BEAM,MOVE_HYPER_BEAM,MOVE_HYPER_BEAM 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 1 MOVE_HYPER_BEAM,MOVE_HYPER_BEAM,MOVE_HYPER_BEAM,MOVE_HYPER_BEAM 252,0,0,0,0,0 NATURE_HARDY
+domeplayer 2 MOVE_HYPER_BEAM,MOVE_HYPER_BEAM,MOVE_HYPER_BEAM,MOVE_TACKLE 252,0,0,0,0,0 NATURE_HARDY
+taskpoke Task_HandleTourneyTreeInput 1 0
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_sy_11beams_last_tackle
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeslot 8 TRAINER_FRONTIER_BRAIN
+taskpoke Task_HandleTourneyTreeInput 1 1
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_02_tucker_card
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+# Round 1 match cards M2-M7 (nothing decided yet)
+taskpoke Task_HandleTourneyTreeInput 1 17
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_m01_match_card
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+taskpoke Task_HandleTourneyTreeInput 1 18
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_m02_match_card
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+taskpoke Task_HandleTourneyTreeInput 1 19
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_m03_match_card
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+taskpoke Task_HandleTourneyTreeInput 1 20
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_m04_match_card
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+taskpoke Task_HandleTourneyTreeInput 1 21
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_m05_match_card
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+taskpoke Task_HandleTourneyTreeInput 1 22
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_m06_match_card
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+# Round 1 decided: the second trainer of every R1 match out in round 0 (M2: by forfeit; M3: no winning
+# move recorded), the round counter on round 2 (SB2+0xCB2 = 1); a card of a later round needs its
+# participants decided, or it reads past them (the tree only lets the cursor reach the current round)
+domeresult 8 1 0 0
+w16 @SB2+EC4@ 21
+domeresult 4 1 0 1
+w16 @SB2+EC8@ 21
+domeresult 15 1 0 0
+w16 @SB2+EDE@ 0
+domeresult 3 1 0 0
+w16 @SB2+EC6@ 21
+domeresult 10 1 0 0
+w16 @SB2+ED4@ 21
+domeresult 6 1 0 0
+w16 @SB2+ECC@ 21
+domeresult 13 1 0 0
+w16 @SB2+EDA@ 21
+domeresult 1 1 0 0
+w16 @SB2+EC2@ 21
+w16 @SB2+CB2@ 1
+taskpoke Task_HandleTourneyTreeInput 1 17
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_r1m1_forfeit
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+taskpoke Task_HandleTourneyTreeInput 1 18
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_r1m2_nomove
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+taskpoke Task_HandleTourneyTreeInput 1 25
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_m09_match_card
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+taskpoke Task_HandleTourneyTreeInput 1 26
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_m10_match_card
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+taskpoke Task_HandleTourneyTreeInput 1 27
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_m11_match_card
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+# Round 2 decided, round counter on the semifinal
+domeresult 12 1 1 0
+w16 @SB2+ED8@ 21
+domeresult 11 1 1 0
+w16 @SB2+ED6@ 21
+domeresult 14 1 1 0
+w16 @SB2+EDC@ 21
+domeresult 9 1 1 0
+w16 @SB2+ED2@ 21
+w16 @SB2+CB2@ 2
+taskpoke Task_HandleTourneyTreeInput 1 29
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_m13_match_card
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+# Semifinal decided; final: the player (tournament id 0, a 7-character name) champion, id 2 (tree position 8) out in the final
+domeresult 7 1 2 0
+w16 @SB2+ECE@ 21
+domeresult 5 1 2 0
+w16 @SB2+ECA@ 21
+playername ששששששש WWWWWWW
+w16 @SB2+CB2@ 3
+domeresult 2 1 3 1
+taskpoke Task_HandleTourneyTreeInput 1 30
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_final_champ_forfeit
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+domeresult 2 1 3 0
+w16 @SB2+EC4@ 0
+taskpoke Task_HandleTourneyTreeInput 1 30
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_final_champ_nomove
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+w16 @SB2+EC4@ 21
+taskpoke Task_HandleTourneyTreeInput 1 30
+waitquiet
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap fd_final_champ_move
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet

@@ -508,10 +508,10 @@ BattleFrontier_BattleFactoryLobby_Text_RentalMonsAreVaried:
 	.string "varied the rental POKéMON.$"
 
 BattleFrontier_BattleFactoryLobby_Text_RulesAreListed:
-	.string "The Battle Swap rules are listed.$"
+	.string "כאן כתובים חוקי החלפת הקרב.$"
 
 BattleFrontier_BattleFactoryLobby_Text_ReadWhichHeading:
-	.string "Which heading do you want to read?$"
+	.string "איזה סעיף ברצונך לקרוא?$"
 
 BattleFrontier_BattleFactoryLobby_Text_ExplainBasicRules:
 	.string "In a Battle Swap event, you may use\n"

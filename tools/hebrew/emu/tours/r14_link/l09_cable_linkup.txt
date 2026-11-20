@@ -1,0 +1,40 @@
+# Cable link-up at the Goldenrod Pokemon Center link counter (GoldenrodCity_PokemonCenter_hns
+# scripts.inc:34-150, TRADE -> save -> 'please wait' -> special TryTradeLinkup) with a second GBA faked:
+# src/cable_club.c Task_LinkupAwaitConnection (:197) waits for GetLinkPlayerCount_2() >= 2, which is
+# gLinkStatus bits 2-4, rebuilt every frame by LinkMain1 (src/link.c:1889) from gLink.playerCount (+3) and
+# gLink.isMaster (+0, 8 = LINK_MASTER). Pinning those bytes (and gLink.state +1 at 1, LINK_STATE_START1, so the
+# handshake code does not rewrite them) makes the counter see two players:
+#   as the follower (isMaster 0): gText_AwaitingLinkup (Task_LinkupExchangeDataWithLeader); B cancels
+#   (LINKUP_FAILED -> CableClub_EventScript_AbortLink).
+#   As the leader every step after the player count checks CheckSioErrored (src/cable_club.c:181,
+#   GetSioMultiSI, src/link.c:1681); mGBA without a link peer reports REG_SIOCNT with SI set (0x600F), so the
+#   task goes to Task_LinkupConnectionError (CableClub_EventScript_AbortLinkConnectionError, shown in r6 k7).
+#   The two leader messages are shown instead with the field message box they use (ShowFieldAutoScrollMessage
+#   prints in window 0) from an event script; the player-count window (gText_NumPlayerLink) is not reached.
+start saves/r14/link/base.sav
+include ../../scripts/continue.txt
+warpto MAP_GOLDENROD_CITY_POKEMON_CENTER_HNS 14 6
+
+# --- TRADE, save YES, 'please wait', then the counter sees two players with the player as follower
+face UP
+tap A 4
+fieldwatch k1_intro menu 6000
+pick 0
+fieldwatch k1_help task:SaveGameTask 6000
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+tap A 0
+waitptr sSaveDialogCallback SaveReturnSuccessCallback 900
+waittask Task_LinkupAwaitConnection 1200 A
+waitquiet
+snap k1_wait
+pin @gLink@ 00010002
+burst k1_follower 8 15
+tap B 4
+unpin
+fieldwatch k1_follower_abort free 6000
+
+# --- the leader's two messages in the field message box
+face UP
+evstart lock; message 0x@gText_ConfirmLinkWhenPlayersReady@; waitmessage; delay 40; buffernumberstring STR_VAR_1, 2; message 0x@gText_ConfirmStartLinkWithXPlayers@; waitmessage; delay 40; buffernumberstring STR_VAR_1, 4; message 0x@gText_ConfirmStartLinkWithXPlayers@; waitmessage; delay 40; closemessage; release; end
+burst k2_leader_msgs 12 20
+waitctl 600 A

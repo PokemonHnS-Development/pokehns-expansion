@@ -47,7 +47,7 @@ SaffronCity_FightingDojo_EventScript_BattleLickilicky_EV_HP::
 	end
 	
 SaffronCity_FightingDojo_Text_Lickilicky:
-	.string "LICKILICKY: LIIIIICK!$"
+	.string "ליקיליקי: ליייייק!$"
 
 SaffronCity_FightingDojo_EventScript_Machamp_EV_Attack::
 	lock
@@ -75,7 +75,7 @@ SaffronCity_FightingDojo_EventScript_BattleMachamp_EV_Attack::
 	end
 
 SaffronCity_FightingDojo_Text_Machamp:
-	.string "MACHAMP: CHAMP!$"
+	.string "מאצ'אמפ: צ'אמפ!$"
 
 SaffronCity_FightingDojo_EventScript_Steelix_EV_Defense::
 	lock
@@ -103,7 +103,7 @@ SaffronCity_FightingDojo_EventScript_BattleSteelix_EV_Defense::
 	end
 
 SaffronCity_FightingDojo_Text_Steelix:
-	.string "STEELIX: GRRRIND!$"
+	.string "סטיליקס: גררריינד!$"
 
 SaffronCity_FightingDojo_EventScript_Alakazam_EV_SpecialAttack::
 	lock
@@ -131,7 +131,7 @@ SaffronCity_FightingDojo_EventScript_BattleAlakazam_EV_SpecialAttack::
 	end
 
 SaffronCity_FightingDojo_Text_Alakazam:
-	.string "ALAKAZAM: ZAM!$"
+	.string "אלקזם: זם!$"
 
 SaffronCity_FightingDojo_EventScript_Slowking_EV_SpecialDefense::
 	lock
@@ -159,7 +159,7 @@ SaffronCity_FightingDojo_EventScript_BattleSlowking_EV_SpecialDefense::
 	end
 
 SaffronCity_FightingDojo_Text_Slowking:
-	.string "SLOWKING: HMMM...$"
+	.string "סלואוקינג: הממם…$"
 
 SaffronCity_FightingDojo_EventScript_Pidgeot_EV_Speed::
 	lock
@@ -187,38 +187,39 @@ SaffronCity_FightingDojo_EventScript_BattlePidgeot_EV_Speed::
 	end
 
 SaffronCity_FightingDojo_Text_Pidgeot:
-	.string "PIDGEOT: GEEEE!$"
+	.string "פידג'יוט: ג'יייי!$"
 
 SaffronCity_FightingDojo_Text_HP:
-	.string "HP$"
+	.string "נ”ח$"
 SaffronCity_FightingDojo_Text_Attack:
-	.string "ATK$"
+	.string "התקפה$"
 SaffronCity_FightingDojo_Text_Defense:
-	.string "DEF$"
+	.string "הגנה$"
 SaffronCity_FightingDojo_Text_SpecialAttack:
-	.string "SP.ATK$"
+	.string "התקפה מיוחדת$"
 SaffronCity_FightingDojo_Text_SpecialDefense:
-	.string "SP.DEF$"
+	.string "הגנה מיוחדת$"
 SaffronCity_FightingDojo_Text_Speed:
-	.string "SPD$"
+	.string "מהירות$"
 
 SaffronCity_FightingDojo_Text_WouldYouLikeToBattle:
-	.string "Battle {STR_VAR_1} for 3 {STR_VAR_2} EVs?$"
+	.string "להילחם נגד {STR_VAR_1} תמורת\n"
+	.string "3 נקודות EV של {STR_VAR_2}?$"
 
 SaffronCity_FightingDojo_Text_BlackBelt:
-	.string "You enter the FIGHTING DOJO!\p"
-	.string "Here, you may hone the stats of\n"
-	.string "of your POKéMON by battle!$"
+	.string "נכנסת לדוג'ו הלחימה!\p"
+	.string "כאן אפשר לחדד את הנתונים\n"
+	.string "של הפוקימונים שלך בעזרת קרבות!$"
 
 SaffronCity_FightingDojo_Text_Sign1:
-	.string "Left: HP, DEFENSE, SPECIAL DEFENSE$"
+	.string "שמאל: נ”ח, הגנה, הגנה מיוחדת$"
 
 SaffronCity_FightingDojo_Text_Sign2:
-	.string "RIGHT: ATTACK, SPECIAL ATTACK, SPEED$"
+	.string "ימין: התקפה, התקפה מיוחדת, מהירות$"
 
 SaffronCity_FightingDojo_Text_Cooltrainer::
-	.string "Only trainers with all KANTO badges\n"
-	.string "may enter the VIP lounge.$"
+	.string "רק מאמנים עם כל התגים של קאנטו\n"
+	.string "רשאים להיכנס לטרקלין האח”מים.$"
 
 @Ability swapper
 

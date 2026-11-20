@@ -97,6 +97,14 @@
 #define CMD_ARGS(...) const struct __attribute__((packed)) { u8 opcode; RECURSIVELY(R_FOR_EACH(APPEND_SEMICOLON, __VA_ARGS__)) const u8 nextInstr[0]; } *const cmd UNUSED = (const void *)gBattlescriptCurrInstr
 #define NATIVE_ARGS(...) CMD_ARGS(void (*func)(void), ##__VA_ARGS__)
 
+#if TEXT_RTL
+// The level-up stat box is mirrored to the left half of the screen, around B_WIN_LEVEL_UP_BOX (moved
+// in BattleInitBgsAndWindows), so it covers the end of the right-aligned message, not its start.
+#define LEVEL_UP_BOX_FRAME 0, 7, 11, 19
+#else
+#define LEVEL_UP_BOX_FRAME 18, 7, 29, 19
+#endif
+
 // table to avoid ugly powing on gba (courtesy of doesnt)
 // this returns (i^2.5)/4
 // the quarters cancel so no need to re-quadruple them in actual calculation
@@ -4247,6 +4255,23 @@ static void Cmd_getexp(void)
     case 2: // set exp value to the poke in expgetter_id and print message
         if (gBattleControllerExecFlags == 0)
         {
+            // Music change in a wild battle after fainting opposing pokemon. Checked before
+            // the per-mon branches so it also plays when no mon can take EXP (all Lv100).
+            if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+                && (gBattleMons[0].hp || (IsDoubleBattle() && gBattleMons[2].hp))
+                && !IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT))
+                && (!IsDoubleBattle() || !IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)))
+                && !gBattleStruct->wildVictorySong)
+            {
+                BattleStopLowHpSound();
+            #if IS_HNS
+                PlayBGM(MUS_HG_VICTORY_WILD);
+            #else
+                PlayBGM(MUS_VICTORY_WILD);
+            #endif
+                gBattleStruct->wildVictorySong++;
+            }
+
             bool32 wasSentOut = (gBattleStruct->expSentInMons & (1u << *expMonId)) != 0;
             holdEffect = GetMonHoldEffect(&gPlayerParty[*expMonId]);
 
@@ -4266,22 +4291,6 @@ static void Cmd_getexp(void)
             }
             else
             {
-                // Music change in a wild battle after fainting opposing pokemon.
-                if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER)
-                    && (gBattleMons[0].hp || (IsDoubleBattle() && gBattleMons[2].hp))
-                    && !IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT))
-                    && (!IsDoubleBattle() || !IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)))
-                    && !gBattleStruct->wildVictorySong)
-                {
-                    BattleStopLowHpSound();
-                #if IS_HNS
-                    PlayBGM(MUS_HG_VICTORY_WILD);
-                #else
-                    PlayBGM(MUS_VICTORY_WILD);
-                #endif
-                    gBattleStruct->wildVictorySong++;
-                }
-
                 if (IsValidForBattle(&gPlayerParty[*expMonId]))
                 {
                     if (wasSentOut)
@@ -6662,7 +6671,7 @@ static void Cmd_drawlvlupbox(void)
         SetBgAttribute(1, BG_ATTR_PRIORITY, 0);
         ShowBg(0);
         ShowBg(1);
-        HandleBattleWindow(18, 7, 29, 19, WINDOW_BG1);
+        HandleBattleWindow(LEVEL_UP_BOX_FRAME, WINDOW_BG1);
         gBattleScripting.drawlvlupboxState = 4;
         break;
     case 4:
@@ -6696,7 +6705,7 @@ static void Cmd_drawlvlupbox(void)
         {
             // Close level up box
             PlaySE(SE_SELECT);
-            HandleBattleWindow(18, 7, 29, 19, WINDOW_BG1 | WINDOW_CLEAR);
+            HandleBattleWindow(LEVEL_UP_BOX_FRAME, WINDOW_BG1 | WINDOW_CLEAR);
             gBattleScripting.drawlvlupboxState++;
         }
         break;
@@ -11365,13 +11374,23 @@ void HandleBattleWindow(u8 xStart, u8 yStart, u8 xEnd, u8 yEnd, u8 flags)
     }
 }
 
+#if TEXT_RTL
+// The box's text is mirrored (and moved one tile left, see BattleInitBgsAndWindows), so the cursor
+// sits in the box's rightmost column and points left.
+#define YESNO_CURSOR_X    0x1C
+#define YESNO_CURSOR_FLIP BG_TILE_H_FLIP(0)
+#else
+#define YESNO_CURSOR_X    0x19
+#define YESNO_CURSOR_FLIP 0
+#endif
+
 void BattleCreateYesNoCursorAt(u8 cursorPosition)
 {
     u16 src[2];
-    src[0] = 1;
-    src[1] = 2;
+    src[0] = 1 | YESNO_CURSOR_FLIP;
+    src[1] = 2 | YESNO_CURSOR_FLIP;
 
-    CopyToBgTilemapBufferRect_ChangePalette(0, src, 0x19, 9 + (2 * cursorPosition), 1, 2, 0x11);
+    CopyToBgTilemapBufferRect_ChangePalette(0, src, YESNO_CURSOR_X, 9 + (2 * cursorPosition), 1, 2, 0x11);
     CopyBgTilemapBufferToVram(0);
 }
 
@@ -11381,7 +11400,7 @@ void BattleDestroyYesNoCursorAt(u8 cursorPosition)
     src[0] = 0x1016;
     src[1] = 0x1016;
 
-    CopyToBgTilemapBufferRect_ChangePalette(0, src, 0x19, 9 + (2 * cursorPosition), 1, 2, 0x11);
+    CopyToBgTilemapBufferRect_ChangePalette(0, src, YESNO_CURSOR_X, 9 + (2 * cursorPosition), 1, 2, 0x11);
     CopyBgTilemapBufferToVram(0);
 }
 

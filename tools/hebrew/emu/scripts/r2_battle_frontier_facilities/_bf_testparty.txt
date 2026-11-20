@@ -1,0 +1,3 @@
+# Party for the entry refusals: slots 2 and 3 hold the same item (Leftovers), slot 4 repeats
+# slot 1's species (Pidgeot), slot 5 is banned from the Frontier (Lugia, NOT ABLE).
+ev createmon 0, 2, SPECIES_AMPHAROS, 50, item=ITEM_LEFTOVERS; createmon 0, 3, SPECIES_GOLEM, 50, item=ITEM_LEFTOVERS; createmon 0, 4, SPECIES_PIDGEOT, 50; createmon 0, 5, SPECIES_LUGIA, 50; end

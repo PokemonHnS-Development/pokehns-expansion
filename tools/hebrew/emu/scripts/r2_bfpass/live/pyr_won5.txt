@@ -1,0 +1,13 @@
+waitquiet
+snap py_won2_menu2
+pick 1
+waitcb2x CB2_UpdatePartyMenu 900
+waittask Task_HandleChooseMonInput 600
+waitquiet
+30 -
+snap py_ph_00_party
+tap A 4
+waitquiet
+30 -
+snap py_ph_01_action
+showtasks

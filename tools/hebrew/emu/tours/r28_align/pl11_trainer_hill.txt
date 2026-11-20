@@ -1,0 +1,7 @@
+# Trainer Hill entrance: the attendant's menus (the first row), every other NPC (nurse, clerks
+# and their shops) and the records sign.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_TRAINER_HILL_ENTRANCE_HNS 9 15 thl
+talkobj 1 thl_att pick=0
+visit thl skip=1

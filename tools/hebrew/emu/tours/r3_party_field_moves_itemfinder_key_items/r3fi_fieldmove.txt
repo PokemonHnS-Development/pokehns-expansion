@@ -1,0 +1,237 @@
+# Party field moves that are refused (src/party_menu.c CursorCb_FieldMove :4138): an HM before
+# its badge ("This can't be used until a new BADGE is obtained", :4161-4165, gText_CantUseUntilNewBadge
+# src/strings.c:285; the H&S gates src/field_move.c:11-60: Cut 2, Flash 1, Rock Smash 1,
+# Strength 3, Surf 4, Fly 5), SOFT-BOILED / MILK DRINK at 1/5 HP or less ("Not enough HP...",
+# src/fldeff_softboiled.c:18-30, PARTY_MSG_NOT_ENOUGH_HP src/field_move.c:224/:232), FLASH a
+# second time in Dark Cave ("This is in use already.", DisplayCantUseFlashMessage :4327) and
+# SURF while surfing ("You're already SURFING.", DisplayCantUseSurfMessage :4355).
+# Start: saves/r3fi_base.sav (= menuA_base, per-language copy). Moves: Typhlosion CUT STRENGTH
+# ROCK SMASH FLAMETHROWER; Pikachu already knows FLASH; Ampharos SOFT-BOILED MILK DRINK;
+# Gyarados SURF FLY BITE HYDRO PUMP. Cherrygrove City (51,2) faces the sea to the north
+# (data/layouts/CherrygroveCity_hns/map.bin, tools findshore.py).
+start saves/r3fi_base.sav
+include ../../scripts/continue.txt
+ev setmonmove 0, 0, MOVE_CUT; setmonmove 0, 1, MOVE_STRENGTH; setmonmove 0, 2, MOVE_ROCK_SMASH; setmonmove 0, 3, MOVE_FLAMETHROWER; setmonmove 2, 0, MOVE_SOFT_BOILED; setmonmove 2, 1, MOVE_MILK_DRINK; setmonmove 3, 0, MOVE_SURF; setmonmove 3, 1, MOVE_FLY; setmonmove 3, 2, MOVE_BITE; setmonmove 3, 3, MOVE_HYDRO_PUMP; clearflag FLAG_BADGE01_GET; clearflag FLAG_BADGE02_GET; clearflag FLAG_BADGE03_GET; clearflag FLAG_BADGE04_GET; clearflag FLAG_BADGE05_GET; end
+expectflag FLAG_BADGE01_GET 0
+expectflag FLAG_BADGE05_GET 0
+
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap r3fi_fm_01_party
+
+# Typhlosion: SUMMARY, CUT, STRENGTH, ROCK SMASH, SWITCH, ITEM, FOLLOWER, CANCEL
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap r3fi_fm_02_typh_actions
+tap DOWN 4
+waitquiet
+tap A 4                                   # CUT (badge 2)
+waitkey 600
+snap r3fi_fm_03_cut_badge
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap r3fi_fm_04_after_cut_badge
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # STRENGTH (badge 3)
+waitkey 600
+snap r3fi_fm_05_strength_badge
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # ROCK SMASH (badge 1)
+waitkey 600
+snap r3fi_fm_06_rocksmash_badge
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Pikachu: SUMMARY, FLASH, SWITCH, ITEM, CANCEL
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4                                   # FLASH (badge 1)
+waitkey 600
+snap r3fi_fm_07_flash_badge
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Gyarados: SUMMARY, SURF, FLY, SWITCH, ITEM, CANCEL
+seek 8 @gPartyMenu+9@ 3 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap r3fi_fm_08_gyarados_actions
+tap DOWN 4
+waitquiet
+tap A 4                                   # SURF (badge 4)
+waitkey 600
+snap r3fi_fm_09_surf_badge
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # FLY (badge 5)
+waitkey 600
+snap r3fi_fm_10_fly_badge
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# Badges back; Ampharos at 21 HP of 108 (1/5 = 21): SOFT-BOILED and MILK DRINK refused
+ev setflag FLAG_BADGE01_GET; setflag FLAG_BADGE02_GET; setflag FLAG_BADGE03_GET; setflag FLAG_BADGE04_GET; setflag FLAG_BADGE05_GET; end
+sethp player 2 21
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 2 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap r3fi_fm_11_ampharos_actions
+tap DOWN 4
+waitquiet
+tap A 4                                   # SOFT-BOILED
+waittaskx Task_CancelAfterAorBPress 300
+waitquiet
+snap r3fi_fm_12_softboiled_not_enough
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # MILK DRINK
+waittaskx Task_CancelAfterAorBPress 300
+waitquiet
+snap r3fi_fm_13_milkdrink_not_enough
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# Dark Cave: Pikachu FLASH lights the cave, then FLASH again: "This is in use already."
+warpto MAP_DARK_CAVE_SOUTH_SIDE_HNS 14 19
+waitctl 900
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4                                   # FLASH
+waitcb2x CB2_Overworld 900
+waitctl 1200 A
+snap r3fi_fm_14_flash_used
+expectflag FLAG_SYS_USE_FLASH 1
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4                                   # FLASH again
+waittaskx Task_CancelAfterAorBPress 300
+waitquiet
+snap r3fi_fm_15_flash_in_use
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# Cherrygrove City shore: Gyarados SURF onto the sea, then SURF again: "You're already SURFING."
+warpto MAP_CHERRYGROVE_CITY_HNS 51 2
+waitctl 900
+face UP
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 3 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4                                   # SURF
+waitcb2x CB2_Overworld 900
+waitctl 1200
+snap r3fi_fm_16_surfing
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 3 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4                                   # SURF while surfing
+waittaskx Task_CancelAfterAorBPress 300
+waitquiet
+snap r3fi_fm_17_already_surfing
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

@@ -1,0 +1,69 @@
+# Fixed Easy Chat phrases of Frontier and Battle Tent trainers: the intro speech each prints before
+# its battle, in the field message box, through the game's own path: the trainer is written into
+# gTrainerBattleParameter.opponentA (+2, struct TrainerBattleParameter), then tower_getopponentintro
+# (BATTLE_TOWER_FUNC_GET_OPPONENT_INTRO: SetFacilityPtrsGetLevel, FrontierSpeechToString of
+# speechBefore, src/battle_tower.c) and msgbox gStringVar4, as the Battle Tower battle room does.
+# Frontier trainers with frontier.lvlMode 0 (gBattleFrontierTrainers); tent trainers with lvlMode
+# 2 (FRONTIER_LVL_TENT) and VAR_FRONTIER_FACILITY naming the tent (SetTentPtrsGetLevel: FACTORY =
+# Slateport, PALACE = Verdanturf, ARENA = Fallarbor), both restored afterwards. The same trainers'
+# win and loss speeches are shown in a battle by the battle-string sweep with _bs_phrases_*.
+# Run: scripts/r18_easy_chat/ec18.py tour ROM OUT --tours tools/hebrew/emu/tours/r18_easychat --only '^ec_phrases$'
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 6 6
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+
+# Frontier trainer 0
+w16 @gTrainerBattleParameter+2@ 0
+evstart lockall; frontier_set FRONTIER_DATA_LVL_MODE, 0; tower_getopponentintro 0; msgbox gStringVar4, MSGBOX_DEFAULT; releaseall; end
+talk ph_fr000_intro 10 -
+waitctl 600
+
+# Frontier trainer 3
+w16 @gTrainerBattleParameter+2@ 3
+evstart lockall; frontier_set FRONTIER_DATA_LVL_MODE, 0; tower_getopponentintro 0; msgbox gStringVar4, MSGBOX_DEFAULT; releaseall; end
+talk ph_fr003_intro 10 -
+waitctl 600
+
+# Frontier trainer 6
+w16 @gTrainerBattleParameter+2@ 6
+evstart lockall; frontier_set FRONTIER_DATA_LVL_MODE, 0; tower_getopponentintro 0; msgbox gStringVar4, MSGBOX_DEFAULT; releaseall; end
+talk ph_fr006_intro 10 -
+waitctl 600
+
+# Frontier trainer 9
+w16 @gTrainerBattleParameter+2@ 9
+evstart lockall; frontier_set FRONTIER_DATA_LVL_MODE, 0; tower_getopponentintro 0; msgbox gStringVar4, MSGBOX_DEFAULT; releaseall; end
+talk ph_fr009_intro 10 -
+waitctl 600
+
+# Frontier trainer 150
+w16 @gTrainerBattleParameter+2@ 96
+evstart lockall; frontier_set FRONTIER_DATA_LVL_MODE, 0; tower_getopponentintro 0; msgbox gStringVar4, MSGBOX_DEFAULT; releaseall; end
+talk ph_fr150_intro 10 -
+waitctl 600
+
+# Frontier trainer 220
+w16 @gTrainerBattleParameter+2@ DC
+evstart lockall; frontier_set FRONTIER_DATA_LVL_MODE, 0; tower_getopponentintro 0; msgbox gStringVar4, MSGBOX_DEFAULT; releaseall; end
+talk ph_fr220_intro 10 -
+waitctl 600
+
+# Slateport tent trainer 0
+w16 @gTrainerBattleParameter+2@ 0
+evstart lockall; frontier_set FRONTIER_DATA_LVL_MODE, 2; setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_FACTORY; tower_getopponentintro 0; msgbox gStringVar4, MSGBOX_DEFAULT; frontier_set FRONTIER_DATA_LVL_MODE, 0; setvar VAR_FRONTIER_FACILITY, 0; releaseall; end
+talk ph_sl000_intro 10 -
+waitctl 600
+
+# Verdanturf tent trainer 0
+w16 @gTrainerBattleParameter+2@ 0
+evstart lockall; frontier_set FRONTIER_DATA_LVL_MODE, 2; setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_PALACE; tower_getopponentintro 0; msgbox gStringVar4, MSGBOX_DEFAULT; frontier_set FRONTIER_DATA_LVL_MODE, 0; setvar VAR_FRONTIER_FACILITY, 0; releaseall; end
+talk ph_ve000_intro 10 -
+waitctl 600
+
+# Fallarbor tent trainer 0
+w16 @gTrainerBattleParameter+2@ 0
+evstart lockall; frontier_set FRONTIER_DATA_LVL_MODE, 2; setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_ARENA; tower_getopponentintro 0; msgbox gStringVar4, MSGBOX_DEFAULT; frontier_set FRONTIER_DATA_LVL_MODE, 0; setvar VAR_FRONTIER_FACILITY, 0; releaseall; end
+talk ph_fa000_intro 10 -
+waitctl 600

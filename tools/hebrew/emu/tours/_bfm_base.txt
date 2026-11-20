@@ -1,0 +1,13 @@
+# Fight-menu base (an include): ladder save 1 -> _battle_base.txt (Route 30, badges, Pokedex,
+# FAST BATTLES off) -> a level-50 Smeargle (Normal type, so P_SHOW_DYNAMIC_TYPES leaves the
+# listed move types alone) -> a wild level-10 Geodude (Rock/Ground: Water and Grass are super
+# effective, Normal and Fire not very effective, Electric has no effect, Psychic is neutral),
+# stopped at the action menu. The tour or driver that includes it then writes the moves to show
+# into gBattleMons[0].moves/pp before each FIGHT (src/battle_main.c:4451-4471 copies them into
+# the CONTROLLER_CHOOSEMOVE buffer every time FIGHT is chosen).
+include _battle_base.txt
+ev givemon SPECIES_SMEARGLE, 50, move1=MOVE_TACKLE, move2=MOVE_LEER, move3=MOVE_EMBER, move4=MOVE_SMOKESCREEN; end
+pinrng
+evstart setwildbattle SPECIES_GEODUDE, 10; dowildbattle; end
+waitbattle
+bwalk bfm_intro input:HandleInputChooseAction

@@ -1,0 +1,16 @@
+# Battle Tower lobby as a player meets it after the League (post-game save, no Mewtwo added):
+# the singles attendant's INFO pages, then CHALLENGE -> the level menu -> Lv. 50 -> the party pick,
+# backed out; the doubles and multis attendants' INFO; the feelings man (YES -> the Easy Chat
+# screen, then B); the rules board's first topic; then every other NPC and sign (the four results
+# boards, the rules board's topic menu).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 12 8 twl
+talkobj 1 twl_sgl_info pick=1
+talkobj 1 twl_sgl_ch pick=0,0
+talkobj 6 twl_dbl_info pick=1
+talkobj 7 twl_mul_info pick=1
+talkobj 2 twl_feel yes
+signpick 2 1 twl_rules pick=0
+signpick 2 1 twl_rules2 pick=1
+visit twl skip=1,2,6,7

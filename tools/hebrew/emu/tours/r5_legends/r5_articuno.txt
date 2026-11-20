@@ -1,0 +1,10 @@
+# Articuno, Seafoam Islands B1F (31,31): SeafoamIslands_B1F_EventScript_Articuno (data/maps/SeafoamIslands_B1F_hns/scripts.inc:4-27), cry text 'גיאוו!'
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_ARTICUNO; end
+warpto MAP_SEAFOAM_ISLANDS_B1F_HNS 31 32
+face UP
+snap articuno_field
+tap A 4
+scene articuno_pre 4000
+include _legend_tail.txt

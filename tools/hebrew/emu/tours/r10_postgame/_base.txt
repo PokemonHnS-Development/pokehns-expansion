@@ -1,0 +1,6 @@
+# r10 post-game league and islands tours: base include (not a tour). r10pg_base.sav is a byte copy
+# of ladder 6 (post-game, Mt. Silver Pokemon Center) -> CONTINUE -> a Lv 100 Mewtwo in slot 0 (the
+# battles end in one hit, no level-up or move prompts), FAST BATTLES off.
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_MEWTWO, 100, move1=MOVE_PSYSTRIKE, move2=MOVE_ICE_BEAM, move3=MOVE_RECOVER, move4=MOVE_AURA_SPHERE; end
+fastbattles off

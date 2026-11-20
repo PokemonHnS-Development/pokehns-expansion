@@ -1413,6 +1413,11 @@ static bool32 InitFrontierMap(void)
         break;
     case 4:
         InitWindows(sMapWindowTemplates);
+#if TEXT_RTL
+        // The cursor sprite points into the list from its left, so the names start where the
+        // English ones do, next to it.
+        SetWindowRtlMode(MAP_WINDOW_NAME, WINDOW_RTL_IN_PLACE);
+#endif
         DeactivateAllTextPrinters();
         PrintOnFrontierMap();
         DecompressAndCopyTileDataToVram(1, sMapScreen_Gfx, 0, 0, 0);

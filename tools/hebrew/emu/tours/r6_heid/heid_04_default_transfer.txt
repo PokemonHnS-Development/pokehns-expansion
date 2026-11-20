@@ -1,0 +1,114 @@
+# The PC transfer messages with the default Hebrew box names (save heid_base: box 1 holds 29,
+# the party is full). Battle: the first catch fills box 1 (gText_PkmnSentToPCAfterCatch,
+# 'הוא הונח בתיבה ”תיבה 1”.'), the second is redirected (gText_PkmnTransferredSomeonesPCBoxFull
+# via STRINGID_PKMNBOXSOMEONESPCFULL, src/battle_script_commands.c:11211-11222). Field gift
+# (Common_EventScript_GiftMon > Common_EventScript_TransferredToPC, data/scripts/pc_transfer.inc):
+# the plain message, then the box-full redirect after FLAG_SHOWN_BOX_WAS_FULL_MESSAGE is cleared
+# and VAR_PC_BOX_TO_SEND_MON points at box 1 again; both with FLAG_SYS_PC_LANETTE clear
+# ('someone's PC') and set (Bill's PC).
+start save:heid_base
+include ../../scripts/continue.txt
+boxnames
+pinrng
+
+# battle 1: box 1 has room
+evstart setwildbattle SPECIES_PAWMI, 5; dowildbattle; end
+waitbattle
+bwalk heid_tr_b1_intro input:HandleInputChooseAction
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+bagpocket 2
+bagseek ITEM_MASTER_BALL
+waitquiet
+tap A 4                                   # USE / CANCEL
+waitquiet
+tap A 4                                   # USE: the throw
+bwalk heid_tr_b1_throw task:Task_HandleCaughtMonPageInput|prompt:Cmd_trygivecaughtmonnick
+snap heid_tr_b1_after_throw
+tap A 4                                   # the Pokedex page
+bwalk heid_tr_b1_after prompt:Cmd_trygivecaughtmonnick
+snap heid_tr_b1_nick_prompt
+tap DOWN 4                                # no nickname
+tap A 4
+bwalk heid_tr_b1_swapq prompt:Cmd_givecaughtmon
+snap heid_tr_b1_swap_prompt
+tap DOWN 4                                # NO: the caught Pokemon goes to the PC
+tap A 4
+bwalk heid_tr_b1_sent free
+snap heid_tr_b1_field
+boxnames
+
+# battle 2: box 1 is full, redirected to box 2
+evstart setwildbattle SPECIES_LECHONK, 5; dowildbattle; end
+waitbattle
+bwalk heid_tr_b2_intro input:HandleInputChooseAction
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+bagpocket 2
+bagseek ITEM_MASTER_BALL
+waitquiet
+tap A 4                                   # USE / CANCEL
+waitquiet
+tap A 4                                   # USE: the throw
+bwalk heid_tr_b2_throw task:Task_HandleCaughtMonPageInput|prompt:Cmd_trygivecaughtmonnick
+snap heid_tr_b2_after_throw
+tap A 4                                   # the Pokedex page
+bwalk heid_tr_b2_after prompt:Cmd_trygivecaughtmonnick
+snap heid_tr_b2_nick_prompt
+tap DOWN 4                                # no nickname
+tap A 4
+bwalk heid_tr_b2_swapq prompt:Cmd_givecaughtmon
+snap heid_tr_b2_swap_prompt
+tap DOWN 4                                # NO: the caught Pokemon goes to the PC
+tap A 4
+bwalk heid_tr_b2_sent free
+snap heid_tr_b2_field
+boxnames
+
+# field gift: the plain message (the full-box message was already shown)
+ev clearflag FLAG_SYS_PC_LANETTE; end
+evstart setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_FIDOUGH; bufferspeciesname STR_VAR_1, SPECIES_FIDOUGH; givemon SPECIES_FIDOUGH, 5; call Common_EventScript_GiftMon; end
+talk heid_tr_g1 10 -
+snap heid_tr_g1_yesno
+tap DOWN 4                                # no nickname
+waitquiet
+tap A 4
+talk heid_tr_g1_pc 10 -
+waitctl 600 B
+
+# field gift: the box-full redirect, someone's PC
+ev clearflag FLAG_SHOWN_BOX_WAS_FULL_MESSAGE; setvar VAR_PC_BOX_TO_SEND_MON, 0; clearflag FLAG_SYS_PC_LANETTE; end
+evstart setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SMOLIV; bufferspeciesname STR_VAR_1, SPECIES_SMOLIV; givemon SPECIES_SMOLIV, 5; call Common_EventScript_GiftMon; end
+talk heid_tr_g2 10 -
+snap heid_tr_g2_yesno
+tap DOWN 4                                # no nickname
+waitquiet
+tap A 4
+talk heid_tr_g2_pc 10 -
+waitctl 600 B
+
+# field gift: the box-full redirect, Bill's PC (FLAG_SYS_PC_LANETTE)
+ev clearflag FLAG_SHOWN_BOX_WAS_FULL_MESSAGE; setvar VAR_PC_BOX_TO_SEND_MON, 0; setflag FLAG_SYS_PC_LANETTE; end
+evstart setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_NYMBLE; bufferspeciesname STR_VAR_1, SPECIES_NYMBLE; givemon SPECIES_NYMBLE, 5; call Common_EventScript_GiftMon; end
+talk heid_tr_g3 10 -
+snap heid_tr_g3_yesno
+tap DOWN 4                                # no nickname
+waitquiet
+tap A 4
+talk heid_tr_g3_pc 10 -
+waitctl 600 B
+
+# field gift: the plain message, Bill's PC
+evstart setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TAROUNTULA; bufferspeciesname STR_VAR_1, SPECIES_TAROUNTULA; givemon SPECIES_TAROUNTULA, 5; call Common_EventScript_GiftMon; end
+talk heid_tr_g4 10 -
+snap heid_tr_g4_yesno
+tap DOWN 4                                # no nickname
+waitquiet
+tap A 4
+talk heid_tr_g4_pc 10 -
+waitctl 600 B
+boxnames

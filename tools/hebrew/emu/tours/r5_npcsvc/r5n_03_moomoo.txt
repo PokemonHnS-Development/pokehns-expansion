@@ -1,0 +1,70 @@
+# Moomoo Farm house (Route39_FarmHouse_hns): FarmerM (4,4) from (4,5), FarmerF (7,5) from (6,5).
+# VAR_ROUTE39_BARN 4: the sick-cow lines. VAR_ROUTE39_BARN 5: the wife's TM Snatch, then the milk:
+# the money box (0,0), YES/NO, YES -> 'another?' YES/NO loop (YES once, then NO), the got-milk lines;
+# ¥400 -> no money; full Medicine pocket -> no room; and NO (no sale; that path ends without
+# `release`, so it runs last).
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+flags FLAG_GOT_TM_SNATCH
+ev setvar VAR_ROUTE39_BARN, 4; clearflag FLAG_GOT_TM_SNATCH; end
+setmoney 10000
+
+# --- 1. sick cow (both farmers)
+warpto MAP_ROUTE39_FARM_HOUSE_HNS 4 5
+face UP
+tap A 4
+fieldwatch f1_sick free 6000
+warpto MAP_ROUTE39_FARM_HOUSE_HNS 6 5
+face RIGHT
+tap A 4
+fieldwatch f1_wife free 6000
+
+# --- 2. healed: the wife's TM, then her line again
+ev setvar VAR_ROUTE39_BARN, 5; end
+warpto MAP_ROUTE39_FARM_HOUSE_HNS 6 5
+face RIGHT
+tap A 4
+fieldwatch f2_wife_tm free 8000
+face RIGHT
+tap A 4
+fieldwatch f2_wife_after free 6000
+
+# --- 3. milk: YES, another YES, another NO
+warpto MAP_ROUTE39_FARM_HOUSE_HNS 4 5
+face UP
+tap A 4
+fieldwatch f3_buy menu 6000
+pick 0
+fieldwatch f3_another menu 6000 20
+pick 0
+fieldwatch f3_another2 menu 6000 20
+pick 1
+fieldwatch f3_got free 6000 20
+expectmoney 9000
+
+# --- 4. ¥700: one bottle, then another? YES -> no money
+setmoney 700
+face UP
+tap A 4
+fieldwatch f4_buy menu 6000
+pick 0
+fieldwatch f4_another menu 6000 20
+pick 0
+fieldwatch f4_nomoney free 6000 20
+
+# --- 5. full Medicine pocket: no room
+setmoney 10000
+fullpocket 1 ITEM_POTION 999            # 1 = POCKET_MEDICINE
+face UP
+tap A 4
+fieldwatch f5_buy menu 6000
+pick 0
+fieldwatch f5_noroom free 6000 20
+fullpocket 1 ITEM_NONE 0
+
+# --- 6. NO: no sale (the script ends without release: last)
+face UP
+tap A 4
+fieldwatch f6_buy menu 6000
+pick 1
+pages f6_nosale 4

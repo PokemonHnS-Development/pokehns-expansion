@@ -49,15 +49,14 @@ BurnedTower_Movement_Eusine2:
 
 
 BurnedTower_1FEusineIntroText:
-	.string "EUSINE: My name's EUSINE.\p"
-	.string "I'm on the trail of a POKéMON\n"
-	.string "called SUICUNE.\p"
-	.string "And you are...?\p"
-	.string "{PLAYER}? Glad to meet you!\p"
-	.string "I heard SUICUNE might be in\n"
-	.string "this BURNED TOWER, so I came\l"
-	.string "to check it out.\p"
-	.string "But where exactly could it be?$"
+	.string "יוסין: שמי יוסין.\p"
+	.string "אני בעקבותיו של פוקימון\n"
+	.string "בשם סואיקון.\p"
+	.string "ומה השם שלך…?\p"
+	.string "{PLAYER}? נעים מאוד!\p"
+	.string "שמעתי שסואיקון אולי נמצא\n"
+	.string "במגדל השרוף, אז באתי לבדוק.\p"
+	.string "אבל איפה בדיוק הוא יכול להיות?$"
 
 BurnedTower_1F_EventScript_Item_HpUp::
 	finditem ITEM_HP_UP
@@ -84,19 +83,17 @@ BurnedTower_1F_EventScript_Morty::
 	end
 
 BurnedTower_1FEusineText:
-	.string "EUSINE: I heard SUICUNE might\n"
-	.string "be in this BURNED TOWER, so I\l"
-	.string "came to check it out.\p"
-	.string "But where exactly could it be?$"
+	.string "יוסין: שמעתי שסואיקון אולי נמצא\n"
+	.string "במגדל השרוף, אז באתי לבדוק.\p"
+	.string "אבל איפה בדיוק הוא יכול להיות?$"
 
 BurnedTower_1FMortyText:
-	.string "MORTY: ECRUTEAK's GYM LEADER\n"
-	.string "has to study what are said to\l"
-	.string "be the legendary POKéMON--\l"
-	.string "SUICUNE, ENTEI and RAIKOU.\p"
-	.string "EUSINE is here, so I've\n"
-	.string "decided to investigate the\l"
-	.string "TOWER with him.$"
+	.string "מורטי: סואיקון, אנטיי ורייקו\n"
+	.string "נחשבים לפוקימונים האגדיים.\p"
+	.string "מנהיג המכון של אקרוטיק\n"
+	.string "חייב לחקור אותם.\p"
+	.string "יוסין כאן, אז החלטתי\n"
+	.string "לחקור את המגדל יחד איתו.$"
 
 BurnedTower_1F_EventScript_Silver::
 	lock
@@ -151,27 +148,25 @@ BurnedTower_1F_Silver_Battle_Chikorita::
 	return
 
 BurnedTowerSilver_BeforeText:
-	.string "..............................\p"
-	.string "...Oh, it's you.\p"
-	.string "I came looking for some\n"
-	.string "legendary POKéMON they say\l"
-	.string "roost here.\p"
-	.string "But there's nothing here!\p"
-	.string "Nothing, after all the effort\n"
-	.string "of coming to this dump?\l"
-	.string "No way!\p"
-	.string "It's all your fault!$"
+	.string "…………\p"
+	.string "…אה, זה אתה.\p"
+	.string "באתי לחפש פוקימונים אגדיים\n"
+	.string "שאומרים שהם שוכנים כאן.\p"
+	.string "אבל אין פה כלום!\p"
+	.string "כלום, אחרי כל המאמץ\n"
+	.string "להגיע לחור הזה? אין מצב!\p"
+	.string "הכול באשמתך!$"
 
 BurnedTowerSilver_WinText:
-	.string "...Humph!\p"
-	.string "I only lost because my\n"
-	.string "POKéMON are incredibly weak.\p"
-	.string "How pathetic.$"
+	.string "…המף!\p"
+	.string "הפסדתי רק כי הפוקימונים\n"
+	.string "שלי חלשים להחריד.\p"
+	.string "כמה פתטי.$"
 
 BurnedTowerSilver_AfterText1:
-	.string "...Aw, whatever.\p"
-	.string "You'd never be able to catch\n"
-	.string "a legendary POKéMON anyway.$"
+	.string "…אה, לא משנה.\p"
+	.string "בכל מקרה, לעולם לא תצליח\n"
+	.string "לתפוס פוקימון אגדי.$"
 
 BurnedTowerSilver_LossText:
 	.string "...Humph!\p"
@@ -179,10 +174,10 @@ BurnedTowerSilver_LossText:
 	.string "wimps. It's a waste of time.$"
 
 BurnedTowerSilver_AfterText2:
-	.string "Humph!\p"
-	.string "What are you doing falling\n"
-	.string "into a hole? Some genius!\p"
-	.string "Serves you right!$"
+	.string "המף!\p"
+	.string "מה אתה עושה, נופל\n"
+	.string "לתוך בור? איזה גאון!\p"
+	.string "מגיע לך!$"
 
 BurnedTower_1F_EventScript_Nard::
 	trainerbattle_single TRAINER_NARD_HNS, BurnedTower_Text_NardSeen, BurnedTower_Text_NardBeaten
@@ -195,23 +190,22 @@ BurnedTower_1F_EventScript_Richardo::
 	end
 
 BurnedTower_Text_NardSeen:
-	.string "Don't worry!\p"
-	.string "We fire-breathers know the true\n"
-	.string "power of fire better than anyone!$"
+	.string "אל דאגה!\p"
+	.string "אנחנו, יורקי האש, מכירים את הכוח\n"
+	.string "האמיתי של האש יותר מכולם!$"
 BurnedTower_Text_NardBeaten:
-	.string "Thanks for such a heated battle!$"
+	.string "תודה על קרב כל כך לוהט!$"
 BurnedTower_Text_NardAfter:
-	.string "The reason this tower's burned is\n"
-	.string "that it was hit by lightning.\p"
-	.string "The fire I'm breathing is tiny\n"
-	.string "in comparison...$"
+	.string "המגדל הזה נשרף כי\n"
+	.string "פגע בו ברק.\p"
+	.string "האש שאני יורק קטנטנה\n"
+	.string "בהשוואה לזה…$"
 
 BurnedTower_Text_RichardoSeen:
-	.string "I'm practicing my stealing in the\n"
-	.string "BURNED TOWER! Don't try\l"
-	.string "this at home!$"
+	.string "אני מתאמן בגניבה במגדל השרוף!\n"
+	.string "אל תנסו את זה בבית!$"
 BurnedTower_Text_RichardoBeaten:
-	.string "Pfffffffffffffff.$"
+	.string "פפפפפפפפפפפפפפף.$"
 BurnedTower_Text_RichardoAfter:
-	.string "Maybe a life of crime isn't for\n"
-	.string "me...$"
+	.string "אולי חיי פשע הם לא\n"
+	.string "בשבילי…$"

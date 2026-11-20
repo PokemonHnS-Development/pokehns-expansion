@@ -1,0 +1,15 @@
+# r11: Clair (Blackthorn Gym, (20,5)) talked to again at each stage after her gym battle
+# (BlackthornGym_EventScript_Clair, data/maps/BlackthornCity_Gym_hns/scripts.inc): VAR_BLACKTHORN_CITY_STATE 2
+# (sent to the Dragon's Den: ClairText_TooMuchToExpect), 4 before the League (ClairText_League), then
+# FLAG_IS_CHAMPION (ClairAfterLeague, the ladder 4 state). Ladder 4 is after the League, so the earlier
+# stages are set back with ev.
+start saves/ladder4_league.sav
+include _base.txt
+ev clearflag FLAG_IS_CHAMPION; setvar VAR_BLACKTHORN_CITY_STATE, 2; end
+warpto MAP_BLACKTHORN_CITY_GYM_HNS 20 6
+face UP
+talkdir v1_den UP
+ev setvar VAR_BLACKTHORN_CITY_STATE, 4; end
+talkdir v1_league UP
+ev setflag FLAG_IS_CHAMPION; end
+talkdir v1_champion UP

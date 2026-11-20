@@ -16,8 +16,7 @@ NewSinjoh_EventScript_TriggerNorthGate::
 	end
 
 NewSinjoh_Text_TriggerNorthGate:
-	.string "Better not leave the Kimono\n"
-	.string "girls waiting.$"
+	.string "עדיף לא לתת לנערות הקימונו לחכות.$"
 
 NewSinjoh_EventScript_PetStantler::
     lock
@@ -30,16 +29,16 @@ NewSinjoh_EventScript_PetStantler::
 	end
 
 NewSinjoh_Text_Stantler_Cry:
-    .string "Lerrrrr!$"
+    .string "לררררר!$"
 
 NewSinjoh_EventScript_Steven::
 	msgbox NewSinjoh_Text_Steven, MSGBOX_AUTOCLOSE
 	end
 
 NewSinjoh_Text_Steven:
-	.string "STEVEN: Ma'am, may I help you to\n"
-	.string "the spring over there?\p"
-	.string "It seems there is plenty of room.$"
+	.string "סטיבן: גברתי, אפשר לעזור לך\n"
+	.string "להגיע למעיין ההוא?\p"
+	.string "נראה שיש שם הרבה מקום.$"
 
 NewSinjoh_MilkMan_EventScript_Seller::
 	lock
@@ -89,31 +88,30 @@ NewSinjoh_MilkMan_NotEnough::
 	end
 
 NewSinjoh_MilkMan_text_BuyMilk:
-	.string "I am the Milkman.\p"
-	.string "My milk is delicious.\p"
-	.string "If you would like some today, it'll be\n"
-	.string "¥500.$"
+	.string "אני החלבן.\p"
+	.string "החלב שלי טעים.\p"
+	.string "אם תרצה ממנו היום, זה יעלה ¥500.$"
 
 NewSinjoh_MilkMan_GotMilk:
-	.string "Here ya go!\n"
-	.string "It's fortified with what the world wants.$"
+	.string "הנה, בבקשה!\n"
+	.string "הוא מועשר במה שהעולם רוצה.$"
 
 NewSinjoh_MilkMan_NoMoney:
-	.string "Sorry.\n"
-	.string "Get some cash, then you will get a sale!$"
+	.string "מצטער.\n"
+	.string "תשיג קצת כסף, ואז נעשה עסק!$"
 
 NewSinjoh_MilkMan_NoRoom:
-	.string "Look's like your PACK's full.$"
+	.string "נראה שהתיק שלך מלא.$"
 
 NewSinjoh_MilkMan_NoSale:
-	.string "Don't you want it?\n"
-	.string "It gots what the world deserves.$"
+	.string "אתה לא רוצה?\n"
+	.string "יש בו את מה שמגיע לעולם.$"
 
 NewSinjoh_MilkMan_Text_WouldYouLikeAnother:
-	.string "How bout another?$"
+	.string "מה דעתך על עוד אחד?$"
 
 NewSinjoh_Text_GotMilk:
-	.string "{PLAYER} got MOOMOO MILK.$"
+	.string "{PLAYER} קיבל חלב מומו.$"
 
 MilkMan_EventScript_Battle:: 
     msgbox MilkMan_Battle_text
@@ -122,13 +120,13 @@ MilkMan_EventScript_Battle::
     end
 
 MilkMan_Battle_text:
-	.string "I am the MilkMan,\p"
-	.string "My milk is delicious.\p"
-	.string "Special delivery today!$"
+	.string "אני החלבן,\p"
+	.string "החלב שלי טעים.\p"
+	.string "היום יש משלוח מיוחד!$"
 
 NewSinjoh_MilkMan_text_Lose:
-	.string "This world is perfect.\n"
-	.string "isn't it?$"
+	.string "העולם הזה מושלם.\n"
+	.string "נכון?$"
 
 NewSinjoh_Script_TravelMart::
 	lock
@@ -153,11 +151,11 @@ NewSinjoh_Pokemart_TravelShop:
 	.2byte ITEM_NONE
 
 NewSinjoh_Text_TravelShopGreeting:
-	.string "Welcome to My little Supply Shop.\n"
-	.string "How can I help you?$"
+	.string "ברוכים הבאים לחנות הציוד הקטנה שלי.\n"
+	.string "איך אפשר לעזור?$"
 
 NewSinjoh_Text_TravelShopEnd:
-	.string "Do come back.$"
+	.string "נשמח לראות אותך שוב.$"
 
 Script_NewSinjoh_Traveler_Brother::
 	lock
@@ -167,22 +165,21 @@ Script_NewSinjoh_Traveler_Brother::
 	end
 
 NewSinjoh_Text_TravelBrother_Greeting:
-    .string "All our goods are homemade\n"
-	.string "and grown locally!\p"
-	.string "My big sister opened up this shop,\n"
-	.string "because the POKéMART company\l"
-	.string "won't open a location\l"
-	.string "this far out from a major town.$"
+    .string "כל המוצרים שלנו תוצרת בית\n"
+    .string "וגידול מקומי!\p"
+    .string "אחותי הגדולה פתחה את החנות,\p"
+    .string "כי רשת חנויות הפוקימון לא מוכנה\n"
+    .string "לפתוח סניף כל כך רחוק מעיר גדולה.$"
 
 NewSinjoh_EventScript_Josh::
 	msgbox NewSinjoh_Text_Josh, MSGBOX_NPC
 	end
 
 NewSinjoh_Text_Josh:
-	.string "This place is sick!\p"
-	.string "Hiding these hot springs\n"
-	.string "from the world is a travesty.\p"
-	.string "I'm gonna tell all my friends!$"
+	.string "המקום הזה מטורף!\p"
+	.string "להסתיר את המעיינות החמים\n"
+	.string "האלה מהעולם זו שערורייה.\p"
+	.string "אני הולך לספר לכל החברים שלי!$"
 
 NewSinjoh_EventScript_Janice::
 	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_JaniceAfter
@@ -193,21 +190,19 @@ NewSinjoh_EventScript_JaniceAfter::
 	end
 
 NewSinjoh_Text_Janice:
-	.string "These springs are magical,\n"
-	.string "but I feel like the locals\l"
-	.string "are giving us dirty looks.$"
+	.string "המעיינות האלה קסומים, אבל יש לי הרגשה\n"
+	.string "שהמקומיים נועצים בנו מבטים עוינים.$"
 NewSinjoh_Text_JaniceAfter:
-	.string "These springs are magical,\n"
-	.string "and the locals are so kind\l"
-	.string "when you get to know them!$"
+	.string "המעיינות האלה קסומים,\n"
+	.string "והמקומיים כל כך נחמדים כשמכירים אותם!$"
 
 NewSinjoh_EventScript_OldLady1::
 	msgbox NewSinjoh_Text_OldLady1, MSGBOX_NPC
 	end
 
 NewSinjoh_Text_OldLady1:
-	.string "There's nothing like a nice view to\n"
-	.string "invigorate this old soul.$"
+	.string "אין כמו נוף יפה כדי להחיות\n"
+	.string "את הנשמה הזקנה שלי.$"
 
 NewSinjoh_EventScript_OldLady2::
 	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_OldLady2Steven
@@ -218,14 +213,13 @@ NewSinjoh_EventScript_OldLady2Steven::
 	end
 
 NewSinjoh_Text_OldLady2:
-	.string "Great, now these tourists\n"
-	.string "are hogging our hot springs!\p"
-	.string "It's been one bad thing after\n"
-	.string "another lately!$"
+	.string "נהדר, עכשיו התיירים האלה\n"
+	.string "משתלטים על המעיינות החמים שלנו!\p"
+	.string "בזמן האחרון צרה רודפת צרה!$"
 NewSinjoh_Text_OldLady2Steven:
-	.string "What a handsome young man!\p"
-	.string "Maybe these tourists aren't\n"
-	.string "so bad after all.$"
+	.string "איזה בחור צעיר ונאה!\p"
+	.string "אולי התיירים האלה לא\n"
+	.string "כל כך גרועים בסך הכול.$"
 
 NewSinjoh_EventScript_OldLady3::
 	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_OldLady3After
@@ -236,16 +230,14 @@ NewSinjoh_EventScript_OldLady3After::
 	end
 
 NewSinjoh_Text_OldLady3:
-	.string "How can that woman\n"
-	.string "be so rude to our guests?\p"
-	.string "She needs to take a dip\n"
-	.string "in the springs. \p"
-	.string "There is plenty of space\n"
-	.string "for everyone.$"
+	.string "איך האישה ההיא יכולה להיות\n"
+	.string "כל כך גסה כלפי האורחים שלנו?\p"
+	.string "היא צריכה לטבול קצת במעיינות.\p"
+	.string "יש מספיק מקום לכולם.$"
 NewSinjoh_Text_OldLady3After:
-	.string "It seems everybody is getting\n"
-	.string "used to each other around here.\p"
-	.string "Good!$"
+	.string "נראה שכולם כאן\n"
+	.string "מתחילים להתרגל זה לזה.\p"
+	.string "יופי!$"
 
 NewSinjoh_EventScript_SpringsSage::
 	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_SpringsSageAfter
@@ -256,37 +248,34 @@ NewSinjoh_EventScript_SpringsSageAfter::
 	end
 
 NewSinjoh_Text_SpringsSage:
-	.string "There has been much division\n"
-	.string "and strife in our community\l"
-	.string "since the newcomers arrived.\p"
-	.string "Regardless of your perspective,\n"
-	.string "it is clear that the balance has\l"
-	.string "been disturbed.\p"
-	.string "Please be kind to locals and\n"
-	.string "tourists alike.$"
+	.string "מאז שהגיעו החדשים,\n"
+	.string "הקהילה שלנו סובלת מפילוג ומריבות.\p"
+	.string "לא משנה מה נקודת המבט שלך,\n"
+	.string "ברור שהאיזון הופר.\p"
+	.string "יש לנהוג באדיבות כלפי\n"
+	.string "המקומיים והתיירים כאחד.$"
 NewSinjoh_Text_SpringsSageAfter:
-	.string "Things have been better since\n"
-	.string "the legendary POKéMON were quelled.\p"
-	.string "Balance has returned to SINJOH.$"
+	.string "המצב השתפר מאז\n"
+	.string "שהפוקימונים האגדיים הורגעו.\p"
+	.string "האיזון חזר לסינג'ו.$"
 
 NewSinjoh_EventScript_Sage2::
 	msgbox NewSinjoh_Text_Sage2, MSGBOX_NPC
 	end
 
 NewSinjoh_Text_Sage2:
-	.string "Times change, but the STANTLER\n"
-	.string "still gather. For that, we can\l"
-	.string "be thankful.$"
+	.string "הזמנים משתנים, אבל הסטנטלר עדיין\n"
+	.string "מתאספים. ועל כך נוכל להודות.$"
 
 NewSinjoh_EventScript_Daughter::
 	msgbox NewSinjoh_Text_Daughter, MSGBOX_NPC
 	end
 
 NewSinjoh_Text_Daughter:
-    .string "Wheeeeee!!\p"
-    .string "Look, Mommy!\n"
-    .string "No hands!\p"
-	.string "Just like the snowboarders!$"
+    .string "ויייייי!!\p"
+    .string "תראי, אמא!\n"
+    .string "בלי ידיים!\p"
+    .string "בדיוק כמו גולשי הסנובורד!$"
 
 NewSinjoh_EventScript_Mother::
 	lock
@@ -298,32 +287,30 @@ NewSinjoh_EventScript_Mother::
 	end
 
 NewSinjoh_Text_Mother:
-    .string "Look at my adorable baby go!\p"
-    .string "This rink has been here\n"
-	.string "for generations, but the children\l"
-	.string "never used it until the newcomers\l"
-	.string "arrived.$"
+    .string "תראה איך הקטנה המתוקה שלי מחליקה!\p"
+    .string "משטח ההחלקה הזה קיים כבר דורות, אבל\n"
+    .string "הילדים לא השתמשו בו עד שהגיעו החדשים.$"
 
 NewSinjoh_EventScript_Welcome_Sign::
 	msgbox NewSinjoh_Text_Welcome_Sign, MSGBOX_SIGN
 	end
 
 NewSinjoh_Text_Welcome_Sign:
-	.string "NEW SINJOH$"
+	.string "סינג'ו החדשה$"
 
 NewSinjoh_EventScript_Resturant_Sign::
 	msgbox NewSinjoh_Text_Resturant_Sign, MSGBOX_SIGN
 	end
 
 NewSinjoh_Text_Resturant_Sign:
-	.string "FAMILY CAFE$"
+	.string "בית קפה משפחתי$"
 
 NewSinjoh_EventScript_Cave_Sign::
 	msgbox NewSinjoh_Text_Cave_Sign, MSGBOX_SIGN
 	end
 
 NewSinjoh_Text_Cave_Sign:
-	.string "HOT SPRINGS CAVE$"
+	.string "מערת המעיינות החמים$"
 
 NewSinjoh_EventScript_Hiker::
 	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_HikerAfter
@@ -334,14 +321,13 @@ NewSinjoh_EventScript_HikerAfter::
 	end
 
 NewSinjoh_Text_Hiker:
-	.string "Business is booming!\n"
-	.string "But prices have gone up since\l"
-	.string "the city folk became interested\l"
-	.string "in our little town.$"
+	.string "העסקים פורחים!\p"
+	.string "אבל המחירים עלו מאז שאנשי העיר\n"
+	.string "התחילו להתעניין בעיירה הקטנה שלנו.$"
 NewSinjoh_Text_HikerAfter:
-	.string "Business is booming!\p"
-	.string "And with how much that silver haried\n"
-	.string "guy tips, prices have come down!$"
+	.string "העסקים פורחים!\p"
+	.string "ובזכות הטיפים הנדיבים של הבחור\n"
+	.string "עם השיער הכסוף, המחירים ירדו!$"
 
 NewSinjoh_EventScript_OldLady4::
 	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_OldLady4After
@@ -352,9 +338,9 @@ NewSinjoh_EventScript_OldLady4After::
 	end
 
 NewSinjoh_Text_OldLady4:
-	.string "I only sell to locals!$"
+	.string "אני מוכרת רק למקומיים!$"
 NewSinjoh_Text_OldLady4After:
-	.string "I STILL only sell to locals!$"
+	.string "אני עדיין מוכרת רק למקומיים!$"
 
 NewSinjoh_EventScript_Item_DuskBall::
 	finditem ITEM_DUSK_BALL

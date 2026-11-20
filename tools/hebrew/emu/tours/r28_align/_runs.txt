@@ -1,0 +1,32 @@
+# Text-alignment tours: the game played as a player would, early, middle and late, on the Hebrew
+# ROM and on the English one, and the screens of the alignment fixes (DECISIONS.md Q150-Q153).
+# Each shot pairs by name with the English one, for textalign.py.
+#
+# E = tools/hebrew/emu. One emulator at a time; HNS_SRC = the ROM's source tree; --clip only on an
+# RTL_CLIP_REPORT build. Every tour starts from a save at the top of HNS_SAVES (the release save
+# folder): ladder1_newgame.sav, ladder3_ecruteak.sav, ladder6_postgame.sav, menuA_base.sav; or
+# from a save an earlier tour of this folder exports (keepsave), or from an empty battery.
+#
+# Tours and their drivers:
+#   pe00-pe05 (early game: new game, the house, Routes 29 and 30, the menus, the first trainers;
+#              pe01 from ladder1_newgame, the next ones from the save the one before exports)
+#       $E/scripts/r28_align/pe_ops.py tour ROM OUT --tours $E/tours/r28_align --only '^pe'
+#   pm_a-pm_h (middle game from ladder3_ecruteak: Ecruteak, the PC, the party and bag, Goldenrod,
+#              services, gyms, Route 37, fishing and a battle bag)
+#       $E/hns.py tour ROM OUT --tours $E/tours/r28_align --only '^pm_'
+#   pl01-pl17, pl18_contest_lobby, pl19, pl20 (late game from ladder6_postgame: the Battle Frontier,
+#              Trainer Hill, Kanto, PokeGear, Pokedex, PC, the league and the Hall of Fame, Safari)
+#       $E/scripts/r28_align/play_late.py tour ROM OUT --tours $E/tours/r28_align --only '^pl(0|1[0-7]|18_contest_lobby|19|20)'
+#   pl18_contest (a Normal COOL contest from entry to ribbon), pl18_long (the same with the widest
+#              Hebrew player name and a long nickname; Hebrew ROM only)
+#       $E/scripts/r16_contests/con16.py tour ROM OUT --tours $E/tours/r28_align --only '^pl18_(contest|long)$'
+#   v_summary (SKILLS, BATTLE MOVES, move select, CONTEST MOVES; Q150, Q151), v_skills_exp (the
+#              SKILLS page of each party member; Q151), v_bbag and v_bag_box (the bag's one-column
+#              action boxes; Q152)
+#       $E/hns.py tour ROM OUT --tours $E/tours/r28_align --only '^v_'
+#
+# Then, for each set:
+#   python3 $E/textalign.py tours EN_OUT HE_OUT TA [--jobs N]
+# The late tours' text pages can differ in number between the two ROMs; pair them first with
+#   python3 $E/scripts/r28_align/align.py EN_OUT HE_OUT EN_PAIRED
+# and check EN_PAIRED against HE_OUT.

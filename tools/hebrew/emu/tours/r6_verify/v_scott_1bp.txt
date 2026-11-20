@@ -1,0 +1,9 @@
+# Verify: Scott's welcome gift with VAR_SCOTT_STATE 0 (1 BP), section 1 of r6_frontier_npcs/f01_scott.txt.
+start saves/r6_frontier_npcs.sav
+include ../../scripts/continue.txt
+setbp 0
+clearflag FLAG_SCOTT_GIVES_BATTLE_POINTS
+warpto MAP_BATTLE_FRONTIER_SCOTTS_HOUSE_HNS 2 4
+face UP
+tap A 4
+fieldwatch s1_welcome free 12000

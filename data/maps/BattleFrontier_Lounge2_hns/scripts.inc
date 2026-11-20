@@ -113,18 +113,18 @@ BattleFrontier_Lounge2_EventScript_TriathleteF_hns::
 	end
 
 BattleFrontier_Lounge2_Text_FrontierManiacIntro_hns::
-	.string "Howdy! When it comes to news about\n"
-	.string "the BATTLE FRONTIER, I'm no. 1.\p"
-	.string "You can think of me as\n"
-	.string "the FRONTIER MANIAC.\p"
-	.string "Just checking, but you are a TRAINER,\n"
-	.string "isn't that right?\p"
-	.string "I'll happily share the hottest news\n"
-	.string "I gathered about the BATTLE FRONTIER.$"
+	.string "אהלן! כשזה מגיע לחדשות על\n"
+	.string "חזית הקרב, אני מספר 1.\p"
+	.string "אפשר לקרוא לי\n"
+	.string "מטורף החזית.\p"
+	.string "רק מוודא, אבל אתה מאמן,\n"
+	.string "נכון?\p"
+	.string "אשמח לספר לך את החדשות הכי לוהטות\n"
+	.string "שאספתי על חזית הקרב.$"
 
 BattleFrontier_Lounge2_Text_SwingByForTheLatestWord_hns::
-	.string "Howdy! Did you swing by to grill me\n"
-	.string "about the latest word? Oh, all right!$"
+	.string "אהלן! קפצת לחקור אותי על\n"
+	.string "החדשות האחרונות? נו, טוב!$"
 
 @ Unused
 BattleFrontier_Lounge2_Text_MyInformationsBeenUsefulRight_hns::
@@ -133,14 +133,14 @@ BattleFrontier_Lounge2_Text_MyInformationsBeenUsefulRight_hns::
 	.string "seriously useful to you, right?$"
 
 BattleFrontier_Lounge2_Text_FacilityIsHottest_hns::
-	.string "Let's see now…\p"
-	.string "It sounds like the {STR_VAR_1}\n"
-	.string "is the hottest place going.$"
+	.string "אז ככה…\p"
+	.string "נשמע שהמקום הכי לוהט כרגע\n"
+	.string "הוא {STR_VAR_1}.$"
 
 BattleFrontier_Lounge2_Text_BattleTowerIsHottest_hns::
-	.string "Let's see now…\p"
-	.string "It sounds like BATTLE TOWER\n"
-	.string "{STR_VAR_1} is the hottest.$"
+	.string "אז ככה…\p"
+	.string "נשמע שהכי לוהט עכשיו זה\n"
+	.string "קרב {STR_VAR_1} במגדל הקרב.$"
 
 BattleFrontier_Lounge2_Text_SalonMaidenIsThere_hns::
 	.string "Bet you didn't know this!\p"
@@ -352,18 +352,18 @@ BattleFrontier_Lounge2_Text_LinkMultiBattleAdvice_hns::
 	.string "you can expect to see tough foes!$"
 
 BattleFrontier_Lounge2_Text_NewsGatheringPower_hns::
-	.string "What amazing news-gathering power!\n"
-	.string "My mentor's like none other!$"
+	.string "איזו יכולת מדהימה לאסוף חדשות!\n"
+	.string "אין כמו המנטור שלי!$"
 
 BattleFrontier_Lounge2_Text_AmazingPowersOfObservation_hns::
-	.string "What amazing powers of observation!\n"
-	.string "My mentor's like none other!$"
+	.string "איזה כושר הבחנה מדהים!\n"
+	.string "אין כמו המנטור שלי!$"
 
 BattleFrontier_Lounge2_Text_AmazingPowerOfPersuasion_hns::
-	.string "What amazing power of persuasion!\n"
-	.string "My mentor's like none other!$"
+	.string "איזה כוח שכנוע מדהים!\n"
+	.string "אין כמו המנטור שלי!$"
 
 BattleFrontier_Lounge2_Text_ThisPlaceIsScaringMe_hns::
-	.string "…What is this place?\n"
-	.string "It's scaring me…$"
+	.string "…מה המקום הזה?\n"
+	.string "הוא מפחיד אותי…$"
 

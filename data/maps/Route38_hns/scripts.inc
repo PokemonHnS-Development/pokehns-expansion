@@ -99,112 +99,92 @@ Route38_EventScript_Item_LaxIncense::
 	end
 
 Route38_Text_BirdKeeperTobySeen:
-	.string "Fly high into the sky,\n"
-	.string "my beloved bird POKéMON!$"
+	.string "המריאו גבוה אל השמיים,\n"
+	.string "פוקימוני הציפורים האהובים שלי!$"
 
 Route38_Text_BirdKeeperTobyBeaten:
-	.string "I feel like just flying\n"
-	.string "away now.$"
+	.string "בא לי פשוט לעוף מפה עכשיו.$"
 
 Route38_Text_BirdKeeperTobyAfter:
-	.string "I plan to train in CIANWOOD CITY\n"
-	.string "to teach my POKéMON how to FLY.$"
+	.string "אני מתכנן להתאמן בעיר סיאנווד כדי\n"
+	.string "ללמד את הפוקימונים שלי תעופה.$"
 
 Route38_Text_SchoolboyChad1Seen:
-	.string "Let me try something\n"
-	.string "I learned today.$"
+	.string "אני רוצה לנסות משהו שלמדתי היום.$"
 
 Route38_Text_SchoolboyChad1Beaten:
-	.string "I didn't study enough,\n"
-	.string "I guess.$"
+	.string "כנראה שלא למדתי מספיק.$"
 
 Route38_Text_SchoolboyChadAfter:
-	.string "I have to take so many\n"
-	.string "tests, I don't have much\l"
-	.string "time for POKéMON.\p"
-	.string "So when I do get to play,\n"
-	.string "I really concentrate.$"
+	.string "יש לי כל כך הרבה מבחנים,\n"
+	.string "שאין לי הרבה זמן לפוקימונים.\p"
+	.string "אז כשכבר יוצא לי לשחק, אני ממש מתרכז.$"
 
 Route38_Text_ChadRegister:
-	.string "I have to take so many\n"
-	.string "tests, I don't have much\l"
-	.string "time for POKéMON.\p"
-	.string "So when I do get to play,\n"
-	.string "I really concentrate.$"
+	.string "יש לי כל כך הרבה מבחנים,\n"
+	.string "שאין לי הרבה זמן לפוקימונים.\p"
+	.string "אז כשכבר יוצא לי לשחק, אני ממש מתרכז.$"
 
 Route38_Text_ChadRematchIntro:
-	.string "Let me try something\n"
-	.string "I learned today.$"
+	.string "אני רוצה לנסות משהו שלמדתי היום.$"
 
 Route38_Text_ChadRematchDefeat:
-	.string "I didn't study enough,\n"
-	.string "I guess.$"
+	.string "כנראה שלא למדתי מספיק.$"
 
 Route38_Text_ChadPostRematch:
-	.string "I have to take so many\n"
-	.string "tests, I don't have much\l"
-	.string "time for POKéMON.\p"
-	.string "So when I do get to play,\n"
-	.string "I really concentrate.$"
+	.string "יש לי כל כך הרבה מבחנים,\n"
+	.string "שאין לי הרבה זמן לפוקימונים.\p"
+	.string "אז כשכבר יוצא לי לשחק, אני ממש מתרכז.$"
 
 Route38_Text_LassDana1Seen:
-	.string "You seem to be good at\n"
-	.string "POKéMON.\p"
-	.string "If you are, how about\n"
-	.string "giving me some advice?$"
+	.string "נראה שיש לך כישרון לפוקימונים.\p"
+	.string "אם כן, מה דעתך לתת לי כמה עצות?$"
 
 Route38_Text_LassDana1Beaten:
-	.string "I see. So you can battle\n"
-	.string "that way.$"
+	.string "הבנתי. אז ככה אפשר להילחם.$"
 
 Route38_Text_LassDanaAfter:
-	.string "I know something good!\p"
-	.string "MOOMOO FARM's milk is\n"
-	.string "famous for its flavor.$"
+	.string "אני יודעת משהו טוב!\p"
+	.string "החלב של חוות מומו\n"
+	.string "מפורסם בזכות הטעם שלו.$"
 
 Route38_Text_BeautyValerieSeen:
-	.string "Hi! Aren't you a cute\n"
-	.string "trainer!\p"
-	.string "May I see your POKéMON?$"
+	.string "היי! איזה מאמן חמוד אתה!\p"
+	.string "אפשר לראות את הפוקימונים שלך?$"
 
 Route38_Text_BeautyValerieBeaten:
-	.string "I'm glad I got to see\n"
-	.string "your POKéMON!$"
+	.string "אני שמחה שזכיתי לראות\n"
+	.string "את הפוקימונים שלך!$"
 
 Route38_Text_BeautyValerieAfter:
-	.string "When I see POKéMON, it\n"
-	.string "seems to soothe my nerves.$"
+	.string "כשאני רואה פוקימונים,\n"
+	.string "זה מרגיע לי את העצבים.$"
 
 Route38_Text_SailorHarrySeen:
-	.string "I've been overseas, so I\n"
-	.string "know about all sorts of\l"
-	.string "POKéMON!$"
+	.string "הייתי מעבר לים, אז אני\n"
+	.string "מכיר כל מיני פוקימונים!$"
 
 Route38_Text_SailorHarryBeaten:
-	.string "Your skill is world class!$"
+	.string "הכישרון שלך ברמה עולמית!$"
 
 Route38_Text_SailorHarryAfter:
-	.string "All kinds of people around\n"
-	.string "the world live happily with\l"
-	.string "POKéMON.$"
+	.string "כל מיני אנשים ברחבי העולם\n"
+	.string "חיים באושר עם פוקימונים.$"
 
 Route38_Text_BeautyOliviaSeen:
-	.string "Don't you think my POKéMON\n"
-	.string "and I are beautiful?$"
+	.string "נכון שאני והפוקימונים שלי יפים?$"
 
 Route38_Text_BeautyOliviaBeaten:
-	.string "We drink MOOMOO MILK every\n"
-	.string "day.$"
+	.string "אנחנו שותים חלב מומו כל יום.$"
 
 Route38_Text_BeautyOliviaAfter:
-	.string "MOOMOO MILK is good for\n"
-	.string "beauty and health,\p"
-	.string "but inconveniently, they\n"
-	.string "only sell one bottle at a time.$"
+	.string "חלב מומו טוב ליופי ולבריאות,\p"
+	.string "אבל זה לא נוח שמוכרים\n"
+	.string "רק בקבוק אחד בכל פעם.$"
 
 Route38_Text_Sign:
-	.string "ROUTE 38\p"
-	.string "OLIVINE CITY - ECRUTEAK CITY$"
+	.string "דרך 38\p"
+	.string "העיר אוליבין - העיר אקרוטיק$"
 
 Route38_Text_TrainerTips:
 	.string "TRAINER TIPS\p"
@@ -217,39 +197,34 @@ Route38_Text_TrainerTips:
 
 
 Route38_Text_WaterSign:
-	.string "NO SWIMMING OR FISHING.\n"
-	.string "WATER FOR FARMING ONLY.\p"
-	.string "-ECRUTEAK COUNCIL$"
+	.string "אסור לשחות או לדוג.\n"
+	.string "המים לחקלאות בלבד.\p"
+	.string "- מועצת אקרוטיק$"
 
 Route38_Text_DanaRegister:
-	.string "I know something good!\p"
-	.string "MOOMOO FARM's milk is\n"
-	.string "famous for its flavor.$"
+	.string "אני יודעת משהו טוב!\p"
+	.string "החלב של חוות מומו\n"
+	.string "מפורסם בזכות הטעם שלו.$"
 
 Route38_Text_DanaRematchIntro:
-	.string "You seem to be good at\n"
-	.string "POKéMON.\p"
-	.string "If you are, how about\n"
-	.string "giving me some advice?$"
+	.string "נראה שיש לך כישרון לפוקימונים.\p"
+	.string "אם כן, מה דעתך לתת לי כמה עצות?$"
 
 Route38_Text_DanaRematchDefeat:
-	.string "I see. So you can battle\n"
-	.string "that way.$"
+	.string "הבנתי. אז ככה אפשר להילחם.$"
 
 Route38_Text_DanaPostRematch:
-	.string "I know something good!\p"
-	.string "MOOMOO FARM's milk is\n"
-	.string "famous for its flavor.$"
+	.string "אני יודעת משהו טוב!\p"
+	.string "החלב של חוות מומו\n"
+	.string "מפורסם בזכות הטעם שלו.$"
 
 Route38_Text_DanaHasItem:
-	.string "Hey! I found something\n"
-	.string "interesting!\p"
-	.string "Here, you can have it!$"
+	.string "היי! מצאתי משהו מעניין!\p"
+	.string "הנה, זה בשבילך!$"
 
 Route38_Text_DanaGaveItem:
-	.string "I'll let you know if I find\n"
-	.string "anything else!$"
+	.string "אודיע לך אם אמצא עוד משהו!$"
 
 Route38_Text_DanaNoRoom:
-	.string "Hmm, your BAG is full.\p"
-	.string "Come back when you have room.$"
+	.string "הממ, התיק שלך מלא.\p"
+	.string "תחזור כשיהיה לך מקום.$"

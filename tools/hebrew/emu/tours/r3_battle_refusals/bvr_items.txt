@@ -1,0 +1,109 @@
+# In-battle BAG > MEDICINE: the bag pocket, the item's USE / CANCEL menu, the battle party menu
+# opened for an item ("Use on which Pokemon?", ChooseMonForInBattleItem, src/party_menu.c:7637-7642),
+# the refusal gText_WontHaveEffect (src/strings.c:276) printed by ItemUseCB_BattleScript
+# (src/party_menu.c:4916-4934) for a target the item cannot help, and the battle script's
+# messages in the battle layout when it does help:
+# - Potion: on a Pokemon at full HP (refused), on the Egg (refused), on the hurt lead (HP restored);
+# - Revive: on a healthy Pokemon (refused), on the fainted one (revived);
+# - Full Heal: on a Pokemon without a status (refused), on the poisoned one (cured).
+# The foe is a wild Lv 5 Magikarp (Splash only), so the turns change nothing else.
+# Party: Typhlosion (lead, 40 HP), Feraligatr (poisoned), Meganium (fainted), an Egg.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_TYPHLOSION, 50, move1=MOVE_TACKLE; givemon SPECIES_FERALIGATR, 50, move1=MOVE_SURF; givemon SPECIES_MEGANIUM, 50, move1=MOVE_RAZOR_LEAF; giveegg SPECIES_TOGEPI; setko 2; setstatus1 STATUS1_POISON, 1; additem ITEM_POTION, 3; additem ITEM_REVIVE, 2; additem ITEM_FULL_HEAL, 2; additem ITEM_POKE_BALL, 3; end
+expect8 @gPlayerPartyCount@ 4
+sethp player 0 40
+
+pinrng
+evstart setwildbattle SPECIES_MAGIKARP, 5; dowildbattle; end
+waitbattle
+bwalk bvr_items_intro input:HandleInputChooseAction
+
+# turn 1: Potion
+w8 @gBagPosition+5@ 1                     # the bag opens on MEDICINE (struct BagPosition.pocket, include/item_menu.h:59-67)
+w16 @gBagPosition+0A@ 0                   # cursor on its first row
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+expect8 @gBagPosition+5@ 1
+snap bvr_items_medicine_potion
+tap DOWN 4
+waitquiet
+snap bvr_items_medicine_row2
+tap DOWN 4
+waitquiet
+snap bvr_items_medicine_row3
+tap DOWN 4
+waitquiet
+snap bvr_items_medicine_close
+seek 16 @gBagPosition+0A@ 0 UP
+include _bag_use.txt
+snap bvr_items_potion_party
+seek 8 @gPartyMenu+9@ 1 DOWN              # Feraligatr, full HP
+snap bvr_items_potion_cursor_full
+tap A 4
+pages bvr_items_potion_full
+include _back_to_bag.txt
+snap bvr_items_potion_back_bag
+include _bag_use.txt
+seek 8 @gPartyMenu+9@ 3 DOWN              # the Egg: IsSelectedMonNotEgg refuses it with a sound only, no text
+tap A 4
+waitquiet
+snap bvr_items_potion_egg
+tap B 4                                   # back to the bag
+include _back_to_bag.txt
+include _bag_use.txt
+seek 8 @gPartyMenu+9@ 0 UP                # Typhlosion, 40 HP
+tap A 4
+waitnotask Task_HandleChooseMonInput 300
+bwalk bvr_items_potion_used input:HandleInputChooseAction
+snap bvr_items_potion_after
+
+# turn 2: Revive (MEDICINE rows: Potion 0, Revive 1, Full Heal 2; the tour checks the item id)
+include ../_bv_switch.txt
+snap bvr_items_party_after_potion
+tap B 4
+waitbinput HandleInputChooseAction 900
+w8 @gBagPosition+5@ 1
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+seek 16 @gBagPosition+0A@ 1 DOWN
+snap bvr_items_medicine_revive
+include _bag_use.txt
+expect16 @gSpecialVar_ItemId@ 21
+seek 8 @gPartyMenu+9@ 1 DOWN              # Feraligatr, not fainted
+tap A 4
+pages bvr_items_revive_healthy
+include _back_to_bag.txt
+include _bag_use.txt
+seek 8 @gPartyMenu+9@ 2 DOWN              # Meganium, fainted
+snap bvr_items_revive_cursor_fainted
+tap A 4
+waitnotask Task_HandleChooseMonInput 300
+bwalk bvr_items_revive_used input:HandleInputChooseAction
+
+# turn 3: Full Heal
+w8 @gBagPosition+5@ 1
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+seek 16 @gBagPosition+0A@ 2 DOWN
+snap bvr_items_medicine_fullheal
+include _bag_use.txt
+expect16 @gSpecialVar_ItemId@ 30
+seek 8 @gPartyMenu+9@ 0 UP                # Typhlosion, no status
+tap A 4
+pages bvr_items_fullheal_healthy
+include _back_to_bag.txt
+include _bag_use.txt
+seek 8 @gPartyMenu+9@ 1 DOWN              # Feraligatr, poisoned
+snap bvr_items_fullheal_cursor_psn
+tap A 4
+waitnotask Task_HandleChooseMonInput 300
+bwalk bvr_items_fullheal_used input:HandleInputChooseAction
+include ../_bv_switch.txt
+snap bvr_items_party_end

@@ -1,0 +1,30 @@
+# Cianwood Pokemon Center fisher (14,6): CianwoodPokemoncenter_EventScript_Fisher
+# (CianwoodPokecenter_hns/scripts.inc:9-33). No party Pokemon knows or can learn Surf
+# (checkfieldmove FIELD_MOVE_SURF = PARTY_SIZE) -> Fisher2 pages, Tentacool received, nickname
+# YES/NO (NO); with a party of one it goes to the party. Talking again (FLAG_TEMP_1 set) -> Fisher1.
+# Then, re-entering the map (FLAG_TEMP_1 clears) with a full party of six: the PC branch
+# (Common_EventScript_ReceiveMonPC: received, nickname NO, 'sent to the PC').
+start saves/r6_gifts_base.sav
+include _base.txt
+ev callnative ZeroPlayerPartyMons; special CalculatePlayerPartyCount; givemon SPECIES_PIDGEOT, 50; end
+warpto MAP_CIANWOOD_POKECENTER_HNS 13 6
+face RIGHT
+snap tc_field
+tap A 4
+scene tc_give 8000
+pickd 1
+scene tc_give_no 6000
+snap tc_give_end
+partyinfo
+face RIGHT
+tap A 4
+scene tc_normal 4000
+snap tc_normal_end
+ev file _nosurf6.inc
+warpto MAP_CIANWOOD_POKECENTER_HNS 13 6
+face RIGHT
+tap A 4
+scene tc_pc 8000
+pickd 1
+scene tc_pc_no 6000
+snap tc_pc_end

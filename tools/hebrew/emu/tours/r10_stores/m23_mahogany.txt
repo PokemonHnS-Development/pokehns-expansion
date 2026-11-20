@@ -1,0 +1,10 @@
+# Mahogany shop granny (VAR_MAHOGANY_TOWN_STATE >= 14) (MAP_MAHOGANY_TOWN_SHOP_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_MAHOGANY_TOWN_SHOP_HNS
+clerk 2 5 m23_hi
+buyopen m23_buy
+listshots m23_list
+buyeach m23_ask
+buyclose m23_menu
+shopquit m23_bye

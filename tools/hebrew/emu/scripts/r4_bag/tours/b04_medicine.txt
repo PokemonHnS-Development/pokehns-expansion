@@ -1,0 +1,7 @@
+# MEDICINE pocket (medicine + battle items, I_COMBINE_BAG_POCKETS): every row and its context menu.
+start saves/menuA_base_copy.sav
+include ../../continue.txt
+fillpocket MEDICINE 999 0 92
+bagopen MEDICINE
+bagrows med ctx 120
+bagclose

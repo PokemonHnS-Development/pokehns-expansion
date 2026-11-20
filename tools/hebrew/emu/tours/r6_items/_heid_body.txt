@@ -1,0 +1,16 @@
+# r6 items, long-name pass (include): the widest {PLAYER} (שמשבחתם, seven 7 px letters / KENNETH) with the widest
+# item names of this group in the found line and the pocket line, the widest TM move name, and the gift lines
+# (the pocket line carries {PLAYER}; the plural lines do not, but are repeated here for completeness).
+include ../../scripts/continue.txt
+setflag FLAG_DISABLE_TRAINERS
+pick heid_b_ice_heal FLAG_ITEM_ROCKETHIDEOUT3_ICE_HEAL MAP_ROCKET_HIDEOUT_B3F_HNS 22 5 UP
+pick heid_b_old_sea_map FLAG_ITEM_VERMILION_OLD_SEA_MAP MAP_VERMILION_CITY_HNS 61 47 UP
+pick heid_b_dusk_ball FLAG_NEWSINJOH_ITEM_DUSK_BALL MAP_NEW_SINJOH_HNS 11 24 UP
+pick heid_h_reaper_cloth FLAG_HIDDEN_ITEM_MT_SILVER_OUTSIDE_REAPER_CLOTH MAP_MT_SILVER_OUTSIDE_HNS 9 29 LEFT
+pick heid_h_ice_heal FLAG_HIDDEN_ITEM_ICEPATH_1F_ICE_HEAL MAP_ICE_PATH_1F_HNS 12 12 UP
+pick heid_t_tm_dragon_claw FLAG_ITEM_ROUTE27_DRAGONCLAW MAP_ROUTE27_HNS 132 17 RIGHT
+pick heid_t_tm_earthquake FLAG_ITEM_VICTORYROAD1_TM_EARTHQUAKE MAP_VICTORY_ROAD_KANTO_B2F_HNS 20 11 LEFT
+gift heid_g_pokeblock_case ITEM_POKEBLOCK_CASE 1
+gift heid_g_bright_powder ITEM_BRIGHT_POWDER 1
+gift heid_g_poke_ball_x5 ITEM_POKE_BALL 5
+gift heid_g_sport_ball_x30 ITEM_SPORT_BALL 30

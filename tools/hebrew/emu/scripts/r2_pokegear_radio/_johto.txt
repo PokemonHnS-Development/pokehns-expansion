@@ -1,0 +1,8 @@
+# The league save (FLAG_HIDE_GOLDENROD_ROCKETS set by scripts/ladder/s4c_radiotower.inc:21, so no
+# Rocket takeover), in Goldenrod City (MAPSEC_GOLDENROD_CITY: Johto, IsPlayerInJohto,
+# src/pokenav_radio.c:976-980), below the door of House 1, radio open.
+include ../continue.txt
+loc
+clockinfo
+warpto MAP_GOLDENROD_CITY_HNS 29 14
+gearradio

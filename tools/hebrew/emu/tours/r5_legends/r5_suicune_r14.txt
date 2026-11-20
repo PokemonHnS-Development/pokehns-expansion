@@ -1,0 +1,12 @@
+# Suicune, Route 14 (26,44) (VAR_SUICUNE_ENCOUNTERS 4): trigger row y=44 x=15-19,
+# Route14_TriggerSuicune_* / Route14_EventScript_Suicune (data/maps/Route14_hns/scripts.inc:10-110):
+# Suicune runs, Eusine's line.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev setvar VAR_SUICUNE_ENCOUNTERS, 4; clearflag FLAG_HIDE_ROUTE14_SUICUNE; setflag FLAG_HIDE_ROUTE14_EUSINE; end
+warpto MAP_ROUTE14_HNS 17 45
+face UP
+snap s14_field
+stepto UP 1
+scene s14_scene 12000 60
+snap s14_end

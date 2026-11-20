@@ -1,0 +1,161 @@
+# A main-bag TOSS carried through to the end (src/item_menu.c ItemMenu_Toss :1972, AskTossItems,
+# ConfirmToss): how many (gText_TossHowManyVar1s with the plural), the YES/NO confirm with the count
+# (gText_ConfirmTossItems), YES, and the report (gText_ThrewAwayVar2Var1s), then the list without the
+# tossed stack. Cases: 3 of 5 (plural), the last 2 (the row goes away), 1 of a stack of 1 (no
+# how-many, singular), 1 picked from a stack of 10 (plural ask, singular confirm), a MEDICINE stack
+# tossed whole, and a berry x1 from the 2x3 BERRIES grid (TOSS = second row, second column).
+# Save: menuA_base. ITEMS rows: 0 REPEL x5, 1 HEART SCALE x1, 2 FIRE STONE x10.
+start saves/r8bfe_menuA_base.sav
+include ../../scripts/continue.txt
+setpocket POCKET_ITEMS ITEM_REPEL:5 ITEM_HEART_SCALE:1 ITEM_FIRE_STONE:10
+setpocket POCKET_MEDICINE ITEM_FULL_HEAL:10 ITEM_POTION:20
+setpocket POCKET_BERRIES ITEM_PERSIM_BERRY:1 ITEM_ORAN_BERRY:4
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 0
+w16 @gBagPosition+14@ 0
+
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap t01_pocket
+
+# REPEL x5: toss 3
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap DOWN 4
+waitquiet
+snap t02_context_toss
+tap A 4
+waittaskx item_menu:Task_ChooseHowManyToToss 300
+waitquiet
+snap t03_howmany_1
+tap UP 4
+tap UP 4
+waitquiet
+snap t04_howmany_3
+tap A 4
+waitquiet
+snap t05_confirm_3
+tap A 4                                   # YES
+waitquiet
+snap t06_threw_3
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+snap t07_list_after_3
+
+# REPEL x2: toss both (DOWN from 1 wraps to the maximum)
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap DOWN 4
+tap A 4
+waittaskx item_menu:Task_ChooseHowManyToToss 300
+tap DOWN 4
+waitquiet
+snap t08_howmany_2
+tap A 4
+waitquiet
+snap t09_confirm_2
+tap A 4
+waitquiet
+snap t10_threw_2
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+snap t11_list_row_gone
+
+# HEART SCALE x1 (now row 0): straight to the confirm, singular
+seek 16 @gBagPosition+8@ 0 UP
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap DOWN 4
+tap A 4
+waitquiet
+snap t12_confirm_single
+tap A 4
+waitquiet
+snap t13_threw_single
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+snap t14_list_after_single
+
+# FIRE STONE x10: 1 picked from the stack
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap DOWN 4
+tap A 4
+waittaskx item_menu:Task_ChooseHowManyToToss 300
+waitquiet
+snap t15_howmany_stone
+tap A 4
+waitquiet
+snap t16_confirm_1_of_10
+tap A 4
+waitquiet
+snap t17_threw_1_of_10
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+
+# MEDICINE: FULL HEAL x10, all of it
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 1
+seek 16 @gBagPosition+A@ 0 UP
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap DOWN 4
+tap A 4
+waittaskx item_menu:Task_ChooseHowManyToToss 300
+tap DOWN 4
+waitquiet
+snap t18_howmany_fullheal_10
+tap A 4
+waitquiet
+snap t19_confirm_fullheal_10
+tap A 4
+waitquiet
+snap t20_threw_fullheal_10
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+snap t21_med_after
+
+# BERRIES: PERSIM x1 through the 2x3 grid
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+tap RIGHT 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+expect8 @gBagPosition+5@ 4
+seek 16 @gBagPosition+10@ 1 DOWN            # the pocket lists berries by number: ORAN, then PERSIM
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap t22_berry_context
+tap DOWN 4
+tap ROWNEXT 4
+waitquiet
+snap t23_berry_context_toss
+tap A 4
+waitquiet
+snap t24_berry_confirm
+tap A 4
+waitquiet
+snap t25_berry_threw
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+snap t26_berries_after
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

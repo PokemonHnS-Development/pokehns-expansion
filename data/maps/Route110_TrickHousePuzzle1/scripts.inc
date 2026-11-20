@@ -37,11 +37,11 @@ Route110_TrickHousePuzzle1_EventScript_Robin::
 	end
 
 Route110_TrickHousePuzzle1_Text_WroteSecretCodeLockOpened::
-	.string "{PLAYER} wrote down the secret code\n"
-	.string "on the door.\p"
-	.string "“TRICK MASTER is fabulous.”\n"
+	.string "{PLAYER} כתב את הקוד הסודי\n"
+	.string "על הדלת.\p"
+	.string "”אמן התעלולים נפלא.”\n"
 	.string "… … … … … … … …\p"
-	.string "The lock clicked open!$"
+	.string "המנעול נפתח בנקישה!$"
 
 Route110_TrickHousePuzzle1_Text_SallyIntro:
 	.string "I'll hack and slash my way to victory\n"

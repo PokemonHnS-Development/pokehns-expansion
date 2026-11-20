@@ -24,56 +24,56 @@ Route2_EventScript_Nugget::
     end
 
 Route2_Text_RobRegister:
-	.string "Let me get your number!$"
+	.string "בוא נחליף מספרים!$"
 
 Route2_Text_RobRematchIntro:
-	.string "I've caught even more bugs!\n"
-	.string "Check them out!$"
+	.string "תפסתי עוד יותר חרקים!\n"
+	.string "תראה אותם!$"
 
 Route2_Text_RobRematchDefeat:
-	.string "I need better bugs!$"
+	.string "אני צריך חרקים טובים יותר!$"
 
 Route2_Text_RobPostRematch:
-	.string "I caught every bug in VIRIDIAN.\n"
-	.string "Is there a better FOREST somewhere?$"
+	.string "תפסתי כל חרק ביער וירידיאן.\n"
+	.string "יש איפשהו יער טוב יותר?$"
 
 Route2_Text_BugCatcherRob_Seen:
-	.string "My bug POKéMON are tough. Prepare to\n"
-	.string "lose!$"
+	.string "פוקימוני החרק שלי קשוחים.\n"
+	.string "תתכונן להפסיד!$"
 
 Route2_Text_BugCatcherRob_Beaten:
-	.string "I was whipped…$"
+	.string "הובסתי לגמרי…$"
 
 Route2_Text_BugCatcherRob_AfterBattle:
-	.string "I'm going to look for stronger bug\n"
-	.string "POKéMON.$"
+	.string "אני הולך לחפש פוקימוני חרק\n"
+	.string "חזקים יותר.$"
 
 Route2_Text_BugCatcherEd_Seen:
-	.string "If you walk in tall grass wearing\n"
-	.string "shorts, do you get nicks and cuts?$"
+	.string "אם הולכים בדשא גבוה עם מכנסיים\n"
+	.string "קצרים, מקבלים שריטות וחתכים?$"
 
 Route2_Text_BugCatcherEd_Beaten:
-	.string "Ouch, ouch, ouch!$"
+	.string "איי, איי, איי!$"
 
 Route2_Text_BugCatcherEd_AfterBattle:
-	.string "They'll really sting when you take a\n"
-	.string "bath.$"
+	.string "הם ממש צורבים כשנכנסים\n"
+	.string "לאמבטיה.$"
 
 Route2_Text_BugCatcherDoug_Seen:
-	.string "Why don't girls like bug POKéMON?$"
+	.string "למה בנות לא אוהבות פוקימוני חרק?$"
 
 Route2_Text_BugCatcherDoug_Beaten:
-	.string "No good!$"
+	.string "לא טוב!$"
 
 Route2_Text_BugCatcherDoug_AfterBattle:
-	.string "Bug POKéMON squish like plush toys\n"
-	.string "when you squeeze their bellies.\p"
-	.string "I love how they feel!$"
+	.string "פוקימוני חרק נמעכים כמו בובות\n"
+	.string "פרווה כשלוחצים להם על הבטן.\p"
+	.string "אני אוהב את התחושה!$"
 
 Route2_Text_Sign:
-	.string "ROUTE 2\p"
-	.string "VIRIDIAN CITY - PEWTER CITY$"
+	.string "דרך 2\p"
+	.string "העיר וירידיאן - העיר פיוטר$"
 
 Route2_Text_DiglettsCaveSign:
-	.string "DIGLETT'S CAVE$"
+	.string "מערת דיגלט$"
 

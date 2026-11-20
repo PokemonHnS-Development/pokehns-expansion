@@ -1,0 +1,55 @@
+# Mystery Gift menu (src/mystery_gift_menu.c) on rc16, as in r2 bt12c (scripts/r2_boot_title_save/
+# bt12c_mystery_gift_menu.txt): the main menu enters it only with a Wireless Adapter (main_menu.c), so the tour
+# switches to CB2_InitMysteryGift from the main menu. Top rows, Wonder Cards -> none -> source menu, Wonder
+# News -> none -> source menu, WIRELESS (no adapter) and FRIEND. Save: copy of saves_screens/r2_boot/
+# boot_mystery.sav (FLAG_SYS_MYSTERY_GIFT_ENABLE set). No card or news can be shown: H&S builds with
+# FREE_MYSTERY_GIFT TRUE (include/config/save.h:16), so ValidateSavedWonderCard / ValidateSavedWonderNews are
+# always FALSE (src/mystery_gift.c:106-118, :212-225).
+start saves/r14/link/mystery.sav
+waitcb2 CB2_MainMenu 4000 START
+waittaskx Task_HandleMainMenuInput 600
+waitquiet
+setcb2 CB2_InitMysteryGift
+waitcb2x CB2_MysteryGiftEReader 300
+waitquiet
+40 -
+snap g01_top_cards
+tap DOWN 6
+waitquiet
+snap g02_top_news
+tap DOWN 6
+waitquiet
+snap g03_top_exit
+tap UP 6
+tap UP 6
+waitquiet
+tap A 4
+waitquiet
+40 -
+snap g04_cards_none
+tap A 4
+waitquiet
+40 -
+snap g05_cards_source_wireless
+tap DOWN 6
+waitquiet
+snap g06_cards_source_friend
+tap DOWN 6
+waitquiet
+snap g07_cards_source_cancel
+tap A 4
+40 -
+waitquiet
+snap g08_back_top
+tap DOWN 6
+waitquiet
+tap A 4
+waitquiet
+40 -
+snap g09_news_none
+tap A 4
+waitquiet
+40 -
+snap g10_news_source
+tap A 4
+burst g11_wireless 12 20

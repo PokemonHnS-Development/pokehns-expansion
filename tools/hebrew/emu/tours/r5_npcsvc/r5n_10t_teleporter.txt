@@ -1,0 +1,55 @@
+# Bill's teleporter only (FLAG_TELEPORTER_UNLOCKED set in RAM, the r5n_10 party): the help window,
+# NO; YES + Corsola (not in the party); YES + Meowth (the cutscene, the Galarian form).
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+ev file _gramps_party.inc
+ev setvar VAR_BILLS_GRANDPA, 6; setflag FLAG_TELEPORTER_UNLOCKED; end
+# --- 10. the teleporter: help window, NO
+warpto MAP_ROUTE25_BILLS_HOUSE_HNS 4 6
+face UP
+tap A 4
+waitmem 32 @sGlobalScriptContext+4@ @WaitForAorBPress@ 300
+snap t1_help
+tap A 0
+fieldwatch t1_ask menu 6000
+pick 1
+fieldwatch t1_no free 3000
+
+# --- 11. YES, Corsola (row 12): not in the party
+face UP
+tap A 4
+waitmem 32 @sGlobalScriptContext+4@ @WaitForAorBPress@ 300
+tap A 0
+fieldwatch t2_ask menu 6000
+pick 0
+waittaskx Task_HandleScrollingMultichoiceInput 600
+waitquiet
+snap t2_list
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap t2_list_corsola
+tap A 0
+fieldwatch t2_notinparty free 6000
+
+# --- 12. YES, Meowth (row 0): the cutscene
+face UP
+tap A 4
+waitmem 32 @sGlobalScriptContext+4@ @WaitForAorBPress@ 300
+tap A 0
+fieldwatch t3_ask menu 6000
+pick 0
+waittaskx Task_HandleScrollingMultichoiceInput 600
+waitquiet
+tap A 0
+fieldwatch t3_cutscene free 20000 40
+partyinfo

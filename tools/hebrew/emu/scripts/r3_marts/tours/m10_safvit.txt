@@ -1,0 +1,22 @@
+# Safari Zone Gate vitamin guru (SafariZoneGate_hns/scripts.inc:144-163).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_SAFARI_ZONE_GATE_HNS 20 23
+evstart goto SafariZoneGate_EventScript_VitaminGuru
+talk m10_safvit_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m10_safvit_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m10_safvit
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m10_safvit_bye 10 -
+waitctl 900

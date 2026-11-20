@@ -336,18 +336,18 @@ Alola_Ulaula_TotemBattle_Trigger_Movement_0:
 	step_end
 
 Alola_Ulaula_TotemBattle_Text_0:
-	.string "Graah!$"
+	.string "גראאה!$"
 
 Alola_Ulaula_TotemBattle_Text_1:
-	.string "Totem TANGROWTH was defeated!\n"
-	.string "It scampered off somewhere…$"
+	.string "טנגרות' הטוטם הובס!\n"
+	.string "הוא נמלט לאנשהו…$"
 
 Alola_Ulaula_TotemBattle_Text_2:
-	.string "Graah!$"
+	.string "גראאה!$"
 
 Alola_Ulaula_TotemBattle_Text_3:
-	.string "Totem PRIMEAPE was defeated!\n"
-	.string "It scampered off somewhere…$"
+	.string "פריימיפ הטוטם הובס!\n"
+	.string "הוא נמלט לאנשהו…$"
 
 UlaUla_Forest_hns_Movement_FacePlayerUpAfterTotemWarp:
 	face_up
@@ -355,29 +355,29 @@ UlaUla_Forest_hns_Movement_FacePlayerUpAfterTotemWarp:
 
 
 Alola_Ulaula_Totem_sign_Text_0:
-	.string "The totem is emanating a strong\n"
-	.string "energy…\p"
-	.string "Touch the totem to teleport to another\n"
-	.string "Isle?$"
+	.string "מהטוטם נובעת\n"
+	.string "אנרגיה חזקה…\p"
+	.string "לגעת בטוטם כדי להשתגר\n"
+	.string "לאי אחר?$"
 
 Alola_Ulaula_Totem_sign_Text_1:
-	.string "MELEMELE ISLE$"
+	.string "האי מלמלה$"
 
 Alola_Ulaula_Totem_sign_Text_2:
-	.string "AKALA ISLE$"
+	.string "האי אקאלה$"
 
 Alola_Ulaula_Totem_sign_Text_3:
-	.string "ULA'ULA ISLE$"
+	.string "האי אולאולה$"
 
 Alola_Ulaula_Totem_sign_Text_4:
-	.string "PONI ISLE$"
+	.string "האי פוני$"
 
 Alola_Ulaula_Totem_sign_Text_5:
-	.string "CANCEL$"
+	.string "ביטול$"
 
 Alola_Ulaula_Totem_sign_Text_6:
-	.string "A strange totem stands here,\n"
-	.string "power is emanating from it…$"
+	.string "כאן עומד טוטם מוזר,\n"
+	.string "ועוצמה נובעת ממנו…$"
 
 Alola_Ulaula_BattleVsTapuBulu_Text_0:
-	.string "Bu-Bulu!$"
+	.string "בו-בולו!$"

@@ -42,6 +42,14 @@ struct WindowTemplate
 
 #define WINDOW_NONE 0xFF
 
+// Right-to-left layout of a window's contents (see the TEXT_RTL notes in src/text.c).
+enum
+{
+    WINDOW_RTL_MIRROR,   // Text, fills and blits are mirrored inside the window (the default)
+    WINDOW_RTL_IN_PLACE, // Each text segment reads right to left inside its English extent
+    WINDOW_RTL_LTR,      // Untouched
+};
+
 struct Window
 {
     struct WindowTemplate window;
@@ -75,6 +83,11 @@ void FillWindowPixelRect8Bit(u32 windowId, u8 fillValue, u16 x, u16 y, u16 width
 void BlitBitmapRectToWindow4BitTo8Bit(u32 windowId, const u8 *pixels, u16 srcX, u16 srcY, u16 srcWidth, int srcHeight, u16 destX, u16 destY, u16 rectWidth, u16 rectHeight, u8 paletteNum);
 void CopyWindowToVram8Bit(u32 windowId, u8 mode);
 u32 WindowWidthPx(u32 windowId);
+void SetWindowRtlMode(u32 windowId, u32 mode);
+u32 GetWindowRtlMode(u32 windowId);
+void SetWindowRtlMirrorWidth(u32 windowId, u32 widthPx);
+u32 GetWindowRtlMirrorWidth(u32 windowId);
+s32 WindowRtlX(u32 windowId, s32 x, s32 width);
 u32 WindowTemplateWidthPx(const struct WindowTemplate *template);
 
 extern struct Window gWindows[];

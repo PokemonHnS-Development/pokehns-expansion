@@ -1,0 +1,15 @@
+# START > SAVE when TrySavingData fails without the save-failed screen: gFlashMemoryPresent pinned
+# to 0 (src/save.c:790-794), so SaveDoSaveCallback shows gText_SaveError (data/text/save.inc:25,
+# src/start_menu.c:1299) in the field message box.
+start saves/boot_base.sav
+include ../continue.txt
+pinsym gFlashMemoryPresent 00000000
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+snap bt07_00_confirm
+tap A 0
+textwatch bt07_err CB2_InitCopyrightScreenAfterBootup 900 A
+unpinsym gFlashMemoryPresent
+90 A
+waitctl 900
+snap bt07_after

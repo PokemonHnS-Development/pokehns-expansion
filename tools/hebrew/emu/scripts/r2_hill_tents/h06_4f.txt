@@ -1,0 +1,21 @@
+# 4F: ice floor (MB_TRICK_HOUSE_PUZZLE_8_FLOOR). Trainer 1 (7,9) looks south, trainer 2 (7,15) north;
+# both see (7,12): sliding there from the west starts the tag battle against both. After-battle
+# speech of both; the challenge timer at (14,1); the stairs to the roof.
+ev special HealPlayerParty; end
+walkto 7 12
+snap h06_before
+dlg h06_intro battle
+battle2 h06
+snap h06_after
+talkto 1 h06_t1_post free
+talkto 2 h06_t2_post free
+walkto 14 2 UP
+20 -
+snap h06_timer_face
+tap A 4
+30 -
+showtasks
+dlg h06_timer free
+walkto 12 1
+snap h06_roof_arrive
+objs

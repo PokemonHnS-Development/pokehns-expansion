@@ -1,0 +1,24 @@
+# Steven at the Sinjoh Ruins at VAR_SINJOH_STORYLINE 9 (SinjohRuins_EventScript_TriggerStevenBattleLeft
+# at (23,31): YES/NO, NO steps the player back; then YES: challenge, TRAINER_STEVEN_HNS with his
+# Full Restore (bitem), defeat, after, Stone Plate, heal, after-plate).
+start saves/r6_story_l6.sav
+include _base.txt
+ev setvar VAR_SINJOH_STORYLINE, 9; cleartrainerflag TRAINER_STEVEN_HNS; clearflag FLAG_HIDE_SINJOHRUINS_STEVEN; removeitem ITEM_STONE_PLATE, 1; end
+warpto MAP_SINJOH_RUINS_HNS 22 31
+objs
+snap S_ruins
+stepto RIGHT 1
+scene S_ask 20000
+tap B 4
+scene S_no 20000
+snap S_no_free
+stepto RIGHT 1
+scene S_ask2 20000
+tap A 4
+scene S_challenge 20000
+bwalk B_bintro input:HandleInputChooseAction
+snap B_action
+bitem B_item 3
+bwin B_win
+scene B_after 40000 30
+snap B_free

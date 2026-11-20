@@ -1,0 +1,28 @@
+# Route 34 Day Care with two Pokemon: two males: 'prefer to play with other Pokemon' (gDaycareText_PlayOther).
+# Party slots 4 and 5 are overwritten with the pair (createmon) and stored with the special the woman's
+# script uses (StoreSelectedPokemonInDaycare, VAR_0x8004 = slot). The man outside (Route34_hns (31,34),
+# Route34_EventScript_CheckOnTwoMons: SetDaycareCompatibilityString, src/daycare.c:1432-1450) prints the
+# compatibility line; the woman inside (3,8) opens the level menu (ShowDaycareLevelMenu, EXIT row
+# gText_Exit4) when asked to take one back.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 4, SPECIES_RATTATA, 10, gender=MON_MALE; createmon 0, 5, SPECIES_RATTATA, 10, gender=MON_MALE; special CalculatePlayerPartyCount; end
+
+ev setvar VAR_0x8004, 4; special StoreSelectedPokemonInDaycare; setvar VAR_0x8004, 4; special StoreSelectedPokemonInDaycare; end
+warpto MAP_ROUTE34_HNS 30 34
+face RIGHT
+talk fo_dc_c_man 12
+waitctl 900 B
+warpto MAP_ROUTE34_DAY_CARE_HNS 3 7
+face DOWN
+talk fo_dc_c_woman 12
+tap A 0
+waittaskx Task_HandleDaycareLevelMenuInput 600
+waitquiet
+snap fo_dc_c_levelmenu
+tap UP 4
+waitquiet
+snap fo_dc_c_levelmenu_exit
+tap B 4
+talk fo_dc_c_bye 6 -
+waitctl 900 B

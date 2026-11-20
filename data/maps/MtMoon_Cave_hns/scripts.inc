@@ -85,29 +85,29 @@ MtMoon_Cave_Movement_SilverLeave:
 	step_end
 
 MtMoon_Cave_Text_Rival_Before:
-	.string "..................................\p"
-	.string "It's been a while, {PLAYER}.\p"
-	.string "…Since I lost to you, I thought about\n"
-	.string "what I was lacking with my POKéMON…\p"
-	.string "And we came up with an answer.\p"
-	.string "{PLAYER}, now we'll show you!$"
+	.string "…………\p"
+	.string "עבר הרבה זמן, {PLAYER}.\p"
+	.string "…מאז שהפסדתי לך, חשבתי על מה\n"
+	.string "שחסר לי עם הפוקימונים שלי…\p"
+	.string "ומצאנו תשובה.\p"
+	.string "{PLAYER}, עכשיו אנחנו נראה לך!$"
 
 MtMoon_Cave_Text_Rival_Win:
-	.string "..................................\p"
-	.string "I thought I raised my POKéMON to be the\n"
-	.string "best they could be…\p"
-	.string "…But it still wasn't enough…$"
+	.string "…………\p"
+	.string "חשבתי שגידלתי את הפוקימונים שלי\n"
+	.string "כך שיהיו הכי טובים שאפשר…\p"
+	.string "…אבל זה עדיין לא הספיק…$"
 
 MtMoon_Cave_Text_Rival_After:
-	.string "..................................\p"
-	.string "…You won, fair and square.\p"
-	.string "I admit it. But this isn't the end.\p"
-	.string "I'm going to be the greatest POKéMON\n"
-	.string "trainer ever.\p"
-	.string "Because these guys are behind me.\p"
-	.string "…Listen, {PLAYER}.\p"
-	.string "One of these days I'm going to prove\n"
-	.string "how good I am by beating you.$"
+	.string "…………\p"
+	.string "…ניצחת ביושר.\p"
+	.string "אני מודה בזה. אבל זה לא הסוף.\p"
+	.string "אני הולך להיות מאמן הפוקימונים\n"
+	.string "הגדול ביותר אי פעם.\p"
+	.string "כי החבר'ה האלה עומדים לצידי.\p"
+	.string "…תקשיב, {PLAYER}.\p"
+	.string "יום אחד אוכיח כמה אני טוב\n"
+	.string "בכך שאנצח אותך.$"
 
 MtMoon_Cave_Text_Rival_Loss:
 	.string "..................................\p"
@@ -117,4 +117,4 @@ MtMoon_Cave_Text_Rival_Loss:
 	.string "trainer.$"
 
 MtMoon_Cave_Text_Sign:
-	.string "MT MOON SQUARE ->$"
+	.string "<- כיכר הר הירח$"

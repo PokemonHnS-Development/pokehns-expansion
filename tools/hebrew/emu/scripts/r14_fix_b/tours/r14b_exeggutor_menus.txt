@@ -1,0 +1,187 @@
+# fix_b item 2: EXEGGUTOR-A's full name (11 letters: 61 px in FONT_NORMAL, 56 narrow, 49 narrower)
+# outside battle. Party: slot 0 EXEGGUTOR-A (no nickname, so its nickname is the species name),
+# slot 1 EXEGGUTOR-A nicknamed ג'ימי (the species name only after the slash), slot 2 EXEGGCUTE
+# with one move and a LEAF STONE in the bag. Screens: the party menu (src/party_menu.c
+# DisplayPartyPokemonNickname: FONT_SMALL fitted to 50 px), the summary INFO page of slots 0 and 1
+# (nickname line fitted to 63 px, species line after the slash to 58 px), the Pokedex list around
+# EXEGGUTOR-A (src/pokedex_plus_hgss.c CreateMonName: FONT_NARROW fitted to 50 px) and its INFO,
+# STATS and EVOLUTION pages, EXEGGCUTE's EVOLUTION page (both evolutions by name), the Name Rater's
+# naming screen for slot 0 (the species name in the title), the PC's DEPOSIT party pane for slots
+# 0 and 1 (src/pokemon_storage_system.c PrintDisplayMonInfo), and the LEAF STONE used on EXEGGCUTE
+# on Poni Isle (an Alola map section, so it becomes EXEGGUTOR-A): the evolution scene's two
+# messages and the party after it.
+# Run with scripts/r14_fix_b/r14fixb.py; HNS_SAVES = saves_all (r2dex_all: every species caught,
+# national Pokedex).
+start saves/r2dex_all.sav
+include ../../continue.txt
+ev createmon 0, 0, SPECIES_EXEGGUTOR_ALOLA, 50, gender=MON_MALE; createmon 0, 1, SPECIES_EXEGGUTOR_ALOLA, 50, gender=MON_FEMALE; createmon 0, 2, SPECIES_EXEGGCUTE, 30, gender=MON_MALE, move1=MOVE_BARRAGE, move2=MOVE_NONE, move3=MOVE_NONE, move4=MOVE_NONE; special CalculatePlayerPartyCount; additem ITEM_LEAF_STONE, 1; end
+nick12 1 ג'ימי JIMMY
+
+# ---- party menu and summary
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap r14e_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap r14e_sum_0_info
+tap DOWN 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+snap r14e_sum_1_nick_info
+tap DOWN 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+snap r14e_sum_2_exeggcute
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 300
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# ---- Pokedex: national, numerical; the list opens on sLastSelectedPokemon (0-based obtainable
+# index: EXEGGUTOR-A 0x1B3, EXEGGCUTE 0x6F, from the OBTAINABLE_TO_NATIONAL order in src/pokemon.c)
+w8 @SB2+19@ 1
+w8 @SB2+18@ 0
+w16 @sLastSelectedPokemon@ 1B3
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx Task_HandlePokedexInput 600
+16 -
+snap r14e_dex_list
+tap A 4
+waittaskx Task_HandleInfoScreenInput 600
+waitquiet
+snap r14e_dex_info
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx Task_HandleStatsScreenInput 600
+waitquiet
+snap r14e_dex_stats
+tap RIGHT 4
+waittaskx Task_HandleEvolutionScreenInput 600
+waitquiet
+snap r14e_dex_evo
+tap B 4
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap B 4
+waitcb2x CB2_Overworld 600
+w16 @sLastSelectedPokemon@ 6F
+waitptr gMenuCallback HandleStartMenuInput 600
+menupick POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx Task_HandlePokedexInput 600
+16 -
+snap r14e_dex_list_exeggcute
+tap A 4
+waittaskx Task_HandleInfoScreenInput 600
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+tap RIGHT 4
+waittaskx Task_HandleStatsScreenInput 600
+tap RIGHT 4
+waittaskx Task_HandleEvolutionScreenInput 600
+waitquiet
+snap r14e_dex_evo_exeggcute
+tap B 4
+waittaskx Task_HandlePokedexInput 600
+16 -
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# ---- Name Rater (Goldenrod): the naming screen for slot 0; OK with nothing typed
+mapwarp MAP_GOLDENROD_CITY_HOUSE1_HNS 4 5
+face UP
+talk r14e_rater 10                        # ends at YES/NO
+tap A 0
+talk r14e_rater_which 10 -
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+tap A 0                                   # slot 0
+waitcb2x CB2_Overworld 900
+talk r14e_rater_rate 10 -
+tap A 0
+talk r14e_rater_ask 10 -
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap r14e_naming
+press START
+waitnaming
+press A
+waitcb2x CB2_Overworld 900
+talk r14e_rater_done 10 -
+waitctl 900
+
+# ---- LEAF STONE on EXEGGCUTE (slot 2) on Poni Isle: the evolution scene and the party after it
+mapwarp MAP_PONI_ISLE_HNS 10 22
+waitctl 600
+bagcursor 0 ITEM_LEAF_STONE
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap r14e_bag_leafstone
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 2 DOWN
+waitquiet
+snap r14e_stone_party
+tap A 4
+waitcb2x CB2_EvolutionSceneUpdate 900
+waittaskdata Task_EvolutionScene 0 3 900
+snap r14e_evo_evolving
+waittaskdata Task_EvolutionScene 0 15 3000
+waitkey 900
+snap r14e_evo_evolved
+tap A 4
+60 -
+waitquiet
+snap r14e_evo_after_1
+tap A 4
+waitcb2x CB2_BagMenuRun 1200
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+menupick POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap r14e_party_after_evo
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# ---- PC: DEPOSIT, the party pane with the display panel on slots 0 and 1
+evstart special ShowPokemonStorageSystemPC; waitstate; end
+waittaskdata Task_PCMainMenu 0 2 600
+press DOWN
+tap A 0                                   # DEPOSIT POKeMON
+waitcb2x CB2_PokeStorage 900
+pcwait
+pcgoto party 0
+snap r14e_pc_party0
+pcgoto party 1
+snap r14e_pc_party1_nick

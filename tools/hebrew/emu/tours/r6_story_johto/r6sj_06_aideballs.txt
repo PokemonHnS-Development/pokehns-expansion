@@ -1,0 +1,12 @@
+# Elm's lab: the aide's five Poke Balls at the door (NewBarkTown_Lab_EventScript_TriggerAideGiveBalls
+# :493-508, (6,12) at VAR_NEWBARKTOWN_LABSTATE 5), the plural obtained line
+# gText_ObtainedTheItems (data/text/obtain_item.inc:33). Ladder 1 + s1 up to the police scene.
+start saves/r6sj_ladder1_newgame.sav
+include _base.txt
+include _s1_lab_done.txt
+ev setvar VAR_CHERRYGROVE_CITY_STATE, 4; setflag FLAG_HIDE_SILVER_CHERRYGROVE; setflag FLAG_SYS_POKEDEX_GET; setflag FLAG_HIDE_TOTODILEBALL; setflag FLAG_HIDE_LAB_POLICEMAN; setvar VAR_NEWBARKTOWN_LABSTATE, 5; setvar VAR_NEWBARK_TOWN_STATE, 4; setflag FLAG_HIDE_MOMS_FRIEND; clearflag FLAG_HIDE_MOMS_FRIEND2; setflag FLAG_ADVENTURE_STARTED; setflag FLAG_EXP_SHARE_ENABLED; end
+warpto MAP_NEW_BARK_TOWN_LAB_HNS 6 9
+snap ab_room
+walkto 6 12
+scene ab 20000
+snap ab_end

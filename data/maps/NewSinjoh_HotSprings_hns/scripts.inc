@@ -37,33 +37,32 @@ NewSinjoh_HotSprings_EventScript_MualaniAfter::
 	end
 
 NewSinjoh_HotSprings_Text_MualaniBefore:
-	.string "Am I a local or a visitor?\n"
-    .string "What a rude question!\p"
-    .string "If you must know, I'm a local.\p"
-    .string "My family was among the first to\n"
-    .string "enjoy these springs.\p"
-    .string "See, I even have this SPLASH PLATE\n"
-    .string "to prove it.$"
+	.string "אם אני מקומית או תיירת?\n"
+	.string "איזו שאלה גסה!\p"
+	.string "אם אתה חייב לדעת, אני מקומית.\p"
+	.string "המשפחה שלי הייתה מהראשונות\n"
+	.string "שנהנו מהמעיינות האלה.\p"
+	.string "תראה, יש לי אפילו את לוח השכשוך\n"
+	.string "הזה כדי להוכיח את זה.$"
 
 NewSinjoh_HotSprings_Text_MualaniBeforeBattle:
-	.string "Wait...\p"
-	.string "You need the SPLASH PLATE\n"
-	.string "to tame the legendary POKéMON?\p"
-	.string "If the KIMONO GIRLS think you\n"
-	.string "are worthy, then so do I.\p"
-	.string "But you'll still need to earn\n"
-	.string "it.$"
+	.string "רגע…\p"
+	.string "אתה צריך את לוח השכשוך\n"
+	.string "כדי לאלף את הפוקימון האגדי?\p"
+	.string "אם נערות הקימונו חושבות שאתה\n"
+	.string "ראוי, אז גם אני חושבת כך.\p"
+	.string "אבל עדיין תצטרך\n"
+	.string "להרוויח אותו.$"
 
 NewSinjoh_HotSprings_Text_MualaniDefeat:
-	.string "Well earned.$"
+	.string "הרווחת ביושר.$"
 
 NewSinjoh_HotSprings_Text_MualaniAfter:
-	.string "It is hard for me to let that\n"
-	.string "plate go.\p"
-	.string "But when the situation changes,\n"
-	.string "it is important for us to change\l"
-	.string "too.\p"
-	.string "The plate is yours.$"
+	.string "קשה לי להיפרד\n"
+	.string "מהלוח הזה.\p"
+	.string "אבל כשהמצב משתנה,\n"
+	.string "חשוב שגם אנחנו נשתנה.\p"
+	.string "הלוח שלך.$"
 
 
 NewSinjoh_HotSprings_EventScript_Sign1::
@@ -71,33 +70,32 @@ NewSinjoh_HotSprings_EventScript_Sign1::
     end
 
 NewSinjoh_HotSprings_Text_Sign1:
-    .string "NEW SINJOH\n"
-    .string "HOT SPRINGS$"
+    .string "המעיינות החמים\n"
+    .string "של סינג'ו החדשה$"
 
 NewSinjoh_HotSprings_EventScript_Sign2::
     msgbox NewSinjoh_HotSprings_Text_Sign2, MSGBOX_SIGN
     end
 
 NewSinjoh_HotSprings_Text_Sign2:
-    .string "DANGER\n"
-    .string "WILD HIBERNATION DEN$"
+    .string "סכנה\n"
+    .string "מאורת תרדמת חורף של פוקימונים פראיים$"
 
 NewSinjoh_HotSprings_EventScript_SkierF::
     msgbox NewSinjoh_HotSprings_Text_SkierF, MSGBOX_NPC
     end
 
 NewSinjoh_HotSprings_Text_SkierF:
-	.string "I hate the cold!\p"
-    .string "I'm just here for the hot springs!$"
+	.string "אני שונאת את הקור!\p"
+	.string "באתי רק בשביל המעיינות החמים!$"
 
 NewSinjoh_HotSprings_EventScript_SkierM::
     msgbox NewSinjoh_HotSprings_Text_SkierM, MSGBOX_NPC
     end
 
 NewSinjoh_HotSprings_Text_SkierM:
-	.string "I came here to snowboard\n"
-    .string "but all my girlfriend wants to do\l"
-    .string "is sit in the springs all day!$"
+	.string "באתי לגלוש בסנובורד, אבל החברה שלי\n"
+	.string "רק רוצה לשבת במעיינות כל היום!$"
 
 
 NewSinjoh_HotSprings_EventScript_OldLady::
@@ -105,18 +103,18 @@ NewSinjoh_HotSprings_EventScript_OldLady::
     end
 
 NewSinjoh_HotSprings_Text_OldLady:
-	.string "Ignore my husband.\p"
-    .string "Let your worries melt away.$"
+	.string "אל תשים לב לבעלי.\p"
+	.string "תן לכל הדאגות שלך להימס.$"
 
 NewSinjoh_HotSprings_EventScript_CreepyMan::
 	msgbox NewSinjoh_HotSprings_Text_CreepyMan, MSGBOX_NPC
 	end
 
 NewSinjoh_HotSprings_Text_CreepyMan:
-	.string "Ouughh...\p"
-	.string "This water feels magical on my back.\p"
-	.string "If you have back pain too,\n"
-	.string "you should stay here with me...$"
+	.string "אוווההה…\p"
+	.string "המים האלה עושים פלאים לגב שלי.\p"
+	.string "אם גם לך כואב הגב,\n"
+	.string "כדאי לך להישאר כאן איתי…$"
 
 NewSinjoh_HotSprings_EventScript_PLATutor::
 	lock
@@ -239,72 +237,72 @@ NewSinjoh_HotSprings_EventScript_PLATutorDecline::
 	end
 
 NewSinjoh_HotSprings_Text_PLATutorIntro:
-	.string "The ancient power flows\n"
-	.string "through these springs.\p"
-	.string "I can teach your POKeMON moves\n"
-	.string "from a forgotten age.\p"
-	.string "Interested?$"
+	.string "הכוח העתיק זורם\n"
+	.string "במעיינות האלה.\p"
+	.string "אני יכול ללמד את הפוקימונים\n"
+	.string "שלך מהלכים מתקופה נשכחת.\p"
+	.string "מעוניין?$"
 
 NewSinjoh_HotSprings_Text_PLATutorChoose:
-	.string "Which move would you like?$"
+	.string "איזה מהלך תרצה?$"
 
 NewSinjoh_HotSprings_Text_PLATutorConfirm:
-	.string "You'd like to learn {STR_VAR_1}?$"
+	.string "ללמד את המהלך {STR_VAR_1}?$"
 
 NewSinjoh_HotSprings_Text_PLATutorWhichMon:
-	.string "Which POKeMON should learn it?$"
+	.string "איזה פוקימון ילמד אותו?$"
 
 NewSinjoh_HotSprings_Text_PLATutorDone:
-	.string "Done! Your POKeMON has mastered\n"
-	.string "the ancient technique.$"
+	.string "סיימנו! הפוקימון שלך שולט\n"
+	.string "עכשיו בטכניקה העתיקה.$"
 
 NewSinjoh_HotSprings_Text_PLATutorComeBack:
-	.string "Come back anytime.$"
+	.string "תחזור מתי שתרצה.$"
 
 NewSinjoh_HotSprings_Text_PLAMove_VictoryDance:
-	.string "VICTORY DANCE$"
+	.string "ריקוד ניצחון$"
 
 NewSinjoh_HotSprings_Text_PLAMove_MountainGale:
-	.string "MOUNTAIN GALE$"
+	.string "סערת הרים$"
 
 NewSinjoh_HotSprings_Text_PLAMove_BitterMalice:
-	.string "BITTER MALICE$"
+	.string "זדון מריר$"
 
 NewSinjoh_HotSprings_Text_PLAMove_SpringtideStorm:
-	.string "SPRINGTIDE STORM$"
+	.string "סופת אביב$"
 
 NewSinjoh_HotSprings_Text_PLAMove_LunarBlessing:
-	.string "LUNAR BLESSING$"
+	.string "ברכת ירח$"
 
 NewSinjoh_HotSprings_Text_PLAMove_BleakwindStorm:
-	.string "BLEAKWIND STORM$"
+	.string "סופה קודרת$"
 
 NewSinjoh_HotSprings_Text_PLAMove_WildboltStorm:
-	.string "WILDBOLT STORM$"
+	.string "סופת ברקים$"
 
 NewSinjoh_HotSprings_Text_PLAMove_SandsearStorm:
-	.string "SANDSEAR STORM$"
+	.string "סופה צורבת$"
 
 NewSinjoh_HotSprings_Text_PLAMove_Shelter:
-	.string "SHELTER$"
+	.string "מחסה$"
 
 NewSinjoh_HotSprings_Text_PLAMove_EsperWing:
-	.string "ESPER WING$"
+	.string "כנף על-חושית$"
 
 NewSinjoh_HotSprings_Text_PLAMove_TakeHeart:
-	.string "TAKE HEART$"
+	.string "אזירת אומץ$"
 
 NewSinjoh_HotSprings_Text_PLAMove_MysticalPower:
-	.string "MYSTICAL POWER$"
+	.string "כוח מיסטי$"
 
 NewSinjoh_HotSprings_Text_PLAMove_WaveCrash:
-	.string "WAVE CRASH$"
+	.string "גל מתנפץ$"
 
 NewSinjoh_HotSprings_Text_PLAMove_PowerShift:
-	.string "POWER SHIFT$"
+	.string "הסטת כוח$"
 
 NewSinjoh_HotSprings_Text_PLAMove_Cancel:
-	.string "CANCEL$"
+	.string "ביטול$"
 
 
 NewSinjoh_HotSprings_EventScript_ActivateArcanine::

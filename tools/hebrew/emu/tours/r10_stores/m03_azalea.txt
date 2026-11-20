@@ -1,0 +1,9 @@
+# shared Cherrygrove clerk (MAP_AZALEA_TOWN_MART_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_AZALEA_TOWN_MART_HNS
+clerk 2 3 m03_hi
+buyopen m03_buy
+listshots m03_list
+buyclose m03_menu
+shopquit m03_bye

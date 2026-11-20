@@ -1,0 +1,24 @@
+# dev: resume the Master contest from its savestate
+start saves/ladder6_postgame.sav
+include ../continue.txt
+sl ../rc_contest_master/rc_m_pre_contest
+w16s gContestMonRound1Points 3 900
+contestplay rc_m_app 01230
+fieldwatch rc_m_judge cb2:CB2_StartShowContestResults 20000 90
+waitcb2x CB2_ShowContestResults 600
+burstuntil rc_m_res CB2_ShowContestResults 64 9000 A 240
+fieldwatch rc_m_prize free 30000 0
+snap rc_m_lobby_back
+evstart goto LilycoveCity_ContestLobby_EventScript_ContestArtist_hns
+fieldwatch rc_m_artist cb2:CB2_HoldContestPainting 6000 30
+burst rc_m_artpaint 6 20
+snap rc_m_artpaint_final
+tap A 4
+waitcb2x CB2_Overworld 900
+fieldwatch rc_m_museum menu 3000
+pick 1
+fieldwatch rc_m_takehome menu 3000
+pick 0
+fieldwatch rc_m_ribbon free 30000 60
+loc
+snap rc_m_lobby_after

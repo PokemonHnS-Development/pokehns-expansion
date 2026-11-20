@@ -1,58 +1,58 @@
 MoveRelearner_Text_WouldLearnNewMoves:
-	.string "Hi, I'm the Move Relearner.\n"
-	.string "Would you like to learn new moves?$"
+	.string "היי, אני מורה המהלכים.\n"
+	.string "רוצה ללמוד מהלכים חדשים?$"
 
 MoveRelearner_Text_LevelUpMoves:
-	.string "Level Up Moves$"
+	.string "מהלכי רמה$"
 
 MoveRelearner_Text_EggMoves:
-	.string "Egg Moves$"
+	.string "מהלכי ביצה$"
 
 MoveRelearner_Text_TMMoves:
-	.string "TM Moves$"
+	.string "מהלכי מ”מ$"
 
 MoveRelearner_Text_TutormoveMoves:
-	.string "Tutor Moves$"
+	.string "מהלכי מורה$"
 
 MoveRelearner_Text_SeeYa:
-	.string "See ya!$"
+	.string "להתראות!$"
 
 MoveRelearner_Text_AnythingElse:
-	.string "Is there anything else I may do for you?$"
+	.string "יש עוד משהו שאוכל לעשות בשבילך?$"
 
 MoveRelearner_Text_ChoosePkmn:
-	.string "Please choose your Pokémon.$"
+	.string "נא לבחור פוקימון.$"
 
 MoveRelearner_Text_HaveNoPkmn:
-	.string "You have no Pokémon.$"
+	.string "אין לך פוקימונים.$"
 
 MoveRelearner_Text_CantTeachMoveToEgg:
-	.string "Sorry…\n"
-	.string "But an Egg can't learn moves.$"
+	.string "מצטער…\n"
+	.string "אבל ביצה לא יכולה ללמוד מהלכים.$"
 
 MoveRelearner_Text_CantTeachMoveToPkmn:
-	.string "Sorry…\p"
-	.string "It doesn't appear as if I have any move\n"
-	.string "I can teach that Pokémon.$"
+	.string "מצטער…\p"
+	.string "נראה שאין לי שום מהלך\n"
+	.string "שאוכל ללמד את הפוקימון הזה.$"
 
 MoveRelearner_Text_LevelUpMoveLWR::
-	.string "level up move$"
+	.string "מהלך רמה$"
 
 MoveRelearner_Text_EggMoveLWR::
-	.string "egg move$"
+	.string "מהלך ביצה$"
 
 MoveRelearner_Text_TMMoveLWR::
-	.string "TM move$"
+	.string "מהלך מ”מ$"
 
 MoveRelearner_Text_TutorMoveLWR::
-	.string "tutor move$"
+	.string "מהלך מורה$"
 
 MoveRelearner_Text_MoveLWR::
-	.string "move$"
+	.string "מהלך$"
 
 MoveRelearner_Text_WhichXmoveShouldTeach:
-	.string "Which {STR_VAR_3} should I teach?$"
+	.string "איזה {STR_VAR_3} ללמד?$"
 
 MoveRelearner_Text_ThankYouComeAgain:
-	.string "Thank you for using our services.\n"
-	.string "Please come again!$"
+	.string "תודה שהשתמשת בשירותינו.\n"
+	.string "נשמח לראותך שוב!$"

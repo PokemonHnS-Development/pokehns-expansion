@@ -1,0 +1,40 @@
+# Frontier Pass (START > PLAYER with the pass): the bottom description window (PrintAreaDescription,
+# src/frontier_pass.c:1181-1188, sPassAreaDescriptions :525-543) for RECORD with no battle record
+# (gText_ThereIsNoBattleRecord), CANCEL, POINTS, EARNED and the seven facility-symbol areas (each needs
+# that symbol, GetCursorAreaFromCoords :864-882: every FLAG_SYS_*_SILVER is set), then RECORD again with
+# sPassData->hasBattleRecord set (stand-in: a recorded battle lives in its own flash sector;
+# struct FrontierPassData byte 14 bit 0, :107-120): gText_ViewRecordedBattle.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; setflag FLAG_SYS_TOWER_SILVER; setflag FLAG_SYS_DOME_SILVER; setflag FLAG_SYS_PALACE_SILVER; setflag FLAG_SYS_ARENA_SILVER; setflag FLAG_SYS_FACTORY_SILVER; setflag FLAG_SYS_PIKE_SILVER; setflag FLAG_SYS_PYRAMID_SILVER; end
+w32 @gMenuCallback@ 0
+startmenu PLAYER
+waittaskx Task_HandleFrontierPassInput 900
+waitquiet
+snap fp_00_open
+passarea RECORD
+snap fp_01_record_none
+passarea CANCEL
+snap fp_02_cancel
+passarea POINTS
+snap fp_03_points
+passarea EARNED
+snap fp_04_earned
+passarea TOWER
+snap fp_10_tower
+passarea DOME
+snap fp_11_dome
+passarea PALACE
+snap fp_12_palace
+passarea ARENA
+snap fp_13_arena
+passarea FACTORY
+snap fp_14_factory
+passarea PIKE
+snap fp_15_pike
+passarea PYRAMID
+snap fp_16_pyramid
+ptror8 sPassData E 1
+passarea POINTS
+passarea RECORD
+snap fp_20_record_view

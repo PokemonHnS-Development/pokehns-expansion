@@ -1,0 +1,22 @@
+# Melemele (Alola) shop (Melemele_House_2_hns/scripts.inc:5-23).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_MELEMELE_HOUSE_2_HNS 5 11
+evstart goto Alola_Pokemart_EventScript_Clerk
+talk m13_alola_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m13_alola_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m13_alola
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m13_alola_bye 10 -
+waitctl 900

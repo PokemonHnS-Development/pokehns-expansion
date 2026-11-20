@@ -1,63 +1,63 @@
 @ Only contains the text for the Mauville Man named Giddy. The rest is in scripts/mauville_man.inc
 GiddyText_SoPretty::
-	.string " so pretty!$"
+	.string " כל כך יפה!$"
 
 GiddyText_SoDarling::
-	.string " so darling!$"
+	.string " כל כך מקסים!$"
 
 GiddyText_SoRelaxed::
-	.string " so relaxed!$"
+	.string " כל כך רגוע!$"
 
 GiddyText_SoSunny::
-	.string " so sunny!$"
+	.string " כל כך שמשי!$"
 
 GiddyText_SoDesirable::
-	.string " so desirable!$"
+	.string " כל כך נחשק!$"
 
 GiddyText_SoExciting::
-	.string " so exciting!$"
+	.string " כל כך מרגש!$"
 
 GiddyText_SoAmusing::
-	.string " so amusing!$"
+	.string " כל כך משעשע!$"
 
 GiddyText_SoMagical::
-	.string " so magical!$"
+	.string " כל כך קסום!$"
 
 GiddyText_Is::
-	.string " is$"
+	.string " זה$"
 
 GiddyText_DontYouAgree::
 	.string "\n"
-	.string "Don't you agree?$"
+	.string "נכון?$"
 
 GiddyText_ISoWantToGoOnAVacation::
-	.string "I so want to go on a vacation.\n"
-	.string "Would you happen to know a nice place?$"
+	.string "אני כל כך רוצה לצאת לחופשה.\n"
+	.string "יש לך במקרה רעיון למקום נחמד?$"
 
 GiddyText_IBoughtCrayonsWith120Colors::
-	.string "I bought crayons with 120 colors!\n"
-	.string "Don't you think that's nice?$"
+	.string "קניתי צבעי שעווה ב-120 צבעים!\n"
+	.string "זה נחמד, לא?$"
 
 GiddyText_WouldntItBeNiceIfWeCouldFloat::
-	.string "Wouldn't it be nice if we could float\n"
-	.string "away on a cloud of bubbles?$"
+	.string "לא היה נחמד אם היינו יכולים לרחף\n"
+	.string "הרחק על ענן של בועות?$"
 
 GiddyText_WhenYouWriteOnASandyBeach::
-	.string "When you write on a sandy beach,\n"
-	.string "they wash away. It makes me sad.$"
+	.string "כשכותבים בחול של חוף הים,\n"
+	.string "המילים נשטפות. זה מעציב אותי.$"
 
 GiddyText_WhatsTheBottomOfTheSeaLike::
-	.string "What's the bottom of the sea like?\n"
-	.string "Just once I would so love to go!$"
+	.string "איך זה בקרקעית הים?\n"
+	.string "הייתי כל כך רוצה לרדת לשם פעם אחת!$"
 
 GiddyText_WhenYouSeeTheSettingSunDoesIt::
-	.string "When you see the setting sun, does it\n"
-	.string "make you want to go home?$"
+	.string "כשרואים את השמש השוקעת,\n"
+	.string "זה גורם לך לרצות ללכת הביתה?$"
 
 GiddyText_LyingBackInTheGreenGrass::
-	.string "Lying back in the green grass…\n"
-	.string "Oh, it's so, so nice!$"
+	.string "לשכב על הגב בדשא הירוק…\n"
+	.string "אוי, זה כל כך, כל כך נעים!$"
 
 GiddyText_SecretBasesAreSoWonderful::
-	.string "SECRET BASES are so wonderful!\n"
-	.string "Can't you feel the excitement?$"
+	.string "בסיסים סודיים הם כל כך נפלאים!\n"
+	.string "לא מרגישים את ההתרגשות?$"

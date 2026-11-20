@@ -1,0 +1,166 @@
+# r11 (gen_mail.py): ENGLISH ROM ONLY. Makes saves_screens/r11/leaders_mail/mail_en_base.sav:
+# two mails written on the English ROM (TROPIC by GOLD, DREAM by KRISTEN) stored in the PC.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; special CalculatePlayerPartyCount; additem ITEM_ORANGE_MAIL, 1; additem ITEM_HARBOR_MAIL, 1; additem ITEM_GLITTER_MAIL, 1; additem ITEM_MECH_MAIL, 1; additem ITEM_WOOD_MAIL, 1; additem ITEM_WAVE_MAIL, 1; additem ITEM_BEAD_MAIL, 1; additem ITEM_SHADOW_MAIL, 1; additem ITEM_FAB_MAIL, 1; additem ITEM_TROPIC_MAIL, 1; additem ITEM_DREAM_MAIL, 1; end
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+bagpocket 0
+bagseek ITEM_TROPIC_MAIL
+waitquiet
+snap en1_bag
+tap A 4
+waitquiet
+snap en1_context
+tap ROWNEXT 4
+waitquiet
+snap en1_context_give
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap en1_give_party
+tap A 4
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+snap en1_ec_frame
+ecputword 0 0 EC_GROUP_GREETINGS EC_WORD_THANK_YOU
+ecbutton 2
+ec A
+snap en1_ec_confirm
+tap A 0
+waitcb2x CB2_UpdatePartyMenu 1200
+60 -
+waitquiet
+snap en1_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap en1_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+snap en1_actions_mail
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+snap en1_mailmenu
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap en1_read
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+snap en1_sendpc
+tap A 4
+waitkey 600
+snap en1_sent
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+setname KRISTEN
+w32 @gMenuCallback@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+bagpocket 0
+bagseek ITEM_DREAM_MAIL
+waitquiet
+tap A 4
+waitquiet
+tap ROWNEXT 4
+waitquiet
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ecputword 0 0 EC_GROUP_GREETINGS EC_WORD_THANK_YOU
+ecbutton 2
+ec A
+tap A 0
+waitcb2x CB2_UpdatePartyMenu 1200
+60 -
+waitquiet
+snap en2_given
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap en2_read
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap en2_sent
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+30 -
+setname GOLD
+mails
+savegame overwrite
+keepsave mail_en

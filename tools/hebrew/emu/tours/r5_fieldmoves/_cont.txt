@@ -1,0 +1,2 @@
+# fm tours: boot the fm_party save and CONTINUE (an include).
+include ../../scripts/continue.txt

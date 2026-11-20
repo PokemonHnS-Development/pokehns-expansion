@@ -1,0 +1,15 @@
+# r11 (gen_tours.py): MAP_CERULEAN_CITY_GYM_HNS after its badge, on ladder6_postgame. Statue CeruleanCity_Gym_EventScript_Statue, guide CeruleanCity_Gym_EventScript_GymGuy, leader CeruleanCity_Gym_EventScript_Misty (data/maps/CeruleanCity_Gym_hns/scripts.inc).
+start saves/ladder6_postgame.sav
+include _base.txt
+warpto MAP_CERULEAN_CITY_GYM_HNS 4 17
+face UP
+snap gk2_room
+talkdir gk2_statue UP
+approach 6
+tap A 4
+drive gk2_guide
+warpto MAP_CERULEAN_CITY_GYM_HNS 7 7
+face UP
+snap gk2_leader_room
+talkdir gk2_leader UP
+talkdir gk2_leader_again UP

@@ -1,0 +1,84 @@
+# Ula'ula paid tutor (Alola_Ulaula_EventScript_MoveTutor, data/maps/UlaulaIsle_hns/scripts.inc:387):
+#  1 not paid, no Heart Scales: intro YES -> 'five scales, not four';  2 five scales: YES -> paid ->
+#  the move list -> Bulldoze -> 'teach Bulldoze?' YES -> which -> box -> Golem learns it -> done;
+#  3 paid: the list -> Bulldoze again -> Golem already knows it -> 'come back';  4 Wild Charge
+#  (row 24, UP x3 from the top: Cancel, Work Up, Wild Charge) -> Ampharos -> done;  5 the list, B.
+start saves/ladder6_postgame_copy.sav
+include _setup.txt
+clearflag FLAG_ULAULA_MOVE_TUTOR_PAID
+ev removeitem ITEM_HEART_SCALE, 999; end
+warpto MAP_ULAULA_ISLE_HNS 7 74
+face UP
+
+# --- 1. no scales
+talk uu1_intro 30
+tap A 0
+talk uu1_noscales 10 -
+waitctl 900
+
+# --- 2. five scales: pay, Bulldoze, Golem
+ev additem ITEM_HEART_SCALE, 5; end
+face UP
+talk uu2_intro 30
+tap A 0
+talk uu2_paid 10 -
+snap uu2_list_01
+press DOWN
+press DOWN
+press DOWN
+snap uu2_list_bulldoze
+tap A 0
+talk uu2_confirm 10 -
+tap A 0
+talk uu2_which 10 -
+include _pickparty.txt
+snap uu2_box
+boxpick 1 1 uu2_party_golem
+include _tofield.txt
+pages uu2_learned 1
+talk uu2_done 10 -
+waitctl 900
+expectflag FLAG_ULAULA_MOVE_TUTOR_PAID 1
+
+# --- 3. Bulldoze again: Golem already knows it
+face UP
+talk uu3_menu 10
+press DOWN
+press DOWN
+press DOWN
+tap A 0
+talk uu3_confirm 10 -
+tap A 0
+talk uu3_which 10 -
+include _pickparty.txt
+boxpick 1 1
+include _tofield.txt
+pages uu3_already 1
+talk uu3_after 10 -
+waitctl 900
+
+# --- 4. Wild Charge to Ampharos
+face UP
+talk uu4_menu 10
+press UP
+snap uu4_list_cancel
+press UP
+press UP
+snap uu4_list_wildcharge
+tap A 0
+talk uu4_confirm 10 -
+tap A 0
+talk uu4_which 10 -
+include _pickparty.txt
+boxpick 1 5 uu4_party_ampharos
+include _tofield.txt
+pages uu4_learned 1
+talk uu4_done 10 -
+waitctl 900
+
+# --- 5. the list, B
+face UP
+talk uu5_menu 10
+tap B 0
+talk uu5_after 10 -
+waitctl 900

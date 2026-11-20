@@ -1,0 +1,17 @@
+# Flash not detected at boot (CB2_FlashNotDetectedScreen, src/save_failed_screen.c:415-465; saveFailedMessage
+# :451-459): run on a ROM copy from scripts/r16_field_odds/noflash.py (IdentifyFlash returns 1, so
+# CheckForFlashMemory finds no chip and AgbMain sets this callback, src/main.c:105, :118-119). In 2.0.6 (a debug
+# build: no RELEASE) the screen first stops on an assert (malloc.c:104, window.c out of memory); START goes on.
+start saves/ladder6_postgame.sav
+waitcb2x CB2_FlashNotDetectedScreen 600
+60 -
+snap fo_flash_01_not_detected
+tap START 10
+60 -
+snap fo_flash_02_after_start
+tap START 10
+60 -
+snap fo_flash_03_after_start2
+tap START 10
+60 -
+snap fo_flash_04_after_start3

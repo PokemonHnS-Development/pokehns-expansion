@@ -1,0 +1,15 @@
+# r11 (gen_tours.py): MAP_OLIVINE_CITY_GYM_HNS after its badge, on ladder4_league. Statue OlivineCity_Gym_EventScript_Statue, guide OlivineCity_Gym_EventScript_GymGuide, leader OlivineCity_Gym_EventScript_Jasmine (data/maps/OlivineCity_Gym_hns/scripts.inc).
+start saves/ladder4_league.sav
+include _base.txt
+warpto MAP_OLIVINE_CITY_GYM_HNS 11 19
+face UP
+snap gj6_room
+talkdir gj6_statue UP
+approach 4
+tap A 4
+drive gj6_guide
+warpto MAP_OLIVINE_CITY_GYM_HNS 8 5
+face UP
+snap gj6_leader_room
+talkdir gj6_leader UP
+talkdir gj6_leader_again UP

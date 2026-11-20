@@ -1,0 +1,34 @@
+# Clair, Blackthorn Gym (20,5): BlackthornGym_EventScript_Clair (battle, 'go to the Dragon's Den'),
+# then the shrine quiz (DragonsDen_Shrine_hns/scripts.inc: trigger (6,15) at state 2; one wrong
+# answer for WrongAnswer1, then 0,0,1,0,2), the Rising Badge scene, then the cavern TM scene
+# (DragonsDen_Cavern_Trigger_ClairMid (31,14) at state 3; the first step after a warp does not
+# run a coord trigger here, so the tour walks two tiles).
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_BLACKTHORN_GYM; clearflag FLAG_BADGE08_GET; clearflag FLAG_IS_CHAMPION; setvar VAR_BLACKTHORN_CITY_STATE, 1; setflag FLAG_HIDE_DRAGONS_DEN_SHRINE_CLAIR; setflag FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR; end
+warpto MAP_BLACKTHORN_CITY_GYM_HNS 20 6
+face UP
+snap cl_room
+include _leader_tail.txt
+warpto MAP_DRAGONS_DEN_SHRINE_HNS 6 16
+snap sh_room
+stepto UP 1
+scene Q1 20000
+pickd 1
+scene Q1w 20000
+pickd 0
+scene Q2 20000
+pickd 0
+scene Q3 20000
+pickd 1
+scene Q4 20000
+pickd 0
+scene Q5 20000
+pickd 2
+scene Q_end 60000
+snap sh_free
+warpto MAP_DRAGONS_DEN_CAVERN_HNS 31 16
+snap cv_room
+stepto UP 2
+scene CV 30000
+snap cv_free

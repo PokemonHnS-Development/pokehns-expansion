@@ -1,0 +1,23 @@
+# Mahogany shop, evolution items (MahoganyTown_Shop_hns/scripts.inc:196-227); the granny
+# sells only after VAR_MAHOGANY_TOWN_STATE >= 14, so the shop part runs directly.
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_MAHOGANY_TOWN_SHOP_HNS 2 7
+evstart lock; faceplayer; goto MahoganyTown_Shop_EventScript_GrannyShop
+talk m06_mahog_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m06_mahog_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m06_mahog
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m06_mahog_bye 10 -
+waitctl 900

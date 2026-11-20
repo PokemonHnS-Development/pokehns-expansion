@@ -1,0 +1,22 @@
+# CHECK TAG (src/berry_tag_screen.c) for every berry, metric (unitSystem 0) then imperial (setunits 1).
+start saves/bp_menuA.sav
+include ../../scripts/continue.txt
+expectunits 0
+fillpocket BERRIES 999 0 66
+bagopen BERRIES
+tagrun tagm
+bagclose
+fillpocket BERRIES 999 60 66
+bagopen BERRIES
+tagrun tagm
+bagclose
+setunits 1
+expectunits 1
+fillpocket BERRIES 999 0 66
+bagopen BERRIES
+tagrun tagi
+bagclose
+fillpocket BERRIES 999 60 66
+bagopen BERRIES
+tagrun tagi
+bagclose

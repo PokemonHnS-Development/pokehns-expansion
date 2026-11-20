@@ -944,70 +944,69 @@ MauvilleCity_GameCorner_EventScript_NoCoinCase::
 	end
 
 MauvilleCity_GameCorner_Text_ThisIsMauvilleGameCorner:
-	.string "This is the GAME CORNER.$"
+	.string "זו המשחקייה.$"
 
 MauvilleCity_GameCorner_Text_NeedCoinCaseForCoins:
-	.string "Okay, you wanted some COINS for\n"
-	.string "the games?\p"
-	.string "But you don't have a COIN CASE for\n"
-	.string "stowing the COINS.$"
+	.string "אז רצית מטבעות בשביל\n"
+	.string "המשחקים?\p"
+	.string "אבל אין לך ארנק מטבעות\n"
+	.string "שאפשר לשמור בו את המטבעות.$"
 
 MauvilleCity_GameCorner_Text_WereYouLookingForCoins:
-	.string "Were you looking for COINS?\p"
-	.string "It's ¥500 for 50 COINS.\n"
-	.string "Would you like some?$"
+	.string "חיפשת מטבעות?\p"
+	.string "50 מטבעות עולים ¥500.\n"
+	.string "רוצה לקנות?$"
 
 MauvilleCity_GameCorner_Text_ThankYouHereAreYourCoins:
-	.string "Thank you very much!\n"
-	.string "Here are your COINS!$"
+	.string "תודה רבה!\n"
+	.string "הנה המטבעות שלך!$"
 
 MauvilleCity_GameCorner_Text_DontHaveEnoughMoneyFor50:
-	.string "Um… You don't appear to have\n"
-	.string "enough money to buy COINS…\p"
-	.string "Please come back when you have\n"
-	.string "at least ¥1000!$"
+	.string "אמ… נראה שאין לך מספיק\n"
+	.string "כסף כדי לקנות מטבעות…\p"
+	.string "נשמח לראות אותך שוב כשיהיו לך\n"
+	.string "לפחות ¥1000!$"
 
 MauvilleCity_GameCorner_Text_DontHaveEnoughMoney:
-	.string "Um… You don't appear to have\n"
-	.string "enough money for that many COINS…$"
+	.string "אמ… נראה שאין לך מספיק\n"
+	.string "כסף לכמות כזאת של מטבעות…$"
 
 MauvilleCity_GameCorner_Text_NoRoomFor50Coins:
-	.string "Oh! Your COIN CASE is too full to buy\n"
-	.string "any more COINS!\p"
-	.string "Enjoy the GOLDENROD GAME CORNER or\n"
-	.string "exchange your COINS for prizes before\l"
-	.string "coming back!$"
+	.string "אוי! ארנק המטבעות שלך מלא מדי\n"
+	.string "כדי לקנות עוד מטבעות!\p"
+	.string "אפשר ליהנות במשחקיית גולדנרוד או\n"
+	.string "להחליף מטבעות בפרסים ולחזור אחר כך!$"
 
 MauvilleCity_GameCorner_Text_NoRoomForCoins:
-	.string "Oh?\n"
-	.string "Your COIN CASE can't fit those COINS...$"
+	.string "אה? בארנק המטבעות שלך אין מקום\n"
+	.string "לכל המטבעות האלה…$"
 
 MauvilleCity_GameCorner_Text_DontNeedCoinsThen:
-	.string "Oh… You don't need COINS, then?\n"
-	.string "Good luck on your adventure!$"
+	.string "אה… אז אין לך צורך במטבעות?\n"
+	.string "בהצלחה בהרפתקה שלך!$"
 
 MauvilleCity_GameCorner_Text_ThanksBuyCoins:
-	.string "Thank you for buying some COINS!\n"
-	.string "Good luck on your adventure!$"
+	.string "תודה שקנית מטבעות!\n"
+	.string "בהצלחה בהרפתקה שלך!$"
 
 MauvilleCity_GameCorner_Text_ExchangeCoinsForPrizes:
-	.string "Welcome.\p"
-	.string "You can exchange your COINS for\n"
-	.string "prizes here.$"
+	.string "ברוכים הבאים.\p"
+	.string "כאן אפשר להחליף מטבעות\n"
+	.string "בפרסים.$"
 
 MauvilleCity_GameCorner_Text_WhichPrize:
-	.string "Which prize would you like?$"
+	.string "איזה פרס תרצה?$"
 
 MauvilleCity_GameCorner_Text_SoYourChoiceIsTheTMX:
-	.string "So your choice is\n"
-	.string "the {STR_VAR_1} {STR_VAR_2}?$"
+	.string "אז בחרת את\n"
+	.string "{STR_VAR_1} {STR_VAR_2}?$"
 
 MauvilleCity_GameCorner_Text_SendToYourHomePC:
 	.string "Thank you!\n"
 	.string "We'll send it to your PC at home.$"
 
 MauvilleCity_GameCorner_Text_NotEnoughCoins:
-	.string "You don't have enough COINS.$"
+	.string "אין לך מספיק מטבעות.$"
 
 @ Unused
 MauvilleCity_GameCorner_Text_NoRoomForPlacingDecor:
@@ -1015,15 +1014,14 @@ MauvilleCity_GameCorner_Text_NoRoomForPlacingDecor:
 	.string "placing {STR_VAR_1}.$"
 
 MauvilleCity_GameCorner_Text_OhIsThatSo:
-	.string "Oh, is that so? \n"
-	.string "You need to save some COINS before\l"
-	.string "coming back here.$"
+	.string "אה, ככה? צריך לחסוך מטבעות\n"
+	.string "לפני שחוזרים לכאן.$"
 
 MauvilleCity_GameCorner_Text_SoYourChoiceIsX:
 	.string "So your choice is {STR_VAR_1}?$"
 
 MauvilleCity_GameCorner_Text_HereYouGo:
-	.string "Here you go!$"
+	.string "הנה, בבקשה!$"
 
 @ Unused
 MauvilleCity_GameCorner_Text_CantCarryAnyMore:
@@ -1107,6 +1105,6 @@ MauvilleCity_GameCorner_Text_HeresSomeSlotsInfo:
 	.string "very difficult to get.$"
 
 MauvilleCity_GameCorner_Text_CantPlayWithNoCoinCase:
-	.string "You can't play if you don't have\n"
-	.string "a COIN CASE.$"
+	.string "אי אפשר לשחק בלי\n"
+	.string "ארנק מטבעות.$"
 

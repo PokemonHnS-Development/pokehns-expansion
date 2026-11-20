@@ -1,0 +1,52 @@
+# The caught-Pokemon Pokedex page of the out-of-dex species whose entries name Hisui, the Ultra
+# Wormhole or Rose: a first catch with a MASTER BALL (Cmd_displaydexinfo,
+# src/battle_script_commands.c:11272-11292 > Task_DisplayCaughtMonDexPageHGSS > PrintMonInfo,
+# src/pokedex_plus_hgss.c:4377, 4435, 4713-4770). A form prints its own entry through formSpecies
+# (:4410-4416): Hisuian Samurott, Sliggoo and Decidueye, male Basculegion and Eternamax Eternatus.
+# Genesect is in tours/r16b_dex/dx_catch_real.txt; Hisuian Typhlosion has a list entry of its own.
+# Same steps as dx_catch_real.txt, except for the three Ultra Beasts: every ball but the Beast Ball
+# has 410/4096 odds on them and the Master Ball is not sure (ComputeBallData,
+# src/battle_script_commands.c:10635-10644), so they are met at level 1 (the low-level bonus,
+# :10928-10929), set to 1 HP (sethp) and caught with a BEAST BALL: odds above 254, a sure catch
+# (:11055-11059). Driver: scripts/r5_legends/r5leg.py (bcatch).
+# Run: scripts/r5_legends/r5leg.py tour ROM OUT --tours tools/hebrew/emu/tours/r17_latin --only '^dx_catch_r17$'
+# Save: ladder6_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all; none of these caught).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+pinrng
+ev additem ITEM_MASTER_BALL, 10; additem ITEM_BEAST_BALL, 10; end
+evstart setwildbattle SPECIES_SAMUROTT_HISUI, 30; dowildbattle; end
+waitbattle
+bwalk dxc_samurott_hisui_intro input:HandleInputChooseAction
+bcatch dxc_samurott_hisui
+evstart setwildbattle SPECIES_BASCULEGION_M, 30; dowildbattle; end
+waitbattle
+bwalk dxc_basculegion_m_intro input:HandleInputChooseAction
+bcatch dxc_basculegion_m
+evstart setwildbattle SPECIES_SLIGGOO_HISUI, 30; dowildbattle; end
+waitbattle
+bwalk dxc_sliggoo_hisui_intro input:HandleInputChooseAction
+bcatch dxc_sliggoo_hisui
+evstart setwildbattle SPECIES_DECIDUEYE_HISUI, 30; dowildbattle; end
+waitbattle
+bwalk dxc_decidueye_hisui_intro input:HandleInputChooseAction
+bcatch dxc_decidueye_hisui
+evstart setwildbattle SPECIES_CELESTEELA, 1; dowildbattle; end
+waitbattle
+bwalk dxc_celesteela_intro input:HandleInputChooseAction
+sethp enemy 0 1
+bcatch dxc_celesteela ITEM_BEAST_BALL
+evstart setwildbattle SPECIES_KARTANA, 1; dowildbattle; end
+waitbattle
+bwalk dxc_kartana_intro input:HandleInputChooseAction
+sethp enemy 0 1
+bcatch dxc_kartana ITEM_BEAST_BALL
+evstart setwildbattle SPECIES_STAKATAKA, 1; dowildbattle; end
+waitbattle
+bwalk dxc_stakataka_intro input:HandleInputChooseAction
+sethp enemy 0 1
+bcatch dxc_stakataka ITEM_BEAST_BALL
+evstart setwildbattle SPECIES_ETERNATUS_ETERNAMAX, 30; dowildbattle; end
+waitbattle
+bwalk dxc_eternamax_intro input:HandleInputChooseAction
+bcatch dxc_eternamax

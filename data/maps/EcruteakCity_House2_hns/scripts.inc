@@ -2,29 +2,29 @@ EcruteakCity_House2_hns_MapScripts::
 	.byte 0
 
 Ecruteak_Text_ItemfinderAdventure:
-	.string "Ah. You're on an adventure with\n"
-	.string "your POKéMON?\p"
-	.string "Well, what's an adventure without\n"
-	.string "treasure hunting?\p"
-	.string "Am I right, or am I right?$"
+	.string "אה. אתה בהרפתקה עם\n"
+	.string "הפוקימונים שלך?\p"
+	.string "נו, מה זו הרפתקה בלי\n"
+	.string "ציד אוצרות?\p"
+	.string "אני צודק, או שאני צודק?$"
 
 Ecruteak_Text_ItemfinderTrueSpirit:
-	.string "Good! You understand the true\n"
-	.string "spirit of adventure.\p"
-	.string "I like that! Take this with you.$"
+	.string "יופי! אתה מבין את רוח\n"
+	.string "ההרפתקה האמיתית.\p"
+	.string "זה מוצא חן בעיניי! הנה, זה בשבילך.$"
 
 Ecruteak_Text_ItemfinderExplanation:
-	.string "There are many items lying about\n"
-	.string "that aren't obvious.\p"
-	.string "Use DOWSING MACHINE to check if there\n"
-	.string "is an item on the ground near you.\p"
-	.string "It doesn't show the exact spot,\n"
-	.string "so you'll have to look yourself.\p"
-	.string "Oh yeah--I heard there are items\n"
-	.string "in ECRUTEAK's BURNED TOWER.$"
+	.string "יש הרבה פריטים מפוזרים\n"
+	.string "שלא רואים אותם בקלות.\p"
+	.string "בעזרת גלאי פריטים אפשר לבדוק\n"
+	.string "אם יש פריט על הקרקע בסביבה.\p"
+	.string "הוא לא מראה את המקום המדויק,\n"
+	.string "אז צריך לחפש בעצמך.\p"
+	.string "אה, נכון - שמעתי שיש פריטים\n"
+	.string "במגדל השרוף של אקרוטיק.$"
 
 Ecruteak_Text_ItemfinderToEachHisOwn:
-	.string "Oh… To each his own, I suppose…$"
+	.string "אה… כל אחד והטעם שלו, אני מניח…$"
 
 EcruteakCity_House2_EventScript_ItemFinderMan::
 	lock
@@ -74,25 +74,25 @@ Ecruteak_Text_ItemFinderMan::
 	.string "their history in books like these.$"
 
 Ecruteak_Text_HistoryBook:
-	.string "HISTORY OF ECRUTEAK\p"
-	.string "Want to read it?$"
+	.string "תולדות אקרוטיק\p"
+	.string "לקרוא את הספר?$"
 
 Ecruteak_Text_TwoTowers:
-	.string "In ECRUTEAK, there were two towers.\p"
-	.string "Each tower was the roost of\n"
-	.string "powerful flying POKéMON.\p"
-	.string "But one of the towers burned to\n"
-	.string "the ground.\p"
-	.string "The two POKéMON haven't been seen\n"
-	.string "since…\p"
-	.string "Keep reading?$"
+	.string "באקרוטיק היו שני מגדלים.\p"
+	.string "כל מגדל היה משכנו של\n"
+	.string "פוקימון מעופף ועוצמתי.\p"
+	.string "אבל אחד המגדלים נשרף\n"
+	.string "עד היסוד.\p"
+	.string "את שני הפוקימונים לא ראו\n"
+	.string "מאז…\p"
+	.string "להמשיך לקרוא?$"
 
 Ecruteak_Text_ThreeMon:
-	.string "ECRUTEAK was also home to three\n"
-	.string "POKéMON that raced around the town.\p"
-	.string "They were said to have been born\n"
-	.string "of water, lightning and fire.\p"
-	.string "But they could not contain their\n"
-	.string "excessive power.\p"
-	.string "So they say the three ran like the\n"
-	.string "wind off into the grassland.$"
+	.string "באקרוטיק חיו גם שלושה\n"
+	.string "פוקימונים שדהרו ברחבי העיר.\p"
+	.string "אומרים שהם נולדו\n"
+	.string "ממים, מברק ומאש.\p"
+	.string "אבל הם לא הצליחו לרסן את\n"
+	.string "כוחם העצום.\p"
+	.string "ולכן, אומרים, השלושה דהרו כמו\n"
+	.string "הרוח אל הערבות.$"

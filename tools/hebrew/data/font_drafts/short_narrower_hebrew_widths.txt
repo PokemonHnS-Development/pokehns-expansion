@@ -1,0 +1,27 @@
+א alef     5  drop col 2
+ב bet      5  drop col 2
+ג gimel    5  
+ד dalet    5  drop col 2
+ה he       5  drop col 3
+ו vav      4  
+ז zayin    5  
+ח het      5  drop col 3
+ט tet      5  drop col 3
+י yod      4  
+כ kaf      5  
+ל lamed    5  drop col 2
+מ mem      5  drop col 3
+נ nun      4  
+ס samekh   5  drop col 3
+ע ayin     5  drop col 1
+פ pe       5  drop col 2
+צ tsadi    5  drop col 3
+ק qof      5  drop col 3
+ר resh     5  
+ש shin     6  drop col 3
+ת tav      5  drop col 2
+ן nun.f    4  
+ם mem.f    5  drop col 3
+ץ tsadi.f  5  drop col 1
+ף pe.f     5  drop col 2
+ך kaf.f    5  

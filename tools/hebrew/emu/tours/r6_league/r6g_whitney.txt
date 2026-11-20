@@ -1,0 +1,21 @@
+# Whitney, Goldenrod Gym (15,8): GoldenrodCity_Gym_EventScript_Whitney (data/maps/GoldenrodCity_Gym_hns/scripts.inc).
+# Battle -> 'You meanie' (state 3) -> talk again (crying) -> Bridget's trigger at (15,11) (state 4)
+# -> talk again: badge, Plain Badge speech, TM Attract.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_GOLDENROD_CITY_GYM; clearflag FLAG_BADGE03_GET; setvar VAR_GOLDENROD_CITY_STATE, 2; end
+warpto MAP_GOLDENROD_CITY_GYM_HNS 15 9
+face UP
+snap wh_room
+include _leader_tail.txt
+face UP
+tap A 4
+scene W_cry 20000
+face DOWN
+stepto DOWN 2
+scene W_bridget 20000
+walkto 15 9
+face UP
+tap A 4
+scene W_badge 40000
+snap W_free

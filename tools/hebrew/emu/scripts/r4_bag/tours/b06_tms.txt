@@ -1,0 +1,7 @@
+# TMs & HMs pocket: every row (number + move name, description) and its context menu with the move panel (PrintTMHMMoveData, src/item_menu.c:2824).
+start saves/menuA_base_copy.sav
+include ../../continue.txt
+fillpocket TM_HM 1 0 160
+bagopen TM_HM
+bagrows tm ctx 200
+bagclose

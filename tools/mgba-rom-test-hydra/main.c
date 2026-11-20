@@ -790,7 +790,7 @@ int main(int argc, char *argv[])
         knownFails += runners[i].knownFails;
         for (int j = 0; j < runners[i].knownFailsPassing; j++)
         {
-            if (j < MAX_SUMMARY_TESTS_TO_LIST)
+            if (j < MAX_SUMMARY_TESTS_TO_LIST && knownFailsPassing < (int)ARRAY_COUNT(knownFailingPassed_TestNames))
             {
                 strcpy(knownFailingPassed_TestNames[knownFailsPassing], runners[i].knownFailingPassed_TestNames[j]);
                 strcpy(knownFailingPassed_FilenameLine[knownFailsPassing], runners[i].knownFailingPassed_FilenameLine[j]);
@@ -799,7 +799,7 @@ int main(int argc, char *argv[])
         }
         for (int j = 0; j < runners[i].expectedFailsPassing; j++)
         {
-            if (j < MAX_SUMMARY_TESTS_TO_LIST)
+            if (j < MAX_SUMMARY_TESTS_TO_LIST && expectedFailsPassing < (int)ARRAY_COUNT(expectedFailingPassed_TestNames))
             {
                 strcpy(expectedFailingPassed_TestNames[expectedFailsPassing], runners[i].expectedFailingPassed_TestNames[j]);
                 strcpy(expectedFailingPassed_FilenameLine[expectedFailsPassing], runners[i].expectedFailingPassed_FilenameLine[j]);
@@ -809,7 +809,7 @@ int main(int argc, char *argv[])
         todos += runners[i].todos;
         for (int j = 0; j < runners[i].assumptionFails; j++)
         {
-            if (j < MAX_SUMMARY_TESTS_TO_LIST)
+            if (j < MAX_SUMMARY_TESTS_TO_LIST && assumptionFails < (int)ARRAY_COUNT(assumeFailed_TestNames))
             {
                 strcpy(assumeFailed_TestNames[assumptionFails], runners[i].assumeFailed_TestNames[j]);
                 strcpy(assumeFailed_FilenameLine[assumptionFails], runners[i].assumeFailed_FilenameLine[j]);
@@ -818,7 +818,7 @@ int main(int argc, char *argv[])
         }
         for (int j = 0; j < runners[i].fails; j++)
         {
-            if (j < MAX_SUMMARY_TESTS_TO_LIST)
+            if (j < MAX_SUMMARY_TESTS_TO_LIST && fails < (int)ARRAY_COUNT(failed_TestNames))
             {
                 strcpy(failed_TestNames[fails], runners[i].failed_TestNames[j]);
                 strcpy(failed_TestFilenameLine[fails], runners[i].failed_TestFilenameLine[j]);

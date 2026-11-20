@@ -101,34 +101,33 @@ BattleFrontier_RankingHall_EventScript_Boy_hns::
 	end
 
 BattleFrontier_RankingHall_Text_ExplainRankingHall_hns:
-	.string "This is the RANKING HALL.\p"
-	.string "This is where we recognize the immortal\n"
-	.string "TRAINERS who left great records in\l"
-	.string "BATTLE FRONTIER events.$"
+	.string "זהו היכל הדירוג.\p"
+	.string "כאן אנחנו מנציחים את המאמנים האגדיים\n"
+	.string "שקבעו שיאים מרשימים באירועי חזית הקרב.$"
 
 BattleFrontier_RankingHall_Text_DomePikeFactoryRecords_hns:
-	.string "BATTLE DOME, BATTLE PIKE,\n"
-	.string "and BATTLE FACTORY Records$"
+	.string "שיאי כיפת הקרב, שביל הקרב\n"
+	.string "ומפעל הקרב$"
 
 BattleFrontier_RankingHall_Text_PalaceArenaPyramidRecords_hns:
-	.string "BATTLE PALACE, BATTLE ARENA,\n"
-	.string "and BATTLE PYRAMID Records$"
+	.string "שיאי ארמון הקרב, זירת הקרב\n"
+	.string "ופירמידת הקרב$"
 
 BattleFrontier_RankingHall_Text_IsYourNameOnThisList_hns:
-	.string "Hi, is your name on this list?$"
+	.string "היי, השם שלך מופיע ברשימה הזאת?$"
 
 BattleFrontier_RankingHall_Text_WowThatsSuper_hns:
-	.string "Wow, that's super!\n"
-	.string "I'll have to try harder, too!$"
+	.string "וואו, זה מעולה!\n"
+	.string "גם אני אצטרך להתאמץ יותר!$"
 
 BattleFrontier_RankingHall_Text_WorkHarderIfYouSawFriendsName_hns:
-	.string "Oh, is that right?\p"
-	.string "If you saw your friend's name up here,\n"
-	.string "I bet it would make you work harder!$"
+	.string "אה, באמת?\p"
+	.string "אם השם של חבר שלך היה מופיע כאן,\n"
+	.string "בטוח שזה היה דוחף אותך להתאמץ יותר!$"
 
 BattleFrontier_RankingHall_Text_MyNamesNotUpThere_hns:
-	.string "Hmm…\n"
-	.string "My name's not up there…\p"
-	.string "Well, it's only natural since I haven't\n"
-	.string "taken any challenges yet.$"
+	.string "הממ…\n"
+	.string "השם שלי לא מופיע שם…\p"
+	.string "טוב, זה רק טבעי, כי עוד לא\n"
+	.string "ניגשתי לאף אתגר.$"
 

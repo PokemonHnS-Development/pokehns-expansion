@@ -1,0 +1,12 @@
+# START > POKEMON > slot 0 > SUMMARY (first action), INFO page, input ready (tours/menu_party.txt:7-25)
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 0 UP
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap A 4
+waitcb2x pokemon_summary_screen:MainCB2 900
+sumwait

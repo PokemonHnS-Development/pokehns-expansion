@@ -60,41 +60,38 @@ Route10_PowerPlantBackRoom_EventScript_Engineer::
 	end
 
 Route10_PowerPlantBackRoom_Text_ManagerWhoWouldRuinMyGenerator:
-	.string "MANAGER: I, I, I'm ready to blast\n"
-	.string "someone!\p"
-	.string "Who would dare ruin my\n"
-	.string "generator?\p"
-	.string "I spent so much time on it!\p"
-	.string "If I catch him, he's going to\n"
-	.string "get a taste of my ZAP CANNON!$"
+	.string "מנהל: אני, אני, אני מוכן לפוצץ\n"
+	.string "מישהו!\p"
+	.string "מי העז להרוס לי את הגנרטור?\p"
+	.string "השקעתי בו כל כך הרבה זמן!\p"
+	.string "אם אתפוס אותו, הוא יטעם\n"
+	.string "את תותח הזרם שלי!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerIWontForgiveCulprit:
-	.string "MANAGER: I won't forgive him!\p"
-	.string "The culprit can cry and\n"
-	.string "apologize,\p"
-	.string "but I'll still hammer him!\p"
-	.string "Gahahahah!$"
+	.string "מנהל: לא אסלח לו!\p"
+	.string "האשם יכול לבכות ולהתנצל,\p"
+	.string "אבל אני ארסק אותו בכל מקרה!\p"
+	.string "גהאהאהאה!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerThatsThePart:
-	.string "MANAGER: Ah! Yeah!\p"
-	.string "That's the missing PART from my\n"
-	.string "beloved generator! You found it?$"
+	.string "מנהל: אה! כן!\p"
+	.string "זה החלק החסר מהגנרטור\n"
+	.string "האהוב שלי! מצאת אותו?$"
 
 Route10_PowerPlantBackRoom_Text_ManagerTakeThisTM:
-	.string "Wahah! Thanks!\p"
-	.string "Here! Take this TM as a reward!$"
+	.string "וואהאה! תודה!\p"
+	.string "הנה! המ”מ הזה הוא הפרס שלך!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerTM07IsZapCannon:
-	.string "MANAGER: That TM is THUNDER.\p"
-	.string "It's a powerful technique!\p"
-	.string "It's not what anyone would\n"
-	.string "consider accurate, but it packs a\l"
-	.string "wallop!$"
+	.string "מנהל: המ”מ הזה מכיל את רעם.\p"
+	.string "זה מהלך עוצמתי!\p"
+	.string "אף אחד לא יגיד שהוא מדויק,\n"
+	.string "אבל הוא מכה בעוצמה אדירה!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerMyBelovedGenerator:
-	.string "MANAGER: My beloved generator!\p"
-	.string "Keep pumping the electricity out!$"
+	.string "מנהל: הגנרטור האהוב שלי!\p"
+	.string "תמשיך להזרים חשמל!$"
 
 Route10_PowerPlantBackRoom_Text_Engineer:
-	.string "This door is unsafe without power.$"
+	.string "הדלת הזו לא בטוחה בלי חשמל.$"
 

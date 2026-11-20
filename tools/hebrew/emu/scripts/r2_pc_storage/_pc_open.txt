@@ -1,0 +1,8 @@
+# From the base save: walk to the PC at (11,1), SOMEONE'S PC, wait for the storage menu
+include ../continue.txt
+go RIGHT 4
+go UP 2
+talk pc_boot 10                           # SOMEONE'S PC / GOLD's PC / CHALLENGES / LOG OFF
+tap A 0                                   # SOMEONE'S PC
+talk pc_storage_open 10 - Task_PCMainMenu
+waittaskdata Task_PCMainMenu 0 2 600      # STATE_HANDLE_INPUT (src/pokemon_storage_system.c:1545)

@@ -1,0 +1,21 @@
+# Steven at the Fuchsia Safari Zone entrance after FLAG_IS_KANTO_CHAMPION
+# (FuchsiaCity_SafariZoneEntrance_StevenChamp, data/maps/FuchsiaCity_SafariZoneEntrance_hns/scripts.inc:74-89):
+# his pages, the Eon Ticket obtain line and the put-away line. Safari progress 1 so the first-visit
+# scene does not run; no Eon Ticket in the bag so the trade branch does not run. Then a second
+# talk (ticket now held): the Beldum trade offer, answered NO.
+start saves/r8_dojo_base.sav
+include _base.txt
+ev setflag FLAG_IS_KANTO_CHAMPION; setvar VAR_KANTO_SAFARI_ZONE_PROGRESS, 1; setvar VAR_SAFARI_ZONE_STATE, 0; clearflag FLAG_FUCHSIA_SAFARI_NPC_TRADE_COMPLETED; removeitem ITEM_EON_TICKET; end
+warpto MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS 12 6
+approach 2
+snap S_face
+tap A 4
+scene S_msg 20000
+snap S_free
+approach 2
+tap A 4
+scene S_trade 20000
+snap S_trade_menu
+tap B 4
+scene S_trade_no 20000
+snap S_trade_free

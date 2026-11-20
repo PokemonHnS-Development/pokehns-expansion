@@ -1,0 +1,33 @@
+# Roaming Raikou and Entei (InitRoamer, src/roamer.c:331-339, as the Burned Tower scene runs it).
+# Each roamer is moved to the player's map (sRoamerLocation, src/roamer.c:31) and the encounter is
+# started the way a land encounter does it (TryStartRoamerEncounter + BattleSetup_StartRoamerBattle,
+# src/wild_encounter.c:841-848). Raikou: wild intro, the player Splashes, the roamer flees on its turn
+# (AI_FLAG_ROAMING), the field after; the Pokedex AREA page with its current-location marker. Entei:
+# intro, then the catch branch and the defeat branch (_legend_tail).
+start saves/ladder6_postgame.sav
+include _base.txt
+ev special InitRoamer; end
+roamers
+warpto MAP_ROUTE36_HNS 30 20
+roamhere SPECIES_RAIKOU
+roamers
+snap rk_field
+roambattle rk
+bwalk rk_intro input:HandleInputChooseAction
+bsplash rk_flee
+scene rk_after 2000
+snap rk_field_after
+roamers
+
+dexopen
+dexfind 243
+dexinfo
+snap rk_dex_info
+dexarea
+snap rk_dex_area
+closeall
+
+roamhere SPECIES_ENTEI
+roambattle en
+include _legend_tail.txt
+roamers

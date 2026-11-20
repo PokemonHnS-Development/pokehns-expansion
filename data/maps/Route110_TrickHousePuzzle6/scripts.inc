@@ -43,11 +43,11 @@ Route110_TrickHousePuzzle6_EventScript_Sebastian::
 	end
 
 Route110_TrickHousePuzzle6_Text_WroteSecretCodeLockOpened:
-	.string "{PLAYER} wrote down the secret code\n"
-	.string "on the door.\p"
-	.string "“TRICK MASTER is my life.”\n"
+	.string "{PLAYER} כתב את הקוד הסודי\n"
+	.string "על הדלת.\p"
+	.string "”אמן התעלולים הוא כל חיי.”\n"
 	.string "… … … … … … … …\p"
-	.string "The lock clicked open!$"
+	.string "המנעול נפתח בנקישה!$"
 
 Route110_TrickHousePuzzle6_Text_SophiaIntro:
 	.string "When I heard there was a strange\n"

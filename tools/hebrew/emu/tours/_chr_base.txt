@@ -1,0 +1,9 @@
+# Include for the chr_* tours (challenge rules at run time): CONTINUE from a challenge save
+# made by chr_00_newgame_a / chr_00_newgame_hc (start save:chal_a / save:chal_hc), then
+# the flags that switch the Nuzlocke on as the lab does after the starter
+# (NewBarkTown_Lab_hns/scripts.inc:429): FLAG_SYS_POKEMON_GET + FLAG_START_NUZLOCKE, with
+# FLAG_END_NUZLOCKE clear (src/nuzlocke.c:276-288). FLAG_MOM_VISITED hides the Route 30
+# Joey scene and makes Mom take her regular branch; the Pokedex shows the caught page.
+include ../scripts/continue.txt
+ev setflag FLAG_SYS_POKEMON_GET; setflag FLAG_START_NUZLOCKE; clearflag FLAG_END_NUZLOCKE; setflag FLAG_MOM_VISITED; setflag FLAG_SYS_POKEDEX_GET; end
+fastbattles off

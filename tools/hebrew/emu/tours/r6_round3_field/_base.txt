@@ -1,0 +1,6 @@
+# r6 round 3 Johto / Kanto field one-offs: base include (not a tour). r6r3f_base.sav (a byte copy of
+# ladder 6: post-game) -> CONTINUE, FAST BATTLES off, wild encounters off
+# (FLAG_DISABLE_ENCOUNTERS) so the walks onto trigger tiles are not interrupted.
+include ../../scripts/continue.txt
+fastbattles off
+ev setflag FLAG_DISABLE_ENCOUNTERS; end

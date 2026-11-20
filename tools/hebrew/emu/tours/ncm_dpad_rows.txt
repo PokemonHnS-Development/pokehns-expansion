@@ -1,0 +1,48 @@
+# Challenge menu value rows follow the D-pad (src/challenge_menu.c ProcessLeftRight): from the
+# defaults, LEFT, LEFT, RIGHT on FEATURES row 1 (shiny chance, five values) and on NUZLOCKE row 0
+# (four values). Raw LEFT/RIGHT on purpose, not ROWNEXT/ROWPREV: on every build the red value
+# must move the way the key points (except where it wraps). A Hebrew build lists the values
+# right to left, so there LEFT is the next value; English lists them left to right.
+start empty
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+tap A 30                                         # NEW GAME
+waittask Task_NewGameHnsSpeech_ChooseGender 4000 A
+10 -
+tap A 30                                         # BOY
+waittask Task_NewGameHnsSpeech_WaitPressBeforeNameChoice 600
+tap A 30
+waitcb2 CB2_NamingScreen 600
+waittask naming_screen:Task_HandleInput 600
+30 -
+tap START 30
+tap A 30
+waittask Task_NewGameHnsSpeech_ProcessNameYesNoMenu 600
+10 -
+tap A 30                                         # YES
+waittask Task_NewGameHnsSpeech_WaitPressDisclaimer 1200 A
+tap A 30
+waittask challenge_menu:Task_ProcessInput 600
+waitquiet
+
+# ---- FEATURES row 1: shiny chance 8192 4096 2048 1024 512, default 8192
+press R
+press DOWN
+snap dpad_shiny_a
+press LEFT
+snap dpad_shiny_b_left
+press LEFT
+snap dpad_shiny_c_left
+press RIGHT
+snap dpad_shiny_d_right
+
+# ---- NUZLOCKE row 0: OFF EASY NORMAL HARD, default OFF
+press R
+press R
+snap dpad_nuz_a
+press LEFT
+snap dpad_nuz_b_left
+press LEFT
+snap dpad_nuz_c_left
+press RIGHT
+snap dpad_nuz_d_right

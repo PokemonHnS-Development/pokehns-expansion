@@ -138,7 +138,7 @@ SkyPillar_Outside_EventScript_ClosedDoor::
 	end
 
 SkyPillar_Outside_Text_DoorIsClosed:
-	.string "The door is closed.$"
+	.string "הדלת סגורה.$"
 
 SkyPillar_Outside_Text_OpenedDoorToSkyPillar:
 	.string "WALLACE: Oh, my, I'm terribly sorry!\p"

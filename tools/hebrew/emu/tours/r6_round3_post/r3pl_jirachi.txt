@@ -1,0 +1,66 @@
+# Jirachi at the Mt. Moon Outside White Rock (bg (13,5), MtMoon_Outside_EventScript_WhiteRock,
+# data/maps/MtMoon_Outside_hns/scripts.inc:22-83): the YES/NO, NO; YES by day (FLAG_NIGHT_POKEMON
+# set by UpdateTimeOfDay, src/overworld.c:1785-1798) -> WhiteRockTouchDay; YES by night ->
+# WhiteRockTouchNight, the camera shake and Jirachi's entrance. Then Jirachi at (13,11) (:108-130):
+# the cry and MtMoon_Outside_Text_Jirachi, the legendary battle; catch, defeat and run branches.
+# Lapras with Surf in party slot 1 (Jirachi is in the pond). The time of day is forced with sHoursOverride (0 = real clock; reset on every warp).
+start saves/ladder6_postgame.sav
+include _r3pl_base.txt
+ev clearflag FLAG_SUMMONED_MTMOON_JIRACHI; setflag FLAG_HIDE_MTMOON_JIRACHI; createmon 0, 1, SPECIES_LAPRAS, 60, move1=MOVE_SURF, move2=MOVE_ICE_BEAM; end
+warpto MAP_MT_MOON_OUTSIDE_HNS 13 6
+face UP
+w8 @sHoursOverride@ C
+60 -
+snap J_field
+# NO
+tap A 4
+scene J_no 3000
+tap B 4
+scene J_no_after 1200
+snap J_no_free
+# YES by day: no reaction
+tap A 4
+scene J_day 3000
+tap A 4
+scene J_day_after 3000
+snap J_day_free
+# YES by night: the spawn
+w8 @sHoursOverride@ 16
+60 -
+clearflag FLAG_NIGHT_POKEMON
+snap J_night_field
+tap A 4
+scene J_night 3000
+tap A 4
+scene J_spawn 20000 12
+snap J_spawned
+objs
+# Jirachi stands in the middle of the pond (11..15, 9..13): Surf from (13,8), one tile down to (13,10)
+stepto DOWN 2
+face DOWN
+tap A 4
+scene J_surf 3000
+tap A 4
+scene J_surf_after 3000
+stepto DOWN 1
+60 -
+face DOWN
+objs
+snap J_before
+ss J_pre
+tap A 4
+scene J_enc 4000
+bwalk J_intro input:HandleInputChooseAction
+snap J_action
+ss J_battle
+bcatch J_catch
+fieldwatch J_catch_after free 6000
+snap J_catch_field
+sl J_battle
+bwin J_win
+fieldwatch J_win_after free 6000
+snap J_win_field
+sl J_battle
+baction RUN
+bwalk J_run free
+snap J_run_field

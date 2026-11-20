@@ -1,0 +1,12 @@
+# r11 (gen_tours.py): MAP_CELADON_CITY_GYM_HNS after its badge, on ladder6_postgame. Statue CeladonCity_Gym_EventScript_GymStatue, guide none, leader CeladonCity_Gym_EventScript_Erika (data/maps/CeladonCity_Gym_hns/scripts.inc).
+start saves/ladder6_postgame.sav
+include _base.txt
+warpto MAP_CELADON_CITY_GYM_HNS 8 17
+face UP
+snap gk4_room
+talkdir gk4_statue UP
+warpto MAP_CELADON_CITY_GYM_HNS 6 5
+face UP
+snap gk4_leader_room
+talkdir gk4_leader UP
+talkdir gk4_leader_again UP

@@ -1,0 +1,66 @@
+# Event-island sailors: talk from the north side (each sailor faces up). The YES/NO prompt
+# (EventTicket_Text_SouthernIslandSailBack / FarawayIsland_Entrance_Text_SailorReturn /
+# BirthIsland_Harbor_Text_SailorReturn), NO -> EventTicket_Text_AsYouLike; YES ->
+# EventTicket_Text_SailHome, the S.S. Tidal departs and the warp back.
+# SouthernIsland_Exterior_hns (13,23), FarawayIsland_Entrance_hns (13,39), BirthIsland_Harbor_hns
+# (8,5), BattleFrontier_OutsideWest_hns (20,68).
+start saves/r6r3_islands_base.sav
+include _base.txt
+
+warpto MAP_SOUTHERN_ISLAND_EXTERIOR_HNS 13 22
+face DOWN
+snap si_field
+tap A 4
+scene si_q 3000
+ss si_yn
+pickd 1
+scene si_no 3000
+snap si_no_end
+sl si_yn
+pickd 0
+scene si_yes 8000 30
+snap si_yes_end
+
+warpto MAP_FARAWAY_ISLAND_ENTRANCE_HNS 13 38
+face DOWN
+snap fa_field
+tap A 4
+scene fa_q 3000
+ss fa_yn
+pickd 1
+scene fa_no 3000
+snap fa_no_end
+sl fa_yn
+pickd 0
+scene fa_yes 8000 30
+snap fa_yes_end
+
+warpto MAP_BATTLE_FRONTIER_OUTSIDE_WEST_HNS 20 67
+face DOWN
+snap bf_field
+tap A 4
+scene bf_q 3000
+ss bf_yn
+pickd 1
+scene bf_no 3000
+snap bf_no_end
+sl bf_yn
+pickd 0
+scene bf_yes 8000 30
+snap bf_yes_end
+
+# Last: the Birth Island YES warps to MAP_LILYCOVE_CITY_HARBOR.
+warpto MAP_BIRTH_ISLAND_HARBOR_HNS 8 4
+face DOWN
+snap bi_field
+tap A 4
+scene bi_q 3000
+ss bi_yn
+pickd 1
+scene bi_no 3000
+snap bi_no_end
+sl bi_yn
+pickd 0
+scene bi_yes 8000 30
+snap bi_yes_end
+

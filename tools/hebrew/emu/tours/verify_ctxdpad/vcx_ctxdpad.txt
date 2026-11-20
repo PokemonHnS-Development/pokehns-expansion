@@ -1,0 +1,56 @@
+# Independent check of the bag 2x2 item context menu and the d-pad on the rc5 ROM.
+# One shot plus a dump of menu.c sMenu (cursorPos is byte 2) after each key.
+# sMenu address 0203378C is from the rc5 pokehns.gba ELF (menu:sMenu).
+start saves/r3fi_base.sav
+include ../../scripts/continue.txt
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 22
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+read 0203378C 12
+snap vcx_01_start
+tap LEFT 4
+waitquiet
+read 0203378C 12
+snap vcx_02_left
+tap LEFT 4
+waitquiet
+read 0203378C 12
+snap vcx_03_left_again
+tap RIGHT 4
+waitquiet
+read 0203378C 12
+snap vcx_04_right
+tap RIGHT 4
+waitquiet
+read 0203378C 12
+snap vcx_05_right_again
+tap LEFT 4
+waitquiet
+read 0203378C 12
+snap vcx_06_left
+tap DOWN 4
+waitquiet
+read 0203378C 12
+snap vcx_07_down
+tap LEFT 4
+waitquiet
+read 0203378C 12
+snap vcx_08_left
+tap RIGHT 4
+waitquiet
+read 0203378C 12
+snap vcx_09_right
+tap LEFT 4
+waitquiet
+read 0203378C 12
+snap vcx_10_left
+tap B 4
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet

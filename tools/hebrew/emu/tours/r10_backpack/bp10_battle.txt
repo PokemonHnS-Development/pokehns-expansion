@@ -1,0 +1,76 @@
+# The bag opened from battle (ITEMMENULOCATION_BATTLE, src/item_menu.c:661): a wild battle from the field,
+# BAG, every pocket switched through (pocket names, arrows), then each pocket filled in batches and
+# every row shot (CLOSE BAG reads "return to battle"), with the battle context menu (USE / CANCEL or
+# CANCEL alone, src/item_menu.c:1683) on every row but those of ITEMS. B back to the action menu
+# between batches.
+start saves/bp_menuA.sav
+include ../../scripts/continue.txt
+fastbattles off
+evstart setwildbattle SPECIES_HOOTHOOT, 5; dowildbattle; end
+waitbattle
+bwalk bb_intro input:HandleInputChooseAction
+bagpos ITEMS 0
+baction BAG
+bagwait
+pocketcycle bbpc
+bagback
+fillpocket ITEMS 999 0 236
+bagpos ITEMS 0
+baction BAG
+bagwait
+bagrows bbit list 300
+bagback
+fillpocket ITEMS 999 236 236
+bagpos ITEMS 0
+baction BAG
+bagwait
+bagrows bbit list 300
+bagback
+fillpocket ITEMS 999 472 236
+bagpos ITEMS 0
+baction BAG
+bagwait
+bagrows bbit list 300
+bagback
+fillpocket MEDICINE 999 0 92
+bagpos MEDICINE 0
+baction BAG
+bagwait
+bagrows bbmed ctx 120
+bagback
+fillpocket POKE_BALLS 999 0 39
+bagpos POKE_BALLS 0
+baction BAG
+bagwait
+bagrows bbball ctx 60
+bagback
+fillpocket TM_HM 1 0 160
+bagpos TM_HM 0
+baction BAG
+bagwait
+bagrows bbtm ctx 200
+bagback
+fillpocket BERRIES 999 0 66
+bagpos BERRIES 0
+baction BAG
+bagwait
+bagrows bbber ctx 100
+bagback
+fillpocket BERRIES 999 60 66
+bagpos BERRIES 0
+baction BAG
+bagwait
+bagrows bbber ctx 100
+bagback
+fillpocket KEY_ITEMS 1 0 60
+bagpos KEY_ITEMS 0
+baction BAG
+bagwait
+bagrows bbkey ctx 100
+bagback
+fillpocket KEY_ITEMS 1 60 60
+bagpos KEY_ITEMS 0
+baction BAG
+bagwait
+bagrows bbkey ctx 100
+bagback

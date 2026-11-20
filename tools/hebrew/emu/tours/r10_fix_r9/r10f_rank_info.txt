@@ -1,0 +1,22 @@
+# The contest lobby receptionist's INFO: ENTER/INFO/EXIT > INFO > the topic menu (MULTI_CONTEST_INFO) >
+# the ranks topic (LilycoveCity_ContestLobby_Text_ExplainContestRanks, data/scripts/contest_hall.inc),
+# every page a shot, back to the topic menu, CANCEL, EXIT. The Pokeblock Case is given first so the
+# receptionist goes straight to ENTER/INFO/EXIT.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev additem ITEM_POKEBLOCK_CASE, 1; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 1
+fieldwatch topic menu 3000
+pick 2
+fieldwatch ranks menu 6000
+pick 3
+fieldwatch back menu 3000
+pick 2
+fieldwatch exit free 3000
+snap lobby_after

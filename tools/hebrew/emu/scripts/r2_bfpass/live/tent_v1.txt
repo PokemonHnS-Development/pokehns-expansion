@@ -1,0 +1,23 @@
+sl dome_done
+30 -
+waitctl 300
+warptoloose MAP_VERDANTURF_TOWN_BATTLE_TENT_LOBBY_HNS 6 6
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+snap tv_lobby
+tap A 0
+drive tv_in menu
+pick 1
+drive tv_info menu 20
+pick 0
+drive tv_sel task:Task_HandleChooseMonInput 20
+include ../hns-tools/scratch/screens/r2_battle_frontier_pass_bp_and_remaining_facilities/live/_enter_123.txt
+drive tv_save menu 10
+pick 0
+saveyes
+drivex tv_go battle 30 9000
+ss tent_v_b1
+fastbattles off
+bpalace tv_b1 30
+drivex tv_after1 menu 30 9000
+ss tent_v_after1

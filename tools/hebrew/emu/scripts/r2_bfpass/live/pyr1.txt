@@ -1,0 +1,12 @@
+sl dome_done
+30 -
+waitctl 300
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY_HNS 14 14
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+snap py_lobby
+tap A 0
+drive py_hint menu
+pick 0
+drive py_hint2 free
+loc

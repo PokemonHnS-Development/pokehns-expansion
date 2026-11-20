@@ -92,22 +92,22 @@ LilycoveCity_CoveLilyMotel_2F_EventScript_MetScott::
 	end
 
 LilycoveCity_CoveLilyMotel_2F_Text_ShowMeCompletedDex:
-	.string "I'm the GAME DESIGNER.\p"
-	.string "Oh, is that right?\n"
-	.string "You're working on a POKéDEX?\p"
-	.string "It's tough trying to complete it,\n"
-	.string "but don't give up.\p"
-	.string "If you do complete it, please come\n"
-	.string "show me.$"
+	.string "אני מעצב המשחקים.\p"
+	.string "אה, באמת?\n"
+	.string "אתה עובד על פוקדקס?\p"
+	.string "קשה מאוד להשלים אותו,\n"
+	.string "אבל אסור לוותר.\p"
+	.string "אם תצליח להשלים אותו, בבקשה\n"
+	.string "בוא להראות לי.$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_FilledPokedexGiveYouThis:
-	.string "Wow! That's awesome!\n"
-	.string "Yep, it's totally awesome!\p"
-	.string "This POKéDEX is completely filled!\n"
-	.string "You really must love POKéMON!\p"
-	.string "I'm so impressed!\p"
-	.string "Let me give you something in\n"
-	.string "recognition of your feat!$"
+	.string "וואו! זה מדהים!\n"
+	.string "כן, זה פשוט מדהים לגמרי!\p"
+	.string "הפוקדקס הזה מלא לגמרי!\n"
+	.string "אתה בטח ממש אוהב פוקימונים!\p"
+	.string "אני ממש מתרשם!\p"
+	.string "אני רוצה לתת לך משהו\n"
+	.string "כהוקרה על ההישג שלך!$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_ImTheProgrammer:
 	.string "Me? You're talking to me?\n"

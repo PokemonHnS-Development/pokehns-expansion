@@ -24,8 +24,8 @@ ViridianCity_PokemonCenter_EventScript_BugCatcher::
 	end
 
 ViridianCity_PokemonCenter_Text_1FCooltrainerM:
-	.string "Where in the world is VIRIDIAN's GYM\n"
-	.string "LEADER? I wanted to challenge him.$"
+	.string "לאן נעלם המנהיג של מכון\n"
+	.string "וירידיאן? רציתי לאתגר אותו.$"
 
 ViridianCity_PokemonCenter_Text_1FCooltrainerM_BlueReturned:
 	.string "There are no GYM TRAINERS at the\n"
@@ -34,10 +34,10 @@ ViridianCity_PokemonCenter_Text_1FCooltrainerM_BlueReturned:
 	.string "win without having any underlings.$"
 
 ViridianCity_PokemonCenter_Text_1FCooltrainerF:
-	.string "I heard that the GYM in CINNABAR is\n"
-	.string "gone.\p"
-	.string "I wonder what became of BLAINE, the\n"
-	.string "GYM LEADER.$"
+	.string "שמעתי שהמכון בסיננבר\n"
+	.string "כבר לא קיים.\p"
+	.string "מעניין מה קרה לבליין,\n"
+	.string "מנהיג המכון.$"
 
 ViridianCity_PokemonCenter_Text_1FBugCatcher:
-	.string "My dream is to become a GYM LEADER.$"
+	.string "החלום שלי הוא להיות מנהיג מכון.$"

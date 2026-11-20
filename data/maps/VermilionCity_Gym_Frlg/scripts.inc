@@ -370,52 +370,52 @@ VermilionCity_Gym_Text_DwaynePostBattle::
 	.string "second lock is right next to it.$"
 
 VermilionCity_Gym_Text_GymGuyAdvice::
-	.string "Yo!\n"
-	.string "Champ in the making!\p"
-	.string "LT. SURGE has a nickname.\p"
-	.string "People refer to him as the\n"
-	.string "Lightning American!\p"
-	.string "He's an expert on electric\n"
-	.string "POKéMON.\p"
-	.string "BIRD/WATER-type POKéMON match\n"
-	.string "poorly against the ELECTRIC type.\p"
-	.string "Beware of paralysis, too.\p"
-	.string "LT. SURGE is very cautious.\p"
-	.string "He's locked himself in, so it won't\n"
-	.string "be easy getting to him.$"
+	.string "יו!\n"
+	.string "אלוף לעתיד!\p"
+	.string "לסמל סרג' יש כינוי.\p"
+	.string "אנשים קוראים לו\n"
+	.string "האמריקאי החשמלי!\p"
+	.string "הוא מומחה לפוקימונים\n"
+	.string "חשמליים.\p"
+	.string "פוקימונים מסוג תעופה/מים\n"
+	.string "חלשים מול סוג חשמל.\p"
+	.string "כדאי להיזהר גם משיתוק.\p"
+	.string "סמל סרג' זהיר מאוד.\p"
+	.string "הוא נעל את עצמו בפנים, אז לא\n"
+	.string "יהיה קל להגיע אליו.$"
 
 VermilionCity_Gym_Text_GymGuyPostVictory::
-	.string "Whew!\n"
-	.string "That match was electric!$"
+	.string "וואו!\n"
+	.string "הקרב הזה היה חשמלי!$"
 
 VermilionCity_Gym_Text_GymStatue::
-	.string "VERMILION POKéMON GYM\n"
-	.string "LEADER: LT. SURGE\p"
-	.string "WINNING TRAINERS:\n"
+	.string "מכון הפוקימון של ורמיליון\n"
+	.string "מנהיג: סמל סרג'\p"
+	.string "מאמנים מנצחים:\n"
 	.string "{RIVAL}$"
 
 VermilionCity_Gym_Text_GymStatuePlayerWon::
-	.string "VERMILION POKéMON GYM\n"
-	.string "LEADER: LT. SURGE\p"
-	.string "WINNING TRAINERS:\n"
+	.string "מכון הפוקימון של ורמיליון\n"
+	.string "מנהיג: סמל סרג'\p"
+	.string "מאמנים מנצחים:\n"
 	.string "{RIVAL}, {PLAYER}$"
 
 VermilionCity_Gym_Text_NopeOnlyTrashHere::
-	.string "Nope!\n"
-	.string "There's only trash here.$"
+	.string "כלום!\n"
+	.string "יש כאן רק זבל.$"
 
 VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened::
-	.string "Hey! There's a switch under the\n"
-	.string "trash! Turn it on!\p"
-	.string "The first electric lock opened!$"
+	.string "היי! יש מתג מתחת לזבל!\n"
+	.string "נדליק אותו!\p"
+	.string "המנעול החשמלי הראשון נפתח!$"
 
 VermilionCity_Gym_Text_SecondLockOpened::
-	.string "The second electric lock opened!\n"
-	.string "The motorized door opened!$"
+	.string "המנעול החשמלי השני נפתח!\n"
+	.string "הדלת הממונעת נפתחה!$"
 
 VermilionCity_Gym_Text_OnlyTrashLocksWereReset::
-	.string "Nope!\n"
-	.string "There's only trash here.\p"
-	.string "Hey!\n"
-	.string "The electric locks were reset!$"
+	.string "כלום!\n"
+	.string "יש כאן רק זבל.\p"
+	.string "היי!\n"
+	.string "המנעולים החשמליים התאפסו!$"
 

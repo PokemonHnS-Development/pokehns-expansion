@@ -1,0 +1,10 @@
+# Goldenrod 4F vitamins (MAP_GOLDENROD_CITY_DEPARTMENT_STORE_4F_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_GOLDENROD_CITY_DEPARTMENT_STORE_4F_HNS
+clerk 24 11 m19_hi
+buyopen m19_buy
+listshots m19_list
+buyeach m19_ask
+buyclose m19_menu
+shopquit m19_bye

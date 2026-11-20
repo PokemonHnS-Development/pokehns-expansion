@@ -1,0 +1,22 @@
+# Safari Zone Gate incense clerk, FLAG_FINITE_TMS branch with two TMs (SafariZoneGate_hns/scripts.inc:124-142).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_SAFARI_ZONE_GATE_HNS 11 23
+evstart goto SafariZoneGate_EventScript_IncenseClerkFinite
+talk m09_safincf_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m09_safincf_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m09_safincf
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m09_safincf_bye 10 -
+waitctl 900

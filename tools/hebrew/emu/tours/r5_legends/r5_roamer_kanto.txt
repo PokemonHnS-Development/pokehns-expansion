@@ -1,0 +1,37 @@
+# Latios / Latias after the Vermilion TV choice: Steven's scene (VermilionCity_EventScript_Trigger
+# Steven*, data/maps/VermilionCity_hns/scripts.inc:430-486) with the MULTI_TV_LATI multichoice; row 0
+# = Latias roams (InitKantoRoamers, src/roamer.c:341-352). Then the roaming Latias: intro, flee on its
+# turn, the Pokedex AREA page, and a second encounter caught / defeated.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev setvar VAR_VERMILION_CITY_STEVEN, 0; clearflag FLAG_HIDE_VERMILION_STEVEN; clearflag FLAG_LATIOS_OR_LATIAS_ROAMING; end
+warpto MAP_VERMILION_CITY_HNS 33 3
+face UP
+snap lt_field
+stepto UP 1
+scene lt_steven 8000
+snap lt_menu
+tap A 4                     # row 0 (the default cursor row): Latias roams
+scene lt_steven2 8000
+snap lt_after_choice
+roamers
+warpto MAP_ROUTE1_HNS 10 20
+roamhere SPECIES_LATIAS
+roambattle la
+bwalk la_intro input:HandleInputChooseAction
+bsplash la_flee
+scene la_after 2000
+snap la_field_after
+
+dexopen
+dexfind 380
+dexinfo
+snap la_dex_info
+dexarea
+snap la_dex_area
+closeall
+
+roamhere SPECIES_LATIAS
+roambattle la2
+include _legend_tail.txt
+roamers

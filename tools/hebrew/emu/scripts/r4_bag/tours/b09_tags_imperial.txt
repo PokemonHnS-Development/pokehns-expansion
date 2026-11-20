@@ -1,0 +1,33 @@
+# CHECK TAG for every berry, imperial: OPTIONS > MAIN row 11 (ITEM_MAIN_UNIT_TYPE, src/option_menu.c:52) > RIGHT, B saves (src/option_menu.c:1103).
+start saves/menuA_base_copy.sav
+include ../../continue.txt
+expectunits 0
+startmenu OPTION
+waitcb2x option_menu:MainCB2 900
+waittaskx option_menu:Task_ProcessInput 900
+waitquiet
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap opt_units_metric
+press RIGHT
+snap opt_units_imperial
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+expectunits 1
+fillpocket BERRIES 999 0 66
+bagopen BERRIES
+tagrun tagi
+bagclose
+fillpocket BERRIES 999 63 66
+bagopen BERRIES
+tagrun tagi
+bagclose

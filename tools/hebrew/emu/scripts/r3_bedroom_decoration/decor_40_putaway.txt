@@ -1,0 +1,103 @@
+# PUT AWAY from save:decor_full (12 dolls placed: Pichu (1,3), Snorlax (3,4), Pikachu (2,3), Marill (5,3),
+# Togepi (6,3), Cyndaquil (1,4), Chikorita (2,4), Totodile (4,4), Jigglypuff (5,4), Meowth (6,4),
+# Clefairy (7,4), Ditto (8,4)). DecorationMenuAction_PutAway (src/decoration.c:676-690) fades to the
+# put-away cursor (Task_ContinuePuttingAwayDecorations :2391-2418; the GOLD decorating sprite,
+# SetUpPuttingAwayDecorationPlayerAvatar :2366-2389). A on an empty tile: gText_NoDecorationHere
+# (AttemptPutAwayDecoration_ :2452-2479). A on a doll: gText_ReturnDecorationToPC + YES/NO
+# (ReturnDecorationPrompt :2677); NO goes back to the cursor, YES: gText_DecorationReturnedToPC
+# (Task_PutAwayDecoration :2319-2353). B: gText_StopPuttingAwayDecorations + YES/NO
+# (AttemptCancelPutAwayDecoration :2442-2450, :2690). A on the PC tile (1,1) would give the same prompt
+# on a PC-on tile (:2467); the H&S bedroom PC is not one, so it says gText_NoDecorationHere.
+# YES goes back to the DECORATE / PUT AWAY / TOSS menu (FieldCB_StopPuttingAwayDecorations :2753).
+start save:decor_full
+include ../continue.txt
+decorprobe
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 1 2
+face UP
+talk da_00_pc_boot 10 A PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press DOWN
+press DOWN
+tap A 0                                   # DECORATION
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+press DOWN
+snap da_01_menu_putaway
+tap A 0                                   # PUT AWAY
+decorwait
+decorshow                                 # the put-away cursor blinks (InitializeCameraSprite1, src/decoration.c:2764-2771)
+snap da_02_cursor_start
+decorgoto 3 2                             # an empty floor tile
+decorshow
+snap da_03_cursor_empty
+tap A 0
+decormsg
+snap da_04_no_decoration_here
+tap A 4
+decorwait
+decorgoto 1 3                             # PICHU DOLL
+decorshow
+snap da_05_cursor_on_pichu
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap da_06_return_to_pc_yes
+press DOWN
+snap da_07_return_to_pc_no
+tap A 0                                   # NO: back to the cursor
+decorwait
+decorshow
+snap da_08_after_no
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0                                   # YES
+decormsg 900
+snap da_09_returned_to_pc
+tap A 4
+decorwait
+decorshow
+snap da_10_after_return
+decorgoto 3 4                             # SNORLAX DOLL (1x2)
+decorshow
+snap da_11_cursor_on_snorlax
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap da_12_return_snorlax_yesno
+tap A 0                                   # YES
+decormsg 900
+snap da_13_snorlax_returned
+tap A 4
+decorwait
+tap B 0                                   # B: stop putting away?
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap da_14_stop_putting_away_yes
+press DOWN
+snap da_15_stop_putting_away_no
+tap A 0                                   # NO: back to the cursor
+decorwait
+decorgoto 1 1                             # the PC tile
+decorshow
+snap da_16_cursor_on_pc
+tap A 0                                   # the bedroom PC is no MB_PLAYER_ROOM_PC_ON tile: "no decoration here"
+decormsg
+snap da_17_pc_tile_no_decoration
+tap A 4
+decorwait
+tap B 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0                                   # YES: back to the actions menu
+waittaskx HandleDecorationActionsMenuInput 900
+waitquiet
+snap da_18_menu_after_stop
+press B
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press B
+waitctl 600 B
+snap da_19_room_10_dolls
+decorprobe

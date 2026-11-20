@@ -1,0 +1,130 @@
+# Weekday siblings (always present, flag 0; MULTI_DAYS_OF_WEEK rows Sun 0 .. Sat 6, cancel 7): for each,
+# talk + a wrong day (Nope), talk + the right day (gift, item fanfare, GaveGift), talk again (Completed).
+# Monica Mon (Route 40), Tuscany Tue (Route 29), Wesley Wed (Lake of Rage), Arthur Thu (Route 36),
+# Frieda Fri (Route 32), Santos Sat (Blackthorn), Sunny Sun (Route 37, wanders); then the Route 26
+# House 2 shelf (all seven names), read through both YES/NO prompts.
+start saves/ladder6_postgame.sav
+include _setup.txt
+ev clearflag FLAG_GOT_SHARP_BEAK; clearflag FLAG_GOT_SILK_SCARF; clearflag FLAG_GOT_BLACK_BELT; clearflag FLAG_GOT_HARD_STONE; clearflag FLAG_GOT_POISON_BARB; clearflag FLAG_GOT_SPELL_TAG; clearflag FLAG_GOT_MAGNET; end
+
+# --- Monica (19,13), Monday = 1
+warpto MAP_ROUTE40_HNS 19 14
+face UP
+tap A 4
+fieldwatch monica_intro menu 6000
+pick 0
+fieldwatch monica_nope free 3000
+face UP
+tap A 4
+fieldwatch monica_intro2 menu 6000
+pick 1
+fieldwatch monica_gift free 8000
+face UP
+tap A 4
+fieldwatch monica_done free 3000
+
+# --- Tuscany (25,12), Tuesday = 2
+warpto MAP_ROUTE29_HNS 25 13
+face UP
+tap A 4
+fieldwatch tuscany_intro menu 6000
+pick 0
+fieldwatch tuscany_nope free 3000
+face UP
+tap A 4
+fieldwatch tuscany_intro2 menu 6000
+pick 2
+fieldwatch tuscany_gift free 8000
+face UP
+tap A 4
+fieldwatch tuscany_done free 3000
+
+# --- Wesley (55,15), Wednesday = 3
+warpto MAP_LAKE_OF_RAGE_HNS 55 16
+face UP
+tap A 4
+fieldwatch wesley_intro menu 6000
+pick 0
+fieldwatch wesley_nope free 3000
+face UP
+tap A 4
+fieldwatch wesley_intro2 menu 6000
+pick 3
+fieldwatch wesley_gift free 8000
+face UP
+tap A 4
+fieldwatch wesley_done free 3000
+
+# --- Arthur (47,16), Thursday = 4
+warpto MAP_ROUTE36_HNS 47 17
+face UP
+tap A 4
+fieldwatch arthur_intro menu 6000
+pick 0
+fieldwatch arthur_nope free 3000
+face UP
+tap A 4
+fieldwatch arthur_intro2 menu 6000
+pick 4
+fieldwatch arthur_gift free 8000
+face UP
+tap A 4
+fieldwatch arthur_done free 3000
+
+# --- Frieda (27,78), Friday = 5
+warpto MAP_ROUTE32_HNS 27 79
+face UP
+tap A 4
+fieldwatch frieda_intro menu 6000
+pick 0
+fieldwatch frieda_nope free 3000
+face UP
+tap A 4
+fieldwatch frieda_intro2 menu 6000
+pick 5
+fieldwatch frieda_gift free 8000
+face UP
+tap A 4
+fieldwatch frieda_done free 3000
+
+# --- Santos (27,39), Saturday = 6
+warpto MAP_BLACKTHORN_CITY_HNS 27 40
+face UP
+tap A 4
+fieldwatch santos_intro menu 6000
+pick 0
+fieldwatch santos_nope free 3000
+face UP
+tap A 4
+fieldwatch santos_intro2 menu 6000
+pick 6
+fieldwatch santos_gift free 8000
+face UP
+tap A 4
+fieldwatch santos_done free 3000
+
+# --- Sunny (20,26, wanders; object 4 on Route 37), Sunday = 0
+warpto MAP_ROUTE37_HNS 20 28
+approachnpc 4
+tap A 4
+fieldwatch sunny_intro menu 6000
+pick 1
+fieldwatch sunny_nope free 3000
+face UP
+tap A 4
+fieldwatch sunny_intro2 menu 6000
+pick 0
+fieldwatch sunny_gift free 8000
+face UP
+tap A 4
+fieldwatch sunny_done free 3000
+
+# --- Route 26 House 2 shelf (6,4): YES, YES
+warpto MAP_ROUTE26_HOUSE2_HNS 6 5
+face UP
+tap A 4
+fieldwatch shelf_1 menu 3000
+pick 0
+fieldwatch shelf_2 menu 6000
+pick 0
+fieldwatch shelf_3 free 6000

@@ -1,0 +1,22 @@
+# r6 field trainers: reruns. Fishermen with sight 0 who face the water (talked to from a walkable
+# tile at their own elevation), a look-around trainer seen from the water, and the three trainers
+# whose script label also exists in a FRLG map (trainerlist.py now prefers the *_hns label).
+start saves/ladder6_postgame.sav
+include ../r6_league/_base.txt
+tbase
+trainer LakeOfRage_hns 2
+trainer Route12_hns 3
+trainer Route12_hns 4
+trainer Route12_hns 5
+trainer Route21_hns 3
+trainer Route27_hns 3
+trainer Route27_hns 10
+trainer Route32_hns 10
+trainer Route32_hns 11
+trainer Route32_hns 12
+trainer Route43_hns 4
+trainer Route44_hns 2
+trainer Route44_hns 3
+trainer Route13_hns 3
+trainer Route14_hns 2
+trainer ViridianForest_hns 1

@@ -1,0 +1,90 @@
+# Ilex Forest Headbutt tutor, PC box Pokemon (gSpecialVar_0x8004 = PC_MON_CHOSEN; the summary opens
+# the box mon, src/pokemon_summary_screen.c:1353):  1 Raichu (box 5, 2 moves) -> learned at once;
+#  2 Feraligatr (box 4, 4 moves) -> replace YES -> which move -> the summary of the BOX mon -> forget
+#  Scratch -> Poof -> learned;  3 Ho-Oh (box 0, greyed: can't learn) -> "can't learn";  4 the box
+#  once more: Feraligatr and Raichu now greyed (they know Headbutt), the party pane, B, NO.
+start saves/ladder6_postgame_copy.sav
+include _setup.txt
+warpto MAP_ILEX_FOREST_HNS 42 27
+face UP
+
+# --- 1. Raichu
+talk hbb1_teach 10
+tap A 0
+talk hbb1_which 10 -
+include _pickparty.txt
+boxpick 0 5 hbb1_box_raichu
+include _tofield.txt
+pages hbb1_learned 1
+talk hbb1_taught 10 -
+waitctl 900
+
+# --- 2. Feraligatr: replace through the box mon's summary
+face UP
+talk hbb2_teach 10
+tap A 0
+talk hbb2_which 10 -
+include _pickparty.txt
+boxpick 0 4 hbb2_box_feraligatr
+include _tofield.txt
+pages hbb2_replace 2
+waitlearn 5
+snap hbb2_replace_yesno
+tap A 0
+pages hbb2_whichforget 1
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleReplaceMoveInput 900
+waitquiet
+snap hbb2_summary_01
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap hbb2_summary_05_new
+press DOWN
+snap hbb2_summary_06_first
+press RIGHT
+waitquiet
+snap hbb2_summary_07_contest
+press LEFT
+waitquiet
+press A
+waitcb2x CB2_Overworld 900
+waittaskx field_specials:Task_LearnMove 900
+pages hbb2_poof 4
+talk hbb2_taught 10 -
+waitctl 900
+
+# --- 3. Ho-Oh (greyed)
+face UP
+talk hbb3_teach 10
+tap A 0
+talk hbb3_which 10 -
+include _pickparty.txt
+boxpick 0 0 hbb3_box_hooh
+include _tofield.txt
+pages hbb3_cantlearn 2
+talk hbb3_declined 10 -
+waitctl 900
+
+# --- 4. the box again (Feraligatr and Raichu greyed now)
+face UP
+talk hbb4_teach 10
+tap A 0
+talk hbb4_which 10 -
+include _pickparty.txt
+boxgo 0 4
+snap hbb4_box_feraligatr
+boxgo 1 1
+snap hbb4_party_golem
+tap B 4
+waittaskx Task_PokeStorageMain 300
+waitquiet
+tap B 4
+waittaskx Task_OnBPressed 300
+12 -
+waitquiet
+press B
+waitcb2x CB2_Overworld 900
+talk hbb4_after 10 -
+waitctl 900

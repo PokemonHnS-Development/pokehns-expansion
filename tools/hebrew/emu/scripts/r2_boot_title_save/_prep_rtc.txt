@@ -1,0 +1,7 @@
+# Prep save for the title-screen reset-RTC screen (B+SELECT+LEFT): CanResetRTC needs
+# FLAG_SYS_RESET_RTC_ENABLE and VAR_RESET_RTC_ENABLE == 0x920 (src/event_data.c:176-188).
+# Run: bts.py --rom EN.gba run _prep_rtc.txt OUT --save .../ladder6_postgame.sav --save-out .../boot_rtc.sav
+include ../continue.txt
+ev setflag FLAG_SYS_RESET_RTC_ENABLE; setvar VAR_RESET_RTC_ENABLE, 0x920; end
+expectflag FLAG_SYS_RESET_RTC_ENABLE 1
+savegame

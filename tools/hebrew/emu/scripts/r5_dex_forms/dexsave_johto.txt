@@ -1,0 +1,7 @@
+# A post-game save with every Johto Pokedex entry caught and the National Pokedex not complete:
+# the Game Designer (Celadon Apartments 3F) then shows the Johto diploma.
+# ladder.py run dexsave_johto.txt OUT --save <copy of ladder6_postgame.sav> --save-out dex_johto_only.sav
+include ../continue.txt
+event dex_johto.inc
+savegame
+shot dexsave_johto_saved

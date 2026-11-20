@@ -1,0 +1,90 @@
+# Kurt's apricorn ball shop (MART_TYPE_KURT, src/shop.c:2337): the buy list with the
+# apricorn cost per ball and the apricorn window in place of the money box, scrolled to
+# CANCEL; how many (x1, wrap to the max, x3), the cost YES/NO answered NO; a ball without
+# its apricorn (none); one Friend Ball made (singular), then three Love Balls (plural).
+# FLAG_CAUGHT_CELEBI skips the GS Ball check (the debug key-item fill holds a GS Ball).
+start saves/r1svc_menuA_base.sav
+include ../continue.txt
+setflag FLAG_CAUGHT_CELEBI
+clearflag FLAG_HIDE_KURT_2
+ev removeitem ITEM_PERSIM_BERRY, 999; removeitem ITEM_LOVE_BALL, 10; end
+warpto MAP_AZALEA_TOWN_KURTS_HOUSE_HNS 15 4
+face UP
+talk svc_kurt_ask 10
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+scrollshots svc_kurt_list DOWN 8              # 7 balls + CANCEL; the list wraps back to the top
+snap svc_kurt_list_top
+# Love Ball: how many, wrap to the max, x3, NO
+tap A 0
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+waitquiet
+snap svc_kurt_qty_01
+press DOWN
+snap svc_kurt_qty_max
+press UP
+press UP
+press UP
+snap svc_kurt_qty_03
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap svc_kurt_confirm
+tap B 0
+waittaskx Task_BuyMenu 600
+waitquiet
+snap svc_kurt_back_to_list
+# Level Ball (7th): no Persim Berry left
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+tap A 0
+pages svc_kurt_none 3
+waittaskx Task_BuyMenu 600
+waitquiet
+snap svc_kurt_after_none
+# Friend Ball (3rd) x1, YES: the singular messages
+press UP
+press UP
+press UP
+press UP
+tap A 0
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+waitquiet
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap svc_kurt_confirm_x1
+tap A 0
+waittaskx Task_ExitKurtShopAfterPurchase 600
+waitquiet
+snap svc_kurt_started
+tap A 0
+waitcb2x CB2_Overworld 900
+talk svc_kurt_made1 10 -
+waitctl 900
+# again: Love Ball x3, YES: the plural messages
+face UP
+talk svc_kurt_ask2 10
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+tap A 0
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+waitquiet
+press UP
+press UP
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0
+waittaskx Task_ExitKurtShopAfterPurchase 600
+waitquiet
+tap A 0
+waitcb2x CB2_Overworld 900
+talk svc_kurt_made3 10 -
+waitctl 900

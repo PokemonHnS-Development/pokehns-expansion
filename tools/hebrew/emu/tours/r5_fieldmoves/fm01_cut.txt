@@ -1,0 +1,51 @@
+# Cut tree (EventScript_CutTree, data/scripts/field_move_scripts_hns.inc:2-28): "X used CUT!"
+# (Text_MonUsedFieldMove :54; the YES/NO Text_WantToCut is commented out in H&S, :11-12), the
+# follower field-move animation (EventScript_FollowerFieldMove :158) and the tree falling; then
+# without badge 2 Text_CantCut (:39-41, :58). Then CUT from the party menu facing a tree
+# (EventScript_UseCut :31, no text) and in tall grass (EventScript_UseCutGrass :591, no text).
+# Celadon City tree at (53,21) (data/maps/CeladonCity_hns/map.json), approached from (52,21).
+start save:fm_party
+include _cont.txt
+warpto MAP_CELADON_CITY_HNS 52 21
+go LEFT                                   # a step out and back brings the follower behind
+go RIGHT
+face RIGHT
+snap fm01_00_facing_tree
+tap A 2
+fieldwatch fm01_cut free 4000 4
+snap fm01_after_cut
+
+# no badge 2: Text_CantCut (a warp brings the tree back: its FLAG_TEMP_5 is cleared on load)
+clearflag FLAG_BADGE02_GET
+warpto MAP_CELADON_CITY_HNS 52 21
+face RIGHT
+tap A 2
+fieldwatch fm01_cantcut free 3000
+setflag FLAG_BADGE02_GET
+
+# CUT from the party menu, facing the tree
+warpto MAP_CELADON_CITY_HNS 52 21
+face RIGHT
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap fm01_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap fm01_party_typhlosion_actions
+tap DOWN 4
+waitquiet
+tap A 4                                   # CUT: the H&S tree (OBJ_EVENT_GFX_CUTTABLE_TREE_HNS) is not
+waittaskx Task_CancelAfterAorBPress 300  # what SetUpFieldMove_Cut looks for (src/fldeff_cut.c:156)
+waitquiet
+snap fm01_partycut_nothing
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

@@ -1,0 +1,7 @@
+# The contest lobby: the receptionist's INFO, then every other NPC and sign (the winners' paintings,
+# the Berry Blender records, the link contest results board).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 10 col
+talkobj 1 col_info pick=1
+visit col skip=1

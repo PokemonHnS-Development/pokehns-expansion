@@ -1,0 +1,30 @@
+# Arceus, Sinjoh Ruins Arceus room (VAR_SINJOH_STORYLINE 10). Trigger (18,24): "play the flute?"
+# YES/NO, the dance with DoOrbEffect, camera shakes, Arceus comes down
+# (SinjohRuins_ArceusRoom_TriggerScene, data/maps/SinjohRuins_ArceusRoom_hns/scripts.inc:32-103).
+# Then SinjohRuins_ArceusRoom_EventScript_Arceus (:271-313): Arceus-Steel boss battle with
+# settotemboost (no catching, no running), the second cry text, the Arceus battle (catch / defeat),
+# and Steven's trigger (18,27) at VAR_SINJOH_STORYLINE 12 (:327+).
+start saves/ladder6_postgame.sav
+include _base.txt
+ev setvar VAR_SINJOH_STORYLINE, 10; setflag FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS; setflag FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_STEVEN; end
+warpto MAP_SINJOH_RUINS_ARCEUS_ROOM_HNS 18 25
+face UP
+snap ar_field
+stepto UP 1
+scene ar_flute 3000
+snap ar_flute_menu
+tap A 4
+scene ar_scene 40000 45
+objs
+go UP 8
+face UP
+snap ar_before
+tap A 4
+scene ar_pre 4000
+bwalk ar1_intro input:HandleInputChooseAction
+bwin ar1_win
+scene ar_mid 6000
+include _legend_tail.txt
+stepto DOWN 10
+scene ar_steven 20000 60
+snap ar_end

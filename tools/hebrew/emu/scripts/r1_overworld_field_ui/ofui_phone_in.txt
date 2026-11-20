@@ -1,0 +1,34 @@
+# Incoming calls from registered trainers in the field (ExecuteMatchCall, src/match_call.c;
+# the name box shows the trainer's name, src/match_call.c:1585-1591). Registers the same
+# trainers as ofui_phone (the `ev setvar` lines are copied from gen_phone.py output), then forces
+# calls with forcecall (ofui.py). Which trainer calls is random.
+start saves/ofui_menuA_base.sav
+include ../continue.txt
+go DOWN 9
+waitctl 600
+go DOWN 1
+ev setvar VAR_0x8004, TRAINER_ALAN_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_ALEX_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_ANTHONY_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_ARNIE_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_BETH_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_BILLY_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_BRENT_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_CARTER_HNS; special SetMatchCallRegisteredFlag; end
+ev setvar VAR_0x8004, TRAINER_CHAD_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_CHARLES_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_DANA_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_DEREK_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_ERIN_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_GAVEN_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_GINA_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_HILLARY_HNS; special SetMatchCallRegisteredFlag; end
+ev setvar VAR_0x8004, TRAINER_HUEY_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_IRWIN_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_JACK_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_JOEL_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_JOEY_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_KENJI_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_KENNY_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_KYLE_HNS; special SetMatchCallRegisteredFlag; end
+ev setvar VAR_0x8004, TRAINER_LIZ_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_PARRY_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_RALPH_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_REENA_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_RILEY_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_ROB_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_TIFFANY_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_TODD_HNS; special SetMatchCallRegisteredFlag; end
+ev setvar VAR_0x8004, TRAINER_TREVOR_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_TULLY_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_VANCE_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_WADE_HNS; special SetMatchCallRegisteredFlag; setvar VAR_0x8004, TRAINER_WILTON_HNS; special SetMatchCallRegisteredFlag; end
+forcecall 60
+waitkey 900
+pages incall1 40
+snap incall1_last
+waitctl 900 B
+forcecall 60
+waitkey 900
+pages incall2 40
+snap incall2_last
+waitctl 900 B
+forcecall 60
+waitkey 900
+pages incall3 40
+snap incall3_last
+waitctl 900 B
+forcecall 60
+waitkey 900
+pages incall4 40
+snap incall4_last
+waitctl 900 B

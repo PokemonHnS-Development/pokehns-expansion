@@ -1,0 +1,31 @@
+# Gym leader battle: Bugsy in the Azalea Town Gym (AzaleaTown_Gym_EventScript_Bugsy,
+# data/maps/AzaleaTown_Gym_hns/scripts.inc:525-549; Pineco, Ledian Lv 15, Scyther Lv 16,
+# Items: Potion x2, src/data/trainers_hns.party:7249-7281). The base clears no gym flag, and
+# FLAG_DEFEATED_AZALEA_TOWN_GYM is clear in ladder save 1, so Bugsy battles.
+# Screens: his field intro, the leader battle intro, Bugsy using a Potion on his weakened
+# Pineco (STRINGID_TRAINER1USEDITEM, src/battle_message.c:509), the switch prompts, his defeat
+# text, the badge message with its fanfare, the badge speech, the TM received
+# (giveitem ITEM_TM_U_TURN) and the TM speech.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_TYPHLOSION, 40, move1=MOVE_FLAMETHROWER, move2=MOVE_EMBER; end
+
+warpto MAP_AZALEA_TOWN_GYM_HNS 11 7
+face UP
+pinrng
+tap A 4
+pages bv_gym_field
+waitbattle 1800
+sethp enemy 0 5                           # Pineco at 5 HP: the AI heals it on turn 1
+bwalk bv_gym_intro input:HandleInputChooseAction
+snap bv_gym_action
+baction FIGHT
+bmove 1                                   # Ember
+bwalk bv_gym_turn1 input:HandleInputChooseAction|prompt:Cmd_yesnobox
+baction FIGHT
+bmove 0                                   # Flamethrower on Scyther
+bwalk bv_gym_turn2 input:HandleInputChooseAction|free
+baction FIGHT
+bmove 0                                   # Flamethrower on Ledian: the win, the badge, the TM
+bwalk bv_gym_win free
+snap bv_gym_end

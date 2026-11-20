@@ -30,51 +30,49 @@ UnionCave_B1F_EventScript_Item_Xdefend::
 	end
 
 UnionCave_B1F_Text_HikerPhillipSeen:
-	.string "It's been a while since I last saw\n"
-	.string "another person.\p"
-	.string "Don't be shy. Let's battle!$"
+	.string "עבר הרבה זמן מאז שראיתי\n"
+	.string "בן אדם אחר.\p"
+	.string "אין מה להתבייש. קדימה, לקרב!$"
 
 UnionCave_B1F_Text_HikerPhillipBeaten:
-	.string "Uurggh…$"
+	.string "אררר…$"
 
 UnionCave_B1F_Text_HikerPhillipAfter:
-	.string "I've been lost for a long time…\p"
-	.string "I don't mind it here, but I am\n"
-	.string "soooo hungry!$"
+	.string "אני אבוד כבר הרבה זמן…\p"
+	.string "לא רע לי פה, אבל אני רעב נורררא!$"
 
 UnionCave_B1F_Text_HikerLeonardSeen:
-	.string "What do you know! A visitor!$"
+	.string "תראו תראו! אורח!$"
 
 UnionCave_B1F_Text_HikerLeonardBeaten:
-	.string "Wahahah! You're a feisty one!$"
+	.string "וואהאהאה! יש בך אש!$"
 
 UnionCave_B1F_Text_HikerLeonardAfter:
-	.string "I live down here.\p"
-	.string "You can, too, if you'd like.\p"
-	.string "There's plenty of room, you see.$"
+	.string "אני גר כאן למטה.\p"
+	.string "גם אתה יכול, אם מתחשק לך.\p"
+	.string "יש פה המון מקום, כמו שרואים.$"
 
 UnionCave_B1F_Text_PokemaniacAndrewSeen:
-	.string "Who's there?\p"
-	.string "Leave me and my POKéMON alone!$"
+	.string "מי שם?\p"
+	.string "עזוב אותי ואת הפוקימונים שלי בשקט!$"
 
 UnionCave_B1F_Text_PokemaniacAndrewBeaten:
-	.string "Go… Go away!$"
+	.string "לך… לך מפה!$"
 
 UnionCave_B1F_Text_PokemaniacAndrewAfter:
-	.string "Just me and my POKéMON. I'm de-\n"
-	.string "lirious with joy.$"
+	.string "רק אני והפוקימונים שלי.\n"
+	.string "אני מאושר עד הגג.$"
 
 UnionCave_B1F_Text_PokemaniacCalvinSeen:
-	.string "I came all the way here to conduct\n"
-	.string "my POKéMON research.\p"
-	.string "Let me demonstrate my findings in a\n"
-	.string "real battle!$"
+	.string "באתי עד לכאן כדי לערוך את\n"
+	.string "מחקר הפוקימונים שלי.\p"
+	.string "אדגים לך את הממצאים שלי\n"
+	.string "בקרב אמיתי!$"
 
 UnionCave_B1F_Text_PokemaniacCalvinBeaten:
-	.string "You demonstrated on me!$"
+	.string "בסוף דווקא הדגמת עליי!$"
 
 UnionCave_B1F_Text_PokemaniacCalvinAfter:
-	.string "I should compile and announce my\n"
-	.string "study findings.\p"
-	.string "I might even become famous like\n"
-	.string "PROF.ELM.$"
+	.string "כדאי שאסכם ואפרסם את\n"
+	.string "ממצאי המחקר שלי.\p"
+	.string "אולי אפילו אתפרסם כמו פרופ' אלם.$"

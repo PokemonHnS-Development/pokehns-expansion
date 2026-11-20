@@ -1,0 +1,38 @@
+# (c) A field-poison white-out inside a Battle Pike challenge: TryFieldPoisonWhiteOut returns
+# FLDPSN_FRONTIER_WHITEOUT in the H&S three-path room (InBattlePike, src/battle_pike.c), so
+# EventScript_FrontierFieldWhiteOut runs BattleFrontier_BattlePike_EventScript_Retire
+# (data/scripts/field_poison.inc, data/scripts/battle_pike.inc), which warps to the Emerald
+# MAP_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY. The challenge is entered at the H&S lobby with real keys
+# (CHALLENGE, LV. 50, three Pokemon, save); in the three-path room the party is set to poisoned at
+# 1 HP (the only RAM change) and the player walks until the poison takes effect (with the default
+# SURVIVE POISON option the party keeps 1 HP: elc2_pike_whiteout_option turns the option off).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_PIDGEOT, 50; createmon 0, 1, SPECIES_AMPHAROS, 50; createmon 0, 2, SPECIES_GOLEM, 50; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY_HNS 5 6
+waitnotask Task_MapNamePopUpWindow 600
+where lobby
+face UP
+tap A 0
+drive elc_in menu
+tap A 4
+drive elc_lv menu
+tap A 4
+drive elc_sel task:Task_HandleChooseMonInput 20
+include _enter3_keys.txt
+drive elc_save menu 10
+tap A 4
+saveyes
+drive elc_go free 40 12000
+where three_path
+snap elc_00_three_path
+setpoison 1
+go UP 3
+go LEFT 1
+go RIGHT 2
+go LEFT 2
+go RIGHT 2
+where after_steps
+snap elc_01_after_steps
+watchload elc_wo 6000 300 4
+where end

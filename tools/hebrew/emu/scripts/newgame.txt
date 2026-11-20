@@ -1,0 +1,59 @@
+# Cold boot -> NEW GAME -> professor intro -> controllable in the bedroom.
+# Run with:  hns.py run scripts/newgame.txt OUTDIR --save OUTDIR/new.sav
+# (a save path that does not exist yet is created empty, which is what NEW GAME needs).
+#
+# Every step waits on game state (callback2 or the active task), never on a frame count,
+# so it survives a translation changing text length. Defaults accepted everywhere:
+# BOY, the random preset name (GOLD with the default RTC), the "Recommended" challenge set.
+
+# Copyright, intro, title. START every 30 frames skips the intro and the title logo
+# animation; once the main menu is up START does nothing there.
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600            # menu drawn and accepting input
+shot ng01_mainmenu
+tap A 30                                         # NEW GAME (top item on an empty save)
+
+# Oak's speech. A advances text; the gender menu task appears when the speech is done.
+waittask Task_NewGameHnsSpeech_ChooseGender 4000 A
+10 -
+shot ng02_gender
+tap A 30                                         # BOY (cursor default)
+waittask Task_NewGameHnsSpeech_WaitPressBeforeNameChoice 600
+tap A 30                                         # "And what's your name?"
+
+# Naming screen: START jumps to OK, A confirms. An empty name keeps the preset that
+# Task_NewGameHnsSpeech_StartNamingScreen wrote (src/naming_screen.c SaveInputText).
+waitcb2 CB2_NamingScreen 600
+waittask naming_screen:Task_HandleInput 600
+30 -
+tap START 30
+shot ng03_naming
+tap A 30
+waittask Task_NewGameHnsSpeech_ProcessNameYesNoMenu 600
+10 -
+shot ng04_name_confirm
+tap A 30                                         # YES
+
+# Challenge disclaimer (two pages), then the challenge menu. R past the last of the six
+# tabs opens "Confirm your choices?" with YES preselected (src/challenge_menu.c SwitchTab).
+waittask Task_NewGameHnsSpeech_WaitPressDisclaimer 1200 A
+tap A 30
+waittask challenge_menu:Task_ProcessInput 600
+shot ng05_challenge
+tap R 20
+tap R 20
+tap R 20
+tap R 20
+tap R 20
+tap R 20
+waittask Task_CallYesOrNoCallback 120
+shot ng06_challenge_confirm
+tap A 30                                         # YES -> back to Oak
+
+# Closing lines, shrink animation, CB2_NewGame, map load.
+waitcb2 CB2_Overworld 3000 A
+waitctl 1200
+shot ng07_bedroom
+read @LOC@ 8
+read @POS@ 4
+read @SB2@ 8

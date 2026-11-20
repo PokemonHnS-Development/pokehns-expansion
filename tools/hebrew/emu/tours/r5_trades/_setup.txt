@@ -1,0 +1,5 @@
+# Every r5_trades tour: CONTINUE from saves/r5_trades_base.sav (a copy of ladder 6, post-game),
+# then the party of _party.inc and the trade flags cleared.
+include ../../scripts/continue.txt
+ev file _party.inc
+partyinfo

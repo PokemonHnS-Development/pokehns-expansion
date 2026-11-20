@@ -1,0 +1,68 @@
+# A POKe BALL used from the bag outside battle moves a party Pokemon into that ball
+# (src/party_menu.c ItemUseCB_PokeBall :7018): sText_MonBallWasChanged '{STR_VAR_1} הועבר\nל{STR_VAR_2}.',
+# and gText_WontHaveEffect when the Pokemon is already in that ball. DUSK BALL is the widest ball name
+# after the ל prefix. Save: menuA_base. POKe BALLS rows (by number): GREAT BALL, DUSK BALL.
+start saves/r8bfe_menuA_base.sav
+include ../../scripts/continue.txt
+setpocket POCKET_POKE_BALLS ITEM_GREAT_BALL:3 ITEM_DUSK_BALL:3
+w8 @gBagPosition+5@ 2
+w16 @gBagPosition+C@ 0
+w16 @gBagPosition+18@ 0
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap p01_pocket
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap p02_context
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap p03_party
+tap A 4
+waitkey 900
+pages p04_great_typhlosion
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap p05_bag_after
+
+# GREAT BALL on Typhlosion again: already in it
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitkey 900
+pages p06_great_again
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+
+# DUSK BALL on Pikachu
+seek 16 @gBagPosition+C@ 1 DOWN
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+tap A 4
+waitkey 900
+pages p07_dusk_pikachu
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap p08_bag_end
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600

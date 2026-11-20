@@ -8,6 +8,7 @@
 #include "constants/songs.h"
 #include "sound.h"
 #include "sprite.h"
+#include "text.h"
 #include "text_window.h"
 
 #define ANIM_CURSOR (NUM_MON_MARKINGS * 2)
@@ -519,7 +520,14 @@ static void CreateMonMarkingsMenuSprites(s16 x, s16 y, u16 baseTileTag, u16 base
         sMenu->textSprite->oam.shape = SPRITE_SHAPE(32x32);
         sMenu->textSprite->oam.size = SPRITE_SIZE(32x32);
         StartSpriteAnim(sMenu->textSprite, ANIM_TEXT);
+#if TEXT_RTL
+        // Right-align the words beside the mirrored cursor. They are drawn from the left edge of
+        // the sprite and are 23 px wide plus shadow, so their right edge lands where the English
+        // words start, mirrored across the 64-px window.
+        sMenu->textSprite->x = x + 41;
+#else
         sMenu->textSprite->x = x + 32;
+#endif
         sMenu->textSprite->y = y + 80;
         CalcCenterToCornerVec(sMenu->textSprite, SPRITE_SHAPE(32x16), SPRITE_SIZE(32x16), ST_OAM_AFFINE_OFF);
     }
@@ -530,10 +538,18 @@ static void CreateMonMarkingsMenuSprites(s16 x, s16 y, u16 baseTileTag, u16 base
 
     // Create cursor sprite
     template.callback = SpriteCB_Cursor;
+#if TEXT_RTL
+    // Mirror the cursor across the 64-px window and point it left, like the list menus' cursor.
+    spriteId = CreateSprite(&template, x + 52, 0, 0);
+#else
     spriteId = CreateSprite(&template, x + 12, 0, 0);
+#endif
     if (spriteId != MAX_SPRITES)
     {
         sMenu->cursorSprite = &gSprites[spriteId];
+#if TEXT_RTL
+        sMenu->cursorSprite->hFlip = TRUE;
+#endif
         sMenu->cursorSprite->sCursorYOffset = y + 16;
         StartSpriteAnim(sMenu->cursorSprite, ANIM_CURSOR);
     }

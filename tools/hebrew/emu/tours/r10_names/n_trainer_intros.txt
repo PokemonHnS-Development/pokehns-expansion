@@ -1,0 +1,10 @@
+# r10 names: battle intro, send-out, next-Pokemon and win lines with the widest class + name pairs
+# of the field trainers (static/widest_trainers.txt): HEX MANIAC MARTHA, DRAGON TAMER DARIN,
+# PARASOL LADY BEVERLY, BIRD KEEPER BRYAN. Uses r6trainers.py's tbase / trainer ops.
+start saves/ladder6_postgame.sav
+include ../r6_league/_base.txt
+tbase
+trainer EcruteakCity_Gym_hns 5
+trainer DragonsDen_Cavern_hns 1
+trainer NationalPark_Normal_hns 6
+trainer Route35_hns 2

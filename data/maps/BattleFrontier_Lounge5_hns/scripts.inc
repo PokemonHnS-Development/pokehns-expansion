@@ -42,14 +42,14 @@ BattleFrontier_Lounge5_EventScript_LittleBoy_hns::
 	end
 
 BattleFrontier_Lounge5_Text_NatureGirlGreeting_hns::
-	.string "Ehehe!\n"
-	.string "I can tell what POKéMON are thinking!\p"
-	.string "Please!\n"
-	.string "Can I see your POKéMON?$"
+	.string "הי-הי!\n"
+	.string "אני יודעת מה פוקימונים חושבים!\p"
+	.string "נו, בבקשה!\n"
+	.string "אפשר לראות את הפוקימון שלך?$"
 
 BattleFrontier_Lounge5_Text_NatureGirlNoneShown_hns::
-	.string "Boo!\n"
-	.string "Cheapie!$"
+	.string "בוז!\n"
+	.string "קמצן!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlAttackHighAttackLow_hns::
 	.string "Hmhm…\p"
@@ -106,20 +106,19 @@ BattleFrontier_Lounge5_Text_NatureGirlSupportHighSupportLow_hns::
 	.string "if it has a lot of ouchies!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlEgg_hns::
-	.string "That's silly! An EGG is asleep!\n"
-	.string "I can't talk to it!$"
+	.string "זה טיפשי! הביצה עוד ישנה!\n"
+	.string "אני לא יכולה לדבר איתה!$"
 
 BattleFrontier_Lounge5_Text_LadyClaimsSheUnderstandsPokemon_hns::
-	.string "How charming!\n"
-	.string "That little lady claims she can\l"
-	.string "understand POKéMON!$"
+	.string "כמה מקסים! הגברת הקטנה הזאת\n"
+	.string "טוענת שהיא מבינה פוקימונים!$"
 
 BattleFrontier_Lounge5_Text_GirlSayingSomethingProfound_hns::
-	.string "I have this feeling that the little girl\n"
-	.string "is saying something profound.$"
+	.string "יש לי הרגשה שהילדה הקטנה\n"
+	.string "אומרת משהו עמוק.$"
 
 BattleFrontier_Lounge5_Text_GirlPlaysAtRedHouseALot_hns::
-	.string "I know something!\p"
-	.string "That little girl plays at the red house\n"
-	.string "a lot!$"
+	.string "אני יודע משהו!\p"
+	.string "הילדה הקטנה הזאת משחקת הרבה\n"
+	.string "בבית האדום!$"
 

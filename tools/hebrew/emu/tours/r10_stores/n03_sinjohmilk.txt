@@ -1,0 +1,6 @@
+# New Sinjoh milk man (NewSinjoh_MilkMan_EventScript_Seller): YES, then NO.
+start saves/st_l6.sav
+include _base.txt
+visit MAP_NEW_SINJOH_HNS 40 14
+clerk 40 13 n03_hi
+chat n03_yes A B

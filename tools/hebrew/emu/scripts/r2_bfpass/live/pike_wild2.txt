@@ -1,0 +1,6 @@
+py: exec("ow = emu.sym('CB2_Overworld')\nfor i in range(80):\n    try:\n        hns.SCRIPT_OPS['go'](emu, ['go', 'RIGHT' if i % 2 == 0 else 'LEFT', '1'], None)\n    except Exception as e:\n        print('go stopped', e)\n    emu.frames(4)\n    if emu.cb2() != ow or emu.task_active('Task_BattleStart'):\n        break\nprint('cb2', emu.cb2_name(), i)")
+drivex pk_r7_wild_go battle 10 3000
+fastbattles off
+bwin pk_r7_wild_b
+drivex pk_r7_wild_after free 10 3000
+loc

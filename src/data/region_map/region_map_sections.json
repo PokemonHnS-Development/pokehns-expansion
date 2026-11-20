@@ -1735,7 +1735,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ABANDONED_SHIP",
-      "name": "ABANDONED SHIP",
+      "name": "הספינה הנטושה",
       "width": 1,
       "x": 6,
       "y": 14
@@ -1743,7 +1743,7 @@
     {
       "height": 1,
       "id": "MAPSEC_BATTLE_FRONTIER",
-      "name": "BATTLE FRONTIER",
+      "name": "חזית הקרב",
       "width": 1,
       "x": 22,
       "y": 12
@@ -1751,7 +1751,7 @@
     {
       "height": 1,
       "id": "MAPSEC_BIRTH_ISLAND",
-      "name": "BIRTH ISLAND",
+      "name": "אי הלידה",
       "width": 1,
       "x": 0,
       "y": 0
@@ -1759,7 +1759,7 @@
     {
       "height": 1,
       "id": "MAPSEC_FARAWAY_ISLAND",
-      "name": "FARAWAY ISLAND",
+      "name": "האי הרחוק",
       "width": 1,
       "x": 0,
       "y": 0
@@ -1767,7 +1767,7 @@
     {
       "height": 1,
       "id": "MAPSEC_LILYCOVE_CITY",
-      "name": "LILYCOVE CITY",
+      "name": "העיר ליליקוב",
       "width": 2,
       "x": 18,
       "y": 3
@@ -1775,7 +1775,7 @@
     {
       "height": 1,
       "id": "MAPSEC_SAFARI_ZONE",
-      "name": "SAFARI ZONE",
+      "name": "אזור הספארי",
       "width": 1,
       "x": 2,
       "y": 9
@@ -1783,7 +1783,7 @@
     {
       "height": 1,
       "id": "MAPSEC_SOUTHERN_ISLAND",
-      "name": "SOUTHERN ISLAND",
+      "name": "האי הדרומי",
       "width": 1,
       "x": 12,
       "y": 14
@@ -1791,56 +1791,56 @@
     {
       "height": 1,
       "id": "MAPSEC_TRAINER_HILL",
-      "name": "TRAINER HILL",
+      "name": "גבעת המאמנים",
       "width": 1,
       "x": 5,
       "y": 3
     },
     {
       "id": "MAPSEC_MELEMELE_ISLAND",
-      "name": "MELEMELE ISLE",
+      "name": "האי מלמלה",
       "region": "REGION_ALOLA"
     },
     {
       "id": "MAPSEC_AKALA_ISLAND",
-      "name": "AKALA ISLE"
+      "name": "האי אקאלה"
     },
     {
       "id": "MAPSEC_ULAULA_ISLAND",
-      "name": "ULA'ULA ISLE"
+      "name": "האי אולאולה"
     },
     {
       "id": "MAPSEC_PONI_ISLAND",
-      "name": "PONI ISLE"
+      "name": "האי פוני"
     },
     {
       "id": "MAPSEC_ALOLA_OCEAN",
-      "name": "MELEMELE SEA"
+      "name": "ים מלמלה"
     },
     {
       "id": "MAPSEC_AKALA_CAVE",
-      "name": "AKALA CAVE"
+      "name": "מערת אקאלה"
     },
     {
       "id": "MAPSEC_AKALA_FOREST",
-      "name": "AKALA FOREST"
+      "name": "יער אקאלה"
     },
     {
       "id": "MAPSEC_PONI_CAVE",
-      "name": "PONI CAVE"
+      "name": "מערת פוני"
     },
     {
       "id": "MAPSEC_ULAULA_CAVE",
-      "name": "MT. LANIKALA"
+      "name": "הר לניקאלה"
     },
     {
       "id": "MAPSEC_ULAULA_CAVE_2",
-      "name": "ULA'ULA CAVE"
+      "name": "מערת אולאולה"
     },
     {
       "height": 1,
       "id": "MAPSEC_VICTORY_ROAD",
-      "name": "VICTORY ROAD",
+      "name": "דרך הניצחון",
       "width": 1,
       "x": 24,
       "y": 5
@@ -1848,7 +1848,7 @@
     {
       "height": 1,
       "id": "MAPSEC_PALLET_TOWN",
-      "name": "PALLET TOWN",
+      "name": "העיירה פאלט",
       "width": 1,
       "x": 4,
       "y": 11
@@ -1856,7 +1856,7 @@
     {
       "height": 1,
       "id": "MAPSEC_VIRIDIAN_CITY",
-      "name": "VIRIDIAN CITY",
+      "name": "העיר וירידיאן",
       "width": 1,
       "x": 4,
       "y": 8
@@ -1864,7 +1864,7 @@
     {
       "height": 1,
       "id": "MAPSEC_PEWTER_CITY",
-      "name": "PEWTER CITY",
+      "name": "העיר פיוטר",
       "width": 1,
       "x": 4,
       "y": 4
@@ -1872,7 +1872,7 @@
     {
       "height": 1,
       "id": "MAPSEC_CERULEAN_CITY",
-      "name": "CERULEAN CITY",
+      "name": "העיר סרוליאן",
       "width": 1,
       "x": 14,
       "y": 3
@@ -1880,7 +1880,7 @@
     {
       "height": 1,
       "id": "MAPSEC_LAVENDER_TOWN",
-      "name": "LAVENDER TOWN",
+      "name": "העיירה לבנדר",
       "width": 1,
       "x": 18,
       "y": 6
@@ -1888,7 +1888,7 @@
     {
       "height": 1,
       "id": "MAPSEC_VERMILION_CITY",
-      "name": "VERMILION CITY",
+      "name": "העיר ורמיליון",
       "width": 1,
       "x": 14,
       "y": 9
@@ -1896,7 +1896,7 @@
     {
       "height": 1,
       "id": "MAPSEC_CELADON_CITY",
-      "name": "CELADON CITY",
+      "name": "העיר סלדון",
       "width": 1,
       "x": 11,
       "y": 6
@@ -1904,7 +1904,7 @@
     {
       "height": 1,
       "id": "MAPSEC_FUCHSIA_CITY",
-      "name": "FUCHSIA CITY",
+      "name": "העיר פושיה",
       "width": 1,
       "x": 12,
       "y": 12
@@ -1912,7 +1912,7 @@
     {
       "height": 1,
       "id": "MAPSEC_CINNABAR_ISLAND",
-      "name": "CINNABAR ISLAND",
+      "name": "האי סיננבר",
       "width": 1,
       "x": 4,
       "y": 14
@@ -1920,7 +1920,7 @@
     {
       "height": 2,
       "id": "MAPSEC_INDIGO_PLATEAU",
-      "name": "INDIGO PLATEAU",
+      "name": "רמת אינדיגו",
       "width": 1,
       "x": 24,
       "y": 3
@@ -1928,7 +1928,7 @@
     {
       "height": 1,
       "id": "MAPSEC_SAFFRON_CITY",
-      "name": "SAFFRON CITY",
+      "name": "העיר סאפרון",
       "width": 1,
       "x": 14,
       "y": 6
@@ -1936,7 +1936,7 @@
     {
       "height": 2,
       "id": "MAPSEC_ROUTE_1",
-      "name": "ROUTE 1",
+      "name": "דרך 1",
       "width": 1,
       "x": 4,
       "y": 9
@@ -1944,7 +1944,7 @@
     {
       "height": 3,
       "id": "MAPSEC_ROUTE_2",
-      "name": "ROUTE 2",
+      "name": "דרך 2",
       "width": 1,
       "x": 4,
       "y": 5
@@ -1952,7 +1952,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_3",
-      "name": "ROUTE 3",
+      "name": "דרך 3",
       "width": 4,
       "x": 5,
       "y": 4
@@ -1960,7 +1960,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_4",
-      "name": "ROUTE 4",
+      "name": "דרך 4",
       "width": 6,
       "x": 8,
       "y": 3
@@ -1968,7 +1968,7 @@
     {
       "height": 2,
       "id": "MAPSEC_ROUTE_5",
-      "name": "ROUTE 5",
+      "name": "דרך 5",
       "width": 1,
       "x": 14,
       "y": 4
@@ -1976,7 +1976,7 @@
     {
       "height": 2,
       "id": "MAPSEC_ROUTE_6",
-      "name": "ROUTE 6",
+      "name": "דרך 6",
       "width": 1,
       "x": 14,
       "y": 7
@@ -1984,7 +1984,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_7",
-      "name": "ROUTE 7",
+      "name": "דרך 7",
       "width": 2,
       "x": 12,
       "y": 6
@@ -1992,7 +1992,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_8",
-      "name": "ROUTE 8",
+      "name": "דרך 8",
       "width": 3,
       "x": 15,
       "y": 6
@@ -2000,7 +2000,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_9",
-      "name": "ROUTE 9",
+      "name": "דרך 9",
       "width": 3,
       "x": 15,
       "y": 3
@@ -2008,7 +2008,7 @@
     {
       "height": 3,
       "id": "MAPSEC_ROUTE_10",
-      "name": "ROUTE 10",
+      "name": "דרך 10",
       "width": 1,
       "x": 18,
       "y": 3
@@ -2016,7 +2016,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_11",
-      "name": "ROUTE 11",
+      "name": "דרך 11",
       "width": 3,
       "x": 15,
       "y": 9
@@ -2024,7 +2024,7 @@
     {
       "height": 5,
       "id": "MAPSEC_ROUTE_12",
-      "name": "ROUTE 12",
+      "name": "דרך 12",
       "width": 1,
       "x": 18,
       "y": 7
@@ -2032,7 +2032,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_13",
-      "name": "ROUTE 13",
+      "name": "דרך 13",
       "width": 2,
       "x": 16,
       "y": 11
@@ -2040,7 +2040,7 @@
     {
       "height": 2,
       "id": "MAPSEC_ROUTE_14",
-      "name": "ROUTE 14",
+      "name": "דרך 14",
       "width": 1,
       "x": 15,
       "y": 11
@@ -2048,7 +2048,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_15",
-      "name": "ROUTE 15",
+      "name": "דרך 15",
       "width": 2,
       "x": 13,
       "y": 12
@@ -2056,7 +2056,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_16",
-      "name": "ROUTE 16",
+      "name": "דרך 16",
       "width": 4,
       "x": 7,
       "y": 6
@@ -2064,7 +2064,7 @@
     {
       "height": 5,
       "id": "MAPSEC_ROUTE_17",
-      "name": "ROUTE 17",
+      "name": "דרך 17",
       "width": 1,
       "x": 7,
       "y": 7
@@ -2072,7 +2072,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_18",
-      "name": "ROUTE 18",
+      "name": "דרך 18",
       "width": 5,
       "x": 7,
       "y": 12
@@ -2080,7 +2080,7 @@
     {
       "height": 2,
       "id": "MAPSEC_ROUTE_19",
-      "name": "ROUTE 19",
+      "name": "דרך 19",
       "width": 1,
       "x": 12,
       "y": 13
@@ -2088,7 +2088,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_20",
-      "name": "ROUTE 20",
+      "name": "דרך 20",
       "width": 7,
       "x": 5,
       "y": 14
@@ -2096,7 +2096,7 @@
     {
       "height": 2,
       "id": "MAPSEC_ROUTE_21",
-      "name": "ROUTE 21",
+      "name": "דרך 21",
       "width": 1,
       "x": 4,
       "y": 12
@@ -2104,7 +2104,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_22",
-      "name": "ROUTE 22",
+      "name": "דרך 22",
       "width": 2,
       "x": 2,
       "y": 8
@@ -2112,7 +2112,7 @@
     {
       "height": 2,
       "id": "MAPSEC_ROUTE_24",
-      "name": "ROUTE 24",
+      "name": "דרך 24",
       "width": 1,
       "x": 14,
       "y": 1
@@ -2120,7 +2120,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_25",
-      "name": "ROUTE 25",
+      "name": "דרך 25",
       "width": 2,
       "x": 15,
       "y": 1
@@ -2128,7 +2128,7 @@
     {
       "height": 1,
       "id": "MAPSEC_VIRIDIAN_FOREST",
-      "name": "VIRIDIAN FOREST",
+      "name": "יער וירידיאן",
       "width": 1,
       "x": 4,
       "y": 6
@@ -2136,7 +2136,7 @@
     {
       "height": 1,
       "id": "MAPSEC_MT_MOON",
-      "name": "MT. MOON",
+      "name": "הר הירח",
       "width": 1,
       "x": 9,
       "y": 3
@@ -2144,7 +2144,7 @@
     {
       "height": 1,
       "id": "MAPSEC_DIGLETTS_CAVE",
-      "name": "DIGLETT'S CAVE",
+      "name": "מערת דיגלט",
       "width": 1,
       "x": 15,
       "y": 9
@@ -2152,7 +2152,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROCKET_HIDEOUT",
-      "name": "ROCKET HIDEOUT",
+      "name": "מחבוא רוקט",
       "width": 1,
       "x": 15,
       "y": 2
@@ -2160,7 +2160,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROCK_TUNNEL",
-      "name": "ROCK TUNNEL",
+      "name": "מערת האבן",
       "width": 1,
       "x": 18,
       "y": 5
@@ -2168,7 +2168,7 @@
     {
       "height": 1,
       "id": "MAPSEC_SEAFOAM_ISLANDS",
-      "name": "SEAFOAM ISLANDS",
+      "name": "איי הקצף",
       "width": 1,
       "x": 8,
       "y": 14
@@ -2176,7 +2176,7 @@
     {
       "height": 1,
       "id": "MAPSEC_CERULEAN_CAVE",
-      "name": "CERULEAN CAVE",
+      "name": "מערת סרוליאן",
       "width": 1,
       "x": 13,
       "y": 3
@@ -2184,7 +2184,7 @@
     {
       "height": 1,
       "id": "MAPSEC_POWER_PLANT",
-      "name": "POWER PLANT",
+      "name": "מפעל החשמל",
       "width": 1,
       "x": 18,
       "y": 4
@@ -2192,7 +2192,7 @@
     {
       "height": 1,
       "id": "MAPSEC_NEW_BARK_TOWN",
-      "name": "NEW BARK TOWN",
+      "name": "העיירה ניו בארק",
       "width": 1,
       "x": 19,
       "y": 10
@@ -2200,7 +2200,7 @@
     {
       "height": 1,
       "id": "MAPSEC_CHERRYGROVE_CITY",
-      "name": "CHERRYGROVE CITY",
+      "name": "העיר צ'ריגרוב",
       "width": 1,
       "x": 14,
       "y": 10
@@ -2208,7 +2208,7 @@
     {
       "height": 1,
       "id": "MAPSEC_VIOLET_CITY",
-      "name": "VIOLET CITY",
+      "name": "העיר ויולט",
       "width": 1,
       "x": 12,
       "y": 4
@@ -2216,7 +2216,7 @@
     {
       "height": 1,
       "id": "MAPSEC_AZALEA_TOWN",
-      "name": "AZALEA TOWN",
+      "name": "העיירה אזייליה",
       "width": 1,
       "x": 10,
       "y": 13
@@ -2224,7 +2224,7 @@
     {
       "height": 2,
       "id": "MAPSEC_GOLDENROD_CITY",
-      "name": "GOLDENROD CITY",
+      "name": "העיר גולדנרוד",
       "width": 1,
       "x": 8,
       "y": 8
@@ -2232,7 +2232,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ECRUTEAK_CITY",
-      "name": "ECRUTEAK CITY",
+      "name": "העיר אקרוטיק",
       "width": 1,
       "x": 10,
       "y": 2
@@ -2240,7 +2240,7 @@
     {
       "height": 1,
       "id": "MAPSEC_OLIVINE_CITY",
-      "name": "OLIVINE CITY",
+      "name": "העיר אוליבין",
       "width": 1,
       "x": 6,
       "y": 4
@@ -2248,7 +2248,7 @@
     {
       "height": 1,
       "id": "MAPSEC_CIANWOOD_CITY",
-      "name": "CIANWOOD CITY",
+      "name": "העיר סיאנווד",
       "width": 1,
       "x": 4,
       "y": 11
@@ -2256,7 +2256,7 @@
     {
       "height": 1,
       "id": "MAPSEC_MAHOGANY_TOWN",
-      "name": "MAHOGANY TOWN",
+      "name": "העיירה מהגוני",
       "width": 1,
       "x": 15,
       "y": 2
@@ -2264,7 +2264,7 @@
     {
       "height": 1,
       "id": "MAPSEC_BLACKTHORN_CITY",
-      "name": "BLACKTHORN CITY",
+      "name": "העיר בלקתורן",
       "width": 1,
       "x": 18,
       "y": 2
@@ -2272,7 +2272,7 @@
     {
       "height": 5,
       "id": "MAPSEC_ROUTE_26",
-      "name": "ROUTE 26",
+      "name": "דרך 26",
       "width": 1,
       "x": 24,
       "y": 6
@@ -2280,7 +2280,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_27",
-      "name": "ROUTE 27",
+      "name": "דרך 27",
       "width": 4,
       "x": 20,
       "y": 10
@@ -2288,7 +2288,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_28",
-      "name": "ROUTE 28",
+      "name": "דרך 28",
       "width": 3,
       "x": 21,
       "y": 5
@@ -2296,7 +2296,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_29",
-      "name": "ROUTE 29",
+      "name": "דרך 29",
       "width": 4,
       "x": 15,
       "y": 10
@@ -2304,7 +2304,7 @@
     {
       "height": 5,
       "id": "MAPSEC_ROUTE_30",
-      "name": "ROUTE 30",
+      "name": "דרך 30",
       "width": 1,
       "x": 14,
       "y": 5
@@ -2312,7 +2312,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_31",
-      "name": "ROUTE 31",
+      "name": "דרך 31",
       "width": 2,
       "x": 13,
       "y": 4
@@ -2320,7 +2320,7 @@
     {
       "height": 6,
       "id": "MAPSEC_ROUTE_32",
-      "name": "ROUTE 32",
+      "name": "דרך 32",
       "width": 1,
       "x": 12,
       "y": 5
@@ -2328,7 +2328,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_33",
-      "name": "ROUTE 33",
+      "name": "דרך 33",
       "width": 2,
       "x": 11,
       "y": 13
@@ -2336,7 +2336,7 @@
     {
       "height": 2,
       "id": "MAPSEC_ROUTE_34",
-      "name": "ROUTE 34",
+      "name": "דרך 34",
       "width": 1,
       "x": 8,
       "y": 10
@@ -2344,7 +2344,7 @@
     {
       "height": 3,
       "id": "MAPSEC_ROUTE_35",
-      "name": "ROUTE 35",
+      "name": "דרך 35",
       "width": 1,
       "x": 8,
       "y": 5
@@ -2352,7 +2352,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_36",
-      "name": "ROUTE 36",
+      "name": "דרך 36",
       "width": 3,
       "x": 9,
       "y": 4
@@ -2360,7 +2360,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_37",
-      "name": "ROUTE 37",
+      "name": "דרך 37",
       "width": 1,
       "x": 10,
       "y": 3
@@ -2368,7 +2368,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_38",
-      "name": "ROUTE 38",
+      "name": "דרך 38",
       "width": 3,
       "x": 7,
       "y": 2
@@ -2376,7 +2376,7 @@
     {
       "height": 2,
       "id": "MAPSEC_ROUTE_39",
-      "name": "ROUTE 39",
+      "name": "דרך 39",
       "width": 1,
       "x": 6,
       "y": 2
@@ -2384,7 +2384,7 @@
     {
       "height": 5,
       "id": "MAPSEC_ROUTE_40",
-      "name": "ROUTE 40",
+      "name": "דרך 40",
       "width": 1,
       "x": 5,
       "y": 4
@@ -2392,7 +2392,7 @@
     {
       "height": 3,
       "id": "MAPSEC_ROUTE_41",
-      "name": "ROUTE 41",
+      "name": "דרך 41",
       "width": 1,
       "x": 5,
       "y": 9
@@ -2400,7 +2400,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_42",
-      "name": "ROUTE 42",
+      "name": "דרך 42",
       "width": 4,
       "x": 11,
       "y": 2
@@ -2408,7 +2408,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_43",
-      "name": "ROUTE 43",
+      "name": "דרך 43",
       "width": 1,
       "x": 15,
       "y": 1
@@ -2416,7 +2416,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_44",
-      "name": "ROUTE 44",
+      "name": "דרך 44",
       "width": 2,
       "x": 16,
       "y": 2
@@ -2424,7 +2424,7 @@
     {
       "height": 4,
       "id": "MAPSEC_ROUTE_45",
-      "name": "ROUTE 45",
+      "name": "דרך 45",
       "width": 1,
       "x": 18,
       "y": 3
@@ -2432,7 +2432,7 @@
     {
       "height": 4,
       "id": "MAPSEC_ROUTE_46",
-      "name": "ROUTE 46",
+      "name": "דרך 46",
       "width": 1,
       "x": 17,
       "y": 6
@@ -2440,7 +2440,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_47",
-      "name": "ROUTE 47",
+      "name": "דרך 47",
       "width": 1,
       "x": 2,
       "y": 11
@@ -2448,7 +2448,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_48",
-      "name": "ROUTE 48",
+      "name": "דרך 48",
       "width": 1,
       "x": 2,
       "y": 10
@@ -2456,7 +2456,7 @@
     {
       "height": 1,
       "id": "MAPSEC_BURNED_TOWER",
-      "name": "BURNED TOWER",
+      "name": "המגדל השרוף",
       "width": 1,
       "x": 9,
       "y": 1
@@ -2464,7 +2464,7 @@
     {
       "height": 1,
       "id": "MAPSEC_CLIFF_CAVE",
-      "name": "CLIFF CAVE",
+      "name": "מערת הצוק",
       "width": 1,
       "x": 3,
       "y": 11
@@ -2472,7 +2472,7 @@
     {
       "height": 2,
       "id": "MAPSEC_DARK_CAVE",
-      "name": "DARK CAVE",
+      "name": "המערה החשוכה",
       "width": 3,
       "x": 15,
       "y": 4
@@ -2480,7 +2480,7 @@
     {
       "height": 1,
       "id": "MAPSEC_DRAGONS_DEN",
-      "name": "DRAGON'S DEN",
+      "name": "מאורת הדרקון",
       "width": 1,
       "x": 18,
       "y": 1
@@ -2488,7 +2488,7 @@
     {
       "height": 2,
       "id": "MAPSEC_EMBEDDED_TOWER",
-      "name": "EMBEDDED TOWER",
+      "name": "המגדל השקוע",
       "width": 1,
       "x": 1,
       "y": 10
@@ -2496,7 +2496,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ICE_PATH",
-      "name": "ICE PATH",
+      "name": "שביל הקרח",
       "width": 1,
       "x": 17,
       "y": 1
@@ -2504,7 +2504,7 @@
     {
       "height": 2,
       "id": "MAPSEC_ILEX_FOREST",
-      "name": "ILEX FOREST",
+      "name": "יער אילקס",
       "width": 2,
       "x": 8,
       "y": 12
@@ -2512,7 +2512,7 @@
     {
       "height": 1,
       "id": "MAPSEC_LAKE_OF_RAGE",
-      "name": "LAKE OF RAGE",
+      "name": "אגם הזעם",
       "width": 1,
       "x": 15,
       "y": 0
@@ -2520,7 +2520,7 @@
     {
       "height": 1,
       "id": "MAPSEC_MT_MORTAR",
-      "name": "MT. MORTAR",
+      "name": "הר המכתש",
       "width": 1,
       "x": 12,
       "y": 1
@@ -2528,7 +2528,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROCKET_HIDEOUT_HNS",
-      "name": "ROCKET HIDEOUT",
+      "name": "מחבוא רוקט",
       "width": 1,
       "x": 15,
       "y": 2
@@ -2536,7 +2536,7 @@
     {
       "height": 4,
       "id": "MAPSEC_VICTORY_ROAD_HNS",
-      "name": "VICTORY ROAD",
+      "name": "דרך הניצחון",
       "width": 1,
       "x": 16,
       "y": 4
@@ -2544,7 +2544,7 @@
     {
       "height": 1,
       "id": "MAPSEC_MT_SILVER",
-      "name": "MT. SILVER",
+      "name": "הר הכסף",
       "width": 1,
       "x": 20,
       "y": 5
@@ -2552,7 +2552,7 @@
     {
       "height": 1,
       "id": "MAPSEC_SINJOH",
-      "name": "SINJOH",
+      "name": "סינג'ו",
       "width": 1,
       "x": 20,
       "y": 3
@@ -2560,7 +2560,7 @@
     {
       "height": 1,
       "id": "MAPSEC_SNOWSWEPT_CAVERN",
-      "name": "SNOWSWEPT CAVERN",
+      "name": "המערה המושלגת",
       "width": 1,
       "x": 20,
       "y": 3
@@ -2568,7 +2568,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_49",
-      "name": "ROUTE 49",
+      "name": "דרך 49",
       "width": 1,
       "x": 20,
       "y": 3
@@ -2576,7 +2576,7 @@
     {
       "height": 1,
       "id": "MAPSEC_ROUTE_50",
-      "name": "ROUTE 50",
+      "name": "דרך 50",
       "width": 1,
       "x": 20,
       "y": 3
@@ -2584,7 +2584,7 @@
     {
       "height": 1,
       "id": "MAPSEC_NEW_SINJOH",
-      "name": "NEW SINJOH",
+      "name": "סינג'ו החדשה",
       "width": 1,
       "x": 20,
       "y": 3
@@ -2592,7 +2592,7 @@
     {
       "height": 1,
       "id": "MAPSEC_SINJOH_RUINS",
-      "name": "SINJOH RUINS",
+      "name": "חורבות סינג'ו",
       "width": 1,
       "x": 20,
       "y": 3
@@ -2600,7 +2600,7 @@
     {
       "height": 1,
       "id": "MAPSEC_NATIONAL_PARK",
-      "name": "NATIONAL PARK",
+      "name": "הפארק הלאומי",
       "width": 1,
       "x": 8,
       "y": 4
@@ -2608,7 +2608,7 @@
     {
       "height": 1,
       "id": "MAPSEC_OLIVINE_LIGHTHOUSE",
-      "name": "OLIVINE LIGHTHOUSE",
+      "name": "מגדלור אוליבין",
       "width": 1,
       "x": 7,
       "y": 4
@@ -2616,7 +2616,7 @@
     {
       "height": 2,
       "id": "MAPSEC_RUINS_OF_ALPH",
-      "name": "RUINS OF ALPH",
+      "name": "חורבות אלף",
       "width": 2,
       "x": 10,
       "y": 5
@@ -2624,7 +2624,7 @@
     {
       "height": 1,
       "id": "MAPSEC_SAFARI_ZONE_GATE",
-      "name": "SAFARI ZONE GATE",
+      "name": "שער אזור הספארי",
       "width": 1,
       "x": 2,
       "y": 9
@@ -2632,7 +2632,7 @@
     {
       "height": 1,
       "id": "MAPSEC_SLOWPOKE_WELL",
-      "name": "SLOWPOKE WELL",
+      "name": "באר סלופוק",
       "width": 1,
       "x": 10,
       "y": 12
@@ -2640,7 +2640,7 @@
     {
       "height": 1,
       "id": "MAPSEC_SPROUT_TOWER",
-      "name": "SPROUT TOWER",
+      "name": "מגדל הנבט",
       "width": 1,
       "x": 12,
       "y": 3
@@ -2648,7 +2648,7 @@
     {
       "height": 1,
       "id": "MAPSEC_SS_AQUA",
-      "name": "S.S. AQUA",
+      "name": "ספינת אקווה",
       "width": 10,
       "x": 14,
       "y": 14
@@ -2656,7 +2656,7 @@
     {
       "height": 1,
       "id": "MAPSEC_TIN_TOWER",
-      "name": "TIN TOWER",
+      "name": "מגדל הבדיל",
       "width": 1,
       "x": 10,
       "y": 1
@@ -2664,7 +2664,7 @@
     {
       "height": 1,
       "id": "MAPSEC_TOHJO_FALLS",
-      "name": "TOHJO FALLS",
+      "name": "מפלי טוג'ו",
       "width": 1,
       "x": 20,
       "y": 9
@@ -2672,7 +2672,7 @@
     {
       "height": 2,
       "id": "MAPSEC_UNION_CAVE",
-      "name": "UNION CAVE",
+      "name": "מערת האיחוד",
       "width": 1,
       "x": 12,
       "y": 11
@@ -2680,7 +2680,7 @@
     {
       "height": 1,
       "id": "MAPSEC_WHIRL_ISLANDS",
-      "name": "WHIRL ISLANDS",
+      "name": "איי המערבולת",
       "width": 1,
       "x": 6,
       "y": 11

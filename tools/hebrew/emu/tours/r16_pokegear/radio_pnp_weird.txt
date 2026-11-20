@@ -1,0 +1,17 @@
+# Places and People (Kanto, 50): DJ Lily's random people/place lines, each followed by a random
+# adjective from sRadioText_PnP_PeopleAdj (src/pokenav_radio.c:896). Index 13 (sRadioText_PnP_Weird)
+# is one random pick of many, so the adjective after line 6 (a trainer) and line 2 (a place) is
+# pointed at it (radiolines, a ROM pointer like the one the game stores) before the lines scroll.
+# The seed is radio_d_kanto's first one, so both ROMs build the same station.
+# Run: scripts/r16_pokegear/gear16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_pokegear [--clip]
+# Save: ladder6_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+warpto MAP_VERMILION_CITY_HNS 61 14
+gearradio
+radiotunepin 50 -1 96B7E0B42D28E515B9DF3B8213013F29
+radiostate
+radiolines 3 sRadioText_PnP_Weird
+radiolines 7 sRadioText_PnP_Weird
+radiojump 255
+radiocycle rr_pnp_weird 10

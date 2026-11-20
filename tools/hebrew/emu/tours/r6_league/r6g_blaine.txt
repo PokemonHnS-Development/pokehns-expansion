@@ -1,0 +1,8 @@
+# Blaine, Seafoam Islands Gym (18,10): SeafoamIslands_Gym_EventScript_Blaine.
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_CINNABAR_ISLAND_GYM; clearflag FLAG_BADGE15_GET; clearflag FLAG_HIDE_SEAFOAM_BLAINE; end
+warpto MAP_SEAFOAM_ISLANDS_GYM_HNS 18 11
+face UP
+snap bl_room
+include _leader_tail.txt

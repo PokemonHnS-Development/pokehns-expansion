@@ -1,0 +1,104 @@
+# Slot machine (Goldenrod Game Corner, machine bg (5,6) read from (4,6) facing east):
+# MauvilleCity_GameCorner_EventScript_SlotMachine1 (data/maps/MauvilleCity_GameCorner/scripts.inc:831-840),
+# src/slot_machine.c (strings :653-657). Bet screen, REEL TIME help (SELECT), a spin with a
+# forced 7 bias (payout), the quit YES/NO, then 9,999 coins, need 3 coins and run out of coins.
+start saves/gc_base.sav
+include ../continue.txt
+ev additem ITEM_COIN_CASE; checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 500; end
+warpto MAP_GOLDENROD_CITY_GAME_CORNER_HNS 4 6
+face RIGHT
+tap A 0
+waitcb2x slot_machine:CB2_SlotMachine 900
+slotstate SLOTTASK_BET_INPUT 900
+snap sl_bet0
+# REEL TIME help
+tap SELECT 0
+waittaskdata Task_InfoBox 0 6 600
+snap sl_reeltime_help
+tap B 0
+slotstate SLOTTASK_BET_INPUT 900
+snap sl_bet0_back
+# bet 1, then max (R)
+press DOWN
+snap sl_bet1
+tap Rb 0
+slotstate SLOTTASK_RESET_BIAS_FAILURE 900
+slotbias 80
+slotstate SLOTTASK_WAIT_REEL_STOP 900
+snap sl_spin
+tap A 0
+slotstate SLOTTASK_WAIT_REEL_STOP 900
+snap sl_reel1
+tap A 0
+slotstate SLOTTASK_WAIT_REEL_STOP 900
+snap sl_reel2
+tap A 0
+burst sl_result 12 20
+slotstate SLOTTASK_BET_INPUT 2400
+snap sl_after1
+# a spin biased to cherries
+tap Rb 0
+slotstate SLOTTASK_RESET_BIAS_FAILURE 900
+slotbias 02
+slotstate SLOTTASK_WAIT_REEL_STOP 900
+tap A 0
+slotstate SLOTTASK_WAIT_REEL_STOP 900
+tap A 0
+slotstate SLOTTASK_WAIT_REEL_STOP 900
+tap A 0
+burst sl_result2 8 20
+slotstate SLOTTASK_BET_INPUT 2400
+snap sl_after2
+# quit prompt: NO, then YES
+tap B 0
+slotstate SLOTTASK_HANDLE_QUIT_INPUT 300
+snap sl_quit
+press DOWN
+snap sl_quit_no
+tap A 0
+slotstate SLOTTASK_BET_INPUT 300
+tap B 0
+slotstate SLOTTASK_HANDLE_QUIT_INPUT 300
+tap A 0
+waitcb2 CB2_Overworld 900
+waitctl 900
+# 9,999 coins
+ev checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 9999; end
+face RIGHT
+tap A 0
+waitcb2x slot_machine:CB2_SlotMachine 900
+slotstate SLOTTASK_WAIT_MSG_MAX_COINS 900
+snap sl_max
+tap A 0
+slotstate SLOTTASK_BET_INPUT 300
+tap B 0
+slotstate SLOTTASK_HANDLE_QUIT_INPUT 300
+tap A 0
+waitcb2 CB2_Overworld 900
+waitctl 900
+# 2 coins: need three coins (R); then 0 coins: out of coins
+ev checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 2; end
+face RIGHT
+tap A 0
+waitcb2x slot_machine:CB2_SlotMachine 900
+slotstate SLOTTASK_BET_INPUT 900
+snap sl_two
+tap Rb 0
+slotstate SLOTTASK_WAIT_MSG_NEED_3_COINS 300
+snap sl_need3
+tap A 0
+slotstate SLOTTASK_BET_INPUT 300
+tap B 0
+slotstate SLOTTASK_HANDLE_QUIT_INPUT 300
+tap A 0
+waitcb2 CB2_Overworld 900
+waitctl 900
+ev checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; end
+face RIGHT
+tap A 0
+waitcb2x slot_machine:CB2_SlotMachine 900
+slotstate SLOTTASK_WAIT_MSG_NO_MORE_COINS 900
+snap sl_nocoins
+tap A 0
+waitcb2 CB2_Overworld 900
+waitctl 900

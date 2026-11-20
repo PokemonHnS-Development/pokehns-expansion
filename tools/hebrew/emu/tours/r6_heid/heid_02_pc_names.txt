@@ -1,0 +1,245 @@
+# The PC with the Hebrew name and the default Hebrew box names (save heid_base). PC menu row
+# 'המחשב של {PLAYER}' (gText_PlayersPC, src/strings.c:546), 'נפתח המחשב של {PLAYER}.'
+# (gText_AccessedPlayersPC, data/text/pc.inc:13-14); the storage box title 'תיבה 1', titles
+# 'תיבה 2'..'תיבה 14' (R), a box Pokemon's display panel and its summary (OT = the player),
+# the box options, the JUMP list (every row), the NAME screen prefilled with the default name;
+# DEPOSIT's "Deposit in which box?" chooser with each box's count (ChooseBoxMenu_PrintInfo,
+# src/pokemon_storage_system.c:1947), every box.
+start save:heid_base
+include ../../scripts/continue.txt
+go RIGHT 4
+go UP 2
+talk heid_pc_boot 10
+snap heid_pc_menu_01
+press DOWN
+snap heid_pc_menu_02_player
+tap A 0
+talk heid_pc_player_open 10 - PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+snap heid_pc_player_menu
+press B
+waittaskx Task_HandleMultichoiceInput 900
+waitquiet
+snap heid_pc_menu_back
+tap A 0                                   # BILL'S PC (the menu reopens on its first row)
+talk heid_pc_storage_open 10 - Task_PCMainMenu
+waittaskdata Task_PCMainMenu 0 2 600
+
+# MOVE POKEMON: the box title, a Pokemon's panel and summary
+tap A 0
+waitcb2x CB2_PokeStorage 900
+pcwait
+snap heid_box_01_title
+press A
+waittaskx Task_OnSelectedMon 300
+12 -
+snap heid_box_02_mon_menu
+press DOWN                                # SUMMARY
+press A
+waitcb2x pokemon_summary_screen:MainCB2 900
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap heid_box_03_summary_ot
+press B
+waitcb2x CB2_PokeStorage 900
+pcwait
+pcgoto box 7
+snap heid_box_04_panel
+# titles of boxes 2-14, then box 1 again (on the title, RIGHT scrolls one box; L/R only in
+# the LR button mode)
+pcgoto title 0
+press RIGHT
+pcwait
+snap heid_box_title_02
+press RIGHT
+pcwait
+snap heid_box_title_03
+press RIGHT
+pcwait
+snap heid_box_title_04
+press RIGHT
+pcwait
+snap heid_box_title_05
+press RIGHT
+pcwait
+snap heid_box_title_06
+press RIGHT
+pcwait
+snap heid_box_title_07
+press RIGHT
+pcwait
+snap heid_box_title_08
+press RIGHT
+pcwait
+snap heid_box_title_09
+press RIGHT
+pcwait
+snap heid_box_title_10
+press RIGHT
+pcwait
+snap heid_box_title_11
+press RIGHT
+pcwait
+snap heid_box_title_12
+press RIGHT
+pcwait
+snap heid_box_title_13
+press RIGHT
+pcwait
+snap heid_box_title_14
+press RIGHT
+pcwait
+snap heid_box_title_01_again
+
+# Box options (UP to the title), the JUMP chooser (RIGHT = next box)
+pcgoto title 0
+press A
+waittaskx Task_HandleBoxOptions 300
+12 -
+snap heid_box_options
+press A                                   # JUMP
+waittaskx Task_JumpBox 300
+12 -
+snap heid_jump_01
+press RIGHT
+12 -
+snap heid_jump_02
+press RIGHT
+12 -
+snap heid_jump_03
+press RIGHT
+12 -
+snap heid_jump_04
+press RIGHT
+12 -
+snap heid_jump_05
+press RIGHT
+12 -
+snap heid_jump_06
+press RIGHT
+12 -
+snap heid_jump_07
+press RIGHT
+12 -
+snap heid_jump_08
+press RIGHT
+12 -
+snap heid_jump_09
+press RIGHT
+12 -
+snap heid_jump_10
+press RIGHT
+12 -
+snap heid_jump_11
+press RIGHT
+12 -
+snap heid_jump_12
+press RIGHT
+12 -
+snap heid_jump_13
+press RIGHT
+12 -
+snap heid_jump_14
+press RIGHT
+12 -
+snap heid_jump_01_again
+press B
+waittaskx Task_PokeStorageMain 300
+pcwait
+# NAME: the naming screen prefilled with the default name
+press A
+waittaskx Task_HandleBoxOptions 300
+12 -
+press DOWN
+press DOWN
+press A
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap heid_name_prefilled
+press B
+waitnaming
+snap heid_name_prefilled_bs1
+press START
+waitnaming
+press A                                   # OK: 'תיבה ' (the trailing space stays)
+waitcb2x CB2_PokeStorage 900
+pcwait
+snap heid_box_title_after_bs
+boxnames
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+12 -
+snap heid_box_exit_confirm
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+
+# DEPOSIT: the box chooser, every box
+press DOWN
+tap A 0
+waitcb2x CB2_PokeStorage 900
+pcwait
+pcgoto party 5
+press A
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+12 -
+press A                                   # DEPOSIT
+waittaskx Task_DepositMenu 300
+waitpmem 8 pokemon_storage_system:sStorage 0 1 300
+waitquiet
+12 -
+snap heid_dep_box01
+press RIGHT
+12 -
+snap heid_dep_box02
+press RIGHT
+12 -
+snap heid_dep_box03
+press RIGHT
+12 -
+snap heid_dep_box04
+press RIGHT
+12 -
+snap heid_dep_box05
+press RIGHT
+12 -
+snap heid_dep_box06
+press RIGHT
+12 -
+snap heid_dep_box07
+press RIGHT
+12 -
+snap heid_dep_box08
+press RIGHT
+12 -
+snap heid_dep_box09
+press RIGHT
+12 -
+snap heid_dep_box10
+press RIGHT
+12 -
+snap heid_dep_box11
+press RIGHT
+12 -
+snap heid_dep_box12
+press RIGHT
+12 -
+snap heid_dep_box13
+press RIGHT
+12 -
+snap heid_dep_box14
+press RIGHT
+12 -
+snap heid_dep_box01_again
+press B
+pcwait
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900

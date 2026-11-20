@@ -1,0 +1,52 @@
+# New Sinjoh milk man (NewSinjoh_hns:43-129; (40,13), talked to from (40,14)): the money box, YES/NO,
+# YES -> 'another?' loop (YES, NO) and the got-milk lines; ¥300 -> no money; full Medicine pocket
+# -> no room; NO; then with 99 Moomoo Milk in the bag: the battle (intro, the battle, the defeat line).
+start saves/r6_npcsvc_base.sav
+include ../../scripts/continue.txt
+setmoney 10000
+fullpocket 1 ITEM_NONE 0
+
+# --- 1. YES, another YES, another NO
+warpto MAP_NEW_SINJOH_HNS 40 14
+face UP
+tap A 4
+fieldwatch s1_buy menu 6000
+pick 0
+fieldwatch s1_another menu 6000 20
+pick 0
+fieldwatch s1_another2 menu 6000 20
+pick 1
+fieldwatch s1_got free 6000 20
+
+# --- 2. NO
+face UP
+tap A 4
+fieldwatch s2_buy menu 6000
+pick 1
+fieldwatch s2_nosale free 6000
+
+# --- 3. ¥300: no money
+setmoney 300
+face UP
+tap A 4
+fieldwatch s3_buy menu 6000
+pick 0
+fieldwatch s3_nomoney free 6000 20
+
+# --- 4. full Medicine pocket: no room
+setmoney 10000
+fullpocket 1 ITEM_POTION 999
+face UP
+tap A 4
+fieldwatch s4_buy menu 6000
+pick 0
+fieldwatch s4_noroom free 6000 20
+
+# --- 5. 99 Moomoo Milk: the battle
+fullpocket 1 ITEM_NONE 0
+ev additem ITEM_MOOMOO_MILK, 99; end
+face UP
+tap A 4
+fieldwatch s5_intro cb2:BattleMainCB2 6000
+bwin s5_battle 30
+fieldwatch s5_after free 6000

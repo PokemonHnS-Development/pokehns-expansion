@@ -1,0 +1,8 @@
+# Dojo invitation, Brock at Diglett's Cave north entrance (DiglettsCave_EntranceNorth_EventScript_Brock, data/maps/DiglettsCave_EntranceNorth_hns/scripts.inc:5-16): one message,
+# the fade, the leader removed, FLAG_HIDE_DOJO_* cleared. The script has no YES/NO.
+start saves/r8_dojo_base.sav
+include _base.txt
+ev clearflag FLAG_HIDE_DIGLETT_BROCK; setflag FLAG_HIDE_DOJO_BROCK; end
+warpto MAP_DIGLETTS_CAVE_ENTRANCE_NORTH_HNS 2 4
+approach 1
+include _invite.txt

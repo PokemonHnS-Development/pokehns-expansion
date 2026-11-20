@@ -160,16 +160,16 @@ CeruleanCity_Gym_EventScript_GymGuyAfter::
 	end
 
 CeruleanCity_Gym_Text_GymStatue::
-    .string "CERULEAN POKéMON GYM\n"
-    .string "LEADER: MISTY\p"
-	.string "WINNING TRAINERS:\n"
-	.string "BLUE, RED$"
+    .string "מכון הפוקימון של סרוליאן\n"
+    .string "מנהיגה: מיסטי\p"
+    .string "מאמנים מנצחים:\n"
+    .string "בלו, רד$"
 
 CeruleanCity_Gym_Text_GymStatuePlayerWon::
-    .string "CERULEAN POKéMON GYM\n"
-    .string "LEADER: MISTY\p"
-    .string "WINNING TRAINERS:\n"
-	.string "BLUE, RED, {PLAYER}$"
+    .string "מכון הפוקימון של סרוליאן\n"
+    .string "מנהיגה: מיסטי\p"
+    .string "מאמנים מנצחים:\n"
+    .string "בלו, רד, {PLAYER}$"
 
 CeruleanGym_Text_Note:
 	.string "Sorry, I'll be out for a while.\n"
@@ -214,22 +214,22 @@ CeruleanCity_Gym_EventScript_Misty_Defeated::
 	end
 
 CeruleanGym_Text_GruntIntro:
-	.string "Oops! I so sorry! You not hurt,\n"
-	.string "okay?\p"
-	.string "I very busy. No time for talking\n"
-	.string "with you. Not good for me if\l"
-	.string "seen by somebody.$"
+	.string "אופס! אני כל כך סליחה!\n"
+	.string "אתה לא נפגע, אוקיי?\p"
+	.string "אני מאוד עסוק. אין זמן לדבר עם אתה.\n"
+	.string "לא טוב בשביל אני אם מישהו רואה.$"
 
 CeruleanGym_Text_GruntBigMistake:
-	.string "Oh no! You seen me already!\n"
-	.string "I make big mistake!$"
+	.string "אוי לא! אתה כבר רואה אני!\n"
+	.string "אני עושה טעות גדולה!$"
 
 CeruleanGym_Text_GruntBye:
-	.string "Hey, you! Forget you see me,\n"
-	.string "okay?\p"
-	.string "You see, hear, know nothing,\p"
-	.string "okay? Bye, kid! Nothing!\p"
-	.string "Bye-bye a go-go!$"
+	.string "היי, אתה! לשכוח שאתה רואה אני,\n"
+	.string "אוקיי?\p"
+	.string "אתה לא רואה, לא שומע,\n"
+	.string "לא יודע כלום,\p"
+	.string "אוקיי? ביי, ילד! כלום!\p"
+	.string "ביי-ביי, יאללה ביי!$"
 
 CeruleanGym_Text_Note1:
 	.string "Sorry, I'll be out for a while.\n"
@@ -238,29 +238,25 @@ CeruleanGym_Text_Note1:
 	.string "too. GYM TRAINERS$"
 
 CeruleanGym_Text_MistyIntro:
-	.string "MISTY: I was expecting you, you\n"
-	.string "pest!\p"
-	.string "You may have a lot of JOHTO GYM\n"
-	.string "BADGES, but you'd better not\l"
-	.string "take me too lightly.\p"
-	.string "My WATER-type POKéMON are\n"
-	.string "tough!$"
+	.string "מיסטי: חיכיתי לך, נודניק!\p"
+	.string "אולי יש לך הרבה תגי מכון\n"
+	.string "מג'וטו, אבל כדאי שלא תזלזל בי.\p"
+	.string "הפוקימונים שלי מסוג מים\n"
+	.string "קשוחים!$"
 
 CeruleanGym_Text_MistyWinLoss:
-	.string "MISTY: You really are good…\p"
-	.string "I'll admit that you are skilled…\p"
-	.string "Here you go. It's CASCADEBADGE.$"
+	.string "מיסטי: אתה באמת טוב…\p"
+	.string "אני מודה שאתה מיומן…\p"
+	.string "הנה. זה תג מפל.$"
 
 CeruleanGym_Text_ReceivedBadge:
-	.string "{PLAYER} received CASCADEBADGE.$"
+	.string "{PLAYER} קיבל את תג מפל.$"
 
 CeruleanGym_Text_MistyFightDone:
-	.string "MISTY: Are there many strong\n"
-	.string "trainers in JOHTO? Like you, I\l"
-	.string "mean.\p"
-	.string "I'm going to travel one day, so\n"
-	.string "I can battle some skilled\l"
-	.string "trainers.$"
+	.string "מיסטי: יש הרבה מאמנים חזקים\n"
+	.string "בג'וטו? כמוך, אני מתכוונת.\p"
+	.string "יום אחד אני אצא למסע,\n"
+	.string "כדי להילחם במאמנים מיומנים.$"
 
 CeruleanGym_Text_MistyRematch:
 	.string "MISTY: Wow, you're the KANTO\n"
@@ -274,56 +270,54 @@ CeruleanGym_Text_MistyRematchDefeat:
 	.string "MISTY: You really are good…$"
 
 CeruleanGym_Text_SwimmerfDianaSeen:
-	.string "Sorry about being away. Let's get\n"
-	.string "on with it!$"
+	.string "סליחה שלא הייתי כאן.\n"
+	.string "קדימה, נתחיל!$"
 
 CeruleanGym_Text_SwimmerfDianaBeaten:
-	.string "I give up! You're the winner!$"
+	.string "אני מוותרת! אתה המנצח!$"
 
 CeruleanGym_Text_SwimmerfDianaAfter:
-	.string "I'll be swimming quietly.$"
+	.string "אני אשחה לי בשקט.$"
 
 CeruleanGym_Text_SwimmerfBrianaSeen:
-	.string "Don't let my elegant swimming\n"
-	.string "unnerve you.$"
+	.string "אל תיתן לשחייה האלגנטית שלי\n"
+	.string "להלחיץ אותך.$"
 
 CeruleanGym_Text_SwimmerfBrianaBeaten:
-	.string "Ooh, you calmly disposed of me…$"
+	.string "אוו, חיסלת אותי בשלווה כזאת…$"
 
 CeruleanGym_Text_SwimmerfBrianaAfter:
-	.string "Don't be too smug about beating\n"
-	.string "me.\p"
-	.string "MISTY will destroy you if you get\n"
-	.string "complacent.$"
+	.string "אל תהיה שחצן מדי בגלל\n"
+	.string "שניצחת אותי.\p"
+	.string "מיסטי תמחץ אותך\n"
+	.string "אם תהיה שאנן.$"
 
 CeruleanGym_Text_SwimmermParkerSeen:
-	.string "Glub…\p"
-	.string "I'm first! Come and get me!$"
+	.string "גלוב…\p"
+	.string "אני ראשון! בוא תתפוס אותי!$"
 
 CeruleanGym_Text_SwimmermParkerBeaten:
-	.string "This can't be…$"
+	.string "זה לא ייתכן…$"
 
 CeruleanGym_Text_SwimmermParkerAfter:
-	.string "MISTY has gotten much better in\n"
-	.string "the past few years.\p"
-	.string "Don't let your guard down, or\n"
-	.string "you'll be crushed!$"
+	.string "מיסטי השתפרה מאוד\n"
+	.string "בשנים האחרונות.\p"
+	.string "אל תוריד את המשמר,\n"
+	.string "אחרת תימחץ!$"
 
 CeruleanGym_Text_GuideIntro:
-	.string "Yo! CHAMP in making!\p"
-	.string "Since MISTY was away, I went out\p"
-	.string "for some fun too. He-he-he.$"
+	.string "יו! אלוף לעתיד!\p"
+	.string "מיסטי לא הייתה כאן, אז גם אני\n"
+	.string "יצאתי לבלות קצת. חה-חה-חה.$"
 
 CeruleanGym_Text_GuideWin:
-	.string "Hoo, you showed me how tough you\n"
-	.string "are.\p"
-	.string "As always, that was one heck of a\n"
-	.string "great battle!$"
+	.string "הו, הראית לי כמה אתה קשוח.\p"
+	.string "כמו תמיד, זה היה קרב אדיר וחצי!$"
 
 CeruleanGym_Text_Misty_GiveTM:
-	.string "Here, take this too.$"
+	.string "הנה, קח גם את זה.$"
 
 CeruleanGym_Text_Misty_ExplainTM:
-	.string "It's the WATER PULSE TM.\p"
-	.string "It causes damage and sometimes\n"
-	.string "causes confusion as well!$"
+	.string "זה המ”מ של דופק מים.\p"
+	.string "הוא גורם נזק, ולפעמים\n"
+	.string "גם גורם לבלבול!$"

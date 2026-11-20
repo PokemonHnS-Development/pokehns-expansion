@@ -131,25 +131,25 @@ GoldenrodCity_RadioTower_3F_EventScript_Sign2::
 	end
 
 GoldenrodCity_RadioTower_3F_Text_CardKeySlot:
-	.string "It's the CARD KEY slot.$"
+	.string "זה החריץ של כרטיס הגישה.$"
 
 GoldenrodCity_RadioTower_3F_Text_InsertedCardKey:
-	.string "{PLAYER} inserted the CARD KEY.$"
+	.string "{PLAYER} הכניס את כרטיס הגישה.$"
  
 GoldenrodCity_RadioTower_3F_Text_Open:
-	.string "The gate is open.$"
+	.string "השער פתוח.$"
 
 GoldenrodCity_RadioTower_3F_Text_PersonnelSign:
-	.string "3F PERSONNEL$"
+	.string "קומה 3: משאבי אנוש$"
 
 GoldenrodCity_RadioTower_3F_Text_PokemonMusicSign:
-	.string "POKéMON MUSIC with Host DJ BEN$"
+	.string "מוזיקת פוקימון\n"
+	.string "עם המנחה, הדי-ג'יי בן$"
 
 GoldenrodCity_RadioTower_3F_Text_SuperNerd:
-	.string "We have recordings of the cries\n"
-	.string "of all POKéMON that have been\l"
-	.string "found.\p"
-	.string "We must have about 400 kinds.$"
+	.string "יש לנו הקלטות של הקריאות של\n"
+	.string "כל הפוקימונים שהתגלו.\p"
+	.string "בטח יש לנו בערך 400 מינים.$"
 
 GoldenrodCity_RadioTower_3F_Text_GymGuideRockets:
 	.string "To trainers, POKéMON are their\n"
@@ -164,71 +164,70 @@ GoldenrodCity_RadioTower_3F_Text_GymGuide:
 	.string "clock too!$"
 
 GoldenrodCity_RadioTower_3F_Text_CooltrainerFPleaseSave:
-	.string "The TEAM ROCKET boss has locked\n"
-	.string "himself in.\p"
-	.string "But the DIRECTOR can open it.\p"
-	.string "He's up on the fifth floor.\p"
-	.string "Please save him!$"
+	.string "הבוס של צוות רוקט נעל את עצמו בפנים.\p"
+	.string "אבל מנהל התחנה יכול לפתוח את הדלת.\p"
+	.string "הוא למעלה, בקומה החמישית.\p"
+	.string "בבקשה, תציל אותו!$"
 
 GoldenrodCity_RadioTower_3F_Text_CooltrainerFDirectorSafe:
 	.string "Is the DIRECTOR safe?$"
 
 GoldenrodCity_RadioTower_3F_Text_CooltrainerFHeroGift:
-	.string "Thank you! You're my hero!\p"
-	.string "This is a token of my appreciation.$"
+	.string "תודה! אתה הגיבור שלי!\p"
+	.string "זה אות הוקרה ממני.$"
 
 GoldenrodCity_RadioTower_3F_Text_CooltrainerFSunnyDay:
-	.string "It's SUNNY DAY.\p"
-	.string "It powers up fire-type moves\n"
-	.string "for a while.$"
+	.string "זה המהלך יום שמשי.\p"
+	.string "הוא מחזק לזמן מה מהלכים מסוג אש.$"
 
 GoldenrodCity_RadioTower_3F_Text_CooltrainerFMarvelous:
-	.string "You were simply marvelous!$"
+	.string "היית פשוט נפלא!$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM7Seen:
-	.string "I've been given strict orders.\p"
-	.string "I'm to crush anyone who challenges\n"
-	.string "TEAM ROCKET!$"
+	.string "קיבלתי פקודות מפורשות.\p"
+	.string "עליי למחוץ כל מי שמעז לאתגר\n"
+	.string "את צוות רוקט!$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM7Beaten:
-	.string "What?!$"
+	.string "מה?!$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM7After:
-	.string "I failed in my duties…\p"
-	.string "ARCHER will be so upset...$"
+	.string "נכשלתי בתפקיד שלי…\p"
+	.string "ארצ'ר ממש יתעצבן…$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM8Seen:
-	.string "It feels great ordering POKéMON\n"
-	.string "to commit crimes.$"
+	.string "איזו הרגשה נהדרת לצוות על\n"
+	.string "פוקימונים לבצע פשעים.$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM8Beaten:
-	.string "You're kidding!$"
+	.string "אתה צוחק עליי!$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM8After:
-	.string "I feel lousy over losing!\p"
-	.string "Darn it! I hate useless POKéMON!$"
+	.string "אני מרגיש זוועה אחרי ההפסד!\p"
+	.string "לעזאזל! אני שונא פוקימונים\n"
+	.string "חסרי תועלת!$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM9Seen:
-	.string "Why did the shutter open? Did you\n"
-	.string "have something to do with this?$"
+	.string "למה התריס נפתח? יש לך\n"
+	.string "יד בזה?$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM9Beaten:
-	.string "I'm done for!$"
+	.string "הלך עליי!$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM9After:
-	.string "What?! You made it past our men in\n"
-	.string "the UNDERGROUND?\p"
-	.string "How could you?$"
+	.string "מה?! חלפת על פני האנשים שלנו\n"
+	.string "במעבר התת-קרקעי?\p"
+	.string "איך הצלחת?$"
 
 GoldenrodCity_RadioTower_3F_Text_ScientistMarcSeen:
-	.string "An unknown child wandering here?\p"
-	.string "Who are you?$"
+	.string "ילד זר מסתובב כאן?\p"
+	.string "מי אתה?$"
 
 GoldenrodCity_RadioTower_3F_Text_ScientistMarcBeaten:
-	.string "Tch! I took you too lightly!$"
+	.string "אוף! זלזלתי בך!$"
 
 GoldenrodCity_RadioTower_3F_Text_ScientistMarcAfter:
-	.string "Bwahahaha…\p"
-	.string "I can transmit as strong a signal\n"
-	.string "as I need from here.$"
+	.string "בוואה-הה-הה…\p"
+	.string "מכאן אני יכול לשדר אות\n"
+	.string "חזק ככל שאצטרך.$"
 

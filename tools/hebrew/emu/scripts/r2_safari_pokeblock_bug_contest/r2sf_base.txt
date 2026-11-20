@@ -1,0 +1,16 @@
+# Safari Zone / Pokeblock / Bug-Catching Contest base save. Ladder save 6 (post-game, six
+# Pokemon Lv 75-85, money and box space to spare) -> berries for the Berry Blender ->
+# Baoba's welcome scene in the Safari Zone gate, which gives the Pokeblock case
+# (SafariZoneGate_SafariZoneEntrance_hns/scripts.inc:35-55, ON_FRAME when
+# VAR_SAFARI_ZONE_GATE_STATE is 3) -> saved in the gate. Exported as save:r2sf_base.
+start saves/ladder6_postgame.sav
+include ../continue.txt
+ev additem ITEM_ORAN_BERRY, 10; additem ITEM_PECHA_BERRY, 10; additem ITEM_CHERI_BERRY, 10; additem ITEM_RAWST_BERRY, 10; setvar VAR_SAFARI_ZONE_GATE_STATE, 3; setvar VAR_SAFARI_ZONE_STATE, 0; end
+# The door from the gate's outside map lands on (9,13); Baoba walks over, the player steps up.
+warpraw MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS 9 13
+talk r2sf_baoba 40 -
+waitctl 1200
+loc
+snap r2sf_gate_free
+savegame
+keepsave r2sf_base

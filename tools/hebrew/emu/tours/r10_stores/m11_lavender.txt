@@ -1,0 +1,9 @@
+# shared Cherrygrove clerk (MAP_LAVENDER_TOWN_MART_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_LAVENDER_TOWN_MART_HNS
+clerk 2 3 m11_hi
+buyopen m11_buy
+listshots m11_list
+buyclose m11_menu
+shopquit m11_bye

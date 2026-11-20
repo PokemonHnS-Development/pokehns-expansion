@@ -370,58 +370,56 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardGotten::
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Reward:
-	.string "The chamber reacts!\n"
-	.string "The way is open.$"
+	.string "החדר מגיב!\n"
+	.string "הדרך פתוחה.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Mon:
-	.string "Some kind of ancient sensor.\n"
-	.string "What is it looking for?$"
+	.string "סוג של חיישן עתיק.\n"
+	.string "מה הוא מחפש?$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Solved:
-	.string "The way is open.$"
+	.string "הדרך פתוחה.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist1:
-	.string "Welcome to this chamber.\p"
-	.string "There are sliding panels that depict\n"
-	.string "a POKéMON drawn by the ancients.\p"
-	.string "Slide the panels around to form\n"
-	.string "the picture.\p"
-	.string "To the left is a description of\n"
-	.string "the POKéMON.\p"
-	.string "Scientists in the lab are examin-\n"
-	.string "-ing some newly found patterns.$"
+	.string "ברוכים הבאים לחדר הזה.\p"
+	.string "יש כאן לוחות הזזה שמתארים\n"
+	.string "פוקימון שצויר בידי הקדמונים.\p"
+	.string "אפשר להזיז את הלוחות כדי\n"
+	.string "להרכיב את התמונה.\p"
+	.string "משמאל יש תיאור של הפוקימון.\p"
+	.string "המדענים במעבדה בוחנים\n"
+	.string "כמה דפוסים שנמצאו לאחרונה.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist2:
-	.string "A hole just opened up in the floor!\n"
-	.string "I'd better tell the others.$"
+	.string "הרגע נפער חור ברצפה!\n"
+	.string "כדאי שאספר לאחרים.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist3:
-	.string "Now a hole in the wall too?!\n"
-	.string "This is getting spooky.$"
+	.string "עכשיו גם חור בקיר?!\n"
+	.string "זה מתחיל להיות מפחיד.$"
 
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Kabuto:
-	.string "A POKéMON that hid on the sea floor.\n"
-	.string "Eyes on its back scanned the area.$"
+	.string "פוקימון שהסתתר בקרקעית הים.\n"
+	.string "העיניים שעל גבו סרקו את הסביבה.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_UnownText:
-	.string "It's UNOWN text!$"
+	.string "זה כתב אנון!$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Statue:
-	.string "It's a replica of an ancient\n"
-	.string "POKéMON.$"
+	.string "זה העתק של פוקימון קדום.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Aerodactyl:
-	.string "This flying POKéMON attacked its\n"
-	.string "prey with saw-like fangs.$"
+	.string "הפוקימון המעופף הזה תקף\n"
+	.string "את טרפו בניבים דמויי מסור.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Omanyte:
-	.string "This POKéMON drifted in the sea\n"
-	.string "by twisting its ten tentacles.$"
+	.string "הפוקימון הזה שט בים\n"
+	.string "בעזרת פיתול עשר זרועותיו.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Hooh:
-	.string "A POKéMON that flew gracefully on\n"
-	.string "rainbow-colored wings.$"
+	.string "פוקימון שעף בחן\n"
+	.string "על כנפיים בצבעי הקשת.$"
 
 @==========================================================================================================================================================
 @ Hooh

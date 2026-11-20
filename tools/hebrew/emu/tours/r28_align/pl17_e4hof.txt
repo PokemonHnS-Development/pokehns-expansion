@@ -1,0 +1,79 @@
+# Elite Four rematch to the Hall of Fame and the credits (the post-game league tour, from ladder 6 with a
+# Lv. 100 Mewtwo in slot 0 so each battle ends in one hit).
+start saves/ladder6_postgame.sav
+include ../r10_postgame/_base.txt
+arrive MAP_INDIGO_PLATEAU_POKEMON_CENTER_HNS 19 15 ipc
+ev setflag FLAG_DAILY_BEAT_SILVER; end
+walkto 32 3
+snap pc_door
+stepto UP 1
+periodic W_enter 240 8
+snap W_room
+ss W_room
+walkto 6 7
+face UP
+tap A 4
+scene W_field 20000
+bwalk W_bintro input:HandleInputChooseAction
+snap W_action
+bwin W_win
+scene W_after 40000 30
+snap W_free
+walkto 6 3
+stepto UP 1
+periodic K_enter 240 8
+snap K_room
+ss K_room
+walkto 6 7
+face UP
+tap A 4
+scene K_field 20000
+bwalk K_bintro input:HandleInputChooseAction
+snap K_action
+bwin K_win
+scene K_after 40000 30
+snap K_free
+walkto 6 3
+stepto UP 1
+periodic B_enter 240 8
+snap B_room
+ss B_room
+walkto 6 7
+face UP
+tap A 4
+scene B_field 20000
+bwalk B_bintro input:HandleInputChooseAction
+snap B_action
+bwin B_win
+scene B_after 40000 30
+snap B_free
+walkto 6 3
+stepto UP 1
+periodic R_enter 240 8
+snap R_room
+ss R_room
+walkto 6 7
+face UP
+tap A 4
+scene R_field 20000
+bwalk R_bintro input:HandleInputChooseAction
+snap R_action
+bwin R_win
+scene R_after 40000 30
+snap R_free
+walkto 6 3
+stepto UP 1
+periodic L_enter 300 8
+snap L_room
+ss L_room
+walkto 6 9
+face UP
+tap A 4
+scene L_field 20000
+bwalk L_bintro input:HandleInputChooseAction
+snap L_action
+bwin L_win
+sceneto L_after MAP_POKEMON_LEAGUE_HALL_OF_FAME_HNS 60000 40
+ss hof_map
+hofwatch hof 60000
+periodicx credits 7200 240

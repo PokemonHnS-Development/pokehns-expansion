@@ -1,0 +1,43 @@
+# Link battle lines on one emulator (src/battle_message.c): an ordinary trainer battle (Youngster Mikey,
+# TRAINER_MIKEY_HNS, started in RAM with trainerbattle_no_intro) with BATTLE_TYPE_RECORDED_LINK (1 << 25)
+# set once the battle runs, which is the flag the link branches test together with BATTLE_TYPE_LINK
+# (STRINGID_INTROMSG :2393, the send-out lines :2516-2749, STRINGID_BATTLEEND :2779; HandleEndTurn_BattleWon /
+# _BattleLost, src/battle_main.c:5597/5708 -> BattleScript_LinkBattleWonOrLost). BATTLE_TYPE_LINK itself is not
+# set (the controllers would wait for the partner). gLinkPlayers[1] is the opponent ('דנה' / DANA); the names
+# come from gLinkPlayers through B_LINK_OPPONENT1_NAME (:3401). The lost and drawn lines are the same message
+# with gBattleTextBuff1[0] = B_OUTCOME_LOST (2) / B_OUTCOME_DREW (3) written before printstring runs.
+start saves/r14/link/base.sav
+include ../../scripts/continue.txt
+ev callnative ZeroPlayerPartyMons; special CalculatePlayerPartyCount; givemon SPECIES_PIKACHU, 60, move1=MOVE_THUNDERBOLT, move2=MOVE_QUICK_ATTACK; givemon SPECIES_CYNDAQUIL, 12; end
+linkplayers he:דנה,en:DANA 1
+warpto MAP_ROUTE30_HNS 23 25
+fastbattles off
+pinrng
+evstart trainerbattle_no_intro TRAINER_MIKEY_HNS, 0x@CableClub_Text_PleaseVisitAgain@; end
+waitbattle
+orw32 gBattleTypeFlags 2000000
+bwalk b1_intro input:HandleInputChooseAction
+snap b1_action
+baction FIGHT
+bmove 0
+bwalk b2_turn1 input:HandleInputChooseAction|prompt:Cmd_yesnobox
+snap b2_turn1_end
+baction FIGHT
+bmove 0
+ss l07_turn2
+# won (B_OUTCOME_WON = 1)
+bwalk b3_won free
+snap b3_won_field
+# lost: when the last foe faints, gBattleOutcome becomes WON; rewrite it to LOST (2) so HandleEndTurn_BattleLost
+# takes its link branch (src/battle_main.c:5708-5730) and prints the same STRINGID_BATTLEEND with LOST
+sl l07_turn2
+waitnz gBattleOutcome 3000 A
+w8 @gBattleOutcome@ 2
+bwalk b4_lost free
+snap b4_lost_field
+# drew (3)
+sl l07_turn2
+waitnz gBattleOutcome 3000 A
+w8 @gBattleOutcome@ 3
+bwalk b5_drew free
+snap b5_drew_field

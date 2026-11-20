@@ -1,0 +1,10 @@
+# r11: Blue (Viridian Gym, (5,2)) after the Earth Badge: BlueGotoDojo on ladder 6 (FLAG_HIDE_DOJO_BLUE
+# set), then with Blue at the dojo (FLAG_HIDE_DOJO_BLUE clear): BlueAtDojo -> LeaderBlue_Epilogue
+# (data/maps/ViridianCity_Gym_hns/scripts.inc).
+start saves/ladder6_postgame.sav
+include _base.txt
+warpto MAP_VIRIDIAN_CITY_GYM_HNS 5 3
+face UP
+talkdir v3_gotodojo UP
+ev clearflag FLAG_HIDE_DOJO_BLUE; end
+talkdir v3_atdojo UP

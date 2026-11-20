@@ -1,0 +1,9 @@
+pick 0
+drivex pk_hint1b free 10 3000
+snap pk_3path_room
+py: sb2 = emu.sb2(); emu.w8(sb2 + 0xE10, (emu.r8(sb2 + 0xE10) & 0x80) | (2 << 3) | 1); print("hint", hex(emu.r8(sb2 + 0xE10)))
+go LEFT 2
+go UP 3
+drivex pk_r1_npc free 30 9000
+loc
+ss pike_r1

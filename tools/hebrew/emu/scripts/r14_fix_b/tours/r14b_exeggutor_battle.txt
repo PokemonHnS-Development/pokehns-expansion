@@ -1,0 +1,71 @@
+# fix_b item 2: EXEGGUTOR-A's full name (11 letters: 61 px in FONT_NORMAL, 56 narrow, 49 narrower)
+# in battle. Our lead (party slot 0) and the wild foe are both EXEGGUTOR-A with no nickname, so both
+# healthboxes print the species name (src/battle_interface.c UpdateNickInHealthbox: FONT_SMALL
+# fitted to 55 px with the gender sign); the intro, the action prompt, a Master Ball, "Gotcha"
+# (ladder6 already has EXEGGUTOR-A in the Pokedex, so no dex page; the INFO page is in
+# r14b_exeggutor_menus), the nickname prompt and the naming screen (src/naming_screen.c DrawMonTextEntryBox: the species name in the title), then a
+# second battle with the Gen 4 battle UI (OPTIONS > BATTLE, challengeSettings.newBattleUI).
+# Run with scripts/r14_fix_b/r14fixb.py; HNS_SAVES = saves_all.
+start saves/ladder6_postgame.sav
+include ../../continue.txt
+ev createmon 0, 0, SPECIES_EXEGGUTOR_ALOLA, 50, gender=MON_MALE; special CalculatePlayerPartyCount; additem ITEM_MASTER_BALL, 1; setflag FLAG_SYS_POKEDEX_GET; end
+fastbattles off
+
+pinrng
+evstart setwildbattle SPECIES_EXEGGUTOR_ALOLA, 50; dowildbattle; end
+waitbattle
+bwalk r14x_battle_intro input:HandleInputChooseAction
+snap r14x_battle_action
+w8 @gBagPosition+5@ 2                     # the bag opens on POKE BALLS (pocket 2) with the cursor on
+w16 @gBagPosition+C@ 4                    # row 4, the Master Ball of this save (POKE, GREAT, ULTRA,
+w16 @gBagPosition+18@ 0                   # QUICK?, MASTER), no scroll
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap r14x_balls
+expect16 @gBagPosition+C@ 4
+expect8 @gBagPosition+5@ 2                # POKE BALLS
+tap A 4                                   # Master Ball: USE / CANCEL
+waitquiet
+tap A 4                                   # USE: the throw
+bwalk r14x_throw prompt:Cmd_trygivecaughtmonnick  # this save has EXEGGUTOR-A registered: no dex page
+snap r14x_nick_prompt
+tap A 4                                   # YES: give a nickname
+bwalk r14x_naming task:naming_screen:Task_HandleInput
+waitnaming
+snap r14x_naming
+tap START 4                               # START: cursor to OK
+waitnaming
+tap A 4                                   # OK with nothing typed: the species name stays
+waitcb2x BattleMainCB2 900
+120 -                                     # the party is full: add the catch to the party? (YES/NO)
+waitquiet
+snap r14x_party_prompt
+tap DOWN 4
+tap A 4                                   # NO: it goes to the PC
+90 -
+waitquiet
+snap r14x_sent_to_pc
+tap A 4
+# bwalk would stop here: a naming_screen:Task_HandleInput entry stays in the task list after the
+# naming screen returns to the battle, so the rest is plain presses
+90 -
+tap A 4
+90 -
+tap A 4
+waitcb2x CB2_Overworld 1800
+waitctl 900
+snap r14x_field
+
+# The Gen 4 battle UI
+opt newBattleUI=1
+optexpect newBattleUI=1
+pinrng
+evstart setwildbattle SPECIES_EXEGGUTOR_ALOLA, 50; dowildbattle; end
+waitbattle
+bwalk r14x_g4_intro input:HandleInputChooseAction
+snap r14x_g4_action
+baction RUN
+bwalk r14x_g4_run free
+snap r14x_g4_end

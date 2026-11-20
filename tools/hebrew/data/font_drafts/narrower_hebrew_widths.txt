@@ -1,0 +1,27 @@
+א alef     5  dup row 9 drop col 3
+ב bet      5  dup row 7 drop col 2
+ג gimel    5  dup row 7
+ד dalet    5  dup row 7 drop col 2
+ה he       5  dup row 7 drop col 3
+ו vav      4  dup row 7
+ז zayin    5  dup row 8
+ח het      5  dup row 7 drop col 3
+ט tet      5  dup row 8 drop col 3
+י yod      4  dup row 7
+כ kaf      5  dup row 7
+ל lamed    5  dup row 7 drop col 2
+מ mem      5  dup row 8 drop col 3
+נ nun      4  dup row 7
+ס samekh   5  dup row 8 drop col 3
+ע ayin     5  dup row 9 drop col 1
+פ pe       5  dup row 6 drop col 3
+צ tsadi    5  dup row 5 drop col 3
+ק qof      5  dup row 9 drop col 3
+ר resh     5  dup row 7
+ש shin     6  dup row 7 drop col 3
+ת tav      5  dup row 7 drop col 2
+ן nun.f    4  dup row 7
+ם mem.f    5  dup row 8 drop col 3
+ץ tsadi.f  5  dup row 5 drop col 1
+ף pe.f     5  dup row 6 drop col 3
+ך kaf.f    5  dup row 7

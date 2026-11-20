@@ -1,0 +1,5 @@
+# r10 travel (gen_tours.py): GATE_ROUTE2_VIRIDIAN_FOREST on tr_l6
+start saves/tr_l6.sav
+include _base.txt
+visit MAP_GATE_ROUTE2_VIRIDIAN_FOREST_HNS
+area

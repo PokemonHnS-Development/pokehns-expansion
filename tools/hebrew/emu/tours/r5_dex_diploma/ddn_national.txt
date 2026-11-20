@@ -1,0 +1,31 @@
+# The Game Designer in the Celadon Apartments 3F (object at 5,12; script
+# LilycoveCity_CoveLilyMotel_2F_EventScript_GameDesigner, data/maps/LilycoveCity_CoveLilyMotel_2F/scripts.inc:4-60)
+# with every Pokedex entry caught (r2dex_all, built by scripts/r2_pokedex/dexsave_all.txt):
+# ShowMeCompletedDex, the fanfare, FilledPokedexGiveYouThis, the badge fanfare, the Shiny Charm and
+# the Oval Charm, then the National diploma (src/diploma.c DisplayDiplomaText, HasAllMons: BG1 offset,
+# gText_DexNational). Talking again (FLAG_TEMP_2 set) runs ShowDiploma directly (the charms are
+# already in the bag). The script then stays in `waitstate` (scripts.inc:37): the diploma returns
+# with CB2_ReturnToFieldFadeFromBlack and nothing re-enables the script context, so the second
+# ShowDiploma of the HasAllRegionalMons branch never runs and waitctl would time out.
+# Run with HNS_SAVES=<hns-tools>/emu/saves_screens (r2dex_all.sav is there).
+start saves/r2dex_all.sav
+include ../../scripts/continue.txt
+warpto MAP_CELADON_CITY_APARTMENTS_3F_HNS 5 13
+face UP
+snap ddn_00_field
+
+talk ddn_t1
+waittaskx Task_DiplomaWaitForKeyPress 900
+snap ddn_t1_diploma
+tap A 4
+waitcb2x CB2_Overworld 900
+120 -                                     # the script stays in waitstate after the diploma (nothing re-enables it), so no waitctl
+snap ddn_t1_back
+
+talk ddn_t2
+waittaskx Task_DiplomaWaitForKeyPress 900
+snap ddn_t2_diploma
+tap A 4
+waitcb2x CB2_Overworld 900
+120 -
+snap ddn_t2_back

@@ -1,0 +1,44 @@
+# Silver and Gold Shield (Scott's prizes, BattleFrontier_ScottsHouse_hns/scripts.inc:99,129). In H&S the
+# shields are DECORCAT_ORNAMENT (src/data/decoration/header.h:513) while the game keeps one category
+# (DECORCAT_DOLL, DECORCAT_COUNT 1, include/decoration.h:43-49), so givedecoration does not put them in the
+# list: the tour first shows that (VAR_RESULT after givedecoration, then the empty list), then writes the
+# two shields into the doll inventory (stand-in) and walks PC > DECORATION > DECORATE > the list, every
+# row with its description window (13x6 tiles at (16,13), PrintDecorationItemDescription
+# src/decoration.c:1055-1068).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev givedecoration DECOR_SILVER_SHIELD; end
+showsym16 gSpecialVar_Result
+ev givedecoration DECOR_GOLD_SHIELD; end
+showsym16 gSpecialVar_Result
+decorprobe
+decorput 0 DECOR_SILVER_SHIELD
+decorput 1 DECOR_GOLD_SHIELD
+decorprobe
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 1 2
+face UP
+talk fo_sh_00_pc 10 A PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press DOWN
+press DOWN
+tap A 0                                   # DECORATION
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+snap fo_sh_01_menu
+tap A 0                                   # DECORATE
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+snap fo_sh_02_categories
+tap A 0
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+snap fo_sh_10_row00
+press DOWN
+snap fo_sh_10_row01
+press DOWN
+snap fo_sh_10_row02
+press DOWN
+snap fo_sh_10_row03
+press DOWN
+snap fo_sh_10_row04

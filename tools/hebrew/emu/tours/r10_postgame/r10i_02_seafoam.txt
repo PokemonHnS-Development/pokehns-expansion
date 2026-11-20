@@ -1,0 +1,19 @@
+# Seafoam Islands from Route 20 (the cave mouth the player surfs to): 1F, B1F (Articuno, the Ice
+# Beam ball), Blaine's island gym (Blaine, gym guide, statues), the secret cave (Groudon). Each
+# floor: arrival pop-up, savestate, visit, a wild encounter in the cave.
+start saves/r10pg_base.sav
+include _base.txt
+arrive MAP_SEAFOAM_ISLANDS_1F_HNS 4 17 sf1
+ss sf1
+visit sf1
+wild sf1_wild
+arrive MAP_SEAFOAM_ISLANDS_B1F_HNS 29 16 sfb1
+ss sfb1
+visit sfb1
+wild sfb1_wild
+arrive MAP_SEAFOAM_ISLANDS_GYM_HNS 18 22 sfg
+ss sfg
+visit sfg
+arrive MAP_SEAFOAM_ISLANDS_SECRET_CAVE_HNS 16 16 sfc
+ss sfc
+visit sfc

@@ -84,9 +84,16 @@ int Intl_GetListMenuWidth(const struct ListMenuTemplate *listMenu)
 
 void CopyMonCategoryText(u16 species, u8 *dest)
 {
+#if TEXT_NAME_SUFFIX_IN_BATTLE
+    // Hebrew puts the noun first: פוקימון זרע ("Seed Pokémon").
+    u8 *str = StringCopy(dest, gText_Pokemon);
+    *str = CHAR_SPACE;
+    StringCopy(str + 1, GetSpeciesCategory(species));
+#else
     u8 *str = StringCopy(dest, GetSpeciesCategory(species));
     *str = CHAR_SPACE;
     StringCopy(str + 1, gText_Pokemon);
+#endif
 }
 
 u8 *GetStringClearToWidth(u8 *dest, int fontId, const u8 *str, int totalStringWidth)
@@ -218,6 +225,16 @@ void FillWindowTilesByRow(int windowId, int columnStart, int rowStart, int numFi
     int fillSize, windowRowSize, i;
     struct Window *window = &gWindows[windowId];
 
+#if TEXT_RTL
+    columnStart = WindowRtlX(windowId, columnStart * 8, numFillTiles * 8) / 8;
+    if (columnStart < 0)
+    {
+        numFillTiles += columnStart;
+        columnStart = 0;
+    }
+    if (numFillTiles <= 0)
+        return;
+#endif
     fillSize = numFillTiles * TILE_SIZE_4BPP;
     windowRowSize = window->window.width * TILE_SIZE_4BPP;
     windowTileData = (u8 *)window->tileData + (rowStart * windowRowSize) + (columnStart * TILE_SIZE_4BPP);

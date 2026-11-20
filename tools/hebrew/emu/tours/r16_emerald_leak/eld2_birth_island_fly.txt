@@ -1,0 +1,36 @@
+# (d2) Leaving Birth Island with Fly instead of the harbor sailor, whose YES warps to an Emerald map
+# and crashes (eld_birth_island.txt). Birth Island's exterior is MAP_TYPE_ROUTE, so the party
+# menu offers FLY there (src/overworld.c Overworld_MapTypeAllowsTeleportAndFly). The ladder-6 party
+# has its own flyers; slot 6 (Togekiss) lists SUMMARY, FLY, FLASH, SWITCH, ITEM, CANCEL.
+start saves/r6r3_islands_base.sav
+include ../../scripts/continue.txt
+warpto MAP_BIRTH_ISLAND_EXTERIOR_HNS 22 20
+where start
+snap eldf_00_island
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap eldf_01_fly_actions
+tap DOWN 4
+waitquiet
+tap A 4                                   # FLY
+waitcb2x region_map:CB2_FlyMap 900
+waitpmem 32 region_map:sFlyMap 0 CB_HandleFlyMapInput 900
+waitquiet
+snap eldf_02_flymap
+tap UP 20                                 # three tiles up: the nearest city dot
+tap UP 20
+tap UP 20
+waitquiet
+snap eldf_03_flymap_city
+tap A 0                                   # fly there
+waitcb2x CB2_Overworld 1200
+waitctl 1200
+where end
+snap eldf_04_arrived

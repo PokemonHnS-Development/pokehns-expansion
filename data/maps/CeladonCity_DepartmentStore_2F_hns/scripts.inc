@@ -15,17 +15,16 @@ CeladonDept2_EventScript_Directory::
 	end
 
 CeladonDeptStore2F_Text_PokefanM:
-	.string "I just recently became a trainer.\p"
-	.string "My son encouraged me to do it.\p"
-	.string "I'm impressed by the selection of\n"
-	.string "convenient items.$"
+	.string "רק לאחרונה הפכתי למאמן.\p"
+	.string "הבן שלי עודד אותי לעשות את זה.\p"
+	.string "אני מתרשם מהמבחר של\n"
+	.string "פריטים שימושיים.$"
 
 CeladonDeptStore2F_Text_Youngster:
-	.string "My dad's having a hard time\n"
-	.string "learning the names of items and\l"
-	.string "how they are supposed to be used…$"
+	.string "לאבא שלי קשה ללמוד את השמות\n"
+	.string "של הפריטים ואיך משתמשים בהם…$"
 
 CeladonDeptStore2F_Text_Directory:
-	.string "Top Grade Items for Trainers!\p"
-	.string "2F: TRAINER'S MARKET$"
+	.string "פריטים מעולים למאמנים!\p"
+	.string "ק2: שוק המאמנים$"
 

@@ -1,0 +1,30 @@
+# The contest lobby's link receptionist (LilycoveCity_ContestLobby_EventScript_LinkContestReceptionist_hns,
+# object 2 at (15,1) behind the counter): the welcome, ENTER/INFO/EXIT, INFO and its three topics
+# (LilycoveCity_ContestLobby_Text_ExplainLinkContest / ExplainEMode / ExplainGMode,
+# data/scripts/contest_hall.inc), each page a shot, CANCEL back to ENTER/INFO/EXIT, EXIT. No link
+# is needed for any of these. In H&S the link receptionist is MOVEMENT_TYPE_INVISIBLE and A at the
+# counter in front of it gives no text (shot lobby_link_tap), so its script is started directly.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 15 3
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+snap lobby_link_counter
+objs
+tap A 30
+snap lobby_link_tap
+evstart goto LilycoveCity_ContestLobby_EventScript_LinkContestReceptionist_hns
+fieldwatch li_recep menu 6000
+pick 1
+fieldwatch li_topic menu 3000
+pick 0
+fieldwatch li_link menu 6000
+pick 1
+fieldwatch li_emode menu 6000
+pick 2
+fieldwatch li_gmode menu 6000
+pick 3
+fieldwatch li_back menu 3000
+pick 2
+fieldwatch li_exit free 3000
+snap lobby_link_after

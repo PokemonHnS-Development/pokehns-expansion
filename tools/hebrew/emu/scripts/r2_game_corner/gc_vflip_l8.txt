@@ -1,0 +1,20 @@
+# Voltorb Flip at level 8 (VAR_TEMP_4 = 7 poked while the menu is open; the script resets it to
+# 0 at :671): two-digit row/column totals and the level 8 label; quit at once.
+start saves/gc_base.sav
+include ../continue.txt
+ev additem ITEM_COIN_CASE; checkcoins VAR_TEMP_0; removecoins VAR_TEMP_0; addcoins 500; end
+warpto MAP_GOLDENROD_CITY_GAME_CORNER_HNS 16 7
+face UP
+talk vf8_menu 10
+setvar VAR_TEMP_4 7
+tap A 0
+vfwait 900
+snap vf8_board
+vfboard
+vfflip mult 3
+snap vf8_flipped
+tap B 0
+snap vf8_quit
+press A
+waitcb2 CB2_Overworld 900
+talk vf8_quit_msg 20 -

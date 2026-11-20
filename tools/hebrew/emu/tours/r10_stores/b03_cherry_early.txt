@@ -1,0 +1,11 @@
+# Cherrygrove Mart before VAR_NEWBARK_TOWN_STATE 5: Cherrygrove_Pokemart_Pokemart (POTION, ANTIDOTE).
+start saves/st_l6.sav
+include _base.txt
+ev setvar VAR_NEWBARK_TOWN_STATE, 4; end
+visit MAP_CHERRYGROVE_CITY_MART_HNS
+clerk 2 3 b03_hi
+buyopen b03_buy
+listshots b03_list
+buyeach b03_ask
+buyclose b03_menu
+shopquit b03_bye

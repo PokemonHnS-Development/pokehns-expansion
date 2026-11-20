@@ -307,82 +307,82 @@ Alola_Ulaula_BattlePalossand_Text_0:
 	.string "Shuck!$"
 
 Alola_Ulaula_MtLanikalaSign_Text_0:
-	.string "This mountain is affectionately\n"
-	.string "referred to as MT. LANIKALA by the\l"
-	.string "locals, as it is the tallest mountain\l"
-	.string "on the ALOLA ISLES.\p"
-	.string "The real name of this mountain has been\n"
-	.string "lost to time.$"
+	.string "המקומיים מכנים את ההר הזה בחיבה בשם\n"
+	.string "הר לניקאלה, כי הוא הגבוה באיי אלולה.\p"
+	.string "שמו האמיתי של ההר הזה\n"
+	.string "נשכח עם השנים.$"
 
 Alola_Ulaula_UlaulaSign_Text_0:
-	.string "ULA'ULA ISLE$"
+	.string "האי אולאולה$"
 
 Alola_Ulaula_Phant_outside_Text_0:
-	.string "Hello there, {PLAYER}!\p"
-	.string "I'm the developer who built this\n"
-	.string "section of the game!\p"
-	.string "I hope you enjoyed this taste of ALOLA.\p"
-	.string "I'm working on a full demake of the\n"
-	.string "region called ULTRA ECLIPSE.$"
+	.string "שלום לך, {PLAYER}!\p"
+	.string "אני המפתח שבנה\n"
+	.string "את החלק הזה של המשחק!\p"
+	.string "מקווה שנהנית מהטעימה הזו מאלולה.\p"
+	.string "אני עובד על גרסת רטרו מלאה של\n"
+	.string "האזור, שנקראת אולטרה אקליפס.$"
 
 Alola_Ulaula_Phant_outside_Text_1:
-	.string "Please come visit me at my house at\n"
-	.string "the top of this isle.\l"
-	.string "I'll make it worth your while!$"
+	.string "בבקשה, בוא לבקר אותי בבית שלי\n"
+	.string "בראש האי הזה. זה ישתלם לך!$"
 
 Alola_Ulaula_TrainerBattlePicnicker_Text_0:
-	.string "Surprise!\nI was in the trees!$"
+	.string "הפתעה!\n"
+	.string "הייתי בין העצים!$"
 
 Alola_Ulaula_TrainerBattlePicnicker_Text_1:
-	.string "Back into hiding I go…$"
+	.string "חוזרת למחבוא…$"
 
 Alola_Ulaula_TrainerBattlePicnicker_Text_2:
-	.string "I thought I saw something red flying\n"
-	.string "through the sky.\p"
-	.string "Could it have been a POKéMON?$"
+	.string "נדמה לי שראיתי משהו אדום\n"
+	.string "עף בשמיים.\p"
+	.string "אולי זה היה פוקימון?$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_0:
-	.string "Hey, I'm going to be the first to climb\nMT. LANIKALA!$"
+	.string "היי, אני אהיה הראשון שיטפס\n"
+	.string "על הר לניקאלה!$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_1:
-	.string "It's not even the real MT. LANIKALA…$"
+	.string "זה אפילו לא הר לניקאלה האמיתי…$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_2:
-	.string "My dad never told me the real name of\n"
-	.string "this mountain.\p"
-	.string "We've always just called it MT. LANIKALA.$"
+	.string "אבא שלי אף פעם לא אמר לי\n"
+	.string "מה השם האמיתי של ההר הזה.\p"
+	.string "תמיד פשוט קראנו לו הר לניקאלה.$"
 
 Alola_Ulaula_TrainerBattleHiker_Text_0:
-	.string "You must be tough to handle this\nrough terrain!$"
+	.string "צריך להיות קשוח כדי להתמודד\n"
+	.string "עם השטח הקשה הזה!$"
 
 Alola_Ulaula_TrainerBattleHiker_Text_1:
-	.string "Oof,\nI should've trained harder…$"
+	.string "אוף,\n"
+	.string "הייתי צריך להתאמן קשה יותר…$"
 
 Alola_Ulaula_TrainerBattleHiker_Text_2:
-	.string "ULA'ULA ISLE has the best hiking!\p"
-	.string "The locals refer to this mountain as\n"
-	.string "MT. LANIKALA, as it is the tallest on\l"
-	.string "the ALOLA ISLES!$"
+	.string "באי אולאולה הטיולים הכי טובים!\p"
+	.string "המקומיים קוראים להר הזה הר לניקאלה,\n"
+	.string "כי הוא הגבוה ביותר באיי אלולה!$"
 
 Alola_Ulaula_TrainerBattleCooltrainer_Text_0:
-	.string "This cave smells terrible!\nLet's battle to get my mind off of it!$"
+	.string "המערה הזאת מסריחה נורא!\n"
+	.string "בוא נילחם, שאשכח קצת מהריח!$"
 
 Alola_Ulaula_TrainerBattleCooltrainer_Text_1:
-	.string "Should've brought some air freshener…$"
+	.string "הייתי צריכה להביא מטהר אוויר…$"
 
 Alola_Ulaula_TrainerBattleCooltrainer_Text_2:
-	.string "You should plug your nose if you plan\n"
-	.string "on going in that cave.$"
+	.string "אם מתכננים להיכנס למערה הזאת,\n"
+	.string "כדאי לסתום את האף.$"
 
 Alola_Ulaula_LassNPC_Text_0:
-	.string "The sea by the ISLES is truly\n"
-	.string "breathtaking.\p"
-	.string "I could sit here all day and just\n"
-	.string "watch the waves.$"
+	.string "הים ליד האיים באמת\n"
+	.string "עוצר נשימה.\p"
+	.string "הייתי יכולה לשבת כאן כל היום\n"
+	.string "ופשוט להסתכל על הגלים.$"
 
 Alola_Ulaula_Bench_Heal_Text_0:
-	.string "Would you like to take a rest on this\n"
-	.string "bench?$"
+	.string "לנוח קצת על הספסל הזה?$"
 
 Alola_Ulaula_EventScript_MoveTutor::
 	lock
@@ -590,126 +590,124 @@ Alola_Ulaula_EventScript_MoveTutorNoScales::
 	end
 
 Alola_Ulaula_Text_MoveTutorIntro:
-	.string "URGH!\n"
-	.string "AGH!\p"
-	.string "YOU!\p"
-	.string "Did the others send you here?\n"
-	.string "Did they tell you that I am the\l"
-	.string "master of POKéMON moves?\p"
+	.string "אררג!\n"
+	.string "אאח!\p"
+	.string "אתה!\p"
+	.string "האחרים שלחו אותך לכאן?\n"
+	.string "הם סיפרו לך שאני אמן מהלכי הפוקימונים?\p"
 	.string "........................\p"
-	.string "I can train your POKéMON in the\n"
-	.string "ways of the ISLES, but first, a\l"
-	.string "small fee.\p"
-	.string "The price is 5 HEART SCALES.\p"
-	.string "Do you have them?$"
+	.string "אני יכול לאמן את הפוקימונים שלך\n"
+	.string "בדרכי האיים, אבל קודם כול, תשלום קטן.\p"
+	.string "המחיר הוא 5 קשקשי לב.\p"
+	.string "יש לך אותם?$"
 
 Alola_Ulaula_Text_MoveTutorPaid:
-	.string "My wife loves these things.\p"
-	.string "From now on, my services are\n"
-	.string "granted to you.$"
+	.string "אשתי מתה על הדברים האלה.\p"
+	.string "מעכשיו, השירותים שלי\n"
+	.string "עומדים לרשותך.$"
 
 Alola_Ulaula_Text_MoveTutorNoScales:
-	.string "Five HEART SCALES.\n"
-	.string "Not four.\p"
-	.string "Try smashing rocks.\n"
-	.string "With your POKéMON, or your fists!$"
+	.string "חמישה קשקשי לב.\n"
+	.string "לא ארבעה.\p"
+	.string "כדאי לנסות לנפץ סלעים.\n"
+	.string "עם הפוקימונים שלך, או עם האגרופים!$"
 
 Alola_Ulaula_Text_MoveTutorChoose:
-	.string "Which move would you like?$"
+	.string "איזה מהלך תרצה?$"
 
 Alola_Ulaula_Text_MoveTutorConfirm:
-	.string "You'd like to learn {STR_VAR_1}?$"
+	.string "ללמד את המהלך {STR_VAR_1}?$"
 
 Alola_Ulaula_Text_MoveTutorWhichMon:
-	.string "Which POKéMON should learn it?$"
+	.string "איזה פוקימון ילמד אותו?$"
 
 Alola_Ulaula_Text_MoveTutorDone:
-	.string "EXCELLENT!\p"
-	.string "Your POKéMON holds the knowledge\n"
-	.string "of the ISLES.$"
+	.string "מצוין!\p"
+	.string "הפוקימון שלך נושא עכשיו\n"
+	.string "את הידע של האיים.$"
 
 Alola_Ulaula_Text_MoveTutorComeBack:
-	.string "The ISLES aren't going anywhere.\n"
-	.string "Come back anytime.$"
+	.string "האיים לא הולכים לשום מקום.\n"
+	.string "אפשר לחזור מתי שרוצים.$"
 
 Alola_Ulaula_Text_TutorMove_Acrobatics:
-	.string "ACROBATICS$"
+	.string "אקרובטיקה$"
 
 Alola_Ulaula_Text_TutorMove_AuroraVeil:
-	.string "AURORA VEIL$"
+	.string "צעיף זוהר$"
 
 Alola_Ulaula_Text_TutorMove_BrutalSwing:
-	.string "BRUTAL SWING$"
+	.string "תנופה אכזרית$"
 
 Alola_Ulaula_Text_TutorMove_Bulldoze:
-	.string "BULLDOZE$"
+	.string "דחפור$"
 
 Alola_Ulaula_Text_TutorMove_Confide:
-	.string "CONFIDE$"
+	.string "שיתוף סוד$"
 
 Alola_Ulaula_Text_TutorMove_DazzlingGleam:
-	.string "DAZZLING GLEAM$"
+	.string "בוהק מסנוור$"
 
 Alola_Ulaula_Text_TutorMove_DragonTail:
-	.string "DRAGON TAIL$"
+	.string "זנב דרקון$"
 
 Alola_Ulaula_Text_TutorMove_EchoedVoice:
-	.string "ECHOED VOICE$"
+	.string "קול מהדהד$"
 
 Alola_Ulaula_Text_TutorMove_FlameCharge:
-	.string "FLAME CHARGE$"
+	.string "שעטת להבה$"
 
 Alola_Ulaula_Text_TutorMove_FrostBreath:
-	.string "FROST BREATH$"
+	.string "נשימת כפור$"
 
 Alola_Ulaula_Text_TutorMove_Infestation:
-	.string "INFESTATION$"
+	.string "מכת מזיקים$"
 
 Alola_Ulaula_Text_TutorMove_LeechLife:
-	.string "LEECH LIFE$"
+	.string "התעלקות$"
 
 Alola_Ulaula_Text_TutorMove_LowSweep:
-	.string "LOW SWEEP$"
+	.string "טאטוא נמוך$"
 
 Alola_Ulaula_Text_TutorMove_Psyshock:
-	.string "PSYSHOCK$"
+	.string "הלם על-חושי$"
 
 Alola_Ulaula_Text_TutorMove_Quash:
-	.string "QUASH$"
+	.string "דיכוי$"
 
 Alola_Ulaula_Text_TutorMove_Round:
-	.string "ROUND$"
+	.string "שירת סבב$"
 
 Alola_Ulaula_Text_TutorMove_Scald:
-	.string "SCALD$"
+	.string "מים רותחים$"
 
 Alola_Ulaula_Text_TutorMove_SkyDrop:
-	.string "SKY DROP$"
+	.string "השלכה משמים$"
 
 Alola_Ulaula_Text_TutorMove_SludgeWave:
-	.string "SLUDGE WAVE$"
+	.string "גל רפש$"
 
 Alola_Ulaula_Text_TutorMove_SmackDown:
-	.string "SMACK DOWN$"
+	.string "מכה לקרקע$"
 
 Alola_Ulaula_Text_TutorMove_SmartStrike:
-	.string "SMART STRIKE$"
+	.string "מכה מחוכמת$"
 
 Alola_Ulaula_Text_TutorMove_Snarl:
-	.string "SNARL$"
+	.string "נביחה$"
 
 Alola_Ulaula_Text_TutorMove_Venoshock:
-	.string "VENOSHOCK$"
+	.string "הלם ארס$"
 
 Alola_Ulaula_Text_TutorMove_VoltSwitch:
-	.string "VOLT SWITCH$"
+	.string "החלפת וולט$"
 
 Alola_Ulaula_Text_TutorMove_WildCharge:
-	.string "WILD CHARGE$"
+	.string "שעטה פראית$"
 
 Alola_Ulaula_Text_TutorMove_WorkUp:
-	.string "WORK UP$"
+	.string "גיוס כוחות$"
 
 Alola_Ulaula_Text_TutorMove_Cancel:
-	.string "CANCEL$"
+	.string "ביטול$"
 

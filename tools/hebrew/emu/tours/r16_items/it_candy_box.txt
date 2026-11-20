@@ -1,0 +1,48 @@
+# ITEM_INFINITE_RARE_CANDIES (the box the Nuzlocke rare-candy challenge puts in the PC,
+# src/player_pc.c:369-371) used from the bag (DisplayItemMessage) and as the registered SELECT item
+# (DisplayItemMessageOnField): 'Obtained 999 Rare Candies!' (gText_Obtained999RareCandies,
+# ItemUseOutOfBattle_InfiniteRareCandies src/item_use.c:1562-1575). The box is put in the KEY ITEMS
+# pocket with setpocket instead of starting a challenge game (the message and its windows are the
+# same). REGISTER as tours/r10_backpack/bp14_register.txt.
+# Run: scripts/r16_items/items16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_items --only '^it_candy_box$'
+# Save: menuA_base.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+setpocket POCKET_KEY_ITEMS ITEM_INFINITE_RARE_CANDIES:1 ITEM_TOWN_MAP:1
+w16 @SB1+49A@ 0                           # gSaveBlock1Ptr->registeredItem = ITEM_NONE
+bagopen KEY_ITEMS
+snap cb_01_list
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+snap cb_02_ctx
+tap A 0                                   # USE
+waitkey 600
+snap cb_03_obtained_999_bag
+tap A 4
+waittaskx Task_BagMenu_HandleInput 300
+waitquiet
+snap cb_04_bag_after
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+tap ROWNEXT 4
+waitquiet
+snap cb_05_ctx_register
+tap A 4
+waittaskx Task_ItemContext_SingleRow 120
+waitquiet
+snap cb_06_how_tap
+tap A 4
+waittaskx Task_BagMenu_HandleInput 120
+waitquiet
+snap cb_07_registered
+bagclose
+tap B 4
+waitctl 600
+tap SELECT 4
+waitkey 600
+snap cb_08_obtained_999_field
+tap A 4
+waitctl 600
+snap cb_09_after

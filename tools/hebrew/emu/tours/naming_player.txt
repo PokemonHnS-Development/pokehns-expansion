@@ -1,0 +1,83 @@
+# Naming screen in the new-game intro (Hebrew build): the Hebrew keyboard page, typing the
+# player's name in Hebrew, the other two pages and their tabs, OK, the professor's confirmation,
+# and the name on the trainer card. Keys on the Hebrew page (visual columns, 0 = left):
+#   row 0: . ז ו ה ד ג ב א    row 1: , נ מ ל כ י ט ח
+#   row 2: - ש ר ק צ פ ע ס    row 3: ' _ ץ ף ן ם ך ת   (_ = space, ' = geresh)
+# The cursor starts on alef (column 7, row 0). The name typed is רון (resh, vav, final nun).
+# The naming screen reads input in sNamingScreen->state == 2 (u8 at +0x1E10).
+start empty
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+tap A 30                                  # NEW GAME
+waittask Task_NewGameHnsSpeech_ChooseGender 4000 A
+10 -
+tap A 30                                  # BOY
+waittask Task_NewGameHnsSpeech_WaitPressBeforeNameChoice 600
+tap A 30                                  # "And what's your name?"
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap naming_player_01_hebrew
+press DOWN                                # resh: row 2, column 2
+press DOWN
+press LEFT
+press LEFT
+press LEFT
+press LEFT
+press LEFT
+snap naming_player_02_on_resh
+press A
+waitnaming
+snap naming_player_03_typed_1
+press UP                                  # vav: row 0, column 2
+press UP
+press A
+waitnaming
+press DOWN                                # final nun: row 3, column 4
+press DOWN
+press DOWN
+press RIGHT
+press RIGHT
+press A
+waitnaming
+snap naming_player_04_typed_3
+press SELECT                              # the Latin page
+waitnaming
+snap naming_player_05_latin
+press SELECT                              # the symbols page
+waitnaming
+snap naming_player_06_symbols
+press SELECT                              # back to the Hebrew page
+waitnaming
+snap naming_player_07_hebrew_again
+press B                                   # delete the final nun, then type it again
+waitnaming
+snap naming_player_08_deleted
+press A
+waitnaming
+press START                               # cursor to OK
+waitnaming
+snap naming_player_09_ok
+press A
+waittask Task_NewGameHnsSpeech_ProcessNameYesNoMenu 900
+10 -
+snap naming_player_10_confirm
+tap A 30                                  # YES
+waittask Task_NewGameHnsSpeech_WaitPressDisclaimer 1200 A
+tap A 30
+waittask challenge_menu:Task_ProcessInput 600
+tap R 20
+tap R 20
+tap R 20
+tap R 20
+tap R 20
+tap R 20
+waittask Task_CallYesOrNoCallback 120
+tap A 30                                  # YES -> back to the professor
+waitcb2 CB2_Overworld 3000 A
+waitctl 1200
+startmenu PLAYER
+waitcb2x CB2_TrainerCard 900
+waitpmem 8 trainer_card:sData 0 10 900
+snap naming_player_11_trainercard
+press B
+waitcb2x CB2_Overworld 900

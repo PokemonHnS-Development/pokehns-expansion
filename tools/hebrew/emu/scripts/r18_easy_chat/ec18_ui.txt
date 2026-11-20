@@ -1,0 +1,200 @@
+# The Easy Chat screen of the Hebrew build: the mirrored layout and the Hebrew alphabet keyboard
+# (src/easy_chat.c under TEXT_RTL). The Odd Egg clerk's INTERVIEW screen (Route34_DayCare_hns,
+# 2x2 frame), opened the way the game opens it. In it:
+#  - the phrase cursor on all four slots and the three footer buttons: it must stand right of its
+#    slot or button and point left;
+#  - the group keyboard: every group name inside the frame, the cursor box on a first-column and a
+#    second-column group, the button window next to the first column;
+#  - the word list of CONDITIONS: the cursor beside the selected word in both columns;
+#  - the alphabet keyboard: alef to tav and Others right to left, the cursor box on every key, each
+#    row's last key (the last row ends at tav: the four blank keys are skipped), and every one of
+#    the 23 lists paged to its end;
+#  - a phrase of four words, OK -> the YES/NO box at the left end of the frame.
+# heapstat walks the heap while the screen is open (sWordData is the struct the keyboard fills).
+start saves/ladder6_postgame.sav
+include ../continue.txt
+ev setflag FLAG_SYS_GAME_CLEAR; clearflag FLAG_RECEIVED_ODD_EGG; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_PIDGEOT, 50; special CalculatePlayerPartyCount; end
+warptoloose MAP_ROUTE34_DAY_CARE_HNS 10 4
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+talk ui_clerk_q 10
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+heapstat interview
+ecstate
+snap ui_slot00
+ecslot 0 1
+snap ui_slot01
+ecslot 1 0
+snap ui_slot10
+ecslot 1 1
+snap ui_slot11
+ecbutton 0
+snap ui_btn_delall
+ecbutton 1
+snap ui_btn_cancel
+ecbutton 2
+snap ui_btn_ok
+ecslot 0 0
+
+# group keyboard
+ec A
+ecstate
+snap ui_kbd_first
+ecgroups ui_kbd_groups
+ecgroup EC_GROUP_POKEMON
+snap ui_kbd_col0
+ecgroup EC_GROUP_TRAINER
+snap ui_kbd_col1
+ecgroup EC_GROUP_STATUS
+ec RIGHT
+ecstate
+snap ui_kbd_btnwin
+ec LEFT
+ecstate
+
+# a word list: the cursor in both columns
+ecgroup EC_GROUP_CONDITIONS
+ec A
+ecstate
+snap ui_list_c0
+ecword EC_WORD_ELSE
+snap ui_list_c1
+ecword EC_WORD_AWFUL
+snap ui_list_c0r1
+eclist ui_list_conditions 80
+ec B
+
+# alphabet keyboard
+ec SELECT
+ecstate
+heapstat alphabet
+snap ui_abc
+eckeys ui_key
+ecletter 3 2
+ec LEFT
+ecstate
+snap ui_abc_after_tav
+ecletter 0 0
+ec A
+eclist ui_abc_alef 80
+ec B
+ecletter 0 1
+ec A
+eclist ui_abc_bet 80
+ec B
+ecletter 0 2
+ec A
+eclist ui_abc_gimel 80
+ec B
+ecletter 0 3
+ec A
+eclist ui_abc_dalet 80
+ec B
+ecletter 0 4
+ec A
+eclist ui_abc_he 80
+ec B
+ecletter 0 5
+ec A
+eclist ui_abc_vav 80
+ec B
+ecletter 0 6
+ec A
+eclist ui_abc_others 80
+ec B
+ecletter 1 0
+ec A
+eclist ui_abc_zayin 80
+ec B
+ecletter 1 1
+ec A
+eclist ui_abc_het 80
+ec B
+ecletter 1 2
+ec A
+eclist ui_abc_tet 80
+ec B
+ecletter 1 3
+ec A
+eclist ui_abc_yod 80
+ec B
+ecletter 1 4
+ec A
+eclist ui_abc_kaf 80
+ec B
+ecletter 1 5
+ec A
+eclist ui_abc_lamed 80
+ec B
+ecletter 2 0
+ec A
+heapstat mem_list
+eclist ui_abc_mem 80
+ec B
+ecletter 2 1
+ec A
+eclist ui_abc_nun 80
+ec B
+ecletter 2 2
+ec A
+eclist ui_abc_samekh 80
+ec B
+ecletter 2 3
+ec A
+eclist ui_abc_ayin 80
+ec B
+ecletter 2 4
+ec A
+eclist ui_abc_pe 80
+ec B
+ecletter 2 5
+ec A
+eclist ui_abc_tsadi 80
+ec B
+ecletter 2 6
+ec A
+eclist ui_abc_qof 80
+ec B
+ecletter 3 0
+ec A
+eclist ui_abc_resh 80
+ec B
+ecletter 3 1
+ec A
+eclist ui_abc_shin 80
+ec B
+ecletter 3 2
+ec A
+eclist ui_abc_tav 80
+ec B
+ec SELECT
+ec B
+ecstate
+
+# four words, OK -> the YES/NO box
+ecputword 0 0 EC_GROUP_STATUS EC_WORD_STATIC
+ecputword 0 1 EC_GROUP_FEELINGS EC_WORD_HAPPY
+ecputword 1 0 EC_GROUP_CONDITIONS EC_WORD_ABSENT
+ecputword 1 1 EC_GROUP_FEELINGS EC_WORD_MEET
+ecstate
+snap ui_4words
+ecslot 1 1
+snap ui_4words_slot11
+ecbutton 2
+ec A
+ecstate
+snap ui_confirm
+ec DOWN
+snap ui_confirm_no
+tap A 0
+ecwait
+ecstate
+snap ui_back
+ec B
+snap ui_quit
+ec UP
+tap A 0
+waitcb2x CB2_Overworld 900
+talk ui_after 10 -
+waitctl 900

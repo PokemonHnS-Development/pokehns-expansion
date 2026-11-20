@@ -1,0 +1,232 @@
+# Field moves in the party menu (src/party_menu.c SetPartyMonFieldSelectionActions :2934,
+# colour :2855-2856, CursorCb_FieldMove :4138; list src/field_move.c:129-252): each Pokemon's
+# action list with its field moves in their own colour, the "can't use that here" family of
+# messages in the Cherrygrove Pokemon Center, Sweet Scent's "nothing here", Soft-Boiled's HP
+# transfer (src/fldeff_softboiled.c), then outdoors Teleport's "Return to the last healing
+# spot?" and in Dark Cave Dig's "Escape from here?" and Flash.
+# OW_ROCK_CLIMB_FIELD_MOVE and OW_DEFOG_FIELD_MOVE are FALSE (include/config/overworld.h), so
+# ROCK CLIMB and DEFOG never appear. Fly is listed for a species that can learn it (Pidgeot),
+# Flash for one that can learn it while HM05 is in the bag (Pikachu).
+# Party: 0 Typhlosion (CUT STRENGTH ROCK SMASH; HP 30 for Soft-Boiled), 1 Pikachu (TELEPORT DIG
+# SWEET SCENT + FLASH), 2 Ampharos (SOFT-BOILED MILK DRINK SECRET POWER), 3 Gyarados (SURF
+# WATERFALL DIVE), 4 egg, 5 Pidgeot (FLY).
+start saves/menuA_base.sav
+include ../scripts/continue.txt
+ev givemon SPECIES_PIDGEOT, 40, move1=MOVE_GUST, move2=MOVE_QUICK_ATTACK, move3=MOVE_NONE, move4=MOVE_NONE; setmonmove 0, 0, MOVE_CUT; setmonmove 0, 1, MOVE_STRENGTH; setmonmove 0, 2, MOVE_ROCK_SMASH; setmonmove 0, 3, MOVE_FLAMETHROWER; setmonmove 1, 0, MOVE_TELEPORT; setmonmove 1, 1, MOVE_DIG; setmonmove 1, 2, MOVE_SWEET_SCENT; setmonmove 1, 3, MOVE_THUNDERBOLT; setmonmove 2, 0, MOVE_SOFT_BOILED; setmonmove 2, 1, MOVE_MILK_DRINK; setmonmove 2, 2, MOVE_SECRET_POWER; setmonmove 2, 3, MOVE_THUNDER; setmonmove 3, 0, MOVE_SURF; setmonmove 3, 1, MOVE_WATERFALL; setmonmove 3, 2, MOVE_DIVE; setmonmove 3, 3, MOVE_HYPER_BEAM; end
+sethp player 0 30
+
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_fm_01_party
+
+# Typhlosion: SUMMARY, CUT, STRENGTH, ROCK SMASH, SWITCH, ITEM, FOLLOWER, CANCEL
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap pbi_fm_02_typhlosion_actions
+tap DOWN 4
+waitquiet
+tap A 4                                   # CUT
+waittaskx Task_CancelAfterAorBPress 300
+waitquiet
+snap pbi_fm_03_cut_nothing
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # STRENGTH
+waittaskx Task_CancelAfterAorBPress 300
+waitquiet
+snap pbi_fm_04_strength_cant
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Pikachu: SUMMARY, TELEPORT, DIG, SWEET SCENT, FLASH, SWITCH, ITEM, CANCEL
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap pbi_fm_05_pikachu_actions
+tap DOWN 4
+waitquiet
+tap A 4                                   # TELEPORT (indoors)
+waittaskx Task_CancelAfterAorBPress 300
+waitquiet
+snap pbi_fm_06_teleport_cant
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # FLASH (not a cave)
+waittaskx Task_CancelAfterAorBPress 300
+waitquiet
+snap pbi_fm_07_flash_cant
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Gyarados: SUMMARY, SURF, WATERFALL, DIVE, SWITCH, ITEM, CANCEL
+seek 8 @gPartyMenu+9@ 3 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap pbi_fm_08_gyarados_actions
+tap DOWN 4
+waitquiet
+tap A 4                                   # SURF
+waittaskx Task_CancelAfterAorBPress 300
+waitquiet
+snap pbi_fm_09_surf_cant
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Pidgeot: SUMMARY, FLY, SWITCH, ITEM, CANCEL
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap pbi_fm_10_pidgeot_actions
+tap DOWN 4
+waitquiet
+tap A 4                                   # FLY (indoors)
+waittaskx Task_CancelAfterAorBPress 300
+waitquiet
+snap pbi_fm_11_fly_cant
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+
+# Ampharos: SUMMARY, SOFT-BOILED, MILK DRINK, SECRET POWER, SWITCH, ITEM, CANCEL
+seek 8 @gPartyMenu+9@ 2 UP
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap pbi_fm_12_ampharos_actions
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # SECRET POWER (no bush or tree here)
+waittaskx Task_CancelAfterAorBPress 300
+waitquiet
+snap pbi_fm_13_secret_power_cant
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4                                   # SOFT-BOILED
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_fm_14_softboiled_which
+seek 8 @gPartyMenu+A@ 0 UP              # the target cursor is slotId2 (include/party_menu.h)
+waitquiet
+tap A 4                                   # on Typhlosion
+waitkey 900
+snap pbi_fm_15_softboiled_restored
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pbi_fm_16_party_after_softboiled
+
+# Pikachu: SWEET SCENT closes the menu; "Looks like there's nothing here..." in the field
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # SWEET SCENT
+waitcb2x CB2_Overworld 900
+waitkey 900
+snap pbi_fm_17_sweet_scent_nothing
+tap A 4
+waitctl 900
+
+# Outdoors (Cherrygrove City): Pikachu TELEPORT asks to return to the last healing spot; NO
+go DOWN 9
+waitctl 900
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4                                   # TELEPORT
+waittaskx Task_HandleFieldMoveExitAreaYesNoInput 600
+waitquiet
+snap pbi_fm_18_teleport_ask
+tap B 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# Dark Cave: Pikachu DIG asks to escape; NO; then FLASH lights the cave
+warpto MAP_DARK_CAVE_SOUTH_SIDE_HNS 14 19
+waitctl 900
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # DIG
+waittaskx Task_HandleFieldMoveExitAreaYesNoInput 600
+waitquiet
+snap pbi_fm_19_dig_ask
+tap B 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+tap A 4                                   # FLASH
+waitcb2x CB2_Overworld 900
+waitctl 1200 A
+snap pbi_fm_20_flash_used

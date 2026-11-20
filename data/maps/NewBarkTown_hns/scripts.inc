@@ -20,7 +20,7 @@ NewBarkTown_EventScript_ElmCallAfterLeague::
 	end
 
 NewBarkTown_Text_ElmName:
-	.string "PROF.ELM$"
+	.string "פרופ' אלם$"
 
 NewBarkTown_OnTransition::
 	goto_if_eq VAR_NEWBARK_TOWN_STATE, 2, NewBarkTown_Set_TalkToElm
@@ -225,55 +225,55 @@ NewBarkTown_Movement_FaceDown:
 	step_end
 
 NewBarkTown_Text_LabSign:
-	.string "PROF.ELM'S LAB$"
+	.string "המעבדה של פרופ' אלם$"
 
 NewBarkTown_Text_Door:
-	.string "The door is locked.$"
+	.string "הדלת נעולה.$"
 
 NewBarkTown_Text_Wooper:
-	.string "WOOPER: Woooooop.$"
+	.string "וופר: ווווווופ.$"
 
 NewBarkTown_Text_FatManState2:
-	.string "Wow, your POKéGEAR is impressive!\n"
-	.string "Did your mom get it for you?$"
+	.string "וואו, הפוקיגיר שלך מרשים!\n"
+	.string "אמא שלך קנתה לך אותו?$"
 
 NewBarkTown_Text_FatManState3:
-	.string "Yo, {PLAYER}!\p"
-	.string "I hear PROF.ELM discovered\n"
-	.string "some new POKéMON.$"
+	.string "יו, {PLAYER}!\p"
+	.string "שמעתי שפרופ' אלם גילה\n"
+	.string "כמה פוקימונים חדשים.$"
 
 NewBarkTown_Text_LassState2:
-	.string "Wait, {PLAYER}!\p"
-	.string "It's dangerous to go out\n"
-	.string "without a POKéMON!\p"
-	.string "Wild POKéMON jump out of the grass\n"
-	.string "on the way to the next town.$"
+	.string "רגע, {PLAYER}!\p"
+	.string "מסוכן לצאת\n"
+	.string "בלי פוקימון!\p"
+	.string "בדרך לעיר הבאה, פוקימונים\n"
+	.string "פראיים קופצים מתוך הדשא.$"
 
 NewBarkTown_Text_LassState3:
-	.string "Oh! Your POKéMON is adorable!\n"
-	.string "I wish I had one!$"
+	.string "אוי! הפוקימון שלך מקסים!\n"
+	.string "הלוואי שהיה לי אחד!$"
 
 NewBarkTown_Text_LassState4:
-	.string "Hi, {PLAYER}! Leaving again?\p"
-	.string "You should tell your mom if\n"
-	.string "you are leaving.$"
+	.string "היי, {PLAYER}! שוב יוצא לדרך?\p"
+	.string "כדאי לספר לאמא שלך\n"
+	.string "שאתה יוצא.$"
 
 NewBarkTown_Text_LassState5:
-	.string "Call your mom on your POKéGEAR\n"
-	.string "to let her know how you're doing.$\p"
+	.string "תתקשר לאמא שלך בפוקיגיר\n"
+	.string "כדי לספר לה מה שלומך.$\p"
 
 NewBarkTown_Text_Silver1:
 	.string ". . .\p"
-	.string "So this is the famous ELM\n"
-	.string "POKéMON LAB…$"
+	.string "אז זו מעבדת הפוקימונים\n"
+	.string "המפורסמת של אלם…$"
 
 NewBarkTown_Text_Silver2:
-	.string "…What are you staring at?$"
+	.string "…מה אתה בוהה בי?$"
 
 NewBarkTown_Text_Sign:
-	.string "NEW BARK TOWN\p"
-	.string "The Town Where the Winds of\n"
-	.string "a New Beginning Blow$"
+	.string "העיירה ניו בארק\p"
+	.string "העיירה שבה נושבות\n"
+	.string "רוחות של התחלה חדשה$"
 
 NewBarkTown_EventScript_PlayersHouseMailbox::
 	msgbox NewBarkTown_Text_PlayersHouse, MSGBOX_SIGN
@@ -284,8 +284,8 @@ NewBarkTown_EventScript_ElmsHouseMailbox::
 	end
 
 NewBarkTown_Text_PlayersHouse:
-	.string "{PLAYER}'S HOUSE$"
+	.string "הבית של {PLAYER}$"
 
 NewBarkTown_Text_ElmsHouse:
-	.string "PROF.ELM'S HOUSE$"
+	.string "הבית של פרופ' אלם$"
 

@@ -1,0 +1,85 @@
+# Buena's password (Radio Tower 2F, Buena at (28,14) facing right): no show today, then the
+# password multichoice (Special_BuenaPasswordShowMultichoice) for each of the 11 categories
+# (B: come back), a wrong answer, already played, and a right answer with the prize.
+start saves/r1svc_menuA_base.sav
+include ../continue.txt
+ev setvar VAR_GOLDENROD_CITY_STATE, 0; clearflag FLAG_DAILY_BUENAS_PASSWORD; clearflag FLAG_DAILY_BUENAS_PASSWORD_GUESSED; end
+warpto MAP_GOLDENROD_CITY_RADIO_TOWER_2F_HNS 29 14
+face LEFT
+talk svc_buena_noshow 10
+waitctl 900
+ev setflag FLAG_DAILY_BUENAS_PASSWORD; setvar VAR_RADIO_BUENAS_PASSWORD, 0x00; end
+face LEFT
+talk svc_buena_c00 10
+tap B 0
+talk svc_buena_c00_back 10 -
+waitctl 900
+ev setvar VAR_RADIO_BUENAS_PASSWORD, 0x10; end
+face LEFT
+talk svc_buena_c01 10
+tap B 0
+waitctl 900 B
+ev setvar VAR_RADIO_BUENAS_PASSWORD, 0x20; end
+face LEFT
+talk svc_buena_c02 10
+tap B 0
+waitctl 900 B
+ev setvar VAR_RADIO_BUENAS_PASSWORD, 0x30; end
+face LEFT
+talk svc_buena_c03 10
+tap B 0
+waitctl 900 B
+ev setvar VAR_RADIO_BUENAS_PASSWORD, 0x40; end
+face LEFT
+talk svc_buena_c04 10
+tap B 0
+waitctl 900 B
+ev setvar VAR_RADIO_BUENAS_PASSWORD, 0x50; end
+face LEFT
+talk svc_buena_c05 10
+tap B 0
+waitctl 900 B
+ev setvar VAR_RADIO_BUENAS_PASSWORD, 0x60; end
+face LEFT
+talk svc_buena_c06 10
+tap B 0
+waitctl 900 B
+ev setvar VAR_RADIO_BUENAS_PASSWORD, 0x70; end
+face LEFT
+talk svc_buena_c07 10
+tap B 0
+waitctl 900 B
+ev setvar VAR_RADIO_BUENAS_PASSWORD, 0x80; end
+face LEFT
+talk svc_buena_c08 10
+tap B 0
+waitctl 900 B
+ev setvar VAR_RADIO_BUENAS_PASSWORD, 0x90; end
+face LEFT
+talk svc_buena_c09 10
+tap B 0
+waitctl 900 B
+ev setvar VAR_RADIO_BUENAS_PASSWORD, 0xA0; end
+face LEFT
+talk svc_buena_c10 10
+press DOWN
+snap svc_buena_c10_2
+press DOWN
+snap svc_buena_c10_3
+# wrong: make choice 2 the right one, answer the top one
+w8 @pokenav_radio:sBuenaCorrectChoice@ 2
+seek 8 @menu:sMenu+2@ 0 UP
+tap A 0
+talk svc_buena_wrong 10 -
+waitctl 900
+face LEFT
+talk svc_buena_played 10
+waitctl 900
+# right: choice 0 is the right one
+ev clearflag FLAG_DAILY_BUENAS_PASSWORD_GUESSED; setvar VAR_RADIO_BUENAS_PASSWORD, 0x40; end
+face LEFT
+talk svc_buena_right_ask 10
+w8 @pokenav_radio:sBuenaCorrectChoice@ 0
+tap A 0
+talk svc_buena_right 10 -
+waitctl 900

@@ -63,41 +63,41 @@ VerdanturfTown_FriendshipRatersHouse_EventScript_Pikachu::
 	end
 
 VerdanturfTown_FriendshipRatersHouse_Text_SeeHowMuchPokemonLikesYou:
-	.string "Let me see your POKéMON.\n"
-	.string "I'll check to see how much it likes you.\p"
-	.string "Oh.\n"
-	.string "Your POKéMON…$"
+	.string "אפשר לראות את הפוקימון שלך?\n"
+	.string "אבדוק כמה הוא אוהב אותך.\p"
+	.string "אה.\n"
+	.string "הפוקימון שלך…$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_AdoresYou:
-	.string "It adores you.\n"
-	.string "It can't possibly love you any more.\l"
-	.string "I even feel happy seeing it.$"
+	.string "הוא מעריץ אותך. הוא לא יכול\n"
+	.string "לאהוב אותך יותר מזה.\p"
+	.string "אפילו אני שמחה לראות את זה.$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_VeryHappy:
-	.string "It seems to be very happy.\n"
-	.string "It obviously likes you a whole lot.$"
+	.string "הוא נראה מאושר מאוד.\n"
+	.string "ברור שהוא אוהב אותך מאוד מאוד.$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_LikesYouQuiteALot:
-	.string "It likes you quite a lot.\n"
-	.string "It seems to want to be babied a little.$"
+	.string "הוא אוהב אותך די הרבה.\n"
+	.string "נראה שהוא רוצה קצת פינוקים.$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_GettingUsedToYou:
-	.string "It's getting used to you.\n"
-	.string "It seems to believe in you.$"
+	.string "הוא מתחיל להתרגל אליך.\n"
+	.string "נראה שהוא מאמין בך.$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_NotUsedToYou:
-	.string "It's not very used to you yet.\n"
-	.string "It neither loves nor hates you.$"
+	.string "הוא עדיין לא ממש רגיל אליך.\n"
+	.string "הוא לא אוהב אותך וגם לא שונא.$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_VeryWary:
-	.string "It's very wary.\n"
-	.string "It has scary viciousness in its eyes.\l"
-	.string "It doesn't like you much at all.$"
+	.string "הוא חשדן מאוד. יש בעיניים שלו\n"
+	.string "אכזריות מפחידה.\p"
+	.string "הוא בכלל לא אוהב אותך.$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_DetestsYou:
-	.string "This is a little hard for me to say…\p"
-	.string "Your POKéMON simply detests you.\n"
-	.string "Doesn't that make you uncomfortable?$"
+	.string "קצת קשה לי להגיד את זה…\p"
+	.string "הפוקימון שלך פשוט מתעב אותך.\n"
+	.string "זה לא מטריד אותך?$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_Pikachu:
 	.string "PIKACHU: Pika pika!$"

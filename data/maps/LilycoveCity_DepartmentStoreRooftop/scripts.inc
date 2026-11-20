@@ -200,20 +200,20 @@ LilycoveCity_DepartmentStoreRooftop_Text_BoneDryThirsty:
 	.string "Ohh… I'm bone-dry thirsty!$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_WhichDrinkWouldYouLike:
-	.string "It's a VENDING MACHINE.\n"
-	.string "Which drink would you like?$"
+	.string "זו מכונת ממכר.\n"
+	.string "איזה משקה תרצה?$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_CanOfDrinkDroppedDown:
-	.string "Clang!\p"
-	.string "A can of {STR_VAR_1} dropped down.$"
+	.string "קלאנג!\p"
+	.string "נפלה פחית {STR_VAR_1}.$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_ExtraCanOfDrinkDroppedDown:
-	.string "Clang!\p"
-	.string "Score! An extra can of {STR_VAR_1}\n"
-	.string "dropped down!$"
+	.string "קלאנג!\p"
+	.string "יש! נפלה עוד פחית\n"
+	.string "{STR_VAR_1}!$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_NotEnoughMoney:
-	.string "Not enough money…$"
+	.string "אין מספיק כסף…$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_DecidedAgainstBuyingDrink:
-	.string "Decided against buying a drink.$"
+	.string "החלטת לא לקנות משקה.$"

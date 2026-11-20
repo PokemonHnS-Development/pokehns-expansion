@@ -1,0 +1,22 @@
+# New Sinjoh travel shop (NewSinjoh_hns/scripts.inc:131-158).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_NEW_SINJOH_HNS 40 12
+evstart goto NewSinjoh_Script_TravelMart
+talk m11_sjtravel_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m11_sjtravel_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m11_sjtravel
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m11_sjtravel_bye 10 -
+waitctl 900

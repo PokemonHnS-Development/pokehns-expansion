@@ -1,0 +1,62 @@
+# Repel / Lure ran out (src/wild_encounter.c:1150-1180 -> EventScript_SprayWoreOff,
+# data/scripts/repel.inc). With I_REPEL_LURE_MENU TRUE (include/config/item.h:37) and two or more
+# sprays of the type in the bag: "...wore off! Use another?" plus the spray menu (DrawSprayMenu,
+# src/sprays.c:79-101: the sprays in the bag + CANCEL, DrawMultichoiceMenuInternal at tile x 18).
+# One spray left: "...wore off... Use X?" YES/NO. None: "...wore off...". After a choice:
+# "{PLAYER} used X." The bag of menuA_base holds every item (debug fill).
+start saves/ofui_menuA_base.sav
+include ../continue.txt
+go DOWN 9
+waitctl 600
+go DOWN 1
+face RIGHT
+
+# (a) Repel ran out, three Repels in the bag: the menu, each row (DOWN wraps), then REPEL
+setvar VAR_REPEL_STEP_COUNT 1
+10 RIGHT
+talk spray_rep 4 -
+press DOWN
+snap spray_rep_menu_row2
+press DOWN
+snap spray_rep_menu_row3
+press DOWN
+snap spray_rep_menu_row4
+press DOWN
+snap spray_rep_menu_row1
+press A
+talk spray_rep_used 4 -
+waitctl 600
+showvar VAR_REPEL_STEP_COUNT
+
+# (b) Lure ran out (REPEL_LURE_MASK, include/constants/item.h:36): the Lure menu, then CANCEL (B)
+setvar VAR_REPEL_STEP_COUNT 8001
+10 RIGHT
+talk spray_lure 4 -
+press B
+waitctl 600
+
+# (c) one kind of Repel left: "Use REPEL?" YES/NO, YES
+ev removeitem ITEM_SUPER_REPEL, 999; removeitem ITEM_MAX_REPEL, 999; end    # the debug fill gives 999 of each
+setvar VAR_REPEL_STEP_COUNT 1
+10 RIGHT
+talk spray_one 4 -
+press A
+talk spray_one_used 4 -
+waitctl 600
+
+# (d) no Repel left: "...wore off..."
+ev removeitem ITEM_REPEL, 999; removeitem ITEM_REPEL, 998; removeitem ITEM_REPEL, 997; end    # (a) and (c) used one each
+setvar VAR_REPEL_STEP_COUNT 1
+10 RIGHT
+talk spray_none 4 -
+waitctl 600
+
+# (e) Lure ran out with one kind of Lure left: "Use LURE?" YES/NO, NO
+ev removeitem ITEM_SUPER_LURE, 999; removeitem ITEM_MAX_LURE, 999; end
+setvar VAR_REPEL_STEP_COUNT 8001
+10 RIGHT
+talk spray_lure_one 4 -
+press DOWN
+snap spray_lure_one_no
+press A
+waitctl 600

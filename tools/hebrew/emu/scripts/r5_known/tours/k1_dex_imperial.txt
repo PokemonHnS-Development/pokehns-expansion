@@ -1,0 +1,54 @@
+# K1: the imperial height ("2'04”") on the Pokedex INFO page and in the size-record sentences.
+# OPTIONS > MAIN row 11 (units) to imperial, as in scripts/r4_fixes/tours/fx_dex_imperial.txt; then
+# the size-record sentences, which take the same string through src/pokemon_size_record.c
+# ReturnHeightStringNoWhitespace (the Seedot and Lotad records of SootopolisCity_LotadAndSeedotHouse,
+# English text in both ROMs, shown here as RAM scripts; the FRLG Magikarp and Heracross houses are
+# not linked into either ROM); then the INFO page of Hoothoot
+# (one-digit feet), Chikorita, Steelix and Gyarados (two-digit feet, src/pokedex.c:4398-4400).
+# Run with scripts/r5_known/r5known.py; the save is a copy of saves_screens/r4_misc/r4_menuA_base.sav.
+start saves/k1_menuA_base.sav
+include ../../continue.txt
+startmenu OPTION
+waitcb2x option_menu:MainCB2 900
+waittaskx option_menu:Task_ProcessInput 900
+waitquiet
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press RIGHT
+snap k1_opt_imperial
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 900
+evstart lock; setvar VAR_SEEDOT_SIZE_RECORD, 0x8000; special GetSeedotSizeRecordInfo; msgbox 0x@SootopolisCity_LotadAndSeedotHouse_Text_BiggestSeedotInHistory@, MSGBOX_DEFAULT; release; end
+talk k1_size_seedot 6 -
+waitctl 900
+evstart lock; setvar VAR_LOTAD_SIZE_RECORD, 0x8000; special GetLotadSizeRecordInfo; msgbox 0x@SootopolisCity_LotadAndSeedotHouse_Text_BiggestLotadInHistory@, MSGBOX_DEFAULT; release; end
+talk k1_size_lotad 6 -
+waitctl 900
+dexopen
+dexgoto 14
+dexinfo
+snap k1_dex_hoothoot_info
+dexback
+dexgoto 0
+dexinfo
+snap k1_dex_chikorita_info
+dexback
+dexgoto 64
+dexinfo
+snap k1_dex_steelix_info
+dexback
+dexgoto 78
+dexinfo
+snap k1_dex_gyarados_info
+dexback

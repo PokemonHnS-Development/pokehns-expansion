@@ -1,0 +1,19 @@
+# Journey-style warps by poking the save block (hns.py Emu.warp), checked on screen.
+#   hns.py run scripts/warp_demo.txt OUTDIR --save $HNS_SAVES/ladder1_newgame.sav
+# Map numbers: `hns.py map POKEMON_CENTER` (group = index in data/maps/map_groups.json
+# group_order, num = index inside the group, exactly as tools/mapjson numbers them).
+include continue.txt
+echo SaveBlock1 before any warp:
+r32 @gSaveBlock1Ptr@
+warp 2 0 7 7                 # MAP_CHERRYGROVE_CITY_POKEMON_CENTER_HNS, one tile above the door
+shot wp_cherrygrove_pc
+expectloc 2 0 7 7
+tap UP 16                    # the player answers to input after a poke-warp
+tap UP 16
+expectloc 2 0 7 6
+warp 0 0 10 10               # MAP_NEW_BARK_TOWN_HNS, outdoors, below the lab door
+shot wp_new_bark
+warp 5 0 7 7                 # MAP_GOLDENROD_CITY_POKEMON_CENTER_HNS
+shot wp_goldenrod_pc
+echo SaveBlock1 after three warps (it moves on every map load):
+r32 @gSaveBlock1Ptr@

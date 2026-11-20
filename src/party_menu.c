@@ -512,11 +512,11 @@ static void Task_FirstBattleEnterParty_RunPrinterMsg2(u8 taskId);
 static void Task_FirstBattleEnterParty_FadeNormal(u8 taskId);
 static void Task_FirstBattleEnterParty_WaitFadeNormal(u8 taskId);
 
-static const u8 sText_askText[] = _("Would you like to change {STR_VAR_1}'s\nability to {STR_VAR_2}?");
-static const u8 sText_doneText[] = _("{STR_VAR_1}'s ability became\n{STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_BasePointsResetToZero[] = _("{STR_VAR_1}'s base points\nwere all reset to zero!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_CannotSendMonToBoxHM[] = _("Cannot send that mon to the box,\nbecause it knows a HM move.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_CannotSendMonToBoxPartner[] = _("Cannot send a mon that doesn't\nbelong to you to the box.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_askText[] = _("לשנות את היכולת של {STR_VAR_1}\nל{STR_VAR_2}?");
+static const u8 sText_doneText[] = _("היכולת של {STR_VAR_1} השתנתה\nל{STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BasePointsResetToZero[] = _("כל הנקודות הבסיסיות של\n{STR_VAR_1} אופסו!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_CannotSendMonToBoxHM[] = _("אי אפשר לשלוח את הפוקימון הזה לתיבה,\nכי הוא יודע מהלך מ”נ.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_CannotSendMonToBoxPartner[] = _("אי אפשר לשלוח לתיבה\nפוקימון שלא שייך לך.{PAUSE_UNTIL_PRESS}");
 
 // static const data
 #include "data/party_menu.h"
@@ -2325,6 +2325,16 @@ static void InitPartyMenuWindows(u8 layout)
         InitWindows(sShowcaseMultiPartyMenuWindowTemplate);
         break;
     }
+#if TEXT_RTL
+    {
+        // Each slot's background art is blitted into its window in slices, and the nickname,
+        // level and HP sit in fixed boxes on that art, so the slots keep the English layout and
+        // only the reading order flips.
+        u32 i;
+        for (i = 0; i < PARTY_SIZE; i++)
+            SetWindowRtlMode(i, WINDOW_RTL_IN_PLACE);
+    }
+#endif
     LoadPartyMenuWindows();
 }
 
@@ -2351,6 +2361,9 @@ static void CreateCancelConfirmWindows(bool8 chooseHalf)
         if (chooseHalf == TRUE)
         {
             confirmWindowId = AddWindow(&sConfirmButtonWindowTemplate);
+#if TEXT_RTL
+            SetWindowRtlMode(confirmWindowId, WINDOW_RTL_IN_PLACE); // Label on fixed button art
+#endif
             FillWindowPixelBuffer(confirmWindowId, PIXEL_FILL(0));
             mainOffset = GetStringCenterAlignXOffset(FONT_SMALL, gMenuText_Confirm, 48);
             AddTextPrinterParameterized4(confirmWindowId, FONT_SMALL, mainOffset, 1, 0, 0, sFontColorTable[0], TEXT_SKIP_DRAW, gMenuText_Confirm);
@@ -2364,6 +2377,11 @@ static void CreateCancelConfirmWindows(bool8 chooseHalf)
             cancelWindowId = AddWindow(&sCancelButtonWindowTemplate);
             offset = 3;
         }
+#if TEXT_RTL
+        // The label is placed on fixed button art, clear of the Poké Ball on its left (offset), so
+        // it keeps its English extent and only the reading order flips.
+        SetWindowRtlMode(cancelWindowId, WINDOW_RTL_IN_PLACE);
+#endif
         FillWindowPixelBuffer(cancelWindowId, PIXEL_FILL(0));
 
         // Branches are functionally identical. Second branch is never reached, Spin Trade wasnt fully implemented
@@ -2539,6 +2557,11 @@ static void DisplayPartyPokemonNickname(struct Pokemon *mon, struct PartyMenuBox
         if (c == 1)
             menuBox->infoRects->blitFunc(menuBox->windowId, menuBox->infoRects->dimensions[0] >> 3, menuBox->infoRects->dimensions[1] >> 3, menuBox->infoRects->dimensions[2] >> 3, menuBox->infoRects->dimensions[3] >> 3, FALSE);
         GetMonNickname(mon, nickname);
+#if TEXT_RTL
+        // A name too wide for the slot even in the narrowest font would run over the box frame
+        // or the HP label.
+        FitNameToWidth(nickname, nickname + StringLength(nickname), GetFontIdToFit(nickname, FONT_SMALL, 0, 50), 50);
+#endif
         DisplayPartyPokemonBarDetailToFit(menuBox->windowId, nickname, 0, menuBox->infoRects->dimensions, 50);
     }
 }
@@ -5197,8 +5220,8 @@ void ItemUseCB_AbilityPatch(u8 taskId, TaskFunc task)
 
 void Task_Mint(u8 taskId)
 {
-    static const u8 sText_askText[] = _("It might affect {STR_VAR_1}'s stats.\nAre you sure you want to use it?");
-    static const u8 sText_doneText[] = _("{STR_VAR_1}'s stats may have changed due\nto the effects of the {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
+    static const u8 sText_askText[] = _("זה עלול להשפיע על נתוני {STR_VAR_1}.\nלהשתמש בו בכל זאת?");
+    static const u8 sText_doneText[] = _("ייתכן שהנתונים של {STR_VAR_1}\nהשתנו בהשפעת {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
     s16 *data = gTasks[taskId].data;
 
     switch (tState)
@@ -6144,7 +6167,7 @@ static void BufferMonStatsToTaskData(struct Pokemon *mon, s16 *data)
 
 void Task_DynamaxCandy(u8 taskId)
 {
-    static const u8 sText_doneText[] = _("{STR_VAR_1}'s Dynamax Level\nincreased by 1!{PAUSE_UNTIL_PRESS}");
+    static const u8 sText_doneText[] = _("רמת הדיינמקס של {STR_VAR_1}\nעלתה ב-1!{PAUSE_UNTIL_PRESS}");
     s16 *data = gTasks[taskId].data;
 
     switch (tState)
@@ -6997,7 +7020,7 @@ void ItemUseCB_PokeBall(u8 taskId, TaskFunc task)
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     u16 currBall = GetMonData(mon, MON_DATA_POKEBALL);
     u16 newBall = ItemIdToBallId(gSpecialVar_ItemId);
-    static const u8 sText_MonBallWasChanged[] = _("{STR_VAR_1} was put in the {STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
+    static const u8 sText_MonBallWasChanged[] = _("{STR_VAR_1} הועבר\nל{STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
 
     if (currBall == newBall)
     {

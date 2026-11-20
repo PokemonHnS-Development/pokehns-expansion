@@ -1,0 +1,7 @@
+# Unique 4F, a single trainer spotting the player: from (7,8) one step east into (8,8), which only
+# trainer 1 (8,7, looking south) sees; a burst of shots for the '!' and the turn, then the intro.
+fastbattles off
+walkto2 7 8
+8 RIGHT
+burst u4b_bang 14 6
+dlg u4b_intro battle

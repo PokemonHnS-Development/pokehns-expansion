@@ -12,6 +12,6 @@ Route5_EventScript_UndergroundPathSign::
 	end
 
 Route5_Text_UndergroundPathSign:
-	.string "UNDERGROUND PATH\p"
-	.string "CERULEAN CITY - VERMILION CITY$"
+	.string "מעבר תת-קרקעי\p"
+	.string "העיר סרוליאן - העיר ורמיליון$"
 

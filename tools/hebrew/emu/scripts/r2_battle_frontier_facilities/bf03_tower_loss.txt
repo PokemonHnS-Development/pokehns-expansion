@@ -1,0 +1,29 @@
+# r2 Battle Frontier: Battle Tower singles, Lv.50, lost on purpose (blose: Splash at 1 HP)
+# for the opponent's winning speech and the lobby after a loss; also the GO ON menu after
+# the first win and the retire question.
+start saves/r2_bff/base_postgame.sav
+include ../continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 6 6
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive tl_in menu
+pick 0
+drive tl_lv menu
+pick 0
+drive tl_sel task:Task_HandleChooseMonInput 20
+include _bf_enter3.txt
+drive tl_save menu 10
+pick 0
+saveyes
+drive tl_go battle 30 9000
+fastbattles off
+bwin tl_b1
+drivex tl_after1 menu 30 9000
+pick 0
+drivex tl_go2 battle 30 9000
+blose tl_lose
+drivex tl_lost menu 30 9000
+pick 1
+drivex tl_end free 20 6000

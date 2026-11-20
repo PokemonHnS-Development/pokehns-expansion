@@ -207,61 +207,56 @@ Gate_NationalPark_Movement_Player_EnterParkBotB:
 	step_end
 
 Route35NationalParkGate_Text_OfficerAskToParticipate:
-	.string "Hello Trainer! The Bug-Catching\n"
-	.string "Contest is on today.\p"
-	.string "The rules are simple.\p"
-	.string "Using one of your POKéMON, catch a\n"
-	.string "bug POKéMON to be judged.\p"
-	.string "Would you like to give it a try?$"
+	.string "שלום, מאמן! היום מתקיימת\n"
+	.string "תחרות לכידת החרקים.\p"
+	.string "החוקים פשוטים.\p"
+	.string "בעזרת אחד מהפוקימונים שלך, צריך\n"
+	.string "לתפוס פוקימון חרק לשיפוט.\p"
+	.string "רוצה לנסות?$"
 
 Route35NationalParkGate_Text_OfficerGiveSportBalls:
-	.string "Any EXP your POKéMON gains during\n"
-	.string "the contest will be reverted when\l"
-	.string "you leave.\p"
-	.string "Here are the SPORT BALLS for the\n"
-	.string "Contest.$"
+	.string "נקודות הניסיון שהפוקימון שלך יצבור\n"
+	.string "במהלך התחרות יבוטלו כשתצא.\p"
+	.string "הנה כדורי התחרות שלך.$"
 
 Route35NationalParkGate_Text_ReceivedSportBalls:
 	.string "{PLAYER} received SPORT BALLS.$"
 
 Route35NationalParkGate_Text_OfficerExplainRules:
-	.string "The person who gets the strongest\n"
-	.string "bug POKéMON is the winner.\p"
-	.string "If you run out of SPORT BALLS,\n"
-	.string "you're done.\p"
-	.string "You can catch up to 5 POKéMON. The\n"
-	.string "last one caught will be the only\l"
-	.string "one kept and placed in the contest.\p"
-	.string "Go out and catch the strongest bug\n"
-	.string "POKéMON you can find!$"
+	.string "מי שתופס את פוקימון החרק החזק\n"
+	.string "ביותר הוא המנצח.\p"
+	.string "כשנגמרים לך כדורי התחרות,\n"
+	.string "סיימת.\p"
+	.string "אפשר לתפוס עד 5 פוקימונים. רק\n"
+	.string "האחרון שנתפס יישאר וישתתף בתחרות.\p"
+	.string "צא ותפוס את פוקימון החרק החזק\n"
+	.string "ביותר שתמצא!$"
 
 Route35NationalParkGate_Text_OfficerAskToUseFirstMon:
-	.string "If you have more than one POKéMON,\n"
-	.string "you'll have to use the\l"
-	.string "first POKéMON in your party.\p"
-	.string "Is that OK with you?$"
+	.string "אם יש לך כמה פוקימונים, תצטרך\n"
+	.string "להשתמש בראשון שבקבוצה שלך.\p"
+	.string "זה בסדר מבחינתך?$"
 
 Route35NationalParkGate_Text_OfficerHoldYourMon:
-	.string "Fine, we'll hold your other POKéMON\n"
-	.string "while you compete.$"
+	.string "בסדר, נשמור את שאר הפוקימונים\n"
+	.string "שלך בזמן התחרות.$"
 
 Route35NationalParkGate_Text_MonLeftWithHelper:
-	.string "{PLAYER}'s POKéMON were left with the\n"
-	.string "CONTEST HELPER.$"
+	.string "הפוקימונים של {PLAYER} הופקדו\n"
+	.string "אצל עוזר התחרות.$"
 
 Route35NationalParkGate_Text_ChooseMonAndComeBack:
 	.string "Please choose the POKéMON to be used\n"
 	.string "in the Contest, then come see me.$"
 
 Route35NationalParkGate_Text_TakePartInFuture:
-	.string "OK. We hope you'll take part in the\n"
-	.string "future.$"
+	.string "בסדר. אנחנו מקווים שתשתתף בעתיד.$"
 
 Route35NationalParkGate_Text_FirstMonCantBattle:
-	.string "Uh-oh… The first POKéMON in your\n"
-	.string "party can't battle.\p"
-	.string "Please switch it with the POKéMON\n"
-	.string "you want to use, then come see me.$"
+	.string "אוי… הפוקימון הראשון בקבוצה\n"
+	.string "שלך לא יכול להילחם.\p"
+	.string "בבקשה החלף אותו בפוקימון שבו\n"
+	.string "תרצה להשתמש, ואז בוא אליי.$"
 
 Route35NationalParkGate_Text_MakeRoom:
 	.string "Uh-oh… Both your party and your\n"
@@ -278,8 +273,8 @@ Route35NationalParkGate_Text_EggAsFirstMon:
 	.string "you want to use, then come see me.$"
 
 Route35NationalParkGate_Text_ContestIsOver:
-	.string "Today's Contest is over. We hope you\n"
-	.string "will participate in the future.$"
+	.string "התחרות של היום הסתיימה. אנחנו\n"
+	.string "מקווים שתשתתף בעתיד.$"
 
 Route35NationalParkGate_EventScript_Policeman::
 	lock
@@ -322,23 +317,21 @@ Route35NationalParkGate_EventScript_Beauty::
 	end
 
 Route35NationalParkGate_Text_Rocker:
-	.string "I love bird POKéMON! I found a\n"
-	.string "DARK-type bird in the park\l"
-	.string "last night!$"
+	.string "אני אוהב פוקימוני ציפור! אתמול\n"
+	.string "בלילה מצאתי בפארק ציפור מסוג אפל!$"
 
 Route35NationalParkGate_Text_BC2:
-	.string "I caught a whopping SCYTHER!$"
+	.string "תפסתי סייטר ענקי!$"
 
 Route35NationalParkGate_Text_Beauty:
-	.string "He always wins these contests!$"
+	.string "הוא תמיד מנצח בתחרויות האלה!$"
 
 Route35NationalParkGate_Text_WeHoldContests:
-	.string "We hold Contests regularly in the\n"
-	.string "PARK. You should give it a shot.$"
+	.string "אנחנו עורכים תחרויות בפארק\n"
+	.string "באופן קבוע. כדאי לך לנסות.$"
 
 Route35NationalParkGate_Text_YoungsterWonders:
-	.string "When is the next Bug-Catching Contest\n"
-	.string "going to be?$"
+	.string "מתי תהיה תחרות לכידת החרקים הבאה?$"
 
 Route35NationalParkGate_Text_ContestExplanation:
 	.string "The Bug-Catching Contest is held on\n"

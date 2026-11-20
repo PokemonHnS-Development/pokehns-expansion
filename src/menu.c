@@ -142,6 +142,12 @@ void InitStandardTextBoxWindows(void)
 {
     ResetNameboxData();
     InitWindows(sStandardTextBox_WindowTemplates);
+#if TEXT_RTL
+    // The dialogue frame pads its left side with a blank tile and has none on the right, so the
+    // English text starts 8 px inside the frame. Mirror around 26 tiles to keep that gap on the
+    // right, where Hebrew lines start.
+    SetWindowRtlMirrorWidth(0, 26 * 8);
+#endif
     sStartMenuWindowId = WINDOW_NONE;
     sMapNamePopupWindowId = WINDOW_NONE;
     if (OW_POPUP_GENERATION == GEN_5)
@@ -243,11 +249,28 @@ static inline void *GetWindowFunc_DialogueFrame(void)
     return (gMsgIsSignPost ? WindowFunc_DrawSignFrame : WindowFunc_DrawDialogueFrame);
 }
 
+#if TEXT_RTL
+// Both message frames are lopsided around their window: the dialogue frame pads the left side with
+// a blank tile and has none on the right, and the sign frame covers the window's last tile. Mirror
+// around one tile less than the window, so lines end as far inside the frame as English ones start.
+// A width already set for the window is kept.
+static void SetDialogueFrameRtlMirrorWidth(u8 windowId)
+{
+    u32 width = GetWindowAttribute(windowId, WINDOW_WIDTH) * 8;
+
+    if (width > 8 && GetWindowRtlMirrorWidth(windowId) == width)
+        SetWindowRtlMirrorWidth(windowId, width - 8);
+}
+#endif
+
 void DrawDialogueFrame(u8 windowId, bool8 copyToVram)
 {
     sTileNum = DLG_WINDOW_BASE_TILE_NUM;
     sPaletteNum = DLG_WINDOW_PALETTE_NUM;
     CallWindowFunction(windowId, GetWindowFunc_DialogueFrame());
+#if TEXT_RTL
+    SetDialogueFrameRtlMirrorWidth(windowId);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     PutWindowTilemap(windowId);
     if (copyToVram == TRUE)
@@ -465,6 +488,9 @@ void DrawDialogFrameWithCustomTileAndPalette(u8 windowId, bool8 copyToVram, u16 
     sTileNum = tileNum;
     sPaletteNum = paletteNum;
     CallWindowFunction(windowId, WindowFunc_DrawDialogueFrame);
+#if TEXT_RTL
+    SetDialogueFrameRtlMirrorWidth(windowId);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     PutWindowTilemap(windowId);
     if (copyToVram == TRUE)
@@ -476,6 +502,9 @@ void DrawDialogFrameWithCustomTile(u8 windowId, bool8 copyToVram, u16 tileNum)
     sTileNum = tileNum;
     sPaletteNum = GetWindowAttribute(windowId, WINDOW_PALETTE_NUM);
     CallWindowFunction(windowId, WindowFunc_DrawDialogueFrame);
+#if TEXT_RTL
+    SetDialogueFrameRtlMirrorWidth(windowId);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     PutWindowTilemap(windowId);
     if (copyToVram == TRUE)
@@ -1087,6 +1116,12 @@ u8 ChangeMenuGridCursorPosition(s8 deltaX, s8 deltaY)
 {
     u8 oldPos = sMenu.cursorPos;
 
+#if TEXT_RTL
+    // Columns run right to left in a mirrored window, so LEFT moves to the next column.
+    if (GetWindowRtlMode(sMenu.windowId) == WINDOW_RTL_MIRROR)
+        deltaX = -deltaX;
+#endif
+
     if (deltaX != 0)
     {
         if ((sMenu.cursorPos % sMenu.columns) + deltaX < 0)
@@ -1119,6 +1154,14 @@ u8 ChangeMenuGridCursorPosition(s8 deltaX, s8 deltaY)
     }
 }
 
+#if TEXT_RTL
+// Whether the open grid menu's columns run right to left (see ChangeMenuGridCursorPosition).
+bool32 IsMenuGridMirrored(void)
+{
+    return GetWindowRtlMode(sMenu.windowId) == WINDOW_RTL_MIRROR;
+}
+
+#endif
 u8 ChangeGridMenuCursorPosition(s8 deltaX, s8 deltaY)
 {
     u8 oldPos = sMenu.cursorPos;

@@ -1,0 +1,24 @@
+# Mr. Pokemon's house (data/maps/Route30_MrPokemonsHouse_hns/scripts.inc): the ON_FRAME scene at
+# VAR_CHERRYGROVE_CITY_STATE 1 (MrPokemonHouse_EventScript_GiveEgg :9-77: the Mystery Egg, Oak, the
+# Pokedex obtained, the heal); then MrPokemonHouse_EventScript_MrPokemon with a Red Scale in the bag
+# (:84-108: YES/NO, YES, Exp. Share S obtained), and once more with NO (Disappointed).
+start saves/r6sj_ladder1_newgame.sav
+include _base.txt
+include _s1_lab_done.txt
+ev setflag FLAG_VISITED_CHERRYGROVE_CITY; clearflag FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE; setflag FLAG_HIDE_GUIDE_GENT_CHERRYGROVE; setvar VAR_CHERRYGROVE_CITY_STATE, 1; end
+warpraw MAP_ROUTE30_MR_POKEMONS_HOUSE_HNS 5 7
+scene mrp 90000 40
+snap mrp_end
+ev additem ITEM_RED_SCALE; end
+approach 1
+tap A 4
+scene rs 10000
+yesno rs_yn YES
+scene rs_got 10000
+snap rs_free
+ev additem ITEM_RED_SCALE; end
+tap A 4
+scene rsno 10000
+yesno rsno_yn NO
+scene rsno_end 6000
+snap rsno_free

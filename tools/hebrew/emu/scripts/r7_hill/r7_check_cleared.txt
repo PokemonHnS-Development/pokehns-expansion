@@ -1,0 +1,11 @@
+# Check saves_screens/r7/r7_hill_all_cleared.sav: CONTINUE, the TIME BOARD with the three clears.
+include ../continue.txt
+hillstate
+walkto 8 11 UP
+tap A 4
+waitcb2 MainCB2_TrainerHillRecords 600
+waittask Task_TrainerHillWaitForPaletteFade 600
+waitquiet
+snap ck_timeboard
+press A
+waitctl 600

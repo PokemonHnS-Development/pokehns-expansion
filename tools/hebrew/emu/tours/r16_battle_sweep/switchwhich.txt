@@ -1,0 +1,22 @@
+# The move menu's "Switch which?" prompt (src/battle_controller_player.c: SELECT in the move list with
+# B_MOVE_REARRANGEMENT_IN_BATTLE GEN_3 prints gText_BattleSwitchWhich in B_WIN_SWITCH_PROMPT, 8x4 tiles,
+# FONT_NARROW), then the swap itself. Save: ladder1_newgame.sav (HNS_SAVES). Run with hns.py tour.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_SANDSLASH_ALOLA, 50, abilityNum=0, move1=MOVE_GROWL, move2=MOVE_ICICLE_CRASH, move3=MOVE_DARKEST_LARIAT, move4=MOVE_PROTECT; end
+pinrng
+evstart setwildbattle SPECIES_STARAPTOR, 5; dowildbattle; end
+waitbattle
+bwalk sw_intro input:HandleInputChooseAction
+baction FIGHT
+waitbinput HandleInputChooseMove
+snap sw_moves
+tap SELECT 4
+waitquiet
+snap sw_switchwhich
+tap DOWN 4
+waitquiet
+snap sw_switchwhich_down
+tap A 4
+waitquiet
+snap sw_swapped

@@ -16,7 +16,7 @@ Route28_EventScript_Item_Flamethrower::
     end
 
 Route28_Text_Sign:
-	.string "ROUTE 28$"
+	.string "דרך 28$"
 
 Route28_EventScript_Trigger_Scientist::
 	lock
@@ -72,19 +72,19 @@ Route28_Movement_ScientistLeave:
 	step_end
 
 Route28_Text_Scientist:
-	.string "Hiya, Boss.\p"
-	.string "Yes, I've found several artifacts,\n"
-	.string "but no sign of the AZURE FLUTE.\p"
-	.string "It may be inside the MOUNTAIN, but\n"
-	.string "the wild POKéMON here are strong,\l"
-	.string "and my team needs some rest...\p"
-	.string "..................\p"
-	.string "You're breaking up...\l"
-	.string "Boss....?\p"
-	.string "I'm going to the POKéMON CENTER.\p"
-	.string "I'll call back if I find the FLUTE.$"
+	.string "היי, בוס.\p"
+	.string "כן, מצאתי כמה ממצאים עתיקים,\n"
+	.string "אבל אין שום סימן לחליל התכלת.\p"
+	.string "אולי הוא בתוך ההר, אבל\n"
+	.string "הפוקימונים הפראיים כאן חזקים,\p"
+	.string "והפוקימונים שלי צריכים מנוחה…\p"
+	.string "……\p"
+	.string "אתה נשמע מקוטע…\l"
+	.string "בוס…?\p"
+	.string "אני הולכת למרכז הפוקימון.\p"
+	.string "אתקשר שוב אם אמצא את החליל.$"
 
 Route28_Text_Scientist2:
-	.string ".......CLICK\p"
-	.string "The signal in SINJOH sucks...$"
+	.string "……קליק\p"
+	.string "הקליטה בסינג'ו פשוט גרועה…$"
 

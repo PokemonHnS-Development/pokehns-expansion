@@ -1,0 +1,16 @@
+# The two wireless link-up screens behind the group-leader menu (src/union_room.c TryBecomeLinkLeader /
+# Task_TryBecomeLinkLeader, TryJoinLinkGroup / Task_TryJoinLinkGroup), entered from the Direct Corner counter
+# with the same script labels (CableClub_EventScript_TryLeadGroup2Players / TryJoinGroup2Players,
+# data/scripts/cable_club.inc:1106-1120). hnsrun has no Wireless Adapter: the RFU never reports a partner,
+# so each screen waits; B cancels.
+start saves/r14/link/base.sav
+include ../../scripts/continue.txt
+warpto MAP_BATTLE_FRONTIER_POKEMON_CENTER_2F_HNS 10 3
+face UP
+
+# --- e1: LEAD a 2-player trade group
+evstart lock; faceplayer; setvar VAR_0x8004, LINK_GROUP_TRADE; goto 0x@CableClub_EventScript_TryLeadGroup2Players@
+burst e1_lead 8 30
+tap B 4
+burst e1_lead_b 6 30
+showtasks

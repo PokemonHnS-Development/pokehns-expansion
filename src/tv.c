@@ -189,16 +189,16 @@ static void DoTVShowSecretBaseSecrets(void);
 static void DoTVShowSafariFanClub(void);
 static void DoTVShowLilycoveContestLady(void);
 
-static const u8 sText_Good[] = _("Good");
-static const u8 sText_VeryGood[] = _("Very good");
-static const u8 sText_Excellent[] = _("Excellent");
-static const u8 sText_SoSo[] = _("So-so");
-static const u8 sText_Bad[] = _("Bad");
-static const u8 sText_TheWorst[] = _("The worst");
+static const u8 sText_Good[] = _("טוב");
+static const u8 sText_VeryGood[] = _("טוב מאוד");
+static const u8 sText_Excellent[] = _("מצוין");
+static const u8 sText_SoSo[] = _("ככה-ככה");
+static const u8 sText_Bad[] = _("רע");
+static const u8 sText_TheWorst[] = _("הכי גרוע");
 
-static const u8 sText_Slots[] = _("SLOTS");
-static const u8 sText_Roulette[] = _("ROULETTE");
-static const u8 sText_Jackpot[] = _("jackpot");
+static const u8 sText_Slots[] = _("מכונות המזל");
+static const u8 sText_Roulette[] = _("רולטה");
+static const u8 sText_Jackpot[] = _("הגדול");
 
 static const struct {
     u16 species;

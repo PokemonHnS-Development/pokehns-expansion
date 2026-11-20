@@ -1,0 +1,73 @@
+# Not learning a move on evolving (src/evolution_scene.c Task_EvolutionScene, EVOSTATE_REPLACE_MOVE):
+# a THUNDER STONE on Pikachu (four moves), as in tours/pbi_stone.txt; Raichu wants a new move.
+# "delete a move?" B -> "give up learning X?" (MVSTATE_ASK_CANCEL) NO -> the intro and the question
+# again; YES -> the forget-a-move page, B there -> "give up learning X?" YES -> "did not learn".
+# THUNDER STONE is index 113 of the ITEMS pocket of menuA_base (scroll 0x6E + cursor 3).
+# Needs a build that asks (P_ASK_MOVE_CONFIRMATION, which follows TEXT_RTL): the Hebrew one.
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+
+w8 @gBagPosition+5@ 0
+w16 @gBagPosition+8@ 3
+w16 @gBagPosition+14@ 6E
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 4                                   # Pikachu
+waitcb2x CB2_EvolutionSceneUpdate 900
+waittaskdata Task_EvolutionScene 0 15 3000
+waitkey 900
+snap lr02_a0_evolved
+tap A 4
+waittaskdata Task_EvolutionScene 6 1 600
+waitquiet
+tap A 4
+waittaskdata Task_EvolutionScene 6 2 600
+waitquiet
+tap A 4
+waittaskdata Task_EvolutionScene 6 4 600
+waitquiet
+snap lr02_a1_delete_q
+tap B 4                                   # B: the same as NO
+waittaskdata Task_EvolutionScene 6 4 600
+waitquiet
+snap lr02_a3_stop_box
+tap DOWN 4
+waitquiet
+snap lr02_a4_stop_box_no
+tap A 4                                   # NO: back to the intro
+waittaskdata Task_EvolutionScene 6 1 600
+waitquiet
+snap lr02_b1_wants_again
+tap A 4
+waittaskdata Task_EvolutionScene 6 2 600
+waitquiet
+tap A 4
+waittaskdata Task_EvolutionScene 6 4 600
+waitquiet
+snap lr02_b2_delete_q_again
+tap A 4                                   # YES: the forget-a-move page
+waittaskx Task_HandleReplaceMoveInput 900
+waitquiet
+snap lr02_b4_forget_page
+tap B 4                                   # leave the page without choosing
+waitcb2x CB2_EvolutionSceneUpdate 900
+waittaskdata Task_EvolutionScene 6 4 900
+waitquiet
+snap lr02_c2_stop_box
+tap A 4                                   # YES: give up
+waittaskdata Task_EvolutionScene 0 15 600
+waitquiet
+snap lr02_c3_not_learned
+tap A 4
+waitcb2x CB2_BagMenuRun 1200
+waittaskx Task_BagMenu_HandleInput 600

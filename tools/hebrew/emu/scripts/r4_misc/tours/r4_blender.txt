@@ -1,0 +1,41 @@
+# Contest lobby (Lilycove Contest Lobby, H&S copy) Berry Blender speed-record sign:
+# bg_sign_event at (30,1) (data/maps/LilycoveCity_ContestLobby_hns/events.inc:39) runs
+# LilycoveCity_ContestLobby_EventScript_BerryBlenderSpeedRecords_hns (scripts.inc:537-543):
+# special ShowBerryBlenderRecordWindow (src/berry_blender.c, sBlenderRecordWindowTemplate 18x11
+# tiles at (6,4); title centred in 144 px, "2/3/4 players" labels at x 4, the records
+# right-aligned to x 140), waitbuttonpress, RemoveRecordsWindow.
+# Records are hundredths of an RPM: 0 (fresh save), mid values that exercise the 3-digit
+# right-aligned integer part and the 2-digit leading-zero fraction, and the u16 maximum.
+start saves/r4_misc/r4_ladder6_postgame.sav
+include ../../continue.txt
+
+warpto 30 94 30 2            # MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS (group 30, num 94 in both trees)
+waitctl 600
+expectloc 30 94 30 2
+face UP
+snap blender_00_field
+
+blender 0 0 0
+press A
+snap blender_01_zero
+tap A 4
+waitctl 600
+
+blender 12345 4508 905
+press A
+snap blender_02_mid
+tap A 4
+waitctl 600
+
+blender 65535 65535 65535
+press A
+snap blender_03_max
+tap A 4
+waitctl 600
+
+blender 100 9999 1
+press A
+snap blender_04_mixed
+tap A 4
+waitctl 600
+snap blender_05_closed

@@ -1,0 +1,10 @@
+# Mt. Moon gift shop (MAP_MT_MOON_SHOP_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_MT_MOON_SHOP_HNS
+clerk 2 4 m24_hi
+buyopen m24_buy
+listshots m24_list
+buyeach m24_ask
+buyclose m24_menu
+shopquit m24_bye

@@ -1,0 +1,10 @@
+# Include (not a tour): trainer battle (Youngster Mikey: Hoothoot, Sentret) stopped at the action menu, for
+# tools/btw_aiswitch.py (debug menu AI pages with a two-Pokemon AI party).
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_TYPHLOSION, 50, item=ITEM_LEFTOVERS, move1=MOVE_SWORDS_DANCE, move2=MOVE_FLAMETHROWER, move3=MOVE_GROWL, move4=MOVE_PROTECT; end
+face UP
+pinrng
+8 UP
+waitnotfree 120
+bwalk btwai_intro input:HandleInputChooseAction

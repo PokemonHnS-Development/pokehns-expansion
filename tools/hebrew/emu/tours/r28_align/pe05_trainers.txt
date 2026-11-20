@@ -1,0 +1,28 @@
+# From the save after the catch (Route 29): west to Cherrygrove, the Pokemon Center with two
+# Pokemon, then Route 30's trainers (Youngster Joey and Mikey spot the player and battle) and
+# the townsfolk there.
+# Driver: pe_ops.py (hns.py + the story-tour ops + talkw / fight / walkfight / walkw / scenea / pocket).
+start save:pe_caught
+include ../../scripts/continue.txt
+fastbattles off
+ev setflag FLAG_DISABLE_ENCOUNTERS; end
+walkfight 0 16 pe05_w1
+go LEFT
+walkfight 47 8 pe05_w2
+go UP
+walkto 7 4 UP
+talk pe05_nurse 20
+tap A 0
+talk pe05_nurse_heal 20 -
+walkto 7 7
+go DOWN 2
+walkto 34 0
+go UP
+snap pe05_route30
+walkfight 25 40 pe05_r30a
+walkfight 25 20 pe05_r30b
+walkfight 20 20 pe05_r30c
+face UP
+talk pe05_tips 10
+snap pe05_end
+objs

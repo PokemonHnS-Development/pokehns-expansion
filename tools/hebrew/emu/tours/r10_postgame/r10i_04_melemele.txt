@@ -1,0 +1,33 @@
+# Alola, Melemele Isle: the trip from Kanto as a player takes it (Route 13 captain with the Strange
+# Souvenir: first-visit pages, the Alola help window, YES, the boat, the arrival on Melemele),
+# then the island: every NPC and sign outside (the captain's way back answered NO, trainers,
+# totem/Tapu, mailbox, map signs), a wild encounter, then every building: Pokemon Center (nurse
+# YES), the mart (BUY list), houses 3-6 and Samson Oak's villa.
+start saves/r10pg_base.sav
+include _base.txt
+ev additem ITEM_STRANGE_SOUVENIR; end
+arrive MAP_ROUTE13_HNS 77 26 r13
+face RIGHT
+tap A 4
+converse r13_cap yes
+snap mel_arrived
+ss mel
+visit mel
+wild mel_wild
+arrive MAP_MELEMELE_HOUSE_HNS 8 12 mpc
+ss mpc
+visit mpc yes=1
+arrive MAP_MELEMELE_HOUSE_2_HNS 7 12 mmart
+ss mmart
+visit mmart
+arrive MAP_MELEMELE_HOUSE_3_HNS 6 12 mh3
+visit mh3
+arrive MAP_MELEMELE_HOUSE_4_HNS 6 12 mh4
+visit mh4
+arrive MAP_MELEMELE_HOUSE_5_HNS 6 12 mh5
+visit mh5
+arrive MAP_MELEMELE_HOUSE_6_HNS 6 12 mh6
+visit mh6
+arrive MAP_MELEMELE_PLAYER_HOUSE_HNS 3 7 mvilla
+visit mvilla
+arrive MAP_MELEMELE_ISLE_HNS 46 24 mel_back

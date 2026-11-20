@@ -1,0 +1,309 @@
+# From the lab save (starter Cyndaquil, the Potion): Route 29 west to Cherrygrove as a player
+# would: the route signs, the townsfolk, Tuscany's weekday menu, the Potion on the ground, the
+# berry tree; a wild Pokemon run from (BAG, POKEMON, summary, FIGHT menus looked at), two wild
+# Pokemon beaten with a Potion from the bag between them (the second battle levels the starter
+# up); then Cherrygrove: the guide gent's tour, the Pokemon Center (nurse, PC), the Mart (BUY
+# with quantity, SELL) and the houses. Ends saved in the Center: keepsave pe_cherry.
+# Driver: pe_ops.py (hns.py + the story-tour ops + talkw / fight / walkfight / walkw / scenea / pocket).
+start save:pe_lab
+include ../../scripts/continue.txt
+fastbattles off
+ev setflag FLAG_DISABLE_ENCOUNTERS; end
+objs
+walkto 6 12
+go DOWN
+walkto 0 13
+go LEFT
+snap pe02_route29
+objs
+walkto 64 16 UP
+talk pe02_sign_east 5
+walkto 61 17 UP
+talk pe02_oldman 10
+walkto 55 9
+approach 8
+talk pe02_potion 10
+walkto 37 15 UP
+talk pe02_lass 10
+walkto 36 20
+approach 2
+talk pe02_youngster 10
+walkto 27 13
+approach 4
+talk pe02_tuscany 10
+snap pe02_tuscany_menu_mon
+press DOWN
+press DOWN
+snap pe02_tuscany_menu_wed
+tap A 4
+talk pe02_tuscany_reply 10 -
+walkto 11 13 UP
+talk pe02_boy 10
+walkto 15 12 UP
+talk pe02_berrytree 10
+walkto 2 14 UP
+talk pe02_sign_west 5
+
+# --- wild battle 1 (Sentret, Lv 3), in the grass: the menus looked at, then RUN
+walkto 13 20
+pinrng
+evstart setwildbattle SPECIES_SENTRET, 3; dowildbattle; end
+waitbattle
+bwalk pe02_w1_intro input:HandleInputChooseAction
+snap pe02_w1_action
+baction FIGHT
+waitbinput HandleInputChooseMove
+snap pe02_w1_fight
+bmove 1 nopress
+waitquiet
+snap pe02_w1_fight_leer
+tap START 4
+waitquiet
+snap pe02_w1_fight_info
+tap START 4
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+pocket 0
+snap pe02_w1_bag_01
+pocket 1
+snap pe02_w1_bag_02
+pocket 2
+snap pe02_w1_bag_03
+pocket 3
+snap pe02_w1_bag_04
+pocket 1
+snap pe02_w1_bag_medicine
+tap A 4
+waitquiet
+snap pe02_w1_bag_use
+tap B 4
+waitquiet
+tap B 4
+waitbinput HandleInputChooseAction
+baction POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 900
+waitquiet
+snap pe02_w1_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap pe02_w1_party_menu
+tap A 4                                   # SUMMARY (the lead has no SHIFT)
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap pe02_w1_summary_info
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintSkillsPage 120
+snap pe02_w1_summary_skills
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintBattleMoves 120
+snap pe02_w1_summary_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+snap pe02_w1_summary_moves_desc
+tap B 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 900
+tap B 4
+waitbinput HandleInputChooseAction
+baction RUN
+bwalk pe02_w1_run free
+unpinrng
+
+# --- wild battle 2 (Pidgey, Lv 4): fought with Tackle
+pinrng
+evstart setwildbattle SPECIES_PIDGEY, 4; dowildbattle; end
+waitbattle
+fight pe02_w2 0
+unpinrng
+# --- a Potion from the bag on the field (MEDICINE pocket, USE, the party, the HP restored)
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+snap pe02_fbag_open
+pocket 1
+snap pe02_fbag_medicine
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+snap pe02_fbag_context
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pe02_fbag_party
+tap A 4
+waitkey 900
+snap pe02_fbag_restored
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pe02_fbag_party_after
+tap B 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+closeall
+# --- wild battle 3 (Rattata, Lv 4): fought with Tackle
+pinrng
+evstart setwildbattle SPECIES_RATTATA, 4; dowildbattle; end
+waitbattle
+fight pe02_w3 0
+unpinrng
+snap pe02_after_battles
+
+# --- Cherrygrove: the guide gent (NO once, then YES and his tour)
+walkto 0 16
+go LEFT
+snap pe02_cherrygrove
+objs
+walkto 58 10
+stepto LEFT
+scene pe02_gent 10000
+yesno pe02_gent_yn NO
+scene pe02_gent_no 8000
+approach 1
+tap A 4
+scene pe02_gent2 10000
+yesno pe02_gent2_yn YES
+scene pe02_gent_tour 60000 40
+snap pe02_gent_end
+objs
+walkto 51 13 UP
+talk pe02_sign 5
+walkto 48 13 UP
+talk pe02_boy 10
+
+# --- the Pokemon Center: the nurse (YES), the PC, the visitors
+walkto 47 8
+go UP
+snap pe02_center
+walkto 7 4 UP
+talk pe02_nurse 20
+tap A 0
+talk pe02_nurse_heal 20 -
+go RIGHT 4
+go UP 2
+talk pe02_pc_boot 10
+snap pe02_pc_menu
+tap DOWN 4
+tap A 0
+talk pe02_pc_player 10 - PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+snap pe02_pc_player_menu
+closeall
+approach 4
+talk pe02_center_fisher 10
+approach 5
+talk pe02_center_gent 10
+walkto 7 7
+go DOWN 2
+
+# --- the Mart: BUY (list, quantity, YES), SELL (bag, quantity, NO), the customers
+walkto 41 8
+go UP
+snap pe02_mart
+walkto 4 3 LEFT
+talk pe02_mart_welcome 10 A Task_ShopMenu
+waittaskx Task_ShopMenu 300
+waitquiet
+snap pe02_mart_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+snap pe02_mart_buy_01
+press DOWN
+snap pe02_mart_buy_02
+press DOWN
+snap pe02_mart_buy_03
+press UP
+press UP
+tap A 0
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+waitquiet
+snap pe02_mart_buy_qty_01
+press UP
+press UP
+snap pe02_mart_buy_qty_03
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap pe02_mart_buy_confirm
+tap A 0
+waittaskx Task_ReturnToItemListAfterItemPurchase 600
+waitquiet
+snap pe02_mart_buy_done
+tap A 0
+waittaskx Task_BuyMenu 600
+waitquiet
+snap pe02_mart_buy_after
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+snap pe02_mart_menu_again
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 0
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap pe02_mart_sell_bag
+tap A 0
+waitquiet
+snap pe02_mart_sell_qty
+tap A 0
+waitquiet
+snap pe02_mart_sell_confirm
+tap B 0
+waitquiet
+snap pe02_mart_sell_no
+closeall
+walkto 3 6 UP
+talk pe02_mart_youngster 10
+walkto 4 7
+go DOWN
+
+# --- the houses
+walkto 34 14
+go UP
+snap pe02_house1
+approach 1
+talk pe02_house1_man 10
+walkw 4 8
+go DOWN
+walkto 42 15
+go UP
+snap pe02_house2
+walkw 4 8
+go DOWN
+walkto 50 18
+go UP
+snap pe02_house3
+approach 1
+talk pe02_house3_boy 10
+approach 2
+talk pe02_house3_girl 10
+walkw 4 8
+go DOWN
+walkto 47 8
+go UP
+savegame
+keepsave pe_cherry

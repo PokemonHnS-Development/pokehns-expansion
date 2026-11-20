@@ -1,0 +1,10 @@
+# Battle Frontier Mart (MAP_BATTLE_FRONTIER_MART_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_BATTLE_FRONTIER_MART_HNS
+clerk 1 3 m30_hi
+buyopen m30_buy
+listshots m30_list
+buyeach m30_ask
+buyclose m30_menu
+shopquit m30_bye

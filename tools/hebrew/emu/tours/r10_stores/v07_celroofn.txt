@@ -1,0 +1,6 @@
+# Vending machine on MAP_CELADON_CITY_DEPARTMENT_STORE_ROOF_NIGHT_HNS: money box + MULTI_VENDING_MACHINE, a drink bought.
+start saves/st_l6.sav
+include _base.txt
+visit MAP_CELADON_CITY_DEPARTMENT_STORE_ROOF_NIGHT_HNS
+signat 11 3 UP v07_hi
+chat v07_fw A B

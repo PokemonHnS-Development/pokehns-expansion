@@ -1,0 +1,27 @@
+# The Pokedex A-Z list around Alolan Exeggutor (src/data/pokemon/pokedex_orders.h, the TEXT_RTL list that
+# tools/hebrew/gen_dex_alpha.py writes). Six species are marked seen and SaveBlock2.pokedex.order (+0x18) is
+# set to ORDER_ALPHABETICAL (1, read at src/pokedex_plus_hgss.c:2106), so the list holds only them: the
+# first shot has the top rows, the second the cursor on the last row. Save: ladder1_newgame.sav (HNS_SAVES).
+# Run with hns.py tour (or any driver built on it, such as r4opt.py).
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev setseenmon SPECIES_ANNIHILAPE; setseenmon SPECIES_ESPEON; setseenmon SPECIES_EXEGGCUTE; setseenmon SPECIES_EXEGGUTOR; setseenmon SPECIES_EXEGGUTOR_ALOLA; setseenmon SPECIES_EKANS; end
+w8 @SB2+18@ 1
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+16 -
+snap dex_az_list
+tap DOWN 4
+waitquiet
+tap DOWN 4
+waitquiet
+tap DOWN 4
+waitquiet
+tap DOWN 4
+waitquiet
+tap DOWN 4
+waitquiet
+tap DOWN 4
+waitquiet
+snap dex_az_list_end

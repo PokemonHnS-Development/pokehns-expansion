@@ -1,0 +1,3 @@
+# r6 round-3 island benches / event-island sailors / minor YES/NO tours: base include (not a tour).
+# r6r3_islands_base.sav (a byte copy of ladder 6: post-game, Mt. Silver Pokemon Center) -> CONTINUE.
+include ../../scripts/continue.txt

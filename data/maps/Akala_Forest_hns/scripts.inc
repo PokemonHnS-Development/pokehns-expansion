@@ -60,29 +60,29 @@ Alola_Akala_BattleRaichu_3:
 
 
 Alola_AkalaForest_TrainerBattleBugCatcher1_Text_0:
-	.string "Look at all the cool bugs here on the \nISLES!$"
+	.string "תראה כמה חרקים מגניבים\n"
+	.string "יש כאן באיים!$"
 
 Alola_AkalaForest_TrainerBattleBugCatcher1_Text_1:
-	.string "Ouch, that stung!$"
+	.string "איי, זה עקץ!$"
 
 Alola_AkalaForest_TrainerBattleBugCatcher1_Text_2:
-	.string "The ISLES are far away from other land,\n"
-	.string "so Bug-type POKéMON here must have\l"
-	.string "adapted to the environment.$"
+	.string "האיים רחוקים מכל יבשה אחרת, אז\n"
+	.string "פוקימוני החרק כאן בטח הסתגלו לסביבה.$"
 
 Alola_AkalaForest_TrainerBattleBugCatcher2_Text_0:
-	.string "Look at what I caught!$"
+	.string "תראה מה תפסתי!$"
 
 Alola_AkalaForest_TrainerBattleBugCatcher2_Text_1:
-	.string "Awh, that bites!$"
+	.string "אוף, איזו עקיצה!$"
 
 Alola_AkalaForest_TrainerBattleBugCatcher2_Text_2:
-	.string "The climate is a bit different on the\n"
-	.string "ALOLA ISLES…\p"
-	.string "I'm sure that's why there are some\n"
-	.string "unique Bug-type POKéMON here.$"
+	.string "האקלים באיי אלולה\n"
+	.string "קצת שונה…\p"
+	.string "אני בטוח שבגלל זה יש כאן כמה\n"
+	.string "פוקימוני חרק ייחודיים.$"
 
 
 Alola_Akala_BattleRaichu_Text_0:
-	.string "Gaaah!$"
+	.string "גאאאה!$"
 

@@ -107,61 +107,54 @@ Route10_PowerPlantEntrance_Movement_WalkBack:
 	step_end
 
 Route10_PowerPlantEntrance_Text_Officer1AThiefBrokeIn:
-	.string "A thief broke into the POWER\n"
-	.string "PLANT…\p"
-	.string "What is the world coming to?$"
+	.string "גנב פרץ למפעל החשמל…\p"
+	.string "לאן העולם הזה הולך?$"
 
 Route10_PowerPlantEntrance_Text_Officer1CeruleanShadyCharacter:
-	.string "I just got word from CERULEAN.\p"
-	.string "It appears that a shady\n"
-	.string "character has been loitering\l"
-	.string "around.$"
+	.string "בדיוק קיבלתי הודעה מסרוליאן.\p"
+	.string "נראה שדמות חשודה מסתובבת\n"
+	.string "שם באזור.$"
 
 Route10_PowerPlantEntrance_Text_Officer1CouldIAskForYourCooperation:
-	.string "Could I ask for your\n"
-	.string "cooperation?$"
+	.string "אפשר לבקש את\n"
+	.string "שיתוף הפעולה שלך?$"
 
 Route10_PowerPlantEntrance_Text_Officer1HaveToBeefUpSecurity:
-	.string "We'll have to beef up our\n"
-	.string "security presence.$"
+	.string "נצטרך לתגבר\n"
+	.string "את האבטחה שלנו.$"
 
 Route10_PowerPlantEntrance_Text_Engineer1SomeoneStoleAPart:
-	.string "Someone made off with a part\n"
-	.string "that's essential for the\l"
-	.string "generator.\p"
-	.string "Without it, the new generator's\n"
-	.string "useless!$"
+	.string "מישהו גנב חלק חיוני\n"
+	.string "לגנרטור.\p"
+	.string "בלעדיו, הגנרטור החדש\n"
+	.string "חסר תועלת!$"
 
 Route10_PowerPlantEntrance_Text_Engineer1GeneratorUpAndRunning:
-	.string "The generator's up and running.\n"
-	.string "It's making electricity to spare.$"
+	.string "הגנרטור עובד כמו שצריך.\n"
+	.string "הוא מייצר חשמל בשפע.$"
 
 Route10_PowerPlantEntrance_Text_Engineer2PowerPlantUpAndRunning:
-	.string "This POWER PLANT had been\n"
-	.string "abandoned in the past.\p"
-	.string "We got it back up and running to\n"
-	.string "provide power to the MAGNET\l"
-	.string "TRAIN.$"
+	.string "מפעל החשמל הזה היה נטוש בעבר.\p"
+	.string "החזרנו אותו לפעולה כדי לספק\n"
+	.string "חשמל לרכבת המגנטית.$"
 
 Route10_PowerPlantEntrance_Text_Engineer2GeneratorIsRunningAgain:
-	.string "The generator's running again!$"
+	.string "הגנרטור פועל שוב!$"
 
 Route10_PowerPlantEntrance_Text_Officer2ManagerHasBeenSadAndFurious:
-	.string "The POWER PLANT's MANAGER is in\n"
-	.string "the back room with the generator.\p"
-	.string "But since someone wrecked the\n"
-	.string "generator, he's been both sad and\l"
-	.string "furious…$"
+	.string "מנהל מפעל החשמל נמצא\n"
+	.string "בחדר האחורי עם הגנרטור.\p"
+	.string "אבל מאז שמישהו הרס את הגנרטור,\n"
+	.string "הוא גם עצוב וגם זועם…$"
 
 Route10_PowerPlantEntrance_Text_Officer2ManagerHasBeenCheerful:
-	.string "Since the generator's been fixed,\n"
-	.string "the MANAGER has been cheerful.$"
+	.string "מאז שהגנרטור תוקן,\n"
+	.string "המנהל במצב רוח מצוין.$"
 
 Route10_PowerPlantEntrance_Text_Engineer4MagnetTrainConsumesElectricity:
-	.string "The MAGNET TRAIN consumes a lot\n"
-	.string "of electricity.\p"
-	.string "It can't move if the new\n"
-	.string "generator isn't operating.$"
+	.string "הרכבת המגנטית צורכת המון חשמל.\p"
+	.string "היא לא יכולה לנסוע אם\n"
+	.string "הגנרטור החדש לא פועל.$"
 
 Route10_PowerPlantEntrance_EventScript_Lorenzo::
 	lock
@@ -189,30 +182,29 @@ Route10_PowerPlantEntrance_EventScript_TradeCompleted::
 	end
 
 Route10_PowerPlantEntrance_Text_WantToTrade:
-	.string "I work here at the POWER PLANT.\n"
-	.string "My MAGNETON's been my partner\l"
-	.string "for years.\p"
-	.string "But I've always wanted a\n"
+	.string "אני עובד כאן במפעל החשמל.\n"
+	.string "המגנטון שלי ואני שותפים כבר שנים.\p"
+	.string "אבל תמיד רציתי\n"
 	.string "{STR_VAR_1}.\p"
-	.string "Would you trade one for my\n"
-	.string "{STR_VAR_2}?$"
+	.string "מה דעתך להחליף אחד\n"
+	.string "ב{STR_VAR_2} שלי?$"
 
 Route10_PowerPlantEntrance_Text_TakeCare:
-	.string "Thanks! Take good care of\n"
-	.string "MAGGIE for me!$"
+	.string "תודה!\n"
+	.string "תשמור טוב על מגי בשבילי!$"
 
 Route10_PowerPlantEntrance_Text_DeclineTrade:
-	.string "No? That's a shame.\n"
-	.string "My MAGNETON's a hard worker.$"
+	.string "לא? חבל.\n"
+	.string "המגנטון שלי ממש חרוץ.$"
 
 Route10_PowerPlantEntrance_Text_NotRequestedMon:
-	.string "Hmm, that's not a {STR_VAR_1}.\n"
-	.string "That's not what I had in mind.$"
+	.string "הממ, זה לא {STR_VAR_1}.\n"
+	.string "לא לזה התכוונתי.$"
 
 Route10_PowerPlantEntrance_Text_TradeCompleted:
-	.string "How's MAGGIE doing?\n"
-	.string "She loves magnetic fields!$"
+	.string "מה שלום מגי?\n"
+	.string "הוא מת על שדות מגנטיים!$"
 
 Route10_PowerPlantEntrance_Text_Engineer4WeCanGetMagnetTrainRunning:
-	.string "All right! We can finally get the\n"
-	.string "MAGNET TRAIN running again.$"
+	.string "יופי! סוף סוף נוכל להפעיל\n"
+	.string "שוב את הרכבת המגנטית.$"

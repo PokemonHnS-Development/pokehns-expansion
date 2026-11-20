@@ -1,0 +1,29 @@
+# Noble Typhlosion-H, New Sinjoh House 3 (NewSinjoh_House3_hns/scripts.inc:22-120). Entering the
+# house runs the ON_FRAME script: VAR_NOBLE_TYPHLOSION 0 -> 'nothing reacts' text; 1 -> the scary
+# text, sparkle, '!' and the flute YES/NO (NO first, then YES after re-entering), the camera pan and
+# shake, the stairs and the noble at (7,17). Then the boss battle (_noble_battle.txt).
+start saves/ladder6_postgame.sav
+include ../r5_legends/_base.txt
+ev setvar VAR_NOBLE_TYPHLOSION, 0; setflag FLAG_HIDE_NEWSINJOH_HOUSE3_NOBLE_TYPHLOSION; end
+warpto MAP_NEW_SINJOH_HOUSE3_HNS 7 19
+scene ty_early 3000
+snap ty_early_end
+ev setvar VAR_NOBLE_TYPHLOSION, 1; end
+warpto MAP_NEW_SINJOH_HOUSE3_HNS 7 19
+scene ty_flute_no 3000
+snap ty_flute_no_menu
+tap B 4
+scene ty_no 3000
+snap ty_no_end
+warpto MAP_NEW_SINJOH_HOUSE3_HNS 7 19
+scene ty_flute 3000
+snap ty_flute_menu
+tap A 4
+scene ty_scene 20000 45
+snap ty_scene_end
+objs
+approach 3
+snap ty_before
+tap A 4
+scene ty_pre 4000
+include _noble_battle.txt

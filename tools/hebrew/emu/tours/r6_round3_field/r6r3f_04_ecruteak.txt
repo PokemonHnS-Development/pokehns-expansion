@@ -1,0 +1,47 @@
+# Ecruteak House 2 (EcruteakCity_House2_hns/scripts.inc): the item finder man (5,4): NO
+# (ToEachHisOwn), YES (TrueSpirit, the Dowsing Machine, Explanation), again (already got); the
+# bookshelf (6,4), read from (6,3) facing down: HistoryBook NO; YES -> TwoTowers NO; YES -> YES -> ThreeMon.
+start saves/r6r3f_base.sav
+include _base.txt
+ev removeitem ITEM_DOWSING_MACHINE; end
+warpto MAP_ECRUTEAK_CITY_HOUSE2_HNS 5 5
+face UP
+snap ec_field
+tap A 4
+scene ec_man1 8000
+yesno ec_man1_yn NO
+scene ec_man1_no 6000
+snap ec_man1_no_end
+face UP
+tap A 4
+scene ec_man2 8000
+yesno ec_man2_yn YES
+scene ec_man2_yes 12000
+snap ec_man2_yes_end
+face UP
+tap A 4
+scene ec_man3 8000
+snap ec_man3_end
+warpto MAP_ECRUTEAK_CITY_HOUSE2_HNS 6 3
+face DOWN
+tap A 4
+scene ec_bk1 6000
+yesno ec_bk1_yn NO
+scene ec_bk1_no 6000
+snap ec_bk1_no_end
+face DOWN
+tap A 4
+scene ec_bk2 6000
+yesno ec_bk2_yn YES
+scene ec_bk2_yes 8000
+yesno ec_bk2b_yn NO
+scene ec_bk2b_no 6000
+snap ec_bk2b_no_end
+face DOWN
+tap A 4
+scene ec_bk3 6000
+yesno ec_bk3_yn YES
+scene ec_bk3_yes 8000
+yesno ec_bk3b_yn YES
+scene ec_bk3b_yes 8000
+snap ec_bk3b_yes_end

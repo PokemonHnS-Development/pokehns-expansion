@@ -1,0 +1,69 @@
+# The Alolan regional statics: each Alola_*_Battle* script is faceplayer, cry, a cry text
+# (MSGBOX_AUTOCLOSE), setwildbattle (Golem-A: setwildbossbattle), dowildbattle. Intro + win for each;
+# Raichu-A also gets the catch branch.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_RAICHU_ALOLA; clearflag FLAG_HIDE_MAROWAK_ALOLA; clearflag FLAG_HIDE_DUGTRIO_ALOLA; clearflag FLAG_HIDE_MUK_ALOLA; clearflag FLAG_HIDE_NINETALES_ALOLA; clearflag FLAG_HIDE_SANDSLASH_ALOLA; clearflag FLAG_HIDE_EXEGGUTOR_ALOLA; clearflag FLAG_HIDE_GOLEM_ALOLA; end
+
+warpto MAP_AKALA_CAVE_HNS 45 31
+face UP
+tap A 4
+scene marowak_pre 4000
+bwalk marowak_intro input:HandleInputChooseAction
+bwin marowak_win
+scene marowak_after 3000
+
+warpto MAP_AKALA_CAVE_HNS 16 13
+face UP
+tap A 4
+scene dugtrio_pre 4000
+bwalk dugtrio_intro input:HandleInputChooseAction
+bwin dugtrio_win
+scene dugtrio_after 3000
+
+warpto MAP_ULA_ULA_CAVE_2_HNS 17 7
+face UP
+tap A 4
+scene muk_pre 4000
+bwalk muk_intro input:HandleInputChooseAction
+bwin muk_win
+scene muk_after 3000
+
+warpto MAP_ULA_ULA_CAVE_HNS 17 7
+face UP
+tap A 4
+scene ninetales_pre 4000
+bwalk ninetales_intro input:HandleInputChooseAction
+bwin ninetales_win
+scene ninetales_after 3000
+
+warpto MAP_ULA_ULA_CAVE_HNS 15 27
+face UP
+tap A 4
+scene sandslash_pre 4000
+bwalk sandslash_intro input:HandleInputChooseAction
+bwin sandslash_win
+scene sandslash_after 3000
+
+warpto MAP_PONI_ISLE_HNS 10 22
+face UP
+tap A 4
+scene exeggutor_pre 4000
+bwalk exeggutor_intro input:HandleInputChooseAction
+bwin exeggutor_win
+scene exeggutor_after 3000
+
+warpto MAP_PONI_CAVE_HNS 22 6
+face UP
+tap A 4
+scene golem_pre 4000
+bwalk golem_intro input:HandleInputChooseAction
+bwin golem_win
+scene golem_after 3000
+
+warpto MAP_AKALA_FOREST_HNS 9 3
+face UP
+snap raichu_field
+tap A 4
+scene raichu_pre 4000
+include _legend_tail.txt

@@ -1,0 +1,60 @@
+# The link rooms the Goldenrod counter warps to after a link-up (GoldenrodCity_PokemonCenter_hns scripts.inc:
+# setwarp MAP_TRADE_CENTER_HNS 5 8 / MAP_BATTLE_COLOSSEUM_2P_HNS 6 8), entered here with warpto and no partner:
+#   r1 Trade Center attendant (9,6), TradeCenter_EventScript_Attendant_hns (TradeCenter_Text_TakeSeatStartTrade)
+#   r2 a Trade Center chair (4,5), EventScript_TradeCenter_Chair0 -> special PlayerEnteredTradeSeat ->
+#      src/cable_club.c Task_EnterCableClubSeat: gText_PleaseWaitForLink, then GetCableClubPartnersReady (no
+#      partner: the link error screen, CB2_PrintErrorMessage)
+#   r3 the lines a partner's avatar and the room exit give, run in RAM in the room (data/scripts/cable_club.inc):
+#      EventScript_ConfirmLeaveCableClubRoom (Text_TerminateLinkConfirmation YES/NO, NO), Text_TerminateLinkPleaseWait,
+#      CableClub_EventScript_TooBusyToNotice, CableClub_Text_GotToLookAtTrainerCard / ...ColoredTrainerCard with the
+#      partner's name (STR_VAR_2 = gText_SilverCard, as GetLinkTrainerCardColor buffers it), CableClub_EventScript_TrainerCardDataOverwritten, RecordCorner_EventScript_ReceivedGiftItem
+#      (RecordCorner_Text_PlayerSentOverOneX), and the record mixing lines gText_MixingRecords /
+#      gText_RecordMixingComplete (src/record_mixing.c PrintTextOnRecordMixing :288 prints them in window 0 at
+#      x 0, y 1 with FONT_NORMAL, as the field message box does)
+#   r4 Battle Colosseum attendant (9,3), BattleColosseum_2P_EventScript_Attendant
+start saves/r14/link/base.sav
+include ../../scripts/continue.txt
+linkplayers he:דנה,en:DANA 1
+
+# --- r1
+warpto MAP_TRADE_CENTER_HNS 8 6
+face RIGHT
+snap r1_room
+tap A 4
+fieldwatch r1_attendant free 6000
+
+# --- r3
+warpto MAP_TRADE_CENTER_HNS 5 7
+face UP
+evstart lockall; goto 0x@EventScript_ConfirmLeaveCableClubRoom@
+fieldwatch r3_leave menu 6000
+pick 1
+fieldwatch r3_leave_no free 6000
+evstart lockall; messageautoscroll 0x@Text_TerminateLinkPleaseWait@; waitmessage; delay 30; closemessage; releaseall; end
+fieldwatch r3_terminate free 6000
+evstart lock; goto 0x@CableClub_EventScript_TooBusyToNotice@
+fieldwatch r3_busy free 6000
+evstart lock; bufferstring STR_VAR_1, 0x@gLinkPlayers+24@; bufferstring STR_VAR_2, 0x@gText_SilverCard@; msgbox 0x@CableClub_Text_GotToLookAtTrainerCard@, MSGBOX_DEFAULT; msgbox 0x@CableClub_Text_GotToLookAtColoredTrainerCard@, MSGBOX_DEFAULT; release; end
+fieldwatch r3_card free 6000
+evstart lock; call 0x@CableClub_EventScript_TrainerCardDataOverwritten@; release; end
+fieldwatch r3_overwritten free 6000
+warpto MAP_TRADE_CENTER_HNS 5 7
+evstart lockall; bufferstring STR_VAR_1, 0x@gLinkPlayers+24@; setvar VAR_TEMP_1, ITEM_NUGGET; goto 0x@RecordCorner_EventScript_ReceivedGiftItem@
+fieldwatch r3_gift free 6000
+evstart lock; message 0x@gText_MixingRecords@; waitmessage; delay 60; message 0x@gText_RecordMixingComplete@; waitmessage; delay 60; closemessage; release; end
+burst r3_mixing 8 20
+waitctl 600 A
+
+# --- r4
+warpto MAP_BATTLE_COLOSSEUM_2P_HNS 8 3
+face RIGHT
+snap r4_room
+tap A 4
+fieldwatch r4_attendant free 6000
+
+# --- r2 (last: without a partner the seat ends on the link error screen)
+warpto MAP_TRADE_CENTER_HNS 4 6
+face UP
+8 UP
+burst r2_chair 12 20
+showtasks

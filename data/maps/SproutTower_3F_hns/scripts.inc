@@ -161,95 +161,88 @@ SproutTower_3F_Movement_EscapeRope:
 	step_end
 
 SproutTower_Text_ElderLecturesRival:
-	.string "ELDER: You are indeed skilled\n"
-	.string "as a trainer.\p"
-	.string "As promised, here is your HM.\p"
-	.string "But let me say this: You should\n"
-	.string "treat your POKéMON better.\p"
-	.string "The way you battle is far too\n"
-	.string "harsh.\p"
-	.string "POKéMON are not tools of war…$"
+	.string "זקן המגדל: אתה אכן מאמן מיומן.\p"
+	.string "כפי שהבטחתי, הנה המ”נ שלך.\p"
+	.string "אבל הרשה לי לומר לך דבר אחד:\n"
+	.string "כדאי שתתייחס טוב יותר לפוקימונים שלך.\p"
+	.string "הדרך שבה אתה נלחם קשוחה מדי.\p"
+	.string "פוקימונים אינם כלי מלחמה…$"
 
 SproutTower_Text_RivalOnlyCaresStrong:
 	.string "…\n"
-	.string "…Humph!\p"
-	.string "He claims to be the ELDER but\n"
-	.string "he's weak.\p"
-	.string "It stands to reason.\p"
-	.string "I'd never lose to fools who babble\n"
-	.string "about being nice to POKéMON.\p"
-	.string "I only care about strong\n"
-	.string "POKéMON that can win.\p"
-	.string "I really couldn't care less\n"
-	.string "about weak POKéMON.$"
+	.string "…המף!\p"
+	.string "הוא טוען שהוא זקן המגדל,\n"
+	.string "אבל הוא חלש.\p"
+	.string "זה ברור מאליו.\p"
+	.string "לעולם לא אפסיד לטיפשים שמקשקשים\n"
+	.string "על יחס יפה לפוקימונים.\p"
+	.string "אכפת לי רק מפוקימונים חזקים\n"
+	.string "שיכולים לנצח.\p"
+	.string "ממש לא אכפת לי\n"
+	.string "מפוקימונים חלשים.$"
 
 SproutTower_Text_RivalUsedEscapeRope:
-	.string "{RIVAL} used an ESCAPE ROPE!$"
+	.string "{RIVAL} השתמש בחבל מילוט!$"
 
 SproutTower_Text_SageLi_Seen:
-	.string "So good of you to come here!\p"
-	.string "SPROUT TOWER is a place of\n"
-	.string "training.\p"
-	.string "People and POKéMON test their\n"
-	.string "bonds to build a bright future\l"
-	.string "together.\p"
-	.string "I am the final test.\p"
-	.string "Allow me to check the ties\n"
-	.string "between your POKéMON and you!$"
+	.string "כמה יפה מצידך שבאת לכאן!\p"
+	.string "מגדל הנבט הוא מקום אימונים.\p"
+	.string "בני אדם ופוקימונים בוחנים כאן את\n"
+	.string "הקשר ביניהם כדי לבנות יחד עתיד מזהיר.\p"
+	.string "אני המבחן האחרון.\p"
+	.string "הרשה לי לבחון את הקשר\n"
+	.string "בינך לבין הפוקימונים שלך!$"
 
 SproutTower_Text_SageLi_Beaten:
-	.string "Ah, excellent!$"
+	.string "אה, מצוין!$"
 
 SproutTower_Text_SageLi_TakeFlash:
-	.string "You and your POKéMON should\n"
-	.string "have no problem using this move.\p"
-	.string "Take this FLASH HM.$"
+	.string "לך ולפוקימונים שלך לא אמורה\n"
+	.string "להיות בעיה להשתמש במהלך הזה.\p"
+	.string "הנה, מ”נ הבזק בשבילך.$"
 
 SproutTower_Text_SageLi_FlashExplain:
-	.string "FLASH illuminates even the\n"
-	.string "darkest of all places.\p"
-	.string "But to use it out of battle, you\n"
-	.string "need the BADGE from VIOLET's GYM.$"
+	.string "הבזק מאיר אפילו את\n"
+	.string "המקומות החשוכים ביותר.\p"
+	.string "אבל כדי להשתמש בו מחוץ לקרב,\n"
+	.string "צריך את התג של מכון ויולט.$"
 
 SproutTower_Text_SageLi_AfterBattle:
-	.string "I hope you learn and grow from\n"
-	.string "your journey.$"
+	.string "אני מקווה שהמסע שלך\n"
+	.string "יעזור לך ללמוד ולצמוח.$"
 
 SproutTower_Text_SageJin_Seen:
-	.string "I train to find enlightenment\n"
-	.string "in POKéMON!$"
+	.string "אני מתאמן כדי למצוא הארה\n"
+	.string "דרך הפוקימונים!$"
 
 SproutTower_Text_SageJin_Beaten:
-	.string "My training is incomplete…$"
+	.string "האימון שלי עוד לא הושלם…$"
 
 SproutTower_Text_SageJin_AfterBattle:
-	.string "As POKéMON grow stronger,\n"
-	.string "so does the trainer.\p"
-	.string "No, wait. As the trainer\n"
-	.string "grows stronger, so do the\l"
-	.string "POKéMON.$"
+	.string "ככל שהפוקימונים מתחזקים,\n"
+	.string "כך מתחזק גם המאמן.\p"
+	.string "לא, רגע. ככל שהמאמן מתחזק,\n"
+	.string "כך מתחזקים גם הפוקימונים.$"
 
 SproutTower_Text_SageTroy_Seen:
-	.string "Let me see how much you trust\n"
-	.string "your POKéMON.$"
+	.string "הבה נראה עד כמה אתה סומך\n"
+	.string "על הפוקימונים שלך.$"
 
 SproutTower_Text_SageTroy_Beaten:
-	.string "Yes, your trust is real!$"
+	.string "כן, האמון שלך אמיתי!$"
 
 SproutTower_Text_SageTroy_AfterBattle:
-	.string "It is not far to the ELDER.$"
+	.string "זקן המגדל נמצא לא רחוק מכאן.$"
 
 SproutTower_Text_SageNeal_Seen:
-	.string "The ELDER's HM lights even\n"
-	.string "pitch-black darkness.$"
+	.string "המ”נ של זקן המגדל מאיר אפילו\n"
+	.string "חושך מוחלט.$"
 
 SproutTower_Text_SageNeal_Beaten:
-	.string "It is my head that is bright!$"
+	.string "דווקא הראש שלי מבריק!$"
 
 SproutTower_Text_SageNeal_AfterBattle:
-	.string "Let there be light on your\n"
-	.string "journey.$"
+	.string "יהי אור במסעך.$"
 
 SproutTower_Text_3F_Painting:
-	.string "It's a powerful painting of a\n"
-	.string "BELLSPROUT.$"
+	.string "זה ציור עוצמתי של בלספראוט.$"

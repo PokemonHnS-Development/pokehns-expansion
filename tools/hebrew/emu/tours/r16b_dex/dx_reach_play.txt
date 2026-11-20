@@ -1,0 +1,34 @@
+# Reach check, part 2 (save dx_rand from dx_reach_newgame): the randomized starter, then wild
+# encounters on Route 29 until one rolls a species outside the 482-entry obtainable list
+# (wildfind reads gBattleMons[1].species and sObtainableToNationalOrder), then a MASTER BALL catch:
+# the caught-Pokemon Pokedex page of that species (No. 000, its category and entry).
+# Aids, not part of the roll: the lab state is set and the player warped in (as tours/chr_14), the
+# ball's choice script is started directly, and MASTER BALLs are put in the bag.
+# Driver: scripts/r16b_dex/dexreach.py --only '^dx_reach'.
+start save:dx_rand
+include ../../scripts/continue.txt
+ev setvar VAR_NEWBARKTOWN_LABSTATE, 1; setflag FLAG_MOM_VISITED; end
+warptoloose MAP_NEW_BARK_TOWN_LAB_HNS 9 5
+waitctl 600
+evstart lock; goto NewBarkTown_Lab_EventScript_CyndaquilBall_Choice
+talk dxp_ball 10 -                              # ends at YES/NO: the randomized picture, name, category
+snap dxp_choice
+tap A 0                                          # YES
+converse dxp_received
+obtainable 0
+monprobe 0
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap dxp_party
+tap B 0
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+ev additem ITEM_MASTER_BALL, 5; end
+warptoloose MAP_ROUTE29_HNS 50 8
+waitctl 600
+wildfind dxw 8
+bcatch dxw_catch
+snap dxw_after

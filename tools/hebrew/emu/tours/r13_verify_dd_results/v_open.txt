@@ -1,0 +1,9 @@
+# r13 verify: doubles results window (Dome lobby sign at 18,10) from the battery kept after
+# the open doubles tourney win, on the release ROM (no clip build).
+start saves/r13/verify_dd_results/dd_open_won.sav
+include ../../scripts/continue.txt
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 18 11
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drivex v_open_res free 10 3000

@@ -1,0 +1,25 @@
+# Noble Kleavor, Route 50 (75,14): the trigger (74|75,15) at VAR_NOBLE_KLEAVOR 1, "play the flute?"
+# YES/NO and the entrance cutscene (Route50_EventScript_ActivateKleavor, data/maps/Route50_hns/
+# scripts.inc:134-186), then Route50_EventScript_Kleavor (:188-225): a boss battle with settotemboost
+# (no catching), the dropped-plate text and the plate.
+start saves/ladder6_postgame.sav
+include _base.txt
+ev setvar VAR_NOBLE_KLEAVOR, 1; setflag FLAG_HIDE_ROUTE50_NOBLE_KLEAVOR; end
+warpto MAP_ROUTE50_HNS 75 16
+face UP
+snap kl_field
+stepto UP 1
+scene kl_flute 3000
+snap kl_flute_menu
+tap A 4
+scene kl_scene 20000 45
+objs
+approach 1
+snap kl_before
+tap A 4
+scene kl_pre 4000
+bwalk kl_intro input:HandleInputChooseAction
+snap kl_action
+bwin kl_win
+scene kl_after 12000
+snap kl_end

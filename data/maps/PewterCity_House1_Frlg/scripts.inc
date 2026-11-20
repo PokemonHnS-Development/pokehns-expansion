@@ -31,7 +31,7 @@ PewterCity_House1_EventScript_DoNidoranCry::
 	return
 
 PewterCity_House1_Text_Nidoran::
-	.string "NIDORAN♂: Bowbow!$"
+	.string "נידורן♂: באו באו!$"
 
 PewterCity_House1_Text_NidoranSit::
 	.string "NIDORAN, sit!$"

@@ -1,0 +1,23 @@
+# Violet aide under the party-limit challenge at 1 (GetMaxPartySize() = 1): the Egg goes to the PC
+# (Aide_EggSentToPC, :67-70), then the Exp. Share S. From a savestate at the offer, with every
+# PC box filled as well: giveegg returns MON_CANT_GIVE -> Common_EventScript_NoMoreRoomForPokemon
+# (data/scripts/pc_transfer.inc:48-51).
+start saves/r6_gifts_base.sav
+include _base.txt
+ev file _solo.inc
+partylimit 5
+ev clearflag FLAG_RECEIVED_TOGEPI_EGG; clearflag FLAG_HIDE_VIOLET_CITY_AIDE; end
+warpto MAP_VIOLET_CITY_POKEMON_CENTER_HNS 9 5
+face UP
+tap A 4
+scene tl_offer 4000
+ss tl_offer
+pickd 0
+scene tl_give 12000
+snap tl_free
+partyinfo
+sl tl_offer
+fillboxes 0
+pickd 0
+scene tl_boxfull 12000
+snap tl_boxfull_end

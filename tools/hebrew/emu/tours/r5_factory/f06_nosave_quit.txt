@@ -1,0 +1,26 @@
+# r5 Battle Factory: quitting without saving. The challenge is saved on entry with status SAVING;
+# a soft reset on the way to the pre-battle room means the lobby's QuitWithoutSaving lines
+# (DidntSaveBeforeQuitting, Lobby :27-38) on CONTINUE.
+start saves/r5/factory_base.sav
+include ../../scripts/continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 4 8
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive q_in menu
+pick 0
+drive q_lv menu
+pick 0
+drivex q_save menu 10
+pick 0
+saveyes
+pages q_step 2
+waitmap - MAP_BATTLE_FRONTIER_BATTLE_FACTORY_PRE_BATTLE_ROOM_HNS
+6 A+B+START+SELECT
+waitcb2 CB2_MainMenu 6000 START
+waittask Task_HandleMainMenuInput 600
+tap A 30
+waitcb2 CB2_Overworld 1200
+drivex q_quit free 20 6000
+frontierinfo

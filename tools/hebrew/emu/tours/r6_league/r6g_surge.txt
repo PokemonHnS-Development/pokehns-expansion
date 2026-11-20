@@ -1,0 +1,24 @@
+# Lt. Surge, Vermilion Gym (5,2): the trash-can switch messages (VermilionCity_Gym_EventScript_TrashCan*,
+# switches forced to cans 7 and 8: a wrong can, the first lock, a wrong second can (locks reset),
+# the second lock), then VermilionCity_Gym_EventScript_Surge with the TM branch (no TM Shock Wave),
+# (removeitem takes exactly the count held; the save holds one), then the Thunderstone branch (VermilionCity_Gym_EventScript_GiveThunderstone).
+start saves/r6_league_base.sav
+include _base.txt
+ev clearflag FLAG_DEFEATED_VERMILION_GYM; clearflag FLAG_BADGE11_GET; clearflag FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES; removeitem ITEM_TM_SHOCK_WAVE, 1; end
+vars VAR_RESULT
+warpto MAP_VERMILION_CITY_GYM_HNS 5 3
+snap su_room
+evstart setvar VAR_TEMP_0, 7; setvar VAR_TEMP_1, 8; clearflag FLAG_TEMP_1; goto VermilionCity_Gym_EventScript_TrashCan1
+scene T_nope 20000
+evstart setvar VAR_TEMP_0, 7; setvar VAR_TEMP_1, 8; goto VermilionCity_Gym_EventScript_TrashCan7
+scene T_first 20000
+evstart goto VermilionCity_Gym_EventScript_TrashCan6
+scene T_reset 20000
+evstart setvar VAR_TEMP_0, 7; setvar VAR_TEMP_1, 8; setflag FLAG_TEMP_1; goto VermilionCity_Gym_EventScript_TrashCan8
+scene T_second 20000
+snap T_open
+face UP
+include _leader_tail.txt
+evstart lock; call VermilionCity_Gym_EventScript_GiveThunderstone; release; end
+scene ST 30000
+snap ST_free

@@ -223,88 +223,76 @@ BattleFrontier_Lounge3_Text_YouLookToughExplainGambling::
 	.string "So, anyway…$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattleTowerSingle::
-	.string "What I'm looking for is a TRAINER who's\n"
-	.string "going to be challenging the BATTLE\l"
-	.string "TOWER's SINGLE BATTLE ROOMS.\p"
-	.string "But so far, I haven't seen a TRAINER\n"
-	.string "that has that winning quality.$"
+	.string "אני מחפש מאמן שעומד לקבל על עצמו\n"
+	.string "את אתגר חדרי קרב יחיד במגדל הקרב.\p"
+	.string "אבל עד עכשיו לא ראיתי מאמן\n"
+	.string "שיש לו את מה שצריך כדי לנצח.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattleTowerDouble::
-	.string "What I'm looking for is a TRAINER who's\n"
-	.string "going to be challenging the BATTLE\l"
-	.string "TOWER's DOUBLE BATTLE ROOMS.\p"
-	.string "But so far, I haven't seen a TRAINER\n"
-	.string "that has that winning quality.$"
+	.string "אני מחפש מאמן שעומד לקבל על עצמו\n"
+	.string "את אתגר חדרי קרב כפול במגדל הקרב.\p"
+	.string "אבל עד עכשיו לא ראיתי מאמן\n"
+	.string "שיש לו את מה שצריך כדי לנצח.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattleTowerMulti::
-	.string "What I'm looking for is a TRAINER who's\n"
-	.string "going to be challenging the BATTLE\l"
-	.string "TOWER's MULTI BATTLE ROOMS.\p"
-	.string "But so far, I haven't seen a TRAINER\n"
-	.string "that has that winning quality.$"
+	.string "אני מחפש מאמן שעומד לקבל על עצמו\n"
+	.string "את אתגר חדרי קרב מרובה במגדל הקרב.\p"
+	.string "אבל עד עכשיו לא ראיתי מאמן\n"
+	.string "שיש לו את מה שצריך כדי לנצח.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattleDomeSingle::
-	.string "What I'm looking for is a TRAINER who's\n"
-	.string "going to be entering the BATTLE\l"
-	.string "DOME's SINGLE BATTLE Tourney.\p"
-	.string "But so far, I haven't seen a TRAINER\n"
-	.string "that has that winning quality.$"
+	.string "אני מחפש מאמן שעומד להשתתף\n"
+	.string "בטורניר הקרב היחיד בכיפת הקרב.\p"
+	.string "אבל עד עכשיו לא ראיתי מאמן\n"
+	.string "שיש לו את מה שצריך כדי לנצח.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattleDomeDouble::
-	.string "What I'm looking for is a TRAINER who's\n"
-	.string "going to be entering the BATTLE\l"
-	.string "DOME's DOUBLE BATTLE Tourney.\p"
-	.string "But so far, I haven't seen a TRAINER\n"
-	.string "that has that winning quality.$"
+	.string "אני מחפש מאמן שעומד להשתתף\n"
+	.string "בטורניר הקרב הכפול בכיפת הקרב.\p"
+	.string "אבל עד עכשיו לא ראיתי מאמן\n"
+	.string "שיש לו את מה שצריך כדי לנצח.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattleFactorySingle::
-	.string "What I'm looking for is a TRAINER who's\n"
-	.string "going to be entering the BATTLE\l"
-	.string "FACTORY's Battle Swap Single Tourney.\p"
-	.string "But so far, I haven't seen a TRAINER\n"
-	.string "that has that winning quality.$"
+	.string "אני מחפש מאמן שעומד להשתתף בטורניר\n"
+	.string "החלפת קרב יחיד במפעל הקרב.\p"
+	.string "אבל עד עכשיו לא ראיתי מאמן\n"
+	.string "שיש לו את מה שצריך כדי לנצח.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattleFactoryDouble::
-	.string "What I'm looking for is a TRAINER who's\n"
-	.string "going to be entering the BATTLE\l"
-	.string "FACTORY's Battle Swap Double Tourney.\p"
-	.string "But so far, I haven't seen a TRAINER\n"
-	.string "that has that winning quality.$"
+	.string "אני מחפש מאמן שעומד להשתתף בטורניר\n"
+	.string "החלפת קרב כפול במפעל הקרב.\p"
+	.string "אבל עד עכשיו לא ראיתי מאמן\n"
+	.string "שיש לו את מה שצריך כדי לנצח.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattlePalaceSingle::
-	.string "What I'm looking for is a TRAINER who's\n"
-	.string "going to be challenging the BATTLE\l"
-	.string "PALACE's SINGLE BATTLE HALLS.\p"
-	.string "But so far, I haven't seen a TRAINER\n"
-	.string "that has that winning quality.$"
+	.string "אני מחפש מאמן שעומד לקבל על עצמו את\n"
+	.string "אתגר אולמות הקרב היחיד בארמון הקרב.\p"
+	.string "אבל עד עכשיו לא ראיתי מאמן\n"
+	.string "שיש לו את מה שצריך כדי לנצח.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattlePalaceDouble::
-	.string "What I'm looking for is a TRAINER who's\n"
-	.string "going to be challenging the BATTLE\l"
-	.string "PALACE's DOUBLE BATTLE HALLS.\p"
-	.string "But so far, I haven't seen a TRAINER\n"
-	.string "that has that winning quality.$"
+	.string "אני מחפש מאמן שעומד לקבל על עצמו את\n"
+	.string "אתגר אולמות הקרב הכפול בארמון הקרב.\p"
+	.string "אבל עד עכשיו לא ראיתי מאמן\n"
+	.string "שיש לו את מה שצריך כדי לנצח.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattleArena::
-	.string "What I'm looking for is a TRAINER who's\n"
-	.string "going to be entering the BATTLE\l"
-	.string "ARENA's Set KO Tourney.\p"
-	.string "But so far, I haven't seen a TRAINER\n"
-	.string "that has that winning quality.$"
+	.string "אני מחפש מאמן שעומד להשתתף\n"
+	.string "בטורניר הנוקאאוט בזירת הקרב.\p"
+	.string "אבל עד עכשיו לא ראיתי מאמן\n"
+	.string "שיש לו את מה שצריך כדי לנצח.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattlePike::
-	.string "What I'm looking for is a TRAINER who's\n"
-	.string "going to be entering the BATTLE PIKE's\l"
-	.string "Battle Choice.\p"
-	.string "But so far, I haven't seen a TRAINER\n"
-	.string "that has that winning quality.$"
+	.string "אני מחפש מאמן שעומד להשתתף\n"
+	.string "באתגר בחירת הקרב של שביל הקרב.\p"
+	.string "אבל עד עכשיו לא ראיתי מאמן\n"
+	.string "שיש לו את מה שצריך כדי לנצח.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattlePyramid::
-	.string "What I'm looking for is a TRAINER who's\n"
-	.string "going to be entering the BATTLE\l"
-	.string "PYRAMID's Battle Quest.\p"
-	.string "But so far, I haven't seen a TRAINER\n"
-	.string "that has that winning quality.$"
+	.string "אני מחפש מאמן שעומד לצאת\n"
+	.string "למסע הקרב בפירמידת הקרב.\p"
+	.string "אבל עד עכשיו לא ראיתי מאמן\n"
+	.string "שיש לו את מה שצריך כדי לנצח.$"
 
 BattleFrontier_Lounge3_Text_HowAboutEnteringEventForMe::
 	.string "I'll see to it that you benefit, too.\n"
@@ -333,88 +321,76 @@ BattleFrontier_Lounge3_Text_ThanksOffYouGo::
 	.string "So, off you go!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleTowerSingle::
-	.string "Get to the BATTLE TOWER's\n"
-	.string "SINGLE BATTLE ROOMS pronto!\p"
-	.string "It's a must-win situation!\n"
-	.string "Don't blow your chance!\l"
-	.string "Both of our futures depend on you!$"
+	.string "קדימה, מיד לחדרי קרב יחיד\n"
+	.string "במגדל הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleTowerDouble::
-	.string "Get to the BATTLE TOWER's\n"
-	.string "DOUBLE BATTLE ROOMS pronto!\p"
-	.string "It's a must-win situation!\n"
-	.string "Don't blow your chance!\l"
-	.string "Both of our futures depend on you!$"
+	.string "קדימה, מיד לחדרי קרב כפול\n"
+	.string "במגדל הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleTowerMulti::
-	.string "Get to the BATTLE TOWER's\n"
-	.string "MULTI BATTLE ROOMS pronto!\p"
-	.string "It's a must-win situation!\n"
-	.string "Don't blow your chance!\l"
-	.string "Both of our futures depend on you!$"
+	.string "קדימה, מיד לחדרי קרב מרובה\n"
+	.string "במגדל הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleDomeSingle::
-	.string "Get to the BATTLE DOME's\n"
-	.string "SINGLE BATTLE Tourney pronto!\p"
-	.string "It's a must-win situation!\n"
-	.string "Don't blow your chance!\l"
-	.string "Both of our futures depend on you!$"
+	.string "קדימה, מיד לטורניר הקרב היחיד\n"
+	.string "בכיפת הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleDomeDouble::
-	.string "Get to the BATTLE DOME's\n"
-	.string "DOUBLE BATTLE Tourney pronto!\p"
-	.string "It's a must-win situation!\n"
-	.string "Don't blow your chance!\l"
-	.string "Both of our futures depend on you!$"
+	.string "קדימה, מיד לטורניר הקרב הכפול\n"
+	.string "בכיפת הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleFactorySingle::
-	.string "Get to the BATTLE FACTORY's\n"
-	.string "Battle Swap Single Tourney pronto!\p"
-	.string "It's a must-win situation!\n"
-	.string "Don't blow your chance!\l"
-	.string "Both of our futures depend on you!$"
+	.string "קדימה, מיד לטורניר החלפת קרב יחיד\n"
+	.string "במפעל הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleFactoryDouble::
-	.string "Get to the BATTLE FACTORY's\n"
-	.string "Battle Swap Double Tourney pronto!\p"
-	.string "It's a must-win situation!\n"
-	.string "Don't blow your chance!\l"
-	.string "Both of our futures depend on you!$"
+	.string "קדימה, מיד לטורניר החלפת קרב כפול\n"
+	.string "במפעל הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattlePalaceSingle::
-	.string "Get to the BATTLE PALACE's\n"
-	.string "SINGLE BATTLE HALLS pronto!\p"
-	.string "It's a must-win situation!\n"
-	.string "Don't blow your chance!\l"
-	.string "Both of our futures depend on you!$"
+	.string "קדימה, מיד לאולמות הקרב היחיד\n"
+	.string "בארמון הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattlePalaceDouble::
-	.string "Get to the BATTLE PALACE's\n"
-	.string "DOUBLE BATTLE HALLS pronto!\p"
-	.string "It's a must-win situation!\n"
-	.string "Don't blow your chance!\l"
-	.string "Both of our futures depend on you!$"
+	.string "קדימה, מיד לאולמות הקרב הכפול\n"
+	.string "בארמון הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleArena::
-	.string "Get to the BATTLE ARENA's\n"
-	.string "Set KO Tourney pronto!\p"
-	.string "It's a must-win situation!\n"
-	.string "Don't blow your chance!\l"
-	.string "Both of our futures depend on you!$"
+	.string "קדימה, מיד לטורניר הנוקאאוט\n"
+	.string "בזירת הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattlePike::
-	.string "Get to the BATTLE PIKE's\n"
-	.string "Battle Choice pronto!\p"
-	.string "It's a must-win situation!\n"
-	.string "Don't blow your chance!\l"
-	.string "Both of our futures depend on you!$"
+	.string "קדימה, מיד לאתגר בחירת הקרב\n"
+	.string "של שביל הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattlePyramid::
-	.string "Get to the BATTLE PYRAMID's\n"
-	.string "Battle Quest pronto!\p"
-	.string "It's a must-win situation!\n"
-	.string "Don't blow your chance!\l"
-	.string "Both of our futures depend on you!$"
+	.string "קדימה, מיד למסע הקרב\n"
+	.string "בפירמידת הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_NiceTryCantReturnPoints::
 	.string "Oh, it's you…\n"

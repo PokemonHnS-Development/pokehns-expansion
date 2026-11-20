@@ -1,0 +1,18 @@
+# Base save for the post-game screen tours, English ROM (the twin of r1_hof_base_he.txt):
+# player name GOLD as in the ladder, slot 5 nicknamed THUNDERKIN.
+include continue.txt
+include _r1_hof_party.txt
+w8 @gPlayerParty+1FC@ CE
+w8 @gPlayerParty+1FD@ C2
+w8 @gPlayerParty+1FE@ CF
+w8 @gPlayerParty+1FF@ C8
+w8 @gPlayerParty+200@ BE
+w8 @gPlayerParty+201@ BF
+w8 @gPlayerParty+202@ CC
+w8 @gPlayerParty+203@ C5
+w8 @gPlayerParty+204@ C3
+w8 @gPlayerParty+205@ C8
+expectflag FLAG_VISITED_KANTO 1
+expectflag FLAG_SYS_GAME_CLEAR 1
+savegame
+shot base_saved

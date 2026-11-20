@@ -1,0 +1,131 @@
+# The DOLL list from save:decor_dolls (all 35 dolls in the PC, none placed).
+# DECORATE > category menu: HnS lists only DOLL + CANCEL (sDecorationCategoryNames, src/decoration.c:221-233;
+# DECORCAT_DOLL = 0 = DECORCAT_DESK, include/decoration.h:30-53), each row with the owned/size count
+# right-aligned to 104 px (PrintDecorationCategoryMenuItem :776-790). DOLL > the items list (FONT_NARROW
+# list menu, item_X 8, 8 rows, src/decoration.c:314-333, :913-936), the category summary window (:1051)
+# and the description window (:1055-1066, 13x6 tiles at (16,13)). Every row is shot, CANCEL last.
+# Then TOSS: the same category menu and list for tossing (:690-704).
+start save:decor_dolls
+include ../continue.txt
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 1 2
+face UP
+talk dl_00_pc_boot 10 A PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press DOWN
+press DOWN
+tap A 0                                   # DECORATION
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+snap dl_01_menu
+tap A 0                                   # DECORATE
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+snap dl_02_categories_doll
+press DOWN
+snap dl_03_categories_cancel
+press UP
+tap A 0                                   # DOLL
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+snap dl_10_row00
+press DOWN
+snap dl_10_row01
+press DOWN
+snap dl_10_row02
+press DOWN
+snap dl_10_row03
+press DOWN
+snap dl_10_row04
+press DOWN
+snap dl_10_row05
+press DOWN
+snap dl_10_row06
+press DOWN
+snap dl_10_row07
+press DOWN
+snap dl_10_row08
+press DOWN
+snap dl_10_row09
+press DOWN
+snap dl_10_row10
+press DOWN
+snap dl_10_row11
+press DOWN
+snap dl_10_row12
+press DOWN
+snap dl_10_row13
+press DOWN
+snap dl_10_row14
+press DOWN
+snap dl_10_row15
+press DOWN
+snap dl_10_row16
+press DOWN
+snap dl_10_row17
+press DOWN
+snap dl_10_row18
+press DOWN
+snap dl_10_row19
+press DOWN
+snap dl_10_row20
+press DOWN
+snap dl_10_row21
+press DOWN
+snap dl_10_row22
+press DOWN
+snap dl_10_row23
+press DOWN
+snap dl_10_row24
+press DOWN
+snap dl_10_row25
+press DOWN
+snap dl_10_row26
+press DOWN
+snap dl_10_row27
+press DOWN
+snap dl_10_row28
+press DOWN
+snap dl_10_row29
+press DOWN
+snap dl_10_row30
+press DOWN
+snap dl_10_row31
+press DOWN
+snap dl_10_row32
+press DOWN
+snap dl_10_row33
+press DOWN
+snap dl_10_row34
+press DOWN
+snap dl_10_row35_cancel
+press B                                   # back to the category menu
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+snap dl_20_categories_after_list
+press B                                   # B: the actions menu again
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+snap dl_21_menu_after_categories
+press DOWN
+press DOWN
+tap A 0                                   # TOSS
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+snap dl_22_toss_categories
+tap A 0                                   # DOLL
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+snap dl_23_toss_list
+press B
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+press DOWN
+tap A 0                                   # CANCEL row of the category menu
+waittaskx HandleDecorationActionsMenuInput 900
+waitquiet
+press B                                   # CANCEL: the PC menu again
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press B
+waitctl 600 B

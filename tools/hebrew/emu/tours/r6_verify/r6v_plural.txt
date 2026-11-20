@@ -1,0 +1,13 @@
+# r6 verify: count-of-items gift windows (Std_ObtainItem with QTY > 1): the aide's 5 Poke Balls through the real
+# lab door trigger (NewBarkTown_Lab_EventScript_TriggerAideGiveBalls), and giveitem ITEM_SPORT_BALL, 30 (the
+# Bug-Catching Contest officer's gift, Gate_NationalPark_hns) run through the same Std_ObtainItem path.
+start saves/r6_items_base.sav
+include ../../scripts/continue.txt
+setflag FLAG_DISABLE_TRAINERS
+setvar VAR_NEWBARKTOWN_LABSTATE 5
+clearflag FLAG_HIDE_NEWBARKTOWN_LAB_AIDE
+warpto MAP_NEW_BARK_TOWN_LAB_HNS 6 11
+ev turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH; end
+go DOWN
+talk v_balls 20 -
+gift v_sport_ball_x30 ITEM_SPORT_BALL 30

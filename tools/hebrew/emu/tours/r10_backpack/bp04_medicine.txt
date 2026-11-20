@@ -1,0 +1,7 @@
+# Field bag, MEDICINE pocket (medicine + battle items), all 71: row + context menu.
+start saves/bp_menuA.sav
+include ../../scripts/continue.txt
+fillpocket MEDICINE 999 0 92
+bagopen MEDICINE
+bagrows med ctx 120
+bagclose

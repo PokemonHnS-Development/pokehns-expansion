@@ -1,0 +1,182 @@
+# r2 Battle Frontier: Battle Factory singles, Lv.50. The rental screen (DoBattleFactorySelectScreen,
+# src/battle_factory_screen.c:1082): all 6 balls, the SUMMARY / RENT / OTHERS menu and its rows,
+# a rental's summary, a rented ball's menu (DESELECT), the 'these three?' YES/NO; the battle;
+# then the swap screen (DoBattleFactorySwapScreen :3221): the player's 3 balls, CANCEL, the
+# SUMMARY / SWAP / RECHOOSE menu, the opponent's 3 balls and the 'accept this one?' YES/NO.
+start saves/r2_bff/base_postgame.sav
+include ../continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 4 8
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive fa_in menu
+pick 0
+drive fa_lv menu
+pick 0
+drivex fa_save menu 10
+pick 0
+saveyes fa_savebox
+drivex fa_go cb2:CB2_InitSelectScreen 30 9000
+waittaskdata Select_Task_HandleChooseMons 0 1 900
+waitquiet
+snap fs_ball1
+tap RIGHT 4
+waitquiet
+snap fs_ball2
+tap RIGHT 4
+waitquiet
+snap fs_ball3
+tap RIGHT 4
+waitquiet
+snap fs_ball4
+tap RIGHT 4
+waitquiet
+snap fs_ball5
+tap RIGHT 4
+waitquiet
+snap fs_ball6
+tap RIGHT 4
+waitquiet
+# ball 1: the menu and each row
+tap A 4
+waittaskdata Select_Task_HandleMenu 0 3 300
+waitquiet
+snap fs_menu_r1
+tap DOWN 4
+waitquiet
+snap fs_menu_r2
+tap DOWN 4
+waitquiet
+snap fs_menu_r3
+tap UP 4
+waitquiet
+tap UP 4
+waitquiet
+# SUMMARY
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitquiet
+snap fs_summary
+tap B 4
+waittaskdata Select_Task_HandleMenu 0 3 600
+waitquiet
+snap fs_menu_back
+# OTHERS: back to the balls
+tap DOWN 4
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleChooseMons 0 1 300
+20 -
+waitquiet
+snap fs_others
+# RENT ball 1, then its menu (DESELECT)
+tap A 4
+waittaskdata Select_Task_HandleMenu 0 3 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleChooseMons 0 1 300
+20 -
+waitquiet
+snap fs_rented1
+tap A 4
+waittaskdata Select_Task_HandleMenu 0 3 300
+waitquiet
+snap fs_menu_rented
+tap DOWN 4
+waitquiet
+snap fs_menu_rented_r2
+tap B 4
+waittaskdata Select_Task_HandleChooseMons 0 1 300
+20 -
+# RENT balls 2 and 3
+tap RIGHT 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleMenu 0 3 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleChooseMons 0 1 300
+20 -
+waitquiet
+snap fs_rented2
+tap RIGHT 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleMenu 0 3 300
+waitquiet
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskdata Select_Task_HandleYesNo 0 5 300
+waitquiet
+snap fs_yesno
+tap DOWN 4
+waitquiet
+snap fs_yesno_no
+tap UP 4
+waitquiet
+tap A 4
+drivex fa_go2 battle 30 9000
+fastbattles off
+bwin fa_b1
+drivex fa_after1 menu 30 9000
+pick 0
+drivex fa_swapq menu 20 6000
+pick 0
+drivex fa_swapgo cb2:CB2_InitSwapScreen 20 6000
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+snap fsw_mine1
+tap RIGHT 4
+waitquiet
+snap fsw_mine2
+tap RIGHT 4
+waitquiet
+snap fsw_mine3
+tap RIGHT 4
+waitquiet
+snap fsw_cancel
+tap DOWN 4
+waitquiet
+tap A 4
+waittaskdata Swap_Task_HandleMenu 0 3 300
+waitquiet
+snap fsw_menu_r1
+tap DOWN 4
+waitquiet
+snap fsw_menu_r2
+tap DOWN 4
+waitquiet
+snap fsw_menu_r3
+tap UP 4
+waitquiet
+tap A 4
+120 -
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+snap fsw_opp1
+tap RIGHT 4
+waitquiet
+snap fsw_opp2
+tap RIGHT 4
+waitquiet
+snap fsw_opp3
+tap RIGHT 4
+waitquiet
+snap fsw_opp_cancel
+tap DOWN 4
+waitquiet
+tap A 4
+60 -
+waitquiet
+snap fsw_accept
+tap A 4
+drivex fa_swapdone battle 20 9000
+

@@ -1,0 +1,106 @@
+# Battle Pyramid (H&S lobby, BattleFrontier_BattlePyramidLobby_hns): the real entry (Level 50, party slots
+# 1-3, save, the walk into floor 1), then on floor 1 with frontier.curChallengeBattleNum (SB2+0xCB2,
+# include/global.h:556) set to 1..6, ShowMapNamePopup (src/map_name_popup.c:567, :724-743) shows
+# sBattlePyramid_MapHeaderStrings[N]: 'פירמידה, קומה 2'..'7' (src/map_name_popup.c:520-525); then START with
+# N = 6 and 7: the floor window (ShowPyramidFloorWindow, src/start_menu.c:485-498: gText_Floor7, and the
+# wider peak window with gText_Peak). Stand-in: the floor number is poked, the popup and window are the game's.
+# Before the party pick: B on the choose-party screen ('cancel the challenge?', gText_CancelChallenge,
+# GetFacilityCancelString src/party_menu.c:7589-7599), then the same with VAR_FRONTIER_FACILITY = Dome and
+# gSpecialVar_0x8005 = 2 (the Dome's between-rounds pick): 'return to the waiting room?' (gText_ReturnToWaitingRoom).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY_HNS 7 13
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive py_in menu
+pick 0
+drive py_lv menu
+pick 0
+drive py_sel task:Task_HandleChooseMonInput 20
+waittask Task_HandleChooseMonInput 600
+waitquiet
+tap B 0
+waitquiet
+snap fp_py_01_cancel_challenge
+tap B 0
+waittask Task_HandleChooseMonInput 600
+waitquiet
+setvar VAR_FRONTIER_FACILITY 1
+wsym16 gSpecialVar_0x8005 2
+tap B 0
+waitquiet
+snap fp_py_02_return_waiting_room
+tap B 0
+waittask Task_HandleChooseMonInput 600
+setvar VAR_FRONTIER_FACILITY 6
+wsym16 gSpecialVar_0x8005 3
+include ../../scripts/r2_bfpass/_enter_123.txt
+drive py_save menu 10
+pick 0
+saveyes
+drivex py_go free 40 12000
+waitctl 300
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+snap fp_py_00_floor1
+w16 @SB2+CB2@ 1
+evstart callnative ShowMapNamePopup; end
+waittaskx map_name_popup:Task_MapNamePopUpWindow 300
+20 -
+snap fp_py_11_popup_floor2_t20
+20 -
+snap fp_py_11_popup_floor2
+40 -
+snap fp_py_11_popup_floor2_t80
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+waitctl 300
+w16 @SB2+CB2@ 2
+evstart callnative ShowMapNamePopup; end
+waittaskx map_name_popup:Task_MapNamePopUpWindow 300
+40 -
+snap fp_py_12_popup_floor3
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+waitctl 300
+w16 @SB2+CB2@ 3
+evstart callnative ShowMapNamePopup; end
+waittaskx map_name_popup:Task_MapNamePopUpWindow 300
+40 -
+snap fp_py_13_popup_floor4
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+waitctl 300
+w16 @SB2+CB2@ 4
+evstart callnative ShowMapNamePopup; end
+waittaskx map_name_popup:Task_MapNamePopUpWindow 300
+40 -
+snap fp_py_14_popup_floor5
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+waitctl 300
+w16 @SB2+CB2@ 5
+evstart callnative ShowMapNamePopup; end
+waittaskx map_name_popup:Task_MapNamePopUpWindow 300
+40 -
+snap fp_py_15_popup_floor6
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+waitctl 300
+w16 @SB2+CB2@ 6
+evstart callnative ShowMapNamePopup; end
+waittaskx map_name_popup:Task_MapNamePopUpWindow 300
+40 -
+snap fp_py_16_popup_floor7
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+waitctl 300
+w16 @SB2+CB2@ 6
+w32 @gMenuCallback@ 0
+startmenux 1 nopress
+waitquiet
+snap fp_py_26_startmenu_floor_6
+tap B 4
+waitctl 300 B
+w16 @SB2+CB2@ 7
+w32 @gMenuCallback@ 0
+startmenux 1 nopress
+waitquiet
+snap fp_py_27_startmenu_floor_7
+tap B 4
+waitctl 300 B

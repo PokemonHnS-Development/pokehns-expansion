@@ -188,16 +188,16 @@ SaffronCity_Text_HesTakingASnooze::
 	.string "Hah! He's taking a snooze!$"
 
 SaffronCity_Text_CitySign::
-	.string "SAFFRON CITY\n"
-	.string "Shining, Golden Land of Commerce$"
+	.string "העיר סאפרון\n"
+	.string "ארץ המסחר הזהובה והנוצצת$"
 
 SaffronCity_Text_FightingDojo::
-	.string "FIGHTING DOJO$"
+	.string "דוג'ו הלחימה$"
 
 SaffronCity_Text_GymSign::
-	.string "SAFFRON CITY POKéMON GYM\n"
-	.string "LEADER: SABRINA\l"
-	.string "The Master of PSYCHIC POKéMON!$"
+	.string "מכון הפוקימון של העיר סאפרון\n"
+	.string "מנהיגה: סברינה\p"
+	.string "המומחית לפוקימונים מסוג על-חושי!$"
 
 SaffronCity_Text_FullHealCuresStatus::
 	.string "TRAINER TIPS\p"
@@ -215,7 +215,7 @@ SaffronCity_Text_GreatBallImprovedCatchRate::
 	.string "POKéMON.$"
 
 SaffronCity_Text_SilphCoSign::
-	.string "SILPH CO. OFFICE BUILDING$"
+	.string "בניין המשרדים של סילף בע”מ$"
 
 SaffronCity_Text_MrPsychicsHouse::
 	.string "MR. PSYCHIC'S HOUSE$"

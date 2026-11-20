@@ -1,0 +1,7 @@
+# Boot with no flash chip detected: CB2_FlashNotDetectedScreen (src/save_failed_screen.c:405-460,
+# src/main.c:118-119). Needs a ROM copy whose IdentifyFlash returns 1 (movs r0,#1; bx lr), because
+# CheckForFlashMemory runs in the same frame as the check. Run with --tours .../noflash on that copy.
+start saves/boot_base.sav
+waitcb2x CB2_FlashNotDetectedScreen 600
+60 -
+snap bt13_01_flash_not_detected

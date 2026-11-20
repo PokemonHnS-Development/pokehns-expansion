@@ -1,0 +1,43 @@
+# Emerald-leak step 2 stand-in (no Emerald map loads, r16/emerald_leak/step1.md): the S.S. Tidal destination
+# menu of the Emerald Lilycove Harbor ferry (ScriptMenu_CreateLilycoveSSTidalMultichoice, src/script_menu.c:825-900)
+# run on an H&S map: only SLATEPORT and EXIT, because H&S defines the ship and Scott flags as 0
+# (include/constants/flags_hns.h:1581, 2260, 2284-2285), so FlagGet is always FALSE (src/event_data.c:234-246).
+# Then the scrollable list the same function would show with all destinations (SCROLL_MULTI_SS_TIDAL_DESTINATION,
+# src/field_specials.c:2693-2702) through ShowScrollableMultichoice: 'העיר SLATEPORT' (gText_SlateportCity,
+# src/strings.c:621) and 'סלע הטבור' (gText_NavelRock, :572).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_1F_HNS 9 7
+waitnotask Task_MapNamePopUpWindow 600
+ev additem ITEM_EON_TICKET; additem ITEM_MYSTIC_TICKET; setflag FLAG_ENABLE_SHIP_SOUTHERN_ISLAND; setflag FLAG_ENABLE_SHIP_NAVEL_ROCK; setflag FLAG_MET_SCOTT_ON_SS_TIDAL; end
+evstart setvar VAR_0x8004, 0; special ScriptMenu_CreateLilycoveSSTidalMultichoice; waitstate; end
+waittaskx Task_HandleMultichoiceInput 600
+waitquiet
+snap ems2_sstidal_01_slateport
+tap UP 4
+waitquiet
+snap ems2_sstidal_02_up
+tap B 4
+waitctl 600 B
+evstart setvar VAR_0x8004, SCROLL_MULTI_SS_TIDAL_DESTINATION; special ShowScrollableMultichoice; waitstate; end
+waittaskx ScrollableMultichoice_ProcessInput 600
+waitquiet
+snap ems2_sstidal_10_list_row0
+tap DOWN 4
+waitquiet
+snap ems2_sstidal_11_row1
+tap DOWN 4
+waitquiet
+snap ems2_sstidal_12_row2
+tap DOWN 4
+waitquiet
+snap ems2_sstidal_13_row3_navel_rock
+tap DOWN 4
+waitquiet
+snap ems2_sstidal_14_row4
+tap DOWN 4
+waitquiet
+snap ems2_sstidal_15_row5
+tap DOWN 4
+waitquiet
+snap ems2_sstidal_16_row6

@@ -1,0 +1,22 @@
+# Goldenrod Dept. Store 4F, vitamins (GoldenrodCity_DepartmentStore_4F_hns/scripts.inc:55-72).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_GOLDENROD_CITY_DEPARTMENT_STORE_4F_HNS 24 13
+evstart goto GoldenrodDeptStore4_EventScript_Clerk
+talk m02_gr4_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m02_gr4_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m02_gr4
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m02_gr4_bye 10 -
+waitctl 900

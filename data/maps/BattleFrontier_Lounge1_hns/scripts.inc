@@ -248,11 +248,11 @@ BattleFrontier_Lounge1_Text_EvenICantTell_hns:
 	.string "A POKéMON is what I need to see!$"
 
 BattleFrontier_Lounge1_Text_SaidMyMonIsOutstanding_hns:
-	.string "He said my POKéMON is outstanding!\n"
-	.string "I'm glad I raised it carefully!$"
+	.string "הוא אמר שהפוקימון שלי מצוין!\n"
+	.string "אני שמח שגידלתי אותו בקפידה!$"
 
 BattleFrontier_Lounge1_Text_DidntDoAnythingSpecialRaisingIt_hns:
-	.string "He said my POKéMON is outstanding!\n"
-	.string "But I didn't do anything special\l"
-	.string "raising it…$"
+	.string "הוא אמר שהפוקימון שלי מצוין!\p"
+	.string "אבל לא עשיתי שום דבר מיוחד\n"
+	.string "כשגידלתי אותו…$"
 

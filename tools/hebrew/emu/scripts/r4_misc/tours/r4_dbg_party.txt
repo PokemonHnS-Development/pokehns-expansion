@@ -1,0 +1,113 @@
+# Overworld debug menu, Party (sDebugMenu_Actions_Party, src/debug.c:618-632) and PC/Bag > Access PC:
+# Check EVs / Check IVs (ChoosePartyMon, then two messages each, data/scripts/debug.inc:163-211),
+# Edit Pokemon > Inflict Status1 (dynamic multichoice, :507-548), Set Hidden Nature (25-row dynamic
+# multichoice of English nature names, :559-595), Set Ability (multichoice of the mon's ability
+# names, :597-610), Set Friendship ("Friendship:\n{STR_VAR_1} {RIGHT_ARROW} {STR_VAR_2}", src/debug.c
+# :4988), Give Pokerus ("Days Left:" / "Strain:", :5053, :5083). Party slot 1 = Typhlosion.
+start saves/r4_misc/r4_menuA_base.sav
+include ../../continue.txt
+
+# Check EVs
+dbg 2 4
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+snap dbg_party_evs_01_choose
+tap A 4
+waitcb2x CB2_Overworld 900
+pages dbg_party_evs_msg 8
+waitctl 600 B
+
+# Check IVs
+dbg 2 5
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_Overworld 900
+pages dbg_party_ivs_msg 8
+waitctl 600 B
+
+# Edit Pokemon > Inflict Status1: first menu, then Single > Typhlosion > status list
+dbg 2 3 0
+waitquiet
+snap dbg_party_status_01_menu
+press A
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_Overworld 900
+waitquiet
+snap dbg_party_status_02_list
+tap UP 6
+waitquiet
+snap dbg_party_status_03_list_last
+tap B 6
+waitctl 600 B
+
+# Edit Pokemon > Set Hidden Nature
+dbg 2 3 2
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_Overworld 900
+waitquiet
+snap dbg_party_nature_01
+tap UP 6
+waitquiet
+snap dbg_party_nature_02_last
+tap A 6                   # this list ignores B (dynmultistack ignoreBPress TRUE): pick Quirky
+waitctl 600 B
+
+# Edit Pokemon > Set Ability
+dbg 2 3 4
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_Overworld 900
+waitquiet
+snap dbg_party_ability_01
+tap B 6
+waitctl 600 B
+
+# Edit Pokemon > Set Friendship
+dbg 2 3 3
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_Overworld 900
+waitquiet
+snap dbg_party_friendship_01
+tap UP 6
+waitquiet
+snap dbg_party_friendship_02
+tap B 6
+waitctl 600 B
+
+# Give Pokerus
+dbg 2 6
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+tap A 4
+waitcb2x CB2_Overworld 900
+waitquiet
+snap dbg_party_pokerus_01
+tap UP 6
+waitquiet
+snap dbg_party_pokerus_02
+press A
+snap dbg_party_pokerus_03_strain
+tap B 6
+waitctl 600 B
+
+# PC/Bag > Access PC (EventScript_PC: the game's own, translated PC script)
+dbg 1 0
+pages dbg_pcbag_pc 4
+waitquiet
+snap dbg_pcbag_pc_menu
+waitctl 600 B
+snap dbg_party_99_end

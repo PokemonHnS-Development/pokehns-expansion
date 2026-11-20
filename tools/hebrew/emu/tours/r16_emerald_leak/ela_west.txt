@@ -1,0 +1,25 @@
+# (a) The cave entrance of the H&S Battle Frontier west side, (39,55) (BattleFrontier_OutsideWest_hns
+# warp 9 -> MAP_ARTISAN_CAVE_B1F warp 0), walked into from below, then the cave's own exit at (8,48)
+# (ArtisanCave_B1F warp 0 -> the Emerald MAP_BATTLE_FRONTIER_OUTSIDE_WEST, warp 10), then a few steps
+# on whatever map that loads. Run: scripts/r16_emerald_leak/emleak.py (docstring).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+where save
+setvar VAR_REPEL_STEP_COUNT FA
+warpto MAP_BATTLE_FRONTIER_OUTSIDE_WEST_HNS 39 58
+where start
+snap ela_00_start
+trystep UP
+trystep UP
+where below_entrance
+snap ela_01_below_entrance
+trystep UP
+where after_entrance
+snap ela_02_after_entrance
+trystep DOWN
+where after_exit
+snap ela_03_after_exit
+trystep DOWN
+trystep DOWN
+where walked
+snap ela_04_walked

@@ -45,4 +45,4 @@ Alola_Poni_Cave_FindItem2::
 
 
 Alola_Poni_BattleGolem_Text_0:
-	.string "Gaaah!$"
+	.string "גאאאה!$"

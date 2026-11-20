@@ -1,0 +1,55 @@
+# pl18_contest with the player contestant (gContestMons[3], 60-byte entries: gContestMons+B4; trainerName +15, nickname +2)
+# renamed after SetContestants: trainer "אלכסנדר" (7 letters, PLAYER_NAME_LENGTH) and nickname "מיאוסקראדה" (10 letters).
+# Hebrew bytes from charmap.txt, so the tour is for the Hebrew ROM only: the widest player name on the results screen.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_ZANGOOSE, 50, move1=MOVE_CRUSH_CLAW, move2=MOVE_FALSE_SWIPE, move3=MOVE_AERIAL_ACE, move4=MOVE_GUILLOTINE; additem ITEM_POKEBLOCK_CASE, 1; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 0
+fieldwatch type menu 3000
+pick 0
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap party_pick
+tap A 4
+waitkey 3000
+oppnames
+w8 @gContestMons+C3@ 3A
+w8 @gContestMons+C4@ 45
+w8 @gContestMons+C5@ 44
+w8 @gContestMons+C6@ 48
+w8 @gContestMons+C7@ 47
+w8 @gContestMons+C8@ 3D
+w8 @gContestMons+C9@ 4D
+w8 @gContestMons+CA@ FF
+w8 @gContestMons+B6@ 46
+w8 @gContestMons+B7@ 43
+w8 @gContestMons+B8@ 3A
+w8 @gContestMons+B9@ 3F
+w8 @gContestMons+BA@ 48
+w8 @gContestMons+BB@ 4C
+w8 @gContestMons+BC@ 4D
+w8 @gContestMons+BD@ 3A
+w8 @gContestMons+BE@ 3D
+w8 @gContestMons+BF@ 3E
+w8 @gContestMons+C0@ FF
+w8 @gContestMons+C1@ FF
+w8 @gContestMons+C2@ FF
+oppnames
+fieldwatch entry cb2:CB2_StartContest 40000 45
+w16s gContestMonRound1Points 3 600
+contestplay5 app 20133
+fieldwatch judge cb2:CB2_StartShowContestResults 20000 45
+waitcb2x CB2_ShowContestResults 600
+burstuntil res CB2_ShowContestResults 16 9000 A 240
+fieldwatch prize free 30000 45
+loc
+snap lobby_after

@@ -1,0 +1,227 @@
+# Placing dolls from save:decor_dolls. The cursor starts on the player's tile (1,2), a plain
+# floor tile that holds no decoration: A > gText_CantBePlacedHere (src/decoration.c:1700-1705).
+# On a floor tile (1,3): gText_PlaceItHere + YES/NO (:1697, :1708-1712); NO goes back to the
+# cursor (ContinueDecorating :1962), YES places it and returns to the list (:1714-1733, :1835-1846)
+# with the in-use mark (blue ball at x 92, DecorationItemsMenu_PrintDecorationInUse :946-955).
+# The placed doll again: gText_InUseAlready (:1386-1390). Snorlax (DECORSHAPE_1x2, a big doll) on
+# (3,4). B while placing: gText_CancelDecorating + YES/NO (:1516-1524, :1773-1778). Then 10 more:
+# 12 placed (DECOR_MAX_PLAYERS_HOUSE, include/constants/global.h:105), and the 13th gives
+# gText_NoMoreDecorations2 with STR_VAR_1 = 12 (:1373-1384). Saved as save:decor_full.
+start save:decor_dolls
+include ../continue.txt
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 1 2
+face UP
+talk dp_00_pc_boot 10 A PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press DOWN
+press DOWN
+tap A 0                                   # DECORATION
+waittaskx HandleDecorationActionsMenuInput 600
+waitquiet
+tap A 0                                   # DECORATE
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+tap A 0                                   # DOLL
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+snap dp_00_list_pichu
+tap A 0                                   # PICHU DOLL
+decorwait
+decorshow
+snap dp_01_place_start
+tap A 0                                   # on the player's tile
+decormsg
+waitquiet
+snap dp_02_cant_place_here
+tap A 4
+decorwait
+decorgoto 1 3
+snap dp_03_place_cursor_floor
+decorshow                                 # the cursor sprite blinks: wait until the doll shows
+snap dp_03b_place_cursor_floor_shown
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap dp_04_place_it_here_yes
+press DOWN
+snap dp_05_place_it_here_no
+tap A 0                                   # NO: back to the cursor
+decorwait
+snap dp_06_after_no
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0                                   # YES
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+snap dp_07_list_pichu_in_use
+tap A 0                                   # PICHU DOLL again: in use
+decormsg
+waitquiet
+snap dp_08_in_use_already
+tap A 4
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+decorrow 25                               # SNORLAX DOLL
+snap dp_09_list_snorlax
+tap A 0
+decorwait
+decorshow
+snap dp_10_place_snorlax_start
+decorgoto 3 4
+snap dp_11_place_snorlax_cursor
+decorshow
+snap dp_11b_place_snorlax_cursor_shown
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap dp_12_place_snorlax_yesno
+tap A 0                                   # YES
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+snap dp_13_list_after_snorlax
+decorrow 1                                # PIKACHU DOLL: B while placing
+tap A 0
+decorwait
+tap B 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap dp_14_cancel_decorating_yes
+press DOWN
+snap dp_15_cancel_decorating_no
+tap A 0                                   # NO: back to the cursor
+decorwait
+tap B 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0                                   # YES: back to the list
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+snap dp_16_list_after_cancel
+decorrow 1
+tap A 0
+decorwait
+decorgoto 2 3
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+decorrow 2
+tap A 0
+decorwait
+decorgoto 5 3
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+decorrow 3
+tap A 0
+decorwait
+decorgoto 6 3
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+decorrow 4
+tap A 0
+decorwait
+decorgoto 1 4
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+decorrow 5
+tap A 0
+decorwait
+decorgoto 2 4
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+decorrow 6
+tap A 0
+decorwait
+decorgoto 4 4
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+decorrow 7
+tap A 0
+decorwait
+decorgoto 5 4
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+decorrow 8
+tap A 0
+decorwait
+decorgoto 6 4
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+decorrow 9
+tap A 0
+decorwait
+decorgoto 7 4
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+decorrow 10
+tap A 0
+decorwait
+decorgoto 8 4
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 0
+waittaskx HandleDecorationItemsMenuInput 900
+waitquiet
+snap dp_20_list_12_placed
+decorrow 0
+snap dp_21_list_top_12_placed
+decorrow 11                               # SMOOCHUM DOLL: a 13th
+tap A 0
+decormsg
+waitquiet
+snap dp_22_no_more_decorations
+tap A 4
+waittaskx HandleDecorationItemsMenuInput 600
+waitquiet
+press B
+waittaskx HandleDecorationCategoriesMenuInput 600
+waitquiet
+press B
+waittaskx HandleDecorationActionsMenuInput 900
+waitquiet
+press B                                   # CANCEL: the PC menu again
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press B
+waitctl 600 B
+snap dp_30_room_12_dolls
+decorprobe
+savegame
+keepsave decor_full

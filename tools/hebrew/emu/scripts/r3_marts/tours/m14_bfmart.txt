@@ -1,0 +1,22 @@
+# Battle Frontier Mart (BattleFrontier_Mart_hns/scripts.inc:4-29).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_BATTLE_FRONTIER_MART_HNS 3 5
+evstart goto BattleFrontier_Mart_EventScript_Clerk_hns
+talk m14_bfmart_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m14_bfmart_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m14_bfmart
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m14_bfmart_bye 10 -
+waitctl 900

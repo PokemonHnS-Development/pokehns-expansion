@@ -1,0 +1,24 @@
+# Part B base (an include, not a tour): ladder save 1 (bedroom, no Pokemon) -> CONTINUE ->
+# the flags every battle tour needs -> Route 30, south of Youngster Mikey. Each tour then
+# gives its own party and items with `ev givemon ...`, so tours do not depend on each
+# other. Everything goes through the ROM's own event-script commands (evasm.py) with
+# constants compiled from the build's own include/, so it runs the same on any build of
+# the same source.
+include ../scripts/continue.txt
+
+# - all eight badges: with a challenge level cap set, the cap without badges is 11
+#   (src/caps.c:19-41,64-85) and a Pokemon at the cap gains no experience
+#   (src/battle_script_commands.c:4300-4310); eight badges lift it to 56 (whether ladder
+#   save 1 has a cap set was not read: UNVERIFIED, and with the badges it does not matter);
+# - the Pokedex, so a caught Pokemon gets its dex page;
+# - FLAG_MOM_VISITED hides the early-game "Joey vs. Mikey" scene on Route 30 (Joey, a
+#   Pidgey and a Rattata standing on (23,23)-(23,25), data/maps/Route30_hns/map.json),
+#   which would block the path to Mikey.
+ev setflag FLAG_MOM_VISITED; setflag FLAG_BADGE01_GET; setflag FLAG_BADGE02_GET; setflag FLAG_BADGE03_GET; setflag FLAG_BADGE04_GET; setflag FLAG_BADGE05_GET; setflag FLAG_BADGE06_GET; setflag FLAG_BADGE07_GET; setflag FLAG_BADGE08_GET; setflag FLAG_SYS_POKEDEX_GET; setflag FLAG_SYS_POKEMON_GET; end
+
+# FAST BATTLES OFF: battle messages stay up for their waitmessage time, so bwalk can
+# photograph the ones that do not wait for A (most messages inside a turn).
+fastbattles off
+
+warpto MAP_ROUTE30_HNS 23 25
+expectflag FLAG_MOM_VISITED 1

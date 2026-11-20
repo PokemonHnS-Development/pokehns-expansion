@@ -1,0 +1,37 @@
+# Pokegear phone list: CHECK on a registered trainer opens the check page, whose field names
+# (Strategy, Trainer's Pokemon, Self-introduction; PrintMatchCallFieldNames,
+# src/pokenav_list.c:739-750, FONT_NARROW) sit next to the trainer's flavour text. Ralph and Joey are
+# registered by mcreg (r3calls.py); B closes the page.
+# Run: scripts/r16_pokegear/gear16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_pokegear [--clip]
+# Save: r3_calls/base.sav (HNS_SAVES=hns-tools/emu/saves_screens).
+start saves/r3_calls/base.sav
+include ../../scripts/continue.txt
+warpto MAP_CHERRYGROVE_CITY_HNS 25 9
+waitctl 600
+mcclear
+mcreg all
+mclistopen
+snap gk_list_top
+mclistrow Ralph
+snap gk_ralph_row
+press A
+snap gk_ralph_opts
+press DOWN
+snap gk_ralph_opts_check
+press A
+waitnav
+snap gk_ralph_check
+press DOWN
+waitnav
+snap gk_ralph_check_down
+press B
+waitnav
+snap gk_ralph_back
+mclistrow Joey
+press A
+press DOWN
+press A
+waitnav
+snap gk_joey_check
+press B
+waitnav

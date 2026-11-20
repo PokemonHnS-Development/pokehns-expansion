@@ -1,0 +1,33 @@
+# Unique 4F: trainer 1 (8,7) looks south over (8,8-10), trainer 2 (11,10) west over (8-10,10).
+# Facing comes from TRAINER_DIRS(a, b): trainer 1 takes b, trainer 2 a (src/trainer_hill.c:826).
+# The way down column 8 crosses trainer 1's sight at (8,8) first: a single battle against trainer 1,
+# then a walk into trainer 2's row: a single battle against trainer 2. After-battle speech of both
+# (Easy Chat), the challenge timer at (14,1), the stairs to the roof.
+ev special HealPlayerParty; end
+fastbattles off
+walkto 8 10
+snap u4_t1_spotted
+10 -
+snap u4_t1_spotted2
+dlg u4_t1_intro battle
+battle2 u4_t1
+snap u4_t1_after
+talkto 1 u4_t1_post free
+ev special HealPlayerParty; end
+walkto 9 10
+snap u4_t2_spotted
+10 -
+snap u4_t2_spotted2
+dlg u4_t2_intro battle
+battle2 u4_t2
+snap u4_t2_after
+talkto 2 u4_t2_post free
+hillstate
+walkto2 14 2 UP
+20 -
+tap A 4
+30 -
+dlg u4_timer free
+walkto2 12 1
+waitctl 600
+snap u4_next

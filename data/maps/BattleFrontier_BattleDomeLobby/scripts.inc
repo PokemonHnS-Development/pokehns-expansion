@@ -526,7 +526,7 @@ BattleFrontier_BattleDomeLobby_Text_HereIsYourPrize:
 
 @ Used by Verdanturf Tent
 BattleFrontier_BattleDomeLobby_Text_ReceivedPrize:
-	.string "{PLAYER} received the prize\n"
+	.string "{PLAYER} קיבל את הפרס\n"
 	.string "{STR_VAR_1}.$"
 
 @ Unused

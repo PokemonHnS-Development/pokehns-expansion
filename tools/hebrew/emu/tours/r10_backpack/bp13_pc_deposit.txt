@@ -1,0 +1,130 @@
+# PC item storage, DEPOSIT: the bag in ITEMMENULOCATION_ITEMPC mode (src/item_menu.c Task_ItemContext_Deposit):
+# every pocket switched through, each pocket's CLOSE row, a deposit from the pockets with the widest names
+# (how many, the count, "deposited N X"), a TM and a key item refused (sText_CantStoreImportantItems), and
+# the WITHDRAW list afterwards. Pockets are set with setpocket (three rows each); the PC is emptied first.
+start saves/bp_menuA.sav
+include ../../scripts/continue.txt
+go RIGHT 4
+go UP 2
+talk pc_boot 10                           # SOMEONE'S PC / GOLD's PC / ...
+tap DOWN 4
+tap A 0                                   # GOLD's PC
+talk pc_player_open 10 - PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+tap A 0                                   # ITEM STORAGE: WITHDRAW / DEPOSIT / TOSS / CANCEL
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+snap pc_itemstorage_menu
+pcfill 0 0
+setpocket POCKET_ITEMS ITEM_TWICE_SPICED_RADISH:999 ITEM_ODD_KEYSTONE:999 ITEM_BIG_BAMBOO_SHOOT:999
+setpocket POCKET_MEDICINE ITEM_BIG_MALASADA:999 ITEM_JUBILIFE_MUFFIN:999 ITEM_ICE_HEAL:999
+setpocket POCKET_POKE_BALLS ITEM_DUSK_BALL:999 ITEM_ULTRA_BALL:999 ITEM_PREMIER_BALL:999
+setpocket POCKET_TM_HM ITEM_TM01:1 ITEM_TM50:1 ITEM_HM01:1
+setpocket POCKET_BERRIES ITEM_IAPAPA_BERRY:999 ITEM_PAYAPA_BERRY:999 ITEM_PAMTRE_BERRY:999
+setpocket POCKET_KEY_ITEMS ITEM_INFINITE_RARE_CANDIES:1 ITEM_POKEBLOCK_CASE:1 ITEM_REINS_OF_UNITY:1
+bagpos ITEMS 0
+press DOWN
+snap pd_00_menu_deposit
+tap A 0                                   # DEPOSIT
+bagwait
+snap pd_01_bag_items
+pocketcycle pdpc
+bagto 3
+snap pd_02_items_close
+bagto 1
+tap A 0
+waitquiet
+snap pd_03_howmany_01
+tap DOWN 4
+waitquiet
+snap pd_04_howmany_999
+tap A 0
+waitquiet
+snap pd_05_deposited
+tap A 4
+bagwait
+snap pd_06_after
+tap RIGHT 4
+bagwait
+bagto 3
+snap pd_10_medicine_close
+bagto 0
+tap A 0
+waitquiet
+tap UP 4
+waitquiet
+snap pd_11_howmany_02
+tap A 0
+waitquiet
+snap pd_12_deposited
+tap A 4
+bagwait
+tap RIGHT 4
+bagwait
+bagto 3
+snap pd_20_balls_close
+bagto 0
+tap A 0
+waitquiet
+snap pd_21_howmany
+tap A 0
+waitquiet
+snap pd_22_deposited_one
+tap A 4
+bagwait
+tap RIGHT 4
+bagwait
+bagto 3
+snap pd_30_tms_close
+bagto 0
+tap A 0
+waitquiet
+50 -
+snap pd_31_tm
+tap A 4
+bagwait
+tap RIGHT 4
+bagwait
+bagto 3
+snap pd_40_berries_close
+bagto 0
+tap A 0
+waitquiet
+tap DOWN 4
+waitquiet
+snap pd_41_howmany_999
+tap A 0
+waitquiet
+snap pd_42_deposited
+tap A 4
+bagwait
+tap RIGHT 4
+bagwait
+bagto 3
+snap pd_50_keys_close
+bagto 0
+tap A 0
+waitquiet
+50 -
+snap pd_51_key_refused
+tap A 4
+bagwait
+tap B 0
+waittaskx ItemStorageMenuProcessInput 900
+waitquiet
+snap pd_60_back_in_menu
+press UP
+tap A 0
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap pd_61_withdraw_list
+tap A 0
+waitquiet
+snap pd_62_withdraw_howmany
+tap DOWN 4
+waitquiet
+snap pd_63_withdraw_999
+tap A 0
+waitquiet
+snap pd_64_withdrawn

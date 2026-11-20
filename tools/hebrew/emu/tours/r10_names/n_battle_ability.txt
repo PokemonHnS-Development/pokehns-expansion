@@ -1,0 +1,95 @@
+# r10 names: the ability pop-up (FONT_SMALL, 76 px budget) with the widest ability names, on the
+# player's side (Porygon2's Trace copies the foe's ability and the pop-up shows the copied name)
+# and on the foe's side (a foe Porygon2 traces the player's Pidgeot's TANGLED FEET); the FIGHT
+# menu (64 px FONT_NARROW slots) with the widest learnable move names, cursor on each slot.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev createmon 0, 0, SPECIES_PORYGON2, 60, abilityNum=0, move1=MOVE_SUNSTEEL_STRIKE, move2=MOVE_DARKEST_LARIAT, move3=MOVE_MALIGNANT_CHAIN, move4=MOVE_TRICK_OR_TREAT; createmon 0, 1, SPECIES_PIDGEOT, 60, abilityNum=1, move1=MOVE_CHILLY_RECEPTION, move2=MOVE_TRIPLE_DIVE, move3=MOVE_CLANGING_SCALES, move4=MOVE_PARABOLIC_CHARGE; special CalculatePlayerPartyCount; end
+pinrng
+# ---- foe SPECIES_PIDGEOT (abilityNum 1), traced by the player's Porygon2
+evstart createmon 1, 0, SPECIES_PIDGEOT, 5, abilityNum=1; dowildbattle; end
+waitbattle
+bwalk n_bab_1_tangled input:HandleInputChooseAction
+snap n_bab_1_tangled_action
+baction FIGHT
+waitbinput HandleInputChooseMove
+waitquiet
+snap n_bab_1_tangled_fight_0
+bmove 1 nopress
+waitquiet
+snap n_bab_1_tangled_fight_1
+bmove 2 nopress
+waitquiet
+snap n_bab_1_tangled_fight_2
+bmove 3 nopress
+waitquiet
+snap n_bab_1_tangled_fight_3
+tap B 4
+waitbinput HandleInputChooseAction
+baction RUN
+bwalk n_bab_1_tangled_run free
+waitctl 600
+# ---- foe SPECIES_CLOYSTER (abilityNum 1), traced by the player's Porygon2
+evstart createmon 1, 0, SPECIES_CLOYSTER, 5, abilityNum=1; dowildbattle; end
+waitbattle
+bwalk n_bab_2_skilllink input:HandleInputChooseAction
+snap n_bab_2_skilllink_action
+baction RUN
+bwalk n_bab_2_skilllink_run free
+waitctl 600
+# ---- foe SPECIES_DARMANITAN_GALAR_STANDARD (abilityNum 0), traced by the player's Porygon2
+evstart createmon 1, 0, SPECIES_DARMANITAN_GALAR_STANDARD, 5, abilityNum=0; dowildbattle; end
+waitbattle
+bwalk n_bab_3_gorilla input:HandleInputChooseAction
+snap n_bab_3_gorilla_action
+baction RUN
+bwalk n_bab_3_gorilla_run free
+waitctl 600
+# ---- foe SPECIES_BELLIBOLT (abilityNum 0), traced by the player's Porygon2
+evstart createmon 1, 0, SPECIES_BELLIBOLT, 5, abilityNum=0; dowildbattle; end
+waitbattle
+bwalk n_bab_4_electro input:HandleInputChooseAction
+snap n_bab_4_electro_action
+baction RUN
+bwalk n_bab_4_electro_run free
+waitctl 600
+# ---- foe SPECIES_DIPPLIN (abilityNum 0), traced by the player's Porygon2
+evstart createmon 1, 0, SPECIES_DIPPLIN, 5, abilityNum=0; dowildbattle; end
+waitbattle
+bwalk n_bab_5_syrup input:HandleInputChooseAction
+snap n_bab_5_syrup_action
+baction RUN
+bwalk n_bab_5_syrup_run free
+waitctl 600
+# ---- foe SPECIES_URSARING (abilityNum 1), traced by the player's Porygon2
+evstart createmon 1, 0, SPECIES_URSARING, 5, abilityNum=1; dowildbattle; end
+waitbattle
+bwalk n_bab_6_quickfeet input:HandleInputChooseAction
+snap n_bab_6_quickfeet_action
+baction RUN
+bwalk n_bab_6_quickfeet_run free
+waitctl 600
+# ---- foe-side pop-up: lead Pidgeot (TANGLED FEET), foe Porygon2 with Trace
+ev createmon 0, 0, SPECIES_PIDGEOT, 60, abilityNum=1, move1=MOVE_CHILLY_RECEPTION, move2=MOVE_TRIPLE_DIVE, move3=MOVE_CLANGING_SCALES, move4=MOVE_PARABOLIC_CHARGE; createmon 0, 1, SPECIES_PORYGON2, 60, abilityNum=0, move1=MOVE_SUNSTEEL_STRIKE, move2=MOVE_DARKEST_LARIAT, move3=MOVE_MALIGNANT_CHAIN, move4=MOVE_TRICK_OR_TREAT; end
+evstart createmon 1, 0, SPECIES_PORYGON2, 5, abilityNum=0; dowildbattle; end
+waitbattle
+bwalk n_bab_9_foetrace input:HandleInputChooseAction
+snap n_bab_9_foetrace_action
+baction FIGHT
+waitbinput HandleInputChooseMove
+waitquiet
+snap n_bab_9_fight_0
+bmove 1 nopress
+waitquiet
+snap n_bab_9_fight_1
+bmove 2 nopress
+waitquiet
+snap n_bab_9_fight_2
+bmove 3 nopress
+waitquiet
+snap n_bab_9_fight_3
+tap B 4
+waitbinput HandleInputChooseAction
+baction RUN
+bwalk n_bab_9_run free
+waitctl 600

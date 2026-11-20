@@ -1,0 +1,7 @@
+# The r5_latin starting state saved with the game's save, exported as save:r5lat_party (copied to
+# saves_screens/r5/r5lat_party_he.sav / _en.sav): ladder 6 + the party of _party.inc (slot 5 free).
+# The other tours do not need it: each builds the same party in RAM from saves/ladder6_postgame.sav.
+start saves/ladder6_postgame.sav
+include _setup.txt
+savegame
+keepsave r5lat_party

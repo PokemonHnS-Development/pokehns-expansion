@@ -1,0 +1,60 @@
+# r9c_longplayer with the widest 7-letter player name the font allows, "ששששששש" (shin is the widest
+# Hebrew glyph: 55 px with the slash in FONT_NARROW, 46 px in FONT_NARROWER), and the same 10-letter
+# nickname "מיאוסקראדה". A stress case for the name box: the name must stay right of the box frame.
+# Hebrew bytes from charmap.txt.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_SCIZOR, 50, move1=MOVE_AERIAL_ACE, move2=MOVE_QUICK_ATTACK, move3=MOVE_METAL_CLAW, move4=MOVE_FURY_CUTTER; additem ITEM_POKEBLOCK_CASE, 1; end
+w8 @gContestMonPartyIndex@ 0
+ev setvar VAR_CONTEST_CATEGORY, 0; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 3
+fieldwatch type menu 3000
+pick 0
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap party_pick
+tap A 4
+waitkey 3000
+setopps 72 73 74
+oppnames
+w8 2000C3F 4E
+w8 2000C40 4E
+w8 2000C41 4E
+w8 2000C42 4E
+w8 2000C43 4E
+w8 2000C44 4E
+w8 2000C45 4E
+w8 2000C46 FF
+w8 2000C32 46
+w8 2000C33 43
+w8 2000C34 3A
+w8 2000C35 3F
+w8 2000C36 48
+w8 2000C37 4C
+w8 2000C38 4D
+w8 2000C39 3A
+w8 2000C3A 3D
+w8 2000C3B 3E
+w8 2000C3C FF
+w8 2000C3D FF
+w8 2000C3E FF
+oppnames
+snap entry_msg
+fieldwatch entry cb2:CB2_StartContest 40000 0
+w16s gContestMonRound1Points 0 600
+contestplay5 app 01233
+fieldwatch judge cb2:CB2_StartShowContestResults 20000 0
+waitcb2x CB2_ShowContestResults 600
+burstuntil res CB2_ShowContestResults 16 9000 A 240
+fieldwatch prize free 30000 0
+loc
+snap lobby_after

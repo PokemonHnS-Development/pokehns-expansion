@@ -1,0 +1,44 @@
+# A Master-rank CUTE contest from the H&S contest lobby (MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS).
+# Party slot 0 becomes a level-50 CLEFABLE made by this ROM (so its nickname is the ROM's species name)
+# with the moves below; the appeals are the digit string 01230 (the move-list index for each round):
+#   0 SWIFT (COOL, CONTEST_EFFECT_BETTER_IF_FIRST, src/data/moves_info.h)
+#   1 FLAIL (CUTE, CONTEST_EFFECT_BETTER_WHEN_LATER, src/data/moves_info.h)
+#   2 ASSIST (CUTE, CONTEST_EFFECT_QUALITY_DEPENDS_ON_TIMING, src/data/moves_info.h)
+#   3 MIMIC (CUTE, CONTEST_EFFECT_APPEAL_AS_GOOD_AS_PREV_ONE, src/data/moves_info.h)
+# Swift (a COOL move: didn't go over well), Flail (better when later), Assist (timing), Mimic (as good as the one before).
+# Entering Master rank needs the CUTE ribbon of the rank below (GetContestEntryEligibility); they are
+# given rank by rank with GiveMonContestRibbon on gContestMonPartyIndex 0.
+# Round 1 points are set to 600 once the contest screen starts (gContestMonRound1Points[3], the
+# player is contestant 3), so the player wins and gets the ribbon (contest_hall.inc ReceiveContestRibbon).
+# gRngValue is pinned from the lobby on (pinrng), so the opponents, the AI's appeals and the
+# audience are the same on the Hebrew and the English ROM (the shots pair up by name).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_CLEFABLE, 50, move1=MOVE_SWIFT, move2=MOVE_FLAIL, move3=MOVE_ASSIST, move4=MOVE_MIMIC; additem ITEM_POKEBLOCK_CASE, 1; end
+w8 @gContestMonPartyIndex@ 0
+ev setvar VAR_CONTEST_CATEGORY, 2; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 3
+fieldwatch type menu 3000
+pick 2
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap party_pick
+tap A 4
+fieldwatch entry cb2:CB2_StartContest 40000 45
+w16s gContestMonRound1Points 3 600
+contestplay5 app 01230
+fieldwatch judge cb2:CB2_StartShowContestResults 20000 45
+waitcb2x CB2_ShowContestResults 600
+burstuntil res CB2_ShowContestResults 16 9000 A 240
+fieldwatch prize free 30000 45
+loc
+snap lobby_after

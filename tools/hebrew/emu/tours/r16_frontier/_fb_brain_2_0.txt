@@ -1,0 +1,16 @@
+# Include (not a tour) for scripts/r16_battle_sweep/bsweep.py: a trainer battle (Youngster Mikey, Route 30,
+# the r16_battle_sweep _bs_trainer.txt setup) with VAR_FRONTIER_FACILITY = 2 (FRONTIER_FACILITY_PALACE) and no symbol of that facility,
+# so CopyFrontierBrainText (src/frontier_util.c:2812-2836) picks the silver (index 0) line of that facility's brain
+# (GetFronterBrainSymbol :2792-2809: no symbol of the facility -> 0, the silver symbol -> 1). The names file
+# fb_brain_names.txt prints the intro and both end lines with gBattleTypeFlags |= BATTLE_TYPE_BATTLE_TOWER
+# and opponentA = TRAINER_FRONTIER_BRAIN (fb_brain_variants.json). Save: ladder1_newgame.sav (HNS_SAVES).
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_SANDSLASH_ALOLA, 50, abilityNum=0, move1=MOVE_GROWL, move2=MOVE_ICICLE_CRASH; setvar VAR_FRONTIER_FACILITY, 2; end
+face UP
+pinrng
+8 UP
+waitnotfree 120
+bwalk bs_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0

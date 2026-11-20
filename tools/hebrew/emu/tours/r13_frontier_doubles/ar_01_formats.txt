@@ -1,0 +1,31 @@
+# r13 which Frontier facilities offer a double battle: the Battle Arena, Battle Pike and Battle
+# Pyramid lobbies have one attendant and no FRONTIER_MODE_DOUBLES in their scripts
+# (data/maps/BattleFrontier_Battle{Arena,Pike,Pyramid}Lobby_hns/scripts.inc). Each attendant's
+# welcome and first menu, then EXIT.
+start saves/r13/palace_doubles/base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_ARENA_LOBBY_HNS 7 8
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+snap af_arena_00
+tap A 0
+drive af_arena menu
+pick 2
+drive af_arena_exit free 10
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY_HNS 5 6
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+snap af_pike_00
+tap A 0
+drive af_pike menu
+pick 2
+drive af_pike_exit free 10
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY_HNS 7 13
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+snap af_pyramid_00
+tap A 0
+drive af_pyramid menu
+pick 2
+drive af_pyramid_exit free 10

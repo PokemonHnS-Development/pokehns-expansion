@@ -63,15 +63,16 @@ BerryTree_EventScript_ItemUseWailmerPail::
 	end
 
 BerryTree_Text_Hns_NotRipe:
-	.string "It's a BERRY tree!\n"
-	.string "These BERRIES aren't ripe yet.$"
+	.string "זה עץ פירות!\n"
+	.string "הפירות האלה עוד לא בשלים.$"
 
 BerryTree_Text_Hns_Picked:
-	.string "{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}.$"
+	.string "{PLAYER} קטף\n"
+	.string "{STR_VAR_2} {STR_VAR_1}.$"
 
 BerryTree_Text_Hns_BagFull:
-	.string "The BAG's BERRIES POCKET is full.\p"
-	.string "The {STR_VAR_1} couldn't be taken.$"
+	.string "כיס הפירות בתיק מלא.\p"
+	.string "אי אפשר היה לקחת {STR_VAR_1}.$"
 
 BerryTree_Text_Hns_Sprouted:
 	.string "The berry tree suddenly sprouted!$"
@@ -337,91 +338,92 @@ BerryTree_EventScript_PlantBerry::
 	return
 
 BerryTree_Text_ItsSoftLoamySoil:
-	.string "It's soft, loamy soil.$"
+	.string "זו אדמה רכה ופורייה.$"
 
 BerryTree_Text_WantToPlant:
-	.string "It's soft, loamy soil.\n"
-	.string "Want to plant a BERRY?$"
+	.string "זו אדמה רכה ופורייה.\n"
+	.string "לשתול פרי?$"
 
 BerryTree_Text_PlantedOneBerry:
-	.string "{PLAYER} planted one {STR_VAR_1} in\n"
-	.string "the soft, loamy soil.$"
+	.string "{PLAYER} שתל {STR_VAR_1}\n"
+	.string "באדמה הרכה והפורייה.$"
 
 BerryTree_Text_BerryGrowthStage1:
 .if OW_BERRY_SIX_STAGES == TRUE
-	.string "This is where you planted the\n{STR_VAR_1}!$"
+	.string "כאן שתלת את\n"
+	.string "{STR_VAR_1}!$"
 .else
-	.string "One {STR_VAR_1} was planted here.$"
+	.string "כאן נשתל {STR_VAR_1}.$"
 .endif
 
 BerryTree_Text_BerryGrowthStage2:
 .if OW_BERRY_SIX_STAGES == TRUE
-	.string "The {STR_VAR_1} is sprouting!$"
+	.string "{STR_VAR_1} מתחיל לנבוט!$"
 .else
-	.string "{STR_VAR_1} has sprouted.$"
+	.string "{STR_VAR_1} נבט.$"
 .endif
 
 BerryTree_Text_BerryGrowthStage3:
 .if OW_BERRY_SIX_STAGES == TRUE
-	.string "The {STR_VAR_1}'s seedling is growing well!$"
+	.string "השתיל של {STR_VAR_1} גדל יפה!$"
 .else
-	.string "This {STR_VAR_1} plant is growing taller.$"
+	.string "הצמח של {STR_VAR_1} הולך ומתגבה.$"
 .endif
 
 BerryTree_Text_BerryGrowthStageTrunk:
-	.string "The {STR_VAR_1}'s trunk is getting bigger!$"
+	.string "הגזע של {STR_VAR_1} הולך ומתעבה!$"
 
 BerryTree_Text_BerryGrowthStageBudding:
-	.string "The {STR_VAR_1} tree has buds!$"
+	.string "לעץ {STR_VAR_1} צצו ניצנים!$"
 
 BerryTree_Text_BerryGrowthStage4:
 .if OW_BERRY_SIX_STAGES == TRUE
-	.string "The {STR_VAR_1} tree is in bloom!$"
+	.string "עץ {STR_VAR_1} פורח!$"
 .else
-	.string "These {STR_VAR_1} flowers are blooming\n"
+	.string "הפרחים של {STR_VAR_1} פורחים\n"
 	.string "{STR_VAR_2}.$"
 .endif
 
 BerryTree_Text_CareAdverbGreat:
-	.string "very beautifully$"
+	.string "יפה מאוד$"
 
 BerryTree_Text_CareAdverbPoor:
-	.string "cutely$"
+	.string "בצורה חמודה$"
 
 BerryTree_Text_CareAdverbGood:
-	.string "prettily$"
+	.string "יפה$"
 
 BerryTree_Text_WantToPick:
-	.string "You found {STR_VAR_2} {STR_VAR_1}!\p"
-	.string "Do you want to pick the\n"
-	.string "{STR_VAR_1}?$"
+	.string "מצאת {STR_VAR_2} {STR_VAR_1}!\n"
+	.string "לקטוף את {STR_VAR_1}?$"
 
 BerryTree_Text_PickedTheBerry:
-	.string "{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}.$"
+	.string "{PLAYER} קטף\n"
+	.string "{STR_VAR_2} {STR_VAR_1}.$"
 
 BerryTree_Text_PutAwayBerry:
-	.string "{PLAYER} put away the {STR_VAR_1}\n"
-	.string "in the BAG's BERRIES POCKET.\p"
-	.string "The soil returned to its soft and\n"
-	.string "loamy state.$"
+	.string "{PLAYER} שם את {STR_VAR_1}\n"
+	.string "בכיס הפירות בתיק.\p"
+	.string "האדמה חזרה להיות\n"
+	.string "רכה ופורייה.$"
 
 BerryTree_Text_BerryPocketFull:
-	.string "The BAG's BERRIES POCKET is full.\p"
-	.string "The {STR_VAR_1} couldn't be taken.$"
+	.string "כיס הפירות בתיק מלא.\p"
+	.string "אי אפשר היה לקחת את {STR_VAR_1}.$"
 
 BerryTree_Text_BerryLeftUnpicked:
-	.string "{PLAYER} left the {STR_VAR_1}\n"
-	.string "unpicked.$"
+	.string "{PLAYER} השאיר את {STR_VAR_1}\n"
+	.string "על העץ.$"
 
 BerryTree_Text_WantToWater:
-	.string "Want to water the {STR_VAR_1} with the\n"
-	.string "WAILMER PAIL?$"
+	.string "להשקות את {STR_VAR_1}\n"
+	.string "בדלי ווילמר?$"
 
 BerryTree_Text_WateredTheBerry:
-	.string "{PLAYER} watered the {STR_VAR_1}.$"
+	.string "{PLAYER} השקה את {STR_VAR_1}.$"
 
 BerryTree_Text_PlantIsDelighted:
-	.string "The plant seems to be delighted.$"
+	.string "נראה שהצמח מאושר.$"
 
 BerryTree_Text_ExclamationPoint:
 	.string "!$"
@@ -461,29 +463,28 @@ BerryTree_EventScript_PickBerry_Mutation::
 	end
 
 BerryTree_Text_WantToPick_Mutation:
-	.string "You found {STR_VAR_2} {STR_VAR_1}\n"
-	.string "and 1 {STR_VAR_3}!\p"
-	.string "Do you want to pick them?$"
+	.string "מצאת {STR_VAR_2} {STR_VAR_1}\n"
+	.string "וגם 1 {STR_VAR_3}!\p"
+	.string "לקטוף אותם?$"
 
 BerryTree_Text_BerryLeftUnpicked_Mutation:
-	.string "{PLAYER} left the {STR_VAR_1}\n"
-	.string "and the {STR_VAR_3} unpicked.$"
+	.string "{PLAYER} השאיר את {STR_VAR_1}\n"
+	.string "ואת {STR_VAR_3} על העץ.$"
 
 BerryTree_Text_BerryPocketFull_Mutation:
-	.string "The BAG's BERRIES POCKET is full.\p"
-	.string "The {STR_VAR_1} and the\n"
-	.string "{STR_VAR_3} couldn't be taken.$"
+	.string "כיס הפירות בתיק מלא.\p"
+	.string "אי אפשר היה לקחת את {STR_VAR_1}\n"
+	.string "ואת {STR_VAR_3}.$"
 
 BerryTree_Text_PickedTheBerry_Mutation:
-	.string "{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}\n"
-	.string "and the {STR_VAR_3}.$"
+	.string "{PLAYER} קטף {STR_VAR_2}\n"
+	.string "{STR_VAR_1} וגם {STR_VAR_3}.$"
 
 BerryTree_Text_PutAwayBerry_Mutation:
-	.string "{PLAYER} put away the {STR_VAR_1}\n"
-	.string "and the {STR_VAR_3} in the BAG's\l"
-	.string "BERRIES POCKET.\p"
-	.string "The soil returned to its soft and\n"
-	.string "loamy state.$"
+	.string "{PLAYER} שם את {STR_VAR_1} ואת\n"
+	.string "{STR_VAR_3} בכיס הפירות בתיק.\p"
+	.string "האדמה חזרה להיות\n"
+	.string "רכה ופורייה.$"
 .endif
 
 .if OW_BERRY_MULCH_USAGE == TRUE
@@ -495,12 +496,12 @@ BerryTree_EventScript_UseMulch::
 	return
 
 BerryTree_Text_WantToMulch:
-	.string "It's soft, loamy soil.\n"
-	.string "Put down some fertilizer?$"
+	.string "זו אדמה רכה ופורייה.\n"
+	.string "לפזר קצת דשן?$"
 
 BerryTree_Text_ScatteredMulch:
-	.string "{PLAYER} scattered the {STR_VAR_1}\n"
-	.string "on the soft, loamy soil.$"
+	.string "{PLAYER} פיזר את {STR_VAR_1}\n"
+	.string "על האדמה הרכה והפורייה.$"
 .endif
 
 .if OW_BERRY_WEEDS == TRUE
@@ -522,11 +523,11 @@ BerryTree_EventScript_PullOutWeed::
 	return
 
 BerryTree_Text_WeedIsGrowing:
-	.string "A weed is growing here.\n"
-	.string "Do you want to pull it out?$"
+	.string "כאן צומח עשב שוטה.\n"
+	.string "לעקור אותו?$"
 
 BerryTree_Text_PulledOutTheWeed:
-	.string "{PLAYER} pulled out the weed!$"
+	.string "{PLAYER} עקר את העשב השוטה!$"
 .endif
 
 .if OW_BERRY_PESTS == TRUE
@@ -543,7 +544,7 @@ BerryTree_EventScript_EncounterPests::
 	return
 
 BerryTree_Text_APokemonAppeared:
-	.string "A Pokémon appeared!$"
+	.string "פוקימון הופיע!$"
 .endif
 
 #endif

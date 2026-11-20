@@ -1,0 +1,221 @@
+# Mid-game play from ladder save 3 (Ecruteak City, 4 badges): the Ecruteak Pokemon Center
+# (nurse, NPCs, bookshelf, wall clock), the town's signs and NPCs, two houses (one gives
+# the Itemfinder), the Dance Theater and the Mart (buy list with prices, quantity, YES/NO,
+# sell list), and the map-name pop-ups of the routes around the city.
+start saves/ladder3_ecruteak.sav
+include ../../scripts/continue.txt
+
+# --- Pokemon Center: the save puts the player at (7,8)
+go UP 4                                   # (7,4), in front of the nurse at (7,2)
+face UP
+talk pma_nurse 20                         # ends at YES/NO
+snap pma_nurse_yesno
+tap A 0                                   # YES
+talk pma_nurse_heal 20 -
+go RIGHT 4                                # (11,4); the hiker stands at (11,5) facing down
+face DOWN
+talk pma_hiker 10
+go RIGHT 2                                # (13,4)
+go DOWN 2                                 # (13,6); the nerd stands at (14,6) facing left
+face RIGHT
+talk pma_nerd 10
+warpto MAP_ECRUTEAK_CITY_POKEMON_CENTER_HNS 2 2
+face UP
+talk pma_bookshelf 10
+
+# --- Out into the city through the door: (39,47) -> (39,48)
+warpto MAP_ECRUTEAK_CITY_POKEMON_CENTER_HNS 7 7
+go DOWN 2
+snap pma_city_door
+# signs: stand below each, facing up
+warpto MAP_ECRUTEAK_CITY_HNS 27 41
+face UP
+talk pma_sign_city 10
+warpto MAP_ECRUTEAK_CITY_HNS 36 41
+face UP
+talk pma_sign_theater 10
+warpto MAP_ECRUTEAK_CITY_HNS 22 49
+face UP
+talk pma_sign_gym 10
+warpto MAP_ECRUTEAK_CITY_HNS 41 26
+face UP
+talk pma_sign_office 10
+warpto MAP_ECRUTEAK_CITY_HNS 24 16
+face UP
+talk pma_sign_burned 10
+# townspeople
+warpto MAP_ECRUTEAK_CITY_HNS 36 33
+face UP
+talk pma_gramps 10
+warpto MAP_ECRUTEAK_CITY_HNS 51 35
+face UP
+talk pma_sage_right 10
+warpto MAP_ECRUTEAK_CITY_HNS 35 44
+face UP
+talk pma_lass 10
+warpto MAP_ECRUTEAK_CITY_HNS 22 43
+face UP
+talk pma_man 10
+warpto MAP_ECRUTEAK_CITY_HNS 19 23
+face UP
+talk pma_girl 10
+warpto MAP_ECRUTEAK_CITY_HNS 27 19
+face UP
+talk pma_sage_tower 10
+
+# --- Houses
+warpto MAP_ECRUTEAK_CITY_HOUSE1_HNS 4 5
+face UP
+talk pma_house1_gramps 10
+warpto MAP_ECRUTEAK_CITY_HOUSE1_HNS 6 5
+face RIGHT
+talk pma_house1_boy 10
+warpto MAP_ECRUTEAK_CITY_HOUSE2_HNS 6 5
+face UP
+talk pma_house2_book 10
+warpto MAP_ECRUTEAK_CITY_HOUSE2_HNS 5 5
+face UP
+talk pma_house2_itemfinder 20             # ends at YES/NO
+tap A 0                                   # YES: he gives the Itemfinder
+talk pma_house2_itemfinder_yes 20 -
+
+# --- The Dance Theater
+warpto MAP_ECRUTEAK_CITY_THEATER_HNS 10 15
+snap pma_theater_in
+warpto MAP_ECRUTEAK_CITY_THEATER_HNS 10 9
+face UP
+talk pma_theater_panel 10
+warpto MAP_ECRUTEAK_CITY_THEATER_HNS 7 12
+face UP
+talk pma_theater_granny 10
+warpto MAP_ECRUTEAK_CITY_THEATER_HNS 3 10
+face UP
+talk pma_theater_gramps 10
+warpto MAP_ECRUTEAK_CITY_THEATER_HNS 17 10
+face UP
+talk pma_theater_boy 10
+warpto MAP_ECRUTEAK_CITY_THEATER_HNS 13 12
+face UP
+talk pma_theater_surfguy 10
+
+# --- The Mart: the clerk at (2,3) faces right
+warpto MAP_ECRUTEAK_CITY_MART_HNS 3 3
+face LEFT
+talk pma_mart_welcome 10 A Task_ShopMenu
+waittaskx Task_ShopMenu 300
+waitquiet
+snap pma_mart_menu
+tap A 0                                   # BUY
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+snap pma_mart_buy_01
+press DOWN
+press DOWN
+press DOWN
+snap pma_mart_buy_04
+press DOWN
+press DOWN
+press DOWN
+snap pma_mart_buy_07
+press DOWN
+press DOWN
+press DOWN
+snap pma_mart_buy_10
+press DOWN
+press DOWN
+press DOWN
+snap pma_mart_buy_13
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP
+press UP                                  # back to the top: Poke Ball
+tap A 0
+waittaskx Task_BuyHowManyDialogueHandleInput 600
+waitquiet
+snap pma_mart_qty_01
+press UP
+snap pma_mart_qty_02
+press RIGHT                               # +10
+snap pma_mart_qty_12
+tap A 0
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+snap pma_mart_confirm
+tap A 0                                   # YES
+waitquiet
+snap pma_mart_bought
+tap A 0
+waitquiet
+snap pma_mart_bonus                       # ten or more Poke Balls: a Premier Ball
+tap A 0
+waittaskx Task_BuyMenu 600
+waitquiet
+snap pma_mart_buy_after
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+seek 8 @menu:sMenu+2@ 1 DOWN              # SELL
+tap A 0
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap pma_mart_sell_bag
+press DOWN
+press DOWN
+snap pma_mart_sell_bag_03
+tap A 0
+waitquiet
+snap pma_mart_sell_qty
+press UP
+snap pma_mart_sell_qty_2
+tap A 0
+waitquiet
+snap pma_mart_sell_confirm
+tap A 0                                   # YES
+waitquiet
+snap pma_mart_sold
+tap A 0
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+seek 8 @menu:sMenu+2@ 2 DOWN              # QUIT
+tap A 0
+talk pma_mart_bye 10 -
+waitctl 900
+warpto MAP_ECRUTEAK_CITY_MART_HNS 7 4
+face DOWN
+talk pma_mart_granny 10
+warpto MAP_ECRUTEAK_CITY_MART_HNS 5 3
+face UP
+talk pma_mart_youngster 10
+
+# --- Routes around the city: the map-name pop-up, then the route sign
+warpto MAP_ROUTE37_HNS 17 11
+shot pma_popup_route37
+warpto MAP_ROUTE37_HNS 20 14
+face UP
+talk pma_sign_route37 10
+warpto MAP_ECRUTEAK_CITY_HNS 33 54
+shot pma_popup_ecruteak
+
+# --- Last: the Center's wall clock. Its script waits (waitstate) after the clock screen and
+# the field stays locked on both ROMs, so it ends the tour.
+warpto MAP_ECRUTEAK_CITY_POKEMON_CENTER_HNS 3 2
+face UP
+talk pma_wallclock 10                     # ... then the clock screen opens
+waitcb2x CB2_ViewWallClock 600
+waittaskx wallclock:Task_ViewClock_HandleInput 600
+snap pma_wallclock_screen

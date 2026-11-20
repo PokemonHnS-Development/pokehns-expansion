@@ -1,0 +1,220 @@
+# Mail from the Battle Frontier Lounge 6 trade (BattleFrontier_Lounge6_hns/scripts.inc; trader at (2,4)
+# facing right): a Skitty for her Meowth, which holds Retro Mail with 9 Easy Chat words (src/data/trade.h:
+# 1019-1033, words :1435-1445). Then the party submenu MAIL -> READ / TAKE / CANCEL
+# (src/party_menu.c:3801-3838), READ (the read-mail screen, src/mail.c), TAKE -> "send to your PC?"
+# (gText_SendMailToPC, strings.c:287) NO -> "the message will be lost" (strings.c:290) NO, TAKE -> YES ->
+# "sent to your PC" (strings.c:288). The PC MAILBOX (src/player_pc.c:230-231): the list, READ /
+# MOVE TO BAG / GIVE / CANCEL, READ, MOVE TO BAG -> "the message will be lost. okay?" (strings.c:486) NO,
+# GIVE -> the party in give-mail mode -> Meowth. Then TAKE -> NO -> YES -> "mail taken from the Pokemon"
+# (strings.c:296).
+start saves/ladder6_postgame.sav
+include ../continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; clearflag FLAG_BATTLE_FRONTIER_TRADE_DONE; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_SKITTY, 10; special CalculatePlayerPartyCount; end
+warptoloose MAP_BATTLE_FRONTIER_LOUNGE6_HNS 3 4
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+loc
+face LEFT
+talk ml_trade_ask 10
+tap A 0
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP 6
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorPosition@ 1 DOWN 8
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+press A
+waitcb2x CB2_InGameTrade 900
+scenewatch ml_trade_scene CB2_Overworld 5000 110 160 A 150
+waitcb2x CB2_Overworld 900
+talk ml_trade_done 10 -
+waitctl 900
+
+# the party: Meowth in slot 2 holds the mail
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap ml_party_meowth
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap ml_party_actions
+partyact 7
+snap ml_party_actions_mail
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 9
+snap ml_mailmenu_read
+partyact 8
+snap ml_mailmenu_take
+partyact 10
+snap ml_mailmenu_cancel
+partyact 9
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap ml_read_held
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+snap ml_back_from_read
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+snap ml_take_sendpc_yes
+tap DOWN 4
+waitquiet
+snap ml_take_sendpc_no
+tap A 4
+waittaskx Task_HandleLoseMailMessageYesNoInput 600
+waitquiet
+snap ml_take_lose_prompt
+tap DOWN 4
+waitquiet
+snap ml_take_lose_prompt_no
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap ml_take_kept
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap ml_take_sent_pc
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap ml_party_after_send
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B
+
+# the PC: MAILBOX
+evstart lockall; special PlayerPC; waitstate; releaseall; end
+waittaskx PlayerPCProcessMenuInput 900
+waitquiet
+snap ml_pc_menu
+press DOWN
+snap ml_pc_menu_mailbox
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap ml_mbox_list
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+snap ml_mbox_opts_read
+seek 8 @menu:sMenu+2@ 1 DOWN
+snap ml_mbox_opts_tobag
+seek 8 @menu:sMenu+2@ 2 DOWN
+snap ml_mbox_opts_give
+seek 8 @menu:sMenu+2@ 3 DOWN
+snap ml_mbox_opts_cancel
+seek 8 @menu:sMenu+2@ 0 UP
+tap A 4
+waitcb2x CB2_MailRead 900
+waitquiet
+snap ml_mbox_read
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap ml_mbox_back
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+seek 8 @menu:sMenu+2@ 1 DOWN
+tap A 4
+waittaskx Mailbox_HandleConfirmMoveToBag 900
+waitquiet
+snap ml_mbox_tobag_prompt
+tap DOWN 4
+waitquiet
+snap ml_mbox_tobag_prompt_no
+tap A 4
+waittaskx Mailbox_ProcessInput 900
+waitquiet
+snap ml_mbox_tobag_no_back
+tap A 4
+waittaskx Mailbox_MailOptionsProcessInput 900
+waitquiet
+seek 8 @menu:sMenu+2@ 2 DOWN
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap ml_mbox_give_party
+seek 8 @gPartyMenu+9@ 1 DOWN
+snap ml_mbox_give_meowth
+tap A 4
+60 -
+waitquiet
+snap ml_mbox_given
+showtasks
+tap A 4
+120 -
+waitquiet
+snap ml_mbox_after_give
+showtasks
+tap B 4
+waittaskx PlayerPCProcessMenuInput 900
+waitquiet
+tap B 4
+waitctl 900
+
+# TAKE again -> NO (not to the PC) -> the message will be lost -> YES: "taken from the Pokemon"
+30 -
+# gMenuCallback still holds HandleStartMenuInput from the first visit (the start menu was closed by B):
+# clear it so `startmenu` presses START again
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 7
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+partyact 8
+tap A 4
+waittaskx Task_HandleSendMailToPCYesNoInput 600
+waitquiet
+tap DOWN 4
+tap A 4
+waittaskx Task_HandleLoseMailMessageYesNoInput 600
+waitquiet
+tap A 4
+waitkey 600
+snap ml_take_lost_taken
+tap A 4
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap ml_party_after_take
+tap B 4
+waitcb2x CB2_Overworld 900
+waitctl 900 B

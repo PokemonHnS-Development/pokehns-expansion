@@ -1,0 +1,8 @@
+# Dojo invitation, Whitney at Goldenrod Dept. Store 6F (GoldenrodDeptStore6_EventScript_Whitney, data/maps/GoldenrodCity_DepartmentStore_6F_hns/scripts.inc:5-16): one message,
+# the fade, the leader removed, FLAG_HIDE_DOJO_* cleared. The script has no YES/NO.
+start saves/r8_dojo_base.sav
+include _base.txt
+ev clearflag FLAG_HIDE_DEPTSTORE_WHITNEY; setflag FLAG_HIDE_DOJO_WHITNEY; end
+warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_6F_HNS 20 10
+approach 4
+include _invite.txt

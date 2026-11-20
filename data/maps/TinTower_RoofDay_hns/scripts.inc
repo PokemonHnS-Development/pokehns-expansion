@@ -286,20 +286,16 @@ TinTower_RoofDay_EventScript_KuniAfter::
 	end
 
 TinTower_RoofDay_Text_Kimono_AfterNotCaught:
-	.string "You have not only made HO-OH\n"
-	.string "appear, but you have also defeated\l"
-	.string "it...\p"
-	.string "There is nothing more for us to\n"
-	.string "say. Take care of yourself in your\l"
-	.string "journey...$"
+	.string "לא רק שגרמת להו-הו להופיע,\n"
+	.string "אלא גם הבסת אותו…\p"
+	.string "אין לנו עוד מה לומר.\n"
+	.string "שמור על עצמך במסע שלך…$"
 
 TinTower_RoofDay_Text_Kimono_AfterCaught:
-	.string "You have not only made HO-OH\n"
-	.string "appear, but you have also caught\l"
-	.string "it...\p"
-	.string "There is nothing more for us to\n"
-	.string "say. Take care of yourself in your\l"
-	.string "journey...$"
+	.string "לא רק שגרמת להו-הו להופיע,\n"
+	.string "אלא גם תפסת אותו…\p"
+	.string "אין לנו עוד מה לומר.\n"
+	.string "שמור על עצמך במסע שלך…$"
 
 TinTower_RoofDay_Movement_CameraPanUp:
 	walk_up
@@ -554,39 +550,36 @@ TinTower_RoofDay_Movement_Kimono_Dance_Shift_Right2:
 	step_end
 
 TinTower_RoofDay_Text_Zuki_Before::
-	.string "ZUKI: Go, face HO-OH. $"
+	.string "זוקי: לך, התייצב מול הו-הו. $"
 TinTower_RoofDay_Text_Naoko_Before::
-	.string "NAOKO: Go, face HO-OH. $"
+	.string "נאוקו: לך, התייצב מול הו-הו. $"
 TinTower_RoofDay_Text_Miki_Before::
-	.string "MIKI: Go, face HO-OH. $"
+	.string "מיקי: לך, התייצב מול הו-הו. $"
 TinTower_RoofDay_Text_Sayo_Before::
-	.string "SAYO: Go, face HO-OH. $"
+	.string "סאיו: לך, התייצב מול הו-הו. $"
 TinTower_RoofDay_Text_Kuni_Before::
-	.string "KUNI: Go, face HO-OH. $"
+	.string "קוני: לך, התייצב מול הו-הו. $"
 
 TinTower_RoofDay_Text_Kimono_Opening::
-	.string "KIMONO GIRL: That's right.\n"
-	.string "This is where we welcome HO-OH.\p"
-	.string "When the dance we practiced many\n"
-	.string "days becomes one with the sound of the\p"
-	.string "CLEAR BELL we entrusted to you, then\n"
-	.string "HO-OH shall come down from the great\l"
-	.string "arch of the sky once again. $"
+	.string "נערת קימונו: נכון מאוד.\n"
+	.string "כאן אנחנו מקבלות את פני הו-הו.\p"
+	.string "כשהריקוד שתרגלנו ימים רבים\n"
+	.string "יתאחד עם צליל הפעמון הצלול\p"
+	.string "שהפקדנו בידיך, אז הו-הו ירד שוב\n"
+	.string "מכיפת השמיים הגדולה. $"
 
 TinTower_RoofDay_Text_Kimono_Closing1::
-	.string "That is indeed HO-OH...\n"
-	.string "The guardian of the sky from\p"
-	.string "ancient times... \p"
-	.string "So many have tried again and again,\n"
-	.string "only to fail...\p"
-	.string "{PLAYER}, your heart in complete\n"
-	.string "harmony with the CLEAR BELL has finally\p"
-	.string "allowed it to appear...\n"
-	.string "{PLAYER}, don't you see?\p"
-	.string "HO-OH... It must have been waiting for\n"
-	.string "someone like you all this time.\p"
-	.string "Wouldn't you agree? $"
+	.string "זה אכן הו-הו…\n"
+	.string "שומר השמיים מימי קדם…\p"
+	.string "רבים כל כך ניסו שוב ושוב,\n"
+	.string "ורק נכשלו…\p"
+	.string "{PLAYER}, ליבך, בהרמוניה מלאה עם\n"
+	.string "הפעמון הצלול, גרם לו סוף סוף להופיע…\p"
+	.string "{PLAYER}, אתה לא מבין?\p"
+	.string "הו-הו… הוא ודאי חיכה כל הזמן הזה\n"
+	.string "למישהו כמוך.\p"
+	.string "אתה לא מסכים? $"
 
 TinTower_RoofDay_Text_Kimono_After::
-	.string "You have done a great job.\n"
-	.string "Say hello to PROF.ELM for us.$"
+	.string "עשית עבודה נהדרת.\n"
+	.string "מסור דרישת שלום לפרופ' אלם מאיתנו.$"

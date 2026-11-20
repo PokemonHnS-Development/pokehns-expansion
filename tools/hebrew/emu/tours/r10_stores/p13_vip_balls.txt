@@ -1,0 +1,10 @@
+# CreateBPPokeBallShop (MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS).
+start saves/st_l6.sav
+include _base.txt
+setbp 9999
+visit MAP_SAFFRON_CITY_FIGHTING_DOJO_VIP_HNS
+clerk 36 5 p13_hi
+buywait p13_buy
+listshots p13_list
+press B
+chat p13_bye

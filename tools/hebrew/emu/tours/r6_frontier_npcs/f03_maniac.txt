@@ -1,0 +1,166 @@
+# Frontier Maniac, Battle Frontier Lounge 2 (data/maps/BattleFrontier_Lounge2_hns/scripts.inc; at (8,4), talked to
+# from (8,5) facing UP). For each VAR_FRONTIER_MANIAC_FACILITY (0-9) and each streak tier of
+# ShowFrontierManiacMessage (src/field_specials.c:2184-2327: tier i = first threshold >= streak; thresholds
+# :2248-2261), the Lv. 50 streak is set in RAM and he is talked to: SwingBy / intro, the 'hottest' line with
+# its STR_VAR_1 buffer, then the facility message (data/maps/BattleFrontier_Lounge2/scripts.inc).
+start saves/r6_frontier_npcs.sav
+include ../../scripts/continue.txt
+clearflag FLAG_MET_BATTLE_FRONTIER_MANIAC
+ev file _maniac_zero.inc
+warpto MAP_BATTLE_FRONTIER_LOUNGE2_HNS 8 5
+
+# --- facility 0 (ts), tier 0: streak 0
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; tower_set TOWER_DATA_WIN_STREAK, 0; setvar VAR_FRONTIER_MANIAC_FACILITY, 0; end
+face UP
+tap A 4
+fieldwatch m_ts0 free 8000
+
+# --- facility 0 (ts), tier 1: streak 22
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; tower_set TOWER_DATA_WIN_STREAK, 22; setvar VAR_FRONTIER_MANIAC_FACILITY, 0; end
+face UP
+tap A 4
+fieldwatch m_ts1 free 8000
+
+# --- facility 0 (ts), tier 2: streak 57
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; tower_set TOWER_DATA_WIN_STREAK, 57; setvar VAR_FRONTIER_MANIAC_FACILITY, 0; end
+face UP
+tap A 4
+fieldwatch m_ts2 free 8000
+
+# --- facility 1 (td), tier 0: streak 0
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES; tower_set TOWER_DATA_WIN_STREAK, 0; setvar VAR_FRONTIER_MANIAC_FACILITY, 1; end
+face UP
+tap A 4
+fieldwatch m_td0 free 8000
+
+# --- facility 1 (td), tier 1: streak 22
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES; tower_set TOWER_DATA_WIN_STREAK, 22; setvar VAR_FRONTIER_MANIAC_FACILITY, 1; end
+face UP
+tap A 4
+fieldwatch m_td1 free 8000
+
+# --- facility 1 (td), tier 2: streak 36
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES; tower_set TOWER_DATA_WIN_STREAK, 36; setvar VAR_FRONTIER_MANIAC_FACILITY, 1; end
+face UP
+tap A 4
+fieldwatch m_td2 free 8000
+
+# --- facility 2 (tm), tier 0: streak 0
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_MULTIS; tower_set TOWER_DATA_WIN_STREAK, 0; setvar VAR_FRONTIER_MANIAC_FACILITY, 2; end
+face UP
+tap A 4
+fieldwatch m_tm0 free 8000
+
+# --- facility 3 (tl), tier 0: streak 0
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_LINK_MULTIS; tower_set TOWER_DATA_WIN_STREAK, 0; setvar VAR_FRONTIER_MANIAC_FACILITY, 3; end
+face UP
+tap A 4
+fieldwatch m_tl0 free 8000
+
+# --- facility 4 (dome), tier 0: streak 0
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; dome_set DOME_DATA_WIN_STREAK, 0; setvar VAR_FRONTIER_MANIAC_FACILITY, 4; end
+face UP
+tap A 4
+fieldwatch m_dome0 free 8000
+
+# --- facility 4 (dome), tier 1: streak 3
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; dome_set DOME_DATA_WIN_STREAK, 3; setvar VAR_FRONTIER_MANIAC_FACILITY, 4; end
+face UP
+tap A 4
+fieldwatch m_dome1 free 8000
+
+# --- facility 4 (dome), tier 2: streak 5
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; dome_set DOME_DATA_WIN_STREAK, 5; setvar VAR_FRONTIER_MANIAC_FACILITY, 4; end
+face UP
+tap A 4
+fieldwatch m_dome2 free 8000
+
+# --- facility 5 (factory), tier 0: streak 0
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; factory_set FACTORY_DATA_WIN_STREAK, 0; setvar VAR_FRONTIER_MANIAC_FACILITY, 5; end
+face UP
+tap A 4
+fieldwatch m_factory0 free 8000
+
+# --- facility 5 (factory), tier 1: streak 8
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; factory_set FACTORY_DATA_WIN_STREAK, 8; setvar VAR_FRONTIER_MANIAC_FACILITY, 5; end
+face UP
+tap A 4
+fieldwatch m_factory1 free 8000
+
+# --- facility 5 (factory), tier 2: streak 22
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; factory_set FACTORY_DATA_WIN_STREAK, 22; setvar VAR_FRONTIER_MANIAC_FACILITY, 5; end
+face UP
+tap A 4
+fieldwatch m_factory2 free 8000
+
+# --- facility 6 (palace), tier 0: streak 0
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; palace_set PALACE_DATA_WIN_STREAK, 0; setvar VAR_FRONTIER_MANIAC_FACILITY, 6; end
+face UP
+tap A 4
+fieldwatch m_palace0 free 8000
+
+# --- facility 6 (palace), tier 1: streak 8
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; palace_set PALACE_DATA_WIN_STREAK, 8; setvar VAR_FRONTIER_MANIAC_FACILITY, 6; end
+face UP
+tap A 4
+fieldwatch m_palace1 free 8000
+
+# --- facility 6 (palace), tier 2: streak 22
+ev setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES; palace_set PALACE_DATA_WIN_STREAK, 22; setvar VAR_FRONTIER_MANIAC_FACILITY, 6; end
+face UP
+tap A 4
+fieldwatch m_palace2 free 8000
+
+# --- facility 7 (arena), tier 0: streak 0
+ev arena_set ARENA_DATA_WIN_STREAK, 0; setvar VAR_FRONTIER_MANIAC_FACILITY, 7; end
+face UP
+tap A 4
+fieldwatch m_arena0 free 8000
+
+# --- facility 7 (arena), tier 1: streak 15
+ev arena_set ARENA_DATA_WIN_STREAK, 15; setvar VAR_FRONTIER_MANIAC_FACILITY, 7; end
+face UP
+tap A 4
+fieldwatch m_arena1 free 8000
+
+# --- facility 7 (arena), tier 2: streak 29
+ev arena_set ARENA_DATA_WIN_STREAK, 29; setvar VAR_FRONTIER_MANIAC_FACILITY, 7; end
+face UP
+tap A 4
+fieldwatch m_arena2 free 8000
+
+# --- facility 8 (pike), tier 0: streak 0
+ev pike_set PIKE_DATA_WIN_STREAK, 0; setvar VAR_FRONTIER_MANIAC_FACILITY, 8; end
+face UP
+tap A 4
+fieldwatch m_pike0 free 8000
+
+# --- facility 8 (pike), tier 1: streak 14
+ev pike_set PIKE_DATA_WIN_STREAK, 14; setvar VAR_FRONTIER_MANIAC_FACILITY, 8; end
+face UP
+tap A 4
+fieldwatch m_pike1 free 8000
+
+# --- facility 8 (pike), tier 2: streak 113
+ev pike_set PIKE_DATA_WIN_STREAK, 113; setvar VAR_FRONTIER_MANIAC_FACILITY, 8; end
+face UP
+tap A 4
+fieldwatch m_pike2 free 8000
+
+# --- facility 9 (pyramid), tier 0: streak 0
+ev pyramid_set PYRAMID_DATA_WIN_STREAK, 0; setvar VAR_FRONTIER_MANIAC_FACILITY, 9; end
+face UP
+tap A 4
+fieldwatch m_pyramid0 free 8000
+
+# --- facility 9 (pyramid), tier 1: streak 8
+ev pyramid_set PYRAMID_DATA_WIN_STREAK, 8; setvar VAR_FRONTIER_MANIAC_FACILITY, 9; end
+face UP
+tap A 4
+fieldwatch m_pyramid1 free 8000
+
+# --- facility 9 (pyramid), tier 2: streak 57
+ev pyramid_set PYRAMID_DATA_WIN_STREAK, 57; setvar VAR_FRONTIER_MANIAC_FACILITY, 9; end
+face UP
+tap A 4
+fieldwatch m_pyramid2 free 8000

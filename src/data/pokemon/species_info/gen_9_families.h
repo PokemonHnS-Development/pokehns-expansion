@@ -23,17 +23,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_GRASS),
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_PROTEAN },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("SPRIGATITO"),
+        .speciesName = _("ספריגטיטו"),
         .cryId = CRY_SPRIGATITO,
         .natDexNum = NATIONAL_DEX_SPRIGATITO,
-        .categoryName = _("Grass Cat"),
+        .categoryName = _("חתול עשב"),
         .height = 4,
         .weight = 41,
         .description = COMPOUND_STRING(
-            "The sweet scent its body gives off\n"
-            "mesmerizes those around it. The\n"
-            "scent grows stronger when this\n"
-            "Pokémon is in the sun."),
+            "הניחוח המתוק שגופו מפיץ מהפנט את כל מי\n"
+            "שסביבו. הניחוח מתחזק כשהפוקימון הזה נמצא\n"
+            "בשמש."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -88,17 +87,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_GRASS),
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_PROTEAN },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("FLORAGATO"),
+        .speciesName = _("פלורגאטו"),
         .cryId = CRY_FLORAGATO,
         .natDexNum = NATIONAL_DEX_FLORAGATO,
-        .categoryName = _("Grass Cat"),
+        .categoryName = _("חתול עשב"),
         .height = 9,
         .weight = 122,
         .description = COMPOUND_STRING(
-            "Floragato deftly wields the vine\n"
-            "hidden beneath its long fur, slamming\n"
-            "the hard flower bud against its\n"
-            "opponents."),
+            "פלורגאטו מניף במיומנות את הגפן שמוסתרת\n"
+            "מתחת לפרוותו הארוכה, ומטיח ביריביו\n"
+            "את ניצן הפרח הקשה."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -152,17 +150,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_GRASS),
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_PROTEAN },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("MEOWSCARADA"),
+        .speciesName = _("מיאוסקראדה"),
         .cryId = CRY_MEOWSCARADA,
         .natDexNum = NATIONAL_DEX_MEOWSCARADA,
-        .categoryName = _("Magician"),
+        .categoryName = _("קוסם"),
         .height = 15,
         .weight = 312,
         .description = COMPOUND_STRING(
-            "This Pokémon uses the reflective\n"
-            "fur lining its cape to camouflage the\n"
-            "stem of its flower, creating the\n"
-            "illusion that the flower is floating."),
+            "הפוקימון הזה מסווה את גבעול הפרח שלו\n"
+            "בעזרת הפרווה המחזירה אור שבבטנת גלימתו,\n"
+            "וכך יוצר אשליה שהפרח מרחף."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -217,17 +214,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_UNAWARE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("FUECOCO"),
+        .speciesName = _("פואקוקו"),
         .cryId = CRY_FUECOCO,
         .natDexNum = NATIONAL_DEX_FUECOCO,
-        .categoryName = _("Fire Croc"),
+        .categoryName = _("תנין אש"),
         .height = 4,
         .weight = 98,
         .description = COMPOUND_STRING(
-            "Its flame sac is small, so energy is\n"
-            "always leaking out. This energy is\n"
-            "released from the dent atop\n"
-            "Fuecoco's head and flickers to and fro."),
+            "שק הלהבות שלו קטן, ולכן אנרגיה דולפת\n"
+            "ממנו כל הזמן. האנרגיה משתחררת מהשקע\n"
+            "שבקודקודו של פואקוקו ומרצדת הלוך ושוב."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -282,17 +278,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_UNAWARE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("CROCALOR"),
+        .speciesName = _("קרוקלור"),
         .cryId = CRY_CROCALOR,
         .natDexNum = NATIONAL_DEX_CROCALOR,
-        .categoryName = _("Fire Croc"),
+        .categoryName = _("תנין אש"),
         .height = 10,
         .weight = 307,
         .description = COMPOUND_STRING(
-            "The combination of Crocalor's fire\n"
-            "energy and overflowing vitality has\n"
-            "caused an egg-shaped fireball to\n"
-            "appear on the Pokémon's head."),
+            "השילוב של אנרגיית האש של קרוקלור עם\n"
+            "החיוניות השופעת שלו גרם לכדור אש\n"
+            "דמוי ביצה להופיע על ראשו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -346,17 +341,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_UNAWARE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("SKELEDIRGE"),
+        .speciesName = _("סקלדרג'"),
         .cryId = CRY_SKELEDIRGE,
         .natDexNum = NATIONAL_DEX_SKELEDIRGE,
-        .categoryName = _("Singer"),
+        .categoryName = _("זמר"),
         .height = 16,
         .weight = 3265,
         .description = COMPOUND_STRING(
-            "Skeledirge's gentle singing\n"
-            "soothes the souls of all that hear it. It\n"
-            "burns its enemies to a crisp with\n"
-            "flames of over 5,400 degrees Fahrenheit."),
+            "שירתו העדינה של סקלדרג' מרגיעה את נפשו של\n"
+            "כל מי ששומע אותה. הוא חורך את אויביו\n"
+            "בלהבות של יותר מ-5,400 מעלות פרנהייט."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -411,17 +405,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING, EGG_GROUP_WATER_1),
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_MOXIE },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("QUAXLY"),
+        .speciesName = _("קוואקסלי"),
         .cryId = CRY_QUAXLY,
         .natDexNum = NATIONAL_DEX_QUAXLY,
-        .categoryName = _("Duckling"),
+        .categoryName = _("ברווזון"),
         .height = 5,
         .weight = 61,
         .description = COMPOUND_STRING(
-            "Its strong legs let it easily swim\n"
-            "around in even fast-flowing rivers.\n"
-            "It likes to keep things tidy and is\n"
-            "prone to overthinking things."),
+            "רגליו החזקות מאפשרות לו לשחות בקלות אפילו\n"
+            "בנהרות שזורמים במהירות. הוא אוהב שהכול\n"
+            "מסודר ונוטה לחשוב יותר מדי על דברים."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -476,17 +469,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING, EGG_GROUP_WATER_1),
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_MOXIE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("QUAXWELL"),
+        .speciesName = _("קוואקסוול"),
         .cryId = CRY_QUAXWELL,
         .natDexNum = NATIONAL_DEX_QUAXWELL,
-        .categoryName = _("Practicing"),
+        .categoryName = _("מתאמן"),
         .height = 12,
         .weight = 215,
         .description = COMPOUND_STRING(
-            "The hardworking Quaxwell observes\n"
-            "people and Pokémon from various\n"
-            "regions and incorporates their\n"
-            "movements into its own dance routines."),
+            "קוואקסוול החרוץ מתבונן באנשים ובפוקימונים\n"
+            "מאזורים שונים ומשלב את תנועותיהם\n"
+            "בריקודים שלו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -540,17 +532,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING, EGG_GROUP_WATER_1),
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_MOXIE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("QUAQUAVAL"),
+        .speciesName = _("קוואקוובל"),
         .cryId = CRY_QUAQUAVAL,
         .natDexNum = NATIONAL_DEX_QUAQUAVAL,
-        .categoryName = _("Dancer"),
+        .categoryName = _("רקדן"),
         .height = 18,
         .weight = 619,
         .description = COMPOUND_STRING(
-            "A single kick from a Quaquaval can\n"
-            "send a truck rolling. This Pokémon\n"
-            "uses its powerful legs to perform\n"
-            "striking dances from far-off lands."),
+            "בעיטה אחת של קוואקוובל יכולה לגלגל משאית.\n"
+            "הפוקימון הזה משתמש ברגליו החזקות כדי\n"
+            "לבצע ריקודים מרהיבים מארצות רחוקות."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -605,17 +596,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_AROMA_VEIL, ABILITY_GLUTTONY, ABILITY_THICK_FAT },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("LECHONK"),
+        .speciesName = _("לצ'ונק"),
         .cryId = CRY_LECHONK,
         .natDexNum = NATIONAL_DEX_LECHONK,
-        .categoryName = _("Hog"),
+        .categoryName = _("חזיר"),
         .height = 5,
         .weight = 102,
         .description = COMPOUND_STRING(
-            "It searches for food all day. It\n"
-            "possesses a keen sense of smell but\n"
-            "doesn't use it for anything other\n"
-            "than foraging."),
+            "הוא מחפש מזון כל היום. יש לו חוש ריח חד,\n"
+            "אבל הוא לא משתמש בו לשום דבר\n"
+            "מלבד חיפוש מזון."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -671,16 +661,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_LINGERING_AROMA, ABILITY_GLUTTONY, ABILITY_THICK_FAT },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("OINKOLOGNE"),
+        .speciesName = _("אוינקולון"),
         .cryId = CRY_OINKOLOGNE_M,
         .natDexNum = NATIONAL_DEX_OINKOLOGNE,
-        .categoryName = _("Hog"),
+        .categoryName = _("חזיר"),
         .height = 10,
         .weight = 1200,
         .description = COMPOUND_STRING(
-            "Oinkologne is proud of its fine,\n"
-            "glossy skin. It emits a concentrated\n"
-            "scent from the tip of its tail."),
+            "אוינקולון גאה בעורו המשובח והמבריק. הוא\n"
+            "מפיץ ניחוח מרוכז מקצה זנבו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -735,17 +724,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_AROMA_VEIL, ABILITY_GLUTTONY, ABILITY_THICK_FAT },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("OINKOLOGNE"),
+        .speciesName = _("אוינקולון"),
         .cryId = CRY_OINKOLOGNE_F,
         .natDexNum = NATIONAL_DEX_OINKOLOGNE,
-        .categoryName = _("Hog"),
+        .categoryName = _("חזיר"),
         .height = 10,
         .weight = 1200,
         .description = COMPOUND_STRING(
-            "This is a meticulous Pokémon that\n"
-            "likes to keep things tidy. It\n"
-            "shrouds itself in a floral aroma that\n"
-            "soothes the Pokémon around it."),
+            "זהו פוקימון קפדן שאוהב שהכול מסודר. הוא\n"
+            "עוטף את עצמו בניחוח פרחוני שמרגיע את\n"
+            "הפוקימונים שסביבו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -802,17 +790,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_INSOMNIA, ABILITY_NONE, ABILITY_STAKEOUT },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("TAROUNTULA"),
+        .speciesName = _("טראונטולה"),
         .cryId = CRY_TAROUNTULA,
         .natDexNum = NATIONAL_DEX_TAROUNTULA,
-        .categoryName = _("String Ball"),
+        .categoryName = _("כדור חוט"),
         .height = 3,
         .weight = 40,
         .description = COMPOUND_STRING(
-            "The thread it secretes from its\n"
-            "rear is as strong as wire. The secret\n"
-            "behind the thread's strength is the\n"
-            "topic of ongoing research."),
+            "החוט שהוא מפריש מהחלק האחורי של גופו חזק\n"
+            "כמו חוט מתכת. סוד החוזק של החוט הוא נושא\n"
+            "למחקר מתמשך."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -867,17 +854,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_INSOMNIA, ABILITY_NONE, ABILITY_STAKEOUT },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("SPIDOPS"),
+        .speciesName = _("ספיידופס"),
         .cryId = CRY_SPIDOPS,
         .natDexNum = NATIONAL_DEX_SPIDOPS,
-        .categoryName = _("Trap"),
+        .categoryName = _("מלכודת"),
         .height = 10,
         .weight = 165,
         .description = COMPOUND_STRING(
-            "It clings to branches and ceilings\n"
-            "using its threads and moves without\n"
-            "a sound. It takes out its prey\n"
-            "before the prey even notices it."),
+            "הוא נאחז בענפים ובתקרות בעזרת החוטים שלו\n"
+            "ונע בלי להשמיע קול. הוא מחסל את טרפו עוד\n"
+            "לפני שהטרף מבחין בו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -932,17 +918,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_SWARM, ABILITY_NONE, ABILITY_TINTED_LENS },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("NYMBLE"),
+        .speciesName = _("נימבל"),
         .cryId = CRY_NYMBLE,
         .natDexNum = NATIONAL_DEX_NYMBLE,
-        .categoryName = _("Grasshopper"),
+        .categoryName = _("חגב"),
         .height = 2,
         .weight = 10,
         .description = COMPOUND_STRING(
-            "It has its third set of legs folded\n"
-            "up. When it's in a tough spot, this\n"
-            "Pokémon jumps over 30 feet using the\n"
-            "strength of its legs."),
+            "זוג הרגליים השלישי שלו מקופל.\n"
+            "כשהוא במצוקה, הפוקימון הזה קופץ\n"
+            "למרחק של יותר מ-30 רגל בכוח רגליו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -997,17 +982,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_SWARM, ABILITY_NONE, ABILITY_TINTED_LENS },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("LOKIX"),
+        .speciesName = _("לוקיקס"),
         .cryId = CRY_LOKIX,
         .natDexNum = NATIONAL_DEX_LOKIX,
-        .categoryName = _("Grasshopper"),
+        .categoryName = _("חגב"),
         .height = 10,
         .weight = 175,
         .description = COMPOUND_STRING(
-            "When it decides to fight all out, it\n"
-            "stands on its previously folded\n"
-            "legs to enter Showdown Mode. It\n"
-            "neutralizes its enemies in short order."),
+            "כשהוא מחליט להילחם בכל הכוח, הוא נעמד על\n"
+            "רגליו שהיו מקופלות ועובר למצב עימות. הוא\n"
+            "מנטרל את אויביו תוך זמן קצר."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1062,17 +1046,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_STATIC, ABILITY_NATURAL_CURE, ABILITY_IRON_FIST },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("PAWMI"),
+        .speciesName = _("פומי"),
         .cryId = CRY_PAWMI,
         .natDexNum = NATIONAL_DEX_PAWMI,
-        .categoryName = _("Mouse"),
+        .categoryName = _("עכבר"),
         .height = 3,
         .weight = 25,
         .description = COMPOUND_STRING(
-            "The pads of its paws are electricity-\n"
-            "discharging organs. Pawmi fires\n"
-            "electricity from its forepaws while\n"
-            "standing unsteadily on its hind legs."),
+            "הכריות שבכפותיו הן איברים שפורקים חשמל.\n"
+            "פומי יורה חשמל מכפותיו הקדמיות כשהוא\n"
+            "עומד בחוסר יציבות על רגליו האחוריות."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1127,17 +1110,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_VOLT_ABSORB, ABILITY_NATURAL_CURE, ABILITY_IRON_FIST },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("PAWMO"),
+        .speciesName = _("פומו"),
         .cryId = CRY_PAWMO,
         .natDexNum = NATIONAL_DEX_PAWMO,
-        .categoryName = _("Mouse"),
+        .categoryName = _("עכבר"),
         .height = 4,
         .weight = 65,
         .description = COMPOUND_STRING(
-            "When its group is attacked, Pawmo\n"
-            "is the first to leap into battle,\n"
-            "defeating enemies with a fighting\n"
-            "technique that utilizes electric shocks."),
+            "כשתוקפים את הקבוצה שלו, פומו הוא הראשון\n"
+            "לזנק לקרב, והוא מביס אויבים בטכניקת לחימה\n"
+            "שמשלבת מכות חשמל."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1191,17 +1173,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_VOLT_ABSORB, ABILITY_NATURAL_CURE, ABILITY_IRON_FIST },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("PAWMOT"),
+        .speciesName = _("פומוט"),
         .cryId = CRY_PAWMOT,
         .natDexNum = NATIONAL_DEX_PAWMOT,
-        .categoryName = _("Hands-On"),
+        .categoryName = _("מעשי"),
         .height = 9,
         .weight = 410,
         .description = COMPOUND_STRING(
-            "This Pokémon normally is slow to\n"
-            "react, but once it enters battle, it\n"
-            "will strike down its enemies with\n"
-            "lightning-fast movements."),
+            "בדרך כלל הפוקימון הזה מגיב באיטיות, אבל\n"
+            "כשהוא נכנס לקרב, הוא מפיל את אויביו\n"
+            "בתנועות מהירות כברק."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1256,17 +1237,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_FAIRY),
         .abilities = { ABILITY_RUN_AWAY, ABILITY_PICKUP, ABILITY_OWN_TEMPO },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("TANDEMAUS"),
+        .speciesName = _("טנדמאוס"),
         .cryId = CRY_TANDEMAUS,
         .natDexNum = NATIONAL_DEX_TANDEMAUS,
-        .categoryName = _("Couple"),
+        .categoryName = _("זוג"),
         .height = 3,
         .weight = 18,
         .description = COMPOUND_STRING(
-            "Exhibiting great teamwork, they\n"
-            "use their incisors to cut pieces out\n"
-            "of any material that might be useful\n"
-            "for a nest, then make off with them."),
+            "בעבודת צוות מופלאה, הם גוזרים\n"
+            "בשיניהם החותכות פיסות מכל חומר\n"
+            "שעשוי להועיל לקן, ואז מסתלקים איתן."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1322,17 +1302,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_FAIRY),
         .abilities = { ABILITY_FRIEND_GUARD, ABILITY_CHEEK_POUCH, ABILITY_TECHNICIAN },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("MAUSHOLD"),
+        .speciesName = _("מאוסהולד"),
         .cryId = CRY_MAUSHOLD_THREE,
         .natDexNum = NATIONAL_DEX_MAUSHOLD,
-        .categoryName = _("Family"),
+        .categoryName = _("משפחה"),
         .height = 3,
         .weight = 23,
         .description = COMPOUND_STRING(
-            "The little one just appeared one\n"
-            "day. They all live together like a\n"
-            "family, but the relationship between\n"
-            "the three is still unclear."),
+            "הקטן פשוט הופיע יום אחד. כולם חיים יחד כמו\n"
+            "משפחה, אבל הקשר בין השלושה עדיין לא ברור."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1387,17 +1365,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_FAIRY),
         .abilities = { ABILITY_FRIEND_GUARD, ABILITY_CHEEK_POUCH, ABILITY_TECHNICIAN },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("MAUSHOLD"),
+        .speciesName = _("מאוסהולד"),
         .cryId = CRY_MAUSHOLD_FOUR,
         .natDexNum = NATIONAL_DEX_MAUSHOLD,
-        .categoryName = _("Family"),
+        .categoryName = _("משפחה"),
         .height = 3,
         .weight = 28,
         .description = COMPOUND_STRING(
-            "The larger pair protects the little\n"
-            "ones during battles. When facing\n"
-            "strong opponents, the whole group\n"
-            "will join the fight."),
+            "הזוג הגדול מגן על הקטנים בזמן קרבות. מול\n"
+            "יריבים חזקים, כל הקבוצה מצטרפת למאבק."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1454,17 +1430,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_MINERAL),
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_NONE, ABILITY_KLUTZ },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("FIDOUGH"),
+        .speciesName = _("פיידו"),
         .cryId = CRY_FIDOUGH,
         .natDexNum = NATIONAL_DEX_FIDOUGH,
-        .categoryName = _("Puppy"),
+        .categoryName = _("גור"),
         .height = 3,
         .weight = 109,
         .description = COMPOUND_STRING(
-            "This Pokémon is smooth and moist\n"
-            "to the touch. Yeast in Fidough's\n"
-            "breath induces fermentation in the\n"
-            "Pokémon's vicinity."),
+            "הפוקימון הזה חלק ולח למגע. השמרים\n"
+            "שבנשימתו של פיידו גורמים לתסיסה בסביבתו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1519,17 +1493,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_MINERAL),
         .abilities = { ABILITY_WELL_BAKED_BODY, ABILITY_NONE, ABILITY_AROMA_VEIL },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("DACHSBUN"),
+        .speciesName = _("דקסבאן"),
         .cryId = CRY_DACHSBUN,
         .natDexNum = NATIONAL_DEX_DACHSBUN,
-        .categoryName = _("Dog"),
+        .categoryName = _("כלב"),
         .height = 5,
         .weight = 149,
         .description = COMPOUND_STRING(
-            "The pleasant aroma that emanates\n"
-            "from this Pokémon's body helps\n"
-            "wheat grow, so Dachsbun has been\n"
-            "treasured by farming villages."),
+            "הניחוח הנעים שעולה מגופו של הפוקימון הזה\n"
+            "עוזר לחיטה לגדול, ולכן כפרים חקלאיים\n"
+            "מוקירים את דקסבאן."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1584,17 +1557,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS),
         .abilities = { ABILITY_EARLY_BIRD, ABILITY_NONE, ABILITY_HARVEST },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("SMOLIV"),
+        .speciesName = _("סמוליב"),
         .cryId = CRY_SMOLIV,
         .natDexNum = NATIONAL_DEX_SMOLIV,
-        .categoryName = _("Olive"),
+        .categoryName = _("זית"),
         .height = 3,
         .weight = 65,
         .description = COMPOUND_STRING(
-            "This Pokémon converts nutrients\n"
-            "into oil, which it stores in the fruit\n"
-            "on its head. It can easily go a whole\n"
-            "week without eating or drinking."),
+            "הפוקימון הזה הופך חומרים מזינים לשמן ואוגר\n"
+            "אותו בפרי שעל ראשו. הוא יכול בקלות לשרוד\n"
+            "שבוע שלם בלי לאכול ובלי לשתות."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1649,17 +1621,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS),
         .abilities = { ABILITY_EARLY_BIRD, ABILITY_NONE, ABILITY_HARVEST },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("DOLLIV"),
+        .speciesName = _("דוליב"),
         .cryId = CRY_DOLLIV,
         .natDexNum = NATIONAL_DEX_DOLLIV,
-        .categoryName = _("Olive"),
+        .categoryName = _("זית"),
         .height = 6,
         .weight = 119,
         .description = COMPOUND_STRING(
-            "Dolliv shares its tasty, fresh-\n"
-            "scented oil with others. This species\n"
-            "has coexisted with humans since\n"
-            "times long gone."),
+            "דוליב חולק עם אחרים את השמן הטעים שלו,\n"
+            "בעל הניחוח הרענן. המין הזה חי לצד בני אדם\n"
+            "מימי קדם."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1713,17 +1684,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS),
         .abilities = { ABILITY_SEED_SOWER, ABILITY_NONE, ABILITY_HARVEST },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("ARBOLIVA"),
+        .speciesName = _("ארבוליבה"),
         .cryId = CRY_ARBOLIVA,
         .natDexNum = NATIONAL_DEX_ARBOLIVA,
-        .categoryName = _("Olive"),
+        .categoryName = _("זית"),
         .height = 14,
         .weight = 482,
         .description = COMPOUND_STRING(
-            "This Pokémon drives back enemies\n"
-            "by launching its rich, aromatic oil at\n"
-            "them with enough force to smash a\n"
-            "boulder."),
+            "הפוקימון הזה הודף אויבים כשהוא יורה עליהם\n"
+            "את השמן העשיר והריחני שלו בעוצמה שמספיקה\n"
+            "לנפץ סלע."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1778,17 +1748,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_HUSTLE, ABILITY_GUTS },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("SQUAWKABILLY"),
+        .speciesName = _("סקוואקבילי"),
         .cryId = CRY_SQUAWKABILLY,
         .natDexNum = NATIONAL_DEX_SQUAWKABILLY,
-        .categoryName = _("Parrot"),
+        .categoryName = _("תוכי"),
         .height = 6,
         .weight = 24,
         .description = COMPOUND_STRING(
-            "Green-feathered flocks hold the\n"
-            "most sway. When they're out\n"
-            "searching for food in the mornings and\n"
-            "evenings, it gets very noisy."),
+            "ללהקות בעלות הנוצות הירוקות יש\n"
+            "ההשפעה הרבה ביותר. כשהן יוצאות לחפש\n"
+            "מזון בבקרים ובערבים, נעשה רועש מאוד."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1844,17 +1813,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_HUSTLE, ABILITY_GUTS },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("SQUAWKABILLY"),
+        .speciesName = _("סקוואקבילי"),
         .cryId = CRY_SQUAWKABILLY,
         .natDexNum = NATIONAL_DEX_SQUAWKABILLY,
-        .categoryName = _("Parrot"),
+        .categoryName = _("תוכי"),
         .height = 6,
         .weight = 24,
         .description = COMPOUND_STRING(
-            "The largest of their flocks can\n"
-            "contain more than 50 individuals. They\n"
-            "fly around towns and forests,\n"
-            "searching for food and making a racket."),
+            "בלהקות הגדולות ביותר שלהם יכולים להיות\n"
+            "יותר מ-50 פרטים. הם עפים בין עיירות ויערות,\n"
+            "מחפשים מזון ומקימים רעש גדול."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1910,17 +1878,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_HUSTLE, ABILITY_SHEER_FORCE },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("SQUAWKABILLY"),
+        .speciesName = _("סקוואקבילי"),
         .cryId = CRY_SQUAWKABILLY,
         .natDexNum = NATIONAL_DEX_SQUAWKABILLY,
-        .categoryName = _("Parrot"),
+        .categoryName = _("תוכי"),
         .height = 6,
         .weight = 24,
         .description = COMPOUND_STRING(
-            "These Squawkabilly are hotheaded,\n"
-            "and their fighting style is vicious.\n"
-            "They'll leap within reach of their\n"
-            "foes to engage in close combat."),
+            "הסקוואקבילי האלה חמומי מוח, וסגנון הלחימה\n"
+            "שלהם אכזרי. הם מזנקים אל טווח ההישג של\n"
+            "אויביהם כדי להילחם בקרב צמוד."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1976,17 +1943,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_HUSTLE, ABILITY_SHEER_FORCE },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("SQUAWKABILLY"),
+        .speciesName = _("סקוואקבילי"),
         .cryId = CRY_SQUAWKABILLY,
         .natDexNum = NATIONAL_DEX_SQUAWKABILLY,
-        .categoryName = _("Parrot"),
+        .categoryName = _("תוכי"),
         .height = 6,
         .weight = 24,
         .description = COMPOUND_STRING(
-            "Though these Squawkabilly are the\n"
-            "fewest in number, they have no\n"
-            "trouble living in towns since they blend\n"
-            "in with the white buildings."),
+            "הסקוואקבילי האלה הם המעטים ביותר במספר,\n"
+            "אבל קל להם לחיות בעיירות, כי הם מתמזגים\n"
+            "עם הבניינים הלבנים."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2044,17 +2010,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_PURIFYING_SALT, ABILITY_STURDY, ABILITY_CLEAR_BODY },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("NACLI"),
+        .speciesName = _("נאקלי"),
         .cryId = CRY_NACLI,
         .natDexNum = NATIONAL_DEX_NACLI,
-        .categoryName = _("Rock Salt"),
+        .categoryName = _("מלח סלעים"),
         .height = 4,
         .weight = 160,
         .description = COMPOUND_STRING(
-            "The ground scrapes its body as it\n"
-            "travels, causing it to leave salt\n"
-            "behind. Salt is constantly being created\n"
-            "and replenished inside Nacli's body."),
+            "כשהוא נע, האדמה משפשפת את גופו, ולכן הוא\n"
+            "משאיר אחריו מלח. בתוך גופו של נאקלי נוצר\n"
+            "ומתחדש מלח ללא הרף."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2109,17 +2074,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_PURIFYING_SALT, ABILITY_STURDY, ABILITY_CLEAR_BODY },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("NACLSTACK"),
+        .speciesName = _("נאקלסטאק"),
         .cryId = CRY_NACLSTACK,
         .natDexNum = NATIONAL_DEX_NACLSTACK,
-        .categoryName = _("Rock Salt"),
+        .categoryName = _("מלח סלעים"),
         .height = 6,
         .weight = 1050,
         .description = COMPOUND_STRING(
-            "It compresses rock salt inside its\n"
-            "body and shoots out hardened salt\n"
-            "pellets with enough force to\n"
-            "perforate an iron sheet."),
+            "הוא דוחס מלח סלעים בתוך גופו ויורה\n"
+            "כדורי מלח קשים בעוצמה שמספיקה\n"
+            "לנקב לוח ברזל."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2173,17 +2137,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_PURIFYING_SALT, ABILITY_STURDY, ABILITY_CLEAR_BODY },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("GARGANACL"),
+        .speciesName = _("גרגנאקל"),
         .cryId = CRY_GARGANACL,
         .natDexNum = NATIONAL_DEX_GARGANACL,
-        .categoryName = _("Rock Salt"),
+        .categoryName = _("מלח סלעים"),
         .height = 23,
         .weight = 2400,
         .description = COMPOUND_STRING(
-            "Garganacl will rub its fingertips\n"
-            "together and sprinkle injured\n"
-            "Pokémon with salt. Even severe wounds will\n"
-            "promptly heal afterward."),
+            "גרגנאקל משפשף את קצות אצבעותיו זו בזו\n"
+            "ומפזר מלח על פוקימונים פצועים. אחר כך\n"
+            "אפילו פצעים קשים מחלימים מיד."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2238,17 +2201,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_NONE, ABILITY_FLAME_BODY },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("CHARCADET"),
+        .speciesName = _("צ'רקדט"),
         .cryId = CRY_CHARCADET,
         .natDexNum = NATIONAL_DEX_CHARCADET,
-        .categoryName = _("Fire Child"),
+        .categoryName = _("ילד אש"),
         .height = 6,
         .weight = 105,
         .description = COMPOUND_STRING(
-            "Burnt charcoal came to life and\n"
-            "became a Pokémon. Possessing a fiery\n"
-            "fighting spirit, Charcadet will\n"
-            "battle even tough opponents."),
+            "פחם שרוף התעורר לחיים והפך לפוקימון.\n"
+            "לצ'רקדט יש רוח לחימה לוהטת, והוא נלחם\n"
+            "אפילו ביריבים קשוחים."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2306,17 +2268,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_NONE, ABILITY_WEAK_ARMOR },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("ARMAROUGE"),
+        .speciesName = _("ארמרוז'"),
         .cryId = CRY_ARMAROUGE,
         .natDexNum = NATIONAL_DEX_ARMAROUGE,
-        .categoryName = _("Fire Warrior"),
+        .categoryName = _("לוחם לוהט"),
         .height = 15,
         .weight = 850,
         .description = COMPOUND_STRING(
-            "Armarouge evolved through the use\n"
-            "of a set of armor that belonged to\n"
-            "a distinguished warrior. This\n"
-            "Pokémon is incredibly loyal."),
+            "ארמרוז' התפתח בעזרת שריון שהיה שייך ללוחם\n"
+            "מהולל. הפוקימון הזה נאמן להפליא."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2369,17 +2329,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_NONE, ABILITY_WEAK_ARMOR },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("CERULEDGE"),
+        .speciesName = _("סרולדג'"),
         .cryId = CRY_CERULEDGE,
         .natDexNum = NATIONAL_DEX_CERULEDGE,
-        .categoryName = _("Fire Blades"),
+        .categoryName = _("להבי אש"),
         .height = 16,
         .weight = 620,
         .description = COMPOUND_STRING(
-            "The fiery blades on its arms burn\n"
-            "fiercely with the lingering\n"
-            "resentment of a sword wielder who fell\n"
-            "before accomplishing their goal."),
+            "הלהבים הלוהטים שעל זרועותיו בוערים בעוז,\n"
+            "מוזנים בטינה שנותרה מלוחם חרב שנפל לפני\n"
+            "שהשיג את מטרתו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2434,17 +2393,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1),
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_STATIC, ABILITY_DAMP },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("TADBULB"),
+        .speciesName = _("טדבאלב"),
         .cryId = CRY_TADBULB,
         .natDexNum = NATIONAL_DEX_TADBULB,
-        .categoryName = _("EleTadpole"),
+        .categoryName = _("ראשן חשמלי"),
         .height = 3,
         .weight = 4,
         .description = COMPOUND_STRING(
-            "Tadbulb shakes its tail to\n"
-            "generate electricity. If it senses danger,\n"
-            "it will make its head blink on and off\n"
-            "to alert its allies."),
+            "טדבאלב מנענע את זנבו כדי לייצר חשמל. אם\n"
+            "הוא מרגיש סכנה, הוא גורם לראשו להבהב כדי\n"
+            "להזהיר את בני בריתו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2500,17 +2458,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1),
         .abilities = { ABILITY_ELECTROMORPHOSIS, ABILITY_STATIC, ABILITY_DAMP },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("BELLIBOLT"),
+        .speciesName = _("בליבולט"),
         .cryId = CRY_BELLIBOLT,
         .natDexNum = NATIONAL_DEX_BELLIBOLT,
-        .categoryName = _("EleFrog"),
+        .categoryName = _("צפרדע חשמלית"),
         .height = 12,
         .weight = 1130,
         .description = COMPOUND_STRING(
-            "When this Pokémon expands and\n"
-            "contracts its wobbly body, the belly-\n"
-            "button dynamo in its stomach\n"
-            "produces a huge amount of electricity."),
+            "כשהפוקימון הזה מנפח ומכווץ\n"
+            "את גופו המתנודד, דינמו הטבור שבבטנו\n"
+            "מפיק כמות עצומה של חשמל."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2565,17 +2522,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FLYING),
         .abilities = { ABILITY_WIND_POWER, ABILITY_VOLT_ABSORB, ABILITY_COMPETITIVE },
         .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("WATTREL"),
+        .speciesName = _("וואטרל"),
         .cryId = CRY_WATTREL,
         .natDexNum = NATIONAL_DEX_WATTREL,
-        .categoryName = _("Storm Petrel"),
+        .categoryName = _("יסעורון"),
         .height = 4,
         .weight = 36,
         .description = COMPOUND_STRING(
-            "When its wings catch the wind, the\n"
-            "bones within produce electricity.\n"
-            "This Pokémon dives into the ocean,\n"
-            "catching prey by electrocuting them."),
+            "כשכנפיו תופסות רוח, העצמות שבתוכן מפיקות\n"
+            "חשמל. הפוקימון הזה צולל לאוקיינוס ולוכד\n"
+            "טרף בעזרת מכות חשמל."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2630,17 +2586,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FLYING),
         .abilities = { ABILITY_WIND_POWER, ABILITY_VOLT_ABSORB, ABILITY_COMPETITIVE },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("KILOWATTREL"),
+        .speciesName = _("קילוואטרל"),
         .cryId = CRY_KILOWATTREL,
         .natDexNum = NATIONAL_DEX_KILOWATTREL,
-        .categoryName = _("Frigatebird"),
+        .categoryName = _("פריגטה"),
         .height = 14,
         .weight = 386,
         .description = COMPOUND_STRING(
-            "It uses its throat sac to store\n"
-            "electricity generated by its wings.\n"
-            "There's hardly any oil in its feathers,\n"
-            "so it is a poor swimmer."),
+            "הוא אוגר בשק הגרון שלו את החשמל שכנפיו\n"
+            "מפיקות. אין כמעט שמן בנוצותיו, ולכן הוא\n"
+            "שחיין גרוע."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2695,17 +2650,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_RUN_AWAY, ABILITY_STAKEOUT },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("MASCHIFF"),
+        .speciesName = _("מסצ'יף"),
         .cryId = CRY_MASCHIFF,
         .natDexNum = NATIONAL_DEX_MASCHIFF,
-        .categoryName = _("Rascal"),
+        .categoryName = _("פרחח"),
         .height = 5,
         .weight = 160,
         .description = COMPOUND_STRING(
-            "Its well-developed jaw and fangs\n"
-            "are strong enough to crunch through\n"
-            "boulders, and its thick fat makes\n"
-            "for an excellent defense."),
+            "הלסת והניבים המפותחים שלו חזקים מספיק\n"
+            "כדי לכתוש סלעים, והשומן העבה שלו משמש\n"
+            "הגנה מצוינת."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2760,17 +2714,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_GUARD_DOG, ABILITY_STAKEOUT },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("MABOSSTIFF"),
+        .speciesName = _("מבוסטיף"),
         .cryId = CRY_MABOSSTIFF,
         .natDexNum = NATIONAL_DEX_MABOSSTIFF,
-        .categoryName = _("Boss"),
+        .categoryName = _("בוס"),
         .height = 11,
         .weight = 610,
         .description = COMPOUND_STRING(
-            "Mabosstiff loves playing with\n"
-            "children. Though usually gentle, it\n"
-            "takes on an intimidating look when\n"
-            "protecting its family."),
+            "מבוסטיף אוהב לשחק עם ילדים. בדרך כלל הוא\n"
+            "עדין, אבל כשהוא מגן על משפחתו, הוא לובש\n"
+            "מראה מאיים."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2825,17 +2778,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_UNBURDEN, ABILITY_PICKPOCKET, ABILITY_PRANKSTER },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("SHROODLE"),
+        .speciesName = _("שרודל"),
         .cryId = CRY_SHROODLE,
         .natDexNum = NATIONAL_DEX_SHROODLE,
-        .categoryName = _("Toxic Mouse"),
+        .categoryName = _("עכבר רעיל"),
         .height = 2,
         .weight = 7,
         .description = COMPOUND_STRING(
-            "To keep enemies away from its\n"
-            "territory, it paints markings around its\n"
-            "nest using a poisonous liquid that\n"
-            "has an acrid odor."),
+            "כדי להרחיק אויבים מהטריטוריה שלו, הוא\n"
+            "מצייר סימנים סביב הקן שלו בנוזל רעיל\n"
+            "בעל ריח חריף."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2890,17 +2842,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_UNBURDEN, ABILITY_POISON_TOUCH, ABILITY_PRANKSTER },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("GRAFAIAI"),
+        .speciesName = _("גרפאיאי"),
         .cryId = CRY_GRAFAIAI,
         .natDexNum = NATIONAL_DEX_GRAFAIAI,
-        .categoryName = _("Toxic Monkey"),
+        .categoryName = _("קוף רעיל"),
         .height = 7,
         .weight = 272,
         .description = COMPOUND_STRING(
-            "Each Grafaiai paints its own\n"
-            "individual pattern, and it will paint that\n"
-            "same pattern over and over again\n"
-            "throughout its life."),
+            "כל גרפאיאי מצייר דוגמה אישית משלו, ולאורך\n"
+            "כל חייו הוא מצייר את אותה הדוגמה שוב ושוב."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2955,17 +2905,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS),
         .abilities = { ABILITY_WIND_RIDER, ABILITY_NONE, ABILITY_INFILTRATOR },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("BRAMBLIN"),
+        .speciesName = _("ברמבלין"),
         .cryId = CRY_BRAMBLIN,
         .natDexNum = NATIONAL_DEX_BRAMBLIN,
-        .categoryName = _("Tumbleweed"),
+        .categoryName = _("שיח מתגלגל"),
         .height = 6,
         .weight = 6,
         .description = COMPOUND_STRING(
-            "A soul unable to move on to the\n"
-            "afterlife was blown around by the wind\n"
-            "until it got tangled up with dried\n"
-            "grass and became a Pokémon."),
+            "נשמה שלא הצליחה לעבור לעולם הבא נישאה\n"
+            "ברוח, עד שהסתבכה בעשב יבש והפכה\n"
+            "לפוקימון."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3020,17 +2969,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS),
         .abilities = { ABILITY_WIND_RIDER, ABILITY_NONE, ABILITY_INFILTRATOR },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("BRAMBLEGHAST"),
+        .speciesName = _("ברמבלגאסט"),
         .cryId = CRY_BRAMBLEGHAST,
         .natDexNum = NATIONAL_DEX_BRAMBLEGHAST,
-        .categoryName = _("Tumbleweed"),
+        .categoryName = _("שיח מתגלגל"),
         .height = 12,
         .weight = 60,
         .description = COMPOUND_STRING(
-            "It will open the branches of its\n"
-            "head to envelop its prey. Once it\n"
-            "absorbs all the life energy it needs, it\n"
-            "expels the prey and discards it."),
+            "הוא פותח את הענפים שבראשו כדי לעטוף את\n"
+            "טרפו. אחרי שהוא סופג את כל אנרגיית החיים\n"
+            "שהוא צריך, הוא פולט את הטרף ומשליך אותו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3087,17 +3035,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS),
         .abilities = { ABILITY_MYCELIUM_MIGHT, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("TOEDSCOOL"),
+        .speciesName = _("טואדסקול"),
         .cryId = CRY_TOEDSCOOL,
         .natDexNum = NATIONAL_DEX_TOEDSCOOL,
-        .categoryName = _("Woodear"),
+        .categoryName = _("פטריית עץ"),
         .height = 9,
         .weight = 330,
         .description = COMPOUND_STRING(
-            "Though it looks like Tentacool,\n"
-            "Toedscool is a completely different\n"
-            "species. Its legs may be thin, but it\n"
-            "can run at a speed of 30 mph."),
+            "אף שהוא נראה כמו טנטקול, טואדסקול הוא מין\n"
+            "שונה לגמרי. רגליו אמנם דקות, אבל הוא יכול\n"
+            "לרוץ במהירות של 30 מייל לשעה."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3154,17 +3101,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS),
         .abilities = { ABILITY_MYCELIUM_MIGHT, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("TOEDSCRUEL"),
+        .speciesName = _("טואדסקרול"),
         .cryId = CRY_TOEDSCRUEL,
         .natDexNum = NATIONAL_DEX_TOEDSCRUEL,
-        .categoryName = _("Woodear"),
+        .categoryName = _("פטריית עץ"),
         .height = 19,
         .weight = 580,
         .description = COMPOUND_STRING(
-            "These Pokémon gather into groups\n"
-            "and form colonies deep within\n"
-            "forests. They absolutely hate it when\n"
-            "strangers approach."),
+            "הפוקימונים האלה מתקבצים בקבוצות ויוצרים\n"
+            "מושבות בעומק היערות.\n"
+            "הם שונאים מאוד שזרים מתקרבים אליהם."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3219,17 +3165,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_3),
         .abilities = { ABILITY_ANGER_SHELL, ABILITY_SHELL_ARMOR, ABILITY_REGENERATOR },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("KLAWF"),
+        .speciesName = _("קלוף"),
         .cryId = CRY_KLAWF,
         .natDexNum = NATIONAL_DEX_KLAWF,
-        .categoryName = _("Ambush"),
+        .categoryName = _("מארב"),
         .height = 13,
         .weight = 790,
         .description = COMPOUND_STRING(
-            "Klawf hangs upside-down from\n"
-            "cliffs, waiting for prey. But Klawf can't\n"
-            "remain in this position for long\n"
-            "because its blood rushes to its head."),
+            "קלוף נתלה הפוך מצוקים ומחכה לטרף. אבל\n"
+            "קלוף לא יכול להישאר בתנוחה הזאת זמן רב, כי\n"
+            "הדם עולה לו לראש."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3285,17 +3230,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS),
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_INSOMNIA, ABILITY_KLUTZ },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("CAPSAKID"),
+        .speciesName = _("קפסקיד"),
         .cryId = CRY_CAPSAKID,
         .natDexNum = NATIONAL_DEX_CAPSAKID,
-        .categoryName = _("Spicy Pepper"),
+        .categoryName = _("פלפל חריף"),
         .height = 3,
         .weight = 30,
         .description = COMPOUND_STRING(
-            "The more sunlight this Pokémon\n"
-            "bathes in, the more spicy chemicals are\n"
-            "produced by its body, and thus the\n"
-            "spicier its moves become."),
+            "ככל שהפוקימון הזה סופג יותר אור שמש, גופו\n"
+            "מייצר יותר חומרים חריפים, וכך המהלכים שלו\n"
+            "נעשים חריפים יותר."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3350,17 +3294,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS),
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_INSOMNIA, ABILITY_MOODY },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("SCOVILLAIN"),
+        .speciesName = _("סקוביליין"),
         .cryId = CRY_SCOVILLAIN,
         .natDexNum = NATIONAL_DEX_SCOVILLAIN,
-        .categoryName = _("Spicy Pepper"),
+        .categoryName = _("פלפל חריף"),
         .height = 9,
         .weight = 150,
         .description = COMPOUND_STRING(
-            "The green head has turned vicious\n"
-            "due to the spicy chemicals\n"
-            "stimulating its brain. Once it goes on a\n"
-            "rampage, there is no stopping it."),
+            "הראש הירוק נעשה אכזרי בגלל\n"
+            "החומרים החריפים שמגרים את מוחו.\n"
+            "כשהוא מתחיל להשתולל, אין דרך לעצור אותו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3416,20 +3359,20 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS),
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_INSOMNIA, ABILITY_MOODY },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("SCOVILLAIN"),
+        .speciesName = _("סקוביליין"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_SCOVILLAIN_MEGA,
     #else
         .cryId = CRY_SCOVILLAIN,
     #endif // P_MODIFIED_MEGA_CRIES
         .natDexNum = NATIONAL_DEX_SCOVILLAIN,
-        .categoryName = _("Spicy Pepper"),
+        .categoryName = _("פלפל חריף"),
         .height = 12,
         .weight = 220,
         .description = COMPOUND_STRING(
-            "Mega Evolution has dialed up this\n"
-            "Pokémon's spiciness. It swings its\n"
-            "“necktie” around to wallop its foes."),
+            "התפתחות המגה הגבירה את החריפות של\n"
+            "הפוקימון הזה. הוא מסובב את ה”עניבה”\n"
+            "שלו כדי להלום ביריביו."),
         .frontPic = gMonFrontPic_ScovillainMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -3476,17 +3419,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_COMPOUND_EYES, ABILITY_NONE, ABILITY_SHED_SKIN },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("RELLOR"),
+        .speciesName = _("רלור"),
         .cryId = CRY_RELLOR,
         .natDexNum = NATIONAL_DEX_RELLOR,
-        .categoryName = _("Rolling"),
+        .categoryName = _("מגלגל"),
         .height = 2,
         .weight = 10,
         .description = COMPOUND_STRING(
-            "This Pokémon creates a mud ball by\n"
-            "mixing sand and dirt with psychic\n"
-            "energy. It treasures its mud ball more\n"
-            "than its own life."),
+            "הפוקימון הזה יוצר כדור בוץ כשהוא מערבב\n"
+            "חול ועפר עם אנרגיה על-חושית. כדור הבוץ\n"
+            "יקר לו יותר מחייו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3541,17 +3483,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_NONE, ABILITY_TELEPATHY },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("RABSCA"),
+        .speciesName = _("רבסקה"),
         .cryId = CRY_RABSCA,
         .natDexNum = NATIONAL_DEX_RABSCA,
-        .categoryName = _("Rolling"),
+        .categoryName = _("מגלגל"),
         .height = 3,
         .weight = 35,
         .description = COMPOUND_STRING(
-            "The body that supports the ball\n"
-            "barely moves. Therefore, it is thought\n"
-            "that the true body of this Pokémon\n"
-            "is actually inside the ball."),
+            "הגוף שתומך בכדור כמעט אינו זז. לכן סבורים\n"
+            "שגופו האמיתי של הפוקימון הזה נמצא בעצם\n"
+            "בתוך הכדור."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3606,17 +3547,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_ANTICIPATION, ABILITY_FRISK, ABILITY_SPEED_BOOST },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("FLITTLE"),
+        .speciesName = _("פליטל"),
         .cryId = CRY_FLITTLE,
         .natDexNum = NATIONAL_DEX_FLITTLE,
-        .categoryName = _("Frill"),
+        .categoryName = _("מלמלה"),
         .height = 2,
         .weight = 15,
         .description = COMPOUND_STRING(
-            "Flittle's toes levitate about half\n"
-            "an inch above the ground because of\n"
-            "the psychic power emitted from the\n"
-            "frills on the Pokémon's belly."),
+            "בהונותיו של פליטל מרחפות כחצי אינץ' מעל\n"
+            "הקרקע, בזכות הכוח העל-חושי שנפלט מהציציות\n"
+            "שעל בטנו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3671,17 +3611,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_OPPORTUNIST, ABILITY_FRISK, ABILITY_SPEED_BOOST },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("ESPATHRA"),
+        .speciesName = _("אספאתרה"),
         .cryId = CRY_ESPATHRA,
         .natDexNum = NATIONAL_DEX_ESPATHRA,
-        .categoryName = _("Ostrich"),
+        .categoryName = _("יען"),
         .height = 19,
         .weight = 900,
         .description = COMPOUND_STRING(
-            "It immobilizes opponents by\n"
-            "bathing them in psychic power from its\n"
-            "large eyes. Despite its appearance, it\n"
-            "has a vicious temperament."),
+            "הוא משתק יריבים כשהוא מציף אותם\n"
+            "בכוח על-חושי מעיניו הגדולות.\n"
+            "למרות המראה שלו, יש לו מזג אכזרי."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3736,17 +3675,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY),
         .abilities = { ABILITY_MOLD_BREAKER, ABILITY_OWN_TEMPO, ABILITY_PICKPOCKET },
         .bodyColor = BODY_COLOR_PINK,
-        .speciesName = _("TINKATINK"),
+        .speciesName = _("טינקטינק"),
         .cryId = CRY_TINKATINK,
         .natDexNum = NATIONAL_DEX_TINKATINK,
-        .categoryName = _("Metalsmith"),
+        .categoryName = _("נפח"),
         .height = 4,
         .weight = 89,
         .description = COMPOUND_STRING(
-            "This Pokémon pounds iron scraps\n"
-            "together to make a hammer. It will\n"
-            "remake the hammer again and again until\n"
-            "it's satisfied with the result."),
+            "הפוקימון הזה מרקע גרוטאות ברזל ויוצר מהן\n"
+            "פטיש. הוא מכין את הפטיש מחדש שוב ושוב, עד\n"
+            "שהוא מרוצה מהתוצאה."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3801,17 +3739,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY),
         .abilities = { ABILITY_MOLD_BREAKER, ABILITY_OWN_TEMPO, ABILITY_PICKPOCKET },
         .bodyColor = BODY_COLOR_PINK,
-        .speciesName = _("TINKATUFF"),
+        .speciesName = _("טינקטאף"),
         .cryId = CRY_TINKATUFF,
         .natDexNum = NATIONAL_DEX_TINKATUFF,
-        .categoryName = _("Hammer"),
+        .categoryName = _("פטיש"),
         .height = 7,
         .weight = 591,
         .description = COMPOUND_STRING(
-            "These Pokémon make their homes in\n"
-            "piles of scrap metal. They test the\n"
-            "strength of each other's hammers by\n"
-            "smashing them together."),
+            "הפוקימונים האלה מקימים את בתיהם\n"
+            "בערימות של גרוטאות מתכת. הם מטיחים\n"
+            "את פטישיהם זה בזה כדי לבחון את חוזקם."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3865,17 +3802,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY),
         .abilities = { ABILITY_MOLD_BREAKER, ABILITY_OWN_TEMPO, ABILITY_PICKPOCKET },
         .bodyColor = BODY_COLOR_PINK,
-        .speciesName = _("TINKATON"),
+        .speciesName = _("טינקטון"),
         .cryId = CRY_TINKATON,
         .natDexNum = NATIONAL_DEX_TINKATON,
-        .categoryName = _("Hammer"),
+        .categoryName = _("פטיש"),
         .height = 7,
         .weight = 1128,
         .description = COMPOUND_STRING(
-            "The hammer tops 220 pounds, yet it\n"
-            "gets swung around easily by\n"
-            "Tinkaton as it steals whatever it pleases\n"
-            "and carries its plunder back home."),
+            "הפטיש שוקל יותר מ-220 ליברות, ובכל זאת\n"
+            "טינקטון מניף אותו בקלות כשהוא גונב כל מה\n"
+            "שמתחשק לו ונושא את השלל הביתה."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3930,16 +3866,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_3),
         .abilities = { ABILITY_GOOEY, ABILITY_RATTLED, ABILITY_SAND_VEIL },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("WIGLETT"),
+        .speciesName = _("ויגלט"),
         .cryId = CRY_WIGLETT,
         .natDexNum = NATIONAL_DEX_WIGLETT,
-        .categoryName = _("Garden Eel"),
+        .categoryName = _("צלופח גן"),
         .height = 12,
         .weight = 18,
         .description = COMPOUND_STRING(
-            "This Pokémon can pick up the scent\n"
-            "of a Veluza just over 65 feet away\n"
-            "and will hide itself in the sand."),
+            "הפוקימון הזה מסוגל לקלוט את הריח של ולוזה\n"
+            "ממרחק של קצת יותר מ-65 רגל, ואז הוא מסתתר\n"
+            "בחול."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3994,16 +3930,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_3),
         .abilities = { ABILITY_GOOEY, ABILITY_RATTLED, ABILITY_SAND_VEIL },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("WUGTRIO"),
+        .speciesName = _("וואגטריו"),
         .cryId = CRY_WUGTRIO,
         .natDexNum = NATIONAL_DEX_WUGTRIO,
-        .categoryName = _("Garden Eel"),
+        .categoryName = _("צלופח גן"),
         .height = 12,
         .weight = 54,
         .description = COMPOUND_STRING(
-            "A variety of fish Pokémon, Wugtrio\n"
-            "was once considered to be a\n"
-            "regional form of Dugtrio."),
+            "וואגטריו הוא סוג של פוקימון דג, ופעם חשבו\n"
+            "שהוא צורה אזורית של דאגטריו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4058,17 +3993,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_BIG_PECKS, ABILITY_KEEN_EYE, ABILITY_ROCKY_PAYLOAD },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("BOMBIRDIER"),
+        .speciesName = _("בומברדיר"),
         .cryId = CRY_BOMBIRDIER,
         .natDexNum = NATIONAL_DEX_BOMBIRDIER,
-        .categoryName = _("Item Drop"),
+        .categoryName = _("מטיל חפצים"),
         .height = 15,
         .weight = 429,
         .description = COMPOUND_STRING(
-            "Bombirdier uses the apron on its\n"
-            "chest to bundle up food, which it\n"
-            "carries back to its nest. It enjoys\n"
-            "dropping things that make loud noises."),
+            "בומברדיר צורר מזון בסינר שעל חזהו ונושא\n"
+            "אותו בחזרה לקן שלו. הוא נהנה להפיל חפצים\n"
+            "שמשמיעים רעש חזק."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4124,16 +4058,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_WATER_2),
         .abilities = { ABILITY_WATER_VEIL, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("FINIZEN"),
+        .speciesName = _("פיניזן"),
         .cryId = CRY_FINIZEN,
         .natDexNum = NATIONAL_DEX_FINIZEN,
-        .categoryName = _("Dolphin"),
+        .categoryName = _("דולפין"),
         .height = 13,
         .weight = 602,
         .description = COMPOUND_STRING(
-            "Its water ring is made from\n"
-            "seawater mixed with a sticky fluid that\n"
-            "Finizen secretes from its blowhole."),
+            "טבעת המים שלו עשויה ממי ים מעורבבים בנוזל\n"
+            "דביק שפיניזן מפריש מנחיר הנשיפה שלו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4188,17 +4121,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_WATER_2),
         .abilities = { ABILITY_ZERO_TO_HERO, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("PALAFIN"),
+        .speciesName = _("פאלפין"),
         .cryId = CRY_FINIZEN,
         .natDexNum = NATIONAL_DEX_PALAFIN,
-        .categoryName = _("Dolphin"),
+        .categoryName = _("דולפין"),
         .height = 13,
         .weight = 602,
         .description = COMPOUND_STRING(
-            "This Pokémon changes its appearance\n"
-            "if it hears its allies calling for\n"
-            "help. Palafin will never show\n"
-            "anybody its moment of transformation."),
+            "הפוקימון הזה משנה את מראהו כשהוא שומע את\n"
+            "חבריו קוראים לעזרה. פאלפין אף פעם לא\n"
+            "מראה לאיש את רגע השינוי שלו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4253,17 +4185,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_WATER_2),
         .abilities = { ABILITY_ZERO_TO_HERO, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("PALAFIN"),
+        .speciesName = _("פאלפין"),
         .cryId = CRY_PALAFIN_HERO,
         .natDexNum = NATIONAL_DEX_PALAFIN,
-        .categoryName = _("Hero"),
+        .categoryName = _("גיבור"),
         .height = 18,
         .weight = 974,
         .description = COMPOUND_STRING(
-            "This Pokémon's ancient genes have\n"
-            "awakened. It is now so extraordinarily\n"
-            "strong that it can easily lift a\n"
-            "cruise ship with one fin."),
+            "הגנים הקדומים של הפוקימון הזה התעוררו.\n"
+            "עכשיו הוא חזק בצורה יוצאת דופן, עד שהוא\n"
+            "יכול להרים בקלות ספינת תענוגות בסנפיר אחד."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4321,17 +4252,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_OVERCOAT, ABILITY_NONE, ABILITY_SLOW_START },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("VAROOM"),
+        .speciesName = _("ורום"),
         .cryId = CRY_VAROOM,
         .natDexNum = NATIONAL_DEX_VAROOM,
-        .categoryName = _("Single-Cyl"),
+        .categoryName = _("חד-צילינדרי"),
         .height = 10,
         .weight = 350,
         .description = COMPOUND_STRING(
-            "The steel section is Varoom's\n"
-            "actual body. This Pokémon clings to\n"
-            "rocks and converts the minerals within\n"
-            "into energy to fuel its activities."),
+            "החלק העשוי פלדה הוא גופו האמיתי של ורום.\n"
+            "הוא נצמד לסלעים והופך את המינרלים שבהם\n"
+            "לאנרגיה שמניעה את פעילותו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4386,17 +4316,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_OVERCOAT, ABILITY_NONE, ABILITY_FILTER },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("REVAVROOM"),
+        .speciesName = _("רבוורום"),
         .cryId = CRY_REVAVROOM,
         .natDexNum = NATIONAL_DEX_REVAVROOM,
-        .categoryName = _("Multi-Cyl"),
+        .categoryName = _("רב-צילינדרי"),
         .height = 18,
         .weight = 1200,
         .description = COMPOUND_STRING(
-            "It creates a gas out of poison and\n"
-            "minerals from rocks. It then\n"
-            "detonates the gas in its cylinders- now\n"
-            "numbering eight-to generate energy."),
+            "הוא יוצר גז מרעל וממינרלים שבסלעים. אחר כך\n"
+            "הוא מפוצץ את הגז בצילינדרים שלו, שמספרם\n"
+            "עכשיו שמונה, כדי להפיק אנרגיה."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4451,17 +4380,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_SHED_SKIN, ABILITY_NONE, ABILITY_REGENERATOR },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("CYCLIZAR"),
+        .speciesName = _("סייקליזר"),
         .cryId = CRY_CYCLIZAR,
         .natDexNum = NATIONAL_DEX_CYCLIZAR,
-        .categoryName = _("Mount"),
+        .categoryName = _("חיית רכיבה"),
         .height = 16,
         .weight = 630,
         .description = COMPOUND_STRING(
-            "It can sprint at over 70 mph while\n"
-            "carrying a human. The rider's body\n"
-            "heat warms Cyclizar's back and lifts\n"
-            "the Pokémon's spirit."),
+            "הוא יכול לדהור ביותר מ-70 מייל לשעה כשאדם\n"
+            "רוכב עליו. חום הגוף של הרוכב מחמם את גבו\n"
+            "של סייקליזר ומרומם את רוחו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4517,17 +4445,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_EARTH_EATER, ABILITY_NONE, ABILITY_SAND_VEIL },
         .bodyColor = BODY_COLOR_PINK,
-        .speciesName = _("ORTHWORM"),
+        .speciesName = _("אורתוורם"),
         .cryId = CRY_ORTHWORM,
         .natDexNum = NATIONAL_DEX_ORTHWORM,
-        .categoryName = _("Earthworm"),
+        .categoryName = _("תולעת אדמה"),
         .height = 25,
         .weight = 3100,
         .description = COMPOUND_STRING(
-            "When attacked, this Pokémon will\n"
-            "wield the tendrils on its body like\n"
-            "fists and pelt the opponent with a\n"
-            "storm of punches."),
+            "כשתוקפים אותו, הפוקימון הזה משתמש\n"
+            "בשלוחות שעל גופו כמו באגרופים ומנחית על\n"
+            "היריב סערת מהלומות."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4583,17 +4510,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_TOXIC_DEBRIS, ABILITY_NONE, ABILITY_CORROSION },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("GLIMMET"),
+        .speciesName = _("גלימט"),
         .cryId = CRY_GLIMMET,
         .natDexNum = NATIONAL_DEX_GLIMMET,
-        .categoryName = _("Ore"),
+        .categoryName = _("עפרה"),
         .height = 7,
         .weight = 80,
         .description = COMPOUND_STRING(
-            "Glimmet's toxic mineral crystals\n"
-            "look just like flower petals. This\n"
-            "Pokémon scatters poisonous powder like\n"
-            "pollen to protect itself."),
+            "גבישי המינרלים הרעילים של גלימט נראים\n"
+            "בדיוק כמו עלי כותרת. כדי להגן על עצמו, הוא\n"
+            "מפזר אבקה רעילה כמו אבקת פרחים."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4649,17 +4575,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_TOXIC_DEBRIS, ABILITY_NONE, ABILITY_CORROSION },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("GLIMMORA"),
+        .speciesName = _("גלימורה"),
         .cryId = CRY_GLIMMORA,
         .natDexNum = NATIONAL_DEX_GLIMMORA,
-        .categoryName = _("Ore"),
+        .categoryName = _("עפרה"),
         .height = 15,
         .weight = 450,
         .description = COMPOUND_STRING(
-            "Glimmora's petals are made of\n"
-            "crystallized poison energy. It has\n"
-            "recently become evident that these\n"
-            "petals resemble Tera Jewels."),
+            "עלי הכותרת של גלימורה עשויים אנרגיית רעל\n"
+            "מגובשת. לאחרונה התברר שעלי הכותרת האלה\n"
+            "דומים לתכשיטי טרה."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4716,21 +4641,20 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_TOXIC_DEBRIS, ABILITY_NONE, ABILITY_CORROSION },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("GLIMMORA"),
+        .speciesName = _("גלימורה"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_GLIMMORA_MEGA,
     #else
         .cryId = CRY_GLIMMORA,
     #endif // P_MODIFIED_MEGA_CRIES
         .natDexNum = NATIONAL_DEX_GLIMMORA,
-        .categoryName = _("Ore"),
+        .categoryName = _("עפרה"),
         .height = 15,
         .weight = 450,
         .description = COMPOUND_STRING(
-            "Glimmora's petals-now larger and\n"
-            "separated from its main body-rotate\n"
-            "around it to provide defense while\n"
-            "cattering poisonous fragments."),
+            "עלי הכותרת של גלימורה, שגדלו ונפרדו\n"
+            "מגופו, מסתובבים סביבו כדי להגן עליו\n"
+            "ובו בזמן מפזרים רסיסים רעילים."),
         .frontPic = gMonFrontPic_GlimmoraMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -4778,17 +4702,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_PICKUP, ABILITY_NONE, ABILITY_FLUFFY },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("GREAVARD"),
+        .speciesName = _("גריבארד"),
         .cryId = CRY_GREAVARD,
         .natDexNum = NATIONAL_DEX_GREAVARD,
-        .categoryName = _("Ghost Dog"),
+        .categoryName = _("כלב רפאים"),
         .height = 6,
         .weight = 350,
         .description = COMPOUND_STRING(
-            "This friendly Pokémon doesn't like\n"
-            "being alone. Pay it even the\n"
-            "slightest bit of attention, and it will\n"
-            "follow you forever."),
+            "הפוקימון הידידותי הזה לא אוהב להיות לבד.\n"
+            "מספיק להקדיש לו אפילו מעט תשומת לב, והוא\n"
+            "ילך אחריך לנצח."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4843,17 +4766,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_SAND_RUSH, ABILITY_NONE, ABILITY_FLUFFY },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("HOUNDSTONE"),
+        .speciesName = _("האונדסטון"),
         .cryId = CRY_HOUNDSTONE,
         .natDexNum = NATIONAL_DEX_HOUNDSTONE,
-        .categoryName = _("Ghost Dog"),
+        .categoryName = _("כלב רפאים"),
         .height = 20,
         .weight = 150,
         .description = COMPOUND_STRING(
-            "Houndstone spends most of its\n"
-            "time sleeping in graveyards. Among all\n"
-            "the dog Pokémon, this one is most\n"
-            "loyal to its master."),
+            "האונדסטון מבלה את רוב זמנו בשינה\n"
+            "בבתי קברות. מכל פוקימוני הכלבים,\n"
+            "הוא הנאמן ביותר לאדונו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4908,17 +4830,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_SCRAPPY, ABILITY_TANGLED_FEET, ABILITY_COSTAR },
         .bodyColor = BODY_COLOR_PINK,
-        .speciesName = _("FLAMIGO"),
+        .speciesName = _("פלמיגו"),
         .cryId = CRY_FLAMIGO,
         .natDexNum = NATIONAL_DEX_FLAMIGO,
-        .categoryName = _("Synchronize"),
+        .categoryName = _("סנכרון"),
         .height = 16,
         .weight = 370,
         .description = COMPOUND_STRING(
-            "Thanks to a behavior of theirs\n"
-            "known as “synchronizing,” an entire\n"
-            "flock of these Pokémon can attack\n"
-            "simultaneously in perfect harmony."),
+            "בזכות התנהגות שלהם שנקראת ”סנכרון”,\n"
+            "להקה שלמה של הפוקימונים האלה יכולה\n"
+            "לתקוף בבת אחת בהרמוניה מושלמת."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4974,17 +4895,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_THICK_FAT, ABILITY_SNOW_CLOAK, ABILITY_SHEER_FORCE },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("CETODDLE"),
+        .speciesName = _("סטודל"),
         .cryId = CRY_CETODDLE,
         .natDexNum = NATIONAL_DEX_CETODDLE,
-        .categoryName = _("Terra Whale"),
+        .categoryName = _("לוויתן יבשה"),
         .height = 12,
         .weight = 450,
         .description = COMPOUND_STRING(
-            "This species left the ocean and\n"
-            "began living on land a very long time\n"
-            "ago. It seems to be closely related\n"
-            "to Wailmer."),
+            "המין הזה עזב את האוקיינוס והחל לחיות\n"
+            "ביבשה לפני זמן רב מאוד. נראה שהוא\n"
+            "קרוב משפחה של ויילמר."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5039,17 +4959,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_THICK_FAT, ABILITY_SLUSH_RUSH, ABILITY_SHEER_FORCE },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("CETITAN"),
+        .speciesName = _("סטיטן"),
         .cryId = CRY_CETITAN,
         .natDexNum = NATIONAL_DEX_CETITAN,
-        .categoryName = _("Terra Whale"),
+        .categoryName = _("לוויתן יבשה"),
         .height = 45,
         .weight = 7000,
         .description = COMPOUND_STRING(
-            "Ice energy builds up in the horn on\n"
-            "its upper jaw, causing the horn to\n"
-            "reach cryogenic temperatures that\n"
-            "freeze its surroundings."),
+            "אנרגיית קרח מצטברת בקרן שעל הלסת העליונה\n"
+            "שלו, והקרן מגיעה לטמפרטורות קריוגניות\n"
+            "שמקפיאות את סביבתו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5104,17 +5023,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
         .abilities = { ABILITY_MOLD_BREAKER, ABILITY_NONE, ABILITY_SHARPNESS },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("VELUZA"),
+        .speciesName = _("ולוזה"),
         .cryId = CRY_VELUZA,
         .natDexNum = NATIONAL_DEX_VELUZA,
-        .categoryName = _("Jettison"),
+        .categoryName = _("השלכה"),
         .height = 25,
         .weight = 900,
         .description = COMPOUND_STRING(
-            "Veluza has excellent regenerative\n"
-            "capabilities. It sheds spare flesh\n"
-            "from its body to boost its agility,\n"
-            "then charges at its prey."),
+            "לוולוזה יש יכולת התחדשות מצוינת. הוא משיל\n"
+            "בשר עודף מגופו כדי להגביר את זריזותו, ואז\n"
+            "מסתער על טרפו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5171,17 +5089,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
         .abilities = { ABILITY_UNAWARE, ABILITY_OBLIVIOUS, ABILITY_WATER_VEIL },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("DONDOZO"),
+        .speciesName = _("דונדוזו"),
         .cryId = CRY_DONDOZO,
         .natDexNum = NATIONAL_DEX_DONDOZO,
-        .categoryName = _("Big Catfish"),
+        .categoryName = _("שפמנון גדול"),
         .height = 120,
         .weight = 2200,
         .description = COMPOUND_STRING(
-            "It treats Tatsugiri like its boss\n"
-            "and follows it loyally. Though\n"
-            "powerful, Dondozo is apparently not very\n"
-            "smart."),
+            "הוא מתייחס לטאצוגירי כאל הבוס שלו והולך\n"
+            "אחריו בנאמנות. דונדוזו אמנם חזק, אבל כנראה\n"
+            "לא חכם במיוחד."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5238,17 +5155,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
         .abilities = { ABILITY_COMMANDER, ABILITY_NONE, ABILITY_STORM_DRAIN },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("TATSUGIRI"),
+        .speciesName = _("טאצוגירי"),
         .cryId = CRY_TATSUGIRI_CURLY,
         .natDexNum = NATIONAL_DEX_TATSUGIRI,
-        .categoryName = _("Mimicry"),
+        .categoryName = _("חקיינות"),
         .height = 3,
         .weight = 80,
         .description = COMPOUND_STRING(
-            "This is a small dragon Pokémon. It\n"
-            "lives inside the mouth of Dondozo to\n"
-            "protect itself from enemies on the\n"
-            "outside."),
+            "זהו פוקימון דרקון קטן. הוא חי בתוך הפה של\n"
+            "דונדוזו כדי להגן על עצמו מאויבים שבחוץ."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5305,16 +5220,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
         .abilities = { ABILITY_COMMANDER, ABILITY_NONE, ABILITY_STORM_DRAIN },
         .bodyColor = BODY_COLOR_PINK,
-        .speciesName = _("TATSUGIRI"),
+        .speciesName = _("טאצוגירי"),
         .cryId = CRY_TATSUGIRI_DROOPY,
         .natDexNum = NATIONAL_DEX_TATSUGIRI,
-        .categoryName = _("Mimicry"),
+        .categoryName = _("חקיינות"),
         .height = 3,
         .weight = 80,
         .description = COMPOUND_STRING(
-            "This Pokémon tricks its opponents\n"
-            "by playing dead. It is small and\n"
-            "weak, but it uses its smarts to survive."),
+            "הפוקימון הזה מערים על יריביו כשהוא מעמיד\n"
+            "פני מת. הוא קטן וחלש, אבל משתמש בתבונתו\n"
+            "כדי לשרוד."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5371,16 +5286,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
         .abilities = { ABILITY_COMMANDER, ABILITY_NONE, ABILITY_STORM_DRAIN },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("TATSUGIRI"),
+        .speciesName = _("טאצוגירי"),
         .cryId = CRY_TATSUGIRI_STRETCHY,
         .natDexNum = NATIONAL_DEX_TATSUGIRI,
-        .categoryName = _("Mimicry"),
+        .categoryName = _("חקיינות"),
         .height = 3,
         .weight = 80,
         .description = COMPOUND_STRING(
-            "It's one of the most intelligent\n"
-            "dragon Pokémon. It camouflages itself\n"
-            "by inflating its throat sac."),
+            "הוא אחד מפוקימוני הדרקון הנבונים ביותר. הוא\n"
+            "מסווה את עצמו כשהוא מנפח את שק הגרון שלו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5438,21 +5352,20 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
         .abilities = { ABILITY_STORM_DRAIN, ABILITY_NONE, ABILITY_STORM_DRAIN },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("TATSUGIRI"),
+        .speciesName = _("טאצוגירי"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_TATSUGIRI_MEGA,
     #else
         .cryId = CRY_TATSUGIRI_CURLY,
     #endif // P_MODIFIED_MEGA_CRIES
         .natDexNum = NATIONAL_DEX_TATSUGIRI,
-        .categoryName = _("Mimicry"),
+        .categoryName = _("חקיינות"),
         .height = 6,
         .weight = 240,
         .description = COMPOUND_STRING(
-            "Tatsugiri's brain has been invigorated\n"
-            "by Mega Evolution, making it even\n"
-            "wilier. It can create and command\n"
-            "copies of itself."),
+            "התפתחות המגה חידדה את המוח של טאצוגירי\n"
+            "והפכה אותו לערמומי עוד יותר. הוא מסוגל\n"
+            "ליצור עותקים של עצמו ולפקד עליהם."),
         .frontPic = gMonFrontPic_TatsugiriCurlyMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 11,
@@ -5496,21 +5409,20 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
         .abilities = { ABILITY_STORM_DRAIN, ABILITY_NONE, ABILITY_STORM_DRAIN },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("TATSUGIRI"),
+        .speciesName = _("טאצוגירי"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_TATSUGIRI_MEGA,
     #else
         .cryId = CRY_TATSUGIRI_DROOPY,
     #endif // P_MODIFIED_MEGA_CRIES
         .natDexNum = NATIONAL_DEX_TATSUGIRI,
-        .categoryName = _("Mimicry"),
+        .categoryName = _("חקיינות"),
         .height = 6,
         .weight = 240,
         .description = COMPOUND_STRING(
-            "It solidifies the energy of Mega Evolution,\n"
-            "building up an overflowing pile to launch\n"
-            "as projectiles. These projectiles explode\n"
-            "on contact."),
+            "הוא מגבש את אנרגיית התפתחות המגה וצובר\n"
+            "ממנה ערימה גדושה כדי לשגר אותה כקליעים.\n"
+            "הקליעים האלה מתפוצצים במגע."),
         .frontPic = gMonFrontPic_TatsugiriDroopyMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 11,
@@ -5554,21 +5466,20 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
         .abilities = { ABILITY_STORM_DRAIN, ABILITY_NONE, ABILITY_STORM_DRAIN },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("TATSUGIRI"),
+        .speciesName = _("טאצוגירי"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_TATSUGIRI_MEGA,
     #else
         .cryId = CRY_TATSUGIRI_STRETCHY,
     #endif // P_MODIFIED_MEGA_CRIES
         .natDexNum = NATIONAL_DEX_TATSUGIRI,
-        .categoryName = _("Mimicry"),
+        .categoryName = _("חקיינות"),
         .height = 6,
         .weight = 240,
         .description = COMPOUND_STRING(
-            "Using the energy of Mega Evolution, it\n"
-            "creates a dish to ride upon, allowing it\n"
-            "to move with total freedom-even through\n"
-            "the air."),
+            "בעזרת אנרגיית התפתחות המגה הוא יוצר\n"
+            "צלחת שהוא רוכב עליה, וכך הוא נע בחופש\n"
+            "מוחלט, אפילו באוויר."),
         .frontPic = gMonFrontPic_TatsugiriStretchyMega,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 11,
@@ -5616,17 +5527,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("GREAT TUSK"),
+        .speciesName = _("גרייט טסק"),
         .cryId = CRY_GREAT_TUSK,
         .natDexNum = NATIONAL_DEX_GREAT_TUSK,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 22,
         .weight = 3200,
         .description = COMPOUND_STRING(
-            "Sightings of this Pokémon have\n"
-            "occurred in recent years. The name\n"
-            "Great Tusk was taken from a creature\n"
-            "listed in a certain book."),
+            "בשנים האחרונות דווח על תצפיות בפוקימון\n"
+            "הזה. השם גרייט טסק נלקח מיצור שמופיע בספר\n"
+            "מסוים."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5683,17 +5593,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_PINK,
-        .speciesName = _("SCREAM TAIL"),
+        .speciesName = _("סקרים טייל"),
         .cryId = CRY_SCREAM_TAIL,
         .natDexNum = NATIONAL_DEX_SCREAM_TAIL,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 12,
         .weight = 80,
         .description = COMPOUND_STRING(
-            "There has been only one reported\n"
-            "sighting of this Pokémon. It\n"
-            "resembles a mysterious creature depicted\n"
-            "in an old expedition journal."),
+            "דווח רק על תצפית אחת בפוקימון הזה. הוא\n"
+            "דומה ליצור מסתורי שמתואר ביומן משלחת ישן."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5750,17 +5658,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("BRUTE BONNET"),
+        .speciesName = _("ברוט בונט"),
         .cryId = CRY_BRUTE_BONNET,
         .natDexNum = NATIONAL_DEX_BRUTE_BONNET,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 12,
         .weight = 210,
         .description = COMPOUND_STRING(
-            "It bears a slight resemblance to a\n"
-            "Pokémon described in a dubious\n"
-            "magazine as a cross between a dinosaur\n"
-            "and a mushroom."),
+            "יש לו דמיון קל לפוקימון שתואר במגזין מפוקפק\n"
+            "כהכלאה בין דינוזאור לפטרייה."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5819,17 +5725,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("FLUTTER MANE"),
+        .speciesName = _("פלאטר מיין"),
         .cryId = CRY_FLUTTER_MANE,
         .natDexNum = NATIONAL_DEX_FLUTTER_MANE,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 14,
         .weight = 40,
         .description = COMPOUND_STRING(
-            "It has similar features to a\n"
-            "ghostly pterosaur that was covered in a\n"
-            "paranormal magazine, but the two\n"
-            "have little else in common."),
+            "יש לו תכונות דומות לפטרוזאור רפאים שסוקר\n"
+            "במגזין פאראנורמלי, אבל מלבד זאת אין לשניים\n"
+            "הרבה במשותף."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5887,16 +5792,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("SLITHER WING"),
+        .speciesName = _("סליתר וינג"),
         .cryId = CRY_SLITHER_WING,
         .natDexNum = NATIONAL_DEX_SLITHER_WING,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 32,
         .weight = 920,
         .description = COMPOUND_STRING(
-            "This mysterious Pokémon has some\n"
-            "similarities to a creature that an\n"
-            "old book introduced as Slither Wing."),
+            "לפוקימון המסתורי הזה יש קווי דמיון ליצור\n"
+            "שספר ישן הציג בשם סליתר וינג."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5953,17 +5857,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("SANDY SHOCKS"),
+        .speciesName = _("סנדי שוקס"),
         .cryId = CRY_SANDY_SHOCKS,
         .natDexNum = NATIONAL_DEX_SANDY_SHOCKS,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 23,
         .weight = 600,
         .description = COMPOUND_STRING(
-            "It slightly resembles a Magneton\n"
-            "that lived for 10,000 years and was\n"
-            "featured in an article in a\n"
-            "paranormal magazine."),
+            "הוא דומה במקצת למגנטון שחי 10,000 שנה\n"
+            "והופיע בכתבה במגזין פאראנורמלי."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6020,17 +5922,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("IRON TREADS"),
+        .speciesName = _("אירן טרדס"),
         .cryId = CRY_IRON_TREADS,
         .natDexNum = NATIONAL_DEX_IRON_TREADS,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 9,
         .weight = 2400,
         .description = COMPOUND_STRING(
-            "Sightings of this Pokémon have\n"
-            "occurred in recent years. It resembles\n"
-            "a mysterious object described in an\n"
-            "old expedition journal."),
+            "בשנים האחרונות דווח על תצפיות בפוקימון\n"
+            "הזה. הוא דומה לחפץ מסתורי שמתואר ביומן\n"
+            "משלחת ישן."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6087,17 +5988,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("IRON BUNDLE"),
+        .speciesName = _("אירן באנדל"),
         .cryId = CRY_IRON_BUNDLE,
         .natDexNum = NATIONAL_DEX_IRON_BUNDLE,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 6,
         .weight = 110,
         .description = COMPOUND_STRING(
-            "Its shape is similar to a robot\n"
-            "featured in a paranormal magazine\n"
-            "article. The robot was said to have been\n"
-            "created by an ancient civilization."),
+            "צורתו דומה לרובוט שהופיע בכתבה במגזין\n"
+            "פאראנורמלי. נטען שהרובוט נבנה בידי\n"
+            "ציוויליזציה עתיקה."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6154,17 +6054,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("IRON HANDS"),
+        .speciesName = _("אירן הנדס"),
         .cryId = CRY_IRON_HANDS,
         .natDexNum = NATIONAL_DEX_IRON_HANDS,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 18,
         .weight = 3807,
         .description = COMPOUND_STRING(
-            "It is very similar to a cyborg\n"
-            "covered exclusively by a paranormal\n"
-            "magazine. The cyborg was said to be the\n"
-            "modified form of a certain athlete."),
+            "הוא דומה מאוד לסייבורג שמגזין פאראנורמלי\n"
+            "סיקר בבלעדיות. נטען שהסייבורג הוא גרסה\n"
+            "מהונדסת של ספורטאי מסוים."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6221,17 +6120,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("IRON JUGULIS"),
+        .speciesName = _("אירן ג'וגלס"),
         .cryId = CRY_IRON_JUGULIS,
         .natDexNum = NATIONAL_DEX_IRON_JUGULIS,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 13,
         .weight = 1110,
         .description = COMPOUND_STRING(
-            "It resembles a certain Pokémon\n"
-            "introduced in a paranormal magazine,\n"
-            "described as the offspring of a\n"
-            "Hydreigon that fell in love with a robot."),
+            "הוא דומה לפוקימון מסוים שהוצג במגזין\n"
+            "פאראנורמלי ותואר כצאצא של הידרייגון\n"
+            "שהתאהב ברובוט."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6289,17 +6187,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("IRON MOTH"),
+        .speciesName = _("אירן מות'"),
         .cryId = CRY_IRON_MOTH,
         .natDexNum = NATIONAL_DEX_IRON_MOTH,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 12,
         .weight = 360,
         .description = COMPOUND_STRING(
-            "No records exist of this species\n"
-            "being caught. Data is lacking, but\n"
-            "the Pokémon's traits match up with an\n"
-            "object described in an old book."),
+            "אין שום תיעוד של לכידת המין הזה. חסרים\n"
+            "נתונים, אבל התכונות של הפוקימון תואמות חפץ\n"
+            "שמתואר בספר ישן."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6357,17 +6254,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("IRON THORNS"),
+        .speciesName = _("אירן תורנס"),
         .cryId = CRY_IRON_THORNS,
         .natDexNum = NATIONAL_DEX_IRON_THORNS,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 16,
         .weight = 3030,
         .description = COMPOUND_STRING(
-            "It has some similarities to a\n"
-            "Pokémon introduced in a dubious magazine\n"
-            "as a Tyranitar from one billion\n"
-            "years into the future."),
+            "יש לו קווי דמיון לפוקימון שהוצג\n"
+            "במגזין מפוקפק כטירניטר שהגיע מהעתיד,\n"
+            "מיליארד שנה קדימה."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6423,17 +6319,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_DRAGON, EGG_GROUP_MINERAL),
         .abilities = { ABILITY_THERMAL_EXCHANGE, ABILITY_NONE, ABILITY_ICE_BODY },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("FRIGIBAX"),
+        .speciesName = _("פריג'יבקס"),
         .cryId = CRY_FRIGIBAX,
         .natDexNum = NATIONAL_DEX_FRIGIBAX,
-        .categoryName = _("Ice Fin"),
+        .categoryName = _("סנפיר קרח"),
         .height = 5,
         .weight = 170,
         .description = COMPOUND_STRING(
-            "This Pokémon lives in forests and\n"
-            "craggy areas. Using the power of its\n"
-            "dorsal fin, it cools the inside of its\n"
-            "nest like a refrigerator."),
+            "הפוקימון הזה חי ביערות ובאזורים סלעיים.\n"
+            "בכוח סנפיר הגב שלו, הוא מצנן את פנים הקן\n"
+            "שלו כמו מקרר."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6488,17 +6383,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_DRAGON, EGG_GROUP_MINERAL),
         .abilities = { ABILITY_THERMAL_EXCHANGE, ABILITY_NONE, ABILITY_ICE_BODY },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("ARCTIBAX"),
+        .speciesName = _("ארקטיבקס"),
         .cryId = CRY_ARCTIBAX,
         .natDexNum = NATIONAL_DEX_ARCTIBAX,
-        .categoryName = _("Ice Fin"),
+        .categoryName = _("סנפיר קרח"),
         .height = 8,
         .weight = 300,
         .description = COMPOUND_STRING(
-            "Arctibax freezes the air around it,\n"
-            "protecting its face with an ice\n"
-            "mask and turning its dorsal fin into a\n"
-            "blade of ice."),
+            "ארקטיבקס מקפיא את האוויר שסביבו, מגן על\n"
+            "פניו במסכת קרח והופך את סנפיר הגב שלו\n"
+            "ללהב קרח."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6552,17 +6446,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_DRAGON, EGG_GROUP_MINERAL),
         .abilities = { ABILITY_THERMAL_EXCHANGE, ABILITY_NONE, ABILITY_ICE_BODY },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("BAXCALIBUR"),
+        .speciesName = _("בקסקליבר"),
         .cryId = CRY_BAXCALIBUR,
         .natDexNum = NATIONAL_DEX_BAXCALIBUR,
-        .categoryName = _("Ice Dragon"),
+        .categoryName = _("דרקון קרח"),
         .height = 21,
         .weight = 2100,
         .description = COMPOUND_STRING(
-            "It launches itself into battle by\n"
-            "flipping upside down and spewing\n"
-            "frigid air from its mouth. It finishes\n"
-            "opponents off with its dorsal blade."),
+            "הוא מזנק לקרב כשהוא מתהפך ופולט אוויר\n"
+            "קפוא מפיו. הוא מחסל יריבים בלהב שעל גבו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6618,21 +6510,20 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_DRAGON, EGG_GROUP_MINERAL),
         .abilities = { ABILITY_THERMAL_EXCHANGE, ABILITY_NONE, ABILITY_ICE_BODY },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("BAXCALIBUR"),
+        .speciesName = _("בקסקליבר"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_BAXCALIBUR_MEGA,
     #else
         .cryId = CRY_BAXCALIBUR,
     #endif // P_MODIFIED_MEGA_CRIES
         .natDexNum = NATIONAL_DEX_BAXCALIBUR,
-        .categoryName = _("Ice Dragon"),
+        .categoryName = _("דרקון קרח"),
         .height = 21,
         .weight = 3150,
         .description = COMPOUND_STRING(
-            "Baxcalibur's dorsal blade has grown even\n"
-            "more massive thanks to Mega Evolution.\n"
-            "This Pokémon fires beams from the hilt\n"
-            "at its solar plexus."),
+            "בזכות התפתחות המגה, להב הגב של בקסקליבר\n"
+            "נעשה עצום עוד יותר. הפוקימון הזה יורה\n"
+            "קרניים מהניצב שבמקלעת השמש שלו."),
         .frontPic = gMonFrontPic_BaxcaliburMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -6679,17 +6570,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_RATTLED, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("GIMMIGHOUL"),
+        .speciesName = _("גימיגול"),
         .cryId = CRY_GIMMIGHOUL_CHEST,
         .natDexNum = NATIONAL_DEX_GIMMIGHOUL,
-        .categoryName = _("Coin Chest"),
+        .categoryName = _("תיבת מטבעות"),
         .height = 3,
         .weight = 50,
         .description = COMPOUND_STRING(
-            "It lives inside an old treasure\n"
-            "chest. Sometimes it gets left in shop\n"
-            "corners since no one realizes it's\n"
-            "actually a Pokémon."),
+            "הוא חי בתוך תיבת אוצר ישנה. לפעמים\n"
+            "משאירים אותו בפינות של חנויות, כי אף אחד\n"
+            "לא מבין שהוא בעצם פוקימון."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6745,17 +6635,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_RUN_AWAY, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("GIMMIGHOUL"),
+        .speciesName = _("גימיגול"),
         .cryId = CRY_GIMMIGHOUL_ROAMING,
         .natDexNum = NATIONAL_DEX_GIMMIGHOUL,
-        .categoryName = _("Coin Hunter"),
+        .categoryName = _("צייד מטבעות"),
         .height = 1,
         .weight = 1,
         .description = COMPOUND_STRING(
-            "It wanders around, carrying an old\n"
-            "coin on its back. It survives by\n"
-            "draining the life-force from humans who\n"
-            "try to pick up its coin."),
+            "הוא משוטט עם מטבע ישן על גבו. הוא שורד\n"
+            "בכך שהוא שואב את כוח החיים מבני אדם\n"
+            "שמנסים להרים את המטבע שלו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6802,17 +6691,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_GOOD_AS_GOLD, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("GHOLDENGO"),
+        .speciesName = _("גולדנגו"),
         .cryId = CRY_GHOLDENGO,
         .natDexNum = NATIONAL_DEX_GHOLDENGO,
-        .categoryName = _("Coin Entity"),
+        .categoryName = _("ישות מטבעות"),
         .height = 12,
         .weight = 300,
         .description = COMPOUND_STRING(
-            "It has a sturdy body made up of\n"
-            "stacked coins. Gholdengo overwhelms\n"
-            "its enemies by firing coin after coin\n"
-            "at them in quick succession."),
+            "יש לו גוף חסון שבנוי ממטבעות מוערמים.\n"
+            "גולדנגו מכריע את אויביו כשהוא יורה עליהם\n"
+            "מטבע אחרי מטבע ברצף מהיר."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6867,17 +6755,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_TABLETS_OF_RUIN, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("WO-CHIEN"),
+        .speciesName = _("וו-צ'יין"),
         .cryId = CRY_WO_CHIEN,
         .natDexNum = NATIONAL_DEX_WO_CHIEN,
-        .categoryName = _("Ruinous"),
+        .categoryName = _("ממיט חורבן"),
         .height = 15,
         .weight = 742,
         .description = COMPOUND_STRING(
-            "The grudge of a person punished\n"
-            "for writing the king's evil deeds upon\n"
-            "wooden tablets has clad itself in\n"
-            "dead leaves to become a Pokémon."),
+            "הטינה של אדם שנענש על כך שכתב את\n"
+            "מעשי הרשע של המלך על לוחות עץ, עטתה\n"
+            "על עצמה עלים מתים והפכה לפוקימון."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6934,17 +6821,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_SWORD_OF_RUIN, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("CHIEN-PAO"),
+        .speciesName = _("צ'יין-פאו"),
         .cryId = CRY_CHIEN_PAO,
         .natDexNum = NATIONAL_DEX_CHIEN_PAO,
-        .categoryName = _("Ruinous"),
+        .categoryName = _("ממיט חורבן"),
         .height = 19,
         .weight = 1522,
         .description = COMPOUND_STRING(
-            "This Pokémon can control 100 tons\n"
-            "of fallen snow. It plays around\n"
-            "innocently by leaping in and out of\n"
-            "avalanches it has caused."),
+            "הפוקימון הזה מסוגל לשלוט ב-100 טון של שלג\n"
+            "שנפל. הוא משחק בתמימות: מזנק פנימה והחוצה\n"
+            "ממפולות שלג שהוא עצמו גרם להן."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7001,17 +6887,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_VESSEL_OF_RUIN, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("TING-LU"),
+        .speciesName = _("טינג-לו"),
         .cryId = CRY_TING_LU,
         .natDexNum = NATIONAL_DEX_TING_LU,
-        .categoryName = _("Ruinous"),
+        .categoryName = _("ממיט חורבן"),
         .height = 27,
         .weight = 6997,
         .description = COMPOUND_STRING(
-            "It slowly brings its exceedingly\n"
-            "heavy head down upon the ground,\n"
-            "splitting the earth open with huge\n"
-            "fissures that run over 160 feet deep."),
+            "הוא מוריד לאט את ראשו הכבד מאוד אל\n"
+            "הקרקע ומבקע את האדמה בסדקים עצומים,\n"
+            "שעומקם יותר מ-160 רגל."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7068,17 +6953,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_BEADS_OF_RUIN, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("CHI-YU"),
+        .speciesName = _("צ'י-יו"),
         .cryId = CRY_CHI_YU,
         .natDexNum = NATIONAL_DEX_CHI_YU,
-        .categoryName = _("Ruinous"),
+        .categoryName = _("ממיט חורבן"),
         .height = 4,
         .weight = 49,
         .description = COMPOUND_STRING(
-            "It controls flames burning at over\n"
-            "5,400 degrees Fahrenheit. It\n"
-            "casually swims through the sea of lava it\n"
-            "creates by melting rock and sand."),
+            "הוא שולט בלהבות שבוערות בחום של\n"
+            "יותר מ-5,400 מעלות פרנהייט. הוא שוחה בנחת\n"
+            "בים הלבה שהוא יוצר כשהוא ממיס סלעים וחול."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7137,17 +7021,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("ROARING MOON"),
+        .speciesName = _("רוארינג מון"),
         .cryId = CRY_ROARING_MOON,
         .natDexNum = NATIONAL_DEX_ROARING_MOON,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 20,
         .weight = 3800,
         .description = COMPOUND_STRING(
-            "According to an article in a\n"
-            "dubious magazine, this Pokémon has some\n"
-            "connection to Mega Evolution that\n"
-            "occurs in Hoenn."),
+            "לפי כתבה במגזין מפוקפק, יש לפוקימון הזה\n"
+            "קשר כלשהו להתפתחות מגה שמתרחשת בהואן."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7205,16 +7087,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("IRON VALIANT"),
+        .speciesName = _("אירן ולינט"),
         .cryId = CRY_IRON_VALIANT,
         .natDexNum = NATIONAL_DEX_IRON_VALIANT,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 14,
         .weight = 350,
         .description = COMPOUND_STRING(
-            "It has some similarities to a mad\n"
-            "scientist's invention covered in a\n"
-            "paranormal magazine."),
+            "יש לו קווי דמיון להמצאה של מדען מטורף\n"
+            "שסוקרה במגזין פאראנורמלי."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7270,17 +7151,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_ORICHALCUM_PULSE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("KORAIDON"),
+        .speciesName = _("קוריידון"),
         .cryId = CRY_KORAIDON,
         .natDexNum = NATIONAL_DEX_KORAIDON,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 25,
         .weight = 3030,
         .description = COMPOUND_STRING(
-            "This Pokémon resembles Cyclizar,\n"
-            "but it is far burlier and more\n"
-            "ferocious. Nothing is known about its\n"
-            "ecology or other features."),
+            "הפוקימון הזה דומה לסייקליזר, אבל הוא חסון\n"
+            "ואכזרי ממנו בהרבה. דבר אינו ידוע\n"
+            "על אורח חייו או על שאר תכונותיו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7338,17 +7218,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_HADRON_ENGINE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("MIRAIDON"),
+        .speciesName = _("מיריידון"),
         .cryId = CRY_MIRAIDON,
         .natDexNum = NATIONAL_DEX_MIRAIDON,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 35,
         .weight = 2400,
         .description = COMPOUND_STRING(
-            "This seems to be the Iron Serpent\n"
-            "mentioned in an Violet Book. The\n"
-            "Iron Serpent is said to have turned the\n"
-            "land to ash with its lightning."),
+            "נראה שזה נחש הברזל שמוזכר בספר הסגול.\n"
+            "מסופר שנחש הברזל הפך את הארץ לאפר\n"
+            "בברקים שלו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7408,16 +7287,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("WALKING WAKE"),
+        .speciesName = _("ווקינג וייק"),
         .cryId = CRY_WALKING_WAKE,
         .natDexNum = NATIONAL_DEX_WALKING_WAKE,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 35,
         .weight = 2800,
         .description = COMPOUND_STRING(
-            "This ferocious creature is shrouded in\n"
-            "mystery. It's named after an aquatic\n"
-            "monster mentioned in an old journal."),
+            "היצור האכזרי הזה עטוף במסתורין. הוא נקרא\n"
+            "על שם מפלצת מים שמוזכרת ביומן ישן."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7474,16 +7352,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("IRON LEAVES"),
+        .speciesName = _("אירן ליבס"),
         .cryId = CRY_IRON_LEAVES,
         .natDexNum = NATIONAL_DEX_IRON_LEAVES,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 15,
         .weight = 1250,
         .description = COMPOUND_STRING(
-            "According to the few eyewitness accounts\n"
-            "that exist, it used its shining blades\n"
-            "to julienne large trees and boulders."),
+            "לפי העדויות המעטות שקיימות, הוא\n"
+            "חתך עצים גדולים וסלעים לרצועות דקות\n"
+            "בעזרת להביו הבוהקים."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7539,17 +7417,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL, EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_HOSPITALITY, ABILITY_NONE, ABILITY_HEATPROOF },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("POLTCHAGEIST"),
+        .speciesName = _("פולצ'גייסט"),
         .cryId = CRY_POLTCHAGEIST,
         .natDexNum = NATIONAL_DEX_POLTCHAGEIST,
-        .categoryName = _("Matcha"),
+        .categoryName = _("תה מאצ'ה"),
         .height = 1,
         .weight = 11,
         .description = COMPOUND_STRING(
-            "Supposedly, the regrets of a tea\n"
-            "ceremony master who died before\n"
-            "perfecting his craft lingered in some\n"
-            "matcha and became a Pokémon."),
+            "אומרים שהחרטות של אמן טקס תה, שמת לפני\n"
+            "ששכלל את מלאכתו, נותרו במעט מאצ'ה והפכו\n"
+            "לפוקימון."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7607,17 +7484,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL, EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_HOSPITALITY, ABILITY_NONE, ABILITY_HEATPROOF },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("POLTCHAGEIST"),
+        .speciesName = _("פולצ'גייסט"),
         .cryId = CRY_POLTCHAGEIST,
         .natDexNum = NATIONAL_DEX_POLTCHAGEIST,
-        .categoryName = _("Matcha"),
+        .categoryName = _("תה מאצ'ה"),
         .height = 1,
         .weight = 11,
         .description = COMPOUND_STRING(
-            "It has taken up residence in a very\n"
-            "expensive tea caddy. It takes an\n"
-            "expert to distinguish the expensive\n"
-            "tea caddies from the cheap ones."),
+            "הוא השתכן בקופסת תה יקרה מאוד. רק מומחה\n"
+            "יכול להבחין בין קופסאות התה היקרות לזולות."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7675,17 +7550,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL, EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_HOSPITALITY, ABILITY_NONE, ABILITY_HEATPROOF },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("SINISTCHA"),
+        .speciesName = _("סיניסצ'ה"),
         .cryId = CRY_SINISTCHA,
         .natDexNum = NATIONAL_DEX_SINISTCHA,
-        .categoryName = _("Matcha"),
+        .categoryName = _("תה מאצ'ה"),
         .height = 2,
         .weight = 22,
         .description = COMPOUND_STRING(
-            "It pretends to be tea, trying to fool\n"
-            "people into drinking it so it can\n"
-            "drain their life-force. Its ruse is\n"
-            "generally unsuccessful."),
+            "הוא מתחזה לתה ומנסה לפתות אנשים לשתות\n"
+            "אותו, כדי שיוכל לשאוב את כוח החיים שלהם.\n"
+            "בדרך כלל התרגיל שלו לא מצליח."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7741,17 +7615,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL, EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_HOSPITALITY, ABILITY_NONE, ABILITY_HEATPROOF },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("SINISTCHA"),
+        .speciesName = _("סיניסצ'ה"),
         .cryId = CRY_SINISTCHA,
         .natDexNum = NATIONAL_DEX_SINISTCHA,
-        .categoryName = _("Matcha"),
+        .categoryName = _("תה מאצ'ה"),
         .height = 2,
         .weight = 22,
         .description = COMPOUND_STRING(
-            "The more stirring it does with the\n"
-            "tea whisk on its head, the more\n"
-            "energy it builds up. It does this to\n"
-            "prepare for battle."),
+            "ככל שהוא מערבב יותר במטרפת התה\n"
+            "שעל ראשו, כך הוא צובר יותר אנרגיה.\n"
+            "הוא עושה זאת כדי להתכונן לקרב."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7809,17 +7682,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_TOXIC_CHAIN, ABILITY_NONE, ABILITY_GUARD_DOG },
         .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("OKIDOGI"),
+        .speciesName = _("אוקידוגי"),
         .cryId = CRY_OKIDOGI,
         .natDexNum = NATIONAL_DEX_OKIDOGI,
-        .categoryName = _("Retainer"),
+        .categoryName = _("משרת"),
         .height = 18,
         .weight = 920,
         .description = COMPOUND_STRING(
-            "After all its muscles were stimulated\n"
-            "by the toxic chain around its neck,\n"
-            "Okidogi transformed and gained\n"
-            "a powerful physique."),
+            "אחרי שהשרשרת הרעילה שסביב צווארו גירתה\n"
+            "את כל שריריו, אוקידוגי השתנה וקיבל מבנה גוף\n"
+            "עוצמתי."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7876,17 +7748,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_TOXIC_CHAIN, ABILITY_NONE, ABILITY_FRISK },
         .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("MUNKIDORI"),
+        .speciesName = _("מאנקידורי"),
         .cryId = CRY_MUNKIDORI,
         .natDexNum = NATIONAL_DEX_MUNKIDORI,
-        .categoryName = _("Retainer"),
+        .categoryName = _("משרת"),
         .height = 10,
         .weight = 122,
         .description = COMPOUND_STRING(
-            "The chain is made from toxins that\n"
-            "enhance capabilities. It stimulated\n"
-            "Munkidori's brain and caused the\n"
-            "Pokémon's psychic powers to bloom."),
+            "השרשרת עשויה מרעלנים שמגבירים יכולות. היא\n"
+            "גירתה את מוחו של מאנקידורי וגרמה לכוחות\n"
+            "העל-חושיים שלו לפרוח."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7943,17 +7814,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_TOXIC_CHAIN, ABILITY_NONE, ABILITY_TECHNICIAN },
         .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("FEZANDIPITI"),
+        .speciesName = _("פזנדיפיטי"),
         .cryId = CRY_FEZANDIPITI,
         .natDexNum = NATIONAL_DEX_FEZANDIPITI,
-        .categoryName = _("Retainer"),
+        .categoryName = _("משרת"),
         .height = 14,
         .weight = 301,
         .description = COMPOUND_STRING(
-            "Fezandipiti owes its beautiful looks and\n"
-            "lovely voice to the toxic stimulants\n"
-            "emanating from the chain wrapped around\n"
-            "its body."),
+            "פזנדיפיטי חב את מראהו היפה ואת קולו הנעים\n"
+            "לחומרים הממריצים הרעילים שנפלטים\n"
+            "מהשרשרת הכרוכה סביב גופו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -8011,10 +7881,10 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),                                         \
         .abilities = { ability, ABILITY_NONE },                                                            \
         .bodyColor = color,                                                                                \
-        .speciesName = _("OGERPON"),                                                                       \
+        .speciesName = _("אוגרפון"),                                                                       \
         .cryId = CRY_OGERPON,                                                                              \
         .natDexNum = NATIONAL_DEX_OGERPON,                                                                 \
-        .categoryName = _("Mask"),                                                                         \
+        .categoryName = _("מסכה"),                                                                         \
         .height = 12,                                                                                      \
         .weight = 398,                                                                                     \
         .description = gOgerpon##Form1##MaskPokedexText,                                                   \
@@ -8092,17 +7962,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("GOUGING FIRE"),
+        .speciesName = _("גג'ינג פייר"),
         .cryId = CRY_GOUGING_FIRE,
         .natDexNum = NATIONAL_DEX_GOUGING_FIRE,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 35,
         .weight = 5900,
         .description = COMPOUND_STRING(
-            "There are scant few reports of\n"
-            "this creature being sighted.\n"
-            "One short video shows it rampaging,\n"
-            "and spouting pillars of flame."),
+            "יש מעט מאוד דיווחים על תצפיות ביצור הזה.\n"
+            "סרטון קצר אחד מראה אותו משתולל ופולט\n"
+            "עמודי אש."),
         .pokemonScale = 259,
         .pokemonOffset = 0,
         .trainerScale = 345,
@@ -8159,17 +8028,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PROTOSYNTHESIS, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("RAGING BOLT"),
+        .speciesName = _("רג'ינג בולט"),
         .cryId = CRY_RAGING_BOLT,
         .natDexNum = NATIONAL_DEX_RAGING_BOLT,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 52,
         .weight = 4800,
         .description = COMPOUND_STRING(
-            "It bears resemblance to a Pokémon\n"
-            "that became a hot topic for a short\n"
-            "while after a paranomal magazine\n"
-            "touted it as Raikou's ancestor."),
+            "הוא דומה לפוקימון שהפך לנושא חם לזמן קצר,\n"
+            "אחרי שמגזין פאראנורמלי הציג אותו\n"
+            "כאב הקדמון של רייקו."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 345,
@@ -8226,16 +8094,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("IRON BOULDER"),
+        .speciesName = _("אירן בולדר"),
         .cryId = CRY_IRON_BOULDER,
         .natDexNum = NATIONAL_DEX_IRON_BOULDER,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 15,
         .weight = 1625,
         .description = COMPOUND_STRING(
-            "It was named after a mysterious\n"
-            "object recorded in an old book.\n"
-            "Its body seems to be metallic."),
+            "הוא נקרא על שם חפץ מסתורי שתועד בספר ישן.\n"
+            "נראה שגופו עשוי מתכת."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 336,
@@ -8292,17 +8159,15 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_QUARK_DRIVE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("IRON CROWN"),
+        .speciesName = _("אירן קראון"),
         .cryId = CRY_IRON_CROWN,
         .natDexNum = NATIONAL_DEX_IRON_CROWN,
-        .categoryName = _("Paradox"),
+        .categoryName = _("פרדוקס"),
         .height = 16,
         .weight = 1560,
         .description = COMPOUND_STRING(
-            "It resembles a mysterious object\n"
-            "introduced in a paranormal magazine\n"
-            "as a cutting-edge weapon\n"
-            "shaped like Cobalion."),
+            "הוא דומה לחפץ מסתורי שהוצג במגזין\n"
+            "פאראנורמלי כנשק חדשני בצורת קובייליון."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 365,
@@ -8359,17 +8224,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_TERA_SHIFT, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("TERAPAGOS"),
+        .speciesName = _("טרפאגוס"),
         .cryId = CRY_TERAPAGOS,
         .natDexNum = NATIONAL_DEX_TERAPAGOS,
-        .categoryName = _("Tera"),
+        .categoryName = _("טרה"),
         .height = 2,
         .weight = 65,
         .description = COMPOUND_STRING(
-            "Terapagos protects itself using its\n"
-            "power to transform energy into hard\n"
-            "crystals. This Pokémon is the source\n"
-            "of the Terastal phenomenon."),
+            "טרפאגוס מגן על עצמו בכוחו להפוך אנרגיה\n"
+            "לגבישים קשים. הפוקימון הזה הוא המקור של\n"
+            "תופעת הטרה."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 365,
@@ -8429,17 +8293,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_TERA_SHELL, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("TERAPAGOS"),
+        .speciesName = _("טרפאגוס"),
         .cryId = CRY_TERAPAGOS,
         .natDexNum = NATIONAL_DEX_TERAPAGOS,
-        .categoryName = _("Tera"),
+        .categoryName = _("טרה"),
         .height = 3,
         .weight = 160,
         .description = COMPOUND_STRING(
-            "The shell is made of crystallized\n"
-            "Terastal energy. When struck by a move,\n"
-            "this shell absorbs the move's energy\n"
-            "and transfers it to Terapagos."),
+            "השריון עשוי מאנרגיית טרה מגובשת. כשמהלך\n"
+            "פוגע בו, השריון סופג את האנרגיה של המהלך\n"
+            "ומעביר אותה לטרפאגוס."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 365,
@@ -8500,17 +8363,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_TERAFORM_ZERO, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("TERAPAGOS"),
+        .speciesName = _("טרפאגוס"),
         .cryId = CRY_TERAPAGOS,
         .natDexNum = NATIONAL_DEX_TERAPAGOS,
-        .categoryName = _("Tera"),
+        .categoryName = _("טרה"),
         .height = 17,
         .weight = 770,
         .description = COMPOUND_STRING(
-            "An old expedition journal describes the\n"
-            "sight of this Pokémon buried in the,\n"
-            "depths of the earth as resembling a\n"
-            "planet floating in space."),
+            "יומן משלחת ישן מתאר את המראה של הפוקימון\n"
+            "הזה, קבור במעמקי האדמה, כדומה לכוכב לכת\n"
+            "שמרחף בחלל."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 365,
@@ -8563,17 +8425,16 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_POISON_PUPPETEER, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("PECHARUNT"),
+        .speciesName = _("פצ'רנט"),
         .cryId = CRY_PECHARUNT,
         .natDexNum = NATIONAL_DEX_PECHARUNT,
-        .categoryName = _("Subjugation"),
+        .categoryName = _("שעבוד"),
         .height = 3,
         .weight = 3,
         .description = COMPOUND_STRING(
-            "It feeds others toxic mochi that\n"
-            "draw out desires and capabilities.\n"
-            "Those who eat the mochi fall under\n"
-            "Pecharunt's control, chained to its will."),
+            "הוא מאכיל אחרים במוצ'י רעיל שמעורר תשוקות\n"
+            "ויכולות. מי שאוכל את המוצ'י נופל לשליטתו של\n"
+            "פצ'רנט, כבול לרצונו."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 365,

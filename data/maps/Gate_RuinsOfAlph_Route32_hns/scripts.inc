@@ -23,7 +23,6 @@ Gate_RuinsOfAlph_Route32_Text_PokefanM:
 	.string "I see a scientist in the making.$"
 
 Gate_RuinsOfAlph_Route32_Text_Youngster:
-	.string "There are drawings on stone\n"
-	.string "panels.\p"
-	.string "I tried moving them.\n"
-	.string "I wonder what they are.$"
+	.string "יש ציורים על לוחות אבן.\p"
+	.string "ניסיתי להזיז אותם.\n"
+	.string "מעניין מה הם.$"

@@ -1,0 +1,10 @@
+# Zapdos, Route 10 (5,48): Route10_EventScript_Zapdos (data/maps/Route10_hns/scripts.inc:52-73), cry text shared with Articuno
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_ZAPDOS; end
+warpto MAP_ROUTE10_HNS 5 49
+face UP
+snap zapdos_field
+tap A 4
+scene zapdos_pre 4000
+include _legend_tail.txt

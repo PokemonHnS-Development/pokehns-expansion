@@ -1,0 +1,51 @@
+# Field poison (OW_POISON_DAMAGE GEN_3, src/field_control_avatar.c:911-934): every 4th step a
+# poisoned Pokemon loses 1 HP with the screen flash (FldEffPoison_Start); at the threshold
+# EventScript_FieldPoison (data/scripts/field_poison.inc) shows gText_PkmnSurvived_FldPsn
+# (survive-poison on: stops at 1 HP) or gText_PkmnFainted_FldPsn (off: faints at 0)
+# (src/field_poison.c:83-88, src/strings.c:749-754). The setting is
+# challengeSettings.tx_Mode_PoisonSurvive, SB3+0x2C bit 1 (on in menuA_base).
+# Pikachu (party slot 2) is poisoned at 2 HP; VAR_POISON_STEP_COUNTER at 3 makes the next
+# step the damage step.
+start saves/ofui_menuA_base.sav
+include ../continue.txt
+go DOWN 9
+waitctl 600
+go DOWN 1
+face RIGHT
+read @SB3+2C@ 1
+
+# 1) survive-poison ON: 2 -> 1 HP, "survived the poisoning"
+ev setstatus1 STATUS1_POISON, 1; end
+sethp player 1 2
+setvar VAR_POISON_STEP_COUNTER 3
+10 RIGHT
+burst psn_on_flash 12 4
+talk psn_on_msg 4 -
+snap psn_on_after
+
+# 2) survive-poison OFF: 2 -> 1 HP (flash only), then 1 -> 0 "fainted"
+setbit @SB3+2C@ 1 0
+ev setstatus1 STATUS1_POISON, 1; end
+sethp player 1 2
+setvar VAR_POISON_STEP_COUNTER 3
+10 RIGHT
+burst psn_off_flash1 12 4
+waitctl 600
+setvar VAR_POISON_STEP_COUNTER 3
+10 RIGHT
+burst psn_off_flash2 8 4
+talk psn_off_msg 4 -
+snap psn_off_after
+
+# 3) survive-poison OFF, the last Pokemon faints: whiteout from poison (gText_PlayerWhitedOut)
+ev setstatus1 STATUS1_POISON, 0; end
+sethp player 0 1
+sethp player 2 0
+sethp player 3 0
+setvar VAR_POISON_STEP_COUNTER 3
+10 RIGHT
+burst psn_wo_flash 8 4
+talk psn_wo_msg 6 -
+waitcb2x CB2_Overworld 1500
+waitctl 1200
+snap psn_wo_respawn

@@ -234,7 +234,7 @@ static void PrintRegionMapSecName(void)
 
 static void PrintTitleWindowText(void)
 {
-    static const u8 FlyPromptText[] = _("{R_BUTTON} FLY");
+    static const u8 FlyPromptText[] = _("{R_BUTTON} תעופה");
     const u8 *region;
     if (IS_HNS)
         region = gText_Johto;

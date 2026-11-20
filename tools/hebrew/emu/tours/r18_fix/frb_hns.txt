@@ -1,0 +1,18 @@
+# The status tag on the lead's healthbox: frostbite with the H&S battle UI, drawn from
+# graphics/battle_interface/hns/status.png row 5.
+# OPTIONS > BATTLE newBattleUI=0 (src/battle_gfx_sfx_util.c UseGen4BattleUI); the status is set with the
+# event script's setstatus1 (src/script_pokemon_util.c Script_SetStatus1), as the debug menus do.
+# Save: ladder1_newgame.sav (HNS_SAVES). Run with scripts/r4_battle_options/r4opt.py tour (opt).
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+opt newBattleUI=0
+ev givemon SPECIES_TYPHLOSION, 50, move1=MOVE_TACKLE; end
+ev setstatus1 STATUS1_FROSTBITE, 0; end
+pinrng
+ev setwildbattle SPECIES_RATTATA, 3; end
+evstart dowildbattle; end
+waitbattle
+bwalk frb_hns_intro input:HandleInputChooseAction
+snap frb_hns_healthbox
+baction RUN
+bwalk frb_hns_run free

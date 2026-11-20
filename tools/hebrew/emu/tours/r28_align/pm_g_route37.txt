@@ -1,0 +1,66 @@
+# Mid-game play from ladder save 3: south out of Ecruteak City onto Route 37 on foot (the
+# map-name pop-up), the route sign, then the double battle with Twins Ann & Anne
+# (trainerbattle_double; Clefairy and Furret). Both foes are set to 1 HP each turn (their
+# gBattleMons copies, battlers 1 and 3), the RNG is pinned, so both ROMs see the same battle.
+# Then the start menu and the save dialog (answered NO).
+start saves/ladder3_ecruteak.sav
+include ../../scripts/continue.txt
+fastbattles off
+
+# --- Leave the Center and walk south out of the city (Ecruteak (33,55) -> Route 37)
+go DOWN 2
+warpto MAP_ECRUTEAK_CITY_HNS 33 53
+go DOWN 3
+6 -
+shot pmg_popup_route37_a
+40 -
+shot pmg_popup_route37_b
+waitctl 900
+warpto MAP_ROUTE37_HNS 20 14
+face UP
+talk pmg_sign 10
+
+# --- The twins at (13,29) and (14,29) face down with sight 1: step into Ann's sight
+warpto MAP_ROUTE37_HNS 13 31
+face UP
+pinrng
+8 UP
+waitnotfree 120
+bwalk pmg_twins_intro input:HandleInputChooseAction
+snap pmg_twins_action1
+w16 @gBattleMons+B2@ 1                  # foe battler 1
+w16 @gBattleMons+1C2@ 1                 # foe battler 3 (0x88 * 3 + 0x2A)
+baction FIGHT
+waitbinput HandleInputChooseMove
+snap pmg_twins_moves1
+bmove 3                                   # Swift (hits both foes)
+bwalk pmg_twins_tgt input:HandleInputShowTargets|input:HandleInputChooseTarget|input:HandleInputShowEntireFieldTargets|input:HandleInputChooseAction
+snap pmg_twins_targets
+tap A 4
+waitbinputb 2 HandleInputChooseAction
+snap pmg_twins_action2
+bactionb 2 FIGHT
+waitbinputb 2 HandleInputChooseMove
+snap pmg_twins_moves2
+bmoveb 2 0
+bwalk pmg_twins_tgt2 input:HandleInputChooseTarget#2|input:HandleInputShowTargets#2|input:HandleInputShowEntireFieldTargets#2
+snap pmg_twins_target2
+tap A 4
+bwalk pmg_twins_turn1
+waitctl 900 B
+
+# --- After the battle: the start menu (with its clock) and the save dialog, answered NO
+startmenu POKEMON nopress
+snap pmg_startmenu
+press DOWN
+snap pmg_startmenu_2
+tap B 4
+waitctl 900 B
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+snap pmg_save_confirm
+tap DOWN 4
+waitquiet
+snap pmg_save_no
+tap A 4
+waitctl 900 B

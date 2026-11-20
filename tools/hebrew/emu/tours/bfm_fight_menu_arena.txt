@@ -1,0 +1,52 @@
+# Fight menu with the Battle Arena window set (B_WIN_TYPE_ARENA, src/battle_bg.c:626-846):
+# there the move-name windows are 8 tiles wide and src/battle_bg.c:1025 leaves them (and the
+# action menu) in WINDOW_RTL_MIRROR. A real Arena challenge is not needed for the window set:
+# BattleInitBgsAndWindows picks it from BATTLE_TYPE_ARENA (src/battle_bg.c:1008), so the wild
+# battle of _bfm_base.txt is started with gBattleTypeFlags pinned to BATTLE_TYPE_ARENA (1 << 18)
+# until the action menu is up. Other Arena behaviour (judging after three turns) is not used:
+# no turn is taken. UNVERIFIED that every other screen element matches a real Arena battle.
+start saves/ladder1_newgame.sav
+include _battle_base.txt
+ev givemon SPECIES_SMEARGLE, 50, move1=MOVE_TACKLE, move2=MOVE_LEER, move3=MOVE_EMBER, move4=MOVE_SMOKESCREEN; end
+pinrng
+pin @gBattleTypeFlags@ 00000400
+evstart setwildbattle SPECIES_GEODUDE, 10; dowildbattle; end
+waitbattle
+bwalk bfm_arena_intro input:HandleInputChooseAction
+snap bfm_arena_action
+baction BAG nopress
+snap bfm_arena_action_bag
+baction POKEMON nopress
+snap bfm_arena_action_pokemon
+baction RUN nopress
+snap bfm_arena_action_run
+baction FIGHT
+waitbinput HandleInputChooseMove
+snap bfm_arena_fight_0
+bmove 1 nopress
+snap bfm_arena_fight_1
+bmove 2 nopress
+snap bfm_arena_fight_2
+bmove 3 nopress
+snap bfm_arena_fight_3
+tap START 4
+snap bfm_arena_fight_3_info
+tap START 4
+waitquiet
+# SUNSTEEL_STRIKE 667, CHILLY_RECEPTION 807, TRICK_OR_TREAT 567, DARKEST_LARIAT 626
+tap B 4
+waitbinput HandleInputChooseAction
+w32 @gBattleMons+C@ 0327029B
+w32 @gBattleMons+10@ 02720237
+w8 @gBattleMons+25@ 05
+w8 @gBattleMons+26@ 0A
+w8 @gBattleMons+27@ 14
+w8 @gBattleMons+28@ 0A
+baction FIGHT
+waitbinput HandleInputChooseMove
+bmove 0 nopress
+snap bfm_arena_long_0
+bmove 1 nopress
+snap bfm_arena_long_1
+tap B 4
+waitbinput HandleInputChooseAction

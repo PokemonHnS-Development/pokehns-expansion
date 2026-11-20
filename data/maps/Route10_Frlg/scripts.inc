@@ -100,5 +100,5 @@ Route10_Text_RockTunnel::
 	.string "ROCK TUNNEL$"
 
 Route10_Text_PowerPlant::
-	.string "POWER PLANT$"
+	.string "מפעל החשמל$"
 

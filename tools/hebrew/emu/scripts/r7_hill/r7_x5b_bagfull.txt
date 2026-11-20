@@ -1,0 +1,8 @@
+# Expert roof with a full Berries pocket: from the roof arrival (x4), the pocket is filled, the clock
+# set as in r7_x5_roof.txt (9:36 against a best of 8:42), then the owner: the marvelous-gift line,
+# 'the Bag is full', 'no room, come back later', then 'not very quick'.
+ev file r7_fill_berries.inc
+hilltimer 34567
+hillbest 3 31337
+talkto 1 x5b_owner free 80
+hillstate

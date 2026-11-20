@@ -576,6 +576,10 @@ static const u8 *FindWordEnd(const u8 *text)
 static u32 WrapDexTextIntoLines(struct Pokenav_Radio *radio, const u8 *text, u32 *n, u32 *buf)
 {
     u32 linesAdded = 0;
+#if RTL_STRING_REPORT
+    RtlStringReport(text);
+#endif
+#line 579
 
     text = SkipRadioBreakChars(text);
 
@@ -685,6 +689,26 @@ static void GetOrGenerateBuenaPassword(u32 *outCategory, u32 *outWord)
     *outWord = stored & 0xF;
 }
 
+#if TEXT_RTL
+// Whether Places & People can name this trainer. A reserved slot (TRAINER_FRONTIER_BRAIN) is all
+// zeros: no party, and a name of spaces with no terminator, which the line would copy on from the
+// next trainer's data into the next line buffer. The whole line must also fit its buffer.
+static bool32 IsPnPTrainerUsable(u16 trainerId)
+{
+    const u8 *name = GetTrainerNameFromId(trainerId);
+    u32 nameLength;
+
+    if (GetTrainerStructFromId(trainerId)->party == NULL || name[0] == CHAR_SPACE || name[0] == EOS)
+        return FALSE;
+    for (nameLength = 0; nameLength <= TRAINER_NAME_LENGTH && name[nameLength] != EOS; nameLength++)
+        ;
+    if (nameLength > TRAINER_NAME_LENGTH)
+        return FALSE;
+    return StringLength(GetTrainerClassNameFromId(trainerId)) + StringLength(sRadioText_PnP_Space) + nameLength
+         < RADIO_LINE_BUF_SIZE;
+}
+
+#endif
 static void GenerateStationContent(struct Pokenav_Radio *radio, u8 station)
 {
     u32 n = 0;
@@ -846,6 +870,10 @@ static void GenerateStationContent(struct Pokenav_Radio *radio, u8 station)
                              || trainerClass == TRAINER_CLASS_ELITE_FOUR
                              || trainerClass == TRAINER_CLASS_LEADER
                              || trainerClass == TRAINER_CLASS_RIVAL);
+#if TEXT_RTL
+                    if (!IsPnPTrainerUsable(trainerId))
+                        excluded = TRUE;
+#endif
                 } while (excluded);
 
                 dst = radio->lineBuffers[buf];

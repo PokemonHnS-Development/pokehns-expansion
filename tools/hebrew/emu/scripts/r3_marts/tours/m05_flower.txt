@@ -1,0 +1,22 @@
+# Goldenrod Flower Shop mints, P20000 each (GoldenrodCity_FlowerShop_hns/scripts.inc:5-50).
+start saves/ladder6_postgame_copy.sav
+include ../../continue.txt
+ev addmoney 9999999; end
+warptoloose MAP_GOLDENROD_CITY_FLOWER_SHOP_HNS 8 6
+evstart goto GoldenrodCity_FlowerShop_EventScript_MintClerk
+talk m05_flower_welcome 10 - Task_ShopMenu
+waittaskx Task_ShopMenu 600
+waitquiet
+snap m05_flower_menu
+tap A 0
+waitcb2x CB2_BuyMenu 900
+waittaskx Task_BuyMenu 900
+waitquiet
+listshots m05_flower
+press B
+waitcb2x CB2_Overworld 900
+waittaskx Task_ShopMenu 900
+waitquiet
+press B
+talk m05_flower_bye 10 -
+waitctl 900

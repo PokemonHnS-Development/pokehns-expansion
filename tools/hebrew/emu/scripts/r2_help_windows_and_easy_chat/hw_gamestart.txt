@@ -1,0 +1,29 @@
+# New game, bedroom (NewBarkTown_PlayersHouse_2F_hns): the coord trigger at (9,3)/(10,3)
+# (events.inc:26-27, VAR_NEWBARK_TOWN_STATE 0) -> "!" -> walk to the clock -> "the clock is stopped"
+# (PlayersHouse_2F_Text_ClockIsStopped) -> the wall-clock set screen (already seen elsewhere; set and
+# confirmed here) -> HELP_GAMESTART_WINDOW (scripts.inc:20-50, helpwindow = show + waitbuttonpress + hide).
+start saves/ladder1_newgame.sav
+include ../continue.txt
+vars VAR_NEWBARK_TOWN_STATE
+go RIGHT 5
+go UP 2
+go RIGHT 3
+loc
+# the next step lands on (9,3): the trigger locks the player
+16 UP
+talk hw_gs_clock 10 -
+waittaskx Task_SetClock_HandleInput 900
+waitquiet
+snap hw_gs_setclock
+tap A 4
+waittaskx Task_SetClock_HandleConfirmInput 120
+waitquiet
+snap hw_gs_setclock_confirm
+tap UP 4
+waitquiet
+tap A 4
+waitcb2x CB2_Overworld 900
+talk hw_gs_help 6 -
+waitctl 600
+snap hw_gs_after
+vars VAR_NEWBARK_TOWN_STATE

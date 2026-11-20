@@ -1,0 +1,6 @@
+[
+ {"file": "data/maps/TestTown/scripts.inc", "batch": "BX"},
+ {"file": "src/data/pokemon/species_info/gen_1_families.h", "batch": "BX"},
+ {"file": "src/data/easy_chat/easy_chat_group_test.h", "batch": "BX"},
+ {"file": "src/not_in_the_baseline.c", "batch": "BY"}
+]

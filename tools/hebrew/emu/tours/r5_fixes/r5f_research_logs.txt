@@ -1,0 +1,40 @@
+# The eight Sinjoh lab research logs (data/maps/SinjohRuins_House1_hns/scripts.inc, Note1-8): each
+# log's header page, "N, from DATE", where the log number and the day are two separate runs of
+# digits. Notes 1-4 are bg events at (8,2) (9,2) (17,2) (18,2), notes 5-8 at (20..23,8), all read
+# facing north. VAR_SINJOH_STORYLINE 6 as in r5_latin/r5l_07_johto_npcs (5 and 7 start cutscenes).
+# Run with scripts/r5_latin/r5lat.py.
+start saves/ladder6_postgame.sav
+include ../r5_latin/_setup.txt
+ev setvar VAR_SINJOH_STORYLINE, 6; end
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 8 3
+face UP
+tap A 4
+fieldwatch r5f_note1 free 6000
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 9 3
+face UP
+tap A 4
+fieldwatch r5f_note2 free 6000
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 17 3
+face UP
+tap A 4
+fieldwatch r5f_note3 free 6000
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 18 3
+face UP
+tap A 4
+fieldwatch r5f_note4 free 6000
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 20 9
+face UP
+tap A 4
+fieldwatch r5f_note5 free 6000
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 21 9
+face UP
+tap A 4
+fieldwatch r5f_note6 free 6000
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 22 9
+face UP
+tap A 4
+fieldwatch r5f_note7 free 6000
+warpto MAP_SINJOH_RUINS_HOUSE1_HNS 23 9
+face UP
+tap A 4
+fieldwatch r5f_note8 free 6000

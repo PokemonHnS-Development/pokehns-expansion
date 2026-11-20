@@ -1,0 +1,42 @@
+# r7 verify: Battle Tower intro and win lines for female-facility-class trainers 97 9 144
+start saves/r7/r7_roster_base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 6 6
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive tw_in menu
+pick 0
+drive tw_lv menu
+pick 0
+drive tw_sel task:Task_HandleChooseMonInput 20
+include ../../scripts/r2_battle_frontier_facilities/_bf_enter3.txt
+drive tw_save menu 10
+pick 0
+saveyes
+fastbattles off
+pin @gTrainerBattleParameter+2@ 6100
+drivex k097_in battle 30 9000
+oppname
+bwinr k097_b
+drivex k097_after menu 30 9000
+unpin
+sb2w16 CE0 1
+sb2w16 CB2 1
+pin @gTrainerBattleParameter+2@ 0900
+pick 0
+drivex k009_in battle 30 9000
+oppname
+bwinr k009_b
+drivex k009_after menu 30 9000
+unpin
+sb2w16 CE0 1
+sb2w16 CB2 1
+pin @gTrainerBattleParameter+2@ 9000
+pick 0
+drivex k144_in battle 30 9000
+oppname
+bwinr k144_b
+drivex k144_after menu 30 9000
+unpin

@@ -1,0 +1,18 @@
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY_HNS 7 13
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive py_in menu
+pick 1
+drive py_info menu 20
+pick 0
+drive py_lv menu
+pick 0
+drive py_sel task:Task_HandleChooseMonInput 20
+include tools/hebrew/emu/scripts/r2_battle_frontier_facilities/_bf_enter3.txt
+drive py_save menu 10
+pick 0
+saveyes
+drivex py_go free 40 12000
+loc
+ss pyr_floor1

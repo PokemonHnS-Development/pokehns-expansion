@@ -173,21 +173,21 @@ static u16 SampleResortGorgeousReward(void);
 static void Task_ShakeScreen(u8 taskId);
 static void Task_EndScreenShake(u8 taskId);
 
-static const u8 sText_BigGuy[] = _("Big guy");
-static const u8 sText_BigGirl[] = _("Big girl");
-static const u8 sText_Son[] = _("son");
-static const u8 sText_Daughter[] = _("daughter");
-static const u8 sText_99TimesPlus[] = _("99 times +");
-static const u8 sText_1MinutePlus[] = _("1 minute +");
-static const u8 sText_SpaceSeconds[] = _(" seconds");
-static const u8 sText_SpaceTimes[] = _(" time(s)");
+static const u8 sText_BigGuy[] = _("בחור גדול");
+static const u8 sText_BigGirl[] = _("בחורה גדולה");
+static const u8 sText_Son[] = _("בן");
+static const u8 sText_Daughter[] = _("בת");
+static const u8 sText_99TimesPlus[] = _("99 פעמים ומעלה");
+static const u8 sText_1MinutePlus[] = _("דקה ומעלה");
+static const u8 sText_SpaceSeconds[] = _(" שניות");
+static const u8 sText_SpaceTimes[] = _(" פעמים");
 
-static const u8 sText_Wallace[] = _("WALLACE");
-static const u8 sText_Steven[] = _("STEVEN");
-static const u8 sText_Brawly[] = _("BRAWLY");
-static const u8 sText_Winona[] = _("WINONA");
-static const u8 sText_Phoebe[] = _("PHOEBE");
-static const u8 sText_Glacia[] = _("GLACIA");
+static const u8 sText_Wallace[] = _("וולאס");
+static const u8 sText_Steven[] = _("סטיבן");
+static const u8 sText_Brawly[] = _("ברולי");
+static const u8 sText_Winona[] = _("וינונה");
+static const u8 sText_Phoebe[] = _("פיבי");
+static const u8 sText_Glacia[] = _("גלסיה");
 
 void Special_ShowDiploma(void)
 {
@@ -2555,89 +2555,89 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_GLASS_WORKSHOP_VENDOR] =
     {
-        COMPOUND_STRING("BLUE FLUTE"),
-        COMPOUND_STRING("YELLOW FLUTE"),
-        COMPOUND_STRING("RED FLUTE"),
-        COMPOUND_STRING("WHITE FLUTE"),
-        COMPOUND_STRING("BLACK FLUTE"),
-        COMPOUND_STRING("PRETTY CHAIR"),
-        COMPOUND_STRING("PRETTY DESK"),
+        COMPOUND_STRING("חליל כחול"),
+        COMPOUND_STRING("חליל צהוב"),
+        COMPOUND_STRING("חליל אדום"),
+        COMPOUND_STRING("חליל לבן"),
+        COMPOUND_STRING("חליל שחור"),
+        COMPOUND_STRING("כיסא יפה"),
+        COMPOUND_STRING("שולחן יפה"),
         gText_Exit
     },
     [SCROLL_MULTI_POKEMON_FAN_CLUB_RATER] =
     {
-        COMPOUND_STRING("0 pts"),
-        COMPOUND_STRING("10 pts"),
-        COMPOUND_STRING("20 pts"),
-        COMPOUND_STRING("30 pts"),
-        COMPOUND_STRING("40 pts"),
-        COMPOUND_STRING("50 pts"),
-        COMPOUND_STRING("60 pts"),
-        COMPOUND_STRING("70 pts"),
-        COMPOUND_STRING("80 pts"),
-        COMPOUND_STRING("90 pts"),
-        COMPOUND_STRING("100 pts"),
+        COMPOUND_STRING("0 נק'"),
+        COMPOUND_STRING("10 נק'"),
+        COMPOUND_STRING("20 נק'"),
+        COMPOUND_STRING("30 נק'"),
+        COMPOUND_STRING("40 נק'"),
+        COMPOUND_STRING("50 נק'"),
+        COMPOUND_STRING("60 נק'"),
+        COMPOUND_STRING("70 נק'"),
+        COMPOUND_STRING("80 נק'"),
+        COMPOUND_STRING("90 נק'"),
+        COMPOUND_STRING("100 נק'"),
         COMPOUND_STRING("?")
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_1] =
     {
-        COMPOUND_STRING("KISS POSTER{CLEAR_TO 0x5E}16BP"),
-        COMPOUND_STRING("KISS CUSHION{CLEAR_TO 0x5E}32BP"),
-        COMPOUND_STRING("SMOOCHUM DOLL{CLEAR_TO 0x5E}32BP"),
-        COMPOUND_STRING("TOGEPI DOLL{CLEAR_TO 0x5E}48BP"),
-        COMPOUND_STRING("MEOWTH DOLL{CLEAR_TO 0x5E}48BP"),
-        COMPOUND_STRING("CLEFAIRY DOLL{CLEAR_TO 0x5E}48BP"),
-        COMPOUND_STRING("DITTO DOLL{CLEAR_TO 0x5E}48BP"),
-        COMPOUND_STRING("CYNDAQUIL DOLL{CLEAR_TO 0x5E}80BP"),
-        COMPOUND_STRING("CHIKORITA DOLL{CLEAR_TO 0x5E}80BP"),
-        COMPOUND_STRING("TOTODILE DOLL{CLEAR_TO 0x5E}80BP"),
+        COMPOUND_STRING("פוסטר נשיקה{CLEAR_TO 0x5E}16BP"),
+        COMPOUND_STRING("כרית נשיקה{CLEAR_TO 0x5E}32BP"),
+        COMPOUND_STRING("בובת סמוצ'ום{CLEAR_TO 0x5E}32BP"),
+        COMPOUND_STRING("בובת טוגפי{CLEAR_TO 0x5E}48BP"),
+        COMPOUND_STRING("בובת מיאו{CLEAR_TO 0x5E}48BP"),
+        COMPOUND_STRING("בובת קלפרי{CLEAR_TO 0x5E}48BP"),
+        COMPOUND_STRING("בובת דיטו{CLEAR_TO 0x5E}48BP"),
+        COMPOUND_STRING("בובת סינדקוויל{CLEAR_TO 0x5E}80BP"),
+        COMPOUND_STRING("בובת צ'יקוריטה{CLEAR_TO 0x5E}80BP"),
+        COMPOUND_STRING("בובת טוטודייל{CLEAR_TO 0x5E}80BP"),
         gText_Exit
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2] =
     {
-        COMPOUND_STRING("LAPRAS DOLL{CLEAR_TO 0x58}128BP"),
-        COMPOUND_STRING("SNORLAX DOLL{CLEAR_TO 0x58}128BP"),
-        COMPOUND_STRING("VENUSAUR DOLL{CLEAR_TO 0x58}256BP"),
-        COMPOUND_STRING("CHARIZARD DOLL{CLEAR_TO 0x58}256BP"),
-        COMPOUND_STRING("BLASTOISE DOLL{CLEAR_TO 0x58}256BP"),
+        COMPOUND_STRING("בובת לפרס{CLEAR_TO 0x58}128BP"),
+        COMPOUND_STRING("בובת סנורלקס{CLEAR_TO 0x58}128BP"),
+        COMPOUND_STRING("בובת וינאזור{CLEAR_TO 0x58}256BP"),
+        COMPOUND_STRING("בובת צ'ריזארד{CLEAR_TO 0x58}256BP"),
+        COMPOUND_STRING("בובת בלסטויז{CLEAR_TO 0x58}256BP"),
         gText_Exit
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR] =
     {
-        COMPOUND_STRING("PROTEIN{CLEAR_TO 0x64}1BP"),
-        COMPOUND_STRING("CALCIUM{CLEAR_TO 0x64}1BP"),
-        COMPOUND_STRING("IRON{CLEAR_TO 0x64}1BP"),
-        COMPOUND_STRING("ZINC{CLEAR_TO 0x64}1BP"),
-        COMPOUND_STRING("CARBOS{CLEAR_TO 0x64}1BP"),
-        COMPOUND_STRING("HP UP{CLEAR_TO 0x64}1BP"),
+        COMPOUND_STRING("חלבון{CLEAR_TO 0x64}1BP"),
+        COMPOUND_STRING("סידן{CLEAR_TO 0x64}1BP"),
+        COMPOUND_STRING("ברזל{CLEAR_TO 0x64}1BP"),
+        COMPOUND_STRING("אבץ{CLEAR_TO 0x64}1BP"),
+        COMPOUND_STRING("פחמימות{CLEAR_TO 0x64}1BP"),
+        COMPOUND_STRING("הגדלת נ”ח{CLEAR_TO 0x64}1BP"),
         gText_Exit
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR] =
     {
-        COMPOUND_STRING("LEFTOVERS{CLEAR_TO 0x5E}48BP"),
-        COMPOUND_STRING("WHITE HERB{CLEAR_TO 0x5E}48BP"),
-        COMPOUND_STRING("QUICK CLAW{CLEAR_TO 0x5E}48BP"),
-        COMPOUND_STRING("MENTAL HERB{CLEAR_TO 0x5E}48BP"),
-        COMPOUND_STRING("BRIGHTPOWDER{CLEAR_TO 0x5E}64BP"),
-        COMPOUND_STRING("CHOICE BAND{CLEAR_TO 0x5E}64BP"),
-        COMPOUND_STRING("KING'S ROCK{CLEAR_TO 0x5E}64BP"),
-        COMPOUND_STRING("FOCUS BAND{CLEAR_TO 0x5E}64BP"),
-        COMPOUND_STRING("SCOPE LENS{CLEAR_TO 0x5E}64BP"),
+        COMPOUND_STRING("שאריות{CLEAR_TO 0x5E}48BP"),
+        COMPOUND_STRING("עשב לבן{CLEAR_TO 0x5E}48BP"),
+        COMPOUND_STRING("טופר מהיר{CLEAR_TO 0x5E}48BP"),
+        COMPOUND_STRING("עשב נפשי{CLEAR_TO 0x5E}48BP"),
+        COMPOUND_STRING("אבקה מבריקה{CLEAR_TO 0x5E}64BP"),
+        COMPOUND_STRING("סרט בחירה{CLEAR_TO 0x5E}64BP"),
+        COMPOUND_STRING("סלע המלך{CLEAR_TO 0x5E}64BP"),
+        COMPOUND_STRING("רצועת ריכוז{CLEAR_TO 0x5E}64BP"),
+        COMPOUND_STRING("עדשת דיוק{CLEAR_TO 0x5E}64BP"),
         gText_Exit
     },
     [SCROLL_MULTI_BERRY_POWDER_VENDOR] =
     {
-        COMPOUND_STRING("ENERGYPOWDER{CLEAR_TO 114}{FONT_SMALL}50"),
-        COMPOUND_STRING("ENERGY ROOT{CLEAR_TO 114}{FONT_SMALL}80"),
-        COMPOUND_STRING("HEAL POWDER{CLEAR_TO 114}{FONT_SMALL}50"),
-        COMPOUND_STRING("REVIVAL HERB{CLEAR_TO 108}{FONT_SMALL}300"),
-        COMPOUND_STRING("PROTEIN{CLEAR_TO 99}{FONT_SMALL}1,000"),
-        COMPOUND_STRING("IRON{CLEAR_TO 99}{FONT_SMALL}1,000"),
-        COMPOUND_STRING("CARBOS{CLEAR_TO 99}{FONT_SMALL}1,000"),
-        COMPOUND_STRING("CALCIUM{CLEAR_TO 99}{FONT_SMALL}1,000"),
-        COMPOUND_STRING("ZINC{CLEAR_TO 99}{FONT_SMALL}1,000"),
-        COMPOUND_STRING("HP UP{CLEAR_TO 99}{FONT_SMALL}1,000"),
-        COMPOUND_STRING("PP UP{CLEAR_TO 99}{FONT_SMALL}3,000"),
+        COMPOUND_STRING("אבקת אנרגיה{CLEAR_TO 114}{FONT_SMALL}50"),
+        COMPOUND_STRING("שורש אנרגיה{CLEAR_TO 114}{FONT_SMALL}80"),
+        COMPOUND_STRING("אבקת ריפוי{CLEAR_TO 114}{FONT_SMALL}50"),
+        COMPOUND_STRING("עשב תחייה{CLEAR_TO 108}{FONT_SMALL}300"),
+        COMPOUND_STRING("חלבון{CLEAR_TO 99}{FONT_SMALL}1,000"),
+        COMPOUND_STRING("ברזל{CLEAR_TO 99}{FONT_SMALL}1,000"),
+        COMPOUND_STRING("פחמימות{CLEAR_TO 99}{FONT_SMALL}1,000"),
+        COMPOUND_STRING("סידן{CLEAR_TO 99}{FONT_SMALL}1,000"),
+        COMPOUND_STRING("אבץ{CLEAR_TO 99}{FONT_SMALL}1,000"),
+        COMPOUND_STRING("הגדלת נ”ח{CLEAR_TO 99}{FONT_SMALL}1,000"),
+        COMPOUND_STRING("הגדלת נ”כ{CLEAR_TO 99}{FONT_SMALL}3,000"),
         gText_Exit
     },
     [SCROLL_MULTI_BF_RECEPTIONIST] =
@@ -2655,38 +2655,38 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_BF_MOVE_TUTOR_1] =
     {
-        COMPOUND_STRING("SOFTBOILED{CLEAR_TO 0x4E}16BP"),
-        COMPOUND_STRING("SEISMIC TOSS{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("DREAM EATER{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("MEGA PUNCH{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("MEGA KICK{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("BODY SLAM{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("ROCK SLIDE{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("COUNTER{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("THUNDER WAVE{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("SWORDS DANCE{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("ביצה רכה{CLEAR_TO 0x4E}16BP"),
+        COMPOUND_STRING("מכה ססמית{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("זלילת חלום{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("אגרוף על{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("בעיטת על{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("חבטת גוף{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("מפולת סלע{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("מתקפת נגד{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("גל רעם{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("מחול חרבות{CLEAR_TO 0x4E}48BP"),
         gText_Exit
     },
     [SCROLL_MULTI_BF_MOVE_TUTOR_2] =
     {
-        COMPOUND_STRING("DEFENSE CURL{CLEAR_TO 0x4E}16BP"),
-        COMPOUND_STRING("SNORE{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("MUD-SLAP{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("SWIFT{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("ICY WIND{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("ENDURE{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("PSYCH UP{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("ICE PUNCH{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("THUNDERPUNCH{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("FIRE PUNCH{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("עמדת הגנה{CLEAR_TO 0x4E}16BP"),
+        COMPOUND_STRING("נחירה{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("סטירת בוץ{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("מטר כוכבים{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("רוח קרה{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("עמידה{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("עידוד עצמי{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("אגרוף קרח{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("אגרוף רעם{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("אגרוף אש{CLEAR_TO 0x4E}48BP"),
         gText_Exit
     },
 #if IS_HNS
         [SCROLL_MULTI_BF_MOVE_TUTOR_3] =
     {
-        COMPOUND_STRING("FRENZY PLANT{CLEAR_TO 0x4E}64BP"),
-        COMPOUND_STRING("BLAST BURN{CLEAR_TO 0x4E}64BP"),
-        COMPOUND_STRING("HYDRO CANNON{CLEAR_TO 0x4E}64BP"),
+        COMPOUND_STRING("צמח פראי{CLEAR_TO 0x4E}64BP"),
+        COMPOUND_STRING("פיצוץ אש{CLEAR_TO 0x4E}64BP"),
+        COMPOUND_STRING("תותח מים{CLEAR_TO 0x4E}64BP"),
         gText_Exit
     },
 #endif
@@ -5411,7 +5411,7 @@ static void Task_ElevatorShake(u8 taskId)
     }
 }
 
-static const u8 sText_NowOn[] = _("Now on:");
+static const u8 sText_NowOn[] = _("כעת ב:");
 
 void DrawElevatorCurrentFloorWindow(void)
 {

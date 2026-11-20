@@ -1,0 +1,9 @@
+# Battle Arena lobby: attendant INFO, CHALLENGE -> level -> party pick (cancelled), the rules
+# board's first topic, every other NPC and sign.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_BATTLE_FRONTIER_BATTLE_ARENA_LOBBY_HNS 7 11 arl
+talkobj 1 arl_info pick=1
+talkobj 1 arl_ch pick=0,0
+signpick 1 7 arl_rules pick=0
+visit arl skip=1

@@ -1,0 +1,9 @@
+# shared Cherrygrove clerk (MAP_FUCHSIA_CITY_MART_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_FUCHSIA_CITY_MART_HNS
+clerk 2 3 m13_hi
+buyopen m13_buy
+listshots m13_list
+buyclose m13_menu
+shopquit m13_bye

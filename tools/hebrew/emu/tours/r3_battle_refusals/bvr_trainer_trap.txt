@@ -1,0 +1,24 @@
+# gText_PkmnsXPreventsSwitching (src/battle_message.c:75) for a trainer's Pokemon: B_BUFF1 is the
+# foe's name with the trainer-battle prefix (SetMonPreventsSwitchingString, src/pokemon.c:8352-8369),
+# not the wild one. Youngster Mikey's Hoothoot (setup of battle_trainer.txt) is given Shadow Tag
+# by writing gBattleMons[1].ability (struct BattlePokemon, include/pokemon.h:337-366: 0x88 bytes,
+# ability at 0x20 as measured next to hp at 0x2A; ABILITY_SHADOW_TAG = 23,
+# include/constants/abilities.h:29) once the battle has started.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_PIKACHU, 30, move1=MOVE_THUNDERBOLT; givemon SPECIES_CYNDAQUIL, 30, move1=MOVE_EMBER; end
+
+face UP
+pinrng
+8 UP
+waitnotfree 120
+bwalk bvr_ttrap_intro input:HandleInputChooseAction
+expect16 @gBattleMons+88@ A3              # battler 1 is Hoothoot (SPECIES_HOOTHOOT 163)
+w16 @gBattleMons+A8@ 17
+include ../_bv_switch.txt
+seek 8 @gPartyMenu+9@ 1 DOWN
+include _sub.txt
+include _shift.txt
+pages bvr_ttrap_prevents
+include _back_to_party.txt
+snap bvr_ttrap_party_back
