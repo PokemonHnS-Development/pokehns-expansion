@@ -78,7 +78,7 @@ SootopolisCity_EventScript_SetNormalLayout::
 	return
 
 SootopolisCity_EventScript_SetLegendariesLayout::
-	setmaplayoutindex LAYOUT_SOOTOPOLIS_CITY_LEGENDS_BATTLE
+	@ Hoenn & Seek: legends layout not compiled while the legendary sites are sealed.
 	return
 
 SootopolisCity_EventScript_SetWeather::

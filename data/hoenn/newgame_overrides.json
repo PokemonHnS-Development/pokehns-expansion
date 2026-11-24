@@ -76,9 +76,15 @@
     "FLAG_HIDE_ROUTE_121_TEAM_AQUA_GRUNTS",
     "FLAG_HIDE_LILYCOVE_MOTEL_SCOTT",
     "FLAG_HIDE_FORTREE_CITY_KECLEON",
-    "FLAG_KECLEON_FLED_FORTREE"
+    "FLAG_KECLEON_FLED_FORTREE",
+    "FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE",
+    "FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN",
+    "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN",
+    "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE",
+    "FLAG_HIDE_MOSSDEEP_CITY_SCOTT",
+    "FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_2_SCANNER"
   ],
-  "_areas": "part 8: harbors, Steven's house; part 10: Littleroot-Rustboro, Dewford, Slateport, Mauville, Routes 101-110, 116-118; part 11: Fallarbor, Lavaridge, Fortree, Lilycove, Mt. Chimney/Pyre, Meteor Falls, hideouts, Routes 111-115, 119-123",
+  "_areas": "part 8: harbors, Steven's house; part 10: Littleroot-Rustboro, Dewford, Slateport, Mauville, Routes 101-110, 116-118; part 11: Fallarbor, Lavaridge, Fortree, Lilycove, Mt. Chimney/Pyre, Meteor Falls, hideouts, Routes 111-115, 119-123; part 12: Mossdeep, Sootopolis, Pacifidlog, Routes 124-134, Abandoned Ship",
   "vars": {
     "VAR_LITTLEROOT_INTRO_STATE": 7,
     "VAR_LITTLEROOT_TOWN_STATE": 4,
@@ -114,6 +120,11 @@
     "VAR_MT_PYRE_STATE": 3,
     "VAR_ROUTE119_STATE": 1,
     "VAR_ROUTE121_STATE": 1,
-    "VAR_WEATHER_INSTITUTE_STATE": 1
+    "VAR_WEATHER_INSTITUTE_STATE": 1,
+    "VAR_MOSSDEEP_CITY_STATE": 3,
+    "VAR_MOSSDEEP_SPACE_CENTER_STATE": 3,
+    "VAR_SOOTOPOLIS_CITY_STATE": 6,
+    "VAR_SKY_PILLAR_STATE": 3,
+    "VAR_ROUTE128_STATE": 2
   }
 }

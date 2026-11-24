@@ -33,6 +33,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 9 (stamps on the trainer card, gym level scaling) | 32,552,996 / 978 KB | 32,701,860 / 833 KB |
 | Part 10 (post-Emerald state, west/south; +6 script-swapped layouts) | 32,583,540 / 948 KB | 32,732,404 / 803 KB |
 | Part 11 (post-Emerald state, north/east; scaled Kecleon, gifts moved) | 32,584,628 / 947 KB | 32,733,460 / 801 KB |
+| Part 12 (post-Emerald state, sea; legendary sites sealed: −Cave of Origin, −Seafloor Cavern, −2 swap layouts) | 32,551,860 / 979 KB | 32,700,660 / 834 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -78,7 +79,14 @@ Read the roadmap entry for the part you're working on before starting.
   - Route 120: Steven is replaced by a Devon field tester (Devon employee sprite) who gives the Devon Scope after the Kecleon; he fades out instead of flying.
   - `special HoennSetupScaledWildBattle` (`src/hoenn_scaling.c`) starts a wild battle with `VAR_0x8004` as species at gym-ace level − 8 (60–70). Use it for any other scripted Hoenn wild battle.
   - Leftover dialogue for the part-13 text pass: leaders still say "Registered ... in the POKéNAV" and Flannery's "You battle like NORMAN".
-- **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Mirage Island, Sky Pillar and the Sootopolis legends layouts are among them; part 12 can drop those scripts and layouts (~20 KB).
+- **Story strip, sea (part 12):** overrides cover Mossdeep and the Space Center (after Magma's raid), Sootopolis (state 6: gym open, the Cave of Origin expert guards the door), Route 128, Pacifidlog and the Abandoned Ship (Scanner hidden; Captain Stern's quest is cut).
+  - Steven's house: the old Beldum ball holds a stone (`HoennSeek_EventScript_StevensStone`): Metagrossite if the player has `ITEM_MEGA_RING` when picking it up, otherwise a Shiny Stone. HnS has no Mega Ring source yet, so today it's always the Shiny Stone.
+  - The Weather Institute scientist moves to (2,2) once `FLAG_SYS_GAME_CLEAR` is set (every Hoenn visitor has it), so look for him there.
+- **Legendary sites sealed until 2.0 (part 12, one commit: "Seal Hoenn's legendary sites").** To undo it: `git revert --no-commit 23adc4fc && git checkout HEAD -- CLAUDE.md` (that commit also carries these notes), then re-run the generators and update the notes. It:
+  - adds `CaveOfOrigin_`, `SeafloorCavern_` and `Underwater_SeafloorCavern` to `data/hoenn/exclude.json` (Sky Pillar, Sealed Chamber, the Regi caves, Terra/Marine Cave and the islands were already excluded since part 2);
+  - puts a sign event running `HoennSeek_EventScript_SealedSite` (`data/scripts/hoenn_sealed.inc`) on each entrance tile: Routes 105, 111, 120 and 131, Sootopolis and Underwater Route 128. The Sealed Chamber hole on Underwater Route 134 is walk-on, so it gets a step trigger that shows the text and moves you back;
+  - drops Mirage Island (Route 130 never swaps its layout) and the Sootopolis legends layout, and stops the Weather Institute scientist from starting abnormal weather (Terra/Marine Cave). `FLAG_SYS_WEATHER_CTRL` is never set in our world, so the Groudon/Kyogre clash weather can't show either.
+- **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
 - C code switches on `IS_HNS` / `IS_FRLG` at build time (570 uses across 127 files). Hoenn needs some Emerald behavior at runtime, so convert those switches to region checks where needed. Don't flip them globally.
@@ -93,9 +101,9 @@ Read the roadmap entry for the part you're working on before starting.
   - Reached through hooks in `GetFlagPointer`/`GetVarPointer` (`src/event_data.c`). Cleared in `NewGameInitData`. SaveBlock3 is 564 of 1,624 bytes.
   - Hidden-item flags must stay below 0x20E9 (13-bit offset from `FLAG_HIDDEN_ITEMS_START`); the generator puts them first.
 - **Trainers.**
-  - Hoenn trainers get IDs from `HOENN_TRAINERS_START` (653) up: 513 now, 653–1165.
+  - Hoenn trainers get IDs from `HOENN_TRAINERS_START` (653) up: 506 now (part 12), 653–1158.
   - Their "defeated" flags come from `TRAINER_FLAG_ID(id)` (used in `battle_setup.c`, `debug.c`), not `TRAINER_FLAGS_START + id`.
-  - `MAX_TRAINERS_COUNT_HNS` was raised to 1168, which moves `TRAINER_PARTNER()` IDs and grows `sTrainerSlides`.
+  - `MAX_TRAINERS_COUNT_HNS` was raised (1160 since part 12; the generator sets it), which moves `TRAINER_PARTNER()` IDs and grows `sTrainerSlides`.
 - **Remap rules:**
   - Remapped:
     - Emerald names that resolved to 0.

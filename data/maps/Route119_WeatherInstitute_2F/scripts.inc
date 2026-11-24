@@ -125,7 +125,7 @@ Route119_WeatherInstitute_2F_EventScript_ExplainCastform::
 	end
 
 Route119_WeatherInstitute_2F_EventScript_ScientistMentionWeather::
-	goto_if_set FLAG_SYS_GAME_CLEAR, Route119_WeatherInstitute_2F_EventScript_TryStartAbnormalWeather
+	@ Hoenn & Seek: abnormal weather (Terra/Marine Cave) sealed until 2.0.
 	msgbox Route119_WeatherInstitute_2F_Text_ChangingWeatherRidiculous, MSGBOX_DEFAULT
 	release
 	end
