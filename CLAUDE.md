@@ -27,6 +27,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 3 (351 Hoenn maps: headers, events, connections) | 32,318,292 / 1,207 KB | 32,479,076 / 1,050 KB |
 | Part 4 (513 Hoenn trainers, trainer cap 864→1168) | 32,498,404 / 1,031 KB | 32,646,212 / 887 KB |
 | Part 5 (Hoenn door animations, mapsecs, warp safety) | 32,527,764 / 1,002 KB | 32,675,540 / 858 KB |
+| Part 6 (region map/Fly per region, Hoenn wild tables) | 32,547,620 / 983 KB | 32,695,364 / 839 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -38,8 +39,10 @@ Read the roadmap entry for the part you're working on before starting.
 - Emerald tilesets are compiled into HnS: `src/data/tilesets/headers.h` and `metatiles.h` use `#if !IS_FRLG`. In debug builds, 7 tilesets that no kept layout uses waste ~39 KB; release builds drop them through LTO/gc-sections.
 - **Map sections (part 5).** `tools/hoenn/gen_hoenn_mapsecs.py` appends the 79 Hoenn sections used by kept maps to `hns_map_sections` in `src/data/region_map/region_map_sections.json` (HnS values 1–124 unchanged; Hoenn 125–203; `MAPSEC_NONE` = 204).
   - Before this, every Hoenn section was `= 0` in HnS.
-  - Sections after `JOHTO_MAPSEC_END` make `GetRegionForSectionId()`/`GetCurrentRegion()` return `REGION_HOENN`. **Use `GetCurrentRegion() == REGION_HOENN` for runtime Hoenn checks.**
+  - Sections after `JOHTO_MAPSEC_END` make `GetRegionForSectionId()` return `REGION_HOENN`, but so do HnS's own Battle Frontier, Trainer Hill and Birth/Faraway/Southern Island sections. **Use `IsHoennMapSec(id)` from `include/hoenn.h` for runtime Hoenn checks** (part 6). It reads `include/constants/hoenn_mapsecs.h`, which `gen_hoenn_mapsecs.py` writes.
   - Four sections HnS already lists (ABANDONED_SHIP, LILYCOVE_CITY, SAFARI_ZONE, VICTORY_ROAD) sit before Pallet, outside every range, so they also count as Hoenn.
+- **Region map and Fly (part 6):** `src/region_map.c` shows Emerald's Hoenn map whenever the player is in a Hoenn section, so Fly only reaches Hoenn towns from Hoenn and Johto/Kanto towns from there. The Pokédex area page (`src/pokedex_area_screen.c`) only marks areas in the region whose map is shown. Edge case: HnS's own contest lobby copy uses `MAPSEC_LILYCOVE_CITY`, so it shows the Hoenn map.
+- **Wild encounters (part 6):** `tools/wild_encounters/wild_encounters_to_header.py` builds Emerald tables for maps in `data/hoenn/maps.json` into HnS (116 tables, in the TIME_DAY slot). Levels are still Emerald's; part 15 rescales them.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
 - C code switches on `IS_HNS` / `IS_FRLG` at build time (570 uses across 127 files). Hoenn needs some Emerald behavior at runtime, so convert those switches to region checks where needed. Don't flip them globally.

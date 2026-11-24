@@ -150,6 +150,7 @@ static const u8 sRegionMapPlayerIcon_KrisGfx[] = INCBIN_U8("graphics/pokenav/reg
 #include "data/region_map/region_map_layout_jk.h"
 #endif
 #include "data/region_map/region_map_entries.h"
+#include "hoenn.h" // Hoenn & Seek
 
 #if IS_HNS
 // Johto-only map coordinates (before FLAG_VISITED_KANTO is set).
@@ -281,6 +282,8 @@ const struct RegionMapLocation *GetActiveRegionMapEntries(void)
 {
 #if IS_HNS
     const struct RegionMapLocation *entries;
+    if (IsHoennMapSec(gMapHeader.regionMapSectionId)) // Hoenn & Seek: Hoenn coordinates live in gRegionMapEntries
+        return gRegionMapEntries;
     if (FlagGet(FLAG_VISITED_KANTO))
         entries = sRegionMapEntries_Johto;
     else
@@ -293,7 +296,7 @@ const struct RegionMapLocation *GetActiveRegionMapEntries(void)
 
 static const mapsec_u16_t sRegionMap_SpecialPlaceLocations[][2] =
 {
-#if IS_HNS
+#if IS_HNS && 0 // Hoenn & Seek: these keys were all 0 in HnS; Hoenn now uses Emerald's list below
     {MAPSEC_UNDERWATER_105,             MAPSEC_ROUTE_30},
     #ifdef BUGFIX
     {MAPSEC_UNDERWATER_125,             MAPSEC_UNION_CAVE},
@@ -337,7 +340,9 @@ static const mapsec_u16_t sRegionMap_SpecialPlaceLocations[][2] =
     {MAPSEC_MT_PYRE,                    MAPSEC_ROUTE_122},
     {MAPSEC_SKY_PILLAR,                 MAPSEC_ROUTE_131},
     {MAPSEC_MIRAGE_TOWER,               MAPSEC_ROUTE_111},
+#if !IS_HNS // Hoenn & Seek: HnS's own Trainer Hill isn't in Hoenn
     {MAPSEC_TRAINER_HILL,               MAPSEC_ROUTE_111},
+#endif
     {MAPSEC_DESERT_UNDERPASS,           MAPSEC_ROUTE_114},
     {MAPSEC_ALTERING_CAVE,              MAPSEC_ROUTE_103},
     {MAPSEC_ARTISAN_CAVE,               MAPSEC_ROUTE_103},
@@ -1490,6 +1495,8 @@ void PokedexAreaScreen_UpdateRegionMapVariablesAndVideoRegs(s16 x, s16 y)
 enum RegionMapType GetRegionMapType(u32 mapSecId)
 {
 #if IS_HNS
+    if (IsHoennMapSec(mapSecId)) // Hoenn & Seek
+        return REGION_MAP_HOENN;
     if (FlagGet(FLAG_VISITED_KANTO))
         return REGION_MAP_JK;
     return REGION_MAP_JOHTO;
@@ -1526,6 +1533,8 @@ static mapsec_u16_t GetMapSecIdAt(u16 x, u16 y)
     x -= MAPCURSOR_X_MIN;
 
 #if IS_HNS
+    if (IsHoennMapSec(gMapHeader.regionMapSectionId)) // Hoenn & Seek
+        return sRegionMap_MapSectionLayout[y][x];
     if (FlagGet(FLAG_VISITED_KANTO))
         return sRegionMapSections_JK[y][x];
     return sRegionMapSections_Johto[y][x];
@@ -1670,7 +1679,7 @@ static void InitMapBasedOnPlayerLocation(void)
         y = GetActiveRegionMapEntries()[sRegionMap->mapSecId].height - 1;
     }
 
-#if !IS_HNS
+    if (!IS_HNS || IsHoennMapSec(sRegionMap->mapSecId)) // Hoenn & Seek
     switch (sRegionMap->mapSecId)
     {
     case MAPSEC_ROUTE_114:
@@ -1704,7 +1713,6 @@ static void InitMapBasedOnPlayerLocation(void)
         GetMarineCaveCoords(&sRegionMap->cursorPosX, &sRegionMap->cursorPosY);
         return;
     }
-#endif
     sRegionMap->cursorPosX = GetActiveRegionMapEntries()[sRegionMap->mapSecId].x + x + MAPCURSOR_X_MIN;
     sRegionMap->cursorPosY = GetActiveRegionMapEntries()[sRegionMap->mapSecId].y + y + MAPCURSOR_Y_MIN;
 }
@@ -1767,7 +1775,7 @@ static u8 GetMapsecType(mapsec_u16_t mapSecId)
     {
     case MAPSEC_NONE:
         return MAPSECTYPE_NONE;
-#if !IS_HNS
+#if 1 // Hoenn & Seek: Hoenn cities (their sections were 0 in HnS before)
     case MAPSEC_LITTLEROOT_TOWN:
         return FlagGet(FLAG_VISITED_LITTLEROOT_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     case MAPSEC_OLDALE_TOWN:
@@ -3031,7 +3039,7 @@ u32 FilterFlyDestination(struct RegionMap* regionMap)
 #else
         return HEAL_LOCATION_BATTLE_FRONTIER_OUTSIDE_EAST;
 #endif
-#if !IS_HNS
+#if 1 // Hoenn & Seek
     case MAPSEC_LITTLEROOT_TOWN:
         return (gSaveBlock2Ptr->playerGender == MALE ? HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE : HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE);
     case MAPSEC_EVER_GRANDE_CITY:

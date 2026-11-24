@@ -12,6 +12,7 @@
 #include "palette.h"
 #include "pokedex.h"
 #include "pokedex_area_screen.h"
+#include "hoenn.h" // Hoenn & Seek
 #include "regions.h"
 #include "region_map.h"
 #include "roamer.h"
@@ -324,6 +325,10 @@ static void FindMapsWithMon(u16 species)
     // up to allow handling others.
     for (i = 0; sFeebasData[i][0] != NUM_SPECIES; i++)
     {
+#if IS_HNS // Hoenn & Seek: Feebas's Route 119 spot only belongs on the Hoenn map
+        if (GetRegionMapType(gMapHeader.regionMapSectionId) != REGION_MAP_HOENN)
+            continue;
+#endif
         if (species == sFeebasData[i][0])
         {
             switch (sFeebasData[i][1])
@@ -349,7 +354,16 @@ static void FindMapsWithMon(u16 species)
     // Add regular species to the area map
     for (i = 0; gWildMonHeaders[i].mapGroup != MAP_GROUP(MAP_UNDEFINED); i++)
     {
+#if IS_HNS // Hoenn & Seek: skip encounter tables whose map was cut, and keep Hoenn/Johto-Kanto apart
+        const struct MapHeader *wildMapHeader = Overworld_GetMapHeaderByGroupAndId(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum);
+        if (wildMapHeader == NULL)
+            continue;
+        u32 headerSectionId = wildMapHeader->regionMapSectionId;
+        if (IsHoennMapSec(headerSectionId) != (currentRegionMapType == REGION_MAP_HOENN))
+            continue;
+#else
         u32 headerSectionId = Overworld_GetMapHeaderByGroupAndId(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum)->regionMapSectionId;
+#endif
 
 #if IS_HNS
         if (currentRegionMapType == REGION_MAP_JOHTO
