@@ -29,6 +29,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 5 (Hoenn door animations, mapsecs, warp safety) | 32,527,764 / 1,002 KB | 32,675,540 / 858 KB |
 | Part 6 (region map/Fly per region, Hoenn wild tables) | 32,547,620 / 983 KB | 32,695,364 / 839 KB |
 | Part 7 (HM09 Dive, Steven's letter) | 32,549,332 / 981 KB | 32,698,084 / 836 KB |
+| Part 8 (Oak's ticket, ferry, Mt. Silver gate, Hoenn new-game flags) | 32,551,572 / 979 KB | 32,700,308 / 834 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -50,6 +51,13 @@ Read the roadmap entry for the part you're working on before starting.
   - Steven's house (`MossdeepCity_StevensHouse`): Steven is away, his letter is always on the table, and reading it gives HM09 (`FLAG_RECEIVED_HM_DIVE`, now a real Hoenn flag; `gen_hoenn_ids.py` remaps `FLAG_RECEIVED_HM_*` names that are 0 in HnS).
   - Dive still unlocks with `FLAG_BADGE07_GET` (Glacier Badge), which every player reaching Hoenn has. Surface with **B**.
   - Dive spots: Routes 124, 126, 127, 128 (deep water) and 134 (map script into Underwater Route 134; its Sealed Chamber door stays shut). Route 125 has no dive spots; `Underwater_Route125` only led to the Marine Cave and is unreachable.
+- **Hoenn new-game state (part 8):** `tools/hoenn/gen_hoenn_newgame.py` writes `data/scripts/hoenn_new_game.inc` (`EventScript_ResetAllMapFlagsHoenn`): the flags Emerald sets at new game that are Hoenn-owned (146), then `data/hoenn/newgame_overrides.json` (post-Emerald state: what to show or hide). `NewGameInitData` runs it right after clearing the Hoenn flags. **Put post-Emerald object visibility in the overrides file**, not in map OnTransition scripts. Re-run after `gen_hoenn_ids.py`.
+- **Hand-defined Hoenn flags/vars (part 8):** `include/constants/hoenn_custom.h`, in the reserved tails 0x1BC0–0x1BFF and 0x7070–0x707F (the generator stops before them). Stamp flags `FLAG_HOENN_STAMP_GYM_1..8` and `FLAG_HOENN_STAMP_WALLACE` live here.
+- **Ferry and gating (part 8),** scripts in `data/scripts/hoenn_ferry.inc`:
+  - Oak (16 badges) gives `ITEM_TIDAL_TICKET` (key item after `ITEM_HM09_SLOT`) instead of opening Mt. Silver.
+  - Vermilion's sailor menu gets SLATEPORT CITY. It's a scrolling `dynmultichoice` because seven entries don't fit HnS's fixed multichoice.
+  - Slateport and Lilycove harbor attendants (map.json script swapped) sail to Vermilion, the other harbor, or HnS's Battle Frontier. No S.S. Tidal interior ride. Arrivals: Hoenn harbors (8,11), Vermilion port (8,9).
+  - Mt. Silver: `ReceptionGate_hns` OnTransition hides the Silver guard and sets `VAR_ROUTE28_SCIENTIST` = 1 once `FLAG_HOENN_STAMP_WALLACE` is set. Oak's later dialogue reflects it.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
 - C code switches on `IS_HNS` / `IS_FRLG` at build time (570 uses across 127 files). Hoenn needs some Emerald behavior at runtime, so convert those switches to region checks where needed. Don't flip them globally.
@@ -82,7 +90,7 @@ Read the roadmap entry for the part you're working on before starting.
   - `tools/hoenn/check_links.py` still lists the 21 targets, for reference.
   - **Doors:** `gen_hoenn_lists.py` writes `data/hoenn/blocked_maps.json`, and `tools/mapjson` emits warps into those maps inside `.if IS_HNS` with coordinates 0x7FFF, so the door stays shut (the warp keeps its index).
   - **Scripts:** `ApplyCurrentWarp` (`src/overworld.c`) refuses any warp whose map header is NULL and keeps the player in place.
-  - Still to give real destinations: Lilycove contest lobby (part 17), harbor ferry/Frontier menu (part 8).
+  - Still to give a real destination: Lilycove contest lobby (part 17).
 - **9 specials used by Hoenn maps have HnS-specific branches inside:**
   - `GameClear` (part 13)
   - `EnterSafariMode` / `ExitSafariMode` (part 17)

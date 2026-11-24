@@ -1,0 +1,12 @@
+{
+  "_comment": "Hoenn & Seek: post-Emerald world state, applied at new game after Emerald's own new-game flags (see tools/hoenn/gen_hoenn_newgame.py). 'clear' shows objects Emerald hides at the start; 'set' hides objects Emerald shows.",
+  "clear": [
+    "FLAG_HIDE_SLATEPORT_CITY_HARBOR_SS_TIDAL",
+    "FLAG_HIDE_LILYCOVE_HARBOR_SSTIDAL",
+    "FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_BELDUM_POKEBALL",
+    "FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY"
+  ],
+  "set": [
+    "FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN"
+  ]
+}

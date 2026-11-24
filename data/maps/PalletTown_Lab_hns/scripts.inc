@@ -29,10 +29,9 @@ PalletTown_Lab_EventScript_OakBadgeCheck::
 	end
 
 PalletTown_Lab_EventScript_Oak16Badges::
-	msgbox PalletTown_Lab_Text_OakOpenMtSilver, MSGBOX_DEFAULT
+	@ Hoenn & Seek: Oak sends you to Hoenn; Mt. Silver opens with Wallace's stamp (data/scripts/hoenn_ferry.inc).
+	call HoennSeek_EventScript_OakGivesTicket
 	closemessage
-	setflag FLAG_INDIGOJUNCTION_HIDE_SILVER_GUARD
-	setvar VAR_ROUTE28_SCIENTIST, 1
 	setvar VAR_PALLETTOWN_LABSTATE, 2
 	call_if_unset FLAG_IS_KANTO_CHAMPION, PalletTown_Lab_EventScript_OakKantoLeague
 	release
@@ -50,6 +49,7 @@ PalletTown_Lab_EventScript_Oak9Badges::
 	end
 
 PalletTown_Lab_EventScript_OakDex::
+	call HoennSeek_EventScript_OakHoennStatus @ Hoenn & Seek
 	msgbox PalletTown_Lab_Text_OakLabDexCheck, MSGBOX_DEFAULT
 	closemessage
 	release

@@ -14409,6 +14409,25 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_SSTicket,
     },
 
+#if IS_HNS
+    // Hoenn & Seek: Oak gives it after the 16th badge.
+    [ITEM_TIDAL_TICKET] =
+    {
+        .name = ITEM_NAME("TIDAL TICKET"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A ticket for the\n"
+            "S.S. TIDAL, sailing\n"
+            "to HOENN."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_SSTicket,
+        .iconPalette = gItemIconPalette_SSTicket,
+    },
+#endif
+
     [ITEM_EON_TICKET] =
     {
         .name = ITEM_NAME("EON TICKET"),

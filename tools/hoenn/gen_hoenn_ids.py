@@ -33,11 +33,11 @@ from resolve_consts import resolve  # noqa: E402
 
 # Must match include/constants/hoenn_layout.h
 HOENN_FLAGS_START = 0x1800
-HOENN_FLAGS_COUNT = 0x400          # story/item/hidden flags
+HOENN_FLAGS_COUNT = 0x3C0          # story/item/hidden flags (0x1BC0-0x1BFF: hand-defined, hoenn_custom.h)
 HOENN_TRAINER_FLAGS_START = 0x1C00
 HOENN_TRAINER_FLAGS_COUNT = 0x400
 HOENN_VARS_START = 0x7000
-HOENN_VARS_COUNT = 0x80
+HOENN_VARS_COUNT = 0x70           # 0x7070-0x707F: hand-defined, hoenn_custom.h
 HNS_TRAINERS = 653                 # TRAINERS_COUNT_HNS upstream; Hoenn trainers follow
 HNS_MAX_TRAINERS = 864
 
