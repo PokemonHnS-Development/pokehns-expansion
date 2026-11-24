@@ -5,7 +5,7 @@ MossdeepCity_StevensHouse_MapScripts::
 	.byte 0
 
 MossdeepCity_StevensHouse_OnLoad:
-	call_if_unset FLAG_SYS_GAME_CLEAR, MossdeepCity_StevensHouse_EventScript_HideStevensNote
+	@ Hoenn & Seek: post-Emerald, Steven's note is always on the table.
 	end
 
 MossdeepCity_StevensHouse_EventScript_HideStevensNote::
@@ -13,6 +13,8 @@ MossdeepCity_StevensHouse_EventScript_HideStevensNote::
 	return
 
 MossdeepCity_StevensHouse_OnTransition:
+	@ Hoenn & Seek: Steven is away training (he's at Meteor Falls).
+	setflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN
 	call_if_eq VAR_STEVENS_HOUSE_STATE, 2, MossdeepCity_StevensHouse_EventScript_SetStevenPos
 	end
 
@@ -138,6 +140,14 @@ MossdeepCity_StevensHouse_EventScript_Steven::
 MossdeepCity_StevensHouse_EventScript_Letter::
 	lockall
 	msgbox MossdeepCity_StevensHouse_Text_LetterFromSteven, MSGBOX_DEFAULT
+	@ Hoenn & Seek: HM09 Dive comes with the letter.
+	goto_if_set FLAG_RECEIVED_HM_DIVE, MossdeepCity_StevensHouse_EventScript_LetterEnd
+	msgbox MossdeepCity_StevensHouse_Text_LetterDivePostscript, MSGBOX_DEFAULT
+	giveitem ITEM_HM_DIVE
+	goto_if_eq VAR_RESULT, FALSE, MossdeepCity_StevensHouse_EventScript_LetterEnd
+	setflag FLAG_RECEIVED_HM_DIVE
+	msgbox MossdeepCity_StevensHouse_Text_ExplainDiveLetter, MSGBOX_DEFAULT
+MossdeepCity_StevensHouse_EventScript_LetterEnd::
 	releaseall
 	end
 
@@ -207,6 +217,20 @@ MossdeepCity_StevensHouse_Text_LetterFromSteven:
 	.string "I'm counting on you.\p"
 	.string "May our paths cross someday.\p"
 	.string "STEVEN STONE$"
+
+MossdeepCity_StevensHouse_Text_LetterDivePostscript:
+	.string "P.S. I've left you something else,\n"
+	.string "tucked in with this letter.\p"
+	.string "The seas around MOSSDEEP hide a\n"
+	.string "whole world beneath the waves.\p"
+	.string "I think you'll put it to good use.$"
+
+MossdeepCity_StevensHouse_Text_ExplainDiveLetter:
+	.string "While SURFING, look for patches of\n"
+	.string "dark, deep water.\p"
+	.string "Use DIVE there to drop to the\n"
+	.string "seafloor, and use it again to\l"
+	.string "come back up.$"
 
 MossdeepCity_StevensHouse_Text_CollectionOfRareRocks:
 	.string "It's a collection of rare rocks and\n"

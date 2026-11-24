@@ -28,6 +28,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 4 (513 Hoenn trainers, trainer cap 864→1168) | 32,498,404 / 1,031 KB | 32,646,212 / 887 KB |
 | Part 5 (Hoenn door animations, mapsecs, warp safety) | 32,527,764 / 1,002 KB | 32,675,540 / 858 KB |
 | Part 6 (region map/Fly per region, Hoenn wild tables) | 32,547,620 / 983 KB | 32,695,364 / 839 KB |
+| Part 7 (HM09 Dive, Steven's letter) | 32,549,332 / 981 KB | 32,698,084 / 836 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -43,6 +44,12 @@ Read the roadmap entry for the part you're working on before starting.
   - Four sections HnS already lists (ABANDONED_SHIP, LILYCOVE_CITY, SAFARI_ZONE, VICTORY_ROAD) sit before Pallet, outside every range, so they also count as Hoenn.
 - **Region map and Fly (part 6):** `src/region_map.c` shows Emerald's Hoenn map whenever the player is in a Hoenn section, so Fly only reaches Hoenn towns from Hoenn and Johto/Kanto towns from there. The Pokédex area page (`src/pokedex_area_screen.c`) only marks areas in the region whose map is shown. Edge case: HnS's own contest lobby copy uses `MAPSEC_LILYCOVE_CITY`, so it shows the Hoenn map.
 - **Wild encounters (part 6):** `tools/wild_encounters/wild_encounters_to_header.py` builds Emerald tables for maps in `data/hoenn/maps.json` into HnS (116 tables, in the TIME_DAY slot). Levels are still Emerald's; part 15 rescales them.
+- **HM09 Dive (part 7):**
+  - `ITEM_HM09` = 901, the slot after the HnS items (`ITEM_HM09_SLOT`, checked by a `STATIC_ASSERT` in `src/data/items.h`). `F(DIVE)` is appended to the HnS `FOREACH_HM`, which makes Dive teachable (151 species), unforgettable (`IsMoveHM`) and an HM in the bag.
+  - `include/constants/tms_hms.h` now includes `constants/global.h`: `battle_anim_scripts.s` used to expand the HM list with `IS_HNS` undefined, which clashed at link time once both lists had `ITEM_HM_DIVE`.
+  - Steven's house (`MossdeepCity_StevensHouse`): Steven is away, his letter is always on the table, and reading it gives HM09 (`FLAG_RECEIVED_HM_DIVE`, now a real Hoenn flag; `gen_hoenn_ids.py` remaps `FLAG_RECEIVED_HM_*` names that are 0 in HnS).
+  - Dive still unlocks with `FLAG_BADGE07_GET` (Glacier Badge), which every player reaching Hoenn has. Surface with **B**.
+  - Dive spots: Routes 124, 126, 127, 128 (deep water) and 134 (map script into Underwater Route 134; its Sealed Chamber door stays shut). Route 125 has no dive spots; `Underwater_Route125` only led to the Marine Cave and is unreachable.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
 - C code switches on `IS_HNS` / `IS_FRLG` at build time (570 uses across 127 files). Hoenn needs some Emerald behavior at runtime, so convert those switches to region checks where needed. Don't flip them globally.

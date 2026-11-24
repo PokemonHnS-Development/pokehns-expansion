@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ASCII view of a map for planning emulator test routes.
     mapinfo.py MAP_NAME [x0 y0 x1 y1]
-Legend: . walkable  # blocked  ~ water  W waterfall  D dive spot  w warp  o object  ? unknown
+Legend: . walkable  # blocked  ~ water  W waterfall  D deep water (dive spot)  w warp  o object  ? unknown
 """
 import json, os, re, struct, sys
 ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
@@ -53,8 +53,8 @@ def main():
             if (x, y) in warps: c = "w"
             elif (x, y) in objs: c = "o"
             elif "WATERFALL" in n: c = "W"
-            elif n in ("MB_DEEP_WATER", "MB_OCEAN_WATER", "MB_POND_WATER", "MB_SEMI_DEEP_WATER", "MB_INTERIOR_DEEP_WATER", "MB_SOOTOPOLIS_DEEP_WATER", "MB_FAST_WATER", "MB_NO_SURFACING", "MB_EASTWARD_CURRENT", "MB_WESTWARD_CURRENT", "MB_NORTHWARD_CURRENT", "MB_SOUTHWARD_CURRENT"): c = "~"
-            elif "DIVE" in n or n == "MB_DEEP_WATER_DIVE": c = "D"
+            elif n == "MB_DEEP_WATER": c = "D"
+            elif n in ("MB_OCEAN_WATER", "MB_POND_WATER", "MB_SEMI_DEEP_WATER", "MB_INTERIOR_DEEP_WATER", "MB_SOOTOPOLIS_DEEP_WATER", "MB_FAST_WATER", "MB_NO_SURFACING", "MB_EASTWARD_CURRENT", "MB_WESTWARD_CURRENT", "MB_NORTHWARD_CURRENT", "MB_SOUTHWARD_CURRENT"): c = "~"
             elif col: c = "#"
             else: c = "."
             row += c

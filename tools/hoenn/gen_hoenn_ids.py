@@ -106,7 +106,8 @@ def main():
         if v is None:
             report["flags"][n] = "undefined in HnS (left alone)"
             continue
-        if n.startswith(KEEP_FLAG_PREFIXES):
+        # FLAG_RECEIVED_HM_{FLY,DIVE,WATERFALL} are defined as 0 in HnS (unused there): give Hoenn real ones.
+        if n.startswith(KEEP_FLAG_PREFIXES) and not (n.startswith("FLAG_RECEIVED_HM_") and v == 0):
             report["flags"][n] = f"shared system flag {hex(v)}"
             continue
         forced = any(re.search(p, n) for p in FORCE_FLAG_PATTERNS)
