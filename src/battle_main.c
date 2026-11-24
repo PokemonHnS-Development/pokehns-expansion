@@ -10,6 +10,7 @@
 #include "battle_hold_effects.h"
 #include "battle_interface.h"
 #include "battle_main.h"
+#include "hoenn.h" // Hoenn & Seek
 #include "battle_message.h"
 #include "battle_pyramid.h"
 #include "battle_scripts.h"
@@ -2064,7 +2065,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 #if RANDOMIZER_AVAILABLE == TRUE
                 species = RandomizeTrainerMon(trainer->trainerClass, i, monsCount, species);
                 #endif
-                CreateMon(&party[i], species, partyData[monIndex].lvl, personalityValue, otId);
+                CreateMon(&party[i], species, HOENN_TRAINER_MON_LEVEL(trainer, partyData[monIndex].lvl), personalityValue, otId); // Hoenn & Seek: gym scaling
             }
             SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[monIndex].heldItem);
 

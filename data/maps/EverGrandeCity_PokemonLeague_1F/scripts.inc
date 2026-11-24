@@ -43,7 +43,7 @@ EverGrandeCity_PokemonLeague_1F_Pokemart:
 	.2byte ITEM_MAX_REPEL
 	pokemartlistend
 
-@ The door guards only check for FLAG_BADGE06_GET because Winonas badge is the only one that can be skipped
+@ The door guards only check for FLAG_HOENN_STAMP_GYM_6 because Winonas badge is the only one that can be skipped
 @ Its assumed the player has the remaining badges
 EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard::
 	lockall
@@ -54,7 +54,7 @@ EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard::
 	message EverGrandeCity_PokemonLeague_1F_Text_MustHaveAllGymBadges
 	waitmessage
 	delay 120
-	goto_if_unset FLAG_BADGE06_GET, EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges
+	goto_if_unset FLAG_HOENN_STAMP_GYM_6, EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges
 	closemessage
 	applymovement LOCALID_LEAGUE_GUARD_1, EverGrandeCity_PokemonLeague_1F_Movement_LeftGuardOutOfWay
 	applymovement LOCALID_LEAGUE_GUARD_2, EverGrandeCity_PokemonLeague_1F_Movement_RightGuardOutOfWay

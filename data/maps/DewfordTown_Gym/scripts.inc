@@ -148,7 +148,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_DEWFORD_GYM
-	setflag FLAG_BADGE02_GET
+	setflag FLAG_HOENN_STAMP_GYM_2
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 2
@@ -262,13 +262,13 @@ DewfordTown_Gym_EventScript_GymGuidePostVictory::
 
 DewfordTown_Gym_EventScript_LeftGymStatue::
 	lockall
-	goto_if_set FLAG_BADGE02_GET, DewfordTown_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_STAMP_GYM_2, DewfordTown_Gym_EventScript_GymStatueCertified
 	goto DewfordTown_Gym_EventScript_GymStatue
 	end
 
 DewfordTown_Gym_EventScript_RightGymStatue::
 	lockall
-	goto_if_set FLAG_BADGE02_GET, DewfordTown_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_STAMP_GYM_2, DewfordTown_Gym_EventScript_GymStatueCertified
 	goto DewfordTown_Gym_EventScript_GymStatue
 	end
 

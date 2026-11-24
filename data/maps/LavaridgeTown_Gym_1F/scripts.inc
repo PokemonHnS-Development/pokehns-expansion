@@ -59,7 +59,7 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
 	msgbox LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_WHITEOUT_TO_LAVARIDGE
 	setflag FLAG_DEFEATED_LAVARIDGE_GYM
-	setflag FLAG_BADGE04_GET
+	setflag FLAG_HOENN_STAMP_GYM_4
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 4
@@ -160,13 +160,13 @@ LavaridgeTown_Gym_1F_EventScript_GymGuidePostVictory::
 
 LavaridgeTown_Gym_1F_EventScript_LeftGymStatue::
 	lockall
-	goto_if_set FLAG_BADGE04_GET, LavaridgeTown_Gym_1F_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_STAMP_GYM_4, LavaridgeTown_Gym_1F_EventScript_GymStatueCertified
 	goto LavaridgeTown_Gym_1F_EventScript_GymStatue
 	end
 
 LavaridgeTown_Gym_1F_EventScript_RightGymStatue::
 	lockall
-	goto_if_set FLAG_BADGE04_GET, LavaridgeTown_Gym_1F_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_STAMP_GYM_4, LavaridgeTown_Gym_1F_EventScript_GymStatueCertified
 	goto LavaridgeTown_Gym_1F_EventScript_GymStatue
 	end
 

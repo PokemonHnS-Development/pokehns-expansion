@@ -24,4 +24,16 @@ static inline bool32 IsHoennMapSec(u32 mapSecId)
 static inline bool32 IsHoennMapSec(u32 mapSecId) { (void)mapSecId; return FALSE; }
 #endif
 
+// Trainer card stamps and gym level scaling (src/hoenn_scaling.c, part 9).
+#define HOENN_GYM_COUNT 8
+struct Trainer;
+#if IS_HNS
+u32 HoennCountStamps(void);
+u32 HoennGymAceLevel(void);
+u8 HoennScaleTrainerMonLevel(const struct Trainer *trainer, u8 level);
+#define HOENN_TRAINER_MON_LEVEL(trainer, level) HoennScaleTrainerMonLevel(trainer, level)
+#else
+#define HOENN_TRAINER_MON_LEVEL(trainer, level) (level)
+#endif
+
 #endif // GUARD_HOENN_H
