@@ -31,6 +31,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 7 (HM09 Dive, Steven's letter) | 32,549,332 / 981 KB | 32,698,084 / 836 KB |
 | Part 8 (Oak's ticket, ferry, Mt. Silver gate, Hoenn new-game flags) | 32,551,572 / 979 KB | 32,700,308 / 834 KB |
 | Part 9 (stamps on the trainer card, gym level scaling) | 32,552,996 / 978 KB | 32,701,860 / 833 KB |
+| Part 10 (post-Emerald state, west/south; +6 script-swapped layouts) | 32,583,540 / 948 KB | 32,732,404 / 803 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -65,11 +66,18 @@ Read the roadmap entry for the part you're working on before starting.
   - `src/hoenn_scaling.c`: `HoennScaleTrainerMonLevel()` is called from the one `CreateMon` in `CreateNPCTrainerPartyFromTrainer` (`HOENN_TRAINER_MON_LEVEL`). For Hoenn gym leaders the ace is 68 at 0 stamps up to 78 at 7 (`HoennGymAceLevel`); gym trainers get ace − 4; each mon keeps its Emerald gap below the ace. Moves without custom sets come from the new level.
   - `tools/hoenn/gen_hoenn_gyms.py` writes `src/data/hoenn_gym_trainers.h` (8 leaders, 57 gym trainers from maps whose name contains `_Gym`). Re-run after `gen_hoenn_ids.py`.
   - Gym leader text still says BADGE and lists HM uses, and gym TMs are still Emerald's (part 13).
+- **Story strip (part 10+):** Hoenn starts in its post-Emerald state instead of having story scripts deleted.
+  - `data/hoenn/newgame_overrides.json` sets each story var to its after-the-story value (so its coord/frame triggers never fire) and shows/hides story objects. Emerald's scripts stay as they are.
+  - `tools/hoenn/story_audit.py PREFIX...` lists, per map, the triggers (with the var value that fires them), flag-hidden objects and every value each var is set to. Use it to pick final values for the next area; `@ State descriptions` comments in Emerald scripts document some vars.
+  - The generator only accepts Hoenn-owned names (remapped, or HnS-reserved `*_UNSAFE` slots).
+  - Part 10 covers Littleroot–Rustboro, Dewford, Slateport, Mauville, Routes 101–110 and 116–118. Notable choices: Birch is home with the three Johto starters on his table (no "catch every Hoenn Pokémon" gate); both Littleroot houses belong to the rival families (Brendan/May themselves come in part 16); Rusturf Tunnel is open; Petalburg Gym is open from the start (the other gyms no longer advance `VAR_PETALBURG_GYM_STATE`).
+- **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Mirage Island, Sky Pillar and the Sootopolis legends layouts are among them; part 12 can drop those scripts and layouts (~20 KB).
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
 - C code switches on `IS_HNS` / `IS_FRLG` at build time (570 uses across 127 files). Hoenn needs some Emerald behavior at runtime, so convert those switches to region checks where needed. Don't flip them globally.
 - **Hoenn IDs (part 4).** `tools/hoenn/gen_hoenn_ids.py` regenerates `include/constants/hoenn_{flags,vars,trainers}.h`, `src/data/trainers_hoenn.party` and `data/hoenn/remap_report.json`. Re-run it whenever `data/hoenn/maps.json` or Hoenn scripts change.
   - Those headers `#undef`/`#define` Emerald names so Hoenn gets its own IDs. They're included at the end of `flags.h`, `vars.h` and `opponents.h`.
+  - They include `constants/global.h` themselves (part 10 fix): `config/randomizer.h` pulls in `vars.h` before `IS_HNS` is defined in the `.s` files, so until part 10 **the var remap never applied to assembled scripts** and Emerald scripts wrote HnS's var slots.
   - `-DHOENN_NO_REMAP` turns the remap off; the generator uses it when resolving.
   - `tools/hoenn/resolve_consts.py` evaluates any constant with the real compiler.
 - **Storage** (`include/constants/hoenn_layout.h`):
