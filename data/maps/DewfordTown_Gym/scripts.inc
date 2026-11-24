@@ -154,14 +154,11 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	call DewfordTown_Gym_EventScript_GiveBulkUp
 	closemessage
 	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox DewfordTown_Gym_Text_RegisteredBrawly, MSGBOX_DEFAULT
-	waitfanfare
+	@ Hoenn & Seek: no PokéNav registration.
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_BRAWLY_MATCH_CALL
-	setvar VAR_ROXANNE_CALL_STEP_COUNTER, 0
-	setflag FLAG_ENABLE_ROXANNE_FIRST_CALL
+	@ Hoenn & Seek: no Roxanne PokéNav call.
 	release
 	end
 
@@ -249,6 +246,7 @@ DewfordTown_Gym_EventScript_GymGuide::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_DEWFORD_GYM, DewfordTown_Gym_EventScript_GymGuidePostVictory
+	call HoennSeek_EventScript_GymGuideGreeting
 	msgbox DewfordTown_Gym_Text_GymGuideAdvice, MSGBOX_DEFAULT
 	release
 	end
@@ -281,8 +279,6 @@ DewfordTown_Gym_EventScript_GymStatue::
 	end
 
 DewfordTown_Gym_Text_GymGuideAdvice:
-	.string "Hey, how's it going, CHAMPION-\n"
-	.string "bound {PLAYER}?\p"
 	.string "DEWFORD's GYM LEADER BRAWLY commands\n"
 	.string "FIGHTING-type POKéMON.\p"
 	.string "Going against him with NORMAL-type\n"
@@ -375,7 +371,7 @@ DewfordTown_Gym_Text_CristianDefeat:
 
 DewfordTown_Gym_Text_CristianPostBattle:
 	.string "You win!\n"
-	.string "Go after that BADGE!$"
+	.string "Go after that stamp!$"
 
 DewfordTown_Gym_Text_BrawlyIntro:
 	.string "I'm BRAWLY!\n"
@@ -391,18 +387,17 @@ DewfordTown_Gym_Text_BrawlyDefeat:
 	.string "splash than I expected!\p"
 	.string "You swamped me!\p"
 	.string "Okay, you've got me.\n"
-	.string "Take this GYM BADGE!$"
+	.string "Here's your stamp!$"
 
 DewfordTown_Gym_Text_ReceivedKnuckleBadge:
-	.string "{PLAYER} received the KNUCKLE BADGE\n"
-	.string "from BRAWLY.$"
+	.string "BRAWLY stamped {PLAYER}'s\n"
+	.string "TRAINER CARD with the KNUCKLE BADGE!$"
 
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
-	.string "The KNUCKLE BADGE makes all POKéMON\n"
-	.string "up to Level 30, even those you get in\l"
-	.string "trades, obey without question.\p"
-	.string "And, you'll be able to use the HM move\n"
-	.string "FLASH outside of battle.\p"
+	.string "That stamp means you rode the big\n"
+	.string "wave and didn't wipe out.\p"
+	.string "Do they surf in JOHTO? You should\n"
+	.string "try it sometime!\p"
 	.string "If you'd like, use this TECHNICAL\n"
 	.string "MACHINE, too.$"
 

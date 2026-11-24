@@ -123,9 +123,10 @@ Route119_WeatherInstitute_1F_Text_NoticingAbnormalWeather:
 
 Route119_WeatherInstitute_1F_Text_WhatWereAquasUpTo:
 	.string "Hello!\n"
-	.string "We've been saved by your actions!\p"
-	.string "What I don't understand is what on\n"
-	.string "earth the AQUAS were up to.$"
+	.string "TEAM AQUA? They drop by every week\l"
+	.string "for our sea forecasts.\p"
+	.string "It helps with their rescue runs.\p"
+	.string "To think they once raided us!$"
 
 Route119_WeatherInstitute_1F_Text_TakeRestInBed:
 	.string "There's a bed…\n"

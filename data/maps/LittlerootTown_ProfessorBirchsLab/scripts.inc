@@ -677,8 +677,13 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchIsntOneForDeskWork:
 LittlerootTown_ProfessorBirchsLab_Text_BirchEnjoysRivalsHelpToo:
 	.string "PROF. BIRCH is studying the habitats\n"
 	.string "and distribution of POKéMON.\p"
-	.string "The PROF enjoys {RIVAL}'s help, too.\n"
-	.string "There's a lot of love there.$"
+	.string "His son BRENDAN helps out whenever\n"
+	.string "he's home. There's a lot of love\l"
+	.string "there.\p"
+	.string "Oh, and PROF. ELM from JOHTO sends\n"
+	.string "the PROF letters about POKéMON EGGS.\p"
+	.string "The PROF reads them out loud.\n"
+	.string "Very loudly. With voices.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon:
 	.string "PROF. BIRCH: So, {PLAYER}{KUN}.\p"
@@ -854,12 +859,12 @@ LittlerootTown_ProfessorBirchsLab_Text_PokedexUpgradedToNational:
 
 LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting2:
 	.string "PROF. BIRCH: But listen.\n"
-	.string "You've become the CHAMPION,\l"
-	.string "but your POKéMON journey isn't over.\p"
+	.string "You may be a CHAMPION in JOHTO, but\l"
+	.string "your POKéMON journey isn't over.\p"
 	.string "There is no end to the road\n"
 	.string "that is POKéMON.\p"
-	.string "Somewhere, there is a grassy patch\n"
-	.string "that's waiting for you!$"
+	.string "Somewhere in HOENN, there is a\n"
+	.string "grassy patch that's waiting for you!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MayTakeBreakFromFieldwork:
 	.string "MAY: I think I'll take a short break\n"

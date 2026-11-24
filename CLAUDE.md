@@ -34,6 +34,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 10 (post-Emerald state, west/south; +6 script-swapped layouts) | 32,583,540 / 948 KB | 32,732,404 / 803 KB |
 | Part 11 (post-Emerald state, north/east; scaled Kecleon, gifts moved) | 32,584,628 / 947 KB | 32,733,460 / 801 KB |
 | Part 12 (post-Emerald state, sea; legendary sites sealed: −Cave of Origin, −Seafloor Cavern, −2 swap layouts) | 32,551,860 / 979 KB | 32,700,660 / 834 KB |
+| Part 13 (dialogue pass, Steven's stone case, gym story side effects removed) | 32,554,436 / 976 KB | 32,702,916 / 831 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -67,7 +68,7 @@ Read the roadmap entry for the part you're working on before starting.
   - Trainer card: the back shows the 8 stamps (Emerald's badge art, loaded after HnS's 16 badges at BG3 tile 192+64) on tile rows 8–9, above the Kanto row. Rows 8–9 only overlap the link-trades stat line.
   - `src/hoenn_scaling.c`: `HoennScaleTrainerMonLevel()` is called from the one `CreateMon` in `CreateNPCTrainerPartyFromTrainer` (`HOENN_TRAINER_MON_LEVEL`). For Hoenn gym leaders the ace is 68 at 0 stamps up to 78 at 7 (`HoennGymAceLevel`); gym trainers get ace − 4; each mon keeps its Emerald gap below the ace. Moves without custom sets come from the new level.
   - `tools/hoenn/gen_hoenn_gyms.py` writes `src/data/hoenn_gym_trainers.h` (8 leaders, 57 gym trainers from maps whose name contains `_Gym`). Re-run after `gen_hoenn_ids.py`.
-  - Gym leader text still says BADGE and lists HM uses, and gym TMs are still Emerald's (part 13).
+  - Gym leader text talks about stamps since part 13 ("ROXANNE stamped {PLAYER}'s TRAINER CARD…"). Gym TMs are still Emerald's.
 - **Story strip (part 10+):** Hoenn starts in its post-Emerald state instead of having story scripts deleted.
   - `data/hoenn/newgame_overrides.json` sets each story var to its after-the-story value (so its coord/frame triggers never fire) and shows/hides story objects. Emerald's scripts stay as they are.
   - `tools/hoenn/story_audit.py PREFIX...` lists, per map, the triggers (with the var value that fires them), flag-hidden objects and every value each var is set to. Use it to pick final values for the next area; `@ State descriptions` comments in Emerald scripts document some vars.
@@ -78,14 +79,21 @@ Read the roadmap entry for the part you're working on before starting.
   - Mr. Stone (Devon 3F) gives a Lucky Egg instead of the Exp. Share H&S already hands out.
   - Route 120: Steven is replaced by a Devon field tester (Devon employee sprite) who gives the Devon Scope after the Kecleon; he fades out instead of flying.
   - `special HoennSetupScaledWildBattle` (`src/hoenn_scaling.c`) starts a wild battle with `VAR_0x8004` as species at gym-ace level − 8 (60–70). Use it for any other scripted Hoenn wild battle.
-  - Leftover dialogue for the part-13 text pass: leaders still say "Registered ... in the POKéNAV" and Flannery's "You battle like NORMAN".
 - **Story strip, sea (part 12):** overrides cover Mossdeep and the Space Center (after Magma's raid), Sootopolis (state 6: gym open, the Cave of Origin expert guards the door), Route 128, Pacifidlog and the Abandoned Ship (Scanner hidden; Captain Stern's quest is cut).
-  - Steven's house: the old Beldum ball holds a stone (`HoennSeek_EventScript_StevensStone`): Metagrossite if the player has `ITEM_MEGA_RING` when picking it up, otherwise a Shiny Stone. HnS has no Mega Ring source yet, so today it's always the Shiny Stone.
+  - Steven's house: the old Beldum ball is Steven's stone case (`HoennSeek_EventScript_StevensStone`, part 13). The player picks one stone: EVOLUTION (10 stones + Oval Stone), MEGA STONES (every non-key `HOLD_EFFECT_MEGA_STONE` item, read from `gItemsInfo` at runtime) or OTHER (Everstone, Hard/Float Stone, Odd Keystone). Lists live in `src/hoenn_specials.c`.
   - The Weather Institute scientist moves to (2,2) once `FLAG_SYS_GAME_CLEAR` is set (every Hoenn visitor has it), so look for him there.
 - **Legendary sites sealed until 2.0 (part 12, one commit: "Seal Hoenn's legendary sites").** To undo it: `git revert --no-commit 23adc4fc && git checkout HEAD -- CLAUDE.md` (that commit also carries these notes), then re-run the generators and update the notes. It:
   - adds `CaveOfOrigin_`, `SeafloorCavern_` and `Underwater_SeafloorCavern` to `data/hoenn/exclude.json` (Sky Pillar, Sealed Chamber, the Regi caves, Terra/Marine Cave and the islands were already excluded since part 2);
   - puts a sign event running `HoennSeek_EventScript_SealedSite` (`data/scripts/hoenn_sealed.inc`) on each entrance tile: Routes 105, 111, 120 and 131, Sootopolis and Underwater Route 128. The Sealed Chamber hole on Underwater Route 134 is walk-on, so it gets a step trigger that shows the text and moves you back;
   - drops Mirage Island (Route 130 never swaps its layout) and the Sootopolis legends layout, and stops the Weather Institute scientist from starting abnormal weather (Terra/Marine Cave). `FLAG_SYS_WEATHER_CTRL` is never set in our world, so the Groudon/Kyogre clash weather can't show either.
+- **Dialogue pass (part 13):** you're a visitor from Johto, not Brendan or May. `tools/hoenn/dialogue_audit.py [--all] [PREFIX...]` lists reachable texts that still assume the Emerald story (Mom, Norman as dad, `{RIVAL}`, Brendan/May, Magma/Aqua, "moved here", champion); it follows branches on story vars too, so check each hit's script.
+  - New and replacement NPC scripts are in `data/scripts/hoenn_dialogue.inc` (map.json script swaps); rewritten Emerald lines stay in their map's `scripts.inc`.
+  - Specials (`src/hoenn_specials.c`): `specialvar VAR_RESULT, HoennGetStampCount`; `specialvar VAR_RESULT, HoennBufferFollower` (TRUE if a Pokémon follows you; nickname in STR_VAR_1, species in STR_VAR_2); `HoennPushStoneList` / `HoennStoneFromIndex` for Steven's case.
+  - Gym guides call `HoennSeek_EventScript_GymGuideGreeting` first: the greeting changes at 0, 1–3 and 4–7 stamps.
+  - Littleroot: May's house is Norman's family (May's mom), Brendan's house is Birch's. The twin outside mistakes you for Brendan or May (by player gender). `FLAG_RESCUED_BIRCH` is set at new game so she stands in her normal spot.
+  - Reformed teams: Aqua runs sea rescues from the Lilycove hideout, Magma does research. Lilycove, Mossdeep, the Weather Institute, Cozmo, Capt. Stern, the museum grunt and the Route 110 sign say so.
+  - Follower lines: May's mom, the Slateport shopper, the Fortree boy and the Lavaridge bather.
+  - **Gym leader scripts had Emerald story side effects that undid the post-Emerald state** (removed): Roxanne set `VAR_RUSTBORO_CITY_STATE` to 1 (Devon Goods theft replayed), Brawly armed Roxanne's PokéNav call, Winona armed Scott's, Tate & Liza restarted the Space Center raid, Norman hid Mr. Briney and moved Wattson out of his gym, then ran the Wally's-dad/HM Surf scene. Leaders no longer register in the PokéNav. Check any other scripts brought in later for `setvar`/`setflag` lines like these.
 - **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.

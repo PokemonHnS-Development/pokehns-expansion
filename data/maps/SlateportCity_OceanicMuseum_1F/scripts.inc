@@ -289,11 +289,12 @@ SlateportCity_OceanicMuseum_1F_Text_WantSeaPokemon:
 SlateportCity_OceanicMuseum_1F_Text_RememberMeTakeThis:
 	.string "Aiyeeeh!\n"
 	.string "What are you doing here?\p"
-	.string "Me? I'm the TEAM AQUA member\n"
-	.string "you thumped before, remember?\l"
-	.string "Back in RUSTURF TUNNEL?\p"
+	.string "Me? I'm with TEAM AQUA! We help\n"
+	.string "out at the museum now. Honest!\p"
+	.string "You've got that look… Like you've\n"
+	.string "thumped a lot of grunts back home.\p"
 	.string "Here, take this!\n"
-	.string "You have to forgive me!$"
+	.string "Just please don't thump me!$"
 
 SlateportCity_OceanicMuseum_1F_Text_HopeINeverSeeYouAgain:
 	.string "That TM, it suits you more than it\n"

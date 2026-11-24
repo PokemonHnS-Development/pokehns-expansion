@@ -90,23 +90,37 @@ HoennSeek_Text_MrStoneAfterGift:
 	.string "doubt.\p"
 	.string "He was always that way, even as a boy.$"
 
-@ Steven's house, Mossdeep (part 12): the Beldum ball now holds a stone from
-@ Steven's collection. Metagrossite once the player has a Mega Ring, otherwise
-@ a Shiny Stone; decided when it's picked up.
+@ Steven's house, Mossdeep (part 12/13): the old Beldum ball is Steven's stone
+@ collection. Pick any one stone that isn't a key item: evolution stones,
+@ Mega Stones or the other stones (lists in src/hoenn_specials.c).
 HoennSeek_EventScript_StevensStone::
 	lockall
 	msgbox HoennSeek_Text_StevensStoneNote, MSGBOX_DEFAULT
-	checkitem ITEM_MEGA_RING
-	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_StevensStoneMega
-	giveitem ITEM_SHINY_STONE
-	goto HoennSeek_EventScript_StevensStoneGot
-
-HoennSeek_EventScript_StevensStoneMega::
-	giveitem ITEM_METAGROSSITE
-HoennSeek_EventScript_StevensStoneGot::
+HoennSeek_EventScript_StevensStoneKind::
+	message HoennSeek_Text_StevensStoneWhichKind
+	waitmessage
+	dynmultichoice 15, 2, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, HoennSeek_Text_StonesEvolution, HoennSeek_Text_StonesMega, HoennSeek_Text_StonesOther, HoennSeek_Text_StonesLeave
+	goto_if_ge VAR_RESULT, 3, HoennSeek_EventScript_StevensStoneLeave
+	copyvar VAR_0x8004, VAR_RESULT
+	message HoennSeek_Text_StevensStoneWhichOne
+	waitmessage
+	special HoennPushStoneList
+	dynmultistack 15, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_NONE
+	goto_if_eq VAR_RESULT, MULTI_B_PRESSED, HoennSeek_EventScript_StevensStoneKind
+	copyvar VAR_0x8005, VAR_RESULT
+	specialvar VAR_0x8006, HoennStoneFromIndex
+	bufferitemname STR_VAR_1, VAR_0x8006
+	msgbox HoennSeek_Text_StevensStoneTakeIt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_StevensStoneKind
+	giveitem VAR_0x8006
 	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_StevensStoneBagFull
 	removeobject LOCALID_STEVENS_HOUSE_BALL
 	setflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_BELDUM_POKEBALL
+	releaseall
+	end
+
+HoennSeek_EventScript_StevensStoneLeave::
+	msgbox HoennSeek_Text_StevensStoneLeave, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -116,7 +130,31 @@ HoennSeek_EventScript_StevensStoneBagFull::
 	end
 
 HoennSeek_Text_StevensStoneNote:
-	.string "There's a note tucked under the\n"
-	.string "POKé BALL.\p"
-	.string "“One of my favorite finds. Take it\n"
-	.string "with you, whoever you are. --STEVEN”$"
+	.string "It's a case full of stones. There's\n"
+	.string "a note tucked under the lid.\p"
+	.string "“Take whichever one you like.\n"
+	.string "Just one, mind you! --STEVEN”$"
+
+HoennSeek_Text_StevensStoneWhichKind:
+	.string "Which kind of stone?$"
+
+HoennSeek_Text_StevensStoneWhichOne:
+	.string "Which one?$"
+
+HoennSeek_Text_StevensStoneTakeIt:
+	.string "Take the {STR_VAR_1}?$"
+
+HoennSeek_Text_StevensStoneLeave:
+	.string "{PLAYER} left the case on the table.$"
+
+HoennSeek_Text_StonesEvolution:
+	.string "EVOLUTION$"
+
+HoennSeek_Text_StonesMega:
+	.string "MEGA STONES$"
+
+HoennSeek_Text_StonesOther:
+	.string "OTHER$"
+
+HoennSeek_Text_StonesLeave:
+	.string "LEAVE IT$"
