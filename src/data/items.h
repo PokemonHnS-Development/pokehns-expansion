@@ -159,6 +159,10 @@ static const u8 sGenericMulchDesc[]   = _("A fertilizer that\n"
                                           "is unsuitable for\n"
                                           "local soil.");
 
+#if IS_HNS
+STATIC_ASSERT(ITEM_HM09 == ITEM_HM09_SLOT, HoennHM09Slot) // Hoenn & Seek
+#endif
+
 const struct ItemInfo gItemsInfo[] =
 {
     [ITEM_NONE] =
@@ -13736,6 +13740,21 @@ const struct ItemInfo gItemsInfo[] =
             "Traps the foe in a\n"
             "violent swirling\n"
             "whirlpool."),
+        .importance = 1,
+        .pocket = POCKET_TM_HM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+    },
+
+    // Hoenn & Seek: HM09 Dive (given at Steven's house in Mossdeep)
+    [ITEM_HM_DIVE] =
+    {
+        .name = ITEM_NAME("HM09"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Dives underwater\n"
+            "the 1st turn, then\n"
+            "attacks next turn."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

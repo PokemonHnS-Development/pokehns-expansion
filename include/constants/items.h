@@ -820,6 +820,9 @@ enum __attribute__((packed)) Item
     ITEM_HM06 = 687,
     ITEM_HM07 = 688,
     ITEM_HM08 = 689,
+#if IS_HNS
+    ITEM_HM09 = 901, // Hoenn & Seek: HM09 Dive, in the slot reserved after the HnS items below
+#endif
 
 
     /* Expands to:
@@ -1080,6 +1083,9 @@ enum __attribute__((packed)) Item
     ITEM_UNUSED_BERRY_2,
     ITEM_UNUSED_BERRY_3,
     ITEM_AZURE_FLUTE,
+#if IS_HNS
+    ITEM_HM09_SLOT, // Hoenn & Seek: must equal ITEM_HM09 (checked in src/data/items.h)
+#endif
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

@@ -1,6 +1,8 @@
 #ifndef GUARD_CONSTANTS_TMS_HMS_H
 #define GUARD_CONSTANTS_TMS_HMS_H
 
+#include "constants/global.h" // Hoenn & Seek: IS_HNS must be set wherever the HM list is expanded
+
 #if IS_HNS
 
 #define FOREACH_TM(F) \
@@ -105,7 +107,8 @@
     F(FLASH) \
     F(ROCK_SMASH) \
     F(WATERFALL) \
-    F(WHIRLPOOL)
+    F(WHIRLPOOL) \
+    F(DIVE) /* Hoenn & Seek: HM09 */
 
 #else
 
