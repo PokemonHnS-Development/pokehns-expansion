@@ -296,6 +296,10 @@ void NewGameInitData(void)
     SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
     ResetItemFlags();
     ResetDexNav();
+#if IS_HNS // Hoenn & Seek: Hoenn's own flags/vars start cleared
+    memset(gSaveBlock3Ptr->hoennFlags, 0, sizeof(gSaveBlock3Ptr->hoennFlags));
+    memset(gSaveBlock3Ptr->hoennVars, 0, sizeof(gSaveBlock3Ptr->hoennVars));
+#endif
     ClearFollowerNPCData();
 
     // Sync engine flags from restored challenge settings

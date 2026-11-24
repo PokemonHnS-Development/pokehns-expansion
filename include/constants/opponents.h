@@ -868,6 +868,9 @@
 #define TRAINERS_COUNT_EMERALD     855
 #define MAX_TRAINERS_COUNT_EMERALD 864
 
+#include "constants/hoenn_trainers.h" // Hoenn & Seek
+#include "constants/hoenn_layout.h"   // Hoenn & Seek
+
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG
 #define MAX_TRAINERS_COUNT                  MAX_TRAINERS_COUNT_FRLG

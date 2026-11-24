@@ -358,6 +358,10 @@ struct SaveBlock3
 #endif
     struct ChallengeSettings challengeSettings;
     u16 registeredItemHold;
+#if IS_HNS // Hoenn & Seek: Hoenn's own flags and vars (see constants/hoenn_layout.h)
+    u8 hoennFlags[HOENN_FLAGS_BYTES];
+    u16 hoennVars[HOENN_VARS_COUNT];
+#endif
 }; /* max size 1624 bytes */
 
 extern struct SaveBlock3 *gSaveBlock3Ptr;

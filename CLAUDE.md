@@ -25,6 +25,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Baseline 2.0.6 | 31,310,548 / 2,191 KB | 31,706,804 / 1,804 KB |
 | Part 2 (271 Hoenn layouts + tilesets) | 32,226,292 / 1,297 KB | 32,387,076 / 1,140 KB |
 | Part 3 (351 Hoenn maps: headers, events, connections) | 32,318,292 / 1,207 KB | 32,479,076 / 1,050 KB |
+| Part 4 (513 Hoenn trainers, trainer cap 864→1168) | 32,498,404 / 1,031 KB | 32,646,212 / 887 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -36,7 +37,27 @@ Read the roadmap entry for the part you're working on before starting.
 - Emerald tilesets are compiled into HnS: `src/data/tilesets/headers.h` and `metatiles.h` use `#if !IS_FRLG`. In debug builds, 7 tilesets that no kept layout uses waste ~39 KB; release builds drop them through LTO/gc-sections.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
 - C code switches on `IS_HNS` / `IS_FRLG` at build time (570 uses across 127 files). Hoenn needs some Emerald behavior at runtime, so convert those switches to region checks where needed. Don't flip them globally.
-- HnS flags live in `include/constants/flags_hns.h`. The Emerald flag names used by Hoenn scripts are `#define`d to `0` there, so they compile silently but do nothing. Flags must stay below the `ENGINE_FLAGS_START` pin (0x960) unless the pin is raised and `SAVE_VERSION` bumped. Old-save compatibility is **not** a goal.
+- **Hoenn IDs (part 4).** `tools/hoenn/gen_hoenn_ids.py` regenerates `include/constants/hoenn_{flags,vars,trainers}.h`, `src/data/trainers_hoenn.party` and `data/hoenn/remap_report.json`. Re-run it whenever `data/hoenn/maps.json` or Hoenn scripts change.
+  - Those headers `#undef`/`#define` Emerald names so Hoenn gets its own IDs. They're included at the end of `flags.h`, `vars.h` and `opponents.h`.
+  - `-DHOENN_NO_REMAP` turns the remap off; the generator uses it when resolving.
+  - `tools/hoenn/resolve_consts.py` evaluates any constant with the real compiler.
+- **Storage** (`include/constants/hoenn_layout.h`):
+  - Hoenn flags 0x1800–0x1BFF and Hoenn trainer flags 0x1C00–0x1FFF live in `gSaveBlock3Ptr->hoennFlags`.
+  - Hoenn vars 0x7000–0x707F live in `hoennVars`.
+  - Reached through hooks in `GetFlagPointer`/`GetVarPointer` (`src/event_data.c`). Cleared in `NewGameInitData`. SaveBlock3 is 564 of 1,624 bytes.
+  - Hidden-item flags must stay below 0x20E9 (13-bit offset from `FLAG_HIDDEN_ITEMS_START`); the generator puts them first.
+- **Trainers.**
+  - Hoenn trainers get IDs from `HOENN_TRAINERS_START` (653) up: 513 now, 653–1165.
+  - Their "defeated" flags come from `TRAINER_FLAG_ID(id)` (used in `battle_setup.c`, `debug.c`), not `TRAINER_FLAGS_START + id`.
+  - `MAX_TRAINERS_COUNT_HNS` was raised to 1168, which moves `TRAINER_PARTNER()` IDs and grows `sTrainerSlides`.
+- **Remap rules:**
+  - Remapped:
+    - Emerald names that resolved to 0.
+    - All `FLAG_HIDDEN_ITEM_*` (HnS collapses them onto one ID).
+    - Emerald vars aliased onto HnS slots (e.g. `VAR_ROUTE121_STATE` == `VAR_NEWBARKTOWN_LABSTATE`).
+  - Kept shared: `FLAG_SYS_*`, **`FLAG_BADGE0x_GET`** (same names as HnS badges; code does `FLAG_BADGE01_GET + n`), `FLAG_RECEIVED_HM_*`, vars HnS owns, and `*_UNSAFE`-aliased engine vars.
+  - **Never remap a name HnS uses with arithmetic.** The generator's input is checked for that; re-check when adding names.
+- HnS's own flags stay below the `ENGINE_FLAGS_START` pin (0x960). Old-save compatibility is **not** a goal.
 
 ## Known Hoenn issues (found in part 3, fix in later parts)
 - **All Emerald map scripts and text were already assembled into HnS** (`data/event_scripts.s` includes every map's `scripts.inc`). Script and text cost is already in the baseline, so cutting story text *saves* ROM.
@@ -52,6 +73,13 @@ Read the roadmap entry for the part you're working on before starting.
   - `BufferFanClubTrainerName`
   
   Re-check each when its area is worked on.
+- **Part 4 leftovers:**
+  - **Hoenn gyms still use HnS badge flags** (`FLAG_BADGE01_GET` = Zephyr), so they think they're already beaten. Part 9 must switch Hoenn gym scripts to stamp flags.
+  - `VAR_ELITE_4_STATE` is shared with HnS's league (part 13).
+  - Lilycove museum/contest flags that HnS's own contest copy references now really work (they used to be 0).
+- **Space opportunities:**
+  - `sTrainerSlides` (src/trainer_slide.c) is ~197 KB of NULL pointers sized `[3][TRAINER_PARTNER(PARTNER_COUNT)][slides]`; HnS defines no slides.
+  - Curating Hoenn trainers to ≤211 (part 14) lets `MAX_TRAINERS_COUNT_HNS` drop back to 864.
 
 ## Conventions
 - **Touch upstream HnS files as little as possible**, so future HnS fixes merge cleanly. Put new code and data in new `hoenn`-named files (`tools/hoenn/`, `src/hoenn_*.c`, `data/maps/*_hoenn/`, etc.) and keep edits to shared files to small hooks.
