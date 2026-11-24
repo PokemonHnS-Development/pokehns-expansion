@@ -28,7 +28,10 @@
     "UnionRoom",
     "SingleBattleColosseum",
     "DoubleBattleColosseum",
-    "LinkContestRoom"
+    "LinkContestRoom",
+    "CaveOfOrigin_",
+    "SeafloorCavern_",
+    "Underwater_SeafloorCavern"
   ],
   "exclude_maps": [
     "InsideOfTruck",
