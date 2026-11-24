@@ -339,4 +339,6 @@
 #define TESTING_VAR_UNUSED_7                (TESTING_VARS_START + 0x7)
 #endif // TESTING
 
+#include "constants/hoenn_vars.h" // Hoenn & Seek
+
 #endif // GUARD_CONSTANTS_VARS_H

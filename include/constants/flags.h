@@ -2519,4 +2519,6 @@
 #endif // TESTING
 
 
+#include "constants/hoenn_flags.h" // Hoenn & Seek
+
 #endif // GUARD_CONSTANTS_FLAGS_H
