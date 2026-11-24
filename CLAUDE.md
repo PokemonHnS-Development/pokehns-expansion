@@ -18,9 +18,21 @@ Read the roadmap entry for the part you're working on before starting.
   - The official `pokemonHnS_v2.0.6.ups` output uses 31,707,732 B, which matches a non-release build. Our builds are not byte-identical to official (compiler differs).
   - Budget content against the release figure, but keep the debug build under 32 MB too, since testing uses it.
   - Report the ROM delta after any content change.
+- Size history (ROM used / free):
+
+| Part | Release | Debug |
+|---|---|---|
+| Baseline 2.0.6 | 31,310,548 / 2,191 KB | 31,706,804 / 1,804 KB |
+| Part 2 (271 Hoenn layouts + tilesets) | 32,226,292 / 1,297 KB | 32,387,076 / 1,140 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
+- **Hoenn inclusion lists (Hoenn & Seek):**
+  - `data/hoenn/exclude.json` holds the hand-edited cut rules: prefixes, exact names, and substrings.
+  - `tools/hoenn/gen_hoenn_lists.py` regenerates `data/hoenn/maps.json` and `data/hoenn/layouts.json` from it. Commit the generated files.
+  - `tools/mapjson` treats any `emerald` layout listed in `data/hoenn/layouts.json` as part of the HnS build. Part 3 will do the same for `maps.json`.
+  - Emerald maps that HnS already copied as `<Name>_hns` are skipped automatically.
+- Emerald tilesets are compiled into HnS: `src/data/tilesets/headers.h` and `metatiles.h` use `#if !IS_FRLG`. In debug builds, 7 tilesets that no kept layout uses waste ~39 KB; release builds drop them through LTO/gc-sections.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
 - C code switches on `IS_HNS` / `IS_FRLG` at build time (570 uses across 127 files). Hoenn needs some Emerald behavior at runtime, so convert those switches to region checks where needed. Don't flip them globally.
 - HnS flags live in `include/constants/flags_hns.h`. The Emerald flag names used by Hoenn scripts are `#define`d to `0` there, so they compile silently but do nothing. Flags must stay below the `ENGINE_FLAGS_START` pin (0x960) unless the pin is raised and `SAVE_VERSION` bumped. Old-save compatibility is **not** a goal.
