@@ -13,7 +13,8 @@ A kept map is any map.json tagged game_version "emerald" (the default) that:
   - is listed in data/maps/map_groups.json,
   - doesn't match an excluded exact name, prefix, or substring,
   - has no HnS copy named "<Name>_hns" (HnS already uses its own copy).
-Kept layouts are the Emerald layouts used by at least one kept map.
+Kept layouts are the Emerald layouts used by at least one kept map, or swapped in by
+a kept map's script (setmaplayoutindex).
 """
 import glob
 import json
@@ -60,7 +61,15 @@ def main():
         l["id"] for l in load("data/layouts/layouts.json")["layouts"]
         if "id" in l and l.get("game_version", "emerald") == "emerald"
     }
-    layouts = sorted({maps[m]["layout"] for m in kept} & emerald_layouts)
+    used = {maps[m]["layout"] for m in kept}
+    # Also keep layouts that kept maps' scripts swap in at runtime (setmaplayoutindex),
+    # e.g. Birch's lab with the Johto starter table, or Shoal Cave at high/low tide.
+    import re as _re
+    for m in kept:
+        sp = os.path.join(ROOT, "data/maps", m, "scripts.inc")
+        if os.path.exists(sp):
+            used |= set(_re.findall(r"setmaplayoutindex (LAYOUT_\w+)", open(sp).read()))
+    layouts = sorted(used & emerald_layouts)
     missing = sorted({maps[m]["layout"] for m in kept} - emerald_layouts)
     if missing:
         sys.exit(f"error: kept maps use non-Emerald layouts: {missing}")

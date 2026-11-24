@@ -158,6 +158,9 @@ def main():
 
     def header(guard, body):
         return (f"#ifndef {guard}\n#define {guard}\n{gen}// Hoenn & Seek: give Hoenn its own IDs. Disabled by HOENN_NO_REMAP (used by the generator).\n"
+                "// IS_HNS must be known here: config/randomizer.h includes constants/vars.h before\n"
+                "// constants/global.h in the .s files, and the include guard would then skip the remap.\n"
+                "#include \"constants/global.h\"\n"
                 f"#if IS_HNS && !defined(HOENN_NO_REMAP)\n{body}#endif\n#endif // {guard}\n")
 
     fb = "".join(f"#undef {n}\n#define {n} 0x{HOENN_FLAGS_START + i:X}\n" for i, n in enumerate(remap_flags))

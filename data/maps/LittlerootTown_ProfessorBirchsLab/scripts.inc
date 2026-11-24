@@ -75,14 +75,13 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForDexUpgrade::
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject::
-	addobject LOCALID_BIRCHS_LAB_RIVAL
+	@ Hoenn & Seek: Brendan/May aren't in the lab (they show up after the League, part 16).
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters::
 	addobject LOCALID_BIRCHS_LAB_CYNDAQUIL_BALL
 	addobject LOCALID_BIRCHS_LAB_TOTODILE_BALL
 	addobject LOCALID_BIRCHS_LAB_CHIKORITA_BALL
-	addobject LOCALID_BIRCHS_LAB_RIVAL
 	turnobject LOCALID_BIRCHS_LAB_CYNDAQUIL_BALL, DIR_SOUTH
 	setobjectxy LOCALID_BIRCHS_LAB_CYNDAQUIL_BALL, 8, 4
 	turnobject LOCALID_BIRCHS_LAB_TOTODILE_BALL, DIR_SOUTH
