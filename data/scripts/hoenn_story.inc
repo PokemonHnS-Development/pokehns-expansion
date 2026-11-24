@@ -89,3 +89,34 @@ HoennSeek_Text_MrStoneAfterGift:
 	.string "somewhere digging up rare stones, no\l"
 	.string "doubt.\p"
 	.string "He was always that way, even as a boy.$"
+
+@ Steven's house, Mossdeep (part 12): the Beldum ball now holds a stone from
+@ Steven's collection. Metagrossite once the player has a Mega Ring, otherwise
+@ a Shiny Stone; decided when it's picked up.
+HoennSeek_EventScript_StevensStone::
+	lockall
+	msgbox HoennSeek_Text_StevensStoneNote, MSGBOX_DEFAULT
+	checkitem ITEM_MEGA_RING
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_StevensStoneMega
+	giveitem ITEM_SHINY_STONE
+	goto HoennSeek_EventScript_StevensStoneGot
+
+HoennSeek_EventScript_StevensStoneMega::
+	giveitem ITEM_METAGROSSITE
+HoennSeek_EventScript_StevensStoneGot::
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_StevensStoneBagFull
+	removeobject LOCALID_STEVENS_HOUSE_BALL
+	setflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_BELDUM_POKEBALL
+	releaseall
+	end
+
+HoennSeek_EventScript_StevensStoneBagFull::
+	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_Text_StevensStoneNote:
+	.string "There's a note tucked under the\n"
+	.string "POKé BALL.\p"
+	.string "“One of my favorite finds. Take it\n"
+	.string "with you, whoever you are. --STEVEN”$"
