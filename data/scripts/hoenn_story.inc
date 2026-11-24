@@ -91,16 +91,16 @@ HoennSeek_Text_MrStoneAfterGift:
 	.string "He was always that way, even as a boy.$"
 
 @ Steven's house, Mossdeep (part 12/13): the old Beldum ball is Steven's stone
-@ collection. Pick any one stone that isn't a key item: evolution stones,
-@ Mega Stones or the other stones (lists in src/hoenn_specials.c).
+@ collection. Pick any one stone that isn't a key item or a Mega Stone:
+@ evolution stones or the other stones (lists in src/hoenn_specials.c).
 HoennSeek_EventScript_StevensStone::
 	lockall
 	msgbox HoennSeek_Text_StevensStoneNote, MSGBOX_DEFAULT
 HoennSeek_EventScript_StevensStoneKind::
 	message HoennSeek_Text_StevensStoneWhichKind
 	waitmessage
-	dynmultichoice 15, 2, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, HoennSeek_Text_StonesEvolution, HoennSeek_Text_StonesMega, HoennSeek_Text_StonesOther, HoennSeek_Text_StonesLeave
-	goto_if_ge VAR_RESULT, 3, HoennSeek_EventScript_StevensStoneLeave
+	dynmultichoice 15, 2, FALSE, 3, 0, DYN_MULTICHOICE_CB_NONE, HoennSeek_Text_StonesEvolution, HoennSeek_Text_StonesOther, HoennSeek_Text_StonesLeave
+	goto_if_ge VAR_RESULT, 2, HoennSeek_EventScript_StevensStoneLeave
 	copyvar VAR_0x8004, VAR_RESULT
 	message HoennSeek_Text_StevensStoneWhichOne
 	waitmessage
@@ -149,9 +149,6 @@ HoennSeek_Text_StevensStoneLeave:
 
 HoennSeek_Text_StonesEvolution:
 	.string "EVOLUTION$"
-
-HoennSeek_Text_StonesMega:
-	.string "MEGA STONES$"
 
 HoennSeek_Text_StonesOther:
 	.string "OTHER$"

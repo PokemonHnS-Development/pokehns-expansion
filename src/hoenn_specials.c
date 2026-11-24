@@ -9,7 +9,6 @@
 #include "pokemon.h"
 #include "script_menu.h"
 #include "string_util.h"
-#include "constants/hold_effects.h"
 #include "constants/items.h"
 
 #if IS_HNS
@@ -34,9 +33,9 @@ u16 HoennBufferFollower(void)
     return TRUE;
 }
 
-// Steven's stone collection (Mossdeep): every stone that isn't a key item,
-// in three menus. VAR_0x8004 picks the menu.
-enum { STONES_EVOLUTION, STONES_MEGA, STONES_OTHER };
+// Steven's stone collection (Mossdeep): every non-key stone except Mega Stones
+// (Hoenn & Seek has no Megas), in two menus. VAR_0x8004 picks the menu.
+enum { STONES_EVOLUTION, STONES_OTHER };
 
 static const u16 sEvolutionStones[] = {
     ITEM_FIRE_STONE, ITEM_WATER_STONE, ITEM_THUNDER_STONE, ITEM_LEAF_STONE,
@@ -48,31 +47,12 @@ static const u16 sOtherStones[] = {
     ITEM_EVERSTONE, ITEM_HARD_STONE, ITEM_FLOAT_STONE, ITEM_ODD_KEYSTONE,
 };
 
-static bool32 IsMegaStone(u32 item)
-{
-    return GetItemHoldEffect(item) == HOLD_EFFECT_MEGA_STONE
-        && GetItemPocket(item) != POCKET_KEY_ITEMS;
-}
-
 // Returns the index-th stone of a menu, or ITEM_NONE past its end.
 static u32 GetStone(u32 menu, u32 index)
 {
-    u32 item;
-
-    switch (menu)
-    {
-    case STONES_EVOLUTION:
+    if (menu == STONES_EVOLUTION)
         return index < ARRAY_COUNT(sEvolutionStones) ? sEvolutionStones[index] : ITEM_NONE;
-    case STONES_OTHER:
-        return index < ARRAY_COUNT(sOtherStones) ? sOtherStones[index] : ITEM_NONE;
-    default:
-        for (item = ITEM_NONE + 1; item < ITEMS_COUNT; item++)
-        {
-            if (IsMegaStone(item) && index-- == 0)
-                return item;
-        }
-        return ITEM_NONE;
-    }
+    return index < ARRAY_COUNT(sOtherStones) ? sOtherStones[index] : ITEM_NONE;
 }
 
 // special HoennPushStoneList: fills the dynmultistack list for menu VAR_0x8004.
