@@ -40,6 +40,7 @@ string version;
 #include <set>
 std::set<string> hoenn_layouts;
 std::set<string> hoenn_maps;
+std::set<string> hoenn_blocked_maps; // MAP_ ids not in the HnS build
 string read_text_file(string filepath);
 
 static void load_hoenn_list(const string &path, std::set<string> &out) {
@@ -301,13 +302,30 @@ string generate_map_events_text(Json map_data) {
     if (map_data["warp_events"].array_items().size() > 0) {
         warps_label = mapName + "_MapWarps";
         text << warps_label << ":\n";
+        if (hoenn_blocked_maps.empty() && std::filesystem::exists("data/hoenn/blocked_maps.json")) {
+            string err;
+            Json blocked = Json::parse(read_text_file("data/hoenn/blocked_maps.json"), err);
+            for (auto &item : blocked["items"].array_items())
+                hoenn_blocked_maps.insert(item.string_value());
+        }
         for (auto &warp_event : map_data["warp_events"].array_items()) {
+            // Hoenn & Seek: a warp into a map that isn't in the HnS build would load a NULL
+            // header and crash. In HnS, park it off-map so it can never trigger (the warp keeps
+            // its index, so other maps' warps into this map still line up).
+            if (hoenn_blocked_maps.count(json_to_string(warp_event, "dest_map"))) {
+                text << "\t.if IS_HNS\n\twarp_def 0x7FFF, 0x7FFF, "
+                     << json_to_string(warp_event, "elevation") << ", "
+                     << json_to_string(warp_event, "dest_warp_id") << ", "
+                     << json_to_string(warp_event, "dest_map") << "\n\t.else\n";
+            }
             text << "\twarp_def "
                  << json_to_string(warp_event, "x") << ", "
                  << json_to_string(warp_event, "y") << ", "
                  << json_to_string(warp_event, "elevation") << ", "
                  << json_to_string(warp_event, "dest_warp_id") << ", "
                  << json_to_string(warp_event, "dest_map") << "\n";
+            if (hoenn_blocked_maps.count(json_to_string(warp_event, "dest_map")))
+                text << "\t.endif\n";
         }
         text << "\n";
     } else {
