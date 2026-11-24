@@ -30,6 +30,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 6 (region map/Fly per region, Hoenn wild tables) | 32,547,620 / 983 KB | 32,695,364 / 839 KB |
 | Part 7 (HM09 Dive, Steven's letter) | 32,549,332 / 981 KB | 32,698,084 / 836 KB |
 | Part 8 (Oak's ticket, ferry, Mt. Silver gate, Hoenn new-game flags) | 32,551,572 / 979 KB | 32,700,308 / 834 KB |
+| Part 9 (stamps on the trainer card, gym level scaling) | 32,552,996 / 978 KB | 32,701,860 / 833 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -58,6 +59,12 @@ Read the roadmap entry for the part you're working on before starting.
   - Vermilion's sailor menu gets SLATEPORT CITY. It's a scrolling `dynmultichoice` because seven entries don't fit HnS's fixed multichoice.
   - Slateport and Lilycove harbor attendants (map.json script swapped) sail to Vermilion, the other harbor, or HnS's Battle Frontier. No S.S. Tidal interior ride. Arrivals: Hoenn harbors (8,11), Vermilion port (8,9).
   - Mt. Silver: `ReceptionGate_hns` OnTransition hides the Silver guard and sets `VAR_ROUTE28_SCIENTIST` = 1 once `FLAG_HOENN_STAMP_WALLACE` is set. Oak's later dialogue reflects it.
+- **Stamps and gym scaling (part 9):**
+  - Hoenn gym scripts set and check `FLAG_HOENN_STAMP_GYM_1..8` instead of `FLAG_BADGE0x_GET` (43 references in 20 kept Hoenn maps were rewritten once; new Emerald scripts brought in later need the same rewrite).
+  - Trainer card: the back shows the 8 stamps (Emerald's badge art, loaded after HnS's 16 badges at BG3 tile 192+64) on tile rows 8–9, above the Kanto row. Rows 8–9 only overlap the link-trades stat line.
+  - `src/hoenn_scaling.c`: `HoennScaleTrainerMonLevel()` is called from the one `CreateMon` in `CreateNPCTrainerPartyFromTrainer` (`HOENN_TRAINER_MON_LEVEL`). For Hoenn gym leaders the ace is 68 at 0 stamps up to 78 at 7 (`HoennGymAceLevel`); gym trainers get ace − 4; each mon keeps its Emerald gap below the ace. Moves without custom sets come from the new level.
+  - `tools/hoenn/gen_hoenn_gyms.py` writes `src/data/hoenn_gym_trainers.h` (8 leaders, 57 gym trainers from maps whose name contains `_Gym`). Re-run after `gen_hoenn_ids.py`.
+  - Gym leader text still says BADGE and lists HM uses, and gym TMs are still Emerald's (part 13).
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
 - C code switches on `IS_HNS` / `IS_FRLG` at build time (570 uses across 127 files). Hoenn needs some Emerald behavior at runtime, so convert those switches to region checks where needed. Don't flip them globally.
@@ -102,7 +109,7 @@ Read the roadmap entry for the part you're working on before starting.
   
   Re-check each when its area is worked on.
 - **Part 4 leftovers:**
-  - **Hoenn gyms still use HnS badge flags** (`FLAG_BADGE01_GET` = Zephyr), so they think they're already beaten. Part 9 must switch Hoenn gym scripts to stamp flags.
+  - ~~Hoenn gyms still use HnS badge flags~~ Fixed in part 9 (stamp flags).
   - `VAR_ELITE_4_STATE` is shared with HnS's league (part 13).
   - Lilycove museum/contest flags that HnS's own contest copy references now really work (they used to be 0).
 - **Space opportunities:**

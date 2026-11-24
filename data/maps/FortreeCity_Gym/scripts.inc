@@ -32,7 +32,7 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_FORTREE_GYM
-	setflag FLAG_BADGE06_GET
+	setflag FLAG_HOENN_STAMP_GYM_6
 	setvar VAR_0x8008, 6
 	call Common_EventScript_SetGymTrainers
 	call FortreeCity_Gym_EventScript_GiveAerialAce
@@ -114,13 +114,13 @@ FortreeCity_Gym_EventScript_GymGuidePostVictory::
 
 FortreeCity_Gym_EventScript_LeftGymStatue::
 	lockall
-	goto_if_set FLAG_BADGE06_GET, FortreeCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_STAMP_GYM_6, FortreeCity_Gym_EventScript_GymStatueCertified
 	goto FortreeCity_Gym_EventScript_GymStatue
 	end
 
 FortreeCity_Gym_EventScript_RightGymStatue::
 	lockall
-	goto_if_set FLAG_BADGE06_GET, FortreeCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_STAMP_GYM_6, FortreeCity_Gym_EventScript_GymStatueCertified
 	goto FortreeCity_Gym_EventScript_GymStatue
 	end
 

@@ -156,7 +156,7 @@ RustboroCity_EventScript_Woman::
 RustboroCity_EventScript_Man1::
 	lock
 	faceplayer
-	goto_if_set FLAG_BADGE01_GET, RustboroCity_EventScript_Man1HaveBadge
+	goto_if_set FLAG_HOENN_STAMP_GYM_1, RustboroCity_EventScript_Man1HaveBadge
 	msgbox RustboroCity_Text_HaveYouChallengedGym, MSGBOX_DEFAULT
 	release
 	end

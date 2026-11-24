@@ -38,7 +38,7 @@ LilycoveCity_PokemonCenter_1F_EventScript_Boy::
 LilycoveCity_PokemonCenter_1F_EventScript_Maniac::
 	lock
 	faceplayer
-	goto_if_set FLAG_BADGE07_GET, LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone
+	goto_if_set FLAG_HOENN_STAMP_GYM_7, LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone
 	msgbox LilycoveCity_PokemonCenter_1F_Text_HeardAboutRottenScoundrels, MSGBOX_DEFAULT
 	release
 	end

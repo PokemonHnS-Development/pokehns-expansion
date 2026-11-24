@@ -9,7 +9,7 @@ EverGrandeCity_PokemonCenter_1F_OnTransition:
 	end
 
 EverGrandeCity_PokemonCenter_1F_EventScript_TryShowScott::
-	goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_HOENN_STAMP_GYM_6, Common_EventScript_NopReturn
 	clearflag FLAG_HIDE_EVER_GRANDE_POKEMON_CENTER_1F_SCOTT
 	return
 

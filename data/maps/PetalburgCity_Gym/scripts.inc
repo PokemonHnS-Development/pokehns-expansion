@@ -377,7 +377,7 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	msgbox PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_PETALBURG_GYM
 	setvar VAR_PETALBURG_GYM_STATE, 7
-	setflag FLAG_BADGE05_GET
+	setflag FLAG_HOENN_STAMP_GYM_5
 	special ResetHealLocationFromDewford
 	call EventScript_HideMrBriney
 	setflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
@@ -1118,13 +1118,13 @@ PetalburgCity_Gym_EventScript_GymGuidePostVictory::
 
 PetalburgCity_Gym_EventScript_LeftGymStatue::
 	lockall
-	goto_if_set FLAG_BADGE05_GET, PetalburgCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_STAMP_GYM_5, PetalburgCity_Gym_EventScript_GymStatueCertified
 	goto PetalburgCity_Gym_EventScript_GymStatue
 	end
 
 PetalburgCity_Gym_EventScript_RightGymStatue::
 	lockall
-	goto_if_set FLAG_BADGE05_GET, PetalburgCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_STAMP_GYM_5, PetalburgCity_Gym_EventScript_GymStatueCertified
 	goto PetalburgCity_Gym_EventScript_GymStatue
 	end
 
