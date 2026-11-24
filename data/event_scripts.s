@@ -1056,6 +1056,7 @@ gStdScripts_End::
 	.include "data/scripts/new_game.inc"
 	.include "data/scripts/hoenn_new_game.inc" @ Hoenn & Seek
 	.include "data/scripts/hoenn_ferry.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_story.inc" @ Hoenn & Seek
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"
 

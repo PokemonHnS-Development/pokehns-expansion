@@ -709,3 +709,5 @@ gSpecials::
 	def_special GivePartyMonNationalRibbon
 	def_special GetMaxPartySize
 	def_special IsPartyLimitChallengeActive
+	@ Hoenn & Seek
+	def_special HoennSetupScaledWildBattle

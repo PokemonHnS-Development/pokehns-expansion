@@ -31,6 +31,7 @@ struct Trainer;
 u32 HoennCountStamps(void);
 u32 HoennGymAceLevel(void);
 u8 HoennScaleTrainerMonLevel(const struct Trainer *trainer, u8 level);
+void HoennSetupScaledWildBattle(void);
 #define HOENN_TRAINER_MON_LEVEL(trainer, level) HoennScaleTrainerMonLevel(trainer, level)
 #else
 #define HOENN_TRAINER_MON_LEVEL(trainer, level) (level)

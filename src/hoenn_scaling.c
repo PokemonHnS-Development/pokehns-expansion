@@ -79,3 +79,17 @@ u8 HoennScaleTrainerMonLevel(const struct Trainer *trainer, u8 level)
 }
 
 #endif // IS_HNS
+
+#if IS_HNS
+#include "script_pokemon_util.h"
+
+#define HOENN_SCALED_WILD_GAP   8
+
+// Special: set up a scripted wild battle against VAR_0x8004's species at the
+// stamp curve minus HOENN_SCALED_WILD_GAP (Lv 60 -> 70). Used for the Route 120
+// bridge Kecleon (part 11).
+void HoennSetupScaledWildBattle(void)
+{
+    CreateScriptedWildMon(VarGet(VAR_0x8004), HoennGymAceLevel() - HOENN_SCALED_WILD_GAP, ITEM_NONE);
+}
+#endif
