@@ -26,6 +26,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 2 (271 Hoenn layouts + tilesets) | 32,226,292 / 1,297 KB | 32,387,076 / 1,140 KB |
 | Part 3 (351 Hoenn maps: headers, events, connections) | 32,318,292 / 1,207 KB | 32,479,076 / 1,050 KB |
 | Part 4 (513 Hoenn trainers, trainer cap 864→1168) | 32,498,404 / 1,031 KB | 32,646,212 / 887 KB |
+| Part 5 (Hoenn door animations, mapsecs, warp safety) | 32,527,764 / 1,002 KB | 32,675,540 / 858 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -35,6 +36,11 @@ Read the roadmap entry for the part you're working on before starting.
   - `tools/mapjson` treats any `emerald` layout or map listed in `data/hoenn/layouts.json` / `maps.json` as part of the HnS build. Map constants exist for every map; excluded maps get a NULL header.
   - Emerald maps that HnS already copied as `<Name>_hns` are skipped automatically.
 - Emerald tilesets are compiled into HnS: `src/data/tilesets/headers.h` and `metatiles.h` use `#if !IS_FRLG`. In debug builds, 7 tilesets that no kept layout uses waste ~39 KB; release builds drop them through LTO/gc-sections.
+- **Map sections (part 5).** `tools/hoenn/gen_hoenn_mapsecs.py` appends the 79 Hoenn sections used by kept maps to `hns_map_sections` in `src/data/region_map/region_map_sections.json` (HnS values 1–124 unchanged; Hoenn 125–203; `MAPSEC_NONE` = 204).
+  - Before this, every Hoenn section was `= 0` in HnS.
+  - Sections after `JOHTO_MAPSEC_END` make `GetRegionForSectionId()`/`GetCurrentRegion()` return `REGION_HOENN`. **Use `GetCurrentRegion() == REGION_HOENN` for runtime Hoenn checks.**
+  - Four sections HnS already lists (ABANDONED_SHIP, LILYCOVE_CITY, SAFARI_ZONE, VICTORY_ROAD) sit before Pallet, outside every range, so they also count as Hoenn.
+- **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
 - C code switches on `IS_HNS` / `IS_FRLG` at build time (570 uses across 127 files). Hoenn needs some Emerald behavior at runtime, so convert those switches to region checks where needed. Don't flip them globally.
 - **Hoenn IDs (part 4).** `tools/hoenn/gen_hoenn_ids.py` regenerates `include/constants/hoenn_{flags,vars,trainers}.h`, `src/data/trainers_hoenn.party` and `data/hoenn/remap_report.json`. Re-run it whenever `data/hoenn/maps.json` or Hoenn scripts change.
@@ -62,7 +68,11 @@ Read the roadmap entry for the part you're working on before starting.
 ## Known Hoenn issues (found in part 3, fix in later parts)
 - **All Emerald map scripts and text were already assembled into HnS** (`data/event_scripts.s` includes every map's `scripts.inc`). Script and text cost is already in the baseline, so cutting story text *saves* ROM.
 - **Flags and vars:** Emerald flag/var names resolve to 0 in HnS. FlagGet(0) is FALSE and FlagSet(0) does nothing; VarGet(0) returns 0 and VarSet(0) does nothing. Story `map_script_2` frame triggers therefore re-fire forever. Fix in part 4.
-- **Dangling links:** `tools/hoenn/check_links.py` lists warps, connections and script warps from kept maps into maps outside the build (21 targets; snapshot in `data/hoenn/dangling_links.json`). Following one loads a NULL header and crashes. Fix in part 5 (or in the part that owns the area: contest lobby → part 17, harbors → part 8).
+- **Dangling links (handled in part 5):**
+  - `tools/hoenn/check_links.py` still lists the 21 targets, for reference.
+  - **Doors:** `gen_hoenn_lists.py` writes `data/hoenn/blocked_maps.json`, and `tools/mapjson` emits warps into those maps inside `.if IS_HNS` with coordinates 0x7FFF, so the door stays shut (the warp keeps its index).
+  - **Scripts:** `ApplyCurrentWarp` (`src/overworld.c`) refuses any warp whose map header is NULL and keeps the player in place.
+  - Still to give real destinations: Lilycove contest lobby (part 17), harbor ferry/Frontier menu (part 8).
 - **9 specials used by Hoenn maps have HnS-specific branches inside:**
   - `GameClear` (part 13)
   - `EnterSafariMode` / `ExitSafariMode` (part 17)
@@ -84,5 +94,8 @@ Read the roadmap entry for the part you're working on before starting.
 ## Conventions
 - **Touch upstream HnS files as little as possible**, so future HnS fixes merge cleanly. Put new code and data in new `hoenn`-named files (`tools/hoenn/`, `src/hoenn_*.c`, `data/maps/*_hoenn/`, etc.) and keep edits to shared files to small hooks.
 - Work on a `part-NN-<slug>` branch off `hoenn` and open a PR into `hoenn`. Don't commit to `master` (it mirrors upstream).
+- **Emulator tests:** a libmgba harness (not in the repo yet) plays scripted input, takes screenshots and reads/writes memory. Useful recipes:
+  - Debug menu: hold R + Start. Warp is Utilities → 2nd item; numbers use ↑/↓ for the value and → for the next digit.
+  - Flags & Vars → items 14–16 turn off collision, encounters and trainer sight.
 - Never commit ROMs, base ROMs or patches. `baserom/` and `dist/` are git-ignored.
 - The project owner tests in mGBA. Every part should end with a building ROM and a patch.

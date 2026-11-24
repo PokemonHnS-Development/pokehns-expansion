@@ -642,8 +642,16 @@ const struct MapLayout *GetMapLayout(u16 mapLayoutId)
     return gMapLayouts[mapLayoutId - 1];
 }
 
+#if IS_HNS
+static void SetWarpData(struct WarpData *warp, s8 mapGroup, s8 mapNum, s8 warpId, s8 x, s8 y);
+#endif
+
 void ApplyCurrentWarp(void)
 {
+#if IS_HNS // Hoenn & Seek: never warp into a map that isn't in this build (NULL header crashes); stay put instead
+    if (Overworld_GetMapHeaderByGroupAndId(sWarpDestination.mapGroup, sWarpDestination.mapNum) == NULL)
+        SetWarpData(&sWarpDestination, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, WARP_ID_NONE, gSaveBlock1Ptr->pos.x, gSaveBlock1Ptr->pos.y);
+#endif
     gLastUsedWarp = gSaveBlock1Ptr->location;
     gSaveBlock1Ptr->location = sWarpDestination;
     sFixedDiveWarp = sDummyWarpData;
