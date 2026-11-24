@@ -1,4 +1,5 @@
 ReceptionGate_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_SilverGateOnTransition @ Hoenn & Seek
 	.byte 0
 
 ReceptionGate_EventScript_Janine::

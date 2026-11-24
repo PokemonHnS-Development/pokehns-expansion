@@ -1085,6 +1085,7 @@ enum __attribute__((packed)) Item
     ITEM_AZURE_FLUTE,
 #if IS_HNS
     ITEM_HM09_SLOT, // Hoenn & Seek: must equal ITEM_HM09 (checked in src/data/items.h)
+    ITEM_TIDAL_TICKET, // Hoenn & Seek: Oak's ticket for the Vermilion-Hoenn ferry
 #endif
 
     ITEMS_COUNT,

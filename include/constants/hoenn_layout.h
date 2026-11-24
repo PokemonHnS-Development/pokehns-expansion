@@ -8,14 +8,17 @@
 // Flag 0x1800-0x1BFF  Hoenn story/item/hidden-item flags (hidden-item flags
 //                     come first: their offset from FLAG_HIDDEN_ITEMS_START is
 //                     stored in 13 bits, so they must stay below 0x20E9)
+//                     0x1BC0-0x1BFF are hand-defined (constants/hoenn_custom.h)
 // Flag 0x1C00-0x1FFF  Hoenn trainer "defeated" flags (trainer ID - HOENN_TRAINERS_START)
-// Var  0x7000-0x707F  Hoenn vars
+// Var  0x7000-0x707F  Hoenn vars (0x7070-0x707F hand-defined, constants/hoenn_custom.h)
 #define HOENN_FLAGS_START           0x1800
 #define HOENN_TRAINER_FLAGS_START   0x1C00
 #define HOENN_FLAGS_END             0x1FFF
 #define HOENN_FLAGS_BYTES           ((HOENN_FLAGS_END - HOENN_FLAGS_START + 1) / 8)
 #define HOENN_VARS_START            0x7000
 #define HOENN_VARS_COUNT            0x80
+#define HOENN_CUSTOM_FLAGS_START    0x1BC0
+#define HOENN_CUSTOM_VARS_START     0x7070
 
 #define IS_HOENN_FLAG(id) ((id) >= HOENN_FLAGS_START && (id) <= HOENN_FLAGS_END)
 #define IS_HOENN_VAR(id)  ((id) >= HOENN_VARS_START && (id) < HOENN_VARS_START + HOENN_VARS_COUNT)

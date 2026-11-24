@@ -60,6 +60,7 @@ extern const u8 EventScript_ResetAllMapFlagsFrlg[];
 #endif
 #if IS_HNS
 extern const u8 EventScript_ResetAllMapFlagsHnS[];
+extern const u8 EventScript_ResetAllMapFlagsHoenn[]; // Hoenn & Seek
 #endif
 
 static void ClearFrontierRecord(void);
@@ -299,6 +300,7 @@ void NewGameInitData(void)
 #if IS_HNS // Hoenn & Seek: Hoenn's own flags/vars start cleared
     memset(gSaveBlock3Ptr->hoennFlags, 0, sizeof(gSaveBlock3Ptr->hoennFlags));
     memset(gSaveBlock3Ptr->hoennVars, 0, sizeof(gSaveBlock3Ptr->hoennVars));
+    RunScriptImmediately(EventScript_ResetAllMapFlagsHoenn); // Hoenn's post-Emerald state; must follow the clear
 #endif
     ClearFollowerNPCData();
 

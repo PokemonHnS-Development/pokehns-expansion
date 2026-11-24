@@ -35,3 +35,6 @@ The script commands are documented at the top of `harness.c`. Savestates only wo
 - **Player position:** `gObjectEvents[0].currentCoords` is at 0x02001804/0x02001806 in current debug builds; subtract 7 (MAP_OFFSET). Re-check the symbol after code changes.
 - **Surfing is about 2× walking speed** (~7–8 frames per tile vs 16).
 - `mapinfo.py MAP [x0 y0 x1 y1]` prints an ASCII map (water, waterfalls, walls, warps, objects) for planning routes.
+- **Save blocks move.** `gSaveBlock1Ptr`/`gSaveBlock3Ptr` change after warps, so read the pointer in the same state you poke. Offsets (current build): SaveBlock1 `flags` +0x198C, `vars` +0x1ABC; SaveBlock3 `hoennFlags` +0x32.
+- **Hold buttons 4 frames** (`press A 4`) for dialogue; single-frame presses are sometimes missed.
+- **Ferry trip (part 8):** from a debug save, set `FLAG_RETURNED_MACHINE_PART` (0x1DD), `VAR_SSAQUA_STATE` (0x408B) = 7 and `VAR_NUM_BADGES` (0x4076) = 16, then: Oak in `PalletTown_Lab_hns` (11/4, `--xy 13 12`, face up) → Vermilion port (15/3, `--xy 8 9`, face down) → Slateport harbor (40/9) → Lilycove harbor (44/10). Mt. Silver gate: `ReceptionGate_hns` (22/22); Wallace's stamp is `FLAG_HOENN_STAMP_WALLACE` (0x1BC8).

@@ -37,6 +37,7 @@ VermilionPort_EventScript_SailorCantSail::
 	end
 
 VermilionPort_EventScript_Sailor_AfterKanto::
+	goto HoennSeek_EventScript_VermilionDestinations @ Hoenn & Seek: adds Slateport (data/scripts/hoenn_ferry.inc)
 	message VermilionPort_Text_WhereSail
 	multichoice 20, 0, MULTI_VERMILION_HARBOR, FALSE
 	switch VAR_RESULT
