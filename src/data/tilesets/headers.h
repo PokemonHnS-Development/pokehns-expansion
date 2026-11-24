@@ -281,7 +281,7 @@ const struct Tileset gTileset_Lab_Frlg =
     .callback = NULL,
 };
 
-#if !IS_FRLG && !IS_HNS
+#if !IS_FRLG // Hoenn & Seek: Emerald (Hoenn) tilesets are also built for HnS
 
 const struct Tileset gTileset_Petalburg =
 {
@@ -844,7 +844,9 @@ const struct Tileset gTileset_UnionRoom =
     .callback = NULL,
 };
 
-#elif IS_FRLG
+#endif // !IS_FRLG
+
+#if IS_FRLG
 
 // FRLG tilesets
 const struct Tileset gTileset_BuildingFrlg =
