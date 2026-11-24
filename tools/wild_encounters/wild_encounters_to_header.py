@@ -1,6 +1,27 @@
 import json
 import re
 
+# Hoenn & Seek: Emerald tables for maps listed in data/hoenn/maps.json are also built for HnS.
+def _hoenn_kept_map_ids():
+    import json as _json, os as _os
+    try:
+        names = _json.load(open("data/hoenn/maps.json"))["items"]
+    except (FileNotFoundError, KeyError, ValueError):
+        return set()
+    ids = set()
+    for n in names:
+        p = _os.path.join("data/maps", n, "map.json")
+        if _os.path.exists(p):
+            ids.add(_json.load(open(p))["id"])
+    return ids
+HOENN_KEPT_MAP_IDS = _hoenn_kept_map_ids()
+
+def _version_guard(version, map_group):
+    m = __import__("re").search(r"MAP_GROUP\((\w+)\)", str(map_group))
+    if version == "EMERALD" and m and m.group(1) in HOENN_KEPT_MAP_IDS:
+        return "#if defined(EMERALD) || defined(POKEMON_HNS) // Hoenn & Seek"
+    return f"#ifdef {version}"
+
 class Config:
     def __init__(self, config_file_name, rtc_constants_file_name, encounters_json_data):
         self.times_of_day = None
@@ -171,7 +192,7 @@ class WildEncounterAssembler:
             elif "_Hns" in shared_label or "_hns" in shared_label:
                 version = "POKEMON_HNS"
 
-            self.WriteLine(f"#ifdef {version}")
+            self.WriteLine(_version_guard(version, map_group))
 
             self.WriteLine("{", 1)
             self.WriteLine(f".mapGroup = {map_group},", 2)
@@ -245,7 +266,7 @@ class WildEncounterAssembler:
                     version = "LEAFGREEN"
                 elif "_Hns" in shared_label or "_hns" in shared_label:
                     version = "POKEMON_HNS"
-                self.WriteLine(f"#ifdef {version}")
+                self.WriteLine(_version_guard(version, map_group))
                 for mon_type in self.config.mon_types:
                     if mon_type not in map_encounters:
                         headers["data"][shared_label][mon_type] = "NULL"
