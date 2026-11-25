@@ -1,5 +1,6 @@
 // Hoenn & Seek (part 13): script specials for Hoenn dialogue and gifts.
 #include "global.h"
+#include "daycare.h"
 #include "event_data.h"
 #include "event_object_movement.h"
 #include "hoenn.h"
@@ -228,3 +229,17 @@ void HoennSetAbilitySlot(void)
 }
 
 #endif // IS_HNS
+
+// specialvar VAR_RESULT, HoennGiveShinyEgg (part 16b): gives a shiny egg of species
+// VAR_0x8004 (Steven's Beldum at Silph Co.). Returns MON_GIVEN_TO_PARTY,
+// MON_GIVEN_TO_PC or MON_CANT_GIVE, like givemon. Hatching keeps the shininess.
+u16 HoennGiveShinyEgg(void)
+{
+    struct Pokemon mon;
+    bool8 isEgg = TRUE, isShiny = TRUE;
+
+    CreateEgg(&mon, gSpecialVar_0x8004, FALSE);
+    SetMonData(&mon, MON_DATA_IS_EGG, &isEgg);
+    SetMonData(&mon, MON_DATA_IS_SHINY, &isShiny);
+    return GiveCapturedMonToPlayer(&mon);
+}

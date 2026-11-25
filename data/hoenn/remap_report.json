@@ -101,6 +101,7 @@
   "FLAG_FORTREE_NPC_TRADE_COMPLETED": "remapped: was 0 (no-op)",
   "FLAG_GOOD_LUCK_SAFARI_ZONE": "kept 0x258",
   "FLAG_GOT_BASEMENT_KEY_FROM_WATTSON": "remapped: was 0 (no-op)",
+  "FLAG_GOT_HOENN_STARTER": "kept 0x202",
   "FLAG_GOT_TM_THUNDERBOLT_FROM_WATTSON": "remapped: was 0 (no-op)",
   "FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT": "remapped: was 0 (no-op)",
   "FLAG_HAS_MATCH_CALL": "kept 0x1f3",

@@ -40,6 +40,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 13b (badges wording, gym prerequisites, Rare Candies, League + Wallace, rematches) | 32,465,204 / 1,063 KB | 32,613,284 / 919 KB |
 | Part 15 (Hoenn wild levels 35–70, 36 night tables, 41 items upgraded) | 32,467,444 / 1,061 KB | 32,615,540 / 917 KB |
 | Part 16a (Aqua/Magma quests, Maxie + Archie double, Norman's call, Brendan & May; 220 trainers, cap 880) | 32,480,596 / 1,048 KB | 32,628,660 / 904 KB |
+| Part 16b (harbor aide, Birch's Mudkip, Wally at the lab, Steven's shiny Beldum egg) | 32,483,380 / 1,045 KB | 32,631,412 / 901 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -129,6 +130,11 @@ Read the roadmap entry for the part you're working on before starting.
   - **Brendan & May:** a two-trainer double (3 each, Lv 85–87). The first win sets `FLAG_HOENN_BEAT_BM`, gives the Treecko and Torchic eggs (needs 2 free slots; otherwise they offer them again at home) and moves them home (`FLAG_HOENN_HIDE_BM_HOME`), where either one offers a double rematch.
   - **Mt. Silver now opens on `FLAG_HOENN_BEAT_BM`**, not Wallace's badge (`hoenn_ferry.inc`; Oak's and the guard's text say "prove yourself in Hoenn").
   - `gen_hoenn_newgame.py` accepts `FLAG_HOENN_*` in the overrides (the three hide flags are set at new game); `gen_hoenn_ids.py` now scans `data/scripts/hoenn_*.inc` too.
+- **Arrival gifts (part 16b):** scripts in `data/scripts/hoenn_arrival.inc`.
+  - **Slateport harbor:** Birch's aide stands at (9,11), next to the ferry arrival tile. A harbor `ON_FRAME` entry (`VAR_HOENN_AIDE_STATE` == 0) makes him greet you once with directions; his object flag is `FLAG_HOENN_RECEIVED_MUDKIP`, so he's gone once you have Mudkip.
+  - **Birch's lab:** Birch's object script is `HoennSeek_EventScript_Birch`: Mudkip Lv 5 (`FLAG_HOENN_RECEIVED_MUDKIP`), then lines that follow Brendan & May's state. `VAR_DEX_UPGRADE_JOHTO_STARTER_STATE` is now 6, so the table layout stays but the Johto starter balls never appear. Wally stands at (9,5) until you talk to him (`FLAG_HOENN_HIDE_LAB_WALLY`).
+  - **Silph Co. (`SaffronCity_SilphCo_hns`):** Steven's object script is `HoennSeek_EventScript_SilphSteven` (same scene and exit as HnS's): a shiny Beldum egg from `specialvar VAR_RESULT, HoennGiveShinyEgg` (species in `VAR_0x8004`; hatching keeps `MON_DATA_IS_SHINY`). It still sets `FLAG_GOT_HOENN_STARTER`.
+  - Oak's ticket text mentions the aide and Birch's gift.
 - **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
@@ -185,7 +191,7 @@ Read the roadmap entry for the part you're working on before starting.
 - **Touch upstream HnS files as little as possible**, so future HnS fixes merge cleanly. Put new code and data in new `hoenn`-named files (`tools/hoenn/`, `src/hoenn_*.c`, `data/maps/*_hoenn/`, etc.) and keep edits to shared files to small hooks.
 - Work on a `part-NN-<slug>` branch off `hoenn` and open a PR into `hoenn`. Don't commit to `master` (it mirrors upstream).
 - **Emulator tests:** a libmgba harness (not in the repo yet) plays scripted input, takes screenshots and reads/writes memory. Useful recipes:
-  - Debug menu: hold R + Start. Scripts are main item 6, then Script N; a test-only ROM can put any script in `Debug_EventScript_Script_7/8` (restore `debug.inc` afterwards). Warp is Utilities → 2nd item; numbers use ↑/↓ for the value and → for the next digit.
+  - Debug menu: hold R + Start. Party → Hatch an Egg hatches a party egg on the spot. Scripts are main item 6, then Script N; a test-only ROM can put any script in `Debug_EventScript_Script_7/8` (restore `debug.inc` afterwards). Warp is Utilities → 2nd item; numbers use ↑/↓ for the value and → for the next digit.
   - Flags & Vars → items 14–16 turn off collision, encounters and trainer sight.
   - `tools/hoenn/emu/mkbase.sh ROM OUT.ss` (run from the harness directory) makes a new game with the debug party, all badges, HnS's HM-received/Headbutt/Running Shoes flags, and the debug menu open. The debug party (`src/data/debug_trainers.party`, debug builds only) is Lapras (lead), Machamp, Pidgeot, Blissey, Miltank and Wobbuffet; between them they know every move with an overworld use: the 9 HMs, Headbutt, Secret Power, Dig, Teleport, Sweet Scent, Milk Drink and Soft-Boiled.
   - Memory (2.0.6 debug build): SaveBlock1 flags at `gSaveBlock1Ptr + 0x198C`; SaveBlock2 battle style is bit 1 of byte `+21`; Hoenn vars at `gSaveBlock3Ptr + 0x132`; enemy battler HP at `gBattleMons + 136 + 42`.
