@@ -1,0 +1,87 @@
+{
+  "_comment": [
+    "Hoenn & Seek (part 15): wild encounters. Read by tools/hoenn/gen_hoenn_wild.py.",
+    "bands: map-name prefix (after MAP_) -> [min, max] level. The longest matching prefix wins.",
+    "Each table's levels are stretched linearly onto its band (fishing starts 5 lower).",
+    "Species then evolve through EVO_LEVEL evolutions the new minimum level has reached.",
+    "rules: prefix -> {day: [ops], night: [ops]}. A night table is built from the original",
+    "Emerald table plus its night ops; maps without night ops fall back to the day table.",
+    "ops: {swap: {SPECIES_A: SPECIES_B}} or {type: land_mons, slots: [i, ...], species: SPECIES_X}."
+  ],
+  "bands": {
+    "ROUTE101": [35, 40], "ROUTE102": [35, 40], "ROUTE103": [35, 40], "ROUTE104": [35, 40],
+    "ROUTE116": [35, 40], "PETALBURG_WOODS": [35, 40], "RUSTURF_TUNNEL": [36, 41], "PETALBURG_CITY": [35, 40],
+
+    "ROUTE105": [40, 47], "ROUTE106": [40, 47], "ROUTE107": [40, 47], "ROUTE108": [40, 47], "ROUTE109": [40, 47],
+    "ROUTE110": [40, 46], "ROUTE111": [42, 48], "ROUTE112": [42, 47], "ROUTE113": [42, 47], "ROUTE114": [43, 48],
+    "ROUTE115": [43, 48], "ROUTE117": [40, 46], "GRANITE_CAVE": [40, 46], "DEWFORD_TOWN": [40, 47],
+    "SLATEPORT_CITY": [40, 47], "FIERY_PATH": [42, 47], "NEW_MAUVILLE": [43, 48], "DESERT_UNDERPASS": [45, 50],
+    "MIRAGE_TOWER": [44, 49], "METEOR_FALLS_1F": [43, 48],
+
+    "ROUTE118": [47, 53], "ROUTE119": [48, 54], "ROUTE120": [48, 54], "ROUTE121": [49, 55], "ROUTE122": [49, 55],
+    "ROUTE123": [49, 55], "JAGGED_PASS": [46, 52], "MT_PYRE": [50, 56], "MAGMA_HIDEOUT": [50, 56],
+    "SAFARI_ZONE": [48, 55], "LILYCOVE_CITY": [49, 55], "METEOR_FALLS_B1F": [50, 56], "ALTERING_CAVE": [48, 54],
+
+    "ROUTE124": [55, 61], "ROUTE125": [55, 61], "ROUTE126": [56, 62], "ROUTE127": [56, 62], "ROUTE128": [57, 63],
+    "ROUTE129": [56, 62], "ROUTE130": [56, 62], "ROUTE131": [56, 62], "ROUTE132": [55, 61], "ROUTE133": [55, 61],
+    "ROUTE134": [56, 62], "UNDERWATER": [56, 62], "MOSSDEEP_CITY": [55, 61], "SOOTOPOLIS_CITY": [57, 63],
+    "PACIFIDLOG_TOWN": [55, 61], "ABANDONED_SHIP": [55, 61], "SHOAL_CAVE": [55, 61],
+
+    "VICTORY_ROAD": [63, 70], "EVER_GRANDE_CITY": [62, 68], "METEOR_FALLS_STEVENS_CAVE": [64, 70]
+  },
+  "rules": {
+    "METEOR_FALLS": {"night": [{"swap": {"SPECIES_SOLROCK": "SPECIES_LUNATONE"}}]},
+    "ROUTE114": {"day": [{"swap": {"SPECIES_SEVIPER": "SPECIES_ZANGOOSE"}}], "night": []},
+    "GRANITE_CAVE": {"day": [{"swap": {"SPECIES_SABLEYE": "SPECIES_MAWILE"}}], "night": [{"swap": {"SPECIES_MAWILE": "SPECIES_SABLEYE"}}]},
+    "VICTORY_ROAD": {"day": [{"swap": {"SPECIES_SABLEYE": "SPECIES_MAWILE"}}], "night": [{"swap": {"SPECIES_MAWILE": "SPECIES_SABLEYE"}}]},
+    "ROUTE117": {
+      "day": [{"swap": {"SPECIES_ILLUMISE": "SPECIES_ODDISH", "SPECIES_VOLBEAT": "SPECIES_SEEDOT"}}],
+      "night": [{"type": "land_mons", "slots": [0, 2, 4], "species": "SPECIES_VOLBEAT"},
+                {"type": "land_mons", "slots": [1, 3], "species": "SPECIES_ILLUMISE"}]
+    },
+    "ROUTE101": {"night": [{"swap": {"SPECIES_ZIGZAGOON": "SPECIES_POOCHYENA", "SPECIES_WURMPLE": "SPECIES_ODDISH"}}]},
+    "ROUTE102": {"night": [{"swap": {"SPECIES_ZIGZAGOON": "SPECIES_POOCHYENA", "SPECIES_WURMPLE": "SPECIES_ODDISH"}}]},
+    "ROUTE103": {"night": [{"swap": {"SPECIES_ZIGZAGOON": "SPECIES_POOCHYENA", "SPECIES_WURMPLE": "SPECIES_ODDISH"}}]},
+    "ROUTE104": {"night": [{"swap": {"SPECIES_ZIGZAGOON": "SPECIES_POOCHYENA", "SPECIES_WURMPLE": "SPECIES_ODDISH"}}]},
+    "ROUTE116": {"night": [{"swap": {"SPECIES_ZIGZAGOON": "SPECIES_POOCHYENA", "SPECIES_WURMPLE": "SPECIES_ODDISH"}}]},
+    "PETALBURG_WOODS": {"night": [{"swap": {"SPECIES_WURMPLE": "SPECIES_HOOTHOOT", "SPECIES_TAILLOW": "SPECIES_SPINARAK"}}]},
+    "ROUTE119": {"night": [{"type": "land_mons", "slots": [0], "species": "SPECIES_ABSOL"},
+                           {"type": "land_mons", "slots": [1], "species": "SPECIES_KECLEON"},
+                           {"type": "land_mons", "slots": [2], "species": "SPECIES_HOOTHOOT"},
+                           {"type": "land_mons", "slots": [3], "species": "SPECIES_SPINARAK"},
+                           {"type": "land_mons", "slots": [4], "species": "SPECIES_MURKROW"}]},
+    "ROUTE120": {"night": [{"type": "land_mons", "slots": [0], "species": "SPECIES_ABSOL"},
+                           {"type": "land_mons", "slots": [3], "species": "SPECIES_KECLEON"},
+                           {"type": "land_mons", "slots": [5], "species": "SPECIES_MURKROW"}]},
+    "ROUTE113": {"night": [{"type": "land_mons", "slots": [0], "species": "SPECIES_SHUPPET"},
+                           {"type": "land_mons", "slots": [3], "species": "SPECIES_DUSKULL"}]},
+    "MT_PYRE_EXTERIOR": {"night": [{"swap": {"SPECIES_VULPIX": "SPECIES_DUSKULL"}},
+                                   {"type": "land_mons", "slots": [8, 9], "species": "SPECIES_MISDREAVUS"}]},
+    "ROUTE123": {"night": [{"swap": {"SPECIES_WINGULL": "SPECIES_DUSKULL"}}]},
+    "ROUTE124": {"night": [{"type": "fishing_mons", "slots": [5, 6], "species": "SPECIES_CHINCHOU"}]},
+    "ROUTE125": {"night": [{"type": "fishing_mons", "slots": [5, 6], "species": "SPECIES_CHINCHOU"}]},
+    "ROUTE126": {"night": [{"type": "fishing_mons", "slots": [5, 6], "species": "SPECIES_CHINCHOU"}]},
+    "ROUTE127": {"night": [{"type": "fishing_mons", "slots": [5, 6], "species": "SPECIES_CHINCHOU"}]},
+    "ROUTE128": {"night": [{"type": "fishing_mons", "slots": [5, 6], "species": "SPECIES_CHINCHOU"}]},
+    "ROUTE129": {"night": [{"type": "fishing_mons", "slots": [5, 6], "species": "SPECIES_CHINCHOU"}]},
+    "ROUTE130": {"night": [{"type": "fishing_mons", "slots": [5, 6], "species": "SPECIES_CHINCHOU"}]},
+    "ROUTE131": {"night": [{"type": "fishing_mons", "slots": [5, 6], "species": "SPECIES_CHINCHOU"}]},
+    "ROUTE132": {"night": [{"type": "fishing_mons", "slots": [5, 6], "species": "SPECIES_CHINCHOU"}]},
+    "ROUTE133": {"night": [{"type": "fishing_mons", "slots": [5, 6], "species": "SPECIES_CHINCHOU"}]},
+    "ROUTE134": {"night": [{"type": "fishing_mons", "slots": [5, 6], "species": "SPECIES_CHINCHOU"}]}
+  },
+  "items": {
+    "_comment": "Item balls and hidden items on Hoenn maps: early-game items become their late-game versions.",
+    "ITEM_POTION": "ITEM_HYPER_POTION",
+    "ITEM_SUPER_POTION": "ITEM_HYPER_POTION",
+    "ITEM_POKE_BALL": "ITEM_ULTRA_BALL",
+    "ITEM_GREAT_BALL": "ITEM_ULTRA_BALL",
+    "ITEM_ANTIDOTE": "ITEM_FULL_HEAL",
+    "ITEM_PARALYZE_HEAL": "ITEM_FULL_HEAL",
+    "ITEM_BURN_HEAL": "ITEM_FULL_HEAL",
+    "ITEM_ICE_HEAL": "ITEM_FULL_HEAL",
+    "ITEM_REPEL": "ITEM_MAX_REPEL",
+    "ITEM_SUPER_REPEL": "ITEM_MAX_REPEL",
+    "ITEM_ETHER": "ITEM_MAX_ETHER"
+  }
+}

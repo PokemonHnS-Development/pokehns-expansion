@@ -16,9 +16,21 @@ def _hoenn_kept_map_ids():
     return ids
 HOENN_KEPT_MAP_IDS = _hoenn_kept_map_ids()
 
+# Hoenn & Seek (part 15): data/hoenn/wild_encounters_hoenn.json (tools/hoenn/gen_hoenn_wild.py)
+# replaces the Emerald tables of those maps in HnS (rescaled levels, night tables).
+def _hoenn_override_entries():
+    try:
+        return __import__("json").load(open("data/hoenn/wild_encounters_hoenn.json"))["encounters"]
+    except (FileNotFoundError, KeyError, ValueError):
+        return []
+HOENN_OVERRIDES = _hoenn_override_entries()
+HOENN_OVERRIDE_IDS = {e["map"][len("MAP_"):] for e in HOENN_OVERRIDES}
+
 def _version_guard(version, map_group):
     m = __import__("re").search(r"MAP_GROUP\((\w+)\)", str(map_group))
     if version == "EMERALD" and m and m.group(1) in HOENN_KEPT_MAP_IDS:
+        if m.group(1)[len("MAP_"):] in HOENN_OVERRIDE_IDS:
+            return "#ifdef EMERALD // Hoenn & Seek: HnS uses the gHoenn_* table"
         return "#if defined(EMERALD) || defined(POKEMON_HNS) // Hoenn & Seek"
     return f"#ifdef {version}"
 
@@ -295,6 +307,7 @@ def ConvertToHeaderFile(json_data):
 def main():
     with open('src/data/wild_encounters.json', 'r') as json_file:
         json_data = json.load(json_file)
+        json_data["wild_encounter_groups"][0]["encounters"] += HOENN_OVERRIDES  # Hoenn & Seek
         ConvertToHeaderFile(json_data)
         
 
