@@ -22,6 +22,16 @@
 #define FLAG_HOENN_SILVER_GATE_OPEN  (HOENN_CUSTOM_FLAGS_START + 0x11) // the gate guard has stepped aside
 #define FLAG_HOENN_MET_MIND_READER   (HOENN_CUSTOM_FLAGS_START + 0x12) // Mossdeep guru introduced himself (part 14a)
 
+#define FLAG_HOENN_SCOPE_BROKEN      (HOENN_CUSTOM_FLAGS_START + 0x13) // Route 120 tester's prototype broke (part 14)
 #define HOENN_CUSTOM_FLAGS_END       (HOENN_CUSTOM_FLAGS_START + 0x3F)
+
+// Fake fights (part 14): one "already happened" flag each, numbered by
+// tools/hoenn/gen_hoenn_trainers.py. They borrow the top of the Hoenn trainer
+// flag block, which real Hoenn trainers (TRAINER_FLAG_ID) never reach.
+#define HOENN_FAKE_FLAGS_START       0x1F00
+#define HOENN_FAKE_FLAGS_COUNT       0x100
+
+// Vars (0x7070-0x707F)
+#define VAR_HOENN_NEWS               (HOENN_CUSTOM_VARS_START + 0x00) // next HOENN TV news item (part 14)
 
 #endif // GUARD_CONSTANTS_HOENN_CUSTOM_H

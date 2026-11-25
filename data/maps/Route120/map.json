@@ -164,9 +164,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route120_EventScript_Colin",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_T_Colin",
       "flag": "0"
     },
     {
@@ -179,7 +179,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route120_EventScript_Robert",
+      "script": "HoennSeek_EventScript_T_Robert1",
       "flag": "0"
     },
     {
@@ -192,7 +192,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "7",
-      "script": "Route120_EventScript_Lorenzo",
+      "script": "HoennSeek_EventScript_T_Lorenzo",
       "flag": "0"
     },
     {
@@ -205,7 +205,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Route120_EventScript_Jenna",
+      "script": "HoennSeek_EventScript_T_Jenna",
       "flag": "0"
     },
     {
@@ -216,9 +216,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route120_EventScript_Jeffrey",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_T_Jeffrey1",
       "flag": "0"
     },
     {
@@ -339,7 +339,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route120_EventScript_Jennifer",
+      "script": "HoennSeek_EventScript_T_Jennifer",
       "flag": "0"
     },
     {
@@ -352,7 +352,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route120_EventScript_Chip",
+      "script": "HoennSeek_EventScript_T_Chip",
       "flag": "0"
     },
     {
@@ -365,7 +365,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route120_EventScript_Clarissa",
+      "script": "HoennSeek_EventScript_T_Clarissa",
       "flag": "0"
     },
     {
@@ -376,9 +376,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route120_EventScript_Angelica",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_T_Angelica",
       "flag": "0"
     },
     {
@@ -471,7 +471,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route120_EventScript_Keigo",
+      "script": "HoennSeek_EventScript_T_Keigo",
       "flag": "0"
     },
     {
@@ -484,7 +484,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route120_EventScript_Riley",
+      "script": "HoennSeek_EventScript_T_Riley",
       "flag": "0"
     },
     {
@@ -576,7 +576,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route120_EventScript_Callie",
+      "script": "HoennSeek_EventScript_T_Callie",
       "flag": "0"
     },
     {
@@ -589,7 +589,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route120_EventScript_Leonel",
+      "script": "HoennSeek_EventScript_T_Leonel",
       "flag": "0"
     },
     {

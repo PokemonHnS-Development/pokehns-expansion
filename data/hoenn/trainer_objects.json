@@ -1,0 +1,4632 @@
+[
+ {
+  "map": "AbandonedShip_Corridors_1F",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
+  "script": "AbandonedShip_Corridors_1F_EventScript_Charlie",
+  "macro": "single",
+  "trainer": "TRAINER_CHARLIE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "AbandonedShip_Corridors_B1F",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+  "script": "AbandonedShip_Corridors_B1F_EventScript_Duncan",
+  "macro": "single",
+  "trainer": "TRAINER_DUNCAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "AbandonedShip_Rooms2_1F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+  "script": "AbandonedShip_Rooms2_1F_EventScript_Dan",
+  "macro": "double",
+  "trainer": "TRAINER_KIRA_AND_DAN_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "AbandonedShip_Rooms2_1F",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
+  "script": "AbandonedShip_Rooms2_1F_EventScript_Kira",
+  "macro": "double",
+  "trainer": "TRAINER_KIRA_AND_DAN_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "AbandonedShip_Rooms2_1F",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "AbandonedShip_Rooms2_1F_EventScript_Garrison",
+  "macro": "single",
+  "trainer": "TRAINER_GARRISON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "AbandonedShip_Rooms2_1F",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_TUBER_F",
+  "script": "AbandonedShip_Rooms2_1F_EventScript_Jani",
+  "macro": "single",
+  "trainer": "TRAINER_JANI",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "AbandonedShip_Rooms_1F",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+  "script": "AbandonedShip_Rooms_1F_EventScript_Thalia",
+  "macro": "single",
+  "trainer": "TRAINER_THALIA_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "AbandonedShip_Rooms_1F",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "AbandonedShip_Rooms_1F_EventScript_Demetrius",
+  "macro": "single",
+  "trainer": "TRAINER_DEMETRIUS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "AquaHideout_1F",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "AquaHideout_1F_EventScript_Grunt1",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_AQUA_HIDEOUT_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "AquaHideout_B1F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "AquaHideout_B1F_EventScript_Grunt2",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_AQUA_HIDEOUT_2",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "AquaHideout_B1F",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "AquaHideout_B1F_EventScript_Grunt3",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_AQUA_HIDEOUT_3",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "AquaHideout_B1F",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+  "script": "AquaHideout_B1F_EventScript_Grunt5",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_AQUA_HIDEOUT_5",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "AquaHideout_B1F",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+  "script": "AquaHideout_B1F_EventScript_Grunt7",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_AQUA_HIDEOUT_7",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "AquaHideout_B2F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "AquaHideout_B2F_EventScript_Matt",
+  "macro": "single",
+  "trainer": "TRAINER_MATT",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "AquaHideout_B2F",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "AquaHideout_B2F_EventScript_Grunt4",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_AQUA_HIDEOUT_4",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "AquaHideout_B2F",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+  "script": "AquaHideout_B2F_EventScript_Grunt6",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_AQUA_HIDEOUT_6",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "AquaHideout_B2F",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "AquaHideout_B2F_EventScript_Grunt8",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_AQUA_HIDEOUT_8",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "DewfordTown_Gym",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_BRAWLY",
+  "script": "DewfordTown_Gym_EventScript_Brawly",
+  "macro": "single",
+  "trainer": "TRAINER_BRAWLY_1",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "DewfordTown_Gym",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+  "script": "DewfordTown_Gym_EventScript_Takao",
+  "macro": "single",
+  "trainer": "TRAINER_TAKAO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "DewfordTown_Gym",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+  "script": "DewfordTown_Gym_EventScript_Jocelyn",
+  "macro": "single",
+  "trainer": "TRAINER_JOCELYN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "DewfordTown_Gym",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+  "script": "DewfordTown_Gym_EventScript_Laura",
+  "macro": "single",
+  "trainer": "TRAINER_LAURA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "DewfordTown_Gym",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+  "script": "DewfordTown_Gym_EventScript_Cristian",
+  "macro": "single",
+  "trainer": "TRAINER_CRISTIAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "DewfordTown_Gym",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+  "script": "DewfordTown_Gym_EventScript_Lilith",
+  "macro": "single",
+  "trainer": "TRAINER_LILITH",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "DewfordTown_Gym",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+  "script": "DewfordTown_Gym_EventScript_Brenden",
+  "macro": "single",
+  "trainer": "TRAINER_BRENDEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "EverGrandeCity_DrakesRoom",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_DRAKE",
+  "script": "EverGrandeCity_DrakesRoom_EventScript_Drake",
+  "macro": "no_intro",
+  "trainer": "TRAINER_DRAKE",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "EverGrandeCity_GlaciasRoom",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_GLACIA",
+  "script": "EverGrandeCity_GlaciasRoom_EventScript_Glacia",
+  "macro": "no_intro",
+  "trainer": "TRAINER_GLACIA",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "EverGrandeCity_PhoebesRoom",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_PHOEBE",
+  "script": "EverGrandeCity_PhoebesRoom_EventScript_Phoebe",
+  "macro": "no_intro",
+  "trainer": "TRAINER_PHOEBE",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "EverGrandeCity_SidneysRoom",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SIDNEY",
+  "script": "EverGrandeCity_SidneysRoom_EventScript_Sidney",
+  "macro": "no_intro",
+  "trainer": "TRAINER_SIDNEY",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "FortreeCity_Gym",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_WINONA",
+  "script": "FortreeCity_Gym_EventScript_Winona",
+  "macro": "single",
+  "trainer": "TRAINER_WINONA_1",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "FortreeCity_Gym",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "FortreeCity_Gym_EventScript_Jared",
+  "macro": "single",
+  "trainer": "TRAINER_JARED",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "FortreeCity_Gym",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+  "script": "FortreeCity_Gym_EventScript_Flint",
+  "macro": "single",
+  "trainer": "TRAINER_FLINT",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "FortreeCity_Gym",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "FortreeCity_Gym_EventScript_Ashley",
+  "macro": "single",
+  "trainer": "TRAINER_ASHLEY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "FortreeCity_Gym",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "FortreeCity_Gym_EventScript_Edwardo",
+  "macro": "single",
+  "trainer": "TRAINER_EDWARDO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "FortreeCity_Gym",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "FortreeCity_Gym_EventScript_Humberto",
+  "macro": "single",
+  "trainer": "TRAINER_HUMBERTO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "FortreeCity_Gym",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "FortreeCity_Gym_EventScript_Darius",
+  "macro": "single",
+  "trainer": "TRAINER_DARIUS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "JaggedPass",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "JaggedPass_EventScript_Eric",
+  "macro": "single",
+  "trainer": "TRAINER_ERIC",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "JaggedPass",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+  "script": "JaggedPass_EventScript_Ethan",
+  "macro": "single",
+  "trainer": "TRAINER_ETHAN_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "JaggedPass",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "JaggedPass_EventScript_Diana",
+  "macro": "single",
+  "trainer": "TRAINER_DIANA_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "JaggedPass",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "JaggedPass_EventScript_Autumn",
+  "macro": "single",
+  "trainer": "TRAINER_AUTUMN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "JaggedPass",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
+  "script": "JaggedPass_EventScript_Julio",
+  "macro": "single",
+  "trainer": "TRAINER_JULIO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "LavaridgeTown_Gym_1F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_FLANNERY",
+  "script": "LavaridgeTown_Gym_1F_EventScript_Flannery",
+  "macro": "single",
+  "trainer": "TRAINER_FLANNERY_1",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "MagmaHideout_1F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_1F_EventScript_Grunt1",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "MagmaHideout_1F",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_1F_EventScript_Grunt2",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_2",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "MagmaHideout_2F_1R",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_2F_1R_EventScript_Grunt4",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_4",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MagmaHideout_2F_1R",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_2F_1R_EventScript_Grunt5",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_5",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MagmaHideout_2F_1R",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+  "script": "MagmaHideout_2F_1R_EventScript_Grunt14",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_14",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "MagmaHideout_2F_1R",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_2F_1R_EventScript_Grunt3",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_3",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MagmaHideout_2F_2R",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_2F_2R_EventScript_Grunt8",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_8",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "MagmaHideout_2F_2R",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_2F_2R_EventScript_Grunt7",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_7",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "MagmaHideout_2F_2R",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_2F_2R_EventScript_Grunt6",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_6",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "MagmaHideout_2F_2R",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+  "script": "MagmaHideout_2F_2R_EventScript_Grunt15",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_15",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MagmaHideout_3F_1R",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_3F_1R_EventScript_Grunt9",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_9",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "MagmaHideout_3F_1R",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+  "script": "MagmaHideout_3F_1R_EventScript_Grunt16",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_16",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "MagmaHideout_3F_2R",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_3F_2R_EventScript_Grunt10",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_10",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MagmaHideout_4F",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_4F_EventScript_Grunt11",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_11",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MagmaHideout_4F",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_4F_EventScript_Grunt12",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_12",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MagmaHideout_4F",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_4F_EventScript_Grunt13",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MAGMA_HIDEOUT_13",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MagmaHideout_4F",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MagmaHideout_4F_EventScript_Tabitha",
+  "macro": "single",
+  "trainer": "TRAINER_TABITHA_MAGMA_HIDEOUT",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "MauvilleCity_Gym",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_WATTSON",
+  "script": "MauvilleCity_Gym_EventScript_Wattson",
+  "macro": "single",
+  "trainer": "TRAINER_WATTSON_1",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "MauvilleCity_Gym",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "MauvilleCity_Gym_EventScript_Shawn",
+  "macro": "single",
+  "trainer": "TRAINER_SHAWN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MauvilleCity_Gym",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+  "script": "MauvilleCity_Gym_EventScript_Vivian",
+  "macro": "single",
+  "trainer": "TRAINER_VIVIAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "MauvilleCity_Gym",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "MauvilleCity_Gym_EventScript_Ben",
+  "macro": "single",
+  "trainer": "TRAINER_BEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "MauvilleCity_Gym",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "MauvilleCity_Gym_EventScript_Kirk",
+  "macro": "single",
+  "trainer": "TRAINER_KIRK",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "MauvilleCity_Gym",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "MauvilleCity_Gym_EventScript_Angelo",
+  "macro": "single",
+  "trainer": "TRAINER_ANGELO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MeteorFalls_1F_2R",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "MeteorFalls_1F_2R_EventScript_Nicolas",
+  "macro": "single",
+  "trainer": "TRAINER_NICOLAS_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MeteorFalls_1F_2R",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+  "script": "MeteorFalls_1F_2R_EventScript_John",
+  "macro": "double",
+  "trainer": "TRAINER_JOHN_AND_JAY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MeteorFalls_1F_2R",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+  "script": "MeteorFalls_1F_2R_EventScript_Jay",
+  "macro": "double",
+  "trainer": "TRAINER_JOHN_AND_JAY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_TATE",
+  "script": "MossdeepCity_Gym_EventScript_TateAndLiza",
+  "macro": "double",
+  "trainer": "TRAINER_TATE_AND_LIZA_1",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
+  "script": "MossdeepCity_Gym_EventScript_Preston",
+  "macro": "single",
+  "trainer": "TRAINER_PRESTON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
+  "script": "MossdeepCity_Gym_EventScript_Blake",
+  "macro": "single",
+  "trainer": "TRAINER_BLAKE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "MossdeepCity_Gym_EventScript_Maura",
+  "macro": "single",
+  "trainer": "TRAINER_MAURA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "MossdeepCity_Gym_EventScript_Samantha",
+  "macro": "single",
+  "trainer": "TRAINER_SAMANTHA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
+  "script": "MossdeepCity_Gym_EventScript_Virgil",
+  "macro": "single",
+  "trainer": "TRAINER_VIRGIL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "MossdeepCity_Gym_EventScript_Hannah",
+  "macro": "single",
+  "trainer": "TRAINER_HANNAH",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_LIZA",
+  "script": "MossdeepCity_Gym_EventScript_TateAndLiza",
+  "macro": "double",
+  "trainer": "TRAINER_TATE_AND_LIZA_1",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 16,
+  "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+  "script": "MossdeepCity_Gym_EventScript_Nate",
+  "macro": "single",
+  "trainer": "TRAINER_NATE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 17,
+  "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
+  "script": "MossdeepCity_Gym_EventScript_Sylvia",
+  "macro": "single",
+  "trainer": "TRAINER_SYLVIA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 24,
+  "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+  "script": "MossdeepCity_Gym_EventScript_Clifford",
+  "macro": "single",
+  "trainer": "TRAINER_CLIFFORD",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 26,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "MossdeepCity_Gym_EventScript_Macey",
+  "macro": "single",
+  "trainer": "TRAINER_MACEY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 27,
+  "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
+  "script": "MossdeepCity_Gym_EventScript_Kathleen",
+  "macro": "single",
+  "trainer": "TRAINER_KATHLEEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_Gym",
+  "index": 31,
+  "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
+  "script": "MossdeepCity_Gym_EventScript_Nicholas",
+  "macro": "single",
+  "trainer": "TRAINER_NICHOLAS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MossdeepCity_SpaceCenter_1F",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+  "script": "MossdeepCity_SpaceCenter_1F_EventScript_Grunt3",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_SPACE_CENTER_3",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "MossdeepCity_SpaceCenter_1F",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MossdeepCity_SpaceCenter_1F_EventScript_Grunt1",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_SPACE_CENTER_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "MossdeepCity_SpaceCenter_1F",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MossdeepCity_SpaceCenter_1F_EventScript_Grunt4",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_SPACE_CENTER_4",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "MossdeepCity_SpaceCenter_1F",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MossdeepCity_SpaceCenter_1F_EventScript_Grunt2",
+  "macro": "no_intro",
+  "trainer": "TRAINER_GRUNT_SPACE_CENTER_2",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "MtChimney",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MtChimney_EventScript_Tabitha",
+  "macro": "single",
+  "trainer": "TRAINER_TABITHA_MT_CHIMNEY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "MtChimney",
+  "index": 21,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+  "script": "MtChimney_EventScript_Grunt2",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MT_CHIMNEY_2",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MtChimney",
+  "index": 24,
+  "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+  "script": "MtChimney_EventScript_Shelby",
+  "macro": "single",
+  "trainer": "TRAINER_SHELBY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MtChimney",
+  "index": 25,
+  "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+  "script": "MtChimney_EventScript_Melissa",
+  "macro": "single",
+  "trainer": "TRAINER_MELISSA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "MtChimney",
+  "index": 26,
+  "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+  "script": "MtChimney_EventScript_Sheila",
+  "macro": "single",
+  "trainer": "TRAINER_SHEILA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MtChimney",
+  "index": 27,
+  "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+  "script": "MtChimney_EventScript_Shirley",
+  "macro": "single",
+  "trainer": "TRAINER_SHIRLEY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MtChimney",
+  "index": 28,
+  "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+  "script": "MtChimney_EventScript_Grunt1",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MT_CHIMNEY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MtChimney",
+  "index": 29,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "MtChimney_EventScript_Sawyer",
+  "macro": "single",
+  "trainer": "TRAINER_SAWYER_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "MtPyre_2F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "MtPyre_2F_EventScript_Mark",
+  "macro": "single",
+  "trainer": "TRAINER_MARK",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "MtPyre_2F",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
+  "script": "MtPyre_2F_EventScript_Dez",
+  "macro": "double",
+  "trainer": "TRAINER_DEZ_AND_LUKE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MtPyre_2F",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+  "script": "MtPyre_2F_EventScript_Luke",
+  "macro": "double",
+  "trainer": "TRAINER_DEZ_AND_LUKE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "MtPyre_2F",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+  "script": "MtPyre_2F_EventScript_Zander",
+  "macro": "single",
+  "trainer": "TRAINER_ZANDER",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "MtPyre_2F",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
+  "script": "MtPyre_2F_EventScript_Leah",
+  "macro": "single",
+  "trainer": "TRAINER_LEAH",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "MtPyre_3F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
+  "script": "MtPyre_3F_EventScript_William",
+  "macro": "single",
+  "trainer": "TRAINER_WILLIAM",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "MtPyre_3F",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "MtPyre_3F_EventScript_Kayla",
+  "macro": "single",
+  "trainer": "TRAINER_KAYLA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "MtPyre_3F",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "MtPyre_3F_EventScript_Gabrielle",
+  "macro": "single",
+  "trainer": "TRAINER_GABRIELLE_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "MtPyre_6F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
+  "script": "MtPyre_6F_EventScript_Valerie",
+  "macro": "single",
+  "trainer": "TRAINER_VALERIE_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MtPyre_6F",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
+  "script": "MtPyre_6F_EventScript_Cedric",
+  "macro": "single",
+  "trainer": "TRAINER_CEDRIC",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MtPyre_Summit",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "MtPyre_Summit_EventScript_Grunt1",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MT_PYRE_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MtPyre_Summit",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "MtPyre_Summit_EventScript_Grunt2",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MT_PYRE_2",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MtPyre_Summit",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "MtPyre_Summit_EventScript_Grunt3",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MT_PYRE_3",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "MtPyre_Summit",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+  "script": "MtPyre_Summit_EventScript_Grunt4",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_MT_PYRE_4",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "PetalburgCity_Gym",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "PetalburgCity_Gym_EventScript_Mary",
+  "macro": "single",
+  "trainer": "TRAINER_MARY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "PetalburgCity_Gym",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "PetalburgCity_Gym_EventScript_Randall",
+  "macro": "single",
+  "trainer": "TRAINER_RANDALL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "PetalburgCity_Gym",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "PetalburgCity_Gym_EventScript_Parker",
+  "macro": "single",
+  "trainer": "TRAINER_PARKER",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "PetalburgCity_Gym",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "PetalburgCity_Gym_EventScript_Alexia",
+  "macro": "single",
+  "trainer": "TRAINER_ALEXIA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "PetalburgCity_Gym",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "PetalburgCity_Gym_EventScript_George",
+  "macro": "single",
+  "trainer": "TRAINER_GEORGE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "PetalburgCity_Gym",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "PetalburgCity_Gym_EventScript_Jody",
+  "macro": "single",
+  "trainer": "TRAINER_JODY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "PetalburgCity_Gym",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "PetalburgCity_Gym_EventScript_Berke",
+  "macro": "single",
+  "trainer": "TRAINER_BERKE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "PetalburgWoods",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+  "script": "PetalburgWoods_EventScript_Lyle",
+  "macro": "single",
+  "trainer": "TRAINER_LYLE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "PetalburgWoods",
+  "index": 9,
+  "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+  "script": "PetalburgWoods_EventScript_James",
+  "macro": "single",
+  "trainer": "TRAINER_JAMES_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route102",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "Route102_EventScript_Calvin",
+  "macro": "single",
+  "trainer": "TRAINER_CALVIN_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route102",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+  "script": "Route102_EventScript_Rick",
+  "macro": "single",
+  "trainer": "TRAINER_RICK",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route102",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route102_EventScript_Tiana",
+  "macro": "single",
+  "trainer": "TRAINER_TIANA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route102",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "Route102_EventScript_Allen",
+  "macro": "single",
+  "trainer": "TRAINER_ALLEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route103",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "Route103_EventScript_Daisy",
+  "macro": "single",
+  "trainer": "TRAINER_DAISY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route103",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_TWIN",
+  "script": "Route103_EventScript_Liv",
+  "macro": "double",
+  "trainer": "TRAINER_AMY_AND_LIV_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route103",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_TWIN",
+  "script": "Route103_EventScript_Amy",
+  "macro": "double",
+  "trainer": "TRAINER_AMY_AND_LIV_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route103",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route103_EventScript_Andrew",
+  "macro": "single",
+  "trainer": "TRAINER_ANDREW",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route103",
+  "index": 11,
+  "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
+  "script": "Route103_EventScript_Miguel",
+  "macro": "single",
+  "trainer": "TRAINER_MIGUEL_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route103",
+  "index": 15,
+  "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+  "script": "Route103_EventScript_Rhett",
+  "macro": "single",
+  "trainer": "TRAINER_RHETT",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route103",
+  "index": 16,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route103_EventScript_Marcos",
+  "macro": "single",
+  "trainer": "TRAINER_MARCOS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route103",
+  "index": 17,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route103_EventScript_Isabelle",
+  "macro": "single",
+  "trainer": "TRAINER_ISABELLE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route103",
+  "index": 18,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route103_EventScript_Pete",
+  "macro": "single",
+  "trainer": "TRAINER_PETE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route104",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route104_EventScript_Haley",
+  "macro": "single",
+  "trainer": "TRAINER_HALEY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "Route104",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route104_EventScript_Ivan",
+  "macro": "single",
+  "trainer": "TRAINER_IVAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "Route104",
+  "index": 22,
+  "graphics_id": "OBJ_EVENT_GFX_TWIN",
+  "script": "Route104_EventScript_Gina",
+  "macro": "double",
+  "trainer": "TRAINER_GINA_AND_MIA_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route104",
+  "index": 23,
+  "graphics_id": "OBJ_EVENT_GFX_TWIN",
+  "script": "Route104_EventScript_Mia",
+  "macro": "double",
+  "trainer": "TRAINER_GINA_AND_MIA_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route104",
+  "index": 24,
+  "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
+  "script": "Route104_EventScript_Winston",
+  "macro": "single",
+  "trainer": "TRAINER_WINSTON_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route104",
+  "index": 25,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "Route104_EventScript_Cindy",
+  "macro": "single",
+  "trainer": "TRAINER_CINDY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route104",
+  "index": 27,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "Route104_EventScript_Billy",
+  "macro": "single",
+  "trainer": "TRAINER_BILLY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route104",
+  "index": 32,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route104_EventScript_Darian",
+  "macro": "single",
+  "trainer": "TRAINER_DARIAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "Route105",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route105_EventScript_Luis",
+  "macro": "single",
+  "trainer": "TRAINER_LUIS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route105",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route105_EventScript_Dominik",
+  "macro": "single",
+  "trainer": "TRAINER_DOMINIK",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route105",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route105_EventScript_Beverly",
+  "macro": "single",
+  "trainer": "TRAINER_BEVERLY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route105",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route105_EventScript_Imani",
+  "macro": "single",
+  "trainer": "TRAINER_IMANI",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route105",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "Route105_EventScript_Foster",
+  "macro": "single",
+  "trainer": "TRAINER_FOSTER",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route105",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route105_EventScript_Josue",
+  "macro": "single",
+  "trainer": "TRAINER_JOSUE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route105",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "Route105_EventScript_Andres",
+  "macro": "single",
+  "trainer": "TRAINER_ANDRES_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route106",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route106_EventScript_Douglas",
+  "macro": "single",
+  "trainer": "TRAINER_DOUGLAS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route106",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route106_EventScript_Kyla",
+  "macro": "single",
+  "trainer": "TRAINER_KYLA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route106",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route106_EventScript_Elliot",
+  "macro": "single",
+  "trainer": "TRAINER_ELLIOT_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route106",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route106_EventScript_Ned",
+  "macro": "single",
+  "trainer": "TRAINER_NED",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route107",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route107_EventScript_Darrin",
+  "macro": "single",
+  "trainer": "TRAINER_DARRIN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route107",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route107_EventScript_Tony",
+  "macro": "single",
+  "trainer": "TRAINER_TONY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route107",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route107_EventScript_Denise",
+  "macro": "single",
+  "trainer": "TRAINER_DENISE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route107",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route107_EventScript_Beth",
+  "macro": "single",
+  "trainer": "TRAINER_BETH",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route107",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route107_EventScript_Lisa",
+  "macro": "double",
+  "trainer": "TRAINER_LISA_AND_RAY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route107",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_TUBER_M_SWIMMING",
+  "script": "Route107_EventScript_Ray",
+  "macro": "double",
+  "trainer": "TRAINER_LISA_AND_RAY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route107",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route107_EventScript_Camron",
+  "macro": "single",
+  "trainer": "TRAINER_CAMRON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route108",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route108_EventScript_Jerome",
+  "macro": "single",
+  "trainer": "TRAINER_JEROME",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route108",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route108_EventScript_Tara",
+  "macro": "single",
+  "trainer": "TRAINER_TARA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route108",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route108_EventScript_Matthew",
+  "macro": "single",
+  "trainer": "TRAINER_MATTHEW",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route108",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route108_EventScript_Missy",
+  "macro": "single",
+  "trainer": "TRAINER_MISSY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route108",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route108_EventScript_Carolina",
+  "macro": "single",
+  "trainer": "TRAINER_CAROLINA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route108",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+  "script": "Route108_EventScript_Cory",
+  "macro": "single",
+  "trainer": "TRAINER_CORY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route109",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route109_EventScript_David",
+  "macro": "single",
+  "trainer": "TRAINER_DAVID",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route109",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route109_EventScript_Alice",
+  "macro": "single",
+  "trainer": "TRAINER_ALICE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route109",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+  "script": "Route109_EventScript_Huey",
+  "macro": "single",
+  "trainer": "TRAINER_HUEY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route109",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+  "script": "Route109_EventScript_Edmond",
+  "macro": "single",
+  "trainer": "TRAINER_EDMOND",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route109",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
+  "script": "Route109_EventScript_Ricky",
+  "macro": "single",
+  "trainer": "TRAINER_RICKY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route109",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_TUBER_F",
+  "script": "Route109_EventScript_Lola",
+  "macro": "single",
+  "trainer": "TRAINER_LOLA_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route109",
+  "index": 10,
+  "graphics_id": "OBJ_EVENT_GFX_TUBER_F",
+  "script": "Route109_EventScript_Gwen",
+  "macro": "single",
+  "trainer": "TRAINER_GWEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route109",
+  "index": 11,
+  "graphics_id": "OBJ_EVENT_GFX_TUBER_F",
+  "script": "Route109_EventScript_Austina",
+  "macro": "single",
+  "trainer": "TRAINER_AUSTINA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route109",
+  "index": 12,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route109_EventScript_Carter",
+  "macro": "single",
+  "trainer": "TRAINER_CARTER",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route109",
+  "index": 16,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
+  "script": "Route109_EventScript_Mel",
+  "macro": "double",
+  "trainer": "TRAINER_MEL_AND_PAUL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route109",
+  "index": 17,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+  "script": "Route109_EventScript_Paul",
+  "macro": "double",
+  "trainer": "TRAINER_MEL_AND_PAUL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route109",
+  "index": 20,
+  "graphics_id": "OBJ_EVENT_GFX_TUBER_F",
+  "script": "Route109_EventScript_Hailey",
+  "macro": "single",
+  "trainer": "TRAINER_HAILEY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route109",
+  "index": 21,
+  "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
+  "script": "Route109_EventScript_Chandler",
+  "macro": "single",
+  "trainer": "TRAINER_CHANDLER",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route109",
+  "index": 23,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route109_EventScript_Elijah",
+  "macro": "single",
+  "trainer": "TRAINER_ELIJAH",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route109_SeashoreHouse",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+  "script": "Route109_SeashoreHouse_EventScript_Dwayne",
+  "macro": "single",
+  "trainer": "TRAINER_DWAYNE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route109_SeashoreHouse",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
+  "script": "Route109_SeashoreHouse_EventScript_Simon",
+  "macro": "single",
+  "trainer": "TRAINER_SIMON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route109_SeashoreHouse",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+  "script": "Route109_SeashoreHouse_EventScript_Johanna",
+  "macro": "single",
+  "trainer": "TRAINER_JOHANNA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route110",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_F",
+  "script": "Route110_EventScript_Jasmine",
+  "macro": "single",
+  "trainer": "TRAINER_JASMINE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route110",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
+  "script": "Route110_EventScript_Anthony",
+  "macro": "single",
+  "trainer": "TRAINER_ANTHONY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route110",
+  "index": 9,
+  "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_F",
+  "script": "Route110_EventScript_Abigail",
+  "macro": "single",
+  "trainer": "TRAINER_ABIGAIL_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route110",
+  "index": 10,
+  "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
+  "script": "Route110_EventScript_Benjamin",
+  "macro": "single",
+  "trainer": "TRAINER_BENJAMIN_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route110",
+  "index": 11,
+  "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
+  "script": "Route110_EventScript_Edward",
+  "macro": "single",
+  "trainer": "TRAINER_EDWARD",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route110",
+  "index": 12,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route110_EventScript_Jaclyn",
+  "macro": "single",
+  "trainer": "TRAINER_JACLYN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route110",
+  "index": 13,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "Route110_EventScript_Edwin",
+  "macro": "single",
+  "trainer": "TRAINER_EDWIN_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route110",
+  "index": 14,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route110_EventScript_Dale",
+  "macro": "single",
+  "trainer": "TRAINER_DALE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route110",
+  "index": 26,
+  "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
+  "script": "Route110_EventScript_Jacob",
+  "macro": "single",
+  "trainer": "TRAINER_JACOB",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route110",
+  "index": 29,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "Route110_EventScript_Timmy",
+  "macro": "single",
+  "trainer": "TRAINER_TIMMY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route110",
+  "index": 30,
+  "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
+  "script": "Route110_EventScript_Isabel",
+  "macro": "single",
+  "trainer": "TRAINER_ISABEL_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route110",
+  "index": 31,
+  "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
+  "script": "Route110_EventScript_Kaleb",
+  "macro": "single",
+  "trainer": "TRAINER_KALEB",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route110",
+  "index": 32,
+  "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_F",
+  "script": "Route110_EventScript_Alyssa",
+  "macro": "single",
+  "trainer": "TRAINER_ALYSSA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route110",
+  "index": 33,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route110_EventScript_Joseph",
+  "macro": "single",
+  "trainer": "TRAINER_JOSEPH",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route111",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "Route111_EventScript_Heidi",
+  "macro": "single",
+  "trainer": "TRAINER_HEIDI",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route111",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+  "script": "Route111_EventScript_Drew",
+  "macro": "single",
+  "trainer": "TRAINER_DREW",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route111",
+  "index": 9,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "Route111_EventScript_Dusty",
+  "macro": "single",
+  "trainer": "TRAINER_DUSTY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route111",
+  "index": 10,
+  "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+  "script": "Route111_EventScript_Beau",
+  "macro": "single",
+  "trainer": "TRAINER_BEAU",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route111",
+  "index": 11,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "Route111_EventScript_Becky",
+  "macro": "single",
+  "trainer": "TRAINER_BECKY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route111",
+  "index": 27,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "Route111_EventScript_Irene",
+  "macro": "single",
+  "trainer": "TRAINER_IRENE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route111",
+  "index": 28,
+  "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+  "script": "Route111_EventScript_Travis",
+  "macro": "single",
+  "trainer": "TRAINER_TRAVIS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route111",
+  "index": 29,
+  "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+  "script": "Route111_EventScript_Daisuke",
+  "macro": "single",
+  "trainer": "TRAINER_DAISUKE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route111",
+  "index": 30,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route111_EventScript_Brooke",
+  "macro": "single",
+  "trainer": "TRAINER_BROOKE_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route111",
+  "index": 31,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "Route111_EventScript_Wilton",
+  "macro": "single",
+  "trainer": "TRAINER_WILTON_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route111",
+  "index": 34,
+  "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+  "script": "Route111_EventScript_Tyron",
+  "macro": "single",
+  "trainer": "TRAINER_TYRON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route111",
+  "index": 35,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "Route111_EventScript_Celina",
+  "macro": "single",
+  "trainer": "TRAINER_CELINA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route111",
+  "index": 36,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "Route111_EventScript_Bianca",
+  "macro": "single",
+  "trainer": "TRAINER_BIANCA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route111",
+  "index": 37,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route111_EventScript_Hayden",
+  "macro": "single",
+  "trainer": "TRAINER_HAYDEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route111",
+  "index": 38,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "Route111_EventScript_Bryan",
+  "macro": "single",
+  "trainer": "TRAINER_BRYAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "Route111",
+  "index": 39,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "Route111_EventScript_Celia",
+  "macro": "single",
+  "trainer": "TRAINER_CELIA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route111",
+  "index": 40,
+  "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+  "script": "Route111_EventScript_Branden",
+  "macro": "single",
+  "trainer": "TRAINER_BRANDEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "Route112",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "Route112_EventScript_Brice",
+  "macro": "single",
+  "trainer": "TRAINER_BRICE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route112",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+  "script": "Route112_EventScript_Larry",
+  "macro": "single",
+  "trainer": "TRAINER_LARRY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route112",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "Route112_EventScript_Carol",
+  "macro": "single",
+  "trainer": "TRAINER_CAROL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route112",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "Route112_EventScript_Trent",
+  "macro": "single",
+  "trainer": "TRAINER_TRENT_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route112",
+  "index": 12,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route112_EventScript_Bryant",
+  "macro": "single",
+  "trainer": "TRAINER_BRYANT",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route112",
+  "index": 13,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "Route112_EventScript_Shayla",
+  "macro": "single",
+  "trainer": "TRAINER_SHAYLA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route113",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "Route113_EventScript_Jaylen",
+  "macro": "single",
+  "trainer": "TRAINER_JAYLEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route113",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "Route113_EventScript_Dillon",
+  "macro": "single",
+  "trainer": "TRAINER_DILLON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route113",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route113_EventScript_Madeline",
+  "macro": "single",
+  "trainer": "TRAINER_MADELINE_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route113",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+  "script": "Route113_EventScript_Lao",
+  "macro": "single",
+  "trainer": "TRAINER_LAO_1",
+  "trainer_type": "TRAINER_TYPE_BURIED",
+  "sight": "1"
+ },
+ {
+  "map": "Route113",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+  "script": "Route113_EventScript_Lung",
+  "macro": "single",
+  "trainer": "TRAINER_LUNG",
+  "trainer_type": "TRAINER_TYPE_BURIED",
+  "sight": "1"
+ },
+ {
+  "map": "Route113",
+  "index": 9,
+  "graphics_id": "OBJ_EVENT_GFX_TWIN",
+  "script": "Route113_EventScript_Tori",
+  "macro": "double",
+  "trainer": "TRAINER_TORI_AND_TIA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route113",
+  "index": 10,
+  "graphics_id": "OBJ_EVENT_GFX_TWIN",
+  "script": "Route113_EventScript_Tia",
+  "macro": "double",
+  "trainer": "TRAINER_TORI_AND_TIA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route113",
+  "index": 12,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "Route113_EventScript_Wyatt",
+  "macro": "single",
+  "trainer": "TRAINER_WYATT",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route113",
+  "index": 13,
+  "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+  "script": "Route113_EventScript_Lawrence",
+  "macro": "single",
+  "trainer": "TRAINER_LAWRENCE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route113",
+  "index": 14,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "Route113_EventScript_Sophie",
+  "macro": "single",
+  "trainer": "TRAINER_SOPHIE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route113",
+  "index": 15,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route113_EventScript_Coby",
+  "macro": "single",
+  "trainer": "TRAINER_COBY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route114",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "Route114_EventScript_Lenny",
+  "macro": "single",
+  "trainer": "TRAINER_LENNY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route114",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "Route114_EventScript_Lucas",
+  "macro": "single",
+  "trainer": "TRAINER_LUCAS_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route114",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+  "script": "Route114_EventScript_Shane",
+  "macro": "single",
+  "trainer": "TRAINER_SHANE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route114",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "Route114_EventScript_Nancy",
+  "macro": "single",
+  "trainer": "TRAINER_NANCY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route114",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "Route114_EventScript_Steve",
+  "macro": "single",
+  "trainer": "TRAINER_STEVE_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route114",
+  "index": 14,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route114_EventScript_Nolan",
+  "macro": "single",
+  "trainer": "TRAINER_NOLAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "Route114",
+  "index": 15,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route114_EventScript_Claude",
+  "macro": "single",
+  "trainer": "TRAINER_CLAUDE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "Route114",
+  "index": 16,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route114_EventScript_Bernie",
+  "macro": "single",
+  "trainer": "TRAINER_BERNIE_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route114",
+  "index": 21,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route114_EventScript_Ivy",
+  "macro": "double",
+  "trainer": "TRAINER_TYRA_AND_IVY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route114",
+  "index": 22,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route114_EventScript_Tyra",
+  "macro": "double",
+  "trainer": "TRAINER_TYRA_AND_IVY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route114",
+  "index": 23,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "Route114_EventScript_Charlotte",
+  "macro": "single",
+  "trainer": "TRAINER_CHARLOTTE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route114",
+  "index": 24,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "Route114_EventScript_Angelina",
+  "macro": "single",
+  "trainer": "TRAINER_ANGELINA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route114",
+  "index": 26,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route114_EventScript_Kai",
+  "macro": "single",
+  "trainer": "TRAINER_KAI",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route115",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+  "script": "Route115_EventScript_Timothy",
+  "macro": "single",
+  "trainer": "TRAINER_TIMOTHY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route115",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+  "script": "Route115_EventScript_Nob",
+  "macro": "single",
+  "trainer": "TRAINER_NOB_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route115",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+  "script": "Route115_EventScript_Cyndy",
+  "macro": "single",
+  "trainer": "TRAINER_CYNDY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route115",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+  "script": "Route115_EventScript_Koichi",
+  "macro": "single",
+  "trainer": "TRAINER_KOICHI",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route115",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "Route115_EventScript_Hector",
+  "macro": "single",
+  "trainer": "TRAINER_HECTOR",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route115",
+  "index": 16,
+  "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_F",
+  "script": "Route115_EventScript_Kyra",
+  "macro": "single",
+  "trainer": "TRAINER_KYRA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route115",
+  "index": 17,
+  "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+  "script": "Route115_EventScript_Jaiden",
+  "macro": "single",
+  "trainer": "TRAINER_JAIDEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route115",
+  "index": 18,
+  "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+  "script": "Route115_EventScript_Helene",
+  "macro": "single",
+  "trainer": "TRAINER_HELENE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route115",
+  "index": 19,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route115_EventScript_Alix",
+  "macro": "single",
+  "trainer": "TRAINER_ALIX",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route115",
+  "index": 20,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route115_EventScript_Marlene",
+  "macro": "single",
+  "trainer": "TRAINER_MARLENE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route116",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "Route116_EventScript_Joey",
+  "macro": "single",
+  "trainer": "TRAINER_JOEY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route116",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+  "script": "Route116_EventScript_Jose",
+  "macro": "single",
+  "trainer": "TRAINER_JOSE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route116",
+  "index": 12,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "Route116_EventScript_Clark",
+  "macro": "single",
+  "trainer": "TRAINER_CLARK",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route116",
+  "index": 15,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route116_EventScript_Janice",
+  "macro": "single",
+  "trainer": "TRAINER_JANICE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route116",
+  "index": 16,
+  "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+  "script": "Route116_EventScript_Karen",
+  "macro": "single",
+  "trainer": "TRAINER_KAREN_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route116",
+  "index": 17,
+  "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+  "script": "Route116_EventScript_Jerry",
+  "macro": "single",
+  "trainer": "TRAINER_JERRY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route116",
+  "index": 22,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "Route116_EventScript_Sarah",
+  "macro": "single",
+  "trainer": "TRAINER_SARAH",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route116",
+  "index": 23,
+  "graphics_id": "OBJ_EVENT_GFX_BOY_2",
+  "script": "Route116_EventScript_Dawson",
+  "macro": "single",
+  "trainer": "TRAINER_DAWSON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route116",
+  "index": 26,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "Route116_EventScript_Johnson",
+  "macro": "single",
+  "trainer": "TRAINER_JOHNSON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route116",
+  "index": 27,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "Route116_EventScript_Devan",
+  "macro": "single",
+  "trainer": "TRAINER_DEVAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route117",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
+  "script": "Route117_EventScript_Dylan",
+  "macro": "single",
+  "trainer": "TRAINER_DYLAN_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route117",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "Route117_EventScript_Lydia",
+  "macro": "single",
+  "trainer": "TRAINER_LYDIA_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route117",
+  "index": 9,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+  "script": "Route117_EventScript_Isaac",
+  "macro": "single",
+  "trainer": "TRAINER_ISAAC_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route117",
+  "index": 16,
+  "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_F",
+  "script": "Route117_EventScript_Maria",
+  "macro": "single",
+  "trainer": "TRAINER_MARIA_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route117",
+  "index": 17,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "Route117_EventScript_Derek",
+  "macro": "single",
+  "trainer": "TRAINER_DEREK",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route117",
+  "index": 18,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route117_EventScript_Meg",
+  "macro": "double",
+  "trainer": "TRAINER_ANNA_AND_MEG_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route117",
+  "index": 19,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route117_EventScript_Anna",
+  "macro": "double",
+  "trainer": "TRAINER_ANNA_AND_MEG_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route117",
+  "index": 21,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route117_EventScript_Brandi",
+  "macro": "single",
+  "trainer": "TRAINER_BRANDI",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route117",
+  "index": 22,
+  "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+  "script": "Route117_EventScript_Aisha",
+  "macro": "single",
+  "trainer": "TRAINER_AISHA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route117",
+  "index": 23,
+  "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_F",
+  "script": "Route117_EventScript_Melina",
+  "macro": "single",
+  "trainer": "TRAINER_MELINA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route118",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route118_EventScript_Perry",
+  "macro": "single",
+  "trainer": "TRAINER_PERRY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route118",
+  "index": 13,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "Route118_EventScript_Rose",
+  "macro": "single",
+  "trainer": "TRAINER_ROSE_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route118",
+  "index": 14,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route118_EventScript_Wade",
+  "macro": "single",
+  "trainer": "TRAINER_WADE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "Route118",
+  "index": 15,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route118_EventScript_Chester",
+  "macro": "single",
+  "trainer": "TRAINER_CHESTER",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route118",
+  "index": 16,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route118_EventScript_Barny",
+  "macro": "single",
+  "trainer": "TRAINER_BARNY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route118",
+  "index": 17,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route118_EventScript_Dalton",
+  "macro": "single",
+  "trainer": "TRAINER_DALTON_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route118",
+  "index": 20,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "Route118_EventScript_Deandre",
+  "macro": "single",
+  "trainer": "TRAINER_DEANDRE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route119",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+  "script": "Route119_EventScript_Greg",
+  "macro": "single",
+  "trainer": "TRAINER_GREG",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route119",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "Route119_EventScript_Taylor",
+  "macro": "single",
+  "trainer": "TRAINER_TAYLOR",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route119",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "Route119_EventScript_Donald",
+  "macro": "single",
+  "trainer": "TRAINER_DONALD",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route119",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+  "script": "Route119_EventScript_Jackson",
+  "macro": "single",
+  "trainer": "TRAINER_JACKSON_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route119",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "Route119_EventScript_Brent",
+  "macro": "single",
+  "trainer": "TRAINER_BRENT",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route119",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "Route119_EventScript_Catherine",
+  "macro": "single",
+  "trainer": "TRAINER_CATHERINE_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route119",
+  "index": 9,
+  "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+  "script": "Route119_EventScript_Doug",
+  "macro": "single",
+  "trainer": "TRAINER_DOUG",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route119",
+  "index": 10,
+  "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+  "script": "Route119_EventScript_Kent",
+  "macro": "single",
+  "trainer": "TRAINER_KENT",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route119",
+  "index": 11,
+  "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+  "script": "Route119_EventScript_Yasu",
+  "macro": "single",
+  "trainer": "TRAINER_YASU",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route119",
+  "index": 12,
+  "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+  "script": "Route119_EventScript_Takashi",
+  "macro": "single",
+  "trainer": "TRAINER_TAKASHI",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route119",
+  "index": 13,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route119_EventScript_Hugh",
+  "macro": "single",
+  "trainer": "TRAINER_HUGH",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route119",
+  "index": 14,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route119_EventScript_Phil",
+  "macro": "single",
+  "trainer": "TRAINER_PHIL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route119",
+  "index": 33,
+  "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+  "script": "Route119_EventScript_Hideo",
+  "macro": "single",
+  "trainer": "TRAINER_HIDEO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route119",
+  "index": 36,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route119_EventScript_Chris",
+  "macro": "single",
+  "trainer": "TRAINER_CHRIS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "Route119",
+  "index": 37,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "Route119_EventScript_Rachel",
+  "macro": "single",
+  "trainer": "TRAINER_RACHEL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route119",
+  "index": 38,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route119_EventScript_Dayton",
+  "macro": "single",
+  "trainer": "TRAINER_DAYTON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route119",
+  "index": 39,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route119_EventScript_Fabian",
+  "macro": "single",
+  "trainer": "TRAINER_FABIAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route119_WeatherInstitute_1F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "Route119_WeatherInstitute_1F_EventScript_Grunt1",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_WEATHER_INST_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route119_WeatherInstitute_1F",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+  "script": "Route119_WeatherInstitute_1F_EventScript_Grunt4",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_WEATHER_INST_4",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route119_WeatherInstitute_2F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "Route119_WeatherInstitute_2F_EventScript_Grunt2",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_WEATHER_INST_2",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route119_WeatherInstitute_2F",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "Route119_WeatherInstitute_2F_EventScript_Grunt3",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_WEATHER_INST_3",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route119_WeatherInstitute_2F",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+  "script": "Route119_WeatherInstitute_2F_EventScript_Shelly",
+  "macro": "single",
+  "trainer": "TRAINER_SHELLY_WEATHER_INSTITUTE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "Route119_WeatherInstitute_2F",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+  "script": "Route119_WeatherInstitute_2F_EventScript_Grunt5",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_WEATHER_INST_5",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route120",
+  "index": 10,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route120_EventScript_Colin",
+  "macro": "single",
+  "trainer": "TRAINER_COLIN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route120",
+  "index": 11,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route120_EventScript_Robert",
+  "macro": "single",
+  "trainer": "TRAINER_ROBERT_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route120",
+  "index": 12,
+  "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+  "script": "Route120_EventScript_Lorenzo",
+  "macro": "single",
+  "trainer": "TRAINER_LORENZO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "Route120",
+  "index": 13,
+  "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+  "script": "Route120_EventScript_Jenna",
+  "macro": "single",
+  "trainer": "TRAINER_JENNA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route120",
+  "index": 14,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "Route120_EventScript_Jeffrey",
+  "macro": "single",
+  "trainer": "TRAINER_JEFFREY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route120",
+  "index": 23,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route120_EventScript_Jennifer",
+  "macro": "single",
+  "trainer": "TRAINER_JENNIFER",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route120",
+  "index": 24,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "Route120_EventScript_Chip",
+  "macro": "single",
+  "trainer": "TRAINER_CHIP",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route120",
+  "index": 25,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route120_EventScript_Clarissa",
+  "macro": "single",
+  "trainer": "TRAINER_CLARISSA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route120",
+  "index": 26,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route120_EventScript_Angelica",
+  "macro": "single",
+  "trainer": "TRAINER_ANGELICA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route120",
+  "index": 33,
+  "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+  "script": "Route120_EventScript_Keigo",
+  "macro": "single",
+  "trainer": "TRAINER_KEIGO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route120",
+  "index": 34,
+  "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+  "script": "Route120_EventScript_Riley",
+  "macro": "single",
+  "trainer": "TRAINER_RILEY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route120",
+  "index": 41,
+  "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+  "script": "Route120_EventScript_Callie",
+  "macro": "single",
+  "trainer": "TRAINER_CALLIE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route120",
+  "index": 42,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "Route120_EventScript_Leonel",
+  "macro": "single",
+  "trainer": "TRAINER_LEONEL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route121",
+  "index": 9,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route121_EventScript_Kate",
+  "macro": "double",
+  "trainer": "TRAINER_KATE_AND_JOY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route121",
+  "index": 10,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route121_EventScript_Joy",
+  "macro": "double",
+  "trainer": "TRAINER_KATE_AND_JOY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route121",
+  "index": 16,
+  "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
+  "script": "Route121_EventScript_Vanessa",
+  "macro": "single",
+  "trainer": "TRAINER_VANESSA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route121",
+  "index": 17,
+  "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+  "script": "Route121_EventScript_Walter",
+  "macro": "single",
+  "trainer": "TRAINER_WALTER_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route121",
+  "index": 18,
+  "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
+  "script": "Route121_EventScript_Tammy",
+  "macro": "single",
+  "trainer": "TRAINER_TAMMY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route121",
+  "index": 19,
+  "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+  "script": "Route121_EventScript_Jessica",
+  "macro": "single",
+  "trainer": "TRAINER_JESSICA_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route121",
+  "index": 22,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "Route121_EventScript_Cale",
+  "macro": "single",
+  "trainer": "TRAINER_CALE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route121",
+  "index": 23,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+  "script": "Route121_EventScript_Myles",
+  "macro": "single",
+  "trainer": "TRAINER_MYLES",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route121",
+  "index": 24,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "Route121_EventScript_Pat",
+  "macro": "single",
+  "trainer": "TRAINER_PAT",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route121",
+  "index": 25,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "Route121_EventScript_Marcel",
+  "macro": "single",
+  "trainer": "TRAINER_MARCEL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route121",
+  "index": 26,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route121_EventScript_Cristin",
+  "macro": "single",
+  "trainer": "TRAINER_CRISTIN_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route123",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route123_EventScript_Wendy",
+  "macro": "single",
+  "trainer": "TRAINER_WENDY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route123",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "Route123_EventScript_Braxton",
+  "macro": "single",
+  "trainer": "TRAINER_BRAXTON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route123",
+  "index": 25,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "Route123_EventScript_Violet",
+  "macro": "single",
+  "trainer": "TRAINER_VIOLET",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route123",
+  "index": 26,
+  "graphics_id": "OBJ_EVENT_GFX_TWIN",
+  "script": "Route123_EventScript_Yuki",
+  "macro": "double",
+  "trainer": "TRAINER_MIU_AND_YUKI",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route123",
+  "index": 27,
+  "graphics_id": "OBJ_EVENT_GFX_TWIN",
+  "script": "Route123_EventScript_Miu",
+  "macro": "double",
+  "trainer": "TRAINER_MIU_AND_YUKI",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route123",
+  "index": 28,
+  "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
+  "script": "Route123_EventScript_Cameron",
+  "macro": "single",
+  "trainer": "TRAINER_CAMERON_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "Route123",
+  "index": 29,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route123_EventScript_Jacki",
+  "macro": "single",
+  "trainer": "TRAINER_JACKI_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route123",
+  "index": 30,
+  "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
+  "script": "Route123_EventScript_Kindra",
+  "macro": "single",
+  "trainer": "TRAINER_KINDRA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route123",
+  "index": 33,
+  "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+  "script": "Route123_EventScript_Jonas",
+  "macro": "single",
+  "trainer": "TRAINER_JONAS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route123",
+  "index": 34,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "Route123_EventScript_Kayley",
+  "macro": "single",
+  "trainer": "TRAINER_KAYLEY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route123",
+  "index": 35,
+  "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+  "script": "Route123_EventScript_Ed",
+  "macro": "single",
+  "trainer": "TRAINER_ED",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route123",
+  "index": 36,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route123_EventScript_Fernando",
+  "macro": "single",
+  "trainer": "TRAINER_FERNANDO_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route123",
+  "index": 37,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route123_EventScript_Alberto",
+  "macro": "single",
+  "trainer": "TRAINER_ALBERTO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route123",
+  "index": 38,
+  "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+  "script": "Route123_EventScript_Frederick",
+  "macro": "single",
+  "trainer": "TRAINER_FREDRICK",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route123",
+  "index": 40,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route123_EventScript_Jazmyn",
+  "macro": "single",
+  "trainer": "TRAINER_JAZMYN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route123",
+  "index": 41,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "Route123_EventScript_Davis",
+  "macro": "single",
+  "trainer": "TRAINER_DAVIS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route124",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route124_EventScript_Spencer",
+  "macro": "single",
+  "trainer": "TRAINER_SPENCER",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route124",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route124_EventScript_Roland",
+  "macro": "single",
+  "trainer": "TRAINER_ROLAND",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "Route124",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route124_EventScript_Jenny",
+  "macro": "single",
+  "trainer": "TRAINER_JENNY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route124",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route124_EventScript_Grace",
+  "macro": "single",
+  "trainer": "TRAINER_GRACE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route124",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route124_EventScript_Chad",
+  "macro": "single",
+  "trainer": "TRAINER_CHAD",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route124",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route124_EventScript_Lila",
+  "macro": "double",
+  "trainer": "TRAINER_LILA_AND_ROY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route124",
+  "index": 9,
+  "graphics_id": "OBJ_EVENT_GFX_TUBER_M_SWIMMING",
+  "script": "Route124_EventScript_Roy",
+  "macro": "double",
+  "trainer": "TRAINER_LILA_AND_ROY_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route124",
+  "index": 10,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route124_EventScript_Declan",
+  "macro": "single",
+  "trainer": "TRAINER_DECLAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route124",
+  "index": 11,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route124_EventScript_Isabella",
+  "macro": "single",
+  "trainer": "TRAINER_ISABELLA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "Route125",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route125_EventScript_Nolen",
+  "macro": "single",
+  "trainer": "TRAINER_NOLEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route125",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route125_EventScript_Stan",
+  "macro": "single",
+  "trainer": "TRAINER_STAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route125",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route125_EventScript_Tanya",
+  "macro": "single",
+  "trainer": "TRAINER_TANYA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route125",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route125_EventScript_Sharon",
+  "macro": "single",
+  "trainer": "TRAINER_SHARON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route125",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+  "script": "Route125_EventScript_Ernest",
+  "macro": "single",
+  "trainer": "TRAINER_ERNEST_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route125",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route125_EventScript_Kim",
+  "macro": "double",
+  "trainer": "TRAINER_KIM_AND_IRIS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route125",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "Route125_EventScript_Iris",
+  "macro": "double",
+  "trainer": "TRAINER_KIM_AND_IRIS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route125",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route125_EventScript_Presley",
+  "macro": "single",
+  "trainer": "TRAINER_PRESLEY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route125",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+  "script": "Route125_EventScript_Auron",
+  "macro": "single",
+  "trainer": "TRAINER_AURON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route126",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route126_EventScript_Barry",
+  "macro": "single",
+  "trainer": "TRAINER_BARRY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route126",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route126_EventScript_Dean",
+  "macro": "single",
+  "trainer": "TRAINER_DEAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route126",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route126_EventScript_Nikki",
+  "macro": "single",
+  "trainer": "TRAINER_NIKKI",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route126",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route126_EventScript_Brenda",
+  "macro": "single",
+  "trainer": "TRAINER_BRENDA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route126",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route126_EventScript_Sienna",
+  "macro": "single",
+  "trainer": "TRAINER_SIENNA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "Route126",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route126_EventScript_Pablo",
+  "macro": "single",
+  "trainer": "TRAINER_PABLO_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "Route126",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route126_EventScript_Isobel",
+  "macro": "single",
+  "trainer": "TRAINER_ISOBEL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "Route126",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route126_EventScript_Leonardo",
+  "macro": "single",
+  "trainer": "TRAINER_LEONARDO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "Route127",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route127_EventScript_Camden",
+  "macro": "single",
+  "trainer": "TRAINER_CAMDEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route127",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route127_EventScript_Donny",
+  "macro": "single",
+  "trainer": "TRAINER_DONNY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route127",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route127_EventScript_Jonah",
+  "macro": "single",
+  "trainer": "TRAINER_JONAH",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "Route127",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route127_EventScript_Roger",
+  "macro": "single",
+  "trainer": "TRAINER_ROGER",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "Route127",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route127_EventScript_Henry",
+  "macro": "single",
+  "trainer": "TRAINER_HENRY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "Route127",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route127_EventScript_Aidan",
+  "macro": "single",
+  "trainer": "TRAINER_AIDAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route127",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+  "script": "Route127_EventScript_Koji",
+  "macro": "single",
+  "trainer": "TRAINER_KOJI_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route127",
+  "index": 9,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route127_EventScript_Athena",
+  "macro": "single",
+  "trainer": "TRAINER_ATHENA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route128",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route128_EventScript_Isaiah",
+  "macro": "single",
+  "trainer": "TRAINER_ISAIAH_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route128",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route128_EventScript_Katelyn",
+  "macro": "single",
+  "trainer": "TRAINER_KATELYN_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "7"
+ },
+ {
+  "map": "Route128",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route128_EventScript_Wayne",
+  "macro": "single",
+  "trainer": "TRAINER_WAYNE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "Route128",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "Route128_EventScript_Ruben",
+  "macro": "single",
+  "trainer": "TRAINER_RUBEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route128",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route128_EventScript_Alexa",
+  "macro": "single",
+  "trainer": "TRAINER_ALEXA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route128",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route128_EventScript_Carlee",
+  "macro": "single",
+  "trainer": "TRAINER_CARLEE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route128",
+  "index": 9,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route128_EventScript_Harrison",
+  "macro": "single",
+  "trainer": "TRAINER_HARRISON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route129",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route129_EventScript_Chase",
+  "macro": "single",
+  "trainer": "TRAINER_CHASE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route129",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route129_EventScript_Allison",
+  "macro": "single",
+  "trainer": "TRAINER_ALLISON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route129",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route129_EventScript_Tisha",
+  "macro": "single",
+  "trainer": "TRAINER_TISHA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route129",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route129_EventScript_Reed",
+  "macro": "single",
+  "trainer": "TRAINER_REED",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route129",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route129_EventScript_Clarence",
+  "macro": "single",
+  "trainer": "TRAINER_CLARENCE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route130",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route130_EventScript_Rodney",
+  "macro": "single",
+  "trainer": "TRAINER_RODNEY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route130",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route130_EventScript_Katie",
+  "macro": "single",
+  "trainer": "TRAINER_KATIE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route130",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route130_EventScript_Santiago",
+  "macro": "single",
+  "trainer": "TRAINER_SANTIAGO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route131",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route131_EventScript_Richard",
+  "macro": "single",
+  "trainer": "TRAINER_RICHARD",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route131",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route131_EventScript_Herman",
+  "macro": "single",
+  "trainer": "TRAINER_HERMAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route131",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route131_EventScript_Susie",
+  "macro": "single",
+  "trainer": "TRAINER_SUSIE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route131",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route131_EventScript_Kara",
+  "macro": "single",
+  "trainer": "TRAINER_KARA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route131",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route131_EventScript_Reli",
+  "macro": "double",
+  "trainer": "TRAINER_RELI_AND_IAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route131",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_TUBER_M_SWIMMING",
+  "script": "Route131_EventScript_Ian",
+  "macro": "double",
+  "trainer": "TRAINER_RELI_AND_IAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route131",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route131_EventScript_Kevin",
+  "macro": "single",
+  "trainer": "TRAINER_KEVIN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route131",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route131_EventScript_Talia",
+  "macro": "single",
+  "trainer": "TRAINER_TALIA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route132",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route132_EventScript_Gilbert",
+  "macro": "single",
+  "trainer": "TRAINER_GILBERT",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route132",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route132_EventScript_Dana",
+  "macro": "single",
+  "trainer": "TRAINER_DANA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route132",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+  "script": "Route132_EventScript_Kiyo",
+  "macro": "single",
+  "trainer": "TRAINER_KIYO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route132",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+  "script": "Route132_EventScript_Ronald",
+  "macro": "single",
+  "trainer": "TRAINER_RONALD",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "Route132",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+  "script": "Route132_EventScript_Paxton",
+  "macro": "single",
+  "trainer": "TRAINER_PAXTON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route132",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route132_EventScript_Darcy",
+  "macro": "single",
+  "trainer": "TRAINER_DARCY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route132",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+  "script": "Route132_EventScript_Makayla",
+  "macro": "single",
+  "trainer": "TRAINER_MAKAYLA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route132",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "Route132_EventScript_Jonathan",
+  "macro": "single",
+  "trainer": "TRAINER_JONATHAN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route133",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route133_EventScript_Franklin",
+  "macro": "single",
+  "trainer": "TRAINER_FRANKLIN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route133",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route133_EventScript_Linda",
+  "macro": "single",
+  "trainer": "TRAINER_LINDA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route133",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route133_EventScript_Debra",
+  "macro": "single",
+  "trainer": "TRAINER_DEBRA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route133",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route133_EventScript_Beck",
+  "macro": "single",
+  "trainer": "TRAINER_BECK",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route133",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "Route133_EventScript_Warren",
+  "macro": "single",
+  "trainer": "TRAINER_WARREN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "Route133",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+  "script": "Route133_EventScript_Mollie",
+  "macro": "single",
+  "trainer": "TRAINER_MOLLIE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route133",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+  "script": "Route133_EventScript_Conor",
+  "macro": "single",
+  "trainer": "TRAINER_CONOR",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route134",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+  "script": "Route134_EventScript_Jack",
+  "macro": "single",
+  "trainer": "TRAINER_JACK",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route134",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+  "script": "Route134_EventScript_Laurel",
+  "macro": "single",
+  "trainer": "TRAINER_LAUREL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "Route134",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "Route134_EventScript_Aaron",
+  "macro": "single",
+  "trainer": "TRAINER_AARON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route134",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+  "script": "Route134_EventScript_Alex",
+  "macro": "single",
+  "trainer": "TRAINER_ALEX",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route134",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+  "script": "Route134_EventScript_Hitoshi",
+  "macro": "single",
+  "trainer": "TRAINER_HITOSHI",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route134",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "Route134_EventScript_Marley",
+  "macro": "single",
+  "trainer": "TRAINER_MARLEY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "Route134",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+  "script": "Route134_EventScript_Kelvin",
+  "macro": "single",
+  "trainer": "TRAINER_KELVIN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "Route134",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+  "script": "Route134_EventScript_Reyna",
+  "macro": "single",
+  "trainer": "TRAINER_REYNA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "Route134",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+  "script": "Route134_EventScript_Hudson",
+  "macro": "single",
+  "trainer": "TRAINER_HUDSON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "RustboroCity_Gym",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_ROXANNE",
+  "script": "RustboroCity_Gym_EventScript_Roxanne",
+  "macro": "single",
+  "trainer": "TRAINER_ROXANNE_1",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "RustboroCity_Gym",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "RustboroCity_Gym_EventScript_Josh",
+  "macro": "single",
+  "trainer": "TRAINER_JOSH",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "RustboroCity_Gym",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+  "script": "RustboroCity_Gym_EventScript_Tommy",
+  "macro": "single",
+  "trainer": "TRAINER_TOMMY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "RustboroCity_Gym",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "RustboroCity_Gym_EventScript_Marc",
+  "macro": "single",
+  "trainer": "TRAINER_MARC",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "RusturfTunnel",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "RusturfTunnel_EventScript_Grunt",
+  "macro": "no_intro",
+  "trainer": "TRAINER_GRUNT_RUSTURF_TUNNEL",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "RusturfTunnel",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_HIKER",
+  "script": "RusturfTunnel_EventScript_Mike",
+  "macro": "single",
+  "trainer": "TRAINER_MIKE_2",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "SSTidalLowerDeck",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+  "script": "SSTidalLowerDeck_EventScript_Phillip",
+  "macro": "single",
+  "trainer": "TRAINER_PHILLIP",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "SSTidalLowerDeck",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+  "script": "SSTidalLowerDeck_EventScript_Leonard",
+  "macro": "single",
+  "trainer": "TRAINER_LEONARD",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "SSTidalRooms",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
+  "script": "SSTidalRooms_EventScript_Colton",
+  "macro": "single",
+  "trainer": "TRAINER_COLTON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "SSTidalRooms",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+  "script": "SSTidalRooms_EventScript_Micah",
+  "macro": "single",
+  "trainer": "TRAINER_MICAH",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "SSTidalRooms",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+  "script": "SSTidalRooms_EventScript_Thomas",
+  "macro": "single",
+  "trainer": "TRAINER_THOMAS",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "SSTidalRooms",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+  "script": "SSTidalRooms_EventScript_Jed",
+  "macro": "double",
+  "trainer": "TRAINER_LEA_AND_JED",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "SSTidalRooms",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
+  "script": "SSTidalRooms_EventScript_Lea",
+  "macro": "double",
+  "trainer": "TRAINER_LEA_AND_JED",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "SSTidalRooms",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
+  "script": "SSTidalRooms_EventScript_Garret",
+  "macro": "single",
+  "trainer": "TRAINER_GARRET",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "SSTidalRooms",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "SSTidalRooms_EventScript_Naomi",
+  "macro": "single",
+  "trainer": "TRAINER_NAOMI",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "0"
+ },
+ {
+  "map": "SootopolisCity_Gym_1F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_JUAN",
+  "script": "SootopolisCity_Gym_1F_EventScript_Juan",
+  "macro": "single",
+  "trainer": "TRAINER_JUAN_1",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "SootopolisCity_Gym_B1F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "SootopolisCity_Gym_B1F_EventScript_Andrea",
+  "macro": "single",
+  "trainer": "TRAINER_ANDREA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "SootopolisCity_Gym_B1F",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+  "script": "SootopolisCity_Gym_B1F_EventScript_Connie",
+  "macro": "single",
+  "trainer": "TRAINER_CONNIE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "SootopolisCity_Gym_B1F",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "SootopolisCity_Gym_B1F_EventScript_Brianna",
+  "macro": "single",
+  "trainer": "TRAINER_BRIANNA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "1"
+ },
+ {
+  "map": "SootopolisCity_Gym_B1F",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+  "script": "SootopolisCity_Gym_B1F_EventScript_Bridget",
+  "macro": "single",
+  "trainer": "TRAINER_BRIDGET",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "5"
+ },
+ {
+  "map": "SootopolisCity_Gym_B1F",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+  "script": "SootopolisCity_Gym_B1F_EventScript_Tiffany",
+  "macro": "single",
+  "trainer": "TRAINER_TIFFANY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "SootopolisCity_Gym_B1F",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
+  "script": "SootopolisCity_Gym_B1F_EventScript_Bethany",
+  "macro": "single",
+  "trainer": "TRAINER_BETHANY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "SootopolisCity_Gym_B1F",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_LASS",
+  "script": "SootopolisCity_Gym_B1F_EventScript_Crissy",
+  "macro": "single",
+  "trainer": "TRAINER_CRISSY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "SootopolisCity_Gym_B1F",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+  "script": "SootopolisCity_Gym_B1F_EventScript_Olivia",
+  "macro": "single",
+  "trainer": "TRAINER_OLIVIA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "SootopolisCity_Gym_B1F",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+  "script": "SootopolisCity_Gym_B1F_EventScript_Daphne",
+  "macro": "single",
+  "trainer": "TRAINER_DAPHNE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "SootopolisCity_Gym_B1F",
+  "index": 9,
+  "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
+  "script": "SootopolisCity_Gym_B1F_EventScript_Annika",
+  "macro": "single",
+  "trainer": "TRAINER_ANNIKA",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "VictoryRoad_1F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "VictoryRoad_1F_EventScript_Edgar",
+  "macro": "single",
+  "trainer": "TRAINER_EDGAR",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "VictoryRoad_1F",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "VictoryRoad_1F_EventScript_Hope",
+  "macro": "single",
+  "trainer": "TRAINER_HOPE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "VictoryRoad_1F",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "VictoryRoad_1F_EventScript_Albert",
+  "macro": "single",
+  "trainer": "TRAINER_ALBERT",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "VictoryRoad_1F",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_WALLY",
+  "script": "VictoryRoad_1F_EventScript_ExitWally",
+  "macro": "single",
+  "trainer": "TRAINER_WALLY_VR_2",
+  "trainer_type": "TRAINER_TYPE_NONE",
+  "sight": "0"
+ },
+ {
+  "map": "VictoryRoad_1F",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "VictoryRoad_1F_EventScript_Katelynn",
+  "macro": "single",
+  "trainer": "TRAINER_KATELYNN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "VictoryRoad_1F",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "VictoryRoad_1F_EventScript_Quincy",
+  "macro": "single",
+  "trainer": "TRAINER_QUINCY",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "VictoryRoad_B1F",
+  "index": 13,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "VictoryRoad_B1F_EventScript_Samuel",
+  "macro": "single",
+  "trainer": "TRAINER_SAMUEL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "VictoryRoad_B1F",
+  "index": 14,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "VictoryRoad_B1F_EventScript_Shannon",
+  "macro": "single",
+  "trainer": "TRAINER_SHANNON",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "VictoryRoad_B1F",
+  "index": 15,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "VictoryRoad_B1F_EventScript_Michelle",
+  "macro": "single",
+  "trainer": "TRAINER_MICHELLE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "VictoryRoad_B1F",
+  "index": 19,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "VictoryRoad_B1F_EventScript_Mitchell",
+  "macro": "single",
+  "trainer": "TRAINER_MITCHELL",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "VictoryRoad_B1F",
+  "index": 20,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "VictoryRoad_B1F_EventScript_Halle",
+  "macro": "single",
+  "trainer": "TRAINER_HALLE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "VictoryRoad_B2F",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "VictoryRoad_B2F_EventScript_Vito",
+  "macro": "single",
+  "trainer": "TRAINER_VITO",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "VictoryRoad_B2F",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "VictoryRoad_B2F_EventScript_Owen",
+  "macro": "single",
+  "trainer": "TRAINER_OWEN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "VictoryRoad_B2F",
+  "index": 2,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "VictoryRoad_B2F_EventScript_Caroline",
+  "macro": "single",
+  "trainer": "TRAINER_CAROLINE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "VictoryRoad_B2F",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "VictoryRoad_B2F_EventScript_Julie",
+  "macro": "single",
+  "trainer": "TRAINER_JULIE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "VictoryRoad_B2F",
+  "index": 5,
+  "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+  "script": "VictoryRoad_B2F_EventScript_Dianne",
+  "macro": "single",
+  "trainer": "TRAINER_DIANNE",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "VictoryRoad_B2F",
+  "index": 6,
+  "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+  "script": "VictoryRoad_B2F_EventScript_Felix",
+  "macro": "single",
+  "trainer": "TRAINER_FELIX",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ }
+]

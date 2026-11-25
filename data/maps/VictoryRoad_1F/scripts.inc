@@ -83,8 +83,6 @@ VictoryRoad_1F_EventScript_EntranceWally::
 @ This Wally appears and remains at the exit after the Hall of Fame is entered
 VictoryRoad_1F_EventScript_ExitWally::
 	trainerbattle_single TRAINER_WALLY_VR_2, VictoryRoad_1F_Text_WallyIntro, VictoryRoad_1F_Text_WallyDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, VictoryRoad_1F_EventScript_RematchWally
 	msgbox VictoryRoad_1F_Text_WallyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -140,20 +138,28 @@ VictoryRoad_1F_Text_WallyPostEntranceBattle:
 	.string "catch up to you!$"
 
 VictoryRoad_1F_Text_WallyIntro:
-	.string "WALLY: Hi! {PLAYER}!\p"
-	.string "I've gotten stronger since that last\n"
-	.string "time! I wanted to show you, {PLAYER}!\p"
-	.string "Okay… Here I come!$"
+	.string "WALLY: Huh? You're the TRAINER from\n"
+	.string "JOHTO everyone's talking about!\p"
+	.string "I'm WALLY. I come here to train\n"
+	.string "every day.\p"
+	.string "A friend of mine became CHAMPION\n"
+	.string "here a few years ago. Ever since,\l"
+	.string "I've been trying to catch up.\p"
+	.string "If I can hold my own against you,\n"
+	.string "I'll know I'm getting close.\p"
+	.string "Please battle me! Here I come!$"
 
 VictoryRoad_1F_Text_WallyDefeat:
-	.string "Wow!\n"
-	.string "{PLAYER}, you are strong, after all!$"
+	.string "Wow…\n"
+	.string "So that's a champion's strength!$"
 
 VictoryRoad_1F_Text_WallyPostBattle:
-	.string "WALLY: I couldn't beat you this time,\n"
-	.string "too… But one of these days, {PLAYER},\l"
-	.string "I'm going to catch up to you…\p"
-	.string "And challenge the POKéMON LEAGUE!$"
+	.string "WALLY: I used to get sick just from\n"
+	.string "walking around. Now look at me!\p"
+	.string "I lost, but I'm not giving up.\n"
+	.string "Someday I'll take on the LEAGUE.\p"
+	.string "Come back and battle me again,\n"
+	.string "okay, {PLAYER}?$"
 
 VictoryRoad_1F_Text_EdgarIntro:
 	.string "I've made it this far a couple times,\n"

@@ -25,7 +25,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "MtPyre_2F_EventScript_Mark",
+      "script": "HoennSeek_EventScript_T_Mark",
       "flag": "0"
     },
     {
@@ -77,7 +77,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "MtPyre_2F_EventScript_Dez",
+      "script": "HoennSeek_EventScript_T_DezAndLuke",
       "flag": "0"
     },
     {
@@ -90,7 +90,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "MtPyre_2F_EventScript_Luke",
+      "script": "HoennSeek_EventScript_T_DezAndLuke",
       "flag": "0"
     },
     {
@@ -103,7 +103,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "MtPyre_2F_EventScript_Zander",
+      "script": "HoennSeek_EventScript_T_Zander",
       "flag": "0"
     },
     {
@@ -116,7 +116,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "MtPyre_2F_EventScript_Leah",
+      "script": "HoennSeek_EventScript_T_Leah",
       "flag": "0"
     }
   ],

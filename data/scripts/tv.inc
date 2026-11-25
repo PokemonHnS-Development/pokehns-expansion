@@ -1,5 +1,6 @@
 EventScript_TV::
 	lockall
+	call HoennSeek_EventScript_TVNews @ Hoenn & Seek (part 14)
 	incrementgamestat GAME_STAT_WATCHED_TV
 	special ResetTVShowState
 	specialvar VAR_RESULT, CheckForPlayersHouseNews

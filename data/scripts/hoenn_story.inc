@@ -44,9 +44,12 @@ HoennSeek_EventScript_MrStone::
 	giveitem ITEM_LUCKY_EGG
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_EXP_SHARE
+	goto_if_set FLAG_HOENN_SCOPE_BROKEN, HoennSeek_EventScript_MrStoneScope
 	msgbox HoennSeek_Text_MrStoneFieldTest, MSGBOX_DEFAULT
 	goto HoennSeek_EventScript_MrStoneEnd
 HoennSeek_EventScript_MrStoneAfterGift::
+	goto_if_set FLAG_HOENN_SCOPE_BROKEN, HoennSeek_EventScript_MrStoneScope
+HoennSeek_EventScript_MrStoneAfterGiftText::
 	msgbox HoennSeek_Text_MrStoneAfterGift, MSGBOX_DEFAULT
 HoennSeek_EventScript_MrStoneEnd::
 	closemessage
@@ -54,6 +57,64 @@ HoennSeek_EventScript_MrStoneEnd::
 	waitmovement 0
 	release
 	end
+
+@ Part 14: the Route 120 tester's prototype broke; Mr. Stone has the finished model.
+HoennSeek_EventScript_MrStoneScope::
+	goto_if_set FLAG_RECEIVED_DEVON_SCOPE, HoennSeek_EventScript_MrStoneAfterGiftText
+	msgbox HoennSeek_Text_MrStoneScopeBroke, MSGBOX_DEFAULT
+	giveitem ITEM_DEVON_SCOPE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_DEVON_SCOPE
+	msgbox HoennSeek_Text_MrStoneScopeExplain, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_MrStoneEnd
+
+@ ---------------------------------------------------------------- Route 120 field tester (part 14)
+@ Called from Route120_EventScript_Steven while the player has no DEVON SCOPE.
+@ His prototype shorts out, so the player has to fetch the finished model from
+@ Mr. Stone in Rustboro and come back.
+HoennSeek_EventScript_TesterNoScope::
+	goto_if_set FLAG_HOENN_SCOPE_BROKEN, HoennSeek_EventScript_TesterWaiting
+	msgbox HoennSeek_Text_TesterIntro, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ROUTE120_STEVEN, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	delay 20
+	playse SE_M_THUNDERBOLT2
+	waitse
+	msgbox HoennSeek_Text_TesterSparks, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ROUTE120_STEVEN, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox HoennSeek_Text_TesterBroken, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_SCOPE_BROKEN
+	release
+	end
+
+HoennSeek_EventScript_TesterWaiting::
+	msgbox HoennSeek_Text_TesterWaiting, MSGBOX_DEFAULT
+	release
+	end
+
+@ ---------------------------------------------------------------- HOENN TV news (part 14)
+@ Called at the top of EventScript_TV. Fake fights set VAR_HOENN_NEWS; the next
+@ TV the player checks shows that story once, then TV goes back to normal.
+HoennSeek_EventScript_TVNews::
+	goto_if_eq VAR_HOENN_NEWS, 0, HoennSeek_EventScript_TVNewsNone
+	call_if_eq VAR_HOENN_NEWS, 1, HoennSeek_EventScript_TVNewsAutograph
+	call_if_eq VAR_HOENN_NEWS, 2, HoennSeek_EventScript_TVNewsSong
+	setvar VAR_HOENN_NEWS, 0
+	releaseall
+	end
+HoennSeek_EventScript_TVNewsNone::
+	return
+
+HoennSeek_EventScript_TVNewsAutograph::
+	msgbox HoennSeek_Text_TVNewsAutograph, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_TVNewsSong::
+	msgbox HoennSeek_Text_TVNewsSong, MSGBOX_DEFAULT
+	return
 
 @ ---------------------------------------------------------------- Text
 
@@ -83,6 +144,59 @@ HoennSeek_Text_MrStoneFieldTest:
 	.string "say hello to our field tester.\p"
 	.string "We're trying out a new DEVON SCOPE\n"
 	.string "out there. It's quite something!$"
+
+HoennSeek_Text_MrStoneScopeBroke:
+	.string "MR. STONE: Our tester on ROUTE 120\n"
+	.string "called. The prototype DEVON SCOPE\l"
+	.string "went up in sparks, did it?\p"
+	.string "Ha ha! That's what field tests are\n"
+	.string "for. Here, take the finished model\l"
+	.string "back to him!$"
+
+HoennSeek_Text_MrStoneScopeExplain:
+	.string "MR. STONE: That SCOPE reveals\n"
+	.string "POKéMON that can't be seen.\p"
+	.string "There are KECLEON hiding all around\n"
+	.string "FORTREE. Keep it, and have fun!$"
+
+HoennSeek_Text_TesterIntro:
+	.string "Oh! A TRAINER! Perfect timing.\p"
+	.string "Something invisible is blocking this\n"
+	.string "bridge. Watch, I'll show you with\l"
+	.string "DEVON's new SCOPE…$"
+
+HoennSeek_Text_TesterSparks:
+	.string "The tester switched on the DEVON\n"
+	.string "SCOPE…\p"
+	.string "Bzzzt! Sparks flew out of it!$"
+
+HoennSeek_Text_TesterBroken:
+	.string "Ack! The prototype's fried!\p"
+	.string "MR. STONE has the finished model at\n"
+	.string "DEVON CORPORATION in RUSTBORO.\p"
+	.string "I can't leave the bridge unwatched.\n"
+	.string "Could you fetch it for me?$"
+
+HoennSeek_Text_TesterWaiting:
+	.string "MR. STONE at DEVON CORPORATION in\n"
+	.string "RUSTBORO has the finished SCOPE.\p"
+	.string "I'll keep an eye on this bridge\n"
+	.string "until you're back!$"
+
+HoennSeek_Text_TVNewsAutograph:
+	.string "HOENN TV NEWS FLASH!\p"
+	.string "The champion from JOHTO has been\n"
+	.string "spotted on HOENN's routes, signing\l"
+	.string "autographs for excited fans!\p"
+	.string "Where will {PLAYER} turn up next?\n"
+	.string "Stay tuned!$"
+
+HoennSeek_Text_TVNewsSong:
+	.string "HOENN TV MUSIC CORNER!\p"
+	.string "A new song about the JOHTO champion\n"
+	.string "is climbing the charts!\p"
+	.string "It's called “{PLAYER}'s THEME.”\n"
+	.string "Our phones haven't stopped ringing!$"
 
 HoennSeek_Text_MrStoneAfterGift:
 	.string "MR. STONE: My son, STEVEN? He's off\n"

@@ -33,8 +33,9 @@ Route120_EventScript_RemoveKecleon::
 
 Route120_OnLoad:
 	call_if_unset FLAG_REGI_DOORS_OPENED, Route120_EventScript_CloseAncientTomb
-	call_if_set FLAG_RECEIVED_DEVON_SCOPE, Route120_EventScript_SetBridgeClearMetatiles
-	call_if_unset FLAG_RECEIVED_DEVON_SCOPE, Route120_EventScript_SetBridgeKecleonMovement
+	@ Hoenn & Seek (part 14): the bridge clears when the tester leaves, not when you get the scope
+	call_if_set FLAG_HIDE_ROUTE_120_STEVEN, Route120_EventScript_SetBridgeClearMetatiles
+	call_if_unset FLAG_HIDE_ROUTE_120_STEVEN, Route120_EventScript_SetBridgeKecleonMovement
 	end
 
 Route120_EventScript_CloseAncientTomb::
@@ -154,6 +155,7 @@ Route120_EventScript_BerryNotLove::
 Route120_EventScript_Steven::
 	lock
 	faceplayer
+	goto_if_unset FLAG_RECEIVED_DEVON_SCOPE, HoennSeek_EventScript_TesterNoScope
 	goto_if_set FLAG_NOT_READY_FOR_BATTLE_ROUTE_120, Route120_EventScript_StevenAskReadyForBattle
 	msgbox Route120_Text_StevenGreeting, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route120_EventScript_StevenNotReady
@@ -217,9 +219,6 @@ Route120_EventScript_StevenGiveDeconScope::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox Route120_Text_StevenGiveDevonScope, MSGBOX_DEFAULT
-	giveitem ITEM_DEVON_SCOPE
-	setflag FLAG_RECEIVED_DEVON_SCOPE
-	msgbox Route120_Text_StevenGoodbye, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ROUTE120_STEVEN, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
@@ -362,14 +361,10 @@ Route120_EventScript_Callie::
 
 @ Hoenn & Seek: a DEVON field tester stands in for Steven (part 11).
 Route120_Text_StevenGreeting:
-	.string "Oh! A TRAINER! Perfect timing.\p"
-	.string "I'm field-testing a new DEVON\n"
-	.string "product: the DEVON SCOPE.\p"
-	.string "Something invisible is blocking this\n"
-	.string "bridge, and the SCOPE just confirmed\l"
-	.string "it!\p"
-	.string "You look like you've battled a lot.\n"
-	.string "Could you deal with it?\p"
+	.string "You brought the finished DEVON SCOPE!\n"
+	.string "MR. STONE must have been laughing.\p"
+	.string "Whatever's invisible is still blocking\n"
+	.string "the bridge. It might put up a fight.\p"
 	.string "Are your POKéMON ready for battle?$"
 
 Route120_Text_StevenIllWaitHere:
@@ -381,11 +376,11 @@ Route120_Text_StevenReadyForBattle:
 	.string "battle now?$"
 
 Route120_Text_StevenShowMeYourPower:
-	.string "Great! Stand back…\n"
-	.string "I'm switching the SCOPE on!$"
+	.string "Great! Point the SCOPE at the bridge,\n"
+	.string "right there!$"
 
 Route120_Text_StevenUsedDevonScope:
-	.string "The tester used the DEVON SCOPE.\p"
+	.string "{PLAYER} used the DEVON SCOPE.\p"
 	.string "An invisible POKéMON became completely\n"
 	.string "visible!\p"
 	.string "The startled POKéMON attacked!$"
@@ -393,9 +388,11 @@ Route120_Text_StevenUsedDevonScope:
 Route120_Text_StevenGiveDevonScope:
 	.string "Field test complete!\n"
 	.string "A KECLEON, of all things.\p"
-	.string "MR. STONE would want you to keep\n"
-	.string "this. Think of it as a thank-you\l"
-	.string "from DEVON.$"
+	.string "Who knows what else is hiding out\n"
+	.string "here? Point the SCOPE at anything\l"
+	.string "that seems out of place.\p"
+	.string "Well, I'd better get back to\n"
+	.string "RUSTBORO and write my report!$"
 
 Route120_Text_StevenGoodbye:
 	.string "Who knows what else is hiding out\n"

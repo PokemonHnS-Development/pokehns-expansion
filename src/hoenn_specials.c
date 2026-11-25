@@ -7,12 +7,32 @@
 #include "list_menu.h"
 #include "malloc.h"
 #include "pokemon.h"
+#include "script.h"
 #include "script_menu.h"
 #include "string_util.h"
 #include "constants/abilities.h"
 #include "constants/items.h"
+#include "constants/opponents.h"
+#include "constants/hoenn_custom.h"
 
 #if IS_HNS
+
+// Fake-fight flags sit above every real Hoenn trainer flag.
+STATIC_ASSERT(HOENN_TRAINER_FLAGS_START + TRAINERS_COUNT_HNS - HOENN_TRAINERS_START <= HOENN_FAKE_FLAGS_START, HoennFakeFlagsOverlapTrainers);
+
+// callnative HoennSeek_EndScriptIfSeeing (part 14): a trainer's sight check runs
+// the object's script until it reaches an effect, and walks up if it finds one.
+// Fake fights that already happened put this first on their talk path, so the
+// sight check ends there and the trainer stays put; talking still gets a line.
+// Tagged requests_effects=1 in the script, so the sight check runs it.
+void HoennSeek_EndScriptIfSeeing(struct ScriptContext *ctx)
+{
+    Script_RequestEffects(SCREFF_V1);
+    // Only the sight check breaks on trainerbattle; the talk check (which skips
+    // scripts with no effect) must keep going so talking still works.
+    if (Script_IsAnalyzingEffects() && ctx->breakOnTrainerBattle)
+        StopScript(ctx);
+}
 
 // specialvar VAR_RESULT, HoennGetStampCount: how many Hoenn gym stamps the player has.
 u16 HoennGetStampCount(void)

@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "MeteorFalls_1F_2R_EventScript_Nicolas",
+      "script": "HoennSeek_EventScript_T_Nicolas1",
       "flag": "0"
     },
     {
@@ -38,7 +38,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "MeteorFalls_1F_2R_EventScript_John",
+      "script": "HoennSeek_EventScript_T_JohnAndJay1",
       "flag": "0"
     },
     {
@@ -51,7 +51,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "MeteorFalls_1F_2R_EventScript_Jay",
+      "script": "HoennSeek_EventScript_T_JohnAndJay1",
       "flag": "0"
     }
   ],

@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "VictoryRoad_1F_EventScript_Edgar",
+      "script": "HoennSeek_EventScript_T_Edgar",
       "flag": "0"
     },
     {
@@ -38,7 +38,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "VictoryRoad_1F_EventScript_Hope",
+      "script": "HoennSeek_EventScript_T_Hope",
       "flag": "0"
     },
     {
@@ -51,7 +51,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "VictoryRoad_1F_EventScript_Albert",
+      "script": "HoennSeek_EventScript_T_Albert",
       "flag": "0"
     },
     {
@@ -117,7 +117,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "VictoryRoad_1F_EventScript_Katelynn",
+      "script": "HoennSeek_EventScript_T_Katelynn",
       "flag": "0"
     },
     {
@@ -130,7 +130,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "VictoryRoad_1F_EventScript_Quincy",
+      "script": "HoennSeek_EventScript_T_Quincy",
       "flag": "0"
     }
   ],

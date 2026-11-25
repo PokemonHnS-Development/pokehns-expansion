@@ -51,7 +51,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "AbandonedShip_Rooms_1F_EventScript_Thalia",
+      "script": "HoennSeek_EventScript_T_Thalia1",
       "flag": "0"
     },
     {
@@ -64,7 +64,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "AbandonedShip_Rooms_1F_EventScript_Demetrius",
+      "script": "HoennSeek_EventScript_T_Demetrius",
       "flag": "0"
     }
   ],

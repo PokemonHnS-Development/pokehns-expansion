@@ -194,7 +194,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "VictoryRoad_B1F_EventScript_Samuel",
+      "script": "HoennSeek_EventScript_T_Samuel",
       "flag": "0"
     },
     {
@@ -207,7 +207,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "VictoryRoad_B1F_EventScript_Shannon",
+      "script": "HoennSeek_EventScript_T_Shannon",
       "flag": "0"
     },
     {
@@ -220,7 +220,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "VictoryRoad_B1F_EventScript_Michelle",
+      "script": "HoennSeek_EventScript_T_Michelle",
       "flag": "0"
     },
     {
@@ -272,7 +272,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "VictoryRoad_B1F_EventScript_Mitchell",
+      "script": "HoennSeek_EventScript_T_Mitchell",
       "flag": "0"
     },
     {
@@ -285,7 +285,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "VictoryRoad_B1F_EventScript_Halle",
+      "script": "HoennSeek_EventScript_T_Halle",
       "flag": "0"
     }
   ],
