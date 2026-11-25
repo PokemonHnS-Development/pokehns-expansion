@@ -183,6 +183,8 @@ def main():
     roles_path = os.path.join(ROOT, "data/hoenn/trainer_roles.json")
     if os.path.exists(roles_path):
         trainers -= set(json.load(open(roles_path))["exclude"])
+        # Part 16c: phone trainers' rematch teams (the last Emerald tier) get IDs too.
+        trainers |= set(json.load(open(roles_path)).get("rematch", {}).values())
     # Part 14: data/hoenn/trainer_parties.party replaces Emerald teams. A block's lines
     # before the first blank line replace those header keys; the rest replaces the Pokemon.
     over_path = os.path.join(ROOT, "data/hoenn/trainer_parties.party")
@@ -211,6 +213,9 @@ def main():
         for t, r in roles.items():
             if r in ("hopeful", "strong") and t in blocks and t not in overridden:
                 blocks[t] = evolve_block(blocks[t], evo, 24 if r == "strong" else 12)
+        for t in json.load(open(roles_path)).get("rematch", {}).values():
+            if t in blocks and t not in overridden:
+                blocks[t] = evolve_block(blocks[t], evo, 28)
     missing = sorted(t for t in trainers if t not in blocks)
     if missing:
         sys.exit(f"Hoenn scripts reference trainers with no Emerald party data: {missing}")
