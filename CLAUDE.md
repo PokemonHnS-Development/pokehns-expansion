@@ -41,6 +41,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 15 (Hoenn wild levels 35–70, 36 night tables, 41 items upgraded) | 32,467,444 / 1,061 KB | 32,615,540 / 917 KB |
 | Part 16a (Aqua/Magma quests, Maxie + Archie double, Norman's call, Brendan & May; 220 trainers, cap 880) | 32,480,596 / 1,048 KB | 32,628,660 / 904 KB |
 | Part 16b (harbor aide, Birch's Mudkip, Wally at the lab, Steven's shiny Beldum egg) | 32,483,380 / 1,045 KB | 32,631,412 / 901 KB |
+| Part 16c (36 Hoenn phone trainers + rematch teams; 256 trainers, cap 912) | 32,510,404 / 1,019 KB | 32,658,548 / 874 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -135,6 +136,12 @@ Read the roadmap entry for the part you're working on before starting.
   - **Birch's lab:** Birch's object script is `HoennSeek_EventScript_Birch`: Mudkip Lv 5 (`FLAG_HOENN_RECEIVED_MUDKIP`), then lines that follow Brendan & May's state. `VAR_DEX_UPGRADE_JOHTO_STARTER_STATE` is now 6, so the table layout stays but the Johto starter balls never appear. Wally stands at (9,5) until you talk to him (`FLAG_HOENN_HIDE_LAB_WALLY`).
   - **Silph Co. (`SaffronCity_SilphCo_hns`):** Steven's object script is `HoennSeek_EventScript_SilphSteven` (same scene and exit as HnS's): a shiny Beldum egg from `specialvar VAR_RESULT, HoennGiveShinyEgg` (species in `VAR_0x8004`; hatching keeps `MON_DATA_IS_SHINY`). It still sets `FLAG_GOT_HOENN_STARTER`.
   - Oak's ticket text mentions the aide and Birch's gift.
+- **PokéGear phone rematches (part 16c):** `gen_hoenn_trainers.py` picks every Emerald rematch trainer (`#else` branch of `gRematchTable` in `src/battle_setup.c`) whose role is battle/hopeful/strong: 36, exactly the 36 normal rematch slots HnS leaves free (`REMATCH_JERRY` … `REMATCH_KIRA_AND_DAN`; HnS reuses the earlier names for Johto trainers). The registered-trainer flags are fixed at `TRAINER_REGISTERED_FLAGS_START + slot` and the next flags follow straight after, so **the enum can't grow**: more Hoenn phone trainers need another flag scheme.
+  - Their generated scripts (`hoenn_trainers.inc`) register after the first win (Emerald's register text, POKéNAV → POKéGEAR copies as `HoennSeek_Text_Gear_*`) and run Emerald's rematch texts.
+  - Rematch team = the trainer's last Emerald tier (`_5`, Amy & Liv `_6`), fully evolved by `gen_hoenn_ids.py` (IV 28; `trainer_roles.json` → `rematch`), scaled in-game to the gym-ace level with no gap (`sHoennRematchTrainers`, `GYM_ROLE_REMATCH`): 68–78 by badges, 85 after Wallace.
+  - Generated: `src/data/hoenn_rematches.h` (included at the end of HnS's `gRematchTable`), `src/data/hoenn_match_call.h` + `_decls.h` (included in `sHnsMatchCallTrainers`, `src/match_call.c`), `data/text/match_call_hoenn.inc` from `data/hoenn/phone_texts.json` (2 general lines + a battle request per trainer; boxes are word-wrapped at 26 columns and two-speaker lines split per speaker).
+  - Calls come from HnS's engine: the 255-step route counter (same map) or the timed random call. Both need `FLAG_HAS_MATCH_CALL` (0x1F3), which `mkbase.sh` doesn't set: write bit 3 of SaveBlock1 flags byte 0x3E to test.
+  - Gym leaders, the E4 and Wally don't call yet (their slots and headers are unused); leaders already offer rematches when you talk to them.
 - **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
@@ -150,9 +157,9 @@ Read the roadmap entry for the part you're working on before starting.
   - Reached through hooks in `GetFlagPointer`/`GetVarPointer` (`src/event_data.c`). Cleared in `NewGameInitData`. SaveBlock3 is 564 of 1,624 bytes.
   - Hidden-item flags must stay below 0x20E9 (13-bit offset from `FLAG_HIDDEN_ITEMS_START`); the generator puts them first.
 - **Trainers.**
-  - Hoenn trainers get IDs from `HOENN_TRAINERS_START` (653) up: 220 since part 16a, 653–872.
+  - Hoenn trainers get IDs from `HOENN_TRAINERS_START` (653) up: 256 since part 16c (220 + 36 rematch teams), 653–908.
   - Their "defeated" flags come from `TRAINER_FLAG_ID(id)` (used in `battle_setup.c`, `debug.c`), not `TRAINER_FLAGS_START + id`.
-  - `MAX_TRAINERS_COUNT_HNS` is set by the generator (880 since part 16a; it moves `TRAINER_PARTNER()` IDs and grows `sTrainerSlides`).
+  - `MAX_TRAINERS_COUNT_HNS` is set by the generator (912 since part 16c; it moves `TRAINER_PARTNER()` IDs and grows `sTrainerSlides`).
 - **Remap rules:**
   - Remapped:
     - Emerald names that resolved to 0.

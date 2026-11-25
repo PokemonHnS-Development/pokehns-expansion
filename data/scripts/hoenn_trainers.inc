@@ -12,8 +12,23 @@ HoennSeek_EventScript_T_Duncan::
 	end
 
 HoennSeek_EventScript_T_KiraAndDan1::
-	trainerbattle_double TRAINER_KIRA_AND_DAN_1, HoennSeek_Text_Intro_hopeful_double_0, AbandonedShip_Rooms2_1F_Text_DanDefeat, AbandonedShip_Rooms2_1F_Text_DanNotEnoughMons
+	trainerbattle_double TRAINER_KIRA_AND_DAN_1, HoennSeek_Text_Intro_hopeful_double_0, AbandonedShip_Rooms2_1F_Text_DanDefeat, AbandonedShip_Rooms2_1F_Text_DanNotEnoughMons, HoennSeek_EventScript_T_KiraAndDan1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_KiraAndDan1_Rematch
 	msgbox AbandonedShip_Rooms2_1F_Text_DanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_KiraAndDan1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox AbandonedShip_Rooms2_1F_Text_KiraRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_KIRA_AND_DAN_1
+	release
+	end
+
+HoennSeek_EventScript_T_KiraAndDan1_Rematch::
+	trainerbattle_rematch_double TRAINER_KIRA_AND_DAN_1, AbandonedShip_Rooms2_1F_Text_DanRematchIntro, AbandonedShip_Rooms2_1F_Text_DanRematchDefeat, AbandonedShip_Rooms2_1F_Text_DanRematchNotEnoughMons
+	msgbox AbandonedShip_Rooms2_1F_Text_DanPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Garrison::
@@ -49,13 +64,43 @@ HoennSeek_EventScript_T_Eric::
 	end
 
 HoennSeek_EventScript_T_Ethan1::
-	trainerbattle_single TRAINER_ETHAN_1, JaggedPass_Text_EthanIntro, JaggedPass_Text_EthanDefeat
+	trainerbattle_single TRAINER_ETHAN_1, JaggedPass_Text_EthanIntro, JaggedPass_Text_EthanDefeat, HoennSeek_EventScript_T_Ethan1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Ethan1_Rematch
 	msgbox JaggedPass_Text_EthanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+HoennSeek_EventScript_T_Ethan1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_JaggedPass_Text_EthanRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ETHAN_1
+	release
+	end
+
+HoennSeek_EventScript_T_Ethan1_Rematch::
+	trainerbattle_rematch TRAINER_ETHAN_1, JaggedPass_Text_EthanRematchIntro, JaggedPass_Text_EthanRematchDefeat
+	msgbox JaggedPass_Text_EthanPostRematch, MSGBOX_AUTOCLOSE
+	end
+
 HoennSeek_EventScript_T_Diana1::
-	trainerbattle_single TRAINER_DIANA_1, JaggedPass_Text_DianaIntro, JaggedPass_Text_DianaDefeat
+	trainerbattle_single TRAINER_DIANA_1, JaggedPass_Text_DianaIntro, JaggedPass_Text_DianaDefeat, HoennSeek_EventScript_T_Diana1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Diana1_Rematch
 	msgbox JaggedPass_Text_DianaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Diana1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox JaggedPass_Text_DianaRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_DIANA_1
+	release
+	end
+
+HoennSeek_EventScript_T_Diana1_Rematch::
+	trainerbattle_rematch TRAINER_DIANA_1, JaggedPass_Text_DianaRematchIntro, JaggedPass_Text_DianaRematchDefeat
+	msgbox JaggedPass_Text_DianaPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Autumn::
@@ -67,18 +112,63 @@ HoennSeek_EventScript_T_Julio::
 	end
 
 HoennSeek_EventScript_T_Nicolas1::
-	trainerbattle_single TRAINER_NICOLAS_1, HoennSeek_Text_Intro_strong_0, MeteorFalls_1F_2R_Text_NicolasDefeat
+	trainerbattle_single TRAINER_NICOLAS_1, HoennSeek_Text_Intro_strong_0, MeteorFalls_1F_2R_Text_NicolasDefeat, HoennSeek_EventScript_T_Nicolas1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Nicolas1_Rematch
 	msgbox MeteorFalls_1F_2R_Text_NicolasPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+HoennSeek_EventScript_T_Nicolas1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_MeteorFalls_1F_2R_Text_NicolasRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_NICOLAS_1
+	release
+	end
+
+HoennSeek_EventScript_T_Nicolas1_Rematch::
+	trainerbattle_rematch TRAINER_NICOLAS_1, MeteorFalls_1F_2R_Text_NicolasRematchIntro, MeteorFalls_1F_2R_Text_NicolasRematchDefeat
+	msgbox MeteorFalls_1F_2R_Text_NicolasPostRematch, MSGBOX_AUTOCLOSE
+	end
+
 HoennSeek_EventScript_T_JohnAndJay1::
-	trainerbattle_double TRAINER_JOHN_AND_JAY_1, HoennSeek_Text_Intro_strong_double_0, MeteorFalls_1F_2R_Text_JohnDefeat, MeteorFalls_1F_2R_Text_JohnNotEnoughMons
+	trainerbattle_double TRAINER_JOHN_AND_JAY_1, HoennSeek_Text_Intro_strong_double_0, MeteorFalls_1F_2R_Text_JohnDefeat, MeteorFalls_1F_2R_Text_JohnNotEnoughMons, HoennSeek_EventScript_T_JohnAndJay1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_JohnAndJay1_Rematch
 	msgbox MeteorFalls_1F_2R_Text_JohnPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+HoennSeek_EventScript_T_JohnAndJay1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox MeteorFalls_1F_2R_Text_JohnRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_JOHN_AND_JAY_1
+	release
+	end
+
+HoennSeek_EventScript_T_JohnAndJay1_Rematch::
+	trainerbattle_rematch_double TRAINER_JOHN_AND_JAY_1, MeteorFalls_1F_2R_Text_JohnRematchIntro, MeteorFalls_1F_2R_Text_JohnRematchDefeat, MeteorFalls_1F_2R_Text_JohnRematchNotEnoughMons
+	msgbox MeteorFalls_1F_2R_Text_JohnPostRematch, MSGBOX_AUTOCLOSE
+	end
+
 HoennSeek_EventScript_T_Shelby1::
-	trainerbattle_single TRAINER_SHELBY_1, HoennSeek_Text_Intro_strong_4, MtChimney_Text_ShelbyDefeat
+	trainerbattle_single TRAINER_SHELBY_1, HoennSeek_Text_Intro_strong_4, MtChimney_Text_ShelbyDefeat, HoennSeek_EventScript_T_Shelby1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Shelby1_Rematch
 	msgbox MtChimney_Text_ShelbyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Shelby1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox MtChimney_Text_ShelbyRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_SHELBY_1
+	release
+	end
+
+HoennSeek_EventScript_T_Shelby1_Rematch::
+	trainerbattle_rematch TRAINER_SHELBY_1, MtChimney_Text_ShelbyRematchIntro, MtChimney_Text_ShelbyRematchDefeat
+	msgbox MtChimney_Text_ShelbyPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Melissa::
@@ -94,8 +184,23 @@ HoennSeek_EventScript_T_Shirley::
 	end
 
 HoennSeek_EventScript_T_Sawyer1::
-	trainerbattle_single TRAINER_SAWYER_1, HoennSeek_Text_Intro_hopeful_1, MtChimney_Text_SawyerDefeat
+	trainerbattle_single TRAINER_SAWYER_1, HoennSeek_Text_Intro_hopeful_1, MtChimney_Text_SawyerDefeat, HoennSeek_EventScript_T_Sawyer1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Sawyer1_Rematch
 	msgbox MtChimney_Text_SawyerPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Sawyer1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_MtChimney_Text_SawyerRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_SAWYER_1
+	release
+	end
+
+HoennSeek_EventScript_T_Sawyer1_Rematch::
+	trainerbattle_rematch TRAINER_SAWYER_1, MtChimney_Text_SawyerRematchIntro, MtChimney_Text_SawyerRematchDefeat
+	msgbox MtChimney_Text_SawyerPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Mark::
@@ -153,8 +258,23 @@ HoennSeek_EventScript_T_Gabrielle1_Done::
 	end
 
 HoennSeek_EventScript_T_Valerie1::
-	trainerbattle_single TRAINER_VALERIE_1, HoennSeek_Text_Intro_hopeful_2, MtPyre_6F_Text_ValerieDefeat
+	trainerbattle_single TRAINER_VALERIE_1, HoennSeek_Text_Intro_hopeful_2, MtPyre_6F_Text_ValerieDefeat, HoennSeek_EventScript_T_Valerie1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Valerie1_Rematch
 	msgbox MtPyre_6F_Text_ValeriePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Valerie1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_MtPyre_6F_Text_ValerieRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_VALERIE_1
+	release
+	end
+
+HoennSeek_EventScript_T_Valerie1_Rematch::
+	trainerbattle_rematch TRAINER_VALERIE_1, MtPyre_6F_Text_ValerieRematchIntro, MtPyre_6F_Text_ValerieRematchDefeat
+	msgbox MtPyre_6F_Text_ValeriePostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Cedric::
@@ -172,8 +292,23 @@ HoennSeek_EventScript_T_James1::
 	end
 
 HoennSeek_EventScript_T_Calvin1::
-	trainerbattle_single TRAINER_CALVIN_1, Route102_Text_CalvinIntro, Route102_Text_CalvinDefeated
+	trainerbattle_single TRAINER_CALVIN_1, Route102_Text_CalvinIntro, Route102_Text_CalvinDefeated, HoennSeek_EventScript_T_Calvin1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Calvin1_Rematch
 	msgbox Route102_Text_CalvinPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Calvin1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_Route102_Text_CalvinRegisterShort, MSGBOX_DEFAULT
+	register_matchcall TRAINER_CALVIN_1
+	release
+	end
+
+HoennSeek_EventScript_T_Calvin1_Rematch::
+	trainerbattle_rematch TRAINER_CALVIN_1, Route102_Text_CalvinRematchIntro, Route102_Text_CalvinRematchDefeated
+	msgbox Route102_Text_CalvinRematchPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Rick::
@@ -207,8 +342,23 @@ HoennSeek_EventScript_T_Daisy_Done::
 	end
 
 HoennSeek_EventScript_T_AmyAndLiv1::
-	trainerbattle_double TRAINER_AMY_AND_LIV_1, Route103_Text_LivIntro, Route103_Text_LivDefeated, Route103_Text_LivNotEnoughPokemon
+	trainerbattle_double TRAINER_AMY_AND_LIV_1, Route103_Text_LivIntro, Route103_Text_LivDefeated, Route103_Text_LivNotEnoughPokemon, HoennSeek_EventScript_T_AmyAndLiv1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_AmyAndLiv1_Rematch
 	msgbox Route103_Text_LivPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_AmyAndLiv1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route103_Text_AmyLivRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_AMY_AND_LIV_1
+	release
+	end
+
+HoennSeek_EventScript_T_AmyAndLiv1_Rematch::
+	trainerbattle_rematch_double TRAINER_AMY_AND_LIV_1, Route103_Text_LivRematchIntro, Route103_Text_LivRematchDefeated, Route103_Text_LivRematchNotEnoughPokemon
+	msgbox Route103_Text_LivRematchPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Andrew::
@@ -250,8 +400,23 @@ HoennSeek_EventScript_T_Pete::
 	end
 
 HoennSeek_EventScript_T_Haley1::
-	trainerbattle_single TRAINER_HALEY_1, Route104_Text_HaleyIntro, Route104_Text_HaleyDefeat
+	trainerbattle_single TRAINER_HALEY_1, Route104_Text_HaleyIntro, Route104_Text_HaleyDefeat, HoennSeek_EventScript_T_Haley1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Haley1_Rematch
 	msgbox Route104_Text_HaleyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Haley1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_Route104_Text_HaleyRegister2, MSGBOX_DEFAULT
+	register_matchcall TRAINER_HALEY_1
+	release
+	end
+
+HoennSeek_EventScript_T_Haley1_Rematch::
+	trainerbattle_rematch TRAINER_HALEY_1, Route104_Text_HaleyRematchIntro, Route104_Text_HaleyRematchDefeat
+	msgbox Route104_Text_HaleyPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Ivan::
@@ -469,8 +634,23 @@ HoennSeek_EventScript_T_Ricky1::
 	end
 
 HoennSeek_EventScript_T_Lola1::
-	trainerbattle_single TRAINER_LOLA_1, Route109_Text_LolaIntro, Route109_Text_LolaDefeated
+	trainerbattle_single TRAINER_LOLA_1, Route109_Text_LolaIntro, Route109_Text_LolaDefeated, HoennSeek_EventScript_T_Lola1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Lola1_Rematch
 	msgbox Route109_Text_LolaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Lola1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route109_Text_LolaRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_LOLA_1
+	release
+	end
+
+HoennSeek_EventScript_T_Lola1_Rematch::
+	trainerbattle_rematch TRAINER_LOLA_1, Route109_Text_LolaRematchIntro, Route109_Text_LolaRematchDefeated
+	msgbox Route109_Text_LolaRematchPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Gwen::
@@ -731,13 +911,43 @@ HoennSeek_EventScript_T_Daisuke::
 	end
 
 HoennSeek_EventScript_T_Brooke1::
-	trainerbattle_single TRAINER_BROOKE_1, HoennSeek_Text_Intro_strong_1, Route111_Text_BrookeDefeat
+	trainerbattle_single TRAINER_BROOKE_1, HoennSeek_Text_Intro_strong_1, Route111_Text_BrookeDefeat, HoennSeek_EventScript_T_Brooke1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Brooke1_Rematch
 	msgbox Route111_Text_BrookePostBattle, MSGBOX_AUTOCLOSE
 	end
 
+HoennSeek_EventScript_T_Brooke1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route111_Text_BrookeRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_BROOKE_1
+	release
+	end
+
+HoennSeek_EventScript_T_Brooke1_Rematch::
+	trainerbattle_rematch TRAINER_BROOKE_1, Route111_Text_BrookeRematchIntro, Route111_Text_BrookeRematchDefeat
+	msgbox Route111_Text_BrookePostRematch, MSGBOX_AUTOCLOSE
+	end
+
 HoennSeek_EventScript_T_Wilton1::
-	trainerbattle_single TRAINER_WILTON_1, HoennSeek_Text_Intro_strong_3, Route111_Text_WiltonDefeat
+	trainerbattle_single TRAINER_WILTON_1, HoennSeek_Text_Intro_strong_3, Route111_Text_WiltonDefeat, HoennSeek_EventScript_T_Wilton1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Wilton1_Rematch
 	msgbox Route111_Text_WiltonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Wilton1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route111_Text_WiltonRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_WILTON_1
+	release
+	end
+
+HoennSeek_EventScript_T_Wilton1_Rematch::
+	trainerbattle_rematch TRAINER_WILTON_1, Route111_Text_WiltonRematchIntro, Route111_Text_WiltonRematchDefeat
+	msgbox Route111_Text_WiltonPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Tyron::
@@ -791,8 +1001,23 @@ HoennSeek_EventScript_T_Carol::
 	end
 
 HoennSeek_EventScript_T_Trent1::
-	trainerbattle_single TRAINER_TRENT_1, HoennSeek_Text_Intro_hopeful_3, Route112_Text_TrentDefeat
+	trainerbattle_single TRAINER_TRENT_1, HoennSeek_Text_Intro_hopeful_3, Route112_Text_TrentDefeat, HoennSeek_EventScript_T_Trent1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Trent1_Rematch
 	msgbox Route112_Text_TrentPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Trent1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_Route112_Text_TrentRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_TRENT_1
+	release
+	end
+
+HoennSeek_EventScript_T_Trent1_Rematch::
+	trainerbattle_rematch TRAINER_TRENT_1, Route112_Text_TrentRematchIntro, Route112_Text_TrentRematchDefeat
+	msgbox Route112_Text_TrentRematchPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Bryant::
@@ -833,13 +1058,43 @@ HoennSeek_EventScript_T_Dillon_Done::
 	end
 
 HoennSeek_EventScript_T_Madeline1::
-	trainerbattle_single TRAINER_MADELINE_1, HoennSeek_Text_Intro_hopeful_1, Route113_Text_MadelineDefeat
+	trainerbattle_single TRAINER_MADELINE_1, HoennSeek_Text_Intro_hopeful_1, Route113_Text_MadelineDefeat, HoennSeek_EventScript_T_Madeline1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Madeline1_Rematch
 	msgbox Route113_Text_MadelinePostBattle, MSGBOX_AUTOCLOSE
 	end
 
+HoennSeek_EventScript_T_Madeline1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_Route113_Text_MadelineRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_MADELINE_1
+	release
+	end
+
+HoennSeek_EventScript_T_Madeline1_Rematch::
+	trainerbattle_rematch TRAINER_MADELINE_1, Route113_Text_MadelineRematchIntro, Route113_Text_MadelineRematchDefeat
+	msgbox Route113_Text_MadelinePostRematch, MSGBOX_AUTOCLOSE
+	end
+
 HoennSeek_EventScript_T_Lao1::
-	trainerbattle_single TRAINER_LAO_1, Route113_Text_LaoIntro, Route113_Text_LaoDefeat
+	trainerbattle_single TRAINER_LAO_1, Route113_Text_LaoIntro, Route113_Text_LaoDefeat, HoennSeek_EventScript_T_Lao1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Lao1_Rematch
 	msgbox Route113_Text_LaoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Lao1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_Route113_Text_LaoRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_LAO_1
+	release
+	end
+
+HoennSeek_EventScript_T_Lao1_Rematch::
+	trainerbattle_rematch TRAINER_LAO_1, Route113_Text_LaoRematchIntro, Route113_Text_LaoRematchDefeat
+	msgbox Route113_Text_LaoPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Lung::
@@ -940,8 +1195,23 @@ HoennSeek_EventScript_T_Claude::
 	end
 
 HoennSeek_EventScript_T_Bernie1::
-	trainerbattle_single TRAINER_BERNIE_1, HoennSeek_Text_Intro_hopeful_1, Route114_Text_BernieDefeat
+	trainerbattle_single TRAINER_BERNIE_1, HoennSeek_Text_Intro_hopeful_1, Route114_Text_BernieDefeat, HoennSeek_EventScript_T_Bernie1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Bernie1_Rematch
 	msgbox Route114_Text_BerniePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Bernie1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route114_Text_BernieRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_BERNIE_1
+	release
+	end
+
+HoennSeek_EventScript_T_Bernie1_Rematch::
+	trainerbattle_rematch TRAINER_BERNIE_1, Route114_Text_BernieRematchIntro, Route114_Text_BernieRematchDefeat
+	msgbox Route114_Text_BerniePostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_TyraAndIvy::
@@ -962,18 +1232,63 @@ HoennSeek_EventScript_T_Kai::
 	end
 
 HoennSeek_EventScript_T_Timothy1::
-	trainerbattle_single TRAINER_TIMOTHY_1, HoennSeek_Text_Intro_strong_2, Route115_Text_TimothyDefeat
+	trainerbattle_single TRAINER_TIMOTHY_1, HoennSeek_Text_Intro_strong_2, Route115_Text_TimothyDefeat, HoennSeek_EventScript_T_Timothy1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Timothy1_Rematch
 	msgbox Route115_Text_TimothyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+HoennSeek_EventScript_T_Timothy1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route115_Text_TimothyRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_TIMOTHY_1
+	release
+	end
+
+HoennSeek_EventScript_T_Timothy1_Rematch::
+	trainerbattle_rematch TRAINER_TIMOTHY_1, Route115_Text_TimothyRematchIntro, Route115_Text_TimothyRematchDefeat
+	msgbox Route115_Text_TimothyPostRematch, MSGBOX_AUTOCLOSE
+	end
+
 HoennSeek_EventScript_T_Nob1::
-	trainerbattle_single TRAINER_NOB_1, HoennSeek_Text_Intro_hopeful_1, Route115_Text_NobDefeat
+	trainerbattle_single TRAINER_NOB_1, HoennSeek_Text_Intro_hopeful_1, Route115_Text_NobDefeat, HoennSeek_EventScript_T_Nob1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Nob1_Rematch
 	msgbox Route115_Text_NobPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+HoennSeek_EventScript_T_Nob1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route115_Text_NobRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_NOB_1
+	release
+	end
+
+HoennSeek_EventScript_T_Nob1_Rematch::
+	trainerbattle_rematch TRAINER_NOB_1, Route115_Text_NobRematchIntro, Route115_Text_NobRematchDefeat
+	msgbox Route115_Text_NobPostRematch, MSGBOX_AUTOCLOSE
+	end
+
 HoennSeek_EventScript_T_Cyndy1::
-	trainerbattle_single TRAINER_CYNDY_1, HoennSeek_Text_Intro_hopeful_3, Route115_Text_CyndyDefeat
+	trainerbattle_single TRAINER_CYNDY_1, HoennSeek_Text_Intro_hopeful_3, Route115_Text_CyndyDefeat, HoennSeek_EventScript_T_Cyndy1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Cyndy1_Rematch
 	msgbox Route115_Text_CyndyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Cyndy1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route115_Text_CyndyRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_CYNDY_1
+	release
+	end
+
+HoennSeek_EventScript_T_Cyndy1_Rematch::
+	trainerbattle_rematch TRAINER_CYNDY_1, Route115_Text_CyndyRematchIntro, Route115_Text_CyndyRematchDefeat
+	msgbox Route115_Text_CyndyPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Koichi::
@@ -1074,8 +1389,23 @@ HoennSeek_EventScript_T_Janice::
 	end
 
 HoennSeek_EventScript_T_Karen1::
-	trainerbattle_single TRAINER_KAREN_1, Route116_Text_KarenIntro, Route116_Text_KarenDefeat
+	trainerbattle_single TRAINER_KAREN_1, Route116_Text_KarenIntro, Route116_Text_KarenDefeat, HoennSeek_EventScript_T_Karen1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Karen1_Rematch
 	msgbox Route116_Text_KarenPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Karen1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_Route116_Text_KarenRegister2, MSGBOX_DEFAULT
+	register_matchcall TRAINER_KAREN_1
+	release
+	end
+
+HoennSeek_EventScript_T_Karen1_Rematch::
+	trainerbattle_rematch TRAINER_KAREN_1, Route116_Text_KarenRematchIntro, Route116_Text_KarenRematchDefeat
+	msgbox Route116_Text_KarenPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Jerry1::
@@ -1118,8 +1448,23 @@ HoennSeek_EventScript_T_Devan::
 	end
 
 HoennSeek_EventScript_T_Dylan1::
-	trainerbattle_single TRAINER_DYLAN_1, HoennSeek_Text_Intro_hopeful_4, Route117_Text_DylanDefeat
+	trainerbattle_single TRAINER_DYLAN_1, HoennSeek_Text_Intro_hopeful_4, Route117_Text_DylanDefeat, HoennSeek_EventScript_T_Dylan1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Dylan1_Rematch
 	msgbox Route117_Text_DylanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Dylan1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route117_Text_DylanRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_DYLAN_1
+	release
+	end
+
+HoennSeek_EventScript_T_Dylan1_Rematch::
+	trainerbattle_rematch TRAINER_DYLAN_1, Route117_Text_DylanRematchIntro, Route117_Text_DylanRematchDefeat
+	msgbox Route117_Text_DylanPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Lydia1::
@@ -1138,8 +1483,23 @@ HoennSeek_EventScript_T_Lydia1_Done::
 	end
 
 HoennSeek_EventScript_T_Isaac1::
-	trainerbattle_single TRAINER_ISAAC_1, HoennSeek_Text_Intro_hopeful_1, Route117_Text_IsaacDefeat
+	trainerbattle_single TRAINER_ISAAC_1, HoennSeek_Text_Intro_hopeful_1, Route117_Text_IsaacDefeat, HoennSeek_EventScript_T_Isaac1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Isaac1_Rematch
 	msgbox Route117_Text_IsaacPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Isaac1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route117_Text_IsaacRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ISAAC_1
+	release
+	end
+
+HoennSeek_EventScript_T_Isaac1_Rematch::
+	trainerbattle_rematch TRAINER_ISAAC_1, Route117_Text_IsaacRematchIntro, Route117_Text_IsaacRematchDefeat
+	msgbox Route117_Text_IsaacPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Maria1::
@@ -1152,8 +1512,23 @@ HoennSeek_EventScript_T_Derek::
 	end
 
 HoennSeek_EventScript_T_AnnaAndMeg1::
-	trainerbattle_double TRAINER_ANNA_AND_MEG_1, HoennSeek_Text_Intro_hopeful_double_0, Route117_Text_MegDefeat, Route117_Text_MegNotEnoughMons
+	trainerbattle_double TRAINER_ANNA_AND_MEG_1, HoennSeek_Text_Intro_hopeful_double_0, Route117_Text_MegDefeat, Route117_Text_MegNotEnoughMons, HoennSeek_EventScript_T_AnnaAndMeg1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_AnnaAndMeg1_Rematch
 	msgbox Route117_Text_MegPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_AnnaAndMeg1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route117_Text_AnnaAndMegRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ANNA_AND_MEG_1
+	release
+	end
+
+HoennSeek_EventScript_T_AnnaAndMeg1_Rematch::
+	trainerbattle_rematch_double TRAINER_ANNA_AND_MEG_1, Route117_Text_MegRematchIntro, Route117_Text_MegRematchDefeat, Route117_Text_MegRematchNotEnoughMons
+	msgbox Route117_Text_MegPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Brandi::
@@ -1174,8 +1549,23 @@ HoennSeek_EventScript_T_Perry::
 	end
 
 HoennSeek_EventScript_T_Rose1::
-	trainerbattle_single TRAINER_ROSE_1, HoennSeek_Text_Intro_hopeful_2, Route118_Text_RoseDefeat
+	trainerbattle_single TRAINER_ROSE_1, HoennSeek_Text_Intro_hopeful_2, Route118_Text_RoseDefeat, HoennSeek_EventScript_T_Rose1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Rose1_Rematch
 	msgbox Route118_Text_RosePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Rose1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_Route118_Text_RoseRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ROSE_1
+	release
+	end
+
+HoennSeek_EventScript_T_Rose1_Rematch::
+	trainerbattle_rematch TRAINER_ROSE_1, Route118_Text_RoseRematchIntro, Route118_Text_RoseRematchDefeat
+	msgbox Route118_Text_RosePostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Wade::
@@ -1222,8 +1612,23 @@ HoennSeek_EventScript_T_Donald::
 	end
 
 HoennSeek_EventScript_T_Jackson1::
-	trainerbattle_single TRAINER_JACKSON_1, HoennSeek_Text_Intro_strong_0, Route119_Text_JacksonDefeat
+	trainerbattle_single TRAINER_JACKSON_1, HoennSeek_Text_Intro_strong_0, Route119_Text_JacksonDefeat, HoennSeek_EventScript_T_Jackson1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Jackson1_Rematch
 	msgbox Route119_Text_JacksonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Jackson1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route119_Text_JacksonRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_JACKSON_1
+	release
+	end
+
+HoennSeek_EventScript_T_Jackson1_Rematch::
+	trainerbattle_rematch TRAINER_JACKSON_1, Route119_Text_JacksonRematchIntro, Route119_Text_JacksonRematchDefeat
+	msgbox Route119_Text_JacksonPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Brent::
@@ -1231,8 +1636,23 @@ HoennSeek_EventScript_T_Brent::
 	end
 
 HoennSeek_EventScript_T_Catherine1::
-	trainerbattle_single TRAINER_CATHERINE_1, HoennSeek_Text_Intro_strong_3, Route119_Text_CatherineDefeat
+	trainerbattle_single TRAINER_CATHERINE_1, HoennSeek_Text_Intro_strong_3, Route119_Text_CatherineDefeat, HoennSeek_EventScript_T_Catherine1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Catherine1_Rematch
 	msgbox Route119_Text_CatherinePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Catherine1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_Route119_Text_CatherineRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_CATHERINE_1
+	release
+	end
+
+HoennSeek_EventScript_T_Catherine1_Rematch::
+	trainerbattle_rematch TRAINER_CATHERINE_1, Route119_Text_CatherineRematchIntro, Route119_Text_CatherineRematchDefeat
+	msgbox Route119_Text_CatherinePostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Doug::
@@ -1299,8 +1719,23 @@ HoennSeek_EventScript_T_Colin::
 	end
 
 HoennSeek_EventScript_T_Robert1::
-	trainerbattle_single TRAINER_ROBERT_1, HoennSeek_Text_Intro_hopeful_5, Route120_Text_RobertDefeat
+	trainerbattle_single TRAINER_ROBERT_1, HoennSeek_Text_Intro_hopeful_5, Route120_Text_RobertDefeat, HoennSeek_EventScript_T_Robert1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Robert1_Rematch
 	msgbox Route120_Text_RobertPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Robert1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_Route120_Text_RobertRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ROBERT_1
+	release
+	end
+
+HoennSeek_EventScript_T_Robert1_Rematch::
+	trainerbattle_rematch TRAINER_ROBERT_1, Route120_Text_RobertRematchIntro, Route120_Text_RobertRematchDefeat
+	msgbox Route120_Text_RobertPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Lorenzo::
@@ -1400,8 +1835,23 @@ HoennSeek_EventScript_T_Vanessa_Done::
 	end
 
 HoennSeek_EventScript_T_Walter1::
-	trainerbattle_single TRAINER_WALTER_1, HoennSeek_Text_Intro_hopeful_3, Route121_Text_WalterDefeat
+	trainerbattle_single TRAINER_WALTER_1, HoennSeek_Text_Intro_hopeful_3, Route121_Text_WalterDefeat, HoennSeek_EventScript_T_Walter1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Walter1_Rematch
 	msgbox Route121_Text_WalterPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Walter1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route121_Text_WalterRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_WALTER_1
+	release
+	end
+
+HoennSeek_EventScript_T_Walter1_Rematch::
+	trainerbattle_rematch TRAINER_WALTER_1, Route121_Text_WalterRematchIntro, Route121_Text_WalterRematchDefeat
+	msgbox Route121_Text_WalterPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Tammy::
@@ -1409,8 +1859,23 @@ HoennSeek_EventScript_T_Tammy::
 	end
 
 HoennSeek_EventScript_T_Jessica1::
-	trainerbattle_single TRAINER_JESSICA_1, HoennSeek_Text_Intro_hopeful_2, Route121_Text_JessicaDefeat
+	trainerbattle_single TRAINER_JESSICA_1, HoennSeek_Text_Intro_hopeful_2, Route121_Text_JessicaDefeat, HoennSeek_EventScript_T_Jessica1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Jessica1_Rematch
 	msgbox Route121_Text_JessicaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Jessica1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route121_Text_JessicaRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_JESSICA_1
+	release
+	end
+
+HoennSeek_EventScript_T_Jessica1_Rematch::
+	trainerbattle_rematch TRAINER_JESSICA_1, Route121_Text_JessicaRematchIntro, Route121_Text_JessicaRematchDefeat
+	msgbox Route121_Text_JessicaPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Cale::
@@ -1431,8 +1896,23 @@ HoennSeek_EventScript_T_Marcel::
 	end
 
 HoennSeek_EventScript_T_Cristin1::
-	trainerbattle_single TRAINER_CRISTIN_1, HoennSeek_Text_Intro_strong_0, Route121_Text_CristinDefeat
+	trainerbattle_single TRAINER_CRISTIN_1, HoennSeek_Text_Intro_strong_0, Route121_Text_CristinDefeat, HoennSeek_EventScript_T_Cristin1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Cristin1_Rematch
 	msgbox Route121_Text_CristinPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Cristin1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_Route121_Text_CristinRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_CRISTIN_1
+	release
+	end
+
+HoennSeek_EventScript_T_Cristin1_Rematch::
+	trainerbattle_rematch TRAINER_CRISTIN_1, Route121_Text_CristinRematchIntro, Route121_Text_CristinRematchDefeat
+	msgbox Route121_Text_CristinPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Wendy::
@@ -1507,8 +1987,23 @@ HoennSeek_EventScript_T_Ed::
 	end
 
 HoennSeek_EventScript_T_Fernando1::
-	trainerbattle_single TRAINER_FERNANDO_1, HoennSeek_Text_Intro_hopeful_3, Route123_Text_FernandoDefeat
+	trainerbattle_single TRAINER_FERNANDO_1, HoennSeek_Text_Intro_hopeful_3, Route123_Text_FernandoDefeat, HoennSeek_EventScript_T_Fernando1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Fernando1_Rematch
 	msgbox Route123_Text_FernandoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Fernando1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route123_Text_FernandoRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_FERNANDO_1
+	release
+	end
+
+HoennSeek_EventScript_T_Fernando1_Rematch::
+	trainerbattle_rematch TRAINER_FERNANDO_1, Route123_Text_FernandoRematchIntro, Route123_Text_FernandoRematchDefeat
+	msgbox Route123_Text_FernandoPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Alberto::
@@ -1552,8 +2047,23 @@ HoennSeek_EventScript_T_Chad::
 	end
 
 HoennSeek_EventScript_T_LilaAndRoy1::
-	trainerbattle_double TRAINER_LILA_AND_ROY_1, HoennSeek_Text_Intro_hopeful_double_1, Route124_Text_LilaDefeat, Route124_Text_LilaNotEnoughMons
+	trainerbattle_double TRAINER_LILA_AND_ROY_1, HoennSeek_Text_Intro_hopeful_double_1, Route124_Text_LilaDefeat, Route124_Text_LilaNotEnoughMons, HoennSeek_EventScript_T_LilaAndRoy1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_LilaAndRoy1_Rematch
 	msgbox Route124_Text_LilaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_LilaAndRoy1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route124_Text_LilaRoyRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_LILA_AND_ROY_1
+	release
+	end
+
+HoennSeek_EventScript_T_LilaAndRoy1_Rematch::
+	trainerbattle_rematch_double TRAINER_LILA_AND_ROY_1, Route124_Text_LilaRematchIntro, Route124_Text_LilaRematchDefeat, Route124_Text_LilaRematchNotEnoughMons
+	msgbox Route124_Text_LilaPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Declan::
@@ -1707,8 +2217,23 @@ HoennSeek_EventScript_T_Aidan::
 	end
 
 HoennSeek_EventScript_T_Koji1::
-	trainerbattle_single TRAINER_KOJI_1, HoennSeek_Text_Intro_hopeful_3, Route127_Text_KojiDefeat
+	trainerbattle_single TRAINER_KOJI_1, HoennSeek_Text_Intro_hopeful_3, Route127_Text_KojiDefeat, HoennSeek_EventScript_T_Koji1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Koji1_Rematch
 	msgbox Route127_Text_KojiPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Koji1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route127_Text_KojiRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_KOJI_1
+	release
+	end
+
+HoennSeek_EventScript_T_Koji1_Rematch::
+	trainerbattle_rematch TRAINER_KOJI_1, Route127_Text_KojiRematchIntro, Route127_Text_KojiRematchDefeat
+	msgbox Route127_Text_KojiPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Athena::
@@ -1717,8 +2242,23 @@ HoennSeek_EventScript_T_Athena::
 	end
 
 HoennSeek_EventScript_T_Isaiah1::
-	trainerbattle_single TRAINER_ISAIAH_1, HoennSeek_Text_Intro_hopeful_4, Route128_Text_IsaiahDefeat
+	trainerbattle_single TRAINER_ISAIAH_1, HoennSeek_Text_Intro_hopeful_4, Route128_Text_IsaiahDefeat, HoennSeek_EventScript_T_Isaiah1_Register
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_T_Isaiah1_Rematch
 	msgbox Route128_Text_IsaiahPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+HoennSeek_EventScript_T_Isaiah1_Register::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HoennSeek_Text_Gear_Route128_Text_IsaiahRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ISAIAH_1
+	release
+	end
+
+HoennSeek_EventScript_T_Isaiah1_Rematch::
+	trainerbattle_rematch TRAINER_ISAIAH_1, Route128_Text_IsaiahRematchIntro, Route128_Text_IsaiahRematchDefeat
+	msgbox Route128_Text_IsaiahPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 HoennSeek_EventScript_T_Katelyn1::
@@ -2155,6 +2695,78 @@ HoennSeek_Text_Fake_song_0:
 HoennSeek_Text_Fake_song_After:
 	.string "Keep your eyes on HOENN TV!\n"
 	.string "The song's gonna be huge!$"
+
+HoennSeek_Text_Gear_JaggedPass_Text_EthanRegister:
+	.string "When I get more used to this bumpiness,\n"
+	.string "I'll be sure to win!\p"
+	.string "Can you register me in your POKéGEAR?$"
+
+HoennSeek_Text_Gear_MeteorFalls_1F_2R_Text_NicolasRegister:
+	.string "I want to know more about your power.\n"
+	.string "Let me register you in my POKéGEAR.$"
+
+HoennSeek_Text_Gear_MtChimney_Text_SawyerRegister:
+	.string "I like little fireballs like you.\n"
+	.string "Let me register you in my POKéGEAR.$"
+
+HoennSeek_Text_Gear_MtPyre_6F_Text_ValerieRegister:
+	.string "Fufufu… I lost the match, but…\n"
+	.string "I have this little ability…\p"
+	.string "Without ever laying my hands on\n"
+	.string "your POKéGEAR… Hiyah!$"
+
+HoennSeek_Text_Gear_Route102_Text_CalvinRegisterShort:
+	.string "I'd like to battle you again, so can\n"
+	.string "you register me in your POKéGEAR?$"
+
+HoennSeek_Text_Gear_Route104_Text_HaleyRegister2:
+	.string "You're strong, but should I register\n"
+	.string "you in my POKéGEAR?\l"
+	.string "Maybe I shouldn't…\p"
+	.string "Okay, sure, I will register you!$"
+
+HoennSeek_Text_Gear_Route112_Text_TrentRegister:
+	.string "Ow, my legs have cramped up.\n"
+	.string "Can you grab me some bandages from\l"
+	.string "my backpack?\p"
+	.string "No, that's my POKéGEAR!\n"
+	.string "Oh, fine, I'll register you.$"
+
+HoennSeek_Text_Gear_Route113_Text_LaoRegister:
+	.string "Yiiyaah! Witness the ancient ninja\n"
+	.string "technique of POKéGEAR registration!$"
+
+HoennSeek_Text_Gear_Route113_Text_MadelineRegister:
+	.string "Here, slide under my parasol.\n"
+	.string "Let me register you in my POKéGEAR.$"
+
+HoennSeek_Text_Gear_Route116_Text_KarenRegister2:
+	.string "Oh, wow! Isn't that a POKéGEAR?\n"
+	.string "I have one, too! Please register me!$"
+
+HoennSeek_Text_Gear_Route118_Text_RoseRegister:
+	.string "Sniff… That odor--it's a POKéGEAR!\n"
+	.string "We must register each other!$"
+
+HoennSeek_Text_Gear_Route119_Text_CatherineRegister:
+	.string "Do you have a POKéGEAR?\n"
+	.string "It's a must-have tool for any TRAINER.\p"
+	.string "Oh, you do have one!\n"
+	.string "Let's register each other, then!$"
+
+HoennSeek_Text_Gear_Route120_Text_RobertRegister:
+	.string "You can be counted on to get better.\n"
+	.string "I'd like to register you in my POKéGEAR!$"
+
+HoennSeek_Text_Gear_Route121_Text_CristinRegister:
+	.string "That was total humiliation!\n"
+	.string "I won't forget you…\l"
+	.string "Hand over your POKéGEAR!$"
+
+HoennSeek_Text_Gear_Route128_Text_IsaiahRegister:
+	.string "I know I'm not good now, but I think\n"
+	.string "I can win eventually.\p"
+	.string "Please register me in your POKéGEAR.$"
 
 HoennSeek_Text_Intro_hopeful_0:
 	.string "I know who you are. The champion\n"

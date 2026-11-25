@@ -170,6 +170,8 @@ static const u16 sKenjiGiftItems[] = { ITEM_PP_UP };
     .giftItems = items, .numGiftItems = ARRAY_COUNT(items), \
     .foundItemText = MatchCall_HNS_##name##_FoundItem }
 
+#include "data/hoenn_match_call_decls.h" // Hoenn & Seek (part 16c)
+
 static const struct HnsMatchCallTrainerInfo sHnsMatchCallTrainers[] =
 {
     HNS_MC_ENTRY3(Joey,     TRAINER_JOEY_HNS),
@@ -212,6 +214,7 @@ static const struct HnsMatchCallTrainerInfo sHnsMatchCallTrainers[] =
     HNS_MC_ENTRY2(Kenny,    TRAINER_KENNY_HNS),
     HNS_MC_ENTRY2(Joel,     TRAINER_JOEL_HNS),
     HNS_MC_ENTRY2(Charles,  TRAINER_CHARLES_HNS),
+#include "data/hoenn_match_call.h" // Hoenn & Seek: Hoenn phone trainers (part 16c)
 };
 #endif
 

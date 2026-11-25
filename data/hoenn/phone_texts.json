@@ -1,0 +1,506 @@
+{
+ "TRAINER_ROSE_1": {
+  "general": [
+   [
+    "Hello, {PLAYER}! It's ROSE.",
+    "My {STR_VAR_3}'s petals smell sweeter every day.",
+    "Hoenn's flowers agree with it."
+   ],
+   [
+    "{PLAYER}, hello! The flowers on ROUTE 118 are blooming.",
+    "I've been training while I pick them."
+   ]
+  ],
+  "battle": [
+   "{PLAYER}! It's ROSE. Come to ROUTE 118 for a battle?",
+   "My team smells like victory today!"
+  ]
+ },
+ "TRAINER_LOLA_1": {
+  "general": [
+   [
+    "Hiya! It's LOLA! I swam all the way out past the buoys today!",
+    "My {STR_VAR_3} helped!"
+   ],
+   [
+    "LOLA here! My big sister says I'm a real trainer now.",
+    "Isn't that cool?"
+   ]
+  ],
+  "battle": [
+   "It's LOLA! I'm on ROUTE 109 by the beach!",
+   "Come battle me! I got way stronger!"
+  ]
+ },
+ "TRAINER_LILA_AND_ROY_1": {
+  "general": [
+   [
+    "LILA: Hi! It's LILA. ROY keeps racing my {STR_VAR_3} across the water.",
+    "He never wins!"
+   ],
+   [
+    "ROY: It's ROY! LILA says I'm slow. Our team's getting faster, though!"
+   ]
+  ],
+  "battle": [
+   "LILA: We're on ROUTE 124! ROY: Come battle us both!",
+   "LILA: We've been practicing!"
+  ]
+ },
+ "TRAINER_CRISTIN_1": {
+  "general": [
+   [
+    "It's CRISTIN. I'm reviewing our last battle.",
+    "My {STR_VAR_3} keeps asking for a rematch."
+   ],
+   [
+    "CRISTIN here. Training on ROUTE 121 is going well.",
+    "I don't plan on losing twice."
+   ]
+  ],
+  "battle": [
+   "CRISTIN. I'm on ROUTE 121. I'm ready for you now.",
+   "Come and see!"
+  ]
+ },
+ "TRAINER_BROOKE_1": {
+  "general": [
+   [
+    "It's BROOKE. The desert wind on ROUTE 111 is great for stamina training.",
+    "My {STR_VAR_3} barely blinks at sand now."
+   ],
+   [
+    "BROOKE here. I've been studying the JOHTO champion's style. Yours.",
+    "It's educational."
+   ]
+  ],
+  "battle": [
+   "BROOKE. I'm on ROUTE 111. Let's settle the score!"
+  ]
+ },
+ "TRAINER_WILTON_1": {
+  "general": [
+   [
+    "WILTON here. I've rebuilt my strategy around {STR_VAR_3}.",
+    "You'll see."
+   ],
+   [
+    "It's WILTON. I keep losing to you in my head. Not for much longer."
+   ]
+  ],
+  "battle": [
+   "WILTON. ROUTE 111. Now. I'm ready!"
+  ]
+ },
+ "TRAINER_VALERIE_1": {
+  "general": [
+   [
+    "…It's VALERIE. The spirits on MT. PYRE say hello.",
+    "My {STR_VAR_3} says hello too."
+   ],
+   [
+    "VALERIE… I dreamed of our battle. You lost, in my dream.",
+    "Hehehe…"
+   ]
+  ],
+  "battle": [
+   "VALERIE. Come to MT. PYRE… the spirits want a rematch.",
+   "So do I."
+  ]
+ },
+ "TRAINER_JESSICA_1": {
+  "general": [
+   [
+    "Hello, {PLAYER}, it's JESSICA. My {STR_VAR_3} got the prettiest new coat.",
+    "Isn't that wonderful?"
+   ],
+   [
+    "JESSICA here. Beauty takes effort, you know. So does battling."
+   ]
+  ],
+  "battle": [
+   "JESSICA here! I'm on ROUTE 121. Shall we battle, darling?"
+  ]
+ },
+ "TRAINER_NOB_1": {
+  "general": [
+   [
+    "OSU! It's NOB! My {STR_VAR_3} and I ran up and down ROUTE 115 a hundred times!"
+   ],
+   [
+    "NOB here! I broke ten boards with one chop today!",
+    "OSU!"
+   ]
+  ],
+  "battle": [
+   "OSU! NOB here! Come to ROUTE 115! My fists are ready!"
+  ]
+ },
+ "TRAINER_KOJI_1": {
+  "general": [
+   [
+    "KOJI here! I train by punching waves on ROUTE 127.",
+    "My {STR_VAR_3} laughs at me."
+   ],
+   [
+    "It's KOJI! The sea makes my legs strong. Hah!"
+   ]
+  ],
+  "battle": [
+   "KOJI! ROUTE 127! Battle! Now!"
+  ]
+ },
+ "TRAINER_FERNANDO_1": {
+  "general": [
+   [
+    "FERNANDO here! I wrote a new song about my {STR_VAR_3}.",
+    "It's a power ballad!"
+   ],
+   [
+    "Yo, it's FERNANDO! The acoustics on ROUTE 123 are amazing."
+   ]
+  ],
+  "battle": [
+   "FERNANDO here! I'm on ROUTE 123. Let's battle to the beat!"
+  ]
+ },
+ "TRAINER_BERNIE_1": {
+  "general": [
+   [
+    "BERNIE here! My {STR_VAR_3}'s fire burns hotter than ever!"
+   ],
+   [
+    "It's BERNIE. It's hot on ROUTE 114 today. Perfect!"
+   ]
+  ],
+  "battle": [
+   "BERNIE! ROUTE 114! Come feel the burn!"
+  ]
+ },
+ "TRAINER_ETHAN_1": {
+  "general": [
+   [
+    "Hey, it's ETHAN! I camped on JAGGED PASS last night.",
+    "My {STR_VAR_3} kept me warm."
+   ],
+   [
+    "ETHAN here. The ash makes great campfire stories."
+   ]
+  ],
+  "battle": [
+   "It's ETHAN! I'm on JAGGED PASS. Battle me again?"
+  ]
+ },
+ "TRAINER_JOHN_AND_JAY_1": {
+  "general": [
+   [
+    "JOHN: It's JOHN. JAY and I hiked METEOR FALLS again today.",
+    "JAY: Our {STR_VAR_3} did all the climbing!"
+   ],
+   [
+    "JAY: It's JAY! JOHN says we're too old to battle.",
+    "JOHN: I said no such thing!"
+   ]
+  ],
+  "battle": [
+   "JOHN: We're at METEOR FALLS. JAY: Come battle us, dear!"
+  ]
+ },
+ "TRAINER_WALTER_1": {
+  "general": [
+   [
+    "Good day, {PLAYER}. WALTER speaking. My {STR_VAR_3} enjoyed a fine stroll today."
+   ],
+   [
+    "WALTER here. A gentleman always returns a challenge."
+   ]
+  ],
+  "battle": [
+   "WALTER here. I await you on ROUTE 121. A battle, if you please."
+  ]
+ },
+ "TRAINER_KAREN_1": {
+  "general": [
+   [
+    "Hi! It's KAREN. We learned about type matchups in class today!",
+    "I already knew them all."
+   ],
+   [
+    "KAREN here! My {STR_VAR_3} got a perfect score on its training!"
+   ]
+  ],
+  "battle": [
+   "It's KAREN! I'm on ROUTE 116. Pop quiz: a battle!"
+  ]
+ },
+ "TRAINER_ANNA_AND_MEG_1": {
+  "general": [
+   [
+    "ANNA: It's ANNA. MEG has been training so hard!",
+    "MEG: My {STR_VAR_3} too!"
+   ],
+   [
+    "MEG: Hi, it's MEG! ANNA says I'm getting good!"
+   ]
+  ],
+  "battle": [
+   "ANNA: We're on ROUTE 117. MEG: Battle us, please!"
+  ]
+ },
+ "TRAINER_TIMOTHY_1": {
+  "general": [
+   [
+    "TIMOTHY here. My {STR_VAR_3} has reached a new level of discipline."
+   ],
+   [
+    "It's TIMOTHY. Mastery takes years. I have them."
+   ]
+  ],
+  "battle": [
+   "TIMOTHY. ROUTE 115. Show me your growth."
+  ]
+ },
+ "TRAINER_SHELBY_1": {
+  "general": [
+   [
+    "Hello, dear, it's SHELBY. The hot springs did wonders for my {STR_VAR_3}."
+   ],
+   [
+    "SHELBY here. Old age is no excuse to stop training."
+   ]
+  ],
+  "battle": [
+   "SHELBY here, on MT. CHIMNEY. Come warm up with a battle."
+  ]
+ },
+ "TRAINER_CALVIN_1": {
+  "general": [
+   [
+    "Hey, it's CALVIN! My {STR_VAR_3} beat everyone on ROUTE 102!",
+    "Except you."
+   ],
+   [
+    "CALVIN here! I've been training every day after school!"
+   ]
+  ],
+  "battle": [
+   "It's CALVIN! ROUTE 102! I'm way stronger now!"
+  ]
+ },
+ "TRAINER_ISAIAH_1": {
+  "general": [
+   [
+    "ISAIAH here. Swam ten laps of ROUTE 128 today.",
+    "My {STR_VAR_3} kept pace."
+   ],
+   [
+    "It's ISAIAH. Run, swim, battle. Repeat."
+   ]
+  ],
+  "battle": [
+   "ISAIAH! ROUTE 128! Race you to a battle!"
+  ]
+ },
+ "TRAINER_DYLAN_1": {
+  "general": [
+   [
+    "DYLAN here! Just finished a run with my {STR_VAR_3}.",
+    "Personal best!"
+   ],
+   [
+    "It's DYLAN. Cross-training is the secret. Battling too!"
+   ]
+  ],
+  "battle": [
+   "DYLAN! ROUTE 117! Let's go!"
+  ]
+ },
+ "TRAINER_NICOLAS_1": {
+  "general": [
+   [
+    "NICOLAS. My {STR_VAR_3} roared so loud the falls shook."
+   ],
+   [
+    "It's NICOLAS. Dragons respect strength. I respect you."
+   ]
+  ],
+  "battle": [
+   "NICOLAS. METEOR FALLS. My dragons await."
+  ]
+ },
+ "TRAINER_ROBERT_1": {
+  "general": [
+   [
+    "ROBERT here! My {STR_VAR_3} flew all the way to Fortree and back!"
+   ],
+   [
+    "It's ROBERT! The winds on ROUTE 120 are perfect today."
+   ]
+  ],
+  "battle": [
+   "ROBERT here! ROUTE 120! Let's soar!"
+  ]
+ },
+ "TRAINER_LAO_1": {
+  "general": [
+   [
+    "It's LAO! I hid in the ash on ROUTE 113 all day!",
+    "Nobody found me!"
+   ],
+   [
+    "LAO here! My {STR_VAR_3} is getting sneakier!"
+   ]
+  ],
+  "battle": [
+   "LAO! ROUTE 113! I bet you can't find me! …Battle me?"
+  ]
+ },
+ "TRAINER_CYNDY_1": {
+  "general": [
+   [
+    "CYNDY here! My {STR_VAR_3} and I sparred all morning!"
+   ],
+   [
+    "It's CYNDY! I'm getting stronger every day!"
+   ]
+  ],
+  "battle": [
+   "CYNDY! ROUTE 115! Ready to rumble?"
+  ]
+ },
+ "TRAINER_MADELINE_1": {
+  "general": [
+   [
+    "MADELINE here. The ash on ROUTE 113 ruins my parasol.",
+    "But my {STR_VAR_3} doesn't mind!"
+   ],
+   [
+    "It's MADELINE. A lady always trains with grace."
+   ]
+  ],
+  "battle": [
+   "MADELINE! I'm on ROUTE 113. Care for an elegant battle?"
+  ]
+ },
+ "TRAINER_DIANA_1": {
+  "general": [
+   [
+    "DIANA here! I had a picnic on JAGGED PASS!",
+    "My {STR_VAR_3} ate all the sandwiches."
+   ],
+   [
+    "It's DIANA! The view from up here is amazing!"
+   ]
+  ],
+  "battle": [
+   "DIANA! JAGGED PASS! Battle me before my next picnic!"
+  ]
+ },
+ "TRAINER_AMY_AND_LIV_1": {
+  "general": [
+   [
+    "AMY: It's AMY! LIV: And LIV! AMY: Our {STR_VAR_3} did a double flip!"
+   ],
+   [
+    "LIV: It's LIV! AMY: And AMY! LIV: We're training together!"
+   ]
+  ],
+  "battle": [
+   "AMY: ROUTE 103! LIV: Battle us! AMY: Both of us!"
+  ]
+ },
+ "TRAINER_ISAAC_1": {
+  "general": [
+   [
+    "ISAAC here. My {STR_VAR_3} is in perfect condition.",
+    "Breeding is an art."
+   ],
+   [
+    "It's ISAAC. I raised a new team. They're impressive."
+   ]
+  ],
+  "battle": [
+   "ISAAC. ROUTE 117. Come meet my best-raised team."
+  ]
+ },
+ "TRAINER_CATHERINE_1": {
+  "general": [
+   [
+    "CATHERINE here. I helped a lost {STR_VAR_3} on ROUTE 119 today."
+   ],
+   [
+    "It's CATHERINE. The rain on ROUTE 119 makes us tougher."
+   ]
+  ],
+  "battle": [
+   "CATHERINE. ROUTE 119. Let's test each other!"
+  ]
+ },
+ "TRAINER_JACKSON_1": {
+  "general": [
+   [
+    "JACKSON here. Patrolled ROUTE 119 all day with my {STR_VAR_3}."
+   ],
+   [
+    "It's JACKSON. A ranger never stops training."
+   ]
+  ],
+  "battle": [
+   "JACKSON. ROUTE 119. Ready when you are."
+  ]
+ },
+ "TRAINER_HALEY_1": {
+  "general": [
+   [
+    "It's HALEY! My {STR_VAR_3} is so cute and so strong now!"
+   ],
+   [
+    "HALEY here! I'm training on ROUTE 104 every day!"
+   ]
+  ],
+  "battle": [
+   "HALEY! ROUTE 104! Battle me again, please!"
+  ]
+ },
+ "TRAINER_TRENT_1": {
+  "general": [
+   [
+    "TRENT here! Climbed ROUTE 112 twice today.",
+    "My {STR_VAR_3} carried the pack!"
+   ],
+   [
+    "It's TRENT! Mountains make you strong, hah!"
+   ]
+  ],
+  "battle": [
+   "TRENT! ROUTE 112! Come and battle a mountain man!"
+  ]
+ },
+ "TRAINER_SAWYER_1": {
+  "general": [
+   [
+    "SAWYER here! My {STR_VAR_3} dug up a shiny rock on MT. CHIMNEY!"
+   ],
+   [
+    "It's SAWYER! The volcano's quiet. Good for training."
+   ]
+  ],
+  "battle": [
+   "SAWYER! MT. CHIMNEY! Battle me at the top!"
+  ]
+ },
+ "TRAINER_KIRA_AND_DAN_1": {
+  "general": [
+   [
+    "KIRA: It's KIRA! DAN and I explored the old ship again.",
+    "DAN: Our {STR_VAR_3} found a key!"
+   ],
+   [
+    "DAN: It's DAN. KIRA wants a rematch. KIRA: You do too!"
+   ]
+  ],
+  "battle": [
+   "KIRA: We're on the ABANDONED SHIP! DAN: Come battle us!"
+  ]
+ }
+}
