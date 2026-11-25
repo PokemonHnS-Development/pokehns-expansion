@@ -50,16 +50,8 @@ EverGrandeCity_ChampionsRoom_EventScript_Defeated::
 	setmetatile 6, 2, METATILE_EliteFour_OpenDoorChampion_Opening, FALSE
 	special DrawWholeMapView
 	msgbox EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
-	closemessage
-	playse SE_DOOR
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, EverGrandeCity_ChampionsRoom_EventScript_PlayMayMusic
-	call_if_eq VAR_RESULT, FEMALE, EverGrandeCity_ChampionsRoom_EventScript_PlayBrendanMusic
-	addobject LOCALID_CHAMPIONS_ROOM_RIVAL
-	call EverGrandeCity_ChampionsRoom_EventScript_RivalApproachPlayer
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, EverGrandeCity_ChampionsRoom_EventScript_MayAdvice
-	goto_if_eq VAR_RESULT, FEMALE, EverGrandeCity_ChampionsRoom_EventScript_BrendanAdvice
+	@ Hoenn & Seek (13b): no rival/Birch scene; the League badge, then the Hall of Fame
+	goto HoennSeek_EventScript_WallaceDefeated
 	end
 
 EverGrandeCity_ChampionsRoom_EventScript_PlayMayMusic::
@@ -221,22 +213,15 @@ EverGrandeCity_ChampionsRoom_Movement_BirchArrives:
 
 EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "WALLACE: Welcome, {PLAYER}{KUN}.\p"
-	.string "That incident in SOOTOPOLIS CITY…\n"
-	.string "That was superb work, putting an end\l"
-	.string "to that crisis all by yourself.\p"
-	.string "Oops!\p"
-	.string "It wouldn't be fair to say that you\n"
-	.string "alone ended the crisis.\p"
-	.string "You overcame that difficult situation\n"
-	.string "by working as one with your POKéMON.\p"
+	.string "The champion of JOHTO and KANTO,\n"
+	.string "here in HOENN to collect our BADGES.\p"
+	.string "I've watched the news. Fans, songs…\n"
+	.string "HOENN has taken a liking to you.\p"
 	.string "We TRAINERS raise POKéMON by giving\n"
 	.string "them items and by teaching them new\l"
 	.string "techniques for battle.\p"
 	.string "But we ourselves also learn many\n"
 	.string "things from POKéMON.\p"
-	.string "And this is where your achievements\n"
-	.string "are put to the test against what\l"
-	.string "others like you have achieved.\p"
 	.string "Now!\p"
 	.string "Who can most elegantly dance with\n"
 	.string "their POKéMON in HOENN?\p"
@@ -257,14 +242,8 @@ EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
 	.string "At times they danced like a spring\n"
 	.string "breeze, and at times they struck\l"
 	.string "like lightning.\p"
-	.string "It was with light, yet surefooted,\n"
-	.string "elegance that you led your POKéMON.\p"
 	.string "Even I felt bedazzled by your\n"
-	.string "masterful performance!\p"
-	.string "You now stand at the glorious peak\n"
-	.string "of the POKéMON LEAGUE.\p"
-	.string "I now proclaim you to be the new\n"
-	.string "HOENN region…$"
+	.string "masterful performance!$"
 
 EverGrandeCity_ChampionsRoom_Text_MayAdvice:
 	.string "MAY: {PLAYER}{KUN}!\p"

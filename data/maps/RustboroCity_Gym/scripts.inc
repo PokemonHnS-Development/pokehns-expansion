@@ -6,6 +6,7 @@ RustboroCity_Gym_EventScript_Roxanne::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_RoxanneRematch
 	goto_if_unset FLAG_RECEIVED_TM_ROCK_TOMB, RustboroCity_Gym_EventScript_GiveRockTomb
+	goto_if_set FLAG_HOENN_STAMP_WALLACE, HoennSeek_EventScript_RematchRoxanne @ Hoenn & Seek (13b)
 	msgbox RustboroCity_Gym_Text_RoxannePostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -14,6 +15,7 @@ RustboroCity_Gym_EventScript_RoxanneDefeated::
 	message RustboroCity_Gym_Text_ReceivedStoneBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
+	call HoennSeek_EventScript_GymRareCandies @ Hoenn & Seek (13b)
 	msgbox RustboroCity_Gym_Text_StoneBadgeInfoTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_RUSTBORO_GYM
 	setflag FLAG_HOENN_STAMP_GYM_1
@@ -119,8 +121,8 @@ RustboroCity_Gym_Text_GymGuidePostVictory:
 	.string "Whoa! What a breathtaking victory!\n"
 	.string "My cheering must've worked!\p"
 	.string "Check your TRAINER CARD.\p"
-	.string "The STONE BADGE stamp should be\n"
-	.string "right there on the back.\p"
+	.string "The STONE BADGE should be right\n"
+	.string "there on the back.\p"
 	.string "One down, seven to go!\n"
 	.string "That's got to feel awesome!$"
 
@@ -177,22 +179,21 @@ RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "It seems that I still have much more\n"
 	.string "to learn…\p"
 	.string "I understand.\p"
-	.string "TRAINERS who already hold another\n"
-	.string "region's BADGES receive a LEAGUE\l"
-	.string "stamp instead.\p"
+	.string "The POKéMON LEAGUE rules say that\n"
+	.string "you've earned this BADGE.\p"
 	.string "Please accept the official POKéMON\n"
-	.string "LEAGUE stamp.$"
+	.string "LEAGUE STONE BADGE.$"
 
 RustboroCity_Gym_Text_ReceivedStoneBadge:
-	.string "ROXANNE stamped {PLAYER}'s\n"
-	.string "TRAINER CARD with the STONE BADGE!$"
+	.string "{PLAYER} received the STONE BADGE\n"
+	.string "from ROXANNE.$"
 
 RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
-	.string "That stamp records your win here\n"
-	.string "in RUSTBORO.\p"
-	.string "It may not be a BADGE, but it is an\n"
-	.string "honest record of an honest battle.\p"
-	.string "Please take this with you, too.$"
+	.string "HOENN's BADGES are kept apart from\n"
+	.string "JOHTO's and KANTO's, on the back of\l"
+	.string "your TRAINER CARD.\p"
+	.string "It's an honest record of an honest\n"
+	.string "battle. Please take this, too.$"
 
 RustboroCity_Gym_Text_ExplainRockTomb:
 	.string "That TECHNICAL MACHINE, TM39,\n"

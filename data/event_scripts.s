@@ -1061,6 +1061,7 @@ gStdScripts_End::
 	.include "data/scripts/hoenn_mind_reader.inc" @ Hoenn & Seek
 	.include "data/scripts/hoenn_sealed.inc" @ Hoenn & Seek
 	.include "data/scripts/hoenn_trainers.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_gyms.inc" @ Hoenn & Seek
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"
 

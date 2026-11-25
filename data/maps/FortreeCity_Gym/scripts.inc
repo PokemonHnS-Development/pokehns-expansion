@@ -6,6 +6,7 @@ FortreeCity_Gym_MapScripts::
 FortreeCity_Gym_OnTransition:
 	special RotatingGate_InitPuzzle
 	setflag FLAG_TEMP_HIDE_FOLLOWER @ Hide follower bc of rotating gates
+	call HoennSeek_EventScript_FortreeGymWinona @ Hoenn & Seek (13b): Winona's on Route 119
 	end
 
 FortreeCity_Gym_OnWarp:
@@ -22,6 +23,7 @@ FortreeCity_Gym_EventScript_Winona::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_WinonaRematch
 	goto_if_unset FLAG_RECEIVED_TM_AERIAL_ACE, FortreeCity_Gym_EventScript_GiveAerialAce2
+	goto_if_set FLAG_HOENN_STAMP_WALLACE, HoennSeek_EventScript_RematchWinona @ Hoenn & Seek (13b)
 	msgbox FortreeCity_Gym_Text_WinonaPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -36,6 +38,7 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	setvar VAR_0x8008, 6
 	call Common_EventScript_SetGymTrainers
 	call FortreeCity_Gym_EventScript_GiveAerialAce
+	call HoennSeek_EventScript_GymRareCandies @ Hoenn & Seek (13b)
 	closemessage
 	delay 30
 	@ Hoenn & Seek: no PokéNav registration.
@@ -101,6 +104,7 @@ FortreeCity_Gym_EventScript_GymGuide::
 	faceplayer
 	goto_if_set FLAG_DEFEATED_FORTREE_GYM, FortreeCity_Gym_EventScript_GymGuidePostVictory
 	call HoennSeek_EventScript_GymGuideGreeting
+	call HoennSeek_EventScript_FortreeGuideWinonaAway
 	msgbox FortreeCity_Gym_Text_GymGuideAdvice, MSGBOX_DEFAULT
 	release
 	end
@@ -243,14 +247,14 @@ FortreeCity_Gym_Text_WinonaDefeat:
 	.string "command POKéMON with more grace\l"
 	.string "than I…\p"
 	.string "In recognition of your prowess,\n"
-	.string "I present to you this GYM stamp.$"
+	.string "I present to you this GYM BADGE.$"
 
 FortreeCity_Gym_Text_ReceivedFeatherBadge:
-	.string "WINONA stamped {PLAYER}'s\n"
-	.string "TRAINER CARD with the FEATHER BADGE!$"
+	.string "{PLAYER} received the FEATHER BADGE\n"
+	.string "from WINONA.$"
 
 FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis:
-	.string "With that stamp, your name joins\n"
+	.string "With that BADGE, your name joins\n"
 	.string "those who soared past FORTREE GYM.\p"
 	.string "And this…\n"
 	.string "This is a gift from me.$"

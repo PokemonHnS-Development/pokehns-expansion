@@ -103,6 +103,7 @@ PetalburgCity_Gym_EventScript_Norman::
 	vsseeker_rematchid TRAINER_NORMAN_1
 	lock
 	faceplayer
+	call HoennSeek_EventScript_NormanGate @ Hoenn & Seek (13b): 4 badges first
 	switch VAR_PETALBURG_GYM_STATE
 	case 2, PetalburgCity_Gym_EventScript_NormanNoBadges
 	case 3, PetalburgCity_Gym_EventScript_NormanOneBadge
@@ -330,6 +331,7 @@ PetalburgCity_Gym_EventScript_NormanPostBattle::
 	call PetalburgCity_Gym_EventScript_ShouldGiveEnigmaBerry
 	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_GiveEnigmaBerry
 	goto_if_unset FLAG_RECEIVED_TM_FACADE, PetalburgCity_Gym_EventScript_GiveFacade2
+	goto_if_set FLAG_HOENN_STAMP_WALLACE, HoennSeek_EventScript_RematchNorman @ Hoenn & Seek (13b)
 	goto_if_set FLAG_SYS_GAME_CLEAR, PetalburgCity_Gym_EventScript_NoAmountOfTrainingIsEnough
 	msgbox PetalburgCity_Gym_Text_DadGoingToKeepTraining, MSGBOX_DEFAULT
 	release
@@ -386,6 +388,7 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	call PetalburgCity_Gym_EventScript_UnlockAllDoors
 	special DrawWholeMapView
 	call PetalburgCity_Gym_EventScript_GiveFacade
+	call HoennSeek_EventScript_GymRareCandies @ Hoenn & Seek (13b)
 	delay 30
 	msgbox PetalburgCity_Gym_Text_DadHappyAndSad, MSGBOX_DEFAULT
 	@ Hoenn & Seek: no Wally's-dad scene (it led to the HM Surf story).
@@ -1264,11 +1267,11 @@ PetalburgCity_Gym_Text_NormanDefeat:
 	.string "Here, take this.$"
 
 PetalburgCity_Gym_Text_ReceivedBalanceBadge:
-	.string "NORMAN stamped {PLAYER}'s\n"
-	.string "TRAINER CARD with the BALANCE BADGE!$"
+	.string "{PLAYER} received the BALANCE BADGE\n"
+	.string "from NORMAN.$"
 
 PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:
-	.string "NORMAN: That stamp is proof that\n"
+	.string "NORMAN: That BADGE is proof that\n"
 	.string "you beat me in a true battle.\p"
 	.string "This is my gift to you, {PLAYER}.\n"
 	.string "I'm sure you'll use it well.$"

@@ -12,7 +12,7 @@ EverGrandeCity_SidneysRoom_OnTransition:
 
 EverGrandeCity_SidneysRoom_OnLoad:
 	call_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_ResetAdvanceToNextRoom
-	call_if_eq VAR_ELITE_4_STATE, 1, EverGrandeCity_SidneysRoom_EventScript_CloseDoor
+	call_if_eq VAR_HOENN_E4_STATE, 1, EverGrandeCity_SidneysRoom_EventScript_CloseDoor
 	end
 
 EverGrandeCity_SidneysRoom_EventScript_ResetAdvanceToNextRoom::
@@ -32,13 +32,13 @@ EverGrandeCity_SidneysRoom_EventScript_PlayerTurnNorth::
 	end
 
 EverGrandeCity_SidneysRoom_OnFrame:
-	map_script_2 VAR_ELITE_4_STATE, 0, EverGrandeCity_SidneysRoom_EventScript_WalkInCloseDoor
+	map_script_2 VAR_HOENN_E4_STATE, 0, EverGrandeCity_SidneysRoom_EventScript_WalkInCloseDoor
 	.2byte 0
 
 EverGrandeCity_SidneysRoom_EventScript_WalkInCloseDoor::
 	lockall
 	call PokemonLeague_EliteFour_EventScript_WalkInCloseDoor
-	setvar VAR_ELITE_4_STATE, 1
+	setvar VAR_HOENN_E4_STATE, 1
 	releaseall
 	end
 

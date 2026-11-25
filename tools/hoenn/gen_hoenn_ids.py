@@ -108,8 +108,9 @@ def main():
                 if json.load(open(p)).get("game_version") == "hns"]
     hns_map_files = [f"{d}/{x}" for d in hns_maps for x in ("scripts.inc", "map.json")]
 
-    flags = scan(hoenn_files, r"\bFLAG_[A-Z0-9_]+\b")
-    vars_ = scan(hoenn_files, r"\bVAR_[A-Z0-9_]+\b")
+    # FLAG_HOENN_* / VAR_HOENN_* are hand-defined in constants/hoenn_custom.h.
+    flags = {n for n in scan(hoenn_files, r"\bFLAG_[A-Z0-9_]+\b") if not n.startswith("FLAG_HOENN_")}
+    vars_ = {n for n in scan(hoenn_files, r"\bVAR_[A-Z0-9_]+\b") if not n.startswith("VAR_HOENN_")}
     trainers = {t for t in scan(hoenn_files, r"\bTRAINER_[A-Z0-9_]+\b") if not t.endswith("_HNS") and not t.startswith(SKIP_TRAINER_PREFIXES)} - SKIP_NAMES
 
     hns_var_owned = set(re.findall(r"^#define\s+(VAR_\w+)", rd("include/constants/vars_hns.h"), re.M))

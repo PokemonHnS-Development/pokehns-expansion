@@ -13,19 +13,19 @@ EverGrandeCity_GlaciasRoom_EventScript_PlayerTurnNorth::
 	end
 
 EverGrandeCity_GlaciasRoom_OnFrame:
-	map_script_2 VAR_ELITE_4_STATE, 2, EverGrandeCity_GlaciasRoom_EventScript_WalkInCloseDoor
+	map_script_2 VAR_HOENN_E4_STATE, 2, EverGrandeCity_GlaciasRoom_EventScript_WalkInCloseDoor
 	.2byte 0
 
 EverGrandeCity_GlaciasRoom_EventScript_WalkInCloseDoor::
 	lockall
 	call PokemonLeague_EliteFour_EventScript_WalkInCloseDoor
-	setvar VAR_ELITE_4_STATE, 3
+	setvar VAR_HOENN_E4_STATE, 3
 	releaseall
 	end
 
 EverGrandeCity_GlaciasRoom_OnLoad:
 	call_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_ResetAdvanceToNextRoom
-	call_if_eq VAR_ELITE_4_STATE, 3, EverGrandeCity_GlaciasRoom_EventScript_CloseDoor
+	call_if_eq VAR_HOENN_E4_STATE, 3, EverGrandeCity_GlaciasRoom_EventScript_CloseDoor
 	end
 
 EverGrandeCity_GlaciasRoom_EventScript_ResetAdvanceToNextRoom::

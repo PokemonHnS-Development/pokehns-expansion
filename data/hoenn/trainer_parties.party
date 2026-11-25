@@ -2,7 +2,8 @@
 # Read by tools/hoenn/gen_hoenn_ids.py. Lines before a block's first blank line replace
 # those header keys; the rest replaces the Pokemon. Gym levels are placeholders:
 # src/hoenn_scaling.c moves the strongest to the stamp curve and keeps the gaps.
-# No Mega Stones anywhere (no Megas in Hoenn & Seek).
+# No Mega Stones anywhere (no Megas in Hoenn & Seek). Elite Four (Lv 76-81) and
+# Wallace (Lv 80-84) have fixed levels.
 
 === TRAINER_ROXANNE_1 ===
 Items: Full Restore / Full Restore / Hyper Potion
@@ -988,3 +989,148 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Zen Headbutt
 - Earthquake
 - Bullet Punch
+
+
+=== TRAINER_SIDNEY ===
+Items: Full Restore / Full Restore / Full Restore
+AI: Smart Trainer
+
+Mightyena
+Level: 76
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Shiftry
+Level: 76
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Cacturne
+Level: 77
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Crawdaunt
+Level: 77
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Sharpedo
+Level: 77
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Absol @ Scope Lens
+Level: 78
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+
+=== TRAINER_PHOEBE ===
+Items: Full Restore / Full Restore / Full Restore
+AI: Smart Trainer
+
+Banette
+Level: 77
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Sableye
+Level: 77
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Mismagius
+Level: 78
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Spiritomb
+Level: 78
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Froslass
+Level: 78
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Dusknoir @ Leftovers
+Level: 79
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+
+=== TRAINER_GLACIA ===
+Items: Full Restore / Full Restore / Full Restore
+AI: Smart Trainer
+
+Glalie
+Level: 78
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Froslass
+Level: 78
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Abomasnow
+Level: 79
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Weavile
+Level: 79
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Mamoswine
+Level: 79
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Walrein @ Sitrus Berry
+Level: 80
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+
+=== TRAINER_DRAKE ===
+Items: Full Restore / Full Restore / Full Restore
+AI: Smart Trainer
+
+Altaria
+Level: 79
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Flygon
+Level: 79
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Kingdra
+Level: 80
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Garchomp
+Level: 80
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Dragonite
+Level: 80
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Salamence @ Lum Berry
+Level: 81
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+
+=== TRAINER_WALLACE ===
+Items: Full Restore / Full Restore / Full Restore
+AI: Smart Trainer
+
+Wailord
+Level: 80
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Tentacruel
+Level: 80
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Ludicolo
+Level: 81
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Whiscash
+Level: 81
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Gyarados
+Level: 82
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Milotic @ Leftovers
+Level: 84
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
