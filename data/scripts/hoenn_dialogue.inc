@@ -56,6 +56,9 @@ HoennSeek_EventScript_BrendansMom::
 	lock
 	faceplayer
 	msgbox HoennSeek_Text_BrendansMom, MSGBOX_DEFAULT
+	special CheckPlayerHasSecretBase
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_MomEnd
+	msgbox HoennSeek_Text_BrendansMomBase, MSGBOX_DEFAULT
 	release
 	end
 
@@ -94,6 +97,14 @@ HoennSeek_Text_BrendansMom:
 	.string "the day they met.\p"
 	.string "You're from JOHTO? How exciting!\n"
 	.string "BRENDAN would love to battle you.$"
+
+HoennSeek_Text_BrendansMomBase:
+	.string "Oh, and BIRCH's aides tell me you\n"
+	.string "have a SECRET BASE now!\p"
+	.string "They spot them all the time on\n"
+	.string "fieldwork. BRENDAN and MAY's old one\l"
+	.string "on ROUTE 111 is still there, full of\l"
+	.string "MAY's dolls. Hehe.$"
 
 @ The twin outside mistakes you for one of them, from a distance.
 HoennSeek_EventScript_LittlerootTwin::

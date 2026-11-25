@@ -35,22 +35,15 @@ enum DecorationCategory
     DECORCAT_ORNAMENT,
     DECORCAT_MAT,
     DECORCAT_POSTER,
-    #if IS_HNS
-    DECORCAT_CUSHION
-    #else
     DECORCAT_DOLL,
     DECORCAT_CUSHION,
     DECORCAT_COUNT,
-    #endif
 };
 
-#if IS_HNS
-enum DecorationCategory_HnS
-{
-    DECORCAT_DOLL,
-    DECORCAT_COUNT,
-};
-#endif
+// Hoenn & Seek: HnS used a dolls-only category list (DECORCAT_DOLL = 0, the
+// same value as DECORCAT_DESK), which filed Hoenn furniture under dolls.
+// Secret bases need all eight; the player's room still only takes dolls and
+// cushions (Emerald's rule in decoration.c).
 
 struct Decoration
 {

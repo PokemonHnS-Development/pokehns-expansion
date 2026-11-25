@@ -60,6 +60,7 @@
 #define FLAG_HOENN_CALL_CONTEST          (HOENN_CUSTOM_FLAGS_START + 0x31) // May's call after your first contest win
 #define FLAG_HOENN_LILYCOVE_CONTEST      (HOENN_CUSTOM_FLAGS_START + 0x32) // in Lilycove's contest lobby: contests return there (part 17)
 #define FLAG_HOENN_MET_CONTEST_TWIN      (HOENN_CUSTOM_FLAGS_START + 0x33) // Lilycove's receptionist told you about her twin
+#define FLAG_HOENN_CALL_BASE             (HOENN_CUSTOM_FLAGS_START + 0x34) // Brendan's call after your first secret base (part 18)
 #define HOENN_CUSTOM_FLAGS_END       (HOENN_CUSTOM_FLAGS_START + 0x3F)
 
 // Fake fights (part 14): one "already happened" flag each, numbered by
