@@ -82,7 +82,8 @@
     "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN",
     "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE",
     "FLAG_HIDE_MOSSDEEP_CITY_SCOTT",
-    "FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_2_SCANNER"
+    "FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_2_SCANNER",
+    "FLAG_RESCUED_BIRCH"
   ],
   "_areas": "part 8: harbors, Steven's house; part 10: Littleroot-Rustboro, Dewford, Slateport, Mauville, Routes 101-110, 116-118; part 11: Fallarbor, Lavaridge, Fortree, Lilycove, Mt. Chimney/Pyre, Meteor Falls, hideouts, Routes 111-115, 119-123; part 12: Mossdeep, Sootopolis, Pacifidlog, Routes 124-134, Abandoned Ship",
   "vars": {

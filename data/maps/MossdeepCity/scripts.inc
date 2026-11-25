@@ -341,14 +341,14 @@ MossdeepCity_Text_SpaceCenterLaunchingRockets:
 	.string "launching huge rockets.$"
 
 MossdeepCity_Text_MossdeepTargetedByMagma:
-	.string "I heard from a SAILOR buddy that\n"
-	.string "TEAM AQUA set up shop in LILYCOVE.\p"
-	.string "I also heard that someone came along\n"
-	.string "and wiped the floor with them!\p"
-	.string "But MOSSDEEP here's been targeted\n"
-	.string "by that TEAM MAGMA.\p"
-	.string "If you want to know what they're up to,\n"
-	.string "go visit the SPACE CENTER.$"
+	.string "I heard from a SAILOR buddy that a\n"
+	.string "TRAINER from JOHTO came over on\l"
+	.string "the ferry.\p"
+	.string "That wouldn't be you, would it?\p"
+	.string "TEAM MAGMA once tried to steal the\n"
+	.string "SPACE CENTER's rocket fuel.\p"
+	.string "These days they just ask for tours.\n"
+	.string "They bring lava cookies, too.$"
 
 MossdeepCity_Text_FeelReliefOnLand:
 	.string "I'm a SAILOR, so the sea's obviously\n"

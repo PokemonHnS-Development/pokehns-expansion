@@ -38,14 +38,11 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	call FortreeCity_Gym_EventScript_GiveAerialAce
 	closemessage
 	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox FortreeCity_Gym_Text_RegisteredWinona, MSGBOX_DEFAULT
-	waitfanfare
+	@ Hoenn & Seek: no PokéNav registration.
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_WINONA_MATCH_CALL
-	setvar VAR_SCOTT_FORTREE_CALL_STEP_COUNTER, 0
-	setflag FLAG_SCOTT_CALL_FORTREE_GYM
+	@ Hoenn & Seek: no Scott PokéNav call.
 	release
 	end
 
@@ -103,6 +100,7 @@ FortreeCity_Gym_EventScript_GymGuide::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_FORTREE_GYM, FortreeCity_Gym_EventScript_GymGuidePostVictory
+	call HoennSeek_EventScript_GymGuideGreeting
 	msgbox FortreeCity_Gym_Text_GymGuideAdvice, MSGBOX_DEFAULT
 	release
 	end
@@ -135,8 +133,6 @@ FortreeCity_Gym_EventScript_GymStatue::
 	end
 
 FortreeCity_Gym_Text_GymGuideAdvice:
-	.string "Yo, how's it going, CHAMPION-\n"
-	.string "bound {PLAYER}?\p"
 	.string "FORTREE GYM LEADER WINONA is\n"
 	.string "a master of FLYING-type POKéMON.\p"
 	.string "She's waiting at the back of this GYM,\n"
@@ -247,18 +243,15 @@ FortreeCity_Gym_Text_WinonaDefeat:
 	.string "command POKéMON with more grace\l"
 	.string "than I…\p"
 	.string "In recognition of your prowess,\n"
-	.string "I present to you this GYM BADGE.$"
+	.string "I present to you this GYM stamp.$"
 
 FortreeCity_Gym_Text_ReceivedFeatherBadge:
-	.string "{PLAYER} received the FEATHER BADGE\n"
-	.string "from WINONA.$"
+	.string "WINONA stamped {PLAYER}'s\n"
+	.string "TRAINER CARD with the FEATHER BADGE!$"
 
 FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis:
-	.string "With the FEATHER BADGE, all POKéMON up\n"
-	.string "to LV 70, even those received through\l"
-	.string "trades, will obey your every command.\p"
-	.string "You will also be able to use\n"
-	.string "the HM move FLY outside of battle.\p"
+	.string "With that stamp, your name joins\n"
+	.string "those who soared past FORTREE GYM.\p"
 	.string "And this…\n"
 	.string "This is a gift from me.$"
 

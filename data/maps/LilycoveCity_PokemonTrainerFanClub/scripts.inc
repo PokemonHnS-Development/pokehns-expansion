@@ -647,7 +647,7 @@ LilycoveCity_PokemonTrainerFanClub_Text_YouveSurpassedYourFather:
 
 LilycoveCity_PokemonTrainerFanClub_Text_YourFatherNeverGaveUpSoKeepOnBattling:
 	.string "Even when things turned bleak,\n"
-	.string "your father never gave up.\p"
+	.string "NORMAN never gave up.\p"
 	.string "This I know to be true.\p"
 	.string "You never give up even if you lose!\n"
 	.string "So keep on battling!$"
@@ -655,10 +655,10 @@ LilycoveCity_PokemonTrainerFanClub_Text_YourFatherNeverGaveUpSoKeepOnBattling:
 LilycoveCity_PokemonTrainerFanClub_Text_LongWayToGoComparedToNorman:
 	.string "NORMAN battled with more power,\n"
 	.string "charisma, and showmanship than you.\p"
-	.string "Even though people may say that\n"
-	.string "you're strong…\p"
+	.string "Even if people say you're JOHTO's\n"
+	.string "CHAMPION…\p"
 	.string "You've still got a long way to go\n"
-	.string "compared to your father.$"
+	.string "compared to our NORMAN!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_YouAndNormanAreDifferent:
 	.string "You're beginning to get the same\n"

@@ -100,9 +100,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	call HoennSeek_EventScript_WattsonBasementKey @ Hoenn & Seek
 	closemessage
 	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox MauvilleCity_Gym_Text_RegisteredWattson, MSGBOX_DEFAULT
-	waitfanfare
+	@ Hoenn & Seek: no PokéNav registration.
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_WATTSON_MATCH_CALL
@@ -224,6 +222,7 @@ MauvilleCity_Gym_EventScript_GymGuide::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_GymGuidePostVictory
+	call HoennSeek_EventScript_GymGuideGreeting
 	msgbox MauvilleCity_Gym_Text_GymGuideAdvice, MSGBOX_DEFAULT
 	release
 	end
@@ -256,8 +255,6 @@ MauvilleCity_Gym_EventScript_GymStatue::
 	end
 
 MauvilleCity_Gym_Text_GymGuideAdvice:
-	.string "Hey, how's it going, CHAMPION-\n"
-	.string "bound {PLAYER}?\p"
 	.string "WATTSON, the LEADER of MAUVILLE\n"
 	.string "GYM, uses ELECTRIC-type POKéMON.\p"
 	.string "If you challenge him with WATER-type\n"
@@ -348,17 +345,15 @@ MauvilleCity_Gym_Text_WattsonDefeat:
 	.string "Wahahahah!\n"
 	.string "Fine, I lost!\p"
 	.string "You ended up giving me a thrill!\n"
-	.string "Take this BADGE!$"
+	.string "Here's your stamp!$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
-	.string "{PLAYER} received the DYNAMO BADGE\n"
-	.string "from WATTSON.$"
+	.string "WATTSON stamped {PLAYER}'s\n"
+	.string "TRAINER CARD with the DYNAMO BADGE!$"
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
-	.string "With the DYNAMO BADGE, POKéMON can\n"
-	.string "use ROCK SMASH out of battle.\p"
-	.string "And, it will make your POKéMON a little\n"
-	.string "bit faster, too.\p"
+	.string "Wahahaha! That stamp shows you\n"
+	.string "shocked old WATTSON fair and square!\p"
 	.string "Hmm…\n"
 	.string "You should take this, too!$"
 
