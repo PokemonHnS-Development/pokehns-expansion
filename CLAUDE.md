@@ -38,6 +38,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 14a (Mossdeep mind reader: IVs and abilities for Star Pieces) | 32,558,132 / 973 KB | 32,706,228 / 828 KB |
 | Part 14 (trainer curation 506→211, cap back to 864; Devon Scope backtrack, Rusturf dig, TV news) | 32,461,540 / 1,067 KB | 32,609,716 / 922 KB |
 | Part 13b (badges wording, gym prerequisites, Rare Candies, League + Wallace, rematches) | 32,465,204 / 1,063 KB | 32,613,284 / 919 KB |
+| Part 15 (Hoenn wild levels 35–70, 36 night tables, 41 items upgraded) | 32,467,444 / 1,061 KB | 32,615,540 / 917 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -52,7 +53,11 @@ Read the roadmap entry for the part you're working on before starting.
   - Sections after `JOHTO_MAPSEC_END` make `GetRegionForSectionId()` return `REGION_HOENN`, but so do HnS's own Battle Frontier, Trainer Hill and Birth/Faraway/Southern Island sections. **Use `IsHoennMapSec(id)` from `include/hoenn.h` for runtime Hoenn checks** (part 6). It reads `include/constants/hoenn_mapsecs.h`, which `gen_hoenn_mapsecs.py` writes.
   - Four sections HnS already lists (ABANDONED_SHIP, LILYCOVE_CITY, SAFARI_ZONE, VICTORY_ROAD) sit before Pallet, outside every range, so they also count as Hoenn.
 - **Region map and Fly (part 6):** `src/region_map.c` shows Emerald's Hoenn map whenever the player is in a Hoenn section, so Fly only reaches Hoenn towns from Hoenn and Johto/Kanto towns from there. The Pokédex area page (`src/pokedex_area_screen.c`) only marks areas in the region whose map is shown. Edge case: HnS's own contest lobby copy uses `MAPSEC_LILYCOVE_CITY`, so it shows the Hoenn map.
-- **Wild encounters (part 6):** `tools/wild_encounters/wild_encounters_to_header.py` builds Emerald tables for maps in `data/hoenn/maps.json` into HnS (116 tables, in the TIME_DAY slot). Levels are still Emerald's; part 15 rescales them.
+- **Wild encounters (part 6, reworked in part 15):** `tools/hoenn/gen_hoenn_wild.py` turns the Emerald tables of kept maps into `data/hoenn/wild_encounters_hoenn.json` (commit it), using `data/hoenn/wild_rules.json`:
+  - `bands`: each map (longest name prefix) gets a level band from Lv 35 (Routes 101–104) to 70 (Victory Road). Every table type is stretched onto it (fishing starts 5 lower), and species evolve through `EVO_LEVEL` evolutions the new minimum level reaches (Zigzagoon becomes Linoone, Magikarp becomes Gyarados).
+  - `rules`: `day`/`night` ops (`swap` species, or replace `slots`). A map with night ops gets a `_Night` table built from the original Emerald table. Day/night pairs replace version exclusives: Solrock/Lunatone in Meteor Falls, Zangoose/Seviper on Route 114, Mawile/Sableye in Granite Cave and Victory Road. Night also brings Volbeat/Illumise (117), Poochyena/Oddish (101–104, 116), Absol/Kecleon/Murkrow/Hoothoot/Spinarak (Petalburg Woods, 119, 120), ghosts (113, 123, Mt. Pyre's exterior, with Misdreavus) and Chinchou on the super rod (124–134).
+  - `tools/wild_encounters/wild_encounters_to_header.py` appends those `gHoenn_*_hns` tables for HnS and guards the Emerald tables of the same maps with `#ifdef EMERALD`.
+  - `items`: the same generator upgrades early-game item balls and hidden items on kept maps, in their map.json (Potion → Hyper Potion, Poké/Great Ball → Ultra Ball, status heals → Full Heal, Repels → Max Repel, Ether → Max Ether). All 256 Hoenn item flags are unique Hoenn flags (checked in part 15).
 - **HM09 Dive (part 7):**
   - `ITEM_HM09` = 901, the slot after the HnS items (`ITEM_HM09_SLOT`, checked by a `STATIC_ASSERT` in `src/data/items.h`). `F(DIVE)` is appended to the HnS `FOREACH_HM`, which makes Dive teachable (151 species), unforgettable (`IsMoveHM`) and an HM in the bag.
   - `include/constants/tms_hms.h` now includes `constants/global.h`: `battle_anim_scripts.s` used to expand the HM list with `IS_HNS` undefined, which clashed at link time once both lists had `ITEM_HM_DIVE`.
