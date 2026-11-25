@@ -134,6 +134,16 @@ class Emu:
             else:  # summary screen or similar: back out
                 self.steps(state, state, [("B", 4), ("wait", 60)])
 
+    def heal(self, state_in, state_out):
+        """Full HP and no status for the whole party (HP/status aren't encrypted)."""
+        p = self.s("gPlayerParty")
+        vals = [int(l.split(": ")[1], 16) for l in self.run([f"loadstate {state_in}"] + [f"r16 {p + 100 * i + 88:x}" for i in range(6)])]
+        cmds = [f"loadstate {state_in}"]
+        for i, mx in enumerate(vals):
+            if mx: cmds += [f"w16 {p + 100 * i + 86:x} {mx}", f"w32 {p + 100 * i + 80:x} 0"]
+        self.run(cmds + ["wait 2", f"savestate {state_out}"])
+        return state_out
+
     def set_battle_style(self, state_in, state_out):
         """Battle style SET (no 'switch Pokémon?' prompt): bit 1 of SaveBlock2 byte +21."""
         sb2 = self.read_words(state_in, 0x030041BC, 1)[0]
@@ -237,6 +247,10 @@ class Emu:
                 base = bm + 136 * b
                 cmds += [f"w16 {base + 2:x} 999", f"w16 {base + 6:x} 999", f"w16 {base + 8:x} 999"]
                 cmds += [f"w8 {base + 37 + m:x} 20" for m in range(4)]  # PP never runs out
+            if i % 2 == 0:  # pick a move explicitly: FIGHT, then rotate through moves 1-3
+                extra = [[], ["RIGHT"], ["DOWN"], ["DOWN", "RIGHT"]][(i // 2) % 4]
+                cmds += ["press UP 2", "wait 3", "press LEFT 2", "wait 3", "press A 4", "wait 20",
+                         "press UP 2", "wait 3", "press LEFT 2", "wait 3"] + sum([[f"press {k} 2", "wait 3"] for k in extra], [])
             cmds += ["press A 4", "wait 40"] + self.text_cmds(32)
             if shots and i % every == 0: cmds.append(f"shot {shots}_{i // every + 1}.png")
         cmds += [f"r8 {main + 0x439:x}", f"savestate {state_out}"]
@@ -328,7 +342,7 @@ def explore(e, state, map_name, prefix, presses=10, skip=(), only=None, signs=Tr
                 continue
             nm, cx, cy, _ = e.where(s)
             if (cx, cy) != (px, py): continue
-            cmds_keys = ["A"] * presses
+            cmds_keys = ["A"] + ["B"] * (presses - 1)
             texts = e.talk(s, "_exp_t.ss", face=key, keys=cmds_keys, wait=100, shots=shot)
             if texts: break
         out.append((kind, script, (x, y), texts, f"{shot}_1.png"))
@@ -348,17 +362,17 @@ def battle_npc(e, state_in, map_name, x, y, state_out, pre=6, post=10, shots=Non
     g, n = map_of(map_name)
     texts = []
     for px, py, key in spots_next_to(map_name, x, y):
-        s = e.go(state_in, g, n, px, py, "_bn_w.ss")
+        s = e.go(e.heal(state_in, "_bn_h.ss"), g, n, px, py, "_bn_w.ss")
         if e.where(s)[1:3] != (px, py): continue
         t = e.talk(s, "_bn_t.ss", face=key, keys=["A"] * pre, wait=90, shots=shots and shots + "_pre")
         texts += t
         if e.where("_bn_t.ss")[3]:
-            ft, still = e.fight("_bn_t.ss", "_bn_f.ss", rounds=80, shots=shots and shots + "_b", every=8)
+            ft, still = e.fight("_bn_t.ss", "_bn_f.ss", rounds=12, shots=shots and shots + "_b", every=4)
             texts += ft
-            for k in range(5):
+            for k in range(40):  # short chunks, so A-mashing stops soon after the battle ends
                 if not still: break
                 e.unstick_party("_bn_f.ss")
-                ft, still = e.fight("_bn_f.ss", "_bn_f.ss", rounds=60, shots=shots and f"{shots}_b{k}", every=10)
+                ft, still = e.fight("_bn_f.ss", "_bn_f.ss", rounds=12, shots=shots and f"{shots}_b{k}", every=6)
                 texts += ft
             t2 = e.talk("_bn_f.ss", state_out, keys=["B"] * post, wait=100, shots=shots and shots + "_post")
             texts += t2
@@ -367,3 +381,69 @@ def battle_npc(e, state_in, map_name, x, y, state_out, pre=6, post=10, shots=Non
             os.replace(os.path.join(e.cwd, "_bn_t.ss"), os.path.join(e.cwd, state_out))
             return texts, None
     return texts, None
+
+def bfs_path(map_name, start, goal):
+    """Shortest walk ('UDLR' string) over '.' tiles from start to goal, or None."""
+    from collections import deque
+    g = grid(map_name)
+    W = {"U": (0, -1), "D": (0, 1), "L": (-1, 0), "R": (1, 0)}
+    prev = {start: None}; q = deque([start])
+    while q:
+        c = q.popleft()
+        if c == goal: break
+        for k, (dx, dy) in W.items():
+            n = (c[0] + dx, c[1] + dy)
+            if n in prev or not (0 <= n[1] < len(g) and 0 <= n[0] < len(g[n[1]])): continue
+            if g[n[1]][n[0]] != "." and n != goal: continue
+            prev[n] = (c, k); q.append(n)
+    if goal not in prev: return None
+    path, c = [], goal
+    while prev[c]: c, k = prev[c]; path.append(k)
+    return "".join(reversed(path))
+
+def explore_fast(e, state, map_name, prefix, presses=9, signs=False, entry=None):
+    """Like explore(), but warps once and walks (BFS) to each NPC: ~5x faster."""
+    objs = objects(map_name)
+    flags = sorted({o[5] for o in objs if o[5] and o[5] != "0"})
+    vals = {}
+    if flags:
+        vals = {k: v for k, v in resolve(*flags).items() if isinstance(v, int)}
+    g, n = map_of(map_name)
+    rows = grid(map_name)
+    # entry tile: the requested one, else the walkable tile closest to the first warp
+    md = json.load(open(os.path.join(ROOT, f"data/maps/{map_name}/map.json")))
+    if not entry:
+        wx, wy = (md["warp_events"][0]["x"], md["warp_events"][0]["y"]) if md.get("warp_events") else (len(rows[0]) // 2, len(rows) // 2)
+        cands = [(abs(x - wx) + abs(y - wy), x, y) for y in range(len(rows)) for x in range(len(rows[y])) if rows[y][x] == "."]
+        entry = min(cands)[1:]
+    base = e.go(state, g, n, entry[0], entry[1], "_xf_entry.ss")
+    nm, ex, ey, _ = e.where(base)
+    out = []
+    targets = [("npc", o[4], o[2], o[3], o[5]) for o in objs if o[4] not in ("0x0", "0")]
+    if signs:
+        targets += [("sign", b["script"], b["x"], b["y"], None) for b in md.get("bg_events") or [] if b.get("type") == "sign"]
+    hidden = set()
+    for kind, script, x, y, flag in targets:
+        if flag in vals and e.getflag(base, vals[flag]): hidden.add((x, y))
+    m = {"U": "UP", "D": "DOWN", "L": "LEFT", "R": "RIGHT"}
+    for i, (kind, script, x, y, flag) in enumerate(targets):
+        if (x, y) in hidden and kind == "npc": continue
+        texts, shot = [], f"{prefix}_{i:02d}"
+        for px, py, key in spots_next_to(map_name, x, y) if kind == "npc" else [(x, y + 1, "UP")]:
+            p = bfs_path(map_name, (ex, ey), (px, py))
+            if p is None: continue
+            cmds = [f"loadstate {base}", f"w8 {e.s('gStringVar4'):x} 255"]
+            for c in p: cmds += [f"press {m[c]} 16", "wait 2"]
+            cmds += [f"press {key} 2", "wait 20"]
+            keys = ["A"] + ["B"] * (presses - 1)
+            for j, k in enumerate(keys):
+                cmds += [f"press {k} 4", "wait 100"] + e.text_cmds()
+                if j == 0: cmds.append(f"shot {shot}_1.png")
+            vals_ = [int(l.split(": ")[1], 16) for l in e.run(cmds)]
+            texts = []
+            for j in range(len(keys)):
+                t, bt = e.parse_text(vals_[j * 256:(j + 1) * 256])
+                if t and t not in texts: texts.append(t)
+            if texts: break
+        out.append((kind, script, (x, y), texts, f"{shot}_1.png"))
+    return out
