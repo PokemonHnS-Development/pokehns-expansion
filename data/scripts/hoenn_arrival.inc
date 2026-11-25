@@ -39,6 +39,7 @@ HoennSeek_EventScript_Birch::
 	call Common_EventScript_GiftMon
 	setflag FLAG_HOENN_RECEIVED_MUDKIP
 	msgbox HoennSeek_Text_BirchAfterGift, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_BirchGivesNumbers @ part 16d
 	release
 	end
 HoennSeek_EventScript_BirchNoRoom::
@@ -47,7 +48,7 @@ HoennSeek_EventScript_BirchNoRoom::
 	end
 HoennSeek_EventScript_BirchAfter::
 	goto_if_set FLAG_HOENN_BEAT_BM, HoennSeek_EventScript_BirchAfterBM
-	goto_if_set FLAG_HOENN_NORMAN_CALLED, HoennSeek_EventScript_BirchBMBack
+	goto_if_set FLAG_HOENN_BM_BACK_CALLED, HoennSeek_EventScript_BirchBMBack
 	msgbox HoennSeek_Text_BirchAfter, MSGBOX_DEFAULT
 	release
 	end
@@ -167,9 +168,12 @@ HoennSeek_Text_BirchAfterGift:
 
 HoennSeek_Text_BirchAfter:
 	.string "PROF. BIRCH: BRENDAN and MAY are\n"
-	.string "off exploring somewhere.\p"
+	.string "in KANTO, training to battle RED.\p"
 	.string "They'll be back eventually. They\n"
-	.string "always come home hungry!$"
+	.string "always come home hungry!\p"
+	.string "NORMAN tells me how your GYM battles\n"
+	.string "go. I pass it all on to BRENDAN.\l"
+	.string "Neighbors gossip, you know!$"
 
 HoennSeek_Text_BirchBMBack:
 	.string "PROF. BIRCH: BRENDAN and MAY are\n"
@@ -179,7 +183,9 @@ HoennSeek_Text_BirchBMBack:
 HoennSeek_Text_BirchAfterBM:
 	.string "PROF. BIRCH: You beat BRENDAN and\n"
 	.string "MAY together? Ha! Remarkable.\p"
-	.string "Fieldwork has nothing on that!$"
+	.string "I called PROF. OAK right away.\n"
+	.string "He calls me every week anyway,\l"
+	.string "asking how the JOHTO TRAINER is.$"
 
 HoennSeek_Text_LabWally:
 	.string "WALLY: Oh, hello! You're the trainer\n"
@@ -188,7 +194,7 @@ HoennSeek_Text_LabWally:
 	.string "If you want a real battle, look for\n"
 	.string "BRENDAN and MAY. They're the best\l"
 	.string "trainers in HOENN.\p"
-	.string "They're out exploring right now,\n"
+	.string "They're in KANTO right now,\n"
 	.string "though.\p"
 	.string "Me? I train at the end of VICTORY\n"
 	.string "ROAD. Collect the GYM BADGES first,\l"

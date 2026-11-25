@@ -43,6 +43,10 @@ void HoennPushAbilityList(void);
 u16 HoennCountOtherAbilities(void);
 void HoennBufferAbilitySlot(void);
 void HoennSetAbilitySlot(void);
+// PokéGear (src/hoenn_phone.c, part 16d)
+bool32 HoennTryEventCall(void);
+bool32 HoennIsCallableSpecialSlot(u32 rematchIdx);
+const u8 *HoennPhoneCallText(u16 trainerId, bool32 *newRematchRequest);
 #define HOENN_TRAINER_MON_LEVEL(trainer, level) HoennScaleTrainerMonLevel(trainer, level)
 #else
 #define HOENN_TRAINER_MON_LEVEL(trainer, level) (level)

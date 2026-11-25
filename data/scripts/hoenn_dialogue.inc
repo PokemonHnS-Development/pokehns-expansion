@@ -67,8 +67,10 @@ HoennSeek_Text_MaysMom:
 	.string "MAY's off traveling again.\n"
 	.string "That girl can't sit still for a\l"
 	.string "minute… just like her father.\p"
-	.string "If you run into her, tell her to\n"
-	.string "call home once in a while!$"
+	.string "She does call home, at least. Mostly\n"
+	.string "to ask what the LEAGUE reports say\l"
+	.string "about the JOHTO TRAINER. NORMAN\l"
+	.string "reads her every one. Hehe.$"
 
 HoennSeek_Text_MaysMomFollower:
 	.string "And who's this? Your {STR_VAR_1}?\p"
@@ -81,6 +83,10 @@ HoennSeek_Text_BrendansMom:
 	.string "PROF. BIRCH is out doing fieldwork,\n"
 	.string "as usual. Or he's in his LAB. Or\l"
 	.string "he's lost in the tall grass again.\p"
+	.string "When he IS home, he and NORMAN chat\n"
+	.string "over the fence for hours. And now he\l"
+	.string "measures volcanoes with MAXIE, of\l"
+	.string "all people! Times change.\p"
 	.string "Our BRENDAN is just the same.\n"
 	.string "He and MAY have been rivals since\l"
 	.string "the day they met.\p"

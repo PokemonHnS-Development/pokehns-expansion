@@ -12,6 +12,8 @@
 #include "constants/trainers.h"
 #if IS_HNS
 #include "constants/flags_hns.h"
+#include "constants/hoenn_custom.h"
+#include "hoenn_phone_text.h" // Hoenn & Seek (part 16d)
 #endif
 
 
@@ -282,81 +284,62 @@ static const struct MatchCallStructNPC sStevenMatchCallHeader =
     .textData = sStevenTextScripts
 };
 
-static const u8 gText_MayBrendanMatchCallDesc[] = _("RAD NEIGHBOR");
-
+// Hoenn & Seek (part 16d): May and Brendan are Hoenn & Seek's friends, not
+// Emerald's rivals. Birch gives you both numbers with Mudkip; their lines follow
+// your progress (the highest entry whose flag is set). See src/hoenn_phone.c.
 static const match_call_text_data_t sMayTextScripts[] = {
-    { MatchCall_Text_May1,  ALWAYS_AVAILABLE,                    NO_FLAG_TO_SET },
-    { MatchCall_Text_May2,  FLAG_DEFEATED_AZALEA_TOWN_GYM,      NO_FLAG_TO_SET },
-    { MatchCall_Text_May3,  FLAG_DELIVERED_DEVON_GOODS,          NO_FLAG_TO_SET },
-    { MatchCall_Text_May4,  ALWAYS_AVAILABLE,                    NO_FLAG_TO_SET }, // TODO: was FLAG_GARBAGEFLAG
-    { MatchCall_Text_May5,  FLAG_RECEIVED_HM_STRENGTH,           NO_FLAG_TO_SET },
-    { MatchCall_Text_May6,  FLAG_DEFEATED_ECRUTEAK_CITY_GYM,     NO_FLAG_TO_SET },
-    { MatchCall_Text_May7,  FLAG_DEFEATED_CIANWOOD_GYM,          NO_FLAG_TO_SET },
-    { MatchCall_Text_May8,  FLAG_RECEIVED_CASTFORM,              NO_FLAG_TO_SET },
-    { MatchCall_Text_May9,  FLAG_RECEIVED_RED_OR_BLUE_ORB,       NO_FLAG_TO_SET },
-    { MatchCall_Text_May10, FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT, NO_FLAG_TO_SET },
-    { MatchCall_Text_May11, FLAG_MET_TEAM_AQUA_HARBOR,           NO_FLAG_TO_SET },
-    { MatchCall_Text_May12, FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, NO_FLAG_TO_SET },
-    { MatchCall_Text_May13, FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN, NO_FLAG_TO_SET },
-    { MatchCall_Text_May14, FLAG_DEFEATED_BLACKTHORN_GYM,        NO_FLAG_TO_SET },
-    { MatchCall_Text_May15, FLAG_SYS_GAME_CLEAR,                 NO_FLAG_TO_SET },
+    { HoennSeek_Text_MayPhone0, ALWAYS_AVAILABLE,                NO_FLAG_TO_SET },
+    { HoennSeek_Text_MayPhone1, FLAG_HOENN_CALL_BADGE1,          NO_FLAG_TO_SET },
+    { HoennSeek_Text_MayPhone2, FLAG_HOENN_CALL_BADGE4,          NO_FLAG_TO_SET },
+    { HoennSeek_Text_MayPhone3, FLAG_HOENN_CALL_BADGE8,          NO_FLAG_TO_SET },
+    { HoennSeek_Text_MayPhone4, FLAG_HOENN_STAMP_WALLACE,        NO_FLAG_TO_SET },
+    { HoennSeek_Text_MayPhone5, FLAG_HOENN_BEAT_BM,              NO_FLAG_TO_SET },
+    { HoennSeek_Text_MayPhone6, FLAG_HOENN_CALL_RED,             NO_FLAG_TO_SET },
     MATCH_CALL_TEXT_END
 };
 
-static const struct MatchCallRival sMayMatchCallHeader =
+static const struct MatchCallStructNPC sMayMatchCallHeader =
 {
-    .type = MC_TYPE_RIVAL,
-    .playerGender = MALE,
-    .flag = FLAG_ENABLE_RIVAL_MATCH_CALL,
-    .desc = gText_MayBrendanMatchCallDesc,
-    .name = gText_ExpandedPlaceholder_May,
+    .type = MC_TYPE_NPC,
+    .mapSec = MAPSEC_LITTLEROOT_TOWN,
+    .flag = FLAG_HOENN_BM_PHONE,
+    .desc = COMPOUND_STRING("NORMAN'S GIRL"),
+    .name = COMPOUND_STRING("MAY"),
     .textData = sMayTextScripts
 };
 
 static const match_call_text_data_t sBrendanTextScripts[] = {
-    { MatchCall_Text_Brendan1,  ALWAYS_AVAILABLE,                    NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan2,  FLAG_DEFEATED_AZALEA_TOWN_GYM,      NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan3,  FLAG_DELIVERED_DEVON_GOODS,          NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan4,  ALWAYS_AVAILABLE,                    NO_FLAG_TO_SET }, // TODO: was FLAG_GARBAGEFLAG
-    { MatchCall_Text_Brendan5,  FLAG_RECEIVED_HM_STRENGTH,           NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan6,  FLAG_DEFEATED_ECRUTEAK_CITY_GYM,     NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan7,  FLAG_DEFEATED_CIANWOOD_GYM,          NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan8,  FLAG_RECEIVED_CASTFORM,              NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan9,  FLAG_RECEIVED_RED_OR_BLUE_ORB,       NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan10, FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT, NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan11, FLAG_MET_TEAM_AQUA_HARBOR,           NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan12, FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan13, FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN, NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan14, FLAG_DEFEATED_BLACKTHORN_GYM,        NO_FLAG_TO_SET },
-    { MatchCall_Text_Brendan15, FLAG_SYS_GAME_CLEAR,                 NO_FLAG_TO_SET },
+    { HoennSeek_Text_BrendanPhone0, ALWAYS_AVAILABLE,            NO_FLAG_TO_SET },
+    { HoennSeek_Text_BrendanPhone1, FLAG_HOENN_CALL_BADGE1,      NO_FLAG_TO_SET },
+    { HoennSeek_Text_BrendanPhone2, FLAG_HOENN_CALL_BADGE4,      NO_FLAG_TO_SET },
+    { HoennSeek_Text_BrendanPhone3, FLAG_HOENN_CALL_BADGE8,      NO_FLAG_TO_SET },
+    { HoennSeek_Text_BrendanPhone4, FLAG_HOENN_STAMP_WALLACE,    NO_FLAG_TO_SET },
+    { HoennSeek_Text_BrendanPhone5, FLAG_HOENN_BEAT_BM,          NO_FLAG_TO_SET },
+    { HoennSeek_Text_BrendanPhone6, FLAG_HOENN_CALL_TEAMS,       NO_FLAG_TO_SET },
+    { HoennSeek_Text_BrendanPhone7, FLAG_HOENN_CALL_RED,         NO_FLAG_TO_SET },
     MATCH_CALL_TEXT_END
 };
 
-static const struct MatchCallRival sBrendanMatchCallHeader =
+static const struct MatchCallStructNPC sBrendanMatchCallHeader =
 {
-    .type = MC_TYPE_RIVAL,
-    .playerGender = FEMALE,
-    .flag = FLAG_ENABLE_RIVAL_MATCH_CALL,
-    .desc = gText_MayBrendanMatchCallDesc,
-    .name = gText_ExpandedPlaceholder_Brendan,
+    .type = MC_TYPE_NPC,
+    .mapSec = MAPSEC_LITTLEROOT_TOWN,
+    .flag = FLAG_HOENN_BM_PHONE,
+    .desc = COMPOUND_STRING("BIRCH'S SON"),
+    .name = COMPOUND_STRING("BRENDAN"),
     .textData = sBrendanTextScripts
 };
 
+// Hoenn & Seek (part 16d): Wally registers after his Victory Road battle and is
+// the only special trainer who calls for rematches (src/hoenn_phone.c).
 static const match_call_text_data_t sWallyTextScripts[] = {
-    { MatchCall_Text_Wally1, ALWAYS_AVAILABLE,                    NO_FLAG_TO_SET },
-    { MatchCall_Text_Wally2, FLAG_RUSTURF_TUNNEL_OPENED,          NO_FLAG_TO_SET },
-    { MatchCall_Text_Wally3, FLAG_DEFEATED_ECRUTEAK_CITY_GYM,     NO_FLAG_TO_SET },
-    { MatchCall_Text_Wally4, FLAG_RECEIVED_CASTFORM,              NO_FLAG_TO_SET },
-    { MatchCall_Text_Wally5, FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT, NO_FLAG_TO_SET },
-    { MatchCall_Text_Wally6, FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN, NO_FLAG_TO_SET },
-    { MatchCall_Text_Wally7, FLAG_DEFEATED_WALLY_VICTORY_ROAD,    NO_FLAG_TO_SET },
+    { HoennSeek_Text_WallyPhone0, ALWAYS_AVAILABLE,              NO_FLAG_TO_SET },
+    { HoennSeek_Text_WallyPhone1, FLAG_HOENN_STAMP_WALLACE,      NO_FLAG_TO_SET },
     MATCH_CALL_TEXT_END
 };
 
 static const struct MatchCallLocationOverride sWallyLocationData[] = {
-    { ALWAYS_AVAILABLE,                       MAPSEC_OLIVINE_CITY },   // TODO: was FLAG_GARBAGEFLAG
-    { FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT,    MAPSEC_NONE },
-    { ALWAYS_AVAILABLE,                       MAPSEC_VICTORY_ROAD },   // TODO: was FLAG_GARBAGEFLAG
+    { ALWAYS_AVAILABLE,                       MAPSEC_VICTORY_ROAD },
     { 0xFFFF,                                 MAPSEC_NONE }
 };
 
@@ -364,9 +347,9 @@ static const struct MatchCallWally sWallyMatchCallHeader =
 {
     .type = MC_TYPE_WALLY,
     .mapSec = 0,
-    .flag = FLAG_ENABLE_WALLY_MATCH_CALL,
+    .flag = FLAG_HOENN_WALLY_PHONE,
     .rematchTableIdx = REMATCH_WALLY_VR,
-    .desc = COMPOUND_STRING("{PKMN} LOVER"),
+    .desc = COMPOUND_STRING("GARDEVOIR FAN"),
     .textData = sWallyTextScripts,
     .locationData = sWallyLocationData
 };
@@ -610,8 +593,8 @@ static const struct MatchCallStructTrainer sWallaceMatchCallHeader =
 static const match_call_t sMatchCallHeaders[] = {
     [MC_HEADER_MR_STONE]   = {.npc    = &sMrStoneMatchCallHeader},
     [MC_HEADER_PROF_BIRCH] = {.birch  = &sProfBirchMatchCallHeader},
-    [MC_HEADER_BRENDAN]    = {.rival  = &sBrendanMatchCallHeader},
-    [MC_HEADER_MAY]        = {.rival  = &sMayMatchCallHeader},
+    [MC_HEADER_BRENDAN]    = {.npc    = &sBrendanMatchCallHeader}, // Hoenn & Seek: NPC contacts (part 16d)
+    [MC_HEADER_MAY]        = {.npc    = &sMayMatchCallHeader},
     [MC_HEADER_WALLY]      = {.wally  = &sWallyMatchCallHeader},
     [MC_HEADER_NORMAN]     = {.leader = &sNormanMatchCallHeader},
     [MC_HEADER_MOM]        = {.npc    = &sMomMatchCallHeader},

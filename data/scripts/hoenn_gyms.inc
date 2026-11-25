@@ -246,7 +246,7 @@ HoennSeek_EventScript_HallOfFameDone::
 	call HoennSeek_EventScript_ResetHoennE4
 	clearflag FLAG_ENTERED_ELITE_FOUR
 	msgbox HoennSeek_Text_HallOfFameDone, MSGBOX_DEFAULT
-	call HoennSeek_EventScript_NormanCall @ part 16a: Brendan & May are back
+	call HoennSeek_EventScript_BMBackCall @ part 16d: May calls, they're back
 	closemessage
 	setrespawn HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE
 	warp MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F, 9, 10
@@ -262,6 +262,9 @@ HoennSeek_Text_GymRareCandies:
 HoennSeek_Text_NormanGate:
 	.string "NORMAN: So you're the TRAINER from\n"
 	.string "JOHTO that everyone's talking about.\p"
+	.string "Every GYM sends its results to the\n"
+	.string "LEAGUE, and I read them all. MAY\l"
+	.string "calls asking about you every week.\p"
 	.string "You have {STR_VAR_1} HOENN BADGES.\n"
 	.string "I only battle TRAINERS with four.\p"
 	.string "It's how I've always run this GYM.\n"

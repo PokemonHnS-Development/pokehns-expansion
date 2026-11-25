@@ -17,7 +17,13 @@ HoennSeek_EventScript_OakHoennStatus::
 	return
 
 HoennSeek_EventScript_OakSilverOpen::
+	goto_if_defeated TRAINER_RED_HNS, HoennSeek_EventScript_OakRedBeaten
 	msgbox HoennSeek_Text_OakSilverOpen, MSGBOX_DEFAULT
+	return
+
+@ Part 16d: after Red, Oak has already told Birch and Norman (May's call says so).
+HoennSeek_EventScript_OakRedBeaten::
+	msgbox HoennSeek_Text_OakRedBeaten, MSGBOX_DEFAULT
 	return
 
 @ ---------------------------------------------------------------- Vermilion port (HnS)
@@ -177,7 +183,15 @@ HoennSeek_Text_OakGoToHoenn:
 	.string "VERMILION CITY port, and the S.S.\l"
 	.string "TIDAL will take you to HOENN.\p"
 	.string "Prove yourself in HOENN, and\n"
-	.string "MT.SILVER will be open.$"
+	.string "MT.SILVER will be open.\p"
+	.string "BIRCH and I talk every week, so\n"
+	.string "I'll hear how you're doing!$"
+
+HoennSeek_Text_OakRedBeaten:
+	.string "OAK: You beat RED! I phoned BIRCH\n"
+	.string "and NORMAN the moment I heard.\p"
+	.string "Their kids will be calling you\n"
+	.string "any minute now, I'm sure!$"
 
 HoennSeek_Text_OakSilverOpen:
 	.string "OAK: You beat BRENDAN and MAY, the\n"
