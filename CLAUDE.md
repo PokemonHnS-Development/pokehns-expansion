@@ -39,6 +39,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 14 (trainer curation 506→211, cap back to 864; Devon Scope backtrack, Rusturf dig, TV news) | 32,461,540 / 1,067 KB | 32,609,716 / 922 KB |
 | Part 13b (badges wording, gym prerequisites, Rare Candies, League + Wallace, rematches) | 32,465,204 / 1,063 KB | 32,613,284 / 919 KB |
 | Part 15 (Hoenn wild levels 35–70, 36 night tables, 41 items upgraded) | 32,467,444 / 1,061 KB | 32,615,540 / 917 KB |
+| Part 16a (Aqua/Magma quests, Maxie + Archie double, Norman's call, Brendan & May; 220 trainers, cap 880) | 32,480,596 / 1,048 KB | 32,628,660 / 904 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -70,7 +71,7 @@ Read the roadmap entry for the part you're working on before starting.
   - Oak (16 badges) gives `ITEM_TIDAL_TICKET` (key item after `ITEM_HM09_SLOT`) instead of opening Mt. Silver.
   - Vermilion's sailor menu gets SLATEPORT CITY. It's a scrolling `dynmultichoice` because seven entries don't fit HnS's fixed multichoice.
   - Slateport and Lilycove harbor attendants (map.json script swapped) sail to Vermilion, the other harbor, or HnS's Battle Frontier. No S.S. Tidal interior ride. Arrivals: Hoenn harbors (8,11), Vermilion port (8,9).
-  - Mt. Silver: `ReceptionGate_hns` OnTransition hides the Silver guard and sets `VAR_ROUTE28_SCIENTIST` = 1 once `FLAG_HOENN_STAMP_WALLACE` is set. Oak's later dialogue reflects it.
+  - Mt. Silver: `ReceptionGate_hns` OnTransition hides the Silver guard and sets `VAR_ROUTE28_SCIENTIST` = 1 once `FLAG_HOENN_BEAT_BM` is set (Wallace's badge until part 16a). Oak's later dialogue reflects it.
 - **Stamps and gym scaling (part 9):**
   - Hoenn gym scripts set and check `FLAG_HOENN_STAMP_GYM_1..8` instead of `FLAG_BADGE0x_GET` (43 references in 20 kept Hoenn maps were rewritten once; new Emerald scripts brought in later need the same rewrite).
   - Trainer card: the back shows the 8 stamps (Emerald's badge art, loaded after HnS's 16 badges at BG3 tile 192+64) on tile rows 8–9, above the Kanto row. Rows 8–9 only overlap the link-trades stat line.
@@ -107,7 +108,7 @@ Read the roadmap entry for the part you're working on before starting.
   - POTENTIAL: one IV to 31 for 1 Star Piece (the list shows current IVs). ABILITY: the species' other regular ability for 1, its hidden ability for 3. Star Pieces: a handful on Hoenn/Johto routes, and wild Staryu/Starmie can hold them.
   - **Dynamic menus free every entry's name when they close**, so anything pushed with `MultichoiceDynamic_PushElement` must be an `Alloc`ed copy, never a pointer into ROM (that hung the ability list).
 - **Trainer curation (part 14):** `data/hoenn/trainer_curation.json` gives every Hoenn trainer a role (defaults by class, overrides by name, `_Gym` maps always `keep`). Run `tools/hoenn/gen_hoenn_trainers.py` **before** `gen_hoenn_ids.py`.
-  - Roles: `keep` (gyms, E4, Winstrates, Wally, Steven, special scripts), `battle` (clueless, Emerald team), `hopeful` (stamp curve − 14), `strong` (curve − 6), `fake:follower|autograph|cheer|foresee|song`, `npc`, `drop` (hidden story trainers, S.S. Tidal). 211 keep an ID (653–863), so `MAX_TRAINERS_COUNT_HNS` is 864 again.
+  - Roles: `keep` (gyms, E4, Winstrates, Wally, Steven, special scripts), `battle` (clueless, Emerald team), `hopeful` (stamp curve − 14), `strong` (curve − 6), `fake:follower|autograph|cheer|foresee|song`, `npc`, `drop` (hidden story trainers, S.S. Tidal). 211 kept an ID (653–863); part 16a brought back 9 (team leaders and admins, Brendan, May), so 220.
   - The generator writes `data/scripts/hoenn_trainers.inc`, swaps object scripts in map.json (NPCs also get `TRAINER_TYPE_NONE`, sight 0), and writes `data/hoenn/trainer_roles.json` (read by `gen_hoenn_ids.py`) and `src/data/hoenn_scaled_trainers.h` (read by `src/hoenn_scaling.c`). `data/hoenn/trainer_objects.json` records each object's **original** script so re-runs are idempotent; delete it only on a clean tree.
   - `gen_hoenn_ids.py` fully evolves hopeful/strong teams and drops their Emerald movesets; `data/hoenn/trainer_parties.party` replaces teams outright (gyms, leaders, Wally VR, Steven). Gym levels there are placeholders; scaling keeps the gaps.
   - **Fake fights** use the engine's sight dry run: a script that reaches a non-`trainerbattle` effect makes the trainer walk up and run it. Once done (flag `HOENN_FAKE_FLAGS_START + n`, 0x1F00+, above all trainer flags), the talk path starts with `callnative HoennSeek_EndScriptIfSeeing, requests_effects=1`, which ends only the sight dry run (`ctx->breakOnTrainerBattle`). The talk dry run (`Script_HasNoEffect`) must keep going, or talking does nothing.
@@ -120,6 +121,14 @@ Read the roadmap entry for the part you're working on before starting.
   - E4 (Lv 76–81) and Wallace (Lv 80–84) have fixed teams in `trainer_parties.party`.
   - **Rematches:** after Wallace, talking to a leader offers a rematch (`HoennSeek_EventScript_Rematch<Leader>`, which clears the trainer flag). `HoennGymAceLevel` returns 85 once `FLAG_HOENN_STAMP_WALLACE` is set, so leaders and gym trainers scale up.
   - `gen_hoenn_ids.py` ignores `FLAG_HOENN_*` / `VAR_HOENN_*` (hand-defined).
+- **Teams and rivals (part 16a):** scripts in `data/scripts/hoenn_teams.inc`, flags `FLAG_HOENN_AQUA_QUEST` … `FLAG_HOENN_BM_EGGS` (custom 0x18–0x24). Design: `claude/hns-hoenn-aqua-magma-quests.md`.
+  - **Aqua:** Matt (Slateport harbor) clears `FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_2_SCANNER`, so the Scanner ball appears in the ship's hidden floor rooms. Archie waits in **Aqua Hideout B1F** (30,3): 1F is all water. Handing over the Scanner starts his battle, then Damp Rock + 5 Dive Balls. Shelly (Weather Institute 1F) points to Matt.
+  - **Magma:** Tabitha (Magma Hideout 1F) → the station's Torkoal on the Fiery Path past the boulders (9,4; its object flag is `FLAG_HOENN_TORKOAL_FOUND`), a scaled wild battle with `FLAG_NO_WILD_CATCHING` → back to Tabitha (`FLAG_HOENN_MAGMA_REPORT`) → Maxie at Mt. Chimney's summit: battle, Heat Rock + 3 Lava Cookies.
+  - Finishing both clears `FLAG_HOENN_HIDE_SUMMIT_LEADERS`: Maxie + Archie at the Mt. Pyre summit, a `trainerbattle_two_trainers` double (Drought Torkoal vs Drizzle Pelipper; Archie's half is `TRAINER_SHELLY_SEAFLOOR_CAVERN` renamed in `trainer_parties.party`). Afterwards they mention the Kanto tower (Embedded Tower, part 18+). Every team battle is repeatable: the scripts clear the trainer flag first.
+  - **Norman's call:** `HoennSeek_EventScript_HallOfFameDone` calls `HoennSeek_EventScript_NormanCall` once (HnS's `setspeaker` + `pokenavcall` phone window). It shows Brendan & May outside in Littleroot (`FLAG_HOENN_HIDE_BM_OUTSIDE`).
+  - **Brendan & May:** a two-trainer double (3 each, Lv 85–87). The first win sets `FLAG_HOENN_BEAT_BM`, gives the Treecko and Torchic eggs (needs 2 free slots; otherwise they offer them again at home) and moves them home (`FLAG_HOENN_HIDE_BM_HOME`), where either one offers a double rematch.
+  - **Mt. Silver now opens on `FLAG_HOENN_BEAT_BM`**, not Wallace's badge (`hoenn_ferry.inc`; Oak's and the guard's text say "prove yourself in Hoenn").
+  - `gen_hoenn_newgame.py` accepts `FLAG_HOENN_*` in the overrides (the three hide flags are set at new game); `gen_hoenn_ids.py` now scans `data/scripts/hoenn_*.inc` too.
 - **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
@@ -135,9 +144,9 @@ Read the roadmap entry for the part you're working on before starting.
   - Reached through hooks in `GetFlagPointer`/`GetVarPointer` (`src/event_data.c`). Cleared in `NewGameInitData`. SaveBlock3 is 564 of 1,624 bytes.
   - Hidden-item flags must stay below 0x20E9 (13-bit offset from `FLAG_HIDDEN_ITEMS_START`); the generator puts them first.
 - **Trainers.**
-  - Hoenn trainers get IDs from `HOENN_TRAINERS_START` (653) up: 211 since part 14, 653–863.
+  - Hoenn trainers get IDs from `HOENN_TRAINERS_START` (653) up: 220 since part 16a, 653–872.
   - Their "defeated" flags come from `TRAINER_FLAG_ID(id)` (used in `battle_setup.c`, `debug.c`), not `TRAINER_FLAGS_START + id`.
-  - `MAX_TRAINERS_COUNT_HNS` is set by the generator (864 since part 14; above that it moves `TRAINER_PARTNER()` IDs and grows `sTrainerSlides`).
+  - `MAX_TRAINERS_COUNT_HNS` is set by the generator (880 since part 16a; it moves `TRAINER_PARTNER()` IDs and grows `sTrainerSlides`).
 - **Remap rules:**
   - Remapped:
     - Emerald names that resolved to 0.
@@ -176,7 +185,7 @@ Read the roadmap entry for the part you're working on before starting.
 - **Touch upstream HnS files as little as possible**, so future HnS fixes merge cleanly. Put new code and data in new `hoenn`-named files (`tools/hoenn/`, `src/hoenn_*.c`, `data/maps/*_hoenn/`, etc.) and keep edits to shared files to small hooks.
 - Work on a `part-NN-<slug>` branch off `hoenn` and open a PR into `hoenn`. Don't commit to `master` (it mirrors upstream).
 - **Emulator tests:** a libmgba harness (not in the repo yet) plays scripted input, takes screenshots and reads/writes memory. Useful recipes:
-  - Debug menu: hold R + Start. Warp is Utilities → 2nd item; numbers use ↑/↓ for the value and → for the next digit.
+  - Debug menu: hold R + Start. Scripts are main item 6, then Script N; a test-only ROM can put any script in `Debug_EventScript_Script_7/8` (restore `debug.inc` afterwards). Warp is Utilities → 2nd item; numbers use ↑/↓ for the value and → for the next digit.
   - Flags & Vars → items 14–16 turn off collision, encounters and trainer sight.
   - `tools/hoenn/emu/mkbase.sh ROM OUT.ss` (run from the harness directory) makes a new game with the debug party, all badges, HnS's HM-received/Headbutt/Running Shoes flags, and the debug menu open. The debug party (`src/data/debug_trainers.party`, debug builds only) is Lapras (lead), Machamp, Pidgeot, Blissey, Miltank and Wobbuffet; between them they know every move with an overworld use: the 9 HMs, Headbutt, Secret Power, Dig, Teleport, Sweet Scent, Milk Drink and Soft-Boiled.
   - Memory (2.0.6 debug build): SaveBlock1 flags at `gSaveBlock1Ptr + 0x198C`; SaveBlock2 battle style is bit 1 of byte `+21`; Hoenn vars at `gSaveBlock3Ptr + 0x132`; enemy battler HP at `gBattleMons + 136 + 42`.

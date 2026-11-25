@@ -104,6 +104,9 @@ def evolve_block(block, evo, iv):
 def main():
     kept = json.load(open(os.path.join(ROOT, "data/hoenn/maps.json")))["items"]
     hoenn_files = [f"data/maps/{m}/{x}" for m in kept for x in ("scripts.inc", "map.json")]
+    # Hoenn & Seek's own scripts (part 16: they start battles with Emerald trainer IDs too).
+    hoenn_files += sorted(os.path.relpath(p, ROOT) for p in glob.glob(os.path.join(ROOT, "data/scripts/hoenn_*.inc"))
+                          if not p.endswith("hoenn_new_game.inc"))
     hns_maps = [os.path.relpath(os.path.dirname(p), ROOT) for p in glob.glob(os.path.join(ROOT, "data/maps/*/map.json"))
                 if json.load(open(p)).get("game_version") == "hns"]
     hns_map_files = [f"{d}/{x}" for d in hns_maps for x in ("scripts.inc", "map.json")]

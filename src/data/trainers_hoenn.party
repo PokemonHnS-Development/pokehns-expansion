@@ -213,6 +213,40 @@ Milotic
 Level: 51
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
+=== TRAINER_ARCHIE ===
+Name: ARCHIE
+Class: Aqua Leader
+Pic: Aqua Leader Archie
+Gender: Male
+Music: Aqua
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+
+Mightyena
+Level: 80
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Crobat
+Level: 80
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Tentacruel
+Level: 81
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Wailord
+Level: 81
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Kingdra
+Level: 81
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Sharpedo @ Life Orb
+Level: 82
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
 === TRAINER_ASHLEY ===
 Name: ASHLEY
 Class: Picnicker
@@ -461,6 +495,49 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Shiftry
 Level: 28
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+=== TRAINER_BRENDAN_LILYCOVE_MUDKIP ===
+Name: BRENDAN
+Class: Rival
+Pic: Brendan
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Smart Trainer
+Items: Full Restore / Full Restore
+
+Sceptile @ Life Orb
+Ability: Overgrow
+Level: 87
+Nature: Timid
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Leaf Storm
+- Dragon Pulse
+- Focus Blast
+- Protect
+
+Manectric @ Life Orb
+Ability: Lightning Rod
+Level: 85
+Nature: Timid
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Flamethrower
+- Snarl
+- Protect
+
+Absol @ Scope Lens
+Ability: Super Luck
+Level: 85
+Nature: Jolly
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Night Slash
+- Psycho Cut
+- Stone Edge
+- Sucker Punch
 
 === TRAINER_BRENDEN ===
 Name: BRENDEN
@@ -2492,6 +2569,32 @@ Delcatty
 Level: 51
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
+=== TRAINER_MATT ===
+Name: MATT
+Class: Aqua Admin
+Pic: Aqua Admin M
+Gender: Male
+Music: Aqua
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+
+Mightyena
+Level: 78
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
+Crobat
+Level: 78
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
+Hariyama
+Level: 79
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
+Sharpedo @ Life Orb
+Level: 80
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
 === TRAINER_MAURA ===
 Name: MAURA
 Class: Psychic
@@ -2508,6 +2611,106 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 Alakazam
 Level: 51
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
+=== TRAINER_MAXIE_MOSSDEEP ===
+Name: MAXIE
+Class: Magma Leader
+Pic: Magma Leader Maxie
+Gender: Male
+Music: Magma
+Double Battle: Yes
+AI: Smart Trainer
+Items: Full Restore / Full Restore
+
+Torkoal @ Heat Rock
+Ability: Drought
+Level: 85
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Mightyena
+Level: 85
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Camerupt @ Life Orb
+Level: 86
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+=== TRAINER_MAXIE_MT_CHIMNEY ===
+Name: MAXIE
+Class: Magma Leader
+Pic: Magma Leader Maxie
+Gender: Male
+Music: Magma
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+
+Mightyena
+Level: 80
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Crobat
+Level: 80
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Weezing
+Level: 81
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Torkoal
+Level: 81
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Donphan
+Level: 81
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Camerupt @ Life Orb
+Level: 82
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+=== TRAINER_MAY_LILYCOVE_MUDKIP ===
+Name: MAY
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Smart Trainer
+Items: Full Restore / Full Restore
+
+Blaziken @ Life Orb
+Ability: Speed Boost
+Level: 87
+Nature: Adamant
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flare Blitz
+- Close Combat
+- Knock Off
+- Protect
+
+Glaceon @ Choice Specs
+Ability: Ice Body
+Level: 85
+Nature: Modest
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Blizzard
+- Ice Beam
+- Shadow Ball
+- Hyper Voice
+
+Blastoise @ White Herb
+Ability: Torrent
+Level: 85
+Nature: Modest
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shell Smash
+- Hydro Pump
+- Ice Beam
+- Dark Pulse
 
 === TRAINER_MEL_AND_PAUL ===
 Name: MEL & PAUL
@@ -3218,6 +3421,55 @@ Hariyama
 Level: 21
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
+=== TRAINER_SHELLY_SEAFLOOR_CAVERN ===
+Name: ARCHIE
+Class: Aqua Leader
+Pic: Aqua Leader Archie
+Gender: Male
+Music: Aqua
+Double Battle: Yes
+AI: Smart Trainer
+Items: Full Restore / Full Restore
+
+Pelipper @ Damp Rock
+Ability: Drizzle
+Level: 85
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Crobat
+Level: 85
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Sharpedo @ Life Orb
+Level: 86
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+=== TRAINER_SHELLY_WEATHER_INSTITUTE ===
+Name: SHELLY
+Class: Aqua Admin
+Pic: Aqua Admin F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer
+Items: Full Restore / Full Restore
+
+Mightyena
+Level: 78
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
+Muk
+Level: 78
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
+Tentacruel
+Level: 79
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
+Sharpedo @ Focus Sash
+Level: 80
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
 === TRAINER_SIDNEY ===
 Name: SIDNEY
 Class: Elite Four
@@ -3344,6 +3596,32 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 Medicham
 Level: 51
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
+=== TRAINER_TABITHA_MAGMA_HIDEOUT ===
+Name: TABITHA
+Class: Magma Admin
+Pic: Magma Admin
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Smart Trainer
+Items: Full Restore / Full Restore
+
+Mightyena
+Level: 78
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
+Crobat
+Level: 78
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
+Weezing
+Level: 79
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
+Camerupt @ Charcoal
+Level: 80
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 
 === TRAINER_TAKAO ===
 Name: TAKAO

@@ -16,7 +16,8 @@ src = rd("data/scripts/new_game.inc")
 block = src[src.index("EventScript_ResetAllMapFlags::"):src.index("EventScript_ResetAllMapFlagsHnS::")]
 emerald = re.findall(r"^\s*setflag (\w+)", block, re.M)
 report = json.loads(rd("data/hoenn/remap_report.json"))["flags"]
-owned = lambda f: report.get(f, "").startswith("remapped")
+# FLAG_HOENN_* are hand-defined in constants/hoenn_custom.h, inside the Hoenn block.
+owned = lambda f: report.get(f, "").startswith("remapped") or f.startswith("FLAG_HOENN_")
 keep = [f for f in emerald if owned(f)]
 ov = json.loads(rd("data/hoenn/newgame_overrides.json"))
 for f in ov.get("clear", []) + ov.get("set", []):
