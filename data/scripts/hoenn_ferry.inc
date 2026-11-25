@@ -164,6 +164,9 @@ HoennSeek_Text_OakTicket:
 HoennSeek_Text_OakTicketExplain:
 	.string "OAK: The S.S. TIDAL sails from\n"
 	.string "VERMILION CITY to SLATEPORT CITY.\p"
+	.string "One of BIRCH's aides will meet you\n"
+	.string "at the harbor. BIRCH has something\l"
+	.string "for you, too.\p"
 	.string "HOENN has a LEAGUE of its own, and\n"
 	.string "its CHAMPION is a man named WALLACE.\p"
 	.string "Prove yourself in HOENN, and I'll\n"
@@ -178,7 +181,7 @@ HoennSeek_Text_OakGoToHoenn:
 
 HoennSeek_Text_OakSilverOpen:
 	.string "OAK: You beat BRENDAN and MAY, the\n"
-	.string "pair who challenged RED himself!\p"
+	.string "pair who took on RED himself!\p"
 	.string "As promised, MT.SILVER is open to\n"
 	.string "you. Go up to INDIGO PLATEAU, and\l"
 	.string "you can reach it from there.$"

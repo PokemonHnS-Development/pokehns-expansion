@@ -1,6 +1,11 @@
 SlateportCity_Harbor_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SlateportCity_Harbor_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SlateportCity_Harbor_OnFrame @ Hoenn & Seek: Birch's aide
 	.byte 0
+
+SlateportCity_Harbor_OnFrame:
+	map_script_2 VAR_HOENN_AIDE_STATE, 0, HoennSeek_EventScript_SlateportAideGreet
+	.2byte 0
 
 SlateportCity_Harbor_OnTransition:
 	setescapewarp MAP_SLATEPORT_CITY, 28, 13

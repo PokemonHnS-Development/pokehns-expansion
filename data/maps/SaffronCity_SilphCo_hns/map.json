@@ -38,7 +38,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SaffronCity_SilphCo_EventScript_Steven",
+      "script": "HoennSeek_EventScript_SilphSteven",
       "flag": "FLAG_GOT_HOENN_STARTER"
     },
     {

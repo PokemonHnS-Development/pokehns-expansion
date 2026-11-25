@@ -712,6 +712,7 @@ gSpecials::
 	@ Hoenn & Seek
 	def_special HoennSetupScaledWildBattle
 	def_special HoennGetStampCount
+	def_special HoennGiveShinyEgg
 	def_special HoennBufferFollower
 	def_special HoennPushStoneList
 	def_special HoennStoneFromIndex

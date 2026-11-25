@@ -42,6 +42,9 @@
 #define FLAG_HOENN_HIDE_BM_HOME          (HOENN_CUSTOM_FLAGS_START + 0x22) // set at new game
 #define FLAG_HOENN_BEAT_BM               (HOENN_CUSTOM_FLAGS_START + 0x23) // opens Mt. Silver
 #define FLAG_HOENN_BM_EGGS               (HOENN_CUSTOM_FLAGS_START + 0x24)
+// Arrival gifts (part 16b)
+#define FLAG_HOENN_RECEIVED_MUDKIP       (HOENN_CUSTOM_FLAGS_START + 0x25) // also hides Birch's aide at the Slateport harbor
+#define FLAG_HOENN_HIDE_LAB_WALLY        (HOENN_CUSTOM_FLAGS_START + 0x26) // Wally leaves the lab after you talk to him
 #define HOENN_CUSTOM_FLAGS_END       (HOENN_CUSTOM_FLAGS_START + 0x3F)
 
 // Fake fights (part 14): one "already happened" flag each, numbered by
@@ -53,5 +56,6 @@
 // Vars (0x7070-0x707F)
 #define VAR_HOENN_NEWS               (HOENN_CUSTOM_VARS_START + 0x00) // next HOENN TV news item (part 14)
 #define VAR_HOENN_E4_STATE           (HOENN_CUSTOM_VARS_START + 0x01) // Hoenn Elite Four progress (VAR_ELITE_4_STATE is HnS's)
+#define VAR_HOENN_AIDE_STATE         (HOENN_CUSTOM_VARS_START + 0x02) // 0: Birch's aide greets you at the Slateport harbor (part 16b)
 
 #endif // GUARD_CONSTANTS_HOENN_CUSTOM_H
