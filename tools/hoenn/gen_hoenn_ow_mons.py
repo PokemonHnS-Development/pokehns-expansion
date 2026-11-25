@@ -9,11 +9,16 @@ atmosphere and on routes to show what lives there. This does the same for Hoenn:
   mons (FLAG_DAY_POKEMON) and night mons (FLAG_NIGHT_POKEMON) sharing tiles;
 - towns get the hand-picked mons in data/hoenn/ow_mons.json.
 
-Spots are chosen from the layout: an open 3x3 of the same kind of tile (so a mon that
-wanders one step never blocks a path or leaves its terrain), away from warps, signs,
-triggers, map edges, other objects and trainers' lines of sight, and never more than 9
-objects (11 in towns) within one screen. Generated objects run HoennSeek_EventScript_OWMon (cry); the
-script name is how re-runs find and replace them. Placement is deterministic per map.
+Spots are scenery the player can't reach (part 20a, after Bryan's review): roofs, cliff
+tops, fenced-off patches, rocks, water behind rocks. A flood fill from warps, map edges and
+objects over passable tiles marks what's reachable; a mon's tile must be out of reach and
+not next to a reachable tile (so you can't walk up to it), with no top-layer graphics (a
+treetop or roof edge would hide it) and no reachable tile two below (a wall face). They
+stay on their tile and animate (walk in place, look around, turn); in an enclosed open patch
+they can also roam a step. Spots also avoid warps, signs, triggers and other objects, and
+never more than 9 objects (11 in towns) share a screen. Sea birds from a surf table perch on
+rocks when no water is out of reach. Generated objects run HoennSeek_EventScript_OWMon (cry);
+the script name is how re-runs find and replace them. Placement is deterministic per map.
 """
 import json, os, random, re, struct, zlib
 
@@ -40,7 +45,8 @@ MB = behaviors()
 GRASS = {MB[n] for n in ("MB_TALL_GRASS", "MB_LONG_GRASS", "MB_ASHGRASS")}
 LAND = GRASS | {MB[n] for n in ("MB_NORMAL", "MB_SHORT_GRASS", "MB_SAND", "MB_CAVE", "MB_FOOTPRINTS",
                                 "MB_INDOOR_ENCOUNTER", "MB_MOUNTAIN_TOP")}
-WATER = {MB[n] for n in ("MB_POND_WATER", "MB_OCEAN_WATER")}
+WATER = {MB[n] for n in ("MB_POND_WATER", "MB_OCEAN_WATER", "MB_DEEP_WATER", "MB_SOOTOPOLIS_DEEP_WATER")}
+FLYERS = {"SPECIES_WINGULL", "SPECIES_PELIPPER", "SPECIES_SWABLU", "SPECIES_ALTARIA", "SPECIES_TAILLOW", "SPECIES_SWELLOW"}
 
 
 def tileset_attrs():
@@ -87,8 +93,7 @@ def grid(layout_id):
             else:
                 i = mt - npri
                 attr, cov = (sec[i], scov[i]) if i < len(sec) else (0, True)
-            # a covered tile counts as blocked for placement
-            cells[x, y] = (col or (2 if cov else 0), elev, attr & 0xFF)
+            cells[x, y] = (col, elev, attr & 0xFF, cov)
     return w, h, cells
 
 
@@ -184,17 +189,37 @@ def main():
                     blocked.add((x + d, y))
                     blocked.add((x, y + d))
 
-        def good(xx, yy, elev, kind):
-            col, e, b = cells[xx, yy]
-            return not col and e == elev and b in (WATER if kind == "water" else LAND)
+        # Tiles the player can reach: flood fill over passable tiles (land and surfable water)
+        # from warps, map edges and existing objects. Mons go where the player can't.
+        reach, todo = set(), []
+        seeds = [(wp["x"], wp["y"]) for wp in m.get("warp_events", [])] + [(int(o["x"]), int(o["y"])) for o in objs]
+        seeds += [(x, y) for (x, y) in cells if (x in (0, w - 1) or y in (0, h - 1))]
+        for xy in seeds:
+            if xy in cells and not cells[xy][0] and xy not in reach:
+                reach.add(xy)
+                todo.append(xy)
+        while todo:
+            x, y = todo.pop()
+            for nxt in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                if nxt in cells and nxt not in reach and not cells[nxt][0]:
+                    reach.add(nxt)
+                    todo.append(nxt)
 
-        def open_spot(x, y, kind, full=False):
-            """The tile and its 4 neighbours are open (full: the whole 3x3, needed to wander)."""
-            if (x, y) in blocked or x < 3 or y < 3 or x >= w - 3 or y >= h - 3:
+        def near_reach(x, y):
+            return any(n in reach for n in ((x, y), (x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)))
+
+        def scenery_spot(x, y, kind):
+            """Out of reach and out of talking range: a roof, a cliff top, a fenced-off patch,
+            water behind rocks. Not a tile with top-layer graphics (treetops, roof edges hide
+            the sprite), and not a wall face (a reachable tile two below)."""
+            if (x, y) in blocked or x < 2 or y < 2 or x >= w - 2 or y >= h - 2:
                 return False
-            elev = cells[x, y][1]
-            ring = [(x + dx, y + dy) for dx in (-1, 0, 1) for dy in (-1, 0, 1) if full or not (dx and dy)]
-            return all(good(xx, yy, elev, kind) for xx, yy in ring)
+            col, e, b, cov = cells[x, y]
+            if cov or near_reach(x, y) or (x, y + 2) in reach:
+                return False
+            if kind == "water":
+                return b in WATER
+            return b not in WATER and b not in (MB["MB_WATERFALL"],)
 
         limit = 11 if is_town else 9  # town counts include story objects that are hidden after Emerald
 
@@ -204,12 +229,9 @@ def main():
         tiles = {k: sum(1 for c in cells.values() if not c[0] and c[2] in (WATER if k == "water" else LAND)) for k in ("land", "water")}
         spots = {}
         for k in ("land", "water"):
-            cand = sorted(xy for xy in cells if open_spot(*xy, k))
-            grass = [xy for xy in cand if cells[xy][2] in GRASS]
-            rest = [xy for xy in cand if cells[xy][2] not in GRASS]
-            rng.shuffle(grass)
-            rng.shuffle(rest)
-            spots[k] = rest + grass  # take() pops from the end: grass first
+            cand = sorted(xy for xy in cells if scenery_spot(*xy, k))
+            rng.shuffle(cand)
+            spots[k] = cand
 
         def take(kind):
             while spots[kind]:
@@ -222,13 +244,15 @@ def main():
             return None
 
         def add(sp, x, y, flag, kind):
-            wander_ok = open_spot(x, y, kind, full=True) or (x, y) in blocked and all(
-                good(x + dx, y + dy, cells[x, y][1], kind) for dx in (-1, 0, 1) for dy in (-1, 0, 1))
-            mv = rng.choice(["MOVEMENT_TYPE_WANDER_AROUND", "MOVEMENT_TYPE_LOOK_AROUND"] if kind == "water" else
-                            ["MOVEMENT_TYPE_WANDER_AROUND", "MOVEMENT_TYPE_WANDER_AROUND", "MOVEMENT_TYPE_LOOK_AROUND",
-                             "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN", "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT"])
-            if mv == "MOVEMENT_TYPE_WANDER_AROUND" and not wander_ok:
-                mv = "MOVEMENT_TYPE_LOOK_AROUND"
+            # mons stay on their tile and animate: walk in place, look around, turn
+            free = not cells[x, y][0] and all(
+                (x + dx, y + dy) in cells and not cells[x + dx, y + dy][0] and not near_reach(x + dx, y + dy)
+                and cells[x + dx, y + dy][1] == cells[x, y][1] for dx in (-1, 0, 1) for dy in (-1, 0, 1))
+            moves = ["MOVEMENT_TYPE_WALK_IN_PLACE_DOWN", "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN", "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+                     "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT", "MOVEMENT_TYPE_LOOK_AROUND", "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT"]
+            if free:  # an enclosed open patch: it can roam a step
+                moves += ["MOVEMENT_TYPE_WANDER_AROUND"] * 2
+            mv = rng.choice(moves)
             r = 1 if mv == "MOVEMENT_TYPE_WANDER_AROUND" else 0
             m["object_events"].append({
                 "graphics_id": "OBJ_EVENT_GFX_MON_BASE+" + sp, "x": x, "y": y, "elevation": 0,
@@ -260,6 +284,14 @@ def main():
                 if len(m["object_events"]) > 61:
                     break
                 xy = take(kind)
+                if not xy and kind == "water":
+                    # no water out of reach: sea birds perch on rocks instead
+                    birds = [sw for sw in dw if sw[0] in FLYERS]
+                    if not birds:
+                        break
+                    dw, nw = birds, ([sw for sw in nw if sw[0] in FLYERS] or None) if nw else None
+                    kind = "land"
+                    xy = take(kind)
                 if not xy:
                     break
                 sd = dw[i][0] if i < len(dw) else pick(rng, dw)

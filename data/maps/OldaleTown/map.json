@@ -85,45 +85,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OldaleTown_EventScript_Rival",
       "flag": "FLAG_HIDE_OLDALE_TOWN_RIVAL"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ZIGZAGOON",
-      "x": 12,
-      "y": 11,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "HoennSeek_EventScript_OWMon",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TAILLOW",
-      "x": 9,
-      "y": 4,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "HoennSeek_EventScript_OWMon",
-      "flag": "FLAG_DAY_POKEMON"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HOOTHOOT",
-      "x": 9,
-      "y": 4,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "HoennSeek_EventScript_OWMon",
-      "flag": "FLAG_NIGHT_POKEMON"
     }
   ],
   "warp_events": [
