@@ -54,10 +54,12 @@ MossdeepCity_Gym_EventScript_SetSwitch4Metatiles::
 	end
 
 MossdeepCity_Gym_EventScript_TateAndLiza::
+	call HoennSeek_EventScript_TateAndLizaGate @ Hoenn & Seek (13b): Cozmo's meteorite first
 	trainerbattle_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaIntro, MossdeepCity_Gym_Text_TateAndLizaDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, MossdeepCity_Gym_EventScript_TateAndLizaDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_TateAndLizaRematch
 	goto_if_unset FLAG_RECEIVED_TM_CALM_MIND, MossdeepCity_Gym_EventScript_GiveCalmMind2
+	goto_if_set FLAG_HOENN_STAMP_WALLACE, HoennSeek_EventScript_RematchTateAndLiza @ Hoenn & Seek (13b)
 	msgbox MossdeepCity_Gym_Text_TateAndLizaPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -78,6 +80,7 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	@ Hoenn & Seek: the Space Center raid stays over (no Magma, state 1).
 	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN
 	call MossdeepCity_Gym_EventScript_GiveCalmMind
+	call HoennSeek_EventScript_GymRareCandies @ Hoenn & Seek (13b)
 	closemessage
 	delay 30
 	@ Hoenn & Seek: no PokéNav registration.
@@ -563,11 +566,11 @@ MossdeepCity_Gym_Text_TateAndLizaDefeat:
 	.string "LIZA: So, in recognition, take this.$"
 
 MossdeepCity_Gym_Text_ReceivedMindBadge:
-	.string "TATE and LIZA stamped {PLAYER}'s\n"
-	.string "TRAINER CARD with the MIND BADGE!$"
+	.string "{PLAYER} received the MIND BADGE\n"
+	.string "from TATE and LIZA.$"
 
 MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis:
-	.string "TATE: That stamp means you beat\n"
+	.string "TATE: That BADGE means you beat\n"
 	.string "both of us…\p"
 	.string "LIZA: …at the same time!\p"
 	.string "TATE: We saw it coming, of course.\p"

@@ -84,7 +84,7 @@ SootopolisCity_Gym_1F_EventScript_Juan::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_JuanRematch
 	goto_if_unset FLAG_RECEIVED_TM_WATER_PULSE, SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2
-	goto_if_unset FLAG_HOENN_STAMP_GYM_6, SootopolisCity_Gym_1F_EventScript_GoGetFortreeBadge
+	goto_if_set FLAG_HOENN_STAMP_WALLACE, HoennSeek_EventScript_RematchJuan @ Hoenn & Seek (13b)
 	msgbox SootopolisCity_Gym_1F_Text_JuanPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -104,6 +104,7 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated::
 	setvar VAR_0x8008, 8
 	call Common_EventScript_SetGymTrainers
 	call SootopolisCity_Gym_1F_EventScript_GiveWaterPulse
+	call HoennSeek_EventScript_GymRareCandies @ Hoenn & Seek (13b)
 	closemessage
 	delay 30
 	@ Hoenn & Seek: no PokéNav registration.
@@ -188,8 +189,8 @@ SootopolisCity_Gym_1F_Text_GymGuidePostVictory:
 	.string "Yow! You've beaten even JUAN, who\n"
 	.string "was supposedly the best in all HOENN!\p"
 	.string "Okay! Check out your TRAINER CARD.\p"
-	.string "If you've gotten all the stamps, you're\n"
-	.string "set for the POKéMON LEAGUE challenge!$"
+	.string "If you've gotten all eight BADGES,\n"
+	.string "you're set for the POKéMON LEAGUE!$"
 
 SootopolisCity_Gym_1F_Text_JuanIntro:
 	.string "Let me ask you.\n"
@@ -227,14 +228,14 @@ SootopolisCity_Gym_1F_Text_JuanDefeat:
 	.string "… … … … … …\p"
 	.string "Hahaha, I merely jest!\p"
 	.string "Rather than my clothes, I shall reward\n"
-	.string "you with this, the RAIN BADGE stamp!$"
+	.string "you with this, the RAIN BADGE!$"
 
 SootopolisCity_Gym_1F_Text_ReceivedRainBadge:
-	.string "JUAN stamped {PLAYER}'s\n"
-	.string "TRAINER CARD with the RAIN BADGE!$"
+	.string "{PLAYER} received the RAIN BADGE\n"
+	.string "from JUAN.$"
 
 SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis:
-	.string "That stamp is a record of the\n"
+	.string "That BADGE is a record of the\n"
 	.string "elegance you showed today.\p"
 	.string "And, so that you never forget the\n"
 	.string "battle we shared, take this…$"
@@ -252,7 +253,7 @@ SootopolisCity_Gym_1F_Text_RegisteredJuan:
 
 SootopolisCity_Gym_1F_Text_JuanPostBattle:
 	.string "TRAINERS who have gathered all eight\n"
-	.string "GYM stamps of HOENN should make\l"
+	.string "GYM BADGES of HOENN should make\l"
 	.string "way to the ultimate destination.\p"
 	.string "The POKéMON LEAGUE.\p"
 	.string "Travel to the easternmost reaches\n"
@@ -262,7 +263,7 @@ SootopolisCity_Gym_1F_Text_JuanPostBattle:
 
 SootopolisCity_Gym_1F_Text_GoGetFortreeBadge:
 	.string "You have gathered a fine collection\n"
-	.string "of stamps.\p"
+	.string "of BADGES.\p"
 	.string "Should you gather all eight, the\n"
 	.string "POKéMON LEAGUE awaits you on\l"
 	.string "EVER GRANDE.$"

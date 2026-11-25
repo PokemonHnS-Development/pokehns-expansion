@@ -48,6 +48,7 @@ LavaridgeTown_Gym_1F_EventScript_Flannery::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_FlanneryRematch
 	goto_if_unset FLAG_RECEIVED_TM_OVERHEAT, LavaridgeTown_Gym_1F_EventScript_GiveOverheat2
+	goto_if_set FLAG_HOENN_STAMP_WALLACE, HoennSeek_EventScript_RematchFlannery @ Hoenn & Seek (13b)
 	msgbox LavaridgeTown_Gym_1F_Text_FlanneryPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -64,6 +65,7 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
 	call Common_EventScript_SetGymTrainers
 	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
 	call LavaridgeTown_Gym_1F_EventScript_GiveOverheat
+	call HoennSeek_EventScript_GymRareCandies @ Hoenn & Seek (13b)
 	call HoennSeek_EventScript_FlanneryGoGoggles @ Hoenn & Seek (was: rival brings them)
 	closemessage
 	delay 30
@@ -321,11 +323,11 @@ LavaridgeTown_Gym_1F_Text_FlanneryDefeat:
 	.string "For that, you deserve this.$"
 
 LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge:
-	.string "FLANNERY stamped {PLAYER}'s\n"
-	.string "TRAINER CARD with the HEAT BADGE!$"
+	.string "{PLAYER} received the HEAT BADGE\n"
+	.string "from FLANNERY.$"
 
 LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis:
-	.string "That stamp is proof you can stand\n"
+	.string "That BADGE is proof you can stand\n"
 	.string "the heat!\p"
 	.string "This is a token of my appreciation.\n"
 	.string "Don't be shy about taking it!$"

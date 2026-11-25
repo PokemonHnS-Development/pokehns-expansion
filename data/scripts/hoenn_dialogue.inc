@@ -29,14 +29,14 @@ HoennSeek_Text_GymGuideGreetingNew:
 
 HoennSeek_Text_GymGuideGreetingSome:
 	.string "Yo! It's the JOHTO TRAINER who's\n"
-	.string "been collecting our GYM stamps!\p"
+	.string "been collecting our GYM BADGES!\p"
 	.string "That's {STR_VAR_1} already, right?\n"
 	.string "Not bad, not bad!$"
 
 HoennSeek_Text_GymGuideGreetingMany:
 	.string "Whoa! The JOHTO CHAMPION everyone's\n"
 	.string "talking about!\p"
-	.string "{STR_VAR_1} stamps already? The GYM\n"
+	.string "{STR_VAR_1} BADGES already? The GYM\n"
 	.string "LEADERS are getting nervous!$"
 
 @ ---------------------------------------------------------------------------

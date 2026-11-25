@@ -23,6 +23,11 @@
 #define FLAG_HOENN_MET_MIND_READER   (HOENN_CUSTOM_FLAGS_START + 0x12) // Mossdeep guru introduced himself (part 14a)
 
 #define FLAG_HOENN_SCOPE_BROKEN      (HOENN_CUSTOM_FLAGS_START + 0x13) // Route 120 tester's prototype broke (part 14)
+// Gyms and League (part 13b)
+#define FLAG_HOENN_COZMO_GAVE_METEORITE  (HOENN_CUSTOM_FLAGS_START + 0x14)
+#define FLAG_HOENN_METEORITE_DELIVERED   (HOENN_CUSTOM_FLAGS_START + 0x15) // opens Tate & Liza
+#define FLAG_HOENN_WINONA_BACK           (HOENN_CUSTOM_FLAGS_START + 0x16) // also hides her Route 119 object
+#define FLAG_HOENN_WINONA_GYM_HIDDEN     (HOENN_CUSTOM_FLAGS_START + 0x17) // set by Fortree Gym OnTransition
 #define HOENN_CUSTOM_FLAGS_END       (HOENN_CUSTOM_FLAGS_START + 0x3F)
 
 // Fake fights (part 14): one "already happened" flag each, numbered by
@@ -33,5 +38,6 @@
 
 // Vars (0x7070-0x707F)
 #define VAR_HOENN_NEWS               (HOENN_CUSTOM_VARS_START + 0x00) // next HOENN TV news item (part 14)
+#define VAR_HOENN_E4_STATE           (HOENN_CUSTOM_VARS_START + 0x01) // Hoenn Elite Four progress (VAR_ELITE_4_STATE is HnS's)
 
 #endif // GUARD_CONSTANTS_HOENN_CUSTOM_H

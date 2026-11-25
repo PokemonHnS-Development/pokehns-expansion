@@ -137,6 +137,7 @@ DewfordTown_Gym_EventScript_Brawly::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_BrawlyRematch
 	goto_if_unset FLAG_RECEIVED_TM_BULK_UP, DewfordTown_Gym_EventScript_GiveBulkUp2
+	goto_if_set FLAG_HOENN_STAMP_WALLACE, HoennSeek_EventScript_RematchBrawly @ Hoenn & Seek (13b)
 	msgbox DewfordTown_Gym_Text_BrawlyPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -152,6 +153,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	setvar VAR_0x8008, 2
 	call Common_EventScript_SetGymTrainers
 	call DewfordTown_Gym_EventScript_GiveBulkUp
+	call HoennSeek_EventScript_GymRareCandies @ Hoenn & Seek (13b)
 	closemessage
 	delay 30
 	@ Hoenn & Seek: no PokéNav registration.
@@ -371,7 +373,7 @@ DewfordTown_Gym_Text_CristianDefeat:
 
 DewfordTown_Gym_Text_CristianPostBattle:
 	.string "You win!\n"
-	.string "Go after that stamp!$"
+	.string "Go after that BADGE!$"
 
 DewfordTown_Gym_Text_BrawlyIntro:
 	.string "I'm BRAWLY!\n"
@@ -387,14 +389,14 @@ DewfordTown_Gym_Text_BrawlyDefeat:
 	.string "splash than I expected!\p"
 	.string "You swamped me!\p"
 	.string "Okay, you've got me.\n"
-	.string "Here's your stamp!$"
+	.string "Here's your BADGE!$"
 
 DewfordTown_Gym_Text_ReceivedKnuckleBadge:
-	.string "BRAWLY stamped {PLAYER}'s\n"
-	.string "TRAINER CARD with the KNUCKLE BADGE!$"
+	.string "{PLAYER} received the KNUCKLE BADGE\n"
+	.string "from BRAWLY.$"
 
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
-	.string "That stamp means you rode the big\n"
+	.string "That BADGE means you rode the big\n"
 	.string "wave and didn't wipe out.\p"
 	.string "Do they surf in JOHTO? You should\n"
 	.string "try it sometime!\p"

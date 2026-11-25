@@ -37,6 +37,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 13 (dialogue pass, Steven's stone case, gym story side effects removed) | 32,554,436 / 976 KB | 32,702,916 / 831 KB |
 | Part 14a (Mossdeep mind reader: IVs and abilities for Star Pieces) | 32,558,132 / 973 KB | 32,706,228 / 828 KB |
 | Part 14 (trainer curation 506→211, cap back to 864; Devon Scope backtrack, Rusturf dig, TV news) | 32,461,540 / 1,067 KB | 32,609,716 / 922 KB |
+| Part 13b (badges wording, gym prerequisites, Rare Candies, League + Wallace, rematches) | 32,465,204 / 1,063 KB | 32,613,284 / 919 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -107,6 +108,13 @@ Read the roadmap entry for the part you're working on before starting.
   - **Fake fights** use the engine's sight dry run: a script that reaches a non-`trainerbattle` effect makes the trainer walk up and run it. Once done (flag `HOENN_FAKE_FLAGS_START + n`, 0x1F00+, above all trainer flags), the talk path starts with `callnative HoennSeek_EndScriptIfSeeing, requests_effects=1`, which ends only the sight dry run (`ctx->breakOnTrainerBattle`). The talk dry run (`Script_HasNoEffect`) must keep going, or talking does nothing.
   - Autograph and song fakes set `VAR_HOENN_NEWS`; `EventScript_TV` calls `HoennSeek_EventScript_TVNews` first, which shows it once.
 - **World friction (part 14):** Route 120's tester has no scope until you fetch it from Mr. Stone (`FLAG_HOENN_SCOPE_BROKEN`); the bridge clears on `FLAG_HIDE_ROUTE_120_STEVEN`, not on owning the scope. Rusturf Tunnel starts sealed (state 3, rocks and the couple shown); Emerald's Rock Smash → `TryUpdateRusturfTunnelState` scene runs, giving a Star Piece instead of HM Strength. Wally waits at the Victory Road exit (VR state 3).
+- **Gyms and League (part 13b):** scripts in `data/scripts/hoenn_gyms.inc`; flags `FLAG_HOENN_COZMO_GAVE_METEORITE`, `FLAG_HOENN_METEORITE_DELIVERED`, `FLAG_HOENN_WINONA_BACK`, `FLAG_HOENN_WINONA_GYM_HIDDEN`, var `VAR_HOENN_E4_STATE` (`hoenn_custom.h`). The text says BADGE; the flags are still `FLAG_HOENN_STAMP_*`.
+  - Prerequisites, each a `call` at the top of the leader's script: Norman needs 4 Hoenn badges; Wattson hands over the Basement Key and only battles once `VAR_NEW_MAUVILLE_STATE` is 2; Tate & Liza need Cozmo's meteorite delivered to the Space Center 1F scientist (Cozmo's and the scientist's scripts are map.json swaps); Winona waits outside the Weather Institute on Route 119 (new object, flag `FLAG_HOENN_WINONA_BACK`) and Fortree Gym's OnTransition hides her gym object until then.
+  - Each leader's defeat script calls `HoennSeek_EventScript_GymRareCandies` (3 Rare Candies). Gym TMs are Emerald's (all are in HnS's TM list).
+  - **League:** the door guards want 8 Hoenn badges; the lobby's OnTransition resets the run (`HoennSeek_EventScript_ResetHoennE4`). The E4 rooms use `VAR_HOENN_E4_STATE`, not HnS's `VAR_ELITE_4_STATE`. After Wallace: the League badge (`FLAG_HOENN_STAMP_WALLACE`), the Hall of Fame machine, then back to the lobby. **No `GameClear` and no Emerald game-clear flags** (that's HnS's ending). The HoF script waits on `FLDEFF_HALL_OF_FAME_RECORD_FRLG`: HnS's record effect removes that ID, so waiting on the Emerald one hangs.
+  - E4 (Lv 76–81) and Wallace (Lv 80–84) have fixed teams in `trainer_parties.party`.
+  - **Rematches:** after Wallace, talking to a leader offers a rematch (`HoennSeek_EventScript_Rematch<Leader>`, which clears the trainer flag). `HoennGymAceLevel` returns 85 once `FLAG_HOENN_STAMP_WALLACE` is set, so leaders and gym trainers scale up.
+  - `gen_hoenn_ids.py` ignores `FLAG_HOENN_*` / `VAR_HOENN_*` (hand-defined).
 - **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
@@ -165,5 +173,7 @@ Read the roadmap entry for the part you're working on before starting.
 - **Emulator tests:** a libmgba harness (not in the repo yet) plays scripted input, takes screenshots and reads/writes memory. Useful recipes:
   - Debug menu: hold R + Start. Warp is Utilities → 2nd item; numbers use ↑/↓ for the value and → for the next digit.
   - Flags & Vars → items 14–16 turn off collision, encounters and trainer sight.
+  - `tools/hoenn/emu/mkbase.sh ROM OUT.ss` (run from the harness directory) makes a new game with the debug party, all badges, HnS's HM-received/Headbutt/Running Shoes flags, and the debug menu open. The debug party (`src/data/debug_trainers.party`, debug builds only) is Lapras (lead), Machamp, Pidgeot, Blissey, Miltank and Wobbuffet; between them they know every move with an overworld use: the 9 HMs, Headbutt, Secret Power, Dig, Teleport, Sweet Scent, Milk Drink and Soft-Boiled.
+  - Memory (2.0.6 debug build): SaveBlock1 flags at `gSaveBlock1Ptr + 0x198C`; SaveBlock2 battle style is bit 1 of byte `+21`; Hoenn vars at `gSaveBlock3Ptr + 0x132`; enemy battler HP at `gBattleMons + 136 + 42`.
 - Never commit ROMs, base ROMs or patches. `baserom/` and `dist/` are git-ignored.
 - The project owner tests in mGBA. Every part should end with a building ROM and a patch.

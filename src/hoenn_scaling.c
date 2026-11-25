@@ -35,9 +35,13 @@ u32 HoennCountStamps(void)
     return count;
 }
 
+#define HOENN_GYM_REMATCH_ACE   85  // after Wallace: leader rematches (part 13b)
+
 u32 HoennGymAceLevel(void)
 {
     u32 stamps = HoennCountStamps();
+    if (FlagGet(FLAG_HOENN_STAMP_WALLACE))
+        return HOENN_GYM_REMATCH_ACE;
 
     if (stamps > HOENN_GYM_COUNT - 1)
         stamps = HOENN_GYM_COUNT - 1;

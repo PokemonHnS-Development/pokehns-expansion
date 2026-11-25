@@ -74,11 +74,13 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 	end
 
 MauvilleCity_Gym_EventScript_Wattson::
+	call HoennSeek_EventScript_WattsonGate @ Hoenn & Seek (13b): New Mauville first
 	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_WattsonRematch
 	goto_if_unset FLAG_RECEIVED_TM_SHOCK_WAVE, MauvilleCity_Gym_EventScript_GiveShockWave2
-	goto_if_eq VAR_NEW_MAUVILLE_STATE, 2, MauvilleCity_Gym_EventScript_CompletedNewMauville
+	goto_if_unset FLAG_GOT_TM_THUNDERBOLT_FROM_WATTSON, MauvilleCity_Gym_EventScript_CompletedNewMauville
+	goto_if_set FLAG_HOENN_STAMP_WALLACE, HoennSeek_EventScript_RematchWattson @ Hoenn & Seek (13b)
 	msgbox MauvilleCity_Gym_Text_WattsonPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -97,7 +99,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	special DrawWholeMapView
 	playse SE_UNLOCK
 	call MauvilleCity_Gym_EventScript_GiveShockWave
-	call HoennSeek_EventScript_WattsonBasementKey @ Hoenn & Seek
+	call HoennSeek_EventScript_GymRareCandies @ Hoenn & Seek (13b)
 	closemessage
 	delay 30
 	@ Hoenn & Seek: no PokéNav registration.
@@ -345,14 +347,14 @@ MauvilleCity_Gym_Text_WattsonDefeat:
 	.string "Wahahahah!\n"
 	.string "Fine, I lost!\p"
 	.string "You ended up giving me a thrill!\n"
-	.string "Here's your stamp!$"
+	.string "Here's your BADGE!$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
-	.string "WATTSON stamped {PLAYER}'s\n"
-	.string "TRAINER CARD with the DYNAMO BADGE!$"
+	.string "{PLAYER} received the DYNAMO BADGE\n"
+	.string "from WATTSON.$"
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
-	.string "Wahahaha! That stamp shows you\n"
+	.string "Wahahaha! That BADGE shows you\n"
 	.string "shocked old WATTSON fair and square!\p"
 	.string "Hmm…\n"
 	.string "You should take this, too!$"
