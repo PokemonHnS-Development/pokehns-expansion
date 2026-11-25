@@ -524,7 +524,10 @@ HoennSeek_Text_MaxieReward:
 	.string "a local specialty.$"
 
 HoennSeek_Text_MaxieChallenge:
-	.string "MAXIE: I could use another reading.\n"
+	.string "MAXIE: PROF. BIRCH was up here this\n"
+	.string "morning. We compare vent readings.\p"
+	.string "He wouldn't stop talking about you.\n"
+	.string "I could use a reading myself.\l"
 	.string "Shall we?$"
 
 HoennSeek_Text_MaxieRematchAfter:

@@ -170,7 +170,10 @@ HoennSeek_Text_BirchAfter:
 	.string "PROF. BIRCH: BRENDAN and MAY are\n"
 	.string "in KANTO, training to battle RED.\p"
 	.string "They'll be back eventually. They\n"
-	.string "always come home hungry!$"
+	.string "always come home hungry!\p"
+	.string "NORMAN tells me how your GYM battles\n"
+	.string "go. I pass it all on to BRENDAN.\l"
+	.string "Neighbors gossip, you know!$"
 
 HoennSeek_Text_BirchBMBack:
 	.string "PROF. BIRCH: BRENDAN and MAY are\n"
@@ -180,7 +183,9 @@ HoennSeek_Text_BirchBMBack:
 HoennSeek_Text_BirchAfterBM:
 	.string "PROF. BIRCH: You beat BRENDAN and\n"
 	.string "MAY together? Ha! Remarkable.\p"
-	.string "Fieldwork has nothing on that!$"
+	.string "I called PROF. OAK right away.\n"
+	.string "He calls me every week anyway,\l"
+	.string "asking how the JOHTO TRAINER is.$"
 
 HoennSeek_Text_LabWally:
 	.string "WALLY: Oh, hello! You're the trainer\n"
