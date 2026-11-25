@@ -20,6 +20,7 @@
 
 // Ferry (part 8)
 #define FLAG_HOENN_SILVER_GATE_OPEN  (HOENN_CUSTOM_FLAGS_START + 0x11) // the gate guard has stepped aside
+#define FLAG_HOENN_MET_MIND_READER   (HOENN_CUSTOM_FLAGS_START + 0x12) // Mossdeep guru introduced himself (part 14a)
 
 #define HOENN_CUSTOM_FLAGS_END       (HOENN_CUSTOM_FLAGS_START + 0x3F)
 

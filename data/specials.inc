@@ -715,3 +715,10 @@ gSpecials::
 	def_special HoennBufferFollower
 	def_special HoennPushStoneList
 	def_special HoennStoneFromIndex
+	def_special HoennPushIVList
+	def_special HoennMaxIV
+	def_special HoennPushAbilityList
+	def_special HoennCountOtherAbilities
+	def_special HoennBufferAbilitySlot
+	def_special HoennSetAbilitySlot
+	def_special HoennCheckIV

@@ -36,6 +36,13 @@ u16 HoennGetStampCount(void);
 u16 HoennBufferFollower(void);
 void HoennPushStoneList(void);
 u16 HoennStoneFromIndex(void);
+void HoennPushIVList(void);
+u16 HoennCheckIV(void);
+u16 HoennMaxIV(void);
+void HoennPushAbilityList(void);
+u16 HoennCountOtherAbilities(void);
+void HoennBufferAbilitySlot(void);
+void HoennSetAbilitySlot(void);
 #define HOENN_TRAINER_MON_LEVEL(trainer, level) HoennScaleTrainerMonLevel(trainer, level)
 #else
 #define HOENN_TRAINER_MON_LEVEL(trainer, level) (level)

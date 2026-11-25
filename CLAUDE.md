@@ -35,6 +35,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 11 (post-Emerald state, north/east; scaled Kecleon, gifts moved) | 32,584,628 / 947 KB | 32,733,460 / 801 KB |
 | Part 12 (post-Emerald state, sea; legendary sites sealed: −Cave of Origin, −Seafloor Cavern, −2 swap layouts) | 32,551,860 / 979 KB | 32,700,660 / 834 KB |
 | Part 13 (dialogue pass, Steven's stone case, gym story side effects removed) | 32,554,436 / 976 KB | 32,702,916 / 831 KB |
+| Part 14a (Mossdeep mind reader: IVs and abilities for Star Pieces) | 32,558,132 / 973 KB | 32,706,228 / 828 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -94,6 +95,10 @@ Read the roadmap entry for the part you're working on before starting.
   - Reformed teams: Aqua runs sea rescues from the Lilycove hideout, Magma does research. Lilycove, Mossdeep, the Weather Institute, Cozmo, Capt. Stern, the museum grunt and the Route 110 sign say so.
   - Follower lines: May's mom, the Slateport shopper, the Fortree boy and the Lavaridge bather.
   - **Gym leader scripts had Emerald story side effects that undid the post-Emerald state** (removed): Roxanne set `VAR_RUSTBORO_CITY_STATE` to 1 (Devon Goods theft replayed), Brawly armed Roxanne's PokéNav call, Winona armed Scott's, Tate & Liza restarted the Space Center raid, Norman hid Mr. Briney and moved Wattson out of his gym, then ran the Wally's-dad/HM Surf scene. Leaders no longer register in the PokéNav. Check any other scripts brought in later for `setvar`/`setflag` lines like these.
+- **Mossdeep mind reader (part 14a):** Emerald's unused link-games building (`MossdeepCity_GameCorner_1F`) is the guru's parlor; scripts in `data/scripts/hoenn_mind_reader.inc`, specials in `src/hoenn_specials.c`.
+  - Locked until Tate & Liza are beaten (`FLAG_HOENN_STAMP_GYM_7`); `FLAG_HOENN_MET_MIND_READER` (0x1BD2) skips his intro after the first visit.
+  - POTENTIAL: one IV to 31 for 1 Star Piece (the list shows current IVs). ABILITY: the species' other regular ability for 1, its hidden ability for 3. Star Pieces: a handful on Hoenn/Johto routes, and wild Staryu/Starmie can hold them.
+  - **Dynamic menus free every entry's name when they close**, so anything pushed with `MultichoiceDynamic_PushElement` must be an `Alloc`ed copy, never a pointer into ROM (that hung the ability list).
 - **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
