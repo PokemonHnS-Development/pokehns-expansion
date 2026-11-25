@@ -74,6 +74,8 @@ Route121_SafariZoneEntrance_EventScript_TryEnterSafariZone::
 	applymovement LOCALID_PLAYER, Route121_SafariZoneEntrance_Movement_EnterSafariZone
 	waitmovement 0
 	special EnterSafariMode
+	setflag FLAG_HOENN_IN_SAFARI_ZONE @ Hoenn & Seek: exits come back here (part 17)
+	clearflag FLAG_IN_KANTO_SAFARI_ZONE
 	setvar VAR_SAFARI_ZONE_STATE, 2
 	clearflag FLAG_GOOD_LUCK_SAFARI_ZONE
 	warp MAP_SAFARI_ZONE_SOUTH, 32, 33

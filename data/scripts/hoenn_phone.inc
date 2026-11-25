@@ -14,6 +14,7 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_ELM, HoennSeek_EventScript_CallElm
 	case HOENN_CALL_TEAMS, HoennSeek_EventScript_CallTeams
 	case HOENN_CALL_RED, HoennSeek_EventScript_CallRed
+	case HOENN_CALL_CONTEST, HoennSeek_EventScript_CallContest
 	releaseall
 	end
 
@@ -41,6 +42,12 @@ HoennSeek_EventScript_CallRed::
 	setflag FLAG_HOENN_CALL_RED
 	setspeaker HoennSeek_Text_NameMay
 	pokenavcall HoennSeek_Text_CallRed
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_EventScript_CallContest::
+	setflag FLAG_HOENN_CALL_CONTEST
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallContest
 	goto HoennSeek_EventScript_CallEnd
 
 @ Elm: the two Johto starters you didn't choose go back on his table.
@@ -285,7 +292,10 @@ HoennSeek_Text_MayPhone2::
 	.string "battle my dad in PETALBURG\l"
 	.string "yet?\p"
 	.string "He'd never tell me if he lost.\n"
-	.string "Tell me everything!$"
+	.string "Tell me everything!\p"
+	.string "Oh, and if you're in LILYCOVE,\n"
+	.string "try the CONTEST HALL! I watch\l"
+	.string "every show on TV.$"
 
 HoennSeek_Text_MayPhone3::
 	.string "MAY: We're packing up! RED\n"
@@ -340,6 +350,10 @@ HoennSeek_Text_BrendanPhone2::
 HoennSeek_Text_BrendanPhone3::
 	.string "BRENDAN: Eight. The ELITE FOUR\n"
 	.string "are tough. WALLACE is tougher.\p"
+	.string "Dad's doing fieldwork at the\n"
+	.string "SAFARI ZONE off ROUTE 121. He\l"
+	.string "says the north side has POKéMON\l"
+	.string "from JOHTO. Bring BLOCKS.\p"
 	.string "We'll be home soon.$"
 
 HoennSeek_Text_BrendanPhone4::
@@ -434,4 +448,14 @@ HoennSeek_Text_LabStarter::
 HoennSeek_Text_LabStarterNoRoom::
 	.string "There's no room for it in your\n"
 	.string "party or BOXES.$"
+
+HoennSeek_Text_CallContest::
+	.string "{PLAYER}! It's MAY! I just saw you\n"
+	.string "win a CONTEST on TV!\p"
+	.string "The CONTEST HALL broadcasts every\n"
+	.string "show. Even out here in KANTO!\p"
+	.string "I used to enter CONTESTS all the\n"
+	.string "time before I got serious about\l"
+	.string "battling. I still miss the ribbons!\p"
+	.string "Win a MASTER RANK one for me, okay?$"
 
