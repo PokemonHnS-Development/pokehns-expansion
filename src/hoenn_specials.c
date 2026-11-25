@@ -10,8 +10,10 @@
 #include "pokemon.h"
 #include "script.h"
 #include "script_menu.h"
+#include "sound.h"
 #include "string_util.h"
 #include "constants/abilities.h"
+#include "constants/event_objects.h"
 #include "constants/items.h"
 #include "constants/opponents.h"
 #include "constants/hoenn_custom.h"
@@ -242,4 +244,12 @@ u16 HoennGiveShinyEgg(void)
     SetMonData(&mon, MON_DATA_IS_EGG, &isEgg);
     SetMonData(&mon, MON_DATA_IS_SHINY, &isShiny);
     return GiveCapturedMonToPlayer(&mon);
+}
+
+// Part 20a: overworld Pokémon (HoennSeek_EventScript_OWMon) play their species' cry.
+void HoennOWMonCry(void)
+{
+    u8 id = GetObjectEventIdByLocalIdAndMap(gSpecialVar_LastTalked, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
+    if (id < OBJECT_EVENTS_COUNT && (gObjectEvents[id].graphicsId & OBJ_EVENT_MON))
+        PlayCry_Normal(OW_SPECIES(&gObjectEvents[id]), 0);
 }
