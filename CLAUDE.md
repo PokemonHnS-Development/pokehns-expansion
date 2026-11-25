@@ -8,6 +8,14 @@ A fork of Heart & Soul (HnS) 2.0.6 (pokeemerald-expansion 1.15.2) that adds Hoen
 
 Read the roadmap entry for the part you're working on before starting.
 
+## Starting a new session (after 1.0)
+Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
+1. **Repo:** clone `itsbliusclues-collab/hoenn-and-seek`, `git checkout hoenn`, branch `part-NN-<slug>` (or `v1.1-<slug>`). PRs go into `hoenn`; never commit to `master`.
+2. **Docs (claude.ai Project "Pokemon"):** read `claude/hns-hoenn-roadmap.md` (status, Later/2.0 list), `claude/hns-hoenn-design-decisions.md` (latest decisions at the top) and the doc for the area you touch (`claude/hns-2.0-systems.md`, `claude/hns-starter-and-species-events.md`, the hidden-events docs, `claude/hns-hoenn-teams.md`, `claude/hns-hoenn-world-details.md`). Bryan's open playtest items: `claude/hns-hoenn-playtest-checklist.md`; Claude's pre-pass findings and resume notes: `claude/hns-hoenn-playtest-log.md`.
+3. **Base ROM:** `baserom/emerald.gba` (Emerald U, sha1 checked by `build_patch.sh`) is not in git. If it's missing, ask Bryan to attach it.
+4. **Emulator:** `tools/hoenn/emu/setup.sh` builds the libmgba harness in `~/emu`, a debug ROM and a Hoenn save; then drive it with `tools/hoenn/emu/pt.py` (`playtest/README.md`). Night: set `TZ`.
+5. **End of every part:** release + debug build, size row below, debug patch, emulator screenshots sent to Bryan as labeled grids, CLAUDE.md notes, roadmap entry, untested items into the checklist, PR.
+
 ## Build
 - `make hns RELEASE=1 -j$(nproc)` produces `pokehns-release.gba`. **Never use plain `make` or `make release`.** Those build the Emerald target, which is broken upstream (`FLAG_RECEIVED_TOGEPI_EGG`).
 - Patch: `tools/hoenn/build_patch.sh <emerald-U.gba>` produces `dist/*.ups`. It verifies the base ROM sha1 and round-trips the patch.
