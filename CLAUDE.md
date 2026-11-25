@@ -5,6 +5,7 @@ A fork of Heart & Soul (HnS) 2.0.6 (pokeemerald-expansion 1.15.2) that adds Hoen
 - `claude/hns-hoenn-design-decisions.md`
 - `claude/hns-2.0.6-hoenn-audit.md`
 - `claude/hns-hoenn-prestart-checklist.md`
+- `claude/hns-hoenn-next-session.md` (start here in a new chat)
 
 Read the roadmap entry for the part you're working on before starting.
 
