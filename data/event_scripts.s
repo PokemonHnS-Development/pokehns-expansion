@@ -1069,6 +1069,7 @@ gStdScripts_End::
 	.include "data/scripts/hoenn_arrival.inc" @ Hoenn & Seek
 	.include "data/scripts/hoenn_phone.inc" @ Hoenn & Seek
 	.include "data/scripts/hoenn_safari.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_gifts.inc" @ Hoenn & Seek
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"
 

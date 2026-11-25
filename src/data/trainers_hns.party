@@ -10393,11 +10393,11 @@ Pic: Red Hns
 Gender: Male
 Music: Hg Champion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 Items: Full Restore / Full Restore
 
 Pikachu-Starter @ Light Ball
-Level: 93
+Level: 95
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Thunderbolt
 - Surf
@@ -10405,7 +10405,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Double Team
 
 Snorlax @ Leftovers
-Level: 77
+Level: 87
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Belly Drum
 - Curse
@@ -10413,7 +10413,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
 
 Charizard @ Charcoal
-Level: 79
+Level: 90
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Fire Blast
 - Aerial Ace
@@ -10421,7 +10421,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Steel Wing
 
 Venusaur @ Miracle Seed
-Level: 79
+Level: 88
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Petal Blizzard
 - Double Edge
@@ -10429,7 +10429,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Leech Seed
 
 Blastoise @ Quick Claw
-Level: 79
+Level: 88
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ice Beam
 - Hydro Pump
@@ -10437,7 +10437,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
 
 Espeon @ Sitrus Berry
-Level: 80
+Level: 86
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Psychic
 - Shadow Ball
@@ -15950,55 +15950,69 @@ Double Battle: No
 AI: Smart Trainer / Prediction
 Items: Full Restore / Full Restore
 
-Pikachu-Starter @ Light Ball  
+Pikachu-Starter @ Light Ball
 Ability: Lightning Rod
-Level: 95
-- Volt Tackle  
-- Surf  
-- Iron Tail  
-- Double Team  
+Level: 100
+Nature: Jolly
+EVs: 252 HP / 252 Atk / 252 Def / 252 SpA / 252 SpD / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Volt Tackle
+- Extreme Speed
+- Surf
+- Iron Tail
 
-Snorlax @ Chesto Berry  
-Ability: Immunity  
-Level: 85
-- Belly Drum  
-- Earthquake  
-- Rest  
-- Heavy Slam  
+Snorlax @ Sitrus Berry
+Ability: Immunity
+Level: 100
+Nature: Adamant
+EVs: 252 HP / 252 Atk / 252 Def / 252 SpA / 252 SpD / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Belly Drum
+- Slack Off
+- Double-Edge
+- Earthquake
 
-Charizard  
-Ability: Blaze  
-Level: 87  
-- Fire Blast  
-- Seismic Toss  
-- Outrage  
-- Steel Wing  
+Charizard @ White Herb
+Ability: Blaze
+Level: 100
+Nature: Timid
+EVs: 252 HP / 252 Atk / 252 Def / 252 SpA / 252 SpD / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shell Smash
+- Fire Blast
+- Air Slash
+- Focus Blast
 
-Venusaur @ Blunder Policy  
-Ability: Chlorophyll  
-Level: 87  
-Tera Type: Grass  
-EVs: 252 Spe  
-IVs: 0 Atk  
-- Sunny Day  
-- Solar Beam  
-- Earth Power  
-- Sleep Powder 
+Venusaur @ Black Sludge
+Ability: Overgrow
+Level: 100
+Nature: Timid
+EVs: 252 HP / 252 Atk / 252 Def / 252 SpA / 252 SpD / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Spore
+- Quiver Dance
+- Giga Drain
+- Sludge Bomb
 
-Blastoise @ Leftovers  
-Ability: Torrent  
-Level: 86
-- Hydro Cannon  
-- Skull Bash  
-- Ice Beam  
-- Flash Cannon  
+Blastoise @ Leftovers
+Ability: Torrent
+Level: 100
+Nature: Bold
+EVs: 252 HP / 252 Atk / 252 Def / 252 SpA / 252 SpD / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Scald
+- Ice Beam
+- Recover
+- Haze
 
-Tauros-Paldea-Combat @ Sitrus Berry  
-Ability: Cud Chew  
-Level: 85  
-Tera Type: Fighting  
-- Raging Bull  
-- Wild Charge  
-- Bulk Up  
+Tauros-Paldea-Combat @ Sitrus Berry
+Ability: Cud Chew
+Level: 100
+Nature: Jolly
+EVs: 252 HP / 252 Atk / 252 Def / 252 SpA / 252 SpD / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Victory Dance
+- Close Combat
 - Throat Chop
+- Wild Charge
 

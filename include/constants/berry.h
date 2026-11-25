@@ -184,6 +184,12 @@ enum __attribute__((__packed__)) Flavor
 #define BERRY_TREE_TAMATO_2     126
 #define BERRY_TREE_TAMATO_3     127
 
+// Hoenn & Seek (part 19): HnS reused these Emerald IDs for Johto/Kanto trees
+// (Route 30, Route 26, Fuchsia, Route 1), so the Hoenn trees get IDs no map uses.
+#define BERRY_TREE_HOENN_ROUTE_102_ORAN     BERRY_TREE_UNUSED  // 57
+#define BERRY_TREE_HOENN_ROUTE_118_SITRUS_1 BERRY_TREE_SITRUS_2 // 109, HnS sets it but places no tree
+#define BERRY_TREE_HOENN_ROUTE_118_SITRUS_2 BERRY_TREE_POMEG_3  // 112, same
+
 #define BERRY_TREES_COUNT 128
 
 #endif // GUARD_CONSTANTS_BERRY_H

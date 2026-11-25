@@ -23,6 +23,8 @@ MauvilleCity_House2_EventScript_AskToTradeForHarborMail::
 	end
 
 MauvilleCity_House2_EventScript_AcceptTrade::
+	checkitem ITEM_COIN_CASE @ Hoenn & Seek: already own it (HnS gives one)
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_HaveCoinCase
 	msgbox MauvilleCity_House2_Text_IllTradeYouCoinCase, MSGBOX_DEFAULT
 	giveitem ITEM_COIN_CASE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
