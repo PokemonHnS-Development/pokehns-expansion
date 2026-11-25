@@ -15,6 +15,7 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_TEAMS, HoennSeek_EventScript_CallTeams
 	case HOENN_CALL_RED, HoennSeek_EventScript_CallRed
 	case HOENN_CALL_CONTEST, HoennSeek_EventScript_CallContest
+	case HOENN_CALL_BASE, HoennSeek_EventScript_CallBase
 	releaseall
 	end
 
@@ -48,6 +49,13 @@ HoennSeek_EventScript_CallContest::
 	setflag FLAG_HOENN_CALL_CONTEST
 	setspeaker HoennSeek_Text_NameMay
 	pokenavcall HoennSeek_Text_CallContest
+	goto HoennSeek_EventScript_CallEnd
+
+@ Brendan: one of Birch's aides saw you duck into your new secret base (part 18).
+HoennSeek_EventScript_CallBase::
+	setflag FLAG_HOENN_CALL_BASE
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallBase
 	goto HoennSeek_EventScript_CallEnd
 
 @ Elm: the two Johto starters you didn't choose go back on his table.
@@ -448,6 +456,18 @@ HoennSeek_Text_LabStarter::
 HoennSeek_Text_LabStarterNoRoom::
 	.string "There's no room for it in your\n"
 	.string "party or BOXES.$"
+
+HoennSeek_Text_CallBase::
+	.string "Hey, {PLAYER}! It's BRENDAN.\p"
+	.string "One of Dad's aides was out on\n"
+	.string "fieldwork and saw you climb into a\l"
+	.string "SECRET BASE! Nice!\p"
+	.string "MAY and I built one on ROUTE 111\n"
+	.string "back when we were rivals. She\l"
+	.string "filled it with dolls. Every inch.\p"
+	.string "FORTREE's shop has desks and\n"
+	.string "chairs. LILYCOVE's DEPT. STORE has\l"
+	.string "the rest. Don't let MAY decorate!$"
 
 HoennSeek_Text_CallContest::
 	.string "{PLAYER}! It's MAY! I just saw you\n"

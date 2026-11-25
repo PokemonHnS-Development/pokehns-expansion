@@ -67,6 +67,9 @@ static u16 GetDueEventCall(void)
     // Part 17: May watches the contests on TV (any contest hall, Lilycove or Viridian).
     if (FlagGet(FLAG_HOENN_BM_PHONE) && GetGameStat(GAME_STAT_WON_CONTEST) > 0 && !FlagGet(FLAG_HOENN_CALL_CONTEST))
         return HOENN_CALL_CONTEST;
+    // Part 18: one of Birch's aides saw you duck into your new secret base.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && gSaveBlock1Ptr->secretBases[0].secretBaseId != 0 && !FlagGet(FLAG_HOENN_CALL_BASE))
+        return HOENN_CALL_BASE;
     return HOENN_CALL_NONE;
 }
 
