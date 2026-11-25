@@ -7,6 +7,8 @@ MossdeepCity_House3_EventScript_SuperRodFisherman::
 	goto_if_set FLAG_RECEIVED_SUPER_ROD, MossdeepCity_House3_EventScript_ReceivedSuperRod
 	msgbox MossdeepCity_House3_Text_YouWantSuperRod, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MossdeepCity_House3_EventScript_DeclineSuperRod
+	checkitem ITEM_SUPER_ROD @ Hoenn & Seek: already own it (HnS gives one)
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_HaveSuperRod
 	msgbox MossdeepCity_House3_Text_SuperRodIsSuper, MSGBOX_DEFAULT
 	giveitem ITEM_SUPER_ROD
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull

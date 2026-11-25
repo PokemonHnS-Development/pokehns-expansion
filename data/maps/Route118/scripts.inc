@@ -30,6 +30,8 @@ Route118_EventScript_GoodRodFisherman::
 	end
 
 Route118_EventScript_ReceiveGoodRod::
+	checkitem ITEM_GOOD_ROD @ Hoenn & Seek: already own it (HnS gives one)
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_HaveGoodRod
 	msgbox Route118_Text_IdenticalMindsTakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_GOOD_ROD
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
