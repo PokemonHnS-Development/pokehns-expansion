@@ -37,7 +37,7 @@
 #define FLAG_HOENN_MAGMA_DONE            (HOENN_CUSTOM_FLAGS_START + 0x1D)
 #define FLAG_HOENN_TEAMS_DOUBLE_WON      (HOENN_CUSTOM_FLAGS_START + 0x1E)
 #define FLAG_HOENN_HIDE_SUMMIT_LEADERS   (HOENN_CUSTOM_FLAGS_START + 0x1F) // set at new game
-#define FLAG_HOENN_NORMAN_CALLED         (HOENN_CUSTOM_FLAGS_START + 0x20)
+#define FLAG_HOENN_BM_BACK_CALLED        (HOENN_CUSTOM_FLAGS_START + 0x20)
 #define FLAG_HOENN_HIDE_BM_OUTSIDE       (HOENN_CUSTOM_FLAGS_START + 0x21) // set at new game
 #define FLAG_HOENN_HIDE_BM_HOME          (HOENN_CUSTOM_FLAGS_START + 0x22) // set at new game
 #define FLAG_HOENN_BEAT_BM               (HOENN_CUSTOM_FLAGS_START + 0x23) // opens Mt. Silver
@@ -45,6 +45,16 @@
 // Arrival gifts (part 16b)
 #define FLAG_HOENN_RECEIVED_MUDKIP       (HOENN_CUSTOM_FLAGS_START + 0x25) // also hides Birch's aide at the Slateport harbor
 #define FLAG_HOENN_HIDE_LAB_WALLY        (HOENN_CUSTOM_FLAGS_START + 0x26) // Wally leaves the lab after you talk to him
+// PokéGear calls (part 16d)
+#define FLAG_HOENN_BM_PHONE              (HOENN_CUSTOM_FLAGS_START + 0x27) // Birch gave you Brendan's and May's numbers
+#define FLAG_HOENN_WALLY_PHONE           (HOENN_CUSTOM_FLAGS_START + 0x28) // registered after his Victory Road battle
+#define FLAG_HOENN_JOHTO_STARTERS_READY  (HOENN_CUSTOM_FLAGS_START + 0x29) // Elm's table has the two other Johto starters
+#define FLAG_HOENN_CALL_BADGE1           (HOENN_CUSTOM_FLAGS_START + 0x2A) // event calls done (src/hoenn_phone.c);
+#define FLAG_HOENN_CALL_BADGE4           (HOENN_CUSTOM_FLAGS_START + 0x2B) // they also gate Brendan's and May's
+#define FLAG_HOENN_CALL_BADGE8           (HOENN_CUSTOM_FLAGS_START + 0x2C) // phone lines when you call them
+#define FLAG_HOENN_CALL_ELM              (HOENN_CUSTOM_FLAGS_START + 0x2D)
+#define FLAG_HOENN_CALL_TEAMS            (HOENN_CUSTOM_FLAGS_START + 0x2E)
+#define FLAG_HOENN_CALL_RED              (HOENN_CUSTOM_FLAGS_START + 0x2F)
 #define HOENN_CUSTOM_FLAGS_END       (HOENN_CUSTOM_FLAGS_START + 0x3F)
 
 // Fake fights (part 14): one "already happened" flag each, numbered by

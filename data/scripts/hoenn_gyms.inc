@@ -246,7 +246,7 @@ HoennSeek_EventScript_HallOfFameDone::
 	call HoennSeek_EventScript_ResetHoennE4
 	clearflag FLAG_ENTERED_ELITE_FOUR
 	msgbox HoennSeek_Text_HallOfFameDone, MSGBOX_DEFAULT
-	call HoennSeek_EventScript_NormanCall @ part 16a: Brendan & May are back
+	call HoennSeek_EventScript_BMBackCall @ part 16d: May calls, they're back
 	closemessage
 	setrespawn HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE
 	warp MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F, 9, 10

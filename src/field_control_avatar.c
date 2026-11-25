@@ -24,6 +24,7 @@
 #include "item_menu.h"
 #include "link.h"
 #include "match_call.h"
+#include "hoenn.h"
 #include "metatile_behavior.h"
 #include "mom_savings.h"
 #include "overworld.h"
@@ -865,6 +866,8 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
         return TRUE;
     }
 #if IS_HNS
+    if (HoennTryEventCall()) // Hoenn & Seek: Brendan & May's and Elm's calls (part 16d)
+        return TRUE;
     if (HnsUpdateRouteStepCounter())
         return TRUE;
 #endif

@@ -221,5 +221,8 @@
   "drop_prefixes": [
     "TRAINER_BRENDAN_",
     "TRAINER_MAY_"
-  ]
+  ],
+  "script_swaps": {
+    "VictoryRoad_1F_EventScript_ExitWally": "HoennSeek_EventScript_VRWally"
+  }
 }

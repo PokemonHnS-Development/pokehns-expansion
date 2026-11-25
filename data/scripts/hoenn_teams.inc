@@ -256,20 +256,7 @@ HoennSeek_EventScript_SummitBattle::
 	trainerbattle_two_trainers TRAINER_MAXIE_MOSSDEEP, HoennSeek_Text_SummitMaxieDefeat, TRAINER_SHELLY_SEAFLOOR_CAVERN, HoennSeek_Text_SummitArchieDefeat
 	return
 
-@ ---------------------------------------------------------------- Norman's call (after Wallace)
-
-@ Called from HoennSeek_EventScript_HallOfFameDone the first time.
-HoennSeek_EventScript_NormanCall::
-	goto_if_set FLAG_HOENN_NORMAN_CALLED, HoennSeek_EventScript_NormanCallDone
-	closemessage
-	setspeaker HoennSeek_Text_NormanName
-	pokenavcall HoennSeek_Text_NormanCall
-	waitmessage
-	delay 30
-	setflag FLAG_HOENN_NORMAN_CALLED
-	clearflag FLAG_HOENN_HIDE_BM_OUTSIDE
-HoennSeek_EventScript_NormanCallDone::
-	return
+@ Part 16d: May calls after the first Hall of Fame (HoennSeek_EventScript_BMBackCall, hoenn_phone.inc).
 
 @ ---------------------------------------------------------------- Brendan & May
 
@@ -604,19 +591,7 @@ HoennSeek_Text_SummitRematchAfter:
 	.string "ARCHIE: Same result! Fwahahaha!\n"
 	.string "MAXIE: …Remarkable.$"
 
-@ ---------------------------------------------------------------- text: Norman + Brendan & May
-
-HoennSeek_Text_NormanName:
-	.string "NORMAN$"
-
-HoennSeek_Text_NormanCall:
-	.string "NORMAN: {PLAYER}! This is NORMAN.\p"
-	.string "Congratulations on the LEAGUE!\p"
-	.string "I have news. My daughter MAY and\n"
-	.string "BRENDAN, PROF. BIRCH's son, just\l"
-	.string "got back to LITTLEROOT.\p"
-	.string "They're eager to meet you.\n"
-	.string "I'd hurry if I were you!$"
+@ ---------------------------------------------------------------- text: Brendan & May
 
 HoennSeek_Text_RivalsIntro:
 	.string "MAY: You're {PLAYER}! Dad told us\n"

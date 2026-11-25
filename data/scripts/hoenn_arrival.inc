@@ -39,6 +39,7 @@ HoennSeek_EventScript_Birch::
 	call Common_EventScript_GiftMon
 	setflag FLAG_HOENN_RECEIVED_MUDKIP
 	msgbox HoennSeek_Text_BirchAfterGift, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_BirchGivesNumbers @ part 16d
 	release
 	end
 HoennSeek_EventScript_BirchNoRoom::
@@ -47,7 +48,7 @@ HoennSeek_EventScript_BirchNoRoom::
 	end
 HoennSeek_EventScript_BirchAfter::
 	goto_if_set FLAG_HOENN_BEAT_BM, HoennSeek_EventScript_BirchAfterBM
-	goto_if_set FLAG_HOENN_NORMAN_CALLED, HoennSeek_EventScript_BirchBMBack
+	goto_if_set FLAG_HOENN_BM_BACK_CALLED, HoennSeek_EventScript_BirchBMBack
 	msgbox HoennSeek_Text_BirchAfter, MSGBOX_DEFAULT
 	release
 	end
@@ -167,7 +168,7 @@ HoennSeek_Text_BirchAfterGift:
 
 HoennSeek_Text_BirchAfter:
 	.string "PROF. BIRCH: BRENDAN and MAY are\n"
-	.string "off exploring somewhere.\p"
+	.string "in KANTO, training to battle RED.\p"
 	.string "They'll be back eventually. They\n"
 	.string "always come home hungry!$"
 
@@ -188,7 +189,7 @@ HoennSeek_Text_LabWally:
 	.string "If you want a real battle, look for\n"
 	.string "BRENDAN and MAY. They're the best\l"
 	.string "trainers in HOENN.\p"
-	.string "They're out exploring right now,\n"
+	.string "They're in KANTO right now,\n"
 	.string "though.\p"
 	.string "Me? I train at the end of VICTORY\n"
 	.string "ROAD. Collect the GYM BADGES first,\l"

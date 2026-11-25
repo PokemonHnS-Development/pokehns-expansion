@@ -4759,6 +4759,82 @@ IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Mystical Fire
 - Calm Mind
 
+=== TRAINER_WALLY_VR_5 ===
+Name: WALLY
+Class: Rival
+Pic: Wally
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+
+Altaria @ Lum Berry
+Ability: Natural Cure
+Level: 83
+Nature: Adamant
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Dance
+- Dragon Claw
+- Earthquake
+- Roost
+
+Delcatty @ Leftovers
+Ability: Wonder Skin
+Level: 83
+Nature: Jolly
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Double-Edge
+- Sucker Punch
+- Wild Charge
+- Fake Out
+
+Roserade @ Life Orb
+Ability: Natural Cure
+Level: 84
+Nature: Timid
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Leaf Storm
+- Sludge Bomb
+- Shadow Ball
+- Sleep Powder
+
+Magnezone @ Choice Specs
+Ability: Magnet Pull
+Level: 84
+Nature: Modest
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
+
+Gallade @ Choice Band
+Ability: Sharpness
+Level: 85
+Nature: Jolly
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sacred Sword
+- Psycho Cut
+- Leaf Blade
+- Night Slash
+
+Gardevoir @ Expert Belt
+Ability: Trace
+Level: 87
+Nature: Modest
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Moonblast
+- Psychic
+- Mystical Fire
+- Calm Mind
+
 === TRAINER_WALTER_1 ===
 Name: WALTER
 Class: Gentleman

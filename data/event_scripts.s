@@ -35,6 +35,7 @@
 #include "constants/field_tasks.h"
 #include "constants/field_weather.h"
 #include "constants/flags.h"
+#include "constants/hoenn_phone.h"
 #include "constants/follower_npc.h"
 #include "constants/frontier_util.h"
 #include "constants/game_stat.h"
@@ -1064,6 +1065,7 @@ gStdScripts_End::
 	.include "data/scripts/hoenn_gyms.inc" @ Hoenn & Seek
 	.include "data/scripts/hoenn_teams.inc" @ Hoenn & Seek
 	.include "data/scripts/hoenn_arrival.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_phone.inc" @ Hoenn & Seek
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"
 
