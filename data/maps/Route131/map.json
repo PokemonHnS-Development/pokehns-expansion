@@ -34,9 +34,9 @@
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_RIGHT_LEFT_DOWN",
       "movement_range_x": 5,
       "movement_range_y": 7,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route131_EventScript_Richard",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_T_Richard",
       "flag": "0"
     },
     {
@@ -47,9 +47,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 7,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route131_EventScript_Herman",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_T_Herman",
       "flag": "0"
     },
     {
@@ -60,9 +60,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_UP_AND_RIGHT",
       "movement_range_x": 6,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route131_EventScript_Susie",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_T_Susie",
       "flag": "0"
     },
     {
@@ -75,7 +75,7 @@
       "movement_range_y": 5,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route131_EventScript_Kara",
+      "script": "HoennSeek_EventScript_T_Kara",
       "flag": "0"
     },
     {
@@ -88,7 +88,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route131_EventScript_Reli",
+      "script": "HoennSeek_EventScript_T_ReliAndIan",
       "flag": "0"
     },
     {
@@ -101,7 +101,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route131_EventScript_Ian",
+      "script": "HoennSeek_EventScript_T_ReliAndIan",
       "flag": "0"
     },
     {
@@ -112,9 +112,9 @@
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
       "movement_range_x": 1,
       "movement_range_y": 3,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
-      "script": "Route131_EventScript_Kevin",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_T_Kevin",
       "flag": "0"
     },
     {
@@ -125,9 +125,9 @@
       "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 3,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
-      "script": "Route131_EventScript_Talia",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_T_Talia",
       "flag": "0"
     }
   ],

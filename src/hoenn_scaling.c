@@ -14,12 +14,16 @@
 #if IS_HNS
 
 #include "data/hoenn_gym_trainers.h"
+#include "data/hoenn_scaled_trainers.h"
 
 #define HOENN_GYM_ACE_MIN       68
 #define HOENN_GYM_ACE_MAX       78
 #define HOENN_GYM_TRAINER_GAP   4
+// Part 14: route trainers who know who you are (data/hoenn/trainer_curation.json).
+#define HOENN_STRONG_GAP        6   // want the challenge: 62-72
+#define HOENN_HOPEFUL_GAP       14  // battle you anyway: 54-64
 
-enum { GYM_ROLE_NONE, GYM_ROLE_TRAINER, GYM_ROLE_LEADER };
+enum { GYM_ROLE_NONE, GYM_ROLE_TRAINER, GYM_ROLE_LEADER, GYM_ROLE_STRONG, GYM_ROLE_HOPEFUL };
 
 u32 HoennCountStamps(void)
 {
@@ -50,6 +54,12 @@ static u32 GetGymRole(const struct Trainer *trainer)
     for (i = 0; i < ARRAY_COUNT(sHoennGymTrainers); i++)
         if (GetTrainerStructFromId(sHoennGymTrainers[i]) == trainer)
             return GYM_ROLE_TRAINER;
+    for (i = 0; i < ARRAY_COUNT(sHoennStrongTrainers); i++)
+        if (GetTrainerStructFromId(sHoennStrongTrainers[i]) == trainer)
+            return GYM_ROLE_STRONG;
+    for (i = 0; i < ARRAY_COUNT(sHoennHopefulTrainers); i++)
+        if (GetTrainerStructFromId(sHoennHopefulTrainers[i]) == trainer)
+            return GYM_ROLE_HOPEFUL;
     return GYM_ROLE_NONE;
 }
 
@@ -70,6 +80,10 @@ u8 HoennScaleTrainerMonLevel(const struct Trainer *trainer, u8 level)
     ace = HoennGymAceLevel();
     if (role == GYM_ROLE_TRAINER)
         ace -= HOENN_GYM_TRAINER_GAP;
+    else if (role == GYM_ROLE_STRONG)
+        ace -= HOENN_STRONG_GAP;
+    else if (role == GYM_ROLE_HOPEFUL)
+        ace -= HOENN_HOPEFUL_GAP;
     scaled = ace - (s32)(maxLevel - level);
     if (scaled < 1)
         scaled = 1;

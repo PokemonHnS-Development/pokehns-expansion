@@ -56,8 +56,9 @@ RusturfTunnel_EventScript_ClearTunnelScene::
 	msgbox RusturfTunnel_Text_YouShatteredBoulderTakeHM, MSGBOX_DEFAULT
 	call_if_eq VAR_TEMP_1, 2, RusturfTunnel_EventScript_WandasBoyfriendApproachPlayer
 	call_if_eq VAR_TEMP_1, 3, RusturfTunnel_EventScript_WandasBoyfriendApproachPlayer
-	giveitem ITEM_HM_STRENGTH
-	setflag FLAG_RECEIVED_HM_STRENGTH
+	@ Hoenn & Seek (part 14): a cave-in sealed the tunnel again. HnS already has
+	@ Strength (and FLAG_RECEIVED_HM_STRENGTH is HnS's), so he gives a Star Piece.
+	giveitem ITEM_STAR_PIECE
 	msgbox RusturfTunnel_Text_ExplainStrength, MSGBOX_DEFAULT
 	closemessage
 	call_if_eq VAR_TEMP_1, 1, RusturfTunnel_EventScript_BoyfriendApproachWanda1
@@ -468,33 +469,27 @@ RusturfTunnel_Text_ThankYouLetsGoHomePeeko:
 	.string "PEEKO: Pihyoh!$"
 
 RusturfTunnel_Text_WhyCantTheyKeepDigging:
-	.string "… …\p"
-	.string "Why can't they keep digging?\n"
-	.string "Is the bedrock too hard?\p"
-	.string "My beloved awaits me in VERDANTURF\n"
-	.string "TOWN just beyond here…\p"
-	.string "If RUSTBORO and VERDANTURF were\n"
-	.string "joined by this tunnel, I could visit\l"
-	.string "her every day…\p"
-	.string "But this…\n"
-	.string "What am I to do?$"
+	.string "A cave-in sealed the tunnel again!\n"
+	.string "Years of digging, and now this…\p"
+	.string "WANDA's stuck on the VERDANTURF side,\n"
+	.string "and these boulders won't budge.\p"
+	.string "If one of your POKéMON could use\n"
+	.string "ROCK SMASH, we could break through\l"
+	.string "together!$"
 
 RusturfTunnel_Text_ToGetToVerdanturf:
-	.string "To get from RUSTBORO to VERDANTURF,\n"
-	.string "you need to go to DEWFORD, then pass\l"
-	.string "through SLATEPORT and MAUVILLE…$"
+	.string "Smash these boulders with ROCK SMASH\n"
+	.string "and I'll dig out the rest. Please!$"
 
 RusturfTunnel_Text_YouShatteredBoulderTakeHM:
-	.string "Wow! You shattered that boulder\n"
-	.string "blocking the way.\p"
-	.string "To show you how much I appreciate it,\n"
-	.string "I'd like you to have this HM.$"
+	.string "You did it! The tunnel's open again!\p"
+	.string "I found this in the rubble while I was\n"
+	.string "digging. Please, take it!$"
 
 RusturfTunnel_Text_ExplainStrength:
-	.string "That HM contains STRENGTH.\p"
-	.string "If a muscular POKéMON were to learn\n"
-	.string "that, it would be able to move even\l"
-	.string "large boulders.$"
+	.string "They say STAR PIECES are worth a lot\n"
+	.string "to a certain mind reader over in\l"
+	.string "MOSSDEEP.$"
 
 RusturfTunnel_Text_WandaReunion:
 	.string "WANDA!\n"
@@ -503,12 +498,10 @@ RusturfTunnel_Text_WandaReunion:
 	.string "Please, take some rest at my home.$"
 
 RusturfTunnel_Text_BoyfriendOnOtherSideOfRock:
-	.string "On the other side of this rock…\n"
-	.string "My boyfriend is there.\p"
-	.string "He… He's not just digging the tunnel\n"
-	.string "to come see me.\p"
-	.string "He works his hands raw and rough\n"
-	.string "for the benefit of everyone.$"
+	.string "The tunnel caved in again…\n"
+	.string "My boyfriend is on the other side.\p"
+	.string "He's been digging for days. If only\n"
+	.string "someone could help him break through…$"
 
 RusturfTunnel_Text_MikeIntro:
 	.string "What do you call a wild man up in the\n"

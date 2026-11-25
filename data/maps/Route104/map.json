@@ -66,7 +66,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "7",
-      "script": "Route104_EventScript_Haley",
+      "script": "HoennSeek_EventScript_T_Haley1",
       "flag": "0"
     },
     {
@@ -144,9 +144,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route104_EventScript_Ivan",
+      "script": "HoennSeek_EventScript_T_Ivan",
       "flag": "0"
     },
     {
@@ -328,7 +328,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route104_EventScript_Gina",
+      "script": "HoennSeek_EventScript_T_GinaAndMia1",
       "flag": "0"
     },
     {
@@ -341,7 +341,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route104_EventScript_Mia",
+      "script": "HoennSeek_EventScript_T_GinaAndMia1",
       "flag": "0"
     },
     {
@@ -354,7 +354,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route104_EventScript_Winston",
+      "script": "HoennSeek_EventScript_T_Winston1",
       "flag": "0"
     },
     {
@@ -365,9 +365,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route104_EventScript_Cindy",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_T_Cindy1",
       "flag": "0"
     },
     {
@@ -393,7 +393,7 @@
       "movement_range_y": 6,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Route104_EventScript_Billy",
+      "script": "HoennSeek_EventScript_T_Billy",
       "flag": "0"
     },
     {
@@ -456,9 +456,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route104_EventScript_Darian",
+      "script": "HoennSeek_EventScript_T_Darian",
       "flag": "0"
     },
     {

@@ -36,6 +36,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 12 (post-Emerald state, sea; legendary sites sealed: −Cave of Origin, −Seafloor Cavern, −2 swap layouts) | 32,551,860 / 979 KB | 32,700,660 / 834 KB |
 | Part 13 (dialogue pass, Steven's stone case, gym story side effects removed) | 32,554,436 / 976 KB | 32,702,916 / 831 KB |
 | Part 14a (Mossdeep mind reader: IVs and abilities for Star Pieces) | 32,558,132 / 973 KB | 32,706,228 / 828 KB |
+| Part 14 (trainer curation 506→211, cap back to 864; Devon Scope backtrack, Rusturf dig, TV news) | 32,461,540 / 1,067 KB | 32,609,716 / 922 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -99,6 +100,13 @@ Read the roadmap entry for the part you're working on before starting.
   - Locked until Tate & Liza are beaten (`FLAG_HOENN_STAMP_GYM_7`); `FLAG_HOENN_MET_MIND_READER` (0x1BD2) skips his intro after the first visit.
   - POTENTIAL: one IV to 31 for 1 Star Piece (the list shows current IVs). ABILITY: the species' other regular ability for 1, its hidden ability for 3. Star Pieces: a handful on Hoenn/Johto routes, and wild Staryu/Starmie can hold them.
   - **Dynamic menus free every entry's name when they close**, so anything pushed with `MultichoiceDynamic_PushElement` must be an `Alloc`ed copy, never a pointer into ROM (that hung the ability list).
+- **Trainer curation (part 14):** `data/hoenn/trainer_curation.json` gives every Hoenn trainer a role (defaults by class, overrides by name, `_Gym` maps always `keep`). Run `tools/hoenn/gen_hoenn_trainers.py` **before** `gen_hoenn_ids.py`.
+  - Roles: `keep` (gyms, E4, Winstrates, Wally, Steven, special scripts), `battle` (clueless, Emerald team), `hopeful` (stamp curve − 14), `strong` (curve − 6), `fake:follower|autograph|cheer|foresee|song`, `npc`, `drop` (hidden story trainers, S.S. Tidal). 211 keep an ID (653–863), so `MAX_TRAINERS_COUNT_HNS` is 864 again.
+  - The generator writes `data/scripts/hoenn_trainers.inc`, swaps object scripts in map.json (NPCs also get `TRAINER_TYPE_NONE`, sight 0), and writes `data/hoenn/trainer_roles.json` (read by `gen_hoenn_ids.py`) and `src/data/hoenn_scaled_trainers.h` (read by `src/hoenn_scaling.c`). `data/hoenn/trainer_objects.json` records each object's **original** script so re-runs are idempotent; delete it only on a clean tree.
+  - `gen_hoenn_ids.py` fully evolves hopeful/strong teams and drops their Emerald movesets; `data/hoenn/trainer_parties.party` replaces teams outright (gyms, leaders, Wally VR, Steven). Gym levels there are placeholders; scaling keeps the gaps.
+  - **Fake fights** use the engine's sight dry run: a script that reaches a non-`trainerbattle` effect makes the trainer walk up and run it. Once done (flag `HOENN_FAKE_FLAGS_START + n`, 0x1F00+, above all trainer flags), the talk path starts with `callnative HoennSeek_EndScriptIfSeeing, requests_effects=1`, which ends only the sight dry run (`ctx->breakOnTrainerBattle`). The talk dry run (`Script_HasNoEffect`) must keep going, or talking does nothing.
+  - Autograph and song fakes set `VAR_HOENN_NEWS`; `EventScript_TV` calls `HoennSeek_EventScript_TVNews` first, which shows it once.
+- **World friction (part 14):** Route 120's tester has no scope until you fetch it from Mr. Stone (`FLAG_HOENN_SCOPE_BROKEN`); the bridge clears on `FLAG_HIDE_ROUTE_120_STEVEN`, not on owning the scope. Rusturf Tunnel starts sealed (state 3, rocks and the couple shown); Emerald's Rock Smash → `TryUpdateRusturfTunnelState` scene runs, giving a Star Piece instead of HM Strength. Wally waits at the Victory Road exit (VR state 3).
 - **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
@@ -114,9 +122,9 @@ Read the roadmap entry for the part you're working on before starting.
   - Reached through hooks in `GetFlagPointer`/`GetVarPointer` (`src/event_data.c`). Cleared in `NewGameInitData`. SaveBlock3 is 564 of 1,624 bytes.
   - Hidden-item flags must stay below 0x20E9 (13-bit offset from `FLAG_HIDDEN_ITEMS_START`); the generator puts them first.
 - **Trainers.**
-  - Hoenn trainers get IDs from `HOENN_TRAINERS_START` (653) up: 506 now (part 12), 653–1158.
+  - Hoenn trainers get IDs from `HOENN_TRAINERS_START` (653) up: 211 since part 14, 653–863.
   - Their "defeated" flags come from `TRAINER_FLAG_ID(id)` (used in `battle_setup.c`, `debug.c`), not `TRAINER_FLAGS_START + id`.
-  - `MAX_TRAINERS_COUNT_HNS` was raised (1160 since part 12; the generator sets it), which moves `TRAINER_PARTNER()` IDs and grows `sTrainerSlides`.
+  - `MAX_TRAINERS_COUNT_HNS` is set by the generator (864 since part 14; above that it moves `TRAINER_PARTNER()` IDs and grows `sTrainerSlides`).
 - **Remap rules:**
   - Remapped:
     - Emerald names that resolved to 0.
@@ -150,7 +158,6 @@ Read the roadmap entry for the part you're working on before starting.
   - Lilycove museum/contest flags that HnS's own contest copy references now really work (they used to be 0).
 - **Space opportunities:**
   - `sTrainerSlides` (src/trainer_slide.c) is ~197 KB of NULL pointers sized `[3][TRAINER_PARTNER(PARTNER_COUNT)][slides]`; HnS defines no slides.
-  - Curating Hoenn trainers to ≤211 (part 14) lets `MAX_TRAINERS_COUNT_HNS` drop back to 864.
 
 ## Conventions
 - **Touch upstream HnS files as little as possible**, so future HnS fixes merge cleanly. Put new code and data in new `hoenn`-named files (`tools/hoenn/`, `src/hoenn_*.c`, `data/maps/*_hoenn/`, etc.) and keep edits to shared files to small hooks.

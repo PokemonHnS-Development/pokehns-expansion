@@ -68,6 +68,39 @@ def scan(files, pat):
     return {n for n in out if not n.startswith(IGNORE_PREFIXES)}
 
 
+def species_key(name):
+    return re.sub(r"[^A-Z0-9]+", "_", name.upper()).strip("_")
+
+
+def species_evolutions():
+    """SPECIES_X -> first evolution target, from src/data/pokemon/species_info."""
+    evo, cur = {}, None
+    for path in sorted(glob.glob(os.path.join(ROOT, "src/data/pokemon/species_info/*.h"))):
+        text = open(path).read()
+        for m in re.finditer(r"^\s*\[SPECIES_(\w+)\]\s*=|\.evolutions\s*=\s*EVOLUTION\(\{EVO_\w+,[^,]*,\s*SPECIES_(\w+)", text, re.M):
+            if m.group(1):
+                cur = m.group(1)
+            elif cur and cur not in evo:
+                evo[cur] = m.group(2)
+    return evo
+
+
+def evolve_block(block, evo, iv):
+    head, _, mons = block.partition("\n\n")
+    out = []
+    for mon in mons.strip("\n").split("\n\n"):
+        lines = [l for l in mon.split("\n") if not l.startswith("- ")]
+        lines = [f"IVs: {iv} HP / {iv} Atk / {iv} Def / {iv} SpA / {iv} SpD / {iv} Spe" if l.startswith("IVs:") else l for l in lines]
+        first = lines[0]
+        name, sep, item = first.partition(" @ ")
+        key = species_key(name)
+        while key in evo and evo[key] != key:
+            key = evo[key]
+        lines[0] = key.replace("_", " ").title().replace(" ", "-") + (sep + item if sep else "")
+        out.append("\n".join(lines))
+    return head + "\n\n" + "\n\n".join(out) + "\n"
+
+
 def main():
     kept = json.load(open(os.path.join(ROOT, "data/hoenn/maps.json")))["items"]
     hoenn_files = [f"data/maps/{m}/{x}" for m in kept for x in ("scripts.inc", "map.json")]
@@ -142,6 +175,38 @@ def main():
     blocks = {}
     for m in re.finditer(r"^=== (TRAINER_\w+) ===\n(.*?)(?=^=== |\Z)", party, re.M | re.S):
         blocks[m.group(1)] = m.group(0)
+    # Part 14: trainers curated out (NPCs, fake fights, unreachable story trainers) get no ID.
+    roles_path = os.path.join(ROOT, "data/hoenn/trainer_roles.json")
+    if os.path.exists(roles_path):
+        trainers -= set(json.load(open(roles_path))["exclude"])
+    # Part 14: data/hoenn/trainer_parties.party replaces Emerald teams. A block's lines
+    # before the first blank line replace those header keys; the rest replaces the Pokemon.
+    over_path = os.path.join(ROOT, "data/hoenn/trainer_parties.party")
+    if os.path.exists(over_path):
+        for m in re.finditer(r"^=== (TRAINER_\w+) ===\n(.*?)(?=^=== |\Z)", rd("data/hoenn/trainer_parties.party"), re.M | re.S):
+            name, body = m.group(1), m.group(2).strip("\n")
+            if name not in blocks:
+                sys.exit(f"trainer_parties.party: unknown trainer {name}")
+            o_head, _, o_mons = body.partition("\n\n")
+            head, _, mons = blocks[name].partition("\n\n")
+            head_lines = head.split("\n")
+            for line in o_head.split("\n"):
+                key = line.split(":", 1)[0] + ":"
+                idx = [i for i, l in enumerate(head_lines) if l.startswith(key)]
+                if idx:
+                    head_lines[idx[0]] = line
+                else:
+                    head_lines.append(line)
+            blocks[name] = "\n".join(head_lines) + "\n\n" + (o_mons.strip("\n") or mons.strip("\n")) + "\n"
+    # Part 14: hopeful/strong route trainers are scaled to Lv 54-72 in-game, so evolve
+    # their Pokemon fully and drop Emerald's movesets (level-up moves come from the new level).
+    if os.path.exists(roles_path):
+        roles = json.load(open(roles_path))["roles"]
+        overridden = set(re.findall(r"^=== (TRAINER_\w+) ===", rd("data/hoenn/trainer_parties.party"), re.M)) if os.path.exists(over_path) else set()
+        evo = species_evolutions()
+        for t, r in roles.items():
+            if r in ("hopeful", "strong") and t in blocks and t not in overridden:
+                blocks[t] = evolve_block(blocks[t], evo, 24 if r == "strong" else 12)
     missing = sorted(t for t in trainers if t not in blocks)
     if missing:
         sys.exit(f"Hoenn scripts reference trainers with no Emerald party data: {missing}")
