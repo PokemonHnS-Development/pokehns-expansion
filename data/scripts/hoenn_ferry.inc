@@ -1,5 +1,5 @@
 @ Hoenn & Seek (part 8): Oak's TIDAL TICKET, the Vermilion <-> Hoenn ferry,
-@ and the Mt. Silver gate (opens with Wallace's stamp).
+@ and the Mt. Silver gate (opens once Brendan & May are beaten, part 16a).
 
 @ ---------------------------------------------------------------- Oak (PalletTown_Lab_hns)
 
@@ -12,7 +12,7 @@ HoennSeek_EventScript_OakGivesTicket::
 
 @ Called on later visits, before Oak's Pokédex check.
 HoennSeek_EventScript_OakHoennStatus::
-	goto_if_set FLAG_HOENN_STAMP_WALLACE, HoennSeek_EventScript_OakSilverOpen
+	goto_if_set FLAG_HOENN_BEAT_BM, HoennSeek_EventScript_OakSilverOpen
 	msgbox HoennSeek_Text_OakGoToHoenn, MSGBOX_DEFAULT
 	return
 
@@ -128,7 +128,7 @@ HoennSeek_EventScript_FerryCancel::
 @ ---------------------------------------------------------------- Mt. Silver gate (ReceptionGate_hns)
 
 HoennSeek_EventScript_SilverGateOnTransition::
-	goto_if_unset FLAG_HOENN_STAMP_WALLACE, HoennSeek_EventScript_SilverGateEnd
+	goto_if_unset FLAG_HOENN_BEAT_BM, HoennSeek_EventScript_SilverGateEnd
 	setflag FLAG_INDIGOJUNCTION_HIDE_SILVER_GUARD
 	setflag FLAG_HOENN_SILVER_GATE_OPEN
 	goto_if_ne VAR_ROUTE28_SCIENTIST, 0, HoennSeek_EventScript_SilverGateEnd
@@ -137,7 +137,7 @@ HoennSeek_EventScript_SilverGateEnd::
 	end
 
 HoennSeek_EventScript_SilverGuard::
-	goto_if_set FLAG_HOENN_STAMP_WALLACE, HoennSeek_EventScript_SilverGuardOpen
+	goto_if_set FLAG_HOENN_BEAT_BM, HoennSeek_EventScript_SilverGuardOpen
 	msgbox HoennSeek_Text_SilverGuardClosed, MSGBOX_NPC
 	end
 
@@ -166,19 +166,19 @@ HoennSeek_Text_OakTicketExplain:
 	.string "VERMILION CITY to SLATEPORT CITY.\p"
 	.string "HOENN has a LEAGUE of its own, and\n"
 	.string "its CHAMPION is a man named WALLACE.\p"
-	.string "Earn his recognition, and I'll see\n"
-	.string "that MT.SILVER is opened for you.$"
+	.string "Prove yourself in HOENN, and I'll\n"
+	.string "see that MT.SILVER is opened for you.$"
 
 HoennSeek_Text_OakGoToHoenn:
 	.string "OAK: Show your TIDAL TICKET at the\n"
 	.string "VERMILION CITY port, and the S.S.\l"
 	.string "TIDAL will take you to HOENN.\p"
-	.string "Once WALLACE recognizes you, MT.SILVER\n"
-	.string "will be open.$"
+	.string "Prove yourself in HOENN, and\n"
+	.string "MT.SILVER will be open.$"
 
 HoennSeek_Text_OakSilverOpen:
-	.string "OAK: So WALLACE recognized you as\n"
-	.string "a CHAMPION! I knew you could do it.\p"
+	.string "OAK: You beat BRENDAN and MAY, the\n"
+	.string "pair who challenged RED himself!\p"
 	.string "As promised, MT.SILVER is open to\n"
 	.string "you. Go up to INDIGO PLATEAU, and\l"
 	.string "you can reach it from there.$"
@@ -206,5 +206,5 @@ HoennSeek_Text_SilverGuardClosed:
 	.string "This way leads to MT.SILVER, but\n"
 	.string "it's off limits.\p"
 	.string "PROF. OAK says only a trainer who\n"
-	.string "has beaten HOENN's CHAMPION may\l"
-	.string "go through.$"
+	.string "has beaten HOENN's strongest pair\l"
+	.string "may go through.$"

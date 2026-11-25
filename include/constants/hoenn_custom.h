@@ -28,6 +28,20 @@
 #define FLAG_HOENN_METEORITE_DELIVERED   (HOENN_CUSTOM_FLAGS_START + 0x15) // opens Tate & Liza
 #define FLAG_HOENN_WINONA_BACK           (HOENN_CUSTOM_FLAGS_START + 0x16) // also hides her Route 119 object
 #define FLAG_HOENN_WINONA_GYM_HIDDEN     (HOENN_CUSTOM_FLAGS_START + 0x17) // set by Fortree Gym OnTransition
+// Teams Aqua/Magma, Norman's call, Brendan & May (part 16a)
+#define FLAG_HOENN_AQUA_QUEST            (HOENN_CUSTOM_FLAGS_START + 0x18)
+#define FLAG_HOENN_AQUA_DONE             (HOENN_CUSTOM_FLAGS_START + 0x19)
+#define FLAG_HOENN_MAGMA_QUEST           (HOENN_CUSTOM_FLAGS_START + 0x1A)
+#define FLAG_HOENN_TORKOAL_FOUND         (HOENN_CUSTOM_FLAGS_START + 0x1B) // also the Fiery Path Torkoal's object flag
+#define FLAG_HOENN_MAGMA_REPORT          (HOENN_CUSTOM_FLAGS_START + 0x1C)
+#define FLAG_HOENN_MAGMA_DONE            (HOENN_CUSTOM_FLAGS_START + 0x1D)
+#define FLAG_HOENN_TEAMS_DOUBLE_WON      (HOENN_CUSTOM_FLAGS_START + 0x1E)
+#define FLAG_HOENN_HIDE_SUMMIT_LEADERS   (HOENN_CUSTOM_FLAGS_START + 0x1F) // set at new game
+#define FLAG_HOENN_NORMAN_CALLED         (HOENN_CUSTOM_FLAGS_START + 0x20)
+#define FLAG_HOENN_HIDE_BM_OUTSIDE       (HOENN_CUSTOM_FLAGS_START + 0x21) // set at new game
+#define FLAG_HOENN_HIDE_BM_HOME          (HOENN_CUSTOM_FLAGS_START + 0x22) // set at new game
+#define FLAG_HOENN_BEAT_BM               (HOENN_CUSTOM_FLAGS_START + 0x23) // opens Mt. Silver
+#define FLAG_HOENN_BM_EGGS               (HOENN_CUSTOM_FLAGS_START + 0x24)
 #define HOENN_CUSTOM_FLAGS_END       (HOENN_CUSTOM_FLAGS_START + 0x3F)
 
 // Fake fights (part 14): one "already happened" flag each, numbered by
