@@ -9,5 +9,6 @@
 #define HOENN_CALL_ELM     4 // Elm: after Brendan & May, the Johto starters are back
 #define HOENN_CALL_TEAMS   5 // Brendan: after the Maxie + Archie double
 #define HOENN_CALL_RED     6 // May: after you beat Red
+#define HOENN_CALL_CONTEST 7 // May: after your first contest win (part 17)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

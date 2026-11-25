@@ -295,6 +295,8 @@ gStdScripts_End::
 	.include "data/maps/LilycoveCity_LilycoveMuseum_2F/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestLobby/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestLobby_hns/scripts.inc"
+	.include "data/maps/LilycoveCity_ContestLobby_hoenn/scripts.inc" @ Hoenn & Seek
+	.include "data/maps/LilycoveCity_ContestHall_hoenn/scripts.inc" @ Hoenn & Seek
 	.include "data/maps/LilycoveCity_ContestHall/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestHall_hns/scripts.inc"
 	.include "data/maps/LilycoveCity_PokemonCenter_1F/scripts.inc"
@@ -1066,6 +1068,7 @@ gStdScripts_End::
 	.include "data/scripts/hoenn_teams.inc" @ Hoenn & Seek
 	.include "data/scripts/hoenn_arrival.inc" @ Hoenn & Seek
 	.include "data/scripts/hoenn_phone.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_safari.inc" @ Hoenn & Seek
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"
 

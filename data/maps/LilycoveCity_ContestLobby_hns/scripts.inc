@@ -6,6 +6,7 @@ LilycoveCity_ContestLobby_hns_MapScripts::
 @ Some scripts for this room are split into data/scripts/contest_hall and data/scripts/berry_blender
 
 LilycoveCity_ContestLobby_OnTransition_hns:
+	clearflag FLAG_HOENN_LILYCOVE_CONTEST @ Hoenn & Seek
 	end
 
 LilycoveCity_ContestLobby_OnFrame_hns:

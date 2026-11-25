@@ -70,7 +70,9 @@ HoennSeek_Text_MaysMom:
 	.string "She does call home, at least. Mostly\n"
 	.string "to ask what the LEAGUE reports say\l"
 	.string "about the JOHTO TRAINER. NORMAN\l"
-	.string "reads her every one. Hehe.$"
+	.string "reads her every one. Hehe.\p"
+	.string "When she IS home, she's glued to\n"
+	.string "the CONTEST shows from LILYCOVE.$"
 
 HoennSeek_Text_MaysMomFollower:
 	.string "And who's this? Your {STR_VAR_1}?\p"

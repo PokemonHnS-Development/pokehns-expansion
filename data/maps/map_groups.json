@@ -711,7 +711,9 @@
     "FuchsiaCity_SafariZoneBeach_hns",
     "FuchsiaCity_SafariZoneBrush_hns",
     "FuchsiaCity_SafariZoneMountain_hns",
-    "FuchsiaCity_SafariZoneCave_hns"
+    "FuchsiaCity_SafariZoneCave_hns",
+    "LilycoveCity_ContestLobby_hoenn",
+    "LilycoveCity_ContestHall_hoenn"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

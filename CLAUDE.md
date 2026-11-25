@@ -43,6 +43,8 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 16b (harbor aide, Birch's Mudkip, Wally at the lab, Steven's shiny Beldum egg) | 32,483,380 / 1,045 KB | 32,631,412 / 901 KB |
 | Part 16c (36 Hoenn phone trainers + rematch teams; 256 trainers, cap 912) | 32,510,404 / 1,019 KB | 32,658,548 / 874 KB |
 | Part 16d (Brendan & May's calls, Elm's Johto starters, Wally's rematch calls, relationship lines; 257 trainers) | 32,517,300 / 1,012 KB | 32,665,236 / 868 KB |
+| Part 17 (Lilycove contest door into HnS's lobby, Hoenn Safari exits, May's contest call) | 32,518,116 / 1,012 KB | 32,665,876 / 867 KB |
+| Part 17 (Lilycove's own lobby + walk-in hall copies, twin NPCs) | 32,522,196 / 1,008 KB | 32,669,940 / 863 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -56,7 +58,7 @@ Read the roadmap entry for the part you're working on before starting.
   - Before this, every Hoenn section was `= 0` in HnS.
   - Sections after `JOHTO_MAPSEC_END` make `GetRegionForSectionId()` return `REGION_HOENN`, but so do HnS's own Battle Frontier, Trainer Hill and Birth/Faraway/Southern Island sections. **Use `IsHoennMapSec(id)` from `include/hoenn.h` for runtime Hoenn checks** (part 6). It reads `include/constants/hoenn_mapsecs.h`, which `gen_hoenn_mapsecs.py` writes.
   - Four sections HnS already lists (ABANDONED_SHIP, LILYCOVE_CITY, SAFARI_ZONE, VICTORY_ROAD) sit before Pallet, outside every range, so they also count as Hoenn.
-- **Region map and Fly (part 6):** `src/region_map.c` shows Emerald's Hoenn map whenever the player is in a Hoenn section, so Fly only reaches Hoenn towns from Hoenn and Johto/Kanto towns from there. The Pokédex area page (`src/pokedex_area_screen.c`) only marks areas in the region whose map is shown. Edge case: HnS's own contest lobby copy uses `MAPSEC_LILYCOVE_CITY`, so it shows the Hoenn map.
+- **Region map and Fly (part 6):** `src/region_map.c` shows Emerald's Hoenn map whenever the player is in a Hoenn section, so Fly only reaches Hoenn towns from Hoenn and Johto/Kanto towns from there. The Pokédex area page (`src/pokedex_area_screen.c`) only marks areas in the region whose map is shown. HnS's contest lobby and walk-in hall use `MAPSEC_VIRIDIAN_CITY`; Lilycove's copies (part 17) use `MAPSEC_LILYCOVE_CITY`.
 - **Wild encounters (part 6, reworked in part 15):** `tools/hoenn/gen_hoenn_wild.py` turns the Emerald tables of kept maps into `data/hoenn/wild_encounters_hoenn.json` (commit it), using `data/hoenn/wild_rules.json`:
   - `bands`: each map (longest name prefix) gets a level band from Lv 35 (Routes 101–104) to 70 (Victory Road). Every table type is stretched onto it (fishing starts 5 lower), and species evolve through `EVO_LEVEL` evolutions the new minimum level reaches (Zigzagoon becomes Linoone, Magikarp becomes Gyarados).
   - `rules`: `day`/`night` ops (`swap` species, or replace `slots`). A map with night ops gets a `_Night` table built from the original Emerald table. Day/night pairs replace version exclusives: Solrock/Lunatone in Meteor Falls, Zangoose/Seviper on Route 114, Mawile/Sableye in Granite Cave and Victory Road. Night also brings Volbeat/Illumise (117), Poochyena/Oddish (101–104, 116), Absol/Kecleon/Murkrow/Hoothoot/Spinarak (Petalburg Woods, 119, 120), ghosts (113, 123, Mt. Pyre's exterior, with Misdreavus) and Chinchou on the super rod (124–134).
@@ -151,6 +153,12 @@ Read the roadmap entry for the part you're working on before starting.
   - **Every phone line says how the caller knows** (Norman hears every gym result through the League; Birch is Norman's neighbor; Oak calls both dads; Maxie works with Birch; Brendan & May see Kanto firsthand). Keep that up, and when a later part adds content, add a stage line or an event call for it here (see Conventions).
   - **In person, the same relationships come up:** Norman's gym gate (he reads every League report; May calls asking about you), May's mom (May calls home for the reports), Brendan's mom (Birch and Norman chat over the fence; Birch measures volcanoes with Maxie), Birch (Norman tells him your gym results; Oak calls him weekly), Maxie's rematch line (Birch was just up there), Oak (talks to Birch weekly; after Red he phoned Birch and Norman, `goto_if_defeated TRAINER_RED_HNS`).
   - Testing: the debug save has no PokéGear in the start menu, so the contact list itself wasn't checked in the emulator. Random calls are rare; to force one, zero `sMatchCallState.minutes` (`sMatchCallState` in the ELF) before every step.
+- **Contests and Safari (part 17):**
+  - **Contests:** HnS already has a full contest lobby and halls (`LilycoveCity_ContestLobby_hns` / `_ContestHall_hns`, Emerald's art, Berry Blenders, the Pokéblock Case at reception), entered from **Viridian City**. Lilycove gets its own copies, `LilycoveCity_ContestLobby_hoenn` and `LilycoveCity_ContestHall_hoenn` (game_version `hns`, appended to `gMapGroup_SpecialArea_Hns`): same layouts and the HnS lobby's scripts (receptionist flow, blenders, OnFrame artist scene), Lilycove map section, static exits to `LilycoveCity` warp 4.
+    - The contest stages (`ContestHall*_hns`) stay shared. The Lilycove lobby's OnTransition sets `FLAG_HOENN_LILYCOVE_CONTEST`, HnS's lobby OnTransition clears it, and `ContestHall_EventScript_SetExitWarp_hns` jumps to `HoennSeek_EventScript_ContestSetExitWarp` when it's set, so you come back to the lobby you entered from.
+    - **The ambient NPCs are the Viridian NPCs' twins** (same sprites, a few nudged spots, new lines in the two `_hoenn` maps' `scripts.inc`). The receptionist explains her twin and the shared ledger once (`FLAG_HOENN_MET_CONTEST_TWIN`), then runs HnS's receptionist script. Emerald's own lobby/hall maps stay excluded. Contest paintings already go to the Lilycove Museum (part 4 note).
+  - **Safari Zone:** Route 121's entrance runs on HnS's Safari engine (`EnterSafariMode` gives 30 Safari Balls in the bag). It sets `FLAG_HOENN_IN_SAFARI_ZONE`; the shared exits in `data/scripts/safari_zone.inc` (retire, time up, out of balls, mid-battle) check it first and send you back to Route 121 (`data/scripts/hoenn_safari.inc`), before HnS's Kanto/Johto checks. Safari levels are part 15's band (48–55).
+  - **Phone:** May's event call after your first contest win (`GAME_STAT_WON_CONTEST` > 0; she watches the broadcasts), May's 4th-badge contact line points to the contest hall, Brendan's 8th-badge line to Birch's fieldwork at the Safari Zone, and May's mom mentions the contest shows.
 - **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
@@ -185,10 +193,10 @@ Read the roadmap entry for the part you're working on before starting.
   - `tools/hoenn/check_links.py` still lists the 21 targets, for reference.
   - **Doors:** `gen_hoenn_lists.py` writes `data/hoenn/blocked_maps.json`, and `tools/mapjson` emits warps into those maps inside `.if IS_HNS` with coordinates 0x7FFF, so the door stays shut (the warp keeps its index).
   - **Scripts:** `ApplyCurrentWarp` (`src/overworld.c`) refuses any warp whose map header is NULL and keeps the player in place.
-  - Still to give a real destination: Lilycove contest lobby (part 17).
+  - Lilycove's contest door got a real destination in part 17 (Lilycove's copy of HnS's lobby).
 - **9 specials used by Hoenn maps have HnS-specific branches inside:**
   - `GameClear` (part 13)
-  - `EnterSafariMode` / `ExitSafariMode` (part 17)
+  - ~~`EnterSafariMode` / `ExitSafariMode`~~ work for Hoenn as they are (part 17)
   - `HasAllRegionalMons` and `SetUnlockedPokedexFlags` (Birch / Pokédex)
   - `DoPCTurnOnEffect` (PC metatiles)
   - `ShowScrollableMultichoice`
@@ -211,7 +219,7 @@ Read the roadmap entry for the part you're working on before starting.
   - Flags & Vars → items 14–16 turn off collision, encounters and trainer sight.
   - `tools/hoenn/emu/mkbase.sh ROM OUT.ss` (run from the harness directory) makes a new game with the debug party, all badges, HnS's HM-received/Headbutt/Running Shoes flags, and the debug menu open. The debug party (`src/data/debug_trainers.party`, debug builds only) is Lapras (lead), Machamp, Pidgeot, Blissey, Miltank and Wobbuffet; between them they know every move with an overworld use: the 9 HMs, Headbutt, Secret Power, Dig, Teleport, Sweet Scent, Milk Drink and Soft-Boiled.
   - Memory (2.0.6 debug build): SaveBlock1 flags at `gSaveBlock1Ptr + 0x198C`; SaveBlock2 battle style is bit 1 of byte `+21`; Hoenn vars at `gSaveBlock3Ptr + 0x132`; enemy battler HP at `gBattleMons + 136 + 42`.
-- **Phone dialogue is part of every content part.** When a part adds a quest, area or battle, add a line for it to Brendan's/May's contact lists (`src/pokenav_match_call_data.c`) or an event call (`src/hoenn_phone.c`), and make the line say who told them. Planned hooks: contests (17), secret bases (18), the Kanto tower (2.0).
+- **Phone dialogue is part of every content part.** When a part adds a quest, area or battle, add a line for it to Brendan's/May's contact lists (`src/pokenav_match_call_data.c`) or an event call (`src/hoenn_phone.c`), and make the line say who told them. Done for contests (17); planned: secret bases (18), the Kanto tower (2.0).
 - **Keep the playtest list current.** Anything a part couldn't test in the emulator goes into `claude/hns-hoenn-playtest-checklist.md` (claude.ai Project), so part 20 can play it through.
 - Never commit ROMs, base ROMs or patches. `baserom/` and `dist/` are git-ignored.
 - The project owner tests in mGBA. Every part should end with a building ROM and a patch.

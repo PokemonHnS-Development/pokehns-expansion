@@ -13,6 +13,7 @@
 #include "global.h"
 #include "battle_setup.h"
 #include "event_data.h"
+#include "constants/game_stat.h"
 #include "hoenn.h"
 #include "match_call.h"
 #include "overworld.h"
@@ -63,6 +64,9 @@ static u16 GetDueEventCall(void)
         return HOENN_CALL_TEAMS;
     if (FlagGet(FLAG_HOENN_BEAT_BM) && HasTrainerBeenFought(TRAINER_RED_HNS) && !FlagGet(FLAG_HOENN_CALL_RED))
         return HOENN_CALL_RED;
+    // Part 17: May watches the contests on TV (any contest hall, Lilycove or Viridian).
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && GetGameStat(GAME_STAT_WON_CONTEST) > 0 && !FlagGet(FLAG_HOENN_CALL_CONTEST))
+        return HOENN_CALL_CONTEST;
     return HOENN_CALL_NONE;
 }
 
