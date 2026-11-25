@@ -27,7 +27,7 @@ def _charmap():
         if m and int(m.group(2), 16) not in dec:
             dec[int(m.group(2), 16)] = m.group(1)
     return dec
-DEC = _charmap()
+DEC = _charmap(); DEC[0x39] = " "
 
 def decode(bs):
     out, i = [], 0
@@ -120,6 +120,27 @@ class Emu:
         self.run(cmds + ["wait 2", f"savestate {state_out}"])
         return state_out
 
+    def callback2(self, state):
+        a = self.read_words(state, self.s("gMain") + 4, 1)[0] & ~1
+        return self.addr2sym.get(a, hex(a))
+
+    def unstick_party(self, state):
+        """If a forced 'Choose a POKéMON' party screen is open, move down until a mon can go out."""
+        for k in range(12):
+            cb = self.callback2(state)
+            if cb in ("BattleMainCB2", "CB2_Overworld"): return
+            if cb == "CB2_UpdatePartyMenu":  # close any submenu, next slot, SEND OUT
+                self.steps(state, state, [("B", 2), ("wait", 20), ("DOWN", 2), ("wait", 20), ("A", 4), ("wait", 30), ("A", 4), ("wait", 90)])
+            else:  # summary screen or similar: back out
+                self.steps(state, state, [("B", 4), ("wait", 60)])
+
+    def set_battle_style(self, state_in, state_out):
+        """Battle style SET (no 'switch Pokémon?' prompt): bit 1 of SaveBlock2 byte +21."""
+        sb2 = self.read_words(state_in, 0x030041BC, 1)[0]
+        v = int(self.run([f"loadstate {state_in}", f"r8 {sb2 + 21:x}"])[0].split(": ")[1], 16)
+        self.run([f"loadstate {state_in}", f"w8 {sb2 + 21:x} {v | 2}", "wait 2", f"savestate {state_out}"])
+        return state_out
+
     def getflag(self, state, flag):
         sb1, sb3 = self.ptrs(state); a, m = self._flag_addr(flag, sb1, sb3)
         return bool(int(self.run([f"loadstate {state}", f"r8 {a:x}"])[0].split(": ")[1], 16) & m)
@@ -131,7 +152,7 @@ class Emu:
     # ------------------------------------------------ actions
     def menu(self, state_in, state_out):
         """Close whatever is open and open the debug menu (needed before warp())."""
-        self.run([f"loadstate {state_in}"] + ["press B 4", "wait 30"] * 6 + ["wait 30", "press R+START 6", "wait 60", f"savestate {state_out}"])
+        self.run([f"loadstate {state_in}"] + ["press B 4", "wait 40"] * 14 + ["wait 30", "press R+START 6", "wait 60", f"savestate {state_out}"])
         return state_out
 
     def warp(self, state_in, group, num, x, y, state_out):
@@ -162,6 +183,26 @@ class Emu:
         m = {"U": "UP", "D": "DOWN", "L": "LEFT", "R": "RIGHT"}
         return self.steps(state_in, state_out, [m[c] for c in path], gap=2)
 
+    def walk_read(self, state_in, state_out, path, shots=None, after=8):
+        """Walk a path ('LRLR…'), reading dialogue every 2 steps, then press B `after`
+        times (finishes a phone call that started). Returns texts."""
+        m = {"U": "UP", "D": "DOWN", "L": "LEFT", "R": "RIGHT"}
+        cmds = [f"loadstate {state_in}", f"w8 {self.s('gStringVar4'):x} 255"]
+        nreads = 0
+        for i, c in enumerate(path):
+            cmds += [f"press {m[c]} 16", "wait 2"]
+            if i % 2: cmds += self.text_cmds(); nreads += 1
+        for k in range(after):
+            cmds += ["press B 4", "wait 110"] + self.text_cmds(); nreads += 1
+            if shots: cmds.append(f"shot {shots}_{k + 1}.png")
+        cmds.append(f"savestate {state_out}")
+        vals = [int(l.split(": ")[1], 16) for l in self.run(cmds)]
+        texts = []
+        for i in range(nreads):
+            t, bt = self.parse_text(vals[i * 256:(i + 1) * 256])
+            if t and (not texts or texts[-1] != t): texts.append(t)
+        return texts
+
     def talk(self, state_in, state_out, face=None, presses=12, wait=110, shots=None, keys=None):
         """Face a direction (optional), then press A `presses` times (or the given key list),
         reading the dialogue box after each. Returns the distinct texts in order.
@@ -183,15 +224,19 @@ class Emu:
         self.log.append((state_in, texts))
         return texts
 
-    def fight(self, state_in, state_out, rounds=60, shots=None, every=10):
+    def fight(self, state_in, state_out, rounds=60, shots=None, every=10, hp=None):
         """Auto-win the current battle: foe battlers get HP 1 and Atk/SpA 1, then A is mashed.
         Returns (texts, still_in_battle)."""
         bm, main = self.s("gBattleMons"), self.s("gMain")
         cmds = [f"loadstate {state_in}"]
         for i in range(rounds):
-            for b in (1, 3):
+            for b in (1, 3):  # foes: Atk/SpA 1 (and HP if hp is given)
                 base = bm + 136 * b
-                cmds += [f"w16 {base + 42:x} 1", f"w16 {base + 2:x} 1", f"w16 {base + 8:x} 1"]  # hp, attack, spAttack
+                cmds += [f"w16 {base + 2:x} 1", f"w16 {base + 8:x} 1"] + ([f"w16 {base + 42:x} {hp}"] if hp is not None else [])
+            for b in (0, 2):  # us: Atk/SpA/Spe 999
+                base = bm + 136 * b
+                cmds += [f"w16 {base + 2:x} 999", f"w16 {base + 6:x} 999", f"w16 {base + 8:x} 999"]
+                cmds += [f"w8 {base + 37 + m:x} 20" for m in range(4)]  # PP never runs out
             cmds += ["press A 4", "wait 40"] + self.text_cmds(32)
             if shots and i % every == 0: cmds.append(f"shot {shots}_{i // every + 1}.png")
         cmds += [f"r8 {main + 0x439:x}", f"savestate {state_out}"]
@@ -200,7 +245,7 @@ class Emu:
         texts = []
         for i in range(rounds):
             t, bt = self.parse_text(vals[i * 64:(i + 1) * 64], 32)
-            for x in (bt, t):
+            for x in (bt,):
                 if x and (not texts or texts[-1] != x) and x not in texts[-4:]: texts.append(x)
         return texts, bool(vals[-1] & 2)
 
@@ -255,3 +300,70 @@ def objects(map_name):
     d = json.load(open(os.path.join(ROOT, f"data/maps/{map_name}/map.json")))
     return [(o.get("local_id"), o["graphics_id"], o["x"], o["y"], o["script"], o.get("flag"), o.get("movement_type"))
             for o in d.get("object_events") or []]
+
+def explore(e, state, map_name, prefix, presses=10, skip=(), only=None, signs=True):
+    """Talk to every visible NPC (and read every sign) on a map. Returns
+    [(kind, script, (x, y), texts, shot)] — shot is the screenshot after the first A."""
+    objs = objects(map_name)
+    flags = sorted({o[5] for o in objs if o[5] and o[5] != "0"})
+    vals = dict(zip(flags, [None] * len(flags)))
+    if flags:
+        r = resolve(*flags)
+        vals = {k: (v if isinstance(v, int) else None) for k, v in r.items()}
+    g, n = map_of(map_name)
+    out = []
+    targets = [("npc", o[4], o[2], o[3], o[5]) for o in objs if o[4] not in ("0x0", "0") ]
+    if signs:
+        md = json.load(open(os.path.join(ROOT, f"data/maps/{map_name}/map.json")))
+        targets += [("sign", b["script"], b["x"], b["y"], None) for b in md.get("bg_events") or [] if b.get("type") == "sign"]
+    for i, (kind, script, x, y, flag) in enumerate(targets):
+        if script in skip or (only and not any(k in script for k in only)): continue
+        if flag and vals.get(flag) is not None and e.getflag(state, vals[flag]): continue
+        texts, shot = [], f"{prefix}_{i:02d}"
+        for px, py, key in (spots_next_to(map_name, x, y) if kind == "npc" else
+                            [(x, y + 1, "UP"), (x - 1, y, "RIGHT"), (x + 1, y, "LEFT"), (x, y - 1, "DOWN")]):
+            try:
+                s = e.go(state, g, n, px, py, "_exp_w.ss")
+            except Exception:
+                continue
+            nm, cx, cy, _ = e.where(s)
+            if (cx, cy) != (px, py): continue
+            cmds_keys = ["A"] * presses
+            texts = e.talk(s, "_exp_t.ss", face=key, keys=cmds_keys, wait=100, shots=shot)
+            if texts: break
+        out.append((kind, script, (x, y), texts, f"{shot}_1.png"))
+    return out
+
+def resolve_map(names):
+    return resolve(*names)
+
+def trainers(map_name):
+    d = json.load(open(os.path.join(ROOT, f"data/maps/{map_name}/map.json")))
+    return [(o["x"], o["y"], o["script"], o.get("flag")) for o in d.get("object_events") or []
+            if o.get("trainer_type", "TRAINER_TYPE_NONE") != "TRAINER_TYPE_NONE"]
+
+def battle_npc(e, state_in, map_name, x, y, state_out, pre=6, post=10, shots=None):
+    """Talk to the NPC at (x,y) until a battle starts, auto-win it, then clear the
+    after-battle text with B (B also answers NO). Returns (texts, won_or_None)."""
+    g, n = map_of(map_name)
+    texts = []
+    for px, py, key in spots_next_to(map_name, x, y):
+        s = e.go(state_in, g, n, px, py, "_bn_w.ss")
+        if e.where(s)[1:3] != (px, py): continue
+        t = e.talk(s, "_bn_t.ss", face=key, keys=["A"] * pre, wait=90, shots=shots and shots + "_pre")
+        texts += t
+        if e.where("_bn_t.ss")[3]:
+            ft, still = e.fight("_bn_t.ss", "_bn_f.ss", rounds=80, shots=shots and shots + "_b", every=8)
+            texts += ft
+            for k in range(5):
+                if not still: break
+                e.unstick_party("_bn_f.ss")
+                ft, still = e.fight("_bn_f.ss", "_bn_f.ss", rounds=60, shots=shots and f"{shots}_b{k}", every=10)
+                texts += ft
+            t2 = e.talk("_bn_f.ss", state_out, keys=["B"] * post, wait=100, shots=shots and shots + "_post")
+            texts += t2
+            return texts, not still
+        if t:
+            os.replace(os.path.join(e.cwd, "_bn_t.ss"), os.path.join(e.cwd, state_out))
+            return texts, None
+    return texts, None
