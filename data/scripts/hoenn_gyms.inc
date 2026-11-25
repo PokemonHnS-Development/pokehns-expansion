@@ -343,8 +343,8 @@ HoennSeek_Text_WinonaRoute119:
 	.string "INSTITUTE track a storm. My bird\l"
 	.string "POKéMON read the winds well.\p"
 	.string "But the storm has passed, and a GYM\n"
-	.string "LEADER shouldn't keep a TRAINER\l"
-	.string "waiting.\p"
+	.string "LEADER shouldn't keep a\l"
+	.string "TRAINER waiting.\p"
 	.string "I'll fly back to FORTREE. Meet me at\n"
 	.string "the GYM!$"
 

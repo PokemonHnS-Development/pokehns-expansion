@@ -1347,6 +1347,8 @@ static bool32 SelectMatchCallTrainer(void)
 #endif
     if (GetRematchTrainerLocation(matchCallId) == gMapHeader.regionMapSectionId && !TrainerIsEligibleForRematch(matchCallId))
         return FALSE;
+    if (!HoennSpecialCallerAnswers(matchCallId)) // Hoenn & Seek (20a): Wally calls less often
+        return FALSE;
 
     return TRUE;
 }

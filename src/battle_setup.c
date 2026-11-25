@@ -943,6 +943,9 @@ static const struct {
     {MAP_SINJOH_RUINS_REGIDRACO_ROOM_HNS,        BATTLE_ENVIRONMENT_SNOW_CAVE},
     {MAP_SINJOH_RUINS_REGIGIGAS_ROOM_HNS,        BATTLE_ENVIRONMENT_SNOW_CAVE},
     {MAP_SINJOH_RUINS_TEMPLE_HNS,                BATTLE_ENVIRONMENT_SNOW_CAVE},
+#if IS_HNS
+#include "data/hoenn_battle_environments.h" // Hoenn & Seek (part 20a)
+#endif
 };
 
 static s32 GetMapDefaultEnvironment(u16 mapId)

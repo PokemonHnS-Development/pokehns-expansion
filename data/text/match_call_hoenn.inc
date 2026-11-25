@@ -7,8 +7,8 @@ MatchCall_HNS_HoennAmyAndLiv1_General1::
 MatchCall_HNS_HoennAmyAndLiv1_General2::
 	.string "LIV: It's LIV!\p"
 	.string "AMY: And AMY!\p"
-	.string "LIV: We're training\n"
-	.string "together!$"
+	.string "LIV: We're\n"
+	.string "training together!$"
 MatchCall_HNS_HoennAmyAndLiv1_Battle::
 	.string "AMY: ROUTE 103!\p"
 	.string "LIV: Battle us!\p"
@@ -58,8 +58,8 @@ MatchCall_HNS_HoennCalvin1_General1::
 	.string "Except you.$"
 MatchCall_HNS_HoennCalvin1_General2::
 	.string "CALVIN here! I've been\n"
-	.string "training every day after\l"
-	.string "school!$"
+	.string "training every day\l"
+	.string "after school!$"
 MatchCall_HNS_HoennCalvin1_Battle::
 	.string "It's CALVIN! ROUTE 102!\n"
 	.string "I'm way stronger now!$"
@@ -70,8 +70,8 @@ MatchCall_HNS_HoennCatherine1_General1::
 	.string "119 today.$"
 MatchCall_HNS_HoennCatherine1_General2::
 	.string "It's CATHERINE. The rain\n"
-	.string "on ROUTE 119 makes us\l"
-	.string "tougher.$"
+	.string "on ROUTE 119 makes\l"
+	.string "us tougher.$"
 MatchCall_HNS_HoennCatherine1_Battle::
 	.string "CATHERINE. ROUTE 119.\n"
 	.string "Let's test each other!$"
@@ -84,8 +84,8 @@ MatchCall_HNS_HoennCristin1_General1::
 MatchCall_HNS_HoennCristin1_General2::
 	.string "CRISTIN here. Training on\n"
 	.string "ROUTE 121 is going well.\p"
-	.string "I don't plan on losing\n"
-	.string "twice.$"
+	.string "I don't plan on\n"
+	.string "losing twice.$"
 MatchCall_HNS_HoennCristin1_Battle::
 	.string "CRISTIN. I'm on ROUTE 121.\n"
 	.string "I'm ready for you now.\p"
@@ -98,14 +98,14 @@ MatchCall_HNS_HoennCyndy1_General2::
 	.string "It's CYNDY! I'm getting\n"
 	.string "stronger every day!$"
 MatchCall_HNS_HoennCyndy1_Battle::
-	.string "CYNDY! ROUTE 115! Ready to\n"
-	.string "rumble?$"
+	.string "CYNDY! ROUTE 115! Ready\n"
+	.string "to rumble?$"
 
 MatchCall_HNS_HoennDiana1_General1::
 	.string "DIANA here! I had a picnic\n"
 	.string "on JAGGED PASS!\p"
-	.string "My {STR_VAR_3} ate all the\n"
-	.string "sandwiches.$"
+	.string "My {STR_VAR_3} ate all\n"
+	.string "the sandwiches.$"
 MatchCall_HNS_HoennDiana1_General2::
 	.string "It's DIANA! The view from\n"
 	.string "up here is amazing!$"
@@ -119,17 +119,17 @@ MatchCall_HNS_HoennDylan1_General1::
 	.string "Personal best!$"
 MatchCall_HNS_HoennDylan1_General2::
 	.string "It's DYLAN. Cross-training\n"
-	.string "is the secret. Battling\l"
-	.string "too!$"
+	.string "is the secret.\l"
+	.string "Battling too!$"
 MatchCall_HNS_HoennDylan1_Battle::
-	.string "DYLAN! ROUTE 117! Let's\n"
-	.string "go!$"
+	.string "DYLAN! ROUTE 117!\n"
+	.string "Let's go!$"
 
 MatchCall_HNS_HoennEthan1_General1::
 	.string "Hey, it's ETHAN! I camped\n"
 	.string "on JAGGED PASS last night.\p"
-	.string "My {STR_VAR_3} kept me\n"
-	.string "warm.$"
+	.string "My {STR_VAR_3} kept\n"
+	.string "me warm.$"
 MatchCall_HNS_HoennEthan1_General2::
 	.string "ETHAN here. The ash makes\n"
 	.string "great campfire stories.$"
@@ -139,13 +139,13 @@ MatchCall_HNS_HoennEthan1_Battle::
 
 MatchCall_HNS_HoennFernando1_General1::
 	.string "FERNANDO here! I wrote a\n"
-	.string "new song about my\l"
-	.string "{STR_VAR_3}.\p"
+	.string "new song about\l"
+	.string "my {STR_VAR_3}.\p"
 	.string "It's a power ballad!$"
 MatchCall_HNS_HoennFernando1_General2::
 	.string "Yo, it's FERNANDO! The\n"
-	.string "acoustics on ROUTE 123 are\l"
-	.string "amazing.$"
+	.string "acoustics on ROUTE 123\l"
+	.string "are amazing.$"
 MatchCall_HNS_HoennFernando1_Battle::
 	.string "FERNANDO here! I'm on\n"
 	.string "ROUTE 123. Let's battle to\l"
@@ -153,8 +153,8 @@ MatchCall_HNS_HoennFernando1_Battle::
 
 MatchCall_HNS_HoennHaley1_General1::
 	.string "It's HALEY! My {STR_VAR_3}\n"
-	.string "is so cute and so strong\l"
-	.string "now!$"
+	.string "is so cute and so\l"
+	.string "strong now!$"
 MatchCall_HNS_HoennHaley1_General2::
 	.string "HALEY here! I'm training\n"
 	.string "on ROUTE 104 every day!$"
@@ -186,8 +186,8 @@ MatchCall_HNS_HoennIsaiah1_Battle::
 
 MatchCall_HNS_HoennJackson1_General1::
 	.string "JACKSON here. Patrolled\n"
-	.string "ROUTE 119 all day with my\l"
-	.string "{STR_VAR_3}.$"
+	.string "ROUTE 119 all day with\l"
+	.string "my {STR_VAR_3}.$"
 MatchCall_HNS_HoennJackson1_General2::
 	.string "It's JACKSON. A ranger\n"
 	.string "never stops training.$"
@@ -202,27 +202,27 @@ MatchCall_HNS_HoennJessica1_General1::
 	.string "Isn't that wonderful?$"
 MatchCall_HNS_HoennJessica1_General2::
 	.string "JESSICA here. Beauty takes\n"
-	.string "effort, you know. So does\l"
-	.string "battling.$"
+	.string "effort, you know. So\l"
+	.string "does battling.$"
 MatchCall_HNS_HoennJessica1_Battle::
 	.string "JESSICA here! I'm on ROUTE\n"
-	.string "121. Shall we battle,\l"
-	.string "darling?$"
+	.string "121. Shall we\l"
+	.string "battle, darling?$"
 
 MatchCall_HNS_HoennJohnAndJay1_General1::
 	.string "JOHN: It's JOHN. JAY and I\n"
-	.string "hiked METEOR FALLS again\l"
-	.string "today.\p"
+	.string "hiked METEOR FALLS\l"
+	.string "again today.\p"
 	.string "JAY: Our {STR_VAR_3} did\n"
 	.string "all the climbing!$"
 MatchCall_HNS_HoennJohnAndJay1_General2::
 	.string "JAY: It's JAY! JOHN says\n"
 	.string "we're too old to battle.\p"
-	.string "JOHN: I said no such\n"
-	.string "thing!$"
+	.string "JOHN: I said no\n"
+	.string "such thing!$"
 MatchCall_HNS_HoennJohnAndJay1_Battle::
-	.string "JOHN: We're at METEOR\n"
-	.string "FALLS.\p"
+	.string "JOHN: We're at\n"
+	.string "METEOR FALLS.\p"
 	.string "JAY: Come battle us, dear!$"
 
 MatchCall_HNS_HoennKaren1_General1::
@@ -232,16 +232,16 @@ MatchCall_HNS_HoennKaren1_General1::
 	.string "I already knew them all.$"
 MatchCall_HNS_HoennKaren1_General2::
 	.string "KAREN here! My {STR_VAR_3}\n"
-	.string "got a perfect score on its\l"
-	.string "training!$"
+	.string "got a perfect score on\l"
+	.string "its training!$"
 MatchCall_HNS_HoennKaren1_Battle::
 	.string "It's KAREN! I'm on ROUTE\n"
 	.string "116. Pop quiz: a battle!$"
 
 MatchCall_HNS_HoennKiraAndDan1_General1::
 	.string "KIRA: It's KIRA! DAN and I\n"
-	.string "explored the old ship\l"
-	.string "again.\p"
+	.string "explored the old\l"
+	.string "ship again.\p"
 	.string "DAN: Our {STR_VAR_3} found\n"
 	.string "a key!$"
 MatchCall_HNS_HoennKiraAndDan1_General2::
@@ -255,10 +255,10 @@ MatchCall_HNS_HoennKiraAndDan1_Battle::
 
 MatchCall_HNS_HoennKoji1_General1::
 	.string "KOJI here! I train by\n"
-	.string "punching waves on ROUTE\l"
-	.string "127.\p"
-	.string "My {STR_VAR_3} laughs at\n"
-	.string "me.$"
+	.string "punching waves on\l"
+	.string "ROUTE 127.\p"
+	.string "My {STR_VAR_3} laughs\n"
+	.string "at me.$"
 MatchCall_HNS_HoennKoji1_General2::
 	.string "It's KOJI! The sea makes\n"
 	.string "my legs strong. Hah!$"
@@ -289,8 +289,8 @@ MatchCall_HNS_HoennLilaAndRoy1_General2::
 MatchCall_HNS_HoennLilaAndRoy1_Battle::
 	.string "LILA: We're on ROUTE 124!\p"
 	.string "ROY: Come battle us both!\p"
-	.string "LILA: We've been\n"
-	.string "practicing!$"
+	.string "LILA: We've\n"
+	.string "been practicing!$"
 
 MatchCall_HNS_HoennLola1_General1::
 	.string "Hiya! It's LOLA! I swam\n"
@@ -299,33 +299,33 @@ MatchCall_HNS_HoennLola1_General1::
 	.string "My {STR_VAR_3} helped!$"
 MatchCall_HNS_HoennLola1_General2::
 	.string "LOLA here! My big sister\n"
-	.string "says I'm a real trainer\l"
-	.string "now.\p"
+	.string "says I'm a real\l"
+	.string "trainer now.\p"
 	.string "Isn't that cool?$"
 MatchCall_HNS_HoennLola1_Battle::
 	.string "It's LOLA! I'm on ROUTE\n"
 	.string "109 by the beach!\p"
-	.string "Come battle me! I got way\n"
-	.string "stronger!$"
+	.string "Come battle me! I got\n"
+	.string "way stronger!$"
 
 MatchCall_HNS_HoennMadeline1_General1::
 	.string "MADELINE here. The ash on\n"
-	.string "ROUTE 113 ruins my\l"
-	.string "parasol.\p"
-	.string "But my {STR_VAR_3} doesn't\n"
-	.string "mind!$"
+	.string "ROUTE 113 ruins\l"
+	.string "my parasol.\p"
+	.string "But my {STR_VAR_3}\n"
+	.string "doesn't mind!$"
 MatchCall_HNS_HoennMadeline1_General2::
 	.string "It's MADELINE. A lady\n"
 	.string "always trains with grace.$"
 MatchCall_HNS_HoennMadeline1_Battle::
 	.string "MADELINE! I'm on ROUTE\n"
-	.string "113. Care for an elegant\l"
-	.string "battle?$"
+	.string "113. Care for an\l"
+	.string "elegant battle?$"
 
 MatchCall_HNS_HoennNicolas1_General1::
 	.string "NICOLAS. My {STR_VAR_3}\n"
-	.string "roared so loud the falls\l"
-	.string "shook.$"
+	.string "roared so loud the\l"
+	.string "falls shook.$"
 MatchCall_HNS_HoennNicolas1_General2::
 	.string "It's NICOLAS. Dragons\n"
 	.string "respect strength. I\l"
@@ -341,13 +341,13 @@ MatchCall_HNS_HoennNob1_General1::
 	.string "hundred times!$"
 MatchCall_HNS_HoennNob1_General2::
 	.string "NOB here! I broke ten\n"
-	.string "boards with one chop\l"
-	.string "today!\p"
+	.string "boards with one\l"
+	.string "chop today!\p"
 	.string "OSU!$"
 MatchCall_HNS_HoennNob1_Battle::
 	.string "OSU! NOB here! Come to\n"
-	.string "ROUTE 115! My fists are\l"
-	.string "ready!$"
+	.string "ROUTE 115! My fists\l"
+	.string "are ready!$"
 
 MatchCall_HNS_HoennRobert1_General1::
 	.string "ROBERT here! My {STR_VAR_3}\n"
@@ -355,8 +355,8 @@ MatchCall_HNS_HoennRobert1_General1::
 	.string "Fortree and back!$"
 MatchCall_HNS_HoennRobert1_General2::
 	.string "It's ROBERT! The winds on\n"
-	.string "ROUTE 120 are perfect\l"
-	.string "today.$"
+	.string "ROUTE 120 are\l"
+	.string "perfect today.$"
 MatchCall_HNS_HoennRobert1_Battle::
 	.string "ROBERT here! ROUTE 120!\n"
 	.string "Let's soar!$"
@@ -365,12 +365,12 @@ MatchCall_HNS_HoennRose1_General1::
 	.string "Hello, {PLAYER}! It's ROSE.\p"
 	.string "My {STR_VAR_3}'s petals\n"
 	.string "smell sweeter every day.\p"
-	.string "Hoenn's flowers agree with\n"
-	.string "it.$"
+	.string "Hoenn's flowers agree\n"
+	.string "with it.$"
 MatchCall_HNS_HoennRose1_General2::
 	.string "{PLAYER}, hello! The\n"
-	.string "flowers on ROUTE 118 are\l"
-	.string "blooming.\p"
+	.string "flowers on ROUTE 118\l"
+	.string "are blooming.\p"
 	.string "I've been training while I\n"
 	.string "pick them.$"
 MatchCall_HNS_HoennRose1_Battle::
@@ -381,8 +381,8 @@ MatchCall_HNS_HoennRose1_Battle::
 
 MatchCall_HNS_HoennSawyer1_General1::
 	.string "SAWYER here! My {STR_VAR_3}\n"
-	.string "dug up a shiny rock on MT.\l"
-	.string "CHIMNEY!$"
+	.string "dug up a shiny rock on\l"
+	.string "MT. CHIMNEY!$"
 MatchCall_HNS_HoennSawyer1_General2::
 	.string "It's SAWYER! The volcano's\n"
 	.string "quiet. Good for training.$"
@@ -416,8 +416,8 @@ MatchCall_HNS_HoennTimothy1_Battle::
 MatchCall_HNS_HoennTrent1_General1::
 	.string "TRENT here! Climbed ROUTE\n"
 	.string "112 twice today.\p"
-	.string "My {STR_VAR_3} carried the\n"
-	.string "pack!$"
+	.string "My {STR_VAR_3} carried\n"
+	.string "the pack!$"
 MatchCall_HNS_HoennTrent1_General2::
 	.string "It's TRENT! Mountains make\n"
 	.string "you strong, hah!$"
@@ -428,28 +428,28 @@ MatchCall_HNS_HoennTrent1_Battle::
 MatchCall_HNS_HoennValerie1_General1::
 	.string "…It's VALERIE. The spirits\n"
 	.string "on MT. PYRE say hello.\p"
-	.string "My {STR_VAR_3} says hello\n"
-	.string "too.$"
+	.string "My {STR_VAR_3} says\n"
+	.string "hello too.$"
 MatchCall_HNS_HoennValerie1_General2::
 	.string "VALERIE… I dreamed of our\n"
-	.string "battle. You lost, in my\l"
-	.string "dream.\p"
+	.string "battle. You lost, in\l"
+	.string "my dream.\p"
 	.string "Hehehe…$"
 MatchCall_HNS_HoennValerie1_Battle::
 	.string "VALERIE. Come to MT. PYRE…\n"
-	.string "the spirits want a\l"
-	.string "rematch.\p"
+	.string "the spirits want\l"
+	.string "a rematch.\p"
 	.string "So do I.$"
 
 MatchCall_HNS_HoennWalter1_General1::
 	.string "Good day, {PLAYER}. WALTER\n"
 	.string "speaking. My {STR_VAR_3}\l"
-	.string "enjoyed a fine stroll\l"
-	.string "today.$"
+	.string "enjoyed a fine\l"
+	.string "stroll today.$"
 MatchCall_HNS_HoennWalter1_General2::
 	.string "WALTER here. A gentleman\n"
-	.string "always returns a\l"
-	.string "challenge.$"
+	.string "always returns\l"
+	.string "a challenge.$"
 MatchCall_HNS_HoennWalter1_Battle::
 	.string "WALTER here. I await you\n"
 	.string "on ROUTE 121. A battle, if\l"
@@ -457,8 +457,8 @@ MatchCall_HNS_HoennWalter1_Battle::
 
 MatchCall_HNS_HoennWilton1_General1::
 	.string "WILTON here. I've rebuilt\n"
-	.string "my strategy around\l"
-	.string "{STR_VAR_3}.\p"
+	.string "my strategy\l"
+	.string "around {STR_VAR_3}.\p"
 	.string "You'll see.$"
 MatchCall_HNS_HoennWilton1_General2::
 	.string "It's WILTON. I keep losing\n"

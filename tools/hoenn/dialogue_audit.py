@@ -24,6 +24,9 @@ PATTERNS = {
     "teams": r"MAGMA|AQUA|MAXIE|ARCHIE",
     "new": r"moved here|new in town|just moved|new neighbor|LITTLEROOT.*(?:new|move)",
     "champion": r"CHAMPION",
+    "pokenav": r"POKéNAV|POKeNAV|MATCH CALL",
+    "badge_name": r"(?:STONE|KNUCKLE|DYNAMO|HEAT|BALANCE|FEATHER|MIND|RAIN) BADGE",
+    "new_leader": r"new GYM LEADER|new LEADER",
 }
 
 def labels(text):

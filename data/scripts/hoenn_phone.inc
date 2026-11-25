@@ -196,8 +196,8 @@ HoennSeek_Text_CallBadge1::
 	.string "your first HOENN BADGE!\p"
 	.string "Gym leaders report every match\n"
 	.string "to the LEAGUE, and Dad's a gym\l"
-	.string "leader. So he hears everything\l"
-	.string "first!\p"
+	.string "leader. So he hears\l"
+	.string "everything first!\p"
 	.string "BRENDAN and I are still in\n"
 	.string "KANTO, training at the foot of\l"
 	.string "MT. SILVER.\p"
@@ -205,12 +205,12 @@ HoennSeek_Text_CallBadge1::
 	.string "grunted. Same thing! Bye!$"
 
 HoennSeek_Text_CallBadge4::
-	.string "…It's BRENDAN. Four badges\n"
-	.string "already.\p"
+	.string "…It's BRENDAN. Four\n"
+	.string "badges already.\p"
 	.string "My dad heard from NORMAN.\n"
 	.string "They're neighbors, so they\l"
-	.string "talk about you over the fence\l"
-	.string "now.\p"
+	.string "talk about you over the\l"
+	.string "fence now.\p"
 	.string "Dad also does volcano research\n"
 	.string "with TEAM MAGMA these days.\p"
 	.string "He says TABITHA at their\n"
@@ -220,8 +220,8 @@ HoennSeek_Text_CallBadge4::
 	.string "That's all. Keep going.$"
 
 HoennSeek_Text_CallBadge8::
-	.string "{PLAYER}! It's MAY! EIGHT\n"
-	.string "BADGES!\p"
+	.string "{PLAYER}! It's MAY!\n"
+	.string "EIGHT BADGES!\p"
 	.string "Dad says the LEAGUE already\n"
 	.string "knows you're coming. EVER\l"
 	.string "GRANDE's buzzing!\p"
@@ -233,23 +233,23 @@ HoennSeek_Text_CallBadge8::
 	.string "ourselves!$"
 
 HoennSeek_Text_CallElm::
-	.string "Hello, {PLAYER}! It's PROF.\n"
-	.string "ELM!\p"
+	.string "Hello, {PLAYER}!\n"
+	.string "It's PROF. ELM!\p"
 	.string "PROF. BIRCH called me. He said\n"
 	.string "you beat his son and NORMAN's\l"
 	.string "daughter together. Amazing!\p"
 	.string "He also sent back two POKéMON\n"
 	.string "he'd been raising for me: the\l"
-	.string "JOHTO starters you didn't\l"
-	.string "choose.\p"
+	.string "JOHTO starters you\l"
+	.string "didn't choose.\p"
 	.string "They're on the table in my lab\n"
 	.string "in NEW BARK TOWN. Come and\l"
 	.string "take them both!$"
 
 HoennSeek_Text_CallTeams::
 	.string "It's BRENDAN. My dad was out\n"
-	.string "at MT. CHIMNEY with MAXIE\l"
-	.string "today.\p"
+	.string "at MT. CHIMNEY with\l"
+	.string "MAXIE today.\p"
 	.string "MAXIE says you beat him and\n"
 	.string "ARCHIE at once. On MT. PYRE,\l"
 	.string "of all places.\p"
@@ -283,8 +283,8 @@ HoennSeek_Text_MayPhone0::
 	.string "KANTO, near MT. SILVER.\p"
 	.string "RED is up there somewhere.\n"
 	.string "BRENDAN says we need more\l"
-	.string "training. I say we need more\l"
-	.string "snacks!$"
+	.string "training. I say we need\l"
+	.string "more snacks!$"
 
 HoennSeek_Text_MayPhone1::
 	.string "MAY: Dad keeps telling me\n"
@@ -297,8 +297,8 @@ HoennSeek_Text_MayPhone1::
 
 HoennSeek_Text_MayPhone2::
 	.string "MAY: Four BADGES! Did you\n"
-	.string "battle my dad in PETALBURG\l"
-	.string "yet?\p"
+	.string "battle my dad in\l"
+	.string "PETALBURG yet?\p"
 	.string "He'd never tell me if he lost.\n"
 	.string "Tell me everything!\p"
 	.string "Oh, and if you're in LILYCOVE,\n"
@@ -309,8 +309,8 @@ HoennSeek_Text_MayPhone3::
 	.string "MAY: We're packing up! RED\n"
 	.string "still won't talk. At all. It's\l"
 	.string "so creepy!\p"
-	.string "Beat WALLACE and we'll come\n"
-	.string "home!$"
+	.string "Beat WALLACE and we'll\n"
+	.string "come home!$"
 
 HoennSeek_Text_MayPhone4::
 	.string "MAY: We're back in LITTLEROOT!\n"
@@ -322,15 +322,15 @@ HoennSeek_Text_MayPhone5::
 	.string "BLAZIKEN? Raise it well!\p"
 	.string "And PROF. OAK opened MT.\n"
 	.string "SILVER for you, right? RED is\l"
-	.string "waiting. Don't let him scare\l"
-	.string "you!$"
+	.string "waiting. Don't let him\l"
+	.string "scare you!$"
 
 HoennSeek_Text_MayPhone6::
 	.string "MAY: You beat RED! Everyone in\n"
 	.string "LITTLEROOT knows. Dad told the\l"
 	.string "whole town!\p"
-	.string "Come over for a rematch\n"
-	.string "anytime!$"
+	.string "Come over for a\n"
+	.string "rematch anytime!$"
 
 HoennSeek_Text_BrendanPhone0::
 	.string "BRENDAN: …It's BRENDAN. We're\n"
@@ -341,8 +341,8 @@ HoennSeek_Text_BrendanPhone0::
 HoennSeek_Text_BrendanPhone1::
 	.string "BRENDAN: My dad and NORMAN are\n"
 	.string "neighbors. NORMAN hears about\l"
-	.string "every gym battle, so Dad does\l"
-	.string "too.\p"
+	.string "every gym battle, so Dad\l"
+	.string "does too.\p"
 	.string "Dad works with TEAM MAGMA on\n"
 	.string "volcano research now. If you\l"
 	.string "pass the old hideout, TABITHA\l"
@@ -366,14 +366,14 @@ HoennSeek_Text_BrendanPhone3::
 
 HoennSeek_Text_BrendanPhone4::
 	.string "BRENDAN: We're back. MAY won't\n"
-	.string "stop talking about you. Come\l"
-	.string "by.$"
+	.string "stop talking about you.\l"
+	.string "Come by.$"
 
 HoennSeek_Text_BrendanPhone5::
 	.string "BRENDAN: You beat us. Fine.\p"
 	.string "PROF. OAK will let you up MT.\n"
-	.string "SILVER now. Go see RED. Don't\l"
-	.string "blink.$"
+	.string "SILVER now. Go see RED.\l"
+	.string "Don't blink.$"
 
 HoennSeek_Text_BrendanPhone6::
 	.string "BRENDAN: Dad's still talking\n"
@@ -425,22 +425,22 @@ HoennSeek_Text_WallyRegister::
 	.string "battle again!$"
 
 HoennSeek_Text_WallyRegistered::
-	.string "Registered WALLY in the\n"
-	.string "POKéGEAR.$"
+	.string "Registered WALLY in\n"
+	.string "the POKéGEAR.$"
 
 HoennSeek_Text_WallyRematchIntro::
 	.string "WALLY: {PLAYER}! You came! I've\n"
-	.string "been training every day. Let's\l"
-	.string "battle!$"
+	.string "been training every day.\l"
+	.string "Let's battle!$"
 
 HoennSeek_Text_WallyRematchAfter::
 	.string "WALLY: I'll call you again\n"
-	.string "when I'm stronger. That's a\l"
-	.string "promise!$"
+	.string "when I'm stronger. That's\l"
+	.string "a promise!$"
 
 HoennSeek_Text_BirchNumbers::
-	.string "PROF. BIRCH: Oh, and take\n"
-	.string "BRENDAN's and MAY's numbers.\p"
+	.string "PROF. BIRCH: Here, take BRENDAN's\n"
+	.string "and MAY's numbers, too.\p"
 	.string "They're off in KANTO, but\n"
 	.string "they'd love to hear from a\l"
 	.string "JOHTO trainer!$"
