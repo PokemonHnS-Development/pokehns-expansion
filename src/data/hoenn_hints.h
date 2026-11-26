@@ -87,6 +87,12 @@ static const struct HoennHintNpc sHintNpcs[] = {
     { (const u8[]){11, 7, 1}, 3, FALSE }, // MossdeepCity_PokemonCenter_1F
     { (const u8[]){17}, 1, TRUE }, // Route119_WeatherInstitute_1F
     { (const u8[]){2, 0}, 2, FALSE }, // Route34_FishingShack_hoenn
+    { (const u8[]){8, 5}, 2, FALSE }, // OlivineCity_HarborOffice_hoenn
+    { (const u8[]){4, 6}, 2, FALSE }, // OlivineCity_SailorsHouse_hoenn
+    { (const u8[]){16}, 1, FALSE }, // OlivineCity_CaptainsHouse_hoenn
+    { (const u8[]){2}, 1, FALSE }, // OlivineCity_TackleShop_hoenn
+    { (const u8[]){0}, 1, FALSE }, // OlivineCity_Shipwright_hoenn
+    { (const u8[]){1}, 1, FALSE }, // OlivineCity_KeepersHouse_hoenn
 };
 
 static const struct HoennForecast sForecasts[] = {
