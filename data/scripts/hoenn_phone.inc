@@ -20,6 +20,7 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_JK_BASE, HoennSeek_EventScript_CallJohtoKantoBase
 	case HOENN_CALL_STRAIT, HoennSeek_EventScript_CallStrait
 	case HOENN_CALL_STARTER_FOUND, HoennSeek_EventScript_CallStarterFound
+	case HOENN_CALL_KANTO_STARTER, HoennSeek_EventScript_CallKantoStarter
 	releaseall
 	end
 
@@ -120,6 +121,18 @@ HoennSeek_EventScript_BufferChikorita:
 	return
 HoennSeek_EventScript_BufferCyndaquil:
 	bufferspeciesname STR_VAR_1, SPECIES_CYNDAQUIL
+	return
+
+@ 2.0 part 16: May, once Bulbasaur or Charmander has chosen you (Bill told Birch).
+HoennSeek_EventScript_CallKantoStarter::
+	setflag FLAG_HOENN_CALL_KANTO_STARTER
+	bufferspeciesname STR_VAR_1, SPECIES_BULBASAUR
+	call_if_set FLAG_HOENN_CHARMANDER_DONE, HoennSeek_EventScript_BufferCharmander
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallKantoStarter
+	goto HoennSeek_EventScript_CallEnd
+HoennSeek_EventScript_BufferCharmander:
+	bufferspeciesname STR_VAR_1, SPECIES_CHARMANDER
 	return
 
 HoennSeek_EventScript_CallEnd::
@@ -295,6 +308,16 @@ HoennSeek_Text_CallStarterFound::
 	.string "Dad was worried sick about it.\n"
 	.string "He says it couldn't be in better\l"
 	.string "hands. Take good care of it!$"
+
+HoennSeek_Text_CallKantoStarter::
+	.string "Hi, {PLAYER}! It's MAY.\p"
+	.string "PROF. BIRCH was on the phone\n"
+	.string "with BILL from CERULEAN today.\p"
+	.string "He says the whole town is talking\n"
+	.string "about you and a {STR_VAR_1}!\p"
+	.string "They hardly ever pick a TRAINER\n"
+	.string "on their own. It must really\l"
+	.string "like you!$"
 
 HoennSeek_Text_CallTeams::
 	.string "It's BRENDAN. My dad was out\n"

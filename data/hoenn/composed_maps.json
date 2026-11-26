@@ -1,5 +1,5 @@
 {
- "_comment": "Hoenn & Seek 2.0 part 15a+: small new maps painted from blocks of an existing layout, and in-place patches to existing layouts. tools/hoenn/gen_hoenn_composed_maps.py explains the ops. Route46_Meadow_hoenn is the hidden meadow behind Route 46's sealed cave mouth (25,33): a cliff along the top with the cave mouth at (11,3), trees on three sides, short grass with flowers, then tall grass down to the treeline. Every block comes from Route 46. Route 46's cave mouth sat in a pocket nothing could reach (HnS kept two Phanpy there as scenery); the patches open it through a cut tree.",
+ "_comment": "Hoenn & Seek 2.0 part 15a+: small new maps painted from blocks of an existing layout, and in-place patches to existing layouts. tools/hoenn/gen_hoenn_composed_maps.py explains the ops. Route46_Meadow_hoenn is the hidden meadow behind Route 46's sealed cave mouth (25,33): a cliff along the top with the cave mouth at (11,3), trees on three sides, short grass with flowers, then tall grass down to the treeline. Every block comes from Route 46. Route 46's cave mouth sat in a pocket nothing could reach (HnS kept two Phanpy there as scenery); the patches open it through a cut tree. Route25_Garden_hoenn (2.0 part 16) is Bulbasaur's hidden garden behind Bill's house: a lawn ringed by trees with a lighter patch in the middle (the cape overlook's) and blue flowers, reached through a new gap in the trees at the top of the overlook. Every block comes from Route 25.",
  "maps": {
   "Route46_Meadow_hoenn": {
    "source": "LAYOUT_ROUTE46_HNS",
@@ -17,6 +17,19 @@
     {"_": "treeline, south", "at": [2, 13, 18, 5], "from": [16, 33], "tile": [2, 5]},
     {"_": "flowers", "cells": [[3, 5], [5, 6], [4, 7], [16, 5], [18, 6], [17, 7], [8, 5], [14, 4]], "from": [3, 19]}
    ]
+  },
+  "Route25_Garden_hoenn": {
+   "source": "LAYOUT_ROUTE25_HNS",
+   "layout": "LAYOUT_ROUTE25_GARDEN_HOENN",
+   "border": [96, 9],
+   "ops": [
+    {"_": "trees everywhere", "at": [0, 0, 20, 16], "from": [96, 9], "tile": [2, 2]},
+    {"_": "lawn", "at": [2, 2, 16, 12], "from": [90, 14], "tile": [2, 1]},
+    {"_": "the lighter patch in the middle (the overlook's)", "at": [8, 5, 4, 7], "from": [97, 13]},
+    {"_": "the way in, bottom middle", "at": [10, 14, 2, 2], "from": [90, 14], "tile": [2, 1]},
+    {"_": "flowers", "cells": [[3, 3], [5, 4], [14, 3], [16, 4], [3, 9], [4, 11], [16, 7], [15, 12], [6, 12]], "from": [72, 12]},
+    {"cells": [[4, 3], [3, 5], [15, 4], [16, 10], [5, 10], [13, 12], [3, 12]], "from": [73, 13]}
+   ]
   }
  },
  "patches": [
@@ -27,6 +40,10 @@
   {"layout": "LAYOUT_ROUTE46_HNS", "cells": [[21, 35]], "from": [17, 33]},
   {"layout": "LAYOUT_ROUTE46_HNS", "cells": [[20, 36]], "from": [16, 34]},
   {"layout": "LAYOUT_ROUTE46_HNS", "cells": [[21, 36]], "from": [17, 34]},
-  {"_": "Route 46's sealed cave mouth becomes the meadow's entrance", "layout": "LAYOUT_ROUTE46_HNS", "clear_collision": [[25, 33]]}
+  {"_": "Route 46's sealed cave mouth becomes the meadow's entrance", "layout": "LAYOUT_ROUTE46_HNS", "clear_collision": [[25, 33]]},
+  {"_": "Route 25: a gap in the cape overlook's top fence and trees at x 98-99, the way into Bulbasaur's garden (2.0 part 16)", "layout": "LAYOUT_ROUTE25_HNS", "cells": [[98, 9], [98, 10], [98, 11]], "from": [98, 12]},
+  {"layout": "LAYOUT_ROUTE25_HNS", "cells": [[99, 9], [99, 10], [99, 11]], "from": [99, 12]},
+  {"_": "... and the cliff above the gap loses the middle tree's crown", "layout": "LAYOUT_ROUTE25_HNS", "cells": [[98, 8]], "from": [94, 8]},
+  {"layout": "LAYOUT_ROUTE25_HNS", "cells": [[99, 8]], "from": [95, 8]}
  ]
 }

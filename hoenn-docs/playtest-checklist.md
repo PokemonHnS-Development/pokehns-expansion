@@ -239,6 +239,15 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Silver at Indigo Plateau after his daily rematch, Mom and Elm's aide: their extra line names the right place for your starter, and stops once you've found it.
 - [ ] Save and reload at the lake after the scene: no replay.
 
+## 2.0 part 16 — Kanto starters A (Bulbasaur, Charmander)
+- [ ] Route 25: the gap in the trees at the top of the cape overlook looks right and leads into the garden; the way back out lands you in the gap. Misty's and Suicune's scenes on the overlook still play.
+- [ ] The garden in the morning: the ceremony (three Ivysaur), the hider joins you holding an Everstone. Later mornings: no ceremony, Ivysaur there. Day, evening, night: empty.
+- [ ] Charmander at Nugget Bridge in the evening and at night (raining), not by day. Saying NO leaves it there; YES takes you to the Cerulean Pokémon Center.
+- [ ] Charmander in a real party slot: Lv 5, max friendship (check with the friendship rater in Olivine).
+- [ ] RYDER outside the Cerulean Gym on your next visit; win, then he's gone. Lose: he's still there.
+- [ ] May's call after either one joins (needs her number from Birch).
+- [ ] Save and reload mid-chain (after shielding Charmander, before the nurse scene).
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

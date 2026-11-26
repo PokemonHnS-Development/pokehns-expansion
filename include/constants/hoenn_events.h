@@ -100,9 +100,11 @@
 // out; weekly, so it clears when the next week starts (Sunday).
 #define FLAG_HOENN_WEEKLY_LAPRAS_MET    (HOENN_WEEKLY_FLAGS_START + 0x00)
 
-// gettimeofday's TIME_DAY and TIME_NIGHT (enum TimeOfDay), for scripts:
+// gettimeofday's times of day (enum TimeOfDay), for scripts:
 // morning 0, day 1, evening 2, night 3.
+#define HOENN_TIME_MORNING 0
 #define HOENN_TIME_DAY   1
+#define HOENN_TIME_EVENING 2
 #define HOENN_TIME_NIGHT 3
 
 // ---- Part 7: hint lines, rumors, forecasts (src/hoenn_hints.c) -------------
@@ -156,5 +158,24 @@
 #define FLAG_HOENN_TOTODILE_DONE        (HOENN_FLAGS_D_STARTERS + 0x0A)
 #define FLAG_HOENN_HIDE_LAKE_FAMILY     (HOENN_FLAGS_D_STARTERS + 0x0B) // the Feraligatr and one Totodile
 #define FLAG_HOENN_HIDE_LAKE_TOTODILE   (HOENN_FLAGS_D_STARTERS + 0x0C) // the Totodile that can stay
+
+// ---- Part 16: Kanto starters A (data/scripts/hoenn_kanto_starters.inc) ------
+// Bulbasaur: the hidden garden behind Bill's house (Route25_Garden_hoenn), mornings.
+#define FLAG_HOENN_BULBASAUR_SCENE      (HOENN_FLAGS_D_STARTERS + 0x0D) // the ceremony played
+#define FLAG_HOENN_BULBASAUR_DONE       (HOENN_FLAGS_D_STARTERS + 0x0E) // it joined you
+#define FLAG_HOENN_HIDE_GARDEN_FAMILY   (HOENN_FLAGS_D_STARTERS + 0x0F) // the Venusaur and three Bulbasaur
+#define FLAG_HOENN_HIDE_GARDEN_YOUNG    (HOENN_FLAGS_D_STARTERS + 0x10) // the three that evolve in the ceremony
+#define FLAG_HOENN_HIDE_GARDEN_IVYSAUR  (HOENN_FLAGS_D_STARTERS + 0x11) // ...and the Ivysaur they became
+#define FLAG_HOENN_HIDE_GARDEN_BULBASAUR (HOENN_FLAGS_D_STARTERS + 0x12) // the one that hid
+// Charmander: waiting in the rain at the foot of Nugget Bridge (Route 24), evenings and nights.
+#define FLAG_HOENN_CHARMANDER_DONE      (HOENN_FLAGS_D_STARTERS + 0x13) // it joined you
+#define FLAG_HOENN_HIDE_CHARMANDER      (HOENN_FLAGS_D_STARTERS + 0x14)
+#define FLAG_HOENN_CHARMANDER_TRAINER_BEATEN (HOENN_FLAGS_D_STARTERS + 0x15) // its old trainer, outside the Cerulean Gym
+#define FLAG_HOENN_HIDE_CHARMANDER_TRAINER   (HOENN_FLAGS_D_STARTERS + 0x16)
+// May's PokéGear call once a Kanto starter from these events is with you.
+#define FLAG_HOENN_CALL_KANTO_STARTER   (HOENN_FLAGS_D_STARTERS + 0x17)
+// 0 = waiting at the bridge, 1 = you're rushing it to the Cerulean Pokémon
+// Center (its frame script plays the scene), 2 = it chose you.
+#define VAR_HOENN_CHARMANDER_STATE      (HOENN_VARS_D_EVENTS + 0x00)
 
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H
