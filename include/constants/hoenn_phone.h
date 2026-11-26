@@ -24,5 +24,8 @@
 #define HOENN_CALL_PROPHECY 19 // May: the Slowking sage taught you its whole prophecy (2.0 part 19)
 #define HOENN_CALL_MUNCHLAX 20 // Brendan: the Route 113 Munchlax woke up for you (2.0 part 20)
 #define HOENN_CALL_SLAKING  21 // May: you caught the Slaking in Petalburg Woods (2.0 part 20)
+#define HOENN_CALL_TROPIUS  22 // Brendan: you met the orchard Tropius on Route 119 (2.0 part 21)
+#define HOENN_CALL_FEEBAS   23 // May: you fished the mirror pool Feebas (2.0 part 21)
+#define HOENN_CALL_FEUD   24 // Brendan: you broke up Route 114's Zangoose vs. Seviper fight (2.0 part 21)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

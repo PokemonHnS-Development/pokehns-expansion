@@ -29,6 +29,9 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_PROPHECY, HoennSeek_EventScript_CallProphecy
 	case HOENN_CALL_MUNCHLAX, HoennSeek_EventScript_CallMunchlax @ 2.0 part 20
 	case HOENN_CALL_SLAKING, HoennSeek_EventScript_CallSlaking
+	case HOENN_CALL_TROPIUS, HoennSeek_EventScript_CallTropius @ 2.0 part 21
+	case HOENN_CALL_FEEBAS, HoennSeek_EventScript_CallFeebas
+	case HOENN_CALL_FEUD, HoennSeek_EventScript_CallFeud
 	releaseall
 	end
 

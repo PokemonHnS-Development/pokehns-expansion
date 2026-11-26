@@ -129,6 +129,8 @@ static bool8 CheckFeebas(void)
     u8 route119Section = 0;
     u16 spotId;
 
+    if (IS_HNS) // Hoenn & Seek 2.0 part 21: Feebas only comes from Route 119's mirror pool
+        return FALSE;
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE119)
      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE119))
     {

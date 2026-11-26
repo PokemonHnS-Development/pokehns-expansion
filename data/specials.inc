@@ -744,3 +744,6 @@ gSpecials::
 	def_special HoennSetWeekdayFromChoice
 	def_special HoennPlayerIsRushing
 	def_special HoennTuneWildMon
+	def_special HoennTuneWildMonSlot
+	def_special HoennSetupScaledWildDouble
+	def_special HoennOrchardBerry

@@ -319,6 +319,7 @@ gStdScripts_End::
 	.include "data/maps/Route25_Garden_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 16
 	.include "data/maps/Route6_Hideout_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 17
 	.include "data/maps/Route113_Grotto_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 20
+	.include "data/maps/Route119_Orchard_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 21
 	.include "data/maps/LilycoveCity_ContestHall/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestHall_hns/scripts.inc"
 	.include "data/maps/LilycoveCity_PokemonCenter_1F/scripts.inc"

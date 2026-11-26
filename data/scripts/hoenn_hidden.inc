@@ -348,3 +348,353 @@ HoennSeek_Text_CallSlaking:
 	.string "everything that goes on there.\p"
 	.string "He says it only ever got up at\n"
 	.string "noon. He's very jealous!$"
+
+@ ==========================================================================
+@ Part 21: Routes 119 and 114
+@ ==========================================================================
+
+@ ---- Tropius's orchard (Route119_Orchard_hoenn) -------------------------
+@ The hidden way in is the tree trunk at Route 119 (26,21), below the
+@ Fortree sign (its collision is cleared in composed_maps.json).
+
+HoennSeek_EventScript_EnterOrchard::
+	warpsilent MAP_ROUTE119_ORCHARD_HOENN, 7, 12
+	waitstate
+	end
+
+HoennSeek_EventScript_LeaveOrchard::
+	warpsilent MAP_ROUTE119, 26, 22
+	waitstate
+	end
+
+@ Tropius stands in the orchard on mornings until it's caught; once battled
+@ it's gone for the rest of the day.
+HoennSeek_EventScript_OrchardOnTransition::
+	setflag FLAG_HOENN_HIDE_TROPIUS
+	goto_if_set FLAG_HOENN_TROPIUS_DONE, HoennSeek_EventScript_HiddenEnd21
+	goto_if_set FLAG_HOENN_DAILY_TROPIUS, HoennSeek_EventScript_HiddenEnd21
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_MORNING, HoennSeek_EventScript_HiddenEnd21
+	clearflag FLAG_HOENN_HIDE_TROPIUS
+HoennSeek_EventScript_HiddenEnd21:
+	end
+
+HoennSeek_EventScript_Tropius::
+	lock
+	faceplayer
+	msgbox HoennSeek_Text_TropiusShakes, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, HoennSeek_Movement_TropiusShake
+	waitmovement 0
+	playmoncry SPECIES_TROPIUS, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_TropiusBattle, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setflag FLAG_HOENN_TROPIUS_MET
+	setflag FLAG_HOENN_DAILY_TROPIUS
+	setvar VAR_0x8004, SPECIES_TROPIUS
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_NONE
+	setvar VAR_0x8006, FALSE
+	setvar VAR_0x8007, ITEM_SITRUS_BERRY
+	setvar VAR_0x8008, 0
+	setvar VAR_0x8009, HOENN_TUNE_HIDDEN_ABILITY
+	special HoennTuneWildMonSlot
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	setflag FLAG_HOENN_HIDE_TROPIUS
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_TropiusCaught
+	msgbox HoennSeek_Text_TropiusFliesOff, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	release
+	end
+
+HoennSeek_EventScript_TropiusCaught:
+	setflag FLAG_HOENN_TROPIUS_DONE
+	removeobject VAR_LAST_TALKED
+	msgbox HoennSeek_Text_TropiusCaught, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_Movement_TropiusShake:
+	face_left
+	delay_4
+	face_right
+	delay_4
+	face_down
+	jump_in_place_down
+	step_end
+
+@ The fruit tree: nothing until Tropius has been met, then one berry a day.
+HoennSeek_EventScript_OrchardTree::
+	lock
+	goto_if_unset FLAG_HOENN_TROPIUS_MET, HoennSeek_EventScript_OrchardTreeHigh
+	goto_if_set FLAG_HOENN_DAILY_ORCHARD_BERRY, HoennSeek_EventScript_OrchardTreeBare
+	specialvar VAR_0x8004, HoennOrchardBerry
+	msgbox HoennSeek_Text_OrchardTreeFruit, MSGBOX_DEFAULT
+	giveitem VAR_0x8004
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_HOENN_DAILY_ORCHARD_BERRY
+	release
+	end
+
+HoennSeek_EventScript_OrchardTreeHigh:
+	msgbox HoennSeek_Text_OrchardTreeHigh, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_OrchardTreeBare:
+	msgbox HoennSeek_Text_OrchardTreeBare, MSGBOX_DEFAULT
+	release
+	end
+
+@ ---- Feebas in the mirror pool (Route 119 pond, (11-12, 67-68)) ---------
+@ Evenings and nights, with the OLD ROD, once a day. Always female, knows
+@ Mirror Coat; the first one you catch holds a Prism Scale (it keeps
+@ holding one until you do).
+HoennSeek_EventScript_MirrorPool::
+	lock
+	msgbox HoennSeek_Text_MirrorPool, MSGBOX_DEFAULT
+	goto_if_set FLAG_HOENN_DAILY_FEEBAS, HoennSeek_EventScript_MirrorPoolStill
+	gettimeofday
+	goto_if_lt VAR_0x8000, HOENN_TIME_EVENING, HoennSeek_EventScript_MirrorPoolDay
+	msgbox HoennSeek_Text_MirrorPoolShimmer, MSGBOX_DEFAULT
+	checkitem ITEM_OLD_ROD
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_MirrorPoolNoRod
+	msgbox HoennSeek_Text_MirrorPoolCast, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_MirrorPoolEnd
+	msgbox HoennSeek_Text_MirrorPoolBite, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_HOENN_DAILY_FEEBAS
+	setvar VAR_0x8004, SPECIES_FEEBAS
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_MIRROR_COAT
+	setvar VAR_0x8006, FALSE
+	setvar VAR_0x8007, ITEM_NONE
+	call_if_unset FLAG_HOENN_FEEBAS_PRISM_GIVEN, HoennSeek_EventScript_FeebasPrismScale
+	setvar VAR_0x8008, 0
+	setvar VAR_0x8009, HOENN_TUNE_FEMALE
+	special HoennTuneWildMonSlot
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_MirrorPoolEnd
+	setflag FLAG_HOENN_FEEBAS_PRISM_GIVEN
+HoennSeek_EventScript_MirrorPoolEnd:
+	release
+	end
+
+HoennSeek_EventScript_FeebasPrismScale:
+	setvar VAR_0x8007, ITEM_PRISM_SCALE
+	return
+
+HoennSeek_EventScript_MirrorPoolStill:
+	msgbox HoennSeek_Text_MirrorPoolStill, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_MirrorPoolDay:
+	msgbox HoennSeek_Text_MirrorPoolDay, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_MirrorPoolNoRod:
+	msgbox HoennSeek_Text_MirrorPoolNoRod, MSGBOX_DEFAULT
+	release
+	end
+
+@ ---- Zangoose vs. Seviper (Route 114's lake island) ---------------------
+@ Sunday evenings and nights, once a week: a wild double against both.
+@ Zangoose has Toxic Boost and a Toxic Orb, Seviper knows Shed Tail.
+HoennSeek_EventScript_Route114OnTransition::
+	setflag FLAG_HOENN_HIDE_FEUD
+	goto_if_set FLAG_HOENN_WEEKLY_FEUD, HoennSeek_EventScript_FeudReturn
+	specialvar VAR_RESULT, GetDayOfWeek
+	goto_if_ne VAR_RESULT, HOENN_SUNDAY, HoennSeek_EventScript_FeudReturn
+	gettimeofday
+	goto_if_lt VAR_0x8000, HOENN_TIME_EVENING, HoennSeek_EventScript_FeudReturn
+	clearflag FLAG_HOENN_HIDE_FEUD
+	setvar VAR_TEMP_4, 1
+HoennSeek_EventScript_FeudReturn:
+	return
+
+HoennSeek_EventScript_FeudApproach::
+HoennSeek_EventScript_Feud::
+	lockall
+	setvar VAR_TEMP_4, 0
+	msgbox HoennSeek_Text_FeudFighting, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_HOENN_ZANGOOSE, HoennSeek_Movement_FeudLunge
+	applymovement LOCALID_HOENN_SEVIPER, HoennSeek_Movement_FeudLunge
+	waitmovement 0
+	playmoncry SPECIES_SEVIPER, CRY_MODE_ENCOUNTER
+	waitmoncry
+	applymovement LOCALID_HOENN_ZANGOOSE, Common_Movement_FacePlayer
+	applymovement LOCALID_HOENN_SEVIPER, Common_Movement_FacePlayer
+	waitmovement 0
+	playmoncry SPECIES_ZANGOOSE, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_FeudTurn, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setflag FLAG_HOENN_WEEKLY_FEUD
+	setflag FLAG_HOENN_FEUD_MET
+	@ setwildbattle with two species makes dowildbattle start a double;
+	@ HoennSetupScaledWildDouble then remakes both at the scaled level.
+	setwildbattle SPECIES_ZANGOOSE, 1, ITEM_NONE, SPECIES_SEVIPER, 1, ITEM_NONE
+	setvar VAR_0x8004, SPECIES_ZANGOOSE
+	setvar VAR_0x8005, SPECIES_SEVIPER
+	special HoennSetupScaledWildDouble
+	setvar VAR_0x8005, MOVE_NONE
+	setvar VAR_0x8006, FALSE
+	setvar VAR_0x8007, ITEM_TOXIC_ORB
+	setvar VAR_0x8008, 0
+	setvar VAR_0x8009, HOENN_TUNE_HIDDEN_ABILITY
+	special HoennTuneWildMonSlot
+	setvar VAR_0x8005, MOVE_SHED_TAIL
+	setvar VAR_0x8007, ITEM_NONE
+	setvar VAR_0x8008, 1
+	setvar VAR_0x8009, 0
+	special HoennTuneWildMonSlot
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	@ back to single wild battles for every later script
+	setwildbattle SPECIES_ZANGOOSE, 1
+	msgbox HoennSeek_Text_FeudAfter, MSGBOX_DEFAULT
+	closemessage
+	removeobject LOCALID_HOENN_ZANGOOSE
+	removeobject LOCALID_HOENN_SEVIPER
+	setflag FLAG_HOENN_HIDE_FEUD
+	releaseall
+	end
+
+HoennSeek_Movement_FeudLunge:
+	jump_in_place_down
+	delay_8
+	jump_in_place_down
+	step_end
+
+@ ---- Part 21's calls ----------------------------------------------------
+HoennSeek_EventScript_CallTropius::
+	setflag FLAG_HOENN_CALL_TROPIUS
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallTropius
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_EventScript_CallFeebas::
+	setflag FLAG_HOENN_CALL_FEEBAS
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallFeebas
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_EventScript_CallFeud::
+	setflag FLAG_HOENN_CALL_FEUD
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallFeud
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Part 21 texts ------------------------------------------------------
+HoennSeek_Text_TropiusShakes:
+	.string "A TROPIUS is shaking fruit off its\n"
+	.string "neck for the morning!$"
+
+HoennSeek_Text_TropiusBattle:
+	.string "It stamps its feet. It wants you\n"
+	.string "out of its orchard!$"
+
+HoennSeek_Text_TropiusFliesOff:
+	.string "TROPIUS flapped its leaves and flew\n"
+	.string "off over the treetops…\p"
+	.string "It left a few fruit behind on the\n"
+	.string "big tree.$"
+
+HoennSeek_Text_TropiusCaught:
+	.string "The big tree is still heavy with\n"
+	.string "the fruit TROPIUS was tending.$"
+
+HoennSeek_Text_OrchardTreeHigh:
+	.string "Fruit hangs from the top of the\n"
+	.string "tree, far out of reach.\p"
+	.string "Something tall must feed here\n"
+	.string "in the mornings.$"
+
+HoennSeek_Text_OrchardTreeFruit:
+	.string "A piece of fruit has dropped from\n"
+	.string "the tree TROPIUS planted!$"
+
+HoennSeek_Text_OrchardTreeBare:
+	.string "Nothing else has fallen today.\n"
+	.string "Come back tomorrow.$"
+
+HoennSeek_Text_MirrorPool:
+	.string "The pond is perfectly still,\n"
+	.string "like a mirror.$"
+
+HoennSeek_Text_MirrorPoolDay:
+	.string "It only reflects the sky right now.\n"
+	.string "Nothing seems to live in it.$"
+
+HoennSeek_Text_MirrorPoolStill:
+	.string "Nothing has stirred in it since\n"
+	.string "earlier today.$"
+
+HoennSeek_Text_MirrorPoolShimmer:
+	.string "In the dim light, one spot of the\n"
+	.string "water is shimmering…$"
+
+HoennSeek_Text_MirrorPoolNoRod:
+	.string "Something might bite if you had\n"
+	.string "even an old fishing rod.$"
+
+HoennSeek_Text_MirrorPoolCast:
+	.string "Cast the OLD ROD into the\n"
+	.string "shimmering spot?$"
+
+HoennSeek_Text_MirrorPoolBite:
+	.string "{PLAYER} cast the OLD ROD…\p"
+	.string "…  …  …\p"
+	.string "Oh! Something shy took the bait!$"
+
+HoennSeek_Text_FeudFighting:
+	.string "A ZANGOOSE and a SEVIPER are locked\n"
+	.string "in a furious fight!$"
+
+HoennSeek_Text_FeudTurn:
+	.string "They noticed you…\n"
+	.string "and both turn on you at once!$"
+
+HoennSeek_Text_FeudAfter:
+	.string "The rivals slipped off into the\n"
+	.string "dark. Same island next Sunday?$"
+
+HoennSeek_Text_CallTropius:
+	.string "{PLAYER}! It's BRENDAN!\p"
+	.string "The WEATHER INSTITUTE on ROUTE 119\n"
+	.string "called Dad this morning.\p"
+	.string "From their roof they saw a TROPIUS\n"
+	.string "in the jungle, and you with it!\p"
+	.string "Dad's been looking for that orchard\n"
+	.string "for years. How did you find it?$"
+
+HoennSeek_Text_CallFeebas:
+	.string "Hi, {PLAYER}! It's MAY!\p"
+	.string "The contest crowd in LILYCOVE says\n"
+	.string "someone fished a FEEBAS out of a\l"
+	.string "pond on ROUTE 119. That was you!\p"
+	.string "Raise its beauty and it becomes\n"
+	.string "MILOTIC, the contest star.\p"
+	.string "Show it off on stage sometime!$"
+
+HoennSeek_Text_CallFeud:
+	.string "{PLAYER}! It's BRENDAN!\p"
+	.string "MAXIE's researchers watch ROUTE 114\n"
+	.string "from the METEOR FALLS side.\p"
+	.string "They told Dad a ZANGOOSE and a\n"
+	.string "SEVIPER fight on the lake island\l"
+	.string "every Sunday night.\p"
+	.string "And you jumped right into the\n"
+	.string "middle of their fight!\p"
+	.string "Those two have hated each other\n"
+	.string "for as long as anyone remembers.$"

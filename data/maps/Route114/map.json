@@ -493,6 +493,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "HoennSeek_EventScript_OWMon",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_HOENN_ZANGOOSE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ZANGOOSE",
+      "x": 10,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Feud",
+      "flag": "FLAG_HOENN_HIDE_FEUD"
+    },
+    {
+      "local_id": "LOCALID_HOENN_SEVIPER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEVIPER",
+      "x": 13,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Feud",
+      "flag": "FLAG_HOENN_HIDE_FEUD"
     }
   ],
   "warp_events": [
@@ -532,7 +560,98 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_FeudApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_FeudApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_FeudApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_FeudApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_FeudApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_FeudApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_FeudApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_FeudApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_FeudApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_FeudApproach"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

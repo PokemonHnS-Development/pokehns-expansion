@@ -16299,6 +16299,18 @@
       "blockdata_filepath": "data/layouts/Route113_Grotto_hoenn/map.bin",
       "game_version": "hns",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE119_ORCHARD_HOENN",
+      "name": "Route119_Orchard_hoenn_Layout",
+      "width": 16,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route119_Orchard_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/Route119_Orchard_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "emerald"
     }
   ]
 }

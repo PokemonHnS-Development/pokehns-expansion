@@ -88,6 +88,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
 | **2.0** part 18 (species A: Mudkip pond, Ralts mornings, Kiyo's Machamp, Scizor duel; 4 calls) | 32,651,572 / 881 KB | 32,811,428 / 725 KB |
 | **2.0** part 19 (species B: Gengar shadow chase, Slowking sage riddles; 2 calls) | 32,657,988 / 875 KB | 32,817,732 / 719 KB |
 | **2.0** part 20 (hidden A: Glass Flute + Munchlax + ash grotto, Spinda's weekly dance, Slaking's noon nap + clearing; 2 calls) | 32,662,804 / 870 KB | 32,823,172 / 714 KB |
+| **2.0** part 21 (hidden B: Tropius orchard + daily berry tree, Feebas mirror pool, Zangoose vs. Seviper weekly double; random Feebas tiles off; 3 calls) | 32,667,572 / 866 KB | 32,827,812 / 709 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
@@ -321,6 +322,11 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
   - **New maps need `"game_version": "hns"` in their map.json** (the layout's isn't enough): without it the map gets a NULL header and every warp into it is silently refused.
   - **Spinda:** Route 113 (66,4), mornings, once a week (`FLAG_HOENN_WEEKLY_SPINDA`), a ring of `VAR_TEMP_4` triggers. **Slaking:** Petalburg Woods (26,7) blocks the way into a new clearing (rows 2–5); battle only at hour 12, once a day, gone once caught.
   - Calls come from `HoennHiddenDueCall()` (the tail of `HoennSpeciesDueCall`); later hidden-event parts add theirs there.
+- **Hidden events B (2.0 part 21):** same files. `special HoennTuneWildMonSlot` is `HoennTuneWildMon` for any enemy slot (`VAR_0x8008`) with `VAR_0x8009` = `HOENN_TUNE_FEMALE` / `HOENN_TUNE_HIDDEN_ABILITY` bits. **Wild doubles:** `setwildbattle A, 1, ITEM_NONE, B, 1, ITEM_NONE` (only that makes `dowildbattle` start a double; `scrcmd.c` keeps the choice in a static), then `special HoennSetupScaledWildDouble` (species in `VAR_0x8004`/`0x8005`), and **a single `setwildbattle` afterwards**, or every later scripted wild battle is a double.
+  - **Tropius:** `Route119_Orchard_hoenn` (composed map), entered by walking into the tree trunk at Route 119 (26,21) (collision cleared), mornings, once a day until caught. The fruit tree (bg events) gives `specialvar HoennOrchardBerry` once a day after the first battle. **Feebas:** bg events on the pond at Route 119 (11–12, 67–68), evening/night, Old Rod (`checkitem`, no fishing engine), daily; `CheckFeebas` (`src/wild_encounter.c`) returns FALSE in HnS (one-line hook). **Zangoose/Seviper:** Route 114's lake island, Sundays from 6 PM, weekly; `VAR_TEMP_4` triggers on every island tile.
+  - **Landing from Surf doesn't fire coord triggers**; the next step does. Put triggers on every tile next to the landing tiles.
+  - Labels say `Feud`, not `Rivals`: `hoenn_teams.inc` already uses `HoennSeek_Text_Rivals*` for Brendan & May.
+  - Testing: the debug save has no rods; `/tmp`-style bag poke: `gBagPockets[POCKET_KEY_ITEMS]` (index 5, 8-byte entries: slot pointer, capacity), write the item ID and `1 ^ (encryptionKey & 0xFFFF)` (SaveBlock2 +0xAC) into the first empty slot. `ITEM_OLD_ROD` is 709.
 - **17r small fixes:** the Slateport aide's greeting is skipped (and marked done) once you have Mudkip; crossing the Tidal Strait before Birch gives you May's number marks her strait call done.
 - **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.

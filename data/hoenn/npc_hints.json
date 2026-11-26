@@ -77,6 +77,8 @@
     "RUMOR_MUNCHLAX":   {"kind": "rumor", "rumor": "MUNCHLAX", "if": [{"not_flag": "FLAG_HOENN_MUNCHLAX_DONE"}]},
     "RUMOR_SPINDA":     {"kind": "rumor", "rumor": "SPINDA", "if": [{"not_flag": "FLAG_HOENN_SPINDA_MET"}]},
     "RUMOR_SLAKING":    {"kind": "rumor", "rumor": "SLAKING", "if": [{"not_flag": "FLAG_HOENN_SLAKING_DONE"}]},
+    "RUMOR_TROPIUS":    {"kind": "rumor", "rumor": "TROPIUS", "if": [{"not_flag": "FLAG_HOENN_TROPIUS_MET"}]},
+    "RUMOR_FEUD":     {"kind": "rumor", "rumor": "FEUD", "if": [{"not_flag": "FLAG_HOENN_FEUD_MET"}]},
 
     "STORY_POND":     {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_POND_SEEN"}], "text": ["Every morning a SWAMPERT brings two MUDKIP to this pond to practice.", "When they all dive, you'd better find some shelter!"]},
     "STORY_RALTS":    {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_RALTS_DONE"}], "text": ["Every morning, a GARDEVOIR guards a RALTS by the tall grass near PETALBURG.", "Run up to them and they vanish! Walk slowly, with a POKéMON that really loves you."]},
@@ -87,6 +89,9 @@
     "STORY_MUNCHLAX": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_MUNCHLAX_DONE"}], "text": ["There's a MUNCHLAX asleep in the trees by the first ash fields. It's been there for weeks!", "The glassblower says he's working on something that could wake it."]},
     "STORY_SPINDA":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_SPINDA_MET"}], "text": ["Some mornings a SPINDA dances in the ash, up by the sign past the twins.", "Only once a week, mind you. It's a shy one."]},
     "STORY_SLAKING":  {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_SLAKING_DONE"}], "text": ["A SLAKING sleeps in the gap in the trees up north. NORMAN used to train back there.", "It only ever gets up at noon. Then it's grumpy!"]},
+    "STORY_TROPIUS":  {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_TROPIUS_MET"}], "text": ["TROPIUS shakes fruit off its neck when the sun comes up.", "I saw one fly into the trees under the FORTREE sign on ROUTE 119. Right into a tree!"]},
+    "STORY_FEEBAS":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_FEEBAS_PRISM_GIVEN"}], "text": ["Nobody looks twice at the fish in that little pond up the route.", "Grandpa says it only bites after dark, and only on an OLD ROD."]},
+    "STORY_FEUD":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_FEUD_MET"}], "text": ["Every Sunday night, same island on ROUTE 114's lake, same fight.", "ZANGOOSE and SEVIPER. Surf out there if you dare!"]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -99,10 +104,10 @@
       "notes": ["Something near the WEATHER INSTITUTE changes with the sky…", "It only appears when the weather turns."]
     },
     "FEEBAS": {
-      "found": [{"caught": "FEEBAS"}],
-      "before": ["A fisherman swears ROUTE 119's river hides a POKéMON nobody else can find.", "Only a few spots in the whole river, he says!"],
-      "after": "So FEEBAS really lives in ROUTE 119's river! Only a handful of spots, too.",
-      "notes": "A shabby fish hides in a long river in HOENN. Only a few spots in it, and they change…"
+      "found": [{"flag": "FLAG_HOENN_FEEBAS_PRISM_GIVEN"}],
+      "before": ["A fisherman swears a little pond on ROUTE 119 hides a POKéMON nobody else can find.", "Only after sundown, and only with the plainest rod, he says!"],
+      "after": "So FEEBAS really lives in that pond on ROUTE 119! The first one even had a PRISM SCALE.",
+      "notes": "A shabby fish hides in a still pond above the falls. It only bites after sundown, on an old rod."
     },
     "MASQUERAIN": {
       "found": [{"caught": "MASQUERAIN"}],
@@ -163,6 +168,18 @@
       "before": ["They say a SLAKING sleeps across a path in PETALBURG WOODS. It only moves when the sun is highest."],
       "after": "Somebody caught the SLAKING in PETALBURG WOODS! NORMAN's old training spot is open again.",
       "notes": "In the woods by PETALBURG, a lazy giant only stirs at noon."
+    },
+    "TROPIUS": {
+      "found": [{"flag": "FLAG_HOENN_TROPIUS_MET"}],
+      "before": ["They say there's an orchard hidden in ROUTE 119's jungle, and a TROPIUS that tends it every morning."],
+      "after": "Somebody found the hidden orchard on ROUTE 119! Its tree drops rare fruit every day.",
+      "notes": "Under the FORTREE sign on ROUTE 119, one tree is a door. Mornings, something tends fruit there."
+    },
+    "FEUD": {
+      "found": [{"flag": "FLAG_HOENN_FEUD_MET"}],
+      "before": ["They say a ZANGOOSE and a SEVIPER fight on the lake island on ROUTE 114, every Sunday night."],
+      "after": "Somebody broke up the Sunday fight on ROUTE 114's island! They'll be back next week, though.",
+      "notes": "Two old enemies meet on ROUTE 114's lake island on Sunday nights."
     }
   },
 
@@ -187,8 +204,8 @@
     {"map": "OldaleTown_PokemonCenter_1F",       "script": "OldaleTown_PokemonCenter_1F_EventScript_Gentleman",    "lines": ["RUMOR_MASQUERAIN"]},
     {"map": "SlateportCity_PokemonCenter_1F",    "script": "SlateportCity_PokemonCenter_1F_EventScript_Woman",     "lines": ["STORY_NORMAN", "TIP_NAMERATER_H"]},
     {"map": "MauvilleCity_PokemonCenter_1F",     "script": "MauvilleCity_PokemonCenter_1F_EventScript_Woman1",     "lines": ["STORY_WATTSON", "RUMOR_CASTFORM"]},
-    {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "RUMOR_MUNCHLAX", "RUMOR_SPINDA", "TIP_REMINDER_H", "TIP_SITES"]},
-    {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS"]},
+    {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "RUMOR_MUNCHLAX", "RUMOR_SPINDA", "RUMOR_FEUD", "TIP_REMINDER_H", "TIP_SITES"]},
+    {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS", "RUMOR_TROPIUS"]},
     {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES"]},
     {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP"]},
     {"map": "Route119_WeatherInstitute_1F",      "script": "Route119_WeatherInstitute_1F_EventScript_InstituteWorker1", "always": true, "lines": ["FORECAST"]},
@@ -207,7 +224,10 @@
     {"map": "AzaleaTown_hns",                    "script": "AzaleaTown_EventScript_Lass",                          "lines": ["STORY_SAGE"]},
     {"map": "Route113",                          "script": "Route113_EventScript_NinjaBoy",                        "lines": ["STORY_MUNCHLAX"]},
     {"map": "Route113",                          "script": "Route113_EventScript_Gentleman",                       "lines": ["STORY_SPINDA"]},
-    {"map": "PetalburgWoods",                    "script": "PetalburgWoods_EventScript_Boy1",                      "lines": ["STORY_SLAKING"]}
+    {"map": "PetalburgWoods",                    "script": "PetalburgWoods_EventScript_Boy1",                      "lines": ["STORY_SLAKING"]},
+    {"map": "FortreeCity",                       "script": "FortreeCity_EventScript_GameboyKid",                   "lines": ["STORY_TROPIUS"]},
+    {"map": "Route119",                          "script": "Route119_EventScript_Boy2",                            "lines": ["STORY_FEEBAS"]},
+    {"map": "FallarborTown",                     "script": "FallarborTown_EventScript_ExpertM",                    "lines": ["STORY_FEUD"]}
   ],
 
   "forecasts": [
