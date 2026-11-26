@@ -36,23 +36,29 @@ HoennSeek_EventScript_AskWeekdayAtStart_Menu:
 	closemessage
 	return
 
-@ The wall clock in your New Bark room, any time after the opening (the bg
-@ event's script, swapped in map.json). First the calendar: it names today and
-@ offers to change the day. Then HnS's clock view, as before (R there resets
-@ the time). The clock view must come last: Special_ViewWallClock returns
-@ straight to the map (CB2_ReturnToField), which ends the script.
-HoennSeek_EventScript_NewBarkWallClock::
-	lockall
-	goto_if_unset FLAG_SET_WALL_CLOCK, LittlerootTown_BrendansHouse_2F_EventScript_WallClock
+@ Every wall clock once the opening scene has set the time: your New Bark
+@ room and the clock in every Pokémon Center (HnS lets you change the time at
+@ any of them), plus the two Littleroot houses. They all run HnS's
+@ LittlerootTown_{Brendans,Mays}House_2F_EventScript_WallClock, which jumps
+@ here (a one-line hook in players_house.inc) once FLAG_SET_WALL_CLOCK is set,
+@ so anywhere the time can be changed, the day can be too.
+@ First the calendar: it names today and offers to change the day. Then HnS's
+@ clock view, as before (R there sets the time). The clock view must come last:
+@ Special_ViewWallClock returns straight to the map (CB2_ReturnToField), which
+@ ends the script. The caller has already run lockall and set VAR_0x8004 to
+@ MALE or FEMALE (the clock face's colors), so nothing here touches it.
+HoennSeek_EventScript_WallClock::
 	special HoennBufferWeekdayName
 	msgbox HoennSeek_Text_CalendarChangeDay, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_NewBarkWallClock_View
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_WallClock_View
 	msgbox HoennSeek_Text_CalendarWhatDay, MSGBOX_DEFAULT
 	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
+	@ EXIT or B: leave the day as it was and go straight to the clock.
+	goto_if_ge VAR_RESULT, HOENN_WEEKDAY_COUNT, HoennSeek_EventScript_WallClock_View
 	special HoennSetWeekdayFromChoice
 	special HoennBufferWeekdayName
 	msgbox HoennSeek_Text_CalendarSet, MSGBOX_DEFAULT
-HoennSeek_EventScript_NewBarkWallClock_View:
+HoennSeek_EventScript_WallClock_View:
 	msgbox PlayersHouse_2F_Text_ClockChange, MSGBOX_DEFAULT
 	incrementgamestat GAME_STAT_CHECKED_CLOCK
 	fadescreen FADE_TO_BLACK

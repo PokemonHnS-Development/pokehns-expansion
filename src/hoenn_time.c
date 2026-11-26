@@ -12,8 +12,9 @@
 //   keeps a weekday offset, VAR_HOENN_WEEKDAY_OFFSET (0-6), and GetDayOfWeek()
 //   in src/rtc.c adds it through HoennAdjustWeekday(). Everything that asks for
 //   the weekday (scripts, the PokéGear radio) sees the same day.
-//   Part 3 adds the places a player sets it (reset-clock screen, new game, the
-//   New Bark wall clock); they all go through HoennSetWeekday().
+//   Part 3 adds the places a player sets it (the new-game clock scene and the
+//   New Bark wall clock); both go through HoennSetWeekday(). The title
+//   screen's reset-clock screen only re-records the week (see below).
 //
 // THE WEEK
 //   Weekly flags (HOENN_WEEKLY_FLAGS_START-END, part 1) reset when a new week
@@ -137,6 +138,18 @@ void HoennSetWeekday(u32 weekday)
     // The week number moves with the offset; record the new one so the next
     // time check doesn't count it as a new week.
     VarSet(VAR_HOENN_WEEK_SEEN, WeekOfLocalDay(days) + 1);
+}
+
+// Part 3: the title screen's reset-clock screen (src/reset_rtc_screen.c) just
+// set a new time. HnS records the new day count there without running the
+// daily reset (VarSet(VAR_DAYS, ...)), so a reset clock never hands out a free
+// new day. Do the same for the week: record it, don't reset the weekly flags.
+// The weekday offset stays, so the weekday moves with the day count.
+// (That screen only opens after a Mystery Event enables it, as in Emerald, so
+// it has no weekday row of its own; the New Bark wall clock changes the day.)
+void HoennRecordWeekAfterClockReset(void)
+{
+    VarSet(VAR_HOENN_WEEK_SEEN, WeekOfLocalDay(gLocalTime.days) + 1);
 }
 
 static const u8 *const sWeekdayNames[WEEKDAY_COUNT] = {

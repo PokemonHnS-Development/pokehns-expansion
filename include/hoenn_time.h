@@ -9,8 +9,9 @@
 // Hooks in upstream files (one line each)
 u32 HoennAdjustWeekday(u32 rtcWeekday);  // GetDayOfWeek(), src/rtc.c
 void HoennUpdatePerWeek(s32 localDays);  // DoTimeBasedEvents(), src/clock.c
+void HoennRecordWeekAfterClockReset(void); // reset-clock screen, src/reset_rtc_screen.c
 
-// For C callers (the reset-clock screen and new-game prompt in part 3)
+// For C callers
 void HoennSetWeekday(u32 weekday);
 bool32 HoennIsSpecialWeatherDay(u16 mapGroup, u16 mapNum);
 
@@ -34,6 +35,7 @@ void HoennDebugReloadMap(void);
 #else
 static inline u32 HoennAdjustWeekday(u32 rtcWeekday) { return rtcWeekday; }
 static inline void HoennUpdatePerWeek(s32 localDays) { (void)localDays; }
+static inline void HoennRecordWeekAfterClockReset(void) { }
 #endif
 
 #endif // GUARD_HOENN_TIME_H
