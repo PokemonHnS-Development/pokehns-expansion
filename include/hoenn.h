@@ -49,6 +49,8 @@ u16 HoennFindPartySpecies(void);
 // PokéGear (src/hoenn_phone.c, part 16d)
 bool32 HoennTryEventCall(void);
 u16 HoennSpeciesDueCall(void);
+u16 HoennHiddenDueCall(void);
+void HoennTuneWildMon(void);
 bool8 HoennPlayerIsRushing(void);
 bool32 HoennIsCallableSpecialSlot(u32 rematchIdx);
 bool32 HoennSpecialCallerAnswers(s32 rematchIdx);

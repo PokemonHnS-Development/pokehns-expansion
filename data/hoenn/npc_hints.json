@@ -74,6 +74,9 @@
     "RUMOR_SCIZOR":     {"kind": "rumor", "rumor": "SCIZOR"},
     "RUMOR_GENGAR":     {"kind": "rumor", "rumor": "GENGAR", "if": [{"not_flag": "FLAG_HOENN_GENGAR_DONE"}]},
     "RUMOR_SAGE":       {"kind": "rumor", "rumor": "SAGE", "if": [{"not_flag": "FLAG_HOENN_SLOWKING_PROPHECY"}]},
+    "RUMOR_MUNCHLAX":   {"kind": "rumor", "rumor": "MUNCHLAX", "if": [{"not_flag": "FLAG_HOENN_MUNCHLAX_DONE"}]},
+    "RUMOR_SPINDA":     {"kind": "rumor", "rumor": "SPINDA", "if": [{"not_flag": "FLAG_HOENN_SPINDA_MET"}]},
+    "RUMOR_SLAKING":    {"kind": "rumor", "rumor": "SLAKING", "if": [{"not_flag": "FLAG_HOENN_SLAKING_DONE"}]},
 
     "STORY_POND":     {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_POND_SEEN"}], "text": ["Every morning a SWAMPERT brings two MUDKIP to this pond to practice.", "When they all dive, you'd better find some shelter!"]},
     "STORY_RALTS":    {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_RALTS_DONE"}], "text": ["Every morning, a GARDEVOIR guards a RALTS by the tall grass near PETALBURG.", "Run up to them and they vanish! Walk slowly, with a POKéMON that really loves you."]},
@@ -81,6 +84,9 @@
 
     "STORY_GENGAR":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_GENGAR_DONE"}], "text": ["On some nights, folks here swear their own shadows grin at them.", "If yours does, follow where it points. It only plays at night."]},
     "STORY_SAGE":     {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_SLOWKING_PROPHECY"}, {"flag": "FLAG_ITEM_SLOWPOKE_WELL_RAIN_DANCE"}], "text": ["That SLOWKING down the well asks a riddle every day, a different one for each day of the week.", "Solve them all and it tells you a whole prophecy. Grandpa KURT says it's about the sea."]},
+    "STORY_MUNCHLAX": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_MUNCHLAX_DONE"}], "text": ["There's a MUNCHLAX asleep in the trees by the first ash fields. It's been there for weeks!", "The glassblower says he's working on something that could wake it."]},
+    "STORY_SPINDA":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_SPINDA_MET"}], "text": ["Some mornings a SPINDA dances in the ash, up by the sign past the twins.", "Only once a week, mind you. It's a shy one."]},
+    "STORY_SLAKING":  {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_SLAKING_DONE"}], "text": ["A SLAKING sleeps in the gap in the trees up north. NORMAN used to train back there.", "It only ever gets up at noon. Then it's grumpy!"]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -139,6 +145,24 @@
       "before": ["The SLOWKING in the SLOWPOKE WELL asks one riddle a day, a new one each weekday.", "Answer all seven and you'll hear its whole prophecy."],
       "after": "Somebody heard the SLOWKING's whole prophecy! Something about lights under the sea.",
       "notes": "A wise king in a JOHTO well asks one riddle each day of the week."
+    },
+    "MUNCHLAX": {
+      "found": [{"flag": "FLAG_HOENN_MUNCHLAX_DONE"}],
+      "before": ["They say a MUNCHLAX on ROUTE 113 has been asleep so long, the ash is piling up on it.", "Something sweet-sounding might wake it."],
+      "after": "Somebody woke the sleepy MUNCHLAX on ROUTE 113! There was a grotto behind it the whole time.",
+      "notes": "A sleeping glutton blocks a path in the ash. A flute of glass might wake it."
+    },
+    "SPINDA": {
+      "found": [{"flag": "FLAG_HOENN_SPINDA_MET"}],
+      "before": ["They say a SPINDA dances in the falling ash on ROUTE 113, on a morning once a week."],
+      "after": "Somebody saw the dancing SPINDA on ROUTE 113! Every one of them has different spots, you know.",
+      "notes": "In the falling ash, on a morning once a week, someone dances alone."
+    },
+    "SLAKING": {
+      "found": [{"flag": "FLAG_HOENN_SLAKING_DONE"}],
+      "before": ["They say a SLAKING sleeps across a path in PETALBURG WOODS. It only moves when the sun is highest."],
+      "after": "Somebody caught the SLAKING in PETALBURG WOODS! NORMAN's old training spot is open again.",
+      "notes": "In the woods by PETALBURG, a lazy giant only stirs at noon."
     }
   },
 
@@ -163,7 +187,7 @@
     {"map": "OldaleTown_PokemonCenter_1F",       "script": "OldaleTown_PokemonCenter_1F_EventScript_Gentleman",    "lines": ["RUMOR_MASQUERAIN"]},
     {"map": "SlateportCity_PokemonCenter_1F",    "script": "SlateportCity_PokemonCenter_1F_EventScript_Woman",     "lines": ["STORY_NORMAN", "TIP_NAMERATER_H"]},
     {"map": "MauvilleCity_PokemonCenter_1F",     "script": "MauvilleCity_PokemonCenter_1F_EventScript_Woman1",     "lines": ["STORY_WATTSON", "RUMOR_CASTFORM"]},
-    {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "TIP_REMINDER_H", "TIP_SITES"]},
+    {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "RUMOR_MUNCHLAX", "RUMOR_SPINDA", "TIP_REMINDER_H", "TIP_SITES"]},
     {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS"]},
     {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES"]},
     {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP"]},
@@ -177,10 +201,13 @@
     {"map": "Route25_BillsHouse_hns",            "script": "Route25_BillsHouse_EventScript_Gramps",                "lines": ["STORY_BILL_GARDEN"]},
     {"map": "Route102",                          "script": "Route102_EventScript_LittleBoy",                       "lines": ["STORY_RALTS"]},
     {"map": "Route102",                          "script": "Route102_EventScript_Boy",                             "lines": ["STORY_POND"]},
-    {"map": "PetalburgCity_PokemonCenter_1F",    "script": "PetalburgCity_PokemonCenter_1F_EventScript_Woman",     "lines": ["RUMOR_RALTS"]},
+    {"map": "PetalburgCity_PokemonCenter_1F",    "script": "PetalburgCity_PokemonCenter_1F_EventScript_Woman",     "lines": ["RUMOR_SLAKING", "RUMOR_RALTS"]},
     {"map": "NationalPark_Normal_hns",           "script": "NationalPark_Normal_EventScript_Lass",                 "lines": ["STORY_SCIZOR"]},
     {"map": "LavenderTown_hns",                  "script": "LavenderTown_EventScript_Gramps",                      "lines": ["STORY_GENGAR"]},
-    {"map": "AzaleaTown_hns",                    "script": "AzaleaTown_EventScript_Lass",                          "lines": ["STORY_SAGE"]}
+    {"map": "AzaleaTown_hns",                    "script": "AzaleaTown_EventScript_Lass",                          "lines": ["STORY_SAGE"]},
+    {"map": "Route113",                          "script": "Route113_EventScript_NinjaBoy",                        "lines": ["STORY_MUNCHLAX"]},
+    {"map": "Route113",                          "script": "Route113_EventScript_Gentleman",                       "lines": ["STORY_SPINDA"]},
+    {"map": "PetalburgWoods",                    "script": "PetalburgWoods_EventScript_Boy1",                      "lines": ["STORY_SLAKING"]}
   ],
 
   "forecasts": [

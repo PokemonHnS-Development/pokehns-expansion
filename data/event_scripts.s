@@ -318,6 +318,7 @@ gStdScripts_End::
 	.include "data/maps/Route46_Meadow_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 15a
 	.include "data/maps/Route25_Garden_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 16
 	.include "data/maps/Route6_Hideout_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 17
+	.include "data/maps/Route113_Grotto_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 20
 	.include "data/maps/LilycoveCity_ContestHall/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestHall_hns/scripts.inc"
 	.include "data/maps/LilycoveCity_PokemonCenter_1F/scripts.inc"
@@ -1100,6 +1101,7 @@ gStdScripts_End::
 	.include "data/scripts/hoenn_starters.inc" @ Hoenn & Seek 2.0 part 15a
 	.include "data/scripts/hoenn_kanto_starters.inc" @ Hoenn & Seek 2.0 part 16
 	.include "data/scripts/hoenn_species.inc" @ Hoenn & Seek 2.0 part 18
+	.include "data/scripts/hoenn_hidden.inc" @ Hoenn & Seek 2.0 part 20
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"
 

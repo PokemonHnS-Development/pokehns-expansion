@@ -277,6 +277,14 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Calls: Brendan (Gengar) and May (prophecy) each ring once.
 - [ ] Hint lines: Lavender's old man, Azalea's lass (after the TM), the Lavender and Azalea Pokémon Center rumors, Birch's aide's field notes.
 
+## 2.0 part 20 — Hidden events A (Munchlax, Spinda, Slaking)
+- [ ] Route 113: collect 500 ash with the Soot Sack and get the Glass Flute; the glassblower's other ash rewards still work afterwards.
+- [ ] Wake the Munchlax with the flute; with a full party it should go to the PC. Walk through the gap into the grotto, take the three items, walk back out.
+- [ ] Spinda: on a real morning it dances on the east ash field; battle (Revelation Dance), then it's gone until the next week (Sunday reset). Check the next week's Spinda has different spots.
+- [ ] Slaking: asleep at other hours; at noon it battles, once a day. Run from it, come back the next noon, catch it; then take the clearing's three items.
+- [ ] Calls: Brendan (Munchlax) and May (Slaking) each ring once.
+- [ ] Hint lines: Route 113's ninja boy and gentleman, Petalburg Woods' boy, the Fallarbor and Petalburg Pokémon Center rumors, Birch's aide's field notes.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

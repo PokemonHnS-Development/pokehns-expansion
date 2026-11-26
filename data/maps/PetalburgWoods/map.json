@@ -118,7 +118,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PetalburgWoods_EventScript_Boy1",
+      "script": "HoennSeek_EventScript_HintNpc38",
       "flag": "0"
     },
     {
@@ -289,6 +289,59 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "HoennSeek_EventScript_OWMon",
       "flag": "FLAG_NIGHT_POKEMON"
+    },
+    {
+      "local_id": "LOCALID_HOENN_SLAKING",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SLAKING",
+      "x": 26,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Slaking",
+      "flag": "FLAG_HOENN_HIDE_SLAKING"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 22,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_MACHO_BRACE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_HOENN_ITEM_CLEARING_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 29,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_BIG_MUSHROOM",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_HOENN_ITEM_CLEARING_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 24,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_BALM_MUSHROOM",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_HOENN_ITEM_CLEARING_3"
     }
   ],
   "warp_events": [

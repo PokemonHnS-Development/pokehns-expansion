@@ -1,5 +1,5 @@
 {
- "_comment": "Hoenn & Seek 2.0 part 15a+: small new maps painted from blocks of an existing layout, and in-place patches to existing layouts. tools/hoenn/gen_hoenn_composed_maps.py explains the ops. Route46_Meadow_hoenn is the hidden meadow behind Route 46's sealed cave mouth (25,33): a cliff along the top with the cave mouth at (11,3), trees on three sides, short grass with flowers, then tall grass down to the treeline. Every block comes from Route 46. Route 46's cave mouth sat in a pocket nothing could reach (HnS kept two Phanpy there as scenery); the patches open it through a cut tree. Route25_Garden_hoenn (2.0 part 16) is Bulbasaur's hidden garden behind Bill's house: a lawn ringed by trees with a lighter patch in the middle (the cape overlook's) and blue flowers, reached through a new gap in the trees at the top of the overlook. Every block comes from Route 25.",
+ "_comment": "Hoenn & Seek 2.0 part 15a+: small new maps painted from blocks of an existing layout, and in-place patches to existing layouts. tools/hoenn/gen_hoenn_composed_maps.py explains the ops. Route46_Meadow_hoenn is the hidden meadow behind Route 46's sealed cave mouth (25,33): a cliff along the top with the cave mouth at (11,3), trees on three sides, short grass with flowers, then tall grass down to the treeline. Every block comes from Route 46. Route 46's cave mouth sat in a pocket nothing could reach (HnS kept two Phanpy there as scenery); the patches open it through a cut tree. Route25_Garden_hoenn (2.0 part 16) is Bulbasaur's hidden garden behind Bill's house: a lawn ringed by trees with a lighter patch in the middle (the cape overlook's) and blue flowers, reached through a new gap in the trees at the top of the overlook. Every block comes from Route 25. Route113_Grotto_hoenn (2.0 part 20) is the Munchlax's hidden grotto: an ash floor ringed by trees, with patches of ash grass, reached through a gap in Route 113's southern trees at (14,16) (patched open). Petalburg Woods (part 20) gets a clearing behind the one-tile notch at (26,6-7), where the Slaking sleeps.",
  "maps": {
   "Route46_Meadow_hoenn": {
    "source": "LAYOUT_ROUTE46_HNS",
@@ -39,6 +39,21 @@
     {"_": "the tunnel's dead end, with its ladder at (3,3)", "at": [0, 0, 14, 16], "from": [0, 0]},
     {"_": "close the passage south with the ledge edge", "cells": [[11, 15], [12, 15]], "from": [9, 15]}
    ]
+  },
+  "Route113_Grotto_hoenn": {
+   "source": "LAYOUT_ROUTE113",
+   "layout": "LAYOUT_ROUTE113_GROTTO_HOENN",
+   "border": [16, 16],
+   "ops": [
+    {"_": "trees everywhere", "at": [0, 0, 16, 14], "from": [16, 16], "tile": [2, 2]},
+    {"_": "ash floor", "at": [2, 2, 12, 8], "from": [14, 10], "tile": [1, 1]},
+    {"_": "the way in, bottom middle", "at": [7, 10, 2, 4], "from": [14, 10], "tile": [1, 1]},
+    {"_": "tree clumps in the corners, so the edge isn't a straight line", "at": [2, 2, 2, 2], "from": [16, 16], "tile": [2, 2]},
+    {"at": [12, 2, 2, 2], "from": [16, 16], "tile": [2, 2]},
+    {"at": [2, 8, 2, 2], "from": [16, 16], "tile": [2, 2]},
+    {"at": [12, 8, 2, 2], "from": [16, 16], "tile": [2, 2]},
+    {"_": "ash grass", "cells": [[5, 3], [4, 4], [4, 5], [10, 3], [11, 4], [11, 5], [4, 7], [5, 9], [10, 9], [11, 7], [11, 8]], "from": [22, 10]}
+   ]
   }
  },
  "patches": [
@@ -53,6 +68,12 @@
   {"_": "Route 25: a gap in the cape overlook's top fence and trees at x 98-99, the way into Bulbasaur's garden (2.0 part 16)", "layout": "LAYOUT_ROUTE25_HNS", "cells": [[98, 9], [98, 10], [98, 11]], "from": [98, 12]},
   {"layout": "LAYOUT_ROUTE25_HNS", "cells": [[99, 9], [99, 10], [99, 11]], "from": [99, 12]},
   {"_": "... and the cliff above the gap loses the middle tree's crown", "layout": "LAYOUT_ROUTE25_HNS", "cells": [[98, 8]], "from": [94, 8]},
-  {"layout": "LAYOUT_ROUTE25_HNS", "cells": [[99, 8]], "from": [95, 8]}
+  {"layout": "LAYOUT_ROUTE25_HNS", "cells": [[99, 8]], "from": [95, 8]},
+  {"_": "Route 113: the gap in the southern trees below the item-ball notch (14,15), into the grotto", "layout": "LAYOUT_ROUTE113", "cells": [[14, 16]], "from": [14, 15]},
+  {"_": "Petalburg Woods: a clearing behind the notch at (26,6-7) (Slaking)", "layout": "LAYOUT_PETALBURG_WOODS", "cells": [[21, 2], [22, 2], [23, 2], [24, 2], [25, 2], [26, 2], [27, 2], [28, 2], [29, 2], [30, 2], [21, 3], [22, 3], [23, 3], [24, 3], [25, 3], [26, 3], [27, 3], [28, 3], [29, 3], [30, 3], [21, 4], [22, 4], [23, 4], [24, 4], [25, 4], [26, 4], [27, 4], [28, 4], [29, 4], [30, 4], [21, 5], [22, 5], [23, 5], [24, 5], [25, 5], [26, 5], [27, 5], [28, 5], [29, 5], [30, 5]], "from": [20, 10]},
+  {"_": "... trunks along its top", "layout": "LAYOUT_PETALBURG_WOODS", "cells": [[22, 1], [24, 1], [26, 1], [28, 1], [30, 1]], "from": [32, 3]},
+  {"layout": "LAYOUT_PETALBURG_WOODS", "cells": [[21, 1], [23, 1], [25, 1], [27, 1], [29, 1]], "from": [33, 3]},
+  {"_": "... and tree tops along its bottom (left of the notch)", "layout": "LAYOUT_PETALBURG_WOODS", "cells": [[22, 6], [24, 6], [28, 6], [30, 6]], "from": [30, 9]},
+  {"layout": "LAYOUT_PETALBURG_WOODS", "cells": [[21, 6], [23, 6], [25, 6], [27, 6], [29, 6]], "from": [31, 9]}
  ]
 }

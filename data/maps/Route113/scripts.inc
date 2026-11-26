@@ -10,6 +10,7 @@ Route113_OnResume:
 Route113_OnTransition:
 	clearflag FLAG_FORCE_MIRAGE_TOWER_VISIBLE
 	call Route113_EventScript_CheckSetAshWeather
+	call HoennSeek_EventScript_Route113OnTransition @ Hoenn & Seek 2.0 part 20
 	end
 
 Route113_EventScript_CheckSetAshWeather::
