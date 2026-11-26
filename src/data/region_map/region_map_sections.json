@@ -703,7 +703,8 @@
       "x": 11,
       "y": 10,
       "width": 1,
-      "height": 1
+      "height": 1,
+      "in_hns": true
     },
     {
       "id": "MAPSEC_UNDERWATER_SEALED_CHAMBER",
@@ -729,7 +730,8 @@
       "x": 0,
       "y": 10,
       "width": 1,
-      "height": 1
+      "height": 1,
+      "in_hns": true
     },
     {
       "id": "MAPSEC_DESERT_RUINS",
@@ -737,7 +739,8 @@
       "x": 8,
       "y": 3,
       "width": 1,
-      "height": 1
+      "height": 1,
+      "in_hns": true
     },
     {
       "id": "MAPSEC_ANCIENT_TOMB",
@@ -745,7 +748,8 @@
       "x": 13,
       "y": 2,
       "width": 1,
-      "height": 1
+      "height": 1,
+      "in_hns": true
     },
     {
       "id": "MAPSEC_INSIDE_OF_TRUCK",
@@ -757,7 +761,8 @@
       "x": 19,
       "y": 10,
       "width": 1,
-      "height": 1
+      "height": 1,
+      "in_hns": true
     },
     {
       "id": "MAPSEC_SECRET_BASE",
@@ -3462,6 +3467,51 @@
       "name": "ALTERING CAVE",
       "x": 6,
       "y": 8,
+      "width": 1,
+      "height": 1,
+      "hoenn": true
+    },
+    {
+      "id": "MAPSEC_SEALED_CHAMBER",
+      "name": "SEALED CHAMBER",
+      "x": 11,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "hoenn": true
+    },
+    {
+      "id": "MAPSEC_ISLAND_CAVE",
+      "name": "ISLAND CAVE",
+      "x": 0,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "hoenn": true
+    },
+    {
+      "id": "MAPSEC_DESERT_RUINS",
+      "name": "DESERT RUINS",
+      "x": 8,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "hoenn": true
+    },
+    {
+      "id": "MAPSEC_ANCIENT_TOMB",
+      "name": "ANCIENT TOMB",
+      "x": 13,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "hoenn": true
+    },
+    {
+      "id": "MAPSEC_SKY_PILLAR",
+      "name": "SKY PILLAR",
+      "x": 19,
+      "y": 10,
       "width": 1,
       "height": 1,
       "hoenn": true

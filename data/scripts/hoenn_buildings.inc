@@ -3,6 +3,12 @@
 @ tools/hoenn/gen_hoenn_buildings.py writes each map's scripts.inc, where an NPC
 @ with "script" jumps here and texts are named <Map>_Text_<Key>.
 
+@ House pets (mon objects in buildings.json) play their cry like trainer followers.
+@ They need their own label: gen_hoenn_followers.py finds (and rewrites) its objects by
+@ the HoennSeek_EventScript_TrainerFollower script name.
+HoennSeek_EventScript_HousePet::
+	goto HoennSeek_EventScript_TrainerFollower
+
 @ ---- Olivine City: retired captain (friendship rater) -----------------------
 @ Rates the lead Pokémon's friendship (Emerald's GetLeadMonFriendshipScore, 0-6).
 HoennSeek_EventScript_OlivineCaptain::

@@ -115,7 +115,7 @@ def build(b, templates):
         taken.add((x, y))
         move = FACING[o.get("facing", "down")]
         if o["type"] == "mon":
-            gfx, script = "OBJ_EVENT_GFX_MON_BASE+SPECIES_%s" % o["species"], "HoennSeek_EventScript_TrainerFollower"
+            gfx, script = "OBJ_EVENT_GFX_MON_BASE+SPECIES_%s" % o["species"], "HoennSeek_EventScript_HousePet"
         elif "daily_gift" in o:
             gfx, script = o["gfx"], "%s_EventScript_Npc%d" % (name, k)
             s2, t2 = daily_gift(name, k, o["daily_gift"])

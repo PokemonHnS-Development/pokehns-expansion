@@ -11,5 +11,6 @@
 #define HOENN_CALL_RED     6 // May: after you beat Red
 #define HOENN_CALL_CONTEST 7 // May: after your first contest win (part 17)
 #define HOENN_CALL_BASE    8 // Brendan: after you make a secret base (part 18)
+#define HOENN_CALL_SITES   9 // May: your base is at a reopened legendary site (2.0 part 12)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

@@ -1,0 +1,18 @@
+{
+  "_comment": [
+    "Hoenn & Seek 2.0 part 12: secret base spots at the reopened legendary sites.",
+    "tools/hoenn/gen_hoenn_base_spots.py writes each spot's closed entrance metatile into the",
+    "layout (collision 1, elevation 0, like Emerald's own spots) and adds a secret_base bg event.",
+    "x,y is the wall tile; the player stands on the tile below it, facing up, and uses Secret Power.",
+    "id: the base's group (which interior you get) and a free variant (Emerald uses 1-4, so 9 is",
+    "always free). The indent colour should match the group (red/blue/yellow cave).",
+    "Constants go to include/constants/hoenn_secret_bases.h. Re-runs are idempotent."
+  ],
+  "spots": [
+    {"name": "DESERT_RUINS",    "map": "DesertRuins",          "x": 8,  "y": 2,  "indent": "Red",    "group": "RED_CAVE1",    "variant": 9},
+    {"name": "ISLAND_CAVE",     "map": "IslandCave",           "x": 8,  "y": 2,  "indent": "Blue",   "group": "BLUE_CAVE1",   "variant": 9},
+    {"name": "ANCIENT_TOMB",    "map": "AncientTomb",          "x": 8,  "y": 2,  "indent": "Yellow", "group": "YELLOW_CAVE1", "variant": 9},
+    {"name": "CAVE_OF_ORIGIN",  "map": "CaveOfOrigin_B1F",     "x": 7,  "y": 12, "indent": "Blue",   "group": "BLUE_CAVE2",   "variant": 9},
+    {"name": "SEAFLOOR_CAVERN", "map": "SeafloorCavern_Room9", "x": 13, "y": 40, "indent": "Blue",   "group": "BLUE_CAVE3",   "variant": 9}
+  ]
+}

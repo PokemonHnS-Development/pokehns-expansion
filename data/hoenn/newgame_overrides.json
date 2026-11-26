@@ -1,5 +1,5 @@
 {
-  "_comment": "Hoenn & Seek: post-Emerald world state, applied at new game after Emerald's own new-game flags (see tools/hoenn/gen_hoenn_newgame.py). 'vars' are story states set to their after-the-story values so their triggers never fire; 'clear' shows objects Emerald hides at the start; 'set' hides story objects Emerald shows. Every name must be Hoenn-owned (remapped), so none of this can touch an HnS flag or var.",
+  "_comment": "Hoenn & Seek: post-Emerald world state, applied at new game after Emerald's own new-game flags (see tools/hoenn/gen_hoenn_newgame.py). 'vars' are story states set to their after-the-story values so their triggers never fire; 'clear' shows objects Emerald hides at the start; 'set' hides story objects Emerald shows. Every name must be Hoenn-owned (remapped), so none of this can touch an HnS flag or var. 2.0 part 12: the reopened legendary sites (Sky Pillar, Sealed Chamber and Regi caves, Cave of Origin, Seafloor Cavern) start empty: Wallace, the Aqua grunts, Kyogre, Rayquaza and the Regis are hidden (the 'defeated' flags stop the maps' own scripts from showing them again); puzzles and items stay.",
   "clear": [
     "FLAG_HIDE_SLATEPORT_CITY_HARBOR_SS_TIDAL",
     "FLAG_HIDE_LILYCOVE_HARBOR_SSTIDAL",
@@ -84,7 +84,27 @@
     "FLAG_RESCUED_BIRCH",
     "FLAG_HOENN_HIDE_SUMMIT_LEADERS",
     "FLAG_HOENN_HIDE_BM_OUTSIDE",
-    "FLAG_HOENN_HIDE_BM_HOME"
+    "FLAG_HOENN_HIDE_BM_HOME",
+    "FLAG_WALLACE_GOES_TO_SKY_PILLAR",
+    "FLAG_HIDE_SKY_PILLAR_WALLACE",
+    "FLAG_DEFEATED_RAYQUAZA",
+    "FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA",
+    "FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL",
+    "FLAG_DEFEATED_REGIROCK",
+    "FLAG_DEFEATED_REGICE",
+    "FLAG_DEFEATED_REGISTEEL",
+    "FLAG_HIDE_REGIROCK",
+    "FLAG_HIDE_REGICE",
+    "FLAG_HIDE_REGISTEEL",
+    "FLAG_HIDE_CAVE_OF_ORIGIN_B1F_WALLACE",
+    "FLAG_HIDE_SEAFLOOR_CAVERN_ENTRANCE_AQUA_GRUNT",
+    "FLAG_HIDE_SEAFLOOR_CAVERN_AQUA_GRUNTS",
+    "FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE",
+    "FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_ARCHIE",
+    "FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAXIE",
+    "FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAGMA_GRUNTS",
+    "FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE_ASLEEP",
+    "FLAG_HIDE_UNDERWATER_SEA_FLOOR_CAVERN_STOLEN_SUBMARINE"
   ],
   "_areas": "part 8: harbors, Steven's house; part 10: Littleroot-Rustboro, Dewford, Slateport, Mauville, Routes 101-110, 116-118; part 11: Fallarbor, Lavaridge, Fortree, Lilycove, Mt. Chimney/Pyre, Meteor Falls, hideouts, Routes 111-115, 119-123; part 12: Mossdeep, Sootopolis, Pacifidlog, Routes 124-134, Abandoned Ship",
   "vars": {
@@ -128,6 +148,8 @@
     "VAR_SOOTOPOLIS_CITY_STATE": 6,
     "VAR_SKY_PILLAR_STATE": 3,
     "VAR_ROUTE128_STATE": 2,
-    "VAR_VICTORY_ROAD_1F_STATE": 3
+    "VAR_VICTORY_ROAD_1F_STATE": 3,
+    "VAR_SEAFLOOR_CAVERN_STATE": 1,
+    "VAR_SKY_PILLAR_RAYQUAZA_CRY_DONE": 1
   }
 }

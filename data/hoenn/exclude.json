@@ -9,12 +9,6 @@
     "VerdanturfTown_BattleTent",
     "SlateportCity_BattleTent",
     "Route110_TrickHouse",
-    "SkyPillar_",
-    "SealedChamber_",
-    "Underwater_SealedChamber",
-    "DesertRuins",
-    "IslandCave",
-    "AncientTomb",
     "TerraCave_",
     "MarineCave_",
     "Underwater_MarineCave",
@@ -28,10 +22,7 @@
     "UnionRoom",
     "SingleBattleColosseum",
     "DoubleBattleColosseum",
-    "LinkContestRoom",
-    "CaveOfOrigin_",
-    "SeafloorCavern_",
-    "Underwater_SeafloorCavern"
+    "LinkContestRoom"
   ],
   "exclude_maps": [
     "InsideOfTruck",

@@ -4,6 +4,6 @@
 // Hoenn map sections appended after HnS's own (contiguous), plus the
 // Hoenn sections HnS already listed before Pallet Town.
 #define HOENN_MAPSEC_FIRST MAPSEC_LITTLEROOT_TOWN
-#define HOENN_MAPSEC_LAST  MAPSEC_ALTERING_CAVE
+#define HOENN_MAPSEC_LAST  MAPSEC_SKY_PILLAR
 #define HOENN_SHARED_MAPSECS MAPSEC_ABANDONED_SHIP, MAPSEC_LILYCOVE_CITY, MAPSEC_SAFARI_ZONE, MAPSEC_VICTORY_ROAD
 #endif

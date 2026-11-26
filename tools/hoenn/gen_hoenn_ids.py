@@ -45,6 +45,11 @@ HNS_MAX_TRAINERS = 864
 KEEP_FLAG_PREFIXES = ("FLAG_SYS_", "FLAG_BADGE0", "FLAG_RECEIVED_HM_", "FLAG_HIDE_MAP_NAME_POPUP", "FLAG_DONT_TRANSITION_MUSIC",
                       "FLAG_SAFE_FOLLOWER_MOVEMENT", "FLAG_FINITE_TMS", "FLAG_PENDING_DAYCARE_EGG",
                       "FLAG_ADVENTURE_STARTED", "FLAG_RECEIVED_BIKE")
+# System flags HnS dropped (0 there) that Hoenn's braille puzzles need (2.0 part 12: the
+# Sealed Chamber and Regi caves). src/braille_puzzles.c reads them too; the remap reaches C
+# code because hoenn_flags.h is included at the end of flags.h.
+REMAP_ZERO_SYS_FLAGS = {"FLAG_SYS_BRAILLE_DIG", "FLAG_SYS_REGIROCK_PUZZLE_COMPLETED",
+                        "FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED", "FLAG_SYS_BRAILLE_REGICE_COMPLETED"}
 # Flags that are live in HnS but mean "this region's progress": give Hoenn its own.
 FORCE_FLAG_PATTERNS = (r"^FLAG_HIDDEN_ITEM_",)
 # Badges are NOT remapped: FLAG_BADGE01_GET etc. are the same names HnS uses for its own badges
@@ -144,7 +149,8 @@ def main():
             report["flags"][n] = "undefined in HnS (left alone)"
             continue
         # FLAG_RECEIVED_HM_{FLY,DIVE,WATERFALL} are defined as 0 in HnS (unused there): give Hoenn real ones.
-        if n.startswith(KEEP_FLAG_PREFIXES) and not (n.startswith("FLAG_RECEIVED_HM_") and v == 0):
+        if n.startswith(KEEP_FLAG_PREFIXES) and not (n.startswith("FLAG_RECEIVED_HM_") and v == 0) \
+                and not (n in REMAP_ZERO_SYS_FLAGS and v == 0):
             report["flags"][n] = f"shared system flag {hex(v)}"
             continue
         forced = any(re.search(p, n) for p in FORCE_FLAG_PATTERNS)

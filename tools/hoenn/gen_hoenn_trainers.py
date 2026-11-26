@@ -301,6 +301,15 @@ def main():
     man_path = P("data/hoenn/trainer_objects.json")
     if os.path.exists(man_path):
         manifest = json.load(open(man_path))
+        # Maps kept since the manifest was written (2.0 part 12 reopened the legendary
+        # sites): their map.json still has the original scripts, so add them now.
+        # (Maps without trainers are scanned again each run and add nothing.)
+        added = build_manifest(sorted(set(kept) - {o["map"] for o in manifest}))
+        if added:
+            manifest = sorted(manifest + added, key=lambda o: (o["map"], o["index"]))
+            with open(man_path, "w") as f:
+                json.dump(manifest, f, indent=1)
+                f.write("\n")
     else:
         manifest = build_manifest(kept)
         with open(man_path, "w") as f:

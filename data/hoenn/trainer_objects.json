@@ -4350,6 +4350,66 @@
   "sight": "0"
  },
  {
+  "map": "SeafloorCavern_Room1",
+  "index": 3,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "SeafloorCavern_Room1_EventScript_Grunt1",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_SEAFLOOR_CAVERN_1",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "2"
+ },
+ {
+  "map": "SeafloorCavern_Room1",
+  "index": 4,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "SeafloorCavern_Room1_EventScript_Grunt2",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_SEAFLOOR_CAVERN_2",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "SeafloorCavern_Room3",
+  "index": 7,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+  "script": "SeafloorCavern_Room3_EventScript_Shelly",
+  "macro": "single",
+  "trainer": "TRAINER_SHELLY_SEAFLOOR_CAVERN",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "6"
+ },
+ {
+  "map": "SeafloorCavern_Room3",
+  "index": 8,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "SeafloorCavern_Room3_EventScript_Grunt5",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_SEAFLOOR_CAVERN_5",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "4"
+ },
+ {
+  "map": "SeafloorCavern_Room4",
+  "index": 0,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+  "script": "SeafloorCavern_Room4_EventScript_Grunt3",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_SEAFLOOR_CAVERN_3",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
+  "map": "SeafloorCavern_Room4",
+  "index": 1,
+  "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+  "script": "SeafloorCavern_Room4_EventScript_Grunt4",
+  "macro": "single",
+  "trainer": "TRAINER_GRUNT_SEAFLOOR_CAVERN_4",
+  "trainer_type": "TRAINER_TYPE_NORMAL",
+  "sight": "3"
+ },
+ {
   "map": "SootopolisCity_Gym_1F",
   "index": 0,
   "graphics_id": "OBJ_EVENT_GFX_JUAN",

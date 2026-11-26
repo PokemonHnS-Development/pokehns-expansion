@@ -186,6 +186,15 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Surf shop: talk to the clerk across the counter (in the harness it only answered from the side, as HnS's own Melemele mart does). Buy each item, and check the prices and list are OK.
 - [ ] The Wailmer pet's big sprite overlaps the shelf behind it. Is that OK, or should it move or change?
 
+## 2.0 part 12 — Legendary sites reopened
+- [ ] Sealed Chamber: dive on Route 134, stand on the hole and press Down, then do Emerald's braille puzzle with Relicanth and Wailord in the party; the Regi doors on Routes 105, 111 and 120 open (only the Route 111 door and the Regirock chamber were checked in the emulator, with the flag set by hand).
+- [ ] Island Cave (Regice) and Ancient Tomb (Registeel: Flash in the middle; in HnS's HM mode Flash needs HM05 in the bag) open their inner chambers when you follow their braille.
+- [ ] Sky Pillar: climb to the top with the Mach Bike over the cracked floors; no Wallace at the door, no Rayquaza at the top.
+- [ ] Cave of Origin and Seafloor Cavern: walk to the end (Seafloor's boulder and current puzzles), no Wallace, Kyogre, Maxie, Archie or grunts.
+- [ ] Each of the five base spots (end of Desert Ruins, Island Cave, Ancient Tomb, Cave of Origin B1F, Seafloor Cavern Room 9): Secret Power makes a base, decorate it, leave and come back (the entrance stays open), then move it to another spot.
+- [ ] May's call about the sites rings once (needs the PokéGear and her number), and Brendan's first-base call doesn't ring after it.
+- [ ] Items and trainers left in the sites (Seafloor Cavern has no grunts now; the items should all still be there).
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

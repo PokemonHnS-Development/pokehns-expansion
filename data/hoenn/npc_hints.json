@@ -37,6 +37,7 @@
     "TIP_REMINDER_H": {"kind": "tip", "text": "In FALLARBOR TOWN there's a MOVE REMINDER. He helps POKéMON remember forgotten moves."},
     "TIP_NAMERATER_H": {"kind": "tip", "text": "The NAME RATER in SLATEPORT CITY can change your POKéMON's nicknames."},
     "TIP_MIND_READER": {"kind": "tip", "if": [{"flag": "FLAG_HOENN_STAMP_GYM_7"}], "text": ["A guru in MOSSDEEP CITY reads POKéMON's minds.", "For STAR PIECES, he can bring out a POKéMON's hidden potential."]},
+    "TIP_SITES":      {"kind": "tip", "if": [{"not_flag": "FLAG_HOENN_CALL_SITES"}], "text": ["The old legendary sites are open again: the desert ruins, SKY PILLAR, even the caves under the sea.", "The POKéMON that slept there are gone. TRAINERS are making SECRET BASES in them!"]},
 
     "STORY_FERRY":    {"kind": "story", "if": [{"badges_min": 16}, {"stamps_below": 1}], "text": ["PROF. OAK is said to give TRAINERS with all 16 BADGES a ticket for the ship to HOENN.", "Ships leave from VERMILION's port."]},
     "STORY_NORMAN":   {"kind": "story", "if": [{"stamps_below": 4}], "text": "NORMAN of PETALBURG only battles TRAINERS who already have four HOENN BADGES."},
@@ -100,9 +101,9 @@
     {"map": "OldaleTown_PokemonCenter_1F",       "script": "OldaleTown_PokemonCenter_1F_EventScript_Gentleman",    "lines": ["RUMOR_MASQUERAIN"]},
     {"map": "SlateportCity_PokemonCenter_1F",    "script": "SlateportCity_PokemonCenter_1F_EventScript_Woman",     "lines": ["STORY_NORMAN", "TIP_NAMERATER_H"]},
     {"map": "MauvilleCity_PokemonCenter_1F",     "script": "MauvilleCity_PokemonCenter_1F_EventScript_Woman1",     "lines": ["STORY_WATTSON", "RUMOR_CASTFORM"]},
-    {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "TIP_REMINDER_H"]},
+    {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "TIP_REMINDER_H", "TIP_SITES"]},
     {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS"]},
-    {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS"]},
+    {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES"]},
     {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP"]},
     {"map": "Route119_WeatherInstitute_1F",      "script": "Route119_WeatherInstitute_1F_EventScript_InstituteWorker1", "always": true, "lines": ["FORECAST"]}
   ],
