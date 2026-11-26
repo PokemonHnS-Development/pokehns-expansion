@@ -817,3 +817,284 @@ HoennSeek_Text_CallAbsol:
 	.string "It runs from everybody. You'll\n"
 	.string "need a way to stop it escaping.\p"
 	.string "Good luck out there! Bye!$"
+
+@ ==========================================================================
+@ Part 22b: Wailord's strait (Route 131) and Chimecho's chimes (Mt. Pyre)
+@ WAILORD: a huge WAILORD sleeps wedged in a one-tile strait at Route 131's
+@ bottom edge, (17,38) (the rock beside it moved down a row in
+@ composed_maps.json). It only wakes on Saturday mornings, when a WAILMER
+@ leads your party (it's listening for its young). Its battle is scaled; it
+@ knows Steam Eruption (its spout) and has a perfect HP IV. Whatever happens,
+@ it dives under and the strait stays open: (17,39) leads to an atoll
+@ (Route131_Atoll_hoenn) with pearls, a Star Piece, hidden Heart Scales and
+@ a Luvdisc lagoon. Until it's caught, it sleeps in that lagoon and wakes
+@ the same way, once a week.
+@ CHIMECHO: on Mt. Pyre's summit at night, chimes ring from the top-left
+@ graves. Three rings of trigger tiles on the only way there (VAR_TEMP_4,
+@ BFS distances 16, 9 and 4 from the graves) make them louder; the last one
+@ brings CHIMECHO out of the fog. Scaled battle, Relic Song, Cleanse Tag.
+@ Once a night until it's caught.
+@ ==========================================================================
+
+@ ---- Wailord ---------------------------------------------------------------
+HoennSeek_EventScript_EnterAtoll::
+	warp MAP_ROUTE131_ATOLL_HOENN, 13, 1
+	waitstate
+	end
+
+HoennSeek_EventScript_LeaveAtoll::
+	warp MAP_ROUTE131, 17, 38
+	waitstate
+	end
+
+@ In the lagoon from its first battle until it's caught, except the rest of
+@ a week in which it was battled.
+HoennSeek_EventScript_AtollOnTransition::
+	setflag FLAG_HOENN_HIDE_WAILORD_ATOLL
+	goto_if_set FLAG_HOENN_WAILORD_CAUGHT, HoennSeek_EventScript_HiddenEnd22b
+	goto_if_set FLAG_HOENN_WEEKLY_WAILORD, HoennSeek_EventScript_HiddenEnd22b
+	clearflag FLAG_HOENN_HIDE_WAILORD_ATOLL
+HoennSeek_EventScript_HiddenEnd22b:
+	end
+
+@ The same script runs in the strait and, once it has moved, in the lagoon.
+HoennSeek_EventScript_Wailord::
+	lock
+	goto_if_set FLAG_HOENN_WAILORD_MOVED, HoennSeek_EventScript_WailordInLagoon
+	msgbox HoennSeek_Text_WailordAsleep, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_WailordTryWake
+
+HoennSeek_EventScript_WailordInLagoon:
+	msgbox HoennSeek_Text_WailordLagoon, MSGBOX_DEFAULT
+HoennSeek_EventScript_WailordTryWake:
+	setvar VAR_0x8004, HOENN_SATURDAY
+	specialvar VAR_RESULT, HoennIsItWeekday
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_WailordSleeps
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_MORNING, HoennSeek_EventScript_WailordSleeps
+	setvar VAR_0x8004, SPECIES_WAILMER
+	specialvar VAR_RESULT, HoennLeadIsSpecies
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_WailordSleeps
+	playmoncry SPECIES_WAILMER, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_WailmerCalls, MSGBOX_DEFAULT
+	waitmoncry
+	playmoncry SPECIES_WAILORD, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_WailordWakes, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setvar VAR_0x800A, FALSE
+	goto_if_set FLAG_HOENN_WAILORD_MOVED, HoennSeek_EventScript_WailordBattle
+	setvar VAR_0x800A, TRUE @ it was in the strait
+HoennSeek_EventScript_WailordBattle:
+	setflag FLAG_HOENN_WAILORD_MOVED
+	setflag FLAG_HOENN_WEEKLY_WAILORD
+	setvar VAR_0x8004, SPECIES_WAILORD
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_STEAM_ERUPTION
+	setvar VAR_0x8006, HOENN_TUNE_IV_HP
+	setvar VAR_0x8007, ITEM_NONE
+	special HoennTuneWildMon
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_WailordCaught
+	removeobject VAR_LAST_TALKED
+	goto_if_eq VAR_0x800A, FALSE, HoennSeek_EventScript_WailordDivesLagoon
+	msgbox HoennSeek_Text_WailordDives, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_WailordDivesLagoon:
+	msgbox HoennSeek_Text_WailordDivesLagoon, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_WailordCaught:
+	setflag FLAG_HOENN_WAILORD_CAUGHT
+	removeobject VAR_LAST_TALKED
+	goto_if_eq VAR_0x800A, FALSE, HoennSeek_EventScript_WailordEnd
+	msgbox HoennSeek_Text_WailordCaught, MSGBOX_DEFAULT
+HoennSeek_EventScript_WailordEnd:
+	release
+	end
+
+HoennSeek_EventScript_WailordSleeps:
+	msgbox HoennSeek_Text_WailordListening, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_CallWailord::
+	setflag FLAG_HOENN_CALL_WAILORD
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallWailord
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Chimecho --------------------------------------------------------------
+@ Called from Mt. Pyre summit's OnTransition.
+HoennSeek_EventScript_PyreSummitOnTransition::
+	setflag FLAG_HOENN_HIDE_CHIMECHO
+	goto_if_set FLAG_HOENN_CHIMECHO_CAUGHT, HoennSeek_EventScript_HiddenReturn
+	goto_if_set FLAG_HOENN_DAILY_CHIMECHO, HoennSeek_EventScript_HiddenReturn
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_HiddenReturn
+	setvar VAR_TEMP_4, 1
+	return
+
+HoennSeek_EventScript_ChimesFaint::
+	lockall
+	setvar VAR_TEMP_4, 2
+	playse SE_M_HEAL_BELL
+	msgbox HoennSeek_Text_ChimesFaint, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimesLouder::
+	lockall
+	setvar VAR_TEMP_4, 3
+	playse SE_M_HEAL_BELL
+	delay 12
+	playse SE_M_HEAL_BELL
+	msgbox HoennSeek_Text_ChimesLouder, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimechoAppears::
+	lockall
+	setvar VAR_TEMP_4, 4
+	applymovement LOCALID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	playmoncry SPECIES_CHIMECHO, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_ChimesHere, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	clearflag FLAG_HOENN_HIDE_CHIMECHO
+	addobject LOCALID_HOENN_CHIMECHO
+	applymovement LOCALID_HOENN_CHIMECHO, HoennSeek_Movement_ChimechoDrift
+	waitmovement 0
+	playmoncry SPECIES_CHIMECHO, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_ChimechoBattle, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setflag FLAG_HOENN_CHIMECHO_MET
+	setflag FLAG_HOENN_DAILY_CHIMECHO
+	setvar VAR_0x8004, SPECIES_CHIMECHO
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_RELIC_SONG
+	setvar VAR_0x8006, FALSE
+	setvar VAR_0x8007, ITEM_CLEANSE_TAG
+	special HoennTuneWildMon
+	dowildbattle
+	removeobject LOCALID_HOENN_CHIMECHO
+	setflag FLAG_HOENN_HIDE_CHIMECHO
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_ChimechoCaught
+	msgbox HoennSeek_Text_ChimechoDrifts, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimechoCaught:
+	setflag FLAG_HOENN_CHIMECHO_CAUGHT
+	msgbox HoennSeek_Text_ChimechoCaught, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ From the graves at (8,4) to two steps from the player at (11,5).
+HoennSeek_Movement_ChimechoDrift:
+	walk_slow_down
+	walk_slow_right
+	step_end
+
+HoennSeek_EventScript_CallChimecho::
+	setflag FLAG_HOENN_CALL_CHIMECHO
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallChimecho
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Part 22b texts ------------------------------------------------------
+HoennSeek_Text_WailordAsleep:
+	.string "A huge WAILORD is asleep in the\n"
+	.string "gap, wedged between the rocks.\p"
+	.string "Each breath it takes sounds like\n"
+	.string "the tide going out.$"
+
+HoennSeek_Text_WailordLagoon:
+	.string "The WAILORD is asleep, floating\n"
+	.string "in the middle of the lagoon.$"
+
+HoennSeek_Text_WailordListening:
+	.string "It doesn't stir. Even asleep,\n"
+	.string "it seems to be listening for\l"
+	.string "something out in the sea…$"
+
+HoennSeek_Text_WailmerCalls:
+	.string "Your WAILMER calls out across\n"
+	.string "the water!$"
+
+HoennSeek_Text_WailordWakes:
+	.string "The WAILORD's eye opens!\p"
+	.string "It blasts a spout of steam high\n"
+	.string "into the morning air!$"
+
+HoennSeek_Text_WailordDives:
+	.string "The WAILORD dove under and\n"
+	.string "swam off through the gap.\p"
+	.string "The strait it was blocking\n"
+	.string "is open now!$"
+
+HoennSeek_Text_WailordDivesLagoon:
+	.string "The WAILORD dove deep into the\n"
+	.string "lagoon. It'll be back to sleep\l"
+	.string "here before long.$"
+
+HoennSeek_Text_WailordCaught:
+	.string "With the WAILORD gone, the\n"
+	.string "strait it was blocking is open!$"
+
+HoennSeek_Text_CallWailord:
+	.string "{PLAYER}! It's BRENDAN!\p"
+	.string "CAPT. STERN's crew was charting\n"
+	.string "the sea by PACIFIDLOG this week.\p"
+	.string "They saw a WAILORD as big as\n"
+	.string "their boat go under, right by\l"
+	.string "ROUTE 131. Dad says it was you!\p"
+	.string "They say there's an atoll past\n"
+	.string "that strait nobody's charted.\p"
+	.string "Dad wants a full report, so look\n"
+	.string "around for me, okay?$"
+
+HoennSeek_Text_ChimesFaint:
+	.string "Somewhere in the fog, a chime\n"
+	.string "rings… then another.\p"
+	.string "But there's no wind tonight.$"
+
+HoennSeek_Text_ChimesLouder:
+	.string "The chimes are louder here,\n"
+	.string "ringing from between the graves.$"
+
+HoennSeek_Text_ChimesHere:
+	.string "The chimes ring all around you!$"
+
+HoennSeek_Text_ChimechoBattle:
+	.string "A CHIMECHO drifted out of the\n"
+	.string "fog, singing an old, old song!$"
+
+HoennSeek_Text_ChimechoDrifts:
+	.string "The CHIMECHO drifted back into\n"
+	.string "the fog. The chimes fell silent.$"
+
+HoennSeek_Text_ChimechoCaught:
+	.string "The summit is quiet now. Only\n"
+	.string "the wind moves between the graves.$"
+
+HoennSeek_Text_CallChimecho:
+	.string "Hi, {PLAYER}! It's MAY.\p"
+	.string "Mom went up to MT. PYRE last\n"
+	.string "night to tend our family's grave.\p"
+	.string "She heard wind chimes on the\n"
+	.string "summit, with no wind at all!\p"
+	.string "The old lady up there told her\n"
+	.string "someone followed the sound into\l"
+	.string "the graves… That was you, right?\p"
+	.string "Mom says it was a CHIMECHO\n"
+	.string "singing to the spirits there.$"

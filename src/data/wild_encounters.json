@@ -42708,6 +42708,95 @@
           }
         },
         {
+          "map": "MAP_ROUTE131_ATOLL_HOENN",
+          "base_label": "gRoute131_Atoll_hoenn",
+          "water_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 56,
+                "max_level": 60,
+                "species": "SPECIES_LUVDISC"
+              },
+              {
+                "min_level": 56,
+                "max_level": 60,
+                "species": "SPECIES_WAILMER"
+              },
+              {
+                "min_level": 57,
+                "max_level": 61,
+                "species": "SPECIES_CORSOLA"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_LUVDISC"
+              },
+              {
+                "min_level": 60,
+                "max_level": 62,
+                "species": "SPECIES_WAILMER"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 51,
+                "max_level": 55,
+                "species": "SPECIES_LUVDISC"
+              },
+              {
+                "min_level": 51,
+                "max_level": 53,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 52,
+                "max_level": 56,
+                "species": "SPECIES_LUVDISC"
+              },
+              {
+                "min_level": 52,
+                "max_level": 56,
+                "species": "SPECIES_CORSOLA"
+              },
+              {
+                "min_level": 52,
+                "max_level": 56,
+                "species": "SPECIES_WAILMER"
+              },
+              {
+                "min_level": 54,
+                "max_level": 58,
+                "species": "SPECIES_LUVDISC"
+              },
+              {
+                "min_level": 54,
+                "max_level": 58,
+                "species": "SPECIES_WAILMER"
+              },
+              {
+                "min_level": 55,
+                "max_level": 59,
+                "species": "SPECIES_CORSOLA"
+              },
+              {
+                "min_level": 56,
+                "max_level": 60,
+                "species": "SPECIES_RELICANTH"
+              },
+              {
+                "min_level": 57,
+                "max_level": 62,
+                "species": "SPECIES_LUVDISC"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_WHIRL_ISLANDS_1F_HNS",
           "base_label": "gWhirlIslands_1F_hns_Day",
           "land_mons": {

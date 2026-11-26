@@ -28,5 +28,7 @@
 #define HOENN_CALL_FEEBAS   23 // May: you fished the mirror pool Feebas (2.0 part 21)
 #define HOENN_CALL_FEUD   24 // Brendan: you broke up Route 114's Zangoose vs. Seviper fight (2.0 part 21)
 #define HOENN_CALL_ABSOL  25 // May: you saw Absol on Route 120's ridge (2.0 part 22a)
+#define HOENN_CALL_WAILORD 26 // Brendan: you woke the Wailord in Route 131's strait (2.0 part 22b)
+#define HOENN_CALL_CHIMECHO 27 // May: you found the Mt. Pyre chimes (2.0 part 22b)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H
