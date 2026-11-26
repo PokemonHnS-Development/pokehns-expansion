@@ -1,22 +1,22 @@
 # Hoenn & Seek: notes for Claude sessions
 
-A fork of Heart & Soul (HnS) 2.0.6 (pokeemerald-expansion 1.15.2) that adds Hoenn as an open, post-Emerald region. Design decisions, the audit and the 20-part roadmap live in the claude.ai Project "Pokemon":
-- `claude/hns-hoenn-roadmap.md`
-- `claude/hns-hoenn-design-decisions.md`
-- `claude/hns-2.0.6-hoenn-audit.md`
-- `claude/hns-hoenn-prestart-checklist.md`
-- `claude/hns-hoenn-next-session.md` (start here in a new chat)
-- `claude/hns-2.0-plan.md` (everything planned for 2.0) and `claude/hns-2.0-roadmap.md` (2.0 build order, one part per sitting)
+A fork of Heart & Soul (HnS) 2.0.6 (pokeemerald-expansion 1.15.2) that adds Hoenn as an open, post-Emerald region.
 
-Read the roadmap entry for the part you're working on before starting.
+**Working docs are in `hoenn-docs/` and are the source of truth** (Bryan uses two Claude accounts, which share only this repo):
+- `hoenn-docs/README.md`: start here (session setup, how Bryan likes to work)
+- `hoenn-docs/2.0-roadmap.md`: build order and status; read your part's entry before starting
+- `hoenn-docs/2.0-plan.md`: every 2.0 decision and the repo check results
+- `hoenn-docs/playtest-checklist.md`: untested items for Bryan's real playthrough
+
+Update them in the same PR as the code. 1.0 background (design decisions, audit, teams, world details, the 1.0 roadmap and playtest log) stays in Bryan's first claude.ai Project, "Pokemon"; everything a 2.0 part needs from it is in this file and the plan.
 
 ## Starting a new session (after 1.0)
 Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
-1. **Repo:** clone `itsbliusclues-collab/hoenn-and-seek`, `git checkout hoenn`, branch `v2-NN-<slug>` for 2.0 parts (`v1.1-<slug>` for 1.0 fixes). PRs go into `hoenn`; never commit to `master`. 1.0 is commit `c0c62f19` (PR #26's merge).
-2. **Docs (claude.ai Project "Pokemon"):** read `claude/hns-2.0-roadmap.md` (the part you're on, its size and quality bar) and the matching section of `claude/hns-2.0-plan.md` (all 2.0 decisions; it replaced the old 2.0 idea docs). Background: `claude/hns-hoenn-roadmap.md` (what 1.0 built), `claude/hns-hoenn-design-decisions.md` (1.0 decisions), `claude/hns-hoenn-teams.md`, `claude/hns-hoenn-world-details.md`. Bryan's open playtest items: `claude/hns-hoenn-playtest-checklist.md`; Claude's pre-pass findings and resume notes: `claude/hns-hoenn-playtest-log.md`.
+1. **Repo:** clone `itsbliusclues-collab/hoenn-and-seek`, `git checkout hoenn`, branch `v2-NN-<slug>` for 2.0 parts (`v1.1-<slug>` for 1.0 fixes). PRs go into `hoenn`; never commit to `master`. 1.0 is tag `1.0` (commit `c0c62f19`, PR #26's merge).
+2. **Docs:** `hoenn-docs/README.md`, then your part in `hoenn-docs/2.0-roadmap.md` and the matching section of `hoenn-docs/2.0-plan.md`.
 3. **Base ROM:** `baserom/emerald.gba` (Emerald U, sha1 checked by `build_patch.sh`) is not in git. If it's missing, ask Bryan to attach it.
 4. **Emulator:** `tools/hoenn/emu/setup.sh` builds the libmgba harness in `~/emu`, a debug ROM and a Hoenn save; then drive it with `tools/hoenn/emu/pt.py` (`playtest/README.md`). Night: set `TZ`.
-5. **End of every part:** release + debug build, size row below, debug patch, emulator screenshots sent to Bryan as labeled grids, CLAUDE.md notes, roadmap entry, untested items into the checklist, PR.
+5. **End of every part:** release + debug build, size row below, debug patch, emulator screenshots sent to Bryan as labeled grids, CLAUDE.md notes, the part's status in `hoenn-docs/2.0-roadmap.md`, untested items into `hoenn-docs/playtest-checklist.md`, PR.
 
 ## Build
 - `make hns RELEASE=1 -j$(nproc)` produces `pokehns-release.gba`. **Never use plain `make` or `make release`.** Those build the Emerald target, which is broken upstream (`FLAG_RECEIVED_TOGEPI_EGG`).
@@ -189,7 +189,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
   - Wally answers one random-call pick in three (`HoennSpecialCallerAnswers`, hooked in `SelectMatchCallTrainer`).
   - **Battle backgrounds:** `data/hoenn/battle_environments.json` → `tools/hoenn/gen_hoenn_battle_bgs.py` → `src/data/hoenn_battle_environments.h`, included at the end of HnS's `sMapDefaultEnvironments` (`src/battle_setup.c`). Keys ending in `_` are prefixes. Only HnS art: MOUNTAIN (111, 112, 114, Jagged Pass, Mt. Pyre outside, Safari North), MOUNTAIN_SNOW as ash on 113, VOLCANO_CAVE (Fiery Path, Mt. Chimney, Magma Hideout, Lavaridge Gym), GRAY_CAVE (Meteor Falls, Shoal Cave, Victory Road), SNOW_CAVE (Shoal ice room), BLUE_BUILDING (Aqua Hideout, New Mauville, Space Center, Weather Institute, Mauville/Mossdeep/Sootopolis gyms). The generator also sets the Hoenn gyms and Aqua Hideout to `MAP_BATTLE_SCENE_NORMAL` (Emerald's gym/Aqua stadium has no modern palette). Hoenn E4 rooms keep their scenes; with new backgrounds on (the default) they use HnS's E4 stadium with `hoenn_{sidney,phoebe,glacia,drake}.pal` platforms. No art exists for a desert, ash, or a burial ground.
   - **Overworld Pokémon:** `data/hoenn/ow_mons.json` → `tools/hoenn/gen_hoenn_ow_mons.py` writes `OBJ_EVENT_GFX_MON_BASE+SPECIES_*` objects into map.json (script `HoennSeek_EventScript_OWMon` marks them; re-runs replace them; deterministic). Routes/caves draw from `wild_encounters_hoenn.json` (land table, surf table), with `FLAG_DAY_POKEMON`/`FLAG_NIGHT_POKEMON` sharing a tile where a `_Night` table differs; towns use hand-picked lists. **They sit in scenery the player can't reach** (Bryan's call, like HnS): roofs, cliff tops, fenced patches, rocks, water behind rocks. A flood fill from warps, edges and objects marks reachable tiles; a mon's tile is out of reach, not next to a reachable tile, has no top-layer graphics (treetops and roof edges would hide it; blocked tiles have elevation 0, so sprites sit under BG1) and has no reachable tile two below (wall faces). They animate in place (walk in place, look around, turn; roam a step in enclosed open patches). Sea birds from surf tables perch on rocks when no water is out of reach. ≤ 9 objects per screen (11 in towns). Re-run after changing wild tables or a map's objects.
-- **2.0 part 1 repo checks** (full results in `claude/hns-2.0-plan.md` section 12):
+- **2.0 part 1 repo checks** (full results in `hoenn-docs/2.0-plan.md` section 12):
   - **Mirage Tower is live in 1.0.** Its four maps are compiled, `VAR_MIRAGE_TOWER_STATE` (HnS's unused `_UNSAFE` slot 0x40CB) starts at 0, so `SetMirageTowerVisibility` shows the tower on half of all Route 111 entries and Emerald's fossil climb works. Taking a fossil sets the var, and from then on even `FLAG_FORCE_MIRAGE_TOWER_VISIBLE` can't bring it back (the var check comes first). The Flygon chain (2.0 part 24) has to hide it by default and change that check.
   - **Roamers:** `ROAMER_COUNT` is 4 (save pads to 7). HnS uses three: Raikou and Entei (Johto table, `InitRoamer`) and one Lati (Kanto table, `InitKantoRoamers`, picked from Steven's `MULTI_TV_LATI` question in Vermilion; the other Lati is static on HnS's Southern Island). The Hall of Fame re-inits all of them. Roamers take the first free index, so **find a roamer by species or location table, never by index**. Each location set needs **at least 3 unique maps** or `RoamerMove` loops forever (`src/roamer.c` header comment): a Route-120-only Absol needs its own movement rule.
   - **Secret bases:** IDs are `u8` (group × 10 + variant); 24 groups use IDs up to 233, so groups 24–25 (IDs 240–255) are free.
@@ -253,7 +253,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
 
 ## Conventions
 - **Touch upstream HnS files as little as possible**, so future HnS fixes merge cleanly. Put new code and data in new `hoenn`-named files (`tools/hoenn/`, `src/hoenn_*.c`, `data/maps/*_hoenn/`, etc.) and keep edits to shared files to small hooks.
-- Work on a `part-NN-<slug>` branch off `hoenn` and open a PR into `hoenn`. Don't commit to `master` (it mirrors upstream).
+- Work on a `v2-NN-<slug>` branch off `hoenn` (1.0 parts used `part-NN-<slug>`) and open a PR into `hoenn`. Don't commit to `master` (it mirrors upstream).
 - **Emulator tests:** a libmgba harness (not in the repo yet) plays scripted input, takes screenshots and reads/writes memory. Useful recipes:
   - Debug menu: hold R + Start. Party → Hatch an Egg hatches a party egg on the spot. Scripts are main item 6, then Script N; a test-only ROM can put any script in `Debug_EventScript_Script_7/8` (restore `debug.inc` afterwards). Warp is Utilities → 2nd item; numbers use ↑/↓ for the value and → for the next digit.
   - Flags & Vars → items 14–16 turn off collision, encounters and trainer sight.
@@ -261,6 +261,6 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
   - Memory (2.0.6 debug build): SaveBlock1 flags at `gSaveBlock1Ptr + 0x198C`; SaveBlock2 battle style is bit 1 of byte `+21`; Hoenn flags at `gSaveBlock3Ptr + 0x32`, vars `+0x132`, 2.0 event flags `+0x232`, event vars `+0x2B2` (`pt.py` handles all four; read bytes, not words: these offsets aren't word-aligned); `saveVersion` is the first u16 of SaveBlock1; enemy battler HP at `gBattleMons + 136 + 42`.
   - **Testing a save upgrade:** `load X.sav` before anything else attaches a flash file. Load a state, poke memory, save from a debug script (`special SaveGame`, mash A), then start a new harness run with `load X.sav`, `wait 300`, `mash START 6 40`, `mash A 2 60` to Continue.
 - **Phone dialogue is part of every content part.** When a part adds a quest, area or battle, add a line for it to Brendan's/May's contact lists (`src/pokenav_match_call_data.c`) or an event call (`src/hoenn_phone.c`), and make the line say who told them. Done for contests (17) and secret bases (18); planned: the Kanto tower (2.0).
-- **Keep the playtest list current.** Anything a part couldn't test in the emulator goes into `claude/hns-hoenn-playtest-checklist.md` (claude.ai Project), so part 20 can play it through.
+- **Keep the playtest list current.** Anything a part couldn't test in the emulator goes into `hoenn-docs/playtest-checklist.md`, so Bryan's playthrough covers it.
 - Never commit ROMs, base ROMs or patches. `baserom/` and `dist/` are git-ignored.
 - The project owner tests in mGBA. Every part should end with a building ROM and a patch.
