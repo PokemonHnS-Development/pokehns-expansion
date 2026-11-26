@@ -44,6 +44,7 @@
 #include "field_screen_effect.h"
 #include "field_weather.h"
 #include "hoenn_flags.h"
+#include "wild_encounter.h"
 #include "hoenn_time.h"
 #include "overworld.h"
 #include "rtc.h"
@@ -271,6 +272,24 @@ bool32 HoennCycleIgnoresWeatherZones(void)
 
     return i >= 0 && !sWeatherCycleMaps[i].emerald
         && HoennIsSpecialWeatherDay(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
+}
+
+// Hook in GetCurrentMapWildMonHeaderId (src/wild_encounter.c), part 6a. The
+// weather tables (data/hoenn/wild_encounters_weather.json) are extra headers
+// for the same map, after every normal one. On the map's special day the first
+// later header for the map is used; any other day, or with no weather table,
+// the normal one.
+u16 HoennWeatherWildHeader(u16 headerId)
+{
+    u32 i;
+    const struct WildPokemonHeader *base = &gWildMonHeaders[headerId];
+
+    if (!HoennIsSpecialWeatherDay(base->mapGroup, base->mapNum))
+        return headerId;
+    for (i = headerId + 1; gWildMonHeaders[i].mapGroup != MAP_GROUP(MAP_UNDEFINED); i++)
+        if (gWildMonHeaders[i].mapGroup == base->mapGroup && gWildMonHeaders[i].mapNum == base->mapNum)
+            return i;
+    return headerId;
 }
 
 // specialvar VAR_RESULT, HoennIsSpecialWeatherHere: the map the player is on.

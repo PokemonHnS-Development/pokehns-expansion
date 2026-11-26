@@ -136,6 +136,15 @@ Each gym leader, Elite Four member and Red has their ace standing next to them (
 - [ ] Fog on Routes 19–20, 44–45 and 122, and snow around Mt. Silver: readable, no slowdown.
 - [ ] The debug menu's WEATHER +1 on a Johto route: the weather changes on the spot.
 
+## 2.0 part 6a — Hoenn weather encounter tables
+On a Hoenn cycle route's special day, wild Pokémon come from a weather table (list: `hoenn-docs/weather-tables.md`).
+- [ ] Do the shifts feel right? Rain: Lombre and Masquerain show up, Water/Bug a bit more common. Storm (120, 124–128, 119): Manectric, Plusle, Minun, Lanturn while surfing.
+- [ ] Castform: only on special days (1–2 %). It changes form in its weather (Forecast).
+- [ ] Surfing and fishing on a special day: surf follows the weather table, fishing is unchanged.
+- [ ] Pokédex area pages: weather-only species (Castform, Masquerain…) are marked on their routes.
+- [ ] The Safari Brush has Chimecho where Castform used to be (wild slot and the overworld Pokémon).
+- [ ] Sweet Scent and Repel work as usual on a special day.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.
