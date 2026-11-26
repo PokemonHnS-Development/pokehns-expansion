@@ -85,7 +85,7 @@ Reproduced in the emulator.
 - **The problem:** if you cross before Birch gives you the numbers, the call rings whenever you get them. "Dad *just* got a call from Mr. Briney" then comes hours late.
 - **Fix:** mark the call done if you crossed without the phone, or word it so the timing doesn't matter.
 
-### 9. Part 13b backgrounds: two visual nits
+### 9. Part 13b backgrounds: two visual nits — **done in 17r-d**
 - **Desert at night:** the sky and dunes darken, but the flat sand in front keeps its daytime colours, so it looks lit wrong.
 - **Graves:** some headstones and a cross sit right behind the player's back sprite, so a cross pokes out beside the head.
 - The plan said Bryan approves mockups first; that was skipped (item 1).

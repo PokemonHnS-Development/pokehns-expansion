@@ -63,7 +63,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
 | **2.0** part 3 (weekday siblings, calendar at the start and on every wall clock, start-menu weekday, Monday Clefairy, Friday Lapras; replaces the riddle scripts) | 32,523,908 / 1,006 KB | 32,683,892 / 850 KB |
 | **2.0** part 4a (level caps for Kanto badges, Kanto champion, Hoenn badges, Hoenn E4) | 32,523,764 / 1,006 KB | 32,684,084 / 849 KB |
 | **2.0** part 4b (30 trainer followers: gym leaders, both Elite Fours, Red) | 32,524,484 / 1,005 KB | 32,684,820 / 849 KB |
-| **2.0** part 5 (daily weather cycles on 78 routes) | 32,525,460 / 1,004 KB | 32,685,796 / 848 KB |
+| **2.0** part 5 (daily weather cycles on 78 routes; 46 since 17r-d) | 32,525,460 / 1,004 KB | 32,685,796 / 848 KB |
 | **2.0** part 6a (52 Hoenn special-weather wild tables, Castform weather-only) | 32,533,348 / 997 KB | 32,693,732 / 840 KB |
 | **2.0** part 6b (89 Johto/Kanto special-weather wild tables) | 32,549,988 / 980 KB | 32,710,372 / 824 KB |
 | **2.0** part 7 (hint engine: 23 hint NPCs, 4 rumors, field notes, 7 forecasts) | 32,556,196 / 974 KB | 32,716,164 / 818 KB |
@@ -84,6 +84,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
 | **2.0** part 17r-a (review fixes: camera pans back, Slateport greeting, strait call, followers behind trainers, buildings group) | 32,655,780 / 877 KB | 32,815,732 / 721 KB |
 | **2.0** part 17r-b (base spots off the path: Sky Pillar, Regi rooms; rock entrances style B) | 32,655,316 / 878 KB | 32,815,252 / 721 KB |
 | **2.0** part 17r-c (Johto starters: no gate, Elm's escapee, area levels, Totodile at ANDRE's spot; Charmander evening only; DAMIAN scaled) | 32,656,052 / 877 KB | 32,815,908 / 721 KB |
+| **2.0** part 17r-d (weather days trimmed to 46 routes; desert night sand, graves stamps) | 32,644,372 / 888 KB | 32,804,228 / 732 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
@@ -259,7 +260,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
   - A follower takes its trainer's flag (hides with them) and isn't hidden on defeat (rematches). Red's Pikachu has `LOCALID_MTSILVER_RED_PIKACHU` (2 on both summit maps) and one hook line in `MtSilver_SummitDay_EventScript_RedOnDefeat` removes it.
   - **Indoor player followers:** HnS only lets Pokémon up to 32×32 follow you indoors, so the debug Lapras doesn't; to test palettes with your own follower in a gym, set the lead's HP (`gPlayerParty + 86`) to 0 so Machamp follows. Followers only appear after a step, not straight after a debug warp.
   - Testing palettes in memory: for each active `gObjectEvents` entry (0x24 bytes; graphicsId +4, spriteId +0x23), `gSprites[spriteId]` (0x44 bytes) has its palette slot in the high nibble of byte 5, and `sSpritePaletteTags[slot]` must be the object's tag (`species + OBJ_EVENT_MON` for Pokémon, 0xFFFF = empty slot). Set `FLAG_DISABLE_TRAINERS` (2406) so walking around a gym doesn't start battles.
-- **Weather cycles (2.0 part 5):** `data/hoenn/weather_cycles.json` → `tools/hoenn/gen_hoenn_weather.py` → `src/data/hoenn_weather_cycles.h`, included as `sWeatherCycleMaps` in `src/hoenn_time.c` (`{map, special weather, offset, emerald}`). Re-run the generator after editing the JSON.
+- **Weather cycles (2.0 part 5, trimmed in 17r):** 46 routes since 17r (Bryan: only where the weather fits: coasts, seas, lakes, mountains, Route 33, Routes 10/120's storms, Emerald's 119/123). `data/hoenn/weather_cycles.json` → `tools/hoenn/gen_hoenn_weather.py` → `src/data/hoenn_weather_cycles.h`, included as `sWeatherCycleMaps` in `src/hoenn_time.c` (`{map, special weather, offset, emerald}`). Re-run the generator after editing the JSON.
   - Hooks: `SetSavedWeatherFromCurrMapHeader` (`src/field_weather_effect.c`) passes the header weather through `HoennCycleMapWeather()`, and `DoCoordEventWeather` (`src/coord_event_weather.c`) returns early when `HoennCycleIgnoresWeatherZones()`. Route 120's OnTransition (`Route120_EventScript_SetWeather`, picks weather by position) skips itself on the storm day. **A map script that runs `setweather` on a cycle map needs the same check** (`specialvar VAR_RESULT, HoennIsSpecialWeatherHere`).
   - Routes 119/123 are `emerald` entries: their zones run Emerald's own cycle, the table only answers "is today special here".
   - Testing: `e.set_weather_stage(s, out, stage)` then warp; `e.weather(s)` reads `gSaveBlock1Ptr->weather` (+0x32, asserted). Warping onto a weather-zone tile runs that zone, so pick the tile with care. Mon objects' palette tag is `species + OBJ_EVENT_MON` plus the shiny (bit 13) and female (bit 12) bits: compare the tag with the whole graphicsId.
