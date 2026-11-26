@@ -60,6 +60,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
 | Part 20a (playtest fixes, Hoenn battle backgrounds, 361 overworld Pokémon in scenery) | 32,533,652 / 996 KB | 32,681,300 / 852 KB |
 | **2.0** part 1 (2.0 event flags/vars in SaveBlock3, save version 6)¹ | 32,521,092 / 1,009 KB | 32,681,572 / 852 KB |
 | **2.0** part 2 (weekday offset, weekly reset, party/weather helpers, debug time & weather menu) | 32,523,652 / 1,006 KB | 32,683,780 / 850 KB |
+| **2.0** part 3 so far (weekday siblings, calendar, Monday Clefairy, Friday Lapras; replaces the riddle scripts) | 32,523,636 / 1,006 KB | 32,683,716 / 850 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
