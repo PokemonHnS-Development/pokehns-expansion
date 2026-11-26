@@ -2,8 +2,8 @@
 @ section 7). Code in src/hoenn_hidden.c, flags in hoenn_events.h.
 @
 @ Part 20: Route 113 and Petalburg Woods.
-@ - Munchlax (Route 113): asleep in a gap in the southern trees at (14,15), in
-@   front of a hidden grotto (Route113_Grotto_hoenn). The glassblower makes a
+@ - Munchlax (Route 113): asleep at (14,14), in front of a gap in the southern
+@   trees that hides a grotto (Route113_Grotto_hoenn). The glassblower makes a
 @   GLASS FLUTE from 500 ash; playing it wakes the Munchlax, which joins you.
 @ - Spinda (Route 113, mornings, once a week): it
 @   dances in the falling ash in the pocket by the sign at (58,4). Walking up
@@ -87,7 +87,7 @@ HoennSeek_EventScript_MunchlaxNoRoom:
 	release
 	end
 
-@ The gap below the Munchlax (14,16) and the grotto's way out (bottom row).
+@ The gap behind the Munchlax (14,16) and the grotto's way out (bottom row).
 HoennSeek_EventScript_EnterGrotto::
 	warpsilent MAP_ROUTE113_GROTTO_HOENN, 7, 11
 	waitstate
@@ -278,8 +278,8 @@ HoennSeek_Text_GlassFluteGiven:
 	.string "that dances in the ash out east.$"
 
 HoennSeek_Text_MunchlaxAsleep:
-	.string "A MUNCHLAX is fast asleep in the\n"
-	.string "gap between the trees, snoring.\p"
+	.string "A MUNCHLAX is fast asleep in front\n"
+	.string "of a gap in the trees, snoring.\p"
 	.string "It's far too sleepy to move. Some\n"
 	.string "sweet sound might wake it up…$"
 
@@ -428,11 +428,14 @@ HoennSeek_Movement_TropiusShake:
 	jump_in_place_down
 	step_end
 
-@ The fruit tree: nothing until Tropius has been met, then one berry a day.
+@ The fruit tree: nothing until Tropius has been met, then one berry each
+@ morning (the plan's "each morning"; 21r).
 HoennSeek_EventScript_OrchardTree::
 	lock
 	goto_if_unset FLAG_HOENN_TROPIUS_MET, HoennSeek_EventScript_OrchardTreeHigh
 	goto_if_set FLAG_HOENN_DAILY_ORCHARD_BERRY, HoennSeek_EventScript_OrchardTreeBare
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_MORNING, HoennSeek_EventScript_OrchardTreeLater
 	specialvar VAR_0x8004, HoennOrchardBerry
 	msgbox HoennSeek_Text_OrchardTreeFruit, MSGBOX_DEFAULT
 	giveitem VAR_0x8004
@@ -448,6 +451,11 @@ HoennSeek_EventScript_OrchardTreeHigh:
 
 HoennSeek_EventScript_OrchardTreeBare:
 	msgbox HoennSeek_Text_OrchardTreeBare, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_OrchardTreeLater:
+	msgbox HoennSeek_Text_OrchardTreeLater, MSGBOX_DEFAULT
 	release
 	end
 
@@ -469,8 +477,9 @@ HoennSeek_EventScript_MirrorPool::
 	msgbox HoennSeek_Text_MirrorPoolBite, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_HOENN_DAILY_FEEBAS
-	setvar VAR_0x8004, SPECIES_FEEBAS
-	special HoennSetupScaledWildBattle
+	@ Route 119's Old Rod level (43-44), not the scaled 60-70: it's the
+	@ shabby fish nobody looks at twice (Bryan's review, 21r).
+	setwildbattle SPECIES_FEEBAS, 44
 	setvar VAR_0x8005, MOVE_MIRROR_COAT
 	setvar VAR_0x8006, FALSE
 	setvar VAR_0x8007, ITEM_NONE
@@ -627,6 +636,11 @@ HoennSeek_Text_OrchardTreeFruit:
 HoennSeek_Text_OrchardTreeBare:
 	.string "Nothing else has fallen today.\n"
 	.string "Come back tomorrow.$"
+
+HoennSeek_Text_OrchardTreeLater:
+	.string "The fruit is still up in the\n"
+	.string "branches. It falls in the morning,\p"
+	.string "when the first sun warms it.$"
 
 HoennSeek_Text_MirrorPool:
 	.string "The pond is perfectly still,\n"
