@@ -274,130 +274,146 @@ HoennSeek_EventScript_HintNpc33::
 	callstd MSGBOX_NPC
 	end
 
-@ Route34_FishingShack_hoenn
+@ LavenderTown_hns
 HoennSeek_EventScript_HintNpc34::
 	callnative HoennSeek_NpcHint
 	.2byte 34
+	goto_if_eq VAR_RESULT, FALSE, LavenderTown_EventScript_Gramps
+	callstd MSGBOX_NPC
+	end
+
+@ AzaleaTown_hns
+HoennSeek_EventScript_HintNpc35::
+	callnative HoennSeek_NpcHint
+	.2byte 35
+	goto_if_eq VAR_RESULT, FALSE, AzaleaTown_EventScript_Lass
+	callstd MSGBOX_NPC
+	end
+
+@ Route34_FishingShack_hoenn
+HoennSeek_EventScript_HintNpc36::
+	callnative HoennSeek_NpcHint
+	.2byte 36
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_HarborOffice_hoenn
-HoennSeek_EventScript_HintNpc35::
+HoennSeek_EventScript_HintNpc37::
 	callnative HoennSeek_NpcHint
-	.2byte 35
+	.2byte 37
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_SailorsHouse_hoenn
-HoennSeek_EventScript_HintNpc36::
+HoennSeek_EventScript_HintNpc38::
 	callnative HoennSeek_NpcHint
-	.2byte 36
+	.2byte 38
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_CaptainsHouse_hoenn
-HoennSeek_EventScript_HintNpc37::
+HoennSeek_EventScript_HintNpc39::
 	callnative HoennSeek_NpcHint
-	.2byte 37
+	.2byte 39
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_TackleShop_hoenn
-HoennSeek_EventScript_HintNpc38::
+HoennSeek_EventScript_HintNpc40::
 	callnative HoennSeek_NpcHint
-	.2byte 38
+	.2byte 40
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_Shipwright_hoenn
-HoennSeek_EventScript_HintNpc39::
+HoennSeek_EventScript_HintNpc41::
 	callnative HoennSeek_NpcHint
-	.2byte 39
+	.2byte 41
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_KeepersHouse_hoenn
-HoennSeek_EventScript_HintNpc40::
+HoennSeek_EventScript_HintNpc42::
 	callnative HoennSeek_NpcHint
-	.2byte 40
+	.2byte 42
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ EcruteakCity_DanceTeacher_hoenn
-HoennSeek_EventScript_HintNpc41::
+HoennSeek_EventScript_HintNpc43::
 	callnative HoennSeek_NpcHint
-	.2byte 41
+	.2byte 43
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ Route34_BreedersHouse_hoenn
-HoennSeek_EventScript_HintNpc42::
+HoennSeek_EventScript_HintNpc44::
 	callnative HoennSeek_NpcHint
-	.2byte 42
+	.2byte 44
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route38_MoomooStoreroom_hoenn
-HoennSeek_EventScript_HintNpc43::
+HoennSeek_EventScript_HintNpc45::
 	callnative HoennSeek_NpcHint
-	.2byte 43
+	.2byte 45
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ BellchimeTrail_Lodge_hoenn
-HoennSeek_EventScript_HintNpc44::
+HoennSeek_EventScript_HintNpc46::
 	callnative HoennSeek_NpcHint
-	.2byte 44
+	.2byte 46
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_BugClub_hoenn
-HoennSeek_EventScript_HintNpc45::
+HoennSeek_EventScript_HintNpc47::
 	callnative HoennSeek_NpcHint
-	.2byte 45
+	.2byte 47
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_EngineersHouse_hoenn
-HoennSeek_EventScript_HintNpc46::
+HoennSeek_EventScript_HintNpc48::
 	callnative HoennSeek_NpcHint
-	.2byte 46
+	.2byte 48
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ CeladonCity_FloristsHouse_hoenn
-HoennSeek_EventScript_HintNpc47::
+HoennSeek_EventScript_HintNpc49::
 	callnative HoennSeek_NpcHint
-	.2byte 47
+	.2byte 49
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_IslandHome_hoenn
-HoennSeek_EventScript_HintNpc48::
+HoennSeek_EventScript_HintNpc50::
 	callnative HoennSeek_NpcHint
-	.2byte 48
+	.2byte 50
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_SurfShop_hoenn
-HoennSeek_EventScript_HintNpc49::
+HoennSeek_EventScript_HintNpc51::
 	callnative HoennSeek_NpcHint
-	.2byte 49
+	.2byte 51
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -492,6 +508,24 @@ HoennSeek_Text_Hint_RumorScizorAfter::
 
 HoennSeek_Text_Hint_RumorScizorNotes::
 	.string "In a JOHTO park, blades clash at\ndusk on the bug contest's\lold days.$"
+
+HoennSeek_Text_Hint_RumorGengarBefore::
+	.string "They say a GENGAR hides in\npeople's shadows at night, here\lin LAVENDER.\pIt leads you on a chase, and only\nthe trainers it likes get to\lsee it.$"
+
+HoennSeek_Text_Hint_RumorGengarAfter::
+	.string "A GENGAR came out of somebody's\nshadow and went with them!\lLAVENDER's nights feel\lquieter now.$"
+
+HoennSeek_Text_Hint_RumorGengarNotes::
+	.string "In a KANTO town of quiet\nmemorials, your shadow may laugh\lat night. Follow it.$"
+
+HoennSeek_Text_Hint_RumorSageBefore::
+	.string "The SLOWKING in the SLOWPOKE WELL\nasks one riddle a day, a new one\leach weekday.\pAnswer all seven and you'll hear\nits whole prophecy.$"
+
+HoennSeek_Text_Hint_RumorSageAfter::
+	.string "Somebody heard the SLOWKING's\nwhole prophecy! Something about\llights under the sea.$"
+
+HoennSeek_Text_Hint_RumorSageNotes::
+	.string "A wise king in a JOHTO well asks\none riddle each day of the week.$"
 
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
@@ -606,6 +640,12 @@ HoennSeek_Text_Hint_LineStoryRalts::
 
 HoennSeek_Text_Hint_LineStoryScizor::
 	.string "Some evenings you can hear blades\nclashing behind the trees in the\lnorth-east corner.\pTUESDAYS, THURSDAYS, SATURDAYS…\nthe old contest days. Watch from\lthe little path at the top of\lthe park!$"
+
+HoennSeek_Text_Hint_LineStoryGengar::
+	.string "On some nights, folks here swear\ntheir own shadows grin at them.\pIf yours does, follow where it\npoints. It only plays at night.$"
+
+HoennSeek_Text_Hint_LineStorySage::
+	.string "That SLOWKING down the well asks a\nriddle every day, a different one\lfor each day of the week.\pSolve them all and it tells you a\nwhole prophecy. Grandpa KURT says\lit's about the sea.$"
 
 HoennSeek_Text_Hint_Forecast0::
 	.string "Our instruments say ROUTE 120 gets\na thunderstorm {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"

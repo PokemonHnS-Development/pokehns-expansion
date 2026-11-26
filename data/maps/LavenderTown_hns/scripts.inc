@@ -1,9 +1,11 @@
 LavenderTown_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LavenderTown_EventScript_CityEnter
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, HoennSeek_LavenderOnFrame @ Hoenn & Seek 2.0 part 19
 	.byte 0
 
 LavenderTown_EventScript_CityEnter::
 	setflag FLAG_VISITED_LAVENDER_TOWN
+	call HoennSeek_EventScript_LavenderOnTransition @ Hoenn & Seek 2.0 part 19
 	end
 
 LavenderTown_EventScript_PokefanM::

@@ -5,6 +5,7 @@ Route8_hns_MapScripts::
 
 Route8_OnTransition: 
 	callnative SetTimeBasedEncounters
+	call HoennSeek_EventScript_Route8OnTransition @ Hoenn & Seek 2.0 part 19
 	end
 
 Route8_EventScript_Dwayne::

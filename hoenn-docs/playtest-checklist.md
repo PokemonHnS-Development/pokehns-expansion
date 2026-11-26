@@ -268,6 +268,15 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Calls: Brendan (the pond, Kiyo), May (Scizor), Wally (the Ralts, once you have his number from Victory Road). Each rings once.
 - [ ] The new hint lines: Route 102's two boys, the Petalburg Pokémon Center woman, the National Park lass, the Mahogany/Cianwood/Goldenrod Pokémon Center NPCs' rumors, and Birch's aide's field notes.
 
+## 2.0 part 19 — Species events B (Gengar, Slowking)
+- [ ] Lavender at night: the shadow grins on arrival; Route 8 (walking west toward the Underground Path) the bag prank; the Underground Path entrance points back; the Radio Tower: the Gengar jumps out and joins (Lv 50, Spectral Thief). Each stage only at night and only in order; daytime visits do nothing.
+- [ ] Coming to Route 8 from Saffron's side also hits a trigger (column x 10) before the tunnel door.
+- [ ] The Gengar with party and PC both full: it slips back and returns the next night (only the full-party → PC case was tested).
+- [ ] Spectral Thief in a real battle (steals the foe's stat boosts) and the Gengar's moveset in the summary screen.
+- [ ] Slowpoke Well B2F: before TM Rain Dance the Slowking is HnS's; after, a riddle per weekday. Wrong answer or right answer uses the day; B doesn't. Solve all seven across a real week (wall-clock day changes) and hear the whole song.
+- [ ] Calls: Brendan (Gengar) and May (prophecy) each ring once.
+- [ ] Hint lines: Lavender's old man, Azalea's lass (after the TM), the Lavender and Azalea Pokémon Center rumors, Birch's aide's field notes.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

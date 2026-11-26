@@ -223,4 +223,21 @@
 // Mornings the Ralts has seen you come calmly with a Pokémon that loves you (0-3).
 #define VAR_HOENN_RALTS_MORNINGS        (HOENN_VARS_D_EVENTS + 0x02)
 
+// ---- Part 19: species events B (data/scripts/hoenn_species.inc) ------------
+// Gengar: at night your shadow grins in Lavender, stops on Route 8, laughs in the
+// Underground Path entrance, and jumps out at Lavender's Radio Tower (joins you).
+#define FLAG_HOENN_GENGAR_DONE          (HOENN_FLAGS_D_SPECIES + 0x10) // it joined you
+#define FLAG_HOENN_HIDE_GENGAR          (HOENN_FLAGS_D_SPECIES + 0x11) // its object in the Radio Tower
+// 0 = not met, 1 = it grinned in Lavender, 2 = it stopped on Route 8,
+// 3 = it laughed in the Underground Path entrance, 4 = it joined you.
+#define VAR_HOENN_GENGAR_STATE          (HOENN_VARS_D_EVENTS + 0x03)
+// Slowking: the sage in Slowpoke Well B2F asks one riddle per weekday; each
+// riddle solved (once) teaches the next line of the Lugia prophecy (7 lines).
+#define FLAG_HOENN_SLOWKING_RIDDLE_SUN  (HOENN_FLAGS_D_SPECIES + 0x12) // + weekday (HOENN_SUNDAY...), 7 flags
+#define FLAG_HOENN_SLOWKING_PROPHECY    (HOENN_FLAGS_D_SPECIES + 0x19) // all seven lines heard
+#define FLAG_HOENN_CALL_GENGAR          (HOENN_FLAGS_D_SPECIES + 0x1A) // Brendan
+#define FLAG_HOENN_CALL_PROPHECY        (HOENN_FLAGS_D_SPECIES + 0x1B) // May
+#define FLAG_HOENN_DAILY_SLOWKING       (HOENN_DAILY_FLAGS_START + 0x07) // one answer a day
+#define VAR_HOENN_SLOWKING_LINES        (HOENN_VARS_D_EVENTS + 0x04) // lines taught (0-7)
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H
