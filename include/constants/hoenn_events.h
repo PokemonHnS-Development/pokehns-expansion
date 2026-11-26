@@ -79,6 +79,7 @@
 #define HOENN_THURSDAY  4
 #define HOENN_FRIDAY    5
 #define HOENN_SATURDAY  6
+#define HOENN_WEEKDAY_COUNT 7 // also MULTI_DAYS_OF_WEEK's EXIT choice
 
 // The day a new week starts on (weekly flags reset when it begins).
 // Sunday, like the PokéGear calendar and the WEEKDAY_* order.
@@ -89,5 +90,17 @@
 // where (stage + offset) % 4 == HOENN_SPECIAL_WEATHER_STAGE. Stage 2 is Route
 // 119's thunderstorm day in Emerald's own cycle, so offset 0 matches it.
 #define HOENN_SPECIAL_WEATHER_STAGE 2
+
+// ---- Part 3: HGSS's weekday content (data/scripts/hoenn_weekday.inc) -------
+// Mt. Moon's Clefairy dance only on Monday nights. The eight Clefairy objects
+// use this flag (they used FLAG_NIGHT_POKEMON); the map's OnTransition clears
+// it on Monday nights and sets it otherwise.
+#define FLAG_HOENN_HIDE_CLEFAIRY_DANCE  (HOENN_FLAGS_A_FOUNDATIONS + 0x00)
+// Union Cave's Lapras comes back every Friday. Set when it's caught or knocked
+// out; weekly, so it clears when the next week starts (Sunday).
+#define FLAG_HOENN_WEEKLY_LAPRAS_MET    (HOENN_WEEKLY_FLAGS_START + 0x00)
+
+// gettimeofday's TIME_NIGHT (enum TimeOfDay), for scripts.
+#define HOENN_TIME_NIGHT 3
 
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

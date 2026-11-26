@@ -182,19 +182,15 @@ Route32_EventScript_Frieda::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_POISON_BARB, Route32_EventScript_FriedaCompleted
+	@ Hoenn & Seek: gift only on Fridays (data/scripts/hoenn_weekday.inc)
+	setvar VAR_0x8004, HOENN_FRIDAY
+	specialvar VAR_RESULT, HoennIsItWeekday
 	msgbox Route32_Text_MeetFrieda, MSGBOX_DEFAULT
-	closemessage
-	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
-	switch VAR_RESULT
-	case 0, Route32_EventScript_FriedaNope
-	case 1, Route32_EventScript_FriedaNope
-	case 2, Route32_EventScript_FriedaNope
-	case 3, Route32_EventScript_FriedaNope
-	case 4, Route32_EventScript_FriedaNope
-	case 5, Route32_EventScript_FriedaYes
-	case 6, Route32_EventScript_FriedaNope
-	case 7, Route32_EventScript_FriedaCancel
-	case MULTI_B_PRESSED, Route32_EventScript_FriedaCancel
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_Route32_SiblingNotToday
+	msgbox HoennSeek_Text_SiblingItsMyDay, MSGBOX_DEFAULT
+	goto Route32_EventScript_FriedaYes
+HoennSeek_Route32_SiblingNotToday:
+	msgbox HoennSeek_Text_SiblingComeBack, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -551,8 +547,8 @@ Route32_Text_MeetFrieda:
 	.string "FRIEDA: Yahoo!\p"
 	.string "I'm FRIEDA of the WEEKDAY FAMILY!\n"
 	.string "Nice to meet you!\p"
-	.string "If you can guess my favorite day,\n"
-	.string "I'll give you a reward.$"
+	.string "My favorite day of the week is\n"
+	.string "{STR_VAR_1}!$"
 
 Route32_Text_FriedaGivesGift:
 	.string "Here's a POISON BARB for you!$"

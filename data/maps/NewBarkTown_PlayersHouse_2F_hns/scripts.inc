@@ -26,6 +26,7 @@ NewBarkTown_PlayersHouse_2F_Script_ClockSetupTrigger1::
 	waitmovement 0
     msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
 	call PlayersHouse_2F_EventScript_SetWallClock
+	call HoennSeek_EventScript_AskWeekdayAtStart @ Hoenn & Seek: the weekday (hoenn_weekday.inc)
 	delay 30
 	setvar VAR_NEWBARK_TOWN_STATE, 1
 	setflag FLAG_SET_WALL_CLOCK
@@ -42,6 +43,7 @@ NewBarkTown_PlayersHouse_2F_Script_ClockSetupTrigger2::
     applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_PlayersHouse_2F_Movement_PlayerWalkToClock2
     msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
 	call PlayersHouse_2F_EventScript_SetWallClock
+	call HoennSeek_EventScript_AskWeekdayAtStart @ Hoenn & Seek: the weekday (hoenn_weekday.inc)
 	delay 30
 	setvar VAR_NEWBARK_TOWN_STATE, 1
 	setflag FLAG_SET_WALL_CLOCK

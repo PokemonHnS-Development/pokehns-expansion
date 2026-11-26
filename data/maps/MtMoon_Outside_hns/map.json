@@ -44,7 +44,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CLEFAIRY",
@@ -57,7 +57,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CLEFAIRY",
@@ -70,7 +70,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CLEFAIRY",
@@ -83,7 +83,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CLEFAIRY",
@@ -96,7 +96,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CLEFAIRY",
@@ -109,7 +109,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CLEFAIRY",
@@ -122,7 +122,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "local_id": "LOCALID_MTMOON_JIRACHI",
@@ -149,7 +149,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SKARMORY",

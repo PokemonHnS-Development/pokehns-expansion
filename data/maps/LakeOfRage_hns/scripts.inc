@@ -364,19 +364,15 @@ LakeOfRage_EventScript_Wesley::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_BLACK_BELT, LakeOfRage_EventScript_WesleyCompleted
+	@ Hoenn & Seek: gift only on Wednesdays (data/scripts/hoenn_weekday.inc)
+	setvar VAR_0x8004, HOENN_WEDNESDAY
+	specialvar VAR_RESULT, HoennIsItWeekday
 	msgbox LakeOfRage_Text_MeetWesley, MSGBOX_DEFAULT
-	closemessage
-	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
-	switch VAR_RESULT
-	case 0, LakeOfRage_EventScript_WesleyNope
-	case 1, LakeOfRage_EventScript_WesleyNope
-	case 2, LakeOfRage_EventScript_WesleyNope
-	case 3, LakeOfRage_EventScript_WesleyYes
-	case 4, LakeOfRage_EventScript_WesleyNope
-	case 5, LakeOfRage_EventScript_WesleyNope
-	case 6, LakeOfRage_EventScript_WesleyNope
-	case 7 LakeOfRage_EventScript_WesleyCancel
-	case MULTI_B_PRESSED, LakeOfRage_EventScript_WesleyCancel
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_LakeOfRage_SiblingNotToday
+	msgbox HoennSeek_Text_SiblingItsMyDay, MSGBOX_DEFAULT
+	goto LakeOfRage_EventScript_WesleyYes
+HoennSeek_LakeOfRage_SiblingNotToday:
+	msgbox HoennSeek_Text_SiblingComeBack, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -407,7 +403,7 @@ LakeOfRage_EventScript_WesleyCompleted::
 LakeOfRage_Text_MeetWesley:
     .string "WESLEY: Well, how do you do?\p"
     .string "I'm a member of the WEEKDAY family!\n"
-	.string "Can you guess my favorite day?$"
+	.string "My favorite day is {STR_VAR_1}!$"
 
 LakeOfRage_Text_WesleyGivesGift:
     .string "Pleased to meet you. Please take a\n"

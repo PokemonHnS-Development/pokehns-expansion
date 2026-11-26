@@ -12,8 +12,9 @@
 //   keeps a weekday offset, VAR_HOENN_WEEKDAY_OFFSET (0-6), and GetDayOfWeek()
 //   in src/rtc.c adds it through HoennAdjustWeekday(). Everything that asks for
 //   the weekday (scripts, the PokéGear radio) sees the same day.
-//   Part 3 adds the places a player sets it (reset-clock screen, new game, the
-//   New Bark wall clock); they all go through HoennSetWeekday().
+//   Part 3 adds the places a player sets it (the new-game clock scene and the
+//   New Bark wall clock); both go through HoennSetWeekday(). The title
+//   screen's reset-clock screen only re-records the week (see below).
 //
 // THE WEEK
 //   Weekly flags (HOENN_WEEKLY_FLAGS_START-END, part 1) reset when a new week
@@ -57,6 +58,8 @@
 
 // Emerald's cycle length (WEATHER_CYCLE_LENGTH is private to field_weather_effect.c).
 #define HOENN_WEATHER_CYCLE_LENGTH 4
+
+STATIC_ASSERT(HOENN_TIME_NIGHT == TIME_NIGHT, HoennTimeNightMatches);
 
 // Scripts compare GetDayOfWeek's result with HOENN_SUNDAY..HOENN_SATURDAY.
 STATIC_ASSERT(HOENN_SUNDAY == WEEKDAY_SUN && HOENN_SATURDAY == WEEKDAY_SAT
@@ -137,14 +140,57 @@ void HoennSetWeekday(u32 weekday)
     VarSet(VAR_HOENN_WEEK_SEEN, WeekOfLocalDay(days) + 1);
 }
 
+// Part 3: the title screen's reset-clock screen (src/reset_rtc_screen.c) just
+// set a new time. HnS records the new day count there without running the
+// daily reset (VarSet(VAR_DAYS, ...)), so a reset clock never hands out a free
+// new day. Do the same for the week: record it, don't reset the weekly flags.
+// The weekday offset stays, so the weekday moves with the day count.
+// (That screen only opens after a Mystery Event enables it, as in Emerald, so
+// it has no weekday row of its own; the New Bark wall clock changes the day.)
+void HoennRecordWeekAfterClockReset(void)
+{
+    VarSet(VAR_HOENN_WEEK_SEEN, WeekOfLocalDay(gLocalTime.days) + 1);
+}
+
+static const u8 *const sWeekdayNames[WEEKDAY_COUNT] = {
+    gText_Sunday, gText_Monday, gText_Tuesday, gText_Wednesday,
+    gText_Thursday, gText_Friday, gText_Saturday,
+};
+
 // special HoennBufferWeekdayName: today's name ("MONDAY") in STR_VAR_1.
 void HoennBufferWeekdayName(void)
 {
-    static const u8 *const sNames[WEEKDAY_COUNT] = {
-        gText_Sunday, gText_Monday, gText_Tuesday, gText_Wednesday,
-        gText_Thursday, gText_Friday, gText_Saturday,
-    };
-    StringCopy(gStringVar1, sNames[GetDayOfWeek()]);
+    StringCopy(gStringVar1, sWeekdayNames[GetDayOfWeek()]);
+}
+
+// Part 3: today's short name ("MON ") at dest, for the start-menu clock.
+// Returns the end of the string, so the time can be written right after it.
+u8 *HoennWriteWeekdayAbbrev(u8 *dest)
+{
+    dest = StringCopyN(dest, sWeekdayNames[GetDayOfWeek()], 3);
+    *dest++ = CHAR_SPACE;
+    *dest = EOS;
+    return dest;
+}
+
+// specialvar VAR_RESULT, HoennIsItWeekday (part 3)
+// VAR_0x8004 = HOENN_SUNDAY..HOENN_SATURDAY. Puts that day's name in STR_VAR_1
+// and returns TRUE if today is that day. Made for HGSS-style "only on my day"
+// NPCs, such as the Weekday siblings, so their text can name the day either way.
+bool16 HoennIsItWeekday(void)
+{
+    u32 day = gSpecialVar_0x8004 % WEEKDAY_COUNT;
+    StringCopy(gStringVar1, sWeekdayNames[day]);
+    return GetDayOfWeek() == day;
+}
+
+// special HoennSetWeekdayFromChoice (part 3): the player answered "What day is
+// it?" (MULTI_DAYS_OF_WEEK, VAR_RESULT = 0-6). Anything else (EXIT or B)
+// leaves the day alone. Used by New Bark's wall clock.
+void HoennSetWeekdayFromChoice(void)
+{
+    if (gSpecialVar_Result < WEEKDAY_COUNT)
+        HoennSetWeekday(gSpecialVar_Result);
 }
 
 // ---- Weather cycle ------------------------------------------------------------
