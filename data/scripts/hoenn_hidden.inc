@@ -477,9 +477,9 @@ HoennSeek_EventScript_MirrorPool::
 	msgbox HoennSeek_Text_MirrorPoolBite, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_HOENN_DAILY_FEEBAS
-	@ Route 119's Old Rod level (43-44), not the scaled 60-70: it's the
-	@ shabby fish nobody looks at twice (Bryan's review, 21r).
-	setwildbattle SPECIES_FEEBAS, 44
+	@ Lv 19, not the scaled 60-70: it's the shabby fish nobody looks at
+	@ twice (Bryan, 21r).
+	setwildbattle SPECIES_FEEBAS, 19
 	setvar VAR_0x8005, MOVE_MIRROR_COAT
 	setvar VAR_0x8006, FALSE
 	setvar VAR_0x8007, ITEM_NONE

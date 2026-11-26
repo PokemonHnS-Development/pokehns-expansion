@@ -122,7 +122,7 @@ Reproduced in the emulator.
 - **The smoke is very faint:** a couple of small `FLDEFF_ASH_PUFF` puffs on the roof, so the house doesn't really read as on fire.
 - **The sunglasses only exist in the text:** the Squirtle leader uses the plain Squirtle sprite.
 
-### 16. Parts 20–21: the grotto, the Slaking clearing and the orchard look generator-made (same as item 11) — **done in 21r**
+### 16. Parts 20–21: the grotto, the Slaking clearing and the orchard look generator-made (same as item 11) — **done in 21r** (the grotto's entrance still cut trees; redrawn on the 2×2 tree grid in 21r-b)
 - **Route 113 grotto** (part 20, `Route113_Grotto_hoenn`) and **Tropius's orchard** (part 21, PR #64, `Route119_Orchard_hoenn`) use the template that item 11 replaced: a box of floor inside a ring of identical trees, a tree clump in each corner, and a 2-wide way in at the bottom. The items and flowers are placed symmetrically.
 - **Petalburg Woods clearing** (part 20, patched into `PetalburgWoods`): a 10×4 rectangle cut out of the forest. Its left and right edges slice 2×2 trees in half (half-trees at x 20 and x 31, rows 2–5, visible in game). Row 6's "tree tops" are walkable and look like bushes you stand on.
 - **Fix:** hand-paint them like 17r-e (`grid` and `src` ops in `composed_maps.json`), mockups to Bryan first. The clearing needs whole trees on its edges, not cut ones.
@@ -140,7 +140,7 @@ Reproduced in the emulator.
 ### 19. PR #64 (part 21) can't merge yet — **done** (the other account merged it)
 - GitHub reports merge conflicts with `hoenn`. 17r-e (PR #63) reformatted `data/hoenn/composed_maps.json` (one op per line) and added part 20's grotto under the new format, and part 21 adds the orchard to the old one. The fix is mechanical: take `hoenn`'s file, add the orchard map and the Route 119 patch, run `gen_hoenn_composed_maps.py` (the other maps must come out unchanged). The docs (roadmap, CLAUDE.md size table) need the usual merge too.
 
-### 20. Choices from parts 18–21 for Bryan to confirm (all listed as "picked without Bryan") — **settled in 21r** (Bryan: "sort it however you see best"): Feebas is a fixed Lv 44 (Route 119's Old Rod level); the orchard tree drops only in the morning (plan), odds kept; the lake island, the woods boy's hint and the Black Belt stay
+### 20. Choices from parts 18–21 for Bryan to confirm (all listed as "picked without Bryan") — **settled in 21r** (Bryan: "sort it however you see best"): Feebas is a fixed Lv 19 (Bryan); the orchard tree drops only in the morning (plan), odds kept; the lake island, the woods boy's hint and the Black Belt stay
 - **Levels:** Feebas is scaled to 60–70 like the battles. A Lv 60+ Feebas is odd for "the shabby fish"; the gifts are lower (Munchlax 42, Gengar 50, Ralts and the starters 5).
 - **Zangoose vs. Seviper:** the plan's "hidden grassy hollow" became Route 114's lake island, which you can see from the bridge, so it isn't hidden.
 - **Orchard fruit tree:** drops any time of day (plan: each morning). Lum/Sitrus two times in three, the rare seven one in three (plan: always rare, better with Tropius leading).

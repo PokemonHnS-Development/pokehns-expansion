@@ -18,7 +18,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 3,
-      "y": 6,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -30,7 +30,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 12,
+      "x": 10,
       "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -59,6 +59,15 @@
   "coord_events": [
     {
       "type": "trigger",
+      "x": 6,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "HoennSeek_EventScript_LeaveGrotto"
+    },
+    {
+      "type": "trigger",
       "x": 7,
       "y": 13,
       "elevation": 0,
@@ -69,6 +78,15 @@
     {
       "type": "trigger",
       "x": 8,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "HoennSeek_EventScript_LeaveGrotto"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
       "y": 13,
       "elevation": 0,
       "var": "VAR_TEMP_5",
