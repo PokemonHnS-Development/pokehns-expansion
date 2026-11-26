@@ -11,6 +11,7 @@ These docs live in the repo so any Claude session, on any account, sees the same
 | `2.0-roadmap.md` | **The build order and status.** Find the next part here |
 | `2.0-plan.md` | Every 2.0 design decision, the repo check results and a master to-do list |
 | `playtest-checklist.md` | Things the emulator couldn't test, for Bryan's real playthrough. Add to it at the end of every part |
+| `review-notes.md` | Open items from Bryan's reviews (placement, look, unapproved choices) to adjust later. Mark them done when a part fixes one |
 | `../CLAUDE.md` | The technical memory: build commands, every subsystem's notes, conventions, ROM size table |
 
 Older 1.0 background (design decisions, teams, the Aqua/Magma quests, world details, the original audit, Claude's 1.0 playtest log) is in Bryan's first claude.ai Project, "Pokemon". Everything a 2.0 part needs from it is already in `CLAUDE.md` and `2.0-plan.md`.
