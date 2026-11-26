@@ -1,19 +1,19 @@
-@ Hoenn & Seek 2.0 parts 15a and 15b: Johto starters (plan section 5).
+@ Hoenn & Seek 2.0 parts 15a, 15b and 17r: Johto starters (plan section 5).
 @
 @ The other two Johto starters no longer come from Elm's table or Route 27's
 @ grass. Each one has a scene of its own, and every scene plays one of three
 @ versions by VAR_STARTER_MON (0 Chikorita, 1 Cyndaquil, 2 Totodile):
 @   your own species      watch-only: a family, nothing to catch
-@   your rival's species  a wild one, a scaled battle (HoennSetupScaledWildBattle)
-@   the unclaimed one     Birch's runaway: one of the two starters he sent Elm
-@                         got loose; it smells Elm's lab on you and joins you
-@                         (Lv 5 with an egg move, like Mudkip's level)
-@ All of them wait until you've beaten Brendan & May (FLAG_HOENN_BEAT_BM), when
-@ Elm calls about the runaway. Each scene has a "family" (the evolved parent and
-@ one young one) and one young one that can stay behind; their hide flags are
-@ decided on every arrival, so the time of day is checked when you walk in.
-@ Chikorita and Cyndaquil came in part 15a, Totodile's Lake of Rage scene
-@ in part 15b.
+@   your rival's species  a wild one at the area's level (HoennSeek_EventScript_StarterWild)
+@   the unclaimed one     an escapee from Elm's lab: it smells the lab on you
+@                         and joins you (Lv 5 with an egg move)
+@ No gate since part 17r (Bryan): every scene is there from the start of Johto.
+@ Elm calls about the escapee after your first Johto badge, and his aide
+@ gives hints. Each scene has a "family" (the evolved parent and one young one)
+@ and one young one that can stay behind; their hide flags are decided on every
+@ arrival, so the time of day is checked when you walk in.
+@ Totodile (part 17r, back to the plan): the cove family is watch-only; the
+@ wild one and the escapee bite on a GOOD ROD at the fisherman ANDRE's spot.
 
 HoennSeek_EventScript_StarterEnd::
 	end
@@ -26,7 +26,6 @@ HoennSeek_EventScript_StarterEnd::
 @ (watch-only), 2 the lone Chikorita.
 HoennSeek_EventScript_MeadowWho::
 	setvar VAR_RESULT, 0
-	goto_if_unset FLAG_HOENN_BEAT_BM, HoennSeek_EventScript_StarterReturn
 	gettimeofday
 	goto_if_gt VAR_0x8000, HOENN_TIME_DAY, HoennSeek_EventScript_StarterReturn
 	goto_if_eq VAR_STARTER_MON, 0, HoennSeek_EventScript_MeadowWhoFamily
@@ -131,7 +130,7 @@ HoennSeek_EventScript_MeadowSunkern::
 	release
 	end
 
-@ The Chikorita that can stay: family member, Birch's runaway or a wild one.
+@ The Chikorita that can stay: family member, Elm's escapee or a wild one.
 HoennSeek_EventScript_MeadowChikorita::
 	goto_if_eq VAR_STARTER_MON, 0, HoennSeek_EventScript_MeadowChikoritaFamily
 	setvar VAR_0x8004, SPECIES_CHIKORITA
@@ -154,7 +153,6 @@ HoennSeek_EventScript_MeadowChikorita::
 HoennSeek_EventScript_BurnedTowerOnTransition::
 	setflag FLAG_HOENN_HIDE_BT_FAMILY
 	setflag FLAG_HOENN_HIDE_BT_CYNDAQUIL
-	goto_if_unset FLAG_HOENN_BEAT_BM, HoennSeek_EventScript_StarterReturn
 	gettimeofday
 	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_StarterReturn
 	goto_if_eq VAR_STARTER_MON, 1, HoennSeek_EventScript_BurnedTowerFamily
@@ -238,7 +236,7 @@ HoennSeek_EventScript_BurnedTowerCyndaquilFamily::
 	release
 	end
 
-@ The Cyndaquil that can stay: family member, a wild one or Birch's runaway.
+@ The Cyndaquil that can stay: family member, a wild one or Elm's escapee.
 HoennSeek_EventScript_BurnedTowerCyndaquil::
 	goto_if_eq VAR_STARTER_MON, 1, HoennSeek_EventScript_BurnedTowerCyndaquilFamily
 	setvar VAR_0x8004, SPECIES_CYNDAQUIL
@@ -252,26 +250,28 @@ HoennSeek_EventScript_BurnedTowerCyndaquil::
 	givemon SPECIES_CYNDAQUIL, 5, move1=MOVE_EXTRASENSORY
 	goto HoennSeek_EventScript_StarterJoined
 
-@ ---- Totodile: the Lake of Rage's south cove, any time but night (15b) -------
+@ ---- Totodile: the Lake of Rage (15b, reworked in 17r) ------------------------
 @ LakeOfRage_hns's OnTransition calls HoennSeek_EventScript_LakeOnTransition
-@ (one hook line). The cove is the water at x 24-28, rows 35-37, south of the
-@ lake: it's water at high and low tide. When the first sighting is due, all
-@ three stay hidden and VAR_TEMP_2 is 1, which arms the trigger tiles around
-@ the cove (the shore to the south, rows 38-40; x 29 to the east; the water
-@ to the north and west, so surfing in counts too). They surface in the scene.
+@ (one hook line).
+@ Watch-only (you chose Totodile), any time but night: a Feraligatr family in
+@ the south cove (water at x 24-28, rows 35-37, at high and low tide). On the
+@ first sighting all three stay hidden and VAR_TEMP_2 is 1, which arms the
+@ trigger tiles around the cove; they surface in the scene and stay.
+@ Otherwise (Bryan, 17r: back to the plan): HnS's fisherman ANDRE stands at
+@ the cove (25,38). By day, until the Totodile is with you, something keeps
+@ stealing his bait. Cast a GOOD (or SUPER) ROD at his spot and a TOTODILE
+@ clamps on: a wild one at the lake's level (your rival's species) or Elm's
+@ escapee, which joins you. His object runs HoennSeek_EventScript_LakeAndre
+@ (map.json swap): his own trainer script until you beat him and whenever
+@ the bait thief isn't due.
 
 HoennSeek_EventScript_LakeOnTransition::
 	setflag FLAG_HOENN_HIDE_LAKE_FAMILY
 	setflag FLAG_HOENN_HIDE_LAKE_TOTODILE
-	goto_if_unset FLAG_HOENN_BEAT_BM, HoennSeek_EventScript_StarterReturn
+	goto_if_ne VAR_STARTER_MON, 2, HoennSeek_EventScript_StarterReturn
 	gettimeofday
 	goto_if_eq VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_StarterReturn
 	goto_if_unset FLAG_HOENN_TOTODILE_SCENE, HoennSeek_EventScript_LakeArm
-	goto_if_eq VAR_STARTER_MON, 2, HoennSeek_EventScript_LakeFamily
-	goto_if_set FLAG_HOENN_TOTODILE_DONE, HoennSeek_EventScript_StarterReturn
-	clearflag FLAG_HOENN_HIDE_LAKE_TOTODILE
-	return
-HoennSeek_EventScript_LakeFamily:
 	clearflag FLAG_HOENN_HIDE_LAKE_FAMILY
 	clearflag FLAG_HOENN_HIDE_LAKE_TOTODILE
 	return
@@ -279,13 +279,10 @@ HoennSeek_EventScript_LakeArm:
 	setvar VAR_TEMP_2, 1
 	return
 
-@ The first sighting: the family surfaces in the cove and splashes about.
-@ Watch-only (you chose Totodile): they stay and play. Otherwise the
-@ Feraligatr dives with one Totodile, and the other one hops ashore at (28,38),
-@ where it is on later visits. Pokémon in the water can't be talked to from
-@ land (the object takes the water's elevation), so the one you meet stands
-@ on the shore: it surfaces at (28,37) for the scene (setobjectxyperm lasts
-@ until you leave) and hops down.
+@ The first sighting (watch-only): the family surfaces in the cove and plays.
+@ Pokémon in the water can't be talked to from land (the object takes the
+@ water's elevation), so the second young one surfaces at (28,37) and hops
+@ onto the shore at (28,38) (setobjectxyperm lasts until you leave).
 HoennSeek_EventScript_LakeFirstSight::
 	lockall
 	setvar VAR_TEMP_2, 0
@@ -315,29 +312,11 @@ HoennSeek_EventScript_LakeFirstSight::
 	waitmoncry
 	msgbox HoennSeek_Text_LakeSplash, MSGBOX_DEFAULT
 	closemessage
-	goto_if_eq VAR_STARTER_MON, 2, HoennSeek_EventScript_LakeWatched
-	playse SE_M_DIVE
-	removeobject LOCALID_HOENN_LAKE_FERALIGATR
-	removeobject LOCALID_HOENN_LAKE_TOTODILE_A
-	waitse
-	msgbox HoennSeek_Text_LakeDove, MSGBOX_DEFAULT
-	closemessage
 	applymovement LOCALID_HOENN_LAKE_TOTODILE, HoennSeek_Movement_LakeHopAshore
 	waitmovement 0
-	call_if_eq VAR_STARTER_MON, 1, HoennSeek_EventScript_LakeStayedWild
-	call_if_eq VAR_STARTER_MON, 0, HoennSeek_EventScript_LakeStayedTag
-	releaseall
-	end
-HoennSeek_EventScript_LakeWatched:
 	msgbox HoennSeek_Text_LakeWatched, MSGBOX_DEFAULT
 	releaseall
 	end
-HoennSeek_EventScript_LakeStayedWild:
-	msgbox HoennSeek_Text_LakeStayedWild, MSGBOX_DEFAULT
-	return
-HoennSeek_EventScript_LakeStayedTag:
-	msgbox HoennSeek_Text_LakeStayedTag, MSGBOX_DEFAULT
-	return
 
 HoennSeek_EventScript_LakeFeraligatr::
 	lock
@@ -349,6 +328,7 @@ HoennSeek_EventScript_LakeFeraligatr::
 	end
 
 HoennSeek_EventScript_LakeTotodileFamily::
+HoennSeek_EventScript_LakeTotodile::
 	lock
 	faceplayer
 	playmoncry SPECIES_TOTODILE, CRY_MODE_NORMAL
@@ -357,19 +337,89 @@ HoennSeek_EventScript_LakeTotodileFamily::
 	release
 	end
 
-@ The Totodile that can stay: family member, a wild one or Birch's runaway.
-HoennSeek_EventScript_LakeTotodile::
-	goto_if_eq VAR_STARTER_MON, 2, HoennSeek_EventScript_LakeTotodileFamily
-	setvar VAR_0x8004, SPECIES_TOTODILE
-	goto_if_eq VAR_STARTER_MON, 1, HoennSeek_EventScript_StarterWild
+@ ANDRE (25,38), facing the cove. His bait thief is the Totodile while you
+@ haven't got it, it isn't yours (VAR_STARTER_MON 2) and it's daytime.
+HoennSeek_EventScript_LakeAndre::
+	@ He's a trainer: until he's beaten, his own script runs (sight battles
+	@ dry-run this script, so it has to reach his trainerbattle first).
+	goto_if_not_defeated TRAINER_ANDRE_HNS, LakeOfRage_EventScript_Andre
+	goto_if_eq VAR_STARTER_MON, 2, LakeOfRage_EventScript_Andre
+	goto_if_set FLAG_HOENN_TOTODILE_DONE, LakeOfRage_EventScript_Andre
+	gettimeofday
+	goto_if_eq VAR_0x8000, HOENN_TIME_NIGHT, LakeOfRage_EventScript_Andre
 	lock
 	faceplayer
-	playmoncry SPECIES_TOTODILE, CRY_MODE_NORMAL
-	msgbox HoennSeek_Text_TotodileJoins, MSGBOX_DEFAULT
+	msgbox HoennSeek_Text_AndreBait, MSGBOX_DEFAULT
+	goto_if_unset FLAG_HOENN_TOTODILE_SCENE, HoennSeek_EventScript_AndreFirstTime
+HoennSeek_EventScript_AndreAskRod:
+	checkitem ITEM_SUPER_ROD
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_AndreOffer
+	checkitem ITEM_GOOD_ROD
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_AndreOffer
+	msgbox HoennSeek_Text_AndreNeedRod, MSGBOX_DEFAULT
+	release
+	end
+HoennSeek_EventScript_AndreFirstTime:
+	setflag FLAG_HOENN_TOTODILE_SCENE
+	goto HoennSeek_EventScript_AndreAskRod
+HoennSeek_EventScript_AndreOffer:
+	msgbox HoennSeek_Text_AndreOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_AndreNo
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox HoennSeek_Text_AndreCast, MSGBOX_DEFAULT
+	closemessage
+	playse SE_M_SURF
+	waitse
+	delay 30
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	playmoncry SPECIES_TOTODILE, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_AndreHooked, MSGBOX_DEFAULT
 	waitmoncry
+	setvar VAR_0x8004, SPECIES_TOTODILE
+	goto_if_eq VAR_STARTER_MON, 1, HoennSeek_EventScript_AndreWild
+	@ Elm's escapee: it lets go of the line and comes to you.
+	msgbox HoennSeek_Text_TotodileJoins, MSGBOX_DEFAULT
 	bufferspeciesname STR_VAR_1, SPECIES_TOTODILE
 	givemon SPECIES_TOTODILE, 5, move1=MOVE_DRAGON_DANCE
-	goto HoennSeek_EventScript_StarterJoined
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, HoennSeek_EventScript_AndreNoRoom
+	call HoennSeek_EventScript_StarterSetDone
+	copyvar VAR_TEMP_TRANSFERRED_SPECIES, VAR_0x8004
+	call Common_EventScript_GiftMon
+	msgbox HoennSeek_Text_AndreThanks, MSGBOX_DEFAULT
+	release
+	end
+HoennSeek_EventScript_AndreNoRoom:
+	msgbox HoennSeek_Text_StarterNoRoom, MSGBOX_DEFAULT
+	msgbox HoennSeek_Text_AndreLetGo, MSGBOX_DEFAULT
+	release
+	end
+HoennSeek_EventScript_AndreWild:
+	call HoennSeek_EventScript_StarterSetWild
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_AndreCaught
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, HoennSeek_EventScript_AndreFainted
+	msgbox HoennSeek_Text_AndreLetGo, MSGBOX_DEFAULT
+	release
+	end
+HoennSeek_EventScript_AndreCaught:
+	call HoennSeek_EventScript_StarterSetDone
+	msgbox HoennSeek_Text_AndreThanks, MSGBOX_DEFAULT
+	release
+	end
+HoennSeek_EventScript_AndreFainted:
+	bufferspeciesname STR_VAR_1, SPECIES_TOTODILE
+	msgbox HoennSeek_Text_StarterFled, MSGBOX_DEFAULT
+	release
+	end
+HoennSeek_EventScript_AndreNo:
+	msgbox HoennSeek_Text_AndreDecline, MSGBOX_DEFAULT
+	release
+	end
 
 @ ---- Shared endings ----------------------------------------------------------
 
@@ -395,7 +445,7 @@ HoennSeek_EventScript_StarterWild::
 	faceplayer
 	playmoncry VAR_0x8004, CRY_MODE_ENCOUNTER
 	waitmoncry
-	special HoennSetupScaledWildBattle
+	call HoennSeek_EventScript_StarterSetWild
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_StarterCaught
@@ -415,6 +465,23 @@ HoennSeek_EventScript_StarterFainted:
 	msgbox HoennSeek_Text_StarterFled, MSGBOX_DEFAULT
 	release
 	end
+
+@ The wild one is at its area's level (part 17r; Hoenn's scaling made it 60-70):
+@ Route 46's meadow 3-8, Burned Tower B1F 16-18, Lake of Rage's water 10-19.
+HoennSeek_EventScript_StarterSetWild::
+	call_if_eq VAR_0x8004, SPECIES_CHIKORITA, HoennSeek_EventScript_WildChikorita
+	call_if_eq VAR_0x8004, SPECIES_CYNDAQUIL, HoennSeek_EventScript_WildCyndaquil
+	call_if_eq VAR_0x8004, SPECIES_TOTODILE, HoennSeek_EventScript_WildTotodile
+	return
+HoennSeek_EventScript_WildChikorita:
+	setwildbattle SPECIES_CHIKORITA, 6
+	return
+HoennSeek_EventScript_WildCyndaquil:
+	setwildbattle SPECIES_CYNDAQUIL, 17
+	return
+HoennSeek_EventScript_WildTotodile:
+	setwildbattle SPECIES_TOTODILE, 18
+	return
 
 @ The DONE flag of the species in VAR_0x8004.
 HoennSeek_EventScript_StarterSetDone::
@@ -564,8 +631,8 @@ HoennSeek_Text_MeadowFamilyWatch::
 HoennSeek_Text_MeadowLoneTag::
 	.string "A lone CHIKORITA is sunbathing\n"
 	.string "among the SUNKERN.\p"
-	.string "There's a ferry tag around its\n"
-	.string "neck. It says: “TO PROF. ELM,\l"
+	.string "There's a tag on its leg. It\n"
+	.string "says: “PROF. ELM's LAB,\l"
 	.string "NEW BARK TOWN.”$"
 
 HoennSeek_Text_MeadowLoneWild::
@@ -628,8 +695,8 @@ HoennSeek_Text_BurnedTowerStayedWild::
 HoennSeek_Text_BurnedTowerStayedTag::
 	.string "…but one CYNDAQUIL stayed\n"
 	.string "behind by the embers.\p"
-	.string "There's a ferry tag around its\n"
-	.string "neck. It says: “TO PROF. ELM,\l"
+	.string "There's a tag on its leg. It\n"
+	.string "says: “PROF. ELM's LAB,\l"
 	.string "NEW BARK TOWN.”$"
 
 HoennSeek_Text_BurnedTowerTyphlosionTalk::
@@ -668,22 +735,40 @@ HoennSeek_Text_LakeWatched::
 	.string "Your own TOTODILE used to snap\n"
 	.string "at the water just like that.$"
 
-HoennSeek_Text_LakeDove::
-	.string "The FERALIGATR dove, and one\n"
-	.string "TOTODILE followed it down…$"
+HoennSeek_Text_AndreBait::
+	.string "ANDRE: Hey! Something down there\n"
+	.string "keeps stealing my bait!\p"
+	.string "It snaps the line right off.\n"
+	.string "My old rod can't hold it.$"
 
-HoennSeek_Text_LakeStayedWild::
-	.string "…but the other one hopped up\n"
-	.string "onto the shore instead.\p"
-	.string "Just like the one your rival\n"
-	.string "chose… It's a wild one!$"
+HoennSeek_Text_AndreNeedRod::
+	.string "Got a GOOD ROD? Come back with\n"
+	.string "one and try my spot. Whatever it\l"
+	.string "is, it bites by day.$"
 
-HoennSeek_Text_LakeStayedTag::
-	.string "…but the other one hopped up\n"
-	.string "onto the shore instead.\p"
-	.string "There's a ferry tag around its\n"
-	.string "neck. It says: “TO PROF. ELM,\l"
-	.string "NEW BARK TOWN.”$"
+HoennSeek_Text_AndreOffer::
+	.string "That's a GOOD ROD!\n"
+	.string "Want to try my spot?$"
+
+HoennSeek_Text_AndreDecline::
+	.string "Suit yourself. My bait's not\n"
+	.string "getting any safer.$"
+
+HoennSeek_Text_AndreCast::
+	.string "{PLAYER} cast a line into\n"
+	.string "the cove…$"
+
+HoennSeek_Text_AndreHooked::
+	.string "Something bit! A TOTODILE has\n"
+	.string "clamped onto the line!$"
+
+HoennSeek_Text_AndreLetGo::
+	.string "The TOTODILE let go and splashed\n"
+	.string "back into the cove…$"
+
+HoennSeek_Text_AndreThanks::
+	.string "ANDRE: So that was my bait\n"
+	.string "thief! Thanks, kid.$"
 
 HoennSeek_Text_LakeFeraligatrTalk::
 	.string "FERALIGATR: Graaah!\p"
@@ -695,8 +780,8 @@ HoennSeek_Text_LakeTotodileTalk::
 	.string "at the ripples.$"
 
 HoennSeek_Text_TotodileJoins::
-	.string "The TOTODILE sniffs at\n"
-	.string "your bag…\p"
+	.string "The TOTODILE lets go of the\n"
+	.string "line and sniffs at your bag…\p"
 	.string "It must smell PROF. ELM's lab\n"
 	.string "on your things! It waddles up\l"
 	.string "to you, ready to come along.$"

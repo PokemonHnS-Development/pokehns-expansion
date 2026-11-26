@@ -545,7 +545,7 @@ HoennSeek_Text_Hint_LineStorySilverCyndaquil::
 	.string "Hmph. Wild CYNDAQUIL turn up in\nthe BURNED TOWER at night.\pGo catch one if you want. Mine\nwill still burn it to a crisp.$"
 
 HoennSeek_Text_Hint_LineStorySilverTotodile::
-	.string "Hmph. A FERALIGATR is raising\nTOTODILE in the LAKE OF RAGE.\pOne of them is wild. Catch it if\nyou want. Mine's stronger.$"
+	.string "Hmph. Something keeps stealing a\nfisherman's bait at the LAKE\lOF RAGE.\pIt's a wild TOTODILE. Bring a GOOD\nROD if you want it.\lMine's stronger.$"
 
 HoennSeek_Text_Hint_LineStorySilverChikorita::
 	.string "Hmph. There's a wild CHIKORITA in\na meadow off ROUTE 46.\pFollow the sweet smell by day.\nMine will never lose to it.$"
@@ -560,13 +560,13 @@ HoennSeek_Text_Hint_LineStoryMomTotodile::
 	.string "PROF. ELM dropped by today.\pHe says a FERALIGATR raises its\nTOTODILE in the LAKE OF RAGE.\pHe thought you'd like to see them,\nsince yours started it all!$"
 
 HoennSeek_Text_Hint_LineStoryAideRunawayTotodile::
-	.string "PROF. BIRCH's TOTODILE is still\nloose somewhere.\pA sailor saw it at the LAKE OF\nRAGE, by the south shore.\pIt knows our lab's smell. If it\nsees you, it'll come to you!$"
+	.string "Our lab's TOTODILE is still\nloose somewhere.\pA fisherman at the LAKE OF RAGE\nkeeps losing his bait. That's\lour guess!\pIt knows our lab's smell. If it\nsees you, it'll come to you!$"
 
 HoennSeek_Text_Hint_LineStoryAideRunawayChikorita::
-	.string "PROF. BIRCH's CHIKORITA is still\nloose somewhere.\pA sailor saw it run into the tall\ngrass on ROUTE 46.\pIt knows our lab's smell. If it\nsees you, it'll come to you!$"
+	.string "Our lab's CHIKORITA is still\nloose somewhere.\pI saw it run into the tall grass\non ROUTE 46, by day.\pIt knows our lab's smell. If it\nsees you, it'll come to you!$"
 
 HoennSeek_Text_Hint_LineStoryAideRunawayCyndaquil::
-	.string "PROF. BIRCH's CYNDAQUIL is still\nloose somewhere.\pA sailor saw it by ECRUTEAK's\nBURNED TOWER, after dark.\pIt knows our lab's smell. If it\nsees you, it'll come to you!$"
+	.string "Our lab's CYNDAQUIL is still\nloose somewhere.\pSomeone saw it by ECRUTEAK's\nBURNED TOWER, after dark.\pIt knows our lab's smell. If it\nsees you, it'll come to you!$"
 
 HoennSeek_Text_Hint_LineStoryAideChikorita::
 	.string "The PROF. is writing about\nCHIKORITA on ROUTE 46.\pThere's a hidden meadow there.\nHave you seen them?$"
@@ -575,13 +575,13 @@ HoennSeek_Text_Hint_LineStoryAideCyndaquil::
 	.string "The PROF. is writing about\nTYPHLOSION in the BURNED TOWER.\pThey bring their young there at\nnight. Have you seen them?$"
 
 HoennSeek_Text_Hint_LineStoryAideTotodile::
-	.string "The PROF. is writing about a\nFERALIGATR in the LAKE OF RAGE.\pIt raises its TOTODILE by the\nsouth shore. Have you seen them?$"
+	.string "The PROF. is writing about a\nFERALIGATR in the LAKE OF RAGE.\pIt raises its TOTODILE in the\nsouth cove. Have you seen them?$"
 
 HoennSeek_Text_Hint_LineStoryBillGarden::
 	.string "My grandson BILL says BULBASAUR\nmeet in a garden behind our house.\pIn the morning, slip through the\ntrees above the overlook!$"
 
 HoennSeek_Text_Hint_LineStoryCeruleanCharmander::
-	.string "The NURSE keeps looking out at\nthe rain.\pShe saw a CHARMANDER by NUGGET\nBRIDGE after dark.\pIt was waiting in the rain. Its\nflame was so small…$"
+	.string "The NURSE keeps looking out at\nthe rain.\pShe saw a CHARMANDER by NUGGET\nBRIDGE at dusk.\pIt was waiting in the rain. Its\nflame was so small…$"
 
 HoennSeek_Text_Hint_LineStoryFerry::
 	.string "PROF. OAK is said to give TRAINERS\nwith all 16 BADGES a ticket for\lthe ship to HOENN.\pShips leave from VERMILION's port.$"

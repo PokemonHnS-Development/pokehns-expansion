@@ -244,7 +244,7 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] The garden in the morning: the ceremony (three Ivysaur), the hider joins you holding an Everstone. Later mornings: no ceremony, Ivysaur there. Day, evening, night: empty.
 - [ ] Charmander at Nugget Bridge in the evening and at night (raining), not by day. Saying NO leaves it there; YES takes you to the Cerulean Pokémon Center.
 - [ ] Charmander in a real party slot: Lv 5, max friendship (check with the friendship rater in Olivine).
-- [ ] RYDER outside the Cerulean Gym on your next visit; win, then he's gone. Lose: he's still there.
+- [ ] DAMIAN (was RYDER) outside the Cerulean Gym on your next visit; win, then he's gone. Lose: he's still there.
 - [ ] May's call after either one joins (needs her number from Birch).
 - [ ] Save and reload mid-chain (after shielding Charmander, before the nurse scene).
 
@@ -259,7 +259,7 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Save and reload in the hideout and right after the fire.
 
 ## 2.0 part 18 — Species events A (Route 102, Kiyo, Scizor)
-- [ ] Route 102 mornings: the Swampert and two Mudkip in the pond; walking toward the bank plays the practice, the dive and a rain shower. Not on Route 102's rain day, not twice in a morning, nobody there after 10 AM.
+- [ ] Route 102 mornings: the Swampert and two Mudkip in the pond; walking toward the bank plays the practice, the dive and a rain shower. Not twice in a morning, nobody there after 10 AM.
 - [ ] Route 102 mornings: Gardevoir and Ralts on the open patch east of the tall grass by Petalburg. Running or biking up makes them teleport away until tomorrow; walking up with a lead below max friendship gets a head shake (and you can try again after leaving the route).
 - [ ] With a max-friendship lead on three different mornings, the Ralts joins: Lv 5, ability **Telepathy**, nickname prompt. With party and boxes full it waits, and talking to it later (or the next morning) lets it join.
 - [ ] Ralts by a real player's route: get a lead to max friendship the normal way (Soothe Bell, walking, Vitamins), not by the harness's memory edit.
@@ -278,3 +278,11 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Cross the Tidal Strait before getting Mudkip and May's number: May's strait call should never ring afterwards.
 - Get Mudkip through the strait, then walk into Slateport harbor: no greeting, and the aide isn't there.
 - Talk to the Squirtle leader after the fire, now that the camera comes back (it should join).
+
+## 2.0 part 17r-c (starter changes)
+- Early Johto (no badges): the Route 46 meadow, the Burned Tower at night and Lake of Rage by day all play.
+- After your first Johto badge, Elm calls about the escapee from his lab; once it's with you, Elm calls again.
+- Lake of Rage, not having picked Totodile: beat ANDRE, then talk to him by day without a rod (asks for one), with a GOOD ROD (bite), with only a SUPER ROD (also works).
+- The wild Chikorita (Lv 6) and Cyndaquil (Lv 17) battles; catch, knock out (back next visit) and run.
+- Charmander only at 6–7 PM, not at night.
+- DAMIAN's levels at a few points in Kanto (e.g. 2 Kanto badges, Kanto champion, after Wallace).

@@ -1,0 +1,74 @@
+{
+  "_comment": [
+    "Written by tools/hoenn/gen_hoenn_base_spots.py: the block each placed spot overwrote,",
+    "so moving a spot puts the old wall back. Seeded in part 17r from the layouts before parts 12, 12b and 13a."
+  ],
+  "spots": {
+    "DESERT_RUINS": {
+      "bin": "data/layouts/DesertRuins/map.bin",
+      "x": 5,
+      "y": 2,
+      "orig": 1561
+    },
+    "ISLAND_CAVE": {
+      "bin": "data/layouts/IslandCave/map.bin",
+      "x": 5,
+      "y": 2,
+      "orig": 1561
+    },
+    "ANCIENT_TOMB": {
+      "bin": "data/layouts/AncientTomb/map.bin",
+      "x": 5,
+      "y": 2,
+      "orig": 1561
+    },
+    "CAVE_OF_ORIGIN": {
+      "bin": "data/layouts/CaveOfOrigin_B1F/map.bin",
+      "x": 7,
+      "y": 12,
+      "orig": 1818
+    },
+    "SEAFLOOR_CAVERN": {
+      "bin": "data/layouts/SeafloorCavern_Room9/map.bin",
+      "x": 13,
+      "y": 40,
+      "orig": 1644
+    },
+    "SKY_PILLAR": {
+      "bin": "data/layouts/SkyPillar_Top/map.bin",
+      "x": 8,
+      "y": 14,
+      "orig": 1583
+    },
+    "SEALED_CHAMBER": {
+      "bin": "data/layouts/SealedChamber_InnerRoom/map.bin",
+      "x": 5,
+      "y": 2,
+      "orig": 1785
+    },
+    "ILEX_FOREST": {
+      "bin": "data/layouts/IlexForest_hns/map.bin",
+      "x": 36,
+      "y": 18,
+      "orig": 1697
+    },
+    "ROUTE45": {
+      "bin": "data/layouts/Route45_hns/map.bin",
+      "x": 30,
+      "y": 78,
+      "orig": 1145
+    },
+    "VIRIDIAN_FOREST": {
+      "bin": "data/layouts/ViridianForest_hns/map.bin",
+      "x": 50,
+      "y": 65,
+      "orig": 1697
+    },
+    "MT_MOON": {
+      "bin": "data/layouts/MtMoon_Cave_hns/map.bin",
+      "x": 18,
+      "y": 20,
+      "orig": 1764
+    }
+  }
+}

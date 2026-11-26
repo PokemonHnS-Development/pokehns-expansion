@@ -52,8 +52,8 @@ static bool32 HoennIsJohtoKantoBase(u8 secretBaseId)
 
 // Which event call is due, if any. Badge calls only ring for the highest
 // milestone reached; skipped lower ones are marked done.
-// 2.0 part 15a: TRUE once the unclaimed Johto starter (the one Birch sent Elm
-// that got loose) is with you. VAR_STARTER_MON: 0 Chikorita, 1 Cyndaquil,
+// 2.0 part 15a: TRUE once the unclaimed Johto starter (the escapee from Elm's
+// lab since part 17r) is with you. VAR_STARTER_MON: 0 Chikorita, 1 Cyndaquil,
 // 2 Totodile; the unclaimed one is the third starter, never yours or the rival's
 // (Cyndaquil if you chose Totodile, Chikorita if Cyndaquil, Totodile if Chikorita).
 static bool32 HoennFoundBirchStarter(void)
@@ -87,7 +87,9 @@ static u16 GetDueEventCall(void)
         if (stamps >= 1 && !FlagGet(FLAG_HOENN_CALL_BADGE1))
             return HOENN_CALL_BADGE1;
     }
-    if (FlagGet(FLAG_HOENN_BEAT_BM) && !FlagGet(FLAG_HOENN_CALL_ELM))
+    // 2.0 part 17r: one of Elm's lab starters got loose. He calls after your first
+    // Johto badge (the scenes have no gate any more).
+    if (FlagGet(FLAG_BADGE01_GET) && !FlagGet(FLAG_HOENN_CALL_ELM))
         return HOENN_CALL_ELM;
     if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_TEAMS_DOUBLE_WON) && !FlagGet(FLAG_HOENN_CALL_TEAMS))
         return HOENN_CALL_TEAMS;
@@ -96,8 +98,8 @@ static u16 GetDueEventCall(void)
     // Part 17: May watches the contests on TV (any contest hall, Lilycove or Viridian).
     if (FlagGet(FLAG_HOENN_BM_PHONE) && GetGameStat(GAME_STAT_WON_CONTEST) > 0 && !FlagGet(FLAG_HOENN_CALL_CONTEST))
         return HOENN_CALL_CONTEST;
-    // 2.0 part 15a: Elm told Birch that his runaway Johto starter found you.
-    if (FlagGet(FLAG_HOENN_BM_PHONE) && HoennFoundBirchStarter() && !FlagGet(FLAG_HOENN_CALL_STARTER_FOUND))
+    // 2.0 part 15a (Elm's call since 17r): the escapee from Elm's lab is with you.
+    if (HoennFoundBirchStarter() && !FlagGet(FLAG_HOENN_CALL_STARTER_FOUND))
         return HOENN_CALL_STARTER_FOUND;
     // 2.0 part 16: Bill told Birch that a Kanto starter chose you (Bulbasaur in
     // the garden behind his house, Charmander at Nugget Bridge), or Birch's aide heard

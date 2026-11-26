@@ -79,7 +79,7 @@
     },
     {
       "type": "secret_base",
-      "x": 8,
+      "x": 5,
       "y": 2,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_HOENN_ANCIENT_TOMB"

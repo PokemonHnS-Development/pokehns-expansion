@@ -149,7 +149,7 @@ HoennSeek_EventScript_GardenBulbasaur::
 	end
 
 @ ---- Charmander: waiting in the rain at the foot of Nugget Bridge ----------
-@ Route 24, evenings and nights (HnS's evening is only 6-7 PM). Its trainer
+@ Route 24, evenings only (HnS's evening is 6-7 PM; Bryan, 17r). Its trainer
 @ told it to wait there and never came back. While it waits, Route 24 rains.
 @ Shield it and you rush it to the Cerulean Pokémon Center, where it chooses
 @ you (VAR_HOENN_CHARMANDER_STATE 1 plays that scene from the Center's frame
@@ -159,7 +159,7 @@ HoennSeek_EventScript_Route24OnTransition::
 	setflag FLAG_HOENN_HIDE_CHARMANDER
 	goto_if_ne VAR_HOENN_CHARMANDER_STATE, 0, HoennSeek_EventScript_KantoStarterReturn
 	gettimeofday
-	goto_if_lt VAR_0x8000, HOENN_TIME_EVENING, HoennSeek_EventScript_KantoStarterReturn
+	goto_if_ne VAR_0x8000, HOENN_TIME_EVENING, HoennSeek_EventScript_KantoStarterReturn
 	clearflag FLAG_HOENN_HIDE_CHARMANDER
 	setweather WEATHER_RAIN
 HoennSeek_EventScript_KantoStarterReturn::

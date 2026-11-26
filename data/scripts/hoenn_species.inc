@@ -25,7 +25,8 @@ HoennSeek_EventScript_SpeciesEnd::
 	end
 
 @ The Swampert family is out on mornings they haven't dived yet, except on the
-@ route's rain day (they stay under while it pours). Trigger tiles: row 8,
+@ route's rain day (they stay under while it pours; 17r-d took Route 102 out of
+@ the weather cycles, so the check only matters if it goes back in). Trigger tiles: row 8,
 @ x 35-47, the way to the pond bank and the grass beside it.
 HoennSeek_EventScript_PondSetup:
 	goto_if_set FLAG_HOENN_DAILY_POND, HoennSeek_EventScript_SpeciesReturn

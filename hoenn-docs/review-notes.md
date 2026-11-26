@@ -45,19 +45,19 @@ These three use nearly the same room: the same table and chairs, in the same spo
 
 The building plan (`buildings.md`) called for variety. Give each room its own furniture layout, or a different template house.
 
-### 3. Sky Pillar base spot is in the middle of the stairs (Bryan)
+### 3. Sky Pillar base spot is in the middle of the stairs (Bryan) — **done in 17r-b**
 `SkyPillar_Top` (12,14), the chamber-base from part 12b, sits in the gap at the top of the stairs, where the player walks. It isn't hidden at all.
 - **Fix:** move it to a stretch of wall off the walking path. Re-run `gen_hoenn_base_spots.py`, then check that the summit still reads like Emerald's.
 - **Also update:** `HOENN_SECRET_BASE_ENTRANCE_POSITIONS`, which the generator writes.
 
-### 4. Rock base entrances in Johto/Kanto are only an outline
+### 4. Rock base entrances in Johto/Kanto are only an outline — **done in 17r-b**
 Route 45 (`Route45_hns` 30,78) and Mt. Moon (`MtMoon_Cave_hns` 18,20) both have this problem.
 - **What's wrong:** the closed entrance from part 13a is a thin arch outline. The rock texture shows through the middle, so it looks unfinished.
 - **What it should look like:** the filled dark indent that Emerald's spots use.
 - **Fine as they are:** the tree entrances in Ilex Forest and Viridian Forest. They're a small dark hole in the trunk, which reads correctly.
 - **Fix:** repaint the rock pair in `gen_hoenn_base_entrances.py` / `base_entrances.json` so the inside is dark.
 
-### 5. Regi room base spots are front and centre (Bryan's call)
+### 5. Regi room base spots are front and centre (Bryan's call) — **done in 17r-b**
 Desert Ruins, Island Cave and Ancient Tomb all put their spot at (8,2). That's the middle of the back wall, straight ahead of the entrance and above where the Regi used to stand.
 - In an empty dead-end room this is easy to find, but it's not discreet.
 - **If Bryan wants it hidden:** move it a few tiles to one side.
@@ -85,7 +85,7 @@ Reproduced in the emulator.
 - **The problem:** if you cross before Birch gives you the numbers, the call rings whenever you get them. "Dad *just* got a call from Mr. Briney" then comes hours late.
 - **Fix:** mark the call done if you crossed without the phone, or word it so the timing doesn't matter.
 
-### 9. Part 13b backgrounds: two visual nits
+### 9. Part 13b backgrounds: two visual nits — **done in 17r-d**
 - **Desert at night:** the sky and dunes darken, but the flat sand in front keeps its daytime colours, so it looks lit wrong.
 - **Graves:** some headstones and a cross sit right behind the player's back sprite, so a cross pokes out beside the head.
 - The plan said Bryan approves mockups first; that was skipped (item 1).
@@ -100,7 +100,7 @@ Reproduced in the emulator: step down the west stairs at night onto (8,17). The 
 - **Fix:** hand polish, such as uneven tree edges, a path, a ledge or a pond, and Sunkern spread through the grass (the text says the meadow is "full of SUNKERN"; about five are visible).
 - The meadow's wild table is Lv 3–8, for a post-game player. That's probably on purpose (baby Pokémon), but Bryan should confirm it.
 
-### 12. Totodile's scene isn't the planned one
+### 12. Totodile's scene isn't the planned one — **done in 17r-c** (ANDRE's spot + GOOD ROD)
 - **The plan:** a Lake of Rage fishing spot, a fisherman whose lines keep getting bitten, and fishing it with the **Good Rod** until a Totodile clamps on.
 - **Part 15b instead:** a Feraligatr surfaces in the south cove and the Totodile hops ashore. There's no fisherman and no fishing.
 - **Also dropped:** the plan's "stay hidden behind a pillar" bit in the Burned Tower is only a line of text.
