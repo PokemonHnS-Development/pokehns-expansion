@@ -28,6 +28,10 @@ A patch changes blocks of an existing layout in place:
                                                            at sx,sy (which no patch may change)
   {"layout": L, "clear_collision": [[x, y], ...]}          makes those blocks passable
                                                            (opens a fake door, for example)
+  {"layout": L, "grid": [...], "at": [x, y], "legend": {...}}  paints by hand, like a map's
+                                                           grid op; legend blocks come from the
+                                                           layout itself (cells no patch paints)
+                                                           or from "src"
 Re-runs give the same files. Check the result with tools/hoenn/render_layout.py.
 """
 import json, os, struct
@@ -117,6 +121,27 @@ def patch(p, lays):
         assert [sx, sy] not in p["cells"], p
         for x, y in p["cells"]:
             b[y * w + x] = b[sy * w + sx]
+    if "grid" in p:
+        x0, y0 = p["at"]
+        painted = {(x0 + i, y0 + j) for j, row in enumerate(p["grid"]) for i, ch in enumerate(row) if ch not in " ."}
+        before = list(b)
+        for j, row in enumerate(p["grid"]):
+            for i, ch in enumerate(row):
+                if ch in " .":
+                    continue
+                e = p["legend"][ch]
+                x, y = x0 + i, y0 + j
+                pw, ph = e.get("tile", [1, 1])
+                sx, sy = e["from"][0] + x % pw, e["from"][1] + y % ph
+                if "src" in e:
+                    other = lays[e["src"]]
+                    assert other["primary_tileset"] == lay["primary_tileset"], (p["layout"], e)
+                    blk = read_blocks(other)[sy * other["width"] + sx]
+                    assert other["secondary_tileset"] == lay["secondary_tileset"] or (blk & 0x3FF) < PRIMARY_METATILES, (p["layout"], e)
+                else:
+                    assert (sx, sy) not in painted, (p["layout"], "legend block inside the patch", sx, sy)
+                    blk = before[sy * w + sx]
+                b[y * w + x] = blk
     for x, y in p.get("clear_collision", []):
         b[y * w + x] &= ~COLLISION
     write_blocks(lay, b)

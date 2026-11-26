@@ -316,3 +316,8 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Walk every edge of the three maps: no gaps in the trees or walls, no tile you can walk into that you shouldn't (the emulator only played the scenes).
 - Surf in the meadow's and the garden's ponds and back out.
 - The meadow's tall grass and the hideout floor at night (tinting).
+
+## 2.0 part 21r (grotto, orchard, clearing redrawn; Munchlax moved)
+- Walk every edge of the grotto, the orchard and Petalburg Woods' clearing: no gaps, nothing walkable that looks like a tree.
+- Route 113: the Munchlax at (14,14) is fully visible and the gap behind it still leads into the grotto once it's gone.
+- The orchard tree outside the morning ("The fruit is still up in the branches…"), then a berry in the morning.

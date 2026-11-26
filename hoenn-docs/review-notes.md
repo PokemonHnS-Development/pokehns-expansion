@@ -122,24 +122,25 @@ Reproduced in the emulator.
 - **The smoke is very faint:** a couple of small `FLDEFF_ASH_PUFF` puffs on the roof, so the house doesn't really read as on fire.
 - **The sunglasses only exist in the text:** the Squirtle leader uses the plain Squirtle sprite.
 
-### 16. Parts 20–21: the grotto, the Slaking clearing and the orchard look generator-made (same as item 11)
+### 16. Parts 20–21: the grotto, the Slaking clearing and the orchard look generator-made (same as item 11) — **done in 21r**
 - **Route 113 grotto** (part 20, `Route113_Grotto_hoenn`) and **Tropius's orchard** (part 21, PR #64, `Route119_Orchard_hoenn`) use the template that item 11 replaced: a box of floor inside a ring of identical trees, a tree clump in each corner, and a 2-wide way in at the bottom. The items and flowers are placed symmetrically.
 - **Petalburg Woods clearing** (part 20, patched into `PetalburgWoods`): a 10×4 rectangle cut out of the forest. Its left and right edges slice 2×2 trees in half (half-trees at x 20 and x 31, rows 2–5, visible in game). Row 6's "tree tops" are walkable and look like bushes you stand on.
 - **Fix:** hand-paint them like 17r-e (`grid` and `src` ops in `composed_maps.json`), mockups to Bryan first. The clearing needs whole trees on its edges, not cut ones.
 
-### 17. Slaking can shut you inside its clearing (part 20)
+### 17. Slaking can shut you inside its clearing (part 20) — **withdrawn in 21r**
 - Petalburg Woods' OnTransition puts the Slaking back in the notch (26,7) on every load, unless it's caught or already battled today. The notch is the clearing's only way out.
 - **How it happens:** beat it at noon, walk into the clearing, save there, and load the next day (or any later day). The Slaking is back, asleep, and only moves at hour 12. You're stuck until noon unless you Fly (Petalburg Woods is `MAP_TYPE_ROUTE`, so Fly works, but Escape Rope doesn't).
 - **Fix:** don't place it while the player is inside the clearing (rows ≤ 6, x 21–30), or let the dozing Slaking's talk script let you squeeze past from the north side.
+- **Withdrawn:** this can't happen. Continuing a save restores the saved objects (`CB2_ContinueSavedGame` doesn't run OnTransition), so the Slaking stays gone; the map only reloads when you leave the clearing.
 
-### 18. The Munchlax is mostly hidden under the treetops (part 20)
+### 18. The Munchlax is mostly hidden under the treetops (part 20) — **done in 21r** (moved to (14,14), on open ash)
 - At (14,15) it sits in a one-tile gap, but the trees around it draw over its lower half. From the path above, you see the top of its head behind the player. The gap itself doesn't read as a gap either (the canopy continues over it, with a slight seam down column 14).
 - **Fix:** open the canopy over (14,15)–(14,16), or move it one tile up onto the open ash.
 
-### 19. PR #64 (part 21) can't merge yet
+### 19. PR #64 (part 21) can't merge yet — **done** (the other account merged it)
 - GitHub reports merge conflicts with `hoenn`. 17r-e (PR #63) reformatted `data/hoenn/composed_maps.json` (one op per line) and added part 20's grotto under the new format, and part 21 adds the orchard to the old one. The fix is mechanical: take `hoenn`'s file, add the orchard map and the Route 119 patch, run `gen_hoenn_composed_maps.py` (the other maps must come out unchanged). The docs (roadmap, CLAUDE.md size table) need the usual merge too.
 
-### 20. Choices from parts 18–21 for Bryan to confirm (all listed as "picked without Bryan")
+### 20. Choices from parts 18–21 for Bryan to confirm (all listed as "picked without Bryan") — **settled in 21r** (Bryan: "sort it however you see best"): Feebas is a fixed Lv 44 (Route 119's Old Rod level); the orchard tree drops only in the morning (plan), odds kept; the lake island, the woods boy's hint and the Black Belt stay
 - **Levels:** Feebas is scaled to 60–70 like the battles. A Lv 60+ Feebas is odd for "the shabby fish"; the gifts are lower (Munchlax 42, Gengar 50, Ralts and the starters 5).
 - **Zangoose vs. Seviper:** the plan's "hidden grassy hollow" became Route 114's lake island, which you can see from the bridge, so it isn't hidden.
 - **Orchard fruit tree:** drops any time of day (plan: each morning). Lum/Sitrus two times in three, the rare seven one in three (plan: always rare, better with Tropius leading).
