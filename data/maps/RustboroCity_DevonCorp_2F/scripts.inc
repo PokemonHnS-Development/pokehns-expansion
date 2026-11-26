@@ -291,9 +291,10 @@ RustboroCity_DevonCorp_2F_Text_WeFinallyMadeNewBalls:
 
 RustboroCity_DevonCorp_2F_Text_IMadePokenav:
 	.string "I made the POKéNAV!\p"
-	.string "As an engineer, I feel blessed to have\n"
-	.string "made something so great!$"
-
+	.string "Hm? Is that a POKéGEAR from JOHTO?\n"
+	.string "A phone, a map AND a radio…\p"
+	.string "Not bad. Not bad at all.\n"
+	.string "Back to the drawing board for me!$"
 RustboroCity_DevonCorp_2F_Text_WowThatsAPokenav:
 	.string "Oh, wow!\n"
 	.string "That's a POKéNAV!\p"

@@ -432,8 +432,8 @@ HoennSeek_Text_ArchieChallenge:
 	.string "champ? The sea's always ready.$"
 
 HoennSeek_Text_ArchieRematchAfter:
-	.string "ARCHIE: Fwahahaha! Johto grows them\n"
-	.string "tough!$"
+	.string "ARCHIE: Fwahahaha! Johto grows\n"
+	.string "them tough!$"
 
 @ ---------------------------------------------------------------- text: Magma
 
@@ -632,15 +632,15 @@ HoennSeek_Text_RivalsEggs:
 	.string "partners' eggs!$"
 
 HoennSeek_Text_ReceivedTreeckoEgg:
-	.string "{PLAYER} received an EGG from\n"
-	.string "BRENDAN!$"
+	.string "{PLAYER} received an EGG\n"
+	.string "from BRENDAN!$"
 
 HoennSeek_Text_ReceivedTorchicEgg:
 	.string "{PLAYER} received an EGG from MAY!$"
 
 HoennSeek_Text_RivalsEggsAfter:
-	.string "BRENDAN: A TREECKO, from my\n"
-	.string "SCEPTILE.\p"
+	.string "BRENDAN: A TREECKO, from\n"
+	.string "my SCEPTILE.\p"
 	.string "MAY: And a TORCHIC, from my\n"
 	.string "BLAZIKEN! Raise them well!$"
 

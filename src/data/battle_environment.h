@@ -857,21 +857,25 @@ static const struct ModernBattleGfx sModernBattleGfx[BATTLE_ENVIRONMENT_COUNT] =
     {
         .background = MODERN_BACKGROUND(StadiumModern),
         .entry = MODERN_ENTRY(BuildingModern),
+        .palette = gBattleEnvironmentPalette_HoennStadiumSidney, // Hoenn & Seek (20a)
     },
     [BATTLE_ENVIRONMENT_PHOEBE] =
     {
         .background = MODERN_BACKGROUND(StadiumModern),
         .entry = MODERN_ENTRY(BuildingModern),
+        .palette = gBattleEnvironmentPalette_HoennStadiumPhoebe, // Hoenn & Seek (20a)
     },
     [BATTLE_ENVIRONMENT_GLACIA] =
     {
         .background = MODERN_BACKGROUND(StadiumModern),
         .entry = MODERN_ENTRY(BuildingModern),
+        .palette = gBattleEnvironmentPalette_HoennStadiumGlacia, // Hoenn & Seek (20a)
     },
     [BATTLE_ENVIRONMENT_DRAKE] =
     {
         .background = MODERN_BACKGROUND(StadiumModern),
         .entry = MODERN_ENTRY(BuildingModern),
+        .palette = gBattleEnvironmentPalette_HoennStadiumDrake, // Hoenn & Seek (20a)
     },
     [BATTLE_ENVIRONMENT_CHAMPION] =
     {

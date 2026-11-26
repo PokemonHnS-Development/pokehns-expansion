@@ -421,8 +421,7 @@ MossdeepCity_Text_SootopolisNewGymLeader:
 	.string "wash over my feet…\p"
 	.string "Speaking of the waves, you know that\n"
 	.string "island city SOOTOPOLIS?\p"
-	.string "I think the GYM there had a new\n"
-	.string "LEADER come in.\p"
-	.string "People tell me the new LEADER once\n"
-	.string "mentored WALLACE.$"
+	.string "The GYM there is run by JUAN.\p"
+	.string "People tell me he once mentored\n"
+	.string "WALLACE himself.$"
 

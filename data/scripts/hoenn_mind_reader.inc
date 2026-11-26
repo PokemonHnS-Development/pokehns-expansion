@@ -156,8 +156,8 @@ HoennSeek_EventScript_StarChart::
 
 @ ---------------------------------------------------------------------------
 HoennSeek_Text_MindReaderClouded:
-	.string "…Hm? You wish me to read your\n"
-	.string "POKéMON?\p"
+	.string "…Hm? You wish me to read\n"
+	.string "your POKéMON?\p"
 	.string "I cannot. Not now.\p"
 	.string "The twins' minds are so loud on\n"
 	.string "this island… They drown out my own.\p"
@@ -231,8 +231,8 @@ HoennSeek_Text_MindReaderWhichAbility:
 
 HoennSeek_Text_MindReaderOneAbility:
 	.string "{STR_VAR_1} knows only one way of\n"
-	.string "being. There is nothing else to\l"
-	.string "awaken.$"
+	.string "being. There is nothing else\l"
+	.string "to awaken.$"
 
 HoennSeek_Text_MindReaderConfirmAbility:
 	.string "To awaken {STR_VAR_2} in\n"

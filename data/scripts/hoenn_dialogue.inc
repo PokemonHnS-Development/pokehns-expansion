@@ -80,7 +80,7 @@ HoennSeek_Text_MaysMom:
 HoennSeek_Text_MaysMomFollower:
 	.string "And who's this? Your {STR_VAR_1}?\p"
 	.string "Aren't you a sweetie!\n"
-	.string "You can come in, too.$"
+	.string "Wipe your feet, both of you!$"
 
 HoennSeek_Text_BrendansMom:
 	.string "Oh, a visitor! Are you looking for\n"

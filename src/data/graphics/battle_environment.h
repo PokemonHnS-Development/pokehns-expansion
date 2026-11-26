@@ -264,3 +264,9 @@ const u32 gBattleEnvironmentAnimTilemap_BuildingModern[] = INCBIN_U32("graphics/
 
 const u32 gBattleEnvironmentAnimTiles_SkyModern[] = INCBIN_U32("graphics/battle_environment/sky_modern/anim_tiles.4bpp.smol");
 const u32 gBattleEnvironmentAnimTilemap_SkyModern[] = INCBIN_U32("graphics/battle_environment/sky_modern/anim_map.bin.smolTM");
+
+// Hoenn & Seek (part 20a): Hoenn E4 rooms on HnS's modern E4 stadium, platform tinted by type.
+const u16 gBattleEnvironmentPalette_HoennStadiumSidney[] = INCBIN_U16("graphics/battle_environment/stadium_modern/hoenn_sidney.gbapal");
+const u16 gBattleEnvironmentPalette_HoennStadiumPhoebe[] = INCBIN_U16("graphics/battle_environment/stadium_modern/hoenn_phoebe.gbapal");
+const u16 gBattleEnvironmentPalette_HoennStadiumGlacia[] = INCBIN_U16("graphics/battle_environment/stadium_modern/hoenn_glacia.gbapal");
+const u16 gBattleEnvironmentPalette_HoennStadiumDrake[] = INCBIN_U16("graphics/battle_environment/stadium_modern/hoenn_drake.gbapal");

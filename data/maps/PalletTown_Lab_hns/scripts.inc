@@ -104,15 +104,15 @@ PalletTown_Lab_Text_OakOpenMtSilver:
 	.string "reach MT.SILVER from there.$"
 
 PalletTown_Lab_Text_OakOpenIndigoPlateau:
-	.string "Oh, and speaking of the INDIGO\n"
-	.string "PLATEAU, now that you've earned\l"
-	.string "16 badges, the KANTO LEAGUE\l"
-	.string "will be ready to accept\l"
-	.string "your challenge once again.\p"
-	.string "But be warned, LANCE and his\n"
-	.string "ELITE FOUR won't go easy on you\l"
-	.string "this time.\p"
-	.string "Good luck, {PLAYER}!$"
+	@ Hoenn & Seek (20a): follows the TIDAL TICKET speech now.
+	.string "OAK: Oh, one more thing!\p"
+	.string "With 16 BADGES, the KANTO LEAGUE at\n"
+	.string "INDIGO PLATEAU will accept your\l"
+	.string "challenge once again.\p"
+	.string "But be warned, LANCE and his ELITE\n"
+	.string "FOUR won't go easy on you this time.\p"
+	.string "HOENN or INDIGO first, it's up to\n"
+	.string "you. Good luck, {PLAYER}!$"
 
 PalletTown_Lab_Text_OakNoKantoBadges:
 	.string "OAK: Hmm? You're not collecting\n"

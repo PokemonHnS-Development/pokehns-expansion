@@ -38,8 +38,8 @@ HoennSeek_EventScript_Birch::
 	goto_if_eq VAR_RESULT, MON_CANT_GIVE, HoennSeek_EventScript_BirchNoRoom
 	call Common_EventScript_GiftMon
 	setflag FLAG_HOENN_RECEIVED_MUDKIP
+	call HoennSeek_EventScript_BirchGivesNumbers @ part 16d (numbers first since 20a)
 	msgbox HoennSeek_Text_BirchAfterGift, MSGBOX_DEFAULT
-	call HoennSeek_EventScript_BirchGivesNumbers @ part 16d
 	release
 	end
 HoennSeek_EventScript_BirchNoRoom::
@@ -157,8 +157,8 @@ HoennSeek_Text_BirchMudkip:
 HoennSeek_Text_BirchNoRoom:
 	.string "PROF. BIRCH: Oh, your party and your\n"
 	.string "BOXES are full!\p"
-	.string "Make some room, and come back for\n"
-	.string "MUDKIP.$"
+	.string "Make some room, and come back\n"
+	.string "for MUDKIP.$"
 
 HoennSeek_Text_BirchAfterGift:
 	.string "PROF. BIRCH: HOENN has eight GYMS\n"
@@ -194,8 +194,8 @@ HoennSeek_Text_LabWally:
 	.string "If you want a real battle, look for\n"
 	.string "BRENDAN and MAY. They're the best\l"
 	.string "trainers in HOENN.\p"
-	.string "They're in KANTO right now,\n"
-	.string "though.\p"
+	.string "They're in KANTO right\n"
+	.string "now, though.\p"
 	.string "Me? I train at the end of VICTORY\n"
 	.string "ROAD. Collect the GYM BADGES first,\l"
 	.string "then come find me.\p"
@@ -208,8 +208,8 @@ HoennSeek_Text_LabWallyLate:
 	.string "Come battle me anytime!$"
 
 HoennSeek_Text_SilphSteven:
-	.string "STEVEN: You are… I remember your\n"
-	.string "eyes.\p"
+	.string "STEVEN: You are… I remember\n"
+	.string "your eyes.\p"
 	.string "When I see a trainer whose eyes\n"
 	.string "twinkle, I always remember.\p"
 	.string "I'm STEVEN. I'm from HOENN, far to\n"

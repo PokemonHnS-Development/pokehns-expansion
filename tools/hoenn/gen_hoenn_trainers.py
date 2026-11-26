@@ -282,6 +282,13 @@ def wrap_boxes(boxes, width=26):
             else:
                 cur = f"{cur} {w}" if cur else w
         lines.append(cur)
+        # no one-word last line: pull a word down unless the line before ends a sentence
+        if len(lines) >= 2 and len(lines[-1].split()) == 1 and len(lines[-2].split()) >= 2 \
+                and (not lines[-2].endswith((".", "!", "?", "…"))
+                     or lines[-2].endswith((" MT.", " PROF.", " MR.", " MS."))):
+            head, moved = lines[-2].rsplit(" ", 1)
+            if vis(moved) + 1 + vis(lines[-1]) <= width:
+                lines[-2], lines[-1] = head, f"{moved} {lines[-1]}"
         out.append(lines[0] + "".join(("\\n" if i == 1 else "\\l") + l for i, l in enumerate(lines[1:], 1)))
     return "\\p".join(out)
 

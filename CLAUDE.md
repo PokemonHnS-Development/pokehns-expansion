@@ -5,8 +5,17 @@ A fork of Heart & Soul (HnS) 2.0.6 (pokeemerald-expansion 1.15.2) that adds Hoen
 - `claude/hns-hoenn-design-decisions.md`
 - `claude/hns-2.0.6-hoenn-audit.md`
 - `claude/hns-hoenn-prestart-checklist.md`
+- `claude/hns-hoenn-next-session.md` (start here in a new chat)
 
 Read the roadmap entry for the part you're working on before starting.
+
+## Starting a new session (after 1.0)
+Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
+1. **Repo:** clone `itsbliusclues-collab/hoenn-and-seek`, `git checkout hoenn`, branch `part-NN-<slug>` (or `v1.1-<slug>`). PRs go into `hoenn`; never commit to `master`.
+2. **Docs (claude.ai Project "Pokemon"):** read `claude/hns-hoenn-roadmap.md` (status, Later/2.0 list), `claude/hns-hoenn-design-decisions.md` (latest decisions at the top) and the doc for the area you touch (`claude/hns-2.0-systems.md`, `claude/hns-starter-and-species-events.md`, the hidden-events docs, `claude/hns-hoenn-teams.md`, `claude/hns-hoenn-world-details.md`). Bryan's open playtest items: `claude/hns-hoenn-playtest-checklist.md`; Claude's pre-pass findings and resume notes: `claude/hns-hoenn-playtest-log.md`.
+3. **Base ROM:** `baserom/emerald.gba` (Emerald U, sha1 checked by `build_patch.sh`) is not in git. If it's missing, ask Bryan to attach it.
+4. **Emulator:** `tools/hoenn/emu/setup.sh` builds the libmgba harness in `~/emu`, a debug ROM and a Hoenn save; then drive it with `tools/hoenn/emu/pt.py` (`playtest/README.md`). Night: set `TZ`.
+5. **End of every part:** release + debug build, size row below, debug patch, emulator screenshots sent to Bryan as labeled grids, CLAUDE.md notes, roadmap entry, untested items into the checklist, PR.
 
 ## Build
 - `make hns RELEASE=1 -j$(nproc)` produces `pokehns-release.gba`. **Never use plain `make` or `make release`.** Those build the Emerald target, which is broken upstream (`FLAG_RECEIVED_TOGEPI_EGG`).
@@ -47,6 +56,7 @@ Read the roadmap entry for the part you're working on before starting.
 | Part 17 (Lilycove's own lobby + walk-in hall copies, twin NPCs) | 32,522,196 / 1,008 KB | 32,669,940 / 863 KB |
 | Part 18 (secret bases: all 8 decoration categories, Brendan's base call) | 32,523,236 / 1,007 KB | 32,670,852 / 862 KB |
 | Part 19 (Red re-leveled + finale, 3 berry trees moved, duplicate key-item gifts) | 32,524,068 / 1,006 KB | 32,671,684 / 862 KB |
+| Part 20a (playtest fixes, Hoenn battle backgrounds, 361 overworld Pokémon in scenery) | 32,533,652 / 996 KB | 32,681,300 / 852 KB |
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -169,6 +179,12 @@ Read the roadmap entry for the part you're working on before starting.
   - **Red** (`src/data/trainers_hns.party`, HnS's own entries): `TRAINER_RED_HNS` keeps HnS's team and moves at Lv 86–95 (Pikachu 95, Charizard 90) with Smart AI; `TRAINER_RED_POSTOBC_HNS` (after the Sinjoh storyline, `VAR_SINJOH_STORYLINE` ≥ 13 + `FLAG_IS_KANTO_CHAMPION`) is all Lv 100, 31 IVs, 252 EVs in every stat (trainers aren't capped at 510) and one illegal move each (Extreme Speed, Slack Off, Shell Smash, Spore/Quiver Dance, Recover, Victory Dance). Sets in `claude/hns-hoenn-teams.md`.
   - **Berry trees:** HnS reused three Emerald IDs for its own trees (Route 30 ↔ Route 102's Oran, Route 26/Fuchsia ↔ Route 118's first Sitrus, Route 1 ↔ its second). Hoenn's three now use `BERRY_TREE_HOENN_*` (`include/constants/berry.h`): 57 (`BERRY_TREE_UNUSED`), 109 and 112 (HnS sets those but places no tree); `EventScript_ResetAllBerries` plants them last. HnS's own shared pairs (Route 26 + Fuchsia, Route 4 + Route 8) are upstream's and left alone. Only 57 was completely unused; IDs HnS sets but never places (107, 115, 118, 121, 124, 127) are the spares.
   - **Duplicate gifts:** Hoenn NPCs giving a key item HnS already gives check `checkitem` first (`data/scripts/hoenn_gifts.inc`): Old Rod → 5 Net Balls, Good Rod → 5 Lure Balls, Super Rod → 5 Dive Balls, Coin Case → 300 coins. HM gifts with Hoenn-owned flags (Fly on Route 119, Waterfall in Sootopolis) and the Exp. Share are unreachable in the post-Emerald state; the rest use flags shared with HnS.
+- **Playtest fixes, backgrounds, overworld Pokémon (part 20a):**
+  - Fixes from Claude's pre-pass (`claude/hns-hoenn-playtest-log.md`): Norman stays in his room (Emerald's `CheckNormanForRematch` ran on `FLAG_SYS_GAME_CLEAR`), Steven's letter, Littleroot house signs, stale Emerald lines (Scott, PokéNav mentions, Oak's Indigo line, Cutter, Petalburg House 2). `dialogue_audit.py` now also flags `pokenav`, `badge_name` and `new_leader`.
+  - **No one-word last lines:** `gen_hoenn_trainers.py`'s `wrap_boxes` pulls a word down; hand-written texts were fixed once. Keep it that way in new texts.
+  - Wally answers one random-call pick in three (`HoennSpecialCallerAnswers`, hooked in `SelectMatchCallTrainer`).
+  - **Battle backgrounds:** `data/hoenn/battle_environments.json` → `tools/hoenn/gen_hoenn_battle_bgs.py` → `src/data/hoenn_battle_environments.h`, included at the end of HnS's `sMapDefaultEnvironments` (`src/battle_setup.c`). Keys ending in `_` are prefixes. Only HnS art: MOUNTAIN (111, 112, 114, Jagged Pass, Mt. Pyre outside, Safari North), MOUNTAIN_SNOW as ash on 113, VOLCANO_CAVE (Fiery Path, Mt. Chimney, Magma Hideout, Lavaridge Gym), GRAY_CAVE (Meteor Falls, Shoal Cave, Victory Road), SNOW_CAVE (Shoal ice room), BLUE_BUILDING (Aqua Hideout, New Mauville, Space Center, Weather Institute, Mauville/Mossdeep/Sootopolis gyms). The generator also sets the Hoenn gyms and Aqua Hideout to `MAP_BATTLE_SCENE_NORMAL` (Emerald's gym/Aqua stadium has no modern palette). Hoenn E4 rooms keep their scenes; with new backgrounds on (the default) they use HnS's E4 stadium with `hoenn_{sidney,phoebe,glacia,drake}.pal` platforms. No art exists for a desert, ash, or a burial ground.
+  - **Overworld Pokémon:** `data/hoenn/ow_mons.json` → `tools/hoenn/gen_hoenn_ow_mons.py` writes `OBJ_EVENT_GFX_MON_BASE+SPECIES_*` objects into map.json (script `HoennSeek_EventScript_OWMon` marks them; re-runs replace them; deterministic). Routes/caves draw from `wild_encounters_hoenn.json` (land table, surf table), with `FLAG_DAY_POKEMON`/`FLAG_NIGHT_POKEMON` sharing a tile where a `_Night` table differs; towns use hand-picked lists. **They sit in scenery the player can't reach** (Bryan's call, like HnS): roofs, cliff tops, fenced patches, rocks, water behind rocks. A flood fill from warps, edges and objects marks reachable tiles; a mon's tile is out of reach, not next to a reachable tile, has no top-layer graphics (treetops and roof edges would hide it; blocked tiles have elevation 0, so sprites sit under BG1) and has no reachable tile two below (wall faces). They animate in place (walk in place, look around, turn; roam a step in enclosed open patches). Sea birds from surf tables perch on rocks when no water is out of reach. ≤ 9 objects per screen (11 in towns). Re-run after changing wild tables or a map's objects.
 - **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.

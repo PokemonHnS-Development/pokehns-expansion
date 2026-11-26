@@ -38,7 +38,9 @@ PetalburgCity_Gym_EventScript_UnlockAllDoors::
 PetalburgCity_Gym_OnTransition:
 	call_if_eq VAR_PETALBURG_GYM_STATE, 1, PetalburgCity_Gym_EventScript_MoveWallyToEntrance
 	call_if_lt VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_MoveNormanToEntrance
-	call_if_set FLAG_SYS_GAME_CLEAR, PetalburgCity_Gym_EventScript_CheckNormanForRematch
+	@ Hoenn & Seek (20a): every visitor has FLAG_SYS_GAME_CLEAR, and Emerald's rematch
+	@ check moved Norman to the entrance. He stays in his room; rematches go through
+	@ HoennSeek_EventScript_RematchNorman.
 	end
 
 PetalburgCity_Gym_EventScript_MoveWallyToEntrance::

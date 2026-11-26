@@ -44,7 +44,7 @@ HoennSeek_EventScript_MrStone::
 	giveitem ITEM_LUCKY_EGG
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_EXP_SHARE
-	goto_if_set FLAG_HOENN_SCOPE_BROKEN, HoennSeek_EventScript_MrStoneScope
+	goto_if_set FLAG_HOENN_SCOPE_BROKEN, HoennSeek_EventScript_MrStoneEggAndScope
 	msgbox HoennSeek_Text_MrStoneFieldTest, MSGBOX_DEFAULT
 	goto HoennSeek_EventScript_MrStoneEnd
 HoennSeek_EventScript_MrStoneAfterGift::
@@ -62,6 +62,7 @@ HoennSeek_EventScript_MrStoneEnd::
 HoennSeek_EventScript_MrStoneScope::
 	goto_if_set FLAG_RECEIVED_DEVON_SCOPE, HoennSeek_EventScript_MrStoneAfterGiftText
 	msgbox HoennSeek_Text_MrStoneScopeBroke, MSGBOX_DEFAULT
+HoennSeek_EventScript_MrStoneGiveScope::
 	giveitem ITEM_DEVON_SCOPE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_DEVON_SCOPE
@@ -128,6 +129,20 @@ HoennSeek_Text_FlanneryGoGogglesExplain:
 	.string "the sandstorm won't stop you.\p"
 	.string "Go see what's hiding out there!$"
 
+@ 20a: first visit after the scope broke: one speech for both gifts.
+HoennSeek_EventScript_MrStoneEggAndScope::
+	msgbox HoennSeek_Text_MrStoneEggAndScope, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_MrStoneGiveScope
+
+HoennSeek_Text_MrStoneEggAndScope:
+	.string "MR. STONE: That LUCKY EGG will help\n"
+	.string "your POKéMON grow faster.\p"
+	.string "And you've met our tester on ROUTE\n"
+	.string "120? He called to say the prototype\l"
+	.string "DEVON SCOPE went up in sparks!\p"
+	.string "Ha ha! That's what field tests are\n"
+	.string "for. Take the finished model, too!$"
+
 HoennSeek_Text_MrStoneWelcome:
 	.string "MR. STONE: Ah, a TRAINER from far\n"
 	.string "away! Welcome to DEVON.\p"
@@ -166,8 +181,8 @@ HoennSeek_Text_TesterIntro:
 	.string "DEVON's new SCOPE…$"
 
 HoennSeek_Text_TesterSparks:
-	.string "The tester switched on the DEVON\n"
-	.string "SCOPE…\p"
+	.string "The tester switched on the\n"
+	.string "DEVON SCOPE…\p"
 	.string "Bzzzt! Sparks flew out of it!$"
 
 HoennSeek_Text_TesterBroken:
@@ -200,8 +215,8 @@ HoennSeek_Text_TVNewsSong:
 
 HoennSeek_Text_MrStoneAfterGift:
 	.string "MR. STONE: My son, STEVEN? He's off\n"
-	.string "somewhere digging up rare stones, no\l"
-	.string "doubt.\p"
+	.string "somewhere digging up rare stones,\l"
+	.string "no doubt.\p"
 	.string "He was always that way, even as a boy.$"
 
 @ Steven's house, Mossdeep (part 12/13): the old Beldum ball is Steven's stone

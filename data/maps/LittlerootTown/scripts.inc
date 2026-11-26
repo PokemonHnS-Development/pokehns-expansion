@@ -395,37 +395,17 @@ LittlerootTown_EventScript_BirchsLabSign::
 	msgbox LittlerootTown_Text_ProfBirchsLab, MSGBOX_SIGN
 	end
 
+@ Hoenn & Seek (20a): Brendan's house is Prof. Birch's, May's is Norman's.
 LittlerootTown_EventScript_BrendansHouseSign::
-	lockall
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_PlayersHouseSignMale
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_BirchsHouseSignFemale
-	releaseall
+	msgbox LittlerootTown_Text_ProfBirchsHouse, MSGBOX_SIGN
 	end
-
-LittlerootTown_EventScript_PlayersHouseSignMale::
-	msgbox LittlerootTown_Text_PlayersHouse, MSGBOX_DEFAULT
-	return
-
-LittlerootTown_EventScript_BirchsHouseSignFemale::
-	msgbox LittlerootTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
-	return
 
 LittlerootTown_EventScript_MaysHouseSign::
-	lockall
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_BirchsHouseSignMale
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_PlayersHouseSignFemale
-	releaseall
+	msgbox HoennSeek_Text_NormansHouse, MSGBOX_SIGN
 	end
 
-LittlerootTown_EventScript_BirchsHouseSignMale::
-	msgbox LittlerootTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
-	return
-
-LittlerootTown_EventScript_PlayersHouseSignFemale::
-	msgbox LittlerootTown_Text_PlayersHouse, MSGBOX_DEFAULT
-	return
+HoennSeek_Text_NormansHouse:
+	.string "NORMAN'S HOUSE$"
 
 LittlerootTown_EventScript_GiveRunningShoesTrigger0::
 	lockall

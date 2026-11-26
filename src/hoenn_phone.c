@@ -100,6 +100,16 @@ bool32 HoennIsCallableSpecialSlot(u32 rematchIdx)
     return rematchIdx == REMATCH_WALLY_VR;
 }
 
+// 20a: Wally was picked as often as any registered trainer, which made him the most
+// frequent caller early on (few Hoenn trainers registered yet). He now goes ahead with
+// one pick in three.
+bool32 HoennSpecialCallerAnswers(s32 rematchIdx)
+{
+    if (rematchIdx != REMATCH_WALLY_VR)
+        return TRUE;
+    return (Random() % 3) == 0;
+}
+
 // Text for a random call from a Hoenn special caller, or NULL to use HnS's tables.
 // Once you've beaten Wally, half his calls ask for a rematch (and arm it).
 const u8 *HoennPhoneCallText(u16 trainerId, bool32 *newRematchRequest)
