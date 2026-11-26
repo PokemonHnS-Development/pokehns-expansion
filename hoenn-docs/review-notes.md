@@ -148,10 +148,44 @@ Reproduced in the emulator.
 - **Machamp reward:** Black Belt (plan: Macho Brace or Black Belt). Slaking's clearing already has a Macho Brace.
 - **The Slowking's prophecy** is original wording (the plan quoted the film; original is right for copyright).
 
+### 21. The Wailord can't be reached (part 22b) — **blocker**
+- The strait's water pocket on Route 131 (x 13–19, rows 33–37) is closed off by rock on every side. You can't surf into it from the sea, from Route 130 or from the bottom strip. The only way out is the Wailord's tile and its warp to the atoll, so the Wailord and the atoll can't be reached in normal play. The emulator agrees: from (11,32) you can't move toward it, and from inside (16,36) you can't move out.
+- More evidence: part 20a's overworld-Pokémon generator put a Tentacruel at (15,36) and a Pelipper at (18,35) in that pocket because it found the pocket unreachable. A third Tentacruel sits at (16,32) in a one-tile gap above it. Part 22b's tests reached the Wailord by warping.
+- **Fix:** open a channel from the main sea into the pocket (the `composed_maps.json` patches on both Route 131 layouts), then re-run `gen_hoenn_ow_mons.py` so no Pokémon sits on the new path. Check it in the emulator by surfing in from open water, not by warping.
+
+### 22. The clifftop and the atoll look generator-made (parts 22b, 23; same as items 11 and 16)
+- **Meteor Falls clifftop** (`MeteorFalls_Clifftop_hoenn`): a box of floor inside a ring of identical trees, which is what the CLAUDE.md convention rules out. The cliff in the middle has no corners: its top edge runs across the whole clearing (x 1–14, row 3), but the cliff face only spans x 4–13. So at both ends the edge hangs over plain floor.
+- **Route 131 atoll** (`Route131_Atoll_hoenn`): it isn't an atoll. It's open sea with rocks spaced evenly around the map edge and three sand islands with columns of trees stacked 4–6 high. There's no reef ring and no lagoon (the Wailord's "lagoon" is just open water), and no Luvdisc pond (plan section 7). Some treetops stick out over the water at the islands' top edges.
+- **Fix:** hand-paint both from a mockup Bryan approves first, as in 17r-e and 21r.
+
+### 23. Choices from parts 22a–23 for Bryan to confirm
+- **Chorus reward:** a Pretty Feather each week. The plan says a Comet Shard or Star Piece each week. The Comet Shard went to the Metagross scene instead (first time; a Star Piece after). A Pretty Feather is worth much less than the plan's reward.
+- The rest are listed as "picked without Bryan" in PRs #71–#73 and the plan:
+  - Absol: the ridge as the "cliff ledge", the normal wild battle theme, its level (gym ace − 8 the first time, then fixed).
+  - The strait's spot and the lagoon rematch.
+  - Chimecho's Cleanse Tag.
+  - The chorus's hide and scare rows, and the flute prompt coming mid-song.
+  - Bagon's hint going to Fallarbor's gentleman.
+  - All new text and callers.
+
+### 24. Small things from parts 22a–23
+- **Text:**
+  - `HoennSeek_Text_MetagrossFused` ends on a one-word line ("METAGROSS!"), which the CLAUDE.md rule forbids.
+  - Brendan's Metagross call ends with "right in front of him. And of you!", which reads oddly.
+- **Absol can turn up while surfing:** `TryStartRoamerEncounter` also runs for water encounters, so on a storm night it can come out of Route 120's ponds. That's upstream roamer behavior, so it's fine if Bryan doesn't mind.
+- **Absol's ridge** has two overworld Vileplume right above and below it ((16,48), (16,52)), so three Pokémon sit in a column.
+- **Plan section 14's to-do list** ticks only the Wailord. Absol, the chorus, Chimecho, Bagon and the Metagross (and the earlier parts' events) are still unticked.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
 ## Checked and fine
+- **Parts 22a, 22b and 23, checked on `hoenn` after PR #73 (Claude, 2026-11-26):**
+  - The debug build works, and the composed-maps, buildings and hints generators re-run with no changes.
+  - Code read: `src/hoenn_roamer.c` and its eight hooks in `src/roamer.c`. Absol can't loop in `RoamerMove`. Its slot stays reserved through the Hall of Fame's re-inits and is released by a new game. A stale Absol from an older game on the same save is handled. Peek, encounters and the Pokédex area page all ask the hooks. Also read: the battle theme hook and the `HOENN_TUNE_IV_HP`/`HOENN_TUNE_SHINY` additions.
+  - Plan conformance: everything matches section 7 and section 9's special moves and items, except item 23's chorus reward.
+  - Maps rendered with their objects and triggers: the Route 120 ridge, Meteor Falls 1F's new cave mouth, B1F_2R's Bagon ledge, Steven's cave, Mt. Pyre's summit rings. They're fine apart from items 21 and 22.
+  - Every new text block was scanned for one-word last lines (item 24). The calls say who told whom.
 - **Parts 18–20, checked on `hoenn` after PR #66 (Claude, 2026-11-26), part 21 from PR #64's branch:**
   - Code read: `src/hoenn_species.c`, `src/hoenn_hidden.c` (part 21's female re-roll and wild-double setup too), every script in `hoenn_species.inc`/`hoenn_hidden.inc` for the scenes above. No logic bugs found beyond items 17–18.
   - In the emulator: the Mudkip pond (practice, the dive, the rain), the Slaking dozing at 1 PM and battling at noon (Lv 60), the clearing, the grotto, talking to the sleeping Munchlax without the flute.
