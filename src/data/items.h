@@ -14443,6 +14443,24 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_Flute,
         .iconPalette = gItemIconPalette_WhiteFlute,
     },
+
+    // Hoenn & Seek 2.0 part 24a: the Desert Underpass Vibrava drops it after
+    // its battle. Part 24b's glassblower fuses it into the Sand Chime.
+    [ITEM_SINGING_SAND] =
+    {
+        .name = ITEM_NAME("SINGING SAND"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Fine desert sand.\n"
+            "It hums softly\n"
+            "when it trickles."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Sand,
+        .iconPalette = gItemIconPalette_SoftSand,
+    },
 #endif
 
     [ITEM_EON_TICKET] =

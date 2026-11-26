@@ -33,5 +33,6 @@
 #define HOENN_CALL_CHORUS 28 // May: you watched the Altaria chorus above Meteor Falls (2.0 part 23)
 #define HOENN_CALL_BAGON 29 // Brendan: you met Bagon on its Meteor Falls ledge (2.0 part 23)
 #define HOENN_CALL_METAGROSS 30 // Brendan: you saw two Metang fuse in Steven's cave (2.0 part 23)
+#define HOENN_CALL_SINGING_SAND 31 // Brendan: you beat the Desert Underpass Vibrava (2.0 part 24a)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

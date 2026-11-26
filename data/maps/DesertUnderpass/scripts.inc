@@ -4,6 +4,7 @@ DesertUnderpass_MapScripts::
 
 DesertUnderpass_OnTransition:
 	setflag FLAG_LANDMARK_DESERT_UNDERPASS
+	call HoennSeek_EventScript_UnderpassOnTransition @ Hoenn & Seek 2.0 part 24a
 	end
 
 DesertUnderpass_EventScript_Fossil::

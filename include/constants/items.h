@@ -1087,6 +1087,7 @@ enum __attribute__((packed)) Item
     ITEM_HM09_SLOT, // Hoenn & Seek: must equal ITEM_HM09 (checked in src/data/items.h)
     ITEM_TIDAL_TICKET, // Hoenn & Seek: Oak's ticket for the Vermilion-Hoenn ferry
     ITEM_GLASS_FLUTE, // Hoenn & Seek 2.0 part 20: the glassblower's flute (wakes Route 113's Munchlax)
+    ITEM_SINGING_SAND, // Hoenn & Seek 2.0 part 24a: the Desert Underpass Vibrava's sand (Flygon's desert song)
 #endif
 
     ITEMS_COUNT,
