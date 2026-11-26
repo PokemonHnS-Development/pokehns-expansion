@@ -7,7 +7,8 @@ Reads data/hoenn/npc_hints.json (its comment explains the format) and writes:
   - data/scripts/hoenn_hints.inc: one wrapper script per NPC, the field-notes
     researcher's script, and every text (word-wrapped here, so the JSON stays readable);
   - map.json script swaps: each listed NPC's object runs its wrapper, which falls
-    back to the NPC's own script (the wrapper names it).
+    back to the NPC's own script (the wrapper names it). Building NPCs with "hints"
+    in data/hoenn/buildings.json are added to the list (run gen_hoenn_buildings.py first).
 Idempotent: an object already running its wrapper is left alone. Deterministic.
 Re-run after editing the JSON, then rebuild.
 """
@@ -89,6 +90,12 @@ def find_object(name, script, index, wrapper):
 
 def main():
     cfg = json.load(open(P("data/hoenn/npc_hints.json")))
+    # Building NPCs (data/hoenn/buildings.json, part 8a+) with "hints" are hint NPCs too.
+    for b in json.load(open(P("data/hoenn/buildings.json")))["buildings"]:
+        for k, o in enumerate(b["objects"]):
+            if o.get("hints"):
+                cfg["npcs"].append({"map": b["name"], "script": "%s_EventScript_Npc%d" % (b["name"], k),
+                                    "lines": o["hints"]})
     lines, rumors = cfg["lines"], cfg["rumors"]
     rumor_ids = list(rumors)
     line_ids = list(lines)
