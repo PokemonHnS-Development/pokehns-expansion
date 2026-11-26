@@ -145,6 +145,13 @@ On a Hoenn cycle route's special day, wild Pokémon come from a weather table (l
 - [ ] The Safari Brush has Chimecho where Castform used to be (wild slot and the overworld Pokémon).
 - [ ] Sweet Scent and Repel work as usual on a special day.
 
+## 2.0 part 6b — Johto and Kanto weather encounter tables
+- [ ] Rain in Johto/Kanto: Poliwag, Wooper and Marill (or their evolutions at Kanto levels) in grass, Psyduck/Golduck while surfing.
+- [ ] Storm on Routes 10, 42 and 43: Mareep line, Pikachu, Magnemite, Voltorb; Chinchou/Lanturn while surfing.
+- [ ] Fog on Routes 44–45 and 19–20: Gastly line, Misdreavus, Murkrow; Slowpoke/Slowbro and Staryu on water.
+- [ ] Snow around Mt. Silver: Delibird, Mamoswine, Jynx; Seel/Dewgong on water.
+- [ ] Surfing on routes whose water has no Pokémon (Routes 3, 5, 7, 8, 11, 16, 18, Mt. Silver's mountainside) stays empty on special days.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

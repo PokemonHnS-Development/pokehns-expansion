@@ -15,7 +15,7 @@
     "Weather beats time of day: on a special day the weather table for the current time is used.",
     "Castform is special-weather only (its Fuchsia Safari slot and overworld object were replaced)."
   ],
-  "regions": ["hoenn"],
+  "regions": ["hoenn", "johto_kanto"],
   "rules": {
     "RAIN":              {"suffix": "Rain",  "boost": ["WATER", "BUG"],              "suppress": ["FIRE", "GROUND", "ROCK"]},
     "RAIN_THUNDERSTORM": {"suffix": "Storm", "boost": ["ELECTRIC", "WATER"],         "suppress": ["FLYING", "FIRE"]},
@@ -29,6 +29,13 @@
       "RAIN":              {"land": {"8": "LOTAD", "9": "SURSKIT", "10": "CASTFORM"}, "water": {"3": "LOTAD", "4": "SURSKIT"}},
       "RAIN_THUNDERSTORM": {"land": {"8": "ELECTRIKE", "9": "PLUSLE", "10": "CASTFORM", "11": "MINUN"}, "water": {"3": "CHINCHOU"}},
       "FOG_HORIZONTAL":    {"land": {"8": "SHUPPET", "9": "DUSKULL", "10": "CASTFORM"}}
+    },
+    "_comment_johto_kanto": "Johto/Kanto extras are Johto/Kanto species (2.0-plan section 10 moves Hoenn species home), and no Castform (Hoenn's Weather Institute).",
+    "johto_kanto": {
+      "RAIN":              {"land": {"8": "POLIWAG", "9": "WOOPER", "10": "MARILL"}, "water": {"3": "PSYDUCK", "4": "POLIWAG"}},
+      "RAIN_THUNDERSTORM": {"land": {"8": "MAREEP", "9": "PIKACHU", "10": "MAGNEMITE", "11": "VOLTORB"}, "water": {"3": "CHINCHOU"}},
+      "FOG_HORIZONTAL":    {"land": {"8": "GASTLY", "9": "MISDREAVUS", "10": "MURKROW"}, "water": {"3": "SLOWPOKE", "4": "STARYU"}},
+      "SNOW":              {"land": {"8": "SWINUB", "9": "DELIBIRD", "10": "JYNX"}, "water": {"3": "SEEL"}}
     }
   },
   "maps": {
