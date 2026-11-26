@@ -36,4 +36,4 @@ OlivineCity_CaptainsHouse_hoenn_Text_Rate5::
 	.string "It's very happy with you. That's a\nfirst mate if I ever saw one!$"
 
 OlivineCity_CaptainsHouse_hoenn_Text_Rate6::
-	.string "Ha! It adores you! I haven't seen\na bond like that since my old\lLAPRAS and me.$"
+	.string "Ha! It adores you! With a partner\nlike that, no fog could ever get\lyou lost.$"
