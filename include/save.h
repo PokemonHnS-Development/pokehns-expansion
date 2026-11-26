@@ -16,7 +16,7 @@
 
 #define SPECIAL_SECTOR_SENTINEL 0xB39D
 
-#define SAVE_VERSION       5
+#define SAVE_VERSION       6 // Hoenn & Seek 2.0: event flags/vars in SaveBlock3 (src/save.c)
 #define SAVE_VERSION_MAGIC 0xE8F828BC
 
 #define SECTOR_ID_SAVEBLOCK2          0

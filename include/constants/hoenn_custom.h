@@ -1,9 +1,13 @@
 #ifndef GUARD_CONSTANTS_HOENN_CUSTOM_H
 #define GUARD_CONSTANTS_HOENN_CUSTOM_H
 
-// Hoenn & Seek: hand-defined flags and vars (not generated). They live in the
+// Hoenn & Seek 1.0: hand-defined flags and vars (not generated). They live in the
 // reserved tail of the Hoenn ranges in constants/hoenn_layout.h, which
 // tools/hoenn/gen_hoenn_ids.py never assigns.
+//
+// This block is nearly full (flags 0x35-0x3F and vars 0x03-0x0F are free).
+// Keep those for 1.x fixes. **New 2.0 content takes its flags and vars from
+// constants/hoenn_events.h**, which has a block per build phase.
 #include "constants/hoenn_layout.h"
 
 // Trainer card stamps (part 9 adds the UI and gym hooks). Wallace's stamp is

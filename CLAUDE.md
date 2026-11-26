@@ -1,21 +1,22 @@
 # Hoenn & Seek: notes for Claude sessions
 
-A fork of Heart & Soul (HnS) 2.0.6 (pokeemerald-expansion 1.15.2) that adds Hoenn as an open, post-Emerald region. Design decisions, the audit and the 20-part roadmap live in the claude.ai Project "Pokemon":
-- `claude/hns-hoenn-roadmap.md`
-- `claude/hns-hoenn-design-decisions.md`
-- `claude/hns-2.0.6-hoenn-audit.md`
-- `claude/hns-hoenn-prestart-checklist.md`
-- `claude/hns-hoenn-next-session.md` (start here in a new chat)
+A fork of Heart & Soul (HnS) 2.0.6 (pokeemerald-expansion 1.15.2) that adds Hoenn as an open, post-Emerald region.
 
-Read the roadmap entry for the part you're working on before starting.
+**Working docs are in `hoenn-docs/` and are the source of truth** (Bryan uses two Claude accounts, which share only this repo):
+- `hoenn-docs/README.md`: start here (session setup, how Bryan likes to work)
+- `hoenn-docs/2.0-roadmap.md`: build order and status; read your part's entry before starting
+- `hoenn-docs/2.0-plan.md`: every 2.0 decision and the repo check results
+- `hoenn-docs/playtest-checklist.md`: untested items for Bryan's real playthrough
+
+Update them in the same PR as the code. 1.0 background (design decisions, audit, teams, world details, the 1.0 roadmap and playtest log) stays in Bryan's first claude.ai Project, "Pokemon"; everything a 2.0 part needs from it is in this file and the plan.
 
 ## Starting a new session (after 1.0)
 Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
-1. **Repo:** clone `itsbliusclues-collab/hoenn-and-seek`, `git checkout hoenn`, branch `part-NN-<slug>` (or `v1.1-<slug>`). PRs go into `hoenn`; never commit to `master`.
-2. **Docs (claude.ai Project "Pokemon"):** read `claude/hns-hoenn-roadmap.md` (status, Later/2.0 list), `claude/hns-hoenn-design-decisions.md` (latest decisions at the top) and the doc for the area you touch (`claude/hns-2.0-systems.md`, `claude/hns-starter-and-species-events.md`, the hidden-events docs, `claude/hns-hoenn-teams.md`, `claude/hns-hoenn-world-details.md`). Bryan's open playtest items: `claude/hns-hoenn-playtest-checklist.md`; Claude's pre-pass findings and resume notes: `claude/hns-hoenn-playtest-log.md`.
+1. **Repo:** clone `itsbliusclues-collab/hoenn-and-seek`, `git checkout hoenn`, branch `v2-NN-<slug>` for 2.0 parts (`v1.1-<slug>` for 1.0 fixes). PRs go into `hoenn`; never commit to `master`. 1.0 is tag `1.0` (commit `c0c62f19`, PR #26's merge).
+2. **Docs:** `hoenn-docs/README.md`, then your part in `hoenn-docs/2.0-roadmap.md` and the matching section of `hoenn-docs/2.0-plan.md`.
 3. **Base ROM:** `baserom/emerald.gba` (Emerald U, sha1 checked by `build_patch.sh`) is not in git. If it's missing, ask Bryan to attach it.
 4. **Emulator:** `tools/hoenn/emu/setup.sh` builds the libmgba harness in `~/emu`, a debug ROM and a Hoenn save; then drive it with `tools/hoenn/emu/pt.py` (`playtest/README.md`). Night: set `TZ`.
-5. **End of every part:** release + debug build, size row below, debug patch, emulator screenshots sent to Bryan as labeled grids, CLAUDE.md notes, roadmap entry, untested items into the checklist, PR.
+5. **End of every part:** release + debug build, size row below, debug patch, emulator screenshots sent to Bryan as labeled grids, CLAUDE.md notes, the part's status in `hoenn-docs/2.0-roadmap.md`, untested items into `hoenn-docs/playtest-checklist.md`, PR.
 
 ## Build
 - `make hns RELEASE=1 -j$(nproc)` produces `pokehns-release.gba`. **Never use plain `make` or `make release`.** Those build the Emerald target, which is broken upstream (`FLAG_RECEIVED_TOGEPI_EGG`).
@@ -57,6 +58,9 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
 | Part 18 (secret bases: all 8 decoration categories, Brendan's base call) | 32,523,236 / 1,007 KB | 32,670,852 / 862 KB |
 | Part 19 (Red re-leveled + finale, 3 berry trees moved, duplicate key-item gifts) | 32,524,068 / 1,006 KB | 32,671,684 / 862 KB |
 | Part 20a (playtest fixes, Hoenn battle backgrounds, 361 overworld Pokémon in scenery) | 32,533,652 / 996 KB | 32,681,300 / 852 KB |
+| **2.0** part 1 (2.0 event flags/vars in SaveBlock3, save version 6)¹ | 32,521,092 / 1,009 KB | 32,681,572 / 852 KB |
+
+¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
 ## How the codebase is organized
 - One tree builds Emerald, FRLG and HnS. Each map/layout's `game_version` field (`emerald` / `frlg` / `hns`) decides whether `tools/mapjson` compiles it into a build. Hoenn maps are tagged `emerald` and are currently excluded from HnS.
@@ -174,7 +178,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
 - **Secret bases (part 18):** Emerald's secret base code, the 75 Hoenn spots, the 25 base interiors, Fortree's decoration shop, Lilycove Dept. Store 5F and the Route 111 Secret Power man (TM43; HnS also has the TM at Lake of Rage) were already in the build and work as they are.
   - **The fix was the decoration categories.** HnS cut `enum DecorationCategory` to dolls only (`DECORCAT_DOLL` = 0, the same value as `DECORCAT_DESK`), so bought furniture landed in the doll list. `include/decoration.h`, `src/decoration.c` and `src/decoration_inventory.c` now use Emerald's 8 categories for every build. The player's room (HnS's New Bark bedroom too) still only takes dolls and cushions: Emerald greys the other categories out there.
   - Phone: Brendan's event call `HOENN_CALL_BASE` once you own a base (`secretBases[0].secretBaseId`; one of Birch's aides saw you), and Brendan's mom adds a line (`special CheckPlayerHasSecretBase`). Both mention Brendan & May's old base on Route 111.
-  - Custom flags 0x35–0x3F (11) are all that's left in `hoenn_custom.h`'s reserved tail; the next part that needs many flags should widen it.
+  - Custom flags 0x35–0x3F (11) are all that's left in `hoenn_custom.h`'s reserved tail; 2.0 content uses `hoenn_events.h` instead (2.0 part 1).
 - **Red and cleanup (part 19):**
   - **Red** (`src/data/trainers_hns.party`, HnS's own entries): `TRAINER_RED_HNS` keeps HnS's team and moves at Lv 86–95 (Pikachu 95, Charizard 90) with Smart AI; `TRAINER_RED_POSTOBC_HNS` (after the Sinjoh storyline, `VAR_SINJOH_STORYLINE` ≥ 13 + `FLAG_IS_KANTO_CHAMPION`) is all Lv 100, 31 IVs, 252 EVs in every stat (trainers aren't capped at 510) and one illegal move each (Extreme Speed, Slack Off, Shell Smash, Spore/Quiver Dance, Recover, Victory Dance). Sets in `claude/hns-hoenn-teams.md`.
   - **Berry trees:** HnS reused three Emerald IDs for its own trees (Route 30 ↔ Route 102's Oran, Route 26/Fuchsia ↔ Route 118's first Sitrus, Route 1 ↔ its second). Hoenn's three now use `BERRY_TREE_HOENN_*` (`include/constants/berry.h`): 57 (`BERRY_TREE_UNUSED`), 109 and 112 (HnS sets those but places no tree); `EventScript_ResetAllBerries` plants them last. HnS's own shared pairs (Route 26 + Fuchsia, Route 4 + Route 8) are upstream's and left alone. Only 57 was completely unused; IDs HnS sets but never places (107, 115, 118, 121, 124, 127) are the spares.
@@ -185,6 +189,14 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
   - Wally answers one random-call pick in three (`HoennSpecialCallerAnswers`, hooked in `SelectMatchCallTrainer`).
   - **Battle backgrounds:** `data/hoenn/battle_environments.json` → `tools/hoenn/gen_hoenn_battle_bgs.py` → `src/data/hoenn_battle_environments.h`, included at the end of HnS's `sMapDefaultEnvironments` (`src/battle_setup.c`). Keys ending in `_` are prefixes. Only HnS art: MOUNTAIN (111, 112, 114, Jagged Pass, Mt. Pyre outside, Safari North), MOUNTAIN_SNOW as ash on 113, VOLCANO_CAVE (Fiery Path, Mt. Chimney, Magma Hideout, Lavaridge Gym), GRAY_CAVE (Meteor Falls, Shoal Cave, Victory Road), SNOW_CAVE (Shoal ice room), BLUE_BUILDING (Aqua Hideout, New Mauville, Space Center, Weather Institute, Mauville/Mossdeep/Sootopolis gyms). The generator also sets the Hoenn gyms and Aqua Hideout to `MAP_BATTLE_SCENE_NORMAL` (Emerald's gym/Aqua stadium has no modern palette). Hoenn E4 rooms keep their scenes; with new backgrounds on (the default) they use HnS's E4 stadium with `hoenn_{sidney,phoebe,glacia,drake}.pal` platforms. No art exists for a desert, ash, or a burial ground.
   - **Overworld Pokémon:** `data/hoenn/ow_mons.json` → `tools/hoenn/gen_hoenn_ow_mons.py` writes `OBJ_EVENT_GFX_MON_BASE+SPECIES_*` objects into map.json (script `HoennSeek_EventScript_OWMon` marks them; re-runs replace them; deterministic). Routes/caves draw from `wild_encounters_hoenn.json` (land table, surf table), with `FLAG_DAY_POKEMON`/`FLAG_NIGHT_POKEMON` sharing a tile where a `_Night` table differs; towns use hand-picked lists. **They sit in scenery the player can't reach** (Bryan's call, like HnS): roofs, cliff tops, fenced patches, rocks, water behind rocks. A flood fill from warps, edges and objects marks reachable tiles; a mon's tile is out of reach, not next to a reachable tile, has no top-layer graphics (treetops and roof edges would hide it; blocked tiles have elevation 0, so sprites sit under BG1) and has no reachable tile two below (wall faces). They animate in place (walk in place, look around, turn; roam a step in enclosed open patches). Sea birds from surf tables perch on rocks when no water is out of reach. ≤ 9 objects per screen (11 in towns). Re-run after changing wild tables or a map's objects.
+- **2.0 part 1 repo checks** (full results in `hoenn-docs/2.0-plan.md` section 12):
+  - **Mirage Tower is live in 1.0.** Its four maps are compiled, `VAR_MIRAGE_TOWER_STATE` (HnS's unused `_UNSAFE` slot 0x40CB) starts at 0, so `SetMirageTowerVisibility` shows the tower on half of all Route 111 entries and Emerald's fossil climb works. Taking a fossil sets the var, and from then on even `FLAG_FORCE_MIRAGE_TOWER_VISIBLE` can't bring it back (the var check comes first). The Flygon chain (2.0 part 24) has to hide it by default and change that check.
+  - **Roamers:** `ROAMER_COUNT` is 4 (save pads to 7). HnS uses three: Raikou and Entei (Johto table, `InitRoamer`) and one Lati (Kanto table, `InitKantoRoamers`, picked from Steven's `MULTI_TV_LATI` question in Vermilion; the other Lati is static on HnS's Southern Island). The Hall of Fame re-inits all of them. Roamers take the first free index, so **find a roamer by species or location table, never by index**. Each location set needs **at least 3 unique maps** or `RoamerMove` loops forever (`src/roamer.c` header comment): a Route-120-only Absol needs its own movement rule.
+  - **Secret bases:** IDs are `u8` (group × 10 + variant); 24 groups use IDs up to 233, so groups 24–25 (IDs 240–255) are free.
+  - **`VAR_STARTER_MON`** (0x4023, shared): 0 Chikorita, 1 Cyndaquil, 2 Totodile, set in `NewBarkTown_Lab_hns`; `BurnedTower_1F_hns` gives Silver the counter-pick.
+  - **Bug-Catching Contest** runs every day (`FLAG_DAILY_BUG_CONTEST_COMPLETED`), not HGSS's Tue/Thu/Sat.
+  - **Feebas:** Emerald's six random Route 119 tiles are active (`CheckFeebas`, `src/wild_encounter.c`).
+  - **Route 102 has wild Gardevoir** (day and night): part 15's level rule evolved Emerald's Ralts. The 2.0 Ralts event makes Ralts one-of-a-kind, so the distribution part removes it.
 - **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
@@ -194,11 +206,13 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
   - They include `constants/global.h` themselves (part 10 fix): `config/randomizer.h` pulls in `vars.h` before `IS_HNS` is defined in the `.s` files, so until part 10 **the var remap never applied to assembled scripts** and Emerald scripts wrote HnS's var slots.
   - `-DHOENN_NO_REMAP` turns the remap off; the generator uses it when resolving.
   - `tools/hoenn/resolve_consts.py` evaluates any constant with the real compiler.
-- **Storage** (`include/constants/hoenn_layout.h`):
-  - Hoenn flags 0x1800–0x1BFF and Hoenn trainer flags 0x1C00–0x1FFF live in `gSaveBlock3Ptr->hoennFlags`.
-  - Hoenn vars 0x7000–0x707F live in `hoennVars`.
-  - Reached through hooks in `GetFlagPointer`/`GetVarPointer` (`src/event_data.c`). Cleared in `NewGameInitData`. SaveBlock3 is 564 of 1,624 bytes.
-  - Hidden-item flags must stay below 0x20E9 (13-bit offset from `FLAG_HIDDEN_ITEMS_START`); the generator puts them first.
+- **Storage** (`include/constants/hoenn_layout.h`, code in `src/hoenn_flags.c`):
+  - **1.0 (generated):** Hoenn flags 0x1800–0x1BFF and Hoenn trainer flags 0x1C00–0x1FFF live in `gSaveBlock3Ptr->hoennFlags`; Hoenn vars 0x7000–0x707F in `hoennVars`.
+  - **2.0 (hand-defined, 2.0 part 1):** event flags 0x2000–0x23FF in `hoennEventFlags`, event vars 0x7080–0x70FF in `hoennEventVars`. Sub-ranges: 0x2000–0x203F hidden items, 0x2040–0x22FF one block per build phase, 0x2300–0x233F daily, 0x2340–0x237F weekly, 0x2380+ spare. **Take new flags/vars from your phase's block in `include/constants/hoenn_events.h`** (the file explains the rules); `hoenn_custom.h`'s last 11 flags are for 1.x fixes.
+  - `GetFlagPointer`/`GetVarPointer` (`src/event_data.c`) hand any Hoenn ID to `HoennGetFlagPointer`/`HoennGetVarPointer`. `NewGameInitData` calls `HoennClearAllFlagsAndVars()`. `ClearDailyFlags` calls `HoennClearDailyFlags()`; `HoennClearWeeklyFlags()` exists for part 2's weekday system to call. SaveBlock3 is 948 of 1,624 bytes.
+  - **Save version 6** (`include/save.h`, migration in `src/save.c`): a 1.0 save never wrote the 2.0 arrays, so loading one clears them. New games start at `SAVE_VERSION`, so 2.0 saves keep their flags. If upstream HnS ever ships its own version 6, renumber ours on merge.
+  - Build-time checks in `src/hoenn_flags.c`: the phase blocks are in order and inside their range, and the arrays sit at the offsets `pt.py` uses (`HOENN_*_SB3`).
+  - Hidden-item flags must stay below 0x20E9 (13-bit offset from `FLAG_HIDDEN_ITEMS_START`); the generator puts them first, and 2.0 hidden items use 0x2000–0x203F.
 - **Trainers.**
   - Hoenn trainers get IDs from `HOENN_TRAINERS_START` (653) up: 257 since part 16d (220 + 36 rematch teams + Wally's), 653–909.
   - Their "defeated" flags come from `TRAINER_FLAG_ID(id)` (used in `battle_setup.c`, `debug.c`), not `TRAINER_FLAGS_START + id`.
@@ -239,13 +253,14 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
 
 ## Conventions
 - **Touch upstream HnS files as little as possible**, so future HnS fixes merge cleanly. Put new code and data in new `hoenn`-named files (`tools/hoenn/`, `src/hoenn_*.c`, `data/maps/*_hoenn/`, etc.) and keep edits to shared files to small hooks.
-- Work on a `part-NN-<slug>` branch off `hoenn` and open a PR into `hoenn`. Don't commit to `master` (it mirrors upstream).
+- Work on a `v2-NN-<slug>` branch off `hoenn` (1.0 parts used `part-NN-<slug>`) and open a PR into `hoenn`. Don't commit to `master` (it mirrors upstream).
 - **Emulator tests:** a libmgba harness (not in the repo yet) plays scripted input, takes screenshots and reads/writes memory. Useful recipes:
   - Debug menu: hold R + Start. Party → Hatch an Egg hatches a party egg on the spot. Scripts are main item 6, then Script N; a test-only ROM can put any script in `Debug_EventScript_Script_7/8` (restore `debug.inc` afterwards). Warp is Utilities → 2nd item; numbers use ↑/↓ for the value and → for the next digit.
   - Flags & Vars → items 14–16 turn off collision, encounters and trainer sight.
   - `tools/hoenn/emu/mkbase.sh ROM OUT.ss` (run from the harness directory) makes a new game with the debug party, all badges, HnS's HM-received/Headbutt/Running Shoes flags, and the debug menu open. The debug party (`src/data/debug_trainers.party`, debug builds only) is Lapras (lead), Machamp, Pidgeot, Blissey, Miltank and Wobbuffet; between them they know every move with an overworld use: the 9 HMs, Headbutt, Secret Power, Dig, Teleport, Sweet Scent, Milk Drink and Soft-Boiled.
-  - Memory (2.0.6 debug build): SaveBlock1 flags at `gSaveBlock1Ptr + 0x198C`; SaveBlock2 battle style is bit 1 of byte `+21`; Hoenn vars at `gSaveBlock3Ptr + 0x132`; enemy battler HP at `gBattleMons + 136 + 42`.
+  - Memory (2.0.6 debug build): SaveBlock1 flags at `gSaveBlock1Ptr + 0x198C`; SaveBlock2 battle style is bit 1 of byte `+21`; Hoenn flags at `gSaveBlock3Ptr + 0x32`, vars `+0x132`, 2.0 event flags `+0x232`, event vars `+0x2B2` (`pt.py` handles all four; read bytes, not words: these offsets aren't word-aligned); `saveVersion` is the first u16 of SaveBlock1; enemy battler HP at `gBattleMons + 136 + 42`.
+  - **Testing a save upgrade:** `load X.sav` before anything else attaches a flash file. Load a state, poke memory, save from a debug script (`special SaveGame`, mash A), then start a new harness run with `load X.sav`, `wait 300`, `mash START 6 40`, `mash A 2 60` to Continue.
 - **Phone dialogue is part of every content part.** When a part adds a quest, area or battle, add a line for it to Brendan's/May's contact lists (`src/pokenav_match_call_data.c`) or an event call (`src/hoenn_phone.c`), and make the line say who told them. Done for contests (17) and secret bases (18); planned: the Kanto tower (2.0).
-- **Keep the playtest list current.** Anything a part couldn't test in the emulator goes into `claude/hns-hoenn-playtest-checklist.md` (claude.ai Project), so part 20 can play it through.
+- **Keep the playtest list current.** Anything a part couldn't test in the emulator goes into `hoenn-docs/playtest-checklist.md`, so Bryan's playthrough covers it.
 - Never commit ROMs, base ROMs or patches. `baserom/` and `dist/` are git-ignored.
 - The project owner tests in mGBA. Every part should end with a building ROM and a patch.

@@ -14,6 +14,7 @@
 #include "constants/game_stat.h"
 #include "constants/rematches.h"
 #include "event_data.h"
+#include "hoenn_flags.h" // Hoenn & Seek
 
 static u16 CalculateChecksum(void *, u16);
 static bool8 ReadFlashSector(u8, struct SaveSector *);
@@ -977,6 +978,17 @@ u8 LoadGameSave(u8 saveType)
         VarSet(VAR_VERMILION_CITY_SAMSON, 0);
         VarSet(VAR_ROUTE28_SCIENTIST, 0);
         gSaveBlock1Ptr->saveVersion = 5;
+    }
+    if (gSaveBlock1Ptr->saveVersion < 6)
+    {
+#if IS_HNS
+        // Hoenn & Seek 2.0 added its event flags and vars to SaveBlock3, in
+        // space a 1.0 save never wrote. Start them cleared so 1.0 saves load
+        // cleanly into 2.0 (src/hoenn_flags.c). New games start at
+        // SAVE_VERSION (NewGameInitData), so this only runs on old saves.
+        HoennClearEventFlagsAndVars();
+#endif
+        gSaveBlock1Ptr->saveVersion = 6;
     }
 
     // Add version migration steps here:
