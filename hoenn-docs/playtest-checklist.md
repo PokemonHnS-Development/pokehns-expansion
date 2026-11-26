@@ -303,3 +303,8 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - The wild Chikorita (Lv 6) and Cyndaquil (Lv 17) battles; catch, knock out (back next visit) and run.
 - Charmander only at 6–7 PM, not at night.
 - DAMIAN's levels at a few points in Kanto (e.g. 2 Kanto badges, Kanto champion, after Wallace).
+
+## 2.0 part 17r-e (hand-painted meadow, garden and hideout)
+- Walk every edge of the three maps: no gaps in the trees or walls, no tile you can walk into that you shouldn't (the emulator only played the scenes).
+- Surf in the meadow's and the garden's ponds and back out.
+- The meadow's tall grass and the hideout floor at night (tinting).

@@ -31,8 +31,8 @@
     {
       "local_id": "LOCALID_HOENN_HIDEOUT_SQUAD_1",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
-      "x": 6,
-      "y": 7,
+      "x": 9,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -45,7 +45,7 @@
     {
       "local_id": "LOCALID_HOENN_HIDEOUT_SQUAD_2",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
-      "x": 8,
+      "x": 3,
       "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -59,8 +59,8 @@
     {
       "local_id": "LOCALID_HOENN_HIDEOUT_SQUAD_3",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
-      "x": 12,
-      "y": 13,
+      "x": 10,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
