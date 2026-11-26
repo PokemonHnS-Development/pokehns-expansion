@@ -88,8 +88,8 @@ class Emu:
         return decode(self._bytes(vals[:nwords])), decode(self._bytes(vals[nwords:2 * nwords]))
 
     def ptrs(self, state):
-        w = self.read_words(state, 0x030041C0, 1)[0]  # gSaveBlock1Ptr
-        w3 = self.read_words(state, 0x03000178, 1)[0]  # gSaveBlock3Ptr
+        w = self.read_words(state, self.s("gSaveBlock1Ptr"), 1)[0]  # by symbol: IWRAM moves when code changes
+        w3 = self.read_words(state, self.s("gSaveBlock3Ptr"), 1)[0]
         return w, w3
 
     def where(self, state):
@@ -152,7 +152,7 @@ class Emu:
 
     def set_battle_style(self, state_in, state_out):
         """Battle style SET (no 'switch Pokémon?' prompt): bit 1 of SaveBlock2 byte +21."""
-        sb2 = self.read_words(state_in, 0x030041BC, 1)[0]
+        sb2 = self._sb2(state_in)
         v = int(self.run([f"loadstate {state_in}", f"r8 {sb2 + 21:x}"])[0].split(": ")[1], 16)
         self.run([f"loadstate {state_in}", f"w8 {sb2 + 21:x} {v | 2}", "wait 2", f"savestate {state_out}"])
         return state_out
@@ -175,7 +175,7 @@ class Emu:
     WEEKDAYS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
 
     def _sb2(self, state):
-        return self.read_words(state, 0x030041BC, 1)[0]  # gSaveBlock2Ptr
+        return self.read_words(state, self.s("gSaveBlock2Ptr"), 1)[0]
 
     def clock(self, state):
         """The game's view of the time: {days, hour, minute, weekday, offset, week, week_seen, stage}.

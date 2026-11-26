@@ -111,6 +111,13 @@ Nothing a player sees yet (part 3 adds the first weekday content); these are for
 - [ ] Mt. Moon's Clefairy dance: only on Monday nights (enter the area after dark).
 - [ ] The sibling texts: do you like the HGSS-style "only on my day" better than HnS's guessing riddle?
 
+## 2.0 part 4a — Level caps
+Only with the challenge setting LEVEL CAP on (Normal or Hard).
+- [ ] **Your 1.0 playtest save, if it's past the Johto League:** the cap after Johto champion is now 60 + Kanto badges (it was 70), and Kanto champion caps at 70 until Hoenn (it was none). Pokémon already above the cap keep their levels but stop gaining EXP. Does that feel right on a real run?
+- [ ] Win a Kanto gym and a Hoenn gym: a Rare Candy (or EXP) goes up to the new cap and no further. (Emulator: Lv 70 → 71 at cap 71, then "It won't have any effect.")
+- [ ] Hard: two levels lower at every Kanto/Hoenn step (tested on a test-only ROM).
+- [ ] Beat Wallace: the cap is gone.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.
