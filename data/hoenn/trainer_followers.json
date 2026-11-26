@@ -1,0 +1,53 @@
+{
+  "_comment": [
+    "Hoenn & Seek 2.0 (part 4b): a follower Pokémon standing next to each gym leader, Elite Four member and Red.",
+    "Read by tools/hoenn/gen_hoenn_followers.py, which appends the objects to each map.json (re-runs replace them).",
+    "trainer: the trainer object's graphics_id (unique on its map). species: the ace, i.e. the highest-level",
+    "Pokémon of the first team (ties: the trainer's signature Pokémon). at: optional [x, y] to override the",
+    "generator's tile choice. local_id: optional name for scripts that need to remove the follower.",
+    "The follower uses the trainer's flag, so it hides whenever the trainer does. It doesn't hide on defeat:",
+    "every leader here can be battled again.",
+    "Not here, for lack of room: Chuck (between the two rocks he smashes), Blaine (in a rock niche) and",
+    "Tate & Liza (on a dais whose only open tiles are where you stand to talk to them). Also not here:",
+    "Janine (Fuchsia's trick is that every trainer looks like her, and a Venomoth would give the real",
+    "one away), Lance and Wallace (their champion rooms run walk-in scenes), Kanto's Elite Four rematch (same",
+    "rooms and people as Johto's)."
+  ],
+  "followers": [
+    {"map": "VioletCity_Gym_hns",          "trainer": "OBJ_EVENT_GFX_FALKNER_HNS",  "species": "NOCTOWL"},
+    {"map": "AzaleaTown_Gym_hns",          "trainer": "OBJ_EVENT_GFX_BUGSY_HNS",    "species": "SCYTHER"},
+    {"map": "GoldenrodCity_Gym_hns",       "trainer": "OBJ_EVENT_GFX_WHITNEY_HNS",  "species": "MILTANK"},
+    {"map": "EcruteakCity_Gym_hns",        "trainer": "OBJ_EVENT_GFX_MORTY_HNS",    "species": "GENGAR"},
+    {"map": "OlivineCity_Gym_hns",         "trainer": "OBJ_EVENT_GFX_JASMINE_HNS",  "species": "STEELIX"},
+    {"map": "MahoganyTown_Gym_hns",        "trainer": "OBJ_EVENT_GFX_PRYCE_HNS",    "species": "PILOSWINE"},
+    {"map": "BlackthornCity_Gym_hns",      "trainer": "OBJ_EVENT_GFX_CLAIR_HNS",    "species": "KINGDRA"},
+
+    {"map": "PewterCity_Gym_hns",          "trainer": "OBJ_EVENT_GFX_BROCK_HNS",    "species": "GOLEM"},
+    {"map": "CeruleanCity_Gym_hns",        "trainer": "OBJ_EVENT_GFX_MISTY_HNS",    "species": "STARMIE"},
+    {"map": "VermilionCity_Gym_hns",       "trainer": "OBJ_EVENT_GFX_SURGE_HNS",    "species": "RAICHU"},
+    {"map": "CeladonCity_Gym_hns",         "trainer": "OBJ_EVENT_GFX_ERIKA_HNS",    "species": "BELLOSSOM"},
+    {"map": "SaffronCity_Gym_hns",         "trainer": "OBJ_EVENT_GFX_SABRINA_HNS",  "species": "ALAKAZAM"},
+    {"map": "ViridianCity_Gym_hns",        "trainer": "OBJ_EVENT_GFX_BLUE_HNS",     "species": "RHYPERIOR"},
+
+    {"map": "PokemonLeague_WillsRoom_hns", "trainer": "OBJ_EVENT_GFX_WILL_HNS",     "species": "XATU"},
+    {"map": "PokemonLeague_KogasRoom_hns", "trainer": "OBJ_EVENT_GFX_KOGA_HNS",     "species": "CROBAT"},
+    {"map": "PokemonLeague_BrunosRoom_hns","trainer": "OBJ_EVENT_GFX_BRUNO_HNS",    "species": "MACHAMP"},
+    {"map": "PokemonLeague_KarensRoom_hns","trainer": "OBJ_EVENT_GFX_KAREN_HNS",    "species": "HOUNDOOM"},
+
+    {"map": "RustboroCity_Gym",            "trainer": "OBJ_EVENT_GFX_ROXANNE",      "species": "PROBOPASS"},
+    {"map": "DewfordTown_Gym",             "trainer": "OBJ_EVENT_GFX_BRAWLY",       "species": "HARIYAMA"},
+    {"map": "MauvilleCity_Gym",            "trainer": "OBJ_EVENT_GFX_WATTSON",      "species": "MANECTRIC"},
+    {"map": "LavaridgeTown_Gym_1F",        "trainer": "OBJ_EVENT_GFX_FLANNERY",     "species": "TORKOAL"},
+    {"map": "PetalburgCity_Gym",           "trainer": "OBJ_EVENT_GFX_NORMAN",       "species": "SLAKING"},
+    {"map": "FortreeCity_Gym",             "trainer": "OBJ_EVENT_GFX_WINONA",       "species": "ALTARIA"},
+    {"map": "SootopolisCity_Gym_1F",       "trainer": "OBJ_EVENT_GFX_JUAN",         "species": "KINGDRA"},
+
+    {"map": "EverGrandeCity_SidneysRoom",  "trainer": "OBJ_EVENT_GFX_SIDNEY",       "species": "ABSOL"},
+    {"map": "EverGrandeCity_PhoebesRoom",  "trainer": "OBJ_EVENT_GFX_PHOEBE",       "species": "DUSKNOIR"},
+    {"map": "EverGrandeCity_GlaciasRoom",  "trainer": "OBJ_EVENT_GFX_GLACIA",       "species": "WALREIN"},
+    {"map": "EverGrandeCity_DrakesRoom",   "trainer": "OBJ_EVENT_GFX_DRAKE",        "species": "SALAMENCE"},
+
+    {"map": "MtSilver_SummitDay_hns",      "trainer": "OBJ_EVENT_GFX_RED_NORMAL_HNS", "species": "PIKACHU", "local_id": "LOCALID_MTSILVER_RED_PIKACHU"},
+    {"map": "MtSilver_SummitNight_hns",    "trainer": "OBJ_EVENT_GFX_RED_NORMAL_HNS", "species": "PIKACHU", "local_id": "LOCALID_MTSILVER_RED_PIKACHU"}
+  ]
+}

@@ -1073,6 +1073,7 @@ gStdScripts_End::
 	.include "data/scripts/hoenn_ow_mons.inc" @ Hoenn & Seek
 	.include "data/scripts/hoenn_debug.inc" @ Hoenn & Seek 2.0
 	.include "data/scripts/hoenn_weekday.inc" @ Hoenn & Seek 2.0 part 3
+	.include "data/scripts/hoenn_followers.inc" @ Hoenn & Seek 2.0 part 4b
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"
 
