@@ -727,7 +727,9 @@
     "BellchimeTrail_Lodge_hoenn",
     "Route6_BugClub_hoenn",
     "Route6_EngineersHouse_hoenn",
-    "CeladonCity_FloristsHouse_hoenn"
+    "CeladonCity_FloristsHouse_hoenn",
+    "MelemeleIsle_IslandHome_hoenn",
+    "MelemeleIsle_SurfShop_hoenn"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

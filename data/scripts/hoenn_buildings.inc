@@ -1,4 +1,4 @@
-@ Hoenn & Seek 2.0 (parts 8b-11): hand-written scripts for opened buildings.
+@ Hoenn & Seek 2.0 (parts 8b-11): hand-written scripts for opened buildings (shops, the rater).
 @ The buildings, their NPCs and every text live in data/hoenn/buildings.json;
 @ tools/hoenn/gen_hoenn_buildings.py writes each map's scripts.inc, where an NPC
 @ with "script" jumps here and texts are named <Map>_Text_<Key>.
@@ -74,3 +74,23 @@ HoennSeek_OlivineTackleShop_Items:
 	pokemartlistend
 
 @ The lighthouse keeper's wife's daily find is a generated daily_gift (buildings.json).
+
+@ ---- Melemele Island: surf shop (part 11) --------------------------------------
+HoennSeek_EventScript_MelemeleSurfShop::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart HoennSeek_MelemeleSurfShop_Items
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+HoennSeek_MelemeleSurfShop_Items:
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_SEA_INCENSE
+	.2byte ITEM_WAVE_INCENSE
+	.2byte ITEM_MYSTIC_WATER
+	pokemartlistend

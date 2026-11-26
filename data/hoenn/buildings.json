@@ -73,6 +73,12 @@
     },
     "house_yellow_c": {
       "from": "CeruleanCity_House3_hns"
+    },
+    "alola_home": {
+      "from": "Melemele_House_3_hns"
+    },
+    "alola_shop": {
+      "from": "Melemele_House_2_hns"
     }
   },
   "buildings": [
@@ -861,6 +867,114 @@
           "x": 8,
           "y": 7,
           "facing": "wander"
+        }
+      ]
+    },
+    {
+      "name": "MelemeleIsle_IslandHome_hoenn",
+      "door": {
+        "map": "MelemeleIsle_hns",
+        "x": 11,
+        "y": 21
+      },
+      "template": "alola_home",
+      "purpose": "Island family home: Alola-style lines and pets (Rockruff, Pikipek).",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_1_HNS",
+          "x": 12,
+          "y": 9,
+          "facing": "left",
+          "text": [
+            "Alola! Come in, come in. Visitors are always welcome here.",
+            "Out on the islands, nobody locks their door. The POKéMON would just let themselves in anyway!"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_MAN_HNS",
+          "x": 4,
+          "y": 9,
+          "facing": "right",
+          "text": [
+            "Every morning our PIKIPEK wakes the whole house, right at sunrise.",
+            "No need for an alarm clock on MELEMELE!"
+          ],
+          "hints": [
+            "TIP_LEVEL_CAP"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LITTLE_GIRL_HNS",
+          "x": 8,
+          "y": 12,
+          "facing": "up",
+          "text": "ROCKRUFF and I are going to do the island challenge together when I'm older!"
+        },
+        {
+          "type": "mon",
+          "species": "ROCKRUFF",
+          "x": 4,
+          "y": 12,
+          "facing": "wander"
+        },
+        {
+          "type": "mon",
+          "species": "PIKIPEK",
+          "x": 12,
+          "y": 12,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "MelemeleIsle_SurfShop_hoenn",
+      "door": {
+        "map": "MelemeleIsle_hns",
+        "x": 20,
+        "y": 25
+      },
+      "template": "alola_shop",
+      "purpose": "Surf shop: surfing tips and Wailmer talk (a small mart: Dive/Net Balls, Sea/Wave Incense, Mystic Water).",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_MART_EMPLOYEE_HNS",
+          "x": 5,
+          "y": 9,
+          "facing": "down",
+          "script": "HoennSeek_EventScript_MelemeleSurfShop"
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_SWIMMER_F_LAND_HNS",
+          "x": 9,
+          "y": 12,
+          "facing": "left",
+          "text": [
+            "Big waves come in after a storm. That's the best time to surf!",
+            "Out past the reef there's a WAILMER pod. If you're lucky, one will ride the swell right beside you."
+          ],
+          "hints": [
+            "TIP_WEATHER"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_TUBER_M_HNS",
+          "x": 4,
+          "y": 12,
+          "facing": "right",
+          "text": "Our shop's WAILMER is too big to fit through the door now. We have to wash it with a hose!"
+        },
+        {
+          "type": "mon",
+          "species": "WAILMER",
+          "x": 11,
+          "y": 12,
+          "facing": "look"
         }
       ]
     }

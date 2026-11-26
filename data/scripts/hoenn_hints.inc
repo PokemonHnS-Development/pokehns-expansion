@@ -298,6 +298,22 @@ HoennSeek_EventScript_HintNpc36::
 	callstd MSGBOX_NPC
 	end
 
+@ MelemeleIsle_IslandHome_hoenn
+HoennSeek_EventScript_HintNpc37::
+	callnative HoennSeek_NpcHint
+	.2byte 37
+	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
+	callstd MSGBOX_NPC
+	end
+
+@ MelemeleIsle_SurfShop_hoenn
+HoennSeek_EventScript_HintNpc38::
+	callnative HoennSeek_NpcHint
+	.2byte 38
+	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
+	callstd MSGBOX_NPC
+	end
+
 @ Field notes (Birch's aide): how many rumors you've found, then a vague hint for the next.
 HoennSeek_EventScript_FieldNotes::
 	lock

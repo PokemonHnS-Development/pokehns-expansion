@@ -104,6 +104,8 @@ static const struct HoennHintNpc sHintNpcs[] = {
     { (const u8[]){1}, 1, FALSE }, // Route6_BugClub_hoenn
     { (const u8[]){9, 2}, 2, FALSE }, // Route6_EngineersHouse_hoenn
     { (const u8[]){4}, 1, FALSE }, // CeladonCity_FloristsHouse_hoenn
+    { (const u8[]){3}, 1, FALSE }, // MelemeleIsle_IslandHome_hoenn
+    { (const u8[]){4}, 1, FALSE }, // MelemeleIsle_SurfShop_hoenn
 };
 
 static const struct HoennForecast sForecasts[] = {
