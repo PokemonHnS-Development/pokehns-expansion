@@ -361,6 +361,10 @@ struct SaveBlock3
 #if IS_HNS // Hoenn & Seek: Hoenn's own flags and vars (see constants/hoenn_layout.h)
     u8 hoennFlags[HOENN_FLAGS_BYTES];
     u16 hoennVars[HOENN_VARS_COUNT];
+    // 2.0 event flags and vars. Keep them after the 1.0 arrays: save version 6
+    // clears them on 1.0 saves (src/save.c), and the harness reads fixed offsets.
+    u8 hoennEventFlags[HOENN_EVENT_FLAGS_BYTES];
+    u16 hoennEventVars[HOENN_EVENT_VARS_COUNT];
 #endif
 }; /* max size 1624 bytes */
 

@@ -48,6 +48,9 @@ def decode(bs):
 # ---------------------------------------------------------------- emulator
 class Emu:
     FLAGS_SB1, VARS_SB1, HOENN_FLAGS_SB3, HOENN_VARS_SB3 = 0x198C, 0x1ABC, 0x32, 0x132
+    # 2.0 event flags (0x2000-0x23FF) and vars (0x7080-0x70FF), after the 1.0
+    # arrays in SaveBlock3. src/hoenn_flags.c asserts these offsets at build time.
+    HOENN_EVENT_FLAGS_SB3, HOENN_EVENT_VARS_SB3 = 0x232, 0x2B2
 
     def __init__(self, rom, elf, cwd=None):
         self.rom, self.elf, self.cwd = rom, elf, cwd or os.getcwd()
@@ -102,9 +105,12 @@ class Emu:
     def _flag_addr(self, flag, sb1, sb3):
         if 0x1800 <= flag < 0x2000:
             o = flag - 0x1800; return sb3 + self.HOENN_FLAGS_SB3 + o // 8, 1 << (o % 8)
+        if 0x2000 <= flag < 0x2400:
+            o = flag - 0x2000; return sb3 + self.HOENN_EVENT_FLAGS_SB3 + o // 8, 1 << (o % 8)
         return sb1 + self.FLAGS_SB1 + flag // 8, 1 << (flag % 8)
 
     def _var_addr(self, var, sb1, sb3):
+        if 0x7080 <= var < 0x7100: return sb3 + self.HOENN_EVENT_VARS_SB3 + (var - 0x7080) * 2
         if var >= 0x7000: return sb3 + self.HOENN_VARS_SB3 + (var - 0x7000) * 2
         return sb1 + self.VARS_SB1 + (var - 0x4000) * 2
 

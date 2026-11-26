@@ -1,6 +1,7 @@
 #include "global.h"
 #include "event_data.h"
 #include "pokedex.h"
+#include "hoenn_flags.h" // Hoenn & Seek
 
 #define SPECIAL_FLAGS_SIZE  (NUM_SPECIAL_FLAGS / 8)  // 8 flags per byte
 #define TEMP_FLAGS_SIZE     (NUM_TEMP_FLAGS / 8)
@@ -73,6 +74,7 @@ void ClearDailyFlags(void)
     u16 i;
     for (i = DAILY_FLAGS_START; i <= DAILY_FLAGS_END; i++)
         FlagClear(i);
+    HoennClearDailyFlags(); // Hoenn & Seek's own daily flags
 #else
     memset(&gSaveBlock1Ptr->flags[DAILY_FLAGS_START / 8], 0, DAILY_FLAGS_SIZE);
 #endif
@@ -191,7 +193,7 @@ u16 *GetVarPointer(u16 id)
 {
 #if IS_HNS // Hoenn & Seek
     if (IS_HOENN_VAR(id))
-        return &gSaveBlock3Ptr->hoennVars[id - HOENN_VARS_START];
+        return HoennGetVarPointer(id);
 #endif
     if (id < VARS_START)
         return NULL;
@@ -241,7 +243,7 @@ u8 *GetFlagPointer(u16 id)
         return NULL;
 #if IS_HNS // Hoenn & Seek
     if (IS_HOENN_FLAG(id))
-        return &gSaveBlock3Ptr->hoennFlags[(id - HOENN_FLAGS_START) / 8];
+        return HoennGetFlagPointer(id);
 #endif
     else if (id < SPECIAL_FLAGS_START)
         return &gSaveBlock1Ptr->flags[id / 8];
