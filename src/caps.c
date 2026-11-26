@@ -2,6 +2,7 @@
 #include "battle.h"
 #include "event_data.h"
 #include "caps.h"
+#include "hoenn_caps.h" // Hoenn & Seek
 #include "pokemon.h"
 
 static u8 GetCurrentBadgeCount(void)
@@ -42,10 +43,6 @@ static const u8 sLevelCapTable_Hard[] =
     [8] = 54,
 };
 
-// Post-league caps, matching HnS: beating the Johto Elite Four raises the cap to
-// 70 for the Kanto half, and only beating the Kanto league removes it entirely.
-#define KANTO_MAX_LEVEL 70
-
 u32 GetCurrentLevelCap(void)
 {
     static const u32 sLevelCapFlagMap[][2] =
@@ -70,11 +67,11 @@ u32 GetCurrentLevelCap(void)
             badgeCount = 8;
 
 #if IS_HNS
-        if (FlagGet(FLAG_IS_KANTO_CHAMPION))
-            return MAX_LEVEL;
-
-        if (FlagGet(FLAG_IS_CHAMPION))
-            return KANTO_MAX_LEVEL;
+        // Hoenn & Seek: Kanto badges, Kanto champion, Hoenn badges and the
+        // Hoenn E4 have caps of their own (src/hoenn_caps.c).
+        if (badgeCount == 8)
+            return HoennGetPostJohtoLevelCap(challengeLevelCap == 1 ? sLevelCapTable_Normal[8] : sLevelCapTable_Hard[8],
+                                             challengeLevelCap != 1);
 #else
         if (FlagGet(FLAG_IS_CHAMPION))
             return MAX_LEVEL;
