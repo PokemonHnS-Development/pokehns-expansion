@@ -86,6 +86,7 @@ static const struct HoennHintNpc sHintNpcs[] = {
     { (const u8[]){14}, 1, FALSE }, // LilycoveCity_PokemonCenter_1F
     { (const u8[]){11, 7, 1}, 3, FALSE }, // MossdeepCity_PokemonCenter_1F
     { (const u8[]){17}, 1, TRUE }, // Route119_WeatherInstitute_1F
+    { (const u8[]){2, 0}, 2, FALSE }, // Route34_FishingShack_hoenn
 };
 
 static const struct HoennForecast sForecasts[] = {

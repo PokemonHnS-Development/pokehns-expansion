@@ -186,6 +186,14 @@ HoennSeek_EventScript_HintNpc22::
 	callstd MSGBOX_NPC
 	end
 
+@ Route34_FishingShack_hoenn
+HoennSeek_EventScript_HintNpc23::
+	callnative HoennSeek_NpcHint
+	.2byte 23
+	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
+	callstd MSGBOX_NPC
+	end
+
 @ Field notes (Birch's aide): how many rumors you've found, then a vague hint for the next.
 HoennSeek_EventScript_FieldNotes::
 	lock

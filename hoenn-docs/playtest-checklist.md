@@ -161,6 +161,10 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] The Weather Institute 1F worker gives the forecast; after both are caught, his own lines.
 - [ ] Level-cap tip only shows with the LEVEL CAP challenge on.
 
+## 2.0 part 8a — Building generator
+- [ ] Route 34's fisherman's shack (the small house on the shore, 23,50): walk in and out, talk to both NPCs (the wife alternates with a hint), the Psyduck cries and wanders without blocking the door.
+- [ ] Review `hoenn-docs/buildings.md`: the 16 buildings and their planned purposes.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.
