@@ -82,6 +82,9 @@
     "RUMOR_ABSOL":    {"kind": "rumor", "rumor": "ABSOL", "if": [{"not_flag": "FLAG_HOENN_ABSOL_CAUGHT"}]},
     "RUMOR_WAILORD":  {"kind": "rumor", "rumor": "WAILORD", "if": [{"not_flag": "FLAG_HOENN_WAILORD_CAUGHT"}]},
     "RUMOR_CHIMECHO": {"kind": "rumor", "rumor": "CHIMECHO", "if": [{"not_flag": "FLAG_HOENN_CHIMECHO_CAUGHT"}]},
+    "RUMOR_CHORUS":   {"kind": "rumor", "rumor": "CHORUS", "if": [{"not_flag": "FLAG_HOENN_CHORUS_WATCHED"}]},
+    "RUMOR_BAGON":    {"kind": "rumor", "rumor": "BAGON", "if": [{"not_flag": "FLAG_HOENN_BAGON_CAUGHT"}]},
+    "RUMOR_METAGROSS": {"kind": "rumor", "rumor": "METAGROSS", "if": [{"not_flag": "FLAG_HOENN_METAGROSS_SEEN"}]},
 
     "STORY_POND":     {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_POND_SEEN"}], "text": ["Every morning a SWAMPERT brings two MUDKIP to this pond to practice.", "When they all dive, you'd better find some shelter!"]},
     "STORY_RALTS":    {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_RALTS_DONE"}], "text": ["Every morning, a GARDEVOIR guards a RALTS by the tall grass near PETALBURG.", "Run up to them and they vanish! Walk slowly, with a POKéMON that really loves you."]},
@@ -98,6 +101,9 @@
     "STORY_ABSOL":  {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_ABSOL_WOKEN"}], "text": ["The white one stands on the cliff when the storm rolls in.", "On ROUTE 120, up on the ridge between the paths. Only on the stormy nights, mind you."]},
     "STORY_WAILORD":  {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_WAILORD_MOVED"}], "text": ["There's a WAILORD asleep in the rocks off ROUTE 131. Been there since spring.", "It's always listening for its little ones. Saturday mornings, it nearly wakes up."]},
     "STORY_CHIMECHO": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_CHIMECHO_CAUGHT"}], "text": ["On still nights, the chimes up here ring by themselves.", "Follow the sound between the graves, if you're brave enough."]},
+    "STORY_CHORUS":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_CHORUS_WATCHED"}], "text": ["Saturday mornings, you can hear singing from the top of METEOR FALLS. ALTARIA, I'd bet.", "There's a way up past the first waterfall. Keep your head down behind the rocks!"]},
+    "STORY_BAGON":    {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_BAGON_CAUGHT"}], "text": ["A BAGON lives deep in METEOR FALLS. Every morning it jumps off a ledge, trying to fly.", "It's been doing it since sunrise for weeks. It never gives up!"]},
+    "STORY_METAGROSS": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_METAGROSS_SEEN"}], "text": ["My husband stays at METEOR FALLS overnight. He says the meteorite pieces glow in STEVEN's cave.", "Once a week, METANG gather around the glow. He's sure something happens then!"]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -204,6 +210,24 @@
       "before": ["They say wind chimes ring on MT. PYRE's summit at night, even when there's no wind."],
       "after": "Somebody followed the chimes on MT. PYRE's summit and found a CHIMECHO singing!",
       "notes": "Chimes ring among MT. PYRE's summit graves at night. Follow the sound."
+    },
+    "CHORUS": {
+      "found": [{"flag": "FLAG_HOENN_CHORUS_WATCHED"}],
+      "before": ["They say a flock sings on a hidden cliff above METEOR FALLS, but only on SATURDAYS."],
+      "after": "Somebody watched the ALTARIA chorus above METEOR FALLS without scaring the flock!",
+      "notes": "An ALTARIA chorus sings above METEOR FALLS on SATURDAY mornings. Watch from behind the boulders."
+    },
+    "BAGON": {
+      "found": [{"flag": "FLAG_HOENN_BAGON_MET"}],
+      "before": ["They say a BAGON in METEOR FALLS jumps off a cliff every morning, trying to fly."],
+      "after": "The BAGON in METEOR FALLS finally got to show someone how high it can jump!",
+      "notes": "A BAGON leaps into a pool deep in METEOR FALLS every morning. Surf to its ledge."
+    },
+    "METAGROSS": {
+      "found": [{"flag": "FLAG_HOENN_METAGROSS_SEEN"}],
+      "before": ["They say two METANG become one at night, deep in STEVEN's cave at METEOR FALLS."],
+      "after": "Somebody saw two METANG fuse into a METAGROSS in STEVEN's cave!",
+      "notes": "Two METANG hover over a glowing rock in STEVEN's cave at night, once a week."
     }
   },
 
@@ -225,11 +249,11 @@
     {"map": "LavenderTown_PokemonCenter_hns",    "script": "LavenderTown_PokemonCenter_EventScript_Gent",          "lines": ["RUMOR_GENGAR", "TIP_REMINDER_JK"]},
     {"map": "SaffronCity_PokemonCenter_hns",     "script": "SaffronCity_PokemonCenter_EventScript_Teacher",        "lines": ["TIP_NAMERATER_JK"]},
     {"map": "CeladonCity_PokemonCenter_hns",     "script": "CeladonCity_PokemonCenter_EventScript_Pharmacist",     "lines": ["STORY_FERRY", "TIP_LEVEL_CAP", "TIP_CLOCK"]},
-    {"map": "OldaleTown_PokemonCenter_1F",       "script": "OldaleTown_PokemonCenter_1F_EventScript_Gentleman",    "lines": ["RUMOR_MASQUERAIN"]},
+    {"map": "OldaleTown_PokemonCenter_1F",       "script": "OldaleTown_PokemonCenter_1F_EventScript_Gentleman",    "lines": ["RUMOR_MASQUERAIN", "RUMOR_METAGROSS"]},
     {"map": "SlateportCity_PokemonCenter_1F",    "script": "SlateportCity_PokemonCenter_1F_EventScript_Woman",     "lines": ["STORY_NORMAN", "TIP_NAMERATER_H", "RUMOR_CHIMECHO"]},
-    {"map": "MauvilleCity_PokemonCenter_1F",     "script": "MauvilleCity_PokemonCenter_1F_EventScript_Woman1",     "lines": ["STORY_WATTSON", "RUMOR_CASTFORM"]},
+    {"map": "MauvilleCity_PokemonCenter_1F",     "script": "MauvilleCity_PokemonCenter_1F_EventScript_Woman1",     "lines": ["STORY_WATTSON", "RUMOR_CASTFORM", "RUMOR_BAGON"]},
     {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "RUMOR_MUNCHLAX", "RUMOR_SPINDA", "RUMOR_FEUD", "TIP_REMINDER_H", "TIP_SITES"]},
-    {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS", "RUMOR_TROPIUS"]},
+    {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS", "RUMOR_TROPIUS", "RUMOR_CHORUS"]},
     {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES", "RUMOR_ABSOL"]},
     {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP", "RUMOR_WAILORD"]},
     {"map": "Route119_WeatherInstitute_1F",      "script": "Route119_WeatherInstitute_1F_EventScript_InstituteWorker1", "always": true, "lines": ["FORECAST"]},
@@ -254,7 +278,10 @@
     {"map": "FallarborTown",                     "script": "FallarborTown_EventScript_ExpertM",                    "lines": ["STORY_FEUD"]},
     {"map": "FortreeCity",                       "script": "FortreeCity_EventScript_OldMan",                       "lines": ["STORY_ABSOL"]},
     {"map": "PacifidlogTown",                    "script": "PacifidlogTown_EventScript_Fisherman",                 "lines": ["STORY_WAILORD"]},
-    {"map": "MtPyre_Summit",                     "script": "MtPyre_Summit_EventScript_OldLady",                    "lines": ["STORY_CHIMECHO"]}
+    {"map": "MtPyre_Summit",                     "script": "MtPyre_Summit_EventScript_OldLady",                    "lines": ["STORY_CHIMECHO"]},
+    {"map": "Route115",                          "script": "Route115_EventScript_Woman",                           "lines": ["STORY_CHORUS"]},
+    {"map": "FallarborTown",                     "script": "FallarborTown_EventScript_Gentleman",                  "lines": ["STORY_BAGON"]},
+    {"map": "FallarborTown_CozmosHouse",         "script": "FallarborTown_CozmosHouse_EventScript_CozmosWife",     "lines": ["STORY_METAGROSS"]}
   ],
 
   "forecasts": [

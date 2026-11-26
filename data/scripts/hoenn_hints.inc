@@ -362,130 +362,154 @@ HoennSeek_EventScript_HintNpc44::
 	callstd MSGBOX_NPC
 	end
 
-@ Route34_FishingShack_hoenn
+@ Route115
 HoennSeek_EventScript_HintNpc45::
 	callnative HoennSeek_NpcHint
 	.2byte 45
+	goto_if_eq VAR_RESULT, FALSE, Route115_EventScript_Woman
+	callstd MSGBOX_NPC
+	end
+
+@ FallarborTown
+HoennSeek_EventScript_HintNpc46::
+	callnative HoennSeek_NpcHint
+	.2byte 46
+	goto_if_eq VAR_RESULT, FALSE, FallarborTown_EventScript_Gentleman
+	callstd MSGBOX_NPC
+	end
+
+@ FallarborTown_CozmosHouse
+HoennSeek_EventScript_HintNpc47::
+	callnative HoennSeek_NpcHint
+	.2byte 47
+	goto_if_eq VAR_RESULT, FALSE, FallarborTown_CozmosHouse_EventScript_CozmosWife
+	callstd MSGBOX_NPC
+	end
+
+@ Route34_FishingShack_hoenn
+HoennSeek_EventScript_HintNpc48::
+	callnative HoennSeek_NpcHint
+	.2byte 48
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_HarborOffice_hoenn
-HoennSeek_EventScript_HintNpc46::
+HoennSeek_EventScript_HintNpc49::
 	callnative HoennSeek_NpcHint
-	.2byte 46
+	.2byte 49
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_SailorsHouse_hoenn
-HoennSeek_EventScript_HintNpc47::
+HoennSeek_EventScript_HintNpc50::
 	callnative HoennSeek_NpcHint
-	.2byte 47
+	.2byte 50
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_CaptainsHouse_hoenn
-HoennSeek_EventScript_HintNpc48::
+HoennSeek_EventScript_HintNpc51::
 	callnative HoennSeek_NpcHint
-	.2byte 48
+	.2byte 51
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_TackleShop_hoenn
-HoennSeek_EventScript_HintNpc49::
+HoennSeek_EventScript_HintNpc52::
 	callnative HoennSeek_NpcHint
-	.2byte 49
+	.2byte 52
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_Shipwright_hoenn
-HoennSeek_EventScript_HintNpc50::
+HoennSeek_EventScript_HintNpc53::
 	callnative HoennSeek_NpcHint
-	.2byte 50
+	.2byte 53
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_KeepersHouse_hoenn
-HoennSeek_EventScript_HintNpc51::
+HoennSeek_EventScript_HintNpc54::
 	callnative HoennSeek_NpcHint
-	.2byte 51
+	.2byte 54
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ EcruteakCity_DanceTeacher_hoenn
-HoennSeek_EventScript_HintNpc52::
+HoennSeek_EventScript_HintNpc55::
 	callnative HoennSeek_NpcHint
-	.2byte 52
+	.2byte 55
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ Route34_BreedersHouse_hoenn
-HoennSeek_EventScript_HintNpc53::
+HoennSeek_EventScript_HintNpc56::
 	callnative HoennSeek_NpcHint
-	.2byte 53
+	.2byte 56
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route38_MoomooStoreroom_hoenn
-HoennSeek_EventScript_HintNpc54::
+HoennSeek_EventScript_HintNpc57::
 	callnative HoennSeek_NpcHint
-	.2byte 54
+	.2byte 57
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ BellchimeTrail_Lodge_hoenn
-HoennSeek_EventScript_HintNpc55::
+HoennSeek_EventScript_HintNpc58::
 	callnative HoennSeek_NpcHint
-	.2byte 55
+	.2byte 58
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_BugClub_hoenn
-HoennSeek_EventScript_HintNpc56::
+HoennSeek_EventScript_HintNpc59::
 	callnative HoennSeek_NpcHint
-	.2byte 56
+	.2byte 59
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_EngineersHouse_hoenn
-HoennSeek_EventScript_HintNpc57::
+HoennSeek_EventScript_HintNpc60::
 	callnative HoennSeek_NpcHint
-	.2byte 57
+	.2byte 60
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ CeladonCity_FloristsHouse_hoenn
-HoennSeek_EventScript_HintNpc58::
+HoennSeek_EventScript_HintNpc61::
 	callnative HoennSeek_NpcHint
-	.2byte 58
+	.2byte 61
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_IslandHome_hoenn
-HoennSeek_EventScript_HintNpc59::
+HoennSeek_EventScript_HintNpc62::
 	callnative HoennSeek_NpcHint
-	.2byte 59
+	.2byte 62
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_SurfShop_hoenn
-HoennSeek_EventScript_HintNpc60::
+HoennSeek_EventScript_HintNpc63::
 	callnative HoennSeek_NpcHint
-	.2byte 60
+	.2byte 63
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -671,6 +695,33 @@ HoennSeek_Text_Hint_RumorChimechoAfter::
 HoennSeek_Text_Hint_RumorChimechoNotes::
 	.string "Chimes ring among MT. PYRE's\nsummit graves at night. Follow\lthe sound.$"
 
+HoennSeek_Text_Hint_RumorChorusBefore::
+	.string "They say a flock sings on a hidden\ncliff above METEOR FALLS, but only\lon SATURDAYS.$"
+
+HoennSeek_Text_Hint_RumorChorusAfter::
+	.string "Somebody watched the ALTARIA\nchorus above METEOR FALLS without\lscaring the flock!$"
+
+HoennSeek_Text_Hint_RumorChorusNotes::
+	.string "An ALTARIA chorus sings above\nMETEOR FALLS on SATURDAY mornings.\lWatch from behind the boulders.$"
+
+HoennSeek_Text_Hint_RumorBagonBefore::
+	.string "They say a BAGON in METEOR FALLS\njumps off a cliff every morning,\ltrying to fly.$"
+
+HoennSeek_Text_Hint_RumorBagonAfter::
+	.string "The BAGON in METEOR FALLS finally\ngot to show someone how high it\lcan jump!$"
+
+HoennSeek_Text_Hint_RumorBagonNotes::
+	.string "A BAGON leaps into a pool deep in\nMETEOR FALLS every morning. Surf\lto its ledge.$"
+
+HoennSeek_Text_Hint_RumorMetagrossBefore::
+	.string "They say two METANG become one at\nnight, deep in STEVEN's cave at\lMETEOR FALLS.$"
+
+HoennSeek_Text_Hint_RumorMetagrossAfter::
+	.string "Somebody saw two METANG fuse into\na METAGROSS in STEVEN's cave!$"
+
+HoennSeek_Text_Hint_RumorMetagrossNotes::
+	.string "Two METANG hover over a glowing\nrock in STEVEN's cave at night,\lonce a week.$"
+
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
 
@@ -817,6 +868,15 @@ HoennSeek_Text_Hint_LineStoryWailord::
 
 HoennSeek_Text_Hint_LineStoryChimecho::
 	.string "On still nights, the chimes up\nhere ring by themselves.\pFollow the sound between the\ngraves, if you're brave enough.$"
+
+HoennSeek_Text_Hint_LineStoryChorus::
+	.string "Saturday mornings, you can hear\nsinging from the top of METEOR\lFALLS. ALTARIA, I'd bet.\pThere's a way up past the first\nwaterfall. Keep your head down\lbehind the rocks!$"
+
+HoennSeek_Text_Hint_LineStoryBagon::
+	.string "A BAGON lives deep in METEOR\nFALLS. Every morning it jumps off\la ledge, trying to fly.\pIt's been doing it since sunrise\nfor weeks. It never gives up!$"
+
+HoennSeek_Text_Hint_LineStoryMetagross::
+	.string "My husband stays at METEOR FALLS\novernight. He says the meteorite\lpieces glow in STEVEN's cave.\pOnce a week, METANG gather around\nthe glow. He's sure something\lhappens then!$"
 
 HoennSeek_Text_Hint_Forecast0::
 	.string "Storms are rolling in around ROUTE\n120 {STR_VAR_1}.\pFolks say that's when the white\none walks.$"

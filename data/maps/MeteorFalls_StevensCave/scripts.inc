@@ -1,4 +1,5 @@
 MeteorFalls_StevensCave_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_StevensCaveOnTransition @ Hoenn & Seek 2.0 part 23
 	.byte 0
 
 MeteorFalls_StevensCave_EventScript_Steven::

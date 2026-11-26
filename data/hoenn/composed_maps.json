@@ -277,6 +277,42 @@
       "h": {"from": [15, 40]}
      }}
    ]
+  },
+  "MeteorFalls_Clifftop_hoenn": {
+   "source": "LAYOUT_ROUTE114",
+   "layout": "LAYOUT_METEOR_FALLS_CLIFFTOP_HOENN",
+   "border": [0, 0],
+   "ops": [
+    {"_": "Altaria's clifftop, by hand (2.0 part 23): a cliff face at the back where the Altaria sings, trees on three sides, a loose line of boulders to hide behind (row 10), and the path down to Meteor Falls at the bottom", "at": [0, 0], "grid": [
+     "TTTTTTTTTTTTTTTTTT",
+     "TTTTTTTTTTTTTTTTTT",
+     "TTeeeeeeeeeeeeeeTT",
+     "TTLLLLLLLLLLLLLLTT",
+     "TTTT(FFFFFFFF)TTTT",
+     "TTTT(FFFFFFFF)TTTT",
+     "TTee[uuuuuuuu]eeTT",
+     "TTggwgggggggggggTT",
+     "TTgggggggggggwggTT",
+     "TTgwgggggggggggwTT",
+     "TTgooggoggogogTTTT",
+     "TTgggggwggggggTTTT",
+     "TTTTTTTTggTTTTTTTT",
+     "TTTTTTTTggTTTTTTTT"
+     ], "legend": {
+      "T": {"from": [0, 0], "tile": [2, 2]},
+      "e": {"from": [0, 6], "tile": [2, 1]},
+      "L": {"from": [5, 2]},
+      "F": {"from": [6, 3]},
+      "(": {"from": [5, 3]},
+      ")": {"from": [17, 3]},
+      "u": {"from": [19, 10]},
+      "[": {"from": [18, 10]},
+      "]": {"from": [22, 10]},
+      "g": {"from": [22, 13]},
+      "o": {"from": [27, 20]},
+      "w": {"from": [14, 16]}
+     }}
+   ]
   }
  },
  "patches": [
@@ -312,6 +348,12 @@
   {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[17, 39]], "from": [14, 36]},
   {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[16, 39]], "from": [16, 38]},
   {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[15, 39]], "from": [15, 38]},
-  {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[14, 39]], "from": [14, 38]}
+  {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[14, 39]], "from": [14, 38]},
+  {"_": "Meteor Falls 1F (2.0 part 23): the yellow rock column at the end of the strip east of the falls (x 27-28) becomes a cave mouth (26-28, 2-3), copied from the doorway at (9-11, 2-3); it leads up to Altaria's clifftop", "layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[26, 2]], "from": [9, 2]},
+  {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[27, 2]], "from": [10, 2]},
+  {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[28, 2]], "from": [11, 2]},
+  {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[26, 3]], "from": [9, 3]},
+  {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[27, 3]], "from": [10, 3]},
+  {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[28, 3]], "from": [11, 3]}
  ]
 }

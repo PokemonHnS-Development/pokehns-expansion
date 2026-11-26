@@ -35,6 +35,9 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_ABSOL, HoennSeek_EventScript_CallAbsol
 	case HOENN_CALL_WAILORD, HoennSeek_EventScript_CallWailord @ 2.0 part 22b
 	case HOENN_CALL_CHIMECHO, HoennSeek_EventScript_CallChimecho
+	case HOENN_CALL_CHORUS, HoennSeek_EventScript_CallChorus
+	case HOENN_CALL_BAGON, HoennSeek_EventScript_CallBagon
+	case HOENN_CALL_METAGROSS, HoennSeek_EventScript_CallMetagross
 	releaseall
 	end
 
