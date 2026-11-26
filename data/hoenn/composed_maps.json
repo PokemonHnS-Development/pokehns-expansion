@@ -30,6 +30,15 @@
     {"_": "flowers", "cells": [[3, 3], [5, 4], [14, 3], [16, 4], [3, 9], [4, 11], [16, 7], [15, 12], [6, 12]], "from": [72, 12]},
     {"cells": [[4, 3], [3, 5], [15, 4], [16, 10], [5, 10], [13, 12], [3, 12]], "from": [73, 13]}
    ]
+  },
+  "Route6_Hideout_hoenn": {
+   "source": "LAYOUT_DIGLETTS_CAVE_TUNNEL_HNS",
+   "layout": "LAYOUT_ROUTE6_HIDEOUT_HOENN",
+   "border": [20, 2],
+   "ops": [
+    {"_": "the tunnel's dead end, with its ladder at (3,3)", "at": [0, 0, 14, 16], "from": [0, 0]},
+    {"_": "close the passage south with the ledge edge", "cells": [[11, 15], [12, 15]], "from": [9, 15]}
+   ]
   }
  },
  "patches": [

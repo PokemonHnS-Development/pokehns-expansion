@@ -248,6 +248,16 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] May's call after either one joins (needs her number from Birch).
 - [ ] Save and reload mid-chain (after shielding Charmander, before the nurse scene).
 
+## 2.0 part 17 — Kanto starters B (Squirtle Squad)
+- [ ] Route 6 by day (mornings and days): four Squirtle on the grass south of the pond; walking up the path east of the pond (or talking to the one in sunglasses) drops you through a pitfall into their hideout. Evenings and nights: nobody there, no pitfall.
+- [ ] The hideout: the meeting plays once; the ladder takes you back to Route 6 by the pond.
+- [ ] Vermilion at night after the hideout: the fire scene on the main street (smoke, the Squad, water), then the leader joins you. By day, or before the hideout, nothing happens.
+- [ ] The leader in a real party slot: Lv 5 Squirtle holding Black Glasses.
+- [ ] With party and boxes full: the leader stays at the house, and the Squad is back there on later nights until it can join.
+- [ ] After it joins: three Squirtle back by the pond by day; the officer's last line.
+- [ ] May's call if the Squirtle is your first Kanto starter from these events (needs her number from Birch).
+- [ ] Save and reload in the hideout and right after the fire.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.
