@@ -137,19 +137,15 @@ BlackthornCity_EventScript_Santos::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_SPELL_TAG, BlackthornCity_EventScript_SantosCompleted
+	@ Hoenn & Seek: gift only on Saturdays (data/scripts/hoenn_weekday.inc)
+	setvar VAR_0x8004, HOENN_SATURDAY
+	specialvar VAR_RESULT, HoennIsItWeekday
 	msgbox BlackthornCity_MeetSantosText, MSGBOX_DEFAULT
-	closemessage
-	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
-	switch VAR_RESULT
-	case 0, BlackthornCity_EventScript_SantosNope
-	case 1, BlackthornCity_EventScript_SantosNope
-	case 2, BlackthornCity_EventScript_SantosNope
-	case 3, BlackthornCity_EventScript_SantosNope
-	case 4, BlackthornCity_EventScript_SantosNope
-	case 5, BlackthornCity_EventScript_SantosNope
-	case 6, BlackthornCity_EventScript_SantosYes
-	case 7 BlackthornCity_EventScript_SantosCancel
-	case MULTI_B_PRESSED, BlackthornCity_EventScript_SantosCancel
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_BlackthornCity_SiblingNotToday
+	msgbox HoennSeek_Text_SiblingItsMyDay, MSGBOX_DEFAULT
+	goto BlackthornCity_EventScript_SantosYes
+HoennSeek_BlackthornCity_SiblingNotToday:
+	msgbox HoennSeek_Text_SiblingComeBack, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -221,7 +217,7 @@ BlackthornYoungsterText:
 BlackthornCity_MeetSantosText:
 	.string "SANTOS: …\p"
 	.string "I'm SANTOS of the weekday family.\p"
-	.string "Take a guess.$"
+	.string "My day is {STR_VAR_1}.$"
 
 BlackthornCity_SantosGivesGiftText:
 	.string "You can have this…$"

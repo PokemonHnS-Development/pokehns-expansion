@@ -739,3 +739,5 @@ gSpecials::
 	def_special HoennDebugNextWeek
 	def_special HoennDebugAdvanceWeatherStage
 	def_special HoennDebugReloadMap
+	def_special HoennIsItWeekday
+	def_special HoennSetWeekdayFromChoice

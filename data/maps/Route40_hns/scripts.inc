@@ -125,8 +125,8 @@ Route40_Text_StandingYoungster:
 Route40_Text_Monica:
 	.string "MONICA: Glad to meet you.\n"
 	.string "I'm MONICA of the WEEKDAY FAMILY.\p"
-	.string "I bet you can't guess my favorite\n"
-	.string "day of the week!$"
+	.string "My favorite day of the week is\n"
+	.string "{STR_VAR_1}.$"
 
 Route40_Text_MonicaGivesGift:
 	.string "That's right!\p"
@@ -156,19 +156,15 @@ Rotue40_EventScript_Monica::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_SHARP_BEAK, Rotue40_EventScript_MonicaCompleted
+	@ Hoenn & Seek: gift only on Mondays (data/scripts/hoenn_weekday.inc)
+	setvar VAR_0x8004, HOENN_MONDAY
+	specialvar VAR_RESULT, HoennIsItWeekday
 	msgbox Route40_Text_Monica, MSGBOX_DEFAULT
-	closemessage
-	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
-	switch VAR_RESULT
-	case 0, Rotue40_EventScript_MonicaNope
-	case 1, Rotue40_EventScript_MonicaYes
-	case 2, Rotue40_EventScript_MonicaNope
-	case 3, Rotue40_EventScript_MonicaNope
-	case 4, Rotue40_EventScript_MonicaNope
-	case 5, Rotue40_EventScript_MonicaNope
-	case 6, Rotue40_EventScript_MonicaNope
-	case 7 Rotue40_EventScript_MonicaCancel
-	case MULTI_B_PRESSED, Rotue40_EventScript_MonicaCancel
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_Route40_SiblingNotToday
+	msgbox HoennSeek_Text_SiblingItsMyDay, MSGBOX_DEFAULT
+	goto Rotue40_EventScript_MonicaYes
+HoennSeek_Route40_SiblingNotToday:
+	msgbox HoennSeek_Text_SiblingComeBack, MSGBOX_DEFAULT
 	closemessage
 	release
 	end

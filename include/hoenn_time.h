@@ -16,6 +16,8 @@ bool32 HoennIsSpecialWeatherDay(u16 mapGroup, u16 mapNum);
 
 // Specials (data/specials.inc). GetDayOfWeek itself is also a special.
 void HoennBufferWeekdayName(void);
+bool16 HoennIsItWeekday(void);
+void HoennSetWeekdayFromChoice(void);
 u16 HoennGetWeatherCycleStage(void);
 u16 HoennIsSpecialWeatherHere(void);
 u16 HoennIsSpecialWeatherOn(void);

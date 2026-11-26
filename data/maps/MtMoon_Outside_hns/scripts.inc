@@ -1,4 +1,5 @@
 MtMoon_Outside_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_MtMoon_Outside_OnTransition @ Hoenn & Seek: Monday dance
 	.byte 0
 
 MtMoon_EventScript_Moonstone::

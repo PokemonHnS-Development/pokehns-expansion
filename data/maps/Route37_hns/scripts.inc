@@ -33,19 +33,15 @@ Route37_EventScript_Sunny::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_MAGNET, Route37_EventScript_SunnyCompleted
+	@ Hoenn & Seek: gift only on Sundays (data/scripts/hoenn_weekday.inc)
+	setvar VAR_0x8004, HOENN_SUNDAY
+	specialvar VAR_RESULT, HoennIsItWeekday
 	msgbox Route37_Text_Sunny_Meet, MSGBOX_DEFAULT
-	closemessage
-	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
-	switch VAR_RESULT
-	case 0, Route37_EventScript_SunnyYes
-	case 1, Route37_EventScript_SunnyNope
-	case 2, Route37_EventScript_SunnyNope
-	case 3, Route37_EventScript_SunnyNope
-	case 4, Route37_EventScript_SunnyNope
-	case 5, Route37_EventScript_SunnyNope
-	case 6, Route37_EventScript_SunnyNope
-	case 7 Route37_EventScript_SunnyCancel
-	case MULTI_B_PRESSED, Route37_EventScript_SunnyCancel
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_Route37_SiblingNotToday
+	msgbox HoennSeek_Text_SiblingItsMyDay, MSGBOX_DEFAULT
+	goto Route37_EventScript_SunnyYes
+HoennSeek_Route37_SiblingNotToday:
+	msgbox HoennSeek_Text_SiblingComeBack, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -119,8 +115,8 @@ Route37_Text_PsychicGreg_After:
 Route37_Text_Sunny_Meet:
 	.string "SUNNY: Hi!\p"
 	.string "I'm SUNNY of the WEEKDAY family!\p"
-	.string "If you can guess my favorite day,\n"
-	.string "I'll give you a reward.$"
+	.string "My favorite day of the week is\n"
+	.string "{STR_VAR_1}!$"
 
 Route37_Text_Sunny_GiveGift1:
 	.string "I was told to give you this if I saw\n"

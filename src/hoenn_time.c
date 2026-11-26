@@ -58,6 +58,8 @@
 // Emerald's cycle length (WEATHER_CYCLE_LENGTH is private to field_weather_effect.c).
 #define HOENN_WEATHER_CYCLE_LENGTH 4
 
+STATIC_ASSERT(HOENN_TIME_NIGHT == TIME_NIGHT, HoennTimeNightMatches);
+
 // Scripts compare GetDayOfWeek's result with HOENN_SUNDAY..HOENN_SATURDAY.
 STATIC_ASSERT(HOENN_SUNDAY == WEEKDAY_SUN && HOENN_SATURDAY == WEEKDAY_SAT
            && WEEKDAY_COUNT == 7, HoennWeekdayConstantsMatchEnum);
@@ -137,14 +139,35 @@ void HoennSetWeekday(u32 weekday)
     VarSet(VAR_HOENN_WEEK_SEEN, WeekOfLocalDay(days) + 1);
 }
 
+static const u8 *const sWeekdayNames[WEEKDAY_COUNT] = {
+    gText_Sunday, gText_Monday, gText_Tuesday, gText_Wednesday,
+    gText_Thursday, gText_Friday, gText_Saturday,
+};
+
 // special HoennBufferWeekdayName: today's name ("MONDAY") in STR_VAR_1.
 void HoennBufferWeekdayName(void)
 {
-    static const u8 *const sNames[WEEKDAY_COUNT] = {
-        gText_Sunday, gText_Monday, gText_Tuesday, gText_Wednesday,
-        gText_Thursday, gText_Friday, gText_Saturday,
-    };
-    StringCopy(gStringVar1, sNames[GetDayOfWeek()]);
+    StringCopy(gStringVar1, sWeekdayNames[GetDayOfWeek()]);
+}
+
+// specialvar VAR_RESULT, HoennIsItWeekday (part 3)
+// VAR_0x8004 = HOENN_SUNDAY..HOENN_SATURDAY. Puts that day's name in STR_VAR_1
+// and returns TRUE if today is that day. Made for HGSS-style "only on my day"
+// NPCs, such as the Weekday siblings, so their text can name the day either way.
+bool16 HoennIsItWeekday(void)
+{
+    u32 day = gSpecialVar_0x8004 % WEEKDAY_COUNT;
+    StringCopy(gStringVar1, sWeekdayNames[day]);
+    return GetDayOfWeek() == day;
+}
+
+// special HoennSetWeekdayFromChoice (part 3): the player answered "What day is
+// it?" (MULTI_DAYS_OF_WEEK, VAR_RESULT = 0-6). Anything else (EXIT or B)
+// leaves the day alone. Used by New Bark's wall clock.
+void HoennSetWeekdayFromChoice(void)
+{
+    if (gSpecialVar_Result < WEEKDAY_COUNT)
+        HoennSetWeekday(gSpecialVar_Result);
 }
 
 // ---- Weather cycle ------------------------------------------------------------
