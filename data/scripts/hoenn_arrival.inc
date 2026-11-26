@@ -7,6 +7,9 @@
 @ Harbor OnFrame while VAR_HOENN_AIDE_STATE is 0: the aide greets you as you step
 @ off the ferry at (8,11). He stands at (9,11) until you have Mudkip.
 HoennSeek_EventScript_SlateportAideGreet::
+	@ Got Mudkip before ever stepping onto the harbor (the Tidal Strait or the
+	@ Lilycove ferry, part 17r): the aide is gone, so skip his greeting.
+	goto_if_set FLAG_HOENN_RECEIVED_MUDKIP, HoennSeek_EventScript_SlateportAideSkip
 	lockall
 	playse SE_PIN
 	applymovement LOCALID_SLATEPORT_HARBOR_BIRCH_AIDE, Common_Movement_ExclamationMark
@@ -16,6 +19,10 @@ HoennSeek_EventScript_SlateportAideGreet::
 	msgbox HoennSeek_Text_SlateportAideGreet, MSGBOX_DEFAULT
 	setvar VAR_HOENN_AIDE_STATE, 1
 	releaseall
+	end
+
+HoennSeek_EventScript_SlateportAideSkip:
+	setvar VAR_HOENN_AIDE_STATE, 1
 	end
 
 HoennSeek_EventScript_SlateportAide::

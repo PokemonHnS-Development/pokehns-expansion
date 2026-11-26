@@ -8,8 +8,10 @@ Reads data/hoenn/buildings.json (its comment explains the format). For each buil
   - data/maps/<name>/scripts.inc: the NPCs' scripts and texts (generated);
   - the outside map gets a warp on the door tile (and loses HnS's "locked door" sign
     there), so the door opens;
-  - map_groups.json lists the map (appended to gMapGroup_SpecialArea_Hns, so no other
-    map number moves) and data/event_scripts.s includes its scripts.
+  - map_groups.json lists the map and data/event_scripts.s includes its scripts. The 16
+    buildings of parts 8a-11 stay where they are in gMapGroup_SpecialArea_Hns; that group
+    is full (map numbers are s8 in warps, so 127 is the last), so a new building is
+    appended to gMapGroup_SpecialArea2_Hns. No existing map number moves either way.
 NPCs with "hints" are picked up by tools/hoenn/gen_hoenn_hints.py (run it afterwards).
 Re-runs rewrite the generated files and leave everything else alone. tools/hoenn/
 find_fake_doors.py lists the doors; hoenn-docs/buildings.md is the plan per building.
@@ -21,7 +23,9 @@ P = lambda *a: os.path.join(ROOT, *a)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_hoenn_hints import wrap  # noqa: E402  (same word wrap as every other generated text)
 
-GROUP = "gMapGroup_SpecialArea_Hns"
+GROUP = "gMapGroup_SpecialArea_Hns"   # the first 16 buildings (full now)
+NEW_GROUP = "gMapGroup_SpecialArea2_Hns"  # where new buildings go (part 17r)
+GROUP_LIMIT = 128  # map numbers 0-127 fit the s8 in struct WarpData
 INCLUDE_AFTER = '\t.include "data/maps/LilycoveCity_ContestHall_hoenn/scripts.inc" @ Hoenn & Seek'
 LOCKED_SIGNS = {"Route7_EventScript_Door"}  # HnS's "The door is locked." sign on fake doors
 FACING = {"down": "MOVEMENT_TYPE_FACE_DOWN", "up": "MOVEMENT_TYPE_FACE_UP", "left": "MOVEMENT_TYPE_FACE_LEFT",
@@ -172,8 +176,10 @@ def build(b, templates):
 
     # 3. Map group and script include.
     groups = load("data/maps/map_groups.json")
-    if name not in groups[GROUP]:
-        groups[GROUP].append(name)
+    if not any(name in groups[g] for g in (GROUP, NEW_GROUP)):
+        groups[NEW_GROUP].append(name)
+        if len(groups[NEW_GROUP]) > GROUP_LIMIT:
+            sys.exit("%s is full: map numbers past 127 don't fit a warp's s8" % NEW_GROUP)
         save("data/maps/map_groups.json", groups)
     es = open(P("data/event_scripts.s")).read()
     line = '\t.include "data/maps/%s/scripts.inc" @ Hoenn & Seek 2.0 (generated building)' % name

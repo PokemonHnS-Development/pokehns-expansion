@@ -521,6 +521,10 @@ HoennSeek_EventScript_VermilionFire::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	getplayerxy VAR_0x8004, VAR_0x8005
+	@ Keep the player's tile for the pan back: once the camera object moves,
+	@ getplayerxy reports the camera's tile instead (part 17r).
+	copyvar VAR_0x8008, VAR_0x8004
+	copyvar VAR_0x8009, VAR_0x8005
 	special SpawnCameraObject
 HoennSeek_EventScript_FirePanX:
 	goto_if_eq VAR_0x8004, 36, HoennSeek_EventScript_FirePanY
@@ -572,9 +576,42 @@ HoennSeek_EventScript_FireStarts:
 	waitmoncry
 	msgbox HoennSeek_Text_FireLeaderLooks, MSGBOX_DEFAULT
 	closemessage
+	call HoennSeek_EventScript_FirePanBack
 	special RemoveCameraObject
 	releaseall
 	end
+
+@ Walk the camera back from the house (36,22) to the player's tile (saved in
+@ VAR_0x8008/0x8009 before the pan), one tile at a time, before removing it.
+@ RemoveCameraObject alone leaves the view offset from the player, and the
+@ map then draws in the wrong places (part 17r).
+HoennSeek_EventScript_FirePanBack:
+	setvar VAR_0x8004, 36
+	setvar VAR_0x8005, 22
+HoennSeek_EventScript_FirePanBackY:
+	goto_if_eq VAR_0x8005, VAR_0x8009, HoennSeek_EventScript_FirePanBackX
+	goto_if_lt VAR_0x8005, VAR_0x8009, HoennSeek_EventScript_FirePanBackDown
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp1
+	waitmovement 0
+	subvar VAR_0x8005, 1
+	goto HoennSeek_EventScript_FirePanBackY
+HoennSeek_EventScript_FirePanBackDown:
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkDown1
+	waitmovement 0
+	addvar VAR_0x8005, 1
+	goto HoennSeek_EventScript_FirePanBackY
+HoennSeek_EventScript_FirePanBackX:
+	goto_if_eq VAR_0x8004, VAR_0x8008, HoennSeek_EventScript_KantoStarterReturn
+	goto_if_lt VAR_0x8004, VAR_0x8008, HoennSeek_EventScript_FirePanBackRight
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkLeft1
+	waitmovement 0
+	subvar VAR_0x8004, 1
+	goto HoennSeek_EventScript_FirePanBackX
+HoennSeek_EventScript_FirePanBackRight:
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkRight1
+	waitmovement 0
+	addvar VAR_0x8004, 1
+	goto HoennSeek_EventScript_FirePanBackX
 
 @ Smoke puffs over the roof: Lavaridge Gym's ash puff (map coordinates + 7;
 @ argument 2 is the subpriority, 3 the priority, above the roof).
