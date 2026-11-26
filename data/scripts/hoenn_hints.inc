@@ -210,130 +210,154 @@ HoennSeek_EventScript_HintNpc25::
 	callstd MSGBOX_NPC
 	end
 
-@ Route34_FishingShack_hoenn
+@ IndigoPlateau_PokemonCenter_hns
 HoennSeek_EventScript_HintNpc26::
 	callnative HoennSeek_NpcHint
 	.2byte 26
+	goto_if_eq VAR_RESULT, FALSE, IndigoPlateau_EventScript_Silver
+	callstd MSGBOX_NPC
+	end
+
+@ NewBarkTown_PlayersHouse_1F_hns
+HoennSeek_EventScript_HintNpc27::
+	callnative HoennSeek_NpcHint
+	.2byte 27
+	goto_if_eq VAR_RESULT, FALSE, NewBarkTown_PlayersHouse_1F_EventScript_Mom
+	callstd MSGBOX_NPC
+	end
+
+@ NewBarkTown_Lab_hns
+HoennSeek_EventScript_HintNpc28::
+	callnative HoennSeek_NpcHint
+	.2byte 28
+	goto_if_eq VAR_RESULT, FALSE, NewBarkTown_EventScript_Aide2
+	callstd MSGBOX_NPC
+	end
+
+@ Route34_FishingShack_hoenn
+HoennSeek_EventScript_HintNpc29::
+	callnative HoennSeek_NpcHint
+	.2byte 29
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_HarborOffice_hoenn
-HoennSeek_EventScript_HintNpc27::
+HoennSeek_EventScript_HintNpc30::
 	callnative HoennSeek_NpcHint
-	.2byte 27
+	.2byte 30
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_SailorsHouse_hoenn
-HoennSeek_EventScript_HintNpc28::
+HoennSeek_EventScript_HintNpc31::
 	callnative HoennSeek_NpcHint
-	.2byte 28
+	.2byte 31
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_CaptainsHouse_hoenn
-HoennSeek_EventScript_HintNpc29::
+HoennSeek_EventScript_HintNpc32::
 	callnative HoennSeek_NpcHint
-	.2byte 29
+	.2byte 32
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_TackleShop_hoenn
-HoennSeek_EventScript_HintNpc30::
+HoennSeek_EventScript_HintNpc33::
 	callnative HoennSeek_NpcHint
-	.2byte 30
+	.2byte 33
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_Shipwright_hoenn
-HoennSeek_EventScript_HintNpc31::
+HoennSeek_EventScript_HintNpc34::
 	callnative HoennSeek_NpcHint
-	.2byte 31
+	.2byte 34
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_KeepersHouse_hoenn
-HoennSeek_EventScript_HintNpc32::
+HoennSeek_EventScript_HintNpc35::
 	callnative HoennSeek_NpcHint
-	.2byte 32
+	.2byte 35
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ EcruteakCity_DanceTeacher_hoenn
-HoennSeek_EventScript_HintNpc33::
+HoennSeek_EventScript_HintNpc36::
 	callnative HoennSeek_NpcHint
-	.2byte 33
+	.2byte 36
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ Route34_BreedersHouse_hoenn
-HoennSeek_EventScript_HintNpc34::
+HoennSeek_EventScript_HintNpc37::
 	callnative HoennSeek_NpcHint
-	.2byte 34
+	.2byte 37
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route38_MoomooStoreroom_hoenn
-HoennSeek_EventScript_HintNpc35::
+HoennSeek_EventScript_HintNpc38::
 	callnative HoennSeek_NpcHint
-	.2byte 35
+	.2byte 38
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ BellchimeTrail_Lodge_hoenn
-HoennSeek_EventScript_HintNpc36::
+HoennSeek_EventScript_HintNpc39::
 	callnative HoennSeek_NpcHint
-	.2byte 36
+	.2byte 39
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_BugClub_hoenn
-HoennSeek_EventScript_HintNpc37::
+HoennSeek_EventScript_HintNpc40::
 	callnative HoennSeek_NpcHint
-	.2byte 37
+	.2byte 40
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_EngineersHouse_hoenn
-HoennSeek_EventScript_HintNpc38::
+HoennSeek_EventScript_HintNpc41::
 	callnative HoennSeek_NpcHint
-	.2byte 38
+	.2byte 41
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ CeladonCity_FloristsHouse_hoenn
-HoennSeek_EventScript_HintNpc39::
+HoennSeek_EventScript_HintNpc42::
 	callnative HoennSeek_NpcHint
-	.2byte 39
+	.2byte 42
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_IslandHome_hoenn
-HoennSeek_EventScript_HintNpc40::
+HoennSeek_EventScript_HintNpc43::
 	callnative HoennSeek_NpcHint
-	.2byte 40
+	.2byte 43
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_SurfShop_hoenn
-HoennSeek_EventScript_HintNpc41::
+HoennSeek_EventScript_HintNpc44::
 	callnative HoennSeek_NpcHint
-	.2byte 41
+	.2byte 44
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -449,6 +473,42 @@ HoennSeek_Text_Hint_LineTipJkBases::
 
 HoennSeek_Text_Hint_LineTipSites::
 	.string "The old legendary sites are open\nagain: the desert ruins, SKY\lPILLAR, even the caves under\lthe sea.\pThe POKéMON that slept there are\ngone. TRAINERS are making SECRET\lBASES in them!$"
+
+HoennSeek_Text_Hint_LineStorySilverCyndaquil::
+	.string "Hmph. Wild CYNDAQUIL turn up in\nthe BURNED TOWER at night.\pGo catch one if you want. Mine\nwill still burn it to a crisp.$"
+
+HoennSeek_Text_Hint_LineStorySilverTotodile::
+	.string "Hmph. A FERALIGATR is raising\nTOTODILE in the LAKE OF RAGE.\pOne of them is wild. Catch it if\nyou want. Mine's stronger.$"
+
+HoennSeek_Text_Hint_LineStorySilverChikorita::
+	.string "Hmph. There's a wild CHIKORITA in\na meadow off ROUTE 46.\pFollow the sweet smell by day.\nMine will never lose to it.$"
+
+HoennSeek_Text_Hint_LineStoryMomChikorita::
+	.string "PROF. ELM dropped by today.\pHe says CHIKORITA families\nsunbathe in a meadow off ROUTE 46.\pHe thought you'd like to see them,\nsince yours started it all!$"
+
+HoennSeek_Text_Hint_LineStoryMomCyndaquil::
+	.string "PROF. ELM dropped by today.\pHe says TYPHLOSION nest in the\nBURNED TOWER at night.\pHe thought you'd like to see them,\nsince yours started it all!$"
+
+HoennSeek_Text_Hint_LineStoryMomTotodile::
+	.string "PROF. ELM dropped by today.\pHe says a FERALIGATR raises its\nTOTODILE in the LAKE OF RAGE.\pHe thought you'd like to see them,\nsince yours started it all!$"
+
+HoennSeek_Text_Hint_LineStoryAideRunawayTotodile::
+	.string "PROF. BIRCH's TOTODILE is still\nloose somewhere.\pA sailor saw it at the LAKE OF\nRAGE, by the south shore.\pIt knows our lab's smell. If it\nsees you, it'll come to you!$"
+
+HoennSeek_Text_Hint_LineStoryAideRunawayChikorita::
+	.string "PROF. BIRCH's CHIKORITA is still\nloose somewhere.\pA sailor saw it run into the tall\ngrass on ROUTE 46.\pIt knows our lab's smell. If it\nsees you, it'll come to you!$"
+
+HoennSeek_Text_Hint_LineStoryAideRunawayCyndaquil::
+	.string "PROF. BIRCH's CYNDAQUIL is still\nloose somewhere.\pA sailor saw it by ECRUTEAK's\nBURNED TOWER, after dark.\pIt knows our lab's smell. If it\nsees you, it'll come to you!$"
+
+HoennSeek_Text_Hint_LineStoryAideChikorita::
+	.string "The PROF. is writing about\nCHIKORITA on ROUTE 46.\pThere's a hidden meadow there.\nHave you seen them?$"
+
+HoennSeek_Text_Hint_LineStoryAideCyndaquil::
+	.string "The PROF. is writing about\nTYPHLOSION in the BURNED TOWER.\pThey bring their young there at\nnight. Have you seen them?$"
+
+HoennSeek_Text_Hint_LineStoryAideTotodile::
+	.string "The PROF. is writing about a\nFERALIGATR in the LAKE OF RAGE.\pIt raises its TOTODILE by the\nsouth shore. Have you seen them?$"
 
 HoennSeek_Text_Hint_LineStoryFerry::
 	.string "PROF. OAK is said to give TRAINERS\nwith all 16 BADGES a ticket for\lthe ship to HOENN.\pShips leave from VERMILION's port.$"

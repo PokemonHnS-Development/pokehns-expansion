@@ -1,4 +1,4 @@
-@ Hoenn & Seek 2.0 part 15a: Johto starters A (plan section 5).
+@ Hoenn & Seek 2.0 parts 15a and 15b: Johto starters (plan section 5).
 @
 @ The other two Johto starters no longer come from Elm's table or Route 27's
 @ grass. Each one has a scene of its own, and every scene plays one of three
@@ -12,7 +12,8 @@
 @ Elm calls about the runaway. Each scene has a "family" (the evolved parent and
 @ one young one) and one young one that can stay behind; their hide flags are
 @ decided on every arrival, so the time of day is checked when you walk in.
-@ Totodile's Lake of Rage scene is part 15b.
+@ Chikorita and Cyndaquil came in part 15a, Totodile's Lake of Rage scene
+@ in part 15b.
 
 HoennSeek_EventScript_StarterEnd::
 	end
@@ -251,6 +252,125 @@ HoennSeek_EventScript_BurnedTowerCyndaquil::
 	givemon SPECIES_CYNDAQUIL, 5, move1=MOVE_EXTRASENSORY
 	goto HoennSeek_EventScript_StarterJoined
 
+@ ---- Totodile: the Lake of Rage's south cove, any time but night (15b) -------
+@ LakeOfRage_hns's OnTransition calls HoennSeek_EventScript_LakeOnTransition
+@ (one hook line). The cove is the water at x 24-28, rows 35-37, south of the
+@ lake: it's water at high and low tide. When the first sighting is due, all
+@ three stay hidden and VAR_TEMP_2 is 1, which arms the trigger tiles around
+@ the cove (the shore to the south, rows 38-40; x 29 to the east; the water
+@ to the north and west, so surfing in counts too). They surface in the scene.
+
+HoennSeek_EventScript_LakeOnTransition::
+	setflag FLAG_HOENN_HIDE_LAKE_FAMILY
+	setflag FLAG_HOENN_HIDE_LAKE_TOTODILE
+	goto_if_unset FLAG_HOENN_BEAT_BM, HoennSeek_EventScript_StarterReturn
+	gettimeofday
+	goto_if_eq VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_StarterReturn
+	goto_if_unset FLAG_HOENN_TOTODILE_SCENE, HoennSeek_EventScript_LakeArm
+	goto_if_eq VAR_STARTER_MON, 2, HoennSeek_EventScript_LakeFamily
+	goto_if_set FLAG_HOENN_TOTODILE_DONE, HoennSeek_EventScript_StarterReturn
+	clearflag FLAG_HOENN_HIDE_LAKE_TOTODILE
+	return
+HoennSeek_EventScript_LakeFamily:
+	clearflag FLAG_HOENN_HIDE_LAKE_FAMILY
+	clearflag FLAG_HOENN_HIDE_LAKE_TOTODILE
+	return
+HoennSeek_EventScript_LakeArm:
+	setvar VAR_TEMP_2, 1
+	return
+
+@ The first sighting: the family surfaces in the cove and splashes about.
+@ Watch-only (you chose Totodile): they stay and play. Otherwise the
+@ Feraligatr dives with one Totodile, and the other one hops ashore at (28,38),
+@ where it is on later visits. Pokémon in the water can't be talked to from
+@ land (the object takes the water's elevation), so the one you meet stands
+@ on the shore: it surfaces at (28,37) for the scene (setobjectxyperm lasts
+@ until you leave) and hops down.
+HoennSeek_EventScript_LakeFirstSight::
+	lockall
+	setvar VAR_TEMP_2, 0
+	setflag FLAG_HOENN_TOTODILE_SCENE
+	msgbox HoennSeek_Text_LakeArrive, MSGBOX_DEFAULT
+	closemessage
+	playse SE_M_DIVE
+	clearflag FLAG_HOENN_HIDE_LAKE_FAMILY
+	clearflag FLAG_HOENN_HIDE_LAKE_TOTODILE
+	addobject LOCALID_HOENN_LAKE_FERALIGATR
+	waitse
+	playmoncry SPECIES_FERALIGATR, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox HoennSeek_Text_LakeFeraligatr, MSGBOX_DEFAULT
+	closemessage
+	playse SE_M_BUBBLE
+	addobject LOCALID_HOENN_LAKE_TOTODILE_A
+	setobjectxyperm LOCALID_HOENN_LAKE_TOTODILE, 28, 37
+	addobject LOCALID_HOENN_LAKE_TOTODILE
+	waitse
+	applymovement LOCALID_HOENN_LAKE_TOTODILE_A, HoennSeek_Movement_StarterHop
+	applymovement LOCALID_HOENN_LAKE_TOTODILE, HoennSeek_Movement_StarterHop
+	playse SE_M_SURF
+	waitmovement 0
+	waitse
+	playmoncry SPECIES_TOTODILE, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox HoennSeek_Text_LakeSplash, MSGBOX_DEFAULT
+	closemessage
+	goto_if_eq VAR_STARTER_MON, 2, HoennSeek_EventScript_LakeWatched
+	playse SE_M_DIVE
+	removeobject LOCALID_HOENN_LAKE_FERALIGATR
+	removeobject LOCALID_HOENN_LAKE_TOTODILE_A
+	waitse
+	msgbox HoennSeek_Text_LakeDove, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_HOENN_LAKE_TOTODILE, HoennSeek_Movement_LakeHopAshore
+	waitmovement 0
+	call_if_eq VAR_STARTER_MON, 1, HoennSeek_EventScript_LakeStayedWild
+	call_if_eq VAR_STARTER_MON, 0, HoennSeek_EventScript_LakeStayedTag
+	releaseall
+	end
+HoennSeek_EventScript_LakeWatched:
+	msgbox HoennSeek_Text_LakeWatched, MSGBOX_DEFAULT
+	releaseall
+	end
+HoennSeek_EventScript_LakeStayedWild:
+	msgbox HoennSeek_Text_LakeStayedWild, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_LakeStayedTag:
+	msgbox HoennSeek_Text_LakeStayedTag, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_LakeFeraligatr::
+	lock
+	faceplayer
+	playmoncry SPECIES_FERALIGATR, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_LakeFeraligatrTalk, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_LakeTotodileFamily::
+	lock
+	faceplayer
+	playmoncry SPECIES_TOTODILE, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_LakeTotodileTalk, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+@ The Totodile that can stay: family member, a wild one or Birch's runaway.
+HoennSeek_EventScript_LakeTotodile::
+	goto_if_eq VAR_STARTER_MON, 2, HoennSeek_EventScript_LakeTotodileFamily
+	setvar VAR_0x8004, SPECIES_TOTODILE
+	goto_if_eq VAR_STARTER_MON, 1, HoennSeek_EventScript_StarterWild
+	lock
+	faceplayer
+	playmoncry SPECIES_TOTODILE, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_TotodileJoins, MSGBOX_DEFAULT
+	waitmoncry
+	bufferspeciesname STR_VAR_1, SPECIES_TOTODILE
+	givemon SPECIES_TOTODILE, 5, move1=MOVE_DRAGON_DANCE
+	goto HoennSeek_EventScript_StarterJoined
+
 @ ---- Shared endings ----------------------------------------------------------
 
 @ After givemon (VAR_0x8004 = species, STR_VAR_1 = its name). Sets the species'
@@ -300,12 +420,16 @@ HoennSeek_EventScript_StarterFainted:
 HoennSeek_EventScript_StarterSetDone::
 	call_if_eq VAR_0x8004, SPECIES_CHIKORITA, HoennSeek_EventScript_ChikoritaDone
 	call_if_eq VAR_0x8004, SPECIES_CYNDAQUIL, HoennSeek_EventScript_CyndaquilDone
+	call_if_eq VAR_0x8004, SPECIES_TOTODILE, HoennSeek_EventScript_TotodileDone
 	return
 HoennSeek_EventScript_ChikoritaDone:
 	setflag FLAG_HOENN_CHIKORITA_DONE
 	return
 HoennSeek_EventScript_CyndaquilDone:
 	setflag FLAG_HOENN_CYNDAQUIL_DONE
+	return
+HoennSeek_EventScript_TotodileDone:
+	setflag FLAG_HOENN_TOTODILE_DONE
 	return
 
 @ Scenes pan the camera two tiles down so the family isn't under the text box.
@@ -330,6 +454,11 @@ HoennSeek_Movement_CameraDown2:
 HoennSeek_Movement_CameraUp2:
 	walk_slow_up
 	walk_slow_up
+	step_end
+
+HoennSeek_Movement_LakeHopAshore:
+	jump_down
+	face_down
 	step_end
 
 HoennSeek_Movement_StarterHop::
@@ -454,6 +583,58 @@ HoennSeek_Text_CyndaquilJoins::
 	.string "It must smell PROF. ELM's lab\n"
 	.string "on your things! Its flames puff\l"
 	.string "up as it trots over to you.$"
+
+HoennSeek_Text_LakeArrive::
+	.string "Something is splashing about in\n"
+	.string "the shallows of the cove…$"
+
+HoennSeek_Text_LakeFeraligatr::
+	.string "A FERALIGATR surfaced!\p"
+	.string "It opens its huge jaws wide and\n"
+	.string "sprays water into the air.$"
+
+HoennSeek_Text_LakeSplash::
+	.string "Two TOTODILE pop up beside it,\n"
+	.string "snapping at the falling spray!$"
+
+HoennSeek_Text_LakeWatched::
+	.string "They chase each other in circles\n"
+	.string "around the FERALIGATR.\p"
+	.string "Your own TOTODILE used to snap\n"
+	.string "at the water just like that.$"
+
+HoennSeek_Text_LakeDove::
+	.string "The FERALIGATR dove, and one\n"
+	.string "TOTODILE followed it down…$"
+
+HoennSeek_Text_LakeStayedWild::
+	.string "…but the other one hopped up\n"
+	.string "onto the shore instead.\p"
+	.string "Just like the one your rival\n"
+	.string "chose… It's a wild one!$"
+
+HoennSeek_Text_LakeStayedTag::
+	.string "…but the other one hopped up\n"
+	.string "onto the shore instead.\p"
+	.string "There's a ferry tag around its\n"
+	.string "neck. It says: “TO PROF. ELM,\l"
+	.string "NEW BARK TOWN.”$"
+
+HoennSeek_Text_LakeFeraligatrTalk::
+	.string "FERALIGATR: Graaah!\p"
+	.string "It's floating calmly, keeping\n"
+	.string "an eye on the little ones.$"
+
+HoennSeek_Text_LakeTotodileTalk::
+	.string "The TOTODILE snaps playfully\n"
+	.string "at the ripples.$"
+
+HoennSeek_Text_TotodileJoins::
+	.string "The TOTODILE sniffs at\n"
+	.string "your bag…\p"
+	.string "It must smell PROF. ELM's lab\n"
+	.string "on your things! It waddles up\l"
+	.string "to you, ready to come along.$"
 
 HoennSeek_Text_StarterNoRoom::
 	.string "There's no room for it in your\n"

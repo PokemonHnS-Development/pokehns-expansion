@@ -56,11 +56,11 @@ static bool32 HoennIsJohtoKantoBase(u8 secretBaseId)
 // that got loose) is with you. VAR_STARTER_MON: 0 Chikorita, 1 Cyndaquil,
 // 2 Totodile; the unclaimed one is the third starter, never yours or the rival's
 // (Cyndaquil if you chose Totodile, Chikorita if Cyndaquil, Totodile if Chikorita).
-// Totodile's Lake of Rage scene comes in part 15b.
 static bool32 HoennFoundBirchStarter(void)
 {
     switch (VarGet(VAR_STARTER_MON))
     {
+    case 0:  return FlagGet(FLAG_HOENN_TOTODILE_DONE);
     case 1:  return FlagGet(FLAG_HOENN_CHIKORITA_DONE);
     case 2:  return FlagGet(FLAG_HOENN_CYNDAQUIL_DONE);
     default: return FALSE;
