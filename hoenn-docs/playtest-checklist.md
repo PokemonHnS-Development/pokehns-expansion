@@ -321,3 +321,4 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Walk every edge of the grotto, the orchard and Petalburg Woods' clearing: no gaps, nothing walkable that looks like a tree.
 - Route 113: the Munchlax at (14,14) is fully visible and the gap behind it still leads into the grotto once it's gone.
 - The orchard tree outside the morning ("The fruit is still up in the branches…"), then a berry in the morning.
+- The grotto (21r-b): leave by each of its four bottom tiles (x 6–9); the trees along its path aren't cut.
