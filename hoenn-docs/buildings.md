@@ -15,10 +15,10 @@ Part 8a checked every HnS door that leads nowhere (`tools/hoenn/find_fake_doors.
 | 5 | 8b ✅ | Olivine City | 27,15 | east row, 1st door | **Fishing tackle shop.** A small mart (Net/Dive/Lure Balls, Repels). |
 | 6 | 8b ✅ | Olivine City | 31,15 | east row, 2nd door | **Shipwright's workshop.** Workers, and talk of the lighthouse and Amphy. |
 | 7 | 8b ✅ | Olivine City | 35,15 | east row, 3rd door | **Lighthouse keeper's family.** Jasmine and Amphy lines, and a daily item. |
-| 8 | 9 | Ecruteak City | 57,25 | house by the east trees | **Kimono dance teacher's house.** Students practicing, and Eevee pets. |
-| 9 | 9 | Route 34 | 33,31 | house next to the Day Care | **Breeder's house.** Egg and breeding tips, with a hint NPC. |
-| 10 | 9 | Route 38 | 34,41 | ranch building | **Moomoo Farm storeroom.** A farmhand, Miltank, and a Moomoo Milk line. |
-| 11 | 9 | Bellchime Trail | 54,58 | lodge | **Tin Tower caretaker's lodge.** Sages, with legendary-bird rumors (rumor lines). |
+| 8 | 9 ✅ | Ecruteak City | 57,25 | house by the east trees | **Kimono dance teacher's house.** Students practicing, and Eevee pets. |
+| 9 | 9 ✅ | Route 34 | 33,31 | house next to the Day Care | **Breeder's house.** Egg and breeding tips, with a hint NPC. |
+| 10 | 9 ✅ | Route 38 | 34,41 | ranch building | **Moomoo Farm storeroom.** A farmhand, Miltank, and a Moomoo Milk line. |
+| 11 | 9 ✅ | Bellchime Trail | 54,58 | lodge | **Tin Tower caretaker's lodge.** Sages, with legendary-bird rumors (rumor lines). |
 | 12 | 10 | Route 6 | 21,17 | house west of the road | **Bug Catchers' club house.** Bug tips, and a Butterfree pet. |
 | 13 | 10 | Route 6 | 49,30 | house east of the road | **Retired Silph engineer.** Talk of the Magnet Train and Power Plant, with a hint NPC. |
 | 14 | 10 | Celadon City | 26,17 | house with a pond | **Florist's house.** Flowers, Bellossom, and a berry gift. |
@@ -45,7 +45,7 @@ Every building gets 1–4 NPCs, at least one of them a hint NPC (`"hints"` in `d
 
 ## Templates in use
 
-HnS's 13×10 houses come in three looks: yellow tile, wood floor, and Mr. Pokémon's white office. Small differences (a wall clock, a TV, a book on the table) set them apart. The chairs (left and right of the table, and the row above them) are walkable tiles, so keep NPCs off them. Templates so far: `house_a`–`house_e` (8a), `office` (Mr. Pokémon), `house_clock` (Lake of Rage 1), `house_tv` (Goldenrod 1), `house_wood` (Lake of Rage 2), `house_wood_book` (Ecruteak 2) and `house_yellow` (Pewter 1).
+HnS's 13×10 houses come in three looks: yellow tile, wood floor, and Mr. Pokémon's white office. Small differences (a wall clock, a TV, a book on the table) set them apart. The chairs (left and right of the table, and the row above them) are walkable tiles, so keep NPCs off them. Templates so far: `house_a`–`house_e` (8a), `office` (Mr. Pokémon), `house_clock` (Lake of Rage 1), `house_tv` (Goldenrod 1), `house_wood` (Lake of Rage 2), `house_wood_book` (Ecruteak 2), `house_yellow` (Pewter 1) (8b), and `house_wood_b` (Violet 2), `house_wood_c` (Blackthorn 2), `farmhouse` (Route 39) and `house_shelves` (New Bark 2) (9).
 
 ## How to add one
 

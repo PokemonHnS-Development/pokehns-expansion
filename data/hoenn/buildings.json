@@ -51,6 +51,18 @@
     },
     "house_yellow": {
       "from": "PewterCity_House1_hns"
+    },
+    "house_wood_b": {
+      "from": "VioletCity_House2_hns"
+    },
+    "house_wood_c": {
+      "from": "BlackthornCity_House2_hns"
+    },
+    "farmhouse": {
+      "from": "Route39_FarmHouse_hns"
+    },
+    "house_shelves": {
+      "from": "NewBarkTown_House2_hns"
     }
   },
   "buildings": [
@@ -442,6 +454,226 @@
           "x": 8,
           "y": 7,
           "facing": "wander"
+        }
+      ]
+    },
+    {
+      "name": "EcruteakCity_DanceTeacher_hoenn",
+      "door": {
+        "map": "EcruteakCity_hns",
+        "x": 57,
+        "y": 25
+      },
+      "template": "house_wood_b",
+      "purpose": "Kimono dance teacher's house: students practicing, and Eevee pets.",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_OLD_WOMAN_HNS",
+          "x": 9,
+          "y": 5,
+          "facing": "left",
+          "text": [
+            "I taught the KIMONO GIRLS of the DANCE THEATER, every one of them.",
+            "A dance is like a battle. Every step must flow into the next!"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_KIMONO_HNS",
+          "x": 2,
+          "y": 3,
+          "facing": "down",
+          "text": [
+            "One, two, turn... Oh! You surprised me.",
+            "I'm practicing for my first show at the DANCE THEATER."
+          ],
+          "hints": [
+            "TIP_REMINDER_JK"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_KIMONO_HNS",
+          "x": 2,
+          "y": 6,
+          "facing": "up",
+          "text": "Our teacher says EEVEE dance better than any of us. I think she's right!"
+        },
+        {
+          "type": "mon",
+          "species": "EEVEE",
+          "x": 6,
+          "y": 7,
+          "facing": "wander"
+        },
+        {
+          "type": "mon",
+          "species": "UMBREON",
+          "x": 10,
+          "y": 3,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "Route34_BreedersHouse_hoenn",
+      "door": {
+        "map": "Route34_hns",
+        "x": 33,
+        "y": 31
+      },
+      "template": "house_shelves",
+      "purpose": "Breeder's house next to the Day Care: egg and breeding tips, with a hint NPC.",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_3_HNS",
+          "x": 9,
+          "y": 4,
+          "facing": "left",
+          "text": [
+            "We moved here to be next door to the DAY-CARE.",
+            "Every morning I check whether the couple found another EGG!"
+          ],
+          "hints": [
+            "TIP_DAYCARE"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_MAN_HNS",
+          "x": 2,
+          "y": 5,
+          "facing": "right",
+          "text": [
+            "A POKéMON from an EGG can know moves its parents knew.",
+            "Breed with care and you'll get a strong one right from the start!"
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "DITTO",
+          "x": 8,
+          "y": 7,
+          "facing": "look"
+        },
+        {
+          "type": "mon",
+          "species": "TOGEPI",
+          "x": 2,
+          "y": 7,
+          "facing": "wander"
+        }
+      ]
+    },
+    {
+      "name": "Route38_MoomooStoreroom_hoenn",
+      "door": {
+        "map": "Route38_hns",
+        "x": 34,
+        "y": 41
+      },
+      "template": "farmhouse",
+      "purpose": "Moomoo Farm storeroom: a farmhand, Miltank, and a Moomoo Milk line.",
+      "signs": [
+        {
+          "x": 5,
+          "y": 4,
+          "text": "Crates of MOOMOO MILK bottles, packed and ready for GOLDENROD's DEPT. STORE."
+        },
+        {
+          "x": 6,
+          "y": 4,
+          "text": "Crates of MOOMOO MILK bottles, packed and ready for GOLDENROD's DEPT. STORE."
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_MAN_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "text": [
+            "MOOMOO MILK from this farm goes all over JOHTO.",
+            "One bottle restores 100 HP. Ask at the farmhouse if you want to buy some!"
+          ],
+          "hints": [
+            "TIP_CLOCK"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LASS_HNS",
+          "x": 9,
+          "y": 6,
+          "facing": "up",
+          "text": "This MILTANK gives the best milk on the farm. She likes it in here where it's cool."
+        },
+        {
+          "type": "mon",
+          "species": "MILTANK",
+          "x": 9,
+          "y": 3,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "BellchimeTrail_Lodge_hoenn",
+      "door": {
+        "map": "BellchimeTrail_hns",
+        "x": 54,
+        "y": 58
+      },
+      "template": "house_wood_c",
+      "purpose": "Tin Tower caretaker's lodge: sages, with legendary-bird rumors.",
+      "signs": [
+        {
+          "x": 6,
+          "y": 4,
+          "text": "A worn scroll. It shows TIN TOWER, and a great bird of many colors circling above it."
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "text": "A worn scroll. It shows TIN TOWER, and a great bird of many colors circling above it."
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_SAGE_ELDER_HNS",
+          "x": 9,
+          "y": 4,
+          "facing": "left",
+          "text": [
+            "We sweep TIN TOWER's steps every dawn, though the bird of many colors has not landed there in years.",
+            "They say it comes only for a TRAINER it has chosen."
+          ],
+          "hints": [
+            "TIP_NAMERATER_JK"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_SAGE_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "text": [
+            "The bird of TIN TOWER has a partner, they say, one that sleeps under the sea.",
+            "Some fishermen swear they've heard it singing near the WHIRL ISLANDS."
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_SAGE_HNS",
+          "x": 9,
+          "y": 7,
+          "facing": "up",
+          "text": "The BELL TOWER's bells ring out with the wind. A good sage can tell the weather by their tune."
         }
       ]
     }

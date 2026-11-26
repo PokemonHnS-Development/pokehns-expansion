@@ -172,6 +172,11 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Lighthouse keeper's wife: one find a day (Pearl; Stardust on Tue/Thu; Big Pearl at weekends). Check that it resets the next day with a real clock, and what she says with a full bag.
 - [ ] The wall clock in the captain's house (with a set clock; debug saves show "The clock is stopped").
 
+## 2.0 part 9 — Johto buildings
+- [ ] Walk into Ecruteak's house by the east trees (57,25), the house next to Route 34's Day Care (33,31), Route 38's ranch building (34,41) and Bellchime Trail's lodge (54,58), and out again. Read the texts in place (no review yet).
+- [ ] The breeder alternates her line with the new Day-Care tip. Does the tip fit, given the Day Care is next door?
+- [ ] The lodge sages' Ho-Oh/Lugia lore doesn't contradict HnS's own legendary story.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

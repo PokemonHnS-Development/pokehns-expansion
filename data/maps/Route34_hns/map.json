@@ -524,6 +524,13 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE34_FISHING_SHACK_HOENN",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 33,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE34_BREEDERS_HOUSE_HOENN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

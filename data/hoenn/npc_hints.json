@@ -27,6 +27,7 @@
   ],
 
   "lines": {
+    "TIP_DAYCARE":    {"kind": "tip", "text": ["The DAY-CARE couple on ROUTE 34 will raise two POKéMON for you.", "Leave two that get along, and one day they may find an EGG!"]},
     "TIP_CLOCK":      {"kind": "tip", "text": "Did you know? The clock on the wall in any POKéMON CENTER lets you set the day and the time."},
     "TIP_LEVEL_CAP":  {"kind": "tip", "if": [{"level_cap": true}], "text": ["With the LEVEL CAP on, your POKéMON stop growing at the next GYM LEADER's level.", "Every BADGE you win raises the cap a little."]},
     "TIP_WEATHER":    {"kind": "tip", "text": ["Some POKéMON only come out when the weather turns.", "Rainy days and stormy days bring out different faces in the grass!"]},
