@@ -143,6 +143,8 @@ u16 HoennOrchardBerry(void)
 //    (Feebas becomes Milotic, the contest star).
 //  - Brendan, Zangoose vs. Seviper: Magma's researchers by Meteor Falls watch
 //    the fight every Sunday and told Birch (they measure volcanoes together).
+//  - May, Absol (part 22a): WINONA flew home through the storm and saw it from
+//    the air; she told Norman, who hears every gym leader's news.
 u16 HoennHiddenDueCall(void)
 {
     if (FlagGet(FLAG_HOENN_MUNCHLAX_DONE) && !FlagGet(FLAG_HOENN_CALL_MUNCHLAX))
@@ -155,6 +157,8 @@ u16 HoennHiddenDueCall(void)
         return HOENN_CALL_FEEBAS;
     if (FlagGet(FLAG_HOENN_FEUD_MET) && !FlagGet(FLAG_HOENN_CALL_FEUD))
         return HOENN_CALL_FEUD;
+    if (FlagGet(FLAG_HOENN_ABSOL_WOKEN) && !FlagGet(FLAG_HOENN_CALL_ABSOL))
+        return HOENN_CALL_ABSOL;
     return HOENN_CALL_NONE;
 }
 

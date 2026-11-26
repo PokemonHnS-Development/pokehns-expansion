@@ -43,6 +43,9 @@ extern const u8 HoennSeek_Text_Hint_RumorTropiusNotes[];
 extern const u8 HoennSeek_Text_Hint_RumorFeudBefore[];
 extern const u8 HoennSeek_Text_Hint_RumorFeudAfter[];
 extern const u8 HoennSeek_Text_Hint_RumorFeudNotes[];
+extern const u8 HoennSeek_Text_Hint_RumorAbsolBefore[];
+extern const u8 HoennSeek_Text_Hint_RumorAbsolAfter[];
+extern const u8 HoennSeek_Text_Hint_RumorAbsolNotes[];
 extern const u8 HoennSeek_Text_Hint_LineTipDaycare[];
 extern const u8 HoennSeek_Text_Hint_LineTipBugContest[];
 extern const u8 HoennSeek_Text_Hint_LineTipClock[];
@@ -89,6 +92,7 @@ extern const u8 HoennSeek_Text_Hint_LineStorySlaking[];
 extern const u8 HoennSeek_Text_Hint_LineStoryTropius[];
 extern const u8 HoennSeek_Text_Hint_LineStoryFeebas[];
 extern const u8 HoennSeek_Text_Hint_LineStoryFeud[];
+extern const u8 HoennSeek_Text_Hint_LineStoryAbsol[];
 extern const u8 HoennSeek_Text_Hint_Forecast0[];
 extern const u8 HoennSeek_Text_Hint_Forecast1[];
 extern const u8 HoennSeek_Text_Hint_Forecast2[];
@@ -96,6 +100,7 @@ extern const u8 HoennSeek_Text_Hint_Forecast3[];
 extern const u8 HoennSeek_Text_Hint_Forecast4[];
 extern const u8 HoennSeek_Text_Hint_Forecast5[];
 extern const u8 HoennSeek_Text_Hint_Forecast6[];
+extern const u8 HoennSeek_Text_Hint_Forecast7[];
 
 static const struct HoennHintRumor sHintRumors[] = {
     { (const struct HoennHintCond[]){{HINT_IF_CAUGHT, SPECIES_CASTFORM, 0}}, 1, HoennSeek_Text_Hint_RumorCastformBefore, HoennSeek_Text_Hint_RumorCastformAfter, HoennSeek_Text_Hint_RumorCastformNotes }, // CASTFORM
@@ -112,6 +117,7 @@ static const struct HoennHintRumor sHintRumors[] = {
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_SLAKING_DONE, 0}}, 1, HoennSeek_Text_Hint_RumorSlakingBefore, HoennSeek_Text_Hint_RumorSlakingAfter, HoennSeek_Text_Hint_RumorSlakingNotes }, // SLAKING
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_TROPIUS_MET, 0}}, 1, HoennSeek_Text_Hint_RumorTropiusBefore, HoennSeek_Text_Hint_RumorTropiusAfter, HoennSeek_Text_Hint_RumorTropiusNotes }, // TROPIUS
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_FEUD_MET, 0}}, 1, HoennSeek_Text_Hint_RumorFeudBefore, HoennSeek_Text_Hint_RumorFeudAfter, HoennSeek_Text_Hint_RumorFeudNotes }, // FEUD
+    { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_ABSOL_WOKEN, 0}}, 1, HoennSeek_Text_Hint_RumorAbsolBefore, HoennSeek_Text_Hint_RumorAbsolAfter, HoennSeek_Text_Hint_RumorAbsolNotes }, // ABSOL
 };
 
 static const struct HoennHintLine sHintLines[] = {
@@ -164,6 +170,7 @@ static const struct HoennHintLine sHintLines[] = {
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_SLAKING_DONE, 0}}, 1, NULL, HINT_RUMOR, 11 }, // RUMOR_SLAKING
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_TROPIUS_MET, 0}}, 1, NULL, HINT_RUMOR, 12 }, // RUMOR_TROPIUS
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_FEUD_MET, 0}}, 1, NULL, HINT_RUMOR, 13 }, // RUMOR_FEUD
+    { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_ABSOL_CAUGHT, 0}}, 1, NULL, HINT_RUMOR, 14 }, // RUMOR_ABSOL
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_POND_SEEN, 0}}, 1, HoennSeek_Text_Hint_LineStoryPond, HINT_STORY, 0 }, // STORY_POND
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_RALTS_DONE, 0}}, 1, HoennSeek_Text_Hint_LineStoryRalts, HINT_STORY, 0 }, // STORY_RALTS
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_SCIZOR_QUICK_CLAW, 0}}, 1, HoennSeek_Text_Hint_LineStoryScizor, HINT_STORY, 0 }, // STORY_SCIZOR
@@ -175,6 +182,7 @@ static const struct HoennHintLine sHintLines[] = {
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_TROPIUS_MET, 0}}, 1, HoennSeek_Text_Hint_LineStoryTropius, HINT_STORY, 0 }, // STORY_TROPIUS
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_FEEBAS_PRISM_GIVEN, 0}}, 1, HoennSeek_Text_Hint_LineStoryFeebas, HINT_STORY, 0 }, // STORY_FEEBAS
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_FEUD_MET, 0}}, 1, HoennSeek_Text_Hint_LineStoryFeud, HINT_STORY, 0 }, // STORY_FEUD
+    { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_ABSOL_WOKEN, 0}}, 1, HoennSeek_Text_Hint_LineStoryAbsol, HINT_STORY, 0 }, // STORY_ABSOL
     { NULL, 0, NULL, HINT_FORECAST, 0 }, // FORECAST
 };
 
@@ -199,9 +207,9 @@ static const struct HoennHintNpc sHintNpcs[] = {
     { (const u8[]){32, 35}, 2, FALSE }, // MauvilleCity_PokemonCenter_1F
     { (const u8[]){33, 44, 45, 48, 7, 15}, 6, FALSE }, // FallarborTown_PokemonCenter_1F
     { (const u8[]){34, 36, 47}, 3, FALSE }, // FortreeCity_PokemonCenter_1F
-    { (const u8[]){36, 15}, 2, FALSE }, // LilycoveCity_PokemonCenter_1F
+    { (const u8[]){36, 15, 49}, 3, FALSE }, // LilycoveCity_PokemonCenter_1F
     { (const u8[]){33, 9, 3}, 3, FALSE }, // MossdeepCity_PokemonCenter_1F
-    { (const u8[]){60}, 1, TRUE }, // Route119_WeatherInstitute_1F
+    { (const u8[]){62}, 1, TRUE }, // Route119_WeatherInstitute_1F
     { (const u8[]){10, 11, 12}, 3, FALSE }, // CianwoodCity_hns
     { (const u8[]){10, 11, 12}, 3, FALSE }, // OlivineCity_hns
     { (const u8[]){13}, 1, FALSE }, // DewfordTown
@@ -209,18 +217,19 @@ static const struct HoennHintNpc sHintNpcs[] = {
     { (const u8[]){19, 20, 21}, 3, FALSE }, // NewBarkTown_PlayersHouse_1F_hns
     { (const u8[]){22, 23, 24, 25, 26, 27}, 6, FALSE }, // NewBarkTown_Lab_hns
     { (const u8[]){28}, 1, FALSE }, // Route25_BillsHouse_hns
+    { (const u8[]){51}, 1, FALSE }, // Route102
     { (const u8[]){50}, 1, FALSE }, // Route102
-    { (const u8[]){49}, 1, FALSE }, // Route102
     { (const u8[]){46, 39}, 2, FALSE }, // PetalburgCity_PokemonCenter_1F
-    { (const u8[]){51}, 1, FALSE }, // NationalPark_Normal_hns
-    { (const u8[]){52}, 1, FALSE }, // LavenderTown_hns
-    { (const u8[]){53}, 1, FALSE }, // AzaleaTown_hns
-    { (const u8[]){54}, 1, FALSE }, // Route113
+    { (const u8[]){52}, 1, FALSE }, // NationalPark_Normal_hns
+    { (const u8[]){53}, 1, FALSE }, // LavenderTown_hns
+    { (const u8[]){54}, 1, FALSE }, // AzaleaTown_hns
     { (const u8[]){55}, 1, FALSE }, // Route113
-    { (const u8[]){56}, 1, FALSE }, // PetalburgWoods
-    { (const u8[]){57}, 1, FALSE }, // FortreeCity
-    { (const u8[]){58}, 1, FALSE }, // Route119
-    { (const u8[]){59}, 1, FALSE }, // FallarborTown
+    { (const u8[]){56}, 1, FALSE }, // Route113
+    { (const u8[]){57}, 1, FALSE }, // PetalburgWoods
+    { (const u8[]){58}, 1, FALSE }, // FortreeCity
+    { (const u8[]){59}, 1, FALSE }, // Route119
+    { (const u8[]){60}, 1, FALSE }, // FallarborTown
+    { (const u8[]){61}, 1, FALSE }, // FortreeCity
     { (const u8[]){4, 2}, 2, FALSE }, // Route34_FishingShack_hoenn
     { (const u8[]){30, 7}, 2, FALSE }, // OlivineCity_HarborOffice_hoenn
     { (const u8[]){6, 8}, 2, FALSE }, // OlivineCity_SailorsHouse_hoenn
@@ -240,11 +249,12 @@ static const struct HoennHintNpc sHintNpcs[] = {
 };
 
 static const struct HoennForecast sForecasts[] = {
-    { MAP_ROUTE120, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_CASTFORM, 0}}, 1, HoennSeek_Text_Hint_Forecast0, TRUE }, // Route120
-    { MAP_ROUTE119, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_CASTFORM, 0}}, 1, HoennSeek_Text_Hint_Forecast1, TRUE }, // Route119
-    { MAP_ROUTE123, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_CASTFORM, 0}}, 1, HoennSeek_Text_Hint_Forecast2, TRUE }, // Route123
-    { MAP_ROUTE104, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_MASQUERAIN, 0}}, 1, HoennSeek_Text_Hint_Forecast3, TRUE }, // Route104
-    { MAP_ROUTE117, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_MASQUERAIN, 0}}, 1, HoennSeek_Text_Hint_Forecast4, TRUE }, // Route117
-    { MAP_ROUTE114, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_MASQUERAIN, 0}}, 1, HoennSeek_Text_Hint_Forecast5, TRUE }, // Route114
-    { MAP_ROUTE121, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_MASQUERAIN, 0}}, 1, HoennSeek_Text_Hint_Forecast6, TRUE }, // Route121
+    { MAP_ROUTE120, (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_ABSOL_CAUGHT, 0}}, 1, HoennSeek_Text_Hint_Forecast0, TRUE }, // Route120
+    { MAP_ROUTE120, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_CASTFORM, 0}}, 1, HoennSeek_Text_Hint_Forecast1, TRUE }, // Route120
+    { MAP_ROUTE119, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_CASTFORM, 0}}, 1, HoennSeek_Text_Hint_Forecast2, TRUE }, // Route119
+    { MAP_ROUTE123, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_CASTFORM, 0}}, 1, HoennSeek_Text_Hint_Forecast3, TRUE }, // Route123
+    { MAP_ROUTE104, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_MASQUERAIN, 0}}, 1, HoennSeek_Text_Hint_Forecast4, TRUE }, // Route104
+    { MAP_ROUTE117, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_MASQUERAIN, 0}}, 1, HoennSeek_Text_Hint_Forecast5, TRUE }, // Route117
+    { MAP_ROUTE114, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_MASQUERAIN, 0}}, 1, HoennSeek_Text_Hint_Forecast6, TRUE }, // Route114
+    { MAP_ROUTE121, (const struct HoennHintCond[]){{HINT_IF_NOT_CAUGHT, SPECIES_MASQUERAIN, 0}}, 1, HoennSeek_Text_Hint_Forecast7, TRUE }, // Route121
 };

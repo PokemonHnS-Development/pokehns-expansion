@@ -338,130 +338,138 @@ HoennSeek_EventScript_HintNpc41::
 	callstd MSGBOX_NPC
 	end
 
-@ Route34_FishingShack_hoenn
+@ FortreeCity
 HoennSeek_EventScript_HintNpc42::
 	callnative HoennSeek_NpcHint
 	.2byte 42
+	goto_if_eq VAR_RESULT, FALSE, FortreeCity_EventScript_OldMan
+	callstd MSGBOX_NPC
+	end
+
+@ Route34_FishingShack_hoenn
+HoennSeek_EventScript_HintNpc43::
+	callnative HoennSeek_NpcHint
+	.2byte 43
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_HarborOffice_hoenn
-HoennSeek_EventScript_HintNpc43::
+HoennSeek_EventScript_HintNpc44::
 	callnative HoennSeek_NpcHint
-	.2byte 43
+	.2byte 44
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_SailorsHouse_hoenn
-HoennSeek_EventScript_HintNpc44::
+HoennSeek_EventScript_HintNpc45::
 	callnative HoennSeek_NpcHint
-	.2byte 44
+	.2byte 45
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_CaptainsHouse_hoenn
-HoennSeek_EventScript_HintNpc45::
+HoennSeek_EventScript_HintNpc46::
 	callnative HoennSeek_NpcHint
-	.2byte 45
+	.2byte 46
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_TackleShop_hoenn
-HoennSeek_EventScript_HintNpc46::
+HoennSeek_EventScript_HintNpc47::
 	callnative HoennSeek_NpcHint
-	.2byte 46
+	.2byte 47
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_Shipwright_hoenn
-HoennSeek_EventScript_HintNpc47::
+HoennSeek_EventScript_HintNpc48::
 	callnative HoennSeek_NpcHint
-	.2byte 47
+	.2byte 48
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_KeepersHouse_hoenn
-HoennSeek_EventScript_HintNpc48::
+HoennSeek_EventScript_HintNpc49::
 	callnative HoennSeek_NpcHint
-	.2byte 48
+	.2byte 49
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ EcruteakCity_DanceTeacher_hoenn
-HoennSeek_EventScript_HintNpc49::
+HoennSeek_EventScript_HintNpc50::
 	callnative HoennSeek_NpcHint
-	.2byte 49
+	.2byte 50
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ Route34_BreedersHouse_hoenn
-HoennSeek_EventScript_HintNpc50::
+HoennSeek_EventScript_HintNpc51::
 	callnative HoennSeek_NpcHint
-	.2byte 50
+	.2byte 51
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route38_MoomooStoreroom_hoenn
-HoennSeek_EventScript_HintNpc51::
+HoennSeek_EventScript_HintNpc52::
 	callnative HoennSeek_NpcHint
-	.2byte 51
+	.2byte 52
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ BellchimeTrail_Lodge_hoenn
-HoennSeek_EventScript_HintNpc52::
+HoennSeek_EventScript_HintNpc53::
 	callnative HoennSeek_NpcHint
-	.2byte 52
+	.2byte 53
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_BugClub_hoenn
-HoennSeek_EventScript_HintNpc53::
+HoennSeek_EventScript_HintNpc54::
 	callnative HoennSeek_NpcHint
-	.2byte 53
+	.2byte 54
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_EngineersHouse_hoenn
-HoennSeek_EventScript_HintNpc54::
+HoennSeek_EventScript_HintNpc55::
 	callnative HoennSeek_NpcHint
-	.2byte 54
+	.2byte 55
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ CeladonCity_FloristsHouse_hoenn
-HoennSeek_EventScript_HintNpc55::
+HoennSeek_EventScript_HintNpc56::
 	callnative HoennSeek_NpcHint
-	.2byte 55
+	.2byte 56
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_IslandHome_hoenn
-HoennSeek_EventScript_HintNpc56::
+HoennSeek_EventScript_HintNpc57::
 	callnative HoennSeek_NpcHint
-	.2byte 56
+	.2byte 57
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_SurfShop_hoenn
-HoennSeek_EventScript_HintNpc57::
+HoennSeek_EventScript_HintNpc58::
 	callnative HoennSeek_NpcHint
-	.2byte 57
+	.2byte 58
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -620,6 +628,15 @@ HoennSeek_Text_Hint_RumorFeudAfter::
 HoennSeek_Text_Hint_RumorFeudNotes::
 	.string "Two old enemies meet on ROUTE\n114's lake island on\lSunday nights.$"
 
+HoennSeek_Text_Hint_RumorAbsolBefore::
+	.string "They say a white POKéMON stands\nover ROUTE 120 on stormy nights.\lNobody's ever caught it.$"
+
+HoennSeek_Text_Hint_RumorAbsolAfter::
+	.string "Somebody saw the white one on\nROUTE 120's ridge! Now it runs\lthrough the grass on\lstormy nights.$"
+
+HoennSeek_Text_Hint_RumorAbsolNotes::
+	.string "On ROUTE 120's storm nights,\nsomething white watches from the\lridge between the paths.$"
+
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
 
@@ -758,25 +775,31 @@ HoennSeek_Text_Hint_LineStoryFeebas::
 HoennSeek_Text_Hint_LineStoryFeud::
 	.string "Every Sunday night, same island on\nROUTE 114's lake, same fight.\pZANGOOSE and SEVIPER. Surf out\nthere if you dare!$"
 
+HoennSeek_Text_Hint_LineStoryAbsol::
+	.string "The white one stands on the cliff\nwhen the storm rolls in.\pOn ROUTE 120, up on the ridge\nbetween the paths. Only on the\lstormy nights, mind you.$"
+
 HoennSeek_Text_Hint_Forecast0::
-	.string "Our instruments say ROUTE 120 gets\na thunderstorm {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"
+	.string "Storms are rolling in around ROUTE\n120 {STR_VAR_1}.\pFolks say that's when the white\none walks.$"
 
 HoennSeek_Text_Hint_Forecast1::
-	.string "Our instruments say a thunderstorm\nreaches ROUTE 119 {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"
+	.string "Our instruments say ROUTE 120 gets\na thunderstorm {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"
 
 HoennSeek_Text_Hint_Forecast2::
-	.string "Our instruments say heavy rain\nreaches ROUTE 123 {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"
+	.string "Our instruments say a thunderstorm\nreaches ROUTE 119 {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"
 
 HoennSeek_Text_Hint_Forecast3::
-	.string "Rain is coming to ROUTES 101 to\n104 {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
+	.string "Our instruments say heavy rain\nreaches ROUTE 123 {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"
 
 HoennSeek_Text_Hint_Forecast4::
-	.string "Rain is coming to the routes\naround MAUVILLE {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
+	.string "Rain is coming to ROUTES 101 to\n104 {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
 
 HoennSeek_Text_Hint_Forecast5::
-	.string "Rain is coming to ROUTES 114 and\n115 {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
+	.string "Rain is coming to the routes\naround MAUVILLE {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
 
 HoennSeek_Text_Hint_Forecast6::
+	.string "Rain is coming to ROUTES 114 and\n115 {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
+
+HoennSeek_Text_Hint_Forecast7::
 	.string "Rain is coming to ROUTE\n121 {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
 
 HoennSeek_Text_FieldNotesIntro:
