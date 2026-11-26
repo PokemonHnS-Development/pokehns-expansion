@@ -59,6 +59,7 @@
 #include "constants/weather.h"
 #include "fishing.h"
 #include "nuzlocke.h"
+#include "hoenn_battle_bg.h" // Hoenn & Seek (2.0 part 13b)
 
 enum TransitionType
 {
@@ -1011,6 +1012,9 @@ enum BattleEnvironments BattleSetup_GetEnvironmentId(void)
     // Per-map default: if this map is in the table, use its environment
     currentMap = (gSaveBlock1Ptr->location.mapGroup << 8) | gSaveBlock1Ptr->location.mapNum;
     mapDefault = GetMapDefaultEnvironment(currentMap);
+#if IS_HNS
+    mapDefault = HoennMapEnvironment(mapDefault, tileBehavior); // Hoenn & Seek: Route 111's desert (2.0 part 13b)
+#endif
     if (mapDefault >= 0)
         return mapDefault;
 

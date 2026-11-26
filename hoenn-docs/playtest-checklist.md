@@ -207,6 +207,12 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Brendan's call after you make a base in Johto or Kanto (needs his number from Birch).
 - [ ] The tip at the Azalea, Blackthorn and Pewter Pokémon Centers goes away after Brendan's call.
 
+## 2.0 part 13b — Battle backgrounds
+- [ ] Route 111: a wild battle (and a trainer) in the desert shows the dunes; one on the grassy north or south end still shows the mountain trail.
+- [ ] Route 113: battles show the grey ash fields; Mt. Pyre's outside and summit show the misty graveyard. Check one at night and one in the evening.
+- [ ] Surfing on Route 111's ponds and battles against gym leaders elsewhere still use their own backgrounds.
+- [ ] Switch the options to classic backgrounds: the three maps fall back to HnS's mountain/sand art with no glitches.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

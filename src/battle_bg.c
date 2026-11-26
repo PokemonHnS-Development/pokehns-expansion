@@ -32,6 +32,7 @@
 #include "constants/battle_partner.h"
 #include "rtc.h"
 #include "data/battle_environment.h"
+#include "hoenn_battle_bg.h" // Hoenn & Seek (2.0 part 13b)
 
 // .rodata
 
@@ -921,6 +922,9 @@ static void LoadBattleEnvironmentGfx(u16 environment)
             else if (terrainTime == BATTLE_TERRAIN_TIME_TWILIGHT && modern->paletteTwilight)
                 palette = modern->paletteTwilight;
         }
+    #if IS_HNS
+        HoennBattleBackground(environment, GetBattleTerrainTimeOfDay(), &tileset, &tilemap, &palette); // Hoenn & Seek (2.0 part 13b)
+    #endif
     }
 
     DecompressDataWithHeaderVram(tileset, (void *)(BG_CHAR_ADDR(2)));
@@ -945,6 +949,9 @@ static void LoadBattleEnvironmentEntryGfx(u16 environment)
             tileset = modern->entry.tileset;
         if (modern->entry.tilemap)
             tilemap = modern->entry.tilemap;
+    #if IS_HNS
+        HoennBattleBackgroundEntry(environment, &tileset, &tilemap); // Hoenn & Seek (2.0 part 13b)
+    #endif
     }
 
     DecompressDataWithHeaderVram(tileset, (void *)BG_CHAR_ADDR(1));
