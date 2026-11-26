@@ -65,6 +65,7 @@ HoennSeek_EventScript_MeadowFirstSight::
 	goto_if_set FLAG_HOENN_HIDE_MEADOW_CHIKORITA, HoennSeek_EventScript_StarterEnd
 	lockall
 	setflag FLAG_HOENN_CHIKORITA_SCENE
+	call HoennSeek_EventScript_StarterPanDown
 	msgbox HoennSeek_Text_MeadowArrive, MSGBOX_DEFAULT
 	goto_if_unset FLAG_HOENN_HIDE_MEADOW_FAMILY, HoennSeek_EventScript_MeadowFamilyScene
 	playmoncry SPECIES_CHIKORITA, CRY_MODE_NORMAL
@@ -73,6 +74,8 @@ HoennSeek_EventScript_MeadowFirstSight::
 	waitmoncry
 	call_if_eq VAR_STARTER_MON, 1, HoennSeek_EventScript_MeadowLoneTag
 	call_if_eq VAR_STARTER_MON, 2, HoennSeek_EventScript_MeadowLoneWild
+	closemessage
+	call HoennSeek_EventScript_StarterPanBack
 	releaseall
 	end
 HoennSeek_EventScript_MeadowLoneTag:
@@ -95,6 +98,8 @@ HoennSeek_EventScript_MeadowFamilyScene:
 	waitmovement 0
 	waitmoncry
 	msgbox HoennSeek_Text_MeadowFamilyWatch, MSGBOX_DEFAULT
+	closemessage
+	call HoennSeek_EventScript_StarterPanBack
 	releaseall
 	end
 
@@ -169,6 +174,9 @@ HoennSeek_EventScript_BurnedTowerFirstSight::
 	lockall
 	setvar VAR_TEMP_4, 0
 	setflag FLAG_HOENN_CYNDAQUIL_SCENE
+	setvar VAR_0x8007, 0
+	getplayerxy VAR_0x8005, VAR_0x8006
+	call_if_lt VAR_0x8006, 14, HoennSeek_EventScript_StarterPanDown
 	msgbox HoennSeek_Text_BurnedTowerArrive, MSGBOX_DEFAULT
 	closemessage
 	playmoncry SPECIES_TYPHLOSION, CRY_MODE_NORMAL
@@ -194,6 +202,8 @@ HoennSeek_EventScript_BurnedTowerFirstSight::
 	call_if_eq VAR_STARTER_MON, 1, HoennSeek_EventScript_BurnedTowerWatched
 	call_if_eq VAR_STARTER_MON, 0, HoennSeek_EventScript_BurnedTowerStayedWild
 	call_if_eq VAR_STARTER_MON, 2, HoennSeek_EventScript_BurnedTowerStayedTag
+	closemessage
+	call HoennSeek_EventScript_StarterPanBack
 	releaseall
 	end
 HoennSeek_EventScript_BurnedTowerAllLeave:
@@ -297,6 +307,30 @@ HoennSeek_EventScript_ChikoritaDone:
 HoennSeek_EventScript_CyndaquilDone:
 	setflag FLAG_HOENN_CYNDAQUIL_DONE
 	return
+
+@ Scenes pan the camera two tiles down so the family isn't under the text box.
+HoennSeek_EventScript_StarterPanDown::
+	setvar VAR_0x8007, 1
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_CameraDown2
+	waitmovement 0
+	return
+HoennSeek_EventScript_StarterPanBack::
+	goto_if_ne VAR_0x8007, 1, HoennSeek_EventScript_StarterReturn
+	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_CameraUp2
+	waitmovement 0
+	special RemoveCameraObject
+	setvar VAR_0x8007, 0
+	return
+
+HoennSeek_Movement_CameraDown2:
+	walk_slow_down
+	walk_slow_down
+	step_end
+HoennSeek_Movement_CameraUp2:
+	walk_slow_up
+	walk_slow_up
+	step_end
 
 HoennSeek_Movement_StarterHop::
 	jump_in_place_down

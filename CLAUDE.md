@@ -77,7 +77,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
 | **2.0** part 13a (4 Johto/Kanto base spots, 2 entrance kinds, 6 dolls, 2 doll counters) | 32,615,652 / 916 KB | 32,775,460 / 760 KB |
 | **2.0** part 13b (desert, ash and grave battle backgrounds) | 32,628,868 / 903 KB | 32,788,868 / 747 KB |
 | **2.0** part 14 (Tidal Strait: 2 sea maps, whirlpool gate, TV bulletin, May's call) | 32,635,700 / 897 KB | 32,795,588 / 741 KB |
-| **2.0** part 15a (Johto starters: Route 46 meadow, Burned Tower scene, Elm's and Brendan's calls) | 32,641,668 / 891 KB | 32,801,684 / 735 KB |
+| **2.0** part 15a (Johto starters: Route 46 meadow, Burned Tower scene, Elm's and Brendan's calls) | 32,641,764 / 891 KB | 32,801,780 / 735 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
