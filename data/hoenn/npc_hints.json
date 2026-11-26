@@ -1,0 +1,117 @@
+{
+  "_comment": [
+    "Hoenn & Seek 2.0 (part 7): alternating hint lines, rumors, field notes and weather forecasts.",
+    "Read by tools/hoenn/gen_hoenn_hints.py, which writes src/data/hoenn_hints.h (the tables",
+    "src/hoenn_hints.c reads), data/scripts/hoenn_hints.inc (one wrapper script per NPC, plus every",
+    "text) and swaps each listed NPC's script in its map.json for the wrapper. Re-runs are idempotent.",
+    "",
+    "lines: reusable extra lines. kind is tip / story / rumor / forecast (documentation only, except",
+    "  that rumor lines name a rumor and forecast lines show today's or tomorrow's forecast). 'if' is a",
+    "  list of conditions that must all hold. Texts are word-wrapped by the generator; a list of strings",
+    "  is one text box per string.",
+    "rumors: 'found' says when the player has found it (all conditions hold); NPCs then say 'after'",
+    "  instead of 'before'. The field-notes researcher counts found rumors and gives the first unfound",
+    "  rumor's 'notes' as a vague hint. Later parts add their own rumors here (roadmap rule).",
+    "npcs: the NPCs that get extra lines. A global toggle (VAR_HOENN_HINT_TOGGLE) flips on every talk",
+    "  to one of them: one talk runs the NPC's own script, the next their first line whose conditions",
+    "  hold (or their own script again if none does). always: true skips the toggle (the line, when one",
+    "  holds, always comes first). 'index' picks the object when several share the script.",
+    "forecasts: {map, if, text}. A forecast applies when the map's special-weather day is today or",
+    "  tomorrow (STR_VAR_1 = TODAY / TOMORROW) and its conditions hold, and only in the region of the",
+    "  map the player is in. Shown by forecast lines and by every TV (before its normal show). Only",
+    "  forecast weather that matters: something rare depends on it (2.0-plan section 2f).",
+    "",
+    "Conditions: {flag: F} {not_flag: F} {var: V, min: n} {var: V, below: n} {stamps_min: n}",
+    "  {stamps_below: n} (Hoenn badges) {badges_min: n} {badges_below: n} (HnS's 16 badges)",
+    "  {caught: SPECIES} {not_caught: SPECIES} {level_cap: true} (HnS's level cap option is on)."
+  ],
+
+  "lines": {
+    "TIP_CLOCK":      {"kind": "tip", "text": "Did you know? The clock on the wall in any POKéMON CENTER lets you set the day and the time."},
+    "TIP_LEVEL_CAP":  {"kind": "tip", "if": [{"level_cap": true}], "text": ["With the LEVEL CAP on, your POKéMON stop growing at the next GYM LEADER's level.", "Every BADGE you win raises the cap a little."]},
+    "TIP_WEATHER":    {"kind": "tip", "text": ["Some POKéMON only come out when the weather turns.", "Rainy days and stormy days bring out different faces in the grass!"]},
+    "TIP_REMINDER_JK": {"kind": "tip", "text": "A man in BLACKTHORN CITY can make POKéMON remember moves they've forgotten."},
+    "TIP_NAMERATER_JK": {"kind": "tip", "text": "The NAME RATER in GOLDENROD CITY can give your POKéMON a better nickname."},
+    "TIP_REMINDER_H": {"kind": "tip", "text": "In FALLARBOR TOWN there's a MOVE REMINDER. He helps POKéMON remember forgotten moves."},
+    "TIP_NAMERATER_H": {"kind": "tip", "text": "The NAME RATER in SLATEPORT CITY can change your POKéMON's nicknames."},
+    "TIP_MIND_READER": {"kind": "tip", "if": [{"flag": "FLAG_HOENN_STAMP_GYM_7"}], "text": ["A guru in MOSSDEEP CITY reads POKéMON's minds.", "For STAR PIECES, he can bring out a POKéMON's hidden potential."]},
+
+    "STORY_FERRY":    {"kind": "story", "if": [{"badges_min": 16}, {"stamps_below": 1}], "text": ["PROF. OAK is said to give TRAINERS with all 16 BADGES a ticket for the ship to HOENN.", "Ships leave from VERMILION's port."]},
+    "STORY_NORMAN":   {"kind": "story", "if": [{"stamps_below": 4}], "text": "NORMAN of PETALBURG only battles TRAINERS who already have four HOENN BADGES."},
+    "STORY_WATTSON":  {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_STAMP_GYM_3"}, {"var": "VAR_NEW_MAUVILLE_STATE", "below": 2}], "text": ["WATTSON won't battle until someone fixes the generator in NEW MAUVILLE.", "He's looking for a TRAINER to help!"]},
+    "STORY_METEORITE": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_METEORITE_DELIVERED"}], "text": ["The MOSSDEEP GYM twins won't battle until the SPACE CENTER gets its meteorite back.", "COZMO in FALLARBOR might know where one is."]},
+    "STORY_WINONA":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_WINONA_BACK"}], "text": "FORTREE's GYM LEADER WINONA has been out by the WEATHER INSTITUTE on ROUTE 119."},
+
+    "RUMOR_CASTFORM":   {"kind": "rumor", "rumor": "CASTFORM"},
+    "RUMOR_FEEBAS":     {"kind": "rumor", "rumor": "FEEBAS"},
+    "RUMOR_MASQUERAIN": {"kind": "rumor", "rumor": "MASQUERAIN"},
+    "RUMOR_LAPRAS":     {"kind": "rumor", "rumor": "LAPRAS"},
+
+    "FORECAST":       {"kind": "forecast"}
+  },
+
+  "rumors": {
+    "CASTFORM": {
+      "found": [{"caught": "CASTFORM"}],
+      "before": ["They say CASTFORM only show themselves when the weather turns.", "Look around ROUTES 119, 120 and 123 when the sky turns!"],
+      "after": "Somebody caught a CASTFORM! So it really does ride the weather near the WEATHER INSTITUTE.",
+      "notes": ["Something near the WEATHER INSTITUTE changes with the sky…", "It only appears when the weather turns."]
+    },
+    "FEEBAS": {
+      "found": [{"caught": "FEEBAS"}],
+      "before": ["A fisherman swears ROUTE 119's river hides a POKéMON nobody else can find.", "Only a few spots in the whole river, he says!"],
+      "after": "So FEEBAS really lives in ROUTE 119's river! Only a handful of spots, too.",
+      "notes": "A shabby fish hides in a long river in HOENN. Only a few spots in it, and they change…"
+    },
+    "MASQUERAIN": {
+      "found": [{"caught": "MASQUERAIN"}],
+      "before": "In HOENN, MASQUERAIN only flutter out of the grass on rainy days.",
+      "after": "Somebody caught a MASQUERAIN in the rain! I knew those rainy days were worth it.",
+      "notes": "A bug with eye-patterned wings only comes out on HOENN's rainy days."
+    },
+    "LAPRAS": {
+      "found": [{"caught": "LAPRAS"}],
+      "before": "Every Friday, a LAPRAS is said to sing deep down in UNION CAVE.",
+      "after": "Somebody met UNION CAVE's Friday LAPRAS! Its song is real after all.",
+      "notes": "Deep in a JOHTO cave, a song can be heard once a week. Which day was it…?"
+    }
+  },
+
+  "field_notes": {"map": "LittlerootTown_ProfessorBirchsLab", "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Aide"},
+
+  "npcs": [
+    {"map": "CherrygroveCity_PokemonCenter_hns", "script": "CherryGrove_Pokecenter_EventScript_Gentleman", "lines": ["TIP_CLOCK"]},
+    {"map": "VioletCity_PokemonCenter_hns",      "script": "VioletCity_PokemonCenter_EventScript_Man",             "lines": ["TIP_LEVEL_CAP", "TIP_CLOCK"]},
+    {"map": "AzaleaTown_PokemonCenter_hns",      "script": "AzaleaPokeCenter_EventScript_Gentleman",       "lines": ["RUMOR_LAPRAS"]},
+    {"map": "GoldenrodCity_PokemonCenter_hns",   "script": "GoldenrodCity_PokemonCenter_EventScript_Granny",       "lines": ["TIP_NAMERATER_JK"]},
+    {"map": "EcruteakCity_PokemonCenter_hns",    "script": "EcruteakCity_PokemonCenter_EventScript_Hiker",         "lines": ["TIP_WEATHER"]},
+    {"map": "OlivineCity_PokemonCenter_hns",     "script": "OlivineCity_EventScript_Teacher",        "lines": ["STORY_FERRY", "TIP_REMINDER_JK"]},
+    {"map": "CianwoodPokecenter_hns",            "script": "CianwoodPokecenter_EventScript_Nerd",                  "lines": ["TIP_LEVEL_CAP", "TIP_WEATHER"]},
+    {"map": "MahoganyTown_PokemonCenter_hns",    "script": "MahoganyTown_PokemonCenter_EventScript_Hiker",         "lines": ["RUMOR_LAPRAS"]},
+    {"map": "BlackthornCity_PokemonCenter_hns",  "script": "BlackthornCity_PokemonCenter_EventScript_Gent",        "lines": ["TIP_REMINDER_JK"]},
+    {"map": "PewterCity_PokemonCenter_hns",      "script": "PewterCity_PokemonCenter_EventScript_Teacher",         "lines": ["TIP_LEVEL_CAP", "TIP_CLOCK"]},
+    {"map": "CeruleanCity_PokemonCenter_hns",    "script": "CeruleanCity_PokemonCenter_EventScript_Guy",           "lines": ["TIP_WEATHER"]},
+    {"map": "VermilionCity_PokemonCenter_hns",   "script": "VermilionPokeCenter_EventScript_Sailor",       "lines": ["STORY_FERRY", "TIP_CLOCK"]},
+    {"map": "LavenderTown_PokemonCenter_hns",    "script": "LavenderTown_PokemonCenter_EventScript_Gent",          "lines": ["TIP_REMINDER_JK"]},
+    {"map": "SaffronCity_PokemonCenter_hns",     "script": "SaffronCity_PokemonCenter_EventScript_Teacher",        "lines": ["TIP_NAMERATER_JK"]},
+    {"map": "CeladonCity_PokemonCenter_hns",     "script": "CeladonCity_PokemonCenter_EventScript_Pharmacist",     "lines": ["STORY_FERRY", "TIP_LEVEL_CAP", "TIP_CLOCK"]},
+    {"map": "OldaleTown_PokemonCenter_1F",       "script": "OldaleTown_PokemonCenter_1F_EventScript_Gentleman",    "lines": ["RUMOR_MASQUERAIN"]},
+    {"map": "SlateportCity_PokemonCenter_1F",    "script": "SlateportCity_PokemonCenter_1F_EventScript_Woman",     "lines": ["STORY_NORMAN", "TIP_NAMERATER_H"]},
+    {"map": "MauvilleCity_PokemonCenter_1F",     "script": "MauvilleCity_PokemonCenter_1F_EventScript_Woman1",     "lines": ["STORY_WATTSON", "RUMOR_CASTFORM"]},
+    {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "TIP_REMINDER_H"]},
+    {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS"]},
+    {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS"]},
+    {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP"]},
+    {"map": "Route119_WeatherInstitute_1F",      "script": "Route119_WeatherInstitute_1F_EventScript_InstituteWorker1", "always": true, "lines": ["FORECAST"]}
+  ],
+
+  "forecasts": [
+    {"map": "Route120", "if": [{"not_caught": "CASTFORM"}], "text": ["Our instruments say ROUTE 120 gets a thunderstorm {STR_VAR_1}.", "CASTFORM come out in weather like that!"]},
+    {"map": "Route119", "if": [{"not_caught": "CASTFORM"}], "text": ["Our instruments say a thunderstorm reaches ROUTE 119 {STR_VAR_1}.", "CASTFORM come out in weather like that!"]},
+    {"map": "Route123", "if": [{"not_caught": "CASTFORM"}], "text": ["Our instruments say heavy rain reaches ROUTE 123 {STR_VAR_1}.", "CASTFORM come out in weather like that!"]},
+    {"map": "Route104", "if": [{"not_caught": "MASQUERAIN"}], "text": ["Rain is coming to ROUTES 101 to 104 {STR_VAR_1}.", "That's when MASQUERAIN flutter out of the grass!"]},
+    {"map": "Route117", "if": [{"not_caught": "MASQUERAIN"}], "text": ["Rain is coming to the routes around MAUVILLE {STR_VAR_1}.", "That's when MASQUERAIN flutter out of the grass!"]},
+    {"map": "Route114", "if": [{"not_caught": "MASQUERAIN"}], "text": ["Rain is coming to ROUTES 114 and 115 {STR_VAR_1}.", "That's when MASQUERAIN flutter out of the grass!"]},
+    {"map": "Route121", "if": [{"not_caught": "MASQUERAIN"}], "text": ["Rain is coming to ROUTE 121 {STR_VAR_1}.", "That's when MASQUERAIN flutter out of the grass!"]}
+  ]
+}

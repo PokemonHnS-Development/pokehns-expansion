@@ -251,6 +251,15 @@ bool32 HoennIsSpecialWeatherDay(u16 mapGroup, u16 mapNum)
     return MapCycleStage(mapGroup, mapNum) == HOENN_SPECIAL_WEATHER_STAGE;
 }
 
+// The same, `days` days from now (0 = today): the stage moves on by one a day.
+// Forecasts (part 7) ask about today and tomorrow.
+bool32 HoennIsSpecialWeatherInDays(u16 mapGroup, u16 mapNum, u32 days)
+{
+    s32 stage = MapCycleStage(mapGroup, mapNum);
+
+    return stage >= 0 && (stage + days) % HOENN_WEATHER_CYCLE_LENGTH == HOENN_SPECIAL_WEATHER_STAGE;
+}
+
 // Hook in SetSavedWeatherFromCurrMapHeader (src/field_weather_effect.c): the
 // weather a map starts with. On a cycle map's special day it's the special
 // weather; otherwise the header's own.

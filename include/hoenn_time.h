@@ -17,6 +17,7 @@ u16 HoennWeatherWildHeader(u16 headerId);   // GetCurrentMapWildMonHeaderId(), s
 // For C callers
 void HoennSetWeekday(u32 weekday);
 bool32 HoennIsSpecialWeatherDay(u16 mapGroup, u16 mapNum);
+bool32 HoennIsSpecialWeatherInDays(u16 mapGroup, u16 mapNum, u32 days); // part 7 forecasts
 
 // Specials (data/specials.inc). GetDayOfWeek itself is also a special.
 void HoennBufferWeekdayName(void);

@@ -152,6 +152,15 @@ On a Hoenn cycle route's special day, wild Pokémon come from a weather table (l
 - [ ] Snow around Mt. Silver: Delibird, Mamoswine, Jynx; Seel/Dewgong on water.
 - [ ] Surfing on routes whose water has no Pokémon (Routes 3, 5, 7, 8, 11, 16, 18, Mt. Silver's mountainside) stays empty on special days.
 
+## 2.0 part 7 — Hint lines, rumors, forecasts
+Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.json`) alternate their own line with an extra one.
+- [ ] Do the extra lines read well, and does alternating feel natural (it's one switch for all hint NPCs, so the first hint NPC you meet may give the tip first)?
+- [ ] Story lines go away once done: Norman (4 badges), Wattson (New Mauville), the meteorite, Winona, the ferry ticket.
+- [ ] Rumors switch to their "after" line once you catch Castform, Feebas, Masquerain or Union Cave's Lapras; Birch's aide counts them.
+- [ ] TVs in Hoenn: a forecast first when a Castform/Masquerain day is today or tomorrow, then the normal show. Johto/Kanto TVs unchanged.
+- [ ] The Weather Institute 1F worker gives the forecast; after both are caught, his own lines.
+- [ ] Level-cap tip only shows with the LEVEL CAP challenge on.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.
