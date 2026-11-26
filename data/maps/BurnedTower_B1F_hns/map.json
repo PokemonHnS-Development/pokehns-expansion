@@ -160,6 +160,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_BURNED_TOWER_B1F_EUSINE"
+    },
+    {
+      "local_id": "LOCALID_HOENN_BT_TYPHLOSION",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TYPHLOSION",
+      "x": 17,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_BurnedTowerTyphlosion",
+      "flag": "FLAG_HOENN_HIDE_BT_FAMILY"
+    },
+    {
+      "local_id": "LOCALID_HOENN_BT_CYNDAQUIL_A",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CYNDAQUIL",
+      "x": 16,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_BurnedTowerCyndaquilFamily",
+      "flag": "FLAG_HOENN_HIDE_BT_FAMILY"
+    },
+    {
+      "local_id": "LOCALID_HOENN_BT_CYNDAQUIL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CYNDAQUIL",
+      "x": 18,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_BurnedTowerCyndaquil",
+      "flag": "FLAG_HOENN_HIDE_BT_CYNDAQUIL"
     }
   ],
   "warp_events": [
@@ -178,7 +220,332 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_BurnedTowerFirstSight"
+    }
+  ],
   "bg_events": [],
   "game_version": "hns",
   "region": "REGION_JOHTO"

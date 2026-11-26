@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+"""Hoenn & Seek (2.0 part 15a): small new maps painted from an existing layout's blocks.
+
+Reads data/hoenn/composed_maps.json and writes data/layouts/<Map>/map.bin and
+border.bin for each map in "maps", then applies "patches" to existing layouts.
+
+A map starts empty and runs its "ops" in order; each op paints a rectangle with
+blocks copied (metatile, collision and elevation) from the map's "source" layout:
+
+  {"at": [x, y, w, h], "from": [sx, sy]}                  copy the w x h blocks at sx,sy
+  {"at": [x, y, w, h], "from": [sx, sy], "tile": [pw, ph]} repeat the pw x ph patch at sx,sy
+                                                           across the rectangle, anchored at x,y
+  {"cells": [[x, y], ...], "from": [sx, sy]}               copy one block to each cell
+
+Keeping the rows' and columns' parity between source and destination keeps 2x2
+patterns (trees, checkered grass) lined up. "border" is the 2x2 border's top-left
+block in the source. Every cell must be painted.
+
+A patch changes blocks of an existing layout in place:
+  {"layout": L, "cells": [[x, y], ...], "from": [sx, sy]}  copies the layout's own block
+                                                           at sx,sy (which no patch may change)
+  {"layout": L, "clear_collision": [[x, y], ...]}          makes those blocks passable
+                                                           (opens a fake door, for example)
+Re-runs give the same files. Check the result with tools/hoenn/render_layout.py.
+"""
+import json, os, struct
+
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
+P = lambda *a: os.path.join(ROOT, *a)
+COLLISION = 0x0C00
+
+
+def layouts():
+    return {l["id"]: l for l in json.load(open(P("data/layouts/layouts.json")))["layouts"] if "id" in l}
+
+
+def read_blocks(lay):
+    d = open(P(lay["blockdata_filepath"]), "rb").read()
+    return list(struct.unpack("<%dH" % (len(d) // 2), d))
+
+
+def write_blocks(lay, blocks):
+    open(P(lay["blockdata_filepath"]), "wb").write(struct.pack("<%dH" % len(blocks), *blocks))
+
+
+def build(name, m, lays):
+    src = lays[m["source"]]
+    sb, sw = read_blocks(src), src["width"]
+    lay = lays[m["layout"]]
+    w, h = lay["width"], lay["height"]
+    out = [None] * (w * h)
+    get = lambda sx, sy: sb[sy * sw + sx]
+    for op in m["ops"]:
+        sx, sy = op["from"]
+        if "cells" in op:
+            for x, y in op["cells"]:
+                out[y * w + x] = get(sx, sy)
+            continue
+        x0, y0, rw, rh = op["at"]
+        pw, ph = op.get("tile", [rw, rh])
+        assert x0 + rw <= w and y0 + rh <= h, (name, op)
+        for j in range(rh):
+            for i in range(rw):
+                out[(y0 + j) * w + x0 + i] = get(sx + i % pw, sy + j % ph)
+    missing = [(i % w, i // w) for i, b in enumerate(out) if b is None]
+    assert not missing, (name, "unpainted cells", missing[:8])
+    write_blocks(lay, out)
+    bx, by = m["border"]
+    border = [get(bx, by), get(bx + 1, by), get(bx, by + 1), get(bx + 1, by + 1)]
+    open(P(lay["border_filepath"]), "wb").write(struct.pack("<4H", *border))
+    print(f"{name}: {w}x{h}")
+
+
+def patch(p, lays):
+    lay = lays[p["layout"]]
+    b = read_blocks(lay)
+    w = lay["width"]
+    if "cells" in p:
+        sx, sy = p["from"]
+        assert [sx, sy] not in p["cells"], p
+        for x, y in p["cells"]:
+            b[y * w + x] = b[sy * w + sx]
+    for x, y in p.get("clear_collision", []):
+        b[y * w + x] &= ~COLLISION
+    write_blocks(lay, b)
+
+
+def main():
+    cfg = json.load(open(P("data/hoenn/composed_maps.json")))
+    lays = layouts()
+    for name, m in cfg["maps"].items():
+        build(name, m, lays)
+    for p in cfg["patches"]:
+        patch(p, lays)
+
+
+if __name__ == "__main__":
+    main()

@@ -52,6 +52,21 @@ static bool32 HoennIsJohtoKantoBase(u8 secretBaseId)
 
 // Which event call is due, if any. Badge calls only ring for the highest
 // milestone reached; skipped lower ones are marked done.
+// 2.0 part 15a: TRUE once the unclaimed Johto starter (the one Birch sent Elm
+// that got loose) is with you. VAR_STARTER_MON: 0 Chikorita, 1 Cyndaquil,
+// 2 Totodile; the unclaimed one is the third starter, never yours or the rival's
+// (Cyndaquil if you chose Totodile, Chikorita if Cyndaquil, Totodile if Chikorita).
+// Totodile's Lake of Rage scene comes in part 15b.
+static bool32 HoennFoundBirchStarter(void)
+{
+    switch (VarGet(VAR_STARTER_MON))
+    {
+    case 1:  return FlagGet(FLAG_HOENN_CHIKORITA_DONE);
+    case 2:  return FlagGet(FLAG_HOENN_CYNDAQUIL_DONE);
+    default: return FALSE;
+    }
+}
+
 static u16 GetDueEventCall(void)
 {
     if (FlagGet(FLAG_HOENN_BM_PHONE) && !FlagGet(FLAG_HOENN_STAMP_WALLACE))
@@ -81,6 +96,9 @@ static u16 GetDueEventCall(void)
     // Part 17: May watches the contests on TV (any contest hall, Lilycove or Viridian).
     if (FlagGet(FLAG_HOENN_BM_PHONE) && GetGameStat(GAME_STAT_WON_CONTEST) > 0 && !FlagGet(FLAG_HOENN_CALL_CONTEST))
         return HOENN_CALL_CONTEST;
+    // 2.0 part 15a: Elm told Birch that his runaway Johto starter found you.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && HoennFoundBirchStarter() && !FlagGet(FLAG_HOENN_CALL_STARTER_FOUND))
+        return HOENN_CALL_STARTER_FOUND;
     // 2.0 part 14: Mr. Briney saw you surf out of the Tidal Strait and told Norman.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_CROSSED_STRAIT) && !FlagGet(FLAG_HOENN_CALL_STRAIT))
         return HOENN_CALL_STRAIT;

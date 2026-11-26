@@ -1,0 +1,32 @@
+{
+ "_comment": "Hoenn & Seek 2.0 part 15a+: small new maps painted from blocks of an existing layout, and in-place patches to existing layouts. tools/hoenn/gen_hoenn_composed_maps.py explains the ops. Route46_Meadow_hoenn is the hidden meadow behind Route 46's sealed cave mouth (25,33): a cliff along the top with the cave mouth at (11,3), trees on three sides, short grass with flowers, then tall grass down to the treeline. Every block comes from Route 46. Route 46's cave mouth sat in a pocket nothing could reach (HnS kept two Phanpy there as scenery); the patches open it through a cut tree.",
+ "maps": {
+  "Route46_Meadow_hoenn": {
+   "source": "LAYOUT_ROUTE46_HNS",
+   "layout": "LAYOUT_ROUTE46_MEADOW_HOENN",
+   "border": [0, 26],
+   "ops": [
+    {"_": "short grass", "at": [0, 0, 22, 18], "from": [6, 18], "tile": [2, 2]},
+    {"_": "cliff face", "at": [2, 0, 18, 3], "from": [0, 8], "tile": [1, 1]},
+    {"_": "cliff foot", "at": [2, 3, 18, 1], "from": [8, 17], "tile": [1, 1]},
+    {"_": "cave mouth (11,3) and its shading", "at": [9, 3, 5, 1], "from": [18, 11]},
+    {"_": "trees, west", "at": [0, 0, 2, 18], "from": [0, 18], "tile": [2, 2]},
+    {"_": "trees, east", "at": [20, 0, 2, 18], "from": [14, 38], "tile": [2, 2]},
+    {"_": "tall grass", "at": [2, 9, 18, 4], "from": [6, 30], "tile": [1, 1]},
+    {"_": "tall grass tongues", "cells": [[2, 8], [3, 8], [18, 8], [19, 8], [7, 8], [15, 8]], "from": [6, 30]},
+    {"_": "treeline, south", "at": [2, 13, 18, 5], "from": [16, 33], "tile": [2, 5]},
+    {"_": "flowers", "cells": [[3, 5], [5, 6], [4, 7], [16, 5], [18, 6], [17, 7], [8, 5], [14, 4]], "from": [3, 19]}
+   ]
+  }
+ },
+ "patches": [
+  {"_": "Route 46: clear the tree between the big tall-grass patch and the pocket below the cave (a cut tree stands at (20,33))", "layout": "LAYOUT_ROUTE46_HNS", "cells": [[20, 33], [21, 33], [20, 34], [21, 34]], "from": [22, 34]},
+  {"_": "... and the cliff above it gets a foot", "layout": "LAYOUT_ROUTE46_HNS", "cells": [[20, 32]], "from": [16, 11]},
+  {"layout": "LAYOUT_ROUTE46_HNS", "cells": [[21, 32]], "from": [17, 11]},
+  {"_": "... the next tree down gets its crown and top back", "layout": "LAYOUT_ROUTE46_HNS", "cells": [[20, 35]], "from": [16, 33]},
+  {"layout": "LAYOUT_ROUTE46_HNS", "cells": [[21, 35]], "from": [17, 33]},
+  {"layout": "LAYOUT_ROUTE46_HNS", "cells": [[20, 36]], "from": [16, 34]},
+  {"layout": "LAYOUT_ROUTE46_HNS", "cells": [[21, 36]], "from": [17, 34]},
+  {"_": "Route 46's sealed cave mouth becomes the meadow's entrance", "layout": "LAYOUT_ROUTE46_HNS", "clear_collision": [[25, 33]]}
+ ]
+}

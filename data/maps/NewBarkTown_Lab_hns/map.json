@@ -66,7 +66,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "HoennSeek_EventScript_LabBallChikorita",
+      "script": "NewBarkTown_Lab_EventScript_ChikoritaBall",
       "flag": "FLAG_HIDE_CHIKORITABALL"
     },
     {
@@ -79,7 +79,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "HoennSeek_EventScript_LabBallCyndaquil",
+      "script": "NewBarkTown_Lab_EventScript_CyndaquilBall",
       "flag": "FLAG_HIDE_CYNDAQUILBALL"
     },
     {
@@ -92,7 +92,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "HoennSeek_EventScript_LabBallTotodile",
+      "script": "NewBarkTown_Lab_EventScript_TotodileBall",
       "flag": "FLAG_HIDE_TOTODILEBALL"
     },
     {

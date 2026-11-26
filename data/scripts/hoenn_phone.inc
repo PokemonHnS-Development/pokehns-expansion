@@ -19,6 +19,7 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_SITES, HoennSeek_EventScript_CallSites
 	case HOENN_CALL_JK_BASE, HoennSeek_EventScript_CallJohtoKantoBase
 	case HOENN_CALL_STRAIT, HoennSeek_EventScript_CallStrait
+	case HOENN_CALL_STARTER_FOUND, HoennSeek_EventScript_CallStarterFound
 	releaseall
 	end
 
@@ -86,24 +87,39 @@ HoennSeek_EventScript_CallStrait::
 	pokenavcall HoennSeek_Text_CallStrait
 	goto HoennSeek_EventScript_CallEnd
 
-@ Elm: the two Johto starters you didn't choose go back on his table.
+@ Elm (2.0 part 15a): Birch sent back two Johto starters he'd been raising for
+@ Elm, and the unclaimed one got loose; the call says where a ferry sailor saw
+@ it (data/scripts/hoenn_starters.inc). VAR_STARTER_MON 0 Chikorita: Totodile at
+@ Lake of Rage (part 15b), 1 Cyndaquil: Chikorita on Route 46, 2 Totodile:
+@ Cyndaquil at the Burned Tower.
 HoennSeek_EventScript_CallElm::
 	setflag FLAG_HOENN_CALL_ELM
-	setflag FLAG_HOENN_JOHTO_STARTERS_READY
-	call_if_ne VAR_STARTER_MON, 0, HoennSeek_EventScript_ShowChikoritaBall
-	call_if_ne VAR_STARTER_MON, 1, HoennSeek_EventScript_ShowCyndaquilBall
-	call_if_ne VAR_STARTER_MON, 2, HoennSeek_EventScript_ShowTotodileBall
 	setspeaker HoennSeek_Text_NameElm
-	pokenavcall HoennSeek_Text_CallElm
+	goto_if_eq VAR_STARTER_MON, 1, HoennSeek_EventScript_CallElmChikorita
+	goto_if_eq VAR_STARTER_MON, 2, HoennSeek_EventScript_CallElmCyndaquil
+	pokenavcall HoennSeek_Text_CallElmTotodile
 	goto HoennSeek_EventScript_CallEnd
-HoennSeek_EventScript_ShowChikoritaBall::
-	clearflag FLAG_HIDE_CHIKORITABALL
+HoennSeek_EventScript_CallElmChikorita:
+	pokenavcall HoennSeek_Text_CallElmChikorita
+	goto HoennSeek_EventScript_CallEnd
+HoennSeek_EventScript_CallElmCyndaquil:
+	pokenavcall HoennSeek_Text_CallElmCyndaquil
+	goto HoennSeek_EventScript_CallEnd
+
+@ Brendan (2.0 part 15a): Elm told Birch that the runaway found you.
+HoennSeek_EventScript_CallStarterFound::
+	setflag FLAG_HOENN_CALL_STARTER_FOUND
+	bufferspeciesname STR_VAR_1, SPECIES_TOTODILE
+	call_if_eq VAR_STARTER_MON, 1, HoennSeek_EventScript_BufferChikorita
+	call_if_eq VAR_STARTER_MON, 2, HoennSeek_EventScript_BufferCyndaquil
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallStarterFound
+	goto HoennSeek_EventScript_CallEnd
+HoennSeek_EventScript_BufferChikorita:
+	bufferspeciesname STR_VAR_1, SPECIES_CHIKORITA
 	return
-HoennSeek_EventScript_ShowCyndaquilBall::
-	clearflag FLAG_HIDE_CYNDAQUILBALL
-	return
-HoennSeek_EventScript_ShowTotodileBall::
-	clearflag FLAG_HIDE_TOTODILEBALL
+HoennSeek_EventScript_BufferCyndaquil:
+	bufferspeciesname STR_VAR_1, SPECIES_CYNDAQUIL
 	return
 
 HoennSeek_EventScript_CallEnd::
@@ -170,40 +186,6 @@ HoennSeek_EventScript_VRWallyRematch::
 	msgbox HoennSeek_Text_WallyRematchAfter, MSGBOX_AUTOCLOSE
 	end
 
-@ ---------------------------------------------------------------- Elm's lab (NewBarkTown_Lab_hns)
-
-@ The three starter balls' scripts (map.json swap). Until Elm's call they run HnS's own.
-HoennSeek_EventScript_LabBallChikorita::
-	goto_if_unset FLAG_HOENN_JOHTO_STARTERS_READY, NewBarkTown_Lab_EventScript_ChikoritaBall
-	setvar VAR_0x8004, SPECIES_CHIKORITA
-	goto HoennSeek_EventScript_LabBallGive
-HoennSeek_EventScript_LabBallCyndaquil::
-	goto_if_unset FLAG_HOENN_JOHTO_STARTERS_READY, NewBarkTown_Lab_EventScript_CyndaquilBall
-	setvar VAR_0x8004, SPECIES_CYNDAQUIL
-	goto HoennSeek_EventScript_LabBallGive
-HoennSeek_EventScript_LabBallTotodile::
-	goto_if_unset FLAG_HOENN_JOHTO_STARTERS_READY, NewBarkTown_Lab_EventScript_TotodileBall
-	setvar VAR_0x8004, SPECIES_TOTODILE
-HoennSeek_EventScript_LabBallGive::
-	lock
-	showmonpic VAR_0x8004, 10, 3
-	bufferspeciesname STR_VAR_1, VAR_0x8004
-	msgbox HoennSeek_Text_LabStarter, MSGBOX_YESNO
-	hidemonpic
-	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_LabBallEnd
-	copyvar VAR_TEMP_TRANSFERRED_SPECIES, VAR_0x8004
-	givemon VAR_0x8004, 5
-	goto_if_eq VAR_RESULT, MON_CANT_GIVE, HoennSeek_EventScript_LabBallNoRoom
-	call Common_EventScript_GiftMon
-	removeobject VAR_LAST_TALKED
-HoennSeek_EventScript_LabBallEnd::
-	release
-	end
-HoennSeek_EventScript_LabBallNoRoom::
-	msgbox HoennSeek_Text_LabStarterNoRoom, MSGBOX_DEFAULT
-	release
-	end
-
 @ ---------------------------------------------------------------- text
 
 HoennSeek_Text_NameMay:
@@ -260,19 +242,59 @@ HoennSeek_Text_CallBadge8::
 	.string "come home and battle you\l"
 	.string "ourselves!$"
 
-HoennSeek_Text_CallElm::
-	.string "Hello, {PLAYER}!\n"
-	.string "It's PROF. ELM!\p"
-	.string "PROF. BIRCH called me. He said\n"
-	.string "you beat his son and NORMAN's\l"
-	.string "daughter together. Amazing!\p"
-	.string "He also sent back two POKéMON\n"
-	.string "he'd been raising for me: the\l"
-	.string "JOHTO starters you\l"
-	.string "didn't choose.\p"
-	.string "They're on the table in my lab\n"
-	.string "in NEW BARK TOWN. Come and\l"
-	.string "take them both!$"
+HoennSeek_Text_CallElmChikorita::
+	.string "Hello, {PLAYER}! It's PROF. ELM!\p"
+	.string "PROF. BIRCH called. You beat his\n"
+	.string "son and NORMAN's daughter. Wow!\p"
+	.string "He'd been raising two JOHTO\n"
+	.string "starters for my lab, and he sent\l"
+	.string "them back on the ferry.\p"
+	.string "One got here safe. But the\n"
+	.string "CHIKORITA slipped away when the\l"
+	.string "ferry docked!\p"
+	.string "A sailor saw it heading up\n"
+	.string "ROUTE 46, following a sweet smell.\p"
+	.string "If you find it, it should know my\n"
+	.string "lab's scent on you. Good luck!$"
+
+HoennSeek_Text_CallElmCyndaquil::
+	.string "Hello, {PLAYER}! It's PROF. ELM!\p"
+	.string "PROF. BIRCH called. You beat his\n"
+	.string "son and NORMAN's daughter. Wow!\p"
+	.string "He'd been raising two JOHTO\n"
+	.string "starters for my lab, and he sent\l"
+	.string "them back on the ferry.\p"
+	.string "One got here safe. But the\n"
+	.string "CYNDAQUIL slipped away when the\l"
+	.string "ferry docked!\p"
+	.string "A sailor saw a little flame near\n"
+	.string "ECRUTEAK's BURNED TOWER, at night.\p"
+	.string "If you find it, it should know my\n"
+	.string "lab's scent on you. Good luck!$"
+
+HoennSeek_Text_CallElmTotodile::
+	.string "Hello, {PLAYER}! It's PROF. ELM!\p"
+	.string "PROF. BIRCH called. You beat his\n"
+	.string "son and NORMAN's daughter. Wow!\p"
+	.string "He'd been raising two JOHTO\n"
+	.string "starters for my lab, and he sent\l"
+	.string "them back on the ferry.\p"
+	.string "One got here safe. But the\n"
+	.string "TOTODILE jumped overboard when\l"
+	.string "the ferry docked!\p"
+	.string "A sailor heard about it splashing\n"
+	.string "around the LAKE OF RAGE.\p"
+	.string "If you find it, it should know my\n"
+	.string "lab's scent on you. Good luck!$"
+
+HoennSeek_Text_CallStarterFound::
+	.string "Hey, {PLAYER}! It's BRENDAN.\p"
+	.string "PROF. ELM just called my dad. The\n"
+	.string "{STR_VAR_1} that got loose on the\l"
+	.string "way to JOHTO is with you now!\p"
+	.string "Dad was worried sick about it.\n"
+	.string "He says it couldn't be in better\l"
+	.string "hands. Take good care of it!$"
 
 HoennSeek_Text_CallTeams::
 	.string "It's BRENDAN. My dad was out\n"
@@ -476,10 +498,6 @@ HoennSeek_Text_BirchNumbers::
 HoennSeek_Text_BMRegistered::
 	.string "Registered BRENDAN and MAY in\n"
 	.string "the POKéGEAR.$"
-
-HoennSeek_Text_LabStarter::
-	.string "It's the {STR_VAR_1} PROF.\n"
-	.string "BIRCH sent back. Take it?$"
 
 HoennSeek_Text_LabStarterNoRoom::
 	.string "There's no room for it in your\n"

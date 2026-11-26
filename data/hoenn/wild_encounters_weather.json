@@ -4887,16 +4887,16 @@
           {
             "min_level": 38,
             "max_level": 38,
-            "species": "SPECIES_BULBASAUR"
+            "species": "SPECIES_RATICATE"
           },
           {
-            "min_level": 5,
-            "max_level": 5,
-            "species": "SPECIES_CHARMANDER"
+            "min_level": 39,
+            "max_level": 39,
+            "species": "SPECIES_SANDSLASH"
           },
           {
-            "min_level": 5,
-            "max_level": 5,
+            "min_level": 38,
+            "max_level": 38,
             "species": "SPECIES_RAPIDASH"
           },
           {
@@ -4915,8 +4915,8 @@
             "species": "SPECIES_AZUMARILL"
           },
           {
-            "min_level": 5,
-            "max_level": 5,
+            "min_level": 41,
+            "max_level": 41,
             "species": "SPECIES_PONYTA"
           }
         ]
@@ -5066,7 +5066,7 @@
           {
             "min_level": 38,
             "max_level": 38,
-            "species": "SPECIES_SQUIRTLE"
+            "species": "SPECIES_QUAGSIRE"
           },
           {
             "min_level": 38,
@@ -5074,9 +5074,9 @@
             "species": "SPECIES_DODRIO"
           },
           {
-            "min_level": 5,
-            "max_level": 5,
-            "species": "SPECIES_BULBASAUR"
+            "min_level": 38,
+            "max_level": 38,
+            "species": "SPECIES_NOCTOWL"
           },
           {
             "min_level": 42,
@@ -5084,9 +5084,9 @@
             "species": "SPECIES_RAPIDASH"
           },
           {
-            "min_level": 5,
-            "max_level": 5,
-            "species": "SPECIES_POLIWAG"
+            "min_level": 39,
+            "max_level": 39,
+            "species": "SPECIES_POLIWHIRL"
           },
           {
             "min_level": 42,
@@ -5094,9 +5094,9 @@
             "species": "SPECIES_QUAGSIRE"
           },
           {
-            "min_level": 5,
-            "max_level": 5,
-            "species": "SPECIES_MARILL"
+            "min_level": 40,
+            "max_level": 40,
+            "species": "SPECIES_AZUMARILL"
           },
           {
             "min_level": 42,
@@ -5225,16 +5225,16 @@
           {
             "min_level": 38,
             "max_level": 38,
-            "species": "SPECIES_CHIKORITA"
+            "species": "SPECIES_RATICATE"
           },
           {
-            "min_level": 5,
-            "max_level": 5,
-            "species": "SPECIES_CYNDAQUIL"
+            "min_level": 39,
+            "max_level": 39,
+            "species": "SPECIES_SANDSLASH"
           },
           {
-            "min_level": 5,
-            "max_level": 5,
+            "min_level": 38,
+            "max_level": 38,
             "species": "SPECIES_RAPIDASH"
           },
           {
@@ -5253,8 +5253,8 @@
             "species": "SPECIES_AZUMARILL"
           },
           {
-            "min_level": 5,
-            "max_level": 5,
+            "min_level": 41,
+            "max_level": 41,
             "species": "SPECIES_PONYTA"
           }
         ]
@@ -5394,31 +5394,31 @@
           {
             "min_level": 39,
             "max_level": 39,
-            "species": "SPECIES_TOTODILE"
+            "species": "SPECIES_MURKROW"
           },
           {
             "min_level": 42,
             "max_level": 42,
-            "species": "SPECIES_MURKROW"
-          },
-          {
-            "min_level": 38,
-            "max_level": 38,
             "species": "SPECIES_ARBOK"
           },
           {
             "min_level": 38,
             "max_level": 38,
-            "species": "SPECIES_CHIKORITA"
+            "species": "SPECIES_QUAGSIRE"
           },
           {
-            "min_level": 5,
-            "max_level": 5,
+            "min_level": 38,
+            "max_level": 38,
+            "species": "SPECIES_NOCTOWL"
+          },
+          {
+            "min_level": 38,
+            "max_level": 38,
             "species": "SPECIES_DODRIO"
           },
           {
-            "min_level": 5,
-            "max_level": 5,
+            "min_level": 39,
+            "max_level": 39,
             "species": "SPECIES_RAPIDASH"
           },
           {
@@ -5432,9 +5432,9 @@
             "species": "SPECIES_QUAGSIRE"
           },
           {
-            "min_level": 5,
-            "max_level": 5,
-            "species": "SPECIES_MARILL"
+            "min_level": 40,
+            "max_level": 40,
+            "species": "SPECIES_AZUMARILL"
           },
           {
             "min_level": 42,
