@@ -6,13 +6,30 @@
     "x,y is the wall tile; the player stands on the tile below it, facing up, and uses Secret Power.",
     "id: the base's group (which interior you get) and a free variant (Emerald uses 1-4, so 9 is",
     "always free). The indent colour should match the group (red/blue/yellow cave).",
-    "Constants go to include/constants/hoenn_secret_bases.h. Re-runs are idempotent."
+    "Constants go to include/constants/hoenn_secret_bases.h. Re-runs are idempotent.",
+    "chambers (part 12b): new base groups 24+ with their own interior. template = the base map whose",
+    "layout and objects are copied; computer = where you stand the first time (in front of the PC);",
+    "tileset.from = the cave base whose tiles are used; floor/wall/outline = palette 6's colours",
+    "2-5, 6-9 and 1 (picked from mockups made with tools/hoenn/render_layout.py: Sky Pillar's",
+    "lavender stone and tan parapets, the Sealed Chamber's sand and dark rock)."
+  ],
+  "chambers": [
+    {"name": "SKY_PILLAR", "group_index": 24, "template": "SecretBase_YellowCave4", "computer": [5, 9],
+     "tileset": {"from": "yellow_cave", "outline": [65, 74, 106],
+                 "floor": [[164, 164, 197], [131, 131, 164], [115, 115, 148], [98, 98, 123]],
+                 "wall": [[197, 172, 156], [172, 139, 115], [156, 115, 106], [123, 98, 90]]}},
+    {"name": "SEALED_CHAMBER", "group_index": 25, "template": "SecretBase_BrownCave4", "computer": [1, 2],
+     "tileset": {"from": "brown_cave", "outline": [65, 41, 65],
+                 "floor": [[205, 172, 123], [172, 139, 106], [148, 106, 90], [115, 74, 57]],
+                 "wall": [[164, 139, 115], [131, 106, 106], [90, 74, 82], [65, 41, 65]]}}
   ],
   "spots": [
     {"name": "DESERT_RUINS",    "map": "DesertRuins",          "x": 8,  "y": 2,  "indent": "Red",    "group": "RED_CAVE1",    "variant": 9},
     {"name": "ISLAND_CAVE",     "map": "IslandCave",           "x": 8,  "y": 2,  "indent": "Blue",   "group": "BLUE_CAVE1",   "variant": 9},
     {"name": "ANCIENT_TOMB",    "map": "AncientTomb",          "x": 8,  "y": 2,  "indent": "Yellow", "group": "YELLOW_CAVE1", "variant": 9},
     {"name": "CAVE_OF_ORIGIN",  "map": "CaveOfOrigin_B1F",     "x": 7,  "y": 12, "indent": "Blue",   "group": "BLUE_CAVE2",   "variant": 9},
-    {"name": "SEAFLOOR_CAVERN", "map": "SeafloorCavern_Room9", "x": 13, "y": 40, "indent": "Blue",   "group": "BLUE_CAVE3",   "variant": 9}
+    {"name": "SEAFLOOR_CAVERN", "map": "SeafloorCavern_Room9", "x": 13, "y": 40, "indent": "Blue",   "group": "BLUE_CAVE3",   "variant": 9},
+    {"name": "SKY_PILLAR",      "map": "SkyPillar_Top",        "x": 12, "y": 14, "indent": "Yellow", "group": "HOENN_SKY_PILLAR",     "variant": 1},
+    {"name": "SEALED_CHAMBER",  "map": "SealedChamber_InnerRoom", "x": 5, "y": 2, "indent": "Red", "group": "HOENN_SEALED_CHAMBER", "variant": 1}
   ]
 }

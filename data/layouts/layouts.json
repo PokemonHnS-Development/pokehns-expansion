@@ -16203,6 +16203,30 @@
       "blockdata_filepath": "data/layouts/NewSinjoh_KimonoHideout_hns/map.bin",
       "game_version": "hns",
       "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_SECRET_BASE_SKY_PILLAR_HOENN",
+      "name": "SecretBase_SkyPillar_hoenn_Layout",
+      "width": 13,
+      "height": 14,
+      "primary_tileset": "gTileset_SecretBase",
+      "secondary_tileset": "gTileset_SecretBaseSkyPillarHoenn",
+      "border_filepath": "data/layouts/SecretBase_SkyPillar_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/SecretBase_SkyPillar_hoenn/map.bin",
+      "layout_version": "emerald",
+      "game_version": "hns"
+    },
+    {
+      "id": "LAYOUT_SECRET_BASE_SEALED_CHAMBER_HOENN",
+      "name": "SecretBase_SealedChamber_hoenn_Layout",
+      "width": 14,
+      "height": 12,
+      "primary_tileset": "gTileset_SecretBase",
+      "secondary_tileset": "gTileset_SecretBaseSealedChamberHoenn",
+      "border_filepath": "data/layouts/SecretBase_SealedChamber_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/SecretBase_SealedChamber_hoenn/map.bin",
+      "layout_version": "emerald",
+      "game_version": "hns"
     }
   ]
 }
