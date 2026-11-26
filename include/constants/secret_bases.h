@@ -166,9 +166,9 @@
 
 #define SECRET_BASE_SHRUB4 SECRET_BASE_GROUP(23)
 
-#define NUM_SECRET_BASE_GROUPS 24
-
-// Hoenn & Seek: base spots at the reopened legendary sites (generated).
+// Hoenn & Seek: base spots and chamber-base groups at the reopened legendary sites (generated).
 #include "constants/hoenn_secret_bases.h"
+
+#define NUM_SECRET_BASE_GROUPS (24 + HOENN_SECRET_BASE_GROUP_COUNT)
 
 #endif  // GUARD_CONSTANTS_SECRET_BASES_H

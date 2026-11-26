@@ -133,6 +133,7 @@ static const u8 sSecretBaseEntrancePositions[NUM_SECRET_BASE_GROUPS * 4] =
     [SECRET_BASE_SHRUB2]       = MAP_NUM(MAP_SECRET_BASE_SHRUB2),       0,  1,  2,
     [SECRET_BASE_SHRUB3]       = MAP_NUM(MAP_SECRET_BASE_SHRUB3),       0,  7,  8,
     [SECRET_BASE_SHRUB4]       = MAP_NUM(MAP_SECRET_BASE_SHRUB4),       0,  9,  6,
+    HOENN_SECRET_BASE_ENTRANCE_POSITIONS // Hoenn & Seek: chamber bases (constants/hoenn_secret_bases.h)
 };
 
 #define GET_BASE_MAP_NUM(group)    (sSecretBaseEntrancePositions[(group) + 0])
@@ -509,7 +510,8 @@ void EnterNewlyCreatedSecretBase(void)
 bool8 CurMapIsSecretBase(void)
 {
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SECRET_BASE_RED_CAVE1)
-     && (u8)gSaveBlock1Ptr->location.mapNum <= MAP_NUM(MAP_SECRET_BASE_SHRUB4))
+     && ((u8)gSaveBlock1Ptr->location.mapNum <= MAP_NUM(MAP_SECRET_BASE_SHRUB4)
+      || HOENN_IS_CHAMBER_BASE_MAP_NUM(gSaveBlock1Ptr->location.mapNum))) // Hoenn & Seek
         return TRUE;
     else
         return FALSE;

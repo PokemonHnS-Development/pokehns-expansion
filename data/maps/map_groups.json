@@ -1204,7 +1204,9 @@
     "BattlePyramidSquare13_hns",
     "BattlePyramidSquare14_hns",
     "BattlePyramidSquare15_hns",
-    "BattlePyramidSquare16_hns"
+    "BattlePyramidSquare16_hns",
+    "SecretBase_SkyPillar_hoenn",
+    "SecretBase_SealedChamber_hoenn"
   ],
   "gMapGroup_SpecialArea": [
     "SafariZone_Northwest",

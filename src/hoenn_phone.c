@@ -38,19 +38,10 @@ extern const u8 HoennSeek_Text_WallyCallBattle[];
 
 static EWRAM_DATA u8 sEventCallSteps = 0;
 
-// 2.0 part 12: the base spots at the reopened legendary sites (data/hoenn/base_spots.json).
+// 2.0 parts 12/12b: the base spots at the reopened legendary sites.
 static bool32 HoennIsLegendarySiteBase(u8 secretBaseId)
 {
-    switch (secretBaseId)
-    {
-    case SECRET_BASE_HOENN_DESERT_RUINS:
-    case SECRET_BASE_HOENN_ISLAND_CAVE:
-    case SECRET_BASE_HOENN_ANCIENT_TOMB:
-    case SECRET_BASE_HOENN_CAVE_OF_ORIGIN:
-    case SECRET_BASE_HOENN_SEAFLOOR_CAVERN:
-        return TRUE;
-    }
-    return FALSE;
+    return HOENN_IS_SITE_BASE(secretBaseId); // data/hoenn/base_spots.json
 }
 
 // Which event call is due, if any. Badge calls only ring for the highest

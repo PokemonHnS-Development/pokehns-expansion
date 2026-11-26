@@ -195,6 +195,12 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] May's call about the sites rings once (needs the PokéGear and her number), and Brendan's first-base call doesn't ring after it.
 - [ ] Items and trainers left in the sites (Seafloor Cavern has no grunts now; the items should all still be there).
 
+## 2.0 part 12b — Chamber-bases
+- [ ] Sky Pillar: climb to the summit (cracked floors need the Mach Bike), use Secret Power on the back wall above the summit's middle, and decorate the base; do the colours look right on real hardware/mGBA?
+- [ ] Sealed Chamber: after the braille puzzle, use Secret Power on the inner room's top wall; decorate the base.
+- [ ] Move your base between a chamber and a normal spot and back (the old base packs up, decorations return to the PC).
+- [ ] Secret base registry/visiting through mixing records isn't testable solo; check nothing odd shows in the base list if you have another save.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

@@ -63,5 +63,13 @@
       "script": "SkyPillar_Top_EventScript_AwakenRayquaza"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "secret_base",
+      "x": 12,
+      "y": 14,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_HOENN_SKY_PILLAR"
+    }
+  ]
 }
