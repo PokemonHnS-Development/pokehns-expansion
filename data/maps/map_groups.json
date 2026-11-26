@@ -720,7 +720,11 @@
     "OlivineCity_CaptainsHouse_hoenn",
     "OlivineCity_TackleShop_hoenn",
     "OlivineCity_Shipwright_hoenn",
-    "OlivineCity_KeepersHouse_hoenn"
+    "OlivineCity_KeepersHouse_hoenn",
+    "EcruteakCity_DanceTeacher_hoenn",
+    "Route34_BreedersHouse_hoenn",
+    "Route38_MoomooStoreroom_hoenn",
+    "BellchimeTrail_Lodge_hoenn"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

@@ -69,6 +69,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
 | **2.0** part 7 (hint engine: 23 hint NPCs, 4 rumors, field notes, 7 forecasts) | 32,556,196 / 974 KB | 32,716,164 / 818 KB |
 | **2.0** part 8a (building generator, fake-door survey, Route 34 fisherman's shack) | 32,556,612 / 974 KB | 32,716,580 / 818 KB |
 | **2.0** part 8b (6 Olivine buildings: mart, friendship rater, daily find) | 32,561,716 / 969 KB | 32,721,668 / 813 KB |
+| **2.0** part 9 (4 Johto buildings: Ecruteak, Route 34, Route 38, Bellchime Trail) | 32,564,260 / 966 KB | 32,724,228 / 810 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 

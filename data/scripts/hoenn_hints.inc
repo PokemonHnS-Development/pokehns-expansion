@@ -242,6 +242,38 @@ HoennSeek_EventScript_HintNpc29::
 	callstd MSGBOX_NPC
 	end
 
+@ EcruteakCity_DanceTeacher_hoenn
+HoennSeek_EventScript_HintNpc30::
+	callnative HoennSeek_NpcHint
+	.2byte 30
+	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
+	callstd MSGBOX_NPC
+	end
+
+@ Route34_BreedersHouse_hoenn
+HoennSeek_EventScript_HintNpc31::
+	callnative HoennSeek_NpcHint
+	.2byte 31
+	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
+	callstd MSGBOX_NPC
+	end
+
+@ Route38_MoomooStoreroom_hoenn
+HoennSeek_EventScript_HintNpc32::
+	callnative HoennSeek_NpcHint
+	.2byte 32
+	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
+	callstd MSGBOX_NPC
+	end
+
+@ BellchimeTrail_Lodge_hoenn
+HoennSeek_EventScript_HintNpc33::
+	callnative HoennSeek_NpcHint
+	.2byte 33
+	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
+	callstd MSGBOX_NPC
+	end
+
 @ Field notes (Birch's aide): how many rumors you've found, then a vague hint for the next.
 HoennSeek_EventScript_FieldNotes::
 	lock
@@ -305,6 +337,9 @@ HoennSeek_Text_Hint_RumorLaprasAfter::
 
 HoennSeek_Text_Hint_RumorLaprasNotes::
 	.string "Deep in a JOHTO cave, a song can\nbe heard once a week. Which day\lwas it…?$"
+
+HoennSeek_Text_Hint_LineTipDaycare::
+	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
 
 HoennSeek_Text_Hint_LineTipClock::
 	.string "Did you know? The clock on the\nwall in any POKéMON CENTER lets\lyou set the day and the time.$"
