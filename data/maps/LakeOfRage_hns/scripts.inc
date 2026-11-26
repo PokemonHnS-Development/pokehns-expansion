@@ -4,6 +4,7 @@ LakeOfRage_hns_MapScripts::
 
 LakeOfRage_OnTransition::
 	setflag FLAG_VISITED_LAKE_OF_RAGE
+	call HoennSeek_EventScript_LakeOnTransition @ Hoenn & Seek 2.0 part 15b
 	call_if_lt VAR_MAHOGANY_TOWN_STATE, 2, LakeOfRage_EventScript_HideLois
 	goto_if_lt VAR_MAHOGANY_TOWN_STATE, 14, LakeOfRage_EventScript_SetHighTide
 	special UpdateShoalTideFlag

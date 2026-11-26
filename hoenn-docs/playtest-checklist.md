@@ -232,6 +232,13 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Brendan's call after a runaway joins you (needs his number from Birch).
 - [ ] Save and reload in the meadow and the tower after each scene: no replay.
 
+## 2.0 part 15b — Johto starters B (Totodile, hints)
+- [ ] Lake of Rage by day, after Brendan & May, each starter: the Feraligatr family that stays (Totodile) / the runaway on the shore that joins you (Chikorita) / the wild one on the shore (Cyndaquil). At night, nobody's there. Try both tides and the thunderstorm.
+- [ ] Surf up to the cove from the lake instead of walking: the scene still plays.
+- [ ] The runaway Totodile in a real party slot: Lv 5 with Dragon Dance.
+- [ ] Silver at Indigo Plateau after his daily rematch, Mom and Elm's aide: their extra line names the right place for your starter, and stops once you've found it.
+- [ ] Save and reload at the lake after the scene: no replay.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

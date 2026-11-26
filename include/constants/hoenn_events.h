@@ -150,4 +150,11 @@
 // Brendan's PokéGear call once Birch's runaway is with you.
 #define FLAG_HOENN_CALL_STARTER_FOUND   (HOENN_FLAGS_D_STARTERS + 0x08)
 
+// ---- Part 15b: Johto starters B -------------------------------------------
+// Totodile: the Lake of Rage's south cove, any time but night.
+#define FLAG_HOENN_TOTODILE_SCENE       (HOENN_FLAGS_D_STARTERS + 0x09)
+#define FLAG_HOENN_TOTODILE_DONE        (HOENN_FLAGS_D_STARTERS + 0x0A)
+#define FLAG_HOENN_HIDE_LAKE_FAMILY     (HOENN_FLAGS_D_STARTERS + 0x0B) // the Feraligatr and one Totodile
+#define FLAG_HOENN_HIDE_LAKE_TOTODILE   (HOENN_FLAGS_D_STARTERS + 0x0C) // the Totodile that can stay
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H
