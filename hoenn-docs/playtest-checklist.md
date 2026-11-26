@@ -364,3 +364,4 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Save and reload between the hum and the Underpass: the Vibrava is still there; save after the sand: it stays gone.
 - Black out to the Vibrava: it's still there next time, and the hum plays again on entering the nook.
 - Brendan's call about the Singing Sand comes on its own (the emulator forced the call).
+- 24r: walking down onto the Trapinch's ring straight from the north, you step one tile left and it scurries past you, not through you. (Checked in the emulator; worth a look on a real walk-in with a follower out.)
