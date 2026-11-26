@@ -186,130 +186,154 @@ HoennSeek_EventScript_HintNpc22::
 	callstd MSGBOX_NPC
 	end
 
-@ Route34_FishingShack_hoenn
+@ CianwoodCity_hns
 HoennSeek_EventScript_HintNpc23::
 	callnative HoennSeek_NpcHint
 	.2byte 23
+	goto_if_eq VAR_RESULT, FALSE, CianwoodCity_EventScript_Youngster
+	callstd MSGBOX_NPC
+	end
+
+@ OlivineCity_hns
+HoennSeek_EventScript_HintNpc24::
+	callnative HoennSeek_NpcHint
+	.2byte 24
+	goto_if_eq VAR_RESULT, FALSE, OlivineCity_EventScript_Sailor1
+	callstd MSGBOX_NPC
+	end
+
+@ DewfordTown
+HoennSeek_EventScript_HintNpc25::
+	callnative HoennSeek_NpcHint
+	.2byte 25
+	goto_if_eq VAR_RESULT, FALSE, DewfordTown_EventScript_Woman
+	callstd MSGBOX_NPC
+	end
+
+@ Route34_FishingShack_hoenn
+HoennSeek_EventScript_HintNpc26::
+	callnative HoennSeek_NpcHint
+	.2byte 26
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_HarborOffice_hoenn
-HoennSeek_EventScript_HintNpc24::
+HoennSeek_EventScript_HintNpc27::
 	callnative HoennSeek_NpcHint
-	.2byte 24
+	.2byte 27
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_SailorsHouse_hoenn
-HoennSeek_EventScript_HintNpc25::
+HoennSeek_EventScript_HintNpc28::
 	callnative HoennSeek_NpcHint
-	.2byte 25
+	.2byte 28
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_CaptainsHouse_hoenn
-HoennSeek_EventScript_HintNpc26::
+HoennSeek_EventScript_HintNpc29::
 	callnative HoennSeek_NpcHint
-	.2byte 26
+	.2byte 29
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_TackleShop_hoenn
-HoennSeek_EventScript_HintNpc27::
+HoennSeek_EventScript_HintNpc30::
 	callnative HoennSeek_NpcHint
-	.2byte 27
+	.2byte 30
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_Shipwright_hoenn
-HoennSeek_EventScript_HintNpc28::
+HoennSeek_EventScript_HintNpc31::
 	callnative HoennSeek_NpcHint
-	.2byte 28
+	.2byte 31
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_KeepersHouse_hoenn
-HoennSeek_EventScript_HintNpc29::
+HoennSeek_EventScript_HintNpc32::
 	callnative HoennSeek_NpcHint
-	.2byte 29
+	.2byte 32
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ EcruteakCity_DanceTeacher_hoenn
-HoennSeek_EventScript_HintNpc30::
+HoennSeek_EventScript_HintNpc33::
 	callnative HoennSeek_NpcHint
-	.2byte 30
+	.2byte 33
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ Route34_BreedersHouse_hoenn
-HoennSeek_EventScript_HintNpc31::
+HoennSeek_EventScript_HintNpc34::
 	callnative HoennSeek_NpcHint
-	.2byte 31
+	.2byte 34
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route38_MoomooStoreroom_hoenn
-HoennSeek_EventScript_HintNpc32::
+HoennSeek_EventScript_HintNpc35::
 	callnative HoennSeek_NpcHint
-	.2byte 32
+	.2byte 35
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ BellchimeTrail_Lodge_hoenn
-HoennSeek_EventScript_HintNpc33::
+HoennSeek_EventScript_HintNpc36::
 	callnative HoennSeek_NpcHint
-	.2byte 33
+	.2byte 36
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_BugClub_hoenn
-HoennSeek_EventScript_HintNpc34::
+HoennSeek_EventScript_HintNpc37::
 	callnative HoennSeek_NpcHint
-	.2byte 34
+	.2byte 37
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_EngineersHouse_hoenn
-HoennSeek_EventScript_HintNpc35::
+HoennSeek_EventScript_HintNpc38::
 	callnative HoennSeek_NpcHint
-	.2byte 35
+	.2byte 38
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ CeladonCity_FloristsHouse_hoenn
-HoennSeek_EventScript_HintNpc36::
+HoennSeek_EventScript_HintNpc39::
 	callnative HoennSeek_NpcHint
-	.2byte 36
+	.2byte 39
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_IslandHome_hoenn
-HoennSeek_EventScript_HintNpc37::
+HoennSeek_EventScript_HintNpc40::
 	callnative HoennSeek_NpcHint
-	.2byte 37
+	.2byte 40
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_SurfShop_hoenn
-HoennSeek_EventScript_HintNpc38::
+HoennSeek_EventScript_HintNpc41::
 	callnative HoennSeek_NpcHint
-	.2byte 38
+	.2byte 41
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -407,6 +431,18 @@ HoennSeek_Text_Hint_LineTipNameraterH::
 
 HoennSeek_Text_Hint_LineTipMindReader::
 	.string "A guru in MOSSDEEP CITY reads\nPOKéMON's minds.\pFor STAR PIECES, he can bring out\na POKéMON's hidden potential.$"
+
+HoennSeek_Text_Hint_LineStoryStraitClosed::
+	.string "See the rocks south of ROUTE 41?\nThere's a gap with a huge\lwhirlpool in it.\pPast it is the TIDAL STRAIT. Folks\nsay it runs all the way to HOENN,\lbut nobody gets through\lthat whirlpool.$"
+
+HoennSeek_Text_Hint_LineStoryStraitOpen::
+	.string "The whirlpool south of ROUTE 41\nhas calmed! Did you see it on TV?\pSURF through the gap in the rocks\nand follow the TIDAL STRAIT. It\lcomes out on HOENN's ROUTE 105.$"
+
+HoennSeek_Text_Hint_LineStoryStraitDoneJ::
+	.string "You SURFED the TIDAL STRAIT all\nthe way to HOENN? The sailors here\lwill be talking about that\lfor years!$"
+
+HoennSeek_Text_Hint_LineStoryStraitH::
+	.string "MR. BRINEY says the sea west of\nROUTE 105 is calm again. The TIDAL\lSTRAIT runs from there all the way\lto JOHTO!$"
 
 HoennSeek_Text_Hint_LineTipJkBases::
 	.string "SECRET POWER works here too, not\njust in HOENN. There are hollow\ltrees in ILEX FOREST and\lVIRIDIAN FOREST.\pAnd cracked rock on ROUTE 45 and\ninside MT. MOON. Make a SECRET\lBASE in one!$"

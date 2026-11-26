@@ -37,6 +37,10 @@
     "TIP_REMINDER_H": {"kind": "tip", "text": "In FALLARBOR TOWN there's a MOVE REMINDER. He helps POKéMON remember forgotten moves."},
     "TIP_NAMERATER_H": {"kind": "tip", "text": "The NAME RATER in SLATEPORT CITY can change your POKéMON's nicknames."},
     "TIP_MIND_READER": {"kind": "tip", "if": [{"flag": "FLAG_HOENN_STAMP_GYM_7"}], "text": ["A guru in MOSSDEEP CITY reads POKéMON's minds.", "For STAR PIECES, he can bring out a POKéMON's hidden potential."]},
+    "STORY_STRAIT_CLOSED": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_STRAIT_OPEN"}], "text": ["See the rocks south of ROUTE 41? There's a gap with a huge whirlpool in it.", "Past it is the TIDAL STRAIT. Folks say it runs all the way to HOENN, but nobody gets through that whirlpool."]},
+    "STORY_STRAIT_OPEN":   {"kind": "story", "if": [{"flag": "FLAG_HOENN_STRAIT_OPEN"}, {"not_flag": "FLAG_HOENN_CROSSED_STRAIT"}], "text": ["The whirlpool south of ROUTE 41 has calmed! Did you see it on TV?", "SURF through the gap in the rocks and follow the TIDAL STRAIT. It comes out on HOENN's ROUTE 105."]},
+    "STORY_STRAIT_DONE_J": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CROSSED_STRAIT"}], "text": ["You SURFED the TIDAL STRAIT all the way to HOENN? The sailors here will be talking about that for years!"]},
+    "STORY_STRAIT_H":      {"kind": "story", "if": [{"flag": "FLAG_HOENN_STRAIT_OPEN"}], "text": ["MR. BRINEY says the sea west of ROUTE 105 is calm again. The TIDAL STRAIT runs from there all the way to JOHTO!"]},
     "TIP_JK_BASES":   {"kind": "tip", "if": [{"not_flag": "FLAG_HOENN_CALL_JK_BASE"}], "text": ["SECRET POWER works here too, not just in HOENN. There are hollow trees in ILEX FOREST and VIRIDIAN FOREST.", "And cracked rock on ROUTE 45 and inside MT. MOON. Make a SECRET BASE in one!"]},
     "TIP_SITES":      {"kind": "tip", "if": [{"not_flag": "FLAG_HOENN_CALL_SITES"}], "text": ["The old legendary sites are open again: the desert ruins, SKY PILLAR, even the caves under the sea.", "The POKéMON that slept there are gone. TRAINERS are making SECRET BASES in them!"]},
 
@@ -106,7 +110,10 @@
     {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS"]},
     {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES"]},
     {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP"]},
-    {"map": "Route119_WeatherInstitute_1F",      "script": "Route119_WeatherInstitute_1F_EventScript_InstituteWorker1", "always": true, "lines": ["FORECAST"]}
+    {"map": "Route119_WeatherInstitute_1F",      "script": "Route119_WeatherInstitute_1F_EventScript_InstituteWorker1", "always": true, "lines": ["FORECAST"]},
+    {"map": "CianwoodCity_hns",                  "script": "CianwoodCity_EventScript_Youngster",                   "lines": ["STORY_STRAIT_CLOSED", "STORY_STRAIT_OPEN", "STORY_STRAIT_DONE_J"]},
+    {"map": "OlivineCity_hns",                   "script": "OlivineCity_EventScript_Sailor1",                      "lines": ["STORY_STRAIT_CLOSED", "STORY_STRAIT_OPEN", "STORY_STRAIT_DONE_J"]},
+    {"map": "DewfordTown",                       "script": "DewfordTown_EventScript_Woman",                        "lines": ["STORY_STRAIT_H"]}
   ],
 
   "forecasts": [

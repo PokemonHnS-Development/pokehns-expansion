@@ -122,4 +122,12 @@
 // Brendan's PokéGear call once your secret base is in Johto or Kanto.
 #define FLAG_HOENN_CALL_JK_BASE       (HOENN_FLAGS_C_WORLD + 0x01)
 
+// ---- Part 14: the Tidal Strait (data/hoenn/strait.json) --------------------
+// The great whirlpool at the strait's Johto end is gone (Oak gave the TIDAL
+// TICKET; the west half's OnTransition also sets it if the ticket is in the bag).
+#define FLAG_HOENN_STRAIT_OPEN        (HOENN_FLAGS_C_WORLD + 0x02)
+// You reached the strait's Hoenn half (May's PokéGear call).
+#define FLAG_HOENN_CROSSED_STRAIT     (HOENN_FLAGS_C_WORLD + 0x03)
+#define FLAG_HOENN_CALL_STRAIT        (HOENN_FLAGS_C_WORLD + 0x04)
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

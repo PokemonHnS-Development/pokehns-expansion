@@ -13,5 +13,6 @@
 #define HOENN_CALL_BASE    8 // Brendan: after you make a secret base (part 18)
 #define HOENN_CALL_SITES   9 // May: your base is at a reopened legendary site (2.0 part 12)
 #define HOENN_CALL_JK_BASE 10 // Brendan: your base is in Johto or Kanto (2.0 part 13a)
+#define HOENN_CALL_STRAIT  11 // May: you surfed the Tidal Strait into Hoenn (2.0 part 14)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

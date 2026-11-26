@@ -313,6 +313,8 @@ gStdScripts_End::
 	.include "data/maps/OlivineCity_SailorsHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
 	.include "data/maps/OlivineCity_HarborOffice_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
 	.include "data/maps/Route34_FishingShack_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/TidalStrait_West_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 14
+	.include "data/maps/TidalStrait_East_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 14
 	.include "data/maps/LilycoveCity_ContestHall/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestHall_hns/scripts.inc"
 	.include "data/maps/LilycoveCity_PokemonCenter_1F/scripts.inc"

@@ -8,6 +8,9 @@ HoennSeek_EventScript_OakGivesTicket::
 	msgbox HoennSeek_Text_OakTicket, MSGBOX_DEFAULT
 	giveitem ITEM_TIDAL_TICKET
 	msgbox HoennSeek_Text_OakTicketExplain, MSGBOX_DEFAULT
+	msgbox HoennSeek_Text_OakStrait, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_STRAIT_OPEN @ 2.0 part 14: the great whirlpool south of Route 41 calms
+	setvar VAR_HOENN_NEWS, 3      @ ...and the next TV you watch says so
 	return
 
 @ Called on later visits, before Oak's Pokédex check.
@@ -177,6 +180,15 @@ HoennSeek_Text_OakTicketExplain:
 	.string "its CHAMPION is a man named WALLACE.\p"
 	.string "Prove yourself in HOENN, and I'll\n"
 	.string "see that MT.SILVER is opened for you.$"
+
+@ 2.0 part 14: the Tidal Strait opens with the ticket.
+HoennSeek_Text_OakStrait:
+	.string "OAK: Oh, and if you'd rather SURF,\n"
+	.string "I hear the great whirlpool south of\l"
+	.string "ROUTE 41 has finally calmed down.\p"
+	.string "The TIDAL STRAIT beyond it runs all\n"
+	.string "the way to HOENN's ROUTE 105. It's\l"
+	.string "a long swim, so heal up first!$"
 
 HoennSeek_Text_OakGoToHoenn:
 	.string "OAK: Show your TIDAL TICKET at the\n"

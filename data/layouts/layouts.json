@@ -16227,6 +16227,30 @@
       "blockdata_filepath": "data/layouts/SecretBase_SealedChamber_hoenn/map.bin",
       "layout_version": "emerald",
       "game_version": "hns"
+    },
+    {
+      "id": "LAYOUT_TIDAL_STRAIT_WEST_HOENN",
+      "name": "TidalStrait_West_hoenn_Layout",
+      "width": 30,
+      "height": 36,
+      "primary_tileset": "gTileset_Johto_NorthEast_Hns",
+      "secondary_tileset": "gTileset_CianwoodCity_Hns",
+      "border_filepath": "data/layouts/TidalStrait_West_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/TidalStrait_West_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_TIDAL_STRAIT_EAST_HOENN",
+      "name": "TidalStrait_East_hoenn_Layout",
+      "width": 30,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/TidalStrait_East_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/TidalStrait_East_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "emerald"
     }
   ]
 }

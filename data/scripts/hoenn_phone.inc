@@ -18,6 +18,7 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_BASE, HoennSeek_EventScript_CallBase
 	case HOENN_CALL_SITES, HoennSeek_EventScript_CallSites
 	case HOENN_CALL_JK_BASE, HoennSeek_EventScript_CallJohtoKantoBase
+	case HOENN_CALL_STRAIT, HoennSeek_EventScript_CallStrait
 	releaseall
 	end
 
@@ -75,6 +76,14 @@ HoennSeek_EventScript_CallJohtoKantoBase::
 	setflag FLAG_HOENN_CALL_JK_BASE
 	setspeaker HoennSeek_Text_NameBrendan
 	pokenavcall HoennSeek_Text_CallJohtoKantoBase
+	goto HoennSeek_EventScript_CallEnd
+
+@ May: you surfed the Tidal Strait into Hoenn (2.0 part 14). MR. BRINEY saw you
+@ from his boat and phoned Norman, who told May.
+HoennSeek_EventScript_CallStrait::
+	setflag FLAG_HOENN_CALL_STRAIT
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallStrait
 	goto HoennSeek_EventScript_CallEnd
 
 @ Elm: the two Johto starters you didn't choose go back on his table.
@@ -499,6 +508,18 @@ HoennSeek_Text_CallJohtoKantoBase::
 	.string "or a cracked rock is all it needs.\p"
 	.string "MAY wants to visit. Hide the\n"
 	.string "DOLLS, or she'll take them home!$"
+
+HoennSeek_Text_CallStrait::
+	.string "{PLAYER}! It's MAY! Dad just got a\n"
+	.string "call from MR. BRINEY.\p"
+	.string "He was sailing past ROUTE 105 and\n"
+	.string "saw someone SURF in from the west,\l"
+	.string "right out of the TIDAL STRAIT!\p"
+	.string "Nobody's crossed it since that\n"
+	.string "whirlpool kicked up. He said the\l"
+	.string "SURFER looked just like you!\p"
+	.string "BRENDAN wants to try it next.\n"
+	.string "I told him to take the ferry!$"
 
 HoennSeek_Text_CallSites::
 	.string "{PLAYER}! It's MAY! PROF. BIRCH's\n"
