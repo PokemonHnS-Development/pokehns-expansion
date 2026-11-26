@@ -213,6 +213,14 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Surfing on Route 111's ponds and battles against gym leaders elsewhere still use their own backgrounds.
 - [ ] Switch the options to classic backgrounds: the three maps fall back to HnS's mountain/sand art with no glitches.
 
+## 2.0 part 14 — Tidal Strait
+- [ ] Before Oak's ticket: Route 41's new gap in the southern rocks leads to the great whirlpool, which blocks the way and talks.
+- [ ] Get the ticket from Oak: his new strait line, then the TV bulletin on the next TV you watch (once).
+- [ ] Surf Route 41 → the strait → Hoenn's Route 105 and back; the fade in the middle feels OK, the ROUTE 41/105 popups and weather change at the right places.
+- [ ] Wild battles and fishing in both halves (levels feel right for a post-16-badge player).
+- [ ] May's call after you reach the Hoenn half (needs her number from Birch).
+- [ ] The Cianwood youngster and Olivine sailor (outside) change their lines: closed, open, crossed; Dewford's woman mentions it.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

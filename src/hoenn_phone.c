@@ -81,6 +81,9 @@ static u16 GetDueEventCall(void)
     // Part 17: May watches the contests on TV (any contest hall, Lilycove or Viridian).
     if (FlagGet(FLAG_HOENN_BM_PHONE) && GetGameStat(GAME_STAT_WON_CONTEST) > 0 && !FlagGet(FLAG_HOENN_CALL_CONTEST))
         return HOENN_CALL_CONTEST;
+    // 2.0 part 14: Mr. Briney saw you surf out of the Tidal Strait and told Norman.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_CROSSED_STRAIT) && !FlagGet(FLAG_HOENN_CALL_STRAIT))
+        return HOENN_CALL_STRAIT;
     // 2.0 part 12: your base is at one of the reopened legendary sites. It replaces
     // Brendan's first-base call (marked done) so the two don't ring back to back.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && HoennIsLegendarySiteBase(gSaveBlock1Ptr->secretBases[0].secretBaseId)

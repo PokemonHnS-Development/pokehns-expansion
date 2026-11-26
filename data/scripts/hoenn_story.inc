@@ -103,6 +103,7 @@ HoennSeek_EventScript_TVNews::
 	goto_if_eq VAR_HOENN_NEWS, 0, HoennSeek_EventScript_TVNewsNone
 	call_if_eq VAR_HOENN_NEWS, 1, HoennSeek_EventScript_TVNewsAutograph
 	call_if_eq VAR_HOENN_NEWS, 2, HoennSeek_EventScript_TVNewsSong
+	call_if_eq VAR_HOENN_NEWS, 3, HoennSeek_EventScript_TVNewsStrait
 	setvar VAR_HOENN_NEWS, 0
 	releaseall
 	end
@@ -115,6 +116,11 @@ HoennSeek_EventScript_TVNewsAutograph::
 
 HoennSeek_EventScript_TVNewsSong::
 	msgbox HoennSeek_Text_TVNewsSong, MSGBOX_DEFAULT
+	return
+
+@ 2.0 part 14: set when Oak hands over the TIDAL TICKET (data/scripts/hoenn_ferry.inc).
+HoennSeek_EventScript_TVNewsStrait::
+	msgbox HoennSeek_Text_TVNewsStrait, MSGBOX_DEFAULT
 	return
 
 @ ---------------------------------------------------------------- Text
@@ -197,6 +203,16 @@ HoennSeek_Text_TesterWaiting:
 	.string "RUSTBORO has the finished SCOPE.\p"
 	.string "I'll keep an eye on this bridge\n"
 	.string "until you're back!$"
+
+HoennSeek_Text_TVNewsStrait:
+	.string "NEWS BULLETIN!\p"
+	.string "The great whirlpool in the rocks\n"
+	.string "south of ROUTE 41 has calmed!\p"
+	.string "For the first time in years, the\n"
+	.string "TIDAL STRAIT is open from JOHTO's\l"
+	.string "southern sea to HOENN's ROUTE 105.\p"
+	.string "Only strong SURFERS should try the\n"
+	.string "crossing. Back to the studio!$"
 
 HoennSeek_Text_TVNewsAutograph:
 	.string "HOENN TV NEWS FLASH!\p"

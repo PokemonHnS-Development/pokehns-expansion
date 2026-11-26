@@ -42392,6 +42392,184 @@
           }
         },
         {
+          "map": "MAP_TIDAL_STRAIT_WEST_HOENN",
+          "base_label": "gTidalStrait_West_hoenn",
+          "water_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 46,
+                "species": "SPECIES_TENTACRUEL"
+              },
+              {
+                "min_level": 40,
+                "max_level": 46,
+                "species": "SPECIES_MANTINE"
+              },
+              {
+                "min_level": 41,
+                "max_level": 47,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 42,
+                "max_level": 48,
+                "species": "SPECIES_LANTURN"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_STARMIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 36,
+                "max_level": 40,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 42,
+                "species": "SPECIES_CHINCHOU"
+              },
+              {
+                "min_level": 38,
+                "max_level": 42,
+                "species": "SPECIES_QWILFISH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 42,
+                "species": "SPECIES_CORSOLA"
+              },
+              {
+                "min_level": 40,
+                "max_level": 46,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 42,
+                "max_level": 46,
+                "species": "SPECIES_LANTURN"
+              },
+              {
+                "min_level": 42,
+                "max_level": 46,
+                "species": "SPECIES_OCTILLERY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_KINGDRA"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_CLOYSTER"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_TIDAL_STRAIT_EAST_HOENN",
+          "base_label": "gTidalStrait_East_hoenn",
+          "water_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 46,
+                "species": "SPECIES_TENTACRUEL"
+              },
+              {
+                "min_level": 40,
+                "max_level": 46,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 41,
+                "max_level": 47,
+                "species": "SPECIES_WAILMER"
+              },
+              {
+                "min_level": 42,
+                "max_level": 48,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_WAILORD"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 36,
+                "max_level": 40,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 42,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 42,
+                "species": "SPECIES_WAILMER"
+              },
+              {
+                "min_level": 38,
+                "max_level": 42,
+                "species": "SPECIES_CORSOLA"
+              },
+              {
+                "min_level": 40,
+                "max_level": 46,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 42,
+                "max_level": 46,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 42,
+                "max_level": 46,
+                "species": "SPECIES_RELICANTH"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_KINGDRA"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_WAILORD"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_WHIRL_ISLANDS_1F_HNS",
           "base_label": "gWhirlIslands_1F_hns_Day",
           "land_mons": {

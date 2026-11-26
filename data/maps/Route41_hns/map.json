@@ -22,6 +22,11 @@
       "map": "MAP_CIANWOOD_CITY_HNS",
       "offset": 10,
       "direction": "left"
+    },
+    {
+      "map": "MAP_TIDAL_STRAIT_WEST_HOENN",
+      "offset": 32,
+      "direction": "down"
     }
   ],
   "object_events": [

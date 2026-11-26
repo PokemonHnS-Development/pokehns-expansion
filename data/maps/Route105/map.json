@@ -28,6 +28,11 @@
       "map": "MAP_UNDERWATER_ROUTE105",
       "offset": 0,
       "direction": "dive"
+    },
+    {
+      "map": "MAP_TIDAL_STRAIT_EAST_HOENN",
+      "offset": -20,
+      "direction": "left"
     }
   ],
   "object_events": [

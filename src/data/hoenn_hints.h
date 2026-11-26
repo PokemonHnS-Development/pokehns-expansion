@@ -23,6 +23,10 @@ extern const u8 HoennSeek_Text_Hint_LineTipNameraterJk[];
 extern const u8 HoennSeek_Text_Hint_LineTipReminderH[];
 extern const u8 HoennSeek_Text_Hint_LineTipNameraterH[];
 extern const u8 HoennSeek_Text_Hint_LineTipMindReader[];
+extern const u8 HoennSeek_Text_Hint_LineStoryStraitClosed[];
+extern const u8 HoennSeek_Text_Hint_LineStoryStraitOpen[];
+extern const u8 HoennSeek_Text_Hint_LineStoryStraitDoneJ[];
+extern const u8 HoennSeek_Text_Hint_LineStoryStraitH[];
 extern const u8 HoennSeek_Text_Hint_LineTipJkBases[];
 extern const u8 HoennSeek_Text_Hint_LineTipSites[];
 extern const u8 HoennSeek_Text_Hint_LineStoryFerry[];
@@ -56,6 +60,10 @@ static const struct HoennHintLine sHintLines[] = {
     { NULL, 0, HoennSeek_Text_Hint_LineTipReminderH, HINT_TIP, 0 }, // TIP_REMINDER_H
     { NULL, 0, HoennSeek_Text_Hint_LineTipNameraterH, HINT_TIP, 0 }, // TIP_NAMERATER_H
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_STAMP_GYM_7, 0}}, 1, HoennSeek_Text_Hint_LineTipMindReader, HINT_TIP, 0 }, // TIP_MIND_READER
+    { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_STRAIT_OPEN, 0}}, 1, HoennSeek_Text_Hint_LineStoryStraitClosed, HINT_STORY, 0 }, // STORY_STRAIT_CLOSED
+    { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_STRAIT_OPEN, 0}, {HINT_IF_NOT_FLAG, FLAG_HOENN_CROSSED_STRAIT, 0}}, 2, HoennSeek_Text_Hint_LineStoryStraitOpen, HINT_STORY, 0 }, // STORY_STRAIT_OPEN
+    { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_CROSSED_STRAIT, 0}}, 1, HoennSeek_Text_Hint_LineStoryStraitDoneJ, HINT_STORY, 0 }, // STORY_STRAIT_DONE_J
+    { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_STRAIT_OPEN, 0}}, 1, HoennSeek_Text_Hint_LineStoryStraitH, HINT_STORY, 0 }, // STORY_STRAIT_H
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_CALL_JK_BASE, 0}}, 1, HoennSeek_Text_Hint_LineTipJkBases, HINT_TIP, 0 }, // TIP_JK_BASES
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_CALL_SITES, 0}}, 1, HoennSeek_Text_Hint_LineTipSites, HINT_TIP, 0 }, // TIP_SITES
     { (const struct HoennHintCond[]){{HINT_IF_BADGES_MIN, 0, 16}, {HINT_IF_STAMPS_BELOW, 0, 1}}, 2, HoennSeek_Text_Hint_LineStoryFerry, HINT_STORY, 0 }, // STORY_FERRY
@@ -73,31 +81,34 @@ static const struct HoennHintLine sHintLines[] = {
 static const struct HoennHintNpc sHintNpcs[] = {
     { (const u8[]){2}, 1, FALSE }, // CherrygroveCity_PokemonCenter_hns
     { (const u8[]){3, 2}, 2, FALSE }, // VioletCity_PokemonCenter_hns
-    { (const u8[]){10, 20}, 2, FALSE }, // AzaleaTown_PokemonCenter_hns
+    { (const u8[]){14, 24}, 2, FALSE }, // AzaleaTown_PokemonCenter_hns
     { (const u8[]){6}, 1, FALSE }, // GoldenrodCity_PokemonCenter_hns
     { (const u8[]){4}, 1, FALSE }, // EcruteakCity_PokemonCenter_hns
-    { (const u8[]){12, 5}, 2, FALSE }, // OlivineCity_PokemonCenter_hns
+    { (const u8[]){16, 5}, 2, FALSE }, // OlivineCity_PokemonCenter_hns
     { (const u8[]){3, 4}, 2, FALSE }, // CianwoodPokecenter_hns
-    { (const u8[]){20}, 1, FALSE }, // MahoganyTown_PokemonCenter_hns
-    { (const u8[]){10, 5}, 2, FALSE }, // BlackthornCity_PokemonCenter_hns
-    { (const u8[]){10, 3, 2}, 3, FALSE }, // PewterCity_PokemonCenter_hns
+    { (const u8[]){24}, 1, FALSE }, // MahoganyTown_PokemonCenter_hns
+    { (const u8[]){14, 5}, 2, FALSE }, // BlackthornCity_PokemonCenter_hns
+    { (const u8[]){14, 3, 2}, 3, FALSE }, // PewterCity_PokemonCenter_hns
     { (const u8[]){4}, 1, FALSE }, // CeruleanCity_PokemonCenter_hns
-    { (const u8[]){12, 2}, 2, FALSE }, // VermilionCity_PokemonCenter_hns
+    { (const u8[]){16, 2}, 2, FALSE }, // VermilionCity_PokemonCenter_hns
     { (const u8[]){5}, 1, FALSE }, // LavenderTown_PokemonCenter_hns
     { (const u8[]){6}, 1, FALSE }, // SaffronCity_PokemonCenter_hns
-    { (const u8[]){12, 3, 2}, 3, FALSE }, // CeladonCity_PokemonCenter_hns
-    { (const u8[]){19}, 1, FALSE }, // OldaleTown_PokemonCenter_1F
-    { (const u8[]){13, 8}, 2, FALSE }, // SlateportCity_PokemonCenter_1F
-    { (const u8[]){14, 17}, 2, FALSE }, // MauvilleCity_PokemonCenter_1F
-    { (const u8[]){15, 7, 11}, 3, FALSE }, // FallarborTown_PokemonCenter_1F
-    { (const u8[]){16, 18}, 2, FALSE }, // FortreeCity_PokemonCenter_1F
-    { (const u8[]){18, 11}, 2, FALSE }, // LilycoveCity_PokemonCenter_1F
-    { (const u8[]){15, 9, 3}, 3, FALSE }, // MossdeepCity_PokemonCenter_1F
-    { (const u8[]){21}, 1, TRUE }, // Route119_WeatherInstitute_1F
+    { (const u8[]){16, 3, 2}, 3, FALSE }, // CeladonCity_PokemonCenter_hns
+    { (const u8[]){23}, 1, FALSE }, // OldaleTown_PokemonCenter_1F
+    { (const u8[]){17, 8}, 2, FALSE }, // SlateportCity_PokemonCenter_1F
+    { (const u8[]){18, 21}, 2, FALSE }, // MauvilleCity_PokemonCenter_1F
+    { (const u8[]){19, 7, 15}, 3, FALSE }, // FallarborTown_PokemonCenter_1F
+    { (const u8[]){20, 22}, 2, FALSE }, // FortreeCity_PokemonCenter_1F
+    { (const u8[]){22, 15}, 2, FALSE }, // LilycoveCity_PokemonCenter_1F
+    { (const u8[]){19, 9, 3}, 3, FALSE }, // MossdeepCity_PokemonCenter_1F
+    { (const u8[]){25}, 1, TRUE }, // Route119_WeatherInstitute_1F
+    { (const u8[]){10, 11, 12}, 3, FALSE }, // CianwoodCity_hns
+    { (const u8[]){10, 11, 12}, 3, FALSE }, // OlivineCity_hns
+    { (const u8[]){13}, 1, FALSE }, // DewfordTown
     { (const u8[]){4, 2}, 2, FALSE }, // Route34_FishingShack_hoenn
-    { (const u8[]){12, 7}, 2, FALSE }, // OlivineCity_HarborOffice_hoenn
+    { (const u8[]){16, 7}, 2, FALSE }, // OlivineCity_HarborOffice_hoenn
     { (const u8[]){6, 8}, 2, FALSE }, // OlivineCity_SailorsHouse_hoenn
-    { (const u8[]){20}, 1, FALSE }, // OlivineCity_CaptainsHouse_hoenn
+    { (const u8[]){24}, 1, FALSE }, // OlivineCity_CaptainsHouse_hoenn
     { (const u8[]){4}, 1, FALSE }, // OlivineCity_TackleShop_hoenn
     { (const u8[]){2}, 1, FALSE }, // OlivineCity_Shipwright_hoenn
     { (const u8[]){3}, 1, FALSE }, // OlivineCity_KeepersHouse_hoenn
