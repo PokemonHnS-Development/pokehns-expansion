@@ -175,9 +175,9 @@ HoennSeek_EventScript_BurnedTowerFirstSight::
 	lockall
 	setvar VAR_TEMP_4, 0
 	setflag FLAG_HOENN_CYNDAQUIL_SCENE
-	setvar VAR_0x8007, 0
-	getplayerxy VAR_0x8005, VAR_0x8006
-	call_if_lt VAR_0x8006, 14, HoennSeek_EventScript_StarterPanDown
+	setvar VAR_0x8008, 17
+	setvar VAR_0x8009, 14
+	call HoennSeek_EventScript_StarterPanTo
 	msgbox HoennSeek_Text_BurnedTowerArrive, MSGBOX_DEFAULT
 	closemessage
 	playmoncry SPECIES_TYPHLOSION, CRY_MODE_NORMAL
@@ -439,13 +439,78 @@ HoennSeek_EventScript_StarterPanDown::
 	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_CameraDown2
 	waitmovement 0
 	return
+@ Pan the camera to the tile in VAR_0x8008/VAR_0x8009 from wherever the
+@ player stands, one tile at a time (part 17r: the Burned Tower's family was
+@ off screen when the scene started from the west stairs). StarterPanBack
+@ walks it back to the player. Uses VAR_0x8004/0x8005 as the camera tile and
+@ VAR_0x800A/0x800B for the player's tile.
+HoennSeek_EventScript_StarterPanTo::
+	setvar VAR_0x8007, 2
+	getplayerxy VAR_0x8004, VAR_0x8005
+	@ The player's tile, for the pan back: once the camera object moves,
+	@ getplayerxy reports the camera's tile instead.
+	copyvar VAR_0x800A, VAR_0x8004
+	copyvar VAR_0x800B, VAR_0x8005
+	special SpawnCameraObject
+	goto HoennSeek_EventScript_CameraWalkTo
+
+@ Walk the camera from VAR_0x8004/0x8005 to VAR_0x8008/0x8009, x first.
+HoennSeek_EventScript_CameraWalkTo:
+	goto_if_eq VAR_0x8004, VAR_0x8008, HoennSeek_EventScript_CameraWalkToY
+	goto_if_lt VAR_0x8004, VAR_0x8008, HoennSeek_EventScript_CameraWalkRight
+	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_CameraLeft1
+	waitmovement 0
+	subvar VAR_0x8004, 1
+	goto HoennSeek_EventScript_CameraWalkTo
+HoennSeek_EventScript_CameraWalkRight:
+	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_CameraRight1
+	waitmovement 0
+	addvar VAR_0x8004, 1
+	goto HoennSeek_EventScript_CameraWalkTo
+HoennSeek_EventScript_CameraWalkToY:
+	goto_if_eq VAR_0x8005, VAR_0x8009, HoennSeek_EventScript_StarterReturn
+	goto_if_lt VAR_0x8005, VAR_0x8009, HoennSeek_EventScript_CameraWalkDown
+	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_CameraUp1
+	waitmovement 0
+	subvar VAR_0x8005, 1
+	goto HoennSeek_EventScript_CameraWalkToY
+HoennSeek_EventScript_CameraWalkDown:
+	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_CameraDown1
+	waitmovement 0
+	addvar VAR_0x8005, 1
+	goto HoennSeek_EventScript_CameraWalkToY
+
 HoennSeek_EventScript_StarterPanBack::
+	goto_if_eq VAR_0x8007, 2, HoennSeek_EventScript_StarterPanBackFromTile
 	goto_if_ne VAR_0x8007, 1, HoennSeek_EventScript_StarterReturn
 	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_CameraUp2
 	waitmovement 0
 	special RemoveCameraObject
 	setvar VAR_0x8007, 0
 	return
+
+HoennSeek_EventScript_StarterPanBackFromTile:
+	copyvar VAR_0x8004, VAR_0x8008
+	copyvar VAR_0x8005, VAR_0x8009
+	copyvar VAR_0x8008, VAR_0x800A
+	copyvar VAR_0x8009, VAR_0x800B
+	call HoennSeek_EventScript_CameraWalkTo
+	special RemoveCameraObject
+	setvar VAR_0x8007, 0
+	return
+
+HoennSeek_Movement_CameraLeft1:
+	walk_slow_left
+	step_end
+HoennSeek_Movement_CameraRight1:
+	walk_slow_right
+	step_end
+HoennSeek_Movement_CameraUp1:
+	walk_slow_up
+	step_end
+HoennSeek_Movement_CameraDown1:
+	walk_slow_down
+	step_end
 
 HoennSeek_Movement_CameraDown2:
 	walk_slow_down

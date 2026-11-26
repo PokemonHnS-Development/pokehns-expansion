@@ -263,3 +263,8 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.
 - [ ] Day/night tinting on Hoenn windows and lamps.
 - [ ] Walking (not warping) Slateport → Route 110 → Route 103 → Oldale → Littleroot as the aide describes.
+
+## 2.0 part 17r-a (review fixes)
+- Cross the Tidal Strait before getting Mudkip and May's number: May's strait call should never ring afterwards.
+- Get Mudkip through the strait, then walk into Slateport harbor: no greeting, and the aide isn't there.
+- Talk to the Squirtle leader after the fire, now that the camera comes back (it should join).

@@ -16,8 +16,9 @@ appends a follower object:
     idempotent. Run it after gen_hoenn_trainers.py and gen_hoenn_ow_mons.py (both rewrite
     Hoenn map.json objects; neither touches objects with this script).
 
-TILE CHOICE (unless the entry gives "at"): the first of right, left, up-right, up-left,
-down-right, down-left of the trainer where
+TILE CHOICE (unless the entry gives "at"): the first of straight behind (skipped for a
+trainer facing up), right, left, up-right, up-left, down-right, down-left of the trainer
+where
   - the tile is walkable floor (collision 0, a plain behavior) at the trainer's elevation
     (or elevation 0, which matches any);
   - no object, warp, sign or trigger is on it, and it isn't in front of any object;
@@ -158,6 +159,11 @@ def choose_tile(name, m, cells, objs, trainer):
     sx, sy = -fdy, fdx  # one side
     order = [(sx, sy), (-sx, -sy), (sx - fdx, sy - fdy), (-sx - fdx, -sy - fdy),
              (sx + fdx, sy + fdy), (-sx + fdx, -sy + fdy)]
+    # Straight behind the trainer comes first where there's room (Bryan, part 17r): it
+    # looks cleaner and big sprites stop covering their trainer. Not for a trainer who
+    # faces up (Red): his "behind" is the tile in front of him on screen.
+    if facing(trainer) != "UP":
+        order.insert(0, (-fdx, -fdy))
     why = []
     for dx, dy in order:
         xy = (tx + dx, ty + dy)

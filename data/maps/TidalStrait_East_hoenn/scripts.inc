@@ -5,9 +5,15 @@ TidalStrait_East_hoenn_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, TidalStrait_East_hoenn_OnTransition
 	.byte 0
 
-@ May's PokéGear call (src/hoenn_phone.c) rings once this is set.
+@ May's PokéGear call (src/hoenn_phone.c) rings once this is set. If you
+@ cross before Birch gives you her number, the call is marked done: by the
+@ time you have the number the news is stale (part 17r).
 TidalStrait_East_hoenn_OnTransition:
+	goto_if_set FLAG_HOENN_CROSSED_STRAIT, TidalStrait_East_hoenn_OnTransitionEnd
 	setflag FLAG_HOENN_CROSSED_STRAIT
+	goto_if_set FLAG_HOENN_BM_PHONE, TidalStrait_East_hoenn_OnTransitionEnd
+	setflag FLAG_HOENN_CALL_STRAIT
+TidalStrait_East_hoenn_OnTransitionEnd:
 	end
 
 TidalStrait_East_hoenn_EventScript_ToJohto::

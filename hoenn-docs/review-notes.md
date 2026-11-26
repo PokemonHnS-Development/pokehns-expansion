@@ -34,7 +34,7 @@ Desert Ruins, Island Cave and Ancient Tomb all put their spot at (8,2). That's t
 - In an empty dead-end room this is easy to find, but it's not discreet.
 - **If Bryan wants it hidden:** move it a few tiles to one side.
 
-### 6. Put leaders' Pokémon behind them where there's room (Bryan)
+### 6. Put leaders' Pokémon behind them where there's room (Bryan) — **done in 17r-a**
 Bryan would like each trainer's follower to stand **behind** the trainer when the tile is free, which should look cleaner. Today `gen_hoenn_followers.py` tries beside first, so all 30 stand to the side. The tile behind was checked with the generator's own rules (floor, nothing on it, not in a trainer's sight, doesn't cut anything off).
 - **Room behind, 12:**
   - Falkner (9,3), Jasmine (8,3), Brock (6,4), Sabrina (14,10).
@@ -46,13 +46,13 @@ Bryan would like each trainer's follower to stand **behind** the trainer when th
 
 **Drake's Salamence hides Drake.** In `EverGrandeCity_DrakesRoom`, Salamence stands at (5,5). It's a large sprite and covers Drake's left half. Moving it behind him, to (6,4), fixes that. Two smaller overlaps are probably fine: Blue's Rhyperior hangs over the edge of his mat, and Jasmine's Steelix overlaps her slightly.
 
-### 7. Slateport aide greets you after you already have Mudkip (bug)
+### 7. Slateport aide greets you after you already have Mudkip (bug) — **done in 17r-a**
 Reproduced in the emulator.
 - **How it happens:** come in by the Tidal Strait (or the Lilycove ferry), get Mudkip from Birch, then walk into Slateport harbor. The `ON_FRAME` greeting (`VAR_HOENN_AIDE_STATE` == 0) still plays, but the aide is hidden (his flag is `FLAG_HOENN_RECEIVED_MUDKIP`). Nobody is standing there, yet "Oh! You must be …, from JOHTO!" plays anyway.
 - **Origin:** part 16b. Part 14 makes it a normal route instead of a rare one.
 - **Fix:** have Birch's gift script set `VAR_HOENN_AIDE_STATE` to 1, or skip the greeting when the flag is set.
 
-### 8. May's strait call can ring long after the crossing
+### 8. May's strait call can ring long after the crossing — **done in 17r-a**
 `HOENN_CALL_STRAIT` needs `FLAG_HOENN_BM_PHONE`.
 - **The problem:** if you cross before Birch gives you the numbers, the call rings whenever you get them. "Dad *just* got a call from Mr. Briney" then comes hours late.
 - **Fix:** mark the call done if you crossed without the phone, or word it so the timing doesn't matter.
@@ -62,7 +62,7 @@ Reproduced in the emulator.
 - **Graves:** some headstones and a cross sit right behind the player's back sprite, so a cross pokes out beside the head.
 - The plan said Bryan approves mockups first; that was skipped (item 1).
 
-### 10. Burned Tower: from the west stairs you never see the Typhlosion family (bug)
+### 10. Burned Tower: from the west stairs you never see the Typhlosion family (bug) — **done in 17r-a**
 Reproduced in the emulator: step down the west stairs at night onto (8,17). The whole scene plays with the camera on the player, and the family at (16–18, 14–15) stays off screen.
 - **Why:** `HoennSeek_EventScript_StarterPanDown` only pans the camera down 2 tiles, and only when the player is above row 14. The south-west trigger row (x 8–13, row 17) gets no pan, and from x 8–9 the family is out of view.
 - **Fix:** pan toward the family from wherever the scene starts, or move the camera to a fixed spot over the embers.
@@ -80,11 +80,11 @@ Reproduced in the emulator: step down the west stairs at night onto (8,17). The 
 
 ### 13. Smaller things from parts 15a–16
 - **RYDER outside the Cerulean Gym** stands right under the gym's round sign, so his head covers it. Moving him a tile would look cleaner.
-- **`gMapGroup_SpecialArea_Hns` is full** (128 maps; the Tidal Strait's east half is number 127, the last one that fits in an `s8`). New maps go in `gMapGroup_SpecialArea2_Hns`, but `gen_hoenn_buildings.py` still appends to the full group. The next building would hang the game on load. Point the generator at the new group before anyone adds one.
+- **Done in 17r-a:** **`gMapGroup_SpecialArea_Hns` is full** (128 maps; the Tidal Strait's east half is number 127, the last one that fits in an `s8`). New maps go in `gMapGroup_SpecialArea2_Hns`, but `gen_hoenn_buildings.py` still appends to the full group. The next building would hang the game on load. Point the generator at the new group before anyone adds one.
 - **RYDER takes Emerald's unused `TRAINER_LEROY` slot.** That shifts every Hoenn trainer ID after it by one, so a save made on a build from before part 16 would have its Hoenn "defeated" flags shuffled. Saves aren't meant to carry over between dev builds, but don't use an old 2.0 test save for a playtest.
 - **Suicune at the Route 25 overlook** stands right next to the new garden gap on a fresh save. Already on the playtest checklist; check it there.
 
-### 14. Vermilion fire: the camera never comes back (bug, serious)
+### 14. Vermilion fire: the camera never comes back (bug, serious) — **done in 17r-a**
 Reproduced in the emulator.
 - **What happens:** `HoennSeek_EventScript_VermilionFire` pans the camera tile by tile to the burning house, then ends with `special RemoveCameraObject` and never pans back. Afterwards the view stays offset from the player. Once you walk a few steps, the map draws in the wrong places (repeated, wrapped strips) until you leave the map.
 - **Fix:** pan back the same number of tiles before `RemoveCameraObject`, as Emerald's camera scenes do (e.g. keep the step counts and walk the camera back).
