@@ -21,6 +21,10 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_STRAIT, HoennSeek_EventScript_CallStrait
 	case HOENN_CALL_STARTER_FOUND, HoennSeek_EventScript_CallStarterFound
 	case HOENN_CALL_KANTO_STARTER, HoennSeek_EventScript_CallKantoStarter
+	case HOENN_CALL_POND, HoennSeek_EventScript_CallPond @ 2.0 part 18 (hoenn_species.inc)
+	case HOENN_CALL_RALTS, HoennSeek_EventScript_CallRalts
+	case HOENN_CALL_KIYO, HoennSeek_EventScript_CallKiyo
+	case HOENN_CALL_SCIZOR, HoennSeek_EventScript_CallScizor
 	releaseall
 	end
 

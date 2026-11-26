@@ -16,5 +16,9 @@
 #define HOENN_CALL_STRAIT  11 // May: you surfed the Tidal Strait into Hoenn (2.0 part 14)
 #define HOENN_CALL_STARTER_FOUND 12 // Brendan: Birch's runaway Johto starter is with you (2.0 part 15a)
 #define HOENN_CALL_KANTO_STARTER 13 // May: a Kanto starter from the 2.0 events chose you (2.0 part 16)
+#define HOENN_CALL_POND   14 // Brendan: you saw the Swampert family dive on Route 102 (2.0 part 18)
+#define HOENN_CALL_RALTS  15 // Wally: the Ralts on Route 102 chose you (2.0 part 18)
+#define HOENN_CALL_KIYO   16 // Brendan: you watched Kiyo spar with a Machamp (2.0 part 18)
+#define HOENN_CALL_SCIZOR 17 // May: you saw the Scizor at the National Park (2.0 part 18)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

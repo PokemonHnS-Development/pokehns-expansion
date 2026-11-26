@@ -35,7 +35,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route102_EventScript_LittleBoy",
+      "script": "HoennSeek_EventScript_HintNpc30",
       "flag": "0"
     },
     {
@@ -87,7 +87,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route102_EventScript_Boy",
+      "script": "HoennSeek_EventScript_HintNpc31",
       "flag": "0"
     },
     {
@@ -219,10 +219,351 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "HoennSeek_EventScript_OWMon",
       "flag": "FLAG_NIGHT_POKEMON"
+    },
+    {
+      "local_id": "LOCALID_HOENN_POND_SWAMPERT",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SWAMPERT",
+      "x": 42,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_PondSwampert",
+      "flag": "FLAG_HOENN_HIDE_POND_FAMILY"
+    },
+    {
+      "local_id": "LOCALID_HOENN_POND_MUDKIP_1",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MUDKIP",
+      "x": 41,
+      "y": 5,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_PondMudkip",
+      "flag": "FLAG_HOENN_HIDE_POND_FAMILY"
+    },
+    {
+      "local_id": "LOCALID_HOENN_POND_MUDKIP_2",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MUDKIP",
+      "x": 43,
+      "y": 5,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_PondMudkip",
+      "flag": "FLAG_HOENN_HIDE_POND_FAMILY"
+    },
+    {
+      "local_id": "LOCALID_HOENN_GARDEVOIR",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GARDEVOIR",
+      "x": 13,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Gardevoir",
+      "flag": "FLAG_HOENN_HIDE_RALTS"
+    },
+    {
+      "local_id": "LOCALID_HOENN_RALTS",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RALTS",
+      "x": 12,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Ralts",
+      "flag": "FLAG_HOENN_HIDE_RALTS"
     }
   ],
   "warp_events": [],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_RaltsApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    },
+    {
+      "type": "trigger",
+      "x": 37,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    },
+    {
+      "type": "trigger",
+      "x": 38,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    },
+    {
+      "type": "trigger",
+      "x": 40,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    },
+    {
+      "type": "trigger",
+      "x": 41,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    },
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    },
+    {
+      "type": "trigger",
+      "x": 44,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    },
+    {
+      "type": "trigger",
+      "x": 45,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    },
+    {
+      "type": "trigger",
+      "x": 46,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    },
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_PondScene"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

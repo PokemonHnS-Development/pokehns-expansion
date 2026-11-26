@@ -5,6 +5,7 @@ NationalPark_Normal_hns_MapScripts::
 
 NationalPark_Normal_OnTransition: 
 	callnative SetTimeBasedEncounters
+	call HoennSeek_EventScript_NationalParkOnTransition @ Hoenn & Seek 2.0 part 18
 	end
 
 NationalPark_Normal_EventScript_Lass::

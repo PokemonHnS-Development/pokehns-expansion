@@ -48,6 +48,8 @@ u16 HoennLeadIsSpecies(void);
 u16 HoennFindPartySpecies(void);
 // PokéGear (src/hoenn_phone.c, part 16d)
 bool32 HoennTryEventCall(void);
+u16 HoennSpeciesDueCall(void);
+bool8 HoennPlayerIsRushing(void);
 bool32 HoennIsCallableSpecialSlot(u32 rematchIdx);
 bool32 HoennSpecialCallerAnswers(s32 rematchIdx);
 const u8 *HoennPhoneCallText(u16 trainerId, bool32 *newRematchRequest);
