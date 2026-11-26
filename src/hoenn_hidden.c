@@ -35,7 +35,8 @@
 //   VAR_0x8008 = the party slot (1 = the second Pokémon of a wild double).
 //   VAR_0x8009 = HOENN_TUNE_* bits: FEMALE re-rolls the Pokémon as a female
 //                (same species and level; done first, so it keeps the rest),
-//                HIDDEN_ABILITY gives it its hidden ability.
+//                HIDDEN_ABILITY gives it its hidden ability, SHINY makes it
+//                shiny (part 23's Altaria).
 static void TuneWildMon(u32 slot, u32 extras)
 {
     struct Pokemon *mon = &gEnemyParty[slot];
@@ -56,6 +57,11 @@ static void TuneWildMon(u32 slot, u32 extras)
     {
         u8 abilityNum = 2;
         SetMonData(mon, MON_DATA_ABILITY_NUM, &abilityNum);
+    }
+    if (extras & HOENN_TUNE_SHINY)
+    {
+        bool32 isShiny = TRUE;
+        SetMonData(mon, MON_DATA_IS_SHINY, &isShiny);
     }
     if (move != MOVE_NONE)
     {
@@ -152,6 +158,13 @@ u16 HoennOrchardBerry(void)
 //    saw it go under from their boat; they told Birch, who funds their surveys.
 //  - May, the Chimecho: her mom tends a grave on Mt. Pyre and heard the chimes
 //    the same night.
+// Part 23's:
+//  - May, the chorus: Winona keeps Altaria and hears about every flock in Hoenn;
+//    she told Norman at the League, who told May.
+//  - Brendan, the Bagon: Magma's researchers survey Meteor Falls with Birch and
+//    saw it leap at you.
+//  - Brendan, the Metagross: Cozmo was charting the meteorite fragments' glow in
+//    Steven's cave that night and told Birch.
 u16 HoennHiddenDueCall(void)
 {
     if (FlagGet(FLAG_HOENN_MUNCHLAX_DONE) && !FlagGet(FLAG_HOENN_CALL_MUNCHLAX))
@@ -170,6 +183,12 @@ u16 HoennHiddenDueCall(void)
         return HOENN_CALL_WAILORD;
     if (FlagGet(FLAG_HOENN_CHIMECHO_MET) && !FlagGet(FLAG_HOENN_CALL_CHIMECHO))
         return HOENN_CALL_CHIMECHO;
+    if (FlagGet(FLAG_HOENN_CHORUS_WATCHED) && !FlagGet(FLAG_HOENN_CALL_CHORUS))
+        return HOENN_CALL_CHORUS;
+    if (FlagGet(FLAG_HOENN_BAGON_MET) && !FlagGet(FLAG_HOENN_CALL_BAGON))
+        return HOENN_CALL_BAGON;
+    if (FlagGet(FLAG_HOENN_METAGROSS_SEEN) && !FlagGet(FLAG_HOENN_CALL_METAGROSS))
+        return HOENN_CALL_METAGROSS;
     return HOENN_CALL_NONE;
 }
 

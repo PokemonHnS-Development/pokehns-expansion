@@ -311,6 +311,16 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Chimecho on a real night: follow the chimes from the summit stairs; catch it (only a knock-out was tested). Once caught, no chimes; otherwise once a night.
 - [ ] Calls: Brendan (Wailord) and May (Chimecho) each ring once. Hint lines: the Pacifidlog fisherman, the summit's old lady, the Mossdeep and Slateport Pokémon Center rumors, Birch's aide's field notes.
 
+## 2.0 part 23 — Meteor Falls: Altaria chorus, Bagon's leap, Metagross
+- [ ] Find the way up from 1F's right-hand ledge (27,3) without being told: does the new cave mouth read as a way in? Walk back down.
+- [ ] The clifftop by eye at 2×: the tree edges, the cliff, the boulder row. Morning tinting makes it look reddish in the test.
+- [ ] A real Saturday morning: watch from behind each boulder; then another week, step into a gap and check the flock is gone until Sunday's reset.
+- [ ] The shiny Altaria with a real Swablu/Altaria lead (the test swapped species in memory): catch it (only a knock-out was tested) and check it's shiny with Perish Song in its summary; after the catch the flute prompt never comes back.
+- [ ] Bagon: surf up from the entrance, watch the leap, land on the ledge from the pool and battle; catch it (only a knock-out was tested): Dragon Ascent and the Dragon Scale.
+- [ ] Metagross on a real night: the fusion flash and the Metagross walking off look right; the Comet Shard, then a Star Piece the next week.
+- [ ] Calls: May (chorus), Brendan (Bagon, Metagross) each ring once. Hint lines: Route 115's woman, Fallarbor's gentleman, Cozmo's wife; the Fortree, Mauville and Oldale Pokémon Center rumors; Birch's aide's field notes.
+- [ ] Cozmo's wife's own line still says Cozmo went to Meteor Falls "with some people from TEAM MAGMA" (Emerald's text, pre-existing): fine for reformed Magma, or reword?
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

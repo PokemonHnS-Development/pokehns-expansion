@@ -1098,3 +1098,501 @@ HoennSeek_Text_CallChimecho:
 	.string "the graves… That was you, right?\p"
 	.string "Mom says it was a CHIMECHO\n"
 	.string "singing to the spirits there.$"
+
+@ ==========================================================================
+@ Part 23: Meteor Falls (Altaria's chorus, Bagon's leap, Metagross)
+@ CHORUS: a cave mouth at the top right of Meteor Falls 1F (27,3) leads up
+@ to a clifftop (MeteorFalls_Clifftop_hoenn). On Saturday mornings an
+@ ALTARIA sings there with four SWABLU, once a week. A line of boulders
+@ (row 10) hides you: stand behind one (row 11) to watch, step into a gap
+@ and the flock scatters until next week. Watch-only, like HGSS's Clefairy
+@ dance; each watch leaves a Pretty Feather.
+@ SHINY ALTARIA: once you've watched the chorus to the end, a later chorus
+@ offers to play the GLASS FLUTE if your lead is a SWABLU or ALTARIA. A
+@ shiny ALTARIA glides down to sing along and battles you: scaled, Perish
+@ Song (the chorus). Knocked out, it's back the next Saturday.
+@ BAGON: on the ledge above the pool in B1F_2R, mornings, once a day until
+@ caught. Surfing up the pool (row 7, where the ledge is in full view)
+@ plays its leap into the water; land on the ledge to battle it: scaled, Dragon Ascent (its dream of flight),
+@ holding a Dragon Scale.
+@ METAGROSS: two METANG hover over a meteorite fragment in Steven's cave
+@ at night, once a week. Coming up the path past them (15-16,12) they
+@ fuse into a METAGROSS, which leaves (watch-only). Comet Shard the first
+@ time, Star Piece after that.
+@ ==========================================================================
+
+@ ---- Altaria's chorus ----------------------------------------------------
+HoennSeek_EventScript_LeaveClifftop::
+	warp MAP_METEOR_FALLS_1F_1R, 27, 4
+	waitstate
+	end
+
+HoennSeek_EventScript_ClifftopOnTransition::
+	setflag FLAG_HOENN_HIDE_CHORUS
+	setflag FLAG_HOENN_HIDE_SHINY_ALTARIA
+	goto_if_set FLAG_HOENN_WEEKLY_CHORUS, HoennSeek_EventScript_HiddenEnd23
+	setvar VAR_0x8004, HOENN_SATURDAY
+	specialvar VAR_RESULT, HoennIsItWeekday
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_HiddenEnd23
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_MORNING, HoennSeek_EventScript_HiddenEnd23
+	clearflag FLAG_HOENN_HIDE_CHORUS
+	setvar VAR_TEMP_1, 1
+HoennSeek_EventScript_HiddenEnd23:
+	end
+
+@ ON_FRAME, the first frame on the clifftop while the chorus is there.
+HoennSeek_EventScript_ChorusIntro::
+	lockall
+	setvar VAR_TEMP_1, 2
+	msgbox HoennSeek_Text_ChorusIntro, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ The chorus's objects can't be reached before they leave.
+HoennSeek_EventScript_ChorusMon::
+	end
+
+@ Row 10's gaps between the boulders.
+HoennSeek_EventScript_ChorusScatter::
+	lockall
+	setvar VAR_TEMP_1, 3
+	playse SE_PIN
+	applymovement LOCALID_HOENN_CHORUS_ALTARIA, Common_Movement_ExclamationMark
+	applymovement LOCALID_HOENN_CHORUS_SWABLU_1, Common_Movement_ExclamationMark
+	applymovement LOCALID_HOENN_CHORUS_SWABLU_2, Common_Movement_ExclamationMark
+	applymovement LOCALID_HOENN_CHORUS_SWABLU_3, Common_Movement_ExclamationMark
+	applymovement LOCALID_HOENN_CHORUS_SWABLU_4, Common_Movement_ExclamationMark
+	waitmovement 0
+	call HoennSeek_EventScript_ChorusFliesOff
+	msgbox HoennSeek_Text_ChorusScattered, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ Row 11, right behind a boulder.
+HoennSeek_EventScript_ChorusWatch::
+	lockall
+	setvar VAR_TEMP_1, 3
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox HoennSeek_Text_ChorusHide, MSGBOX_DEFAULT
+	closemessage
+	call HoennSeek_EventScript_ChorusCircle
+	playmoncry SPECIES_ALTARIA, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_ChorusSings, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	call HoennSeek_EventScript_ChorusCircle
+	goto_if_unset FLAG_HOENN_CHORUS_WATCHED, HoennSeek_EventScript_ChorusEnds
+	goto_if_set FLAG_HOENN_SHINY_ALTARIA_DONE, HoennSeek_EventScript_ChorusEnds
+	checkitem ITEM_GLASS_FLUTE
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_ChorusEnds
+	setvar VAR_0x8004, SPECIES_SWABLU
+	specialvar VAR_RESULT, HoennLeadIsSpecies
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_ChorusFlute
+	setvar VAR_0x8004, SPECIES_ALTARIA
+	specialvar VAR_RESULT, HoennLeadIsSpecies
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_ChorusEnds
+HoennSeek_EventScript_ChorusFlute:
+	msgbox HoennSeek_Text_ChorusHumming, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_ChorusEnds
+	playse SE_GLASS_FLUTE
+	msgbox HoennSeek_Text_ChorusFlute, MSGBOX_DEFAULT
+	waitse
+	closemessage
+	clearflag FLAG_HOENN_HIDE_SHINY_ALTARIA
+	addobject LOCALID_HOENN_SHINY_ALTARIA
+	applymovement LOCALID_HOENN_SHINY_ALTARIA, HoennSeek_Movement_ShinyAltariaGlides
+	waitmovement 0
+	playmoncry SPECIES_ALTARIA, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_ShinyAltaria, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setvar VAR_0x8004, SPECIES_ALTARIA
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_PERISH_SONG
+	setvar VAR_0x8006, FALSE
+	setvar VAR_0x8007, ITEM_NONE
+	setvar VAR_0x8008, 0
+	setvar VAR_0x8009, HOENN_TUNE_SHINY
+	special HoennTuneWildMonSlot
+	dowildbattle
+	removeobject LOCALID_HOENN_SHINY_ALTARIA
+	setflag FLAG_HOENN_HIDE_SHINY_ALTARIA
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_ChorusEnds
+	setflag FLAG_HOENN_SHINY_ALTARIA_DONE
+HoennSeek_EventScript_ChorusEnds:
+	call HoennSeek_EventScript_ChorusFliesOff
+	setflag FLAG_HOENN_CHORUS_WATCHED
+	msgbox HoennSeek_Text_ChorusEnds, MSGBOX_DEFAULT
+	giveitem ITEM_PRETTY_FEATHER
+	releaseall
+	end
+
+@ The SWABLU fly two laps around the singing ALTARIA.
+HoennSeek_EventScript_ChorusCircle:
+	applymovement LOCALID_HOENN_CHORUS_SWABLU_1, HoennSeek_Movement_SwabluLapA
+	applymovement LOCALID_HOENN_CHORUS_SWABLU_2, HoennSeek_Movement_SwabluLapB
+	applymovement LOCALID_HOENN_CHORUS_SWABLU_3, HoennSeek_Movement_SwabluLapC
+	applymovement LOCALID_HOENN_CHORUS_SWABLU_4, HoennSeek_Movement_SwabluLapD
+	applymovement LOCALID_HOENN_CHORUS_ALTARIA, HoennSeek_Movement_AltariaSings
+	waitmovement 0
+	return
+
+HoennSeek_EventScript_ChorusFliesOff:
+	playse SE_M_FLY
+	applymovement LOCALID_HOENN_CHORUS_ALTARIA, HoennSeek_Movement_ChorusFliesOff
+	applymovement LOCALID_HOENN_CHORUS_SWABLU_1, HoennSeek_Movement_ChorusFliesOff
+	applymovement LOCALID_HOENN_CHORUS_SWABLU_2, HoennSeek_Movement_ChorusFliesOff
+	applymovement LOCALID_HOENN_CHORUS_SWABLU_3, HoennSeek_Movement_ChorusFliesOff
+	applymovement LOCALID_HOENN_CHORUS_SWABLU_4, HoennSeek_Movement_ChorusFliesOff
+	waitmovement 0
+	removeobject LOCALID_HOENN_CHORUS_ALTARIA
+	removeobject LOCALID_HOENN_CHORUS_SWABLU_1
+	removeobject LOCALID_HOENN_CHORUS_SWABLU_2
+	removeobject LOCALID_HOENN_CHORUS_SWABLU_3
+	removeobject LOCALID_HOENN_CHORUS_SWABLU_4
+	setflag FLAG_HOENN_HIDE_CHORUS
+	setflag FLAG_HOENN_WEEKLY_CHORUS
+	return
+
+@ Each SWABLU loops through the three tiles next to its own, away from the
+@ others, and lands where it started.
+HoennSeek_Movement_SwabluLapA: @ (6,7)
+	walk_up
+	walk_left
+	walk_down
+	walk_right
+	face_right
+	step_end
+
+HoennSeek_Movement_SwabluLapB: @ (10,7)
+	walk_up
+	walk_right
+	walk_down
+	walk_left
+	face_left
+	step_end
+
+HoennSeek_Movement_SwabluLapC: @ (5,9)
+	walk_left
+	walk_up
+	walk_right
+	walk_down
+	face_right
+	step_end
+
+HoennSeek_Movement_SwabluLapD: @ (11,9)
+	walk_right
+	walk_up
+	walk_left
+	walk_down
+	face_left
+	step_end
+
+HoennSeek_Movement_AltariaSings:
+	jump_in_place_down
+	delay_8
+	jump_in_place_down
+	delay_8
+	face_down
+	step_end
+
+HoennSeek_Movement_ChorusFliesOff:
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+@ From the right edge of the stage (12,7) to the middle (9,7).
+HoennSeek_Movement_ShinyAltariaGlides:
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	face_down
+	step_end
+
+HoennSeek_EventScript_CallChorus::
+	setflag FLAG_HOENN_CALL_CHORUS
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallChorus
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Bagon ----------------------------------------------------------------
+HoennSeek_EventScript_BagonOnTransition::
+	setflag FLAG_HOENN_HIDE_BAGON
+	goto_if_set FLAG_HOENN_BAGON_CAUGHT, HoennSeek_EventScript_HiddenEnd23
+	goto_if_set FLAG_HOENN_DAILY_BAGON, HoennSeek_EventScript_HiddenEnd23
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_MORNING, HoennSeek_EventScript_HiddenEnd23
+	clearflag FLAG_HOENN_HIDE_BAGON
+	setvar VAR_TEMP_1, 1
+	end
+
+@ Row 7 of the pool, the first row from which the whole ledge is on screen.
+HoennSeek_EventScript_BagonLeaps::
+	lockall
+	setvar VAR_TEMP_1, 2
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_HOENN_BAGON, HoennSeek_Movement_BagonWindUp
+	waitmovement 0
+	playmoncry SPECIES_BAGON, CRY_MODE_NORMAL
+	applymovement LOCALID_HOENN_BAGON, HoennSeek_Movement_BagonLeap
+	waitmovement 0
+	waitmoncry
+	playse SE_M_DIVE
+	msgbox HoennSeek_Text_BagonLeaps, MSGBOX_DEFAULT
+	closemessage
+	setobjectxy LOCALID_HOENN_BAGON, 6, 4
+	applymovement LOCALID_HOENN_BAGON, HoennSeek_Movement_BagonClimbsBack
+	waitmovement 0
+	msgbox HoennSeek_Text_BagonClimbs, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_Bagon::
+	lock
+	faceplayer
+	playmoncry SPECIES_BAGON, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_BagonBattle, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setflag FLAG_HOENN_BAGON_MET
+	setflag FLAG_HOENN_DAILY_BAGON
+	setvar VAR_0x8004, SPECIES_BAGON
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_DRAGON_ASCENT
+	setvar VAR_0x8006, FALSE
+	setvar VAR_0x8007, ITEM_DRAGON_SCALE
+	special HoennTuneWildMon
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	removeobject VAR_LAST_TALKED
+	setflag FLAG_HOENN_HIDE_BAGON
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_BagonCaught
+	msgbox HoennSeek_Text_BagonLeaves, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_BagonCaught:
+	setflag FLAG_HOENN_BAGON_CAUGHT
+	release
+	end
+
+HoennSeek_Movement_BagonWindUp:
+	jump_in_place_down
+	jump_in_place_down
+	delay_8
+	step_end
+
+@ Off the ledge (6,4) into the pool (6,5), out of sight under the water.
+HoennSeek_Movement_BagonLeap:
+	jump_down
+	set_invisible
+	step_end
+
+HoennSeek_Movement_BagonClimbsBack:
+	delay_16
+	set_visible
+	jump_in_place_down
+	face_down
+	step_end
+
+HoennSeek_EventScript_CallBagon::
+	setflag FLAG_HOENN_CALL_BAGON
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallBagon
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Metagross -------------------------------------------------------------
+HoennSeek_EventScript_StevensCaveOnTransition::
+	setflag FLAG_HOENN_HIDE_METANG
+	setflag FLAG_HOENN_HIDE_METAGROSS
+	goto_if_set FLAG_HOENN_WEEKLY_METAGROSS, HoennSeek_EventScript_HiddenEnd23
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_HiddenEnd23
+	clearflag FLAG_HOENN_HIDE_METANG
+	setvar VAR_TEMP_1, 1
+	end
+
+@ They're gone before you can get next to them.
+HoennSeek_EventScript_Metang::
+	end
+
+@ (15,12) and (16,12): every way up the cave passes one of them.
+HoennSeek_EventScript_MetangFuse::
+	lockall
+	setvar VAR_TEMP_1, 2
+	applymovement LOCALID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox HoennSeek_Text_MetangHover, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_HOENN_METANG_1, HoennSeek_Movement_MetangRight
+	applymovement LOCALID_HOENN_METANG_2, HoennSeek_Movement_MetangLeft
+	waitmovement 0
+	playse SE_M_REFLECT
+	fadescreen FADE_TO_WHITE
+	removeobject LOCALID_HOENN_METANG_1
+	removeobject LOCALID_HOENN_METANG_2
+	clearflag FLAG_HOENN_HIDE_METAGROSS
+	addobject LOCALID_HOENN_METAGROSS
+	delay 30
+	fadescreen FADE_FROM_WHITE
+	playmoncry SPECIES_METAGROSS, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_MetagrossFused, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	applymovement LOCALID_HOENN_METAGROSS, HoennSeek_Movement_MetagrossLeaves
+	waitmovement 0
+	removeobject LOCALID_HOENN_METAGROSS
+	setflag FLAG_HOENN_HIDE_METAGROSS
+	setflag FLAG_HOENN_HIDE_METANG
+	setflag FLAG_HOENN_WEEKLY_METAGROSS
+	msgbox HoennSeek_Text_MetagrossGone, MSGBOX_DEFAULT
+	goto_if_set FLAG_HOENN_METAGROSS_SEEN, HoennSeek_EventScript_MetagrossStarPiece
+	setflag FLAG_HOENN_METAGROSS_SEEN
+	giveitem ITEM_COMET_SHARD
+	releaseall
+	end
+
+HoennSeek_EventScript_MetagrossStarPiece:
+	giveitem ITEM_STAR_PIECE
+	releaseall
+	end
+
+HoennSeek_Movement_MetangRight:
+	walk_slow_right
+	step_end
+
+HoennSeek_Movement_MetangLeft:
+	walk_slow_left
+	step_end
+
+@ From (11,9) up into the dark at (11,7).
+HoennSeek_Movement_MetagrossLeaves:
+	face_right
+	delay_16
+	walk_slow_up
+	walk_slow_up
+	step_end
+
+HoennSeek_EventScript_CallMetagross::
+	setflag FLAG_HOENN_CALL_METAGROSS
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallMetagross
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Part 23 texts ---------------------------------------------------------
+HoennSeek_Text_ChorusIntro:
+	.string "A song is drifting over the\n"
+	.string "boulders up ahead…\p"
+	.string "Better stay out of sight behind\n"
+	.string "them, or the singers might fly!$"
+
+HoennSeek_Text_ChorusHide:
+	.string "{PLAYER} crouched behind the\n"
+	.string "boulder and peeked over it.$"
+
+HoennSeek_Text_ChorusSings:
+	.string "An ALTARIA is singing, and the\n"
+	.string "SWABLU circle it, humming along!$"
+
+HoennSeek_Text_ChorusHumming:
+	.string "Your POKéMON is humming along\n"
+	.string "with the chorus, very quietly…\p"
+	.string "Play the GLASS FLUTE with them?$"
+
+HoennSeek_Text_ChorusFlute:
+	.string "{PLAYER} played the GLASS FLUTE.\p"
+	.string "The flute and the song blend\n"
+	.string "together into one melody!$"
+
+HoennSeek_Text_ShinyAltaria:
+	.string "An ALTARIA with golden wings\n"
+	.string "glided down to sing along!\p"
+	.string "It noticed {PLAYER}!$"
+
+HoennSeek_Text_ChorusEnds:
+	.string "The song ended, and the flock\n"
+	.string "flew off over the falls.\p"
+	.string "A soft feather drifted down by\n"
+	.string "the boulder.$"
+
+HoennSeek_Text_ChorusScattered:
+	.string "The SWABLU scattered, and the\n"
+	.string "whole flock flew off!\p"
+	.string "They won't sing here again\n"
+	.string "until next SATURDAY morning.$"
+
+HoennSeek_Text_BagonLeaps:
+	.string "A BAGON leapt off the ledge,\n"
+	.string "flapping its stubby arms…\p"
+	.string "SPLASH! Straight into the pool.$"
+
+HoennSeek_Text_BagonClimbs:
+	.string "It climbed back onto the ledge,\n"
+	.string "dripping wet, to try again.$"
+
+HoennSeek_Text_BagonBattle:
+	.string "The BAGON wants to show you how\n"
+	.string "high it can fly!$"
+
+HoennSeek_Text_BagonLeaves:
+	.string "The BAGON dove into the pool and\n"
+	.string "swam off. It'll be back to leap\l"
+	.string "again tomorrow morning.$"
+
+HoennSeek_Text_MetangHover:
+	.string "Two METANG are hovering over a\n"
+	.string "glowing rock, humming together…$"
+
+HoennSeek_Text_MetagrossFused:
+	.string "The two METANG fused into a\n"
+	.string "METAGROSS!$"
+
+HoennSeek_Text_MetagrossGone:
+	.string "The METAGROSS lumbered off into\n"
+	.string "the dark.\p"
+	.string "Something is glinting where the\n"
+	.string "rock was glowing…$"
+
+HoennSeek_Text_CallChorus:
+	.string "Hi, {PLAYER}! It's MAY.\p"
+	.string "Dad saw WINONA at the LEAGUE\n"
+	.string "today. She keeps ALTARIA, so\l"
+	.string "she hears about every flock.\p"
+	.string "She said someone watched the\n"
+	.string "chorus above METEOR FALLS\l"
+	.string "without scaring a single one!\p"
+	.string "Dad laughed and said that had\n"
+	.string "to be you. Was it?$"
+
+HoennSeek_Text_CallBagon:
+	.string "{PLAYER}! It's BRENDAN!\p"
+	.string "MAXIE's researchers were at\n"
+	.string "METEOR FALLS with Dad's team.\p"
+	.string "They saw a BAGON leap off a\n"
+	.string "ledge, climb back up and then\l"
+	.string "battle someone. Dad says that\l"
+	.string "was you!\p"
+	.string "BAGON dream of flying, you know.\n"
+	.string "Maybe it wanted to show you!$"
+
+HoennSeek_Text_CallMetagross:
+	.string "{PLAYER}! It's BRENDAN!\p"
+	.string "PROF. COZMO called Dad from\n"
+	.string "METEOR FALLS. He was up all\l"
+	.string "night in STEVEN's cave.\p"
+	.string "He was charting how the\n"
+	.string "meteorite pieces glow, when\l"
+	.string "two METANG fused right in\l"
+	.string "front of him. And of you!\p"
+	.string "Dad's never even seen that\n"
+	.string "happen. Lucky!$"

@@ -321,4 +321,29 @@
 #define FLAG_HOENN_DAILY_CHIMECHO       (HOENN_DAILY_FLAGS_START + 0x0C)
 #define FLAG_HOENN_CALL_CHIMECHO        (HOENN_FLAGS_E_HOENN + 0x25) // May
 
+// ---- Part 23: Meteor Falls (data/scripts/hoenn_hidden.inc) ----
+// HoennTuneWildMonSlot bit: the Pokémon becomes shiny (the chorus's Altaria).
+#define HOENN_TUNE_SHINY  4
+// Altaria's chorus: a clifftop above Meteor Falls (MeteorFalls_Clifftop_hoenn,
+// through a cave mouth at 1F_1R (27,3)). Saturday mornings, once a week: watch
+// from behind the boulders, or step out and the flock scatters until next week.
+#define FLAG_HOENN_HIDE_CHORUS          (HOENN_FLAGS_E_HOENN + 0x26) // decided on every arrival
+#define FLAG_HOENN_CHORUS_WATCHED       (HOENN_FLAGS_E_HOENN + 0x27) // watched once to the end (rumor, call, shiny add-on)
+#define FLAG_HOENN_HIDE_SHINY_ALTARIA   (HOENN_FLAGS_E_HOENN + 0x28) // set on every arrival
+#define FLAG_HOENN_SHINY_ALTARIA_DONE   (HOENN_FLAGS_E_HOENN + 0x29) // caught
+#define FLAG_HOENN_WEEKLY_CHORUS        (HOENN_WEEKLY_FLAGS_START + 0x04) // watched or scattered this week
+#define FLAG_HOENN_CALL_CHORUS          (HOENN_FLAGS_E_HOENN + 0x2A) // May
+// Bagon's leap: Meteor Falls B1F_2R's top ledge, mornings, once a day until caught.
+#define FLAG_HOENN_BAGON_CAUGHT         (HOENN_FLAGS_E_HOENN + 0x2B)
+#define FLAG_HOENN_HIDE_BAGON           (HOENN_FLAGS_E_HOENN + 0x2C) // decided on every arrival
+#define FLAG_HOENN_BAGON_MET            (HOENN_FLAGS_E_HOENN + 0x2D) // battled once (rumor, call)
+#define FLAG_HOENN_DAILY_BAGON          (HOENN_DAILY_FLAGS_START + 0x0D)
+#define FLAG_HOENN_CALL_BAGON           (HOENN_FLAGS_E_HOENN + 0x2E) // Brendan
+// Metagross (watch-only): two Metang fuse in Steven's cave at night, once a week.
+#define FLAG_HOENN_HIDE_METANG          (HOENN_FLAGS_E_HOENN + 0x2F) // decided on every arrival
+#define FLAG_HOENN_HIDE_METAGROSS       (HOENN_FLAGS_E_HOENN + 0x30) // set on every arrival
+#define FLAG_HOENN_METAGROSS_SEEN       (HOENN_FLAGS_E_HOENN + 0x31) // watched once (Comet Shard the first time; rumor, call)
+#define FLAG_HOENN_WEEKLY_METAGROSS     (HOENN_WEEKLY_FLAGS_START + 0x05)
+#define FLAG_HOENN_CALL_METAGROSS       (HOENN_FLAGS_E_HOENN + 0x32) // Brendan
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H
