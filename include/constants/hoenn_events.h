@@ -114,4 +114,8 @@
 // Celadon florist: one berry a day, by weekday (part 10).
 #define FLAG_HOENN_DAILY_FLORIST_GIFT (HOENN_DAILY_FLAGS_START + 0x01)
 
+// ---- Part 12: legendary sites reopened (data/hoenn/base_spots.json) --------
+// May's PokéGear call once your secret base is at one of the sites.
+#define FLAG_HOENN_CALL_SITES         (HOENN_FLAGS_C_WORLD + 0x00)
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

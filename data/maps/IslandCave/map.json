@@ -77,6 +77,13 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "IslandCave_EventScript_CaveEntranceSide"
+    },
+    {
+      "type": "secret_base",
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_HOENN_ISLAND_CAVE"
     }
   ]
 }

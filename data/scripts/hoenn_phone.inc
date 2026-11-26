@@ -16,6 +16,7 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_RED, HoennSeek_EventScript_CallRed
 	case HOENN_CALL_CONTEST, HoennSeek_EventScript_CallContest
 	case HOENN_CALL_BASE, HoennSeek_EventScript_CallBase
+	case HOENN_CALL_SITES, HoennSeek_EventScript_CallSites
 	releaseall
 	end
 
@@ -56,6 +57,15 @@ HoennSeek_EventScript_CallBase::
 	setflag FLAG_HOENN_CALL_BASE
 	setspeaker HoennSeek_Text_NameBrendan
 	pokenavcall HoennSeek_Text_CallBase
+	goto HoennSeek_EventScript_CallEnd
+
+@ May: your base is at one of the reopened legendary sites (2.0 part 12). Birch's
+@ aides chart those sites for the League now that they're open again, and one of
+@ them tells her.
+HoennSeek_EventScript_CallSites::
+	setflag FLAG_HOENN_CALL_SITES
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallSites
 	goto HoennSeek_EventScript_CallEnd
 
 @ Elm: the two Johto starters you didn't choose go back on his table.
@@ -468,6 +478,19 @@ HoennSeek_Text_CallBase::
 	.string "FORTREE's shop has desks and\n"
 	.string "chairs. LILYCOVE's DEPT. STORE has\l"
 	.string "the rest. Don't let MAY decorate!$"
+
+HoennSeek_Text_CallSites::
+	.string "{PLAYER}! It's MAY! PROF. BIRCH's\n"
+	.string "aides are charting the old\l"
+	.string "legendary sites for the LEAGUE,\l"
+	.string "now that they're open again.\p"
+	.string "One of them just called me,\n"
+	.string "laughing. Someone made a SECRET\l"
+	.string "BASE inside one. It was you!\p"
+	.string "The POKéMON that slept there\n"
+	.string "are long gone, so it's all yours.\p"
+	.string "BRENDAN says it's spooky. I say\n"
+	.string "it needs dolls. Lots of dolls!$"
 
 HoennSeek_Text_CallContest::
 	.string "{PLAYER}! It's MAY! I just saw you\n"

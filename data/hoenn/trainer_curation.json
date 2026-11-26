@@ -68,6 +68,11 @@
     "Aqua Admin": "drop"
   },
   "trainers": {
+    "TRAINER_GRUNT_SEAFLOOR_CAVERN_1": "drop",
+    "TRAINER_GRUNT_SEAFLOOR_CAVERN_2": "drop",
+    "TRAINER_GRUNT_SEAFLOOR_CAVERN_3": "drop",
+    "TRAINER_GRUNT_SEAFLOOR_CAVERN_4": "drop",
+    "TRAINER_GRUNT_SEAFLOOR_CAVERN_5": "drop",
     "TRAINER_JENNIFER": "fake:cheer",
     "TRAINER_WENDY": "fake:autograph",
     "TRAINER_ALEXA": "fake:cheer",

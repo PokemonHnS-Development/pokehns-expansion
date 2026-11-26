@@ -193,14 +193,5 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [
-    {
-      "type": "sign",
-      "x": 36,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "HoennSeek_EventScript_SealedSite"
-    }
-  ]
+  "bg_events": []
 }

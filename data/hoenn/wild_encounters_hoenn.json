@@ -8805,6 +8805,955 @@
    }
   },
   {
+   "map": "MAP_SEAFLOOR_CAVERN_ROOM1",
+   "base_label": "gHoenn_SeafloorCavern_Room1_hns",
+   "land_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 61,
+      "max_level": 61,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 58,
+      "max_level": 58,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 59,
+      "max_level": 59,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   }
+  },
+  {
+   "map": "MAP_SEAFLOOR_CAVERN_ROOM2",
+   "base_label": "gHoenn_SeafloorCavern_Room2_hns",
+   "land_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 61,
+      "max_level": 61,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 58,
+      "max_level": 58,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 59,
+      "max_level": 59,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   }
+  },
+  {
+   "map": "MAP_SEAFLOOR_CAVERN_ROOM3",
+   "base_label": "gHoenn_SeafloorCavern_Room3_hns",
+   "land_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 61,
+      "max_level": 61,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 58,
+      "max_level": 58,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 59,
+      "max_level": 59,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   }
+  },
+  {
+   "map": "MAP_SEAFLOOR_CAVERN_ROOM4",
+   "base_label": "gHoenn_SeafloorCavern_Room4_hns",
+   "land_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 61,
+      "max_level": 61,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 58,
+      "max_level": 58,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 59,
+      "max_level": 59,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   }
+  },
+  {
+   "map": "MAP_SEAFLOOR_CAVERN_ROOM5",
+   "base_label": "gHoenn_SeafloorCavern_Room5_hns",
+   "land_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 61,
+      "max_level": 61,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 58,
+      "max_level": 58,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 59,
+      "max_level": 59,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   }
+  },
+  {
+   "map": "MAP_SEAFLOOR_CAVERN_ROOM6",
+   "base_label": "gHoenn_SeafloorCavern_Room6_hns",
+   "land_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 61,
+      "max_level": 61,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 58,
+      "max_level": 58,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 59,
+      "max_level": 59,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   },
+   "water_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 58,
+      "max_level": 64,
+      "species": "SPECIES_TENTACRUEL"
+     },
+     {
+      "min_level": 58,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   },
+   "fishing_mons": {
+    "encounter_rate": 10,
+    "mons": [
+     {
+      "min_level": 53,
+      "max_level": 54,
+      "species": "SPECIES_GYARADOS"
+     },
+     {
+      "min_level": 53,
+      "max_level": 54,
+      "species": "SPECIES_TENTACRUEL"
+     },
+     {
+      "min_level": 54,
+      "max_level": 60,
+      "species": "SPECIES_GYARADOS"
+     },
+     {
+      "min_level": 54,
+      "max_level": 60,
+      "species": "SPECIES_TENTACRUEL"
+     },
+     {
+      "min_level": 54,
+      "max_level": 60,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 58,
+      "max_level": 60,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 60,
+      "max_level": 61,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 57,
+      "max_level": 58,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 61,
+      "max_level": 63,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 63,
+      "max_level": 64,
+      "species": "SPECIES_WAILORD"
+     }
+    ]
+   }
+  },
+  {
+   "map": "MAP_SEAFLOOR_CAVERN_ROOM7",
+   "base_label": "gHoenn_SeafloorCavern_Room7_hns",
+   "land_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 61,
+      "max_level": 61,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 58,
+      "max_level": 58,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 59,
+      "max_level": 59,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   },
+   "water_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 58,
+      "max_level": 64,
+      "species": "SPECIES_TENTACRUEL"
+     },
+     {
+      "min_level": 58,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   },
+   "fishing_mons": {
+    "encounter_rate": 10,
+    "mons": [
+     {
+      "min_level": 53,
+      "max_level": 54,
+      "species": "SPECIES_GYARADOS"
+     },
+     {
+      "min_level": 53,
+      "max_level": 54,
+      "species": "SPECIES_TENTACRUEL"
+     },
+     {
+      "min_level": 54,
+      "max_level": 60,
+      "species": "SPECIES_GYARADOS"
+     },
+     {
+      "min_level": 54,
+      "max_level": 60,
+      "species": "SPECIES_TENTACRUEL"
+     },
+     {
+      "min_level": 54,
+      "max_level": 60,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 58,
+      "max_level": 60,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 60,
+      "max_level": 61,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 57,
+      "max_level": 58,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 61,
+      "max_level": 63,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 63,
+      "max_level": 64,
+      "species": "SPECIES_WAILORD"
+     }
+    ]
+   }
+  },
+  {
+   "map": "MAP_SEAFLOOR_CAVERN_ROOM8",
+   "base_label": "gHoenn_SeafloorCavern_Room8_hns",
+   "land_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 61,
+      "max_level": 61,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 58,
+      "max_level": 58,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 59,
+      "max_level": 59,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   }
+  },
+  {
+   "map": "MAP_SEAFLOOR_CAVERN_ENTRANCE",
+   "base_label": "gHoenn_SeafloorCavern_Entrance_hns",
+   "water_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 58,
+      "max_level": 64,
+      "species": "SPECIES_TENTACRUEL"
+     },
+     {
+      "min_level": 58,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   },
+   "fishing_mons": {
+    "encounter_rate": 10,
+    "mons": [
+     {
+      "min_level": 53,
+      "max_level": 54,
+      "species": "SPECIES_GYARADOS"
+     },
+     {
+      "min_level": 53,
+      "max_level": 54,
+      "species": "SPECIES_TENTACRUEL"
+     },
+     {
+      "min_level": 54,
+      "max_level": 60,
+      "species": "SPECIES_GYARADOS"
+     },
+     {
+      "min_level": 54,
+      "max_level": 60,
+      "species": "SPECIES_TENTACRUEL"
+     },
+     {
+      "min_level": 54,
+      "max_level": 60,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 58,
+      "max_level": 60,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 60,
+      "max_level": 61,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 57,
+      "max_level": 58,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 61,
+      "max_level": 63,
+      "species": "SPECIES_WAILORD"
+     },
+     {
+      "min_level": 63,
+      "max_level": 64,
+      "species": "SPECIES_WAILORD"
+     }
+    ]
+   }
+  },
+  {
+   "map": "MAP_CAVE_OF_ORIGIN_ENTRANCE",
+   "base_label": "gHoenn_CaveOfOrigin_Entrance_hns",
+   "land_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 61,
+      "max_level": 61,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 65,
+      "max_level": 65,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 65,
+      "max_level": 65,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 66,
+      "max_level": 66,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   }
+  },
+  {
+   "map": "MAP_CAVE_OF_ORIGIN_1F",
+   "base_label": "gHoenn_CaveOfOrigin_1F_hns",
+   "land_mons": {
+    "encounter_rate": 4,
+    "mons": [
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 61,
+      "max_level": 61,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 60,
+      "max_level": 60,
+      "species": "SPECIES_SABLEYE"
+     },
+     {
+      "min_level": 62,
+      "max_level": 62,
+      "species": "SPECIES_SABLEYE"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_SABLEYE"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 65,
+      "max_level": 65,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 63,
+      "max_level": 63,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 66,
+      "max_level": 66,
+      "species": "SPECIES_CROBAT"
+     }
+    ]
+   }
+  },
+  {
    "map": "MAP_NEW_MAUVILLE_ENTRANCE",
    "base_label": "gHoenn_NewMauville_Entrance_hns",
    "land_mons": {
@@ -11883,6 +12832,75 @@
    }
   },
   {
+   "map": "MAP_SKY_PILLAR_1F",
+   "base_label": "gHoenn_SkyPillar_1F_hns",
+   "land_mons": {
+    "encounter_rate": 10,
+    "mons": [
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_SABLEYE"
+     },
+     {
+      "min_level": 65,
+      "max_level": 65,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 66,
+      "max_level": 66,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 65,
+      "max_level": 65,
+      "species": "SPECIES_SABLEYE"
+     },
+     {
+      "min_level": 68,
+      "max_level": 68,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 69,
+      "max_level": 69,
+      "species": "SPECIES_BANETTE"
+     },
+     {
+      "min_level": 70,
+      "max_level": 70,
+      "species": "SPECIES_BANETTE"
+     },
+     {
+      "min_level": 68,
+      "max_level": 68,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 69,
+      "max_level": 69,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 70,
+      "max_level": 70,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 69,
+      "max_level": 69,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 70,
+      "max_level": 70,
+      "species": "SPECIES_CLAYDOL"
+     }
+    ]
+   }
+  },
+  {
    "map": "MAP_SOOTOPOLIS_CITY",
    "base_label": "gHoenn_SootopolisCity_hns",
    "water_mons": {
@@ -11967,6 +12985,144 @@
       "min_level": 52,
       "max_level": 63,
       "species": "SPECIES_GYARADOS"
+     }
+    ]
+   }
+  },
+  {
+   "map": "MAP_SKY_PILLAR_3F",
+   "base_label": "gHoenn_SkyPillar_3F_hns",
+   "land_mons": {
+    "encounter_rate": 10,
+    "mons": [
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_SABLEYE"
+     },
+     {
+      "min_level": 65,
+      "max_level": 65,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 66,
+      "max_level": 66,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 65,
+      "max_level": 65,
+      "species": "SPECIES_SABLEYE"
+     },
+     {
+      "min_level": 68,
+      "max_level": 68,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 69,
+      "max_level": 69,
+      "species": "SPECIES_BANETTE"
+     },
+     {
+      "min_level": 70,
+      "max_level": 70,
+      "species": "SPECIES_BANETTE"
+     },
+     {
+      "min_level": 68,
+      "max_level": 68,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 69,
+      "max_level": 69,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 70,
+      "max_level": 70,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 69,
+      "max_level": 69,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 70,
+      "max_level": 70,
+      "species": "SPECIES_CLAYDOL"
+     }
+    ]
+   }
+  },
+  {
+   "map": "MAP_SKY_PILLAR_5F",
+   "base_label": "gHoenn_SkyPillar_5F_hns",
+   "land_mons": {
+    "encounter_rate": 10,
+    "mons": [
+     {
+      "min_level": 64,
+      "max_level": 64,
+      "species": "SPECIES_SABLEYE"
+     },
+     {
+      "min_level": 65,
+      "max_level": 65,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 66,
+      "max_level": 66,
+      "species": "SPECIES_CROBAT"
+     },
+     {
+      "min_level": 65,
+      "max_level": 65,
+      "species": "SPECIES_SABLEYE"
+     },
+     {
+      "min_level": 67,
+      "max_level": 67,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 68,
+      "max_level": 68,
+      "species": "SPECIES_BANETTE"
+     },
+     {
+      "min_level": 69,
+      "max_level": 69,
+      "species": "SPECIES_BANETTE"
+     },
+     {
+      "min_level": 67,
+      "max_level": 67,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 68,
+      "max_level": 68,
+      "species": "SPECIES_CLAYDOL"
+     },
+     {
+      "min_level": 69,
+      "max_level": 69,
+      "species": "SPECIES_ALTARIA"
+     },
+     {
+      "min_level": 70,
+      "max_level": 70,
+      "species": "SPECIES_ALTARIA"
+     },
+     {
+      "min_level": 70,
+      "max_level": 70,
+      "species": "SPECIES_ALTARIA"
      }
     ]
    }

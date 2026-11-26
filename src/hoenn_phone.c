@@ -25,6 +25,8 @@
 
 #if IS_HNS
 #include "constants/hoenn_custom.h"
+#include "constants/hoenn_events.h"
+#include "constants/secret_bases.h"
 #include "constants/hoenn_phone.h"
 
 extern const u8 HoennSeek_EventScript_PhoneEvent[];
@@ -35,6 +37,21 @@ extern const u8 HoennSeek_Text_WallyCallBattle[];
 #define EVENT_CALL_STEP_INTERVAL 16 // look for a due call every 16 steps
 
 static EWRAM_DATA u8 sEventCallSteps = 0;
+
+// 2.0 part 12: the base spots at the reopened legendary sites (data/hoenn/base_spots.json).
+static bool32 HoennIsLegendarySiteBase(u8 secretBaseId)
+{
+    switch (secretBaseId)
+    {
+    case SECRET_BASE_HOENN_DESERT_RUINS:
+    case SECRET_BASE_HOENN_ISLAND_CAVE:
+    case SECRET_BASE_HOENN_ANCIENT_TOMB:
+    case SECRET_BASE_HOENN_CAVE_OF_ORIGIN:
+    case SECRET_BASE_HOENN_SEAFLOOR_CAVERN:
+        return TRUE;
+    }
+    return FALSE;
+}
 
 // Which event call is due, if any. Badge calls only ring for the highest
 // milestone reached; skipped lower ones are marked done.
@@ -67,6 +84,14 @@ static u16 GetDueEventCall(void)
     // Part 17: May watches the contests on TV (any contest hall, Lilycove or Viridian).
     if (FlagGet(FLAG_HOENN_BM_PHONE) && GetGameStat(GAME_STAT_WON_CONTEST) > 0 && !FlagGet(FLAG_HOENN_CALL_CONTEST))
         return HOENN_CALL_CONTEST;
+    // 2.0 part 12: your base is at one of the reopened legendary sites. It replaces
+    // Brendan's first-base call (marked done) so the two don't ring back to back.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && HoennIsLegendarySiteBase(gSaveBlock1Ptr->secretBases[0].secretBaseId)
+     && !FlagGet(FLAG_HOENN_CALL_SITES))
+    {
+        FlagSet(FLAG_HOENN_CALL_BASE);
+        return HOENN_CALL_SITES;
+    }
     // Part 18: one of Birch's aides saw you duck into your new secret base.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && gSaveBlock1Ptr->secretBases[0].secretBaseId != 0 && !FlagGet(FLAG_HOENN_CALL_BASE))
         return HOENN_CALL_BASE;
