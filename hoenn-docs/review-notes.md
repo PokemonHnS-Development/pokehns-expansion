@@ -34,12 +34,17 @@ Desert Ruins, Island Cave and Ancient Tomb all put their spot at (8,2). That's t
 - In an empty dead-end room this is easy to find, but it's not discreet.
 - **If Bryan wants it hidden:** move it a few tiles to one side.
 
-### 6. Drake's Salamence hides Drake
-`EverGrandeCity_DrakesRoom`: Salamence (5,5) is a large sprite and covers Drake's left half.
-- **Fix:** move it one tile further away, to (4,5), or to Drake's other side, in `trainer_followers.json`.
-- **Smaller overlaps, probably fine:**
-  - Blue's Rhyperior hangs over the edge of his mat.
-  - Jasmine's Steelix overlaps her slightly.
+### 6. Put leaders' Pokémon behind them where there's room (Bryan)
+Bryan would like each trainer's follower to stand **behind** the trainer when the tile is free, which should look cleaner. Today `gen_hoenn_followers.py` tries beside first, so all 30 stand to the side. The tile behind was checked with the generator's own rules (floor, nothing on it, not in a trainer's sight, doesn't cut anything off).
+- **Room behind, 12:**
+  - Falkner (9,3), Jasmine (8,3), Brock (6,4), Sabrina (14,10).
+  - Johto's Elite Four: Will, Koga, Bruno, Karen, all (6,5).
+  - Hoenn's Elite Four: Sidney, Phoebe, Glacia, Drake, all (6,4).
+- **Wall behind, so they stay beside, 16:** Bugsy, Whitney, Morty, Pryce, Clair, Misty, Lt. Surge, Erika, Blue, Roxanne, Brawly, Wattson, Flannery, Norman, Winona, Juan.
+- **Red** is left out: he faces away from you, so "behind" would put Pikachu in front of the stairs.
+- **Fix:** in `choose_tile`, try the tile behind first, then the current order. Re-run the generator and re-shoot the 12. This also fixes the problem below.
+
+**Drake's Salamence hides Drake.** In `EverGrandeCity_DrakesRoom`, Salamence stands at (5,5). It's a large sprite and covers Drake's left half. Moving it behind him, to (6,4), fixes that. Two smaller overlaps are probably fine: Blue's Rhyperior hangs over the edge of his mat, and Jasmine's Steelix overlaps her slightly.
 
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
