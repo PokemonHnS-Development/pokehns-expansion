@@ -72,10 +72,15 @@
     "RUMOR_RALTS":      {"kind": "rumor", "rumor": "RALTS"},
     "RUMOR_MACHAMP":    {"kind": "rumor", "rumor": "MACHAMP"},
     "RUMOR_SCIZOR":     {"kind": "rumor", "rumor": "SCIZOR"},
+    "RUMOR_GENGAR":     {"kind": "rumor", "rumor": "GENGAR", "if": [{"not_flag": "FLAG_HOENN_GENGAR_DONE"}]},
+    "RUMOR_SAGE":       {"kind": "rumor", "rumor": "SAGE", "if": [{"not_flag": "FLAG_HOENN_SLOWKING_PROPHECY"}]},
 
     "STORY_POND":     {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_POND_SEEN"}], "text": ["Every morning a SWAMPERT brings two MUDKIP to this pond to practice.", "When they all dive, you'd better find some shelter!"]},
     "STORY_RALTS":    {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_RALTS_DONE"}], "text": ["Every morning, a GARDEVOIR guards a RALTS by the tall grass near PETALBURG.", "Run up to them and they vanish! Walk slowly, with a POKéMON that really loves you."]},
     "STORY_SCIZOR":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_SCIZOR_QUICK_CLAW"}], "text": ["Some evenings you can hear blades clashing behind the trees in the north-east corner.", "TUESDAYS, THURSDAYS, SATURDAYS… the old contest days. Watch from the little path at the top of the park!"]},
+
+    "STORY_GENGAR":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_GENGAR_DONE"}], "text": ["On some nights, folks here swear their own shadows grin at them.", "If yours does, follow where it points. It only plays at night."]},
+    "STORY_SAGE":     {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_SLOWKING_PROPHECY"}, {"flag": "FLAG_ITEM_SLOWPOKE_WELL_RAIN_DANCE"}], "text": ["That SLOWKING down the well asks a riddle every day, a different one for each day of the week.", "Solve them all and it tells you a whole prophecy. Grandpa KURT says it's about the sea."]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -122,6 +127,18 @@
       "before": ["On TUESDAY, THURSDAY and SATURDAY evenings, the SCYTHER behind the NATIONAL PARK's trees duel.", "They say a SCIZOR breaks it up!"],
       "after": "Somebody saw the NATIONAL PARK's SCIZOR! It's so fast, nobody had ever seen it properly.",
       "notes": "In a JOHTO park, blades clash at dusk on the bug contest's old days."
+    },
+    "GENGAR": {
+      "found": [{"flag": "FLAG_HOENN_GENGAR_DONE"}],
+      "before": ["They say a GENGAR hides in people's shadows at night, here in LAVENDER.", "It leads you on a chase, and only the trainers it likes get to see it."],
+      "after": "A GENGAR came out of somebody's shadow and went with them! LAVENDER's nights feel quieter now.",
+      "notes": "In a KANTO town of quiet memorials, your shadow may laugh at night. Follow it."
+    },
+    "SAGE": {
+      "found": [{"flag": "FLAG_HOENN_SLOWKING_PROPHECY"}],
+      "before": ["The SLOWKING in the SLOWPOKE WELL asks one riddle a day, a new one each weekday.", "Answer all seven and you'll hear its whole prophecy."],
+      "after": "Somebody heard the SLOWKING's whole prophecy! Something about lights under the sea.",
+      "notes": "A wise king in a JOHTO well asks one riddle each day of the week."
     }
   },
 
@@ -130,7 +147,7 @@
   "npcs": [
     {"map": "CherrygroveCity_PokemonCenter_hns", "script": "CherryGrove_Pokecenter_EventScript_Gentleman", "lines": ["TIP_CLOCK"]},
     {"map": "VioletCity_PokemonCenter_hns",      "script": "VioletCity_PokemonCenter_EventScript_Man",             "lines": ["TIP_LEVEL_CAP", "TIP_CLOCK"]},
-    {"map": "AzaleaTown_PokemonCenter_hns",      "script": "AzaleaPokeCenter_EventScript_Gentleman",       "lines": ["TIP_JK_BASES", "RUMOR_LAPRAS"]},
+    {"map": "AzaleaTown_PokemonCenter_hns",      "script": "AzaleaPokeCenter_EventScript_Gentleman",       "lines": ["TIP_JK_BASES", "RUMOR_SAGE", "RUMOR_LAPRAS"]},
     {"map": "GoldenrodCity_PokemonCenter_hns",   "script": "GoldenrodCity_PokemonCenter_EventScript_Granny",       "lines": ["TIP_NAMERATER_JK", "RUMOR_SCIZOR"]},
     {"map": "EcruteakCity_PokemonCenter_hns",    "script": "EcruteakCity_PokemonCenter_EventScript_Hiker",         "lines": ["TIP_WEATHER"]},
     {"map": "OlivineCity_PokemonCenter_hns",     "script": "OlivineCity_EventScript_Teacher",        "lines": ["STORY_FERRY", "TIP_REMINDER_JK"]},
@@ -140,7 +157,7 @@
     {"map": "PewterCity_PokemonCenter_hns",      "script": "PewterCity_PokemonCenter_EventScript_Teacher",         "lines": ["TIP_JK_BASES", "TIP_LEVEL_CAP", "TIP_CLOCK"]},
     {"map": "CeruleanCity_PokemonCenter_hns",    "script": "CeruleanCity_PokemonCenter_EventScript_Guy",           "lines": ["STORY_CERULEAN_CHARMANDER", "TIP_WEATHER"]},
     {"map": "VermilionCity_PokemonCenter_hns",   "script": "VermilionPokeCenter_EventScript_Sailor",       "lines": ["STORY_FERRY", "TIP_CLOCK"]},
-    {"map": "LavenderTown_PokemonCenter_hns",    "script": "LavenderTown_PokemonCenter_EventScript_Gent",          "lines": ["TIP_REMINDER_JK"]},
+    {"map": "LavenderTown_PokemonCenter_hns",    "script": "LavenderTown_PokemonCenter_EventScript_Gent",          "lines": ["RUMOR_GENGAR", "TIP_REMINDER_JK"]},
     {"map": "SaffronCity_PokemonCenter_hns",     "script": "SaffronCity_PokemonCenter_EventScript_Teacher",        "lines": ["TIP_NAMERATER_JK"]},
     {"map": "CeladonCity_PokemonCenter_hns",     "script": "CeladonCity_PokemonCenter_EventScript_Pharmacist",     "lines": ["STORY_FERRY", "TIP_LEVEL_CAP", "TIP_CLOCK"]},
     {"map": "OldaleTown_PokemonCenter_1F",       "script": "OldaleTown_PokemonCenter_1F_EventScript_Gentleman",    "lines": ["RUMOR_MASQUERAIN"]},
@@ -161,7 +178,9 @@
     {"map": "Route102",                          "script": "Route102_EventScript_LittleBoy",                       "lines": ["STORY_RALTS"]},
     {"map": "Route102",                          "script": "Route102_EventScript_Boy",                             "lines": ["STORY_POND"]},
     {"map": "PetalburgCity_PokemonCenter_1F",    "script": "PetalburgCity_PokemonCenter_1F_EventScript_Woman",     "lines": ["RUMOR_RALTS"]},
-    {"map": "NationalPark_Normal_hns",           "script": "NationalPark_Normal_EventScript_Lass",                 "lines": ["STORY_SCIZOR"]}
+    {"map": "NationalPark_Normal_hns",           "script": "NationalPark_Normal_EventScript_Lass",                 "lines": ["STORY_SCIZOR"]},
+    {"map": "LavenderTown_hns",                  "script": "LavenderTown_EventScript_Gramps",                      "lines": ["STORY_GENGAR"]},
+    {"map": "AzaleaTown_hns",                    "script": "AzaleaTown_EventScript_Lass",                          "lines": ["STORY_SAGE"]}
   ],
 
   "forecasts": [

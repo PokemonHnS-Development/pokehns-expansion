@@ -36,6 +36,11 @@ bool8 HoennPlayerIsRushing(void)
 //    other about their training, and Kiyo wrote about you).
 //  - May, the Scizor: Bugsy hosts the Bug-Catching Contest show on the radio and
 //    talked about the trainer who saw the Scizor.
+// Part 19's calls:
+//  - Brendan, the Gengar: he and May train near Lavender, and Mr. Fuji at the
+//    Soul House told him about the trainer whose shadow laughed.
+//  - May, the Slowking's prophecy: Kurt hears the Slowking from his house by the
+//    well, and she stopped by for Apricorn balls.
 u16 HoennSpeciesDueCall(void)
 {
     if (FlagGet(FLAG_HOENN_WALLY_PHONE) && FlagGet(FLAG_HOENN_RALTS_DONE) && !FlagGet(FLAG_HOENN_CALL_RALTS))
@@ -48,6 +53,10 @@ u16 HoennSpeciesDueCall(void)
         return HOENN_CALL_KIYO;
     if (FlagGet(FLAG_HOENN_SCIZOR_QUICK_CLAW) && !FlagGet(FLAG_HOENN_CALL_SCIZOR))
         return HOENN_CALL_SCIZOR;
+    if (FlagGet(FLAG_HOENN_GENGAR_DONE) && !FlagGet(FLAG_HOENN_CALL_GENGAR))
+        return HOENN_CALL_GENGAR;
+    if (FlagGet(FLAG_HOENN_SLOWKING_PROPHECY) && !FlagGet(FLAG_HOENN_CALL_PROPHECY))
+        return HOENN_CALL_PROPHECY;
     return HOENN_CALL_NONE;
 }
 

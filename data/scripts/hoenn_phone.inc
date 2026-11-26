@@ -25,6 +25,8 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_RALTS, HoennSeek_EventScript_CallRalts
 	case HOENN_CALL_KIYO, HoennSeek_EventScript_CallKiyo
 	case HOENN_CALL_SCIZOR, HoennSeek_EventScript_CallScizor
+	case HOENN_CALL_GENGAR, HoennSeek_EventScript_CallGengar @ 2.0 part 19
+	case HOENN_CALL_PROPHECY, HoennSeek_EventScript_CallProphecy
 	releaseall
 	end
 

@@ -777,3 +777,586 @@ HoennSeek_Text_CallScizor:
 	.string "that breaks up the SCYTHER duels!\p"
 	.string "That was you, wasn't it? It was,\n"
 	.string "I just know it!$"
+
+@ ==========================================================================
+@ Part 19: the Gengar shadow chase (Lavender Town, nights). Every stage only
+@ happens at night, in order (VAR_HOENN_GENGAR_STATE 0-4). Hooks: one `call` in
+@ Lavender's and Route 8's OnTransition, and map scripts added to the Underground
+@ Path entrance and the Radio Tower (both had none). The stages that play on
+@ arrival use ON_FRAME entries on VAR_TEMP_4, which the OnTransition arms.
+@ ==========================================================================
+
+@ Arms VAR_TEMP_4 when it's night and the chase is at stage VAR_0x8004.
+HoennSeek_EventScript_GengarArm:
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_SpeciesReturn
+	goto_if_ne VAR_HOENN_GENGAR_STATE, VAR_0x8004, HoennSeek_EventScript_SpeciesReturn
+	setvar VAR_TEMP_4, 1
+	return
+
+HoennSeek_EventScript_LavenderOnTransition::
+	setvar VAR_0x8004, 0
+	goto HoennSeek_EventScript_GengarArm
+
+HoennSeek_LavenderOnFrame::
+	map_script_2 VAR_TEMP_4, 1, HoennSeek_EventScript_GengarLavender
+	.2byte 0
+
+@ Stage 0 -> 1: your shadow grins.
+HoennSeek_EventScript_GengarLavender::
+	lockall
+	setvar VAR_TEMP_4, 0
+	setvar VAR_HOENN_GENGAR_STATE, 1
+	delay 30
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+	waitmovement 0
+	msgbox HoennSeek_Text_GengarGrin, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_GENGAR, CRY_MODE_NORMAL
+	applymovement OBJ_EVENT_ID_PLAYER, HoennSeek_Movement_ShadowTwitch
+	waitmovement 0
+	waitmoncry
+	msgbox HoennSeek_Text_GengarPointsRoute8, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ Stage 1 -> 2: Route 8, the column of tiles east of the tunnel building
+@ (x 14, rows 20-23): every way to the Underground Path crosses it.
+HoennSeek_EventScript_Route8OnTransition::
+	setvar VAR_0x8004, 1
+	goto HoennSeek_EventScript_GengarArm
+
+HoennSeek_EventScript_GengarRoute8::
+	lockall
+	setvar VAR_TEMP_4, 0
+	setvar VAR_HOENN_GENGAR_STATE, 2
+	msgbox HoennSeek_Text_GengarStops, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_GENGAR, CRY_MODE_NORMAL
+	applymovement OBJ_EVENT_ID_PLAYER, HoennSeek_Movement_ShadowTwitch
+	waitmovement 0
+	waitmoncry
+	@ The prank: a cheap item in your BAG "turns into" a joke note, for a moment.
+	playse SE_RG_BAG_POCKET
+	msgbox HoennSeek_Text_GengarBagJoke, MSGBOX_DEFAULT
+	msgbox HoennSeek_Text_GengarPointsTunnel, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ Stage 2 -> 3: the Underground Path entrance, on arrival.
+@ (The map's own table, Route8_TunnelEntrance_hns_MapScripts, points here.)
+HoennSeek_EventScript_TunnelOnTransition::
+	setvar VAR_0x8004, 2
+	call HoennSeek_EventScript_GengarArm
+	end
+
+HoennSeek_TunnelOnFrame::
+	map_script_2 VAR_TEMP_4, 1, HoennSeek_EventScript_GengarTunnel
+	.2byte 0
+
+HoennSeek_EventScript_GengarTunnel::
+	lockall
+	setvar VAR_TEMP_4, 0
+	setvar VAR_HOENN_GENGAR_STATE, 3
+	delay 20
+	playmoncry SPECIES_GENGAR, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_GengarEcho, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, HoennSeek_Movement_ShadowTwitch
+	waitmovement 0
+	msgbox HoennSeek_Text_GengarPointsTower, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ Stage 3 -> 4: Lavender's Radio Tower, by the memorial in the corner where
+@ the old POKéMON TOWER stood. The Gengar jumps out and joins you (Lv 50, the
+@ level of Route 8's night Haunter, knowing Spectral Thief).
+@ (The map's own table, LavenderTown_RadioStation_hns_MapScripts, points here.)
+HoennSeek_EventScript_RadioTowerOnTransition::
+	setflag FLAG_HOENN_HIDE_GENGAR
+	setvar VAR_0x8004, 3
+	call HoennSeek_EventScript_GengarArm
+	end
+
+HoennSeek_RadioTowerOnFrame::
+	map_script_2 VAR_TEMP_4, 1, HoennSeek_EventScript_GengarTower
+	.2byte 0
+
+HoennSeek_EventScript_GengarTower::
+	lockall
+	setvar VAR_TEMP_4, 0
+	delay 20
+	msgbox HoennSeek_Text_GengarMemorial, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, HoennSeek_Movement_ShadowTwitch
+	waitmovement 0
+	clearflag FLAG_HOENN_HIDE_GENGAR
+	addobject LOCALID_HOENN_GENGAR
+	playse SE_M_NIGHTMARE
+	applymovement LOCALID_HOENN_GENGAR, HoennSeek_Movement_GengarPops
+	waitmovement 0
+	playmoncry SPECIES_GENGAR, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_GengarJumpsOut, MSGBOX_DEFAULT
+	waitmoncry
+HoennSeek_EventScript_GengarJoin:
+	bufferspeciesname STR_VAR_1, SPECIES_GENGAR
+	givemon SPECIES_GENGAR, 50, move1=MOVE_SPECTRAL_THIEF, move2=MOVE_SHADOW_BALL, move3=MOVE_SLUDGE_BOMB, move4=MOVE_HYPNOSIS
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, HoennSeek_EventScript_GengarNoRoom
+	setvar VAR_HOENN_GENGAR_STATE, 4
+	setflag FLAG_HOENN_GENGAR_DONE
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_GENGAR
+	call Common_EventScript_GiftMon
+	removeobject LOCALID_HOENN_GENGAR
+	msgbox HoennSeek_Text_GengarJoined, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ No room: it slips back into your shadow and tries again next time you come in at night.
+HoennSeek_EventScript_GengarNoRoom:
+	msgbox HoennSeek_Text_GengarNoRoom, MSGBOX_DEFAULT
+	closemessage
+	removeobject LOCALID_HOENN_GENGAR
+	releaseall
+	end
+
+HoennSeek_EventScript_Gengar::
+	lockall
+	goto HoennSeek_EventScript_GengarJoin
+
+@ ==========================================================================
+@ Part 19: the Slowking sage (Slowpoke Well B2F). HnS's Slowking gives TM Rain
+@ Dance first (its own script, unchanged); after that its object runs this.
+@ One riddle per weekday; each one solved (once) teaches the next line of the
+@ prophecy. One answer a day. The prophecy is the Lugia chain's clue (parts
+@ 34+): three birds, their feathers and the Silver Wing, the Whirl Islands at
+@ night, and the lights under the sea that lead to the shrine.
+@ ==========================================================================
+
+HoennSeek_EventScript_SlowkingSage::
+	goto_if_unset FLAG_ITEM_SLOWPOKE_WELL_RAIN_DANCE, SlowpokeWell_EventScript_Slowking
+	lock
+	faceplayer
+	playmoncry SPECIES_SLOWKING, CRY_MODE_NORMAL
+	waitmoncry
+	goto_if_set FLAG_HOENN_SLOWKING_PROPHECY, HoennSeek_EventScript_SageDone
+	call_if_eq VAR_HOENN_SLOWKING_LINES, 0, HoennSeek_EventScript_SageIntro
+	goto_if_set FLAG_HOENN_DAILY_SLOWKING, HoennSeek_EventScript_SageTomorrow
+	specialvar VAR_RESULT, GetDayOfWeek
+	switch VAR_RESULT
+	case HOENN_SUNDAY, HoennSeek_EventScript_RiddleSun
+	case HOENN_MONDAY, HoennSeek_EventScript_RiddleMon
+	case HOENN_TUESDAY, HoennSeek_EventScript_RiddleTue
+	case HOENN_WEDNESDAY, HoennSeek_EventScript_RiddleWed
+	case HOENN_THURSDAY, HoennSeek_EventScript_RiddleThu
+	case HOENN_FRIDAY, HoennSeek_EventScript_RiddleFri
+	case HOENN_SATURDAY, HoennSeek_EventScript_RiddleSat
+	release
+	end
+
+HoennSeek_EventScript_SageIntro:
+	msgbox HoennSeek_Text_SageIntro, MSGBOX_DEFAULT
+	return
+
+@ Already answered today (right or wrong), or today's riddle is solved.
+HoennSeek_EventScript_SageTomorrow:
+	msgbox HoennSeek_Text_SageTomorrow, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_SageOfferRecite
+HoennSeek_EventScript_SageSolvedToday:
+	msgbox HoennSeek_Text_SageSolvedToday, MSGBOX_DEFAULT
+HoennSeek_EventScript_SageOfferRecite:
+	goto_if_eq VAR_HOENN_SLOWKING_LINES, 0, HoennSeek_EventScript_SageRelease
+	msgbox HoennSeek_Text_SageHearAgain, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_SageRelease
+	call HoennSeek_EventScript_SageRecite
+HoennSeek_EventScript_SageRelease:
+	release
+	end
+
+HoennSeek_EventScript_SageDone:
+	msgbox HoennSeek_Text_SageDone, MSGBOX_DEFAULT
+	msgbox HoennSeek_Text_SageHearAgain, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_SageRelease
+	call HoennSeek_EventScript_SageRecite
+	release
+	end
+
+HoennSeek_EventScript_SageRecite:
+	call_if_ge VAR_HOENN_SLOWKING_LINES, 1, HoennSeek_EventScript_SageLine1
+	call_if_ge VAR_HOENN_SLOWKING_LINES, 2, HoennSeek_EventScript_SageLine2
+	call_if_ge VAR_HOENN_SLOWKING_LINES, 3, HoennSeek_EventScript_SageLine3
+	call_if_ge VAR_HOENN_SLOWKING_LINES, 4, HoennSeek_EventScript_SageLine4
+	call_if_ge VAR_HOENN_SLOWKING_LINES, 5, HoennSeek_EventScript_SageLine5
+	call_if_ge VAR_HOENN_SLOWKING_LINES, 6, HoennSeek_EventScript_SageLine6
+	call_if_ge VAR_HOENN_SLOWKING_LINES, 7, HoennSeek_EventScript_SageLine7
+	return
+HoennSeek_EventScript_SageLine1:
+	msgbox HoennSeek_Text_Prophecy1, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_SageLine2:
+	msgbox HoennSeek_Text_Prophecy2, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_SageLine3:
+	msgbox HoennSeek_Text_Prophecy3, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_SageLine4:
+	msgbox HoennSeek_Text_Prophecy4, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_SageLine5:
+	msgbox HoennSeek_Text_Prophecy5, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_SageLine6:
+	msgbox HoennSeek_Text_Prophecy6, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_SageLine7:
+	msgbox HoennSeek_Text_Prophecy7, MSGBOX_DEFAULT
+	return
+
+@ Each riddle: skip it if solved, ask, then three answers. VAR_0x8005 is the
+@ right answer's index; B leaves without using up the day's answer.
+HoennSeek_EventScript_RiddleSun:
+	goto_if_set FLAG_HOENN_SLOWKING_RIDDLE_SUN, HoennSeek_EventScript_SageSolvedToday
+	msgbox HoennSeek_Text_RiddleSun, MSGBOX_DEFAULT
+	dynmultichoice 18, 4, FALSE, 3, 0, DYN_MULTICHOICE_CB_NONE, HoennSeek_Text_AnsFog, HoennSeek_Text_AnsDarkness, HoennSeek_Text_AnsSmoke
+	setvar VAR_0x8005, 1
+	call HoennSeek_EventScript_RiddleCheck
+	setflag FLAG_HOENN_SLOWKING_RIDDLE_SUN
+	goto HoennSeek_EventScript_RiddleSolved
+HoennSeek_EventScript_RiddleMon:
+	goto_if_set FLAG_HOENN_SLOWKING_RIDDLE_SUN + HOENN_MONDAY, HoennSeek_EventScript_SageSolvedToday
+	msgbox HoennSeek_Text_RiddleMon, MSGBOX_DEFAULT
+	dynmultichoice 18, 4, FALSE, 3, 0, DYN_MULTICHOICE_CB_NONE, HoennSeek_Text_AnsCoin, HoennSeek_Text_AnsKite, HoennSeek_Text_AnsSnake
+	setvar VAR_0x8005, 0
+	call HoennSeek_EventScript_RiddleCheck
+	setflag FLAG_HOENN_SLOWKING_RIDDLE_SUN + HOENN_MONDAY
+	goto HoennSeek_EventScript_RiddleSolved
+HoennSeek_EventScript_RiddleTue:
+	goto_if_set FLAG_HOENN_SLOWKING_RIDDLE_SUN + HOENN_TUESDAY, HoennSeek_EventScript_SageSolvedToday
+	msgbox HoennSeek_Text_RiddleTue, MSGBOX_DEFAULT
+	dynmultichoice 18, 4, FALSE, 3, 0, DYN_MULTICHOICE_CB_NONE, HoennSeek_Text_AnsWind, HoennSeek_Text_AnsBird, HoennSeek_Text_AnsCloud
+	setvar VAR_0x8005, 2
+	call HoennSeek_EventScript_RiddleCheck
+	setflag FLAG_HOENN_SLOWKING_RIDDLE_SUN + HOENN_TUESDAY
+	goto HoennSeek_EventScript_RiddleSolved
+HoennSeek_EventScript_RiddleWed:
+	goto_if_set FLAG_HOENN_SLOWKING_RIDDLE_SUN + HOENN_WEDNESDAY, HoennSeek_EventScript_SageSolvedToday
+	msgbox HoennSeek_Text_RiddleWed, MSGBOX_DEFAULT
+	dynmultichoice 18, 4, FALSE, 3, 0, DYN_MULTICHOICE_CB_NONE, HoennSeek_Text_AnsSponge, HoennSeek_Text_AnsTowel, HoennSeek_Text_AnsFish
+	setvar VAR_0x8005, 1
+	call HoennSeek_EventScript_RiddleCheck
+	setflag FLAG_HOENN_SLOWKING_RIDDLE_SUN + HOENN_WEDNESDAY
+	goto HoennSeek_EventScript_RiddleSolved
+HoennSeek_EventScript_RiddleThu:
+	goto_if_set FLAG_HOENN_SLOWKING_RIDDLE_SUN + HOENN_THURSDAY, HoennSeek_EventScript_SageSolvedToday
+	msgbox HoennSeek_Text_RiddleThu, MSGBOX_DEFAULT
+	dynmultichoice 18, 4, FALSE, 3, 0, DYN_MULTICHOICE_CB_NONE, HoennSeek_Text_AnsPiano, HoennSeek_Text_AnsDoor, HoennSeek_Text_AnsMap
+	setvar VAR_0x8005, 0
+	call HoennSeek_EventScript_RiddleCheck
+	setflag FLAG_HOENN_SLOWKING_RIDDLE_SUN + HOENN_THURSDAY
+	goto HoennSeek_EventScript_RiddleSolved
+HoennSeek_EventScript_RiddleFri:
+	goto_if_set FLAG_HOENN_SLOWKING_RIDDLE_SUN + HOENN_FRIDAY, HoennSeek_EventScript_SageSolvedToday
+	msgbox HoennSeek_Text_RiddleFri, MSGBOX_DEFAULT
+	dynmultichoice 18, 4, FALSE, 3, 0, DYN_MULTICHOICE_CB_NONE, HoennSeek_Text_AnsNeedle, HoennSeek_Text_AnsPotato, HoennSeek_Text_AnsWhirlpool
+	setvar VAR_0x8005, 2
+	call HoennSeek_EventScript_RiddleCheck
+	setflag FLAG_HOENN_SLOWKING_RIDDLE_SUN + HOENN_FRIDAY
+	goto HoennSeek_EventScript_RiddleSolved
+HoennSeek_EventScript_RiddleSat:
+	goto_if_set FLAG_HOENN_SLOWKING_RIDDLE_SUN + HOENN_SATURDAY, HoennSeek_EventScript_SageSolvedToday
+	msgbox HoennSeek_Text_RiddleSat, MSGBOX_DEFAULT
+	dynmultichoice 18, 4, FALSE, 3, 0, DYN_MULTICHOICE_CB_NONE, HoennSeek_Text_AnsBall, HoennSeek_Text_AnsCold, HoennSeek_Text_AnsShadow
+	setvar VAR_0x8005, 1
+	call HoennSeek_EventScript_RiddleCheck
+	setflag FLAG_HOENN_SLOWKING_RIDDLE_SUN + HOENN_SATURDAY
+	goto HoennSeek_EventScript_RiddleSolved
+
+@ Returns only on a right answer; otherwise ends the script.
+HoennSeek_EventScript_RiddleCheck:
+	goto_if_eq VAR_RESULT, MULTI_B_PRESSED, HoennSeek_EventScript_RiddleLater
+	setflag FLAG_HOENN_DAILY_SLOWKING
+	goto_if_ne VAR_RESULT, VAR_0x8005, HoennSeek_EventScript_RiddleWrong
+	return
+HoennSeek_EventScript_RiddleLater:
+	msgbox HoennSeek_Text_RiddleLater, MSGBOX_DEFAULT
+	release
+	end
+HoennSeek_EventScript_RiddleWrong:
+	playmoncry SPECIES_SLOWPOKE, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_RiddleWrong, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_RiddleSolved:
+	addvar VAR_HOENN_SLOWKING_LINES, 1
+	playse SE_M_PSYBEAM
+	applymovement LOCALID_WELL_SLOWKING, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox HoennSeek_Text_RiddleRight, MSGBOX_DEFAULT
+	call_if_eq VAR_HOENN_SLOWKING_LINES, 1, HoennSeek_EventScript_SageLine1
+	call_if_eq VAR_HOENN_SLOWKING_LINES, 2, HoennSeek_EventScript_SageLine2
+	call_if_eq VAR_HOENN_SLOWKING_LINES, 3, HoennSeek_EventScript_SageLine3
+	call_if_eq VAR_HOENN_SLOWKING_LINES, 4, HoennSeek_EventScript_SageLine4
+	call_if_eq VAR_HOENN_SLOWKING_LINES, 5, HoennSeek_EventScript_SageLine5
+	call_if_eq VAR_HOENN_SLOWKING_LINES, 6, HoennSeek_EventScript_SageLine6
+	call_if_eq VAR_HOENN_SLOWKING_LINES, 7, HoennSeek_EventScript_SageLine7
+	goto_if_lt VAR_HOENN_SLOWKING_LINES, 7, HoennSeek_EventScript_SageMore
+	setflag FLAG_HOENN_SLOWKING_PROPHECY
+	msgbox HoennSeek_Text_SageComplete, MSGBOX_DEFAULT
+	release
+	end
+HoennSeek_EventScript_SageMore:
+	msgbox HoennSeek_Text_SageMore, MSGBOX_DEFAULT
+	release
+	end
+
+@ Part 19's calls.
+HoennSeek_EventScript_CallGengar::
+	setflag FLAG_HOENN_CALL_GENGAR
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallGengar
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_EventScript_CallProphecy::
+	setflag FLAG_HOENN_CALL_PROPHECY
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallProphecy
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_Movement_ShadowTwitch:
+	face_left
+	delay_8
+	face_right
+	delay_8
+	face_down
+	step_end
+
+HoennSeek_Movement_GengarPops:
+	jump_in_place_right
+	face_right
+	step_end
+
+@ Part 19 texts.
+HoennSeek_Text_GengarGrin:
+	.string "…Huh?\p"
+	.string "Your shadow under the streetlight\n"
+	.string "just grinned at you!$"
+
+HoennSeek_Text_GengarPointsRoute8:
+	.string "Your shadow stretches out to the\n"
+	.string "west, toward ROUTE 8…$"
+
+HoennSeek_Text_GengarStops:
+	.string "Your shadow stops dead and points\n"
+	.string "at the ground.\p"
+	.string "Something giggles from somewhere\n"
+	.string "around your feet…$"
+
+HoennSeek_Text_GengarBagJoke:
+	.string "Your BAG rustles. You peek inside…\p"
+	.string "Your POTION is gone! In its place\n"
+	.string "is a note that says “BOO!”\p"
+	.string "…You blink, and it's a POTION\n"
+	.string "again. Very funny.$"
+
+HoennSeek_Text_GengarPointsTunnel:
+	.string "Your shadow stretches toward the\n"
+	.string "UNDERGROUND PATH.$"
+
+HoennSeek_Text_GengarEcho:
+	.string "A cackle echoes all around\n"
+	.string "the entrance!$"
+
+HoennSeek_Text_GengarPointsTower:
+	.string "Your shadow points back east,\n"
+	.string "toward LAVENDER's RADIO TOWER.$"
+
+HoennSeek_Text_GengarMemorial:
+	.string "In the corner, a small plaque\n"
+	.string "remembers the old POKéMON TOWER.\p"
+	.string "Your shadow stretches toward it,\n"
+	.string "then bulges…$"
+
+HoennSeek_Text_GengarJumpsOut:
+	.string "A GENGAR jumped out of your shadow!\p"
+	.string "It's laughing so hard it can\n"
+	.string "barely float.\p"
+	.string "It seems to like you. It wants to\n"
+	.string "come along!$"
+
+HoennSeek_Text_GengarJoined:
+	.string "GENGAR grins from your shadow.\n"
+	.string "It's not leaving any time soon.$"
+
+HoennSeek_Text_GengarNoRoom:
+	.string "You have no room for it…\p"
+	.string "GENGAR slips back into your shadow\n"
+	.string "to wait. Come back some night!$"
+
+HoennSeek_Text_SageIntro:
+	.string "A voice echoes in your head…\p"
+	.string "SLOWKING: Seeker. I know an old\n"
+	.string "song, but it does not come cheaply.\p"
+	.string "Each day of the week, I ask one\n"
+	.string "riddle. Answer it, and I will teach\l"
+	.string "you the next line of the song.$"
+
+HoennSeek_Text_SageTomorrow:
+	.string "SLOWKING: One answer a day,\n"
+	.string "seeker. Come back tomorrow.$"
+
+HoennSeek_Text_SageSolvedToday:
+	.string "SLOWKING: You have already solved\n"
+	.string "today's riddle. Another day brings\l"
+	.string "another riddle.$"
+
+HoennSeek_Text_SageHearAgain:
+	.string "Hear the song so far?$"
+
+HoennSeek_Text_SageDone:
+	.string "SLOWKING: The song is yours now.\n"
+	.string "Carry it to the whirling tides.$"
+
+HoennSeek_Text_RiddleLater:
+	.string "SLOWKING: Think on it. The riddle\n"
+	.string "will wait.$"
+
+HoennSeek_Text_RiddleWrong:
+	.string "SLOWKING yawns enormously.\p"
+	.string "SLOWKING: …No. Think on it until\n"
+	.string "tomorrow.$"
+
+HoennSeek_Text_RiddleRight:
+	.string "SLOWKING: Yes. Listen well…$"
+
+HoennSeek_Text_SageMore:
+	.string "SLOWKING: There is more. Come back\n"
+	.string "on another day.$"
+
+HoennSeek_Text_SageComplete:
+	.string "SLOWKING: That is the whole song.\p"
+	.string "The guardian of the sea still\n"
+	.string "sleeps. Perhaps you are the one\l"
+	.string "who will wake it.$"
+
+HoennSeek_Text_RiddleSun:
+	.string "SLOWKING: The more of me there is,\n"
+	.string "the less you see. GASTLY love me.\p"
+	.string "What am I?$"
+HoennSeek_Text_RiddleMon:
+	.string "SLOWKING: I have a head and a tail\n"
+	.string "but no body. TRAINERS flip me to\l"
+	.string "see who goes first. What am I?$"
+HoennSeek_Text_RiddleTue:
+	.string "SLOWKING: I fly without wings and\n"
+	.string "cry without eyes. When I come, the\l"
+	.string "SLOWPOKE come out. What am I?$"
+HoennSeek_Text_RiddleWed:
+	.string "SLOWKING: The more I dry, the\n"
+	.string "wetter I get. What am I?$"
+HoennSeek_Text_RiddleThu:
+	.string "SLOWKING: I have many keys but open\n"
+	.string "no locks. The radio plays my songs.\l"
+	.string "What am I?$"
+HoennSeek_Text_RiddleFri:
+	.string "SLOWKING: I have an eye but cannot\n"
+	.string "see, and I spin forever above the\l"
+	.string "guardian's bed. What am I?$"
+HoennSeek_Text_RiddleSat:
+	.string "SLOWKING: You can catch me, but\n"
+	.string "you can never throw me. What am I?$"
+
+HoennSeek_Text_AnsFog:
+	.string "FOG$"
+HoennSeek_Text_AnsDarkness:
+	.string "DARKNESS$"
+HoennSeek_Text_AnsSmoke:
+	.string "SMOKE$"
+HoennSeek_Text_AnsCoin:
+	.string "A COIN$"
+HoennSeek_Text_AnsKite:
+	.string "A KITE$"
+HoennSeek_Text_AnsSnake:
+	.string "A SNAKE$"
+HoennSeek_Text_AnsWind:
+	.string "THE WIND$"
+HoennSeek_Text_AnsBird:
+	.string "A BIRD$"
+HoennSeek_Text_AnsCloud:
+	.string "A RAIN CLOUD$"
+HoennSeek_Text_AnsSponge:
+	.string "A SPONGE$"
+HoennSeek_Text_AnsTowel:
+	.string "A TOWEL$"
+HoennSeek_Text_AnsFish:
+	.string "A FISH$"
+HoennSeek_Text_AnsPiano:
+	.string "A PIANO$"
+HoennSeek_Text_AnsDoor:
+	.string "A DOOR$"
+HoennSeek_Text_AnsMap:
+	.string "A MAP$"
+HoennSeek_Text_AnsNeedle:
+	.string "A NEEDLE$"
+HoennSeek_Text_AnsPotato:
+	.string "A POTATO$"
+HoennSeek_Text_AnsWhirlpool:
+	.string "A WHIRLPOOL$"
+HoennSeek_Text_AnsBall:
+	.string "A POKé BALL$"
+HoennSeek_Text_AnsCold:
+	.string "A COLD$"
+HoennSeek_Text_AnsShadow:
+	.string "A SHADOW$"
+
+@ The prophecy (written for Hoenn & Seek, in the spirit of the Lugia legend).
+HoennSeek_Text_Prophecy1:
+	.string "“When fire, ice and thunder\n"
+	.string "quarrel, the sky will burn and\l"
+	.string "the sea will rise.”$"
+HoennSeek_Text_Prophecy2:
+	.string "“The guardian of the sea will wake\n"
+	.string "to calm them, but its song alone\l"
+	.string "will not be enough.”$"
+HoennSeek_Text_Prophecy3:
+	.string "“Each titan sheds one feather,\n"
+	.string "and each feather holds a piece of\l"
+	.string "its power.”$"
+HoennSeek_Text_Prophecy4:
+	.string "“Gather all three with the wing of\n"
+	.string "silver, and the guardian will hear\l"
+	.string "the one who carries them.”$"
+HoennSeek_Text_Prophecy5:
+	.string "“Seek the islands of whirling\n"
+	.string "tides when the sun has set.”$"
+HoennSeek_Text_Prophecy6:
+	.string "“Follow the lights that swim\n"
+	.string "beneath the waves to the hidden\l"
+	.string "shore.”$"
+HoennSeek_Text_Prophecy7:
+	.string "“Lay the treasures down there,\n"
+	.string "and the song of the sea will\l"
+	.string "answer.”$"
+
+HoennSeek_Text_CallGengar:
+	.string "{PLAYER}! It's BRENDAN!\p"
+	.string "May and I stopped by the SOUL HOUSE\n"
+	.string "in LAVENDER, and MR. FUJI told us\l"
+	.string "the strangest story.\p"
+	.string "A TRAINER's shadow laughed all\n"
+	.string "night, then a GENGAR jumped out\l"
+	.string "of it at the RADIO TOWER!\p"
+	.string "That was you, right? Watch your\n"
+	.string "BAG. GENGAR love pranks!$"
+
+HoennSeek_Text_CallProphecy:
+	.string "Hi, {PLAYER}! It's MAY.\p"
+	.string "I went to see KURT in AZALEA\n"
+	.string "about some APRICORN BALLS.\p"
+	.string "He says the SLOWKING in the well\n"
+	.string "finally sang its whole song for\l"
+	.string "someone. Was that you?\p"
+	.string "He thinks it's about the guardian\n"
+	.string "of the sea. Spooky, right?$"
