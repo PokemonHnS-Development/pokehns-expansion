@@ -359,4 +359,27 @@
 #define FLAG_HOENN_GOT_SINGING_SAND     (HOENN_FLAGS_E_HOENN + 0x36) // beat the Vibrava (the Singing Sand)
 #define FLAG_HOENN_CALL_SINGING_SAND    (HOENN_FLAGS_E_HOENN + 0x37) // Brendan
 
+// ---- Part 24b: Flygon's desert song B (data/scripts/hoenn_hidden.inc) ----
+// Route 113, evenings: the Vibrava circles the ash outside the Glass Workshop
+// and its hum answers the Singing Sand. The glassblower then fuses the sand
+// into the SAND CHIME. Lavaridge's hot-springs granny: "ring it in the desert
+// at sunset". Ringing it on Route 111's desert in the evening raises the
+// Mirage Tower for the rest of the day (src/hoenn_hidden.c,
+// HoennMirageTowerRung; it never shows by chance any more). A Flygon waits at
+// the top, in front of Emerald's two fossils; once it's caught, taking a
+// fossil collapses the tower for good, as in Emerald.
+#define FLAG_HOENN_HIDE_ROUTE113_VIBRAVA (HOENN_FLAGS_E_HOENN + 0x38) // decided on every arrival
+#define FLAG_HOENN_ROUTE113_VIBRAVA_SEEN (HOENN_FLAGS_E_HOENN + 0x39) // the Route 113 scene played
+#define FLAG_HOENN_GOT_SAND_CHIME       (HOENN_FLAGS_E_HOENN + 0x3A)
+#define FLAG_HOENN_MIRAGE_RAISED        (HOENN_FLAGS_E_HOENN + 0x3B) // the chime raised the tower at least once
+#define FLAG_HOENN_HIDE_MIRAGE_FLYGON   (HOENN_FLAGS_E_HOENN + 0x3C) // decided on every arrival at 4F
+#define FLAG_HOENN_CAUGHT_FLYGON        (HOENN_FLAGS_E_HOENN + 0x3D)
+#define FLAG_HOENN_ITEM_MIRAGE_DRAGON_FANG (HOENN_FLAGS_E_HOENN + 0x3E) // item ball on 4F
+#define FLAG_HOENN_CALL_FLYGON          (HOENN_FLAGS_E_HOENN + 0x3F) // May
+#define FLAG_HOENN_DAILY_MIRAGE_TOWER   (HOENN_DAILY_FLAGS_START + 0x0F) // rung today: the tower stands until midnight
+// specialvar VAR_RESULT, HoennSandChimePlace
+#define HOENN_CHIME_ELSEWHERE 0
+#define HOENN_CHIME_DESERT    1
+#define HOENN_CHIME_ON_TOWER  2 // standing where the tower would rise
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

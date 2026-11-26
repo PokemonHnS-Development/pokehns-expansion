@@ -24,6 +24,8 @@
 	.set GLASS_FLUTE_PRICE, 500
 
 HoennSeek_EventScript_GlassWorker::
+	goto_if_set FLAG_HOENN_GOT_SINGING_SAND, HoennSeek_EventScript_GlassWorkerSand @ part 24b
+HoennSeek_EventScript_GlassWorkerFlute::
 	goto_if_set FLAG_HOENN_GOT_GLASS_FLUTE, Route113_GlassWorkshop_EventScript_GlassWorker
 	goto_if_ne VAR_GLASS_WORKSHOP_STATE, 2, Route113_GlassWorkshop_EventScript_GlassWorker
 	checkitem ITEM_SOOT_SACK
@@ -114,6 +116,7 @@ HoennSeek_Movement_MunchlaxWakes:
 @ Called from Route 113's OnTransition: shows the Spinda and arms the ring of
 @ trigger tiles around it (VAR_TEMP_4) on a morning it hasn't danced yet.
 HoennSeek_EventScript_Route113OnTransition::
+	call HoennSeek_EventScript_Route113VibravaOnTransition @ part 24b
 	setflag FLAG_HOENN_HIDE_SPINDA
 	goto_if_set FLAG_HOENN_WEEKLY_SPINDA, HoennSeek_EventScript_HiddenReturn
 	gettimeofday
@@ -1939,3 +1942,341 @@ HoennSeek_Text_CallSingingSand:
 	.string "Dad says VIBRAVA hum like that\n"
 	.string "to call their flock. Wonder\l"
 	.string "where it went!$"
+
+@ ==========================================================================
+@ Part 24b: Flygon's desert song B (plan section 7, steps 4-6)
+@ ROUTE 113, evenings, once you have the SINGING SAND: the Vibrava from the
+@   Desert Underpass flits over the ash outside the Glass Workshop (40,6).
+@   Talking to it: it circles, its hum and the sand's answer each other, and
+@   it flies off over the workshop roof. Watch-only.
+@ GLASSBLOWER: with the sand (and the Vibrava seen) he fuses it into the SAND
+@   CHIME. Before the Vibrava, he says the sand is too fine to melt alone and
+@   that VIBRAVA come by at sunset. His glass flute offer comes after.
+@ LAVARIDGE: the hot-springs granny's hint line ("ring it in the desert at
+@   sunset"), from the hint engine.
+@ SAND CHIME (key item, used from the bag; src/item_use.c): on Route 111's
+@   desert in the evening it raises the MIRAGE TOWER until midnight
+@   (FLAG_HOENN_DAILY_MIRAGE_TOWER, read by SetMirageTowerVisibility through
+@   HoennMirageTowerRung). Anywhere else, at another hour, or once the tower
+@   has crumbled, it just rings.
+@ MIRAGE TOWER 4F: a FLYGON guards Emerald's two fossils. A scaled battle
+@   (Boomburst, Soft Sand), catchable; knocked out, it's back the next time you
+@   come up to 4F; ran from, it stays. Once it's caught the fossils can be
+@   taken, and taking one collapses the tower for good (Emerald's scene). A
+@   DRAGON FANG lies in the corner. May calls once you've caught it.
+@ ==========================================================================
+
+HoennSeek_EventScript_HiddenEnd24b:
+	return
+
+@ ---- Route 113 ------------------------------------------------------------
+HoennSeek_EventScript_Route113VibravaOnTransition::
+	setflag FLAG_HOENN_HIDE_ROUTE113_VIBRAVA
+	goto_if_unset FLAG_HOENN_GOT_SINGING_SAND, HoennSeek_EventScript_HiddenEnd24b
+	goto_if_set FLAG_HOENN_ROUTE113_VIBRAVA_SEEN, HoennSeek_EventScript_HiddenEnd24b
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_EVENING, HoennSeek_EventScript_HiddenEnd24b
+	clearflag FLAG_HOENN_HIDE_ROUTE113_VIBRAVA
+	return
+
+HoennSeek_EventScript_Route113Vibrava::
+	lock
+	faceplayer
+	playmoncry SPECIES_VIBRAVA, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_Route113VibravaHums, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	applymovement LOCALID_HOENN_ROUTE113_VIBRAVA, HoennSeek_Movement_VibravaCircles
+	waitmovement 0
+	msgbox HoennSeek_Text_Route113SandAnswers, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_HOENN_ROUTE113_VIBRAVA, HoennSeek_Movement_VibravaOverRoof
+	waitmovement 0
+	removeobject LOCALID_HOENN_ROUTE113_VIBRAVA
+	setflag FLAG_HOENN_HIDE_ROUTE113_VIBRAVA
+	setflag FLAG_HOENN_ROUTE113_VIBRAVA_SEEN
+	msgbox HoennSeek_Text_Route113VibravaGone, MSGBOX_DEFAULT
+	release
+	end
+
+@ A spin in the falling ash, then a hop.
+HoennSeek_Movement_VibravaCircles:
+	face_up
+	delay_4
+	face_right
+	delay_4
+	face_down
+	delay_4
+	face_left
+	delay_4
+	face_up
+	delay_4
+	face_right
+	delay_4
+	face_down
+	delay_4
+	face_left
+	delay_4
+	jump_in_place_down
+	step_end
+
+@ Up over the workshop roof to the north, and out of sight.
+HoennSeek_Movement_VibravaOverRoof:
+	face_up
+	jump_in_place_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	set_invisible
+	step_end
+
+@ ---- The glassblower --------------------------------------------------------
+HoennSeek_EventScript_GlassWorkerSand:
+	goto_if_set FLAG_HOENN_GOT_SAND_CHIME, HoennSeek_EventScript_GlassWorkerFlute
+	lock
+	faceplayer
+	goto_if_set FLAG_HOENN_ROUTE113_VIBRAVA_SEEN, HoennSeek_EventScript_GlassChimeFuse
+	msgbox HoennSeek_Text_GlassSandTooFine, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_GlassChimeFuse:
+	msgbox HoennSeek_Text_GlassChimeOffer, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	playse SE_M_FLAMETHROWER
+	waitse
+	delay 30
+	fadescreen FADE_FROM_BLACK
+	removeitem ITEM_SINGING_SAND
+	giveitem ITEM_SAND_CHIME
+	setflag FLAG_HOENN_GOT_SAND_CHIME
+	msgbox HoennSeek_Text_GlassChimeGiven, MSGBOX_DEFAULT
+	release
+	end
+
+@ ---- The Sand Chime (from the bag) ----------------------------------------
+HoennSeek_EventScript_RingSandChime::
+	lockall
+	playse SE_M_HEAL_BELL
+	msgbox HoennSeek_Text_ChimeRings, MSGBOX_DEFAULT
+	waitse
+	specialvar VAR_RESULT, HoennSandChimePlace
+	goto_if_eq VAR_RESULT, HOENN_CHIME_ELSEWHERE, HoennSeek_EventScript_ChimeFades
+	goto_if_ne VAR_MIRAGE_TOWER_STATE, 0, HoennSeek_EventScript_ChimeTowerGone
+	goto_if_set FLAG_HOENN_DAILY_MIRAGE_TOWER, HoennSeek_EventScript_ChimeTowerStands
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_EVENING, HoennSeek_EventScript_ChimeNotSunset
+	goto_if_eq VAR_RESULT, HOENN_CHIME_ON_TOWER, HoennSeek_EventScript_ChimeStepBack
+	msgbox HoennSeek_Text_ChimeDunesAnswer, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_HOENN_DAILY_MIRAGE_TOWER
+	setflag FLAG_HOENN_MIRAGE_RAISED
+	@ Reload Route 111 where you stand: its OnTransition now picks the
+	@ tower layout (SetMirageTowerVisibility) and starts the shimmer.
+	getplayerxy VAR_0x8004, VAR_0x8005
+	fadescreen FADE_TO_WHITE
+	warpsilent MAP_ROUTE111, VAR_0x8004, VAR_0x8005
+	waitstate
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimeFades:
+	msgbox HoennSeek_Text_ChimeFades, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimeTowerGone:
+	msgbox HoennSeek_Text_ChimeTowerGone, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimeTowerStands:
+	msgbox HoennSeek_Text_ChimeTowerStands, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimeNotSunset:
+	msgbox HoennSeek_Text_ChimeNotSunset, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimeStepBack:
+	msgbox HoennSeek_Text_ChimeStepBack, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ ---- Mirage Tower 4F -------------------------------------------------------
+HoennSeek_EventScript_MirageTopOnTransition:
+	setflag FLAG_HOENN_HIDE_MIRAGE_FLYGON
+	goto_if_set FLAG_HOENN_CAUGHT_FLYGON, HoennSeek_EventScript_MirageTopEnd
+	clearflag FLAG_HOENN_HIDE_MIRAGE_FLYGON
+HoennSeek_EventScript_MirageTopEnd:
+	end
+
+HoennSeek_EventScript_MirageFlygon::
+	lock
+	faceplayer
+	playmoncry SPECIES_FLYGON, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_FlygonSings, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setvar VAR_0x8004, SPECIES_FLYGON
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_BOOMBURST
+	setvar VAR_0x8006, FALSE
+	setvar VAR_0x8007, ITEM_SOFT_SAND
+	special HoennTuneWildMon
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_FlygonCaught
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, HoennSeek_EventScript_FlygonFades
+	msgbox HoennSeek_Text_FlygonStays, MSGBOX_DEFAULT
+	release
+	end
+
+@ Knocked out: it fades like a mirage; it's back the next time you come up.
+HoennSeek_EventScript_FlygonFades:
+	removeobject LOCALID_HOENN_MIRAGE_FLYGON
+	setflag FLAG_HOENN_HIDE_MIRAGE_FLYGON
+	msgbox HoennSeek_Text_FlygonFades, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_FlygonCaught:
+	removeobject LOCALID_HOENN_MIRAGE_FLYGON
+	setflag FLAG_HOENN_HIDE_MIRAGE_FLYGON
+	setflag FLAG_HOENN_CAUGHT_FLYGON
+	msgbox HoennSeek_Text_FlygonCaught, MSGBOX_DEFAULT
+	release
+	end
+
+@ The fossils run Emerald's scripts once the Flygon is caught (taking one
+@ brings the tower down for good). Until then, it stands guard.
+HoennSeek_EventScript_MirageRootFossil::
+	goto_if_set FLAG_HOENN_CAUGHT_FLYGON, MirageTower_4F_EventScript_RootFossil
+	goto HoennSeek_EventScript_MirageFossilGuarded
+
+HoennSeek_EventScript_MirageClawFossil::
+	goto_if_set FLAG_HOENN_CAUGHT_FLYGON, MirageTower_4F_EventScript_ClawFossil
+HoennSeek_EventScript_MirageFossilGuarded:
+	lock
+	msgbox HoennSeek_Text_FossilGuarded, MSGBOX_DEFAULT
+	release
+	end
+
+@ ---- Call -------------------------------------------------------------------
+HoennSeek_EventScript_CallFlygon::
+	setflag FLAG_HOENN_CALL_FLYGON
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallFlygon
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Texts -----------------------------------------------------------------
+HoennSeek_Text_Route113VibravaHums:
+	.string "It's the VIBRAVA from the DESERT\n"
+	.string "UNDERPASS! It's humming softly.$"
+
+HoennSeek_Text_Route113SandAnswers:
+	.string "The SINGING SAND in your BAG\n"
+	.string "hums back, in the same tune!\p"
+	.string "The VIBRAVA looks up at the\n"
+	.string "GLASS WORKSHOP's chimney…$"
+
+HoennSeek_Text_Route113VibravaGone:
+	.string "The VIBRAVA flew off over the\n"
+	.string "roof of the GLASS WORKSHOP.$"
+
+HoennSeek_Text_GlassSandTooFine:
+	.string "What's that humming? Sand?\n"
+	.string "Let me see… My, it sings!\p"
+	.string "Glass from sand like this would\n"
+	.string "ring like a bell. But it's far\l"
+	.string "too fine to melt on its own.\p"
+	.string "A VIBRAVA's wingbeat packs fine\n"
+	.string "sand together, they say.\p"
+	.string "They come by in the evenings to\n"
+	.string "hum in the falling ash. If one\l"
+	.string "answers your sand, come back!$"
+
+HoennSeek_Text_GlassChimeOffer:
+	.string "A VIBRAVA was humming outside\n"
+	.string "my door at sunset! Did you see?\p"
+	.string "Its wings packed your sand just\n"
+	.string "right. Leave it to me!$"
+
+HoennSeek_Text_GlassChimeGiven:
+	.string "A SAND CHIME! Listen to it\n"
+	.string "ring. It's the desert's own song.\p"
+	.string "The old folks at LAVARIDGE's\n"
+	.string "hot springs know desert songs.\p"
+	.string "Ask them what a chime like that\n"
+	.string "is for!$"
+
+HoennSeek_Text_ChimeRings:
+	.string "{PLAYER} rang the SAND CHIME.\n"
+	.string "A clear, humming note rings out.$"
+
+HoennSeek_Text_ChimeFades:
+	.string "The note fades away. Nothing\n"
+	.string "seems to answer it here.$"
+
+HoennSeek_Text_ChimeTowerGone:
+	.string "The sand hums back faintly, but\n"
+	.string "nothing rises from the dunes\l"
+	.string "any more.$"
+
+HoennSeek_Text_ChimeTowerStands:
+	.string "The MIRAGE TOWER shimmers in\n"
+	.string "the haze, humming along.$"
+
+HoennSeek_Text_ChimeNotSunset:
+	.string "The sand stirs, then settles.\p"
+	.string "It seems to be waiting for the\n"
+	.string "sun to set.$"
+
+HoennSeek_Text_ChimeStepBack:
+	.string "The sand shifts under your feet!\p"
+	.string "Something wants to rise right\n"
+	.string "here. Better step back first.$"
+
+HoennSeek_Text_ChimeDunesAnswer:
+	.string "The dunes answer with a deep hum!\p"
+	.string "Something is rising out of the\n"
+	.string "haze of the sandstorm…$"
+
+HoennSeek_Text_FlygonSings:
+	.string "A FLYGON! Its wings hum the same\n"
+	.string "song as the SAND CHIME!$"
+
+HoennSeek_Text_FlygonStays:
+	.string "The FLYGON settled back in front\n"
+	.string "of the FOSSILS, still humming.$"
+
+HoennSeek_Text_FlygonFades:
+	.string "The FLYGON flickered like a\n"
+	.string "mirage and was gone.\p"
+	.string "It might come back if you climb\n"
+	.string "up here again.$"
+
+HoennSeek_Text_FlygonCaught:
+	.string "The hum around the tower has\n"
+	.string "gone quiet…$"
+
+HoennSeek_Text_FossilGuarded:
+	.string "The FLYGON hums a warning. It's\n"
+	.string "guarding this FOSSIL.$"
+
+HoennSeek_Text_CallFlygon:
+	.string "{PLAYER}? It's MAY!\p"
+	.string "One of PROF. BIRCH's aides was\n"
+	.string "charting the ROUTE 111 desert.\p"
+	.string "At sunset, a tower rose right\n"
+	.string "out of the sandstorm, she says!\p"
+	.string "She saw someone climb it, and\n"
+	.string "come down with a FLYGON.\p"
+	.string "The PROFESSOR told me it had to\n"
+	.string "be you. A mirage tower! I'm so\l"
+	.string "jealous! Bye!$"

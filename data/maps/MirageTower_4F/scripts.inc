@@ -1,4 +1,5 @@
 MirageTower_4F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_MirageTopOnTransition @ Hoenn & Seek 2.0 part 24b
 	.byte 0
 
 MirageTower_4F_EventScript_RootFossil::
