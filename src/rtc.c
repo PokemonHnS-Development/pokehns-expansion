@@ -3,6 +3,7 @@
 #include "battle_pyramid.h"
 #include "datetime.h"
 #include "rtc.h"
+#include "hoenn_time.h" // Hoenn & Seek
 #include "string_util.h"
 #include "strings.h"
 #include "text.h"
@@ -457,7 +458,7 @@ enum Weekday GetDayOfWeek(void)
     RtcCalcLocalTime();
     ConvertTimeToDateTime(&dateTime, &gLocalTime);
 
-    return dateTime.dayOfWeek;
+    return HoennAdjustWeekday(dateTime.dayOfWeek); // Hoenn & Seek: the player's weekday offset (src/hoenn_time.c)
 }
 
 enum TimeOfDay GenConfigTimeOfDay(enum TimeOfDay timeOfDay)

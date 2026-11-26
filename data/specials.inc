@@ -724,3 +724,18 @@ gSpecials::
 	def_special HoennBufferAbilitySlot
 	def_special HoennSetAbilitySlot
 	def_special HoennCheckIV
+	@ Hoenn & Seek 2.0 part 2: script helpers (src/hoenn_time.c, src/hoenn_specials.c)
+	def_special GetDayOfWeek
+	def_special HoennBufferWeekdayName
+	def_special HoennLeadIsSpecies
+	def_special HoennFindPartySpecies
+	def_special HoennGetWeatherCycleStage
+	def_special HoennIsSpecialWeatherHere
+	def_special HoennIsSpecialWeatherOn
+	def_special HoennDebugBufferStatus
+	def_special HoennDebugStartClock
+	def_special HoennDebugSetWeekday
+	def_special HoennDebugSetHour
+	def_special HoennDebugNextWeek
+	def_special HoennDebugAdvanceWeatherStage
+	def_special HoennDebugReloadMap

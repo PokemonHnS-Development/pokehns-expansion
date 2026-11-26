@@ -165,6 +165,86 @@ class Emu:
         sb1, sb3 = self.ptrs(state)
         return int(self.run([f"loadstate {state}", f"r16 {self._var_addr(var, sb1, sb3):x}"])[0].split(": ")[1], 16)
 
+    # ------------------------------------------------ time and weather (2.0 part 2)
+    # The same changes the debug menu's "H&S time & weather…" makes, done through
+    # memory so a test can jump straight to a weekday, hour, week or weather stage.
+    # They take effect on the next time check: warp (go()) or walk a few steps.
+    # Offsets are asserted in src/hoenn_time.c; vars are in constants/hoenn_events.h.
+    VAR_WEEKDAY_OFFSET, VAR_WEEK_SEEN = 0x7080, 0x7081
+    SB1_WEATHER_STAGE, SB2_TIME_OFFSET = 0x33, 0x98
+    WEEKDAYS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
+
+    def _sb2(self, state):
+        return self.read_words(state, 0x030041BC, 1)[0]  # gSaveBlock2Ptr
+
+    def clock(self, state):
+        """The game's view of the time: {days, hour, minute, weekday, offset, week, week_seen, stage}.
+        gLocalTime is refreshed on every time check, so read it after a few frames in the overworld."""
+        lt = self.s("gLocalTime")
+        sb1, sb3 = self.ptrs(state)
+        out = self.run([f"loadstate {state}", f"r16 {lt:x}", f"r8 {lt + 2:x}", f"r8 {lt + 3:x}",
+                        f"r16 {self._var_addr(self.VAR_WEEKDAY_OFFSET, sb1, sb3):x}",
+                        f"r16 {self._var_addr(self.VAR_WEEK_SEEN, sb1, sb3):x}",
+                        f"r8 {sb1 + self.SB1_WEATHER_STAGE:x}"])
+        v = [int(l.split(": ")[1], 16) for l in out]
+        days = v[0] - 0x10000 if v[0] & 0x8000 else v[0]
+        offset = v[3] % 7
+        wd = (6 + max(days, 0) + offset) % 7  # day 0 is a Saturday (src/hoenn_time.c)
+        week = (max(days, 0) + (6 + offset) % 7) // 7  # weeks start on Sunday
+        return {"days": days, "hour": v[1], "minute": v[2], "weekday": self.WEEKDAYS[wd], "offset": offset,
+                "week": week, "week_seen": v[4], "stage": v[5]}
+
+    def start_clock(self, state_in, state_out):
+        """Debug saves (mkbase.sh) skip New Bark's wall clock, so FLAG_SYS_CLOCK_SET
+        is off and no daily/weekly reset ever runs. state_in must have the debug
+        menu open: this answers YES to the "H&S time & weather…" clock prompt."""
+        keys = ["A", "DOWN", "DOWN", "DOWN", "DOWN", "DOWN", "A"]
+        self.run([f"loadstate {state_in}"] + sum([[f"press {k} 4", "wait 20"] for k in keys], []) +
+                 ["wait 90", "press A 4", "wait 90", "press B 4", "wait 40", f"savestate {state_out}"])
+        return state_out
+
+    def _shift_time(self, state_in, state_out, seconds):
+        """Move local time forward by `seconds` (negative: back) by changing
+        SaveBlock2's localTimeOffset (local = RTC - offset), kept normalized."""
+        sb2 = self._sb2(state_in) + self.SB2_TIME_OFFSET
+        out = self.run([f"loadstate {state_in}", f"r16 {sb2:x}", f"r8 {sb2 + 2:x}", f"r8 {sb2 + 3:x}", f"r8 {sb2 + 4:x}"])
+        d, h, m, sec = [int(l.split(": ")[1], 16) for l in out]
+        sx = lambda x, bits: x - (1 << bits) if x & (1 << (bits - 1)) else x
+        total = sx(d, 16) * 86400 + sx(h, 8) * 3600 + sx(m, 8) * 60 + sx(sec, 8) - seconds
+        d, rest = divmod(total, 86400); h, rest = divmod(rest, 3600); m, sec = divmod(rest, 60)
+        self.run([f"loadstate {state_in}", f"w16 {sb2:x} {d & 0xFFFF}", f"w8 {sb2 + 2:x} {h}",
+                  f"w8 {sb2 + 3:x} {m}", f"w8 {sb2 + 4:x} {sec}", "wait 2", f"savestate {state_out}"])
+        return state_out
+
+    def set_hour(self, state_in, state_out, hour):
+        """Same day, `hour`:00."""
+        c = self.clock(state_in)
+        return self._shift_time(state_in, state_out, (hour - c["hour"]) * 3600 - c["minute"] * 60)
+
+    def next_week(self, state_in, state_out):
+        """Midnight at the start of next week: the next time check runs the daily
+        update for the skipped days and resets the weekly flags."""
+        c = self.clock(state_in)
+        days = 7 - self.WEEKDAYS.index(c["weekday"])
+        return self._shift_time(state_in, state_out, days * 86400 - c["hour"] * 3600 - c["minute"] * 60)
+
+    def set_weekday(self, state_in, state_out, day):
+        """Make today `day` ('MON' or 0-6, Sunday = 0) through the weekday offset,
+        like HoennSetWeekday: no new week (VAR_HOENN_WEEK_SEEN is set to this week)."""
+        day = self.WEEKDAYS.index(day) if isinstance(day, str) else day
+        c = self.clock(state_in)
+        base = (6 + max(c["days"], 0)) % 7
+        offset = (day - base) % 7
+        week = (max(c["days"], 0) + (6 + offset) % 7) // 7
+        return self.poke(state_in, state_out, vars_={self.VAR_WEEKDAY_OFFSET: offset, self.VAR_WEEK_SEEN: week + 1})
+
+    def set_weather_stage(self, state_in, state_out, stage):
+        """Emerald's 4-day weather cycle stage (0-3; 2 is the special-weather day).
+        Warp afterwards to see the weather change."""
+        sb1, _ = self.ptrs(state_in)
+        self.run([f"loadstate {state_in}", f"w8 {sb1 + self.SB1_WEATHER_STAGE:x} {stage % 4}", "wait 2", f"savestate {state_out}"])
+        return state_out
+
     # ------------------------------------------------ actions
     def menu(self, state_in, state_out):
         """Close whatever is open and open the debug menu (needed before warp())."""
