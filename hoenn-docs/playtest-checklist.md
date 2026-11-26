@@ -364,3 +364,11 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Save and reload between the hum and the Underpass: the Vibrava is still there; save after the sand: it stays gone.
 - Black out to the Vibrava: it's still there next time, and the hum plays again on entering the nook.
 - Brendan's call about the Singing Sand comes on its own (the emulator forced the call).
+
+## 2.0 part 24b (Flygon desert song B)
+- Climb the Mirage Tower on the bicycle's fast gear (press R while still): cross 2F's cracked floor down the left side and 3F's, smash 3F's rocks. Falling should just drop you a floor.
+- Ring the SAND CHIME from the bag and from SELECT; ring it in the desert at 6:59 PM and check the tower is still there after 7 PM and gone after midnight.
+- The tower's shimmer while walking up to it in the sandstorm (it fades in and out, as in Emerald).
+- Catch the Flygon with an ordinary ball (the emulator used a Master Ball); check it holds SOFT SAND and knows BOOMBURST in the summary.
+- After catching it, take a fossil: the collapse scene, the fall onto Route 111, and the tower never coming back.
+- The Route 113 Vibrava is easy to reach while it wanders (it moves within 2 tiles of (40,6)).

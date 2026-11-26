@@ -110,6 +110,9 @@
     "STORY_DESERT_ELDER": {"kind": "story", "if": [{"flag": "FLAG_HOENN_DESERT_SONG_HEARD"}, {"not_flag": "FLAG_HOENN_GOT_SINGING_SAND"}], "text": ["The desert sand drains into a hollow, you say? It did that when I was a boy, too.", "My father said it runs down under ROUTE 114, where the FOSSIL MANIAC digs. PROF. COZMO has studied it."]},
     "STORY_DESERT_COZMO": {"kind": "story", "if": [{"flag": "FLAG_HOENN_DESERT_SONG_HEARD"}, {"not_flag": "FLAG_HOENN_GOT_SINGING_SAND"}], "text": ["Desert sand that hums? It's so fine it sings when it slides. And it slides underground!", "The FOSSIL MANIAC's tunnel on ROUTE 114 runs under the desert: the DESERT UNDERPASS. Try its sandy far end."]},
     "RUMOR_DESERT_SONG": {"kind": "rumor", "rumor": "DESERT_SONG", "if": [{"not_flag": "FLAG_HOENN_GOT_SINGING_SAND"}]},
+    "STORY_SAND_CHIME": {"kind": "story", "if": [{"flag": "FLAG_HOENN_GOT_SAND_CHIME"}, {"not_flag": "FLAG_HOENN_MIRAGE_RAISED"}], "text": ["Oh my, a chime of desert sand! I haven't heard that song since I was a girl.", "Ring it in the desert at sunset, dearie, and the mirage shows the way."]},
+    "STORY_MIRAGE_FLYGON": {"kind": "story", "if": [{"flag": "FLAG_HOENN_MIRAGE_RAISED"}, {"not_flag": "FLAG_HOENN_CAUGHT_FLYGON"}], "text": ["You saw the mirage tower? In my day, a FLYGON sang at the very top.", "Its floors are cracked and crumbling. Only fast wheels get across them!"]},
+    "RUMOR_MIRAGE_TOWER": {"kind": "rumor", "rumor": "MIRAGE_TOWER", "if": [{"flag": "FLAG_HOENN_GOT_SINGING_SAND"}]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -240,6 +243,12 @@
       "before": ["They say the ROUTE 111 desert hums like a song, but only in the evening."],
       "after": "Somebody found what was humming under the desert: a VIBRAVA!",
       "notes": "The ROUTE 111 desert hums in the evening. Follow the TRAPINCH that come up to listen."
+    },
+    "MIRAGE_TOWER": {
+      "found": [{"flag": "FLAG_HOENN_CAUGHT_FLYGON"}],
+      "before": ["They say a tower rises out of the ROUTE 111 sand at sunset, then fades away like a mirage."],
+      "after": "Somebody climbed the mirage tower in the desert and caught a FLYGON at the top!",
+      "notes": "A chime made from singing sand, rung in the ROUTE 111 desert at sunset, raises the MIRAGE TOWER. Something hums at the top."
     }
   },
 
@@ -296,7 +305,8 @@
     {"map": "FallarborTown_CozmosHouse",         "script": "FallarborTown_CozmosHouse_EventScript_CozmosWife",     "lines": ["STORY_METAGROSS"]},
     {"map": "Route111",                          "script": "Route111_EventScript_Hiker",                           "lines": ["STORY_DESERT_SONG", "STORY_DESERT_TRACKS"]},
     {"map": "FallarborTown_CozmosHouse",         "script": "HoennSeek_EventScript_Cozmo",                          "lines": ["STORY_DESERT_COZMO"]},
-    {"map": "VerdanturfTown_PokemonCenter_1F",   "script": "VerdanturfTown_PokemonCenter_1F_EventScript_Gentleman", "lines": ["RUMOR_DESERT_SONG"]}
+    {"map": "VerdanturfTown_PokemonCenter_1F",   "script": "VerdanturfTown_PokemonCenter_1F_EventScript_Gentleman", "lines": ["RUMOR_DESERT_SONG", "RUMOR_MIRAGE_TOWER"]},
+    {"map": "LavaridgeTown",                     "script": "LavaridgeTown_EventScript_HotSpringsOldWoman1",       "lines": ["STORY_SAND_CHIME", "STORY_MIRAGE_FLYGON"]}
   ],
 
   "forecasts": [

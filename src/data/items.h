@@ -14461,6 +14461,25 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_Sand,
         .iconPalette = gItemIconPalette_SoftSand,
     },
+
+    // Hoenn & Seek 2.0 part 24b: the Route 113 glassblower fuses the Singing
+    // Sand into it. Rung on Route 111's desert in the evening, it raises the
+    // Mirage Tower (HoennSeek_EventScript_RingSandChime).
+    [ITEM_SAND_CHIME] =
+    {
+        .name = ITEM_NAME("SAND CHIME"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A glass chime of\n"
+            "singing sand. Its\n"
+            "ring carries far."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_HoennSandChime,
+        .iconPic = gItemIcon_SootheBell,
+        .iconPalette = gItemIconPalette_SootheBell,
+    },
 #endif
 
     [ITEM_EON_TICKET] =

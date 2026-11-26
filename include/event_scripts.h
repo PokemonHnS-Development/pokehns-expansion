@@ -551,6 +551,7 @@ extern const u8 EventScript_PalletTown_PlayersHouse_2F_TurnOnPC[];
 extern const u8 EventScript_PC[];
 extern const u8 EventScript_Headbutt[];
 extern const u8 EventScript_AccessPokemonBoxLink[];
+extern const u8 HoennSeek_EventScript_RingSandChime[]; // Hoenn & Seek 2.0 part 24b
 extern const u8 EventScript_TestSignpostMsg[];
 extern const u8 EventScript_HiddenItemScript[];
 extern const u8 EventScript_TV[];

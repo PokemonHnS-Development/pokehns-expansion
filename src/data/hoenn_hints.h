@@ -64,6 +64,9 @@ extern const u8 HoennSeek_Text_Hint_RumorMetagrossNotes[];
 extern const u8 HoennSeek_Text_Hint_RumorDesert_SongBefore[];
 extern const u8 HoennSeek_Text_Hint_RumorDesert_SongAfter[];
 extern const u8 HoennSeek_Text_Hint_RumorDesert_SongNotes[];
+extern const u8 HoennSeek_Text_Hint_RumorMirage_TowerBefore[];
+extern const u8 HoennSeek_Text_Hint_RumorMirage_TowerAfter[];
+extern const u8 HoennSeek_Text_Hint_RumorMirage_TowerNotes[];
 extern const u8 HoennSeek_Text_Hint_LineTipDaycare[];
 extern const u8 HoennSeek_Text_Hint_LineTipBugContest[];
 extern const u8 HoennSeek_Text_Hint_LineTipClock[];
@@ -120,6 +123,8 @@ extern const u8 HoennSeek_Text_Hint_LineStoryDesertSong[];
 extern const u8 HoennSeek_Text_Hint_LineStoryDesertTracks[];
 extern const u8 HoennSeek_Text_Hint_LineStoryDesertElder[];
 extern const u8 HoennSeek_Text_Hint_LineStoryDesertCozmo[];
+extern const u8 HoennSeek_Text_Hint_LineStorySandChime[];
+extern const u8 HoennSeek_Text_Hint_LineStoryMirageFlygon[];
 extern const u8 HoennSeek_Text_Hint_Forecast0[];
 extern const u8 HoennSeek_Text_Hint_Forecast1[];
 extern const u8 HoennSeek_Text_Hint_Forecast2[];
@@ -151,6 +156,7 @@ static const struct HoennHintRumor sHintRumors[] = {
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_BAGON_MET, 0}}, 1, HoennSeek_Text_Hint_RumorBagonBefore, HoennSeek_Text_Hint_RumorBagonAfter, HoennSeek_Text_Hint_RumorBagonNotes }, // BAGON
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_METAGROSS_SEEN, 0}}, 1, HoennSeek_Text_Hint_RumorMetagrossBefore, HoennSeek_Text_Hint_RumorMetagrossAfter, HoennSeek_Text_Hint_RumorMetagrossNotes }, // METAGROSS
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_GOT_SINGING_SAND, 0}}, 1, HoennSeek_Text_Hint_RumorDesert_SongBefore, HoennSeek_Text_Hint_RumorDesert_SongAfter, HoennSeek_Text_Hint_RumorDesert_SongNotes }, // DESERT_SONG
+    { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_CAUGHT_FLYGON, 0}}, 1, HoennSeek_Text_Hint_RumorMirage_TowerBefore, HoennSeek_Text_Hint_RumorMirage_TowerAfter, HoennSeek_Text_Hint_RumorMirage_TowerNotes }, // MIRAGE_TOWER
 };
 
 static const struct HoennHintLine sHintLines[] = {
@@ -231,6 +237,9 @@ static const struct HoennHintLine sHintLines[] = {
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_DESERT_SONG_HEARD, 0}, {HINT_IF_NOT_FLAG, FLAG_HOENN_GOT_SINGING_SAND, 0}}, 2, HoennSeek_Text_Hint_LineStoryDesertElder, HINT_STORY, 0 }, // STORY_DESERT_ELDER
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_DESERT_SONG_HEARD, 0}, {HINT_IF_NOT_FLAG, FLAG_HOENN_GOT_SINGING_SAND, 0}}, 2, HoennSeek_Text_Hint_LineStoryDesertCozmo, HINT_STORY, 0 }, // STORY_DESERT_COZMO
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_GOT_SINGING_SAND, 0}}, 1, NULL, HINT_RUMOR, 20 }, // RUMOR_DESERT_SONG
+    { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_GOT_SAND_CHIME, 0}, {HINT_IF_NOT_FLAG, FLAG_HOENN_MIRAGE_RAISED, 0}}, 2, HoennSeek_Text_Hint_LineStorySandChime, HINT_STORY, 0 }, // STORY_SAND_CHIME
+    { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_MIRAGE_RAISED, 0}, {HINT_IF_NOT_FLAG, FLAG_HOENN_CAUGHT_FLYGON, 0}}, 2, HoennSeek_Text_Hint_LineStoryMirageFlygon, HINT_STORY, 0 }, // STORY_MIRAGE_FLYGON
+    { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_GOT_SINGING_SAND, 0}}, 1, NULL, HINT_RUMOR, 21 }, // RUMOR_MIRAGE_TOWER
     { NULL, 0, NULL, HINT_FORECAST, 0 }, // FORECAST
 };
 
@@ -257,7 +266,7 @@ static const struct HoennHintNpc sHintNpcs[] = {
     { (const u8[]){34, 36, 47, 52}, 4, FALSE }, // FortreeCity_PokemonCenter_1F
     { (const u8[]){36, 15, 49}, 3, FALSE }, // LilycoveCity_PokemonCenter_1F
     { (const u8[]){33, 9, 3, 50}, 4, FALSE }, // MossdeepCity_PokemonCenter_1F
-    { (const u8[]){77}, 1, TRUE }, // Route119_WeatherInstitute_1F
+    { (const u8[]){80}, 1, TRUE }, // Route119_WeatherInstitute_1F
     { (const u8[]){10, 11, 12}, 3, FALSE }, // CianwoodCity_hns
     { (const u8[]){10, 11, 12}, 3, FALSE }, // OlivineCity_hns
     { (const u8[]){13}, 1, FALSE }, // DewfordTown
@@ -285,7 +294,8 @@ static const struct HoennHintNpc sHintNpcs[] = {
     { (const u8[]){71}, 1, FALSE }, // FallarborTown_CozmosHouse
     { (const u8[]){72, 73}, 2, FALSE }, // Route111
     { (const u8[]){75}, 1, FALSE }, // FallarborTown_CozmosHouse
-    { (const u8[]){76}, 1, FALSE }, // VerdanturfTown_PokemonCenter_1F
+    { (const u8[]){76, 79}, 2, FALSE }, // VerdanturfTown_PokemonCenter_1F
+    { (const u8[]){77, 78}, 2, FALSE }, // LavaridgeTown
     { (const u8[]){4, 2}, 2, FALSE }, // Route34_FishingShack_hoenn
     { (const u8[]){30, 7}, 2, FALSE }, // OlivineCity_HarborOffice_hoenn
     { (const u8[]){6, 8}, 2, FALSE }, // OlivineCity_SailorsHouse_hoenn

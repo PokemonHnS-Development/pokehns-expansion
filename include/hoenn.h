@@ -51,6 +51,7 @@ u16 HoennFindPartySpecies(void);
 bool32 HoennTryEventCall(void);
 u16 HoennSpeciesDueCall(void);
 u16 HoennHiddenDueCall(void);
+bool8 HoennMirageTowerRung(void); // 2.0 part 24b
 void HoennTuneWildMon(void);
 void HoennTuneWildMonSlot(void);
 void HoennSetupScaledWildDouble(void);
