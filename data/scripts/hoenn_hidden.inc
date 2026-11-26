@@ -1106,7 +1106,7 @@ HoennSeek_Text_CallChimecho:
 @ ALTARIA sings there with four SWABLU, once a week. A line of boulders
 @ (row 10) hides you: stand behind one (row 11) to watch, step into a gap
 @ and the flock scatters until next week. Watch-only, like HGSS's Clefairy
-@ dance; each watch leaves a Pretty Feather.
+@ dance; each watch leaves a STAR PIECE where the ALTARIA sang (22r, Bryan).
 @ SHINY ALTARIA: once you've watched the chorus to the end, a later chorus
 @ offers to play the GLASS FLUTE if your lead is a SWABLU or ALTARIA. A
 @ shiny ALTARIA glides down to sing along and battles you: scaled, Perish
@@ -1226,7 +1226,7 @@ HoennSeek_EventScript_ChorusEnds:
 	call HoennSeek_EventScript_ChorusFliesOff
 	setflag FLAG_HOENN_CHORUS_WATCHED
 	msgbox HoennSeek_Text_ChorusEnds, MSGBOX_DEFAULT
-	giveitem ITEM_PRETTY_FEATHER
+	giveitem ITEM_STAR_PIECE
 	releaseall
 	end
 
@@ -1522,8 +1522,8 @@ HoennSeek_Text_ShinyAltaria:
 HoennSeek_Text_ChorusEnds:
 	.string "The song ended, and the flock\n"
 	.string "flew off over the falls.\p"
-	.string "A soft feather drifted down by\n"
-	.string "the boulder.$"
+	.string "Something glittered on the grass\n"
+	.string "where the ALTARIA had sung.$"
 
 HoennSeek_Text_ChorusScattered:
 	.string "The SWABLU scattered, and the\n"

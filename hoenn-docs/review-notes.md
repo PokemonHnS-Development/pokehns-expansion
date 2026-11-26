@@ -153,12 +153,12 @@ Reproduced in the emulator.
 - More evidence: part 20a's overworld-Pokémon generator put a Tentacruel at (15,36) and a Pelipper at (18,35) in that pocket because it found the pocket unreachable. A third Tentacruel sits at (16,32) in a one-tile gap above it. Part 22b's tests reached the Wailord by warping.
 - **Fix:** open a channel from the main sea into the pocket (the `composed_maps.json` patches on both Route 131 layouts), then re-run `gen_hoenn_ow_mons.py` so no Pokémon sits on the new path. Check it in the emulator by surfing in from open water, not by warping.
 
-### 22. The clifftop and the atoll look generator-made (parts 22b, 23; same as items 11 and 16)
+### 22. The clifftop and the atoll look generator-made (parts 22b, 23; same as items 11 and 16) — **done in 22r-b** (Bryan approved the mockups: a mountain meadow ringed by Route 114's rock, and a sand ring around a lagoon)
 - **Meteor Falls clifftop** (`MeteorFalls_Clifftop_hoenn`): a box of floor inside a ring of identical trees, which is what the CLAUDE.md convention rules out. The cliff in the middle has no corners: its top edge runs across the whole clearing (x 1–14, row 3), but the cliff face only spans x 4–13. So at both ends the edge hangs over plain floor.
 - **Route 131 atoll** (`Route131_Atoll_hoenn`): it isn't an atoll. It's open sea with rocks spaced evenly around the map edge and three sand islands with columns of trees stacked 4–6 high. There's no reef ring and no lagoon (the Wailord's "lagoon" is just open water), and no Luvdisc pond (plan section 7). Some treetops stick out over the water at the islands' top edges.
 - **Fix:** hand-paint both from a mockup Bryan approves first, as in 17r-e and 21r.
 
-### 23. Choices from parts 22a–23 for Bryan to confirm
+### 23. Choices from parts 22a–23 for Bryan to confirm — **chorus reward settled in 22r-b** (Bryan: a Star Piece each week); the rest stay as built unless Bryan says otherwise
 - **Chorus reward:** a Pretty Feather each week. The plan says a Comet Shard or Star Piece each week. The Comet Shard went to the Metagross scene instead (first time; a Star Piece after). A Pretty Feather is worth much less than the plan's reward.
 - The rest are listed as "picked without Bryan" in PRs #71–#73 and the plan:
   - Absol: the ridge as the "cliff ledge", the normal wild battle theme, its level (gym ace − 8 the first time, then fixed).

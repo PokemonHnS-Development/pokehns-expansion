@@ -31,7 +31,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 9,
+      "x": 11,
       "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -44,8 +44,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 20,
-      "y": 25,
+      "x": 23,
+      "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -57,8 +57,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 23,
-      "y": 9,
+      "x": 3,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -84,24 +84,24 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 13,
-      "y": 28,
+      "x": 12,
+      "y": 29,
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HOENN_HIDDEN_ATOLL_1"
     },
     {
       "type": "hidden_item",
-      "x": 23,
-      "y": 29,
+      "x": 18,
+      "y": 23,
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HOENN_HIDDEN_ATOLL_2"
     },
     {
       "type": "hidden_item",
-      "x": 6,
-      "y": 24,
+      "x": 4,
+      "y": 25,
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HOENN_HIDDEN_ATOLL_3"

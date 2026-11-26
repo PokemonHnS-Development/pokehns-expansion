@@ -355,3 +355,5 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Route 131: surf in from the open sea through the new channel ((20,33), then down between the rocks) to the sleeping Wailord, without warping.
 - Route 120 on a storm night: surfing its ponds never brings out Absol; the grass still does.
 - Overworld Pokémon re-placed on Routes 102, 113, 114, 119, 120, 131, Petalburg Woods, Mt. Pyre's summit and Meteor Falls: none blocks a path or stands on an event's tiles.
+- Meteor Falls clifftop (22r-b): walk every rock edge of the meadow; nothing walkable outside it, no gap that skips the boulder row; the chorus gives a STAR PIECE.
+- Route 131 atoll (22r-b): land on the ring from the lagoon (its north-facing shores aren't landable, as in Emerald), reach all three item balls and the three hidden HEART SCALEs ((12,29), (18,23), (4,25)), and surf the lagoon for Luvdisc.
