@@ -102,7 +102,8 @@ Nothing a player sees yet (part 3 adds the first weekday content); these are for
 
 ## 2.0 part 3 — Weekday content
 - [ ] **A real new game:** after setting the stopped clock in your room, the calendar asks what day it is; pick the real day.
-- [ ] Your room's wall clock: view it, say YES to "Change the day?", pick a day; the start-menu/PokéGear day follows.
+- [ ] Your room's wall clock: say YES to "Change the day?", pick a day; the start menu ("FRI 9:34 PM") and the PokéGear follow. (Emulator-tested with a debug save.)
+- [ ] The start-menu clock with the weekday: does the wider box look right next to the menu, including in the Safari Zone?
 - [ ] The seven Weekday siblings: on the wrong day they name their day; on their day they give the gift (once).
 - [ ] Union Cave B2F's Lapras: there on a Friday; catch or beat it, and it's back the next Friday, not before.
 - [ ] Mt. Moon's Clefairy dance: only on Monday nights (enter the area after dark).

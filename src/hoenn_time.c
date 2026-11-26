@@ -150,6 +150,16 @@ void HoennBufferWeekdayName(void)
     StringCopy(gStringVar1, sWeekdayNames[GetDayOfWeek()]);
 }
 
+// Part 3: today's short name ("MON ") at dest, for the start-menu clock.
+// Returns the end of the string, so the time can be written right after it.
+u8 *HoennWriteWeekdayAbbrev(u8 *dest)
+{
+    dest = StringCopyN(dest, sWeekdayNames[GetDayOfWeek()], 3);
+    *dest++ = CHAR_SPACE;
+    *dest = EOS;
+    return dest;
+}
+
 // specialvar VAR_RESULT, HoennIsItWeekday (part 3)
 // VAR_0x8004 = HOENN_SUNDAY..HOENN_SATURDAY. Puts that day's name in STR_VAR_1
 // and returns TRUE if today is that day. Made for HGSS-style "only on my day"

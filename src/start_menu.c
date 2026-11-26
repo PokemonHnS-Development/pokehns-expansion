@@ -37,6 +37,7 @@
 #include "scanline_effect.h"
 #include "script.h"
 #include "sound.h"
+#include "hoenn_time.h" // Hoenn & Seek
 #include "start_menu.h"
 #include "strings.h"
 #include "string_util.h"
@@ -165,7 +166,11 @@ static const struct WindowTemplate sWindowTemplate_StartClock = {
     .bg = 0,
     .tilemapLeft = 1,
     .tilemapTop = 1,
+#if IS_HNS
+    .width = 10, // Hoenn & Seek: room for the weekday ("MON 12:59 PM")
+#else
     .width = 6,
+#endif
     .height = 2,
     .paletteNum = 15,
     .baseBlock = 0x30
@@ -523,7 +528,12 @@ static void ShowTimeWindow(void)
         suffix = sText_PM;
     }
 
+#if IS_HNS
+    ptr = HoennWriteWeekdayAbbrev(gStringVar4); // Hoenn & Seek: "MON " first
+    ptr = ConvertIntToDecimalStringN(ptr, convertedHours, STR_CONV_MODE_LEFT_ALIGN, 3);
+#else
     ptr = ConvertIntToDecimalStringN(gStringVar4, convertedHours, STR_CONV_MODE_LEFT_ALIGN, 3);
+#endif
     *ptr = 0xF0;
     ConvertIntToDecimalStringN(ptr + 1, gLocalTime.minutes, STR_CONV_MODE_LEADING_ZEROS, 2);
     AddTextPrinterParameterized(sStartClockWindowId, FONT_NORMAL, gStringVar4,

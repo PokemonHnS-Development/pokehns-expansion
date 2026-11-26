@@ -37,25 +37,27 @@ HoennSeek_EventScript_AskWeekdayAtStart_Menu:
 	return
 
 @ The wall clock in your New Bark room, any time after the opening (the bg
-@ event's script, swapped in map.json). It shows the clock as before (R there
-@ resets the time), then offers to change the day.
+@ event's script, swapped in map.json). First the calendar: it names today and
+@ offers to change the day. Then HnS's clock view, as before (R there resets
+@ the time). The clock view must come last: Special_ViewWallClock returns
+@ straight to the map (CB2_ReturnToField), which ends the script.
 HoennSeek_EventScript_NewBarkWallClock::
 	lockall
 	goto_if_unset FLAG_SET_WALL_CLOCK, LittlerootTown_BrendansHouse_2F_EventScript_WallClock
-	msgbox PlayersHouse_2F_Text_ClockChange, MSGBOX_DEFAULT
-	incrementgamestat GAME_STAT_CHECKED_CLOCK
-	fadescreen FADE_TO_BLACK
-	special Special_ViewWallClock
-	waitstate
 	special HoennBufferWeekdayName
 	msgbox HoennSeek_Text_CalendarChangeDay, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_NewBarkWallClock_Done
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_NewBarkWallClock_View
 	msgbox HoennSeek_Text_CalendarWhatDay, MSGBOX_DEFAULT
 	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
 	special HoennSetWeekdayFromChoice
 	special HoennBufferWeekdayName
 	msgbox HoennSeek_Text_CalendarSet, MSGBOX_DEFAULT
-HoennSeek_EventScript_NewBarkWallClock_Done:
+HoennSeek_EventScript_NewBarkWallClock_View:
+	msgbox PlayersHouse_2F_Text_ClockChange, MSGBOX_DEFAULT
+	incrementgamestat GAME_STAT_CHECKED_CLOCK
+	fadescreen FADE_TO_BLACK
+	special Special_ViewWallClock
+	waitstate
 	releaseall
 	end
 
