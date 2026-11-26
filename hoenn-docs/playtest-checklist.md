@@ -181,6 +181,11 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Walk into both Route 6 houses (21,17 and 49,30) and Celadon's house by the pond (26,17), and out again. Read the texts in place (no review yet).
 - [ ] Celadon florist: one berry a day, a different one each weekday (Lum on Sunday, Sitrus on Saturday). With a real clock, check that the next day gives another berry, and check what she says with a full Berry Pocket. Do the same for the Olivine keeper's gift.
 
+## 2.0 part 11 — Melemele buildings
+- [ ] Walk into Melemele's two houses (11,21 and 20,25) and out again. Read the texts in place (no review yet).
+- [ ] Surf shop: talk to the clerk across the counter (in the harness it only answered from the side, as HnS's own Melemele mart does). Buy each item, and check the prices and list are OK.
+- [ ] The Wailmer pet's big sprite overlaps the shelf behind it. Is that OK, or should it move or change?
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.
