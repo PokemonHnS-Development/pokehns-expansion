@@ -31,7 +31,7 @@
       "objects": [
         {"type": "npc", "gfx": "OBJ_EVENT_GFX_FISHERMAN_HNS", "x": 2, "y": 6, "facing": "right",
          "text": ["The fish off ROUTE 34 bite best in the early morning.", "Don't tell anyone, but on rainy days you'll hook POLIWAG right off the beach!"]},
-        {"type": "npc", "gfx": "OBJ_EVENT_GFX_WOMAN_2_HNS", "x": 8, "y": 3, "facing": "look",
+        {"type": "npc", "gfx": "OBJ_EVENT_GFX_WOMAN_2_HNS", "x": 10, "y": 3, "facing": "look",
          "text": "My husband spends more time at sea than at home. Lucky for him, the fish keep us fed!",
          "hints": ["TIP_WEATHER", "TIP_CLOCK"]},
         {"type": "mon", "species": "PSYDUCK", "x": 6, "y": 7, "facing": "wander"}
