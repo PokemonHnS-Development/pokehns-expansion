@@ -9,6 +9,7 @@
 #include "data.h"
 #include "event_data.h"
 #include "hoenn.h"
+#include "hoenn_caps.h"
 #include "constants/opponents.h"
 
 #if IS_HNS
@@ -23,7 +24,14 @@
 #define HOENN_STRONG_GAP        6   // want the challenge: 62-72
 #define HOENN_HOPEFUL_GAP       14  // battle you anyway: 54-64
 
-enum { GYM_ROLE_NONE, GYM_ROLE_TRAINER, GYM_ROLE_LEADER, GYM_ROLE_STRONG, GYM_ROLE_HOPEFUL, GYM_ROLE_REMATCH };
+enum { GYM_ROLE_NONE, GYM_ROLE_TRAINER, GYM_ROLE_LEADER, GYM_ROLE_STRONG, GYM_ROLE_HOPEFUL, GYM_ROLE_REMATCH, GYM_ROLE_PROGRESS };
+
+// 2.0 part 17r: DAMIAN, Charmander's old trainer outside the Cerulean Gym
+// (Emerald's unused TRAINER_LEROY slot). Kanto has no gate, so his ace follows
+// your progress: the level cap for your badges (src/hoenn_caps.c, Normal),
+// whether or not the cap setting is on; 85 after Wallace, like the rematches.
+#define HOENN_DAMIAN TRAINER_LEROY
+#define HOENN_JOHTO_CHAMPION_CAP 56  // HnS's last Johto cap: the floor before Kanto badges
 
 u32 HoennCountStamps(void)
 {
@@ -64,6 +72,8 @@ static u32 GetGymRole(const struct Trainer *trainer)
     for (i = 0; i < ARRAY_COUNT(sHoennHopefulTrainers); i++)
         if (GetTrainerStructFromId(sHoennHopefulTrainers[i]) == trainer)
             return GYM_ROLE_HOPEFUL;
+    if (GetTrainerStructFromId(HOENN_DAMIAN) == trainer)
+        return GYM_ROLE_PROGRESS;
     // Part 16c: phone rematch teams top out at the gym-ace level (68-78, 85 after Wallace).
     for (i = 0; i < ARRAY_COUNT(sHoennRematchTrainers); i++)
         if (GetTrainerStructFromId(sHoennRematchTrainers[i]) == trainer)
@@ -86,6 +96,8 @@ u8 HoennScaleTrainerMonLevel(const struct Trainer *trainer, u8 level)
             maxLevel = trainer->party[i].lvl;
 
     ace = HoennGymAceLevel();
+    if (role == GYM_ROLE_PROGRESS && !FlagGet(FLAG_HOENN_STAMP_WALLACE))
+        ace = HoennGetPostJohtoLevelCap(HOENN_JOHTO_CHAMPION_CAP, FALSE);
     if (role == GYM_ROLE_TRAINER)
         ace -= HOENN_GYM_TRAINER_GAP;
     else if (role == GYM_ROLE_STRONG)
