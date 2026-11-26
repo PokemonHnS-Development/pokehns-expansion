@@ -712,3 +712,108 @@ HoennSeek_Text_CallFeud:
 	.string "middle of their fight!\p"
 	.string "Those two have hated each other\n"
 	.string "for as long as anyone remembers.$"
+
+@ ==========================================================================
+@ Part 22a: Absol, the storm wanderer (Route 120)
+@ On Route 120's storm day (its weather cycle), in the evening or at night,
+@ an ABSOL stands on the ridge between the route's two paths, (15,50). The
+@ first step onto row 52 on either side plays the scene: it looks at you,
+@ lightning, and it's gone. From then on it roams Route 120's grass on storm
+@ evenings and nights (src/hoenn_roamer.c): it flees like Raikou and Entei,
+@ and keeps its HP and status between battles. Knocked out, it's back on the
+@ ridge the next storm night, and the same scene revives the same ABSOL.
+@ Caught: the ridge stays empty. It knows Earthquake, Eruption, Extreme Speed
+@ and Future Sight and holds a Razor Claw (plan section 9).
+@ ==========================================================================
+
+@ Called from Route 120's OnTransition: shows the ABSOL on the ridge and arms
+@ the trigger row (VAR_TEMP_4) when it isn't roaming or caught.
+HoennSeek_EventScript_Route120OnTransition::
+	setflag FLAG_HOENN_HIDE_ABSOL_CLIFF
+	specialvar VAR_RESULT, HoennAbsolIsOut
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_HiddenReturn
+	specialvar VAR_RESULT, HoennAbsolState
+	goto_if_eq VAR_RESULT, HOENN_ABSOL_ROAMING, HoennSeek_EventScript_HiddenReturn
+	goto_if_eq VAR_RESULT, HOENN_ABSOL_CAUGHT, HoennSeek_EventScript_HiddenReturn
+	clearflag FLAG_HOENN_HIDE_ABSOL_CLIFF
+	setvar VAR_TEMP_4, 1
+	return
+
+HoennSeek_EventScript_AbsolCliff::
+	lockall
+	setvar VAR_TEMP_4, 0
+	getplayerxy VAR_0x8008, VAR_0x8009
+	call_if_lt VAR_0x8008, 15, HoennSeek_EventScript_AbsolLookLeft
+	call_if_gt VAR_0x8008, 15, HoennSeek_EventScript_AbsolLookRight
+	playmoncry SPECIES_ABSOL, CRY_MODE_ENCOUNTER
+	specialvar VAR_RESULT, HoennAbsolState
+	call_if_eq VAR_RESULT, HOENN_ABSOL_DOWN, HoennSeek_EventScript_AbsolAgainText
+	call_if_ne VAR_RESULT, HOENN_ABSOL_DOWN, HoennSeek_EventScript_AbsolFirstText
+	waitmoncry
+	closemessage
+	delay 20
+	playse SE_THUNDER
+	fadescreen FADE_TO_WHITE
+	removeobject LOCALID_HOENN_ABSOL_CLIFF
+	setflag FLAG_HOENN_HIDE_ABSOL_CLIFF
+	specialvar VAR_RESULT, HoennWakeAbsol
+	setflag FLAG_HOENN_ABSOL_WOKEN
+	delay 8
+	fadescreen FADE_FROM_WHITE
+	msgbox HoennSeek_Text_AbsolGone, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_AbsolLookLeft:
+	applymovement LOCALID_HOENN_ABSOL_CLIFF, Common_Movement_FaceLeft
+	waitmovement 0
+	return
+
+HoennSeek_EventScript_AbsolLookRight:
+	applymovement LOCALID_HOENN_ABSOL_CLIFF, Common_Movement_FaceRight
+	waitmovement 0
+	return
+
+HoennSeek_EventScript_AbsolFirstText:
+	msgbox HoennSeek_Text_AbsolOnRidge, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_AbsolAgainText:
+	msgbox HoennSeek_Text_AbsolBack, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_CallAbsol::
+	setflag FLAG_HOENN_CALL_ABSOL
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallAbsol
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Part 22a texts ------------------------------------------------------
+HoennSeek_Text_AbsolOnRidge:
+	.string "A white POKéMON stands on the\n"
+	.string "ridge, its horn to the storm…\p"
+	.string "It's looking straight at you.$"
+
+HoennSeek_Text_AbsolBack:
+	.string "The white POKéMON is back on the\n"
+	.string "ridge, rested and watching you.$"
+
+HoennSeek_Text_AbsolGone:
+	.string "…When the flash cleared, the\n"
+	.string "ridge was empty.\p"
+	.string "Something white is moving in\n"
+	.string "the tall grass of ROUTE 120.$"
+
+HoennSeek_Text_CallAbsol:
+	.string "{PLAYER}? It's MAY!\p"
+	.string "WINONA flew home to FORTREE in\n"
+	.string "that storm, and she told Dad what\l"
+	.string "she saw from up there.\p"
+	.string "A white ABSOL on the ridge over\n"
+	.string "ROUTE 120, staring at someone…\p"
+	.string "That was you, wasn't it?\p"
+	.string "They say ABSOL show up when\n"
+	.string "disaster's near. Or a big storm!\p"
+	.string "It runs from everybody. You'll\n"
+	.string "need a way to stop it escaping.\p"
+	.string "Good luck out there! Bye!$"

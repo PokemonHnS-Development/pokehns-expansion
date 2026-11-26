@@ -12,6 +12,7 @@
 #include "sprite.h"
 #include "task.h"
 #include "constants/event_objects.h"
+#include "hoenn.h"
 #if IS_HNS
 #include "pokedex.h"
 #endif
@@ -212,6 +213,8 @@ static void TryAttractRoamer(u32 roamerIndex)
     u8 playerMapNum = gSaveBlock1Ptr->location.mapNum;
     u8 legendCount = CountLegendariesInParty();
 
+    if (HoennIsAbsolRoamer(roamerIndex)) // Hoenn & Seek 2.0 part 22a: Absol (src/hoenn_roamer.c) never moves
+        return;
     if (legendCount == 0)
         return;
 
@@ -309,7 +312,7 @@ static u8 GetFirstInactiveRoamerIndex(void)
 
     for (i = 0; i < ROAMER_COUNT; i++)
     {
-        if (!ROAMER(i)->active)
+        if (!ROAMER(i)->active && !HoennRoamerSlotReserved(i)) // Hoenn & Seek 2.0 part 22a: Absol (src/hoenn_roamer.c) keeps its slot
             return i;
     }
     return ROAMER_COUNT;
@@ -389,7 +392,7 @@ void RoamerMoveToOtherLocationSet(u32 roamerIndex)
 {
     u8 mapNum = 0;
 
-    if (!ROAMER(roamerIndex)->active)
+    if (!ROAMER(roamerIndex)->active || HoennIsAbsolRoamer(roamerIndex)) // Hoenn & Seek 2.0 part 22a: Absol (src/hoenn_roamer.c) never moves
         return;
 
     const u8 (*locs)[6] = GetRoamerLocations(roamerIndex);
@@ -413,6 +416,8 @@ void RoamerMove(u32 roamerIndex)
 {
     u8 locSet = 0;
 
+    if (HoennIsAbsolRoamer(roamerIndex)) // Hoenn & Seek 2.0 part 22a: Absol (src/hoenn_roamer.c) never moves
+        return;
     if ((Random() % 16) == 0)
     {
         RoamerMoveToOtherLocationSet(roamerIndex);
@@ -444,6 +449,8 @@ void RoamerMove(u32 roamerIndex)
 
 bool8 IsRoamerAt(u32 roamerIndex, u8 mapGroup, u8 mapNum)
 {
+    if (HoennIsAbsolRoamer(roamerIndex)) // Hoenn & Seek 2.0 part 22a: Absol (src/hoenn_roamer.c)
+        return HoennAbsolIsAt(roamerIndex, mapGroup, mapNum);
     if (ROAMER(roamerIndex)->active && mapGroup == sRoamerLocation[roamerIndex][MAP_GRP] && mapNum == sRoamerLocation[roamerIndex][MAP_NUM])
         return TRUE;
     else
@@ -464,6 +471,7 @@ void CreateRoamerMonInstance(u32 roamerIndex)
     SetMonData(mon, MON_DATA_SMART, &ROAMER(roamerIndex)->smart);
     SetMonData(mon, MON_DATA_TOUGH, &ROAMER(roamerIndex)->tough);
     SetMonData(mon, MON_DATA_IS_SHINY, &ROAMER(roamerIndex)->shiny);
+    HoennTuneRoamerMon(roamerIndex, mon); // Hoenn & Seek 2.0 part 22a: Absol (src/hoenn_roamer.c): its moves and item
 }
 
 bool8 TryStartRoamerEncounter(void)
@@ -489,6 +497,7 @@ void UpdateRoamerHPStatus(struct Pokemon *mon)
     ROAMER(gEncounteredRoamerIndex)->hp = GetMonData(mon, MON_DATA_HP);
     ROAMER(gEncounteredRoamerIndex)->statusA = status;
     ROAMER(gEncounteredRoamerIndex)->statusB = status >> 8;
+    HoennRoamerBattleEnded(gEncounteredRoamerIndex); // Hoenn & Seek 2.0 part 22a: Absol (src/hoenn_roamer.c): caught?
 
     RoamerMoveToOtherLocationSet(gEncounteredRoamerIndex);
 }
@@ -500,6 +509,8 @@ void SetRoamerInactive(u32 roamerIndex)
 
 void GetRoamerLocation(u32 roamerIndex, u8 *mapGroup, u8 *mapNum)
 {
+    if (HoennIsAbsolRoamer(roamerIndex)) // Hoenn & Seek 2.0 part 22a: Absol (src/hoenn_roamer.c)
+        return HoennGetAbsolLocation(mapGroup, mapNum);
     *mapGroup = sRoamerLocation[roamerIndex][MAP_GRP];
     *mapNum = sRoamerLocation[roamerIndex][MAP_NUM];
 }

@@ -57,6 +57,7 @@ Route120_EventScript_SetBridgeKecleonMovement::
 Route120_OnTransition:
 	call GabbyAndTy_EventScript_UpdateLocation
 	call Route120_EventScript_SetWeather
+	call HoennSeek_EventScript_Route120OnTransition @ Hoenn & Seek 2.0 part 22a: Absol on the ridge
 	end
 
 Route120_EventScript_SetWeather::

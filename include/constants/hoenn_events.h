@@ -283,4 +283,17 @@
 #define FLAG_HOENN_CALL_FEEBAS          (HOENN_FLAGS_E_HOENN + 0x15) // May
 #define FLAG_HOENN_CALL_FEUD          (HOENN_FLAGS_E_HOENN + 0x16) // Brendan
 
+// ---- Part 22a: Absol, the storm wanderer (src/hoenn_roamer.c, data/scripts/hoenn_hidden.inc) ----
+// On Route 120's storm day, evenings and nights, Absol stands on the ridge above
+// the route; seeing it starts it roaming Route 120 (storm evenings/nights only).
+#define FLAG_HOENN_ABSOL_WOKEN          (HOENN_FLAGS_E_HOENN + 0x17) // the cliff scene played once: it roams
+#define FLAG_HOENN_ABSOL_CAUGHT         (HOENN_FLAGS_E_HOENN + 0x18)
+#define FLAG_HOENN_HIDE_ABSOL_CLIFF     (HOENN_FLAGS_E_HOENN + 0x19) // decided on every arrival
+#define FLAG_HOENN_CALL_ABSOL           (HOENN_FLAGS_E_HOENN + 0x1A) // May
+// specialvar VAR_RESULT, HoennAbsolState
+#define HOENN_ABSOL_ASLEEP  0 // never woken (or this game's data is gone): the cliff scene creates it
+#define HOENN_ABSOL_ROAMING 1
+#define HOENN_ABSOL_DOWN    2 // knocked out: the cliff scene brings the same one back
+#define HOENN_ABSOL_CAUGHT  3
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

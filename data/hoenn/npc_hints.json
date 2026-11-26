@@ -79,6 +79,7 @@
     "RUMOR_SLAKING":    {"kind": "rumor", "rumor": "SLAKING", "if": [{"not_flag": "FLAG_HOENN_SLAKING_DONE"}]},
     "RUMOR_TROPIUS":    {"kind": "rumor", "rumor": "TROPIUS", "if": [{"not_flag": "FLAG_HOENN_TROPIUS_MET"}]},
     "RUMOR_FEUD":     {"kind": "rumor", "rumor": "FEUD", "if": [{"not_flag": "FLAG_HOENN_FEUD_MET"}]},
+    "RUMOR_ABSOL":    {"kind": "rumor", "rumor": "ABSOL", "if": [{"not_flag": "FLAG_HOENN_ABSOL_CAUGHT"}]},
 
     "STORY_POND":     {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_POND_SEEN"}], "text": ["Every morning a SWAMPERT brings two MUDKIP to this pond to practice.", "When they all dive, you'd better find some shelter!"]},
     "STORY_RALTS":    {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_RALTS_DONE"}], "text": ["Every morning, a GARDEVOIR guards a RALTS by the tall grass near PETALBURG.", "Run up to them and they vanish! Walk slowly, with a POKéMON that really loves you."]},
@@ -92,6 +93,7 @@
     "STORY_TROPIUS":  {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_TROPIUS_MET"}], "text": ["TROPIUS shakes fruit off its neck when the sun comes up.", "I saw one fly into the trees under the FORTREE sign on ROUTE 119. Right into a tree!"]},
     "STORY_FEEBAS":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_FEEBAS_PRISM_GIVEN"}], "text": ["Nobody looks twice at the fish in that little pond up the route.", "Grandpa says it only bites after dark, and only on an OLD ROD."]},
     "STORY_FEUD":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_FEUD_MET"}], "text": ["Every Sunday night, same island on ROUTE 114's lake, same fight.", "ZANGOOSE and SEVIPER. Surf out there if you dare!"]},
+    "STORY_ABSOL":  {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_ABSOL_WOKEN"}], "text": ["The white one stands on the cliff when the storm rolls in.", "On ROUTE 120, up on the ridge between the paths. Only on the stormy nights, mind you."]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -180,6 +182,12 @@
       "before": ["They say a ZANGOOSE and a SEVIPER fight on the lake island on ROUTE 114, every Sunday night."],
       "after": "Somebody broke up the Sunday fight on ROUTE 114's island! They'll be back next week, though.",
       "notes": "Two old enemies meet on ROUTE 114's lake island on Sunday nights."
+    },
+    "ABSOL": {
+      "found": [{"flag": "FLAG_HOENN_ABSOL_WOKEN"}],
+      "before": ["They say a white POKéMON stands over ROUTE 120 on stormy nights. Nobody's ever caught it."],
+      "after": "Somebody saw the white one on ROUTE 120's ridge! Now it runs through the grass on stormy nights.",
+      "notes": "On ROUTE 120's storm nights, something white watches from the ridge between the paths."
     }
   },
 
@@ -206,7 +214,7 @@
     {"map": "MauvilleCity_PokemonCenter_1F",     "script": "MauvilleCity_PokemonCenter_1F_EventScript_Woman1",     "lines": ["STORY_WATTSON", "RUMOR_CASTFORM"]},
     {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "RUMOR_MUNCHLAX", "RUMOR_SPINDA", "RUMOR_FEUD", "TIP_REMINDER_H", "TIP_SITES"]},
     {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS", "RUMOR_TROPIUS"]},
-    {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES"]},
+    {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES", "RUMOR_ABSOL"]},
     {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP"]},
     {"map": "Route119_WeatherInstitute_1F",      "script": "Route119_WeatherInstitute_1F_EventScript_InstituteWorker1", "always": true, "lines": ["FORECAST"]},
     {"map": "CianwoodCity_hns",                  "script": "CianwoodCity_EventScript_Youngster",                   "lines": ["STORY_STRAIT_CLOSED", "STORY_STRAIT_OPEN", "STORY_STRAIT_DONE_J"]},
@@ -227,10 +235,12 @@
     {"map": "PetalburgWoods",                    "script": "PetalburgWoods_EventScript_Boy1",                      "lines": ["STORY_SLAKING"]},
     {"map": "FortreeCity",                       "script": "FortreeCity_EventScript_GameboyKid",                   "lines": ["STORY_TROPIUS"]},
     {"map": "Route119",                          "script": "Route119_EventScript_Boy2",                            "lines": ["STORY_FEEBAS"]},
-    {"map": "FallarborTown",                     "script": "FallarborTown_EventScript_ExpertM",                    "lines": ["STORY_FEUD"]}
+    {"map": "FallarborTown",                     "script": "FallarborTown_EventScript_ExpertM",                    "lines": ["STORY_FEUD"]},
+    {"map": "FortreeCity",                       "script": "FortreeCity_EventScript_OldMan",                       "lines": ["STORY_ABSOL"]}
   ],
 
   "forecasts": [
+    {"map": "Route120", "if": [{"not_flag": "FLAG_HOENN_ABSOL_CAUGHT"}], "text": ["Storms are rolling in around ROUTE 120 {STR_VAR_1}.", "Folks say that's when the white one walks."]},
     {"map": "Route120", "if": [{"not_caught": "CASTFORM"}], "text": ["Our instruments say ROUTE 120 gets a thunderstorm {STR_VAR_1}.", "CASTFORM come out in weather like that!"]},
     {"map": "Route119", "if": [{"not_caught": "CASTFORM"}], "text": ["Our instruments say a thunderstorm reaches ROUTE 119 {STR_VAR_1}.", "CASTFORM come out in weather like that!"]},
     {"map": "Route123", "if": [{"not_caught": "CASTFORM"}], "text": ["Our instruments say heavy rain reaches ROUTE 123 {STR_VAR_1}.", "CASTFORM come out in weather like that!"]},

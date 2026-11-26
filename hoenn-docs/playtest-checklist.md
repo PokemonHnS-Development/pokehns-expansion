@@ -293,6 +293,15 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Calls: Brendan (Tropius, feud) and May (Feebas) each ring once.
 - [ ] Hint lines: Fortree's Game Boy kid, the Route 119 boy, Fallarbor's expert, the Fortree and Fallarbor Pokémon Center rumors, Birch's aide's field notes.
 
+## 2.0 part 22a — Absol, the storm wanderer
+- [ ] Find the ridge from the hints on a real storm evening (the forecast on a TV the day before should say so).
+- [ ] Catch it: trap it first (Mean Look, Block, Shadow Tag, Arena Trap). Catching wasn't tested; the caught flag should keep the ridge empty for good, and the roamer slot should free up.
+- [ ] Wear it down over two storm nights: its HP and status should carry over between battles (only a one-hit knock-out was tested).
+- [ ] The roamer peek on arrival in Route 120 (HnS's animation, random).
+- [ ] The Pokédex area page for Absol shows Route 120 while it roams.
+- [ ] A Hall of Fame rerun (Johto) while Absol is knocked out: Raikou and Entei come back and Absol still returns at the ridge.
+- [ ] May's call rings once; Fortree's old man, the Lilycove Pokémon Center boy's rumor, the field notes.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

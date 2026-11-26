@@ -27,5 +27,6 @@
 #define HOENN_CALL_TROPIUS  22 // Brendan: you met the orchard Tropius on Route 119 (2.0 part 21)
 #define HOENN_CALL_FEEBAS   23 // May: you fished the mirror pool Feebas (2.0 part 21)
 #define HOENN_CALL_FEUD   24 // Brendan: you broke up Route 114's Zangoose vs. Seviper fight (2.0 part 21)
+#define HOENN_CALL_ABSOL  25 // May: you saw Absol on Route 120's ridge (2.0 part 22a)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

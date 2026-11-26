@@ -59,8 +59,27 @@ bool8 HoennPlayerIsRushing(void);
 bool32 HoennIsCallableSpecialSlot(u32 rematchIdx);
 bool32 HoennSpecialCallerAnswers(s32 rematchIdx);
 const u8 *HoennPhoneCallText(u16 trainerId, bool32 *newRematchRequest);
+// Absol, the Route 120 roamer (src/hoenn_roamer.c, part 22a). The hooks in
+// src/roamer.c need these in every build, so the #else branch stubs them.
+#define HOENN_ROAMER_TABLE_ABSOL 0xA5 // its Roamer.locationTableId: no location table
+struct Pokemon;
+bool32 HoennIsAbsolRoamer(u32 roamerIndex);
+bool32 HoennAbsolIsAt(u32 roamerIndex, u8 mapGroup, u8 mapNum);
+void HoennGetAbsolLocation(u8 *mapGroup, u8 *mapNum);
+bool32 HoennRoamerSlotReserved(u32 roamerIndex);
+void HoennTuneRoamerMon(u32 roamerIndex, struct Pokemon *mon);
+void HoennRoamerBattleEnded(u32 roamerIndex);
+u16 HoennAbsolState(void);
+u16 HoennWakeAbsol(void);
+u16 HoennAbsolIsOut(void);
 #define HOENN_TRAINER_MON_LEVEL(trainer, level) HoennScaleTrainerMonLevel(trainer, level)
 #else
+static inline bool32 HoennIsAbsolRoamer(u32 roamerIndex) { (void)roamerIndex; return FALSE; }
+static inline bool32 HoennAbsolIsAt(u32 roamerIndex, u8 mapGroup, u8 mapNum) { return FALSE; }
+static inline void HoennGetAbsolLocation(u8 *mapGroup, u8 *mapNum) { }
+static inline bool32 HoennRoamerSlotReserved(u32 roamerIndex) { return FALSE; }
+static inline void HoennTuneRoamerMon(u32 roamerIndex, struct Pokemon *mon) { }
+static inline void HoennRoamerBattleEnded(u32 roamerIndex) { }
 #define HOENN_TRAINER_MON_LEVEL(trainer, level) (level)
 #endif
 

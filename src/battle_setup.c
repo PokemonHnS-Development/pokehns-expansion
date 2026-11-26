@@ -469,6 +469,8 @@ void BattleSetup_StartRoamerBattle(void)
         song = MUS_HG_VS_RAIKOU;
     else
         song = MUS_HG_VS_SUICUNE; 
+    if (species == SPECIES_ABSOL) // Hoenn & Seek 2.0 part 22a: Absol gets the normal wild theme
+        song = 0;
 #endif
     CreateBattleStartTask(GetWildBattleTransition(), song);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);

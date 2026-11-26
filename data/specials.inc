@@ -747,3 +747,6 @@ gSpecials::
 	def_special HoennTuneWildMonSlot
 	def_special HoennSetupScaledWildDouble
 	def_special HoennOrchardBerry
+	def_special HoennAbsolState
+	def_special HoennWakeAbsol
+	def_special HoennAbsolIsOut

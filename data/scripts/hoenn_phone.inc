@@ -32,6 +32,7 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_TROPIUS, HoennSeek_EventScript_CallTropius @ 2.0 part 21
 	case HOENN_CALL_FEEBAS, HoennSeek_EventScript_CallFeebas
 	case HOENN_CALL_FEUD, HoennSeek_EventScript_CallFeud
+	case HOENN_CALL_ABSOL, HoennSeek_EventScript_CallAbsol
 	releaseall
 	end
 
