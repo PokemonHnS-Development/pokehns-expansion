@@ -126,6 +126,16 @@ Each gym leader, Elite Four member and Red has their ace standing next to them (
 - [ ] Your own follower next to theirs in each gym: no wrong colors. (Emulator: all 30, with and without a follower out; palettes checked in memory.)
 - [ ] Red: Pikachu stands beside him and disappears with him after the battle (emulator-tested).
 
+## 2.0 part 5 — Daily weather cycles
+78 routes now have a special-weather day one day in four (list and groups in `data/hoenn/weather_cycles.json`). Debug menu → "H&S time & weather…" → WEATHER +1 steps through the days.
+- [ ] Do the picks feel right? Which routes rain, storm, fog or snow, and which groups share a day. Easy to change in the JSON.
+- [ ] Walk from a rainy route into a town and back: the weather changes at the border without stutter.
+- [ ] Route 120 on its storm day: the storm covers the whole route, including where Emerald had sunny patches (emulator-tested).
+- [ ] Routes 119 and 123 work as in Emerald on every day.
+- [ ] Battles on a rain or storm day start in rain (as in Emerald). OK for trainer battles, or should trainers be exempt?
+- [ ] Fog on Routes 19–20, 44–45 and 122, and snow around Mt. Silver: readable, no slowdown.
+- [ ] The debug menu's WEATHER +1 on a Johto route: the weather changes on the spot.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.
