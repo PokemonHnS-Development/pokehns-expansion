@@ -6,8 +6,8 @@ Coordinates are map tiles `(x, y)` from the map's `map.json`.
 
 ## Open
 
-### 1. Choices made without Bryan's approval (parts 5–16)
-Parts 5–16 (PRs #32–#50) ran without approval gates. That covered dialogue, pets, shop lists and the part 13a secret-base entrance art, which `2.0-plan.md` said Bryan approves first. Each PR's description lists its choices. Go through those lists with Bryan and change anything he wouldn't have picked. Items 4 and 5 below are part of this.
+### 1. Choices made without Bryan's approval (parts 5–17)
+Parts 5–17 (PRs #32–#52) ran without approval gates. That covered dialogue, pets, shop lists and the part 13a secret-base entrance art, which `2.0-plan.md` said Bryan approves first. Each PR's description lists its choices. Go through those lists with Bryan and change anything he wouldn't have picked. Items 4 and 5 below are part of this.
 
 ### 2. Building interiors look too alike
 These three use nearly the same room: the same table and chairs, in the same spot.
@@ -84,10 +84,21 @@ Reproduced in the emulator: step down the west stairs at night onto (8,17). The 
 - **RYDER takes Emerald's unused `TRAINER_LEROY` slot.** That shifts every Hoenn trainer ID after it by one, so a save made on a build from before part 16 would have its Hoenn "defeated" flags shuffled. Saves aren't meant to carry over between dev builds, but don't use an old 2.0 test save for a playtest.
 - **Suicune at the Route 25 overlook** stands right next to the new garden gap on a fresh save. Already on the playtest checklist; check it there.
 
+### 14. Vermilion fire: the camera never comes back (bug, serious)
+Reproduced in the emulator.
+- **What happens:** `HoennSeek_EventScript_VermilionFire` pans the camera tile by tile to the burning house, then ends with `special RemoveCameraObject` and never pans back. Afterwards the view stays offset from the player. Once you walk a few steps, the map draws in the wrong places (repeated, wrapped strips) until you leave the map.
+- **Fix:** pan back the same number of tiles before `RemoveCameraObject`, as Emerald's camera scenes do (e.g. keep the step counts and walk the camera back).
+- **Not tested** because of this: talking to the leader after the fire.
+
+### 15. Part 17 nits
+- **The smoke is very faint:** a couple of small `FLDEFF_ASH_PUFF` puffs on the roof, so the house doesn't really read as on fire.
+- **The sunglasses only exist in the text:** the Squirtle leader uses the plain Squirtle sprite.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
 ## Checked and fine
+- **Part 17, checked in later on:** the debug size matches and the generators re-run with no changes. In the emulator, the Route 6 pitfall, the fall, the hideout scene and the fire scene all play (camera bug aside, item 14).
 - **Parts 15a, 15b and 16, checked in later on:**
   - The debug size matches, and every generator re-runs with no changes.
   - Scenes played in the emulator:
