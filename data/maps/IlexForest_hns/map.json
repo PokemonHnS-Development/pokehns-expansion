@@ -616,6 +616,13 @@
       "elevation": 0,
       "item": "ITEM_BIG_MUSHROOM",
       "flag": "FLAG_HIDDEN_ITEM_ILEX_BIG_MUSHROOM"
+    },
+    {
+      "type": "secret_base",
+      "x": 36,
+      "y": 18,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_HOENN_ILEX_FOREST"
     }
   ],
   "game_version": "hns",

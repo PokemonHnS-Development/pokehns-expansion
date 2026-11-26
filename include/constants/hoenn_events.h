@@ -118,4 +118,8 @@
 // May's PokéGear call once your secret base is at one of the sites.
 #define FLAG_HOENN_CALL_SITES         (HOENN_FLAGS_C_WORLD + 0x00)
 
+// ---- Part 13a: Johto/Kanto secret bases (data/hoenn/base_spots.json) -------
+// Brendan's PokéGear call once your secret base is in Johto or Kanto.
+#define FLAG_HOENN_CALL_JK_BASE       (HOENN_FLAGS_C_WORLD + 0x01)
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

@@ -1091,6 +1091,7 @@ gStdScripts_End::
 	.include "data/scripts/hoenn_followers.inc" @ Hoenn & Seek 2.0 part 4b
 	.include "data/scripts/hoenn_hints.inc" @ Hoenn & Seek 2.0 part 7 (generated)
 	.include "data/scripts/hoenn_buildings.inc" @ Hoenn & Seek 2.0 parts 8b-11
+	.include "data/scripts/hoenn_bases.inc" @ Hoenn & Seek 2.0 part 13a
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"
 

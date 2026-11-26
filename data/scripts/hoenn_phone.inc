@@ -17,6 +17,7 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_CONTEST, HoennSeek_EventScript_CallContest
 	case HOENN_CALL_BASE, HoennSeek_EventScript_CallBase
 	case HOENN_CALL_SITES, HoennSeek_EventScript_CallSites
+	case HOENN_CALL_JK_BASE, HoennSeek_EventScript_CallJohtoKantoBase
 	releaseall
 	end
 
@@ -66,6 +67,14 @@ HoennSeek_EventScript_CallSites::
 	setflag FLAG_HOENN_CALL_SITES
 	setspeaker HoennSeek_Text_NameMay
 	pokenavcall HoennSeek_Text_CallSites
+	goto HoennSeek_EventScript_CallEnd
+
+@ Brendan: your base is in Johto or Kanto (2.0 part 13a). A HIKER he battled on
+@ the way through saw the name on the base's entrance.
+HoennSeek_EventScript_CallJohtoKantoBase::
+	setflag FLAG_HOENN_CALL_JK_BASE
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallJohtoKantoBase
 	goto HoennSeek_EventScript_CallEnd
 
 @ Elm: the two Johto starters you didn't choose go back on his table.
@@ -478,6 +487,18 @@ HoennSeek_Text_CallBase::
 	.string "FORTREE's shop has desks and\n"
 	.string "chairs. LILYCOVE's DEPT. STORE has\l"
 	.string "the rest. Don't let MAY decorate!$"
+
+HoennSeek_Text_CallJohtoKantoBase::
+	.string "{PLAYER}! It's BRENDAN! A HIKER I\n"
+	.string "just battled swears he found a\l"
+	.string "SECRET BASE way out here!\p"
+	.string "He said the name on it was\n"
+	.string "{PLAYER}. I knew it was you!\p"
+	.string "I thought SECRET POWER only worked\n"
+	.string "in HOENN. Turns out a hollow tree\l"
+	.string "or a cracked rock is all it needs.\p"
+	.string "MAY wants to visit. Hide the\n"
+	.string "DOLLS, or she'll take them home!$"
 
 HoennSeek_Text_CallSites::
 	.string "{PLAYER}! It's MAY! PROF. BIRCH's\n"

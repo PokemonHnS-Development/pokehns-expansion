@@ -1,0 +1,214 @@
+{
+  "_comment": [
+    "Secret base entrances drawn into Johto/Kanto tilesets (2.0 part 13a). Read by",
+    "tools/hoenn/gen_hoenn_base_entrances.py, which explains the format. Each host is a",
+    "secondary tileset; the closed and open metatiles are drawn over base_metatile (from the",
+    "host or its primary). Spots that use them are in base_spots.json (johto_kanto_spots).",
+    "Art: '.' keeps the base pixel; K/D/M = darkest/2nd/3rd darkest, H lightest, G/L vine greens.",
+    "Picked without Bryan (review): style A of both kinds; swap 'style' to try the others."
+  ],
+  "kinds": {
+    "tree": {
+      "behavior": "MB_SECRET_BASE_SPOT_TREE_LEFT",
+      "style": "A",
+      "styles": {
+        "A": {
+          "note": "knot hole closed; hollow with hanging vines open",
+          "closed": [
+            "................",
+            "................",
+            "................",
+            "................",
+            "................",
+            "................",
+            "................",
+            "................",
+            "......DDDD......",
+            ".....DKKKKD.....",
+            ".....DKKKKD.....",
+            "......DKKD......",
+            "................",
+            "................",
+            "................",
+            "................"
+          ],
+          "open": [
+            "................",
+            "................",
+            "................",
+            "................",
+            "................",
+            ".....DDDDDD.....",
+            "....DKKKKKKD....",
+            "...DKLKKKKLKD...",
+            "...DKGKKKKGKD...",
+            "...DKLKKLKLKD...",
+            "...DKGKKGKGKD...",
+            "...DKLKKLKLKD...",
+            "...DKGKKGKGKD...",
+            "...DKKKKLKKKD...",
+            "...DKKKKGKKKD...",
+            "...DKKKKKKKKD..."
+          ]
+        },
+        "B": {
+          "note": "faint crack closed; plain dark hollow open",
+          "closed": [
+            "................",
+            "................",
+            "................",
+            "................",
+            "................",
+            "................",
+            "................",
+            "................",
+            "................",
+            "......D..D......",
+            ".......DD.......",
+            "......D..D......",
+            "................",
+            "................",
+            "................",
+            "................"
+          ],
+          "open": [
+            "................",
+            "................",
+            "................",
+            "................",
+            "................",
+            ".....DDDDDD.....",
+            "....DKKKKKKD....",
+            "...DKKKKKKKKD...",
+            "...DKKKKKKKKD...",
+            "...DKKKKKKKKD...",
+            "...DKKKKKKKKD...",
+            "...DKKKKKKKKD...",
+            "...DKKKKKKKKD...",
+            "...DKKKKKKKKD...",
+            "...DKKKKKKKKD...",
+            "...DKKKKKKKKD..."
+          ]
+        }
+      }
+    },
+    "rock": {
+      "behavior": "MB_SECRET_BASE_SPOT_BROWN_CAVE",
+      "style": "A",
+      "styles": {
+        "A": {
+          "note": "sealed arch with cracks closed; wide arched hole open",
+          "closed": [
+            "................",
+            "................",
+            ".....KKKKKK.....",
+            "...KK..D...KK...",
+            "..K....D.....K..",
+            ".K....D.D.....K.",
+            ".K...D...D....K.",
+            ".K..D.....D...K.",
+            ".K.........D..K.",
+            ".K........D...K.",
+            ".K............K.",
+            ".K............K.",
+            ".K............K.",
+            ".K............K.",
+            ".K............K.",
+            ".K............K."
+          ],
+          "open": [
+            "................",
+            "................",
+            ".....DDDDDD.....",
+            "...DDKKKKKKDD...",
+            "..DKKKKKKKKKKD..",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD."
+          ]
+        },
+        "B": {
+          "note": "square recess closed (like Emerald's indent); wide arched hole open",
+          "closed": [
+            "................",
+            "................",
+            "................",
+            "..KKKKKKKKKKKK..",
+            "..KDDDDDDDDDDK..",
+            "..KD........DK..",
+            "..KD........DK..",
+            "..KD........DK..",
+            "..KD........DK..",
+            "..KD........DK..",
+            "..KD........DK..",
+            "..KD........DK..",
+            "..KD........DK..",
+            "..KD........DK..",
+            "..KD........DK..",
+            "..KD........DK.."
+          ],
+          "open": [
+            "................",
+            "................",
+            ".....DDDDDD.....",
+            "...DDKKKKKKDD...",
+            "..DKKKKKKKKKKD..",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD.",
+            ".DKKKKKKKKKKKKD."
+          ]
+        }
+      }
+    }
+  },
+  "hosts": [
+    {
+      "name": "ILEX_TREE",
+      "tileset": "ilex_forest_hns",
+      "primary": "gTileset_Johto_South_Hns",
+      "secondary": "gTileset_IlexForest_Hns",
+      "kind": "tree",
+      "base_metatile": "0x2A1"
+    },
+    {
+      "name": "VIRIDIAN_TREE",
+      "tileset": "viridian_forest_hns",
+      "primary": "gTileset_Kanto_General_Hns",
+      "secondary": "gTileset_ViridianForest_Hns",
+      "kind": "tree",
+      "base_metatile": "0x2A1"
+    },
+    {
+      "name": "ROUTE45_ROCK",
+      "tileset": "blackthorn_hns",
+      "primary": "gTileset_Johto_NorthEast_Hns",
+      "secondary": "gTileset_Blackthorn_Hns",
+      "kind": "rock",
+      "base_metatile": "0x079"
+    },
+    {
+      "name": "MT_MOON_ROCK",
+      "tileset": "cave_mt_moon_hns",
+      "primary": "gTileset_Johto_General_Hns",
+      "secondary": "gTileset_Cave_MtMoon_Hns",
+      "kind": "rock",
+      "base_metatile": "0x2E4"
+    }
+  ]
+}

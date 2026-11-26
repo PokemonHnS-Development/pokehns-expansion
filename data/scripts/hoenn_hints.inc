@@ -408,6 +408,9 @@ HoennSeek_Text_Hint_LineTipNameraterH::
 HoennSeek_Text_Hint_LineTipMindReader::
 	.string "A guru in MOSSDEEP CITY reads\nPOKéMON's minds.\pFor STAR PIECES, he can bring out\na POKéMON's hidden potential.$"
 
+HoennSeek_Text_Hint_LineTipJkBases::
+	.string "SECRET POWER works here too, not\njust in HOENN. There are hollow\ltrees in ILEX FOREST and\lVIRIDIAN FOREST.\pAnd cracked rock on ROUTE 45 and\ninside MT. MOON. Make a SECRET\lBASE in one!$"
+
 HoennSeek_Text_Hint_LineTipSites::
 	.string "The old legendary sites are open\nagain: the desert ruins, SKY\lPILLAR, even the caves under\lthe sea.\pThe POKéMON that slept there are\ngone. TRAINERS are making SECRET\lBASES in them!$"
 

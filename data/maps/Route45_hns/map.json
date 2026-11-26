@@ -398,6 +398,13 @@
       "elevation": 0,
       "item": "ITEM_FULL_HEAL",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE45_FULL_HEAL"
+    },
+    {
+      "type": "secret_base",
+      "x": 30,
+      "y": 78,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_HOENN_ROUTE45"
     }
   ],
   "game_version": "hns",

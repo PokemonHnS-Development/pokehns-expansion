@@ -718,6 +718,13 @@
       "elevation": 0,
       "item": "ITEM_LEAF_STONE",
       "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_LEAF_STONE"
+    },
+    {
+      "type": "secret_base",
+      "x": 50,
+      "y": 65,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_HOENN_VIRIDIAN_FOREST"
     }
   ],
   "game_version": "hns",

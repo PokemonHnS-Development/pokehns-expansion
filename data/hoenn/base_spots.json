@@ -11,25 +11,240 @@
     "layout and objects are copied; computer = where you stand the first time (in front of the PC);",
     "tileset.from = the cave base whose tiles are used; floor/wall/outline = palette 6's colours",
     "2-5, 6-9 and 1 (picked from mockups made with tools/hoenn/render_layout.py: Sky Pillar's",
-    "lavender stone and tan parapets, the Sealed Chamber's sand and dark rock)."
+    "lavender stone and tan parapets, the Sealed Chamber's sand and dark rock).",
+    "johto_kanto_spots (2.0 part 13a): same fields on HnS maps; 'entrance' names a host in base_entrances.json, 'walkable' tiles get collision 0, variants 5-8 (9 is the sites')."
   ],
   "chambers": [
-    {"name": "SKY_PILLAR", "group_index": 24, "template": "SecretBase_YellowCave4", "computer": [5, 9],
-     "tileset": {"from": "yellow_cave", "outline": [65, 74, 106],
-                 "floor": [[164, 164, 197], [131, 131, 164], [115, 115, 148], [98, 98, 123]],
-                 "wall": [[197, 172, 156], [172, 139, 115], [156, 115, 106], [123, 98, 90]]}},
-    {"name": "SEALED_CHAMBER", "group_index": 25, "template": "SecretBase_BrownCave4", "computer": [1, 2],
-     "tileset": {"from": "brown_cave", "outline": [65, 41, 65],
-                 "floor": [[205, 172, 123], [172, 139, 106], [148, 106, 90], [115, 74, 57]],
-                 "wall": [[164, 139, 115], [131, 106, 106], [90, 74, 82], [65, 41, 65]]}}
+    {
+      "name": "SKY_PILLAR",
+      "group_index": 24,
+      "template": "SecretBase_YellowCave4",
+      "computer": [
+        5,
+        9
+      ],
+      "tileset": {
+        "from": "yellow_cave",
+        "outline": [
+          65,
+          74,
+          106
+        ],
+        "floor": [
+          [
+            164,
+            164,
+            197
+          ],
+          [
+            131,
+            131,
+            164
+          ],
+          [
+            115,
+            115,
+            148
+          ],
+          [
+            98,
+            98,
+            123
+          ]
+        ],
+        "wall": [
+          [
+            197,
+            172,
+            156
+          ],
+          [
+            172,
+            139,
+            115
+          ],
+          [
+            156,
+            115,
+            106
+          ],
+          [
+            123,
+            98,
+            90
+          ]
+        ]
+      }
+    },
+    {
+      "name": "SEALED_CHAMBER",
+      "group_index": 25,
+      "template": "SecretBase_BrownCave4",
+      "computer": [
+        1,
+        2
+      ],
+      "tileset": {
+        "from": "brown_cave",
+        "outline": [
+          65,
+          41,
+          65
+        ],
+        "floor": [
+          [
+            205,
+            172,
+            123
+          ],
+          [
+            172,
+            139,
+            106
+          ],
+          [
+            148,
+            106,
+            90
+          ],
+          [
+            115,
+            74,
+            57
+          ]
+        ],
+        "wall": [
+          [
+            164,
+            139,
+            115
+          ],
+          [
+            131,
+            106,
+            106
+          ],
+          [
+            90,
+            74,
+            82
+          ],
+          [
+            65,
+            41,
+            65
+          ]
+        ]
+      }
+    }
   ],
   "spots": [
-    {"name": "DESERT_RUINS",    "map": "DesertRuins",          "x": 8,  "y": 2,  "indent": "Red",    "group": "RED_CAVE1",    "variant": 9},
-    {"name": "ISLAND_CAVE",     "map": "IslandCave",           "x": 8,  "y": 2,  "indent": "Blue",   "group": "BLUE_CAVE1",   "variant": 9},
-    {"name": "ANCIENT_TOMB",    "map": "AncientTomb",          "x": 8,  "y": 2,  "indent": "Yellow", "group": "YELLOW_CAVE1", "variant": 9},
-    {"name": "CAVE_OF_ORIGIN",  "map": "CaveOfOrigin_B1F",     "x": 7,  "y": 12, "indent": "Blue",   "group": "BLUE_CAVE2",   "variant": 9},
-    {"name": "SEAFLOOR_CAVERN", "map": "SeafloorCavern_Room9", "x": 13, "y": 40, "indent": "Blue",   "group": "BLUE_CAVE3",   "variant": 9},
-    {"name": "SKY_PILLAR",      "map": "SkyPillar_Top",        "x": 12, "y": 14, "indent": "Yellow", "group": "HOENN_SKY_PILLAR",     "variant": 1},
-    {"name": "SEALED_CHAMBER",  "map": "SealedChamber_InnerRoom", "x": 5, "y": 2, "indent": "Red", "group": "HOENN_SEALED_CHAMBER", "variant": 1}
+    {
+      "name": "DESERT_RUINS",
+      "map": "DesertRuins",
+      "x": 8,
+      "y": 2,
+      "indent": "Red",
+      "group": "RED_CAVE1",
+      "variant": 9
+    },
+    {
+      "name": "ISLAND_CAVE",
+      "map": "IslandCave",
+      "x": 8,
+      "y": 2,
+      "indent": "Blue",
+      "group": "BLUE_CAVE1",
+      "variant": 9
+    },
+    {
+      "name": "ANCIENT_TOMB",
+      "map": "AncientTomb",
+      "x": 8,
+      "y": 2,
+      "indent": "Yellow",
+      "group": "YELLOW_CAVE1",
+      "variant": 9
+    },
+    {
+      "name": "CAVE_OF_ORIGIN",
+      "map": "CaveOfOrigin_B1F",
+      "x": 7,
+      "y": 12,
+      "indent": "Blue",
+      "group": "BLUE_CAVE2",
+      "variant": 9
+    },
+    {
+      "name": "SEAFLOOR_CAVERN",
+      "map": "SeafloorCavern_Room9",
+      "x": 13,
+      "y": 40,
+      "indent": "Blue",
+      "group": "BLUE_CAVE3",
+      "variant": 9
+    },
+    {
+      "name": "SKY_PILLAR",
+      "map": "SkyPillar_Top",
+      "x": 12,
+      "y": 14,
+      "indent": "Yellow",
+      "group": "HOENN_SKY_PILLAR",
+      "variant": 1
+    },
+    {
+      "name": "SEALED_CHAMBER",
+      "map": "SealedChamber_InnerRoom",
+      "x": 5,
+      "y": 2,
+      "indent": "Red",
+      "group": "HOENN_SEALED_CHAMBER",
+      "variant": 1
+    }
+  ],
+  "johto_kanto_spots": [
+    {
+      "name": "ILEX_FOREST",
+      "map": "IlexForest_hns",
+      "x": 36,
+      "y": 18,
+      "entrance": "ILEX_TREE",
+      "group": "TREE1",
+      "variant": 5,
+      "walkable": [
+        [
+          36,
+          19
+        ]
+      ]
+    },
+    {
+      "name": "ROUTE45",
+      "map": "Route45_hns",
+      "x": 30,
+      "y": 78,
+      "entrance": "ROUTE45_ROCK",
+      "group": "BROWN_CAVE3",
+      "variant": 5
+    },
+    {
+      "name": "VIRIDIAN_FOREST",
+      "map": "ViridianForest_hns",
+      "x": 50,
+      "y": 65,
+      "entrance": "VIRIDIAN_TREE",
+      "group": "TREE3",
+      "variant": 5
+    },
+    {
+      "name": "MT_MOON",
+      "map": "MtMoon_Cave_hns",
+      "x": 18,
+      "y": 20,
+      "entrance": "MT_MOON_ROCK",
+      "group": "RED_CAVE4",
+      "variant": 5
+    }
   ]
 }
