@@ -240,9 +240,37 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_HOENN_MUNCHLAX",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MUNCHLAX",
+      "x": 14,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Munchlax",
+      "flag": "FLAG_HOENN_MUNCHLAX_DONE"
+    },
+    {
+      "local_id": "LOCALID_HOENN_SPINDA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPINDA",
+      "x": 66,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Spinda",
+      "flag": "FLAG_HOENN_HIDE_SPINDA"
+    },
+    {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPINDA",
       "x": 82,
-      "y": 14,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
       "movement_range_x": 0,
@@ -255,7 +283,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGCARGO",
       "x": 88,
-      "y": 2,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
       "movement_range_x": 0,
@@ -307,7 +335,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPINDA",
       "x": 95,
-      "y": 14,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
       "movement_range_x": 0,
@@ -329,34 +357,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "HoennSeek_EventScript_OWMon",
       "flag": "0"
-    },
-    {
-      "local_id": "LOCALID_HOENN_MUNCHLAX",
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MUNCHLAX",
-      "x": 14,
-      "y": 14,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "HoennSeek_EventScript_Munchlax",
-      "flag": "FLAG_HOENN_MUNCHLAX_DONE"
-    },
-    {
-      "local_id": "LOCALID_HOENN_SPINDA",
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPINDA",
-      "x": 66,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "HoennSeek_EventScript_Spinda",
-      "flag": "FLAG_HOENN_HIDE_SPINDA"
     }
   ],
   "warp_events": [

@@ -349,6 +349,8 @@
   {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[16, 39]], "from": [16, 38]},
   {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[15, 39]], "from": [15, 38]},
   {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[14, 39]], "from": [14, 38]},
+  {"_": "Route 131 (22r): the small rock at (18-19,33-34) goes, so a winding channel leads from the open sea down to the Wailord's strait (the pocket was closed off)", "layout": "LAYOUT_ROUTE131", "cells": [[18, 33], [19, 33], [18, 34], [19, 34]], "from": [21, 33]},
+  {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[18, 33], [19, 33], [18, 34], [19, 34]], "from": [21, 33]},
   {"_": "Meteor Falls 1F (2.0 part 23): the yellow rock column at the end of the strip east of the falls (x 27-28) becomes a cave mouth (26-28, 2-3), copied from the doorway at (9-11, 2-3); it leads up to Altaria's clifftop", "layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[26, 2]], "from": [9, 2]},
   {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[27, 2]], "from": [10, 2]},
   {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[28, 2]], "from": [11, 2]},
