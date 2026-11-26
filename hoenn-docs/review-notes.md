@@ -122,10 +122,39 @@ Reproduced in the emulator.
 - **The smoke is very faint:** a couple of small `FLDEFF_ASH_PUFF` puffs on the roof, so the house doesn't really read as on fire.
 - **The sunglasses only exist in the text:** the Squirtle leader uses the plain Squirtle sprite.
 
+### 16. Parts 20–21: the grotto, the Slaking clearing and the orchard look generator-made (same as item 11)
+- **Route 113 grotto** (part 20, `Route113_Grotto_hoenn`) and **Tropius's orchard** (part 21, PR #64, `Route119_Orchard_hoenn`) use the template that item 11 replaced: a box of floor inside a ring of identical trees, a tree clump in each corner, and a 2-wide way in at the bottom. The items and flowers are placed symmetrically.
+- **Petalburg Woods clearing** (part 20, patched into `PetalburgWoods`): a 10×4 rectangle cut out of the forest. Its left and right edges slice 2×2 trees in half (half-trees at x 20 and x 31, rows 2–5, visible in game). Row 6's "tree tops" are walkable and look like bushes you stand on.
+- **Fix:** hand-paint them like 17r-e (`grid` and `src` ops in `composed_maps.json`), mockups to Bryan first. The clearing needs whole trees on its edges, not cut ones.
+
+### 17. Slaking can shut you inside its clearing (part 20)
+- Petalburg Woods' OnTransition puts the Slaking back in the notch (26,7) on every load, unless it's caught or already battled today. The notch is the clearing's only way out.
+- **How it happens:** beat it at noon, walk into the clearing, save there, and load the next day (or any later day). The Slaking is back, asleep, and only moves at hour 12. You're stuck until noon unless you Fly (Petalburg Woods is `MAP_TYPE_ROUTE`, so Fly works, but Escape Rope doesn't).
+- **Fix:** don't place it while the player is inside the clearing (rows ≤ 6, x 21–30), or let the dozing Slaking's talk script let you squeeze past from the north side.
+
+### 18. The Munchlax is mostly hidden under the treetops (part 20)
+- At (14,15) it sits in a one-tile gap, but the trees around it draw over its lower half. From the path above, you see the top of its head behind the player. The gap itself doesn't read as a gap either (the canopy continues over it, with a slight seam down column 14).
+- **Fix:** open the canopy over (14,15)–(14,16), or move it one tile up onto the open ash.
+
+### 19. PR #64 (part 21) can't merge yet
+- GitHub reports merge conflicts with `hoenn`. 17r-e (PR #63) reformatted `data/hoenn/composed_maps.json` (one op per line) and added part 20's grotto under the new format, and part 21 adds the orchard to the old one. The fix is mechanical: take `hoenn`'s file, add the orchard map and the Route 119 patch, run `gen_hoenn_composed_maps.py` (the other maps must come out unchanged). The docs (roadmap, CLAUDE.md size table) need the usual merge too.
+
+### 20. Choices from parts 18–21 for Bryan to confirm (all listed as "picked without Bryan")
+- **Levels:** Feebas is scaled to 60–70 like the battles. A Lv 60+ Feebas is odd for "the shabby fish"; the gifts are lower (Munchlax 42, Gengar 50, Ralts and the starters 5).
+- **Zangoose vs. Seviper:** the plan's "hidden grassy hollow" became Route 114's lake island, which you can see from the bridge, so it isn't hidden.
+- **Orchard fruit tree:** drops any time of day (plan: each morning). Lum/Sitrus two times in three, the rare seven one in three (plan: always rare, better with Tropius leading).
+- **Slaking's hint** comes from a Petalburg Woods boy, not Norman (the plan had Norman say it).
+- **Machamp reward:** Black Belt (plan: Macho Brace or Black Belt). Slaking's clearing already has a Macho Brace.
+- **The Slowking's prophecy** is original wording (the plan quoted the film; original is right for copyright).
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
 ## Checked and fine
+- **Parts 18–20, checked on `hoenn` after PR #66 (Claude, 2026-11-26), part 21 from PR #64's branch:**
+  - Code read: `src/hoenn_species.c`, `src/hoenn_hidden.c` (part 21's female re-roll and wild-double setup too), every script in `hoenn_species.inc`/`hoenn_hidden.inc` for the scenes above. No logic bugs found beyond items 17–18.
+  - In the emulator: the Mudkip pond (practice, the dive, the rain), the Slaking dozing at 1 PM and battling at noon (Lv 60), the clearing, the grotto, talking to the sleeping Munchlax without the flute.
+  - Object placement (rendered from the maps): the Ralts/Gardevoir patch and pond family on Route 102, Kiyo and the Machamp in Mt. Mortar, the Scizor and Scyther in the National Park, the Radio Tower Gengar, Spinda's ring, the feud island and the mirror pool all sit where they should.
 - **Part 17, checked in later on:** the debug size matches and the generators re-run with no changes. In the emulator, the Route 6 pitfall, the fall, the hideout scene and the fire scene all play (camera bug aside, item 14).
 - **Parts 15a, 15b and 16, checked in later on:**
   - The debug size matches, and every generator re-runs with no changes.
