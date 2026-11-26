@@ -571,3 +571,5 @@ const u8 DecorDesc_REGISTEEL_DOLL[] = _(
     "A large doll.\n"
         "Place it on a mat\n"
         "or a desk.");
+
+#include "hoenn_decorations.h" // Hoenn & Seek

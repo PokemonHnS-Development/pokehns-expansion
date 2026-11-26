@@ -122,6 +122,7 @@
 #define DECOR_REGIROCK_DOLL    118
 #define DECOR_REGICE_DOLL      119
 #define DECOR_REGISTEEL_DOLL   120
-#define NUM_DECORATIONS DECOR_REGISTEEL_DOLL
+#include "constants/hoenn_decorations.h" // Hoenn & Seek: Johto/Kanto dolls
+#define NUM_DECORATIONS HOENN_DECORATIONS_END
 
 #endif  // GUARD_CONSTANTS_DECORATIONS_H

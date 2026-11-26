@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Hoenn & Seek (2.0 parts 12 and 12b): secret bases at the reopened legendary sites.
+"""Hoenn & Seek (2.0 parts 12, 12b, 13a): secret bases at the reopened legendary sites and in Johto/Kanto.
 
 Reads data/hoenn/base_spots.json.
 
@@ -25,6 +25,12 @@ Reads data/hoenn/base_spots.json.
     reopens the player's base from it on later visits);
   * SECRET_BASE_HOENN_<NAME> = the group's first ID rounded down to the tens + the variant.
     HOENN_IS_SITE_BASE(id) is true for every spot here (May's phone call uses it).
+
+"johto_kanto_spots" (part 13a) work the same way on HnS maps, with the entrance metatiles
+gen_hoenn_base_entrances.py draws into their tilesets ("entrance" names a host in
+data/hoenn/base_entrances.json; run that generator first). "walkable" tiles get collision 0
+(Ilex Forest's tree shadows are solid, so the player couldn't stand below the tree).
+HOENN_IS_JOHTO_KANTO_BASE(id) is true for these (Brendan's phone call uses it).
 
 Re-runs give the same result.
 """
@@ -138,15 +144,25 @@ def build_chamber(ch, layouts, groups, tileset_defs):
     }
 
 
-def place_spot(spot, base_id, const, layouts):
+def entrance_metatiles():
+    """METATILE_HOENN_BASE_<HOST> values from gen_hoenn_base_entrances.py's header."""
+    path = P("include/constants/hoenn_base_entrances.h")
+    if not os.path.exists(path):
+        return {}
+    return {m[0]: int(m[1], 16) for m in re.findall(r"#define METATILE_HOENN_BASE_(\w+?)\s+0x(\w+)", open(path).read())}
+
+
+def place_spot(spot, base_id, const, layouts, metatile):
     mpath = f"data/maps/{spot['map']}/map.json"
     m = load(mpath)
     layout = next(l for l in layouts["layouts"] if l.get("id") == m["layout"])
-    assert layout["primary_tileset"] == "gTileset_General", layout["id"]
     bin_path = P(layout["blockdata_filepath"])
     data = bytearray(open(bin_path, "rb").read())
     off = (spot["y"] * layout["width"] + spot["x"]) * 2
-    struct.pack_into("<H", data, off, INDENT[spot["indent"]] | (1 << 10))  # collision 1, elevation 0
+    struct.pack_into("<H", data, off, metatile | (1 << 10))  # collision 1, elevation 0
+    for x, y in spot.get("walkable", []):
+        o = (y * layout["width"] + x) * 2
+        struct.pack_into("<H", data, o, struct.unpack_from("<H", data, o)[0] & ~(3 << 10))
     open(bin_path, "wb").write(bytes(data))
 
     bgs = [b for b in m["bg_events"]
@@ -176,13 +192,30 @@ def main():
     spot_defs, site_ids = [], []
     for spot in cfg["spots"]:
         assert spot["map"] in kept, f"{spot['map']} is not a kept Hoenn map"
+        assert spot["indent"] in INDENT, spot["name"]  # General's indents need a General-primary map
+        lay_id = load(f"data/maps/{spot['map']}/map.json")["layout"]
+        assert next(l for l in layouts["layouts"] if l.get("id") == lay_id)["primary_tileset"] == "gTileset_General", lay_id
         base_id = firsts[spot["group"]] // 10 * 10 + spot["variant"]
         new_group = spot["group"].startswith("HOENN_")
         assert 0 < base_id < 256 and (new_group or 5 <= spot["variant"] <= 9), (spot["name"], base_id)
         const = f"SECRET_BASE_HOENN_{spot['name']}"
         spot_defs.append(f"#define {const} {base_id}  // {spot['group']}, variant {spot['variant']}: {spot['map']} ({spot['x']},{spot['y']})")
         site_ids.append(f"(id) == {const}")
-        place_spot(spot, base_id, const, layouts)
+        place_spot(spot, base_id, const, layouts, INDENT[spot["indent"]])
+
+    # Part 13a: Johto/Kanto spots on HnS maps, with the entrances drawn into their tilesets.
+    mts = entrance_metatiles()
+    jk_defs, jk_ids = [], []
+    for spot in cfg.get("johto_kanto_spots", []):
+        assert os.path.isdir(P(f"data/maps/{spot['map']}")) and spot["map"].endswith("_hns"), spot["map"]
+        base_id = firsts[spot["group"]] // 10 * 10 + spot["variant"]
+        assert 0 < base_id < 256 and 5 <= spot["variant"] <= 8, (spot["name"], base_id)
+        const = f"SECRET_BASE_HOENN_{spot['name']}"
+        jk_defs.append(f"#define {const} {base_id}  // {spot['group']}, variant {spot['variant']}: {spot['map']} ({spot['x']},{spot['y']})")
+        jk_ids.append(f"(id) == {const}")
+        place_spot(spot, base_id, const, layouts, mts[spot["entrance"]])
+    ids = [l.split()[2] for l in spot_defs + jk_defs]
+    assert len(ids) == len(set(ids)), "two spots share a base ID"
 
     save("data/layouts/layouts.json", layouts)
     save("data/maps/map_groups.json", groups)
@@ -207,8 +240,11 @@ def main():
         f.write("#define HOENN_IS_CHAMBER_BASE_MAP_NUM(mapNum) (" + (" || ".join(mapnums) or "FALSE") + ")\n\n")
         f.write("// Entrance spots.\n" + "\n".join(spot_defs) + "\n\n")
         f.write("// TRUE for a base at one of the sites.\n")
-        f.write("#define HOENN_IS_SITE_BASE(id) (" + " \\\n                             || ".join(site_ids) + ")\n\n#endif\n")
-    print(f"{len(entrances)} chamber bases, {len(spot_defs)} spots")
+        f.write("#define HOENN_IS_SITE_BASE(id) (" + " \\\n                             || ".join(site_ids) + ")\n\n")
+        f.write("// Johto/Kanto spots (part 13a).\n" + "\n".join(jk_defs) + "\n\n")
+        f.write("// TRUE for a base in Johto or Kanto.\n")
+        f.write("#define HOENN_IS_JOHTO_KANTO_BASE(id) (" + (" \\\n                                    || ".join(jk_ids) or "FALSE") + ")\n\n#endif\n")
+    print(f"{len(entrances)} chamber bases, {len(spot_defs)} site spots, {len(jk_defs)} Johto/Kanto spots")
 
 
 if __name__ == "__main__":

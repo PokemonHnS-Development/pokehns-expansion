@@ -38,4 +38,16 @@
                              || (id) == SECRET_BASE_HOENN_SKY_PILLAR \
                              || (id) == SECRET_BASE_HOENN_SEALED_CHAMBER)
 
+// Johto/Kanto spots (part 13a).
+#define SECRET_BASE_HOENN_ILEX_FOREST 165  // TREE1, variant 5: IlexForest_hns (36,18)
+#define SECRET_BASE_HOENN_ROUTE45 65  // BROWN_CAVE3, variant 5: Route45_hns (30,78)
+#define SECRET_BASE_HOENN_VIRIDIAN_FOREST 185  // TREE3, variant 5: ViridianForest_hns (50,65)
+#define SECRET_BASE_HOENN_MT_MOON 35  // RED_CAVE4, variant 5: MtMoon_Cave_hns (18,20)
+
+// TRUE for a base in Johto or Kanto.
+#define HOENN_IS_JOHTO_KANTO_BASE(id) ((id) == SECRET_BASE_HOENN_ILEX_FOREST \
+                                    || (id) == SECRET_BASE_HOENN_ROUTE45 \
+                                    || (id) == SECRET_BASE_HOENN_VIRIDIAN_FOREST \
+                                    || (id) == SECRET_BASE_HOENN_MT_MOON)
+
 #endif

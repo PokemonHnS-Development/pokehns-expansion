@@ -120,5 +120,6 @@ const struct DecorItem gDecorIconTable[] =
     [DECOR_WAILMER_DOLL]    = {gDecorIcon_WailmerDoll, gDecorIconPalette_WailmerDoll},
     [DECOR_REGIROCK_DOLL]   = {gDecorIcon_RegirockDoll, gDecorIconPalette_RegirockDoll},
     [DECOR_REGICE_DOLL]     = {gDecorIcon_RegiceDoll, gDecorIconPalette_RegiceDoll},
-    [DECOR_REGISTEEL_DOLL]  = {gDecorIcon_RegisteelDoll, gDecorIconPalette_RegisteelDoll}
+    [DECOR_REGISTEEL_DOLL]  = {gDecorIcon_RegisteelDoll, gDecorIconPalette_RegisteelDoll},
+    HOENN_DECORATION_ICONS // Hoenn & Seek
 };

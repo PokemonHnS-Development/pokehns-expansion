@@ -201,6 +201,12 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Move your base between a chamber and a normal spot and back (the old base packs up, decorations return to the PC).
 - [ ] Secret base registry/visiting through mixing records isn't testable solo; check nothing odd shows in the base list if you have another save.
 
+## 2.0 part 13a — Johto/Kanto secret bases
+- [ ] Ilex Forest (the lone tree just east of the northern pond), Route 45 (the rock face above the pond at the bottom), Viridian Forest (the lone tree near the south exit) and Mt. Moon (the lower wall south of the middle room): each entrance is easy enough to spot, Secret Power opens it, and the base works.
+- [ ] Put one of the new dolls (Goldenrod 5F or Celadon 4F) on a desk or mat in a base, leave and come back: the doll is still there and looks right. Not confirmed in the emulator.
+- [ ] Brendan's call after you make a base in Johto or Kanto (needs his number from Birch).
+- [ ] The tip at the Azalea, Blackthorn and Pewter Pokémon Centers goes away after Brendan's call.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

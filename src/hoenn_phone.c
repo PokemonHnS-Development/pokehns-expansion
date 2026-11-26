@@ -44,6 +44,12 @@ static bool32 HoennIsLegendarySiteBase(u8 secretBaseId)
     return HOENN_IS_SITE_BASE(secretBaseId); // data/hoenn/base_spots.json
 }
 
+// 2.0 part 13a: the base spots in Johto and Kanto.
+static bool32 HoennIsJohtoKantoBase(u8 secretBaseId)
+{
+    return HOENN_IS_JOHTO_KANTO_BASE(secretBaseId); // data/hoenn/base_spots.json
+}
+
 // Which event call is due, if any. Badge calls only ring for the highest
 // milestone reached; skipped lower ones are marked done.
 static u16 GetDueEventCall(void)
@@ -82,6 +88,14 @@ static u16 GetDueEventCall(void)
     {
         FlagSet(FLAG_HOENN_CALL_BASE);
         return HOENN_CALL_SITES;
+    }
+    // 2.0 part 13a: your base is in Johto or Kanto. A hiker Brendan battled saw it.
+    // Like the sites call, it stands in for Brendan's first-base call.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && HoennIsJohtoKantoBase(gSaveBlock1Ptr->secretBases[0].secretBaseId)
+     && !FlagGet(FLAG_HOENN_CALL_JK_BASE))
+    {
+        FlagSet(FLAG_HOENN_CALL_BASE);
+        return HOENN_CALL_JK_BASE;
     }
     // Part 18: one of Birch's aides saw you duck into your new secret base.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && gSaveBlock1Ptr->secretBases[0].secretBaseId != 0 && !FlagGet(FLAG_HOENN_CALL_BASE))

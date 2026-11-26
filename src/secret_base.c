@@ -35,6 +35,7 @@
 #include "tv.h"
 #include "window.h"
 #include "constants/event_bg.h"
+#include "constants/hoenn_base_entrances.h" // Hoenn & Seek
 #include "constants/decorations.h"
 #include "constants/event_objects.h"
 #include "constants/field_specials.h"
@@ -103,6 +104,7 @@ static const struct SecretBaseEntranceMetatiles sSecretBaseEntranceMetatiles[] =
     {.closedMetatileId = METATILE_General_BlueCaveIndent,       .openMetatileId = METATILE_General_BlueCaveOpen},
     {.closedMetatileId = METATILE_Fallarbor_BrownCaveIndent,    .openMetatileId = METATILE_Fallarbor_BrownCaveOpen},
     {.closedMetatileId = METATILE_Fortree_SecretBase_Shrub,     .openMetatileId = METATILE_Fortree_SecretBase_ShrubOpen},
+    HOENN_SECRET_BASE_ENTRANCE_METATILES // Hoenn & Seek: Johto/Kanto entrances (constants/hoenn_base_entrances.h)
 };
 
 // mapNum, warpId, x, y
