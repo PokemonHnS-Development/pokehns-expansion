@@ -24,6 +24,17 @@ def _hoenn_override_entries():
     except (FileNotFoundError, KeyError, ValueError):
         return []
 HOENN_OVERRIDES = _hoenn_override_entries()
+
+# Hoenn & Seek 2.0 (part 6a): weather tables (tools/hoenn/gen_hoenn_weather_wild.py). They go
+# after every other table, so each is a second header for its map; HoennWeatherWildHeader()
+# picks it on the map's special-weather day.
+def _hoenn_weather_entries():
+    try:
+        return __import__("json").load(open("data/hoenn/wild_encounters_weather.json"))["encounters"]
+    except FileNotFoundError:
+        return []
+
+HOENN_WEATHER = _hoenn_weather_entries()
 HOENN_OVERRIDE_IDS = {e["map"][len("MAP_"):] for e in HOENN_OVERRIDES}
 
 def _version_guard(version, map_group):
@@ -307,7 +318,7 @@ def ConvertToHeaderFile(json_data):
 def main():
     with open('src/data/wild_encounters.json', 'r') as json_file:
         json_data = json.load(json_file)
-        json_data["wild_encounter_groups"][0]["encounters"] += HOENN_OVERRIDES  # Hoenn & Seek
+        json_data["wild_encounter_groups"][0]["encounters"] += HOENN_OVERRIDES + HOENN_WEATHER  # Hoenn & Seek
         ConvertToHeaderFile(json_data)
         
 

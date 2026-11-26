@@ -12,6 +12,7 @@ void HoennUpdatePerWeek(s32 localDays);  // DoTimeBasedEvents(), src/clock.c
 void HoennRecordWeekAfterClockReset(void); // reset-clock screen, src/reset_rtc_screen.c
 u8 HoennCycleMapWeather(u8 headerWeather);  // SetSavedWeatherFromCurrMapHeader(), src/field_weather_effect.c (part 5)
 bool32 HoennCycleIgnoresWeatherZones(void); // DoCoordEventWeather(), src/coord_event_weather.c (part 5)
+u16 HoennWeatherWildHeader(u16 headerId);   // GetCurrentMapWildMonHeaderId(), src/wild_encounter.c (part 6a)
 
 // For C callers
 void HoennSetWeekday(u32 weekday);
@@ -40,6 +41,7 @@ static inline void HoennUpdatePerWeek(s32 localDays) { (void)localDays; }
 static inline void HoennRecordWeekAfterClockReset(void) { }
 static inline u8 HoennCycleMapWeather(u8 headerWeather) { return headerWeather; }
 static inline bool32 HoennCycleIgnoresWeatherZones(void) { return FALSE; }
+static inline u16 HoennWeatherWildHeader(u16 headerId) { return headerId; }
 #endif
 
 #endif // GUARD_HOENN_TIME_H

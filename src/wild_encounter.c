@@ -33,6 +33,7 @@
 #include "constants/weather.h"
 #include "pokenav.h"
 #include "sound.h"
+#include "hoenn_time.h"
 
 extern const u8 EventScript_SprayWoreOff[];
 
@@ -407,7 +408,7 @@ u16 GetCurrentMapWildMonHeaderId(void)
                 i += alteringCaveId;
             }
 
-            return i;
+            return HoennWeatherWildHeader(i); // Hoenn & Seek: special-weather tables
         }
     }
 
