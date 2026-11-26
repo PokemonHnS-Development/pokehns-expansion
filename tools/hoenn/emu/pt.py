@@ -171,7 +171,7 @@ class Emu:
     # They take effect on the next time check: warp (go()) or walk a few steps.
     # Offsets are asserted in src/hoenn_time.c; vars are in constants/hoenn_events.h.
     VAR_WEEKDAY_OFFSET, VAR_WEEK_SEEN = 0x7080, 0x7081
-    SB1_WEATHER_STAGE, SB2_TIME_OFFSET = 0x33, 0x98
+    SB1_WEATHER, SB1_WEATHER_STAGE, SB2_TIME_OFFSET = 0x32, 0x33, 0x98
     WEEKDAYS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
 
     def _sb2(self, state):
@@ -237,6 +237,11 @@ class Emu:
         offset = (day - base) % 7
         week = (max(c["days"], 0) + (6 + offset) % 7) // 7
         return self.poke(state_in, state_out, vars_={self.VAR_WEEKDAY_OFFSET: offset, self.VAR_WEEK_SEEN: week + 1})
+
+    def weather(self, state):
+        """The weather the overworld is in (gSaveBlock1Ptr->weather, a WEATHER_* number)."""
+        sb1, _ = self.ptrs(state)
+        return int(self.run([f"loadstate {state}", f"r8 {sb1 + self.SB1_WEATHER:x}"])[0].split(": ")[1], 16)
 
     def set_weather_stage(self, state_in, state_out, stage):
         """Emerald's 4-day weather cycle stage (0-3; 2 is the special-weather day).

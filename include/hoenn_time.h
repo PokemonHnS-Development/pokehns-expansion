@@ -1,7 +1,7 @@
 #ifndef GUARD_HOENN_TIME_H
 #define GUARD_HOENN_TIME_H
 
-// Hoenn & Seek 2.0 (part 2): weekday, weekly reset and weather-cycle helpers.
+// Hoenn & Seek 2.0 (parts 2 and 5): weekday, weekly reset and weather-cycle helpers.
 // The code and the reasoning behind it are in src/hoenn_time.c; the vars and
 // script constants are in constants/hoenn_events.h (part 2's section).
 
@@ -10,6 +10,8 @@
 u32 HoennAdjustWeekday(u32 rtcWeekday);  // GetDayOfWeek(), src/rtc.c
 void HoennUpdatePerWeek(s32 localDays);  // DoTimeBasedEvents(), src/clock.c
 void HoennRecordWeekAfterClockReset(void); // reset-clock screen, src/reset_rtc_screen.c
+u8 HoennCycleMapWeather(u8 headerWeather);  // SetSavedWeatherFromCurrMapHeader(), src/field_weather_effect.c (part 5)
+bool32 HoennCycleIgnoresWeatherZones(void); // DoCoordEventWeather(), src/coord_event_weather.c (part 5)
 
 // For C callers
 void HoennSetWeekday(u32 weekday);
@@ -36,6 +38,8 @@ void HoennDebugReloadMap(void);
 static inline u32 HoennAdjustWeekday(u32 rtcWeekday) { return rtcWeekday; }
 static inline void HoennUpdatePerWeek(s32 localDays) { (void)localDays; }
 static inline void HoennRecordWeekAfterClockReset(void) { }
+static inline u8 HoennCycleMapWeather(u8 headerWeather) { return headerWeather; }
+static inline bool32 HoennCycleIgnoresWeatherZones(void) { return FALSE; }
 #endif
 
 #endif // GUARD_HOENN_TIME_H

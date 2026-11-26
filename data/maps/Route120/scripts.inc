@@ -60,10 +60,16 @@ Route120_OnTransition:
 	end
 
 Route120_EventScript_SetWeather::
+	@ Hoenn & Seek 2.0 (part 5): on the storm day the storm covers the whole route.
+	specialvar VAR_RESULT, HoennIsSpecialWeatherHere
+	goto_if_eq VAR_RESULT, TRUE, Route120_EventScript_KeepStormWeather
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	goto_if_le VAR_TEMP_1, 14, Route120_EventScript_SetSunnyWeather
 	goto_if_le VAR_TEMP_1, 60, Route120_EventScript_TrySetRainyWeather
 	goto_if_ge VAR_TEMP_1, 61, Route120_EventScript_SetCloudyWeather
+	return
+
+Route120_EventScript_KeepStormWeather::
 	return
 
 Route120_EventScript_SetCloudyWeather::

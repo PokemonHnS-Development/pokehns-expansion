@@ -29,11 +29,12 @@
 //   Emerald steps Routes 119 and 123 through a 4-day weather cycle
 //   (gSaveBlock1Ptr->weatherCycleStage, advanced once a day). Part 5 puts most
 //   routes on cycles of their own, each with one "special weather" day in four.
-//   Events ask HoennIsSpecialWeatherDay() instead of reading the stage, so they
-//   keep working when part 5 adds per-route offsets.
-//   Until then it's a working stub: only Emerald's two cycle routes have a
-//   special day, and it's stage 2 for both (Route 119's thunderstorm, Route
-//   123's rain). Part 5 replaces the sWeatherCycleMaps table.
+//   Events ask HoennIsSpecialWeatherDay() instead of reading the stage.
+//   Part 5: 78 routes are on cycles (data/hoenn/weather_cycles.json). A map's
+//   special day is the day (stage + its offset) % 4 == 2; that day the map
+//   starts in its special weather (HoennCycleMapWeather, hooked where the map
+//   header's weather is applied) and its weather zones are skipped
+//   (HoennCycleIgnoresWeatherZones). Routes 119 and 123 keep Emerald's cycles.
 
 #include "global.h"
 #include "clock.h"
@@ -67,6 +68,7 @@ STATIC_ASSERT(HOENN_SUNDAY == WEEKDAY_SUN && HOENN_SATURDAY == WEEKDAY_SAT
 STATIC_ASSERT(HOENN_SPECIAL_WEATHER_STAGE < HOENN_WEATHER_CYCLE_LENGTH, HoennSpecialStageInCycle);
 // The emulator harness (tools/hoenn/emu/pt.py) pokes these at fixed offsets.
 STATIC_ASSERT(offsetof(struct SaveBlock1, weatherCycleStage) == 0x33, HoennHarnessWeatherStageOffset);
+STATIC_ASSERT(offsetof(struct SaveBlock1, weather) == 0x32, HoennHarnessWeatherOffset);
 STATIC_ASSERT(offsetof(struct SaveBlock2, localTimeOffset) == 0x98, HoennHarnessTimeOffsetOffset);
 
 // ---- Weekday ----------------------------------------------------------------
@@ -201,18 +203,25 @@ u16 HoennGetWeatherCycleStage(void)
     return gSaveBlock1Ptr->weatherCycleStage;
 }
 
-// The maps with a weather cycle, the cycle weather they use, and how many days
-// their cycle is shifted from weatherCycleStage. Emerald puts its cycles in
-// coord-event weather zones (the map headers say WEATHER_SUNNY), so the map
-// header can't tell us; this table does. Part 5 generates a longer one from
-// its JSON (generic cycle weather types, an offset per route).
+// The maps with a weather cycle (part 5): generated from
+// data/hoenn/weather_cycles.json by tools/hoenn/gen_hoenn_weather.py.
+//   weather: the special-day weather (WEATHER_RAIN, ...). For Emerald's two
+//            cycle routes it's their cycle (WEATHER_ROUTE119_CYCLE), which
+//            field_weather_effect.c translates per stage in their weather zones.
+//   offset:  days added to weatherCycleStage, so groups of routes have their
+//            special day on different days.
+//   emerald: Routes 119 and 123. Their map headers and zones already run
+//            Emerald's cycle, so HoennCycleMapWeather leaves them alone; they're
+//            here so events can ask about their special day.
+// Any other map in the table shows its header weather three days in four and
+// its special weather on the fourth, everywhere on the map.
 static const struct {
     u16 map;    // MAP_* (num | group << 8)
-    u8 weather; // the cycle's WEATHER_* (translated per stage by field_weather_effect.c)
-    u8 offset;  // days added to weatherCycleStage
+    u8 weather;
+    u8 offset;
+    bool8 emerald;
 } sWeatherCycleMaps[] = {
-    { MAP_ROUTE119, WEATHER_ROUTE119_CYCLE, 0 }, // sunny, rain, THUNDERSTORM, rain
-    { MAP_ROUTE123, WEATHER_ROUTE123_CYCLE, 0 }, // sunny, sunny, RAIN, sunny
+#include "data/hoenn_weather_cycles.h"
 };
 
 static s32 FindWeatherCycleMap(u16 mapGroup, u16 mapNum)
@@ -239,6 +248,29 @@ static s32 MapCycleStage(u16 mapGroup, u16 mapNum)
 bool32 HoennIsSpecialWeatherDay(u16 mapGroup, u16 mapNum)
 {
     return MapCycleStage(mapGroup, mapNum) == HOENN_SPECIAL_WEATHER_STAGE;
+}
+
+// Hook in SetSavedWeatherFromCurrMapHeader (src/field_weather_effect.c): the
+// weather a map starts with. On a cycle map's special day it's the special
+// weather; otherwise the header's own.
+u8 HoennCycleMapWeather(u8 headerWeather)
+{
+    s32 i = FindWeatherCycleMap(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
+
+    if (i < 0 || sWeatherCycleMaps[i].emerald || !HoennIsSpecialWeatherDay(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum))
+        return headerWeather;
+    return sWeatherCycleMaps[i].weather;
+}
+
+// Hook in DoCoordEventWeather (src/coord_event_weather.c): TRUE skips a weather
+// zone. On a cycle map's special day the special weather covers the whole map
+// (Route 120's sunny and rain patches would otherwise turn the storm off).
+bool32 HoennCycleIgnoresWeatherZones(void)
+{
+    s32 i = FindWeatherCycleMap(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
+
+    return i >= 0 && !sWeatherCycleMaps[i].emerald
+        && HoennIsSpecialWeatherDay(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
 }
 
 // specialvar VAR_RESULT, HoennIsSpecialWeatherHere: the map the player is on.
@@ -332,8 +364,10 @@ void HoennDebugAdvanceWeatherStage(void)
     s32 i = FindWeatherCycleMap(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
 
     UpdateWeatherPerDay(1);
-    if (i >= 0)
+    if (i >= 0 && sWeatherCycleMaps[i].emerald)
         SetSavedWeather(sWeatherCycleMaps[i].weather);
+    else if (i >= 0)
+        SetSavedWeather(HoennCycleMapWeather(gMapHeader.weather));
 }
 
 // Reloads the current map where the player stands (like warpsilent), so
