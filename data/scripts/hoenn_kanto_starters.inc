@@ -435,7 +435,7 @@ HoennSeek_EventScript_SquadPitfall:
 	waitmovement 0
 	playse SE_FALL
 	delay 60
-	setwarp MAP_ROUTE6_HIDEOUT_HOENN, 10, 12
+	setwarp MAP_ROUTE6_HIDEOUT_HOENN, 8, 10
 	special DoFallWarp
 	waitstate
 	end

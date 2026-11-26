@@ -11,6 +11,13 @@ blocks copied (metatile, collision and elevation) from the map's "source" layout
   {"at": [x, y, w, h], "from": [sx, sy], "tile": [pw, ph]} repeat the pw x ph patch at sx,sy
                                                            across the rectangle, anchored at x,y
   {"cells": [[x, y], ...], "from": [sx, sy]}               copy one block to each cell
+  {"grid": ["..TT..", ...], "at": [x, y], "legend": {"T": {"from": [sx, sy], "tile": [2, 2]}}}
+      paint by hand: each character is a legend entry (" " and "." leave the cell as it is);
+      an entry with "tile" repeats that patch anchored at the map's (0,0), so "from" is the
+      patch block that lands on even (x, y)
+Any op or legend entry may take "src": LAYOUT_X to copy from another layout with the same
+primary tileset; its blocks must be primary metatiles, or that layout must also share the
+secondary tileset (checked).
 
 Keeping the rows' and columns' parity between source and destination keeps 2x2
 patterns (trees, checkered grass) lined up. "border" is the 2x2 border's top-left
@@ -28,6 +35,7 @@ import json, os, struct
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
 P = lambda *a: os.path.join(ROOT, *a)
 COLLISION = 0x0C00
+PRIMARY_METATILES = 640  # NUM_METATILES_IN_PRIMARY (HnS layouts)
 
 
 def layouts():
@@ -50,18 +58,47 @@ def build(name, m, lays):
     w, h = lay["width"], lay["height"]
     out = [None] * (w * h)
     get = lambda sx, sy: sb[sy * sw + sx]
+
+    def getter(op):
+        if "src" not in op:
+            return get
+        other = lays[op["src"]]
+        assert other["primary_tileset"] == lay["primary_tileset"], (name, op)
+        ob, ow = read_blocks(other), other["width"]
+        same_sec = other["secondary_tileset"] == lay["secondary_tileset"]
+
+        def g(sx, sy):
+            b = ob[sy * ow + sx]
+            assert same_sec or (b & 0x3FF) < PRIMARY_METATILES, (name, op["src"], sx, sy, "secondary metatile")
+            return b
+        return g
+
     for op in m["ops"]:
+        if "grid" in op:
+            x0, y0 = op["at"]
+            for j, row in enumerate(op["grid"]):
+                for i, ch in enumerate(row):
+                    if ch in " .":
+                        continue
+                    e = op["legend"][ch]
+                    x, y = x0 + i, y0 + j
+                    assert x < w and y < h, (name, "grid outside the map", x, y)
+                    pw, ph = e.get("tile", [1, 1])
+                    sx, sy = e["from"]
+                    out[y * w + x] = getter(e)(sx + x % pw, sy + y % ph)
+            continue
+        g = getter(op)
         sx, sy = op["from"]
         if "cells" in op:
             for x, y in op["cells"]:
-                out[y * w + x] = get(sx, sy)
+                out[y * w + x] = g(sx, sy)
             continue
         x0, y0, rw, rh = op["at"]
         pw, ph = op.get("tile", [rw, rh])
         assert x0 + rw <= w and y0 + rh <= h, (name, op)
         for j in range(rh):
             for i in range(rw):
-                out[(y0 + j) * w + x0 + i] = get(sx + i % pw, sy + j % ph)
+                out[(y0 + j) * w + x0 + i] = g(sx + i % pw, sy + j % ph)
     missing = [(i % w, i // w) for i, b in enumerate(out) if b is None]
     assert not missing, (name, "unpainted cells", missing[:8])
     write_blocks(lay, out)
