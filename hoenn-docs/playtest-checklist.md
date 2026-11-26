@@ -100,6 +100,14 @@ Nothing a player sees yet (part 3 adds the first weekday content); these are for
 - [ ] Route 119 and 123 in real play: walk into the rain zones on a "special" day (thunderstorm on 119, rain on 123) and a normal one.
 - [ ] Leave the game on over a real Saturday → Sunday midnight: no freeze or stutter when the week rolls over.
 
+## 2.0 part 3 — Weekday content
+- [ ] **A real new game:** after setting the stopped clock in your room, the calendar asks what day it is; pick the real day.
+- [ ] Your room's wall clock: view it, say YES to "Change the day?", pick a day; the start-menu/PokéGear day follows.
+- [ ] The seven Weekday siblings: on the wrong day they name their day; on their day they give the gift (once).
+- [ ] Union Cave B2F's Lapras: there on a Friday; catch or beat it, and it's back the next Friday, not before.
+- [ ] Mt. Moon's Clefairy dance: only on Monday nights (enter the area after dark).
+- [ ] The sibling texts: do you like the HGSS-style "only on my day" better than HnS's guessing riddle?
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.
