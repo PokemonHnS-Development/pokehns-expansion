@@ -543,6 +543,48 @@
       "elevation": 0,
       "dest_map": "MAP_OLIVINE_CITY_POKEMON_CENTER_HNS",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 2,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY_HARBOR_OFFICE_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY_SAILORS_HOUSE_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY_CAPTAINS_HOUSE_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY_TACKLE_SHOP_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 31,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY_SHIPWRIGHT_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 35,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY_KEEPERS_HOUSE_HOENN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

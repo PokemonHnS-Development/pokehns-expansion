@@ -297,6 +297,12 @@ gStdScripts_End::
 	.include "data/maps/LilycoveCity_ContestLobby_hns/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestLobby_hoenn/scripts.inc" @ Hoenn & Seek
 	.include "data/maps/LilycoveCity_ContestHall_hoenn/scripts.inc" @ Hoenn & Seek
+	.include "data/maps/OlivineCity_KeepersHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/OlivineCity_Shipwright_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/OlivineCity_TackleShop_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/OlivineCity_CaptainsHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/OlivineCity_SailorsHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/OlivineCity_HarborOffice_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
 	.include "data/maps/Route34_FishingShack_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
 	.include "data/maps/LilycoveCity_ContestHall/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestHall_hns/scripts.inc"
@@ -1076,6 +1082,7 @@ gStdScripts_End::
 	.include "data/scripts/hoenn_weekday.inc" @ Hoenn & Seek 2.0 part 3
 	.include "data/scripts/hoenn_followers.inc" @ Hoenn & Seek 2.0 part 4b
 	.include "data/scripts/hoenn_hints.inc" @ Hoenn & Seek 2.0 part 7 (generated)
+	.include "data/scripts/hoenn_buildings.inc" @ Hoenn & Seek 2.0 parts 8b-11
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"
 

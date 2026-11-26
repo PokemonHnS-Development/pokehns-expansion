@@ -84,6 +84,11 @@ def build(b, templates):
         move = FACING[o.get("facing", "down")]
         if o["type"] == "mon":
             gfx, script = "OBJ_EVENT_GFX_MON_BASE+SPECIES_%s" % o["species"], "HoennSeek_EventScript_TrainerFollower"
+        elif "script" in o:
+            # A hand-written script (data/scripts/hoenn_buildings.inc: shops, gifts...).
+            # The object still runs a generated label, so gen_hoenn_hints.py can wrap it.
+            gfx, script = o["gfx"], "%s_EventScript_Npc%d" % (name, k)
+            scripts += ["%s::" % script, "\tgoto %s" % o["script"], ""]
         else:
             gfx, script = o["gfx"], "%s_EventScript_Npc%d" % (name, k)
             scripts += ["%s::" % script, "\tmsgbox %s_Text_Npc%d, MSGBOX_NPC" % (name, k), "\tend", ""]
@@ -94,6 +99,20 @@ def build(b, templates):
                         "movement_range_y": 1 if move == FACING["wander"] else 0,
                         "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
                         "script": script, "flag": "0"})
+    # Signs: the template's own (bookshelves, TV...) unless the building lists its own.
+    if "signs" in b:
+        bg = []
+        for k, sgn in enumerate(b["signs"]):
+            label = "%s_EventScript_Sign%d" % (name, k)
+            scripts += ["%s::" % label, "\tmsgbox %s_Text_Sign%d, MSGBOX_SIGN" % (name, k), "\tend", ""]
+            texts += ["%s_Text_Sign%d:" % (name, k), '\t.string "%s$"' % wrap(sgn["text"]), ""]
+            bg.append({"type": "sign", "x": sgn["x"], "y": sgn["y"], "elevation": 0,
+                       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": label})
+    else:
+        bg = tpl.get("bg_events") or []
+    # Named texts for hand-written scripts: <name>_Text_<Key>.
+    for key, text in b.get("texts", {}).items():
+        texts += ["%s_Text_%s::" % (name, key), '\t.string "%s$"' % wrap(text), ""]
     interior = {
         "id": mid, "name": name, "layout": tpl["layout"],
         "music": b.get("music", outside["music"]),
@@ -105,7 +124,7 @@ def build(b, templates):
         "warp_events": [{"x": entrance["x"], "y": entrance["y"], "elevation": entrance.get("elevation", 0),
                          "dest_map": outside["id"], "dest_warp_id": str(idx)}],
         "coord_events": [],
-        "bg_events": tpl.get("bg_events") or [],
+        "bg_events": bg,
         "game_version": "hns",
     }
     if "region" in outside:

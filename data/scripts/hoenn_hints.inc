@@ -194,6 +194,54 @@ HoennSeek_EventScript_HintNpc23::
 	callstd MSGBOX_NPC
 	end
 
+@ OlivineCity_HarborOffice_hoenn
+HoennSeek_EventScript_HintNpc24::
+	callnative HoennSeek_NpcHint
+	.2byte 24
+	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
+	callstd MSGBOX_NPC
+	end
+
+@ OlivineCity_SailorsHouse_hoenn
+HoennSeek_EventScript_HintNpc25::
+	callnative HoennSeek_NpcHint
+	.2byte 25
+	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
+	callstd MSGBOX_NPC
+	end
+
+@ OlivineCity_CaptainsHouse_hoenn
+HoennSeek_EventScript_HintNpc26::
+	callnative HoennSeek_NpcHint
+	.2byte 26
+	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
+	callstd MSGBOX_NPC
+	end
+
+@ OlivineCity_TackleShop_hoenn
+HoennSeek_EventScript_HintNpc27::
+	callnative HoennSeek_NpcHint
+	.2byte 27
+	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
+	callstd MSGBOX_NPC
+	end
+
+@ OlivineCity_Shipwright_hoenn
+HoennSeek_EventScript_HintNpc28::
+	callnative HoennSeek_NpcHint
+	.2byte 28
+	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
+	callstd MSGBOX_NPC
+	end
+
+@ OlivineCity_KeepersHouse_hoenn
+HoennSeek_EventScript_HintNpc29::
+	callnative HoennSeek_NpcHint
+	.2byte 29
+	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
+	callstd MSGBOX_NPC
+	end
+
 @ Field notes (Birch's aide): how many rumors you've found, then a vague hint for the next.
 HoennSeek_EventScript_FieldNotes::
 	lock
