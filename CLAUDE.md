@@ -196,6 +196,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
   - **`VAR_STARTER_MON`** (0x4023, shared): 0 Chikorita, 1 Cyndaquil, 2 Totodile, set in `NewBarkTown_Lab_hns`; `BurnedTower_1F_hns` gives Silver the counter-pick.
   - **Bug-Catching Contest** runs every day (`FLAG_DAILY_BUG_CONTEST_COMPLETED`), not HGSS's Tue/Thu/Sat.
   - **Feebas:** Emerald's six random Route 119 tiles are active (`CheckFeebas`, `src/wild_encounter.c`).
+  - **Route 102 has wild Gardevoir** (day and night): part 15's level rule evolved Emerald's Ralts. The 2.0 Ralts event makes Ralts one-of-a-kind, so the distribution part removes it.
 - **Script-swapped layouts (part 10):** `gen_hoenn_lists.py` also keeps layouts that kept maps swap in with `setmaplayoutindex` (Birch's lab table, Shoal Cave tides, ...). Missing ones drew a black screen. Part 12 dropped the Mirage Island and Sootopolis legends ones.
 - **Doors:** `src/field_door.c`'s `sDoorAnimGraphicsTable` includes Emerald's doors in HnS. The lookup matches metatile + tileset, so they don't clash with HnS doors.
 - Each layout's `layout_version` selects the primary tileset size at runtime: HnS 640 tiles/7 palettes, Emerald 512/6. Hoenn layouts must stay `emerald`.
