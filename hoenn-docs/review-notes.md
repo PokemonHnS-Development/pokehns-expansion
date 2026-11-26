@@ -24,7 +24,7 @@ Bryan went through the review items and the choices from parts 5–17. These rep
 **Look**
 - **Rock base entrances: style B,** Emerald's solid square recess (Route 45, Mt. Moon). The tree entrances stay style A.
 - **Base spots move off the walking path:** Sky Pillar (item 3) and the three Regi rooms (item 5). The chamber interiors' colours stay.
-- **The meadow, the garden and the Squirtle hideout get a hand-made look.** Mockups go to Bryan before they're built.
+- **The meadow, the garden and the Squirtle hideout get a hand-made look.** Mockups go to Bryan before they're built. **Done in 17r-e** (Bryan approved the mockups; the meadow's two side trees got full tops after his note).
 - **Battle backgrounds:** keep the picks (desert dunes, ash, graves) and fix the two nits (item 9).
 - **Leaders' Pokémon stand behind them where there's room** (item 6).
 
@@ -95,7 +95,7 @@ Reproduced in the emulator: step down the west stairs at night onto (8,17). The 
 - **Why:** `HoennSeek_EventScript_StarterPanDown` only pans the camera down 2 tiles, and only when the player is above row 14. The south-west trigger row (x 8–13, row 17) gets no pan, and from x 8–9 the family is out of view.
 - **Fix:** pan toward the family from wherever the scene starts, or move the camera to a fixed spot over the embers.
 
-### 11. The two new maps look generator-made
+### 11. The two new maps look generator-made — **done in 17r-e** (all three maps hand-painted from Bryan-approved mockups, Squirtle hideout too)
 `Route46_Meadow_hoenn` and `Route25_Garden_hoenn` work, but they're very boxy. Each has a straight border of identical trees and a flat open lawn with scattered flowers. The meadow also has a solid cliff band and a big rectangle of tall grass. The garden has a pale rectangle in the middle.
 - **Fix:** hand polish, such as uneven tree edges, a path, a ledge or a pond, and Sunkern spread through the grass (the text says the meadow is "full of SUNKERN"; about five are visible).
 - The meadow's wild table is Lv 3–8, for a post-game player. That's probably on purpose (baby Pokémon), but Bryan should confirm it.
