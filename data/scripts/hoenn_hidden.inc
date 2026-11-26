@@ -1596,3 +1596,346 @@ HoennSeek_Text_CallMetagross:
 	.string "front of him. You saw it too!\p"
 	.string "Dad's never even seen that\n"
 	.string "happen. Lucky!$"
+
+@ ==========================================================================
+@ Part 24a: Flygon's desert song A (Route 111, Fallarbor, Desert Underpass)
+@ ROUTE 111, EVENINGS: a TRAPINCH sits out in the desert east of the Mirage
+@ Tower (26,58). Coming within four tiles of it (a ring of VAR_TEMP_4
+@ triggers) plays the hum: the TRAPINCH pops up, scurries north leaving
+@ footprints (the camera follows it) and burrows into a sand hollow at the
+@ desert's north edge (29-31, 35-36, painted by composed_maps.json). Once a
+@ day until you have the SINGING SAND. Reading the hollow afterwards says
+@ the sand drains away underground.
+@ FALLARBOR (hint lines, data/hoenn/npc_hints.json): the town's old gentleman
+@ remembers the sand draining into the FOSSIL MANIAC's tunnel, and COZMO
+@ explains where it goes: the DESERT UNDERPASS.
+@ DESERT UNDERPASS, any time, after the hum: a VIBRAVA fans the sand in the
+@ nook at the sandy east end (104,4). Entering the nook (row 7) plays the
+@ hum; talking starts the battle: scaled, Boomburst (the desert's song),
+@ and it can't be caught. Knocked out, it leaves the SINGING SAND (a new key
+@ item) and flies off up a crack in the ceiling (part 24b: it circles
+@ Route 113's ash). Run, and it stays.
+@ ==========================================================================
+
+HoennSeek_EventScript_HiddenEnd24a:
+	return
+
+@ ---- Route 111: the hum and the TRAPINCH ----------------------------------
+HoennSeek_EventScript_DesertSongOnTransition::
+	setflag FLAG_HOENN_HIDE_DESERT_TRAPINCH
+	setvar VAR_TEMP_4, 0
+	goto_if_set FLAG_HOENN_GOT_SINGING_SAND, HoennSeek_EventScript_HiddenEnd24a
+	goto_if_set FLAG_HOENN_DAILY_DESERT_SONG, HoennSeek_EventScript_HiddenEnd24a
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_EVENING, HoennSeek_EventScript_HiddenEnd24a
+	clearflag FLAG_HOENN_HIDE_DESERT_TRAPINCH
+	setvar VAR_TEMP_4, 1
+	return
+
+@ A trigger tile four steps from the TRAPINCH.
+HoennSeek_EventScript_DesertSong::
+	lockall
+	setvar VAR_TEMP_4, 2
+	msgbox HoennSeek_Text_DesertHum, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_HOENN_DESERT_TRAPINCH, HoennSeek_Movement_TrapinchPopsUp
+	waitmovement 0
+	playmoncry SPECIES_TRAPINCH, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_TrapinchListens, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	@ Pan to the TRAPINCH, then follow it (the camera takes the same steps).
+	setvar VAR_0x8008, 26
+	setvar VAR_0x8009, 58
+	call HoennSeek_EventScript_StarterPanTo
+	applymovement LOCALID_HOENN_DESERT_TRAPINCH, HoennSeek_Movement_TrapinchToHollow
+	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_TrapinchToHollow
+	waitmovement OBJ_EVENT_ID_CAMERA
+	waitmovement LOCALID_HOENN_DESERT_TRAPINCH
+	@ It burrows into the hollow at (30,35).
+	applymovement LOCALID_HOENN_DESERT_TRAPINCH, HoennSeek_Movement_TrapinchBurrows
+	waitmovement 0
+	@ A puff of sand where it dug in (FLDEFF_SAND_HOLE, DexNav's, loops
+	@ forever and never ends: don't use it here).
+	setfieldeffectargument 0, 37
+	setfieldeffectargument 1, 42
+	setfieldeffectargument 2, 0
+	setfieldeffectargument 3, 1
+	dofieldeffect FLDEFF_DUST
+	playse SE_M_DIG
+	removeobject LOCALID_HOENN_DESERT_TRAPINCH
+	delay 16
+	dofieldeffect FLDEFF_DUST
+	delay 30
+	setflag FLAG_HOENN_HIDE_DESERT_TRAPINCH
+	msgbox HoennSeek_Text_TrapinchBurrowed, MSGBOX_DEFAULT
+	closemessage
+	@ Back to the player, quickly: the hollow can be 30 tiles away.
+	setvar VAR_0x8004, 30
+	setvar VAR_0x8005, 35
+	call HoennSeek_EventScript_DesertCameraBack
+	setflag FLAG_HOENN_DESERT_SONG_HEARD
+	setflag FLAG_HOENN_DAILY_DESERT_SONG
+	releaseall
+	end
+
+@ Walks the camera from VAR_0x8004/0x8005 back to the player's tile, saved
+@ by StarterPanTo in VAR_0x800A/0x800B (x first), then removes it. Like
+@ hoenn_starters.inc's StarterPanBack, but four times as fast.
+HoennSeek_EventScript_DesertCameraBack:
+	goto_if_eq VAR_0x8004, VAR_0x800A, HoennSeek_EventScript_DesertCameraBackY
+	goto_if_lt VAR_0x8004, VAR_0x800A, HoennSeek_EventScript_DesertCameraRight
+	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_CameraFastLeft
+	waitmovement 0
+	subvar VAR_0x8004, 1
+	goto HoennSeek_EventScript_DesertCameraBack
+HoennSeek_EventScript_DesertCameraRight:
+	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_CameraFastRight
+	waitmovement 0
+	addvar VAR_0x8004, 1
+	goto HoennSeek_EventScript_DesertCameraBack
+HoennSeek_EventScript_DesertCameraBackY:
+	goto_if_eq VAR_0x8005, VAR_0x800B, HoennSeek_EventScript_DesertCameraDone
+	goto_if_lt VAR_0x8005, VAR_0x800B, HoennSeek_EventScript_DesertCameraDown
+	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_CameraFastUp
+	waitmovement 0
+	subvar VAR_0x8005, 1
+	goto HoennSeek_EventScript_DesertCameraBackY
+HoennSeek_EventScript_DesertCameraDown:
+	applymovement OBJ_EVENT_ID_CAMERA, HoennSeek_Movement_CameraFastDown
+	waitmovement 0
+	addvar VAR_0x8005, 1
+	goto HoennSeek_EventScript_DesertCameraBackY
+HoennSeek_EventScript_DesertCameraDone:
+	special RemoveCameraObject
+	setvar VAR_0x8007, 0
+	return
+
+@ Talking to it before the hum starts it too (the triggers are a ring).
+HoennSeek_EventScript_DesertTrapinch::
+	goto_if_eq VAR_TEMP_4, 1, HoennSeek_EventScript_DesertSong
+	end
+
+@ The sand hollow at the desert's north edge (bg events on all six tiles).
+HoennSeek_EventScript_DesertHollow::
+	goto_if_set FLAG_HOENN_GOT_SINGING_SAND, HoennSeek_EventScript_DesertHollowQuiet
+	goto_if_set FLAG_HOENN_DESERT_SONG_HEARD, HoennSeek_EventScript_DesertHollowTracks
+	msgbox HoennSeek_Text_DesertHollow, MSGBOX_SIGN
+	end
+HoennSeek_EventScript_DesertHollowTracks:
+	msgbox HoennSeek_Text_DesertHollowTracks, MSGBOX_SIGN
+	end
+HoennSeek_EventScript_DesertHollowQuiet:
+	msgbox HoennSeek_Text_DesertHollowQuiet, MSGBOX_SIGN
+	end
+
+HoennSeek_Movement_TrapinchPopsUp:
+	jump_in_place_down
+	face_up
+	step_end
+
+@ (26,58) to the hollow (30,35), around the rocks: the path a BFS over the
+@ map's walkable tiles found (no objects on it).
+HoennSeek_Movement_TrapinchToHollow:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
+HoennSeek_Movement_TrapinchBurrows:
+	face_down
+	jump_in_place_down
+	jump_in_place_down
+	step_end
+
+HoennSeek_Movement_CameraFastLeft:
+	walk_faster_left
+	step_end
+HoennSeek_Movement_CameraFastRight:
+	walk_faster_right
+	step_end
+HoennSeek_Movement_CameraFastUp:
+	walk_faster_up
+	step_end
+HoennSeek_Movement_CameraFastDown:
+	walk_faster_down
+	step_end
+
+@ ---- Desert Underpass: the VIBRAVA ------------------------------------------
+HoennSeek_EventScript_UnderpassOnTransition::
+	setflag FLAG_HOENN_HIDE_UNDERPASS_VIBRAVA
+	setvar VAR_TEMP_1, 0
+	goto_if_unset FLAG_HOENN_DESERT_SONG_HEARD, HoennSeek_EventScript_HiddenEnd24a
+	goto_if_set FLAG_HOENN_GOT_SINGING_SAND, HoennSeek_EventScript_HiddenEnd24a
+	clearflag FLAG_HOENN_HIDE_UNDERPASS_VIBRAVA
+	setvar VAR_TEMP_1, 1
+	return
+
+@ Row 7, the only way into the nook: (104,4) is in view from both tiles.
+HoennSeek_EventScript_UnderpassHum::
+	lockall
+	setvar VAR_TEMP_1, 2
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox HoennSeek_Text_UnderpassHum, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_HOENN_UNDERPASS_VIBRAVA, HoennSeek_Movement_VibravaNotices
+	waitmovement 0
+	playmoncry SPECIES_VIBRAVA, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_UnderpassVibrava, MSGBOX_DEFAULT
+	waitmoncry
+	releaseall
+	end
+
+HoennSeek_EventScript_UnderpassVibrava::
+	lock
+	faceplayer
+	setvar VAR_TEMP_1, 2
+	playmoncry SPECIES_VIBRAVA, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_VibravaBattle, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setflag FLAG_NO_WILD_CATCHING
+	setvar VAR_0x8004, SPECIES_VIBRAVA
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_BOOMBURST
+	setvar VAR_0x8006, FALSE
+	setvar VAR_0x8007, ITEM_NONE
+	special HoennTuneWildMon
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	clearflag FLAG_NO_WILD_CATCHING
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_WON, HoennSeek_EventScript_VibravaStays
+	msgbox HoennSeek_Text_VibravaDrops, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_HOENN_UNDERPASS_VIBRAVA, HoennSeek_Movement_VibravaFliesOff
+	waitmovement 0
+	removeobject LOCALID_HOENN_UNDERPASS_VIBRAVA
+	setflag FLAG_HOENN_HIDE_UNDERPASS_VIBRAVA
+	giveitem ITEM_SINGING_SAND
+	setflag FLAG_HOENN_GOT_SINGING_SAND
+	msgbox HoennSeek_Text_SingingSandHums, MSGBOX_DEFAULT
+	release
+	end
+HoennSeek_EventScript_VibravaStays:
+	msgbox HoennSeek_Text_VibravaStays, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_Movement_VibravaNotices:
+	jump_in_place_down
+	jump_in_place_down
+	step_end
+
+@ Up and away through a crack in the ceiling.
+HoennSeek_Movement_VibravaFliesOff:
+	face_up
+	jump_in_place_up
+	walk_faster_up
+	set_invisible
+	step_end
+
+@ ---- Call -------------------------------------------------------------------
+HoennSeek_EventScript_CallSingingSand::
+	setflag FLAG_HOENN_CALL_SINGING_SAND
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallSingingSand
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Texts -----------------------------------------------------------------
+HoennSeek_Text_DesertHum:
+	.string "A low hum drifts over the dunes,\n"
+	.string "rising and falling like a song…$"
+
+HoennSeek_Text_TrapinchListens:
+	.string "A TRAPINCH popped up out of the\n"
+	.string "sand! It's listening to the hum…$"
+
+HoennSeek_Text_TrapinchBurrowed:
+	.string "The TRAPINCH dug into a hollow\n"
+	.string "at the edge of the desert.\p"
+	.string "The hum faded away with it.$"
+
+HoennSeek_Text_DesertHollow:
+	.string "A hollow in the sand. Fine grains\n"
+	.string "trickle down into it and vanish.$"
+
+HoennSeek_Text_DesertHollowTracks:
+	.string "TRAPINCH tracks lead into the\n"
+	.string "hollow and stop.\p"
+	.string "Fine sand trickles down into it\n"
+	.string "and vanishes somewhere below.\p"
+	.string "A faint hum seems to rise from\n"
+	.string "deep underground…$"
+
+HoennSeek_Text_DesertHollowQuiet:
+	.string "Fine sand trickles down into the\n"
+	.string "hollow. All is quiet below.$"
+
+HoennSeek_Text_UnderpassHum:
+	.string "A soft hum echoes through the\n"
+	.string "tunnel. Fine sand is pouring\l"
+	.string "down from a crack overhead…$"
+
+HoennSeek_Text_UnderpassVibrava:
+	.string "A VIBRAVA is fanning the falling\n"
+	.string "sand with its wings!\p"
+	.string "The humming is coming from it!$"
+
+HoennSeek_Text_VibravaBattle:
+	.string "The VIBRAVA's wings buzz louder\n"
+	.string "and louder!$"
+
+HoennSeek_Text_VibravaDrops:
+	.string "The VIBRAVA shook its wings.\n"
+	.string "Glittering sand spilled out!\p"
+	.string "It flew off up the crack in the\n"
+	.string "ceiling, toward the desert above.$"
+
+HoennSeek_Text_SingingSandHums:
+	.string "The SINGING SAND hums softly\n"
+	.string "whenever it trickles.$"
+
+HoennSeek_Text_VibravaStays:
+	.string "The VIBRAVA went back to fanning\n"
+	.string "the sand, humming to itself.$"
+
+HoennSeek_Text_CallSingingSand:
+	.string "{PLAYER}! It's BRENDAN!\p"
+	.string "The FOSSIL MANIAC on ROUTE 114\n"
+	.string "just called Dad. He sends Dad\l"
+	.string "every fossil he digs up.\p"
+	.string "He says something was humming\n"
+	.string "in his tunnel for days. Then\l"
+	.string "came a battle, and silence!\p"
+	.string "He saw you come out with a\n"
+	.string "pouch of sand that sings.\p"
+	.string "Dad says VIBRAVA hum like that\n"
+	.string "to call their flock. Wonder\l"
+	.string "where it went!$"

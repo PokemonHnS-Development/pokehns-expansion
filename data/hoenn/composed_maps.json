@@ -375,6 +375,8 @@
   {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[28, 2]], "from": [11, 2]},
   {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[26, 3]], "from": [9, 3]},
   {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[27, 3]], "from": [10, 3]},
-  {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[28, 3]], "from": [11, 3]}
+  {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[28, 3]], "from": [11, 3]},
+  {"_": "Route 111 (2.0 part 24a): a sand hollow in the dead-end bay at the desert's north edge (29-31, 35-36), where the TRAPINCH burrows: a 3x2 patch of the desert's own darker deep-sand blocks, the same pieces its dune patches use (corners from the patch at (32-33, 37-38))", "layout": "LAYOUT_ROUTE111", "at": [29, 35], "grid": ["abc", "def"], "legend": {"a": {"from": [32, 37]}, "b": {"from": [21, 40]}, "c": {"from": [33, 37]}, "d": {"from": [32, 38]}, "e": {"from": [15, 45]}, "f": {"from": [33, 38]}}},
+  {"_": "... the same in Route 111's no-tower layout, which its OnTransition swaps in whenever the Mirage Tower is hidden", "layout": "LAYOUT_ROUTE111_NO_MIRAGE_TOWER", "at": [29, 35], "grid": ["abc", "def"], "legend": {"a": {"from": [32, 37]}, "b": {"from": [21, 40]}, "c": {"from": [33, 37]}, "d": {"from": [32, 38]}, "e": {"from": [15, 45]}, "f": {"from": [33, 38]}}}
  ]
 }

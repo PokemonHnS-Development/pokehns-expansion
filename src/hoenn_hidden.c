@@ -165,6 +165,10 @@ u16 HoennOrchardBerry(void)
 //    saw it leap at you.
 //  - Brendan, the Metagross: Cozmo was charting the meteorite fragments' glow in
 //    Steven's cave that night and told Birch.
+// Part 24a's:
+//  - Brendan, the Singing Sand: the Fossil Maniac sends Birch every fossil he
+//    digs up; he heard the Vibrava humming in the Desert Underpass, then a
+//    battle, and phoned Birch about it.
 u16 HoennHiddenDueCall(void)
 {
     if (FlagGet(FLAG_HOENN_MUNCHLAX_DONE) && !FlagGet(FLAG_HOENN_CALL_MUNCHLAX))
@@ -189,6 +193,8 @@ u16 HoennHiddenDueCall(void)
         return HOENN_CALL_BAGON;
     if (FlagGet(FLAG_HOENN_METAGROSS_SEEN) && !FlagGet(FLAG_HOENN_CALL_METAGROSS))
         return HOENN_CALL_METAGROSS;
+    if (FlagGet(FLAG_HOENN_GOT_SINGING_SAND) && !FlagGet(FLAG_HOENN_CALL_SINGING_SAND))
+        return HOENN_CALL_SINGING_SAND;
     return HOENN_CALL_NONE;
 }
 

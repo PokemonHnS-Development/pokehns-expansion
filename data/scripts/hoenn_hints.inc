@@ -386,130 +386,154 @@ HoennSeek_EventScript_HintNpc47::
 	callstd MSGBOX_NPC
 	end
 
-@ Route34_FishingShack_hoenn
+@ Route111
 HoennSeek_EventScript_HintNpc48::
 	callnative HoennSeek_NpcHint
 	.2byte 48
+	goto_if_eq VAR_RESULT, FALSE, Route111_EventScript_Hiker
+	callstd MSGBOX_NPC
+	end
+
+@ FallarborTown_CozmosHouse
+HoennSeek_EventScript_HintNpc49::
+	callnative HoennSeek_NpcHint
+	.2byte 49
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_Cozmo
+	callstd MSGBOX_NPC
+	end
+
+@ VerdanturfTown_PokemonCenter_1F
+HoennSeek_EventScript_HintNpc50::
+	callnative HoennSeek_NpcHint
+	.2byte 50
+	goto_if_eq VAR_RESULT, FALSE, VerdanturfTown_PokemonCenter_1F_EventScript_Gentleman
+	callstd MSGBOX_NPC
+	end
+
+@ Route34_FishingShack_hoenn
+HoennSeek_EventScript_HintNpc51::
+	callnative HoennSeek_NpcHint
+	.2byte 51
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_HarborOffice_hoenn
-HoennSeek_EventScript_HintNpc49::
+HoennSeek_EventScript_HintNpc52::
 	callnative HoennSeek_NpcHint
-	.2byte 49
+	.2byte 52
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_SailorsHouse_hoenn
-HoennSeek_EventScript_HintNpc50::
+HoennSeek_EventScript_HintNpc53::
 	callnative HoennSeek_NpcHint
-	.2byte 50
+	.2byte 53
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_CaptainsHouse_hoenn
-HoennSeek_EventScript_HintNpc51::
+HoennSeek_EventScript_HintNpc54::
 	callnative HoennSeek_NpcHint
-	.2byte 51
+	.2byte 54
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_TackleShop_hoenn
-HoennSeek_EventScript_HintNpc52::
+HoennSeek_EventScript_HintNpc55::
 	callnative HoennSeek_NpcHint
-	.2byte 52
+	.2byte 55
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_Shipwright_hoenn
-HoennSeek_EventScript_HintNpc53::
+HoennSeek_EventScript_HintNpc56::
 	callnative HoennSeek_NpcHint
-	.2byte 53
+	.2byte 56
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_KeepersHouse_hoenn
-HoennSeek_EventScript_HintNpc54::
+HoennSeek_EventScript_HintNpc57::
 	callnative HoennSeek_NpcHint
-	.2byte 54
+	.2byte 57
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ EcruteakCity_DanceTeacher_hoenn
-HoennSeek_EventScript_HintNpc55::
+HoennSeek_EventScript_HintNpc58::
 	callnative HoennSeek_NpcHint
-	.2byte 55
+	.2byte 58
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ Route34_BreedersHouse_hoenn
-HoennSeek_EventScript_HintNpc56::
+HoennSeek_EventScript_HintNpc59::
 	callnative HoennSeek_NpcHint
-	.2byte 56
+	.2byte 59
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route38_MoomooStoreroom_hoenn
-HoennSeek_EventScript_HintNpc57::
+HoennSeek_EventScript_HintNpc60::
 	callnative HoennSeek_NpcHint
-	.2byte 57
+	.2byte 60
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ BellchimeTrail_Lodge_hoenn
-HoennSeek_EventScript_HintNpc58::
+HoennSeek_EventScript_HintNpc61::
 	callnative HoennSeek_NpcHint
-	.2byte 58
+	.2byte 61
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_BugClub_hoenn
-HoennSeek_EventScript_HintNpc59::
+HoennSeek_EventScript_HintNpc62::
 	callnative HoennSeek_NpcHint
-	.2byte 59
+	.2byte 62
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_EngineersHouse_hoenn
-HoennSeek_EventScript_HintNpc60::
+HoennSeek_EventScript_HintNpc63::
 	callnative HoennSeek_NpcHint
-	.2byte 60
+	.2byte 63
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ CeladonCity_FloristsHouse_hoenn
-HoennSeek_EventScript_HintNpc61::
+HoennSeek_EventScript_HintNpc64::
 	callnative HoennSeek_NpcHint
-	.2byte 61
+	.2byte 64
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_IslandHome_hoenn
-HoennSeek_EventScript_HintNpc62::
+HoennSeek_EventScript_HintNpc65::
 	callnative HoennSeek_NpcHint
-	.2byte 62
+	.2byte 65
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_SurfShop_hoenn
-HoennSeek_EventScript_HintNpc63::
+HoennSeek_EventScript_HintNpc66::
 	callnative HoennSeek_NpcHint
-	.2byte 63
+	.2byte 66
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -722,6 +746,15 @@ HoennSeek_Text_Hint_RumorMetagrossAfter::
 HoennSeek_Text_Hint_RumorMetagrossNotes::
 	.string "Two METANG hover over a glowing\nrock in STEVEN's cave at night,\lonce a week.$"
 
+HoennSeek_Text_Hint_RumorDesert_SongBefore::
+	.string "They say the ROUTE 111 desert hums\nlike a song, but only in\lthe evening.$"
+
+HoennSeek_Text_Hint_RumorDesert_SongAfter::
+	.string "Somebody found what was humming\nunder the desert: a VIBRAVA!$"
+
+HoennSeek_Text_Hint_RumorDesert_SongNotes::
+	.string "The ROUTE 111 desert hums in the\nevening. Follow the TRAPINCH that\lcome up to listen.$"
+
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
 
@@ -877,6 +910,18 @@ HoennSeek_Text_Hint_LineStoryBagon::
 
 HoennSeek_Text_Hint_LineStoryMetagross::
 	.string "My husband stays at METEOR FALLS\novernight. He says the meteorite\lpieces glow in STEVEN's cave.\pOnce a week, METANG gather around\nthe glow. He's sure something\lhappens then!$"
+
+HoennSeek_Text_Hint_LineStoryDesertSong::
+	.string "The desert sings at sunset.\nHonest! A low hum rolls right over\lthe dunes.\pI only ever hear it in the\nevening. The TRAPINCH come up out\lof the sand to listen.$"
+
+HoennSeek_Text_Hint_LineStoryDesertTracks::
+	.string "Tracks that run into a hollow?\nSand drains away there, all\lday long.\pThe old folks in FALLARBOR know\nevery desert story. Go ask them!$"
+
+HoennSeek_Text_Hint_LineStoryDesertElder::
+	.string "The desert sand drains into a\nhollow, you say? It did that when\lI was a boy, too.\pMy father said it runs down under\nROUTE 114, where the FOSSIL MANIAC\ldigs. PROF. COZMO has studied it.$"
+
+HoennSeek_Text_Hint_LineStoryDesertCozmo::
+	.string "Desert sand that hums? It's so\nfine it sings when it slides. And\lit slides underground!\pThe FOSSIL MANIAC's tunnel on\nROUTE 114 runs under the desert:\lthe DESERT UNDERPASS. Try its\lsandy far end.$"
 
 HoennSeek_Text_Hint_Forecast0::
 	.string "Storms are rolling in around ROUTE\n120 {STR_VAR_1}.\pFolks say that's when the white\none walks.$"

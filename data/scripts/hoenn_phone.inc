@@ -38,6 +38,7 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_CHORUS, HoennSeek_EventScript_CallChorus
 	case HOENN_CALL_BAGON, HoennSeek_EventScript_CallBagon
 	case HOENN_CALL_METAGROSS, HoennSeek_EventScript_CallMetagross
+	case HOENN_CALL_SINGING_SAND, HoennSeek_EventScript_CallSingingSand
 	releaseall
 	end
 

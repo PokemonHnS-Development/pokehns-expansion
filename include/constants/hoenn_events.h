@@ -346,4 +346,17 @@
 #define FLAG_HOENN_WEEKLY_METAGROSS     (HOENN_WEEKLY_FLAGS_START + 0x05)
 #define FLAG_HOENN_CALL_METAGROSS       (HOENN_FLAGS_E_HOENN + 0x32) // Brendan
 
+// ---- Part 24a: Flygon's desert song A (data/scripts/hoenn_hidden.inc) ----
+// Route 111, evenings: a hum over the desert, and a Trapinch that scurries off
+// into a sand hollow at the desert's north edge (30,35). Fallarbor's old-timers
+// say the sand drains into the Fossil Maniac's tunnel; in the Desert
+// Underpass's sandy east end a Vibrava fans the sand. Beat it (it can't be
+// caught) and it leaves the Singing Sand. Part 24b continues the chain.
+#define FLAG_HOENN_DESERT_SONG_HEARD    (HOENN_FLAGS_E_HOENN + 0x33) // the Route 111 Trapinch scene played once
+#define FLAG_HOENN_HIDE_DESERT_TRAPINCH (HOENN_FLAGS_E_HOENN + 0x34) // decided on every arrival
+#define FLAG_HOENN_DAILY_DESERT_SONG    (HOENN_DAILY_FLAGS_START + 0x0E) // the scene played today
+#define FLAG_HOENN_HIDE_UNDERPASS_VIBRAVA (HOENN_FLAGS_E_HOENN + 0x35) // decided on every arrival
+#define FLAG_HOENN_GOT_SINGING_SAND     (HOENN_FLAGS_E_HOENN + 0x36) // beat the Vibrava (the Singing Sand)
+#define FLAG_HOENN_CALL_SINGING_SAND    (HOENN_FLAGS_E_HOENN + 0x37) // Brendan
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

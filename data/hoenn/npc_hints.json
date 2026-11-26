@@ -105,6 +105,12 @@
     "STORY_BAGON":    {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_BAGON_CAUGHT"}], "text": ["A BAGON lives deep in METEOR FALLS. Every morning it jumps off a ledge, trying to fly.", "It's been doing it since sunrise for weeks. It never gives up!"]},
     "STORY_METAGROSS": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_METAGROSS_SEEN"}], "text": ["My husband stays at METEOR FALLS overnight. He says the meteorite pieces glow in STEVEN's cave.", "Once a week, METANG gather around the glow. He's sure something happens then!"]},
 
+    "STORY_DESERT_SONG": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_DESERT_SONG_HEARD"}, {"not_flag": "FLAG_HOENN_GOT_SINGING_SAND"}], "text": ["The desert sings at sunset. Honest! A low hum rolls right over the dunes.", "I only ever hear it in the evening. The TRAPINCH come up out of the sand to listen."]},
+    "STORY_DESERT_TRACKS": {"kind": "story", "if": [{"flag": "FLAG_HOENN_DESERT_SONG_HEARD"}, {"not_flag": "FLAG_HOENN_GOT_SINGING_SAND"}], "text": ["Tracks that run into a hollow? Sand drains away there, all day long.", "The old folks in FALLARBOR know every desert story. Go ask them!"]},
+    "STORY_DESERT_ELDER": {"kind": "story", "if": [{"flag": "FLAG_HOENN_DESERT_SONG_HEARD"}, {"not_flag": "FLAG_HOENN_GOT_SINGING_SAND"}], "text": ["The desert sand drains into a hollow, you say? It did that when I was a boy, too.", "My father said it runs down under ROUTE 114, where the FOSSIL MANIAC digs. PROF. COZMO has studied it."]},
+    "STORY_DESERT_COZMO": {"kind": "story", "if": [{"flag": "FLAG_HOENN_DESERT_SONG_HEARD"}, {"not_flag": "FLAG_HOENN_GOT_SINGING_SAND"}], "text": ["Desert sand that hums? It's so fine it sings when it slides. And it slides underground!", "The FOSSIL MANIAC's tunnel on ROUTE 114 runs under the desert: the DESERT UNDERPASS. Try its sandy far end."]},
+    "RUMOR_DESERT_SONG": {"kind": "rumor", "rumor": "DESERT_SONG", "if": [{"not_flag": "FLAG_HOENN_GOT_SINGING_SAND"}]},
+
     "FORECAST":       {"kind": "forecast"}
   },
 
@@ -228,6 +234,12 @@
       "before": ["They say two METANG become one at night, deep in STEVEN's cave at METEOR FALLS."],
       "after": "Somebody saw two METANG fuse into a METAGROSS in STEVEN's cave!",
       "notes": "Two METANG hover over a glowing rock in STEVEN's cave at night, once a week."
+    },
+    "DESERT_SONG": {
+      "found": [{"flag": "FLAG_HOENN_GOT_SINGING_SAND"}],
+      "before": ["They say the ROUTE 111 desert hums like a song, but only in the evening."],
+      "after": "Somebody found what was humming under the desert: a VIBRAVA!",
+      "notes": "The ROUTE 111 desert hums in the evening. Follow the TRAPINCH that come up to listen."
     }
   },
 
@@ -280,8 +292,11 @@
     {"map": "PacifidlogTown",                    "script": "PacifidlogTown_EventScript_Fisherman",                 "lines": ["STORY_WAILORD"]},
     {"map": "MtPyre_Summit",                     "script": "MtPyre_Summit_EventScript_OldLady",                    "lines": ["STORY_CHIMECHO"]},
     {"map": "Route115",                          "script": "Route115_EventScript_Woman",                           "lines": ["STORY_CHORUS"]},
-    {"map": "FallarborTown",                     "script": "FallarborTown_EventScript_Gentleman",                  "lines": ["STORY_BAGON"]},
-    {"map": "FallarborTown_CozmosHouse",         "script": "FallarborTown_CozmosHouse_EventScript_CozmosWife",     "lines": ["STORY_METAGROSS"]}
+    {"map": "FallarborTown",                     "script": "FallarborTown_EventScript_Gentleman",                  "lines": ["STORY_DESERT_ELDER", "STORY_BAGON"]},
+    {"map": "FallarborTown_CozmosHouse",         "script": "FallarborTown_CozmosHouse_EventScript_CozmosWife",     "lines": ["STORY_METAGROSS"]},
+    {"map": "Route111",                          "script": "Route111_EventScript_Hiker",                           "lines": ["STORY_DESERT_SONG", "STORY_DESERT_TRACKS"]},
+    {"map": "FallarborTown_CozmosHouse",         "script": "HoennSeek_EventScript_Cozmo",                          "lines": ["STORY_DESERT_COZMO"]},
+    {"map": "VerdanturfTown_PokemonCenter_1F",   "script": "VerdanturfTown_PokemonCenter_1F_EventScript_Gentleman", "lines": ["RUMOR_DESERT_SONG"]}
   ],
 
   "forecasts": [

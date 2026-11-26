@@ -357,3 +357,10 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Overworld Pokémon re-placed on Routes 102, 113, 114, 119, 120, 131, Petalburg Woods, Mt. Pyre's summit and Meteor Falls: none blocks a path or stands on an event's tiles.
 - Meteor Falls clifftop (22r-b): walk every rock edge of the meadow; nothing walkable outside it, no gap that skips the boulder row; the chorus gives a STAR PIECE.
 - Route 131 atoll (22r-b): land on the ring from the lagoon (its north-facing shores aren't landable, as in Emerald), reach all three item balls and the three hidden HEART SCALEs ((12,29), (18,23), (4,25)), and surf the lagoon for Luvdisc.
+
+## 2.0 part 24a (Flygon desert song A)
+- Route 111 at 6 PM with the Go-Goggles, walking in from Mauville or Route 112 in a real sandstorm (the emulator warped in): the Trapinch is visible and the ring triggers from every side.
+- The hollow at (29–31, 35–36) reads as a patch of drifted sand on both Route 111 layouts (tower shown and hidden), and the scene looks right with the Mirage Tower visible.
+- Save and reload between the hum and the Underpass: the Vibrava is still there; save after the sand: it stays gone.
+- Black out to the Vibrava: it's still there next time, and the hum plays again on entering the nook.
+- Brendan's call about the Singing Sand comes on its own (the emulator forced the call).
