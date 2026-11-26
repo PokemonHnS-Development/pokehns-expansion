@@ -117,7 +117,7 @@ u8 HoennScaleTrainerMonLevel(const struct Trainer *trainer, u8 level)
 #if IS_HNS
 #include "script_pokemon_util.h"
 
-#define HOENN_SCALED_WILD_GAP   8
+// HOENN_SCALED_WILD_GAP (include/hoenn.h): scaled wild Pokémon are this far below the gym ace.
 
 // Special: set up a scripted wild battle against VAR_0x8004's species at the
 // stamp curve minus HOENN_SCALED_WILD_GAP (Lv 60 -> 70). Used for the Route 120

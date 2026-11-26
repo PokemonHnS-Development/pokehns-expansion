@@ -285,6 +285,14 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Calls: Brendan (Munchlax) and May (Slaking) each ring once.
 - [ ] Hint lines: Route 113's ninja boy and gentleman, Petalburg Woods' boy, the Fallarbor and Petalburg Pokémon Center rumors, Birch's aide's field notes.
 
+## 2.0 part 21 — Hidden events B (Tropius, Feebas, Zangoose vs. Seviper)
+- [ ] Find the orchard on your own from the hints (the trunk under Route 119's Fortree sign). Catch the Tropius on a real morning; check Harvest regrows its Sitrus Berry in battle.
+- [ ] The fruit tree over several real days, with and without Tropius leading.
+- [ ] The mirror pool: catch a Feebas (only the knock-out path was tested); it should hold a Prism Scale, and the next one shouldn't. Fish the rest of Route 119 a while: no Feebas.
+- [ ] Zangoose vs. Seviper on a real Sunday evening: catch one of them in the double (catching in a wild double wasn't tested), Toxic Orb + Toxic Boost and Shed Tail in action; next Sunday they're back.
+- [ ] Calls: Brendan (Tropius, feud) and May (Feebas) each ring once.
+- [ ] Hint lines: Fortree's Game Boy kid, the Route 119 boy, Fallarbor's expert, the Fortree and Fallarbor Pokémon Center rumors, Birch's aide's field notes.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

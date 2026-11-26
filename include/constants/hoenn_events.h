@@ -262,4 +262,25 @@
 #define FLAG_HOENN_CALL_SLAKING         (HOENN_FLAGS_E_HOENN + 0x0C) // May
 #define FLAG_HOENN_GOT_GLASS_FLUTE      (HOENN_FLAGS_E_HOENN + 0x0D)
 
+// ---- Part 21: Routes 119 and 114 (data/scripts/hoenn_hidden.inc) ----
+// HoennTuneWildMonSlot's VAR_0x8009 bits (src/hoenn_hidden.c).
+#define HOENN_TUNE_FEMALE          1
+#define HOENN_TUNE_HIDDEN_ABILITY  2
+// Tropius: mornings in a hidden orchard behind Route 119's trees (Route119_Orchard_hoenn).
+#define FLAG_HOENN_TROPIUS_DONE         (HOENN_FLAGS_E_HOENN + 0x0E) // caught
+#define FLAG_HOENN_HIDE_TROPIUS         (HOENN_FLAGS_E_HOENN + 0x0F)
+#define FLAG_HOENN_TROPIUS_MET          (HOENN_FLAGS_E_HOENN + 0x10) // battled once: the fruit tree drops berries
+#define FLAG_HOENN_DAILY_TROPIUS        (HOENN_DAILY_FLAGS_START + 0x09) // battled today
+#define FLAG_HOENN_DAILY_ORCHARD_BERRY  (HOENN_DAILY_FLAGS_START + 0x0A)
+// Feebas: the mirror pool on upper Route 119, evenings and nights, Old Rod, once a day.
+#define FLAG_HOENN_DAILY_FEEBAS         (HOENN_DAILY_FLAGS_START + 0x0B)
+#define FLAG_HOENN_FEEBAS_PRISM_GIVEN   (HOENN_FLAGS_E_HOENN + 0x11) // the first one caught came with a Prism Scale
+// Zangoose vs. Seviper: Route 114's lake island, Sunday evenings and nights, once a week.
+#define FLAG_HOENN_HIDE_FEUD          (HOENN_FLAGS_E_HOENN + 0x12)
+#define FLAG_HOENN_WEEKLY_FEUD        (HOENN_WEEKLY_FLAGS_START + 0x02)
+#define FLAG_HOENN_FEUD_MET           (HOENN_FLAGS_E_HOENN + 0x13)
+#define FLAG_HOENN_CALL_TROPIUS         (HOENN_FLAGS_E_HOENN + 0x14) // Brendan
+#define FLAG_HOENN_CALL_FEEBAS          (HOENN_FLAGS_E_HOENN + 0x15) // May
+#define FLAG_HOENN_CALL_FEUD          (HOENN_FLAGS_E_HOENN + 0x16) // Brendan
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

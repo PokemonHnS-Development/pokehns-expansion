@@ -30,6 +30,7 @@ struct Trainer;
 #if IS_HNS
 u32 HoennCountStamps(void);
 u32 HoennGymAceLevel(void);
+#define HOENN_SCALED_WILD_GAP 8 // scripted wild battles: gym-ace level - 8 (60-70, 77 after Wallace)
 u8 HoennScaleTrainerMonLevel(const struct Trainer *trainer, u8 level);
 void HoennSetupScaledWildBattle(void);
 u16 HoennGetStampCount(void);
@@ -51,6 +52,9 @@ bool32 HoennTryEventCall(void);
 u16 HoennSpeciesDueCall(void);
 u16 HoennHiddenDueCall(void);
 void HoennTuneWildMon(void);
+void HoennTuneWildMonSlot(void);
+void HoennSetupScaledWildDouble(void);
+u16 HoennOrchardBerry(void);
 bool8 HoennPlayerIsRushing(void);
 bool32 HoennIsCallableSpecialSlot(u32 rematchIdx);
 bool32 HoennSpecialCallerAnswers(s32 rematchIdx);
