@@ -93,6 +93,13 @@ Things each part couldn't check in the emulator, so Bryan's real playthrough cov
 - [ ] **Load your real 1.0 mGBA save into the 2.0 part 1 debug patch:** it should Continue normally with your progress intact (flags, Hoenn badges, phone contacts). The emulator test faked a 1.0 save; this is the real one.
 - [ ] Nothing to see in play yet: 2.0 flags only start being used in part 2.
 
+## 2.0 part 2 — Script helpers and debug tools
+Nothing a player sees yet (part 3 adds the first weekday content); these are for the debug patch.
+- [ ] **The weekday on your real save:** debug menu → Utilities → "H&S time & weather…". Until part 3 the game's weekday is arbitrary: day 0 is a Saturday, and a real save's day 0 is the day you set New Bark's wall clock (a debug save that never set it runs one day ahead of the real date). Use SET WEEKDAY to match your real day; does the status line then match your real day and time, and does it stay right after a save and reload?
+- [ ] On your real 1.0/2.0 save (clock set by New Bark's wall clock), NEXT WEEK clears weekly flags and SET WEEKDAY never does. Emulator-tested on a debug save only.
+- [ ] Route 119 and 123 in real play: walk into the rain zones on a "special" day (thunderstorm on 119, rain on 123) and a normal one.
+- [ ] Leave the game on over a real Saturday → Sunday midnight: no freeze or stutter when the week rolls over.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

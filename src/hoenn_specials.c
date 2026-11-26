@@ -230,6 +230,49 @@ void HoennSetAbilitySlot(void)
     SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_ABILITY_NUM, &slot);
 }
 
+// ---- Party checks (2.0 part 2) ------------------------------------------
+// "Any slot" is HnS's own script command: `checkspecies SPECIES_X` sets
+// VAR_RESULT to TRUE if a party Pokémon (not an egg) is that species. These two
+// cover what it doesn't: the lead, and which slot it is. Species are exact IDs,
+// so a regional form or Unown letter is its own species.
+
+// The lead: the first Pokémon that isn't an egg and can still fight. It's the
+// one that goes out first and walks behind the player.
+static struct Pokemon *GetLeadMon(void)
+{
+    u32 i;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        struct Pokemon *mon = &gPlayerParty[i];
+        u32 species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG);
+        if (species != SPECIES_NONE && species != SPECIES_EGG && GetMonData(mon, MON_DATA_HP) > 0)
+            return mon;
+    }
+    return NULL;
+}
+
+// setvar VAR_0x8004, SPECIES_CHINCHOU
+// specialvar VAR_RESULT, HoennLeadIsSpecies   @ TRUE / FALSE
+u16 HoennLeadIsSpecies(void)
+{
+    struct Pokemon *lead = GetLeadMon();
+    return lead != NULL && GetMonData(lead, MON_DATA_SPECIES) == gSpecialVar_0x8004;
+}
+
+// setvar VAR_0x8004, SPECIES_RALTS
+// specialvar VAR_RESULT, HoennFindPartySpecies   @ slot 0-5, or PARTY_SIZE (6) if none
+// The first matching slot, eggs skipped. Use it when the event changes that
+// Pokémon (VAR_RESULT can go straight into VAR_0x8004 for other specials).
+u16 HoennFindPartySpecies(void)
+{
+    u32 i;
+    for (i = 0; i < PARTY_SIZE; i++)
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG) == gSpecialVar_0x8004
+         && gSpecialVar_0x8004 != SPECIES_NONE)
+            return i;
+    return PARTY_SIZE;
+}
+
 #endif // IS_HNS
 
 // specialvar VAR_RESULT, HoennGiveShinyEgg (part 16b): gives a shiny egg of species

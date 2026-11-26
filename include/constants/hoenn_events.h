@@ -60,4 +60,34 @@
 // Each part adds its section below, in roadmap order.
 // ==========================================================================
 
+// ---- Part 2: script helpers (src/hoenn_time.c) ----------------------------
+// The weekday the game shows is the RTC's weekday plus this offset (0-6), so
+// the player can line the game's week up with the real one without moving
+// the day counter (that would run the daily resets and grow berries). Set it
+// only through HoennSetWeekday(), which also keeps the week from rolling over.
+#define VAR_HOENN_WEEKDAY_OFFSET  (HOENN_VARS_A_FOUNDATIONS + 0x00)
+// The week the weekly flags were last reset in, plus one (0 = not seen yet:
+// the next time check only records the week). See HoennUpdatePerWeek().
+#define VAR_HOENN_WEEK_SEEN       (HOENN_VARS_A_FOUNDATIONS + 0x01)
+
+// Weekdays as specialvar VAR_RESULT, GetDayOfWeek returns them. Scripts can't
+// use enum Weekday, so these mirror it (src/hoenn_time.c checks they match).
+#define HOENN_SUNDAY    0
+#define HOENN_MONDAY    1
+#define HOENN_TUESDAY   2
+#define HOENN_WEDNESDAY 3
+#define HOENN_THURSDAY  4
+#define HOENN_FRIDAY    5
+#define HOENN_SATURDAY  6
+
+// The day a new week starts on (weekly flags reset when it begins).
+// Sunday, like the PokéGear calendar and the WEEKDAY_* order.
+#define HOENN_WEEK_STARTS_ON      HOENN_SUNDAY
+
+// Weather cycles are 4 days long (Emerald's weatherCycleStage, 0-3). Part 5
+// gives each cycle route an offset; a route's "special weather" day is the one
+// where (stage + offset) % 4 == HOENN_SPECIAL_WEATHER_STAGE. Stage 2 is Route
+// 119's thunderstorm day in Emerald's own cycle, so offset 0 matches it.
+#define HOENN_SPECIAL_WEATHER_STAGE 2
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

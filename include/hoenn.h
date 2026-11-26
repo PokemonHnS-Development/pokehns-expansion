@@ -43,6 +43,9 @@ void HoennPushAbilityList(void);
 u16 HoennCountOtherAbilities(void);
 void HoennBufferAbilitySlot(void);
 void HoennSetAbilitySlot(void);
+// Party checks (2.0 part 2)
+u16 HoennLeadIsSpecies(void);
+u16 HoennFindPartySpecies(void);
 // PokéGear (src/hoenn_phone.c, part 16d)
 bool32 HoennTryEventCall(void);
 bool32 HoennIsCallableSpecialSlot(u32 rematchIdx);

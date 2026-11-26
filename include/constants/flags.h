@@ -2521,5 +2521,6 @@
 
 #include "constants/hoenn_flags.h" // Hoenn & Seek
 #include "constants/hoenn_custom.h" // Hoenn & Seek
+#include "constants/hoenn_events.h" // Hoenn & Seek 2.0
 
 #endif // GUARD_CONSTANTS_FLAGS_H
