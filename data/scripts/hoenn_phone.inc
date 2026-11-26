@@ -33,6 +33,8 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_FEEBAS, HoennSeek_EventScript_CallFeebas
 	case HOENN_CALL_FEUD, HoennSeek_EventScript_CallFeud
 	case HOENN_CALL_ABSOL, HoennSeek_EventScript_CallAbsol
+	case HOENN_CALL_WAILORD, HoennSeek_EventScript_CallWailord @ 2.0 part 22b
+	case HOENN_CALL_CHIMECHO, HoennSeek_EventScript_CallChimecho
 	releaseall
 	end
 

@@ -28,7 +28,8 @@
 // Tunes one wild Pokémon in gEnemyParty (HoennTuneWildMon: slot 0, no extras).
 //   VAR_0x8005 = a move to teach (MOVE_NONE: none). It replaces the last move,
 //                unless the Pokémon already knows it or has an empty slot.
-//   VAR_0x8006 = TRUE: all six IVs become 31.
+//   VAR_0x8006 = TRUE: all six IVs become 31; HOENN_TUNE_IV_HP (2): only HP's
+//                (part 22b's Wailord).
 //   VAR_0x8007 = held item (ITEM_NONE: keep whatever it rolled).
 // HoennTuneWildMonSlot also reads:
 //   VAR_0x8008 = the party slot (1 = the second Pokémon of a wild double).
@@ -78,7 +79,8 @@ static void TuneWildMon(u32 slot, u32 extras)
     if (VarGet(VAR_0x8006))
     {
         u8 iv = MAX_PER_STAT_IVS;
-        for (i = 0; i < NUM_STATS; i++)
+        u32 stats = VarGet(VAR_0x8006) == HOENN_TUNE_IV_HP ? 1 : NUM_STATS;
+        for (i = 0; i < stats; i++)
             SetMonData(mon, MON_DATA_HP_IV + i, &iv);
         CalculateMonStats(mon);
     }
@@ -145,6 +147,11 @@ u16 HoennOrchardBerry(void)
 //    the fight every Sunday and told Birch (they measure volcanoes together).
 //  - May, Absol (part 22a): WINONA flew home through the storm and saw it from
 //    the air; she told Norman, who hears every gym leader's news.
+// Part 22b's:
+//  - Brendan, the Wailord: Capt. Stern's crew charts the sea near Pacifidlog and
+//    saw it go under from their boat; they told Birch, who funds their surveys.
+//  - May, the Chimecho: her mom tends a grave on Mt. Pyre and heard the chimes
+//    the same night.
 u16 HoennHiddenDueCall(void)
 {
     if (FlagGet(FLAG_HOENN_MUNCHLAX_DONE) && !FlagGet(FLAG_HOENN_CALL_MUNCHLAX))
@@ -159,6 +166,10 @@ u16 HoennHiddenDueCall(void)
         return HOENN_CALL_FEUD;
     if (FlagGet(FLAG_HOENN_ABSOL_WOKEN) && !FlagGet(FLAG_HOENN_CALL_ABSOL))
         return HOENN_CALL_ABSOL;
+    if (FlagGet(FLAG_HOENN_WAILORD_MOVED) && !FlagGet(FLAG_HOENN_CALL_WAILORD))
+        return HOENN_CALL_WAILORD;
+    if (FlagGet(FLAG_HOENN_CHIMECHO_MET) && !FlagGet(FLAG_HOENN_CALL_CHIMECHO))
+        return HOENN_CALL_CHIMECHO;
     return HOENN_CALL_NONE;
 }
 

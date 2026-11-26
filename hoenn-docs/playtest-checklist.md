@@ -302,6 +302,15 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] A Hall of Fame rerun (Johto) while Absol is knocked out: Raikou and Entei come back and Absol still returns at the ridge.
 - [ ] May's call rings once; Fortree's old man, the Lilycove Pokémon Center boy's rumor, the field notes.
 
+## 2.0 part 22b — Wailord's strait and atoll, Chimecho's chimes
+- [ ] Find the Wailord from the Pacifidlog fisherman's hint; on a real Saturday morning, lead with a Wailmer you caught or bred (the test swapped the lead's species in memory).
+- [ ] Catch the Wailord (only knock-outs were tested): the strait's text after a catch, then the lagoon stays empty. Check Steam Eruption and the 31 HP IV in its summary.
+- [ ] The Wailord's sprite in the strait: does it read as "wedged in the gap"? (It's HnS's 32×32 overworld sprite, the size of the strait tile.)
+- [ ] Surf the atoll: every island reachable, the three item balls and three hidden Heart Scales, the Luvdisc-heavy wild table, and the way back out at the top.
+- [ ] Route 131's bottom edge where the cliff's foot was moved back a tile: does it look natural in game?
+- [ ] Chimecho on a real night: follow the chimes from the summit stairs; catch it (only a knock-out was tested). Once caught, no chimes; otherwise once a night.
+- [ ] Calls: Brendan (Wailord) and May (Chimecho) each ring once. Hint lines: the Pacifidlog fisherman, the summit's old lady, the Mossdeep and Slateport Pokémon Center rumors, Birch's aide's field notes.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

@@ -80,6 +80,8 @@
     "RUMOR_TROPIUS":    {"kind": "rumor", "rumor": "TROPIUS", "if": [{"not_flag": "FLAG_HOENN_TROPIUS_MET"}]},
     "RUMOR_FEUD":     {"kind": "rumor", "rumor": "FEUD", "if": [{"not_flag": "FLAG_HOENN_FEUD_MET"}]},
     "RUMOR_ABSOL":    {"kind": "rumor", "rumor": "ABSOL", "if": [{"not_flag": "FLAG_HOENN_ABSOL_CAUGHT"}]},
+    "RUMOR_WAILORD":  {"kind": "rumor", "rumor": "WAILORD", "if": [{"not_flag": "FLAG_HOENN_WAILORD_CAUGHT"}]},
+    "RUMOR_CHIMECHO": {"kind": "rumor", "rumor": "CHIMECHO", "if": [{"not_flag": "FLAG_HOENN_CHIMECHO_CAUGHT"}]},
 
     "STORY_POND":     {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_POND_SEEN"}], "text": ["Every morning a SWAMPERT brings two MUDKIP to this pond to practice.", "When they all dive, you'd better find some shelter!"]},
     "STORY_RALTS":    {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_RALTS_DONE"}], "text": ["Every morning, a GARDEVOIR guards a RALTS by the tall grass near PETALBURG.", "Run up to them and they vanish! Walk slowly, with a POKéMON that really loves you."]},
@@ -94,6 +96,8 @@
     "STORY_FEEBAS":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_FEEBAS_PRISM_GIVEN"}], "text": ["Nobody looks twice at the fish in that little pond up the route.", "Grandpa says it only bites after dark, and only on an OLD ROD."]},
     "STORY_FEUD":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_FEUD_MET"}], "text": ["Every Sunday night, same island on ROUTE 114's lake, same fight.", "ZANGOOSE and SEVIPER. Surf out there if you dare!"]},
     "STORY_ABSOL":  {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_ABSOL_WOKEN"}], "text": ["The white one stands on the cliff when the storm rolls in.", "On ROUTE 120, up on the ridge between the paths. Only on the stormy nights, mind you."]},
+    "STORY_WAILORD":  {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_WAILORD_MOVED"}], "text": ["There's a WAILORD asleep in the rocks off ROUTE 131. Been there since spring.", "It's always listening for its little ones. Saturday mornings, it nearly wakes up."]},
+    "STORY_CHIMECHO": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_CHIMECHO_CAUGHT"}], "text": ["On still nights, the chimes up here ring by themselves.", "Follow the sound between the graves, if you're brave enough."]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -188,6 +192,18 @@
       "before": ["They say a white POKéMON stands over ROUTE 120 on stormy nights. Nobody's ever caught it."],
       "after": "Somebody saw the white one on ROUTE 120's ridge! Now it runs through the grass on stormy nights.",
       "notes": "On ROUTE 120's storm nights, something white watches from the ridge between the paths."
+    },
+    "WAILORD": {
+      "found": [{"flag": "FLAG_HOENN_WAILORD_MOVED"}],
+      "before": ["They say a WAILORD sleeps in a gap in the rocks on ROUTE 131, and nothing will wake it."],
+      "after": "The sleeping WAILORD on ROUTE 131 woke up! There's an atoll past the rocks where it was.",
+      "notes": "A WAILORD blocks a strait on ROUTE 131. It's waiting for its young on Saturday mornings."
+    },
+    "CHIMECHO": {
+      "found": [{"flag": "FLAG_HOENN_CHIMECHO_MET"}],
+      "before": ["They say wind chimes ring on MT. PYRE's summit at night, even when there's no wind."],
+      "after": "Somebody followed the chimes on MT. PYRE's summit and found a CHIMECHO singing!",
+      "notes": "Chimes ring among MT. PYRE's summit graves at night. Follow the sound."
     }
   },
 
@@ -210,12 +226,12 @@
     {"map": "SaffronCity_PokemonCenter_hns",     "script": "SaffronCity_PokemonCenter_EventScript_Teacher",        "lines": ["TIP_NAMERATER_JK"]},
     {"map": "CeladonCity_PokemonCenter_hns",     "script": "CeladonCity_PokemonCenter_EventScript_Pharmacist",     "lines": ["STORY_FERRY", "TIP_LEVEL_CAP", "TIP_CLOCK"]},
     {"map": "OldaleTown_PokemonCenter_1F",       "script": "OldaleTown_PokemonCenter_1F_EventScript_Gentleman",    "lines": ["RUMOR_MASQUERAIN"]},
-    {"map": "SlateportCity_PokemonCenter_1F",    "script": "SlateportCity_PokemonCenter_1F_EventScript_Woman",     "lines": ["STORY_NORMAN", "TIP_NAMERATER_H"]},
+    {"map": "SlateportCity_PokemonCenter_1F",    "script": "SlateportCity_PokemonCenter_1F_EventScript_Woman",     "lines": ["STORY_NORMAN", "TIP_NAMERATER_H", "RUMOR_CHIMECHO"]},
     {"map": "MauvilleCity_PokemonCenter_1F",     "script": "MauvilleCity_PokemonCenter_1F_EventScript_Woman1",     "lines": ["STORY_WATTSON", "RUMOR_CASTFORM"]},
     {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "RUMOR_MUNCHLAX", "RUMOR_SPINDA", "RUMOR_FEUD", "TIP_REMINDER_H", "TIP_SITES"]},
     {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS", "RUMOR_TROPIUS"]},
     {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES", "RUMOR_ABSOL"]},
-    {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP"]},
+    {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP", "RUMOR_WAILORD"]},
     {"map": "Route119_WeatherInstitute_1F",      "script": "Route119_WeatherInstitute_1F_EventScript_InstituteWorker1", "always": true, "lines": ["FORECAST"]},
     {"map": "CianwoodCity_hns",                  "script": "CianwoodCity_EventScript_Youngster",                   "lines": ["STORY_STRAIT_CLOSED", "STORY_STRAIT_OPEN", "STORY_STRAIT_DONE_J"]},
     {"map": "OlivineCity_hns",                   "script": "OlivineCity_EventScript_Sailor1",                      "lines": ["STORY_STRAIT_CLOSED", "STORY_STRAIT_OPEN", "STORY_STRAIT_DONE_J"]},
@@ -236,7 +252,9 @@
     {"map": "FortreeCity",                       "script": "FortreeCity_EventScript_GameboyKid",                   "lines": ["STORY_TROPIUS"]},
     {"map": "Route119",                          "script": "Route119_EventScript_Boy2",                            "lines": ["STORY_FEEBAS"]},
     {"map": "FallarborTown",                     "script": "FallarborTown_EventScript_ExpertM",                    "lines": ["STORY_FEUD"]},
-    {"map": "FortreeCity",                       "script": "FortreeCity_EventScript_OldMan",                       "lines": ["STORY_ABSOL"]}
+    {"map": "FortreeCity",                       "script": "FortreeCity_EventScript_OldMan",                       "lines": ["STORY_ABSOL"]},
+    {"map": "PacifidlogTown",                    "script": "PacifidlogTown_EventScript_Fisherman",                 "lines": ["STORY_WAILORD"]},
+    {"map": "MtPyre_Summit",                     "script": "MtPyre_Summit_EventScript_OldLady",                    "lines": ["STORY_CHIMECHO"]}
   ],
 
   "forecasts": [

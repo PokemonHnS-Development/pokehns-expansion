@@ -218,6 +218,65 @@
       "w": {"from": [17, 82]}
      }}
    ]
+  },
+  "Route131_Atoll_hoenn": {
+   "source": "LAYOUT_ROUTE105",
+   "layout": "LAYOUT_ROUTE131_ATOLL_HOENN",
+   "border": [4, 40],
+   "ops": [
+    {"_": "open sea", "at": [0, 0, 28, 34], "from": [5, 40], "tile": [1, 1]},
+    {"_": "the long tree island (Route 105's)", "at": [16, 6, 9, 21], "from": [10, 42]},
+    {"_": "the long tree island (Route 105's): rock halves cut by the copy", "cells": [[18, 6], [19, 6], [16, 26], [17, 26]], "from": [5, 40]},
+    {"_": "the west tree islet", "at": [5, 9, 6, 11], "from": [3, 51]},
+    {"_": "the southwest tree islet", "at": [2, 20, 7, 10], "from": [4, 70]},
+    {"_": "a sandbar", "at": [11, 26, 5, 6], "from": [11, 70]},
+    {"_": "a sand spit", "at": [21, 29, 5, 4], "from": [13, 67]},
+    {"_": "the reef ring, by hand: brown rocks (abcd) and wave-washed rocks (efgh); the gap between the two rocks at the top (13,0-1) is the strait", "at": [0, 0], "grid": [
+     "ab.....ef..ab.ef....ef..ab..",
+     "cd..ab.gh..cd.gh.ab.gh..cd..",
+     "....cd...........cd.......ab",
+     "..ef......................cd",
+     "..gh........................",
+     "............................",
+     "..........................ef",
+     ".ab.......................gh",
+     ".cd..........ef.............",
+     ".............gh.............",
+     "ef........................ab",
+     "gh........................cd",
+     "............................",
+     "............ab..............",
+     ".ab.........cd...........ef.",
+     ".cd......................gh.",
+     "............................",
+     "............................",
+     "ef........ef................",
+     "gh........gh.............ab.",
+     ".........................cd.",
+     "............................",
+     "..............ab..........ef",
+     "..............cd..........gh",
+     "ab..........................",
+     "cd..........................",
+     "..........................ab",
+     "..........................cd",
+     "............................",
+     "............................",
+     "..........................ef",
+     ".......ab..........ef.....gh",
+     "ab.ef..cd..ef...ab.gh...ab..",
+     "cd.gh......gh...cd......cd.."
+     ], "legend": {
+      "a": {"from": [10, 38]},
+      "b": {"from": [11, 38]},
+      "c": {"from": [10, 39]},
+      "d": {"from": [11, 39]},
+      "e": {"from": [14, 39]},
+      "f": {"from": [15, 39]},
+      "g": {"from": [14, 40]},
+      "h": {"from": [15, 40]}
+     }}
+   ]
   }
  },
  "patches": [
@@ -235,6 +294,24 @@
   {"layout": "LAYOUT_ROUTE25_HNS", "cells": [[99, 8]], "from": [95, 8]},
   {"_": "Route 113: the gap in the southern trees below the item-ball notch (14,15), into the grotto", "layout": "LAYOUT_ROUTE113", "cells": [[14, 16]], "from": [14, 15]},
   {"_": "Petalburg Woods: Slaking's clearing behind the notch at (26,6-7), cut along the 2x2 trees so every tree left is whole; one tree stays at the top (2.0 part 20, redrawn in 21r)", "layout": "LAYOUT_PETALBURG_WOODS", "at": [22, 2], "grid": ["gggg..gg", "gggg..gg", "gggggggg", "gggggggg"], "legend": {"g": {"from": [32, 6], "tile": [2, 2]}}},
-  {"_": "Route 119: the tree trunk at (26,21), below the Fortree sign, is the hidden way into Tropius's orchard (2.0 part 21)", "layout": "LAYOUT_ROUTE119", "clear_collision": [[26, 21]]}
+  {"_": "Route 119: the tree trunk at (26,21), below the Fortree sign, is the hidden way into Tropius's orchard (2.0 part 21)", "layout": "LAYOUT_ROUTE119", "clear_collision": [[26, 21]]},
+  {"_": "Route 131 (2.0 part 22b): the rock beside the nook at (17,38) moves down a row, and the cliff's foot (15-17,39) steps back a tile, so the nook becomes a one-tile strait out of the map's bottom edge, where Wailord sleeps; the strait's last tile (17,39) leads to the atoll", "layout": "LAYOUT_ROUTE131", "cells": [[18, 37], [19, 37]], "from": [14, 36]},
+  {"layout": "LAYOUT_ROUTE131", "cells": [[18, 38]], "from": [14, 32]},
+  {"layout": "LAYOUT_ROUTE131", "cells": [[19, 38]], "from": [15, 32]},
+  {"layout": "LAYOUT_ROUTE131", "cells": [[18, 39]], "from": [14, 33]},
+  {"layout": "LAYOUT_ROUTE131", "cells": [[19, 39]], "from": [15, 33]},
+  {"layout": "LAYOUT_ROUTE131", "cells": [[17, 39]], "from": [14, 36]},
+  {"layout": "LAYOUT_ROUTE131", "cells": [[16, 39]], "from": [16, 38]},
+  {"layout": "LAYOUT_ROUTE131", "cells": [[15, 39]], "from": [15, 38]},
+  {"layout": "LAYOUT_ROUTE131", "cells": [[14, 39]], "from": [14, 38]},
+  {"_": "... the same in Route 131's Sky Pillar layout, which its OnTransition always swaps in", "layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[18, 37], [19, 37]], "from": [14, 36]},
+  {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[18, 38]], "from": [14, 32]},
+  {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[19, 38]], "from": [15, 32]},
+  {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[18, 39]], "from": [14, 33]},
+  {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[19, 39]], "from": [15, 33]},
+  {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[17, 39]], "from": [14, 36]},
+  {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[16, 39]], "from": [16, 38]},
+  {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[15, 39]], "from": [15, 38]},
+  {"layout": "LAYOUT_ROUTE131_SKY_PILLAR", "cells": [[14, 39]], "from": [14, 38]}
  ]
 }

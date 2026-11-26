@@ -16311,6 +16311,18 @@
       "blockdata_filepath": "data/layouts/Route119_Orchard_hoenn/map.bin",
       "game_version": "hns",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE131_ATOLL_HOENN",
+      "name": "Route131_Atoll_hoenn_Layout",
+      "width": 28,
+      "height": 34,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Route131_Atoll_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/Route131_Atoll_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "emerald"
     }
   ]
 }

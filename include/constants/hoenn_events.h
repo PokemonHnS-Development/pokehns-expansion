@@ -296,4 +296,29 @@
 #define HOENN_ABSOL_DOWN    2 // knocked out: the cliff scene brings the same one back
 #define HOENN_ABSOL_CAUGHT  3
 
+// ---- Part 22b: Wailord's strait and atoll, Chimecho's chimes (data/scripts/hoenn_hidden.inc) ----
+// HoennTuneWildMon's VAR_0x8006 value for "only the HP IV becomes 31" (TRUE = all six).
+#define HOENN_TUNE_IV_HP  2
+// Wailord sleeps in a one-tile strait at Route 131's bottom edge (17,38); a Wailmer lead
+// wakes it on Saturday mornings. After its first battle the strait leads to an atoll
+// (Route131_Atoll_hoenn), where it sleeps in the lagoon until it's caught.
+#define FLAG_HOENN_WAILORD_MOVED        (HOENN_FLAGS_E_HOENN + 0x1B) // battled once: the strait is open (its Route 131 object flag)
+#define FLAG_HOENN_WAILORD_CAUGHT       (HOENN_FLAGS_E_HOENN + 0x1C)
+#define FLAG_HOENN_HIDE_WAILORD_ATOLL   (HOENN_FLAGS_E_HOENN + 0x1D) // decided on every arrival
+#define FLAG_HOENN_WEEKLY_WAILORD       (HOENN_WEEKLY_FLAGS_START + 0x03) // battled this week
+#define FLAG_HOENN_ITEM_ATOLL_1         (HOENN_FLAGS_E_HOENN + 0x1E) // the atoll's item balls
+#define FLAG_HOENN_ITEM_ATOLL_2         (HOENN_FLAGS_E_HOENN + 0x1F)
+#define FLAG_HOENN_ITEM_ATOLL_3         (HOENN_FLAGS_E_HOENN + 0x20)
+#define FLAG_HOENN_HIDDEN_ATOLL_1       (HOENN_EVENT_HIDDEN_ITEMS_START + 0x00) // the atoll's hidden Heart Scales
+#define FLAG_HOENN_HIDDEN_ATOLL_2       (HOENN_EVENT_HIDDEN_ITEMS_START + 0x01)
+#define FLAG_HOENN_HIDDEN_ATOLL_3       (HOENN_EVENT_HIDDEN_ITEMS_START + 0x02)
+#define FLAG_HOENN_CALL_WAILORD         (HOENN_FLAGS_E_HOENN + 0x21) // Brendan
+// Chimecho: Mt. Pyre's summit at night, hidden in the top-left graves (8,4); rings of
+// VAR_TEMP_4 triggers on the way make the chimes louder. Once a night until caught.
+#define FLAG_HOENN_CHIMECHO_CAUGHT      (HOENN_FLAGS_E_HOENN + 0x22)
+#define FLAG_HOENN_HIDE_CHIMECHO        (HOENN_FLAGS_E_HOENN + 0x23) // set on every arrival
+#define FLAG_HOENN_CHIMECHO_MET         (HOENN_FLAGS_E_HOENN + 0x24) // battled once (rumor, call)
+#define FLAG_HOENN_DAILY_CHIMECHO       (HOENN_DAILY_FLAGS_START + 0x0C)
+#define FLAG_HOENN_CALL_CHIMECHO        (HOENN_FLAGS_E_HOENN + 0x25) // May
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

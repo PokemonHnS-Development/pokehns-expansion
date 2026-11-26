@@ -3,6 +3,7 @@ MtPyre_Summit_MapScripts::
 	.byte 0
 
 MtPyre_Summit_OnTransition:
+	call HoennSeek_EventScript_PyreSummitOnTransition @ Hoenn & Seek 2.0 part 22b: Chimecho's chimes
 	call_if_eq VAR_MT_PYRE_STATE, 2, MtPyre_Summit_EventScript_SetArchieMaxiePositions
 	end
 
