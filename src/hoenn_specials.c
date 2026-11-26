@@ -8,6 +8,7 @@
 #include "list_menu.h"
 #include "malloc.h"
 #include "pokemon.h"
+#include "pokemon_storage_system.h"
 #include "script.h"
 #include "script_menu.h"
 #include "sound.h"
@@ -287,6 +288,21 @@ u16 HoennGiveShinyEgg(void)
     SetMonData(&mon, MON_DATA_IS_EGG, &isEgg);
     SetMonData(&mon, MON_DATA_IS_SHINY, &isShiny);
     return GiveCapturedMonToPlayer(&mon);
+}
+
+// special HoennMaxFriendshipOfGift (2.0 part 16): call right after givemon, with
+// its result still in VAR_RESULT. The Pokémon it just gave gets max friendship
+// (Charmander, who waited in the rain for someone). givemon fills the first
+// empty party slot (so it's the last one) or stores it in the PC, which
+// records where in gSpecialVar_MonBoxId/MonBoxPos.
+void HoennMaxFriendshipOfGift(void)
+{
+    u8 friendship = MAX_FRIENDSHIP;
+
+    if (gSpecialVar_Result == MON_GIVEN_TO_PARTY && gPlayerPartyCount > 0)
+        SetMonData(&gPlayerParty[gPlayerPartyCount - 1], MON_DATA_FRIENDSHIP, &friendship);
+    else if (gSpecialVar_Result == MON_GIVEN_TO_PC)
+        SetBoxMonData(GetBoxedMonPtr(gSpecialVar_MonBoxId, gSpecialVar_MonBoxPos), MON_DATA_FRIENDSHIP, &friendship);
 }
 
 // Part 20a: overworld Pokémon (HoennSeek_EventScript_OWMon) play their species' cry.

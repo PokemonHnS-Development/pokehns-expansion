@@ -349,6 +349,24 @@
       "var": "VAR_SUICUNE_ENCOUNTERS",
       "var_value": "6",
       "script": "Route25_Trigger_SuicuneRightRight"
+    },
+    {
+      "type": "trigger",
+      "x": 98,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "HoennSeek_EventScript_Route25ToGarden"
+    },
+    {
+      "type": "trigger",
+      "x": 99,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "HoennSeek_EventScript_Route25ToGarden"
     }
   ],
   "bg_events": [

@@ -99,6 +99,11 @@ static u16 GetDueEventCall(void)
     // 2.0 part 15a: Elm told Birch that his runaway Johto starter found you.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && HoennFoundBirchStarter() && !FlagGet(FLAG_HOENN_CALL_STARTER_FOUND))
         return HOENN_CALL_STARTER_FOUND;
+    // 2.0 part 16: Bill told Birch that a Kanto starter chose you (Bulbasaur in
+    // the garden behind his house, Charmander at Nugget Bridge). Part 17 adds Squirtle.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && (FlagGet(FLAG_HOENN_BULBASAUR_DONE) || FlagGet(FLAG_HOENN_CHARMANDER_DONE))
+     && !FlagGet(FLAG_HOENN_CALL_KANTO_STARTER))
+        return HOENN_CALL_KANTO_STARTER;
     // 2.0 part 14: Mr. Briney saw you surf out of the Tidal Strait and told Norman.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_CROSSED_STRAIT) && !FlagGet(FLAG_HOENN_CALL_STRAIT))
         return HOENN_CALL_STRAIT;

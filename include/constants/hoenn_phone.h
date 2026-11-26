@@ -15,5 +15,6 @@
 #define HOENN_CALL_JK_BASE 10 // Brendan: your base is in Johto or Kanto (2.0 part 13a)
 #define HOENN_CALL_STRAIT  11 // May: you surfed the Tidal Strait into Hoenn (2.0 part 14)
 #define HOENN_CALL_STARTER_FOUND 12 // Brendan: Birch's runaway Johto starter is with you (2.0 part 15a)
+#define HOENN_CALL_KANTO_STARTER 13 // May: a Kanto starter from the 2.0 events chose you (2.0 part 16)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

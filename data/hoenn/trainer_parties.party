@@ -3,7 +3,8 @@
 # those header keys; the rest replaces the Pokemon. Gym levels are placeholders:
 # src/hoenn_scaling.c moves the strongest to the stamp curve and keeps the gaps.
 # No Mega Stones anywhere (no Megas in Hoenn & Seek). Elite Four (Lv 76-81) and
-# Wallace (Lv 80-84) have fixed levels.
+# Wallace (Lv 80-84) have fixed levels. 2.0 part 16: TRAINER_LEROY (Emerald's unused
+# slot) is RYDER, Charmander's old trainer outside the Cerulean Gym (fixed Lv 60-63).
 
 === TRAINER_ROXANNE_1 ===
 Items: Full Restore / Full Restore / Hyper Potion
@@ -1436,3 +1437,23 @@ IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Psychic
 - Mystical Fire
 - Calm Mind
+=== TRAINER_LEROY ===
+Name: RYDER
+Items: Full Restore / Full Restore
+AI: Smart Trainer
+
+Ninetales
+Level: 60
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+Rapidash
+Level: 61
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+Magmortar
+Level: 62
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+Arcanine
+Level: 63
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
