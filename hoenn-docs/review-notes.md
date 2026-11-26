@@ -4,6 +4,34 @@ These are open items from Bryan's look at the world and Claude's review of 2.0 p
 
 Coordinates are map tiles `(x, y)` from the map's `map.json`.
 
+## Bryan's decisions (2026-11-26)
+Bryan went through the review items and the choices from parts 5–17. These replace the matching "Picked without Bryan" lines in the PRs and the plan. **Part 17r** does them (roadmap, Phase D). Until it's merged, don't change these areas from another session.
+
+**Gameplay**
+- **Johto starters: no gate.** All three scenes are there from the start of Johto, not after Brendan & May. The unclaimed one is **an escapee from Elm's lab**, not Birch's ferry runaway. Elm's aide gives the hint, and it joins once it smells the lab on you. The calls and hints are reworded to match.
+- **The wild one like your rival's** is at the area's level (about Route 46's, the Burned Tower's or Lake of Rage's wild level), not Hoenn's scaling.
+- **Egg moves stay:** Aromatherapy, Extrasensory, Dragon Dance.
+- **The meadow's wild grass stays Lv 3–8,** a baby-Pokémon meadow on purpose.
+- **Totodile goes back to the plan:** a fisherman at Lake of Rage whose lines keep getting bitten. Fish his spot with the **Good Rod** and a Totodile clamps on. The Feraligatr-in-the-cove scene goes.
+- **Weather days: trim to the plan.** Only routes where the weather fits get a special day; inland routes stay normal. Part 17r proposes the list in its PR.
+- **Castform stays at 1–2 %.**
+- **Charmander: evening only** (HnS's 6–7 PM), not nights.
+- **The Squirtle Squad keeps its single trap.**
+- **RYDER becomes DAMIAN** (the anime Charmander's trainer). His levels scale with your badges.
+- **Route 26/27's replacements stay** (Sandslash, Raticate, Quagsire, Noctowl).
+- **Kept as built:** TV forecasts (no radio), the name Tidal Strait, Chimecho for HnS's Safari Brush slot, dolls at ₽6,000.
+
+**Look**
+- **Rock base entrances: style B,** Emerald's solid square recess (Route 45, Mt. Moon). The tree entrances stay style A.
+- **Base spots move off the walking path:** Sky Pillar (item 3) and the three Regi rooms (item 5). The chamber interiors' colours stay.
+- **The meadow, the garden and the Squirtle hideout get a hand-made look.** Mockups go to Bryan before they're built.
+- **Battle backgrounds:** keep the picks (desert dunes, ash, graves) and fix the two nits (item 9).
+- **Leaders' Pokémon stand behind them where there's room** (item 6).
+
+**Text:** every new line from parts 5–17 goes into one doc, grouped by place, for Bryan to comment on.
+
+**Bugs:** items 7, 8, 10 and 14, and the full map group (item 13), are fixed in part 17r.
+
 ## Open
 
 ### 1. Choices made without Bryan's approval (parts 5–17)
