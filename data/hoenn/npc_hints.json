@@ -69,6 +69,13 @@
     "RUMOR_FEEBAS":     {"kind": "rumor", "rumor": "FEEBAS"},
     "RUMOR_MASQUERAIN": {"kind": "rumor", "rumor": "MASQUERAIN"},
     "RUMOR_LAPRAS":     {"kind": "rumor", "rumor": "LAPRAS"},
+    "RUMOR_RALTS":      {"kind": "rumor", "rumor": "RALTS"},
+    "RUMOR_MACHAMP":    {"kind": "rumor", "rumor": "MACHAMP"},
+    "RUMOR_SCIZOR":     {"kind": "rumor", "rumor": "SCIZOR"},
+
+    "STORY_POND":     {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_POND_SEEN"}], "text": ["Every morning a SWAMPERT brings two MUDKIP to this pond to practice.", "When they all dive, you'd better find some shelter!"]},
+    "STORY_RALTS":    {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_RALTS_DONE"}], "text": ["Every morning, a GARDEVOIR guards a RALTS by the tall grass near PETALBURG.", "Run up to them and they vanish! Walk slowly, with a POKéMON that really loves you."]},
+    "STORY_SCIZOR":   {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_SCIZOR_QUICK_CLAW"}], "text": ["Some evenings you can hear blades clashing behind the trees in the north-east corner.", "TUESDAYS, THURSDAYS, SATURDAYS… the old contest days. Watch from the little path at the top of the park!"]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -97,6 +104,24 @@
       "before": "Every Friday, a LAPRAS is said to sing deep down in UNION CAVE.",
       "after": "Somebody met UNION CAVE's Friday LAPRAS! Its song is real after all.",
       "notes": "Deep in a JOHTO cave, a song can be heard once a week. Which day was it…?"
+    },
+    "RALTS": {
+      "found": [{"flag": "FLAG_HOENN_RALTS_DONE"}],
+      "before": ["They say the only RALTS in HOENN lives on ROUTE 102, with a GARDEVOIR watching over it.", "It won't let just anyone near."],
+      "after": "Someone earned that GARDEVOIR's trust! The RALTS on ROUTE 102 went with them.",
+      "notes": ["On a quiet HOENN route, a guardian reads the hearts of those who come near.", "Come in the morning, and don't rush."]
+    },
+    "MACHAMP": {
+      "found": [{"flag": "FLAG_HOENN_KIYO_BLACK_BELT"}],
+      "before": "The KARATE KING in MT. MORTAR spars with a wild MACHAMP every morning, they say.",
+      "after": "Somebody watched KIYO's morning match with that MACHAMP! Not a peep the whole time, I heard.",
+      "notes": "Deep in a JOHTO mountain, two fighters meet every morning. Watch quietly…"
+    },
+    "SCIZOR": {
+      "found": [{"flag": "FLAG_HOENN_SCIZOR_QUICK_CLAW"}],
+      "before": ["On TUESDAY, THURSDAY and SATURDAY evenings, the SCYTHER behind the NATIONAL PARK's trees duel.", "They say a SCIZOR breaks it up!"],
+      "after": "Somebody saw the NATIONAL PARK's SCIZOR! It's so fast, nobody had ever seen it properly.",
+      "notes": "In a JOHTO park, blades clash at dusk on the bug contest's old days."
     }
   },
 
@@ -106,11 +131,11 @@
     {"map": "CherrygroveCity_PokemonCenter_hns", "script": "CherryGrove_Pokecenter_EventScript_Gentleman", "lines": ["TIP_CLOCK"]},
     {"map": "VioletCity_PokemonCenter_hns",      "script": "VioletCity_PokemonCenter_EventScript_Man",             "lines": ["TIP_LEVEL_CAP", "TIP_CLOCK"]},
     {"map": "AzaleaTown_PokemonCenter_hns",      "script": "AzaleaPokeCenter_EventScript_Gentleman",       "lines": ["TIP_JK_BASES", "RUMOR_LAPRAS"]},
-    {"map": "GoldenrodCity_PokemonCenter_hns",   "script": "GoldenrodCity_PokemonCenter_EventScript_Granny",       "lines": ["TIP_NAMERATER_JK"]},
+    {"map": "GoldenrodCity_PokemonCenter_hns",   "script": "GoldenrodCity_PokemonCenter_EventScript_Granny",       "lines": ["TIP_NAMERATER_JK", "RUMOR_SCIZOR"]},
     {"map": "EcruteakCity_PokemonCenter_hns",    "script": "EcruteakCity_PokemonCenter_EventScript_Hiker",         "lines": ["TIP_WEATHER"]},
     {"map": "OlivineCity_PokemonCenter_hns",     "script": "OlivineCity_EventScript_Teacher",        "lines": ["STORY_FERRY", "TIP_REMINDER_JK"]},
-    {"map": "CianwoodPokecenter_hns",            "script": "CianwoodPokecenter_EventScript_Nerd",                  "lines": ["TIP_LEVEL_CAP", "TIP_WEATHER"]},
-    {"map": "MahoganyTown_PokemonCenter_hns",    "script": "MahoganyTown_PokemonCenter_EventScript_Hiker",         "lines": ["RUMOR_LAPRAS"]},
+    {"map": "CianwoodPokecenter_hns",            "script": "CianwoodPokecenter_EventScript_Nerd",                  "lines": ["TIP_LEVEL_CAP", "TIP_WEATHER", "RUMOR_MACHAMP"]},
+    {"map": "MahoganyTown_PokemonCenter_hns",    "script": "MahoganyTown_PokemonCenter_EventScript_Hiker",         "lines": ["RUMOR_LAPRAS", "RUMOR_MACHAMP"]},
     {"map": "BlackthornCity_PokemonCenter_hns",  "script": "BlackthornCity_PokemonCenter_EventScript_Gent",        "lines": ["TIP_JK_BASES", "TIP_REMINDER_JK"]},
     {"map": "PewterCity_PokemonCenter_hns",      "script": "PewterCity_PokemonCenter_EventScript_Teacher",         "lines": ["TIP_JK_BASES", "TIP_LEVEL_CAP", "TIP_CLOCK"]},
     {"map": "CeruleanCity_PokemonCenter_hns",    "script": "CeruleanCity_PokemonCenter_EventScript_Guy",           "lines": ["STORY_CERULEAN_CHARMANDER", "TIP_WEATHER"]},
@@ -132,7 +157,11 @@
     {"map": "IndigoPlateau_PokemonCenter_hns",   "script": "IndigoPlateau_EventScript_Silver",                     "lines": ["STORY_SILVER_CYNDAQUIL", "STORY_SILVER_TOTODILE", "STORY_SILVER_CHIKORITA"]},
     {"map": "NewBarkTown_PlayersHouse_1F_hns",   "script": "NewBarkTown_PlayersHouse_1F_EventScript_Mom",          "lines": ["STORY_MOM_CHIKORITA", "STORY_MOM_CYNDAQUIL", "STORY_MOM_TOTODILE"]},
     {"map": "NewBarkTown_Lab_hns",               "script": "NewBarkTown_EventScript_Aide2",                        "lines": ["STORY_AIDE_RUNAWAY_TOTODILE", "STORY_AIDE_RUNAWAY_CHIKORITA", "STORY_AIDE_RUNAWAY_CYNDAQUIL", "STORY_AIDE_CHIKORITA", "STORY_AIDE_CYNDAQUIL", "STORY_AIDE_TOTODILE"]},
-    {"map": "Route25_BillsHouse_hns",            "script": "Route25_BillsHouse_EventScript_Gramps",                "lines": ["STORY_BILL_GARDEN"]}
+    {"map": "Route25_BillsHouse_hns",            "script": "Route25_BillsHouse_EventScript_Gramps",                "lines": ["STORY_BILL_GARDEN"]},
+    {"map": "Route102",                          "script": "Route102_EventScript_LittleBoy",                       "lines": ["STORY_RALTS"]},
+    {"map": "Route102",                          "script": "Route102_EventScript_Boy",                             "lines": ["STORY_POND"]},
+    {"map": "PetalburgCity_PokemonCenter_1F",    "script": "PetalburgCity_PokemonCenter_1F_EventScript_Woman",     "lines": ["RUMOR_RALTS"]},
+    {"map": "NationalPark_Normal_hns",           "script": "NationalPark_Normal_EventScript_Lass",                 "lines": ["STORY_SCIZOR"]}
   ],
 
   "forecasts": [

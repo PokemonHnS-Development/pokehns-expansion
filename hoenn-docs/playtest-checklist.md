@@ -258,6 +258,16 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] May's call if the Squirtle is your first Kanto starter from these events (needs her number from Birch).
 - [ ] Save and reload in the hideout and right after the fire.
 
+## 2.0 part 18 — Species events A (Route 102, Kiyo, Scizor)
+- [ ] Route 102 mornings: the Swampert and two Mudkip in the pond; walking toward the bank plays the practice, the dive and a rain shower. Not on Route 102's rain day, not twice in a morning, nobody there after 10 AM.
+- [ ] Route 102 mornings: Gardevoir and Ralts on the open patch east of the tall grass by Petalburg. Running or biking up makes them teleport away until tomorrow; walking up with a lead below max friendship gets a head shake (and you can try again after leaving the route).
+- [ ] With a max-friendship lead on three different mornings, the Ralts joins: Lv 5, ability **Telepathy**, nickname prompt. With party and boxes full it waits, and talking to it later (or the next morning) lets it join.
+- [ ] Ralts by a real player's route: get a lead to max friendship the normal way (Soothe Bell, walking, Vitamins), not by the harness's memory edit.
+- [ ] Mt. Mortar B1F mornings: Kiyo spars with a Machamp as you come up to him; Black Belt the first time, a short line on later mornings. Kiyo's own battle and Tyrogue gift still work afterwards.
+- [ ] National Park, Tuesday/Thursday/Saturday 6–7 PM: the Scyther duel from the little path at the top of the park, the Scizor, the Quick Claw (once). Other days and hours: the two Scyther just wander.
+- [ ] Calls: Brendan (the pond, Kiyo), May (Scizor), Wally (the Ralts, once you have his number from Victory Road). Each rings once.
+- [ ] The new hint lines: Route 102's two boys, the Petalburg Pokémon Center woman, the National Park lass, the Mahogany/Cianwood/Goldenrod Pokémon Center NPCs' rumors, and Birch's aide's field notes.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

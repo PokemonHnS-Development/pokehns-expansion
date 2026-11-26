@@ -128,7 +128,7 @@ static u16 GetDueEventCall(void)
     // Part 18: one of Birch's aides saw you duck into your new secret base.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && gSaveBlock1Ptr->secretBases[0].secretBaseId != 0 && !FlagGet(FLAG_HOENN_CALL_BASE))
         return HOENN_CALL_BASE;
-    return HOENN_CALL_NONE;
+    return HoennSpeciesDueCall(); // 2.0 parts 18+ (src/hoenn_species.c)
 }
 
 bool32 HoennTryEventCall(void)

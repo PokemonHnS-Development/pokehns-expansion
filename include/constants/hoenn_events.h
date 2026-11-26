@@ -191,4 +191,36 @@
 // scene), 2 = met them (Vermilion's fire waits for night), 3 = the leader joined.
 #define VAR_HOENN_SQUIRTLE_STATE        (HOENN_VARS_D_EVENTS + 0x01)
 
+// ---- Part 18: species events A (data/scripts/hoenn_species.inc) ------------
+// Route 102, mornings: a Swampert watches two Mudkip practice in the pond, then
+// they dive just before a sudden shower (watch-only). Not on the route's rain day.
+#define FLAG_HOENN_HIDE_POND_FAMILY     (HOENN_FLAGS_D_SPECIES + 0x00) // Swampert and two Mudkip
+#define FLAG_HOENN_POND_SEEN            (HOENN_FLAGS_D_SPECIES + 0x01) // the dive played once
+// Route 102, mornings: a Gardevoir guards a Ralts near Petalburg. Walk up (no
+// running, no bike) with a max-friendship lead on three mornings; on the third
+// the Ralts joins you (hidden ability Telepathy). Rush in and they teleport away.
+#define FLAG_HOENN_HIDE_RALTS           (HOENN_FLAGS_D_SPECIES + 0x02) // Gardevoir and the Ralts
+#define FLAG_HOENN_RALTS_DONE           (HOENN_FLAGS_D_SPECIES + 0x03) // it joined you
+// Mt. Mortar B1F, mornings: Kiyo spars with a wild Machamp. Watch the match and
+// he gives you a Black Belt (once).
+#define FLAG_HOENN_HIDE_KIYO_MACHAMP    (HOENN_FLAGS_D_SPECIES + 0x04)
+#define FLAG_HOENN_KIYO_BLACK_BELT      (HOENN_FLAGS_D_SPECIES + 0x05)
+// National Park, Tue/Thu/Sat evenings: a Scizor ends the Scyther duel in the
+// back field and flicks a Quick Claw over the trees (once).
+#define FLAG_HOENN_HIDE_SCIZOR          (HOENN_FLAGS_D_SPECIES + 0x06)
+#define FLAG_HOENN_SCIZOR_QUICK_CLAW    (HOENN_FLAGS_D_SPECIES + 0x07)
+// PokéGear event calls (src/hoenn_species.c).
+#define FLAG_HOENN_CALL_POND            (HOENN_FLAGS_D_SPECIES + 0x08) // Brendan
+#define FLAG_HOENN_CALL_RALTS           (HOENN_FLAGS_D_SPECIES + 0x09) // Wally
+#define FLAG_HOENN_CALL_KIYO            (HOENN_FLAGS_D_SPECIES + 0x0A) // Brendan
+#define FLAG_HOENN_CALL_SCIZOR          (HOENN_FLAGS_D_SPECIES + 0x0B) // May
+// Once a day each: the scene played (or the Ralts visit counted, or they teleported away).
+#define FLAG_HOENN_DAILY_POND           (HOENN_DAILY_FLAGS_START + 0x02)
+#define FLAG_HOENN_DAILY_RALTS          (HOENN_DAILY_FLAGS_START + 0x03) // visited today
+#define FLAG_HOENN_DAILY_RALTS_GONE     (HOENN_DAILY_FLAGS_START + 0x04) // ...and you rushed: gone till tomorrow
+#define FLAG_HOENN_DAILY_KIYO_MATCH     (HOENN_DAILY_FLAGS_START + 0x05)
+#define FLAG_HOENN_DAILY_SCIZOR         (HOENN_DAILY_FLAGS_START + 0x06)
+// Mornings the Ralts has seen you come calmly with a Pokémon that loves you (0-3).
+#define VAR_HOENN_RALTS_MORNINGS        (HOENN_VARS_D_EVENTS + 0x02)
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

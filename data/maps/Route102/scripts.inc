@@ -1,4 +1,5 @@
 Route102_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_Route102OnTransition @ Hoenn & Seek 2.0 part 18
 	.byte 0
 
 Route102_EventScript_LittleBoy::

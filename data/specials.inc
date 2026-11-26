@@ -742,3 +742,4 @@ gSpecials::
 	def_special HoennDebugReloadMap
 	def_special HoennIsItWeekday
 	def_special HoennSetWeekdayFromChoice
+	def_special HoennPlayerIsRushing
