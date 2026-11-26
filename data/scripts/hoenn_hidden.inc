@@ -1554,8 +1554,8 @@ HoennSeek_Text_MetangHover:
 	.string "glowing rock, humming together…$"
 
 HoennSeek_Text_MetagrossFused:
-	.string "The two METANG fused into a\n"
-	.string "METAGROSS!$"
+	.string "In a flash of light, the two\n"
+	.string "METANG fused into a METAGROSS!$"
 
 HoennSeek_Text_MetagrossGone:
 	.string "The METAGROSS lumbered off into\n"
@@ -1593,6 +1593,6 @@ HoennSeek_Text_CallMetagross:
 	.string "He was charting how the\n"
 	.string "meteorite pieces glow, when\l"
 	.string "two METANG fused right in\l"
-	.string "front of him. And of you!\p"
+	.string "front of him. You saw it too!\p"
 	.string "Dad's never even seen that\n"
 	.string "happen. Lucky!$"

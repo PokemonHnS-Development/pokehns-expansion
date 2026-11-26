@@ -32,6 +32,7 @@
 //                                              and the encounters use the same test)
 #include "global.h"
 #include "event_data.h"
+#include "field_player_avatar.h"
 #include "move.h"
 #include "ow_synchronize.h"
 #include "battle.h"
@@ -83,10 +84,12 @@ u16 HoennAbsolIsOut(void)
         && (time == TIME_EVENING || time == TIME_NIGHT);
 }
 
-// Hook in IsRoamerAt.
+// Hook in IsRoamerAt. Not while you surf (22r, Bryan): TryStartRoamerEncounter
+// also runs for water encounters, and Absol doesn't swim out of Route 120's ponds.
 bool32 HoennAbsolIsAt(u32 roamerIndex, u8 mapGroup, u8 mapNum)
 {
     return gSaveBlock1Ptr->roamer[roamerIndex].active
+        && !TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING)
         && gSaveBlock1Ptr->roamer[roamerIndex].hp != 0
         && mapGroup == ABSOL_MAP_GROUP && mapNum == ABSOL_MAP_NUM
         && HoennAbsolIsOut();

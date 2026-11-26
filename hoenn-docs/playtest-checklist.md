@@ -350,3 +350,8 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Route 113: the Munchlax at (14,14) is fully visible and the gap behind it still leads into the grotto once it's gone.
 - The orchard tree outside the morning ("The fruit is still up in the branches…"), then a berry in the morning.
 - The grotto (21r-b): leave by each of its four bottom tiles (x 6–9); the trees along its path aren't cut.
+
+## 2.0 part 22r (review fixes for parts 22a–23)
+- Route 131: surf in from the open sea through the new channel ((20,33), then down between the rocks) to the sleeping Wailord, without warping.
+- Route 120 on a storm night: surfing its ponds never brings out Absol; the grass still does.
+- Overworld Pokémon re-placed on Routes 102, 113, 114, 119, 120, 131, Petalburg Woods, Mt. Pyre's summit and Meteor Falls: none blocks a path or stands on an event's tiles.

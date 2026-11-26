@@ -148,7 +148,7 @@ Reproduced in the emulator.
 - **Machamp reward:** Black Belt (plan: Macho Brace or Black Belt). Slaking's clearing already has a Macho Brace.
 - **The Slowking's prophecy** is original wording (the plan quoted the film; original is right for copyright).
 
-### 21. The Wailord can't be reached (part 22b) — **blocker**
+### 21. The Wailord can't be reached (part 22b) — **done in 22r-a** (the rock at (18–19, 33–34) removed; surfed in from open water in the emulator)
 - The strait's water pocket on Route 131 (x 13–19, rows 33–37) is closed off by rock on every side. You can't surf into it from the sea, from Route 130 or from the bottom strip. The only way out is the Wailord's tile and its warp to the atoll, so the Wailord and the atoll can't be reached in normal play. The emulator agrees: from (11,32) you can't move toward it, and from inside (16,36) you can't move out.
 - More evidence: part 20a's overworld-Pokémon generator put a Tentacruel at (15,36) and a Pelipper at (18,35) in that pocket because it found the pocket unreachable. A third Tentacruel sits at (16,32) in a one-tile gap above it. Part 22b's tests reached the Wailord by warping.
 - **Fix:** open a channel from the main sea into the pocket (the `composed_maps.json` patches on both Route 131 layouts), then re-run `gen_hoenn_ow_mons.py` so no Pokémon sits on the new path. Check it in the emulator by surfing in from open water, not by warping.
@@ -168,7 +168,7 @@ Reproduced in the emulator.
   - Bagon's hint going to Fallarbor's gentleman.
   - All new text and callers.
 
-### 24. Small things from parts 22a–23
+### 24. Small things from parts 22a–23 — **done in 22r-a** (new texts: "In a flash of light, the two METANG fused into a METAGROSS!", "You saw it too!"; Absol never meets you while surfing (Bryan); the overworld Pokémon re-run moved the Glooms off the ridge; section 14 ticked)
 - **Text:**
   - `HoennSeek_Text_MetagrossFused` ends on a one-word line ("METAGROSS!"), which the CLAUDE.md rule forbids.
   - Brendan's Metagross call ends with "right in front of him. And of you!", which reads oddly.
