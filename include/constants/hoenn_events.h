@@ -111,5 +111,7 @@
 // ---- Parts 8a-11: opened buildings (data/hoenn/buildings.json) -------------
 // Olivine lighthouse keeper's wife: one find from the shore a day (part 8b).
 #define FLAG_HOENN_DAILY_KEEPER_GIFT  (HOENN_DAILY_FLAGS_START + 0x00)
+// Celadon florist: one berry a day, by weekday (part 10).
+#define FLAG_HOENN_DAILY_FLORIST_GIFT (HOENN_DAILY_FLAGS_START + 0x01)
 
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

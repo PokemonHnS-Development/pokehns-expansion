@@ -5,23 +5,66 @@ OlivineCity_KeepersHouse_hoenn_MapScripts::
 	.byte 0
 
 OlivineCity_KeepersHouse_hoenn_EventScript_Npc0::
-	goto HoennSeek_EventScript_OlivineKeeperGift
+	lock
+	faceplayer
+	goto_if_set FLAG_HOENN_DAILY_KEEPER_GIFT, OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Done
+	msgbox OlivineCity_KeepersHouse_hoenn_Text_Npc0_Intro, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, GetDayOfWeek
+	switch VAR_RESULT
+	case HOENN_SUNDAY, OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Item0
+	case HOENN_MONDAY, OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Item1
+	case HOENN_TUESDAY, OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Item2
+	case HOENN_WEDNESDAY, OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Item1
+	case HOENN_THURSDAY, OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Item2
+	case HOENN_FRIDAY, OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Item1
+	case HOENN_SATURDAY, OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Item0
+	release
+	end
+
+OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Item0::
+	giveitem ITEM_BIG_PEARL
+	goto OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Given
+
+OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Item1::
+	giveitem ITEM_PEARL
+	goto OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Given
+
+OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Item2::
+	giveitem ITEM_STARDUST
+	goto OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Given
+
+OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Given::
+	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Full
+	setflag FLAG_HOENN_DAILY_KEEPER_GIFT
+	msgbox OlivineCity_KeepersHouse_hoenn_Text_Npc0_After, MSGBOX_DEFAULT
+	release
+	end
+
+OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Full::
+	msgbox OlivineCity_KeepersHouse_hoenn_Text_Npc0_Full, MSGBOX_DEFAULT
+	release
+	end
+
+OlivineCity_KeepersHouse_hoenn_EventScript_Npc0_Done::
+	msgbox OlivineCity_KeepersHouse_hoenn_Text_Npc0_Done, MSGBOX_DEFAULT
+	release
+	end
 
 OlivineCity_KeepersHouse_hoenn_EventScript_Npc1::
 	msgbox OlivineCity_KeepersHouse_hoenn_Text_Npc1, MSGBOX_NPC
 	end
 
-OlivineCity_KeepersHouse_hoenn_Text_Npc1:
-	.string "I've kept the LIGHTHOUSE for\nthirty years, and AMPHY lights the\llamp now.\pJASMINE climbs up every evening\nafter the GYM closes, just to say\lgoodnight to it.$"
-
-OlivineCity_KeepersHouse_hoenn_Text_GiftIntro::
+OlivineCity_KeepersHouse_hoenn_Text_Npc0_Intro:
 	.string "The tide leaves all sorts of\nthings on the rocks below the\lLIGHTHOUSE. I go down every\lmorning. Here's today's find!$"
 
-OlivineCity_KeepersHouse_hoenn_Text_GiftAfter::
+OlivineCity_KeepersHouse_hoenn_Text_Npc0_After:
 	.string "Come back tomorrow. The sea always\nbrings something new.$"
 
-OlivineCity_KeepersHouse_hoenn_Text_GiftBagFull::
+OlivineCity_KeepersHouse_hoenn_Text_Npc0_Full:
 	.string "Oh, your BAG is full! I'll keep it\nfor you until you make room.$"
 
-OlivineCity_KeepersHouse_hoenn_Text_GiftDone::
+OlivineCity_KeepersHouse_hoenn_Text_Npc0_Done:
 	.string "I've already been down to the\nrocks today. Come back tomorrow!$"
+
+OlivineCity_KeepersHouse_hoenn_Text_Npc1:
+	.string "I've kept the LIGHTHOUSE for\nthirty years, and AMPHY lights the\llamp now.\pJASMINE climbs up every evening\nafter the GYM closes, just to say\lgoodnight to it.$"

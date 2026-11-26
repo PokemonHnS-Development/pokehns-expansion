@@ -73,45 +73,4 @@ HoennSeek_OlivineTackleShop_Items:
 	.2byte ITEM_MAX_REPEL
 	pokemartlistend
 
-@ ---- Olivine City: lighthouse keeper's wife (daily find) ---------------------
-@ One item a day from the shore below the lighthouse, by weekday: a Big Pearl at
-@ the weekend, Stardust on Tuesdays and Thursdays, a Pearl otherwise. The flag is
-@ only set once the item fits in the bag.
-HoennSeek_EventScript_OlivineKeeperGift::
-	lock
-	faceplayer
-	goto_if_set FLAG_HOENN_DAILY_KEEPER_GIFT, HoennSeek_EventScript_OlivineKeeperGiftDone
-	msgbox OlivineCity_KeepersHouse_hoenn_Text_GiftIntro, MSGBOX_DEFAULT
-	specialvar VAR_RESULT, GetDayOfWeek
-	switch VAR_RESULT
-	case HOENN_SUNDAY, HoennSeek_EventScript_OlivineKeeperBigPearl
-	case HOENN_SATURDAY, HoennSeek_EventScript_OlivineKeeperBigPearl
-	case HOENN_TUESDAY, HoennSeek_EventScript_OlivineKeeperStardust
-	case HOENN_THURSDAY, HoennSeek_EventScript_OlivineKeeperStardust
-	giveitem ITEM_PEARL
-	goto HoennSeek_EventScript_OlivineKeeperGiven
-
-HoennSeek_EventScript_OlivineKeeperBigPearl::
-	giveitem ITEM_BIG_PEARL
-	goto HoennSeek_EventScript_OlivineKeeperGiven
-
-HoennSeek_EventScript_OlivineKeeperStardust::
-	giveitem ITEM_STARDUST
-	goto HoennSeek_EventScript_OlivineKeeperGiven
-
-HoennSeek_EventScript_OlivineKeeperGiven::
-	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_OlivineKeeperBagFull
-	setflag FLAG_HOENN_DAILY_KEEPER_GIFT
-	msgbox OlivineCity_KeepersHouse_hoenn_Text_GiftAfter, MSGBOX_DEFAULT
-	release
-	end
-
-HoennSeek_EventScript_OlivineKeeperBagFull::
-	msgbox OlivineCity_KeepersHouse_hoenn_Text_GiftBagFull, MSGBOX_DEFAULT
-	release
-	end
-
-HoennSeek_EventScript_OlivineKeeperGiftDone::
-	msgbox OlivineCity_KeepersHouse_hoenn_Text_GiftDone, MSGBOX_DEFAULT
-	release
-	end
+@ The lighthouse keeper's wife's daily find is a generated daily_gift (buildings.json).

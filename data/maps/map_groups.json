@@ -724,7 +724,10 @@
     "EcruteakCity_DanceTeacher_hoenn",
     "Route34_BreedersHouse_hoenn",
     "Route38_MoomooStoreroom_hoenn",
-    "BellchimeTrail_Lodge_hoenn"
+    "BellchimeTrail_Lodge_hoenn",
+    "Route6_BugClub_hoenn",
+    "Route6_EngineersHouse_hoenn",
+    "CeladonCity_FloristsHouse_hoenn"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

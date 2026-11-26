@@ -49,6 +49,38 @@ def map_const(name):
     return "MAP_" + re.sub(r"(?<=[a-z0-9])(?=[A-Z])", "_", name).upper()
 
 
+WEEKDAYS = ["HOENN_SUNDAY", "HOENN_MONDAY", "HOENN_TUESDAY", "HOENN_WEDNESDAY", "HOENN_THURSDAY",
+            "HOENN_FRIDAY", "HOENN_SATURDAY"]
+
+
+def daily_gift(name, k, g):
+    """A once-a-day gift: one item per weekday (Sunday first), a daily flag (from the
+    daily range in include/constants/hoenn_events.h, cleared by HoennClearDailyFlags), and
+    four texts: intro, after (given), full (bag full: the flag stays clear) and done."""
+    if len(g["items"]) != 7:
+        sys.exit("%s: object %d's daily_gift needs 7 items (Sunday..Saturday)" % (name, k))
+    base = "%s_EventScript_Npc%d" % (name, k)
+    tb = "%s_Text_Npc%d" % (name, k)
+    items = list(dict.fromkeys(g["items"]))  # one giveitem label per distinct item
+    sc = ["%s::" % base, "\tlock", "\tfaceplayer",
+          "\tgoto_if_set %s, %s_Done" % (g["flag"], base),
+          "\tmsgbox %s_Intro, MSGBOX_DEFAULT" % tb,
+          "\tspecialvar VAR_RESULT, GetDayOfWeek",
+          "\tswitch VAR_RESULT"]
+    sc += ["\tcase %s, %s_Item%d" % (WEEKDAYS[d], base, items.index(it)) for d, it in enumerate(g["items"])]
+    sc += ["\trelease", "\tend", ""]
+    for n, it in enumerate(items):
+        sc += ["%s_Item%d::" % (base, n), "\tgiveitem ITEM_%s" % it, "\tgoto %s_Given" % base, ""]
+    sc += ["%s_Given::" % base, "\tgoto_if_eq VAR_RESULT, FALSE, %s_Full" % base,
+           "\tsetflag %s" % g["flag"], "\tmsgbox %s_After, MSGBOX_DEFAULT" % tb, "\trelease", "\tend", "",
+           "%s_Full::" % base, "\tmsgbox %s_Full, MSGBOX_DEFAULT" % tb, "\trelease", "\tend", "",
+           "%s_Done::" % base, "\tmsgbox %s_Done, MSGBOX_DEFAULT" % tb, "\trelease", "\tend", ""]
+    tx = []
+    for key in ("intro", "after", "full", "done"):
+        tx += ["%s_%s:" % (tb, key.title()), '\t.string "%s$"' % wrap(g[key]), ""]
+    return sc, tx
+
+
 def build(b, templates):
     name = b["name"]
     tpl = load("data/maps/%s/map.json" % templates[b["template"]]["from"])
@@ -84,6 +116,11 @@ def build(b, templates):
         move = FACING[o.get("facing", "down")]
         if o["type"] == "mon":
             gfx, script = "OBJ_EVENT_GFX_MON_BASE+SPECIES_%s" % o["species"], "HoennSeek_EventScript_TrainerFollower"
+        elif "daily_gift" in o:
+            gfx, script = o["gfx"], "%s_EventScript_Npc%d" % (name, k)
+            s2, t2 = daily_gift(name, k, o["daily_gift"])
+            scripts += s2
+            texts += t2
         elif "script" in o:
             # A hand-written script (data/scripts/hoenn_buildings.inc: shops, gifts...).
             # The object still runs a generated label, so gen_hoenn_hints.py can wrap it.
