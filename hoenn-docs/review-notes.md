@@ -100,7 +100,7 @@ Reproduced in the emulator: step down the west stairs at night onto (8,17). The 
 - **Fix:** hand polish, such as uneven tree edges, a path, a ledge or a pond, and Sunkern spread through the grass (the text says the meadow is "full of SUNKERN"; about five are visible).
 - The meadow's wild table is Lv 3–8, for a post-game player. That's probably on purpose (baby Pokémon), but Bryan should confirm it.
 
-### 12. Totodile's scene isn't the planned one
+### 12. Totodile's scene isn't the planned one — **done in 17r-c** (ANDRE's spot + GOOD ROD)
 - **The plan:** a Lake of Rage fishing spot, a fisherman whose lines keep getting bitten, and fishing it with the **Good Rod** until a Totodile clamps on.
 - **Part 15b instead:** a Feraligatr surfaces in the south cove and the Totodile hops ashore. There's no fisherman and no fishing.
 - **Also dropped:** the plan's "stay hidden behind a pillar" bit in the Burned Tower is only a line of text.

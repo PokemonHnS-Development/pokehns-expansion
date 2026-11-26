@@ -4,7 +4,8 @@
 # src/hoenn_scaling.c moves the strongest to the stamp curve and keeps the gaps.
 # No Mega Stones anywhere (no Megas in Hoenn & Seek). Elite Four (Lv 76-81) and
 # Wallace (Lv 80-84) have fixed levels. 2.0 part 16: TRAINER_LEROY (Emerald's unused
-# slot) is RYDER, Charmander's old trainer outside the Cerulean Gym (fixed Lv 60-63).
+# slot) is DAMIAN (RYDER until 17r), Charmander's old trainer outside the Cerulean Gym;
+# src/hoenn_scaling.c sets his ace to your progress level cap (gaps kept: Arcanine is the ace).
 
 === TRAINER_ROXANNE_1 ===
 Items: Full Restore / Full Restore / Hyper Potion
@@ -1438,7 +1439,7 @@ IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Mystical Fire
 - Calm Mind
 === TRAINER_LEROY ===
-Name: RYDER
+Name: DAMIAN
 Items: Full Restore / Full Restore
 AI: Smart Trainer
 

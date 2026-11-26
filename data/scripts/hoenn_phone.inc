@@ -107,13 +107,13 @@ HoennSeek_EventScript_CallElmCyndaquil:
 	pokenavcall HoennSeek_Text_CallElmCyndaquil
 	goto HoennSeek_EventScript_CallEnd
 
-@ Brendan (2.0 part 15a): Elm told Birch that the runaway found you.
+@ Elm (2.0 part 15a, Brendan's until 17r): his lab's escapee is with you.
 HoennSeek_EventScript_CallStarterFound::
 	setflag FLAG_HOENN_CALL_STARTER_FOUND
 	bufferspeciesname STR_VAR_1, SPECIES_TOTODILE
 	call_if_eq VAR_STARTER_MON, 1, HoennSeek_EventScript_BufferChikorita
 	call_if_eq VAR_STARTER_MON, 2, HoennSeek_EventScript_BufferCyndaquil
-	setspeaker HoennSeek_Text_NameBrendan
+	setspeaker HoennSeek_Text_NameElm
 	pokenavcall HoennSeek_Text_CallStarterFound
 	goto HoennSeek_EventScript_CallEnd
 HoennSeek_EventScript_BufferChikorita:
@@ -263,57 +263,49 @@ HoennSeek_Text_CallBadge8::
 
 HoennSeek_Text_CallElmChikorita::
 	.string "Hello, {PLAYER}! It's PROF. ELM!\p"
-	.string "PROF. BIRCH called. You beat his\n"
-	.string "son and NORMAN's daughter. Wow!\p"
-	.string "He'd been raising two JOHTO\n"
-	.string "starters for my lab, and he sent\l"
-	.string "them back on the ferry.\p"
-	.string "One got here safe. But the\n"
-	.string "CHIKORITA slipped away when the\l"
-	.string "ferry docked!\p"
-	.string "A sailor saw it heading up\n"
-	.string "ROUTE 46, following a sweet smell.\p"
+	.string "Congratulations on your first\n"
+	.string "BADGE! But I have bad news, too.\p"
+	.string "One of my lab's POKéMON got out!\n"
+	.string "A CHIKORITA I was raising for\l"
+	.string "the next new TRAINER.\p"
+	.string "My aide saw it heading up ROUTE\n"
+	.string "46, following a sweet smell.\p"
 	.string "If you find it, it should know my\n"
 	.string "lab's scent on you. Good luck!$"
 
 HoennSeek_Text_CallElmCyndaquil::
 	.string "Hello, {PLAYER}! It's PROF. ELM!\p"
-	.string "PROF. BIRCH called. You beat his\n"
-	.string "son and NORMAN's daughter. Wow!\p"
-	.string "He'd been raising two JOHTO\n"
-	.string "starters for my lab, and he sent\l"
-	.string "them back on the ferry.\p"
-	.string "One got here safe. But the\n"
-	.string "CYNDAQUIL slipped away when the\l"
-	.string "ferry docked!\p"
-	.string "A sailor saw a little flame near\n"
+	.string "Congratulations on your first\n"
+	.string "BADGE! But I have bad news, too.\p"
+	.string "One of my lab's POKéMON got out!\n"
+	.string "A CYNDAQUIL I was raising for\l"
+	.string "the next new TRAINER.\p"
+	.string "Someone saw a little flame near\n"
 	.string "ECRUTEAK's BURNED TOWER, at night.\p"
 	.string "If you find it, it should know my\n"
 	.string "lab's scent on you. Good luck!$"
 
 HoennSeek_Text_CallElmTotodile::
 	.string "Hello, {PLAYER}! It's PROF. ELM!\p"
-	.string "PROF. BIRCH called. You beat his\n"
-	.string "son and NORMAN's daughter. Wow!\p"
-	.string "He'd been raising two JOHTO\n"
-	.string "starters for my lab, and he sent\l"
-	.string "them back on the ferry.\p"
-	.string "One got here safe. But the\n"
-	.string "TOTODILE jumped overboard when\l"
-	.string "the ferry docked!\p"
-	.string "A sailor heard about it splashing\n"
-	.string "around the LAKE OF RAGE.\p"
+	.string "Congratulations on your first\n"
+	.string "BADGE! But I have bad news, too.\p"
+	.string "One of my lab's POKéMON got out!\n"
+	.string "A TOTODILE I was raising for\l"
+	.string "the next new TRAINER.\p"
+	.string "A fisherman at the LAKE OF RAGE\n"
+	.string "says something keeps stealing\l"
+	.string "his bait. I bet it's our TOTODILE!\p"
 	.string "If you find it, it should know my\n"
 	.string "lab's scent on you. Good luck!$"
 
 HoennSeek_Text_CallStarterFound::
-	.string "Hey, {PLAYER}! It's BRENDAN.\p"
-	.string "PROF. ELM just called my dad. The\n"
-	.string "{STR_VAR_1} that got loose on the\l"
-	.string "way to JOHTO is with you now!\p"
-	.string "Dad was worried sick about it.\n"
-	.string "He says it couldn't be in better\l"
-	.string "hands. Take good care of it!$"
+	.string "{PLAYER}! It's PROF. ELM!\p"
+	.string "My aide says our {STR_VAR_1}\n"
+	.string "is with you now! It must have\l"
+	.string "smelled the lab on you.\p"
+	.string "I was so worried about it. It\n"
+	.string "couldn't be in better hands.\l"
+	.string "Take good care of it!$"
 
 HoennSeek_Text_CallSquirtle::
 	.string "Hi, {PLAYER}! It's MAY.\p"

@@ -244,7 +244,7 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] The garden in the morning: the ceremony (three Ivysaur), the hider joins you holding an Everstone. Later mornings: no ceremony, Ivysaur there. Day, evening, night: empty.
 - [ ] Charmander at Nugget Bridge in the evening and at night (raining), not by day. Saying NO leaves it there; YES takes you to the Cerulean Pokémon Center.
 - [ ] Charmander in a real party slot: Lv 5, max friendship (check with the friendship rater in Olivine).
-- [ ] RYDER outside the Cerulean Gym on your next visit; win, then he's gone. Lose: he's still there.
+- [ ] DAMIAN (was RYDER) outside the Cerulean Gym on your next visit; win, then he's gone. Lose: he's still there.
 - [ ] May's call after either one joins (needs her number from Birch).
 - [ ] Save and reload mid-chain (after shielding Charmander, before the nurse scene).
 
@@ -268,3 +268,11 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Cross the Tidal Strait before getting Mudkip and May's number: May's strait call should never ring afterwards.
 - Get Mudkip through the strait, then walk into Slateport harbor: no greeting, and the aide isn't there.
 - Talk to the Squirtle leader after the fire, now that the camera comes back (it should join).
+
+## 2.0 part 17r-c (starter changes)
+- Early Johto (no badges): the Route 46 meadow, the Burned Tower at night and Lake of Rage by day all play.
+- After your first Johto badge, Elm calls about the escapee from his lab; once it's with you, Elm calls again.
+- Lake of Rage, not having picked Totodile: beat ANDRE, then talk to him by day without a rod (asks for one), with a GOOD ROD (bite), with only a SUPER ROD (also works).
+- The wild Chikorita (Lv 6) and Cyndaquil (Lv 17) battles; catch, knock out (back next visit) and run.
+- Charmander only at 6–7 PM, not at night.
+- DAMIAN's levels at a few points in Kanto (e.g. 2 Kanto badges, Kanto champion, after Wallace).
