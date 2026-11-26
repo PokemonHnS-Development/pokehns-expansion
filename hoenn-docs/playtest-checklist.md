@@ -118,6 +118,14 @@ Only with the challenge setting LEVEL CAP on (Normal or Hard).
 - [ ] Hard: two levels lower at every Kanto/Hoenn step (tested on a test-only ROM).
 - [ ] Beat Wallace: the cap is gone.
 
+## 2.0 part 4b — Trainer followers
+Each gym leader, Elite Four member and Red has their ace standing next to them (30 objects on 30 maps; list in `data/hoenn/trainer_followers.json`).
+- [ ] Do the picks feel right? Each is the highest-level Pokémon of the leader's first team (ties: their signature one). Easy to swap in the JSON.
+- [ ] No Chuck, Blaine, Tate & Liza (no free tile next to them), Janine (it would give away her disguise trick), Lance or Wallace (walk-in scenes). Is that OK, or should some get a follower a tile further away?
+- [ ] Mahogany's ice and Sootopolis's ice: the followers sit away from the ice; do all slides still work?
+- [ ] Your own follower next to theirs in each gym: no wrong colors. (Emulator: all 30, with and without a follower out; palettes checked in memory.)
+- [ ] Red: Pikachu stands beside him and disappears with him after the battle (emulator-tested).
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.
