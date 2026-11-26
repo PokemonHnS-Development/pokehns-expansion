@@ -5,7 +5,7 @@
     "secondary tileset; the closed and open metatiles are drawn over base_metatile (from the",
     "host or its primary). Spots that use them are in base_spots.json (johto_kanto_spots).",
     "Art: '.' keeps the base pixel; K/D/M = darkest/2nd/3rd darkest, H lightest, G/L vine greens.",
-    "Picked without Bryan (review): style A of both kinds; swap 'style' to try the others."
+    "Bryan (part 17r): tree style A; rock style B, filled dark so it reads as a recess."
   ],
   "kinds": {
     "tree": {
@@ -94,7 +94,7 @@
     },
     "rock": {
       "behavior": "MB_SECRET_BASE_SPOT_BROWN_CAVE",
-      "style": "A",
+      "style": "B",
       "styles": {
         "A": {
           "note": "sealed arch with cracks closed; wide arched hole open",
@@ -143,17 +143,17 @@
             "................",
             "..KKKKKKKKKKKK..",
             "..KDDDDDDDDDDK..",
-            "..KD........DK..",
-            "..KD........DK..",
-            "..KD........DK..",
-            "..KD........DK..",
-            "..KD........DK..",
-            "..KD........DK..",
-            "..KD........DK..",
-            "..KD........DK..",
-            "..KD........DK..",
-            "..KD........DK..",
-            "..KD........DK.."
+            "..KDMMMMMMMMDK..",
+            "..KDMMMMMMMMDK..",
+            "..KDMMMMMMMMDK..",
+            "..KDMMMMMMMMDK..",
+            "..KDMMMMMMMMDK..",
+            "..KDMMMMMMMMDK..",
+            "..KDMMMMMMMMDK..",
+            "..KDMMMMMMMMDK..",
+            "..KDMMMMMMMMDK..",
+            "..KDMMMMMMMMDK..",
+            "..KDMMMMMMMMDK.."
           ],
           "open": [
             "................",

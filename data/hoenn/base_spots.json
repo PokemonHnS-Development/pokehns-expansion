@@ -142,7 +142,7 @@
     {
       "name": "DESERT_RUINS",
       "map": "DesertRuins",
-      "x": 8,
+      "x": 5,
       "y": 2,
       "indent": "Red",
       "group": "RED_CAVE1",
@@ -151,7 +151,7 @@
     {
       "name": "ISLAND_CAVE",
       "map": "IslandCave",
-      "x": 8,
+      "x": 5,
       "y": 2,
       "indent": "Blue",
       "group": "BLUE_CAVE1",
@@ -160,7 +160,7 @@
     {
       "name": "ANCIENT_TOMB",
       "map": "AncientTomb",
-      "x": 8,
+      "x": 5,
       "y": 2,
       "indent": "Yellow",
       "group": "YELLOW_CAVE1",
@@ -187,7 +187,7 @@
     {
       "name": "SKY_PILLAR",
       "map": "SkyPillar_Top",
-      "x": 12,
+      "x": 8,
       "y": 14,
       "indent": "Yellow",
       "group": "HOENN_SKY_PILLAR",
