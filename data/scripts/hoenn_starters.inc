@@ -352,8 +352,10 @@ HoennSeek_EventScript_LakeAndre::
 	msgbox HoennSeek_Text_AndreBait, MSGBOX_DEFAULT
 	goto_if_unset FLAG_HOENN_TOTODILE_SCENE, HoennSeek_EventScript_AndreFirstTime
 HoennSeek_EventScript_AndreAskRod:
+	bufferitemname STR_VAR_1, ITEM_SUPER_ROD
 	checkitem ITEM_SUPER_ROD
 	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_AndreOffer
+	bufferitemname STR_VAR_1, ITEM_GOOD_ROD
 	checkitem ITEM_GOOD_ROD
 	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_AndreOffer
 	msgbox HoennSeek_Text_AndreNeedRod, MSGBOX_DEFAULT
@@ -747,7 +749,7 @@ HoennSeek_Text_AndreNeedRod::
 	.string "is, it bites by day.$"
 
 HoennSeek_Text_AndreOffer::
-	.string "That's a GOOD ROD!\n"
+	.string "That's a {STR_VAR_1}!\n"
 	.string "Want to try my spot?$"
 
 HoennSeek_Text_AndreDecline::
