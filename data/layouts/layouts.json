@@ -16251,6 +16251,18 @@
       "blockdata_filepath": "data/layouts/TidalStrait_East_hoenn/map.bin",
       "game_version": "hns",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE46_MEADOW_HOENN",
+      "name": "Route46_Meadow_hoenn_Layout",
+      "width": 22,
+      "height": 18,
+      "primary_tileset": "gTileset_Johto_NorthEast_Hns",
+      "secondary_tileset": "gTileset_CherrygroveCity_Hns",
+      "border_filepath": "data/layouts/Route46_Meadow_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/Route46_Meadow_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     }
   ]
 }

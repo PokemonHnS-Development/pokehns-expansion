@@ -221,6 +221,17 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] May's call after you reach the Hoenn half (needs her number from Birch).
 - [ ] The Cianwood youngster and Olivine sailor (outside) change their lines: closed, open, crossed; Dewford's woman mentions it.
 
+## 2.0 part 15a — Johto starters A (Chikorita, Cyndaquil)
+- [ ] Routes 26/27: no Chikorita, Cyndaquil, Totodile, Bulbasaur, Charmander or Squirtle in the grass or walking around; Elm's table stays empty after beating Brendan & May.
+- [ ] Elm's call after Brendan & May names the right place for your starter (Route 46 / Burned Tower / Lake of Rage).
+- [ ] Route 46: the sweet-aroma line in the big tall-grass patch (daytime, after Brendan & May); Cut the tree east of it, walk to the cave mouth and into the meadow. Check the new tree and cliff tiles look right.
+- [ ] Meadow by day, each starter: Meganium family (Chikorita) / the tagged runaway that joins you (Cyndaquil) / the wild one (Totodile). At night or in the evening, nobody's there.
+- [ ] Burned Tower B1F at night, each starter: wild Cyndaquil (Chikorita) / the family leaving (Cyndaquil) / the runaway (Totodile). By day, nobody's there.
+- [ ] Wild ones: catch one (gone for good); knock one out (back next visit); run (still there).
+- [ ] Runaways: Lv 5 with Aromatherapy / Extrasensory; with a full party it goes to the PC; with party and boxes full it stays.
+- [ ] Brendan's call after a runaway joins you (needs his number from Birch).
+- [ ] Save and reload in the meadow and the tower after each scene: no replay.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

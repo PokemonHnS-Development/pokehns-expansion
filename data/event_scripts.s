@@ -315,6 +315,7 @@ gStdScripts_End::
 	.include "data/maps/Route34_FishingShack_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
 	.include "data/maps/TidalStrait_West_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 14
 	.include "data/maps/TidalStrait_East_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 14
+	.include "data/maps/Route46_Meadow_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 15a
 	.include "data/maps/LilycoveCity_ContestHall/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestHall_hns/scripts.inc"
 	.include "data/maps/LilycoveCity_PokemonCenter_1F/scripts.inc"
@@ -1094,6 +1095,7 @@ gStdScripts_End::
 	.include "data/scripts/hoenn_hints.inc" @ Hoenn & Seek 2.0 part 7 (generated)
 	.include "data/scripts/hoenn_buildings.inc" @ Hoenn & Seek 2.0 parts 8b-11
 	.include "data/scripts/hoenn_bases.inc" @ Hoenn & Seek 2.0 part 13a
+	.include "data/scripts/hoenn_starters.inc" @ Hoenn & Seek 2.0 part 15a
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"
 

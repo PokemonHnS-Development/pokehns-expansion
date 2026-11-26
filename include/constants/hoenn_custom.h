@@ -52,7 +52,7 @@
 // PokéGear calls (part 16d)
 #define FLAG_HOENN_BM_PHONE              (HOENN_CUSTOM_FLAGS_START + 0x27) // Birch gave you Brendan's and May's numbers
 #define FLAG_HOENN_WALLY_PHONE           (HOENN_CUSTOM_FLAGS_START + 0x28) // registered after his Victory Road battle
-#define FLAG_HOENN_JOHTO_STARTERS_READY  (HOENN_CUSTOM_FLAGS_START + 0x29) // Elm's table has the two other Johto starters
+#define FLAG_HOENN_JOHTO_STARTERS_READY  (HOENN_CUSTOM_FLAGS_START + 0x29) // unused since 2.0 part 15a (Elm no longer gives starters)
 #define FLAG_HOENN_CALL_BADGE1           (HOENN_CUSTOM_FLAGS_START + 0x2A) // event calls done (src/hoenn_phone.c);
 #define FLAG_HOENN_CALL_BADGE4           (HOENN_CUSTOM_FLAGS_START + 0x2B) // they also gate Brendan's and May's
 #define FLAG_HOENN_CALL_BADGE8           (HOENN_CUSTOM_FLAGS_START + 0x2C) // phone lines when you call them

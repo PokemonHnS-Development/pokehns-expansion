@@ -157,7 +157,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHIKORITA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RATICATE",
       "x": 58,
       "y": 14,
       "elevation": 0,
@@ -170,7 +170,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CYNDAQUIL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SANDSLASH",
       "x": 55,
       "y": 14,
       "elevation": 0,
@@ -183,7 +183,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TOTODILE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NOCTOWL",
       "x": 58,
       "y": 16,
       "elevation": 0,

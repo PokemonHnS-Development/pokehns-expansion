@@ -100,7 +100,9 @@
 // out; weekly, so it clears when the next week starts (Sunday).
 #define FLAG_HOENN_WEEKLY_LAPRAS_MET    (HOENN_WEEKLY_FLAGS_START + 0x00)
 
-// gettimeofday's TIME_NIGHT (enum TimeOfDay), for scripts.
+// gettimeofday's TIME_DAY and TIME_NIGHT (enum TimeOfDay), for scripts:
+// morning 0, day 1, evening 2, night 3.
+#define HOENN_TIME_DAY   1
 #define HOENN_TIME_NIGHT 3
 
 // ---- Part 7: hint lines, rumors, forecasts (src/hoenn_hints.c) -------------
@@ -129,5 +131,23 @@
 // You reached the strait's Hoenn half (May's PokéGear call).
 #define FLAG_HOENN_CROSSED_STRAIT     (HOENN_FLAGS_C_WORLD + 0x03)
 #define FLAG_HOENN_CALL_STRAIT        (HOENN_FLAGS_C_WORLD + 0x04)
+
+// ---- Part 15a: Johto starters A (data/scripts/hoenn_starters.inc) ----------
+// Each Johto starter's scene plays one of three versions by VAR_STARTER_MON:
+// your own species is watch-only, the rival's is wild, the unclaimed one is the
+// Pokémon Birch sent Elm that got loose (it joins you). All need
+// FLAG_HOENN_BEAT_BM. The HIDE flags are decided on every arrival.
+// Chikorita: the hidden meadow behind Route 46's cave, mornings and daytime.
+#define FLAG_HOENN_CHIKORITA_SCENE      (HOENN_FLAGS_D_STARTERS + 0x00) // first sighting played
+#define FLAG_HOENN_CHIKORITA_DONE       (HOENN_FLAGS_D_STARTERS + 0x01) // caught or joined you
+#define FLAG_HOENN_HIDE_MEADOW_FAMILY   (HOENN_FLAGS_D_STARTERS + 0x02) // the Meganium and one Chikorita
+#define FLAG_HOENN_HIDE_MEADOW_CHIKORITA (HOENN_FLAGS_D_STARTERS + 0x03) // the Chikorita that can stay
+// Cyndaquil: Burned Tower B1F, at night.
+#define FLAG_HOENN_CYNDAQUIL_SCENE      (HOENN_FLAGS_D_STARTERS + 0x04)
+#define FLAG_HOENN_CYNDAQUIL_DONE       (HOENN_FLAGS_D_STARTERS + 0x05)
+#define FLAG_HOENN_HIDE_BT_FAMILY       (HOENN_FLAGS_D_STARTERS + 0x06) // the Typhlosion and one Cyndaquil
+#define FLAG_HOENN_HIDE_BT_CYNDAQUIL    (HOENN_FLAGS_D_STARTERS + 0x07) // the Cyndaquil that can stay
+// Brendan's PokéGear call once Birch's runaway is with you.
+#define FLAG_HOENN_CALL_STARTER_FOUND   (HOENN_FLAGS_D_STARTERS + 0x08)
 
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H
