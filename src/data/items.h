@@ -14426,6 +14426,23 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_SSTicket,
         .iconPalette = gItemIconPalette_SSTicket,
     },
+
+    // Hoenn & Seek 2.0 part 20: the Route 113 glassblower makes it from 500 ash.
+    [ITEM_GLASS_FLUTE] =
+    {
+        .name = ITEM_NAME("GLASS FLUTE"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A flute of clear\n"
+            "glass. It can wake\n"
+            "a sleeping glutton."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Flute,
+        .iconPalette = gItemIconPalette_WhiteFlute,
+    },
 #endif
 
     [ITEM_EON_TICKET] =

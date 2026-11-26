@@ -240,4 +240,26 @@
 #define FLAG_HOENN_DAILY_SLOWKING       (HOENN_DAILY_FLAGS_START + 0x07) // one answer a day
 #define VAR_HOENN_SLOWKING_LINES        (HOENN_VARS_D_EVENTS + 0x04) // lines taught (0-7)
 
+// ---- Part 20: Route 113 and Petalburg Woods (data/scripts/hoenn_hidden.inc) ----
+// Munchlax: asleep in a gap in Route 113's southern trees, in front of a hidden
+// grotto. The glassblower's GLASS FLUTE wakes it, and it joins you.
+#define FLAG_HOENN_MUNCHLAX_DONE        (HOENN_FLAGS_E_HOENN + 0x00) // it joined you (also its object flag)
+#define FLAG_HOENN_ITEM_GROTTO_1        (HOENN_FLAGS_E_HOENN + 0x01) // the grotto's item balls
+#define FLAG_HOENN_ITEM_GROTTO_2        (HOENN_FLAGS_E_HOENN + 0x02)
+#define FLAG_HOENN_ITEM_GROTTO_3        (HOENN_FLAGS_E_HOENN + 0x03)
+// Spinda: dances in the falling ash on Route 113 on weekday mornings, once a week.
+#define FLAG_HOENN_HIDE_SPINDA          (HOENN_FLAGS_E_HOENN + 0x04)
+#define FLAG_HOENN_WEEKLY_SPINDA        (HOENN_WEEKLY_FLAGS_START + 0x01) // danced (and battled) this week
+#define FLAG_HOENN_SPINDA_MET           (HOENN_FLAGS_E_HOENN + 0x05) // for the rumor
+// Slaking: dozes across a side path in Petalburg Woods; it only gets up at noon.
+#define FLAG_HOENN_SLAKING_DONE         (HOENN_FLAGS_E_HOENN + 0x06) // caught
+#define FLAG_HOENN_HIDE_SLAKING         (HOENN_FLAGS_E_HOENN + 0x07)
+#define FLAG_HOENN_DAILY_SLAKING        (HOENN_DAILY_FLAGS_START + 0x08) // battled today: the path is open
+#define FLAG_HOENN_ITEM_CLEARING_1      (HOENN_FLAGS_E_HOENN + 0x08) // the clearing's item balls
+#define FLAG_HOENN_ITEM_CLEARING_2      (HOENN_FLAGS_E_HOENN + 0x09)
+#define FLAG_HOENN_ITEM_CLEARING_3      (HOENN_FLAGS_E_HOENN + 0x0A)
+#define FLAG_HOENN_CALL_MUNCHLAX        (HOENN_FLAGS_E_HOENN + 0x0B) // Brendan
+#define FLAG_HOENN_CALL_SLAKING         (HOENN_FLAGS_E_HOENN + 0x0C) // May
+#define FLAG_HOENN_GOT_GLASS_FLUTE      (HOENN_FLAGS_E_HOENN + 0x0D)
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

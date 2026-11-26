@@ -57,7 +57,7 @@ u16 HoennSpeciesDueCall(void)
         return HOENN_CALL_GENGAR;
     if (FlagGet(FLAG_HOENN_SLOWKING_PROPHECY) && !FlagGet(FLAG_HOENN_CALL_PROPHECY))
         return HOENN_CALL_PROPHECY;
-    return HOENN_CALL_NONE;
+    return HoennHiddenDueCall(); // 2.0 parts 20+ (src/hoenn_hidden.c)
 }
 
 #endif // IS_HNS

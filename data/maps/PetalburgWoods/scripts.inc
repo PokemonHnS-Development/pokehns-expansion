@@ -1,4 +1,5 @@
 PetalburgWoods_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_PetalburgWoodsOnTransition @ Hoenn & Seek 2.0 part 20
 	.byte 0
 
 PetalburgWoods_EventScript_DevonResearcherLeft::

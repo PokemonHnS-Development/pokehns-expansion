@@ -743,3 +743,4 @@ gSpecials::
 	def_special HoennIsItWeekday
 	def_special HoennSetWeekdayFromChoice
 	def_special HoennPlayerIsRushing
+	def_special HoennTuneWildMon
