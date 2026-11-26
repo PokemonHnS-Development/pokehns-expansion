@@ -21,12 +21,12 @@
 #define HOENN_IS_CHAMBER_BASE_MAP_NUM(mapNum) ((mapNum) == MAP_NUM(MAP_SECRET_BASE_SKY_PILLAR_HOENN) || (mapNum) == MAP_NUM(MAP_SECRET_BASE_SEALED_CHAMBER_HOENN))
 
 // Entrance spots.
-#define SECRET_BASE_HOENN_DESERT_RUINS 9  // RED_CAVE1, variant 9: DesertRuins (8,2)
-#define SECRET_BASE_HOENN_ISLAND_CAVE 89  // BLUE_CAVE1, variant 9: IslandCave (8,2)
-#define SECRET_BASE_HOENN_ANCIENT_TOMB 129  // YELLOW_CAVE1, variant 9: AncientTomb (8,2)
+#define SECRET_BASE_HOENN_DESERT_RUINS 9  // RED_CAVE1, variant 9: DesertRuins (5,2)
+#define SECRET_BASE_HOENN_ISLAND_CAVE 89  // BLUE_CAVE1, variant 9: IslandCave (5,2)
+#define SECRET_BASE_HOENN_ANCIENT_TOMB 129  // YELLOW_CAVE1, variant 9: AncientTomb (5,2)
 #define SECRET_BASE_HOENN_CAVE_OF_ORIGIN 99  // BLUE_CAVE2, variant 9: CaveOfOrigin_B1F (7,12)
 #define SECRET_BASE_HOENN_SEAFLOOR_CAVERN 109  // BLUE_CAVE3, variant 9: SeafloorCavern_Room9 (13,40)
-#define SECRET_BASE_HOENN_SKY_PILLAR 241  // HOENN_SKY_PILLAR, variant 1: SkyPillar_Top (12,14)
+#define SECRET_BASE_HOENN_SKY_PILLAR 241  // HOENN_SKY_PILLAR, variant 1: SkyPillar_Top (8,14)
 #define SECRET_BASE_HOENN_SEALED_CHAMBER 251  // HOENN_SEALED_CHAMBER, variant 1: SealedChamber_InnerRoom (5,2)
 
 // TRUE for a base at one of the sites.
