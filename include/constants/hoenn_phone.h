@@ -22,5 +22,7 @@
 #define HOENN_CALL_SCIZOR 17 // May: you saw the Scizor at the National Park (2.0 part 18)
 #define HOENN_CALL_GENGAR 18 // Brendan: a Gengar jumped out of your shadow in Lavender (2.0 part 19)
 #define HOENN_CALL_PROPHECY 19 // May: the Slowking sage taught you its whole prophecy (2.0 part 19)
+#define HOENN_CALL_MUNCHLAX 20 // Brendan: the Route 113 Munchlax woke up for you (2.0 part 20)
+#define HOENN_CALL_SLAKING  21 // May: you caught the Slaking in Petalburg Woods (2.0 part 20)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

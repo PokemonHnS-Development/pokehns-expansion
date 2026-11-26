@@ -16287,6 +16287,18 @@
       "blockdata_filepath": "data/layouts/Route6_Hideout_hoenn/map.bin",
       "game_version": "hns",
       "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_ROUTE113_GROTTO_HOENN",
+      "name": "Route113_Grotto_hoenn_Layout",
+      "width": 16,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/Route113_Grotto_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/Route113_Grotto_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "emerald"
     }
   ]
 }
