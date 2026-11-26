@@ -107,7 +107,7 @@ HoennSeek_EventScript_TVNews::
 	releaseall
 	end
 HoennSeek_EventScript_TVNewsNone::
-	return
+	goto HoennSeek_EventScript_TVForecast @ 2.0 part 7 (data/scripts/hoenn_hints.inc)
 
 HoennSeek_EventScript_TVNewsAutograph::
 	msgbox HoennSeek_Text_TVNewsAutograph, MSGBOX_DEFAULT

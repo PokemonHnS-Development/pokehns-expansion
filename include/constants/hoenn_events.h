@@ -103,4 +103,9 @@
 // gettimeofday's TIME_NIGHT (enum TimeOfDay), for scripts.
 #define HOENN_TIME_NIGHT 3
 
+// ---- Part 7: hint lines, rumors, forecasts (src/hoenn_hints.c) -------------
+// Flips on every talk to a hint NPC: 0 = their own script next, 1 = their extra
+// line next. One var for all of them, so there are no per-NPC flags (2.0-plan 2c).
+#define VAR_HOENN_HINT_TOGGLE     (HOENN_VARS_B_WEATHER_HINTS + 0x00)
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H
