@@ -428,6 +428,13 @@
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_APARTMENTS_1F_HNS",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 26,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY_FLORISTS_HOUSE_HOENN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
@@ -487,14 +494,6 @@
       "elevation": 0,
       "item": "ITEM_PP_UP",
       "flag": "FLAG_HIDDEN_ITEM_CELADON_CITY_PP_UP_HNS"
-    },
-    {
-      "type": "sign",
-      "x": 26,
-      "y": 17,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route7_EventScript_Door"
     }
   ],
   "game_version": "hns",

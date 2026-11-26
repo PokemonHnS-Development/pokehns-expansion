@@ -177,6 +177,10 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] The breeder alternates her line with the new Day-Care tip. Does the tip fit, given the Day Care is next door?
 - [ ] The lodge sages' Ho-Oh/Lugia lore doesn't contradict HnS's own legendary story.
 
+## 2.0 part 10 — Kanto buildings
+- [ ] Walk into both Route 6 houses (21,17 and 49,30) and Celadon's house by the pond (26,17), and out again. Read the texts in place (no review yet).
+- [ ] Celadon florist: one berry a day, a different one each weekday (Lum on Sunday, Sitrus on Saturday). With a real clock, check that the next day gives another berry, and check what she says with a full Berry Pocket. Do the same for the Olivine keeper's gift.
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.

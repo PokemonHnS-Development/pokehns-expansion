@@ -274,6 +274,30 @@ HoennSeek_EventScript_HintNpc33::
 	callstd MSGBOX_NPC
 	end
 
+@ Route6_BugClub_hoenn
+HoennSeek_EventScript_HintNpc34::
+	callnative HoennSeek_NpcHint
+	.2byte 34
+	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
+	callstd MSGBOX_NPC
+	end
+
+@ Route6_EngineersHouse_hoenn
+HoennSeek_EventScript_HintNpc35::
+	callnative HoennSeek_NpcHint
+	.2byte 35
+	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
+	callstd MSGBOX_NPC
+	end
+
+@ CeladonCity_FloristsHouse_hoenn
+HoennSeek_EventScript_HintNpc36::
+	callnative HoennSeek_NpcHint
+	.2byte 36
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
+	callstd MSGBOX_NPC
+	end
+
 @ Field notes (Birch's aide): how many rumors you've found, then a vague hint for the next.
 HoennSeek_EventScript_FieldNotes::
 	lock
@@ -340,6 +364,9 @@ HoennSeek_Text_Hint_RumorLaprasNotes::
 
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
+
+HoennSeek_Text_Hint_LineTipBugContest::
+	.string "The BUG-CATCHING CONTEST in\nJOHTO's NATIONAL PARK runs\levery day.\pCatch the best BUG POKéMON you can\nfind and you might win a prize!$"
 
 HoennSeek_Text_Hint_LineTipClock::
 	.string "Did you know? The clock on the\nwall in any POKéMON CENTER lets\lyou set the day and the time.$"

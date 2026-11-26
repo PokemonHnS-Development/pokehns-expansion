@@ -19,9 +19,9 @@ Part 8a checked every HnS door that leads nowhere (`tools/hoenn/find_fake_doors.
 | 9 | 9 ✅ | Route 34 | 33,31 | house next to the Day Care | **Breeder's house.** Egg and breeding tips, with a hint NPC. |
 | 10 | 9 ✅ | Route 38 | 34,41 | ranch building | **Moomoo Farm storeroom.** A farmhand, Miltank, and a Moomoo Milk line. |
 | 11 | 9 ✅ | Bellchime Trail | 54,58 | lodge | **Tin Tower caretaker's lodge.** Sages, with legendary-bird rumors (rumor lines). |
-| 12 | 10 | Route 6 | 21,17 | house west of the road | **Bug Catchers' club house.** Bug tips, and a Butterfree pet. |
-| 13 | 10 | Route 6 | 49,30 | house east of the road | **Retired Silph engineer.** Talk of the Magnet Train and Power Plant, with a hint NPC. |
-| 14 | 10 | Celadon City | 26,17 | house with a pond | **Florist's house.** Flowers, Bellossom, and a berry gift. |
+| 12 | 10 ✅ | Route 6 | 21,17 | house west of the road | **Bug Catchers' club house.** Bug tips, and a Butterfree pet. |
+| 13 | 10 ✅ | Route 6 | 49,30 | house east of the road | **Retired Silph engineer.** Talk of the Magnet Train and Power Plant, with a hint NPC. |
+| 14 | 10 ✅ | Celadon City | 26,17 | house with a pond | **Florist's house.** Flowers, Bellossom, and a berry gift. |
 | 15 | 11 | Melemele Island | 11,21 | island house | **Island family home.** Alola-style lines and pets. |
 | 16 | 11 | Melemele Island | 20,25 | island house | **Surf shop.** Surfing tips and Wailmer talk. |
 
@@ -45,10 +45,10 @@ Every building gets 1–4 NPCs, at least one of them a hint NPC (`"hints"` in `d
 
 ## Templates in use
 
-HnS's 13×10 houses come in three looks: yellow tile, wood floor, and Mr. Pokémon's white office. Small differences (a wall clock, a TV, a book on the table) set them apart. The chairs (left and right of the table, and the row above them) are walkable tiles, so keep NPCs off them. Templates so far: `house_a`–`house_e` (8a), `office` (Mr. Pokémon), `house_clock` (Lake of Rage 1), `house_tv` (Goldenrod 1), `house_wood` (Lake of Rage 2), `house_wood_book` (Ecruteak 2), `house_yellow` (Pewter 1) (8b), and `house_wood_b` (Violet 2), `house_wood_c` (Blackthorn 2), `farmhouse` (Route 39) and `house_shelves` (New Bark 2) (9).
+HnS's 13×10 houses come in three looks: yellow tile, wood floor, and Mr. Pokémon's white office. Small differences (a wall clock, a TV, a book on the table) set them apart. The chairs (left and right of the table, and the row above them) are walkable tiles, so keep NPCs off them. Templates so far: `house_a`–`house_e` (8a), `office` (Mr. Pokémon), `house_clock` (Lake of Rage 1), `house_tv` (Goldenrod 1), `house_wood` (Lake of Rage 2), `house_wood_book` (Ecruteak 2), `house_yellow` (Pewter 1) (8b), and `house_wood_b` (Violet 2), `house_wood_c` (Blackthorn 2), `farmhouse` (Route 39) and `house_shelves` (New Bark 2) (9), and `house_yellow_b` (Route 5), `house_wood_d` (Saffron 1) and `house_yellow_c` (Cerulean 3) (10).
 
 ## How to add one
 
-1. Add the building to `data/hoenn/buildings.json`: door, template, purpose and objects. Use `signs` to replace the template's signs (`[]` for none). For a shop, gift or anything else beyond text, give the NPC a `script` written in `data/scripts/hoenn_buildings.inc`, and put its texts in the building's `texts`.
+1. Add the building to `data/hoenn/buildings.json`: door, template, purpose and objects. Use `signs` to replace the template's signs (`[]` for none). For a once-a-day gift, give the NPC a `daily_gift` (a daily flag from `hoenn_events.h`, 7 items from Sunday to Saturday, and the intro/after/full/done texts); the generator writes the script. For a shop or anything else beyond text, give the NPC a `script` written in `data/scripts/hoenn_buildings.inc`, and put its texts in the building's `texts`.
 2. Run `tools/hoenn/gen_hoenn_buildings.py`, then `tools/hoenn/gen_hoenn_hints.py`. The second one turns NPCs with `hints` into hint NPCs. Always run it after the buildings generator.
 3. Build and walk in.

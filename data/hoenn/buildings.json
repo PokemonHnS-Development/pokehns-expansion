@@ -12,7 +12,8 @@
     "  texts: {Key: text} becomes <name>_Text_<Key>, for hand-written scripts in data/scripts/hoenn_buildings.inc.",
     "  Objects are",
     "  {type: npc, gfx, x, y, facing (down/up/left/right/wander/look), text (string or list of boxes) or",
-    "   script (a hand-written script label instead of text),",
+    "   script (a hand-written script label instead of text), or daily_gift {flag (a daily flag), items",
+    "   (7 item names without ITEM_, Sunday first), intro, after, full (bag full), done} instead of text,",
     "   hints (optional: hint line ids from data/hoenn/npc_hints.json, makes them a hint NPC)}",
     "  or {type: mon, species, x, y, facing}: a Pokémon object that plays its cry (house pets).",
     "  Every object must stand on a free floor tile, not on or right above the entrance. In the 13x10",
@@ -63,6 +64,15 @@
     },
     "house_shelves": {
       "from": "NewBarkTown_House2_hns"
+    },
+    "house_yellow_b": {
+      "from": "Route5_House_hns"
+    },
+    "house_wood_d": {
+      "from": "SaffronCity_House1_hns"
+    },
+    "house_yellow_c": {
+      "from": "CeruleanCity_House3_hns"
     }
   },
   "buildings": [
@@ -419,12 +429,6 @@
       "template": "house_tv",
       "purpose": "Lighthouse keeper's family: Jasmine and Amphy lines, and a daily item.",
       "signs": [],
-      "texts": {
-        "GiftIntro": "The tide leaves all sorts of things on the rocks below the LIGHTHOUSE. I go down every morning. Here's today's find!",
-        "GiftAfter": "Come back tomorrow. The sea always brings something new.",
-        "GiftBagFull": "Oh, your BAG is full! I'll keep it for you until you make room.",
-        "GiftDone": "I've already been down to the rocks today. Come back tomorrow!"
-      },
       "objects": [
         {
           "type": "npc",
@@ -432,7 +436,22 @@
           "x": 2,
           "y": 4,
           "facing": "right",
-          "script": "HoennSeek_EventScript_OlivineKeeperGift"
+          "daily_gift": {
+            "flag": "FLAG_HOENN_DAILY_KEEPER_GIFT",
+            "items": [
+              "BIG_PEARL",
+              "PEARL",
+              "STARDUST",
+              "PEARL",
+              "STARDUST",
+              "PEARL",
+              "BIG_PEARL"
+            ],
+            "intro": "The tide leaves all sorts of things on the rocks below the LIGHTHOUSE. I go down every morning. Here's today's find!",
+            "after": "Come back tomorrow. The sea always brings something new.",
+            "full": "Oh, your BAG is full! I'll keep it for you until you make room.",
+            "done": "I've already been down to the rocks today. Come back tomorrow!"
+          }
         },
         {
           "type": "npc",
@@ -674,6 +693,174 @@
           "y": 7,
           "facing": "up",
           "text": "The BELL TOWER's bells ring out with the wind. A good sage can tell the weather by their tune."
+        }
+      ]
+    },
+    {
+      "name": "Route6_BugClub_hoenn",
+      "door": {
+        "map": "Route6_hns",
+        "x": 21,
+        "y": 17
+      },
+      "template": "house_yellow_b",
+      "purpose": "Bug Catchers' club house: bug tips, and a Butterfree pet.",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_BUG_CATCHER_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "text": [
+            "Welcome to the ROUTE 6 BUG CLUB! Members only... but you can look around.",
+            "Our club rule: never let a BUG POKéMON go hungry!"
+          ],
+          "hints": [
+            "TIP_BUG_CONTEST"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_BUG_CATCHER_HNS",
+          "x": 9,
+          "y": 5,
+          "facing": "left",
+          "text": [
+            "Bug POKéMON evolve fast. CATERPIE becomes BUTTERFREE before you know it!",
+            "That's why they're the best."
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_YOUNGSTER_HNS",
+          "x": 8,
+          "y": 7,
+          "facing": "up",
+          "text": "I want to join, but I've only caught a WEEDLE. They say I need three kinds to be a member."
+        },
+        {
+          "type": "mon",
+          "species": "BUTTERFREE",
+          "x": 2,
+          "y": 7,
+          "facing": "wander"
+        }
+      ]
+    },
+    {
+      "name": "Route6_EngineersHouse_hoenn",
+      "door": {
+        "map": "Route6_hns",
+        "x": 49,
+        "y": 30
+      },
+      "template": "house_wood_d",
+      "purpose": "Retired Silph engineer: talk of the Magnet Train and the Power Plant, with a hint NPC.",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_SCIENTIST_M_HNS",
+          "x": 9,
+          "y": 4,
+          "facing": "left",
+          "text": [
+            "I worked thirty years at SILPH CO. I helped design the MAGNET TRAIN's motors!",
+            "It runs on electricity from the POWER PLANT. Without it, the whole line stops."
+          ],
+          "hints": [
+            "TIP_MIND_READER",
+            "TIP_CLOCK"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_2_HNS",
+          "x": 2,
+          "y": 5,
+          "facing": "right",
+          "text": [
+            "My husband retired, but he still takes the MAGNET TRAIN to GOLDENROD every week.",
+            "He says he's checking the motors. I think he just likes the ride."
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "MAGNEMITE",
+          "x": 2,
+          "y": 7,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "CeladonCity_FloristsHouse_hoenn",
+      "door": {
+        "map": "CeladonCity_hns",
+        "x": 26,
+        "y": 17
+      },
+      "template": "house_yellow_c",
+      "purpose": "Florist's house: flowers, Bellossom, and a berry gift.",
+      "signs": [
+        {
+          "x": 5,
+          "y": 4,
+          "text": "A vase of fresh flowers from the garden by the pond."
+        },
+        {
+          "x": 6,
+          "y": 4,
+          "text": "A vase of fresh flowers from the garden by the pond."
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_1_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "daily_gift": {
+            "flag": "FLAG_HOENN_DAILY_FLORIST_GIFT",
+            "items": [
+              "LUM_BERRY",
+              "CHERI_BERRY",
+              "CHESTO_BERRY",
+              "PECHA_BERRY",
+              "RAWST_BERRY",
+              "ASPEAR_BERRY",
+              "SITRUS_BERRY"
+            ],
+            "intro": [
+              "I grow flowers for ERIKA's GYM, and berries along the pond.",
+              "Here, take one of today's berries!"
+            ],
+            "after": "A different berry ripens every day of the week. Come back tomorrow!",
+            "full": "Oh, your BAG is full. Make some room and I'll pick one for you.",
+            "done": "That was today's berry. Come back tomorrow, there's always another!"
+          }
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LASS_HNS",
+          "x": 9,
+          "y": 5,
+          "facing": "left",
+          "text": [
+            "Our BELLOSSOM dances whenever the sun comes out.",
+            "On rainy days it just sits by the window and sulks!"
+          ],
+          "hints": [
+            "TIP_WEATHER"
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "BELLOSSOM",
+          "x": 8,
+          "y": 7,
+          "facing": "wander"
         }
       ]
     }

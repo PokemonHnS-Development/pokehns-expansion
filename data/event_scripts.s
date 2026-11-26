@@ -297,6 +297,9 @@ gStdScripts_End::
 	.include "data/maps/LilycoveCity_ContestLobby_hns/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestLobby_hoenn/scripts.inc" @ Hoenn & Seek
 	.include "data/maps/LilycoveCity_ContestHall_hoenn/scripts.inc" @ Hoenn & Seek
+	.include "data/maps/CeladonCity_FloristsHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/Route6_EngineersHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/Route6_BugClub_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
 	.include "data/maps/BellchimeTrail_Lodge_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
 	.include "data/maps/Route38_MoomooStoreroom_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
 	.include "data/maps/Route34_BreedersHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)

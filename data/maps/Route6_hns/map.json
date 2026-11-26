@@ -268,6 +268,20 @@
       "elevation": 0,
       "dest_map": "MAP_GATE_SAFFRON_CITY_ROUTE6_HNS",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 21,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6_BUG_CLUB_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 49,
+      "y": 30,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6_ENGINEERS_HOUSE_HOENN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
