@@ -126,6 +126,7 @@ HoennSeek_EventScript_BufferCyndaquil:
 @ 2.0 part 16: May, once Bulbasaur or Charmander has chosen you (Bill told Birch).
 HoennSeek_EventScript_CallKantoStarter::
 	setflag FLAG_HOENN_CALL_KANTO_STARTER
+	goto_if_set FLAG_HOENN_SQUIRTLE_DONE, HoennSeek_EventScript_CallSquirtle
 	bufferspeciesname STR_VAR_1, SPECIES_BULBASAUR
 	call_if_set FLAG_HOENN_CHARMANDER_DONE, HoennSeek_EventScript_BufferCharmander
 	setspeaker HoennSeek_Text_NameMay
@@ -134,6 +135,11 @@ HoennSeek_EventScript_CallKantoStarter::
 HoennSeek_EventScript_BufferCharmander:
 	bufferspeciesname STR_VAR_1, SPECIES_CHARMANDER
 	return
+@ Part 17: the Squirtle Squad's leader, if it's with you when the call rings.
+HoennSeek_EventScript_CallSquirtle:
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallSquirtle
+	goto HoennSeek_EventScript_CallEnd
 
 HoennSeek_EventScript_CallEnd::
 	waitmessage
@@ -308,6 +314,17 @@ HoennSeek_Text_CallStarterFound::
 	.string "Dad was worried sick about it.\n"
 	.string "He says it couldn't be in better\l"
 	.string "hands. Take good care of it!$"
+
+HoennSeek_Text_CallSquirtle::
+	.string "Hi, {PLAYER}! It's MAY.\p"
+	.string "PROF. BIRCH's aide just got\n"
+	.string "off the ferry from VERMILION.\p"
+	.string "The whole port was talking about\n"
+	.string "a SQUIRTLE gang that put out a\l"
+	.string "fire, and the TRAINER who left\l"
+	.string "with their leader!\p"
+	.string "That was you, wasn't it?\n"
+	.string "I knew it!$"
 
 HoennSeek_Text_CallKantoStarter::
 	.string "Hi, {PLAYER}! It's MAY.\p"

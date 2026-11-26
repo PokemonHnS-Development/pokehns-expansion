@@ -178,4 +178,17 @@
 // Center (its frame script plays the scene), 2 = it chose you.
 #define VAR_HOENN_CHARMANDER_STATE      (HOENN_VARS_D_EVENTS + 0x00)
 
+// ---- Part 17: Kanto starters B (data/scripts/hoenn_kanto_starters.inc) ------
+// Squirtle: the Squirtle Squad. By day they play by Route 6's pond and dig
+// pitfalls; one drops you into their hideout (Route6_Hideout_hoenn). At night
+// they put out a house fire in Vermilion, and the leader (sunglasses) joins you.
+#define FLAG_HOENN_SQUIRTLE_DONE        (HOENN_FLAGS_D_STARTERS + 0x18) // the leader joined you
+#define FLAG_HOENN_HIDE_SQUAD_ROUTE6    (HOENN_FLAGS_D_STARTERS + 0x19) // three Squirtle by the pond
+#define FLAG_HOENN_HIDE_SQUAD_LEADER    (HOENN_FLAGS_D_STARTERS + 0x1A) // ...and their leader, until the hideout
+#define FLAG_HOENN_HIDE_SQUAD_VERMILION (HOENN_FLAGS_D_STARTERS + 0x1B) // the Squad at the burning house
+#define FLAG_HOENN_SQUIRTLE_FIRE_OUT    (HOENN_FLAGS_D_STARTERS + 0x1C) // the fire scene played
+// 0 = not met, 1 = you fell into the hideout (its frame script plays the
+// scene), 2 = met them (Vermilion's fire waits for night), 3 = the leader joined.
+#define VAR_HOENN_SQUIRTLE_STATE        (HOENN_VARS_D_EVENTS + 0x01)
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H
