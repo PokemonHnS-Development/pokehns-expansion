@@ -89,7 +89,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
 | **2.0** part 19 (species B: Gengar shadow chase, Slowking sage riddles; 2 calls) | 32,657,988 / 875 KB | 32,817,732 / 719 KB |
 | **2.0** part 20 (hidden A: Glass Flute + Munchlax + ash grotto, Spinda's weekly dance, Slaking's noon nap + clearing; 2 calls) | 32,662,804 / 870 KB | 32,823,172 / 714 KB |
 | **2.0** part 17r-e (meadow, garden and Squirtle den hand-painted; 4 more Sunkern; on top of part 20) | 32,662,900 / 870 KB | 32,823,268 / 714 KB |
-| **2.0** part 21 (hidden B: Tropius orchard + daily berry tree, Feebas mirror pool, Zangoose vs. Seviper weekly double; random Feebas tiles off; 3 calls) | 32,667,572 / 866 KB | 32,827,812 / 709 KB |
+| **2.0** part 21 (hidden B: Tropius orchard + daily berry tree, Feebas mirror pool, Zangoose vs. Seviper weekly double; random Feebas tiles off; 3 calls) | 32,667,668 / 865 KB | 32,827,908 / 709 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
