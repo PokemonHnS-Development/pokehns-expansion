@@ -108,4 +108,8 @@
 // line next. One var for all of them, so there are no per-NPC flags (2.0-plan 2c).
 #define VAR_HOENN_HINT_TOGGLE     (HOENN_VARS_B_WEATHER_HINTS + 0x00)
 
+// ---- Parts 8a-11: opened buildings (data/hoenn/buildings.json) -------------
+// Olivine lighthouse keeper's wife: one find from the shore a day (part 8b).
+#define FLAG_HOENN_DAILY_KEEPER_GIFT  (HOENN_DAILY_FLAGS_START + 0x00)
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

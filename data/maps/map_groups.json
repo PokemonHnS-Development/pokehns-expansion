@@ -714,7 +714,13 @@
     "FuchsiaCity_SafariZoneCave_hns",
     "LilycoveCity_ContestLobby_hoenn",
     "LilycoveCity_ContestHall_hoenn",
-    "Route34_FishingShack_hoenn"
+    "Route34_FishingShack_hoenn",
+    "OlivineCity_HarborOffice_hoenn",
+    "OlivineCity_SailorsHouse_hoenn",
+    "OlivineCity_CaptainsHouse_hoenn",
+    "OlivineCity_TackleShop_hoenn",
+    "OlivineCity_Shipwright_hoenn",
+    "OlivineCity_KeepersHouse_hoenn"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

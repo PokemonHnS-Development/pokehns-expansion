@@ -4,37 +4,445 @@
     "Read by tools/hoenn/gen_hoenn_buildings.py; the per-building plan is hoenn-docs/buildings.md and",
     "tools/hoenn/find_fake_doors.py lists the doors.",
     "templates: name -> {from: an HnS house map}. A building uses that map's layout (furniture and all),",
-    "  its signs (bookshelves, TV...) and its entrance tile; HnS has a dozen 13x10 house variants, so",
-    "  buildings vary by picking different ones (no new layouts, no new ROM for tiles).",
+    "  its signs (bookshelves, TV...) and its entrance tile; HnS has dozens of 13x10 house maps (yellow tile,",
+    "  wood floor, Mr. POKéMON's white office), so buildings vary by picking different ones (no new tiles).",
     "buildings: {name (map folder, ends in _hoenn), door {map, x, y}, template, purpose, music (optional,",
-    "  default: the outside map's), objects}. Objects are",
-    "  {type: npc, gfx, x, y, facing (down/up/left/right/wander/look), text (string or list of boxes),",
+    "  default: the outside map's), signs (optional), texts (optional), objects}.",
+    "  signs: [{x, y, text}] replaces the template's signs ([] = none; leave it out to keep them).",
+    "  texts: {Key: text} becomes <name>_Text_<Key>, for hand-written scripts in data/scripts/hoenn_buildings.inc.",
+    "  Objects are",
+    "  {type: npc, gfx, x, y, facing (down/up/left/right/wander/look), text (string or list of boxes) or",
+    "   script (a hand-written script label instead of text),",
     "   hints (optional: hint line ids from data/hoenn/npc_hints.json, makes them a hint NPC)}",
     "  or {type: mon, species, x, y, facing}: a Pokémon object that plays its cry (house pets).",
-    "  Every object must stand on a free floor tile, not on or right above the entrance."
+    "  Every object must stand on a free floor tile, not on or right above the entrance. In the 13x10",
+    "  houses the chairs (left and right of the table, and the row above them) are walkable: keep NPCs off them."
   ],
-
   "templates": {
-    "house_a": {"from": "CherrygroveCity_House1_hns"},
-    "house_b": {"from": "CherrygroveCity_House2_hns"},
-    "house_c": {"from": "CianwoodHouse2_hns"},
-    "house_d": {"from": "GoldenrodCity_House2_hns"},
-    "house_e": {"from": "EcruteakCity_House1_hns"}
+    "house_a": {
+      "from": "CherrygroveCity_House1_hns"
+    },
+    "house_b": {
+      "from": "CherrygroveCity_House2_hns"
+    },
+    "house_c": {
+      "from": "CianwoodHouse2_hns"
+    },
+    "house_d": {
+      "from": "GoldenrodCity_House2_hns"
+    },
+    "house_e": {
+      "from": "EcruteakCity_House1_hns"
+    },
+    "office": {
+      "from": "Route30_MrPokemonsHouse_hns"
+    },
+    "house_clock": {
+      "from": "LakeOfRage_House1_hns"
+    },
+    "house_tv": {
+      "from": "GoldenrodCity_House1_hns"
+    },
+    "house_wood": {
+      "from": "LakeOfRage_House2_hns"
+    },
+    "house_wood_book": {
+      "from": "EcruteakCity_House2_hns"
+    },
+    "house_yellow": {
+      "from": "PewterCity_House1_hns"
+    }
   },
-
   "buildings": [
     {
       "name": "Route34_FishingShack_hoenn",
-      "door": {"map": "Route34_hns", "x": 23, "y": 50},
+      "door": {
+        "map": "Route34_hns",
+        "x": 23,
+        "y": 50
+      },
       "template": "house_c",
       "purpose": "Fisherman's shack on Route 34's shore (part 8a's test interior).",
       "objects": [
-        {"type": "npc", "gfx": "OBJ_EVENT_GFX_FISHERMAN_HNS", "x": 2, "y": 6, "facing": "right",
-         "text": ["The fish off ROUTE 34 bite best in the early morning.", "Don't tell anyone, but on rainy days you'll hook POLIWAG right off the beach!"]},
-        {"type": "npc", "gfx": "OBJ_EVENT_GFX_WOMAN_2_HNS", "x": 10, "y": 3, "facing": "look",
-         "text": "My husband spends more time at sea than at home. Lucky for him, the fish keep us fed!",
-         "hints": ["TIP_WEATHER", "TIP_CLOCK"]},
-        {"type": "mon", "species": "PSYDUCK", "x": 6, "y": 7, "facing": "wander"}
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_FISHERMAN_HNS",
+          "x": 2,
+          "y": 6,
+          "facing": "right",
+          "text": [
+            "The fish off ROUTE 34 bite best in the early morning.",
+            "Don't tell anyone, but on rainy days you'll hook POLIWAG right off the beach!"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_2_HNS",
+          "x": 10,
+          "y": 3,
+          "facing": "look",
+          "text": "My husband spends more time at sea than at home. Lucky for him, the fish keep us fed!",
+          "hints": [
+            "TIP_WEATHER",
+            "TIP_CLOCK"
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "PSYDUCK",
+          "x": 6,
+          "y": 7,
+          "facing": "wander"
+        }
+      ]
+    },
+    {
+      "name": "OlivineCity_HarborOffice_hoenn",
+      "door": {
+        "map": "OlivineCity_hns",
+        "x": 2,
+        "y": 15
+      },
+      "template": "office",
+      "purpose": "Harbor office: ship schedules for the S.S. AQUA and the HOENN ferry, a clerk who hints about Hoenn.",
+      "signs": [
+        {
+          "x": 1,
+          "y": 1,
+          "text": "Logbooks of every ship that has docked in OLIVINE, going back fifty years."
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "text": "Logbooks of every ship that has docked in OLIVINE, going back fifty years."
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "text": "Tide tables for the waters around OLIVINE and CIANWOOD."
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "text": "Tide tables for the waters around OLIVINE and CIANWOOD."
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "text": [
+            "A chart of the sea routes.",
+            "A line runs from OLIVINE to VERMILION, and a long dotted one from VERMILION far to the south, to SLATEPORT CITY in HOENN."
+          ]
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "text": [
+            "A chart of the sea routes.",
+            "A line runs from OLIVINE to VERMILION, and a long dotted one from VERMILION far to the south, to SLATEPORT CITY in HOENN."
+          ]
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "text": "The ship-to-shore radio crackles: “...calm seas past CIANWOOD... light winds...”"
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "text": "The ship-to-shore radio crackles: “...calm seas past CIANWOOD... light winds...”"
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_ATTENDANT_F_HNS",
+          "x": 7,
+          "y": 3,
+          "facing": "down",
+          "text": [
+            "Welcome to the OLIVINE HARBOR OFFICE!",
+            "The S.S. AQUA sails between OLIVINE and VERMILION CITY. The board at the port has its sailing days."
+          ],
+          "hints": [
+            "STORY_FERRY",
+            "TIP_REMINDER_H"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_SAILOR_HNS",
+          "x": 1,
+          "y": 6,
+          "facing": "right",
+          "text": [
+            "I just signed on with the HOENN ferry out of VERMILION.",
+            "Warm seas, wild WAILMER, and the ship docks right in SLATEPORT. Can't wait!"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_GENTLEMAN_HNS",
+          "x": 9,
+          "y": 7,
+          "facing": "up",
+          "text": "I've waited an hour to ask about my lost luggage. The clerk keeps talking about the weather!"
+        }
+      ]
+    },
+    {
+      "name": "OlivineCity_SailorsHouse_hoenn",
+      "door": {
+        "map": "OlivineCity_hns",
+        "x": 6,
+        "y": 15
+      },
+      "template": "house_yellow",
+      "purpose": "Sailor's family home: the sailor is away at sea, his kids are home, and there's a Wingull pet.",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_1_HNS",
+          "x": 9,
+          "y": 5,
+          "facing": "left",
+          "text": [
+            "My husband sails on the S.S. AQUA.",
+            "He's at sea half the week, so the kids and the WINGULL keep me busy!"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LITTLE_BOY_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "wander",
+          "text": "Dad brought WINGULL home from VERMILION. It follows the ships all the way across the sea!"
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LITTLE_GIRL_HNS",
+          "x": 8,
+          "y": 7,
+          "facing": "up",
+          "text": "When I grow up, I'm going to captain my own ship and sail all the way to HOENN!",
+          "hints": [
+            "TIP_NAMERATER_JK",
+            "TIP_NAMERATER_H"
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "WINGULL",
+          "x": 2,
+          "y": 7,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "OlivineCity_CaptainsHouse_hoenn",
+      "door": {
+        "map": "OlivineCity_hns",
+        "x": 10,
+        "y": 15
+      },
+      "template": "house_clock",
+      "purpose": "Retired captain: sea stories, and he rates your Pokémon's friendship.",
+      "texts": {
+        "RateIntro": [
+          "Forty years I captained ships out of this port. You learn to read a crew.",
+          "Let's have a look at your {STR_VAR_1}..."
+        ],
+        "Rate0": "Hmph. That one would mutiny the first chance it got. Treat it better, sailor.",
+        "Rate1": "It keeps its distance from you, like a deckhand who doesn't trust the captain yet.",
+        "Rate2": "It's not used to you yet. Give it time at sea together.",
+        "Rate3": "It's getting used to you. A few more voyages and you'll be a fine crew.",
+        "Rate4": "It likes you quite a lot! It would follow you through any storm.",
+        "Rate5": "It's very happy with you. That's a first mate if I ever saw one!",
+        "Rate6": "Ha! It adores you! I haven't seen a bond like that since my old LAPRAS and me."
+      },
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_CAPTAIN_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "script": "HoennSeek_EventScript_OlivineCaptain",
+          "hints": [
+            "RUMOR_LAPRAS"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_OLD_WOMAN_HNS",
+          "x": 9,
+          "y": 5,
+          "facing": "left",
+          "text": [
+            "My husband still tells the story of the night a LAPRAS led his ship through the fog off CIANWOOD.",
+            "I've heard it three hundred times. I still like it."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OlivineCity_TackleShop_hoenn",
+      "door": {
+        "map": "OlivineCity_hns",
+        "x": 27,
+        "y": 15
+      },
+      "template": "house_wood",
+      "purpose": "Fishing tackle shop: a small mart (Net/Dive/Lure Balls, Repels).",
+      "signs": [
+        {
+          "x": 6,
+          "y": 4,
+          "text": "Fishing line, hooks and lures, sorted by size."
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "text": "Fishing line, hooks and lures, sorted by size."
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_MART_EMPLOYEE_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "script": "HoennSeek_EventScript_OlivineTackleShop"
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_FISHERMAN_HNS",
+          "x": 9,
+          "y": 6,
+          "facing": "up",
+          "text": [
+            "A LURE BALL for anything you hook, a NET BALL for WATER and BUG types...",
+            "And a DIVE BALL for anything you meet under the waves. This shop has all three!"
+          ],
+          "hints": [
+            "TIP_WEATHER"
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "MAGIKARP",
+          "x": 9,
+          "y": 3,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "OlivineCity_Shipwright_hoenn",
+      "door": {
+        "map": "OlivineCity_hns",
+        "x": 31,
+        "y": 15
+      },
+      "template": "house_wood_book",
+      "purpose": "Shipwright's workshop: workers, and talk of the lighthouse and Amphy.",
+      "signs": [
+        {
+          "x": 6,
+          "y": 4,
+          "text": "Blueprints for a new ferry. They're stamped “S.S. TIDAL, SLATEPORT SHIPYARD.”"
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "text": "Blueprints for a new ferry. They're stamped “S.S. TIDAL, SLATEPORT SHIPYARD.”"
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WORKER_M_HNS",
+          "x": 2,
+          "y": 5,
+          "facing": "right",
+          "text": [
+            "We repair every ship that docks in OLIVINE.",
+            "The shipyard in SLATEPORT sent us these plans so we can fix their ferry when it's in port."
+          ],
+          "hints": [
+            "TIP_CLOCK"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WORKER_F_HNS",
+          "x": 9,
+          "y": 4,
+          "facing": "look",
+          "text": [
+            "No captain sails at night without the LIGHTHOUSE.",
+            "When AMPHY fell ill, JASMINE stayed by its side until it could shine again. Every sailor here owes her one."
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_ENGINEER_HNS",
+          "x": 9,
+          "y": 7,
+          "facing": "up",
+          "text": "Steel hulls, strong as a STEELIX! Well, almost."
+        }
+      ]
+    },
+    {
+      "name": "OlivineCity_KeepersHouse_hoenn",
+      "door": {
+        "map": "OlivineCity_hns",
+        "x": 35,
+        "y": 15
+      },
+      "template": "house_tv",
+      "purpose": "Lighthouse keeper's family: Jasmine and Amphy lines, and a daily item.",
+      "signs": [],
+      "texts": {
+        "GiftIntro": "The tide leaves all sorts of things on the rocks below the LIGHTHOUSE. I go down every morning. Here's today's find!",
+        "GiftAfter": "Come back tomorrow. The sea always brings something new.",
+        "GiftBagFull": "Oh, your BAG is full! I'll keep it for you until you make room.",
+        "GiftDone": "I've already been down to the rocks today. Come back tomorrow!"
+      },
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_3_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "script": "HoennSeek_EventScript_OlivineKeeperGift"
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_OLD_MAN_HNS",
+          "x": 9,
+          "y": 4,
+          "facing": "left",
+          "text": [
+            "I've kept the LIGHTHOUSE for thirty years, and AMPHY lights the lamp now.",
+            "JASMINE climbs up every evening after the GYM closes, just to say goodnight to it."
+          ],
+          "hints": [
+            "TIP_LEVEL_CAP"
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "MAREEP",
+          "x": 8,
+          "y": 7,
+          "facing": "wander"
+        }
       ]
     }
   ]

@@ -165,6 +165,13 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Route 34's fisherman's shack (the small house on the shore, 23,50): walk in and out, talk to both NPCs (the wife alternates with a hint), the Psyduck cries and wanders without blocking the door.
 - [ ] Review `hoenn-docs/buildings.md`: the 16 buildings and their planned purposes.
 
+## 2.0 part 8b — Olivine buildings
+- [ ] Walk into all 6 (west row 2,15 / 6,15 / 10,15; east row 27,15 / 31,15 / 35,15) and out again. Read the texts in place: none of them has had Bryan's review.
+- [ ] Retired captain: rates the lead Pokémon (tested only with the debug Lapras, the lowest rating). Try a happy Pokémon. On the second talk he gives the Lapras rumor.
+- [ ] Tackle shop: buy each ball and Repel. Are the prices and the list OK?
+- [ ] Lighthouse keeper's wife: one find a day (Pearl; Stardust on Tue/Thu; Big Pearl at weekends). Check that it resets the next day with a real clock, and what she says with a full bag.
+- [ ] The wall clock in the captain's house (with a set clock; debug saves show "The clock is stopped").
+
 ## General
 - [ ] The release build plays the same as the debug build (all testing so far used debug builds).
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.
