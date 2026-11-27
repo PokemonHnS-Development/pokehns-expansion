@@ -433,6 +433,69 @@
      ],
      "legend": {"a": {"from": [0, 70]}, "b": {"from": [18, 79]}, "c": {"from": [2, 72]}, "d": {"from": [5, 84]}, "e": {"from": [33, 78]}, "f": {"from": [8, 77]}, "g": {"from": [1, 85]}, "h": {"from": [0, 85]}, "i": {"from": [27, 73]}, "j": {"from": [8, 84]}, "k": {"from": [1, 86]}, "l": {"from": [0, 86]}, "m": {"from": [20, 76]}, "n": {"from": [29, 60]}, "o": {"from": [26, 80]}, "p": {"from": [28, 80]}, "q": {"from": [31, 80]}, "r": {"from": [22, 67]}, "s": {"from": [23, 67]}, "t": {"from": [26, 81]}, "u": {"from": [28, 81]}, "v": {"from": [31, 81]}, "w": {"from": [22, 68]}, "x": {"from": [23, 68]}, "y": {"from": [26, 83]}, "z": {"from": [27, 83]}, "A": {"from": [31, 83]}, "B": {"from": [14, 0]}, "C": {"from": [11, 54]}, "D": {"from": [27, 68]}, "E": {"from": [37, 65]}, "F": {"from": [10, 54]}}}
    ]
+  },
+  "RockTunnel_OnixBore_hoenn": {
+   "source": "LAYOUT_ROCK_TUNNEL_B1F_HNS",
+   "layout": "LAYOUT_ROCK_TUNNEL_ONIX_BORE_HOENN",
+   "border": [9, 0],
+   "ops": [
+    {"_": "Onix's bore (2.0 part 29): tonight's hole drops you at the bottom (x 7-8) of a tunnel the Onix dug, which winds up to its round chamber",
+     "at": [0, 0],
+     "grid": [
+      "aaaaaaaaaaaaaaaaaaaa",
+      "aaaaabccccccccdaaaaa",
+      "aaaaaeffffffffgaaaaa",
+      "aaabchfffffffficdaaa",
+      "aaaefffffjffffffgaaa",
+      "aaaeffffffffffffgaaa",
+      "aaaefffffffjffffgaaa",
+      "aaaeffffffffffffgaaa",
+      "aaaklmffjfffffnloaaa",
+      "aaaaaeffffffffgaaaaa",
+      "aaaaaklllmffnloaaaaa",
+      "aaaaaaaaaefficcccdaa",
+      "aaaaaaaaaefffffffgaa",
+      "aaaaaaaaaefffffffgaa",
+      "aaaaaaaaakllllmffgaa",
+      "aaaaaabccccccchffgaa",
+      "aaaaaaefffffffffjgaa",
+      "aaaaaaeffffffffffgaa",
+      "aaaaaaeffnllllllloaa",
+      "aaaaaaeffgaaaaaaaaaa",
+      "aaaaaaeffgaaaaaaaaaa",
+      "aaaaaaeffgaaaaaaaaaa"
+     ],
+     "legend": {"a": {"from": [9, 0]}, "b": {"from": [2, 0]}, "c": {"from": [3, 0]}, "d": {"from": [8, 0]}, "e": {"from": [2, 1]}, "f": {"from": [3, 1]}, "g": {"from": [8, 1]}, "h": {"from": [15, 5]}, "i": {"from": [21, 3]}, "j": {"from": [6, 1]}, "k": {"from": [15, 9]}, "l": {"from": [14, 6]}, "m": {"from": [15, 6]}, "n": {"from": [13, 6]}, "o": {"from": [55, 21]}}}
+   ]
+  },
+  "DarkCave_Burrow_hoenn": {
+   "source": "LAYOUT_DARK_CAVE_SOUTH_SIDE_HNS",
+   "layout": "LAYOUT_DARK_CAVE_BURROW_HOENN",
+   "border": [8, 3],
+   "ops": [
+    {"_": "Dunsparce burrow (2.0 part 29): the burrow holes drop into a dug room (rows 11-14); a passage (x 10-11, rows 7-10) choked with rubble leads up to the hidden chamber (rows 3-6); the ladder at (14,13)",
+     "at": [0, 0],
+     "grid": [
+      "aaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaabbbbbbaaaaaaa",
+      "aaaaaaaacddddddeaaaaaa",
+      "aaaaaaacfggggggheaaaaa",
+      "aaaaaaaiggggggggjaaaaa",
+      "aaaaaaaigggggkggjaaaaa",
+      "aaaaaaalmggggggnoaaaaa",
+      "aaaaaaaalmggnppoaaaaaa",
+      "aaaaaaaaaiggjaaaaaaaaa",
+      "aaaabbbbbiggjbbbbaaaaa",
+      "aaacdddddfgghddddeaaaa",
+      "aaaigggggggggggggjaaaa",
+      "aaaigggggggggggggjaaaa",
+      "aaaigkggggggggZggjaaaa",
+      "aaaigggggggggggggjaaaa",
+      "aaalpppppppppppppoaaaa",
+      "aaaaaaaaaaaaaaaaaaaaaa"
+     ],
+     "legend": {"a": {"from": [0, 0]}, "b": {"from": [1, 5]}, "c": {"from": [0, 5]}, "d": {"from": [2, 6]}, "e": {"from": [37, 5]}, "f": {"from": [44, 8]}, "g": {"from": [4, 7]}, "h": {"from": [37, 11]}, "i": {"from": [1, 7]}, "j": {"from": [7, 7]}, "k": {"from": [45, 7]}, "l": {"from": [7, 12]}, "m": {"from": [56, 9]}, "n": {"from": [50, 9]}, "o": {"from": [1, 12]}, "p": {"from": [51, 9]}, "Z": {"from": [6, 47], "src": "LAYOUT_UNION_CAVE_1F_HNS"}}}
+   ]
   }
  },
  "patches": [

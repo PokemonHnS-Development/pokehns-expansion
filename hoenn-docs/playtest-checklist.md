@@ -459,3 +459,12 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 - May's call after the first landing (outside; not inside Mt. Silver).
 - The glass workshop boy's rumor before and after the flyover.
 
+## 2.0 part 29 (shifting tunnels)
+- Rock Tunnel B1F at night: the rumble (once a night), then find that weekday's hole. Try at least two weekdays: is each hole easy enough to spot with Flash?
+- The bore: the shiny Onix, its battle level for your progress, the three item balls, the Metal Coat where it lay. Knock it out and come back the next night.
+- Holes by day: none. After the catch: holes still open, no rumble.
+- Dark Cave's south side: find the burrow hole in the morning, day, evening and night (each in a different spot; with Flash). Is the schedule guessable from the Violet kid's rumor?
+- The burrow: one row cleared per time of day; the fourth opens the passage; the Dudunsparce (Three-Segment form in the summary screen); the ladder back.
+- Route 21 islet (surf there): vines by day, Cut does nothing; mornings the vines step aside and the shiny Tangela waits. Afterwards: the Miracle Seed, no vines.
+- Brendan's call after the Onix (outside).
+- Rumors: Lavender hiker, Violet kid, Pallet man, before and after.
