@@ -412,6 +412,11 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 ## Lane A parts (27b on: Cipher, Johto, the sea)
 Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its `## 2.0 part NN` sections directly above "Lane B parts"; lane B adds its own at the end of the file, so the two never edit the same lines.
 
+## 27r (Unown Cipher fixes)
+- Words Room 1: walk right up to the north wall (you're standing on the braille) and press A facing the wall: it should read.
+- At night in rooms 2–4, the same from the wall.
+- Stay up past midnight: the word shouldn't change until morning (Friday night is UNION all night).
+
 ## 2.0 part 27b (Unown Cipher B)
 - After seeing a night word, go to its place at night: is the ring easy to find from the entrance, and do the letters read as the word (clockwise from the top)? Bell Tower 2F, Mt. Moon Square, Ice Path 1F, Whirl Islands B2F, Mt. Mortar (by the lake), Union Cave B1F, Seafoam 1F.
 - Walk to each ring from the real entrance (the tests warped next to them): Whirl Islands B2F and Seafoam 1F especially.
