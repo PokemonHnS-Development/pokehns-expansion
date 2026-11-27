@@ -11,6 +11,7 @@
 HoennSeek_EventScript_PhoneEventLaneB::
 	switch VAR_0x8004
 	case HOENN_CALL_MOON_HOLLOW, HoennSeek_EventScript_CallMoonHollow @ part 31b
+	case HOENN_CALL_BIRDS, HoennSeek_EventScript_CallBirds @ part 34a
 	releaseall @ no call matched: the end of the chain
 	end
 
@@ -561,3 +562,538 @@ HoennSeek_Text_CallMoonHollow:
 	.string "Dad says a place like your moon\n"
 	.string "hollow is just where it'd listen.\l"
 	.string "Make a good wish, okay? Later!$"
+
+@ ==========================================================================
+@ Part 34a: the three birds (Bill's hub, the feathers, the roosts)
+@ ==========================================================================
+@ - Bill (GoldenrodCity_BillsHouse_hns, object script swap) tracks the three
+@   legendary birds through his PC network. Once you have his Eevee he tells
+@   you, for each bird not yet caught, where its feather is said to be or,
+@   if you carry it, where the bird roosts.
+@ - Feathers (key items): the FROST FEATHER (part 26b, Shoal Cave's ice
+@   chamber); the THUNDER FEATHER, which the Power Plant manager gives you on
+@   Route 10's thunderstorm day (his object script is swapped; HnS's script
+@   runs until the Machine Part is back); the FLAME FEATHER, dropped into
+@   Route 113's ash when Moltres flies over (the cameo: trigger column x 56,
+@   rows 2-12, any time, once).
+@ - Roosts: Seafoam B1F's middle island (Articuno, 31,31), the Power Plant's
+@   back yard on Route 10 (Zapdos, 5,48; reached through the plant's back
+@   room), Mt. Silver's Moltres room (Moltres, 17,18, in the pit; HnS had it at 17,20,
+@   out of view under the text box from the foot of the stairs). HnS's bird
+@   objects stay, with Hoenn & Seek flags (HnS's own bird hide flags are 0, so its
+@   birds came back after every battle). Each roost map's OnTransition asks
+@   HoennBirdRoostState (src/hoenn_lane_b.c): a bird that already landed is
+@   shown; with the feather in the bag the roost's triggers are armed
+@   (VAR_TEMP_6 1), and stepping on one calls the bird down. It waits there
+@   until you battle it (HnS's Lv 50 legendary battle): caught, gone for good;
+@   knocked out, back another day (daily flag); ran, it stays. Feathers stay in
+@   the bag: Lugia's shrine (lane A's part 34b) asks for all three.
+@ - Phone: May, once a feather has called a bird down (Bill phoned Birch).
+
+@ ---- Bill's hub ---------------------------------------------------------------
+
+HoennSeek_EventScript_BillBirds::
+	goto_if_unset FLAG_GOT_EEVEE, GoldenrodCity_BillsHouse_EventScript_Bill
+	lock
+	faceplayer
+	goto_if_set FLAG_HOENN_BILL_BIRDS, HoennSeek_EventScript_BillBirdsStatus
+	msgbox HoennSeek_Text_BillBirdsIntro, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_BILL_BIRDS
+HoennSeek_EventScript_BillBirdsStatus:
+	goto_if_unset FLAG_HOENN_CAUGHT_ARTICUNO, HoennSeek_EventScript_BillBirdsReport
+	goto_if_unset FLAG_HOENN_CAUGHT_ZAPDOS, HoennSeek_EventScript_BillBirdsReport
+	goto_if_unset FLAG_HOENN_CAUGHT_MOLTRES, HoennSeek_EventScript_BillBirdsReport
+	msgbox HoennSeek_Text_BillBirdsAllCaught, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_BillBirdsReport:
+	msgbox HoennSeek_Text_BillBirdsReport, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_BillArticuno
+	call HoennSeek_EventScript_BillZapdos
+	call HoennSeek_EventScript_BillMoltres
+	msgbox HoennSeek_Text_BillBirdsBye, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_BillArticuno:
+	goto_if_set FLAG_HOENN_CAUGHT_ARTICUNO, HoennSeek_EventScript_BillArticunoCaught
+	checkitem ITEM_FROST_FEATHER
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_BillArticunoRoost
+	msgbox HoennSeek_Text_BillArticunoClue, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_BillArticunoRoost:
+	msgbox HoennSeek_Text_BillArticunoRoost, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_BillArticunoCaught:
+	msgbox HoennSeek_Text_BillArticunoCaught, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_BillZapdos:
+	goto_if_set FLAG_HOENN_CAUGHT_ZAPDOS, HoennSeek_EventScript_BillZapdosCaught
+	checkitem ITEM_THUNDER_FEATHER
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_BillZapdosRoost
+	msgbox HoennSeek_Text_BillZapdosClue, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_BillZapdosRoost:
+	msgbox HoennSeek_Text_BillZapdosRoost, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_BillZapdosCaught:
+	msgbox HoennSeek_Text_BillZapdosCaught, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_BillMoltres:
+	goto_if_set FLAG_HOENN_CAUGHT_MOLTRES, HoennSeek_EventScript_BillMoltresCaught
+	checkitem ITEM_FLAME_FEATHER
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_BillMoltresRoost
+	msgbox HoennSeek_Text_BillMoltresClue, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_BillMoltresRoost:
+	msgbox HoennSeek_Text_BillMoltresRoost, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_BillMoltresCaught:
+	msgbox HoennSeek_Text_BillMoltresCaught, MSGBOX_DEFAULT
+	return
+
+@ ---- Zapdos: the Power Plant manager's feather ----------------------------------
+
+HoennSeek_EventScript_PowerPlantManager::
+	goto_if_lt VAR_KANTO_ROCKET_STORY_STATE, 7, Route10_PowerPlantBackRoom_EventScript_Manager
+	lock
+	faceplayer
+	goto_if_set FLAG_HOENN_GOT_THUNDER_FEATHER, HoennSeek_EventScript_ManagerAfterFeather
+	setvar VAR_0x8004, MAP_ROUTE10_HNS
+	specialvar VAR_RESULT, HoennIsSpecialWeatherOn
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_ManagerStormFeather
+	msgbox HoennSeek_Text_ManagerStormHint, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_ManagerStormFeather:
+	msgbox HoennSeek_Text_ManagerStorm, MSGBOX_DEFAULT
+	giveitem ITEM_THUNDER_FEATHER
+	setflag FLAG_HOENN_GOT_THUNDER_FEATHER
+	msgbox HoennSeek_Text_ManagerYard, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_ManagerAfterFeather:
+	msgbox HoennSeek_Text_ManagerAfterFeather, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+@ ---- Moltres: the flyover on Route 113 ---------------------------------------------
+
+@ Called from Route 113's OnTransition.
+HoennSeek_EventScript_Route113BirdsOnTransition::
+	setflag FLAG_HOENN_HIDE_ROUTE113_MOLTRES
+	setflag FLAG_HOENN_HIDE_FLAME_FEATHER
+	goto_if_set FLAG_HOENN_GOT_FLAME_FEATHER, HoennSeek_EventScript_LaneBReturn
+	goto_if_set FLAG_HOENN_MOLTRES_CAMEO, HoennSeek_EventScript_FlameFeatherShow
+	setvar VAR_TEMP_6, 1
+	return
+HoennSeek_EventScript_FlameFeatherShow:
+	clearflag FLAG_HOENN_HIDE_FLAME_FEATHER
+HoennSeek_EventScript_LaneBReturn:
+	return
+
+HoennSeek_EventScript_MoltresFlyover::
+	lockall
+	setvar VAR_TEMP_6, 0
+	setflag FLAG_HOENN_MOLTRES_CAMEO
+	msgbox HoennSeek_Text_FlyoverHeat, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_0x8008, 57
+	setvar VAR_0x8009, 6
+	call HoennSeek_EventScript_StarterPanTo
+	clearflag FLAG_HOENN_HIDE_ROUTE113_MOLTRES
+	addobject LOCALID_HOENN_ROUTE113_MOLTRES
+	playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
+	applymovement LOCALID_HOENN_ROUTE113_MOLTRES, HoennSeek_Movement_MoltresFlyover
+	delay 96
+	setfieldeffectargument 0, 64 @ (57,4) + MAP_OFFSET
+	setfieldeffectargument 1, 11
+	setfieldeffectargument 2, 0
+	setfieldeffectargument 3, 1
+	dofieldeffect FLDEFF_ASH_PUFF
+	clearflag FLAG_HOENN_HIDE_FLAME_FEATHER
+	addobject LOCALID_HOENN_FLAME_FEATHER
+	waitmovement LOCALID_HOENN_ROUTE113_MOLTRES
+	removeobject LOCALID_HOENN_ROUTE113_MOLTRES
+	waitmoncry
+	msgbox HoennSeek_Text_FlyoverPassed, MSGBOX_DEFAULT
+	closemessage
+	call HoennSeek_EventScript_StarterPanBack
+	releaseall
+	end
+
+HoennSeek_EventScript_FlameFeather::
+	lock
+	msgbox HoennSeek_Text_FlameFeatherAsh, MSGBOX_DEFAULT
+	giveitem ITEM_FLAME_FEATHER
+	setflag FLAG_HOENN_GOT_FLAME_FEATHER
+	removeobject LOCALID_HOENN_FLAME_FEATHER
+	goto HoennSeek_EventScript_LaneBRelease
+
+@ ---- The roosts ------------------------------------------------------------------
+
+@ Each roost map's OnTransition: VAR_0x8009 = the bird; arms VAR_TEMP_6.
+HoennSeek_EventScript_ArticunoRoostOnTransition::
+	setvar VAR_0x8009, HOENN_BIRD_ARTICUNO
+	goto HoennSeek_EventScript_BirdRoostOnTransition
+HoennSeek_EventScript_ZapdosRoostOnTransition::
+	setvar VAR_0x8009, HOENN_BIRD_ZAPDOS
+	goto HoennSeek_EventScript_BirdRoostOnTransition
+HoennSeek_EventScript_MoltresRoostOnTransition::
+	setvar VAR_0x8009, HOENN_BIRD_MOLTRES
+HoennSeek_EventScript_BirdRoostOnTransition:
+	setvar VAR_TEMP_6, 0
+	specialvar VAR_RESULT, HoennBirdRoostState
+	goto_if_ne VAR_RESULT, HOENN_ROOST_CALL, HoennSeek_EventScript_LaneBReturn
+	setvar VAR_TEMP_6, 1
+	return
+
+@ Seafoam B1F has no map scripts of its own.
+HoennSeek_EventScript_SeafoamB1FOnTransition::
+	call HoennSeek_EventScript_ArticunoRoostOnTransition
+	end
+
+@ The calls: the feather reacts, the bird flies down onto its roost.
+HoennSeek_EventScript_ArticunoRoostCall::
+	lockall
+	setvar VAR_TEMP_6, 0
+	msgbox HoennSeek_Text_FrostFeatherGlows, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
+	setvar VAR_0x8009, HOENN_BIRD_ARTICUNO
+	special HoennBirdLand
+	setobjectxyperm LOCALID_SEAFOAM_ARTICUNO, 31, 25
+	addobject LOCALID_SEAFOAM_ARTICUNO
+	applymovement LOCALID_SEAFOAM_ARTICUNO, HoennSeek_Movement_BirdLand
+	waitmovement 0
+	setobjectxyperm LOCALID_SEAFOAM_ARTICUNO, 31, 31
+	waitmoncry
+	msgbox HoennSeek_Text_ArticunoLanded, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_ZapdosRoostCall::
+	lockall
+	setvar VAR_TEMP_6, 0
+	msgbox HoennSeek_Text_ThunderFeatherCrackles, MSGBOX_DEFAULT
+	closemessage
+	playse SE_THUNDER
+	playmoncry SPECIES_ZAPDOS, CRY_MODE_ENCOUNTER
+	setvar VAR_0x8009, HOENN_BIRD_ZAPDOS
+	special HoennBirdLand
+	setobjectxyperm LOCALID_ROUTE10_ZAPDOS, 5, 42
+	addobject LOCALID_ROUTE10_ZAPDOS
+	applymovement LOCALID_ROUTE10_ZAPDOS, HoennSeek_Movement_BirdLand
+	waitmovement 0
+	setobjectxyperm LOCALID_ROUTE10_ZAPDOS, 5, 48
+	waitmoncry
+	msgbox HoennSeek_Text_ZapdosLanded, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_MoltresRoostCall::
+	lockall
+	setvar VAR_TEMP_6, 0
+	msgbox HoennSeek_Text_FlameFeatherBurns, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
+	setvar VAR_0x8009, HOENN_BIRD_MOLTRES
+	special HoennBirdLand
+	setobjectxyperm LOCALID_MTSILVER_MOLTRES, 11, 18
+	addobject LOCALID_MTSILVER_MOLTRES
+	applymovement LOCALID_MTSILVER_MOLTRES, HoennSeek_Movement_BirdLandFromLeft
+	waitmovement 0
+	setobjectxyperm LOCALID_MTSILVER_MOLTRES, 17, 18
+	waitmoncry
+	msgbox HoennSeek_Text_MoltresLanded, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ The battles (the birds' object scripts): HnS's Lv 50 legendary battle, then
+@ HoennBirdBattleEnded decides whether the bird leaves.
+HoennSeek_EventScript_ArticunoRoost::
+	lock
+	faceplayer
+	playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
+	msgbox SeafoamIslands_B1F_Text_ArticunoBattle
+	delay 40
+	waitmoncry
+	seteventmon SPECIES_ARTICUNO, 50
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	setvar VAR_0x8009, HOENN_BIRD_ARTICUNO
+	specialvar VAR_RESULT, HoennBirdBattleEnded
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_SEAFOAM_ARTICUNO
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_ZapdosRoost::
+	lock
+	faceplayer
+	playmoncry SPECIES_ZAPDOS, CRY_MODE_ENCOUNTER
+	msgbox SeafoamIslands_B1F_Text_ArticunoBattle
+	delay 40
+	waitmoncry
+	seteventmon SPECIES_ZAPDOS, 50
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	setvar VAR_0x8009, HOENN_BIRD_ZAPDOS
+	specialvar VAR_RESULT, HoennBirdBattleEnded
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_ROUTE10_ZAPDOS
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_MoltresRoost::
+	lock
+	faceplayer
+	playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
+	msgbox SeafoamIslands_B1F_Text_ArticunoBattle
+	delay 40
+	waitmoncry
+	seteventmon SPECIES_MOLTRES, 50
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	setvar VAR_0x8009, HOENN_BIRD_MOLTRES
+	specialvar VAR_RESULT, HoennBirdBattleEnded
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_MTSILVER_MOLTRES
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto HoennSeek_EventScript_LaneBRelease
+
+@ ---- May's call -------------------------------------------------------------------
+
+HoennSeek_EventScript_CallBirds::
+	setflag FLAG_HOENN_CALL_BIRDS
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallBirds
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Part 34a movements -------------------------------------------------------------
+
+HoennSeek_Movement_BirdLand:
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_fast_down
+	walk_slow_down
+	face_down
+	step_end
+
+@ Moltres comes in from the side of its pit (you stand at the foot of the
+@ stairs, above its roost).
+HoennSeek_Movement_BirdLandFromLeft:
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_fast_right
+	walk_slow_right
+	face_up
+	step_end
+
+@ From (65,9), off screen east of the camera at (57,6), to (47,1), off screen
+@ to the north-west.
+HoennSeek_Movement_MoltresFlyover:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+@ ---- Part 34a texts ---------------------------------------------------------------
+
+HoennSeek_Text_BillBirdsIntro:
+	.string "BILL: Oh, hey! You've been to\n"
+	.string "HOENN, haven't you? Lucky!\p"
+	.string "I've hooked my PC network up to\n"
+	.string "trainers all over, and I'm using\l"
+	.string "it to track three legendary birds:\l"
+	.string "ARTICUNO, ZAPDOS and MOLTRES.\p"
+	.string "Here's the funny thing. Every\n"
+	.string "report mentions a feather.\p"
+	.string "I think each bird drops one\n"
+	.string "somewhere, and if you carry it\l"
+	.string "back to where the bird roosts,\l"
+	.string "the bird comes to see who has it!$"
+
+HoennSeek_Text_BillBirdsReport:
+	.string "BILL: Here's what my network\n"
+	.string "has picked up so far…$"
+
+HoennSeek_Text_BillArticunoClue:
+	.string "ARTICUNO: a trainer in HOENN saw\n"
+	.string "an icy glow deep in SHOAL CAVE,\l"
+	.string "off ROUTE 125.\p"
+	.string "An ice bird would leave its\n"
+	.string "feather where it's coldest.$"
+
+HoennSeek_Text_BillArticunoRoost:
+	.string "ARTICUNO: you've got its FROST\n"
+	.string "FEATHER! It roosts deep in the\l"
+	.string "SEAFOAM ISLANDS, on the island in\l"
+	.string "the middle of the cold water.$"
+
+HoennSeek_Text_BillArticunoCaught:
+	.string "ARTICUNO: it's with you now. Wow!$"
+
+HoennSeek_Text_BillZapdosClue:
+	.string "ZAPDOS: the POWER PLANT on\n"
+	.string "ROUTE 10 has trouble whenever\l"
+	.string "a thunderstorm hits.\p"
+	.string "Lightning hits the roof, and the\n"
+	.string "manager finds strange things in\l"
+	.string "his generator. Ask him on a\l"
+	.string "stormy day!$"
+
+HoennSeek_Text_BillZapdosRoost:
+	.string "ZAPDOS: you've got its THUNDER\n"
+	.string "FEATHER! It roosts in the yard\l"
+	.string "behind the POWER PLANT. The back\l"
+	.string "door is in the generator room.$"
+
+HoennSeek_Text_BillZapdosCaught:
+	.string "ZAPDOS: it's with you now. Wow!$"
+
+HoennSeek_Text_BillMoltresClue:
+	.string "MOLTRES: hikers in HOENN keep\n"
+	.string "seeing a burning shadow over the\l"
+	.string "ash on ROUTE 113.\p"
+	.string "Something that hot would shed a\n"
+	.string "feather or two!$"
+
+HoennSeek_Text_BillMoltresRoost:
+	.string "MOLTRES: you've got its FLAME\n"
+	.string "FEATHER! It roosts on MT. SILVER,\l"
+	.string "in the big cave with the stone\l"
+	.string "pit, past the waterfall.$"
+
+HoennSeek_Text_BillMoltresCaught:
+	.string "MOLTRES: it's with you now. Wow!$"
+
+HoennSeek_Text_BillBirdsBye:
+	.string "BILL: Come back and tell me how\n"
+	.string "it goes, okay? My network loves\l"
+	.string "a good story!$"
+
+HoennSeek_Text_BillBirdsAllCaught:
+	.string "BILL: You caught all three birds!\n"
+	.string "My network's gone wild!\p"
+	.string "Hang on to those feathers, okay?\p"
+	.string "A man in AZALEA posted an old\n"
+	.string "song about fire, ice and thunder.\l"
+	.string "It says their feathers, together,\l"
+	.string "wake something under the sea…$"
+
+HoennSeek_Text_ManagerStormHint:
+	.string "MANAGER: My beloved generator\n"
+	.string "runs like a dream now…\p"
+	.string "Except on thunderstorm days!\n"
+	.string "Lightning hits the roof, and my\l"
+	.string "generator sparks like crazy!\p"
+	.string "Last storm, I found a gold feather\n"
+	.string "stuck to the coils. It blew away\l"
+	.string "before I could grab it.$"
+
+HoennSeek_Text_ManagerStorm:
+	.string "MANAGER: Did you hear that crash?\n"
+	.string "Lightning hit the roof again!\p"
+	.string "And look what came down the cable\n"
+	.string "into my generator…\p"
+	.string "A gold feather, fizzing with\n"
+	.string "sparks! It shorts out everything\l"
+	.string "it touches.\p"
+	.string "Please, take it away from my\n"
+	.string "precious machine!$"
+
+HoennSeek_Text_ManagerYard:
+	.string "MANAGER: The sparks always come\n"
+	.string "from the yard out the back door.\p"
+	.string "Something big sits out there when\n"
+	.string "it storms. I don't go and look!$"
+
+HoennSeek_Text_ManagerAfterFeather:
+	.string "MANAGER: My generator has been as\n"
+	.string "calm as a MAREEP since you took\l"
+	.string "that feather. Thank you!$"
+
+HoennSeek_Text_FlyoverHeat:
+	.string "The ash underfoot is warm…\n"
+	.string "Something is coming!$"
+
+HoennSeek_Text_FlyoverPassed:
+	.string "A great bird of flame swept over\n"
+	.string "ROUTE 113, heading north-west!\p"
+	.string "Something dropped into the ash\n"
+	.string "where it passed…$"
+
+HoennSeek_Text_FlameFeatherAsh:
+	.string "A red feather lies in the ash,\n"
+	.string "still glowing like an ember.$"
+
+HoennSeek_Text_FrostFeatherGlows:
+	.string "The FROST FEATHER is glowing with\n"
+	.string "a cold blue light…\p"
+	.string "A chill wind sweeps over the water!$"
+
+HoennSeek_Text_ArticunoLanded:
+	.string "ARTICUNO came down to its roost!\n"
+	.string "It's watching the FROST FEATHER…$"
+
+HoennSeek_Text_ThunderFeatherCrackles:
+	.string "The THUNDER FEATHER is crackling\n"
+	.string "with sparks…\p"
+	.string "The air smells like a storm!$"
+
+HoennSeek_Text_ZapdosLanded:
+	.string "ZAPDOS came down to its roost!\n"
+	.string "Its eyes are fixed on your\l"
+	.string "THUNDER FEATHER…$"
+
+HoennSeek_Text_FlameFeatherBurns:
+	.string "The FLAME FEATHER is burning\n"
+	.string "brighter and brighter…\p"
+	.string "The cave is suddenly hot!$"
+
+HoennSeek_Text_MoltresLanded:
+	.string "MOLTRES came down to its roost!\n"
+	.string "It's watching the FLAME FEATHER…$"
+
+HoennSeek_Text_CallBirds:
+	.string "Hi, {PLAYER}! It's MAY!\p"
+	.string "BILL from GOLDENROD just phoned\n"
+	.string "Professor BIRCH, all excited.\p"
+	.string "His PC network picked up a report\n"
+	.string "of a legendary bird coming down\l"
+	.string "right where you were standing!\p"
+	.string "The Professor wants to hear\n"
+	.string "everything. So do I!\p"
+	.string "Did its feather really bring it\n"
+	.string "to you? I want the whole story!$"

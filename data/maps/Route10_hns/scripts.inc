@@ -5,6 +5,7 @@ Route10_hns_MapScripts::
 
 Route10_OnTransition: 
 	callnative SetTimeBasedEncounters
+	call HoennSeek_EventScript_ZapdosRoostOnTransition @ Hoenn & Seek 2.0 part 34a
 	end
 
 Route10_EventScript_Surge::

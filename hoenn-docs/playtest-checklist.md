@@ -456,3 +456,14 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 - The granddaughter's line at each stage, the boy's Peat Block line, the Blackthorn Mart rumor before and after.
 - Brendan's call after the hollow (rings within a few steps outdoors).
 - Route 45's fog day: are the bears and the pine still easy to see in the fog?
+
+## 2.0 part 34a (the three birds)
+- Bill in Goldenrod after his Eevee: the feather explanation, then one line per bird. Come back with a feather, after a landing and after a catch.
+- Route 10's Power Plant on its thunderstorm day (after the Magnet Train is fixed): the manager's THUNDER FEATHER. On other days, his hint; the entrance engineer's storm forecast the day before.
+- The yard behind the Power Plant with the feather: Zapdos lands (does the thunder sound fit?). Run from it, knock it out (back the next day), catch it.
+- Route 113's west path: the Moltres flyover (speed, the ash puff), the red feather in the ash. Does the scene read well at night too?
+- Mt. Silver's Moltres room: Moltres flies in from the left and lands above the text box. Its new spot (two tiles higher): does it still look right in the room?
+- Seafoam B1F with the FROST FEATHER: Articuno lands on the islet.
+- May's call after the first landing (outside; not inside Mt. Silver).
+- The glass workshop boy's rumor before and after the flyover.
+

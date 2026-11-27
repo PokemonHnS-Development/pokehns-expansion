@@ -572,4 +572,43 @@
 #define HOENN_HONEY_MORNINGS_NEEDED     3 // watched mornings before the mother comes
 // The hollow uses VAR_TEMP_1 for its first-visit scene (an ON_FRAME entry).
 
+// ---- Part 34a: the three birds (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Bill (Goldenrod) tracks Articuno, Zapdos and Moltres. Each bird has a
+// feather (key item): the FROST FEATHER (part 26b, Shoal Cave), the THUNDER
+// FEATHER (the Power Plant manager on Route 10's thunderstorm day) and the
+// FLAME FEATHER (dropped into Route 113's ash by Moltres's flyover). Carrying a
+// bird's feather to its roost (Seafoam B1F, the Power Plant's back yard, Mt.
+// Silver's Moltres room) calls the bird down; it waits there until you battle
+// it. Caught = gone for good; knocked out = back another day; ran = it stays.
+// The flags below come in Articuno, Zapdos, Moltres order (HOENN_BIRD_*), so
+// src/hoenn_lane_b.c can add the bird's index to the first one.
+#define HOENN_BIRD_ARTICUNO             0
+#define HOENN_BIRD_ZAPDOS               1
+#define HOENN_BIRD_MOLTRES              2
+#define HOENN_BIRD_COUNT                3
+#define FLAG_HOENN_HIDE_ARTICUNO        (HOENN_LANE_B_FLAGS_F + 0x00) // object flags (replace HnS's FLAG_HIDE_*, which are 0)
+#define FLAG_HOENN_HIDE_ZAPDOS          (HOENN_LANE_B_FLAGS_F + 0x01)
+#define FLAG_HOENN_HIDE_MOLTRES         (HOENN_LANE_B_FLAGS_F + 0x02)
+#define FLAG_HOENN_ARTICUNO_LANDED      (HOENN_LANE_B_FLAGS_F + 0x03) // the feather called it down: it waits at its roost
+#define FLAG_HOENN_ZAPDOS_LANDED        (HOENN_LANE_B_FLAGS_F + 0x04)
+#define FLAG_HOENN_MOLTRES_LANDED       (HOENN_LANE_B_FLAGS_F + 0x05)
+#define FLAG_HOENN_CAUGHT_ARTICUNO      (HOENN_LANE_B_FLAGS_F + 0x06)
+#define FLAG_HOENN_CAUGHT_ZAPDOS        (HOENN_LANE_B_FLAGS_F + 0x07)
+#define FLAG_HOENN_CAUGHT_MOLTRES       (HOENN_LANE_B_FLAGS_F + 0x08)
+#define FLAG_HOENN_GOT_THUNDER_FEATHER  (HOENN_LANE_B_FLAGS_F + 0x09)
+#define FLAG_HOENN_GOT_FLAME_FEATHER    (HOENN_LANE_B_FLAGS_F + 0x0A)
+#define FLAG_HOENN_MOLTRES_CAMEO        (HOENN_LANE_B_FLAGS_F + 0x0B) // saw Moltres fly over Route 113
+#define FLAG_HOENN_HIDE_FLAME_FEATHER   (HOENN_LANE_B_FLAGS_F + 0x0C) // object flag: the feather in Route 113's ash
+#define FLAG_HOENN_HIDE_ROUTE113_MOLTRES (HOENN_LANE_B_FLAGS_F + 0x0D) // object flag: Moltres in the flyover
+#define FLAG_HOENN_BILL_BIRDS           (HOENN_LANE_B_FLAGS_F + 0x0E) // Bill told you he's tracking the birds
+#define FLAG_HOENN_CALL_BIRDS           (HOENN_LANE_B_FLAGS_F + 0x0F) // May: Bill heard a bird came down
+#define FLAG_HOENN_DAILY_ARTICUNO_GONE  (HOENN_LANE_B_DAILY + 0x02)   // knocked out today: back tomorrow
+#define FLAG_HOENN_DAILY_ZAPDOS_GONE    (HOENN_LANE_B_DAILY + 0x03)
+#define FLAG_HOENN_DAILY_MOLTRES_GONE   (HOENN_LANE_B_DAILY + 0x04)
+// specialvar VAR_RESULT, HoennBirdRoostState (VAR_0x8009 = HOENN_BIRD_*):
+#define HOENN_ROOST_EMPTY    0 // nothing happens (caught, gone today, or no feather)
+#define HOENN_ROOST_CALL     1 // the feather can call it: arm the roost's triggers
+#define HOENN_ROOST_WAITING  2 // it already landed: it's shown
+// Route 113 uses VAR_TEMP_6 for the flyover's triggers; the roosts use VAR_TEMP_6 too.
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H
