@@ -13,7 +13,7 @@ Only lane B's builder edits this file (the reviewer may add a line when it merge
 | 34a | PR open, Nov 27 | `v2-34a-birds`, PR #91 (stacked on #90) | lane A's 34b needs it. Feathers: `ITEM_FROST_FEATHER` (26b), `ITEM_THUNDER_FEATHER`, `ITEM_FLAME_FEATHER`; flags `FLAG_HOENN_GOT_*_FEATHER`, caught flags `FLAG_HOENN_*_CAUGHT` |
 | 29 | PR open, Nov 27 | `v2-29-shifting-tunnels`, PR #94 (stacked on #91) | progress-level wild battles: `HoennSetupProgressWildBattle` (`src/hoenn_lane_b.c`) |
 | 30a | PR open, Nov 27 | `v2-30a-kangaskhan-baby`, PR #95 (stacked on #94) | the baby follows as the follower Pokémon: `HoennFollowerOverride` hooks in `src/event_object_movement.c` |
-| 30b | PR open, Nov 27 | `v2-30b-tauros-stampede`, PR #TBD (stacked on #95) | herd task in `src/hoenn_lane_b.c` (`Task_HoennStampede`); `FuchsiaCity_SafariZoneHighland_hoenn` |
+| 30b | PR open, Nov 27 | `v2-30b-tauros-stampede`, PR #96 (stacked on #95) | herd task in `src/hoenn_lane_b.c` (`Task_HoennStampede`); `FuchsiaCity_SafariZoneHighland_hoenn` |
 | 33 | — | — | waits for lane A's 32; freezes wild tables (rule 3.6) |
 | 36 | — | — | |
 | 35a | — | — | |
