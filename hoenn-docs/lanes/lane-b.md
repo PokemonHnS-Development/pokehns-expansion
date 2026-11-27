@@ -16,7 +16,7 @@ Only lane B's builder edits this file (the reviewer may add a line when it merge
 | 30b | ✅ merged (PR #96, Nov 27) | `v2-30b-tauros-stampede`, PR #96 | herd task in `src/hoenn_lane_b.c` (`Task_HoennStampede`); `FuchsiaCity_SafariZoneHighland_hoenn`; the lead bull is a scripted Safari encounter (`HoennStartScriptedSafariBattle`) |
 | 33 | — | — | waits for lane A's 32; freezes wild tables (rule 3.6). Built after 36, since 32 wasn't merged when 30b was done |
 | 36 | ✅ merged (PR #98, Nov 27) | `v2-36-weather-legendaries`, PR #98 | legend helpers `HoennLegendState`/`HoennLegendBattleEnded` (`src/hoenn_lane_b.c`); the ORBS' weather `HoennOrbWeather` (hook in `src/hoenn_time.c`) |
-| 35a | approved, merging (Nov 27) | `v2-35a-mewtwo-mew`, PR #100 | journal pages `FLAG_HOENN_JOURNAL_PAGE_1..6`, `HoennJournalPageCount`; Mew's dawn blurs `HoennMewBlurState`; sea map pieces `HoennSeaMapPieceCount` |
+| 35a | ✅ merged (PR #100, Nov 27) | `v2-35a-mewtwo-mew`, PR #100 | journal pages `FLAG_HOENN_JOURNAL_PAGE_1..6`, `HoennJournalPageCount`; Mew's dawn blurs `HoennMewBlurState`; sea map pieces `HoennSeaMapPieceCount` |
 
 ## Claims on shared things
 Anything outside lane B's ranges or maps, one line each, before the part that uses it.
