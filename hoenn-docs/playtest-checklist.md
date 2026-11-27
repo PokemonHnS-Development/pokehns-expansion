@@ -99,6 +99,7 @@ Nothing a player sees yet (part 3 adds the first weekday content); these are for
 - [ ] On your real 1.0/2.0 save (clock set by New Bark's wall clock), NEXT WEEK clears weekly flags and SET WEEKDAY never does. Emulator-tested on a debug save only.
 - [ ] Route 119 and 123 in real play: walk into the rain zones on a "special" day (thunderstorm on 119, rain on 123) and a normal one.
 - [ ] Leave the game on over a real Saturday → Sunday midnight: no freeze or stutter when the week rolls over.
+- [ ] **Night resets (41r):** knock out a night Pokémon (Froslass, Sneasel, the Onix) before midnight: it's still gone after midnight and back the next evening. Emulator-tested with the debug clock only.
 
 ## 2.0 part 3 — Weekday content
 - [ ] **A real new game:** after setting the stopped clock in your room, the calendar asks what day it is; pick the real day. (Emulator-tested on a real new game; check it reads well on a phone.)
