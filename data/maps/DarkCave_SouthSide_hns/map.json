@@ -231,6 +231,41 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE46_HNS",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 12,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DARK_CAVE_BURROW_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_DARK_CAVE_BURROW_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 34,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_DARK_CAVE_BURROW_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 47,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_DARK_CAVE_BURROW_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_DARK_CAVE_BURROW_HOENN",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

@@ -1,0 +1,112 @@
+{
+  "id": "MAP_ROCK_TUNNEL_ONIX_BORE_HOENN",
+  "name": "RockTunnel_OnixBore_hoenn",
+  "layout": "LAYOUT_ROCK_TUNNEL_ONIX_BORE_HOENN",
+  "music": "MUS_HG_ROCK_TUNNEL",
+  "region_map_section": "MAPSEC_ROCK_TUNNEL",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "game_version": "hns",
+  "region": "REGION_KANTO",
+  "object_events": [
+    {
+      "local_id": "LOCALID_HOENN_BORE_ONIX",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ONIX+OBJ_EVENT_MON_SHINY",
+      "x": 10,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_BoreOnix",
+      "flag": "FLAG_HOENN_HIDE_ONIX"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
+      "x": 7,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_BoreIronBall",
+      "flag": "FLAG_HOENN_ITEM_BORE_IRON_BALL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
+      "x": 14,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_BoreStarPiece",
+      "flag": "FLAG_HOENN_ITEM_BORE_STAR_PIECE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
+      "x": 5,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_BoreBigNugget",
+      "flag": "FLAG_HOENN_ITEM_BORE_BIG_NUGGET"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL_B1F_HNS",
+      "dest_warp_id": "6"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "HoennSeek_EventScript_BoreExit"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "HoennSeek_EventScript_BoreExit"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 10,
+      "y": 5,
+      "elevation": 3,
+      "item": "ITEM_METAL_COAT",
+      "flag": "FLAG_HOENN_HIDDEN_BORE_METAL_COAT"
+    }
+  ]
+}

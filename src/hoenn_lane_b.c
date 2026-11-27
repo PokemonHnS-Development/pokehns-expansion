@@ -13,10 +13,15 @@
 #include "global.h"
 #include "battle.h"
 #include "event_data.h"
-#include "item.h"
+#include "fieldmap.h"
 #include "hoenn.h"
+#include "hoenn_caps.h"
+#include "item.h"
+#include "rtc.h"
+#include "script_pokemon_util.h"
 #include "constants/battle.h"
 #include "constants/items.h"
+#include "constants/rtc.h"
 
 #if IS_HNS
 #include "constants/hoenn_events.h"
@@ -32,6 +37,9 @@ u16 HoennLaneBDueCall(void)
      && (FlagGet(FLAG_HOENN_ARTICUNO_LANDED) || FlagGet(FLAG_HOENN_ZAPDOS_LANDED) || FlagGet(FLAG_HOENN_MOLTRES_LANDED)
       || FlagGet(FLAG_HOENN_CAUGHT_ARTICUNO) || FlagGet(FLAG_HOENN_CAUGHT_ZAPDOS) || FlagGet(FLAG_HOENN_CAUGHT_MOLTRES)))
         return HOENN_CALL_BIRDS;
+    // Part 29: Brendan, once the crystal Onix is yours (a Lavender hiker saw it).
+    if (FlagGet(FLAG_HOENN_ONIX_CAUGHT) && !FlagGet(FLAG_HOENN_CALL_TUNNELS))
+        return HOENN_CALL_TUNNELS;
     return HOENN_CALL_NONE; // the end of the chain
 }
 
@@ -103,6 +111,192 @@ bool16 HoennBirdBattleEnded(void)
     }
     FlagClear(FLAG_HOENN_ARTICUNO_LANDED + bird);
     return TRUE;
+}
+
+// ---------------------------------------------------------------------------
+// Part 29: shifting tunnels. Levels for these Johto/Kanto events follow your
+// progress, like DAMIAN's team (src/hoenn_scaling.c): HnS's Normal level cap for
+// your Johto badges, then the post-Johto cap (Kanto badges, Hoenn badges), 85
+// after Wallace; the Pokémon comes in 5 below it, never under VAR_0x8005.
+
+#define PROGRESS_WILD_GAP       5
+#define PROGRESS_AFTER_WALLACE  85
+#define PROGRESS_JOHTO_CHAMPION 56 // the floor before Kanto badges (as for DAMIAN)
+
+// HnS's Normal caps by Johto badge count (src/caps.c); 0 badges: Lv 10.
+static const u8 sJohtoBadgeLevels[] = { 10, 15, 19, 24, 29, 31, 33, 42 };
+
+static u32 HoennProgressLevel(void)
+{
+    u32 i, badges = 0;
+
+    if (FlagGet(FLAG_HOENN_STAMP_WALLACE))
+        return PROGRESS_AFTER_WALLACE;
+    for (i = 0; i < 8; i++)
+        if (FlagGet(FLAG_BADGE01_GET + i))
+            badges++;
+    if (badges < 8)
+        return sJohtoBadgeLevels[badges];
+    return HoennGetPostJohtoLevelCap(PROGRESS_JOHTO_CHAMPION, FALSE);
+}
+
+// special HoennSetupProgressWildBattle: VAR_0x8004 = species, VAR_0x8005 = the
+// lowest level it may have. Follow with HoennTuneWildMonSlot as usual.
+void HoennSetupProgressWildBattle(void)
+{
+    u32 level = HoennProgressLevel() - PROGRESS_WILD_GAP;
+
+    if (level < VarGet(VAR_0x8005))
+        level = VarGet(VAR_0x8005);
+    CreateScriptedWildMon(VarGet(VAR_0x8004), level, ITEM_NONE);
+}
+
+static void SetBlock(s32 x, s32 y, u16 metatile)
+{
+    MapGridSetMetatileIdAt(x + MAP_OFFSET, y + MAP_OFFSET, metatile);
+}
+
+// --- The tunneling Onix (Rock Tunnel B1F) ---
+// One hole per weekday (HOENN_SUNDAY = 0), each on the face of a different rock
+// wall, with open floor below it. Each has a door warp into the bore in
+// RockTunnel_B1F_hns's map.json, in the same order (warps 6-12); the warp only
+// works while the hole is drawn (MB_NON_ANIMATED_DOOR), so on any other night
+// that wall is just rock.
+#define ONIX_HOLE_METATILE 0x342 // Cave_Gray's hole in a rock face (a non-animated door)
+
+static const struct { u8 x, y; } sOnixHoles[] = {
+    {30,  3}, // Sunday: the north passage
+    {19, 11}, // Monday: the block by the ladder
+    {35, 11}, // Tuesday: the long block in the middle
+    {50, 17}, // Wednesday: the east passage's wall
+    {23, 18}, // Thursday: the block above the south room
+    { 5, 27}, // Friday: the west end of the great wall
+    {13, 27}, // Saturday: the middle of the great wall
+};
+
+// specialvar VAR_RESULT, HoennOnixHoleTonight: tonight's hole (0-6), or
+// HOENN_ONIX_NO_HOLE by day. The holes keep opening after the Onix is caught,
+// so the bore's items stay within reach.
+u16 HoennOnixHoleTonight(void)
+{
+    if (GetTimeOfDay() != TIME_NIGHT)
+        return HOENN_ONIX_NO_HOLE;
+    return GetDayOfWeek() % ARRAY_COUNT(sOnixHoles);
+}
+
+// special HoennDrawOnixHole (Rock Tunnel B1F's ON_LOAD): opens tonight's hole.
+void HoennDrawOnixHole(void)
+{
+    u32 hole = HoennOnixHoleTonight();
+
+    if (hole < ARRAY_COUNT(sOnixHoles))
+        SetBlock(sOnixHoles[hole].x, sOnixHoles[hole].y, ONIX_HOLE_METATILE);
+}
+
+// special HoennOnixHoleExit: where the bore lets you out, the floor below
+// today's hole, in VAR_0x8008/VAR_0x8009 (warp takes vars). Uses the weekday
+// even by day, so leaving after dawn puts you below the hole you came in by.
+void HoennOnixHoleExit(void)
+{
+    u32 hole = GetDayOfWeek() % ARRAY_COUNT(sOnixHoles);
+
+    gSpecialVar_0x8008 = sOnixHoles[hole].x;
+    gSpecialVar_0x8009 = sOnixHoles[hole].y + 1;
+}
+
+// --- The Dunsparce burrows (Dark Cave) ---
+// One burrow hole per time of day on Dark Cave's south side (HOENN_TIME_*
+// order). Each has a warp in DarkCave_SouthSide_hns's map.json (warps 3-6) into
+// the burrow; the warp only works while its hole is drawn (MB_MT_PYRE_HOLE: you
+// fall through).
+#define BURROW_HOLE_METATILE 0x286 // Cave_Default's hole in the floor
+
+static const struct { u8 x, y; } sBurrowHoles[] = {
+    [TIME_MORNING] = {12,  8}, // the north-west corner, past the pebbles
+    [TIME_DAY]     = {19, 16}, // the long passage west of the lake
+    [TIME_EVENING] = {34,  9}, // the lake's east shore
+    [TIME_NIGHT]   = {47, 13}, // the east hall
+};
+
+// special HoennDrawBurrowHole (Dark Cave south side's ON_LOAD).
+void HoennDrawBurrowHole(void)
+{
+    u32 t = GetTimeOfDay();
+
+    if (t < ARRAY_COUNT(sBurrowHoles))
+        SetBlock(sBurrowHoles[t].x, sBurrowHoles[t].y, BURROW_HOLE_METATILE);
+}
+
+static u32 BurrowDigs(void)
+{
+    u32 t, digs = 0;
+
+    for (t = 0; t < HOENN_BURROW_DIGS_NEEDED; t++)
+        if (FlagGet(FLAG_HOENN_BURROW_DUG_MORNING + t))
+            digs++;
+    return digs;
+}
+
+// The passage from the burrow's room up to the chamber (x 10-11, rows 7-10) is
+// choked with rubble; each dig clears the lowest row left.
+#define BURROW_PASSAGE_X    10
+#define BURROW_PASSAGE_TOP  7
+#define BURROW_RUBBLE_A     (0x283 | MAPGRID_COLLISION_MASK)
+#define BURROW_RUBBLE_B     (0x282 | MAPGRID_COLLISION_MASK)
+
+// special HoennDrawBurrowRubble (the burrow's ON_LOAD).
+void HoennDrawBurrowRubble(void)
+{
+    s32 y, rows = HOENN_BURROW_DIGS_NEEDED - BurrowDigs();
+
+    for (y = 0; y < rows; y++)
+    {
+        SetBlock(BURROW_PASSAGE_X, BURROW_PASSAGE_TOP + y, (y & 1) ? BURROW_RUBBLE_B : BURROW_RUBBLE_A);
+        SetBlock(BURROW_PASSAGE_X + 1, BURROW_PASSAGE_TOP + y, (y & 1) ? BURROW_RUBBLE_A : BURROW_RUBBLE_B);
+    }
+}
+
+// The digger waits on the floor just below the lowest row of rubble left.
+static u32 LowestRubbleRow(void)
+{
+    return BURROW_PASSAGE_TOP + HOENN_BURROW_DIGS_NEEDED - BurrowDigs() - 1;
+}
+
+// specialvar VAR_RESULT, HoennBurrowPrepare (the burrow's OnTransition):
+// TRUE if this time of day's Dunsparce hasn't dug yet; then its digger is shown
+// and goes to VAR_0x8008/VAR_0x8009 (setobjectxyperm). Also decides whether the
+// Dudunsparce sleeps in the chamber (passage open, not caught, not knocked out
+// today).
+bool16 HoennBurrowPrepare(void)
+{
+    u32 t = GetTimeOfDay();
+    bool32 due = t < HOENN_BURROW_DIGS_NEEDED && BurrowDigs() < HOENN_BURROW_DIGS_NEEDED
+              && !FlagGet(FLAG_HOENN_BURROW_DUG_MORNING + t);
+
+    FlagSet(FLAG_HOENN_HIDE_BURROW_DIGGER);
+    FlagSet(FLAG_HOENN_HIDE_DUDUNSPARCE);
+    if (BurrowDigs() == HOENN_BURROW_DIGS_NEEDED && !FlagGet(FLAG_HOENN_DUDUNSPARCE_CAUGHT)
+     && !FlagGet(FLAG_HOENN_DAILY_DUDUNSPARCE_GONE))
+        FlagClear(FLAG_HOENN_HIDE_DUDUNSPARCE);
+    if (!due)
+        return FALSE;
+    FlagClear(FLAG_HOENN_HIDE_BURROW_DIGGER);
+    gSpecialVar_0x8008 = BURROW_PASSAGE_X;
+    gSpecialVar_0x8009 = LowestRubbleRow() + 1;
+    return TRUE;
+}
+
+// specialvar VAR_RESULT, HoennBurrowDig: this time of day's Dunsparce digs out
+// the lowest row of rubble. VAR_0x8008 gets that row's y (the script clears it
+// with setmetatile); the result is the number of rows still left (0: open).
+u16 HoennBurrowDig(void)
+{
+    u32 t = GetTimeOfDay();
+
+    gSpecialVar_0x8008 = LowestRubbleRow();
+    if (t < HOENN_BURROW_DIGS_NEEDED)
+        FlagSet(FLAG_HOENN_BURROW_DUG_MORNING + t);
+    return HOENN_BURROW_DIGS_NEEDED - BurrowDigs();
 }
 
 #endif // IS_HNS

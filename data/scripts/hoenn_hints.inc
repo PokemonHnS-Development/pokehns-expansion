@@ -474,10 +474,34 @@ HoennSeek_EventScript_Hint_GlassWorkshopBoy::
 	callstd MSGBOX_NPC
 	end
 
+@ LavenderTown_hns
+HoennSeek_EventScript_Hint_LavenderPokefan::
+	callnative HoennSeek_NpcHint
+	.2byte 59
+	goto_if_eq VAR_RESULT, FALSE, LavenderTown_EventScript_PokefanM
+	callstd MSGBOX_NPC
+	end
+
+@ VioletCity_hns
+HoennSeek_EventScript_Hint_VioletYoungster::
+	callnative HoennSeek_NpcHint
+	.2byte 60
+	goto_if_eq VAR_RESULT, FALSE, VioletCity_EventScript_Youngster
+	callstd MSGBOX_NPC
+	end
+
+@ PalletTown_hns
+HoennSeek_EventScript_Hint_PalletFatman::
+	callnative HoennSeek_NpcHint
+	.2byte 61
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_Fatman
+	callstd MSGBOX_NPC
+	end
+
 @ Route34_FishingShack_hoenn
 HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 59
+	.2byte 62
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -485,7 +509,7 @@ HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 @ OlivineCity_HarborOffice_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 60
+	.2byte 63
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -493,7 +517,7 @@ HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 @ OlivineCity_SailorsHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 	callnative HoennSeek_NpcHint
-	.2byte 61
+	.2byte 64
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
@@ -501,7 +525,7 @@ HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 @ OlivineCity_CaptainsHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 62
+	.2byte 65
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -509,7 +533,7 @@ HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 @ OlivineCity_TackleShop_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 63
+	.2byte 66
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -517,7 +541,7 @@ HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 @ OlivineCity_Shipwright_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 64
+	.2byte 67
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -525,7 +549,7 @@ HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 @ OlivineCity_KeepersHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 65
+	.2byte 68
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -533,7 +557,7 @@ HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 @ EcruteakCity_DanceTeacher_hoenn
 HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 66
+	.2byte 69
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -541,7 +565,7 @@ HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 @ Route34_BreedersHouse_hoenn
 HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 67
+	.2byte 70
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -549,7 +573,7 @@ HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 @ Route38_MoomooStoreroom_hoenn
 HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 68
+	.2byte 71
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -557,7 +581,7 @@ HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 @ BellchimeTrail_Lodge_hoenn
 HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 69
+	.2byte 72
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -565,7 +589,7 @@ HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 @ Route6_BugClub_hoenn
 HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 70
+	.2byte 73
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -573,7 +597,7 @@ HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 @ Route6_EngineersHouse_hoenn
 HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 71
+	.2byte 74
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -581,7 +605,7 @@ HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 @ CeladonCity_FloristsHouse_hoenn
 HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 72
+	.2byte 75
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -589,7 +613,7 @@ HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 @ MelemeleIsle_IslandHome_hoenn
 HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 73
+	.2byte 76
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -597,7 +621,7 @@ HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 @ MelemeleIsle_SurfShop_hoenn
 HoennSeek_EventScript_Hint_MelemeleIsle_SurfShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 74
+	.2byte 77
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -605,7 +629,7 @@ HoennSeek_EventScript_Hint_MelemeleIsle_SurfShop_hoenn_Npc1::
 @ Route45_BeekeeperHouse_hoenn
 HoennSeek_EventScript_Hint_Route45_BeekeeperHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 75
+	.2byte 78
 	goto_if_eq VAR_RESULT, FALSE, Route45_BeekeeperHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -889,6 +913,33 @@ HoennSeek_Text_Hint_RumorMoltres_FlyoverAfter::
 
 HoennSeek_Text_Hint_RumorMoltres_FlyoverNotes::
 	.string "A burning shadow crosses ROUTE\n113's ash fields, heading\lnorth-west. Walk the ash east of\lthe glass workshop.$"
+
+HoennSeek_Text_Hint_RumorOnix_BoreBefore::
+	.string "Hikers say ROCK TUNNEL rumbles at\nnight, and every night there's a\lfresh hole in a different wall!\pSomething big is digging down\nthere. They say it's never the\lsame wall two nights running.$"
+
+HoennSeek_Text_Hint_RumorOnix_BoreAfter::
+	.string "A trainer found a crystal ONIX\nresting under ROCK TUNNEL! So\lthat's what's been digging all\lthose holes.$"
+
+HoennSeek_Text_Hint_RumorOnix_BoreNotes::
+	.string "At night a fresh hole opens in a\ndifferent wall of ROCK TUNNEL B1F,\lone for each day of the week. Look\lalong the rock faces.$"
+
+HoennSeek_Text_Hint_RumorDunsparce_BurrowBefore::
+	.string "DARK CAVE has DUNSPARCE holes, but\nthey're never in the same place!\lOne in the morning, one by day,\lone at sunset, one at night.\pMy dad says they're all digging\ntoward the same spot. I want to\lknow what's down there!$"
+
+HoennSeek_Text_Hint_RumorDunsparce_BurrowAfter::
+	.string "Somebody found a DUDUNSPARCE with\nthree segments under DARK CAVE!\lThe DUNSPARCE were digging to it\lall along.$"
+
+HoennSeek_Text_Hint_RumorDunsparce_BurrowNotes::
+	.string "DARK CAVE's burrow holes move with\nthe time of day: morning, day,\levening and night. Each time, a\ldifferent DUNSPARCE digs a\llittle further.$"
+
+HoennSeek_Text_Hint_RumorTangela_VinesBefore::
+	.string "A fisherman pal of mine says one\nof ROUTE 21's islets is all\ltangled up in vines. Nothing\lgets through!\pHe says they go limp first thing\nin the morning, though. Real\lsleepyheads, those vines!$"
+
+HoennSeek_Text_Hint_RumorTangela_VinesAfter::
+	.string "So those vines on ROUTE 21 were\nTANGELA all along! Guarding\lsomething in the middle, I hear.$"
+
+HoennSeek_Text_Hint_RumorTangela_VinesNotes::
+	.string "The islet on ROUTE 21 nearest\nPALLET is wrapped in writhing\lvines. They only relax in\lthe morning.$"
 
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"

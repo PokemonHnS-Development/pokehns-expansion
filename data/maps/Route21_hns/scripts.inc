@@ -5,6 +5,7 @@ Route21_hns_MapScripts::
 
 Route21_OnTransition:
 	callnative SetTimeBasedEncounters
+	call HoennSeek_EventScript_Route21OnTransition @ Hoenn & Seek 2.0 part 29
 	end
 
 Route21_EventScript_Seth::

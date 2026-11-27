@@ -584,4 +584,43 @@
 #define HOENN_ROOST_WAITING  2 // it already landed: it's shown
 // Route 113 uses VAR_TEMP_6 for the flyover's triggers; the roosts use VAR_TEMP_6 too.
 
+
+// ---- Part 29: shifting tunnels (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Onix: every night a fresh hole opens in a different wall of Rock Tunnel B1F
+// (one per weekday, sOnixHoles); it leads into the Onix's bore
+// (RockTunnel_OnixBore_hoenn), where a shiny Onix rests in its chamber at night.
+// Dunsparce: Dark Cave's south side has four burrow holes, one open in each time
+// of day (sBurrowHoles). They all drop into the burrow (DarkCave_Burrow_hoenn);
+// the first visit in each time of day, a Dunsparce digs one row of the rubble
+// out of the passage, and after all four the chamber behind it is open, where a
+// Three-Segment Dudunsparce sleeps.
+// Tangela: Route 21's islet near Pallet is choked with Tangela vines that only
+// relax in the morning, opening the way to a shiny Tangela.
+#define FLAG_HOENN_ONIX_CAUGHT          (HOENN_LANE_B_FLAGS_E + 0x06)
+#define FLAG_HOENN_HIDE_ONIX            (HOENN_LANE_B_FLAGS_E + 0x07) // object flag, decided on every arrival
+#define FLAG_HOENN_ITEM_BORE_IRON_BALL  (HOENN_LANE_B_FLAGS_E + 0x08)
+#define FLAG_HOENN_ITEM_BORE_STAR_PIECE (HOENN_LANE_B_FLAGS_E + 0x09)
+#define FLAG_HOENN_ITEM_BORE_BIG_NUGGET (HOENN_LANE_B_FLAGS_E + 0x0A)
+#define FLAG_HOENN_ONIX_FOUND           (HOENN_LANE_B_FLAGS_E + 0x0B) // reached the bore's chamber (rumor)
+#define FLAG_HOENN_BURROW_DUG_MORNING   (HOENN_LANE_B_FLAGS_E + 0x0C) // + HOENN_TIME_*: that time of day's Dunsparce dug
+#define FLAG_HOENN_BURROW_DUG_DAY       (HOENN_LANE_B_FLAGS_E + 0x0D)
+#define FLAG_HOENN_BURROW_DUG_EVENING   (HOENN_LANE_B_FLAGS_E + 0x0E)
+#define FLAG_HOENN_BURROW_DUG_NIGHT     (HOENN_LANE_B_FLAGS_E + 0x0F)
+#define FLAG_HOENN_DUDUNSPARCE_CAUGHT   (HOENN_LANE_B_FLAGS_E + 0x10)
+#define FLAG_HOENN_HIDE_DUDUNSPARCE     (HOENN_LANE_B_FLAGS_E + 0x11) // object flag, decided on every arrival
+#define FLAG_HOENN_HIDE_BURROW_DIGGER   (HOENN_LANE_B_FLAGS_E + 0x12) // object flag, decided on every arrival
+#define FLAG_HOENN_TANGELA_CAUGHT       (HOENN_LANE_B_FLAGS_E + 0x13)
+#define FLAG_HOENN_HIDE_TANGELA         (HOENN_LANE_B_FLAGS_E + 0x14) // object flag: the shiny one and its vines
+#define FLAG_HOENN_TANGELA_SEEN         (HOENN_LANE_B_FLAGS_E + 0x15) // pushed at the vines once (rumor)
+#define FLAG_HOENN_CALL_TUNNELS         (HOENN_LANE_B_FLAGS_E + 0x16) // Brendan: the crystal Onix
+#define FLAG_HOENN_DAILY_ONIX_GONE      (HOENN_LANE_B_DAILY + 0x05)   // knocked out tonight: back tomorrow night
+#define FLAG_HOENN_DAILY_ONIX_RUMBLE    (HOENN_LANE_B_DAILY + 0x06)   // tonight's rumble was felt
+#define FLAG_HOENN_DAILY_DUDUNSPARCE_GONE (HOENN_LANE_B_DAILY + 0x07)
+#define FLAG_HOENN_DAILY_TANGELA_GONE   (HOENN_LANE_B_DAILY + 0x08)
+#define FLAG_HOENN_HIDDEN_BORE_METAL_COAT  (HOENN_LANE_B_HIDDEN + 0x00) // under the Onix's resting spot
+#define FLAG_HOENN_HIDDEN_ISLET_MIRACLE_SEED (HOENN_LANE_B_HIDDEN + 0x01) // where the shiny Tangela sat
+#define HOENN_ONIX_NO_HOLE      7  // HoennOnixHoleTonight: no hole (it's not night)
+#define HOENN_BURROW_DIGS_NEEDED 4 // one per time of day
+// Rock Tunnel B1F uses VAR_TEMP_5 for the rumble, the burrow VAR_TEMP_1 for the dig,
+// Route 21 VAR_TEMP_1 for the vines' morning.
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H
