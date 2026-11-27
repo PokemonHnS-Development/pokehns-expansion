@@ -219,9 +219,6 @@ u16 HoennHiddenDueCall(void)
         return HOENN_CALL_ICE_GLALIE;
     if (FlagGet(FLAG_HOENN_GOT_FROST_FEATHER) && !FlagGet(FLAG_HOENN_CALL_FROST_FEATHER))
         return HOENN_CALL_FROST_FEATHER;
-    // Part 27a was built before the lanes; its call is checked first.
-    if (HoennCipherDueCall() != HOENN_CALL_NONE)
-        return HOENN_CALL_CIPHER;
     return HoennLaneADueCall(); // parts 27a+: the two builder lanes (src/hoenn_lane_a.c, then _b.c)
 }
 

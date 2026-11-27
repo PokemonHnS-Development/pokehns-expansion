@@ -485,18 +485,18 @@
 // ones above, numbered from its range's start:
 //     #define FLAG_HOENN_X   (HOENN_LANE_A_FLAGS_E + 0x00)
 
-// ---- Part 27a: Unown Cipher A (data/scripts/hoenn_cipher.inc, src/hoenn_cipher.c) ----
+// ---- Part 27a: Unown Cipher A (lane A, built before the split) (data/scripts/hoenn_cipher.inc, src/hoenn_cipher.c) ----
 // Once all four Ruins of Alph panels are solved and you've been to Hoenn, a
 // Rosetta line shows in Words Room 1: Unown letters under Hoenn braille cells
 // (AT NIGHT WE SPEAK). Reading the braille teaches you the Unown letters. From
 // then on, at night, Words Rooms 2-4 show a glowing word that changes by
 // weekday; the lab researcher keeps count. Brendan's call sends you to the lab.
-#define FLAG_HOENN_CIPHER_ASKED         (HOENN_FLAGS_E_JOHTO_KANTO + 0x00) // the lab researcher asked for help
-#define FLAG_HOENN_CIPHER_ROSETTA       (HOENN_FLAGS_E_JOHTO_KANTO + 0x01) // read the braille: you can read Unown
-#define FLAG_HOENN_CIPHER_WORD_SUN      (HOENN_FLAGS_E_JOHTO_KANTO + 0x02) // + HOENN_SUNDAY..HOENN_SATURDAY (0x02-0x08):
+#define FLAG_HOENN_CIPHER_ASKED         (HOENN_LANE_A_FLAGS_E + 0x00) // the lab researcher asked for help
+#define FLAG_HOENN_CIPHER_ROSETTA       (HOENN_LANE_A_FLAGS_E + 0x01) // read the braille: you can read Unown
+#define FLAG_HOENN_CIPHER_WORD_SUN      (HOENN_LANE_A_FLAGS_E + 0x02) // + HOENN_SUNDAY..HOENN_SATURDAY (0x02-0x08):
                                                                            // that weekday's night word was seen
-#define FLAG_HOENN_CIPHER_ALL_WORDS     (HOENN_FLAGS_E_JOHTO_KANTO + 0x09) // the lab heard all seven (part 27b starts here)
-#define FLAG_HOENN_CALL_CIPHER          (HOENN_FLAGS_E_JOHTO_KANTO + 0x0A) // Brendan: the lab phoned Birch
+#define FLAG_HOENN_CIPHER_ALL_WORDS     (HOENN_LANE_A_FLAGS_E + 0x09) // the lab heard all seven (part 27b starts here)
+#define FLAG_HOENN_CALL_CIPHER          (HOENN_LANE_A_FLAGS_E + 0x0A) // Brendan: the lab phoned Birch
 // Words Rooms 2-4 use VAR_TEMP_1 for the night word's first-sight message.
 // specialvar VAR_RESULT, HoennCipherTonightWord answers:
 #define HOENN_CIPHER_NO_WORD   0 // no word shows now (not night, or the Rosetta isn't read)

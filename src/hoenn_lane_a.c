@@ -20,7 +20,11 @@
 
 u16 HoennLaneADueCall(void)
 {
-    // Lane A's calls go here, e.g.
+    u16 call = HoennCipherDueCall(); // part 27a (src/hoenn_cipher.c)
+
+    if (call != HOENN_CALL_NONE)
+        return call;
+    // Lane A's next calls go here, e.g.
     //     if (FlagGet(FLAG_HOENN_X_MET) && !FlagGet(FLAG_HOENN_CALL_X))
     //         return HOENN_CALL_X;
     return HoennLaneBDueCall(); // lane B's calls come after lane A's

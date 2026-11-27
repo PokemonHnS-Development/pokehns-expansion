@@ -7,12 +7,12 @@
 Only lane A's builder edits this file (the reviewer may add a line when it merges).
 
 ## Setup
-- Lane setup PR #85 (rules, ranges, lane files, hint keys, `regen_all.sh`): built by lane A, ready for the reviewer (Nov 27).
+- Lane setup PR #85 (rules, ranges, lane files, hint keys, `regen_all.sh`): built by lane A, merged by the reviewer (Nov 27) after syncing it onto 27a.
 
 ## Parts
 | Part | State | Branch / PR | Notes |
 |---|---|---|---|
-| 27a | being built by lane B's builder (Nov 27) | — | started before the split |
+| 27a | merged (Nov 27; review fixes by the reviewer before merging) | PR #86 | built by lane B's builder; flags `HOENN_LANE_A_FLAGS_E` + 0x00–0x0A, call 37: **27b continues from + 0x0B and call 38** |
 | 27b | next, after 27a merges and Aidan says go | — | |
 | 28 | — | — | |
 | 31a | — | — | |

@@ -191,11 +191,11 @@ Reproduced in the emulator.
 ### 28. PR #79 (24r) isn't merged and now conflicts (parts 24a–26b review) — **done** (merged with `hoenn` by hand and merged, Nov 27)
 - PR #79 fixes a real 24a bug: the Trapinch walks up column 26 straight through you if you trigger the scene from the ring's north tile (26,54). It also adds review items 25–27 (that fix, the faint sand hollow, 24a's choices). It was opened before parts 24b–26b merged, and GitHub now reports conflicts in CLAUDE.md, the roadmap, the playtest list and these notes. **The bug is still on `hoenn`.** Rebase and merge it (items 25–27 then land above this one).
 
-### 29. Small text things from parts 25a–26b
+### 29. Small text things from parts 25a–26b — **done in 26r** (PR for `v2-26r-text-fixes`: "crack. It's wide enough to / swim down!"; the diver is "he" in both calls)
 - `HoennSeek_Text_CrackLit` ends on a one-word line ("down!"), which the CLAUDE.md rule forbids.
 - **The Mossdeep diver is a man:** the hint NPC at (38,12) is the male sailor sprite (`OBJ_EVENT_GFX_SAILOR`, "I dive off ROUTE 124 every night"). But both trench calls call the diver "she": Brendan's "She was night diving off ROUTE 124" and May's "She talks to PROF. BIRCH about everything". Change both to "he".
 
-### 30. Docs
+### 30. Docs — **done in 26r** (section 14's ice chamber ticked)
 - Plan section 14's master list still has the ice chamber unticked, though 26b finished it.
 
 ### 31. Choices from parts 24b–26b for Bryan to confirm
@@ -209,6 +209,12 @@ Each PR lists its "picked without Bryan" choices. These are the ones that change
 - **The researcher's word list ran off the text box.** "Night words so far: {STR_VAR_2}." had no line breaks, so with three or more words it went past the box's edge (six words were ~59 characters on one line). The list now goes on its own line and `HoennCipherWordCount` starts a new one after every third word; checked in the emulator with six words.
 - Checked and fine: the visited flags `HoennCipherIsOpen` reads are all Hoenn-owned (0x1B01–0x1B0E, never set at new game); the Rosetta's row 3 in Words Room 1 was plain floor, so nothing original is drawn over; the swapped lab scientist only had flavour text; every other new text fits the box (measured with the font's glyph widths); the unown-tiles and hints generators re-run with no changes.
 - 27a's flags (`HOENN_FLAGS_E_JOHTO_KANTO` + 0x00–0x0A) and call ID 37 sit at the start of lane A's ranges from the lane setup (PR #85), as that PR expects: lane A's 27b continues from + 0x0B and call 38.
+
+### 33. Lane setup review (PR #85, Claude, Nov 27) — **merged**
+- Merged third, after #79 and #86, so the reviewer did the sync (lanes rule 3.5): 27a's flags moved under lane A's header as `HOENN_LANE_A_FLAGS_E + n` (same IDs), `HOENN_CALL_CIPHER` (37) moved into lane A's call section, its due check into `HoennLaneADueCall` and its case into `hoenn_lane_a.inc`'s switch. 27a's hint NPC (the lab scientist, entry 55) got the key `AlphLabScientist`.
+- `regen_all.sh` didn't run 27a's new `gen_hoenn_unown_tiles.py`; added. `regen_all.sh --check` reports no changes on the synced branch.
+- Emulator on the synced debug ROM: Brendan's cipher call rings through the lane chain (after Elm's), the lab scientist alternates his own line and his hint line, a keyed building NPC (Route 6 Bug Club) still alternates.
+- One thing to know: the lane rules say the reviewer "writes notes, not fixes" and sends small fixes back as `NNr` parts. This review fixed 27a's two text bugs in place before merging instead, because 27a's builder had already moved to lane B and the fixes were a few lines.
 
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
