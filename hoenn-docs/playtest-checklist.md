@@ -427,6 +427,14 @@ Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its 
 - Mt. Moon Square on a Monday night: the Clefairy dance and the MOON ring together (colours, slowdown).
 - The lab researcher with 1–6 fragments, then all seven (ANCIENT). May's call afterwards, outdoors.
 
+## 2.0 part 31a (Sneasel thief)
+- Push all four boulders on Ice Path B1F down their holes, then go down to B2F at night (7 PM–6 AM): an item ball out on the ice.
+- Reach it: a SNEASEL pops up behind it and snatches it, twice more across the ice. Is each new ball easy to spot, and can you work out how to reach it? (Route used in testing, from the ladder: LLLLDLURU; after the snatch LDDRDR; then ULLLLDLURDDDRD; then LUULD to the nook.)
+- Try to get stuck: no slide should leave you somewhere you can't get back to a ladder.
+- The nook battle: Pickpocket, Razor Claw. Knock it out: the stash (2 PP Ups, Lucky Egg, Lansat, Starf). Next night it's back in the nook; catch it.
+- Leave mid-chase and come back: it starts over from the first ball.
+- Brendan's call afterwards, and the Blackthorn Cooltrainer near the Pokémon Center (talk twice).
+
 ## Lane B parts (27a, 31b on: Kanto, Safari, legends)
 Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 
@@ -480,7 +488,7 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 ## 2.0 part 30b (the Tauros stampede)
 - Safari Zone at SAFARI LEVEL 3: walk up the MOUNTAIN's east canyon (the two-wide path on its right edge) into the new highland. Does the join look seamless, and does the highland look hand-made?
 - Monday morning: the six charging Tauros. Is crossing the lanes fun and fair (not too easy, not too hard)? Get hit once (the long message), then again (the short one).
-- Reach the lead bull in the north nook: its battle (Paldean Tauros, Lv near your progress level). Run once (it stays), then catch it. The herd stops to graze afterwards; talk to one.
+- Reach the lead bull in the north nook: its Safari encounter (Paldean Tauros, Lv near your progress level; bait, rocks, Safari Balls, none of your Pokémon). Run once (it stays), let it flee once on a later Monday (gone for the week), then catch it; try a catch with your last Safari Ball (the Safari ends after the catch). The herd stops to graze afterwards; talk to one.
 - Next Monday: a different breed leads. Knock one out instead of catching it: it should be back the Monday after.
 - Any other day, or Monday afternoon: the highland is empty.
 - Brendan's call after the first catch (outside), and the Safari entrance attendant's rumor before and after.
