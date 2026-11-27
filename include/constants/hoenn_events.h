@@ -634,7 +634,7 @@
 #define FLAG_HOENN_CALL_REGIS           (HOENN_LANE_A_FLAGS_F + 0x2D) // May: Steven phoned Birch about the doors
                                                                        // (0x2E-0x3F spare)
 #define VAR_HOENN_DEOXYS_SIGNAL         (HOENN_LANE_A_VARS_F + 0x00) // nights the signal was heard (0-3)
-#define VAR_HOENN_DEOXYS_NIGHT          (HOENN_LANE_A_VARS_F + 0x01) // the last such night's day number + 1 (0 = none)
+#define VAR_HOENN_DEOXYS_NIGHT          (HOENN_LANE_A_VARS_F + 0x01) // the last such night's day number + 2 (0 = none; see HoennDeoxysSignalNight)
 #define HOENN_DEOXYS_NIGHTS 3
 
 // ---- Lane B: parts 31b, 34a, 29, 30a, 30b, 33, 36, 35a (hoenn-docs/lanes/lane-b.md) ----

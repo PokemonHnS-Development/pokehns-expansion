@@ -495,7 +495,7 @@ u16 HoennWishCount(void)
 //   2: a new night: VAR_HOENN_DEOXYS_SIGNAL went up by one
 // A night runs from dusk to dawn, so the hours after midnight belong to the
 // day before (as in HoennNightWeekday). VAR_HOENN_DEOXYS_NIGHT keeps that
-// night's day number + 1, so 0 means no night logged yet.
+// night's day number + 2, so 0 means no night logged yet.
 u16 HoennDeoxysSignalNight(void)
 {
     u16 night;
@@ -503,10 +503,12 @@ u16 HoennDeoxysSignalNight(void)
     RtcCalcLocalTime();
     if (GetTimeOfDay() != TIME_NIGHT)
         return 0;
-    night = gLocalTime.days;
+    // The hours before noon belong to the night that began the day before.
+    // Counting from days + 2 keeps that from underflowing on day 0 and keeps
+    // every logged night above 0.
+    night = gLocalTime.days + 2;
     if (gLocalTime.hours < 12)
         night--;
-    night++;
     if (VarGet(VAR_HOENN_DEOXYS_NIGHT) == night)
         return 1;
     VarSet(VAR_HOENN_DEOXYS_NIGHT, night);
