@@ -167,7 +167,10 @@ void HoennCipherNoteWord(void)
 
 // specialvar VAR_RESULT, HoennCipherWordCount: how many of the seven words were
 // noted. STR_VAR_1 gets the count, STR_VAR_2 the words in weekday order
-// ("MOON, ICE"), for the lab researcher.
+// ("MOON, ICE"), for the lab researcher. The text box doesn't wrap, so a new
+// line starts after every third word: six words ("TOWER, MOON, ICE, WHIRL,
+// MORTAR, UNION") ran far past the box's edge on one line (review, Nov 27).
+#define CIPHER_WORDS_PER_LINE 3
 u16 HoennCipherWordCount(void)
 {
     u32 i, count = 0;
@@ -181,7 +184,9 @@ u16 HoennCipherWordCount(void)
         if (count != 0)
         {
             *end++ = CHAR_COMMA;
-            *end++ = CHAR_SPACE;
+            // The researcher's text puts the list on its own line, so the
+            // next one scrolls up (\l).
+            *end++ = (count % CIPHER_WORDS_PER_LINE == 0) ? CHAR_PROMPT_SCROLL : CHAR_SPACE;
         }
         end = StringCopy(end, sNightWords[i]);
         count++;

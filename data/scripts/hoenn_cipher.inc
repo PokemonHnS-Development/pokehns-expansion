@@ -140,9 +140,12 @@ HoennSeek_EventScript_CallCipher::
 	goto HoennSeek_EventScript_CallEnd
 
 @ ---- Texts ----------------------------------------------------------------------
+@ Two lines: the braille window is at most 28 tiles wide, so the phrase on one
+@ line was cut off after "WE SP" (review, Nov 27).
 HoennSeek_Braille_AtNightWeSpeak:
 	brailleformat 0, 0, 0, 0, 0, 0
-	.braille "AT NIGHT WE SPEAK$"
+	.braille "AT NIGHT\n"
+	.braille "WE SPEAK$"
 
 HoennSeek_Text_AlphResearcherAsk:
 	.string "Oh! You solved all four panels in\n"
@@ -182,7 +185,8 @@ HoennSeek_Text_AlphResearcherRosetta:
 	.string "tell me what you see!$"
 
 HoennSeek_Text_AlphResearcherCount:
-	.string "Night words so far: {STR_VAR_2}.\p"
+	.string "Night words so far:\n"
+	.string "{STR_VAR_2}.\p"
 	.string "That's {STR_VAR_1} of the seven days of\n"
 	.string "the week.\p"
 	.string "A different word every night…\n"
