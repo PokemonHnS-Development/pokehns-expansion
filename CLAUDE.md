@@ -128,7 +128,7 @@ Lane B sizes (27a, then 31b on):
 | 30a (Kangaskhan baby: Beach follower with its own sprite, Brush nook, Lucky Egg, May's call; on top of 29; re-measured by the reviewer after merging 29's reviewed branch (`hoenn` at #91): +2,688 B release, +2,640 B debug) | 32,739,236 / 796 KB | 32,897,780 / 641 KB |
 | 30b (Tauros stampede: highland map, herd task, Paldean lead bull, Brendan's call; on top of 30a; re-measured by the reviewer after merging 30a's reviewed branch (`hoenn` at #91): +4,688 B release, +4,528 B debug) | 32,743,924 / 791 KB | 32,902,308 / 636 KB |
 | 36 (weather legendaries: ORBS, downpour/drought days, JADE ORB mural, ENIGMA STONE, 2 key items, 2 calls; re-measured by the reviewer after merging 30b's reviewed branch (`hoenn` at #91): +7,072 B release, +6,640 B debug) | 32,750,996 / 784 KB | 32,908,948 / 630 KB |
-| 35a (Mewtwo and Mew: 6 journal pages, Fuji, Cinnabar cameo, Cerulean gate; 3 dawn Mew blurs, OLD SEA MAP; 2 calls; on top of 36: +7,360 B release, +7,216 B debug) | 32,752,420 / 783 KB | 32,910,900 / 628 KB |
+| 35a (Mewtwo and Mew: 6 journal pages, Fuji, Cinnabar cameo, Cerulean gate; 3 dawn Mew blurs, OLD SEA MAP; 2 calls; re-measured by the reviewer after merging 36's reviewed branch (`hoenn` at #91): +7,216 B release, +7,216 B debug) | 32,758,212 / 777 KB | 32,916,164 / 623 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
