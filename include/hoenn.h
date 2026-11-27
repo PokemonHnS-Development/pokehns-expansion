@@ -52,6 +52,7 @@ bool32 HoennTryEventCall(void);
 u16 HoennSpeciesDueCall(void);
 u16 HoennHiddenDueCall(void);
 u16 HoennLaneADueCall(void); // src/hoenn_lane_a.c (lane setup, Nov 27)
+u32 HoennObjectPaletteSpecies(u32 species); // src/hoenn_lane_a.c (part 27b)
 u16 HoennLaneBDueCall(void); // src/hoenn_lane_b.c
 // The Kangaskhan baby as your follower (src/hoenn_lane_b.c, 2.0 part 30a)
 bool32 HoennIsKangaBabyGfx(u32 species);
@@ -61,6 +62,7 @@ const u8 *HoennFollowerScript(void);
 extern const u8 HoennSeek_EventScript_KangaBabyFollower[];
 bool8 HoennMirageTowerRung(void); // 2.0 part 24b
 u16 HoennCipherDueCall(void);      // 2.0 part 27a (src/hoenn_cipher.c)
+u32 HoennNightWeekday(void);       // 27r: a night's weekday, dusk to dawn (src/hoenn_cipher.c)
 bool32 HoennLightsOnStep(void); // follow-the-lights (src/hoenn_lights.c, 2.0 part 25a)
 void HoennTuneWildMon(void);
 void HoennTuneWildMonSlot(void);

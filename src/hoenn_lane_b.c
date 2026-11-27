@@ -180,12 +180,13 @@ static const struct { u8 x, y; } sOnixHoles[] = {
 
 // specialvar VAR_RESULT, HoennOnixHoleTonight: tonight's hole (0-6), or
 // HOENN_ONIX_NO_HOLE by day. The holes keep opening after the Onix is caught,
-// so the bore's items stay within reach.
+// so the bore's items stay within reach. A night is one weekday from dusk to
+// dawn (HoennNightWeekday, 27r), so the hole doesn't move at midnight.
 u16 HoennOnixHoleTonight(void)
 {
     if (GetTimeOfDay() != TIME_NIGHT)
         return HOENN_ONIX_NO_HOLE;
-    return GetDayOfWeek() % ARRAY_COUNT(sOnixHoles);
+    return HoennNightWeekday() % ARRAY_COUNT(sOnixHoles);
 }
 
 // special HoennDrawOnixHole (Rock Tunnel B1F's ON_LOAD): opens tonight's hole.
@@ -198,11 +199,12 @@ void HoennDrawOnixHole(void)
 }
 
 // special HoennOnixHoleExit: where the bore lets you out, the floor below
-// today's hole, in VAR_0x8008/VAR_0x8009 (warp takes vars). Uses the weekday
-// even by day, so leaving after dawn puts you below the hole you came in by.
+// tonight's hole, in VAR_0x8008/VAR_0x8009 (warp takes vars). Uses the night's
+// weekday even by day, so leaving after dawn still puts you below a hole's
+// floor (the one you came in by, unless you went in after midnight).
 void HoennOnixHoleExit(void)
 {
-    u32 hole = GetDayOfWeek() % ARRAY_COUNT(sOnixHoles);
+    u32 hole = HoennNightWeekday() % ARRAY_COUNT(sOnixHoles);
 
     gSpecialVar_0x8008 = sOnixHoles[hole].x;
     gSpecialVar_0x8009 = sOnixHoles[hole].y + 1;
