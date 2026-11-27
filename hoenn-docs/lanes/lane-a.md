@@ -18,7 +18,7 @@ Only lane A's builder edits this file (the reviewer may add a line when it merge
 | 28 | after 27b merges (31a goes first meanwhile) | — | |
 | 31a | merged (PR #92, Nov 27) | `v2-31a-sneasel-thief` | flags `HOENN_LANE_A_FLAGS_E` + 0x20–0x26, daily + 0x00, call 39 (built while #88 (27b) waits for review; 27b took + 0x0B–0x15 and call 38, 28 gets + 0x16–0x1F, 32 + 0x27–0x2F) |
 | 32 | PR open (Nov 27), waiting for review; **handed to lane B's builder (Aidan, Nov 27)** | PR #97 | built by lane A. Lane B's builder now owns it: review fixes, syncs onto `hoenn`, and the follow-up for its own 33. Its IDs stay in lane A's ranges (flags `HOENN_LANE_A_FLAGS_E` + 0x27–0x2B, daily + 1, call 40) and its code in lane A's files; lane A keeps out of the branch. 34b (lane A) builds on it once it merges |
-| 34b | — | — | needs lane B's 34a |
+| 34b | PR open (Nov 27), stacked on #97 (merge after #97) | `v2-34b-lugia` | flags `HOENN_LANE_A_FLAGS_F` + 0x0E–0x10, call 46 (35b has F + 0x00–0x0D, 37 F + 0x20 on; calls 41–45 stay with 35b, 28, 37) |
 | 35b | — | — | |
 | 37 | — | — | needs lane B's 31b |
 
@@ -30,3 +30,4 @@ Anything outside lane A's ranges or maps (a spare flag, another lane's map, a ne
 - Seafoam: `SeafoamIslands_1F_hns` only (27b's FOAM ring).
 - `data/specials.inc`: 27b added a lane A block and an empty lane B block after `HoennCipherWordCount` (like the other markers); lane B adds its specials under its own marker.
 - `src/event_object_movement.c`: one hook line (27b, `HoennObjectPaletteSpecies`).
+- 34b: HnS's `WhirlIslands_LugiaChamber_hns/scripts.inc` (one `goto_if_unset` line), Route 41's coord events (row 56) and `OlivineCity_PokemonCenter_hns`'s fisher (hint). Writes HnS's `FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL` and `VAR_COMPLETED_LUGIA` (3 → 4 only).

@@ -447,6 +447,14 @@ Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its 
 - Amphy at the lighthouse top at night before and after the rescue, and the rescued Ampharos next to it (by day too); May's call after the rescue.
 - The Olivine Cafe sailor's and the lighthouse 1F sailor's new lines.
 
+## 2.0 part 34b (Lugia)
+- The lagoon stone with none, some and all of the four treasures (FROST, THUNDER, FLAME FEATHERS, SILVER WING): the empty-hollow lines, then the ceremony. Does the white flash look right, and does the lagoon keep its night colours afterwards?
+- **The Lugia battle itself** in the Whirl Islands' deep chamber after the shrine opens (HnS's Lv 70 encounter; not played in the emulator), and catching it.
+- The chamber before the shrine: empty. Route 41's south-west open after the shrine (Tentacruel gone).
+- A save that already caught Lugia in HnS's story: the shrine still opens, the chamber stays empty.
+- The cameo: at night after the lagoon and the Slowking's prophecy, surf north of the lagoon cave. Once only; not by day; not without the prophecy. Does Lugia's dive look right?
+- Brendan's call after the shrine; the Olivine Pokémon Center fisher's lines before and after.
+
 ## Lane B parts (27a, 31b on: Kanto, Safari, legends)
 Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 

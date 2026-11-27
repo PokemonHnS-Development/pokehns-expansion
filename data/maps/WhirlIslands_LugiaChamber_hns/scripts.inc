@@ -18,6 +18,7 @@ WhirlIslands_LugiaChamber_MapScript_LugiaPostStoryGone::
 	end
 
 WhirlIslands_LugiaChamber_MapScript_LugiaPostStoryEncounter::
+	goto_if_unset FLAG_HOENN_LUGIA_SHRINE_OPEN, HoennSeek_EventScript_LugiaChamberAsleep @ Hoenn & Seek 2.0 part 34b: the lagoon's shrine (hoenn_lane_a.inc)
 	setflag FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS
 	clearflag FLAG_HIDE_LUGIA
 	setobjectxyperm LOCALID_LUGIA, 29, 12

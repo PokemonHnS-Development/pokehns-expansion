@@ -51,6 +51,7 @@
 #define HOENN_CALL_CIPHER_FRAGMENT 38 // May: the Ruins lab phoned Birch about a tablet fragment (2.0 part 27b)
 #define HOENN_CALL_SNEASEL 39 // Brendan: Clair's gym report says the Ice Path thief was caught (2.0 part 31a; 38 is 27b's)
 #define HOENN_CALL_AMPHAROS 40 // May: Jasmine told the LEAGUE the second light went out (2.0 part 32; 27b is 38, 31a 39)
+#define HOENN_CALL_LUGIA 46 // Brendan: Bill heard the Whirl Islands' sea went still (2.0 part 34b; 41-45 are 35b, 28 and 37)
 // (lane A's calls go here)
 
 // Lane B: 70-99.
