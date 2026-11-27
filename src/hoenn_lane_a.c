@@ -15,6 +15,7 @@
 #include "hoenn.h"
 
 #if IS_HNS
+#include "constants/hoenn_custom.h"
 #include "constants/hoenn_events.h"
 #include "constants/hoenn_phone.h"
 
@@ -24,6 +25,9 @@ u16 HoennLaneADueCall(void)
 
     if (call != HOENN_CALL_NONE)
         return call;
+    // Part 31a, Brendan: Norman read Clair's gym report about the Ice Path thief.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_SNEASEL_STASH) && !FlagGet(FLAG_HOENN_CALL_SNEASEL))
+        return HOENN_CALL_SNEASEL;
     // Lane A's next calls go here, e.g.
     //     if (FlagGet(FLAG_HOENN_X_MET) && !FlagGet(FLAG_HOENN_CALL_X))
     //         return HOENN_CALL_X;
