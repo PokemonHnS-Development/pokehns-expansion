@@ -798,6 +798,10 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
     UpdateFriendshipStepCounter();
     UpdateFarawayIslandStepCounter();
     UpdateFollowerStepCounter();
+#if IS_HNS
+    if (HoennLightsOnStep()) // Hoenn & Seek: follow-the-lights (2.0 part 25a)
+        return TRUE;
+#endif
 
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_FORCED_MOVE) && !MetatileBehavior_IsForcedMovementTile(metatileBehavior))
     {

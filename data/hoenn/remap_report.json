@@ -621,6 +621,7 @@
   "FLAG_ITEM_SHOAL_CAVE_ICE_ROOM_TM_HAIL": "remapped: was 0 (no-op)",
   "FLAG_ITEM_SHOAL_CAVE_INNER_ROOM_RARE_CANDY": "remapped: was 0 (no-op)",
   "FLAG_ITEM_SHOAL_CAVE_STAIRS_ROOM_ICE_HEAL": "remapped: was 0 (no-op)",
+  "FLAG_ITEM_SLOWPOKE_WELL_RAIN_DANCE": "kept 0xf7",
   "FLAG_ITEM_VICTORY_ROAD_1F_MAX_ELIXIR": "remapped: was 0 (no-op)",
   "FLAG_ITEM_VICTORY_ROAD_1F_PP_UP": "remapped: was 0 (no-op)",
   "FLAG_ITEM_VICTORY_ROAD_B1F_FULL_RESTORE": "remapped: was 0 (no-op)",

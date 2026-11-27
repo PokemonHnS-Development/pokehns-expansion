@@ -418,130 +418,138 @@ HoennSeek_EventScript_HintNpc51::
 	callstd MSGBOX_NPC
 	end
 
-@ Route34_FishingShack_hoenn
+@ MossdeepCity
 HoennSeek_EventScript_HintNpc52::
 	callnative HoennSeek_NpcHint
 	.2byte 52
+	goto_if_eq VAR_RESULT, FALSE, MossdeepCity_EventScript_Sailor
+	callstd MSGBOX_NPC
+	end
+
+@ Route34_FishingShack_hoenn
+HoennSeek_EventScript_HintNpc53::
+	callnative HoennSeek_NpcHint
+	.2byte 53
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_HarborOffice_hoenn
-HoennSeek_EventScript_HintNpc53::
+HoennSeek_EventScript_HintNpc54::
 	callnative HoennSeek_NpcHint
-	.2byte 53
+	.2byte 54
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_SailorsHouse_hoenn
-HoennSeek_EventScript_HintNpc54::
+HoennSeek_EventScript_HintNpc55::
 	callnative HoennSeek_NpcHint
-	.2byte 54
+	.2byte 55
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_CaptainsHouse_hoenn
-HoennSeek_EventScript_HintNpc55::
+HoennSeek_EventScript_HintNpc56::
 	callnative HoennSeek_NpcHint
-	.2byte 55
+	.2byte 56
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_TackleShop_hoenn
-HoennSeek_EventScript_HintNpc56::
+HoennSeek_EventScript_HintNpc57::
 	callnative HoennSeek_NpcHint
-	.2byte 56
+	.2byte 57
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_Shipwright_hoenn
-HoennSeek_EventScript_HintNpc57::
+HoennSeek_EventScript_HintNpc58::
 	callnative HoennSeek_NpcHint
-	.2byte 57
+	.2byte 58
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_KeepersHouse_hoenn
-HoennSeek_EventScript_HintNpc58::
+HoennSeek_EventScript_HintNpc59::
 	callnative HoennSeek_NpcHint
-	.2byte 58
+	.2byte 59
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ EcruteakCity_DanceTeacher_hoenn
-HoennSeek_EventScript_HintNpc59::
+HoennSeek_EventScript_HintNpc60::
 	callnative HoennSeek_NpcHint
-	.2byte 59
+	.2byte 60
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ Route34_BreedersHouse_hoenn
-HoennSeek_EventScript_HintNpc60::
+HoennSeek_EventScript_HintNpc61::
 	callnative HoennSeek_NpcHint
-	.2byte 60
+	.2byte 61
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route38_MoomooStoreroom_hoenn
-HoennSeek_EventScript_HintNpc61::
+HoennSeek_EventScript_HintNpc62::
 	callnative HoennSeek_NpcHint
-	.2byte 61
+	.2byte 62
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ BellchimeTrail_Lodge_hoenn
-HoennSeek_EventScript_HintNpc62::
+HoennSeek_EventScript_HintNpc63::
 	callnative HoennSeek_NpcHint
-	.2byte 62
+	.2byte 63
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_BugClub_hoenn
-HoennSeek_EventScript_HintNpc63::
+HoennSeek_EventScript_HintNpc64::
 	callnative HoennSeek_NpcHint
-	.2byte 63
+	.2byte 64
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_EngineersHouse_hoenn
-HoennSeek_EventScript_HintNpc64::
+HoennSeek_EventScript_HintNpc65::
 	callnative HoennSeek_NpcHint
-	.2byte 64
+	.2byte 65
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ CeladonCity_FloristsHouse_hoenn
-HoennSeek_EventScript_HintNpc65::
+HoennSeek_EventScript_HintNpc66::
 	callnative HoennSeek_NpcHint
-	.2byte 65
+	.2byte 66
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_IslandHome_hoenn
-HoennSeek_EventScript_HintNpc66::
+HoennSeek_EventScript_HintNpc67::
 	callnative HoennSeek_NpcHint
-	.2byte 66
+	.2byte 67
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_SurfShop_hoenn
-HoennSeek_EventScript_HintNpc67::
+HoennSeek_EventScript_HintNpc68::
 	callnative HoennSeek_NpcHint
-	.2byte 67
+	.2byte 68
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -772,6 +780,15 @@ HoennSeek_Text_Hint_RumorMirage_TowerAfter::
 HoennSeek_Text_Hint_RumorMirage_TowerNotes::
 	.string "A chime made from singing sand,\nrung in the ROUTE 111 desert at\lsunset, raises the MIRAGE TOWER.\lSomething hums at the top.$"
 
+HoennSeek_Text_Hint_RumorNight_DiveBefore::
+	.string "They say lights dance on the\nseabed off ROUTE 124, but only\lat night.$"
+
+HoennSeek_Text_Hint_RumorNight_DiveAfter::
+	.string "Somebody followed the lights off\nROUTE 124 down into a\lhidden trench!$"
+
+HoennSeek_Text_Hint_RumorNight_DiveNotes::
+	.string "At night, a CHINCHOU's light on\nthe seabed under ROUTE 124 leads\lsomewhere. Bring a POKéMON\lthat glows.$"
+
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
 
@@ -945,6 +962,12 @@ HoennSeek_Text_Hint_LineStorySandChime::
 
 HoennSeek_Text_Hint_LineStoryMirageFlygon::
 	.string "You saw the mirage tower? In my\nday, a FLYGON sang at the\lvery top.\pIts floors are cracked and\ncrumbling. Only fast wheels get\lacross them!$"
+
+HoennSeek_Text_Hint_LineStoryNightDive::
+	.string "I dive off ROUTE 124 every night.\nAfter dark, the deep water\lthere glows!\pA CHINCHOU's light waits on the\nseabed. Swim close and it drifts\laway, as if it wants you\lto follow.$"
+
+HoennSeek_Text_Hint_LineStoryTrenchDark::
+	.string "A crack in the seabed off ROUTE\n124? I've never dared swim down.\lIt's black as ink.\pYou'd want a POKéMON that glows on\nyour team. A CHINCHOU or a\lLANTURN, say.$"
 
 HoennSeek_Text_Hint_Forecast0::
 	.string "Storms are rolling in around ROUTE\n120 {STR_VAR_1}.\pFolks say that's when the white\none walks.$"

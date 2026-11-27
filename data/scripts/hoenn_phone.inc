@@ -40,6 +40,7 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_METAGROSS, HoennSeek_EventScript_CallMetagross
 	case HOENN_CALL_SINGING_SAND, HoennSeek_EventScript_CallSingingSand
 	case HOENN_CALL_FLYGON, HoennSeek_EventScript_CallFlygon
+	case HOENN_CALL_TRENCH, HoennSeek_EventScript_CallTrench
 	releaseall
 	end
 

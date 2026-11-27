@@ -35,5 +35,6 @@
 #define HOENN_CALL_METAGROSS 30 // Brendan: you saw two Metang fuse in Steven's cave (2.0 part 23)
 #define HOENN_CALL_SINGING_SAND 31
 #define HOENN_CALL_FLYGON 32 // May: you caught the Mirage Tower Flygon (2.0 part 24b)
+#define HOENN_CALL_TRENCH 33 // Brendan: you followed the Chinchou lights into the Route 124 trench (2.0 part 25a)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

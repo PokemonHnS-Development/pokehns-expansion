@@ -113,6 +113,9 @@
     "STORY_SAND_CHIME": {"kind": "story", "if": [{"flag": "FLAG_HOENN_GOT_SAND_CHIME"}, {"not_flag": "FLAG_HOENN_MIRAGE_RAISED"}], "text": ["Oh my, a chime of desert sand! I haven't heard that song since I was a girl.", "Ring it in the desert at sunset, dearie, and the mirage shows the way."]},
     "STORY_MIRAGE_FLYGON": {"kind": "story", "if": [{"flag": "FLAG_HOENN_MIRAGE_RAISED"}, {"not_flag": "FLAG_HOENN_CAUGHT_FLYGON"}], "text": ["You saw the mirage tower? In my day, a FLYGON sang at the very top.", "Its floors are cracked and crumbling. Only fast wheels get across them!"]},
     "RUMOR_MIRAGE_TOWER": {"kind": "rumor", "rumor": "MIRAGE_TOWER", "if": [{"flag": "FLAG_HOENN_GOT_SINGING_SAND"}]},
+    "STORY_NIGHT_DIVE": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_TRENCH_FOUND"}], "text": ["I dive off ROUTE 124 every night. After dark, the deep water there glows!", "A CHINCHOU's light waits on the seabed. Swim close and it drifts away, as if it wants you to follow."]},
+    "STORY_TRENCH_DARK": {"kind": "story", "if": [{"flag": "FLAG_HOENN_TRENCH_FOUND"}, {"not_flag": "FLAG_HOENN_TRENCH_ENTERED"}], "text": ["A crack in the seabed off ROUTE 124? I've never dared swim down. It's black as ink.", "You'd want a POKéMON that glows on your team. A CHINCHOU or a LANTURN, say."]},
+    "RUMOR_NIGHT_DIVE": {"kind": "rumor", "rumor": "NIGHT_DIVE", "if": [{"not_flag": "FLAG_HOENN_TRENCH_ENTERED"}]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -249,6 +252,12 @@
       "before": ["They say a tower rises out of the ROUTE 111 sand at sunset, then fades away like a mirage."],
       "after": "Somebody climbed the mirage tower in the desert and caught a FLYGON at the top!",
       "notes": "A chime made from singing sand, rung in the ROUTE 111 desert at sunset, raises the MIRAGE TOWER. Something hums at the top."
+    },
+    "NIGHT_DIVE": {
+      "found": [{"flag": "FLAG_HOENN_TRENCH_ENTERED"}],
+      "before": ["They say lights dance on the seabed off ROUTE 124, but only at night."],
+      "after": "Somebody followed the lights off ROUTE 124 down into a hidden trench!",
+      "notes": "At night, a CHINCHOU's light on the seabed under ROUTE 124 leads somewhere. Bring a POKéMON that glows."
     }
   },
 
@@ -276,7 +285,7 @@
     {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "RUMOR_MUNCHLAX", "RUMOR_SPINDA", "RUMOR_FEUD", "TIP_REMINDER_H", "TIP_SITES"]},
     {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS", "RUMOR_TROPIUS", "RUMOR_CHORUS"]},
     {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES", "RUMOR_ABSOL"]},
-    {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP", "RUMOR_WAILORD"]},
+    {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP", "RUMOR_WAILORD", "RUMOR_NIGHT_DIVE"]},
     {"map": "Route119_WeatherInstitute_1F",      "script": "Route119_WeatherInstitute_1F_EventScript_InstituteWorker1", "always": true, "lines": ["FORECAST"]},
     {"map": "CianwoodCity_hns",                  "script": "CianwoodCity_EventScript_Youngster",                   "lines": ["STORY_STRAIT_CLOSED", "STORY_STRAIT_OPEN", "STORY_STRAIT_DONE_J"]},
     {"map": "OlivineCity_hns",                   "script": "OlivineCity_EventScript_Sailor1",                      "lines": ["STORY_STRAIT_CLOSED", "STORY_STRAIT_OPEN", "STORY_STRAIT_DONE_J"]},
@@ -306,7 +315,8 @@
     {"map": "Route111",                          "script": "Route111_EventScript_Hiker",                           "lines": ["STORY_DESERT_SONG", "STORY_DESERT_TRACKS"]},
     {"map": "FallarborTown_CozmosHouse",         "script": "HoennSeek_EventScript_Cozmo",                          "lines": ["STORY_DESERT_COZMO"]},
     {"map": "VerdanturfTown_PokemonCenter_1F",   "script": "VerdanturfTown_PokemonCenter_1F_EventScript_Gentleman", "lines": ["RUMOR_DESERT_SONG", "RUMOR_MIRAGE_TOWER"]},
-    {"map": "LavaridgeTown",                     "script": "LavaridgeTown_EventScript_HotSpringsOldWoman1",       "lines": ["STORY_SAND_CHIME", "STORY_MIRAGE_FLYGON"]}
+    {"map": "LavaridgeTown",                     "script": "LavaridgeTown_EventScript_HotSpringsOldWoman1",       "lines": ["STORY_SAND_CHIME", "STORY_MIRAGE_FLYGON"]},
+    {"map": "MossdeepCity",                      "script": "MossdeepCity_EventScript_Sailor",                      "lines": ["STORY_NIGHT_DIVE", "STORY_TRENCH_DARK"]}
   ],
 
   "forecasts": [

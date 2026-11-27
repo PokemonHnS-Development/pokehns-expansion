@@ -332,6 +332,21 @@
       "t": {"from": [11, 37]}
      }}
    ]
+  },
+  "Route124_Trench_hoenn": {
+   "source": "LAYOUT_UNDERWATER_ROUTE128",
+   "layout": "LAYOUT_ROUTE124_TRENCH_HOENN",
+   "border": [24, 14],
+   "ops": [
+    {"_": "2.0 part 25a: the night dive's trench, a cut of the deep trench south of the Seafloor Cavern's mound on Underwater Route 128", "at": [0, 0, 34, 23], "from": [24, 17]},
+    {"_": "no cavern door: the mound's cliff edge runs on", "cells": [[13, 8], [14, 8], [15, 8], [13, 9], [14, 9], [15, 9]], "from": [40, 25]},
+    {"_": "the back wall where the trench ran on north (part 25b opens it)", "cells": [[24, 0], [25, 0], [26, 0], [27, 0], [28, 0], [29, 0], [30, 0], [31, 0], [32, 0]], "from": [24, 17]},
+    {"_": "the floor's top edge under it", "cells": [[24, 1]], "from": [36, 18]},
+    {"cells": [[25, 1], [26, 1], [27, 1]], "from": [37, 18]},
+    {"cells": [[28, 1]], "from": [39, 18]},
+    {"_": "the way back up: a glimmer of light on the floor", "cells": [[13, 19]], "from": [38, 19]},
+    {"_": "the mound's sealed hollow keeps no glimmer (it was a dive spot on Route 128)", "cells": [[14, 2]], "from": [37, 19]}
+   ]
   }
  },
  "patches": [
