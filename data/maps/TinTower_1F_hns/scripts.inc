@@ -3,6 +3,7 @@ TinTower_1F_hns_MapScripts::
 	.byte 0
 
 TinTower_OnTransition::
+	call HoennSeek_EventScript_GlyphRingArm @ Hoenn & Seek 2.0 part 27b: the Unown ring
 	setescapewarp MAP_BELLCHIME_TRAIL_HNS, 35, 42
 	end
 

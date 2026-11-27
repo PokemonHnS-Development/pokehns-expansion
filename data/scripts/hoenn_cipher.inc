@@ -31,6 +31,8 @@ HoennSeek_EventScript_AlphResearcherAgain:
 	end
 
 HoennSeek_EventScript_AlphResearcherWords:
+	specialvar VAR_RESULT, HoennCipherFragmentCount @ part 27b: the fragments come first
+	goto_if_ne VAR_RESULT, 0, HoennSeek_EventScript_AlphResearcherFragments
 	specialvar VAR_RESULT, HoennCipherWordCount
 	goto_if_eq VAR_RESULT, 0, HoennSeek_EventScript_AlphResearcherRosetta
 	goto_if_ge VAR_RESULT, 7, HoennSeek_EventScript_AlphResearcherAllWords
@@ -53,6 +55,28 @@ HoennSeek_EventScript_AlphResearcherAllWords:
 
 HoennSeek_EventScript_AlphResearcherAllWordsAgain:
 	msgbox HoennSeek_Text_AlphResearcherAllWordsAgain, MSGBOX_DEFAULT
+	release
+	end
+
+@ Part 27b: the tablet fragments from the glyph sites (hoenn_lane_a.inc). The
+@ first time she sees one, the lab phones Birch (May's call). With all seven
+@ she lays them out: ANCIENT (part 28 starts from FLAG_HOENN_CIPHER_TABLET).
+HoennSeek_EventScript_AlphResearcherFragments:
+	setflag FLAG_HOENN_CIPHER_SHOWED_LAB
+	goto_if_ge VAR_RESULT, 7, HoennSeek_EventScript_AlphResearcherTablet
+	msgbox HoennSeek_Text_AlphResearcherFragments, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_AlphResearcherTablet:
+	goto_if_set FLAG_HOENN_CIPHER_TABLET, HoennSeek_EventScript_AlphResearcherTabletAgain
+	msgbox HoennSeek_Text_AlphResearcherTablet, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_CIPHER_TABLET
+	release
+	end
+
+HoennSeek_EventScript_AlphResearcherTabletAgain:
+	msgbox HoennSeek_Text_AlphResearcherTabletAgain, MSGBOX_DEFAULT
 	release
 	end
 
@@ -271,3 +295,32 @@ HoennSeek_Text_CallCipher:
 	.string "of their stone panels, too!\p"
 	.string "Go see them at the lab, okay?\n"
 	.string "Dad wants to know what it says!$"
+
+@ Part 27b
+HoennSeek_Text_AlphResearcherFragments:
+	.string "A TABLET FRAGMENT? Where a ring of\n"
+	.string "UNOWN was floating? Let me see!\p"
+	.string "The stone is like the RUINS' own.\n"
+	.string "You have {STR_VAR_3} of seven: {STR_VAR_1}.\p"
+	.string "One piece for each word, I think.\n"
+	.string "Seven letters… they must spell\l"
+	.string "something when they're together!$"
+
+HoennSeek_Text_AlphResearcherTablet:
+	.string "All seven fragments! Let me lay\n"
+	.string "them out on the table…\p"
+	.string "E, N, C, I, T, N, A. If this edge\n"
+	.string "fits that one… and this goes here…\p"
+	.string "A-N-C-I-E-N-T. ANCIENT!\n"
+	.string "It's one whole tablet again!\p"
+	.string "And the back is carved too. A map\n"
+	.string "of the RUINS, with a mark right in\l"
+	.string "the middle, where nothing is built.\p"
+	.string "I need time with this. Come back\n"
+	.string "and see me, {PLAYER}!$"
+
+HoennSeek_Text_AlphResearcherTabletAgain:
+	.string "ANCIENT, and a mark in the middle\n"
+	.string "of the RUINS where nothing stands…\p"
+	.string "The UNOWN are telling us something.\n"
+	.string "I'm sure of it.$"

@@ -756,6 +756,15 @@ gSpecials::
 	def_special HoennCipherTonightWord
 	def_special HoennCipherNoteWord
 	def_special HoennCipherWordCount
+	@ Hoenn & Seek 2.0, builder lane A (parts 27b+): lane A's specials go here
+	def_special HoennGlyphRingShows
+	def_special HoennGlyphRingPrepare
+	def_special HoennGlyphSetupBattle
+	def_special HoennGlyphTakeFragment
+	def_special HoennCipherFragmentCount
+	@ (end of lane A's specials)
+
+	@ Hoenn & Seek 2.0, builder lane B (parts 31b+): lane B's specials go here
 	def_special HoennBirdRoostState
 	def_special HoennBirdLand
 	def_special HoennBirdBattleEnded

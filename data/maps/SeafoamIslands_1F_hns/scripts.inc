@@ -5,6 +5,7 @@ SeafoamIslands_1F_hns_MapScripts::
 	.byte 0
 
 SeafoamIslands_1F_OnTransition: 
+	call HoennSeek_EventScript_GlyphRingArm @ Hoenn & Seek 2.0 part 27b: the Unown ring
 	setvar VAR_ICE_STEP_COUNT, 1
 	end
 
