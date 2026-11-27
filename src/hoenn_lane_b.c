@@ -12,6 +12,8 @@
 //   they should ring; IDs come from lane B's range in constants/hoenn_phone.h.
 #include "global.h"
 #include "battle.h"
+#include "battle_setup.h"
+#include "main.h"
 #include "event_data.h"
 #include "event_object_movement.h"
 #include "fieldmap.h"
@@ -562,8 +564,44 @@ void HoennTuneLeadBull(void)
     CalculateMonStats(&gEnemyParty[0]);
 }
 
+// special HoennStartScriptedSafariBattle + waitstate: the lead bull is met the
+// Safari way (bait, rocks, Safari Balls), never with your own Pokémon (Bryan,
+// 30b review). The highland is in the Safari Zone, so BattleSetup_StartWildBattle
+// starts a Safari battle there; afterwards the script carries on
+// (HoennSafariScriptedBattleEnd, hooked into CB2_EndSafariBattle), so it can
+// read the outcome.
+static bool8 sScriptedSafariBattle;
+
+void HoennStartScriptedSafariBattle(void)
+{
+    sScriptedSafariBattle = TRUE;
+    BattleSetup_StartWildBattle();
+}
+
+// TRUE if it took over the end of the battle: back to the field with the
+// script running again. Running out of balls mid-battle still ends the Safari
+// the usual way (the bull simply stays). A catch with the last ball goes back
+// to the script too, which then ends the Safari itself.
+bool32 HoennSafariScriptedBattleEnd(void)
+{
+    if (!sScriptedSafariBattle)
+        return FALSE;
+    sScriptedSafariBattle = FALSE;
+    if (gBattleOutcome == B_OUTCOME_NO_SAFARI_BALLS)
+        return FALSE;
+    SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+    return TRUE;
+}
+
+// specialvar VAR_RESULT, HoennSafariBallsLeft: Safari Balls left in the bag.
+u16 HoennSafariBallsLeft(void)
+{
+    return gNumSafariBalls;
+}
+
 // specialvar VAR_RESULT, HoennLeadBullBattleEnded: TRUE when the bull leaves
-// (caught, or knocked out: back next Monday); FALSE if you ran.
+// (caught, or it fled from the Safari encounter: back next Monday); FALSE if
+// you ran.
 bool16 HoennLeadBullBattleEnded(void)
 {
     u32 breed = HoennStampedeBreed();
@@ -575,7 +613,7 @@ bool16 HoennLeadBullBattleEnded(void)
             FlagSet(FLAG_HOENN_CAUGHT_BULL_COMBAT + breed);
         FlagSet(FLAG_HOENN_STAMPEDE_LEADER_CAUGHT);
         break;
-    case B_OUTCOME_WON:
+    case B_OUTCOME_MON_FLED:
         break;
     default:
         return FALSE;

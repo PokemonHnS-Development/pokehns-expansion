@@ -781,3 +781,5 @@ gSpecials::
 	def_special HoennStampedeBreed
 	def_special HoennTuneLeadBull
 	def_special HoennLeadBullBattleEnded
+	def_special HoennStartScriptedSafariBattle
+	def_special HoennSafariBallsLeft

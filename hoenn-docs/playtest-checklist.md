@@ -480,7 +480,7 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 ## 2.0 part 30b (the Tauros stampede)
 - Safari Zone at SAFARI LEVEL 3: walk up the MOUNTAIN's east canyon (the two-wide path on its right edge) into the new highland. Does the join look seamless, and does the highland look hand-made?
 - Monday morning: the six charging Tauros. Is crossing the lanes fun and fair (not too easy, not too hard)? Get hit once (the long message), then again (the short one).
-- Reach the lead bull in the north nook: its battle (Paldean Tauros, Lv near your progress level). Run once (it stays), then catch it. The herd stops to graze afterwards; talk to one.
+- Reach the lead bull in the north nook: its Safari encounter (Paldean Tauros, Lv near your progress level; bait, rocks, Safari Balls, none of your Pokémon). Run once (it stays), let it flee once on a later Monday (gone for the week), then catch it; try a catch with your last Safari Ball (the Safari ends after the catch). The herd stops to graze afterwards; talk to one.
 - Next Monday: a different breed leads. Knock one out instead of catching it: it should be back the Monday after.
 - Any other day, or Monday afternoon: the highland is empty.
 - Brendan's call after the first catch (outside), and the Safari entrance attendant's rumor before and after.
