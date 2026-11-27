@@ -52,6 +52,7 @@ bool32 HoennTryEventCall(void);
 u16 HoennSpeciesDueCall(void);
 u16 HoennHiddenDueCall(void);
 u16 HoennLaneADueCall(void); // src/hoenn_lane_a.c (lane setup, Nov 27)
+u32 HoennObjectPaletteSpecies(u32 species); // src/hoenn_lane_a.c (part 27b)
 u16 HoennLaneBDueCall(void); // src/hoenn_lane_b.c
 bool8 HoennMirageTowerRung(void); // 2.0 part 24b
 u16 HoennCipherDueCall(void);      // 2.0 part 27a (src/hoenn_cipher.c)

@@ -48,6 +48,7 @@
 #define HOENN_CALL_LANE_A_FIRST 37
 #define HOENN_CALL_LANE_A_LAST  69
 #define HOENN_CALL_CIPHER 37 // Brendan: the Ruins of Alph lab phoned Birch about a braille wall (2.0 part 27a)
+#define HOENN_CALL_CIPHER_FRAGMENT 38 // May: the Ruins lab phoned Birch about a tablet fragment (2.0 part 27b)
 // (lane A's calls go here)
 
 // Lane B: 70-99.

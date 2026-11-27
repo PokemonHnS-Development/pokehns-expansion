@@ -224,6 +224,16 @@ Each PR lists its "picked without Bryan" choices. These are the ones that change
 - Night runs from evening to 4 AM, but the word follows `GetDayOfWeek`, which turns over at midnight. So on Friday night the rooms show UNION until midnight, then FOAM (Saturday's), and one late night gives two words. The researcher's "a different word every night" is then not quite true.
 - Suggestion: treat hours before `NIGHT_HOUR_END` as the previous day in `HoennCipherDrawRoom`, `HoennCipherTonightWord` and `HoennCipherNoteWord` (one helper), so a night is one word from dusk to dawn. 27b's glyph sites should use the same helper. Bryan can say keep it as is; collecting stays easy either way, since any wall clock changes the day.
 
+### 36. 27b: rings lose letters when a Pokémon follows you (bug, review of PR #88, Nov 27) — **fixed in PR #88 before merging**
+Each Unown form is its own species with its own compressed sprite sheet (6 frames, 96 tiles), and a compressed sheet is loaded whole. On Whirl Islands B2F at night, five letters, the map's other overworld Pokémon and the debug Lapras following the player ran out of sprite memory: H and I were never spawned (WHIRL read W, R, L).
+- **Fix (reviewer, Bryan's go-ahead):** `HoennSeek_EventScript_GlyphRingArm` sets `FLAG_TEMP_HIDE_FOLLOWER` when the map's ring is out, so your Pokémon stays in its ball for that visit (a temp flag; it comes back on the next map).
+- **Checked:** all seven rings walked to from a real entrance with Lapras leading (Ice Path by sliding in): every letter spawned and visible. `review-27b-fix.png` in the project's `hoenn-2.0/review/`.
+- **For later parts:** don't put more than about four *different* Pokémon sprites on one screen; same-species objects share a sheet.
+
+### 37. Review of 27r (PR #93) and 27b (PR #88) (reviewer, Nov 27) — **merged**
+- **27r:** the night word is one word from dusk to dawn (Sat 10 PM FOAM, Sat 2 AM still Friday's UNION, Fri 9 PM UNION, Sat noon none); the word reads from the wall row. Merged as built.
+- **27b:** `regen_all.sh --check` clean; seven rings spell their words, reachable on foot from the entrances (Bell Tower stairs, Mt. Moon Square's cave mouth, Route 44, Whirl B3F ladder, the Mortar ledge passage, Union Cave 1F, Route 20); talking starts the right letter. Bryan approved every choice listed in the PR (sites, ring per seen word, Lv 60–70, fragments as flags, ANCIENT, May's call).
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 

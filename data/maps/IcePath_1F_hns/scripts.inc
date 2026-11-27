@@ -4,6 +4,7 @@ IcePath_1F_hns_MapScripts::
 	.byte 0
 
 IcePath_1F_OnTransition: 
+	call HoennSeek_EventScript_GlyphRingArm @ Hoenn & Seek 2.0 part 27b: the Unown ring
 	callnative SetTimeBasedEncounters
 	end
 
