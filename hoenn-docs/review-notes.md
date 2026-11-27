@@ -348,6 +348,14 @@ Merged `hoenn` at #99 (28, 35b; 32 was already in the branch) into the branch: t
 - **Choices for Bryan:** every replacement species (the list in the PR and section 10 of the plan), what stays Hoenn in Kanto (the Fuchsia Safari's Hoenn areas, Wingull on Route 19, Lunatone/Solrock in Mt. Moon, Torkoal on Cinnabar, Route 18's Kecleon), Roselia added to Route 117 by day, Mt. Silver's Weavile → Mamoswine, Ula'ula Cave's Sneasel → Snorunt.
 - Grid: `review-33.png` in the project's `hoenn-2.0/review/`.
 
+### 51. Review of 34b (PR #106, lane A) (reviewer, Nov 27) — **merged before review (by lane A, at Aidan's request, 22:28 UTC); findings below, choices waiting for Bryan**
+Tested on the branch synced onto `hoenn` at #107 (no conflicts); `regen_all.sh --check` clean; living dex 416 of 416. Size row re-measured: +3,088 B release, +3,120 B debug over 33.
+- **Read:** the shrine script, the one-line chamber gate in HnS's `WhirlIslands_LugiaChamber` OnTransition, the cameo (borrowed Lanturn-light template), Brendan's call and the Olivine Pokémon Center fisher's lines. Checked HnS's own Lugia flow: `VAR_COMPLETED_LUGIA` 2 = story dance, 3 = story battle done (won or ran), 4 = the post-story Lv 70 Lugia, set by the Hall of Fame and by the Pewter grandpa (Ho-Oh path, with the SILVER WING). So the gate means HnS's post-Hall-of-Fame Lugia now also waits for the shrine.
+- **Played (debug save):** stone with nothing, with two of four (names the thunder and flame hollows), with all four (Slowking line, YES, ceremony, flags set, var 3 → 4, Tentacruel hidden), the after-text; the chamber at var 4 empty before the shrine and with Lugia at (29,12) after; the Route 41 cameo at 10 PM from the lagoon mouth (rises, sings, dives, plays once; nothing by day or a second night); Brendan's call; the fisher's cameo line and the rumor before/after.
+- **Choices for Bryan:** all four treasures needed; feathers kept; HnS's own Lv 70 Lugia reused, and gated behind the shrine (also after the Hall of Fame); the cameo's spot and once-only.
+- Not played: the Lugia battle itself (HnS's, on the playtest list).
+- Grid: `review-34b.png` in the project's `hoenn-2.0/review/`.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
