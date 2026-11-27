@@ -14499,6 +14499,44 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_EVFeather,
         .iconPalette = gItemIconPalette_GeniusFeather,
     },
+
+    // Hoenn & Seek 2.0 part 34a (lane B): the Power Plant manager's find on
+    // Route 10's thunderstorm day. Brought to the plant's back yard, it calls
+    // Zapdos down; Lugia's shrine (part 34b) asks for it too.
+    [ITEM_THUNDER_FEATHER] =
+    {
+        .name = ITEM_NAME("THUNDER FEATHER"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A great bird's gold\n"
+            "feather. Sparks fly\n"
+            "when it's touched."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_EVFeather,
+        .iconPalette = gItemIconPalette_HealthFeather,
+    },
+
+    // Hoenn & Seek 2.0 part 34a (lane B): dropped into Route 113's ash by
+    // Moltres's flyover. Brought to Mt. Silver's Moltres room, it calls Moltres
+    // down; Lugia's shrine (part 34b) asks for it too.
+    [ITEM_FLAME_FEATHER] =
+    {
+        .name = ITEM_NAME("FLAME FEATHER"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A great bird's red\n"
+            "feather. It stays\n"
+            "warm and glowing."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_EVFeather,
+        .iconPalette = gItemIconPalette_MuscleFeather,
+    },
 #endif
 
     [ITEM_EON_TICKET] =

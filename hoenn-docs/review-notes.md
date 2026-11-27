@@ -241,6 +241,12 @@ Built by this thread before it took over reviewing, so read with that in mind. M
 - **Fog:** Route 45 is a fog-cycle route, so on its fog day the meadow scene is hard to see. That's the weather working as designed.
 - Grid: `review-31b.png` in the project's `hoenn-2.0/review/`.
 
+### 39. Review of 34a (PR #91) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+Built by this thread before it took over reviewing. Merged 31b's branch (with `hoenn` at #88) in; conflicts only in the size table, the hint list and `data/specials.inc` (the bird specials now sit under lane B's marker). `regen_all.sh --check` clean; size row re-measured (+6,368 B release). No map layouts change.
+- **Played:** Bill's intro and per-bird report (clue → "waiting at its roost" with directions → caught); the manager's hint on a normal day and the feather on Route 10's storm day; the engineer's forecast the day before; the Moltres flyover on Route 113's west path and the FLAME FEATHER pickup; the workshop boy's rumor. Roosts: Zapdos lands, **run** = it stays (still there on re-entry, no second landing), **knocked out** = gone today, back the next day; Articuno lands and is **caught** (Master Ball) = the islet stays empty; Moltres lands in view in Mt. Silver's room. May's call rings once on Route 10. No bugs found.
+- **Worth Bryan's eye:** HnS's three birds used to sit at their spots from the start; now each needs its feather, so Articuno needs Hoenn's ice chamber (26b) first. Bill's first talk is long (about 16 boxes).
+- Grid: `review-34a.png` in the project's `hoenn-2.0/review/`.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
