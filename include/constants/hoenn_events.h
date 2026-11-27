@@ -394,4 +394,27 @@
 #define FLAG_HOENN_TRENCH_ENTERED       (HOENN_FLAGS_E_HOENN + 0x42) // swam down into the trench once
 #define FLAG_HOENN_CALL_TRENCH          (HOENN_FLAGS_E_HOENN + 0x43) // Brendan
 
+// ---- Part 25b: Night dive B (data/scripts/hoenn_hidden.inc) ----
+// The trench under Underwater Route 124. A guardian waits at the bottom of the
+// trench, a different one by weekday: Huntail Mon/Wed/Fri, Gorebyss Tue/Thu/Sat,
+// Relicanth Sun (hidden ability, perfect IVs). A pearl bed of three Clamperl
+// gives two Big Pearls and a Pearl String, each once a week. Once all three
+// guardians are caught, the mound's old cavern door opens onto its hollow,
+// where the Deep Sea Tooth and Deep Sea Scale lie.
+#define FLAG_HOENN_HIDE_HUNTAIL         (HOENN_FLAGS_E_HOENN + 0x44) // decided on every arrival
+#define FLAG_HOENN_HIDE_GOREBYSS        (HOENN_FLAGS_E_HOENN + 0x45) // decided on every arrival
+#define FLAG_HOENN_HIDE_RELICANTH       (HOENN_FLAGS_E_HOENN + 0x46) // decided on every arrival
+#define FLAG_HOENN_CAUGHT_HUNTAIL       (HOENN_FLAGS_E_HOENN + 0x47)
+#define FLAG_HOENN_CAUGHT_GOREBYSS      (HOENN_FLAGS_E_HOENN + 0x48)
+#define FLAG_HOENN_CAUGHT_RELICANTH     (HOENN_FLAGS_E_HOENN + 0x49)
+#define FLAG_HOENN_TRENCH_GUARDIAN_MET  (HOENN_FLAGS_E_HOENN + 0x4A) // battled a guardian once
+#define FLAG_HOENN_TRENCH_DOOR_OPEN     (HOENN_FLAGS_E_HOENN + 0x4B) // all three caught
+#define FLAG_HOENN_ITEM_DEEP_SEA_TOOTH  (HOENN_FLAGS_E_HOENN + 0x4C) // item ball in the hollow
+#define FLAG_HOENN_ITEM_DEEP_SEA_SCALE  (HOENN_FLAGS_E_HOENN + 0x4D) // item ball in the hollow
+#define FLAG_HOENN_CALL_TRENCH_DOOR     (HOENN_FLAGS_E_HOENN + 0x4E) // May
+#define FLAG_HOENN_DAILY_TRENCH_GUARDIAN (HOENN_DAILY_FLAGS_START + 0x10) // knocked out (or caught) today
+#define FLAG_HOENN_WEEKLY_PEARL_1       (HOENN_WEEKLY_FLAGS_START + 0x06) // Big Pearl
+#define FLAG_HOENN_WEEKLY_PEARL_2       (HOENN_WEEKLY_FLAGS_START + 0x07) // Big Pearl
+#define FLAG_HOENN_WEEKLY_PEARL_3       (HOENN_WEEKLY_FLAGS_START + 0x08) // Pearl String
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

@@ -205,6 +205,8 @@ u16 HoennHiddenDueCall(void)
         return HOENN_CALL_FLYGON;
     if (FlagGet(FLAG_HOENN_TRENCH_ENTERED) && !FlagGet(FLAG_HOENN_CALL_TRENCH))
         return HOENN_CALL_TRENCH;
+    if (FlagGet(FLAG_HOENN_TRENCH_DOOR_OPEN) && !FlagGet(FLAG_HOENN_CALL_TRENCH_DOOR))
+        return HOENN_CALL_TRENCH_DOOR;
     return HOENN_CALL_NONE;
 }
 
