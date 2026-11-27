@@ -9,7 +9,7 @@ Only lane B's builder edits this file (the reviewer may add a line when it merge
 ## Parts
 | Part | State | Branch / PR | Notes |
 |---|---|---|---|
-| 31b | next, after 27a | — | lane A's 37 needs it: build it first |
+| 31b | claimed, Nov 27 | branch `v2-31b-honey-trail` | lane A's 37 needs it: built first. The branch merges the setup PR (#85) on top of 27a (#86) |
 | 34a | — | — | lane A's 34b needs it: build it second |
 | 29 | — | — | |
 | 30a | — | — | |
