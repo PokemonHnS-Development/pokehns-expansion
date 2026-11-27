@@ -11,7 +11,8 @@
 //   Unown (row 3): AT NIGHT WE SPEAK. Reading the braille sets
 //   FLAG_HOENN_CIPHER_ROSETTA (you can read Unown from then on).
 // - With the Rosetta read, at night (HnS's TIME_NIGHT), Words Rooms 2-4 show a
-//   glowing word on row 3 that changes by weekday. Each word names a place for
+//   glowing word on row 3 that changes by weekday (one word per night, dusk
+//   to dawn: HoennNightWeekday, 27r). Each word names a place for
 //   part 27b's glyph sites: Sun TOWER, Mon MOON, Tue ICE, Wed WHIRL, Thu MORTAR,
 //   Fri UNION, Sat FOAM. FLAG_HOENN_CIPHER_WORD_SUN + weekday records it.
 // The braille and glowing-letter blocks come from
@@ -51,7 +52,7 @@ static const u8 sWordMortar[] = _("MORTAR");
 static const u8 sWordUnion[]  = _("UNION");
 static const u8 sWordFoam[]   = _("FOAM");
 
-// Indexed by GetDayOfWeek() (HOENN_SUNDAY = 0).
+// Indexed by HoennNightWeekday() (HOENN_SUNDAY = 0).
 static const u8 *const sNightWords[] = {
     sWordTower, sWordMoon, sWordIce, sWordWhirl, sWordMortar, sWordUnion, sWordFoam,
 };
@@ -81,6 +82,21 @@ static void SetFloorBlock(s32 x, s32 y, u16 metatile)
 static bool32 IsNightNow(void)
 {
     return GetTimeOfDay() == TIME_NIGHT;
+}
+
+// The weekday a night belongs to: the hours after midnight still count as the
+// evening's day, so one night (dusk to dawn) is one weekday. GetDayOfWeek()
+// turns over at midnight, which made the word change halfway through the
+// night (review item 35, 27r). Outside the night it's just GetDayOfWeek().
+// Part 27b's glyph sites use it too.
+u32 HoennNightWeekday(void)
+{
+    u32 day = GetDayOfWeek();
+
+    RtcCalcLocalTime();
+    if (IsNightNow() && gLocalTime.hours < 12)
+        day = (day + HOENN_WEEKDAY_COUNT - 1) % HOENN_WEEKDAY_COUNT;
+    return day;
 }
 
 // specialvar VAR_RESULT, HoennCipherIsOpen
@@ -129,7 +145,7 @@ void HoennCipherDrawRoom(void)
     if (!NightWordShows())
         return;
     {
-        const u8 *word = sNightWords[GetDayOfWeek() % ARRAY_COUNT(sNightWords)];
+        const u8 *word = sNightWords[HoennNightWeekday()];
         s32 x0;
 
         len = StringLength(word);
@@ -152,7 +168,7 @@ u16 HoennCipherTonightWord(void)
 
     if (!NightWordShows())
         return HOENN_CIPHER_NO_WORD;
-    day = GetDayOfWeek() % ARRAY_COUNT(sNightWords);
+    day = HoennNightWeekday();
     StringCopy(gStringVar1, sNightWords[day]);
     return FlagGet(FLAG_HOENN_CIPHER_WORD_SUN + day) ? HOENN_CIPHER_SEEN_WORD : HOENN_CIPHER_NEW_WORD;
 }
@@ -162,7 +178,7 @@ u16 HoennCipherTonightWord(void)
 void HoennCipherNoteWord(void)
 {
     if (NightWordShows())
-        FlagSet(FLAG_HOENN_CIPHER_WORD_SUN + GetDayOfWeek() % ARRAY_COUNT(sNightWords));
+        FlagSet(FLAG_HOENN_CIPHER_WORD_SUN + HoennNightWeekday());
 }
 
 // specialvar VAR_RESULT, HoennCipherWordCount: how many of the seven words were
