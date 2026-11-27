@@ -269,6 +269,12 @@ Built by this thread before it took over reviewing. Merged 30a's reviewed branch
 - **Choices for Bryan:** a new highland map above the Safari Mountain (SAFARI LEVEL 3); Monday mornings; six lanes at mixed speeds; a hit costs only Safari steps; the three Paldean breeds rotate weekly, skipping caught ones; a normal battle, not a Safari one; knocked out = back next Monday; after all three, the herd still runs with no leader.
 - Grid: `review-30b.png` in the project's `hoenn-2.0/review/`.
 
+### 44. Review of 36 (PR #98) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+Built by this thread before it took over reviewing. Merged 30b's reviewed branch in (conflicts only in CLAUDE.md and the generated hint header); `regen_all.sh --check` clean; size row re-measured (+7,072 B release).
+- **Played:** the old man before the Maxie + Archie double (Emerald's legend) and after it (both ORBS, then a short reminder); Routes 19/20 on their fog day without the ORBS (fog), with them (downpour on 19, drought on 20) and on other days (normal); Route 19's cave and Seafoam's secret cave empty without the ORB or on other days; Kyogre (Lv 70) caught → gone for good; Groudon knocked out → gone, back the next day, then caught; Brendan's call; the Sky Pillar mural before both titans (carving only) and after (JADE ORB); Embedded Tower empty at 11 AM, Rayquaza at noon, caught; May's call; Southern Island's sign, the three shards, the Pewter Museum expert's ENIGMA STONE; the grove empty without the stone, Latios (the non-roaming Lati on this save) with it; ran → it stays; caught → gone. No bugs found.
+- **Choices for Bryan:** the ORBS come from Mt. Pyre's old man after the Maxie + Archie double; Kyogre and Groudon now need their ORB (HnS's caves had them waiting from the start) and appear only on the Seafoam waters' fog day, which the ORB turns into downpour/drought; HnS's levels kept (titans and Rayquaza 70, Lati 50); the JADE ORB from a new Sky Pillar mural once both titans are caught, Rayquaza only at noon (not on Route 47's rain day); the Lati needs the ENIGMA STONE (three shards on HnS's Southern Island, joined by the Pewter Museum's expert); knocked out = back tomorrow (midnight, see item 41); the hints and two calls.
+- Grid: `review-36.png` in the project's `hoenn-2.0/review/`.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
