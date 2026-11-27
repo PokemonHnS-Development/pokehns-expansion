@@ -445,3 +445,14 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 - Over a week of nights (or with the wall clock's calendar), collect all seven words, then talk to the researcher: the list and the seven-places line.
 - The puzzle chambers and the Sinjoh Ruins temple share this tileset: check their coloured stone panels look unchanged (palette 10 got a new colour in an unused slot).
 - The lab's wandering scientist's two new lines.
+
+## 2.0 part 31b (Teddiursa honey trail)
+- The beekeeper's house at the top of Route 45: does the new door and house look natural on that plateau? The route sign moved one tile right to make room.
+- The beekeeper's HONEY once a day (talk again the same day, then on the next day).
+- Spread HONEY on the pine in the pond meadow (face the tree from the right), then come back on a later morning (4-10 AM): two Teddiursa. Watch them once, shoo them once (the honey should still be there the next morning).
+- After three watched mornings: the Ursaring at the pine in the morning, then at night (7 PM-6 AM). Follow her: the walk to the cliff, the climb, the moon hollow scene.
+- The moon hollow: does it look hand-made (rock ring, pool, flowers)? The pool by night and by day, the bears only at night, leaving by the bottom path.
+- The claw marks on the meadow's east cliff take you straight up afterwards, at any hour.
+- The granddaughter's line at each stage, the boy's Peat Block line, the Blackthorn Mart rumor before and after.
+- Brendan's call after the hollow (rings within a few steps outdoors).
+- Route 45's fog day: are the bears and the pine still easy to see in the fog?

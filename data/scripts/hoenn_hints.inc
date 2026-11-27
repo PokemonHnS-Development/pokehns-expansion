@@ -450,10 +450,18 @@ HoennSeek_EventScript_Hint_AlphLabScientist::
 	callstd MSGBOX_NPC
 	end
 
+@ BlackthornCity_Mart_hns
+HoennSeek_EventScript_Hint_BlackthornMartTrainer::
+	callnative HoennSeek_NpcHint
+	.2byte 56
+	goto_if_eq VAR_RESULT, FALSE, BlackthornMart_EventScript_CoolTrainerM
+	callstd MSGBOX_NPC
+	end
+
 @ BlackthornCity_hns
 HoennSeek_EventScript_Hint_BlackthornSkater::
 	callnative HoennSeek_NpcHint
-	.2byte 56
+	.2byte 57
 	goto_if_eq VAR_RESULT, FALSE, BlackthornCity_EventScript_CoolTrainerF2
 	callstd MSGBOX_NPC
 	end
@@ -461,7 +469,7 @@ HoennSeek_EventScript_Hint_BlackthornSkater::
 @ Route34_FishingShack_hoenn
 HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 57
+	.2byte 58
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -469,7 +477,7 @@ HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 @ OlivineCity_HarborOffice_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 58
+	.2byte 59
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -477,7 +485,7 @@ HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 @ OlivineCity_SailorsHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 	callnative HoennSeek_NpcHint
-	.2byte 59
+	.2byte 60
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
@@ -485,7 +493,7 @@ HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 @ OlivineCity_CaptainsHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 60
+	.2byte 61
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -493,7 +501,7 @@ HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 @ OlivineCity_TackleShop_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 61
+	.2byte 62
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -501,7 +509,7 @@ HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 @ OlivineCity_Shipwright_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 62
+	.2byte 63
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -509,7 +517,7 @@ HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 @ OlivineCity_KeepersHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 63
+	.2byte 64
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -517,7 +525,7 @@ HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 @ EcruteakCity_DanceTeacher_hoenn
 HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 64
+	.2byte 65
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -525,7 +533,7 @@ HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 @ Route34_BreedersHouse_hoenn
 HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 65
+	.2byte 66
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -533,7 +541,7 @@ HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 @ Route38_MoomooStoreroom_hoenn
 HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 66
+	.2byte 67
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -541,7 +549,7 @@ HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 @ BellchimeTrail_Lodge_hoenn
 HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 67
+	.2byte 68
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -549,7 +557,7 @@ HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 @ Route6_BugClub_hoenn
 HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 68
+	.2byte 69
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -557,7 +565,7 @@ HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 @ Route6_EngineersHouse_hoenn
 HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 69
+	.2byte 70
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -565,7 +573,7 @@ HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 @ CeladonCity_FloristsHouse_hoenn
 HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 70
+	.2byte 71
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -573,7 +581,7 @@ HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 @ MelemeleIsle_IslandHome_hoenn
 HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 71
+	.2byte 72
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -581,8 +589,16 @@ HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 @ MelemeleIsle_SurfShop_hoenn
 HoennSeek_EventScript_Hint_MelemeleIsle_SurfShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 72
+	.2byte 73
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
+	callstd MSGBOX_NPC
+	end
+
+@ Route45_BeekeeperHouse_hoenn
+HoennSeek_EventScript_Hint_Route45_BeekeeperHouse_hoenn_Npc1::
+	callnative HoennSeek_NpcHint
+	.2byte 74
+	goto_if_eq VAR_RESULT, FALSE, Route45_BeekeeperHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
@@ -848,6 +864,15 @@ HoennSeek_Text_Hint_RumorIce_FroslassAfter::
 HoennSeek_Text_Hint_RumorIce_FroslassNotes::
 	.string "At night, a FROSLASS's face shows\nin the pillars of the SHOAL CAVE\lice chamber. Touch the one she's\lin, and only that one.$"
 
+HoennSeek_Text_Hint_RumorHoney_TrailBefore::
+	.string "They say a beekeeper lives up on\nROUTE 45, and the wild bears there\lcan't resist his HONEY!$"
+
+HoennSeek_Text_Hint_RumorHoney_TrailAfter::
+	.string "Somebody followed an URSARING up a\ncliff on ROUTE 45 at night!\lThere's a hollow up there where\lthe bears watch the moon.$"
+
+HoennSeek_Text_Hint_RumorHoney_TrailNotes::
+	.string "The beekeeper on JOHTO's ROUTE 45\ngives out HONEY. Spread it on the\lold pine by the pond and come back\lin the morning. If the cubs trust\lyou, their mother may show you the\lway up.$"
+
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
 
@@ -1045,6 +1070,18 @@ HoennSeek_Text_Hint_LineStoryIceFroslass::
 
 HoennSeek_Text_Hint_LineStoryIceFeather::
 	.string "That feather you found… A great\nice bird passed over the sea when\lI was a boy.\pSomething like that doesn't leave\nits feathers lying around for\lnothing. Hold on to it.$"
+
+HoennSeek_Text_Hint_LineStoryHoneyTree::
+	.string "Grandpa's old pine is in the\nmeadow by the pond, at the bottom\lof ROUTE 45. It's tucked in behind\la hedge.\pSpread the HONEY low on the trunk,\nwhere a TEDDIURSA can reach!$"
+
+HoennSeek_Text_Hint_LineStoryHoneyMother::
+	.string "The TEDDIURSA came for your HONEY?\nDon't chase them off!\pIf they get used to you, their\nmother will come and see who's\lbeen feeding her cubs.$"
+
+HoennSeek_Text_Hint_LineStoryHoneyNight::
+	.string "The mother URSARING came to the\npine? Then she'll be back\lat night.\pMother bears go walking under the\nmoon. Grandpa says she wants to\lshow you something!$"
+
+HoennSeek_Text_Hint_LineStoryHoneyHollow::
+	.string "You followed the mother up the\ncliff? Grandpa says the bears have\lwatched the moon from up there\lsince he was a boy.$"
 
 HoennSeek_Text_Hint_LineStoryCipherWall::
 	.string "Did you feel that tremor? A new\nline of writing turned up inside\lthe RUINS.\pIt's got dots on it like nothing\nfrom JOHTO. We need someone who's\lbeen to HOENN!$"
