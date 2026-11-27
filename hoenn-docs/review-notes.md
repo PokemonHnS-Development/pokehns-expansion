@@ -216,10 +216,24 @@ Each PR lists its "picked without Bryan" choices. These are the ones that change
 - Emulator on the synced debug ROM: Brendan's cipher call rings through the lane chain (after Elm's), the lab scientist alternates his own line and his hint line, a keyed building NPC (Route 6 Bug Club) still alternates.
 - One thing to know: the lane rules say the reviewer "writes notes, not fixes" and sends small fixes back as `NNr` parts. This review fixed 27a's two text bugs in place before merging instead, because 27a's builder had already moved to lane B and the fixes were a few lines.
 
+### 34. The new floor lines can't be read from the wall (part 27a, for lane A's 27r)
+- Words Room 1's braille (row 2) and the Unown line under it (row 3) are walkable floor, and so is the row of rooms 2–4's night word. A player who walks up to the north wall ends up standing on the braille, and A at the wall does nothing. Reading works only from one row further back, facing up. (This tripped the reviewer's own emulator test too.)
+- Fix: add the same bg events one row up: room 1 row 1 (`HoennSeek_EventScript_CipherRosetta`, x 2–18 except the spaces) and rooms 2–4 row 2 (`HoennSeek_EventScript_CipherWordSign`). Check first that row 2 in rooms 2–4 has no original sign on it.
+
+### 35. The night word changes at midnight, halfway through the night (part 27a, suggestion for 27r)
+- Night runs from evening to 4 AM, but the word follows `GetDayOfWeek`, which turns over at midnight. So on Friday night the rooms show UNION until midnight, then FOAM (Saturday's), and one late night gives two words. The researcher's "a different word every night" is then not quite true.
+- Suggestion: treat hours before `NIGHT_HOUR_END` as the previous day in `HoennCipherDrawRoom`, `HoennCipherTonightWord` and `HoennCipherNoteWord` (one helper), so a night is one word from dusk to dawn. 27b's glyph sites should use the same helper. Bryan can say keep it as is; collecting stays easy either way, since any wall clock changes the day.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
 ## Checked and fine
+- **Lane setup (#85), 27a (#86), 24r (#79) and 26r (#87), re-checked on `hoenn` at de86bdf3 (Claude, 2026-11-26):**
+  - `regen_all.sh --check` reports no changes; release 32,709,828 and debug 32,869,076, matching the 26r row. (Running it rewrites `hoenn_desert/palette_night.pal` with LF line endings where `.gitattributes` wants CRLF; `git diff` shows nothing, so it's harmless.)
+  - Lane ranges: each of the E/F flag blocks, the daily, weekly and hidden-item flags and the E/F var blocks is split between the lanes with no overlap, and nothing before the split used them except 27a's 11 flags. The phone chain falls through lane A's switch to lane B's and ends with `releaseall`.
+  - 27a's palette 10 slot 13 (now the glow cyan) is also used by one old metatile, placed once in the Puzzle and Reward Chambers (4,18); it renders pixel-identical, since the other layer covers it.
+  - In the emulator from a fresh debug save: Elm's escapee call, then Brendan's cipher call (says who told him); the lab researcher's ask and repeat lines; the Rosetta read from row 4 (braille window on two lines, the fanfare, the flag); Friday 10 PM in Words Room 2 shows UNION in cyan, centred, and notes it; the researcher's six-word list wraps after three words; seven words set `FLAG_HOENN_CIPHER_ALL_WORDS`.
+  - 24r: `DesertStepAside` returns properly when you trigger from the ring's south tile (`HiddenEnd24a` is a `return`). 26r's three text fixes are in.
 - **Parts 24a–26b, checked on `hoenn` after PR #83 (Claude, 2026-11-26):**
   - The debug build works, and every generator re-runs with no changes, including the overworld Pokémon (22r's lesson stuck).
   - Code read:
