@@ -16409,6 +16409,18 @@
       "layout_version": "hns"
     },
     {
+      "id": "LAYOUT_RUINS_OF_ALPH_SANCTUM_HOENN",
+      "name": "RuinsOfAlph_Sanctum_hoenn_Layout",
+      "width": 17,
+      "height": 13,
+      "primary_tileset": "gTileset_Johto_Building_Hns",
+      "secondary_tileset": "gTileset_RuinsOfAlph_B1F_Hns",
+      "border_filepath": "data/layouts/RuinsOfAlph_Sanctum_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_Sanctum_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
       "id": "LAYOUT_ROUTE41_LAGOON_HOENN",
       "name": "Route41_Lagoon_hoenn_Layout",
       "width": 30,

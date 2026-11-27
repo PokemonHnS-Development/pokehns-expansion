@@ -414,6 +414,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_HOENN_ALPH_SEAL_1",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_UNOWN",
+      "x": 21,
+      "y": 27,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HOENN_CIPHER_HIDE_SEAL"
+    },
+    {
+      "local_id": "LOCALID_HOENN_ALPH_SEAL_2",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_UNOWN_N",
+      "x": 24,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HOENN_CIPHER_HIDE_SEAL"
+    },
+    {
+      "local_id": "LOCALID_HOENN_ALPH_SEAL_3",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_UNOWN_C",
+      "x": 26,
+      "y": 26,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HOENN_CIPHER_HIDE_SEAL"
     }
   ],
   "warp_events": [
@@ -486,6 +528,13 @@
       "elevation": 0,
       "dest_map": "MAP_RUINS_OF_ALPH_PUZZLE_AND_REWARD_CHAMBERS_HNS",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_RUINS_OF_ALPH_SANCTUM_HOENN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
@@ -537,6 +586,14 @@
       "elevation": 0,
       "item": "ITEM_NUGGET",
       "flag": "FLAG_HIDDEN_ITEM_RUINSOFALPH_NUGGET"
+    },
+    {
+      "type": "sign",
+      "x": 23,
+      "y": 27,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "HoennSeek_EventScript_AlphBoulder"
     }
   ],
   "game_version": "hns",

@@ -1,9 +1,11 @@
 RuinsOfAlph_Outside_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, HoennSeek_EventScript_AlphOutsideOnLoad @ Hoenn & Seek 2.0 part 28
 	map_script MAP_SCRIPT_ON_TRANSITION, RuinsOfAlph_Outside_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
 
 RuinsOfAlph_Outside_OnTransition: 
+	call HoennSeek_EventScript_AlphSealArm @ Hoenn & Seek 2.0 part 28
 	callnative SetTimeBasedEncounters
 	end	
 

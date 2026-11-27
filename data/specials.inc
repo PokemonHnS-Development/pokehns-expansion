@@ -762,6 +762,7 @@ gSpecials::
 	def_special HoennGlyphSetupBattle
 	def_special HoennGlyphTakeFragment
 	def_special HoennCipherFragmentCount
+	def_special HoennSanctumLetter
 	def_special HoennAmpharosAshorePlace
 	@ (end of lane A's specials)
 
