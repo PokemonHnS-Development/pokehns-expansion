@@ -664,4 +664,28 @@
 #define FLAG_HOENN_CALL_KANGASKHAN      (HOENN_LANE_B_FLAGS_E + 0x1B) // May: the warden told Birch's aide
 #define FLAG_HOENN_KANGA_EGG_GIVEN      (HOENN_LANE_B_FLAGS_E + 0x1C) // the mother's LUCKY EGG (later, if the bag was full)
 // The Beach and the Brush use VAR_TEMP_1 for the baby's scenes.
+
+// ---- Part 30b: the Tauros stampede (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Monday mornings a Tauros herd charges back and forth across the Safari Zone's
+// highland (FuchsiaCity_SafariZoneHighland_hoenn, above the MOUNTAIN's east
+// canyon), one bull per lane; a bull that runs into you knocks you back to the
+// canyon. Past the herd, its lead bull waits in a nook of the north cliff: a
+// Paldean Tauros whose breed rotates by week (Combat, Blaze, Aqua; caught ones
+// are skipped), perfect Attack and Speed. One battle a week.
+#define FLAG_HOENN_HIDE_STAMPEDE        (HOENN_LANE_B_FLAGS_E + 0x1D) // object flag: the herd, decided on every arrival
+#define FLAG_HOENN_HIDE_BULL_COMBAT     (HOENN_LANE_B_FLAGS_E + 0x1E) // object flags: the lead bull, + HOENN_BULL_*
+#define FLAG_HOENN_HIDE_BULL_BLAZE      (HOENN_LANE_B_FLAGS_E + 0x1F)
+#define FLAG_HOENN_HIDE_BULL_AQUA       (HOENN_LANE_B_FLAGS_E + 0x20)
+#define FLAG_HOENN_CAUGHT_BULL_COMBAT   (HOENN_LANE_B_FLAGS_E + 0x21) // + HOENN_BULL_*
+#define FLAG_HOENN_CAUGHT_BULL_BLAZE    (HOENN_LANE_B_FLAGS_E + 0x22)
+#define FLAG_HOENN_CAUGHT_BULL_AQUA     (HOENN_LANE_B_FLAGS_E + 0x23)
+#define FLAG_HOENN_CALL_STAMPEDE        (HOENN_LANE_B_FLAGS_E + 0x24) // Brendan: Birch's aide heard from the warden
+#define FLAG_HOENN_STAMPEDE_LEADER_CAUGHT (HOENN_LANE_B_FLAGS_E + 0x25) // any breed caught (rumor, call)
+#define FLAG_HOENN_STAMPEDE_HIT_ONCE    (HOENN_LANE_B_FLAGS_E + 0x26) // the first knock-back explains itself
+#define FLAG_HOENN_WEEKLY_LEAD_BULL     (HOENN_LANE_B_WEEKLY + 0x00)  // battled the lead bull this week
+#define HOENN_BULL_COMBAT 0
+#define HOENN_BULL_BLAZE  1
+#define HOENN_BULL_AQUA   2
+#define HOENN_BULL_COUNT  3
+#define HOENN_BULL_NONE   HOENN_BULL_COUNT // every breed caught
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

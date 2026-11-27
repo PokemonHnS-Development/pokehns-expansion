@@ -12,16 +12,26 @@
 //   they should ring; IDs come from lane B's range in constants/hoenn_phone.h.
 #include "global.h"
 #include "battle.h"
+#include "battle_setup.h"
+#include "main.h"
 #include "event_data.h"
+#include "event_object_movement.h"
 #include "fieldmap.h"
 #include "hoenn.h"
 #include "hoenn_caps.h"
 #include "item.h"
+#include "overworld.h"
+#include "pokemon.h"
 #include "rtc.h"
 #include "safari_zone.h"
+#include "script.h"
 #include "script_pokemon_util.h"
+#include "task.h"
 #include "constants/battle.h"
+#include "constants/event_object_movement.h"
 #include "constants/items.h"
+#include "constants/map_event_ids.h"
+#include "constants/map_groups.h"
 #include "constants/rtc.h"
 
 #if IS_HNS
@@ -44,6 +54,9 @@ u16 HoennLaneBDueCall(void)
     // Part 30a: May, once the Kangaskhan baby is back with its mother.
     if (FlagGet(FLAG_HOENN_KANGA_REUNITED) && !FlagGet(FLAG_HOENN_CALL_KANGASKHAN))
         return HOENN_CALL_KANGASKHAN;
+    // Part 30b: Brendan, once the stampede's lead bull is yours.
+    if (FlagGet(FLAG_HOENN_STAMPEDE_LEADER_CAUGHT) && !FlagGet(FLAG_HOENN_CALL_STAMPEDE))
+        return HOENN_CALL_STAMPEDE;
     return HOENN_CALL_NONE; // the end of the chain
 }
 
@@ -348,6 +361,265 @@ bool32 HoennFollowerOverride(u32 *species, bool32 *shiny, bool32 *female)
 const u8 *HoennFollowerScript(void)
 {
     return KangaBabyFollowing() ? HoennSeek_EventScript_KangaBabyFollower : NULL;
+}
+
+// ---- Part 30b: the Tauros stampede ----
+// Monday mornings, six Tauros charge across the Safari Zone's highland
+// (FuchsiaCity_SafariZoneHighland_hoenn), one per lane: each runs from one side
+// wall to the other, paws the ground, turns and charges back. The player keeps
+// control the whole time; a Tauros that runs into the player's tile starts
+// HoennSeek_EventScript_StampedeHit, which knocks them back to the canyon.
+//
+// A task drives the herd (started from the map's ON_RESUME script, so it
+// comes back after battles and menus). Each lane's state (x, direction, a
+// countdown) lives in sHerd; the object's template coords follow x on every
+// step, so a Tauros that leaves the screen and is respawned reappears where
+// it should be. Off screen the countdown alone paces it, so the herd keeps the
+// same rhythm whether or not you can see it. The task idles while a script or
+// menu holds the player (ArePlayerFieldControlsLocked). After the lead bull's
+// battle (caught or knocked out) the herd stops where it is and grazes for the
+// rest of the week.
+
+#define STAMPEDE_TURN_PAUSE 24 // frames a Tauros paws the ground at a lane's end
+
+enum { STAMPEDE_NORMAL, STAMPEDE_FAST, STAMPEDE_FASTER };
+static const u8 sStampedeFrames[] = { [STAMPEDE_NORMAL] = 16, [STAMPEDE_FAST] = 8, [STAMPEDE_FASTER] = 4 };
+
+struct StampedeLane
+{
+    u8 localId;
+    u8 y, xMin, xMax; // the lane's row and its grass between the side walls
+    u8 speed;         // STAMPEDE_*
+};
+
+// Start positions and directions are the objects' own in the map.json. The
+// player walks a tile in 16 frames (no running in the Safari Zone).
+static const struct StampedeLane sStampedeLanes[] = {
+    { LOCALID_HOENN_STAMPEDE_1,  7, 4, 21, STAMPEDE_FAST },
+    { LOCALID_HOENN_STAMPEDE_2,  9, 3, 22, STAMPEDE_FAST },
+    { LOCALID_HOENN_STAMPEDE_3, 10, 4, 21, STAMPEDE_NORMAL },
+    { LOCALID_HOENN_STAMPEDE_4, 12, 5, 23, STAMPEDE_FASTER },
+    { LOCALID_HOENN_STAMPEDE_5, 14, 3, 22, STAMPEDE_FAST },
+    { LOCALID_HOENN_STAMPEDE_6, 15, 3, 20, STAMPEDE_FAST },
+};
+#define STAMPEDE_LANES ARRAY_COUNT(sStampedeLanes)
+
+static EWRAM_DATA struct
+{
+    bool8 ready; // cleared on every arrival (HoennStampedeReset)
+    s8 dir[STAMPEDE_LANES]; // +1 east, -1 west
+    u8 wait[STAMPEDE_LANES]; // frames until the next step or the end of a pause
+} sHerd = {0};
+
+static bool32 OnHighland(void)
+{
+    return gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_FUCHSIA_CITY_SAFARI_ZONE_HIGHLAND_HOENN)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_FUCHSIA_CITY_SAFARI_ZONE_HIGHLAND_HOENN);
+}
+
+// The herd is out (Monday mornings) and still has its leader this week: once
+// the lead bull is caught or knocked out, the Tauros stand and graze.
+static bool32 HerdCharging(void)
+{
+    return !FlagGet(FLAG_HOENN_HIDE_STAMPEDE) && !FlagGet(FLAG_HOENN_WEEKLY_LEAD_BULL);
+}
+
+static const struct ObjectEventTemplate *LaneTemplate(u32 i)
+{
+    return GetObjectEventTemplateByLocalIdAndMap(sStampedeLanes[i].localId,
+        gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
+}
+
+// The lane's Tauros object if it's on screen.
+static struct ObjectEvent *LaneObject(u32 i)
+{
+    u8 objId;
+
+    if (TryGetObjectEventIdByLocalIdAndMap(sStampedeLanes[i].localId, gSaveBlock1Ptr->location.mapNum,
+                                           gSaveBlock1Ptr->location.mapGroup, &objId))
+        return NULL;
+    return &gObjectEvents[objId];
+}
+
+static u8 StampedeWalkAction(u32 i, u32 dir)
+{
+    switch (sStampedeLanes[i].speed)
+    {
+    case STAMPEDE_NORMAL: return GetWalkNormalMovementAction(dir);
+    case STAMPEDE_FAST:   return GetWalkFastMovementAction(dir);
+    default:              return GetWalkFasterMovementAction(dir);
+    }
+}
+
+static void Task_HoennStampede(u8 taskId)
+{
+    u32 i;
+    struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
+
+    if (!OnHighland() || !HerdCharging())
+    {
+        DestroyTask(taskId);
+        return;
+    }
+    if (ArePlayerFieldControlsLocked())
+        return;
+
+    for (i = 0; i < STAMPEDE_LANES; i++)
+    {
+        const struct StampedeLane *lane = &sStampedeLanes[i];
+        const struct ObjectEventTemplate *template = LaneTemplate(i);
+        struct ObjectEvent *obj = LaneObject(i);
+        s32 x, next;
+        u32 dir;
+
+        if (template == NULL)
+            continue;
+        // Run into: the Tauros has started a step onto the player's tile.
+        if (obj != NULL && obj->currentCoords.x == player->currentCoords.x
+                        && obj->currentCoords.y == player->currentCoords.y)
+        {
+            ScriptContext_SetupScript(HoennSeek_EventScript_StampedeHit);
+            return;
+        }
+        if (sHerd.wait[i] > 0)
+        {
+            sHerd.wait[i]--;
+            continue;
+        }
+        if (obj != NULL && ObjectEventIsMovementOverridden(obj) && !ObjectEventClearHeldMovementIfFinished(obj))
+            continue; // still finishing the last tile
+
+        x = template->x;
+        next = x + sHerd.dir[i];
+        if (next < lane->xMin || next > lane->xMax)
+        {
+            // The lane's end: paw the ground, turn, charge back.
+            sHerd.dir[i] = -sHerd.dir[i];
+            sHerd.wait[i] = STAMPEDE_TURN_PAUSE;
+            if (obj != NULL)
+                ObjectEventSetHeldMovement(obj, GetWalkInPlaceFastMovementAction(sHerd.dir[i] > 0 ? DIR_EAST : DIR_WEST));
+            continue;
+        }
+        dir = sHerd.dir[i] > 0 ? DIR_EAST : DIR_WEST;
+        SetObjEventTemplateCoords(lane->localId, next, lane->y);
+        if (obj != NULL)
+            ObjectEventSetHeldMovement(obj, StampedeWalkAction(i, dir)); // paces itself
+        else
+            sHerd.wait[i] = sStampedeFrames[lane->speed] - 1; // off screen: the clock paces it
+    }
+}
+
+// special HoennStampedeReset (the highland's OnTransition): the herd starts
+// from the map.json's places, facing the map.json's ways.
+void HoennStampedeReset(void)
+{
+    sHerd.ready = FALSE;
+}
+
+// special HoennStartStampede (the highland's ON_RESUME): start the herd's task
+// if the herd is out and it isn't running yet.
+void HoennStartStampede(void)
+{
+    u32 i;
+
+    if (!HerdCharging() || FuncIsActiveTask(Task_HoennStampede))
+        return;
+    if (!sHerd.ready)
+    {
+        for (i = 0; i < STAMPEDE_LANES; i++)
+        {
+            const struct ObjectEventTemplate *template = LaneTemplate(i);
+            sHerd.dir[i] = (template != NULL && template->movementType == MOVEMENT_TYPE_FACE_LEFT) ? -1 : 1;
+            sHerd.wait[i] = 0;
+        }
+        sHerd.ready = TRUE;
+    }
+    CreateTask(Task_HoennStampede, 80);
+}
+
+// specialvar VAR_RESULT, HoennStampedeBreed: this week's lead bull (HOENN_BULL_*):
+// the three breeds take turns by week, skipping any already caught;
+// HOENN_BULL_NONE once all three are.
+u16 HoennStampedeBreed(void)
+{
+    u32 i, first = VarGet(VAR_HOENN_WEEK_SEEN) % HOENN_BULL_COUNT;
+
+    for (i = 0; i < HOENN_BULL_COUNT; i++)
+    {
+        u32 breed = (first + i) % HOENN_BULL_COUNT;
+        if (!FlagGet(FLAG_HOENN_CAUGHT_BULL_COMBAT + breed))
+            return breed;
+    }
+    return HOENN_BULL_NONE;
+}
+
+// special HoennTuneLeadBull (after HoennSetupProgressWildBattle): perfect
+// Attack and Speed, the bull's two best stats.
+void HoennTuneLeadBull(void)
+{
+    u8 iv = MAX_PER_STAT_IVS;
+
+    SetMonData(&gEnemyParty[0], MON_DATA_ATK_IV, &iv);
+    SetMonData(&gEnemyParty[0], MON_DATA_SPEED_IV, &iv);
+    CalculateMonStats(&gEnemyParty[0]);
+}
+
+// special HoennStartScriptedSafariBattle + waitstate: the lead bull is met the
+// Safari way (bait, rocks, Safari Balls), never with your own Pokémon (Bryan,
+// 30b review). The highland is in the Safari Zone, so BattleSetup_StartWildBattle
+// starts a Safari battle there; afterwards the script carries on
+// (HoennSafariScriptedBattleEnd, hooked into CB2_EndSafariBattle), so it can
+// read the outcome.
+static bool8 sScriptedSafariBattle;
+
+void HoennStartScriptedSafariBattle(void)
+{
+    sScriptedSafariBattle = TRUE;
+    BattleSetup_StartWildBattle();
+}
+
+// TRUE if it took over the end of the battle: back to the field with the
+// script running again. Running out of balls mid-battle still ends the Safari
+// the usual way (the bull simply stays). A catch with the last ball goes back
+// to the script too, which then ends the Safari itself.
+bool32 HoennSafariScriptedBattleEnd(void)
+{
+    if (!sScriptedSafariBattle)
+        return FALSE;
+    sScriptedSafariBattle = FALSE;
+    if (gBattleOutcome == B_OUTCOME_NO_SAFARI_BALLS)
+        return FALSE;
+    SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+    return TRUE;
+}
+
+// specialvar VAR_RESULT, HoennSafariBallsLeft: Safari Balls left in the bag.
+u16 HoennSafariBallsLeft(void)
+{
+    return gNumSafariBalls;
+}
+
+// specialvar VAR_RESULT, HoennLeadBullBattleEnded: TRUE when the bull leaves
+// (caught, or it fled from the Safari encounter: back next Monday); FALSE if
+// you ran.
+bool16 HoennLeadBullBattleEnded(void)
+{
+    u32 breed = HoennStampedeBreed();
+
+    switch (gBattleOutcome)
+    {
+    case B_OUTCOME_CAUGHT:
+        if (breed < HOENN_BULL_COUNT)
+            FlagSet(FLAG_HOENN_CAUGHT_BULL_COMBAT + breed);
+        FlagSet(FLAG_HOENN_STAMPEDE_LEADER_CAUGHT);
+        break;
+    case B_OUTCOME_MON_FLED:
+        break;
+    default:
+        return FALSE;
+    }
+    FlagSet(FLAG_HOENN_WEEKLY_LEAD_BULL);
+    return TRUE;
 }
 
 #endif // IS_HNS

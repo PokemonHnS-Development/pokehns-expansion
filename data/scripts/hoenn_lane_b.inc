@@ -14,6 +14,7 @@ HoennSeek_EventScript_PhoneEventLaneB::
 	case HOENN_CALL_BIRDS, HoennSeek_EventScript_CallBirds @ part 34a
 	case HOENN_CALL_TUNNELS, HoennSeek_EventScript_CallTunnels @ part 29
 	case HOENN_CALL_KANGASKHAN, HoennSeek_EventScript_CallKangaskhan @ part 30a
+	case HOENN_CALL_STAMPEDE, HoennSeek_EventScript_CallStampede @ part 30b
 	releaseall @ no call matched: the end of the chain
 	end
 
@@ -1780,3 +1781,207 @@ HoennSeek_Text_CallKangaskhan:
 	.string "all the way back to its mother?\p"
 	.string "That's so sweet! I'd have cried\n"
 	.string "right along with it!$"
+
+@ ==========================================================================
+@ ==========================================================================
+@ Part 30b: the Tauros stampede (Fuchsia Safari Zone)
+@ ==========================================================================
+@ The MOUNTAIN's east canyon (SAFARI LEVEL 3) climbs to a new highland,
+@ FuchsiaCity_SafariZoneHighland_hoenn (a map connection). On Monday mornings
+@ six Tauros charge back and forth across it, one per lane (rows 7, 9, 10, 12,
+@ 14, 15); src/hoenn_lane_b.c's stampede task moves them and knocks you back
+@ to the canyon (HoennSeek_EventScript_StampedeHit) when one runs into you.
+@ Past the herd, the lead bull stands in the north cliff's nook (13,4): a
+@ Paldean Tauros, this week's breed from HoennStampedeBreed (the three rotate
+@ by week; caught breeds are skipped). Perfect Attack and Speed; caught or
+@ knocked out, it's gone until next Monday and the herd stops to graze.
+	.include "data/maps/FuchsiaCity_SafariZoneHighland_hoenn/scripts.inc"
+
+HoennSeek_EventScript_HighlandOnTransition::
+	special HoennStampedeReset
+	setflag FLAG_HOENN_HIDE_STAMPEDE
+	setflag FLAG_HOENN_HIDE_BULL_COMBAT
+	setflag FLAG_HOENN_HIDE_BULL_BLAZE
+	setflag FLAG_HOENN_HIDE_BULL_AQUA
+	setvar VAR_0x8004, HOENN_MONDAY
+	specialvar VAR_RESULT, HoennIsItWeekday
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBEnd
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_MORNING, HoennSeek_EventScript_LaneBEnd
+	clearflag FLAG_HOENN_HIDE_STAMPEDE
+	goto_if_set FLAG_HOENN_WEEKLY_LEAD_BULL, HoennSeek_EventScript_LaneBEnd
+	specialvar VAR_RESULT, HoennStampedeBreed
+	switch VAR_RESULT
+	case HOENN_BULL_COMBAT, HoennSeek_EventScript_ShowBullCombat
+	case HOENN_BULL_BLAZE, HoennSeek_EventScript_ShowBullBlaze
+	case HOENN_BULL_AQUA, HoennSeek_EventScript_ShowBullAqua
+	end
+
+HoennSeek_EventScript_ShowBullCombat:
+	clearflag FLAG_HOENN_HIDE_BULL_COMBAT
+	end
+
+HoennSeek_EventScript_ShowBullBlaze:
+	clearflag FLAG_HOENN_HIDE_BULL_BLAZE
+	end
+
+HoennSeek_EventScript_ShowBullAqua:
+	clearflag FLAG_HOENN_HIDE_BULL_AQUA
+	end
+
+@ Runs on every load and after every battle or menu: (re)starts the herd.
+HoennSeek_EventScript_HighlandOnResume::
+	special HoennStartStampede
+	end
+
+@ A Tauros ran into you (started by the stampede task).
+HoennSeek_EventScript_StampedeHit::
+	lockall
+	playmoncry SPECIES_TAUROS, CRY_MODE_ENCOUNTER
+	playse SE_M_DOUBLE_SLAP
+	applymovement OBJ_EVENT_ID_PLAYER, HoennSeek_Movement_StampedeTumble
+	waitmovement 0
+	waitmoncry
+	goto_if_set FLAG_HOENN_STAMPEDE_HIT_ONCE, HoennSeek_EventScript_StampedeHitAgain
+	setflag FLAG_HOENN_STAMPEDE_HIT_ONCE
+	msgbox HoennSeek_Text_StampedeHitFirst, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_StampedeBack
+
+HoennSeek_EventScript_StampedeHitAgain:
+	msgbox HoennSeek_Text_StampedeHit, MSGBOX_DEFAULT
+HoennSeek_EventScript_StampedeBack:
+	closemessage
+	warpsilent MAP_FUCHSIA_CITY_SAFARI_ZONE_HIGHLAND_HOENN, 12, 18
+	waitstate
+	releaseall
+	end
+
+HoennSeek_Movement_StampedeTumble:
+	jump_in_place_down
+	face_left
+	face_up
+	face_right
+	face_down
+	step_end
+
+@ Talking to a herd Tauros (it has to be standing still: at a lane's end, or
+@ grazing once the lead bull is gone for the week).
+HoennSeek_EventScript_StampedeTauros::
+	lock
+	playmoncry SPECIES_TAUROS, CRY_MODE_NORMAL
+	goto_if_set FLAG_HOENN_WEEKLY_LEAD_BULL, HoennSeek_EventScript_StampedeGrazing
+	msgbox HoennSeek_Text_StampedeTauros, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_StampedeGrazing:
+	msgbox HoennSeek_Text_StampedeGrazing, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_LeadBull::
+	lock
+	faceplayer
+	specialvar VAR_RESULT, HoennStampedeBreed
+	switch VAR_RESULT
+	case HOENN_BULL_BLAZE, HoennSeek_EventScript_LeadBullBlaze
+	case HOENN_BULL_AQUA, HoennSeek_EventScript_LeadBullAqua
+	setvar VAR_0x8004, SPECIES_TAUROS_PALDEA_COMBAT
+	goto HoennSeek_EventScript_LeadBullBattle
+
+HoennSeek_EventScript_LeadBullBlaze:
+	setvar VAR_0x8004, SPECIES_TAUROS_PALDEA_BLAZE
+	goto HoennSeek_EventScript_LeadBullBattle
+
+HoennSeek_EventScript_LeadBullAqua:
+	setvar VAR_0x8004, SPECIES_TAUROS_PALDEA_AQUA
+HoennSeek_EventScript_LeadBullBattle:
+	playmoncry VAR_0x8004, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_LeadBull, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setvar VAR_0x8005, 35
+	special HoennSetupProgressWildBattle
+	special HoennTuneLeadBull
+	@ A Safari encounter (bait, rocks, Safari Balls), not a battle with your
+	@ own Pokémon (30b review); the script carries on afterwards.
+	special HoennStartScriptedSafariBattle
+	waitstate
+	specialvar VAR_RESULT, HoennLeadBullBattleEnded
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOENN_LEAD_BULL_COMBAT
+	removeobject LOCALID_HOENN_LEAD_BULL_BLAZE
+	removeobject LOCALID_HOENN_LEAD_BULL_AQUA
+	fadescreenswapbuffers FADE_FROM_BLACK
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_LeadBullCaught
+	msgbox HoennSeek_Text_LeadBullFled, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_LeadBullCaught:
+	msgbox HoennSeek_Text_LeadBullCaught, MSGBOX_DEFAULT
+	release
+	@ Caught with the last Safari Ball: now the Safari ends, as it would have.
+	specialvar VAR_RESULT, HoennSafariBallsLeft
+	goto_if_eq VAR_RESULT, 0, SafariZone_EventScript_OutOfBalls
+	end
+
+@ ---- Part 30b's call --------------------------------------------------------
+HoennSeek_EventScript_CallStampede::
+	setflag FLAG_HOENN_CALL_STAMPEDE
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallStampede
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Part 30b texts ---------------------------------------------------------
+HoennSeek_Text_StampedeHitFirst:
+	.string "Whoa! A charging TAUROS knocked\n"
+	.string "you flat!\p"
+	.string "You tumbled all the way back down\n"
+	.string "to the canyon.\p"
+	.string "The herd runs in lanes. Slip\n"
+	.string "across each one while its TAUROS\l"
+	.string "is charging the other way!$"
+
+HoennSeek_Text_StampedeHit:
+	.string "A TAUROS bowled you over! You\n"
+	.string "tumbled back down to the canyon.$"
+
+HoennSeek_Text_StampedeTauros:
+	.string "The TAUROS snorts and paws at the\n"
+	.string "ground. It's ready to charge again!$"
+
+HoennSeek_Text_StampedeGrazing:
+	.string "The TAUROS is grazing. It barely\n"
+	.string "looks up at you.$"
+
+HoennSeek_Text_LeadBull:
+	.string "The herd's leader! A TAUROS unlike\n"
+	.string "any from KANTO lowers its horns…$"
+
+HoennSeek_Text_LeadBullFled:
+	.string "The lead bull thundered off down\n"
+	.string "the far side of the highland.\p"
+	.string "Without it, the herd slows to a\n"
+	.string "trot, then settles down to graze.\p"
+	.string "It may lead them again next\n"
+	.string "MONDAY morning.$"
+
+HoennSeek_Text_LeadBullCaught:
+	.string "Without its leader, the herd slows\n"
+	.string "to a trot, then starts grazing.\p"
+	.string "Next MONDAY, a new bull may well\n"
+	.string "be leading them.$"
+
+HoennSeek_Text_CallStampede:
+	.string "Hey, {PLAYER}! It's BRENDAN.\p"
+	.string "PROF. BIRCH's aide at the FUCHSIA\n"
+	.string "SAFARI ZONE says the wardens saw\l"
+	.string "you catch the TAUROS herd's leader!\p"
+	.string "A bull from PALDEA, way out in\n"
+	.string "KANTO! May's going to be so\l"
+	.string "jealous when I tell her.$"

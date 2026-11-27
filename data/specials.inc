@@ -776,3 +776,10 @@ gSpecials::
 	def_special HoennDrawBurrowRubble
 	def_special HoennBurrowPrepare
 	def_special HoennBurrowDig
+	def_special HoennStampedeReset
+	def_special HoennStartStampede
+	def_special HoennStampedeBreed
+	def_special HoennTuneLeadBull
+	def_special HoennLeadBullBattleEnded
+	def_special HoennStartScriptedSafariBattle
+	def_special HoennSafariBallsLeft
