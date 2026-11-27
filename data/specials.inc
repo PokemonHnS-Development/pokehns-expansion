@@ -769,6 +769,13 @@ gSpecials::
 	def_special HoennAmpharosToLighthouse
 	def_special HoennAmpharosHidePlayer
 	def_special HoennHasAnyBerry
+	@ part 35b (src/hoenn_johto_legends.c)
+	def_special HoennEusineState
+	def_special HoennHoOhClue
+	def_special HoennForestSoilState
+	def_special HoennForestSoilPlant
+	def_special HoennForestSoilTake
+	def_special HoennForestOfferings
 	def_special HoennLugiaCameoPrepare
 	@ (end of lane A's specials)
 

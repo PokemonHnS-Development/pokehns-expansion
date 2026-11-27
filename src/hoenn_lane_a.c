@@ -513,6 +513,9 @@ u16 HoennLaneADueCall(void)
     // Part 32: the stranded Ampharos is rescued; Jasmine's report reached Norman.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_RESCUED_AMPHAROS) && !FlagGet(FLAG_HOENN_CALL_AMPHAROS))
         return HOENN_CALL_AMPHAROS;
+    // Part 35b: Brendan heard of the rainbow over Ecruteak (src/hoenn_johto_legends.c)
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_HOOH_RAINBOW) && !FlagGet(FLAG_HOENN_CALL_RAINBOW))
+        return HOENN_CALL_RAINBOW;
     // Part 34b, Brendan: Bill heard the Olivine lighthouse saw the Whirl Islands' sea go still.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_LUGIA_SHRINE_OPEN) && !FlagGet(FLAG_HOENN_CALL_LUGIA))
         return HOENN_CALL_LUGIA;

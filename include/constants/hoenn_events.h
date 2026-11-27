@@ -573,6 +573,40 @@
 #define HOENN_AMPHAROS_HOME     6 // at the lighthouse top for good
 // Route 41 uses VAR_TEMP_2 for the light's stop (light_paths.json) and
 // VAR_TEMP_3 = 1 for the sea cave's trigger (57,54) once it's found.
+// ---- Part 35b: Ho-Oh, Raikou/Entei, Celebi (lane A) (data/scripts/hoenn_johto_legends.inc, src/hoenn_johto_legends.c) ----
+// Raikou and Entei: which you've met and caught (noted after every roamer
+// battle); once one is caught, EUSINE's notes put the other on OAK's radio
+// show. Ho-Oh: dawn, the Ruins' Ho-Oh panel, all three beasts met and the
+// CLEAR BELL; the rainbow over Ecruteak is its cameo. Celebi: three forest
+// offerings grown from berries planted in old soil, then the GS BALL.
+#define FLAG_HOENN_MET_RAIKOU            (HOENN_LANE_A_FLAGS_F + 0x00) // battled the roaming Raikou
+#define FLAG_HOENN_MET_ENTEI             (HOENN_LANE_A_FLAGS_F + 0x01) // battled the roaming Entei
+#define FLAG_HOENN_CAUGHT_RAIKOU         (HOENN_LANE_A_FLAGS_F + 0x02) // (HnS's FLAG_CAUGHT_RAIKOU is never set)
+#define FLAG_HOENN_CAUGHT_ENTEI          (HOENN_LANE_A_FLAGS_F + 0x03)
+#define FLAG_HOENN_EUSINE_NOTES          (HOENN_LANE_A_FLAGS_F + 0x04) // EUSINE sends his tracking notes to the radio
+#define FLAG_HOENN_HOOH_RAINBOW          (HOENN_LANE_A_FLAGS_F + 0x05) // saw the rainbow over Ecruteak (cameo)
+#define FLAG_HOENN_CALL_RAINBOW          (HOENN_LANE_A_FLAGS_F + 0x06) // Brendan: the League heard of the rainbow
+#define FLAG_HOENN_FOREST_PLANTED_ILEX   (HOENN_LANE_A_FLAGS_F + 0x07) // + HOENN_SOIL_* (0x07-0x09): a berry was planted
+#define FLAG_HOENN_FOREST_OFFERING_ILEX  (HOENN_LANE_A_FLAGS_F + 0x0A) // + HOENN_SOIL_* (0x0A-0x0C): its glowing berry was taken
+#define FLAG_HOENN_SHRINE_OFFERED        (HOENN_LANE_A_FLAGS_F + 0x0D) // the three offerings are in the shrine's dishes
+// 0x0E-0x10: part 34b (below)
+#define FLAG_HOENN_DAILY_SOIL_ILEX       (HOENN_LANE_A_DAILY + 2)      // + HOENN_SOIL_* (daily 2-4): planted today
+// The soil spots (VAR_0x8004 for HoennForestSoil*):
+#define HOENN_SOIL_ILEX       0
+#define HOENN_SOIL_VIRIDIAN   1
+#define HOENN_SOIL_PETALBURG  2
+#define HOENN_SOIL_COUNT      3
+// specialvar VAR_RESULT, HoennForestSoilState:
+#define HOENN_SOIL_EMPTY      0
+#define HOENN_SOIL_GROWING    1 // planted today: come back tomorrow
+#define HOENN_SOIL_GROWN      2
+#define HOENN_SOIL_TAKEN      3
+// specialvar VAR_RESULT, HoennHoOhClue: the first clue still missing
+#define HOENN_HOOH_READY        0
+#define HOENN_HOOH_NEEDS_BELL   1
+#define HOENN_HOOH_NEEDS_PUZZLE 2
+#define HOENN_HOOH_NEEDS_BEASTS 3
+#define HOENN_HOOH_NEEDS_DAWN   4
 // ---- Part 34b: Lugia (data/scripts/hoenn_lane_a.inc) ----
 // The lagoon's old stone (part 32) is Lugia's shrine. Carrying the three
 // birds' feathers (part 34a) and a SILVER WING, you lay them in its hollows:

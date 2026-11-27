@@ -15,6 +15,7 @@ HoennSeek_EventScript_PhoneEventLaneA::
 	case HOENN_CALL_SNEASEL, HoennSeek_EventScript_CallSneasel @ part 31a
 	case HOENN_CALL_CIPHER_SANCTUM, HoennSeek_EventScript_CallCipherSanctum @ part 28
 	case HOENN_CALL_AMPHAROS, HoennSeek_EventScript_CallAmpharos @ part 32
+	case HOENN_CALL_RAINBOW, HoennSeek_EventScript_CallRainbow @ part 35b (hoenn_johto_legends.inc)
 	case HOENN_CALL_LUGIA, HoennSeek_EventScript_CallLugia @ part 34b
 	goto HoennSeek_EventScript_PhoneEventLaneB @ lane B's calls (hoenn_lane_b.inc)
 
