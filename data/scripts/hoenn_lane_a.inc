@@ -320,8 +320,8 @@ HoennSeek_Movement_SneaselDashDown:
 	walk_faster_down
 	step_end
 
-@ Brendan: Norman reads every gym's report to the League, and Clair's says
-@ the Ice Path thief was caught.
+@ Brendan: May's dad (Norman) reads every gym's report to the League, and
+@ Clair's says the Ice Path thief was caught. (Brendan's own dad is Birch.)
 HoennSeek_EventScript_CallSneasel::
 	setflag FLAG_HOENN_CALL_SNEASEL
 	setspeaker HoennSeek_Text_NameBrendan
@@ -361,9 +361,10 @@ HoennSeek_Text_SneaselStash:
 
 HoennSeek_Text_CallSneasel:
 	.string "{PLAYER}! It's BRENDAN.\p"
-	.string "Dad reads every gym's report to\n"
-	.string "the LEAGUE, and guess what was\l"
-	.string "in CLAIR's from BLACKTHORN?\p"
+	.string "MAY's dad gets every gym's\n"
+	.string "report from the LEAGUE, and\l"
+	.string "guess what was in CLAIR's,\l"
+	.string "from BLACKTHORN?\p"
 	.string "The thief of the ICE PATH! Some\n"
 	.string "SNEASEL was swiping items right\l"
 	.string "off the ice for years.\p"
