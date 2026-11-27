@@ -33,6 +33,12 @@ HoennSeek_EventScript_GlyphRingArm::
 	specialvar VAR_RESULT, HoennGlyphRingShows
 	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_GlyphRingArmDone
 	clearflag FLAG_HOENN_CIPHER_HIDE_RING
+	@ Each letter is its own Unown form, and each form loads its whole sprite
+	@ sheet (96 tiles). A ring of five, the map's other Pokémon and a follower
+	@ ran out of sprite memory, so letters went missing (review item 36). Your
+	@ Pokémon stays in its ball while a ring is out (a temp flag: only for
+	@ this visit).
+	setflag FLAG_TEMP_HIDE_FOLLOWER
 HoennSeek_EventScript_GlyphRingArmDone:
 	return
 
@@ -161,6 +167,20 @@ HoennSeek_EventScript_AlphOutsideOnLoadEnd:
 @ only appear in the scene.
 HoennSeek_EventScript_AlphSealArm::
 	setflag FLAG_HOENN_CIPHER_HIDE_SEAL
+	@ Like the glyph rings (review item 36): the seal's three Unown forms each
+	@ load a whole sprite sheet, so your Pokémon stays in its ball on the nights
+	@ the boulder can still open.
+	goto_if_unset FLAG_HOENN_CIPHER_TABLET, HoennSeek_EventScript_AlphSealArmDone
+	goto_if_set FLAG_HOENN_CIPHER_SANCTUM_OPEN, HoennSeek_EventScript_AlphSealArmDone
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_AlphSealArmDone
+	setflag FLAG_TEMP_HIDE_FOLLOWER
+HoennSeek_EventScript_AlphSealArmDone:
+	return
+
+@ The sanctum's five floating Unown are five forms: no follower in there either.
+HoennSeek_EventScript_SanctumOnTransition::
+	setflag FLAG_TEMP_HIDE_FOLLOWER
 	return
 
 @ The boulder's face (a sign facing north at 23,27).

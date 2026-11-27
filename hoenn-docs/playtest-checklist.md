@@ -419,7 +419,8 @@ Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its 
 
 ## 2.0 part 27b (Unown Cipher B)
 - After seeing a night word, go to its place at night: is the ring easy to find from the entrance, and do the letters read as the word (clockwise from the top)? Bell Tower 2F, Mt. Moon Square, Ice Path 1F, Whirl Islands B2F, Mt. Mortar (by the lake), Union Cave B1F, Seafoam 1F.
-- Walk to each ring from the real entrance (the tests warped next to them): Whirl Islands B2F and Seafoam 1F especially.
+- Walk to each ring from the real entrance (the reviewer walked to all seven in the emulator; check the real puzzles on the way: Whirl Islands, Seafoam's boulders, Ice Path's ice).
+- While a ring is out your Pokémon stays in its ball on that map (review item 36): does it come back out on the next map? Does it feel odd?
 - The battle: the letter shown in battle matches the one that broke away (FOAM's is an A).
 - Catch one and check the Pokédex and summary show that letter.
 - Run from one: the ring stays; come back and it's still there. Let one knock you out: the ring is there next night.
