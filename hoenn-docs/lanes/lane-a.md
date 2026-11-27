@@ -13,8 +13,8 @@ Only lane A's builder edits this file (the reviewer may add a line when it merge
 | Part | State | Branch / PR | Notes |
 |---|---|---|---|
 | 27a | merged (Nov 27; review fixes by the reviewer before merging) | PR #86 | built by lane B's builder; flags `HOENN_LANE_A_FLAGS_E` + 0x00–0x0A, call 37: **27b continues from + 0x0B and call 38** |
-| 27b | PR open, waiting for the reviewer (Nov 27) | `v2-27b-cipher-sites` | E +0x0B–0x15, call 38; touches HnS maps Bell Tower 2F, Mt. Moon Square, Ice Path 1F, Whirl Islands B2F, Mt. Mortar 1F south, Union Cave B1F, Seafoam 1F (all lane A's) |
-| 28 | — | — | |
+| 27b | PR #88 open, waiting for the reviewer (Nov 27) | `v2-27b-cipher-sites` | E +0x0B–0x15, call 38; touches HnS maps Bell Tower 2F, Mt. Moon Square, Ice Path 1F, Whirl Islands B2F, Mt. Mortar 1F south, Union Cave B1F, Seafoam 1F (all lane A's) |
+| 28 | after 27b merges (31a goes first meanwhile) | — | |
 | 31a | — | — | |
 | 32 | — | — | lane B's 33 waits for it |
 | 34b | — | — | needs lane B's 34a |
