@@ -12,6 +12,7 @@ These docs live in the repo so any Claude session, on any account, sees the same
 | `2.0-plan.md` | Every 2.0 design decision, the repo check results and a master to-do list |
 | `playtest-checklist.md` | Things the emulator couldn't test, for Bryan's real playthrough. Add to it at the end of every part |
 | `lanes/` | **Two builder lanes + a reviewer (Nov 27):** the rules (`README.md`) and each lane's status. Read it before claiming a part |
+| `2.0-ideas-proposal.md` | Bryan's Nov 27 ideas (rival, gym leaders, swarms, species cut, …): answers and a proposed Phase H. **Not decided yet** |
 | `review-notes.md` | Open items from Bryan's reviews (placement, look, unapproved choices) to adjust later. Mark them done when a part fixes one |
 | `../CLAUDE.md` | The technical memory: build commands, every subsystem's notes, conventions, ROM size table |
 
