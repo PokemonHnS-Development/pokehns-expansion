@@ -126,6 +126,11 @@
     "RUMOR_ICE_CHAMBER": {"kind": "rumor", "rumor": "ICE_CHAMBER"},
     "STORY_ICE_FROSLASS": {"kind": "story", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}, {"not_flag": "FLAG_HOENN_ICE_FROSLASS_MET"}], "text": ["Something cold walks the ice down there when the tide is out at night.", "You'll see her in the ice before you see her. Touch the wrong ice and she'll blow you right back!"]},
     "STORY_ICE_FEATHER": {"kind": "story", "if": [{"flag": "FLAG_HOENN_GOT_FROST_FEATHER"}], "text": ["That feather you found… A great ice bird passed over the sea when I was a boy.", "Something like that doesn't leave its feathers lying around for nothing. Hold on to it."]},
+    "STORY_HONEY_TREE":   {"kind": "story", "if": [{"var": "VAR_HOENN_HONEY_MORNINGS", "below": 1}, {"var": "VAR_HOENN_HONEY_STAGE", "below": 1}], "text": ["Grandpa's old pine is in the meadow by the pond, at the bottom of ROUTE 45. It's tucked in behind a hedge.", "Spread the HONEY low on the trunk, where a TEDDIURSA can reach!"]},
+    "STORY_HONEY_MOTHER": {"kind": "story", "if": [{"var": "VAR_HOENN_HONEY_MORNINGS", "min": 1}, {"var": "VAR_HOENN_HONEY_STAGE", "below": 1}], "text": ["The TEDDIURSA came for your HONEY? Don't chase them off!", "If they get used to you, their mother will come and see who's been feeding her cubs."]},
+    "STORY_HONEY_NIGHT":  {"kind": "story", "if": [{"var": "VAR_HOENN_HONEY_STAGE", "min": 1}, {"var": "VAR_HOENN_HONEY_STAGE", "below": 2}], "text": ["The mother URSARING came to the pine? Then she'll be back at night.", "Mother bears go walking under the moon. Grandpa says she wants to show you something!"]},
+    "STORY_HONEY_HOLLOW": {"kind": "story", "if": [{"flag": "FLAG_HOENN_MOON_HOLLOW_FOUND"}], "text": ["You followed the mother up the cliff? Grandpa says the bears have watched the moon from up there since he was a boy."]},
+    "RUMOR_HONEY_TRAIL":  {"kind": "rumor", "rumor": "HONEY_TRAIL"},
     "RUMOR_ICE_FROSLASS": {"kind": "rumor", "rumor": "ICE_FROSLASS", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}]},
     "STORY_CIPHER_WALL":  {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ASKED"}, {"not_flag": "FLAG_HOENN_CIPHER_ROSETTA"}], "text": ["Did you feel that tremor? A new line of writing turned up inside the RUINS.", "It's got dots on it like nothing from JOHTO. We need someone who's been to HOENN!"]},
     "STORY_CIPHER_NIGHT": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ROSETTA"}, {"not_flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}], "text": ["AT NIGHT WE SPEAK… I've been sleeping here at the lab ever since you read it.", "If the WORDS chambers really light up at night, is it the same word every night? Tell my colleague what you see!"]},
@@ -289,6 +294,12 @@
       "before": ["They say a ghost walks the ice under SHOAL CAVE at night. Her face shows in the ice, but she's never there when you look!"],
       "after": "Somebody chased that ghost through the ice under SHOAL CAVE. It was a FROSLASS!",
       "notes": "At night, a FROSLASS's face shows in the pillars of the SHOAL CAVE ice chamber. Touch the one she's in, and only that one."
+    },
+    "HONEY_TRAIL": {
+      "found": [{"flag": "FLAG_HOENN_MOON_HOLLOW_FOUND"}],
+      "before": ["They say a beekeeper lives up on ROUTE 45, and the wild bears there can't resist his HONEY!"],
+      "after": "Somebody followed an URSARING up a cliff on ROUTE 45 at night! There's a hollow up there where the bears watch the moon.",
+      "notes": "The beekeeper on JOHTO's ROUTE 45 gives out HONEY. Spread it on the old pine by the pond and come back in the morning. If the cubs trust you, their mother may show you the way up."
     }
   },
 
@@ -350,7 +361,8 @@
     {"map": "MossdeepCity",                      "script": "MossdeepCity_EventScript_Sailor",                      "lines": ["STORY_NIGHT_DIVE", "STORY_TRENCH_DARK", "STORY_TRENCH_GUARDIANS"]},
     {"map": "ShoalCave_LowTideEntranceRoom",     "script": "ShoalCave_LowTideEntranceRoom_EventScript_ShellBellExpert", "lines": ["STORY_ICE_HOLE", "STORY_ICE_FEATHER", "STORY_ICE_FROSLASS", "STORY_ICE_GLALIE"]},
     {"map": "PacifidlogTown_PokemonCenter_1F",   "script": "PacifidlogTown_PokemonCenter_1F_EventScript_OldMan",  "lines": ["RUMOR_ICE_FROSLASS", "RUMOR_ICE_CHAMBER"]},
-    {"map": "RuinsOfAlph_Lab_hns",               "script": "RuinsOfAlph_Lab_EventScript_Scientist1", "key": "AlphLabScientist", "lines": ["STORY_CIPHER_NIGHT", "STORY_CIPHER_WALL"]}
+    {"map": "RuinsOfAlph_Lab_hns",               "script": "RuinsOfAlph_Lab_EventScript_Scientist1", "key": "AlphLabScientist", "lines": ["STORY_CIPHER_NIGHT", "STORY_CIPHER_WALL"]},
+    {"map": "BlackthornCity_Mart_hns",           "script": "BlackthornMart_EventScript_CoolTrainerM", "key": "BlackthornMartTrainer", "lines": ["RUMOR_HONEY_TRAIL"]}
   ],
 
   "forecasts": [

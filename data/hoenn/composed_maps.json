@@ -405,6 +405,34 @@
       "5": {"from": [13, 24]}
      }}
    ]
+  },
+  "Route45_MoonHollow_hoenn": {
+   "source": "LAYOUT_ROUTE45_HNS",
+   "layout": "LAYOUT_ROUTE45_MOON_HOLLOW_HOENN",
+   "border": [0, 0],
+   "ops": [
+    {"_": "The moon hollow (2.0 part 31b), by hand: a grass hollow high on Route 45's mountain, ringed by its rock (north wall 079, west face 072, east face 070, south rim 069, and the inside corners 0b2/0b3/0bb/0ba and step pieces 07a/078/06a/068 read from Route 45's own pockets), a terrace face across the top, a small pool for the moon to sit in, flowers, a patch of bare ground, and the narrow trail down at the bottom (x 7-8) the Ursaring climbs",
+     "at": [0, 0],
+     "grid": [
+      "aaaaaaaaaaaaaaaaaa",
+      "bbbbbbbbbbbbbbbbbb",
+      "aaaaaacddddddeaaaa",
+      "aaaaaafghghghiaaaa",
+      "aaaacdjklklkmndeaa",
+      "aaaafghmhghghghiaa",
+      "aacdjklklopppqlnea",
+      "aafghgrshtuuuvhgia",
+      "aafkmkwxlyzzzAlmia",
+      "aafghmhghghghgmgia",
+      "aaBCmklklklklklDEa",
+      "aaafhghghghghghiaa",
+      "aaaBFFCklDFFFFFEaa",
+      "aaaaaafghiaaaaaaaa",
+      "aaaaaafkliaaaaaaaa",
+      "aaaaaafghiaaaaaaaa"
+     ],
+     "legend": {"a": {"from": [0, 70]}, "b": {"from": [18, 79]}, "c": {"from": [2, 72]}, "d": {"from": [5, 84]}, "e": {"from": [33, 78]}, "f": {"from": [8, 77]}, "g": {"from": [1, 85]}, "h": {"from": [0, 85]}, "i": {"from": [27, 73]}, "j": {"from": [8, 84]}, "k": {"from": [1, 86]}, "l": {"from": [0, 86]}, "m": {"from": [20, 76]}, "n": {"from": [29, 60]}, "o": {"from": [26, 80]}, "p": {"from": [28, 80]}, "q": {"from": [31, 80]}, "r": {"from": [22, 67]}, "s": {"from": [23, 67]}, "t": {"from": [26, 81]}, "u": {"from": [28, 81]}, "v": {"from": [31, 81]}, "w": {"from": [22, 68]}, "x": {"from": [23, 68]}, "y": {"from": [26, 83]}, "z": {"from": [27, 83]}, "A": {"from": [31, 83]}, "B": {"from": [14, 0]}, "C": {"from": [11, 54]}, "D": {"from": [27, 68]}, "E": {"from": [37, 65]}, "F": {"from": [10, 54]}}}
+   ]
   }
  },
  "patches": [
@@ -450,6 +478,9 @@
   {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[27, 3]], "from": [10, 3]},
   {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[28, 3]], "from": [11, 3]},
   {"_": "Route 111 (2.0 part 24a): a sand hollow in the dead-end bay at the desert's north edge (29-31, 35-36), where the TRAPINCH burrows: a 3x2 patch of the desert's own darker deep-sand blocks, the same pieces its dune patches use (corners from the patch at (32-33, 37-38))", "layout": "LAYOUT_ROUTE111", "at": [29, 35], "grid": ["abc", "def"], "legend": {"a": {"from": [32, 37]}, "b": {"from": [21, 40]}, "c": {"from": [33, 37]}, "d": {"from": [32, 38]}, "e": {"from": [15, 45]}, "f": {"from": [33, 38]}}},
-  {"_": "... the same in Route 111's no-tower layout, which its OnTransition swaps in whenever the Mirage Tower is hidden", "layout": "LAYOUT_ROUTE111_NO_MIRAGE_TOWER", "at": [29, 35], "grid": ["abc", "def"], "legend": {"a": {"from": [32, 37]}, "b": {"from": [21, 40]}, "c": {"from": [33, 37]}, "d": {"from": [32, 38]}, "e": {"from": [15, 45]}, "f": {"from": [33, 38]}}}
+  {"_": "... the same in Route 111's no-tower layout, which its OnTransition swaps in whenever the Mirage Tower is hidden", "layout": "LAYOUT_ROUTE111_NO_MIRAGE_TOWER", "at": [29, 35], "grid": ["abc", "def"], "legend": {"a": {"from": [32, 37]}, "b": {"from": [21, 40]}, "c": {"from": [33, 37]}, "d": {"from": [32, 38]}, "e": {"from": [15, 45]}, "f": {"from": [33, 38]}}},
+  {"_": "Route 45 (2.0 part 31b): the beekeeper's house at the top of the route, Blackthorn's dark-roofed house (Route 45 shares Blackthorn's tilesets), on the sand right of the path down from the bridge, door (31,7); the route sign moves from (31,4), right above the roof, to (34,7) beside the house, where Blackthorn puts its house signs", "layout": "LAYOUT_ROUTE45_HNS", "at": [30, 4], "grid": [".s...", "abcd.", "efgh.", "ijklS"], "legend": {"a": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [20, 37]}, "b": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [21, 37]}, "c": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [22, 37]}, "d": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [23, 37]}, "e": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [20, 38]}, "f": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [21, 38]}, "g": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [22, 38]}, "h": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [23, 38]}, "i": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [20, 39]}, "j": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [21, 39]}, "k": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [22, 39]}, "l": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [23, 39]}, "s": {"from": [33, 4]}, "S": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [42, 42]}}},
+  {"_": "Route 45 (2.0 part 31b): the honey pine's nook. The hedge's two bottom bushes beside the pond meadow's tall pine (22,83-84) become grass, so a hidden pocket opens between the hedge and the pine's trunk, reached only from (22,85) below", "layout": "LAYOUT_ROUTE45_HNS", "cells": [[22, 83]], "from": [24, 83]},
+  {"layout": "LAYOUT_ROUTE45_HNS", "cells": [[22, 84]], "from": [24, 84]}
  ]
 }

@@ -37,7 +37,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "BlackthornMart_EventScript_CoolTrainerM",
+      "script": "HoennSeek_EventScript_Hint_BlackthornMartTrainer",
       "flag": "0"
     },
     {

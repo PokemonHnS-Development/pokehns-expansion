@@ -54,5 +54,6 @@
 #define HOENN_CALL_LANE_B_FIRST 70
 #define HOENN_CALL_LANE_B_LAST  99
 // (lane B's calls go here, at the end of the file)
+#define HOENN_CALL_MOON_HOLLOW  70 // Brendan: the beekeeper's letter about the moon hollow (part 31b)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

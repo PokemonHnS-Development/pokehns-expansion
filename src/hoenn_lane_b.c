@@ -20,9 +20,9 @@
 
 u16 HoennLaneBDueCall(void)
 {
-    // Lane B's calls go here, e.g.
-    //     if (FlagGet(FLAG_HOENN_X_MET) && !FlagGet(FLAG_HOENN_CALL_X))
-    //         return HOENN_CALL_X;
+    // Part 31b: Brendan, once you've followed the Ursaring up to the moon hollow.
+    if (FlagGet(FLAG_HOENN_MOON_HOLLOW_FOUND) && !FlagGet(FLAG_HOENN_CALL_MOON_HOLLOW))
+        return HOENN_CALL_MOON_HOLLOW;
     return HOENN_CALL_NONE; // the end of the chain
 }
 

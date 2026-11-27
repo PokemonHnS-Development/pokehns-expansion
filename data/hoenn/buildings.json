@@ -977,6 +977,86 @@
           "facing": "look"
         }
       ]
+    },
+    {
+      "name": "Route45_BeekeeperHouse_hoenn",
+      "door": {
+        "map": "Route45_hns",
+        "x": 31,
+        "y": 7
+      },
+      "template": "house_a",
+      "purpose": "Beekeeper's house (2.0 part 31b): one HONEY a day, the honey pine's hint, Bloodmoon Ursaluna lore, a Combee.",
+      "signs": [
+        {
+          "x": 8,
+          "y": 2,
+          "text": "Rows of golden HONEY jars, each one labeled with a month and a flower."
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_OLD_MAN_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "daily_gift": {
+            "flag": "FLAG_HOENN_DAILY_BEEKEEPER_HONEY",
+            "items": [
+              "HONEY",
+              "HONEY",
+              "HONEY",
+              "HONEY",
+              "HONEY",
+              "HONEY",
+              "HONEY"
+            ],
+            "intro": [
+              "My COMBEE make the sweetest HONEY in all of JOHTO. Here, take a jar!",
+              "Spread it on a tree and wild POKéMON come for it. The TEDDIURSA on this mountain love the old pine by the pond, at the bottom of the route."
+            ],
+            "after": "Spread it on the bark and come back the next morning. Bears are early risers!",
+            "full": "Your BAG's too full for a jar. Make some room and come back.",
+            "done": "One jar a day is all my COMBEE can spare. Come back tomorrow!"
+          }
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LASS_HNS",
+          "x": 9,
+          "y": 5,
+          "facing": "left",
+          "text": [
+            "Grandpa sends a jar of HONEY to PROF. BIRCH in HOENN every month.",
+            "The PROF writes back with notes on HOENN's flowers for the COMBEE!"
+          ],
+          "hints": [
+            "STORY_HONEY_HOLLOW",
+            "STORY_HONEY_NIGHT",
+            "STORY_HONEY_MOTHER",
+            "STORY_HONEY_TREE"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LITTLE_BOY_HNS",
+          "x": 8,
+          "y": 7,
+          "facing": "up",
+          "text": [
+            "Grandpa says an URSARING that sees the moon from MT. MOON at night changes into something else!",
+            "You need a PEAT BLOCK for it, though. The old lady's shop in MAHOGANY sells them."
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "COMBEE",
+          "x": 2,
+          "y": 7,
+          "facing": "look"
+        }
+      ]
     }
   ]
 }
