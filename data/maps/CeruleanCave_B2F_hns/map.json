@@ -116,8 +116,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "CeruleanCave3_EventScript_MewtwoNew",
-      "flag": "FLAG_HIDE_MEWTWO"
+      "script": "HoennSeek_EventScript_CeruleanMewtwo",
+      "flag": "FLAG_HOENN_HIDE_MEWTWO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ANNIHILAPE",

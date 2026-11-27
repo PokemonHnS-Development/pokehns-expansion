@@ -502,3 +502,13 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 - Embedded Tower at noon: Rayquaza. Not at 11 or 13, and not on Route 47's rain day.
 - Southern Island (STEVEN's EON TICKET): the sign's note, the three shards, the Pewter Museum expert (with 1–2 shards, then all 3), and the Lati in the grove. Is the Lati the one that isn't roaming Kanto? The sailor's rumor before and after.
 - Brendan's call after the first titan, May's after Rayquaza (both outside). Did any HnS event (Hall of Fame, the S.S. Aqua) bring the old legendaries back where they shouldn't be?
+
+## 2.0 part 35a (Mewtwo and Mew)
+- Journal pages: Cinnabar's lab rubble (north of the mansion spot), Silph Co.'s lobby painting, the Game Corner plant by the door, Rocket hideout B3F, Goldenrod's warehouse. Does each count up and say what's left? Are the spots findable without the hints?
+- MR. FUJI with 0, 2 and 5 pages: HnS's own text, the hints for missing pages, then the last page.
+- The Cinnabar cameo after the fourth page, both from picking it up and arriving on the island. Also arrive by **Surf** and by **Fly**: does the pan start and end on your tile?
+- Cerulean Cave B2F: no Mewtwo before page 6. Knock it out: back the next day? Run: still there? Catch: Brendan's call (outside).
+- Mew at dawn (4–8 AM) on Routes 1, 22 and 101: does the blur dash look right, including over Route 1's ledges? Not there at 8 AM or later.
+- Three scraps → the OLD SEA MAP → the Vermilion sailor → Faraway Island. Faraway's Mew chase itself wasn't retested. May's call.
+- HnS's Hall of Fame clears `FLAG_CAUGHT_MEW` (so Faraway's Mew can come back): after a Hall of Fame with Mew caught, the blurs can show again at dawn, but only where you haven't already found the scrap. Is that fine?
+- Vermilion's old item ball at (61,46): a BIG PEARL now.
