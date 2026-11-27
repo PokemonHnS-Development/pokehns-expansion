@@ -5,7 +5,7 @@
 // reserved tail of the Hoenn ranges in constants/hoenn_layout.h, which
 // tools/hoenn/gen_hoenn_ids.py never assigns.
 //
-// This block is nearly full (flags 0x35-0x3F and vars 0x03-0x0F are free).
+// This block is nearly full (flags 0x37-0x3F and vars 0x03-0x0F are free).
 // Keep those for 1.x fixes. **New 2.0 content takes its flags and vars from
 // constants/hoenn_events.h**, which has a block per build phase.
 #include "constants/hoenn_layout.h"
@@ -66,6 +66,21 @@
 #define FLAG_HOENN_MET_CONTEST_TWIN      (HOENN_CUSTOM_FLAGS_START + 0x33) // Lilycove's receptionist told you about her twin
 #define FLAG_HOENN_CALL_BASE             (HOENN_CUSTOM_FLAGS_START + 0x34) // Brendan's call after your first secret base (part 18)
 #define HOENN_CUSTOM_FLAGS_END       (HOENN_CUSTOM_FLAGS_START + 0x3F)
+
+// 1.x fix (found in 2.0 part 26a): HnS defines Emerald's two Shoal Cave system
+// flags as 0, so FlagSet did nothing and the cave was stuck at low tide (and the
+// Shoal Salt and Shells never came back). Give them real Hoenn flags. The
+// tide flag is set (high tide) by UpdateShoalTideFlag when you walk in from
+// Route 125; the item flag by SetShoalItemFlag at each new day (src/clock.c).
+#define FLAG_HOENN_SHOAL_TIDE        (HOENN_CUSTOM_FLAGS_START + 0x35)
+#define FLAG_HOENN_SHOAL_ITEM        (HOENN_CUSTOM_FLAGS_START + 0x36)
+#include "constants/global.h"
+#if IS_HNS && !defined(HOENN_NO_REMAP)
+#undef FLAG_SYS_SHOAL_TIDE
+#define FLAG_SYS_SHOAL_TIDE          FLAG_HOENN_SHOAL_TIDE
+#undef FLAG_SYS_SHOAL_ITEM
+#define FLAG_SYS_SHOAL_ITEM          FLAG_HOENN_SHOAL_ITEM
+#endif
 
 // Fake fights (part 14): one "already happened" flag each, numbered by
 // tools/hoenn/gen_hoenn_trainers.py. They borrow the top of the Hoenn trainer

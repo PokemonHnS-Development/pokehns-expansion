@@ -20,6 +20,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "constants/metatile_labels.h"
+#include "hoenn.h"
 
 struct MirageTowerPulseBlend
 {
@@ -322,6 +323,9 @@ void SetMirageTowerVisibility(void)
     visible = rand & 1;
     if (FlagGet(FLAG_FORCE_MIRAGE_TOWER_VISIBLE) == TRUE)
         visible = TRUE;
+#if IS_HNS
+    visible = HoennMirageTowerRung(); // Hoenn & Seek 2.0 part 24b: only the Sand Chime raises it
+#endif
 
     if (visible)
     {

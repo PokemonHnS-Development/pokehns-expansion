@@ -24,6 +24,8 @@
 	.set GLASS_FLUTE_PRICE, 500
 
 HoennSeek_EventScript_GlassWorker::
+	goto_if_set FLAG_HOENN_GOT_SINGING_SAND, HoennSeek_EventScript_GlassWorkerSand @ part 24b
+HoennSeek_EventScript_GlassWorkerFlute::
 	goto_if_set FLAG_HOENN_GOT_GLASS_FLUTE, Route113_GlassWorkshop_EventScript_GlassWorker
 	goto_if_ne VAR_GLASS_WORKSHOP_STATE, 2, Route113_GlassWorkshop_EventScript_GlassWorker
 	checkitem ITEM_SOOT_SACK
@@ -114,6 +116,7 @@ HoennSeek_Movement_MunchlaxWakes:
 @ Called from Route 113's OnTransition: shows the Spinda and arms the ring of
 @ trigger tiles around it (VAR_TEMP_4) on a morning it hasn't danced yet.
 HoennSeek_EventScript_Route113OnTransition::
+	call HoennSeek_EventScript_Route113VibravaOnTransition @ part 24b
 	setflag FLAG_HOENN_HIDE_SPINDA
 	goto_if_set FLAG_HOENN_WEEKLY_SPINDA, HoennSeek_EventScript_HiddenReturn
 	gettimeofday
@@ -1957,3 +1960,1101 @@ HoennSeek_Text_CallSingingSand:
 	.string "Dad says VIBRAVA hum like that\n"
 	.string "to call their flock. Wonder\l"
 	.string "where it went!$"
+
+@ ==========================================================================
+@ Part 24b: Flygon's desert song B (plan section 7, steps 4-6)
+@ ROUTE 113, evenings, once you have the SINGING SAND: the Vibrava from the
+@   Desert Underpass flits over the ash outside the Glass Workshop (40,6).
+@   Talking to it: it circles, its hum and the sand's answer each other, and
+@   it flies off over the workshop roof. Watch-only.
+@ GLASSBLOWER: with the sand (and the Vibrava seen) he fuses it into the SAND
+@   CHIME. Before the Vibrava, he says the sand is too fine to melt alone and
+@   that VIBRAVA come by at sunset. His glass flute offer comes after.
+@ LAVARIDGE: the hot-springs granny's hint line ("ring it in the desert at
+@   sunset"), from the hint engine.
+@ SAND CHIME (key item, used from the bag; src/item_use.c): on Route 111's
+@   desert in the evening it raises the MIRAGE TOWER until midnight
+@   (FLAG_HOENN_DAILY_MIRAGE_TOWER, read by SetMirageTowerVisibility through
+@   HoennMirageTowerRung). Anywhere else, at another hour, or once the tower
+@   has crumbled, it just rings.
+@ MIRAGE TOWER 4F: a FLYGON guards Emerald's two fossils. A scaled battle
+@   (Boomburst, Soft Sand), catchable; knocked out, it's back the next time you
+@   come up to 4F; ran from, it stays. Once it's caught the fossils can be
+@   taken, and taking one collapses the tower for good (Emerald's scene). A
+@   DRAGON FANG lies in the corner. May calls once you've caught it.
+@ ==========================================================================
+
+HoennSeek_EventScript_HiddenEnd24b:
+	return
+
+@ ---- Route 113 ------------------------------------------------------------
+HoennSeek_EventScript_Route113VibravaOnTransition::
+	setflag FLAG_HOENN_HIDE_ROUTE113_VIBRAVA
+	goto_if_unset FLAG_HOENN_GOT_SINGING_SAND, HoennSeek_EventScript_HiddenEnd24b
+	goto_if_set FLAG_HOENN_ROUTE113_VIBRAVA_SEEN, HoennSeek_EventScript_HiddenEnd24b
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_EVENING, HoennSeek_EventScript_HiddenEnd24b
+	clearflag FLAG_HOENN_HIDE_ROUTE113_VIBRAVA
+	return
+
+HoennSeek_EventScript_Route113Vibrava::
+	lock
+	faceplayer
+	playmoncry SPECIES_VIBRAVA, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_Route113VibravaHums, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	applymovement LOCALID_HOENN_ROUTE113_VIBRAVA, HoennSeek_Movement_VibravaCircles
+	waitmovement 0
+	msgbox HoennSeek_Text_Route113SandAnswers, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_HOENN_ROUTE113_VIBRAVA, HoennSeek_Movement_VibravaOverRoof
+	waitmovement 0
+	removeobject LOCALID_HOENN_ROUTE113_VIBRAVA
+	setflag FLAG_HOENN_HIDE_ROUTE113_VIBRAVA
+	setflag FLAG_HOENN_ROUTE113_VIBRAVA_SEEN
+	msgbox HoennSeek_Text_Route113VibravaGone, MSGBOX_DEFAULT
+	release
+	end
+
+@ A spin in the falling ash, then a hop.
+HoennSeek_Movement_VibravaCircles:
+	face_up
+	delay_4
+	face_right
+	delay_4
+	face_down
+	delay_4
+	face_left
+	delay_4
+	face_up
+	delay_4
+	face_right
+	delay_4
+	face_down
+	delay_4
+	face_left
+	delay_4
+	jump_in_place_down
+	step_end
+
+@ Up over the workshop roof to the north, and out of sight.
+HoennSeek_Movement_VibravaOverRoof:
+	face_up
+	jump_in_place_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	set_invisible
+	step_end
+
+@ ---- The glassblower --------------------------------------------------------
+HoennSeek_EventScript_GlassWorkerSand:
+	goto_if_set FLAG_HOENN_GOT_SAND_CHIME, HoennSeek_EventScript_GlassWorkerFlute
+	lock
+	faceplayer
+	goto_if_set FLAG_HOENN_ROUTE113_VIBRAVA_SEEN, HoennSeek_EventScript_GlassChimeFuse
+	msgbox HoennSeek_Text_GlassSandTooFine, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_GlassChimeFuse:
+	msgbox HoennSeek_Text_GlassChimeOffer, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	playse SE_M_FLAMETHROWER
+	waitse
+	delay 30
+	fadescreen FADE_FROM_BLACK
+	removeitem ITEM_SINGING_SAND
+	giveitem ITEM_SAND_CHIME
+	setflag FLAG_HOENN_GOT_SAND_CHIME
+	msgbox HoennSeek_Text_GlassChimeGiven, MSGBOX_DEFAULT
+	release
+	end
+
+@ ---- The Sand Chime (from the bag) ----------------------------------------
+HoennSeek_EventScript_RingSandChime::
+	lockall
+	playse SE_M_HEAL_BELL
+	msgbox HoennSeek_Text_ChimeRings, MSGBOX_DEFAULT
+	waitse
+	specialvar VAR_RESULT, HoennSandChimePlace
+	goto_if_eq VAR_RESULT, HOENN_CHIME_ELSEWHERE, HoennSeek_EventScript_ChimeFades
+	goto_if_ne VAR_MIRAGE_TOWER_STATE, 0, HoennSeek_EventScript_ChimeTowerGone
+	goto_if_set FLAG_HOENN_DAILY_MIRAGE_TOWER, HoennSeek_EventScript_ChimeTowerStands
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_EVENING, HoennSeek_EventScript_ChimeNotSunset
+	goto_if_eq VAR_RESULT, HOENN_CHIME_ON_TOWER, HoennSeek_EventScript_ChimeStepBack
+	msgbox HoennSeek_Text_ChimeDunesAnswer, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_HOENN_DAILY_MIRAGE_TOWER
+	setflag FLAG_HOENN_MIRAGE_RAISED
+	@ Reload Route 111 where you stand: its OnTransition now picks the
+	@ tower layout (SetMirageTowerVisibility) and starts the shimmer.
+	getplayerxy VAR_0x8004, VAR_0x8005
+	fadescreen FADE_TO_WHITE
+	warpsilent MAP_ROUTE111, VAR_0x8004, VAR_0x8005
+	waitstate
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimeFades:
+	msgbox HoennSeek_Text_ChimeFades, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimeTowerGone:
+	msgbox HoennSeek_Text_ChimeTowerGone, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimeTowerStands:
+	msgbox HoennSeek_Text_ChimeTowerStands, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimeNotSunset:
+	msgbox HoennSeek_Text_ChimeNotSunset, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_ChimeStepBack:
+	msgbox HoennSeek_Text_ChimeStepBack, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ ---- Mirage Tower 4F -------------------------------------------------------
+HoennSeek_EventScript_MirageTopOnTransition:
+	setflag FLAG_HOENN_HIDE_MIRAGE_FLYGON
+	goto_if_set FLAG_HOENN_CAUGHT_FLYGON, HoennSeek_EventScript_MirageTopEnd
+	clearflag FLAG_HOENN_HIDE_MIRAGE_FLYGON
+HoennSeek_EventScript_MirageTopEnd:
+	end
+
+HoennSeek_EventScript_MirageFlygon::
+	lock
+	faceplayer
+	playmoncry SPECIES_FLYGON, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_FlygonSings, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setvar VAR_0x8004, SPECIES_FLYGON
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_BOOMBURST
+	setvar VAR_0x8006, FALSE
+	setvar VAR_0x8007, ITEM_SOFT_SAND
+	special HoennTuneWildMon
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_FlygonCaught
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, HoennSeek_EventScript_FlygonFades
+	msgbox HoennSeek_Text_FlygonStays, MSGBOX_DEFAULT
+	release
+	end
+
+@ Knocked out: it fades like a mirage; it's back the next time you come up.
+HoennSeek_EventScript_FlygonFades:
+	removeobject LOCALID_HOENN_MIRAGE_FLYGON
+	setflag FLAG_HOENN_HIDE_MIRAGE_FLYGON
+	msgbox HoennSeek_Text_FlygonFades, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_FlygonCaught:
+	removeobject LOCALID_HOENN_MIRAGE_FLYGON
+	setflag FLAG_HOENN_HIDE_MIRAGE_FLYGON
+	setflag FLAG_HOENN_CAUGHT_FLYGON
+	msgbox HoennSeek_Text_FlygonCaught, MSGBOX_DEFAULT
+	release
+	end
+
+@ The fossils run Emerald's scripts once the Flygon is caught (taking one
+@ brings the tower down for good). Until then, it stands guard.
+HoennSeek_EventScript_MirageRootFossil::
+	goto_if_set FLAG_HOENN_CAUGHT_FLYGON, MirageTower_4F_EventScript_RootFossil
+	goto HoennSeek_EventScript_MirageFossilGuarded
+
+HoennSeek_EventScript_MirageClawFossil::
+	goto_if_set FLAG_HOENN_CAUGHT_FLYGON, MirageTower_4F_EventScript_ClawFossil
+HoennSeek_EventScript_MirageFossilGuarded:
+	lock
+	msgbox HoennSeek_Text_FossilGuarded, MSGBOX_DEFAULT
+	release
+	end
+
+@ ---- Call -------------------------------------------------------------------
+HoennSeek_EventScript_CallFlygon::
+	setflag FLAG_HOENN_CALL_FLYGON
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallFlygon
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Texts -----------------------------------------------------------------
+HoennSeek_Text_Route113VibravaHums:
+	.string "It's the VIBRAVA from the DESERT\n"
+	.string "UNDERPASS! It's humming softly.$"
+
+HoennSeek_Text_Route113SandAnswers:
+	.string "The SINGING SAND in your BAG\n"
+	.string "hums back, in the same tune!\p"
+	.string "The VIBRAVA looks up at the\n"
+	.string "GLASS WORKSHOP's chimney…$"
+
+HoennSeek_Text_Route113VibravaGone:
+	.string "The VIBRAVA flew off over the\n"
+	.string "roof of the GLASS WORKSHOP.$"
+
+HoennSeek_Text_GlassSandTooFine:
+	.string "What's that humming? Sand?\n"
+	.string "Let me see… My, it sings!\p"
+	.string "Glass from sand like this would\n"
+	.string "ring like a bell. But it's far\l"
+	.string "too fine to melt on its own.\p"
+	.string "A VIBRAVA's wingbeat packs fine\n"
+	.string "sand together, they say.\p"
+	.string "They come by in the evenings to\n"
+	.string "hum in the falling ash. If one\l"
+	.string "answers your sand, come back!$"
+
+HoennSeek_Text_GlassChimeOffer:
+	.string "A VIBRAVA was humming outside\n"
+	.string "my door at sunset! Did you see?\p"
+	.string "Its wings packed your sand just\n"
+	.string "right. Leave it to me!$"
+
+HoennSeek_Text_GlassChimeGiven:
+	.string "A SAND CHIME! Listen to it\n"
+	.string "ring. It's the desert's own song.\p"
+	.string "The old folks at LAVARIDGE's\n"
+	.string "hot springs know desert songs.\p"
+	.string "Ask them what a chime like that\n"
+	.string "is for!$"
+
+HoennSeek_Text_ChimeRings:
+	.string "{PLAYER} rang the SAND CHIME.\n"
+	.string "A clear, humming note rings out.$"
+
+HoennSeek_Text_ChimeFades:
+	.string "The note fades away. Nothing\n"
+	.string "seems to answer it here.$"
+
+HoennSeek_Text_ChimeTowerGone:
+	.string "The sand hums back faintly, but\n"
+	.string "nothing rises from the dunes\l"
+	.string "any more.$"
+
+HoennSeek_Text_ChimeTowerStands:
+	.string "The MIRAGE TOWER shimmers in\n"
+	.string "the haze, humming along.$"
+
+HoennSeek_Text_ChimeNotSunset:
+	.string "The sand stirs, then settles.\p"
+	.string "It seems to be waiting for the\n"
+	.string "sun to set.$"
+
+HoennSeek_Text_ChimeStepBack:
+	.string "The sand shifts under your feet!\p"
+	.string "Something wants to rise right\n"
+	.string "here. Better step back first.$"
+
+HoennSeek_Text_ChimeDunesAnswer:
+	.string "The dunes answer with a deep hum!\p"
+	.string "Something is rising out of the\n"
+	.string "haze of the sandstorm…$"
+
+HoennSeek_Text_FlygonSings:
+	.string "A FLYGON! Its wings hum the same\n"
+	.string "song as the SAND CHIME!$"
+
+HoennSeek_Text_FlygonStays:
+	.string "The FLYGON settled back in front\n"
+	.string "of the FOSSILS, still humming.$"
+
+HoennSeek_Text_FlygonFades:
+	.string "The FLYGON flickered like a\n"
+	.string "mirage and was gone.\p"
+	.string "It might come back if you climb\n"
+	.string "up here again.$"
+
+HoennSeek_Text_FlygonCaught:
+	.string "The hum around the tower has\n"
+	.string "gone quiet…$"
+
+HoennSeek_Text_FossilGuarded:
+	.string "The FLYGON hums a warning. It's\n"
+	.string "guarding this FOSSIL.$"
+
+HoennSeek_Text_CallFlygon:
+	.string "{PLAYER}? It's MAY!\p"
+	.string "One of PROF. BIRCH's aides was\n"
+	.string "charting the ROUTE 111 desert.\p"
+	.string "At sunset, a tower rose right\n"
+	.string "out of the sandstorm, she says!\p"
+	.string "She saw someone climb it, and\n"
+	.string "come down with a FLYGON.\p"
+	.string "The PROFESSOR told me it had to\n"
+	.string "be you. A mirage tower! I'm so\l"
+	.string "jealous! Bye!$"
+
+@ =============================================================================
+@ Part 25a: Night dive A (Underwater Route 124)
+@ At night a CHINCHOU's light waits in the north-west basin. src/hoenn_lights.c
+@ moves it from stop to stop as you swim close (the route is generated from
+@ data/hoenn/light_paths.json); stray too far and the lights scatter back to the
+@ start. The light leads to the bottom of the south-east basin, slips into a
+@ crack there, and the crack stays open from then on (ON_LOAD redraws it). Going
+@ down needs a CHINCHOU or LANTURN in the party to light the way. The trench
+@ below (Route124_Trench_hoenn) is filled in by part 25b.
+@ =============================================================================
+HoennSeek_EventScript_UW124OnLoad::
+	call_if_set FLAG_HOENN_TRENCH_FOUND, HoennSeek_EventScript_OpenTrenchCrack
+	end
+
+@ The basin's bottom edge (44-45, 39) becomes Underwater Route 134's opening
+@ pieces, with its light shimmer on the floor above (44, 38), the trigger tile.
+HoennSeek_EventScript_OpenTrenchCrack::
+	setmetatile 44, 39, 0x22C, TRUE
+	setmetatile 45, 39, 0x22D, TRUE
+	setmetatile 44, 38, 0x224, FALSE
+	return
+
+HoennSeek_EventScript_UW124OnTransition::
+	setflag FLAG_HOENN_HIDE_DIVE_LIGHT
+	goto_if_set FLAG_HOENN_TRENCH_FOUND, HoennSeek_EventScript_ArmTrenchCrack
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_HiddenEnd25a
+	clearflag FLAG_HOENN_HIDE_DIVE_LIGHT
+	end
+
+HoennSeek_EventScript_ArmTrenchCrack:
+	setvar VAR_TEMP_3, 1
+	end
+
+HoennSeek_EventScript_HiddenEnd25a:
+	end
+
+HoennSeek_EventScript_DiveLight::
+	lock
+	playmoncry SPECIES_CHINCHOU, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_DiveLightBlinks, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+@ Started by src/hoenn_lights.c for any light path (VAR_0x8005 = the light).
+HoennSeek_EventScript_LightsScatter::
+	lockall
+	playse SE_M_DETECT
+	msgbox HoennSeek_Text_LightsScatter, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ The light's last stop is (44, 37), just above the crack.
+HoennSeek_EventScript_DiveLightsEnd::
+	lockall
+	playmoncry SPECIES_CHINCHOU, CRY_MODE_NORMAL
+	applymovement LOCALID_HOENN_DIVE_LIGHT, HoennSeek_Movement_LightIntoCrack
+	waitmovement 0
+	waitmoncry
+	msgbox HoennSeek_Text_LightSlipsDown, MSGBOX_DEFAULT
+	closemessage
+	removeobject LOCALID_HOENN_DIVE_LIGHT
+	setflag FLAG_HOENN_HIDE_DIVE_LIGHT
+	setflag FLAG_HOENN_TRENCH_FOUND
+	call HoennSeek_EventScript_OpenTrenchCrack
+	special DrawWholeMapView
+	playse SE_M_BUBBLE
+	waitse
+	msgbox HoennSeek_Text_CrackGlows, MSGBOX_DEFAULT
+	setvar VAR_TEMP_3, 1
+	releaseall
+	end
+
+HoennSeek_Movement_LightIntoCrack:
+	walk_slow_down
+	step_end
+
+@ Coord trigger on (44, 38) once the crack is open (VAR_TEMP_3 = 1).
+HoennSeek_EventScript_TrenchCrack::
+	lockall
+	checkspecies SPECIES_LANTURN
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_TrenchCrackLit
+	checkspecies SPECIES_CHINCHOU
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_TrenchCrackLit
+	msgbox HoennSeek_Text_CrackTooDark, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	releaseall
+	end
+
+HoennSeek_EventScript_TrenchCrackLit:
+	msgbox HoennSeek_Text_CrackLit, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_TrenchCrackStay
+	closemessage
+	playse SE_M_DIVE
+	setflag FLAG_HOENN_TRENCH_ENTERED
+	warp MAP_ROUTE124_TRENCH_HOENN, 13, 18
+	waitstate
+	releaseall
+	end
+
+HoennSeek_EventScript_TrenchCrackStay:
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	releaseall
+	end
+
+@ Coord trigger on the trench's way out (13, 19).
+HoennSeek_EventScript_TrenchExit::
+	lockall
+	playse SE_M_DIVE
+	warp MAP_UNDERWATER_ROUTE124, 44, 37
+	waitstate
+	releaseall
+	end
+
+@ ---- Call -------------------------------------------------------------------
+HoennSeek_EventScript_CallTrench::
+	setflag FLAG_HOENN_CALL_TRENCH
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallTrench
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Texts -----------------------------------------------------------------
+HoennSeek_Text_DiveLightBlinks:
+	.string "The CHINCHOU's lights blink on and\n"
+	.string "off, on and off…\p"
+	.string "It seems to want you to follow it.$"
+
+HoennSeek_Text_LightsScatter:
+	.string "The light you were following\n"
+	.string "flickered out…\p"
+	.string "Far back the way you came, a faint\n"
+	.string "glow lights up again.$"
+
+HoennSeek_Text_LightSlipsDown:
+	.string "The CHINCHOU slipped down into a\n"
+	.string "crack in the seabed!$"
+
+HoennSeek_Text_CrackGlows:
+	.string "Light glows up out of the crack.\p"
+	.string "There's a deep trench down there!$"
+
+HoennSeek_Text_CrackTooDark:
+	.string "The crack drops away into water\n"
+	.string "as black as ink.\p"
+	.string "A POKéMON that glows might light\n"
+	.string "the way down…$"
+
+HoennSeek_Text_CrackLit:
+	.string "Your glowing POKéMON lights up the\n"
+	.string "crack. It's wide enough to swim\l"
+	.string "down!\p"
+	.string "Dive down into the trench?$"
+
+HoennSeek_Text_CallTrench:
+	.string "Hey, {PLAYER}! It's BRENDAN.\p"
+	.string "A diver from MOSSDEEP dropped by\n"
+	.string "the lab to see PROF. BIRCH.\p"
+	.string "She was night diving off ROUTE 124\n"
+	.string "and saw a trainer follow CHINCHOU\l"
+	.string "lights right down into the seabed!\p"
+	.string "Dad says nobody but you would\n"
+	.string "try that. What's down there?\p"
+	.string "Tell me next time, okay? Later!$"
+
+@ =============================================================================
+@ Part 25b: Night dive B (Route124_Trench_hoenn)
+@ A guardian waits at the bottom of the trench (17,14), a different one by
+@ weekday: HUNTAIL Mon/Wed/Fri, GOREBYSS Tue/Thu/Sat, RELICANTH Sun. Each is a
+@ scaled wild battle with its hidden ability and perfect IVs; run and it
+@ stays, knock it out and it's gone until its next day. A pearl bed of three
+@ CLAMPERL in the west basin gives a pearl each, once a week. Once all three
+@ guardians are caught, the mound's old cavern door (13-15, 8-9) opens and
+@ leads into its hollow (12-15, 1-3), where the DEEP SEA TOOTH and DEEP SEA
+@ SCALE lie; the hollow's glimmer (14,3) takes you back out.
+@ =============================================================================
+HoennSeek_EventScript_TrenchOnLoad::
+	call_if_set FLAG_HOENN_TRENCH_DOOR_OPEN, HoennSeek_EventScript_OpenTrenchDoor
+	end
+
+@ The door is Underwater Route 128's Seafloor Cavern door (part 25a's
+@ composed map filled it in), and the hollow gets its glimmer back.
+HoennSeek_EventScript_OpenTrenchDoor::
+	setmetatile 13, 8, 0x265, TRUE
+	setmetatile 14, 8, 0x266, TRUE
+	setmetatile 15, 8, 0x267, TRUE
+	setmetatile 13, 9, 0x26D, TRUE
+	setmetatile 14, 9, 0x26E, FALSE
+	setmetatile 15, 9, 0x26F, TRUE
+	setmetatile 14, 3, 0x2B8, FALSE
+	return
+
+HoennSeek_EventScript_TrenchOnTransition::
+	setflag FLAG_HOENN_HIDE_HUNTAIL
+	setflag FLAG_HOENN_HIDE_GOREBYSS
+	setflag FLAG_HOENN_HIDE_RELICANTH
+	call_if_set FLAG_HOENN_TRENCH_DOOR_OPEN, HoennSeek_EventScript_ArmTrenchDoor
+	goto_if_set FLAG_HOENN_DAILY_TRENCH_GUARDIAN, HoennSeek_EventScript_HiddenEnd25a
+	specialvar VAR_RESULT, GetDayOfWeek
+	switch VAR_RESULT
+	case HOENN_SUNDAY, HoennSeek_EventScript_TrenchShowRelicanth
+	case HOENN_TUESDAY, HoennSeek_EventScript_TrenchShowGorebyss
+	case HOENN_THURSDAY, HoennSeek_EventScript_TrenchShowGorebyss
+	case HOENN_SATURDAY, HoennSeek_EventScript_TrenchShowGorebyss
+	goto_if_set FLAG_HOENN_CAUGHT_HUNTAIL, HoennSeek_EventScript_HiddenEnd25a
+	clearflag FLAG_HOENN_HIDE_HUNTAIL
+	end
+
+HoennSeek_EventScript_TrenchShowGorebyss:
+	goto_if_set FLAG_HOENN_CAUGHT_GOREBYSS, HoennSeek_EventScript_HiddenEnd25a
+	clearflag FLAG_HOENN_HIDE_GOREBYSS
+	end
+
+HoennSeek_EventScript_TrenchShowRelicanth:
+	goto_if_set FLAG_HOENN_CAUGHT_RELICANTH, HoennSeek_EventScript_HiddenEnd25a
+	clearflag FLAG_HOENN_HIDE_RELICANTH
+	end
+
+HoennSeek_EventScript_ArmTrenchDoor:
+	setvar VAR_TEMP_2, 1
+	return
+
+@ ---- Guardians -------------------------------------------------------------
+@ Flag commands take no vars, so each guardian has its own tail.
+HoennSeek_EventScript_TrenchHuntail::
+	lock
+	setvar VAR_0x8004, SPECIES_HUNTAIL
+	setvar VAR_0x8005, MOVE_SUCKER_PUNCH
+	setvar VAR_0x8007, ITEM_BIG_PEARL
+	call HoennSeek_EventScript_TrenchGuardianBattle
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_TrenchGuardianEnd
+	removeobject LOCALID_HOENN_TRENCH_HUNTAIL
+	setflag FLAG_HOENN_HIDE_HUNTAIL
+	goto_if_ne VAR_0x8000, B_OUTCOME_CAUGHT, HoennSeek_EventScript_TrenchGuardianSinks
+	setflag FLAG_HOENN_CAUGHT_HUNTAIL
+	goto HoennSeek_EventScript_TrenchGuardianCaught
+
+HoennSeek_EventScript_TrenchGorebyss::
+	lock
+	setvar VAR_0x8004, SPECIES_GOREBYSS
+	setvar VAR_0x8005, MOVE_SHELL_SMASH
+	setvar VAR_0x8007, ITEM_HEART_SCALE
+	call HoennSeek_EventScript_TrenchGuardianBattle
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_TrenchGuardianEnd
+	removeobject LOCALID_HOENN_TRENCH_GOREBYSS
+	setflag FLAG_HOENN_HIDE_GOREBYSS
+	goto_if_ne VAR_0x8000, B_OUTCOME_CAUGHT, HoennSeek_EventScript_TrenchGuardianSinks
+	setflag FLAG_HOENN_CAUGHT_GOREBYSS
+	goto HoennSeek_EventScript_TrenchGuardianCaught
+
+HoennSeek_EventScript_TrenchRelicanth::
+	lock
+	setvar VAR_0x8004, SPECIES_RELICANTH
+	setvar VAR_0x8005, MOVE_HEAD_SMASH
+	setvar VAR_0x8007, ITEM_STAR_PIECE
+	call HoennSeek_EventScript_TrenchGuardianBattle
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_TrenchGuardianEnd
+	removeobject LOCALID_HOENN_TRENCH_RELICANTH
+	setflag FLAG_HOENN_HIDE_RELICANTH
+	goto_if_ne VAR_0x8000, B_OUTCOME_CAUGHT, HoennSeek_EventScript_TrenchGuardianSinks
+	setflag FLAG_HOENN_CAUGHT_RELICANTH
+	goto HoennSeek_EventScript_TrenchGuardianCaught
+
+@ VAR_0x8004 species, 0x8005 its move, 0x8007 its held item (always set: a
+@ wild HUNTAIL/GOREBYSS with no item can roll the DEEP SEA TOOTH/SCALE, the
+@ hollow's reward, at the start of the battle). Returns VAR_RESULT FALSE if the player
+@ ran (it stays), else TRUE with the battle outcome in VAR_0x8000.
+HoennSeek_EventScript_TrenchGuardianBattle:
+	playmoncry VAR_0x8004, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_TrenchGuardian, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setflag FLAG_HOENN_TRENCH_GUARDIAN_MET
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8006, TRUE
+	setvar VAR_0x8008, 0
+	setvar VAR_0x8009, HOENN_TUNE_HIDDEN_ABILITY
+	special HoennTuneWildMonSlot
+	dowildbattle
+	specialvar VAR_0x8000, GetBattleOutcome
+	setvar VAR_RESULT, FALSE
+	goto_if_eq VAR_0x8000, B_OUTCOME_RAN, HoennSeek_EventScript_HiddenReturn
+	goto_if_eq VAR_0x8000, B_OUTCOME_PLAYER_TELEPORTED, HoennSeek_EventScript_HiddenReturn
+	setflag FLAG_HOENN_DAILY_TRENCH_GUARDIAN
+	setvar VAR_RESULT, TRUE
+	return
+
+HoennSeek_EventScript_TrenchGuardianSinks:
+	msgbox HoennSeek_Text_TrenchGuardianSinks, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_TrenchGuardianCaught:
+	goto_if_unset FLAG_HOENN_CAUGHT_HUNTAIL, HoennSeek_EventScript_TrenchGuardianEnd
+	goto_if_unset FLAG_HOENN_CAUGHT_GOREBYSS, HoennSeek_EventScript_TrenchGuardianEnd
+	goto_if_unset FLAG_HOENN_CAUGHT_RELICANTH, HoennSeek_EventScript_TrenchGuardianEnd
+	@ The last of the three: the mound's door opens.
+	playse SE_M_EARTHQUAKE
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 8  @ number of shakes
+	setvar VAR_0x8007, 5  @ shake delay
+	special ShakeCamera
+	waitstate
+	setflag FLAG_HOENN_TRENCH_DOOR_OPEN
+	call HoennSeek_EventScript_OpenTrenchDoor
+	special DrawWholeMapView
+	setvar VAR_TEMP_2, 1
+	msgbox HoennSeek_Text_TrenchDoorOpens, MSGBOX_DEFAULT
+HoennSeek_EventScript_TrenchGuardianEnd:
+	release
+	end
+
+@ ---- The door and the hollow -------------------------------------------------
+HoennSeek_EventScript_TrenchDoor::
+	lockall
+	playse SE_M_DIVE
+	warp MAP_ROUTE124_TRENCH_HOENN, 13, 2
+	waitstate
+	releaseall
+	end
+
+HoennSeek_EventScript_TrenchHollowExit::
+	lockall
+	playse SE_M_DIVE
+	warp MAP_ROUTE124_TRENCH_HOENN, 14, 10
+	waitstate
+	releaseall
+	end
+
+@ ---- Pearl bed ----------------------------------------------------------------
+HoennSeek_EventScript_PearlBed1::
+	lock
+	playmoncry SPECIES_CLAMPERL, CRY_MODE_NORMAL
+	goto_if_set FLAG_HOENN_WEEKLY_PEARL_1, HoennSeek_EventScript_PearlBedShut
+	call HoennSeek_EventScript_PearlBedOpens
+	giveitem ITEM_BIG_PEARL
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_PearlBedFull
+	setflag FLAG_HOENN_WEEKLY_PEARL_1
+	release
+	end
+
+HoennSeek_EventScript_PearlBed2::
+	lock
+	playmoncry SPECIES_CLAMPERL, CRY_MODE_NORMAL
+	goto_if_set FLAG_HOENN_WEEKLY_PEARL_2, HoennSeek_EventScript_PearlBedShut
+	call HoennSeek_EventScript_PearlBedOpens
+	giveitem ITEM_BIG_PEARL
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_PearlBedFull
+	setflag FLAG_HOENN_WEEKLY_PEARL_2
+	release
+	end
+
+HoennSeek_EventScript_PearlBed3::
+	lock
+	playmoncry SPECIES_CLAMPERL, CRY_MODE_NORMAL
+	goto_if_set FLAG_HOENN_WEEKLY_PEARL_3, HoennSeek_EventScript_PearlBedShut
+	call HoennSeek_EventScript_PearlBedOpens
+	giveitem ITEM_PEARL_STRING
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_PearlBedFull
+	setflag FLAG_HOENN_WEEKLY_PEARL_3
+	release
+	end
+
+HoennSeek_EventScript_PearlBedOpens:
+	msgbox HoennSeek_Text_PearlBedOpens, MSGBOX_DEFAULT
+	waitmoncry
+	return
+
+HoennSeek_EventScript_PearlBedShut:
+	msgbox HoennSeek_Text_PearlBedShut, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_PearlBedFull:
+	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
+	release
+	end
+
+@ ---- Call -------------------------------------------------------------------
+HoennSeek_EventScript_CallTrenchDoor::
+	setflag FLAG_HOENN_CALL_TRENCH_DOOR
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallTrenchDoor
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Texts -----------------------------------------------------------------
+HoennSeek_Text_TrenchGuardian:
+	.string "Something huge stirs at the\n"
+	.string "bottom of the trench!$"
+
+HoennSeek_Text_TrenchGuardianSinks:
+	.string "It sank back into the dark.\p"
+	.string "Something else may be waiting\n"
+	.string "here tomorrow…$"
+
+HoennSeek_Text_TrenchDoorOpens:
+	.string "The seabed rumbled…\p"
+	.string "A dark doorway has opened in the\n"
+	.string "face of the mound!$"
+
+HoennSeek_Text_PearlBedOpens:
+	.string "The CLAMPERL opened its shell.\n"
+	.string "There's a pearl inside!$"
+
+HoennSeek_Text_PearlBedShut:
+	.string "The CLAMPERL is keeping its shell\n"
+	.string "shut tight.\p"
+	.string "A new pearl takes a week to grow.$"
+
+HoennSeek_Text_CallTrenchDoor:
+	.string "{PLAYER}! It's MAY!\p"
+	.string "That diver from MOSSDEEP came by\n"
+	.string "the lab again. She talks to PROF.\l"
+	.string "BIRCH about everything she sees!\p"
+	.string "She says the big POKéMON in the\n"
+	.string "ROUTE 124 trench are all gone,\l"
+	.string "and the seabed shook last night.\p"
+	.string "You caught all three, didn't you?\n"
+	.string "Brendan owes me a lunch. Bye!$"
+
+@ =============================================================================
+@ Part 26a: Ice chamber A (ShoalCave_LowTideIceRoom, ShoalCave_IceChamber_hoenn)
+@ At low tide a ladder hole opens in the ice room's floor (16,21), in the strip
+@ of ice in its south-east corner; at high tide sea ice plugs it. The tide is
+@ Emerald's FLAG_SYS_SHOAL_TIDE (set = high), which UpdateShoalTideFlag only
+@ changes when you walk in from Route 125, so it can't turn while you're inside.
+@ The hole leads down into the frozen chamber: a sliding-ice hall (a puzzle,
+@ 12 moves at best; every slide can get back to the ladder), and through the
+@ one gap in its ice wall (10,13-15), the inner chamber. There a GLALIE waits
+@ on the frozen pool by day (any time but night): a scaled wild battle with
+@ perfect IVs and Head Smash. Run and it stays; knock it out and it's back
+@ tomorrow; caught, it's gone. Part 26b brings the chamber's night.
+@ =============================================================================
+
+@ ---- The ice room's hole ------------------------------------------------------
+@ The layout keeps plain ice at (16,21), so the hole only exists while this
+@ draws it. The warp there (warp 1) only fires on the ladder's MB_LADDER.
+HoennSeek_EventScript_IceRoomOnLoad::
+	goto_if_set FLAG_SYS_SHOAL_TIDE, HoennSeek_EventScript_IceRoomHolePlugged
+	setmetatile 16, 21, 0x38B, FALSE
+	end
+
+HoennSeek_EventScript_IceRoomHolePlugged:
+	setmetatile 16, 21, 0x37D, TRUE
+	end
+
+@ Its sign: only the plug at high tide has something to say.
+HoennSeek_EventScript_IceRoomHole::
+	goto_if_unset FLAG_SYS_SHOAL_TIDE, HoennSeek_EventScript_IceRoomHoleEnd
+	msgbox HoennSeek_Text_IceRoomPlug, MSGBOX_SIGN
+HoennSeek_EventScript_IceRoomHoleEnd:
+	end
+
+@ ---- The chamber -------------------------------------------------------------
+HoennSeek_EventScript_IceChamberOnTransition::
+	setflag FLAG_HOENN_ICE_CHAMBER_FOUND
+	setflag FLAG_HOENN_HIDE_ICE_GLALIE
+	setflag FLAG_HOENN_HIDE_ICE_FROSLASS
+	setvar VAR_TEMP_4, 0
+	gettimeofday
+	goto_if_eq VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_IceChamberNight
+	goto_if_set FLAG_HOENN_CAUGHT_ICE_GLALIE, HoennSeek_EventScript_IceChamberEnd
+	goto_if_set FLAG_HOENN_DAILY_ICE_GLALIE, HoennSeek_EventScript_IceChamberEnd
+	clearflag FLAG_HOENN_HIDE_ICE_GLALIE
+HoennSeek_EventScript_IceChamberEnd:
+	end
+
+@ Part 26b: at night the Froslass waits in the first pillar (the object's
+@ template spot, 11,6), and the frame script shows her once on arrival.
+HoennSeek_EventScript_IceChamberNight:
+	goto_if_set FLAG_HOENN_CAUGHT_ICE_FROSLASS, HoennSeek_EventScript_IceChamberEnd
+	goto_if_set FLAG_HOENN_DAILY_ICE_FROSLASS, HoennSeek_EventScript_IceChamberEnd
+	clearflag FLAG_HOENN_HIDE_ICE_FROSLASS
+	setvar VAR_TEMP_4, 1
+	setvar VAR_TEMP_5, 1
+	end
+
+HoennSeek_EventScript_IceGlalie::
+	lock
+	playmoncry SPECIES_GLALIE, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_IceGlalie, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setflag FLAG_HOENN_ICE_GLALIE_MET
+	setvar VAR_0x8004, SPECIES_GLALIE
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_HEAD_SMASH
+	setvar VAR_0x8006, TRUE
+	setvar VAR_0x8007, ITEM_NONE
+	special HoennTuneWildMon
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, HoennSeek_EventScript_IceGlalieStays
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, HoennSeek_EventScript_IceGlalieStays
+	setflag FLAG_HOENN_DAILY_ICE_GLALIE
+	removeobject LOCALID_HOENN_ICE_GLALIE
+	setflag FLAG_HOENN_HIDE_ICE_GLALIE
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_IceGlalieCaught
+	msgbox HoennSeek_Text_IceGlalieGone, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_IceGlalieCaught:
+	setflag FLAG_HOENN_CAUGHT_ICE_GLALIE
+HoennSeek_EventScript_IceGlalieStays:
+	release
+	end
+
+@ ---- Part 26b: the Froslass's pillar chase -----------------------------------
+@ The chamber's ice rocks are its pillars. At night a FROSLASS's reflection
+@ shows in one of them (her object, standing on the rock: the rocks have no top
+@ layer, so she's drawn over them). Touch that pillar and she flickers out and
+@ into the next one, and the camera shows you where; touch any other pillar
+@ while she's in the ice and a freezing gust blows you back to the ladder,
+@ which starts the chase over. Getting to each pillar is the sliding puzzle:
+@ (6,9) and (12,9) can only be touched from the tile below them.
+@ VAR_TEMP_4: 0 no chase, 1-5 the pillar she's in, 6 she has stepped out.
+@ Pillars, in order: (11,6), (6,9), (15,4), (12,9) in the hall, then (15,20)
+@ in the inner chamber's south-east corner, where she steps out.
+HoennSeek_EventScript_IceFroslassIntro::
+	lockall
+	setvar VAR_TEMP_5, 2
+	delay 30
+	msgbox HoennSeek_Text_IceFroslassIntro, MSGBOX_DEFAULT
+	closemessage
+	@ The first pillar is at the bottom edge of the screen from the ladder,
+	@ under the message box, so the camera goes to show it.
+	setvar VAR_0x8008, 11
+	setvar VAR_0x8009, 6
+	call HoennSeek_EventScript_StarterPanTo
+	playse SE_M_HAZE
+	applymovement LOCALID_HOENN_ICE_FROSLASS, HoennSeek_Movement_IceFroslassFlicker
+	waitmovement 0
+	msgbox HoennSeek_Text_IceFroslassIntro2, MSGBOX_DEFAULT
+	closemessage
+	call HoennSeek_EventScript_StarterPanBack
+	releaseall
+	end
+
+HoennSeek_EventScript_IceFroslass::
+	lock
+	goto_if_ge VAR_TEMP_4, 5, HoennSeek_EventScript_IceFroslassStepOut
+	playse SE_M_HAZE
+	applymovement LOCALID_HOENN_ICE_FROSLASS, HoennSeek_Movement_IceFroslassFlicker
+	waitmovement 0
+	removeobject LOCALID_HOENN_ICE_FROSLASS
+	addvar VAR_TEMP_4, 1
+	call_if_eq VAR_TEMP_4, 2, HoennSeek_EventScript_IceFroslassTo2
+	call_if_eq VAR_TEMP_4, 3, HoennSeek_EventScript_IceFroslassTo3
+	call_if_eq VAR_TEMP_4, 4, HoennSeek_EventScript_IceFroslassTo4
+	call_if_eq VAR_TEMP_4, 5, HoennSeek_EventScript_IceFroslassTo5
+	msgbox HoennSeek_Text_IceFroslassSlips, MSGBOX_DEFAULT
+	closemessage
+	@ Show the pillar she went to, then come back.
+	call HoennSeek_EventScript_StarterPanTo
+	@ removeobject set her flag; clear it, or she isn't respawned once the
+	@ camera leaves her pillar and comes back.
+	clearflag FLAG_HOENN_HIDE_ICE_FROSLASS
+	addobject LOCALID_HOENN_ICE_FROSLASS
+	playse SE_M_HAZE
+	applymovement LOCALID_HOENN_ICE_FROSLASS, HoennSeek_Movement_IceFroslassFlicker
+	waitmovement 0
+	delay 30
+	call HoennSeek_EventScript_StarterPanBack
+	release
+	end
+
+@ Each sets her object's spot and the camera's target (VAR_0x8008/0x8009).
+HoennSeek_EventScript_IceFroslassTo2:
+	setobjectxyperm LOCALID_HOENN_ICE_FROSLASS, 6, 9
+	setvar VAR_0x8008, 6
+	setvar VAR_0x8009, 9
+	return
+HoennSeek_EventScript_IceFroslassTo3:
+	setobjectxyperm LOCALID_HOENN_ICE_FROSLASS, 15, 4
+	setvar VAR_0x8008, 15
+	setvar VAR_0x8009, 4
+	return
+HoennSeek_EventScript_IceFroslassTo4:
+	setobjectxyperm LOCALID_HOENN_ICE_FROSLASS, 12, 9
+	setvar VAR_0x8008, 12
+	setvar VAR_0x8009, 9
+	return
+HoennSeek_EventScript_IceFroslassTo5:
+	setobjectxyperm LOCALID_HOENN_ICE_FROSLASS, 15, 20
+	setvar VAR_0x8008, 15
+	setvar VAR_0x8009, 20
+	return
+
+@ The last pillar: she steps out and fights. If you ran, she's still there
+@ (stage 6) and talking to her fights again.
+HoennSeek_EventScript_IceFroslassStepOut:
+	goto_if_eq VAR_TEMP_4, 6, HoennSeek_EventScript_IceFroslassBattle
+	setvar VAR_TEMP_4, 6
+	setflag FLAG_HOENN_ICE_FROSLASS_MET
+	playmoncry SPECIES_FROSLASS, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_IceFroslassOut, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+HoennSeek_EventScript_IceFroslassBattle:
+	setvar VAR_0x8004, SPECIES_FROSLASS
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_SPIRIT_SHACKLE
+	setvar VAR_0x8006, TRUE
+	setvar VAR_0x8007, ITEM_NONE
+	special HoennTuneWildMon
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, HoennSeek_EventScript_IceFroslassStays
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, HoennSeek_EventScript_IceFroslassStays
+	setflag FLAG_HOENN_DAILY_ICE_FROSLASS
+	removeobject LOCALID_HOENN_ICE_FROSLASS
+	setflag FLAG_HOENN_HIDE_ICE_FROSLASS
+	setvar VAR_TEMP_4, 0
+	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_IceFroslassCaught
+	call_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_IceFroslassGone
+	goto_if_set FLAG_HOENN_GOT_FROST_FEATHER, HoennSeek_EventScript_IceFroslassStays
+	@ Behind her, the pillar's ice holds Articuno's feather.
+	msgbox HoennSeek_Text_IceFeatherGlint, MSGBOX_DEFAULT
+	giveitem ITEM_FROST_FEATHER
+	setflag FLAG_HOENN_GOT_FROST_FEATHER
+	msgbox HoennSeek_Text_IceFeatherGot, MSGBOX_DEFAULT
+HoennSeek_EventScript_IceFroslassStays:
+	release
+	end
+
+HoennSeek_EventScript_IceFroslassCaught:
+	setflag FLAG_HOENN_CAUGHT_ICE_FROSLASS
+	return
+
+HoennSeek_EventScript_IceFroslassGone:
+	msgbox HoennSeek_Text_IceFroslassGone, MSGBOX_DEFAULT
+	return
+
+@ Every ice rock in the chamber (bg events). While she's in the ice, the
+@ wrong one blows you back to the ladder; the right one is her object, which
+@ the game finds first.
+HoennSeek_EventScript_IcePillar::
+	goto_if_eq VAR_TEMP_4, 0, HoennSeek_EventScript_IcePillarEnd
+	goto_if_eq VAR_TEMP_4, 6, HoennSeek_EventScript_IcePillarEnd
+	lockall
+	playse SE_M_ICY_WIND
+	msgbox HoennSeek_Text_IceGust, MSGBOX_DEFAULT
+	closemessage
+	warpwhitefade MAP_SHOAL_CAVE_ICE_CHAMBER_HOENN, 0
+	waitstate
+	releaseall
+HoennSeek_EventScript_IcePillarEnd:
+	end
+
+HoennSeek_Movement_IceFroslassFlicker:
+	set_invisible
+	delay_4
+	set_visible
+	delay_4
+	set_invisible
+	delay_4
+	set_visible
+	delay_8
+	step_end
+
+@ ---- Call -------------------------------------------------------------------
+HoennSeek_EventScript_CallIceGlalie::
+	setflag FLAG_HOENN_CALL_ICE_GLALIE
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallIceGlalie
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_EventScript_CallFrostFeather::
+	setflag FLAG_HOENN_CALL_FROST_FEATHER
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallFrostFeather
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Texts -----------------------------------------------------------------
+HoennSeek_Text_IceRoomPlug:
+	.string "A lump of sea ice plugs a hole in\n"
+	.string "the floor.\p"
+	.string "Seawater sloshes somewhere\n"
+	.string "underneath it.\p"
+	.string "Maybe it drains away when the\n"
+	.string "tide goes out…$"
+
+HoennSeek_Text_IceGlalie:
+	.string "A GLALIE sits frozen in the ice.\n"
+	.string "Its eyes snap open!$"
+
+HoennSeek_Text_IceGlalieGone:
+	.string "The GLALIE rolled away into the\n"
+	.string "ice and was gone.\p"
+	.string "It might be back tomorrow…$"
+
+HoennSeek_Text_CallIceGlalie:
+	.string "{PLAYER}! It's BRENDAN.\p"
+	.string "The old man who makes SHELL BELLS\n"
+	.string "in SHOAL CAVE came by the lab.\l"
+	.string "He trades shells with the PROF.\p"
+	.string "He saw you climb down through the\n"
+	.string "ice at low tide, then heard a\l"
+	.string "GLALIE roar from under the floor!\p"
+	.string "He says it's sat down there since\n"
+	.string "before he was born. Bet it hit\l"
+	.string "hard! Talk later!$"
+
+HoennSeek_Text_IceFroslassIntro:
+	.string "A chill runs down your back.\n"
+	.string "Something moved in the ice…$"
+
+HoennSeek_Text_IceFroslassIntro2:
+	.string "A FROSLASS's pale face looks out\n"
+	.string "from inside a pillar of ice!$"
+
+HoennSeek_Text_IceFroslassSlips:
+	.string "The FROSLASS's reflection slipped\n"
+	.string "away through the ice!$"
+
+HoennSeek_Text_IceGust:
+	.string "Wrong pillar! A freezing gust\n"
+	.string "howls out of the ice!$"
+
+HoennSeek_Text_IceFroslassOut:
+	.string "The FROSLASS stepped out of\n"
+	.string "the ice!$"
+
+HoennSeek_Text_IceFroslassGone:
+	.string "The FROSLASS melted back into the\n"
+	.string "ice and was gone.\p"
+	.string "She might walk the ice again\n"
+	.string "tomorrow night…$"
+
+HoennSeek_Text_IceFeatherGlint:
+	.string "Something glints deep in the\n"
+	.string "pillar where she stood…\p"
+	.string "A long blue feather, frozen into\n"
+	.string "the ice! It slides out cleanly.$"
+
+HoennSeek_Text_IceFeatherGot:
+	.string "It's as cold as the ice it was in,\n"
+	.string "but it doesn't melt at all.$"
+
+HoennSeek_Text_CallFrostFeather:
+	.string "Hi, {PLAYER}! It's MAY.\p"
+	.string "The SHELL BELL man from SHOAL\n"
+	.string "CAVE was at the lab again.\p"
+	.string "He says you went down to the ice\n"
+	.string "at night and came back with a\l"
+	.string "blue feather that won't melt!\p"
+	.string "The PROF thinks it's ARTICUNO's.\n"
+	.string "It flew over our sea years ago.\p"
+	.string "BILL in CERULEAN collects stories\n"
+	.string "about the legendary birds.\l"
+	.string "He'd love to hear about this!\p"
+	.string "Keep it safe, okay? Bye!$"

@@ -11,12 +11,15 @@
 // - specialvar VAR_RESULT, HoennOrchardBerry: the orchard tree's daily berry.
 // - HoennHiddenDueCall(): the PokéGear event calls these events add. It runs from
 //   HoennSpeciesDueCall() (src/hoenn_species.c), after the species calls.
+// - HoennMirageTowerRung(): whether the Sand Chime raised the Mirage Tower today
+//   (part 24b; hook in SetMirageTowerVisibility).
 #include "global.h"
 #include "event_data.h"
 #include "move.h"
 #include "ow_synchronize.h"
 #include "pokemon.h"
 #include "random.h"
+#include "constants/map_groups.h"
 #include "script_pokemon_util.h"
 #include "hoenn.h"
 
@@ -169,6 +172,16 @@ u16 HoennOrchardBerry(void)
 //  - Brendan, the Singing Sand: the Fossil Maniac sends Birch every fossil he
 //    digs up; he heard the Vibrava humming in the Desert Underpass, then a
 //    battle, and phoned Birch about it.
+// Part 24b's:
+//  - May, the Flygon: one of Birch's aides charting the desert saw a tower rise
+//    out of the sand at sunset and someone climb it; May heard it from Birch.
+// (Parts 25a/25b's calls are explained by their texts in hoenn_hidden.inc.)
+// Part 26a's:
+//  - Brendan, the ice chamber's Glalie: the Shell Bell maker in Shoal Cave
+//    trades shells with Birch; he saw you climb down through the ice and heard
+//    the Glalie roar under the floor.
+//  - May, Articuno's feather (26b): the same Shell Bell maker brought Birch
+//    the news; May knows Bill collects stories about the legendary birds.
 u16 HoennHiddenDueCall(void)
 {
     if (FlagGet(FLAG_HOENN_MUNCHLAX_DONE) && !FlagGet(FLAG_HOENN_CALL_MUNCHLAX))
@@ -195,7 +208,45 @@ u16 HoennHiddenDueCall(void)
         return HOENN_CALL_METAGROSS;
     if (FlagGet(FLAG_HOENN_GOT_SINGING_SAND) && !FlagGet(FLAG_HOENN_CALL_SINGING_SAND))
         return HOENN_CALL_SINGING_SAND;
+    if (FlagGet(FLAG_HOENN_CAUGHT_FLYGON) && !FlagGet(FLAG_HOENN_CALL_FLYGON))
+        return HOENN_CALL_FLYGON;
+    if (FlagGet(FLAG_HOENN_TRENCH_ENTERED) && !FlagGet(FLAG_HOENN_CALL_TRENCH))
+        return HOENN_CALL_TRENCH;
+    if (FlagGet(FLAG_HOENN_TRENCH_DOOR_OPEN) && !FlagGet(FLAG_HOENN_CALL_TRENCH_DOOR))
+        return HOENN_CALL_TRENCH_DOOR;
+    if (FlagGet(FLAG_HOENN_ICE_GLALIE_MET) && !FlagGet(FLAG_HOENN_CALL_ICE_GLALIE))
+        return HOENN_CALL_ICE_GLALIE;
+    if (FlagGet(FLAG_HOENN_GOT_FROST_FEATHER) && !FlagGet(FLAG_HOENN_CALL_FROST_FEATHER))
+        return HOENN_CALL_FROST_FEATHER;
     return HOENN_CALL_NONE;
+}
+
+// Part 24b: the Mirage Tower stands only on a day the Sand Chime was rung on
+// Route 111 (until midnight's daily reset). Called from
+// SetMirageTowerVisibility (src/mirage_tower.c), which still hides it for good
+// once VAR_MIRAGE_TOWER_STATE is set (a fossil was taken and it crumbled).
+// Emerald's coin flip and FLAG_FORCE_MIRAGE_TOWER_VISIBLE are gone in HnS.
+bool8 HoennMirageTowerRung(void)
+{
+    return FlagGet(FLAG_HOENN_DAILY_MIRAGE_TOWER);
+}
+
+// specialvar VAR_RESULT, HoennSandChimePlace: where the Sand Chime is being
+// rung. The desert is the box Route111_EventScript_CheckSetSandstorm uses
+// (rows 34-107; north of row 73 only from x 8). The tower's own tiles
+// (18-20, 53-58) get their own answer, so it never rises on top of you.
+u16 HoennSandChimePlace(void)
+{
+    s16 x = gSaveBlock1Ptr->pos.x, y = gSaveBlock1Ptr->pos.y;
+
+    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_ROUTE111)
+     || gSaveBlock1Ptr->location.mapNum != MAP_NUM(MAP_ROUTE111))
+        return HOENN_CHIME_ELSEWHERE;
+    if (y < 34 || y > 107 || (y <= 72 && x < 8))
+        return HOENN_CHIME_ELSEWHERE;
+    if (x >= 18 && x <= 20 && y >= 53 && y <= 58)
+        return HOENN_CHIME_ON_TOWER;
+    return HOENN_CHIME_DESERT;
 }
 
 #endif // IS_HNS

@@ -33,6 +33,11 @@
 #define HOENN_CALL_CHORUS 28 // May: you watched the Altaria chorus above Meteor Falls (2.0 part 23)
 #define HOENN_CALL_BAGON 29 // Brendan: you met Bagon on its Meteor Falls ledge (2.0 part 23)
 #define HOENN_CALL_METAGROSS 30 // Brendan: you saw two Metang fuse in Steven's cave (2.0 part 23)
-#define HOENN_CALL_SINGING_SAND 31 // Brendan: you beat the Desert Underpass Vibrava (2.0 part 24a)
+#define HOENN_CALL_SINGING_SAND 31
+#define HOENN_CALL_FLYGON 32 // May: you caught the Mirage Tower Flygon (2.0 part 24b)
+#define HOENN_CALL_TRENCH 33 // Brendan: you followed the Chinchou lights into the Route 124 trench (2.0 part 25a)
+#define HOENN_CALL_TRENCH_DOOR 34 // May: the trench's three guardians are caught and its door is open (2.0 part 25b)
+#define HOENN_CALL_ICE_GLALIE 35 // Brendan: you met the Glalie in Shoal Cave's ice chamber (2.0 part 26a)
+#define HOENN_CALL_FROST_FEATHER 36 // May: you found Articuno's feather behind the Froslass (2.0 part 26b)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

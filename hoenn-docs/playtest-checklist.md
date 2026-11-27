@@ -365,3 +365,44 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Black out to the Vibrava: it's still there next time, and the hum plays again on entering the nook.
 - Brendan's call about the Singing Sand comes on its own (the emulator forced the call).
 - 24r: walking down onto the Trapinch's ring straight from the north, you step one tile left and it scurries past you, not through you. (Checked in the emulator; worth a look on a real walk-in with a follower out.)
+
+## 2.0 part 24b (Flygon desert song B)
+- Climb the Mirage Tower on the bicycle's fast gear (press R while still): cross 2F's cracked floor down the left side and 3F's, smash 3F's rocks. Falling should just drop you a floor.
+- Ring the SAND CHIME from the bag and from SELECT; ring it in the desert at 6:59 PM and check the tower is still there after 7 PM and gone after midnight.
+- The tower's shimmer while walking up to it in the sandstorm (it fades in and out, as in Emerald).
+- Catch the Flygon with an ordinary ball (the emulator used a Master Ball); check it holds SOFT SAND and knows BOOMBURST in the summary.
+- After catching it, take a fossil: the collapse scene, the fall onto Route 111, and the tower never coming back.
+- The Route 113 Vibrava is easy to reach while it wanders (it moves within 2 tiles of (40,6)).
+
+## 2.0 part 25a (Night dive A)
+- Follow the Chinchou light on Underwater Route 124 at night the way a player would (dive from Route 124's deep water, find the light, keep up with it). Is it easy to see where it went after each drift? Is 11 tiles a fair "lost" distance?
+- Wild battles in the seaweed along the way: after one, the light should be at its next stop.
+- Stand in the light's path while it drifts (it passes through you for one tile).
+- Surface (B) halfway: on the next dive the light is back at the start.
+- The crack with a Chinchou, with a Lanturn, and with neither; the trench at night and by day.
+- Brendan's call after the first trip down (it rings once you're back on the surface).
+
+## 2.0 part 25b (Night dive B)
+- Catch each guardian with an ordinary ball (the emulator used a Master Ball); check their abilities (Water Veil, Hydration, Sturdy), moves and held items in the summary.
+- Knock one out, then come back the next day it's due.
+- Watch the door open on the third catch (the camera shake) and walk in and out of the hollow a few times.
+- The Clamperl pearls across a real week change (Sunday).
+
+## 2.0 part 26a (Ice chamber A)
+- **Shoal Cave's tides now really change** (they were stuck at low tide since 1.0): walk in at high tide (9 AM–3 PM, 9 PM–3 AM) and at low tide and check the water in the entrance and inner rooms, and that the ice room is still reachable the way Emerald intends.
+- The Shoal Salt and Shells come back the day after you take them (talk to the Shell Bell man to reset them, as in Emerald). Never worked in 1.0 either.
+- Solve the sliding-ice puzzle yourself, without the solution: too easy, too hard, or about right? It can't trap you (every slide can still get back to the ladder), but say if any spot feels like one.
+- The ladder hole at low tide and the sea-ice plug at high tide (read the plug).
+- Catch the Glalie with an ordinary ball (the emulator used a Master Ball); check Head Smash and the 31s in the summary.
+- The bicycle on the chamber's ice (the map allows cycling, like Emerald's ice room).
+- Brendan's call after meeting the Glalie (rings within a few steps in a cave or outdoors).
+
+## 2.0 part 26b (Ice chamber B)
+- Do the whole Froslass chase yourself at night (7–9 PM or 3–6 AM, at low tide): is following her through the sliding hall fun, too long, or confusing? Is it clear which pillar she's in (her sprite stands on the rock)?
+- Touch a wrong pillar on purpose: the gust, the white fade, and the chase starting over at the first pillar (her intro plays again).
+- Leave by the ladder mid-chase and come back: the chase should start over.
+- Her battle: catch her with an ordinary ball; check Spirit Shackle (you can't switch out or run while it's in effect) and the 31s.
+- The FROST FEATHER in the key items pocket: name, icon and description.
+- The Dawn Stone behind the outcrop and the NeverMeltIce in the hall's top-left wall (face the wall from the corner).
+- May's call about the feather (rings within a few steps in a cave or outdoors).
+- The Shell Bell man's new lines and the Pacifidlog old man's rumor.

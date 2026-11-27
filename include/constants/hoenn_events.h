@@ -359,4 +359,100 @@
 #define FLAG_HOENN_GOT_SINGING_SAND     (HOENN_FLAGS_E_HOENN + 0x36) // beat the Vibrava (the Singing Sand)
 #define FLAG_HOENN_CALL_SINGING_SAND    (HOENN_FLAGS_E_HOENN + 0x37) // Brendan
 
+// ---- Part 24b: Flygon's desert song B (data/scripts/hoenn_hidden.inc) ----
+// Route 113, evenings: the Vibrava circles the ash outside the Glass Workshop
+// and its hum answers the Singing Sand. The glassblower then fuses the sand
+// into the SAND CHIME. Lavaridge's hot-springs granny: "ring it in the desert
+// at sunset". Ringing it on Route 111's desert in the evening raises the
+// Mirage Tower for the rest of the day (src/hoenn_hidden.c,
+// HoennMirageTowerRung; it never shows by chance any more). A Flygon waits at
+// the top, in front of Emerald's two fossils; once it's caught, taking a
+// fossil collapses the tower for good, as in Emerald.
+#define FLAG_HOENN_HIDE_ROUTE113_VIBRAVA (HOENN_FLAGS_E_HOENN + 0x38) // decided on every arrival
+#define FLAG_HOENN_ROUTE113_VIBRAVA_SEEN (HOENN_FLAGS_E_HOENN + 0x39) // the Route 113 scene played
+#define FLAG_HOENN_GOT_SAND_CHIME       (HOENN_FLAGS_E_HOENN + 0x3A)
+#define FLAG_HOENN_MIRAGE_RAISED        (HOENN_FLAGS_E_HOENN + 0x3B) // the chime raised the tower at least once
+#define FLAG_HOENN_HIDE_MIRAGE_FLYGON   (HOENN_FLAGS_E_HOENN + 0x3C) // decided on every arrival at 4F
+#define FLAG_HOENN_CAUGHT_FLYGON        (HOENN_FLAGS_E_HOENN + 0x3D)
+#define FLAG_HOENN_ITEM_MIRAGE_DRAGON_FANG (HOENN_FLAGS_E_HOENN + 0x3E) // item ball on 4F
+#define FLAG_HOENN_CALL_FLYGON          (HOENN_FLAGS_E_HOENN + 0x3F) // May
+#define FLAG_HOENN_DAILY_MIRAGE_TOWER   (HOENN_DAILY_FLAGS_START + 0x0F) // rung today: the tower stands until midnight
+// specialvar VAR_RESULT, HoennSandChimePlace
+#define HOENN_CHIME_ELSEWHERE 0
+#define HOENN_CHIME_DESERT    1
+#define HOENN_CHIME_ON_TOWER  2 // standing where the tower would rise
+
+// ---- Part 25a: Night dive A (src/hoenn_lights.c, data/scripts/hoenn_hidden.inc) ----
+// Underwater Route 124, nights: a Chinchou's light waits in the north-west
+// basin. Swim close and it drifts on to the next spot; stray too far and the
+// lights scatter back to the start (follow-the-lights, data/hoenn/light_paths.json).
+// It leads to the bottom of the south-east basin and slips into a crack, which
+// stays open from then on. Going down needs a Chinchou or Lanturn in the party
+// to light the way. The trench below is part 25b's.
+#define FLAG_HOENN_HIDE_DIVE_LIGHT      (HOENN_FLAGS_E_HOENN + 0x40) // decided on every arrival
+#define FLAG_HOENN_TRENCH_FOUND         (HOENN_FLAGS_E_HOENN + 0x41) // the lights led you to the crack
+#define FLAG_HOENN_TRENCH_ENTERED       (HOENN_FLAGS_E_HOENN + 0x42) // swam down into the trench once
+#define FLAG_HOENN_CALL_TRENCH          (HOENN_FLAGS_E_HOENN + 0x43) // Brendan
+
+// ---- Part 25b: Night dive B (data/scripts/hoenn_hidden.inc) ----
+// The trench under Underwater Route 124. A guardian waits at the bottom of the
+// trench, a different one by weekday: Huntail Mon/Wed/Fri, Gorebyss Tue/Thu/Sat,
+// Relicanth Sun (hidden ability, perfect IVs). A pearl bed of three Clamperl
+// gives two Big Pearls and a Pearl String, each once a week. Once all three
+// guardians are caught, the mound's old cavern door opens onto its hollow,
+// where the Deep Sea Tooth and Deep Sea Scale lie.
+#define FLAG_HOENN_HIDE_HUNTAIL         (HOENN_FLAGS_E_HOENN + 0x44) // decided on every arrival
+#define FLAG_HOENN_HIDE_GOREBYSS        (HOENN_FLAGS_E_HOENN + 0x45) // decided on every arrival
+#define FLAG_HOENN_HIDE_RELICANTH       (HOENN_FLAGS_E_HOENN + 0x46) // decided on every arrival
+#define FLAG_HOENN_CAUGHT_HUNTAIL       (HOENN_FLAGS_E_HOENN + 0x47)
+#define FLAG_HOENN_CAUGHT_GOREBYSS      (HOENN_FLAGS_E_HOENN + 0x48)
+#define FLAG_HOENN_CAUGHT_RELICANTH     (HOENN_FLAGS_E_HOENN + 0x49)
+#define FLAG_HOENN_TRENCH_GUARDIAN_MET  (HOENN_FLAGS_E_HOENN + 0x4A) // battled a guardian once
+#define FLAG_HOENN_TRENCH_DOOR_OPEN     (HOENN_FLAGS_E_HOENN + 0x4B) // all three caught
+#define FLAG_HOENN_ITEM_DEEP_SEA_TOOTH  (HOENN_FLAGS_E_HOENN + 0x4C) // item ball in the hollow
+#define FLAG_HOENN_ITEM_DEEP_SEA_SCALE  (HOENN_FLAGS_E_HOENN + 0x4D) // item ball in the hollow
+#define FLAG_HOENN_CALL_TRENCH_DOOR     (HOENN_FLAGS_E_HOENN + 0x4E) // May
+#define FLAG_HOENN_DAILY_TRENCH_GUARDIAN (HOENN_DAILY_FLAGS_START + 0x10) // knocked out (or caught) today
+#define FLAG_HOENN_WEEKLY_PEARL_1       (HOENN_WEEKLY_FLAGS_START + 0x06) // Big Pearl
+#define FLAG_HOENN_WEEKLY_PEARL_2       (HOENN_WEEKLY_FLAGS_START + 0x07) // Big Pearl
+#define FLAG_HOENN_WEEKLY_PEARL_3       (HOENN_WEEKLY_FLAGS_START + 0x08) // Pearl String
+
+
+// ---- Part 26a: Ice chamber A (data/scripts/hoenn_hidden.inc) ----
+// Shoal Cave's ice room, low tide: a ladder hole in the ice (16,21) leads down
+// into ShoalCave_IceChamber_hoenn. At high tide sea ice plugs the hole (the
+// tide is Emerald's FLAG_SYS_SHOAL_TIDE, set when you walk in from Route 125).
+// The chamber's hall is a sliding-ice puzzle; through the one gap in its ice
+// wall (10,13) lies the inner chamber, where a GLALIE waits by day (any time
+// but night): scaled, perfect IVs, Head Smash. Run and it stays; knock it out
+// and it's back tomorrow; caught, it's gone for good. Part 26b brings the
+// night (Froslass) and Articuno's feather.
+#define FLAG_HOENN_ICE_CHAMBER_FOUND    (HOENN_FLAGS_E_HOENN + 0x4F) // climbed down into the chamber once
+#define FLAG_HOENN_HIDE_ICE_GLALIE      (HOENN_FLAGS_E_HOENN + 0x50) // decided on every arrival
+#define FLAG_HOENN_CAUGHT_ICE_GLALIE    (HOENN_FLAGS_E_HOENN + 0x51)
+#define FLAG_HOENN_ICE_GLALIE_MET       (HOENN_FLAGS_E_HOENN + 0x52) // battled once (call)
+#define FLAG_HOENN_CALL_ICE_GLALIE      (HOENN_FLAGS_E_HOENN + 0x53) // Brendan
+#define FLAG_HOENN_DAILY_ICE_GLALIE     (HOENN_DAILY_FLAGS_START + 0x11) // knocked out (or caught) today
+
+// ---- Part 26b: Ice chamber B (data/scripts/hoenn_hidden.inc) ----
+// The chamber at night: a FROSLASS's reflection shows in one of its ice
+// pillars (the ice rocks). Touch that pillar and she slips into the next one,
+// across the hall and into the inner chamber; touch any other pillar while she
+// is in the ice and a gust blows you back up to the ladder (the chase starts
+// over). At the fifth pillar she steps out: scaled, perfect IVs, Spirit
+// Shackle. Run and she stays; knocked out, she's back tomorrow night; caught,
+// gone. After her first battle the pillar she left gives up ARTICUNO's
+// FROST FEATHER. Bonuses: a DAWN STONE behind the inner chamber's outcrop and
+// a NEVERMELTICE frozen into the hall's north-west wall (hidden).
+#define FLAG_HOENN_HIDE_ICE_FROSLASS    (HOENN_FLAGS_E_HOENN + 0x54) // decided on every arrival
+#define FLAG_HOENN_CAUGHT_ICE_FROSLASS  (HOENN_FLAGS_E_HOENN + 0x55)
+#define FLAG_HOENN_ICE_FROSLASS_MET     (HOENN_FLAGS_E_HOENN + 0x56) // she stepped out of the last pillar once
+#define FLAG_HOENN_GOT_FROST_FEATHER    (HOENN_FLAGS_E_HOENN + 0x57)
+#define FLAG_HOENN_ITEM_ICE_DAWN_STONE  (HOENN_FLAGS_E_HOENN + 0x58) // item ball behind the outcrop
+#define FLAG_HOENN_CALL_FROST_FEATHER   (HOENN_FLAGS_E_HOENN + 0x59) // May
+#define FLAG_HOENN_DAILY_ICE_FROSLASS   (HOENN_DAILY_FLAGS_START + 0x12) // knocked out (or caught) today
+#define FLAG_HOENN_HIDDEN_ICE_NEVERMELTICE (HOENN_EVENT_HIDDEN_ITEMS_START + 0x03)
+// The chase's stage lives in VAR_TEMP_4 (0 = no chase, 1-5 = the pillar she's
+// in, 6 = she stepped out), so leaving the map starts it over.
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

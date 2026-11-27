@@ -110,6 +110,21 @@
     "STORY_DESERT_ELDER": {"kind": "story", "if": [{"flag": "FLAG_HOENN_DESERT_SONG_HEARD"}, {"not_flag": "FLAG_HOENN_GOT_SINGING_SAND"}], "text": ["The desert sand drains into a hollow, you say? It did that when I was a boy, too.", "My father said it runs down under ROUTE 114, where the FOSSIL MANIAC digs. PROF. COZMO has studied it."]},
     "STORY_DESERT_COZMO": {"kind": "story", "if": [{"flag": "FLAG_HOENN_DESERT_SONG_HEARD"}, {"not_flag": "FLAG_HOENN_GOT_SINGING_SAND"}], "text": ["Desert sand that hums? It's so fine it sings when it slides. And it slides underground!", "The FOSSIL MANIAC's tunnel on ROUTE 114 runs under the desert: the DESERT UNDERPASS. Try its sandy far end."]},
     "RUMOR_DESERT_SONG": {"kind": "rumor", "rumor": "DESERT_SONG", "if": [{"not_flag": "FLAG_HOENN_GOT_SINGING_SAND"}]},
+    "STORY_SAND_CHIME": {"kind": "story", "if": [{"flag": "FLAG_HOENN_GOT_SAND_CHIME"}, {"not_flag": "FLAG_HOENN_MIRAGE_RAISED"}], "text": ["Oh my, a chime of desert sand! I haven't heard that song since I was a girl.", "Ring it in the desert at sunset, dearie, and the mirage shows the way."]},
+    "STORY_MIRAGE_FLYGON": {"kind": "story", "if": [{"flag": "FLAG_HOENN_MIRAGE_RAISED"}, {"not_flag": "FLAG_HOENN_CAUGHT_FLYGON"}], "text": ["You saw the mirage tower? In my day, a FLYGON sang at the very top.", "Its floors are cracked and crumbling. Only fast wheels get across them!"]},
+    "RUMOR_MIRAGE_TOWER": {"kind": "rumor", "rumor": "MIRAGE_TOWER", "if": [{"flag": "FLAG_HOENN_GOT_SINGING_SAND"}]},
+    "STORY_NIGHT_DIVE": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_TRENCH_FOUND"}], "text": ["I dive off ROUTE 124 every night. After dark, the deep water there glows!", "A CHINCHOU's light waits on the seabed. Swim close and it drifts away, as if it wants you to follow."]},
+    "STORY_TRENCH_DARK": {"kind": "story", "if": [{"flag": "FLAG_HOENN_TRENCH_FOUND"}, {"not_flag": "FLAG_HOENN_TRENCH_ENTERED"}], "text": ["A crack in the seabed off ROUTE 124? I've never dared swim down. It's black as ink.", "You'd want a POKéMON that glows on your team. A CHINCHOU or a LANTURN, say."]},
+    "RUMOR_NIGHT_DIVE": {"kind": "rumor", "rumor": "NIGHT_DIVE", "if": [{"not_flag": "FLAG_HOENN_TRENCH_ENTERED"}]},
+    "STORY_TRENCH_GUARDIANS": {"kind": "story", "if": [{"flag": "FLAG_HOENN_TRENCH_ENTERED"}, {"not_flag": "FLAG_HOENN_TRENCH_DOOR_OPEN"}], "text": ["You went down into that trench? Then you've met its guardians. Something different waits there each day.", "HUNTAIL on MONDAY, WEDNESDAY and FRIDAY. GOREBYSS on TUESDAY, THURSDAY and SATURDAY. And on SUNDAY, an old RELICANTH."]},
+    "STORY_TRENCH_PEARLS": {"kind": "story", "if": [{"flag": "FLAG_HOENN_TRENCH_ENTERED"}], "text": ["The CLAMPERL down in that trench grow pearls. Big ones!", "They only open up once a week, mind you."]},
+    "RUMOR_TRENCH_GUARDIANS": {"kind": "rumor", "rumor": "TRENCH_GUARDIANS", "if": [{"flag": "FLAG_HOENN_TRENCH_ENTERED"}, {"not_flag": "FLAG_HOENN_TRENCH_DOOR_OPEN"}]},
+    "STORY_ICE_HOLE": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}], "text": ["The deepest room of this cave is all ice. When the tide goes out, the seawater under it drains away and a hole opens in its floor.", "I hear something with a face as hard as ice sits down there by day. Mind your footing on the way!"]},
+    "STORY_ICE_GLALIE": {"kind": "story", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}, {"not_flag": "FLAG_HOENN_CAUGHT_ICE_GLALIE"}], "text": ["You went down through the ice? Then you've seen that GLALIE on the frozen pool.", "Its head is harder than the ice it sits in. Bring something that can take a hit!"]},
+    "RUMOR_ICE_CHAMBER": {"kind": "rumor", "rumor": "ICE_CHAMBER"},
+    "STORY_ICE_FROSLASS": {"kind": "story", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}, {"not_flag": "FLAG_HOENN_ICE_FROSLASS_MET"}], "text": ["Something cold walks the ice down there when the tide is out at night.", "You'll see her in the ice before you see her. Touch the wrong ice and she'll blow you right back!"]},
+    "STORY_ICE_FEATHER": {"kind": "story", "if": [{"flag": "FLAG_HOENN_GOT_FROST_FEATHER"}], "text": ["That feather you found… A great ice bird passed over the sea when I was a boy.", "Something like that doesn't leave its feathers lying around for nothing. Hold on to it."]},
+    "RUMOR_ICE_FROSLASS": {"kind": "rumor", "rumor": "ICE_FROSLASS", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -240,6 +255,36 @@
       "before": ["They say the ROUTE 111 desert hums like a song, but only in the evening."],
       "after": "Somebody found what was humming under the desert: a VIBRAVA!",
       "notes": "The ROUTE 111 desert hums in the evening. Follow the TRAPINCH that come up to listen."
+    },
+    "MIRAGE_TOWER": {
+      "found": [{"flag": "FLAG_HOENN_CAUGHT_FLYGON"}],
+      "before": ["They say a tower rises out of the ROUTE 111 sand at sunset, then fades away like a mirage."],
+      "after": "Somebody climbed the mirage tower in the desert and caught a FLYGON at the top!",
+      "notes": "A chime made from singing sand, rung in the ROUTE 111 desert at sunset, raises the MIRAGE TOWER. Something hums at the top."
+    },
+    "NIGHT_DIVE": {
+      "found": [{"flag": "FLAG_HOENN_TRENCH_ENTERED"}],
+      "before": ["They say lights dance on the seabed off ROUTE 124, but only at night."],
+      "after": "Somebody followed the lights off ROUTE 124 down into a hidden trench!",
+      "notes": "At night, a CHINCHOU's light on the seabed under ROUTE 124 leads somewhere. Bring a POKéMON that glows."
+    },
+    "TRENCH_GUARDIANS": {
+      "found": [{"flag": "FLAG_HOENN_TRENCH_DOOR_OPEN"}],
+      "before": ["They say three old POKéMON guard the trench under ROUTE 124, and something sleeps behind them."],
+      "after": "Somebody caught all three of the ROUTE 124 trench's guardians, and the mound down there opened up!",
+      "notes": "The ROUTE 124 trench's guardian changes with the weekday. Catch all three and the mound in the trench opens."
+    },
+    "ICE_CHAMBER": {
+      "found": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}],
+      "before": ["They say a hole opens in the ice deep inside SHOAL CAVE, but only when the tide is out."],
+      "after": "Somebody climbed down through the ice in SHOAL CAVE at low tide and found a frozen chamber!",
+      "notes": "When the tide is out, the ice room at the bottom of SHOAL CAVE has a way down. Mind the slippery floor."
+    },
+    "ICE_FROSLASS": {
+      "found": [{"flag": "FLAG_HOENN_ICE_FROSLASS_MET"}],
+      "before": ["They say a ghost walks the ice under SHOAL CAVE at night. Her face shows in the ice, but she's never there when you look!"],
+      "after": "Somebody chased that ghost through the ice under SHOAL CAVE. It was a FROSLASS!",
+      "notes": "At night, a FROSLASS's face shows in the pillars of the SHOAL CAVE ice chamber. Touch the one she's in, and only that one."
     }
   },
 
@@ -266,8 +311,8 @@
     {"map": "MauvilleCity_PokemonCenter_1F",     "script": "MauvilleCity_PokemonCenter_1F_EventScript_Woman1",     "lines": ["STORY_WATTSON", "RUMOR_CASTFORM", "RUMOR_BAGON"]},
     {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "RUMOR_MUNCHLAX", "RUMOR_SPINDA", "RUMOR_FEUD", "TIP_REMINDER_H", "TIP_SITES"]},
     {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS", "RUMOR_TROPIUS", "RUMOR_CHORUS"]},
-    {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES", "RUMOR_ABSOL"]},
-    {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP", "RUMOR_WAILORD"]},
+    {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES", "RUMOR_ABSOL", "RUMOR_TRENCH_GUARDIANS"]},
+    {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP", "RUMOR_WAILORD", "RUMOR_NIGHT_DIVE"]},
     {"map": "Route119_WeatherInstitute_1F",      "script": "Route119_WeatherInstitute_1F_EventScript_InstituteWorker1", "always": true, "lines": ["FORECAST"]},
     {"map": "CianwoodCity_hns",                  "script": "CianwoodCity_EventScript_Youngster",                   "lines": ["STORY_STRAIT_CLOSED", "STORY_STRAIT_OPEN", "STORY_STRAIT_DONE_J"]},
     {"map": "OlivineCity_hns",                   "script": "OlivineCity_EventScript_Sailor1",                      "lines": ["STORY_STRAIT_CLOSED", "STORY_STRAIT_OPEN", "STORY_STRAIT_DONE_J"]},
@@ -289,14 +334,18 @@
     {"map": "Route119",                          "script": "Route119_EventScript_Boy2",                            "lines": ["STORY_FEEBAS"]},
     {"map": "FallarborTown",                     "script": "FallarborTown_EventScript_ExpertM",                    "lines": ["STORY_FEUD"]},
     {"map": "FortreeCity",                       "script": "FortreeCity_EventScript_OldMan",                       "lines": ["STORY_ABSOL"]},
-    {"map": "PacifidlogTown",                    "script": "PacifidlogTown_EventScript_Fisherman",                 "lines": ["STORY_WAILORD"]},
+    {"map": "PacifidlogTown",                    "script": "PacifidlogTown_EventScript_Fisherman",                 "lines": ["STORY_WAILORD", "STORY_TRENCH_PEARLS"]},
     {"map": "MtPyre_Summit",                     "script": "MtPyre_Summit_EventScript_OldLady",                    "lines": ["STORY_CHIMECHO"]},
     {"map": "Route115",                          "script": "Route115_EventScript_Woman",                           "lines": ["STORY_CHORUS"]},
     {"map": "FallarborTown",                     "script": "FallarborTown_EventScript_Gentleman",                  "lines": ["STORY_DESERT_ELDER", "STORY_BAGON"]},
     {"map": "FallarborTown_CozmosHouse",         "script": "FallarborTown_CozmosHouse_EventScript_CozmosWife",     "lines": ["STORY_METAGROSS"]},
     {"map": "Route111",                          "script": "Route111_EventScript_Hiker",                           "lines": ["STORY_DESERT_SONG", "STORY_DESERT_TRACKS"]},
     {"map": "FallarborTown_CozmosHouse",         "script": "HoennSeek_EventScript_Cozmo",                          "lines": ["STORY_DESERT_COZMO"]},
-    {"map": "VerdanturfTown_PokemonCenter_1F",   "script": "VerdanturfTown_PokemonCenter_1F_EventScript_Gentleman", "lines": ["RUMOR_DESERT_SONG"]}
+    {"map": "VerdanturfTown_PokemonCenter_1F",   "script": "VerdanturfTown_PokemonCenter_1F_EventScript_Gentleman", "lines": ["RUMOR_DESERT_SONG", "RUMOR_MIRAGE_TOWER"]},
+    {"map": "LavaridgeTown",                     "script": "LavaridgeTown_EventScript_HotSpringsOldWoman1",       "lines": ["STORY_SAND_CHIME", "STORY_MIRAGE_FLYGON"]},
+    {"map": "MossdeepCity",                      "script": "MossdeepCity_EventScript_Sailor",                      "lines": ["STORY_NIGHT_DIVE", "STORY_TRENCH_DARK", "STORY_TRENCH_GUARDIANS"]},
+    {"map": "ShoalCave_LowTideEntranceRoom",     "script": "ShoalCave_LowTideEntranceRoom_EventScript_ShellBellExpert", "lines": ["STORY_ICE_HOLE", "STORY_ICE_FEATHER", "STORY_ICE_FROSLASS", "STORY_ICE_GLALIE"]},
+    {"map": "PacifidlogTown_PokemonCenter_1F",   "script": "PacifidlogTown_PokemonCenter_1F_EventScript_OldMan",  "lines": ["RUMOR_ICE_FROSLASS", "RUMOR_ICE_CHAMBER"]}
   ],
 
   "forecasts": [

@@ -750,3 +750,4 @@ gSpecials::
 	def_special HoennAbsolState
 	def_special HoennWakeAbsol
 	def_special HoennAbsolIsOut
+	def_special HoennSandChimePlace
