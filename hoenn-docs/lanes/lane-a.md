@@ -17,7 +17,7 @@ Only lane A's builder edits this file (the reviewer may add a line when it merge
 | 27b | after 27r, after 27a merges and Aidan says go | — | |
 | 28 | — | — | |
 | 31a | — | — | |
-| 32 | PR open (Nov 27), waiting for review | PR #97 | flags `HOENN_LANE_A_FLAGS_E` + 0x27–0x2B, daily + 1, call 40; lane B's 33 can start once it merges |
+| 32 | PR open (Nov 27), waiting for review; **handed to lane B's builder (Aidan, Nov 27)** | PR #97 | built by lane A. Lane B's builder now owns it: review fixes, syncs onto `hoenn`, and the follow-up for its own 33. Its IDs stay in lane A's ranges (flags `HOENN_LANE_A_FLAGS_E` + 0x27–0x2B, daily + 1, call 40) and its code in lane A's files; lane A keeps out of the branch. 34b (lane A) builds on it once it merges |
 | 34b | — | — | needs lane B's 34a |
 | 35b | — | — | |
 | 37 | — | — | needs lane B's 31b |
