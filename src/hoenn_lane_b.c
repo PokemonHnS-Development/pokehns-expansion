@@ -17,6 +17,7 @@
 #include "fieldmap.h"
 #include "hoenn.h"
 #include "hoenn_caps.h"
+#include "hoenn_time.h"
 #include "item.h"
 #include "overworld.h"
 #include "pokemon.h"
@@ -31,6 +32,8 @@
 #include "constants/map_event_ids.h"
 #include "constants/map_groups.h"
 #include "constants/rtc.h"
+#include "constants/vars.h"
+#include "constants/weather.h"
 
 #if IS_HNS
 #include "constants/hoenn_events.h"
@@ -55,6 +58,12 @@ u16 HoennLaneBDueCall(void)
     // Part 30b: Brendan, once the stampede's lead bull is yours.
     if (FlagGet(FLAG_HOENN_STAMPEDE_LEADER_CAUGHT) && !FlagGet(FLAG_HOENN_CALL_STAMPEDE))
         return HOENN_CALL_STAMPEDE;
+    // Part 36: Brendan, once Kyogre or Groudon is yours (Maxie's instruments).
+    if ((FlagGet(FLAG_HOENN_CAUGHT_KYOGRE) || FlagGet(FLAG_HOENN_CAUGHT_GROUDON)) && !FlagGet(FLAG_HOENN_CALL_TITANS))
+        return HOENN_CALL_TITANS;
+    // Part 36: May, once Rayquaza is yours (the Weather Institute's report).
+    if (FlagGet(FLAG_HOENN_CAUGHT_RAYQUAZA) && !FlagGet(FLAG_HOENN_CALL_RAYQUAZA))
+        return HOENN_CALL_RAYQUAZA;
     return HOENN_CALL_NONE; // the end of the chain
 }
 
@@ -582,5 +591,113 @@ bool16 HoennLeadBullBattleEnded(void)
     return TRUE;
 }
 
-#endif // IS_HNS
+// ---------------------------------------------------------------------------
+// Part 36: Hoenn's weather legendaries. Kyogre (the Route 19 cave), Groudon
+// (Seafoam's secret cave), Rayquaza (the Embedded Tower, Route 47) and the
+// Southern Island Lati keep HnS's maps, levels and battles; these decide when
+// they're there. Each map's OnTransition and battle script pass the legend's
+// HOENN_LEGEND_* in VAR_0x8009 (VAR_0x8004-0x8006 are taken by seteventmon).
 
+static const u16 sLegendKeys[HOENN_LEGEND_COUNT] = {
+    [HOENN_LEGEND_KYOGRE]   = ITEM_BLUE_ORB,
+    [HOENN_LEGEND_GROUDON]  = ITEM_RED_ORB,
+    [HOENN_LEGEND_RAYQUAZA] = ITEM_JADE_ORB,
+    [HOENN_LEGEND_LATI]     = ITEM_ENIGMA_STONE,
+};
+
+static u32 LegendIndex(void)
+{
+    return gSpecialVar_0x8009 < HOENN_LEGEND_COUNT ? gSpecialVar_0x8009 : HOENN_LEGEND_KYOGRE;
+}
+
+#define SPECIAL_DAY(map) HoennIsSpecialWeatherDay(MAP_GROUP(map), MAP_NUM(map))
+
+// Is the legend's moment now? Kyogre and Groudon need the Seafoam waters'
+// special day (Routes 19 and 20 share it); Rayquaza needs noon without Route
+// 47's rain; the Lati only needs the ENIGMA STONE.
+static bool32 LegendMoment(u32 legend)
+{
+    switch (legend)
+    {
+    case HOENN_LEGEND_KYOGRE:
+        return SPECIAL_DAY(MAP_ROUTE19_HNS);
+    case HOENN_LEGEND_GROUDON:
+        return SPECIAL_DAY(MAP_ROUTE20_HNS);
+    case HOENN_LEGEND_RAYQUAZA:
+        RtcCalcLocalTime();
+        return gLocalTime.hours == HOENN_RAYQUAZA_HOUR && !SPECIAL_DAY(MAP_ROUTE47_HNS);
+    default:
+        return TRUE;
+    }
+}
+
+// specialvar VAR_RESULT, HoennLegendState: decides on every arrival whether the
+// legend is there (TRUE) and shows or hides its object. For the Lati, HnS's
+// rule picks which of the pair waits here: the one that isn't roaming Kanto
+// (VAR_ROAMER_POKEMON_HNS 0 = Latias roams, so Latios waits).
+bool16 HoennLegendState(void)
+{
+    u32 legend = LegendIndex();
+    bool32 here = !FlagGet(FLAG_HOENN_CAUGHT_KYOGRE + legend)
+               && !FlagGet(FLAG_HOENN_DAILY_KYOGRE_GONE + legend)
+               && CheckBagHasItem(sLegendKeys[legend], 1)
+               && LegendMoment(legend);
+
+    if (legend == HOENN_LEGEND_LATI)
+    {
+        FlagSet(FLAG_HOENN_HIDE_LATIAS);
+        FlagSet(FLAG_HOENN_HIDE_LATIOS);
+        if (here)
+            FlagClear(VarGet(VAR_ROAMER_POKEMON_HNS) == 0 ? FLAG_HOENN_HIDE_LATIOS : FLAG_HOENN_HIDE_LATIAS);
+        return here;
+    }
+    if (here)
+        FlagClear(FLAG_HOENN_HIDE_KYOGRE + legend);
+    else
+        FlagSet(FLAG_HOENN_HIDE_KYOGRE + legend);
+    return here;
+}
+
+// specialvar VAR_RESULT, HoennLegendBattleEnded: after the battle. Caught: gone
+// for good. Knocked out: gone until tomorrow (for Kyogre and Groudon that means
+// the next special day). Ran: it stays. TRUE if it leaves.
+bool16 HoennLegendBattleEnded(void)
+{
+    u32 legend = LegendIndex();
+
+    switch (gBattleOutcome)
+    {
+    case B_OUTCOME_CAUGHT:
+        FlagSet(FLAG_HOENN_CAUGHT_KYOGRE + legend);
+        break;
+    case B_OUTCOME_WON:
+        FlagSet(FLAG_HOENN_DAILY_KYOGRE_GONE + legend);
+        break;
+    default:
+        return FALSE;
+    }
+    return TRUE;
+}
+
+// Hook at the end of HoennCycleMapWeather (src/hoenn_time.c): on the Seafoam
+// waters' special day (fog), an ORB in the bag brings its titan's weather
+// instead, until that titan is caught: a downpour on Route 19, a drought on
+// Route 20. That's the sign the cave is stirring.
+u8 HoennOrbWeather(u8 weather)
+{
+    u16 map = (gSaveBlock1Ptr->location.mapGroup << 8) | gSaveBlock1Ptr->location.mapNum;
+
+    if (map == MAP_ROUTE19_HNS && CheckBagHasItem(ITEM_BLUE_ORB, 1) && !FlagGet(FLAG_HOENN_CAUGHT_KYOGRE))
+        return WEATHER_DOWNPOUR;
+    if (map == MAP_ROUTE20_HNS && CheckBagHasItem(ITEM_RED_ORB, 1) && !FlagGet(FLAG_HOENN_CAUGHT_GROUDON))
+        return WEATHER_DROUGHT;
+    return weather;
+}
+
+// specialvar VAR_RESULT, HoennEnigmaShardCount: shards found on the island.
+u16 HoennEnigmaShardCount(void)
+{
+    return FlagGet(FLAG_HOENN_ENIGMA_SHARD_1) + FlagGet(FLAG_HOENN_ENIGMA_SHARD_2) + FlagGet(FLAG_HOENN_ENIGMA_SHARD_3);
+}
+
+#endif // IS_HNS

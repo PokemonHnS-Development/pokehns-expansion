@@ -471,3 +471,11 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 - Brendan's call after the first catch (outside), and the Safari entrance attendant's rumor before and after.
 - Open the start menu or bag mid-stampede: the herd should pause and pick up where it was.
 
+## 2.0 part 36 (Hoenn's weather legendaries)
+- After Maxie and Archie's double, talk to Mt. Pyre's old man: the BLUE and RED ORBS. Sell or give away one before catching its titan, then talk to him again: he gives another.
+- Wait for the Seafoam waters' fog day (the TV forecast should mention it the day before): Route 19 has a downpour, Route 20 a drought. Do the battles there get rain and sun? Does the drought look right on HnS's palettes?
+- Kyogre in the Route 19 cave and Groudon behind Blaine in Seafoam: only on that day. Knock one out: is it back on the next fog day? Running keeps it there.
+- With both caught: Sky Pillar's top, the wall right of the door (21,14): the mural and the JADE ORB. Does the old man point there?
+- Embedded Tower at noon: Rayquaza. Not at 11 or 13, and not on Route 47's rain day.
+- Southern Island (STEVEN's EON TICKET): the sign's note, the three shards, the Pewter Museum expert (with 1–2 shards, then all 3), and the Lati in the grove. Is the Lati the one that isn't roaming Kanto? The sailor's rumor before and after.
+- Brendan's call after the first titan, May's after Rayquaza (both outside). Did any HnS event (Hall of Fame, the S.S. Aqua) bring the old legendaries back where they shouldn't be?

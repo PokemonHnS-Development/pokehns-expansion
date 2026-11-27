@@ -772,3 +772,6 @@ gSpecials::
 	def_special HoennStampedeBreed
 	def_special HoennTuneLeadBull
 	def_special HoennLeadBullBattleEnded
+	def_special HoennLegendState
+	def_special HoennLegendBattleEnded
+	def_special HoennEnigmaShardCount

@@ -357,11 +357,11 @@ HoennSeek_Text_CallTeams::
 	.string "MAXIE says you beat him and\n"
 	.string "ARCHIE at once. On MT. PYRE,\l"
 	.string "of all places.\p"
-	.string "He also told Dad about a tower\n"
-	.string "in KANTO where GROUDON and\l"
-	.string "KYOGRE are resting.\p"
-	.string "…Dad wants to see it. So do I.\n"
-	.string "Tell me if you find it.$"
+	.string "He also told Dad GROUDON and\n"
+	.string "KYOGRE are resting under the\l"
+	.string "SEAFOAM waters in KANTO.\p"
+	.string "…Dad wants to see them. So do I.\n"
+	.string "Tell me if you find them.$"
 
 HoennSeek_Text_CallRed::
 	.string "{PLAYER}!! PROF. OAK just\n"
@@ -481,7 +481,7 @@ HoennSeek_Text_BrendanPhone5::
 
 HoennSeek_Text_BrendanPhone6::
 	.string "BRENDAN: Dad's still talking\n"
-	.string "about that tower in KANTO\l"
+	.string "about the SEAFOAM waters\l"
 	.string "MAXIE told him about.\p"
 	.string "GROUDON and KYOGRE, resting.\n"
 	.string "…I'd like to see that.$"

@@ -14537,6 +14537,44 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_EVFeather,
         .iconPalette = gItemIconPalette_MuscleFeather,
     },
+
+    // Hoenn & Seek 2.0 part 36 (lane B): set into the mural at the top of Sky
+    // Pillar, once Kyogre and Groudon are settled. Carried into the Embedded
+    // Tower (Route 47) at noon on a clear day, it calls Rayquaza down.
+    [ITEM_JADE_ORB] =
+    {
+        .name = ITEM_NAME("JADE ORB"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A green orb from\n"
+            "SKY PILLAR. It hums\n"
+            "in clear skies."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_JadeOrb,
+        .iconPalette = gItemIconPalette_JadeOrb,
+    },
+
+    // Hoenn & Seek 2.0 part 36 (lane B): three shards from HnS's Southern
+    // Island, joined by the Pewter Museum's stone expert. Carried into the
+    // island's grove, it calls the Lati that doesn't roam.
+    [ITEM_ENIGMA_STONE] =
+    {
+        .name = ITEM_NAME("ENIGMA STONE"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A red and blue gem\n"
+            "that glows with a\n"
+            "dreamlike light."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_SoulDew,
+        .iconPalette = gItemIconPalette_SoulDew,
+    },
 #endif
 
     [ITEM_EON_TICKET] =

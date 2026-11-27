@@ -15,6 +15,8 @@ HoennSeek_EventScript_PhoneEventLaneB::
 	case HOENN_CALL_TUNNELS, HoennSeek_EventScript_CallTunnels @ part 29
 	case HOENN_CALL_KANGASKHAN, HoennSeek_EventScript_CallKangaskhan @ part 30a
 	case HOENN_CALL_STAMPEDE, HoennSeek_EventScript_CallStampede @ part 30b
+	case HOENN_CALL_TITANS, HoennSeek_EventScript_CallTitans @ part 36
+	case HOENN_CALL_RAYQUAZA, HoennSeek_EventScript_CallRayquaza @ part 36
 	releaseall @ no call matched: the end of the chain
 	end
 
@@ -1979,3 +1981,475 @@ HoennSeek_Text_CallStampede:
 	.string "A bull from PALDEA, way out in\n"
 	.string "KANTO! May's going to be so\l"
 	.string "jealous when I tell her.$"
+
+@ ==========================================================================
+@ Part 36: Hoenn's weather legendaries (Kyogre, Groudon, Rayquaza, the Lati)
+@ ==========================================================================
+@ - The ORBS: once Maxie and Archie's double at Mt. Pyre's summit is won, the
+@   old man there (object script swap) gives the BLUE and RED ORBS. He gives
+@   one again if it's gone from the bag before its titan is caught.
+@ - Kyogre and Groudon keep HnS's caves and battles (Lv 70). On the Seafoam
+@   waters' special day (Routes 19 and 20 share it; normally fog), an ORB in
+@   the bag brings its titan's weather instead (HoennOrbWeather: a downpour on
+@   Route 19, a drought on Route 20), and the titan waits in its cave: Kyogre in
+@   the Route 19 cave, Groudon in Seafoam's secret cave (behind Blaine's gym).
+@ - Rayquaza: with both caught, the mural on Sky Pillar's top wall (21,14)
+@   gives the JADE ORB. Rayquaza then waits in the Embedded Tower (Route 47) at
+@   noon, unless it's Route 47's rain day.
+@ - Latias/Latios: three ENIGMA shards on HnS's Southern Island (by the
+@   landing, the east clearing, the grove's pond). The Pewter Museum's stone
+@   expert joins them into the ENIGMA STONE; with it, the Lati that doesn't
+@   roam Kanto waits in the grove. The roaming one is unchanged.
+@ - Every legend: caught = gone for good; knocked out = gone until tomorrow;
+@   ran = it stays (HoennLegendBattleEnded).
+@ - Calls: Brendan after Kyogre or Groudon (Maxie's instruments), May after
+@   Rayquaza (the Weather Institute on TV).
+
+@ ---- The ORBS (Mt. Pyre summit) ---------------------------------------------
+HoennSeek_EventScript_PyreOldMan::
+	goto_if_unset FLAG_HOENN_TEAMS_DOUBLE_WON, MtPyre_Summit_EventScript_OldMan
+	lock
+	faceplayer
+	goto_if_set FLAG_HOENN_GOT_ORBS, HoennSeek_EventScript_PyreOldManAfter
+	msgbox HoennSeek_Text_PyreOrbsIntro, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_PyreGiveOrbs
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	setflag FLAG_HOENN_GOT_ORBS
+	msgbox HoennSeek_Text_PyreOrbsGiven, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+@ Gives each ORB whose titan is still out there and that isn't in the bag.
+@ VAR_RESULT is FALSE if the bag had no room (nothing given).
+HoennSeek_EventScript_PyreGiveOrbs::
+	checkitemspace ITEM_BLUE_ORB
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_PyreBagFull
+	checkitemspace ITEM_RED_ORB
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_PyreBagFull
+	call_if_unset FLAG_HOENN_CAUGHT_KYOGRE, HoennSeek_EventScript_PyreGiveBlueOrb
+	call_if_unset FLAG_HOENN_CAUGHT_GROUDON, HoennSeek_EventScript_PyreGiveRedOrb
+	setvar VAR_RESULT, TRUE
+	return
+HoennSeek_EventScript_PyreGiveBlueOrb::
+	checkitem ITEM_BLUE_ORB
+	goto_if_eq VAR_RESULT, TRUE, Common_EventScript_NopReturn
+	giveitem ITEM_BLUE_ORB
+	return
+HoennSeek_EventScript_PyreGiveRedOrb::
+	checkitem ITEM_RED_ORB
+	goto_if_eq VAR_RESULT, TRUE, Common_EventScript_NopReturn
+	giveitem ITEM_RED_ORB
+	return
+HoennSeek_EventScript_PyreBagFull::
+	msgbox HoennSeek_Text_PyreBagFull, MSGBOX_DEFAULT
+	setvar VAR_RESULT, FALSE
+	return
+
+HoennSeek_EventScript_PyreOldManAfter::
+	goto_if_unset FLAG_HOENN_CAUGHT_KYOGRE, HoennSeek_EventScript_PyreOldManWaiting
+	goto_if_unset FLAG_HOENN_CAUGHT_GROUDON, HoennSeek_EventScript_PyreOldManWaiting
+	msgbox HoennSeek_Text_PyreTitansSettled, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+@ An ORB went missing (sold, or held by a Pokémon): he has another.
+HoennSeek_EventScript_PyreOldManWaiting::
+	setvar VAR_0x8008, FALSE
+	call_if_unset FLAG_HOENN_CAUGHT_KYOGRE, HoennSeek_EventScript_PyreMissingBlue
+	call_if_unset FLAG_HOENN_CAUGHT_GROUDON, HoennSeek_EventScript_PyreMissingRed
+	goto_if_eq VAR_0x8008, FALSE, HoennSeek_EventScript_PyreOldManHint
+	msgbox HoennSeek_Text_PyreOrbMissing, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_PyreGiveOrbs
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_PyreOldManHint::
+	msgbox HoennSeek_Text_PyreOrbsHint, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_PyreMissingBlue::
+	checkitem ITEM_BLUE_ORB
+	goto_if_eq VAR_RESULT, TRUE, Common_EventScript_NopReturn
+	setvar VAR_0x8008, TRUE
+	return
+HoennSeek_EventScript_PyreMissingRed::
+	checkitem ITEM_RED_ORB
+	goto_if_eq VAR_RESULT, TRUE, Common_EventScript_NopReturn
+	setvar VAR_0x8008, TRUE
+	return
+
+@ ---- Kyogre (Route 19 cave) and Groudon (Seafoam's secret cave) ------------
+HoennSeek_EventScript_KyogreCaveOnTransition::
+	setvar VAR_0x8009, HOENN_LEGEND_KYOGRE
+	specialvar VAR_RESULT, HoennLegendState
+	end
+
+HoennSeek_EventScript_GroudonCaveOnTransition::
+	setvar VAR_0x8009, HOENN_LEGEND_GROUDON
+	specialvar VAR_RESULT, HoennLegendState
+	end
+
+HoennSeek_EventScript_Kyogre::
+	lock
+	faceplayer
+	setflag FLAG_HOENN_TITANS_MET
+	msgbox HoennSeek_Text_BlueOrbShines, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
+	waitmoncry
+	seteventmon SPECIES_KYOGRE, 70
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	setvar VAR_0x8009, HOENN_LEGEND_KYOGRE
+	specialvar VAR_RESULT, HoennLegendBattleEnded
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOENN_KYOGRE
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_Groudon::
+	lock
+	faceplayer
+	setflag FLAG_HOENN_TITANS_MET
+	msgbox HoennSeek_Text_RedOrbShines, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_GROUDON, CRY_MODE_ENCOUNTER
+	waitmoncry
+	seteventmon SPECIES_GROUDON, 70
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	setvar VAR_0x8009, HOENN_LEGEND_GROUDON
+	specialvar VAR_RESULT, HoennLegendBattleEnded
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOENN_GROUDON
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto HoennSeek_EventScript_LaneBRelease
+
+@ ---- Rayquaza: Sky Pillar's mural and the Embedded Tower ---------------------
+HoennSeek_EventScript_SkyPillarMural::
+	lockall
+	msgbox HoennSeek_Text_SkyPillarMural, MSGBOX_DEFAULT
+	goto_if_set FLAG_HOENN_GOT_JADE_ORB, HoennSeek_EventScript_SkyPillarMuralEmpty
+	goto_if_unset FLAG_HOENN_CAUGHT_KYOGRE, HoennSeek_EventScript_SkyPillarMuralDull
+	goto_if_unset FLAG_HOENN_CAUGHT_GROUDON, HoennSeek_EventScript_SkyPillarMuralDull
+	msgbox HoennSeek_Text_SkyPillarMuralGlows, MSGBOX_DEFAULT
+	giveitem ITEM_JADE_ORB
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	setflag FLAG_HOENN_GOT_JADE_ORB
+	msgbox HoennSeek_Text_SkyPillarJadeOrb, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_SkyPillarMuralDull::
+	msgbox HoennSeek_Text_SkyPillarMuralDull, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_SkyPillarMuralEmpty::
+	msgbox HoennSeek_Text_SkyPillarMuralEmpty, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_EmbeddedTowerOnTransition::
+	setvar VAR_0x8009, HOENN_LEGEND_RAYQUAZA
+	specialvar VAR_RESULT, HoennLegendState
+	end
+
+HoennSeek_EventScript_Rayquaza::
+	lock
+	faceplayer
+	msgbox HoennSeek_Text_JadeOrbShines, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_RAYQUAZA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	seteventmon SPECIES_RAYQUAZA, 70
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	setvar VAR_0x8009, HOENN_LEGEND_RAYQUAZA
+	specialvar VAR_RESULT, HoennLegendBattleEnded
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_EMBEDDEDRAYQUAZA
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto HoennSeek_EventScript_LaneBRelease
+
+@ ---- Latias/Latios: the ENIGMA shards and the Southern Island grove ----------
+HoennSeek_EventScript_SouthernIslandSign::
+	lockall
+	msgbox SouthernIsland_Exterior_Text_Sign, MSGBOX_DEFAULT
+	goto_if_set FLAG_HOENN_GOT_ENIGMA_STONE, HoennSeek_EventScript_LaneBRelease
+	specialvar VAR_RESULT, HoennEnigmaShardCount
+	goto_if_eq VAR_RESULT, HOENN_ENIGMA_SHARDS, HoennSeek_EventScript_LaneBRelease
+	msgbox HoennSeek_Text_SouthernIslandScratches, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_EnigmaShard1::
+	goto_if_set FLAG_HOENN_ENIGMA_SHARD_1, HoennSeek_EventScript_LaneBEnd
+	lockall
+	setflag FLAG_HOENN_ENIGMA_SHARD_1
+	goto HoennSeek_EventScript_EnigmaShardFound
+HoennSeek_EventScript_EnigmaShard2::
+	goto_if_set FLAG_HOENN_ENIGMA_SHARD_2, HoennSeek_EventScript_LaneBEnd
+	lockall
+	setflag FLAG_HOENN_ENIGMA_SHARD_2
+	goto HoennSeek_EventScript_EnigmaShardFound
+HoennSeek_EventScript_EnigmaShard3::
+	goto_if_set FLAG_HOENN_ENIGMA_SHARD_3, HoennSeek_EventScript_LaneBEnd
+	lockall
+	setflag FLAG_HOENN_ENIGMA_SHARD_3
+HoennSeek_EventScript_EnigmaShardFound::
+	specialvar VAR_RESULT, HoennEnigmaShardCount
+	buffernumberstring STR_VAR_1, VAR_RESULT
+	playfanfare MUS_OBTAIN_ITEM
+	message HoennSeek_Text_EnigmaShardFound
+	waitmessage
+	waitfanfare
+	goto_if_eq VAR_RESULT, HOENN_ENIGMA_SHARDS, HoennSeek_EventScript_EnigmaShardsAll
+	msgbox HoennSeek_Text_EnigmaShardsMore, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_EnigmaShardsAll::
+	msgbox HoennSeek_Text_EnigmaShardsAll, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+@ The Pewter Museum's stone expert (the fossil woman, object script swap):
+@ HnS's own lines until you carry a shard.
+HoennSeek_EventScript_MuseumStoneExpert::
+	goto_if_set FLAG_HOENN_GOT_ENIGMA_STONE, HoennSeek_EventScript_MuseumStoneAfter
+	specialvar VAR_RESULT, HoennEnigmaShardCount
+	goto_if_eq VAR_RESULT, 0, PewterCity_Museum_1F_EventScript_FossilWoman
+	lock
+	faceplayer
+	goto_if_lt VAR_RESULT, HOENN_ENIGMA_SHARDS, HoennSeek_EventScript_MuseumStoneMore
+	msgbox HoennSeek_Text_MuseumStoneJoin, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_WHITE
+	playse SE_M_HEAL_BELL
+	waitse
+	fadescreen FADE_FROM_WHITE
+	msgbox HoennSeek_Text_MuseumStoneJoined, MSGBOX_DEFAULT
+	giveitem ITEM_ENIGMA_STONE
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	setflag FLAG_HOENN_GOT_ENIGMA_STONE
+	msgbox HoennSeek_Text_MuseumStoneGo, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_MuseumStoneMore::
+	setvar VAR_0x8008, HOENN_ENIGMA_SHARDS
+	subvar VAR_0x8008, VAR_RESULT
+	buffernumberstring STR_VAR_1, VAR_0x8008
+	msgbox HoennSeek_Text_MuseumStoneMore, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_MuseumStoneAfter::
+	lock
+	faceplayer
+	goto_if_set FLAG_HOENN_CAUGHT_LATI, HoennSeek_EventScript_MuseumStoneDone
+	msgbox HoennSeek_Text_MuseumStoneGo, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_MuseumStoneDone::
+	msgbox HoennSeek_Text_MuseumStoneDone, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_SouthernIslandOnTransition::
+	setvar VAR_0x8009, HOENN_LEGEND_LATI
+	specialvar VAR_RESULT, HoennLegendState
+	end
+
+HoennSeek_EventScript_SouthernLatios::
+	lock
+	faceplayer
+	msgbox HoennSeek_Text_EnigmaStoneShines, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
+	waitmoncry
+	seteventmon SPECIES_LATIOS, 50
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	setvar VAR_0x8009, HOENN_LEGEND_LATI
+	specialvar VAR_RESULT, HoennLegendBattleEnded
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_SOUTHERN_ISLAND_INTERIOR_HNS_LATIOS
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_SouthernLatias::
+	lock
+	faceplayer
+	msgbox HoennSeek_Text_EnigmaStoneShines, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_LATIAS, CRY_MODE_ENCOUNTER
+	waitmoncry
+	seteventmon SPECIES_LATIAS, 50
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	setvar VAR_0x8009, HOENN_LEGEND_LATI
+	specialvar VAR_RESULT, HoennLegendBattleEnded
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_SOUTHERN_ISLAND_INTERIOR_HNS_LATIAS
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto HoennSeek_EventScript_LaneBRelease
+
+@ ---- Part 36's calls ----------------------------------------------------------
+HoennSeek_EventScript_CallTitans::
+	setflag FLAG_HOENN_CALL_TITANS
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallTitans
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_EventScript_CallRayquaza::
+	setflag FLAG_HOENN_CALL_RAYQUAZA
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallRayquaza
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Part 36 texts -------------------------------------------------------------
+HoennSeek_Text_PyreOrbsIntro:
+	.string "So, those two finally came up the\n"
+	.string "mountain together.\p"
+	.string "MAXIE and ARCHIE told me where\n"
+	.string "the titans sleep now. Far away,\l"
+	.string "under KANTO's SEAFOAM waters.\p"
+	.string "And they told me who stood\n"
+	.string "between them. You.\p"
+	.string "The ORBS have rested with us long\n"
+	.string "enough. Take them to the titans.$"
+
+HoennSeek_Text_PyreOrbsGiven:
+	.string "The BLUE ORB answers the rain,\n"
+	.string "the RED ORB the sun.\p"
+	.string "Some days, fog lies over the\n"
+	.string "SEAFOAM waters. With an ORB, those\l"
+	.string "days will bring the titan's\l"
+	.string "weather instead.\p"
+	.string "KYOGRE sleeps under ROUTE 19.\n"
+	.string "GROUDON in SEAFOAM's fire.$"
+
+HoennSeek_Text_PyreOrbsHint:
+	.string "The ORBS wait for the fog over the\n"
+	.string "SEAFOAM waters.\p"
+	.string "On those days, carry the BLUE ORB\n"
+	.string "to ROUTE 19's cave, or the RED ORB\l"
+	.string "to SEAFOAM's hidden cave.$"
+
+HoennSeek_Text_PyreOrbMissing:
+	.string "Your ORB is not with you? An ORB\n"
+	.string "must ride in the BAG to wake its\l"
+	.string "titan. Here, we keep another.$"
+
+HoennSeek_Text_PyreBagFull:
+	.string "Hm? Your BAG is full. Make room,\n"
+	.string "then come back to me.$"
+
+HoennSeek_Text_PyreTitansSettled:
+	.string "The sea and the land are both\n"
+	.string "with you now.\p"
+	.string "There is one more legend, though.\n"
+	.string "The one who calmed them both.\p"
+	.string "Its tale is carved at the top of\n"
+	.string "SKY PILLAR.$"
+
+HoennSeek_Text_BlueOrbShines:
+	.string "The BLUE ORB in the BAG shines.\n"
+	.string "The water heaves…$"
+
+HoennSeek_Text_RedOrbShines:
+	.string "The RED ORB in the BAG shines.\n"
+	.string "The heat is unbearable…$"
+
+HoennSeek_Text_SkyPillarMural:
+	.string "An old carving. A red giant and a\n"
+	.string "blue giant face each other.\p"
+	.string "Above them, a green serpent coils\n"
+	.string "around a tower set into a cliff by\l"
+	.string "a western sea, under a noon sun.$"
+
+HoennSeek_Text_SkyPillarMuralDull:
+	.string "The serpent's eye is a dull green\n"
+	.string "stone. The giants below it look\l"
+	.string "restless.$"
+
+HoennSeek_Text_SkyPillarMuralGlows:
+	.string "The serpent's eye is glowing!\p"
+	.string "The green stone slips out of the\n"
+	.string "carving into your hands.$"
+
+HoennSeek_Text_SkyPillarJadeOrb:
+	.string "The JADE ORB hums. It feels like\n"
+	.string "a clear sky.\p"
+	.string "A tower in a cliff by a western\n"
+	.string "sea… Somewhere far from HOENN?$"
+
+HoennSeek_Text_SkyPillarMuralEmpty:
+	.string "The serpent's eye is an empty\n"
+	.string "hollow now.$"
+
+HoennSeek_Text_JadeOrbShines:
+	.string "The JADE ORB in the BAG hums.\n"
+	.string "The air is perfectly still…$"
+
+HoennSeek_Text_SouthernIslandScratches:
+	.string "Scratched under the words:\p"
+	.string "“Our stone broke in three. One by\n"
+	.string "the landing, one in the east\l"
+	.string "clearing, one by the grove's\l"
+	.string "pond, among the flowers.”$"
+
+HoennSeek_Text_EnigmaShardFound:
+	.string "{PLAYER} found a shard of red and\n"
+	.string "blue stone! ({STR_VAR_1} of 3)$"
+
+HoennSeek_Text_EnigmaShardsMore:
+	.string "It's warm to the touch. There must\n"
+	.string "be more pieces on the island.$"
+
+HoennSeek_Text_EnigmaShardsAll:
+	.string "The three shards fit together, but\n"
+	.string "they won't stay joined.\p"
+	.string "Someone who knows stones might\n"
+	.string "know what to do with them.$"
+
+HoennSeek_Text_MuseumStoneMore:
+	.string "Those shards! Red and blue, and\n"
+	.string "warm… That's no ordinary stone.\p"
+	.string "It's missing pieces, though.\n"
+	.string "{STR_VAR_1} more, I'd say.\p"
+	.string "Find them all, and I can join\n"
+	.string "them for you.$"
+
+HoennSeek_Text_MuseumStoneJoin:
+	.string "All three shards! Let me see…\p"
+	.string "STEVEN once told me about a stone\n"
+	.string "like this, from SOUTHERN ISLAND.\p"
+	.string "Hold still. Joining stone takes a\n"
+	.string "steady hand.$"
+
+HoennSeek_Text_MuseumStoneJoined:
+	.string "There! The ENIGMA STONE, whole\n"
+	.string "again. It's yours.$"
+
+HoennSeek_Text_MuseumStoneGo:
+	.string "The ENIGMA STONE belongs in the\n"
+	.string "SOUTHERN ISLAND's grove.\p"
+	.string "STEVEN said it's how the island's\n"
+	.string "guardian knows a friend.$"
+
+HoennSeek_Text_MuseumStoneDone:
+	.string "So the guardian came to you! That\n"
+	.string "story deserves a plaque.$"
+
+HoennSeek_Text_EnigmaStoneShines:
+	.string "The ENIGMA STONE in the BAG glows\n"
+	.string "with a dreamlike light…$"
+
+HoennSeek_Text_CallTitans:
+	.string "Hey, {PLAYER}! It's BRENDAN.\p"
+	.string "MAXIE just called my dad. His\n"
+	.string "instruments went wild over\l"
+	.string "KANTO's SEAFOAM waters!\p"
+	.string "Then the old man on MT. PYRE told\n"
+	.string "him who'd taken the ORBS. You!\p"
+	.string "Dad says HOENN's titans couldn't\n"
+	.string "be in better hands.$"
+
+HoennSeek_Text_CallRayquaza:
+	.string "{PLAYER}! It's MAY!\p"
+	.string "The WEATHER INSTITUTE was on TV!\n"
+	.string "At noon, the sky over all of\l"
+	.string "HOENN went still.\p"
+	.string "They tracked a green streak\n"
+	.string "heading west, all the way to\l"
+	.string "JOHTO!\p"
+	.string "That was RAYQUAZA, wasn't it?\n"
+	.string "Dad says only you could pull\l"
+	.string "that off!$"
