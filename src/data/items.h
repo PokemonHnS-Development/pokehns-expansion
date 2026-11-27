@@ -14499,6 +14499,82 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_EVFeather,
         .iconPalette = gItemIconPalette_GeniusFeather,
     },
+
+    // Hoenn & Seek 2.0 part 34a (lane B): the Power Plant manager's find on
+    // Route 10's thunderstorm day. Brought to the plant's back yard, it calls
+    // Zapdos down; Lugia's shrine (part 34b) asks for it too.
+    [ITEM_THUNDER_FEATHER] =
+    {
+        .name = ITEM_NAME("THUNDER FEATHER"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A great bird's gold\n"
+            "feather. Sparks fly\n"
+            "when it's touched."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_EVFeather,
+        .iconPalette = gItemIconPalette_HealthFeather,
+    },
+
+    // Hoenn & Seek 2.0 part 34a (lane B): dropped into Route 113's ash by
+    // Moltres's flyover. Brought to Mt. Silver's Moltres room, it calls Moltres
+    // down; Lugia's shrine (part 34b) asks for it too.
+    [ITEM_FLAME_FEATHER] =
+    {
+        .name = ITEM_NAME("FLAME FEATHER"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A great bird's red\n"
+            "feather. It stays\n"
+            "warm and glowing."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_EVFeather,
+        .iconPalette = gItemIconPalette_MuscleFeather,
+    },
+
+    // Hoenn & Seek 2.0 part 36 (lane B): set into the mural at the top of Sky
+    // Pillar, once Kyogre and Groudon are settled. Carried into the Embedded
+    // Tower (Route 47) at noon on a clear day, it calls Rayquaza down.
+    [ITEM_JADE_ORB] =
+    {
+        .name = ITEM_NAME("JADE ORB"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A green orb from\n"
+            "SKY PILLAR. It hums\n"
+            "in clear skies."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_JadeOrb,
+        .iconPalette = gItemIconPalette_JadeOrb,
+    },
+
+    // Hoenn & Seek 2.0 part 36 (lane B): three shards from HnS's Southern
+    // Island, joined by the Pewter Museum's stone expert. Carried into the
+    // island's grove, it calls the Lati that doesn't roam.
+    [ITEM_ENIGMA_STONE] =
+    {
+        .name = ITEM_NAME("ENIGMA STONE"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A red and blue gem\n"
+            "that glows with a\n"
+            "dreamlike light."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_SoulDew,
+        .iconPalette = gItemIconPalette_SoulDew,
+    },
 #endif
 
     [ITEM_EON_TICKET] =

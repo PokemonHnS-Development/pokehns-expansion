@@ -25,8 +25,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SeafoamIslands_B1F_EventScript_Articuno",
-      "flag": "FLAG_HIDE_ARTICUNO"
+      "script": "HoennSeek_EventScript_ArticunoRoost",
+      "flag": "FLAG_HOENN_HIDE_ARTICUNO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PILOSWINE",
@@ -158,7 +158,179 @@
       "dest_warp_id": "9"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 31,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 31,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 31,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 31,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 31,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_ArticunoRoostCall"
+    }
+  ],
   "bg_events": [
     {
       "type": "hidden_item",

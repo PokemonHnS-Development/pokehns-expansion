@@ -1,4 +1,5 @@
 FuchsiaCity_SafariZoneBeach_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_SafariBeachOnTransition @ Hoenn & Seek (2.0 part 30a)
 	.byte 0
 
 SafariZoneFuchsia_EventScript_Attendant1::

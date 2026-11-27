@@ -52,9 +52,22 @@ bool32 HoennTryEventCall(void);
 u16 HoennSpeciesDueCall(void);
 u16 HoennHiddenDueCall(void);
 u16 HoennLaneADueCall(void); // src/hoenn_lane_a.c (lane setup, Nov 27)
+u32 HoennObjectPaletteSpecies(u32 species); // src/hoenn_lane_a.c (part 27b)
+u32 HoennRadioUnownBroadcast(const u8 **lines, u8 *line); // src/hoenn_lane_a.c (part 28): the Ruins' Unown station
+bool32 HoennLaneAOnStep(void); // src/hoenn_lane_a.c (part 32: the Ampharos ride)
+bool32 HoennLaneAFollowerOverride(u32 *species, bool32 *shiny, bool32 *female); // src/hoenn_lane_a.c (part 32)
 u16 HoennLaneBDueCall(void); // src/hoenn_lane_b.c
+// The Kangaskhan baby as your follower (src/hoenn_lane_b.c, 2.0 part 30a)
+bool32 HoennIsKangaBabyGfx(u32 species);
+u32 HoennFollowerPaletteSpecies(u32 species);
+bool32 HoennFollowerOverride(u32 *species, bool32 *shiny, bool32 *female);
+bool32 HoennSafariScriptedBattleEnd(void); // 2.0 part 30b: CB2_EndSafariBattle hook
+const u8 *HoennFollowerScript(void);
+extern const u8 HoennSeek_EventScript_StampedeHit[];
+extern const u8 HoennSeek_EventScript_KangaBabyFollower[];
 bool8 HoennMirageTowerRung(void); // 2.0 part 24b
 u16 HoennCipherDueCall(void);      // 2.0 part 27a (src/hoenn_cipher.c)
+u32 HoennNightWeekday(void);       // 27r: a night's weekday, dusk to dawn (src/hoenn_cipher.c)
 // 2.0 part 35b (src/hoenn_johto_legends.c)
 void HoennJohtoBeastBattleEnded(u32 roamerIndex);
 u32 HoennRadioEusineReport(const u8 **lines, u8 *line1, u8 *line2);

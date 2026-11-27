@@ -997,6 +997,8 @@ extern const u32 gItemIcon_RedOrb[];
 extern const u16 gItemIconPalette_RedOrb[];
 extern const u32 gItemIcon_BlueOrb[];
 extern const u16 gItemIconPalette_BlueOrb[];
+extern const u32 gItemIcon_JadeOrb[]; // Hoenn & Seek 2.0 part 36
+extern const u16 gItemIconPalette_JadeOrb[];
 // Mega Stones
 extern const u32 gItemIcon_Venusaurite[];
 extern const u16 gItemIconPalette_Venusaurite[];

@@ -125,6 +125,21 @@ void HoennUpdatePerWeek(s32 localDays)
     *seen = week;
 }
 
+// THE NIGHT (41r, Bryan): a night event's "knocked out, back tomorrow night"
+// flag (sNightlyFlags, src/hoenn_flags.c) can't reset at midnight, which falls
+// in the middle of the night. Nights are counted from noon to noon instead: the
+// hours before noon belong to the day before, like HoennNightWeekday(). Stores
+// night + 1, so 0 means "nothing recorded yet"; going backwards just re-records.
+void HoennUpdatePerNight(s32 localDays, s32 hours)
+{
+    u16 *seen = GetVarPointer(VAR_HOENN_NIGHT_SEEN);
+    u16 night = localDays - (hours < 12 ? 1 : 0) + 1;
+
+    if (*seen != 0 && night > *seen)
+        HoennClearNightlyFlags();
+    *seen = night;
+}
+
 // Makes today the given weekday (WEEKDAY_*), without starting a new week.
 void HoennSetWeekday(u32 weekday)
 {
@@ -153,6 +168,7 @@ void HoennSetWeekday(u32 weekday)
 void HoennRecordWeekAfterClockReset(void)
 {
     VarSet(VAR_HOENN_WEEK_SEEN, WeekOfLocalDay(gLocalTime.days) + 1);
+    VarSet(VAR_HOENN_NIGHT_SEEN, 0); // the next time check records the night
 }
 
 static const u8 *const sWeekdayNames[WEEKDAY_COUNT] = {
@@ -269,7 +285,7 @@ u8 HoennCycleMapWeather(u8 headerWeather)
 
     if (i < 0 || sWeatherCycleMaps[i].emerald || !HoennIsSpecialWeatherDay(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum))
         return headerWeather;
-    return sWeatherCycleMaps[i].weather;
+    return HoennOrbWeather(sWeatherCycleMaps[i].weather); // 2.0 part 36: the ORBS' weather
 }
 
 // Hook in DoCoordEventWeather (src/coord_event_weather.c): TRUE skips a weather

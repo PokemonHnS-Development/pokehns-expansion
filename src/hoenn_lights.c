@@ -10,7 +10,7 @@
 // Paths live in data/hoenn/light_paths.json; tools/hoenn/gen_hoenn_lights.py
 // finds each route on the map's layout and writes src/data/hoenn_light_paths.h.
 // The Night Dive on Underwater Route 124 (part 25a) is the first path; the
-// Lugia chain's Lanturn lights are meant to be the next one.
+// Lanturn lights on Route 41 (part 32, the Lugia chain) are the second.
 //
 // State:
 // - The path's stage var (a VAR_TEMP_*, so it resets on every map load, like
@@ -62,7 +62,6 @@ struct HoennLightPath
     const u8 *endScript;
 };
 
-extern const u8 HoennSeek_EventScript_DiveLightsEnd[];
 extern const u8 HoennSeek_EventScript_LightsScatter[];
 
 #include "data/hoenn_light_paths.h"

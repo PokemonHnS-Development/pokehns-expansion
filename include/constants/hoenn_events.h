@@ -20,7 +20,9 @@
 // - If a block fills up, take the next one from HOENN_FLAGS_SPARE / the spare
 //   vars and say so in a comment. Never move a block: numbers are saved.
 // - src/hoenn_flags.c checks at build time that the blocks don't overlap.
-// - Daily flags reset every morning with HnS's; weekly flags reset once a week.
+// - Daily flags reset at midnight with HnS's; weekly flags reset once a week.
+//   A night event's daily flag goes in sNightlyFlags (src/hoenn_flags.c) instead,
+//   so it resets at noon and lasts the whole night (41r).
 //   Use them for "once a day" / "once a week" events instead of a counter.
 // - Hidden items placed by 2.0 events (bg_event "hidden_item") need a flag
 //   below 0x20E9, so they take theirs from HOENN_EVENT_HIDDEN_ITEMS_START.
@@ -69,6 +71,10 @@
 // The week the weekly flags were last reset in, plus one (0 = not seen yet:
 // the next time check only records the week). See HoennUpdatePerWeek().
 #define VAR_HOENN_WEEK_SEEN       (HOENN_VARS_A_FOUNDATIONS + 0x01)
+// The night the nightly flags were last reset in, plus one (0 = not seen yet).
+// A night runs from noon to noon, so the hours after midnight belong to the
+// night before. See HoennUpdatePerNight() (41r).
+#define VAR_HOENN_NIGHT_SEEN      (HOENN_VARS_A_FOUNDATIONS + 0x02)
 
 // Weekdays as specialvar VAR_RESULT, GetDayOfWeek returns them. Scripts can't
 // use enum Weekday, so these mirror it (src/hoenn_time.c checks they match).
@@ -503,6 +509,70 @@
 #define HOENN_CIPHER_NEW_WORD  1 // tonight's word, not noted yet
 #define HOENN_CIPHER_SEEN_WORD 2 // tonight's word, already noted
 
+// ---- Part 27b: Unown Cipher B, the glyph sites (data/scripts/hoenn_lane_a.inc, src/hoenn_lane_a.c) ----
+// Each night word names a place. Once you've seen a weekday's word, its place
+// shows a ring of Unown at night spelling the word, in a quiet corner. Talk to
+// the ring: one letter comes out to battle, and once it's caught or knocked
+// out the ring is gone and a TABLET FRAGMENT carved with that letter lies on
+// the floor. The seven letters spell ANCIENT (part 28 reads the tablet).
+#define FLAG_HOENN_CIPHER_FRAGMENT_SUN  (HOENN_LANE_A_FLAGS_E + 0x0B) // + HOENN_SUNDAY..HOENN_SATURDAY (0x0B-0x11):
+                                                                       // that place's fragment was found
+#define FLAG_HOENN_CIPHER_HIDE_RING     (HOENN_LANE_A_FLAGS_E + 0x12) // the ring objects' flag (every site map decides it on arrival)
+#define FLAG_HOENN_CIPHER_SHOWED_LAB    (HOENN_LANE_A_FLAGS_E + 0x13) // the lab researcher has seen a fragment
+#define FLAG_HOENN_CALL_CIPHER_FRAGMENT (HOENN_LANE_A_FLAGS_E + 0x14) // May: the lab phoned Birch about the fragment
+#define FLAG_HOENN_CIPHER_TABLET        (HOENN_LANE_A_FLAGS_E + 0x15) // the lab put all seven together (part 28 starts here)
+
+// ---- Part 31a: the Sneasel thief (data/scripts/hoenn_lane_a.inc) ----
+// Ice Path B2F at night, once all four B1F boulders have dropped onto it: an
+// item ball on the ice is snatched by a Sneasel as you reach it, then another
+// shows farther across the ice, three times; then it's cornered in the
+// north-west nook. Its stash comes with the first battle.
+#define FLAG_HOENN_HIDE_SNEASEL_BALL_1  (HOENN_LANE_A_FLAGS_E + 0x20) // the three snatched balls' object flags
+#define FLAG_HOENN_HIDE_SNEASEL_BALL_2  (HOENN_LANE_A_FLAGS_E + 0x21) //   (decided on every arrival)
+#define FLAG_HOENN_HIDE_SNEASEL_BALL_3  (HOENN_LANE_A_FLAGS_E + 0x22)
+#define FLAG_HOENN_HIDE_ICE_SNEASEL     (HOENN_LANE_A_FLAGS_E + 0x23) // the Sneasel's object flag
+#define FLAG_HOENN_SNEASEL_STASH        (HOENN_LANE_A_FLAGS_E + 0x24) // fought it once and got its stash: no more chase, it waits in the nook
+#define FLAG_HOENN_CAUGHT_ICE_SNEASEL   (HOENN_LANE_A_FLAGS_E + 0x25)
+#define FLAG_HOENN_CALL_SNEASEL         (HOENN_LANE_A_FLAGS_E + 0x26) // Brendan: Clair's gym report
+#define FLAG_HOENN_DAILY_ICE_SNEASEL    (HOENN_LANE_A_DAILY + 0x00)   // knocked out: back next night
+// ---- Part 28: Unown Cipher C, the sanctum (data/scripts/hoenn_lane_a.inc, src/hoenn_lane_a.c) ----
+// The tablet's mark is the boulder in the middle of the Ruins of Alph. At night
+// the Unown open it, and a ladder leads down to the sanctum: a mural that calls
+// any of the 28 letters (once a day) and the final inscription (part 37's start).
+#define FLAG_HOENN_CIPHER_SANCTUM_OPEN  (HOENN_LANE_A_FLAGS_E + 0x16) // the boulder is open (redrawn on every load)
+#define FLAG_HOENN_CIPHER_HIDE_SEAL     (HOENN_LANE_A_FLAGS_E + 0x17) // the opening scene's three Unown (hidden on arrival)
+#define FLAG_HOENN_CIPHER_INSCRIPTION   (HOENN_LANE_A_FLAGS_E + 0x18) // read the final inscription (part 37 starts here)
+#define FLAG_HOENN_CIPHER_LAB_SANCTUM   (HOENN_LANE_A_FLAGS_E + 0x19) // the lab researcher heard about the inscription
+#define FLAG_HOENN_CALL_CIPHER_SANCTUM  (HOENN_LANE_A_FLAGS_E + 0x1A) // Brendan: the lab phoned Birch about the sanctum
+                                                                       // (0x1B-0x1F spare for part 28)
+#define FLAG_HOENN_DAILY_SANCTUM_MURAL  (HOENN_LANE_A_DAILY + 5)      // the mural called a letter tonight (nightly, 41r)
+                                                                       // (+0..4 are 31a, 32 and 35b's)
+#define HOENN_SANCTUM_LETTERS 28 // A-Z ! ? (the mural's menu; index 28 is CANCEL)
+// ---- Part 32: Olivine nights (data/scripts/hoenn_lane_a.inc) ----
+// At night a LANTURN's light waits off Route 41's north shore and leads across
+// the sea (src/hoenn_lights.c) to the foot of the east ridge, where it slips
+// into a sea cave (57,53): the way into Route41_Lagoon_hoenn, Lugia's shrine
+// (part 34b). Also at night, a stranded AMPHAROS blinks on a sea rock off Route 40 (32,32);
+// AMPHY in the lighthouse keeps watching its light. It's too scared to swim:
+// it takes a BERRY from you once a night, and after three it trusts you and
+// climbs on behind you; the first step you take on land (any map) it hops off
+// and runs home to JASMINE (Bryan, 32 review: a rescue, not a catch). Afterwards it lives at the lighthouse top
+// next to AMPHY. (31a ends at + 0x26 and daily + 0; 28 has + 0x16-0x1F.)
+#define FLAG_HOENN_HIDE_LANTURN_LIGHT       (HOENN_LANE_A_FLAGS_E + 0x27) // the light object (out at night until the cave is found)
+#define FLAG_HOENN_LAGOON_FOUND             (HOENN_LANE_A_FLAGS_E + 0x28) // followed the lights: the sea cave is open
+#define FLAG_HOENN_HIDE_STRANDED_AMPHAROS   (HOENN_LANE_A_FLAGS_E + 0x29) // its object on the rock (shown at night until rescued)
+#define FLAG_HOENN_RESCUED_AMPHAROS         (HOENN_LANE_A_FLAGS_E + 0x2A) // brought ashore: it lives at the lighthouse now
+#define FLAG_HOENN_CALL_AMPHAROS            (HOENN_LANE_A_FLAGS_E + 0x2B) // May: Jasmine told the LEAGUE (part 32's call)
+#define FLAG_HOENN_HIDE_LIGHTHOUSE_AMPHAROS (HOENN_LANE_A_FLAGS_E + 0x2C) // its object at the lighthouse top (shown once rescued)
+#define FLAG_HOENN_AMPHAROS_JASMINE_AWAY    (HOENN_LANE_A_FLAGS_E + 0x2D) // Jasmine had left the lighthouse: the arrival scene shows her, then hides her again
+#define FLAG_HOENN_DAILY_AMPHAROS_BERRY     (HOENN_LANE_A_DAILY + 1)      // it took a BERRY tonight (nightly, 41r)
+#define VAR_HOENN_AMPHAROS_STATE            (HOENN_LANE_A_VARS_E + 0x00)  // 0-2 BERRIES taken, then:
+#define HOENN_AMPHAROS_TRUSTS   3 // trusts you: it will ride with you
+#define HOENN_AMPHAROS_RIDING   4 // riding with you (your follower)
+#define HOENN_AMPHAROS_ARRIVING 5 // the lighthouse scene is due
+#define HOENN_AMPHAROS_HOME     6 // at the lighthouse top for good
+// Route 41 uses VAR_TEMP_2 for the light's stop (light_paths.json) and
+// VAR_TEMP_3 = 1 for the sea cave's trigger (57,54) once it's found.
 // ---- Part 35b: Ho-Oh, Raikou/Entei, Celebi (lane A) (data/scripts/hoenn_johto_legends.inc, src/hoenn_johto_legends.c) ----
 // Raikou and Entei: which you've met and caught (noted after every roamer
 // battle); once one is caught, EUSINE's notes put the other on OAK's radio
@@ -557,4 +627,223 @@
 // Lane B's part sections go here, at the end of the file:
 //     #define FLAG_HOENN_Y   (HOENN_LANE_B_FLAGS_E + 0x00)
 
+// ---- Part 31b: Teddiursa's honey trail (data/scripts/hoenn_lane_b.inc) ----
+// A beekeeper's house at the top of Route 45 gives one HONEY a day. Spread on
+// the old pine in the pond meadow, it brings two Teddiursa the next morning;
+// after HOENN_HONEY_MORNINGS_NEEDED watched mornings their mother comes
+// instead, and on a later night she climbs the meadow's east cliff and leads
+// you to the moon hollow (Route45_MoonHollow_hoenn), one of Jirachi's three
+// wishing spots (lane A's part 37 reads FLAG_HOENN_MOON_HOLLOW_FOUND).
+#define FLAG_HOENN_HONEY_ON_TREE        (HOENN_LANE_B_FLAGS_E + 0x00) // HONEY is on the pine
+#define FLAG_HOENN_HIDE_HONEY_TEDDI     (HOENN_LANE_B_FLAGS_E + 0x01) // object flag: the two Teddiursa at the pine
+#define FLAG_HOENN_HIDE_HONEY_URSARING  (HOENN_LANE_B_FLAGS_E + 0x02) // object flag: the Ursaring at the pine
+#define FLAG_HOENN_HIDE_HOLLOW_BEARS    (HOENN_LANE_B_FLAGS_E + 0x03) // object flag: the bears in the hollow
+#define FLAG_HOENN_MOON_HOLLOW_FOUND    (HOENN_LANE_B_FLAGS_E + 0x04) // followed the Ursaring up (Jirachi's spot)
+#define FLAG_HOENN_CALL_MOON_HOLLOW     (HOENN_LANE_B_FLAGS_E + 0x05) // Brendan's call about it
+#define FLAG_HOENN_DAILY_BEEKEEPER_HONEY (HOENN_LANE_B_DAILY + 0x00)  // today's jar from the beekeeper
+#define FLAG_HOENN_DAILY_HONEY_SPREAD    (HOENN_LANE_B_DAILY + 0x01)  // HONEY went on the pine today (visitors come on a later morning)
+#define VAR_HOENN_HONEY_STAGE           (HOENN_LANE_B_VARS_E + 0x00)  // HOENN_HONEY_STAGE_*
+#define VAR_HOENN_HONEY_MORNINGS        (HOENN_LANE_B_VARS_E + 0x01)  // honey mornings watched (stops counting at the goal)
+#define HOENN_HONEY_STAGE_CUBS          0 // the Teddiursa come for the honey
+#define HOENN_HONEY_STAGE_NIGHT         1 // the mother came one morning: she waits at the pine at night
+#define HOENN_HONEY_STAGE_HOLLOW        2 // the hollow is found; the bears sit there at night
+#define HOENN_HONEY_MORNINGS_NEEDED     3 // watched mornings before the mother comes
+// The hollow uses VAR_TEMP_1 for its first-visit scene (an ON_FRAME entry).
+
+// ---- Part 34a: the three birds (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Bill (Goldenrod) tracks Articuno, Zapdos and Moltres. Each bird has a
+// feather (key item): the FROST FEATHER (part 26b, Shoal Cave), the THUNDER
+// FEATHER (the Power Plant manager on Route 10's thunderstorm day) and the
+// FLAME FEATHER (dropped into Route 113's ash by Moltres's flyover). Carrying a
+// bird's feather to its roost (Seafoam B1F, the Power Plant's back yard, Mt.
+// Silver's Moltres room) calls the bird down; it waits there until you battle
+// it. Caught = gone for good; knocked out = back another day; ran = it stays.
+// The flags below come in Articuno, Zapdos, Moltres order (HOENN_BIRD_*), so
+// src/hoenn_lane_b.c can add the bird's index to the first one.
+#define HOENN_BIRD_ARTICUNO             0
+#define HOENN_BIRD_ZAPDOS               1
+#define HOENN_BIRD_MOLTRES              2
+#define HOENN_BIRD_COUNT                3
+#define FLAG_HOENN_HIDE_ARTICUNO        (HOENN_LANE_B_FLAGS_F + 0x00) // object flags (replace HnS's FLAG_HIDE_*, which are 0)
+#define FLAG_HOENN_HIDE_ZAPDOS          (HOENN_LANE_B_FLAGS_F + 0x01)
+#define FLAG_HOENN_HIDE_MOLTRES         (HOENN_LANE_B_FLAGS_F + 0x02)
+#define FLAG_HOENN_ARTICUNO_LANDED      (HOENN_LANE_B_FLAGS_F + 0x03) // the feather called it down: it waits at its roost
+#define FLAG_HOENN_ZAPDOS_LANDED        (HOENN_LANE_B_FLAGS_F + 0x04)
+#define FLAG_HOENN_MOLTRES_LANDED       (HOENN_LANE_B_FLAGS_F + 0x05)
+#define FLAG_HOENN_CAUGHT_ARTICUNO      (HOENN_LANE_B_FLAGS_F + 0x06)
+#define FLAG_HOENN_CAUGHT_ZAPDOS        (HOENN_LANE_B_FLAGS_F + 0x07)
+#define FLAG_HOENN_CAUGHT_MOLTRES       (HOENN_LANE_B_FLAGS_F + 0x08)
+#define FLAG_HOENN_GOT_THUNDER_FEATHER  (HOENN_LANE_B_FLAGS_F + 0x09)
+#define FLAG_HOENN_GOT_FLAME_FEATHER    (HOENN_LANE_B_FLAGS_F + 0x0A)
+#define FLAG_HOENN_MOLTRES_CAMEO        (HOENN_LANE_B_FLAGS_F + 0x0B) // saw Moltres fly over Route 113
+#define FLAG_HOENN_HIDE_FLAME_FEATHER   (HOENN_LANE_B_FLAGS_F + 0x0C) // object flag: the feather in Route 113's ash
+#define FLAG_HOENN_HIDE_ROUTE113_MOLTRES (HOENN_LANE_B_FLAGS_F + 0x0D) // object flag: Moltres in the flyover
+#define FLAG_HOENN_BILL_BIRDS           (HOENN_LANE_B_FLAGS_F + 0x0E) // Bill told you he's tracking the birds
+#define FLAG_HOENN_CALL_BIRDS           (HOENN_LANE_B_FLAGS_F + 0x0F) // May: Bill heard a bird came down
+#define FLAG_HOENN_DAILY_ARTICUNO_GONE  (HOENN_LANE_B_DAILY + 0x02)   // knocked out today: back tomorrow
+#define FLAG_HOENN_DAILY_ZAPDOS_GONE    (HOENN_LANE_B_DAILY + 0x03)
+#define FLAG_HOENN_DAILY_MOLTRES_GONE   (HOENN_LANE_B_DAILY + 0x04)
+// specialvar VAR_RESULT, HoennBirdRoostState (VAR_0x8009 = HOENN_BIRD_*):
+#define HOENN_ROOST_EMPTY    0 // nothing happens (caught, gone today, or no feather)
+#define HOENN_ROOST_CALL     1 // the feather can call it: arm the roost's triggers
+#define HOENN_ROOST_WAITING  2 // it already landed: it's shown
+// Route 113 uses VAR_TEMP_6 for the flyover's triggers; the roosts use VAR_TEMP_6 too.
+
+
+// ---- Part 29: shifting tunnels (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Onix: every night a fresh hole opens in a different wall of Rock Tunnel B1F
+// (one per weekday, sOnixHoles); it leads into the Onix's bore
+// (RockTunnel_OnixBore_hoenn), where a shiny Onix rests in its chamber at night.
+// Dunsparce: Dark Cave's south side has four burrow holes, one open in each time
+// of day (sBurrowHoles). They all drop into the burrow (DarkCave_Burrow_hoenn);
+// the first visit in each time of day, a Dunsparce digs one row of the rubble
+// out of the passage, and after all four the chamber behind it is open, where a
+// Three-Segment Dudunsparce sleeps.
+// Tangela: Route 21's islet near Pallet is choked with Tangela vines that only
+// relax in the morning, opening the way to a shiny Tangela.
+#define FLAG_HOENN_ONIX_CAUGHT          (HOENN_LANE_B_FLAGS_E + 0x06)
+#define FLAG_HOENN_HIDE_ONIX            (HOENN_LANE_B_FLAGS_E + 0x07) // object flag, decided on every arrival
+#define FLAG_HOENN_ITEM_BORE_IRON_BALL  (HOENN_LANE_B_FLAGS_E + 0x08)
+#define FLAG_HOENN_ITEM_BORE_STAR_PIECE (HOENN_LANE_B_FLAGS_E + 0x09)
+#define FLAG_HOENN_ITEM_BORE_BIG_NUGGET (HOENN_LANE_B_FLAGS_E + 0x0A)
+#define FLAG_HOENN_ONIX_FOUND           (HOENN_LANE_B_FLAGS_E + 0x0B) // reached the bore's chamber (rumor)
+#define FLAG_HOENN_BURROW_DUG_MORNING   (HOENN_LANE_B_FLAGS_E + 0x0C) // + HOENN_TIME_*: that time of day's Dunsparce dug
+#define FLAG_HOENN_BURROW_DUG_DAY       (HOENN_LANE_B_FLAGS_E + 0x0D)
+#define FLAG_HOENN_BURROW_DUG_EVENING   (HOENN_LANE_B_FLAGS_E + 0x0E)
+#define FLAG_HOENN_BURROW_DUG_NIGHT     (HOENN_LANE_B_FLAGS_E + 0x0F)
+#define FLAG_HOENN_DUDUNSPARCE_CAUGHT   (HOENN_LANE_B_FLAGS_E + 0x10)
+#define FLAG_HOENN_HIDE_DUDUNSPARCE     (HOENN_LANE_B_FLAGS_E + 0x11) // object flag, decided on every arrival
+#define FLAG_HOENN_HIDE_BURROW_DIGGER   (HOENN_LANE_B_FLAGS_E + 0x12) // object flag, decided on every arrival
+#define FLAG_HOENN_TANGELA_CAUGHT       (HOENN_LANE_B_FLAGS_E + 0x13)
+#define FLAG_HOENN_HIDE_TANGELA         (HOENN_LANE_B_FLAGS_E + 0x14) // object flag: the shiny one and its vines
+#define FLAG_HOENN_TANGELA_SEEN         (HOENN_LANE_B_FLAGS_E + 0x15) // pushed at the vines once (rumor)
+#define FLAG_HOENN_CALL_TUNNELS         (HOENN_LANE_B_FLAGS_E + 0x16) // Brendan: the crystal Onix
+#define FLAG_HOENN_DAILY_ONIX_GONE      (HOENN_LANE_B_DAILY + 0x05)   // knocked out tonight: back tomorrow night
+#define FLAG_HOENN_DAILY_ONIX_RUMBLE    (HOENN_LANE_B_DAILY + 0x06)   // tonight's rumble was felt
+#define FLAG_HOENN_DAILY_DUDUNSPARCE_GONE (HOENN_LANE_B_DAILY + 0x07)
+#define FLAG_HOENN_DAILY_TANGELA_GONE   (HOENN_LANE_B_DAILY + 0x08)
+#define FLAG_HOENN_HIDDEN_BORE_METAL_COAT  (HOENN_LANE_B_HIDDEN + 0x00) // under the Onix's resting spot
+#define FLAG_HOENN_HIDDEN_ISLET_MIRACLE_SEED (HOENN_LANE_B_HIDDEN + 0x01) // where the shiny Tangela sat
+#define HOENN_ONIX_NO_HOLE      7  // HoennOnixHoleTonight: no hole (it's not night)
+#define HOENN_BURROW_DIGS_NEEDED 4 // one per time of day
+// Rock Tunnel B1F uses VAR_TEMP_5 for the rumble, the burrow VAR_TEMP_1 for the dig,
+// Route 21 VAR_TEMP_1 for the vines' morning.
+
+// ---- Part 30a: the lost Kangaskhan baby (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Evenings in the Fuchsia Safari Zone, a Kangaskhan baby cries on the Beach's
+// sand. Talk to it and it follows you like your follower Pokémon (its own
+// sprite) until the Safari game ends; walk it to its mother in a hidden nook of
+// the Brush (4,15) and she gives you a Lucky Egg. Afterwards the two sit there
+// together. Leaving the Safari Zone with the baby sends it back to the Beach.
+#define FLAG_HOENN_KANGA_BABY_FOLLOWING (HOENN_LANE_B_FLAGS_E + 0x17) // the baby walks behind you (Safari Zone only)
+#define FLAG_HOENN_KANGA_REUNITED       (HOENN_LANE_B_FLAGS_E + 0x18) // brought it home: Lucky Egg given
+#define FLAG_HOENN_HIDE_KANGA_BABY      (HOENN_LANE_B_FLAGS_E + 0x19) // object flag: the baby on the Beach, decided on every arrival
+#define FLAG_HOENN_HIDE_KANGA_PAIR_BABY (HOENN_LANE_B_FLAGS_E + 0x1A) // object flag: the baby beside its mother in the Brush
+#define FLAG_HOENN_CALL_KANGASKHAN      (HOENN_LANE_B_FLAGS_E + 0x1B) // May: the warden told Birch's aide
+#define FLAG_HOENN_KANGA_EGG_GIVEN      (HOENN_LANE_B_FLAGS_E + 0x1C) // the mother's LUCKY EGG (later, if the bag was full)
+// The Beach and the Brush use VAR_TEMP_1 for the baby's scenes.
+
+// ---- Part 30b: the Tauros stampede (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Monday mornings a Tauros herd charges back and forth across the Safari Zone's
+// highland (FuchsiaCity_SafariZoneHighland_hoenn, above the MOUNTAIN's east
+// canyon), one bull per lane; a bull that runs into you knocks you back to the
+// canyon. Past the herd, its lead bull waits in a nook of the north cliff: a
+// Paldean Tauros whose breed rotates by week (Combat, Blaze, Aqua; caught ones
+// are skipped), perfect Attack and Speed. One battle a week.
+#define FLAG_HOENN_HIDE_STAMPEDE        (HOENN_LANE_B_FLAGS_E + 0x1D) // object flag: the herd, decided on every arrival
+#define FLAG_HOENN_HIDE_BULL_COMBAT     (HOENN_LANE_B_FLAGS_E + 0x1E) // object flags: the lead bull, + HOENN_BULL_*
+#define FLAG_HOENN_HIDE_BULL_BLAZE      (HOENN_LANE_B_FLAGS_E + 0x1F)
+#define FLAG_HOENN_HIDE_BULL_AQUA       (HOENN_LANE_B_FLAGS_E + 0x20)
+#define FLAG_HOENN_CAUGHT_BULL_COMBAT   (HOENN_LANE_B_FLAGS_E + 0x21) // + HOENN_BULL_*
+#define FLAG_HOENN_CAUGHT_BULL_BLAZE    (HOENN_LANE_B_FLAGS_E + 0x22)
+#define FLAG_HOENN_CAUGHT_BULL_AQUA     (HOENN_LANE_B_FLAGS_E + 0x23)
+#define FLAG_HOENN_CALL_STAMPEDE        (HOENN_LANE_B_FLAGS_E + 0x24) // Brendan: Birch's aide heard from the warden
+#define FLAG_HOENN_STAMPEDE_LEADER_CAUGHT (HOENN_LANE_B_FLAGS_E + 0x25) // any breed caught (rumor, call)
+#define FLAG_HOENN_STAMPEDE_HIT_ONCE    (HOENN_LANE_B_FLAGS_E + 0x26) // the first knock-back explains itself
+#define FLAG_HOENN_WEEKLY_LEAD_BULL     (HOENN_LANE_B_WEEKLY + 0x00)  // battled the lead bull this week
+#define HOENN_BULL_COMBAT 0
+#define HOENN_BULL_BLAZE  1
+#define HOENN_BULL_AQUA   2
+#define HOENN_BULL_COUNT  3
+#define HOENN_BULL_NONE   HOENN_BULL_COUNT // every breed caught
+
+// ---- Part 36: Hoenn's weather legendaries (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Kyogre and Groudon: once Maxie and Archie's double is won, the old man at Mt.
+// Pyre's summit gives you the BLUE and RED ORBS. Carrying one, the Seafoam
+// waters' special day changes: a downpour on Route 19 (Kyogre wakes in the
+// Route 19 cave) or a drought on Route 20 (Groudon wakes in Seafoam's secret
+// cave). Rayquaza: with both settled, Sky Pillar's mural gives the JADE ORB;
+// Rayquaza waits in the Embedded Tower (Route 47) at noon, unless it rains
+// there. Latias/Latios: three ENIGMA shards on HnS's Southern Island, joined at
+// the Pewter Museum; the ENIGMA STONE calls the Lati that doesn't roam.
+// HnS's own FLAG_HIDE_KYOGRE and friends are real flags, but HnS's Hall of Fame
+// clears them, so the objects take these lane B flags instead.
+#define HOENN_LEGEND_KYOGRE   0 // VAR_0x8009 for HoennLegendState / HoennLegendBattleEnded
+#define HOENN_LEGEND_GROUDON  1
+#define HOENN_LEGEND_RAYQUAZA 2
+#define HOENN_LEGEND_LATI     3
+#define HOENN_LEGEND_COUNT    4
+#define FLAG_HOENN_GOT_ORBS             (HOENN_LANE_B_FLAGS_F + 0x10) // the old man gave both ORBS
+#define FLAG_HOENN_HIDE_KYOGRE          (HOENN_LANE_B_FLAGS_F + 0x11) // object flags, + HOENN_LEGEND_*, decided on every arrival
+#define FLAG_HOENN_HIDE_GROUDON         (HOENN_LANE_B_FLAGS_F + 0x12)
+#define FLAG_HOENN_HIDE_RAYQUAZA        (HOENN_LANE_B_FLAGS_F + 0x13)
+#define FLAG_HOENN_HIDE_LATIAS          (HOENN_LANE_B_FLAGS_F + 0x14) // the island's Lati: Latias...
+#define FLAG_HOENN_HIDE_LATIOS          (HOENN_LANE_B_FLAGS_F + 0x15) // ...or Latios (whichever doesn't roam)
+#define FLAG_HOENN_CAUGHT_KYOGRE        (HOENN_LANE_B_FLAGS_F + 0x16) // + HOENN_LEGEND_*
+#define FLAG_HOENN_CAUGHT_GROUDON       (HOENN_LANE_B_FLAGS_F + 0x17)
+#define FLAG_HOENN_CAUGHT_RAYQUAZA      (HOENN_LANE_B_FLAGS_F + 0x18)
+#define FLAG_HOENN_CAUGHT_LATI          (HOENN_LANE_B_FLAGS_F + 0x19)
+#define FLAG_HOENN_GOT_JADE_ORB         (HOENN_LANE_B_FLAGS_F + 0x1A)
+#define FLAG_HOENN_ENIGMA_SHARD_1       (HOENN_LANE_B_FLAGS_F + 0x1B) // the shard by the landing
+#define FLAG_HOENN_ENIGMA_SHARD_2       (HOENN_LANE_B_FLAGS_F + 0x1C) // the shard on the east terrace
+#define FLAG_HOENN_ENIGMA_SHARD_3       (HOENN_LANE_B_FLAGS_F + 0x1D) // the shard by the grove's pond
+#define FLAG_HOENN_GOT_ENIGMA_STONE     (HOENN_LANE_B_FLAGS_F + 0x1E)
+#define FLAG_HOENN_TITANS_MET           (HOENN_LANE_B_FLAGS_F + 0x1F) // battled Kyogre or Groudon once (rumor)
+#define FLAG_HOENN_CALL_TITANS          (HOENN_LANE_B_FLAGS_F + 0x20) // Brendan: Maxie's instruments
+#define FLAG_HOENN_CALL_RAYQUAZA        (HOENN_LANE_B_FLAGS_F + 0x21) // May: the Weather Institute's report
+#define FLAG_HOENN_DAILY_KYOGRE_GONE    (HOENN_LANE_B_DAILY + 0x09)   // knocked out today, + HOENN_LEGEND_*
+#define FLAG_HOENN_DAILY_GROUDON_GONE   (HOENN_LANE_B_DAILY + 0x0A)
+#define FLAG_HOENN_DAILY_RAYQUAZA_GONE  (HOENN_LANE_B_DAILY + 0x0B)
+#define FLAG_HOENN_DAILY_LATI_GONE      (HOENN_LANE_B_DAILY + 0x0C)
+#define HOENN_ENIGMA_SHARDS 3
+#define HOENN_RAYQUAZA_HOUR 12 // noon
+// ---- Part 35a: Mewtwo and Mew (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Mewtwo: six pages of the burned Cinnabar MANSION's journal. Five lie where the
+// notes ended up (the crater on CINNABAR, SILPH CO.'s lobby, the CELADON GAME
+// CORNER, the Mahogany and Goldenrod ROCKET hideouts); MR. FUJI in Lavender
+// keeps the sixth and gives it once you have the other five. After four, MEWTWO
+// is glimpsed over Cinnabar's crater and teleports away; with all six it waits
+// on CERULEAN CAVE B2F's islet. Mew: at dawn (HOENN_MEW_DAWN_BEGIN-_END), a pink
+// blur in three meadows (Route 1, Route 22, Hoenn's Route 101) drops a piece of
+// an OLD SEA MAP; the third piece completes the map, and HnS's ferry takes you
+// to Faraway Island, where HnS's Mew chase is unchanged.
+#define FLAG_HOENN_JOURNAL_PAGE_1       (HOENN_LANE_B_FLAGS_F + 0x22) // Cinnabar's crater
+#define FLAG_HOENN_JOURNAL_PAGE_2       (HOENN_LANE_B_FLAGS_F + 0x23) // Silph Co.'s lobby painting
+#define FLAG_HOENN_JOURNAL_PAGE_3       (HOENN_LANE_B_FLAGS_F + 0x24) // the Celadon Game Corner's plant pot
+#define FLAG_HOENN_JOURNAL_PAGE_4       (HOENN_LANE_B_FLAGS_F + 0x25) // Giovanni's desk, Mahogany hideout B3F
+#define FLAG_HOENN_JOURNAL_PAGE_5       (HOENN_LANE_B_FLAGS_F + 0x26) // a crate in Goldenrod's underground warehouse
+#define FLAG_HOENN_JOURNAL_PAGE_6       (HOENN_LANE_B_FLAGS_F + 0x27) // MR. FUJI's, given with the other five
+#define FLAG_HOENN_MEWTWO_CAMEO         (HOENN_LANE_B_FLAGS_F + 0x28) // seen over Cinnabar's crater
+#define FLAG_HOENN_HIDE_CINNABAR_MEWTWO (HOENN_LANE_B_FLAGS_F + 0x29) // object flag: the cameo's Mewtwo
+#define FLAG_HOENN_HIDE_MEWTWO          (HOENN_LANE_B_FLAGS_F + 0x2A) // object flag: Cerulean Cave B2F, decided on every arrival
+#define FLAG_HOENN_CAUGHT_MEWTWO        (HOENN_LANE_B_FLAGS_F + 0x2B)
+#define FLAG_HOENN_MEWTWO_MET           (HOENN_LANE_B_FLAGS_F + 0x2C) // battled once (rumor)
+#define FLAG_HOENN_SEA_MAP_PIECE_1      (HOENN_LANE_B_FLAGS_F + 0x2D) // + HOENN_MEW_*: Route 1
+#define FLAG_HOENN_SEA_MAP_PIECE_2      (HOENN_LANE_B_FLAGS_F + 0x2E) // Route 22
+#define FLAG_HOENN_SEA_MAP_PIECE_3      (HOENN_LANE_B_FLAGS_F + 0x2F) // Route 101
+#define FLAG_HOENN_HIDE_MEW_BLUR        (HOENN_LANE_B_FLAGS_F + 0x30) // object flag: the blur, on all three maps
+#define FLAG_HOENN_CALL_MEWTWO          (HOENN_LANE_B_FLAGS_F + 0x31) // Brendan: Cerulean Cave went quiet
+#define FLAG_HOENN_CALL_MEW             (HOENN_LANE_B_FLAGS_F + 0x32) // May: the sea map
+#define FLAG_HOENN_FUJI_JOURNAL         (HOENN_LANE_B_FLAGS_F + 0x33) // MR. FUJI told the journal's story
+#define FLAG_HOENN_MEW_BLUR_SEEN        (HOENN_LANE_B_FLAGS_F + 0x34) // a blur dashed off once (rumor)
+#define FLAG_HOENN_DAILY_MEWTWO_GONE    (HOENN_LANE_B_DAILY + 0x0D)   // knocked out today
+#define HOENN_JOURNAL_PAGES      6
+#define HOENN_JOURNAL_CAMEO_PAGES 4
+#define HOENN_MEW_ROUTE1     0 // VAR_0x8009 for the blur's specials
+#define HOENN_MEW_ROUTE22    1
+#define HOENN_MEW_ROUTE101   2
+#define HOENN_MEW_SIGHTINGS  3
+#define HOENN_MEW_DAWN_BEGIN 4 // 4:00-7:59, the first hours of HnS's morning
+#define HOENN_MEW_DAWN_END   8
+#define HOENN_MEWTWO_LEVEL   80 // HnS's own level
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

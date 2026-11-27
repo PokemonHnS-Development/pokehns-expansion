@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OlivineLighthouse_EventScript_1FSailor",
+      "script": "HoennSeek_EventScript_Hint_LighthouseSailor",
       "flag": "0"
     },
     {
@@ -182,7 +182,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OlivineLighthouse_EventScript_Ampharos",
+      "script": "HoennSeek_EventScript_LighthouseAmphy",
       "flag": "0"
     },
     {
@@ -249,6 +249,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OlivineLighthouse_EventScript_Item_Ether",
       "flag": "FLAG_ITEM_LIGHTHOUSE_ETHER"
+    },
+    {
+      "local_id": "LOCALID_HOENN_LIGHTHOUSE_AMPHAROS",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_AMPHAROS",
+      "x": 157,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_LighthouseRescuedAmpharos",
+      "flag": "FLAG_HOENN_HIDE_LIGHTHOUSE_AMPHAROS"
     }
   ],
   "warp_events": [
