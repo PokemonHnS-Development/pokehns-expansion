@@ -12,6 +12,8 @@ HoennSeek_EventScript_PhoneEventLaneB::
 	switch VAR_0x8004
 	case HOENN_CALL_MOON_HOLLOW, HoennSeek_EventScript_CallMoonHollow @ part 31b
 	case HOENN_CALL_BIRDS, HoennSeek_EventScript_CallBirds @ part 34a
+	case HOENN_CALL_TUNNELS, HoennSeek_EventScript_CallTunnels @ part 29
+	case HOENN_CALL_KANGASKHAN, HoennSeek_EventScript_CallKangaskhan @ part 30a
 	releaseall @ no call matched: the end of the chain
 	end
 
@@ -1097,3 +1099,684 @@ HoennSeek_Text_CallBirds:
 	.string "everything. So do I!\p"
 	.string "Did its feather really bring it\n"
 	.string "to you? I want the whole story!$"
+
+@ ==========================================================================
+@ Part 29: shifting tunnels (Rock Tunnel's Onix, Dark Cave's Dunsparce,
+@ Route 21's Tangela vines)
+@ ==========================================================================
+@ - Onix: at night, a fresh hole opens in a different wall of Rock Tunnel B1F
+@   each weekday (sOnixHoles in src/hoenn_lane_b.c; B1F's warps 6-12, which only
+@   work while their hole is drawn). It leads into the Onix's bore
+@   (RockTunnel_OnixBore_hoenn), where a shiny Onix that knows Diamond Storm
+@   rests in the chamber at night. Run: it stays. Knocked out: back tomorrow
+@   night. Caught: gone (the holes keep opening at night, so the chamber's items
+@   and the Metal Coat under its resting spot can still be fetched). The first
+@   time each night you enter B1F while it's there, the tunnel rumbles.
+@ - Dunsparce: Dark Cave's south side has four burrow holes, one open in each
+@   time of day (sBurrowHoles; warps 3-6). All drop into the burrow
+@   (DarkCave_Burrow_hoenn). The first visit in each time of day, a Dunsparce
+@   digs one row of rubble out of the passage to the chamber; after all four,
+@   a Three-Segment Dudunsparce sleeps there. Knocked out: back tomorrow.
+@ - Tangela: four Tangela wrap a shiny one on Route 21's islet near Pallet
+@   (5-7, 28-30). They writhe and won't let you near, except in the morning,
+@   when they lie limp a step away. The shiny one knows AncientPower and holds
+@   a Big Root; a Miracle Seed is hidden where it sat.
+@ - Levels follow your progress (HoennSetupProgressWildBattle, 5 below your
+@   level cap; never below 40 for the Onix, 32 for the Dudunsparce, 30 for the
+@   Tangela).
+
+	.include "data/maps/RockTunnel_OnixBore_hoenn/scripts.inc"
+	.include "data/maps/DarkCave_Burrow_hoenn/scripts.inc"
+
+@ ---- Onix: Rock Tunnel B1F -------------------------------------------------
+
+HoennSeek_EventScript_RockTunnelB1FOnLoad::
+	special HoennDrawOnixHole
+	end
+
+@ From B1F's OnTransition: arms the rumble the first time tonight.
+HoennSeek_EventScript_RockTunnelB1FOnTransition::
+	goto_if_set FLAG_HOENN_ONIX_CAUGHT, HoennSeek_EventScript_LaneBReturn
+	goto_if_set FLAG_HOENN_DAILY_ONIX_GONE, HoennSeek_EventScript_LaneBReturn
+	goto_if_set FLAG_HOENN_DAILY_ONIX_RUMBLE, HoennSeek_EventScript_LaneBReturn
+	specialvar VAR_RESULT, HoennOnixHoleTonight
+	goto_if_eq VAR_RESULT, HOENN_ONIX_NO_HOLE, HoennSeek_EventScript_LaneBReturn
+	setvar VAR_TEMP_5, 1
+	return
+
+HoennSeek_EventScript_RockTunnelB1FOnFrame::
+	map_script_2 VAR_TEMP_5, 1, HoennSeek_EventScript_OnixRumble
+	.2byte 0
+
+HoennSeek_EventScript_OnixRumble::
+	lockall
+	setvar VAR_TEMP_5, 2
+	setflag FLAG_HOENN_DAILY_ONIX_RUMBLE
+	playse SE_M_EARTHQUAKE
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 2  @ horizontal pan
+	setvar VAR_0x8006, 10 @ number of shakes
+	setvar VAR_0x8007, 4  @ shake delay
+	special ShakeCamera
+	waitstate
+	msgbox HoennSeek_Text_OnixRumble, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ ---- Onix: the bore ----------------------------------------------------------
+
+HoennSeek_EventScript_BoreExit::
+	special HoennOnixHoleExit
+	warp MAP_ROCK_TUNNEL_B1F_HNS, VAR_0x8008, VAR_0x8009
+	waitstate
+	end
+
+HoennSeek_EventScript_BoreOnix::
+	lock
+	setflag FLAG_HOENN_ONIX_FOUND
+	playmoncry SPECIES_ONIX, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_BoreOnix, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setvar VAR_0x8004, SPECIES_ONIX
+	setvar VAR_0x8005, 40
+	special HoennSetupProgressWildBattle
+	setvar VAR_0x8005, MOVE_DIAMOND_STORM
+	setvar VAR_0x8006, FALSE
+	setvar VAR_0x8007, ITEM_NONE
+	setvar VAR_0x8008, 0
+	setvar VAR_0x8009, HOENN_TUNE_SHINY
+	special HoennTuneWildMonSlot
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_BoreOnixCaught
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, HoennSeek_EventScript_BoreOnixGone
+	release
+	end
+
+HoennSeek_EventScript_BoreOnixCaught::
+	setflag FLAG_HOENN_ONIX_CAUGHT
+	goto HoennSeek_EventScript_BoreOnixLeaves
+
+HoennSeek_EventScript_BoreOnixGone::
+	setflag FLAG_HOENN_DAILY_ONIX_GONE
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOENN_BORE_ONIX
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox HoennSeek_Text_BoreOnixFled, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_BoreOnixLeaves::
+	removeobject LOCALID_HOENN_BORE_ONIX
+	msgbox HoennSeek_Text_BoreOnixSpot, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_BoreIronBall::
+	finditem ITEM_IRON_BALL
+	end
+
+HoennSeek_EventScript_BoreStarPiece::
+	finditem ITEM_STAR_PIECE
+	end
+
+HoennSeek_EventScript_BoreBigNugget::
+	finditem ITEM_BIG_NUGGET
+	end
+
+@ ---- Dunsparce: Dark Cave --------------------------------------------------
+
+HoennSeek_EventScript_DarkCaveSouthOnLoad::
+	special HoennDrawBurrowHole
+	end
+
+@ The burrow's ON_FRAME (VAR_TEMP_1 1): this time of day's Dunsparce digs out
+@ one row of rubble, then burrows away into the wall.
+HoennSeek_EventScript_BurrowDig::
+	lockall
+	setvar VAR_TEMP_1, 2
+	playmoncry SPECIES_DUNSPARCE, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_BurrowDigger, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	applymovement LOCALID_HOENN_BURROW_DIGGER, HoennSeek_Movement_BurrowDig
+	waitmovement 0
+	playse SE_M_DIG
+	specialvar VAR_RESULT, HoennBurrowDig
+	copyvar VAR_0x800A, VAR_0x8008
+	addvar VAR_0x800A, 7
+	setfieldeffectargument 0, 17
+	setfieldeffectargument 1, VAR_0x800A
+	setfieldeffectargument 2, 0
+	setfieldeffectargument 3, 1
+	dofieldeffect FLDEFF_ASH_PUFF
+	setfieldeffectargument 0, 18
+	dofieldeffect FLDEFF_ASH_PUFF
+	setmetatile 10, VAR_0x8008, 0x281, FALSE
+	setmetatile 11, VAR_0x8008, 0x281, FALSE
+	special DrawWholeMapView
+	delay 20
+	applymovement LOCALID_HOENN_BURROW_DIGGER, HoennSeek_Movement_BurrowAway
+	waitmovement 0
+	removeobject LOCALID_HOENN_BURROW_DIGGER
+	goto_if_eq VAR_RESULT, 0, HoennSeek_EventScript_BurrowOpen
+	buffernumberstring STR_VAR_1, VAR_RESULT
+	msgbox HoennSeek_Text_BurrowDug, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_BurrowOpen::
+	clearflag FLAG_HOENN_HIDE_DUDUNSPARCE
+	addobject LOCALID_HOENN_DUDUNSPARCE
+	msgbox HoennSeek_Text_BurrowOpen, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ Talking to the digger before its scene plays (it can't, the scene comes first).
+HoennSeek_EventScript_BurrowDigger::
+	lock
+	playmoncry SPECIES_DUNSPARCE, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_BurrowDiggerBusy, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_BurrowDudunsparce::
+	lock
+	playmoncry SPECIES_DUDUNSPARCE_THREE_SEGMENT, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_BurrowDudunsparce, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setvar VAR_0x8004, SPECIES_DUDUNSPARCE_THREE_SEGMENT
+	setvar VAR_0x8005, 32
+	special HoennSetupProgressWildBattle
+	setvar VAR_0x8005, MOVE_NONE
+	setvar VAR_0x8006, FALSE
+	setvar VAR_0x8007, ITEM_NONE
+	setvar VAR_0x8008, 0
+	setvar VAR_0x8009, 0
+	special HoennTuneWildMonSlot
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_BurrowDudunsparceCaught
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, HoennSeek_EventScript_BurrowDudunsparceGone
+	release
+	end
+
+HoennSeek_EventScript_BurrowDudunsparceCaught::
+	setflag FLAG_HOENN_DUDUNSPARCE_CAUGHT
+	removeobject LOCALID_HOENN_DUDUNSPARCE
+	release
+	end
+
+HoennSeek_EventScript_BurrowDudunsparceGone::
+	setflag FLAG_HOENN_DAILY_DUDUNSPARCE_GONE
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOENN_DUDUNSPARCE
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox HoennSeek_Text_BurrowDudunsparceFled, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_Movement_BurrowDig:
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	step_end
+
+HoennSeek_Movement_BurrowAway:
+	walk_up
+	walk_in_place_fast_up
+	walk_in_place_fast_up
+	step_end
+
+@ ---- Tangela: Route 21's islet ------------------------------------------------
+
+@ From Route 21's OnTransition: the shiny one shows unless caught or knocked
+@ out today; in the morning the vines lie limp a step back from it.
+HoennSeek_EventScript_Route21OnTransition::
+	goto_if_set FLAG_HOENN_TANGELA_CAUGHT, HoennSeek_EventScript_LaneBReturn
+	clearflag FLAG_HOENN_HIDE_TANGELA
+	call_if_set FLAG_HOENN_DAILY_TANGELA_GONE, HoennSeek_EventScript_IsletTangelaAway
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_MORNING, HoennSeek_EventScript_LaneBReturn
+	setobjectxyperm LOCALID_HOENN_ISLET_VINE_1, 6, 27
+	setobjectxyperm LOCALID_HOENN_ISLET_VINE_2, 4, 29
+	setobjectxyperm LOCALID_HOENN_ISLET_VINE_3, 9, 30
+	setobjectxyperm LOCALID_HOENN_ISLET_VINE_4, 5, 31
+	setobjectmovementtype LOCALID_HOENN_ISLET_VINE_1, MOVEMENT_TYPE_FACE_DOWN
+	setobjectmovementtype LOCALID_HOENN_ISLET_VINE_2, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype LOCALID_HOENN_ISLET_VINE_3, MOVEMENT_TYPE_FACE_LEFT
+	setobjectmovementtype LOCALID_HOENN_ISLET_VINE_4, MOVEMENT_TYPE_FACE_UP
+	return
+
+HoennSeek_EventScript_IsletTangelaAway::
+	setflag FLAG_HOENN_HIDE_TANGELA
+	return
+
+HoennSeek_EventScript_IsletVines::
+	lock
+	setflag FLAG_HOENN_TANGELA_SEEN
+	gettimeofday
+	goto_if_eq VAR_0x8000, HOENN_TIME_MORNING, HoennSeek_EventScript_IsletVinesLimp
+	playmoncry SPECIES_TANGELA, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_IsletVines, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_IsletVinesLimp::
+	msgbox HoennSeek_Text_IsletVinesLimp, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_IsletTangela::
+	lock
+	faceplayer
+	setflag FLAG_HOENN_TANGELA_SEEN
+	playmoncry SPECIES_TANGELA, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_IsletTangela, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setvar VAR_0x8004, SPECIES_TANGELA
+	setvar VAR_0x8005, 30
+	special HoennSetupProgressWildBattle
+	setvar VAR_0x8005, MOVE_ANCIENT_POWER
+	setvar VAR_0x8006, FALSE
+	setvar VAR_0x8007, ITEM_BIG_ROOT
+	setvar VAR_0x8008, 0
+	setvar VAR_0x8009, HOENN_TUNE_SHINY
+	special HoennTuneWildMonSlot
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_IsletTangelaCaught
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, HoennSeek_EventScript_IsletTangelaGone
+	release
+	end
+
+HoennSeek_EventScript_IsletTangelaCaught::
+	setflag FLAG_HOENN_TANGELA_CAUGHT
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOENN_ISLET_TANGELA
+	removeobject LOCALID_HOENN_ISLET_VINE_1
+	removeobject LOCALID_HOENN_ISLET_VINE_2
+	removeobject LOCALID_HOENN_ISLET_VINE_3
+	removeobject LOCALID_HOENN_ISLET_VINE_4
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox HoennSeek_Text_IsletVinesGone, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_IsletTangelaGone::
+	setflag FLAG_HOENN_DAILY_TANGELA_GONE
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOENN_ISLET_TANGELA
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox HoennSeek_Text_IsletTangelaFled, MSGBOX_DEFAULT
+	release
+	end
+
+@ ---- Brendan's call -------------------------------------------------------------
+
+HoennSeek_EventScript_CallTunnels::
+	setflag FLAG_HOENN_CALL_TUNNELS
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallTunnels
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Part 29 texts ----------------------------------------------------------
+
+HoennSeek_Text_OnixRumble:
+	.string "The ground shakes!\p"
+	.string "Something huge is boring through\n"
+	.string "the rock somewhere nearby…\p"
+	.string "A fresh hole must have opened in\n"
+	.string "one of these walls tonight.$"
+
+HoennSeek_Text_BoreOnix:
+	.string "A huge ONIX rests in its chamber.\p"
+	.string "Its body glitters like crystal in\n"
+	.string "the dark!$"
+
+HoennSeek_Text_BoreOnixFled:
+	.string "The ONIX bored away into the rock.\p"
+	.string "It will be back to rest here\n"
+	.string "tomorrow night.$"
+
+HoennSeek_Text_BoreOnixSpot:
+	.string "Something glints in the dirt where\n"
+	.string "the ONIX was lying.$"
+
+HoennSeek_Text_BurrowDigger:
+	.string "A DUNSPARCE is chewing at the\n"
+	.string "rubble in the passage!$"
+
+HoennSeek_Text_BurrowDiggerBusy:
+	.string "The DUNSPARCE is too busy digging\n"
+	.string "to notice you.$"
+
+HoennSeek_Text_BurrowDug:
+	.string "It cleared away a whole row of\n"
+	.string "rubble and wriggled into the wall!\p"
+	.string "There's still rubble in the way.\n"
+	.string "Rows left: {STR_VAR_1}.\p"
+	.string "Another DUNSPARCE might come at\n"
+	.string "a different time of day.$"
+
+HoennSeek_Text_BurrowOpen:
+	.string "The last of the rubble fell away!\p"
+	.string "The passage is open, and something\n"
+	.string "is snoring at the far end…$"
+
+HoennSeek_Text_BurrowDudunsparce:
+	.string "A DUDUNSPARCE is curled up at the\n"
+	.string "end of its burrow.\p"
+	.string "It has three segments!\n"
+	.string "It's waking up!$"
+
+HoennSeek_Text_BurrowDudunsparceFled:
+	.string "The DUDUNSPARCE burrowed away.\p"
+	.string "It will come back to sleep\n"
+	.string "here tomorrow.$"
+
+HoennSeek_Text_IsletVines:
+	.string "A tangle of writhing vines guards\n"
+	.string "the middle of the islet.\p"
+	.string "They squirm away from your hand.\n"
+	.string "Even CUT couldn't get through.$"
+
+HoennSeek_Text_IsletVinesLimp:
+	.string "The vines lie limp in the morning\n"
+	.string "sun. They're fast asleep.$"
+
+HoennSeek_Text_IsletTangela:
+	.string "The TANGELA in the middle of the\n"
+	.string "vines is a different color!$"
+
+HoennSeek_Text_IsletTangelaFled:
+	.string "The TANGELA dove into the sea.\p"
+	.string "It will come back to the\n"
+	.string "islet tomorrow.$"
+
+HoennSeek_Text_IsletVinesGone:
+	.string "The other TANGELA slipped into the\n"
+	.string "sea and swam away.$"
+
+HoennSeek_Text_CallTunnels:
+	.string "Hey, {PLAYER}! It's BRENDAN.\p"
+	.string "A hiker from LAVENDER phoned the\n"
+	.string "lab. He's been mapping ROCK TUNNEL\l"
+	.string "for Dad for years.\p"
+	.string "He swears he saw a trainer walk\n"
+	.string "out of a hole in the wall with an\l"
+	.string "ONIX that sparkled like crystal!\p"
+	.string "That was you, right? Dad wants to\n"
+	.string "see it. Bring it to HOENN sometime!$"
+
+@ ==========================================================================
+@ Part 30a: the lost Kangaskhan baby (Fuchsia Safari Zone)
+@ ==========================================================================
+@ Evenings (once the BRUSH is open to you, SAFARI LEVEL 2), a Kangaskhan baby
+@ cries on the BEACH's sand at (39,36). Say YES and it follows you like your
+@ follower Pokémon, drawn with its own sprite (src/hoenn_lane_b.c,
+@ HoennFollowerOverride). Its mother paces in a nook of the BRUSH's woods (4,15),
+@ reached through the grass notch at (8-9,17-18); stepping into the nook with
+@ the baby (triggers at x 7, rows 17-18) plays the reunion and she gives a
+@ LUCKY EGG. Afterwards the pair sit there together. If the Safari game ends
+@ first, the entrance clears the follow flag and the baby is back on the BEACH
+@ the next evening.
+
+HoennSeek_EventScript_SafariBeachOnTransition::
+	setflag FLAG_HOENN_HIDE_KANGA_BABY
+	goto_if_set FLAG_HOENN_KANGA_REUNITED, HoennSeek_EventScript_LaneBEnd
+	goto_if_set FLAG_HOENN_KANGA_BABY_FOLLOWING, HoennSeek_EventScript_LaneBEnd
+	goto_if_lt VAR_KANTO_SAFARI_ZONE_PROGRESS, 2, HoennSeek_EventScript_LaneBEnd
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_EVENING, HoennSeek_EventScript_LaneBEnd
+	clearflag FLAG_HOENN_HIDE_KANGA_BABY
+	end
+
+HoennSeek_EventScript_SafariBrushOnTransition::
+	setflag FLAG_HOENN_HIDE_KANGA_PAIR_BABY
+	goto_if_set FLAG_HOENN_KANGA_REUNITED, HoennSeek_EventScript_KangaPairShow
+	goto_if_unset FLAG_HOENN_KANGA_BABY_FOLLOWING, HoennSeek_EventScript_LaneBEnd
+	setvar VAR_TEMP_1, 1
+	end
+
+HoennSeek_EventScript_KangaPairShow:
+	clearflag FLAG_HOENN_HIDE_KANGA_PAIR_BABY
+	end
+
+HoennSeek_EventScript_KangaBaby::
+	lock
+	faceplayer
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_HIGH_PITCH
+	msgbox HoennSeek_Text_KangaBaby, MSGBOX_DEFAULT
+	waitmoncry
+	msgbox HoennSeek_Text_KangaBabyAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_KangaBabyStays
+	msgbox HoennSeek_Text_KangaBabyFollows, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_HOENN_KANGA_BABY_FOLLOWING
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOENN_KANGA_BABY
+	updatefollowingmon
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+HoennSeek_EventScript_KangaBabyStays:
+	msgbox HoennSeek_Text_KangaBabyStays, MSGBOX_DEFAULT
+	release
+	end
+
+@ Talking to the baby while it follows you (HoennFollowerScript).
+HoennSeek_EventScript_KangaBabyFollower::
+	lock
+	faceplayer
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_HIGH_PITCH
+	msgbox HoennSeek_Text_KangaBabyFollower, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_KangaMother::
+	lock
+	faceplayer
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_NORMAL
+	goto_if_unset FLAG_HOENN_KANGA_REUNITED, HoennSeek_EventScript_KangaMotherAlone
+	goto_if_unset FLAG_HOENN_KANGA_EGG_GIVEN, HoennSeek_EventScript_KangaMotherEgg
+	msgbox HoennSeek_Text_KangaMotherAfter, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_KangaMotherAlone:
+	msgbox HoennSeek_Text_KangaMotherAlone, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_KangaMotherEgg:
+	msgbox HoennSeek_Text_KangaMotherEggAgain, MSGBOX_DEFAULT
+	waitmoncry
+	call HoennSeek_EventScript_KangaGiveEgg
+	release
+	end
+
+HoennSeek_EventScript_KangaPairBaby::
+	lock
+	faceplayer
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_HIGH_PITCH
+	msgbox HoennSeek_Text_KangaPairBaby, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+@ The nook's entrance with the baby behind you (it walks one tile behind, so
+@ it's at (8, your row)): it hops over you and runs to its mother.
+HoennSeek_EventScript_KangaReunion::
+	lockall
+	setvar VAR_TEMP_1, 0
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_HIGH_PITCH
+	msgbox HoennSeek_Text_KangaReunionSniff, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	clearflag FLAG_HOENN_KANGA_BABY_FOLLOWING
+	updatefollowingmon
+	getplayerxy VAR_0x8004, VAR_0x8005
+	setobjectxyperm LOCALID_HOENN_KANGA_PAIR_BABY, 8, VAR_0x8005
+	clearflag FLAG_HOENN_HIDE_KANGA_PAIR_BABY
+	addobject LOCALID_HOENN_KANGA_PAIR_BABY
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	call_if_eq VAR_0x8005, 17, HoennSeek_EventScript_KangaBabyRunsFrom17
+	call_if_eq VAR_0x8005, 18, HoennSeek_EventScript_KangaBabyRunsFrom18
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_HOENN_KANGA_MOTHER, HoennSeek_Movement_KangaMotherTurns
+	waitmovement 0
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_ENCOUNTER
+	applymovement LOCALID_HOENN_KANGA_MOTHER, HoennSeek_Movement_KangaHeart
+	applymovement LOCALID_HOENN_KANGA_PAIR_BABY, HoennSeek_Movement_KangaHeart
+	waitmovement LOCALID_HOENN_KANGA_PAIR_BABY
+	waitmoncry
+	msgbox HoennSeek_Text_KangaReunion, MSGBOX_DEFAULT
+	setobjectxyperm LOCALID_HOENN_KANGA_PAIR_BABY, 5, 15
+	setobjectmovementtype LOCALID_HOENN_KANGA_PAIR_BABY, MOVEMENT_TYPE_FACE_LEFT
+	setflag FLAG_HOENN_KANGA_REUNITED
+	call HoennSeek_EventScript_KangaGiveEgg
+	releaseall
+	end
+
+HoennSeek_EventScript_KangaBabyRunsFrom17:
+	applymovement LOCALID_HOENN_KANGA_PAIR_BABY, HoennSeek_Movement_KangaBabyRun17
+	waitmovement 0
+	return
+
+HoennSeek_EventScript_KangaBabyRunsFrom18:
+	applymovement LOCALID_HOENN_KANGA_PAIR_BABY, HoennSeek_Movement_KangaBabyRun18
+	waitmovement 0
+	return
+
+HoennSeek_EventScript_KangaGiveEgg:
+	msgbox HoennSeek_Text_KangaEgg, MSGBOX_DEFAULT
+	giveitem ITEM_LUCKY_EGG
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_KangaEggNoRoom
+	setflag FLAG_HOENN_KANGA_EGG_GIVEN
+	msgbox HoennSeek_Text_KangaEggAfter, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_KangaEggNoRoom:
+	msgbox HoennSeek_Text_KangaEggNoRoom, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_CallKangaskhan::
+	setflag FLAG_HOENN_CALL_KANGASKHAN
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallKangaskhan
+	goto HoennSeek_EventScript_CallEnd
+
+@ From (8,17): over you to (6,17), left to (5,17), up beside its mother.
+HoennSeek_Movement_KangaBabyRun17:
+	jump_2_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	face_left
+	step_end
+
+@ From (8,18): over you to (6,18), left to (5,18), up beside its mother.
+HoennSeek_Movement_KangaBabyRun18:
+	jump_2_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	face_left
+	step_end
+
+HoennSeek_Movement_KangaMotherTurns:
+	face_right
+	step_end
+
+HoennSeek_Movement_KangaHeart:
+	emote_heart
+	step_end
+
+@ ---- Part 30a texts ---------------------------------------------------------
+
+HoennSeek_Text_KangaBaby:
+	.string "A tiny KANGASKHAN is crying all\n"
+	.string "alone at the water's edge!\p"
+	.string "It must have wandered off from\n"
+	.string "its mother and gotten lost.$"
+
+HoennSeek_Text_KangaBabyAsk:
+	.string "It's looking up at you with big,\n"
+	.string "wet eyes. Help it find its mother?$"
+
+HoennSeek_Text_KangaBabyFollows:
+	.string "The baby grabs your leg and won't\n"
+	.string "let go. It's coming with you!\p"
+	.string "Better find its mother before your\n"
+	.string "SAFARI GAME ends.$"
+
+HoennSeek_Text_KangaBabyStays:
+	.string "The baby sniffles and curls up on\n"
+	.string "the sand. It keeps crying…$"
+
+HoennSeek_Text_KangaBabyFollower:
+	.string "The baby clings to you. It keeps\n"
+	.string "sniffing the air and peering\l"
+	.string "toward the woods of the BRUSH.$"
+
+HoennSeek_Text_KangaMotherAlone:
+	.string "The KANGASKHAN paces back and\n"
+	.string "forth, peering out of the woods.\p"
+	.string "Its pouch is empty…$"
+
+HoennSeek_Text_KangaReunionSniff:
+	.string "The baby squeals and wriggles!\n"
+	.string "It smells something up ahead!$"
+
+HoennSeek_Text_KangaReunion:
+	.string "The baby runs to its mother and\n"
+	.string "hugs her leg. Together again!$"
+
+HoennSeek_Text_KangaEgg:
+	.string "The mother KANGASKHAN nudges\n"
+	.string "something to you with her nose.$"
+
+HoennSeek_Text_KangaEggAfter:
+	.string "A LUCKY EGG! She must have been\n"
+	.string "keeping it safe in her nest.$"
+
+HoennSeek_Text_KangaEggNoRoom:
+	.string "Your BAG is too full to take it.\n"
+	.string "She'll keep it safe for now.$"
+
+HoennSeek_Text_KangaMotherEggAgain:
+	.string "The KANGASKHAN still has something\n"
+	.string "for you, tucked in the grass.$"
+
+HoennSeek_Text_KangaMotherAfter:
+	.string "The KANGASKHAN keeps a calm watch\n"
+	.string "over its baby. It looks content.$"
+
+HoennSeek_Text_KangaPairBaby:
+	.string "The baby peeks out of the grass\n"
+	.string "and squeaks happily at you!$"
+
+HoennSeek_Text_CallKangaskhan:
+	.string "Hi, {PLAYER}! It's MAY!\p"
+	.string "One of PROF. BIRCH's aides does\n"
+	.string "fieldwork at the FUCHSIA SAFARI\l"
+	.string "ZONE, and the warden told her a\l"
+	.string "story about you!\p"
+	.string "You walked a lost KANGASKHAN baby\n"
+	.string "all the way back to its mother?\p"
+	.string "That's so sweet! I'd have cried\n"
+	.string "right along with it!$"

@@ -247,12 +247,27 @@ Built by this thread before it took over reviewing. Merged 31b's branch (with `h
 - **Worth Bryan's eye:** HnS's three birds used to sit at their spots from the start; now each needs its feather, so Articuno needs Hoenn's ice chamber (26b) first. Bill's first talk is long (about 16 boxes).
 - Grid: `review-34a.png` in the project's `hoenn-2.0/review/`.
 
-### 40. Review of 31a (PR #92, lane A) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+### 40. Review of 31a (PR #92, lane A) (reviewer, Nov 27) — **approved; merged after re-sync**
 Merged `hoenn` (27r, 27b, 31b, 34a) into the branch: conflicts only in the lane A switch and sections (27b first, then 31a), the lane docs and the hint list (27b's, 31b's and 34a's NPCs, then the Blackthorn skater); `regen_all.sh --check` clean; size row re-measured.
 - **Bug fixed in review:** Brendan's call said "Dad reads every gym's report", but Brendan's dad is Birch; it's May's dad (Norman) who reads the League reports. Now "MAY's dad gets every gym's report from the LEAGUE…" (checked in the emulator: fits the box).
 - **Played:** with all four B1F boulders dropped, at night: ball 1 snatched, you slide on, ball 2, ball 3, the chase into the north-west nook (legs LLLLDLURU, LDDRDR, ULLLLDLURDDDRD, LUULD); cornered line; Lv 60 battle (Razor Claw, Pickpocket). **Knocked out** = stash given, gone that night, back in the nook the next; **run** = stays; **caught** = never shows again. Leaving mid-chase restarts it; nothing by day or with a boulder still up. The Blackthorn skater's hint by stage, Brendan's call once.
 - **Choices for Bryan:** only on B2F; the three ball spots and the nook; needs every B1F boulder dropped; the Blackthorn skater as the hint NPC; the stash comes with a knockout as well as a catch.
 - Grid: `review-31a.png` in the project's `hoenn-2.0/review/`.
+
+### 41. Review of 29 (PR #94) (reviewer, Nov 27) — **merged**
+Built by this thread before it took over reviewing. Merged `hoenn` at #91 into the branch (conflicts only in the size table and the generated hint header); `regen_all.sh --check` clean; size row re-measured.
+- **Fixed in review:** the Onix's hole used `GetDayOfWeek()`, so at midnight it jumped to the next weekday's wall in the middle of the night (27r's rule is `HoennNightWeekday()` for anything weekly at night). Now Tuesday 2 AM still opens Monday's hole and Tuesday 10 PM opens Tuesday's (checked in the emulator).
+- **Played:** the rumble and Monday's hole, no hole by day, the bore, the shiny Onix (Lv 51 on the debug save: cap 56 − 5; Diamond Storm), caught → Metal Coat where it lay, Tuesday's hole after the catch with no rumble, knocked out → gone for the night. Dark Cave's four holes by time of day, one row of rubble per time, the passage, the Three-Segment Dudunsparce caught, the ladder out. Route 21's islet: vines by day (Cut won't help), morning: the shiny Tangela caught, the Miracle Seed, no vines. Brendan's call, the three rumors.
+- **For Bryan (all parts with night "back tomorrow" battles, not just 29):** HnS's daily flags reset at midnight, so a night Pokémon knocked out at 11 PM is back at 12:01 AM the same night (29's Onix, 31a's Sneasel). The docs say "back the next night". Either accept it or add a night-aware reset.
+- **Choices for Bryan:** progress-based levels (cap − 5, floors 40/32/30) instead of Hoenn's 60–70; one hole per weekday into a single bore; the holes keep opening after the catch; one Dunsparce dig per time of day; a ring of Tangela vines (Route 21 has no cove); the three rumor NPCs (Lavender, Violet, Pallet).
+- Grid: `review-29.png` in the project's `hoenn-2.0/review/`.
+
+### 42. Review of 30a (PR #95) (reviewer, Nov 27) — **merged**
+Built by this thread before it took over reviewing. Merged 29's reviewed branch in (one real conflict: `LoadDynamicFollowerPalette` now calls 30a's `HoennFollowerPaletteSpecies` and then 27b's `HoennObjectPaletteSpecies`; both are needed); `regen_all.sh --check` clean; size row re-measured.
+- **Code read:** the baby is the follower while `FLAG_HOENN_KANGA_BABY_FOLLOWING` is set *and* you're in the Safari Zone; it's drawn as `SPECIES_NONE` there (no real Pokémon uses it), with Kangaskhan's palette tag, so a wild Kangaskhan object shares the palette without clashing. Talking to it runs its own script.
+- **Played:** evening on the Beach at SAFARI LEVEL 2, the baby joins and follows (your follower steps aside), through a Safari battle and across the Beach → Brush connection; the mother alone in the nook; the reunion (hearts, LUCKY EGG); the pair afterwards; nothing by day or at level 1; leaving the Safari sends it back to the Beach; the attendant's rumor; May's call. No bugs found.
+- **Choices for Bryan:** evenings only; needs SAFARI LEVEL 2; its own hand-drawn sprite; the Safari's step limit as the timer; the mother's new nook cut into the Brush's trees; a Lucky Egg as the thanks; neither is catchable.
+- Grid: `review-30a.png` in the project's `hoenn-2.0/review/`.
 
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.

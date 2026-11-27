@@ -467,3 +467,21 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 - May's call after the first landing (outside; not inside Mt. Silver).
 - The glass workshop boy's rumor before and after the flyover.
 
+## 2.0 part 29 (shifting tunnels)
+- Rock Tunnel B1F at night: the rumble (once a night), then find that weekday's hole. Try at least two weekdays: is each hole easy enough to spot with Flash?
+- The bore: the shiny Onix, its battle level for your progress, the three item balls, the Metal Coat where it lay. Knock it out and come back the next night.
+- Holes by day: none. After the catch: holes still open, no rumble.
+- Dark Cave's south side: find the burrow hole in the morning, day, evening and night (each in a different spot; with Flash). Is the schedule guessable from the Violet kid's rumor?
+- The burrow: one row cleared per time of day; the fourth opens the passage; the Dudunsparce (Three-Segment form in the summary screen); the ladder back.
+- Route 21 islet (surf there): vines by day, Cut does nothing; mornings the vines step aside and the shiny Tangela waits. Afterwards: the Miracle Seed, no vines.
+- Brendan's call after the Onix (outside).
+- Rumors: Lavender hiker, Violet kid, Pallet man, before and after.
+
+## 2.0 part 30a (the lost Kangaskhan baby)
+- Safari Beach at 6–7 PM (SAFARI LEVEL 2 or higher): the baby on the sand. Not there by day or at level 1.
+- Let it follow you: does its little sprite look right walking in every direction, and through the gate into the Brush?
+- Take it into the Brush's south-west nook (the gap in the trees near the bottom left): the reunion, the hearts, the Lucky Egg. Is the nook easy enough to find, and does it look like natural woods?
+- Run out of steps (or retire) with the baby following: it should be back on the Beach the next evening.
+- Afterwards: the pair together in the nook, both talk lines; a Safari battle mid-follow (the baby still follows after).
+- May's call after the reunion (outside), the Brush attendant's rumor before and after.
+

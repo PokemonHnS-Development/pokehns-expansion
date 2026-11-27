@@ -14,7 +14,9 @@ blocks copied (metatile, collision and elevation) from the map's "source" layout
   {"grid": ["..TT..", ...], "at": [x, y], "legend": {"T": {"from": [sx, sy], "tile": [2, 2]}}}
       paint by hand: each character is a legend entry (" " and "." leave the cell as it is);
       an entry with "tile" repeats that patch anchored at the map's (0,0), so "from" is the
-      patch block that lands on even (x, y)
+      patch block that lands on even (x, y); an entry with "metatile": "0x1e6" keeps the
+      collision and elevation of its "from" block but draws that metatile instead (for
+      a piece no layout uses yet, 2.0 part 30a)
 Any op or legend entry may take "src": LAYOUT_X to copy from another layout with the same
 primary tileset; its blocks must be primary metatiles, or that layout must also share the
 secondary tileset (checked).
@@ -44,6 +46,13 @@ PRIMARY_METATILES = 640  # NUM_METATILES_IN_PRIMARY (HnS layouts)
 
 def layouts():
     return {l["id"]: l for l in json.load(open(P("data/layouts/layouts.json")))["layouts"] if "id" in l}
+
+
+def with_metatile(entry, block):
+    """A legend entry's block, with its "metatile" drawn instead if it names one."""
+    if "metatile" not in entry:
+        return block
+    return (block & ~0x3FF) | int(entry["metatile"], 16)
 
 
 def read_blocks(lay):
@@ -89,7 +98,7 @@ def build(name, m, lays):
                     assert x < w and y < h, (name, "grid outside the map", x, y)
                     pw, ph = e.get("tile", [1, 1])
                     sx, sy = e["from"]
-                    out[y * w + x] = getter(e)(sx + x % pw, sy + y % ph)
+                    out[y * w + x] = with_metatile(e, getter(e)(sx + x % pw, sy + y % ph))
             continue
         g = getter(op)
         sx, sy = op["from"]
@@ -141,7 +150,7 @@ def patch(p, lays):
                 else:
                     assert (sx, sy) not in painted, (p["layout"], "legend block inside the patch", sx, sy)
                     blk = before[sy * w + sx]
-                b[y * w + x] = blk
+                b[y * w + x] = with_metatile(e, blk)
     for x, y in p.get("clear_collision", []):
         b[y * w + x] &= ~COLLISION
     write_blocks(lay, b)
