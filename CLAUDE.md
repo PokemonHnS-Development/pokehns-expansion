@@ -114,14 +114,16 @@ Lane A sizes:
 | Lane setup (lane files, phone chain, hint keys; no content) | 32,703,076 / 831 KB | 32,862,548 / 675 KB |
 | Lane setup synced onto 27a (27a's call moved into lane A's chain, its hint NPC keyed; measured on `hoenn` after #79, #86 and this) | 32,709,828 / 824 KB | 32,869,076 / 669 KB |
 | 26r (reviewer's text fixes for pre-split parts 25a–26b: no size change) | 32,709,828 / 824 KB | 32,869,076 / 669 KB |
+| 27r (review items 34–35: cipher floor lines read from the wall, one word per night; on `hoenn` at #89) | 32,711,444 / 823 KB | 32,870,628 / 667 KB |
+| **2.0** part 27b (Unown Cipher B: 7 night Unown rings, tablet fragments spelling ANCIENT, May's call; Unown forms share one object palette; re-measured after merging 27r and the review fix: follower hidden while a ring is out) | 32,715,460 / 819 KB | 32,874,372 / 664 KB |
 
 Lane B sizes (27a, then 31b on):
 
 | Part | Release | Debug |
 |---|---|---|
 | 27a (Unown Cipher A: Rosetta line in Words Room 1, weekday night words, braille + glow tiles; Brendan's call; re-measured after the review fixes and 24r) | 32,709,924 / 824 KB | 32,869,044 / 669 KB |
-| 31b (Teddiursa honey trail: beekeeper house, honey pine, moon hollow map, Brendan's call; measured after merging `hoenn` at #87: +6,960 B release, +6,976 B debug) | 32,716,788 / 818 KB | 32,876,052 / 662 KB |
-| 34a (the three birds: 2 feathers, roost scenes, Moltres flyover, Bill, May's call; on top of 31b, `hoenn` at #89: +6,400 B release, +6,592 B debug) | 32,723,188 / 811 KB | 32,882,644 / 656 KB |
+| 31b (Teddiursa honey trail: beekeeper house, honey pine, moon hollow map, Brendan's call; re-measured by the reviewer after merging `hoenn` at #88: +6,944 B release, +6,960 B debug) | 32,722,404 / 812 KB | 32,881,332 / 657 KB |
+| 34a (the three birds: 2 feathers, roost scenes, Moltres flyover, Bill, May's call; on top of 31b, `hoenn` at #89 (re-measured in review below): +6,400 B release, +6,592 B debug) | 32,723,188 / 811 KB | 32,882,644 / 656 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
@@ -404,6 +406,8 @@ Lane B sizes (27a, then 31b on):
 
 ## Lane A notes (2.0 parts 27b on)
 Lane A (`hoenn-docs/lanes/lane-a.md`) adds a bullet per part here, at the end of this list, in the same style as the notes above. Its code lives in `src/hoenn_lane_a.c` and `data/scripts/hoenn_lane_a.inc` unless a note says otherwise.
+- **Cipher fixes (27r, review items 34–35):** the Words rooms' sign bg events are repeated on the rows above the floor lines (room 1 row 1, rooms 2–4 rows 1–2), so the line reads from the wall too. **`HoennNightWeekday()`** (`src/hoenn_cipher.c`, declared in `hoenn.h`) is the weekday a night belongs to: at night before noon it returns the previous day, so a night (7 PM–6 AM) is one weekday. Use it, not `GetDayOfWeek()`, for anything weekly that happens at night.
+- **Unown Cipher B (2.0 part 27b):** C in `src/hoenn_lane_a.c` (its header explains the design), scenes in `hoenn_lane_a.inc`, the lab researcher's fragment lines in `hoenn_cipher.inc`, flags in part 27b's section of `hoenn_events.h` (lane A E +0x0B–0x15), call 38. Each weekday's word names a site (`sGlyphSites`): Bell Tower 2F (13,16), Mt. Moon Square (39,12), Ice Path 1F (33,28), Whirl Islands B2F (34,15), Mt. Mortar 1F south (30,15), Union Cave B1F (22,27), Seafoam 1F (15,13) (ring centres). The ring objects (no local IDs: `LOCALID_*` names are global, so the same name on seven maps is redefined) run `HoennSeek_EventScript_GlyphRing` and share `FLAG_HOENN_CIPHER_HIDE_RING`, which each site map's ON_TRANSITION decides (`call HoennSeek_EventScript_GlyphRingArm`; Whirl Islands B2F and Union Cave B1F got ON_TRANSITION entries; Bell Tower's floors share one OnTransition, so the call runs on every floor and answers FALSE off 2F). Shown at night once that weekday's word was seen (`FLAG_HOENN_CIPHER_WORD_SUN + day`) and until its fragment (`FLAG_HOENN_CIPHER_FRAGMENT_SUN + day`). `HoennGlyphRingPrepare` finds the letter's object by script + graphics ID; `HoennGlyphTakeFragment` removes every object running the ring script. **Plain `SPECIES_UNOWN` shows the letter its personality picks** (battle sprites call `GetUnownSpeciesId`), so FOAM's A is recreated with letter 1 (`HoennGlyphSetupBattle`); the other letters are form species. **Every Unown form loads its own copy of the same palette**, so `HoennObjectPaletteSpecies` (one hook in `LoadDynamicFollowerPalette`) gives forms plain Unown's tag: a ring takes one sprite palette. Lane A's specials have their own marked block in `data/specials.inc`. **Sprite memory (review item 36):** each Unown form loads its whole sheet (96 tiles), so `HoennSeek_EventScript_GlyphRingArm` sets `FLAG_TEMP_HIDE_FOLLOWER` while a ring is out; without it a ring of five plus a follower lost letters. Testing: the rings need `FLAG_HOENN_CIPHER_ROSETTA` + the word flags and night (`set_hour 22`); the lab researcher needs the four panel flags and a Hoenn visited flag.
 
 ## Lane B notes (2.0 parts 27a, 31b on)
 Lane B (`hoenn-docs/lanes/lane-b.md`) adds a bullet per part here, at the end of this list. Its code lives in `src/hoenn_lane_b.c` and `data/scripts/hoenn_lane_b.inc` unless a note says otherwise. (27a was started before the split and may use the older files.)

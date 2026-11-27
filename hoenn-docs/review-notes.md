@@ -216,13 +216,30 @@ Each PR lists its "picked without Bryan" choices. These are the ones that change
 - Emulator on the synced debug ROM: Brendan's cipher call rings through the lane chain (after Elm's), the lab scientist alternates his own line and his hint line, a keyed building NPC (Route 6 Bug Club) still alternates.
 - One thing to know: the lane rules say the reviewer "writes notes, not fixes" and sends small fixes back as `NNr` parts. This review fixed 27a's two text bugs in place before merging instead, because 27a's builder had already moved to lane B and the fixes were a few lines.
 
-### 34. The new floor lines can't be read from the wall (part 27a, for lane A's 27r)
+### 34. The new floor lines can't be read from the wall (part 27a, for lane A's 27r) — **done in 27r** (room 1 reads from row 1 too, rooms 2–4 from rows 1 and 2; checked in the emulator)
 - Words Room 1's braille (row 2) and the Unown line under it (row 3) are walkable floor, and so is the row of rooms 2–4's night word. A player who walks up to the north wall ends up standing on the braille, and A at the wall does nothing. Reading works only from one row further back, facing up. (This tripped the reviewer's own emulator test too.)
 - Fix: add the same bg events one row up: room 1 row 1 (`HoennSeek_EventScript_CipherRosetta`, x 2–18 except the spaces) and rooms 2–4 row 2 (`HoennSeek_EventScript_CipherWordSign`). Check first that row 2 in rooms 2–4 has no original sign on it.
 
-### 35. The night word changes at midnight, halfway through the night (part 27a, suggestion for 27r)
+### 35. The night word changes at midnight, halfway through the night (part 27a, suggestion for 27r) — **done in 27r** (`HoennNightWeekday()`: hours after midnight count as the evening's day; Saturday 2 AM shows Friday's UNION in the emulator; 27b's rings use it too)
 - Night runs from evening to 4 AM, but the word follows `GetDayOfWeek`, which turns over at midnight. So on Friday night the rooms show UNION until midnight, then FOAM (Saturday's), and one late night gives two words. The researcher's "a different word every night" is then not quite true.
 - Suggestion: treat hours before `NIGHT_HOUR_END` as the previous day in `HoennCipherDrawRoom`, `HoennCipherTonightWord` and `HoennCipherNoteWord` (one helper), so a night is one word from dusk to dawn. 27b's glyph sites should use the same helper. Bryan can say keep it as is; collecting stays easy either way, since any wall clock changes the day.
+
+### 36. 27b: rings lose letters when a Pokémon follows you (bug, review of PR #88, Nov 27) — **fixed in PR #88 before merging**
+Each Unown form is its own species with its own compressed sprite sheet (6 frames, 96 tiles), and a compressed sheet is loaded whole. On Whirl Islands B2F at night, five letters, the map's other overworld Pokémon and the debug Lapras following the player ran out of sprite memory: H and I were never spawned (WHIRL read W, R, L).
+- **Fix (reviewer, Bryan's go-ahead):** `HoennSeek_EventScript_GlyphRingArm` sets `FLAG_TEMP_HIDE_FOLLOWER` when the map's ring is out, so your Pokémon stays in its ball for that visit (a temp flag; it comes back on the next map).
+- **Checked:** all seven rings walked to from a real entrance with Lapras leading (Ice Path by sliding in): every letter spawned and visible. `review-27b-fix.png` in the project's `hoenn-2.0/review/`.
+- **For later parts:** don't put more than about four *different* Pokémon sprites on one screen; same-species objects share a sheet.
+
+### 37. Review of 27r (PR #93) and 27b (PR #88) (reviewer, Nov 27) — **merged**
+- **27r:** the night word is one word from dusk to dawn (Sat 10 PM FOAM, Sat 2 AM still Friday's UNION, Fri 9 PM UNION, Sat noon none); the word reads from the wall row. Merged as built.
+- **27b:** `regen_all.sh --check` clean; seven rings spell their words, reachable on foot from the entrances (Bell Tower stairs, Mt. Moon Square's cave mouth, Route 44, Whirl B3F ladder, the Mortar ledge passage, Union Cave 1F, Route 20); talking starts the right letter. Bryan approved every choice listed in the PR (sites, ring per seen word, Lv 60–70, fragments as flags, ANCIENT, May's call).
+
+### 38. Review of 31b (PR #90) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+Built by this thread before it took over reviewing, so read with that in mind. Merged `hoenn` at #88 into the branch (one hint-list conflict: kept 27b's `STORY_CIPHER_RINGS` line and 31b's Blackthorn Mart rumor); `regen_all.sh --check` clean; size row re-measured (+6,944 B release).
+- **Played start to finish** on a fresh debug save: HONEY from the beekeeper (once a day), spread on the pine, nobody the same morning, two Teddiursa on a later morning, watch three times (the third says they trust you), shoo keeps the honey and the day's flag, the fourth honey brings the mother, at night she leads you up the claw cliff into the hollow (scene, `FLAG_HOENN_MOON_HOLLOW_FOUND`, stage 2), bears and pool lines by night and day, trail back down, claw marks climb any time afterwards, Brendan's call rings once. No bugs found.
+- **Looks:** the house and the nook sit well in Route 45 at 2×; the hollow is a hand-painted rock bowl. One thing Bryan may not like: a single 2×2 bare-ground patch west of the pool (planned as "where the bears sit", but nobody sits there).
+- **Fog:** Route 45 is a fog-cycle route, so on its fog day the meadow scene is hard to see. That's the weather working as designed.
+- Grid: `review-31b.png` in the project's `hoenn-2.0/review/`.
 
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
