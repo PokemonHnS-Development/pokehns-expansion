@@ -291,6 +291,15 @@ Built by this thread before it took over reviewing. Merged 36's reviewed branch 
 - **Choices for Bryan:** Mewtwo now needs all six pages (HnS had it in the cave from the start); Faraway Island now needs three dawn sightings (HnS gave the OLD SEA MAP free in Vermilion); dawn is 4–8 AM; page spots (a plant because HnS's Game Corner has no basement, Silph's lobby because HnS only has the lobby, Goldenrod's warehouse as the "second hideout"); the plan's Whirlpool/Dive gates dropped; HnS's levels kept (Mewtwo 80); the 4-page cameo; Fuji's role.
 - Grid: `review-35a.png` in the project's `hoenn-2.0/review/`.
 
+### 47. Review of 32 (PR #97, lane A, handed to lane B's builder) (reviewer, Nov 27) — **waiting for Bryan**
+Merged `hoenn` at #100 into the branch (15 files conflicted, all "both sides added": IDs, the lane A call switch, maps/layouts lists, docs; the generated hint files re-run); `regen_all.sh --check` clean; size row re-measured (+4,784 B release over 35a). IDs don't clash with 27b/31a (flags E +0x27–0x2B, daily +1, call 40).
+- **Code read:** `gen_hoenn_lights.py`'s two new path options (`water_only`, `avoid_objects`) leave 25a's path unchanged; Route 41 is at the 64-object limit with the light; the stranded Ampharos' battle and flags; Amphy falls back to HnS's script before the lighthouse is cured and by day.
+- **Fixed in review:** two one-word last lines ("waves." on the shrine stone, "inside…" after the cave opens).
+- **Played (debug save, 10 PM):** the light waits at (41,16); followed it all 13 stops to the ridge (no stop off screen, it keeps to the water); swimming off mid-follow scatters it back to the start; the cave opens with its line; the lagoon (Lanturn + Chinchou school), the shrine stone with and without Slowking's prophecy; out through the channel; by day the cave still leads in and the light is gone. Route 40: the Ampharos on its rock (talk from the water), Lv 60 with Tail Glow; knocked out → "resting" line; caught → gone; May's call. Amphy at the top at night before/after; the cafe and lighthouse sailors' lines before/after.
+- **Needs 41r (#105) when both merge:** `FLAG_HOENN_DAILY_STRANDED_AMPHAROS` is a night flag, so it belongs in `sNightlyFlags` (whichever PR merges second adds it).
+- **Choices for Bryan:** the light swims on the surface (Route 41 has no Dive spots); a sea cave at the ridge's foot as the way in, open for good once found; the lagoon's look (render in `review-32-lagoon-map.png`) and the shrine "stone" being one of Route 41's ordinary boulders; the Ampharos on **Route 40** (Route 41 is full) as a **battle** at Hoenn's scaled level (60–70) rather than a gift from Jasmine (part 29 uses progress levels for Johto events instead); knocked out = back next night; May's call via Jasmine's reports; the two sailors as hint NPCs.
+- Grid: `review-32.png` in the project's `hoenn-2.0/review/`.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 

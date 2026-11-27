@@ -582,8 +582,8 @@ HoennSeek_Text_LanturnIntoCave:
 	.string "The LANTURN swam into the rocks!\p"
 	.string "There's a low sea cave at the foot\n"
 	.string "of the ridge, hidden in its shadow.\p"
-	.string "Its light glows somewhere far\n"
-	.string "inside…$"
+	.string "Its light glows somewhere\n"
+	.string "far inside…$"
 
 HoennSeek_Text_LagoonLanturn:
 	.string "The LANTURN's light sways slowly\n"
@@ -595,8 +595,8 @@ HoennSeek_Text_LagoonChinchou:
 	.string "time with the others.$"
 
 HoennSeek_Text_LagoonShrine:
-	.string "An old stone, worn smooth by the\n"
-	.string "waves.\p"
+	.string "An old stone, worn smooth\n"
+	.string "by the waves.\p"
 	.string "Three small hollows ring a larger\n"
 	.string "one on its top. Something was\l"
 	.string "meant to rest in them…$"
