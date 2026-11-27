@@ -129,6 +129,9 @@
     "RUMOR_ICE_FROSLASS": {"kind": "rumor", "rumor": "ICE_FROSLASS", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}]},
     "STORY_CIPHER_WALL":  {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ASKED"}, {"not_flag": "FLAG_HOENN_CIPHER_ROSETTA"}], "text": ["Did you feel that tremor? A new line of writing turned up inside the RUINS.", "It's got dots on it like nothing from JOHTO. We need someone who's been to HOENN!"]},
     "STORY_CIPHER_NIGHT": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ROSETTA"}, {"not_flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}], "text": ["AT NIGHT WE SPEAK… I've been sleeping here at the lab ever since you read it.", "If the WORDS chambers really light up at night, is it the same word every night? Tell my colleague what you see!"]},
+    "STORY_LANTURN_LIGHTS": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_LAGOON_FOUND"}], "text": ["Sail past the WHIRL ISLANDS after dark and you'll see a light on the water, bobbing along like it wants you to follow.", "Old hands say it leads somewhere no chart shows. Me, I steer clear!"]},
+    "STORY_LANTURN_LAGOON": {"kind": "story", "if": [{"flag": "FLAG_HOENN_LAGOON_FOUND"}], "text": ["You followed that light at night? Then you've seen where it goes.", "Some places the sea keeps for itself. Don't worry, I won't tell a soul."]},
+    "STORY_AMPHY_NIGHT": {"kind": "story", "if": [{"var": "VAR_OLIVINE_CITY_STATE", "min": 5}, {"not_flag": "FLAG_HOENN_CAUGHT_STRANDED_AMPHAROS"}], "text": ["AMPHY's well again, but JASMINE says it won't settle at night.", "It just stands at the top of the LIGHTHOUSE, staring out to sea."]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -350,7 +353,9 @@
     {"map": "MossdeepCity",                      "script": "MossdeepCity_EventScript_Sailor",                      "lines": ["STORY_NIGHT_DIVE", "STORY_TRENCH_DARK", "STORY_TRENCH_GUARDIANS"]},
     {"map": "ShoalCave_LowTideEntranceRoom",     "script": "ShoalCave_LowTideEntranceRoom_EventScript_ShellBellExpert", "lines": ["STORY_ICE_HOLE", "STORY_ICE_FEATHER", "STORY_ICE_FROSLASS", "STORY_ICE_GLALIE"]},
     {"map": "PacifidlogTown_PokemonCenter_1F",   "script": "PacifidlogTown_PokemonCenter_1F_EventScript_OldMan",  "lines": ["RUMOR_ICE_FROSLASS", "RUMOR_ICE_CHAMBER"]},
-    {"map": "RuinsOfAlph_Lab_hns",               "script": "RuinsOfAlph_Lab_EventScript_Scientist1", "key": "AlphLabScientist", "lines": ["STORY_CIPHER_NIGHT", "STORY_CIPHER_WALL"]}
+    {"map": "RuinsOfAlph_Lab_hns",               "script": "RuinsOfAlph_Lab_EventScript_Scientist1", "key": "AlphLabScientist", "lines": ["STORY_CIPHER_NIGHT", "STORY_CIPHER_WALL"]},
+    {"map": "OlivineCity_Cafe_hns",              "script": "OlivineCity_EventScript_SailorB", "key": "OlivineCafeSailor", "lines": ["STORY_LANTURN_LAGOON", "STORY_LANTURN_LIGHTS"]},
+    {"map": "OlivineCity_Lighthouse_hns",        "script": "OlivineLighthouse_EventScript_1FSailor", "key": "LighthouseSailor", "lines": ["STORY_AMPHY_NIGHT"]}
   ],
 
   "forecasts": [

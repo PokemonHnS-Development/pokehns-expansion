@@ -1154,6 +1154,7 @@
   "VAR_NEW_MAUVILLE_STATE": "remapped: aliased onto ['VAR_NOBLE_ELECTRODE']",
   "VAR_OLDALE_RIVAL_STATE": "remapped: aliased onto ['VAR_RADIO_LUCKY_ID']",
   "VAR_OLDALE_TOWN_STATE": "remapped: aliased onto ['VAR_2']",
+  "VAR_OLIVINE_CITY_STATE": "kept: HnS owns or uses this name (0x4077)",
   "VAR_PETALBURG_CITY_STATE": "remapped: aliased onto ['VAR_BLACKTHORN_GYM_STATE']",
   "VAR_PETALBURG_GYM_STATE": "remapped: aliased onto ['VAR_SAFARI_ZONE_GATE_STATE']",
   "VAR_PETALBURG_WOODS_STATE": "remapped: aliased onto ['VAR_ALAN_ITEM_HNS']",
