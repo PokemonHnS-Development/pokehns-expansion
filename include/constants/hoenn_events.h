@@ -516,6 +516,20 @@
 #define FLAG_HOENN_CALL_CIPHER_FRAGMENT (HOENN_LANE_A_FLAGS_E + 0x14) // May: the lab phoned Birch about the fragment
 #define FLAG_HOENN_CIPHER_TABLET        (HOENN_LANE_A_FLAGS_E + 0x15) // the lab put all seven together (part 28 starts here)
 
+// ---- Part 28: Unown Cipher C, the sanctum (data/scripts/hoenn_lane_a.inc, src/hoenn_lane_a.c) ----
+// The tablet's mark is the boulder in the middle of the Ruins of Alph. At night
+// the Unown open it, and a ladder leads down to the sanctum: a mural that calls
+// any of the 28 letters (once a day) and the final inscription (part 37's start).
+#define FLAG_HOENN_CIPHER_SANCTUM_OPEN  (HOENN_LANE_A_FLAGS_E + 0x16) // the boulder is open (redrawn on every load)
+#define FLAG_HOENN_CIPHER_HIDE_SEAL     (HOENN_LANE_A_FLAGS_E + 0x17) // the opening scene's three Unown (hidden on arrival)
+#define FLAG_HOENN_CIPHER_INSCRIPTION   (HOENN_LANE_A_FLAGS_E + 0x18) // read the final inscription (part 37 starts here)
+#define FLAG_HOENN_CIPHER_LAB_SANCTUM   (HOENN_LANE_A_FLAGS_E + 0x19) // the lab researcher heard about the inscription
+#define FLAG_HOENN_CALL_CIPHER_SANCTUM  (HOENN_LANE_A_FLAGS_E + 0x1A) // Brendan: the lab phoned Birch about the sanctum
+                                                                       // (0x1B-0x1F spare for part 28)
+#define FLAG_HOENN_DAILY_SANCTUM_MURAL  (HOENN_LANE_A_DAILY + 5)      // the mural called a letter today
+                                                                       // (+0..4 are 31a, 32 and 35b's)
+#define HOENN_SANCTUM_LETTERS 28 // A-Z ! ? (the mural's menu; index 28 is CANCEL)
+
 // ---- Lane B: parts 31b, 34a, 29, 30a, 30b, 33, 36, 35a (hoenn-docs/lanes/lane-b.md) ----
 // (Kept below lane A's sections, so its additions land at the end of the file.)
 #define HOENN_LANE_B_FLAGS_E        (HOENN_FLAGS_E_JOHTO_KANTO + 0x30)     // 0x21D0, 48 flags

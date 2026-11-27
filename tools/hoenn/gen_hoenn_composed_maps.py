@@ -21,7 +21,8 @@ secondary tileset (checked).
 
 Keeping the rows' and columns' parity between source and destination keeps 2x2
 patterns (trees, checkered grass) lined up. "border" is the 2x2 border's top-left
-block in the source. Every cell must be painted.
+block in the source, or "source" for the source layout's own border (2.0 part 28:
+the Ruins' black border has no 2x2 block of its own in the map). Every cell must be painted.
 
 A patch changes blocks of an existing layout in place:
   {"layout": L, "cells": [[x, y], ...], "from": [sx, sy]}  copies the layout's own block
@@ -106,8 +107,11 @@ def build(name, m, lays):
     missing = [(i % w, i // w) for i, b in enumerate(out) if b is None]
     assert not missing, (name, "unpainted cells", missing[:8])
     write_blocks(lay, out)
-    bx, by = m["border"]
-    border = [get(bx, by), get(bx + 1, by), get(bx, by + 1), get(bx + 1, by + 1)]
+    if m["border"] == "source":
+        border = list(struct.unpack("<4H", open(P(src["border_filepath"]), "rb").read()))
+    else:
+        bx, by = m["border"]
+        border = [get(bx, by), get(bx + 1, by), get(bx, by + 1), get(bx + 1, by + 1)]
     open(P(lay["border_filepath"]), "wb").write(struct.pack("<4H", *border))
     print(f"{name}: {w}x{h}")
 
