@@ -142,6 +142,9 @@
     "STORY_CIPHER_NIGHT": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ROSETTA"}, {"not_flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}], "text": ["AT NIGHT WE SPEAK… I've been sleeping here at the lab ever since you read it.", "If the WORDS chambers really light up at night, is it the same word every night? Tell my colleague what you see!"]},
     "STORY_CIPHER_RINGS": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}, {"not_flag": "FLAG_HOENN_CIPHER_TABLET"}], "text": ["Hikers keep phoning the lab. They see UNOWN floating in a circle at night, deep in the caves.", "Always somewhere quiet, away from the path. Is it the places from the words?"]},
 
+    "STORY_ICE_THIEF": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_SNEASEL_STASH"}], "text": ["Items keep vanishing off the ice deep down in the ICE PATH. Only at night!", "CLAIR thinks it's a POKéMON. Whatever it is, it's fast on the ice."]},
+    "STORY_ICE_THIEF_NOOK": {"kind": "story", "if": [{"flag": "FLAG_HOENN_SNEASEL_STASH"}, {"not_flag": "FLAG_HOENN_CAUGHT_ICE_SNEASEL"}], "text": ["That SNEASEL from the ICE PATH still comes back to its corner at night.", "It's lost its hoard, but it hasn't lost that grin!"]},
+
     "FORECAST":       {"kind": "forecast"}
   },
 
@@ -405,7 +408,8 @@
     {"map": "LavenderTown_hns",                  "script": "LavenderTown_EventScript_PokefanM", "key": "LavenderPokefan", "lines": ["RUMOR_ONIX_BORE"]},
     {"map": "VioletCity_hns",                    "script": "VioletCity_EventScript_Youngster", "key": "VioletYoungster", "lines": ["RUMOR_DUNSPARCE_BURROW"]},
     {"map": "PalletTown_hns",                    "script": "PalletTown_EventScript_Fatman", "key": "PalletFatman", "lines": ["RUMOR_TANGELA_VINES"]},
-    {"map": "FuchsiaCity_SafariZoneBrush_hns",   "script": "SafariZoneFuchsia_EventScript_Attendant1", "key": "SafariBrushWarden", "lines": ["RUMOR_KANGA_BABY"]}
+    {"map": "FuchsiaCity_SafariZoneBrush_hns",   "script": "SafariZoneFuchsia_EventScript_Attendant1", "key": "SafariBrushWarden", "lines": ["RUMOR_KANGA_BABY"]},
+    {"map": "BlackthornCity_hns",                "script": "BlackthornCity_EventScript_CoolTrainerF2", "key": "BlackthornSkater", "lines": ["STORY_ICE_THIEF", "STORY_ICE_THIEF_NOOK"]}
   ],
 
   "forecasts": [
