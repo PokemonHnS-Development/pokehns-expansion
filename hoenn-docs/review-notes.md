@@ -298,7 +298,7 @@ Item 41's question: Bryan chose a night-aware reset. A night event's daily flag 
 - Grid: `41r_night_reset.png` in the project's `hoenn-2.0/review/`.
 - **For the lane A PRs still open (32, 28, 35b) and 33:** any new night "back tomorrow night" flag goes in `sNightlyFlags`.
 
-### 48. Review of 28 (PR #101, lane A) (reviewer, Nov 27) — **waiting for Bryan**
+### 48. Review of 28 (PR #101, lane A) (reviewer, Nov 27) — **approved by Bryan; merged**
 Merged `hoenn` at #100 and #105 into the branch (CLAUDE.md size rows only); `regen_all.sh --check` clean; size row re-measured.
 - **Code read:** the boulder (sign bg event, night check, `setmetatile` on the scene and on every ON_LOAD), the seal and the sanctum hide your follower (five Unown forms, review item 36's sprite-memory rule); the mural's `dynmultichoice` of 28 forms + CANCEL; `HoennSanctumLetter` → 27b's `HoennGlyphSetupBattle` (plain Unown gets an A personality); ran = pick again, otherwise the daily flag. The mural can be visited by day too, but the builder put its daily flag in 41r's nightly list while merging #105, so one battle per night (noon to noon); fine either way, since you mostly come at night. The radio hook writes at most 29 bytes into a 40-byte line buffer. Brendan's call sits after 31a's in `HoennLaneADueCall`.
 - **Fixed in review:**
