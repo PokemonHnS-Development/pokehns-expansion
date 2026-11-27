@@ -15,7 +15,7 @@ Only lane B's builder edits this file (the reviewer may add a line when it merge
 | 30a | PR open, Nov 27 | `v2-30a-kangaskhan-baby`, PR #95 (stacked on #94) | the baby follows as the follower Pokémon: `HoennFollowerOverride` hooks in `src/event_object_movement.c` |
 | 30b | PR open, Nov 27 | `v2-30b-tauros-stampede`, PR #96 (stacked on #95) | herd task in `src/hoenn_lane_b.c` (`Task_HoennStampede`); `FuchsiaCity_SafariZoneHighland_hoenn` |
 | 33 | — | — | waits for lane A's 32; freezes wild tables (rule 3.6). Built after 36, since 32 wasn't merged when 30b was done |
-| 36 | PR open, Nov 27 | `v2-36-weather-legendaries`, PR #TBD (stacked on #96) | legend helpers `HoennLegendState`/`HoennLegendBattleEnded` (`src/hoenn_lane_b.c`); the ORBS' weather `HoennOrbWeather` (hook in `src/hoenn_time.c`) |
+| 36 | PR open, Nov 27 | `v2-36-weather-legendaries`, PR #98 (stacked on #96) | legend helpers `HoennLegendState`/`HoennLegendBattleEnded` (`src/hoenn_lane_b.c`); the ORBS' weather `HoennOrbWeather` (hook in `src/hoenn_time.c`) |
 | 35a | — | — | |
 
 ## Claims on shared things
