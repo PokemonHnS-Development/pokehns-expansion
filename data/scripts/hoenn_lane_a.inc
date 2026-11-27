@@ -13,9 +13,9 @@ HoennSeek_EventScript_PhoneEventLaneA::
 	case HOENN_CALL_CIPHER, HoennSeek_EventScript_CallCipher @ part 27a (hoenn_cipher.inc)
 	case HOENN_CALL_CIPHER_FRAGMENT, HoennSeek_EventScript_CallCipherFragment @ part 27b
 	case HOENN_CALL_SNEASEL, HoennSeek_EventScript_CallSneasel @ part 31a
+	case HOENN_CALL_CIPHER_SANCTUM, HoennSeek_EventScript_CallCipherSanctum @ part 28
 	case HOENN_CALL_AMPHAROS, HoennSeek_EventScript_CallAmpharos @ part 32
 	case HOENN_CALL_LUGIA, HoennSeek_EventScript_CallLugia @ part 34b
-	case HOENN_CALL_CIPHER_SANCTUM, HoennSeek_EventScript_CallCipherSanctum @ part 28
 	goto HoennSeek_EventScript_PhoneEventLaneB @ lane B's calls (hoenn_lane_b.inc)
 
 @ ============================================================================
@@ -374,122 +374,6 @@ HoennSeek_Text_CallSneasel:
 	.string "And a trainer from out of town\n"
 	.string "finally cornered it. That was\l"
 	.string "you, wasn't it? Ha! Nice one!$"
-
-@ ============================================================================
-@ Part 32: Olivine nights (Route 41, Route41_Lagoon_hoenn, Route 40, Olivine Lighthouse)
-@ The Lanturn lights: at night a LANTURN's light waits off Route 41's north
-@ shore (41,17) and drifts on whenever you swim close (src/hoenn_lights.c,
-@ path LANTURN_LIGHTS in data/hoenn/light_paths.json: on the water only,
-@ around the whirlpools and swimmers). It leads south-east to the foot of the
-@ east ridge, where it swims into a sea cave (57,53) that nobody had noticed.
-@ The cave stays open from then on (ON_LOAD draws it); swimming under it
-@ (57,54) takes you into the hidden lagoon, where a LANTURN and its CHINCHOU
-@ school light an old stone on the beach: Lugia's shrine (part 34b adds what
-@ the stone does). The lagoon's channel (16-17, 23) leads back out.
-@ The stranded AMPHAROS: at night it stands on a sea rock off Route 40 (32,32),
-@ blinking its tail. AMPHY, at the top of the lighthouse, watches that light
-@ after dark. (Route 41 already has 64 object templates, the most a map can
-@ hold, so it lives on Route 40, the sea right below the lighthouse. Its
-@ template elevation is 4 so it's drawn above the rock's top layer; standing
-@ on an elevation-0 rock tile, it can still be talked to from the water.)
-@ It's too frightened to swim back: it climbs on behind you, and the first
-@ step you take on land (Route 40's beach is eight tiles north; any shore on
-@ any map works) it hops off and runs home to the lighthouse, where it stays next to AMPHY (May calls). A rescue, not a
-@ battle or a catch (Bryan, 32 review).
-@ ============================================================================
-
-@ One `call` at the top of Route 41's OnTransition.
-HoennSeek_EventScript_Route41Night::
-	setflag FLAG_HOENN_HIDE_LANTURN_LIGHT
-	call_if_set FLAG_HOENN_LAGOON_FOUND, HoennSeek_EventScript_ArmLagoonCave
-	call HoennSeek_EventScript_ArmLugiaCameo @ part 34b
-	goto_if_set FLAG_HOENN_LAGOON_FOUND, HoennSeek_EventScript_Route41NightDone
-	gettimeofday
-	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_Route41NightDone
-	clearflag FLAG_HOENN_HIDE_LANTURN_LIGHT
-HoennSeek_EventScript_Route41NightDone:
-	return
-
-@ One `call` at the top of Route 40's OnTransition. Hidden while it rides
-@ with you, or once it's home.
-HoennSeek_EventScript_Route40Night::
-	setflag FLAG_HOENN_HIDE_STRANDED_AMPHAROS
-	goto_if_set FLAG_HOENN_RESCUED_AMPHAROS, HoennSeek_EventScript_Route41NightDone
-	goto_if_set FLAG_HOENN_AMPHAROS_RIDING, HoennSeek_EventScript_Route41NightDone
-	gettimeofday
-	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_Route41NightDone
-	clearflag FLAG_HOENN_HIDE_STRANDED_AMPHAROS
-	return
-
-HoennSeek_EventScript_ArmLagoonCave:
-	setvar VAR_TEMP_3, 1
-	return
-
-@ Route 41's ON_LOAD.
-HoennSeek_EventScript_Route41OnLoad::
-	call_if_set FLAG_HOENN_LAGOON_FOUND, HoennSeek_EventScript_DrawLagoonCave
-	end
-
-@ The east ridge's bottom edge at (57,53) becomes a cave mouth (the Whirl
-@ Islands' own, which fits the ridge's bottom row; still a wall).
-HoennSeek_EventScript_DrawLagoonCave:
-	setmetatile 57, 53, 0x368, TRUE
-	return
-
-@ Talking to the light while it waits.
-HoennSeek_EventScript_LanturnLight::
-	lock
-	playmoncry SPECIES_LANTURN, CRY_MODE_NORMAL
-	msgbox HoennSeek_Text_LanturnLightBlinks, MSGBOX_DEFAULT
-	waitmoncry
-	release
-	end
-
-@ Started by src/hoenn_lights.c at the last stop (57,55), below the ridge.
-HoennSeek_EventScript_LanturnLightsEnd::
-	lockall
-	playmoncry SPECIES_LANTURN, CRY_MODE_NORMAL
-	applymovement LOCALID_HOENN_LANTURN_LIGHT, HoennSeek_Movement_LanturnIntoCave
-	waitmovement 0
-	waitmoncry
-	removeobject LOCALID_HOENN_LANTURN_LIGHT
-	setflag FLAG_HOENN_HIDE_LANTURN_LIGHT
-	setflag FLAG_HOENN_LAGOON_FOUND
-	call HoennSeek_EventScript_DrawLagoonCave
-	special DrawWholeMapView
-	playse SE_M_BUBBLE
-	waitse
-	msgbox HoennSeek_Text_LanturnIntoCave, MSGBOX_DEFAULT
-	call HoennSeek_EventScript_ArmLagoonCave
-	releaseall
-	end
-
-HoennSeek_Movement_LanturnIntoCave:
-	walk_slow_up
-	walk_slow_up
-	step_end
-
-@ Coord trigger under the cave (57,54), once it's open (VAR_TEMP_3 = 1).
-HoennSeek_EventScript_LagoonCave::
-	lockall
-	warp MAP_ROUTE41_LAGOON_HOENN, 16, 22
-	waitstate
-	releaseall
-	end
-
-@ Coord triggers on the lagoon channel's last row (16-17, 23).
-HoennSeek_EventScript_LagoonExit::
-	lockall
-	warp MAP_ROUTE41_HNS, 57, 55
-	waitstate
-	releaseall
-	end
-
-HoennSeek_EventScript_LagoonLanturn::
-	lock
-	faceplayer
-	playmoncry SPECIES_LANTURN, CRY_MODE_NORMAL
-	msgbox HoennSeek_Text_LagoonLanturn, MSGBOX_DEFAULT
 @ ============================================================================
 @ Part 28: Unown Cipher C, the sanctum (src/hoenn_lane_a.c has the design)
 @ The tablet's mark is the boulder in the middle of the RUINS OF ALPH (Outside,
@@ -584,6 +468,373 @@ HoennSeek_EventScript_SanctumUnown::
 	release
 	end
 
+@ The mural (the north wall's frieze, signs facing north on row 1).
+HoennSeek_EventScript_SanctumMural::
+	lockall
+	goto_if_set FLAG_HOENN_DAILY_SANCTUM_MURAL, HoennSeek_EventScript_SanctumMuralQuiet
+	msgbox HoennSeek_Text_SanctumMural, MSGBOX_DEFAULT
+	message HoennSeek_Text_SanctumMuralWhich
+	waitmessage
+	dynmultichoice 19, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, HoennSeek_Text_SanctumLetter0, HoennSeek_Text_SanctumLetter1, HoennSeek_Text_SanctumLetter2, HoennSeek_Text_SanctumLetter3, HoennSeek_Text_SanctumLetter4, HoennSeek_Text_SanctumLetter5, HoennSeek_Text_SanctumLetter6, HoennSeek_Text_SanctumLetter7, HoennSeek_Text_SanctumLetter8, HoennSeek_Text_SanctumLetter9, HoennSeek_Text_SanctumLetter10, HoennSeek_Text_SanctumLetter11, HoennSeek_Text_SanctumLetter12, HoennSeek_Text_SanctumLetter13, HoennSeek_Text_SanctumLetter14, HoennSeek_Text_SanctumLetter15, HoennSeek_Text_SanctumLetter16, HoennSeek_Text_SanctumLetter17, HoennSeek_Text_SanctumLetter18, HoennSeek_Text_SanctumLetter19, HoennSeek_Text_SanctumLetter20, HoennSeek_Text_SanctumLetter21, HoennSeek_Text_SanctumLetter22, HoennSeek_Text_SanctumLetter23, HoennSeek_Text_SanctumLetter24, HoennSeek_Text_SanctumLetter25, HoennSeek_Text_SanctumLetter26, HoennSeek_Text_SanctumLetter27, HoennSeek_Text_SanctumCancel
+	closemessage
+	goto_if_ge VAR_RESULT, HOENN_SANCTUM_LETTERS, HoennSeek_EventScript_SanctumMuralCancel
+	special HoennSanctumLetter
+	msgbox HoennSeek_Text_SanctumMuralCalls, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_UNOWN, CRY_MODE_ENCOUNTER
+	waitmoncry
+	special HoennGlyphSetupBattle
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, HoennSeek_EventScript_SanctumMuralRan
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, HoennSeek_EventScript_SanctumMuralRan
+	setflag FLAG_HOENN_DAILY_SANCTUM_MURAL
+	msgbox HoennSeek_Text_SanctumMuralAfter, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_SanctumMuralRan:
+	msgbox HoennSeek_Text_SanctumMuralRan, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_SanctumMuralCancel:
+	msgbox HoennSeek_Text_SanctumMuralCancel, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_SanctumMuralQuiet:
+	msgbox HoennSeek_Text_SanctumMuralQuiet, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ The final inscription (the middle statue).
+HoennSeek_EventScript_SanctumInscription::
+	lockall
+	msgbox HoennSeek_Text_SanctumInscriptionSee, MSGBOX_DEFAULT
+	braillemessage HoennSeek_Braille_Sinjoh
+	waitbuttonpress
+	closebraillemessage
+	msgbox HoennSeek_Text_SanctumInscriptionRead, MSGBOX_DEFAULT
+	goto_if_set FLAG_HOENN_CIPHER_INSCRIPTION, HoennSeek_EventScript_SanctumInscriptionEnd
+	setflag FLAG_HOENN_CIPHER_INSCRIPTION
+	msgbox HoennSeek_Text_SanctumInscriptionLab, MSGBOX_DEFAULT
+HoennSeek_EventScript_SanctumInscriptionEnd:
+	releaseall
+	end
+
+@ Brendan: the Ruins lab phoned Birch once it read the inscription with you.
+HoennSeek_EventScript_CallCipherSanctum::
+	setflag FLAG_HOENN_CALL_CIPHER_SANCTUM
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallCipherSanctum
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_Braille_Sinjoh:
+	brailleformat 0, 0, 0, 0, 0, 0
+	.braille "SINJOH\n"
+	.braille "THREE SLEEP$"
+
+HoennSeek_Text_AlphBoulderDay:
+	.string "This boulder sits right where the\n"
+	.string "tablet's mark is.\p"
+	.string "Faint UNOWN letters are worn into\n"
+	.string "its face, too faint to read…\p"
+	.string "AT NIGHT WE SPEAK, the braille in\n"
+	.string "the RUINS said.$"
+
+HoennSeek_Text_AlphBoulderNight:
+	.string "The worn UNOWN letters on the\n"
+	.string "boulder are glowing!\p"
+	.string "A-N-C-I-E-N-T. The same word as\n"
+	.string "the tablet!$"
+
+HoennSeek_Text_AlphBoulderGather:
+	.string "UNOWN are gathering around the\n"
+	.string "stone!$"
+
+HoennSeek_Text_AlphBoulderOpens:
+	.string "The UNOWN are gone.\p"
+	.string "The boulder has split open. A\n"
+	.string "ladder leads down into the dark…$"
+
+HoennSeek_Text_AlphBoulderIsOpen:
+	.string "The opening in the boulder leads\n"
+	.string "down into the RUINS.$"
+
+HoennSeek_Text_SanctumUnown:
+	.string "The UNOWN drifts by without a\n"
+	.string "sound. It doesn't seem to mind you.$"
+
+HoennSeek_Text_SanctumMural:
+	.string "The wall is carved with UNOWN of\n"
+	.string "every shape, even ! and ?.\p"
+	.string "As you look along it, the letters\n"
+	.string "seem to stir…$"
+
+HoennSeek_Text_SanctumMuralWhich:
+	.string "Which letter will you call?$"
+
+HoennSeek_Text_SanctumMuralCalls:
+	.string "The letter {STR_VAR_1} glows on the wall…\n"
+	.string "and an UNOWN {STR_VAR_1} slips out of it!$"
+
+HoennSeek_Text_SanctumMuralAfter:
+	.string "The mural is still again. The UNOWN\n"
+	.string "won't answer again until tomorrow.$"
+
+HoennSeek_Text_SanctumMuralRan:
+	.string "The UNOWN drifted back into the\n"
+	.string "wall. The letters still stir.$"
+
+HoennSeek_Text_SanctumMuralCancel:
+	.string "The letters settle back into the\n"
+	.string "stone.$"
+
+HoennSeek_Text_SanctumMuralQuiet:
+	.string "The mural is still. The UNOWN won't\n"
+	.string "answer again until tomorrow.$"
+
+HoennSeek_Text_SanctumInscriptionSee:
+	.string "UNOWN letters circle the statue,\n"
+	.string "with braille carved under them.$"
+
+HoennSeek_Text_SanctumInscriptionRead:
+	.string "With the UNOWN letters and the\n"
+	.string "braille, you can read all of it:\p"
+	.string "WE WERE BORN AT SINJOH, PAST\n"
+	.string "THE SNOWS.\p"
+	.string "THREE SLEEP THERE BEHIND SEALED\n"
+	.string "DOORS. THE OLDEST OF THE DEEP AND\l"
+	.string "THE GREATEST OF THE SEA WAKE THEM.$"
+
+HoennSeek_Text_SanctumInscriptionLab:
+	.string "The lab at the RUINS will want to\n"
+	.string "hear about this!$"
+
+HoennSeek_Text_SanctumCancel:
+	.string "CANCEL$"
+
+HoennSeek_Text_SanctumLetter0:
+	.string "UNOWN A$"
+
+HoennSeek_Text_SanctumLetter1:
+	.string "UNOWN B$"
+
+HoennSeek_Text_SanctumLetter2:
+	.string "UNOWN C$"
+
+HoennSeek_Text_SanctumLetter3:
+	.string "UNOWN D$"
+
+HoennSeek_Text_SanctumLetter4:
+	.string "UNOWN E$"
+
+HoennSeek_Text_SanctumLetter5:
+	.string "UNOWN F$"
+
+HoennSeek_Text_SanctumLetter6:
+	.string "UNOWN G$"
+
+HoennSeek_Text_SanctumLetter7:
+	.string "UNOWN H$"
+
+HoennSeek_Text_SanctumLetter8:
+	.string "UNOWN I$"
+
+HoennSeek_Text_SanctumLetter9:
+	.string "UNOWN J$"
+
+HoennSeek_Text_SanctumLetter10:
+	.string "UNOWN K$"
+
+HoennSeek_Text_SanctumLetter11:
+	.string "UNOWN L$"
+
+HoennSeek_Text_SanctumLetter12:
+	.string "UNOWN M$"
+
+HoennSeek_Text_SanctumLetter13:
+	.string "UNOWN N$"
+
+HoennSeek_Text_SanctumLetter14:
+	.string "UNOWN O$"
+
+HoennSeek_Text_SanctumLetter15:
+	.string "UNOWN P$"
+
+HoennSeek_Text_SanctumLetter16:
+	.string "UNOWN Q$"
+
+HoennSeek_Text_SanctumLetter17:
+	.string "UNOWN R$"
+
+HoennSeek_Text_SanctumLetter18:
+	.string "UNOWN S$"
+
+HoennSeek_Text_SanctumLetter19:
+	.string "UNOWN T$"
+
+HoennSeek_Text_SanctumLetter20:
+	.string "UNOWN U$"
+
+HoennSeek_Text_SanctumLetter21:
+	.string "UNOWN V$"
+
+HoennSeek_Text_SanctumLetter22:
+	.string "UNOWN W$"
+
+HoennSeek_Text_SanctumLetter23:
+	.string "UNOWN X$"
+
+HoennSeek_Text_SanctumLetter24:
+	.string "UNOWN Y$"
+
+HoennSeek_Text_SanctumLetter25:
+	.string "UNOWN Z$"
+
+HoennSeek_Text_SanctumLetter26:
+	.string "UNOWN !$"
+
+HoennSeek_Text_SanctumLetter27:
+	.string "UNOWN ?$"
+
+HoennSeek_Text_CallCipherSanctum:
+	.string "Hey, {PLAYER}! BRENDAN here.\p"
+	.string "The RUINS OF ALPH lab just phoned\n"
+	.string "my dad again. You found a room\l"
+	.string "under a boulder?\p"
+	.string "And an UNOWN carving about three\n"
+	.string "of something sleeping at SINJOH?\p"
+	.string "Dad says the oldest of the deep\n"
+	.string "could be RELICANTH. It hasn't\l"
+	.string "changed in a hundred million years.\p"
+	.string "And the greatest of the sea… that\n"
+	.string "has to be WAILORD!\p"
+	.string "Sounds like a Hoenn job to me.\n"
+	.string "Good luck!$"
+
+@ ============================================================================
+@ Part 32: Olivine nights (Route 41, Route41_Lagoon_hoenn, Route 40, Olivine Lighthouse)
+@ The Lanturn lights: at night a LANTURN's light waits off Route 41's north
+@ shore (41,17) and drifts on whenever you swim close (src/hoenn_lights.c,
+@ path LANTURN_LIGHTS in data/hoenn/light_paths.json: on the water only,
+@ around the whirlpools and swimmers). It leads south-east to the foot of the
+@ east ridge, where it swims into a sea cave (57,53) that nobody had noticed.
+@ The cave stays open from then on (ON_LOAD draws it); swimming under it
+@ (57,54) takes you into the hidden lagoon, where a LANTURN and its CHINCHOU
+@ school light an old stone on the beach: Lugia's shrine (part 34b adds what
+@ the stone does). The lagoon's channel (16-17, 23) leads back out.
+@ The stranded AMPHAROS: at night it stands on a sea rock off Route 40 (31,32),
+@ blinking its tail. AMPHY, at the top of the lighthouse, watches that light
+@ after dark. (Route 41 already has 64 object templates, the most a map can
+@ hold, so it lives on Route 40, the sea right below the lighthouse. Its
+@ template elevation is 4 so it's drawn above the rock's top layer; standing
+@ on an elevation-0 rock tile, it can still be talked to from the water.)
+@ A rescue, not a battle or a catch (Bryan, 32 review). It's too frightened
+@ to come near you at first: it takes a BERRY from you once a night, and after
+@ the third it trusts you and climbs on behind you. It rides as your follower
+@ Pokémon, so the moment you land on any shore it's there; your first step
+@ ashore it hops off and runs, and a short scene at the lighthouse top shows
+@ it reaching JASMINE and AMPHY, then you're back where you landed. It lives
+@ there from then on (May calls). VAR_HOENN_AMPHAROS_STATE has the stages.
+@ ============================================================================
+
+@ One `call` at the top of Route 41's OnTransition.
+HoennSeek_EventScript_Route41Night::
+	setflag FLAG_HOENN_HIDE_LANTURN_LIGHT
+	call_if_set FLAG_HOENN_LAGOON_FOUND, HoennSeek_EventScript_ArmLagoonCave
+	call HoennSeek_EventScript_ArmLugiaCameo @ part 34b
+	goto_if_set FLAG_HOENN_LAGOON_FOUND, HoennSeek_EventScript_Route41NightDone
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_Route41NightDone
+	clearflag FLAG_HOENN_HIDE_LANTURN_LIGHT
+HoennSeek_EventScript_Route41NightDone:
+	return
+
+@ One `call` at the top of Route 40's OnTransition. Hidden while it rides
+@ with you, or once it's home.
+HoennSeek_EventScript_Route40Night::
+	setflag FLAG_HOENN_HIDE_STRANDED_AMPHAROS
+	goto_if_ge VAR_HOENN_AMPHAROS_STATE, HOENN_AMPHAROS_RIDING, HoennSeek_EventScript_Route41NightDone
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_Route41NightDone
+	clearflag FLAG_HOENN_HIDE_STRANDED_AMPHAROS
+	return
+
+HoennSeek_EventScript_ArmLagoonCave:
+	setvar VAR_TEMP_3, 1
+	return
+
+@ Route 41's ON_LOAD.
+HoennSeek_EventScript_Route41OnLoad::
+	call_if_set FLAG_HOENN_LAGOON_FOUND, HoennSeek_EventScript_DrawLagoonCave
+	end
+
+@ The east ridge's bottom edge at (57,53) becomes a cave mouth (the Whirl
+@ Islands' own, which fits the ridge's bottom row; still a wall).
+HoennSeek_EventScript_DrawLagoonCave:
+	setmetatile 57, 53, 0x368, TRUE
+	return
+
+@ Talking to the light while it waits.
+HoennSeek_EventScript_LanturnLight::
+	lock
+	playmoncry SPECIES_LANTURN, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_LanturnLightBlinks, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+@ Started by src/hoenn_lights.c at the last stop (57,55), below the ridge.
+HoennSeek_EventScript_LanturnLightsEnd::
+	lockall
+	playmoncry SPECIES_LANTURN, CRY_MODE_NORMAL
+	applymovement LOCALID_HOENN_LANTURN_LIGHT, HoennSeek_Movement_LanturnIntoCave
+	waitmovement 0
+	waitmoncry
+	removeobject LOCALID_HOENN_LANTURN_LIGHT
+	setflag FLAG_HOENN_HIDE_LANTURN_LIGHT
+	setflag FLAG_HOENN_LAGOON_FOUND
+	call HoennSeek_EventScript_DrawLagoonCave
+	special DrawWholeMapView
+	playse SE_M_BUBBLE
+	waitse
+	msgbox HoennSeek_Text_LanturnIntoCave, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_ArmLagoonCave
+	releaseall
+	end
+
+HoennSeek_Movement_LanturnIntoCave:
+	walk_slow_up
+	walk_slow_up
+	step_end
+
+@ Coord trigger under the cave (57,54), once it's open (VAR_TEMP_3 = 1).
+HoennSeek_EventScript_LagoonCave::
+	lockall
+	warp MAP_ROUTE41_LAGOON_HOENN, 16, 22
+	waitstate
+	releaseall
+	end
+
+@ Coord triggers on the lagoon channel's last row (16-17, 23).
+HoennSeek_EventScript_LagoonExit::
+	lockall
+	warp MAP_ROUTE41_HNS, 57, 55
+	waitstate
+	releaseall
+	end
+
+HoennSeek_EventScript_LagoonLanturn::
+	lock
+	faceplayer
+	playmoncry SPECIES_LANTURN, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_LagoonLanturn, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
 HoennSeek_EventScript_LagoonChinchou::
 	lock
 	faceplayer
@@ -595,23 +846,56 @@ HoennSeek_EventScript_LagoonChinchou::
 
 @ The old stone (bg events on 11-12, 6): Lugia's shrine, part 34b's section.
 
-@ The stranded AMPHAROS on its rock off Route 40 (32,32), talked to from the
-@ open water north of it (32,31), eight tiles off the beach. (Until the 32
-@ review it stood at (32,33), only reachable from the sealed channel south of
-@ the rocks: 180 tiles of surfing from any shore.)
+@ The stranded AMPHAROS on its rock off Route 40 (31,32), talked to from the
+@ open water north of it (31,31), eight tiles off the beach. (Until the 32
+@ review it stood on a small rock at (32,33), only reachable from the sealed
+@ channel south of the rocks: 180 tiles of surfing from any shore. The rock is
+@ now two of Route 40's brown sea boulders side by side, 29-32, 32-33.)
 HoennSeek_EventScript_StrandedAmpharos::
 	lock
 	faceplayer
+	goto_if_ge VAR_HOENN_AMPHAROS_STATE, HOENN_AMPHAROS_TRUSTS, HoennSeek_EventScript_StrandedAmpharosTrusts
 	playmoncry SPECIES_AMPHAROS, CRY_MODE_ENCOUNTER
-	msgbox HoennSeek_Text_StrandedAmpharos, MSGBOX_DEFAULT
+	goto_if_set FLAG_HOENN_DAILY_AMPHAROS_BERRY, HoennSeek_EventScript_StrandedAmpharosFed
+	call_if_eq VAR_HOENN_AMPHAROS_STATE, 0, HoennSeek_EventScript_StrandedAmpharosFirst
+	call_if_ne VAR_HOENN_AMPHAROS_STATE, 0, HoennSeek_EventScript_StrandedAmpharosAgain
 	waitmoncry
-	msgbox HoennSeek_Text_StrandedAmpharosRide, MSGBOX_YESNO
+	specialvar VAR_RESULT, HoennHasAnyBerry
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_StrandedAmpharosNoBerry
+	msgbox HoennSeek_Text_StrandedAmpharosOffer, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_StrandedAmpharosStays
+	fadescreen FADE_TO_BLACK
+	special Bag_ChooseBerry
+	waitstate
+	goto_if_eq VAR_ITEM_ID, ITEM_NONE, HoennSeek_EventScript_StrandedAmpharosStays
+	removeitem VAR_ITEM_ID
+	bufferitemname STR_VAR_1, VAR_ITEM_ID
+	setflag FLAG_HOENN_DAILY_AMPHAROS_BERRY
+	addvar VAR_HOENN_AMPHAROS_STATE, 1
 	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
-	removeobject LOCALID_HOENN_STRANDED_AMPHAROS
+	msgbox HoennSeek_Text_StrandedAmpharosAte, MSGBOX_DEFAULT
 	waitmoncry
-	msgbox HoennSeek_Text_StrandedAmpharosClimbs, MSGBOX_DEFAULT
-	setflag FLAG_HOENN_AMPHAROS_RIDING
+	goto_if_ge VAR_HOENN_AMPHAROS_STATE, HOENN_AMPHAROS_TRUSTS, HoennSeek_EventScript_StrandedAmpharosNowTrusts
+	msgbox HoennSeek_Text_StrandedAmpharosWary, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_StrandedAmpharosFirst:
+	msgbox HoennSeek_Text_StrandedAmpharos, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_StrandedAmpharosAgain:
+	msgbox HoennSeek_Text_StrandedAmpharosAgain, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_StrandedAmpharosFed:
+	msgbox HoennSeek_Text_StrandedAmpharosFed, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_StrandedAmpharosNoBerry:
+	msgbox HoennSeek_Text_StrandedAmpharosNoBerry, MSGBOX_DEFAULT
 	release
 	end
 
@@ -620,71 +904,74 @@ HoennSeek_EventScript_StrandedAmpharosStays:
 	release
 	end
 
-@ HoennLaneAOnStep (src/hoenn_lane_a.c) runs this on your first step on land
-@ while it rides (landing from Surf isn't a step; the next one is), on any
-@ map. Route 40 and Olivine City have an object for it (Olivine's pier is the
-@ other shore close by): it appears on the
-@ tile you just landed on, hops, and runs off along open land
-@ (HoennAmpharosAshorePlace picks the way). Anywhere else, text only.
-HoennSeek_EventScript_AmpharosAshore::
-	lockall
-	clearflag FLAG_HOENN_AMPHAROS_RIDING
-	setflag FLAG_HOENN_RESCUED_AMPHAROS
-	specialvar VAR_RESULT, HoennAmpharosAshorePlace
-	copyvar VAR_0x800B, VAR_RESULT
-	goto_if_eq VAR_0x800A, 1, HoennSeek_EventScript_AmpharosAshoreRoute40
-	goto_if_eq VAR_0x800A, 2, HoennSeek_EventScript_AmpharosAshoreOlivine
+@ The third BERRY: it trusts you now, and asks straight away.
+HoennSeek_EventScript_StrandedAmpharosNowTrusts:
+	msgbox HoennSeek_Text_StrandedAmpharosNowTrusts, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_StrandedAmpharosRide
+
+HoennSeek_EventScript_StrandedAmpharosTrusts:
 	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
-	msgbox HoennSeek_Text_AmpharosAshore, MSGBOX_DEFAULT
+	msgbox HoennSeek_Text_StrandedAmpharosTrusts, MSGBOX_DEFAULT
 	waitmoncry
-	msgbox HoennSeek_Text_AmpharosRanHome, MSGBOX_DEFAULT
-	releaseall
+HoennSeek_EventScript_StrandedAmpharosRide:
+	msgbox HoennSeek_Text_StrandedAmpharosRide, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_StrandedAmpharosStays
+	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
+	removeobject LOCALID_HOENN_STRANDED_AMPHAROS
+	waitmoncry
+	setvar VAR_HOENN_AMPHAROS_STATE, HOENN_AMPHAROS_RIDING
+	updatefollowingmon
+	msgbox HoennSeek_Text_StrandedAmpharosClimbs, MSGBOX_DEFAULT
+	release
 	end
 
-HoennSeek_EventScript_AmpharosAshoreRoute40:
-	setvar VAR_0x800A, LOCALID_HOENN_STRANDED_AMPHAROS
-	clearflag FLAG_HOENN_HIDE_STRANDED_AMPHAROS
-	goto HoennSeek_EventScript_AmpharosAshoreScene
-
-HoennSeek_EventScript_AmpharosAshoreOlivine:
-	setvar VAR_0x800A, LOCALID_HOENN_OLIVINE_AMPHAROS
-	clearflag FLAG_HOENN_HIDE_OLIVINE_AMPHAROS
-HoennSeek_EventScript_AmpharosAshoreScene:
-	setobjectxyperm VAR_0x800A, VAR_0x8008, VAR_0x8009
-	addobject VAR_0x800A
-	applymovement VAR_0x800A, HoennSeek_Movement_AmpharosHopOff
+@ HoennLaneAOnStep (src/hoenn_lane_a.c) runs this on your first step on land
+@ while it rides (landing from Surf isn't a step; the next one is), on any
+@ map. It's your follower then, so it hops, runs off along open land
+@ (HoennAmpharosRunDir), and the lighthouse scene follows; you're put back on
+@ this tile afterwards (HoennAmpharosSaveReturn).
+HoennSeek_EventScript_AmpharosAshore::
+	lockall
+	setvar VAR_HOENN_AMPHAROS_STATE, HOENN_AMPHAROS_ARRIVING
+	special HoennAmpharosSaveReturn
+	specialvar VAR_0x800B, HoennAmpharosRunDir
+	goto_if_eq VAR_0x800B, DIR_NONE, HoennSeek_EventScript_AmpharosAshoreCry
+	applymovement OBJ_EVENT_ID_FOLLOWER, HoennSeek_Movement_AmpharosHopOff
 	waitmovement 0
+HoennSeek_EventScript_AmpharosAshoreCry:
 	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
 	msgbox HoennSeek_Text_AmpharosAshore, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
-	goto_if_eq VAR_0x800B, DIR_NORTH, HoennSeek_EventScript_AmpharosRunsNorth
-	goto_if_eq VAR_0x800B, DIR_SOUTH, HoennSeek_EventScript_AmpharosRunsSouth
-	goto_if_eq VAR_0x800B, DIR_WEST, HoennSeek_EventScript_AmpharosRunsWest
-	goto_if_eq VAR_0x800B, DIR_EAST, HoennSeek_EventScript_AmpharosRunsEast
-	applymovement VAR_0x800A, HoennSeek_Movement_AmpharosFades
-	goto HoennSeek_EventScript_AmpharosAshoreGone
+	call_if_eq VAR_0x800B, DIR_NORTH, HoennSeek_EventScript_AmpharosRunsNorth
+	call_if_eq VAR_0x800B, DIR_SOUTH, HoennSeek_EventScript_AmpharosRunsSouth
+	call_if_eq VAR_0x800B, DIR_WEST, HoennSeek_EventScript_AmpharosRunsWest
+	call_if_eq VAR_0x800B, DIR_EAST, HoennSeek_EventScript_AmpharosRunsEast
+	msgbox HoennSeek_Text_AmpharosRanHome, MSGBOX_DEFAULT
+	closemessage
+	special HoennAmpharosToLighthouse @ warpsilent can't take x 158 (s8)
+	waitstate
+	end
 
 HoennSeek_EventScript_AmpharosRunsNorth:
-	applymovement VAR_0x800A, HoennSeek_Movement_AmpharosRunsNorth
-	goto HoennSeek_EventScript_AmpharosAshoreGone
+	applymovement OBJ_EVENT_ID_FOLLOWER, HoennSeek_Movement_AmpharosRunsNorth
+	waitmovement 0
+	return
 
 HoennSeek_EventScript_AmpharosRunsSouth:
-	applymovement VAR_0x800A, HoennSeek_Movement_AmpharosRunsSouth
-	goto HoennSeek_EventScript_AmpharosAshoreGone
+	applymovement OBJ_EVENT_ID_FOLLOWER, HoennSeek_Movement_AmpharosRunsSouth
+	waitmovement 0
+	return
 
 HoennSeek_EventScript_AmpharosRunsWest:
-	applymovement VAR_0x800A, HoennSeek_Movement_AmpharosRunsWest
-	goto HoennSeek_EventScript_AmpharosAshoreGone
+	applymovement OBJ_EVENT_ID_FOLLOWER, HoennSeek_Movement_AmpharosRunsWest
+	waitmovement 0
+	return
 
 HoennSeek_EventScript_AmpharosRunsEast:
-	applymovement VAR_0x800A, HoennSeek_Movement_AmpharosRunsEast
-HoennSeek_EventScript_AmpharosAshoreGone:
+	applymovement OBJ_EVENT_ID_FOLLOWER, HoennSeek_Movement_AmpharosRunsEast
 	waitmovement 0
-	removeobject VAR_0x800A
-	msgbox HoennSeek_Text_AmpharosRanHome, MSGBOX_DEFAULT
-	releaseall
-	end
+	return
 
 HoennSeek_Movement_AmpharosHopOff:
 	jump_in_place_down
@@ -719,18 +1006,72 @@ HoennSeek_Movement_AmpharosRunsEast:
 	set_invisible
 	step_end
 
-HoennSeek_Movement_AmpharosFades:
-	jump_in_place_down
-	set_invisible
-	step_end
-
-@ Olivine Lighthouse's ON_TRANSITION: the rescued AMPHAROS lives next to AMPHY.
+@ ---- The lighthouse top --------------------------------------------------------
+@ ON_TRANSITION: the rescued AMPHAROS lives next to AMPHY. On the arrival scene
+@ JASMINE is shown even if she has gone back to her gym (and hidden again
+@ after), your follower stays in its ball, and the AMPHAROS waits off screen.
 HoennSeek_EventScript_LighthouseOnTransition::
 	setflag FLAG_HOENN_HIDE_LIGHTHOUSE_AMPHAROS
+	goto_if_eq VAR_HOENN_AMPHAROS_STATE, HOENN_AMPHAROS_ARRIVING, HoennSeek_EventScript_LighthouseArriving
 	goto_if_unset FLAG_HOENN_RESCUED_AMPHAROS, HoennSeek_EventScript_LighthouseOnTransitionEnd
 	clearflag FLAG_HOENN_HIDE_LIGHTHOUSE_AMPHAROS
 HoennSeek_EventScript_LighthouseOnTransitionEnd:
 	end
+
+HoennSeek_EventScript_LighthouseArriving:
+	setflag FLAG_TEMP_HIDE_FOLLOWER
+	clearflag FLAG_HOENN_AMPHAROS_JASMINE_AWAY
+	goto_if_unset FLAG_HIDE_LIGHTHOUSE_JASMINE, HoennSeek_EventScript_LighthouseOnTransitionEnd
+	setflag FLAG_HOENN_AMPHAROS_JASMINE_AWAY
+	clearflag FLAG_HIDE_LIGHTHOUSE_JASMINE
+	end
+
+@ ON_WARP_INTO_MAP_TABLE: you aren't in the scene (the camera stays on your
+@ hidden avatar at 158,11, which frames the stairs and AMPHY's corner).
+HoennSeek_EventScript_LighthouseHidePlayer::
+	special HoennAmpharosHidePlayer
+	end
+
+@ ON_FRAME_TABLE: it comes up the stairs to JASMINE and AMPHY.
+HoennSeek_EventScript_LighthouseAmpharosArrives::
+	lockall
+	setobjectxyperm LOCALID_HOENN_LIGHTHOUSE_AMPHAROS, 156, 14
+	clearflag FLAG_HOENN_HIDE_LIGHTHOUSE_AMPHAROS
+	addobject LOCALID_HOENN_LIGHTHOUSE_AMPHAROS
+	applymovement LOCALID_HOENN_LIGHTHOUSE_AMPHAROS, HoennSeek_Movement_AmpharosUpTheStairs
+	waitmovement 0
+	applymovement LOCALID_LIGHTHOUSE_JASMINE, Common_Movement_FaceRight
+	waitmovement 0
+	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_JasmineMeetsAmpharos, MSGBOX_DEFAULT
+	waitmoncry
+	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_AmphyMeetsAmpharos, MSGBOX_DEFAULT
+	waitmoncry
+	setvar VAR_HOENN_AMPHAROS_STATE, HOENN_AMPHAROS_HOME
+	setflag FLAG_HOENN_RESCUED_AMPHAROS
+	setobjectxyperm LOCALID_HOENN_LIGHTHOUSE_AMPHAROS, 157, 8
+	call_if_set FLAG_HOENN_AMPHAROS_JASMINE_AWAY, HoennSeek_EventScript_LighthouseJasmineAway
+	fadescreen FADE_TO_BLACK
+	special HoennAmpharosReturn
+	waitstate
+	end
+
+HoennSeek_EventScript_LighthouseJasmineAway:
+	setflag FLAG_HIDE_LIGHTHOUSE_JASMINE
+	clearflag FLAG_HOENN_AMPHAROS_JASMINE_AWAY
+	return
+
+HoennSeek_Movement_AmpharosUpTheStairs:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	face_left
+	step_end
 
 HoennSeek_EventScript_LighthouseRescuedAmpharos::
 	lock
@@ -807,8 +1148,40 @@ HoennSeek_Text_StrandedAmpharos:
 	.string "An AMPHAROS is stranded on the\n"
 	.string "rock! Its tail light blinks\l"
 	.string "and blinks.\p"
-	.string "It's shaking. The waves are\n"
-	.string "too much for it to swim back.$"
+	.string "It's shaking, and it shrinks back\n"
+	.string "from you. It doesn't trust you.$"
+
+HoennSeek_Text_StrandedAmpharosAgain:
+	.string "The AMPHAROS on the rock knows\n"
+	.string "you. It edges a little closer.$"
+
+HoennSeek_Text_StrandedAmpharosOffer:
+	.string "It keeps eyeing your BAG.\n"
+	.string "Offer it a BERRY?$"
+
+HoennSeek_Text_StrandedAmpharosNoBerry:
+	.string "It keeps eyeing your BAG. If only\n"
+	.string "you had a BERRY to give it…$"
+
+HoennSeek_Text_StrandedAmpharosAte:
+	.string "The AMPHAROS snatched the\n"
+	.string "{STR_VAR_1} and gobbled it up!$"
+
+HoennSeek_Text_StrandedAmpharosWary:
+	.string "It still won't come near you.\n"
+	.string "Maybe tomorrow night…$"
+
+HoennSeek_Text_StrandedAmpharosFed:
+	.string "The AMPHAROS is nibbling the last\n"
+	.string "of your BERRY. It's still wary.$"
+
+HoennSeek_Text_StrandedAmpharosNowTrusts:
+	.string "It isn't shaking anymore.\n"
+	.string "It's looking right at you!$"
+
+HoennSeek_Text_StrandedAmpharosTrusts:
+	.string "The AMPHAROS blinks its tail at\n"
+	.string "you. It's been waiting for you!$"
 
 HoennSeek_Text_StrandedAmpharosRide:
 	.string "Let it climb on behind you and\n"
@@ -833,6 +1206,20 @@ HoennSeek_Text_AmpharosAshore:
 HoennSeek_Text_AmpharosRanHome:
 	.string "It ran off toward the LIGHTHOUSE,\n"
 	.string "its tail blinking all the way.$"
+
+HoennSeek_Text_JasmineMeetsAmpharos:
+	.string "JASMINE: Oh! An AMPHAROS…\n"
+	.string "And it's soaking wet!\p"
+	.string "You're the one out on the rock,\n"
+	.string "aren't you? AMPHY never stopped\l"
+	.string "watching your light.\p"
+	.string "Someone brought you back…\n"
+	.string "You can stay here with us now.$"
+
+HoennSeek_Text_AmphyMeetsAmpharos:
+	.string "AMPHY: Palulu!\p"
+	.string "The two AMPHAROS blinked their\n"
+	.string "tails at each other.$"
 
 HoennSeek_Text_LighthouseRescuedAmpharos:
 	.string "It's the AMPHAROS from the sea\n"
@@ -861,9 +1248,10 @@ HoennSeek_Text_CallAmpharos:
 	.string "She says AMPHY kept staring at a\n"
 	.string "second light out at sea every\l"
 	.string "night. A stranded AMPHAROS!\p"
-	.string "Then a trainer from out of town\n"
-	.string "gave it a ride back to shore\l"
-	.string "on their POKéMON!\p"
+	.string "A trainer from out of town won\n"
+	.string "it over with BERRIES, then gave\l"
+	.string "it a ride back to shore. It ran\l"
+	.string "all the way up the lighthouse!\p"
 	.string "That was you, right? AMPHY must\n"
 	.string "be so happy!$"
 
@@ -1126,248 +1514,3 @@ HoennSeek_Text_CallLugia:
 	.string "Was that you? Whatever sings down\n"
 	.string "there is waiting deep in the\l"
 	.string "islands now. Go and see it!$"
-@ The mural (the north wall's frieze, signs facing north on row 1).
-HoennSeek_EventScript_SanctumMural::
-	lockall
-	goto_if_set FLAG_HOENN_DAILY_SANCTUM_MURAL, HoennSeek_EventScript_SanctumMuralQuiet
-	msgbox HoennSeek_Text_SanctumMural, MSGBOX_DEFAULT
-	message HoennSeek_Text_SanctumMuralWhich
-	waitmessage
-	dynmultichoice 19, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, HoennSeek_Text_SanctumLetter0, HoennSeek_Text_SanctumLetter1, HoennSeek_Text_SanctumLetter2, HoennSeek_Text_SanctumLetter3, HoennSeek_Text_SanctumLetter4, HoennSeek_Text_SanctumLetter5, HoennSeek_Text_SanctumLetter6, HoennSeek_Text_SanctumLetter7, HoennSeek_Text_SanctumLetter8, HoennSeek_Text_SanctumLetter9, HoennSeek_Text_SanctumLetter10, HoennSeek_Text_SanctumLetter11, HoennSeek_Text_SanctumLetter12, HoennSeek_Text_SanctumLetter13, HoennSeek_Text_SanctumLetter14, HoennSeek_Text_SanctumLetter15, HoennSeek_Text_SanctumLetter16, HoennSeek_Text_SanctumLetter17, HoennSeek_Text_SanctumLetter18, HoennSeek_Text_SanctumLetter19, HoennSeek_Text_SanctumLetter20, HoennSeek_Text_SanctumLetter21, HoennSeek_Text_SanctumLetter22, HoennSeek_Text_SanctumLetter23, HoennSeek_Text_SanctumLetter24, HoennSeek_Text_SanctumLetter25, HoennSeek_Text_SanctumLetter26, HoennSeek_Text_SanctumLetter27, HoennSeek_Text_SanctumCancel
-	closemessage
-	goto_if_ge VAR_RESULT, HOENN_SANCTUM_LETTERS, HoennSeek_EventScript_SanctumMuralCancel
-	special HoennSanctumLetter
-	msgbox HoennSeek_Text_SanctumMuralCalls, MSGBOX_DEFAULT
-	closemessage
-	playmoncry SPECIES_UNOWN, CRY_MODE_ENCOUNTER
-	waitmoncry
-	special HoennGlyphSetupBattle
-	dowildbattle
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, HoennSeek_EventScript_SanctumMuralRan
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, HoennSeek_EventScript_SanctumMuralRan
-	setflag FLAG_HOENN_DAILY_SANCTUM_MURAL
-	msgbox HoennSeek_Text_SanctumMuralAfter, MSGBOX_DEFAULT
-	releaseall
-	end
-
-HoennSeek_EventScript_SanctumMuralRan:
-	msgbox HoennSeek_Text_SanctumMuralRan, MSGBOX_DEFAULT
-	releaseall
-	end
-
-HoennSeek_EventScript_SanctumMuralCancel:
-	msgbox HoennSeek_Text_SanctumMuralCancel, MSGBOX_DEFAULT
-	releaseall
-	end
-
-HoennSeek_EventScript_SanctumMuralQuiet:
-	msgbox HoennSeek_Text_SanctumMuralQuiet, MSGBOX_DEFAULT
-	releaseall
-	end
-
-@ The final inscription (the middle statue).
-HoennSeek_EventScript_SanctumInscription::
-	lockall
-	msgbox HoennSeek_Text_SanctumInscriptionSee, MSGBOX_DEFAULT
-	braillemessage HoennSeek_Braille_Sinjoh
-	waitbuttonpress
-	closebraillemessage
-	msgbox HoennSeek_Text_SanctumInscriptionRead, MSGBOX_DEFAULT
-	goto_if_set FLAG_HOENN_CIPHER_INSCRIPTION, HoennSeek_EventScript_SanctumInscriptionEnd
-	setflag FLAG_HOENN_CIPHER_INSCRIPTION
-	msgbox HoennSeek_Text_SanctumInscriptionLab, MSGBOX_DEFAULT
-HoennSeek_EventScript_SanctumInscriptionEnd:
-	releaseall
-	end
-
-@ Brendan: the Ruins lab phoned Birch once it read the inscription with you.
-HoennSeek_EventScript_CallCipherSanctum::
-	setflag FLAG_HOENN_CALL_CIPHER_SANCTUM
-	setspeaker HoennSeek_Text_NameBrendan
-	pokenavcall HoennSeek_Text_CallCipherSanctum
-	goto HoennSeek_EventScript_CallEnd
-
-HoennSeek_Braille_Sinjoh:
-	brailleformat 0, 0, 0, 0, 0, 0
-	.braille "SINJOH\n"
-	.braille "THREE SLEEP$"
-
-HoennSeek_Text_AlphBoulderDay:
-	.string "This boulder sits right where the\n"
-	.string "tablet's mark is.\p"
-	.string "Faint UNOWN letters are worn into\n"
-	.string "its face, too faint to read…\p"
-	.string "AT NIGHT WE SPEAK, the braille in\n"
-	.string "the RUINS said.$"
-
-HoennSeek_Text_AlphBoulderNight:
-	.string "The worn UNOWN letters on the\n"
-	.string "boulder are glowing!\p"
-	.string "A-N-C-I-E-N-T. The same word as\n"
-	.string "the tablet!$"
-
-HoennSeek_Text_AlphBoulderGather:
-	.string "UNOWN are gathering around the\n"
-	.string "stone!$"
-
-HoennSeek_Text_AlphBoulderOpens:
-	.string "The UNOWN are gone.\p"
-	.string "The boulder has split open. A\n"
-	.string "ladder leads down into the dark…$"
-
-HoennSeek_Text_AlphBoulderIsOpen:
-	.string "The opening in the boulder leads\n"
-	.string "down into the RUINS.$"
-
-HoennSeek_Text_SanctumUnown:
-	.string "The UNOWN drifts by without a\n"
-	.string "sound. It doesn't seem to mind you.$"
-
-HoennSeek_Text_SanctumMural:
-	.string "The wall is carved with UNOWN of\n"
-	.string "every shape, even ! and ?.\p"
-	.string "As you look along it, the letters\n"
-	.string "seem to stir…$"
-
-HoennSeek_Text_SanctumMuralWhich:
-	.string "Which letter will you call?$"
-
-HoennSeek_Text_SanctumMuralCalls:
-	.string "The letter {STR_VAR_1} glows on the wall…\n"
-	.string "and an UNOWN {STR_VAR_1} slips out of it!$"
-
-HoennSeek_Text_SanctumMuralAfter:
-	.string "The mural is still again. The UNOWN\n"
-	.string "won't answer again until tomorrow.$"
-
-HoennSeek_Text_SanctumMuralRan:
-	.string "The UNOWN drifted back into the\n"
-	.string "wall. The letters still stir.$"
-
-HoennSeek_Text_SanctumMuralCancel:
-	.string "The letters settle back into the\n"
-	.string "stone.$"
-
-HoennSeek_Text_SanctumMuralQuiet:
-	.string "The mural is still. The UNOWN won't\n"
-	.string "answer again until tomorrow.$"
-
-HoennSeek_Text_SanctumInscriptionSee:
-	.string "UNOWN letters circle the statue,\n"
-	.string "with braille carved under them.$"
-
-HoennSeek_Text_SanctumInscriptionRead:
-	.string "With the UNOWN letters and the\n"
-	.string "braille, you can read all of it:\p"
-	.string "WE WERE BORN AT SINJOH, PAST\n"
-	.string "THE SNOWS.\p"
-	.string "THREE SLEEP THERE BEHIND SEALED\n"
-	.string "DOORS. THE OLDEST OF THE DEEP AND\l"
-	.string "THE GREATEST OF THE SEA WAKE THEM.$"
-
-HoennSeek_Text_SanctumInscriptionLab:
-	.string "The lab at the RUINS will want to\n"
-	.string "hear about this!$"
-
-HoennSeek_Text_SanctumCancel:
-	.string "CANCEL$"
-
-HoennSeek_Text_SanctumLetter0:
-	.string "UNOWN A$"
-
-HoennSeek_Text_SanctumLetter1:
-	.string "UNOWN B$"
-
-HoennSeek_Text_SanctumLetter2:
-	.string "UNOWN C$"
-
-HoennSeek_Text_SanctumLetter3:
-	.string "UNOWN D$"
-
-HoennSeek_Text_SanctumLetter4:
-	.string "UNOWN E$"
-
-HoennSeek_Text_SanctumLetter5:
-	.string "UNOWN F$"
-
-HoennSeek_Text_SanctumLetter6:
-	.string "UNOWN G$"
-
-HoennSeek_Text_SanctumLetter7:
-	.string "UNOWN H$"
-
-HoennSeek_Text_SanctumLetter8:
-	.string "UNOWN I$"
-
-HoennSeek_Text_SanctumLetter9:
-	.string "UNOWN J$"
-
-HoennSeek_Text_SanctumLetter10:
-	.string "UNOWN K$"
-
-HoennSeek_Text_SanctumLetter11:
-	.string "UNOWN L$"
-
-HoennSeek_Text_SanctumLetter12:
-	.string "UNOWN M$"
-
-HoennSeek_Text_SanctumLetter13:
-	.string "UNOWN N$"
-
-HoennSeek_Text_SanctumLetter14:
-	.string "UNOWN O$"
-
-HoennSeek_Text_SanctumLetter15:
-	.string "UNOWN P$"
-
-HoennSeek_Text_SanctumLetter16:
-	.string "UNOWN Q$"
-
-HoennSeek_Text_SanctumLetter17:
-	.string "UNOWN R$"
-
-HoennSeek_Text_SanctumLetter18:
-	.string "UNOWN S$"
-
-HoennSeek_Text_SanctumLetter19:
-	.string "UNOWN T$"
-
-HoennSeek_Text_SanctumLetter20:
-	.string "UNOWN U$"
-
-HoennSeek_Text_SanctumLetter21:
-	.string "UNOWN V$"
-
-HoennSeek_Text_SanctumLetter22:
-	.string "UNOWN W$"
-
-HoennSeek_Text_SanctumLetter23:
-	.string "UNOWN X$"
-
-HoennSeek_Text_SanctumLetter24:
-	.string "UNOWN Y$"
-
-HoennSeek_Text_SanctumLetter25:
-	.string "UNOWN Z$"
-
-HoennSeek_Text_SanctumLetter26:
-	.string "UNOWN !$"
-
-HoennSeek_Text_SanctumLetter27:
-	.string "UNOWN ?$"
-
-HoennSeek_Text_CallCipherSanctum:
-	.string "Hey, {PLAYER}! BRENDAN here.\p"
-	.string "The RUINS OF ALPH lab just phoned\n"
-	.string "my dad again. You found a room\l"
-	.string "under a boulder?\p"
-	.string "And an UNOWN carving about three\n"
-	.string "of something sleeping at SINJOH?\p"
-	.string "Dad says the oldest of the deep\n"
-	.string "could be RELICANTH. It hasn't\l"
-	.string "changed in a hundred million years.\p"
-	.string "And the greatest of the sea… that\n"
-	.string "has to be WAILORD!\p"
-	.string "Sounds like a Hoenn job to me.\n"
-	.string "Good luck!$"

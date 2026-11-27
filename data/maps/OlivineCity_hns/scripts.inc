@@ -5,7 +5,6 @@ OlivineCity_hns_MapScripts::
 	.byte 0
 
 OlivineCity_MapScript_OnTransition::
-	setflag FLAG_HOENN_HIDE_OLIVINE_AMPHAROS @ Hoenn & Seek 2.0 part 32: the Ampharos's landing-scene object
 	callnative SetTimeBasedEncounters
 	goto_if_ge VAR_OLIVINE_CITY_STATE, 5, OlivineCity_MapScript_ClearWeather
 	end

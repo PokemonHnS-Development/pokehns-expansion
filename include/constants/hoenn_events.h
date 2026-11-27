@@ -535,15 +535,28 @@
 #define FLAG_HOENN_CAUGHT_ICE_SNEASEL   (HOENN_LANE_A_FLAGS_E + 0x25)
 #define FLAG_HOENN_CALL_SNEASEL         (HOENN_LANE_A_FLAGS_E + 0x26) // Brendan: Clair's gym report
 #define FLAG_HOENN_DAILY_ICE_SNEASEL    (HOENN_LANE_A_DAILY + 0x00)   // knocked out: back next night
+// ---- Part 28: Unown Cipher C, the sanctum (data/scripts/hoenn_lane_a.inc, src/hoenn_lane_a.c) ----
+// The tablet's mark is the boulder in the middle of the Ruins of Alph. At night
+// the Unown open it, and a ladder leads down to the sanctum: a mural that calls
+// any of the 28 letters (once a day) and the final inscription (part 37's start).
+#define FLAG_HOENN_CIPHER_SANCTUM_OPEN  (HOENN_LANE_A_FLAGS_E + 0x16) // the boulder is open (redrawn on every load)
+#define FLAG_HOENN_CIPHER_HIDE_SEAL     (HOENN_LANE_A_FLAGS_E + 0x17) // the opening scene's three Unown (hidden on arrival)
+#define FLAG_HOENN_CIPHER_INSCRIPTION   (HOENN_LANE_A_FLAGS_E + 0x18) // read the final inscription (part 37 starts here)
+#define FLAG_HOENN_CIPHER_LAB_SANCTUM   (HOENN_LANE_A_FLAGS_E + 0x19) // the lab researcher heard about the inscription
+#define FLAG_HOENN_CALL_CIPHER_SANCTUM  (HOENN_LANE_A_FLAGS_E + 0x1A) // Brendan: the lab phoned Birch about the sanctum
+                                                                       // (0x1B-0x1F spare for part 28)
+#define FLAG_HOENN_DAILY_SANCTUM_MURAL  (HOENN_LANE_A_DAILY + 5)      // the mural called a letter tonight (nightly, 41r)
+                                                                       // (+0..4 are 31a, 32 and 35b's)
+#define HOENN_SANCTUM_LETTERS 28 // A-Z ! ? (the mural's menu; index 28 is CANCEL)
 // ---- Part 32: Olivine nights (data/scripts/hoenn_lane_a.inc) ----
 // At night a LANTURN's light waits off Route 41's north shore and leads across
 // the sea (src/hoenn_lights.c) to the foot of the east ridge, where it slips
 // into a sea cave (57,53): the way into Route41_Lagoon_hoenn, Lugia's shrine
 // (part 34b). Also at night, a stranded AMPHAROS blinks on a sea rock off Route 40 (32,32);
 // AMPHY in the lighthouse keeps watching its light. It's too scared to swim:
-// it climbs on behind you, and the first step you take on land (any map;
-// Route 40's beach is eight tiles north) it hops off and runs home (Bryan,
-// 32 review: a rescue, not a catch). Afterwards it lives at the lighthouse top
+// it takes a BERRY from you once a night, and after three it trusts you and
+// climbs on behind you; the first step you take on land (any map) it hops off
+// and runs home to JASMINE (Bryan, 32 review: a rescue, not a catch). Afterwards it lives at the lighthouse top
 // next to AMPHY. (31a ends at + 0x26 and daily + 0; 28 has + 0x16-0x1F.)
 #define FLAG_HOENN_HIDE_LANTURN_LIGHT       (HOENN_LANE_A_FLAGS_E + 0x27) // the light object (out at night until the cave is found)
 #define FLAG_HOENN_LAGOON_FOUND             (HOENN_LANE_A_FLAGS_E + 0x28) // followed the lights: the sea cave is open
@@ -551,9 +564,13 @@
 #define FLAG_HOENN_RESCUED_AMPHAROS         (HOENN_LANE_A_FLAGS_E + 0x2A) // brought ashore: it lives at the lighthouse now
 #define FLAG_HOENN_CALL_AMPHAROS            (HOENN_LANE_A_FLAGS_E + 0x2B) // May: Jasmine told the LEAGUE (part 32's call)
 #define FLAG_HOENN_HIDE_LIGHTHOUSE_AMPHAROS (HOENN_LANE_A_FLAGS_E + 0x2C) // its object at the lighthouse top (shown once rescued)
-#define FLAG_HOENN_AMPHAROS_RIDING          (HOENN_LANE_A_FLAGS_E + 0x2D) // it's on your back (HoennLaneAOnStep plays the landing)
-#define FLAG_HOENN_HIDE_OLIVINE_AMPHAROS    (HOENN_LANE_A_FLAGS_E + 0x2E) // its object in Olivine City, for the landing scene (set on every arrival)
-                                                                     // (daily + 1 is free again: the 32 review dropped the battle)
+#define FLAG_HOENN_AMPHAROS_JASMINE_AWAY    (HOENN_LANE_A_FLAGS_E + 0x2D) // Jasmine had left the lighthouse: the arrival scene shows her, then hides her again
+#define FLAG_HOENN_DAILY_AMPHAROS_BERRY     (HOENN_LANE_A_DAILY + 1)      // it took a BERRY tonight (nightly, 41r)
+#define VAR_HOENN_AMPHAROS_STATE            (HOENN_LANE_A_VARS_E + 0x00)  // 0-2 BERRIES taken, then:
+#define HOENN_AMPHAROS_TRUSTS   3 // trusts you: it will ride with you
+#define HOENN_AMPHAROS_RIDING   4 // riding with you (your follower)
+#define HOENN_AMPHAROS_ARRIVING 5 // the lighthouse scene is due
+#define HOENN_AMPHAROS_HOME     6 // at the lighthouse top for good
 // Route 41 uses VAR_TEMP_2 for the light's stop (light_paths.json) and
 // VAR_TEMP_3 = 1 for the sea cave's trigger (57,54) once it's found.
 // ---- Part 34b: Lugia (data/scripts/hoenn_lane_a.inc) ----
@@ -568,19 +585,6 @@
 #define FLAG_HOENN_LUGIA_CAMEO_SEEN    (HOENN_LANE_A_FLAGS_F + 0x0F) // saw Lugia surface off Route 41
 #define FLAG_HOENN_CALL_LUGIA          (HOENN_LANE_A_FLAGS_F + 0x10) // Brendan: Bill's call about the still sea
 // Route 41 also uses VAR_TEMP_4 = 1 for the cameo's trigger row (52-63, 56).
-// ---- Part 28: Unown Cipher C, the sanctum (data/scripts/hoenn_lane_a.inc, src/hoenn_lane_a.c) ----
-// The tablet's mark is the boulder in the middle of the Ruins of Alph. At night
-// the Unown open it, and a ladder leads down to the sanctum: a mural that calls
-// any of the 28 letters (once a day) and the final inscription (part 37's start).
-#define FLAG_HOENN_CIPHER_SANCTUM_OPEN  (HOENN_LANE_A_FLAGS_E + 0x16) // the boulder is open (redrawn on every load)
-#define FLAG_HOENN_CIPHER_HIDE_SEAL     (HOENN_LANE_A_FLAGS_E + 0x17) // the opening scene's three Unown (hidden on arrival)
-#define FLAG_HOENN_CIPHER_INSCRIPTION   (HOENN_LANE_A_FLAGS_E + 0x18) // read the final inscription (part 37 starts here)
-#define FLAG_HOENN_CIPHER_LAB_SANCTUM   (HOENN_LANE_A_FLAGS_E + 0x19) // the lab researcher heard about the inscription
-#define FLAG_HOENN_CALL_CIPHER_SANCTUM  (HOENN_LANE_A_FLAGS_E + 0x1A) // Brendan: the lab phoned Birch about the sanctum
-                                                                       // (0x1B-0x1F spare for part 28)
-#define FLAG_HOENN_DAILY_SANCTUM_MURAL  (HOENN_LANE_A_DAILY + 5)      // the mural called a letter tonight (nightly, 41r)
-                                                                       // (+0..4 are 31a, 32 and 35b's)
-#define HOENN_SANCTUM_LETTERS 28 // A-Z ! ? (the mural's menu; index 28 is CANCEL)
 
 // ---- Lane B: parts 31b, 34a, 29, 30a, 30b, 33, 36, 35a (hoenn-docs/lanes/lane-b.md) ----
 // (Kept below lane A's sections, so its additions land at the end of the file.)
