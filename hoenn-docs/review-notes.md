@@ -191,11 +191,11 @@ Reproduced in the emulator.
 ### 28. PR #79 (24r) isn't merged and now conflicts (parts 24a–26b review) — **done** (merged with `hoenn` by hand and merged, Nov 27)
 - PR #79 fixes a real 24a bug: the Trapinch walks up column 26 straight through you if you trigger the scene from the ring's north tile (26,54). It also adds review items 25–27 (that fix, the faint sand hollow, 24a's choices). It was opened before parts 24b–26b merged, and GitHub now reports conflicts in CLAUDE.md, the roadmap, the playtest list and these notes. **The bug is still on `hoenn`.** Rebase and merge it (items 25–27 then land above this one).
 
-### 29. Small text things from parts 25a–26b
+### 29. Small text things from parts 25a–26b — **done in 26r** (PR for `v2-26r-text-fixes`: "crack. It's wide enough to / swim down!"; the diver is "he" in both calls)
 - `HoennSeek_Text_CrackLit` ends on a one-word line ("down!"), which the CLAUDE.md rule forbids.
 - **The Mossdeep diver is a man:** the hint NPC at (38,12) is the male sailor sprite (`OBJ_EVENT_GFX_SAILOR`, "I dive off ROUTE 124 every night"). But both trench calls call the diver "she": Brendan's "She was night diving off ROUTE 124" and May's "She talks to PROF. BIRCH about everything". Change both to "he".
 
-### 30. Docs
+### 30. Docs — **done in 26r** (section 14's ice chamber ticked)
 - Plan section 14's master list still has the ice chamber unticked, though 26b finished it.
 
 ### 31. Choices from parts 24b–26b for Bryan to confirm

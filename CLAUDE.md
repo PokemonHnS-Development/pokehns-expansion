@@ -113,7 +113,8 @@ Lane A sizes:
 |---|---|---|
 | Lane setup (lane files, phone chain, hint keys; no content) | 32,703,076 / 831 KB | 32,862,548 / 675 KB |
 | Lane setup synced onto 27a (27a's call moved into lane A's chain, its hint NPC keyed; measured on `hoenn` after #79, #86 and this) | 32,709,828 / 824 KB | 32,869,076 / 669 KB |
-| **2.0** part 27b (Unown Cipher B: 7 night Unown rings, tablet fragments spelling ANCIENT, May's call; Unown forms share one object palette) | 32,713,844 / 820 KB | 32,872,820 / 665 KB |
+| 26r (reviewer's text fixes for pre-split parts 25a–26b: no size change) | 32,709,828 / 824 KB | 32,869,076 / 669 KB |
+| **2.0** part 27b (Unown Cipher B: 7 night Unown rings, tablet fragments spelling ANCIENT, May's call; Unown forms share one object palette) | 32,713,828 / 820 KB | 32,872,804 / 665 KB |
 
 Lane B sizes (27a, then 31b on):
 
