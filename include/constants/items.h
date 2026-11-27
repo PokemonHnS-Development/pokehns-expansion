@@ -1090,6 +1090,8 @@ enum __attribute__((packed)) Item
     ITEM_SINGING_SAND, // Hoenn & Seek 2.0 part 24a: the Desert Underpass Vibrava's sand (Flygon's desert song)
     ITEM_SAND_CHIME, // Hoenn & Seek 2.0 part 24b: the Singing Sand fused into glass; raises the Mirage Tower
     ITEM_FROST_FEATHER, // Hoenn & Seek 2.0 part 26b: Articuno's feather from Shoal Cave's ice chamber
+    ITEM_THUNDER_FEATHER, // Hoenn & Seek 2.0 part 34a (lane B): Zapdos's feather from the Power Plant on Route 10's storm day
+    ITEM_FLAME_FEATHER, // Hoenn & Seek 2.0 part 34a (lane B): Moltres's feather from Route 113's ash
 #endif
 
     ITEMS_COUNT,

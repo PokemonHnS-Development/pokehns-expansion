@@ -1,4 +1,5 @@
 SeafoamIslands_B1F_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_SeafoamB1FOnTransition @ Hoenn & Seek 2.0 part 34a
 	.byte 0
 
 SeafoamIslands_B1F_EventScript_Articuno::

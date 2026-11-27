@@ -756,3 +756,6 @@ gSpecials::
 	def_special HoennCipherTonightWord
 	def_special HoennCipherNoteWord
 	def_special HoennCipherWordCount
+	def_special HoennBirdRoostState
+	def_special HoennBirdLand
+	def_special HoennBirdBattleEnded
