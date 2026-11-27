@@ -445,3 +445,43 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 - Over a week of nights (or with the wall clock's calendar), collect all seven words, then talk to the researcher: the list and the seven-places line.
 - The puzzle chambers and the Sinjoh Ruins temple share this tileset: check their coloured stone panels look unchanged (palette 10 got a new colour in an unused slot).
 - The lab's wandering scientist's two new lines.
+
+## 2.0 part 31b (Teddiursa honey trail)
+- The beekeeper's house at the top of Route 45: does the new door and house look natural on that plateau? The route sign moved one tile right to make room.
+- The beekeeper's HONEY once a day (talk again the same day, then on the next day).
+- Spread HONEY on the pine in the pond meadow (face the tree from the right), then come back on a later morning (4-10 AM): two Teddiursa. Watch them once, shoo them once (the honey should still be there the next morning).
+- After three watched mornings: the Ursaring at the pine in the morning, then at night (7 PM-6 AM). Follow her: the walk to the cliff, the climb, the moon hollow scene.
+- The moon hollow: does it look hand-made (rock ring, pool, flowers)? The pool by night and by day, the bears only at night, leaving by the bottom path.
+- The claw marks on the meadow's east cliff take you straight up afterwards, at any hour.
+- The granddaughter's line at each stage, the boy's Peat Block line, the Blackthorn Mart rumor before and after.
+- Brendan's call after the hollow (rings within a few steps outdoors).
+- Route 45's fog day: are the bears and the pine still easy to see in the fog?
+
+## 2.0 part 34a (the three birds)
+- Bill in Goldenrod after his Eevee: the feather explanation, then one line per bird. Come back with a feather, after a landing and after a catch.
+- Route 10's Power Plant on its thunderstorm day (after the Magnet Train is fixed): the manager's THUNDER FEATHER. On other days, his hint; the entrance engineer's storm forecast the day before.
+- The yard behind the Power Plant with the feather: Zapdos lands (does the thunder sound fit?). Run from it, knock it out (back the next day), catch it.
+- Route 113's west path: the Moltres flyover (speed, the ash puff), the red feather in the ash. Does the scene read well at night too?
+- Mt. Silver's Moltres room: Moltres flies in from the left and lands above the text box. Its new spot (two tiles higher): does it still look right in the room?
+- Seafoam B1F with the FROST FEATHER: Articuno lands on the islet.
+- May's call after the first landing (outside; not inside Mt. Silver).
+- The glass workshop boy's rumor before and after the flyover.
+
+## 2.0 part 29 (shifting tunnels)
+- Rock Tunnel B1F at night: the rumble (once a night), then find that weekday's hole. Try at least two weekdays: is each hole easy enough to spot with Flash?
+- The bore: the shiny Onix, its battle level for your progress, the three item balls, the Metal Coat where it lay. Knock it out and come back the next night.
+- Holes by day: none. After the catch: holes still open, no rumble.
+- Dark Cave's south side: find the burrow hole in the morning, day, evening and night (each in a different spot; with Flash). Is the schedule guessable from the Violet kid's rumor?
+- The burrow: one row cleared per time of day; the fourth opens the passage; the Dudunsparce (Three-Segment form in the summary screen); the ladder back.
+- Route 21 islet (surf there): vines by day, Cut does nothing; mornings the vines step aside and the shiny Tangela waits. Afterwards: the Miracle Seed, no vines.
+- Brendan's call after the Onix (outside).
+- Rumors: Lavender hiker, Violet kid, Pallet man, before and after.
+
+## 2.0 part 30a (the lost Kangaskhan baby)
+- Safari Beach at 6–7 PM (SAFARI LEVEL 2 or higher): the baby on the sand. Not there by day or at level 1.
+- Let it follow you: does its little sprite look right walking in every direction, and through the gate into the Brush?
+- Take it into the Brush's south-west nook (the gap in the trees near the bottom left): the reunion, the hearts, the Lucky Egg. Is the nook easy enough to find, and does it look like natural woods?
+- Run out of steps (or retire) with the baby following: it should be back on the Beach the next evening.
+- Afterwards: the pair together in the nook, both talk lines; a Safari battle mid-follow (the baby still follows after).
+- May's call after the reunion (outside), the Brush attendant's rumor before and after.
+

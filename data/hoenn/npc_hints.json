@@ -126,6 +126,17 @@
     "RUMOR_ICE_CHAMBER": {"kind": "rumor", "rumor": "ICE_CHAMBER"},
     "STORY_ICE_FROSLASS": {"kind": "story", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}, {"not_flag": "FLAG_HOENN_ICE_FROSLASS_MET"}], "text": ["Something cold walks the ice down there when the tide is out at night.", "You'll see her in the ice before you see her. Touch the wrong ice and she'll blow you right back!"]},
     "STORY_ICE_FEATHER": {"kind": "story", "if": [{"flag": "FLAG_HOENN_GOT_FROST_FEATHER"}], "text": ["That feather you found… A great ice bird passed over the sea when I was a boy.", "Something like that doesn't leave its feathers lying around for nothing. Hold on to it."]},
+    "STORY_HONEY_TREE":   {"kind": "story", "if": [{"var": "VAR_HOENN_HONEY_MORNINGS", "below": 1}, {"var": "VAR_HOENN_HONEY_STAGE", "below": 1}], "text": ["Grandpa's old pine is in the meadow by the pond, at the bottom of ROUTE 45. It's tucked in behind a hedge.", "Spread the HONEY low on the trunk, where a TEDDIURSA can reach!"]},
+    "STORY_HONEY_MOTHER": {"kind": "story", "if": [{"var": "VAR_HOENN_HONEY_MORNINGS", "min": 1}, {"var": "VAR_HOENN_HONEY_STAGE", "below": 1}], "text": ["The TEDDIURSA came for your HONEY? Don't chase them off!", "If they get used to you, their mother will come and see who's been feeding her cubs."]},
+    "STORY_HONEY_NIGHT":  {"kind": "story", "if": [{"var": "VAR_HOENN_HONEY_STAGE", "min": 1}, {"var": "VAR_HOENN_HONEY_STAGE", "below": 2}], "text": ["The mother URSARING came to the pine? Then she'll be back at night.", "Mother bears go walking under the moon. Grandpa says she wants to show you something!"]},
+    "STORY_HONEY_HOLLOW": {"kind": "story", "if": [{"flag": "FLAG_HOENN_MOON_HOLLOW_FOUND"}], "text": ["You followed the mother up the cliff? Grandpa says the bears have watched the moon from up there since he was a boy."]},
+    "RUMOR_HONEY_TRAIL":  {"kind": "rumor", "rumor": "HONEY_TRAIL"},
+    "STORY_ZAPDOS_STORM": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_GOT_THUNDER_FEATHER"}], "text": ["When a thunderstorm hits ROUTE 10, lightning strikes our roof and the generator goes wild.", "The MANAGER keeps finding odd things in the coils after a storm. Ask him next time it storms!"]},
+    "RUMOR_MOLTRES_FLYOVER": {"kind": "rumor", "rumor": "MOLTRES_FLYOVER"},
+    "RUMOR_ONIX_BORE": {"kind": "rumor", "rumor": "ONIX_BORE"},
+    "RUMOR_DUNSPARCE_BURROW": {"kind": "rumor", "rumor": "DUNSPARCE_BURROW"},
+    "RUMOR_TANGELA_VINES": {"kind": "rumor", "rumor": "TANGELA_VINES"},
+    "RUMOR_KANGA_BABY": {"kind": "rumor", "rumor": "KANGA_BABY"},
     "RUMOR_ICE_FROSLASS": {"kind": "rumor", "rumor": "ICE_FROSLASS", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}]},
     "STORY_CIPHER_WALL":  {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ASKED"}, {"not_flag": "FLAG_HOENN_CIPHER_ROSETTA"}], "text": ["Did you feel that tremor? A new line of writing turned up inside the RUINS.", "It's got dots on it like nothing from JOHTO. We need someone who's been to HOENN!"]},
     "STORY_CIPHER_NIGHT": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ROSETTA"}, {"not_flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}], "text": ["AT NIGHT WE SPEAK… I've been sleeping here at the lab ever since you read it.", "If the WORDS chambers really light up at night, is it the same word every night? Tell my colleague what you see!"]},
@@ -290,6 +301,42 @@
       "before": ["They say a ghost walks the ice under SHOAL CAVE at night. Her face shows in the ice, but she's never there when you look!"],
       "after": "Somebody chased that ghost through the ice under SHOAL CAVE. It was a FROSLASS!",
       "notes": "At night, a FROSLASS's face shows in the pillars of the SHOAL CAVE ice chamber. Touch the one she's in, and only that one."
+    },
+    "HONEY_TRAIL": {
+      "found": [{"flag": "FLAG_HOENN_MOON_HOLLOW_FOUND"}],
+      "before": ["They say a beekeeper lives up on ROUTE 45, and the wild bears there can't resist his HONEY!"],
+      "after": "Somebody followed an URSARING up a cliff on ROUTE 45 at night! There's a hollow up there where the bears watch the moon.",
+      "notes": "The beekeeper on JOHTO's ROUTE 45 gives out HONEY. Spread it on the old pine by the pond and come back in the morning. If the cubs trust you, their mother may show you the way up."
+    },
+    "MOLTRES_FLYOVER": {
+      "found": [{"flag": "FLAG_HOENN_MOLTRES_CAMEO"}],
+      "before": ["They say a burning shadow sometimes sweeps over the ash on ROUTE 113. The ash goes warm right before it comes!"],
+      "after": "Somebody saw a great bird of flame fly over ROUTE 113! It dropped something in the ash.",
+      "notes": "A burning shadow crosses ROUTE 113's ash fields, heading north-west. Walk the ash east of the glass workshop."
+    },
+    "ONIX_BORE": {
+      "found": [{"flag": "FLAG_HOENN_ONIX_FOUND"}],
+      "before": ["Hikers say ROCK TUNNEL rumbles at night, and every night there's a fresh hole in a different wall!", "Something big is digging down there. They say it's never the same wall two nights running."],
+      "after": "A trainer found a crystal ONIX resting under ROCK TUNNEL! So that's what's been digging all those holes.",
+      "notes": "At night a fresh hole opens in a different wall of ROCK TUNNEL B1F, one for each day of the week. Look along the rock faces."
+    },
+    "DUNSPARCE_BURROW": {
+      "found": [{"flag": "FLAG_HOENN_DUDUNSPARCE_CAUGHT"}],
+      "before": ["DARK CAVE has DUNSPARCE holes, but they're never in the same place! One in the morning, one by day, one at sunset, one at night.", "My dad says they're all digging toward the same spot. I want to know what's down there!"],
+      "after": "Somebody found a DUDUNSPARCE with three segments under DARK CAVE! The DUNSPARCE were digging to it all along.",
+      "notes": "DARK CAVE's burrow holes move with the time of day: morning, day, evening and night. Each time, a different DUNSPARCE digs a little further."
+    },
+    "TANGELA_VINES": {
+      "found": [{"flag": "FLAG_HOENN_TANGELA_SEEN"}],
+      "before": ["A fisherman pal of mine says one of ROUTE 21's islets is all tangled up in vines. Nothing gets through!", "He says they go limp first thing in the morning, though. Real sleepyheads, those vines!"],
+      "after": "So those vines on ROUTE 21 were TANGELA all along! Guarding something in the middle, I hear.",
+      "notes": "The islet on ROUTE 21 nearest PALLET is wrapped in writhing vines. They only relax in the morning."
+    },
+    "KANGA_BABY": {
+      "found": [{"flag": "FLAG_HOENN_KANGA_REUNITED"}],
+      "before": ["Evenings, we hear crying down on the BEACH. Something small and lost, I'd guess.", "And a KANGASKHAN mother keeps pacing where the woods bend in, west of here. Her pouch is empty."],
+      "after": "Somebody brought a lost KANGASKHAN baby home to its mother! Now the pair nest in the woods out west.",
+      "notes": "Evenings in the FUCHSIA SAFARI ZONE, a KANGASKHAN baby cries on the BEACH. Its mother waits in a nook of the BRUSH's woods."
     }
   },
 
@@ -351,10 +398,18 @@
     {"map": "MossdeepCity",                      "script": "MossdeepCity_EventScript_Sailor",                      "lines": ["STORY_NIGHT_DIVE", "STORY_TRENCH_DARK", "STORY_TRENCH_GUARDIANS"]},
     {"map": "ShoalCave_LowTideEntranceRoom",     "script": "ShoalCave_LowTideEntranceRoom_EventScript_ShellBellExpert", "lines": ["STORY_ICE_HOLE", "STORY_ICE_FEATHER", "STORY_ICE_FROSLASS", "STORY_ICE_GLALIE"]},
     {"map": "PacifidlogTown_PokemonCenter_1F",   "script": "PacifidlogTown_PokemonCenter_1F_EventScript_OldMan",  "lines": ["RUMOR_ICE_FROSLASS", "RUMOR_ICE_CHAMBER"]},
-    {"map": "RuinsOfAlph_Lab_hns",               "script": "RuinsOfAlph_Lab_EventScript_Scientist1", "key": "AlphLabScientist", "lines": ["STORY_CIPHER_NIGHT", "STORY_CIPHER_RINGS", "STORY_CIPHER_WALL"]}
+    {"map": "RuinsOfAlph_Lab_hns",               "script": "RuinsOfAlph_Lab_EventScript_Scientist1", "key": "AlphLabScientist", "lines": ["STORY_CIPHER_NIGHT", "STORY_CIPHER_RINGS", "STORY_CIPHER_WALL"]},
+    {"map": "BlackthornCity_Mart_hns",           "script": "BlackthornMart_EventScript_CoolTrainerM", "key": "BlackthornMartTrainer", "lines": ["RUMOR_HONEY_TRAIL"]},
+    {"map": "Route10_PowerPlantEntrance_hns",    "script": "Route10_PowerPlantEntrance_EventScript_Engineer3", "key": "PowerPlantEngineer", "lines": ["FORECAST", "STORY_ZAPDOS_STORM"]},
+    {"map": "Route113_GlassWorkshop",            "script": "Route113_GlassWorkshop_EventScript_NinjaBoy", "key": "GlassWorkshopBoy", "lines": ["RUMOR_MOLTRES_FLYOVER"]},
+    {"map": "LavenderTown_hns",                  "script": "LavenderTown_EventScript_PokefanM", "key": "LavenderPokefan", "lines": ["RUMOR_ONIX_BORE"]},
+    {"map": "VioletCity_hns",                    "script": "VioletCity_EventScript_Youngster", "key": "VioletYoungster", "lines": ["RUMOR_DUNSPARCE_BURROW"]},
+    {"map": "PalletTown_hns",                    "script": "PalletTown_EventScript_Fatman", "key": "PalletFatman", "lines": ["RUMOR_TANGELA_VINES"]},
+    {"map": "FuchsiaCity_SafariZoneBrush_hns",   "script": "SafariZoneFuchsia_EventScript_Attendant1", "key": "SafariBrushWarden", "lines": ["RUMOR_KANGA_BABY"]}
   ],
 
   "forecasts": [
+    {"map": "Route10_hns", "if": [{"not_flag": "FLAG_HOENN_GOT_THUNDER_FEATHER"}], "text": ["Thunderstorms are coming to ROUTE 10's POWER PLANT {STR_VAR_1}.", "The plant's manager says that's when his generator acts up!"]},
     {"map": "Route120", "if": [{"not_flag": "FLAG_HOENN_ABSOL_CAUGHT"}], "text": ["Storms are rolling in around ROUTE 120 {STR_VAR_1}.", "Folks say that's when the white one walks."]},
     {"map": "Route120", "if": [{"not_caught": "CASTFORM"}], "text": ["Our instruments say ROUTE 120 gets a thunderstorm {STR_VAR_1}.", "CASTFORM come out in weather like that!"]},
     {"map": "Route119", "if": [{"not_caught": "CASTFORM"}], "text": ["Our instruments say a thunderstorm reaches ROUTE 119 {STR_VAR_1}.", "CASTFORM come out in weather like that!"]},

@@ -9,6 +9,7 @@ MtSilver_1F_MoltresRoom_OnResume::
 
 MtSilver_1F_MoltresRoom_OnTransition: 
 	callnative SetTimeBasedEncounters
+	call HoennSeek_EventScript_MoltresRoostOnTransition @ Hoenn & Seek 2.0 part 34a
 	end
 
 

@@ -549,4 +549,119 @@
 // Lane B's part sections go here, at the end of the file:
 //     #define FLAG_HOENN_Y   (HOENN_LANE_B_FLAGS_E + 0x00)
 
+// ---- Part 31b: Teddiursa's honey trail (data/scripts/hoenn_lane_b.inc) ----
+// A beekeeper's house at the top of Route 45 gives one HONEY a day. Spread on
+// the old pine in the pond meadow, it brings two Teddiursa the next morning;
+// after HOENN_HONEY_MORNINGS_NEEDED watched mornings their mother comes
+// instead, and on a later night she climbs the meadow's east cliff and leads
+// you to the moon hollow (Route45_MoonHollow_hoenn), one of Jirachi's three
+// wishing spots (lane A's part 37 reads FLAG_HOENN_MOON_HOLLOW_FOUND).
+#define FLAG_HOENN_HONEY_ON_TREE        (HOENN_LANE_B_FLAGS_E + 0x00) // HONEY is on the pine
+#define FLAG_HOENN_HIDE_HONEY_TEDDI     (HOENN_LANE_B_FLAGS_E + 0x01) // object flag: the two Teddiursa at the pine
+#define FLAG_HOENN_HIDE_HONEY_URSARING  (HOENN_LANE_B_FLAGS_E + 0x02) // object flag: the Ursaring at the pine
+#define FLAG_HOENN_HIDE_HOLLOW_BEARS    (HOENN_LANE_B_FLAGS_E + 0x03) // object flag: the bears in the hollow
+#define FLAG_HOENN_MOON_HOLLOW_FOUND    (HOENN_LANE_B_FLAGS_E + 0x04) // followed the Ursaring up (Jirachi's spot)
+#define FLAG_HOENN_CALL_MOON_HOLLOW     (HOENN_LANE_B_FLAGS_E + 0x05) // Brendan's call about it
+#define FLAG_HOENN_DAILY_BEEKEEPER_HONEY (HOENN_LANE_B_DAILY + 0x00)  // today's jar from the beekeeper
+#define FLAG_HOENN_DAILY_HONEY_SPREAD    (HOENN_LANE_B_DAILY + 0x01)  // HONEY went on the pine today (visitors come on a later morning)
+#define VAR_HOENN_HONEY_STAGE           (HOENN_LANE_B_VARS_E + 0x00)  // HOENN_HONEY_STAGE_*
+#define VAR_HOENN_HONEY_MORNINGS        (HOENN_LANE_B_VARS_E + 0x01)  // honey mornings watched (stops counting at the goal)
+#define HOENN_HONEY_STAGE_CUBS          0 // the Teddiursa come for the honey
+#define HOENN_HONEY_STAGE_NIGHT         1 // the mother came one morning: she waits at the pine at night
+#define HOENN_HONEY_STAGE_HOLLOW        2 // the hollow is found; the bears sit there at night
+#define HOENN_HONEY_MORNINGS_NEEDED     3 // watched mornings before the mother comes
+// The hollow uses VAR_TEMP_1 for its first-visit scene (an ON_FRAME entry).
+
+// ---- Part 34a: the three birds (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Bill (Goldenrod) tracks Articuno, Zapdos and Moltres. Each bird has a
+// feather (key item): the FROST FEATHER (part 26b, Shoal Cave), the THUNDER
+// FEATHER (the Power Plant manager on Route 10's thunderstorm day) and the
+// FLAME FEATHER (dropped into Route 113's ash by Moltres's flyover). Carrying a
+// bird's feather to its roost (Seafoam B1F, the Power Plant's back yard, Mt.
+// Silver's Moltres room) calls the bird down; it waits there until you battle
+// it. Caught = gone for good; knocked out = back another day; ran = it stays.
+// The flags below come in Articuno, Zapdos, Moltres order (HOENN_BIRD_*), so
+// src/hoenn_lane_b.c can add the bird's index to the first one.
+#define HOENN_BIRD_ARTICUNO             0
+#define HOENN_BIRD_ZAPDOS               1
+#define HOENN_BIRD_MOLTRES              2
+#define HOENN_BIRD_COUNT                3
+#define FLAG_HOENN_HIDE_ARTICUNO        (HOENN_LANE_B_FLAGS_F + 0x00) // object flags (replace HnS's FLAG_HIDE_*, which are 0)
+#define FLAG_HOENN_HIDE_ZAPDOS          (HOENN_LANE_B_FLAGS_F + 0x01)
+#define FLAG_HOENN_HIDE_MOLTRES         (HOENN_LANE_B_FLAGS_F + 0x02)
+#define FLAG_HOENN_ARTICUNO_LANDED      (HOENN_LANE_B_FLAGS_F + 0x03) // the feather called it down: it waits at its roost
+#define FLAG_HOENN_ZAPDOS_LANDED        (HOENN_LANE_B_FLAGS_F + 0x04)
+#define FLAG_HOENN_MOLTRES_LANDED       (HOENN_LANE_B_FLAGS_F + 0x05)
+#define FLAG_HOENN_CAUGHT_ARTICUNO      (HOENN_LANE_B_FLAGS_F + 0x06)
+#define FLAG_HOENN_CAUGHT_ZAPDOS        (HOENN_LANE_B_FLAGS_F + 0x07)
+#define FLAG_HOENN_CAUGHT_MOLTRES       (HOENN_LANE_B_FLAGS_F + 0x08)
+#define FLAG_HOENN_GOT_THUNDER_FEATHER  (HOENN_LANE_B_FLAGS_F + 0x09)
+#define FLAG_HOENN_GOT_FLAME_FEATHER    (HOENN_LANE_B_FLAGS_F + 0x0A)
+#define FLAG_HOENN_MOLTRES_CAMEO        (HOENN_LANE_B_FLAGS_F + 0x0B) // saw Moltres fly over Route 113
+#define FLAG_HOENN_HIDE_FLAME_FEATHER   (HOENN_LANE_B_FLAGS_F + 0x0C) // object flag: the feather in Route 113's ash
+#define FLAG_HOENN_HIDE_ROUTE113_MOLTRES (HOENN_LANE_B_FLAGS_F + 0x0D) // object flag: Moltres in the flyover
+#define FLAG_HOENN_BILL_BIRDS           (HOENN_LANE_B_FLAGS_F + 0x0E) // Bill told you he's tracking the birds
+#define FLAG_HOENN_CALL_BIRDS           (HOENN_LANE_B_FLAGS_F + 0x0F) // May: Bill heard a bird came down
+#define FLAG_HOENN_DAILY_ARTICUNO_GONE  (HOENN_LANE_B_DAILY + 0x02)   // knocked out today: back tomorrow
+#define FLAG_HOENN_DAILY_ZAPDOS_GONE    (HOENN_LANE_B_DAILY + 0x03)
+#define FLAG_HOENN_DAILY_MOLTRES_GONE   (HOENN_LANE_B_DAILY + 0x04)
+// specialvar VAR_RESULT, HoennBirdRoostState (VAR_0x8009 = HOENN_BIRD_*):
+#define HOENN_ROOST_EMPTY    0 // nothing happens (caught, gone today, or no feather)
+#define HOENN_ROOST_CALL     1 // the feather can call it: arm the roost's triggers
+#define HOENN_ROOST_WAITING  2 // it already landed: it's shown
+// Route 113 uses VAR_TEMP_6 for the flyover's triggers; the roosts use VAR_TEMP_6 too.
+
+
+// ---- Part 29: shifting tunnels (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Onix: every night a fresh hole opens in a different wall of Rock Tunnel B1F
+// (one per weekday, sOnixHoles); it leads into the Onix's bore
+// (RockTunnel_OnixBore_hoenn), where a shiny Onix rests in its chamber at night.
+// Dunsparce: Dark Cave's south side has four burrow holes, one open in each time
+// of day (sBurrowHoles). They all drop into the burrow (DarkCave_Burrow_hoenn);
+// the first visit in each time of day, a Dunsparce digs one row of the rubble
+// out of the passage, and after all four the chamber behind it is open, where a
+// Three-Segment Dudunsparce sleeps.
+// Tangela: Route 21's islet near Pallet is choked with Tangela vines that only
+// relax in the morning, opening the way to a shiny Tangela.
+#define FLAG_HOENN_ONIX_CAUGHT          (HOENN_LANE_B_FLAGS_E + 0x06)
+#define FLAG_HOENN_HIDE_ONIX            (HOENN_LANE_B_FLAGS_E + 0x07) // object flag, decided on every arrival
+#define FLAG_HOENN_ITEM_BORE_IRON_BALL  (HOENN_LANE_B_FLAGS_E + 0x08)
+#define FLAG_HOENN_ITEM_BORE_STAR_PIECE (HOENN_LANE_B_FLAGS_E + 0x09)
+#define FLAG_HOENN_ITEM_BORE_BIG_NUGGET (HOENN_LANE_B_FLAGS_E + 0x0A)
+#define FLAG_HOENN_ONIX_FOUND           (HOENN_LANE_B_FLAGS_E + 0x0B) // reached the bore's chamber (rumor)
+#define FLAG_HOENN_BURROW_DUG_MORNING   (HOENN_LANE_B_FLAGS_E + 0x0C) // + HOENN_TIME_*: that time of day's Dunsparce dug
+#define FLAG_HOENN_BURROW_DUG_DAY       (HOENN_LANE_B_FLAGS_E + 0x0D)
+#define FLAG_HOENN_BURROW_DUG_EVENING   (HOENN_LANE_B_FLAGS_E + 0x0E)
+#define FLAG_HOENN_BURROW_DUG_NIGHT     (HOENN_LANE_B_FLAGS_E + 0x0F)
+#define FLAG_HOENN_DUDUNSPARCE_CAUGHT   (HOENN_LANE_B_FLAGS_E + 0x10)
+#define FLAG_HOENN_HIDE_DUDUNSPARCE     (HOENN_LANE_B_FLAGS_E + 0x11) // object flag, decided on every arrival
+#define FLAG_HOENN_HIDE_BURROW_DIGGER   (HOENN_LANE_B_FLAGS_E + 0x12) // object flag, decided on every arrival
+#define FLAG_HOENN_TANGELA_CAUGHT       (HOENN_LANE_B_FLAGS_E + 0x13)
+#define FLAG_HOENN_HIDE_TANGELA         (HOENN_LANE_B_FLAGS_E + 0x14) // object flag: the shiny one and its vines
+#define FLAG_HOENN_TANGELA_SEEN         (HOENN_LANE_B_FLAGS_E + 0x15) // pushed at the vines once (rumor)
+#define FLAG_HOENN_CALL_TUNNELS         (HOENN_LANE_B_FLAGS_E + 0x16) // Brendan: the crystal Onix
+#define FLAG_HOENN_DAILY_ONIX_GONE      (HOENN_LANE_B_DAILY + 0x05)   // knocked out tonight: back tomorrow night
+#define FLAG_HOENN_DAILY_ONIX_RUMBLE    (HOENN_LANE_B_DAILY + 0x06)   // tonight's rumble was felt
+#define FLAG_HOENN_DAILY_DUDUNSPARCE_GONE (HOENN_LANE_B_DAILY + 0x07)
+#define FLAG_HOENN_DAILY_TANGELA_GONE   (HOENN_LANE_B_DAILY + 0x08)
+#define FLAG_HOENN_HIDDEN_BORE_METAL_COAT  (HOENN_LANE_B_HIDDEN + 0x00) // under the Onix's resting spot
+#define FLAG_HOENN_HIDDEN_ISLET_MIRACLE_SEED (HOENN_LANE_B_HIDDEN + 0x01) // where the shiny Tangela sat
+#define HOENN_ONIX_NO_HOLE      7  // HoennOnixHoleTonight: no hole (it's not night)
+#define HOENN_BURROW_DIGS_NEEDED 4 // one per time of day
+// Rock Tunnel B1F uses VAR_TEMP_5 for the rumble, the burrow VAR_TEMP_1 for the dig,
+// Route 21 VAR_TEMP_1 for the vines' morning.
+
+// ---- Part 30a: the lost Kangaskhan baby (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Evenings in the Fuchsia Safari Zone, a Kangaskhan baby cries on the Beach's
+// sand. Talk to it and it follows you like your follower Pokémon (its own
+// sprite) until the Safari game ends; walk it to its mother in a hidden nook of
+// the Brush (4,15) and she gives you a Lucky Egg. Afterwards the two sit there
+// together. Leaving the Safari Zone with the baby sends it back to the Beach.
+#define FLAG_HOENN_KANGA_BABY_FOLLOWING (HOENN_LANE_B_FLAGS_E + 0x17) // the baby walks behind you (Safari Zone only)
+#define FLAG_HOENN_KANGA_REUNITED       (HOENN_LANE_B_FLAGS_E + 0x18) // brought it home: Lucky Egg given
+#define FLAG_HOENN_HIDE_KANGA_BABY      (HOENN_LANE_B_FLAGS_E + 0x19) // object flag: the baby on the Beach, decided on every arrival
+#define FLAG_HOENN_HIDE_KANGA_PAIR_BABY (HOENN_LANE_B_FLAGS_E + 0x1A) // object flag: the baby beside its mother in the Brush
+#define FLAG_HOENN_CALL_KANGASKHAN      (HOENN_LANE_B_FLAGS_E + 0x1B) // May: the warden told Birch's aide
+#define FLAG_HOENN_KANGA_EGG_GIVEN      (HOENN_LANE_B_FLAGS_E + 0x1C) // the mother's LUCKY EGG (later, if the bag was full)
+// The Beach and the Brush use VAR_TEMP_1 for the baby's scenes.
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

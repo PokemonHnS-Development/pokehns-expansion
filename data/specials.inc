@@ -766,3 +766,14 @@ gSpecials::
 	@ (end of lane A's specials)
 
 	@ Hoenn & Seek 2.0, builder lane B (parts 31b+): lane B's specials go here
+	def_special HoennBirdRoostState
+	def_special HoennBirdLand
+	def_special HoennBirdBattleEnded
+	def_special HoennSetupProgressWildBattle
+	def_special HoennOnixHoleTonight
+	def_special HoennDrawOnixHole
+	def_special HoennOnixHoleExit
+	def_special HoennDrawBurrowHole
+	def_special HoennDrawBurrowRubble
+	def_special HoennBurrowPrepare
+	def_special HoennBurrowDig

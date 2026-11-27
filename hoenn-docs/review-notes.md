@@ -234,6 +234,34 @@ Each Unown form is its own species with its own compressed sprite sheet (6 frame
 - **27r:** the night word is one word from dusk to dawn (Sat 10 PM FOAM, Sat 2 AM still Friday's UNION, Fri 9 PM UNION, Sat noon none); the word reads from the wall row. Merged as built.
 - **27b:** `regen_all.sh --check` clean; seven rings spell their words, reachable on foot from the entrances (Bell Tower stairs, Mt. Moon Square's cave mouth, Route 44, Whirl B3F ladder, the Mortar ledge passage, Union Cave 1F, Route 20); talking starts the right letter. Bryan approved every choice listed in the PR (sites, ring per seen word, Lv 60–70, fragments as flags, ANCIENT, May's call).
 
+### 38. Review of 31b (PR #90) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+Built by this thread before it took over reviewing, so read with that in mind. Merged `hoenn` at #88 into the branch (one hint-list conflict: kept 27b's `STORY_CIPHER_RINGS` line and 31b's Blackthorn Mart rumor); `regen_all.sh --check` clean; size row re-measured (+6,944 B release).
+- **Played start to finish** on a fresh debug save: HONEY from the beekeeper (once a day), spread on the pine, nobody the same morning, two Teddiursa on a later morning, watch three times (the third says they trust you), shoo keeps the honey and the day's flag, the fourth honey brings the mother, at night she leads you up the claw cliff into the hollow (scene, `FLAG_HOENN_MOON_HOLLOW_FOUND`, stage 2), bears and pool lines by night and day, trail back down, claw marks climb any time afterwards, Brendan's call rings once. No bugs found.
+- **Looks:** the house and the nook sit well in Route 45 at 2×; the hollow is a hand-painted rock bowl. One thing Bryan may not like: a single 2×2 bare-ground patch west of the pool (planned as "where the bears sit", but nobody sits there).
+- **Fog:** Route 45 is a fog-cycle route, so on its fog day the meadow scene is hard to see. That's the weather working as designed.
+- Grid: `review-31b.png` in the project's `hoenn-2.0/review/`.
+
+### 39. Review of 34a (PR #91) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+Built by this thread before it took over reviewing. Merged 31b's branch (with `hoenn` at #88) in; conflicts only in the size table, the hint list and `data/specials.inc` (the bird specials now sit under lane B's marker). `regen_all.sh --check` clean; size row re-measured (+6,368 B release). No map layouts change.
+- **Played:** Bill's intro and per-bird report (clue → "waiting at its roost" with directions → caught); the manager's hint on a normal day and the feather on Route 10's storm day; the engineer's forecast the day before; the Moltres flyover on Route 113's west path and the FLAME FEATHER pickup; the workshop boy's rumor. Roosts: Zapdos lands, **run** = it stays (still there on re-entry, no second landing), **knocked out** = gone today, back the next day; Articuno lands and is **caught** (Master Ball) = the islet stays empty; Moltres lands in view in Mt. Silver's room. May's call rings once on Route 10. No bugs found.
+- **Worth Bryan's eye:** HnS's three birds used to sit at their spots from the start; now each needs its feather, so Articuno needs Hoenn's ice chamber (26b) first. Bill's first talk is long (about 16 boxes).
+- Grid: `review-34a.png` in the project's `hoenn-2.0/review/`.
+
+### 41. Review of 29 (PR #94) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+Built by this thread before it took over reviewing. Merged `hoenn` at #91 into the branch (conflicts only in the size table and the generated hint header); `regen_all.sh --check` clean; size row re-measured.
+- **Fixed in review:** the Onix's hole used `GetDayOfWeek()`, so at midnight it jumped to the next weekday's wall in the middle of the night (27r's rule is `HoennNightWeekday()` for anything weekly at night). Now Tuesday 2 AM still opens Monday's hole and Tuesday 10 PM opens Tuesday's (checked in the emulator).
+- **Played:** the rumble and Monday's hole, no hole by day, the bore, the shiny Onix (Lv 51 on the debug save: cap 56 − 5; Diamond Storm), caught → Metal Coat where it lay, Tuesday's hole after the catch with no rumble, knocked out → gone for the night. Dark Cave's four holes by time of day, one row of rubble per time, the passage, the Three-Segment Dudunsparce caught, the ladder out. Route 21's islet: vines by day (Cut won't help), morning: the shiny Tangela caught, the Miracle Seed, no vines. Brendan's call, the three rumors.
+- **For Bryan (all parts with night "back tomorrow" battles, not just 29):** HnS's daily flags reset at midnight, so a night Pokémon knocked out at 11 PM is back at 12:01 AM the same night (29's Onix, 31a's Sneasel). The docs say "back the next night". Either accept it or add a night-aware reset.
+- **Choices for Bryan:** progress-based levels (cap − 5, floors 40/32/30) instead of Hoenn's 60–70; one hole per weekday into a single bore; the holes keep opening after the catch; one Dunsparce dig per time of day; a ring of Tangela vines (Route 21 has no cove); the three rumor NPCs (Lavender, Violet, Pallet).
+- Grid: `review-29.png` in the project's `hoenn-2.0/review/`.
+
+### 42. Review of 30a (PR #95) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+Built by this thread before it took over reviewing. Merged 29's reviewed branch in (one real conflict: `LoadDynamicFollowerPalette` now calls 30a's `HoennFollowerPaletteSpecies` and then 27b's `HoennObjectPaletteSpecies`; both are needed); `regen_all.sh --check` clean; size row re-measured.
+- **Code read:** the baby is the follower while `FLAG_HOENN_KANGA_BABY_FOLLOWING` is set *and* you're in the Safari Zone; it's drawn as `SPECIES_NONE` there (no real Pokémon uses it), with Kangaskhan's palette tag, so a wild Kangaskhan object shares the palette without clashing. Talking to it runs its own script.
+- **Played:** evening on the Beach at SAFARI LEVEL 2, the baby joins and follows (your follower steps aside), through a Safari battle and across the Beach → Brush connection; the mother alone in the nook; the reunion (hearts, LUCKY EGG); the pair afterwards; nothing by day or at level 1; leaving the Safari sends it back to the Beach; the attendant's rumor; May's call. No bugs found.
+- **Choices for Bryan:** evenings only; needs SAFARI LEVEL 2; its own hand-drawn sprite; the Safari's step limit as the timer; the mother's new nook cut into the Brush's trees; a Lucky Egg as the thanks; neither is catchable.
+- Grid: `review-30a.png` in the project's `hoenn-2.0/review/`.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
