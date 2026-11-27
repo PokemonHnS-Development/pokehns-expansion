@@ -44,9 +44,7 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_TRENCH_DOOR, HoennSeek_EventScript_CallTrenchDoor
 	case HOENN_CALL_ICE_GLALIE, HoennSeek_EventScript_CallIceGlalie
 	case HOENN_CALL_FROST_FEATHER, HoennSeek_EventScript_CallFrostFeather
-	case HOENN_CALL_CIPHER, HoennSeek_EventScript_CallCipher
-	releaseall
-	end
+	goto HoennSeek_EventScript_PhoneEventLaneA @ parts 27a+: lane A's calls (hoenn_lane_a.inc), then lane B's
 
 HoennSeek_EventScript_CallBadge1::
 	setflag FLAG_HOENN_CALL_BADGE1

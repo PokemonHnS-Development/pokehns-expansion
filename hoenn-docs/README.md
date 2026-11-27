@@ -11,6 +11,7 @@ These docs live in the repo so any Claude session, on any account, sees the same
 | `2.0-roadmap.md` | **The build order and status.** Find the next part here |
 | `2.0-plan.md` | Every 2.0 design decision, the repo check results and a master to-do list |
 | `playtest-checklist.md` | Things the emulator couldn't test, for Bryan's real playthrough. Add to it at the end of every part |
+| `lanes/` | **Two builder lanes + a reviewer (Nov 27):** the rules (`README.md`) and each lane's status. Read it before claiming a part |
 | `review-notes.md` | Open items from Bryan's reviews (placement, look, unapproved choices) to adjust later. Mark them done when a part fixes one |
 | `../CLAUDE.md` | The technical memory: build commands, every subsystem's notes, conventions, ROM size table |
 
@@ -18,7 +19,7 @@ Older 1.0 background (design decisions, teams, the Aqua/Magma quests, world deta
 
 ## Starting a session
 1. **Repo:** clone `itsbliusclues-collab/hoenn-and-seek` and check out `hoenn` (on a shallow clone: `git fetch --depth 1 origin hoenn && git checkout -b hoenn origin/hoenn`).
-2. **Check for an open PR** (`gh api repos/itsbliusclues-collab/hoenn-and-seek/pulls`). "Next" from Bryan means: merge the open PR, then start the next part from `2.0-roadmap.md`.
+2. **Check for an open PR** (`gh api repos/itsbliusclues-collab/hoenn-and-seek/pulls`) and your lane file in `lanes/`. Since Nov 27, "next" means: start your lane's next part. The reviewer merges PRs; builders don't.
 3. **Toolchain** (a fresh cloud session has none): `apt-get install -y gcc-arm-none-eabi binutils-arm-none-eabi libnewlib-arm-none-eabi libpng-dev libmgba-dev` (gcc 13.2.1, the same as every earlier build), then `make -j$(nproc) tools`.
 4. **Build:** `make hns -j$(nproc)` (debug, with the warp menu) and `make hns RELEASE=1 -j$(nproc)`. Never plain `make`. A cold build takes ~5–10 minutes; run it in the background.
 5. **Base ROM:** `baserom/emerald.gba` (Pokémon Emerald, US; sha1 `f3ae0881…`) is not in git and must never be committed. It's only needed for the `.ups` patches; ask Bryan to attach it. `tools/hoenn/build_patch.sh --debug` then makes the debug patch.
@@ -44,8 +45,9 @@ Older 1.0 background (design decisions, teams, the Aqua/Magma quests, world deta
 - **Touch upstream HnS files as little as possible:** new code in `hoenn`-named files; small hooks in shared files. Data-driven where it fits: JSON in `data/hoenn/` plus a generator in `tools/hoenn/`.
 - **No Megas.**
 
-## Working from two Claude accounts
-Bryan uses two Claude accounts on this repo. They share nothing except GitHub, so:
-- Work on **one part at a time**, and end every session with the part's PR open and the docs here updated.
-- Before starting, merge or check the open PR so you don't build on a stale branch.
-- Never keep decisions only in a chat: put them in `2.0-plan.md` or `2.0-roadmap.md` in the PR.
+## Working from three Claude accounts (since Nov 27)
+Aidan runs **two builders and a reviewer**, each on its own Claude account. They share nothing except GitHub, so the rules are in **`lanes/README.md`**; read it before starting anything. In short:
+- Each builder owns a **lane** (A or B) of parts, maps and ID ranges; status per lane in `lanes/lane-a.md` and `lanes/lane-b.md`. If you don't know which lane you are, ask Aidan.
+- Work on **one part at a time** in your lane. Open the PR as a draft, merge `hoenn` into your branch (no rebase, no force push), run `tools/hoenn/regen_all.sh`, rebuild, then mark it ready.
+- **The reviewer merges**, one PR at a time. Builders never merge their own PRs. Aidan's "next" means "start your lane's next part".
+- Never keep decisions only in a chat: put them in `2.0-plan.md`, your lane file or the part's roadmap row in the PR.

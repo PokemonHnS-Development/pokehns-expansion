@@ -443,7 +443,7 @@ HoennSeek_EventScript_HintNpc54::
 	end
 
 @ RuinsOfAlph_Lab_hns
-HoennSeek_EventScript_HintNpc55::
+HoennSeek_EventScript_Hint_AlphLabScientist::
 	callnative HoennSeek_NpcHint
 	.2byte 55
 	goto_if_eq VAR_RESULT, FALSE, RuinsOfAlph_Lab_EventScript_Scientist1
@@ -451,7 +451,7 @@ HoennSeek_EventScript_HintNpc55::
 	end
 
 @ Route34_FishingShack_hoenn
-HoennSeek_EventScript_HintNpc56::
+HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
 	.2byte 56
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
@@ -459,7 +459,7 @@ HoennSeek_EventScript_HintNpc56::
 	end
 
 @ OlivineCity_HarborOffice_hoenn
-HoennSeek_EventScript_HintNpc57::
+HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
 	.2byte 57
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
@@ -467,7 +467,7 @@ HoennSeek_EventScript_HintNpc57::
 	end
 
 @ OlivineCity_SailorsHouse_hoenn
-HoennSeek_EventScript_HintNpc58::
+HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 	callnative HoennSeek_NpcHint
 	.2byte 58
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
@@ -475,7 +475,7 @@ HoennSeek_EventScript_HintNpc58::
 	end
 
 @ OlivineCity_CaptainsHouse_hoenn
-HoennSeek_EventScript_HintNpc59::
+HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
 	.2byte 59
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
@@ -483,7 +483,7 @@ HoennSeek_EventScript_HintNpc59::
 	end
 
 @ OlivineCity_TackleShop_hoenn
-HoennSeek_EventScript_HintNpc60::
+HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
 	.2byte 60
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
@@ -491,7 +491,7 @@ HoennSeek_EventScript_HintNpc60::
 	end
 
 @ OlivineCity_Shipwright_hoenn
-HoennSeek_EventScript_HintNpc61::
+HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
 	.2byte 61
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
@@ -499,7 +499,7 @@ HoennSeek_EventScript_HintNpc61::
 	end
 
 @ OlivineCity_KeepersHouse_hoenn
-HoennSeek_EventScript_HintNpc62::
+HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
 	.2byte 62
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
@@ -507,7 +507,7 @@ HoennSeek_EventScript_HintNpc62::
 	end
 
 @ EcruteakCity_DanceTeacher_hoenn
-HoennSeek_EventScript_HintNpc63::
+HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
 	.2byte 63
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
@@ -515,7 +515,7 @@ HoennSeek_EventScript_HintNpc63::
 	end
 
 @ Route34_BreedersHouse_hoenn
-HoennSeek_EventScript_HintNpc64::
+HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
 	.2byte 64
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
@@ -523,7 +523,7 @@ HoennSeek_EventScript_HintNpc64::
 	end
 
 @ Route38_MoomooStoreroom_hoenn
-HoennSeek_EventScript_HintNpc65::
+HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
 	.2byte 65
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
@@ -531,7 +531,7 @@ HoennSeek_EventScript_HintNpc65::
 	end
 
 @ BellchimeTrail_Lodge_hoenn
-HoennSeek_EventScript_HintNpc66::
+HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
 	.2byte 66
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
@@ -539,7 +539,7 @@ HoennSeek_EventScript_HintNpc66::
 	end
 
 @ Route6_BugClub_hoenn
-HoennSeek_EventScript_HintNpc67::
+HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
 	.2byte 67
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
@@ -547,7 +547,7 @@ HoennSeek_EventScript_HintNpc67::
 	end
 
 @ Route6_EngineersHouse_hoenn
-HoennSeek_EventScript_HintNpc68::
+HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
 	.2byte 68
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
@@ -555,7 +555,7 @@ HoennSeek_EventScript_HintNpc68::
 	end
 
 @ CeladonCity_FloristsHouse_hoenn
-HoennSeek_EventScript_HintNpc69::
+HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
 	.2byte 69
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
@@ -563,7 +563,7 @@ HoennSeek_EventScript_HintNpc69::
 	end
 
 @ MelemeleIsle_IslandHome_hoenn
-HoennSeek_EventScript_HintNpc70::
+HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
 	.2byte 70
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
@@ -571,7 +571,7 @@ HoennSeek_EventScript_HintNpc70::
 	end
 
 @ MelemeleIsle_SurfShop_hoenn
-HoennSeek_EventScript_HintNpc71::
+HoennSeek_EventScript_Hint_MelemeleIsle_SurfShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
 	.2byte 71
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1

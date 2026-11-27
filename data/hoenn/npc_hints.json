@@ -16,6 +16,8 @@
     "  to one of them: one talk runs the NPC's own script, the next their first line whose conditions",
     "  hold (or their own script again if none does). always: true skips the toggle (the line, when one",
     "  holds, always comes first). 'index' picks the object when several share the script.",
+    "  key (lane setup, Nov 27): every NPC after the first 55 needs a unique key (letters, digits, _);",
+    "  its wrapper is HoennSeek_EventScript_Hint_<key>. The first 55 keep positional names: never move them.",
     "forecasts: {map, if, text}. A forecast applies when the map's special-weather day is today or",
     "  tomorrow (STR_VAR_1 = TODAY / TOMORROW) and its conditions hold, and only in the region of the",
     "  map the player is in. Shown by forecast lines and by every TV (before its normal show). Only",
@@ -348,7 +350,7 @@
     {"map": "MossdeepCity",                      "script": "MossdeepCity_EventScript_Sailor",                      "lines": ["STORY_NIGHT_DIVE", "STORY_TRENCH_DARK", "STORY_TRENCH_GUARDIANS"]},
     {"map": "ShoalCave_LowTideEntranceRoom",     "script": "ShoalCave_LowTideEntranceRoom_EventScript_ShellBellExpert", "lines": ["STORY_ICE_HOLE", "STORY_ICE_FEATHER", "STORY_ICE_FROSLASS", "STORY_ICE_GLALIE"]},
     {"map": "PacifidlogTown_PokemonCenter_1F",   "script": "PacifidlogTown_PokemonCenter_1F_EventScript_OldMan",  "lines": ["RUMOR_ICE_FROSLASS", "RUMOR_ICE_CHAMBER"]},
-    {"map": "RuinsOfAlph_Lab_hns",               "script": "RuinsOfAlph_Lab_EventScript_Scientist1",              "lines": ["STORY_CIPHER_NIGHT", "STORY_CIPHER_WALL"]}
+    {"map": "RuinsOfAlph_Lab_hns",               "script": "RuinsOfAlph_Lab_EventScript_Scientist1", "key": "AlphLabScientist", "lines": ["STORY_CIPHER_NIGHT", "STORY_CIPHER_WALL"]}
   ],
 
   "forecasts": [
