@@ -1052,6 +1052,9 @@ HoennSeek_Text_Hint_LineStoryCipherWall::
 HoennSeek_Text_Hint_LineStoryCipherNight::
 	.string "AT NIGHT WE SPEAK… I've been\nsleeping here at the lab ever\lsince you read it.\pIf the WORDS chambers really light\nup at night, is it the same word\levery night? Tell my colleague\lwhat you see!$"
 
+HoennSeek_Text_Hint_LineStoryCipherRings::
+	.string "Hikers keep phoning the lab. They\nsee UNOWN floating in a circle at\lnight, deep in the caves.\pAlways somewhere quiet, away from\nthe path. Is it the places from\lthe words?$"
+
 HoennSeek_Text_Hint_LineStoryIceThief::
 	.string "Items keep vanishing off the ice\ndeep down in the ICE PATH. Only\lat night!\pCLAIR thinks it's a POKéMON.\nWhatever it is, it's fast on\lthe ice.$"
 

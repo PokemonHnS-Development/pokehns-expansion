@@ -503,6 +503,19 @@
 #define HOENN_CIPHER_NEW_WORD  1 // tonight's word, not noted yet
 #define HOENN_CIPHER_SEEN_WORD 2 // tonight's word, already noted
 
+// ---- Part 27b: Unown Cipher B, the glyph sites (data/scripts/hoenn_lane_a.inc, src/hoenn_lane_a.c) ----
+// Each night word names a place. Once you've seen a weekday's word, its place
+// shows a ring of Unown at night spelling the word, in a quiet corner. Talk to
+// the ring: one letter comes out to battle, and once it's caught or knocked
+// out the ring is gone and a TABLET FRAGMENT carved with that letter lies on
+// the floor. The seven letters spell ANCIENT (part 28 reads the tablet).
+#define FLAG_HOENN_CIPHER_FRAGMENT_SUN  (HOENN_LANE_A_FLAGS_E + 0x0B) // + HOENN_SUNDAY..HOENN_SATURDAY (0x0B-0x11):
+                                                                       // that place's fragment was found
+#define FLAG_HOENN_CIPHER_HIDE_RING     (HOENN_LANE_A_FLAGS_E + 0x12) // the ring objects' flag (every site map decides it on arrival)
+#define FLAG_HOENN_CIPHER_SHOWED_LAB    (HOENN_LANE_A_FLAGS_E + 0x13) // the lab researcher has seen a fragment
+#define FLAG_HOENN_CALL_CIPHER_FRAGMENT (HOENN_LANE_A_FLAGS_E + 0x14) // May: the lab phoned Birch about the fragment
+#define FLAG_HOENN_CIPHER_TABLET        (HOENN_LANE_A_FLAGS_E + 0x15) // the lab put all seven together (part 28 starts here)
+
 // ---- Part 31a: the Sneasel thief (data/scripts/hoenn_lane_a.inc) ----
 // Ice Path B2F at night, once all four B1F boulders have dropped onto it: an
 // item ball on the ice is snatched by a Sneasel as you reach it, then another
