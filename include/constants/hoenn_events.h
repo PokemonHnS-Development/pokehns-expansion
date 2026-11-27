@@ -522,4 +522,27 @@
 // Lane B's part sections go here, at the end of the file:
 //     #define FLAG_HOENN_Y   (HOENN_LANE_B_FLAGS_E + 0x00)
 
+// ---- Part 31b: Teddiursa's honey trail (data/scripts/hoenn_lane_b.inc) ----
+// A beekeeper's house at the top of Route 45 gives one HONEY a day. Spread on
+// the old pine in the pond meadow, it brings two Teddiursa the next morning;
+// after HOENN_HONEY_MORNINGS_NEEDED watched mornings their mother comes
+// instead, and on a later night she climbs the meadow's east cliff and leads
+// you to the moon hollow (Route45_MoonHollow_hoenn), one of Jirachi's three
+// wishing spots (lane A's part 37 reads FLAG_HOENN_MOON_HOLLOW_FOUND).
+#define FLAG_HOENN_HONEY_ON_TREE        (HOENN_LANE_B_FLAGS_E + 0x00) // HONEY is on the pine
+#define FLAG_HOENN_HIDE_HONEY_TEDDI     (HOENN_LANE_B_FLAGS_E + 0x01) // object flag: the two Teddiursa at the pine
+#define FLAG_HOENN_HIDE_HONEY_URSARING  (HOENN_LANE_B_FLAGS_E + 0x02) // object flag: the Ursaring at the pine
+#define FLAG_HOENN_HIDE_HOLLOW_BEARS    (HOENN_LANE_B_FLAGS_E + 0x03) // object flag: the bears in the hollow
+#define FLAG_HOENN_MOON_HOLLOW_FOUND    (HOENN_LANE_B_FLAGS_E + 0x04) // followed the Ursaring up (Jirachi's spot)
+#define FLAG_HOENN_CALL_MOON_HOLLOW     (HOENN_LANE_B_FLAGS_E + 0x05) // Brendan's call about it
+#define FLAG_HOENN_DAILY_BEEKEEPER_HONEY (HOENN_LANE_B_DAILY + 0x00)  // today's jar from the beekeeper
+#define FLAG_HOENN_DAILY_HONEY_SPREAD    (HOENN_LANE_B_DAILY + 0x01)  // HONEY went on the pine today (visitors come on a later morning)
+#define VAR_HOENN_HONEY_STAGE           (HOENN_LANE_B_VARS_E + 0x00)  // HOENN_HONEY_STAGE_*
+#define VAR_HOENN_HONEY_MORNINGS        (HOENN_LANE_B_VARS_E + 0x01)  // honey mornings watched (stops counting at the goal)
+#define HOENN_HONEY_STAGE_CUBS          0 // the Teddiursa come for the honey
+#define HOENN_HONEY_STAGE_NIGHT         1 // the mother came one morning: she waits at the pine at night
+#define HOENN_HONEY_STAGE_HOLLOW        2 // the hollow is found; the bears sit there at night
+#define HOENN_HONEY_MORNINGS_NEEDED     3 // watched mornings before the mother comes
+// The hollow uses VAR_TEMP_1 for its first-visit scene (an ON_FRAME entry).
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H
