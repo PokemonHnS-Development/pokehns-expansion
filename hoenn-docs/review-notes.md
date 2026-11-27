@@ -255,6 +255,13 @@ Built by this thread before it took over reviewing. Merged `hoenn` at #91 into t
 - **Choices for Bryan:** progress-based levels (cap − 5, floors 40/32/30) instead of Hoenn's 60–70; one hole per weekday into a single bore; the holes keep opening after the catch; one Dunsparce dig per time of day; a ring of Tangela vines (Route 21 has no cove); the three rumor NPCs (Lavender, Violet, Pallet).
 - Grid: `review-29.png` in the project's `hoenn-2.0/review/`.
 
+### 42. Review of 30a (PR #95) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+Built by this thread before it took over reviewing. Merged 29's reviewed branch in (one real conflict: `LoadDynamicFollowerPalette` now calls 30a's `HoennFollowerPaletteSpecies` and then 27b's `HoennObjectPaletteSpecies`; both are needed); `regen_all.sh --check` clean; size row re-measured.
+- **Code read:** the baby is the follower while `FLAG_HOENN_KANGA_BABY_FOLLOWING` is set *and* you're in the Safari Zone; it's drawn as `SPECIES_NONE` there (no real Pokémon uses it), with Kangaskhan's palette tag, so a wild Kangaskhan object shares the palette without clashing. Talking to it runs its own script.
+- **Played:** evening on the Beach at SAFARI LEVEL 2, the baby joins and follows (your follower steps aside), through a Safari battle and across the Beach → Brush connection; the mother alone in the nook; the reunion (hearts, LUCKY EGG); the pair afterwards; nothing by day or at level 1; leaving the Safari sends it back to the Beach; the attendant's rumor; May's call. No bugs found.
+- **Choices for Bryan:** evenings only; needs SAFARI LEVEL 2; its own hand-drawn sprite; the Safari's step limit as the timer; the mother's new nook cut into the Brush's trees; a Lucky Egg as the thanks; neither is catchable.
+- Grid: `review-30a.png` in the project's `hoenn-2.0/review/`.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 

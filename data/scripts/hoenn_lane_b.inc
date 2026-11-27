@@ -13,6 +13,7 @@ HoennSeek_EventScript_PhoneEventLaneB::
 	case HOENN_CALL_MOON_HOLLOW, HoennSeek_EventScript_CallMoonHollow @ part 31b
 	case HOENN_CALL_BIRDS, HoennSeek_EventScript_CallBirds @ part 34a
 	case HOENN_CALL_TUNNELS, HoennSeek_EventScript_CallTunnels @ part 29
+	case HOENN_CALL_KANGASKHAN, HoennSeek_EventScript_CallKangaskhan @ part 30a
 	releaseall @ no call matched: the end of the chain
 	end
 
@@ -1513,3 +1514,269 @@ HoennSeek_Text_CallTunnels:
 	.string "ONIX that sparkled like crystal!\p"
 	.string "That was you, right? Dad wants to\n"
 	.string "see it. Bring it to HOENN sometime!$"
+
+@ ==========================================================================
+@ Part 30a: the lost Kangaskhan baby (Fuchsia Safari Zone)
+@ ==========================================================================
+@ Evenings (once the BRUSH is open to you, SAFARI LEVEL 2), a Kangaskhan baby
+@ cries on the BEACH's sand at (39,36). Say YES and it follows you like your
+@ follower Pokémon, drawn with its own sprite (src/hoenn_lane_b.c,
+@ HoennFollowerOverride). Its mother paces in a nook of the BRUSH's woods (4,15),
+@ reached through the grass notch at (8-9,17-18); stepping into the nook with
+@ the baby (triggers at x 7, rows 17-18) plays the reunion and she gives a
+@ LUCKY EGG. Afterwards the pair sit there together. If the Safari game ends
+@ first, the entrance clears the follow flag and the baby is back on the BEACH
+@ the next evening.
+
+HoennSeek_EventScript_SafariBeachOnTransition::
+	setflag FLAG_HOENN_HIDE_KANGA_BABY
+	goto_if_set FLAG_HOENN_KANGA_REUNITED, HoennSeek_EventScript_LaneBEnd
+	goto_if_set FLAG_HOENN_KANGA_BABY_FOLLOWING, HoennSeek_EventScript_LaneBEnd
+	goto_if_lt VAR_KANTO_SAFARI_ZONE_PROGRESS, 2, HoennSeek_EventScript_LaneBEnd
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_EVENING, HoennSeek_EventScript_LaneBEnd
+	clearflag FLAG_HOENN_HIDE_KANGA_BABY
+	end
+
+HoennSeek_EventScript_SafariBrushOnTransition::
+	setflag FLAG_HOENN_HIDE_KANGA_PAIR_BABY
+	goto_if_set FLAG_HOENN_KANGA_REUNITED, HoennSeek_EventScript_KangaPairShow
+	goto_if_unset FLAG_HOENN_KANGA_BABY_FOLLOWING, HoennSeek_EventScript_LaneBEnd
+	setvar VAR_TEMP_1, 1
+	end
+
+HoennSeek_EventScript_KangaPairShow:
+	clearflag FLAG_HOENN_HIDE_KANGA_PAIR_BABY
+	end
+
+HoennSeek_EventScript_KangaBaby::
+	lock
+	faceplayer
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_HIGH_PITCH
+	msgbox HoennSeek_Text_KangaBaby, MSGBOX_DEFAULT
+	waitmoncry
+	msgbox HoennSeek_Text_KangaBabyAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_KangaBabyStays
+	msgbox HoennSeek_Text_KangaBabyFollows, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_HOENN_KANGA_BABY_FOLLOWING
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOENN_KANGA_BABY
+	updatefollowingmon
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+HoennSeek_EventScript_KangaBabyStays:
+	msgbox HoennSeek_Text_KangaBabyStays, MSGBOX_DEFAULT
+	release
+	end
+
+@ Talking to the baby while it follows you (HoennFollowerScript).
+HoennSeek_EventScript_KangaBabyFollower::
+	lock
+	faceplayer
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_HIGH_PITCH
+	msgbox HoennSeek_Text_KangaBabyFollower, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_KangaMother::
+	lock
+	faceplayer
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_NORMAL
+	goto_if_unset FLAG_HOENN_KANGA_REUNITED, HoennSeek_EventScript_KangaMotherAlone
+	goto_if_unset FLAG_HOENN_KANGA_EGG_GIVEN, HoennSeek_EventScript_KangaMotherEgg
+	msgbox HoennSeek_Text_KangaMotherAfter, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_KangaMotherAlone:
+	msgbox HoennSeek_Text_KangaMotherAlone, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_KangaMotherEgg:
+	msgbox HoennSeek_Text_KangaMotherEggAgain, MSGBOX_DEFAULT
+	waitmoncry
+	call HoennSeek_EventScript_KangaGiveEgg
+	release
+	end
+
+HoennSeek_EventScript_KangaPairBaby::
+	lock
+	faceplayer
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_HIGH_PITCH
+	msgbox HoennSeek_Text_KangaPairBaby, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+@ The nook's entrance with the baby behind you (it walks one tile behind, so
+@ it's at (8, your row)): it hops over you and runs to its mother.
+HoennSeek_EventScript_KangaReunion::
+	lockall
+	setvar VAR_TEMP_1, 0
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_HIGH_PITCH
+	msgbox HoennSeek_Text_KangaReunionSniff, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	clearflag FLAG_HOENN_KANGA_BABY_FOLLOWING
+	updatefollowingmon
+	getplayerxy VAR_0x8004, VAR_0x8005
+	setobjectxyperm LOCALID_HOENN_KANGA_PAIR_BABY, 8, VAR_0x8005
+	clearflag FLAG_HOENN_HIDE_KANGA_PAIR_BABY
+	addobject LOCALID_HOENN_KANGA_PAIR_BABY
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	call_if_eq VAR_0x8005, 17, HoennSeek_EventScript_KangaBabyRunsFrom17
+	call_if_eq VAR_0x8005, 18, HoennSeek_EventScript_KangaBabyRunsFrom18
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_HOENN_KANGA_MOTHER, HoennSeek_Movement_KangaMotherTurns
+	waitmovement 0
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_ENCOUNTER
+	applymovement LOCALID_HOENN_KANGA_MOTHER, HoennSeek_Movement_KangaHeart
+	applymovement LOCALID_HOENN_KANGA_PAIR_BABY, HoennSeek_Movement_KangaHeart
+	waitmovement LOCALID_HOENN_KANGA_PAIR_BABY
+	waitmoncry
+	msgbox HoennSeek_Text_KangaReunion, MSGBOX_DEFAULT
+	setobjectxyperm LOCALID_HOENN_KANGA_PAIR_BABY, 5, 15
+	setobjectmovementtype LOCALID_HOENN_KANGA_PAIR_BABY, MOVEMENT_TYPE_FACE_LEFT
+	setflag FLAG_HOENN_KANGA_REUNITED
+	call HoennSeek_EventScript_KangaGiveEgg
+	releaseall
+	end
+
+HoennSeek_EventScript_KangaBabyRunsFrom17:
+	applymovement LOCALID_HOENN_KANGA_PAIR_BABY, HoennSeek_Movement_KangaBabyRun17
+	waitmovement 0
+	return
+
+HoennSeek_EventScript_KangaBabyRunsFrom18:
+	applymovement LOCALID_HOENN_KANGA_PAIR_BABY, HoennSeek_Movement_KangaBabyRun18
+	waitmovement 0
+	return
+
+HoennSeek_EventScript_KangaGiveEgg:
+	msgbox HoennSeek_Text_KangaEgg, MSGBOX_DEFAULT
+	giveitem ITEM_LUCKY_EGG
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_KangaEggNoRoom
+	setflag FLAG_HOENN_KANGA_EGG_GIVEN
+	msgbox HoennSeek_Text_KangaEggAfter, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_KangaEggNoRoom:
+	msgbox HoennSeek_Text_KangaEggNoRoom, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_CallKangaskhan::
+	setflag FLAG_HOENN_CALL_KANGASKHAN
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallKangaskhan
+	goto HoennSeek_EventScript_CallEnd
+
+@ From (8,17): over you to (6,17), left to (5,17), up beside its mother.
+HoennSeek_Movement_KangaBabyRun17:
+	jump_2_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	face_left
+	step_end
+
+@ From (8,18): over you to (6,18), left to (5,18), up beside its mother.
+HoennSeek_Movement_KangaBabyRun18:
+	jump_2_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	face_left
+	step_end
+
+HoennSeek_Movement_KangaMotherTurns:
+	face_right
+	step_end
+
+HoennSeek_Movement_KangaHeart:
+	emote_heart
+	step_end
+
+@ ---- Part 30a texts ---------------------------------------------------------
+
+HoennSeek_Text_KangaBaby:
+	.string "A tiny KANGASKHAN is crying all\n"
+	.string "alone at the water's edge!\p"
+	.string "It must have wandered off from\n"
+	.string "its mother and gotten lost.$"
+
+HoennSeek_Text_KangaBabyAsk:
+	.string "It's looking up at you with big,\n"
+	.string "wet eyes. Help it find its mother?$"
+
+HoennSeek_Text_KangaBabyFollows:
+	.string "The baby grabs your leg and won't\n"
+	.string "let go. It's coming with you!\p"
+	.string "Better find its mother before your\n"
+	.string "SAFARI GAME ends.$"
+
+HoennSeek_Text_KangaBabyStays:
+	.string "The baby sniffles and curls up on\n"
+	.string "the sand. It keeps crying…$"
+
+HoennSeek_Text_KangaBabyFollower:
+	.string "The baby clings to you. It keeps\n"
+	.string "sniffing the air and peering\l"
+	.string "toward the woods of the BRUSH.$"
+
+HoennSeek_Text_KangaMotherAlone:
+	.string "The KANGASKHAN paces back and\n"
+	.string "forth, peering out of the woods.\p"
+	.string "Its pouch is empty…$"
+
+HoennSeek_Text_KangaReunionSniff:
+	.string "The baby squeals and wriggles!\n"
+	.string "It smells something up ahead!$"
+
+HoennSeek_Text_KangaReunion:
+	.string "The baby runs to its mother and\n"
+	.string "hugs her leg. Together again!$"
+
+HoennSeek_Text_KangaEgg:
+	.string "The mother KANGASKHAN nudges\n"
+	.string "something to you with her nose.$"
+
+HoennSeek_Text_KangaEggAfter:
+	.string "A LUCKY EGG! She must have been\n"
+	.string "keeping it safe in her nest.$"
+
+HoennSeek_Text_KangaEggNoRoom:
+	.string "Your BAG is too full to take it.\n"
+	.string "She'll keep it safe for now.$"
+
+HoennSeek_Text_KangaMotherEggAgain:
+	.string "The KANGASKHAN still has something\n"
+	.string "for you, tucked in the grass.$"
+
+HoennSeek_Text_KangaMotherAfter:
+	.string "The KANGASKHAN keeps a calm watch\n"
+	.string "over its baby. It looks content.$"
+
+HoennSeek_Text_KangaPairBaby:
+	.string "The baby peeks out of the grass\n"
+	.string "and squeaks happily at you!$"
+
+HoennSeek_Text_CallKangaskhan:
+	.string "Hi, {PLAYER}! It's MAY!\p"
+	.string "One of PROF. BIRCH's aides does\n"
+	.string "fieldwork at the FUCHSIA SAFARI\l"
+	.string "ZONE, and the warden told her a\l"
+	.string "story about you!\p"
+	.string "You walked a lost KANGASKHAN baby\n"
+	.string "all the way back to its mother?\p"
+	.string "That's so sweet! I'd have cried\n"
+	.string "right along with it!$"

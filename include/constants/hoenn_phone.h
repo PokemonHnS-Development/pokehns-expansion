@@ -58,5 +58,6 @@
 #define HOENN_CALL_MOON_HOLLOW  70 // Brendan: the beekeeper's letter about the moon hollow (part 31b)
 #define HOENN_CALL_BIRDS        71 // May: a feather called a legendary bird down (part 34a)
 #define HOENN_CALL_TUNNELS      72 // Brendan: you caught Rock Tunnel's crystal Onix (part 29)
+#define HOENN_CALL_KANGASKHAN   73 // May: you brought the Safari's lost Kangaskhan baby home (part 30a)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

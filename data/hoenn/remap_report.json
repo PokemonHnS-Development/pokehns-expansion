@@ -1138,6 +1138,7 @@
   "VAR_JAGGED_PASS_ASH_WEATHER": "remapped: aliased onto ['VAR_SAFFRON_CITY_STATE']",
   "VAR_JAGGED_PASS_STATE": "remapped: aliased onto ['VAR_RADIO_LUCKY_ID_HI']",
   "VAR_KANTO_ROCKET_STORY_STATE": "kept: HnS owns or uses this name (0x406c)",
+  "VAR_KANTO_SAFARI_ZONE_PROGRESS": "kept: HnS owns or uses this name (0x406d)",
   "VAR_LAVARIDGE_TOWN_STATE": "remapped: aliased onto ['VAR_AZALEA_TOWN_STATE']",
   "VAR_LILYCOVE_FAN_CLUB_STATE": "kept: engine var HnS deliberately shares (0x4095)",
   "VAR_LILYCOVE_MUSEUM_2F_STATE": "kept: HnS owns or uses this name (0x4094)",

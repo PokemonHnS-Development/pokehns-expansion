@@ -636,4 +636,18 @@
 #define HOENN_BURROW_DIGS_NEEDED 4 // one per time of day
 // Rock Tunnel B1F uses VAR_TEMP_5 for the rumble, the burrow VAR_TEMP_1 for the dig,
 // Route 21 VAR_TEMP_1 for the vines' morning.
+
+// ---- Part 30a: the lost Kangaskhan baby (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Evenings in the Fuchsia Safari Zone, a Kangaskhan baby cries on the Beach's
+// sand. Talk to it and it follows you like your follower Pokémon (its own
+// sprite) until the Safari game ends; walk it to its mother in a hidden nook of
+// the Brush (4,15) and she gives you a Lucky Egg. Afterwards the two sit there
+// together. Leaving the Safari Zone with the baby sends it back to the Beach.
+#define FLAG_HOENN_KANGA_BABY_FOLLOWING (HOENN_LANE_B_FLAGS_E + 0x17) // the baby walks behind you (Safari Zone only)
+#define FLAG_HOENN_KANGA_REUNITED       (HOENN_LANE_B_FLAGS_E + 0x18) // brought it home: Lucky Egg given
+#define FLAG_HOENN_HIDE_KANGA_BABY      (HOENN_LANE_B_FLAGS_E + 0x19) // object flag: the baby on the Beach, decided on every arrival
+#define FLAG_HOENN_HIDE_KANGA_PAIR_BABY (HOENN_LANE_B_FLAGS_E + 0x1A) // object flag: the baby beside its mother in the Brush
+#define FLAG_HOENN_CALL_KANGASKHAN      (HOENN_LANE_B_FLAGS_E + 0x1B) // May: the warden told Birch's aide
+#define FLAG_HOENN_KANGA_EGG_GIVEN      (HOENN_LANE_B_FLAGS_E + 0x1C) // the mother's LUCKY EGG (later, if the bag was full)
+// The Beach and the Brush use VAR_TEMP_1 for the baby's scenes.
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

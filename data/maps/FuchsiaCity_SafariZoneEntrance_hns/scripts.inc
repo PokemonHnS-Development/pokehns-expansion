@@ -9,6 +9,7 @@ FuchsiaCity_SafariZoneEntrance_OnFrame::
 	.2byte 0
 
 FuchsiaCity_SafariZoneEntrance_OnTransition::
+	clearflag FLAG_HOENN_KANGA_BABY_FOLLOWING @ Hoenn & Seek (2.0 part 30a): the lost Kangaskhan baby stays in the Safari Zone
 	call_if_eq VAR_KANTO_SAFARI_ZONE_PROGRESS, 0, FuchsiaCity_SafariZoneEntrance_FirstTime
 	end
 
