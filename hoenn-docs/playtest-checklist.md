@@ -458,7 +458,7 @@ Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its 
 - Once the Hall of Fame (or the Pewter grandpa) brings Ho-Oh back: the middle sage on Tin Tower 1F. With the Rainbow Wing and no CLEAR BELL, does he give you the bell? Do his clues follow what you're missing (Ruins panel, the three beasts, dawn)?
 - With every clue, walk into Ecruteak between 4 and 10 AM: the rainbow scene. Is Ho-Oh's flight visible wherever you enter from? Brendan's call a few steps later.
 - The roof at dawn (Ho-Oh there) and at any other time (empty), including at night.
-- With the GS BALL waiting at the shrine: plant a berry at each soil spot (beside the Ilex shrine, below the lone tree in Viridian Forest's south, beside a lone tree in Petalburg Woods' tall grass on the east side), come back the next day, take the glowing berries, then the shrine and Celebi.
+- With the GS BALL waiting at the shrine: plant a berry at each soil spot (the clearing floor just left of the Ilex shrine; you can step onto it, so face it to plant, below the lone tree in Viridian Forest's south, beside a lone tree in Petalburg Woods' tall grass on the east side), come back the next day, take the glowing berries, then the shrine and Celebi.
 
 ## Lane B parts (27a, 31b on: Kanto, Safari, legends)
 Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
