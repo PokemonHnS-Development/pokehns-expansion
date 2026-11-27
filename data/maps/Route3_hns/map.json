@@ -78,7 +78,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SKITTY",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MANKEY",
       "x": 31,
       "y": 11,
       "elevation": 0,
@@ -143,7 +143,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NINCADA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NIDORAN_M",
       "x": 82,
       "y": 12,
       "elevation": 0,
