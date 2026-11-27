@@ -32,6 +32,12 @@ HoennSeek_EventScript_GlyphRingArm::
 	specialvar VAR_RESULT, HoennGlyphRingShows
 	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_GlyphRingArmDone
 	clearflag FLAG_HOENN_CIPHER_HIDE_RING
+	@ Each letter is its own Unown form, and each form loads its whole sprite
+	@ sheet (96 tiles). A ring of five, the map's other Pokémon and a follower
+	@ ran out of sprite memory, so letters went missing (review item 36). Your
+	@ Pokémon stays in its ball while a ring is out (a temp flag: only for
+	@ this visit).
+	setflag FLAG_TEMP_HIDE_FOLLOWER
 HoennSeek_EventScript_GlyphRingArmDone:
 	return
 
