@@ -2744,12 +2744,24 @@ HoennSeek_EventScript_IceRoomHoleEnd:
 HoennSeek_EventScript_IceChamberOnTransition::
 	setflag FLAG_HOENN_ICE_CHAMBER_FOUND
 	setflag FLAG_HOENN_HIDE_ICE_GLALIE
+	setflag FLAG_HOENN_HIDE_ICE_FROSLASS
+	setvar VAR_TEMP_4, 0
+	gettimeofday
+	goto_if_eq VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_IceChamberNight
 	goto_if_set FLAG_HOENN_CAUGHT_ICE_GLALIE, HoennSeek_EventScript_IceChamberEnd
 	goto_if_set FLAG_HOENN_DAILY_ICE_GLALIE, HoennSeek_EventScript_IceChamberEnd
-	gettimeofday
-	goto_if_eq VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_IceChamberEnd
 	clearflag FLAG_HOENN_HIDE_ICE_GLALIE
 HoennSeek_EventScript_IceChamberEnd:
+	end
+
+@ Part 26b: at night the Froslass waits in the first pillar (the object's
+@ template spot, 11,6), and the frame script shows her once on arrival.
+HoennSeek_EventScript_IceChamberNight:
+	goto_if_set FLAG_HOENN_CAUGHT_ICE_FROSLASS, HoennSeek_EventScript_IceChamberEnd
+	goto_if_set FLAG_HOENN_DAILY_ICE_FROSLASS, HoennSeek_EventScript_IceChamberEnd
+	clearflag FLAG_HOENN_HIDE_ICE_FROSLASS
+	setvar VAR_TEMP_4, 1
+	setvar VAR_TEMP_5, 1
 	end
 
 HoennSeek_EventScript_IceGlalie::
@@ -2783,11 +2795,170 @@ HoennSeek_EventScript_IceGlalieStays:
 	release
 	end
 
+@ ---- Part 26b: the Froslass's pillar chase -----------------------------------
+@ The chamber's ice rocks are its pillars. At night a FROSLASS's reflection
+@ shows in one of them (her object, standing on the rock: the rocks have no top
+@ layer, so she's drawn over them). Touch that pillar and she flickers out and
+@ into the next one, and the camera shows you where; touch any other pillar
+@ while she's in the ice and a freezing gust blows you back to the ladder,
+@ which starts the chase over. Getting to each pillar is the sliding puzzle:
+@ (6,9) and (12,9) can only be touched from the tile below them.
+@ VAR_TEMP_4: 0 no chase, 1-5 the pillar she's in, 6 she has stepped out.
+@ Pillars, in order: (11,6), (6,9), (15,4), (12,9) in the hall, then (15,20)
+@ in the inner chamber's south-east corner, where she steps out.
+HoennSeek_EventScript_IceFroslassIntro::
+	lockall
+	setvar VAR_TEMP_5, 2
+	delay 30
+	msgbox HoennSeek_Text_IceFroslassIntro, MSGBOX_DEFAULT
+	closemessage
+	@ The first pillar is at the bottom edge of the screen from the ladder,
+	@ under the message box, so the camera goes to show it.
+	setvar VAR_0x8008, 11
+	setvar VAR_0x8009, 6
+	call HoennSeek_EventScript_StarterPanTo
+	playse SE_M_HAZE
+	applymovement LOCALID_HOENN_ICE_FROSLASS, HoennSeek_Movement_IceFroslassFlicker
+	waitmovement 0
+	msgbox HoennSeek_Text_IceFroslassIntro2, MSGBOX_DEFAULT
+	closemessage
+	call HoennSeek_EventScript_StarterPanBack
+	releaseall
+	end
+
+HoennSeek_EventScript_IceFroslass::
+	lock
+	goto_if_ge VAR_TEMP_4, 5, HoennSeek_EventScript_IceFroslassStepOut
+	playse SE_M_HAZE
+	applymovement LOCALID_HOENN_ICE_FROSLASS, HoennSeek_Movement_IceFroslassFlicker
+	waitmovement 0
+	removeobject LOCALID_HOENN_ICE_FROSLASS
+	addvar VAR_TEMP_4, 1
+	call_if_eq VAR_TEMP_4, 2, HoennSeek_EventScript_IceFroslassTo2
+	call_if_eq VAR_TEMP_4, 3, HoennSeek_EventScript_IceFroslassTo3
+	call_if_eq VAR_TEMP_4, 4, HoennSeek_EventScript_IceFroslassTo4
+	call_if_eq VAR_TEMP_4, 5, HoennSeek_EventScript_IceFroslassTo5
+	msgbox HoennSeek_Text_IceFroslassSlips, MSGBOX_DEFAULT
+	closemessage
+	@ Show the pillar she went to, then come back.
+	call HoennSeek_EventScript_StarterPanTo
+	@ removeobject set her flag; clear it, or she isn't respawned once the
+	@ camera leaves her pillar and comes back.
+	clearflag FLAG_HOENN_HIDE_ICE_FROSLASS
+	addobject LOCALID_HOENN_ICE_FROSLASS
+	playse SE_M_HAZE
+	applymovement LOCALID_HOENN_ICE_FROSLASS, HoennSeek_Movement_IceFroslassFlicker
+	waitmovement 0
+	delay 30
+	call HoennSeek_EventScript_StarterPanBack
+	release
+	end
+
+@ Each sets her object's spot and the camera's target (VAR_0x8008/0x8009).
+HoennSeek_EventScript_IceFroslassTo2:
+	setobjectxyperm LOCALID_HOENN_ICE_FROSLASS, 6, 9
+	setvar VAR_0x8008, 6
+	setvar VAR_0x8009, 9
+	return
+HoennSeek_EventScript_IceFroslassTo3:
+	setobjectxyperm LOCALID_HOENN_ICE_FROSLASS, 15, 4
+	setvar VAR_0x8008, 15
+	setvar VAR_0x8009, 4
+	return
+HoennSeek_EventScript_IceFroslassTo4:
+	setobjectxyperm LOCALID_HOENN_ICE_FROSLASS, 12, 9
+	setvar VAR_0x8008, 12
+	setvar VAR_0x8009, 9
+	return
+HoennSeek_EventScript_IceFroslassTo5:
+	setobjectxyperm LOCALID_HOENN_ICE_FROSLASS, 15, 20
+	setvar VAR_0x8008, 15
+	setvar VAR_0x8009, 20
+	return
+
+@ The last pillar: she steps out and fights. If you ran, she's still there
+@ (stage 6) and talking to her fights again.
+HoennSeek_EventScript_IceFroslassStepOut:
+	goto_if_eq VAR_TEMP_4, 6, HoennSeek_EventScript_IceFroslassBattle
+	setvar VAR_TEMP_4, 6
+	setflag FLAG_HOENN_ICE_FROSLASS_MET
+	playmoncry SPECIES_FROSLASS, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_IceFroslassOut, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+HoennSeek_EventScript_IceFroslassBattle:
+	setvar VAR_0x8004, SPECIES_FROSLASS
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_SPIRIT_SHACKLE
+	setvar VAR_0x8006, TRUE
+	setvar VAR_0x8007, ITEM_NONE
+	special HoennTuneWildMon
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, HoennSeek_EventScript_IceFroslassStays
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, HoennSeek_EventScript_IceFroslassStays
+	setflag FLAG_HOENN_DAILY_ICE_FROSLASS
+	removeobject LOCALID_HOENN_ICE_FROSLASS
+	setflag FLAG_HOENN_HIDE_ICE_FROSLASS
+	setvar VAR_TEMP_4, 0
+	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_IceFroslassCaught
+	call_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_IceFroslassGone
+	goto_if_set FLAG_HOENN_GOT_FROST_FEATHER, HoennSeek_EventScript_IceFroslassStays
+	@ Behind her, the pillar's ice holds Articuno's feather.
+	msgbox HoennSeek_Text_IceFeatherGlint, MSGBOX_DEFAULT
+	giveitem ITEM_FROST_FEATHER
+	setflag FLAG_HOENN_GOT_FROST_FEATHER
+	msgbox HoennSeek_Text_IceFeatherGot, MSGBOX_DEFAULT
+HoennSeek_EventScript_IceFroslassStays:
+	release
+	end
+
+HoennSeek_EventScript_IceFroslassCaught:
+	setflag FLAG_HOENN_CAUGHT_ICE_FROSLASS
+	return
+
+HoennSeek_EventScript_IceFroslassGone:
+	msgbox HoennSeek_Text_IceFroslassGone, MSGBOX_DEFAULT
+	return
+
+@ Every ice rock in the chamber (bg events). While she's in the ice, the
+@ wrong one blows you back to the ladder; the right one is her object, which
+@ the game finds first.
+HoennSeek_EventScript_IcePillar::
+	goto_if_eq VAR_TEMP_4, 0, HoennSeek_EventScript_IcePillarEnd
+	goto_if_eq VAR_TEMP_4, 6, HoennSeek_EventScript_IcePillarEnd
+	lockall
+	playse SE_M_ICY_WIND
+	msgbox HoennSeek_Text_IceGust, MSGBOX_DEFAULT
+	closemessage
+	warpwhitefade MAP_SHOAL_CAVE_ICE_CHAMBER_HOENN, 0
+	waitstate
+	releaseall
+HoennSeek_EventScript_IcePillarEnd:
+	end
+
+HoennSeek_Movement_IceFroslassFlicker:
+	set_invisible
+	delay_4
+	set_visible
+	delay_4
+	set_invisible
+	delay_4
+	set_visible
+	delay_8
+	step_end
+
 @ ---- Call -------------------------------------------------------------------
 HoennSeek_EventScript_CallIceGlalie::
 	setflag FLAG_HOENN_CALL_ICE_GLALIE
 	setspeaker HoennSeek_Text_NameBrendan
 	pokenavcall HoennSeek_Text_CallIceGlalie
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_EventScript_CallFrostFeather::
+	setflag FLAG_HOENN_CALL_FROST_FEATHER
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallFrostFeather
 	goto HoennSeek_EventScript_CallEnd
 
 @ ---- Texts -----------------------------------------------------------------
@@ -2819,3 +2990,53 @@ HoennSeek_Text_CallIceGlalie:
 	.string "He says it's sat down there since\n"
 	.string "before he was born. Bet it hit\l"
 	.string "hard! Talk later!$"
+
+HoennSeek_Text_IceFroslassIntro:
+	.string "A chill runs down your back.\n"
+	.string "Something moved in the ice…$"
+
+HoennSeek_Text_IceFroslassIntro2:
+	.string "A FROSLASS's pale face looks out\n"
+	.string "from inside a pillar of ice!$"
+
+HoennSeek_Text_IceFroslassSlips:
+	.string "The FROSLASS's reflection slipped\n"
+	.string "away through the ice!$"
+
+HoennSeek_Text_IceGust:
+	.string "Wrong pillar! A freezing gust\n"
+	.string "howls out of the ice!$"
+
+HoennSeek_Text_IceFroslassOut:
+	.string "The FROSLASS stepped out of\n"
+	.string "the ice!$"
+
+HoennSeek_Text_IceFroslassGone:
+	.string "The FROSLASS melted back into the\n"
+	.string "ice and was gone.\p"
+	.string "She might walk the ice again\n"
+	.string "tomorrow night…$"
+
+HoennSeek_Text_IceFeatherGlint:
+	.string "Something glints deep in the\n"
+	.string "pillar where she stood…\p"
+	.string "A long blue feather, frozen into\n"
+	.string "the ice! It slides out cleanly.$"
+
+HoennSeek_Text_IceFeatherGot:
+	.string "It's as cold as the ice it was in,\n"
+	.string "but it doesn't melt at all.$"
+
+HoennSeek_Text_CallFrostFeather:
+	.string "Hi, {PLAYER}! It's MAY.\p"
+	.string "The SHELL BELL man from SHOAL\n"
+	.string "CAVE was at the lab again.\p"
+	.string "He says you went down to the ice\n"
+	.string "at night and came back with a\l"
+	.string "blue feather that won't melt!\p"
+	.string "The PROF thinks it's ARTICUNO's.\n"
+	.string "It flew over our sea years ago.\p"
+	.string "BILL in CERULEAN collects stories\n"
+	.string "about the legendary birds.\l"
+	.string "He'd love to hear about this!\p"
+	.string "Keep it safe, okay? Bye!$"

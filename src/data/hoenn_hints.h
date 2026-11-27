@@ -76,6 +76,9 @@ extern const u8 HoennSeek_Text_Hint_RumorTrench_GuardiansNotes[];
 extern const u8 HoennSeek_Text_Hint_RumorIce_ChamberBefore[];
 extern const u8 HoennSeek_Text_Hint_RumorIce_ChamberAfter[];
 extern const u8 HoennSeek_Text_Hint_RumorIce_ChamberNotes[];
+extern const u8 HoennSeek_Text_Hint_RumorIce_FroslassBefore[];
+extern const u8 HoennSeek_Text_Hint_RumorIce_FroslassAfter[];
+extern const u8 HoennSeek_Text_Hint_RumorIce_FroslassNotes[];
 extern const u8 HoennSeek_Text_Hint_LineTipDaycare[];
 extern const u8 HoennSeek_Text_Hint_LineTipBugContest[];
 extern const u8 HoennSeek_Text_Hint_LineTipClock[];
@@ -140,6 +143,8 @@ extern const u8 HoennSeek_Text_Hint_LineStoryTrenchGuardians[];
 extern const u8 HoennSeek_Text_Hint_LineStoryTrenchPearls[];
 extern const u8 HoennSeek_Text_Hint_LineStoryIceHole[];
 extern const u8 HoennSeek_Text_Hint_LineStoryIceGlalie[];
+extern const u8 HoennSeek_Text_Hint_LineStoryIceFroslass[];
+extern const u8 HoennSeek_Text_Hint_LineStoryIceFeather[];
 extern const u8 HoennSeek_Text_Hint_Forecast0[];
 extern const u8 HoennSeek_Text_Hint_Forecast1[];
 extern const u8 HoennSeek_Text_Hint_Forecast2[];
@@ -175,6 +180,7 @@ static const struct HoennHintRumor sHintRumors[] = {
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_TRENCH_ENTERED, 0}}, 1, HoennSeek_Text_Hint_RumorNight_DiveBefore, HoennSeek_Text_Hint_RumorNight_DiveAfter, HoennSeek_Text_Hint_RumorNight_DiveNotes }, // NIGHT_DIVE
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_TRENCH_DOOR_OPEN, 0}}, 1, HoennSeek_Text_Hint_RumorTrench_GuardiansBefore, HoennSeek_Text_Hint_RumorTrench_GuardiansAfter, HoennSeek_Text_Hint_RumorTrench_GuardiansNotes }, // TRENCH_GUARDIANS
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_ICE_CHAMBER_FOUND, 0}}, 1, HoennSeek_Text_Hint_RumorIce_ChamberBefore, HoennSeek_Text_Hint_RumorIce_ChamberAfter, HoennSeek_Text_Hint_RumorIce_ChamberNotes }, // ICE_CHAMBER
+    { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_ICE_FROSLASS_MET, 0}}, 1, HoennSeek_Text_Hint_RumorIce_FroslassBefore, HoennSeek_Text_Hint_RumorIce_FroslassAfter, HoennSeek_Text_Hint_RumorIce_FroslassNotes }, // ICE_FROSLASS
 };
 
 static const struct HoennHintLine sHintLines[] = {
@@ -267,6 +273,9 @@ static const struct HoennHintLine sHintLines[] = {
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_ICE_CHAMBER_FOUND, 0}}, 1, HoennSeek_Text_Hint_LineStoryIceHole, HINT_STORY, 0 }, // STORY_ICE_HOLE
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_ICE_CHAMBER_FOUND, 0}, {HINT_IF_NOT_FLAG, FLAG_HOENN_CAUGHT_ICE_GLALIE, 0}}, 2, HoennSeek_Text_Hint_LineStoryIceGlalie, HINT_STORY, 0 }, // STORY_ICE_GLALIE
     { NULL, 0, NULL, HINT_RUMOR, 24 }, // RUMOR_ICE_CHAMBER
+    { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_ICE_CHAMBER_FOUND, 0}, {HINT_IF_NOT_FLAG, FLAG_HOENN_ICE_FROSLASS_MET, 0}}, 2, HoennSeek_Text_Hint_LineStoryIceFroslass, HINT_STORY, 0 }, // STORY_ICE_FROSLASS
+    { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_GOT_FROST_FEATHER, 0}}, 1, HoennSeek_Text_Hint_LineStoryIceFeather, HINT_STORY, 0 }, // STORY_ICE_FEATHER
+    { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_ICE_CHAMBER_FOUND, 0}}, 1, NULL, HINT_RUMOR, 25 }, // RUMOR_ICE_FROSLASS
     { NULL, 0, NULL, HINT_FORECAST, 0 }, // FORECAST
 };
 
@@ -293,7 +302,7 @@ static const struct HoennHintNpc sHintNpcs[] = {
     { (const u8[]){34, 36, 47, 52}, 4, FALSE }, // FortreeCity_PokemonCenter_1F
     { (const u8[]){36, 15, 49, 85}, 4, FALSE }, // LilycoveCity_PokemonCenter_1F
     { (const u8[]){33, 9, 3, 50, 82}, 5, FALSE }, // MossdeepCity_PokemonCenter_1F
-    { (const u8[]){89}, 1, TRUE }, // Route119_WeatherInstitute_1F
+    { (const u8[]){92}, 1, TRUE }, // Route119_WeatherInstitute_1F
     { (const u8[]){10, 11, 12}, 3, FALSE }, // CianwoodCity_hns
     { (const u8[]){10, 11, 12}, 3, FALSE }, // OlivineCity_hns
     { (const u8[]){13}, 1, FALSE }, // DewfordTown
@@ -324,8 +333,8 @@ static const struct HoennHintNpc sHintNpcs[] = {
     { (const u8[]){76, 79}, 2, FALSE }, // VerdanturfTown_PokemonCenter_1F
     { (const u8[]){77, 78}, 2, FALSE }, // LavaridgeTown
     { (const u8[]){80, 81, 83}, 3, FALSE }, // MossdeepCity
-    { (const u8[]){86, 87}, 2, FALSE }, // ShoalCave_LowTideEntranceRoom
-    { (const u8[]){88}, 1, FALSE }, // PacifidlogTown_PokemonCenter_1F
+    { (const u8[]){86, 90, 89, 87}, 4, FALSE }, // ShoalCave_LowTideEntranceRoom
+    { (const u8[]){91, 88}, 2, FALSE }, // PacifidlogTown_PokemonCenter_1F
     { (const u8[]){4, 2}, 2, FALSE }, // Route34_FishingShack_hoenn
     { (const u8[]){30, 7}, 2, FALSE }, // OlivineCity_HarborOffice_hoenn
     { (const u8[]){6, 8}, 2, FALSE }, // OlivineCity_SailorsHouse_hoenn

@@ -180,6 +180,8 @@ u16 HoennOrchardBerry(void)
 //  - Brendan, the ice chamber's Glalie: the Shell Bell maker in Shoal Cave
 //    trades shells with Birch; he saw you climb down through the ice and heard
 //    the Glalie roar under the floor.
+//  - May, Articuno's feather (26b): the same Shell Bell maker brought Birch
+//    the news; May knows Bill collects stories about the legendary birds.
 u16 HoennHiddenDueCall(void)
 {
     if (FlagGet(FLAG_HOENN_MUNCHLAX_DONE) && !FlagGet(FLAG_HOENN_CALL_MUNCHLAX))
@@ -214,6 +216,8 @@ u16 HoennHiddenDueCall(void)
         return HOENN_CALL_TRENCH_DOOR;
     if (FlagGet(FLAG_HOENN_ICE_GLALIE_MET) && !FlagGet(FLAG_HOENN_CALL_ICE_GLALIE))
         return HOENN_CALL_ICE_GLALIE;
+    if (FlagGet(FLAG_HOENN_GOT_FROST_FEATHER) && !FlagGet(FLAG_HOENN_CALL_FROST_FEATHER))
+        return HOENN_CALL_FROST_FEATHER;
     return HOENN_CALL_NONE;
 }
 
