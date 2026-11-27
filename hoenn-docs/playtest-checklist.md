@@ -405,3 +405,11 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - The Dawn Stone behind the outcrop and the NeverMeltIce in the hall's top-left wall (face the wall from the corner).
 - May's call about the feather (rings within a few steps in a cave or outdoors).
 - The Shell Bell man's new lines and the Pacifidlog old man's rumor.
+
+---
+
+## Lane A parts (27b on: Cipher, Johto, the sea)
+Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its `## 2.0 part NN` sections directly above "Lane B parts"; lane B adds its own at the end of the file, so the two never edit the same lines.
+
+## Lane B parts (27a, 31b on: Kanto, Safari, legends)
+Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.

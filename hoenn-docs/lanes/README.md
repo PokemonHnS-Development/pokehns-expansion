@@ -1,8 +1,16 @@
-# Two builder lanes + one reviewer: PROPOSAL
+# Two builder lanes + one reviewer
 
-**Status: proposal, partly decided.** Aidan asked (Nov 27) to talk the options through first. **Decided (Aidan, Nov 27):** the reviewer Claude merges; 35a is in lane B. Everything else still waits for his approval; no IDs or code have been changed. Written against `hoenn` at `d16b90e4b8` (parts 1–26b merged, PR #79 = 24r open).
+**Status: approved by Aidan (Nov 27), who asked for the setup PR (section 5).** Decided: the reviewer Claude merges every builder PR; 35a is in lane B; the lane A builder builds the setup PR. Written against `hoenn` at `d16b90e4b8` (parts 1–26b merged, PR #79 = 24r open).
+
+**Who is who.** Aidan runs three Claude accounts that share only this repo:
+- **Lane A builder:** the account that wrote this proposal and the setup PR (Aidan's project "Pokemon Romhack", thread "Split remaining parts into two lanes"). It also built 24r (#79).
+- **Lane B builder:** the account that was already building **27a** when the lanes were set up (Nov 27). It finishes 27a (a lane A part, built before the split; it keeps whatever IDs and files it used), then switches to lane B, starting with 31b. Lane A's builder picks up from 27b once 27a is merged.
+- **Reviewer:** the third account. It reviews and merges.
+If you're a new session and don't know your lane, ask Aidan before claiming a part.
 
 Remaining parts: 27a–37 (14 parts), then 38–40 (finish).
+
+**27a** was started by lane B's builder before the setup PR. It keeps whatever IDs and files it used; the rules below apply to every part after it. Whichever of 27a and the setup PR merges second syncs onto the other (rule 3.5).
 
 ## 1. The two lanes
 
@@ -11,7 +19,7 @@ The split follows **maps**: each lane owns a set of places, so its PRs rarely to
 ### Lane A: Johto, the Cipher and the sea (Lugia's side)
 | Order | Part | Size | Maps / systems it touches | Needs |
 |---|---|---|---|---|
-| A1 | 27a Unown Cipher A | M | Ruins of Alph (lab, Words rooms, new Rosetta wall) | 3 ✅ |
+| A1 | 27a Unown Cipher A (**built by lane B's builder**, started before the split) | M | Ruins of Alph (lab, Words rooms, new Rosetta wall) | 3 ✅ |
 | A2 | 27b Unown Cipher B | L | glyph rings: Bell/Tin Tower, Mt. Moon (Cave), Ice Path, Whirl Islands, Mt. Mortar, Union Cave, **Seafoam 1F** | A1 |
 | A3 | 28 Unown Cipher C | M | Ruins sanctum (new map), **PokéGear radio hook** | A2 |
 | A4 | 31a Sneasel thief | M | Ice Path B2F/B3F | 3 ✅ |
@@ -66,7 +74,7 @@ Every range below is inside the blocks `include/constants/hoenn_events.h` alread
 | Hidden-item flags (0x2000 block; 0x00–0x03 used) | 0x04–0x1F | 0x20–0x3B | 0x3C–0x3F |
 | Event vars, E block (0x70A8, 40) | +0x00–0x13 | +0x14–0x27 | — |
 | Event vars, F block (0x70D0, 24) | +0x00–0x0B | +0x0C–0x17 | — |
-| PokéGear event call IDs (`hoenn_phone.h`, 0–36 used) | 40–69 | 70–99 | — |
+| PokéGear event call IDs (`hoenn_phone.h`, 0–36 used) | 37–69 | 70–99 | 100+ |
 | Spare flag block (0x2290, 112) / spare vars (0x70F0, 16) | — | — | claimed by PR, reviewer approves |
 | G Finish block (flags 0x2280, vars 0x70E8) | — | — | the join (38–40) |
 
@@ -87,17 +95,15 @@ A lane owns the maps in its table. **Touching a map the other lane owns needs a 
 
 ### 3.3 Shared code: one file per lane, small hooks
 The hot spots today are `data/scripts/hoenn_hidden.inc` and `src/hoenn_hidden.c`, where every part appends at the end. Proposed:
-- Lane A: `data/scripts/hoenn_johto_events.inc` + `src/hoenn_johto_events.c` (legendary parts may use `hoenn_legends_a.*`).
-- Lane B: `data/scripts/hoenn_kanto_events.inc` + `src/hoenn_kanto_events.c` (legendary parts `hoenn_legends_b.*`).
-- **Phone:** the setup PR chains two new functions after `HoennHiddenDueCall()`: `HoennJohtoDueCall()` (lane A) then `HoennKantoDueCall()` (lane B). Each lane only edits its own.
+- Lane A: `data/scripts/hoenn_lane_a.inc` + `src/hoenn_lane_a.c`. Lane B: `data/scripts/hoenn_lane_b.inc` + `src/hoenn_lane_b.c`. Named by lane, not region, because each lane mixes regions (lane A has Meteor Falls, lane B has Dark Cave). A part may add its own file instead (`hoenn_cipher.inc`, …) if it's big; it's still that lane's file.
+- **Phone:** `HoennHiddenDueCall()` ends with `return HoennLaneADueCall();`, which ends with `return HoennLaneBDueCall();`. The event-call `switch` in `hoenn_phone.inc` falls through to `HoennSeek_EventScript_PhoneEventLaneA` (in lane A's file), then `…LaneB`. Each lane only edits its own function and switch.
+- **Phone call texts** go in the lane's own script file, next to its scenes.
 - Text files, `event_scripts.s` includes, `hoenn_phone.inc`: the setup PR adds a lane A and a lane B section marker in each, far apart, so appends never land on adjacent lines.
 
 ### 3.4 Generated files: never hand-merge
-`npc_hints.json` is the one real trap: **the generator names hint wrappers by list position** (`HoennSeek_EventScript_HintNpc%d`), so two lanes each appending an NPC both make "HintNpc55", and after the merge the second one's map object is matched to the wrong entry. The setup PR fixes this by giving each hint NPC a stable key (wrapper `HoennSeek_EventScript_Hint_<key>`), a one-time rename the generator does itself.
+`npc_hints.json` was the one real trap: **the generator named hint wrappers by list position** (`HoennSeek_EventScript_HintNpc%d`), so two lanes each appending an NPC both made "HintNpc55", and after the merge the second one's map object was matched to the wrong entry. Since the setup PR, **every new hint NPC needs a `"key"`** (letters, digits, `_`; unique), and its wrapper is `HoennSeek_EventScript_Hint_<key>`. The first 55 entries keep their old positional names, so they must never be moved or deleted (the generator stops if an entry past them has no key). Building NPCs get keys from their building automatically.
 
-For every generated file (maps' `map.json` objects, `hoenn_hints.inc`, `hoenn_flags.h`/`vars.h`/`trainers.h`, composed layouts, light paths, overworld Pokémon): on a conflict, **take `hoenn`'s side, then re-run the generators** in the documented order:
-`gen_hoenn_lists` → `gen_hoenn_trainers` → `gen_hoenn_ids` → `gen_hoenn_gyms` / `gen_hoenn_newgame` → `gen_hoenn_composed_maps` → `gen_hoenn_ow_mons` → `gen_hoenn_followers` → `gen_hoenn_buildings` → `gen_hoenn_hints` → `gen_hoenn_lights`.
-The setup PR adds `tools/hoenn/regen_all.sh` to run that chain, so nobody has to remember it.
+For every generated file (maps' `map.json` objects, `hoenn_hints.inc`, `hoenn_flags.h`/`vars.h`/`trainers.h`, composed layouts, light paths, overworld Pokémon, …): on a conflict, **take `hoenn`'s side, keep both sides of the hand-written inputs (the JSON in `data/hoenn/`, scripts), then run `tools/hoenn/regen_all.sh`** and rebuild. It runs all 20 generators in their dependency order (listed in its header). On a clean tree, `regen_all.sh --check` must report no changes; if it doesn't, a generator or an input is out of date.
 
 ### 3.5 Claiming, syncing, merging
 - **Claim:** a part is claimed by pushing its branch `v2-NN-<slug>` and a line in your lane file (`hoenn-docs/lanes/lane-a.md` / `lane-b.md`: "27a: claimed, Nov 27, branch …"). The roadmap itself isn't edited for claims.
@@ -114,7 +120,7 @@ The setup PR adds `tools/hoenn/regen_all.sh` to run that chain, so nobody has to
 |---|---|---|
 | Roadmap status paragraph | every part rewrites one long line | frozen at "see `hoenn-docs/lanes/`"; each lane keeps its status (claimed / PR / merged / next) in its own lane file |
 | Roadmap tables | ✅ on adjacent rows | each lane only marks ✅ on its own rows; the setup PR regroups the remaining rows into a lane A table and a lane B table so edits are never adjacent |
-| CLAUDE.md size table | one table, a row per part | two tables, "Lane A sizes" and "Lane B sizes", each row the full ROM size measured **after syncing**; the reviewer adds a combined row when a lane PR merges |
+| CLAUDE.md size table | one table, a row per part | two tables, "Lane A sizes" and "Lane B sizes", each row the whole ROM measured **after syncing**, so the newest row in either is the current size |
 | CLAUDE.md codebase notes | a bullet per part, appended at one spot | two sections, "Lane A parts" and "Lane B parts", far apart |
 | Playtest checklist | appended at the end | a lane A and a lane B section |
 | `review-notes.md` | shared | only the reviewer writes it |
@@ -126,20 +132,20 @@ The setup PR adds `tools/hoenn/regen_all.sh` to run that chain, so nobody has to
 - **What it reviews:** every builder PR, in the merge order above. Checklist per PR: the part's "Done when"; IDs inside the lane's ranges; no edits to the other lane's maps or files without a lane-file note; generated files match a fresh `regen_all.sh`; release + debug build; size row; debug `.ups` and screenshots in `/mnt/project-files/hoenn-2.0/part-NN/`; edge-case pass done; phone and hint lines added; docs updated in the right lane section.
 - **Plays it:** applies the debug patch, runs the part's event once in the harness (as 24r did), and checks the map art at 2× (the hand-made-maps convention).
 - **Writes notes, not fixes:** findings go in `review-notes.md` with the part number. Small fixes go back to the owning lane as an `NNr` part before its next part; the reviewer only builds a fix itself when it's cross-lane (both lanes' code) or the owning lane is mid-part and the fix blocks the other lane.
-- **Merges (decided, Aidan Nov 27):** the reviewer is the one that merges every builder PR, after its review passes and within the run Aidan has authorised, then adds the combined size row and tells the other lane to sync. Builders never merge their own PRs.
+- **Merges (decided, Aidan Nov 27):** the reviewer is the one that merges every builder PR, after its review passes and within the run Aidan has authorised, then tells the other lane to sync. Builders never merge their own PRs.
 - **Order when two PRs are ready at once:** the one the other lane depends on first (31b, 34a, 32), then the older one. Review fixes (`NNr`) go before new parts of the same lane.
 - **At the join:** the reviewer runs 38's audit checklist against both lanes' notes, then reviews 39a/b's fixes.
 
-## 5. Setup PR (only after Aidan approves)
-One small PR before either lane starts, so neither lane has to touch shared files for structure:
+## 5. Setup PR (built by the lane A builder; PR #85)
+One small PR before either lane starts, so neither lane has to touch shared files for structure. All six are done in PR #85 (no content; release −96 B, debug +32 B; hint NPCs and the phone chain emulator-tested):
 1. `hoenn_events.h`: lane A / lane B section markers and the range comments from 3.1 (no flags defined yet).
-2. `hoenn_phone.h` call-ID range comments; `HoennJohtoDueCall` / `HoennKantoDueCall` stubs chained after `HoennHiddenDueCall`.
+2. `hoenn_phone.h` call-ID range comments; `HoennLaneADueCall` / `HoennLaneBDueCall` stubs chained after `HoennHiddenDueCall`, and the phone switch falling through to each lane.
 3. New empty lane script/source files, included and built.
 4. `gen_hoenn_hints.py`: stable keys instead of list positions (re-run; no behavior change).
 5. `tools/hoenn/regen_all.sh`.
 6. Docs: `hoenn-docs/lanes/lane-a.md` + `lane-b.md`, the roadmap regrouped into lane tables, CLAUDE.md lane sections and size tables, playtest checklist sections, README pointer.
 
-## Open questions for Aidan
+## Questions Aidan answered (Nov 27)
 - ~~Is 35a a floater?~~ Decided: lane B.
 - ~~Who merges?~~ Decided: the reviewer.
-- Who builds the setup PR: the reviewer (proposed, since it owns the shared files) or one builder?
+- ~~Who builds the setup PR?~~ Decided: the lane A builder.

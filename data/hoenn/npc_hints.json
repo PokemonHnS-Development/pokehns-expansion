@@ -16,6 +16,8 @@
     "  to one of them: one talk runs the NPC's own script, the next their first line whose conditions",
     "  hold (or their own script again if none does). always: true skips the toggle (the line, when one",
     "  holds, always comes first). 'index' picks the object when several share the script.",
+    "  key (lane setup, Nov 27): every NPC after the first 55 needs a unique key (letters, digits, _);",
+    "  its wrapper is HoennSeek_EventScript_Hint_<key>. The first 55 keep positional names: never move them.",
     "forecasts: {map, if, text}. A forecast applies when the map's special-weather day is today or",
     "  tomorrow (STR_VAR_1 = TODAY / TOMORROW) and its conditions hold, and only in the region of the",
     "  map the player is in. Shown by forecast lines and by every TV (before its normal show). Only",

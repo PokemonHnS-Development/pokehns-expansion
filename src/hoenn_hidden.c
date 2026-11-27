@@ -10,7 +10,8 @@
 //   wild doubles and female or hidden-ability Pokémon (part 21).
 // - specialvar VAR_RESULT, HoennOrchardBerry: the orchard tree's daily berry.
 // - HoennHiddenDueCall(): the PokéGear event calls these events add. It runs from
-//   HoennSpeciesDueCall() (src/hoenn_species.c), after the species calls.
+//   HoennSpeciesDueCall() (src/hoenn_species.c), after the species calls, and
+//   hands on to the two builder lanes' calls (src/hoenn_lane_a.c, _b.c).
 // - HoennMirageTowerRung(): whether the Sand Chime raised the Mirage Tower today
 //   (part 24b; hook in SetMirageTowerVisibility).
 #include "global.h"
@@ -218,7 +219,7 @@ u16 HoennHiddenDueCall(void)
         return HOENN_CALL_ICE_GLALIE;
     if (FlagGet(FLAG_HOENN_GOT_FROST_FEATHER) && !FlagGet(FLAG_HOENN_CALL_FROST_FEATHER))
         return HOENN_CALL_FROST_FEATHER;
-    return HOENN_CALL_NONE;
+    return HoennLaneADueCall(); // parts 27a+: the two builder lanes (src/hoenn_lane_a.c, then _b.c)
 }
 
 // Part 24b: the Mirage Tower stands only on a day the Sand Chime was rung on

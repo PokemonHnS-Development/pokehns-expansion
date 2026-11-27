@@ -11,12 +11,26 @@ Reads data/hoenn/npc_hints.json (its comment explains the format) and writes:
     in data/hoenn/buildings.json are added to the list (run gen_hoenn_buildings.py first).
 Idempotent: an object already running its wrapper is left alone. Deterministic.
 Re-run after editing the JSON, then rebuild.
+
+Wrapper names (lane setup, Nov 27). Two builders now add hint NPCs in parallel
+(hoenn-docs/lanes/README.md), so a wrapper can't be named by its position in the
+list: two branches would both append "HintNpc55", and after the merge the
+second NPC's object would be matched to the first one's entry. So:
+  - the first LEGACY_NPCS entries of "npcs" keep their positional names
+    (HoennSeek_EventScript_HintNpc0..54); never move or delete them;
+  - every later entry needs a "key" (letters, digits, _), and its wrapper is
+    HoennSeek_EventScript_Hint_<key>;
+  - building NPCs are keyed by their building and object index.
+The table index after "callnative HoennSeek_NpcHint" is still the position,
+but it's generated, so re-running after a merge fixes it.
 """
 import json, os, re, sys
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 P = lambda *a: os.path.join(ROOT, *a)
 WIDTH = 34  # characters per line in a standard message box
+LEGACY_NPCS = 55  # "npcs" entries named by position (see the header); frozen
+KEY_RE = re.compile(r"^[A-Za-z0-9_]+$")
 
 COND_TYPES = {  # JSON key -> (C enum, needs a second value?)
     "flag": "HINT_IF_FLAG", "not_flag": "HINT_IF_NOT_FLAG",
@@ -76,16 +90,35 @@ def conds_c(conds):
     return "(const struct HoennHintCond[]){%s}, %d" % (", ".join(cond_c(c) for c in conds), len(conds))
 
 
-def find_object(name, script, index, wrapper):
+def find_object(name, script, index, wrapper, old_wrapper=None):
+    """The one object on map `name` that runs `script`, its wrapper or (once,
+    while migrating to keyed names) `old_wrapper`."""
     path = P("data/maps", name, "map.json")
     d = json.load(open(path))
     objs = d.get("object_events") or []
-    hits = [i for i, o in enumerate(objs) if o["script"] in (script, wrapper)]
+    names = (script, wrapper) if old_wrapper is None else (script, wrapper, old_wrapper)
+    hits = [i for i, o in enumerate(objs) if o["script"] in names]
     if index is not None:
         hits = [i for i in hits if i == index]
     if len(hits) != 1:
         sys.exit(f"{name}: expected one object running {script}, found {len(hits)}")
     return path, d, hits[0]
+
+
+def npc_wrapper(n, npc, seen_keys):
+    """(wrapper label, old positional label to migrate from or None) for entry n."""
+    positional = "HoennSeek_EventScript_HintNpc%d" % n
+    key = npc.get("key")
+    if key is None:
+        if n < LEGACY_NPCS:
+            return positional, None
+        sys.exit(f'npc_hints.json: NPC {n} ({npc["map"]}) needs a "key" (see gen_hoenn_hints.py\'s header)')
+    if not KEY_RE.match(key) or key in seen_keys:
+        sys.exit(f"npc_hints.json: NPC key {key!r} is not a unique [A-Za-z0-9_] name")
+    seen_keys.add(key)
+    # Building NPCs used to run a positional wrapper; accept it once so the
+    # first run after the lane setup renames them.
+    return "HoennSeek_EventScript_Hint_" + key, positional if npc.get("building") else None
 
 
 def main():
@@ -95,7 +128,8 @@ def main():
         for k, o in enumerate(b["objects"]):
             if o.get("hints"):
                 cfg["npcs"].append({"map": b["name"], "script": "%s_EventScript_Npc%d" % (b["name"], k),
-                                    "lines": o["hints"]})
+                                    "lines": o["hints"], "key": "%s_Npc%d" % (b["name"], k),
+                                    "building": True})
     lines, rumors = cfg["lines"], cfg["rumors"]
     rumor_ids = list(rumors)
     line_ids = list(lines)
@@ -138,9 +172,10 @@ def main():
     # NPCs: wrapper scripts and map.json swaps
     npc_rows = []
     changed = 0
+    seen_keys = set()
     for n, npc in enumerate(cfg["npcs"]):
-        wrapper = "HoennSeek_EventScript_HintNpc%d" % n
-        path, d, i = find_object(npc["map"], npc["script"], npc.get("index"), wrapper)
+        wrapper, old_wrapper = npc_wrapper(n, npc, seen_keys)
+        path, d, i = find_object(npc["map"], npc["script"], npc.get("index"), wrapper, old_wrapper)
         if d["object_events"][i]["script"] != wrapper:
             d["object_events"][i]["script"] = wrapper
             with open(path, "w") as fh:
