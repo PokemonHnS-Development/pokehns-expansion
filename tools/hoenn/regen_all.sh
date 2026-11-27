@@ -15,7 +15,7 @@
 #   tables → strait → base entrances → base spots → composed maps → trainers →
 #   IDs → gyms, new-game state → battle backgrounds and art → overworld
 #   Pokémon → trainer followers → buildings → hints → light paths → Unown
-#   tiles.
+#   tiles, then the living dex check.
 #
 # Usage: tools/hoenn/regen_all.sh           run everything
 #        tools/hoenn/regen_all.sh --check   run, then fail if the tree changed
@@ -65,6 +65,12 @@ for g in "${GENERATORS[@]}"; do
     echo "== $g"
     python3 "tools/hoenn/$g.py"
 done
+
+# Not a generator of game data, a check (2.0 part 33): every species in scope
+# still has a source and the one-of-a-kind ones only have their event. It
+# rewrites hoenn-docs/living-dex.md and stops the run if the check fails.
+echo "== living_dex"
+python3 tools/hoenn/living_dex.py --report hoenn-docs/living-dex.md
 
 # Two generators rewrite files that come out byte-different but identical in
 # content: gen_hoenn_base_entrances.py and gen_hoenn_battle_art.py re-encode

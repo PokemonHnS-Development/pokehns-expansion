@@ -615,7 +615,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NOCTOWL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARIADOS",
       "x": 2,
       "y": 36,
       "elevation": 0,
@@ -641,7 +641,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TROPIUS",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_BRELOOM",
       "x": 3,
       "y": 77,
       "elevation": 0,
@@ -654,7 +654,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NOCTOWL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARIADOS",
       "x": 3,
       "y": 77,
       "elevation": 0,
@@ -680,7 +680,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ABSOL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARIADOS",
       "x": 37,
       "y": 77,
       "elevation": 0,
@@ -706,7 +706,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ABSOL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARIADOS",
       "x": 33,
       "y": 33,
       "elevation": 0,
@@ -732,7 +732,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ABSOL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NOCTOWL",
       "x": 5,
       "y": 39,
       "elevation": 0,
@@ -771,7 +771,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ABSOL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NOCTOWL",
       "x": 37,
       "y": 80,
       "elevation": 0,

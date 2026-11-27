@@ -1,0 +1,22 @@
+{
+  "_comment": [
+    "Hoenn & Seek 2.0 part 33: read by tools/hoenn/living_dex.py.",
+    "extra_sources: sources the parser can't see. Each names a file and a text it must contain, so a stale entry fails.",
+    "  waits_for: the source comes from another open PR; until it merges the species is reported as pending, not as an error.",
+    "one_of_a_kind: species (and their family) that may only come from the listed sources (prefixes of the tool's source names).",
+    "unreachable_script_files: script files HnS includes but can never run (none so far)."
+  ],
+  "extra_sources": [
+    {"species": ["SPECIES_RAIKOU", "SPECIES_ENTEI"], "file": "src/roamer.c", "contains": "TryAddRoamer(SPECIES_ENTEI", "why": "Johto roamers (HnS)"},
+    {"species": ["SPECIES_ABSOL"], "file": "src/hoenn_roamer.c", "contains": "roamer->species = SPECIES_ABSOL;", "why": "Route 120 storm-night roamer (2.0 part 22a)"},
+    {"species": ["SPECIES_SNEASEL"], "file": "data/scripts/hoenn_lane_a.inc", "contains": "setvar VAR_0x8004, SPECIES_SNEASEL", "why": "Ice Path Sneasel thief (2.0 part 31a)"}
+  ],
+  "one_of_a_kind": {
+    "SPECIES_ABSOL": {"sources": ["extra:Route 120 storm-night roamer"], "family": [], "event": "2.0 part 22a"},
+    "SPECIES_TROPIUS": {"sources": ["script:data/scripts/hoenn_hidden.inc"], "family": [], "event": "2.0 part 21 (orchard)"},
+    "SPECIES_FEEBAS": {"sources": ["script:data/scripts/hoenn_hidden.inc"], "family": ["SPECIES_MILOTIC"], "event": "2.0 part 21 (mirror pool)"},
+    "SPECIES_RALTS": {"sources": ["script:data/scripts/hoenn_species.inc"], "family": ["SPECIES_KIRLIA", "SPECIES_GARDEVOIR", "SPECIES_GALLADE"], "event": "2.0 part 18 (Ralts mornings); Rustboro's trade only asks for one"},
+    "SPECIES_SNEASEL": {"sources": ["extra:Ice Path Sneasel thief", "script:data/scripts/hoenn_lane_a.inc"], "family": ["SPECIES_WEAVILE"], "event": "2.0 part 31a; Hisuian Sneasel (Route 49, Snowswept Cavern) is a different species and stays"}
+  },
+  "unreachable_script_files": []
+}

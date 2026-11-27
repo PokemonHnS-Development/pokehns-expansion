@@ -83,7 +83,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNEASEL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
       "x": 1,
       "y": 7,
       "elevation": 0,

@@ -28,7 +28,7 @@
       "flag": "FLAG_ITEM_ICEPATH2_IRON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNEASEL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
       "x": 28,
       "y": 15,
       "elevation": 0,
@@ -41,7 +41,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNEASEL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
       "x": 28,
       "y": 23,
       "elevation": 0,
@@ -54,7 +54,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNEASEL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
       "x": 5,
       "y": 45,
       "elevation": 0,
@@ -80,7 +80,7 @@
       "flag": "FLAG_ITEM_ICEPATH2_REVIVE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNEASEL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
       "x": 21,
       "y": 24,
       "elevation": 0,
@@ -93,7 +93,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNEASEL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
       "x": 29,
       "y": 31,
       "elevation": 0,
@@ -159,7 +159,7 @@
     },
     {
       "local_id": "LOCALID_ICEPATH2_BOULDER3",
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNEASEL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
       "x": 6,
       "y": 4,
       "elevation": 0,
