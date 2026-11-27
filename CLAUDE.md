@@ -112,6 +112,7 @@ Lane A sizes:
 | Part | Release | Debug |
 |---|---|---|
 | Lane setup (lane files, phone chain, hint keys; no content) | 32,703,076 / 831 KB | 32,862,548 / 675 KB |
+| Lane setup synced onto 27a (27a's call moved into lane A's chain, its hint NPC keyed; measured on `hoenn` after #79, #86 and this) | 32,709,828 / 824 KB | 32,869,076 / 669 KB |
 
 Lane B sizes (27a, then 31b on):
 
