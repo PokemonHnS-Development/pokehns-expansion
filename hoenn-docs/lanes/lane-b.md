@@ -14,7 +14,7 @@ Only lane B's builder edits this file (the reviewer may add a line when it merge
 | 29 | ✅ merged (PR #94, Nov 27) | `v2-29-shifting-tunnels`, PR #94 (stacked on #91) | progress-level wild battles: `HoennSetupProgressWildBattle` (`src/hoenn_lane_b.c`) |
 | 30a | ✅ merged (PR #95, Nov 27) | `v2-30a-kangaskhan-baby`, PR #95 (stacked on #94) | the baby follows as the follower Pokémon: `HoennFollowerOverride` hooks in `src/event_object_movement.c` |
 | 30b | ✅ merged (PR #96, Nov 27) | `v2-30b-tauros-stampede`, PR #96 | herd task in `src/hoenn_lane_b.c` (`Task_HoennStampede`); `FuchsiaCity_SafariZoneHighland_hoenn`; the lead bull is a scripted Safari encounter (`HoennStartScriptedSafariBattle`) |
-| 33 | PR open, Nov 27 | `v2-33-distribution`, PR #102 (stacked on #100; includes part 32, PR #97) | living dex check `tools/hoenn/living_dex.py` + `data/hoenn/distribution.json`; **merge after 31a (PR #92)**, Sneasel's only source. Wild tables frozen for lane A until it merges (rule 3.6) |
+| 33 | PR #102 in review (item 50; synced onto `hoenn` at #99 by the reviewer) | `v2-33-distribution`, PR #102 | living dex check `tools/hoenn/living_dex.py` + `data/hoenn/distribution.json`; **merge after 31a (PR #92)**, Sneasel's only source. Wild tables frozen for lane A until it merges (rule 3.6) |
 | 36 | ✅ merged (PR #98, Nov 27) | `v2-36-weather-legendaries`, PR #98 | legend helpers `HoennLegendState`/`HoennLegendBattleEnded` (`src/hoenn_lane_b.c`); the ORBS' weather `HoennOrbWeather` (hook in `src/hoenn_time.c`) |
 | 35a | ✅ merged (PR #100, Nov 27) | `v2-35a-mewtwo-mew`, PR #100 | journal pages `FLAG_HOENN_JOURNAL_PAGE_1..6`, `HoennJournalPageCount`; Mew's dawn blurs `HoennMewBlurState`; sea map pieces `HoennSeaMapPieceCount` |
 

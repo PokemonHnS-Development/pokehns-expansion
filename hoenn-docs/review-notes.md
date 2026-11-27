@@ -341,6 +341,13 @@ Merged `hoenn` at #97 into the branch (11 files conflicted, all "both sides adde
 - **Choices for Bryan:** dawn = HnS's morning (4–10 AM); "met" Raikou/Entei = met in battle (HnS marks all three seen when they start roaming), Suicune = the chase finished (8 encounters); the sage giving the CLEAR BELL for the RAINBOW WING; the rainbow told in text with Ho-Oh flying across (no rainbow art, no weather); the radio report in OAK's TALK (Johto only; not in the morning, when that slot is the Pokédex show); any berry, ready the next calendar day (planting at 11 PM is ready at midnight); the three soil spots and their texts; Brendan as the caller.
 - Grid: `review-35b.png` in the project's `hoenn-2.0/review/`.
 
+### 50. Review of 33 (PR #102, lane B) (reviewer, Nov 27) — **waiting for Bryan**
+Merged `hoenn` at #99 (28, 35b; 32 was already in the branch) into the branch: the conflicts were all "both sides added" (28's sanctum map/layout/patch, the Alph lab hint line, docs); the generated hint files re-run; `regen_all.sh --check` clean; the living dex check passes (416 of 416). Size row re-measured: +48 B over 35b. `distribution.json`'s `waits_for` on Sneasel removed (31a is merged).
+- **Read:** every wild slot that changed (src/data/wild_encounters.json against `hoenn`, 79 tables; `wild_rules.json` for Hoenn's), the overworld objects that follow them, `living_dex.py` and its report. Each replaced slot keeps its level and rate. The check reads the compiled tables (only the slots the engine rolls), scripts, trades and roamers, and fails if a one-of-a-kind species has any other source, so it doubles as the test that Absol, Tropius, Feebas, Sneasel/Weavile and the Ralts line come only from their events.
+- **Played (debug save, 2 PM):** Fortree's roof Swellow, Route 120's cliff Nuzleaf, Route 6's Psyduck and Mankey on the truck, Route 15's Oddish. Rare slots weren't sampled in battle (a 1-in-20 slot needs hundreds of encounters); the check covers them.
+- **Choices for Bryan:** every replacement species (the list in the PR and section 10 of the plan), what stays Hoenn in Kanto (the Fuchsia Safari's Hoenn areas, Wingull on Route 19, Lunatone/Solrock in Mt. Moon, Torkoal on Cinnabar, Route 18's Kecleon), Roselia added to Route 117 by day, Mt. Silver's Weavile → Mamoswine, Ula'ula Cave's Sneasel → Snorunt.
+- Grid: `review-33.png` in the project's `hoenn-2.0/review/`.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 

@@ -9,7 +9,7 @@
   "extra_sources": [
     {"species": ["SPECIES_RAIKOU", "SPECIES_ENTEI"], "file": "src/roamer.c", "contains": "TryAddRoamer(SPECIES_ENTEI", "why": "Johto roamers (HnS)"},
     {"species": ["SPECIES_ABSOL"], "file": "src/hoenn_roamer.c", "contains": "roamer->species = SPECIES_ABSOL;", "why": "Route 120 storm-night roamer (2.0 part 22a)"},
-    {"species": ["SPECIES_SNEASEL"], "file": "data/scripts/hoenn_lane_a.inc", "contains": "setvar VAR_0x8004, SPECIES_SNEASEL", "why": "Ice Path Sneasel thief (2.0 part 31a)", "waits_for": "part 31a (PR #92)"}
+    {"species": ["SPECIES_SNEASEL"], "file": "data/scripts/hoenn_lane_a.inc", "contains": "setvar VAR_0x8004, SPECIES_SNEASEL", "why": "Ice Path Sneasel thief (2.0 part 31a)"}
   ],
   "one_of_a_kind": {
     "SPECIES_ABSOL": {"sources": ["extra:Route 120 storm-night roamer"], "family": [], "event": "2.0 part 22a"},

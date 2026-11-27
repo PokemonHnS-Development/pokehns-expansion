@@ -134,7 +134,7 @@ Lane B sizes (27a, then 31b on):
 | 30b (Tauros stampede: highland map, herd task, Paldean lead bull, Brendan's call; on top of 30a; re-measured by the reviewer after the review change (the lead bull is a Safari encounter) and merging `hoenn` at #92 (31a): +4,832 B release, +4,624 B debug) | 32,745,892 / 789 KB | 32,904,228 / 634 KB |
 | 36 (weather legendaries: ORBS, downpour/drought days, JADE ORB mural, ENIGMA STONE, 2 key items, 2 calls; re-measured by the reviewer after merging `hoenn` at #96 (31a, 30b with its Safari change): +7,024 B release, +6,640 B debug) | 32,752,916 / 782 KB | 32,910,868 / 628 KB |
 | 35a (Mewtwo and Mew: 6 journal pages, Fuji, Cinnabar cameo, Cerulean gate; 3 dawn Mew blurs, OLD SEA MAP; 2 calls; re-measured by the reviewer after merging `hoenn` at #98 (31a, 30b, 36): +7,232 B release, +7,232 B debug) | 32,760,148 / 775 KB | 32,918,100 / 621 KB |
-| 33 (distribution: one-of-a-kind species only from their events, 36 Hoenn species moved out of Kanto routes, living dex check; on top of 35a + part 32 (PR #97), measured against that merge: +48 B release, +48 B debug) | 32,757,092 / 778 KB | 32,915,556 / 623 KB |
+| 33 (distribution: one-of-a-kind species only from their events, 36 Hoenn species moved out of Kanto routes, living dex check; re-measured by the reviewer after merging `hoenn` at #99 (32, 35b): +48 B release, +48 B debug over 35b) | 32,777,844 / 758 KB | 32,935,188 / 604 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
