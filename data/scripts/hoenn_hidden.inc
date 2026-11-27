@@ -2453,15 +2453,15 @@ HoennSeek_Text_CrackTooDark:
 
 HoennSeek_Text_CrackLit:
 	.string "Your glowing POKéMON lights up the\n"
-	.string "crack. It's wide enough to swim\l"
-	.string "down!\p"
+	.string "crack. It's wide enough to\l"
+	.string "swim down!\p"
 	.string "Dive down into the trench?$"
 
 HoennSeek_Text_CallTrench:
 	.string "Hey, {PLAYER}! It's BRENDAN.\p"
 	.string "A diver from MOSSDEEP dropped by\n"
 	.string "the lab to see PROF. BIRCH.\p"
-	.string "She was night diving off ROUTE 124\n"
+	.string "He was night diving off ROUTE 124\n"
 	.string "and saw a trainer follow CHINCHOU\l"
 	.string "lights right down into the seabed!\p"
 	.string "Dad says nobody but you would\n"
@@ -2717,9 +2717,9 @@ HoennSeek_Text_PearlBedShut:
 HoennSeek_Text_CallTrenchDoor:
 	.string "{PLAYER}! It's MAY!\p"
 	.string "That diver from MOSSDEEP came by\n"
-	.string "the lab again. She talks to PROF.\l"
-	.string "BIRCH about everything she sees!\p"
-	.string "She says the big POKéMON in the\n"
+	.string "the lab again. He talks to PROF.\l"
+	.string "BIRCH about everything he sees!\p"
+	.string "He says the big POKéMON in the\n"
 	.string "ROUTE 124 trench are all gone,\l"
 	.string "and the seabed shook last night.\p"
 	.string "You caught all three, didn't you?\n"
