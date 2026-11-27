@@ -41,6 +41,7 @@
 #include "trainer_hill.h"
 #include "util.h"
 #include "wild_encounter.h"
+#include "hoenn.h" // Hoenn & Seek 2.0 part 27b (HoennObjectPaletteSpecies)
 #include "constants/event_object_movement.h"
 #include "constants/abilities.h"
 #include "constants/battle.h"
@@ -2337,6 +2338,7 @@ static u32 LoadDynamicFollowerPalette(u32 species, bool32 shiny, bool32 female)
     u32 paletteNum;
 #if IS_HNS
     species = HoennFollowerPaletteSpecies(species); // Hoenn & Seek (2.0 part 30a)
+    species = HoennObjectPaletteSpecies(species); // Hoenn & Seek 2.0 part 27b: forms sharing a palette share its tag
 #endif
     // Use standalone palette, unless entry is OOB or NULL (fallback to front-sprite-based)
 #if OW_POKEMON_OBJECT_EVENTS == TRUE && OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE

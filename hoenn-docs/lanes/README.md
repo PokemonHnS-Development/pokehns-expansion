@@ -89,7 +89,7 @@ Things that **can't** be reserved by range, and the rule for each:
 ### 3.2 Map ownership
 A lane owns the maps in its table. **Touching a map the other lane owns needs a line in your lane file first**, and the reviewer merges those two PRs in sequence, never in parallel.
 - **Seafoam is split by floor:** lane A uses `SeafoamIslands_1F_hns` for the FOAM glyph ring (27b); lane B owns `SeafoamIslands_B1F_hns` (Articuno, 34a) and `SeafoamIslands_SecretCave_hns` (Groudon, 36).
-- **Mt. Moon:** all lane A (27b's ring in `MtMoon_Cave_hns`, 37's Jirachi outside). 31b only *mentions* Mt. Moon in text.
+- **Mt. Moon:** all lane A (27b's ring is in Mt. Moon Square, `MtMoon_Outside_hns`, far east of the Clefairy and 37's Jirachi). 31b only *mentions* Mt. Moon in text.
 - **Route 113:** lane B (34a's Moltres ash). Its existing events (20, 24b) are done.
 - **Radio:** lane A owns the PokéGear radio hook (28 builds it, 35b reuses it). Lane B doesn't touch the radio.
 
@@ -98,7 +98,7 @@ The hot spots today are `data/scripts/hoenn_hidden.inc` and `src/hoenn_hidden.c`
 - Lane A: `data/scripts/hoenn_lane_a.inc` + `src/hoenn_lane_a.c`. Lane B: `data/scripts/hoenn_lane_b.inc` + `src/hoenn_lane_b.c`. Named by lane, not region, because each lane mixes regions (lane A has Meteor Falls, lane B has Dark Cave). A part may add its own file instead (`hoenn_cipher.inc`, …) if it's big; it's still that lane's file.
 - **Phone:** `HoennHiddenDueCall()` ends with `return HoennLaneADueCall();`, which ends with `return HoennLaneBDueCall();`. The event-call `switch` in `hoenn_phone.inc` falls through to `HoennSeek_EventScript_PhoneEventLaneA` (in lane A's file), then `…LaneB`. Each lane only edits its own function and switch.
 - **Phone call texts** go in the lane's own script file, next to its scenes.
-- Text files, `event_scripts.s` includes, `hoenn_phone.inc`: the setup PR adds a lane A and a lane B section marker in each, far apart, so appends never land on adjacent lines.
+- Text files, `event_scripts.s` includes, `hoenn_phone.inc`, `data/specials.inc` (markers added by 27b): the setup PR adds a lane A and a lane B section marker in each, far apart, so appends never land on adjacent lines.
 
 ### 3.4 Generated files: never hand-merge
 `npc_hints.json` was the one real trap: **the generator named hint wrappers by list position** (`HoennSeek_EventScript_HintNpc%d`), so two lanes each appending an NPC both made "HintNpc55", and after the merge the second one's map object was matched to the wrong entry. Since the setup PR, **every new hint NPC needs a `"key"`** (letters, digits, `_`; unique), and its wrapper is `HoennSeek_EventScript_Hint_<key>`. The first 55 entries keep their old positional names, so they must never be moved or deleted (the generator stops if an entry past them has no key). Building NPCs get keys from their building automatically.
