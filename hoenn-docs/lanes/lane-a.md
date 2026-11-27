@@ -13,7 +13,8 @@ Only lane A's builder edits this file (the reviewer may add a line when it merge
 | Part | State | Branch / PR | Notes |
 |---|---|---|---|
 | 27a | merged (Nov 27; review fixes by the reviewer before merging) | PR #86 | built by lane B's builder; flags `HOENN_LANE_A_FLAGS_E` + 0x00–0x0A, call 37: **27b continues from + 0x0B and call 38** |
-| 27b | next, after 27a merges and Aidan says go | — | |
+| 27r | next (reviewer, Nov 27) | — | review items 34–35 (reading the floor lines from the wall; the word changing at midnight). Goes before 27b |
+| 27b | after 27r, after 27a merges and Aidan says go | — | |
 | 28 | — | — | |
 | 31a | — | — | |
 | 32 | — | — | lane B's 33 waits for it |
