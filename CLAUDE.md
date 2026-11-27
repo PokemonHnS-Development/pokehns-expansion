@@ -103,7 +103,7 @@ Hoenn & Seek 1.0 is parts 1–20a (merged into `hoenn`). New work starts here:
 | **2.0** part 26a (ice chamber A: Shoal Cave's low-tide ladder hole, sliding-ice chamber map, Glalie by day; Brendan's call; Shoal tide/item flags fixed) | 32,700,452 / 833 KB | 32,859,940 / 678 KB |
 | **2.0** part 26b (ice chamber B: Froslass pillar chase, FROST FEATHER, Dawn Stone + NeverMeltIce; May's call) | 32,703,172 / 831 KB | 32,862,516 / 675 KB |
 | **2.0** 24r (review of 24a: you step aside from the Trapinch's path; measured on 24a, merged after 26b: +48 B) | 32,687,092 / 847 KB | 32,846,836 / 691 KB |
-| **2.0** part 27a (Unown Cipher A: Rosetta line in Words Room 1, weekday night words, braille + glow tiles; Brendan's call) | 32,709,860 / 824 KB | 32,868,980 / 669 KB |
+| **2.0** part 27a (Unown Cipher A: Rosetta line in Words Room 1, weekday night words, braille + glow tiles; Brendan's call; re-measured after the review fixes and 24r) | 32,709,924 / 824 KB | 32,869,044 / 669 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
