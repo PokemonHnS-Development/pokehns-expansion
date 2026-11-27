@@ -18,6 +18,7 @@
 #include "hoenn_caps.h"
 #include "item.h"
 #include "rtc.h"
+#include "safari_zone.h"
 #include "script_pokemon_util.h"
 #include "constants/battle.h"
 #include "constants/items.h"
@@ -40,6 +41,9 @@ u16 HoennLaneBDueCall(void)
     // Part 29: Brendan, once the crystal Onix is yours (a Lavender hiker saw it).
     if (FlagGet(FLAG_HOENN_ONIX_CAUGHT) && !FlagGet(FLAG_HOENN_CALL_TUNNELS))
         return HOENN_CALL_TUNNELS;
+    // Part 30a: May, once the Kangaskhan baby is back with its mother.
+    if (FlagGet(FLAG_HOENN_KANGA_REUNITED) && !FlagGet(FLAG_HOENN_CALL_KANGASKHAN))
+        return HOENN_CALL_KANGASKHAN;
     return HOENN_CALL_NONE; // the end of the chain
 }
 
@@ -297,6 +301,51 @@ u16 HoennBurrowDig(void)
     if (t < HOENN_BURROW_DIGS_NEEDED)
         FlagSet(FLAG_HOENN_BURROW_DUG_MORNING + t);
     return HOENN_BURROW_DIGS_NEEDED - BurrowDigs();
+}
+
+// ---- Part 30a: the lost Kangaskhan baby ----
+// The baby walks behind you as your follower Pokémon would: while it follows,
+// the follower system shows it instead of your lead (four one-line hooks in
+// src/event_object_movement.c call the functions below). Its sprite is our own
+// (graphics/hoenn/kanga_baby, drawn in Kangaskhan's overworld palette), and it
+// stands in for SPECIES_NONE, which no real follower or overworld Pokémon ever
+// uses; only inside the Safari Zone does SPECIES_NONE mean the baby. The map
+// objects of the baby use OBJ_EVENT_GFX_MON_BASE+SPECIES_NONE too.
+
+// The baby is following you (only inside the Safari Zone: leaving it ends the
+// walk, and the Safari entrance clears the flag).
+static bool32 KangaBabyFollowing(void)
+{
+    return FlagGet(FLAG_HOENN_KANGA_BABY_FOLLOWING) && GetSafariZoneFlag();
+}
+
+// SpeciesToGraphicsInfo: draw the baby for this species?
+bool32 HoennIsKangaBabyGfx(u32 species)
+{
+    return species == SPECIES_NONE && GetSafariZoneFlag();
+}
+
+// LoadDynamicFollowerPalette*: the baby uses its mother's overworld palette.
+u32 HoennFollowerPaletteSpecies(u32 species)
+{
+    return HoennIsKangaBabyGfx(species) ? SPECIES_KANGASKHAN : species;
+}
+
+// GetFollowerInfo: TRUE (and the baby's "species") while it follows you.
+bool32 HoennFollowerOverride(u32 *species, bool32 *shiny, bool32 *female)
+{
+    if (!KangaBabyFollowing())
+        return FALSE;
+    *species = SPECIES_NONE;
+    *shiny = FALSE;
+    *female = FALSE;
+    return TRUE;
+}
+
+// Talking to the follower: the baby's own script while it follows, else NULL.
+const u8 *HoennFollowerScript(void)
+{
+    return KangaBabyFollowing() ? HoennSeek_EventScript_KangaBabyFollower : NULL;
 }
 
 #endif // IS_HNS
