@@ -1647,6 +1647,11 @@ HoennSeek_EventScript_DesertSong::
 	msgbox HoennSeek_Text_TrapinchListens, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
+	@ Its path runs straight up column 26 (see TrapinchToHollow), and the
+	@ ring's north trigger (26,54) sits on it: from there the TRAPINCH would
+	@ walk right through you, so step aside first (24r).
+	getplayerxy VAR_0x8004, VAR_0x8005
+	call_if_eq VAR_0x8004, 26, HoennSeek_EventScript_DesertStepAside
 	@ Pan to the TRAPINCH, then follow it (the camera takes the same steps).
 	setvar VAR_0x8008, 26
 	setvar VAR_0x8009, 58
@@ -1681,6 +1686,14 @@ HoennSeek_EventScript_DesertSong::
 	setflag FLAG_HOENN_DAILY_DESERT_SONG
 	releaseall
 	end
+
+@ Only (26,54) and (26,62) of the ring are in column 26, and the path goes
+@ north, so only the north one is in the way. (25,54) is open sand.
+HoennSeek_EventScript_DesertStepAside:
+	goto_if_ne VAR_0x8005, 54, HoennSeek_EventScript_HiddenEnd24a
+	applymovement LOCALID_PLAYER, HoennSeek_Movement_DesertStepAside
+	waitmovement 0
+	return
 
 @ Walks the camera from VAR_0x8004/0x8005 back to the player's tile, saved
 @ by StarterPanTo in VAR_0x800A/0x800B (x first), then removes it. Like
@@ -1767,6 +1780,11 @@ HoennSeek_Movement_TrapinchToHollow:
 	walk_right
 	walk_right
 	walk_up
+	step_end
+
+HoennSeek_Movement_DesertStepAside:
+	walk_left
+	face_down
 	step_end
 
 HoennSeek_Movement_TrapinchBurrows:
