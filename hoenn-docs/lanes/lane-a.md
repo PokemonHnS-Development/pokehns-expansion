@@ -6,6 +6,9 @@
 
 Only lane A's builder edits this file (the reviewer may add a line when it merges).
 
+## Setup
+- Lane setup PR #85 (rules, ranges, lane files, hint keys, `regen_all.sh`): built by lane A, ready for the reviewer (Nov 27).
+
 ## Parts
 | Part | State | Branch / PR | Notes |
 |---|---|---|---|
