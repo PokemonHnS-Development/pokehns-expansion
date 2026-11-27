@@ -48,6 +48,7 @@
 #define HOENN_CALL_LANE_A_FIRST 37
 #define HOENN_CALL_LANE_A_LAST  69
 #define HOENN_CALL_CIPHER 37 // Brendan: the Ruins of Alph lab phoned Birch about a braille wall (2.0 part 27a)
+#define HOENN_CALL_RAINBOW 41 // Brendan: the League heard of a rainbow over Ecruteak at dawn (2.0 part 35b; 38-40 are 27b, 31a, 32)
 // (lane A's calls go here)
 
 // Lane B: 70-99.

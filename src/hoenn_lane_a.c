@@ -24,6 +24,9 @@ u16 HoennLaneADueCall(void)
 
     if (call != HOENN_CALL_NONE)
         return call;
+    // Part 35b: Brendan heard of the rainbow over Ecruteak (src/hoenn_johto_legends.c)
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_HOOH_RAINBOW) && !FlagGet(FLAG_HOENN_CALL_RAINBOW))
+        return HOENN_CALL_RAINBOW;
     // Lane A's next calls go here, e.g.
     //     if (FlagGet(FLAG_HOENN_X_MET) && !FlagGet(FLAG_HOENN_CALL_X))
     //         return HOENN_CALL_X;

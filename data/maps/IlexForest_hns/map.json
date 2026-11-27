@@ -583,7 +583,7 @@
       "y": 36,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "IlexForest_EventScript_Shrine"
+      "script": "HoennSeek_EventScript_IlexShrine"
     },
     {
       "type": "sign",
@@ -616,6 +616,14 @@
       "elevation": 0,
       "item": "ITEM_BIG_MUSHROOM",
       "flag": "FLAG_HIDDEN_ITEM_ILEX_BIG_MUSHROOM"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 36,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "HoennSeek_EventScript_SoilIlex"
     },
     {
       "type": "secret_base",

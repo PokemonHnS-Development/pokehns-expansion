@@ -756,3 +756,10 @@ gSpecials::
 	def_special HoennCipherTonightWord
 	def_special HoennCipherNoteWord
 	def_special HoennCipherWordCount
+	@ Hoenn & Seek 2.0 part 35b (src/hoenn_johto_legends.c)
+	def_special HoennEusineState
+	def_special HoennHoOhClue
+	def_special HoennForestSoilState
+	def_special HoennForestSoilPlant
+	def_special HoennForestSoilTake
+	def_special HoennForestOfferings

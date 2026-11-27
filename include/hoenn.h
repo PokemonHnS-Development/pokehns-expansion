@@ -55,6 +55,15 @@ u16 HoennLaneADueCall(void); // src/hoenn_lane_a.c (lane setup, Nov 27)
 u16 HoennLaneBDueCall(void); // src/hoenn_lane_b.c
 bool8 HoennMirageTowerRung(void); // 2.0 part 24b
 u16 HoennCipherDueCall(void);      // 2.0 part 27a (src/hoenn_cipher.c)
+// 2.0 part 35b (src/hoenn_johto_legends.c)
+void HoennJohtoBeastBattleEnded(u32 roamerIndex);
+u32 HoennRadioEusineReport(const u8 **lines, u8 *line1, u8 *line2);
+u16 HoennEusineState(void);
+u16 HoennHoOhClue(void);
+u16 HoennForestSoilState(void);
+void HoennForestSoilPlant(void);
+void HoennForestSoilTake(void);
+u16 HoennForestOfferings(void);
 bool32 HoennLightsOnStep(void); // follow-the-lights (src/hoenn_lights.c, 2.0 part 25a)
 void HoennTuneWildMon(void);
 void HoennTuneWildMonSlot(void);

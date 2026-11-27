@@ -11,4 +11,5 @@
 HoennSeek_EventScript_PhoneEventLaneA::
 	switch VAR_0x8004
 	case HOENN_CALL_CIPHER, HoennSeek_EventScript_CallCipher @ part 27a (hoenn_cipher.inc)
+	case HOENN_CALL_RAINBOW, HoennSeek_EventScript_CallRainbow @ part 35b (hoenn_johto_legends.inc)
 	goto HoennSeek_EventScript_PhoneEventLaneB @ lane B's calls (hoenn_lane_b.inc)
