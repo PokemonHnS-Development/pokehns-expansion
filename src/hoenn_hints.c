@@ -6,9 +6,13 @@
 //
 // Hint NPCs alternate: talking to any of them flips one global toggle
 // (VAR_HOENN_HINT_TOGGLE), so one talk runs the NPC's own script and the next
-// shows their extra line. There are no per-NPC flags. An NPC's extra line is the
-// first of their lines whose conditions hold, so lines are listed in priority
-// order (stories that expire first, then rumors and tips). Rumor lines say
+// shows their extra line. There are no per-NPC flags. An NPC's extra line comes
+// from those of their lines whose conditions hold, in turn: the toggle var's
+// upper bits count the extra lines shown (part 38), and that count picks which
+// holding line is next. Until part 38 it was always the first holding line, so
+// an NPC's lines after an unconditional one (a tip, most rumors) never showed.
+// The count is shared by every hint NPC, so any holding line can come first;
+// lines whose conditions expire (stories) still drop out of the turn. Rumor lines say
 // "before" until the rumor is found (its own conditions, e.g. the Pokémon was
 // caught), then "after". Forecast lines show the first forecast that applies.
 //
@@ -203,21 +207,35 @@ void HoennSeek_NpcHint(struct ScriptContext *ctx)
     u32 npcId = ScriptReadHalfword(ctx);
     const struct HoennHintNpc *npc = &sHintNpcs[npcId];
     const u8 *text = NULL;
-    u32 i;
+    u32 i, holding = 0, pick;
+    u16 toggle;
 
     gSpecialVar_Result = FALSE;
+    // Bit 0 of the var is the shared toggle (0 → their own line this time, 1 →
+    // the extra line); the bits above count extra lines shown, so each one shown
+    // moves on to the next holding line.
+    toggle = VarGet(VAR_HOENN_HINT_TOGGLE);
     if (!npc->always)
     {
-        // Flip the shared toggle: 0 → their own line this time, 1 → the extra line.
-        u16 toggle = VarGet(VAR_HOENN_HINT_TOGGLE);
-        VarSet(VAR_HOENN_HINT_TOGGLE, !toggle);
-        if (toggle == 0)
+        VarSet(VAR_HOENN_HINT_TOGGLE, toggle ^ 1);
+        if (!(toggle & 1))
             return;
     }
-    for (i = 0; i < npc->lineCount && text == NULL; i++)
-        text = LineText(&sHintLines[npc->lines[i]]);
-    if (text == NULL)
+    for (i = 0; i < npc->lineCount; i++)
+        if (LineText(&sHintLines[npc->lines[i]]) != NULL)
+            holding++;
+    if (holding == 0)
         return;
+    pick = (toggle >> 1) % holding;
+    for (i = 0; i < npc->lineCount && text == NULL; i++)
+    {
+        const u8 *lineText = LineText(&sHintLines[npc->lines[i]]);
+
+        if (lineText != NULL && pick-- == 0)
+            text = lineText;
+    }
+    // Count this one (bit 0 stays as the toggle left it; wraps harmlessly).
+    VarSet(VAR_HOENN_HINT_TOGGLE, (VarGet(VAR_HOENN_HINT_TOGGLE) & 1) | (((toggle >> 1) + 1) << 1));
     ctx->data[0] = (uintptr_t)text;
     gSpecialVar_Result = TRUE;
 }

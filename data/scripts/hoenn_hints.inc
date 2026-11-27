@@ -1143,6 +1143,69 @@ HoennSeek_Text_Hint_RumorRegi_DoorsAfter::
 HoennSeek_Text_Hint_RumorRegi_DoorsNotes::
 	.string "The boulders at the SINJOH RUINS\ncarry braille that the RUINS OF\lALPH's final inscription explains:\lRELICANTH and WAILORD.$"
 
+HoennSeek_Text_Hint_RumorUnown_CipherBefore::
+	.string "The RUINS OF ALPH have a room full\nof writing nobody can read.\pThe lab says the UNOWN spell a\ndifferent word each night. Spooky,\lif you ask me.$"
+
+HoennSeek_Text_Hint_RumorUnown_CipherAfter::
+	.string "They say someone read the last\nline in the RUINS. The lab hasn't\lstopped talking about it!$"
+
+HoennSeek_Text_Hint_RumorUnown_CipherNotes::
+	.string "A braille line in the RUINS OF\nALPH's first word room teaches the\lUNOWN letters. Each night's word\lnames a place where the UNOWN\lgather; the pieces they leave open\la boulder outside the RUINS.$"
+
+HoennSeek_Text_Hint_RumorIce_ThiefBefore::
+	.string "Hikers say things go missing deep\nin the ICE PATH, but only\lat night.\pLeave an item lying on the ice\ndown there and it's gone\lby morning!$"
+
+HoennSeek_Text_Hint_RumorIce_ThiefAfter::
+	.string "Nothing's gone missing in the ICE\nPATH lately. Someone must've\lcaught up with that thief.$"
+
+HoennSeek_Text_Hint_RumorIce_ThiefNotes::
+	.string "Once the ICE PATH's boulders have\ndropped to the bottom floor, a\lSNEASEL snatches the items off the\lice at night. Chase it across the\lice to its nook.$"
+
+HoennSeek_Text_Hint_RumorLanturn_LightsBefore::
+	.string "Fishermen from OLIVINE talk about\na light that drifts on ROUTE 41\lafter dark.\pIt keeps just ahead of your boat,\nas if it wants you to follow.$"
+
+HoennSeek_Text_Hint_RumorLanturn_LightsAfter::
+	.string "Someone followed the ROUTE 41\nlight all the way, I hear. Now the\lsea there is just dark again.$"
+
+HoennSeek_Text_Hint_RumorLanturn_LightsNotes::
+	.string "At night on ROUTE 41, a LANTURN's\nlight drifts away from the WHIRL\lISLANDS. Surf after it, staying\lclose, and it leads to a sea cave\lin the eastern rocks.$"
+
+HoennSeek_Text_Hint_RumorAmpharos_RescueBefore::
+	.string "Sailors coming into OLIVINE at\nnight see a second light, out on\lthe rocks off ROUTE 40.\pIt blinks like a lighthouse, only\nit's far too small. And it\lnever moves.$"
+
+HoennSeek_Text_Hint_RumorAmpharos_RescueAfter::
+	.string "The little light off ROUTE 40 is\ngone. JASMINE says the LIGHTHOUSE\lhas a new keeper now!$"
+
+HoennSeek_Text_Hint_RumorAmpharos_RescueNotes::
+	.string "An AMPHAROS is stranded on a sea\nrock off ROUTE 40. It's\lfrightened: bring it a BERRY each\lnight until it trusts you enough\lto ride ashore.$"
+
+HoennSeek_Text_Hint_RumorHooh_DawnBefore::
+	.string "My grandma says HO-OH only lands\non the TIN TOWER at dawn.\pAnd only for someone who's met the\nPOKéMON it brought back from\lthe fire.$"
+
+HoennSeek_Text_Hint_RumorHooh_DawnAfter::
+	.string "Did you see the rainbow over\nECRUTEAK at dawn? Grandma cried.\lShe says HO-OH has come home.$"
+
+HoennSeek_Text_Hint_RumorHooh_DawnNotes::
+	.string "With the CLEAR BELL, the RUINS OF\nALPH's HO-OH panel solved, RAIKOU\land ENTEI met and SUICUNE seen\lmany times, HO-OH waits on the TIN\lTOWER's roof at dawn. The TIN\lTOWER's sages know more.$"
+
+HoennSeek_Text_Hint_RumorForest_OfferingsBefore::
+	.string "The ILEX FOREST shrine has three\nlittle dishes, and they're\lalways empty.\pOld folks say the forest's\nguardian wants something grown in\lold soil.$"
+
+HoennSeek_Text_Hint_RumorForest_OfferingsAfter::
+	.string "Someone filled the dishes at the\nILEX shrine! The whole forest felt\lbrighter for a day.$"
+
+HoennSeek_Text_Hint_RumorForest_OfferingsNotes::
+	.string "There's old, dark soil in ILEX\nFOREST, VIRIDIAN FOREST and\lPETALBURG WOODS. Plant a BERRY in\leach, come back the next day, and\llay what grew at the ILEX shrine.$"
+
+HoennSeek_Text_Hint_RumorSky_Pillar_MuralBefore::
+	.string "There's an old mural on top of SKY\nPILLAR. Three great POKéMON, and\lone of them holds a green orb.\pMy grandpa says it only means\nsomething once the other two are\lat peace.$"
+
+HoennSeek_Text_Hint_RumorSky_Pillar_MuralAfter::
+	.string "Someone took the green orb from\nSKY PILLAR's mural, they say. The\lsky over the sea looks\ldifferent since.$"
+
+HoennSeek_Text_Hint_RumorSky_Pillar_MuralNotes::
+	.string "Once KYOGRE and GROUDON have been\nsettled, SKY PILLAR's mural gives\lup the JADE ORB. RAYQUAZA comes to\lKANTO's EMBEDDED TOWER at noon for\lanyone who carries it, unless it\lrains there.$"
+
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
 

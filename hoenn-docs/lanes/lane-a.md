@@ -21,7 +21,7 @@ Only lane A's builder edits this file (the reviewer may add a line when it merge
 | 34b | ✅ merged (PR #106, Nov 27; reviewed and merged by lane A at Aidan's request) | `v2-34b-lugia` | flags `HOENN_LANE_A_FLAGS_F` + 0x0E–0x10, call 46 (35b has F + 0x00–0x0D, 37 F + 0x20 on; calls 41–45 stay with 35b, 28, 37) |
 | 35b | PR #99 merged (Nov 27, review item 49: Ilex soil moved to (30,35)) | `v2-35b-johto-legends` | flags `HOENN_LANE_A_FLAGS_F` + 0x00–0x0D, daily + 2–4, call 41; built the radio hook (`HoennRadioEusineReport` in OAK's POKéMON TALK), so 28 reuses it instead of building it |
 | 37 | ✅ merged (PR #104, Nov 27; reviewed and merged by lane A at Aidan's request) | `v2-37-wishes-and-giants` | flags `HOENN_LANE_A_FLAGS_F` + 0x20–0x2D (0x2E–0x3F spare; 34b takes + 0x0E–0x1F), vars `HOENN_LANE_A_VARS_F` + 0, 1, calls 43–45 |
-| 38 | in progress (Nov 27, lane A; Phase G, one builder) | `v2-38-sweep` | the join's sweep: phone and hint coverage, field-notes totals, overworld Pokémon regen, ROM/flag budget, link trade + battle. Lane B: please don't start 38; 39a is next after it merges |
+| 38 | **released** (Nov 27: Aidan gave the audit to another account; lane A moved to planning 2.1/2.2) | `v2-38-sweep` (work in progress, not a PR) | lane A got partway before handing off; the branch's last commit lists what's done and what isn't. Whoever takes 38 may build on it or start fresh |
 
 ## ID plan (inside lane A's ranges)
 So parts built out of order don't collide: 27b E +0x0B–0x15 (used); 28 E +0x16–0x1F; 31a E +0x20–0x25; 32 E +0x26–0x2F; 34b, 35b, 37 F +0x00 on. Calls 38 (27b) on, in build order. Vars, daily, weekly and hidden flags in build order.
