@@ -1907,7 +1907,10 @@ HoennSeek_EventScript_LeadBullBattle:
 	setvar VAR_0x8005, 35
 	special HoennSetupProgressWildBattle
 	special HoennTuneLeadBull
-	dowildbattle
+	@ A Safari encounter (bait, rocks, Safari Balls), not a battle with your
+	@ own Pokémon (30b review); the script carries on afterwards.
+	special HoennStartScriptedSafariBattle
+	waitstate
 	specialvar VAR_RESULT, HoennLeadBullBattleEnded
 	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
 	fadescreenswapbuffers FADE_TO_BLACK
@@ -1924,6 +1927,9 @@ HoennSeek_EventScript_LeadBullBattle:
 HoennSeek_EventScript_LeadBullCaught:
 	msgbox HoennSeek_Text_LeadBullCaught, MSGBOX_DEFAULT
 	release
+	@ Caught with the last Safari Ball: now the Safari ends, as it would have.
+	specialvar VAR_RESULT, HoennSafariBallsLeft
+	goto_if_eq VAR_RESULT, 0, SafariZone_EventScript_OutOfBalls
 	end
 
 @ ---- Part 30b's call --------------------------------------------------------
@@ -1960,8 +1966,8 @@ HoennSeek_Text_LeadBull:
 	.string "any from KANTO lowers its horns…$"
 
 HoennSeek_Text_LeadBullFled:
-	.string "The lead bull limped off down the\n"
-	.string "far side of the highland.\p"
+	.string "The lead bull thundered off down\n"
+	.string "the far side of the highland.\p"
 	.string "Without it, the herd slows to a\n"
 	.string "trot, then settles down to graze.\p"
 	.string "It may lead them again next\n"
