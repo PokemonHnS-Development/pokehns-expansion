@@ -121,7 +121,7 @@ Lane A sizes:
 | **2.0** part 28 (Unown Cipher C: night boulder, sanctum map, 28-form mural, Sinjoh inscription, Unown radio, Brendan's call; no follower by the seal or in the sanctum; re-measured by the reviewer after merging `hoenn` at #105 (27b, 31a, lane B's 31b–35a, 41r) the mural flag made nightly and two map fixes) | 32,765,156 / 770 KB | 32,923,028 / 616 KB |
 | 32 (Olivine nights: Lanturn lights on Route 41, hidden lagoon + Lugia's shrine stone, stranded Ampharos won over with BERRIES and rescued from Route 40, lighthouse arrival scene; May's call; re-measured by the reviewer after merging `hoenn` at #101 (28), two text fixes and both rescue reworks) | 32,772,692 / 763 KB | 32,930,132 / 609 KB |
 | 35b (Ho-Oh at dawn + Tin Tower sage clues + rainbow cameo, Eusine's notes on Oak's radio show, Celebi's three forest offerings; Brendan's call; re-measured by the reviewer after merging `hoenn` at #97 (27b, 28, 31a, 32, lane B's parts): +5,104 B release, +5,008 B debug over 32) | 32,777,796 / 758 KB | 32,935,140 / 604 KB |
-| **2.0** part 34b (Lugia: lagoon shrine with the three feathers + Silver Wing, chamber gate, Route 41 night cameo, Brendan's call; re-measured on `hoenn` at #99 (28, 32 with its review rounds, 35b): +3,088 B release, +3,120 B debug over 35b) | 32,780,884 / 755 KB | 32,938,260 / 601 KB |
+| **2.0** part 34b (Lugia: lagoon shrine with the three feathers + Silver Wing, chamber gate, Route 41 night cameo, Brendan's call; self-reviewed and merged by lane A at Aidan's request; re-measured on `hoenn` at #107 (35b, 33): +3,088 B release, +3,120 B debug over 33) | 32,780,932 / 755 KB | 32,938,308 / 601 KB |
 
 Lane B sizes (27a, then 31b on):
 
