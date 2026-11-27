@@ -538,7 +538,7 @@
    "border": "source",
    "ops": [
     {"_": "the sanctum, by hand: the inner chamber's walls and statues, its ladder up to the boulder, the middle statue holds the final inscription", "at": [0, 0], "grid": [
-      "GHIIIIIIIIIIIIIIJ",
+      "TUUUUUUUUUUUUUUUV",
       "D...............F",
       "DsssssssssssssssF",
       "DLffffffffffffffF",
@@ -551,7 +551,7 @@
       "DLfffffflfffffffF",
       "MHIIIIIIIIIIIIIIN",
       "OEEEEEEEEEEEEEEEP"
-     ], "legend": {"D": {"from": [1, 1]}, "E": {"from": [2, 1]}, "F": {"from": [28, 1]}, "G": {"from": [1, 6]}, "H": {"from": [2, 6]}, "I": {"from": [3, 6]}, "J": {"from": [28, 6]}, "s": {"from": [2, 8]}, "L": {"from": [2, 9]}, "f": {"from": [8, 15]}, "h": {"from": [4, 9]}, "b": {"from": [4, 10]}, "k": {"from": [4, 11]}, "r": {"from": [5, 10]}, "q": {"from": [5, 11]}, "t": {"from": [15, 15]}, "l": {"from": [15, 16]}, "M": {"from": [1, 30]}, "N": {"from": [28, 30]}, "O": {"from": [1, 31]}, "P": {"from": [28, 31]}}},
+     ], "legend": {"T": {"from": [1, 0]}, "U": {"from": [2, 0]}, "V": {"from": [28, 0]}, "D": {"from": [1, 1]}, "E": {"from": [2, 1]}, "F": {"from": [28, 1]}, "H": {"from": [2, 6]}, "I": {"from": [3, 6]}, "s": {"from": [2, 8]}, "L": {"from": [2, 9]}, "f": {"from": [8, 15]}, "h": {"from": [4, 9]}, "b": {"from": [4, 10]}, "k": {"from": [4, 11]}, "r": {"from": [5, 10]}, "q": {"from": [5, 11]}, "t": {"from": [15, 15]}, "l": {"from": [15, 16]}, "M": {"from": [1, 30]}, "N": {"from": [28, 30]}, "O": {"from": [1, 31]}, "P": {"from": [28, 31]}}},
     {"_": "the mural: a run of the inner chamber's UNOWN frieze along the north wall", "at": [1, 1, 15, 1], "from": [2, 13]}
    ]
   }

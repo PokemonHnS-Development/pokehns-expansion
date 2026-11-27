@@ -118,7 +118,7 @@ Lane A sizes:
 | **2.0** part 27b (Unown Cipher B: 7 night Unown rings, tablet fragments spelling ANCIENT, May's call; Unown forms share one object palette; re-measured after merging 27r and the review fix: follower hidden while a ring is out) | 32,715,460 / 819 KB | 32,874,372 / 664 KB |
 | 31a (Sneasel thief: Ice Path B2F chase, nook battle, stash, Brendan's call; re-measured by the reviewer after merging `hoenn` at #95 (31b, 34a, 29, 30a) and the call-text fix: +1,824 B release, +1,824 B debug) | 32,741,060 / 794 KB | 32,899,604 / 639 KB |
 | 41r (night-aware reset: night events' daily flags reset at noon, not midnight; on `hoenn` at #100) | 32,760,356 / 775 KB | 32,918,260 / 621 KB |
-| **2.0** part 28 (Unown Cipher C: night boulder, sanctum map, 28-form mural, Sinjoh inscription, Unown radio, Brendan's call; re-measured on `hoenn` after #92 (31a); no follower by the seal or in the sanctum) | 32,745,796 / 789 KB | 32,904,372 / 634 KB |
+| **2.0** part 28 (Unown Cipher C: night boulder, sanctum map, 28-form mural, Sinjoh inscription, Unown radio, Brendan's call; no follower by the seal or in the sanctum; re-measured by the reviewer after merging `hoenn` at #105 (27b, 31a, lane B's 31b–35a, 41r) and two map fixes) | 32,765,140 / 770 KB | 32,923,028 / 616 KB |
 
 Lane B sizes (27a, then 31b on):
 
