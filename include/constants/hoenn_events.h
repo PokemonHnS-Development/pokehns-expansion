@@ -589,7 +589,7 @@
 #define FLAG_HOENN_FOREST_PLANTED_ILEX   (HOENN_LANE_A_FLAGS_F + 0x07) // + HOENN_SOIL_* (0x07-0x09): a berry was planted
 #define FLAG_HOENN_FOREST_OFFERING_ILEX  (HOENN_LANE_A_FLAGS_F + 0x0A) // + HOENN_SOIL_* (0x0A-0x0C): its glowing berry was taken
 #define FLAG_HOENN_SHRINE_OFFERED        (HOENN_LANE_A_FLAGS_F + 0x0D) // the three offerings are in the shrine's dishes
-// 0x0E-0x0F: spare for 35b's review
+// 0x0E-0x10: part 34b (below)
 #define FLAG_HOENN_DAILY_SOIL_ILEX       (HOENN_LANE_A_DAILY + 2)      // + HOENN_SOIL_* (daily 2-4): planted today
 // The soil spots (VAR_0x8004 for HoennForestSoil*):
 #define HOENN_SOIL_ILEX       0
@@ -607,6 +607,18 @@
 #define HOENN_HOOH_NEEDS_PUZZLE 2
 #define HOENN_HOOH_NEEDS_BEASTS 3
 #define HOENN_HOOH_NEEDS_DAWN   4
+// ---- Part 34b: Lugia (data/scripts/hoenn_lane_a.inc) ----
+// The lagoon's old stone (part 32) is Lugia's shrine. Carrying the three
+// birds' feathers (part 34a) and a SILVER WING, you lay them in its hollows:
+// the stone answers, Lugia's chamber in the Whirl Islands opens, and HnS's
+// post-story Lugia waits there. The feathers stay yours (they still call the
+// birds). After the Slowking's prophecy (part 19) and once the lagoon is found,
+// Lugia surfaces once off the ridge on Route 41 at night, sings, and dives
+// toward the islands. (35b has F + 0x00-0x0D; 37 has F + 0x20 on.)
+#define FLAG_HOENN_LUGIA_SHRINE_OPEN   (HOENN_LANE_A_FLAGS_F + 0x0E) // the treasures were laid down: Lugia waits in its chamber
+#define FLAG_HOENN_LUGIA_CAMEO_SEEN    (HOENN_LANE_A_FLAGS_F + 0x0F) // saw Lugia surface off Route 41
+#define FLAG_HOENN_CALL_LUGIA          (HOENN_LANE_A_FLAGS_F + 0x10) // Brendan: Bill's call about the still sea
+// Route 41 also uses VAR_TEMP_4 = 1 for the cameo's trigger row (52-63, 56).
 
 // ---- Lane B: parts 31b, 34a, 29, 30a, 30b, 33, 36, 35a (hoenn-docs/lanes/lane-b.md) ----
 // (Kept below lane A's sections, so its additions land at the end of the file.)

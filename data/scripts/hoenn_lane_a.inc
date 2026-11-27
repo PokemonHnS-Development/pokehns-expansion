@@ -16,6 +16,7 @@ HoennSeek_EventScript_PhoneEventLaneA::
 	case HOENN_CALL_CIPHER_SANCTUM, HoennSeek_EventScript_CallCipherSanctum @ part 28
 	case HOENN_CALL_AMPHAROS, HoennSeek_EventScript_CallAmpharos @ part 32
 	case HOENN_CALL_RAINBOW, HoennSeek_EventScript_CallRainbow @ part 35b (hoenn_johto_legends.inc)
+	case HOENN_CALL_LUGIA, HoennSeek_EventScript_CallLugia @ part 34b
 	goto HoennSeek_EventScript_PhoneEventLaneB @ lane B's calls (hoenn_lane_b.inc)
 
 @ ============================================================================
@@ -744,6 +745,7 @@ HoennSeek_Text_CallCipherSanctum:
 HoennSeek_EventScript_Route41Night::
 	setflag FLAG_HOENN_HIDE_LANTURN_LIGHT
 	call_if_set FLAG_HOENN_LAGOON_FOUND, HoennSeek_EventScript_ArmLagoonCave
+	call HoennSeek_EventScript_ArmLugiaCameo @ part 34b
 	goto_if_set FLAG_HOENN_LAGOON_FOUND, HoennSeek_EventScript_Route41NightDone
 	gettimeofday
 	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_Route41NightDone
@@ -843,15 +845,7 @@ HoennSeek_EventScript_LagoonChinchou::
 	release
 	end
 
-@ The old stone (bg events on 11-12, 6). Part 34b adds the feathers.
-HoennSeek_EventScript_LagoonShrine::
-	lockall
-	msgbox HoennSeek_Text_LagoonShrine, MSGBOX_DEFAULT
-	goto_if_unset FLAG_HOENN_SLOWKING_PROPHECY, HoennSeek_EventScript_LagoonShrineEnd
-	msgbox HoennSeek_Text_LagoonShrineProphecy, MSGBOX_DEFAULT
-HoennSeek_EventScript_LagoonShrineEnd:
-	releaseall
-	end
+@ The old stone (bg events on 11-12, 6): Lugia's shrine, part 34b's section.
 
 @ The stranded AMPHAROS on its rock off Route 40 (31,32), talked to from the
 @ open water north of it (31,31), eight tiles off the beach. (Until the 32
@@ -1261,3 +1255,263 @@ HoennSeek_Text_CallAmpharos:
 	.string "all the way up the lighthouse!\p"
 	.string "That was you, right? AMPHY must\n"
 	.string "be so happy!$"
+
+@ ============================================================================
+@ Part 34b: Lugia (Route41_Lagoon_hoenn's stone, Route 41, Whirl Islands)
+@ The lagoon's old stone is Lugia's shrine: three small hollows (frost,
+@ thunder, flame) ring a larger one (the SILVER WING). Carrying all four
+@ treasures, you lay them down: the stone answers, the sea goes still, and
+@ the way to Lugia's chamber opens (FLAG_HOENN_LUGIA_SHRINE_OPEN). The
+@ treasures rise back into your hands, because the feathers still call the
+@ three birds (part 34a). Missing ones show as empty hollows.
+@ Lugia keeps HnS's own post-story battle in the Whirl Islands chamber
+@ (VAR_COMPLETED_LUGIA 4, Lv 70); one line in the chamber's OnTransition
+@ keeps it away until the shrine is open. Opening the shrine also sets that
+@ var to 4 when HnS's story left it at 3 (the story battle was run from or
+@ won) and Lugia isn't caught, and keeps the islands' TENTACRUEL away.
+@ The cameo: at night, once the lagoon is found and the SLOWKING's prophecy
+@ known (part 19), the first time you swim along the ridge's foot (row 56,
+@ x 52-63) Lugia surfaces at (62,58), sings one note and dives toward the
+@ islands. Route 41 has no free object template, so the cameo borrows the
+@ Lanturn light's, which never shows once the lagoon is found
+@ (HoennLugiaCameoPrepare, src/hoenn_lane_a.c).
+@ ============================================================================
+
+HoennSeek_EventScript_LagoonShrine::
+	lockall
+	goto_if_set FLAG_HOENN_LUGIA_SHRINE_OPEN, HoennSeek_EventScript_LugiaShrineOpen
+	msgbox HoennSeek_Text_LagoonShrine, MSGBOX_DEFAULT
+	call_if_set FLAG_HOENN_SLOWKING_PROPHECY, HoennSeek_EventScript_LugiaShrineProphecy
+	setvar VAR_0x8006, 0 @ treasures carried
+	checkitem ITEM_FROST_FEATHER
+	call_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_LugiaShrineCount
+	checkitem ITEM_THUNDER_FEATHER
+	call_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_LugiaShrineCount
+	checkitem ITEM_FLAME_FEATHER
+	call_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_LugiaShrineCount
+	checkitem ITEM_SILVER_WING
+	call_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_LugiaShrineCount
+	goto_if_eq VAR_0x8006, 4, HoennSeek_EventScript_LugiaShrineOffer
+	goto_if_eq VAR_0x8006, 0, HoennSeek_EventScript_LugiaShrineEnd
+	@ Some of them: say which hollows stay empty.
+	msgbox HoennSeek_Text_LugiaShrineSome, MSGBOX_DEFAULT
+	checkitem ITEM_FROST_FEATHER
+	call_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LugiaShrineNoFrost
+	checkitem ITEM_THUNDER_FEATHER
+	call_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LugiaShrineNoThunder
+	checkitem ITEM_FLAME_FEATHER
+	call_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LugiaShrineNoFlame
+	checkitem ITEM_SILVER_WING
+	call_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LugiaShrineNoWing
+HoennSeek_EventScript_LugiaShrineEnd:
+	releaseall
+	end
+
+HoennSeek_EventScript_LugiaShrineCount:
+	addvar VAR_0x8006, 1
+	return
+HoennSeek_EventScript_LugiaShrineProphecy:
+	msgbox HoennSeek_Text_LagoonShrineProphecy, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_LugiaShrineNoFrost:
+	msgbox HoennSeek_Text_LugiaShrineNoFrost, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_LugiaShrineNoThunder:
+	msgbox HoennSeek_Text_LugiaShrineNoThunder, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_LugiaShrineNoFlame:
+	msgbox HoennSeek_Text_LugiaShrineNoFlame, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_LugiaShrineNoWing:
+	msgbox HoennSeek_Text_LugiaShrineNoWing, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_LugiaShrineOffer:
+	msgbox HoennSeek_Text_LugiaShrineOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_LugiaShrineEnd
+	msgbox HoennSeek_Text_LugiaShrineFeathers, MSGBOX_DEFAULT
+	playse SE_M_ICY_WIND
+	waitse
+	playse SE_M_THUNDERBOLT
+	waitse
+	playse SE_M_FLAME_WHEEL
+	waitse
+	msgbox HoennSeek_Text_LugiaShrineWing, MSGBOX_DEFAULT
+	closemessage
+	playse SE_M_MORNING_SUN
+	@ swapbuffers keeps the map's own palettes (a plain fade back from
+	@ white came back with the day/night tint on this cave map)
+	fadescreenswapbuffers FADE_TO_WHITE
+	delay 30
+	fadescreenswapbuffers FADE_FROM_WHITE
+	waitse
+	delay 30
+	playmoncry SPECIES_LUGIA, CRY_MODE_ECHO_END
+	waitmoncry
+	setflag FLAG_HOENN_LUGIA_SHRINE_OPEN
+	setflag FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL
+	goto_if_set FLAG_CAUGHT_LUGIA, HoennSeek_EventScript_LugiaShrineOpened
+	call_if_eq VAR_COMPLETED_LUGIA, 3, HoennSeek_EventScript_LugiaShrineWakes
+HoennSeek_EventScript_LugiaShrineOpened:
+	msgbox HoennSeek_Text_LugiaShrineOpened, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ HnS's chamber shows its post-story Lugia at VAR_COMPLETED_LUGIA 4.
+HoennSeek_EventScript_LugiaShrineWakes:
+	setvar VAR_COMPLETED_LUGIA, 4
+	return
+
+HoennSeek_EventScript_LugiaShrineOpen:
+	msgbox HoennSeek_Text_LugiaShrineAfter, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ One line at the top of HnS's post-story branch in the Lugia chamber's
+@ OnTransition: until the shrine is open, the chamber is empty.
+HoennSeek_EventScript_LugiaChamberAsleep::
+	setflag FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS
+	setflag FLAG_HIDE_LUGIA
+	end
+
+@ Called from Route 41's night check (HoennSeek_EventScript_Route41Night).
+HoennSeek_EventScript_ArmLugiaCameo:
+	goto_if_set FLAG_HOENN_LUGIA_CAMEO_SEEN, HoennSeek_EventScript_ArmLugiaCameoDone
+	goto_if_unset FLAG_HOENN_LAGOON_FOUND, HoennSeek_EventScript_ArmLugiaCameoDone
+	goto_if_unset FLAG_HOENN_SLOWKING_PROPHECY, HoennSeek_EventScript_ArmLugiaCameoDone
+	goto_if_set FLAG_CAUGHT_LUGIA, HoennSeek_EventScript_ArmLugiaCameoDone
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_ArmLugiaCameoDone
+	setvar VAR_TEMP_4, 1
+HoennSeek_EventScript_ArmLugiaCameoDone:
+	return
+
+@ Coord triggers on row 56 (x 52-63), VAR_TEMP_4 = 1.
+HoennSeek_EventScript_LugiaCameo::
+	lockall
+	setvar VAR_TEMP_4, 0
+	setflag FLAG_HOENN_LUGIA_CAMEO_SEEN
+	setvar VAR_0x8008, 60
+	setvar VAR_0x8009, 57
+	call HoennSeek_EventScript_StarterPanTo
+	msgbox HoennSeek_Text_LugiaCameoSwell, MSGBOX_DEFAULT
+	closemessage
+	special HoennLugiaCameoPrepare
+	setobjectxyperm LOCALID_HOENN_LANTURN_LIGHT, 62, 58
+	clearflag FLAG_HOENN_HIDE_LANTURN_LIGHT
+	playse SE_M_DIVE
+	addobject LOCALID_HOENN_LANTURN_LIGHT
+	waitse
+	msgbox HoennSeek_Text_LugiaCameoRise, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_LUGIA, CRY_MODE_HIGH_PITCH
+	waitmoncry
+	msgbox HoennSeek_Text_LugiaCameoSing, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_HOENN_LANTURN_LIGHT, HoennSeek_Movement_LugiaCameoDive
+	waitmovement 0
+	playse SE_M_DIVE
+	removeobject LOCALID_HOENN_LANTURN_LIGHT
+	waitse
+	msgbox HoennSeek_Text_LugiaCameoGone, MSGBOX_DEFAULT
+	closemessage
+	call HoennSeek_EventScript_StarterPanBack
+	releaseall
+	end
+
+HoennSeek_Movement_LugiaCameoDive:
+	walk_slow_down
+	walk_slow_left
+	walk_slow_down
+	step_end
+
+HoennSeek_EventScript_CallLugia::
+	setflag FLAG_HOENN_CALL_LUGIA
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallLugia
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_Text_LugiaShrineSome:
+	.string "You hold out what you carry. The\n"
+	.string "stone stays cold. Some of its\l"
+	.string "hollows are still waiting…$"
+
+HoennSeek_Text_LugiaShrineNoFrost:
+	.string "One small hollow is rimmed with\n"
+	.string "frost, as if it misses something.$"
+
+HoennSeek_Text_LugiaShrineNoThunder:
+	.string "One small hollow is scorched in a\n"
+	.string "jagged line, like a lightning bolt.$"
+
+HoennSeek_Text_LugiaShrineNoFlame:
+	.string "One small hollow is warm to the\n"
+	.string "touch, as if a fire burned in it.$"
+
+HoennSeek_Text_LugiaShrineNoWing:
+	.string "The large hollow in the middle\n"
+	.string "is shaped like a silver wing.$"
+
+HoennSeek_Text_LugiaShrineOffer:
+	.string "The FROST, THUNDER and FLAME\n"
+	.string "FEATHERS stir in your bag, and\l"
+	.string "the SILVER WING with them.\p"
+	.string "Lay the treasures down in\n"
+	.string "the hollows?$"
+
+HoennSeek_Text_LugiaShrineFeathers:
+	.string "{PLAYER} laid the three feathers in\n"
+	.string "the small hollows.$"
+
+HoennSeek_Text_LugiaShrineWing:
+	.string "{PLAYER} laid the SILVER WING\n"
+	.string "in the middle…$"
+
+HoennSeek_Text_LugiaShrineOpened:
+	.string "The stone shone, and a song rose\n"
+	.string "from deep under the sea.\p"
+	.string "Out past the lagoon, the waves\n"
+	.string "around the WHIRL ISLANDS fell still.\p"
+	.string "The treasures rose from the stone\n"
+	.string "and drifted back into your hands.\p"
+	.string "The way into the islands'\n"
+	.string "deepest chamber is open.$"
+
+HoennSeek_Text_LugiaShrineAfter:
+	.string "The old stone's hollows still\n"
+	.string "shimmer faintly.\p"
+	.string "Out past the lagoon, the sea\n"
+	.string "around the WHIRL ISLANDS is calm.$"
+
+HoennSeek_Text_LugiaCameoSwell:
+	.string "The sea swells, out past\n"
+	.string "the ridge…$"
+
+HoennSeek_Text_LugiaCameoRise:
+	.string "A huge silver shape rises out\n"
+	.string "of the waves!$"
+
+HoennSeek_Text_LugiaCameoSing:
+	.string "It sang one long, clear note\n"
+	.string "over the dark water…$"
+
+HoennSeek_Text_LugiaCameoGone:
+	.string "…and dove, heading for the\n"
+	.string "WHIRL ISLANDS.$"
+
+HoennSeek_Text_CallLugia:
+	.string "{PLAYER}! It's BRENDAN.\p"
+	.string "BILL just phoned. He's been\n"
+	.string "calling us about those three\l"
+	.string "birds, remember?\p"
+	.string "JASMINE's lighthouse keeper told\n"
+	.string "him the sea round the WHIRL\l"
+	.string "ISLANDS went flat calm last night.\p"
+	.string "No wind, no whirlpools, and a song\n"
+	.string "coming up from under the water.\p"
+	.string "BILL says that's the old AZALEA\n"
+	.string "song come true. Someone laid the\l"
+	.string "three feathers down!\p"
+	.string "Was that you? Whatever sings down\n"
+	.string "there is waiting deep in the\l"
+	.string "islands now. Go and see it!$"

@@ -53,6 +53,7 @@
 #define HOENN_CALL_CIPHER_SANCTUM 42 // Brendan: the Ruins lab phoned Birch about the sanctum (2.0 part 28; 39-41 are 31a, 32, 35b)
 #define HOENN_CALL_AMPHAROS 40 // May: Jasmine told the LEAGUE the second light went out (2.0 part 32; 27b is 38, 31a 39)
 #define HOENN_CALL_RAINBOW 41 // Brendan: the League heard of a rainbow over Ecruteak at dawn (2.0 part 35b; 38-40 are 27b, 31a, 32)
+#define HOENN_CALL_LUGIA 46 // Brendan: Bill heard the Whirl Islands' sea went still (2.0 part 34b; 41-45 are 35b, 28 and 37)
 // (lane A's calls go here)
 
 // Lane B: 70-99.

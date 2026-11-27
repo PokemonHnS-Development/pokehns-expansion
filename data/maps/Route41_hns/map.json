@@ -966,6 +966,114 @@
       "var": "VAR_TEMP_3",
       "var_value": "1",
       "script": "HoennSeek_EventScript_LagoonCave"
+    },
+    {
+      "type": "trigger",
+      "x": 52,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 54,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 55,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 57,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 59,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 60,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 61,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 62,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 63,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
     }
   ],
   "bg_events": [
