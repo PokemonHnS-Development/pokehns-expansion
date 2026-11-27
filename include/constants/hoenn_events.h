@@ -455,6 +455,36 @@
 // The chase's stage lives in VAR_TEMP_4 (0 = no chase, 1-5 = the pillar she's
 // in, 6 = she stepped out), so leaving the map starts it over.
 
+// ==== Two builder lanes (since Nov 27) =====================================
+// Two builders now add parts in parallel (hoenn-docs/lanes/README.md), so the
+// rest of phases E and F is split into one range per lane inside the blocks
+// above. A lane defines its flags and vars ONLY from its own ranges, in its own
+// section below (lane A's directly under its header, lane B's at the end of
+// the file), so the two never edit the same lines. src/hoenn_flags.c checks at
+// build time that the ranges sit inside their blocks and don't overlap.
+// Out of room? Take flags from HOENN_FLAGS_SPARE (vars: HOENN_VARS_SPARE) and
+// write the claim in your lane file. 27a was started before the split and
+// uses lane A's ranges from their start.
+
+// ---- Lane A: parts 27a-28, 31a, 32, 34b, 35b, 37 (hoenn-docs/lanes/lane-a.md) ----
+#define HOENN_LANE_A_FLAGS_E        (HOENN_FLAGS_E_JOHTO_KANTO + 0x00)     // 0x21A0, 48 flags
+#define HOENN_LANE_A_FLAGS_E_COUNT  0x30
+#define HOENN_LANE_A_FLAGS_F        (HOENN_FLAGS_F_LEGENDARIES + 0x00)     // 0x2200, 64 flags
+#define HOENN_LANE_A_FLAGS_F_COUNT  0x40
+#define HOENN_LANE_A_DAILY          (HOENN_DAILY_FLAGS_START + 0x13)       // 21 daily flags
+#define HOENN_LANE_A_DAILY_COUNT    21
+#define HOENN_LANE_A_WEEKLY         (HOENN_WEEKLY_FLAGS_START + 0x09)      // 26 weekly flags
+#define HOENN_LANE_A_WEEKLY_COUNT   26
+#define HOENN_LANE_A_HIDDEN         (HOENN_EVENT_HIDDEN_ITEMS_START + 0x04) // 28 hidden-item flags
+#define HOENN_LANE_A_HIDDEN_COUNT   28
+#define HOENN_LANE_A_VARS_E         (HOENN_VARS_E_EVENTS + 0x00)           // 20 vars
+#define HOENN_LANE_A_VARS_E_COUNT   20
+#define HOENN_LANE_A_VARS_F         (HOENN_VARS_F_LEGENDARIES + 0x00)      // 12 vars
+#define HOENN_LANE_A_VARS_F_COUNT   12
+// Lane A's part sections go here, each "// ---- Part NN: ... ----" like the
+// ones above, numbered from its range's start:
+//     #define FLAG_HOENN_X   (HOENN_LANE_A_FLAGS_E + 0x00)
+
 // ---- Part 27a: Unown Cipher A (data/scripts/hoenn_cipher.inc, src/hoenn_cipher.c) ----
 // Once all four Ruins of Alph panels are solved and you've been to Hoenn, a
 // Rosetta line shows in Words Room 1: Unown letters under Hoenn braille cells
@@ -472,5 +502,24 @@
 #define HOENN_CIPHER_NO_WORD   0 // no word shows now (not night, or the Rosetta isn't read)
 #define HOENN_CIPHER_NEW_WORD  1 // tonight's word, not noted yet
 #define HOENN_CIPHER_SEEN_WORD 2 // tonight's word, already noted
+
+// ---- Lane B: parts 31b, 34a, 29, 30a, 30b, 33, 36, 35a (hoenn-docs/lanes/lane-b.md) ----
+// (Kept below lane A's sections, so its additions land at the end of the file.)
+#define HOENN_LANE_B_FLAGS_E        (HOENN_FLAGS_E_JOHTO_KANTO + 0x30)     // 0x21D0, 48 flags
+#define HOENN_LANE_B_FLAGS_E_COUNT  0x30
+#define HOENN_LANE_B_FLAGS_F        (HOENN_FLAGS_F_LEGENDARIES + 0x40)     // 0x2240, 64 flags
+#define HOENN_LANE_B_FLAGS_F_COUNT  0x40
+#define HOENN_LANE_B_DAILY          (HOENN_DAILY_FLAGS_START + 0x28)       // 20 daily flags
+#define HOENN_LANE_B_DAILY_COUNT    20
+#define HOENN_LANE_B_WEEKLY         (HOENN_WEEKLY_FLAGS_START + 0x23)      // 26 weekly flags
+#define HOENN_LANE_B_WEEKLY_COUNT   26
+#define HOENN_LANE_B_HIDDEN         (HOENN_EVENT_HIDDEN_ITEMS_START + 0x20) // 28 hidden-item flags
+#define HOENN_LANE_B_HIDDEN_COUNT   28
+#define HOENN_LANE_B_VARS_E         (HOENN_VARS_E_EVENTS + 0x14)           // 20 vars
+#define HOENN_LANE_B_VARS_E_COUNT   20
+#define HOENN_LANE_B_VARS_F         (HOENN_VARS_F_LEGENDARIES + 0x0C)      // 12 vars
+#define HOENN_LANE_B_VARS_F_COUNT   12
+// Lane B's part sections go here, at the end of the file:
+//     #define FLAG_HOENN_Y   (HOENN_LANE_B_FLAGS_E + 0x00)
 
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H
