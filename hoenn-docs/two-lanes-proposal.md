@@ -1,6 +1,6 @@
 # Two builder lanes + one reviewer: PROPOSAL
 
-**Status: proposal, not decided.** Aidan asked (Nov 27) to talk the options through first. Nothing here applies until Aidan approves it; no IDs or code have been changed. Written against `hoenn` at `d16b90e4b8` (parts 1–26b merged, PR #79 = 24r open).
+**Status: proposal, partly decided.** Aidan asked (Nov 27) to talk the options through first. **Decided (Aidan, Nov 27):** the reviewer Claude merges; 35a is in lane B. Everything else still waits for his approval; no IDs or code have been changed. Written against `hoenn` at `d16b90e4b8` (parts 1–26b merged, PR #79 = 24r open).
 
 Remaining parts: 27a–37 (14 parts), then 38–40 (finish).
 
@@ -20,7 +20,7 @@ The split follows **maps**: each lane owns a set of places, so its PRs rarely to
 | A7 | 35b Ho-Oh, beasts, Celebi | L | Tin Tower roof, Ecruteak, Ruins puzzle, radio (Eusine), Ilex/Viridian/Petalburg Woods berry spots | 3 ✅ |
 | A8 | 37 Jirachi, Deoxys, Regis, Arceus | L | Mt. Moon outside, Meteor Falls, Space Center, Sinjoh Ruins, Route 45 moon hollow | 22b/23/25b ✅, A3, **B1 (31b)** |
 
-### Lane B: Kanto, the Safari and Hoenn's legends
+### Lane B: Kanto, the Safari and the legends' other half
 | Order | Part | Size | Maps / systems it touches | Needs |
 |---|---|---|---|---|
 | B1 | 31b Teddiursa honey trail | L | Route 45 + beekeeper house (buildings generator), honey tree, moon hollow (new map) | 3 ✅ |
@@ -31,12 +31,9 @@ The split follows **maps**: each lane owns a set of places, so its PRs rarely to
 | B6 | 33 Distribution + living dex | L | every wild table, overworld objects (see rule 3.6) | all of 15–32 (**A5**) |
 | B7 | 36 Hoenn weather legendaries | L | Mt. Pyre, Route 19 cave, **Seafoam Secret Cave**, Sky Pillar, Embedded Tower, Southern Island, Pewter Museum | 5 ✅, 12 ✅ |
 
-### Floater
-| Part | Size | Why it floats |
-|---|---|---|
-| 35a Mewtwo + Mew | L | Its maps (Cinnabar, Silph Co., Celadon Game Corner, Rocket hideouts, Cerulean Cave, Mew's three grassy spots) belong to neither lane. **Whichever lane runs out of parts first claims it** (rule 2.1). Lane B is lighter by about one M part, so it's the likely taker. |
+| B8 | 35a Mewtwo + Mew | L | Cinnabar, Silph Co., Celadon Game Corner, Rocket hideouts (incl. Mahogany's), Cerulean Cave, Mew's three grassy spots at dawn | 3 ✅ |
 
-Load: lane A is 4 L + 4 M, lane B is 5 L + 2 M; with 35a either way they come out within about one part of each other.
+Load: lane A is 4 L + 4 M, lane B is 6 L + 2 M (Aidan put 35a in lane B, Nov 27). Lane B's 35a can swap with 36 freely; neither depends on the other.
 
 ### Then the lanes join (one at a time, in this order)
 38 Sweep → 39a → 39b → 40 Bryan's playtest. They read and touch everything, so both builders stop new work; one builder does each part, the other only does review fixes.
@@ -129,7 +126,7 @@ The setup PR adds `tools/hoenn/regen_all.sh` to run that chain, so nobody has to
 - **What it reviews:** every builder PR, in the merge order above. Checklist per PR: the part's "Done when"; IDs inside the lane's ranges; no edits to the other lane's maps or files without a lane-file note; generated files match a fresh `regen_all.sh`; release + debug build; size row; debug `.ups` and screenshots in `/mnt/project-files/hoenn-2.0/part-NN/`; edge-case pass done; phone and hint lines added; docs updated in the right lane section.
 - **Plays it:** applies the debug patch, runs the part's event once in the harness (as 24r did), and checks the map art at 2× (the hand-made-maps convention).
 - **Writes notes, not fixes:** findings go in `review-notes.md` with the part number. Small fixes go back to the owning lane as an `NNr` part before its next part; the reviewer only builds a fix itself when it's cross-lane (both lanes' code) or the owning lane is mid-part and the fix blocks the other lane.
-- **Merges** after Aidan's go-ahead rule (as today: Aidan says "next" or authorises a run), then adds the combined size row and tells the other lane to sync.
+- **Merges (decided, Aidan Nov 27):** the reviewer is the one that merges every builder PR, after its review passes and within the run Aidan has authorised, then adds the combined size row and tells the other lane to sync. Builders never merge their own PRs.
 - **Order when two PRs are ready at once:** the one the other lane depends on first (31b, 34a, 32), then the older one. Review fixes (`NNr`) go before new parts of the same lane.
 - **At the join:** the reviewer runs 38's audit checklist against both lanes' notes, then reviews 39a/b's fixes.
 
@@ -143,6 +140,6 @@ One small PR before either lane starts, so neither lane has to touch shared file
 6. Docs: `hoenn-docs/lanes/lane-a.md` + `lane-b.md`, the roadmap regrouped into lane tables, CLAUDE.md lane sections and size tables, playtest checklist sections, README pointer.
 
 ## Open questions for Aidan
-- Is 35a as a floater OK, or pin it to lane B now?
-- Should the reviewer merge (proposed), or do you want to keep merging yourself?
+- ~~Is 35a a floater?~~ Decided: lane B.
+- ~~Who merges?~~ Decided: the reviewer.
 - Who builds the setup PR: the reviewer (proposed, since it owns the shared files) or one builder?
