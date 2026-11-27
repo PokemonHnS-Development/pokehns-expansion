@@ -16407,6 +16407,18 @@
       "blockdata_filepath": "data/layouts/DarkCave_Burrow_hoenn/map.bin",
       "game_version": "hns",
       "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_ROUTE41_LAGOON_HOENN",
+      "name": "Route41_Lagoon_hoenn_Layout",
+      "width": 30,
+      "height": 24,
+      "primary_tileset": "gTileset_Johto_NorthEast_Hns",
+      "secondary_tileset": "gTileset_CianwoodCity_Hns",
+      "border_filepath": "data/layouts/Route41_Lagoon_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/Route41_Lagoon_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     }
   ]
 }

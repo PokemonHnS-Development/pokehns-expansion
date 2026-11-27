@@ -412,6 +412,15 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 ## Lane A parts (27b on: Cipher, Johto, the sea)
 Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its `## 2.0 part NN` sections directly above "Lane B parts"; lane B adds its own at the end of the file, so the two never edit the same lines.
 
+## 2.0 part 32 (Olivine nights)
+- At night (7 PM–6 AM), surf Route 41's north-west water (near 41,16): the Lanturn light. Swim close and follow it all the way to the east ridge. Does each stop stay on screen? Is the pace comfortable?
+- Swim off while following: the lights scatter and the light is back at the start.
+- The sea cave appearing at the ridge, then the lagoon: does it look hand-made (rock edges, beach, water)? The Lanturn, the Chinchou, the old stone (with and without the Slowking's prophecy).
+- Leave and come back by day: the cave is still there and works.
+- Route 40 at night: the Ampharos blinking on its rock (talk from the water below it). Knock it out (it rests until the next night), then catch it: Tail Glow in its moves.
+- Amphy at the lighthouse top at night before and after the catch; May's call after the catch.
+- The Olivine Cafe sailor's and the lighthouse 1F sailor's new lines.
+
 ## Lane B parts (27a, 31b on: Kanto, Safari, legends)
 Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 

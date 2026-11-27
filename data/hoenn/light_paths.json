@@ -1,5 +1,5 @@
 {
- "_comment": "Hoenn & Seek 2.0 part 25a: follow-the-lights paths. tools/hoenn/gen_hoenn_lights.py finds the shortest walkable route from start to end on the layout and puts a stop every `spacing` steps (and one at the end); it writes src/data/hoenn_light_paths.h for src/hoenn_lights.c, which explains the mechanic. The light is the map object `local_id` (placed at `start` in its map.json). `near`: how close (in tiles, any direction) the player must come before the light drifts on; `lost`: how far away the player may get once it has started before the lights scatter back to the start. `stage_var` is a VAR_TEMP_* the map's own scripts don't use. Keep `spacing` at 6 or less so the next stop is on screen. The Lanturn lights (Lugia, plan section 8) are meant to be another entry here.",
+ "_comment": "Hoenn & Seek 2.0 part 25a: follow-the-lights paths. tools/hoenn/gen_hoenn_lights.py finds the shortest walkable route from start to end on the layout and puts a stop every `spacing` steps (and one at the end); it writes src/data/hoenn_light_paths.h for src/hoenn_lights.c, which explains the mechanic. The light is the map object `local_id` (placed at `start` in its map.json). `near`: how close (in tiles, any direction) the player must come before the light drifts on; `lost`: how far away the player may get once it has started before the lights scatter back to the start. `stage_var` is a VAR_TEMP_* the map's own scripts don't use. Keep `spacing` at 6 or less so the next stop is on screen. Optional: \"water_only\" keeps the route on surf water (elevation 1), \"avoid_objects\" keeps it off the tiles of the map's other objects. LANTURN_LIGHTS (part 32) is the Lugia chain's path on Route 41's surface.",
  "paths": [
   {
    "name": "NIGHT_DIVE",
@@ -12,6 +12,20 @@
    "lost": 11,
    "stage_var": "VAR_TEMP_2",
    "end_script": "HoennSeek_EventScript_DiveLightsEnd"
+  },
+  {
+   "name": "LANTURN_LIGHTS",
+   "map": "Route41_hns",
+   "local_id": "LOCALID_HOENN_LANTURN_LIGHT",
+   "start": [41, 16],
+   "end": [57, 55],
+   "spacing": 6,
+   "near": 2,
+   "lost": 11,
+   "stage_var": "VAR_TEMP_2",
+   "water_only": true,
+   "avoid_objects": true,
+   "end_script": "HoennSeek_EventScript_LanturnLightsEnd"
   }
  ]
 }

@@ -503,6 +503,22 @@
 #define HOENN_CIPHER_NEW_WORD  1 // tonight's word, not noted yet
 #define HOENN_CIPHER_SEEN_WORD 2 // tonight's word, already noted
 
+// ---- Part 32: Olivine nights (data/scripts/hoenn_lane_a.inc) ----
+// At night a LANTURN's light waits off Route 41's north shore and leads across
+// the sea (src/hoenn_lights.c) to the foot of the east ridge, where it slips
+// into a sea cave (57,53): the way into Route41_Lagoon_hoenn, Lugia's shrine
+// (part 34b). Also at night, a stranded AMPHAROS blinks on a sea rock off Route 40 (32,33);
+// AMPHY in the lighthouse keeps watching its light. (31a ends at + 0x26 and
+// daily + 0; 28 has + 0x16-0x1F.)
+#define FLAG_HOENN_HIDE_LANTURN_LIGHT       (HOENN_LANE_A_FLAGS_E + 0x27) // the light object (out at night until the cave is found)
+#define FLAG_HOENN_LAGOON_FOUND             (HOENN_LANE_A_FLAGS_E + 0x28) // followed the lights: the sea cave is open
+#define FLAG_HOENN_HIDE_STRANDED_AMPHAROS   (HOENN_LANE_A_FLAGS_E + 0x29) // its object (shown at night until caught)
+#define FLAG_HOENN_CAUGHT_STRANDED_AMPHAROS (HOENN_LANE_A_FLAGS_E + 0x2A)
+#define FLAG_HOENN_CALL_AMPHAROS            (HOENN_LANE_A_FLAGS_E + 0x2B) // May: Jasmine told the LEAGUE (part 32's call)
+#define FLAG_HOENN_DAILY_STRANDED_AMPHAROS  (HOENN_LANE_A_DAILY + 1)      // knocked out: resting until tomorrow
+// Route 41 uses VAR_TEMP_2 for the light's stop (light_paths.json) and
+// VAR_TEMP_3 = 1 for the sea cave's trigger (57,54) once it's found.
+
 // ---- Lane B: parts 31b, 34a, 29, 30a, 30b, 33, 36, 35a (hoenn-docs/lanes/lane-b.md) ----
 // (Kept below lane A's sections, so its additions land at the end of the file.)
 #define HOENN_LANE_B_FLAGS_E        (HOENN_FLAGS_E_JOHTO_KANTO + 0x30)     // 0x21D0, 48 flags

@@ -145,6 +145,9 @@
     "RUMOR_ICE_FROSLASS": {"kind": "rumor", "rumor": "ICE_FROSLASS", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}]},
     "STORY_CIPHER_WALL":  {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ASKED"}, {"not_flag": "FLAG_HOENN_CIPHER_ROSETTA"}], "text": ["Did you feel that tremor? A new line of writing turned up inside the RUINS.", "It's got dots on it like nothing from JOHTO. We need someone who's been to HOENN!"]},
     "STORY_CIPHER_NIGHT": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ROSETTA"}, {"not_flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}], "text": ["AT NIGHT WE SPEAK… I've been sleeping here at the lab ever since you read it.", "If the WORDS chambers really light up at night, is it the same word every night? Tell my colleague what you see!"]},
+    "STORY_LANTURN_LIGHTS": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_LAGOON_FOUND"}], "text": ["Sail past the WHIRL ISLANDS after dark and you'll see a light on the water, bobbing along like it wants you to follow.", "Old hands say it leads somewhere no chart shows. Me, I steer clear!"]},
+    "STORY_LANTURN_LAGOON": {"kind": "story", "if": [{"flag": "FLAG_HOENN_LAGOON_FOUND"}], "text": ["You followed that light at night? Then you've seen where it goes.", "Some places the sea keeps for itself. Don't worry, I won't tell a soul."]},
+    "STORY_AMPHY_NIGHT": {"kind": "story", "if": [{"var": "VAR_OLIVINE_CITY_STATE", "min": 5}, {"not_flag": "FLAG_HOENN_CAUGHT_STRANDED_AMPHAROS"}], "text": ["AMPHY's well again, but JASMINE says it won't settle at night.", "It just stands at the top of the LIGHTHOUSE, staring out to sea."]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -445,7 +448,9 @@
     {"map": "SouthernIsland_Exterior_hns", "script": "SouthernIsland_Exterior_hns_EventScript_Sailor", "key": "SouthernIslandSailor", "lines": ["RUMOR_ENIGMA_SHARDS"]},
     {"map": "CinnabarIsland_PokemonCenter_hns", "script": "CinnabarIsland_PokemonCenter_EventScript_Fisher", "key": "CinnabarPCFisher", "lines": ["RUMOR_MANSION_JOURNAL"]},
     {"map": "ViridianCity_PokemonCenter_hns", "script": "ViridianCity_PokemonCenter_EventScript_BugCatcher", "key": "ViridianPCBugCatcher", "lines": ["RUMOR_MEW_BLUR"]},
-    {"map": "OldaleTown_PokemonCenter_1F", "script": "OldaleTown_PokemonCenter_1F_EventScript_Boy", "key": "OldalePCBoy", "lines": ["RUMOR_MEW_BLUR"]}
+    {"map": "OldaleTown_PokemonCenter_1F", "script": "OldaleTown_PokemonCenter_1F_EventScript_Boy", "key": "OldalePCBoy", "lines": ["RUMOR_MEW_BLUR"]},
+    {"map": "OlivineCity_Cafe_hns",              "script": "OlivineCity_EventScript_SailorB", "key": "OlivineCafeSailor", "lines": ["STORY_LANTURN_LAGOON", "STORY_LANTURN_LIGHTS"]},
+    {"map": "OlivineCity_Lighthouse_hns",        "script": "OlivineLighthouse_EventScript_1FSailor", "key": "LighthouseSailor", "lines": ["STORY_AMPHY_NIGHT"]}
   ],
 
   "forecasts": [

@@ -289,6 +289,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Rotue40_EventScript_Monica",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_HOENN_STRANDED_AMPHAROS",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_AMPHAROS",
+      "x": 32,
+      "y": 33,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_StrandedAmpharos",
+      "flag": "FLAG_HOENN_HIDE_STRANDED_AMPHAROS"
     }
   ],
   "warp_events": [

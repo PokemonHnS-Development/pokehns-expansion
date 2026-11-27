@@ -48,6 +48,7 @@
 #define HOENN_CALL_LANE_A_FIRST 37
 #define HOENN_CALL_LANE_A_LAST  69
 #define HOENN_CALL_CIPHER 37 // Brendan: the Ruins of Alph lab phoned Birch about a braille wall (2.0 part 27a)
+#define HOENN_CALL_AMPHAROS 40 // May: Jasmine told the LEAGUE the second light went out (2.0 part 32; 27b is 38, 31a 39)
 // (lane A's calls go here)
 
 // Lane B: 70-99.
