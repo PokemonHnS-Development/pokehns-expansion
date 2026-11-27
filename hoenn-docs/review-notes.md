@@ -291,6 +291,13 @@ Built by this thread before it took over reviewing. Merged 36's reviewed branch 
 - **Choices for Bryan:** Mewtwo now needs all six pages (HnS had it in the cave from the start); Faraway Island now needs three dawn sightings (HnS gave the OLD SEA MAP free in Vermilion); dawn is 4–8 AM; page spots (a plant because HnS's Game Corner has no basement, Silph's lobby because HnS only has the lobby, Goldenrod's warehouse as the "second hideout"); the plan's Whirlpool/Dive gates dropped; HnS's levels kept (Mewtwo 80); the 4-page cameo; Fuji's role.
 - Grid: `review-35a.png` in the project's `hoenn-2.0/review/`.
 
+### 46. Night-aware reset (41r, reviewer, Nov 27) — **built on Bryan's yes to item 41; waiting for his review**
+Item 41's question: Bryan chose a night-aware reset. A night event's daily flag no longer resets at midnight: nights are counted from noon to noon (like `HoennNightWeekday()`), so a Pokémon knocked out at 11 PM stays gone through the small hours and is back the next evening.
+- **Which flags:** every daily flag of an evening/night-only event: Feebas (evenings and nights), Chimecho, the trench guardians, Froslass, Sneasel, and the Onix (gone + the once-a-night rumble). Not the birds, Dudunsparce, the legends or Mewtwo (any time of day), and not Glalie (never at night). Weekly night events (Metagross, Zangoose vs. Seviper) are unchanged.
+- **Played (debug save):** Saturday 10 PM with all six flags set (and two daytime ones); Sunday 1 AM: the daytime flags cleared at midnight, the night ones kept, the ice chamber quiet; 11 AM still kept; 1 PM all cleared; 9 PM Froslass back ("A chill runs down your back"). Setting the clock back two days re-records the night without clearing; moving forward again clears, the same as HnS's daily flags.
+- Grid: `41r_night_reset.png` in the project's `hoenn-2.0/review/`.
+- **For the lane A PRs still open (32, 28, 35b) and 33:** any new night "back tomorrow night" flag goes in `sNightlyFlags`.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
