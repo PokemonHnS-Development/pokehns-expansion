@@ -85,6 +85,7 @@ HoennSeek_Text_CalendarChangeDay:
 @ FLAG_HOENN_HIDE_CLEFAIRY_DANCE, decided here each time you arrive, so
 @ nightfall while you're standing there shows them on your next visit.
 HoennSeek_MtMoon_Outside_OnTransition::
+	call HoennSeek_EventScript_GlyphRingArm @ Hoenn & Seek 2.0 part 27b: the Unown ring
 	setflag FLAG_HOENN_HIDE_CLEFAIRY_DANCE
 	gettimeofday
 	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_MtMoon_Outside_OnTransition_End

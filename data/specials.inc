@@ -756,6 +756,29 @@ gSpecials::
 	def_special HoennCipherTonightWord
 	def_special HoennCipherNoteWord
 	def_special HoennCipherWordCount
+	@ Hoenn & Seek 2.0, builder lane A (parts 27b+): lane A's specials go here
+	def_special HoennGlyphRingShows
+	def_special HoennGlyphRingPrepare
+	def_special HoennGlyphSetupBattle
+	def_special HoennGlyphTakeFragment
+	def_special HoennCipherFragmentCount
+	def_special HoennSanctumLetter
+	def_special HoennAmpharosRunDir
+	def_special HoennAmpharosSaveReturn
+	def_special HoennAmpharosReturn
+	def_special HoennAmpharosToLighthouse
+	def_special HoennAmpharosHidePlayer
+	def_special HoennHasAnyBerry
+	@ part 35b (src/hoenn_johto_legends.c)
+	def_special HoennEusineState
+	def_special HoennHoOhClue
+	def_special HoennForestSoilState
+	def_special HoennForestSoilPlant
+	def_special HoennForestSoilTake
+	def_special HoennForestOfferings
+	@ (end of lane A's specials)
+
+	@ Hoenn & Seek 2.0, builder lane B (parts 31b+): lane B's specials go here
 	def_special HoennBirdRoostState
 	def_special HoennBirdLand
 	def_special HoennBirdBattleEnded
@@ -772,6 +795,8 @@ gSpecials::
 	def_special HoennStampedeBreed
 	def_special HoennTuneLeadBull
 	def_special HoennLeadBullBattleEnded
+	def_special HoennStartScriptedSafariBattle
+	def_special HoennSafariBallsLeft
 	def_special HoennLegendState
 	def_special HoennLegendBattleEnded
 	def_special HoennEnigmaShardCount

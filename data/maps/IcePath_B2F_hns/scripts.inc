@@ -4,6 +4,7 @@ IcePath_B2F_hns_MapScripts::
 	.byte 0
 
 IcePath_B2F_OnTransition: 
+	call HoennSeek_EventScript_SneaselArm @ Hoenn & Seek 2.0 part 31a: the Sneasel thief
 	callnative SetTimeBasedEncounters
 	end
 

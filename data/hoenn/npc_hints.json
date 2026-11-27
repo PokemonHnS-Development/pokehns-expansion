@@ -145,9 +145,13 @@
     "RUMOR_ICE_FROSLASS": {"kind": "rumor", "rumor": "ICE_FROSLASS", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}]},
     "STORY_CIPHER_WALL":  {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ASKED"}, {"not_flag": "FLAG_HOENN_CIPHER_ROSETTA"}], "text": ["Did you feel that tremor? A new line of writing turned up inside the RUINS.", "It's got dots on it like nothing from JOHTO. We need someone who's been to HOENN!"]},
     "STORY_CIPHER_NIGHT": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ROSETTA"}, {"not_flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}], "text": ["AT NIGHT WE SPEAK… I've been sleeping here at the lab ever since you read it.", "If the WORDS chambers really light up at night, is it the same word every night? Tell my colleague what you see!"]},
+    "STORY_CIPHER_RINGS": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}, {"not_flag": "FLAG_HOENN_CIPHER_TABLET"}], "text": ["Hikers keep phoning the lab. They see UNOWN floating in a circle at night, deep in the caves.", "Always somewhere quiet, away from the path. Is it the places from the words?"]},
+
+    "STORY_ICE_THIEF": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_SNEASEL_STASH"}], "text": ["Items keep vanishing off the ice deep down in the ICE PATH. Only at night!", "CLAIR thinks it's a POKéMON. Whatever it is, it's fast on the ice."]},
+    "STORY_ICE_THIEF_NOOK": {"kind": "story", "if": [{"flag": "FLAG_HOENN_SNEASEL_STASH"}, {"not_flag": "FLAG_HOENN_CAUGHT_ICE_SNEASEL"}], "text": ["That SNEASEL from the ICE PATH still comes back to its corner at night.", "It's lost its hoard, but it hasn't lost that grin!"]},
     "STORY_LANTURN_LIGHTS": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_LAGOON_FOUND"}], "text": ["Sail past the WHIRL ISLANDS after dark and you'll see a light on the water, bobbing along like it wants you to follow.", "Old hands say it leads somewhere no chart shows. Me, I steer clear!"]},
     "STORY_LANTURN_LAGOON": {"kind": "story", "if": [{"flag": "FLAG_HOENN_LAGOON_FOUND"}], "text": ["You followed that light at night? Then you've seen where it goes.", "Some places the sea keeps for itself. Don't worry, I won't tell a soul."]},
-    "STORY_AMPHY_NIGHT": {"kind": "story", "if": [{"var": "VAR_OLIVINE_CITY_STATE", "min": 5}, {"not_flag": "FLAG_HOENN_CAUGHT_STRANDED_AMPHAROS"}], "text": ["AMPHY's well again, but JASMINE says it won't settle at night.", "It just stands at the top of the LIGHTHOUSE, staring out to sea."]},
+    "STORY_AMPHY_NIGHT": {"kind": "story", "if": [{"var": "VAR_OLIVINE_CITY_STATE", "min": 5}, {"not_flag": "FLAG_HOENN_RESCUED_AMPHAROS"}], "text": ["AMPHY's well again, but JASMINE says it won't settle at night.", "It just stands at the top of the LIGHTHOUSE, staring out to sea."]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -435,7 +439,7 @@
     {"map": "MossdeepCity",                      "script": "MossdeepCity_EventScript_Sailor",                      "lines": ["STORY_NIGHT_DIVE", "STORY_TRENCH_DARK", "STORY_TRENCH_GUARDIANS"]},
     {"map": "ShoalCave_LowTideEntranceRoom",     "script": "ShoalCave_LowTideEntranceRoom_EventScript_ShellBellExpert", "lines": ["STORY_ICE_HOLE", "STORY_ICE_FEATHER", "STORY_ICE_FROSLASS", "STORY_ICE_GLALIE"]},
     {"map": "PacifidlogTown_PokemonCenter_1F",   "script": "PacifidlogTown_PokemonCenter_1F_EventScript_OldMan",  "lines": ["RUMOR_ICE_FROSLASS", "RUMOR_ICE_CHAMBER"]},
-    {"map": "RuinsOfAlph_Lab_hns",               "script": "RuinsOfAlph_Lab_EventScript_Scientist1", "key": "AlphLabScientist", "lines": ["STORY_CIPHER_NIGHT", "STORY_CIPHER_WALL"]},
+    {"map": "RuinsOfAlph_Lab_hns",               "script": "RuinsOfAlph_Lab_EventScript_Scientist1", "key": "AlphLabScientist", "lines": ["STORY_CIPHER_NIGHT", "STORY_CIPHER_RINGS", "STORY_CIPHER_WALL"]},
     {"map": "BlackthornCity_Mart_hns",           "script": "BlackthornMart_EventScript_CoolTrainerM", "key": "BlackthornMartTrainer", "lines": ["RUMOR_HONEY_TRAIL"]},
     {"map": "Route10_PowerPlantEntrance_hns",    "script": "Route10_PowerPlantEntrance_EventScript_Engineer3", "key": "PowerPlantEngineer", "lines": ["FORECAST", "STORY_ZAPDOS_STORM"]},
     {"map": "Route113_GlassWorkshop",            "script": "Route113_GlassWorkshop_EventScript_NinjaBoy", "key": "GlassWorkshopBoy", "lines": ["RUMOR_MOLTRES_FLYOVER"]},
@@ -443,6 +447,7 @@
     {"map": "VioletCity_hns",                    "script": "VioletCity_EventScript_Youngster", "key": "VioletYoungster", "lines": ["RUMOR_DUNSPARCE_BURROW"]},
     {"map": "PalletTown_hns",                    "script": "PalletTown_EventScript_Fatman", "key": "PalletFatman", "lines": ["RUMOR_TANGELA_VINES"]},
     {"map": "FuchsiaCity_SafariZoneBrush_hns",   "script": "SafariZoneFuchsia_EventScript_Attendant1", "key": "SafariBrushWarden", "lines": ["RUMOR_KANGA_BABY"]},
+    {"map": "BlackthornCity_hns",                "script": "BlackthornCity_EventScript_CoolTrainerF2", "key": "BlackthornSkater", "lines": ["STORY_ICE_THIEF", "STORY_ICE_THIEF_NOOK"]},
     {"map": "FuchsiaCity_SafariZoneEntrance_hns", "script": "Route121_SafariZoneEntrance_EventScript_InfoAttendant", "key": "SafariGateAttendant", "lines": ["RUMOR_TAUROS_STAMPEDE"]},
     {"map": "Route19_hns", "script": "Route19_EventScript_Fatman", "key": "Route19Fisher", "lines": ["RUMOR_SEAFOAM_TITANS"]},
     {"map": "SouthernIsland_Exterior_hns", "script": "SouthernIsland_Exterior_hns_EventScript_Sailor", "key": "SouthernIslandSailor", "lines": ["RUMOR_ENIGMA_SHARDS"]},

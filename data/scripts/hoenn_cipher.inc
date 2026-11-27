@@ -31,6 +31,8 @@ HoennSeek_EventScript_AlphResearcherAgain:
 	end
 
 HoennSeek_EventScript_AlphResearcherWords:
+	specialvar VAR_RESULT, HoennCipherFragmentCount @ part 27b: the fragments come first
+	goto_if_ne VAR_RESULT, 0, HoennSeek_EventScript_AlphResearcherFragments
 	specialvar VAR_RESULT, HoennCipherWordCount
 	goto_if_eq VAR_RESULT, 0, HoennSeek_EventScript_AlphResearcherRosetta
 	goto_if_ge VAR_RESULT, 7, HoennSeek_EventScript_AlphResearcherAllWords
@@ -53,6 +55,49 @@ HoennSeek_EventScript_AlphResearcherAllWords:
 
 HoennSeek_EventScript_AlphResearcherAllWordsAgain:
 	msgbox HoennSeek_Text_AlphResearcherAllWordsAgain, MSGBOX_DEFAULT
+	release
+	end
+
+@ Part 27b: the tablet fragments from the glyph sites (hoenn_lane_a.inc). The
+@ first time she sees one, the lab phones Birch (May's call). With all seven
+@ she lays them out: ANCIENT (part 28 starts from FLAG_HOENN_CIPHER_TABLET).
+HoennSeek_EventScript_AlphResearcherFragments:
+	setflag FLAG_HOENN_CIPHER_SHOWED_LAB
+	goto_if_ge VAR_RESULT, 7, HoennSeek_EventScript_AlphResearcherTablet
+	msgbox HoennSeek_Text_AlphResearcherFragments, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_AlphResearcherTablet:
+	goto_if_set FLAG_HOENN_CIPHER_TABLET, HoennSeek_EventScript_AlphResearcherTabletAgain
+	msgbox HoennSeek_Text_AlphResearcherTablet, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_CIPHER_TABLET
+	release
+	end
+
+HoennSeek_EventScript_AlphResearcherTabletAgain:
+	goto_if_set FLAG_HOENN_CIPHER_INSCRIPTION, HoennSeek_EventScript_AlphResearcherInscription @ part 28
+	goto_if_set FLAG_HOENN_CIPHER_SANCTUM_OPEN, HoennSeek_EventScript_AlphResearcherSanctum
+	msgbox HoennSeek_Text_AlphResearcherTabletAgain, MSGBOX_DEFAULT
+	release
+	end
+
+@ Part 28: the sanctum under the boulder (hoenn_lane_a.inc). Once you've read
+@ the inscription she reads it with you and phones Birch (Brendan's call).
+HoennSeek_EventScript_AlphResearcherSanctum:
+	msgbox HoennSeek_Text_AlphResearcherSanctum, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_AlphResearcherInscription:
+	goto_if_set FLAG_HOENN_CIPHER_LAB_SANCTUM, HoennSeek_EventScript_AlphResearcherInscriptionAgain
+	setflag FLAG_HOENN_CIPHER_LAB_SANCTUM
+	msgbox HoennSeek_Text_AlphResearcherInscription, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_AlphResearcherInscriptionAgain:
+	msgbox HoennSeek_Text_AlphResearcherInscriptionAgain, MSGBOX_DEFAULT
 	release
 	end
 
@@ -271,3 +316,59 @@ HoennSeek_Text_CallCipher:
 	.string "of their stone panels, too!\p"
 	.string "Go see them at the lab, okay?\n"
 	.string "Dad wants to know what it says!$"
+
+@ Part 27b
+HoennSeek_Text_AlphResearcherFragments:
+	.string "A TABLET FRAGMENT? Where a ring of\n"
+	.string "UNOWN was floating? Let me see!\p"
+	.string "The stone is like the RUINS' own.\n"
+	.string "You have {STR_VAR_3} of seven: {STR_VAR_1}.\p"
+	.string "One piece for each word, I think.\n"
+	.string "Seven letters… they must spell\l"
+	.string "something when they're together!$"
+
+HoennSeek_Text_AlphResearcherTablet:
+	.string "All seven fragments! Let me lay\n"
+	.string "them out on the table…\p"
+	.string "E, N, C, I, T, N, A. If this edge\n"
+	.string "fits that one… and this goes here…\p"
+	.string "A-N-C-I-E-N-T. ANCIENT!\n"
+	.string "It's one whole tablet again!\p"
+	.string "And the back is carved too. A map\n"
+	.string "of the RUINS, with a mark right in\l"
+	.string "the middle, where nothing is built.\p"
+	.string "I need time with this. Come back\n"
+	.string "and see me, {PLAYER}!$"
+
+HoennSeek_Text_AlphResearcherTabletAgain:
+	.string "ANCIENT, and a mark in the middle\n"
+	.string "of the RUINS where nothing stands…\p"
+	.string "Nothing but that big boulder south\n"
+	.string "of the chamber, anyway.\p"
+	.string "The UNOWN are telling us something.\n"
+	.string "And they only speak at night…$"
+
+HoennSeek_Text_AlphResearcherSanctum:
+	.string "The boulder opened? And there's a\n"
+	.string "room under it, with a statue?\p"
+	.string "Please, read what's on it! I'm too\n"
+	.string "scared to go down there myself.$"
+
+HoennSeek_Text_AlphResearcherInscription:
+	.string "WE WERE BORN AT SINJOH, PAST THE\n"
+	.string "SNOWS…\p"
+	.string "The SINJOH RUINS! The UNOWN came\n"
+	.string "from there? Up the snowy road\l"
+	.string "north of NEW SINJOH!\p"
+	.string "And three sleepers behind sealed\n"
+	.string "doors. The oldest of the deep, the\l"
+	.string "greatest of the sea…\p"
+	.string "I'll phone PROF. BIRCH. Those\n"
+	.string "sound like Hoenn POKéMON to me!$"
+
+HoennSeek_Text_AlphResearcherInscriptionAgain:
+	.string "THREE SLEEP AT SINJOH. The oldest\n"
+	.string "of the deep and the greatest of\l"
+	.string "the sea wake them.\p"
+	.string "PROF. BIRCH thinks it means\n"
+	.string "RELICANTH and WAILORD!$"

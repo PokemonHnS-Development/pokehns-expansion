@@ -99,6 +99,7 @@ Nothing a player sees yet (part 3 adds the first weekday content); these are for
 - [ ] On your real 1.0/2.0 save (clock set by New Bark's wall clock), NEXT WEEK clears weekly flags and SET WEEKDAY never does. Emulator-tested on a debug save only.
 - [ ] Route 119 and 123 in real play: walk into the rain zones on a "special" day (thunderstorm on 119, rain on 123) and a normal one.
 - [ ] Leave the game on over a real Saturday → Sunday midnight: no freeze or stutter when the week rolls over.
+- [ ] **Night resets (41r):** knock out a night Pokémon (Froslass, Sneasel, the Onix) before midnight: it's still gone after midnight and back the next evening. Emulator-tested with the debug clock only.
 
 ## 2.0 part 3 — Weekday content
 - [ ] **A real new game:** after setting the stopped clock in your room, the calendar asks what day it is; pick the real day. (Emulator-tested on a real new game; check it reads well on a phone.)
@@ -412,14 +413,52 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 ## Lane A parts (27b on: Cipher, Johto, the sea)
 Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its `## 2.0 part NN` sections directly above "Lane B parts"; lane B adds its own at the end of the file, so the two never edit the same lines.
 
+## 27r (Unown Cipher fixes)
+- Words Room 1: walk right up to the north wall (you're standing on the braille) and press A facing the wall: it should read.
+- At night in rooms 2–4, the same from the wall.
+- Stay up past midnight: the word shouldn't change until morning (Friday night is UNION all night).
+
+## 2.0 part 27b (Unown Cipher B)
+- After seeing a night word, go to its place at night: is the ring easy to find from the entrance, and do the letters read as the word (clockwise from the top)? Bell Tower 2F, Mt. Moon Square, Ice Path 1F, Whirl Islands B2F, Mt. Mortar (by the lake), Union Cave B1F, Seafoam 1F.
+- Walk to each ring from the real entrance (the reviewer walked to all seven in the emulator; check the real puzzles on the way: Whirl Islands, Seafoam's boulders, Ice Path's ice).
+- While a ring is out your Pokémon stays in its ball on that map (review item 36): does it come back out on the next map? Does it feel odd?
+- The battle: the letter shown in battle matches the one that broke away (FOAM's is an A).
+- Catch one and check the Pokédex and summary show that letter.
+- Run from one: the ring stays; come back and it's still there. Let one knock you out: the ring is there next night.
+- Mt. Moon Square on a Monday night: the Clefairy dance and the MOON ring together (colours, slowdown).
+- The lab researcher with 1–6 fragments, then all seven (ANCIENT). May's call afterwards, outdoors.
+
+## 2.0 part 31a (Sneasel thief)
+- Push all four boulders on Ice Path B1F down their holes, then go down to B2F at night (7 PM–6 AM): an item ball out on the ice.
+- Reach it: a SNEASEL pops up behind it and snatches it, twice more across the ice. Is each new ball easy to spot, and can you work out how to reach it? (Route used in testing, from the ladder: LLLLDLURU; after the snatch LDDRDR; then ULLLLDLURDDDRD; then LUULD to the nook.)
+- Try to get stuck: no slide should leave you somewhere you can't get back to a ladder.
+- The nook battle: Pickpocket, Razor Claw. Knock it out: the stash (2 PP Ups, Lucky Egg, Lansat, Starf). Next night it's back in the nook; catch it.
+- Leave mid-chase and come back: it starts over from the first ball.
+- Brendan's call afterwards, and the Blackthorn Cooltrainer near the Pokémon Center (talk twice).
+## 2.0 part 28 (Unown Cipher C)
+- With the tablet, find the boulder south of the central chamber from the tablet's hint, by day (a hint line) and at night (the scene). Does the shake and white flash look right? Is the ladder hole clear afterwards, by day too?
+- Walk down: the sanctum's walls, frieze and statues. Does it look like part of the Ruins, with no odd edges? Do the floating Unown sit well?
+- The mural: try several letters across days, including ! and ?. Catch one and check the Pokédex and summary show that form. The next day it lets you pick again.
+- The inscription from each side of the statue, and the researcher afterwards; Brendan's call outdoors.
+- Radio (PokéGear, station 41, in the Ruins) at each stage: before the tablet (a site word that changes weekly), with the tablet, after the boulder, after the inscription. The emulator only checked the last stage.
+- The sanctum's battle background (a cave).
+
 ## 2.0 part 32 (Olivine nights)
 - At night (7 PM–6 AM), surf Route 41's north-west water (near 41,16): the Lanturn light. Swim close and follow it all the way to the east ridge. Does each stop stay on screen? Is the pace comfortable?
 - Swim off while following: the lights scatter and the light is back at the start.
 - The sea cave appearing at the ridge, then the lagoon: does it look hand-made (rock edges, beach, water)? The Lanturn, the Chinchou, the old stone (with and without the Slowking's prophecy).
 - Leave and come back by day: the cave is still there and works.
-- Route 40 at night: the Ampharos blinking on its rock (talk from the water below it). Knock it out (it rests until the next night), then catch it: Tail Glow in its moves.
-- Amphy at the lighthouse top at night before and after the catch; May's call after the catch.
+- Route 40 at night: the Ampharos blinking on its two boulders (surf from the beach, talk to it from the water north of them). With no BERRY: it shrinks back. Give it a BERRY (any kind), then talk again the same night ("nibbling the last of your BERRY"); come back the next night (after noon counts as a new night) for the second and third. Does three nights feel right? Say NO after the third: it stays. Say YES: it rides with you as your follower.
+- Land with it anywhere (Route 40's beach, Olivine's pier, Cianwood, after Fly): one step on land and it hops off, runs along the land, then the lighthouse cutscene (it climbs the stairs to Jasmine and Amphy) and you're back on your landing tile. Does the run direction look right everywhere? Try it after Jasmine has gone back to the gym too.
+- While it rides, leave Route 40 by surfing into Olivine or Route 41: it stays with you until your next step on land.
+- Amphy at the lighthouse top at night before and after the rescue, and the rescued Ampharos next to it (by day too); May's call after the rescue.
 - The Olivine Cafe sailor's and the lighthouse 1F sailor's new lines.
+## 2.0 part 35b (Ho-Oh, Raikou/Entei, Celebi)
+- Catch Raikou or Entei, then talk to EUSINE in the Celadon Pokémon Center. Then OAK's POKéMON TALK in Johto (not in the morning): does MARY's tip name a route, and is the other beast really there?
+- Once the Hall of Fame (or the Pewter grandpa) brings Ho-Oh back: the middle sage on Tin Tower 1F. With the Rainbow Wing and no CLEAR BELL, does he give you the bell? Do his clues follow what you're missing (Ruins panel, the three beasts, dawn)?
+- With every clue, walk into Ecruteak between 4 and 10 AM: the rainbow scene. Is Ho-Oh's flight visible wherever you enter from? Brendan's call a few steps later.
+- The roof at dawn (Ho-Oh there) and at any other time (empty), including at night.
+- With the GS BALL waiting at the shrine: plant a berry at each soil spot (the clearing floor just left of the Ilex shrine; you can step onto it, so face it to plant, below the lone tree in Viridian Forest's south, beside a lone tree in Petalburg Woods' tall grass on the east side), come back the next day, take the glowing berries, then the shrine and Celebi.
 
 ## Lane B parts (27a, 31b on: Kanto, Safari, legends)
 Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
@@ -474,7 +513,7 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 ## 2.0 part 30b (the Tauros stampede)
 - Safari Zone at SAFARI LEVEL 3: walk up the MOUNTAIN's east canyon (the two-wide path on its right edge) into the new highland. Does the join look seamless, and does the highland look hand-made?
 - Monday morning: the six charging Tauros. Is crossing the lanes fun and fair (not too easy, not too hard)? Get hit once (the long message), then again (the short one).
-- Reach the lead bull in the north nook: its battle (Paldean Tauros, Lv near your progress level). Run once (it stays), then catch it. The herd stops to graze afterwards; talk to one.
+- Reach the lead bull in the north nook: its Safari encounter (Paldean Tauros, Lv near your progress level; bait, rocks, Safari Balls, none of your Pokémon). Run once (it stays), let it flee once on a later Monday (gone for the week), then catch it; try a catch with your last Safari Ball (the Safari ends after the catch). The herd stops to graze afterwards; talk to one.
 - Next Monday: a different breed leads. Knock one out instead of catching it: it should be back the Monday after.
 - Any other day, or Monday afternoon: the highland is empty.
 - Brendan's call after the first catch (outside), and the Safari entrance attendant's rumor before and after.

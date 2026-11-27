@@ -20,7 +20,9 @@
 // - If a block fills up, take the next one from HOENN_FLAGS_SPARE / the spare
 //   vars and say so in a comment. Never move a block: numbers are saved.
 // - src/hoenn_flags.c checks at build time that the blocks don't overlap.
-// - Daily flags reset every morning with HnS's; weekly flags reset once a week.
+// - Daily flags reset at midnight with HnS's; weekly flags reset once a week.
+//   A night event's daily flag goes in sNightlyFlags (src/hoenn_flags.c) instead,
+//   so it resets at noon and lasts the whole night (41r).
 //   Use them for "once a day" / "once a week" events instead of a counter.
 // - Hidden items placed by 2.0 events (bg_event "hidden_item") need a flag
 //   below 0x20E9, so they take theirs from HOENN_EVENT_HIDDEN_ITEMS_START.
@@ -69,6 +71,10 @@
 // The week the weekly flags were last reset in, plus one (0 = not seen yet:
 // the next time check only records the week). See HoennUpdatePerWeek().
 #define VAR_HOENN_WEEK_SEEN       (HOENN_VARS_A_FOUNDATIONS + 0x01)
+// The night the nightly flags were last reset in, plus one (0 = not seen yet).
+// A night runs from noon to noon, so the hours after midnight belong to the
+// night before. See HoennUpdatePerNight() (41r).
+#define VAR_HOENN_NIGHT_SEEN      (HOENN_VARS_A_FOUNDATIONS + 0x02)
 
 // Weekdays as specialvar VAR_RESULT, GetDayOfWeek returns them. Scripts can't
 // use enum Weekday, so these mirror it (src/hoenn_time.c checks they match).
@@ -503,21 +509,104 @@
 #define HOENN_CIPHER_NEW_WORD  1 // tonight's word, not noted yet
 #define HOENN_CIPHER_SEEN_WORD 2 // tonight's word, already noted
 
+// ---- Part 27b: Unown Cipher B, the glyph sites (data/scripts/hoenn_lane_a.inc, src/hoenn_lane_a.c) ----
+// Each night word names a place. Once you've seen a weekday's word, its place
+// shows a ring of Unown at night spelling the word, in a quiet corner. Talk to
+// the ring: one letter comes out to battle, and once it's caught or knocked
+// out the ring is gone and a TABLET FRAGMENT carved with that letter lies on
+// the floor. The seven letters spell ANCIENT (part 28 reads the tablet).
+#define FLAG_HOENN_CIPHER_FRAGMENT_SUN  (HOENN_LANE_A_FLAGS_E + 0x0B) // + HOENN_SUNDAY..HOENN_SATURDAY (0x0B-0x11):
+                                                                       // that place's fragment was found
+#define FLAG_HOENN_CIPHER_HIDE_RING     (HOENN_LANE_A_FLAGS_E + 0x12) // the ring objects' flag (every site map decides it on arrival)
+#define FLAG_HOENN_CIPHER_SHOWED_LAB    (HOENN_LANE_A_FLAGS_E + 0x13) // the lab researcher has seen a fragment
+#define FLAG_HOENN_CALL_CIPHER_FRAGMENT (HOENN_LANE_A_FLAGS_E + 0x14) // May: the lab phoned Birch about the fragment
+#define FLAG_HOENN_CIPHER_TABLET        (HOENN_LANE_A_FLAGS_E + 0x15) // the lab put all seven together (part 28 starts here)
+
+// ---- Part 31a: the Sneasel thief (data/scripts/hoenn_lane_a.inc) ----
+// Ice Path B2F at night, once all four B1F boulders have dropped onto it: an
+// item ball on the ice is snatched by a Sneasel as you reach it, then another
+// shows farther across the ice, three times; then it's cornered in the
+// north-west nook. Its stash comes with the first battle.
+#define FLAG_HOENN_HIDE_SNEASEL_BALL_1  (HOENN_LANE_A_FLAGS_E + 0x20) // the three snatched balls' object flags
+#define FLAG_HOENN_HIDE_SNEASEL_BALL_2  (HOENN_LANE_A_FLAGS_E + 0x21) //   (decided on every arrival)
+#define FLAG_HOENN_HIDE_SNEASEL_BALL_3  (HOENN_LANE_A_FLAGS_E + 0x22)
+#define FLAG_HOENN_HIDE_ICE_SNEASEL     (HOENN_LANE_A_FLAGS_E + 0x23) // the Sneasel's object flag
+#define FLAG_HOENN_SNEASEL_STASH        (HOENN_LANE_A_FLAGS_E + 0x24) // fought it once and got its stash: no more chase, it waits in the nook
+#define FLAG_HOENN_CAUGHT_ICE_SNEASEL   (HOENN_LANE_A_FLAGS_E + 0x25)
+#define FLAG_HOENN_CALL_SNEASEL         (HOENN_LANE_A_FLAGS_E + 0x26) // Brendan: Clair's gym report
+#define FLAG_HOENN_DAILY_ICE_SNEASEL    (HOENN_LANE_A_DAILY + 0x00)   // knocked out: back next night
+// ---- Part 28: Unown Cipher C, the sanctum (data/scripts/hoenn_lane_a.inc, src/hoenn_lane_a.c) ----
+// The tablet's mark is the boulder in the middle of the Ruins of Alph. At night
+// the Unown open it, and a ladder leads down to the sanctum: a mural that calls
+// any of the 28 letters (once a day) and the final inscription (part 37's start).
+#define FLAG_HOENN_CIPHER_SANCTUM_OPEN  (HOENN_LANE_A_FLAGS_E + 0x16) // the boulder is open (redrawn on every load)
+#define FLAG_HOENN_CIPHER_HIDE_SEAL     (HOENN_LANE_A_FLAGS_E + 0x17) // the opening scene's three Unown (hidden on arrival)
+#define FLAG_HOENN_CIPHER_INSCRIPTION   (HOENN_LANE_A_FLAGS_E + 0x18) // read the final inscription (part 37 starts here)
+#define FLAG_HOENN_CIPHER_LAB_SANCTUM   (HOENN_LANE_A_FLAGS_E + 0x19) // the lab researcher heard about the inscription
+#define FLAG_HOENN_CALL_CIPHER_SANCTUM  (HOENN_LANE_A_FLAGS_E + 0x1A) // Brendan: the lab phoned Birch about the sanctum
+                                                                       // (0x1B-0x1F spare for part 28)
+#define FLAG_HOENN_DAILY_SANCTUM_MURAL  (HOENN_LANE_A_DAILY + 5)      // the mural called a letter tonight (nightly, 41r)
+                                                                       // (+0..4 are 31a, 32 and 35b's)
+#define HOENN_SANCTUM_LETTERS 28 // A-Z ! ? (the mural's menu; index 28 is CANCEL)
 // ---- Part 32: Olivine nights (data/scripts/hoenn_lane_a.inc) ----
 // At night a LANTURN's light waits off Route 41's north shore and leads across
 // the sea (src/hoenn_lights.c) to the foot of the east ridge, where it slips
 // into a sea cave (57,53): the way into Route41_Lagoon_hoenn, Lugia's shrine
-// (part 34b). Also at night, a stranded AMPHAROS blinks on a sea rock off Route 40 (32,33);
-// AMPHY in the lighthouse keeps watching its light. (31a ends at + 0x26 and
-// daily + 0; 28 has + 0x16-0x1F.)
+// (part 34b). Also at night, a stranded AMPHAROS blinks on a sea rock off Route 40 (32,32);
+// AMPHY in the lighthouse keeps watching its light. It's too scared to swim:
+// it takes a BERRY from you once a night, and after three it trusts you and
+// climbs on behind you; the first step you take on land (any map) it hops off
+// and runs home to JASMINE (Bryan, 32 review: a rescue, not a catch). Afterwards it lives at the lighthouse top
+// next to AMPHY. (31a ends at + 0x26 and daily + 0; 28 has + 0x16-0x1F.)
 #define FLAG_HOENN_HIDE_LANTURN_LIGHT       (HOENN_LANE_A_FLAGS_E + 0x27) // the light object (out at night until the cave is found)
 #define FLAG_HOENN_LAGOON_FOUND             (HOENN_LANE_A_FLAGS_E + 0x28) // followed the lights: the sea cave is open
-#define FLAG_HOENN_HIDE_STRANDED_AMPHAROS   (HOENN_LANE_A_FLAGS_E + 0x29) // its object (shown at night until caught)
-#define FLAG_HOENN_CAUGHT_STRANDED_AMPHAROS (HOENN_LANE_A_FLAGS_E + 0x2A)
+#define FLAG_HOENN_HIDE_STRANDED_AMPHAROS   (HOENN_LANE_A_FLAGS_E + 0x29) // its object on the rock (shown at night until rescued)
+#define FLAG_HOENN_RESCUED_AMPHAROS         (HOENN_LANE_A_FLAGS_E + 0x2A) // brought ashore: it lives at the lighthouse now
 #define FLAG_HOENN_CALL_AMPHAROS            (HOENN_LANE_A_FLAGS_E + 0x2B) // May: Jasmine told the LEAGUE (part 32's call)
-#define FLAG_HOENN_DAILY_STRANDED_AMPHAROS  (HOENN_LANE_A_DAILY + 1)      // knocked out: resting until tomorrow
+#define FLAG_HOENN_HIDE_LIGHTHOUSE_AMPHAROS (HOENN_LANE_A_FLAGS_E + 0x2C) // its object at the lighthouse top (shown once rescued)
+#define FLAG_HOENN_AMPHAROS_JASMINE_AWAY    (HOENN_LANE_A_FLAGS_E + 0x2D) // Jasmine had left the lighthouse: the arrival scene shows her, then hides her again
+#define FLAG_HOENN_DAILY_AMPHAROS_BERRY     (HOENN_LANE_A_DAILY + 1)      // it took a BERRY tonight (nightly, 41r)
+#define VAR_HOENN_AMPHAROS_STATE            (HOENN_LANE_A_VARS_E + 0x00)  // 0-2 BERRIES taken, then:
+#define HOENN_AMPHAROS_TRUSTS   3 // trusts you: it will ride with you
+#define HOENN_AMPHAROS_RIDING   4 // riding with you (your follower)
+#define HOENN_AMPHAROS_ARRIVING 5 // the lighthouse scene is due
+#define HOENN_AMPHAROS_HOME     6 // at the lighthouse top for good
 // Route 41 uses VAR_TEMP_2 for the light's stop (light_paths.json) and
 // VAR_TEMP_3 = 1 for the sea cave's trigger (57,54) once it's found.
+// ---- Part 35b: Ho-Oh, Raikou/Entei, Celebi (lane A) (data/scripts/hoenn_johto_legends.inc, src/hoenn_johto_legends.c) ----
+// Raikou and Entei: which you've met and caught (noted after every roamer
+// battle); once one is caught, EUSINE's notes put the other on OAK's radio
+// show. Ho-Oh: dawn, the Ruins' Ho-Oh panel, all three beasts met and the
+// CLEAR BELL; the rainbow over Ecruteak is its cameo. Celebi: three forest
+// offerings grown from berries planted in old soil, then the GS BALL.
+#define FLAG_HOENN_MET_RAIKOU            (HOENN_LANE_A_FLAGS_F + 0x00) // battled the roaming Raikou
+#define FLAG_HOENN_MET_ENTEI             (HOENN_LANE_A_FLAGS_F + 0x01) // battled the roaming Entei
+#define FLAG_HOENN_CAUGHT_RAIKOU         (HOENN_LANE_A_FLAGS_F + 0x02) // (HnS's FLAG_CAUGHT_RAIKOU is never set)
+#define FLAG_HOENN_CAUGHT_ENTEI          (HOENN_LANE_A_FLAGS_F + 0x03)
+#define FLAG_HOENN_EUSINE_NOTES          (HOENN_LANE_A_FLAGS_F + 0x04) // EUSINE sends his tracking notes to the radio
+#define FLAG_HOENN_HOOH_RAINBOW          (HOENN_LANE_A_FLAGS_F + 0x05) // saw the rainbow over Ecruteak (cameo)
+#define FLAG_HOENN_CALL_RAINBOW          (HOENN_LANE_A_FLAGS_F + 0x06) // Brendan: the League heard of the rainbow
+#define FLAG_HOENN_FOREST_PLANTED_ILEX   (HOENN_LANE_A_FLAGS_F + 0x07) // + HOENN_SOIL_* (0x07-0x09): a berry was planted
+#define FLAG_HOENN_FOREST_OFFERING_ILEX  (HOENN_LANE_A_FLAGS_F + 0x0A) // + HOENN_SOIL_* (0x0A-0x0C): its glowing berry was taken
+#define FLAG_HOENN_SHRINE_OFFERED        (HOENN_LANE_A_FLAGS_F + 0x0D) // the three offerings are in the shrine's dishes
+// 0x0E-0x0F: spare for 35b's review
+#define FLAG_HOENN_DAILY_SOIL_ILEX       (HOENN_LANE_A_DAILY + 2)      // + HOENN_SOIL_* (daily 2-4): planted today
+// The soil spots (VAR_0x8004 for HoennForestSoil*):
+#define HOENN_SOIL_ILEX       0
+#define HOENN_SOIL_VIRIDIAN   1
+#define HOENN_SOIL_PETALBURG  2
+#define HOENN_SOIL_COUNT      3
+// specialvar VAR_RESULT, HoennForestSoilState:
+#define HOENN_SOIL_EMPTY      0
+#define HOENN_SOIL_GROWING    1 // planted today: come back tomorrow
+#define HOENN_SOIL_GROWN      2
+#define HOENN_SOIL_TAKEN      3
+// specialvar VAR_RESULT, HoennHoOhClue: the first clue still missing
+#define HOENN_HOOH_READY        0
+#define HOENN_HOOH_NEEDS_BELL   1
+#define HOENN_HOOH_NEEDS_PUZZLE 2
+#define HOENN_HOOH_NEEDS_BEASTS 3
+#define HOENN_HOOH_NEEDS_DAWN   4
 
 // ---- Lane B: parts 31b, 34a, 29, 30a, 30b, 33, 36, 35a (hoenn-docs/lanes/lane-b.md) ----
 // (Kept below lane A's sections, so its additions land at the end of the file.)
