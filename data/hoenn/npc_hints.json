@@ -142,6 +142,8 @@
     "STORY_CIPHER_NIGHT": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ROSETTA"}, {"not_flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}], "text": ["AT NIGHT WE SPEAK… I've been sleeping here at the lab ever since you read it.", "If the WORDS chambers really light up at night, is it the same word every night? Tell my colleague what you see!"]},
     "STORY_CIPHER_RINGS": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}, {"not_flag": "FLAG_HOENN_CIPHER_TABLET"}], "text": ["Hikers keep phoning the lab. They see UNOWN floating in a circle at night, deep in the caves.", "Always somewhere quiet, away from the path. Is it the places from the words?"]},
 
+    "STORY_ICE_THIEF": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_SNEASEL_STASH"}], "text": ["Items keep vanishing off the ice deep down in the ICE PATH. Only at night!", "CLAIR thinks it's a POKéMON. Whatever it is, it's fast on the ice."]},
+    "STORY_ICE_THIEF_NOOK": {"kind": "story", "if": [{"flag": "FLAG_HOENN_SNEASEL_STASH"}, {"not_flag": "FLAG_HOENN_CAUGHT_ICE_SNEASEL"}], "text": ["That SNEASEL from the ICE PATH still comes back to its corner at night.", "It's lost its hoard, but it hasn't lost that grin!"]},
     "STORY_WISH_MONDAY": {"kind": "story", "if": [{"flag": "FLAG_HOENN_WISH_METEOR_FALLS"}, {"flag": "FLAG_HOENN_WISH_SPACE_CENTER"}, {"flag": "FLAG_HOENN_WISH_MOON_HOLLOW"}, {"not_caught": "JIRACHI"}], "text": ["Three wishes on three falling stars? Then the old story says the white rock at MT. MOON will answer.", "But only on the night the CLEFAIRY dance there. That's Monday night, in my day."]},
     "STORY_WISHES": {"kind": "story", "if": [{"not_caught": "JIRACHI"}], "text": ["When I was a boy, we wished on falling stars in three places: where the stars fell, where people watch them, and where the moon comes closest.", "METEOR FALLS, this very SPACE CENTER at night… and the third is a hollow somewhere in JOHTO that only the bears know."]},
     "RUMOR_JIRACHI": {"kind": "rumor", "rumor": "JIRACHI"},
@@ -434,6 +436,7 @@
     {"map": "VioletCity_hns",                    "script": "VioletCity_EventScript_Youngster", "key": "VioletYoungster", "lines": ["RUMOR_DUNSPARCE_BURROW"]},
     {"map": "PalletTown_hns",                    "script": "PalletTown_EventScript_Fatman", "key": "PalletFatman", "lines": ["RUMOR_TANGELA_VINES"]},
     {"map": "FuchsiaCity_SafariZoneBrush_hns",   "script": "SafariZoneFuchsia_EventScript_Attendant1", "key": "SafariBrushWarden", "lines": ["RUMOR_KANGA_BABY"]},
+    {"map": "BlackthornCity_hns",                "script": "BlackthornCity_EventScript_CoolTrainerF2", "key": "BlackthornSkater", "lines": ["STORY_ICE_THIEF", "STORY_ICE_THIEF_NOOK"]},
     {"map": "MossdeepCity_SpaceCenter_1F", "script": "MossdeepCity_SpaceCenter_1F_EventScript_OldMan", "key": "SpaceCenterOldMan", "lines": ["STORY_WISH_MONDAY", "STORY_WISHES", "RUMOR_JIRACHI"]},
     {"map": "MossdeepCity_SpaceCenter_1F", "script": "MossdeepCity_SpaceCenter_1F_EventScript_Woman", "key": "SpaceCenterWoman", "lines": ["STORY_SIGNAL", "RUMOR_DEOXYS"]},
     {"map": "SinjohRuins_House1_hns", "script": "SinjohRuins_Lab_EventScript_Linguist", "key": "SinjohLinguist", "lines": ["STORY_ARCEUS_WAITS", "STORY_REGI_SEA", "STORY_REGI_BRAILLE", "RUMOR_REGI_DOORS"]}

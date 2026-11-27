@@ -516,6 +516,19 @@
 #define FLAG_HOENN_CALL_CIPHER_FRAGMENT (HOENN_LANE_A_FLAGS_E + 0x14) // May: the lab phoned Birch about the fragment
 #define FLAG_HOENN_CIPHER_TABLET        (HOENN_LANE_A_FLAGS_E + 0x15) // the lab put all seven together (part 28 starts here)
 
+// ---- Part 31a: the Sneasel thief (data/scripts/hoenn_lane_a.inc) ----
+// Ice Path B2F at night, once all four B1F boulders have dropped onto it: an
+// item ball on the ice is snatched by a Sneasel as you reach it, then another
+// shows farther across the ice, three times; then it's cornered in the
+// north-west nook. Its stash comes with the first battle.
+#define FLAG_HOENN_HIDE_SNEASEL_BALL_1  (HOENN_LANE_A_FLAGS_E + 0x20) // the three snatched balls' object flags
+#define FLAG_HOENN_HIDE_SNEASEL_BALL_2  (HOENN_LANE_A_FLAGS_E + 0x21) //   (decided on every arrival)
+#define FLAG_HOENN_HIDE_SNEASEL_BALL_3  (HOENN_LANE_A_FLAGS_E + 0x22)
+#define FLAG_HOENN_HIDE_ICE_SNEASEL     (HOENN_LANE_A_FLAGS_E + 0x23) // the Sneasel's object flag
+#define FLAG_HOENN_SNEASEL_STASH        (HOENN_LANE_A_FLAGS_E + 0x24) // fought it once and got its stash: no more chase, it waits in the nook
+#define FLAG_HOENN_CAUGHT_ICE_SNEASEL   (HOENN_LANE_A_FLAGS_E + 0x25)
+#define FLAG_HOENN_CALL_SNEASEL         (HOENN_LANE_A_FLAGS_E + 0x26) // Brendan: Clair's gym report
+#define FLAG_HOENN_DAILY_ICE_SNEASEL    (HOENN_LANE_A_DAILY + 0x00)   // knocked out: back next night
 // ---- Part 28: Unown Cipher C, the sanctum (data/scripts/hoenn_lane_a.inc, src/hoenn_lane_a.c) ----
 // The tablet's mark is the boulder in the middle of the Ruins of Alph. At night
 // the Unown open it, and a ladder leads down to the sanctum: a mural that calls

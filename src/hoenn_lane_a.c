@@ -359,6 +359,9 @@ u16 HoennLaneADueCall(void)
     if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_CIPHER_SHOWED_LAB)
      && !FlagGet(FLAG_HOENN_CALL_CIPHER_FRAGMENT))
         return HOENN_CALL_CIPHER_FRAGMENT;
+    // Part 31a, Brendan: May's dad (Norman) read Clair's gym report about the Ice Path thief.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_SNEASEL_STASH) && !FlagGet(FLAG_HOENN_CALL_SNEASEL))
+        return HOENN_CALL_SNEASEL;
     // Part 28, Brendan: the lab phoned Birch once it read the inscription with you.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_CIPHER_LAB_SANCTUM)
      && !FlagGet(FLAG_HOENN_CALL_CIPHER_SANCTUM))
