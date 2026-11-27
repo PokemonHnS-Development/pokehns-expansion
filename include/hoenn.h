@@ -52,6 +52,7 @@ bool32 HoennTryEventCall(void);
 u16 HoennSpeciesDueCall(void);
 u16 HoennHiddenDueCall(void);
 bool8 HoennMirageTowerRung(void); // 2.0 part 24b
+u16 HoennCipherDueCall(void);      // 2.0 part 27a (src/hoenn_cipher.c)
 bool32 HoennLightsOnStep(void); // follow-the-lights (src/hoenn_lights.c, 2.0 part 25a)
 void HoennTuneWildMon(void);
 void HoennTuneWildMonSlot(void);

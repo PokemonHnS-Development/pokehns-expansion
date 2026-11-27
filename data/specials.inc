@@ -751,3 +751,8 @@ gSpecials::
 	def_special HoennWakeAbsol
 	def_special HoennAbsolIsOut
 	def_special HoennSandChimePlace
+	def_special HoennCipherIsOpen
+	def_special HoennCipherDrawRoom
+	def_special HoennCipherTonightWord
+	def_special HoennCipherNoteWord
+	def_special HoennCipherWordCount
