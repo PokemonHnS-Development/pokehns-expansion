@@ -453,3 +453,12 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 - Route 21 islet (surf there): vines by day, Cut does nothing; mornings the vines step aside and the shiny Tangela waits. Afterwards: the Miracle Seed, no vines.
 - Brendan's call after the Onix (outside).
 - Rumors: Lavender hiker, Violet kid, Pallet man, before and after.
+
+## 2.0 part 30a (the lost Kangaskhan baby)
+- Safari Beach at 6–7 PM (SAFARI LEVEL 2 or higher): the baby on the sand. Not there by day or at level 1.
+- Let it follow you: does its little sprite look right walking in every direction, and through the gate into the Brush?
+- Take it into the Brush's south-west nook (the gap in the trees near the bottom left): the reunion, the hearts, the Lucky Egg. Is the nook easy enough to find, and does it look like natural woods?
+- Run out of steps (or retire) with the baby following: it should be back on the Beach the next evening.
+- Afterwards: the pair together in the nook, both talk lines; a Safari battle mid-follow (the baby still follows after).
+- May's call after the reunion (outside), the Brush attendant's rumor before and after.
+
