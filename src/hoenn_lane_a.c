@@ -46,6 +46,18 @@
 //   word through the static once the Rosetta is read: the place of a fragment
 //   you're still missing (a different one each week), then what to do next
 //   (HoennRadioUnownBroadcast, one hook line in src/pokenav_radio.c).
+//
+// Part 37 (Jirachi, Deoxys, the Regis, Arceus; plan section 4):
+// - Jirachi: a wish on a shooting star, at night, at three spots: the Meteor
+//   Falls clifftop (part 23's map), the Space Center's 2F windows and the moon
+//   hollow's pool (lane B's part 31b). With all three made, the white rock at
+//   Mt. Moon Square answers on the Clefairy's Monday night (part 3), which is
+//   when HnS's own summon runs. HoennWishCount() counts them.
+// - Deoxys: the Space Center's 2F scientist picks up a signal from a meteorite
+//   at night. HoennDeoxysSignalNight() counts each night once (a night is dusk
+//   to dawn, like HoennNightWeekday), and on the third different night he gives
+//   the AURORA TICKET, which HnS's Olivine fan used to give to any champion.
+// - The Regis and Arceus are script-only (data/scripts/hoenn_lane_a.inc).
 #include "global.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -493,6 +505,42 @@ void HoennLugiaCameoPrepare(void)
     }
 }
 
+// ---- Part 37: Jirachi's wishes, Deoxys's signal -----------------------------
+// specialvar VAR_RESULT, HoennWishCount: how many of the three wishes are made.
+u16 HoennWishCount(void)
+{
+    return FlagGet(FLAG_HOENN_WISH_METEOR_FALLS) + FlagGet(FLAG_HOENN_WISH_SPACE_CENTER)
+         + FlagGet(FLAG_HOENN_WISH_MOON_HOLLOW);
+}
+
+// specialvar VAR_RESULT, HoennDeoxysSignalNight: the scientist's check.
+//   0: it isn't night (the signal only comes through at night)
+//   1: night, but tonight is already in his log
+//   2: a new night: VAR_HOENN_DEOXYS_SIGNAL went up by one
+// A night runs from dusk to dawn, so the hours after midnight belong to the
+// day before (as in HoennNightWeekday). VAR_HOENN_DEOXYS_NIGHT keeps that
+// night's day number + 2, so 0 means no night logged yet.
+u16 HoennDeoxysSignalNight(void)
+{
+    u16 night;
+
+    RtcCalcLocalTime();
+    if (GetTimeOfDay() != TIME_NIGHT)
+        return 0;
+    // The hours before noon belong to the night that began the day before.
+    // Counting from days + 2 keeps that from underflowing on day 0 and keeps
+    // every logged night above 0.
+    night = gLocalTime.days + 2;
+    if (gLocalTime.hours < 12)
+        night--;
+    if (VarGet(VAR_HOENN_DEOXYS_NIGHT) == night)
+        return 1;
+    VarSet(VAR_HOENN_DEOXYS_NIGHT, night);
+    if (VarGet(VAR_HOENN_DEOXYS_SIGNAL) < HOENN_DEOXYS_NIGHTS)
+        VarSet(VAR_HOENN_DEOXYS_SIGNAL, VarGet(VAR_HOENN_DEOXYS_SIGNAL) + 1);
+    return 2;
+}
+
 u16 HoennLaneADueCall(void)
 {
     u16 call = HoennCipherDueCall(); // part 27a (src/hoenn_cipher.c)
@@ -519,6 +567,16 @@ u16 HoennLaneADueCall(void)
     // Part 34b, Brendan: Bill heard the Olivine lighthouse saw the Whirl Islands' sea go still.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_LUGIA_SHRINE_OPEN) && !FlagGet(FLAG_HOENN_CALL_LUGIA))
         return HOENN_CALL_LUGIA;
+    // Part 37, May: the Space Center's old man phoned Birch about your wishes.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && HoennWishCount() == 3 && !FlagGet(FLAG_HOENN_CALL_WISHES))
+        return HOENN_CALL_WISHES;
+    // Part 37, Brendan: the Space Center told Birch it gave you the ticket.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_DEOXYS_TICKET) && !FlagGet(FLAG_HOENN_CALL_DEOXYS))
+        return HOENN_CALL_DEOXYS;
+    // Part 37, May: Steven heard a door move at the Sinjoh Ruins.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && !FlagGet(FLAG_HOENN_CALL_REGIS)
+     && (FlagGet(FLAG_HOENN_REGI_OPEN_ROCK) || FlagGet(FLAG_HOENN_REGI_OPEN_ICE) || FlagGet(FLAG_HOENN_REGI_OPEN_STEEL)))
+        return HOENN_CALL_REGIS;
     // Lane A's next calls go here, e.g.
     //     if (FlagGet(FLAG_HOENN_X_MET) && !FlagGet(FLAG_HOENN_CALL_X))
     //         return HOENN_CALL_X;

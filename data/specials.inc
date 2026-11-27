@@ -777,6 +777,8 @@ gSpecials::
 	def_special HoennForestSoilTake
 	def_special HoennForestOfferings
 	def_special HoennLugiaCameoPrepare
+	def_special HoennWishCount
+	def_special HoennDeoxysSignalNight
 	@ (end of lane A's specials)
 
 	@ Hoenn & Seek 2.0, builder lane B (parts 31b+): lane B's specials go here

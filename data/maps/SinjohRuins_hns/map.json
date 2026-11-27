@@ -332,6 +332,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_DAY_POKEMON"
+    },
+    {
+      "local_id": "LOCALID_HOENN_REGI_SEAL_ROCK",
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER_HNS",
+      "x": 9,
+      "y": 44,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_RegiSealRock",
+      "flag": "FLAG_HOENN_REGI_HIDE_ROCK"
+    },
+    {
+      "local_id": "LOCALID_HOENN_REGI_SEAL_ICE",
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER_HNS",
+      "x": 7,
+      "y": 48,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_RegiSealIce",
+      "flag": "FLAG_HOENN_REGI_HIDE_ICE"
+    },
+    {
+      "local_id": "LOCALID_HOENN_REGI_SEAL_STEEL",
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER_HNS",
+      "x": 8,
+      "y": 54,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_RegiSealSteel",
+      "flag": "FLAG_HOENN_REGI_HIDE_STEEL"
     }
   ],
   "warp_events": [

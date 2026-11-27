@@ -586,10 +586,34 @@ HoennSeek_EventScript_Hint_OlivinePCFisher::
 	callstd MSGBOX_NPC
 	end
 
+@ MossdeepCity_SpaceCenter_1F
+HoennSeek_EventScript_Hint_SpaceCenterOldMan::
+	callnative HoennSeek_NpcHint
+	.2byte 73
+	goto_if_eq VAR_RESULT, FALSE, MossdeepCity_SpaceCenter_1F_EventScript_OldMan
+	callstd MSGBOX_NPC
+	end
+
+@ MossdeepCity_SpaceCenter_1F
+HoennSeek_EventScript_Hint_SpaceCenterWoman::
+	callnative HoennSeek_NpcHint
+	.2byte 74
+	goto_if_eq VAR_RESULT, FALSE, MossdeepCity_SpaceCenter_1F_EventScript_Woman
+	callstd MSGBOX_NPC
+	end
+
+@ SinjohRuins_House1_hns
+HoennSeek_EventScript_Hint_SinjohLinguist::
+	callnative HoennSeek_NpcHint
+	.2byte 75
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_Linguist
+	callstd MSGBOX_NPC
+	end
+
 @ Route34_FishingShack_hoenn
 HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 73
+	.2byte 76
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -597,7 +621,7 @@ HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 @ OlivineCity_HarborOffice_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 74
+	.2byte 77
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -605,7 +629,7 @@ HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 @ OlivineCity_SailorsHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 	callnative HoennSeek_NpcHint
-	.2byte 75
+	.2byte 78
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
@@ -613,7 +637,7 @@ HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 @ OlivineCity_CaptainsHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 76
+	.2byte 79
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -621,7 +645,7 @@ HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 @ OlivineCity_TackleShop_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 77
+	.2byte 80
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -629,7 +653,7 @@ HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 @ OlivineCity_Shipwright_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 78
+	.2byte 81
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -637,7 +661,7 @@ HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 @ OlivineCity_KeepersHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 79
+	.2byte 82
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -645,7 +669,7 @@ HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 @ EcruteakCity_DanceTeacher_hoenn
 HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 80
+	.2byte 83
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -653,7 +677,7 @@ HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 @ Route34_BreedersHouse_hoenn
 HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 81
+	.2byte 84
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -661,7 +685,7 @@ HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 @ Route38_MoomooStoreroom_hoenn
 HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 82
+	.2byte 85
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -669,7 +693,7 @@ HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 @ BellchimeTrail_Lodge_hoenn
 HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 83
+	.2byte 86
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -677,7 +701,7 @@ HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 @ Route6_BugClub_hoenn
 HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 84
+	.2byte 87
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -685,7 +709,7 @@ HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 @ Route6_EngineersHouse_hoenn
 HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 85
+	.2byte 88
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -693,7 +717,7 @@ HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 @ CeladonCity_FloristsHouse_hoenn
 HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 86
+	.2byte 89
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -701,7 +725,7 @@ HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 @ MelemeleIsle_IslandHome_hoenn
 HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 87
+	.2byte 90
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -709,7 +733,7 @@ HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 @ MelemeleIsle_SurfShop_hoenn
 HoennSeek_EventScript_Hint_MelemeleIsle_SurfShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 88
+	.2byte 91
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -717,7 +741,7 @@ HoennSeek_EventScript_Hint_MelemeleIsle_SurfShop_hoenn_Npc1::
 @ Route45_BeekeeperHouse_hoenn
 HoennSeek_EventScript_Hint_Route45_BeekeeperHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 89
+	.2byte 92
 	goto_if_eq VAR_RESULT, FALSE, Route45_BeekeeperHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -1092,6 +1116,33 @@ HoennSeek_Text_Hint_RumorLugia_SongAfter::
 HoennSeek_Text_Hint_RumorLugia_SongNotes::
 	.string "The SLOWKING in SLOWPOKE WELL\nsings an old prophecy. The three\lbirds' feathers and a SILVER WING,\llaid on a stone past ROUTE 41's\lnight lights, open the WHIRL\lISLANDS' deepest chamber.$"
 
+HoennSeek_Text_Hint_RumorJirachiBefore::
+	.string "They say a POKéMON sleeps for a\nthousand years and wakes for\la wish.\pWish on a falling star in three\nplaces, and it might hear you.$"
+
+HoennSeek_Text_Hint_RumorJirachiAfter::
+	.string "Somebody woke the wishing POKéMON\nat MT. MOON! Was it you?$"
+
+HoennSeek_Text_Hint_RumorJirachiNotes::
+	.string "At night, wish on a falling star\nat METEOR FALLS, at MOSSDEEP's\lSPACE CENTER and at a moonlit\lhollow in JOHTO. Then go to MT.\lMOON on the CLEFAIRY's night.$"
+
+HoennSeek_Text_Hint_RumorDeoxys_SignalBefore::
+	.string "MOSSDEEP's SPACE CENTER is picking\nup a signal from space. Only at\lnight, they say.$"
+
+HoennSeek_Text_Hint_RumorDeoxys_SignalAfter::
+	.string "The SPACE CENTER tracked its space\nsignal to an island south\lof KANTO!$"
+
+HoennSeek_Text_Hint_RumorDeoxys_SignalNotes::
+	.string "The SPACE CENTER's scientist on 2F\nlogs a signal from space at night.\lHe needs three different nights.$"
+
+HoennSeek_Text_Hint_RumorRegi_DoorsBefore::
+	.string "Up at the SINJOH RUINS, boulders\nseal the caves in the cliffs.\lSomething big lives behind them.$"
+
+HoennSeek_Text_Hint_RumorRegi_DoorsAfter::
+	.string "All three boulders at the SINJOH\nRUINS have rolled away!$"
+
+HoennSeek_Text_Hint_RumorRegi_DoorsNotes::
+	.string "The boulders at the SINJOH RUINS\ncarry braille that the RUINS OF\lALPH's final inscription explains:\lRELICANTH and WAILORD.$"
+
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
 
@@ -1331,6 +1382,24 @@ HoennSeek_Text_Hint_LineStoryAmphyNight::
 
 HoennSeek_Text_Hint_LineStoryLugiaSurfaced::
 	.string "You saw it too? Something huge and\nsilver, singing off the ridge on\lROUTE 41!\pIt dove for the WHIRL ISLANDS.\nThey say the islands keep a\lchamber nobody can find until the\lsea lets them.$"
+
+HoennSeek_Text_Hint_LineStoryWishMonday::
+	.string "Three wishes on three falling\nstars? Then the old story says the\lwhite rock at MT. MOON\lwill answer.\pBut only on the night the CLEFAIRY\ndance there. That's Monday night,\lin my day.$"
+
+HoennSeek_Text_Hint_LineStoryWishes::
+	.string "When I was a boy, we wished on\nfalling stars in three places:\lwhere the stars fell, where people\lwatch them, and where the moon\lcomes closest.\pMETEOR FALLS, this very SPACE\nCENTER at night… and the third is\la hollow somewhere in JOHTO that\lonly the bears know.$"
+
+HoennSeek_Text_Hint_LineStorySignal::
+	.string "Our scientist upstairs hasn't\nslept in days. He says a signal\lcomes down from space, but only\lat night.\pHe needs readings from three\ndifferent nights. Maybe keep\lhim company?$"
+
+HoennSeek_Text_Hint_LineStoryRegiBraille::
+	.string "Boulders block the caves the\nplates opened, and someone carved\lbraille into them, older than any\lwe know.\pThe UNOWN scholars at the RUINS OF\nALPH might know a way to read it.$"
+
+HoennSeek_Text_Hint_LineStoryRegiSea::
+	.string "The oldest of the deep and the\ngreatest of the sea… RELICANTH and\lWAILORD, surely. Both live in\lHOENN's seas.\pBring them both to the boulders.\nThe stones were made to\lanswer them.$"
+
+HoennSeek_Text_Hint_LineStoryArceusWaits::
+	.string "ARCEUS is still up in its chamber,\nwatching. It won't come with\lanyone yet.\pThe UNOWN wrote about SINJOH, long\nago. Their words are somewhere\lunder the RUINS OF ALPH.$"
 
 HoennSeek_Text_Hint_Forecast0::
 	.string "Fog is due over ROUTE 19 {STR_VAR_1}.\pOdd… the rain gauges out there\nkeep twitching anyway.$"
