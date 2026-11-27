@@ -12,6 +12,7 @@ void HoennClearAllFlagsAndVars(void);
 void HoennClearEventFlagsAndVars(void);
 void HoennClearDailyFlags(void);
 void HoennClearWeeklyFlags(void);
+void HoennClearNightlyFlags(void);
 #endif
 
 #endif // GUARD_HOENN_FLAGS_H
