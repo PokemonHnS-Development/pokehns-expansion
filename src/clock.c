@@ -35,6 +35,7 @@ void DoTimeBasedEvents(void)
         RtcCalcLocalTime();
         UpdatePerDay(&gLocalTime);
         HoennUpdatePerWeek(gLocalTime.days); // Hoenn & Seek: weekly flags (src/hoenn_time.c)
+        HoennUpdatePerNight(gLocalTime.days, gLocalTime.hours); // Hoenn & Seek: nightly flags
         UpdatePerMinute(&gLocalTime);
     }
 }

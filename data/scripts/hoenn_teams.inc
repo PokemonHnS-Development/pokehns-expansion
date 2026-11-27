@@ -580,9 +580,11 @@ HoennSeek_Text_SummitAfter:
 	.string "MAXIE: Fufufu. Just like the two\n"
 	.string "we once woke.\p"
 	.string "MAXIE: We traced GROUDON and KYOGRE\n"
-	.string "to a tower in KANTO.\p"
+	.string "to the SEAFOAM waters in KANTO.\p"
 	.string "ARCHIE: They're resting there.\n"
 	.string "Maybe someday they'll come home.\p"
+	.string "MAXIE: The old man here keeps the\n"
+	.string "ORBS. Talk to him.\p"
 	.string "MAXIE: Come back whenever you like.\n"
 	.string "We'll be here.$"
 

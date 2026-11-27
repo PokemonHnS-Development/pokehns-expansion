@@ -1092,6 +1092,8 @@ enum __attribute__((packed)) Item
     ITEM_FROST_FEATHER, // Hoenn & Seek 2.0 part 26b: Articuno's feather from Shoal Cave's ice chamber
     ITEM_THUNDER_FEATHER, // Hoenn & Seek 2.0 part 34a (lane B): Zapdos's feather from the Power Plant on Route 10's storm day
     ITEM_FLAME_FEATHER, // Hoenn & Seek 2.0 part 34a (lane B): Moltres's feather from Route 113's ash
+    ITEM_JADE_ORB, // Hoenn & Seek 2.0 part 36 (lane B): set into Sky Pillar's mural; wakes Rayquaza in the Embedded Tower
+    ITEM_ENIGMA_STONE, // Hoenn & Seek 2.0 part 36 (lane B): Southern Island's shards, joined at the Pewter Museum; calls the island's Lati
 #endif
 
     ITEMS_COUNT,

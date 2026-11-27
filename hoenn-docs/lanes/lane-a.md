@@ -15,7 +15,7 @@ Only lane A's builder edits this file (the reviewer may add a line when it merge
 | 27a | merged (Nov 27; review fixes by the reviewer before merging) | PR #86 | built by lane B's builder; flags `HOENN_LANE_A_FLAGS_E` + 0x00–0x0A, call 37: **27b continues from + 0x0B and call 38** |
 | 27r | merged (PR #93, Nov 27) | `v2-27r-cipher-fixes` | review items 34–35 (reading the floor lines from the wall; the word changing at midnight). Goes before 27b; #88 will be synced onto it |
 | 27b | merged (PR #88, Nov 27; the reviewer hid the follower while a ring is out) | `v2-27b-cipher-sites` | E +0x0B–0x15, call 38; touches HnS maps Bell Tower 2F, Mt. Moon Square, Ice Path 1F, Whirl Islands B2F, Mt. Mortar 1F south, Union Cave B1F, Seafoam 1F (all lane A's) |
-| 28 | PR #101 open (Nov 27), waiting for review; synced onto `hoenn` after #92 (31a) | `v2-28-cipher-sanctum` | built on 27b (#88) + 27r (#93); flags `HOENN_LANE_A_FLAGS_E` + 0x16–0x1A (0x1B–0x1F spare), daily + 5, call 42 |
+| 28 | PR #101 open (Nov 27), waiting for review; synced onto `hoenn` after #105 (41r); its mural flag is nightly (41r) | `v2-28-cipher-sanctum` | built on 27b (#88) + 27r (#93); flags `HOENN_LANE_A_FLAGS_E` + 0x16–0x1A (0x1B–0x1F spare), daily + 5, call 42 |
 | 31a | merged (PR #92, Nov 27) | `v2-31a-sneasel-thief` | flags `HOENN_LANE_A_FLAGS_E` + 0x20–0x26, daily + 0x00, call 39 (built while #88 (27b) waits for review; 27b took + 0x0B–0x15 and call 38, 28 gets + 0x16–0x1F, 32 + 0x27–0x2F) |
 | 32 | — | — | lane B's 33 waits for it |
 | 34b | next (Nov 27): 34a is merged; builds on part 32 (#97, now lane B's) | — | flags F + 0x0E–0x1F, vars F + 2 on, call 46 on |

@@ -126,12 +126,51 @@ void HoennClearEventFlagsAndVars(void)
     memset(gSaveBlock3Ptr->hoennEventVars, 0, sizeof(gSaveBlock3Ptr->hoennEventVars));
 }
 
+// Daily flags of night events (41r, Bryan): "knocked out tonight, back
+// tomorrow night". Midnight falls in the middle of a night, so these skip the
+// midnight reset and clear at noon instead (HoennUpdatePerNight, src/hoenn_time.c):
+// a Pokémon you knock out at 11 PM is still gone at 1 AM. Add a part's flag here
+// when its event only happens in the evening or at night.
+static const u16 sNightlyFlags[] = {
+    FLAG_HOENN_DAILY_FEEBAS,          // part 21: evenings and nights
+    FLAG_HOENN_DAILY_CHIMECHO,        // part 22b: nights
+    FLAG_HOENN_DAILY_TRENCH_GUARDIAN, // part 25b: nights
+    FLAG_HOENN_DAILY_ICE_FROSLASS,    // part 26b: nights
+    FLAG_HOENN_DAILY_ICE_SNEASEL,     // part 31a: nights
+    FLAG_HOENN_DAILY_ONIX_GONE,       // part 29: nights
+    FLAG_HOENN_DAILY_ONIX_RUMBLE,     // part 29: once a night
+    FLAG_HOENN_DAILY_SANCTUM_MURAL,   // part 28: once a night
+};
+
+static bool32 IsNightlyFlag(u16 flag)
+{
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(sNightlyFlags); i++)
+    {
+        if (sNightlyFlags[i] == flag)
+            return TRUE;
+    }
+    return FALSE;
+}
+
 // Runs with HnS's ClearDailyFlags (once a day, when the RTC day changes).
+// The nightly flags above wait for noon.
 void HoennClearDailyFlags(void)
 {
     u32 i;
     for (i = HOENN_DAILY_FLAGS_START; i <= HOENN_DAILY_FLAGS_END; i++)
-        FlagClear(i);
+    {
+        if (!IsNightlyFlag(i))
+            FlagClear(i);
+    }
+}
+
+// HoennUpdatePerNight (src/hoenn_time.c) calls this when a new night begins.
+void HoennClearNightlyFlags(void)
+{
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(sNightlyFlags); i++)
+        FlagClear(sNightlyFlags[i]);
 }
 
 // Weekly flags: HOENN_WEEKLY_FLAGS_START-END. Part 2 clears them at the start
