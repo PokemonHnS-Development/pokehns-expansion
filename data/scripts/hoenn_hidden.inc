@@ -2280,3 +2280,172 @@ HoennSeek_Text_CallFlygon:
 	.string "The PROFESSOR told me it had to\n"
 	.string "be you. A mirage tower! I'm so\l"
 	.string "jealous! Bye!$"
+
+@ =============================================================================
+@ Part 25a: Night dive A (Underwater Route 124)
+@ At night a CHINCHOU's light waits in the north-west basin. src/hoenn_lights.c
+@ moves it from stop to stop as you swim close (the route is generated from
+@ data/hoenn/light_paths.json); stray too far and the lights scatter back to the
+@ start. The light leads to the bottom of the south-east basin, slips into a
+@ crack there, and the crack stays open from then on (ON_LOAD redraws it). Going
+@ down needs a CHINCHOU or LANTURN in the party to light the way. The trench
+@ below (Route124_Trench_hoenn) is filled in by part 25b.
+@ =============================================================================
+HoennSeek_EventScript_UW124OnLoad::
+	call_if_set FLAG_HOENN_TRENCH_FOUND, HoennSeek_EventScript_OpenTrenchCrack
+	end
+
+@ The basin's bottom edge (44-45, 39) becomes Underwater Route 134's opening
+@ pieces, with its light shimmer on the floor above (44, 38), the trigger tile.
+HoennSeek_EventScript_OpenTrenchCrack::
+	setmetatile 44, 39, 0x22C, TRUE
+	setmetatile 45, 39, 0x22D, TRUE
+	setmetatile 44, 38, 0x224, FALSE
+	return
+
+HoennSeek_EventScript_UW124OnTransition::
+	setflag FLAG_HOENN_HIDE_DIVE_LIGHT
+	goto_if_set FLAG_HOENN_TRENCH_FOUND, HoennSeek_EventScript_ArmTrenchCrack
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_HiddenEnd25a
+	clearflag FLAG_HOENN_HIDE_DIVE_LIGHT
+	end
+
+HoennSeek_EventScript_ArmTrenchCrack:
+	setvar VAR_TEMP_3, 1
+	end
+
+HoennSeek_EventScript_HiddenEnd25a:
+	end
+
+HoennSeek_EventScript_DiveLight::
+	lock
+	playmoncry SPECIES_CHINCHOU, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_DiveLightBlinks, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+@ Started by src/hoenn_lights.c for any light path (VAR_0x8005 = the light).
+HoennSeek_EventScript_LightsScatter::
+	lockall
+	playse SE_M_DETECT
+	msgbox HoennSeek_Text_LightsScatter, MSGBOX_DEFAULT
+	releaseall
+	end
+
+@ The light's last stop is (44, 37), just above the crack.
+HoennSeek_EventScript_DiveLightsEnd::
+	lockall
+	playmoncry SPECIES_CHINCHOU, CRY_MODE_NORMAL
+	applymovement LOCALID_HOENN_DIVE_LIGHT, HoennSeek_Movement_LightIntoCrack
+	waitmovement 0
+	waitmoncry
+	msgbox HoennSeek_Text_LightSlipsDown, MSGBOX_DEFAULT
+	closemessage
+	removeobject LOCALID_HOENN_DIVE_LIGHT
+	setflag FLAG_HOENN_HIDE_DIVE_LIGHT
+	setflag FLAG_HOENN_TRENCH_FOUND
+	call HoennSeek_EventScript_OpenTrenchCrack
+	special DrawWholeMapView
+	playse SE_M_BUBBLE
+	waitse
+	msgbox HoennSeek_Text_CrackGlows, MSGBOX_DEFAULT
+	setvar VAR_TEMP_3, 1
+	releaseall
+	end
+
+HoennSeek_Movement_LightIntoCrack:
+	walk_slow_down
+	step_end
+
+@ Coord trigger on (44, 38) once the crack is open (VAR_TEMP_3 = 1).
+HoennSeek_EventScript_TrenchCrack::
+	lockall
+	checkspecies SPECIES_LANTURN
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_TrenchCrackLit
+	checkspecies SPECIES_CHINCHOU
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_TrenchCrackLit
+	msgbox HoennSeek_Text_CrackTooDark, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	releaseall
+	end
+
+HoennSeek_EventScript_TrenchCrackLit:
+	msgbox HoennSeek_Text_CrackLit, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_TrenchCrackStay
+	closemessage
+	playse SE_M_DIVE
+	setflag FLAG_HOENN_TRENCH_ENTERED
+	warp MAP_ROUTE124_TRENCH_HOENN, 13, 18
+	waitstate
+	releaseall
+	end
+
+HoennSeek_EventScript_TrenchCrackStay:
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	releaseall
+	end
+
+@ Coord trigger on the trench's way out (13, 19).
+HoennSeek_EventScript_TrenchExit::
+	lockall
+	playse SE_M_DIVE
+	warp MAP_UNDERWATER_ROUTE124, 44, 37
+	waitstate
+	releaseall
+	end
+
+@ ---- Call -------------------------------------------------------------------
+HoennSeek_EventScript_CallTrench::
+	setflag FLAG_HOENN_CALL_TRENCH
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallTrench
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Texts -----------------------------------------------------------------
+HoennSeek_Text_DiveLightBlinks:
+	.string "The CHINCHOU's lights blink on and\n"
+	.string "off, on and off…\p"
+	.string "It seems to want you to follow it.$"
+
+HoennSeek_Text_LightsScatter:
+	.string "The light you were following\n"
+	.string "flickered out…\p"
+	.string "Far back the way you came, a faint\n"
+	.string "glow lights up again.$"
+
+HoennSeek_Text_LightSlipsDown:
+	.string "The CHINCHOU slipped down into a\n"
+	.string "crack in the seabed!$"
+
+HoennSeek_Text_CrackGlows:
+	.string "Light glows up out of the crack.\p"
+	.string "There's a deep trench down there!$"
+
+HoennSeek_Text_CrackTooDark:
+	.string "The crack drops away into water\n"
+	.string "as black as ink.\p"
+	.string "A POKéMON that glows might light\n"
+	.string "the way down…$"
+
+HoennSeek_Text_CrackLit:
+	.string "Your glowing POKéMON lights up the\n"
+	.string "crack. It's wide enough to swim\l"
+	.string "down!\p"
+	.string "Dive down into the trench?$"
+
+HoennSeek_Text_CallTrench:
+	.string "Hey, {PLAYER}! It's BRENDAN.\p"
+	.string "A diver from MOSSDEEP dropped by\n"
+	.string "the lab to see PROF. BIRCH.\p"
+	.string "She was night diving off ROUTE 124\n"
+	.string "and saw a trainer follow CHINCHOU\l"
+	.string "lights right down into the seabed!\p"
+	.string "Dad says nobody but you would\n"
+	.string "try that. What's down there?\p"
+	.string "Tell me next time, okay? Later!$"

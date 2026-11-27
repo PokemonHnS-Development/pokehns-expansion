@@ -16325,6 +16325,18 @@
       "layout_version": "emerald"
     },
     {
+      "id": "LAYOUT_ROUTE124_TRENCH_HOENN",
+      "name": "Route124_Trench_hoenn_Layout",
+      "width": 34,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Route124_Trench_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/Route124_Trench_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "emerald"
+    },
+    {
       "id": "LAYOUT_METEOR_FALLS_CLIFFTOP_HOENN",
       "name": "MeteorFalls_Clifftop_hoenn_Layout",
       "width": 18,

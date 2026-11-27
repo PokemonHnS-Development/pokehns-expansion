@@ -382,4 +382,16 @@
 #define HOENN_CHIME_DESERT    1
 #define HOENN_CHIME_ON_TOWER  2 // standing where the tower would rise
 
+// ---- Part 25a: Night dive A (src/hoenn_lights.c, data/scripts/hoenn_hidden.inc) ----
+// Underwater Route 124, nights: a Chinchou's light waits in the north-west
+// basin. Swim close and it drifts on to the next spot; stray too far and the
+// lights scatter back to the start (follow-the-lights, data/hoenn/light_paths.json).
+// It leads to the bottom of the south-east basin and slips into a crack, which
+// stays open from then on. Going down needs a Chinchou or Lanturn in the party
+// to light the way. The trench below is part 25b's.
+#define FLAG_HOENN_HIDE_DIVE_LIGHT      (HOENN_FLAGS_E_HOENN + 0x40) // decided on every arrival
+#define FLAG_HOENN_TRENCH_FOUND         (HOENN_FLAGS_E_HOENN + 0x41) // the lights led you to the crack
+#define FLAG_HOENN_TRENCH_ENTERED       (HOENN_FLAGS_E_HOENN + 0x42) // swam down into the trench once
+#define FLAG_HOENN_CALL_TRENCH          (HOENN_FLAGS_E_HOENN + 0x43) // Brendan
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

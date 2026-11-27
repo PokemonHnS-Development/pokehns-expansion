@@ -372,3 +372,12 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Catch the Flygon with an ordinary ball (the emulator used a Master Ball); check it holds SOFT SAND and knows BOOMBURST in the summary.
 - After catching it, take a fossil: the collapse scene, the fall onto Route 111, and the tower never coming back.
 - The Route 113 Vibrava is easy to reach while it wanders (it moves within 2 tiles of (40,6)).
+
+## 2.0 part 25a (Night dive A)
+- Follow the Chinchou light on Underwater Route 124 at night the way a player would (dive from Route 124's deep water, find the light, keep up with it). Is it easy to see where it went after each drift? Is 11 tiles a fair "lost" distance?
+- Wild battles in the seaweed along the way: after one, the light should be at its next stop.
+- Stand in the light's path while it drifts (it passes through you for one tile).
+- Surface (B) halfway: on the next dive the light is back at the start.
+- The crack with a Chinchou, with a Lanturn, and with neither; the trench at night and by day.
+- Brendan's call after the first trip down (it rings once you're back on the surface).
+
