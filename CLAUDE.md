@@ -127,7 +127,7 @@ Lane B sizes (27a, then 31b on):
 | 34a (the three birds: 2 feathers, roost scenes, Moltres flyover, Bill, May's call; on top of 31b; re-measured by the reviewer after merging `hoenn` at #88: +6,368 B release, +6,576 B debug) | 32,728,772 / 806 KB | 32,887,908 / 650 KB |
 | 29 (shifting tunnels: Onix bore, Dunsparce burrow, Tangela vines, 2 maps, Brendan's call; re-measured by the reviewer after merging `hoenn` at #91 and the night-weekday fix: +7,776 B release, +7,232 B debug) | 32,736,548 / 798 KB | 32,895,140 / 643 KB |
 | 30a (Kangaskhan baby: Beach follower with its own sprite, Brush nook, Lucky Egg, May's call; on top of 29; re-measured by the reviewer after merging 29's reviewed branch (`hoenn` at #91): +2,688 B release, +2,640 B debug) | 32,739,236 / 796 KB | 32,897,780 / 641 KB |
-| 30b (Tauros stampede: highland map, herd task, Paldean lead bull, Brendan's call; on top of 30a; re-measured by the reviewer after merging 30a's reviewed branch (`hoenn` at #91), then after the review change (the lead bull is a Safari encounter): +4,912 B release, +4,656 B debug) | 32,744,148 / 791 KB | 32,902,436 / 636 KB |
+| 30b (Tauros stampede: highland map, herd task, Paldean lead bull, Brendan's call; on top of 30a; re-measured by the reviewer after the review change (the lead bull is a Safari encounter) and merging `hoenn` at #92 (31a): +4,832 B release, +4,624 B debug) | 32,745,892 / 789 KB | 32,904,228 / 634 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
