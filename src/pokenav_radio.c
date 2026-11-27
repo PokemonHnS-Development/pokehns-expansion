@@ -1,4 +1,5 @@
 #include "global.h"
+#include "hoenn.h"
 #if IS_HNS
 #include "event_data.h"
 #include "pokenav.h"
@@ -895,6 +896,9 @@ static void GenerateStationContent(struct Pokenav_Radio *radio, u8 station)
         break;
 
     case RADIO_STATION_UNOWN:
+        n += HoennRadioUnownBroadcast(&radio->lines[n], radio->lineBuffers[0]); // Hoenn & Seek 2.0 part 28: the cipher's signal
+        break;
+
     case RADIO_STATION_POKE_FLUTE:
     case RADIO_STATION_EVOLUTION:
         break;

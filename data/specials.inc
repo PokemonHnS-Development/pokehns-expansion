@@ -764,6 +764,7 @@ gSpecials::
 	def_special HoennCipherFragmentCount
 	def_special HoennAmpharosAshorePlace
 	def_special HoennLugiaCameoPrepare
+	def_special HoennSanctumLetter
 	@ (end of lane A's specials)
 
 	@ Hoenn & Seek 2.0, builder lane B (parts 31b+): lane B's specials go here

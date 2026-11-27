@@ -54,6 +54,7 @@ u16 HoennHiddenDueCall(void);
 u16 HoennLaneADueCall(void); // src/hoenn_lane_a.c (lane setup, Nov 27)
 u32 HoennObjectPaletteSpecies(u32 species); // src/hoenn_lane_a.c (part 27b)
 bool32 HoennLaneAOnStep(void); // src/hoenn_lane_a.c (part 32: the Ampharos ride)
+u32 HoennRadioUnownBroadcast(const u8 **lines, u8 *line); // src/hoenn_lane_a.c (part 28): the Ruins' Unown station
 u16 HoennLaneBDueCall(void); // src/hoenn_lane_b.c
 // The Kangaskhan baby as your follower (src/hoenn_lane_b.c, 2.0 part 30a)
 bool32 HoennIsKangaBabyGfx(u32 species);
