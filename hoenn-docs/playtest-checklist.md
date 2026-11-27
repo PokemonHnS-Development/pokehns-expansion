@@ -407,6 +407,14 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - May's call about the feather (rings within a few steps in a cave or outdoors).
 - The Shell Bell man's new lines and the Pacifidlog old man's rumor.
 
+---
+
+## Lane A parts (27b on: Cipher, Johto, the sea)
+Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its `## 2.0 part NN` sections directly above "Lane B parts"; lane B adds its own at the end of the file, so the two never edit the same lines.
+
+## Lane B parts (27a, 31b on: Kanto, Safari, legends)
+Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
+
 ## 2.0 part 27a (Unown Cipher A)
 - With all four Ruins panels solved, visit Hoenn, then come back: Brendan's call about the lab, and the lab researcher's request (she's the woman at the back of the lab).
 - Words Room 1 (the one with six lines): does the new line under the north wall read as braille dots over Unown letters? Read it from the row below (face up).
