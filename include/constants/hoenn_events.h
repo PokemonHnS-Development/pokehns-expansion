@@ -688,4 +688,45 @@
 #define HOENN_BULL_AQUA   2
 #define HOENN_BULL_COUNT  3
 #define HOENN_BULL_NONE   HOENN_BULL_COUNT // every breed caught
+
+// ---- Part 36: Hoenn's weather legendaries (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Kyogre and Groudon: once Maxie and Archie's double is won, the old man at Mt.
+// Pyre's summit gives you the BLUE and RED ORBS. Carrying one, the Seafoam
+// waters' special day changes: a downpour on Route 19 (Kyogre wakes in the
+// Route 19 cave) or a drought on Route 20 (Groudon wakes in Seafoam's secret
+// cave). Rayquaza: with both settled, Sky Pillar's mural gives the JADE ORB;
+// Rayquaza waits in the Embedded Tower (Route 47) at noon, unless it rains
+// there. Latias/Latios: three ENIGMA shards on HnS's Southern Island, joined at
+// the Pewter Museum; the ENIGMA STONE calls the Lati that doesn't roam.
+// HnS's own FLAG_HIDE_KYOGRE and friends are real flags, but HnS's Hall of Fame
+// clears them, so the objects take these lane B flags instead.
+#define HOENN_LEGEND_KYOGRE   0 // VAR_0x8009 for HoennLegendState / HoennLegendBattleEnded
+#define HOENN_LEGEND_GROUDON  1
+#define HOENN_LEGEND_RAYQUAZA 2
+#define HOENN_LEGEND_LATI     3
+#define HOENN_LEGEND_COUNT    4
+#define FLAG_HOENN_GOT_ORBS             (HOENN_LANE_B_FLAGS_F + 0x10) // the old man gave both ORBS
+#define FLAG_HOENN_HIDE_KYOGRE          (HOENN_LANE_B_FLAGS_F + 0x11) // object flags, + HOENN_LEGEND_*, decided on every arrival
+#define FLAG_HOENN_HIDE_GROUDON         (HOENN_LANE_B_FLAGS_F + 0x12)
+#define FLAG_HOENN_HIDE_RAYQUAZA        (HOENN_LANE_B_FLAGS_F + 0x13)
+#define FLAG_HOENN_HIDE_LATIAS          (HOENN_LANE_B_FLAGS_F + 0x14) // the island's Lati: Latias...
+#define FLAG_HOENN_HIDE_LATIOS          (HOENN_LANE_B_FLAGS_F + 0x15) // ...or Latios (whichever doesn't roam)
+#define FLAG_HOENN_CAUGHT_KYOGRE        (HOENN_LANE_B_FLAGS_F + 0x16) // + HOENN_LEGEND_*
+#define FLAG_HOENN_CAUGHT_GROUDON       (HOENN_LANE_B_FLAGS_F + 0x17)
+#define FLAG_HOENN_CAUGHT_RAYQUAZA      (HOENN_LANE_B_FLAGS_F + 0x18)
+#define FLAG_HOENN_CAUGHT_LATI          (HOENN_LANE_B_FLAGS_F + 0x19)
+#define FLAG_HOENN_GOT_JADE_ORB         (HOENN_LANE_B_FLAGS_F + 0x1A)
+#define FLAG_HOENN_ENIGMA_SHARD_1       (HOENN_LANE_B_FLAGS_F + 0x1B) // the shard by the landing
+#define FLAG_HOENN_ENIGMA_SHARD_2       (HOENN_LANE_B_FLAGS_F + 0x1C) // the shard on the east terrace
+#define FLAG_HOENN_ENIGMA_SHARD_3       (HOENN_LANE_B_FLAGS_F + 0x1D) // the shard by the grove's pond
+#define FLAG_HOENN_GOT_ENIGMA_STONE     (HOENN_LANE_B_FLAGS_F + 0x1E)
+#define FLAG_HOENN_TITANS_MET           (HOENN_LANE_B_FLAGS_F + 0x1F) // battled Kyogre or Groudon once (rumor)
+#define FLAG_HOENN_CALL_TITANS          (HOENN_LANE_B_FLAGS_F + 0x20) // Brendan: Maxie's instruments
+#define FLAG_HOENN_CALL_RAYQUAZA        (HOENN_LANE_B_FLAGS_F + 0x21) // May: the Weather Institute's report
+#define FLAG_HOENN_DAILY_KYOGRE_GONE    (HOENN_LANE_B_DAILY + 0x09)   // knocked out today, + HOENN_LEGEND_*
+#define FLAG_HOENN_DAILY_GROUDON_GONE   (HOENN_LANE_B_DAILY + 0x0A)
+#define FLAG_HOENN_DAILY_RAYQUAZA_GONE  (HOENN_LANE_B_DAILY + 0x0B)
+#define FLAG_HOENN_DAILY_LATI_GONE      (HOENN_LANE_B_DAILY + 0x0C)
+#define HOENN_ENIGMA_SHARDS 3
+#define HOENN_RAYQUAZA_HOUR 12 // noon
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

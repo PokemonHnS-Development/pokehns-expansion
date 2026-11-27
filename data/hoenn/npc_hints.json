@@ -138,6 +138,8 @@
     "RUMOR_TANGELA_VINES": {"kind": "rumor", "rumor": "TANGELA_VINES"},
     "RUMOR_KANGA_BABY": {"kind": "rumor", "rumor": "KANGA_BABY"},
     "RUMOR_TAUROS_STAMPEDE": {"kind": "rumor", "rumor": "TAUROS_STAMPEDE"},
+    "RUMOR_SEAFOAM_TITANS": {"kind": "rumor", "rumor": "SEAFOAM_TITANS"},
+    "RUMOR_ENIGMA_SHARDS": {"kind": "rumor", "rumor": "ENIGMA_SHARDS"},
     "RUMOR_ICE_FROSLASS": {"kind": "rumor", "rumor": "ICE_FROSLASS", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}]},
     "STORY_CIPHER_WALL":  {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ASKED"}, {"not_flag": "FLAG_HOENN_CIPHER_ROSETTA"}], "text": ["Did you feel that tremor? A new line of writing turned up inside the RUINS.", "It's got dots on it like nothing from JOHTO. We need someone who's been to HOENN!"]},
     "STORY_CIPHER_NIGHT": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ROSETTA"}, {"not_flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}], "text": ["AT NIGHT WE SPEAK… I've been sleeping here at the lab ever since you read it.", "If the WORDS chambers really light up at night, is it the same word every night? Tell my colleague what you see!"]},
@@ -347,6 +349,18 @@
       "before": ["Hear that rumbling? MONDAY mornings, a TAUROS herd stampedes across the highland above the MOUNTAIN.", "Each bull keeps to its own lane. The wardens say the herd's leader is no KANTO TAUROS at all!"],
       "after": "Somebody caught the TAUROS herd's lead bull! Funny thing is, there's a new one leading them every few weeks.",
       "notes": "MONDAY mornings, a TAUROS herd charges across the highland above the SAFARI ZONE's MOUNTAIN, up its east canyon. Its lead bull waits beyond the herd."
+    },
+    "SEAFOAM_TITANS": {
+      "found": [{"flag": "FLAG_HOENN_TITANS_MET"}],
+      "before": ["Some days the fog over these waters is so thick, I can't see my own float.", "Grandpa said the right ORB would turn that fog into a storm, and wake whatever sleeps under the SEAFOAM ISLANDS."],
+      "after": "Did you see that downpour on ROUTE 19? Rain like that only falls when something enormous wakes up.",
+      "notes": "On the days fog covers ROUTES 19 and 20, KANTO's sea caves stir for anyone carrying an ORB. The old man at MT. PYRE's summit keeps them."
+    },
+    "ENIGMA_SHARDS": {
+      "found": [{"flag": "FLAG_HOENN_GOT_ENIGMA_STONE"}],
+      "before": ["While I wait by the boat, I see red and blue sparkles in the grass. Warm, like little embers.", "The PEWTER MUSEUM knows its stones. They'd know what those are."],
+      "after": "The grove feels different since you brought that stone back. Like someone in there is listening.",
+      "notes": "Shards of a red and blue stone lie hidden on the SOUTHERN ISLAND. The PEWTER MUSEUM's stone expert can piece them together."
     }
   },
 
@@ -417,10 +431,14 @@
     {"map": "PalletTown_hns",                    "script": "PalletTown_EventScript_Fatman", "key": "PalletFatman", "lines": ["RUMOR_TANGELA_VINES"]},
     {"map": "FuchsiaCity_SafariZoneBrush_hns",   "script": "SafariZoneFuchsia_EventScript_Attendant1", "key": "SafariBrushWarden", "lines": ["RUMOR_KANGA_BABY"]},
     {"map": "BlackthornCity_hns",                "script": "BlackthornCity_EventScript_CoolTrainerF2", "key": "BlackthornSkater", "lines": ["STORY_ICE_THIEF", "STORY_ICE_THIEF_NOOK"]},
-    {"map": "FuchsiaCity_SafariZoneEntrance_hns", "script": "Route121_SafariZoneEntrance_EventScript_InfoAttendant", "key": "SafariGateAttendant", "lines": ["RUMOR_TAUROS_STAMPEDE"]}
+    {"map": "FuchsiaCity_SafariZoneEntrance_hns", "script": "Route121_SafariZoneEntrance_EventScript_InfoAttendant", "key": "SafariGateAttendant", "lines": ["RUMOR_TAUROS_STAMPEDE"]},
+    {"map": "Route19_hns", "script": "Route19_EventScript_Fatman", "key": "Route19Fisher", "lines": ["RUMOR_SEAFOAM_TITANS"]},
+    {"map": "SouthernIsland_Exterior_hns", "script": "SouthernIsland_Exterior_hns_EventScript_Sailor", "key": "SouthernIslandSailor", "lines": ["RUMOR_ENIGMA_SHARDS"]}
   ],
 
   "forecasts": [
+    {"map": "Route19_hns", "if": [{"flag": "FLAG_HOENN_GOT_ORBS"}, {"not_flag": "FLAG_HOENN_CAUGHT_KYOGRE"}], "text": ["Fog is due over ROUTE 19 {STR_VAR_1}.", "Odd… the rain gauges out there keep twitching anyway."]},
+    {"map": "Route20_hns", "if": [{"flag": "FLAG_HOENN_GOT_ORBS"}, {"not_flag": "FLAG_HOENN_CAUGHT_GROUDON"}], "text": ["Fog is due over ROUTE 20 {STR_VAR_1}.", "Strange… the SEAFOAM thermometers keep climbing."]},
     {"map": "Route10_hns", "if": [{"not_flag": "FLAG_HOENN_GOT_THUNDER_FEATHER"}], "text": ["Thunderstorms are coming to ROUTE 10's POWER PLANT {STR_VAR_1}.", "The plant's manager says that's when his generator acts up!"]},
     {"map": "Route120", "if": [{"not_flag": "FLAG_HOENN_ABSOL_CAUGHT"}], "text": ["Storms are rolling in around ROUTE 120 {STR_VAR_1}.", "Folks say that's when the white one walks."]},
     {"map": "Route120", "if": [{"not_caught": "CASTFORM"}], "text": ["Our instruments say ROUTE 120 gets a thunderstorm {STR_VAR_1}.", "CASTFORM come out in weather like that!"]},

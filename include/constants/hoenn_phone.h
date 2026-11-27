@@ -61,5 +61,7 @@
 #define HOENN_CALL_TUNNELS      72 // Brendan: you caught Rock Tunnel's crystal Onix (part 29)
 #define HOENN_CALL_KANGASKHAN   73 // May: you brought the Safari's lost Kangaskhan baby home (part 30a)
 #define HOENN_CALL_STAMPEDE     74 // Brendan: you caught the Safari stampede's lead bull (part 30b)
+#define HOENN_CALL_TITANS       75 // Brendan: you caught Kyogre or Groudon (part 36)
+#define HOENN_CALL_RAYQUAZA     76 // May: you caught Rayquaza (part 36)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H
