@@ -20,7 +20,9 @@ def main():
     kept = json.load(open(P("data/hoenn/maps.json")))["items"]
     rules = cfg["rules"]
     out = []
-    for name in sorted(kept):
+    # Hoenn & Seek's own maps (*_hoenn) aren't in maps.json; they're listed by exact name (2.0 part 26a).
+    own = sorted(n for n in rules if n.endswith("_hoenn"))
+    for name in sorted(kept) + own:
         if name in rules:
             env = rules[name]
         else:

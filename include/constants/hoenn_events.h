@@ -417,4 +417,21 @@
 #define FLAG_HOENN_WEEKLY_PEARL_2       (HOENN_WEEKLY_FLAGS_START + 0x07) // Big Pearl
 #define FLAG_HOENN_WEEKLY_PEARL_3       (HOENN_WEEKLY_FLAGS_START + 0x08) // Pearl String
 
+
+// ---- Part 26a: Ice chamber A (data/scripts/hoenn_hidden.inc) ----
+// Shoal Cave's ice room, low tide: a ladder hole in the ice (16,21) leads down
+// into ShoalCave_IceChamber_hoenn. At high tide sea ice plugs the hole (the
+// tide is Emerald's FLAG_SYS_SHOAL_TIDE, set when you walk in from Route 125).
+// The chamber's hall is a sliding-ice puzzle; through the one gap in its ice
+// wall (10,13) lies the inner chamber, where a GLALIE waits by day (any time
+// but night): scaled, perfect IVs, Head Smash. Run and it stays; knock it out
+// and it's back tomorrow; caught, it's gone for good. Part 26b brings the
+// night (Froslass) and Articuno's feather.
+#define FLAG_HOENN_ICE_CHAMBER_FOUND    (HOENN_FLAGS_E_HOENN + 0x4F) // climbed down into the chamber once
+#define FLAG_HOENN_HIDE_ICE_GLALIE      (HOENN_FLAGS_E_HOENN + 0x50) // decided on every arrival
+#define FLAG_HOENN_CAUGHT_ICE_GLALIE    (HOENN_FLAGS_E_HOENN + 0x51)
+#define FLAG_HOENN_ICE_GLALIE_MET       (HOENN_FLAGS_E_HOENN + 0x52) // battled once (call)
+#define FLAG_HOENN_CALL_ICE_GLALIE      (HOENN_FLAGS_E_HOENN + 0x53) // Brendan
+#define FLAG_HOENN_DAILY_ICE_GLALIE     (HOENN_DAILY_FLAGS_START + 0x11) // knocked out (or caught) today
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

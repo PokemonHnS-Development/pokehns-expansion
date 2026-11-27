@@ -386,3 +386,12 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Knock one out, then come back the next day it's due.
 - Watch the door open on the third catch (the camera shake) and walk in and out of the hollow a few times.
 - The Clamperl pearls across a real week change (Sunday).
+
+## 2.0 part 26a (Ice chamber A)
+- **Shoal Cave's tides now really change** (they were stuck at low tide since 1.0): walk in at high tide (9 AM–3 PM, 9 PM–3 AM) and at low tide and check the water in the entrance and inner rooms, and that the ice room is still reachable the way Emerald intends.
+- The Shoal Salt and Shells come back the day after you take them (talk to the Shell Bell man to reset them, as in Emerald). Never worked in 1.0 either.
+- Solve the sliding-ice puzzle yourself, without the solution: too easy, too hard, or about right? It can't trap you (every slide can still get back to the ladder), but say if any spot feels like one.
+- The ladder hole at low tide and the sea-ice plug at high tide (read the plug).
+- Catch the Glalie with an ordinary ball (the emulator used a Master Ball); check Head Smash and the 31s in the summary.
+- The bicycle on the chamber's ice (the map allows cycling, like Emerald's ice room).
+- Brendan's call after meeting the Glalie (rings within a few steps in a cave or outdoors).

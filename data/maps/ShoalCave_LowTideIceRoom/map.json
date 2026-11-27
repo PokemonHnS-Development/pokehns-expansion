@@ -75,8 +75,24 @@
       "elevation": 3,
       "dest_map": "MAP_SHOAL_CAVE_LOW_TIDE_LOWER_ROOM",
       "dest_warp_id": "3"
+    },
+    {
+      "x": 16,
+      "y": 21,
+      "elevation": 3,
+      "dest_map": "MAP_SHOAL_CAVE_ICE_CHAMBER_HOENN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 21,
+      "elevation": 3,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "HoennSeek_EventScript_IceRoomHole"
+    }
+  ]
 }

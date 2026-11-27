@@ -426,130 +426,146 @@ HoennSeek_EventScript_HintNpc52::
 	callstd MSGBOX_NPC
 	end
 
-@ Route34_FishingShack_hoenn
+@ ShoalCave_LowTideEntranceRoom
 HoennSeek_EventScript_HintNpc53::
 	callnative HoennSeek_NpcHint
 	.2byte 53
+	goto_if_eq VAR_RESULT, FALSE, ShoalCave_LowTideEntranceRoom_EventScript_ShellBellExpert
+	callstd MSGBOX_NPC
+	end
+
+@ PacifidlogTown_PokemonCenter_1F
+HoennSeek_EventScript_HintNpc54::
+	callnative HoennSeek_NpcHint
+	.2byte 54
+	goto_if_eq VAR_RESULT, FALSE, PacifidlogTown_PokemonCenter_1F_EventScript_OldMan
+	callstd MSGBOX_NPC
+	end
+
+@ Route34_FishingShack_hoenn
+HoennSeek_EventScript_HintNpc55::
+	callnative HoennSeek_NpcHint
+	.2byte 55
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_HarborOffice_hoenn
-HoennSeek_EventScript_HintNpc54::
+HoennSeek_EventScript_HintNpc56::
 	callnative HoennSeek_NpcHint
-	.2byte 54
+	.2byte 56
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_SailorsHouse_hoenn
-HoennSeek_EventScript_HintNpc55::
+HoennSeek_EventScript_HintNpc57::
 	callnative HoennSeek_NpcHint
-	.2byte 55
+	.2byte 57
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_CaptainsHouse_hoenn
-HoennSeek_EventScript_HintNpc56::
+HoennSeek_EventScript_HintNpc58::
 	callnative HoennSeek_NpcHint
-	.2byte 56
+	.2byte 58
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_TackleShop_hoenn
-HoennSeek_EventScript_HintNpc57::
+HoennSeek_EventScript_HintNpc59::
 	callnative HoennSeek_NpcHint
-	.2byte 57
+	.2byte 59
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_Shipwright_hoenn
-HoennSeek_EventScript_HintNpc58::
+HoennSeek_EventScript_HintNpc60::
 	callnative HoennSeek_NpcHint
-	.2byte 58
+	.2byte 60
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ OlivineCity_KeepersHouse_hoenn
-HoennSeek_EventScript_HintNpc59::
+HoennSeek_EventScript_HintNpc61::
 	callnative HoennSeek_NpcHint
-	.2byte 59
+	.2byte 61
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ EcruteakCity_DanceTeacher_hoenn
-HoennSeek_EventScript_HintNpc60::
+HoennSeek_EventScript_HintNpc62::
 	callnative HoennSeek_NpcHint
-	.2byte 60
+	.2byte 62
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ Route34_BreedersHouse_hoenn
-HoennSeek_EventScript_HintNpc61::
+HoennSeek_EventScript_HintNpc63::
 	callnative HoennSeek_NpcHint
-	.2byte 61
+	.2byte 63
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route38_MoomooStoreroom_hoenn
-HoennSeek_EventScript_HintNpc62::
+HoennSeek_EventScript_HintNpc64::
 	callnative HoennSeek_NpcHint
-	.2byte 62
+	.2byte 64
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ BellchimeTrail_Lodge_hoenn
-HoennSeek_EventScript_HintNpc63::
+HoennSeek_EventScript_HintNpc65::
 	callnative HoennSeek_NpcHint
-	.2byte 63
+	.2byte 65
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_BugClub_hoenn
-HoennSeek_EventScript_HintNpc64::
+HoennSeek_EventScript_HintNpc66::
 	callnative HoennSeek_NpcHint
-	.2byte 64
+	.2byte 66
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ Route6_EngineersHouse_hoenn
-HoennSeek_EventScript_HintNpc65::
+HoennSeek_EventScript_HintNpc67::
 	callnative HoennSeek_NpcHint
-	.2byte 65
+	.2byte 67
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
 
 @ CeladonCity_FloristsHouse_hoenn
-HoennSeek_EventScript_HintNpc66::
+HoennSeek_EventScript_HintNpc68::
 	callnative HoennSeek_NpcHint
-	.2byte 66
+	.2byte 68
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_IslandHome_hoenn
-HoennSeek_EventScript_HintNpc67::
+HoennSeek_EventScript_HintNpc69::
 	callnative HoennSeek_NpcHint
-	.2byte 67
+	.2byte 69
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
 @ MelemeleIsle_SurfShop_hoenn
-HoennSeek_EventScript_HintNpc68::
+HoennSeek_EventScript_HintNpc70::
 	callnative HoennSeek_NpcHint
-	.2byte 68
+	.2byte 70
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -798,6 +814,15 @@ HoennSeek_Text_Hint_RumorTrench_GuardiansAfter::
 HoennSeek_Text_Hint_RumorTrench_GuardiansNotes::
 	.string "The ROUTE 124 trench's guardian\nchanges with the weekday. Catch\lall three and the mound in the\ltrench opens.$"
 
+HoennSeek_Text_Hint_RumorIce_ChamberBefore::
+	.string "They say a hole opens in the ice\ndeep inside SHOAL CAVE, but only\lwhen the tide is out.$"
+
+HoennSeek_Text_Hint_RumorIce_ChamberAfter::
+	.string "Somebody climbed down through the\nice in SHOAL CAVE at low tide and\lfound a frozen chamber!$"
+
+HoennSeek_Text_Hint_RumorIce_ChamberNotes::
+	.string "When the tide is out, the ice room\nat the bottom of SHOAL CAVE has a\lway down. Mind the slippery floor.$"
+
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
 
@@ -983,6 +1008,12 @@ HoennSeek_Text_Hint_LineStoryTrenchGuardians::
 
 HoennSeek_Text_Hint_LineStoryTrenchPearls::
 	.string "The CLAMPERL down in that trench\ngrow pearls. Big ones!\pThey only open up once a week,\nmind you.$"
+
+HoennSeek_Text_Hint_LineStoryIceHole::
+	.string "The deepest room of this cave is\nall ice. When the tide goes out,\lthe seawater under it drains away\land a hole opens in its floor.\pI hear something with a face as\nhard as ice sits down there by\lday. Mind your footing on the way!$"
+
+HoennSeek_Text_Hint_LineStoryIceGlalie::
+	.string "You went down through the ice?\nThen you've seen that GLALIE on\lthe frozen pool.\pIts head is harder than the ice it\nsits in. Bring something that can\ltake a hit!$"
 
 HoennSeek_Text_Hint_Forecast0::
 	.string "Storms are rolling in around ROUTE\n120 {STR_VAR_1}.\pFolks say that's when the white\none walks.$"
