@@ -58,6 +58,7 @@ bool32 HoennIsKangaBabyGfx(u32 species);
 u32 HoennFollowerPaletteSpecies(u32 species);
 bool32 HoennFollowerOverride(u32 *species, bool32 *shiny, bool32 *female);
 const u8 *HoennFollowerScript(void);
+extern const u8 HoennSeek_EventScript_StampedeHit[];
 extern const u8 HoennSeek_EventScript_KangaBabyFollower[];
 bool8 HoennMirageTowerRung(void); // 2.0 part 24b
 u16 HoennCipherDueCall(void);      // 2.0 part 27a (src/hoenn_cipher.c)

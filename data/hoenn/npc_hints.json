@@ -137,6 +137,7 @@
     "RUMOR_DUNSPARCE_BURROW": {"kind": "rumor", "rumor": "DUNSPARCE_BURROW"},
     "RUMOR_TANGELA_VINES": {"kind": "rumor", "rumor": "TANGELA_VINES"},
     "RUMOR_KANGA_BABY": {"kind": "rumor", "rumor": "KANGA_BABY"},
+    "RUMOR_TAUROS_STAMPEDE": {"kind": "rumor", "rumor": "TAUROS_STAMPEDE"},
     "RUMOR_ICE_FROSLASS": {"kind": "rumor", "rumor": "ICE_FROSLASS", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}]},
     "STORY_CIPHER_WALL":  {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ASKED"}, {"not_flag": "FLAG_HOENN_CIPHER_ROSETTA"}], "text": ["Did you feel that tremor? A new line of writing turned up inside the RUINS.", "It's got dots on it like nothing from JOHTO. We need someone who's been to HOENN!"]},
     "STORY_CIPHER_NIGHT": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ROSETTA"}, {"not_flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}], "text": ["AT NIGHT WE SPEAK… I've been sleeping here at the lab ever since you read it.", "If the WORDS chambers really light up at night, is it the same word every night? Tell my colleague what you see!"]},
@@ -336,6 +337,12 @@
       "before": ["Evenings, we hear crying down on the BEACH. Something small and lost, I'd guess.", "And a KANGASKHAN mother keeps pacing where the woods bend in, west of here. Her pouch is empty."],
       "after": "Somebody brought a lost KANGASKHAN baby home to its mother! Now the pair nest in the woods out west.",
       "notes": "Evenings in the FUCHSIA SAFARI ZONE, a KANGASKHAN baby cries on the BEACH. Its mother waits in a nook of the BRUSH's woods."
+    },
+    "TAUROS_STAMPEDE": {
+      "found": [{"flag": "FLAG_HOENN_STAMPEDE_LEADER_CAUGHT"}],
+      "before": ["Hear that rumbling? MONDAY mornings, a TAUROS herd stampedes across the highland above the MOUNTAIN.", "Each bull keeps to its own lane. The wardens say the herd's leader is no KANTO TAUROS at all!"],
+      "after": "Somebody caught the TAUROS herd's lead bull! Funny thing is, there's a new one leading them every few weeks.",
+      "notes": "MONDAY mornings, a TAUROS herd charges across the highland above the SAFARI ZONE's MOUNTAIN, up its east canyon. Its lead bull waits beyond the herd."
     }
   },
 
@@ -404,7 +411,8 @@
     {"map": "LavenderTown_hns",                  "script": "LavenderTown_EventScript_PokefanM", "key": "LavenderPokefan", "lines": ["RUMOR_ONIX_BORE"]},
     {"map": "VioletCity_hns",                    "script": "VioletCity_EventScript_Youngster", "key": "VioletYoungster", "lines": ["RUMOR_DUNSPARCE_BURROW"]},
     {"map": "PalletTown_hns",                    "script": "PalletTown_EventScript_Fatman", "key": "PalletFatman", "lines": ["RUMOR_TANGELA_VINES"]},
-    {"map": "FuchsiaCity_SafariZoneBrush_hns",   "script": "SafariZoneFuchsia_EventScript_Attendant1", "key": "SafariBrushWarden", "lines": ["RUMOR_KANGA_BABY"]}
+    {"map": "FuchsiaCity_SafariZoneBrush_hns",   "script": "SafariZoneFuchsia_EventScript_Attendant1", "key": "SafariBrushWarden", "lines": ["RUMOR_KANGA_BABY"]},
+    {"map": "FuchsiaCity_SafariZoneEntrance_hns", "script": "Route121_SafariZoneEntrance_EventScript_InfoAttendant", "key": "SafariGateAttendant", "lines": ["RUMOR_TAUROS_STAMPEDE"]}
   ],
 
   "forecasts": [

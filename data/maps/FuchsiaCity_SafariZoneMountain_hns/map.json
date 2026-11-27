@@ -14,6 +14,11 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+      "map": "MAP_FUCHSIA_CITY_SAFARI_ZONE_HIGHLAND_HOENN",
+      "offset": 53,
+      "direction": "up"
+    },
+    {
       "map": "MAP_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS",
       "offset": 0,
       "direction": "down"
