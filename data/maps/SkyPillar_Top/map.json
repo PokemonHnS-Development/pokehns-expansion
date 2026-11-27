@@ -65,6 +65,14 @@
   ],
   "bg_events": [
     {
+      "type": "sign",
+      "x": 21,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "HoennSeek_EventScript_SkyPillarMural"
+    },
+    {
       "type": "secret_base",
       "x": 8,
       "y": 14,

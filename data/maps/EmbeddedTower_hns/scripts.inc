@@ -1,4 +1,5 @@
 EmbeddedTower_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_EmbeddedTowerOnTransition @ Hoenn & Seek 2.0 part 36
 	.byte 0
 
 

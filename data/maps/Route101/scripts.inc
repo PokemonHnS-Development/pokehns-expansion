@@ -5,6 +5,7 @@ Route101_MapScripts::
 
 Route101_OnTransition:
 	call ProfBirch_EventScript_UpdateLocation
+	call HoennSeek_EventScript_MewBlurRoute101OnTransition
 	end
 
 Route101_OnFrame:

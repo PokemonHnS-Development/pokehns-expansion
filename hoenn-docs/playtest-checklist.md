@@ -492,3 +492,30 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 - Afterwards: the pair together in the nook, both talk lines; a Safari battle mid-follow (the baby still follows after).
 - May's call after the reunion (outside), the Brush attendant's rumor before and after.
 
+## 2.0 part 30b (the Tauros stampede)
+- Safari Zone at SAFARI LEVEL 3: walk up the MOUNTAIN's east canyon (the two-wide path on its right edge) into the new highland. Does the join look seamless, and does the highland look hand-made?
+- Monday morning: the six charging Tauros. Is crossing the lanes fun and fair (not too easy, not too hard)? Get hit once (the long message), then again (the short one).
+- Reach the lead bull in the north nook: its Safari encounter (Paldean Tauros, Lv near your progress level; bait, rocks, Safari Balls, none of your Pokémon). Run once (it stays), let it flee once on a later Monday (gone for the week), then catch it; try a catch with your last Safari Ball (the Safari ends after the catch). The herd stops to graze afterwards; talk to one.
+- Next Monday: a different breed leads. Knock one out instead of catching it: it should be back the Monday after.
+- Any other day, or Monday afternoon: the highland is empty.
+- Brendan's call after the first catch (outside), and the Safari entrance attendant's rumor before and after.
+- Open the start menu or bag mid-stampede: the herd should pause and pick up where it was.
+
+## 2.0 part 36 (Hoenn's weather legendaries)
+- After Maxie and Archie's double, talk to Mt. Pyre's old man: the BLUE and RED ORBS. Sell or give away one before catching its titan, then talk to him again: he gives another.
+- Wait for the Seafoam waters' fog day (the TV forecast should mention it the day before): Route 19 has a downpour, Route 20 a drought. Do the battles there get rain and sun? Does the drought look right on HnS's palettes?
+- Kyogre in the Route 19 cave and Groudon behind Blaine in Seafoam: only on that day. Knock one out: is it back on the next fog day? Running keeps it there.
+- With both caught: Sky Pillar's top, the wall right of the door (21,14): the mural and the JADE ORB. Does the old man point there?
+- Embedded Tower at noon: Rayquaza. Not at 11 or 13, and not on Route 47's rain day.
+- Southern Island (STEVEN's EON TICKET): the sign's note, the three shards, the Pewter Museum expert (with 1–2 shards, then all 3), and the Lati in the grove. Is the Lati the one that isn't roaming Kanto? The sailor's rumor before and after.
+- Brendan's call after the first titan, May's after Rayquaza (both outside). Did any HnS event (Hall of Fame, the S.S. Aqua) bring the old legendaries back where they shouldn't be?
+
+## 2.0 part 35a (Mewtwo and Mew)
+- Journal pages: Cinnabar's lab rubble (north of the mansion spot), Silph Co.'s lobby painting, the Game Corner plant by the door, Rocket hideout B3F, Goldenrod's warehouse. Does each count up and say what's left? Are the spots findable without the hints?
+- MR. FUJI with 0, 2 and 5 pages: HnS's own text, the hints for missing pages, then the last page.
+- The Cinnabar cameo after the fourth page, both from picking it up and arriving on the island. Also arrive by **Surf** and by **Fly**: does the pan start and end on your tile?
+- Cerulean Cave B2F: no Mewtwo before page 6. Knock it out: back the next day? Run: still there? Catch: Brendan's call (outside).
+- Mew at dawn (4–8 AM) on Routes 1, 22 and 101: does the blur dash look right, including over Route 1's ledges? Not there at 8 AM or later.
+- Three scraps → the OLD SEA MAP → the Vermilion sailor → Faraway Island. Faraway's Mew chase itself wasn't retested. May's call.
+- HnS's Hall of Fame clears `FLAG_CAUGHT_MEW` (so Faraway's Mew can come back): after a Hall of Fame with Mew caught, the blurs can show again at dawn, but only where you haven't already found the scrap. Is that fine?
+- Vermilion's old item ball at (61,46): a BIG PEARL now.

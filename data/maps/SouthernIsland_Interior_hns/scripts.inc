@@ -1,5 +1,5 @@
 SouthernIsland_Interior_hns_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, SouthernIsland_Interior_hns_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_SouthernIslandOnTransition @ Hoenn & Seek 2.0 part 36 (was SouthernIsland_Interior_hns_OnTransition)
 	.byte 0
 
 SouthernIsland_Interior_hns_OnTransition::

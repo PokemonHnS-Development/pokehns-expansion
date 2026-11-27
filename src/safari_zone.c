@@ -13,6 +13,7 @@
 #include "constants/game_stat.h"
 #include "constants/items.h"
 #include "field_screen_effect.h"
+#include "hoenn.h"
 
 struct PokeblockFeeder
 {
@@ -136,6 +137,10 @@ void CB2_EndSafariBattle(void)
     sSafariZonePkblkUses += gBattleResults.pokeblockThrows;
     if (gBattleOutcome == B_OUTCOME_CAUGHT)
         sSafariZoneCaughtMons++;
+#if IS_HNS
+    if (HoennSafariScriptedBattleEnd()) // Hoenn & Seek 2.0 part 30b: the lead bull's script carries on
+        return;
+#endif
     if (gNumSafariBalls != 0)
     {
         SetMainCallback2(CB2_ReturnToField);

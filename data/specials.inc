@@ -777,3 +777,19 @@ gSpecials::
 	def_special HoennDrawBurrowRubble
 	def_special HoennBurrowPrepare
 	def_special HoennBurrowDig
+	def_special HoennStampedeReset
+	def_special HoennStartStampede
+	def_special HoennStampedeBreed
+	def_special HoennTuneLeadBull
+	def_special HoennLeadBullBattleEnded
+	def_special HoennStartScriptedSafariBattle
+	def_special HoennSafariBallsLeft
+	def_special HoennLegendState
+	def_special HoennLegendBattleEnded
+	def_special HoennEnigmaShardCount
+	def_special HoennJournalPageCount
+	def_special HoennMewtwoCameoDue
+	def_special HoennMewtwoState
+	def_special HoennMewtwoBattleEnded
+	def_special HoennSeaMapPieceCount
+	def_special HoennMewBlurState

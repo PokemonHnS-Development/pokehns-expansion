@@ -16373,6 +16373,18 @@
       "layout_version": "hns"
     },
     {
+      "id": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_HIGHLAND_HOENN",
+      "name": "FuchsiaCity_SafariZoneHighland_hoenn_Layout",
+      "width": 26,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NationalPark_Hns",
+      "border_filepath": "data/layouts/FuchsiaCity_SafariZoneHighland_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaCity_SafariZoneHighland_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
       "id": "LAYOUT_ROCK_TUNNEL_ONIX_BORE_HOENN",
       "name": "RockTunnel_OnixBore_hoenn_Layout",
       "width": 20,
