@@ -176,10 +176,38 @@ Reproduced in the emulator.
 - **Absol's ridge** has two overworld Vileplume right above and below it ((16,48), (16,52)), so three Pokémon sit in a column.
 - **Plan section 14's to-do list** ticks only the Wailord. Absol, the chorus, Chimecho, Bagon and the Metagross (and the earlier parts' events) are still unticked.
 
+### 28. PR #79 (24r) isn't merged and now conflicts (parts 24a–26b review)
+- PR #79 fixes a real 24a bug: the Trapinch walks up column 26 straight through you if you trigger the scene from the ring's north tile (26,54). It also adds review items 25–27 (that fix, the faint sand hollow, 24a's choices). It was opened before parts 24b–26b merged, and GitHub now reports conflicts in CLAUDE.md, the roadmap, the playtest list and these notes. **The bug is still on `hoenn`.** Rebase and merge it (items 25–27 then land above this one).
+
+### 29. Small text things from parts 25a–26b
+- `HoennSeek_Text_CrackLit` ends on a one-word line ("down!"), which the CLAUDE.md rule forbids.
+- **The Mossdeep diver is a man:** the hint NPC at (38,12) is the male sailor sprite (`OBJ_EVENT_GFX_SAILOR`, "I dive off ROUTE 124 every night"). But both trench calls call the diver "she": Brendan's "She was night diving off ROUTE 124" and May's "She talks to PROF. BIRCH about everything". Change both to "he".
+
+### 30. Docs
+- Plan section 14's master list still has the ice chamber unticked, though 26b finished it.
+
+### 31. Choices from parts 24b–26b for Bryan to confirm
+Each PR lists its "picked without Bryan" choices. These are the ones that change what the plan says:
+- **Mirage Tower (24b):** it stands until midnight after the chime. The fossils stay behind the Flygon, and taking one still ends the tower for good. The Flygon is catchable and comes back after a knockout. The Underpass Vibrava (24a) can't be caught.
+- **Night dive (25a/25b):** once found, the crack and the guardians are there at any hour, though the plan's diver line says "at night". The "back wall" is the mound's old Seafloor Cavern door: the trench's top wall is on the map edge. Both are written into the plan.
+- **Ice chamber (26a/26b):** Froslass is drawn standing on the ice rock, not as a reflection inside it. The feather also comes after a knockout, not only a catch. Plan step 5's optional Icy Rock trade was left out.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
 ## Checked and fine
+- **Parts 24a–26b, checked on `hoenn` after PR #83 (Claude, 2026-11-26):**
+  - The debug build works, and every generator re-runs with no changes, including the overworld Pokémon (22r's lesson stuck).
+  - Code read:
+    - `src/hoenn_lights.c` and its step hook: a despawn or a battle mid-drift loses nothing.
+    - The Mirage Tower hook: a crumbled tower still stays gone.
+    - `HoennSandChimePlace`, the Sand Chime item use, and the 1.x Shoal flag fix in `hoenn_custom.h`.
+  - Plan conformance: the events match section 7 and section 9's moves, abilities and items, apart from item 31.
+  - Maps rendered with objects and triggers: the ice chamber, the trench, Underwater Route 124, the ice room, Route 111, Mirage Tower 4F, the Desert Underpass and Route 113.
+    - Reachability: the light's start and the crack are in the region you reach by diving at the round dive spots.
+    - Ice chamber items: the hidden NeverMeltIce (2,1) can be picked up (slide left from the ladder, face up), and the Dawn Stone is reachable.
+  - **High tide in the emulator:** at noon after walking in from Route 125, the tide flag is set and the entrance room floods, wadeable as in Emerald. Nobody had reached high tide since 1.0 (the flag was 0), so this was worth a look.
+  - New text was scanned (item 29). Every call says who told the caller.
 - **Parts 22a, 22b and 23, checked on `hoenn` after PR #73 (Claude, 2026-11-26):**
   - The debug build works, and the composed-maps, buildings and hints generators re-run with no changes.
   - Code read: `src/hoenn_roamer.c` and its eight hooks in `src/roamer.c`. Absol can't loop in `RoamerMove`. Its slot stays reserved through the Hall of Fame's re-inits and is released by a new game. A stale Absol from an older game on the same save is handled. Peek, encounters and the Pokédex area page all ask the hooks. Also read: the battle theme hook and the `HOENN_TUNE_IV_HP`/`HOENN_TUNE_SHINY` additions.
