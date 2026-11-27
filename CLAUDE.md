@@ -122,7 +122,7 @@ Lane B sizes (27a, then 31b on):
 | Part | Release | Debug |
 |---|---|---|
 | 27a (Unown Cipher A: Rosetta line in Words Room 1, weekday night words, braille + glow tiles; Brendan's call; re-measured after the review fixes and 24r) | 32,709,924 / 824 KB | 32,869,044 / 669 KB |
-| 31b (Teddiursa honey trail: beekeeper house, honey pine, moon hollow map, Brendan's call; measured after merging `hoenn` at #87: +6,960 B release, +6,976 B debug) | 32,716,788 / 818 KB | 32,876,052 / 662 KB |
+| 31b (Teddiursa honey trail: beekeeper house, honey pine, moon hollow map, Brendan's call; re-measured by the reviewer after merging `hoenn` at #88: +6,944 B release, +6,960 B debug) | 32,722,404 / 812 KB | 32,881,332 / 657 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 

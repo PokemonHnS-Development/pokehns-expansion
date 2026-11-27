@@ -234,6 +234,13 @@ Each Unown form is its own species with its own compressed sprite sheet (6 frame
 - **27r:** the night word is one word from dusk to dawn (Sat 10 PM FOAM, Sat 2 AM still Friday's UNION, Fri 9 PM UNION, Sat noon none); the word reads from the wall row. Merged as built.
 - **27b:** `regen_all.sh --check` clean; seven rings spell their words, reachable on foot from the entrances (Bell Tower stairs, Mt. Moon Square's cave mouth, Route 44, Whirl B3F ladder, the Mortar ledge passage, Union Cave 1F, Route 20); talking starts the right letter. Bryan approved every choice listed in the PR (sites, ring per seen word, Lv 60–70, fragments as flags, ANCIENT, May's call).
 
+### 38. Review of 31b (PR #90) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+Built by this thread before it took over reviewing, so read with that in mind. Merged `hoenn` at #88 into the branch (one hint-list conflict: kept 27b's `STORY_CIPHER_RINGS` line and 31b's Blackthorn Mart rumor); `regen_all.sh --check` clean; size row re-measured (+6,944 B release).
+- **Played start to finish** on a fresh debug save: HONEY from the beekeeper (once a day), spread on the pine, nobody the same morning, two Teddiursa on a later morning, watch three times (the third says they trust you), shoo keeps the honey and the day's flag, the fourth honey brings the mother, at night she leads you up the claw cliff into the hollow (scene, `FLAG_HOENN_MOON_HOLLOW_FOUND`, stage 2), bears and pool lines by night and day, trail back down, claw marks climb any time afterwards, Brendan's call rings once. No bugs found.
+- **Looks:** the house and the nook sit well in Route 45 at 2×; the hollow is a hand-painted rock bowl. One thing Bryan may not like: a single 2×2 bare-ground patch west of the pool (planned as "where the bears sit", but nobody sits there).
+- **Fog:** Route 45 is a fog-cycle route, so on its fog day the meadow scene is hard to see. That's the weather working as designed.
+- Grid: `review-31b.png` in the project's `hoenn-2.0/review/`.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
