@@ -789,6 +789,15 @@ HoennSeek_Text_Hint_RumorNight_DiveAfter::
 HoennSeek_Text_Hint_RumorNight_DiveNotes::
 	.string "At night, a CHINCHOU's light on\nthe seabed under ROUTE 124 leads\lsomewhere. Bring a POKéMON\lthat glows.$"
 
+HoennSeek_Text_Hint_RumorTrench_GuardiansBefore::
+	.string "They say three old POKéMON guard\nthe trench under ROUTE 124, and\lsomething sleeps behind them.$"
+
+HoennSeek_Text_Hint_RumorTrench_GuardiansAfter::
+	.string "Somebody caught all three of the\nROUTE 124 trench's guardians, and\lthe mound down there opened up!$"
+
+HoennSeek_Text_Hint_RumorTrench_GuardiansNotes::
+	.string "The ROUTE 124 trench's guardian\nchanges with the weekday. Catch\lall three and the mound in the\ltrench opens.$"
+
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
 
@@ -968,6 +977,12 @@ HoennSeek_Text_Hint_LineStoryNightDive::
 
 HoennSeek_Text_Hint_LineStoryTrenchDark::
 	.string "A crack in the seabed off ROUTE\n124? I've never dared swim down.\lIt's black as ink.\pYou'd want a POKéMON that glows on\nyour team. A CHINCHOU or a\lLANTURN, say.$"
+
+HoennSeek_Text_Hint_LineStoryTrenchGuardians::
+	.string "You went down into that trench?\nThen you've met its guardians.\lSomething different waits there\leach day.\pHUNTAIL on MONDAY, WEDNESDAY and\nFRIDAY. GOREBYSS on TUESDAY,\lTHURSDAY and SATURDAY. And on\lSUNDAY, an old RELICANTH.$"
+
+HoennSeek_Text_Hint_LineStoryTrenchPearls::
+	.string "The CLAMPERL down in that trench\ngrow pearls. Big ones!\pThey only open up once a week,\nmind you.$"
 
 HoennSeek_Text_Hint_Forecast0::
 	.string "Storms are rolling in around ROUTE\n120 {STR_VAR_1}.\pFolks say that's when the white\none walks.$"

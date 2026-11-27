@@ -2449,3 +2449,260 @@ HoennSeek_Text_CallTrench:
 	.string "Dad says nobody but you would\n"
 	.string "try that. What's down there?\p"
 	.string "Tell me next time, okay? Later!$"
+
+@ =============================================================================
+@ Part 25b: Night dive B (Route124_Trench_hoenn)
+@ A guardian waits at the bottom of the trench (17,14), a different one by
+@ weekday: HUNTAIL Mon/Wed/Fri, GOREBYSS Tue/Thu/Sat, RELICANTH Sun. Each is a
+@ scaled wild battle with its hidden ability and perfect IVs; run and it
+@ stays, knock it out and it's gone until its next day. A pearl bed of three
+@ CLAMPERL in the west basin gives a pearl each, once a week. Once all three
+@ guardians are caught, the mound's old cavern door (13-15, 8-9) opens and
+@ leads into its hollow (12-15, 1-3), where the DEEP SEA TOOTH and DEEP SEA
+@ SCALE lie; the hollow's glimmer (14,3) takes you back out.
+@ =============================================================================
+HoennSeek_EventScript_TrenchOnLoad::
+	call_if_set FLAG_HOENN_TRENCH_DOOR_OPEN, HoennSeek_EventScript_OpenTrenchDoor
+	end
+
+@ The door is Underwater Route 128's Seafloor Cavern door (part 25a's
+@ composed map filled it in), and the hollow gets its glimmer back.
+HoennSeek_EventScript_OpenTrenchDoor::
+	setmetatile 13, 8, 0x265, TRUE
+	setmetatile 14, 8, 0x266, TRUE
+	setmetatile 15, 8, 0x267, TRUE
+	setmetatile 13, 9, 0x26D, TRUE
+	setmetatile 14, 9, 0x26E, FALSE
+	setmetatile 15, 9, 0x26F, TRUE
+	setmetatile 14, 3, 0x2B8, FALSE
+	return
+
+HoennSeek_EventScript_TrenchOnTransition::
+	setflag FLAG_HOENN_HIDE_HUNTAIL
+	setflag FLAG_HOENN_HIDE_GOREBYSS
+	setflag FLAG_HOENN_HIDE_RELICANTH
+	call_if_set FLAG_HOENN_TRENCH_DOOR_OPEN, HoennSeek_EventScript_ArmTrenchDoor
+	goto_if_set FLAG_HOENN_DAILY_TRENCH_GUARDIAN, HoennSeek_EventScript_HiddenEnd25a
+	specialvar VAR_RESULT, GetDayOfWeek
+	switch VAR_RESULT
+	case HOENN_SUNDAY, HoennSeek_EventScript_TrenchShowRelicanth
+	case HOENN_TUESDAY, HoennSeek_EventScript_TrenchShowGorebyss
+	case HOENN_THURSDAY, HoennSeek_EventScript_TrenchShowGorebyss
+	case HOENN_SATURDAY, HoennSeek_EventScript_TrenchShowGorebyss
+	goto_if_set FLAG_HOENN_CAUGHT_HUNTAIL, HoennSeek_EventScript_HiddenEnd25a
+	clearflag FLAG_HOENN_HIDE_HUNTAIL
+	end
+
+HoennSeek_EventScript_TrenchShowGorebyss:
+	goto_if_set FLAG_HOENN_CAUGHT_GOREBYSS, HoennSeek_EventScript_HiddenEnd25a
+	clearflag FLAG_HOENN_HIDE_GOREBYSS
+	end
+
+HoennSeek_EventScript_TrenchShowRelicanth:
+	goto_if_set FLAG_HOENN_CAUGHT_RELICANTH, HoennSeek_EventScript_HiddenEnd25a
+	clearflag FLAG_HOENN_HIDE_RELICANTH
+	end
+
+HoennSeek_EventScript_ArmTrenchDoor:
+	setvar VAR_TEMP_2, 1
+	return
+
+@ ---- Guardians -------------------------------------------------------------
+@ Flag commands take no vars, so each guardian has its own tail.
+HoennSeek_EventScript_TrenchHuntail::
+	lock
+	setvar VAR_0x8004, SPECIES_HUNTAIL
+	setvar VAR_0x8005, MOVE_SUCKER_PUNCH
+	setvar VAR_0x8007, ITEM_BIG_PEARL
+	call HoennSeek_EventScript_TrenchGuardianBattle
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_TrenchGuardianEnd
+	removeobject LOCALID_HOENN_TRENCH_HUNTAIL
+	setflag FLAG_HOENN_HIDE_HUNTAIL
+	goto_if_ne VAR_0x8000, B_OUTCOME_CAUGHT, HoennSeek_EventScript_TrenchGuardianSinks
+	setflag FLAG_HOENN_CAUGHT_HUNTAIL
+	goto HoennSeek_EventScript_TrenchGuardianCaught
+
+HoennSeek_EventScript_TrenchGorebyss::
+	lock
+	setvar VAR_0x8004, SPECIES_GOREBYSS
+	setvar VAR_0x8005, MOVE_SHELL_SMASH
+	setvar VAR_0x8007, ITEM_HEART_SCALE
+	call HoennSeek_EventScript_TrenchGuardianBattle
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_TrenchGuardianEnd
+	removeobject LOCALID_HOENN_TRENCH_GOREBYSS
+	setflag FLAG_HOENN_HIDE_GOREBYSS
+	goto_if_ne VAR_0x8000, B_OUTCOME_CAUGHT, HoennSeek_EventScript_TrenchGuardianSinks
+	setflag FLAG_HOENN_CAUGHT_GOREBYSS
+	goto HoennSeek_EventScript_TrenchGuardianCaught
+
+HoennSeek_EventScript_TrenchRelicanth::
+	lock
+	setvar VAR_0x8004, SPECIES_RELICANTH
+	setvar VAR_0x8005, MOVE_HEAD_SMASH
+	setvar VAR_0x8007, ITEM_STAR_PIECE
+	call HoennSeek_EventScript_TrenchGuardianBattle
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_TrenchGuardianEnd
+	removeobject LOCALID_HOENN_TRENCH_RELICANTH
+	setflag FLAG_HOENN_HIDE_RELICANTH
+	goto_if_ne VAR_0x8000, B_OUTCOME_CAUGHT, HoennSeek_EventScript_TrenchGuardianSinks
+	setflag FLAG_HOENN_CAUGHT_RELICANTH
+	goto HoennSeek_EventScript_TrenchGuardianCaught
+
+@ VAR_0x8004 species, 0x8005 its move, 0x8007 its held item (always set: a
+@ wild HUNTAIL/GOREBYSS with no item can roll the DEEP SEA TOOTH/SCALE, the
+@ hollow's reward, at the start of the battle). Returns VAR_RESULT FALSE if the player
+@ ran (it stays), else TRUE with the battle outcome in VAR_0x8000.
+HoennSeek_EventScript_TrenchGuardianBattle:
+	playmoncry VAR_0x8004, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_TrenchGuardian, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setflag FLAG_HOENN_TRENCH_GUARDIAN_MET
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8006, TRUE
+	setvar VAR_0x8008, 0
+	setvar VAR_0x8009, HOENN_TUNE_HIDDEN_ABILITY
+	special HoennTuneWildMonSlot
+	dowildbattle
+	specialvar VAR_0x8000, GetBattleOutcome
+	setvar VAR_RESULT, FALSE
+	goto_if_eq VAR_0x8000, B_OUTCOME_RAN, HoennSeek_EventScript_HiddenReturn
+	goto_if_eq VAR_0x8000, B_OUTCOME_PLAYER_TELEPORTED, HoennSeek_EventScript_HiddenReturn
+	setflag FLAG_HOENN_DAILY_TRENCH_GUARDIAN
+	setvar VAR_RESULT, TRUE
+	return
+
+HoennSeek_EventScript_TrenchGuardianSinks:
+	msgbox HoennSeek_Text_TrenchGuardianSinks, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_TrenchGuardianCaught:
+	goto_if_unset FLAG_HOENN_CAUGHT_HUNTAIL, HoennSeek_EventScript_TrenchGuardianEnd
+	goto_if_unset FLAG_HOENN_CAUGHT_GOREBYSS, HoennSeek_EventScript_TrenchGuardianEnd
+	goto_if_unset FLAG_HOENN_CAUGHT_RELICANTH, HoennSeek_EventScript_TrenchGuardianEnd
+	@ The last of the three: the mound's door opens.
+	playse SE_M_EARTHQUAKE
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 8  @ number of shakes
+	setvar VAR_0x8007, 5  @ shake delay
+	special ShakeCamera
+	waitstate
+	setflag FLAG_HOENN_TRENCH_DOOR_OPEN
+	call HoennSeek_EventScript_OpenTrenchDoor
+	special DrawWholeMapView
+	setvar VAR_TEMP_2, 1
+	msgbox HoennSeek_Text_TrenchDoorOpens, MSGBOX_DEFAULT
+HoennSeek_EventScript_TrenchGuardianEnd:
+	release
+	end
+
+@ ---- The door and the hollow -------------------------------------------------
+HoennSeek_EventScript_TrenchDoor::
+	lockall
+	playse SE_M_DIVE
+	warp MAP_ROUTE124_TRENCH_HOENN, 13, 2
+	waitstate
+	releaseall
+	end
+
+HoennSeek_EventScript_TrenchHollowExit::
+	lockall
+	playse SE_M_DIVE
+	warp MAP_ROUTE124_TRENCH_HOENN, 14, 10
+	waitstate
+	releaseall
+	end
+
+@ ---- Pearl bed ----------------------------------------------------------------
+HoennSeek_EventScript_PearlBed1::
+	lock
+	playmoncry SPECIES_CLAMPERL, CRY_MODE_NORMAL
+	goto_if_set FLAG_HOENN_WEEKLY_PEARL_1, HoennSeek_EventScript_PearlBedShut
+	call HoennSeek_EventScript_PearlBedOpens
+	giveitem ITEM_BIG_PEARL
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_PearlBedFull
+	setflag FLAG_HOENN_WEEKLY_PEARL_1
+	release
+	end
+
+HoennSeek_EventScript_PearlBed2::
+	lock
+	playmoncry SPECIES_CLAMPERL, CRY_MODE_NORMAL
+	goto_if_set FLAG_HOENN_WEEKLY_PEARL_2, HoennSeek_EventScript_PearlBedShut
+	call HoennSeek_EventScript_PearlBedOpens
+	giveitem ITEM_BIG_PEARL
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_PearlBedFull
+	setflag FLAG_HOENN_WEEKLY_PEARL_2
+	release
+	end
+
+HoennSeek_EventScript_PearlBed3::
+	lock
+	playmoncry SPECIES_CLAMPERL, CRY_MODE_NORMAL
+	goto_if_set FLAG_HOENN_WEEKLY_PEARL_3, HoennSeek_EventScript_PearlBedShut
+	call HoennSeek_EventScript_PearlBedOpens
+	giveitem ITEM_PEARL_STRING
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_PearlBedFull
+	setflag FLAG_HOENN_WEEKLY_PEARL_3
+	release
+	end
+
+HoennSeek_EventScript_PearlBedOpens:
+	msgbox HoennSeek_Text_PearlBedOpens, MSGBOX_DEFAULT
+	waitmoncry
+	return
+
+HoennSeek_EventScript_PearlBedShut:
+	msgbox HoennSeek_Text_PearlBedShut, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+HoennSeek_EventScript_PearlBedFull:
+	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
+	release
+	end
+
+@ ---- Call -------------------------------------------------------------------
+HoennSeek_EventScript_CallTrenchDoor::
+	setflag FLAG_HOENN_CALL_TRENCH_DOOR
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallTrenchDoor
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Texts -----------------------------------------------------------------
+HoennSeek_Text_TrenchGuardian:
+	.string "Something huge stirs at the\n"
+	.string "bottom of the trench!$"
+
+HoennSeek_Text_TrenchGuardianSinks:
+	.string "It sank back into the dark.\p"
+	.string "Something else may be waiting\n"
+	.string "here tomorrow…$"
+
+HoennSeek_Text_TrenchDoorOpens:
+	.string "The seabed rumbled…\p"
+	.string "A dark doorway has opened in the\n"
+	.string "face of the mound!$"
+
+HoennSeek_Text_PearlBedOpens:
+	.string "The CLAMPERL opened its shell.\n"
+	.string "There's a pearl inside!$"
+
+HoennSeek_Text_PearlBedShut:
+	.string "The CLAMPERL is keeping its shell\n"
+	.string "shut tight.\p"
+	.string "A new pearl takes a week to grow.$"
+
+HoennSeek_Text_CallTrenchDoor:
+	.string "{PLAYER}! It's MAY!\p"
+	.string "That diver from MOSSDEEP came by\n"
+	.string "the lab again. She talks to PROF.\l"
+	.string "BIRCH about everything she sees!\p"
+	.string "She says the big POKéMON in the\n"
+	.string "ROUTE 124 trench are all gone,\l"
+	.string "and the seabed shook last night.\p"
+	.string "You caught all three, didn't you?\n"
+	.string "Brendan owes me a lunch. Bye!$"

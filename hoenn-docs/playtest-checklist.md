@@ -381,3 +381,8 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - The crack with a Chinchou, with a Lanturn, and with neither; the trench at night and by day.
 - Brendan's call after the first trip down (it rings once you're back on the surface).
 
+## 2.0 part 25b (Night dive B)
+- Catch each guardian with an ordinary ball (the emulator used a Master Ball); check their abilities (Water Veil, Hydration, Sturdy), moves and held items in the summary.
+- Knock one out, then come back the next day it's due.
+- Watch the door open on the third catch (the camera shake) and walk in and out of the hollow a few times.
+- The Clamperl pearls across a real week change (Sunday).

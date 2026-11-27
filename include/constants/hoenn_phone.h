@@ -36,5 +36,6 @@
 #define HOENN_CALL_SINGING_SAND 31
 #define HOENN_CALL_FLYGON 32 // May: you caught the Mirage Tower Flygon (2.0 part 24b)
 #define HOENN_CALL_TRENCH 33 // Brendan: you followed the Chinchou lights into the Route 124 trench (2.0 part 25a)
+#define HOENN_CALL_TRENCH_DOOR 34 // May: the trench's three guardians are caught and its door is open (2.0 part 25b)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

@@ -116,6 +116,9 @@
     "STORY_NIGHT_DIVE": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_TRENCH_FOUND"}], "text": ["I dive off ROUTE 124 every night. After dark, the deep water there glows!", "A CHINCHOU's light waits on the seabed. Swim close and it drifts away, as if it wants you to follow."]},
     "STORY_TRENCH_DARK": {"kind": "story", "if": [{"flag": "FLAG_HOENN_TRENCH_FOUND"}, {"not_flag": "FLAG_HOENN_TRENCH_ENTERED"}], "text": ["A crack in the seabed off ROUTE 124? I've never dared swim down. It's black as ink.", "You'd want a POKéMON that glows on your team. A CHINCHOU or a LANTURN, say."]},
     "RUMOR_NIGHT_DIVE": {"kind": "rumor", "rumor": "NIGHT_DIVE", "if": [{"not_flag": "FLAG_HOENN_TRENCH_ENTERED"}]},
+    "STORY_TRENCH_GUARDIANS": {"kind": "story", "if": [{"flag": "FLAG_HOENN_TRENCH_ENTERED"}, {"not_flag": "FLAG_HOENN_TRENCH_DOOR_OPEN"}], "text": ["You went down into that trench? Then you've met its guardians. Something different waits there each day.", "HUNTAIL on MONDAY, WEDNESDAY and FRIDAY. GOREBYSS on TUESDAY, THURSDAY and SATURDAY. And on SUNDAY, an old RELICANTH."]},
+    "STORY_TRENCH_PEARLS": {"kind": "story", "if": [{"flag": "FLAG_HOENN_TRENCH_ENTERED"}], "text": ["The CLAMPERL down in that trench grow pearls. Big ones!", "They only open up once a week, mind you."]},
+    "RUMOR_TRENCH_GUARDIANS": {"kind": "rumor", "rumor": "TRENCH_GUARDIANS", "if": [{"flag": "FLAG_HOENN_TRENCH_ENTERED"}, {"not_flag": "FLAG_HOENN_TRENCH_DOOR_OPEN"}]},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -258,6 +261,12 @@
       "before": ["They say lights dance on the seabed off ROUTE 124, but only at night."],
       "after": "Somebody followed the lights off ROUTE 124 down into a hidden trench!",
       "notes": "At night, a CHINCHOU's light on the seabed under ROUTE 124 leads somewhere. Bring a POKéMON that glows."
+    },
+    "TRENCH_GUARDIANS": {
+      "found": [{"flag": "FLAG_HOENN_TRENCH_DOOR_OPEN"}],
+      "before": ["They say three old POKéMON guard the trench under ROUTE 124, and something sleeps behind them."],
+      "after": "Somebody caught all three of the ROUTE 124 trench's guardians, and the mound down there opened up!",
+      "notes": "The ROUTE 124 trench's guardian changes with the weekday. Catch all three and the mound in the trench opens."
     }
   },
 
@@ -284,7 +293,7 @@
     {"map": "MauvilleCity_PokemonCenter_1F",     "script": "MauvilleCity_PokemonCenter_1F_EventScript_Woman1",     "lines": ["STORY_WATTSON", "RUMOR_CASTFORM", "RUMOR_BAGON"]},
     {"map": "FallarborTown_PokemonCenter_1F",    "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",      "lines": ["STORY_METEORITE", "RUMOR_MUNCHLAX", "RUMOR_SPINDA", "RUMOR_FEUD", "TIP_REMINDER_H", "TIP_SITES"]},
     {"map": "FortreeCity_PokemonCenter_1F",      "script": "FortreeCity_PokemonCenter_1F_EventScript_Man",         "lines": ["STORY_WINONA", "RUMOR_FEEBAS", "RUMOR_TROPIUS", "RUMOR_CHORUS"]},
-    {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES", "RUMOR_ABSOL"]},
+    {"map": "LilycoveCity_PokemonCenter_1F",     "script": "LilycoveCity_PokemonCenter_1F_EventScript_Boy",        "lines": ["RUMOR_FEEBAS", "TIP_SITES", "RUMOR_ABSOL", "RUMOR_TRENCH_GUARDIANS"]},
     {"map": "MossdeepCity_PokemonCenter_1F",     "script": "MossdeepCity_PokemonCenter_1F_EventScript_Girl",       "lines": ["STORY_METEORITE", "TIP_MIND_READER", "TIP_LEVEL_CAP", "RUMOR_WAILORD", "RUMOR_NIGHT_DIVE"]},
     {"map": "Route119_WeatherInstitute_1F",      "script": "Route119_WeatherInstitute_1F_EventScript_InstituteWorker1", "always": true, "lines": ["FORECAST"]},
     {"map": "CianwoodCity_hns",                  "script": "CianwoodCity_EventScript_Youngster",                   "lines": ["STORY_STRAIT_CLOSED", "STORY_STRAIT_OPEN", "STORY_STRAIT_DONE_J"]},
@@ -307,7 +316,7 @@
     {"map": "Route119",                          "script": "Route119_EventScript_Boy2",                            "lines": ["STORY_FEEBAS"]},
     {"map": "FallarborTown",                     "script": "FallarborTown_EventScript_ExpertM",                    "lines": ["STORY_FEUD"]},
     {"map": "FortreeCity",                       "script": "FortreeCity_EventScript_OldMan",                       "lines": ["STORY_ABSOL"]},
-    {"map": "PacifidlogTown",                    "script": "PacifidlogTown_EventScript_Fisherman",                 "lines": ["STORY_WAILORD"]},
+    {"map": "PacifidlogTown",                    "script": "PacifidlogTown_EventScript_Fisherman",                 "lines": ["STORY_WAILORD", "STORY_TRENCH_PEARLS"]},
     {"map": "MtPyre_Summit",                     "script": "MtPyre_Summit_EventScript_OldLady",                    "lines": ["STORY_CHIMECHO"]},
     {"map": "Route115",                          "script": "Route115_EventScript_Woman",                           "lines": ["STORY_CHORUS"]},
     {"map": "FallarborTown",                     "script": "FallarborTown_EventScript_Gentleman",                  "lines": ["STORY_DESERT_ELDER", "STORY_BAGON"]},
@@ -316,7 +325,7 @@
     {"map": "FallarborTown_CozmosHouse",         "script": "HoennSeek_EventScript_Cozmo",                          "lines": ["STORY_DESERT_COZMO"]},
     {"map": "VerdanturfTown_PokemonCenter_1F",   "script": "VerdanturfTown_PokemonCenter_1F_EventScript_Gentleman", "lines": ["RUMOR_DESERT_SONG", "RUMOR_MIRAGE_TOWER"]},
     {"map": "LavaridgeTown",                     "script": "LavaridgeTown_EventScript_HotSpringsOldWoman1",       "lines": ["STORY_SAND_CHIME", "STORY_MIRAGE_FLYGON"]},
-    {"map": "MossdeepCity",                      "script": "MossdeepCity_EventScript_Sailor",                      "lines": ["STORY_NIGHT_DIVE", "STORY_TRENCH_DARK"]}
+    {"map": "MossdeepCity",                      "script": "MossdeepCity_EventScript_Sailor",                      "lines": ["STORY_NIGHT_DIVE", "STORY_TRENCH_DARK", "STORY_TRENCH_GUARDIANS"]}
   ],
 
   "forecasts": [
