@@ -18,9 +18,9 @@ Only lane A's builder edits this file (the reviewer may add a line when it merge
 | 28 | PR #101 open (Nov 27), waiting for review | `v2-28-cipher-sanctum` | built on 27b (#88) + 27r (#93); flags `HOENN_LANE_A_FLAGS_E` + 0x16–0x1A (0x1B–0x1F spare), daily + 5, call 42 |
 | 31a | — | — | |
 | 32 | — | — | lane B's 33 waits for it |
-| 34b | paused (Nov 27): waits for lane B's 34a (`v2-34a-birds`) and part 32 (#97) to merge | — | needs lane B's 34a |
+| 34b | next (Nov 27): 34a is merged; builds on part 32 (#97, now lane B's) | — | flags F + 0x0E–0x1F, vars F + 2 on, call 46 on |
 | 35b | — | — | |
-| 37 | paused (Nov 27): waits for lane B's 31b (`v2-31b-honey-trail`) and part 28 (#101) to merge | — | needs lane B's 31b |
+| 37 | PR open (Nov 27), waiting for review; **stacked on 28 (#101)**, so it merges after #101 | `v2-37-wishes-and-giants` | flags `HOENN_LANE_A_FLAGS_F` + 0x20–0x2D (0x2E–0x3F spare; 34b takes + 0x0E–0x1F), vars `HOENN_LANE_A_VARS_F` + 0, 1, calls 43–45 |
 
 ## ID plan (inside lane A's ranges)
 So parts built out of order don't collide: 27b E +0x0B–0x15 (used); 28 E +0x16–0x1F; 31a E +0x20–0x25; 32 E +0x26–0x2F; 34b, 35b, 37 F +0x00 on. Calls 38 (27b) on, in build order. Vars, daily, weekly and hidden flags in build order.
@@ -34,3 +34,5 @@ Anything outside lane A's ranges or maps (a spare flag, another lane's map, a ne
 - `src/pokenav_radio.c` (28): `#include "hoenn.h"` (the same line 35b adds) and one line in the Unown station's case.
 - `gMapGroup_SpecialArea2_Hns` (28): `RuinsOfAlph_Sanctum_hoenn` appended.
 - `tools/hoenn/gen_hoenn_composed_maps.py` (28): `"border": "source"` copies the source layout's border.
+- Part 37: `data/scripts/hoenn_lane_b.inc` (lane B's file): one line in `HoennSeek_EventScript_MoonHollowPoolNight` hands the pool at night to lane A's wish (the hook 31b left for 37).
+- Part 37 (HnS maps, all lane A's in README section 1): `MtMoon_Outside_hns` (white rock sign + Jirachi object swapped), `OlivineCity_hns` (the ticket fan swapped), `SinjohRuins_hns` (three boulder objects, one OnTransition `call`), `SinjohRuins_ArceusRoom_hns` (one hook line), and Hoenn's `MossdeepCity_SpaceCenter_2F` (scientist swap, window signs) and `MeteorFalls_Clifftop_hoenn` (boulder signs).

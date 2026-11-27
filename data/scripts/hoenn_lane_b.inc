@@ -276,7 +276,7 @@ HoennSeek_EventScript_MoonHollowPool::
 
 HoennSeek_EventScript_MoonHollowPoolNight:
 	msgbox HoennSeek_Text_HollowPoolNight, MSGBOX_DEFAULT
-	goto HoennSeek_EventScript_LaneBRelease
+	goto HoennSeek_EventScript_WishMoonHollow @ lane A's part 37: Jirachi's wish (hoenn_lane_a.inc)
 
 HoennSeek_EventScript_LeaveMoonHollow::
 	warp MAP_ROUTE45_HNS, 32, 85

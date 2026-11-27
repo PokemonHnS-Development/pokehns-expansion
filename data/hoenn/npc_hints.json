@@ -142,6 +142,16 @@
     "STORY_CIPHER_NIGHT": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ROSETTA"}, {"not_flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}], "text": ["AT NIGHT WE SPEAK… I've been sleeping here at the lab ever since you read it.", "If the WORDS chambers really light up at night, is it the same word every night? Tell my colleague what you see!"]},
     "STORY_CIPHER_RINGS": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}, {"not_flag": "FLAG_HOENN_CIPHER_TABLET"}], "text": ["Hikers keep phoning the lab. They see UNOWN floating in a circle at night, deep in the caves.", "Always somewhere quiet, away from the path. Is it the places from the words?"]},
 
+    "STORY_WISH_MONDAY": {"kind": "story", "if": [{"flag": "FLAG_HOENN_WISH_METEOR_FALLS"}, {"flag": "FLAG_HOENN_WISH_SPACE_CENTER"}, {"flag": "FLAG_HOENN_WISH_MOON_HOLLOW"}, {"not_caught": "JIRACHI"}], "text": ["Three wishes on three falling stars? Then the old story says the white rock at MT. MOON will answer.", "But only on the night the CLEFAIRY dance there. That's Monday night, in my day."]},
+    "STORY_WISHES": {"kind": "story", "if": [{"not_caught": "JIRACHI"}], "text": ["When I was a boy, we wished on falling stars in three places: where the stars fell, where people watch them, and where the moon comes closest.", "METEOR FALLS, this very SPACE CENTER at night… and the third is a hollow somewhere in JOHTO that only the bears know."]},
+    "RUMOR_JIRACHI": {"kind": "rumor", "rumor": "JIRACHI"},
+    "STORY_SIGNAL": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_DEOXYS_TICKET"}], "text": ["Our scientist upstairs hasn't slept in days. He says a signal comes down from space, but only at night.", "He needs readings from three different nights. Maybe keep him company?"]},
+    "RUMOR_DEOXYS": {"kind": "rumor", "rumor": "DEOXYS_SIGNAL"},
+    "STORY_REGI_BRAILLE": {"kind": "story", "if": [{"var": "VAR_PLATECOUNTER", "min": 3}, {"not_flag": "FLAG_HOENN_CIPHER_INSCRIPTION"}], "text": ["Boulders block the caves the plates opened, and someone carved braille into them, older than any we know.", "The UNOWN scholars at the RUINS OF ALPH might know a way to read it."]},
+    "STORY_REGI_SEA": {"kind": "story", "if": [{"var": "VAR_PLATECOUNTER", "min": 3}, {"flag": "FLAG_HOENN_CIPHER_INSCRIPTION"}, {"not_flag": "FLAG_HOENN_REGI_OPEN_STEEL"}], "text": ["The oldest of the deep and the greatest of the sea… RELICANTH and WAILORD, surely. Both live in HOENN's seas.", "Bring them both to the boulders. The stones were made to answer them."]},
+    "STORY_ARCEUS_WAITS": {"kind": "story", "if": [{"var": "VAR_SINJOH_STORYLINE", "min": 12}, {"not_flag": "FLAG_HOENN_CIPHER_INSCRIPTION"}, {"not_caught": "ARCEUS"}], "text": ["ARCEUS is still up in its chamber, watching. It won't come with anyone yet.", "The UNOWN wrote about SINJOH, long ago. Their words are somewhere under the RUINS OF ALPH."]},
+    "RUMOR_REGI_DOORS": {"kind": "rumor", "rumor": "REGI_DOORS"},
+
     "FORECAST":       {"kind": "forecast"}
   },
 
@@ -337,6 +347,24 @@
       "before": ["Evenings, we hear crying down on the BEACH. Something small and lost, I'd guess.", "And a KANGASKHAN mother keeps pacing where the woods bend in, west of here. Her pouch is empty."],
       "after": "Somebody brought a lost KANGASKHAN baby home to its mother! Now the pair nest in the woods out west.",
       "notes": "Evenings in the FUCHSIA SAFARI ZONE, a KANGASKHAN baby cries on the BEACH. Its mother waits in a nook of the BRUSH's woods."
+    },
+    "JIRACHI": {
+      "found": [{"caught": "JIRACHI"}],
+      "before": ["They say a POKéMON sleeps for a thousand years and wakes for a wish.", "Wish on a falling star in three places, and it might hear you."],
+      "after": "Somebody woke the wishing POKéMON at MT. MOON! Was it you?",
+      "notes": "At night, wish on a falling star at METEOR FALLS, at MOSSDEEP's SPACE CENTER and at a moonlit hollow in JOHTO. Then go to MT. MOON on the CLEFAIRY's night."
+    },
+    "DEOXYS_SIGNAL": {
+      "found": [{"flag": "FLAG_HOENN_DEOXYS_TICKET"}],
+      "before": ["MOSSDEEP's SPACE CENTER is picking up a signal from space. Only at night, they say."],
+      "after": "The SPACE CENTER tracked its space signal to an island south of KANTO!",
+      "notes": "The SPACE CENTER's scientist on 2F logs a signal from space at night. He needs three different nights."
+    },
+    "REGI_DOORS": {
+      "found": [{"flag": "FLAG_HOENN_REGI_OPEN_ROCK"}, {"flag": "FLAG_HOENN_REGI_OPEN_ICE"}, {"flag": "FLAG_HOENN_REGI_OPEN_STEEL"}],
+      "before": ["Up at the SINJOH RUINS, boulders seal the caves in the cliffs. Something big lives behind them."],
+      "after": "All three boulders at the SINJOH RUINS have rolled away!",
+      "notes": "The boulders at the SINJOH RUINS carry braille that the RUINS OF ALPH's final inscription explains: RELICANTH and WAILORD."
     }
   },
 
@@ -405,7 +433,10 @@
     {"map": "LavenderTown_hns",                  "script": "LavenderTown_EventScript_PokefanM", "key": "LavenderPokefan", "lines": ["RUMOR_ONIX_BORE"]},
     {"map": "VioletCity_hns",                    "script": "VioletCity_EventScript_Youngster", "key": "VioletYoungster", "lines": ["RUMOR_DUNSPARCE_BURROW"]},
     {"map": "PalletTown_hns",                    "script": "PalletTown_EventScript_Fatman", "key": "PalletFatman", "lines": ["RUMOR_TANGELA_VINES"]},
-    {"map": "FuchsiaCity_SafariZoneBrush_hns",   "script": "SafariZoneFuchsia_EventScript_Attendant1", "key": "SafariBrushWarden", "lines": ["RUMOR_KANGA_BABY"]}
+    {"map": "FuchsiaCity_SafariZoneBrush_hns",   "script": "SafariZoneFuchsia_EventScript_Attendant1", "key": "SafariBrushWarden", "lines": ["RUMOR_KANGA_BABY"]},
+    {"map": "MossdeepCity_SpaceCenter_1F", "script": "MossdeepCity_SpaceCenter_1F_EventScript_OldMan", "key": "SpaceCenterOldMan", "lines": ["STORY_WISH_MONDAY", "STORY_WISHES", "RUMOR_JIRACHI"]},
+    {"map": "MossdeepCity_SpaceCenter_1F", "script": "MossdeepCity_SpaceCenter_1F_EventScript_Woman", "key": "SpaceCenterWoman", "lines": ["STORY_SIGNAL", "RUMOR_DEOXYS"]},
+    {"map": "SinjohRuins_House1_hns", "script": "SinjohRuins_Lab_EventScript_Linguist", "key": "SinjohLinguist", "lines": ["STORY_ARCEUS_WAITS", "STORY_REGI_SEA", "STORY_REGI_BRAILLE", "RUMOR_REGI_DOORS"]}
   ],
 
   "forecasts": [

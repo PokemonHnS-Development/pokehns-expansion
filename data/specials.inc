@@ -763,6 +763,8 @@ gSpecials::
 	def_special HoennGlyphTakeFragment
 	def_special HoennCipherFragmentCount
 	def_special HoennSanctumLetter
+	def_special HoennWishCount
+	def_special HoennDeoxysSignalNight
 	@ (end of lane A's specials)
 
 	@ Hoenn & Seek 2.0, builder lane B (parts 31b+): lane B's specials go here

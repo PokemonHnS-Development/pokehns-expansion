@@ -135,7 +135,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtMoon_Outside_EventScript_Jirachi",
+      "script": "HoennSeek_EventScript_MtMoonJirachi",
       "flag": "FLAG_HIDE_MTMOON_JIRACHI"
     },
     {
@@ -295,7 +295,7 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "MtMoon_Outside_EventScript_WhiteRock"
+      "script": "HoennSeek_EventScript_WhiteRock"
     }
   ],
   "game_version": "hns",

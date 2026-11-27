@@ -530,6 +530,35 @@
                                                                        // (+0..4 are 31a, 32 and 35b's)
 #define HOENN_SANCTUM_LETTERS 28 // A-Z ! ? (the mural's menu; index 28 is CANCEL)
 
+// ---- Part 37: Jirachi, Deoxys, the Regis, Arceus (data/scripts/hoenn_lane_a.inc, src/hoenn_lane_a.c) ----
+// Phase F (legendaries) starts at FLAGS_F + 0x20: 35b uses + 0x00-0x0D and
+// 34b (built after 37) takes + 0x0E-0x1F.
+// Jirachi: a wish on a shooting star at three spots, at night; then the white
+// rock at Mt. Moon Square answers on the Clefairy's Monday night.
+#define FLAG_HOENN_WISH_METEOR_FALLS    (HOENN_LANE_A_FLAGS_F + 0x20) // wished on the Meteor Falls clifftop
+#define FLAG_HOENN_WISH_SPACE_CENTER    (HOENN_LANE_A_FLAGS_F + 0x21) // wished at the Space Center's 2F windows
+#define FLAG_HOENN_WISH_MOON_HOLLOW     (HOENN_LANE_A_FLAGS_F + 0x22) // wished at the moon hollow's pool (part 31b)
+#define FLAG_HOENN_CALL_WISHES          (HOENN_LANE_A_FLAGS_F + 0x23) // May: the Space Center phoned Birch about the wishes
+// Deoxys: the Space Center's 2F scientist tracks a signal on three different
+// nights, then hands over the AURORA TICKET (the Olivine fan no longer gives it).
+#define FLAG_HOENN_DEOXYS_TICKET        (HOENN_LANE_A_FLAGS_F + 0x24) // the scientist gave you the AURORA TICKET
+#define FLAG_HOENN_CALL_DEOXYS          (HOENN_LANE_A_FLAGS_F + 0x25) // Brendan: Birch heard about the ticket
+// Regis: a boulder seals each of HnS's three Regi doors at the Sinjoh Ruins
+// once its plates have opened it; the inscription (part 28) reads its braille,
+// and Relicanth + Wailord in the party move it.
+#define FLAG_HOENN_REGI_OPEN_ROCK       (HOENN_LANE_A_FLAGS_F + 0x26) // Regirock's door: its boulder rolled aside
+#define FLAG_HOENN_REGI_OPEN_ICE        (HOENN_LANE_A_FLAGS_F + 0x27) // Regice's
+#define FLAG_HOENN_REGI_OPEN_STEEL      (HOENN_LANE_A_FLAGS_F + 0x28) // Registeel's
+#define FLAG_HOENN_REGI_HIDE_ROCK       (HOENN_LANE_A_FLAGS_F + 0x29) // the boulders' object flags (decided on arrival)
+#define FLAG_HOENN_REGI_HIDE_ICE        (HOENN_LANE_A_FLAGS_F + 0x2A)
+#define FLAG_HOENN_REGI_HIDE_STEEL      (HOENN_LANE_A_FLAGS_F + 0x2B)
+#define FLAG_HOENN_REGI_STIRRED         (HOENN_LANE_A_FLAGS_F + 0x2C) // the cameo: something stirred behind a door
+#define FLAG_HOENN_CALL_REGIS           (HOENN_LANE_A_FLAGS_F + 0x2D) // May: Steven phoned Birch about the doors
+                                                                       // (0x2E-0x3F spare)
+#define VAR_HOENN_DEOXYS_SIGNAL         (HOENN_LANE_A_VARS_F + 0x00) // nights the signal was heard (0-3)
+#define VAR_HOENN_DEOXYS_NIGHT          (HOENN_LANE_A_VARS_F + 0x01) // the last such night's day number + 1 (0 = none)
+#define HOENN_DEOXYS_NIGHTS 3
+
 // ---- Lane B: parts 31b, 34a, 29, 30a, 30b, 33, 36, 35a (hoenn-docs/lanes/lane-b.md) ----
 // (Kept below lane A's sections, so its additions land at the end of the file.)
 #define HOENN_LANE_B_FLAGS_E        (HOENN_FLAGS_E_JOHTO_KANTO + 0x30)     // 0x21D0, 48 flags

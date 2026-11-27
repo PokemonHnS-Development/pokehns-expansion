@@ -13,6 +13,9 @@ HoennSeek_EventScript_PhoneEventLaneA::
 	case HOENN_CALL_CIPHER, HoennSeek_EventScript_CallCipher @ part 27a (hoenn_cipher.inc)
 	case HOENN_CALL_CIPHER_FRAGMENT, HoennSeek_EventScript_CallCipherFragment @ part 27b
 	case HOENN_CALL_CIPHER_SANCTUM, HoennSeek_EventScript_CallCipherSanctum @ part 28
+	case HOENN_CALL_WISHES, HoennSeek_EventScript_CallWishes @ part 37
+	case HOENN_CALL_DEOXYS, HoennSeek_EventScript_CallDeoxys @ part 37
+	case HOENN_CALL_REGIS, HoennSeek_EventScript_CallRegis @ part 37
 	goto HoennSeek_EventScript_PhoneEventLaneB @ lane B's calls (hoenn_lane_b.inc)
 
 @ ============================================================================
@@ -487,3 +490,536 @@ HoennSeek_Text_CallCipherSanctum:
 	.string "has to be WAILORD!\p"
 	.string "Sounds like a Hoenn job to me.\n"
 	.string "Good luck!$"
+
+@ ============================================================================
+@ Part 37: Jirachi, Deoxys, the Regis, Arceus (src/hoenn_lane_a.c has the design)
+@ - Jirachi: wish on a shooting star at night at three spots (Meteor Falls
+@   clifftop, the Space Center's 2F windows, the moon hollow's pool); then the
+@   white rock answers on the Clefairy's Monday night (HnS's summon).
+@ - Deoxys: the Space Center 2F scientist logs a signal on three different
+@   nights, then gives the AURORA TICKET (Vermilion's ferry to Birth Island).
+@ - Regis: boulders seal HnS's three Regi doors at the Sinjoh Ruins. Their
+@   braille reads only after part 28's inscription; RELICANTH and WAILORD in the
+@   party roll them aside.
+@ - Arceus: after HnS's first (uncatchable) battle, the second waits until
+@   you've read the inscription (one hook line in its room's script).
+@ ============================================================================
+
+@ ---- Jirachi: the three wishes ----------------------------------------------
+@ Meteor Falls clifftop: the boulder at its top right (bg events).
+HoennSeek_EventScript_WishMeteorFalls::
+	lockall
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_WishFallsDay
+	goto_if_set FLAG_HOENN_WISH_METEOR_FALLS, HoennSeek_EventScript_WishAlreadyMade
+	msgbox HoennSeek_Text_WishFallsNight, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_ShootingStar
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_WishEnd
+	setflag FLAG_HOENN_WISH_METEOR_FALLS
+	goto HoennSeek_EventScript_WishMade
+
+HoennSeek_EventScript_WishFallsDay:
+	msgbox HoennSeek_Text_WishFallsDay, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_WishEnd
+
+@ Space Center 2F: the windows along its north wall (bg events, facing up).
+HoennSeek_EventScript_WishSpaceCenter::
+	lockall
+	gettimeofday
+	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_WishWindowDay
+	goto_if_set FLAG_HOENN_WISH_SPACE_CENTER, HoennSeek_EventScript_WishAlreadyMade
+	msgbox HoennSeek_Text_WishWindowNight, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_ShootingStar
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_WishEnd
+	setflag FLAG_HOENN_WISH_SPACE_CENTER
+	goto HoennSeek_EventScript_WishMade
+
+HoennSeek_EventScript_WishWindowDay:
+	msgbox HoennSeek_Text_WishWindowDay, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_WishEnd
+
+@ The moon hollow's pool at night (lane B's HoennSeek_EventScript_MoonHollowPool
+@ shows the moon's reflection, then comes here; it has already locked).
+HoennSeek_EventScript_WishMoonHollow::
+	goto_if_set FLAG_HOENN_WISH_MOON_HOLLOW, HoennSeek_EventScript_WishEnd
+	call HoennSeek_EventScript_ShootingStar
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_WishEnd
+	setflag FLAG_HOENN_WISH_MOON_HOLLOW
+	goto HoennSeek_EventScript_WishMade
+
+@ A streak of light, then "Make a wish?" (answer in VAR_RESULT).
+HoennSeek_EventScript_ShootingStar:
+	playse SE_SHINY
+	fadescreenswapbuffers FADE_TO_WHITE
+	delay 6
+	fadescreenswapbuffers FADE_FROM_WHITE
+	waitse
+	msgbox HoennSeek_Text_ShootingStar, MSGBOX_YESNO
+	return
+
+HoennSeek_EventScript_WishMade:
+	msgbox HoennSeek_Text_WishMade, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, HoennWishCount
+	goto_if_lt VAR_RESULT, 3, HoennSeek_EventScript_WishEnd
+	playse SE_M_HEAL_BELL
+	msgbox HoennSeek_Text_WishThird, MSGBOX_DEFAULT
+	waitse
+	goto HoennSeek_EventScript_WishEnd
+
+HoennSeek_EventScript_WishAlreadyMade:
+	msgbox HoennSeek_Text_WishAlreadyMade, MSGBOX_DEFAULT
+HoennSeek_EventScript_WishEnd:
+	releaseall
+	end
+
+@ ---- Jirachi: the white rock (MtMoon_Outside_hns's sign, a map.json swap) ----
+@ HnS's rock summoned Jirachi on any night. Now it needs the three wishes and
+@ the Clefairy's dance (Monday nights: FLAG_HOENN_HIDE_CLEFAIRY_DANCE is clear,
+@ part 3 decides it on arrival); then HnS's own summon scene runs.
+HoennSeek_EventScript_WhiteRock::
+	lock
+	msgbox MtMoon_Outside_Text_WhiteRockTouchIt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, MtMoon_Outside_EventScript_WhiteRockNoOp
+	goto_if_set FLAG_SUMMONED_MTMOON_JIRACHI, MtMoon_OutsideEventScript_WhiteRockNoReaction
+	specialvar VAR_RESULT, HoennWishCount
+	goto_if_eq VAR_RESULT, 0, MtMoon_OutsideEventScript_WhiteRockNoReaction
+	goto_if_lt VAR_RESULT, 3, HoennSeek_EventScript_WhiteRockListening
+	goto_if_set FLAG_HOENN_HIDE_CLEFAIRY_DANCE, HoennSeek_EventScript_WhiteRockWaiting
+	goto MtMoon_Outside_EventScript_WhiteRockSpawnJirachi
+
+HoennSeek_EventScript_WhiteRockListening:
+	msgbox HoennSeek_Text_WhiteRockListening, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_WhiteRockWaiting:
+	msgbox HoennSeek_Text_WhiteRockWaiting, MSGBOX_DEFAULT
+	release
+	end
+
+@ Jirachi's object (a map.json swap of HnS's script, same battle at Lv 50).
+@ Caught: gone. Knocked out: gone, but the rock can wake it again on a later
+@ Monday night (HnS lost it until the next Hall of Fame). Ran: it stays.
+HoennSeek_EventScript_MtMoonJirachi::
+	lock
+	faceplayer
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
+	msgbox MtMoon_Outside_Text_Jirachi
+	delay 40
+	waitmoncry
+	seteventmon SPECIES_JIRACHI, 50
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MtMoon_Outside_EventScript_JirachiRan
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_MtMoonJirachiGone
+	clearflag FLAG_SUMMONED_MTMOON_JIRACHI
+HoennSeek_EventScript_MtMoonJirachiGone:
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_MTMOON_JIRACHI
+	setflag FLAG_HIDE_MTMOON_JIRACHI
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_MtMoonJirachiEnd
+	msgbox HoennSeek_Text_JirachiBackToSleep, MSGBOX_DEFAULT
+HoennSeek_EventScript_MtMoonJirachiEnd:
+	release
+	end
+
+@ ---- Deoxys: the signal (MossdeepCity_SpaceCenter_2F's scientist, a swap) ----
+HoennSeek_EventScript_SignalScientist::
+	lock
+	faceplayer
+	goto_if_set FLAG_HOENN_DEOXYS_TICKET, HoennSeek_EventScript_SignalAfter
+	specialvar VAR_RESULT, HoennDeoxysSignalNight
+	goto_if_eq VAR_RESULT, 0, HoennSeek_EventScript_SignalDay
+	goto_if_ge VAR_HOENN_DEOXYS_SIGNAL, HOENN_DEOXYS_NIGHTS, HoennSeek_EventScript_SignalTicket
+	goto_if_eq VAR_RESULT, 1, HoennSeek_EventScript_SignalSameNight
+	goto_if_eq VAR_HOENN_DEOXYS_SIGNAL, 2, HoennSeek_EventScript_SignalSecond
+	msgbox HoennSeek_Text_SignalFirst, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_SignalSecond:
+	msgbox HoennSeek_Text_SignalSecond, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_SignalSameNight:
+	msgbox HoennSeek_Text_SignalSameNight, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_SignalDay:
+	goto_if_eq VAR_HOENN_DEOXYS_SIGNAL, 0, MossdeepCity_SpaceCenter_2F_EventScript_ScientistNormal
+	msgbox HoennSeek_Text_SignalDay, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_SignalTicket:
+	msgbox HoennSeek_Text_SignalThird, MSGBOX_DEFAULT
+	checkitem ITEM_AURORA_TICKET
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_SignalTicketDone
+	giveitem ITEM_AURORA_TICKET
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_SignalTicketEnd
+HoennSeek_EventScript_SignalTicketDone:
+	setflag FLAG_HOENN_DEOXYS_TICKET
+	msgbox HoennSeek_Text_SignalTicketHow, MSGBOX_DEFAULT
+HoennSeek_EventScript_SignalTicketEnd:
+	release
+	end
+
+HoennSeek_EventScript_SignalAfter:
+	msgbox HoennSeek_Text_SignalAfter, MSGBOX_DEFAULT
+	release
+	end
+
+@ HnS's Olivine fan (OlivineCity_hns, a swap) gave the AURORA TICKET to any
+@ champion. She now passes on what MARY's show said about the signal instead.
+HoennSeek_EventScript_OlivineAuroraFan::
+	lock
+	faceplayer
+	checkitem ITEM_AURORA_TICKET
+	goto_if_eq VAR_RESULT, TRUE, OlivineCity_EventScript_EonTicketWomanAfter
+	goto_if_unset FLAG_IS_KANTO_CHAMPION, OlivineCity_EventScript_EonTicketWoman
+	msgbox HoennSeek_Text_OlivineFanSignal, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+@ ---- The Regis: the sealed doors (SinjohRuins_hns) ---------------------------
+@ HnS opens each door on ON_LOAD once enough plates are found (VAR_PLATECOUNTER
+@ 3, 6, 9). A boulder object now stands in each open doorway until it's rolled
+@ aside; Regieleki's and Regidrago's doors are HnS's as they were.
+@ Called from SinjohRuins_hns's ON_TRANSITION (one hook line).
+HoennSeek_EventScript_RegiSealsArm::
+	setflag FLAG_HOENN_REGI_HIDE_ROCK
+	setflag FLAG_HOENN_REGI_HIDE_ICE
+	setflag FLAG_HOENN_REGI_HIDE_STEEL
+	goto_if_lt VAR_PLATECOUNTER, 3, HoennSeek_EventScript_RegiSealsArmEnd
+	call_if_unset FLAG_HOENN_REGI_OPEN_ROCK, HoennSeek_EventScript_RegiSealShowRock
+	goto_if_lt VAR_PLATECOUNTER, 6, HoennSeek_EventScript_RegiSealsArmEnd
+	call_if_unset FLAG_HOENN_REGI_OPEN_ICE, HoennSeek_EventScript_RegiSealShowIce
+	goto_if_lt VAR_PLATECOUNTER, 9, HoennSeek_EventScript_RegiSealsArmEnd
+	call_if_unset FLAG_HOENN_REGI_OPEN_STEEL, HoennSeek_EventScript_RegiSealShowSteel
+HoennSeek_EventScript_RegiSealsArmEnd:
+	return
+
+HoennSeek_EventScript_RegiSealShowRock:
+	clearflag FLAG_HOENN_REGI_HIDE_ROCK
+	return
+
+HoennSeek_EventScript_RegiSealShowIce:
+	clearflag FLAG_HOENN_REGI_HIDE_ICE
+	return
+
+HoennSeek_EventScript_RegiSealShowSteel:
+	clearflag FLAG_HOENN_REGI_HIDE_STEEL
+	return
+
+@ The boulders' object scripts. Flag commands can't take a var, so each door
+@ has its own short tail.
+HoennSeek_EventScript_RegiSealRock::
+	lock
+	call HoennSeek_EventScript_RegiSealRead
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_RegiSealEnd
+	setflag FLAG_HOENN_REGI_OPEN_ROCK
+	goto HoennSeek_EventScript_RegiSealMove
+
+HoennSeek_EventScript_RegiSealIce::
+	lock
+	call HoennSeek_EventScript_RegiSealRead
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_RegiSealEnd
+	setflag FLAG_HOENN_REGI_OPEN_ICE
+	goto HoennSeek_EventScript_RegiSealMove
+
+HoennSeek_EventScript_RegiSealSteel::
+	lock
+	call HoennSeek_EventScript_RegiSealRead
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_RegiSealEnd
+	setflag FLAG_HOENN_REGI_OPEN_STEEL
+	goto HoennSeek_EventScript_RegiSealMove
+
+@ The braille, its translation once the inscription is read, the cameo the
+@ first time, then the party check. VAR_RESULT: TRUE when the boulder moves.
+HoennSeek_EventScript_RegiSealRead:
+	msgbox HoennSeek_Text_RegiSealSee, MSGBOX_DEFAULT
+	braillemessage HoennSeek_Braille_RegiSeal
+	waitbuttonpress
+	closebraillemessage
+	goto_if_set FLAG_HOENN_CIPHER_INSCRIPTION, HoennSeek_EventScript_RegiSealTranslate
+	msgbox HoennSeek_Text_RegiSealUnread, MSGBOX_DEFAULT
+	setvar VAR_RESULT, FALSE
+	return
+
+HoennSeek_EventScript_RegiSealTranslate:
+	msgbox HoennSeek_Text_RegiSealRead, MSGBOX_DEFAULT
+	call_if_unset FLAG_HOENN_REGI_STIRRED, HoennSeek_EventScript_RegiSealStir
+	checkspecies SPECIES_RELICANTH
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_RegiSealStays
+	checkspecies SPECIES_WAILORD
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_RegiSealStays
+	setvar VAR_RESULT, TRUE
+	return
+
+HoennSeek_EventScript_RegiSealStays:
+	msgbox HoennSeek_Text_RegiSealStays, MSGBOX_DEFAULT
+	setvar VAR_RESULT, FALSE
+	return
+
+@ The cameo: the first time the braille is read, the giant behind it stirs.
+HoennSeek_EventScript_RegiSealStir:
+	setflag FLAG_HOENN_REGI_STIRRED
+	closemessage
+	delay 20
+	playse SE_M_STRENGTH
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 0  @ horizontal pan
+	setvar VAR_0x8006, 4  @ num shakes
+	setvar VAR_0x8007, 8  @ shake delay
+	special ShakeCamera
+	waitstate
+	delay 30
+	playse SE_M_STRENGTH
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 0
+	setvar VAR_0x8006, 4
+	setvar VAR_0x8007, 8
+	special ShakeCamera
+	waitstate
+	msgbox HoennSeek_Text_RegiSealStir, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_RegiSealMove:
+	msgbox HoennSeek_Text_RegiSealCry, MSGBOX_DEFAULT
+	closemessage
+	playse SE_M_STRENGTH
+	setvar VAR_0x8004, 2  @ vertical pan
+	setvar VAR_0x8005, 2  @ horizontal pan
+	setvar VAR_0x8006, 10 @ num shakes
+	setvar VAR_0x8007, 4  @ shake delay
+	special ShakeCamera
+	waitstate
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox HoennSeek_Text_RegiSealOpen, MSGBOX_DEFAULT
+HoennSeek_EventScript_RegiSealEnd:
+	release
+	end
+
+HoennSeek_Braille_RegiSeal:
+	brailleformat 0, 0, 0, 0, 0, 0
+	.braille "THE DEEP\n"
+	.braille "THE SEA$"
+
+@ ---- Arceus (one hook line at the top of HnS's second battle) ----------------
+@ HnS's first battle (Arceus with the Iron Plate, uncatchable) is unchanged.
+@ The second, catchable one now waits for part 28's inscription.
+HoennSeek_EventScript_ArceusWaits::
+	msgbox HoennSeek_Text_ArceusWaits, MSGBOX_DEFAULT
+	release
+	end
+
+@ ---- Phone ------------------------------------------------------------------
+HoennSeek_EventScript_CallWishes::
+	setflag FLAG_HOENN_CALL_WISHES
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallWishes
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_EventScript_CallDeoxys::
+	setflag FLAG_HOENN_CALL_DEOXYS
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallDeoxys
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_EventScript_CallRegis::
+	setflag FLAG_HOENN_CALL_REGIS
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallRegis
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Texts ------------------------------------------------------------------
+HoennSeek_Text_WishFallsDay:
+	.string "A smooth boulder, warm from the\n"
+	.string "sun. Its top faces the open sky.$"
+
+HoennSeek_Text_WishFallsNight:
+	.string "From the boulder you can see the\n"
+	.string "whole night sky over the falls.$"
+
+HoennSeek_Text_WishWindowDay:
+	.string "Through the windows: the rocket\n"
+	.string "pad, and the sea beyond it.$"
+
+HoennSeek_Text_WishWindowNight:
+	.string "Through the windows: stars over\n"
+	.string "the rocket pad and the dark sea.$"
+
+HoennSeek_Text_ShootingStar:
+	.string "A shooting star streaks across\n"
+	.string "the sky!\p"
+	.string "Make a wish?$"
+
+HoennSeek_Text_WishMade:
+	.string "{PLAYER} closed their eyes and made\n"
+	.string "a wish on the falling star…$"
+
+HoennSeek_Text_WishThird:
+	.string "Far away, something seemed to\n"
+	.string "chime, like a little bell.\p"
+	.string "Three wishes, made on three\n"
+	.string "falling stars…$"
+
+HoennSeek_Text_WishAlreadyMade:
+	.string "You've already made your wish here.\n"
+	.string "The stars keep turning overhead.$"
+
+HoennSeek_Text_WhiteRockListening:
+	.string "{PLAYER} touched the unusual rock.\n"
+	.string "..........................\p"
+	.string "It feels faintly warm, as if it\n"
+	.string "were listening for something.$"
+
+HoennSeek_Text_WhiteRockWaiting:
+	.string "{PLAYER} touched the unusual rock.\n"
+	.string "..........................\p"
+	.string "It glows softly, like the moon.\n"
+	.string "But nothing more happens.\p"
+	.string "It seems to be waiting for\n"
+	.string "something to happen here.$"
+
+HoennSeek_Text_JirachiBackToSleep:
+	.string "JIRACHI curled up and drifted back\n"
+	.string "into the stars.\p"
+	.string "Maybe the white rock will wake it\n"
+	.string "on another dancing night.$"
+
+HoennSeek_Text_SignalFirst:
+	.string "Shh! Listen… beep… beep-beep…\p"
+	.string "That pulse is coming from space!\n"
+	.string "From a meteorite, I'd bet my job.\p"
+	.string "It only comes through at night.\n"
+	.string "If I could just log it a few more\l"
+	.string "nights, I'd know where it lands.$"
+
+HoennSeek_Text_SignalSecond:
+	.string "You're back! Listen, it's the same\n"
+	.string "pulse as before, but louder.\p"
+	.string "Two nights of readings… One more\n"
+	.string "and I can plot where it lands.$"
+
+HoennSeek_Text_SignalSameNight:
+	.string "Tonight's readings are logged.\n"
+	.string "The pulse only changes between\l"
+	.string "nights, so come back another one.$"
+
+HoennSeek_Text_SignalDay:
+	.string "The signal? It's drowned out by\n"
+	.string "the sun all day.\p"
+	.string "Come back at night, when the sky\n"
+	.string "is quiet.$"
+
+HoennSeek_Text_SignalThird:
+	.string "Three nights of readings… Here!\n"
+	.string "The pulse comes from an island far\l"
+	.string "south of KANTO's VERMILION CITY.\p"
+	.string "There's a triangle of rock on it,\n"
+	.string "in the photos. Something's waiting\l"
+	.string "there for a visitor.\p"
+	.string "The SPACE CENTER chartered a pass\n"
+	.string "for the ferry. You go. I'll listen.$"
+
+HoennSeek_Text_SignalTicketHow:
+	.string "Show the AURORA TICKET to the\n"
+	.string "sailor at VERMILION's port and ask\l"
+	.string "for BIRTH ISLAND.$"
+
+HoennSeek_Text_SignalAfter:
+	.string "The pulse from BIRTH ISLAND?\n"
+	.string "Some nights it's quiet, some nights\l"
+	.string "it shouts. What's out there?$"
+
+HoennSeek_Text_OlivineFanSignal:
+	.string "You must be {PLAYER}! The champion!\p"
+	.string "On MARY's show last night, a guest\n"
+	.string "from HOENN's SPACE CENTER said\l"
+	.string "they hear a beeping from space!\p"
+	.string "Only at night, though. Spooky!\n"
+	.string "Their scientist logs it upstairs.$"
+
+HoennSeek_Text_RegiSealSee:
+	.string "A huge boulder fills the cave mouth.\n"
+	.string "Braille is carved into its face.$"
+
+HoennSeek_Text_RegiSealUnread:
+	.string "The braille is old, older than any\n"
+	.string "you know. You can't make out what\l"
+	.string "it means.$"
+
+HoennSeek_Text_RegiSealRead:
+	.string "With the inscription from the\n"
+	.string "RUINS OF ALPH, you can read it:\p"
+	.string "LET THE OLDEST OF THE DEEP AND\n"
+	.string "THE GREATEST OF THE SEA STAND\l"
+	.string "BEFORE THIS STONE.$"
+
+HoennSeek_Text_RegiSealStir:
+	.string "Something huge moved, deep\n"
+	.string "behind the boulder…\p"
+	.string "One heavy step, then another.\n"
+	.string "Then silence.$"
+
+HoennSeek_Text_RegiSealStays:
+	.string "The boulder doesn't budge.$"
+
+HoennSeek_Text_RegiSealCry:
+	.string "RELICANTH and WAILORD cry out\n"
+	.string "from their POKé BALLS!\p"
+	.string "The boulder starts to tremble…$"
+
+HoennSeek_Text_RegiSealOpen:
+	.string "The boulder rolled aside!\n"
+	.string "The way in is open.$"
+
+HoennSeek_Text_ArceusWaits:
+	.string "ARCEUS watches you, perfectly\n"
+	.string "still and silent.\p"
+	.string "It seems to be waiting for words\n"
+	.string "older than these RUINS.$"
+
+HoennSeek_Text_CallWishes:
+	.string "Hi, {PLAYER}! It's MAY.\p"
+	.string "An old man from MOSSDEEP's SPACE\n"
+	.string "CENTER phoned PROF. BIRCH. He's an\l"
+	.string "old stargazing friend of his.\p"
+	.string "He said a trainer's been making\n"
+	.string "wishes on shooting stars, in all\l"
+	.string "three places from his old story!\p"
+	.string "That's you, isn't it? In the story,\n"
+	.string "the wish comes true at the white\l"
+	.string "rock on MT. MOON…\p"
+	.string "on the night the CLEFAIRY dance.\n"
+	.string "Good luck!$"
+
+HoennSeek_Text_CallDeoxys:
+	.string "Hey, {PLAYER}, it's BRENDAN.\p"
+	.string "The SPACE CENTER phoned Dad to\n"
+	.string "borrow a meteorite sample, and\l"
+	.string "mentioned their signal.\p"
+	.string "They gave you the ferry pass to\n"
+	.string "BIRTH ISLAND?\p"
+	.string "Dad says if something fell from\n"
+	.string "space, it may not like visitors.\l"
+	.string "Be careful out there!$"
+
+HoennSeek_Text_CallRegis:
+	.string "Hi, {PLAYER}! It's MAY.\p"
+	.string "STEVEN phoned PROF. BIRCH from\n"
+	.string "the SINJOH RUINS!\p"
+	.string "He said the ground shook, and a\n"
+	.string "boulder rolled away from one of\l"
+	.string "the old doors in the cliffs.\p"
+	.string "With RELICANTH and WAILORD, just\n"
+	.string "like the braille said! You really\l"
+	.string "did it, didn't you?$"

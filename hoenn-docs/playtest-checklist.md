@@ -435,6 +435,15 @@ Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its 
 - Radio (PokéGear, station 41, in the Ruins) at each stage: before the tablet (a site word that changes weekly), with the tablet, after the boulder, after the inscription. The emulator only checked the last stage.
 - The sanctum's battle background (a cave).
 
+## 2.0 part 37 (Jirachi, Deoxys, the Regis, Arceus)
+- Make the three wishes at night (Meteor Falls clifftop boulder, Space Center 2F windows, the moon hollow's pool). Does the shooting-star flash read as a falling star? Is the clifftop boulder an obvious place to look?
+- Mt. Moon Square's white rock with 1–2 wishes, with 3 on a non-Monday night, and on a Monday night after the Clefairy appear. Catch Jirachi; on another save, knock it out and summon it again the next Monday.
+- The Space Center 2F scientist on three different real nights (he wanders: talk from any side), then take the AURORA TICKET to Vermilion's port and on to Birth Island's triangle and Deoxys. The emulator stopped at the ticket.
+- Olivine's ticket fan as champion (the MARY report) and after you have the ticket.
+- Sinjoh Ruins after finding 3, 6 and 9 plates: do the boulders sit well in the cliff doorways? Read one before and after part 28's inscription (the footsteps cameo the first time), then with Relicanth and Wailord. Walk into each room; Regice's and Registeel's were only seen, not opened, in the emulator.
+- Arceus: win HnS's first battle before reading the inscription, then talk again (it waits); after the inscription it battles. Steven's scene after the first battle still plays.
+- The three calls outdoors (May after the third wish, Brendan after the ticket, May after a boulder moves) and the hint NPCs: the Space Center's old man and 1F woman, the Sinjoh lab's linguist. In the debug save the two Space Center NPCs still say Emerald's Magma lines in their own turn (the save lacks `FLAG_SYS_GAME_CLEAR`); check them on a real save.
+
 ## Lane B parts (27a, 31b on: Kanto, Safari, legends)
 Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 
