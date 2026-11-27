@@ -19,7 +19,7 @@ Only lane A's builder edits this file (the reviewer may add a line when it merge
 | 31a | — | — | |
 | 32 | — | — | lane B's 33 waits for it |
 | 34b | — | — | needs lane B's 34a |
-| 35b | PR open (Nov 27), waiting for review | `v2-35b-johto-legends` | flags `HOENN_LANE_A_FLAGS_F` + 0x00–0x0D (0x0E–0x0F spare), daily + 2–4, call 41; built the radio hook (`HoennRadioEusineReport` in OAK's POKéMON TALK), so 28 reuses it instead of building it |
+| 35b | PR #99 open (Nov 27), waiting for review | `v2-35b-johto-legends` | flags `HOENN_LANE_A_FLAGS_F` + 0x00–0x0D (0x0E–0x0F spare), daily + 2–4, call 41; built the radio hook (`HoennRadioEusineReport` in OAK's POKéMON TALK), so 28 reuses it instead of building it |
 | 37 | — | — | needs lane B's 31b |
 
 ## Claims on shared things
