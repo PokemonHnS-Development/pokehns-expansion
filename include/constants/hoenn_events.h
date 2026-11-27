@@ -434,4 +434,25 @@
 #define FLAG_HOENN_CALL_ICE_GLALIE      (HOENN_FLAGS_E_HOENN + 0x53) // Brendan
 #define FLAG_HOENN_DAILY_ICE_GLALIE     (HOENN_DAILY_FLAGS_START + 0x11) // knocked out (or caught) today
 
+// ---- Part 26b: Ice chamber B (data/scripts/hoenn_hidden.inc) ----
+// The chamber at night: a FROSLASS's reflection shows in one of its ice
+// pillars (the ice rocks). Touch that pillar and she slips into the next one,
+// across the hall and into the inner chamber; touch any other pillar while she
+// is in the ice and a gust blows you back up to the ladder (the chase starts
+// over). At the fifth pillar she steps out: scaled, perfect IVs, Spirit
+// Shackle. Run and she stays; knocked out, she's back tomorrow night; caught,
+// gone. After her first battle the pillar she left gives up ARTICUNO's
+// FROST FEATHER. Bonuses: a DAWN STONE behind the inner chamber's outcrop and
+// a NEVERMELTICE frozen into the hall's north-west wall (hidden).
+#define FLAG_HOENN_HIDE_ICE_FROSLASS    (HOENN_FLAGS_E_HOENN + 0x54) // decided on every arrival
+#define FLAG_HOENN_CAUGHT_ICE_FROSLASS  (HOENN_FLAGS_E_HOENN + 0x55)
+#define FLAG_HOENN_ICE_FROSLASS_MET     (HOENN_FLAGS_E_HOENN + 0x56) // she stepped out of the last pillar once
+#define FLAG_HOENN_GOT_FROST_FEATHER    (HOENN_FLAGS_E_HOENN + 0x57)
+#define FLAG_HOENN_ITEM_ICE_DAWN_STONE  (HOENN_FLAGS_E_HOENN + 0x58) // item ball behind the outcrop
+#define FLAG_HOENN_CALL_FROST_FEATHER   (HOENN_FLAGS_E_HOENN + 0x59) // May
+#define FLAG_HOENN_DAILY_ICE_FROSLASS   (HOENN_DAILY_FLAGS_START + 0x12) // knocked out (or caught) today
+#define FLAG_HOENN_HIDDEN_ICE_NEVERMELTICE (HOENN_EVENT_HIDDEN_ITEMS_START + 0x03)
+// The chase's stage lives in VAR_TEMP_4 (0 = no chase, 1-5 = the pillar she's
+// in, 6 = she stepped out), so leaving the map starts it over.
+
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

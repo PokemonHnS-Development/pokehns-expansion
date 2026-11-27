@@ -43,6 +43,7 @@ HoennSeek_EventScript_PhoneEvent::
 	case HOENN_CALL_TRENCH, HoennSeek_EventScript_CallTrench
 	case HOENN_CALL_TRENCH_DOOR, HoennSeek_EventScript_CallTrenchDoor
 	case HOENN_CALL_ICE_GLALIE, HoennSeek_EventScript_CallIceGlalie
+	case HOENN_CALL_FROST_FEATHER, HoennSeek_EventScript_CallFrostFeather
 	releaseall
 	end
 

@@ -38,5 +38,6 @@
 #define HOENN_CALL_TRENCH 33 // Brendan: you followed the Chinchou lights into the Route 124 trench (2.0 part 25a)
 #define HOENN_CALL_TRENCH_DOOR 34 // May: the trench's three guardians are caught and its door is open (2.0 part 25b)
 #define HOENN_CALL_ICE_GLALIE 35 // Brendan: you met the Glalie in Shoal Cave's ice chamber (2.0 part 26a)
+#define HOENN_CALL_FROST_FEATHER 36 // May: you found Articuno's feather behind the Froslass (2.0 part 26b)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

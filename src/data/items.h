@@ -14480,6 +14480,25 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_SootheBell,
         .iconPalette = gItemIconPalette_SootheBell,
     },
+
+    // Hoenn & Seek 2.0 part 26b: frozen into the ice behind the Froslass in
+    // Shoal Cave's ice chamber. One of the three birds' feathers that the
+    // legendary parts (Articuno's roost, Lugia's shrine) ask for.
+    [ITEM_FROST_FEATHER] =
+    {
+        .name = ITEM_NAME("FROST FEATHER"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A great bird's ice-\n"
+            "blue feather. It\n"
+            "never melts."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_EVFeather,
+        .iconPalette = gItemIconPalette_GeniusFeather,
+    },
 #endif
 
     [ITEM_EON_TICKET] =

@@ -1089,6 +1089,7 @@ enum __attribute__((packed)) Item
     ITEM_GLASS_FLUTE, // Hoenn & Seek 2.0 part 20: the glassblower's flute (wakes Route 113's Munchlax)
     ITEM_SINGING_SAND, // Hoenn & Seek 2.0 part 24a: the Desert Underpass Vibrava's sand (Flygon's desert song)
     ITEM_SAND_CHIME, // Hoenn & Seek 2.0 part 24b: the Singing Sand fused into glass; raises the Mirage Tower
+    ITEM_FROST_FEATHER, // Hoenn & Seek 2.0 part 26b: Articuno's feather from Shoal Cave's ice chamber
 #endif
 
     ITEMS_COUNT,

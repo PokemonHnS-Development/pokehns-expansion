@@ -823,6 +823,15 @@ HoennSeek_Text_Hint_RumorIce_ChamberAfter::
 HoennSeek_Text_Hint_RumorIce_ChamberNotes::
 	.string "When the tide is out, the ice room\nat the bottom of SHOAL CAVE has a\lway down. Mind the slippery floor.$"
 
+HoennSeek_Text_Hint_RumorIce_FroslassBefore::
+	.string "They say a ghost walks the ice\nunder SHOAL CAVE at night. Her\lface shows in the ice, but she's\lnever there when you look!$"
+
+HoennSeek_Text_Hint_RumorIce_FroslassAfter::
+	.string "Somebody chased that ghost through\nthe ice under SHOAL CAVE. It was\la FROSLASS!$"
+
+HoennSeek_Text_Hint_RumorIce_FroslassNotes::
+	.string "At night, a FROSLASS's face shows\nin the pillars of the SHOAL CAVE\lice chamber. Touch the one she's\lin, and only that one.$"
+
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
 
@@ -1014,6 +1023,12 @@ HoennSeek_Text_Hint_LineStoryIceHole::
 
 HoennSeek_Text_Hint_LineStoryIceGlalie::
 	.string "You went down through the ice?\nThen you've seen that GLALIE on\lthe frozen pool.\pIts head is harder than the ice it\nsits in. Bring something that can\ltake a hit!$"
+
+HoennSeek_Text_Hint_LineStoryIceFroslass::
+	.string "Something cold walks the ice down\nthere when the tide is out\lat night.\pYou'll see her in the ice before\nyou see her. Touch the wrong ice\land she'll blow you right back!$"
+
+HoennSeek_Text_Hint_LineStoryIceFeather::
+	.string "That feather you found… A great\nice bird passed over the sea when\lI was a boy.\pSomething like that doesn't leave\nits feathers lying around for\lnothing. Hold on to it.$"
 
 HoennSeek_Text_Hint_Forecast0::
 	.string "Storms are rolling in around ROUTE\n120 {STR_VAR_1}.\pFolks say that's when the white\none walks.$"

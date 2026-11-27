@@ -395,3 +395,13 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Catch the Glalie with an ordinary ball (the emulator used a Master Ball); check Head Smash and the 31s in the summary.
 - The bicycle on the chamber's ice (the map allows cycling, like Emerald's ice room).
 - Brendan's call after meeting the Glalie (rings within a few steps in a cave or outdoors).
+
+## 2.0 part 26b (Ice chamber B)
+- Do the whole Froslass chase yourself at night (7–9 PM or 3–6 AM, at low tide): is following her through the sliding hall fun, too long, or confusing? Is it clear which pillar she's in (her sprite stands on the rock)?
+- Touch a wrong pillar on purpose: the gust, the white fade, and the chase starting over at the first pillar (her intro plays again).
+- Leave by the ladder mid-chase and come back: the chase should start over.
+- Her battle: catch her with an ordinary ball; check Spirit Shackle (you can't switch out or run while it's in effect) and the 31s.
+- The FROST FEATHER in the key items pocket: name, icon and description.
+- The Dawn Stone behind the outcrop and the NeverMeltIce in the hall's top-left wall (face the wall from the corner).
+- May's call about the feather (rings within a few steps in a cave or outdoors).
+- The Shell Bell man's new lines and the Pacifidlog old man's rumor.
