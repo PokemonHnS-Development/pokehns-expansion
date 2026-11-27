@@ -81,7 +81,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SURSKIT",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PSYDUCK",
       "x": 21,
       "y": -3,
       "elevation": 0,
@@ -94,7 +94,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPOINK",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DROWZEE",
       "x": 5,
       "y": 18,
       "elevation": 0,

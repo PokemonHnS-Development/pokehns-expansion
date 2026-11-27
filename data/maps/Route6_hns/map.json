@@ -130,7 +130,7 @@
       "flag": "FLAG_RETURNED_MACHINE_PART"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PLUSLE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PSYDUCK",
       "x": 57,
       "y": 4,
       "elevation": 0,
@@ -143,7 +143,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MINUN",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MANKEY",
       "x": 56,
       "y": 6,
       "elevation": 0,

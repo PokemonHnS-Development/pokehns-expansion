@@ -122,7 +122,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEVIPER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_EKANS",
       "x": 83,
       "y": 0,
       "elevation": 0,
@@ -135,7 +135,7 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ZANGOOSE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MANKEY",
       "x": 30,
       "y": 16,
       "elevation": 0,

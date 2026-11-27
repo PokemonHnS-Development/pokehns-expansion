@@ -193,7 +193,7 @@
      {
       "min_level": 40,
       "max_level": 40,
-      "species": "SPECIES_GARDEVOIR"
+      "species": "SPECIES_NUZLEAF"
      },
      {
       "min_level": 40,
@@ -347,7 +347,7 @@
      {
       "min_level": 40,
       "max_level": 40,
-      "species": "SPECIES_GARDEVOIR"
+      "species": "SPECIES_NUZLEAF"
      },
      {
       "min_level": 40,
@@ -2242,12 +2242,12 @@
      {
       "min_level": 40,
       "max_level": 40,
-      "species": "SPECIES_GLOOM"
+      "species": "SPECIES_ROSELIA"
      },
      {
       "min_level": 40,
       "max_level": 40,
-      "species": "SPECIES_GLOOM"
+      "species": "SPECIES_ROSELIA"
      },
      {
       "min_level": 46,
@@ -4997,17 +4997,17 @@
      {
       "min_level": 50,
       "max_level": 50,
-      "species": "SPECIES_TROPIUS"
+      "species": "SPECIES_BRELOOM"
      },
      {
       "min_level": 52,
       "max_level": 52,
-      "species": "SPECIES_TROPIUS"
+      "species": "SPECIES_BRELOOM"
      },
      {
       "min_level": 54,
       "max_level": 54,
-      "species": "SPECIES_TROPIUS"
+      "species": "SPECIES_BRELOOM"
      },
      {
       "min_level": 50,
@@ -5111,7 +5111,7 @@
      {
       "min_level": 50,
       "max_level": 50,
-      "species": "SPECIES_ABSOL"
+      "species": "SPECIES_GLOOM"
      },
      {
       "min_level": 50,
@@ -5151,17 +5151,17 @@
      {
       "min_level": 50,
       "max_level": 50,
-      "species": "SPECIES_TROPIUS"
+      "species": "SPECIES_BRELOOM"
      },
      {
       "min_level": 52,
       "max_level": 52,
-      "species": "SPECIES_TROPIUS"
+      "species": "SPECIES_BRELOOM"
      },
      {
       "min_level": 54,
       "max_level": 54,
-      "species": "SPECIES_TROPIUS"
+      "species": "SPECIES_BRELOOM"
      },
      {
       "min_level": 50,
@@ -5305,12 +5305,12 @@
      {
       "min_level": 48,
       "max_level": 48,
-      "species": "SPECIES_ABSOL"
+      "species": "SPECIES_NUZLEAF"
      },
      {
       "min_level": 54,
       "max_level": 54,
-      "species": "SPECIES_ABSOL"
+      "species": "SPECIES_NUZLEAF"
      },
      {
       "min_level": 48,
@@ -5419,7 +5419,7 @@
      {
       "min_level": 48,
       "max_level": 48,
-      "species": "SPECIES_ABSOL"
+      "species": "SPECIES_MIGHTYENA"
      },
      {
       "min_level": 48,
@@ -5459,12 +5459,12 @@
      {
       "min_level": 48,
       "max_level": 48,
-      "species": "SPECIES_ABSOL"
+      "species": "SPECIES_NUZLEAF"
      },
      {
       "min_level": 54,
       "max_level": 54,
-      "species": "SPECIES_ABSOL"
+      "species": "SPECIES_NUZLEAF"
      },
      {
       "min_level": 48,

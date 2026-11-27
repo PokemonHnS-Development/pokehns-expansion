@@ -142,6 +142,7 @@
     "RUMOR_ENIGMA_SHARDS": {"kind": "rumor", "rumor": "ENIGMA_SHARDS"},
     "RUMOR_MANSION_JOURNAL": {"kind": "rumor", "rumor": "MANSION_JOURNAL"},
     "RUMOR_MEW_BLUR": {"kind": "rumor", "rumor": "MEW_BLUR"},
+    "RUMOR_LUGIA_SONG": {"kind": "rumor", "rumor": "LUGIA_SONG"},
     "RUMOR_ICE_FROSLASS": {"kind": "rumor", "rumor": "ICE_FROSLASS", "if": [{"flag": "FLAG_HOENN_ICE_CHAMBER_FOUND"}]},
     "STORY_CIPHER_WALL":  {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ASKED"}, {"not_flag": "FLAG_HOENN_CIPHER_ROSETTA"}], "text": ["Did you feel that tremor? A new line of writing turned up inside the RUINS.", "It's got dots on it like nothing from JOHTO. We need someone who's been to HOENN!"]},
     "STORY_CIPHER_NIGHT": {"kind": "story", "if": [{"flag": "FLAG_HOENN_CIPHER_ROSETTA"}, {"not_flag": "FLAG_HOENN_CIPHER_ALL_WORDS"}], "text": ["AT NIGHT WE SPEAK… I've been sleeping here at the lab ever since you read it.", "If the WORDS chambers really light up at night, is it the same word every night? Tell my colleague what you see!"]},
@@ -152,6 +153,7 @@
     "STORY_LANTURN_LIGHTS": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_LAGOON_FOUND"}], "text": ["Sail past the WHIRL ISLANDS after dark and you'll see a light on the water, bobbing along like it wants you to follow.", "Old hands say it leads somewhere no chart shows. Me, I steer clear!"]},
     "STORY_LANTURN_LAGOON": {"kind": "story", "if": [{"flag": "FLAG_HOENN_LAGOON_FOUND"}], "text": ["You followed that light at night? Then you've seen where it goes.", "Some places the sea keeps for itself. Don't worry, I won't tell a soul."]},
     "STORY_AMPHY_NIGHT": {"kind": "story", "if": [{"var": "VAR_OLIVINE_CITY_STATE", "min": 5}, {"not_flag": "FLAG_HOENN_RESCUED_AMPHAROS"}], "text": ["AMPHY's well again, but JASMINE says it won't settle at night.", "It just stands at the top of the LIGHTHOUSE, staring out to sea."]},
+    "STORY_LUGIA_SURFACED": {"kind": "story", "if": [{"flag": "FLAG_HOENN_LUGIA_CAMEO_SEEN"}, {"not_flag": "FLAG_HOENN_LUGIA_SHRINE_OPEN"}], "text": ["You saw it too? Something huge and silver, singing off the ridge on ROUTE 41!", "It dove for the WHIRL ISLANDS. They say the islands keep a chamber nobody can find until the sea lets them."]},
     "STORY_WISH_MONDAY": {"kind": "story", "if": [{"flag": "FLAG_HOENN_WISH_METEOR_FALLS"}, {"flag": "FLAG_HOENN_WISH_SPACE_CENTER"}, {"flag": "FLAG_HOENN_WISH_MOON_HOLLOW"}, {"not_caught": "JIRACHI"}], "text": ["Three wishes on three falling stars? Then the old story says the white rock at MT. MOON will answer.", "But only on the night the CLEFAIRY dance there. That's Monday night, in my day."]},
     "STORY_WISHES": {"kind": "story", "if": [{"not_caught": "JIRACHI"}], "text": ["When I was a boy, we wished on falling stars in three places: where the stars fell, where people watch them, and where the moon comes closest.", "METEOR FALLS, this very SPACE CENTER at night… and the third is a hollow somewhere in JOHTO that only the bears know."]},
     "RUMOR_JIRACHI": {"kind": "rumor", "rumor": "JIRACHI"},
@@ -388,6 +390,12 @@
       "after": "Someone's been picking up the scraps that pink blur drops. I bet they'd make a map!",
       "notes": "At dawn, something pink plays in the grass of ROUTE 1, ROUTE 22 and HOENN's ROUTE 101. It leaves scraps of an old sea chart behind."
     },
+    "LUGIA_SONG": {
+      "found": [{"flag": "FLAG_HOENN_LUGIA_SHRINE_OPEN"}],
+      "before": ["Old sailors in OLIVINE say there's a song under the sea near the WHIRL ISLANDS.", "Fire, ice and thunder, it goes, and something silver to bring them together."],
+      "after": "The sea round the WHIRL ISLANDS has been dead calm lately. Like it's listening for something.",
+      "notes": "The SLOWKING in SLOWPOKE WELL sings an old prophecy. The three birds' feathers and a SILVER WING, laid on a stone past ROUTE 41's night lights, open the WHIRL ISLANDS' deepest chamber."
+    },
     "JIRACHI": {
       "found": [{"caught": "JIRACHI"}],
       "before": ["They say a POKéMON sleeps for a thousand years and wakes for a wish.", "Wish on a falling star in three places, and it might hear you."],
@@ -483,6 +491,7 @@
     {"map": "OldaleTown_PokemonCenter_1F", "script": "OldaleTown_PokemonCenter_1F_EventScript_Boy", "key": "OldalePCBoy", "lines": ["RUMOR_MEW_BLUR"]},
     {"map": "OlivineCity_Cafe_hns",              "script": "OlivineCity_EventScript_SailorB", "key": "OlivineCafeSailor", "lines": ["STORY_LANTURN_LAGOON", "STORY_LANTURN_LIGHTS"]},
     {"map": "OlivineCity_Lighthouse_hns",        "script": "OlivineLighthouse_EventScript_1FSailor", "key": "LighthouseSailor", "lines": ["STORY_AMPHY_NIGHT"]},
+    {"map": "OlivineCity_PokemonCenter_hns", "script": "OlivineCity_EventScript_Fisher", "key": "OlivinePCFisher", "lines": ["STORY_LUGIA_SURFACED", "RUMOR_LUGIA_SONG"]},
     {"map": "MossdeepCity_SpaceCenter_1F", "script": "MossdeepCity_SpaceCenter_1F_EventScript_OldMan", "key": "SpaceCenterOldMan", "lines": ["STORY_WISH_MONDAY", "STORY_WISHES", "RUMOR_JIRACHI"]},
     {"map": "MossdeepCity_SpaceCenter_1F", "script": "MossdeepCity_SpaceCenter_1F_EventScript_Woman", "key": "SpaceCenterWoman", "lines": ["STORY_SIGNAL", "RUMOR_DEOXYS"]},
     {"map": "SinjohRuins_House1_hns", "script": "SinjohRuins_Lab_EventScript_Linguist", "key": "SinjohLinguist", "lines": ["STORY_ARCEUS_WAITS", "STORY_REGI_SEA", "STORY_REGI_BRAILLE", "RUMOR_REGI_DOORS"]}

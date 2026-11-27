@@ -578,10 +578,18 @@ HoennSeek_EventScript_Hint_LighthouseSailor::
 	callstd MSGBOX_NPC
 	end
 
+@ OlivineCity_PokemonCenter_hns
+HoennSeek_EventScript_Hint_OlivinePCFisher::
+	callnative HoennSeek_NpcHint
+	.2byte 72
+	goto_if_eq VAR_RESULT, FALSE, OlivineCity_EventScript_Fisher
+	callstd MSGBOX_NPC
+	end
+
 @ MossdeepCity_SpaceCenter_1F
 HoennSeek_EventScript_Hint_SpaceCenterOldMan::
 	callnative HoennSeek_NpcHint
-	.2byte 72
+	.2byte 73
 	goto_if_eq VAR_RESULT, FALSE, MossdeepCity_SpaceCenter_1F_EventScript_OldMan
 	callstd MSGBOX_NPC
 	end
@@ -589,7 +597,7 @@ HoennSeek_EventScript_Hint_SpaceCenterOldMan::
 @ MossdeepCity_SpaceCenter_1F
 HoennSeek_EventScript_Hint_SpaceCenterWoman::
 	callnative HoennSeek_NpcHint
-	.2byte 73
+	.2byte 74
 	goto_if_eq VAR_RESULT, FALSE, MossdeepCity_SpaceCenter_1F_EventScript_Woman
 	callstd MSGBOX_NPC
 	end
@@ -597,7 +605,7 @@ HoennSeek_EventScript_Hint_SpaceCenterWoman::
 @ SinjohRuins_House1_hns
 HoennSeek_EventScript_Hint_SinjohLinguist::
 	callnative HoennSeek_NpcHint
-	.2byte 74
+	.2byte 75
 	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_Linguist
 	callstd MSGBOX_NPC
 	end
@@ -605,7 +613,7 @@ HoennSeek_EventScript_Hint_SinjohLinguist::
 @ Route34_FishingShack_hoenn
 HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 75
+	.2byte 76
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -613,7 +621,7 @@ HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 @ OlivineCity_HarborOffice_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 76
+	.2byte 77
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -621,7 +629,7 @@ HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 @ OlivineCity_SailorsHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 	callnative HoennSeek_NpcHint
-	.2byte 77
+	.2byte 78
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
@@ -629,7 +637,7 @@ HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 @ OlivineCity_CaptainsHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 78
+	.2byte 79
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -637,7 +645,7 @@ HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 @ OlivineCity_TackleShop_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 79
+	.2byte 80
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -645,7 +653,7 @@ HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 @ OlivineCity_Shipwright_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 80
+	.2byte 81
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -653,7 +661,7 @@ HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 @ OlivineCity_KeepersHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 81
+	.2byte 82
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -661,7 +669,7 @@ HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 @ EcruteakCity_DanceTeacher_hoenn
 HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 82
+	.2byte 83
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -669,7 +677,7 @@ HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 @ Route34_BreedersHouse_hoenn
 HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 83
+	.2byte 84
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -677,7 +685,7 @@ HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 @ Route38_MoomooStoreroom_hoenn
 HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 84
+	.2byte 85
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -685,7 +693,7 @@ HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 @ BellchimeTrail_Lodge_hoenn
 HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 85
+	.2byte 86
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -693,7 +701,7 @@ HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 @ Route6_BugClub_hoenn
 HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 86
+	.2byte 87
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -701,7 +709,7 @@ HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 @ Route6_EngineersHouse_hoenn
 HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 87
+	.2byte 88
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -709,7 +717,7 @@ HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 @ CeladonCity_FloristsHouse_hoenn
 HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 88
+	.2byte 89
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -717,7 +725,7 @@ HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 @ MelemeleIsle_IslandHome_hoenn
 HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 89
+	.2byte 90
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -725,7 +733,7 @@ HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 @ MelemeleIsle_SurfShop_hoenn
 HoennSeek_EventScript_Hint_MelemeleIsle_SurfShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 90
+	.2byte 91
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -733,7 +741,7 @@ HoennSeek_EventScript_Hint_MelemeleIsle_SurfShop_hoenn_Npc1::
 @ Route45_BeekeeperHouse_hoenn
 HoennSeek_EventScript_Hint_Route45_BeekeeperHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 91
+	.2byte 92
 	goto_if_eq VAR_RESULT, FALSE, Route45_BeekeeperHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -1099,6 +1107,15 @@ HoennSeek_Text_Hint_RumorMew_BlurAfter::
 HoennSeek_Text_Hint_RumorMew_BlurNotes::
 	.string "At dawn, something pink plays in\nthe grass of ROUTE 1, ROUTE 22 and\lHOENN's ROUTE 101. It leaves\lscraps of an old sea chart behind.$"
 
+HoennSeek_Text_Hint_RumorLugia_SongBefore::
+	.string "Old sailors in OLIVINE say there's\na song under the sea near the\lWHIRL ISLANDS.\pFire, ice and thunder, it goes,\nand something silver to bring\lthem together.$"
+
+HoennSeek_Text_Hint_RumorLugia_SongAfter::
+	.string "The sea round the WHIRL ISLANDS\nhas been dead calm lately. Like\lit's listening for something.$"
+
+HoennSeek_Text_Hint_RumorLugia_SongNotes::
+	.string "The SLOWKING in SLOWPOKE WELL\nsings an old prophecy. The three\lbirds' feathers and a SILVER WING,\llaid on a stone past ROUTE 41's\lnight lights, open the WHIRL\lISLANDS' deepest chamber.$"
+
 HoennSeek_Text_Hint_RumorJirachiBefore::
 	.string "They say a POKéMON sleeps for a\nthousand years and wakes for\la wish.\pWish on a falling star in three\nplaces, and it might hear you.$"
 
@@ -1362,6 +1379,9 @@ HoennSeek_Text_Hint_LineStoryLanturnLagoon::
 
 HoennSeek_Text_Hint_LineStoryAmphyNight::
 	.string "AMPHY's well again, but JASMINE\nsays it won't settle at night.\pIt just stands at the top of the\nLIGHTHOUSE, staring out to sea.$"
+
+HoennSeek_Text_Hint_LineStoryLugiaSurfaced::
+	.string "You saw it too? Something huge and\nsilver, singing off the ridge on\lROUTE 41!\pIt dove for the WHIRL ISLANDS.\nThey say the islands keep a\lchamber nobody can find until the\lsea lets them.$"
 
 HoennSeek_Text_Hint_LineStoryWishMonday::
 	.string "Three wishes on three falling\nstars? Then the old story says the\lwhite rock at MT. MOON\lwill answer.\pBut only on the night the CLEFAIRY\ndance there. That's Monday night,\lin my day.$"

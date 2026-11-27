@@ -74,6 +74,8 @@
 #include "string_util.h"
 #include "constants/characters.h"
 #include "constants/event_objects.h"
+#include "constants/event_object_movement.h"
+#include "constants/map_event_ids.h"
 #include "constants/map_groups.h"
 #include "constants/rtc.h"
 #include "constants/species.h"
@@ -481,6 +483,28 @@ void HoennAmpharosHidePlayer(void)
     gObjectEvents[gPlayerAvatar.objectEventId].invisible = TRUE;
 }
 
+// ---------------------------------------------------------------------------
+// Part 34b: Lugia. Route 41 already holds 64 object templates, the most a map
+// can have, so the Lugia that surfaces there borrows part 32's Lanturn light:
+// once the lagoon is found that light never shows again. Its template is the
+// RAM copy in SaveBlock1, so changing its graphics here only lasts until the
+// map loads again (the next load copies the ROM template back).
+void HoennLugiaCameoPrepare(void)
+{
+    u32 i;
+    struct ObjectEventTemplate *templates = gSaveBlock1Ptr->objectEventTemplates;
+
+    for (i = 0; i < gMapHeader.events->objectEventCount; i++)
+    {
+        if (templates[i].localId == LOCALID_HOENN_LANTURN_LIGHT)
+        {
+            templates[i].graphicsId = OBJ_EVENT_GFX_MON_BASE + SPECIES_LUGIA;
+            templates[i].movementType = MOVEMENT_TYPE_FACE_DOWN;
+            return;
+        }
+    }
+}
+
 // ---- Part 37: Jirachi's wishes, Deoxys's signal -----------------------------
 // specialvar VAR_RESULT, HoennWishCount: how many of the three wishes are made.
 u16 HoennWishCount(void)
@@ -540,6 +564,9 @@ u16 HoennLaneADueCall(void)
     // Part 35b: Brendan heard of the rainbow over Ecruteak (src/hoenn_johto_legends.c)
     if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_HOOH_RAINBOW) && !FlagGet(FLAG_HOENN_CALL_RAINBOW))
         return HOENN_CALL_RAINBOW;
+    // Part 34b, Brendan: Bill heard the Olivine lighthouse saw the Whirl Islands' sea go still.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_LUGIA_SHRINE_OPEN) && !FlagGet(FLAG_HOENN_CALL_LUGIA))
+        return HOENN_CALL_LUGIA;
     // Part 37, May: the Space Center's old man phoned Birch about your wishes.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && HoennWishCount() == 3 && !FlagGet(FLAG_HOENN_CALL_WISHES))
         return HOENN_CALL_WISHES;

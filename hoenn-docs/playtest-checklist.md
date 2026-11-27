@@ -460,6 +460,14 @@ Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its 
 - The roof at dawn (Ho-Oh there) and at any other time (empty), including at night.
 - With the GS BALL waiting at the shrine: plant a berry at each soil spot (the clearing floor just left of the Ilex shrine; you can step onto it, so face it to plant, below the lone tree in Viridian Forest's south, beside a lone tree in Petalburg Woods' tall grass on the east side), come back the next day, take the glowing berries, then the shrine and Celebi.
 
+## 2.0 part 34b (Lugia)
+- The lagoon stone with none, some and all of the four treasures (FROST, THUNDER, FLAME FEATHERS, SILVER WING): the empty-hollow lines, then the ceremony. Does the white flash look right, and does the lagoon keep its night colours afterwards?
+- **The Lugia battle itself** in the Whirl Islands' deep chamber after the shrine opens (HnS's Lv 70 encounter; not played in the emulator), and catching it.
+- The chamber before the shrine: empty. Route 41's south-west open after the shrine (Tentacruel gone).
+- A save that already caught Lugia in HnS's story: the shrine still opens, the chamber stays empty.
+- The cameo: at night after the lagoon and the Slowking's prophecy, surf north of the lagoon cave. Once only; not by day; not without the prophecy. Does Lugia's dive look right?
+- Brendan's call after the shrine; the Olivine Pokémon Center fisher's lines before and after.
+
 ## 2.0 part 37 (Jirachi, Deoxys, the Regis, Arceus)
 - Make the three wishes at night (Meteor Falls clifftop boulder, Space Center 2F windows, the moon hollow's pool). Does the shooting-star flash read as a falling star? Is the clifftop boulder an obvious place to look?
 - Mt. Moon Square's white rock with 1–2 wishes, with 3 on a non-Monday night, and on a Monday night after the Clefairy appear. Catch Jirachi; on another save, knock it out and summon it again the next Monday.
@@ -546,3 +554,10 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 - Three scraps → the OLD SEA MAP → the Vermilion sailor → Faraway Island. Faraway's Mew chase itself wasn't retested. May's call.
 - HnS's Hall of Fame clears `FLAG_CAUGHT_MEW` (so Faraway's Mew can come back): after a Hall of Fame with Mew caught, the blurs can show again at dawn, but only where you haven't already found the scrap. Is that fine?
 - Vermilion's old item ball at (61,46): a BIG PEARL now.
+
+## 2.0 part 33 (distribution)
+- Kanto routes 1–25, Rock Tunnel, Seafoam, Viridian Forest, Cinnabar's water, Pallet's rods: no Hoenn species any more except Wingull (Route 19), Lunatone/Solrock (Mt. Moon), Torkoal (Cinnabar) and Route 18's Kecleon. Do the replacements feel right for each route? The overworld Pokémon on those maps changed to match.
+- Ice Path: no Sneasel (Delibird by day; Swinub, Jynx, Delibird at night). Sneasel only from lane A's thief (31a).
+- Safari Zone Brush/Mountain/Cave: Roselia, Breloom, Kecleon, Grumpig, Gyarados instead of Tropius, Absol and Feebas. Johto Safari Low Right: Piloswine and Quagsire instead of Sneasel.
+- Hoenn: Route 102 has Nuzleaf where Gardevoir was, Routes 119/120 Breloom/Nuzleaf/Gloom/Mightyena where Tropius and Absol were, Route 117 has Roselia by day. Fortree's roof Pokémon is a Swellow. Absol only as the storm roamer, Tropius only in the orchard.
+- The Pokédex area pages for Absol, Tropius, Feebas, Sneasel and Ralts: do they still show stale spots?
