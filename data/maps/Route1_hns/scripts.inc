@@ -5,6 +5,7 @@ Route1_hns_MapScripts::
 
 Route1_OnTransition: 
 	callnative SetTimeBasedEncounters
+	call HoennSeek_EventScript_MewBlurRoute1OnTransition
 	end
 
 Route1_EventScript_SchoolboyDanny::

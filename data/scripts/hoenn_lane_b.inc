@@ -17,6 +17,8 @@ HoennSeek_EventScript_PhoneEventLaneB::
 	case HOENN_CALL_STAMPEDE, HoennSeek_EventScript_CallStampede @ part 30b
 	case HOENN_CALL_TITANS, HoennSeek_EventScript_CallTitans @ part 36
 	case HOENN_CALL_RAYQUAZA, HoennSeek_EventScript_CallRayquaza @ part 36
+	case HOENN_CALL_MEWTWO, HoennSeek_EventScript_CallMewtwo @ part 35a
+	case HOENN_CALL_MEW, HoennSeek_EventScript_CallMew @ part 35a
 	releaseall @ no call matched: the end of the chain
 	end
 
@@ -2453,3 +2455,579 @@ HoennSeek_Text_CallRayquaza:
 	.string "That was RAYQUAZA, wasn't it?\n"
 	.string "Dad says only you could pull\l"
 	.string "that off!$"
+
+@ ==========================================================================
+@ Part 35a: Mewtwo and Mew
+@ ==========================================================================
+@ - Mewtwo: six pages of the burned Cinnabar MANSION's journal, each signed
+@   FUJI. Five are sign bg events: CINNABAR's crater (39-41,20), SILPH CO.'s
+@   lobby painting (15-16,3), the CELADON GAME CORNER's plant by the door
+@   (0,10), GIOVANNI's desk in the Mahogany hideout (B3F 10-11,2) and a crate
+@   in Goldenrod's underground warehouse (17-18,15). MR. FUJI (Lavender's Soul
+@   House, object script swap) says where the missing ones went and gives the
+@   sixth once you have the other five.
+@ - After four pages, the next arrival on Cinnabar (or the crater page itself)
+@   pans to the crater: MEWTWO teleports in over it, stares, and teleports toward
+@   CERULEAN (VAR_TEMP_5 1 = Cinnabar's ON_FRAME plays it).
+@ - With all six, MEWTWO waits on CERULEAN CAVE B2F's islet (HnS's object and
+@   Lv 80 battle; HoennMewtwoState on every arrival). Caught: gone for good.
+@   Knocked out: back tomorrow. Ran: it stays. Brendan calls once it's yours.
+@ - Mew: at dawn (4:00-7:59) a pink blur sits in three meadows (Route 1 at
+@   19,12; Route 22 at 28,17, below the pond; Hoenn's Route 101 at 8,3). A ring
+@   of VAR_TEMP_6 triggers three tiles out makes it dash off and drop a piece
+@   of an OLD SEA MAP. The third piece gives ITEM_OLD_SEA_MAP; HnS's ferries
+@   (Vermilion, Olivine) then sail to Faraway Island, where HnS's own Mew chase
+@   is unchanged. Vermilion's item ball that used to hold the map now holds a
+@   BIG PEARL. May calls once the map is whole.
+
+@ ---- The journal pages ---------------------------------------------------------
+
+HoennSeek_EventScript_JournalPageCinnabar::
+	lockall
+	goto_if_set FLAG_HOENN_JOURNAL_PAGE_1, HoennSeek_EventScript_JournalCinnabarDone
+	msgbox HoennSeek_Text_JournalFoundCinnabar, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_JOURNAL_PAGE_1
+	msgbox HoennSeek_Text_JournalPage1, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_JournalCount
+	@ The fourth page found right here: the cameo plays at once.
+	specialvar VAR_RESULT, HoennMewtwoCameoDue
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	closemessage
+	goto HoennSeek_EventScript_MewtwoCameoScene
+HoennSeek_EventScript_JournalCinnabarDone:
+	msgbox HoennSeek_Text_JournalCinnabarDone, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_JournalPageSilph::
+	lockall
+	goto_if_set FLAG_HOENN_JOURNAL_PAGE_2, HoennSeek_EventScript_JournalSilphDone
+	msgbox HoennSeek_Text_JournalFoundSilph, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_JOURNAL_PAGE_2
+	msgbox HoennSeek_Text_JournalPage2, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_JournalCount
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_JournalSilphDone:
+	msgbox HoennSeek_Text_JournalSilphDone, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_JournalPageGameCorner::
+	lockall
+	goto_if_set FLAG_HOENN_JOURNAL_PAGE_3, HoennSeek_EventScript_JournalGameCornerDone
+	msgbox HoennSeek_Text_JournalFoundGameCorner, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_JOURNAL_PAGE_3
+	msgbox HoennSeek_Text_JournalPage3, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_JournalCount
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_JournalGameCornerDone:
+	msgbox HoennSeek_Text_JournalGameCornerDone, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_JournalPageHideout::
+	lockall
+	goto_if_set FLAG_HOENN_JOURNAL_PAGE_4, HoennSeek_EventScript_JournalHideoutDone
+	msgbox HoennSeek_Text_JournalFoundHideout, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_JOURNAL_PAGE_4
+	msgbox HoennSeek_Text_JournalPage4, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_JournalCount
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_JournalHideoutDone:
+	msgbox HoennSeek_Text_JournalHideoutDone, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_JournalPageWarehouse::
+	lockall
+	goto_if_set FLAG_HOENN_JOURNAL_PAGE_5, HoennSeek_EventScript_JournalWarehouseDone
+	msgbox HoennSeek_Text_JournalFoundWarehouse, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_JOURNAL_PAGE_5
+	msgbox HoennSeek_Text_JournalPage5, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_JournalCount
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_JournalWarehouseDone:
+	msgbox HoennSeek_Text_JournalWarehouseDone, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+@ "N of 6 pages", and who signed them (until the last one).
+HoennSeek_EventScript_JournalCount:
+	specialvar VAR_RESULT, HoennJournalPageCount
+	buffernumberstring STR_VAR_1, VAR_RESULT
+	goto_if_eq VAR_RESULT, HOENN_JOURNAL_PAGES, HoennSeek_EventScript_JournalCountAll
+	msgbox HoennSeek_Text_JournalCount, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_JournalCountAll:
+	msgbox HoennSeek_Text_JournalCountAll, MSGBOX_DEFAULT
+	return
+
+@ ---- MR. FUJI (Lavender's Soul House) -------------------------------------------
+
+HoennSeek_EventScript_FujiJournal::
+	lock
+	faceplayer
+	goto_if_set FLAG_HOENN_JOURNAL_PAGE_6, HoennSeek_EventScript_FujiAfter
+	specialvar VAR_RESULT, HoennJournalPageCount
+	goto_if_eq VAR_RESULT, 0, LavenderTownSoulHouse_EventScript_MrFuji
+	goto_if_eq VAR_RESULT, 5, HoennSeek_EventScript_FujiLastPage
+	goto_if_set FLAG_HOENN_FUJI_JOURNAL, HoennSeek_EventScript_FujiWhere
+	msgbox HoennSeek_Text_FujiIntro, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_FUJI_JOURNAL
+HoennSeek_EventScript_FujiWhere:
+	specialvar VAR_RESULT, HoennJournalPageCount
+	buffernumberstring STR_VAR_1, VAR_RESULT
+	msgbox HoennSeek_Text_FujiWhere, MSGBOX_DEFAULT
+	call_if_unset FLAG_HOENN_JOURNAL_PAGE_1, HoennSeek_EventScript_FujiHint1
+	call_if_unset FLAG_HOENN_JOURNAL_PAGE_2, HoennSeek_EventScript_FujiHint2
+	call_if_unset FLAG_HOENN_JOURNAL_PAGE_3, HoennSeek_EventScript_FujiHint3
+	call_if_unset FLAG_HOENN_JOURNAL_PAGE_4, HoennSeek_EventScript_FujiHint4
+	call_if_unset FLAG_HOENN_JOURNAL_PAGE_5, HoennSeek_EventScript_FujiHint5
+	msgbox HoennSeek_Text_FujiKeepsLast, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_FujiHint1:
+	msgbox HoennSeek_Text_FujiHint1, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_FujiHint2:
+	msgbox HoennSeek_Text_FujiHint2, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_FujiHint3:
+	msgbox HoennSeek_Text_FujiHint3, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_FujiHint4:
+	msgbox HoennSeek_Text_FujiHint4, MSGBOX_DEFAULT
+	return
+HoennSeek_EventScript_FujiHint5:
+	msgbox HoennSeek_Text_FujiHint5, MSGBOX_DEFAULT
+	return
+
+HoennSeek_EventScript_FujiLastPage:
+	setflag FLAG_HOENN_FUJI_JOURNAL
+	msgbox HoennSeek_Text_FujiLastPage, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_JOURNAL_PAGE_6
+	msgbox HoennSeek_Text_JournalPage6, MSGBOX_DEFAULT
+	call HoennSeek_EventScript_JournalCount
+	msgbox HoennSeek_Text_FujiGoGently, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+HoennSeek_EventScript_FujiAfter:
+	goto_if_set FLAG_HOENN_CAUGHT_MEWTWO, HoennSeek_EventScript_FujiThanks
+	msgbox HoennSeek_Text_FujiGoGently, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_FujiThanks:
+	msgbox HoennSeek_Text_FujiThanks, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+@ ---- The cameo over Cinnabar's crater ---------------------------------------------
+
+@ Called from Cinnabar's OnTransition.
+HoennSeek_EventScript_CinnabarMewtwoOnTransition::
+	setvar VAR_TEMP_5, 0
+	specialvar VAR_RESULT, HoennMewtwoCameoDue
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBReturn
+	setvar VAR_TEMP_5, 1
+	return
+
+HoennSeek_CinnabarOnFrame::
+	map_script_2 VAR_TEMP_5, 1, HoennSeek_EventScript_MewtwoCameo
+	.2byte 0
+
+HoennSeek_EventScript_MewtwoCameo::
+	lockall
+HoennSeek_EventScript_MewtwoCameoScene:
+	setvar VAR_TEMP_5, 0
+	setflag FLAG_HOENN_MEWTWO_CAMEO
+	msgbox HoennSeek_Text_MewtwoCameoChill, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_0x8008, 40
+	setvar VAR_0x8009, 22
+	call HoennSeek_EventScript_StarterPanTo
+	clearflag FLAG_HOENN_HIDE_CINNABAR_MEWTWO
+	addobject LOCALID_HOENN_CINNABAR_MEWTWO
+	playse SE_M_TELEPORT
+	applymovement LOCALID_HOENN_CINNABAR_MEWTWO, HoennSeek_Movement_TeleportIn
+	waitmovement 0
+	waitse
+	playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
+	waitmoncry
+	msgbox HoennSeek_Text_MewtwoCameoStare, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_HOENN_CINNABAR_MEWTWO, HoennSeek_Movement_MewtwoLookAway
+	waitmovement 0
+	playse SE_M_TELEPORT
+	applymovement LOCALID_HOENN_CINNABAR_MEWTWO, HoennSeek_Movement_Teleport
+	waitmovement 0
+	removeobject LOCALID_HOENN_CINNABAR_MEWTWO
+	waitse
+	msgbox HoennSeek_Text_MewtwoCameoGone, MSGBOX_DEFAULT
+	closemessage
+	call HoennSeek_EventScript_StarterPanBack
+	releaseall
+	end
+
+@ ---- Mewtwo on Cerulean Cave B2F --------------------------------------------------
+
+HoennSeek_EventScript_CeruleanB2FOnTransition::
+	specialvar VAR_RESULT, HoennMewtwoState
+	end
+
+HoennSeek_EventScript_CeruleanMewtwo::
+	lock
+	faceplayer
+	msgbox HoennSeek_Text_MewtwoWaits, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
+	waitmoncry
+	seteventmon SPECIES_MEWTWO, HOENN_MEWTWO_LEVEL
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, HoennMewtwoBattleEnded
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBRelease
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_CERULEANCAVE_MEWTWO
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto HoennSeek_EventScript_LaneBRelease
+
+@ ---- Mew: the dawn blurs ---------------------------------------------------------
+
+HoennSeek_EventScript_MewBlurRoute1OnTransition::
+	setvar VAR_0x8009, HOENN_MEW_ROUTE1
+	goto HoennSeek_EventScript_MewBlurOnTransition
+HoennSeek_EventScript_MewBlurRoute22OnTransition::
+	setvar VAR_0x8009, HOENN_MEW_ROUTE22
+	goto HoennSeek_EventScript_MewBlurOnTransition
+HoennSeek_EventScript_MewBlurRoute101OnTransition::
+	setvar VAR_0x8009, HOENN_MEW_ROUTE101
+HoennSeek_EventScript_MewBlurOnTransition:
+	setvar VAR_TEMP_6, 0
+	specialvar VAR_RESULT, HoennMewBlurState
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_LaneBReturn
+	setvar VAR_TEMP_6, 1
+	return
+
+@ The ring triggers: it notices you, dashes off and is gone; a piece of the
+@ map flutters down where it was.
+HoennSeek_EventScript_MewBlurRoute1::
+	lockall
+	setvar VAR_TEMP_6, 0
+	call HoennSeek_EventScript_MewBlurNotice
+	applymovement LOCALID_HOENN_MEW_BLUR_ROUTE1, HoennSeek_Movement_MewDash
+	waitmovement 0
+	removeobject LOCALID_HOENN_MEW_BLUR_ROUTE1
+	setflag FLAG_HOENN_SEA_MAP_PIECE_1
+	goto HoennSeek_EventScript_MewBlurPiece
+
+HoennSeek_EventScript_MewBlurRoute22::
+	lockall
+	setvar VAR_TEMP_6, 0
+	call HoennSeek_EventScript_MewBlurNotice
+	applymovement LOCALID_HOENN_MEW_BLUR_ROUTE22, HoennSeek_Movement_MewDash
+	waitmovement 0
+	removeobject LOCALID_HOENN_MEW_BLUR_ROUTE22
+	setflag FLAG_HOENN_SEA_MAP_PIECE_2
+	goto HoennSeek_EventScript_MewBlurPiece
+
+HoennSeek_EventScript_MewBlurRoute101::
+	lockall
+	setvar VAR_TEMP_6, 0
+	call HoennSeek_EventScript_MewBlurNotice
+	applymovement LOCALID_HOENN_MEW_BLUR_ROUTE101, HoennSeek_Movement_MewDash
+	waitmovement 0
+	removeobject LOCALID_HOENN_MEW_BLUR_ROUTE101
+	setflag FLAG_HOENN_SEA_MAP_PIECE_3
+	goto HoennSeek_EventScript_MewBlurPiece
+
+HoennSeek_EventScript_MewBlurNotice:
+	playse SE_PIN
+	delay 30
+	playmoncry SPECIES_MEW, CRY_MODE_NORMAL
+	return
+
+HoennSeek_EventScript_MewBlurPiece:
+	setflag FLAG_HOENN_MEW_BLUR_SEEN
+	waitmoncry
+	msgbox HoennSeek_Text_MewBlurGone, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, HoennSeaMapPieceCount
+	goto_if_eq VAR_RESULT, HOENN_MEW_SIGHTINGS, HoennSeek_EventScript_SeaMapWhole
+	buffernumberstring STR_VAR_1, VAR_RESULT
+	msgbox HoennSeek_Text_SeaMapPieces, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+HoennSeek_EventScript_SeaMapWhole:
+	msgbox HoennSeek_Text_SeaMapFits, MSGBOX_DEFAULT
+	checkitem ITEM_OLD_SEA_MAP
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_SeaMapIsland
+	giveitem ITEM_OLD_SEA_MAP
+HoennSeek_EventScript_SeaMapIsland:
+	msgbox HoennSeek_Text_SeaMapIsland, MSGBOX_DEFAULT
+	goto HoennSeek_EventScript_LaneBRelease
+
+@ Vermilion's item ball near the port held HnS's OLD SEA MAP; the map now
+@ comes from the blurs, so the ball holds a BIG PEARL.
+HoennSeek_EventScript_VermilionBigPearl::
+	finditem ITEM_BIG_PEARL
+	end
+
+@ ---- Part 35a's calls -----------------------------------------------------------
+HoennSeek_EventScript_CallMewtwo::
+	setflag FLAG_HOENN_CALL_MEWTWO
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallMewtwo
+	goto HoennSeek_EventScript_CallEnd
+
+HoennSeek_EventScript_CallMew::
+	setflag FLAG_HOENN_CALL_MEW
+	setspeaker HoennSeek_Text_NameMay
+	pokenavcall HoennSeek_Text_CallMew
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Part 35a movements -----------------------------------------------------------
+
+HoennSeek_Movement_MewtwoLookAway:
+	face_right
+	delay_16
+	face_up
+	delay_16
+	step_end
+
+@ A teleport: the sprite flickers out.
+HoennSeek_Movement_Teleport:
+	set_invisible
+	delay_4
+	set_visible
+	delay_4
+	set_invisible
+	delay_4
+	set_visible
+	delay_2
+	set_invisible
+	delay_2
+	set_visible
+	delay_2
+	set_invisible
+	step_end
+
+HoennSeek_Movement_TeleportIn:
+	set_invisible
+	delay_4
+	set_visible
+	delay_2
+	set_invisible
+	delay_2
+	set_visible
+	delay_4
+	set_invisible
+	delay_4
+	set_visible
+	step_end
+
+@ The blur: a hop, then off through the grass, flickering.
+HoennSeek_Movement_MewDash:
+	jump_in_place_up
+	walk_faster_up
+	set_invisible
+	walk_faster_up
+	set_visible
+	walk_faster_up
+	set_invisible
+	walk_faster_up
+	step_end
+
+@ ---- Part 35a texts ---------------------------------------------------------------
+
+HoennSeek_Text_JournalFoundCinnabar:
+	.string "Something is caught in the\n"
+	.string "crater's rocks…\p"
+	.string "A scorched page from a journal!$"
+
+HoennSeek_Text_JournalCinnabarDone:
+	.string "The crater's rocks are still warm\n"
+	.string "to the touch.$"
+
+HoennSeek_Text_JournalFoundSilph:
+	.string "A yellowed page is tucked behind\n"
+	.string "the painting's frame!$"
+
+HoennSeek_Text_JournalSilphDone:
+	.string "A painting of a sunny meadow by\n"
+	.string "the sea.$"
+
+HoennSeek_Text_JournalFoundGameCorner:
+	.string "Something is rolled up and pushed\n"
+	.string "into the plant's soil…\p"
+	.string "A page from a journal!$"
+
+HoennSeek_Text_JournalGameCornerDone:
+	.string "A potted plant. Someone has been\n"
+	.string "watering it.$"
+
+HoennSeek_Text_JournalFoundHideout:
+	.string "A page is taped under the old\n"
+	.string "desk's drawer!$"
+
+HoennSeek_Text_JournalHideoutDone:
+	.string "The desk's drawers are empty.$"
+
+HoennSeek_Text_JournalFoundWarehouse:
+	.string "A page is stuck between the\n"
+	.string "crate's slats!$"
+
+HoennSeek_Text_JournalWarehouseDone:
+	.string "The crate is full of old\n"
+	.string "radio parts.$"
+
+HoennSeek_Text_JournalPage1:
+	.string "“JULY 5. We brought the pink one\n"
+	.string "home from the southern jungle.\p"
+	.string "It barely eats. It only watches\n"
+	.string "the sea, as if it misses an\l"
+	.string "island somewhere out there.”$"
+
+HoennSeek_Text_JournalPage2:
+	.string "“FEB. 6. The child grown from its\n"
+	.string "cells opened its eyes today.\p"
+	.string "We have named it MEWTWO.”$"
+
+HoennSeek_Text_JournalPage3:
+	.string "“MAY 9. Our new backers pay in\n"
+	.string "cash and dress in black.\p"
+	.string "They don't want a child. They\n"
+	.string "want a weapon.”$"
+
+HoennSeek_Text_JournalPage4:
+	.string "“AUG. 2. MEWTWO obeys no one.\n"
+	.string "Its power grows every night.\p"
+	.string "The backers are pleased.\n"
+	.string "I am afraid.”$"
+
+HoennSeek_Text_JournalPage5:
+	.string "“SEPT. 1. It broke its bonds and\n"
+	.string "the MANSION burned.\p"
+	.string "I watched it fly away to the\n"
+	.string "north-east, toward CERULEAN.”$"
+
+HoennSeek_Text_JournalPage6:
+	.string "“The last page. It found a quiet\n"
+	.string "place under CERULEAN's cave,\l"
+	.string "across the black water.\p"
+	.string "Let no one go there who wants a\n"
+	.string "weapon. Go only if you would\l"
+	.string "respect it.”$"
+
+HoennSeek_Text_JournalCount:
+	.string "Journal pages found: {STR_VAR_1} of 6.\p"
+	.string "Every page is signed the same\n"
+	.string "way: FUJI.$"
+
+HoennSeek_Text_JournalCountAll:
+	.string "That's all six pages of the\n"
+	.string "MANSION's journal!$"
+
+HoennSeek_Text_FujiIntro:
+	.string "MR. FUJI: That page… That's my\n"
+	.string "own handwriting.\p"
+	.string "Long ago, I worked in the MANSION\n"
+	.string "on CINNABAR ISLAND.\p"
+	.string "We made something there that\n"
+	.string "should never have been made.$"
+
+HoennSeek_Text_FujiWhere:
+	.string "You have {STR_VAR_1} of my pages. I know\n"
+	.string "where the others went.$"
+
+HoennSeek_Text_FujiHint1:
+	.string "One burned with the MANSION.\n"
+	.string "Look in CINNABAR's crater.$"
+
+HoennSeek_Text_FujiHint2:
+	.string "SILPH CO. bought my notes. Their\n"
+	.string "lobby keeps the strangest art.$"
+
+HoennSeek_Text_FujiHint3:
+	.string "Our backers met under the CELADON\n"
+	.string "GAME CORNER. Mind the plant by\l"
+	.string "the door.$"
+
+HoennSeek_Text_FujiHint4:
+	.string "Their boss kept a desk in the\n"
+	.string "hideout under MAHOGANY TOWN.$"
+
+HoennSeek_Text_FujiHint5:
+	.string "The rest was packed in crates, in\n"
+	.string "a warehouse under GOLDENROD.$"
+
+HoennSeek_Text_FujiKeepsLast:
+	.string "I kept the last page myself.\p"
+	.string "Bring me the other five, and I'll\n"
+	.string "know you understand.$"
+
+HoennSeek_Text_FujiLastPage:
+	.string "MR. FUJI: All five… You've read\n"
+	.string "them? Then you understand.\p"
+	.string "Here. This is the last page.\n"
+	.string "I've kept it all these years.$"
+
+HoennSeek_Text_FujiGoGently:
+	.string "MR. FUJI: It isn't a weapon. It\n"
+	.string "never was.\p"
+	.string "If you go to it, go as a trainer,\n"
+	.string "not as one of those men.$"
+
+HoennSeek_Text_FujiThanks:
+	.string "MR. FUJI: So it chose to go\n"
+	.string "with you…\p"
+	.string "Thank you. I think it has finally\n"
+	.string "found some peace.$"
+
+HoennSeek_Text_MewtwoCameoChill:
+	.string "A chill runs through the air over\n"
+	.string "the crater…$"
+
+HoennSeek_Text_MewtwoCameoStare:
+	.string "A pale POKéMON floats over the\n"
+	.string "ruins. It stares at {PLAYER}.$"
+
+HoennSeek_Text_MewtwoCameoGone:
+	.string "It turned to the north-east,\n"
+	.string "toward CERULEAN, and vanished.$"
+
+HoennSeek_Text_MewtwoWaits:
+	.string "MEWTWO opens its eyes. It seems\n"
+	.string "to know why {PLAYER} has come.$"
+
+HoennSeek_Text_MewBlurGone:
+	.string "A pink blur shot off through\n"
+	.string "the grass!\p"
+	.string "Something fluttered down where it\n"
+	.string "had been…\p"
+	.string "A torn piece of an old sea chart!$"
+
+HoennSeek_Text_SeaMapPieces:
+	.string "{PLAYER} now has {STR_VAR_1} of the\n"
+	.string "chart's 3 pieces.$"
+
+HoennSeek_Text_SeaMapFits:
+	.string "The three pieces fit together!\n"
+	.string "It's a whole map of the sea!$"
+
+HoennSeek_Text_SeaMapIsland:
+	.string "It marks a far-off island. The\n"
+	.string "sailors at VERMILION's port\l"
+	.string "might know the way.$"
+
+HoennSeek_Text_CallMewtwo:
+	.string "Hey, {PLAYER}! It's BRENDAN.\p"
+	.string "PROF. OAK just called my dad.\n"
+	.string "CERULEAN CAVE's guard phoned him.\p"
+	.string "He says the cave has gone quiet,\n"
+	.string "like something in there finally\l"
+	.string "got some rest.\p"
+	.string "And you're the one who came out\n"
+	.string "with it. MEWTWO!\l"
+	.string "Dad's going to flip!$"
+
+HoennSeek_Text_CallMew:
+	.string "{PLAYER}! It's MAY!\p"
+	.string "One of PROF. BIRCH's aides logged\n"
+	.string "pink blurs in the grass at dawn.\l"
+	.string "On ROUTE 1, ROUTE 22 and 101!\p"
+	.string "She says each one left a scrap of\n"
+	.string "an old sea chart, and you got\l"
+	.string "them all!\p"
+	.string "If that map takes you somewhere,\n"
+	.string "tell me everything, OK?$"

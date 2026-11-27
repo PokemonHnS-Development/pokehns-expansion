@@ -39,6 +39,8 @@
 #include "constants/hoenn_events.h"
 #include "constants/hoenn_phone.h"
 
+u16 HoennSeaMapPieceCount(void);
+
 u16 HoennLaneBDueCall(void)
 {
     // Part 31b: Brendan, once you've followed the Ursaring up to the moon hollow.
@@ -64,6 +66,12 @@ u16 HoennLaneBDueCall(void)
     // Part 36: May, once Rayquaza is yours (the Weather Institute's report).
     if (FlagGet(FLAG_HOENN_CAUGHT_RAYQUAZA) && !FlagGet(FLAG_HOENN_CALL_RAYQUAZA))
         return HOENN_CALL_RAYQUAZA;
+    // Part 35a: Brendan, once Mewtwo is yours (Cerulean Cave went quiet).
+    if (FlagGet(FLAG_HOENN_CAUGHT_MEWTWO) && !FlagGet(FLAG_HOENN_CALL_MEWTWO))
+        return HOENN_CALL_MEWTWO;
+    // Part 35a: May, once the OLD SEA MAP is whole (a Vermilion sailor saw it).
+    if (HoennSeaMapPieceCount() == HOENN_MEW_SIGHTINGS && !FlagGet(FLAG_HOENN_CALL_MEW))
+        return HOENN_CALL_MEW;
     return HOENN_CALL_NONE; // the end of the chain
 }
 
@@ -698,6 +706,99 @@ u8 HoennOrbWeather(u8 weather)
 u16 HoennEnigmaShardCount(void)
 {
     return FlagGet(FLAG_HOENN_ENIGMA_SHARD_1) + FlagGet(FLAG_HOENN_ENIGMA_SHARD_2) + FlagGet(FLAG_HOENN_ENIGMA_SHARD_3);
+}
+
+// ---------------------------------------------------------------------------
+// Part 35a: Mewtwo and Mew. Mewtwo keeps HnS's islet on Cerulean Cave B2F and
+// its Lv 80 battle; six pages of the burned MANSION's journal decide when it's
+// there. Mew keeps HnS's Faraway Island chase; three dawn sightings make the
+// OLD SEA MAP the ferry needs. HnS's FLAG_HIDE_MEWTWO is cleared by its Hall of
+// Fame and S.S. Aqua scripts, so the cave's object takes a lane B flag instead.
+
+// specialvar VAR_RESULT, HoennJournalPageCount: pages found (0-6).
+u16 HoennJournalPageCount(void)
+{
+    u32 i, count = 0;
+
+    for (i = 0; i < HOENN_JOURNAL_PAGES; i++)
+        count += FlagGet(FLAG_HOENN_JOURNAL_PAGE_1 + i);
+    return count;
+}
+
+// specialvar VAR_RESULT, HoennMewtwoCameoDue: four pages and the crater scene
+// not seen yet (and Mewtwo still free). Cinnabar's OnTransition arms the scene
+// from this; the page script asks again right after a pickup. The cameo's
+// object stays hidden until the scene teleports it in.
+bool16 HoennMewtwoCameoDue(void)
+{
+    FlagSet(FLAG_HOENN_HIDE_CINNABAR_MEWTWO);
+    return HoennJournalPageCount() >= HOENN_JOURNAL_CAMEO_PAGES
+        && !FlagGet(FLAG_HOENN_MEWTWO_CAMEO)
+        && !FlagGet(FLAG_HOENN_CAUGHT_MEWTWO);
+}
+
+// specialvar VAR_RESULT, HoennMewtwoState: Cerulean Cave B2F's OnTransition.
+// Mewtwo is on its islet once all six pages are found, until it's caught; a
+// knocked-out Mewtwo is back the next day.
+bool16 HoennMewtwoState(void)
+{
+    bool32 here = HoennJournalPageCount() == HOENN_JOURNAL_PAGES
+               && !FlagGet(FLAG_HOENN_CAUGHT_MEWTWO)
+               && !FlagGet(FLAG_HOENN_DAILY_MEWTWO_GONE);
+
+    if (here)
+        FlagClear(FLAG_HOENN_HIDE_MEWTWO);
+    else
+        FlagSet(FLAG_HOENN_HIDE_MEWTWO);
+    return here;
+}
+
+// specialvar VAR_RESULT, HoennMewtwoBattleEnded: caught = gone for good,
+// knocked out = gone until tomorrow, ran = it stays. TRUE if it leaves.
+bool16 HoennMewtwoBattleEnded(void)
+{
+    FlagSet(FLAG_HOENN_MEWTWO_MET);
+    switch (gBattleOutcome)
+    {
+    case B_OUTCOME_CAUGHT:
+        FlagSet(FLAG_HOENN_CAUGHT_MEWTWO);
+        return TRUE;
+    case B_OUTCOME_WON:
+        FlagSet(FLAG_HOENN_DAILY_MEWTWO_GONE);
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
+// specialvar VAR_RESULT, HoennSeaMapPieceCount: OLD SEA MAP pieces (0-3).
+u16 HoennSeaMapPieceCount(void)
+{
+    u32 i, count = 0;
+
+    for (i = 0; i < HOENN_MEW_SIGHTINGS; i++)
+        count += FlagGet(FLAG_HOENN_SEA_MAP_PIECE_1 + i);
+    return count;
+}
+
+// specialvar VAR_RESULT, HoennMewBlurState: a blur map's OnTransition, with
+// HOENN_MEW_* in VAR_0x8009. The blur is there at dawn until its piece is
+// found, and never once the map is whole or Mew is caught.
+bool16 HoennMewBlurState(void)
+{
+    u32 place = gSpecialVar_0x8009 < HOENN_MEW_SIGHTINGS ? gSpecialVar_0x8009 : HOENN_MEW_ROUTE1;
+    bool32 here;
+
+    RtcCalcLocalTime();
+    here = gLocalTime.hours >= HOENN_MEW_DAWN_BEGIN && gLocalTime.hours < HOENN_MEW_DAWN_END
+        && !FlagGet(FLAG_HOENN_SEA_MAP_PIECE_1 + place)
+        && !FlagGet(FLAG_CAUGHT_MEW);
+
+    if (here)
+        FlagClear(FLAG_HOENN_HIDE_MEW_BLUR);
+    else
+        FlagSet(FLAG_HOENN_HIDE_MEW_BLUR);
+    return here;
 }
 
 #endif // IS_HNS

@@ -702,4 +702,43 @@
 #define FLAG_HOENN_DAILY_LATI_GONE      (HOENN_LANE_B_DAILY + 0x0C)
 #define HOENN_ENIGMA_SHARDS 3
 #define HOENN_RAYQUAZA_HOUR 12 // noon
+// ---- Part 35a: Mewtwo and Mew (data/scripts/hoenn_lane_b.inc, src/hoenn_lane_b.c) ----
+// Mewtwo: six pages of the burned Cinnabar MANSION's journal. Five lie where the
+// notes ended up (the crater on CINNABAR, SILPH CO.'s lobby, the CELADON GAME
+// CORNER, the Mahogany and Goldenrod ROCKET hideouts); MR. FUJI in Lavender
+// keeps the sixth and gives it once you have the other five. After four, MEWTWO
+// is glimpsed over Cinnabar's crater and teleports away; with all six it waits
+// on CERULEAN CAVE B2F's islet. Mew: at dawn (HOENN_MEW_DAWN_BEGIN-_END), a pink
+// blur in three meadows (Route 1, Route 22, Hoenn's Route 101) drops a piece of
+// an OLD SEA MAP; the third piece completes the map, and HnS's ferry takes you
+// to Faraway Island, where HnS's Mew chase is unchanged.
+#define FLAG_HOENN_JOURNAL_PAGE_1       (HOENN_LANE_B_FLAGS_F + 0x22) // Cinnabar's crater
+#define FLAG_HOENN_JOURNAL_PAGE_2       (HOENN_LANE_B_FLAGS_F + 0x23) // Silph Co.'s lobby painting
+#define FLAG_HOENN_JOURNAL_PAGE_3       (HOENN_LANE_B_FLAGS_F + 0x24) // the Celadon Game Corner's plant pot
+#define FLAG_HOENN_JOURNAL_PAGE_4       (HOENN_LANE_B_FLAGS_F + 0x25) // Giovanni's desk, Mahogany hideout B3F
+#define FLAG_HOENN_JOURNAL_PAGE_5       (HOENN_LANE_B_FLAGS_F + 0x26) // a crate in Goldenrod's underground warehouse
+#define FLAG_HOENN_JOURNAL_PAGE_6       (HOENN_LANE_B_FLAGS_F + 0x27) // MR. FUJI's, given with the other five
+#define FLAG_HOENN_MEWTWO_CAMEO         (HOENN_LANE_B_FLAGS_F + 0x28) // seen over Cinnabar's crater
+#define FLAG_HOENN_HIDE_CINNABAR_MEWTWO (HOENN_LANE_B_FLAGS_F + 0x29) // object flag: the cameo's Mewtwo
+#define FLAG_HOENN_HIDE_MEWTWO          (HOENN_LANE_B_FLAGS_F + 0x2A) // object flag: Cerulean Cave B2F, decided on every arrival
+#define FLAG_HOENN_CAUGHT_MEWTWO        (HOENN_LANE_B_FLAGS_F + 0x2B)
+#define FLAG_HOENN_MEWTWO_MET           (HOENN_LANE_B_FLAGS_F + 0x2C) // battled once (rumor)
+#define FLAG_HOENN_SEA_MAP_PIECE_1      (HOENN_LANE_B_FLAGS_F + 0x2D) // + HOENN_MEW_*: Route 1
+#define FLAG_HOENN_SEA_MAP_PIECE_2      (HOENN_LANE_B_FLAGS_F + 0x2E) // Route 22
+#define FLAG_HOENN_SEA_MAP_PIECE_3      (HOENN_LANE_B_FLAGS_F + 0x2F) // Route 101
+#define FLAG_HOENN_HIDE_MEW_BLUR        (HOENN_LANE_B_FLAGS_F + 0x30) // object flag: the blur, on all three maps
+#define FLAG_HOENN_CALL_MEWTWO          (HOENN_LANE_B_FLAGS_F + 0x31) // Brendan: Cerulean Cave went quiet
+#define FLAG_HOENN_CALL_MEW             (HOENN_LANE_B_FLAGS_F + 0x32) // May: the sea map
+#define FLAG_HOENN_FUJI_JOURNAL         (HOENN_LANE_B_FLAGS_F + 0x33) // MR. FUJI told the journal's story
+#define FLAG_HOENN_MEW_BLUR_SEEN        (HOENN_LANE_B_FLAGS_F + 0x34) // a blur dashed off once (rumor)
+#define FLAG_HOENN_DAILY_MEWTWO_GONE    (HOENN_LANE_B_DAILY + 0x0D)   // knocked out today
+#define HOENN_JOURNAL_PAGES      6
+#define HOENN_JOURNAL_CAMEO_PAGES 4
+#define HOENN_MEW_ROUTE1     0 // VAR_0x8009 for the blur's specials
+#define HOENN_MEW_ROUTE22    1
+#define HOENN_MEW_ROUTE101   2
+#define HOENN_MEW_SIGHTINGS  3
+#define HOENN_MEW_DAWN_BEGIN 4 // 4:00-7:59, the first hours of HnS's morning
+#define HOENN_MEW_DAWN_END   8
+#define HOENN_MEWTWO_LEVEL   80 // HnS's own level
 #endif // GUARD_CONSTANTS_HOENN_EVENTS_H

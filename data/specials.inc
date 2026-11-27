@@ -775,3 +775,9 @@ gSpecials::
 	def_special HoennLegendState
 	def_special HoennLegendBattleEnded
 	def_special HoennEnigmaShardCount
+	def_special HoennJournalPageCount
+	def_special HoennMewtwoCameoDue
+	def_special HoennMewtwoState
+	def_special HoennMewtwoBattleEnded
+	def_special HoennSeaMapPieceCount
+	def_special HoennMewBlurState
