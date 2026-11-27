@@ -116,7 +116,7 @@ Lane A sizes:
 | 26r (reviewer's text fixes for pre-split parts 25a–26b: no size change) | 32,709,828 / 824 KB | 32,869,076 / 669 KB |
 | 27r (review items 34–35: cipher floor lines read from the wall, one word per night; on `hoenn` at #89) | 32,711,444 / 823 KB | 32,870,628 / 667 KB |
 | **2.0** part 27b (Unown Cipher B: 7 night Unown rings, tablet fragments spelling ANCIENT, May's call; Unown forms share one object palette; re-measured after merging 27r and the review fix: follower hidden while a ring is out) | 32,715,460 / 819 KB | 32,874,372 / 664 KB |
-| 31a (Sneasel thief: Ice Path B2F chase, nook battle, stash, Brendan's call; re-measured by the reviewer after merging `hoenn` at #88 and the call-text fix: +1,904 B release, +1,792 B debug) | 32,717,364 / 817 KB | 32,876,164 / 662 KB |
+| 31a (Sneasel thief: Ice Path B2F chase, nook battle, stash, Brendan's call; re-measured by the reviewer after merging `hoenn` at #91 (31b, 34a) and the call-text fix: +1,920 B release, +1,824 B debug) | 32,730,692 / 804 KB | 32,889,732 / 649 KB |
 
 Lane B sizes (27a, then 31b on):
 

@@ -234,18 +234,25 @@ Each Unown form is its own species with its own compressed sprite sheet (6 frame
 - **27r:** the night word is one word from dusk to dawn (Sat 10 PM FOAM, Sat 2 AM still Friday's UNION, Fri 9 PM UNION, Sat noon none); the word reads from the wall row. Merged as built.
 - **27b:** `regen_all.sh --check` clean; seven rings spell their words, reachable on foot from the entrances (Bell Tower stairs, Mt. Moon Square's cave mouth, Route 44, Whirl B3F ladder, the Mortar ledge passage, Union Cave 1F, Route 20); talking starts the right letter. Bryan approved every choice listed in the PR (sites, ring per seen word, Lv 60–70, fragments as flags, ANCIENT, May's call).
 
-### 38. Review of 31b (PR #90) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+### 38. Review of 31b (PR #90) (reviewer, Nov 27) — **merged** (Bryan approved every choice)
 Built by this thread before it took over reviewing, so read with that in mind. Merged `hoenn` at #88 into the branch (one hint-list conflict: kept 27b's `STORY_CIPHER_RINGS` line and 31b's Blackthorn Mart rumor); `regen_all.sh --check` clean; size row re-measured (+6,944 B release).
 - **Played start to finish** on a fresh debug save: HONEY from the beekeeper (once a day), spread on the pine, nobody the same morning, two Teddiursa on a later morning, watch three times (the third says they trust you), shoo keeps the honey and the day's flag, the fourth honey brings the mother, at night she leads you up the claw cliff into the hollow (scene, `FLAG_HOENN_MOON_HOLLOW_FOUND`, stage 2), bears and pool lines by night and day, trail back down, claw marks climb any time afterwards, Brendan's call rings once. No bugs found.
 - **Looks:** the house and the nook sit well in Route 45 at 2×; the hollow is a hand-painted rock bowl. One thing Bryan may not like: a single 2×2 bare-ground patch west of the pool (planned as "where the bears sit", but nobody sits there).
 - **Fog:** Route 45 is a fog-cycle route, so on its fog day the meadow scene is hard to see. That's the weather working as designed.
 - Grid: `review-31b.png` in the project's `hoenn-2.0/review/`.
 
-### 39. Review of 34a (PR #91) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+### 39. Review of 34a (PR #91) (reviewer, Nov 27) — **merged** (Bryan approved every choice)
 Built by this thread before it took over reviewing. Merged 31b's branch (with `hoenn` at #88) in; conflicts only in the size table, the hint list and `data/specials.inc` (the bird specials now sit under lane B's marker). `regen_all.sh --check` clean; size row re-measured (+6,368 B release). No map layouts change.
 - **Played:** Bill's intro and per-bird report (clue → "waiting at its roost" with directions → caught); the manager's hint on a normal day and the feather on Route 10's storm day; the engineer's forecast the day before; the Moltres flyover on Route 113's west path and the FLAME FEATHER pickup; the workshop boy's rumor. Roosts: Zapdos lands, **run** = it stays (still there on re-entry, no second landing), **knocked out** = gone today, back the next day; Articuno lands and is **caught** (Master Ball) = the islet stays empty; Moltres lands in view in Mt. Silver's room. May's call rings once on Route 10. No bugs found.
 - **Worth Bryan's eye:** HnS's three birds used to sit at their spots from the start; now each needs its feather, so Articuno needs Hoenn's ice chamber (26b) first. Bill's first talk is long (about 16 boxes).
 - Grid: `review-34a.png` in the project's `hoenn-2.0/review/`.
+
+### 40. Review of 31a (PR #92, lane A) (reviewer, Nov 27) — **waiting on Bryan's go-ahead**
+Merged `hoenn` (27r, 27b, 31b, 34a) into the branch: conflicts only in the lane A switch and sections (27b first, then 31a), the lane docs and the hint list (27b's, 31b's and 34a's NPCs, then the Blackthorn skater); `regen_all.sh --check` clean; size row re-measured.
+- **Bug fixed in review:** Brendan's call said "Dad reads every gym's report", but Brendan's dad is Birch; it's May's dad (Norman) who reads the League reports. Now "MAY's dad gets every gym's report from the LEAGUE…" (checked in the emulator: fits the box).
+- **Played:** with all four B1F boulders dropped, at night: ball 1 snatched, you slide on, ball 2, ball 3, the chase into the north-west nook (legs LLLLDLURU, LDDRDR, ULLLLDLURDDDRD, LUULD); cornered line; Lv 60 battle (Razor Claw, Pickpocket). **Knocked out** = stash given, gone that night, back in the nook the next; **run** = stays; **caught** = never shows again. Leaving mid-chase restarts it; nothing by day or with a boulder still up. The Blackthorn skater's hint by stage, Brendan's call once.
+- **Choices for Bryan:** only on B2F; the three ball spots and the nook; needs every B1F boulder dropped; the Blackthorn skater as the hint NPC; the stash comes with a knockout as well as a catch.
+- Grid: `review-31a.png` in the project's `hoenn-2.0/review/`.
 
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.

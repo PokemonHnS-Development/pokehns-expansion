@@ -9,8 +9,8 @@ Only lane B's builder edits this file (the reviewer may add a line when it merge
 ## Parts
 | Part | State | Branch / PR | Notes |
 |---|---|---|---|
-| 31b | PR open, Nov 27 | `v2-31b-honey-trail`, PR #90 | lane A's 37 needs it: built first. Hook for 37: the hollow pool's `HoennSeek_EventScript_MoonHollowPool`, flag `FLAG_HOENN_MOON_HOLLOW_FOUND` |
-| 34a | PR open, Nov 27 | `v2-34a-birds`, PR #91 (stacked on #90) | lane A's 34b needs it. Feathers: `ITEM_FROST_FEATHER` (26b), `ITEM_THUNDER_FEATHER`, `ITEM_FLAME_FEATHER`; flags `FLAG_HOENN_GOT_*_FEATHER`, caught flags `FLAG_HOENN_*_CAUGHT` |
+| 31b | ✅ merged (PR #90, Nov 27) | `v2-31b-honey-trail`, PR #90 | lane A's 37 needs it: built first. Hook for 37: the hollow pool's `HoennSeek_EventScript_MoonHollowPool`, flag `FLAG_HOENN_MOON_HOLLOW_FOUND` |
+| 34a | ✅ merged (PR #91, Nov 27) | `v2-34a-birds`, PR #91 (stacked on #90) | lane A's 34b needs it. Feathers: `ITEM_FROST_FEATHER` (26b), `ITEM_THUNDER_FEATHER`, `ITEM_FLAME_FEATHER`; flags `FLAG_HOENN_GOT_*_FEATHER`, caught flags `FLAG_HOENN_*_CAUGHT` |
 | 29 | — | — | |
 | 30a | — | — | |
 | 30b | — | — | |
