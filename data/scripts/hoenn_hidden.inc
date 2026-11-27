@@ -2706,3 +2706,116 @@ HoennSeek_Text_CallTrenchDoor:
 	.string "and the seabed shook last night.\p"
 	.string "You caught all three, didn't you?\n"
 	.string "Brendan owes me a lunch. Bye!$"
+
+@ =============================================================================
+@ Part 26a: Ice chamber A (ShoalCave_LowTideIceRoom, ShoalCave_IceChamber_hoenn)
+@ At low tide a ladder hole opens in the ice room's floor (16,21), in the strip
+@ of ice in its south-east corner; at high tide sea ice plugs it. The tide is
+@ Emerald's FLAG_SYS_SHOAL_TIDE (set = high), which UpdateShoalTideFlag only
+@ changes when you walk in from Route 125, so it can't turn while you're inside.
+@ The hole leads down into the frozen chamber: a sliding-ice hall (a puzzle,
+@ 12 moves at best; every slide can get back to the ladder), and through the
+@ one gap in its ice wall (10,13-15), the inner chamber. There a GLALIE waits
+@ on the frozen pool by day (any time but night): a scaled wild battle with
+@ perfect IVs and Head Smash. Run and it stays; knock it out and it's back
+@ tomorrow; caught, it's gone. Part 26b brings the chamber's night.
+@ =============================================================================
+
+@ ---- The ice room's hole ------------------------------------------------------
+@ The layout keeps plain ice at (16,21), so the hole only exists while this
+@ draws it. The warp there (warp 1) only fires on the ladder's MB_LADDER.
+HoennSeek_EventScript_IceRoomOnLoad::
+	goto_if_set FLAG_SYS_SHOAL_TIDE, HoennSeek_EventScript_IceRoomHolePlugged
+	setmetatile 16, 21, 0x38B, FALSE
+	end
+
+HoennSeek_EventScript_IceRoomHolePlugged:
+	setmetatile 16, 21, 0x37D, TRUE
+	end
+
+@ Its sign: only the plug at high tide has something to say.
+HoennSeek_EventScript_IceRoomHole::
+	goto_if_unset FLAG_SYS_SHOAL_TIDE, HoennSeek_EventScript_IceRoomHoleEnd
+	msgbox HoennSeek_Text_IceRoomPlug, MSGBOX_SIGN
+HoennSeek_EventScript_IceRoomHoleEnd:
+	end
+
+@ ---- The chamber -------------------------------------------------------------
+HoennSeek_EventScript_IceChamberOnTransition::
+	setflag FLAG_HOENN_ICE_CHAMBER_FOUND
+	setflag FLAG_HOENN_HIDE_ICE_GLALIE
+	goto_if_set FLAG_HOENN_CAUGHT_ICE_GLALIE, HoennSeek_EventScript_IceChamberEnd
+	goto_if_set FLAG_HOENN_DAILY_ICE_GLALIE, HoennSeek_EventScript_IceChamberEnd
+	gettimeofday
+	goto_if_eq VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_IceChamberEnd
+	clearflag FLAG_HOENN_HIDE_ICE_GLALIE
+HoennSeek_EventScript_IceChamberEnd:
+	end
+
+HoennSeek_EventScript_IceGlalie::
+	lock
+	playmoncry SPECIES_GLALIE, CRY_MODE_ENCOUNTER
+	msgbox HoennSeek_Text_IceGlalie, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	setflag FLAG_HOENN_ICE_GLALIE_MET
+	setvar VAR_0x8004, SPECIES_GLALIE
+	special HoennSetupScaledWildBattle
+	setvar VAR_0x8005, MOVE_HEAD_SMASH
+	setvar VAR_0x8006, TRUE
+	setvar VAR_0x8007, ITEM_NONE
+	special HoennTuneWildMon
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, HoennSeek_EventScript_IceGlalieStays
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, HoennSeek_EventScript_IceGlalieStays
+	setflag FLAG_HOENN_DAILY_ICE_GLALIE
+	removeobject LOCALID_HOENN_ICE_GLALIE
+	setflag FLAG_HOENN_HIDE_ICE_GLALIE
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_IceGlalieCaught
+	msgbox HoennSeek_Text_IceGlalieGone, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_IceGlalieCaught:
+	setflag FLAG_HOENN_CAUGHT_ICE_GLALIE
+HoennSeek_EventScript_IceGlalieStays:
+	release
+	end
+
+@ ---- Call -------------------------------------------------------------------
+HoennSeek_EventScript_CallIceGlalie::
+	setflag FLAG_HOENN_CALL_ICE_GLALIE
+	setspeaker HoennSeek_Text_NameBrendan
+	pokenavcall HoennSeek_Text_CallIceGlalie
+	goto HoennSeek_EventScript_CallEnd
+
+@ ---- Texts -----------------------------------------------------------------
+HoennSeek_Text_IceRoomPlug:
+	.string "A lump of sea ice plugs a hole in\n"
+	.string "the floor.\p"
+	.string "Seawater sloshes somewhere\n"
+	.string "underneath it.\p"
+	.string "Maybe it drains away when the\n"
+	.string "tide goes out…$"
+
+HoennSeek_Text_IceGlalie:
+	.string "A GLALIE sits frozen in the ice.\n"
+	.string "Its eyes snap open!$"
+
+HoennSeek_Text_IceGlalieGone:
+	.string "The GLALIE rolled away into the\n"
+	.string "ice and was gone.\p"
+	.string "It might be back tomorrow…$"
+
+HoennSeek_Text_CallIceGlalie:
+	.string "{PLAYER}! It's BRENDAN.\p"
+	.string "The old man who makes SHELL BELLS\n"
+	.string "in SHOAL CAVE came by the lab.\l"
+	.string "He trades shells with the PROF.\p"
+	.string "He saw you climb down through the\n"
+	.string "ice at low tide, then heard a\l"
+	.string "GLALIE roar from under the floor!\p"
+	.string "He says it's sat down there since\n"
+	.string "before he was born. Bet it hit\l"
+	.string "hard! Talk later!$"

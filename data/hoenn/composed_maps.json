@@ -347,6 +347,64 @@
     {"_": "the way back up: a glimmer of light on the floor", "cells": [[13, 19]], "from": [38, 19]},
     {"_": "the mound's sealed hollow keeps no glimmer (it was a dive spot on Route 128)", "cells": [[14, 2]], "from": [37, 19]}
    ]
+  },
+  "ShoalCave_IceChamber_hoenn": {
+   "source": "LAYOUT_SHOAL_CAVE_LOW_TIDE_ICE_ROOM",
+   "layout": "LAYOUT_SHOAL_CAVE_ICE_CHAMBER_HOENN",
+   "border": [18, 0],
+   "ops": [
+    {"_": "2.0 part 26a: the frozen chamber under Shoal Cave's ice room, painted from the ice room's own blocks: a sliding-ice hall (rows 2-12) and, through the one gap in its ice wall, the inner chamber where the GLALIE waits", "at": [0, 0], "grid": [
+      "ATTTTTTTTTTTTTTTCS",
+      "LATTHTTTTTTTTTTTRS",
+      "LLiihiiiiiiiiiiiRS",
+      "LLiiiiiiiiiiiiiiRS",
+      "LLiiiiiiiiiiiiioRS",
+      "LLiioiiiiiiiiiiiRS",
+      "LLiiiiiiiiiOiiiiRS",
+      "LLiiiiiiiiiiiiiiRS",
+      "LLiiiiiiiiiiiiiiRS",
+      "LLoiiiOiiiiiOiiiRS",
+      "LLiiiiiioiiiiiiiRS",
+      "LLiiiiiiiiii_iiiRS",
+      "LLiiioiiiiiiOiiiRS",
+      "jjrrrrrrrqiprrrrjS",
+      "SSSSSSSSSEiRSSSSSS",
+      "LATTTTTTTdibTTTTCS",
+      "LLffffffffgfffffRS",
+      "LLfoffffffffprqfRS",
+      "LLfff7777fffRSEfRS",
+      "LLff4iiii5ffbTdfRS",
+      "LLff4iiii5fffffoRS",
+      "LLfffggggfffffffRS",
+      "jjrrrrrrrrrrrrrrjS",
+      "SSSSSSSSSSSSSSSSSS"
+     ], "legend": {
+      "A": {"from": [0, 0]},
+      "T": {"from": [1, 0]},
+      "L": {"from": [0, 2]},
+      "R": {"from": [16, 2]},
+      "S": {"from": [17, 2]},
+      "C": {"from": [16, 0]},
+      "i": {"from": [2, 2]},
+      "o": {"from": [3, 3]},
+      "O": {"from": [6, 2]},
+      "_": {"from": [6, 5]},
+      "H": {"from": [17, 9]},
+      "h": {"from": [17, 10]},
+      "r": {"from": [2, 27]},
+      "q": {"from": [4, 27]},
+      "p": {"from": [6, 7]},
+      "b": {"from": [14, 5]},
+      "d": {"from": [16, 0]},
+      "j": {"from": [0, 18]},
+      "f": {"from": [11, 8]},
+      "g": {"from": [11, 7]},
+      "E": {"from": [10, 8]},
+      "7": {"from": [12, 10]},
+      "4": {"from": [11, 11]},
+      "5": {"from": [13, 24]}
+     }}
+   ]
   }
  },
  "patches": [

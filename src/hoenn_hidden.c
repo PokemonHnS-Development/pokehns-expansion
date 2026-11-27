@@ -175,6 +175,11 @@ u16 HoennOrchardBerry(void)
 // Part 24b's:
 //  - May, the Flygon: one of Birch's aides charting the desert saw a tower rise
 //    out of the sand at sunset and someone climb it; May heard it from Birch.
+// (Parts 25a/25b's calls are explained by their texts in hoenn_hidden.inc.)
+// Part 26a's:
+//  - Brendan, the ice chamber's Glalie: the Shell Bell maker in Shoal Cave
+//    trades shells with Birch; he saw you climb down through the ice and heard
+//    the Glalie roar under the floor.
 u16 HoennHiddenDueCall(void)
 {
     if (FlagGet(FLAG_HOENN_MUNCHLAX_DONE) && !FlagGet(FLAG_HOENN_CALL_MUNCHLAX))
@@ -207,6 +212,8 @@ u16 HoennHiddenDueCall(void)
         return HOENN_CALL_TRENCH;
     if (FlagGet(FLAG_HOENN_TRENCH_DOOR_OPEN) && !FlagGet(FLAG_HOENN_CALL_TRENCH_DOOR))
         return HOENN_CALL_TRENCH_DOOR;
+    if (FlagGet(FLAG_HOENN_ICE_GLALIE_MET) && !FlagGet(FLAG_HOENN_CALL_ICE_GLALIE))
+        return HOENN_CALL_ICE_GLALIE;
     return HOENN_CALL_NONE;
 }
 
