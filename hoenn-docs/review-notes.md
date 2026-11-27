@@ -298,6 +298,16 @@ Item 41's question: Bryan chose a night-aware reset. A night event's daily flag 
 - Grid: `41r_night_reset.png` in the project's `hoenn-2.0/review/`.
 - **For the lane A PRs still open (32, 28, 35b) and 33:** any new night "back tomorrow night" flag goes in `sNightlyFlags`.
 
+### 48. Review of 28 (PR #101, lane A) (reviewer, Nov 27) — **approved by Bryan; merged**
+Merged `hoenn` at #100 and #105 into the branch (CLAUDE.md size rows only); `regen_all.sh --check` clean; size row re-measured.
+- **Code read:** the boulder (sign bg event, night check, `setmetatile` on the scene and on every ON_LOAD), the seal and the sanctum hide your follower (five Unown forms, review item 36's sprite-memory rule); the mural's `dynmultichoice` of 28 forms + CANCEL; `HoennSanctumLetter` → 27b's `HoennGlyphSetupBattle` (plain Unown gets an A personality); ran = pick again, otherwise the daily flag. The mural can be visited by day too, but the builder put its daily flag in 41r's nightly list while merging #105, so one battle per night (noon to noon); fine either way, since you mostly come at night. The radio hook writes at most 29 bytes into a 40-byte line buffer. Brendan's call sits after 31a's in `HoennLaneADueCall`.
+- **Fixed in review:**
+  - The five floating Unown were `LOOK_AROUND`, so they showed edge-on as thin sticks half the time. They're now `WALK_IN_PLACE_DOWN`, like 27b's rings.
+  - The sanctum's top row was copied from B1F row 6, which is the bottom of the room above it, so a strip of floor showed over the frieze. It now uses B1F row 0, the plain top edge (`composed_maps.json`).
+- **Played (debug save):** by day the boulder's worn-face line; at 10 PM the three Unown gather, the shake, the white fade, the cave mouth; down the ladder; the sanctum (Unown now facing you, clean top edge); the mural's line, the letter menu, B called → a Lv 60 Unown B; knocked out → "won't answer again until tomorrow"; the inscription (braille + translation); the lab researcher's new line, then her repeat line; Brendan's call. **Not played:** the Unown radio station (the debug save has no PokéGear radio): it's on the playtest list.
+- **Choices for Bryan:** the boulder at (23,27) as the tablet's mark; the night opening with three Unown; the sanctum's look; one mural battle a day for any of the 28 forms; Lv 60–70 (Hoenn's scaling, like 27b's rings, not 29's Johto progress levels); the inscription's wording (Sinjoh, three sleepers, the oldest of the deep and the greatest of the sea); Brendan as the caller ("Relicanth and Wailord"); the radio's words.
+- Grid: `review-28.png` in the project's `hoenn-2.0/review/`.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 

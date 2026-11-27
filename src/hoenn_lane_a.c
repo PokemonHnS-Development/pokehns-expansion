@@ -27,6 +27,25 @@
 //   sixteen sprite palettes. HoennObjectPaletteSpecies() (one hook line in
 //   LoadDynamicFollowerPalette, src/event_object_movement.c) makes every form
 //   use plain Unown's palette tag, so a ring takes one.
+//
+// Part 28 (Unown Cipher C, the sanctum; plan section 8 item 4):
+// - The tablet's mark is the boulder in the middle of the Ruins of Alph
+//   (Outside, 23,27). At night with the tablet, examining its face plays the
+//   opening: three Unown gather, the ground shakes and a cave mouth opens
+//   (metatile 0xA9, the Union Cave doorway; the Outside's ON_LOAD redraws it once
+//   FLAG_HOENN_CIPHER_SANCTUM_OPEN is set). Its warp leads down a ladder into
+//   RuinsOfAlph_Sanctum_hoenn, a composed map of the inner chamber's blocks.
+// - The sanctum's north wall is a mural of the Unown frieze. Once a day it calls
+//   the letter you pick, any of the 28 forms (HoennSanctumLetter, then 27b's
+//   HoennGlyphSetupBattle, which also gives plain Unown an A personality).
+// - The middle statue holds the final inscription: Unown and Hoenn braille that
+//   point to the Sinjoh Ruins and the three giants behind its doors
+//   (FLAG_HOENN_CIPHER_INSCRIPTION, part 37's start). The lab researcher reads it
+//   with you and phones Birch (Brendan's call).
+// - Radio: the Ruins' Unown station (HnS played only music there) now spells a
+//   word through the static once the Rosetta is read: the place of a fragment
+//   you're still missing (a different one each week), then what to do next
+//   (HoennRadioUnownBroadcast, one hook line in src/pokenav_radio.c).
 #include "global.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -45,6 +64,8 @@
 #include "constants/hoenn_custom.h"
 #include "constants/hoenn_events.h"
 #include "constants/hoenn_phone.h"
+
+bool8 HoennCipherIsOpen(void); // src/hoenn_cipher.c (part 27a)
 
 extern const u8 HoennSeek_EventScript_GlyphRing[];
 
@@ -197,6 +218,91 @@ u32 HoennObjectPaletteSpecies(u32 species)
     return species;
 }
 
+// ---- Part 28: the sanctum ---------------------------------------------------
+
+// special HoennSanctumLetter: the mural's menu answer (VAR_RESULT, 0-27 = A-Z ! ?)
+// becomes the Unown species in VAR_0x8004 (for HoennGlyphSetupBattle) and its
+// letter in STR_VAR_1. Letter forms are their own species; A is plain Unown.
+void HoennSanctumLetter(void)
+{
+    static const u8 sMarks[] = _("!?");
+    u32 i = gSpecialVar_Result < HOENN_SANCTUM_LETTERS ? gSpecialVar_Result : 0;
+
+    gSpecialVar_0x8004 = (i == 0) ? SPECIES_UNOWN : SPECIES_UNOWN_B + i - 1;
+    gStringVar1[0] = (i < 26) ? CHAR_A + i : sMarks[i - 26];
+    gStringVar1[1] = EOS;
+}
+
+static const u8 sText_RadioUnownStatic[] = _("…Strange cries in the static…");
+static const u8 sText_RadioUnownSpells[] = _("The UNOWN signal spells:");
+static const u8 sWordLab[]    = _("LAB");
+static const u8 sWordMiddle[] = _("MIDDLE");
+static const u8 sWordNight[]  = _("NIGHT");
+static const u8 sWordDown[]   = _("DOWN");
+static const u8 sWordSinjoh[] = _("SINJOH");
+static const u8 sWordGiants[] = _("GIANTS");
+
+// "T-O-W-E-R… T-O-W-E-R…" into line (a 40-byte radio buffer; words are short).
+static void SpellWord(u8 *line, const u8 *word)
+{
+    u32 n, i;
+
+    for (n = 0; n < 2; n++)
+    {
+        for (i = 0; word[i] != EOS; i++)
+        {
+            if (i != 0)
+                *line++ = CHAR_HYPHEN;
+            *line++ = word[i];
+        }
+        *line++ = CHAR_ELLIPSIS;
+        if (n == 0)
+            *line++ = CHAR_SPACE;
+    }
+    *line = EOS;
+}
+
+// One hook line in the Unown station's case of the radio (src/pokenav_radio.c,
+// which only plays it at the Ruins of Alph). Nothing until the cipher opens,
+// then static until the Rosetta is read; after that a word, which changes each
+// week while you're looking for fragments and then follows the story.
+u32 HoennRadioUnownBroadcast(const u8 **lines, u8 *line)
+{
+    u32 week = VarGet(VAR_HOENN_WEEK_SEEN);
+    const u8 *word = NULL;
+    u32 i;
+
+    if (!HoennCipherIsOpen())
+        return 0;
+    if (!FlagGet(FLAG_HOENN_CIPHER_ROSETTA))
+    {
+        lines[0] = sText_RadioUnownStatic;
+        return 1;
+    }
+    if (FlagGet(FLAG_HOENN_CIPHER_INSCRIPTION))
+        word = (week & 1) ? sWordGiants : sWordSinjoh;
+    else if (FlagGet(FLAG_HOENN_CIPHER_SANCTUM_OPEN))
+        word = sWordDown;
+    else if (FlagGet(FLAG_HOENN_CIPHER_TABLET))
+        word = (week & 1) ? sWordNight : sWordMiddle;
+    else
+    {
+        // A place whose fragment is still missing, a different one each week.
+        for (i = 0; i < HOENN_WEEKDAY_COUNT && word == NULL; i++)
+        {
+            u32 day = (week + i) % HOENN_WEEKDAY_COUNT;
+            if (!FlagGet(FLAG_HOENN_CIPHER_FRAGMENT_SUN + day))
+                word = sGlyphSites[day].word;
+        }
+        if (word == NULL)
+            word = sWordLab; // all seven: take them to the lab
+    }
+    SpellWord(line, word);
+    lines[0] = sText_RadioUnownSpells;
+    lines[1] = line;
+    return 2;
+}
+
 u16 HoennLaneADueCall(void)
 {
     u16 call = HoennCipherDueCall(); // part 27a (src/hoenn_cipher.c)
@@ -210,6 +316,10 @@ u16 HoennLaneADueCall(void)
     // Part 31a, Brendan: May's dad (Norman) read Clair's gym report about the Ice Path thief.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_SNEASEL_STASH) && !FlagGet(FLAG_HOENN_CALL_SNEASEL))
         return HOENN_CALL_SNEASEL;
+    // Part 28, Brendan: the lab phoned Birch once it read the inscription with you.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_CIPHER_LAB_SANCTUM)
+     && !FlagGet(FLAG_HOENN_CALL_CIPHER_SANCTUM))
+        return HOENN_CALL_CIPHER_SANCTUM;
     // Lane A's next calls go here, e.g.
     //     if (FlagGet(FLAG_HOENN_X_MET) && !FlagGet(FLAG_HOENN_CALL_X))
     //         return HOENN_CALL_X;

@@ -76,7 +76,28 @@ HoennSeek_EventScript_AlphResearcherTablet:
 	end
 
 HoennSeek_EventScript_AlphResearcherTabletAgain:
+	goto_if_set FLAG_HOENN_CIPHER_INSCRIPTION, HoennSeek_EventScript_AlphResearcherInscription @ part 28
+	goto_if_set FLAG_HOENN_CIPHER_SANCTUM_OPEN, HoennSeek_EventScript_AlphResearcherSanctum
 	msgbox HoennSeek_Text_AlphResearcherTabletAgain, MSGBOX_DEFAULT
+	release
+	end
+
+@ Part 28: the sanctum under the boulder (hoenn_lane_a.inc). Once you've read
+@ the inscription she reads it with you and phones Birch (Brendan's call).
+HoennSeek_EventScript_AlphResearcherSanctum:
+	msgbox HoennSeek_Text_AlphResearcherSanctum, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_AlphResearcherInscription:
+	goto_if_set FLAG_HOENN_CIPHER_LAB_SANCTUM, HoennSeek_EventScript_AlphResearcherInscriptionAgain
+	setflag FLAG_HOENN_CIPHER_LAB_SANCTUM
+	msgbox HoennSeek_Text_AlphResearcherInscription, MSGBOX_DEFAULT
+	release
+	end
+
+HoennSeek_EventScript_AlphResearcherInscriptionAgain:
+	msgbox HoennSeek_Text_AlphResearcherInscriptionAgain, MSGBOX_DEFAULT
 	release
 	end
 
@@ -322,5 +343,32 @@ HoennSeek_Text_AlphResearcherTablet:
 HoennSeek_Text_AlphResearcherTabletAgain:
 	.string "ANCIENT, and a mark in the middle\n"
 	.string "of the RUINS where nothing stands…\p"
+	.string "Nothing but that big boulder south\n"
+	.string "of the chamber, anyway.\p"
 	.string "The UNOWN are telling us something.\n"
-	.string "I'm sure of it.$"
+	.string "And they only speak at night…$"
+
+HoennSeek_Text_AlphResearcherSanctum:
+	.string "The boulder opened? And there's a\n"
+	.string "room under it, with a statue?\p"
+	.string "Please, read what's on it! I'm too\n"
+	.string "scared to go down there myself.$"
+
+HoennSeek_Text_AlphResearcherInscription:
+	.string "WE WERE BORN AT SINJOH, PAST THE\n"
+	.string "SNOWS…\p"
+	.string "The SINJOH RUINS! The UNOWN came\n"
+	.string "from there? Up the snowy road\l"
+	.string "north of NEW SINJOH!\p"
+	.string "And three sleepers behind sealed\n"
+	.string "doors. The oldest of the deep, the\l"
+	.string "greatest of the sea…\p"
+	.string "I'll phone PROF. BIRCH. Those\n"
+	.string "sound like Hoenn POKéMON to me!$"
+
+HoennSeek_Text_AlphResearcherInscriptionAgain:
+	.string "THREE SLEEP AT SINJOH. The oldest\n"
+	.string "of the deep and the greatest of\l"
+	.string "the sea wake them.\p"
+	.string "PROF. BIRCH thinks it means\n"
+	.string "RELICANTH and WAILORD!$"

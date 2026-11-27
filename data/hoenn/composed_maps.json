@@ -1,5 +1,5 @@
 {
- "_comment": "Hoenn & Seek 2.0 part 15a+: small new maps painted from blocks of an existing layout, and in-place patches to existing layouts. tools/hoenn/gen_hoenn_composed_maps.py explains the ops. Route46_Meadow_hoenn (hand-painted in 17r) is the hidden meadow behind Route 46's sealed cave mouth (25,33): a low cliff with a rounded hill around the cave mouth at (11,3), a sunlit strip down to the Meganium family, a pond, trees jutting in from the sides and the south treeline, an uneven bank of tall grass. Blocks come from Route 46, with Route 43's pond, shrubs and sunlit path. Route 46's cave mouth sat in a pocket nothing could reach (HnS kept two Phanpy there as scenery); the patches open it through a cut tree. Route25_Garden_hoenn (2.0 part 16) is Bulbasaur's hidden garden behind Bill's house: a lawn ringed by trees, with a round dirt clearing where the Bulbasaur gather, a path down to the way in, a pond, loose trees and blue flowers (a hand-painted grid since 17r), reached through a new gap in the trees at the top of the overlook. Every block comes from Route 25. Route6_Hideout_hoenn (2.0 part 17, hand-painted in 17r) is the Squirtle Squad's den: the tunnel's dead end with its ladder, opening into a dug-out room (walls from Diglett's Cave's north entrance room). Route113_Grotto_hoenn (2.0 part 20) is the Munchlax's hidden grotto: an ash floor ringed by trees, with patches of ash grass, reached through a gap in Route 113's southern trees at (14,16) (patched open). Petalburg Woods (part 20) gets a clearing behind the one-tile notch at (26,6-7), where the Slaking sleeps. Route119_Orchard_hoenn (2.0 part 21) is Tropius's hidden orchard: grass ringed by jungle with a big fruit tree and flowers, entered through the tree trunk at Route 119 (26,21), whose collision is cleared. Every block comes from Route 119. Route113_Grotto_hoenn and Route119_Orchard_hoenn (2.0 parts 20/21) were hand-painted in 21r, and Petalburg Woods' clearing patch now cuts along whole trees.",
+ "_comment": "Hoenn & Seek 2.0 part 15a+: small new maps painted from blocks of an existing layout, and in-place patches to existing layouts. tools/hoenn/gen_hoenn_composed_maps.py explains the ops. Route46_Meadow_hoenn (hand-painted in 17r) is the hidden meadow behind Route 46's sealed cave mouth (25,33): a low cliff with a rounded hill around the cave mouth at (11,3), a sunlit strip down to the Meganium family, a pond, trees jutting in from the sides and the south treeline, an uneven bank of tall grass. Blocks come from Route 46, with Route 43's pond, shrubs and sunlit path. Route 46's cave mouth sat in a pocket nothing could reach (HnS kept two Phanpy there as scenery); the patches open it through a cut tree. Route25_Garden_hoenn (2.0 part 16) is Bulbasaur's hidden garden behind Bill's house: a lawn ringed by trees, with a round dirt clearing where the Bulbasaur gather, a path down to the way in, a pond, loose trees and blue flowers (a hand-painted grid since 17r), reached through a new gap in the trees at the top of the overlook. Every block comes from Route 25. Route6_Hideout_hoenn (2.0 part 17, hand-painted in 17r) is the Squirtle Squad's den: the tunnel's dead end with its ladder, opening into a dug-out room (walls from Diglett's Cave's north entrance room). Route113_Grotto_hoenn (2.0 part 20) is the Munchlax's hidden grotto: an ash floor ringed by trees, with patches of ash grass, reached through a gap in Route 113's southern trees at (14,16) (patched open). Petalburg Woods (part 20) gets a clearing behind the one-tile notch at (26,6-7), where the Slaking sleeps. Route119_Orchard_hoenn (2.0 part 21) is Tropius's hidden orchard: grass ringed by jungle with a big fruit tree and flowers, entered through the tree trunk at Route 119 (26,21), whose collision is cleared. Every block comes from Route 119. Route113_Grotto_hoenn and Route119_Orchard_hoenn (2.0 parts 20/21) were hand-painted in 21r, and Petalburg Woods' clearing patch now cuts along whole trees. RuinsOfAlph_Sanctum_hoenn (2.0 part 28) is the Unown sanctum under the boulder in the middle of the Ruins of Alph, built from the inner chamber's (B1F) walls, statues, ladder and UNOWN frieze.",
  "maps": {
   "Route46_Meadow_hoenn": {
    "source": "LAYOUT_ROUTE46_HNS",
@@ -530,6 +530,29 @@
       "aaaaaaammniniinaaaaaaaaaaa"
      ],
      "legend": {"a": {"from": [5, 1], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "b": {"from": [14, 10]}, "c": {"from": [9, 3], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "d": {"from": [58, 13]}, "e": {"from": [30, 9]}, "f": {"from": [33, 8], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "g": {"from": [30, 10]}, "h": {"from": [32, 9], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "i": {"from": [33, 9], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "j": {"from": [20, 9], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "k": {"from": [33, 9], "metatile": "0x004", "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "l": {"from": [30, 12]}, "m": {"from": [60, 12]}, "n": {"from": [6, 17]}, "o": {"from": [38, 13]}, "p": {"from": [40, 11]}, "q": {"from": [30, 7], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "r": {"from": [22, 7], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "s": {"from": [23, 11], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "t": {"from": [24, 11], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "u": {"from": [7, 1], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "v": {"from": [8, 1], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}}}
+   ]
+  },
+  "RuinsOfAlph_Sanctum_hoenn": {
+   "source": "LAYOUT_RUINS_OF_ALPH_B1F_HNS",
+   "layout": "LAYOUT_RUINS_OF_ALPH_SANCTUM_HOENN",
+   "border": "source",
+   "ops": [
+    {"_": "the sanctum, by hand: the inner chamber's walls and statues, its ladder up to the boulder, the middle statue holds the final inscription", "at": [0, 0], "grid": [
+      "TUUUUUUUUUUUUUUUV",
+      "D...............F",
+      "DsssssssssssssssF",
+      "DLffffffffffffffF",
+      "DLfhffffhffffhffF",
+      "DLfbrfffbrfffbrfF",
+      "DLfkqfffkqfffkqfF",
+      "DLfhfffffffffhffF",
+      "DLfbrffffffffbrfF",
+      "DLfkqffftffffkqfF",
+      "DLfffffflfffffffF",
+      "MHIIIIIIIIIIIIIIN",
+      "OEEEEEEEEEEEEEEEP"
+     ], "legend": {"T": {"from": [1, 0]}, "U": {"from": [2, 0]}, "V": {"from": [28, 0]}, "D": {"from": [1, 1]}, "E": {"from": [2, 1]}, "F": {"from": [28, 1]}, "H": {"from": [2, 6]}, "I": {"from": [3, 6]}, "s": {"from": [2, 8]}, "L": {"from": [2, 9]}, "f": {"from": [8, 15]}, "h": {"from": [4, 9]}, "b": {"from": [4, 10]}, "k": {"from": [4, 11]}, "r": {"from": [5, 10]}, "q": {"from": [5, 11]}, "t": {"from": [15, 15]}, "l": {"from": [15, 16]}, "M": {"from": [1, 30]}, "N": {"from": [28, 30]}, "O": {"from": [1, 31]}, "P": {"from": [28, 31]}}},
+    {"_": "the mural: a run of the inner chamber's UNOWN frieze along the north wall", "at": [1, 1, 15, 1], "from": [2, 13]}
    ]
   }
  },
