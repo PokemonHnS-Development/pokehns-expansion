@@ -545,7 +545,7 @@
 #define FLAG_HOENN_CIPHER_LAB_SANCTUM   (HOENN_LANE_A_FLAGS_E + 0x19) // the lab researcher heard about the inscription
 #define FLAG_HOENN_CALL_CIPHER_SANCTUM  (HOENN_LANE_A_FLAGS_E + 0x1A) // Brendan: the lab phoned Birch about the sanctum
                                                                        // (0x1B-0x1F spare for part 28)
-#define FLAG_HOENN_DAILY_SANCTUM_MURAL  (HOENN_LANE_A_DAILY + 5)      // the mural called a letter today
+#define FLAG_HOENN_DAILY_SANCTUM_MURAL  (HOENN_LANE_A_DAILY + 5)      // the mural called a letter tonight (nightly, 41r)
                                                                        // (+0..4 are 31a, 32 and 35b's)
 #define HOENN_SANCTUM_LETTERS 28 // A-Z ! ? (the mural's menu; index 28 is CANCEL)
 

@@ -139,6 +139,7 @@ static const u16 sNightlyFlags[] = {
     FLAG_HOENN_DAILY_ICE_SNEASEL,     // part 31a: nights
     FLAG_HOENN_DAILY_ONIX_GONE,       // part 29: nights
     FLAG_HOENN_DAILY_ONIX_RUMBLE,     // part 29: once a night
+    FLAG_HOENN_DAILY_SANCTUM_MURAL,   // part 28: once a night
 };
 
 static bool32 IsNightlyFlag(u16 flag)
