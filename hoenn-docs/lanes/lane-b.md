@@ -9,7 +9,7 @@ Only lane B's builder edits this file (the reviewer may add a line when it merge
 ## Parts
 | Part | State | Branch / PR | Notes |
 |---|---|---|---|
-| 31b | PR open, Nov 27 | `v2-31b-honey-trail`, PR #TBD | lane A's 37 needs it: built first. Hook for 37: the hollow pool's `HoennSeek_EventScript_MoonHollowPool`, flag `FLAG_HOENN_MOON_HOLLOW_FOUND` |
+| 31b | PR open, Nov 27 | `v2-31b-honey-trail`, PR #90 | lane A's 37 needs it: built first. Hook for 37: the hollow pool's `HoennSeek_EventScript_MoonHollowPool`, flag `FLAG_HOENN_MOON_HOLLOW_FOUND` |
 | 34a | — | — | lane A's 34b needs it: build it second |
 | 29 | — | — | |
 | 30a | — | — | |
