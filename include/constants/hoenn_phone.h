@@ -47,6 +47,7 @@
 // Lane A: 37-69 (27a, started before the split, also takes its IDs from here).
 #define HOENN_CALL_LANE_A_FIRST 37
 #define HOENN_CALL_LANE_A_LAST  69
+#define HOENN_CALL_CIPHER 37 // Brendan: the Ruins of Alph lab phoned Birch about a braille wall (2.0 part 27a)
 // (lane A's calls go here)
 
 // Lane B: 70-99.

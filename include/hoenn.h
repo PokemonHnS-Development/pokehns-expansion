@@ -54,6 +54,7 @@ u16 HoennHiddenDueCall(void);
 u16 HoennLaneADueCall(void); // src/hoenn_lane_a.c (lane setup, Nov 27)
 u16 HoennLaneBDueCall(void); // src/hoenn_lane_b.c
 bool8 HoennMirageTowerRung(void); // 2.0 part 24b
+u16 HoennCipherDueCall(void);      // 2.0 part 27a (src/hoenn_cipher.c)
 bool32 HoennLightsOnStep(void); // follow-the-lights (src/hoenn_lights.c, 2.0 part 25a)
 void HoennTuneWildMon(void);
 void HoennTuneWildMonSlot(void);

@@ -176,7 +176,19 @@ Reproduced in the emulator.
 - **Absol's ridge** has two overworld Vileplume right above and below it ((16,48), (16,52)), so three Pokémon sit in a column.
 - **Plan section 14's to-do list** ticks only the Wailord. Absol, the chorus, Chimecho, Bagon and the Metagross (and the earlier parts' events) are still unticked.
 
-### 28. PR #79 (24r) isn't merged and now conflicts (parts 24a–26b review)
+### 25. The Trapinch walks right through you (part 24a, bug) — **done in 24r**
+- The Trapinch's path runs straight up column 26, and the ring's north trigger (26,54) is on it. Coming down from the north (the natural way in from the dunes) you step on (26,54), and the Trapinch walks up through your sprite.
+- **Fix (24r):** from (26,54) you step one tile left first, then the scene plays. The other 31 ring tiles are off the path (the south one, (26,62), is behind it). Checked in the emulator from the north, south and west.
+
+### 26. The sand hollow hardly shows (part 24a, look)
+- The hollow at (29–31, 35–36) is the desert's own darker deep-sand blocks, so it looks like one more of the faint dune patches around it, not a hole the Trapinch dug into. You only find it by reading it.
+- Not changed: a real pit would need a new tile or a darker recolour, which is new art and needs Bryan's OK. Screenshot in `part-24r/part-24r-screenshots.png`.
+
+### 27. Choices from part 24a for Bryan to confirm
+- Listed as "picked without Bryan" in PR #77 and the roadmap: the Trapinch's spot and trigger ring, the camera following it, the hollow being a deep-sand patch (item 26), evening only (HnS's one-hour evening), once a day, Fallarbor's gentleman as the elder plus Cozmo, the Underpass nook, the Vibrava being uncatchable at the scaled level with Boomburst, Vibrava any time underground, the Singing Sand's icon (Soft Sand's), Brendan as caller, all text.
+- One effect to know about: the Fallarbor gentleman's desert line comes before his Bagon line, so while the chain is open he no longer gives the Bagon hint.
+
+### 28. PR #79 (24r) isn't merged and now conflicts (parts 24a–26b review) — **done** (merged with `hoenn` by hand and merged, Nov 27)
 - PR #79 fixes a real 24a bug: the Trapinch walks up column 26 straight through you if you trigger the scene from the ring's north tile (26,54). It also adds review items 25–27 (that fix, the faint sand hollow, 24a's choices). It was opened before parts 24b–26b merged, and GitHub now reports conflicts in CLAUDE.md, the roadmap, the playtest list and these notes. **The bug is still on `hoenn`.** Rebase and merge it (items 25–27 then land above this one).
 
 ### 29. Small text things from parts 25a–26b
@@ -191,6 +203,12 @@ Each PR lists its "picked without Bryan" choices. These are the ones that change
 - **Mirage Tower (24b):** it stands until midnight after the chime. The fossils stay behind the Flygon, and taking one still ends the tower for good. The Flygon is catchable and comes back after a knockout. The Underpass Vibrava (24a) can't be caught.
 - **Night dive (25a/25b):** once found, the crack and the guardians are there at any hour, though the plan's diver line says "at night". The "back wall" is the mound's old Seafloor Cavern door: the trench's top wall is on the map edge. Both are written into the plan.
 - **Ice chamber (26a/26b):** Froslass is drawn standing on the ice rock, not as a reflection inside it. The feather also comes after a knockout, not only a catch. Plan step 5's optional Icy Rock trade was left out.
+
+### 32. Part 27a review (PR #86, Claude, Nov 27) — **fixed in PR #86 before merging**
+- **The braille window cut the Rosetta off.** `braillemessage` caps its window at 28 tiles, so AT NIGHT WE SPEAK showed as "AT NIGHT WE SP" (visible in the part's own grid, panel 3). Now two lines, AT NIGHT / WE SPEAK; checked in the emulator.
+- **The researcher's word list ran off the text box.** "Night words so far: {STR_VAR_2}." had no line breaks, so with three or more words it went past the box's edge (six words were ~59 characters on one line). The list now goes on its own line and `HoennCipherWordCount` starts a new one after every third word; checked in the emulator with six words.
+- Checked and fine: the visited flags `HoennCipherIsOpen` reads are all Hoenn-owned (0x1B01–0x1B0E, never set at new game); the Rosetta's row 3 in Words Room 1 was plain floor, so nothing original is drawn over; the swapped lab scientist only had flavour text; every other new text fits the box (measured with the font's glyph widths); the unown-tiles and hints generators re-run with no changes.
+- 27a's flags (`HOENN_FLAGS_E_JOHTO_KANTO` + 0x00–0x0A) and call ID 37 sit at the start of lane A's ranges from the lane setup (PR #85), as that PR expects: lane A's 27b continues from + 0x0B and call 38.
 
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
@@ -208,6 +226,11 @@ Each PR lists its "picked without Bryan" choices. These are the ones that change
     - Ice chamber items: the hidden NeverMeltIce (2,1) can be picked up (slide left from the ladder, face up), and the Dawn Stone is reachable.
   - **High tide in the emulator:** at noon after walking in from Route 125, the tide flag is set and the entrance room floods, wadeable as in Emerald. Nobody had reached high tide since 1.0 (the flag was 0), so this was worth a look.
   - New text was scanned (item 29). Every call says who told the caller.
+- **Part 24a, checked on `hoenn` after PR #77 (Claude, 2026-11-26):**
+  - Release and debug builds work; the debug size matches CLAUDE.md. Every generator (composed maps, overworld Pokémon, followers, buildings, hints) re-runs with no changes.
+  - Code read: the whole Part 24a section of `hoenn_hidden.inc`, the Route 111 and Underpass hooks, the flags (no clashes), `ITEM_SINGING_SAND`, the call. Blacking out to the Vibrava is safe: HnS clears `FLAG_NO_WILD_CATCHING` on a whiteout (`src/overworld.c`), so catching isn't left switched off.
+  - In the emulator at 6 PM: the scene from the north, south and west sides of the ring (footprints, the burrow, the camera back); none the same evening again; the hollow's text after the hum; the Underpass empty before the hum; the hum, the battle (Lv 60, Boomburst, catching off), running (it stays and battles again), winning (the Singing Sand, catching back on, gone on re-entry).
+  - The Underpass Ditto that moved to (124,5) sits on a cliff top. That's the overworld generator's normal out-of-reach spot, not a bug.
 - **Parts 22a, 22b and 23, checked on `hoenn` after PR #73 (Claude, 2026-11-26):**
   - The debug build works, and the composed-maps, buildings and hints generators re-run with no changes.
   - Code read: `src/hoenn_roamer.c` and its eight hooks in `src/roamer.c`. Absol can't loop in `RoamerMove`. Its slot stays reserved through the Hall of Fame's re-inits and is released by a new game. A stale Absol from an older game on the same save is handled. Peek, encounters and the Pokédex area page all ask the hooks. Also read: the battle theme hook and the `HOENN_TUNE_IV_HP`/`HOENN_TUNE_SHINY` additions.

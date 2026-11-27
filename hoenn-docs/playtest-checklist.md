@@ -364,6 +364,7 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - Save and reload between the hum and the Underpass: the Vibrava is still there; save after the sand: it stays gone.
 - Black out to the Vibrava: it's still there next time, and the hum plays again on entering the nook.
 - Brendan's call about the Singing Sand comes on its own (the emulator forced the call).
+- 24r: walking down onto the Trapinch's ring straight from the north, you step one tile left and it scurries past you, not through you. (Checked in the emulator; worth a look on a real walk-in with a follower out.)
 
 ## 2.0 part 24b (Flygon desert song B)
 - Climb the Mirage Tower on the bicycle's fast gear (press R while still): cross 2F's cracked floor down the left side and 3F's, smash 3F's rocks. Falling should just drop you a floor.
@@ -413,3 +414,11 @@ Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its 
 
 ## Lane B parts (27a, 31b on: Kanto, Safari, legends)
 Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
+
+## 2.0 part 27a (Unown Cipher A)
+- With all four Ruins panels solved, visit Hoenn, then come back: Brendan's call about the lab, and the lab researcher's request (she's the woman at the back of the lab).
+- Words Room 1 (the one with six lines): does the new line under the north wall read as braille dots over Unown letters? Read it from the row below (face up).
+- At night (7 PM–6 AM) go into the other three Words rooms: the glowing word above the inscription, the message the first time each weekday. Is the pale-cyan glow easy to see on the floor?
+- Over a week of nights (or with the wall clock's calendar), collect all seven words, then talk to the researcher: the list and the seven-places line.
+- The puzzle chambers and the Sinjoh Ruins temple share this tileset: check their coloured stone panels look unchanged (palette 10 got a new colour in an unused slot).
+- The lab's wandering scientist's two new lines.
