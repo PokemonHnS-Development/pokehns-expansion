@@ -953,7 +953,7 @@ HoennSeek_Text_Hint_RumorKanga_BabyBefore::
 	.string "Evenings, we hear crying down on\nthe BEACH. Something small and\llost, I'd guess.\pAnd a KANGASKHAN mother keeps\npacing where the woods bend in,\lwest of here. Her pouch is empty.$"
 
 HoennSeek_Text_Hint_RumorKanga_BabyAfter::
-	.string "Somebody walked a lost KANGASKHAN\nbaby back to its mother! The two\lnest in the woods west of\lhere now.$"
+	.string "Somebody brought a lost KANGASKHAN\nbaby home to its mother! Now the\lpair nest in the woods out west.$"
 
 HoennSeek_Text_Hint_RumorKanga_BabyNotes::
 	.string "Evenings in the FUCHSIA SAFARI\nZONE, a KANGASKHAN baby cries on\lthe BEACH. Its mother waits in a\lnook of the BRUSH's woods.$"

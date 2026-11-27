@@ -334,7 +334,7 @@
     "KANGA_BABY": {
       "found": [{"flag": "FLAG_HOENN_KANGA_REUNITED"}],
       "before": ["Evenings, we hear crying down on the BEACH. Something small and lost, I'd guess.", "And a KANGASKHAN mother keeps pacing where the woods bend in, west of here. Her pouch is empty."],
-      "after": "Somebody walked a lost KANGASKHAN baby back to its mother! The two nest in the woods west of here now.",
+      "after": "Somebody brought a lost KANGASKHAN baby home to its mother! Now the pair nest in the woods out west.",
       "notes": "Evenings in the FUCHSIA SAFARI ZONE, a KANGASKHAN baby cries on the BEACH. Its mother waits in a nook of the BRUSH's woods."
     }
   },
