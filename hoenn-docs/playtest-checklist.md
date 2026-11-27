@@ -426,6 +426,14 @@ Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its 
 - Mt. Moon Square on a Monday night: the Clefairy dance and the MOON ring together (colours, slowdown).
 - The lab researcher with 1–6 fragments, then all seven (ANCIENT). May's call afterwards, outdoors.
 
+## 2.0 part 28 (Unown Cipher C)
+- With the tablet, find the boulder south of the central chamber from the tablet's hint, by day (a hint line) and at night (the scene). Does the shake and white flash look right? Is the ladder hole clear afterwards, by day too?
+- Walk down: the sanctum's walls, frieze and statues. Does it look like part of the Ruins, with no odd edges? Do the floating Unown sit well?
+- The mural: try several letters across days, including ! and ?. Catch one and check the Pokédex and summary show that form. The next day it lets you pick again.
+- The inscription from each side of the statue, and the researcher afterwards; Brendan's call outdoors.
+- Radio (PokéGear, station 41, in the Ruins) at each stage: before the tablet (a site word that changes weekly), with the tablet, after the boulder, after the inscription. The emulator only checked the last stage.
+- The sanctum's battle background (a cave).
+
 ## Lane B parts (27a, 31b on: Kanto, Safari, legends)
 Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 
