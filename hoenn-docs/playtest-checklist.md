@@ -406,3 +406,11 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - The Dawn Stone behind the outcrop and the NeverMeltIce in the hall's top-left wall (face the wall from the corner).
 - May's call about the feather (rings within a few steps in a cave or outdoors).
 - The Shell Bell man's new lines and the Pacifidlog old man's rumor.
+
+## 2.0 part 27a (Unown Cipher A)
+- With all four Ruins panels solved, visit Hoenn, then come back: Brendan's call about the lab, and the lab researcher's request (she's the woman at the back of the lab).
+- Words Room 1 (the one with six lines): does the new line under the north wall read as braille dots over Unown letters? Read it from the row below (face up).
+- At night (7 PM–6 AM) go into the other three Words rooms: the glowing word above the inscription, the message the first time each weekday. Is the pale-cyan glow easy to see on the floor?
+- Over a week of nights (or with the wall clock's calendar), collect all seven words, then talk to the researcher: the list and the seven-places line.
+- The puzzle chambers and the Sinjoh Ruins temple share this tileset: check their coloured stone panels look unchanged (palette 10 got a new colour in an unused slot).
+- The lab's wandering scientist's two new lines.

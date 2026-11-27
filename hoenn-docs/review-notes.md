@@ -204,6 +204,12 @@ Each PR lists its "picked without Bryan" choices. These are the ones that change
 - **Night dive (25a/25b):** once found, the crack and the guardians are there at any hour, though the plan's diver line says "at night". The "back wall" is the mound's old Seafloor Cavern door: the trench's top wall is on the map edge. Both are written into the plan.
 - **Ice chamber (26a/26b):** Froslass is drawn standing on the ice rock, not as a reflection inside it. The feather also comes after a knockout, not only a catch. Plan step 5's optional Icy Rock trade was left out.
 
+### 32. Part 27a review (PR #86, Claude, Nov 27) — **fixed in PR #86 before merging**
+- **The braille window cut the Rosetta off.** `braillemessage` caps its window at 28 tiles, so AT NIGHT WE SPEAK showed as "AT NIGHT WE SP" (visible in the part's own grid, panel 3). Now two lines, AT NIGHT / WE SPEAK; checked in the emulator.
+- **The researcher's word list ran off the text box.** "Night words so far: {STR_VAR_2}." had no line breaks, so with three or more words it went past the box's edge (six words were ~59 characters on one line). The list now goes on its own line and `HoennCipherWordCount` starts a new one after every third word; checked in the emulator with six words.
+- Checked and fine: the visited flags `HoennCipherIsOpen` reads are all Hoenn-owned (0x1B01–0x1B0E, never set at new game); the Rosetta's row 3 in Words Room 1 was plain floor, so nothing original is drawn over; the swapped lab scientist only had flavour text; every other new text fits the box (measured with the font's glyph widths); the unown-tiles and hints generators re-run with no changes.
+- 27a's flags (`HOENN_FLAGS_E_JOHTO_KANTO` + 0x00–0x0A) and call ID 37 sit at the start of lane A's ranges from the lane setup (PR #85), as that PR expects: lane A's 27b continues from + 0x0B and call 38.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 

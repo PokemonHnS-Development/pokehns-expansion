@@ -39,5 +39,6 @@
 #define HOENN_CALL_TRENCH_DOOR 34 // May: the trench's three guardians are caught and its door is open (2.0 part 25b)
 #define HOENN_CALL_ICE_GLALIE 35 // Brendan: you met the Glalie in Shoal Cave's ice chamber (2.0 part 26a)
 #define HOENN_CALL_FROST_FEATHER 36 // May: you found Articuno's feather behind the Froslass (2.0 part 26b)
+#define HOENN_CALL_CIPHER 37 // Brendan: the Ruins of Alph lab phoned Birch about a braille wall (2.0 part 27a)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

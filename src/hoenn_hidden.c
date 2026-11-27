@@ -218,7 +218,7 @@ u16 HoennHiddenDueCall(void)
         return HOENN_CALL_ICE_GLALIE;
     if (FlagGet(FLAG_HOENN_GOT_FROST_FEATHER) && !FlagGet(FLAG_HOENN_CALL_FROST_FEATHER))
         return HOENN_CALL_FROST_FEATHER;
-    return HOENN_CALL_NONE;
+    return HoennCipherDueCall(); // Johto/Kanto hidden events (part 27a+)
 }
 
 // Part 24b: the Mirage Tower stands only on a day the Sand Chime was rung on
