@@ -448,8 +448,8 @@ Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its 
 - Swim off while following: the lights scatter and the light is back at the start.
 - The sea cave appearing at the ridge, then the lagoon: does it look hand-made (rock edges, beach, water)? The Lanturn, the Chinchou, the old stone (with and without the Slowking's prophecy).
 - Leave and come back by day: the cave is still there and works.
-- Route 40 at night: the Ampharos blinking on its rock (surf from the beach, talk to it from the water north of it). Say NO: it stays. Say YES: it rides with you.
-- Land with it on Route 40's beach and on Olivine's pier: it hops off on the tile you landed on and runs off along the shore. Does the run direction look right? Also try landing somewhere far (Cianwood): text only.
+- Route 40 at night: the Ampharos blinking on its two boulders (surf from the beach, talk to it from the water north of them). With no BERRY: it shrinks back. Give it a BERRY (any kind), then talk again the same night ("nibbling the last of your BERRY"); come back the next night (after noon counts as a new night) for the second and third. Does three nights feel right? Say NO after the third: it stays. Say YES: it rides with you as your follower.
+- Land with it anywhere (Route 40's beach, Olivine's pier, Cianwood, after Fly): one step on land and it hops off, runs along the land, then the lighthouse cutscene (it climbs the stairs to Jasmine and Amphy) and you're back on your landing tile. Does the run direction look right everywhere? Try it after Jasmine has gone back to the gym too.
 - While it rides, leave Route 40 by surfing into Olivine or Route 41: it stays with you until your next step on land.
 - Amphy at the lighthouse top at night before and after the rescue, and the rescued Ampharos next to it (by day too); May's call after the rescue.
 - The Olivine Cafe sailor's and the lighthouse 1F sailor's new lines.

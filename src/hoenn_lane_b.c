@@ -366,6 +366,8 @@ u32 HoennFollowerPaletteSpecies(u32 species)
 // GetFollowerInfo: TRUE (and the baby's "species") while it follows you.
 bool32 HoennFollowerOverride(u32 *species, bool32 *shiny, bool32 *female)
 {
+    if (HoennLaneAFollowerOverride(species, shiny, female)) // lane A, part 32: the Ampharos rides with you
+        return TRUE;
     if (!KangaBabyFollowing())
         return FALSE;
     *species = SPECIES_NONE;
