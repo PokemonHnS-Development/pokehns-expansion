@@ -16359,6 +16359,18 @@
       "blockdata_filepath": "data/layouts/MeteorFalls_Clifftop_hoenn/map.bin",
       "game_version": "hns",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE45_MOON_HOLLOW_HOENN",
+      "name": "Route45_MoonHollow_hoenn_Layout",
+      "width": 18,
+      "height": 16,
+      "primary_tileset": "gTileset_Johto_NorthEast_Hns",
+      "secondary_tileset": "gTileset_Blackthorn_Hns",
+      "border_filepath": "data/layouts/Route45_MoonHollow_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/Route45_MoonHollow_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     }
   ]
 }

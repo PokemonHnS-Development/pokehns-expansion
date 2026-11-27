@@ -9,7 +9,7 @@ Only lane B's builder edits this file (the reviewer may add a line when it merge
 ## Parts
 | Part | State | Branch / PR | Notes |
 |---|---|---|---|
-| 31b | next, after 27a | — | lane A's 37 needs it: build it first |
+| 31b | PR open, Nov 27 | `v2-31b-honey-trail`, PR #90 | lane A's 37 needs it: built first. Hook for 37: the hollow pool's `HoennSeek_EventScript_MoonHollowPool`, flag `FLAG_HOENN_MOON_HOLLOW_FOUND` |
 | 34a | — | — | lane A's 34b needs it: build it second |
 | 29 | — | — | |
 | 30a | — | — | |
@@ -21,3 +21,4 @@ Only lane B's builder edits this file (the reviewer may add a line when it merge
 ## Claims on shared things
 Anything outside lane B's ranges or maps, one line each, before the part that uses it.
 - Seafoam: `SeafoamIslands_B1F_hns` (34a) and `SeafoamIslands_SecretCave_hns` (36).
+- 31b: `Route45_BeekeeperHouse_hoenn` and `Route45_MoonHollow_hoenn` appended to `gMapGroup_SpecialArea2_Hns`; Route 45 (`Route45_hns`) got an ON_TRANSITION, three objects, a door and a patch; the Blackthorn Mart's cool trainer became a hint NPC (key `BlackthornMartTrainer`).
