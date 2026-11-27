@@ -13,7 +13,7 @@ Only lane B's builder edits this file (the reviewer may add a line when it merge
 | 34a | ✅ merged (PR #91, Nov 27) | `v2-34a-birds`, PR #91 (stacked on #90) | lane A's 34b needs it. Feathers: `ITEM_FROST_FEATHER` (26b), `ITEM_THUNDER_FEATHER`, `ITEM_FLAME_FEATHER`; flags `FLAG_HOENN_GOT_*_FEATHER`, caught flags `FLAG_HOENN_*_CAUGHT` |
 | 29 | ✅ merged (PR #94, Nov 27) | `v2-29-shifting-tunnels`, PR #94 (stacked on #91) | progress-level wild battles: `HoennSetupProgressWildBattle` (`src/hoenn_lane_b.c`) |
 | 30a | ✅ merged (PR #95, Nov 27) | `v2-30a-kangaskhan-baby`, PR #95 (stacked on #94) | the baby follows as the follower Pokémon: `HoennFollowerOverride` hooks in `src/event_object_movement.c` |
-| 30b | PR open, Nov 27 | `v2-30b-tauros-stampede`, PR #96 | herd task in `src/hoenn_lane_b.c` (`Task_HoennStampede`); `FuchsiaCity_SafariZoneHighland_hoenn`; the lead bull is a scripted Safari encounter (`HoennStartScriptedSafariBattle`) |
+| 30b | ✅ merged (PR #96, Nov 27) | `v2-30b-tauros-stampede`, PR #96 | herd task in `src/hoenn_lane_b.c` (`Task_HoennStampede`); `FuchsiaCity_SafariZoneHighland_hoenn`; the lead bull is a scripted Safari encounter (`HoennStartScriptedSafariBattle`) |
 | 33 | — | — | waits for lane A's 32; freezes wild tables (rule 3.6) |
 | 36 | — | — | |
 | 35a | — | — | |

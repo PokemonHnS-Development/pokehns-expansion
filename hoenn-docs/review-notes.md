@@ -269,7 +269,7 @@ Built by this thread before it took over reviewing. Merged 29's reviewed branch 
 - **Choices for Bryan:** evenings only; needs SAFARI LEVEL 2; its own hand-drawn sprite; the Safari's step limit as the timer; the mother's new nook cut into the Brush's trees; a Lucky Egg as the thanks; neither is catchable.
 - Grid: `review-30a.png` in the project's `hoenn-2.0/review/`.
 
-### 43. Review of 30b (PR #96) (reviewer, Nov 27) — **changed on Bryan's review, waiting on his go-ahead**
+### 43. Review of 30b (PR #96) (reviewer, Nov 27) — **changed on Bryan's review, approved, merged**
 Built by this thread before it took over reviewing. Merged 30a's reviewed branch in (conflicts only in CLAUDE.md and the generated hint header); `regen_all.sh --check` clean; size row re-measured.
 - **Code read:** the herd task (`Task_HoennStampede`) moves the template coords first, so off-screen Tauros keep their rhythm; it idles while a script or menu holds you and stops for good once the week's bull is gone. A hit is a Tauros starting a step onto your tile.
 - **Played:** Monday morning on the highland (from the Mountain's canyon); getting hit (long line the first time, short after) and landing at the canyon; crossing all six lanes by timing; the lead bull (Paldean Blaze this week, progress level, perfect Atk/Speed, a normal battle with your own balls); ran → it stays; caught → the herd grazes for the week; next Monday the next breed (Aqua) leads; Tuesday and Monday afternoon empty; the entrance attendant's rumor before and after; Brendan's call. No bugs found.
