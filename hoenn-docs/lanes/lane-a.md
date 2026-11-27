@@ -18,9 +18,9 @@ Only lane A's builder edits this file (the reviewer may add a line when it merge
 | 28 | PR #101 open (Nov 27), waiting for review | `v2-28-cipher-sanctum` | built on 27b (#88) + 27r (#93); flags `HOENN_LANE_A_FLAGS_E` + 0x16–0x1A (0x1B–0x1F spare), daily + 5, call 42 |
 | 31a | — | — | |
 | 32 | — | — | lane B's 33 waits for it |
-| 34b | — | — | needs lane B's 34a |
+| 34b | paused (Nov 27): waits for lane B's 34a (`v2-34a-birds`) and part 32 (#97) to merge | — | needs lane B's 34a |
 | 35b | — | — | |
-| 37 | — | — | needs lane B's 31b |
+| 37 | paused (Nov 27): waits for lane B's 31b (`v2-31b-honey-trail`) and part 28 (#101) to merge | — | needs lane B's 31b |
 
 ## ID plan (inside lane A's ranges)
 So parts built out of order don't collide: 27b E +0x0B–0x15 (used); 28 E +0x16–0x1F; 31a E +0x20–0x25; 32 E +0x26–0x2F; 34b, 35b, 37 F +0x00 on. Calls 38 (27b) on, in build order. Vars, daily, weekly and hidden flags in build order.
