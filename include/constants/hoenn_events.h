@@ -20,7 +20,9 @@
 // - If a block fills up, take the next one from HOENN_FLAGS_SPARE / the spare
 //   vars and say so in a comment. Never move a block: numbers are saved.
 // - src/hoenn_flags.c checks at build time that the blocks don't overlap.
-// - Daily flags reset every morning with HnS's; weekly flags reset once a week.
+// - Daily flags reset at midnight with HnS's; weekly flags reset once a week.
+//   A night event's daily flag goes in sNightlyFlags (src/hoenn_flags.c) instead,
+//   so it resets at noon and lasts the whole night (41r).
 //   Use them for "once a day" / "once a week" events instead of a counter.
 // - Hidden items placed by 2.0 events (bg_event "hidden_item") need a flag
 //   below 0x20E9, so they take theirs from HOENN_EVENT_HIDDEN_ITEMS_START.
@@ -69,6 +71,10 @@
 // The week the weekly flags were last reset in, plus one (0 = not seen yet:
 // the next time check only records the week). See HoennUpdatePerWeek().
 #define VAR_HOENN_WEEK_SEEN       (HOENN_VARS_A_FOUNDATIONS + 0x01)
+// The night the nightly flags were last reset in, plus one (0 = not seen yet).
+// A night runs from noon to noon, so the hours after midnight belong to the
+// night before. See HoennUpdatePerNight() (41r).
+#define VAR_HOENN_NIGHT_SEEN      (HOENN_VARS_A_FOUNDATIONS + 0x02)
 
 // Weekdays as specialvar VAR_RESULT, GetDayOfWeek returns them. Scripts can't
 // use enum Weekday, so these mirror it (src/hoenn_time.c checks they match).
