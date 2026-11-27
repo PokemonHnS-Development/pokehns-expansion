@@ -498,3 +498,10 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 - Three scraps → the OLD SEA MAP → the Vermilion sailor → Faraway Island. Faraway's Mew chase itself wasn't retested. May's call.
 - HnS's Hall of Fame clears `FLAG_CAUGHT_MEW` (so Faraway's Mew can come back): after a Hall of Fame with Mew caught, the blurs can show again at dawn, but only where you haven't already found the scrap. Is that fine?
 - Vermilion's old item ball at (61,46): a BIG PEARL now.
+
+## 2.0 part 33 (distribution)
+- Kanto routes 1–25, Rock Tunnel, Seafoam, Viridian Forest, Cinnabar's water, Pallet's rods: no Hoenn species any more except Wingull (Route 19), Lunatone/Solrock (Mt. Moon), Torkoal (Cinnabar) and Route 18's Kecleon. Do the replacements feel right for each route? The overworld Pokémon on those maps changed to match.
+- Ice Path: no Sneasel (Delibird by day; Swinub, Jynx, Delibird at night). Sneasel only from lane A's thief (31a).
+- Safari Zone Brush/Mountain/Cave: Roselia, Breloom, Kecleon, Grumpig, Gyarados instead of Tropius, Absol and Feebas. Johto Safari Low Right: Piloswine and Quagsire instead of Sneasel.
+- Hoenn: Route 102 has Nuzleaf where Gardevoir was, Routes 119/120 Breloom/Nuzleaf/Gloom/Mightyena where Tropius and Absol were, Route 117 has Roselia by day. Fortree's roof Pokémon is a Swellow. Absol only as the storm roamer, Tropius only in the orchard.
+- The Pokédex area pages for Absol, Tropius, Feebas, Sneasel and Ralts: do they still show stale spots?
