@@ -149,6 +149,9 @@
 
     "STORY_ICE_THIEF": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_SNEASEL_STASH"}], "text": ["Items keep vanishing off the ice deep down in the ICE PATH. Only at night!", "CLAIR thinks it's a POKéMON. Whatever it is, it's fast on the ice."]},
     "STORY_ICE_THIEF_NOOK": {"kind": "story", "if": [{"flag": "FLAG_HOENN_SNEASEL_STASH"}, {"not_flag": "FLAG_HOENN_CAUGHT_ICE_SNEASEL"}], "text": ["That SNEASEL from the ICE PATH still comes back to its corner at night.", "It's lost its hoard, but it hasn't lost that grin!"]},
+    "STORY_LANTURN_LIGHTS": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_LAGOON_FOUND"}], "text": ["Sail past the WHIRL ISLANDS after dark and you'll see a light on the water, bobbing along like it wants you to follow.", "Old hands say it leads somewhere no chart shows. Me, I steer clear!"]},
+    "STORY_LANTURN_LAGOON": {"kind": "story", "if": [{"flag": "FLAG_HOENN_LAGOON_FOUND"}], "text": ["You followed that light at night? Then you've seen where it goes.", "Some places the sea keeps for itself. Don't worry, I won't tell a soul."]},
+    "STORY_AMPHY_NIGHT": {"kind": "story", "if": [{"var": "VAR_OLIVINE_CITY_STATE", "min": 5}, {"not_flag": "FLAG_HOENN_RESCUED_AMPHAROS"}], "text": ["AMPHY's well again, but JASMINE says it won't settle at night.", "It just stands at the top of the LIGHTHOUSE, staring out to sea."]},
     "STORY_WISH_MONDAY": {"kind": "story", "if": [{"flag": "FLAG_HOENN_WISH_METEOR_FALLS"}, {"flag": "FLAG_HOENN_WISH_SPACE_CENTER"}, {"flag": "FLAG_HOENN_WISH_MOON_HOLLOW"}, {"not_caught": "JIRACHI"}], "text": ["Three wishes on three falling stars? Then the old story says the white rock at MT. MOON will answer.", "But only on the night the CLEFAIRY dance there. That's Monday night, in my day."]},
     "STORY_WISHES": {"kind": "story", "if": [{"not_caught": "JIRACHI"}], "text": ["When I was a boy, we wished on falling stars in three places: where the stars fell, where people watch them, and where the moon comes closest.", "METEOR FALLS, this very SPACE CENTER at night… and the third is a hollow somewhere in JOHTO that only the bears know."]},
     "RUMOR_JIRACHI": {"kind": "rumor", "rumor": "JIRACHI"},
@@ -478,6 +481,8 @@
     {"map": "CinnabarIsland_PokemonCenter_hns", "script": "CinnabarIsland_PokemonCenter_EventScript_Fisher", "key": "CinnabarPCFisher", "lines": ["RUMOR_MANSION_JOURNAL"]},
     {"map": "ViridianCity_PokemonCenter_hns", "script": "ViridianCity_PokemonCenter_EventScript_BugCatcher", "key": "ViridianPCBugCatcher", "lines": ["RUMOR_MEW_BLUR"]},
     {"map": "OldaleTown_PokemonCenter_1F", "script": "OldaleTown_PokemonCenter_1F_EventScript_Boy", "key": "OldalePCBoy", "lines": ["RUMOR_MEW_BLUR"]},
+    {"map": "OlivineCity_Cafe_hns",              "script": "OlivineCity_EventScript_SailorB", "key": "OlivineCafeSailor", "lines": ["STORY_LANTURN_LAGOON", "STORY_LANTURN_LIGHTS"]},
+    {"map": "OlivineCity_Lighthouse_hns",        "script": "OlivineLighthouse_EventScript_1FSailor", "key": "LighthouseSailor", "lines": ["STORY_AMPHY_NIGHT"]},
     {"map": "MossdeepCity_SpaceCenter_1F", "script": "MossdeepCity_SpaceCenter_1F_EventScript_OldMan", "key": "SpaceCenterOldMan", "lines": ["STORY_WISH_MONDAY", "STORY_WISHES", "RUMOR_JIRACHI"]},
     {"map": "MossdeepCity_SpaceCenter_1F", "script": "MossdeepCity_SpaceCenter_1F_EventScript_Woman", "key": "SpaceCenterWoman", "lines": ["STORY_SIGNAL", "RUMOR_DEOXYS"]},
     {"map": "SinjohRuins_House1_hns", "script": "SinjohRuins_Lab_EventScript_Linguist", "key": "SinjohLinguist", "lines": ["STORY_ARCEUS_WAITS", "STORY_REGI_SEA", "STORY_REGI_BRAILLE", "RUMOR_REGI_DOORS"]}

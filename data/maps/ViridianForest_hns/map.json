@@ -720,6 +720,22 @@
       "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_LEAF_STONE"
     },
     {
+      "type": "sign",
+      "x": 39,
+      "y": 59,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "HoennSeek_EventScript_SoilViridian"
+    },
+    {
+      "type": "sign",
+      "x": 40,
+      "y": 59,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "HoennSeek_EventScript_SoilViridian"
+    },
+    {
       "type": "secret_base",
       "x": 50,
       "y": 65,

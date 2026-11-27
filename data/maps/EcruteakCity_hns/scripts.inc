@@ -1,10 +1,17 @@
 EcruteakCity_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, EcruteakCity_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, HoennSeek_EcruteakFrameTable @ Hoenn & Seek 2.0 part 35b
 	.byte 0
+
+@ Hoenn & Seek 2.0 part 35b: the rainbow over Ecruteak (data/scripts/hoenn_johto_legends.inc).
+HoennSeek_EcruteakFrameTable:
+	map_script_2 VAR_TEMP_1, 1, HoennSeek_EventScript_EcruteakRainbow
+	.2byte 0
 
 EcruteakCity_OnTransition::
 	callnative SetTimeBasedEncounters
+	call HoennSeek_EventScript_EcruteakDawn @ Hoenn & Seek 2.0 part 35b
 	end
 
 EcruteakCity_Test_Lugia::

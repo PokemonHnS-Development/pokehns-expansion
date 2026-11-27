@@ -127,6 +127,7 @@ void HoennRoamerBattleEnded(u32 roamerIndex)
 {
     if (HoennIsAbsolRoamer(roamerIndex) && gBattleOutcome == B_OUTCOME_CAUGHT)
         FlagSet(FLAG_HOENN_ABSOL_CAUGHT);
+    HoennJohtoBeastBattleEnded(roamerIndex); // 2.0 part 35b (src/hoenn_johto_legends.c): Raikou and Entei
 }
 
 u16 HoennAbsolState(void)

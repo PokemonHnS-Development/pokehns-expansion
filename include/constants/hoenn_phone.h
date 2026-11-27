@@ -51,6 +51,8 @@
 #define HOENN_CALL_CIPHER_FRAGMENT 38 // May: the Ruins lab phoned Birch about a tablet fragment (2.0 part 27b)
 #define HOENN_CALL_SNEASEL 39 // Brendan: Clair's gym report says the Ice Path thief was caught (2.0 part 31a; 38 is 27b's)
 #define HOENN_CALL_CIPHER_SANCTUM 42 // Brendan: the Ruins lab phoned Birch about the sanctum (2.0 part 28; 39-41 are 31a, 32, 35b)
+#define HOENN_CALL_AMPHAROS 40 // May: Jasmine told the LEAGUE the second light went out (2.0 part 32; 27b is 38, 31a 39)
+#define HOENN_CALL_RAINBOW 41 // Brendan: the League heard of a rainbow over Ecruteak at dawn (2.0 part 35b; 38-40 are 27b, 31a, 32)
 #define HOENN_CALL_WISHES 43 // May: the Space Center phoned Birch about three wishes (2.0 part 37)
 #define HOENN_CALL_DEOXYS 44 // Brendan: Birch heard the Space Center gave you the AURORA TICKET (2.0 part 37)
 #define HOENN_CALL_REGIS 45 // May: Steven phoned Birch about the Sinjoh doors (2.0 part 37)

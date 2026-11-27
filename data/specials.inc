@@ -763,6 +763,19 @@ gSpecials::
 	def_special HoennGlyphTakeFragment
 	def_special HoennCipherFragmentCount
 	def_special HoennSanctumLetter
+	def_special HoennAmpharosRunDir
+	def_special HoennAmpharosSaveReturn
+	def_special HoennAmpharosReturn
+	def_special HoennAmpharosToLighthouse
+	def_special HoennAmpharosHidePlayer
+	def_special HoennHasAnyBerry
+	@ part 35b (src/hoenn_johto_legends.c)
+	def_special HoennEusineState
+	def_special HoennHoOhClue
+	def_special HoennForestSoilState
+	def_special HoennForestSoilPlant
+	def_special HoennForestSoilTake
+	def_special HoennForestOfferings
 	def_special HoennWishCount
 	def_special HoennDeoxysSignalNight
 	@ (end of lane A's specials)

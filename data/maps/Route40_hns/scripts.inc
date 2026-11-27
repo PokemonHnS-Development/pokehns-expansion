@@ -3,6 +3,7 @@ Route40_hns_MapScripts::
 	.byte 0
 
 Route40_MapScript_OnTransition::
+	call HoennSeek_EventScript_Route40Night @ Hoenn & Seek 2.0 part 32: the stranded Ampharos
 	callnative SetTimeBasedEncounters
 	goto_if_ge VAR_OLIVINE_CITY_STATE, 5, Route40_MapScript_ClearWeather
 	end

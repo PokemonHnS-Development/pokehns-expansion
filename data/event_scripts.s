@@ -326,6 +326,7 @@ gStdScripts_End::
 	.include "data/maps/Route124_Trench_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 25a
 	.include "data/maps/ShoalCave_IceChamber_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 26a
 	.include "data/maps/RuinsOfAlph_Sanctum_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 28
+	.include "data/maps/Route41_Lagoon_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 32
 	.include "data/maps/LilycoveCity_ContestHall/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestHall_hns/scripts.inc"
 	.include "data/maps/LilycoveCity_PokemonCenter_1F/scripts.inc"
@@ -1111,6 +1112,7 @@ gStdScripts_End::
 	.include "data/scripts/hoenn_hidden.inc" @ Hoenn & Seek 2.0 part 20
 	.include "data/scripts/hoenn_cipher.inc" @ Hoenn & Seek 2.0 part 27a
 	.include "data/scripts/hoenn_lane_a.inc" @ Hoenn & Seek 2.0, builder lane A (parts 27b+)
+	.include "data/scripts/hoenn_johto_legends.inc" @ Hoenn & Seek 2.0 part 35b (lane A)
 	.include "data/scripts/hoenn_lane_b.inc" @ Hoenn & Seek 2.0, builder lane B (parts 31b+)
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"

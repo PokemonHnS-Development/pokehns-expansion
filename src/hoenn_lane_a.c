@@ -61,7 +61,14 @@
 #include "global.h"
 #include "event_data.h"
 #include "event_object_movement.h"
+#include "field_player_avatar.h"
+#include "field_screen_effect.h"
+#include "item.h"
+#include "overworld.h"
+#include "constants/items.h"
 #include "fieldmap.h"
+#include "metatile_behavior.h"
+#include "script.h"
 #include "pokemon.h"
 #include "rtc.h"
 #include "string_util.h"
@@ -80,6 +87,7 @@
 bool8 HoennCipherIsOpen(void); // src/hoenn_cipher.c (part 27a)
 
 extern const u8 HoennSeek_EventScript_GlyphRing[];
+extern const u8 HoennSeek_EventScript_AmpharosAshore[];
 
 // ---- Part 27b: the glyph sites ----------------------------------------------
 struct GlyphSite
@@ -315,6 +323,164 @@ u32 HoennRadioUnownBroadcast(const u8 **lines, u8 *line)
     return 2;
 }
 
+// ---- Part 32: the stranded Ampharos ---------------------------------------
+// Bryan (32 review): a rescue, not a battle. VAR_HOENN_AMPHAROS_STATE counts
+// the BERRIES it has taken from you (one a night, HOENN_AMPHAROS_TRUSTS of
+// them); then it rides with you (HOENN_AMPHAROS_RIDING) and shows as your
+// follower Pokémon, so it's seen the moment you land on any shore. Your first
+// step on land plays the hop-off (HoennSeek_EventScript_AmpharosAshore): it
+// runs off, and a short scene at the lighthouse top (HOENN_AMPHAROS_ARRIVING)
+// shows it reaching JASMINE and AMPHY before you're put back where you landed.
+
+static bool32 AmpharosWithYou(void)
+{
+    u32 state = VarGet(VAR_HOENN_AMPHAROS_STATE);
+    return state == HOENN_AMPHAROS_RIDING || state == HOENN_AMPHAROS_ARRIVING;
+}
+
+// One hook line in TryStartStepCountScript (src/field_control_avatar.c), after
+// the follow-the-lights one. Landing from Surf isn't a step; the next one is.
+bool32 HoennLaneAOnStep(void)
+{
+    if (VarGet(VAR_HOENN_AMPHAROS_STATE) != HOENN_AMPHAROS_RIDING)
+        return FALSE;
+    if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_SURFING | PLAYER_AVATAR_FLAG_UNDERWATER))
+        return FALSE;
+    ScriptContext_SetupScript(HoennSeek_EventScript_AmpharosAshore);
+    return TRUE;
+}
+
+// Called first by HoennFollowerOverride (src/hoenn_lane_b.c, part 30a's hook
+// in GetFollowerInfo): while it rides with you, it's your follower.
+bool32 HoennLaneAFollowerOverride(u32 *species, bool32 *shiny, bool32 *female)
+{
+    if (!AmpharosWithYou())
+        return FALSE;
+    *species = SPECIES_AMPHAROS;
+    *shiny = FALSE;
+    *female = FALSE;
+    return TRUE;
+}
+
+// specialvar VAR_RESULT, HoennHasAnyBerry: anything in the BERRIES pocket.
+u16 HoennHasAnyBerry(void)
+{
+    u32 i;
+
+    for (i = 0; i < gBagPockets[POCKET_BERRIES].capacity; i++)
+    {
+        if (GetBagItemId(POCKET_BERRIES, i) != ITEM_NONE && GetBagItemQuantity(POCKET_BERRIES, i) != 0)
+            return TRUE;
+    }
+    return FALSE;
+}
+
+static bool32 IsOpenLand(s32 x, s32 y)
+{
+    if (MapGridGetCollisionAt(x, y))
+        return FALSE;
+    if (MetatileBehavior_IsSurfableWaterOrUnderwater(MapGridGetMetatileBehaviorAt(x, y)))
+        return FALSE;
+    return GetObjectEventIdByXY(x, y) == OBJECT_EVENTS_COUNT;
+}
+
+// specialvar VAR_RESULT, HoennAmpharosRunDir: the way the follower (the
+// Ampharos) runs off, with 3 tiles of open land: away from you first, then
+// to the sides. DIR_NONE if it isn't showing (it then just leaves off screen).
+u16 HoennAmpharosRunDir(void)
+{
+    static const s8 sDeltas[][2] = {
+        [DIR_SOUTH] = {0, 1}, [DIR_NORTH] = {0, -1}, [DIR_WEST] = {-1, 0}, [DIR_EAST] = {1, 0},
+    };
+    static const u8 sOrder[] = {DIR_NORTH, DIR_SOUTH, DIR_WEST, DIR_EAST};
+    struct ObjectEvent *follower = GetFollowerObject();
+    struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
+    s32 x, y;
+    u32 i, k, away;
+
+    if (follower == NULL || follower->invisible)
+        return DIR_NONE;
+    x = follower->currentCoords.x;
+    y = follower->currentCoords.y;
+    if (x < player->currentCoords.x)
+        away = DIR_WEST;
+    else if (x > player->currentCoords.x)
+        away = DIR_EAST;
+    else if (y < player->currentCoords.y)
+        away = DIR_NORTH;
+    else
+        away = DIR_SOUTH;
+    for (i = 0; i < ARRAY_COUNT(sOrder) + 1; i++)
+    {
+        u32 dir = (i == 0) ? away : sOrder[i - 1];
+
+        if (dir == GetOppositeDirection(away))
+            continue; // that's toward you
+        for (k = 1; k <= 3; k++)
+        {
+            if (!IsOpenLand(x + sDeltas[dir][0] * k, y + sDeltas[dir][1] * k))
+                break;
+        }
+        if (k > 3)
+            return dir;
+    }
+    return DIR_NONE;
+}
+
+// Where to put you back after the lighthouse scene. Kept in EWRAM, not in
+// gSaveBlock1Ptr->dynamicWarp (doors use that), and written field by field:
+// SetDynamicWarpWithCoords/SetWarpDestination take s8 coordinates, so any x
+// past 127 (the lighthouse is 170 tiles wide) came out as the map's centre.
+// The scene can't be saved during, and a reset replays it from RIDING.
+static EWRAM_DATA struct WarpData sAmpharosReturn = {0};
+
+static void WarpToCoords(s8 mapGroup, s8 mapNum, s16 x, s16 y)
+{
+    struct WarpData saved = gSaveBlock1Ptr->dynamicWarp;
+
+    gSaveBlock1Ptr->dynamicWarp.mapGroup = mapGroup;
+    gSaveBlock1Ptr->dynamicWarp.mapNum = mapNum;
+    gSaveBlock1Ptr->dynamicWarp.warpId = WARP_ID_NONE;
+    gSaveBlock1Ptr->dynamicWarp.x = x;
+    gSaveBlock1Ptr->dynamicWarp.y = y;
+    SetWarpDestinationToDynamicWarp(0);
+    gSaveBlock1Ptr->dynamicWarp = saved;
+}
+
+// special HoennAmpharosSaveReturn: remember your tile.
+void HoennAmpharosSaveReturn(void)
+{
+    sAmpharosReturn.mapGroup = gSaveBlock1Ptr->location.mapGroup;
+    sAmpharosReturn.mapNum = gSaveBlock1Ptr->location.mapNum;
+    sAmpharosReturn.warpId = WARP_ID_NONE;
+    sAmpharosReturn.x = gSaveBlock1Ptr->pos.x;
+    sAmpharosReturn.y = gSaveBlock1Ptr->pos.y;
+}
+
+// special HoennAmpharosToLighthouse (then waitstate): `warpsilent` to the
+// lighthouse top's (158,11), which a script command can't reach (s8 x).
+void HoennAmpharosToLighthouse(void)
+{
+    WarpToCoords(MAP_GROUP(MAP_OLIVINE_CITY_LIGHTHOUSE_HNS), MAP_NUM(MAP_OLIVINE_CITY_LIGHTHOUSE_HNS), 158, 11);
+    DoDiveWarp();
+    ResetInitialPlayerAvatarState();
+}
+
+// special HoennAmpharosReturn (then waitstate): back to the saved tile.
+void HoennAmpharosReturn(void)
+{
+    WarpToCoords(sAmpharosReturn.mapGroup, sAmpharosReturn.mapNum, sAmpharosReturn.x, sAmpharosReturn.y);
+    DoWarp();
+    ResetInitialPlayerAvatarState();
+}
+
+// special HoennAmpharosHidePlayer (the lighthouse's ON_WARP_INTO_MAP entry,
+// after objects spawn and before the fade-in): you aren't in the scene.
+void HoennAmpharosHidePlayer(void)
+{
+    gObjectEvents[gPlayerAvatar.objectEventId].invisible = TRUE;
+}
+
 // ---- Part 37: Jirachi's wishes, Deoxys's signal -----------------------------
 // specialvar VAR_RESULT, HoennWishCount: how many of the three wishes are made.
 u16 HoennWishCount(void)
@@ -366,6 +532,12 @@ u16 HoennLaneADueCall(void)
     if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_CIPHER_LAB_SANCTUM)
      && !FlagGet(FLAG_HOENN_CALL_CIPHER_SANCTUM))
         return HOENN_CALL_CIPHER_SANCTUM;
+    // Part 32: the stranded Ampharos is rescued; Jasmine's report reached Norman.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_RESCUED_AMPHAROS) && !FlagGet(FLAG_HOENN_CALL_AMPHAROS))
+        return HOENN_CALL_AMPHAROS;
+    // Part 35b: Brendan heard of the rainbow over Ecruteak (src/hoenn_johto_legends.c)
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_HOOH_RAINBOW) && !FlagGet(FLAG_HOENN_CALL_RAINBOW))
+        return HOENN_CALL_RAINBOW;
     // Part 37, May: the Space Center's old man phoned Birch about your wishes.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && HoennWishCount() == 3 && !FlagGet(FLAG_HOENN_CALL_WISHES))
         return HOENN_CALL_WISHES;

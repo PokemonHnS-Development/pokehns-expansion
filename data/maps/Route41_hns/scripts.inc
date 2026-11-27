@@ -1,8 +1,10 @@
 Route41_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route41_MapScript_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, HoennSeek_EventScript_Route41OnLoad @ Hoenn & Seek 2.0 part 32 (hoenn_lane_a.inc)
 	.byte 0
 
 Route41_MapScript_OnTransition::
+	call HoennSeek_EventScript_Route41Night @ Hoenn & Seek 2.0 part 32: the Lanturn light
 	goto_if_eq VAR_COMPLETED_LUGIA, 4, Route41_MapScript_DoNothing
 	goto_if_ge VAR_OLIVINE_CITY_STATE, 5, OlivineCity_MapScript_ClearWeather
 	end
