@@ -13,14 +13,20 @@ Only lane A's builder edits this file (the reviewer may add a line when it merge
 | Part | State | Branch / PR | Notes |
 |---|---|---|---|
 | 27a | merged (Nov 27; review fixes by the reviewer before merging) | PR #86 | built by lane B's builder; flags `HOENN_LANE_A_FLAGS_E` + 0x00–0x0A, call 37: **27b continues from + 0x0B and call 38** |
-| 27b | next, after 27a merges and Aidan says go | — | |
-| 28 | — | — | |
+| 27r | PR open (Nov 27) | `v2-27r-cipher-fixes` | review items 34–35 (reading the floor lines from the wall; the word changing at midnight). Goes before 27b; #88 will be synced onto it |
+| 27b | PR #88 open, waiting for the reviewer (Nov 27) | `v2-27b-cipher-sites` | E +0x0B–0x15, call 38; touches HnS maps Bell Tower 2F, Mt. Moon Square, Ice Path 1F, Whirl Islands B2F, Mt. Mortar 1F south, Union Cave B1F, Seafoam 1F (all lane A's) |
+| 28 | after 27b merges (31a goes first meanwhile) | — | |
 | 31a | — | — | |
 | 32 | — | — | lane B's 33 waits for it |
 | 34b | — | — | needs lane B's 34a |
 | 35b | — | — | |
 | 37 | — | — | needs lane B's 31b |
 
+## ID plan (inside lane A's ranges)
+So parts built out of order don't collide: 27b E +0x0B–0x15 (used); 28 E +0x16–0x1F; 31a E +0x20–0x25; 32 E +0x26–0x2F; 34b, 35b, 37 F +0x00 on. Calls 38 (27b) on, in build order. Vars, daily, weekly and hidden flags in build order.
+
 ## Claims on shared things
 Anything outside lane A's ranges or maps (a spare flag, another lane's map, a new trainer ID), one line each, before the part that uses it.
 - Seafoam: `SeafoamIslands_1F_hns` only (27b's FOAM ring).
+- `data/specials.inc`: 27b added a lane A block and an empty lane B block after `HoennCipherWordCount` (like the other markers); lane B adds its specials under its own marker.
+- `src/event_object_movement.c`: one hook line (27b, `HoennObjectPaletteSpecies`).

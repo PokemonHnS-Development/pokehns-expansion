@@ -1081,6 +1081,9 @@ HoennSeek_Text_Hint_LineStoryCipherWall::
 HoennSeek_Text_Hint_LineStoryCipherNight::
 	.string "AT NIGHT WE SPEAK… I've been\nsleeping here at the lab ever\lsince you read it.\pIf the WORDS chambers really light\nup at night, is it the same word\levery night? Tell my colleague\lwhat you see!$"
 
+HoennSeek_Text_Hint_LineStoryCipherRings::
+	.string "Hikers keep phoning the lab. They\nsee UNOWN floating in a circle at\lnight, deep in the caves.\pAlways somewhere quiet, away from\nthe path. Is it the places from\lthe words?$"
+
 HoennSeek_Text_Hint_Forecast0::
 	.string "Storms are rolling in around ROUTE\n120 {STR_VAR_1}.\pFolks say that's when the white\none walks.$"
 
