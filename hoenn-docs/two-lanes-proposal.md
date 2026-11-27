@@ -20,7 +20,7 @@ The split follows **maps**: each lane owns a set of places, so its PRs rarely to
 | A7 | 35b Ho-Oh, beasts, Celebi | L | Tin Tower roof, Ecruteak, Ruins puzzle, radio (Eusine), Ilex/Viridian/Petalburg Woods berry spots | 3 ✅ |
 | A8 | 37 Jirachi, Deoxys, Regis, Arceus | L | Mt. Moon outside, Meteor Falls, Space Center, Sinjoh Ruins, Route 45 moon hollow | 22b/23/25b ✅, A3, **B1 (31b)** |
 
-### Lane B: Kanto, the Safari and the legends' other half
+### Lane B: Kanto, the Safari, Mewtwo/Mew and Hoenn's legends
 | Order | Part | Size | Maps / systems it touches | Needs |
 |---|---|---|---|---|
 | B1 | 31b Teddiursa honey trail | L | Route 45 + beekeeper house (buildings generator), honey tree, moon hollow (new map) | 3 ✅ |
