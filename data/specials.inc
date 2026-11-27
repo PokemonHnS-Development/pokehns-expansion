@@ -763,6 +763,12 @@ gSpecials::
 	def_special HoennGlyphTakeFragment
 	def_special HoennCipherFragmentCount
 	def_special HoennSanctumLetter
+	def_special HoennAmpharosRunDir
+	def_special HoennAmpharosSaveReturn
+	def_special HoennAmpharosReturn
+	def_special HoennAmpharosToLighthouse
+	def_special HoennAmpharosHidePlayer
+	def_special HoennHasAnyBerry
 	@ (end of lane A's specials)
 
 	@ Hoenn & Seek 2.0, builder lane B (parts 31b+): lane B's specials go here

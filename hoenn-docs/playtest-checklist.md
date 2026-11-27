@@ -443,6 +443,17 @@ Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its 
 - Radio (PokéGear, station 41, in the Ruins) at each stage: before the tablet (a site word that changes weekly), with the tablet, after the boulder, after the inscription. The emulator only checked the last stage.
 - The sanctum's battle background (a cave).
 
+## 2.0 part 32 (Olivine nights)
+- At night (7 PM–6 AM), surf Route 41's north-west water (near 41,16): the Lanturn light. Swim close and follow it all the way to the east ridge. Does each stop stay on screen? Is the pace comfortable?
+- Swim off while following: the lights scatter and the light is back at the start.
+- The sea cave appearing at the ridge, then the lagoon: does it look hand-made (rock edges, beach, water)? The Lanturn, the Chinchou, the old stone (with and without the Slowking's prophecy).
+- Leave and come back by day: the cave is still there and works.
+- Route 40 at night: the Ampharos blinking on its two boulders (surf from the beach, talk to it from the water north of them). With no BERRY: it shrinks back. Give it a BERRY (any kind), then talk again the same night ("nibbling the last of your BERRY"); come back the next night (after noon counts as a new night) for the second and third. Does three nights feel right? Say NO after the third: it stays. Say YES: it rides with you as your follower.
+- Land with it anywhere (Route 40's beach, Olivine's pier, Cianwood, after Fly): one step on land and it hops off, runs along the land, then the lighthouse cutscene (it climbs the stairs to Jasmine and Amphy) and you're back on your landing tile. Does the run direction look right everywhere? Try it after Jasmine has gone back to the gym too.
+- While it rides, leave Route 40 by surfing into Olivine or Route 41: it stays with you until your next step on land.
+- Amphy at the lighthouse top at night before and after the rescue, and the rescued Ampharos next to it (by day too); May's call after the rescue.
+- The Olivine Cafe sailor's and the lighthouse 1F sailor's new lines.
+
 ## Lane B parts (27a, 31b on: Kanto, Safari, legends)
 Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 
