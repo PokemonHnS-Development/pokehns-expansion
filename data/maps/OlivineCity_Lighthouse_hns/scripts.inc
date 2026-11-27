@@ -1,4 +1,5 @@
 OlivineCity_Lighthouse_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_LighthouseOnTransition @ Hoenn & Seek 2.0 part 32 (hoenn_lane_a.inc)
 	.byte 0
 
 OlivineLighthouse_EventScript_Item_Ether::

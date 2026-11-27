@@ -539,15 +539,21 @@
 // At night a LANTURN's light waits off Route 41's north shore and leads across
 // the sea (src/hoenn_lights.c) to the foot of the east ridge, where it slips
 // into a sea cave (57,53): the way into Route41_Lagoon_hoenn, Lugia's shrine
-// (part 34b). Also at night, a stranded AMPHAROS blinks on a sea rock off Route 40 (32,33);
-// AMPHY in the lighthouse keeps watching its light. (31a ends at + 0x26 and
-// daily + 0; 28 has + 0x16-0x1F.)
+// (part 34b). Also at night, a stranded AMPHAROS blinks on a sea rock off Route 40 (32,32);
+// AMPHY in the lighthouse keeps watching its light. It's too scared to swim:
+// it climbs on behind you, and the first step you take on land (any map;
+// Route 40's beach is eight tiles north) it hops off and runs home (Bryan,
+// 32 review: a rescue, not a catch). Afterwards it lives at the lighthouse top
+// next to AMPHY. (31a ends at + 0x26 and daily + 0; 28 has + 0x16-0x1F.)
 #define FLAG_HOENN_HIDE_LANTURN_LIGHT       (HOENN_LANE_A_FLAGS_E + 0x27) // the light object (out at night until the cave is found)
 #define FLAG_HOENN_LAGOON_FOUND             (HOENN_LANE_A_FLAGS_E + 0x28) // followed the lights: the sea cave is open
-#define FLAG_HOENN_HIDE_STRANDED_AMPHAROS   (HOENN_LANE_A_FLAGS_E + 0x29) // its object (shown at night until caught)
-#define FLAG_HOENN_CAUGHT_STRANDED_AMPHAROS (HOENN_LANE_A_FLAGS_E + 0x2A)
+#define FLAG_HOENN_HIDE_STRANDED_AMPHAROS   (HOENN_LANE_A_FLAGS_E + 0x29) // its object on the rock (shown at night until rescued)
+#define FLAG_HOENN_RESCUED_AMPHAROS         (HOENN_LANE_A_FLAGS_E + 0x2A) // brought ashore: it lives at the lighthouse now
 #define FLAG_HOENN_CALL_AMPHAROS            (HOENN_LANE_A_FLAGS_E + 0x2B) // May: Jasmine told the LEAGUE (part 32's call)
-#define FLAG_HOENN_DAILY_STRANDED_AMPHAROS  (HOENN_LANE_A_DAILY + 1)      // knocked out: resting until tomorrow
+#define FLAG_HOENN_HIDE_LIGHTHOUSE_AMPHAROS (HOENN_LANE_A_FLAGS_E + 0x2C) // its object at the lighthouse top (shown once rescued)
+#define FLAG_HOENN_AMPHAROS_RIDING          (HOENN_LANE_A_FLAGS_E + 0x2D) // it's on your back (HoennLaneAOnStep plays the landing)
+#define FLAG_HOENN_HIDE_OLIVINE_AMPHAROS    (HOENN_LANE_A_FLAGS_E + 0x2E) // its object in Olivine City, for the landing scene (set on every arrival)
+                                                                     // (daily + 1 is free again: the 32 review dropped the battle)
 // Route 41 uses VAR_TEMP_2 for the light's stop (light_paths.json) and
 // VAR_TEMP_3 = 1 for the sea cave's trigger (57,54) once it's found.
 

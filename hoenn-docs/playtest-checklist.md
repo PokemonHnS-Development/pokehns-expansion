@@ -441,8 +441,10 @@ Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its 
 - Swim off while following: the lights scatter and the light is back at the start.
 - The sea cave appearing at the ridge, then the lagoon: does it look hand-made (rock edges, beach, water)? The Lanturn, the Chinchou, the old stone (with and without the Slowking's prophecy).
 - Leave and come back by day: the cave is still there and works.
-- Route 40 at night: the Ampharos blinking on its rock (talk from the water below it). Knock it out (it rests until the next night), then catch it: Tail Glow in its moves.
-- Amphy at the lighthouse top at night before and after the catch; May's call after the catch.
+- Route 40 at night: the Ampharos blinking on its rock (surf from the beach, talk to it from the water north of it). Say NO: it stays. Say YES: it rides with you.
+- Land with it on Route 40's beach and on Olivine's pier: it hops off on the tile you landed on and runs off along the shore. Does the run direction look right? Also try landing somewhere far (Cianwood): text only.
+- While it rides, leave Route 40 by surfing into Olivine or Route 41: it stays with you until your next step on land.
+- Amphy at the lighthouse top at night before and after the rescue, and the rescued Ampharos next to it (by day too); May's call after the rescue.
 - The Olivine Cafe sailor's and the lighthouse 1F sailor's new lines.
 
 ## Lane B parts (27a, 31b on: Kanto, Safari, legends)

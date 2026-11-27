@@ -359,7 +359,7 @@ static const struct HoennHintLine sHintLines[] = {
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_SNEASEL_STASH, 0}, {HINT_IF_NOT_FLAG, FLAG_HOENN_CAUGHT_ICE_SNEASEL, 0}}, 2, HoennSeek_Text_Hint_LineStoryIceThiefNook, HINT_STORY, 0 }, // STORY_ICE_THIEF_NOOK
     { (const struct HoennHintCond[]){{HINT_IF_NOT_FLAG, FLAG_HOENN_LAGOON_FOUND, 0}}, 1, HoennSeek_Text_Hint_LineStoryLanturnLights, HINT_STORY, 0 }, // STORY_LANTURN_LIGHTS
     { (const struct HoennHintCond[]){{HINT_IF_FLAG, FLAG_HOENN_LAGOON_FOUND, 0}}, 1, HoennSeek_Text_Hint_LineStoryLanturnLagoon, HINT_STORY, 0 }, // STORY_LANTURN_LAGOON
-    { (const struct HoennHintCond[]){{HINT_IF_VAR_MIN, VAR_OLIVINE_CITY_STATE, 5}, {HINT_IF_NOT_FLAG, FLAG_HOENN_CAUGHT_STRANDED_AMPHAROS, 0}}, 2, HoennSeek_Text_Hint_LineStoryAmphyNight, HINT_STORY, 0 }, // STORY_AMPHY_NIGHT
+    { (const struct HoennHintCond[]){{HINT_IF_VAR_MIN, VAR_OLIVINE_CITY_STATE, 5}, {HINT_IF_NOT_FLAG, FLAG_HOENN_RESCUED_AMPHAROS, 0}}, 2, HoennSeek_Text_Hint_LineStoryAmphyNight, HINT_STORY, 0 }, // STORY_AMPHY_NIGHT
     { NULL, 0, NULL, HINT_FORECAST, 0 }, // FORECAST
 };
 

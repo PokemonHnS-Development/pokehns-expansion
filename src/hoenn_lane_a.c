@@ -30,7 +30,10 @@
 #include "global.h"
 #include "event_data.h"
 #include "event_object_movement.h"
+#include "field_player_avatar.h"
 #include "fieldmap.h"
+#include "metatile_behavior.h"
+#include "script.h"
 #include "pokemon.h"
 #include "rtc.h"
 #include "string_util.h"
@@ -47,6 +50,7 @@
 #include "constants/hoenn_phone.h"
 
 extern const u8 HoennSeek_EventScript_GlyphRing[];
+extern const u8 HoennSeek_EventScript_AmpharosAshore[];
 
 // ---- Part 27b: the glyph sites ----------------------------------------------
 struct GlyphSite
@@ -197,6 +201,84 @@ u32 HoennObjectPaletteSpecies(u32 species)
     return species;
 }
 
+// ---- Part 32: the stranded Ampharos's ride ashore --------------------------
+// Bryan (32 review): a rescue, not a battle. Say YES at its rock and it climbs
+// on behind you (FLAG_HOENN_AMPHAROS_RIDING); the first step you take on land,
+// on any map, plays the hop-off scene. Route 40's beach is eight tiles north
+// of its rock; Route 40 and Olivine City have an object for the scene,
+// anywhere else (a long detour) it's text only.
+
+// One hook line in TryStartStepCountScript (src/field_control_avatar.c), after
+// the follow-the-lights one. Landing from Surf isn't a step; the next one is.
+bool32 HoennLaneAOnStep(void)
+{
+    if (!FlagGet(FLAG_HOENN_AMPHAROS_RIDING))
+        return FALSE;
+    if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_SURFING | PLAYER_AVATAR_FLAG_UNDERWATER))
+        return FALSE;
+    ScriptContext_SetupScript(HoennSeek_EventScript_AmpharosAshore);
+    return TRUE;
+}
+
+static bool32 IsOpenLand(s32 x, s32 y)
+{
+    if (MapGridGetCollisionAt(x + MAP_OFFSET, y + MAP_OFFSET))
+        return FALSE;
+    if (MetatileBehavior_IsSurfableWaterOrUnderwater(MapGridGetMetatileBehaviorAt(x + MAP_OFFSET, y + MAP_OFFSET)))
+        return FALSE;
+    return GetObjectEventIdByXY(x + MAP_OFFSET, y + MAP_OFFSET) == OBJECT_EVENTS_COUNT;
+}
+
+// specialvar VAR_RESULT, HoennAmpharosAshorePlace: where the Ampharos hops
+// off. VAR_0x8008/9 = the tile behind you (the one you just landed on), and
+// VAR_RESULT = 0 if this map has no object for it, else the direction
+// (DIR_SOUTH..DIR_EAST) with 3 tiles of open land for it to run off along
+// (DIR_NONE if none: it just hops and fades). VAR_0x800A = 1 on Route 40,
+// 2 on Olivine City, 0 elsewhere.
+u16 HoennAmpharosAshorePlace(void)
+{
+    static const s8 sDeltas[][2] = {
+        [DIR_SOUTH] = {0, 1}, [DIR_NORTH] = {0, -1}, [DIR_WEST] = {-1, 0}, [DIR_EAST] = {1, 0},
+    };
+    static const u8 sOrder[] = {DIR_NORTH, DIR_SOUTH, DIR_WEST, DIR_EAST};
+    u32 facing = GetPlayerFacingDirection();
+    s32 x, y;
+    u32 i, k;
+
+    if (facing < DIR_SOUTH || facing > DIR_EAST)
+        facing = DIR_SOUTH;
+    x = gSaveBlock1Ptr->pos.x - sDeltas[facing][0];
+    y = gSaveBlock1Ptr->pos.y - sDeltas[facing][1];
+    gSpecialVar_0x8008 = x;
+    gSpecialVar_0x8009 = y;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE40_HNS)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE40_HNS))
+        gSpecialVar_0x800A = 1;
+    else if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_OLIVINE_CITY_HNS)
+          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_OLIVINE_CITY_HNS))
+        gSpecialVar_0x800A = 2;
+    else
+        gSpecialVar_0x800A = 0;
+    if (gSpecialVar_0x800A == 0)
+        return DIR_NONE;
+    // Away from you first: the direction you came from, then the others.
+    for (i = 0; i < ARRAY_COUNT(sOrder) + 1; i++)
+    {
+        u32 dir = (i == 0) ? GetOppositeDirection(facing) : sOrder[i - 1];
+
+        if (dir == facing)
+            continue; // that's you
+        for (k = 1; k <= 3; k++)
+        {
+            if (!IsOpenLand(x + sDeltas[dir][0] * k, y + sDeltas[dir][1] * k))
+                break;
+        }
+        if (k > 3)
+            return dir;
+    }
+    return DIR_NONE;
+}
+
 u16 HoennLaneADueCall(void)
 {
     u16 call = HoennCipherDueCall(); // part 27a (src/hoenn_cipher.c)
@@ -210,8 +292,8 @@ u16 HoennLaneADueCall(void)
     // Part 31a, Brendan: May's dad (Norman) read Clair's gym report about the Ice Path thief.
     if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_SNEASEL_STASH) && !FlagGet(FLAG_HOENN_CALL_SNEASEL))
         return HOENN_CALL_SNEASEL;
-    // Part 32: the stranded Ampharos is caught; Jasmine's report reached Norman.
-    if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_CAUGHT_STRANDED_AMPHAROS) && !FlagGet(FLAG_HOENN_CALL_AMPHAROS))
+    // Part 32: the stranded Ampharos is rescued; Jasmine's report reached Norman.
+    if (FlagGet(FLAG_HOENN_BM_PHONE) && FlagGet(FLAG_HOENN_RESCUED_AMPHAROS) && !FlagGet(FLAG_HOENN_CALL_AMPHAROS))
         return HOENN_CALL_AMPHAROS;
     // Lane A's next calls go here, e.g.
     //     if (FlagGet(FLAG_HOENN_X_MET) && !FlagGet(FLAG_HOENN_CALL_X))

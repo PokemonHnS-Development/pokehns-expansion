@@ -384,13 +384,16 @@ HoennSeek_Text_CallSneasel:
 @ (57,54) takes you into the hidden lagoon, where a LANTURN and its CHINCHOU
 @ school light an old stone on the beach: Lugia's shrine (part 34b adds what
 @ the stone does). The lagoon's channel (16-17, 23) leads back out.
-@ The stranded AMPHAROS: at night it stands on a sea rock off Route 40 (32,33),
+@ The stranded AMPHAROS: at night it stands on a sea rock off Route 40 (32,32),
 @ blinking its tail. AMPHY, at the top of the lighthouse, watches that light
 @ after dark. (Route 41 already has 64 object templates, the most a map can
 @ hold, so it lives on Route 40, the sea right below the lighthouse. Its
 @ template elevation is 4 so it's drawn above the rock's top layer; standing
-@ on an elevation-0 rock tile, it can still be talked to from the water.) Talking to it starts a scaled battle (Tail Glow); knocked out it
-@ rests on its rock until the next night, caught it's done (May calls).
+@ on an elevation-0 rock tile, it can still be talked to from the water.)
+@ It's too frightened to swim back: it climbs on behind you, and the first
+@ step you take on land (Route 40's beach is eight tiles north; any shore on
+@ any map works) it hops off and runs home to the lighthouse, where it stays next to AMPHY (May calls). A rescue, not a
+@ battle or a catch (Bryan, 32 review).
 @ ============================================================================
 
 @ One `call` at the top of Route 41's OnTransition.
@@ -404,10 +407,12 @@ HoennSeek_EventScript_Route41Night::
 HoennSeek_EventScript_Route41NightDone:
 	return
 
-@ One `call` at the top of Route 40's OnTransition.
+@ One `call` at the top of Route 40's OnTransition. Hidden while it rides
+@ with you, or once it's home.
 HoennSeek_EventScript_Route40Night::
 	setflag FLAG_HOENN_HIDE_STRANDED_AMPHAROS
-	goto_if_set FLAG_HOENN_CAUGHT_STRANDED_AMPHAROS, HoennSeek_EventScript_Route41NightDone
+	goto_if_set FLAG_HOENN_RESCUED_AMPHAROS, HoennSeek_EventScript_Route41NightDone
+	goto_if_set FLAG_HOENN_AMPHAROS_RIDING, HoennSeek_EventScript_Route41NightDone
 	gettimeofday
 	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_EventScript_Route41NightDone
 	clearflag FLAG_HOENN_HIDE_STRANDED_AMPHAROS
@@ -505,41 +510,148 @@ HoennSeek_EventScript_LagoonShrineEnd:
 	releaseall
 	end
 
-@ The stranded AMPHAROS on its rock off Route 40 (32,33).
+@ The stranded AMPHAROS on its rock off Route 40 (32,32), talked to from the
+@ open water north of it (32,31), eight tiles off the beach. (Until the 32
+@ review it stood at (32,33), only reachable from the sealed channel south of
+@ the rocks: 180 tiles of surfing from any shore.)
 HoennSeek_EventScript_StrandedAmpharos::
 	lock
 	faceplayer
-	goto_if_set FLAG_HOENN_DAILY_STRANDED_AMPHAROS, HoennSeek_EventScript_StrandedAmpharosResting
 	playmoncry SPECIES_AMPHAROS, CRY_MODE_ENCOUNTER
 	msgbox HoennSeek_Text_StrandedAmpharos, MSGBOX_DEFAULT
 	waitmoncry
-	closemessage
-	setvar VAR_0x8004, SPECIES_AMPHAROS
-	special HoennSetupScaledWildBattle
-	setvar VAR_0x8005, MOVE_TAIL_GLOW
-	setvar VAR_0x8006, FALSE
-	setvar VAR_0x8007, ITEM_NONE
-	special HoennTuneWildMon
-	dowildbattle
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_StrandedAmpharosCaught
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, HoennSeek_EventScript_StrandedAmpharosEnd
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, HoennSeek_EventScript_StrandedAmpharosEnd
-	setflag FLAG_HOENN_DAILY_STRANDED_AMPHAROS
-	msgbox HoennSeek_Text_StrandedAmpharosDown, MSGBOX_DEFAULT
-	release
-	end
-
-HoennSeek_EventScript_StrandedAmpharosCaught:
-	setflag FLAG_HOENN_CAUGHT_STRANDED_AMPHAROS
+	msgbox HoennSeek_Text_StrandedAmpharosRide, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HoennSeek_EventScript_StrandedAmpharosStays
+	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
 	removeobject LOCALID_HOENN_STRANDED_AMPHAROS
-HoennSeek_EventScript_StrandedAmpharosEnd:
+	waitmoncry
+	msgbox HoennSeek_Text_StrandedAmpharosClimbs, MSGBOX_DEFAULT
+	setflag FLAG_HOENN_AMPHAROS_RIDING
 	release
 	end
 
-HoennSeek_EventScript_StrandedAmpharosResting:
-	playmoncry SPECIES_AMPHAROS, CRY_MODE_WEAK
-	msgbox HoennSeek_Text_StrandedAmpharosResting, MSGBOX_DEFAULT
+HoennSeek_EventScript_StrandedAmpharosStays:
+	msgbox HoennSeek_Text_StrandedAmpharosStays, MSGBOX_DEFAULT
+	release
+	end
+
+@ HoennLaneAOnStep (src/hoenn_lane_a.c) runs this on your first step on land
+@ while it rides (landing from Surf isn't a step; the next one is), on any
+@ map. Route 40 and Olivine City have an object for it (Olivine's pier is the
+@ other shore close by): it appears on the
+@ tile you just landed on, hops, and runs off along open land
+@ (HoennAmpharosAshorePlace picks the way). Anywhere else, text only.
+HoennSeek_EventScript_AmpharosAshore::
+	lockall
+	clearflag FLAG_HOENN_AMPHAROS_RIDING
+	setflag FLAG_HOENN_RESCUED_AMPHAROS
+	specialvar VAR_RESULT, HoennAmpharosAshorePlace
+	copyvar VAR_0x800B, VAR_RESULT
+	goto_if_eq VAR_0x800A, 1, HoennSeek_EventScript_AmpharosAshoreRoute40
+	goto_if_eq VAR_0x800A, 2, HoennSeek_EventScript_AmpharosAshoreOlivine
+	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_AmpharosAshore, MSGBOX_DEFAULT
+	waitmoncry
+	msgbox HoennSeek_Text_AmpharosRanHome, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_EventScript_AmpharosAshoreRoute40:
+	setvar VAR_0x800A, LOCALID_HOENN_STRANDED_AMPHAROS
+	clearflag FLAG_HOENN_HIDE_STRANDED_AMPHAROS
+	goto HoennSeek_EventScript_AmpharosAshoreScene
+
+HoennSeek_EventScript_AmpharosAshoreOlivine:
+	setvar VAR_0x800A, LOCALID_HOENN_OLIVINE_AMPHAROS
+	clearflag FLAG_HOENN_HIDE_OLIVINE_AMPHAROS
+HoennSeek_EventScript_AmpharosAshoreScene:
+	setobjectxyperm VAR_0x800A, VAR_0x8008, VAR_0x8009
+	addobject VAR_0x800A
+	applymovement VAR_0x800A, HoennSeek_Movement_AmpharosHopOff
+	waitmovement 0
+	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_AmpharosAshore, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	goto_if_eq VAR_0x800B, DIR_NORTH, HoennSeek_EventScript_AmpharosRunsNorth
+	goto_if_eq VAR_0x800B, DIR_SOUTH, HoennSeek_EventScript_AmpharosRunsSouth
+	goto_if_eq VAR_0x800B, DIR_WEST, HoennSeek_EventScript_AmpharosRunsWest
+	goto_if_eq VAR_0x800B, DIR_EAST, HoennSeek_EventScript_AmpharosRunsEast
+	applymovement VAR_0x800A, HoennSeek_Movement_AmpharosFades
+	goto HoennSeek_EventScript_AmpharosAshoreGone
+
+HoennSeek_EventScript_AmpharosRunsNorth:
+	applymovement VAR_0x800A, HoennSeek_Movement_AmpharosRunsNorth
+	goto HoennSeek_EventScript_AmpharosAshoreGone
+
+HoennSeek_EventScript_AmpharosRunsSouth:
+	applymovement VAR_0x800A, HoennSeek_Movement_AmpharosRunsSouth
+	goto HoennSeek_EventScript_AmpharosAshoreGone
+
+HoennSeek_EventScript_AmpharosRunsWest:
+	applymovement VAR_0x800A, HoennSeek_Movement_AmpharosRunsWest
+	goto HoennSeek_EventScript_AmpharosAshoreGone
+
+HoennSeek_EventScript_AmpharosRunsEast:
+	applymovement VAR_0x800A, HoennSeek_Movement_AmpharosRunsEast
+HoennSeek_EventScript_AmpharosAshoreGone:
+	waitmovement 0
+	removeobject VAR_0x800A
+	msgbox HoennSeek_Text_AmpharosRanHome, MSGBOX_DEFAULT
+	releaseall
+	end
+
+HoennSeek_Movement_AmpharosHopOff:
+	jump_in_place_down
+	face_player
+	step_end
+
+HoennSeek_Movement_AmpharosRunsNorth:
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	set_invisible
+	step_end
+
+HoennSeek_Movement_AmpharosRunsSouth:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	set_invisible
+	step_end
+
+HoennSeek_Movement_AmpharosRunsWest:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	set_invisible
+	step_end
+
+HoennSeek_Movement_AmpharosRunsEast:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	set_invisible
+	step_end
+
+HoennSeek_Movement_AmpharosFades:
+	jump_in_place_down
+	set_invisible
+	step_end
+
+@ Olivine Lighthouse's ON_TRANSITION: the rescued AMPHAROS lives next to AMPHY.
+HoennSeek_EventScript_LighthouseOnTransition::
+	setflag FLAG_HOENN_HIDE_LIGHTHOUSE_AMPHAROS
+	goto_if_unset FLAG_HOENN_RESCUED_AMPHAROS, HoennSeek_EventScript_LighthouseOnTransitionEnd
+	clearflag FLAG_HOENN_HIDE_LIGHTHOUSE_AMPHAROS
+HoennSeek_EventScript_LighthouseOnTransitionEnd:
+	end
+
+HoennSeek_EventScript_LighthouseRescuedAmpharos::
+	lock
+	faceplayer
+	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
+	msgbox HoennSeek_Text_LighthouseRescuedAmpharos, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -552,7 +664,7 @@ HoennSeek_EventScript_LighthouseAmphy::
 	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, OlivineLighthouse_EventScript_Ampharos
 	lock
 	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
-	goto_if_set FLAG_HOENN_CAUGHT_STRANDED_AMPHAROS, HoennSeek_EventScript_AmphyContent
+	goto_if_set FLAG_HOENN_RESCUED_AMPHAROS, HoennSeek_EventScript_AmphyContent
 	msgbox HoennSeek_Text_AmphyWatchesLight, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -610,17 +722,38 @@ HoennSeek_Text_StrandedAmpharos:
 	.string "An AMPHAROS is stranded on the\n"
 	.string "rock! Its tail light blinks\l"
 	.string "and blinks.\p"
-	.string "It's frightened! It lashes out!$"
+	.string "It's shaking. The waves are\n"
+	.string "too much for it to swim back.$"
 
-HoennSeek_Text_StrandedAmpharosDown:
-	.string "The AMPHAROS huddled down on its\n"
-	.string "rock. Its light has gone dim.\p"
-	.string "It'll still be stuck out here\n"
-	.string "tomorrow night…$"
+HoennSeek_Text_StrandedAmpharosRide:
+	.string "Let it climb on behind you and\n"
+	.string "take it back to land?$"
 
-HoennSeek_Text_StrandedAmpharosResting:
-	.string "The AMPHAROS is huddled on its\n"
-	.string "rock, resting. Its light is dim.$"
+HoennSeek_Text_StrandedAmpharosClimbs:
+	.string "The AMPHAROS climbed on behind\n"
+	.string "you and is clinging on tight!\p"
+	.string "Better get it back to dry land.\n"
+	.string "Any shore will do!$"
+
+HoennSeek_Text_StrandedAmpharosStays:
+	.string "The AMPHAROS huddles on its rock,\n"
+	.string "blinking out at the dark sea.$"
+
+HoennSeek_Text_AmpharosAshore:
+	.string "The AMPHAROS hopped down onto\n"
+	.string "dry land and shook itself off.\p"
+	.string "Its tail lit up bright as a\n"
+	.string "lamp! It looks so relieved!$"
+
+HoennSeek_Text_AmpharosRanHome:
+	.string "It ran off toward the LIGHTHOUSE,\n"
+	.string "its tail blinking all the way.$"
+
+HoennSeek_Text_LighthouseRescuedAmpharos:
+	.string "It's the AMPHAROS from the sea\n"
+	.string "rock! JASMINE has taken it in.\p"
+	.string "It blinks its tail at AMPHY, and\n"
+	.string "AMPHY blinks back. Palulu!$"
 
 HoennSeek_Text_AmphyWatchesLight:
 	.string "AMPHY is gazing out to sea.\p"
@@ -632,6 +765,7 @@ HoennSeek_Text_AmphyWatchesLight:
 HoennSeek_Text_AmphyContent:
 	.string "AMPHY is gazing out to sea.\p"
 	.string "The light on the water is gone.\n"
+	.string "Its friend is safe beside it now.\p"
 	.string "AMPHY: Palulu!$"
 
 HoennSeek_Text_CallAmpharos:
@@ -643,7 +777,7 @@ HoennSeek_Text_CallAmpharos:
 	.string "second light out at sea every\l"
 	.string "night. A stranded AMPHAROS!\p"
 	.string "Then a trainer from out of town\n"
-	.string "brought it in off its rock on\l"
-	.string "ROUTE 40.\p"
+	.string "gave it a ride back to shore\l"
+	.string "on their POKéMON!\p"
 	.string "That was you, right? AMPHY must\n"
 	.string "be so happy!$"

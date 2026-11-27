@@ -151,7 +151,7 @@
     "STORY_ICE_THIEF_NOOK": {"kind": "story", "if": [{"flag": "FLAG_HOENN_SNEASEL_STASH"}, {"not_flag": "FLAG_HOENN_CAUGHT_ICE_SNEASEL"}], "text": ["That SNEASEL from the ICE PATH still comes back to its corner at night.", "It's lost its hoard, but it hasn't lost that grin!"]},
     "STORY_LANTURN_LIGHTS": {"kind": "story", "if": [{"not_flag": "FLAG_HOENN_LAGOON_FOUND"}], "text": ["Sail past the WHIRL ISLANDS after dark and you'll see a light on the water, bobbing along like it wants you to follow.", "Old hands say it leads somewhere no chart shows. Me, I steer clear!"]},
     "STORY_LANTURN_LAGOON": {"kind": "story", "if": [{"flag": "FLAG_HOENN_LAGOON_FOUND"}], "text": ["You followed that light at night? Then you've seen where it goes.", "Some places the sea keeps for itself. Don't worry, I won't tell a soul."]},
-    "STORY_AMPHY_NIGHT": {"kind": "story", "if": [{"var": "VAR_OLIVINE_CITY_STATE", "min": 5}, {"not_flag": "FLAG_HOENN_CAUGHT_STRANDED_AMPHAROS"}], "text": ["AMPHY's well again, but JASMINE says it won't settle at night.", "It just stands at the top of the LIGHTHOUSE, staring out to sea."]},
+    "STORY_AMPHY_NIGHT": {"kind": "story", "if": [{"var": "VAR_OLIVINE_CITY_STATE", "min": 5}, {"not_flag": "FLAG_HOENN_RESCUED_AMPHAROS"}], "text": ["AMPHY's well again, but JASMINE says it won't settle at night.", "It just stands at the top of the LIGHTHOUSE, staring out to sea."]},
 
     "FORECAST":       {"kind": "forecast"}
   },
