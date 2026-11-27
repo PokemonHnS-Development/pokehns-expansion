@@ -114,6 +114,7 @@ Lane A sizes:
 | Lane setup (lane files, phone chain, hint keys; no content) | 32,703,076 / 831 KB | 32,862,548 / 675 KB |
 | Lane setup synced onto 27a (27a's call moved into lane A's chain, its hint NPC keyed; measured on `hoenn` after #79, #86 and this) | 32,709,828 / 824 KB | 32,869,076 / 669 KB |
 | 26r (reviewer's text fixes for pre-split parts 25a–26b: no size change) | 32,709,828 / 824 KB | 32,869,076 / 669 KB |
+| 27r (review items 34–35: cipher floor lines read from the wall, one word per night; on `hoenn` at #89) | 32,711,444 / 823 KB | 32,870,628 / 667 KB |
 
 Lane B sizes (27a, then 31b on):
 
@@ -402,6 +403,7 @@ Lane B sizes (27a, then 31b on):
 
 ## Lane A notes (2.0 parts 27b on)
 Lane A (`hoenn-docs/lanes/lane-a.md`) adds a bullet per part here, at the end of this list, in the same style as the notes above. Its code lives in `src/hoenn_lane_a.c` and `data/scripts/hoenn_lane_a.inc` unless a note says otherwise.
+- **Cipher fixes (27r, review items 34–35):** the Words rooms' sign bg events are repeated on the rows above the floor lines (room 1 row 1, rooms 2–4 rows 1–2), so the line reads from the wall too. **`HoennNightWeekday()`** (`src/hoenn_cipher.c`, declared in `hoenn.h`) is the weekday a night belongs to: at night before noon it returns the previous day, so a night (7 PM–6 AM) is one weekday. Use it, not `GetDayOfWeek()`, for anything weekly that happens at night.
 
 ## Lane B notes (2.0 parts 27a, 31b on)
 Lane B (`hoenn-docs/lanes/lane-b.md`) adds a bullet per part here, at the end of this list. Its code lives in `src/hoenn_lane_b.c` and `data/scripts/hoenn_lane_b.inc` unless a note says otherwise. (27a was started before the split and may use the older files.)

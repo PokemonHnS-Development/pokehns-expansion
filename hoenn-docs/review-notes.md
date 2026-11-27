@@ -216,11 +216,11 @@ Each PR lists its "picked without Bryan" choices. These are the ones that change
 - Emulator on the synced debug ROM: Brendan's cipher call rings through the lane chain (after Elm's), the lab scientist alternates his own line and his hint line, a keyed building NPC (Route 6 Bug Club) still alternates.
 - One thing to know: the lane rules say the reviewer "writes notes, not fixes" and sends small fixes back as `NNr` parts. This review fixed 27a's two text bugs in place before merging instead, because 27a's builder had already moved to lane B and the fixes were a few lines.
 
-### 34. The new floor lines can't be read from the wall (part 27a, for lane A's 27r)
+### 34. The new floor lines can't be read from the wall (part 27a, for lane A's 27r) — **done in 27r** (room 1 reads from row 1 too, rooms 2–4 from rows 1 and 2; checked in the emulator)
 - Words Room 1's braille (row 2) and the Unown line under it (row 3) are walkable floor, and so is the row of rooms 2–4's night word. A player who walks up to the north wall ends up standing on the braille, and A at the wall does nothing. Reading works only from one row further back, facing up. (This tripped the reviewer's own emulator test too.)
 - Fix: add the same bg events one row up: room 1 row 1 (`HoennSeek_EventScript_CipherRosetta`, x 2–18 except the spaces) and rooms 2–4 row 2 (`HoennSeek_EventScript_CipherWordSign`). Check first that row 2 in rooms 2–4 has no original sign on it.
 
-### 35. The night word changes at midnight, halfway through the night (part 27a, suggestion for 27r)
+### 35. The night word changes at midnight, halfway through the night (part 27a, suggestion for 27r) — **done in 27r** (`HoennNightWeekday()`: hours after midnight count as the evening's day; Saturday 2 AM shows Friday's UNION in the emulator; 27b's rings use it too)
 - Night runs from evening to 4 AM, but the word follows `GetDayOfWeek`, which turns over at midnight. So on Friday night the rooms show UNION until midnight, then FOAM (Saturday's), and one late night gives two words. The researcher's "a different word every night" is then not quite true.
 - Suggestion: treat hours before `NIGHT_HOUR_END` as the previous day in `HoennCipherDrawRoom`, `HoennCipherTonightWord` and `HoennCipherNoteWord` (one helper), so a night is one word from dusk to dawn. 27b's glyph sites should use the same helper. Bryan can say keep it as is; collecting stays easy either way, since any wall clock changes the day.
 
