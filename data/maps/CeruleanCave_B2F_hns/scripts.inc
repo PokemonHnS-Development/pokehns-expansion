@@ -1,4 +1,5 @@
 CeruleanCave_B2F_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_CeruleanB2FOnTransition
 	.byte 0
 
 CeruleanCave3_EventScript_MewtwoNew::

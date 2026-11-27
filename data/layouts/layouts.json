@@ -16361,6 +16361,54 @@
       "layout_version": "emerald"
     },
     {
+      "id": "LAYOUT_ROUTE45_MOON_HOLLOW_HOENN",
+      "name": "Route45_MoonHollow_hoenn_Layout",
+      "width": 18,
+      "height": 16,
+      "primary_tileset": "gTileset_Johto_NorthEast_Hns",
+      "secondary_tileset": "gTileset_Blackthorn_Hns",
+      "border_filepath": "data/layouts/Route45_MoonHollow_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/Route45_MoonHollow_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_HIGHLAND_HOENN",
+      "name": "FuchsiaCity_SafariZoneHighland_hoenn_Layout",
+      "width": 26,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NationalPark_Hns",
+      "border_filepath": "data/layouts/FuchsiaCity_SafariZoneHighland_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaCity_SafariZoneHighland_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_ROCK_TUNNEL_ONIX_BORE_HOENN",
+      "name": "RockTunnel_OnixBore_hoenn_Layout",
+      "width": 20,
+      "height": 22,
+      "primary_tileset": "gTileset_Johto_General_Hns",
+      "secondary_tileset": "gTileset_Cave_Gray_Hns",
+      "border_filepath": "data/layouts/RockTunnel_OnixBore_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/RockTunnel_OnixBore_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_DARK_CAVE_BURROW_HOENN",
+      "name": "DarkCave_Burrow_hoenn_Layout",
+      "width": 22,
+      "height": 17,
+      "primary_tileset": "gTileset_Johto_General_Hns",
+      "secondary_tileset": "gTileset_Cave_Default_Hns",
+      "border_filepath": "data/layouts/DarkCave_Burrow_hoenn/border.bin",
+      "blockdata_filepath": "data/layouts/DarkCave_Burrow_hoenn/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
       "id": "LAYOUT_ROUTE41_LAGOON_HOENN",
       "name": "Route41_Lagoon_hoenn_Layout",
       "width": 30,

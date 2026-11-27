@@ -1,4 +1,5 @@
 #include "global.h"
+#include "hoenn.h"
 #include "malloc.h"
 #include "battle_anim.h"
 #include "battle_pyramid.h"
@@ -40,6 +41,7 @@
 #include "trainer_hill.h"
 #include "util.h"
 #include "wild_encounter.h"
+#include "hoenn.h" // Hoenn & Seek 2.0 part 27b (HoennObjectPaletteSpecies)
 #include "constants/event_object_movement.h"
 #include "constants/abilities.h"
 #include "constants/battle.h"
@@ -487,6 +489,9 @@ const u8 gInitialMovementTypeFacingDirections[NUM_MOVEMENT_TYPES] = {
 #include "data/object_events/object_event_subsprites.h"
 #include "data/object_events/object_event_graphics_info.h"
 #include "data/object_events/object_event_graphics_info_followers.h"
+#if IS_HNS
+#include "data/hoenn_kanga_baby.h" // Hoenn & Seek (2.0 part 30a)
+#endif
 
 static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Npc1,                  OBJ_EVENT_PAL_TAG_NPC_1},
@@ -2130,7 +2135,11 @@ static u32 LoadDynamicFollowerPaletteFromGraphicsId(u16 graphicsId, struct Sprit
     u16 species = graphicsId & OBJ_EVENT_MON_SPECIES_MASK;
     bool32 shiny = graphicsId & OBJ_EVENT_MON_SHINY;
     bool32 female = graphicsId & OBJ_EVENT_MON_FEMALE;
-    u8 paletteNum = LoadDynamicFollowerPalette(species, shiny, female);
+    u8 paletteNum;
+#if IS_HNS
+    species = HoennFollowerPaletteSpecies(species); // Hoenn & Seek (2.0 part 30a)
+#endif
+    paletteNum = LoadDynamicFollowerPalette(species, shiny, female);
     if (template)
     {
         template->paletteTag = species + OBJ_EVENT_MON;
@@ -2288,6 +2297,10 @@ struct ObjectEvent *GetFollowerObject(void)
 const struct ObjectEventGraphicsInfo *SpeciesToGraphicsInfo(u32 species, bool32 shiny, bool32 female)
 {
     const struct ObjectEventGraphicsInfo *graphicsInfo = NULL;
+#if IS_HNS
+    if (HoennIsKangaBabyGfx(species)) // Hoenn & Seek (2.0 part 30a)
+        return &sHoennKangaBabyGraphicsInfo;
+#endif
 #if OW_POKEMON_OBJECT_EVENTS
     switch (species)
     {
@@ -2323,6 +2336,10 @@ const struct ObjectEventGraphicsInfo *SpeciesToGraphicsInfo(u32 species, bool32 
 static u32 LoadDynamicFollowerPalette(u32 species, bool32 shiny, bool32 female)
 {
     u32 paletteNum;
+#if IS_HNS
+    species = HoennFollowerPaletteSpecies(species); // Hoenn & Seek (2.0 part 30a)
+    species = HoennObjectPaletteSpecies(species); // Hoenn & Seek 2.0 part 27b: forms sharing a palette share its tag
+#endif
     // Use standalone palette, unless entry is OOB or NULL (fallback to front-sprite-based)
 #if OW_POKEMON_OBJECT_EVENTS == TRUE && OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
     if ((shiny && gSpeciesInfo[species].overworldPalette)
@@ -2494,6 +2511,10 @@ static bool8 GetMonInfo(struct Pokemon *mon, u32 *species, bool32 *shiny, bool32
 // Retrieve graphic information about the following pokemon, if any
 bool8 GetFollowerInfo(u32 *species, bool32 *shiny, bool32 *female)
 {
+#if IS_HNS
+    if (HoennFollowerOverride(species, shiny, female)) // Hoenn & Seek (2.0 part 30a): the Kangaskhan baby
+        return TRUE;
+#endif
     return GetMonInfo(GetFirstLiveMon(), species, shiny, female);
 }
 
@@ -3974,6 +3995,10 @@ void SetObjectEventDirection(struct ObjectEvent *objectEvent, enum Direction dir
 
 static const u8 *GetObjectEventScriptPointerByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup)
 {
+#if IS_HNS
+    if (localId == OBJ_EVENT_ID_FOLLOWER && HoennFollowerScript() != NULL) // Hoenn & Seek (2.0 part 30a)
+        return HoennFollowerScript();
+#endif
     if (localId == OBJ_EVENT_ID_FOLLOWER)
         return EventScript_Follower;
     return GetObjectEventTemplateByLocalIdAndMap(localId, mapNum, mapGroup)->script;

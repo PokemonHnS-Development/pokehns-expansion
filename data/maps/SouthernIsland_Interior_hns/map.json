@@ -25,8 +25,8 @@
       "movement_range_y": 5,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SouthernIsland_Interior_hns_EventScript_Latios",
-      "flag": "FLAG_HIDE_LATIOS"
+      "script": "HoennSeek_EventScript_SouthernLatios",
+      "flag": "FLAG_HOENN_HIDE_LATIOS"
     },
     {
       "local_id": "LOCALID_SOUTHERN_ISLAND_INTERIOR_HNS_LATIAS",
@@ -39,8 +39,8 @@
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SouthernIsland_Interior_hns_EventScript_Latias",
-      "flag": "FLAG_HIDE_LATIAS"
+      "script": "HoennSeek_EventScript_SouthernLatias",
+      "flag": "FLAG_HOENN_HIDE_LATIAS"
     }
   ],
   "warp_events": [
@@ -68,6 +68,14 @@
       "elevation": 0,
       "item": "ITEM_SOUL_DEW",
       "flag": "FLAG_ITEM_SOUTHER_ISLAND_SOUL_DEW"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "HoennSeek_EventScript_EnigmaShard3"
     }
   ],
   "game_version": "hns"

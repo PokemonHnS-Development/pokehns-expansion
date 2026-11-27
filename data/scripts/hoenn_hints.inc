@@ -450,26 +450,122 @@ HoennSeek_EventScript_Hint_AlphLabScientist::
 	callstd MSGBOX_NPC
 	end
 
-@ OlivineCity_Cafe_hns
-HoennSeek_EventScript_Hint_OlivineCafeSailor::
+@ BlackthornCity_Mart_hns
+HoennSeek_EventScript_Hint_BlackthornMartTrainer::
 	callnative HoennSeek_NpcHint
 	.2byte 56
-	goto_if_eq VAR_RESULT, FALSE, OlivineCity_EventScript_SailorB
+	goto_if_eq VAR_RESULT, FALSE, BlackthornMart_EventScript_CoolTrainerM
 	callstd MSGBOX_NPC
 	end
 
-@ OlivineCity_Lighthouse_hns
-HoennSeek_EventScript_Hint_LighthouseSailor::
+@ Route10_PowerPlantEntrance_hns
+HoennSeek_EventScript_Hint_PowerPlantEngineer::
 	callnative HoennSeek_NpcHint
 	.2byte 57
-	goto_if_eq VAR_RESULT, FALSE, OlivineLighthouse_EventScript_1FSailor
+	goto_if_eq VAR_RESULT, FALSE, Route10_PowerPlantEntrance_EventScript_Engineer3
+	callstd MSGBOX_NPC
+	end
+
+@ Route113_GlassWorkshop
+HoennSeek_EventScript_Hint_GlassWorkshopBoy::
+	callnative HoennSeek_NpcHint
+	.2byte 58
+	goto_if_eq VAR_RESULT, FALSE, Route113_GlassWorkshop_EventScript_NinjaBoy
+	callstd MSGBOX_NPC
+	end
+
+@ LavenderTown_hns
+HoennSeek_EventScript_Hint_LavenderPokefan::
+	callnative HoennSeek_NpcHint
+	.2byte 59
+	goto_if_eq VAR_RESULT, FALSE, LavenderTown_EventScript_PokefanM
+	callstd MSGBOX_NPC
+	end
+
+@ VioletCity_hns
+HoennSeek_EventScript_Hint_VioletYoungster::
+	callnative HoennSeek_NpcHint
+	.2byte 60
+	goto_if_eq VAR_RESULT, FALSE, VioletCity_EventScript_Youngster
+	callstd MSGBOX_NPC
+	end
+
+@ PalletTown_hns
+HoennSeek_EventScript_Hint_PalletFatman::
+	callnative HoennSeek_NpcHint
+	.2byte 61
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_Fatman
+	callstd MSGBOX_NPC
+	end
+
+@ FuchsiaCity_SafariZoneBrush_hns
+HoennSeek_EventScript_Hint_SafariBrushWarden::
+	callnative HoennSeek_NpcHint
+	.2byte 62
+	goto_if_eq VAR_RESULT, FALSE, SafariZoneFuchsia_EventScript_Attendant1
+	callstd MSGBOX_NPC
+	end
+
+@ BlackthornCity_hns
+HoennSeek_EventScript_Hint_BlackthornSkater::
+	callnative HoennSeek_NpcHint
+	.2byte 63
+	goto_if_eq VAR_RESULT, FALSE, BlackthornCity_EventScript_CoolTrainerF2
+	callstd MSGBOX_NPC
+	end
+
+@ FuchsiaCity_SafariZoneEntrance_hns
+HoennSeek_EventScript_Hint_SafariGateAttendant::
+	callnative HoennSeek_NpcHint
+	.2byte 64
+	goto_if_eq VAR_RESULT, FALSE, Route121_SafariZoneEntrance_EventScript_InfoAttendant
+	callstd MSGBOX_NPC
+	end
+
+@ Route19_hns
+HoennSeek_EventScript_Hint_Route19Fisher::
+	callnative HoennSeek_NpcHint
+	.2byte 65
+	goto_if_eq VAR_RESULT, FALSE, Route19_EventScript_Fatman
+	callstd MSGBOX_NPC
+	end
+
+@ SouthernIsland_Exterior_hns
+HoennSeek_EventScript_Hint_SouthernIslandSailor::
+	callnative HoennSeek_NpcHint
+	.2byte 66
+	goto_if_eq VAR_RESULT, FALSE, SouthernIsland_Exterior_hns_EventScript_Sailor
+	callstd MSGBOX_NPC
+	end
+
+@ CinnabarIsland_PokemonCenter_hns
+HoennSeek_EventScript_Hint_CinnabarPCFisher::
+	callnative HoennSeek_NpcHint
+	.2byte 67
+	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_PokemonCenter_EventScript_Fisher
+	callstd MSGBOX_NPC
+	end
+
+@ ViridianCity_PokemonCenter_hns
+HoennSeek_EventScript_Hint_ViridianPCBugCatcher::
+	callnative HoennSeek_NpcHint
+	.2byte 68
+	goto_if_eq VAR_RESULT, FALSE, ViridianCity_PokemonCenter_EventScript_BugCatcher
+	callstd MSGBOX_NPC
+	end
+
+@ OldaleTown_PokemonCenter_1F
+HoennSeek_EventScript_Hint_OldalePCBoy::
+	callnative HoennSeek_NpcHint
+	.2byte 69
+	goto_if_eq VAR_RESULT, FALSE, OldaleTown_PokemonCenter_1F_EventScript_Boy
 	callstd MSGBOX_NPC
 	end
 
 @ Route34_FishingShack_hoenn
 HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 58
+	.2byte 70
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -477,7 +573,7 @@ HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 @ OlivineCity_HarborOffice_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 59
+	.2byte 71
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -485,7 +581,7 @@ HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 @ OlivineCity_SailorsHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 	callnative HoennSeek_NpcHint
-	.2byte 60
+	.2byte 72
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
@@ -493,7 +589,7 @@ HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 @ OlivineCity_CaptainsHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 61
+	.2byte 73
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -501,7 +597,7 @@ HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 @ OlivineCity_TackleShop_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 62
+	.2byte 74
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -509,7 +605,7 @@ HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 @ OlivineCity_Shipwright_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 63
+	.2byte 75
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -517,7 +613,7 @@ HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 @ OlivineCity_KeepersHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 64
+	.2byte 76
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -525,7 +621,7 @@ HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 @ EcruteakCity_DanceTeacher_hoenn
 HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 65
+	.2byte 77
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -533,7 +629,7 @@ HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 @ Route34_BreedersHouse_hoenn
 HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 66
+	.2byte 78
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -541,7 +637,7 @@ HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 @ Route38_MoomooStoreroom_hoenn
 HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 67
+	.2byte 79
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -549,7 +645,7 @@ HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 @ BellchimeTrail_Lodge_hoenn
 HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 68
+	.2byte 80
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -557,7 +653,7 @@ HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 @ Route6_BugClub_hoenn
 HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 69
+	.2byte 81
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -565,7 +661,7 @@ HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 @ Route6_EngineersHouse_hoenn
 HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 70
+	.2byte 82
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -573,7 +669,7 @@ HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 @ CeladonCity_FloristsHouse_hoenn
 HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 71
+	.2byte 83
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -581,7 +677,7 @@ HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 @ MelemeleIsle_IslandHome_hoenn
 HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 72
+	.2byte 84
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -589,8 +685,16 @@ HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 @ MelemeleIsle_SurfShop_hoenn
 HoennSeek_EventScript_Hint_MelemeleIsle_SurfShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 73
+	.2byte 85
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
+	callstd MSGBOX_NPC
+	end
+
+@ Route45_BeekeeperHouse_hoenn
+HoennSeek_EventScript_Hint_Route45_BeekeeperHouse_hoenn_Npc1::
+	callnative HoennSeek_NpcHint
+	.2byte 86
+	goto_if_eq VAR_RESULT, FALSE, Route45_BeekeeperHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
 
@@ -856,6 +960,105 @@ HoennSeek_Text_Hint_RumorIce_FroslassAfter::
 HoennSeek_Text_Hint_RumorIce_FroslassNotes::
 	.string "At night, a FROSLASS's face shows\nin the pillars of the SHOAL CAVE\lice chamber. Touch the one she's\lin, and only that one.$"
 
+HoennSeek_Text_Hint_RumorHoney_TrailBefore::
+	.string "They say a beekeeper lives up on\nROUTE 45, and the wild bears there\lcan't resist his HONEY!$"
+
+HoennSeek_Text_Hint_RumorHoney_TrailAfter::
+	.string "Somebody followed an URSARING up a\ncliff on ROUTE 45 at night!\lThere's a hollow up there where\lthe bears watch the moon.$"
+
+HoennSeek_Text_Hint_RumorHoney_TrailNotes::
+	.string "The beekeeper on JOHTO's ROUTE 45\ngives out HONEY. Spread it on the\lold pine by the pond and come back\lin the morning. If the cubs trust\lyou, their mother may show you the\lway up.$"
+
+HoennSeek_Text_Hint_RumorMoltres_FlyoverBefore::
+	.string "They say a burning shadow\nsometimes sweeps over the ash on\lROUTE 113. The ash goes warm right\lbefore it comes!$"
+
+HoennSeek_Text_Hint_RumorMoltres_FlyoverAfter::
+	.string "Somebody saw a great bird of flame\nfly over ROUTE 113! It dropped\lsomething in the ash.$"
+
+HoennSeek_Text_Hint_RumorMoltres_FlyoverNotes::
+	.string "A burning shadow crosses ROUTE\n113's ash fields, heading\lnorth-west. Walk the ash east of\lthe glass workshop.$"
+
+HoennSeek_Text_Hint_RumorOnix_BoreBefore::
+	.string "Hikers say ROCK TUNNEL rumbles at\nnight, and every night there's a\lfresh hole in a different wall!\pSomething big is digging down\nthere. They say it's never the\lsame wall two nights running.$"
+
+HoennSeek_Text_Hint_RumorOnix_BoreAfter::
+	.string "A trainer found a crystal ONIX\nresting under ROCK TUNNEL! So\lthat's what's been digging all\lthose holes.$"
+
+HoennSeek_Text_Hint_RumorOnix_BoreNotes::
+	.string "At night a fresh hole opens in a\ndifferent wall of ROCK TUNNEL B1F,\lone for each day of the week. Look\lalong the rock faces.$"
+
+HoennSeek_Text_Hint_RumorDunsparce_BurrowBefore::
+	.string "DARK CAVE has DUNSPARCE holes, but\nthey're never in the same place!\lOne in the morning, one by day,\lone at sunset, one at night.\pMy dad says they're all digging\ntoward the same spot. I want to\lknow what's down there!$"
+
+HoennSeek_Text_Hint_RumorDunsparce_BurrowAfter::
+	.string "Somebody found a DUDUNSPARCE with\nthree segments under DARK CAVE!\lThe DUNSPARCE were digging to it\lall along.$"
+
+HoennSeek_Text_Hint_RumorDunsparce_BurrowNotes::
+	.string "DARK CAVE's burrow holes move with\nthe time of day: morning, day,\levening and night. Each time, a\ldifferent DUNSPARCE digs a\llittle further.$"
+
+HoennSeek_Text_Hint_RumorTangela_VinesBefore::
+	.string "A fisherman pal of mine says one\nof ROUTE 21's islets is all\ltangled up in vines. Nothing\lgets through!\pHe says they go limp first thing\nin the morning, though. Real\lsleepyheads, those vines!$"
+
+HoennSeek_Text_Hint_RumorTangela_VinesAfter::
+	.string "So those vines on ROUTE 21 were\nTANGELA all along! Guarding\lsomething in the middle, I hear.$"
+
+HoennSeek_Text_Hint_RumorTangela_VinesNotes::
+	.string "The islet on ROUTE 21 nearest\nPALLET is wrapped in writhing\lvines. They only relax in\lthe morning.$"
+
+HoennSeek_Text_Hint_RumorKanga_BabyBefore::
+	.string "Evenings, we hear crying down on\nthe BEACH. Something small and\llost, I'd guess.\pAnd a KANGASKHAN mother keeps\npacing where the woods bend in,\lwest of here. Her pouch is empty.$"
+
+HoennSeek_Text_Hint_RumorKanga_BabyAfter::
+	.string "Somebody brought a lost KANGASKHAN\nbaby home to its mother! Now the\lpair nest in the woods out west.$"
+
+HoennSeek_Text_Hint_RumorKanga_BabyNotes::
+	.string "Evenings in the FUCHSIA SAFARI\nZONE, a KANGASKHAN baby cries on\lthe BEACH. Its mother waits in a\lnook of the BRUSH's woods.$"
+
+HoennSeek_Text_Hint_RumorTauros_StampedeBefore::
+	.string "Hear that rumbling? MONDAY\nmornings, a TAUROS herd stampedes\lacross the highland above\lthe MOUNTAIN.\pEach bull keeps to its own lane.\nThe wardens say the herd's leader\lis no KANTO TAUROS at all!$"
+
+HoennSeek_Text_Hint_RumorTauros_StampedeAfter::
+	.string "Somebody caught the TAUROS herd's\nlead bull! Funny thing is, there's\la new one leading them every\lfew weeks.$"
+
+HoennSeek_Text_Hint_RumorTauros_StampedeNotes::
+	.string "MONDAY mornings, a TAUROS herd\ncharges across the highland above\lthe SAFARI ZONE's MOUNTAIN, up its\least canyon. Its lead bull waits\lbeyond the herd.$"
+
+HoennSeek_Text_Hint_RumorSeafoam_TitansBefore::
+	.string "Some days the fog over these\nwaters is so thick, I can't see my\lown float.\pGrandpa said the right ORB would\nturn that fog into a storm, and\lwake whatever sleeps under the\lSEAFOAM ISLANDS.$"
+
+HoennSeek_Text_Hint_RumorSeafoam_TitansAfter::
+	.string "Did you see that downpour on ROUTE\n19? Rain like that only falls when\lsomething enormous wakes up.$"
+
+HoennSeek_Text_Hint_RumorSeafoam_TitansNotes::
+	.string "On the days fog covers ROUTES 19\nand 20, KANTO's sea caves stir for\lanyone carrying an ORB. The old\lman at MT. PYRE's summit\lkeeps them.$"
+
+HoennSeek_Text_Hint_RumorEnigma_ShardsBefore::
+	.string "While I wait by the boat, I see\nred and blue sparkles in the\lgrass. Warm, like little embers.\pThe PEWTER MUSEUM knows its\nstones. They'd know what\lthose are.$"
+
+HoennSeek_Text_Hint_RumorEnigma_ShardsAfter::
+	.string "The grove feels different since\nyou brought that stone back. Like\lsomeone in there is listening.$"
+
+HoennSeek_Text_Hint_RumorEnigma_ShardsNotes::
+	.string "Shards of a red and blue stone lie\nhidden on the SOUTHERN ISLAND. The\lPEWTER MUSEUM's stone expert can\lpiece them together.$"
+
+HoennSeek_Text_Hint_RumorMansion_JournalBefore::
+	.string "The volcano took the old MANSION,\nlab and all. Nobody went near the\lruins for years.\pBut pages of its journal keep\nturning up all over. They're\lsigned FUJI. Like old MR. FUJI\lin LAVENDER…$"
+
+HoennSeek_Text_Hint_RumorMansion_JournalAfter::
+	.string "They say someone went down into\nCERULEAN CAVE and met what that\lMANSION made. The whole island\lbreathes easier.$"
+
+HoennSeek_Text_Hint_RumorMansion_JournalNotes::
+	.string "Pages of the burned MANSION's\njournal are scattered across KANTO\land JOHTO. MR. FUJI in LAVENDER\lwrote them, and knows where\lthey went.$"
+
+HoennSeek_Text_Hint_RumorMew_BlurBefore::
+	.string "My cousin swears something pink\nzips through the grass at first\llight. On ROUTE 1, ROUTE 22, even\lHOENN's ROUTE 101!\pBy the time you look again it's\ngone. Only a scrap of old paper,\lblowing in the wind…$"
+
+HoennSeek_Text_Hint_RumorMew_BlurAfter::
+	.string "Someone's been picking up the\nscraps that pink blur drops. I bet\lthey'd make a map!$"
+
+HoennSeek_Text_Hint_RumorMew_BlurNotes::
+	.string "At dawn, something pink plays in\nthe grass of ROUTE 1, ROUTE 22 and\lHOENN's ROUTE 101. It leaves\lscraps of an old sea chart behind.$"
+
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"
 
@@ -1054,43 +1257,67 @@ HoennSeek_Text_Hint_LineStoryIceFroslass::
 HoennSeek_Text_Hint_LineStoryIceFeather::
 	.string "That feather you found… A great\nice bird passed over the sea when\lI was a boy.\pSomething like that doesn't leave\nits feathers lying around for\lnothing. Hold on to it.$"
 
+HoennSeek_Text_Hint_LineStoryHoneyTree::
+	.string "Grandpa's old pine is in the\nmeadow by the pond, at the bottom\lof ROUTE 45. It's tucked in behind\la hedge.\pSpread the HONEY low on the trunk,\nwhere a TEDDIURSA can reach!$"
+
+HoennSeek_Text_Hint_LineStoryHoneyMother::
+	.string "The TEDDIURSA came for your HONEY?\nDon't chase them off!\pIf they get used to you, their\nmother will come and see who's\lbeen feeding her cubs.$"
+
+HoennSeek_Text_Hint_LineStoryHoneyNight::
+	.string "The mother URSARING came to the\npine? Then she'll be back\lat night.\pMother bears go walking under the\nmoon. Grandpa says she wants to\lshow you something!$"
+
+HoennSeek_Text_Hint_LineStoryHoneyHollow::
+	.string "You followed the mother up the\ncliff? Grandpa says the bears have\lwatched the moon from up there\lsince he was a boy.$"
+
+HoennSeek_Text_Hint_LineStoryZapdosStorm::
+	.string "When a thunderstorm hits ROUTE 10,\nlightning strikes our roof and the\lgenerator goes wild.\pThe MANAGER keeps finding odd\nthings in the coils after a storm.\lAsk him next time it storms!$"
+
 HoennSeek_Text_Hint_LineStoryCipherWall::
 	.string "Did you feel that tremor? A new\nline of writing turned up inside\lthe RUINS.\pIt's got dots on it like nothing\nfrom JOHTO. We need someone who's\lbeen to HOENN!$"
 
 HoennSeek_Text_Hint_LineStoryCipherNight::
 	.string "AT NIGHT WE SPEAK… I've been\nsleeping here at the lab ever\lsince you read it.\pIf the WORDS chambers really light\nup at night, is it the same word\levery night? Tell my colleague\lwhat you see!$"
 
-HoennSeek_Text_Hint_LineStoryLanturnLights::
-	.string "Sail past the WHIRL ISLANDS after\ndark and you'll see a light on the\lwater, bobbing along like it wants\lyou to follow.\pOld hands say it leads somewhere\nno chart shows. Me, I steer clear!$"
+HoennSeek_Text_Hint_LineStoryCipherRings::
+	.string "Hikers keep phoning the lab. They\nsee UNOWN floating in a circle at\lnight, deep in the caves.\pAlways somewhere quiet, away from\nthe path. Is it the places from\lthe words?$"
 
-HoennSeek_Text_Hint_LineStoryLanturnLagoon::
-	.string "You followed that light at night?\nThen you've seen where it goes.\pSome places the sea keeps for\nitself. Don't worry, I won't tell\la soul.$"
+HoennSeek_Text_Hint_LineStoryIceThief::
+	.string "Items keep vanishing off the ice\ndeep down in the ICE PATH. Only\lat night!\pCLAIR thinks it's a POKéMON.\nWhatever it is, it's fast on\lthe ice.$"
 
-HoennSeek_Text_Hint_LineStoryAmphyNight::
-	.string "AMPHY's well again, but JASMINE\nsays it won't settle at night.\pIt just stands at the top of the\nLIGHTHOUSE, staring out to sea.$"
+HoennSeek_Text_Hint_LineStoryIceThiefNook::
+	.string "That SNEASEL from the ICE PATH\nstill comes back to its corner\lat night.\pIt's lost its hoard, but it hasn't\nlost that grin!$"
 
 HoennSeek_Text_Hint_Forecast0::
-	.string "Storms are rolling in around ROUTE\n120 {STR_VAR_1}.\pFolks say that's when the white\none walks.$"
+	.string "Fog is due over ROUTE 19 {STR_VAR_1}.\pOdd… the rain gauges out there\nkeep twitching anyway.$"
 
 HoennSeek_Text_Hint_Forecast1::
-	.string "Our instruments say ROUTE 120 gets\na thunderstorm {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"
+	.string "Fog is due over ROUTE 20 {STR_VAR_1}.\pStrange… the SEAFOAM thermometers\nkeep climbing.$"
 
 HoennSeek_Text_Hint_Forecast2::
-	.string "Our instruments say a thunderstorm\nreaches ROUTE 119 {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"
+	.string "Thunderstorms are coming to ROUTE\n10's POWER PLANT {STR_VAR_1}.\pThe plant's manager says that's\nwhen his generator acts up!$"
 
 HoennSeek_Text_Hint_Forecast3::
-	.string "Our instruments say heavy rain\nreaches ROUTE 123 {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"
+	.string "Storms are rolling in around ROUTE\n120 {STR_VAR_1}.\pFolks say that's when the white\none walks.$"
 
 HoennSeek_Text_Hint_Forecast4::
-	.string "Rain is coming to ROUTES 101 to\n104 {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
+	.string "Our instruments say ROUTE 120 gets\na thunderstorm {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"
 
 HoennSeek_Text_Hint_Forecast5::
-	.string "Rain is coming to the routes\naround MAUVILLE {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
+	.string "Our instruments say a thunderstorm\nreaches ROUTE 119 {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"
 
 HoennSeek_Text_Hint_Forecast6::
-	.string "Rain is coming to ROUTES 114 and\n115 {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
+	.string "Our instruments say heavy rain\nreaches ROUTE 123 {STR_VAR_1}.\pCASTFORM come out in weather\nlike that!$"
 
 HoennSeek_Text_Hint_Forecast7::
+	.string "Rain is coming to ROUTES 101 to\n104 {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
+
+HoennSeek_Text_Hint_Forecast8::
+	.string "Rain is coming to the routes\naround MAUVILLE {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
+
+HoennSeek_Text_Hint_Forecast9::
+	.string "Rain is coming to ROUTES 114 and\n115 {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
+
+HoennSeek_Text_Hint_Forecast10::
 	.string "Rain is coming to ROUTE\n121 {STR_VAR_1}.\pThat's when MASQUERAIN flutter out\nof the grass!$"
 
 HoennSeek_Text_FieldNotesIntro:

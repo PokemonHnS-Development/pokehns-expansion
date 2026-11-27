@@ -48,6 +48,8 @@
 #define HOENN_CALL_LANE_A_FIRST 37
 #define HOENN_CALL_LANE_A_LAST  69
 #define HOENN_CALL_CIPHER 37 // Brendan: the Ruins of Alph lab phoned Birch about a braille wall (2.0 part 27a)
+#define HOENN_CALL_CIPHER_FRAGMENT 38 // May: the Ruins lab phoned Birch about a tablet fragment (2.0 part 27b)
+#define HOENN_CALL_SNEASEL 39 // Brendan: Clair's gym report says the Ice Path thief was caught (2.0 part 31a; 38 is 27b's)
 #define HOENN_CALL_AMPHAROS 40 // May: Jasmine told the LEAGUE the second light went out (2.0 part 32; 27b is 38, 31a 39)
 // (lane A's calls go here)
 
@@ -55,5 +57,14 @@
 #define HOENN_CALL_LANE_B_FIRST 70
 #define HOENN_CALL_LANE_B_LAST  99
 // (lane B's calls go here, at the end of the file)
+#define HOENN_CALL_MOON_HOLLOW  70 // Brendan: the beekeeper's letter about the moon hollow (part 31b)
+#define HOENN_CALL_BIRDS        71 // May: a feather called a legendary bird down (part 34a)
+#define HOENN_CALL_TUNNELS      72 // Brendan: you caught Rock Tunnel's crystal Onix (part 29)
+#define HOENN_CALL_KANGASKHAN   73 // May: you brought the Safari's lost Kangaskhan baby home (part 30a)
+#define HOENN_CALL_STAMPEDE     74 // Brendan: you caught the Safari stampede's lead bull (part 30b)
+#define HOENN_CALL_TITANS       75 // Brendan: you caught Kyogre or Groudon (part 36)
+#define HOENN_CALL_RAYQUAZA     76 // May: you caught Rayquaza (part 36)
+#define HOENN_CALL_MEWTWO       77 // Brendan: you caught Mewtwo (part 35a)
+#define HOENN_CALL_MEW          78 // May: your OLD SEA MAP is whole (part 35a)
 
 #endif // GUARD_CONSTANTS_HOENN_PHONE_H

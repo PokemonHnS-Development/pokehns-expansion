@@ -1,4 +1,5 @@
 UnionCave_B1F_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_GlyphRingOnTransition @ Hoenn & Seek 2.0 part 27b
 	.byte 0
 
 UnionCave_B1F_EventScript_HikerPhillip::

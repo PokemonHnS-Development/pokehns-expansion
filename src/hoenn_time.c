@@ -269,7 +269,7 @@ u8 HoennCycleMapWeather(u8 headerWeather)
 
     if (i < 0 || sWeatherCycleMaps[i].emerald || !HoennIsSpecialWeatherDay(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum))
         return headerWeather;
-    return sWeatherCycleMaps[i].weather;
+    return HoennOrbWeather(sWeatherCycleMaps[i].weather); // 2.0 part 36: the ORBS' weather
 }
 
 // Hook in DoCoordEventWeather (src/coord_event_weather.c): TRUE skips a weather

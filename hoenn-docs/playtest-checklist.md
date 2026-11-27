@@ -412,6 +412,29 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 ## Lane A parts (27b on: Cipher, Johto, the sea)
 Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its `## 2.0 part NN` sections directly above "Lane B parts"; lane B adds its own at the end of the file, so the two never edit the same lines.
 
+## 27r (Unown Cipher fixes)
+- Words Room 1: walk right up to the north wall (you're standing on the braille) and press A facing the wall: it should read.
+- At night in rooms 2–4, the same from the wall.
+- Stay up past midnight: the word shouldn't change until morning (Friday night is UNION all night).
+
+## 2.0 part 27b (Unown Cipher B)
+- After seeing a night word, go to its place at night: is the ring easy to find from the entrance, and do the letters read as the word (clockwise from the top)? Bell Tower 2F, Mt. Moon Square, Ice Path 1F, Whirl Islands B2F, Mt. Mortar (by the lake), Union Cave B1F, Seafoam 1F.
+- Walk to each ring from the real entrance (the reviewer walked to all seven in the emulator; check the real puzzles on the way: Whirl Islands, Seafoam's boulders, Ice Path's ice).
+- While a ring is out your Pokémon stays in its ball on that map (review item 36): does it come back out on the next map? Does it feel odd?
+- The battle: the letter shown in battle matches the one that broke away (FOAM's is an A).
+- Catch one and check the Pokédex and summary show that letter.
+- Run from one: the ring stays; come back and it's still there. Let one knock you out: the ring is there next night.
+- Mt. Moon Square on a Monday night: the Clefairy dance and the MOON ring together (colours, slowdown).
+- The lab researcher with 1–6 fragments, then all seven (ANCIENT). May's call afterwards, outdoors.
+
+## 2.0 part 31a (Sneasel thief)
+- Push all four boulders on Ice Path B1F down their holes, then go down to B2F at night (7 PM–6 AM): an item ball out on the ice.
+- Reach it: a SNEASEL pops up behind it and snatches it, twice more across the ice. Is each new ball easy to spot, and can you work out how to reach it? (Route used in testing, from the ladder: LLLLDLURU; after the snatch LDDRDR; then ULLLLDLURDDDRD; then LUULD to the nook.)
+- Try to get stuck: no slide should leave you somewhere you can't get back to a ladder.
+- The nook battle: Pickpocket, Razor Claw. Knock it out: the stash (2 PP Ups, Lucky Egg, Lansat, Starf). Next night it's back in the nook; catch it.
+- Leave mid-chase and come back: it starts over from the first ball.
+- Brendan's call afterwards, and the Blackthorn Cooltrainer near the Pokémon Center (talk twice).
+
 ## 2.0 part 32 (Olivine nights)
 - At night (7 PM–6 AM), surf Route 41's north-west water (near 41,16): the Lanturn light. Swim close and follow it all the way to the east ridge. Does each stop stay on screen? Is the pace comfortable?
 - Swim off while following: the lights scatter and the light is back at the start.
@@ -431,3 +454,70 @@ Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 - Over a week of nights (or with the wall clock's calendar), collect all seven words, then talk to the researcher: the list and the seven-places line.
 - The puzzle chambers and the Sinjoh Ruins temple share this tileset: check their coloured stone panels look unchanged (palette 10 got a new colour in an unused slot).
 - The lab's wandering scientist's two new lines.
+
+## 2.0 part 31b (Teddiursa honey trail)
+- The beekeeper's house at the top of Route 45: does the new door and house look natural on that plateau? The route sign moved one tile right to make room.
+- The beekeeper's HONEY once a day (talk again the same day, then on the next day).
+- Spread HONEY on the pine in the pond meadow (face the tree from the right), then come back on a later morning (4-10 AM): two Teddiursa. Watch them once, shoo them once (the honey should still be there the next morning).
+- After three watched mornings: the Ursaring at the pine in the morning, then at night (7 PM-6 AM). Follow her: the walk to the cliff, the climb, the moon hollow scene.
+- The moon hollow: does it look hand-made (rock ring, pool, flowers)? The pool by night and by day, the bears only at night, leaving by the bottom path.
+- The claw marks on the meadow's east cliff take you straight up afterwards, at any hour.
+- The granddaughter's line at each stage, the boy's Peat Block line, the Blackthorn Mart rumor before and after.
+- Brendan's call after the hollow (rings within a few steps outdoors).
+- Route 45's fog day: are the bears and the pine still easy to see in the fog?
+
+## 2.0 part 34a (the three birds)
+- Bill in Goldenrod after his Eevee: the feather explanation, then one line per bird. Come back with a feather, after a landing and after a catch.
+- Route 10's Power Plant on its thunderstorm day (after the Magnet Train is fixed): the manager's THUNDER FEATHER. On other days, his hint; the entrance engineer's storm forecast the day before.
+- The yard behind the Power Plant with the feather: Zapdos lands (does the thunder sound fit?). Run from it, knock it out (back the next day), catch it.
+- Route 113's west path: the Moltres flyover (speed, the ash puff), the red feather in the ash. Does the scene read well at night too?
+- Mt. Silver's Moltres room: Moltres flies in from the left and lands above the text box. Its new spot (two tiles higher): does it still look right in the room?
+- Seafoam B1F with the FROST FEATHER: Articuno lands on the islet.
+- May's call after the first landing (outside; not inside Mt. Silver).
+- The glass workshop boy's rumor before and after the flyover.
+
+## 2.0 part 29 (shifting tunnels)
+- Rock Tunnel B1F at night: the rumble (once a night), then find that weekday's hole. Try at least two weekdays: is each hole easy enough to spot with Flash?
+- The bore: the shiny Onix, its battle level for your progress, the three item balls, the Metal Coat where it lay. Knock it out and come back the next night.
+- Holes by day: none. After the catch: holes still open, no rumble.
+- Dark Cave's south side: find the burrow hole in the morning, day, evening and night (each in a different spot; with Flash). Is the schedule guessable from the Violet kid's rumor?
+- The burrow: one row cleared per time of day; the fourth opens the passage; the Dudunsparce (Three-Segment form in the summary screen); the ladder back.
+- Route 21 islet (surf there): vines by day, Cut does nothing; mornings the vines step aside and the shiny Tangela waits. Afterwards: the Miracle Seed, no vines.
+- Brendan's call after the Onix (outside).
+- Rumors: Lavender hiker, Violet kid, Pallet man, before and after.
+
+## 2.0 part 30a (the lost Kangaskhan baby)
+- Safari Beach at 6–7 PM (SAFARI LEVEL 2 or higher): the baby on the sand. Not there by day or at level 1.
+- Let it follow you: does its little sprite look right walking in every direction, and through the gate into the Brush?
+- Take it into the Brush's south-west nook (the gap in the trees near the bottom left): the reunion, the hearts, the Lucky Egg. Is the nook easy enough to find, and does it look like natural woods?
+- Run out of steps (or retire) with the baby following: it should be back on the Beach the next evening.
+- Afterwards: the pair together in the nook, both talk lines; a Safari battle mid-follow (the baby still follows after).
+- May's call after the reunion (outside), the Brush attendant's rumor before and after.
+
+## 2.0 part 30b (the Tauros stampede)
+- Safari Zone at SAFARI LEVEL 3: walk up the MOUNTAIN's east canyon (the two-wide path on its right edge) into the new highland. Does the join look seamless, and does the highland look hand-made?
+- Monday morning: the six charging Tauros. Is crossing the lanes fun and fair (not too easy, not too hard)? Get hit once (the long message), then again (the short one).
+- Reach the lead bull in the north nook: its Safari encounter (Paldean Tauros, Lv near your progress level; bait, rocks, Safari Balls, none of your Pokémon). Run once (it stays), let it flee once on a later Monday (gone for the week), then catch it; try a catch with your last Safari Ball (the Safari ends after the catch). The herd stops to graze afterwards; talk to one.
+- Next Monday: a different breed leads. Knock one out instead of catching it: it should be back the Monday after.
+- Any other day, or Monday afternoon: the highland is empty.
+- Brendan's call after the first catch (outside), and the Safari entrance attendant's rumor before and after.
+- Open the start menu or bag mid-stampede: the herd should pause and pick up where it was.
+
+## 2.0 part 36 (Hoenn's weather legendaries)
+- After Maxie and Archie's double, talk to Mt. Pyre's old man: the BLUE and RED ORBS. Sell or give away one before catching its titan, then talk to him again: he gives another.
+- Wait for the Seafoam waters' fog day (the TV forecast should mention it the day before): Route 19 has a downpour, Route 20 a drought. Do the battles there get rain and sun? Does the drought look right on HnS's palettes?
+- Kyogre in the Route 19 cave and Groudon behind Blaine in Seafoam: only on that day. Knock one out: is it back on the next fog day? Running keeps it there.
+- With both caught: Sky Pillar's top, the wall right of the door (21,14): the mural and the JADE ORB. Does the old man point there?
+- Embedded Tower at noon: Rayquaza. Not at 11 or 13, and not on Route 47's rain day.
+- Southern Island (STEVEN's EON TICKET): the sign's note, the three shards, the Pewter Museum expert (with 1–2 shards, then all 3), and the Lati in the grove. Is the Lati the one that isn't roaming Kanto? The sailor's rumor before and after.
+- Brendan's call after the first titan, May's after Rayquaza (both outside). Did any HnS event (Hall of Fame, the S.S. Aqua) bring the old legendaries back where they shouldn't be?
+
+## 2.0 part 35a (Mewtwo and Mew)
+- Journal pages: Cinnabar's lab rubble (north of the mansion spot), Silph Co.'s lobby painting, the Game Corner plant by the door, Rocket hideout B3F, Goldenrod's warehouse. Does each count up and say what's left? Are the spots findable without the hints?
+- MR. FUJI with 0, 2 and 5 pages: HnS's own text, the hints for missing pages, then the last page.
+- The Cinnabar cameo after the fourth page, both from picking it up and arriving on the island. Also arrive by **Surf** and by **Fly**: does the pan start and end on your tile?
+- Cerulean Cave B2F: no Mewtwo before page 6. Knock it out: back the next day? Run: still there? Catch: Brendan's call (outside).
+- Mew at dawn (4–8 AM) on Routes 1, 22 and 101: does the blur dash look right, including over Route 1's ledges? Not there at 8 AM or later.
+- Three scraps → the OLD SEA MAP → the Vermilion sailor → Faraway Island. Faraway's Mew chase itself wasn't retested. May's call.
+- HnS's Hall of Fame clears `FLAG_CAUGHT_MEW` (so Faraway's Mew can come back): after a Hall of Fame with Mew caught, the blurs can show again at dawn, but only where you haven't already found the scrap. Is that fine?
+- Vermilion's old item ball at (61,46): a BIG PEARL now.

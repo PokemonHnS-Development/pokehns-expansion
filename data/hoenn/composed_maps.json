@@ -406,6 +406,132 @@
      }}
    ]
   },
+  "Route45_MoonHollow_hoenn": {
+   "source": "LAYOUT_ROUTE45_HNS",
+   "layout": "LAYOUT_ROUTE45_MOON_HOLLOW_HOENN",
+   "border": [0, 0],
+   "ops": [
+    {"_": "The moon hollow (2.0 part 31b), by hand: a grass hollow high on Route 45's mountain, ringed by its rock (north wall 079, west face 072, east face 070, south rim 069, and the inside corners 0b2/0b3/0bb/0ba and step pieces 07a/078/06a/068 read from Route 45's own pockets), a terrace face across the top, a small pool for the moon to sit in, flowers, a patch of bare ground, and the narrow trail down at the bottom (x 7-8) the Ursaring climbs",
+     "at": [0, 0],
+     "grid": [
+      "aaaaaaaaaaaaaaaaaa",
+      "bbbbbbbbbbbbbbbbbb",
+      "aaaaaacddddddeaaaa",
+      "aaaaaafghghghiaaaa",
+      "aaaacdjklklkmndeaa",
+      "aaaafghmhghghghiaa",
+      "aacdjklklopppqlnea",
+      "aafghgrshtuuuvhgia",
+      "aafkmkwxlyzzzAlmia",
+      "aafghmhghghghgmgia",
+      "aaBCmklklklklklDEa",
+      "aaafhghghghghghiaa",
+      "aaaBFFCklDFFFFFEaa",
+      "aaaaaafghiaaaaaaaa",
+      "aaaaaafkliaaaaaaaa",
+      "aaaaaafghiaaaaaaaa"
+     ],
+     "legend": {"a": {"from": [0, 70]}, "b": {"from": [18, 79]}, "c": {"from": [2, 72]}, "d": {"from": [5, 84]}, "e": {"from": [33, 78]}, "f": {"from": [8, 77]}, "g": {"from": [1, 85]}, "h": {"from": [0, 85]}, "i": {"from": [27, 73]}, "j": {"from": [8, 84]}, "k": {"from": [1, 86]}, "l": {"from": [0, 86]}, "m": {"from": [20, 76]}, "n": {"from": [29, 60]}, "o": {"from": [26, 80]}, "p": {"from": [28, 80]}, "q": {"from": [31, 80]}, "r": {"from": [22, 67]}, "s": {"from": [23, 67]}, "t": {"from": [26, 81]}, "u": {"from": [28, 81]}, "v": {"from": [31, 81]}, "w": {"from": [22, 68]}, "x": {"from": [23, 68]}, "y": {"from": [26, 83]}, "z": {"from": [27, 83]}, "A": {"from": [31, 83]}, "B": {"from": [14, 0]}, "C": {"from": [11, 54]}, "D": {"from": [27, 68]}, "E": {"from": [37, 65]}, "F": {"from": [10, 54]}}}
+   ]
+  },
+  "RockTunnel_OnixBore_hoenn": {
+   "source": "LAYOUT_ROCK_TUNNEL_B1F_HNS",
+   "layout": "LAYOUT_ROCK_TUNNEL_ONIX_BORE_HOENN",
+   "border": [9, 0],
+   "ops": [
+    {"_": "Onix's bore (2.0 part 29): tonight's hole drops you at the bottom (x 7-8) of a tunnel the Onix dug, which winds up to its round chamber",
+     "at": [0, 0],
+     "grid": [
+      "aaaaaaaaaaaaaaaaaaaa",
+      "aaaaabccccccccdaaaaa",
+      "aaaaaeffffffffgaaaaa",
+      "aaabchfffffffficdaaa",
+      "aaaefffffjffffffgaaa",
+      "aaaeffffffffffffgaaa",
+      "aaaefffffffjffffgaaa",
+      "aaaeffffffffffffgaaa",
+      "aaaklmffjfffffnloaaa",
+      "aaaaaeffffffffgaaaaa",
+      "aaaaaklllmffnloaaaaa",
+      "aaaaaaaaaefficcccdaa",
+      "aaaaaaaaaefffffffgaa",
+      "aaaaaaaaaefffffffgaa",
+      "aaaaaaaaakllllmffgaa",
+      "aaaaaabccccccchffgaa",
+      "aaaaaaefffffffffjgaa",
+      "aaaaaaeffffffffffgaa",
+      "aaaaaaeffnllllllloaa",
+      "aaaaaaeffgaaaaaaaaaa",
+      "aaaaaaeffgaaaaaaaaaa",
+      "aaaaaaeffgaaaaaaaaaa"
+     ],
+     "legend": {"a": {"from": [9, 0]}, "b": {"from": [2, 0]}, "c": {"from": [3, 0]}, "d": {"from": [8, 0]}, "e": {"from": [2, 1]}, "f": {"from": [3, 1]}, "g": {"from": [8, 1]}, "h": {"from": [15, 5]}, "i": {"from": [21, 3]}, "j": {"from": [6, 1]}, "k": {"from": [15, 9]}, "l": {"from": [14, 6]}, "m": {"from": [15, 6]}, "n": {"from": [13, 6]}, "o": {"from": [55, 21]}}}
+   ]
+  },
+  "DarkCave_Burrow_hoenn": {
+   "source": "LAYOUT_DARK_CAVE_SOUTH_SIDE_HNS",
+   "layout": "LAYOUT_DARK_CAVE_BURROW_HOENN",
+   "border": [8, 3],
+   "ops": [
+    {"_": "Dunsparce burrow (2.0 part 29): the burrow holes drop into a dug room (rows 11-14); a passage (x 10-11, rows 7-10) choked with rubble leads up to the hidden chamber (rows 3-6); the ladder at (14,13)",
+     "at": [0, 0],
+     "grid": [
+      "aaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaabbbbbbaaaaaaa",
+      "aaaaaaaacddddddeaaaaaa",
+      "aaaaaaacfggggggheaaaaa",
+      "aaaaaaaiggggggggjaaaaa",
+      "aaaaaaaigggggkggjaaaaa",
+      "aaaaaaalmggggggnoaaaaa",
+      "aaaaaaaalmggnppoaaaaaa",
+      "aaaaaaaaaiggjaaaaaaaaa",
+      "aaaabbbbbiggjbbbbaaaaa",
+      "aaacdddddfgghddddeaaaa",
+      "aaaigggggggggggggjaaaa",
+      "aaaigggggggggggggjaaaa",
+      "aaaigkggggggggZggjaaaa",
+      "aaaigggggggggggggjaaaa",
+      "aaalpppppppppppppoaaaa",
+      "aaaaaaaaaaaaaaaaaaaaaa"
+     ],
+     "legend": {"a": {"from": [0, 0]}, "b": {"from": [1, 5]}, "c": {"from": [0, 5]}, "d": {"from": [2, 6]}, "e": {"from": [37, 5]}, "f": {"from": [44, 8]}, "g": {"from": [4, 7]}, "h": {"from": [37, 11]}, "i": {"from": [1, 7]}, "j": {"from": [7, 7]}, "k": {"from": [45, 7]}, "l": {"from": [7, 12]}, "m": {"from": [56, 9]}, "n": {"from": [50, 9]}, "o": {"from": [1, 12]}, "p": {"from": [51, 9]}, "Z": {"from": [6, 47], "src": "LAYOUT_UNION_CAVE_1F_HNS"}}}
+   ]
+  },
+  "FuchsiaCity_SafariZoneHighland_hoenn": {
+   "source": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_MOUNTAIN_HNS",
+   "layout": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_HIGHLAND_HOENN",
+   "border": [0, 0],
+   "ops": [
+    {"_": "The Safari Zone's highland (2.0 part 30b), where the Tauros stampede runs: a grass basin above the MOUNTAIN, reached by its east canyon (the bottom four rows are the MOUNTAIN's top rows, columns 53-67, so the map connection lines up). Every rock block was picked by matching its 3x3 neighbourhood (plateau / cliff / grass) against the MOUNTAIN and the BRUSH, so the cliffs use the Safari's own corners and steps: a stepped north wall with a nook for the lead bull (trees in its back corners), uneven side walls (so the herd's lanes end at different places), boulders and flowers on the rows between the lanes",
+     "at": [0, 0],
+     "grid": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaabcccdaaaaaaaaaa",
+      "aaaaaaaaabebfffecdaaaaaaaa",
+      "aaaaaabccbghiiigjfccdaaaaa",
+      "aaabcffffhiiiiiiiijffdaaaa",
+      "aabbhkkiiiiiiiiiiliiiicdaa",
+      "ambhiiiiiiiiiiiiiiiiiijdda",
+      "amniiiiliiiiiiiiiiliiiiopa",
+      "amniiiiiiiiiiiiiiiiiiiiqpa",
+      "amrdiiiiiiiiiiiiiiiiiisqpa",
+      "amcrtiiiiiiiliiiiiikiijfpa",
+      "amcbhiiiiiiiiiiiiiiiiiiipa",
+      "ambhkiiiliiiiiiiiiiiliispa",
+      "amniiiiiiiiiiiiiiiiiiiiqpa",
+      "amniiiiiiiiiiiiiiiiiibcqpa",
+      "amrdiiiiiiikiiiiiiiijdccaa",
+      "aaffdiiliiiikiiiiikiifffaa",
+      "aauvffccctiiiiiibcccfuuuaa",
+      "aaaaaaammniniinaaaaaaaaaaa",
+      "aaaaaaammniniinaaaaaaaaaaa",
+      "aaaaaaammniniinaaaaaaaaaaa",
+      "aaaaaaammniniinaaaaaaaaaaa"
+     ],
+     "legend": {"a": {"from": [5, 1], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "b": {"from": [14, 10]}, "c": {"from": [9, 3], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "d": {"from": [58, 13]}, "e": {"from": [30, 9]}, "f": {"from": [33, 8], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "g": {"from": [30, 10]}, "h": {"from": [32, 9], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "i": {"from": [33, 9], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "j": {"from": [20, 9], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "k": {"from": [33, 9], "metatile": "0x004", "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "l": {"from": [30, 12]}, "m": {"from": [60, 12]}, "n": {"from": [6, 17]}, "o": {"from": [38, 13]}, "p": {"from": [40, 11]}, "q": {"from": [30, 7], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "r": {"from": [22, 7], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "s": {"from": [23, 11], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "t": {"from": [24, 11], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "u": {"from": [7, 1], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}, "v": {"from": [8, 1], "src": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS"}}}
+   ]
+  },
   "Route41_Lagoon_hoenn": {
    "source": "LAYOUT_ROUTE41_HNS",
    "layout": "LAYOUT_ROUTE41_LAGOON_HOENN",
@@ -486,6 +612,10 @@
   {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[27, 3]], "from": [10, 3]},
   {"layout": "LAYOUT_METEOR_FALLS_1F_1R", "cells": [[28, 3]], "from": [11, 3]},
   {"_": "Route 111 (2.0 part 24a): a sand hollow in the dead-end bay at the desert's north edge (29-31, 35-36), where the TRAPINCH burrows: a 3x2 patch of the desert's own darker deep-sand blocks, the same pieces its dune patches use (corners from the patch at (32-33, 37-38))", "layout": "LAYOUT_ROUTE111", "at": [29, 35], "grid": ["abc", "def"], "legend": {"a": {"from": [32, 37]}, "b": {"from": [21, 40]}, "c": {"from": [33, 37]}, "d": {"from": [32, 38]}, "e": {"from": [15, 45]}, "f": {"from": [33, 38]}}},
-  {"_": "... the same in Route 111's no-tower layout, which its OnTransition swaps in whenever the Mirage Tower is hidden", "layout": "LAYOUT_ROUTE111_NO_MIRAGE_TOWER", "at": [29, 35], "grid": ["abc", "def"], "legend": {"a": {"from": [32, 37]}, "b": {"from": [21, 40]}, "c": {"from": [33, 37]}, "d": {"from": [32, 38]}, "e": {"from": [15, 45]}, "f": {"from": [33, 38]}}}
+  {"_": "... the same in Route 111's no-tower layout, which its OnTransition swaps in whenever the Mirage Tower is hidden", "layout": "LAYOUT_ROUTE111_NO_MIRAGE_TOWER", "at": [29, 35], "grid": ["abc", "def"], "legend": {"a": {"from": [32, 37]}, "b": {"from": [21, 40]}, "c": {"from": [33, 37]}, "d": {"from": [32, 38]}, "e": {"from": [15, 45]}, "f": {"from": [33, 38]}}},
+  {"_": "Route 45 (2.0 part 31b): the beekeeper's house at the top of the route, Blackthorn's dark-roofed house (Route 45 shares Blackthorn's tilesets), on the sand right of the path down from the bridge, door (31,7); the route sign moves from (31,4), right above the roof, to (34,7) beside the house, where Blackthorn puts its house signs", "layout": "LAYOUT_ROUTE45_HNS", "at": [30, 4], "grid": [".s...", "abcd.", "efgh.", "ijklS"], "legend": {"a": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [20, 37]}, "b": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [21, 37]}, "c": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [22, 37]}, "d": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [23, 37]}, "e": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [20, 38]}, "f": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [21, 38]}, "g": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [22, 38]}, "h": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [23, 38]}, "i": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [20, 39]}, "j": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [21, 39]}, "k": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [22, 39]}, "l": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [23, 39]}, "s": {"from": [33, 4]}, "S": {"src": "LAYOUT_BLACKTHORN_CITY_HNS", "from": [42, 42]}}},
+  {"_": "Route 45 (2.0 part 31b): the honey pine's nook. The hedge's two bottom bushes beside the pond meadow's tall pine (22,83-84) become grass, so a hidden pocket opens between the hedge and the pine's trunk, reached only from (22,85) below", "layout": "LAYOUT_ROUTE45_HNS", "cells": [[22, 83]], "from": [24, 83]},
+  {"layout": "LAYOUT_ROUTE45_HNS", "cells": [[22, 84]], "from": [24, 84]},
+  {"_": "Fuchsia Safari Brush (2.0 part 30a): the Kangaskhan mother's hidden corner. Two trees beside the grass notch at (8-9,17-18) and the one above them are gone, so a nook bends up behind the trees from the notch; whole trees only, the neighbours take their edge pieces (1e6, a bottom-left tree half over grass, is used nowhere else, so it is drawn on the 1e4 block)", "layout": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_BRUSH_HNS", "at": [3, 14], "grid": [".AB..", "RggL.", "rggCB", "Rgggg", "rtutu"], "legend": {"A": {"from": [8, 16]}, "B": {"from": [33, 25]}, "R": {"from": [7, 9]}, "r": {"from": [7, 10]}, "L": {"from": [8, 11]}, "C": {"from": [8, 16], "metatile": "0x1e6"}, "g": {"from": [8, 17]}, "t": {"from": [8, 10]}, "u": {"from": [9, 10]}}}
  ]
 }
