@@ -412,6 +412,14 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 ## Lane A parts (27b on: Cipher, Johto, the sea)
 Since Nov 27 two builders work in parallel (`lanes/README.md`). Lane A adds its `## 2.0 part NN` sections directly above "Lane B parts"; lane B adds its own at the end of the file, so the two never edit the same lines.
 
+## 2.0 part 31a (Sneasel thief)
+- Push all four boulders on Ice Path B1F down their holes, then go down to B2F at night (7 PM–6 AM): an item ball out on the ice.
+- Reach it: a SNEASEL pops up behind it and snatches it, twice more across the ice. Is each new ball easy to spot, and can you work out how to reach it? (Route used in testing, from the ladder: LLLLDLURU; after the snatch LDDRDR; then ULLLLDLURDDDRD; then LUULD to the nook.)
+- Try to get stuck: no slide should leave you somewhere you can't get back to a ladder.
+- The nook battle: Pickpocket, Razor Claw. Knock it out: the stash (2 PP Ups, Lucky Egg, Lansat, Starf). Next night it's back in the nook; catch it.
+- Leave mid-chase and come back: it starts over from the first ball.
+- Brendan's call afterwards, and the Blackthorn Cooltrainer near the Pokémon Center (talk twice).
+
 ## Lane B parts (27a, 31b on: Kanto, Safari, legends)
 Lane B's `## 2.0 part NN` sections go below this line, at the end of the file.
 

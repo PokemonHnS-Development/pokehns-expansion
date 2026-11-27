@@ -114,6 +114,7 @@ Lane A sizes:
 | Lane setup (lane files, phone chain, hint keys; no content) | 32,703,076 / 831 KB | 32,862,548 / 675 KB |
 | Lane setup synced onto 27a (27a's call moved into lane A's chain, its hint NPC keyed; measured on `hoenn` after #79, #86 and this) | 32,709,828 / 824 KB | 32,869,076 / 669 KB |
 | 26r (reviewer's text fixes for pre-split parts 25a–26b: no size change) | 32,709,828 / 824 KB | 32,869,076 / 669 KB |
+| 31a (Sneasel thief: Ice Path B2F chase, nook battle, stash, Brendan's call; measured after merging `hoenn` at #89, without 27b) | 32,711,732 / 822 KB | 32,870,884 / 667 KB |
 
 Lane B sizes (27a, then 31b on):
 
@@ -402,6 +403,8 @@ Lane B sizes (27a, then 31b on):
 
 ## Lane A notes (2.0 parts 27b on)
 Lane A (`hoenn-docs/lanes/lane-a.md`) adds a bullet per part here, at the end of this list, in the same style as the notes above. Its code lives in `src/hoenn_lane_a.c` and `data/scripts/hoenn_lane_a.inc` unless a note says otherwise.
+
+- **Sneasel thief (2.0 part 31a):** `data/scripts/hoenn_lane_a.inc` (Part 31a section), flags `HOENN_LANE_A_FLAGS_E` + 0x20–0x26, daily `HOENN_LANE_A_DAILY` + 0, call `HOENN_CALL_SNEASEL` (39). One `call HoennSeek_EventScript_SneaselArm` in `IcePath_B2F_OnTransition` hides everything, then shows ball 1 (or the nook Sneasel once the stash is taken) at night when all four `FLAG_HIDE_ICEPATH_B2F_BOULDER1–4` are clear (the B1F boulders have dropped; B2F's ice is only solvable in that shape). Objects `LOCALID_HOENN_SNEASEL_BALL_1–3`, `LOCALID_HOENN_ICE_SNEASEL` (moved with `setobjectxyperm` behind each ball before `addobject`). **`removeobject` sets the object's own flag**, so the snatch needs no per-ball tails. **When an object that stopped your slide disappears, you slide on** (ice forced movement keeps trying the way you face), so a chase on ice must plan each leg from where that slide ends; the route was checked with a small solver (every state reachable can still reach a ladder). Testing: slides need ~160 frames of wait before the next press (a 16-tile slide is ~130 frames); set every other `FLAG_HOENN_CALL_*` first or an older event call rings mid-test; catch with a Master Ball poked into bag pocket 2.
 
 ## Lane B notes (2.0 parts 27a, 31b on)
 Lane B (`hoenn-docs/lanes/lane-b.md`) adds a bullet per part here, at the end of this list. Its code lives in `src/hoenn_lane_b.c` and `data/scripts/hoenn_lane_b.inc` unless a note says otherwise. (27a was started before the split and may use the older files.)

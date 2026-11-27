@@ -16,7 +16,7 @@ Only lane A's builder edits this file (the reviewer may add a line when it merge
 | 27r | next (reviewer, Nov 27) | — | review items 34–35 (reading the floor lines from the wall; the word changing at midnight). Goes before 27b |
 | 27b | after 27r, after 27a merges and Aidan says go | — | |
 | 28 | — | — | |
-| 31a | — | — | |
+| 31a | PR open (Nov 27) | `v2-31a-sneasel-thief` | flags `HOENN_LANE_A_FLAGS_E` + 0x20–0x26, daily + 0x00, call 39 (built while #88 (27b) waits for review; 27b took + 0x0B–0x15 and call 38, 28 gets + 0x16–0x1F, 32 + 0x27–0x2F) |
 | 32 | — | — | lane B's 33 waits for it |
 | 34b | — | — | needs lane B's 34a |
 | 35b | — | — | |
