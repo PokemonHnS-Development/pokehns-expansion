@@ -648,6 +648,9 @@
 #define VAR_HOENN_DEOXYS_SIGNAL         (HOENN_LANE_A_VARS_F + 0x00) // nights the signal was heard (0-3)
 #define VAR_HOENN_DEOXYS_NIGHT          (HOENN_LANE_A_VARS_F + 0x01) // the last such night's day number + 2 (0 = none; see HoennDeoxysSignalNight)
 #define HOENN_DEOXYS_NIGHTS 3
+// Part 38 (review item 53): a knocked-out JIRACHI is gone for the rest of that
+// night, so the white rock can't wake it again until another dancing night.
+#define FLAG_HOENN_DAILY_JIRACHI_GONE   (HOENN_LANE_A_DAILY + 6)      // knocked out tonight (nightly, 41r)
 
 // ---- Lane B: parts 31b, 34a, 29, 30a, 30b, 33, 36, 35a (hoenn-docs/lanes/lane-b.md) ----
 // (Kept below lane A's sections, so its additions land at the end of the file.)

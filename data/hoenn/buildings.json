@@ -6,6 +6,7 @@
     "templates: name -> {from: an HnS house map}. A building uses that map's layout (furniture and all),",
     "  its signs (bookshelves, TV...) and its entrance tile; HnS has dozens of 13x10 house maps (yellow tile,",
     "  wood floor, Mr. POKéMON's white office), so buildings vary by picking different ones (no new tiles).",
+    "layout (optional, 2.0 part 38): a composed copy of the template house (data/hoenn/composed_maps.json) with the furniture moved; objects are checked against its collision.",
     "buildings: {name (map folder, ends in _hoenn), door {map, x, y}, template, purpose, music (optional,",
     "  default: the outside map's), signs (optional), texts (optional), objects}.",
     "  signs: [{x, y, text}] replaces the template's signs ([] = none; leave it out to keep them).",
@@ -490,14 +491,15 @@
         "y": 25
       },
       "template": "house_wood_b",
+      "layout": "LAYOUT_ECRUTEAK_CITY_DANCE_TEACHER_HOENN",
       "purpose": "Kimono dance teacher's house: students practicing, and Eevee pets.",
       "objects": [
         {
           "type": "npc",
           "gfx": "OBJ_EVENT_GFX_OLD_WOMAN_HNS",
-          "x": 9,
-          "y": 5,
-          "facing": "left",
+          "x": 5,
+          "y": 7,
+          "facing": "up",
           "text": [
             "I taught the KIMONO GIRLS of the DANCE THEATER, every one of them.",
             "A dance is like a battle. Every step must flow into the next!"
@@ -506,9 +508,9 @@
         {
           "type": "npc",
           "gfx": "OBJ_EVENT_GFX_KIMONO_HNS",
-          "x": 2,
-          "y": 3,
-          "facing": "down",
+          "x": 4,
+          "y": 4,
+          "facing": "right",
           "text": [
             "One, two, turn... Oh! You surprised me.",
             "I'm practicing for my first show at the DANCE THEATER."
@@ -520,16 +522,16 @@
         {
           "type": "npc",
           "gfx": "OBJ_EVENT_GFX_KIMONO_HNS",
-          "x": 2,
-          "y": 6,
-          "facing": "up",
+          "x": 6,
+          "y": 4,
+          "facing": "left",
           "text": "Our teacher says EEVEE dance better than any of us. I think she's right!"
         },
         {
           "type": "mon",
           "species": "EEVEE",
-          "x": 6,
-          "y": 7,
+          "x": 7,
+          "y": 6,
           "facing": "wander"
         },
         {
@@ -807,26 +809,42 @@
         "y": 17
       },
       "template": "house_yellow_c",
+      "layout": "LAYOUT_CELADON_CITY_FLORISTS_HOUSE_HOENN",
       "purpose": "Florist's house: flowers, Bellossom, and a berry gift.",
       "signs": [
         {
-          "x": 5,
+          "x": 3,
           "y": 4,
           "text": "A vase of fresh flowers from the garden by the pond."
         },
         {
-          "x": 6,
+          "x": 4,
           "y": 4,
           "text": "A vase of fresh flowers from the garden by the pond."
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "text": "Pots of flowers in full bloom, each one labeled for ERIKA's GYM."
+        },
+        {
+          "x": 10,
+          "y": 4,
+          "text": "Pots of flowers in full bloom, each one labeled for ERIKA's GYM."
+        },
+        {
+          "x": 8,
+          "y": 7,
+          "text": "Pots of flowers in full bloom, each one labeled for ERIKA's GYM."
         }
       ],
       "objects": [
         {
           "type": "npc",
           "gfx": "OBJ_EVENT_GFX_WOMAN_1_HNS",
-          "x": 2,
+          "x": 9,
           "y": 4,
-          "facing": "right",
+          "facing": "down",
           "daily_gift": {
             "flag": "FLAG_HOENN_DAILY_FLORIST_GIFT",
             "items": [
@@ -850,9 +868,9 @@
         {
           "type": "npc",
           "gfx": "OBJ_EVENT_GFX_LASS_HNS",
-          "x": 9,
-          "y": 5,
-          "facing": "left",
+          "x": 6,
+          "y": 7,
+          "facing": "right",
           "text": [
             "Our BELLOSSOM dances whenever the sun comes out.",
             "On rainy days it just sits by the window and sulks!"
@@ -864,8 +882,8 @@
         {
           "type": "mon",
           "species": "BELLOSSOM",
-          "x": 8,
-          "y": 7,
+          "x": 9,
+          "y": 6,
           "facing": "wander"
         }
       ]

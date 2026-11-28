@@ -37,7 +37,7 @@ Bryan went through the review items and the choices from parts 5–17. These rep
 ### 1. Choices made without Bryan's approval (parts 5–17)
 Parts 5–17 (PRs #32–#52) ran without approval gates. That covered dialogue, pets, shop lists and the part 13a secret-base entrance art, which `2.0-plan.md` said Bryan approves first. Each PR's description lists its choices. Go through those lists with Bryan and change anything he wouldn't have picked. Items 4 and 5 below are part of this.
 
-### 2. Building interiors look too alike
+### 2. Building interiors look too alike — **done in 38** (the florist's and the dance teacher's rooms have their own furniture: buildings can name a composed `layout`; the keeper's house keeps the template)
 These three use nearly the same room: the same table and chairs, in the same spot.
 - The Olivine lighthouse keeper's family
 - The Ecruteak dance teacher
@@ -106,7 +106,7 @@ Reproduced in the emulator: step down the west stairs at night onto (8,17). The 
 - **Also dropped:** the plan's "stay hidden behind a pillar" bit in the Burned Tower is only a line of text.
 - Bryan should decide whether to keep these or go back to the plan.
 
-### 13. Smaller things from parts 15a–16
+### 13. Smaller things from parts 15a–16 — **DAMIAN moved in 38** (37,32); the rest were notes
 - **RYDER outside the Cerulean Gym** stands right under the gym's round sign, so his head covers it. Moving him a tile would look cleaner.
 - **Done in 17r-a:** **`gMapGroup_SpecialArea_Hns` is full** (128 maps; the Tidal Strait's east half is number 127, the last one that fits in an `s8`). New maps go in `gMapGroup_SpecialArea2_Hns`, but `gen_hoenn_buildings.py` still appends to the full group. The next building would hang the game on load. Point the generator at the new group before anyone adds one.
 - **RYDER takes Emerald's unused `TRAINER_LEROY` slot.** That shifts every Hoenn trainer ID after it by one, so a save made on a build from before part 16 would have its Hoenn "defeated" flags shuffled. Saves aren't meant to carry over between dev builds, but don't use an old 2.0 test save for a playtest.
@@ -118,7 +118,7 @@ Reproduced in the emulator.
 - **Fix:** pan back the same number of tiles before `RemoveCameraObject`, as Emerald's camera scenes do (e.g. keep the step counts and walk the camera back).
 - **Not tested** because of this: talking to the leader after the fire.
 
-### 15. Part 17 nits
+### 15. Part 17 nits — **smoke denser in 38** (five puffs a round, four rounds); the sunglasses need sprite art (playtest list)
 - **The smoke is very faint:** a couple of small `FLDEFF_ASH_PUFF` puffs on the roof, so the house doesn't really read as on fire.
 - **The sunglasses only exist in the text:** the Squirtle leader uses the plain Squirtle sprite.
 
@@ -376,7 +376,7 @@ Tested on `hoenn` at `cdacfafc` (#104's merge): debug build 32,946,132 B (594 KB
 - Not played: Deoxys on Birth Island, the Regi battles and the Arceus battle (all HnS's own), and the Deoxys call.
 - Grid: `review-37.png` in the project's `hoenn-2.0/review/`. Debug patch: `hoenn-2.0/patches/37-wishes-and-giants-debug.ups`.
 
-### 53. Part 37, second pass, and night weekdays for part 38 (reviewer, Nov 28)
+### 53. Part 37, second pass, and night weekdays for part 38 (reviewer, Nov 28) — **done in 38** (`HoennIsItNightWeekday`/`HoennNightWeekday` specials for the Clefairy dance, the trench and the feud; `FLAG_HOENN_DAILY_JIRACHI_GONE`, nightly)
 A second reviewer session played 37 at the same time as item 52 (`hoenn` at `cdacfafc`). Everything in 52 matches. What it adds:
 - **A knocked-out JIRACHI is back the same night, not "on another dancing night".** Knocking it out clears `FLAG_SUMMONED_MTMOON_JIRACHI`, and on the same Monday night nothing else stops the rock (three wishes, Clefairy out), so touching it again summons it straight away. The text says "Maybe the white rock will wake it on another dancing night." Fix in 38: set a flag on a knockout that only clears once the night is over (add it to `sNightlyFlags`, 41r), or reword the text.
 - **The seals can't be pushed.** They use HnS's pushable boulder sprite. With Strength on, pushing the Regice and Registeel boulders from the north and the south does nothing, and the Regirock one has cliff on every side but its doorway. So there's no way round the seal.
@@ -387,6 +387,17 @@ A second reviewer session played 37 at the same time as item 52 (`hoenn` at `cda
   - **Zangoose vs. Seviper** (21, Route 114, "Sunday evenings and nights"). It ends at midnight, while 41r's nightly reset runs noon to noon.
   - A `specialvar VAR_RESULT, HoennIsItNightWeekday` (like `HoennIsItWeekday`, but on `HoennNightWeekday()`) would fix all three with one line each.
   - Checked and fine: the other weekday checks run by day only (the siblings, Union Cave's Lapras, the Meteor Falls chorus, the Wailord, the Highland stampede, the National Park duel, the Slowking riddles).
+
+### 54. Part 38: the sweep (Nov 28)
+Phase G's first part, done by the reviewer after both lanes finished (Bryan: "wrap up 2.0"). Played on a fresh debug save; the size row is in CLAUDE.md's lane A table.
+- **Phone:** all 59 event calls are switched and have a due check; every call says how the caller heard. Each content part has at least one call; Spinda, Celebi and the Lati share their part's call.
+- **Hints:** all 41 rumors were reachable through an NPC, but five lane events had no rumor, so the field notes never pointed to them. Added SNEASEL_THIEF, STRANDED_LIGHT, UNOWN_CIPHER, RAINBOW and FOREST_OFFERINGS, each on a Pokémon Center NPC who carried no hints (Blackthorn twin, Cianwood fisherman, Violet gentleman, Ecruteak woman, Azalea pokéfan). The field notes count 46.
+- **Texts:** new `tools/hoenn/text_audit.py` measures every Hoenn & Seek text with FONT_NORMAL's glyph widths against the 216 px box and finds one-word last lines. It found 22 one-word lines (re-wrapped) and no overflow; `regen_all.sh` now runs it.
+- **Objects:** no map passes `OBJECT_EVENT_TEMPLATES_COUNT` (Route 41 and Bellchime Trail are at exactly 64). Every night event's "back tomorrow" daily flag is in `sNightlyFlags`.
+- **Generators:** `regen_all.sh --check` is clean after the changes; `gen_hoenn_battle_art.py` writes its `.pal` files with CRLF now, so a run no longer leaves them showing as modified.
+- **Budgets (2.0 event flags 0x2000–0x23FF):** phase blocks C–F use 357 of 448 flags; lane A's Johto/Kanto block has 2 left, lane B's 9, both legendary blocks 11–18; daily 40 of 64, weekly 10 of 64; vars 39 of 128. Phase G and the spare blocks (128 flags, 24 vars) are untouched. 2.1 gets its own block (save version 7), so 2.0 has room for fixes. ROM: release 747 KB free before this part (see the size row).
+- **Not tested here:** the link trade and battle (two emulators; on the playtest list).
+- **Waiting on Bryan in 40:** the choices in items 1, 27 and 31, the faint sand hollow (26), and the Squirtle leader's sunglasses (15). They need his eye, not code.
 
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.

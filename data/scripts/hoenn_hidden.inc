@@ -523,7 +523,7 @@ HoennSeek_EventScript_MirrorPoolNoRod:
 HoennSeek_EventScript_Route114OnTransition::
 	setflag FLAG_HOENN_HIDE_FEUD
 	goto_if_set FLAG_HOENN_WEEKLY_FEUD, HoennSeek_EventScript_FeudReturn
-	specialvar VAR_RESULT, GetDayOfWeek
+	specialvar VAR_RESULT, HoennNightWeekday @ Sunday's night runs until dawn (part 38)
 	goto_if_ne VAR_RESULT, HOENN_SUNDAY, HoennSeek_EventScript_FeudReturn
 	gettimeofday
 	goto_if_lt VAR_0x8000, HOENN_TIME_EVENING, HoennSeek_EventScript_FeudReturn
@@ -2501,7 +2501,7 @@ HoennSeek_EventScript_TrenchOnTransition::
 	setflag FLAG_HOENN_HIDE_RELICANTH
 	call_if_set FLAG_HOENN_TRENCH_DOOR_OPEN, HoennSeek_EventScript_ArmTrenchDoor
 	goto_if_set FLAG_HOENN_DAILY_TRENCH_GUARDIAN, HoennSeek_EventScript_HiddenEnd25a
-	specialvar VAR_RESULT, GetDayOfWeek
+	specialvar VAR_RESULT, HoennNightWeekday @ one guardian per night, past midnight too (part 38)
 	switch VAR_RESULT
 	case HOENN_SUNDAY, HoennSeek_EventScript_TrenchShowRelicanth
 	case HOENN_TUESDAY, HoennSeek_EventScript_TrenchShowGorebyss

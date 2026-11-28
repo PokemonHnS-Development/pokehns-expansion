@@ -163,6 +163,11 @@
     "STORY_REGI_SEA": {"kind": "story", "if": [{"var": "VAR_PLATECOUNTER", "min": 3}, {"flag": "FLAG_HOENN_CIPHER_INSCRIPTION"}, {"not_flag": "FLAG_HOENN_REGI_OPEN_STEEL"}], "text": ["The oldest of the deep and the greatest of the sea… RELICANTH and WAILORD, surely. Both live in HOENN's seas.", "Bring them both to the boulders. The stones were made to answer them."]},
     "STORY_ARCEUS_WAITS": {"kind": "story", "if": [{"var": "VAR_SINJOH_STORYLINE", "min": 12}, {"not_flag": "FLAG_HOENN_CIPHER_INSCRIPTION"}, {"not_caught": "ARCEUS"}], "text": ["ARCEUS is still up in its chamber, watching. It won't come with anyone yet.", "The UNOWN wrote about SINJOH, long ago. Their words are somewhere under the RUINS OF ALPH."]},
     "RUMOR_REGI_DOORS": {"kind": "rumor", "rumor": "REGI_DOORS"},
+    "RUMOR_SNEASEL_THIEF": {"kind": "rumor", "rumor": "SNEASEL_THIEF"},
+    "RUMOR_STRANDED_LIGHT": {"kind": "rumor", "rumor": "STRANDED_LIGHT"},
+    "RUMOR_UNOWN_CIPHER": {"kind": "rumor", "rumor": "UNOWN_CIPHER"},
+    "RUMOR_RAINBOW": {"kind": "rumor", "rumor": "RAINBOW"},
+    "RUMOR_FOREST_OFFERINGS": {"kind": "rumor", "rumor": "FOREST_OFFERINGS"},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -413,6 +418,36 @@
       "before": ["Up at the SINJOH RUINS, boulders seal the caves in the cliffs. Something big lives behind them."],
       "after": "All three boulders at the SINJOH RUINS have rolled away!",
       "notes": "The boulders at the SINJOH RUINS carry braille that the RUINS OF ALPH's final inscription explains: RELICANTH and WAILORD."
+    },
+    "SNEASEL_THIEF": {
+      "found": [{"flag": "FLAG_HOENN_SNEASEL_STASH"}],
+      "before": ["Skaters on the ICE PATH say things go missing down there at night.", "Something small and dark snatches items right off the ice, and it's gone before you can turn around!"],
+      "after": "Nothing's gone missing on the ICE PATH lately. Somebody finally cornered that thief.",
+      "notes": "At night, items left on the ICE PATH's lowest floor vanish once its boulders are pushed down. Chase the thief across the ice to its nook."
+    },
+    "STRANDED_LIGHT": {
+      "found": [{"flag": "FLAG_HOENN_RESCUED_AMPHAROS"}],
+      "before": ["Some nights there's a second light out past ROUTE 40, blinking on a rock in the sea.", "JASMINE's AMPHAROS stares at it from the lighthouse all night long."],
+      "after": "That second light off ROUTE 40 is gone. They say an AMPHAROS lives at the lighthouse now.",
+      "notes": "A stranded AMPHAROS waits on a sea rock off ROUTE 40 at night. It only trusts someone who brings it BERRIES, one a night."
+    },
+    "UNOWN_CIPHER": {
+      "found": [{"flag": "FLAG_HOENN_CIPHER_INSCRIPTION"}],
+      "before": ["The lab at the RUINS OF ALPH found a new line of writing, with HOENN braille over it.", "The UNOWN on the floor are supposed to glow at night. Nobody here can read them, though."],
+      "after": "The RUINS OF ALPH lab finally read the whole UNOWN inscription. Something about SINJOH, I heard.",
+      "notes": "The RUINS OF ALPH's Words rooms glow at night, a different word each night of the week. Each word names a place where UNOWN dance in a ring."
+    },
+    "RAINBOW": {
+      "found": [{"flag": "FLAG_HOENN_HOOH_RAINBOW"}],
+      "before": ["The sages say a rainbow comes to TIN TOWER at dawn, for a trainer who's heard all three beasts and rung the CLEAR BELL."],
+      "after": "Did you see it? A rainbow over ECRUTEAK at dawn, and a bird of every color flying into it!",
+      "notes": "The rainbow bird comes to TIN TOWER's roof at dawn, once you've met the roaming beasts, solved the RUINS' HO-OH panel and carry the CLEAR BELL."
+    },
+    "FOREST_OFFERINGS": {
+      "found": [{"flag": "FLAG_HOENN_SHRINE_OFFERED"}],
+      "before": ["My grandma says the ILEX FOREST shrine wants gifts from three forests, not just one.", "Old soil grows a berry overnight that glows, if you plant one in the right spot."],
+      "after": "Somebody filled all three dishes at the ILEX FOREST shrine! Grandma's been smiling all week.",
+      "notes": "Plant a BERRY in the old soil of ILEX FOREST, VIRIDIAN FOREST and PETALBURG WOODS. Each grows a glowing offering by the next day, for the ILEX shrine."
     }
   },
 
@@ -494,7 +529,12 @@
     {"map": "OlivineCity_PokemonCenter_hns", "script": "OlivineCity_EventScript_Fisher", "key": "OlivinePCFisher", "lines": ["STORY_LUGIA_SURFACED", "RUMOR_LUGIA_SONG"]},
     {"map": "MossdeepCity_SpaceCenter_1F", "script": "MossdeepCity_SpaceCenter_1F_EventScript_OldMan", "key": "SpaceCenterOldMan", "lines": ["STORY_WISH_MONDAY", "STORY_WISHES", "RUMOR_JIRACHI"]},
     {"map": "MossdeepCity_SpaceCenter_1F", "script": "MossdeepCity_SpaceCenter_1F_EventScript_Woman", "key": "SpaceCenterWoman", "lines": ["STORY_SIGNAL", "RUMOR_DEOXYS"]},
-    {"map": "SinjohRuins_House1_hns", "script": "SinjohRuins_Lab_EventScript_Linguist", "key": "SinjohLinguist", "lines": ["STORY_ARCEUS_WAITS", "STORY_REGI_SEA", "STORY_REGI_BRAILLE", "RUMOR_REGI_DOORS"]}
+    {"map": "SinjohRuins_House1_hns", "script": "SinjohRuins_Lab_EventScript_Linguist", "key": "SinjohLinguist", "lines": ["STORY_ARCEUS_WAITS", "STORY_REGI_SEA", "STORY_REGI_BRAILLE", "RUMOR_REGI_DOORS"]},
+    {"map": "BlackthornCity_PokemonCenter_hns", "script": "BlackthornCity_PokemonCenter_EventScript_Twin", "key": "BlackthornPCTwin", "lines": ["RUMOR_SNEASEL_THIEF"]},
+    {"map": "CianwoodPokecenter_hns", "script": "CianwoodPokemoncenter_EventScript_Fisher", "key": "CianwoodPCFisher", "lines": ["RUMOR_STRANDED_LIGHT"]},
+    {"map": "VioletCity_PokemonCenter_hns", "script": "VioletCity_PokemonCenter_EventScript_Gentleman", "key": "VioletPCGentleman", "lines": ["RUMOR_UNOWN_CIPHER"]},
+    {"map": "EcruteakCity_PokemonCenter_hns", "script": "EcruteakCity_PokemonCenter_EventScript_Woman", "key": "EcruteakPCWoman", "lines": ["RUMOR_RAINBOW"]},
+    {"map": "AzaleaTown_PokemonCenter_hns", "script": "AzaleaPokeCenter_EventScript_PokefanF", "key": "AzaleaPCPokefan", "lines": ["RUMOR_FOREST_OFFERINGS"]}
   ],
 
   "forecasts": [

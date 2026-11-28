@@ -2364,8 +2364,8 @@ HoennSeek_Text_SkyPillarMural:
 
 HoennSeek_Text_SkyPillarMuralDull:
 	.string "The serpent's eye is a dull green\n"
-	.string "stone. The giants below it look\l"
-	.string "restless.$"
+	.string "stone. The giants below it\l"
+	.string "look restless.$"
 
 HoennSeek_Text_SkyPillarMuralGlows:
 	.string "The serpent's eye is glowing!\p"
@@ -2456,8 +2456,8 @@ HoennSeek_Text_CallRayquaza:
 	.string "At noon, the sky over all of\l"
 	.string "HOENN went still.\p"
 	.string "They tracked a green streak\n"
-	.string "heading west, all the way to\l"
-	.string "JOHTO!\p"
+	.string "heading west, all the way\l"
+	.string "to JOHTO!\p"
 	.string "That was RAYQUAZA, wasn't it?\n"
 	.string "Dad says only you could pull\l"
 	.string "that off!$"

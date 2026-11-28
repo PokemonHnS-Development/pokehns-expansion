@@ -72,6 +72,11 @@ done
 echo "== living_dex"
 python3 tools/hoenn/living_dex.py --report hoenn-docs/living-dex.md
 
+# Part 38: every Hoenn & Seek text fits the message box (216 px) and no box ends
+# on a one-word line. Stops the run if anything is found.
+echo "== text_audit"
+python3 tools/hoenn/text_audit.py
+
 # Two generators rewrite files that come out byte-different but identical in
 # content: gen_hoenn_base_entrances.py and gen_hoenn_battle_art.py re-encode
 # their PNGs (same pixels and palette, other zlib settings), and .pal files can

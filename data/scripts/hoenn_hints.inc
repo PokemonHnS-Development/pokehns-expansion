@@ -610,10 +610,50 @@ HoennSeek_EventScript_Hint_SinjohLinguist::
 	callstd MSGBOX_NPC
 	end
 
+@ BlackthornCity_PokemonCenter_hns
+HoennSeek_EventScript_Hint_BlackthornPCTwin::
+	callnative HoennSeek_NpcHint
+	.2byte 76
+	goto_if_eq VAR_RESULT, FALSE, BlackthornCity_PokemonCenter_EventScript_Twin
+	callstd MSGBOX_NPC
+	end
+
+@ CianwoodPokecenter_hns
+HoennSeek_EventScript_Hint_CianwoodPCFisher::
+	callnative HoennSeek_NpcHint
+	.2byte 77
+	goto_if_eq VAR_RESULT, FALSE, CianwoodPokemoncenter_EventScript_Fisher
+	callstd MSGBOX_NPC
+	end
+
+@ VioletCity_PokemonCenter_hns
+HoennSeek_EventScript_Hint_VioletPCGentleman::
+	callnative HoennSeek_NpcHint
+	.2byte 78
+	goto_if_eq VAR_RESULT, FALSE, VioletCity_PokemonCenter_EventScript_Gentleman
+	callstd MSGBOX_NPC
+	end
+
+@ EcruteakCity_PokemonCenter_hns
+HoennSeek_EventScript_Hint_EcruteakPCWoman::
+	callnative HoennSeek_NpcHint
+	.2byte 79
+	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_PokemonCenter_EventScript_Woman
+	callstd MSGBOX_NPC
+	end
+
+@ AzaleaTown_PokemonCenter_hns
+HoennSeek_EventScript_Hint_AzaleaPCPokefan::
+	callnative HoennSeek_NpcHint
+	.2byte 80
+	goto_if_eq VAR_RESULT, FALSE, AzaleaPokeCenter_EventScript_PokefanF
+	callstd MSGBOX_NPC
+	end
+
 @ Route34_FishingShack_hoenn
 HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 76
+	.2byte 81
 	goto_if_eq VAR_RESULT, FALSE, Route34_FishingShack_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -621,7 +661,7 @@ HoennSeek_EventScript_Hint_Route34_FishingShack_hoenn_Npc1::
 @ OlivineCity_HarborOffice_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 77
+	.2byte 82
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_HarborOffice_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -629,7 +669,7 @@ HoennSeek_EventScript_Hint_OlivineCity_HarborOffice_hoenn_Npc0::
 @ OlivineCity_SailorsHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 	callnative HoennSeek_NpcHint
-	.2byte 78
+	.2byte 83
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_SailorsHouse_hoenn_EventScript_Npc2
 	callstd MSGBOX_NPC
 	end
@@ -637,7 +677,7 @@ HoennSeek_EventScript_Hint_OlivineCity_SailorsHouse_hoenn_Npc2::
 @ OlivineCity_CaptainsHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 79
+	.2byte 84
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_CaptainsHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -645,7 +685,7 @@ HoennSeek_EventScript_Hint_OlivineCity_CaptainsHouse_hoenn_Npc0::
 @ OlivineCity_TackleShop_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 80
+	.2byte 85
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_TackleShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -653,7 +693,7 @@ HoennSeek_EventScript_Hint_OlivineCity_TackleShop_hoenn_Npc1::
 @ OlivineCity_Shipwright_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 81
+	.2byte 86
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_Shipwright_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -661,7 +701,7 @@ HoennSeek_EventScript_Hint_OlivineCity_Shipwright_hoenn_Npc0::
 @ OlivineCity_KeepersHouse_hoenn
 HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 82
+	.2byte 87
 	goto_if_eq VAR_RESULT, FALSE, OlivineCity_KeepersHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -669,7 +709,7 @@ HoennSeek_EventScript_Hint_OlivineCity_KeepersHouse_hoenn_Npc1::
 @ EcruteakCity_DanceTeacher_hoenn
 HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 83
+	.2byte 88
 	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_DanceTeacher_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -677,7 +717,7 @@ HoennSeek_EventScript_Hint_EcruteakCity_DanceTeacher_hoenn_Npc1::
 @ Route34_BreedersHouse_hoenn
 HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 84
+	.2byte 89
 	goto_if_eq VAR_RESULT, FALSE, Route34_BreedersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -685,7 +725,7 @@ HoennSeek_EventScript_Hint_Route34_BreedersHouse_hoenn_Npc0::
 @ Route38_MoomooStoreroom_hoenn
 HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 85
+	.2byte 90
 	goto_if_eq VAR_RESULT, FALSE, Route38_MoomooStoreroom_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -693,7 +733,7 @@ HoennSeek_EventScript_Hint_Route38_MoomooStoreroom_hoenn_Npc0::
 @ BellchimeTrail_Lodge_hoenn
 HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 86
+	.2byte 91
 	goto_if_eq VAR_RESULT, FALSE, BellchimeTrail_Lodge_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -701,7 +741,7 @@ HoennSeek_EventScript_Hint_BellchimeTrail_Lodge_hoenn_Npc0::
 @ Route6_BugClub_hoenn
 HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 87
+	.2byte 92
 	goto_if_eq VAR_RESULT, FALSE, Route6_BugClub_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -709,7 +749,7 @@ HoennSeek_EventScript_Hint_Route6_BugClub_hoenn_Npc0::
 @ Route6_EngineersHouse_hoenn
 HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 	callnative HoennSeek_NpcHint
-	.2byte 88
+	.2byte 93
 	goto_if_eq VAR_RESULT, FALSE, Route6_EngineersHouse_hoenn_EventScript_Npc0
 	callstd MSGBOX_NPC
 	end
@@ -717,7 +757,7 @@ HoennSeek_EventScript_Hint_Route6_EngineersHouse_hoenn_Npc0::
 @ CeladonCity_FloristsHouse_hoenn
 HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 89
+	.2byte 94
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_FloristsHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -725,7 +765,7 @@ HoennSeek_EventScript_Hint_CeladonCity_FloristsHouse_hoenn_Npc1::
 @ MelemeleIsle_IslandHome_hoenn
 HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 90
+	.2byte 95
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_IslandHome_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -733,7 +773,7 @@ HoennSeek_EventScript_Hint_MelemeleIsle_IslandHome_hoenn_Npc1::
 @ MelemeleIsle_SurfShop_hoenn
 HoennSeek_EventScript_Hint_MelemeleIsle_SurfShop_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 91
+	.2byte 96
 	goto_if_eq VAR_RESULT, FALSE, MelemeleIsle_SurfShop_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -741,7 +781,7 @@ HoennSeek_EventScript_Hint_MelemeleIsle_SurfShop_hoenn_Npc1::
 @ Route45_BeekeeperHouse_hoenn
 HoennSeek_EventScript_Hint_Route45_BeekeeperHouse_hoenn_Npc1::
 	callnative HoennSeek_NpcHint
-	.2byte 92
+	.2byte 97
 	goto_if_eq VAR_RESULT, FALSE, Route45_BeekeeperHouse_hoenn_EventScript_Npc1
 	callstd MSGBOX_NPC
 	end
@@ -1142,6 +1182,51 @@ HoennSeek_Text_Hint_RumorRegi_DoorsAfter::
 
 HoennSeek_Text_Hint_RumorRegi_DoorsNotes::
 	.string "The boulders at the SINJOH RUINS\ncarry braille that the RUINS OF\lALPH's final inscription explains:\lRELICANTH and WAILORD.$"
+
+HoennSeek_Text_Hint_RumorSneasel_ThiefBefore::
+	.string "Skaters on the ICE PATH say things\ngo missing down there at night.\pSomething small and dark snatches\nitems right off the ice, and it's\lgone before you can turn around!$"
+
+HoennSeek_Text_Hint_RumorSneasel_ThiefAfter::
+	.string "Nothing's gone missing on the ICE\nPATH lately. Somebody finally\lcornered that thief.$"
+
+HoennSeek_Text_Hint_RumorSneasel_ThiefNotes::
+	.string "At night, items left on the ICE\nPATH's lowest floor vanish once\lits boulders are pushed down.\lChase the thief across the ice to\lits nook.$"
+
+HoennSeek_Text_Hint_RumorStranded_LightBefore::
+	.string "Some nights there's a second light\nout past ROUTE 40, blinking on a\lrock in the sea.\pJASMINE's AMPHAROS stares at it\nfrom the lighthouse all\lnight long.$"
+
+HoennSeek_Text_Hint_RumorStranded_LightAfter::
+	.string "That second light off ROUTE 40 is\ngone. They say an AMPHAROS lives\lat the lighthouse now.$"
+
+HoennSeek_Text_Hint_RumorStranded_LightNotes::
+	.string "A stranded AMPHAROS waits on a sea\nrock off ROUTE 40 at night. It\lonly trusts someone who brings it\lBERRIES, one a night.$"
+
+HoennSeek_Text_Hint_RumorUnown_CipherBefore::
+	.string "The lab at the RUINS OF ALPH found\na new line of writing, with HOENN\lbraille over it.\pThe UNOWN on the floor are\nsupposed to glow at night. Nobody\lhere can read them, though.$"
+
+HoennSeek_Text_Hint_RumorUnown_CipherAfter::
+	.string "The RUINS OF ALPH lab finally read\nthe whole UNOWN inscription.\lSomething about SINJOH, I heard.$"
+
+HoennSeek_Text_Hint_RumorUnown_CipherNotes::
+	.string "The RUINS OF ALPH's Words rooms\nglow at night, a different word\leach night of the week. Each word\lnames a place where UNOWN dance in\la ring.$"
+
+HoennSeek_Text_Hint_RumorRainbowBefore::
+	.string "The sages say a rainbow comes to\nTIN TOWER at dawn, for a trainer\lwho's heard all three beasts and\lrung the CLEAR BELL.$"
+
+HoennSeek_Text_Hint_RumorRainbowAfter::
+	.string "Did you see it? A rainbow over\nECRUTEAK at dawn, and a bird of\levery color flying into it!$"
+
+HoennSeek_Text_Hint_RumorRainbowNotes::
+	.string "The rainbow bird comes to TIN\nTOWER's roof at dawn, once you've\lmet the roaming beasts, solved the\lRUINS' HO-OH panel and carry the\lCLEAR BELL.$"
+
+HoennSeek_Text_Hint_RumorForest_OfferingsBefore::
+	.string "My grandma says the ILEX FOREST\nshrine wants gifts from three\lforests, not just one.\pOld soil grows a berry overnight\nthat glows, if you plant one in\lthe right spot.$"
+
+HoennSeek_Text_Hint_RumorForest_OfferingsAfter::
+	.string "Somebody filled all three dishes\nat the ILEX FOREST shrine!\lGrandma's been smiling all week.$"
+
+HoennSeek_Text_Hint_RumorForest_OfferingsNotes::
+	.string "Plant a BERRY in the old soil of\nILEX FOREST, VIRIDIAN FOREST and\lPETALBURG WOODS. Each grows a\lglowing offering by the next day,\lfor the ILEX shrine.$"
 
 HoennSeek_Text_Hint_LineTipDaycare::
 	.string "The DAY-CARE couple on ROUTE 34\nwill raise two POKéMON for you.\pLeave two that get along, and one\nday they may find an EGG!$"

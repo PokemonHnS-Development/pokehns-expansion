@@ -78,6 +78,18 @@ CeladonCity_FloristsHouse_hoenn_EventScript_Sign1::
 	msgbox CeladonCity_FloristsHouse_hoenn_Text_Sign1, MSGBOX_SIGN
 	end
 
+CeladonCity_FloristsHouse_hoenn_EventScript_Sign2::
+	msgbox CeladonCity_FloristsHouse_hoenn_Text_Sign2, MSGBOX_SIGN
+	end
+
+CeladonCity_FloristsHouse_hoenn_EventScript_Sign3::
+	msgbox CeladonCity_FloristsHouse_hoenn_Text_Sign3, MSGBOX_SIGN
+	end
+
+CeladonCity_FloristsHouse_hoenn_EventScript_Sign4::
+	msgbox CeladonCity_FloristsHouse_hoenn_Text_Sign4, MSGBOX_SIGN
+	end
+
 CeladonCity_FloristsHouse_hoenn_Text_Npc0_Intro:
 	.string "I grow flowers for ERIKA's GYM,\nand berries along the pond.\pHere, take one of today's berries!$"
 
@@ -98,3 +110,12 @@ CeladonCity_FloristsHouse_hoenn_Text_Sign0:
 
 CeladonCity_FloristsHouse_hoenn_Text_Sign1:
 	.string "A vase of fresh flowers from the\ngarden by the pond.$"
+
+CeladonCity_FloristsHouse_hoenn_Text_Sign2:
+	.string "Pots of flowers in full bloom,\neach one labeled for ERIKA's GYM.$"
+
+CeladonCity_FloristsHouse_hoenn_Text_Sign3:
+	.string "Pots of flowers in full bloom,\neach one labeled for ERIKA's GYM.$"
+
+CeladonCity_FloristsHouse_hoenn_Text_Sign4:
+	.string "Pots of flowers in full bloom,\neach one labeled for ERIKA's GYM.$"

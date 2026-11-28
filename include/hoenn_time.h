@@ -24,6 +24,7 @@ u8 HoennOrbWeather(u8 weather); // src/hoenn_lane_b.c (2.0 part 36): the ORBS' d
 // Specials (data/specials.inc). GetDayOfWeek itself is also a special.
 void HoennBufferWeekdayName(void);
 bool16 HoennIsItWeekday(void);
+bool16 HoennIsItNightWeekday(void); // part 38
 u8 *HoennWriteWeekdayAbbrev(u8 *dest);
 void HoennSetWeekdayFromChoice(void);
 u16 HoennGetWeatherCycleStage(void);

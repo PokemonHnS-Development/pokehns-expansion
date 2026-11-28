@@ -46,6 +46,7 @@
 #include "hoenn_flags.h"
 #include "wild_encounter.h"
 #include "hoenn_time.h"
+#include "hoenn.h"
 #include "overworld.h"
 #include "rtc.h"
 #include "string_util.h"
@@ -201,6 +202,17 @@ bool16 HoennIsItWeekday(void)
     u32 day = gSpecialVar_0x8004 % WEEKDAY_COUNT;
     StringCopy(gStringVar1, sWeekdayNames[day]);
     return GetDayOfWeek() == day;
+}
+
+// specialvar VAR_RESULT, HoennIsItNightWeekday (part 38): HoennIsItWeekday, but
+// on the weekday a night belongs to (HoennNightWeekday, 27r), so a "Monday
+// night" event still runs at 2 AM on Tuesday and not at 2 AM on Monday. Use it
+// for anything weekly that happens at night (review items 41 and 53).
+bool16 HoennIsItNightWeekday(void)
+{
+    u32 day = gSpecialVar_0x8004 % WEEKDAY_COUNT;
+    StringCopy(gStringVar1, sWeekdayNames[day]);
+    return HoennNightWeekday() == day;
 }
 
 // special HoennSetWeekdayFromChoice (part 3): the player answered "What day is

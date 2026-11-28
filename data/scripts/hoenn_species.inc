@@ -1225,8 +1225,8 @@ HoennSeek_Text_RiddleLater:
 
 HoennSeek_Text_RiddleWrong:
 	.string "SLOWKING yawns enormously.\p"
-	.string "SLOWKING: …No. Think on it until\n"
-	.string "tomorrow.$"
+	.string "SLOWKING: …No. Think on it\n"
+	.string "until tomorrow.$"
 
 HoennSeek_Text_RiddleRight:
 	.string "SLOWKING: Yes. Listen well…$"
@@ -1333,12 +1333,12 @@ HoennSeek_Text_Prophecy5:
 	.string "tides when the sun has set.”$"
 HoennSeek_Text_Prophecy6:
 	.string "“Follow the lights that swim\n"
-	.string "beneath the waves to the hidden\l"
-	.string "shore.”$"
+	.string "beneath the waves to the\l"
+	.string "hidden shore.”$"
 HoennSeek_Text_Prophecy7:
 	.string "“Lay the treasures down there,\n"
-	.string "and the song of the sea will\l"
-	.string "answer.”$"
+	.string "and the song of the sea\l"
+	.string "will answer.”$"
 
 HoennSeek_Text_CallGengar:
 	.string "{PLAYER}! It's BRENDAN!\p"

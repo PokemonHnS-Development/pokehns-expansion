@@ -220,8 +220,8 @@ HoennSeek_Text_AlphResearcherRosetta:
 	.string "says it, and so do the UNOWN\l"
 	.string "letters under it!\p"
 	.string "One dot square for each UNOWN\n"
-	.string "letter. It's a key to their whole\l"
-	.string "alphabet!\p"
+	.string "letter. It's a key to their\l"
+	.string "whole alphabet!\p"
 	.string "AT NIGHT… We've never studied the\n"
 	.string "RUINS after dark. We all go home\l"
 	.string "at sunset.\p"
@@ -355,8 +355,8 @@ HoennSeek_Text_AlphResearcherSanctum:
 	.string "scared to go down there myself.$"
 
 HoennSeek_Text_AlphResearcherInscription:
-	.string "WE WERE BORN AT SINJOH, PAST THE\n"
-	.string "SNOWS…\p"
+	.string "WE WERE BORN AT SINJOH, PAST\n"
+	.string "THE SNOWS…\p"
 	.string "The SINJOH RUINS! The UNOWN came\n"
 	.string "from there? Up the snowy road\l"
 	.string "north of NEW SINJOH!\p"

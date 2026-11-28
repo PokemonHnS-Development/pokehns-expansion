@@ -283,8 +283,8 @@ HoennSeek_Text_WattsonFavorAfter:
 	.string "WATTSON: Get to the BASEMENT KEY door\n"
 	.string "on ROUTE 110's water and shut that\l"
 	.string "generator off.\p"
-	.string "Then we'll have our battle!\n"
-	.string "Wahahaha!$"
+	.string "Then we'll have our\n"
+	.string "battle! Wahahaha!$"
 
 HoennSeek_Text_WattsonGateRemind:
 	.string "WATTSON: The NEW MAUVILLE generator\n"
@@ -317,8 +317,8 @@ HoennSeek_Text_CozmoAskAfter:
 
 HoennSeek_Text_CozmoRemind:
 	.string "PROF. COZMO: The SPACE CENTER is in\n"
-	.string "MOSSDEEP. Take good care of my\l"
-	.string "METEORITE!$"
+	.string "MOSSDEEP. Take good care of\l"
+	.string "my METEORITE!$"
 
 HoennSeek_Text_CozmoThanks:
 	.string "PROF. COZMO: The SPACE CENTER called!\n"

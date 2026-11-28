@@ -262,8 +262,8 @@ HoennSeek_Text_MindReaderAideClouded:
 	.string "Don't ask me what that means.$"
 
 HoennSeek_Text_MindReaderAide:
-	.string "The MASTER reads a POKéMON's hidden\n"
-	.string "potential.\p"
+	.string "The MASTER reads a POKéMON's\n"
+	.string "hidden potential.\p"
 	.string "One STAR PIECE draws out one stat\n"
 	.string "to its fullest.\p"
 	.string "One STAR PIECE changes its ability.\n"

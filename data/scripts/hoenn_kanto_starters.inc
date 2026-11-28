@@ -312,8 +312,8 @@ HoennSeek_Text_BulbasaurJoins::
 HoennSeek_Text_CharmanderWaiting::
 	.string "A CHARMANDER is huddled at the\n"
 	.string "foot of the bridge in the rain.\p"
-	.string "The flame on its tail is barely\n"
-	.string "flickering…\p"
+	.string "The flame on its tail is\n"
+	.string "barely flickering…\p"
 	.string "It keeps staring down the road.\n"
 	.string "Someone told it to wait here.$"
 
@@ -614,26 +614,36 @@ HoennSeek_EventScript_FirePanBackRight:
 	goto HoennSeek_EventScript_FirePanBackX
 
 @ Smoke puffs over the roof: Lavaridge Gym's ash puff (map coordinates + 7;
-@ argument 2 is the subpriority, 3 the priority, above the roof).
+@ argument 2 is the subpriority, 3 the priority, above the roof). Five puffs
+@ across the roof per round, four rounds (review item 15: two rounds of three
+@ were too faint to read as a fire).
 HoennSeek_EventScript_FireSmoke:
 	setvar VAR_0x8006, 0
+	setfieldeffectargument 2, 0
+	setfieldeffectargument 3, 1
 HoennSeek_EventScript_FireSmokeLoop:
 	setfieldeffectargument 0, 43
 	setfieldeffectargument 1, 25
-	setfieldeffectargument 2, 0
-	setfieldeffectargument 3, 1
 	dofieldeffect FLDEFF_ASH_PUFF
-	delay 10
+	delay 6
 	setfieldeffectargument 0, 45
 	setfieldeffectargument 1, 26
 	dofieldeffect FLDEFF_ASH_PUFF
-	delay 10
-	setfieldeffectargument 0, 44
+	delay 6
+	setfieldeffectargument 0, 42
 	setfieldeffectargument 1, 26
 	dofieldeffect FLDEFF_ASH_PUFF
-	delay 10
+	delay 6
+	setfieldeffectargument 0, 44
+	setfieldeffectargument 1, 25
+	dofieldeffect FLDEFF_ASH_PUFF
+	delay 6
+	setfieldeffectargument 0, 46
+	setfieldeffectargument 1, 25
+	dofieldeffect FLDEFF_ASH_PUFF
+	delay 6
 	addvar VAR_0x8006, 1
-	goto_if_lt VAR_0x8006, 2, HoennSeek_EventScript_FireSmokeLoop
+	goto_if_lt VAR_0x8006, 4, HoennSeek_EventScript_FireSmokeLoop
 	return
 
 HoennSeek_EventScript_FireSpray:
@@ -732,8 +742,8 @@ HoennSeek_Movement_HideoutLeaderOut:
 HoennSeek_Text_SquadByThePond::
 	.string "Four SQUIRTLE are playing by\n"
 	.string "the pond.\p"
-	.string "The one in front is wearing\n"
-	.string "sunglasses!\p"
+	.string "The one in front is\n"
+	.string "wearing sunglasses!\p"
 	.string "It's waving at you to come\n"
 	.string "over and play…$"
 
@@ -827,8 +837,8 @@ HoennSeek_Text_OfficerMet::
 	.string "hideout? Ha! You fell in too?\p"
 	.string "They've been seen sneaking\n"
 	.string "around town after dark.\p"
-	.string "I'll be keeping an eye out\n"
-	.string "tonight.$"
+	.string "I'll be keeping an eye\n"
+	.string "out tonight.$"
 
 HoennSeek_Text_OfficerFireOut::
 	.string "That SQUIRTLE SQUAD put out\n"

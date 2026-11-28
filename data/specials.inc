@@ -741,6 +741,8 @@ gSpecials::
 	def_special HoennDebugAdvanceWeatherStage
 	def_special HoennDebugReloadMap
 	def_special HoennIsItWeekday
+	def_special HoennIsItNightWeekday
+	def_special HoennNightWeekday
 	def_special HoennSetWeekdayFromChoice
 	def_special HoennPlayerIsRushing
 	def_special HoennTuneWildMon
