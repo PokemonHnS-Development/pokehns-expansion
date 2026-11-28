@@ -33,8 +33,9 @@ Route120_EventScript_RemoveKecleon::
 
 Route120_OnLoad:
 	call_if_unset FLAG_REGI_DOORS_OPENED, Route120_EventScript_CloseAncientTomb
-	call_if_set FLAG_RECEIVED_DEVON_SCOPE, Route120_EventScript_SetBridgeClearMetatiles
-	call_if_unset FLAG_RECEIVED_DEVON_SCOPE, Route120_EventScript_SetBridgeKecleonMovement
+	@ Hoenn & Seek (part 14): the bridge clears when the tester leaves, not when you get the scope
+	call_if_set FLAG_HIDE_ROUTE_120_STEVEN, Route120_EventScript_SetBridgeClearMetatiles
+	call_if_unset FLAG_HIDE_ROUTE_120_STEVEN, Route120_EventScript_SetBridgeKecleonMovement
 	end
 
 Route120_EventScript_CloseAncientTomb::
@@ -56,13 +57,20 @@ Route120_EventScript_SetBridgeKecleonMovement::
 Route120_OnTransition:
 	call GabbyAndTy_EventScript_UpdateLocation
 	call Route120_EventScript_SetWeather
+	call HoennSeek_EventScript_Route120OnTransition @ Hoenn & Seek 2.0 part 22a: Absol on the ridge
 	end
 
 Route120_EventScript_SetWeather::
+	@ Hoenn & Seek 2.0 (part 5): on the storm day the storm covers the whole route.
+	specialvar VAR_RESULT, HoennIsSpecialWeatherHere
+	goto_if_eq VAR_RESULT, TRUE, Route120_EventScript_KeepStormWeather
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	goto_if_le VAR_TEMP_1, 14, Route120_EventScript_SetSunnyWeather
 	goto_if_le VAR_TEMP_1, 60, Route120_EventScript_TrySetRainyWeather
 	goto_if_ge VAR_TEMP_1, 61, Route120_EventScript_SetCloudyWeather
+	return
+
+Route120_EventScript_KeepStormWeather::
 	return
 
 Route120_EventScript_SetCloudyWeather::
@@ -154,6 +162,7 @@ Route120_EventScript_BerryNotLove::
 Route120_EventScript_Steven::
 	lock
 	faceplayer
+	goto_if_unset FLAG_RECEIVED_DEVON_SCOPE, HoennSeek_EventScript_TesterNoScope
 	goto_if_set FLAG_NOT_READY_FOR_BATTLE_ROUTE_120, Route120_EventScript_StevenAskReadyForBattle
 	msgbox Route120_Text_StevenGreeting, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route120_EventScript_StevenNotReady
@@ -190,7 +199,9 @@ Route120_EventScript_StevenBattleKecleon::
 	playmoncry SPECIES_KECLEON, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_KECLEON, 30
+	@ Hoenn & Seek: Kecleon scales with the stamp count
+	setvar VAR_0x8004, SPECIES_KECLEON
+	special HoennSetupScaledWildBattle
 	setvar VAR_0x8009, 0
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
@@ -215,23 +226,19 @@ Route120_EventScript_StevenGiveDeconScope::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox Route120_Text_StevenGiveDevonScope, MSGBOX_DEFAULT
-	giveitem ITEM_DEVON_SCOPE
-	setflag FLAG_RECEIVED_DEVON_SCOPE
-	msgbox Route120_Text_StevenGoodbye, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ROUTE120_STEVEN, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
-	delay 50
-	setfieldeffectargument 0, 1
-	dofieldeffect FLDEFF_NPCFLY_OUT
-	delay 15
+	@ Hoenn & Seek: the Devon field tester heads home (Steven used to Fly off)
+	delay 30
+	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ROUTE120_STEVEN
-	waitfieldeffect FLDEFF_NPCFLY_OUT
 	setmetatile 13, 15, METATILE_Fortree_WoodBridge1_Top, FALSE
 	setmetatile 12, 16, METATILE_Fortree_WoodBridge1_Bottom, FALSE
 	setmetatile 12, 17, METATILE_General_ReflectiveWater, FALSE
 	setmetatile 13, 17, METATILE_General_ReflectiveWater, FALSE
 	special DrawWholeMapView
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 
@@ -359,53 +366,47 @@ Route120_EventScript_Callie::
 	msgbox Route120_Text_CalliePostBattle, MSGBOX_AUTOCLOSE
 	end
 
+@ Hoenn & Seek: a DEVON field tester stands in for Steven (part 11).
 Route120_Text_StevenGreeting:
-	.string "STEVEN: Hm? {PLAYER}{KUN}, hi.\n"
-	.string "It's been a while.\p"
-	.string "There's something here that you can't\n"
-	.string "see, right?\p"
-	.string "Now, if I were to use this device on\n"
-	.string "the invisible obstacle…\p"
-	.string "No, no. Rather than describing it,\n"
-	.string "I should just show you.\l"
-	.string "That would be more fun.\p"
-	.string "{PLAYER}{KUN}, are your POKéMON ready for\n"
-	.string "battle?$"
+	.string "You brought the finished DEVON SCOPE!\n"
+	.string "MR. STONE must have been laughing.\p"
+	.string "Whatever's invisible is still blocking\n"
+	.string "the bridge. It might put up a fight.\p"
+	.string "Are your POKéMON ready for battle?$"
 
 Route120_Text_StevenIllWaitHere:
-	.string "STEVEN: No?\p"
-	.string "I'll wait here, so you can get ready.$"
+	.string "No? That's fine.\n"
+	.string "I'll wait here while you get ready.$"
 
 Route120_Text_StevenReadyForBattle:
-	.string "STEVEN: {PLAYER}{KUN}, are your POKéMON\n"
-	.string "ready for battle?$"
+	.string "Are your POKéMON ready for\n"
+	.string "battle now?$"
 
 Route120_Text_StevenShowMeYourPower:
-	.string "STEVEN: {PLAYER}{KUN}, show me your true\n"
-	.string "power as a TRAINER!$"
+	.string "Great! Point the SCOPE at the bridge,\n"
+	.string "right there!$"
 
 Route120_Text_StevenUsedDevonScope:
-	.string "STEVEN used the DEVON SCOPE.\p"
+	.string "{PLAYER} used the DEVON SCOPE.\p"
 	.string "An invisible POKéMON became completely\n"
 	.string "visible!\p"
 	.string "The startled POKéMON attacked!$"
 
 Route120_Text_StevenGiveDevonScope:
-	.string "STEVEN: I see…\n"
-	.string "Your battle style is intriguing.\p"
-	.string "Your POKéMON have obviously grown\n"
-	.string "since I first met you in DEWFORD.\p"
-	.string "I'd like you to have this\n"
-	.string "DEVON SCOPE.\p"
-	.string "Who knows, there may be other\n"
-	.string "concealed POKéMON.$"
+	.string "Field test complete!\n"
+	.string "A KECLEON, of all things.\p"
+	.string "Who knows what else is hiding out\n"
+	.string "here? Point the SCOPE at anything\l"
+	.string "that seems out of place.\p"
+	.string "Well, I'd better get back to\n"
+	.string "RUSTBORO and write my report!$"
 
 Route120_Text_StevenGoodbye:
-	.string "STEVEN: {PLAYER}{KUN}.\p"
-	.string "I enjoy seeing POKéMON and TRAINERS\n"
-	.string "who strive together.\p"
-	.string "I think you're doing great.\p"
-	.string "Well, let's meet again somewhere.$"
+	.string "Who knows what else is hiding out\n"
+	.string "here? Point the SCOPE at anything\l"
+	.string "that seems out of place.\p"
+	.string "Well, I'd better get back to\n"
+	.string "RUSTBORO and write my report!$"
 
 Kecleon_Text_SomethingUnseeable:
 	.string "Something unseeable is in the way.$"

@@ -5,6 +5,7 @@ VermilionCity_hns_MapScripts::
 
 VermilionCity_MapScript_OnTransition::
 	setflag FLAG_VISITED_VERMILION_CITY
+	call HoennSeek_EventScript_VermilionOnTransition @ Hoenn & Seek 2.0 part 17: the Squirtle Squad
 	goto_if_eq VAR_SUICUNE_ENCOUNTERS, 3, VermilionCity_EventScript_SetSuicuneScene
 	setflag FLAG_HIDE_VERMILION_EUSINE_SUICUNE
 	callnative SetTimeBasedEncounters

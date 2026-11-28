@@ -398,6 +398,20 @@
       "elevation": 0,
       "dest_map": "MAP_MELEMELE_HOUSE_2_HNS",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_MELEMELE_ISLE_ISLAND_HOME_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_MELEMELE_ISLE_SURF_SHOP_HOENN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

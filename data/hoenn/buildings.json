@@ -1,0 +1,1062 @@
+{
+  "_comment": [
+    "Hoenn & Seek 2.0 (parts 8a-11): interiors for HnS's fake buildings (2.0-plan section 3a).",
+    "Read by tools/hoenn/gen_hoenn_buildings.py; the per-building plan is hoenn-docs/buildings.md and",
+    "tools/hoenn/find_fake_doors.py lists the doors.",
+    "templates: name -> {from: an HnS house map}. A building uses that map's layout (furniture and all),",
+    "  its signs (bookshelves, TV...) and its entrance tile; HnS has dozens of 13x10 house maps (yellow tile,",
+    "  wood floor, Mr. POKéMON's white office), so buildings vary by picking different ones (no new tiles).",
+    "buildings: {name (map folder, ends in _hoenn), door {map, x, y}, template, purpose, music (optional,",
+    "  default: the outside map's), signs (optional), texts (optional), objects}.",
+    "  signs: [{x, y, text}] replaces the template's signs ([] = none; leave it out to keep them).",
+    "  texts: {Key: text} becomes <name>_Text_<Key>, for hand-written scripts in data/scripts/hoenn_buildings.inc.",
+    "  Objects are",
+    "  {type: npc, gfx, x, y, facing (down/up/left/right/wander/look), text (string or list of boxes) or",
+    "   script (a hand-written script label instead of text), or daily_gift {flag (a daily flag), items",
+    "   (7 item names without ITEM_, Sunday first), intro, after, full (bag full), done} instead of text,",
+    "   hints (optional: hint line ids from data/hoenn/npc_hints.json, makes them a hint NPC)}",
+    "  or {type: mon, species, x, y, facing}: a Pokémon object that plays its cry (house pets).",
+    "  Every object must stand on a free floor tile, not on or right above the entrance. In the 13x10",
+    "  houses the chairs (left and right of the table, and the row above them) are walkable: keep NPCs off them."
+  ],
+  "templates": {
+    "house_a": {
+      "from": "CherrygroveCity_House1_hns"
+    },
+    "house_b": {
+      "from": "CherrygroveCity_House2_hns"
+    },
+    "house_c": {
+      "from": "CianwoodHouse2_hns"
+    },
+    "house_d": {
+      "from": "GoldenrodCity_House2_hns"
+    },
+    "house_e": {
+      "from": "EcruteakCity_House1_hns"
+    },
+    "office": {
+      "from": "Route30_MrPokemonsHouse_hns"
+    },
+    "house_clock": {
+      "from": "LakeOfRage_House1_hns"
+    },
+    "house_tv": {
+      "from": "GoldenrodCity_House1_hns"
+    },
+    "house_wood": {
+      "from": "LakeOfRage_House2_hns"
+    },
+    "house_wood_book": {
+      "from": "EcruteakCity_House2_hns"
+    },
+    "house_yellow": {
+      "from": "PewterCity_House1_hns"
+    },
+    "house_wood_b": {
+      "from": "VioletCity_House2_hns"
+    },
+    "house_wood_c": {
+      "from": "BlackthornCity_House2_hns"
+    },
+    "farmhouse": {
+      "from": "Route39_FarmHouse_hns"
+    },
+    "house_shelves": {
+      "from": "NewBarkTown_House2_hns"
+    },
+    "house_yellow_b": {
+      "from": "Route5_House_hns"
+    },
+    "house_wood_d": {
+      "from": "SaffronCity_House1_hns"
+    },
+    "house_yellow_c": {
+      "from": "CeruleanCity_House3_hns"
+    },
+    "alola_home": {
+      "from": "Melemele_House_3_hns"
+    },
+    "alola_shop": {
+      "from": "Melemele_House_2_hns"
+    }
+  },
+  "buildings": [
+    {
+      "name": "Route34_FishingShack_hoenn",
+      "door": {
+        "map": "Route34_hns",
+        "x": 23,
+        "y": 50
+      },
+      "template": "house_c",
+      "purpose": "Fisherman's shack on Route 34's shore (part 8a's test interior).",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_FISHERMAN_HNS",
+          "x": 2,
+          "y": 6,
+          "facing": "right",
+          "text": [
+            "The fish off ROUTE 34 bite best in the early morning.",
+            "Don't tell anyone, but on rainy days you'll hook POLIWAG right off the beach!"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_2_HNS",
+          "x": 10,
+          "y": 3,
+          "facing": "look",
+          "text": "My husband spends more time at sea than at home. Lucky for him, the fish keep us fed!",
+          "hints": [
+            "TIP_WEATHER",
+            "TIP_CLOCK"
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "PSYDUCK",
+          "x": 6,
+          "y": 7,
+          "facing": "wander"
+        }
+      ]
+    },
+    {
+      "name": "OlivineCity_HarborOffice_hoenn",
+      "door": {
+        "map": "OlivineCity_hns",
+        "x": 2,
+        "y": 15
+      },
+      "template": "office",
+      "purpose": "Harbor office: ship schedules for the S.S. AQUA and the HOENN ferry, a clerk who hints about Hoenn.",
+      "signs": [
+        {
+          "x": 1,
+          "y": 1,
+          "text": "Logbooks of every ship that has docked in OLIVINE, going back fifty years."
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "text": "Logbooks of every ship that has docked in OLIVINE, going back fifty years."
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "text": "Tide tables for the waters around OLIVINE and CIANWOOD."
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "text": "Tide tables for the waters around OLIVINE and CIANWOOD."
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "text": [
+            "A chart of the sea routes.",
+            "A line runs from OLIVINE to VERMILION, and a long dotted one from VERMILION far to the south, to SLATEPORT CITY in HOENN."
+          ]
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "text": [
+            "A chart of the sea routes.",
+            "A line runs from OLIVINE to VERMILION, and a long dotted one from VERMILION far to the south, to SLATEPORT CITY in HOENN."
+          ]
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "text": "The ship-to-shore radio crackles: “...calm seas past CIANWOOD... light winds...”"
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "text": "The ship-to-shore radio crackles: “...calm seas past CIANWOOD... light winds...”"
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_ATTENDANT_F_HNS",
+          "x": 7,
+          "y": 3,
+          "facing": "down",
+          "text": [
+            "Welcome to the OLIVINE HARBOR OFFICE!",
+            "The S.S. AQUA sails between OLIVINE and VERMILION CITY. The board at the port has its sailing days."
+          ],
+          "hints": [
+            "STORY_FERRY",
+            "TIP_REMINDER_H"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_SAILOR_HNS",
+          "x": 1,
+          "y": 6,
+          "facing": "right",
+          "text": [
+            "I just signed on with the HOENN ferry out of VERMILION.",
+            "Warm seas, wild WAILMER, and the ship docks right in SLATEPORT. Can't wait!"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_GENTLEMAN_HNS",
+          "x": 9,
+          "y": 7,
+          "facing": "up",
+          "text": "I've waited an hour to ask about my lost luggage. The clerk keeps talking about the weather!"
+        }
+      ]
+    },
+    {
+      "name": "OlivineCity_SailorsHouse_hoenn",
+      "door": {
+        "map": "OlivineCity_hns",
+        "x": 6,
+        "y": 15
+      },
+      "template": "house_yellow",
+      "purpose": "Sailor's family home: the sailor is away at sea, his kids are home, and there's a Wingull pet.",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_1_HNS",
+          "x": 9,
+          "y": 5,
+          "facing": "left",
+          "text": [
+            "My husband sails on the S.S. AQUA.",
+            "He's at sea half the week, so the kids and the WINGULL keep me busy!"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LITTLE_BOY_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "wander",
+          "text": "Dad brought WINGULL home from VERMILION. It follows the ships all the way across the sea!"
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LITTLE_GIRL_HNS",
+          "x": 8,
+          "y": 7,
+          "facing": "up",
+          "text": "When I grow up, I'm going to captain my own ship and sail all the way to HOENN!",
+          "hints": [
+            "TIP_NAMERATER_JK",
+            "TIP_NAMERATER_H"
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "WINGULL",
+          "x": 2,
+          "y": 7,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "OlivineCity_CaptainsHouse_hoenn",
+      "door": {
+        "map": "OlivineCity_hns",
+        "x": 10,
+        "y": 15
+      },
+      "template": "house_clock",
+      "purpose": "Retired captain: sea stories, and he rates your Pokémon's friendship.",
+      "texts": {
+        "RateIntro": [
+          "Forty years I captained ships out of this port. You learn to read a crew.",
+          "Let's have a look at your {STR_VAR_1}..."
+        ],
+        "Rate0": "Hmph. That one would mutiny the first chance it got. Treat it better, sailor.",
+        "Rate1": "It keeps its distance from you, like a deckhand who doesn't trust the captain yet.",
+        "Rate2": "It's not used to you yet. Give it time at sea together.",
+        "Rate3": "It's getting used to you. A few more voyages and you'll be a fine crew.",
+        "Rate4": "It likes you quite a lot! It would follow you through any storm.",
+        "Rate5": "It's very happy with you. That's a first mate if I ever saw one!",
+        "Rate6": "Ha! It adores you! With a partner like that, no fog could ever get you lost."
+      },
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_CAPTAIN_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "script": "HoennSeek_EventScript_OlivineCaptain",
+          "hints": [
+            "RUMOR_LAPRAS"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_OLD_WOMAN_HNS",
+          "x": 9,
+          "y": 5,
+          "facing": "left",
+          "text": [
+            "My husband still tells the story of the night a LAPRAS led his ship through the fog off CIANWOOD.",
+            "I've heard it three hundred times. I still like it."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OlivineCity_TackleShop_hoenn",
+      "door": {
+        "map": "OlivineCity_hns",
+        "x": 27,
+        "y": 15
+      },
+      "template": "house_wood",
+      "purpose": "Fishing tackle shop: a small mart (Net/Dive/Lure Balls, Repels).",
+      "signs": [
+        {
+          "x": 6,
+          "y": 4,
+          "text": "Fishing line, hooks and lures, sorted by size."
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "text": "Fishing line, hooks and lures, sorted by size."
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_MART_EMPLOYEE_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "script": "HoennSeek_EventScript_OlivineTackleShop"
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_FISHERMAN_HNS",
+          "x": 9,
+          "y": 6,
+          "facing": "up",
+          "text": [
+            "A LURE BALL for anything you hook, a NET BALL for WATER and BUG types...",
+            "And a DIVE BALL for anything you meet under the waves. This shop has all three!"
+          ],
+          "hints": [
+            "TIP_WEATHER"
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "MAGIKARP",
+          "x": 9,
+          "y": 3,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "OlivineCity_Shipwright_hoenn",
+      "door": {
+        "map": "OlivineCity_hns",
+        "x": 31,
+        "y": 15
+      },
+      "template": "house_wood_book",
+      "purpose": "Shipwright's workshop: workers, and talk of the lighthouse and Amphy.",
+      "signs": [
+        {
+          "x": 6,
+          "y": 4,
+          "text": "Blueprints for a new ferry. They're stamped “S.S. TIDAL, SLATEPORT SHIPYARD.”"
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "text": "Blueprints for a new ferry. They're stamped “S.S. TIDAL, SLATEPORT SHIPYARD.”"
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WORKER_M_HNS",
+          "x": 2,
+          "y": 5,
+          "facing": "right",
+          "text": [
+            "We repair every ship that docks in OLIVINE.",
+            "The shipyard in SLATEPORT sent us these plans so we can fix their ferry when it's in port."
+          ],
+          "hints": [
+            "TIP_CLOCK"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WORKER_F_HNS",
+          "x": 9,
+          "y": 4,
+          "facing": "look",
+          "text": [
+            "No captain sails at night without the LIGHTHOUSE.",
+            "When AMPHY fell ill, JASMINE stayed by its side until it could shine again. Every sailor here owes her one."
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_ENGINEER_HNS",
+          "x": 9,
+          "y": 7,
+          "facing": "up",
+          "text": "Steel hulls, strong as a STEELIX! Well, almost."
+        }
+      ]
+    },
+    {
+      "name": "OlivineCity_KeepersHouse_hoenn",
+      "door": {
+        "map": "OlivineCity_hns",
+        "x": 35,
+        "y": 15
+      },
+      "template": "house_tv",
+      "purpose": "Lighthouse keeper's family: Jasmine and Amphy lines, and a daily item.",
+      "signs": [],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_3_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "daily_gift": {
+            "flag": "FLAG_HOENN_DAILY_KEEPER_GIFT",
+            "items": [
+              "BIG_PEARL",
+              "PEARL",
+              "STARDUST",
+              "PEARL",
+              "STARDUST",
+              "PEARL",
+              "BIG_PEARL"
+            ],
+            "intro": "The tide leaves all sorts of things on the rocks below the LIGHTHOUSE. I go down every morning. Here's today's find!",
+            "after": "Come back tomorrow. The sea always brings something new.",
+            "full": "Oh, your BAG is full! I'll keep it for you until you make room.",
+            "done": "I've already been down to the rocks today. Come back tomorrow!"
+          }
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_OLD_MAN_HNS",
+          "x": 9,
+          "y": 4,
+          "facing": "left",
+          "text": [
+            "I've kept the LIGHTHOUSE for thirty years, and AMPHY lights the lamp now.",
+            "JASMINE climbs up every evening after the GYM closes, just to say goodnight to it."
+          ],
+          "hints": [
+            "TIP_LEVEL_CAP"
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "MAREEP",
+          "x": 8,
+          "y": 7,
+          "facing": "wander"
+        }
+      ]
+    },
+    {
+      "name": "EcruteakCity_DanceTeacher_hoenn",
+      "door": {
+        "map": "EcruteakCity_hns",
+        "x": 57,
+        "y": 25
+      },
+      "template": "house_wood_b",
+      "purpose": "Kimono dance teacher's house: students practicing, and Eevee pets.",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_OLD_WOMAN_HNS",
+          "x": 9,
+          "y": 5,
+          "facing": "left",
+          "text": [
+            "I taught the KIMONO GIRLS of the DANCE THEATER, every one of them.",
+            "A dance is like a battle. Every step must flow into the next!"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_KIMONO_HNS",
+          "x": 2,
+          "y": 3,
+          "facing": "down",
+          "text": [
+            "One, two, turn... Oh! You surprised me.",
+            "I'm practicing for my first show at the DANCE THEATER."
+          ],
+          "hints": [
+            "TIP_REMINDER_JK"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_KIMONO_HNS",
+          "x": 2,
+          "y": 6,
+          "facing": "up",
+          "text": "Our teacher says EEVEE dance better than any of us. I think she's right!"
+        },
+        {
+          "type": "mon",
+          "species": "EEVEE",
+          "x": 6,
+          "y": 7,
+          "facing": "wander"
+        },
+        {
+          "type": "mon",
+          "species": "UMBREON",
+          "x": 10,
+          "y": 3,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "Route34_BreedersHouse_hoenn",
+      "door": {
+        "map": "Route34_hns",
+        "x": 33,
+        "y": 31
+      },
+      "template": "house_shelves",
+      "purpose": "Breeder's house next to the Day Care: egg and breeding tips, with a hint NPC.",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_3_HNS",
+          "x": 9,
+          "y": 4,
+          "facing": "left",
+          "text": [
+            "We moved here to be next door to the DAY-CARE.",
+            "Every morning I check whether the couple found another EGG!"
+          ],
+          "hints": [
+            "TIP_DAYCARE"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_MAN_HNS",
+          "x": 2,
+          "y": 5,
+          "facing": "right",
+          "text": [
+            "A POKéMON from an EGG can know moves its parents knew.",
+            "Breed with care and you'll get a strong one right from the start!"
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "DITTO",
+          "x": 8,
+          "y": 7,
+          "facing": "look"
+        },
+        {
+          "type": "mon",
+          "species": "TOGEPI",
+          "x": 2,
+          "y": 7,
+          "facing": "wander"
+        }
+      ]
+    },
+    {
+      "name": "Route38_MoomooStoreroom_hoenn",
+      "door": {
+        "map": "Route38_hns",
+        "x": 34,
+        "y": 41
+      },
+      "template": "farmhouse",
+      "purpose": "Moomoo Farm storeroom: a farmhand, Miltank, and a Moomoo Milk line.",
+      "signs": [
+        {
+          "x": 5,
+          "y": 4,
+          "text": "Crates of MOOMOO MILK bottles, packed and ready for GOLDENROD's DEPT. STORE."
+        },
+        {
+          "x": 6,
+          "y": 4,
+          "text": "Crates of MOOMOO MILK bottles, packed and ready for GOLDENROD's DEPT. STORE."
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_MAN_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "text": [
+            "MOOMOO MILK from this farm goes all over JOHTO.",
+            "One bottle restores 100 HP. Ask at the farmhouse if you want to buy some!"
+          ],
+          "hints": [
+            "TIP_CLOCK"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LASS_HNS",
+          "x": 9,
+          "y": 6,
+          "facing": "up",
+          "text": "This MILTANK gives the best milk on the farm. She likes it in here where it's cool."
+        },
+        {
+          "type": "mon",
+          "species": "MILTANK",
+          "x": 9,
+          "y": 3,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "BellchimeTrail_Lodge_hoenn",
+      "door": {
+        "map": "BellchimeTrail_hns",
+        "x": 54,
+        "y": 58
+      },
+      "template": "house_wood_c",
+      "purpose": "Tin Tower caretaker's lodge: sages, with legendary-bird rumors.",
+      "signs": [
+        {
+          "x": 6,
+          "y": 4,
+          "text": "A worn scroll. It shows TIN TOWER, and a great bird of many colors circling above it."
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "text": "A worn scroll. It shows TIN TOWER, and a great bird of many colors circling above it."
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_SAGE_ELDER_HNS",
+          "x": 9,
+          "y": 4,
+          "facing": "left",
+          "text": [
+            "We sweep TIN TOWER's steps every dawn, though the bird of many colors has not landed there in years.",
+            "They say it comes only for a TRAINER it has chosen."
+          ],
+          "hints": [
+            "TIP_NAMERATER_JK"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_SAGE_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "text": [
+            "The bird of TIN TOWER has a partner, they say, one that sleeps under the sea.",
+            "Some fishermen swear they've heard it singing near the WHIRL ISLANDS."
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_SAGE_HNS",
+          "x": 9,
+          "y": 7,
+          "facing": "up",
+          "text": "The BELL TOWER's bells ring out with the wind. A good sage can tell the weather by their tune."
+        }
+      ]
+    },
+    {
+      "name": "Route6_BugClub_hoenn",
+      "door": {
+        "map": "Route6_hns",
+        "x": 21,
+        "y": 17
+      },
+      "template": "house_yellow_b",
+      "purpose": "Bug Catchers' club house: bug tips, and a Butterfree pet.",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_BUG_CATCHER_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "text": [
+            "Welcome to the ROUTE 6 BUG CLUB! Members only... but you can look around.",
+            "Our club rule: never let a BUG POKéMON go hungry!"
+          ],
+          "hints": [
+            "TIP_BUG_CONTEST"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_BUG_CATCHER_HNS",
+          "x": 9,
+          "y": 5,
+          "facing": "left",
+          "text": [
+            "Bug POKéMON evolve fast. CATERPIE becomes BUTTERFREE before you know it!",
+            "That's why they're the best."
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_YOUNGSTER_HNS",
+          "x": 8,
+          "y": 7,
+          "facing": "up",
+          "text": "I want to join, but I've only caught a WEEDLE. They say I need three kinds to be a member."
+        },
+        {
+          "type": "mon",
+          "species": "BUTTERFREE",
+          "x": 2,
+          "y": 7,
+          "facing": "wander"
+        }
+      ]
+    },
+    {
+      "name": "Route6_EngineersHouse_hoenn",
+      "door": {
+        "map": "Route6_hns",
+        "x": 49,
+        "y": 30
+      },
+      "template": "house_wood_d",
+      "purpose": "Retired Silph engineer: talk of the Magnet Train and the Power Plant, with a hint NPC.",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_SCIENTIST_M_HNS",
+          "x": 9,
+          "y": 4,
+          "facing": "left",
+          "text": [
+            "I worked thirty years at SILPH CO. I helped design the MAGNET TRAIN's motors!",
+            "It runs on electricity from the POWER PLANT. Without it, the whole line stops."
+          ],
+          "hints": [
+            "TIP_MIND_READER",
+            "TIP_CLOCK"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_2_HNS",
+          "x": 2,
+          "y": 5,
+          "facing": "right",
+          "text": [
+            "My husband retired, but he still takes the MAGNET TRAIN to GOLDENROD every week.",
+            "He says he's checking the motors. I think he just likes the ride."
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "MAGNEMITE",
+          "x": 2,
+          "y": 7,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "CeladonCity_FloristsHouse_hoenn",
+      "door": {
+        "map": "CeladonCity_hns",
+        "x": 26,
+        "y": 17
+      },
+      "template": "house_yellow_c",
+      "purpose": "Florist's house: flowers, Bellossom, and a berry gift.",
+      "signs": [
+        {
+          "x": 5,
+          "y": 4,
+          "text": "A vase of fresh flowers from the garden by the pond."
+        },
+        {
+          "x": 6,
+          "y": 4,
+          "text": "A vase of fresh flowers from the garden by the pond."
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_1_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "daily_gift": {
+            "flag": "FLAG_HOENN_DAILY_FLORIST_GIFT",
+            "items": [
+              "LUM_BERRY",
+              "CHERI_BERRY",
+              "CHESTO_BERRY",
+              "PECHA_BERRY",
+              "RAWST_BERRY",
+              "ASPEAR_BERRY",
+              "SITRUS_BERRY"
+            ],
+            "intro": [
+              "I grow flowers for ERIKA's GYM, and berries along the pond.",
+              "Here, take one of today's berries!"
+            ],
+            "after": "A different berry ripens every day of the week. Come back tomorrow!",
+            "full": "Oh, your BAG is full. Make some room and I'll pick one for you.",
+            "done": "That was today's berry. Come back tomorrow, there's always another!"
+          }
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LASS_HNS",
+          "x": 9,
+          "y": 5,
+          "facing": "left",
+          "text": [
+            "Our BELLOSSOM dances whenever the sun comes out.",
+            "On rainy days it just sits by the window and sulks!"
+          ],
+          "hints": [
+            "TIP_WEATHER"
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "BELLOSSOM",
+          "x": 8,
+          "y": 7,
+          "facing": "wander"
+        }
+      ]
+    },
+    {
+      "name": "MelemeleIsle_IslandHome_hoenn",
+      "door": {
+        "map": "MelemeleIsle_hns",
+        "x": 11,
+        "y": 21
+      },
+      "template": "alola_home",
+      "purpose": "Island family home: Alola-style lines and pets (Rockruff, Pikipek).",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_WOMAN_1_HNS",
+          "x": 12,
+          "y": 9,
+          "facing": "left",
+          "text": [
+            "Alola! Come in, come in. Visitors are always welcome here.",
+            "Out on the islands, nobody locks their door. The POKéMON would just let themselves in anyway!"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_MAN_HNS",
+          "x": 4,
+          "y": 9,
+          "facing": "right",
+          "text": [
+            "Every morning our PIKIPEK wakes the whole house, right at sunrise.",
+            "No need for an alarm clock on MELEMELE!"
+          ],
+          "hints": [
+            "TIP_LEVEL_CAP"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LITTLE_GIRL_HNS",
+          "x": 8,
+          "y": 12,
+          "facing": "up",
+          "text": "ROCKRUFF and I are going to do the island challenge together when I'm older!"
+        },
+        {
+          "type": "mon",
+          "species": "ROCKRUFF",
+          "x": 4,
+          "y": 12,
+          "facing": "wander"
+        },
+        {
+          "type": "mon",
+          "species": "PIKIPEK",
+          "x": 12,
+          "y": 12,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "MelemeleIsle_SurfShop_hoenn",
+      "door": {
+        "map": "MelemeleIsle_hns",
+        "x": 20,
+        "y": 25
+      },
+      "template": "alola_shop",
+      "purpose": "Surf shop: surfing tips and Wailmer talk (a small mart: Dive/Net Balls, Sea/Wave Incense, Mystic Water).",
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_MART_EMPLOYEE_HNS",
+          "x": 5,
+          "y": 9,
+          "facing": "down",
+          "script": "HoennSeek_EventScript_MelemeleSurfShop"
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_SWIMMER_F_LAND_HNS",
+          "x": 9,
+          "y": 12,
+          "facing": "left",
+          "text": [
+            "Big waves come in after a storm. That's the best time to surf!",
+            "Out past the reef there's a WAILMER pod. If you're lucky, one will ride the swell right beside you."
+          ],
+          "hints": [
+            "TIP_WEATHER"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_TUBER_M_HNS",
+          "x": 4,
+          "y": 12,
+          "facing": "right",
+          "text": "Our shop's WAILMER is too big to fit through the door now. We have to wash it with a hose!"
+        },
+        {
+          "type": "mon",
+          "species": "WAILMER",
+          "x": 11,
+          "y": 12,
+          "facing": "look"
+        }
+      ]
+    },
+    {
+      "name": "Route45_BeekeeperHouse_hoenn",
+      "door": {
+        "map": "Route45_hns",
+        "x": 31,
+        "y": 7
+      },
+      "template": "house_a",
+      "purpose": "Beekeeper's house (2.0 part 31b): one HONEY a day, the honey pine's hint, Bloodmoon Ursaluna lore, a Combee.",
+      "signs": [
+        {
+          "x": 8,
+          "y": 2,
+          "text": "Rows of golden HONEY jars, each one labeled with a month and a flower."
+        }
+      ],
+      "objects": [
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_OLD_MAN_HNS",
+          "x": 2,
+          "y": 4,
+          "facing": "right",
+          "daily_gift": {
+            "flag": "FLAG_HOENN_DAILY_BEEKEEPER_HONEY",
+            "items": [
+              "HONEY",
+              "HONEY",
+              "HONEY",
+              "HONEY",
+              "HONEY",
+              "HONEY",
+              "HONEY"
+            ],
+            "intro": [
+              "My COMBEE make the sweetest HONEY in all of JOHTO. Here, take a jar!",
+              "Spread it on a tree and wild POKéMON come for it. The TEDDIURSA on this mountain love the old pine by the pond, at the bottom of the route."
+            ],
+            "after": "Spread it on the bark and come back the next morning. Bears are early risers!",
+            "full": "Your BAG's too full for a jar. Make some room and come back.",
+            "done": "One jar a day is all my COMBEE can spare. Come back tomorrow!"
+          }
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LASS_HNS",
+          "x": 9,
+          "y": 5,
+          "facing": "left",
+          "text": [
+            "Grandpa sends a jar of HONEY to PROF. BIRCH in HOENN every month.",
+            "The PROF writes back with notes on HOENN's flowers for the COMBEE!"
+          ],
+          "hints": [
+            "STORY_HONEY_HOLLOW",
+            "STORY_HONEY_NIGHT",
+            "STORY_HONEY_MOTHER",
+            "STORY_HONEY_TREE"
+          ]
+        },
+        {
+          "type": "npc",
+          "gfx": "OBJ_EVENT_GFX_LITTLE_BOY_HNS",
+          "x": 8,
+          "y": 7,
+          "facing": "up",
+          "text": [
+            "Grandpa says an URSARING that sees the moon from MT. MOON at night changes into something else!",
+            "You need a PEAT BLOCK for it, though. The old lady's shop in MAHOGANY sells them."
+          ]
+        },
+        {
+          "type": "mon",
+          "species": "COMBEE",
+          "x": 2,
+          "y": 7,
+          "facing": "look"
+        }
+      ]
+    }
+  ]
+}

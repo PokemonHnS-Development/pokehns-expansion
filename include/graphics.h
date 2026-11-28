@@ -405,6 +405,10 @@ extern const u16 gBattleEnvironmentPalette_StadiumWill[];
 extern const u16 gBattleEnvironmentPalette_StadiumKoga[];
 extern const u16 gBattleEnvironmentPalette_StadiumBruno[];
 extern const u16 gBattleEnvironmentPalette_StadiumKaren[];
+extern const u16 gBattleEnvironmentPalette_HoennStadiumSidney[];
+extern const u16 gBattleEnvironmentPalette_HoennStadiumPhoebe[];
+extern const u16 gBattleEnvironmentPalette_HoennStadiumGlacia[];
+extern const u16 gBattleEnvironmentPalette_HoennStadiumDrake[];
 extern const u16 gBattleEnvironmentPalette_StadiumLance[];
 extern const u16 gBattleEnvironmentPalette_StadiumLeaderModern[];
 extern const u16 gBattleEnvironmentPalette_TallGrassModernMorning[];
@@ -993,6 +997,8 @@ extern const u32 gItemIcon_RedOrb[];
 extern const u16 gItemIconPalette_RedOrb[];
 extern const u32 gItemIcon_BlueOrb[];
 extern const u16 gItemIconPalette_BlueOrb[];
+extern const u32 gItemIcon_JadeOrb[]; // Hoenn & Seek 2.0 part 36
+extern const u16 gItemIconPalette_JadeOrb[];
 // Mega Stones
 extern const u32 gItemIcon_Venusaurite[];
 extern const u16 gItemIconPalette_Venusaurite[];

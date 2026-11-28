@@ -159,6 +159,10 @@ static const u8 sGenericMulchDesc[]   = _("A fertilizer that\n"
                                           "is unsuitable for\n"
                                           "local soil.");
 
+#if IS_HNS
+STATIC_ASSERT(ITEM_HM09 == ITEM_HM09_SLOT, HoennHM09Slot) // Hoenn & Seek
+#endif
+
 const struct ItemInfo gItemsInfo[] =
 {
     [ITEM_NONE] =
@@ -13741,6 +13745,21 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
+
+    // Hoenn & Seek: HM09 Dive (given at Steven's house in Mossdeep)
+    [ITEM_HM_DIVE] =
+    {
+        .name = ITEM_NAME("HM09"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Dives underwater\n"
+            "the 1st turn, then\n"
+            "attacks next turn."),
+        .importance = 1,
+        .pocket = POCKET_TM_HM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+    },
 #else
     [ITEM_HM_DIVE] =
     {
@@ -14389,6 +14408,174 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_SSTicket,
         .iconPalette = gItemIconPalette_SSTicket,
     },
+
+#if IS_HNS
+    // Hoenn & Seek: Oak gives it after the 16th badge.
+    [ITEM_TIDAL_TICKET] =
+    {
+        .name = ITEM_NAME("TIDAL TICKET"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A ticket for the\n"
+            "S.S. TIDAL, sailing\n"
+            "to HOENN."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_SSTicket,
+        .iconPalette = gItemIconPalette_SSTicket,
+    },
+
+    // Hoenn & Seek 2.0 part 20: the Route 113 glassblower makes it from 500 ash.
+    [ITEM_GLASS_FLUTE] =
+    {
+        .name = ITEM_NAME("GLASS FLUTE"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A flute of clear\n"
+            "glass. It can wake\n"
+            "a sleeping glutton."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Flute,
+        .iconPalette = gItemIconPalette_WhiteFlute,
+    },
+
+    // Hoenn & Seek 2.0 part 24a: the Desert Underpass Vibrava drops it after
+    // its battle. Part 24b's glassblower fuses it into the Sand Chime.
+    [ITEM_SINGING_SAND] =
+    {
+        .name = ITEM_NAME("SINGING SAND"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Fine desert sand.\n"
+            "It hums softly\n"
+            "when it trickles."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Sand,
+        .iconPalette = gItemIconPalette_SoftSand,
+    },
+
+    // Hoenn & Seek 2.0 part 24b: the Route 113 glassblower fuses the Singing
+    // Sand into it. Rung on Route 111's desert in the evening, it raises the
+    // Mirage Tower (HoennSeek_EventScript_RingSandChime).
+    [ITEM_SAND_CHIME] =
+    {
+        .name = ITEM_NAME("SAND CHIME"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A glass chime of\n"
+            "singing sand. Its\n"
+            "ring carries far."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_HoennSandChime,
+        .iconPic = gItemIcon_SootheBell,
+        .iconPalette = gItemIconPalette_SootheBell,
+    },
+
+    // Hoenn & Seek 2.0 part 26b: frozen into the ice behind the Froslass in
+    // Shoal Cave's ice chamber. One of the three birds' feathers that the
+    // legendary parts (Articuno's roost, Lugia's shrine) ask for.
+    [ITEM_FROST_FEATHER] =
+    {
+        .name = ITEM_NAME("FROST FEATHER"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A great bird's ice-\n"
+            "blue feather. It\n"
+            "never melts."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_EVFeather,
+        .iconPalette = gItemIconPalette_GeniusFeather,
+    },
+
+    // Hoenn & Seek 2.0 part 34a (lane B): the Power Plant manager's find on
+    // Route 10's thunderstorm day. Brought to the plant's back yard, it calls
+    // Zapdos down; Lugia's shrine (part 34b) asks for it too.
+    [ITEM_THUNDER_FEATHER] =
+    {
+        .name = ITEM_NAME("THUNDER FEATHER"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A great bird's gold\n"
+            "feather. Sparks fly\n"
+            "when it's touched."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_EVFeather,
+        .iconPalette = gItemIconPalette_HealthFeather,
+    },
+
+    // Hoenn & Seek 2.0 part 34a (lane B): dropped into Route 113's ash by
+    // Moltres's flyover. Brought to Mt. Silver's Moltres room, it calls Moltres
+    // down; Lugia's shrine (part 34b) asks for it too.
+    [ITEM_FLAME_FEATHER] =
+    {
+        .name = ITEM_NAME("FLAME FEATHER"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A great bird's red\n"
+            "feather. It stays\n"
+            "warm and glowing."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_EVFeather,
+        .iconPalette = gItemIconPalette_MuscleFeather,
+    },
+
+    // Hoenn & Seek 2.0 part 36 (lane B): set into the mural at the top of Sky
+    // Pillar, once Kyogre and Groudon are settled. Carried into the Embedded
+    // Tower (Route 47) at noon on a clear day, it calls Rayquaza down.
+    [ITEM_JADE_ORB] =
+    {
+        .name = ITEM_NAME("JADE ORB"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A green orb from\n"
+            "SKY PILLAR. It hums\n"
+            "in clear skies."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_JadeOrb,
+        .iconPalette = gItemIconPalette_JadeOrb,
+    },
+
+    // Hoenn & Seek 2.0 part 36 (lane B): three shards from HnS's Southern
+    // Island, joined by the Pewter Museum's stone expert. Carried into the
+    // island's grove, it calls the Lati that doesn't roam.
+    [ITEM_ENIGMA_STONE] =
+    {
+        .name = ITEM_NAME("ENIGMA STONE"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A red and blue gem\n"
+            "that glows with a\n"
+            "dreamlike light."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_SoulDew,
+        .iconPalette = gItemIconPalette_SoulDew,
+    },
+#endif
 
     [ITEM_EON_TICKET] =
     {

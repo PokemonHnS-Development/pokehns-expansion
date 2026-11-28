@@ -1,0 +1,258 @@
+#!/usr/bin/env python3
+"""Hoenn & Seek 2.0 (part 7): NPC hint lines, rumors, field notes and forecasts.
+
+Reads data/hoenn/npc_hints.json (its comment explains the format) and writes:
+  - src/data/hoenn_hints.h: the condition, line, rumor, NPC and forecast tables
+    that src/hoenn_hints.c reads (texts are extern labels from the .inc below);
+  - data/scripts/hoenn_hints.inc: one wrapper script per NPC, the field-notes
+    researcher's script, and every text (word-wrapped here, so the JSON stays readable);
+  - map.json script swaps: each listed NPC's object runs its wrapper, which falls
+    back to the NPC's own script (the wrapper names it). Building NPCs with "hints"
+    in data/hoenn/buildings.json are added to the list (run gen_hoenn_buildings.py first).
+Idempotent: an object already running its wrapper is left alone. Deterministic.
+Re-run after editing the JSON, then rebuild.
+
+Wrapper names (lane setup, Nov 27). Two builders now add hint NPCs in parallel
+(hoenn-docs/lanes/README.md), so a wrapper can't be named by its position in the
+list: two branches would both append "HintNpc55", and after the merge the
+second NPC's object would be matched to the first one's entry. So:
+  - the first LEGACY_NPCS entries of "npcs" keep their positional names
+    (HoennSeek_EventScript_HintNpc0..54); never move or delete them;
+  - every later entry needs a "key" (letters, digits, _), and its wrapper is
+    HoennSeek_EventScript_Hint_<key>;
+  - building NPCs are keyed by their building and object index.
+The table index after "callnative HoennSeek_NpcHint" is still the position,
+but it's generated, so re-running after a merge fixes it.
+"""
+import json, os, re, sys
+
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+P = lambda *a: os.path.join(ROOT, *a)
+WIDTH = 34  # characters per line in a standard message box
+LEGACY_NPCS = 55  # "npcs" entries named by position (see the header); frozen
+KEY_RE = re.compile(r"^[A-Za-z0-9_]+$")
+
+COND_TYPES = {  # JSON key -> (C enum, needs a second value?)
+    "flag": "HINT_IF_FLAG", "not_flag": "HINT_IF_NOT_FLAG",
+    "stamps_min": "HINT_IF_STAMPS_MIN", "stamps_below": "HINT_IF_STAMPS_BELOW",
+    "badges_min": "HINT_IF_BADGES_MIN", "badges_below": "HINT_IF_BADGES_BELOW",
+    "caught": "HINT_IF_CAUGHT", "not_caught": "HINT_IF_NOT_CAUGHT",
+    "level_cap": "HINT_IF_LEVEL_CAP",
+}
+
+
+def wrap(text):
+    """Word-wrap a text (a string, or a list of strings = one box each) for msgbox:
+    lines join with \\n then \\l, boxes with \\p. No one-word last line (CLAUDE.md)."""
+    def vis(w):
+        w = re.sub(r"\{PLAYER\}", "XXXXXXX", w)
+        return len(re.sub(r"\{STR_VAR_\d\}", "XXXXXXXX", w))
+    boxes = text if isinstance(text, list) else [text]
+    out = []
+    for box in boxes:
+        lines, cur = [], ""
+        for w in box.split():
+            if cur and vis(cur) + 1 + vis(w) > WIDTH:
+                lines.append(cur)
+                cur = w
+            else:
+                cur = f"{cur} {w}" if cur else w
+        lines.append(cur)
+        if len(lines) >= 2 and len(lines[-1].split()) == 1 and len(lines[-2].split()) >= 2 \
+                and not lines[-2].endswith((".", "!", "?", "…")):
+            head, moved = lines[-2].rsplit(" ", 1)
+            if vis(moved) + 1 + vis(lines[-1]) <= WIDTH:
+                lines[-2], lines[-1] = head, f"{moved} {lines[-1]}"
+        out.append(lines[0] + "".join(("\\n" if i == 1 else "\\l") + l for i, l in enumerate(lines[1:], 1)))
+    return "\\p".join(out)
+
+
+def cond_c(cond):
+    """One JSON condition -> a C initializer {type, id, value}."""
+    if "var" in cond:
+        if "min" in cond:
+            return "{HINT_IF_VAR_MIN, %s, %d}" % (cond["var"], cond["min"])
+        return "{HINT_IF_VAR_BELOW, %s, %d}" % (cond["var"], cond["below"])
+    (key, val), = cond.items()
+    kind = COND_TYPES[key]
+    if key in ("caught", "not_caught"):
+        return "{%s, SPECIES_%s, 0}" % (kind, val)
+    if key in ("flag", "not_flag"):
+        return "{%s, %s, 0}" % (kind, val)
+    if key == "level_cap":
+        return "{%s, 0, 0}" % kind
+    return "{%s, 0, %d}" % (kind, val)
+
+
+def conds_c(conds):
+    if not conds:
+        return "NULL, 0"
+    return "(const struct HoennHintCond[]){%s}, %d" % (", ".join(cond_c(c) for c in conds), len(conds))
+
+
+def find_object(name, script, index, wrapper, old_wrapper=None):
+    """The one object on map `name` that runs `script`, its wrapper or (once,
+    while migrating to keyed names) `old_wrapper`."""
+    path = P("data/maps", name, "map.json")
+    d = json.load(open(path))
+    objs = d.get("object_events") or []
+    names = (script, wrapper) if old_wrapper is None else (script, wrapper, old_wrapper)
+    hits = [i for i, o in enumerate(objs) if o["script"] in names]
+    if index is not None:
+        hits = [i for i in hits if i == index]
+    if len(hits) != 1:
+        sys.exit(f"{name}: expected one object running {script}, found {len(hits)}")
+    return path, d, hits[0]
+
+
+def npc_wrapper(n, npc, seen_keys):
+    """(wrapper label, old positional label to migrate from or None) for entry n."""
+    positional = "HoennSeek_EventScript_HintNpc%d" % n
+    key = npc.get("key")
+    if key is None:
+        if n < LEGACY_NPCS:
+            return positional, None
+        sys.exit(f'npc_hints.json: NPC {n} ({npc["map"]}) needs a "key" (see gen_hoenn_hints.py\'s header)')
+    if not KEY_RE.match(key) or key in seen_keys:
+        sys.exit(f"npc_hints.json: NPC key {key!r} is not a unique [A-Za-z0-9_] name")
+    seen_keys.add(key)
+    # Building NPCs used to run a positional wrapper; accept it once so the
+    # first run after the lane setup renames them.
+    return "HoennSeek_EventScript_Hint_" + key, positional if npc.get("building") else None
+
+
+def main():
+    cfg = json.load(open(P("data/hoenn/npc_hints.json")))
+    # Building NPCs (data/hoenn/buildings.json, part 8a+) with "hints" are hint NPCs too.
+    for b in json.load(open(P("data/hoenn/buildings.json")))["buildings"]:
+        for k, o in enumerate(b["objects"]):
+            if o.get("hints"):
+                cfg["npcs"].append({"map": b["name"], "script": "%s_EventScript_Npc%d" % (b["name"], k),
+                                    "lines": o["hints"], "key": "%s_Npc%d" % (b["name"], k),
+                                    "building": True})
+    lines, rumors = cfg["lines"], cfg["rumors"]
+    rumor_ids = list(rumors)
+    line_ids = list(lines)
+    inc = ["@ Generated by tools/hoenn/gen_hoenn_hints.py from data/hoenn/npc_hints.json. Do not edit.",
+           "@ Hoenn & Seek 2.0 (part 7): hint NPC wrappers, the field-notes researcher and their texts.",
+           "@ Code: src/hoenn_hints.c.", ""]
+    hdr = ["// Generated by tools/hoenn/gen_hoenn_hints.py from data/hoenn/npc_hints.json. Do not edit.",
+           "// Included by src/hoenn_hints.c.", ""]
+    texts = []  # (label, wrapped text)
+
+    def text_label(name, text):
+        label = "HoennSeek_Text_Hint_" + name
+        texts.append((label, wrap(text)))
+        hdr.append("extern const u8 %s[];" % label)
+        return label
+
+    # Rumors
+    rumor_rows = []
+    for rid in rumor_ids:
+        r = rumors[rid]
+        b = text_label("Rumor%sBefore" % rid.title(), r["before"])
+        a = text_label("Rumor%sAfter" % rid.title(), r["after"])
+        n = text_label("Rumor%sNotes" % rid.title(), r["notes"])
+        rumor_rows.append("    { %s, %s, %s, %s }, // %s" % (conds_c(r["found"]), b, a, n, rid))
+    # Lines
+    line_rows = []
+    for lid in line_ids:
+        l = lines[lid]
+        kind = {"tip": "HINT_TIP", "story": "HINT_STORY", "rumor": "HINT_RUMOR", "forecast": "HINT_FORECAST"}[l["kind"]]
+        text = text_label("Line" + "".join(p.title() for p in lid.split("_")), l["text"]) if "text" in l else "NULL"
+        rumor = rumor_ids.index(l["rumor"]) if "rumor" in l else 0
+        line_rows.append("    { %s, %s, %s, %d }, // %s" % (conds_c(l.get("if")), text, kind, rumor, lid))
+    # Forecasts
+    fc_rows = []
+    for k, f in enumerate(cfg["forecasts"]):
+        mid = json.load(open(P("data/maps", f["map"], "map.json")))["id"]
+        t = text_label("Forecast%d" % k, f["text"])
+        fc_rows.append("    { %s, %s, %s, %s }, // %s" % (mid, conds_c(f.get("if")), t,
+                                                     "FALSE" if f["map"].endswith("_hns") else "TRUE", f["map"]))
+    # NPCs: wrapper scripts and map.json swaps
+    npc_rows = []
+    changed = 0
+    seen_keys = set()
+    for n, npc in enumerate(cfg["npcs"]):
+        wrapper, old_wrapper = npc_wrapper(n, npc, seen_keys)
+        path, d, i = find_object(npc["map"], npc["script"], npc.get("index"), wrapper, old_wrapper)
+        if d["object_events"][i]["script"] != wrapper:
+            d["object_events"][i]["script"] = wrapper
+            with open(path, "w") as fh:
+                json.dump(d, fh, indent=2)
+                fh.write("\n")
+            changed += 1
+        ids = [line_ids.index(x) for x in npc["lines"]]
+        npc_rows.append("    { (const u8[]){%s}, %d, %s }, // %s" % (", ".join(map(str, ids)), len(ids),
+                                                                   "TRUE" if npc.get("always") else "FALSE", npc["map"]))
+        inc += ["@ %s" % npc["map"],
+                "%s::" % wrapper,
+                "\tcallnative HoennSeek_NpcHint",
+                "\t.2byte %d" % n,
+                "\tgoto_if_eq VAR_RESULT, FALSE, %s" % npc["script"],
+                "\tcallstd MSGBOX_NPC",
+                "\tend", ""]
+    # Field-notes researcher
+    fn = cfg["field_notes"]
+    wrapper = "HoennSeek_EventScript_FieldNotes"
+    path, d, i = find_object(fn["map"], fn["script"], fn.get("index"), wrapper)
+    if d["object_events"][i]["script"] != wrapper:
+        d["object_events"][i]["script"] = wrapper
+        with open(path, "w") as fh:
+            json.dump(d, fh, indent=2)
+            fh.write("\n")
+        changed += 1
+    inc += ["@ Field notes (Birch's aide): how many rumors you've found, then a vague hint for the next.",
+            "%s::" % wrapper,
+            "\tlock",
+            "\tfaceplayer",
+            "\tcallnative HoennSeek_FieldNotesCount @ STR_VAR_1 found, STR_VAR_2 total; VAR_RESULT = unfound",
+            "\tmsgbox HoennSeek_Text_FieldNotesIntro, MSGBOX_DEFAULT",
+            "\tgoto_if_eq VAR_RESULT, 0, HoennSeek_EventScript_FieldNotesAllFound",
+            "\tmsgbox HoennSeek_Text_FieldNotesNext, MSGBOX_DEFAULT",
+            "\tcallnative HoennSeek_FieldNotesHint @ the first unfound rumor's notes",
+            "\tcallstd MSGBOX_DEFAULT",
+            "\trelease",
+            "\tend",
+            "HoennSeek_EventScript_FieldNotesAllFound::",
+            "\tmsgbox HoennSeek_Text_FieldNotesAllFound, MSGBOX_DEFAULT",
+            "\trelease",
+            "\tend", ""]
+    texts.append(("HoennSeek_Text_FieldNotesIntro", wrap([
+        "Oh, hello! I keep PROF. BIRCH's field notes on POKéMON rumors from all over.",
+        "You've confirmed {STR_VAR_1} of the {STR_VAR_2} rumors in my notes so far!"])))
+    texts.append(("HoennSeek_Text_FieldNotesNext", wrap("Here's one nobody has confirmed yet…")))
+    texts.append(("HoennSeek_Text_FieldNotesAllFound", wrap([
+        "Every rumor in my notes, confirmed! You're a better field researcher than I am.",
+        "I'll write down any new ones I hear about."])))
+    # TV forecast intro (data/scripts/hoenn_story.inc calls HoennSeek_EventScript_TVForecast)
+    inc += ["@ TVs: today's or tomorrow's forecast first, when one matters (then the normal show).",
+            "HoennSeek_EventScript_TVForecast::",
+            "\tcallnative HoennSeek_Forecast",
+            "\tgoto_if_eq VAR_RESULT, FALSE, HoennSeek_EventScript_TVForecastNone",
+            "\tmsgbox HoennSeek_Text_TVForecastIntro, MSGBOX_DEFAULT",
+            "\tcallnative HoennSeek_Forecast",
+            "\tcallstd MSGBOX_DEFAULT",
+            "HoennSeek_EventScript_TVForecastNone::",
+            "\treturn", ""]
+    texts.append(("HoennSeek_Text_TVForecastIntro", wrap("It's the weather forecast!")))
+
+    inc.append("@ ---- Texts ----")
+    for label, t in texts:
+        inc += ["%s::" % label if label.startswith("HoennSeek_Text_Hint_") else "%s:" % label,
+                '\t.string "%s$"' % t, ""]
+
+    hdr += ["",
+            "static const struct HoennHintRumor sHintRumors[] = {"] + rumor_rows + ["};", "",
+            "static const struct HoennHintLine sHintLines[] = {"] + line_rows + ["};", "",
+            "static const struct HoennHintNpc sHintNpcs[] = {"] + npc_rows + ["};", "",
+            "static const struct HoennForecast sForecasts[] = {"] + fc_rows + ["};"]
+
+    open(P("src/data/hoenn_hints.h"), "w").write("\n".join(hdr) + "\n")
+    open(P("data/scripts/hoenn_hints.inc"), "w").write("\n".join(inc) + "\n")
+    print("%d NPCs, %d lines, %d rumors, %d forecasts; %d map.json objects swapped"
+          % (len(cfg["npcs"]), len(line_ids), len(rumor_ids), len(cfg["forecasts"]), changed))
+
+
+if __name__ == "__main__":
+    main()

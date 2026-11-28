@@ -1,6 +1,50 @@
 import json
 import re
 
+# Hoenn & Seek: Emerald tables for maps listed in data/hoenn/maps.json are also built for HnS.
+def _hoenn_kept_map_ids():
+    import json as _json, os as _os
+    try:
+        names = _json.load(open("data/hoenn/maps.json"))["items"]
+    except (FileNotFoundError, KeyError, ValueError):
+        return set()
+    ids = set()
+    for n in names:
+        p = _os.path.join("data/maps", n, "map.json")
+        if _os.path.exists(p):
+            ids.add(_json.load(open(p))["id"])
+    return ids
+HOENN_KEPT_MAP_IDS = _hoenn_kept_map_ids()
+
+# Hoenn & Seek (part 15): data/hoenn/wild_encounters_hoenn.json (tools/hoenn/gen_hoenn_wild.py)
+# replaces the Emerald tables of those maps in HnS (rescaled levels, night tables).
+def _hoenn_override_entries():
+    try:
+        return __import__("json").load(open("data/hoenn/wild_encounters_hoenn.json"))["encounters"]
+    except (FileNotFoundError, KeyError, ValueError):
+        return []
+HOENN_OVERRIDES = _hoenn_override_entries()
+
+# Hoenn & Seek 2.0 (part 6a): weather tables (tools/hoenn/gen_hoenn_weather_wild.py). They go
+# after every other table, so each is a second header for its map; HoennWeatherWildHeader()
+# picks it on the map's special-weather day.
+def _hoenn_weather_entries():
+    try:
+        return __import__("json").load(open("data/hoenn/wild_encounters_weather.json"))["encounters"]
+    except FileNotFoundError:
+        return []
+
+HOENN_WEATHER = _hoenn_weather_entries()
+HOENN_OVERRIDE_IDS = {e["map"][len("MAP_"):] for e in HOENN_OVERRIDES}
+
+def _version_guard(version, map_group):
+    m = __import__("re").search(r"MAP_GROUP\((\w+)\)", str(map_group))
+    if version == "EMERALD" and m and m.group(1) in HOENN_KEPT_MAP_IDS:
+        if m.group(1)[len("MAP_"):] in HOENN_OVERRIDE_IDS:
+            return "#ifdef EMERALD // Hoenn & Seek: HnS uses the gHoenn_* table"
+        return "#if defined(EMERALD) || defined(POKEMON_HNS) // Hoenn & Seek"
+    return f"#ifdef {version}"
+
 class Config:
     def __init__(self, config_file_name, rtc_constants_file_name, encounters_json_data):
         self.times_of_day = None
@@ -171,7 +215,7 @@ class WildEncounterAssembler:
             elif "_Hns" in shared_label or "_hns" in shared_label:
                 version = "POKEMON_HNS"
 
-            self.WriteLine(f"#ifdef {version}")
+            self.WriteLine(_version_guard(version, map_group))
 
             self.WriteLine("{", 1)
             self.WriteLine(f".mapGroup = {map_group},", 2)
@@ -245,7 +289,7 @@ class WildEncounterAssembler:
                     version = "LEAFGREEN"
                 elif "_Hns" in shared_label or "_hns" in shared_label:
                     version = "POKEMON_HNS"
-                self.WriteLine(f"#ifdef {version}")
+                self.WriteLine(_version_guard(version, map_group))
                 for mon_type in self.config.mon_types:
                     if mon_type not in map_encounters:
                         headers["data"][shared_label][mon_type] = "NULL"
@@ -274,6 +318,7 @@ def ConvertToHeaderFile(json_data):
 def main():
     with open('src/data/wild_encounters.json', 'r') as json_file:
         json_data = json.load(json_file)
+        json_data["wild_encounter_groups"][0]["encounters"] += HOENN_OVERRIDES + HOENN_WEATHER  # Hoenn & Seek
         ConvertToHeaderFile(json_data)
         
 

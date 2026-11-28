@@ -1,0 +1,103 @@
+{
+  "MAP_ANCIENT_TOMB": [
+    "Route120 (warp)"
+  ],
+  "MAP_BATTLE_FRONTIER_OUTSIDE_WEST": [
+    "LilycoveCity_Harbor (script)",
+    "SlateportCity_Harbor (script)"
+  ],
+  "MAP_BIRTH_ISLAND_HARBOR": [
+    "LilycoveCity_Harbor (script)"
+  ],
+  "MAP_DESERT_RUINS": [
+    "Route111 (warp)"
+  ],
+  "MAP_FALLARBOR_TOWN_BATTLE_TENT_LOBBY": [
+    "FallarborTown (warp)"
+  ],
+  "MAP_FARAWAY_ISLAND_ENTRANCE": [
+    "LilycoveCity_Harbor (script)"
+  ],
+  "MAP_ISLAND_CAVE": [
+    "Route105 (warp)"
+  ],
+  "MAP_LILYCOVE_CITY_CONTEST_LOBBY": [
+    "LilycoveCity (warp)"
+  ],
+  "MAP_NAVEL_ROCK_HARBOR": [
+    "LilycoveCity_Harbor (script)"
+  ],
+  "MAP_ROUTE110_TRICK_HOUSE_ENTRANCE": [
+    "Route110 (warp)"
+  ],
+  "MAP_ROUTE117_POKEMON_DAY_CARE": [
+    "Route117 (warp)"
+  ],
+  "MAP_SKY_PILLAR_ENTRANCE": [
+    "Route131 (warp)"
+  ],
+  "MAP_SLATEPORT_CITY_BATTLE_TENT_LOBBY": [
+    "SlateportCity (warp)"
+  ],
+  "MAP_SOUTHERN_ISLAND_EXTERIOR": [
+    "LilycoveCity_Harbor (script)"
+  ],
+  "MAP_TERRA_CAVE_ENTRANCE": [
+    "Route113 (warp)",
+    "Route114 (warp)",
+    "Route115 (warp)",
+    "Route116 (warp)",
+    "Route118 (warp)"
+  ],
+  "MAP_TRADE_CENTER": [
+    "DewfordTown_PokemonCenter_2F (warp)",
+    "EverGrandeCity_PokemonCenter_2F (warp)",
+    "EverGrandeCity_PokemonLeague_2F (warp)",
+    "FallarborTown_PokemonCenter_2F (warp)",
+    "FortreeCity_PokemonCenter_2F (warp)",
+    "LavaridgeTown_PokemonCenter_2F (warp)",
+    "LilycoveCity_PokemonCenter_2F (warp)",
+    "MauvilleCity_PokemonCenter_2F (warp)",
+    "MossdeepCity_PokemonCenter_2F (warp)",
+    "OldaleTown_PokemonCenter_2F (warp)",
+    "PacifidlogTown_PokemonCenter_2F (warp)",
+    "PetalburgCity_PokemonCenter_2F (warp)",
+    "RustboroCity_PokemonCenter_2F (warp)",
+    "SlateportCity_PokemonCenter_2F (warp)",
+    "SootopolisCity_PokemonCenter_2F (warp)",
+    "VerdanturfTown_PokemonCenter_2F (warp)"
+  ],
+  "MAP_TRAINER_HILL_ENTRANCE": [
+    "Route111 (warp)"
+  ],
+  "MAP_UNDERWATER_MARINE_CAVE": [
+    "Underwater_Route105 (warp)",
+    "Underwater_Route125 (warp)",
+    "Underwater_Route127 (warp)",
+    "Underwater_Route129 (warp)"
+  ],
+  "MAP_UNDERWATER_SEALED_CHAMBER": [
+    "Underwater_Route134 (warp)"
+  ],
+  "MAP_UNION_ROOM": [
+    "DewfordTown_PokemonCenter_2F (warp)",
+    "EverGrandeCity_PokemonCenter_2F (warp)",
+    "EverGrandeCity_PokemonLeague_2F (warp)",
+    "FallarborTown_PokemonCenter_2F (warp)",
+    "FortreeCity_PokemonCenter_2F (warp)",
+    "LavaridgeTown_PokemonCenter_2F (warp)",
+    "LilycoveCity_PokemonCenter_2F (warp)",
+    "MauvilleCity_PokemonCenter_2F (warp)",
+    "MossdeepCity_PokemonCenter_2F (warp)",
+    "OldaleTown_PokemonCenter_2F (warp)",
+    "PacifidlogTown_PokemonCenter_2F (warp)",
+    "PetalburgCity_PokemonCenter_2F (warp)",
+    "RustboroCity_PokemonCenter_2F (warp)",
+    "SlateportCity_PokemonCenter_2F (warp)",
+    "SootopolisCity_PokemonCenter_2F (warp)",
+    "VerdanturfTown_PokemonCenter_2F (warp)"
+  ],
+  "MAP_VERDANTURF_TOWN_BATTLE_TENT_LOBBY": [
+    "VerdanturfTown (warp)"
+  ]
+}

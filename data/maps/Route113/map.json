@@ -41,7 +41,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route113_EventScript_NinjaBoy",
+      "script": "HoennSeek_EventScript_HintNpc36",
       "flag": "0"
     },
     {
@@ -54,7 +54,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route113_EventScript_Gentleman",
+      "script": "HoennSeek_EventScript_HintNpc37",
       "flag": "0"
     },
     {
@@ -67,7 +67,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route113_EventScript_Jaylen",
+      "script": "HoennSeek_EventScript_T_Jaylen",
       "flag": "0"
     },
     {
@@ -80,7 +80,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route113_EventScript_Dillon",
+      "script": "HoennSeek_EventScript_T_Dillon",
       "flag": "0"
     },
     {
@@ -93,7 +93,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Route113_EventScript_Madeline",
+      "script": "HoennSeek_EventScript_T_Madeline1",
       "flag": "0"
     },
     {
@@ -118,7 +118,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_SUPER_REPEL",
+      "trainer_sight_or_berry_tree_id": "ITEM_MAX_REPEL",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_113_SUPER_REPEL"
     },
@@ -132,7 +132,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_BURIED",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route113_EventScript_Lao",
+      "script": "HoennSeek_EventScript_T_Lao1",
       "flag": "0"
     },
     {
@@ -145,7 +145,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_BURIED",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route113_EventScript_Lung",
+      "script": "HoennSeek_EventScript_T_Lung",
       "flag": "0"
     },
     {
@@ -158,7 +158,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route113_EventScript_Tori",
+      "script": "HoennSeek_EventScript_T_ToriAndTia",
       "flag": "0"
     },
     {
@@ -171,7 +171,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route113_EventScript_Tia",
+      "script": "HoennSeek_EventScript_T_ToriAndTia",
       "flag": "0"
     },
     {
@@ -197,7 +197,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route113_EventScript_Wyatt",
+      "script": "HoennSeek_EventScript_T_Wyatt",
       "flag": "0"
     },
     {
@@ -208,9 +208,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
       "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route113_EventScript_Lawrence",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_T_Lawrence",
       "flag": "0"
     },
     {
@@ -221,9 +221,9 @@
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
       "movement_range_x": 1,
       "movement_range_y": 3,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "6",
-      "script": "Route113_EventScript_Sophie",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_T_Sophie",
       "flag": "0"
     },
     {
@@ -236,7 +236,168 @@
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "6",
-      "script": "Route113_EventScript_Coby",
+      "script": "HoennSeek_EventScript_T_Coby",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_HOENN_MUNCHLAX",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MUNCHLAX",
+      "x": 14,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Munchlax",
+      "flag": "FLAG_HOENN_MUNCHLAX_DONE"
+    },
+    {
+      "local_id": "LOCALID_HOENN_SPINDA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPINDA",
+      "x": 66,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Spinda",
+      "flag": "FLAG_HOENN_HIDE_SPINDA"
+    },
+    {
+      "local_id": "LOCALID_HOENN_ROUTE113_VIBRAVA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_VIBRAVA",
+      "x": 40,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Route113Vibrava",
+      "flag": "FLAG_HOENN_HIDE_ROUTE113_VIBRAVA"
+    },
+    {
+      "local_id": "LOCALID_HOENN_ROUTE113_MOLTRES",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MOLTRES",
+      "x": 65,
+      "y": 9,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HOENN_HIDE_ROUTE113_MOLTRES"
+    },
+    {
+      "local_id": "LOCALID_HOENN_FLAME_FEATHER",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 57,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_FlameFeather",
+      "flag": "FLAG_HOENN_HIDE_FLAME_FEATHER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPINDA",
+      "x": 84,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_OWMon",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGCARGO",
+      "x": 89,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_OWMon",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPINDA",
+      "x": 43,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_OWMon",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGCARGO",
+      "x": 39,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_OWMon",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPINDA",
+      "x": 27,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_OWMon",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPINDA",
+      "x": 96,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_OWMon",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPINDA",
+      "x": 57,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_OWMon",
       "flag": "0"
     }
   ],
@@ -396,6 +557,168 @@
       "y": 7,
       "elevation": 3,
       "weather": "COORD_EVENT_WEATHER_VOLCANIC_ASH"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "HoennSeek_EventScript_EnterGrotto"
+    },
+    {
+      "type": "trigger",
+      "x": 66,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_SpindaApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 65,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_SpindaApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 67,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_SpindaApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 64,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_SpindaApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 65,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_SpindaApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 67,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_SpindaApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresFlyover"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresFlyover"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresFlyover"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresFlyover"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresFlyover"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresFlyover"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresFlyover"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresFlyover"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresFlyover"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresFlyover"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresFlyover"
     }
   ],
   "bg_events": [
@@ -443,7 +766,7 @@
       "x": 66,
       "y": 3,
       "elevation": 3,
-      "item": "ITEM_ETHER",
+      "item": "ITEM_MAX_ETHER",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_113_ETHER"
     },
     {

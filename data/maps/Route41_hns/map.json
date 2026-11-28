@@ -22,6 +22,11 @@
       "map": "MAP_CIANWOOD_CITY_HNS",
       "offset": 10,
       "direction": "left"
+    },
+    {
+      "map": "MAP_TIDAL_STRAIT_WEST_HOENN",
+      "offset": 32,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -843,6 +848,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_Whirlpool",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_HOENN_LANTURN_LIGHT",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_LANTURN",
+      "x": 41,
+      "y": 16,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_LanturnLight",
+      "flag": "FLAG_HOENN_HIDE_LANTURN_LIGHT"
     }
   ],
   "warp_events": [
@@ -938,7 +957,125 @@
       "dest_warp_id": "8"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 57,
+      "y": 54,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LagoonCave"
+    },
+    {
+      "type": "trigger",
+      "x": 52,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 54,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 55,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 57,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 59,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 60,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 61,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 62,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    },
+    {
+      "type": "trigger",
+      "x": 63,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_LugiaCameo"
+    }
+  ],
   "bg_events": [
     {
       "type": "hidden_item",

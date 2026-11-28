@@ -1,0 +1,44 @@
+{
+  "_comment": [
+    "Hoenn & Seek 2.0 (part 5): daily weather cycles. Read by tools/hoenn/gen_hoenn_weather.py,",
+    "which writes src/data/hoenn_weather_cycles.h (the table src/hoenn_time.c uses).",
+    "Every map below has one special-weather day in four: the day (weatherCycleStage + offset) % 4 == 2.",
+    "The other three days it keeps the weather in its map header. Groups with different offsets storm on",
+    "different days, so a region never all rains at once. On a map's special day its weather zones",
+    "(coord-event weather, e.g. Route 120's patches) are ignored, so the special weather covers the map.",
+    "weather: RAIN, RAIN_THUNDERSTORM, SNOW, FOG_HORIZONTAL or SANDSTORM (any WEATHER_* works).",
+    "emerald: Routes 119 and 123 keep Emerald's own cycles (their zones translate the stage themselves);",
+    "they're listed so events can ask about their special day (119's thunderstorm, 123's rain).",
+    "Trimmed in part 17r (Bryan: only where the weather fits): inland and city routes stay normal.",
+    "Not listed on purpose: towns and cities, places that are always rainy or snowy (Olivine, Cianwood,",
+    "Routes 17, 40, 41, 49, 50, Lake of Rage, Mt. Silver's snow, Sinjoh), forests (shade), Route 111's",
+    "desert and Route 113's ash (their own zones), Safari Zones, and Alola."
+  ],
+  "groups": [
+    {"name": "Johto: Route 33 (rainy, like HGSS)", "weather": "RAIN",     "offset": 1, "maps": ["Route33_hns"]},
+    {"name": "Johto: lake and east",        "weather": "RAIN_THUNDERSTORM", "offset": 3, "maps": ["Route42_hns", "Route43_hns"]},
+    {"name": "Johto: mountains",            "weather": "FOG_HORIZONTAL",    "offset": 2, "maps": ["Route44_hns", "Route45_hns"]},
+    {"name": "Johto: Cianwood cliffs",      "weather": "RAIN",              "offset": 0, "maps": ["Route47_hns", "Route48_hns"]},
+    {"name": "Johto–Kanto: Tohjo coast",    "weather": "RAIN",              "offset": 1, "maps": ["Route26_hns", "Route26North_hns", "Route27_hns"]},
+    {"name": "Mt. Silver approach",         "weather": "SNOW",              "offset": 3, "maps": ["Route28_hns", "MtSilver_Outside_hns", "MtSilver_MountainSide_hns"]},
+
+    {"name": "Kanto: Cerulean Cape",        "weather": "RAIN",              "offset": 3, "maps": ["Route24_hns", "Route25_hns"]},
+    {"name": "Kanto: Power Plant",          "weather": "RAIN_THUNDERSTORM", "offset": 1, "maps": ["Route10_hns"]},
+    {"name": "Kanto: Silence Bridge coast", "weather": "RAIN",              "offset": 1, "maps": ["Route12_hns", "Route13_hns"]},
+    {"name": "Kanto: Seafoam waters",       "weather": "FOG_HORIZONTAL",    "offset": 3, "maps": ["Route19_hns", "Route20_hns"]},
+    {"name": "Kanto: Cinnabar sea",         "weather": "RAIN",              "offset": 0, "maps": ["Route21_hns"]},
+
+    {"name": "Hoenn: Route 104 coast",      "weather": "RAIN",              "offset": 1, "maps": ["Route104"]},
+    {"name": "Hoenn: Dewford seas",         "weather": "RAIN",              "offset": 2, "maps": ["Route105", "Route106", "Route107", "Route108", "Route109"]},
+    {"name": "Hoenn: Seaside and Route 118", "weather": "RAIN",             "offset": 3, "maps": ["Route110", "Route118"]},
+    {"name": "Hoenn: Route 115 coast",      "weather": "RAIN",              "offset": 0, "maps": ["Route115"]},
+    {"name": "Hoenn: Route 120 (Absol's storm day)", "weather": "RAIN_THUNDERSTORM", "offset": 1, "maps": ["Route120"]},
+    {"name": "Hoenn: Safari and Mt. Pyre",  "weather": "RAIN",              "offset": 1, "maps": ["Route121"]},
+    {"name": "Hoenn: Mt. Pyre's sea",       "weather": "FOG_HORIZONTAL",    "offset": 3, "maps": ["Route122"]},
+    {"name": "Hoenn: eastern seas",         "weather": "RAIN_THUNDERSTORM", "offset": 2, "maps": ["Route124", "Route125", "Route126", "Route127", "Route128"]},
+    {"name": "Hoenn: southern seas",        "weather": "RAIN",              "offset": 3, "maps": ["Route129", "Route130", "Route131", "Route132", "Route133", "Route134"]},
+
+    {"name": "Emerald: Route 119",          "weather": "ROUTE119_CYCLE",    "offset": 0, "emerald": true, "maps": ["Route119"]},
+    {"name": "Emerald: Route 123",          "weather": "ROUTE123_CYCLE",    "offset": 0, "emerald": true, "maps": ["Route123"]}
+  ]
+}

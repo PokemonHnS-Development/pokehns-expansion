@@ -5,6 +5,7 @@ Route22_hns_MapScripts::
 
 Route22_OnTransition: 
 	callnative SetTimeBasedEncounters
+	call HoennSeek_EventScript_MewBlurRoute22OnTransition
 	end
 
 Route22_EventScript_Sign::

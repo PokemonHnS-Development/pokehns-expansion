@@ -709,3 +709,103 @@ gSpecials::
 	def_special GivePartyMonNationalRibbon
 	def_special GetMaxPartySize
 	def_special IsPartyLimitChallengeActive
+	@ Hoenn & Seek
+	def_special HoennSetupScaledWildBattle
+	def_special HoennGetStampCount
+	def_special HoennGiveShinyEgg
+	def_special HoennMaxFriendshipOfGift
+	def_special HoennOWMonCry
+	def_special HoennBufferFollower
+	def_special HoennPushStoneList
+	def_special HoennStoneFromIndex
+	def_special HoennPushIVList
+	def_special HoennMaxIV
+	def_special HoennPushAbilityList
+	def_special HoennCountOtherAbilities
+	def_special HoennBufferAbilitySlot
+	def_special HoennSetAbilitySlot
+	def_special HoennCheckIV
+	@ Hoenn & Seek 2.0 part 2: script helpers (src/hoenn_time.c, src/hoenn_specials.c)
+	def_special GetDayOfWeek
+	def_special HoennBufferWeekdayName
+	def_special HoennLeadIsSpecies
+	def_special HoennFindPartySpecies
+	def_special HoennGetWeatherCycleStage
+	def_special HoennIsSpecialWeatherHere
+	def_special HoennIsSpecialWeatherOn
+	def_special HoennDebugBufferStatus
+	def_special HoennDebugStartClock
+	def_special HoennDebugSetWeekday
+	def_special HoennDebugSetHour
+	def_special HoennDebugNextWeek
+	def_special HoennDebugAdvanceWeatherStage
+	def_special HoennDebugReloadMap
+	def_special HoennIsItWeekday
+	def_special HoennSetWeekdayFromChoice
+	def_special HoennPlayerIsRushing
+	def_special HoennTuneWildMon
+	def_special HoennTuneWildMonSlot
+	def_special HoennSetupScaledWildDouble
+	def_special HoennOrchardBerry
+	def_special HoennAbsolState
+	def_special HoennWakeAbsol
+	def_special HoennAbsolIsOut
+	def_special HoennSandChimePlace
+	def_special HoennCipherIsOpen
+	def_special HoennCipherDrawRoom
+	def_special HoennCipherTonightWord
+	def_special HoennCipherNoteWord
+	def_special HoennCipherWordCount
+	@ Hoenn & Seek 2.0, builder lane A (parts 27b+): lane A's specials go here
+	def_special HoennGlyphRingShows
+	def_special HoennGlyphRingPrepare
+	def_special HoennGlyphSetupBattle
+	def_special HoennGlyphTakeFragment
+	def_special HoennCipherFragmentCount
+	def_special HoennSanctumLetter
+	def_special HoennAmpharosRunDir
+	def_special HoennAmpharosSaveReturn
+	def_special HoennAmpharosReturn
+	def_special HoennAmpharosToLighthouse
+	def_special HoennAmpharosHidePlayer
+	def_special HoennHasAnyBerry
+	@ part 35b (src/hoenn_johto_legends.c)
+	def_special HoennEusineState
+	def_special HoennHoOhClue
+	def_special HoennForestSoilState
+	def_special HoennForestSoilPlant
+	def_special HoennForestSoilTake
+	def_special HoennForestOfferings
+	def_special HoennLugiaCameoPrepare
+	def_special HoennWishCount
+	def_special HoennDeoxysSignalNight
+	@ (end of lane A's specials)
+
+	@ Hoenn & Seek 2.0, builder lane B (parts 31b+): lane B's specials go here
+	def_special HoennBirdRoostState
+	def_special HoennBirdLand
+	def_special HoennBirdBattleEnded
+	def_special HoennSetupProgressWildBattle
+	def_special HoennOnixHoleTonight
+	def_special HoennDrawOnixHole
+	def_special HoennOnixHoleExit
+	def_special HoennDrawBurrowHole
+	def_special HoennDrawBurrowRubble
+	def_special HoennBurrowPrepare
+	def_special HoennBurrowDig
+	def_special HoennStampedeReset
+	def_special HoennStartStampede
+	def_special HoennStampedeBreed
+	def_special HoennTuneLeadBull
+	def_special HoennLeadBullBattleEnded
+	def_special HoennStartScriptedSafariBattle
+	def_special HoennSafariBallsLeft
+	def_special HoennLegendState
+	def_special HoennLegendBattleEnded
+	def_special HoennEnigmaShardCount
+	def_special HoennJournalPageCount
+	def_special HoennMewtwoCameoDue
+	def_special HoennMewtwoState
+	def_special HoennMewtwoBattleEnded
+	def_special HoennSeaMapPieceCount
+	def_special HoennMewBlurState

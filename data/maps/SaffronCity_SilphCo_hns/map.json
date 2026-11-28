@@ -38,7 +38,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SaffronCity_SilphCo_EventScript_Steven",
+      "script": "HoennSeek_EventScript_SilphSteven",
       "flag": "FLAG_GOT_HOENN_STARTER"
     },
     {
@@ -81,6 +81,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SaffronCity_SilphCo_EventScript_Sign2"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "HoennSeek_EventScript_JournalPageSilph"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "HoennSeek_EventScript_JournalPageSilph"
     }
   ],
   "game_version": "hns",

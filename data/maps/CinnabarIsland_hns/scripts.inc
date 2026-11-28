@@ -1,11 +1,13 @@
 CinnabarIsland_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarIsland_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, HoennSeek_CinnabarOnFrame
 	.byte 0
 	
 CinnabarIsland_OnTransition:
 	setflag FLAG_VISITED_CINNABAR_ISLAND
 	callnative SetTimeBasedEncounters
+	call HoennSeek_EventScript_CinnabarMewtwoOnTransition
 	end
 
 CinnabarIsland_EventScript_Blaine::

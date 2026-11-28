@@ -820,6 +820,9 @@ enum __attribute__((packed)) Item
     ITEM_HM06 = 687,
     ITEM_HM07 = 688,
     ITEM_HM08 = 689,
+#if IS_HNS
+    ITEM_HM09 = 901, // Hoenn & Seek: HM09 Dive, in the slot reserved after the HnS items below
+#endif
 
 
     /* Expands to:
@@ -1080,6 +1083,18 @@ enum __attribute__((packed)) Item
     ITEM_UNUSED_BERRY_2,
     ITEM_UNUSED_BERRY_3,
     ITEM_AZURE_FLUTE,
+#if IS_HNS
+    ITEM_HM09_SLOT, // Hoenn & Seek: must equal ITEM_HM09 (checked in src/data/items.h)
+    ITEM_TIDAL_TICKET, // Hoenn & Seek: Oak's ticket for the Vermilion-Hoenn ferry
+    ITEM_GLASS_FLUTE, // Hoenn & Seek 2.0 part 20: the glassblower's flute (wakes Route 113's Munchlax)
+    ITEM_SINGING_SAND, // Hoenn & Seek 2.0 part 24a: the Desert Underpass Vibrava's sand (Flygon's desert song)
+    ITEM_SAND_CHIME, // Hoenn & Seek 2.0 part 24b: the Singing Sand fused into glass; raises the Mirage Tower
+    ITEM_FROST_FEATHER, // Hoenn & Seek 2.0 part 26b: Articuno's feather from Shoal Cave's ice chamber
+    ITEM_THUNDER_FEATHER, // Hoenn & Seek 2.0 part 34a (lane B): Zapdos's feather from the Power Plant on Route 10's storm day
+    ITEM_FLAME_FEATHER, // Hoenn & Seek 2.0 part 34a (lane B): Moltres's feather from Route 113's ash
+    ITEM_JADE_ORB, // Hoenn & Seek 2.0 part 36 (lane B): set into Sky Pillar's mural; wakes Rayquaza in the Embedded Tower
+    ITEM_ENIGMA_STONE, // Hoenn & Seek 2.0 part 36 (lane B): Southern Island's shards, joined at the Pewter Museum; calls the island's Lati
+#endif
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

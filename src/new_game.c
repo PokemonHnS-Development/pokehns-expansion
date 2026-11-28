@@ -34,6 +34,7 @@
 #include "frontier_util.h"
 #include "pokedex.h"
 #include "save.h"
+#include "hoenn_flags.h" // Hoenn & Seek
 #include "link_rfu.h"
 #include "main.h"
 #include "contest.h"
@@ -60,6 +61,7 @@ extern const u8 EventScript_ResetAllMapFlagsFrlg[];
 #endif
 #if IS_HNS
 extern const u8 EventScript_ResetAllMapFlagsHnS[];
+extern const u8 EventScript_ResetAllMapFlagsHoenn[]; // Hoenn & Seek
 #endif
 
 static void ClearFrontierRecord(void);
@@ -296,6 +298,10 @@ void NewGameInitData(void)
     SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
     ResetItemFlags();
     ResetDexNav();
+#if IS_HNS // Hoenn & Seek: Hoenn's own flags/vars start cleared
+    HoennClearAllFlagsAndVars();
+    RunScriptImmediately(EventScript_ResetAllMapFlagsHoenn); // Hoenn's post-Emerald state; must follow the clear
+#endif
     ClearFollowerNPCData();
 
     // Sync engine flags from restored challenge settings

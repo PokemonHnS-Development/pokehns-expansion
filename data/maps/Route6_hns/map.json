@@ -130,7 +130,7 @@
       "flag": "FLAG_RETURNED_MACHINE_PART"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PLUSLE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PSYDUCK",
       "x": 57,
       "y": 4,
       "elevation": 0,
@@ -143,7 +143,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MINUN",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MANKEY",
       "x": 56,
       "y": 6,
       "elevation": 0,
@@ -245,6 +245,62 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_HOENN_SQUAD_LEADER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
+      "x": 31,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Route6Leader",
+      "flag": "FLAG_HOENN_HIDE_SQUAD_LEADER"
+    },
+    {
+      "local_id": "LOCALID_HOENN_SQUAD_1",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
+      "x": 33,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Route6Squirtle",
+      "flag": "FLAG_HOENN_HIDE_SQUAD_ROUTE6"
+    },
+    {
+      "local_id": "LOCALID_HOENN_SQUAD_2",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
+      "x": 35,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Route6Squirtle",
+      "flag": "FLAG_HOENN_HIDE_SQUAD_ROUTE6"
+    },
+    {
+      "local_id": "LOCALID_HOENN_SQUAD_3",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
+      "x": 37,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Route6Squirtle",
+      "flag": "FLAG_HOENN_HIDE_SQUAD_ROUTE6"
     }
   ],
   "warp_events": [
@@ -268,9 +324,85 @@
       "elevation": 0,
       "dest_map": "MAP_GATE_SAFFRON_CITY_ROUTE6_HNS",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 21,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6_BUG_CLUB_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 49,
+      "y": 30,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6_ENGINEERS_HOUSE_HOENN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 38,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6_HIDEOUT_HOENN",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 40,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_Route6Pitfall"
+    },
+    {
+      "type": "trigger",
+      "x": 41,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_Route6Pitfall"
+    },
+    {
+      "type": "trigger",
+      "x": 40,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_Route6Pitfall"
+    },
+    {
+      "type": "trigger",
+      "x": 41,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_Route6Pitfall"
+    },
+    {
+      "type": "trigger",
+      "x": 40,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_Route6Pitfall"
+    },
+    {
+      "type": "trigger",
+      "x": 41,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_Route6Pitfall"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

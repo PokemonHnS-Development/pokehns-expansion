@@ -81,19 +81,15 @@ Route29_EventScript_Tuscany::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_SILK_SCARF, Route29_EventScript_TuscanyCompleted
+	@ Hoenn & Seek: gift only on Tuesdays (data/scripts/hoenn_weekday.inc)
+	setvar VAR_0x8004, HOENN_TUESDAY
+	specialvar VAR_RESULT, HoennIsItWeekday
 	msgbox Route29_Text_MeetTuscany, MSGBOX_DEFAULT
-	closemessage
-	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
-	switch VAR_RESULT
-	case 0, Route29_EventScript_TuscanyNope
-	case 1, Route29_EventScript_TuscanyNope
-	case 2, Route29_EventScript_TuscanyYes
-	case 3, Route29_EventScript_TuscanyNope
-	case 4, Route29_EventScript_TuscanyNope
-	case 5, Route29_EventScript_TuscanyNope
-	case 6, Route29_EventScript_TuscanyNope
-	case 7 Route29_EventScript_TuscanyCancel
-	case MULTI_B_PRESSED, Route29_EventScript_TuscanyCancel
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_Route29_SiblingNotToday
+	msgbox HoennSeek_Text_SiblingItsMyDay, MSGBOX_DEFAULT
+	goto Route29_EventScript_TuscanyYes
+HoennSeek_Route29_SiblingNotToday:
+	msgbox HoennSeek_Text_SiblingComeBack, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -215,8 +211,8 @@ Route29_Text_MeetTuscany:
 	.string "TUSCANY: I do believe that this\n"
 	.string "is the first time we've met?\p"
 	.string "I'm TUSCANY of the WEEKDAY FAMILY.\p"
-	.string "If you can guess my favorite day,\n"
-	.string "I'll give you a reward.$"
+	.string "My favorite day of the week is\n"
+	.string "{STR_VAR_1}.$"
 
 Route29_Text_TuscanyNope:
 	.string "Not quite!$"

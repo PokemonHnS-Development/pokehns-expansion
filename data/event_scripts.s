@@ -35,6 +35,7 @@
 #include "constants/field_tasks.h"
 #include "constants/field_weather.h"
 #include "constants/flags.h"
+#include "constants/hoenn_phone.h"
 #include "constants/follower_npc.h"
 #include "constants/frontier_util.h"
 #include "constants/game_stat.h"
@@ -294,6 +295,38 @@ gStdScripts_End::
 	.include "data/maps/LilycoveCity_LilycoveMuseum_2F/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestLobby/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestLobby_hns/scripts.inc"
+	.include "data/maps/LilycoveCity_ContestLobby_hoenn/scripts.inc" @ Hoenn & Seek
+	.include "data/maps/LilycoveCity_ContestHall_hoenn/scripts.inc" @ Hoenn & Seek
+	.include "data/maps/Route45_BeekeeperHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/MelemeleIsle_SurfShop_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/MelemeleIsle_IslandHome_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/CeladonCity_FloristsHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/Route6_EngineersHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/Route6_BugClub_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/BellchimeTrail_Lodge_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/Route38_MoomooStoreroom_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/Route34_BreedersHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/EcruteakCity_DanceTeacher_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/OlivineCity_KeepersHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/OlivineCity_Shipwright_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/OlivineCity_TackleShop_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/OlivineCity_CaptainsHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/OlivineCity_SailorsHouse_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/OlivineCity_HarborOffice_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/Route34_FishingShack_hoenn/scripts.inc" @ Hoenn & Seek 2.0 (generated building)
+	.include "data/maps/TidalStrait_West_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 14
+	.include "data/maps/TidalStrait_East_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 14
+	.include "data/maps/Route46_Meadow_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 15a
+	.include "data/maps/Route25_Garden_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 16
+	.include "data/maps/Route6_Hideout_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 17
+	.include "data/maps/Route113_Grotto_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 20
+	.include "data/maps/Route119_Orchard_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 21
+	.include "data/maps/Route131_Atoll_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 22b
+	.include "data/maps/MeteorFalls_Clifftop_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 23
+	.include "data/maps/Route124_Trench_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 25a
+	.include "data/maps/ShoalCave_IceChamber_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 26a
+	.include "data/maps/RuinsOfAlph_Sanctum_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 28
+	.include "data/maps/Route41_Lagoon_hoenn/scripts.inc" @ Hoenn & Seek 2.0 part 32
 	.include "data/maps/LilycoveCity_ContestHall/scripts.inc"
 	.include "data/maps/LilycoveCity_ContestHall_hns/scripts.inc"
 	.include "data/maps/LilycoveCity_PokemonCenter_1F/scripts.inc"
@@ -1054,6 +1087,33 @@ gStdScripts_End::
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
 	.include "data/scripts/new_game.inc"
+	.include "data/scripts/hoenn_new_game.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_ferry.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_story.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_dialogue.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_mind_reader.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_trainers.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_gyms.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_teams.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_arrival.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_phone.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_safari.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_gifts.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_ow_mons.inc" @ Hoenn & Seek
+	.include "data/scripts/hoenn_debug.inc" @ Hoenn & Seek 2.0
+	.include "data/scripts/hoenn_weekday.inc" @ Hoenn & Seek 2.0 part 3
+	.include "data/scripts/hoenn_followers.inc" @ Hoenn & Seek 2.0 part 4b
+	.include "data/scripts/hoenn_hints.inc" @ Hoenn & Seek 2.0 part 7 (generated)
+	.include "data/scripts/hoenn_buildings.inc" @ Hoenn & Seek 2.0 parts 8b-11
+	.include "data/scripts/hoenn_bases.inc" @ Hoenn & Seek 2.0 part 13a
+	.include "data/scripts/hoenn_starters.inc" @ Hoenn & Seek 2.0 part 15a
+	.include "data/scripts/hoenn_kanto_starters.inc" @ Hoenn & Seek 2.0 part 16
+	.include "data/scripts/hoenn_species.inc" @ Hoenn & Seek 2.0 part 18
+	.include "data/scripts/hoenn_hidden.inc" @ Hoenn & Seek 2.0 part 20
+	.include "data/scripts/hoenn_cipher.inc" @ Hoenn & Seek 2.0 part 27a
+	.include "data/scripts/hoenn_lane_a.inc" @ Hoenn & Seek 2.0, builder lane A (parts 27b+)
+	.include "data/scripts/hoenn_johto_legends.inc" @ Hoenn & Seek 2.0 part 35b (lane A)
+	.include "data/scripts/hoenn_lane_b.inc" @ Hoenn & Seek 2.0, builder lane B (parts 31b+)
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"
 
@@ -1839,6 +1899,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/lilycove_lady.inc"
 	.include "data/text/match_call.inc"
 	.include "data/text/match_call_hns.inc"
+	.include "data/text/match_call_hoenn.inc" @ Hoenn & Seek
 	.include "data/scripts/mom_savings.inc"
 	.include "data/scripts/apprentice.inc"
 	.include "data/text/apprentice.inc"

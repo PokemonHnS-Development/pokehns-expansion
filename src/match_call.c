@@ -113,6 +113,10 @@ struct MatchCallTrainerTextInfo
     u16 differentRouteMatchCallTextId;
 };
 
+#if !IS_HNS
+#define HOENN_CALLABLE_SPECIAL(i) FALSE
+#endif
+
 #if IS_HNS
 #define HNS_MAX_GENERAL_TEXTS 3
 #define HNS_MAX_GIFT_ITEMS    4
@@ -170,6 +174,10 @@ static const u16 sKenjiGiftItems[] = { ITEM_PP_UP };
     .giftItems = items, .numGiftItems = ARRAY_COUNT(items), \
     .foundItemText = MatchCall_HNS_##name##_FoundItem }
 
+#include "data/hoenn_match_call_decls.h" // Hoenn & Seek (part 16c)
+#include "hoenn.h"
+#define HOENN_CALLABLE_SPECIAL(i) HoennIsCallableSpecialSlot(i) // Hoenn & Seek: Wally calls too (part 16d)
+
 static const struct HnsMatchCallTrainerInfo sHnsMatchCallTrainers[] =
 {
     HNS_MC_ENTRY3(Joey,     TRAINER_JOEY_HNS),
@@ -212,6 +220,7 @@ static const struct HnsMatchCallTrainerInfo sHnsMatchCallTrainers[] =
     HNS_MC_ENTRY2(Kenny,    TRAINER_KENNY_HNS),
     HNS_MC_ENTRY2(Joel,     TRAINER_JOEL_HNS),
     HNS_MC_ENTRY2(Charles,  TRAINER_CHARLES_HNS),
+#include "data/hoenn_match_call.h" // Hoenn & Seek: Hoenn phone trainers (part 16c)
 };
 #endif
 
@@ -1338,6 +1347,8 @@ static bool32 SelectMatchCallTrainer(void)
 #endif
     if (GetRematchTrainerLocation(matchCallId) == gMapHeader.regionMapSectionId && !TrainerIsEligibleForRematch(matchCallId))
         return FALSE;
+    if (!HoennSpecialCallerAnswers(matchCallId)) // Hoenn & Seek (20a): Wally calls less often
+        return FALSE;
 
     return TRUE;
 }
@@ -1346,8 +1357,10 @@ static bool32 SelectMatchCallTrainer(void)
 static u32 GetNumRegisteredTrainers(void)
 {
     u32 i, count;
-    for (i = 0, count = 0; i < REMATCH_SPECIAL_TRAINER_START; i++)
+    for (i = 0, count = 0; i < REMATCH_TABLE_ENTRIES; i++)
     {
+        if (i >= REMATCH_SPECIAL_TRAINER_START && !HOENN_CALLABLE_SPECIAL(i))
+            continue;
         if (FlagGet(TRAINER_REGISTERED_FLAGS_START + i))
             count++;
     }
@@ -1358,8 +1371,10 @@ static u32 GetNumRegisteredTrainers(void)
 static u32 GetActiveMatchCallTrainerId(u32 activeMatchCallId)
 {
     u32 i;
-    for (i = 0; i < REMATCH_SPECIAL_TRAINER_START; i++)
+    for (i = 0; i < REMATCH_TABLE_ENTRIES; i++)
     {
+        if (i >= REMATCH_SPECIAL_TRAINER_START && !HOENN_CALLABLE_SPECIAL(i))
+            continue;
         if (FlagGet(TRAINER_REGISTERED_FLAGS_START + i))
         {
             if (!activeMatchCallId)
@@ -1799,7 +1814,8 @@ bool32 SelectMatchCallMessage(int trainerId, u8 *str)
     bool32 newRematchRequest = FALSE;
     s32 rematchIdx = GetRematchIdxByTrainerIdx(trainerId);
 
-    for (i = 0; i < ARRAY_COUNT(sHnsMatchCallTrainers); i++)
+    text = HoennPhoneCallText(trainerId, &newRematchRequest); // Hoenn & Seek: Wally (part 16d)
+    for (i = 0; text == NULL && i < ARRAY_COUNT(sHnsMatchCallTrainers); i++)
     {
         if (sHnsMatchCallTrainers[i].trainerId == trainerId)
         {

@@ -44,7 +44,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CLEFAIRY",
@@ -57,7 +57,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CLEFAIRY",
@@ -70,7 +70,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CLEFAIRY",
@@ -83,7 +83,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CLEFAIRY",
@@ -96,7 +96,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CLEFAIRY",
@@ -109,7 +109,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CLEFAIRY",
@@ -122,7 +122,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "local_id": "LOCALID_MTMOON_JIRACHI",
@@ -135,7 +135,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtMoon_Outside_EventScript_Jirachi",
+      "script": "HoennSeek_EventScript_MtMoonJirachi",
       "flag": "FLAG_HIDE_MTMOON_JIRACHI"
     },
     {
@@ -149,7 +149,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_Outside_EventScript_Clefairy",
-      "flag": "FLAG_NIGHT_POKEMON"
+      "flag": "FLAG_HOENN_HIDE_CLEFAIRY_DANCE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SKARMORY",
@@ -202,6 +202,58 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_UNOWN_M",
+      "x": 39,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_GlyphRing",
+      "flag": "FLAG_HOENN_CIPHER_HIDE_RING"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_UNOWN_O",
+      "x": 40,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_GlyphRing",
+      "flag": "FLAG_HOENN_CIPHER_HIDE_RING"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_UNOWN_O",
+      "x": 39,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_GlyphRing",
+      "flag": "FLAG_HOENN_CIPHER_HIDE_RING"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_UNOWN_N",
+      "x": 38,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_GlyphRing",
+      "flag": "FLAG_HOENN_CIPHER_HIDE_RING"
     }
   ],
   "warp_events": [
@@ -243,7 +295,7 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "MtMoon_Outside_EventScript_WhiteRock"
+      "script": "HoennSeek_EventScript_WhiteRock"
     }
   ],
   "game_version": "hns",

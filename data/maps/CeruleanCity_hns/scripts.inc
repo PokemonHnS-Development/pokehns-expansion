@@ -4,6 +4,7 @@ CeruleanCity_hns_MapScripts::
 
 CeruleanCity_EventScript_CityEnter::
 	setflag FLAG_VISITED_CERULEAN_CITY
+	call HoennSeek_EventScript_CeruleanOnTransition @ Hoenn & Seek 2.0 part 16
 	end
 
 CeruleanCity_EventScript_CooltrainerM1::

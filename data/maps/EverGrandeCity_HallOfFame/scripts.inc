@@ -38,14 +38,14 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
-	dofieldeffect FLDEFF_HALL_OF_FAME_RECORD
-	waitfieldeffect FLDEFF_HALL_OF_FAME_RECORD
+	@ Hoenn & Seek (13b): HnS's record effect removes the FRLG ID from the active
+	@ list, so waiting on the Emerald ID never returns.
+	dofieldeffect FLDEFF_HALL_OF_FAME_RECORD_FRLG
+	waitfieldeffect FLDEFF_HALL_OF_FAME_RECORD_FRLG
 	delay 40
 	setvar VAR_TEMP_1, 1
-	call EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, EverGrandeCity_HallOfFame_EventScript_GameClearMale
-	goto_if_eq VAR_RESULT, FEMALE, EverGrandeCity_HallOfFame_EventScript_GameClearFemale
+	@ Hoenn & Seek (13b): no Emerald game-clear flags or GameClear (HnS's ending)
+	goto HoennSeek_EventScript_HallOfFameDone
 	end
 
 EverGrandeCity_HallOfFame_EventScript_GameClearMale::

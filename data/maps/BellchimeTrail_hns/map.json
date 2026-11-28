@@ -882,6 +882,13 @@
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_SAGE_OFFICE2_HNS",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 54,
+      "y": 58,
+      "elevation": 0,
+      "dest_map": "MAP_BELLCHIME_TRAIL_LODGE_HOENN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -895,16 +902,7 @@
       "script": "EcruteakBellchimeTrail_EventScript_DoorTrigger"
     }
   ],
-  "bg_events": [
-    {
-      "type": "sign",
-      "x": 54,
-      "y": 58,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route7_EventScript_Door"
-    }
-  ],
+  "bg_events": [],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

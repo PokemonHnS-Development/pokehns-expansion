@@ -1,4 +1,5 @@
 UnionCave_B2F_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_UnionCave_B2F_OnTransition @ Hoenn & Seek: Friday Lapras
 	.byte 0
 
 UnionCave_B2F_EventScript_CooltrainerNick::
@@ -28,6 +29,7 @@ UnionCave_B2F_EventScript_Lapras::
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_UNION_CAVE_LAPRAS
 	setflag FLAG_HIDE_UNION_CAVE_LAPRAS
+	setflag FLAG_HOENN_WEEKLY_LAPRAS_MET @ Hoenn & Seek: back next Friday
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end

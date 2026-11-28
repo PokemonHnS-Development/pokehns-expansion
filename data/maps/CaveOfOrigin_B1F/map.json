@@ -40,5 +40,13 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "secret_base",
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_HOENN_CAVE_OF_ORIGIN"
+    }
+  ]
 }

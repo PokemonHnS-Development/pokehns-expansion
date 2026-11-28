@@ -18,6 +18,7 @@
 #include "bg.h"
 #include "window.h"
 #include "gpu_regs.h"
+#include "hoenn_time.h" // Hoenn & Seek
 #include "constants/rgb.h"
 
 #define PALTAG_ARROW 0x1000
@@ -776,6 +777,7 @@ static void Task_ResetRtcScreen(u8 taskId)
                     gLocalTime.seconds);
                 gSaveBlock2Ptr->lastBerryTreeUpdate = gLocalTime;
                 VarSet(VAR_DAYS, gLocalTime.days);
+                HoennRecordWeekAfterClockReset(); // Hoenn & Seek: no weekly reset either
                 DisableResetRTC();
                 ShowMessage(gText_ClockHasBeenReset);
                 tState = MAINSTATE_SAVE;

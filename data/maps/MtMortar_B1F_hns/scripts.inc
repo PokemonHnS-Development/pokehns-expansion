@@ -5,6 +5,7 @@ MtMortar_B1F_hns_MapScripts::
 
 MtMortar_B1F_OnTransition: 
 	callnative SetTimeBasedEncounters
+	call HoennSeek_EventScript_MtMortarOnTransition @ Hoenn & Seek 2.0 part 18
 	end
 
 MtMortar_B1F_EventScript_Item_HyperPotion::

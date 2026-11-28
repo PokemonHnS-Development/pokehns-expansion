@@ -10,6 +10,7 @@ SafariZone_EventScript_OutOfBallsMidBattle::
 #if IS_FRLG
 	setwarp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 4, 1
 #elif IS_HNS
+	goto_if_set FLAG_HOENN_IN_SAFARI_ZONE, HoennSeek_EventScript_SafariExitMidBattle @ Hoenn & Seek (part 17)
 	goto_if_set FLAG_IN_KANTO_SAFARI_ZONE, SafariZone_EventScript_ExitKantoMidBattle
 	setwarp MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS, 9, 3
 #else
@@ -34,6 +35,7 @@ SafariZone_EventScript_Exit::
 #if IS_FRLG
 	warp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 4, 1
 #elif IS_HNS
+	goto_if_set FLAG_HOENN_IN_SAFARI_ZONE, HoennSeek_EventScript_SafariExit @ Hoenn & Seek (part 17)
 	goto_if_set FLAG_IN_KANTO_SAFARI_ZONE, SafariZone_EventScript_ExitKanto
 	warp MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS, 9, 3
 #else

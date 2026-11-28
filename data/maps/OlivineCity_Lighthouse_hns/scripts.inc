@@ -1,5 +1,17 @@
 OlivineCity_Lighthouse_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_LighthouseOnTransition @ Hoenn & Seek 2.0 part 32 (hoenn_lane_a.inc)
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, OlivineLighthouse_OnWarp_Hoenn
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, OlivineLighthouse_OnFrame_Hoenn
 	.byte 0
+
+@ Hoenn & Seek 2.0 part 32: the rescued AMPHAROS's arrival scene (hoenn_lane_a.inc).
+OlivineLighthouse_OnWarp_Hoenn:
+	map_script_2 VAR_HOENN_AMPHAROS_STATE, HOENN_AMPHAROS_ARRIVING, HoennSeek_EventScript_LighthouseHidePlayer
+	.2byte 0
+
+OlivineLighthouse_OnFrame_Hoenn:
+	map_script_2 VAR_HOENN_AMPHAROS_STATE, HOENN_AMPHAROS_ARRIVING, HoennSeek_EventScript_LighthouseAmpharosArrives
+	.2byte 0
 
 OlivineLighthouse_EventScript_Item_Ether::
     finditem ITEM_ETHER

@@ -2,6 +2,7 @@
 #include "constants/weather.h"
 #include "coord_event_weather.h"
 #include "field_weather.h"
+#include "hoenn_time.h"
 
 struct CoordEventWeather
 {
@@ -108,6 +109,8 @@ static void CoordEventWeather_Route123Cycle(void)
 void DoCoordEventWeather(u8 coordEventWeather)
 {
     u8 i;
+    if (HoennCycleIgnoresWeatherZones()) // Hoenn & Seek: a special-weather day covers the map
+        return;
     for (i = 0; i < ARRAY_COUNT(sCoordEventWeatherFuncs); i++)
     {
         if (sCoordEventWeatherFuncs[i].coordEventWeather == coordEventWeather)

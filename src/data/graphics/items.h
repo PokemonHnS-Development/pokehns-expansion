@@ -733,6 +733,10 @@ const u16 gItemIconPalette_RedOrb[] = INCBIN_U16("graphics/items/icon_palettes/r
 const u32 gItemIcon_BlueOrb[] = INCBIN_U32("graphics/items/icons/blue_orb.4bpp.smol");
 const u16 gItemIconPalette_BlueOrb[] = INCBIN_U16("graphics/items/icon_palettes/blue_orb.gbapal");
 
+// Hoenn & Seek 2.0 part 36 (lane B): the JADE ORB (upstream ships the art but no item).
+const u32 gItemIcon_JadeOrb[] = INCBIN_U32("graphics/items/icons/jade_orb.4bpp.smol");
+const u16 gItemIconPalette_JadeOrb[] = INCBIN_U16("graphics/items/icon_palettes/jade_orb.gbapal");
+
 // Mega Stones
 
 const u32 gItemIcon_Venusaurite[] = INCBIN_U32("graphics/items/icons/venusaurite.4bpp.smol");

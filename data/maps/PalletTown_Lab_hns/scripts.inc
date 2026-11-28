@@ -29,10 +29,9 @@ PalletTown_Lab_EventScript_OakBadgeCheck::
 	end
 
 PalletTown_Lab_EventScript_Oak16Badges::
-	msgbox PalletTown_Lab_Text_OakOpenMtSilver, MSGBOX_DEFAULT
+	@ Hoenn & Seek: Oak sends you to Hoenn; Mt. Silver opens with Wallace's stamp (data/scripts/hoenn_ferry.inc).
+	call HoennSeek_EventScript_OakGivesTicket
 	closemessage
-	setflag FLAG_INDIGOJUNCTION_HIDE_SILVER_GUARD
-	setvar VAR_ROUTE28_SCIENTIST, 1
 	setvar VAR_PALLETTOWN_LABSTATE, 2
 	call_if_unset FLAG_IS_KANTO_CHAMPION, PalletTown_Lab_EventScript_OakKantoLeague
 	release
@@ -50,6 +49,7 @@ PalletTown_Lab_EventScript_Oak9Badges::
 	end
 
 PalletTown_Lab_EventScript_OakDex::
+	call HoennSeek_EventScript_OakHoennStatus @ Hoenn & Seek
 	msgbox PalletTown_Lab_Text_OakLabDexCheck, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -104,15 +104,15 @@ PalletTown_Lab_Text_OakOpenMtSilver:
 	.string "reach MT.SILVER from there.$"
 
 PalletTown_Lab_Text_OakOpenIndigoPlateau:
-	.string "Oh, and speaking of the INDIGO\n"
-	.string "PLATEAU, now that you've earned\l"
-	.string "16 badges, the KANTO LEAGUE\l"
-	.string "will be ready to accept\l"
-	.string "your challenge once again.\p"
-	.string "But be warned, LANCE and his\n"
-	.string "ELITE FOUR won't go easy on you\l"
-	.string "this time.\p"
-	.string "Good luck, {PLAYER}!$"
+	@ Hoenn & Seek (20a): follows the TIDAL TICKET speech now.
+	.string "OAK: Oh, one more thing!\p"
+	.string "With 16 BADGES, the KANTO LEAGUE at\n"
+	.string "INDIGO PLATEAU will accept your\l"
+	.string "challenge once again.\p"
+	.string "But be warned, LANCE and his ELITE\n"
+	.string "FOUR won't go easy on you this time.\p"
+	.string "HOENN or INDIGO first, it's up to\n"
+	.string "you. Good luck, {PLAYER}!$"
 
 PalletTown_Lab_Text_OakNoKantoBadges:
 	.string "OAK: Hmm? You're not collecting\n"

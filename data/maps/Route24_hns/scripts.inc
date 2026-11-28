@@ -4,6 +4,7 @@ Route24_hns_MapScripts::
 	.byte 0
 
 Route24_OnTransition:
+	call HoennSeek_EventScript_Route24OnTransition @ Hoenn & Seek 2.0 part 16
 	call_if_eq VAR_KANTO_ROCKET_STORY_STATE, 4, Route24_MapScript_SetRocketScene
 	callnative SetTimeBasedEncounters
 	end

@@ -401,6 +401,7 @@ ContestHall_EventScript_CreateWirelessContestAudience_hns::
 
 ContestHall_EventScript_SetExitWarp_hns::
 	special ClearLinkContestFlags
+	goto_if_set FLAG_HOENN_LILYCOVE_CONTEST, HoennSeek_EventScript_ContestSetExitWarp @ Hoenn & Seek
 	switch VAR_CONTEST_TYPE
 	case CONTEST_TYPE_NPC_NORMAL, ContestHall_EventScript_SetExitWarpNormalContest_hns
 	case CONTEST_TYPE_NPC_SUPER, ContestHall_EventScript_SetExitWarpSuperContest_hns

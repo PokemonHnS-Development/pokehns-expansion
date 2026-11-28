@@ -34,6 +34,7 @@
 #include "constants/rgb.h"
 #include "constants/trainers.h"
 #include "constants/union_room.h"
+#include "hoenn.h" // Hoenn & Seek
 
 #if IS_HNS
 #define NUM_BADGES_FRONT 8
@@ -89,7 +90,11 @@ struct TrainerCardData
     u16 frontTilemap[600];
     u16 backTilemap[600];
     u16 bgTilemap[600];
+#if IS_HNS
+    u8 badgeTiles[0x80 * NUM_BADGES + 0x80 * HOENN_GYM_COUNT]; // Hoenn & Seek: + Hoenn stamps (Emerald badge art)
+#else
     u8 badgeTiles[0x80 * NUM_BADGES];
+#endif
     u8 stickerTiles[0x200];
     u8 cardTiles[0x2300];
     u16 cardTilemapBuffer[0x1000];
@@ -607,6 +612,7 @@ static bool8 LoadCardGfx(void)
     case 3:
 #if IS_HNS
         DecompressDataWithHeaderWram(sHnsTrainerCardBadgesCombined_Gfx, sData->badgeTiles);
+        DecompressDataWithHeaderWram(sHoennTrainerCardBadges_Gfx, &sData->badgeTiles[0x80 * NUM_BADGES]); // Hoenn & Seek
 #else
         if (sData->cardType != CARD_TYPE_FRLG)
             DecompressDataWithHeaderWram(sHoennTrainerCardBadges_Gfx, sData->badgeTiles);
@@ -1658,6 +1664,28 @@ static void DrawStarsAndBadgesOnCard(void)
 }
 
 #if IS_HNS
+// Hoenn & Seek: the 8 Hoenn gym stamps, a row above the Kanto badges.
+static void DrawHoennStampsOnBack(void)
+{
+    u8 i, x = 4;
+    u8 palNum = 3;
+    u16 tileNum = 192 + 64;
+
+    if (sData->isLink)
+        return;
+    for (i = 0; i < HOENN_GYM_COUNT; i++, tileNum += 2, x += 3)
+    {
+        if (FlagGet(FLAG_HOENN_STAMP_GYM_1 + i))
+        {
+            FillBgTilemapBufferRect(3, tileNum,      x,     8, 1, 1, palNum);
+            FillBgTilemapBufferRect(3, tileNum + 1,  x + 1, 8, 1, 1, palNum);
+            FillBgTilemapBufferRect(3, tileNum + 16, x,     9, 1, 1, palNum);
+            FillBgTilemapBufferRect(3, tileNum + 17, x + 1, 9, 1, 1, palNum);
+        }
+    }
+    CopyBgTilemapBufferToVram(3);
+}
+
 static void DrawExtraBadgesOnBack(void)
 {
     u8 i, x = 4;
@@ -1861,6 +1889,7 @@ static bool8 Task_DrawFlippedCardSide(struct Task *task)
                 DrawCardBackStats();
 #if IS_HNS
                 DrawExtraBadgesOnBack();
+                DrawHoennStampsOnBack(); // Hoenn & Seek
 #endif
             }
             else

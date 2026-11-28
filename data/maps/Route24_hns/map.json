@@ -81,7 +81,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SURSKIT",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PSYDUCK",
       "x": 21,
       "y": -3,
       "elevation": 0,
@@ -94,7 +94,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPOINK",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DROWZEE",
       "x": 5,
       "y": 18,
       "elevation": 0,
@@ -131,6 +131,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OlivineCity_PortOutside_EventScript_Fisherman2",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_HOENN_ROUTE24_CHARMANDER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHARMANDER",
+      "x": 24,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_Charmander",
+      "flag": "FLAG_HOENN_HIDE_CHARMANDER"
     }
   ],
   "warp_events": [],

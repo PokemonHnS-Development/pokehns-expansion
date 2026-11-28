@@ -1,0 +1,34 @@
+{
+  "_comment": "Hoenn maps NOT compiled into Hoenn & Seek. Edit, then run tools/hoenn/gen_hoenn_lists.py. Maps that HnS already copied (<Name>_hns) are skipped automatically.",
+  "exclude_prefixes": [
+    "BattleFrontier_",
+    "BattlePyramid",
+    "TrainerHill_",
+    "ArtisanCave_",
+    "FallarborTown_BattleTent",
+    "VerdanturfTown_BattleTent",
+    "SlateportCity_BattleTent",
+    "Route110_TrickHouse",
+    "TerraCave_",
+    "MarineCave_",
+    "Underwater_MarineCave",
+    "SouthernIsland_",
+    "FarawayIsland_",
+    "NavelRock_",
+    "BirthIsland_",
+    "TradeCenter",
+    "RecordCorner",
+    "BattleColosseum_",
+    "UnionRoom",
+    "SingleBattleColosseum",
+    "DoubleBattleColosseum",
+    "LinkContestRoom"
+  ],
+  "exclude_maps": [
+    "InsideOfTruck",
+    "Route117_PokemonDayCare"
+  ],
+  "exclude_containing": [
+    "Unused"
+  ]
+}

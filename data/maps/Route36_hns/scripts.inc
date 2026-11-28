@@ -44,19 +44,15 @@ Route36_EventScript_Arthur::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_HARD_STONE, Route36_EventScript_ArthurCompleted
+	@ Hoenn & Seek: gift only on Thursdays (data/scripts/hoenn_weekday.inc)
+	setvar VAR_0x8004, HOENN_THURSDAY
+	specialvar VAR_RESULT, HoennIsItWeekday
 	msgbox Route36_Text_MeetArthur, MSGBOX_DEFAULT
-	closemessage
-	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
-	switch VAR_RESULT
-	case 0, Route36_EventScript_ArthurNope
-	case 1, Route36_EventScript_ArthurNope
-	case 2, Route36_EventScript_ArthurNope
-	case 3, Route36_EventScript_ArthurNope
-	case 4, Route36_EventScript_ArthurYes
-	case 5, Route36_EventScript_ArthurNope
-	case 6, Route36_EventScript_ArthurNope
-	case 7, Route36_EventScript_ArthurCancel
-	case MULTI_B_PRESSED, Route36_EventScript_ArthurCancel
+	goto_if_eq VAR_RESULT, FALSE, HoennSeek_Route36_SiblingNotToday
+	msgbox HoennSeek_Text_SiblingItsMyDay, MSGBOX_DEFAULT
+	goto Route36_EventScript_ArthurYes
+HoennSeek_Route36_SiblingNotToday:
+	msgbox HoennSeek_Text_SiblingComeBack, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -301,8 +297,8 @@ Route36_Text_SchoolboyAlanAfter:
 Route36_Text_MeetArthur:
 	.string "ARTHUR: Who are you?\n"
 	.string "I'm ARTHUR of the WEEKDAY FAMILY.\p"
-	.string "If you can guess my favorite day,\n"
-	.string "I'll give you a reward.$"
+	.string "My favorite day of the week is\n"
+	.string "{STR_VAR_1}.$"
 
 Route36_Text_ArthurNope:
 	.string "Not quite!$"

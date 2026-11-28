@@ -4,6 +4,7 @@ Route6_hns_MapScripts::
 	.byte 0
 
 Route6_OnTransition:
+	call HoennSeek_EventScript_Route6OnTransition @ Hoenn & Seek 2.0 part 17: the Squirtle Squad
 	callnative SetTimeBasedEncounters
 	end
 

@@ -1,0 +1,306 @@
+{
+ "_comment": "Hoenn & Seek (part 20a): overworld Pokémon, as HnS has in Johto and Kanto. tools/hoenn/gen_hoenn_ow_mons.py adds them to each kept Hoenn map's map.json (script HoennSeek_EventScript_OWMon marks them; re-runs replace them). Maps with a wild table get mons drawn from it (land table on grass/floor, surf table on water), split by FLAG_DAY_POKEMON / FLAG_NIGHT_POKEMON where the map has a _Night table. 'towns' lists ambient mons for maps without encounters (or adds to them): [species, count, where] with where = land | water | day | night | water_night. 'no_land' skips a map's land table (Route 130's is Mirage Island's); 'never_species' are left out (Kecleon is meant to be invisible).",
+ "skip": [
+  "Underwater_",
+  "AbandonedShip_",
+  "MirageTower_",
+  "SkyPillar",
+  "SecretBase_",
+  "GraniteCave_StevensRoom",
+  "MeteorFalls_StevensCave",
+  "NewMauville_Entrance",
+  "MagmaHideout_",
+  "MtPyre_1F",
+  "Route104_Prototype",
+  "Route119_WeatherInstitute",
+  "AlteringCave"
+ ],
+ "indoor_ok": [
+  "MtPyre_"
+ ],
+ "no_land": [
+  "Route130"
+ ],
+ "never_species": [
+  "KECLEON"
+ ],
+ "caps": {
+  "route": 8,
+  "cave": 5,
+  "water": 4
+ },
+ "tiles_per_mon": {
+  "route": 120,
+  "cave": 80,
+  "water": 300
+ },
+ "towns": {
+  "LittlerootTown": [
+   [
+    "ZIGZAGOON",
+    2,
+    "land"
+   ],
+   [
+    "WURMPLE",
+    1,
+    "day"
+   ],
+   [
+    "POOCHYENA",
+    1,
+    "night"
+   ]
+  ],
+  "OldaleTown": [
+   [
+    "ZIGZAGOON",
+    1,
+    "land"
+   ],
+   [
+    "TAILLOW",
+    1,
+    "day"
+   ],
+   [
+    "HOOTHOOT",
+    1,
+    "night"
+   ]
+  ],
+  "PetalburgCity": [
+   [
+    "SLAKOTH",
+    1,
+    "land"
+   ],
+   [
+    "ZIGZAGOON",
+    1,
+    "land"
+   ],
+   [
+    "MARILL",
+    1,
+    "water"
+   ]
+  ],
+  "RustboroCity": [
+   [
+    "SKITTY",
+    1,
+    "land"
+   ],
+   [
+    "WHISMUR",
+    1,
+    "land"
+   ],
+   [
+    "NOSEPASS",
+    1,
+    "land"
+   ]
+  ],
+  "DewfordTown": [
+   [
+    "WINGULL",
+    2,
+    "land"
+   ],
+   [
+    "MACHOP",
+    1,
+    "land"
+   ],
+   [
+    "TENTACOOL",
+    1,
+    "water"
+   ]
+  ],
+  "SlateportCity": [
+   [
+    "WINGULL",
+    2,
+    "land"
+   ],
+   [
+    "PELIPPER",
+    1,
+    "day"
+   ],
+   [
+    "WAILMER",
+    1,
+    "water"
+   ]
+  ],
+  "MauvilleCity": [
+   [
+    "ELECTRIKE",
+    1,
+    "land"
+   ],
+   [
+    "PLUSLE",
+    1,
+    "land"
+   ],
+   [
+    "MINUN",
+    1,
+    "land"
+   ]
+  ],
+  "VerdanturfTown": [
+   [
+    "ROSELIA",
+    1,
+    "land"
+   ],
+   [
+    "WHISMUR",
+    1,
+    "land"
+   ],
+   [
+    "SKITTY",
+    1,
+    "land"
+   ]
+  ],
+  "FallarborTown": [
+   [
+    "SPINDA",
+    2,
+    "land"
+   ],
+   [
+    "SKARMORY",
+    1,
+    "day"
+   ]
+  ],
+  "LavaridgeTown": [
+   [
+    "NUMEL",
+    1,
+    "land"
+   ],
+   [
+    "SLUGMA",
+    1,
+    "land"
+   ],
+   [
+    "TORKOAL",
+    1,
+    "land"
+   ]
+  ],
+  "FortreeCity": [
+   [
+    "SWABLU",
+    2,
+    "land"
+   ],
+   [
+    "SWELLOW",
+    1,
+    "day"
+   ],
+   [
+    "NOCTOWL",
+    1,
+    "night"
+   ]
+  ],
+  "LilycoveCity": [
+   [
+    "WINGULL",
+    1,
+    "land"
+   ],
+   [
+    "SKITTY",
+    1,
+    "land"
+   ],
+   [
+    "PELIPPER",
+    1,
+    "day"
+   ],
+   [
+    "WAILMER",
+    1,
+    "water"
+   ]
+  ],
+  "MossdeepCity": [
+   [
+    "SOLROCK",
+    1,
+    "day"
+   ],
+   [
+    "LUNATONE",
+    1,
+    "night"
+   ],
+   [
+    "SPOINK",
+    1,
+    "land"
+   ],
+   [
+    "WINGULL",
+    1,
+    "land"
+   ],
+   [
+    "WAILMER",
+    1,
+    "water"
+   ]
+  ],
+  "SootopolisCity": [
+   [
+    "SPHEAL",
+    1,
+    "land"
+   ],
+   [
+    "LUVDISC",
+    2,
+    "water"
+   ]
+  ],
+  "PacifidlogTown": [
+   [
+    "CORSOLA",
+    2,
+    "water"
+   ],
+   [
+    "WINGULL",
+    1,
+    "land"
+   ]
+  ],
+  "EverGrandeCity": [
+   [
+    "ALTARIA",
+    1,
+    "land"
+   ],
+   [
+    "ROSELIA",
+    1,
+    "land"
+   ]
+  ]
+ }
+}

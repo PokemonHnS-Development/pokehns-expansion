@@ -26,7 +26,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TROPIUS",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ROSELIA",
       "x": 6,
       "y": 20,
       "elevation": 0,
@@ -52,7 +52,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ABSOL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KECLEON",
       "x": 4,
       "y": 7,
       "elevation": 0,
@@ -65,7 +65,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CASTFORM",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHIMECHO",
       "x": 43,
       "y": 10,
       "elevation": 0,
@@ -87,8 +87,36 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SafariZoneFuchsia_EventScript_Attendant1",
+      "script": "HoennSeek_EventScript_Hint_SafariBrushWarden",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_HOENN_KANGA_MOTHER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KANGASKHAN",
+      "x": 4,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_KangaMother",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_HOENN_KANGA_PAIR_BABY",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NONE",
+      "x": 5,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_KangaPairBaby",
+      "flag": "FLAG_HOENN_HIDE_KANGA_PAIR_BABY"
     }
   ],
   "warp_events": [],
@@ -110,6 +138,24 @@
       "var": "VAR_KANTO_SAFARI_ZONE_PROGRESS",
       "var_value": "1",
       "script": "SafariZoneFuchsia_Trigger1"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_KangaReunion"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_KangaReunion"
     }
   ],
   "bg_events": [],

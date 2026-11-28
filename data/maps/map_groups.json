@@ -105,7 +105,8 @@
     "gMapGroup_IndoorFiveIslandRoute_Frlg",
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
-    "gMapGroup_IndoorSevenIslandRoute_Frlg"
+    "gMapGroup_IndoorSevenIslandRoute_Frlg",
+    "gMapGroup_SpecialArea2_Hns"
   ],
   "gMapGroup_TownsAndRoutes_Hns": [
     "NewBarkTown_hns",
@@ -711,7 +712,27 @@
     "FuchsiaCity_SafariZoneBeach_hns",
     "FuchsiaCity_SafariZoneBrush_hns",
     "FuchsiaCity_SafariZoneMountain_hns",
-    "FuchsiaCity_SafariZoneCave_hns"
+    "FuchsiaCity_SafariZoneCave_hns",
+    "LilycoveCity_ContestLobby_hoenn",
+    "LilycoveCity_ContestHall_hoenn",
+    "Route34_FishingShack_hoenn",
+    "OlivineCity_HarborOffice_hoenn",
+    "OlivineCity_SailorsHouse_hoenn",
+    "OlivineCity_CaptainsHouse_hoenn",
+    "OlivineCity_TackleShop_hoenn",
+    "OlivineCity_Shipwright_hoenn",
+    "OlivineCity_KeepersHouse_hoenn",
+    "EcruteakCity_DanceTeacher_hoenn",
+    "Route34_BreedersHouse_hoenn",
+    "Route38_MoomooStoreroom_hoenn",
+    "BellchimeTrail_Lodge_hoenn",
+    "Route6_BugClub_hoenn",
+    "Route6_EngineersHouse_hoenn",
+    "CeladonCity_FloristsHouse_hoenn",
+    "MelemeleIsle_IslandHome_hoenn",
+    "MelemeleIsle_SurfShop_hoenn",
+    "TidalStrait_West_hoenn",
+    "TidalStrait_East_hoenn"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1186,7 +1207,9 @@
     "BattlePyramidSquare13_hns",
     "BattlePyramidSquare14_hns",
     "BattlePyramidSquare15_hns",
-    "BattlePyramidSquare16_hns"
+    "BattlePyramidSquare16_hns",
+    "SecretBase_SkyPillar_hoenn",
+    "SecretBase_SealedChamber_hoenn"
   ],
   "gMapGroup_SpecialArea": [
     "SafariZone_Northwest",
@@ -1813,5 +1836,23 @@
   ],
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
+  ],
+  "gMapGroup_SpecialArea2_Hns": [
+    "Route46_Meadow_hoenn",
+    "Route25_Garden_hoenn",
+    "Route6_Hideout_hoenn",
+    "Route113_Grotto_hoenn",
+    "Route119_Orchard_hoenn",
+    "Route131_Atoll_hoenn",
+    "MeteorFalls_Clifftop_hoenn",
+    "Route124_Trench_hoenn",
+    "ShoalCave_IceChamber_hoenn",
+    "Route45_MoonHollow_hoenn",
+    "Route45_BeekeeperHouse_hoenn",
+    "RockTunnel_OnixBore_hoenn",
+    "DarkCave_Burrow_hoenn",
+    "FuchsiaCity_SafariZoneHighland_hoenn",
+    "RuinsOfAlph_Sanctum_hoenn",
+    "Route41_Lagoon_hoenn"
   ]
 }

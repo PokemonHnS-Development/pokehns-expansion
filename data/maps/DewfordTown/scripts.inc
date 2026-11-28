@@ -79,6 +79,8 @@ DewfordTown_EventScript_OldRodFisherman::
 	end
 
 DewfordTown_EventScript_GiveOldRod::
+	checkitem ITEM_OLD_ROD @ Hoenn & Seek: already own it (HnS gives one)
+	goto_if_eq VAR_RESULT, TRUE, HoennSeek_EventScript_HaveOldRod
 	msgbox DewfordTown_Text_GiveYouOneOfMyRods, MSGBOX_DEFAULT
 	giveitem ITEM_OLD_ROD
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull

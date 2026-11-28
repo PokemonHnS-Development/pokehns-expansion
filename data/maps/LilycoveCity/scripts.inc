@@ -57,7 +57,7 @@ LilycoveCity_EventScript_Man3::
 LilycoveCity_EventScript_Girl::
 	lock
 	faceplayer
-	goto_if_set FLAG_BADGE07_GET, LilycoveCity_EventScript_GirlAquaGone
+	goto_if_set FLAG_HOENN_STAMP_GYM_7, LilycoveCity_EventScript_GirlAquaGone
 	msgbox LilycoveCity_Text_StrangeCaveInCove, MSGBOX_DEFAULT
 	release
 	end
@@ -112,7 +112,7 @@ LilycoveCity_EventScript_ExpertF::
 LilycoveCity_EventScript_ExpertM2::
 	lock
 	faceplayer
-	goto_if_set FLAG_BADGE07_GET, LilycoveCity_EventScript_ExpertM2AquaGone
+	goto_if_set FLAG_HOENN_STAMP_GYM_7, LilycoveCity_EventScript_ExpertM2AquaGone
 	msgbox LilycoveCity_Text_TeamAquaRenovatedCavern, MSGBOX_DEFAULT
 	release
 	end
@@ -323,7 +323,7 @@ LilycoveCity_EventScript_BattleBrendanMudkip::
 LilycoveCity_EventScript_DefeatedMay::
 	msgbox LilycoveCity_Text_MayGoingBackToLittleroot, MSGBOX_DEFAULT
 	setvar VAR_RESULT, FALSE
-	call_if_set FLAG_BADGE06_GET, LilycoveCity_EventScript_CheckFinalBadge
+	call_if_set FLAG_HOENN_STAMP_GYM_6, LilycoveCity_EventScript_CheckFinalBadge
 	call_if_eq VAR_RESULT, FALSE, LilycoveCity_EventScript_MayCollectBadges
 	call_if_eq VAR_RESULT, TRUE, LilycoveCity_EventScript_MayPokemonLeague
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
@@ -332,7 +332,7 @@ LilycoveCity_EventScript_DefeatedMay::
 	end
 
 LilycoveCity_EventScript_CheckFinalBadge::
-	goto_if_set FLAG_BADGE08_GET, LilycoveCity_EventScript_HasFinalBadge
+	goto_if_set FLAG_HOENN_STAMP_GYM_8, LilycoveCity_EventScript_HasFinalBadge
 	return
 
 LilycoveCity_EventScript_HasFinalBadge::
@@ -355,7 +355,7 @@ LilycoveCity_EventScript_MayBattleFrontier::
 LilycoveCity_EventScript_DefeatedBrendan::
 	msgbox LilycoveCity_Text_BrendanGoingBackToLittleroot, MSGBOX_DEFAULT
 	setvar VAR_RESULT, FALSE
-	call_if_set FLAG_BADGE06_GET, LilycoveCity_EventScript_CheckFinalBadge
+	call_if_set FLAG_HOENN_STAMP_GYM_6, LilycoveCity_EventScript_CheckFinalBadge
 	call_if_eq VAR_RESULT, FALSE, LilycoveCity_EventScript_BrendanCollectBadges
 	call_if_eq VAR_RESULT, TRUE, LilycoveCity_EventScript_BrendanPokemonLeague
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
@@ -603,24 +603,26 @@ LilycoveCity_Text_ImFromKanto:
 	.string "only in this area?$"
 
 LilycoveCity_Text_TeamAquaBeenTrainingWailmer:
-	.string "TEAM AQUA's been training their\n"
-	.string "WAILMER in the cove.\p"
-	.string "We SAILORS can't get our boats out\n"
-	.string "to sea with them in the way!$"
+	.string "TEAM AQUA trains their WAILMER in\n"
+	.string "the cove these days.\p"
+	.string "They used to block our boats.\n"
+	.string "Now those WAILMER tow us out to sea\l"
+	.string "when the current's bad!$"
 
 LilycoveCity_Text_SomeonePuntedTeamAquaOut:
-	.string "Ahoy, did you know?\p"
-	.string "Someone punted TEAM AQUA out of\n"
-	.string "the way for us!\p"
-	.string "That got the WAILMER out of the cove,\n"
-	.string "so we can get our boats out again.$"
+	.string "Ahoy! Did you hear?\p"
+	.string "TEAM AQUA runs sea rescues out of\n"
+	.string "their old HIDEOUT in the cove now.\p"
+	.string "Three years ago I'd have laughed.\n"
+	.string "Now they've fished me out twice!$"
 
 LilycoveCity_Text_SomeoneStoleMyPokemon:
-	.string "I was taking a relaxing snooze at the\n"
-	.string "seaside inn to the sound of waves…\p"
-	.string "When someone stole my POKéMON!\p"
-	.string "Who's the abductor?\n"
-	.string "TEAM AQUA? Is it TEAM AQUA?$"
+	.string "I was napping at the seaside inn\n"
+	.string "when a TEAM AQUA member knocked\l"
+	.string "on my door…\p"
+	.string "To bring back my POKéMON!\n"
+	.string "It had wandered off to the beach.\p"
+	.string "They're so polite these days!$"
 
 LilycoveCity_Text_MissingPokemonCameBack:
 	.string "My missing POKéMON…\n"
@@ -648,20 +650,18 @@ LilycoveCity_Text_SixtyYearsAgoHusbandProposed:
 LilycoveCity_Text_TeamAquaRenovatedCavern:
 	.string "Hm, you know of the peculiar cavern\n"
 	.string "in this cove?\p"
-	.string "That had been a natural formation,\n"
-	.string "but then that TEAM AQUA lot came\l"
-	.string "along and made their renovations.\p"
-	.string "They call themselves\n"
-	.string "the “nature-loving TEAM AQUA”!\p"
-	.string "But what they do and what they say\n"
-	.string "don't match at all!$"
+	.string "TEAM AQUA made it their HIDEOUT\n"
+	.string "years ago. Now it's a rescue base.\p"
+	.string "They even give tours on weekends.\n"
+	.string "The snacks are mostly seaweed.$"
 
 LilycoveCity_Text_TeamAquaLotGoneForGood:
 	.string "That cave in the cove…\p"
-	.string "I didn't notice it right away,\n"
-	.string "but it's completely empty now.\p"
-	.string "That TEAM AQUA lot, they must\n"
-	.string "have gone away for good.$"
+	.string "TEAM AQUA still works out of it,\n"
+	.string "patrolling the sea.\p"
+	.string "Not like that TEAM ROCKET lot up\n"
+	.string "in JOHTO, eh? I hear they tried a\l"
+	.string "comeback and flopped.$"
 
 LilycoveCity_Text_CitySign:
 	.string "LILYCOVE CITY\p"

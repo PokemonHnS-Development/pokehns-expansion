@@ -31,6 +31,7 @@ TinTower_RoofDay_MapScript_HoohPostStoryEncounter::
 	setflag FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS
 	clearflag FLAG_HIDE_HO_OH
 	setobjectxyperm LOCALID_HO_OH, 10, 6
+	call HoennSeek_EventScript_HoOhDawnGate @ Hoenn & Seek 2.0 part 35b: only at dawn, with every clue
 	end
 
 TinTower_RoofDay_EventScript_TalkToKimono::

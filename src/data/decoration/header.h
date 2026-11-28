@@ -1450,5 +1450,6 @@ const struct Decoration gDecorations[] =
         .price = 10000,
         .description = DecorDesc_REGISTEEL_DOLL,
         .tiles = DecorGfx_REGISTEEL_DOLL,
-    }
+    },
+    HOENN_DECORATION_HEADERS // Hoenn & Seek
 };

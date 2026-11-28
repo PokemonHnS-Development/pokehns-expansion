@@ -18,15 +18,15 @@
       "local_id": "LOCALID_MTSILVER_MOLTRES",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MOLTRES",
       "x": 17,
-      "y": 20,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtSilver_1F_MoltresRoom_EventScript_Moltres",
-      "flag": "FLAG_HIDE_MOLTRES"
+      "script": "HoennSeek_EventScript_MoltresRoost",
+      "flag": "FLAG_HOENN_HIDE_MOLTRES"
     }
   ],
   "warp_events": [
@@ -38,7 +38,35 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresRoostCall"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_MoltresRoostCall"
+    }
+  ],
   "bg_events": [],
   "game_version": "hns",
   "region": "REGION_JOHTO"

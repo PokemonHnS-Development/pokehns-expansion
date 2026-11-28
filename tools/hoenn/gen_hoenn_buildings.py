@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+"""Hoenn & Seek 2.0 (part 8a): interiors for HnS's fake buildings.
+
+Reads data/hoenn/buildings.json (its comment explains the format). For each building:
+  - data/maps/<name>/map.json: an indoor map on one of HnS's own house layouts (the
+    template), with the template's signs (bookshelves, TV...), a warp back out, and
+    the building's NPCs and decoration objects;
+  - data/maps/<name>/scripts.inc: the NPCs' scripts and texts (generated);
+  - the outside map gets a warp on the door tile (and loses HnS's "locked door" sign
+    there), so the door opens;
+  - map_groups.json lists the map and data/event_scripts.s includes its scripts. The 16
+    buildings of parts 8a-11 stay where they are in gMapGroup_SpecialArea_Hns; that group
+    is full (map numbers are s8 in warps, so 127 is the last), so a new building is
+    appended to gMapGroup_SpecialArea2_Hns. No existing map number moves either way.
+NPCs with "hints" are picked up by tools/hoenn/gen_hoenn_hints.py (run it afterwards).
+Re-runs rewrite the generated files and leave everything else alone. tools/hoenn/
+find_fake_doors.py lists the doors; hoenn-docs/buildings.md is the plan per building.
+"""
+import json, os, re, subprocess, sys
+
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+P = lambda *a: os.path.join(ROOT, *a)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from gen_hoenn_hints import wrap  # noqa: E402  (same word wrap as every other generated text)
+
+GROUP = "gMapGroup_SpecialArea_Hns"   # the first 16 buildings (full now)
+NEW_GROUP = "gMapGroup_SpecialArea2_Hns"  # where new buildings go (part 17r)
+GROUP_LIMIT = 128  # map numbers 0-127 fit the s8 in struct WarpData
+INCLUDE_AFTER = '\t.include "data/maps/LilycoveCity_ContestHall_hoenn/scripts.inc" @ Hoenn & Seek'
+LOCKED_SIGNS = {"Route7_EventScript_Door"}  # HnS's "The door is locked." sign on fake doors
+FACING = {"down": "MOVEMENT_TYPE_FACE_DOWN", "up": "MOVEMENT_TYPE_FACE_UP", "left": "MOVEMENT_TYPE_FACE_LEFT",
+          "right": "MOVEMENT_TYPE_FACE_RIGHT", "wander": "MOVEMENT_TYPE_WANDER_AROUND",
+          "look": "MOVEMENT_TYPE_LOOK_AROUND"}
+
+
+def load(path):
+    return json.load(open(P(path)))
+
+
+def save(path, data):
+    with open(P(path), "w") as fh:
+        json.dump(data, fh, indent=2)
+        fh.write("\n")
+
+
+def grid(map_name):
+    """mapinfo.py's walkability grid ('.' walkable, '#', '~', 'w' warp, 'o' object)."""
+    out = subprocess.run(["python3", P("tools/hoenn/emu/mapinfo.py"), map_name], capture_output=True, text=True).stdout
+    return [l[4:] for l in out.splitlines()[2:] if re.match(r"^\s*\d+ ", l)]
+
+
+def map_const(name):
+    return "MAP_" + re.sub(r"(?<=[a-z0-9])(?=[A-Z])", "_", name).upper()
+
+
+WEEKDAYS = ["HOENN_SUNDAY", "HOENN_MONDAY", "HOENN_TUESDAY", "HOENN_WEDNESDAY", "HOENN_THURSDAY",
+            "HOENN_FRIDAY", "HOENN_SATURDAY"]
+
+
+def daily_gift(name, k, g):
+    """A once-a-day gift: one item per weekday (Sunday first), a daily flag (from the
+    daily range in include/constants/hoenn_events.h, cleared by HoennClearDailyFlags), and
+    four texts: intro, after (given), full (bag full: the flag stays clear) and done."""
+    if len(g["items"]) != 7:
+        sys.exit("%s: object %d's daily_gift needs 7 items (Sunday..Saturday)" % (name, k))
+    base = "%s_EventScript_Npc%d" % (name, k)
+    tb = "%s_Text_Npc%d" % (name, k)
+    items = list(dict.fromkeys(g["items"]))  # one giveitem label per distinct item
+    sc = ["%s::" % base, "\tlock", "\tfaceplayer",
+          "\tgoto_if_set %s, %s_Done" % (g["flag"], base),
+          "\tmsgbox %s_Intro, MSGBOX_DEFAULT" % tb,
+          "\tspecialvar VAR_RESULT, GetDayOfWeek",
+          "\tswitch VAR_RESULT"]
+    sc += ["\tcase %s, %s_Item%d" % (WEEKDAYS[d], base, items.index(it)) for d, it in enumerate(g["items"])]
+    sc += ["\trelease", "\tend", ""]
+    for n, it in enumerate(items):
+        sc += ["%s_Item%d::" % (base, n), "\tgiveitem ITEM_%s" % it, "\tgoto %s_Given" % base, ""]
+    sc += ["%s_Given::" % base, "\tgoto_if_eq VAR_RESULT, FALSE, %s_Full" % base,
+           "\tsetflag %s" % g["flag"], "\tmsgbox %s_After, MSGBOX_DEFAULT" % tb, "\trelease", "\tend", "",
+           "%s_Full::" % base, "\tmsgbox %s_Full, MSGBOX_DEFAULT" % tb, "\trelease", "\tend", "",
+           "%s_Done::" % base, "\tmsgbox %s_Done, MSGBOX_DEFAULT" % tb, "\trelease", "\tend", ""]
+    tx = []
+    for key in ("intro", "after", "full", "done"):
+        tx += ["%s_%s:" % (tb, key.title()), '\t.string "%s$"' % wrap(g[key]), ""]
+    return sc, tx
+
+
+def build(b, templates):
+    name = b["name"]
+    tpl = load("data/maps/%s/map.json" % templates[b["template"]]["from"])
+    outside = load("data/maps/%s/map.json" % b["door"]["map"])
+    dx, dy = b["door"]["x"], b["door"]["y"]
+
+    # 1. The door: a warp on the outside map (reused if a re-run already added it).
+    warps = outside.setdefault("warp_events", [])
+    idx = next((i for i, w in enumerate(warps) if (w["x"], w["y"]) == (dx, dy)), None)
+    mid = map_const(name)
+    if idx is None:
+        warps.append({"x": dx, "y": dy, "elevation": 0, "dest_map": mid, "dest_warp_id": "0"})
+        idx = len(warps) - 1
+    elif warps[idx]["dest_map"] != mid:
+        sys.exit("%s: %s already has a warp at %d,%d to %s" % (name, b["door"]["map"], dx, dy, warps[idx]["dest_map"]))
+    outside["bg_events"] = [e for e in outside.get("bg_events") or []
+                            if not ((e["x"], e["y"]) == (dx, dy) and e.get("script") in LOCKED_SIGNS)]
+    save("data/maps/%s/map.json" % b["door"]["map"], outside)
+
+    # 2. The interior map: the template's layout, signs and entrance tile.
+    entrance = tpl["warp_events"][0]
+    g = grid(templates[b["template"]]["from"])
+    taken = {(entrance["x"], entrance["y"]), (entrance["x"], entrance["y"] - 1)}  # keep the way in clear
+    objects, scripts = [], ["@ Generated by tools/hoenn/gen_hoenn_buildings.py from data/hoenn/buildings.json. Do not edit.",
+                            "@ %s: %s" % (name, b["purpose"]), "",
+                            "%s_MapScripts::" % name, "\t.byte 0", ""]
+    texts = []
+    for k, o in enumerate(b["objects"]):
+        x, y = o["x"], o["y"]
+        if g[y][x] not in ".o" or (x, y) in taken:  # 'o': the template map's own objects, not copied
+            sys.exit("%s: object %d at %d,%d isn't a free floor tile" % (name, k, x, y))
+        taken.add((x, y))
+        move = FACING[o.get("facing", "down")]
+        if o["type"] == "mon":
+            gfx, script = "OBJ_EVENT_GFX_MON_BASE+SPECIES_%s" % o["species"], "HoennSeek_EventScript_HousePet"
+        elif "daily_gift" in o:
+            gfx, script = o["gfx"], "%s_EventScript_Npc%d" % (name, k)
+            s2, t2 = daily_gift(name, k, o["daily_gift"])
+            scripts += s2
+            texts += t2
+        elif "script" in o:
+            # A hand-written script (data/scripts/hoenn_buildings.inc: shops, gifts...).
+            # The object still runs a generated label, so gen_hoenn_hints.py can wrap it.
+            gfx, script = o["gfx"], "%s_EventScript_Npc%d" % (name, k)
+            scripts += ["%s::" % script, "\tgoto %s" % o["script"], ""]
+        else:
+            gfx, script = o["gfx"], "%s_EventScript_Npc%d" % (name, k)
+            scripts += ["%s::" % script, "\tmsgbox %s_Text_Npc%d, MSGBOX_NPC" % (name, k), "\tend", ""]
+            texts += ["%s_Text_Npc%d:" % (name, k), '\t.string "%s$"' % wrap(o["text"]), ""]
+        objects.append({"local_id": "LOCALID_%s_%d" % (mid[4:], k), "graphics_id": gfx, "x": x, "y": y,
+                        "elevation": 0, "movement_type": move,
+                        "movement_range_x": 1 if move == FACING["wander"] else 0,
+                        "movement_range_y": 1 if move == FACING["wander"] else 0,
+                        "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+                        "script": script, "flag": "0"})
+    # Signs: the template's own (bookshelves, TV...) unless the building lists its own.
+    if "signs" in b:
+        bg = []
+        for k, sgn in enumerate(b["signs"]):
+            label = "%s_EventScript_Sign%d" % (name, k)
+            scripts += ["%s::" % label, "\tmsgbox %s_Text_Sign%d, MSGBOX_SIGN" % (name, k), "\tend", ""]
+            texts += ["%s_Text_Sign%d:" % (name, k), '\t.string "%s$"' % wrap(sgn["text"]), ""]
+            bg.append({"type": "sign", "x": sgn["x"], "y": sgn["y"], "elevation": 0,
+                       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": label})
+    else:
+        bg = tpl.get("bg_events") or []
+    # Named texts for hand-written scripts: <name>_Text_<Key>.
+    for key, text in b.get("texts", {}).items():
+        texts += ["%s_Text_%s::" % (name, key), '\t.string "%s$"' % wrap(text), ""]
+    interior = {
+        "id": mid, "name": name, "layout": tpl["layout"],
+        "music": b.get("music", outside["music"]),
+        "region_map_section": outside["region_map_section"],
+        "requires_flash": False, "weather": "WEATHER_NONE", "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": False, "allow_escaping": False, "allow_running": True, "show_map_name": False,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL", "connections": None,
+        "object_events": objects,
+        "warp_events": [{"x": entrance["x"], "y": entrance["y"], "elevation": entrance.get("elevation", 0),
+                         "dest_map": outside["id"], "dest_warp_id": str(idx)}],
+        "coord_events": [],
+        "bg_events": bg,
+        "game_version": "hns",
+    }
+    if "region" in outside:
+        interior["region"] = outside["region"]
+    os.makedirs(P("data/maps", name), exist_ok=True)
+    save("data/maps/%s/map.json" % name, interior)
+    open(P("data/maps", name, "scripts.inc"), "w").write("\n".join(scripts + texts))
+
+    # 3. Map group and script include.
+    groups = load("data/maps/map_groups.json")
+    if not any(name in groups[g] for g in (GROUP, NEW_GROUP)):
+        groups[NEW_GROUP].append(name)
+        if len(groups[NEW_GROUP]) > GROUP_LIMIT:
+            sys.exit("%s is full: map numbers past 127 don't fit a warp's s8" % NEW_GROUP)
+        save("data/maps/map_groups.json", groups)
+    es = open(P("data/event_scripts.s")).read()
+    line = '\t.include "data/maps/%s/scripts.inc" @ Hoenn & Seek 2.0 (generated building)' % name
+    if line not in es:
+        es = es.replace(INCLUDE_AFTER + "\n", INCLUDE_AFTER + "\n" + line + "\n", 1) if INCLUDE_AFTER in es else sys.exit("include anchor missing")
+        open(P("data/event_scripts.s"), "w").write(es)
+
+
+def main():
+    cfg = load("data/hoenn/buildings.json")
+    for b in cfg["buildings"]:
+        build(b, cfg["templates"])
+    print("%d buildings" % len(cfg["buildings"]))
+
+
+if __name__ == "__main__":
+    main()

@@ -4,8 +4,7 @@ Route130_MapScripts::
 
 Route130_OnTransition:
 	call_if_ge VAR_SOOTOPOLIS_CITY_STATE, 4, Route130_EventScript_CheckSetAbnormalWeather
-	specialvar VAR_RESULT, IsMirageIslandPresent
-	goto_if_eq VAR_RESULT, TRUE, Route130_EventScript_SetMirageIslandLayout
+	@ Hoenn & Seek: Mirage Island is cut (sealed with the legendary sites).
 @ Mirage Island isn't currently visible, hide any objects on the island. Only the first flag is actually associated with anything.
 	setflag FLAG_TEMP_HIDE_MIRAGE_ISLAND_BERRY_TREE
 	setflag FLAG_TEMP_12
@@ -23,10 +22,6 @@ Route130_OnTransition:
 	setflag FLAG_TEMP_1E
 	setflag FLAG_TEMP_1F
 	setmaplayoutindex LAYOUT_ROUTE130
-	end
-
-Route130_EventScript_SetMirageIslandLayout::
-	setmaplayoutindex LAYOUT_ROUTE130_MIRAGE_ISLAND
 	end
 
 Route130_EventScript_CheckSetAbnormalWeather::

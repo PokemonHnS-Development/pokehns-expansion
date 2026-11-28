@@ -51,6 +51,7 @@ MtSilver_SummitDay_EventScript_RedOnDefeat::
 	fadescreenswapbuffers FADE_TO_BLACK
 	setflag FLAG_HIDE_MTSILVER_RED
 	removeobject LOCALID_MTSILVER_RED
+	removeobject LOCALID_MTSILVER_RED_PIKACHU  @ Hoenn & Seek 2.0 part 4b: his follower leaves with him
 	fadescreenswapbuffers FADE_FROM_BLACK
 	delay 180
 	fadescreenspeed FADE_TO_BLACK, 24

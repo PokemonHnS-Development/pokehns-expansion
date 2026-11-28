@@ -1,6 +1,7 @@
 .set LOCALID_ROUTE19CAVEKYOGRE, 1
 
 Route19_Cave_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HoennSeek_EventScript_KyogreCaveOnTransition @ Hoenn & Seek 2.0 part 36
 	.byte 0
 
 Route19Cave_EventScript_Kyogre::

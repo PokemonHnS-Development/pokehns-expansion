@@ -1,0 +1,27 @@
+wait 300
+mash START 6 40
+mash A 2 60
+wait 120
+mash A 70 30
+mash A 80 30
+press R
+wait 30
+press R
+wait 30
+press START
+wait 60
+mash A 3 40
+press R
+wait 30
+press R
+wait 30
+press R
+wait 30
+press R
+wait 30
+press A
+wait 60
+mash A 45 30
+mash A 10 30
+wait 60
+press R+START 6

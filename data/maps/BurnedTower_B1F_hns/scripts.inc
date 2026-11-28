@@ -6,6 +6,7 @@ BurnedTower_B1F_hns_MapScripts::
 
 BurnedTower_B1F_OnTransition: 
 	callnative SetTimeBasedEncounters
+	call HoennSeek_EventScript_BurnedTowerOnTransition @ Hoenn & Seek 2.0 part 15a
 	end
 
 BurnedTower_B1F_OnFrame::

@@ -35,6 +35,7 @@
 #include "tv.h"
 #include "window.h"
 #include "constants/event_bg.h"
+#include "constants/hoenn_base_entrances.h" // Hoenn & Seek
 #include "constants/decorations.h"
 #include "constants/event_objects.h"
 #include "constants/field_specials.h"
@@ -103,6 +104,7 @@ static const struct SecretBaseEntranceMetatiles sSecretBaseEntranceMetatiles[] =
     {.closedMetatileId = METATILE_General_BlueCaveIndent,       .openMetatileId = METATILE_General_BlueCaveOpen},
     {.closedMetatileId = METATILE_Fallarbor_BrownCaveIndent,    .openMetatileId = METATILE_Fallarbor_BrownCaveOpen},
     {.closedMetatileId = METATILE_Fortree_SecretBase_Shrub,     .openMetatileId = METATILE_Fortree_SecretBase_ShrubOpen},
+    HOENN_SECRET_BASE_ENTRANCE_METATILES // Hoenn & Seek: Johto/Kanto entrances (constants/hoenn_base_entrances.h)
 };
 
 // mapNum, warpId, x, y
@@ -133,6 +135,7 @@ static const u8 sSecretBaseEntrancePositions[NUM_SECRET_BASE_GROUPS * 4] =
     [SECRET_BASE_SHRUB2]       = MAP_NUM(MAP_SECRET_BASE_SHRUB2),       0,  1,  2,
     [SECRET_BASE_SHRUB3]       = MAP_NUM(MAP_SECRET_BASE_SHRUB3),       0,  7,  8,
     [SECRET_BASE_SHRUB4]       = MAP_NUM(MAP_SECRET_BASE_SHRUB4),       0,  9,  6,
+    HOENN_SECRET_BASE_ENTRANCE_POSITIONS // Hoenn & Seek: chamber bases (constants/hoenn_secret_bases.h)
 };
 
 #define GET_BASE_MAP_NUM(group)    (sSecretBaseEntrancePositions[(group) + 0])
@@ -509,7 +512,8 @@ void EnterNewlyCreatedSecretBase(void)
 bool8 CurMapIsSecretBase(void)
 {
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SECRET_BASE_RED_CAVE1)
-     && (u8)gSaveBlock1Ptr->location.mapNum <= MAP_NUM(MAP_SECRET_BASE_SHRUB4))
+     && ((u8)gSaveBlock1Ptr->location.mapNum <= MAP_NUM(MAP_SECRET_BASE_SHRUB4)
+      || HOENN_IS_CHAMBER_BASE_MAP_NUM(gSaveBlock1Ptr->location.mapNum))) // Hoenn & Seek
         return TRUE;
     else
         return FALSE;

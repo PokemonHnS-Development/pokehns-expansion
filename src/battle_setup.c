@@ -59,6 +59,7 @@
 #include "constants/weather.h"
 #include "fishing.h"
 #include "nuzlocke.h"
+#include "hoenn_battle_bg.h" // Hoenn & Seek (2.0 part 13b)
 
 enum TransitionType
 {
@@ -200,6 +201,7 @@ const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES] =
     [REMATCH_KENNY_HNS]   = REMATCH(TRAINER_KENNY_HNS,    TRAINER_KENNY_2_HNS,   TRAINER_KENNY_3_HNS,   TRAINER_KENNY_3_HNS,   TRAINER_KENNY_3_HNS,   MAP_ROUTE13_HNS),
     [REMATCH_JOEL_HNS]    = REMATCH(TRAINER_JOEL_HNS,     TRAINER_JOEL_2_HNS,    TRAINER_JOEL_3_HNS,    TRAINER_JOEL_3_HNS,    TRAINER_JOEL_3_HNS,    MAP_ROUTE17_HNS),
     [REMATCH_CHARLES_HNS] = REMATCH(TRAINER_CHARLES_HNS,  TRAINER_CHARLES_2_HNS, TRAINER_CHARLES_3_HNS, TRAINER_CHARLES_3_HNS, TRAINER_CHARLES_3_HNS, MAP_ROUTE17_HNS),
+#include "data/hoenn_rematches.h" // Hoenn & Seek: Hoenn phone trainers (part 16c)
 };
 #else
 const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES] =
@@ -467,6 +469,8 @@ void BattleSetup_StartRoamerBattle(void)
         song = MUS_HG_VS_RAIKOU;
     else
         song = MUS_HG_VS_SUICUNE; 
+    if (species == SPECIES_ABSOL) // Hoenn & Seek 2.0 part 22a: Absol gets the normal wild theme
+        song = 0;
 #endif
     CreateBattleStartTask(GetWildBattleTransition(), song);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
@@ -942,6 +946,9 @@ static const struct {
     {MAP_SINJOH_RUINS_REGIDRACO_ROOM_HNS,        BATTLE_ENVIRONMENT_SNOW_CAVE},
     {MAP_SINJOH_RUINS_REGIGIGAS_ROOM_HNS,        BATTLE_ENVIRONMENT_SNOW_CAVE},
     {MAP_SINJOH_RUINS_TEMPLE_HNS,                BATTLE_ENVIRONMENT_SNOW_CAVE},
+#if IS_HNS
+#include "data/hoenn_battle_environments.h" // Hoenn & Seek (part 20a)
+#endif
 };
 
 static s32 GetMapDefaultEnvironment(u16 mapId)
@@ -1007,6 +1014,9 @@ enum BattleEnvironments BattleSetup_GetEnvironmentId(void)
     // Per-map default: if this map is in the table, use its environment
     currentMap = (gSaveBlock1Ptr->location.mapGroup << 8) | gSaveBlock1Ptr->location.mapNum;
     mapDefault = GetMapDefaultEnvironment(currentMap);
+#if IS_HNS
+    mapDefault = HoennMapEnvironment(mapDefault, tileBehavior); // Hoenn & Seek: Route 111's desert (2.0 part 13b)
+#endif
     if (mapDefault >= 0)
         return mapDefault;
 
@@ -1291,12 +1301,12 @@ static void TryUpdateGymLeaderRematchFromTrainer(void)
 
 static u16 GetTrainerAFlag(void)
 {
-    return TRAINER_FLAGS_START + TRAINER_BATTLE_PARAM.opponentA;
+    return TRAINER_FLAG_ID(TRAINER_BATTLE_PARAM.opponentA);
 }
 
 static u16 GetTrainerBFlag(void)
 {
-    return TRAINER_FLAGS_START + TRAINER_BATTLE_PARAM.opponentB;
+    return TRAINER_FLAG_ID(TRAINER_BATTLE_PARAM.opponentB);
 }
 
 static bool32 IsPlayerDefeated(u32 battleOutcome)
@@ -1507,7 +1517,7 @@ void SetUpTwoTrainersBattle(void)
 bool32 GetTrainerFlagFromScriptPointer(const u8 *data)
 {
     TrainerBattleParameter *temp = (TrainerBattleParameter*)(data + OPCODE_OFFSET);
-    return FlagGet(TRAINER_FLAGS_START + temp->params.opponentA);
+    return FlagGet(TRAINER_FLAG_ID(temp->params.opponentA));
 }
 
 bool32 GetRematchFromScriptPointer(const u8 *data)
@@ -1565,17 +1575,17 @@ static void UNUSED SetBattledTrainerFlag(void)
 
 bool8 HasTrainerBeenFought(u16 trainerId)
 {
-    return FlagGet(TRAINER_FLAGS_START + trainerId);
+    return FlagGet(TRAINER_FLAG_ID(trainerId));
 }
 
 void SetTrainerFlag(u16 trainerId)
 {
-    FlagSet(TRAINER_FLAGS_START + trainerId);
+    FlagSet(TRAINER_FLAG_ID(trainerId));
 }
 
 void ClearTrainerFlag(u16 trainerId)
 {
-    FlagClear(TRAINER_FLAGS_START + trainerId);
+    FlagClear(TRAINER_FLAG_ID(trainerId));
 }
 
 void BattleSetup_StartTrainerBattle(void)

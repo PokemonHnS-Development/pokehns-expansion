@@ -1,0 +1,136 @@
+{
+  "id": "MAP_TIDAL_STRAIT_WEST_HOENN",
+  "name": "TidalStrait_West_hoenn",
+  "layout": "LAYOUT_TIDAL_STRAIT_WEST_HOENN",
+  "music": "MUS_HG_ROUTE34",
+  "region_map_section": "MAPSEC_ROUTE_41",
+  "requires_flash": false,
+  "weather": "WEATHER_RAIN",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE41_HNS",
+      "offset": -32,
+      "direction": "up"
+    }
+  ],
+  "game_version": "hns",
+  "region": "REGION_JOHTO",
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WHIRLPOOL_HNS",
+      "x": 14,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_TOWER_BEAM",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TidalStrait_West_hoenn_EventScript_Whirlpool",
+      "flag": "FLAG_HOENN_STRAIT_OPEN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WHIRLPOOL_HNS",
+      "x": 15,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_TOWER_BEAM",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TidalStrait_West_hoenn_EventScript_Whirlpool",
+      "flag": "FLAG_HOENN_STRAIT_OPEN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WHIRLPOOL_HNS",
+      "x": 14,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_TOWER_BEAM",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TidalStrait_West_hoenn_EventScript_Whirlpool",
+      "flag": "FLAG_HOENN_STRAIT_OPEN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WHIRLPOOL_HNS",
+      "x": 15,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_TOWER_BEAM",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TidalStrait_West_hoenn_EventScript_Whirlpool",
+      "flag": "FLAG_HOENN_STRAIT_OPEN"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 35,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TidalStrait_West_hoenn_EventScript_ToHoenn"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 35,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TidalStrait_West_hoenn_EventScript_ToHoenn"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 35,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TidalStrait_West_hoenn_EventScript_ToHoenn"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 35,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TidalStrait_West_hoenn_EventScript_ToHoenn"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 35,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TidalStrait_West_hoenn_EventScript_ToHoenn"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 35,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TidalStrait_West_hoenn_EventScript_ToHoenn"
+    }
+  ],
+  "bg_events": []
+}

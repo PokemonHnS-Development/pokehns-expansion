@@ -1,0 +1,47 @@
+{
+  "_comment": [
+    "Hoenn & Seek 2.0 (parts 6a/6b): wild encounter tables for special-weather days.",
+    "Read by tools/hoenn/gen_hoenn_weather_wild.py, which writes data/hoenn/wild_encounters_weather.json",
+    "(appended last by tools/wild_encounters/wild_encounters_to_header.py) and the review list",
+    "hoenn-docs/weather-tables.md.",
+    "For every map in data/hoenn/weather_cycles.json whose region is listed in 'regions', each of the map's",
+    "tables (every time of day) gets a weather copy:",
+    "  1. by type rule: the slots keep their rates and levels, but the species are dealt out again. Each one's",
+    "     target share is its normal share x2 (boosted type), x0.25 (suppressed) or x1, scaled to fill the slots;",
+    "     anything with a normal share of 5 % or more keeps a slot. Fishing and Rock Smash are copied.",
+    "  2. extras: a few weather-only Pokemon replace the rarest slots (land slots 8-11 are 4, 4, 1, 1 %;",
+    "     water slots 3-4 are 4, 1 %). Base species are evolved to the slot's level by level evolutions.",
+    "  3. maps: per-map hand fixes after review (slot replacements, or 'skip': true for no weather table).",
+    "Weather beats time of day: on a special day the weather table for the current time is used.",
+    "Castform is special-weather only (its Fuchsia Safari slot and overworld object were replaced)."
+  ],
+  "regions": ["hoenn", "johto_kanto"],
+  "rules": {
+    "RAIN":              {"suffix": "Rain",  "boost": ["WATER", "BUG"],              "suppress": ["FIRE", "GROUND", "ROCK"]},
+    "RAIN_THUNDERSTORM": {"suffix": "Storm", "boost": ["ELECTRIC", "WATER"],         "suppress": ["FLYING", "FIRE"]},
+    "FOG_HORIZONTAL":    {"suffix": "Fog",   "boost": ["GHOST", "DARK", "PSYCHIC"],  "suppress": ["FLYING"]},
+    "SNOW":              {"suffix": "Snow",  "boost": ["ICE"],                       "suppress": ["FIRE", "GRASS", "BUG"]},
+    "ROUTE119_CYCLE":    {"same_as": "RAIN_THUNDERSTORM"},
+    "ROUTE123_CYCLE":    {"same_as": "RAIN"}
+  },
+  "extras": {
+    "hoenn": {
+      "RAIN":              {"land": {"8": "LOTAD", "9": "SURSKIT", "10": "CASTFORM"}, "water": {"3": "LOTAD", "4": "SURSKIT"}},
+      "RAIN_THUNDERSTORM": {"land": {"8": "ELECTRIKE", "9": "PLUSLE", "10": "CASTFORM", "11": "MINUN"}, "water": {"3": "CHINCHOU"}},
+      "FOG_HORIZONTAL":    {"land": {"8": "SHUPPET", "9": "DUSKULL", "10": "CASTFORM"}}
+    },
+    "_comment_johto_kanto": "Johto/Kanto extras are Johto/Kanto species (2.0-plan section 10 moves Hoenn species home), and no Castform (Hoenn's Weather Institute).",
+    "johto_kanto": {
+      "RAIN":              {"land": {"8": "POLIWAG", "9": "WOOPER", "10": "MARILL"}, "water": {"3": "PSYDUCK", "4": "POLIWAG"}},
+      "RAIN_THUNDERSTORM": {"land": {"8": "MAREEP", "9": "PIKACHU", "10": "MAGNEMITE", "11": "VOLTORB"}, "water": {"3": "CHINCHOU"}},
+      "FOG_HORIZONTAL":    {"land": {"8": "GASTLY", "9": "MISDREAVUS", "10": "MURKROW"}, "water": {"3": "SLOWPOKE", "4": "STARYU"}},
+      "SNOW":              {"land": {"8": "SWINUB", "9": "DELIBIRD", "10": "JYNX"}, "water": {"3": "SEEL"}}
+    }
+  },
+  "maps": {
+    "_comment": "Castform is a little less rare near the Weather Institute: its slot 11 too.",
+    "Route119": {"land": {"11": "CASTFORM"}},
+    "Route120": {"land": {"11": "CASTFORM"}},
+    "Route123": {"land": {"11": "CASTFORM"}}
+  }
+}

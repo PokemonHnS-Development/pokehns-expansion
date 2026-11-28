@@ -1,4 +1,5 @@
 #include "global.h"
+#include "hoenn.h"
 #if IS_HNS
 #include "event_data.h"
 #include "pokenav.h"
@@ -458,6 +459,7 @@ static void GenerateOPTSegment(struct Pokenav_Radio *radio)
     case OPT_PHASE_INTRO:
         radio->lines[n++] = sRadioText_OPT_Intro;
         radio->lines[n++] = sRadioText_OPT_WithMeMary;
+        n += HoennRadioEusineReport(&radio->lines[n], radio->lineBuffers[0], radio->lineBuffers[1]); // Hoenn & Seek 2.0 part 35b: EUSINE's notes
         radio->optPhase = OPT_PHASE_POKEMON;
         break;
 
@@ -895,6 +897,9 @@ static void GenerateStationContent(struct Pokenav_Radio *radio, u8 station)
         break;
 
     case RADIO_STATION_UNOWN:
+        n += HoennRadioUnownBroadcast(&radio->lines[n], radio->lineBuffers[0]); // Hoenn & Seek 2.0 part 28: the cipher's signal
+        break;
+
     case RADIO_STATION_POKE_FLUTE:
     case RADIO_STATION_EVOLUTION:
         break;

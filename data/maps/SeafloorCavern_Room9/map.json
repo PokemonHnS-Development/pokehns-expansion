@@ -133,5 +133,13 @@
       "script": "SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "secret_base",
+      "x": 13,
+      "y": 40,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_HOENN_SEAFLOOR_CAVERN"
+    }
+  ]
 }

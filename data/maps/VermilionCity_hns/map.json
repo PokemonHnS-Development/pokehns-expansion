@@ -314,7 +314,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "VermilionCity_EventScript_OldSeaMap",
+      "script": "HoennSeek_EventScript_VermilionBigPearl",
       "flag": "FLAG_ITEM_VERMILION_OLD_SEA_MAP"
     },
     {
@@ -619,6 +619,76 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_VERMILION_CITY_SAMSON"
+    },
+    {
+      "local_id": "LOCALID_HOENN_FIRE_LEADER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
+      "x": 37,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_FireLeader",
+      "flag": "FLAG_HOENN_HIDE_SQUAD_VERMILION"
+    },
+    {
+      "local_id": "LOCALID_HOENN_FIRE_SQUAD_1",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
+      "x": 34,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_FireSquirtle",
+      "flag": "FLAG_HOENN_HIDE_SQUAD_VERMILION"
+    },
+    {
+      "local_id": "LOCALID_HOENN_FIRE_SQUAD_2",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
+      "x": 35,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_FireSquirtle",
+      "flag": "FLAG_HOENN_HIDE_SQUAD_VERMILION"
+    },
+    {
+      "local_id": "LOCALID_HOENN_FIRE_SQUAD_3",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
+      "x": 36,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_FireSquirtle",
+      "flag": "FLAG_HOENN_HIDE_SQUAD_VERMILION"
+    },
+    {
+      "local_id": "LOCALID_HOENN_VERMILION_OFFICER",
+      "graphics_id": "OBJ_EVENT_GFX_OFFICER_HNS",
+      "x": 31,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HoennSeek_EventScript_VermilionOfficer",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -769,6 +839,141 @@
       "var": "VAR_VERMILION_CITY_SAMSON",
       "var_value": "1",
       "script": "VermilionCity_EventScript_TriggerSamson"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 37,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
+    },
+    {
+      "type": "trigger",
+      "x": 37,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "1",
+      "script": "HoennSeek_EventScript_VermilionFire"
     }
   ],
   "bg_events": [

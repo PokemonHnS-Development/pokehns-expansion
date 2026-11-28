@@ -280,6 +280,13 @@
       "elevation": 0,
       "dest_map": "MAP_GATE_ECRUTEAK_CITY_ROUTE38_HNS",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 34,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE38_MOOMOO_STOREROOM_HOENN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

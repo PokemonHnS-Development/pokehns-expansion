@@ -920,7 +920,10 @@ Route110_Text_AquaWasHere:
 	.string "Someone painted that onto this sign,\n"
 	.string "but then someone else painted over it.\p"
 	.string "“TEAM MAGMA rules!” is what it\n"
-	.string "says now.$"
+	.string "says now.\p"
+	.string "Underneath, in very neat writing:\n"
+	.string "“Please stop painting the signs.\l"
+	.string "--ROUTE 110 SIGN COMMITTEE”$"
 
 Route110_Text_Route103Sign:
 	.string "ROUTE 110\n"

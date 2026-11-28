@@ -18,11 +18,55 @@ Pic: Brendan
 Gender: Male
 Music: Male
 
-Buffie (Wobbuffet)
+Lapras
+Modest Nature
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Surf
+- Waterfall
+- Whirlpool
+- Dive
+
+Machamp
+Adamant Nature
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rock Smash
+- Strength
+- Headbutt
+- Dig
+
+Pidgeot
+Jolly Nature
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fly
+- Cut
+- Secret Power
+- Sweet Scent
+
+Blissey
+Bold Nature
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Soft-Boiled
+- Flash
+- Teleport
+- Ice Beam
+
+Miltank
+Careful Nature
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Milk Drink
+- Headbutt
+- Secret Power
+- Body Slam
+
+Wobbuffet
 Brave Nature
 Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Def / 6 SpA
 - Earthquake
 - Flamethrower
 - Celebrate

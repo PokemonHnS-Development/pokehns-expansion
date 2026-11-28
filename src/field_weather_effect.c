@@ -7,6 +7,7 @@
 #include "random.h"
 #include "script.h"
 #include "constants/weather.h"
+#include "hoenn_time.h"
 #include "constants/songs.h"
 #include "constants/rgb.h"
 #include "sound.h"
@@ -2529,7 +2530,7 @@ u8 GetSavedWeather(void)
 void SetSavedWeatherFromCurrMapHeader(void)
 {
     u8 oldWeather = gSaveBlock1Ptr->weather;
-    gSaveBlock1Ptr->weather = TranslateWeatherNum(gMapHeader.weather);
+    gSaveBlock1Ptr->weather = TranslateWeatherNum(HoennCycleMapWeather(gMapHeader.weather)); // Hoenn & Seek: daily cycles
     UpdateRainCounter(gSaveBlock1Ptr->weather, oldWeather);
 }
 

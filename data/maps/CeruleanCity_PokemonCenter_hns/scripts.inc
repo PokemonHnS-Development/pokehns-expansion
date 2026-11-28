@@ -1,5 +1,6 @@
 CeruleanCity_PokemonCenter_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CeruleanCity_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, HoennSeek_CeruleanPC_OnFrame @ Hoenn & Seek 2.0 part 16
 	.byte 0
 
 CeruleanCity_PokemonCenter_OnTransition::

@@ -258,6 +258,13 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MtMoon_Cave_EventScript_Sign"
+    },
+    {
+      "type": "secret_base",
+      "x": 18,
+      "y": 20,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_HOENN_MT_MOON"
     }
   ],
   "game_version": "hns",

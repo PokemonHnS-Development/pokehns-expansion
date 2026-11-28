@@ -5,6 +5,7 @@
 #include "event_data.h"
 #include "field_specials.h"
 #include "field_weather.h"
+#include "hoenn_time.h" // Hoenn & Seek
 #include "lottery_corner.h"
 #include "main.h"
 #include "overworld.h"
@@ -33,6 +34,8 @@ void DoTimeBasedEvents(void)
     {
         RtcCalcLocalTime();
         UpdatePerDay(&gLocalTime);
+        HoennUpdatePerWeek(gLocalTime.days); // Hoenn & Seek: weekly flags (src/hoenn_time.c)
+        HoennUpdatePerNight(gLocalTime.days, gLocalTime.hours); // Hoenn & Seek: nightly flags
         UpdatePerMinute(&gLocalTime);
     }
 }

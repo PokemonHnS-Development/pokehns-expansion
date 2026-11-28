@@ -1704,6 +1704,20 @@ static void Task_PlayPokeFlute(u8 taskId)
     gTasks[taskId].func = Task_DisplayPokeFluteMessage;
 }
 
+// Hoenn & Seek 2.0 part 24b: the Sand Chime closes the bag and runs its
+// script on the field (data/scripts/hoenn_hidden.inc decides what happens).
+static void Task_HoennRingSandChime(u8 taskId)
+{
+    ScriptContext_SetupScript(HoennSeek_EventScript_RingSandChime);
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_HoennSandChime(u8 taskId)
+{
+    sItemUseOnFieldCB = Task_HoennRingSandChime;
+    SetUpItemUseOnFieldCallback(taskId);
+}
+
 void ItemUseOutOfBattle_PokeFlute(u8 taskId)
 {
     bool32 wokeSomeoneUp = FALSE;
