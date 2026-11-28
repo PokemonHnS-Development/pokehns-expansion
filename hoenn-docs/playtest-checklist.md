@@ -323,7 +323,7 @@ Hint NPCs (one per Pokémon Center in most towns, list in `data/hoenn/npc_hints.
 - [ ] Cozmo's wife's own line still says Cozmo went to Meteor Falls "with some people from TEAM MAGMA" (Emerald's text, pre-existing): fine for reformed Magma, or reword?
 
 ## General
-- [ ] The release build plays the same as the debug build (all testing so far used debug builds).
+- [ ] The release build plays the same as the debug build. (39a: a new game on the release build reaches New Bark, the clock scene and the weekday prompt; everything else was tested on debug builds.)
 - [ ] Every phone line and in-person line about Brendan & May still makes sense in the order a real player hits them.
 - [ ] Day/night tinting on Hoenn windows and lamps.
 - [ ] Walking (not warping) Slateport → Route 110 → Route 103 → Oldale → Littleroot as the aide describes.
