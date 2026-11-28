@@ -14,6 +14,7 @@
 #include "sound.h"
 #include "string_util.h"
 #include "constants/abilities.h"
+#include "constants/metatile_behaviors.h"
 #include "constants/event_objects.h"
 #include "constants/items.h"
 #include "constants/opponents.h"
@@ -272,6 +273,19 @@ u16 HoennFindPartySpecies(void)
          && gSpecialVar_0x8004 != SPECIES_NONE)
             return i;
     return PARTY_SIZE;
+}
+
+// 1.1 fix (found in the 2.1-27 review, Nov 28): Petalburg Gym's room doors have
+// MB_PETALBURG_GYM_DOOR, which this engine's MetatileBehavior_IsWarpDoor doesn't
+// count, so walking up into an open room door did nothing and Norman's room
+// couldn't be reached (since 1.0). The door counts as a warp door, but only in
+// that gym: HnS's own tilesets use the same behavior elsewhere (Pokemon Center,
+// Goldenrod's tunnel, Viridian Gym), and those stay as they are.
+bool32 HoennIsPetalburgGymDoor(u8 metatileBehavior)
+{
+    return metatileBehavior == MB_PETALBURG_GYM_DOOR
+        && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PETALBURG_CITY_GYM)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PETALBURG_CITY_GYM);
 }
 
 #endif // IS_HNS

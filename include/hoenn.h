@@ -34,6 +34,7 @@ u32 HoennGymAceLevel(void);
 u8 HoennScaleTrainerMonLevel(const struct Trainer *trainer, u8 level);
 void HoennSetupScaledWildBattle(void);
 u16 HoennGetStampCount(void);
+bool32 HoennIsPetalburgGymDoor(u8 metatileBehavior); // 1.1 fix: Petalburg Gym's room doors (src/hoenn_specials.c)
 u16 HoennBufferFollower(void);
 void HoennPushStoneList(void);
 u16 HoennStoneFromIndex(void);

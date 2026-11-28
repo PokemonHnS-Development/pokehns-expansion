@@ -1,5 +1,6 @@
 #include "global.h"
 #include "metatile_behavior.h"
+#include "hoenn.h"
 #include "constants/metatile_behaviors.h"
 
 #define TILE_FLAG_HAS_ENCOUNTERS (1 << 0)
@@ -239,6 +240,10 @@ bool8 MetatileBehavior_IsWarpDoor(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_ANIMATED_DOOR)
         return TRUE;
+#if IS_HNS
+    else if (HoennIsPetalburgGymDoor(metatileBehavior)) // Hoenn & Seek 1.1: its room doors
+        return TRUE;
+#endif
     else
         return FALSE;
 }
