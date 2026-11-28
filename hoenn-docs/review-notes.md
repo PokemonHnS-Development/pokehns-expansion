@@ -356,7 +356,7 @@ Tested on the branch synced onto `hoenn` at #107 (no conflicts); `regen_all.sh -
 - Not played: the Lugia battle itself (HnS's, on the playtest list).
 - Grid: `review-34b.png` in the project's `hoenn-2.0/review/`.
 
-### 52. Review of 37 (PR #104, lane A) (reviewer, Nov 28) — **merged before review (by lane A, at Aidan's request); reviewed after the merge on Bryan's call; choices waiting for Bryan**
+### 52. Review of 37 (PR #104, lane A) (reviewer, Nov 28) — **merged before review (by lane A, at Aidan's request); reviewed after the merge on Bryan's call; choices confirmed by Bryan (Nov 28)**
 Tested on `hoenn` at `cdacfafc` (#104's merge): debug build 32,946,132 B (594 KB free), the same as lane A's size row.
 - **Read:** the Part 37 section of `hoenn_lane_a.inc`, `HoennWishCount` and `HoennDeoxysSignalNight`, the map.json swaps (white rock, Jirachi, the 2F scientist, the Olivine fan, the Sinjoh linguist), the Sinjoh Ruins OnTransition hook, the one-line Arceus gate, the three event calls and the new hint lines and rumors.
 - **Played (debug save):**
@@ -367,7 +367,7 @@ Tested on `hoenn` at `cdacfafc` (#104's merge): debug build 32,946,132 B (594 KB
   - **Arceus.** At storyline 12 without the inscription, Arceus "waits". With it, HnS's catchable battle starts.
   - **Calls.** May's wishes call and May's Regi call both ring.
 - **No bugs found.**
-- **Choices for Bryan:**
+- **Choices (confirmed by Bryan):**
   - Jirachi needs three night wishes, then Monday night at the white rock. HnS's rock worked on any night.
   - A knocked-out Jirachi can come back on a later Monday. HnS's didn't return until the next Hall of Fame.
   - The AURORA TICKET comes from three nights of the Space Center signal. HnS's Olivine fan used to give it to any champion.
