@@ -143,6 +143,7 @@ Phase G sizes (38 on, one part at a time; measured on `hoenn` with every lane pa
 | Part | Release | Debug |
 |---|---|---|
 | **2.0** part 38 (sweep: hint lines take turns, 7 rumors, event calls spaced out (lane A's start); text audit + 22 re-wrapped texts, night weekdays, Jirachi's nightly flag, 2 refurnished rooms, Damian moved, denser smoke: +4,160 B release, +4,208 B debug over 37) | 32,792,948 / 743 KB | 32,950,340 / 589 KB |
+| 1.1 fix (Petalburg Gym's room doors open into their rooms; found in the 2.1-27 review: +32 B release, +144 B debug over 38) | 32,792,980 / 743 KB | 32,950,484 / 589 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
@@ -233,6 +234,7 @@ Phase G sizes (38 on, one part at a time; measured on `hoenn` with every lane pa
   - Each leader's defeat script calls `HoennSeek_EventScript_GymRareCandies` (3 Rare Candies). Gym TMs are Emerald's (all are in HnS's TM list).
   - **League:** the door guards want 8 Hoenn badges; the lobby's OnTransition resets the run (`HoennSeek_EventScript_ResetHoennE4`). The E4 rooms use `VAR_HOENN_E4_STATE`, not HnS's `VAR_ELITE_4_STATE`. After Wallace: the League badge (`FLAG_HOENN_STAMP_WALLACE`), the Hall of Fame machine, then back to the lobby. **No `GameClear` and no Emerald game-clear flags** (that's HnS's ending). The HoF script waits on `FLDEFF_HALL_OF_FAME_RECORD_FRLG`: HnS's record effect removes that ID, so waiting on the Emerald one hangs.
   - E4 (Lv 76–81) and Wallace (Lv 80–84) have fixed teams in `trainer_parties.party`.
+  - **Petalburg Gym's room doors (1.1 fix):** their bottom tile is `MB_PETALBURG_GYM_DOOR`, which this engine's `MetatileBehavior_IsWarpDoor` didn't count, so the doors never warped (since 1.0; Norman was unreachable without warping). `HoennIsPetalburgGymDoor` (`src/hoenn_specials.c`, one `#if IS_HNS` line in `src/metatile_behavior.c`) counts it, only on that map: HnS's own tilesets (Pokémon Center, Goldenrod's tunnel, Viridian Gym) use the same behavior and stay as they were.
   - **Rematches:** after Wallace, talking to a leader offers a rematch (`HoennSeek_EventScript_Rematch<Leader>`, which clears the trainer flag). `HoennGymAceLevel` returns 85 once `FLAG_HOENN_STAMP_WALLACE` is set, so leaders and gym trainers scale up.
   - `gen_hoenn_ids.py` ignores `FLAG_HOENN_*` / `VAR_HOENN_*` (hand-defined).
 - **Teams and rivals (part 16a):** scripts in `data/scripts/hoenn_teams.inc`, flags `FLAG_HOENN_AQUA_QUEST` … `FLAG_HOENN_BM_EGGS` (custom 0x18–0x24). Design: `claude/hns-hoenn-aqua-magma-quests.md`.

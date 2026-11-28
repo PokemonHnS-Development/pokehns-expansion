@@ -11,6 +11,7 @@ Things each part couldn't check in the emulator, so Bryan's real playthrough cov
 - [ ] The E4 and Wallace with **real** battles: are Lv 76–84 fair?
 - [ ] Leader rematches after Wallace: the prompt, the Lv 85 teams, and that the leader stays rematchable.
 - [ ] No real Hall of Fame screen yet (only the machine animation) — decide whether that's fine.
+- [ ] **Petalburg Gym's room doors (1.1 fix, Nov 28):** until this fix, walking up into an open room door did nothing, so Norman's room couldn't be reached without the debug menu. Emulator: both lobby doors now open into their rooms. Walk the whole gym once (each room's door opens after its trainer) and check you can leave every room the way you came.
 
 ## Part 16a — Teams and rivals
 - [x] Maxie, Archie and the Maxie + Archie double played to the end, with after-scenes (pre-pass).
