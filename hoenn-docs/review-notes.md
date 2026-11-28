@@ -376,6 +376,18 @@ Tested on `hoenn` at `cdacfafc` (#104's merge): debug build 32,946,132 B (594 KB
 - Not played: Deoxys on Birth Island, the Regi battles and the Arceus battle (all HnS's own), and the Deoxys call.
 - Grid: `review-37.png` in the project's `hoenn-2.0/review/`. Debug patch: `hoenn-2.0/patches/37-wishes-and-giants-debug.ups`.
 
+### 53. Part 37, second pass, and night weekdays for part 38 (reviewer, Nov 28)
+A second reviewer session played 37 at the same time as item 52 (`hoenn` at `cdacfafc`). Everything in 52 matches. What it adds:
+- **A knocked-out JIRACHI is back the same night, not "on another dancing night".** Knocking it out clears `FLAG_SUMMONED_MTMOON_JIRACHI`, and on the same Monday night nothing else stops the rock (three wishes, Clefairy out), so touching it again summons it straight away. The text says "Maybe the white rock will wake it on another dancing night." Fix in 38: set a flag on a knockout that only clears once the night is over (add it to `sNightlyFlags`, 41r), or reword the text.
+- **The seals can't be pushed.** They use HnS's pushable boulder sprite. With Strength on, pushing the Regice and Registeel boulders from the north and the south does nothing, and the Regirock one has cliff on every side but its doorway. So there's no way round the seal.
+- Release 32,788,788 B, matching lane A's row. `regen_all.sh --check` reports no changes.
+- **For part 38: three "X night" checks still use the calendar day.** 29's review set the rule (item 41): anything weekly at night uses `HoennNightWeekday()`, because `GetDayOfWeek()` turns over at midnight, partway through a night. Three older checks don't:
+  - **Mt. Moon's Clefairy dance** (part 3, `hoenn_weekday.inc`, `HoennIsItWeekday` + `HOENN_TIME_NIGHT`). It shows from Monday evening until midnight, then again Tuesday 12–4 AM is not Monday, while Monday 12–4 AM (Sunday's night) is. **37's Jirachi summon depends on it**, so it shares the same hours.
+  - **The trench guardians** (25b, `HoennSeek_EventScript_TrenchOnTransition`, `GetDayOfWeek`). The guardian changes at midnight partway through a dive. 41r already made their daily flag nightly.
+  - **Zangoose vs. Seviper** (21, Route 114, "Sunday evenings and nights"). It ends at midnight, while 41r's nightly reset runs noon to noon.
+  - A `specialvar VAR_RESULT, HoennIsItNightWeekday` (like `HoennIsItWeekday`, but on `HoennNightWeekday()`) would fix all three with one line each.
+  - Checked and fine: the other weekday checks run by day only (the siblings, Union Cave's Lapras, the Meteor Falls chorus, the Wailord, the Highland stampede, the National Park duel, the Slowking riddles).
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
