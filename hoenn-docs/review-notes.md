@@ -348,6 +348,34 @@ Merged `hoenn` at #99 (28, 35b; 32 was already in the branch) into the branch: t
 - **Choices for Bryan:** every replacement species (the list in the PR and section 10 of the plan), what stays Hoenn in Kanto (the Fuchsia Safari's Hoenn areas, Wingull on Route 19, Lunatone/Solrock in Mt. Moon, Torkoal on Cinnabar, Route 18's Kecleon), Roselia added to Route 117 by day, Mt. Silver's Weavile → Mamoswine, Ula'ula Cave's Sneasel → Snorunt.
 - Grid: `review-33.png` in the project's `hoenn-2.0/review/`.
 
+### 51. Review of 34b (PR #106, lane A) (reviewer, Nov 27) — **merged before review (by lane A, at Aidan's request, 22:28 UTC); choices confirmed by Bryan after the fact (Nov 28)**
+Tested on the branch synced onto `hoenn` at #107 (no conflicts); `regen_all.sh --check` clean; living dex 416 of 416. Size row re-measured: +3,088 B release, +3,120 B debug over 33.
+- **Read:** the shrine script, the one-line chamber gate in HnS's `WhirlIslands_LugiaChamber` OnTransition, the cameo (borrowed Lanturn-light template), Brendan's call and the Olivine Pokémon Center fisher's lines. Checked HnS's own Lugia flow: `VAR_COMPLETED_LUGIA` 2 = story dance, 3 = story battle done (won or ran), 4 = the post-story Lv 70 Lugia, set by the Hall of Fame and by the Pewter grandpa (Ho-Oh path, with the SILVER WING). So the gate means HnS's post-Hall-of-Fame Lugia now also waits for the shrine.
+- **Played (debug save):** stone with nothing, with two of four (names the thunder and flame hollows), with all four (Slowking line, YES, ceremony, flags set, var 3 → 4, Tentacruel hidden), the after-text; the chamber at var 4 empty before the shrine and with Lugia at (29,12) after; the Route 41 cameo at 10 PM from the lagoon mouth (rises, sings, dives, plays once; nothing by day or a second night); Brendan's call; the fisher's cameo line and the rumor before/after.
+- **Choices (confirmed by Bryan):** all four treasures needed; feathers kept; HnS's own Lv 70 Lugia reused, and gated behind the shrine (also after the Hall of Fame); the cameo's spot and once-only.
+- Not played: the Lugia battle itself (HnS's, on the playtest list).
+- Grid: `review-34b.png` in the project's `hoenn-2.0/review/`.
+
+### 52. Review of 37 (PR #104, lane A) (reviewer, Nov 28) — **merged before review (by lane A, at Aidan's request); reviewed after the merge on Bryan's call; choices confirmed by Bryan (Nov 28)**
+Tested on `hoenn` at `cdacfafc` (#104's merge): debug build 32,946,132 B (594 KB free), the same as lane A's size row.
+- **Read:** the Part 37 section of `hoenn_lane_a.inc`, `HoennWishCount` and `HoennDeoxysSignalNight`, the map.json swaps (white rock, Jirachi, the 2F scientist, the Olivine fan, the Sinjoh linguist), the Sinjoh Ruins OnTransition hook, the one-line Arceus gate, the three event calls and the new hint lines and rumors.
+- **Played (debug save):**
+  - **Wishes.** All three wishes work at night: the Meteor Falls clifftop boulder, the Space Center 2F windows and the moon hollow's pool. The third one gives the chime. Each spot has its own text by day and says you've already wished on a repeat.
+  - **White rock and Jirachi.** With 2 wishes the rock is "listening". With 3 on a Sunday night it's "waiting". On Monday night the Clefairy are out and Jirachi lands in the pond. You battle it from the water at (13,10). Knocking it out hides it and clears the summon flag, so a later Monday night can wake it again.
+  - **Deoxys signal.** Night 1 gives the first line. Asking again later the same night, including at 2 AM, gives "already logged". By day he says to come back at night. Night 2 gives the second line, night 3 gives the AURORA TICKET and how to use it, then the after-line. The Olivine fan (champion, no ticket) now points to the Space Center.
+  - **Regi boulders.** At 9 plates the boulders stand in the doorways. Without the inscription the braille can't be read. With it, the first read plays the stir cameo, then "doesn't budge" without RELICANTH and WAILORD. With both, it rolls aside, `FLAG_HOENN_REGI_OPEN_ROCK` is set, it stays gone on re-entry, and the west arrow warp leads into the Regirock room.
+  - **Arceus.** At storyline 12 without the inscription, Arceus "waits". With it, HnS's catchable battle starts.
+  - **Calls.** May's wishes call and May's Regi call both ring.
+- **No bugs found.**
+- **Choices (confirmed by Bryan):**
+  - Jirachi needs three night wishes, then Monday night at the white rock. HnS's rock worked on any night.
+  - A knocked-out Jirachi can come back on a later Monday. HnS's didn't return until the next Hall of Fame.
+  - The AURORA TICKET comes from three nights of the Space Center signal. HnS's Olivine fan used to give it to any champion.
+  - HnS's Regi doors also need the Ruins inscription plus RELICANTH and WAILORD in the party.
+  - Arceus's catchable battle waits for the inscription.
+- Not played: Deoxys on Birth Island, the Regi battles and the Arceus battle (all HnS's own), and the Deoxys call.
+- Grid: `review-37.png` in the project's `hoenn-2.0/review/`. Debug patch: `hoenn-2.0/patches/37-wishes-and-giants-debug.ups`.
+
 ## Withdrawn
 - **Mt. Moon base next to Silver's trigger.** This was wrong. Silver's rematch is an `ON_FRAME` script that runs when you enter the cave (`VAR_PEWTER_CITY_STATE` 0/1), not a tile trigger, so the base spot doesn't clash with it.
 
