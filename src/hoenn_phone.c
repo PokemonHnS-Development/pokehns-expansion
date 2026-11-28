@@ -37,6 +37,11 @@ extern const u8 HoennSeek_Text_WallyCallBattle[];
 #define EVENT_CALL_STEP_INTERVAL 16 // look for a due call every 16 steps
 
 static EWRAM_DATA u8 sEventCallSteps = 0;
+// Part 38: after an event call, the next waits EVENT_CALL_GAP checks (256 steps).
+// Calls about events done before Birch gave you Brendan & May's numbers all come
+// due at once; without the gap they rang every 16 steps, one after another.
+#define EVENT_CALL_GAP 16
+static EWRAM_DATA u8 sEventCallGap = 0;
 
 // 2.0 parts 12/12b: the base spots at the reopened legendary sites.
 static bool32 HoennIsLegendarySiteBase(u8 secretBaseId)
@@ -140,6 +145,11 @@ bool32 HoennTryEventCall(void)
     if (++sEventCallSteps < EVENT_CALL_STEP_INTERVAL)
         return FALSE;
     sEventCallSteps = 0;
+    if (sEventCallGap != 0)
+    {
+        sEventCallGap--;
+        return FALSE;
+    }
 
     if (!FlagGet(FLAG_HAS_MATCH_CALL)
      || !(Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) || gMapHeader.mapType == MAP_TYPE_UNDERGROUND))
@@ -149,6 +159,7 @@ bool32 HoennTryEventCall(void)
     if (call == HOENN_CALL_NONE)
         return FALSE;
 
+    sEventCallGap = EVENT_CALL_GAP;
     gSpecialVar_0x8004 = call;
     ScriptContext_SetupScript(HoennSeek_EventScript_PhoneEvent);
     return TRUE;
