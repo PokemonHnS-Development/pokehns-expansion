@@ -90,7 +90,7 @@ HoennSeek_MtMoon_Outside_OnTransition::
 	gettimeofday
 	goto_if_ne VAR_0x8000, HOENN_TIME_NIGHT, HoennSeek_MtMoon_Outside_OnTransition_End
 	setvar VAR_0x8004, HOENN_MONDAY
-	specialvar VAR_RESULT, HoennIsItWeekday
+	specialvar VAR_RESULT, HoennIsItNightWeekday @ Monday's night runs until dawn (part 38)
 	goto_if_eq VAR_RESULT, FALSE, HoennSeek_MtMoon_Outside_OnTransition_End
 	clearflag FLAG_HOENN_HIDE_CLEFAIRY_DANCE
 HoennSeek_MtMoon_Outside_OnTransition_End:

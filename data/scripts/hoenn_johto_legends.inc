@@ -347,16 +347,16 @@ HoennSeek_Text_SageBeasts:
 
 HoennSeek_Text_SageDawn:
 	.string "You carry the bell, you know its\n"
-	.string "likeness, and the three beasts know\l"
-	.string "you.\p"
+	.string "likeness, and the three beasts\l"
+	.string "know you.\p"
 	.string "Now go up at dawn, when the first\n"
 	.string "light touches the roof.$"
 
 HoennSeek_Text_SageReady:
-	.string "Dawn… The first light is on the\n"
-	.string "roof.\p"
-	.string "If it is ever coming, it is coming\n"
-	.string "now.$"
+	.string "Dawn… The first light is on\n"
+	.string "the roof.\p"
+	.string "If it is ever coming, it is\n"
+	.string "coming now.$"
 
 HoennSeek_Text_SageNoWing:
 	.string "The bell of tin rings for those\n"
@@ -374,8 +374,8 @@ HoennSeek_Text_SageAfterBell:
 	.string "Its sound will carry to the roof.$"
 
 HoennSeek_Text_RainbowAppears:
-	.string "The morning sun breaks over\n"
-	.string "ECRUTEAK…\p"
+	.string "The morning sun breaks\n"
+	.string "over ECRUTEAK…\p"
 	.string "A rainbow arcs across the sky, from\n"
 	.string "the hills to the top of TIN TOWER!$"
 
@@ -412,8 +412,8 @@ HoennSeek_Text_SoilPlanted:
 	.string "A little sprout pushed up at once!$"
 
 HoennSeek_Text_SoilGrowing:
-	.string "A little sprout. It sways in the\n"
-	.string "sunlight.\p"
+	.string "A little sprout. It sways in\n"
+	.string "the sunlight.\p"
 	.string "It might be grown by tomorrow.$"
 
 HoennSeek_Text_SoilGrown:

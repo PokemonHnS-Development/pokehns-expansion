@@ -590,6 +590,31 @@
      ], "legend": {"T": {"from": [1, 0]}, "U": {"from": [2, 0]}, "V": {"from": [28, 0]}, "D": {"from": [1, 1]}, "E": {"from": [2, 1]}, "F": {"from": [28, 1]}, "H": {"from": [2, 6]}, "I": {"from": [3, 6]}, "s": {"from": [2, 8]}, "L": {"from": [2, 9]}, "f": {"from": [8, 15]}, "h": {"from": [4, 9]}, "b": {"from": [4, 10]}, "k": {"from": [4, 11]}, "r": {"from": [5, 10]}, "q": {"from": [5, 11]}, "t": {"from": [15, 15]}, "l": {"from": [15, 16]}, "M": {"from": [1, 30]}, "N": {"from": [28, 30]}, "O": {"from": [1, 31]}, "P": {"from": [28, 31]}}},
     {"_": "the mural: a run of the inner chamber's UNOWN frieze along the north wall", "at": [1, 1, 15, 1], "from": [2, 13]}
    ]
+  },
+  "CeladonCity_FloristsHouse_hoenn": {
+   "_": "review item 2 (part 38): the florist's house, CeruleanCity_House3's room with the table pushed to the left wall and pots of flowers on the right",
+   "source": "LAYOUT_CERULEAN_CITY_HOUSE3_HNS",
+   "layout": "LAYOUT_CELADON_CITY_FLORISTS_HOUSE_HOENN",
+   "border": "source",
+   "ops": [
+    {"_": "the house as it is", "at": [0, 0, 13, 10], "from": [0, 0]},
+    {"_": "rug, table and chairs two tiles left", "at": [1, 3, 6, 4], "from": [3, 3]},
+    {"_": "bare floor where the rug's right end was", "at": [7, 3, 2, 4], "from": [1, 3], "tile": [1, 1]},
+    {"_": "flower pots: tops", "cells": [[8, 3], [10, 3], [8, 6]], "from": [10, 7]},
+    {"_": "flower pots: bottoms", "cells": [[8, 4], [10, 4], [8, 7]], "from": [10, 8]}
+   ]
+  },
+  "EcruteakCity_DanceTeacher_hoenn": {
+   "_": "review item 2 (part 38): the dance teacher's studio, VioletCity_House2's room with the rug and table cleared for an open practice floor",
+   "source": "LAYOUT_VIOLET_CITY_HOUSE2_HNS",
+   "layout": "LAYOUT_ECRUTEAK_CITY_DANCE_TEACHER_HOENN",
+   "border": "source",
+   "ops": [
+    {"_": "the house as it is", "at": [0, 0, 13, 10], "from": [0, 0]},
+    {"_": "rug and table gone: bare boards", "at": [4, 3, 6, 4], "from": [1, 3], "tile": [1, 1]},
+    {"_": "potted plants: tops", "cells": [[1, 3], [8, 3]], "from": [10, 7]},
+    {"_": "potted plants: bottoms", "cells": [[1, 4], [8, 4]], "from": [10, 8]}
+   ]
   }
  },
  "patches": [

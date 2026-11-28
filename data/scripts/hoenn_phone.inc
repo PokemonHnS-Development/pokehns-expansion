@@ -280,8 +280,8 @@ HoennSeek_Text_CallBadge8::
 	.string "still hasn't said a single\l"
 	.string "word to us. Not one!\p"
 	.string "Beat WALLACE, okay? Then we'll\n"
-	.string "come home and battle you\l"
-	.string "ourselves!$"
+	.string "come home and battle\l"
+	.string "you ourselves!$"
 
 HoennSeek_Text_CallElmChikorita::
 	.string "Hello, {PLAYER}! It's PROF. ELM!\p"

@@ -554,8 +554,8 @@ HoennSeek_Text_AlphBoulderNight:
 	.string "the tablet!$"
 
 HoennSeek_Text_AlphBoulderGather:
-	.string "UNOWN are gathering around the\n"
-	.string "stone!$"
+	.string "UNOWN are gathering around\n"
+	.string "the stone!$"
 
 HoennSeek_Text_AlphBoulderOpens:
 	.string "The UNOWN are gone.\p"
@@ -592,8 +592,8 @@ HoennSeek_Text_SanctumMuralRan:
 	.string "wall. The letters still stir.$"
 
 HoennSeek_Text_SanctumMuralCancel:
-	.string "The letters settle back into the\n"
-	.string "stone.$"
+	.string "The letters settle back into\n"
+	.string "the stone.$"
 
 HoennSeek_Text_SanctumMuralQuiet:
 	.string "The mural is still. The UNOWN won't\n"
@@ -1608,6 +1608,7 @@ HoennSeek_EventScript_WhiteRock::
 	msgbox MtMoon_Outside_Text_WhiteRockTouchIt, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, MtMoon_Outside_EventScript_WhiteRockNoOp
 	goto_if_set FLAG_SUMMONED_MTMOON_JIRACHI, MtMoon_OutsideEventScript_WhiteRockNoReaction
+	goto_if_set FLAG_HOENN_DAILY_JIRACHI_GONE, HoennSeek_EventScript_WhiteRockWaiting @ part 38: not again tonight
 	specialvar VAR_RESULT, HoennWishCount
 	goto_if_eq VAR_RESULT, 0, MtMoon_OutsideEventScript_WhiteRockNoReaction
 	goto_if_lt VAR_RESULT, 3, HoennSeek_EventScript_WhiteRockListening
@@ -1641,6 +1642,7 @@ HoennSeek_EventScript_MtMoonJirachi::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MtMoon_Outside_EventScript_JirachiRan
 	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, HoennSeek_EventScript_MtMoonJirachiGone
 	clearflag FLAG_SUMMONED_MTMOON_JIRACHI
+	setflag FLAG_HOENN_DAILY_JIRACHI_GONE @ part 38: back on another dancing night, not tonight
 HoennSeek_EventScript_MtMoonJirachiGone:
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_MTMOON_JIRACHI

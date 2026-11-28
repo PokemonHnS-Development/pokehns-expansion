@@ -194,8 +194,8 @@ HoennSeek_EventScript_SlateportShopperPlain::
 HoennSeek_Text_SlateportShopperFollower:
 	.string "Oh my! Is that your {STR_VAR_1}?\p"
 	.string "I'd buy it something at the market,\n"
-	.string "but I've already bought too much…\l"
-	.string "again.$"
+	.string "but I've already bought too\l"
+	.string "much… again.$"
 
 HoennSeek_EventScript_FortreeBoy::
 	lock

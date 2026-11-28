@@ -44,7 +44,8 @@ def read_pal(path):
 
 
 def write_pal(path, cols):
-    with open(P(path), "w") as f:
+    # CRLF, as .gitattributes checks .pal files out (an LF file shows as modified).
+    with open(P(path), "w", newline="\r\n") as f:
         f.write("JASC-PAL\n0100\n%d\n" % len(cols))
         for c in cols:
             f.write("%d %d %d\n" % c)

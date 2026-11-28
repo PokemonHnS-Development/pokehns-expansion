@@ -102,8 +102,8 @@ HoennSeek_Text_TwinFisherman:
 	.string "I lavished care on this POKéMON,\n"
 	.string "day in and day out.\p"
 	.string "My twin did the very same thing,\n"
-	.string "with the very same species, in\l"
-	.string "VIRIDIAN.\p"
+	.string "with the very same species,\l"
+	.string "in VIRIDIAN.\p"
 	.string "If we both win today, I'm asking\n"
 	.string "for a rematch… between our twins.$"
 
