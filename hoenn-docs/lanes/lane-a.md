@@ -21,6 +21,7 @@ Only lane A's builder edits this file (the reviewer may add a line when it merge
 | 34b | ✅ merged (PR #106, Nov 27; reviewed and merged by lane A at Aidan's request) | `v2-34b-lugia` | flags `HOENN_LANE_A_FLAGS_F` + 0x0E–0x10, call 46 (35b has F + 0x00–0x0D, 37 F + 0x20 on; calls 41–45 stay with 35b, 28, 37) |
 | 35b | PR #99 merged (Nov 27, review item 49: Ilex soil moved to (30,35)) | `v2-35b-johto-legends` | flags `HOENN_LANE_A_FLAGS_F` + 0x00–0x0D, daily + 2–4, call 41; built the radio hook (`HoennRadioEusineReport` in OAK's POKéMON TALK), so 28 reuses it instead of building it |
 | 37 | ✅ merged (PR #104, Nov 27; reviewed and merged by lane A at Aidan's request) | `v2-37-wishes-and-giants` | flags `HOENN_LANE_A_FLAGS_F` + 0x20–0x2D (0x2E–0x3F spare; 34b takes + 0x0E–0x1F), vars `HOENN_LANE_A_VARS_F` + 0, 1, calls 43–45 |
+| 38 | **finished by the reviewer** (Nov 28; lane A's work in progress was merged as PR #117, the rest on top: review item 54) | `v2-38-sweep` | lane A's hint rotation, call gap and 7 rumors are kept |
 
 ## ID plan (inside lane A's ranges)
 So parts built out of order don't collide: 27b E +0x0B–0x15 (used); 28 E +0x16–0x1F; 31a E +0x20–0x25; 32 E +0x26–0x2F; 34b, 35b, 37 F +0x00 on. Calls 38 (27b) on, in build order. Vars, daily, weekly and hidden flags in build order.

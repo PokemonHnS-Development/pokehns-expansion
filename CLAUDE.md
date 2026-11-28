@@ -142,7 +142,7 @@ Phase G sizes (38 on, one part at a time; measured on `hoenn` with every lane pa
 
 | Part | Release | Debug |
 |---|---|---|
-| **2.0** part 38 (sweep: 5 rumors, text audit + 22 re-wrapped texts, night weekdays, Jirachi's nightly flag, 2 refurnished rooms, Damian moved, denser smoke: +3,312 B release, +3,296 B debug over 37) | 32,792,100 / 744 KB | 32,949,428 / 590 KB |
+| **2.0** part 38 (sweep: hint lines take turns, 7 rumors, event calls spaced out (lane A's start); text audit + 22 re-wrapped texts, night weekdays, Jirachi's nightly flag, 2 refurnished rooms, Damian moved, denser smoke: +4,160 B release, +4,208 B debug over 37) | 32,792,948 / 743 KB | 32,950,340 / 589 KB |
 
 ¹ Release got 12.5 KB *smaller*: flag/var lookups now go through `HoennGetFlagPointer`/`HoennGetVarPointer`, so LTO stops inlining `GetVarPointer` into ~100 callers (`ScrCmd_createmon` alone −1.6 KB). Same behavior. Measured against a fresh 1.0 release build, which matched the 20a row byte for byte.
 
@@ -455,7 +455,8 @@ Phase G runs one part at a time after both lanes (`hoenn-docs/lanes/README.md`).
   - **`FLAG_HOENN_DAILY_JIRACHI_GONE`** (lane A daily + 6, in `sNightlyFlags`): a knockout sets it, and the white rock says "waiting" for the rest of that night.
   - **`tools/hoenn/text_audit.py`** measures every line of every Hoenn & Seek text (`data/scripts/hoenn_*.inc`, `data/maps/*_hoenn/scripts.inc`) with FONT_NORMAL's glyph widths against the 216 px message box, and finds one-word last lines (a line that's only a placeholder is allowed). `regen_all.sh` runs it last and stops on a finding. Placeholders count as 7 capitals ({PLAYER}) or 10 ({STR_VAR_n}); a placeholder that holds a number goes in its `NUMBERS` set.
   - **Buildings with their own furniture:** a building in `buildings.json` may name a `"layout"`, a composed copy of its template house (`composed_maps.json`, `"border": "source"`, register the layout in `layouts.json` first) with the furniture moved. Objects are then checked against that layout's collision. The Celadon florist and the Ecruteak dance teacher use it, because nearly every HnS house is the same room.
-  - **Rumors added** for lane events that had none (SNEASEL_THIEF, STRANDED_LIGHT, UNOWN_CIPHER, RAINBOW, FOREST_OFFERINGS) on keyed Pokémon Center NPCs (`BlackthornPCTwin`, `CianwoodPCFisher`, `VioletPCGentleman`, `EcruteakPCWoman`, `AzaleaPCPokefan`): 46 rumors.
+  - **Hint lines take turns** (lane A, before handing 38 off): `VAR_HOENN_HINT_TOGGLE`'s upper bits count extra lines shown and pick among an NPC's holding lines in turn (`src/hoenn_hints.c`). Until then an NPC only ever said its first holding line, so lines listed after a tip or a rumor never showed. Seven rumors were added on existing Pokémon Center NPCs (UNOWN_CIPHER, ICE_THIEF, LANTURN_LIGHTS, AMPHAROS_RESCUE, HOOH_DAWN, FOREST_OFFERINGS, SKY_PILLAR_MURAL): 48 in the field notes.
+  - **Event calls wait for each other** (lane A): after an event call, the next waits `EVENT_CALL_GAP` checks (256 steps, `src/hoenn_phone.c`). Calls about events done before Birch gave you Brendan & May's numbers used to ring every 16 steps, one after another.
   - `gen_hoenn_battle_art.py` writes `.pal` files with CRLF (`.gitattributes` checks them out that way), so a run no longer leaves them showing as modified.
 
 ## Known Hoenn issues (found in part 3, fix in later parts)

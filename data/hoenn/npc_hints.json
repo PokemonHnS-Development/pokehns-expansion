@@ -13,9 +13,10 @@
     "  instead of 'before'. The field-notes researcher counts found rumors and gives the first unfound",
     "  rumor's 'notes' as a vague hint. Later parts add their own rumors here (roadmap rule).",
     "npcs: the NPCs that get extra lines. A global toggle (VAR_HOENN_HINT_TOGGLE) flips on every talk",
-    "  to one of them: one talk runs the NPC's own script, the next their first line whose conditions",
-    "  hold (or their own script again if none does). always: true skips the toggle (the line, when one",
-    "  holds, always comes first). 'index' picks the object when several share the script.",
+    "  to one of them: one talk runs the NPC's own script, the next one of their lines whose conditions",
+    "  hold, taking turns (part 38: the toggle var's upper bits count extra lines shown; before that only",
+    "  the first holding line ever showed). Their own script runs again if none holds. always: true skips",
+    "  the toggle (a holding line always comes first). 'index' picks the object when several share the script.",
     "  key (lane setup, Nov 27): every NPC after the first 55 needs a unique key (letters, digits, _);",
     "  its wrapper is HoennSeek_EventScript_Hint_<key>. The first 55 keep positional names: never move them.",
     "forecasts: {map, if, text}. A forecast applies when the map's special-weather day is today or",
@@ -163,11 +164,13 @@
     "STORY_REGI_SEA": {"kind": "story", "if": [{"var": "VAR_PLATECOUNTER", "min": 3}, {"flag": "FLAG_HOENN_CIPHER_INSCRIPTION"}, {"not_flag": "FLAG_HOENN_REGI_OPEN_STEEL"}], "text": ["The oldest of the deep and the greatest of the sea… RELICANTH and WAILORD, surely. Both live in HOENN's seas.", "Bring them both to the boulders. The stones were made to answer them."]},
     "STORY_ARCEUS_WAITS": {"kind": "story", "if": [{"var": "VAR_SINJOH_STORYLINE", "min": 12}, {"not_flag": "FLAG_HOENN_CIPHER_INSCRIPTION"}, {"not_caught": "ARCEUS"}], "text": ["ARCEUS is still up in its chamber, watching. It won't come with anyone yet.", "The UNOWN wrote about SINJOH, long ago. Their words are somewhere under the RUINS OF ALPH."]},
     "RUMOR_REGI_DOORS": {"kind": "rumor", "rumor": "REGI_DOORS"},
-    "RUMOR_SNEASEL_THIEF": {"kind": "rumor", "rumor": "SNEASEL_THIEF"},
-    "RUMOR_STRANDED_LIGHT": {"kind": "rumor", "rumor": "STRANDED_LIGHT"},
     "RUMOR_UNOWN_CIPHER": {"kind": "rumor", "rumor": "UNOWN_CIPHER"},
-    "RUMOR_RAINBOW": {"kind": "rumor", "rumor": "RAINBOW"},
+    "RUMOR_ICE_THIEF": {"kind": "rumor", "rumor": "ICE_THIEF"},
+    "RUMOR_LANTURN_LIGHTS": {"kind": "rumor", "rumor": "LANTURN_LIGHTS"},
+    "RUMOR_AMPHAROS_RESCUE": {"kind": "rumor", "rumor": "AMPHAROS_RESCUE"},
+    "RUMOR_HOOH_DAWN": {"kind": "rumor", "rumor": "HOOH_DAWN"},
     "RUMOR_FOREST_OFFERINGS": {"kind": "rumor", "rumor": "FOREST_OFFERINGS"},
+    "RUMOR_SKY_PILLAR_MURAL": {"kind": "rumor", "rumor": "SKY_PILLAR_MURAL"},
 
     "FORECAST":       {"kind": "forecast"}
   },
@@ -419,35 +422,47 @@
       "after": "All three boulders at the SINJOH RUINS have rolled away!",
       "notes": "The boulders at the SINJOH RUINS carry braille that the RUINS OF ALPH's final inscription explains: RELICANTH and WAILORD."
     },
-    "SNEASEL_THIEF": {
-      "found": [{"flag": "FLAG_HOENN_SNEASEL_STASH"}],
-      "before": ["Skaters on the ICE PATH say things go missing down there at night.", "Something small and dark snatches items right off the ice, and it's gone before you can turn around!"],
-      "after": "Nothing's gone missing on the ICE PATH lately. Somebody finally cornered that thief.",
-      "notes": "At night, items left on the ICE PATH's lowest floor vanish once its boulders are pushed down. Chase the thief across the ice to its nook."
-    },
-    "STRANDED_LIGHT": {
-      "found": [{"flag": "FLAG_HOENN_RESCUED_AMPHAROS"}],
-      "before": ["Some nights there's a second light out past ROUTE 40, blinking on a rock in the sea.", "JASMINE's AMPHAROS stares at it from the lighthouse all night long."],
-      "after": "That second light off ROUTE 40 is gone. They say an AMPHAROS lives at the lighthouse now.",
-      "notes": "A stranded AMPHAROS waits on a sea rock off ROUTE 40 at night. It only trusts someone who brings it BERRIES, one a night."
-    },
     "UNOWN_CIPHER": {
       "found": [{"flag": "FLAG_HOENN_CIPHER_INSCRIPTION"}],
-      "before": ["The lab at the RUINS OF ALPH found a new line of writing, with HOENN braille over it.", "The UNOWN on the floor are supposed to glow at night. Nobody here can read them, though."],
-      "after": "The RUINS OF ALPH lab finally read the whole UNOWN inscription. Something about SINJOH, I heard.",
-      "notes": "The RUINS OF ALPH's Words rooms glow at night, a different word each night of the week. Each word names a place where UNOWN dance in a ring."
+      "before": ["The RUINS OF ALPH have a room full of writing nobody can read.", "The lab says the UNOWN spell a different word each night. Spooky, if you ask me."],
+      "after": "They say someone read the last line in the RUINS. The lab hasn't stopped talking about it!",
+      "notes": "A braille line in the RUINS OF ALPH's first word room teaches the UNOWN letters. Each night's word names a place where the UNOWN gather; the pieces they leave open a boulder outside the RUINS."
     },
-    "RAINBOW": {
+    "ICE_THIEF": {
+      "found": [{"flag": "FLAG_HOENN_SNEASEL_STASH"}],
+      "before": ["Hikers say things go missing deep in the ICE PATH, but only at night.", "Leave an item lying on the ice down there and it's gone by morning!"],
+      "after": "Nothing's gone missing in the ICE PATH lately. Someone must've caught up with that thief.",
+      "notes": "Once the ICE PATH's boulders have dropped to the bottom floor, a SNEASEL snatches the items off the ice at night. Chase it across the ice to its nook."
+    },
+    "LANTURN_LIGHTS": {
+      "found": [{"flag": "FLAG_HOENN_LAGOON_FOUND"}],
+      "before": ["Fishermen from OLIVINE talk about a light that drifts on ROUTE 41 after dark.", "It keeps just ahead of your boat, as if it wants you to follow."],
+      "after": "Someone followed the ROUTE 41 light all the way, I hear. Now the sea there is just dark again.",
+      "notes": "At night on ROUTE 41, a LANTURN's light drifts away from the WHIRL ISLANDS. Surf after it, staying close, and it leads to a sea cave in the eastern rocks."
+    },
+    "AMPHAROS_RESCUE": {
+      "found": [{"flag": "FLAG_HOENN_RESCUED_AMPHAROS"}],
+      "before": ["Sailors coming into OLIVINE at night see a second light, out on the rocks off ROUTE 40.", "It blinks like a lighthouse, only it's far too small. And it never moves."],
+      "after": "The little light off ROUTE 40 is gone. JASMINE says the LIGHTHOUSE has a new keeper now!",
+      "notes": "An AMPHAROS is stranded on a sea rock off ROUTE 40. It's frightened: bring it a BERRY each night until it trusts you enough to ride ashore."
+    },
+    "HOOH_DAWN": {
       "found": [{"flag": "FLAG_HOENN_HOOH_RAINBOW"}],
-      "before": ["The sages say a rainbow comes to TIN TOWER at dawn, for a trainer who's heard all three beasts and rung the CLEAR BELL."],
-      "after": "Did you see it? A rainbow over ECRUTEAK at dawn, and a bird of every color flying into it!",
-      "notes": "The rainbow bird comes to TIN TOWER's roof at dawn, once you've met the roaming beasts, solved the RUINS' HO-OH panel and carry the CLEAR BELL."
+      "before": ["My grandma says HO-OH only lands on the TIN TOWER at dawn.", "And only for someone who's met the POKéMON it brought back from the fire."],
+      "after": "Did you see the rainbow over ECRUTEAK at dawn? Grandma cried. She says HO-OH has come home.",
+      "notes": "With the CLEAR BELL, the RUINS OF ALPH's HO-OH panel solved, RAIKOU and ENTEI met and SUICUNE seen many times, HO-OH waits on the TIN TOWER's roof at dawn. The TIN TOWER's sages know more."
     },
     "FOREST_OFFERINGS": {
       "found": [{"flag": "FLAG_HOENN_SHRINE_OFFERED"}],
-      "before": ["My grandma says the ILEX FOREST shrine wants gifts from three forests, not just one.", "Old soil grows a berry overnight that glows, if you plant one in the right spot."],
-      "after": "Somebody filled all three dishes at the ILEX FOREST shrine! Grandma's been smiling all week.",
-      "notes": "Plant a BERRY in the old soil of ILEX FOREST, VIRIDIAN FOREST and PETALBURG WOODS. Each grows a glowing offering by the next day, for the ILEX shrine."
+      "before": ["The ILEX FOREST shrine has three little dishes, and they're always empty.", "Old folks say the forest's guardian wants something grown in old soil."],
+      "after": "Someone filled the dishes at the ILEX shrine! The whole forest felt brighter for a day.",
+      "notes": "There's old, dark soil in ILEX FOREST, VIRIDIAN FOREST and PETALBURG WOODS. Plant a BERRY in each, come back the next day, and lay what grew at the ILEX shrine."
+    },
+    "SKY_PILLAR_MURAL": {
+      "found": [{"flag": "FLAG_HOENN_GOT_JADE_ORB"}],
+      "before": ["There's an old mural on top of SKY PILLAR. Three great POKéMON, and one of them holds a green orb.", "My grandpa says it only means something once the other two are at peace."],
+      "after": "Someone took the green orb from SKY PILLAR's mural, they say. The sky over the sea looks different since.",
+      "notes": "Once KYOGRE and GROUDON have been settled, SKY PILLAR's mural gives up the JADE ORB. RAYQUAZA comes to KANTO's EMBEDDED TOWER at noon for anyone who carries it, unless it rains there."
     }
   },
 
@@ -455,13 +470,13 @@
 
   "npcs": [
     {"map": "CherrygroveCity_PokemonCenter_hns", "script": "CherryGrove_Pokecenter_EventScript_Gentleman", "lines": ["TIP_CLOCK"]},
-    {"map": "VioletCity_PokemonCenter_hns",      "script": "VioletCity_PokemonCenter_EventScript_Man",             "lines": ["TIP_LEVEL_CAP", "TIP_CLOCK"]},
+    {"map": "VioletCity_PokemonCenter_hns",      "script": "VioletCity_PokemonCenter_EventScript_Man",             "lines": ["TIP_LEVEL_CAP", "TIP_CLOCK", "RUMOR_UNOWN_CIPHER"]},
     {"map": "AzaleaTown_PokemonCenter_hns",      "script": "AzaleaPokeCenter_EventScript_Gentleman",       "lines": ["TIP_JK_BASES", "RUMOR_SAGE", "RUMOR_LAPRAS"]},
-    {"map": "GoldenrodCity_PokemonCenter_hns",   "script": "GoldenrodCity_PokemonCenter_EventScript_Granny",       "lines": ["TIP_NAMERATER_JK", "RUMOR_SCIZOR"]},
-    {"map": "EcruteakCity_PokemonCenter_hns",    "script": "EcruteakCity_PokemonCenter_EventScript_Hiker",         "lines": ["TIP_WEATHER"]},
-    {"map": "OlivineCity_PokemonCenter_hns",     "script": "OlivineCity_EventScript_Teacher",        "lines": ["STORY_FERRY", "TIP_REMINDER_JK"]},
-    {"map": "CianwoodPokecenter_hns",            "script": "CianwoodPokecenter_EventScript_Nerd",                  "lines": ["TIP_LEVEL_CAP", "TIP_WEATHER", "RUMOR_MACHAMP"]},
-    {"map": "MahoganyTown_PokemonCenter_hns",    "script": "MahoganyTown_PokemonCenter_EventScript_Hiker",         "lines": ["RUMOR_LAPRAS", "RUMOR_MACHAMP"]},
+    {"map": "GoldenrodCity_PokemonCenter_hns",   "script": "GoldenrodCity_PokemonCenter_EventScript_Granny",       "lines": ["TIP_NAMERATER_JK", "RUMOR_SCIZOR", "RUMOR_FOREST_OFFERINGS"]},
+    {"map": "EcruteakCity_PokemonCenter_hns",    "script": "EcruteakCity_PokemonCenter_EventScript_Hiker",         "lines": ["TIP_WEATHER", "RUMOR_HOOH_DAWN"]},
+    {"map": "OlivineCity_PokemonCenter_hns",     "script": "OlivineCity_EventScript_Teacher",        "lines": ["STORY_FERRY", "TIP_REMINDER_JK", "RUMOR_AMPHAROS_RESCUE"]},
+    {"map": "CianwoodPokecenter_hns",            "script": "CianwoodPokecenter_EventScript_Nerd",                  "lines": ["TIP_LEVEL_CAP", "TIP_WEATHER", "RUMOR_MACHAMP", "RUMOR_LANTURN_LIGHTS"]},
+    {"map": "MahoganyTown_PokemonCenter_hns",    "script": "MahoganyTown_PokemonCenter_EventScript_Hiker",         "lines": ["RUMOR_LAPRAS", "RUMOR_MACHAMP", "RUMOR_ICE_THIEF"]},
     {"map": "BlackthornCity_PokemonCenter_hns",  "script": "BlackthornCity_PokemonCenter_EventScript_Gent",        "lines": ["TIP_JK_BASES", "TIP_REMINDER_JK"]},
     {"map": "PewterCity_PokemonCenter_hns",      "script": "PewterCity_PokemonCenter_EventScript_Teacher",         "lines": ["TIP_JK_BASES", "TIP_LEVEL_CAP", "TIP_CLOCK"]},
     {"map": "CeruleanCity_PokemonCenter_hns",    "script": "CeruleanCity_PokemonCenter_EventScript_Guy",           "lines": ["STORY_CERULEAN_CHARMANDER", "TIP_WEATHER"]},
@@ -508,7 +523,7 @@
     {"map": "LavaridgeTown",                     "script": "LavaridgeTown_EventScript_HotSpringsOldWoman1",       "lines": ["STORY_SAND_CHIME", "STORY_MIRAGE_FLYGON"]},
     {"map": "MossdeepCity",                      "script": "MossdeepCity_EventScript_Sailor",                      "lines": ["STORY_NIGHT_DIVE", "STORY_TRENCH_DARK", "STORY_TRENCH_GUARDIANS"]},
     {"map": "ShoalCave_LowTideEntranceRoom",     "script": "ShoalCave_LowTideEntranceRoom_EventScript_ShellBellExpert", "lines": ["STORY_ICE_HOLE", "STORY_ICE_FEATHER", "STORY_ICE_FROSLASS", "STORY_ICE_GLALIE"]},
-    {"map": "PacifidlogTown_PokemonCenter_1F",   "script": "PacifidlogTown_PokemonCenter_1F_EventScript_OldMan",  "lines": ["RUMOR_ICE_FROSLASS", "RUMOR_ICE_CHAMBER"]},
+    {"map": "PacifidlogTown_PokemonCenter_1F",   "script": "PacifidlogTown_PokemonCenter_1F_EventScript_OldMan",  "lines": ["RUMOR_ICE_FROSLASS", "RUMOR_ICE_CHAMBER", "RUMOR_SKY_PILLAR_MURAL"]},
     {"map": "RuinsOfAlph_Lab_hns",               "script": "RuinsOfAlph_Lab_EventScript_Scientist1", "key": "AlphLabScientist", "lines": ["STORY_CIPHER_NIGHT", "STORY_CIPHER_RINGS", "STORY_CIPHER_WALL"]},
     {"map": "BlackthornCity_Mart_hns",           "script": "BlackthornMart_EventScript_CoolTrainerM", "key": "BlackthornMartTrainer", "lines": ["RUMOR_HONEY_TRAIL"]},
     {"map": "Route10_PowerPlantEntrance_hns",    "script": "Route10_PowerPlantEntrance_EventScript_Engineer3", "key": "PowerPlantEngineer", "lines": ["FORECAST", "STORY_ZAPDOS_STORM"]},
@@ -529,12 +544,7 @@
     {"map": "OlivineCity_PokemonCenter_hns", "script": "OlivineCity_EventScript_Fisher", "key": "OlivinePCFisher", "lines": ["STORY_LUGIA_SURFACED", "RUMOR_LUGIA_SONG"]},
     {"map": "MossdeepCity_SpaceCenter_1F", "script": "MossdeepCity_SpaceCenter_1F_EventScript_OldMan", "key": "SpaceCenterOldMan", "lines": ["STORY_WISH_MONDAY", "STORY_WISHES", "RUMOR_JIRACHI"]},
     {"map": "MossdeepCity_SpaceCenter_1F", "script": "MossdeepCity_SpaceCenter_1F_EventScript_Woman", "key": "SpaceCenterWoman", "lines": ["STORY_SIGNAL", "RUMOR_DEOXYS"]},
-    {"map": "SinjohRuins_House1_hns", "script": "SinjohRuins_Lab_EventScript_Linguist", "key": "SinjohLinguist", "lines": ["STORY_ARCEUS_WAITS", "STORY_REGI_SEA", "STORY_REGI_BRAILLE", "RUMOR_REGI_DOORS"]},
-    {"map": "BlackthornCity_PokemonCenter_hns", "script": "BlackthornCity_PokemonCenter_EventScript_Twin", "key": "BlackthornPCTwin", "lines": ["RUMOR_SNEASEL_THIEF"]},
-    {"map": "CianwoodPokecenter_hns", "script": "CianwoodPokemoncenter_EventScript_Fisher", "key": "CianwoodPCFisher", "lines": ["RUMOR_STRANDED_LIGHT"]},
-    {"map": "VioletCity_PokemonCenter_hns", "script": "VioletCity_PokemonCenter_EventScript_Gentleman", "key": "VioletPCGentleman", "lines": ["RUMOR_UNOWN_CIPHER"]},
-    {"map": "EcruteakCity_PokemonCenter_hns", "script": "EcruteakCity_PokemonCenter_EventScript_Woman", "key": "EcruteakPCWoman", "lines": ["RUMOR_RAINBOW"]},
-    {"map": "AzaleaTown_PokemonCenter_hns", "script": "AzaleaPokeCenter_EventScript_PokefanF", "key": "AzaleaPCPokefan", "lines": ["RUMOR_FOREST_OFFERINGS"]}
+    {"map": "SinjohRuins_House1_hns", "script": "SinjohRuins_Lab_EventScript_Linguist", "key": "SinjohLinguist", "lines": ["STORY_ARCEUS_WAITS", "STORY_REGI_SEA", "STORY_REGI_BRAILLE", "RUMOR_REGI_DOORS"]}
   ],
 
   "forecasts": [
